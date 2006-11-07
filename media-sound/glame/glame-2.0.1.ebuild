@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-2.0.1.ebuild,v 1.4 2006/10/03 13:40:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-2.0.1.ebuild,v 1.5 2006/11/07 18:14:17 aballier Exp $
 
-inherit eutils
+WANT_AUTOCONF=2.5
+
+inherit eutils autotools
 
 DESCRIPTION="an audio file editing utility"
 HOMEPAGE="http://glame.sourceforge.net/"
@@ -22,10 +24,11 @@ RDEPEND=">=dev-util/guile-1.4-r3
 	media-sound/madplay
 	media-libs/ladspa-sdk
 	vorbis? ( >=media-libs/libvorbis-1.0 )
-	gnome? ( <gnome-base/libglade-2 gnome-base/gnome-libs )
+	gnome? ( >=gnome-base/libglade-2 >=gnome-base/libgnome-2.6\
+	>=gnome-base/libgnome-2.6 >=gnome-base/libgnomecanvas-2.6\
+	>=dev-libs/glib-2.6 >=x11-libs/gtk+-2.6.0 )
 	alsa? ( media-libs/alsa-lib )"
 DEPEND="${RDEPEND}
-	>=sys-devel/autoconf-2.58
 	nls? ( >=sys-devel/gettext-0.11.3 )"
 
 RESTRICT="primaryuri"
@@ -34,9 +37,8 @@ src_unpack() {
 	unpack ${A}
 
 	# fix makefile problem
-	export WANT_AUTOCONF=2.5
 	cd ${S}/libltdl
-	autoconf -f
+	eautoconf
 
 	cd ${S}
 	epatch ${FILESDIR}/${P}-cflags.patch

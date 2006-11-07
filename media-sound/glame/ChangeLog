@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/glame
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/ChangeLog,v 1.29 2006/10/03 13:40:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/ChangeLog,v 1.30 2006/11/07 18:14:17 aballier Exp $
+
+  07 Nov 2006; Alexis Ballier <aballier@gentoo.org> glame-2.0.1.ebuild:
+  Updating deps wrt to bug #118746
 
   03 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> glame-2.0.1.ebuild:
   Stable on sparc wrt #147776
