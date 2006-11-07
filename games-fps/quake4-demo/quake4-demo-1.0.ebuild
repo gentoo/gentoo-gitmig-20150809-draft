@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/quake4-demo-1.0.ebuild,v 1.11 2006/10/05 12:11:48 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/quake4-demo-1.0.ebuild,v 1.12 2006/11/07 02:07:48 nyhm Exp $
 
 inherit eutils games
 
@@ -19,6 +19,7 @@ SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE="alsa opengl dedicated"
 RESTRICT="strip"
+QA_EXECSTACK_x86="${GAMES_PREFIX_OPT:1}/${PN}/*"
 
 UIDEPEND="virtual/opengl
 	x86? (
