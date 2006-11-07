@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/soup-0.7.11-r1.ebuild,v 1.5 2006/11/07 15:04:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/soup-0.7.11-r1.ebuild,v 1.6 2006/11/07 15:22:23 allanonjl Exp $
 
 inherit gnome.org libtool eutils
 
@@ -59,5 +59,5 @@ src_compile() {
 src_install() {
 	einstall || die
 
-	dodoc AUTHORS ABOUT-NLS COPYING* ChangeLog README* INSTALL NEWS TODO
+	dodoc AUTHORS COPYING* ChangeLog README* INSTALL NEWS TODO
 }
