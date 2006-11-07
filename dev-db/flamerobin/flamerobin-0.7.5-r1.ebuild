@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/flamerobin-0.7.5-r1.ebuild,v 1.1 2006/11/04 20:59:10 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/flamerobin-0.7.5-r1.ebuild,v 1.2 2006/11/07 01:17:35 wltjr Exp $
 
-inherit eutils
+inherit eutils wxwidgets
 
 DESCRIPTION="A database administration tool for Firebird DBMS"
 HOMEPAGE="http://www.flamerobin.org/"
@@ -20,6 +20,10 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${P}-src"
 
+pkg_setup() {
+	export	WX_GTK_VER="2.6"
+	need-wxwidgets gtk2
+}
 src_compile() {
 	local myconf
 	myconf="${myconf} --disable-shared --disable-debug --with-wx=yes"
@@ -34,4 +38,3 @@ src_install() {
 
 	dodoc devdocs/* docs/* docs-src/*
 }
-
