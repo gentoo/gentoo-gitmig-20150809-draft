@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/ivtv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.53 2006/10/17 16:31:20 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.54 2006/11/07 01:21:57 cardoe Exp $
+
+  07 Nov 2006; Doug Goldstein <cardoe@gentoo.org> ivtv-0.7.1.ebuild:
+  Stable on amd64 and x86. I use it on stable profiles. It works.
 
   17 Oct 2006; Doug Goldstein <cardoe@gentoo.org> ivtv-0.8.0.ebuild:
   Additional checks since people like bug #151357 play around with kernel
