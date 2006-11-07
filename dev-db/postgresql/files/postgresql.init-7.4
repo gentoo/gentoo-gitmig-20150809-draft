@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/files/postgresql.init-7.4,v 1.4 2006/07/30 22:30:54 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/files/postgresql.init-7.4,v 1.5 2006/11/07 22:48:22 chtekk Exp $
 
 opts="${opts} reload"
 
@@ -10,9 +10,9 @@ depend() {
 }
 
 checkconfig() {
-	if [ ! -d $PGDATA ]; then
-		eerror "directory not found: $PGDATA"
-		eerror "You should create PGDATA directory first."
+	if [ ! -d "$PGDATA" ] ; then
+		eerror "Directory not found: $PGDATA"
+		eerror "You must create the $PGDATA directory first!"
 		return 1
 	fi
 }
@@ -21,21 +21,25 @@ start() {
 	checkconfig || return 1
 
 	ebegin "Starting PostgreSQL"
-	if [ -f $PGDATA/postmaster.pid ]; then
-		rm $PGDATA/postmaster.pid
+
+	if [ -f "$PGDATA/postmaster.pid" ] ; then
+		rm -f "$PGDATA/postmaster.pid"
 	fi
+
 	su - $PGUSER -c "/usr/bin/pg_ctl start -D '$PGDATA' -s -l '$PGLOG' -o '$PGOPTS'"
 
 	while :
 	do
 		cnt=$(($cnt + 1))
-		if [ -f "$PGDATA/postmaster.pid" ]; then
+		if [ -f "$PGDATA/postmaster.pid" ] ; then
 			ret=0
 			break
 		fi
 
-		if [ $cnt -eq 30 ]; then
-			eerror "Please see log file: $PGLOG"
+		if [ $cnt -eq 30 ] ; then
+			eerror
+			eerror "Please check the $PGLOG log file for errors."
+			eerror
 			ret=1
 			break
 		fi

@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/files/pg_autovacuum.init-7.4,v 1.1 2006/07/30 22:30:54 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/files/pg_autovacuum.init-7.4,v 1.2 2006/11/07 22:48:22 chtekk Exp $
 
 depend() {
 	need postgresql logger
@@ -9,11 +9,12 @@ depend() {
 
 start() {
 	ebegin "Starting pg_autovacuum"
-	echo ""
-	echo -n "Waiting max. 10 sec. for postgresql to start "
+
+	echo
+	echo -n "Waiting max. 20 sec. for PostgreSQL to start "
 	CONTINUE=0
 	TOO_LONG=0
-	while [ "$CONTINUE" -eq 0 ] && [ $TOO_LONG -lt 10 ]
+	while [ "$CONTINUE" -eq 0 ] && [ $TOO_LONG -lt 20 ]
 	do
 		psql -U $PGUSER -d template1 -c "SELECT 1" 1> /dev/null 2> /dev/null
 		if [ "$?" -eq 0 ]
@@ -25,20 +26,22 @@ start() {
 			sleep 1
 		fi
 	done
+
 	start-stop-daemon -o --chuid $PGUSER --start --quiet --exec /usr/bin/pg_autovacuum -- -D -v $VACUUM_BASE -V $VACUUM_SCALE -s $SLEEP_BASE -S $SLEEP_SCALE -L $PG_AUTOVACUUM_LOG
 
 	sleep 1
 	pidof /usr/bin/pg_autovacuum > /dev/null
-	if [ $? -eq 0 ]; then
+	if [ $? -eq 0 ] ; then
 		eend 0
 	else
-		eerror ""
-		eerror "Please see log file: $PG_AUTOVACUUM_LOG"
-		eerror "You may need to add following lines in /var/lib/postgresql/data/postgresql.conf and restart PostgreSQL."
+		eerror
+		eerror "Please check the $PG_AUTOVACUUM_LOG log file for errors."
+		eerror "You may need to add the following lines to /var/lib/postgresql/data/postgresql.conf and restart PostgreSQL."
 		eerror " stats_start_collector = true"
 		eerror " stats_row_level = true"
-
-		eerror "Please read ___DOCDIR___/contrib/README.pg_autovacuum for details."
+		eerror
+		eerror "Please read ___DOCDIR___/contrib/README.pg_autovacuum for details!"
+		eerror
 		eend 1
 	fi
 }
@@ -46,6 +49,5 @@ start() {
 stop() {
 	ebegin "Stopping pg_autovacuum"
 	start-stop-daemon --stop --quiet --exec /usr/bin/pg_autovacuum
-	result=$?
-	eend $result
+	eend $?
 }
