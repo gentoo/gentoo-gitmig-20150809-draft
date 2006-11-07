@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1_p20099999.ebuild,v 1.4 2006/10/20 19:35:37 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1_p20099999.ebuild,v 1.5 2006/11/07 16:28:20 genstef Exp $
 
-inherit nsplugins kde-functions autotools cvs
+inherit nsplugins autotools cvs
 
 DESCRIPTION="Gnash is a GNU Flash movie player that supports many SWF v7 features"
 HOMEPAGE="http://www.gnu.org/software/gnash"
@@ -16,25 +16,29 @@ S=${WORKDIR}/${PN}
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-*"
-IUSE="gstreamer mad nsplugin nptl xml kde video_cards_i810"
+IUSE="agg gstreamer ffmpeg nsplugin xml video_cards_i810"
 #dmalloc, broken see bug 142939
 #dmalloc? ( dev-libs/dmalloc )
 #		$(use_enable dmalloc) \
 
 RDEPEND="
 	xml? ( dev-libs/libxml2 )
-	kde? (
-		kde-base/kdelibs
-		x11-libs/qt
-	)
 	sys-libs/zlib
 	media-libs/jpeg
-	mad? ( media-libs/libmad )
 	media-libs/libogg
 	media-libs/libpng
-	media-libs/libsdl
 	net-misc/curl
-	virtual/opengl
+	!ffmpeg? ( media-libs/libmad )
+	ffmpeg? ( media-video/ffmpeg )
+	gstreamer? ( media-libs/gstreamer
+		|| (
+			media-plugins/gst-plugins-ffmpeg
+			media-plugins/gst-plugins-mad
+			media-plugins/gst-plugins-lame
+		)
+	)
+	!gstreamer? ( media-libs/libsdl )
+	dev-libs/boost
 	|| (
 		( x11-libs/libX11
 		x11-libs/libXi
@@ -43,34 +47,26 @@ RDEPEND="
 		x11-proto/xproto )
 		virtual/x11
 	)
-	gstreamer? ( media-libs/gstreamer )
-	!gstreamer? ( media-libs/sdl-mixer )
 	dev-libs/atk
 	dev-libs/glib
 	>x11-libs/gtk+-2
 	x11-libs/pango
-	dev-libs/boost
-	x11-libs/gtkglext"
+	!agg? ( virtual/opengl x11-libs/gtkglext )
+	agg? ( x11-libs/agg )"
 	#cairo? ( x11-libs/cairo )
-
-set-kdedir
 
 src_unpack() {
 	cvs_src_unpack
 	cd ${S}
-
-	# enable sound by default
-	ssed="bool.*do_sound[ \t]*=[ \t]*"
-	grep "${ssed}" . -rl | xargs \
-		sed -i -e "s:\(${ssed}\)false:\1true:"
-
-	AT_M4DIR="macros" eautoreconf
+	AT_M4DIR=macros AT_NO_RECURSIVE=1 eautoreconf
+	cd libltdl
+	eautoreconf
 }
 
 src_compile() {
 	local myconf
 
-	use nsplugin && myconf="${myconf} --enable-plugin --with-plugindir=/opt/netscape/plugins"
+	use nsplugin && myconf="${myconf} --with-plugindir=/opt/netscape/plugins"
 
 	#--enable-renderer=engine Specify rendering engine:
 	#				OpenGL (default)
@@ -79,6 +75,9 @@ src_compile() {
 	#if use cairo; then
 	#	myconf="${myconf} --enable-renderer=cairo"
 	#fi
+	if use agg; then
+		myconf="${myconf} --enable-renderer=agg"
+	fi
 	#--enable-gui=flavor Specify gui flavor:
 	#				GTK
 	#				SDL -> has no controls, we do not USE it
@@ -90,19 +89,19 @@ src_compile() {
 		myconf="${myconf} --enable-sound=sdl"
 	fi
 
-	if use kde; then
-		myconf="${myconf} --enable-gui=KDE"
+	if use ffmpeg; then
+		myconf="${myconf} --with-mp3-decoder=ffmpeg"
 	fi
 
+	# klash is broken, thus we do not offer it
 	econf \
-		$(use_enable kde klash) \
-		$(use_enable mad mp3) \
-		$(use_enable nptl pthreads) \
+		$(use_enable nsplugin plugin) \
 		$(use_enable xml) \
 		$(use_enable video_cards_i810 i810-lod-bias) \
 		--without-gcc-arch \
+		--disable-klash \
 		${myconf} || die "econf failed"
-	emake || die "emake failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
