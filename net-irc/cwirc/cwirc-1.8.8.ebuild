@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/cwirc/cwirc-1.8.8.ebuild,v 1.5 2005/09/01 01:54:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/cwirc/cwirc-1.8.8.ebuild,v 1.6 2006/11/07 22:28:29 swegener Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,23 +13,19 @@ KEYWORDS="x86 ~ppc"
 IUSE=""
 
 RDEPEND="x11-libs/gtk+
-	|| (
-		>=net-irc/xchat-2.0.1
-		>=net-irc/xchat-gnome-0.4
-	)"
+	>=net-irc/xchat-2.0.1"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
 	epatch "${FILESDIR}"/cwirc-1.7.1-gentoo.patch
-	sed -i -e 's:$(STRIP):true:' Makefile
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS} -DLINUX" || die "emake failed"
+	emake STRIP="true" CC="$(tc-getCC)" CFLAGS="${CFLAGS} -DLINUX" || die "emake failed"
 }
 
 src_install() {
