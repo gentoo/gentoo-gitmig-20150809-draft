@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.5-r1.ebuild,v 1.1 2006/10/31 19:42:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.5-r1.ebuild,v 1.2 2006/11/07 09:28:50 flameeyes Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -18,7 +18,7 @@ BOTH_DEPEND="~kde-base/kdebase-${PV}
 	net-dns/libidn
 	>=dev-libs/glib-2
 	app-crypt/qca
-	sametime? ( =net-libs/meanwhile-0.4* )
+	sametime? ( =net-libs/meanwhile-1.0* )
 	xmms? ( media-sound/xmms )
 	slp? ( net-libs/openslp )
 	wifi? ( net-wireless/wireless-tools )

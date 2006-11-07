@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.221 2006/10/31 19:42:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.222 2006/11/07 09:28:50 flameeyes Exp $
+
+  07 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdenetwork-3.5.5-r1.ebuild:
+  Fix dependency over meanwhile.
+
+  06 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdenetwork-3.5.5-r1.ebuild:
+  Fix meanwhile dependency to 1.0 version. Thanks to Troy Carpenter and Jon
+  Moon in bug #151052.
 
 *kdenetwork-3.5.5-r1 (31 Oct 2006)
 
