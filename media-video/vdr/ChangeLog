@@ -1,6 +1,13 @@
 # ChangeLog for media-video/vdr
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.70 2006/09/26 20:21:42 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.71 2006/11/07 20:28:12 zzam Exp $
+
+*vdr-1.4.4 (07 Nov 2006)
+
+  07 Nov 2006; Matthias Schwarzott <zzam@gentoo.org> +vdr-1.4.4.ebuild:
+  Version bumped. Apply-logic has now been moved to patchset. That makes the
+  ebuild a lot simpler. No parser for patch-headers, no special vanilla logic.
+  New patch noepg.
 
 *vdr-1.4.3 (26 Sep 2006)
 
