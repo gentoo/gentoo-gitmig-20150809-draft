@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/mpb-1.4.2.ebuild,v 1.1 2006/07/02 23:17:07 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/mpb-1.4.2.ebuild,v 1.2 2006/11/07 13:27:40 pbienst Exp $
 
 DESCRIPTION="Program for computing the band structures and electromagnetic modes of periodic dielectric structures"
 SRC_URI="http://ab-initio.mit.edu/mpb/${P}.tar.gz"
@@ -14,9 +14,9 @@ SLOT="0"
 DEPEND="virtual/lapack
 	sci-libs/libctl
 	sci-libs/hdf5
-	=sci-libs/fftw-2.1.5-r1
+	~sci-libs/fftw-2.1.5
 	sys-libs/readline"
-RDEPEND="=sci-libs/fftw-2.1.5-r1"
+RDEPEND="~sci-libs/fftw-2.1.5"
 
 src_unpack() {
 	unpack ${A}
