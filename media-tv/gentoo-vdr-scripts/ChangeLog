@@ -1,6 +1,15 @@
 # ChangeLog for media-tv/gentoo-vdr-scripts
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.66 2006/09/13 21:10:18 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.67 2006/11/07 20:16:22 zzam Exp $
+
+*gentoo-vdr-scripts-0.3.7 (07 Nov 2006)
+
+  07 Nov 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +gentoo-vdr-scripts-0.3.7.ebuild:
+  New release. Contains changed configurations of active plugins. Ebuild
+  handles configuration-update. Now install nvram-shutdown-script always.
+  nvram-use-flag now only controlls depend to nvram-wakeup. Removed all hacked
+  ownership code. Generally cleaned it a bit up.
 
   13 Sep 2006; Matthias Schwarzott <zzam@gentoo.org>
   -files/gentoo-vdr-scripts-0.3.5-merged-file-permissions.diff,
