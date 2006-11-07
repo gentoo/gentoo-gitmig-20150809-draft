@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/doom3-demo-1.1.1286.ebuild,v 1.17 2006/10/05 12:06:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/doom3-demo-1.1.1286.ebuild,v 1.18 2006/11/07 20:44:23 nyhm Exp $
 
 inherit eutils games
 
@@ -15,14 +15,11 @@ SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE="opengl dedicated"
 RESTRICT="strip mirror"
-
-DEPEND="app-arch/bzip2
-	app-arch/tar"
+QA_EXECSTACK="${GAMES_PREFIX_OPT:1}/${PN}/*"
 
 # Do not remove the amd64 dep unless you are POSITIVE that it is not necessary.
 # See bug #88227 for more.
-RDEPEND="virtual/libc
-	opengl? ( virtual/opengl )
+RDEPEND="opengl? ( virtual/opengl )
 	amd64? ( app-emulation/emul-linux-x86-xlibs
 		|| (
 			>=app-emulation/emul-linux-x86-xlibs-7.0
@@ -42,11 +39,11 @@ src_unpack() {
 }
 
 src_install() {
-	dodir ${dir}
+	dodir "${dir}"
 
-	insinto ${dir}
+	insinto "${dir}"
 	doins License.txt README version.info
-	exeinto ${dir}
+	exeinto "${dir}"
 	doexe gamex86.so libgcc_s.so.1 libstdc++.so.5 || die "doexe libs"
 	if use amd64; then
 		doexe bin/Linux/amd64/doom.x86 || die "doexe doom.x86"
@@ -56,13 +53,13 @@ src_install() {
 		die "Platform not supported"
 	fi
 
-	insinto ${dir}/demo
+	insinto "${dir}"/demo
 	doins demo/* || die "doins base"
 
-	newicon ${DISTDIR}/doom3.png doom3-demo.png
+	newicon "${DISTDIR}"/doom3.png ${PN}.png
 
-	games_make_wrapper doom3-demo ./doom.x86 "${dir}" "${dir}"
-	make_desktop_entry doom3-demo "Doom III (Demo)" doom3-demo.png
+	games_make_wrapper ${PN} ./doom.x86 "${dir}" "${dir}"
+	make_desktop_entry ${PN} "Doom III (Demo)"
 
 	prepgamesdirs
 }
