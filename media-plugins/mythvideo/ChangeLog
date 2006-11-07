@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythvideo
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.39 2006/10/26 16:13:08 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.40 2006/11/07 07:45:47 cardoe Exp $
+
+  07 Nov 2006; Doug Goldstein <cardoe@gentoo.org> mythvideo-0.19.ebuild,
+  mythvideo-0.20_p11329.ebuild:
+  Allow for mplayer-bin to sub in for mplayer
 
   26 Oct 2006; Steve Dibb <beandog@gentoo.org> mythvideo-0.19.ebuild,
   mythvideo-0.20_p11329.ebuild:
