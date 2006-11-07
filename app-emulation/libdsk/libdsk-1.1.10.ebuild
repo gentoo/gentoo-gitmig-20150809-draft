@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libdsk/libdsk-1.1.10.ebuild,v 1.2 2006/10/29 03:00:40 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libdsk/libdsk-1.1.10.ebuild,v 1.3 2006/11/07 09:12:13 dragonheart Exp $
 
-inherit java-pkg
+inherit java-pkg java-utils-2 flag-o-matic
 
 DESCRIPTION="Disk emulation library"
 HOMEPAGE="http://www.seasip.demon.co.uk/Unix/LibDsk/"
@@ -22,6 +22,7 @@ pkg_setup() {
 }
 
 src_compile() {
+	use java && sed -i -e "s!_JINC=\"\$_JTOPDIR/i!_JINC=\"${JAVA_HOME}/i!" configure
 	econf \
 		--with-zlib \
 		--with-bzlib \
