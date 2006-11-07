@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO/perl-IO-1.23.01.ebuild,v 1.1 2006/11/06 16:40:08 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO/perl-IO-1.23.01.ebuild,v 1.2 2006/11/07 06:34:22 opfer Exp $
 
 inherit versionator
 
@@ -11,7 +11,7 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~sparc"
+KEYWORDS="~amd64 ~mips ~sparc ~x86"
 
 IUSE=""
 DEPEND=""
