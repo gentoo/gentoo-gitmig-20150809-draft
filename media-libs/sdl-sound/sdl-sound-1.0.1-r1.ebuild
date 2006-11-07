@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.1-r1.ebuild,v 1.6 2006/10/19 17:38:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.1-r1.ebuild,v 1.7 2006/11/07 19:17:30 mr_bones_ Exp $
+
+WANT_AUTOMAKE="1.5"
+inherit autotools
 
 MY_P="${P/sdl-/SDL_}"
 DESCRIPTION="A library that handles the decoding of sound file formats"
