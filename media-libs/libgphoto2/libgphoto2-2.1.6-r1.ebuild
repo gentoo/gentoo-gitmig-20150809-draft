@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.6-r1.ebuild,v 1.11 2006/07/18 11:30:43 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.6-r1.ebuild,v 1.12 2006/11/07 12:03:11 hanno Exp $
 
 inherit libtool eutils
 
@@ -24,7 +24,7 @@ RDEPEND="!nousb? (
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	doc? ( dev-util/gtk-doc 
+	doc? ( dev-util/gtk-doc
 		=app-text/docbook-sgml-dtd-4.2*
 	)"
 
