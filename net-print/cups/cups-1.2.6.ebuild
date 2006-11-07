@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.6.ebuild,v 1.2 2006/11/07 20:41:52 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.6.ebuild,v 1.3 2006/11/07 21:59:41 chutzpah Exp $
+
+WANT_AUTOMAKE=latest
 
 inherit autotools eutils flag-o-matic multilib pam
 

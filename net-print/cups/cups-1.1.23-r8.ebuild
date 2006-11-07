@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r8.ebuild,v 1.6 2006/09/05 05:25:33 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r8.ebuild,v 1.7 2006/11/07 21:59:41 chutzpah Exp $
+
+WANT_AUTOMAKE=latest
 
 inherit eutils flag-o-matic pam autotools
 
