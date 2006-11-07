@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/mpb-1.4.2.ebuild,v 1.2 2006/11/07 13:27:40 pbienst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/mpb-1.4.2.ebuild,v 1.3 2006/11/07 14:12:52 markusle Exp $
+
+inherit fortran
 
 DESCRIPTION="Program for computing the band structures and electromagnetic modes of periodic dielectric structures"
 SRC_URI="http://ab-initio.mit.edu/mpb/${P}.tar.gz"
@@ -12,6 +14,7 @@ KEYWORDS="~x86"
 SLOT="0"
 
 DEPEND="virtual/lapack
+	dev-util/guile
 	sci-libs/libctl
 	sci-libs/hdf5
 	~sci-libs/fftw-2.1.5
@@ -21,8 +24,9 @@ RDEPEND="~sci-libs/fftw-2.1.5"
 src_unpack() {
 	unpack ${A}
 
-	# Create directories to compile the versions with inversion symmetry
-	# and with hermitian eps.
+	epatch "${FILESDIR}"/${P}-gcc4.patch
+	# Create directories to compile the versions with inversion 
+	# symmetry and with hermitian eps.
 
 	cp -r ${S} ${S}_inv
 	cp -r ${S} ${S}_herm
