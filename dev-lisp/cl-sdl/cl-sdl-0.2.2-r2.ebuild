@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sdl/cl-sdl-0.2.2-r2.ebuild,v 1.1 2005/07/20 21:36:09 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sdl/cl-sdl-0.2.2-r2.ebuild,v 1.2 2006/11/07 05:33:32 mr_bones_ Exp $
 
 inherit common-lisp eutils
 
@@ -12,10 +12,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 DEPEND="dev-lisp/cl-uffi
-	=media-libs/libsdl-1.2*
-	=media-libs/sdl-ttf-2*
-	=media-libs/sdl-mixer-1.2*
-	=media-libs/sdl-image-1.2*
+	media-libs/libsdl
+	media-libs/sdl-ttf
+	media-libs/sdl-mixer
+	media-libs/sdl-image
 	virtual/opengl"
 
 S=${WORKDIR}/${PN}
