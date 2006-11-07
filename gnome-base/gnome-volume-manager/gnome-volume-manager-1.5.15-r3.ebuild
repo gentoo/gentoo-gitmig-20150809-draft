@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/gnome-volume-manager-1.5.15-r3.ebuild,v 1.4 2006/11/07 08:08:05 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/gnome-volume-manager-1.5.15-r3.ebuild,v 1.5 2006/11/07 14:09:42 gustavoz Exp $
 
 inherit gnome2 eutils autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ~hppa ~ia64 ppc ~ppc64 sparc x86"
 IUSE="crypt debug doc"
 
 RDEPEND="gnome-base/nautilus
