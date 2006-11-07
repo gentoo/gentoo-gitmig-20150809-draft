@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Compress-Zlib
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Zlib/ChangeLog,v 1.56 2006/11/06 14:43:20 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Zlib/ChangeLog,v 1.57 2006/11/07 05:42:30 tsunam Exp $
+
+  07 Nov 2006; Joshua Jackson <tsunam@gentoo.org> ChangeLog:
+  Stable x86 for bug #154244
 
 *Compress-Zlib-2.001 (06 Nov 2006)
 

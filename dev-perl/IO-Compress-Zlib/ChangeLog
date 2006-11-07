@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Compress-Zlib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Compress-Zlib/ChangeLog,v 1.1 2006/11/06 14:42:27 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Compress-Zlib/ChangeLog,v 1.2 2006/11/07 05:41:43 tsunam Exp $
+
+  07 Nov 2006; Joshua Jackson <tsunam@gentoo.org> ChangeLog:
+  Stable x86 for bug #154244
 
 *IO-Compress-Zlib-2.001 (06 Nov 2006)
 
