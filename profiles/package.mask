@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6212 2006/11/07 03:59:25 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6213 2006/11/07 11:00:35 twp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1352,10 +1352,6 @@ app-cdr/cdrx
 # Marius Mauch <genone@gentoo.org> (17 Jan 2006)
 # Development version
 >=dev-util/gambas-1.9
-
-# Tom Payne <twp@gentoo.org> (15 Jan 2006)
-# sys-fs/convertfs is broken. Masked pending likely removal. Bug # 107635.
-sys-fs/convertfs
 
 # Diego Pettenò <flameeyes@gentoo.org> (13 Jan 2006)
 # Vulnerable to security issue. See bug #115760
