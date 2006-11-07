@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/spacetripper-demo/spacetripper-demo-1.ebuild,v 1.9 2006/09/19 18:47:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/spacetripper-demo/spacetripper-demo-1.ebuild,v 1.10 2006/11/07 19:43:15 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.btinternet.com/~bongpig/${MY_P}.sh"
 
 LICENSE="POMPOM"
 SLOT="0"
-KEYWORDS="-* ~amd64 x86"
+KEYWORDS="-* amd64 x86"
 RESTRICT="strip"
 IUSE=""
 
@@ -22,14 +22,12 @@ RDEPEND="virtual/opengl
 		app-emulation/emul-linux-x86-compat
 		app-emulation/emul-linux-x86-sdl )
 	x86? (
-		|| (
-			(
-				x11-libs/libX11
-				x11-libs/libXext )
-			virtual/x11 ) )"
+		x11-libs/libX11
+		x11-libs/libXext )"
+
+S=${WORKDIR}
 
 GAMES_CHECK_LICENSE="yes"
-S=${WORKDIR}
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
 
@@ -50,8 +48,10 @@ src_install() {
 	insinto "${dir}"
 	doins -r preview run styles || die "doins failed"
 	doins README license.txt icon.xpm
+	newicon icon.xpm spacetripper-demo.png
 
 	games_make_wrapper spacetripper-demo ./spacetripperdemo "${dir}" "${dir}"
+	make_desktop_entry spacetripper-demo spacetripper-demo spacetripper-demo.png
 
 	prepgamesdirs
 }
