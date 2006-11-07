@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.2.2-r2.ebuild,v 1.14 2006/10/20 14:31:02 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.2.2-r2.ebuild,v 1.15 2006/11/07 18:50:13 aballier Exp $
 
 WANT_AUTOMAKE=1.7
 
@@ -30,7 +30,7 @@ src_unpack() {
 	epatch "${FILESDIR}/openexr-1.2.2-gcc4.patch"
 	epatch "${FILESDIR}/${P}-asneeded.patch"
 	# Replace the temporary directory used for tests
-	sed -i -e 's:"/var/tmp/":'"${T}"':' "${S}/IlmImfTest/tmpDir.h"
+	sed -i -e 's:"/var/tmp/":"'${T}'":' "${S}/IlmImfTest/tmpDir.h"
 
 	cd "${S}"
 	eautomake
