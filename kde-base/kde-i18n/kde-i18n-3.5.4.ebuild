@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.5.4.ebuild,v 1.1 2006/07/25 11:03:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.5.4.ebuild,v 1.2 2006/11/07 23:54:36 flameeyes Exp $
 
 inherit kde
 
@@ -24,7 +24,7 @@ for X in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${X}"
 done
 
-pkg_setup() {
+src_unpack() {
 	if [ -z "${A}" ]; then
 		echo
 		eerror "You must set the LINGUAS environment variable to a list of valid"
@@ -36,9 +36,7 @@ pkg_setup() {
 		echo
 		die
 	fi
-}
 
-src_unpack() {
 	# Override kde_src_unpack.
 	unpack ${A}
 
