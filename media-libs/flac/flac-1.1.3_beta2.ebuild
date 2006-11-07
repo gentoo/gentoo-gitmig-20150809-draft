@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.3_beta2.ebuild,v 1.1 2006/10/19 17:16:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.3_beta2.ebuild,v 1.2 2006/11/07 16:15:39 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -10,7 +10,7 @@ inherit libtool eutils toolchain-funcs autotools
 MY_P="${P/_beta/-beta}"
 
 PATCHLEVEL="9"
-DESCRIPTION="free lossless audio encoder which includes an XMMS plugin"
+DESCRIPTION="free lossless audio encoder and decoder"
 HOMEPAGE="http://flac.sourceforge.net/"
 SRC_URI="mirror://sourceforge/flac/${MY_P}.tar.gz
 	mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
@@ -18,10 +18,9 @@ SRC_URI="mirror://sourceforge/flac/${MY_P}.tar.gz
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="3dnow debug doc ogg sse xmms"
+IUSE="3dnow debug doc ogg sse"
 
-RDEPEND="ogg? ( >=media-libs/libogg-1.0_rc2 )
-	xmms? ( media-sound/xmms )"
+RDEPEND="ogg? ( >=media-libs/libogg-1.0_rc2 )"
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )
 	sys-apps/gawk
@@ -58,11 +57,7 @@ src_compile() {
 	# the man page ebuild requires docbook2man... yick!
 	sed -i -e 's:include man:include:g' Makefile
 
-	# FIXME parallel make seems to mess up the building of the xmms input plugin
-	local makeopts
-	use xmms && makeopts="-j1"
-
-	emake ${makeopts} || die "make failed"
+	emake || die "make failed"
 }
 
 src_install() {
