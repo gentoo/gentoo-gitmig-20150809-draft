@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-1.8.4.1-r1.ebuild,v 1.3 2006/07/04 13:14:40 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-1.8.4.1-r1.ebuild,v 1.4 2006/11/07 01:06:47 cardoe Exp $
 
 inherit eutils gnome2 autotools
 
@@ -38,7 +38,9 @@ RDEPEND=">=dev-libs/glib-2.8
 		!firefox? ( www-client/seamonkey )
 		) )
 	firefox? ( >=www-client/mozilla-firefox-1.0.5 )
-	dbus? ( >=sys-apps/dbus-0.34 )
+	dbus? ( || ( >=dev-libs/dbus-glib-0.71 
+				( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.34 ) )
+		)
 	python? (
 		>=dev-lang/python-2.3
 		>=dev-python/pygtk-2.7.1
