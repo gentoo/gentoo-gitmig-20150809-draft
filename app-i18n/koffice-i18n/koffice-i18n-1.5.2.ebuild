@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.5.2.ebuild,v 1.6 2006/10/24 15:24:35 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.5.2.ebuild,v 1.7 2006/11/07 23:59:04 flameeyes Exp $
 
 inherit kde
 
@@ -24,7 +24,7 @@ for X in ${LANGS}; do
 	IUSE="${IUSE} linguas_${X}"
 done
 
-pkg_setup() {
+src_unpack() {
 	if [ -z "${A}" ]; then
 		echo
 		eerror "You must set the LINGUAS environment variable to a list of valid"
@@ -36,9 +36,7 @@ pkg_setup() {
 		echo
 		die
 	fi
-}
 
-src_unpack() {
 	unpack ${A}
 }
 
