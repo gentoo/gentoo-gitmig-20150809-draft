@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/oregano
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.22 2006/10/05 21:02:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.23 2006/11/07 21:44:05 gustavoz Exp $
+
+  07 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org> oregano-0.60.0.ebuild:
+  Stable on sparc
 
 *oregano-0.60.0 (05 Oct 2006)
 
