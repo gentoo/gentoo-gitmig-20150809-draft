@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-2.0.1.ebuild,v 1.5 2006/11/07 18:14:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-2.0.1.ebuild,v 1.6 2006/11/07 18:22:50 aballier Exp $
 
 WANT_AUTOCONF=2.5
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-util/guile-1.4-r3
 	>=media-sound/esound-0.2
 	>=media-libs/audiofile-0.2.2
 	=sci-libs/fftw-2*
-	media-sound/madplay
+	media-libs/libmad
 	media-libs/ladspa-sdk
 	vorbis? ( >=media-libs/libvorbis-1.0 )
 	gnome? ( >=gnome-base/libglade-2 >=gnome-base/libgnome-2.6\
