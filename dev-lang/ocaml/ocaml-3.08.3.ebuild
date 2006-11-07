@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.08.3.ebuild,v 1.13 2006/11/03 10:07:38 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.08.3.ebuild,v 1.14 2006/11/07 00:25:53 nattfodd Exp $
 
 inherit flag-o-matic eutils multilib
 
@@ -57,8 +57,12 @@ src_compile() {
 	sed -i -e "s/\(NATIVECCCOMPOPTS=.*\)/\1 ${CFLAGS}/" config/Makefile
 
 	make world || die
-	make opt || die
-	make opt.opt || die
+
+	# Native code generation unsupported on some archs
+	if ! use ppc64 ; then
+		make opt || die
+		make opt.opt || die
+	fi
 }
 
 src_install() {
