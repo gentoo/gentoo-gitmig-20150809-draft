@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.36.0.ebuild,v 1.2 2006/10/22 09:14:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.36.0.ebuild,v 1.3 2006/11/07 20:39:54 betelgeuse Exp $
 
 inherit flag-o-matic toolchain-funcs eutils multilib
 
@@ -13,16 +13,16 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="svga jpeg tiff png xml zlib"
+IUSE="svga jpeg jpeg2k tiff png xml zlib"
 
 DEPEND="jpeg? ( >=media-libs/jpeg-6b )
+	jpeg2k? ( media-libs/jasper )
 	tiff? ( >=media-libs/tiff-3.5.5 )
 	png? ( >=media-libs/libpng-1.2.1 )
 	xml? ( dev-libs/libxml2 )
 	zlib? ( sys-libs/zlib )
 	svga? ( media-libs/svgalib )
 	media-libs/jbigkit
-	media-libs/jasper
 	media-libs/urt"
 
 netpbm_libtype() {
@@ -43,6 +43,10 @@ netpbm_ldshlib() {
 }
 netpbm_config() {
 	use $1 && echo -l${2:-$1} || echo NONE
+}
+
+netpbm_jasper() {
+	use !jpeg2k && echo NONE
 }
 
 src_unpack() {
@@ -83,7 +87,7 @@ src_unpack() {
 	JBIGLIB = -ljbig
 	JBIGHDR_DIR =
 	JASPERLIB = -ljasper
-	JASPERHDR_DIR =
+	JASPERHDR_DIR = $(netpbm_jasper)
 	URTLIB = -lrle
 	URTHDR_DIR =
 	EOF

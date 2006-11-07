@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.133 2006/10/31 10:15:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.134 2006/11/07 20:39:54 betelgeuse Exp $
+
+  07 Nov 2006; Petteri Räty <betelgeuse@gentoo.org> ChangeLog:
+  Added the jpeg2k use flag to make the media-libs/jasper dependency optional.
+  Fixes bug #154353.
 
 *netpbm-10.26.33 (31 Oct 2006)
 
