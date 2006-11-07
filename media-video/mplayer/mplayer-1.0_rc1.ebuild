@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1.ebuild,v 1.11 2006/11/03 19:18:14 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1.ebuild,v 1.12 2006/11/07 19:21:10 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -86,7 +86,8 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	svga? ( media-libs/svgalib )
 	theora? ( media-libs/libtheora )
 	live? ( >=media-plugins/live-2004.07.20 )
-	truetype? ( >=media-libs/freetype-2.1 )
+	truetype? ( >=media-libs/freetype-2.1
+				media-libs/fontconfig )
 	xinerama? ( x11-libs/libXinerama
 				x11-libs/libXxf86vm
 				x11-libs/libXext )
@@ -494,6 +495,11 @@ src_install() {
 	newins ${S}/etc/example.conf mplayer.conf
 	dosed -e 's/include =/#include =/' /etc/mplayer.conf
 	dosed -e 's/fs=yes/fs=no/' /etc/mplayer.conf
+	use truetype && cat >> ${D}/etc/mplayer.conf << EOT
+fontconfig=1
+subfont-osd-scale=4
+subfont-text-scale=3
+EOT
 	dosym ../../../etc/mplayer.conf /usr/share/mplayer/mplayer.conf
 
 	#mv the midentify script to /usr/bin for emovix.
