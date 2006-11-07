@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kaffeine
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.61 2006/10/01 17:49:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.62 2006/11/07 22:42:24 flameeyes Exp $
+
+  07 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kaffeine-0.8.2-fbsd.patch, kaffeine-0.8.2-r1.ebuild:
+  Add patch to build on Gentoo/FreeBSD and add ~x86-fbsd keyword.
 
   01 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   kaffeine-0.8.2-r1.ebuild:
