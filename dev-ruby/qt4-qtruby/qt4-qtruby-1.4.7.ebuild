@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/qt4-qtruby-1.4.7.ebuild,v 1.1 2006/10/31 13:30:20 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/qt4-qtruby-1.4.7.ebuild,v 1.2 2006/11/07 13:21:57 caleb Exp $
 
 inherit toolchain-funcs eutils
 
@@ -12,10 +12,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 DEPEND=">=virtual/ruby-1.8
-	!kde-base/qtruby
 	=x11-libs/qt-4*"
-
-# This is not currently able to install alongside the Qt3 version of QtRuby
 
 SLOT="0"
 
