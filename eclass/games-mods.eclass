@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.6 2006/11/02 19:11:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.7 2006/11/07 15:38:52 wolf31o2 Exp $
 
 # Variables to specify in an ebuild which uses this eclass:
 # GAME - (doom3, quake4 or ut2004, etc), unless ${PN} starts with e.g. "doom3-"
@@ -413,17 +413,20 @@ games-mods_pkg_postinst() {
 	games_pkg_postinst
 	if default_client
 	then
-		elog "To play this mod run:"
 		if [[ -n "${MOD_BINS}" ]]
 		then
 			for binary in ${MOD_BINS}
 			do
+				elog "To play this mod run:"
 				elog " ${GAME_EXE}-${binary}"
+				echo
 			done
-		else
+		elif [[ -n "${MOD_DIR}" ]]
+		then
+			elog "To play this mod run:"
 			elog " ${GAME_EXE}-${MOD_DIR}"
+			echo
 		fi
-		echo
 	fi
 	if use dedicated
 	then
