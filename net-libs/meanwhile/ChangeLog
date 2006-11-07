@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/meanwhile
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.36 2006/11/06 16:43:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.37 2006/11/07 04:24:03 jer Exp $
+
+  07 Nov 2006; Jeroen Roovers <jer@gentoo.org> meanwhile-1.0.2.ebuild:
+  Marked ~hppa (bug #151052).
 
   06 Nov 2006; Bryan Østergaard <kloeri@gentoo.org> meanwhile-1.0.2.ebuild:
   Add ~ia64 keyword, bug 154212.
