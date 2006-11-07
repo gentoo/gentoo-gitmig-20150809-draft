@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/popt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.42 2006/11/05 17:26:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.43 2006/11/07 21:41:56 sanchan Exp $
+
+*popt-1.10.4-r3 (07 Nov 2006)
+
+  07 Nov 2006; Sandro Bonazzola <sanchan@gentoo.org>
+  +files/popt-1.10.4-regression.patch, metadata.xml, +popt-1.10.4-r3.ebuild:
+  Version bump, including a fix for a regression found by wormo@gentoo.org and
+  fixed with a patch provided by drizzt@gentoo.org, last fix needed for bug
+  #121862.
 
   05 Nov 2006; Bryan Østergaard <kloeri@gentoo.org> popt-1.10.4-r2.ebuild:
   Add ~alpha keyword.
