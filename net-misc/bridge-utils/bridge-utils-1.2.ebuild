@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-1.2.ebuild,v 1.2 2006/11/04 17:22:21 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-1.2.ebuild,v 1.3 2006/11/07 23:25:23 kanaka Exp $
 
 # I think you want CONFIG_BRIDGE in your kernel to use this ;)
 
@@ -25,7 +25,7 @@ KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~x86"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S} 
+	cd ${S}
 	WANT_AUTOMAKE=1.9 eautomake || die "Failed to run autoconf"
 	WANT_AUTOCONF=2.5 eautoconf || die "Failed to run autoconf"
 }
@@ -34,7 +34,7 @@ src_compile() {
 	# use santitized headers and not headers from /usr/src
 	econf \
 		--prefix=/ \
-		--libdir=/usr/lib \
+		--libdir=/usr/$(get_libdir) \
 		--includedir=/usr/include \
 		--with-linux-headers=/usr/include \
 		|| die "econf failed"
