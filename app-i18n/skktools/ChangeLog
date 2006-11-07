@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/skktools
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skktools/ChangeLog,v 1.6 2005/04/23 12:25:34 usata Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skktools/ChangeLog,v 1.7 2006/11/07 06:04:16 usata Exp $
+
+*skktools-1.2 (07 Nov 2006)
+
+  07 Nov 2006; Mamoru KOMACHI <usata@gentoo.org> +skktools-1.2.ebuild:
+  Version bumped.
 
   23 Apr 2005; <usata@gentoo.org> +files/skktools-1.1-gentoo.diff,
   skktools-1.1.ebuild:
