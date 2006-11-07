@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.5.ebuild,v 1.10 2006/11/01 22:04:39 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.5.ebuild,v 1.11 2006/11/07 10:36:54 uberlord Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,14 +15,18 @@ IUSE="dbus gsm madwifi qt3 qt4 readline ssl kernel_linux kernel_FreeBSD"
 
 #When dbus-core is out of package mask, this is how it works
 #RDEPEND="dbus? ( || ( sys-apps/dbus-core sys-apps/dbus ) )"
-RDEPEND="kernel_linux? ( dbus? ( sys-apps/dbus ) )
-		kernel_linux? ( gsm? ( sys-apps/pcsc-lite ) )
+RDEPEND="dbus? ( sys-apps/dbus )
+		kernel_linux? (
+			gsm? ( sys-apps/pcsc-lite )
+		 	madwifi? (
+				|| ( net-wireless/madwifi-ng net-wireless/madwifi-old )
+			)
+		)
+		!kernel_linux? ( net-libs/libpcap )
 		qt4? ( =x11-libs/qt-4* )
 		!qt4? ( qt3? ( =x11-libs/qt-3* ) )
 		readline? ( sys-libs/ncurses sys-libs/readline )
-		ssl? ( dev-libs/openssl )
-		kernel_linux? ( madwifi? ( || ( net-wireless/madwifi-ng net-wireless/madwifi-old ) ) )
-		!kernel_linux? ( net-libs/libpcap )"
+		ssl? ( dev-libs/openssl )"
 
 pkg_setup() {
 	if use kernel_linux ; then
