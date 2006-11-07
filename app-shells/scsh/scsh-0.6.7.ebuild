@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/scsh-0.6.7.ebuild,v 1.2 2006/11/07 05:35:17 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/scsh-0.6.7.ebuild,v 1.3 2006/11/07 07:16:53 opfer Exp $
 
 inherit eutils scsh
 
@@ -22,7 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	if ! use scsh; then
-		epatch ${FILESDIR}/0.6.6-Makefile.in-doc-dir-gentoo.patch || die
+		epatch ${FILESDIR}/${PV}-Makefile.in-doc-dir-gentoo.patch || die
 	fi
 }
 
