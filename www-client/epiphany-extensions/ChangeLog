@@ -1,6 +1,11 @@
 # ChangeLog for www-client/epiphany-extensions
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.43 2006/10/25 15:52:49 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.44 2006/11/07 01:16:01 cardoe Exp $
+
+  07 Nov 2006; Doug Goldstein <cardoe@gentoo.org>
+  epiphany-extensions-1.8.1-r1.ebuild, epiphany-extensions-2.14.1-r1.ebuild,
+  epiphany-extensions-2.16.0.ebuild, epiphany-extensions-2.16.1.ebuild:
+  Update D-Bus dependancy to use new D-Bus bindings.
 
   25 Oct 2006; Mart Raudsepp <leio@gentoo.org>
   -epiphany-extensions-1.8.1.ebuild:

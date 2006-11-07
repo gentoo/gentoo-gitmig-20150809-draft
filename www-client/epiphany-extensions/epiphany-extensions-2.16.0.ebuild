@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.16.0.ebuild,v 1.5 2006/09/12 18:38:44 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.16.0.ebuild,v 1.6 2006/11/07 01:16:01 cardoe Exp $
 
 inherit eutils gnome2
 
@@ -20,7 +20,8 @@ RDEPEND=">=www-client/epiphany-2.16
 	app-text/opensp
 	>=www-client/mozilla-firefox-1.0.2-r1
 	pcre? ( >=dev-libs/libpcre-3.9-r2 )
-	>=sys-apps/dbus-0.34
+	|| ( >=dev-libs/dbus-glib-0.71
+		( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.34 ) )
 	python? ( >=dev-lang/python-2.3 )"
 
 DEPEND="${RDEPEND}
