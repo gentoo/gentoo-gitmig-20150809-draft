@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.36 2006/11/08 06:51:55 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.37 2006/11/08 22:25:25 opfer Exp $
+
+  08 Nov 2006; Christian Faulhammer <opfer@gentoo.org> erlang-11.2.1.ebuild:
+  disable High Performance Erlang (HiPE) because it breaks some systems,
+  especially hardened. Also fix an glibc error. Thanks to Alexander Gabert
+  <a.gabert@fh-trier.de>, Kenny Bentley <seriousmoose@yahoo.com>, Chris Carlin
+  <ccarlin@physics.tamu.edu>, Chainsaw and nattfodd. Bugs #119753, #154338 and
+  # 151612
 
   08 Nov 2006; Christian Faulhammer <opfer@gentoo.org> erlang-11.2.1.ebuild:
   fix compilation on hardened systems by filtering SSP, see bug #154338.

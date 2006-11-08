@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.1.ebuild,v 1.3 2006/11/08 06:51:55 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.1.ebuild,v 1.4 2006/11/08 22:25:25 opfer Exp $
 
 inherit eutils multilib flag-o-matic elisp-common versionator
 
@@ -46,11 +46,20 @@ src_unpack() {
 	epatch "${FILESDIR}/10.2.6-manpage-emacs-gentoo.patch"
 	use odbc || sed -i 's: odbc : :' lib/Makefile
 #	epatch "${DISTDIR}"/otp_src_${MY_PV}_epoll.patch
+
+	# bug 151612
+	einfo "fixing hardcoded GLIBC_MINOR value dependency on signal
+	handling (#151612)"
+	sed -i "s/__GLIBC_MINOR__\ ==\ 3/__GLIBC_MINOR__\ \>=\ 3/g" \
+	    ${S}/erts/emulator/hipe/hipe_x86_signal.c
 }
 
 src_compile() {
 	use java || export JAVAC=false
+	## disable High Performance Erlang (HiPE) to avoid a lot of
+	## problems on hardened, bug #154338
 	econf \
+		--disable-hipe \
 		--enable-threads \
 		$(use_with ssl) \
 		|| die
