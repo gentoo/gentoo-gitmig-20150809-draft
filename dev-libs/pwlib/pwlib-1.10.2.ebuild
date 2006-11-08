@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.10.2.ebuild,v 1.1 2006/09/12 17:47:21 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.10.2.ebuild,v 1.2 2006/11/08 22:54:54 drizzt Exp $
 
-inherit eutils flag-o-matic multilib
+WANT_AUTOCONF="latest"
+
+inherit eutils flag-o-matic multilib autotools
 
 IUSE="alsa debug ieee1394 ipv6 ldap oss sasl sdl ssl v4l v4l2 xml"
 
@@ -18,8 +20,7 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	ieee1394? ( media-libs/libdv
 		sys-libs/libavc1394
 		sys-libs/libraw1394
-		<media-libs/libdc1394-1.9.99
-		!>=media-libs/libdc1394-2.0.0_pre1 )
+		<media-libs/libdc1394-1.9.99 )
 	ldap? ( net-nds/openldap )
 	sasl? ( dev-libs/cyrus-sasl )
 	sdl? ( media-libs/libsdl )
@@ -50,7 +51,7 @@ src_unpack() {
 	# use sdl-config to query required libraries
 	epatch ${FILESDIR}/pwlib-1.9.3-sdl-configure.patch
 
-	autoconf || die "autoconf failed"
+	eautoconf || die "autoconf failed"
 }
 
 src_compile() {
