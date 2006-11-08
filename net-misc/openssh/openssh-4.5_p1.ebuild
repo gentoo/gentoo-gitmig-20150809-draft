@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.5_p1.ebuild,v 1.1 2006/11/07 23:03:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.5_p1.ebuild,v 1.2 2006/11/08 07:37:59 vapier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -72,7 +72,7 @@ src_unpack() {
 		-e '/_PATH_XAUTH/s:/usr/X11R6/bin/xauth:/usr/bin/xauth:' \
 		pathnames.h || die
 
-	use X509 && epatch "${DISTDIR}"/${X509_PATCH} "${FILESDIR}"/${P}-x509-hpn-glue.patch
+	use X509 && epatch "${DISTDIR}"/${X509_PATCH} "${FILESDIR}"/${PN}-4.4_p1-x509-hpn-glue.patch
 	use chroot && epatch "${FILESDIR}"/openssh-4.3_p1-chroot.patch
 	use smartcard && epatch "${FILESDIR}"/openssh-3.9_p1-opensc.patch
 	if ! use X509 ; then
@@ -83,7 +83,7 @@ src_unpack() {
 			use ldap && epatch "${FILESDIR}"/openssh-4.0_p1-smartcard-ldap-happy.patch
 		fi
 		if use ldap ; then
-			epatch "${DISTDIR}"/${LDAP_PATCH} "${FILESDIR}"/${P}-ldap-hpn-glue.patch
+			epatch "${DISTDIR}"/${LDAP_PATCH} "${FILESDIR}"/${PN}-4.4_p1-ldap-hpn-glue.patch
 		fi
 	elif [[ -n ${SECURID_PATCH} ]] && use smartcard || use ldap ; then
 		ewarn "Sorry, X509 and smartcard/ldap don't get along, disabling smartcard/ldap"
