@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.485 2006/11/06 02:27:08 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.486 2006/11/08 07:23:01 opfer Exp $
+
+  08 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  glibc-2.3.6-r5.ebuild, glibc-2.4-r4.ebuild:
+  stable x86, bug #154176
 
   06 Nov 2006; Daniel Gryniewicz <dang@gentoo.org> glibc-2.4-r4.ebuild:
   Marked stable on amd64 for bug #154176
