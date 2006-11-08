@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation# Distributed under the terms of the GNU General Public License v2
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/sqlgrey-1.7.4.ebuild,v 1.3 2006/10/23 20:12:26 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/sqlgrey-1.7.4.ebuild,v 1.4 2006/11/08 01:21:16 dang Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ RDEPEND="dev-lang/perl
 	)"
 DEPEND="$RDEPEND
 	sys-apps/sed"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 ~x86"
 
 pkg_setup() {
 	has_version dev-perl/IO-Multiplex || die "IO-Multiplex needed. Please emerge it or run g-cpan.pl IO::Multiplex"
