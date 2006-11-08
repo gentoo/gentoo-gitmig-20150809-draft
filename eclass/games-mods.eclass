@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.7 2006/11/07 15:38:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.8 2006/11/08 14:43:18 wolf31o2 Exp $
 
 # Variables to specify in an ebuild which uses this eclass:
 # GAME - (doom3, quake4 or ut2004, etc), unless ${PN} starts with e.g. "doom3-"
@@ -270,7 +270,8 @@ games-mods_src_install() {
 			done
 		# We don't want to leave the binary directory around
 		rm -rf bin
-		else
+		elif [[ -n "${MOD_DIR}" ]]
+		then
 			games_make_wrapper "${GAME_EXE}-${MOD_DIR}" \
 				"${GAME_EXE} ${SELECT_MOD}${MOD_DIR}" "${dir}" "${dir}"
 			make_desktop_entry "${GAME_EXE}-${MOD_DIR}" \
