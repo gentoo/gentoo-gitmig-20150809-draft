@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.5_p1.ebuild,v 1.2 2006/11/08 07:37:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.5_p1.ebuild,v 1.3 2006/11/08 08:01:49 vapier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -11,7 +11,7 @@ inherit eutils flag-o-matic ccc multilib autotools pam
 # and _p? releases.
 PARCH=${P/_/}
 
-X509_PATCH="${PARCH/4.5/4.4}+x509-5.5.1.diff.gz"
+X509_PATCH="${PARCH/4.5/4.4}+x509-5.5.1.diff.bz2"
 SECURID_PATCH="${PARCH/4.5/4.4}+SecurID_v1.3.2.patch"
 LDAP_PATCH="${PARCH/-4.5p1/-lpk-4.4p1}-0.3.7.patch"
 HPN_PATCH="${PARCH/4.5/4.4}-hpn12v13.diff.gz"
