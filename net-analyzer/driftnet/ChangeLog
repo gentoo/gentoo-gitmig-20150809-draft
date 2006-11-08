@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/driftnet
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/ChangeLog,v 1.27 2006/10/31 21:18:00 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/ChangeLog,v 1.28 2006/11/08 16:57:03 gustavoz Exp $
+
+  08 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org> driftnet-0.1.6.ebuild,
+  driftnet-0.1.6-r3.ebuild:
+  Doesn't really work so -sparc
 
   31 Oct 2006; Markus Ullmann <jokey@gentoo.org> driftnet-0.1.6.ebuild,
   driftnet-0.1.6-r3.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6-r3.ebuild,v 1.4 2006/10/31 21:18:00 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6-r3.ebuild,v 1.5 2006/11/08 16:57:03 gustavoz Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://debian/pool/main/d/driftnet/${MY_P}.orig.tar.gz
 	mirror://debian/pool/main/d/driftnet/${MY_P}-4.diff.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc ~sparc x86"
+KEYWORDS="~amd64 ppc -sparc x86"
 SLOT="0"
 IUSE="gtk"
 
