@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.173 2006/11/06 22:44:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.174 2006/11/08 12:02:29 flameeyes Exp $
+
+  08 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/amarok-1.4.4-sparc.patch, amarok-1.4.4.ebuild:
+  Add patch to allow building on SPARC, see bug #153024. Thanks to Jason Wever
+  for reporting and Jurij Smakov for the patch.
 
   06 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> amarok-1.4.3-r1.ebuild,
   amarok-1.4.4.ebuild:
