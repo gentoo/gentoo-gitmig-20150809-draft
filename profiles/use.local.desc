@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2307 2006/11/07 22:14:56 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2308 2006/11/08 08:31:28 opfer Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -860,6 +860,9 @@ media-sound/bmpx:p2p - Enable support for downloading songs from the SoulSeek p2
 media-sound/bmpx:raptor - Enable usage of raptor for rlq container plugin
 media-sound/bmpx:sid - Build with SID (Commodore 64 Audio) support
 media-sound/bmpx:stream - Build with support for streaming audio
+media-sound/cmus:ao - Use libao for sound playback
+media-sound/cmus:modplug - Build with modplug support
+media-sound/cmus:musepack - Enable support for the musepack audio codec
 media-sound/darkice:twolame - Build with twolame support
 media-sound/ecasound:libsamplerate - Build with libsamplerate support
 media-sound/freewheeling:fluidsynth - compile with support for fluidsynth
