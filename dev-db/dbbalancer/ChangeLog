@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/dbbalancer
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/dbbalancer/ChangeLog,v 1.9 2005/07/22 23:22:25 nakano Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/dbbalancer/ChangeLog,v 1.10 2006/11/08 20:53:44 dev-zero Exp $
+
+  08 Nov 2006; Tiziano Müller <dev-zero@gentoo.org>
+  dbbalancer-0.4.4.ebuild:
+  libpqpp dependency added, bug #154320
 
   22 Jul 2005; Masatomo Nakano <nakano@gentoo.org>
   +files/dbbalancer-0.4.4-gentoo.patch, +metadata.xml,

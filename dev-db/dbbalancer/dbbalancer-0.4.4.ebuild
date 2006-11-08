@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/dbbalancer/dbbalancer-0.4.4.ebuild,v 1.14 2005/07/22 23:22:25 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/dbbalancer/dbbalancer-0.4.4.ebuild,v 1.15 2006/11/08 20:53:44 dev-zero Exp $
 
 inherit eutils
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND=">=dev-db/postgresql-7.2.3-r1
+DEPEND="dev-db/postgresql
+	dev-cpp/libpqpp
 	>=dev-libs/ace-5.2.4-r1
 	>=app-text/openjade-1.3.1-r5
 	>=app-text/docbook-dsssl-stylesheets-1.77"
