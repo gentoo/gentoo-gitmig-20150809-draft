@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/euses/euses-2.4.3.ebuild,v 1.5 2006/02/17 02:16:48 deltacow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/euses/euses-2.4.3.ebuild,v 1.6 2006/11/08 01:49:55 jer Exp $
+
+WANT_AUTOMAKE="1.9"
 
 inherit toolchain-funcs autotools
 
