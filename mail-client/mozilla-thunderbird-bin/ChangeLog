@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mozilla-thunderbird-bin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.49 2006/11/08 19:22:24 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.50 2006/11/08 20:39:12 opfer Exp $
+
+  08 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  mozilla-thunderbird-bin-1.5.0.8.ebuild:
+  stable x86, security bug #154448
 
 *mozilla-thunderbird-bin-1.5.0.8 (08 Nov 2006)
 
