@@ -1,0 +1,69 @@
+diff -urNp dazuko-2.3.1.org/configure dazuko-2.3.1/configure
+--- dazuko-2.3.1.org/configure	2006-10-04 00:48:18.000000000 +0200
++++ dazuko-2.3.1/configure	2006-11-08 15:11:38.000000000 +0200
+@@ -590,21 +590,20 @@ do_linux26()
+ 		then
+ 			LINUX26_USE_SUSPEND=1
+ 		fi
++	fi
++
++	SRC_PATH_END="/include/linux/freezer.h"
++	get_src_path
+ 
+-		grep "try_todo_list.*(.*void.*)" "$SRC_PATH" > /dev/null 2>&1
++	if [ -f "$SRC_PATH" ]
++	then
++		grep "try_to_freeze.*(.*void.*)" "$SRC_PATH" > /dev/null 2>&1
+ 		if [ $? -eq 0 ]
+ 		then
+-			LINUX26_USE_SUSPEND=2
++			LINUX26_USE_SUSPEND=1
+ 		fi
+ 	fi
+ 
+-	if [ $LINUX26_USE_SUSPEND -eq 2 ]
+-	then
+-		echo "ok (suspend2)"
+-	else
+-		echo "ok (suspend1)"
+-	fi
+-
+ 	if [ $LOCAL_DPATH -eq 2 ]
+ 	then
+ 		LOCAL_DPATH=1
+@@ -705,11 +704,6 @@ do_linux26()
+ 		echo "EXTRA_CFLAGS += -DUSE_TRYTOFREEZEVOID" >> Makefile
+ 	fi
+ 
+-	if [ ${LINUX26_USE_SUSPEND} -eq 2 ]
+-	then
+-		echo "EXTRA_CFLAGS += -DUSE_SUSPEND2" >> Makefile
+-	fi
+-
+ 	if [ ${LINUX26_USE_CLASS} -eq 1 ]
+ 	then
+ 		echo "EXTRA_CFLAGS += -DUSE_CLASS" >> Makefile
+diff -urNp dazuko-2.3.1.org/dazuko_linux26.c dazuko-2.3.1/dazuko_linux26.c
+--- dazuko-2.3.1.org/dazuko_linux26.c	2006-07-29 12:13:03.000000000 +0300
++++ dazuko-2.3.1/dazuko_linux26.c	2006-11-08 15:15:25.000000000 +0200
+@@ -37,7 +37,7 @@
+ #include <linux/devfs_fs_kernel.h>
+ #endif
+ #include <linux/device.h>
+-#if !defined(USE_TRYTOFREEZEVOID) && !defined(USE_SUSPEND2)
++#if !defined(USE_TRYTOFREEZEVOID)
+ #include <linux/suspend.h>
+ #endif
+ #include <asm/uaccess.h>
+@@ -178,10 +178,7 @@ inline int xp_wait_until_condition(struc
+ 		{
+ 			ret = wait_event_interruptible(queue->queue, cfunction(cparam) != 0);
+ 
+-#ifdef USE_SUSPEND2
+-			if (try_todo_list() == 0)
+-				break;
+-#elif defined (USE_TRYTOFREEZEVOID)
++#if defined (USE_TRYTOFREEZEVOID)
+ 			if (try_to_freeze() == 0)
+ 				break;
+ #else
