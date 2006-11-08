@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.2.3.ebuild,v 1.1 2006/11/08 03:22:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.2.3.ebuild,v 1.2 2006/11/08 17:17:20 mr_bones_ Exp $
 
 inherit eutils autotools
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/ogre/${PN}-linux_osx-v${MY_PV}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="cegui cg devil double-precision examples gtk openexr threads"
+IUSE="cegui cg devil double-precision examples gtk openexr test threads"
 
 RDEPEND=">=dev-libs/zziplib-0.13.36
 	>=media-libs/freetype-2.1.10
@@ -29,7 +29,8 @@ DEPEND="${RDEPEND}
 	x11-proto/xf86vidmodeproto
 	dev-util/pkgconfig
 	sys-devel/flex
-	cg? ( >=media-gfx/nvidia-cg-toolkit-1.2 )"
+	cg? ( >=media-gfx/nvidia-cg-toolkit-1.2 )
+	test? ( dev-util/cppunit )"
 
 S=${WORKDIR}/ogrenew
 

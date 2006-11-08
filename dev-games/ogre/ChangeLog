@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/ogre
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.30 2006/11/08 03:22:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.31 2006/11/08 17:17:20 mr_bones_ Exp $
+
+  08 Nov 2006; Michael Sterrett <mr_bones_@gentoo.org> ogre-1.2.3.ebuild:
+  fix deps for test suite (bug #139895)
 
 *ogre-1.2.3 (08 Nov 2006)
 
