@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/emerge-delta-webrsync-3.5.1-r2.ebuild,v 1.1 2006/10/15 11:20:19 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/emerge-delta-webrsync-3.5.1-r2.ebuild,v 1.2 2006/11/08 18:00:41 zmedico Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="sys-apps/portage
+RDEPEND=">=sys-apps/portage-2.1.1-r1
 	>=dev-util/diffball-0.6.5
 	x86? ( app-arch/tarsync )"
 
