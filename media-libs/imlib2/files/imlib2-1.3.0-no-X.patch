@@ -1,3 +1,24 @@
+http://bugs.gentoo.org/154461
+
+Index: configure.in
+===================================================================
+RCS file: /cvs/e/e17/libs/imlib2/configure.in,v
+retrieving revision 1.132
+retrieving revision 1.133
+diff -u -p -r1.132 -r1.133
+--- configure.in	30 Sep 2006 08:15:32 -0000	1.132
++++ configure.in	25 Oct 2006 04:45:08 -0000	1.133
+@@ -10,7 +10,7 @@ AM_CONFIG_HEADER(config.h)
+ 
+ AC_C_BIGENDIAN
+ AC_PROG_CC
+-
++AM_PROG_AS
+ 
+ case $host_os in
+ solaris*)
+
+
 http://bugs.gentoo.org/154304
 
 Index: configure.in
