@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2308 2006/11/08 08:31:28 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2309 2006/11/08 20:39:21 kloeri Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1772,6 +1772,7 @@ www-client/kazehakase:hyperestraier - enable hyperestraier support for full-text
 www-client/kazehakase:thumbnail - enable thumbnail support.
 www-client/mozilla-firefox:mozbranding - Enable official branding
 www-client/mozilla-firefox:mozdevelop - Enable features for web developers (e.g. Venkman)
+www-client/mozilla-firefox:moznopango - Disable pango during runtime
 www-client/mozilla-firefox:restrict-javascript - Pull in noscript extension to disable javascript globally, putting user fully in control of the sites he/she visits
 www-client/mozilla-firefox:xforms - XForms is a standard to split up XHTML into XForms, instance data, and user interface
 www-client/mozilla-launcher:aoss - Add support for media-libs/alsa-oss - playing sounds from browser via OSS emulation
