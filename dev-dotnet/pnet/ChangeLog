@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/pnet
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/ChangeLog,v 1.35 2006/11/08 04:01:38 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/ChangeLog,v 1.36 2006/11/08 08:53:19 opfer Exp $
+
+  08 Nov 2006; Christian Faulhammer <opfer@gentoo.org> pnet-0.7.4.ebuild:
+  stable x86, bug #153036
 
   08 Nov 2006; Daniel Gryniewicz <dang@gentoo.org> pnet-0.7.4.ebuild:
   Marked stable on amd64 for bug #153036
