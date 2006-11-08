@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.35 2006/11/02 20:56:33 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.36 2006/11/08 06:51:55 opfer Exp $
+
+  08 Nov 2006; Christian Faulhammer <opfer@gentoo.org> erlang-11.2.1.ebuild:
+  fix compilation on hardened systems by filtering SSP, see bug #154338.
+  Thanks to pappy-_ on IRC who provided advice and test hardware.
 
   02 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
   -files/10.2.7-manpage-emacs-gentoo.patch, -files/erlang-9c.patch,

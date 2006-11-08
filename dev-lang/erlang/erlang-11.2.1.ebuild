@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.1.ebuild,v 1.2 2006/11/02 20:56:33 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.1.ebuild,v 1.3 2006/11/08 06:51:55 opfer Exp $
 
 inherit eutils multilib flag-o-matic elisp-common versionator
 
@@ -36,6 +36,10 @@ S=${WORKDIR}/${MY_P}
 SITEFILE=50erlang-gentoo.el
 
 src_unpack() {
+	## fix compilation on hardened systems, see bug #154338
+	filter-flags "-fstack-protector"
+	filter-flags "-fstack-protector-all"
+
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-10.2.6-export-TARGET.patch"
