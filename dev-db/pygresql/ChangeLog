@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/pygresql
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.36 2006/04/27 15:10:40 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.37 2006/11/08 19:34:31 dev-zero Exp $
+
+*pygresql-3.8.1 (08 Nov 2006)
+
+  08 Nov 2006; Tiziano Müller <dev-zero@gentoo.org>
+  -files/pygresql-3.6.1-gentoo.patch, pygresql-3.5.ebuild,
+  -pygresql-3.6.1.ebuild, pygresql-3.6.2.ebuild, pygresql-3.6.2-r1.ebuild,
+  -pygresql-3.8.ebuild, +pygresql-3.8.1.ebuild:
+  Version bump. Dependency and ebuild cleanups: bug 149320, thanks to Frederik
+  Holljen.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-pygresql-3.5,
   files/digest-pygresql-3.6.1, files/digest-pygresql-3.6.2,
