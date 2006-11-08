@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.10.4-r3.ebuild,v 1.2 2006/11/07 21:53:23 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.10.4-r3.ebuild,v 1.3 2006/11/08 17:12:01 drizzt Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.9"
@@ -13,7 +13,7 @@ SRC_URI="ftp://jbj.org/pub/rpm-4.4.x/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc64 ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="nls"
 
 RDEPEND="nls? ( virtual/libintl )"
