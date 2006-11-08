@@ -1,7 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.3.0.ebuild,v 1.1 2006/11/06 15:12:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.3.0.ebuild,v 1.2 2006/11/08 07:05:40 vapier Exp $
 
+WANT_AUTOTOOLS="yes"
 inherit enlightenment toolchain-funcs
 
 MY_P=${P/_/-}
@@ -23,7 +24,9 @@ DEPEND="=media-libs/freetype-2*
 src_unpack() {
 	enlightenment_src_unpack
 	cd "${S}"/src/modules/loaders
-	epatch "${FILESDIR}"/${P}-buf-checks.patch
+	epatch "${FILESDIR}"/${P}-buf-checks.patch #154216
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-no-X.patch #154304
 }
 
 src_compile() {
