@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6217 2006/11/08 10:32:31 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6218 2006/11/08 19:28:04 aballier Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ## 
+
+# Alexis Ballier <aballier@gentoo.org< (07 Nov 2006)
+# Needs some testing
+=media-libs/openexr-1.4.0a
 
 # Seemant Kulleen <seemant@gentoo.org> (07 Nov 2006)
 # Masked because there's a digest mismatch, and who knows what the real
