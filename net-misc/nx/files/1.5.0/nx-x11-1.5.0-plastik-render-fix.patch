@@ -1,0 +1,20 @@
+--- nx-X11/programs/Xserver/hw/nxagent/GCOps.c~ 2005-11-25 21:42:23.000000000 +0100
++++ nx-X11/programs/Xserver/hw/nxagent/GCOps.c  2006-03-08 11:28:43.000000000 +0100
+@@ -2385,7 +2385,7 @@
+   {
+     if ((pDrawable)->type == DRAWABLE_PIXMAP)
+     {
+-      miPolySegment(nxagentVirtualDrawable(pDrawable), pGC, nSegments, pSegments);
++      fbPolySegment(nxagentVirtualDrawable(pDrawable), pGC, nSegments, pSegments);
+     }
+
+     return;
+@@ -2423,7 +2423,7 @@
+     }
+
+     nxagentGCTrap++;
+-    miPolySegment(nxagentVirtualDrawable(pDrawable), pGC, nSegments, pSegments);
++    fbPolySegment(nxagentVirtualDrawable(pDrawable), pGC, nSegments, pSegments);
+     nxagentGCTrap--;
+     return;
+   }

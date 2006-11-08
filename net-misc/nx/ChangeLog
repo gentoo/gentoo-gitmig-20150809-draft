@@ -1,0 +1,7 @@
+# ChangeLog for net-misc/nx
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.1 2006/11/08 21:27:10 stuart Exp $
+
+  08 Nov 2006; Stuart Herbert <stuart@gentoo.org> ChangeLog:
+  Initial import; replaces net-misc/nx-x11 and net-misc/nx-x11-bin
+
