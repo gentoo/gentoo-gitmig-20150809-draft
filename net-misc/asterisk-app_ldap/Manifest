@@ -1,10 +1,50 @@
-MD5 8ce6b824660cba5a14d126d037131dae asterisk-app_ldap-0.9.9_p2.ebuild 1095
-MD5 9ae0e26fe47ac1fa048da1aea987e490 asterisk-app_ldap-1.0_rc1.ebuild 1093
-MD5 3b7f949ea23f9a266799bc96195e0469 asterisk-app_ldap-1.0_rc5.ebuild 1076
-MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
-MD5 af69ba3137e16aff0be2851aedc958de ChangeLog 2417
-MD5 0bd2ed4630b92ad1b95cf85ebc054e2d files/app_ldap-1.0_rc5-gentoo.diff 807
-MD5 f2c8f978f335d6a1685ca0613b7fd2f5 files/digest-asterisk-app_ldap-0.9.9_p2 64
-MD5 16388011c058b887897ae9bf30dc2239 files/digest-asterisk-app_ldap-1.0_rc5 62
-MD5 b04db881b7de10671c3c524accaf2185 files/digest-asterisk-app_ldap-1.0_rc1 62
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX app_ldap-0.9.9-astcfg.diff 1268 RMD160 5efc80ea5150bea0c392cfd4d7cec8370bf9e312 SHA1 ca19ec50a77304b42ce1cb2b01d04314b05090ef SHA256 fcf87230afae9c79c583210f68a97c71d40d037b753408e48d515d296d811a2f
 MD5 c03b7aacfa063473f9f352484ecf034a files/app_ldap-0.9.9-astcfg.diff 1268
+RMD160 5efc80ea5150bea0c392cfd4d7cec8370bf9e312 files/app_ldap-0.9.9-astcfg.diff 1268
+SHA256 fcf87230afae9c79c583210f68a97c71d40d037b753408e48d515d296d811a2f files/app_ldap-0.9.9-astcfg.diff 1268
+AUX app_ldap-1.0_rc5-gentoo.diff 807 RMD160 b7e25024bcb0fe7d1aef27e7097ffe26ac2d8bed SHA1 55ee8260f0125ac2fddbc0355a879dd0dc2556a1 SHA256 cad10125d0e042a7aba62fe1ccb6204dc76393cea27132d161d048e39d404674
+MD5 0bd2ed4630b92ad1b95cf85ebc054e2d files/app_ldap-1.0_rc5-gentoo.diff 807
+RMD160 b7e25024bcb0fe7d1aef27e7097ffe26ac2d8bed files/app_ldap-1.0_rc5-gentoo.diff 807
+SHA256 cad10125d0e042a7aba62fe1ccb6204dc76393cea27132d161d048e39d404674 files/app_ldap-1.0_rc5-gentoo.diff 807
+DIST app_ldap-0.9.9.2.tgz 17089
+DIST app_ldap-1.0rc1.tgz 6212
+DIST app_ldap-1.0rc5.tgz 6253 RMD160 f3afd75bdcabea6c7e8fe1e8e16c8fd0be2f69ce SHA1 a7327bd98ffcbd3d4f802cd422c352d5310bb565 SHA256 d6f14ad4c19e71a4c86ebbe19eb32ae3a937964b3a254e81b0d5381b8b5b3434
+EBUILD asterisk-app_ldap-0.9.9_p2.ebuild 1095 RMD160 bd52a9541de7059fbc8898515d271f31630463dd SHA1 cb6eadfd614e8f300921718a1ee01ff863875a48 SHA256 4519208fbca1156fef357b394f2b104d35df1a94609454a6590e5d424f127fac
+MD5 8ce6b824660cba5a14d126d037131dae asterisk-app_ldap-0.9.9_p2.ebuild 1095
+RMD160 bd52a9541de7059fbc8898515d271f31630463dd asterisk-app_ldap-0.9.9_p2.ebuild 1095
+SHA256 4519208fbca1156fef357b394f2b104d35df1a94609454a6590e5d424f127fac asterisk-app_ldap-0.9.9_p2.ebuild 1095
+EBUILD asterisk-app_ldap-1.0_rc1.ebuild 1093 RMD160 76c4df2c176338dc25f33de104ce3993314c4de1 SHA1 5fd564e428abbb99974f1600093adf15a41646a2 SHA256 9d41da49521c330426008d92b81538d517fad534c0cde9f4bb4e787f570a451f
+MD5 9ae0e26fe47ac1fa048da1aea987e490 asterisk-app_ldap-1.0_rc1.ebuild 1093
+RMD160 76c4df2c176338dc25f33de104ce3993314c4de1 asterisk-app_ldap-1.0_rc1.ebuild 1093
+SHA256 9d41da49521c330426008d92b81538d517fad534c0cde9f4bb4e787f570a451f asterisk-app_ldap-1.0_rc1.ebuild 1093
+EBUILD asterisk-app_ldap-1.0_rc5.ebuild 1076 RMD160 863c6c95bbfb1b18cf4142cd1b9ea82361753b05 SHA1 cfab0c94b0e079c9cd61621f20c401f3b809875e SHA256 f1fb7110edb36c102abb78cdb8dfdfeb8e243f23e55c2f6aad823fd12a7375ae
+MD5 be8a7071285192911eb506fbd3d48c6e asterisk-app_ldap-1.0_rc5.ebuild 1076
+RMD160 863c6c95bbfb1b18cf4142cd1b9ea82361753b05 asterisk-app_ldap-1.0_rc5.ebuild 1076
+SHA256 f1fb7110edb36c102abb78cdb8dfdfeb8e243f23e55c2f6aad823fd12a7375ae asterisk-app_ldap-1.0_rc5.ebuild 1076
+MISC ChangeLog 2536 RMD160 bd4c568fe7a80718009b89801a02c7ef98506feb SHA1 beacc928fc7f7e01531a5e5ab71550b27f305227 SHA256 41453ba99c617b192c97211fed38bf3bb78080c4337f7e2f569de7daf2699d87
+MD5 d8ddd6b6251888ee3c33f66fd2243d96 ChangeLog 2536
+RMD160 bd4c568fe7a80718009b89801a02c7ef98506feb ChangeLog 2536
+SHA256 41453ba99c617b192c97211fed38bf3bb78080c4337f7e2f569de7daf2699d87 ChangeLog 2536
+MISC metadata.xml 217 RMD160 275af641d8134ee438c8e2c9f89eb3b0a286a386 SHA1 7b349815d56d7d7e2d46968341228c5267c666eb SHA256 c3eb09d27b1a9cf05b690524903c7faf096829ef1d19c0264769c277ac28d0a1
+MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
+RMD160 275af641d8134ee438c8e2c9f89eb3b0a286a386 metadata.xml 217
+SHA256 c3eb09d27b1a9cf05b690524903c7faf096829ef1d19c0264769c277ac28d0a1 metadata.xml 217
+MD5 f2c8f978f335d6a1685ca0613b7fd2f5 files/digest-asterisk-app_ldap-0.9.9_p2 64
+RMD160 6dbd8806435c54c9764a96be801e8a3addd59c52 files/digest-asterisk-app_ldap-0.9.9_p2 64
+SHA256 5c1c2ba96e665e08ec88e1b8877210ca453817d49202eb0fc8f738f674ba0d5e files/digest-asterisk-app_ldap-0.9.9_p2 64
+MD5 b04db881b7de10671c3c524accaf2185 files/digest-asterisk-app_ldap-1.0_rc1 62
+RMD160 bcaf52f2f8f53340d45d501c887c24a2df942b8f files/digest-asterisk-app_ldap-1.0_rc1 62
+SHA256 1ab83e2f918e3b540e51d57cc2b4541564c0f7691069c14d765af233e794910d files/digest-asterisk-app_ldap-1.0_rc1 62
+MD5 d0fa9fe78ce4f15e8f7039f68ababe6f files/digest-asterisk-app_ldap-1.0_rc5 232
+RMD160 061a81a58b305049081f90df3505a1f22eebb2fb files/digest-asterisk-app_ldap-1.0_rc5 232
+SHA256 2833c0cb0387d238cf47ceaac4689d44ea52f9e3ef35ee91db6cc89dd53c1ed4 files/digest-asterisk-app_ldap-1.0_rc5 232
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFUgDBNQqtfCuFneMRAtcsAJ9rb5/dioJHzI7MFOdDTGOS1E0XlgCbBRpC
+Fd3cWZHJRa0eExQGXRUipa0=
+=6UAs
+-----END PGP SIGNATURE-----
