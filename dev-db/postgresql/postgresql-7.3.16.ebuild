@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.16.ebuild,v 1.2 2006/11/08 20:28:10 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.16.ebuild,v 1.3 2006/11/08 20:43:49 chtekk Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib toolchain-funcs versionator
 
@@ -161,10 +161,8 @@ pkg_postinst() {
 	elog "Execute the following command to setup the initial database environment:"
 	elog
 	elog "emerge --config =${PF}"
-
 	elog
-
-	elog "If you need a global psqlrc-file, you can place it in /etc/postgresql."
+	elog "If you need a global psqlrc-file, you can place it in '${ROOT}/etc/postgresql/'."
 }
 
 pkg_config() {

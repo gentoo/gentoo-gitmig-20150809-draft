@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.295 2006/11/08 20:28:10 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.296 2006/11/08 20:43:49 chtekk Exp $
+
+  08 Nov 2006; Luca Longinotti <chtekk@gentoo.org> postgresql-7.3.16.ebuild,
+  postgresql-7.4.14.ebuild, postgresql-8.0.9.ebuild,
+  postgresql-8.1.5.ebuild:
+  Make the notice $ROOT aware.
 
   08 Nov 2006; Tiziano Müller <dev-zero@gentoo.org>
   postgresql-7.3.16.ebuild, postgresql-7.4.14.ebuild,
