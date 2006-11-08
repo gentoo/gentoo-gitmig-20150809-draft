@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/xsnap
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/ChangeLog,v 1.24 2006/10/21 21:30:02 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/ChangeLog,v 1.25 2006/11/08 14:07:18 nelchael Exp $
+
+*xsnap-1.5.1 (08 Nov 2006)
+*xsnap-1.4.4 (08 Nov 2006)
+
+  08 Nov 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/xsnap-1.5.1-po_Makefile.patch, +xsnap-1.4.4.ebuild,
+  +xsnap-1.5.1.ebuild:
+  Version bump.
 
   21 Oct 2006; David Shakaryan <omp@gentoo.org> xsnap-1.4.3-r1.ebuild:
   Remove monolithic X from dependencies and fix quotes.
