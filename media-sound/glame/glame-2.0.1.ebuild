@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-2.0.1.ebuild,v 1.6 2006/11/07 18:22:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-2.0.1.ebuild,v 1.7 2006/11/08 05:12:52 tsunam Exp $
 
 WANT_AUTOCONF=2.5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/glame/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc sparc ~x86"
+KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE="nls gnome vorbis debug alsa"
 
 RDEPEND=">=dev-util/guile-1.4-r3
