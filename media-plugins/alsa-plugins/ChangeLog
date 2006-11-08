@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.29 2006/10/25 05:57:44 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.30 2006/11/08 01:39:09 jer Exp $
+
+  08 Nov 2006; Jeroen Roovers <jer@gentoo.org> alsa-plugins-1.0.13.ebuild:
+  Marked ~hppa (bug #150540).
 
   25 Oct 2006; Joshua Jackson <tsunam@gentoo.org>
   alsa-plugins-1.0.13.ebuild:
