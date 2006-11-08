@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.110 2006/11/08 22:54:54 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.111 2006/11/08 23:41:07 drizzt Exp $
+
+*pwlib-1.10.2-r1 (08 Nov 2006)
+
+  08 Nov 2006; Timothy Redaelli <drizzt@gentoo.org>
+  +files/pwlib-1.10.2-asm.patch, +pwlib-1.10.2-r1.ebuild:
+  Revbump.
+  Fixed bug 140358 and bug 145424, thanks to "Danny van Dyk" for the patch.
 
   08 Nov 2006; Timothy Redaelli <drizzt@gentoo.org> pwlib-1.10.2.ebuild:
   Removed blocker to libdc1394>1.9.9 to fix bug #140283 (Thanks to Tomas Cohen
