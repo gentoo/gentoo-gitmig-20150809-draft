@@ -1,6 +1,18 @@
+diff -Nru bitpim-0.9.07.orig/src/bp.py bitpim-0.9.07/src/bp.py
+--- bitpim-0.9.07.orig/src/bp.py	2006-09-02 08:20:47.000000000 +0300
++++ bitpim-0.9.07/src/bp.py	2006-11-08 11:55:33.337514250 +0200
+@@ -52,7 +52,7 @@
+     if sys.platform=="darwin" and len(sys.argv)>1 and sys.argv[1].startswith("-psn_"):
+ 	# get rid of the process serial number on mac
+ 	sys.argv=sys.argv[:1]+sys.argv[2:]
+-    _options, _args=getopt.getopt(sys.argv[1:], 'c:d:')
++    _options, _args=getopt.gnu_getopt(sys.argv[1:], 'c:d:')
+     _kwargs={}
+     # check for debug flag
+     _debug=__debug__ or bool(_args and 'debug' in _args)
 diff -Nru bitpim-0.9.07.orig/src/common.py bitpim-0.9.07/src/common.py
---- bitpim-0.9.07.orig/src/common.py	2006-09-15 18:41:32.734807000 +0300
-+++ bitpim-0.9.07/src/common.py	2006-09-15 18:41:12.801561250 +0300
+--- bitpim-0.9.07.orig/src/common.py	2006-08-27 01:44:28.000000000 +0300
++++ bitpim-0.9.07/src/common.py	2006-11-08 11:55:08.355953000 +0200
 @@ -854,4 +854,4 @@
          # windows running from exe, return as is
          return os.path.abspath(os.path.dirname(sys.executable))
@@ -8,8 +20,8 @@ diff -Nru bitpim-0.9.07.orig/src/common.py bitpim-0.9.07/src/common.py
 -    return os.path.split(os.path.abspath(os.path.dirname(sys.argv[0])))[0]
 +    return os.path.abspath(os.path.dirname(sys.argv[0]))
 diff -Nru bitpim-0.9.07.orig/src/conversions.py bitpim-0.9.07/src/conversions.py
---- bitpim-0.9.07.orig/src/conversions.py	2006-09-15 18:41:32.734807000 +0300
-+++ bitpim-0.9.07/src/conversions.py	2006-09-15 18:41:12.801561250 +0300
+--- bitpim-0.9.07.orig/src/conversions.py	2006-05-28 06:10:52.000000000 +0300
++++ bitpim-0.9.07/src/conversions.py	2006-11-08 11:55:08.355953000 +0200
 @@ -20,11 +20,11 @@
  
  class ConversionFailed(Exception): pass
@@ -42,8 +54,8 @@ diff -Nru bitpim-0.9.07.orig/src/conversions.py bitpim-0.9.07/src/conversions.py
      pngtopnmbin=gethelperbinary('pngtopnm')
      ppmquantbin=gethelperbinary('ppmquant')
 diff -Nru bitpim-0.9.07.orig/src/native/av/bmp2avi/Makefile bitpim-0.9.07/src/native/av/bmp2avi/Makefile
---- bitpim-0.9.07.orig/src/native/av/bmp2avi/Makefile	2006-09-15 18:41:32.734807000 +0300
-+++ bitpim-0.9.07/src/native/av/bmp2avi/Makefile	2006-09-15 18:41:12.801561250 +0300
+--- bitpim-0.9.07.orig/src/native/av/bmp2avi/Makefile	2006-05-05 10:10:08.000000000 +0300
++++ bitpim-0.9.07/src/native/av/bmp2avi/Makefile	2006-11-08 11:55:08.355953000 +0200
 @@ -13,6 +13,6 @@
  
  SRC=avi_file.cxx bmp_file.cxx b2a.cxx
@@ -53,8 +65,8 @@ diff -Nru bitpim-0.9.07.orig/src/native/av/bmp2avi/Makefile bitpim-0.9.07/src/na
  	$(CXX) $(EXTRADEFINES) -O2 -o $@ $(SRC)
  
 diff -Nru bitpim-0.9.07.orig/src/native/usb/build.sh bitpim-0.9.07/src/native/usb/build.sh
---- bitpim-0.9.07.orig/src/native/usb/build.sh	2006-09-15 18:41:12.000000000 +0300
-+++ bitpim-0.9.07/src/native/usb/build.sh	2006-09-15 18:42:03.296717000 +0300
+--- bitpim-0.9.07.orig/src/native/usb/build.sh	2006-03-04 06:57:24.000000000 +0200
++++ bitpim-0.9.07/src/native/usb/build.sh	2006-11-08 11:55:08.355953000 +0200
 @@ -4,4 +4,4 @@
  swig -python -I/usr/include libusb.i
  
