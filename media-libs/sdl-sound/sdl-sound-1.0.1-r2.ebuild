@@ -1,8 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.1-r2.ebuild,v 1.8 2006/11/07 19:17:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.1-r2.ebuild,v 1.9 2006/11/08 20:58:14 vapier Exp $
 
-WANT_AUTOMAKE="1.5"
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 inherit flag-o-matic autotools eutils
 
 MY_P="${P/sdl-/SDL_}"
@@ -19,8 +20,7 @@ RDEPEND=">=media-libs/libsdl-1.2
 	flac? ( ~media-libs/flac-1.1.2 )
 	mikmod? ( >=media-libs/libmikmod-3.1.9 media-libs/libmodplug )
 	vorbis? ( >=media-libs/libvorbis-1.0_beta4 )
-	speex? ( media-libs/speex
-		media-libs/libogg )
+	speex? ( media-libs/speex media-libs/libogg )
 	physfs? ( dev-games/physfs )
 	mpeg? ( media-libs/smpeg )"
 DEPEND="${RDEPEND}
