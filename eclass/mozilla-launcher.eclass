@@ -1,8 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla-launcher.eclass,v 1.12 2005/07/28 21:06:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla-launcher.eclass,v 1.13 2006/11/08 20:37:16 kloeri Exp $
 
 inherit nsplugins multilib
+
+if ! [[ ${PN: -4} == "-bin" ]] ; then
+	IUSE="moznopango"
+fi
 
 # update_mozilla_launcher_symlinks
 # --------------------------------
@@ -65,6 +69,8 @@ install_mozilla_launcher_stub() {
 	declare libdir=$2
 
 	dodir /usr/bin
+
+	if [[ ${PN: -4} == "-bin" ]]  | use ! moznopango; then
 	cat <<EOF >${D}/usr/bin/${name}
 #!/bin/sh
 #
@@ -77,5 +83,29 @@ export MOZILLA_LIBDIR=${libdir}
 export MOZ_PLUGIN_PATH=\${MOZ_PLUGIN_PATH:-/usr/$(get_libdir)/$PLUGINS_DIR}
 exec /usr/libexec/mozilla-launcher "\$@"
 EOF
+	else
+	cat <<EOF >${D}/usr/bin/${name}
+#!/bin/sh
+#
+# Stub script to run mozilla-launcher.  We used to use a symlink here
+# but OOo brokenness makes it necessary to use a stub instead:
+# http://bugs.gentoo.org/show_bug.cgi?id=78890
+
+export MOZILLA_LAUNCHER=${name}
+export MOZILLA_LIBDIR=${libdir}
+export MOZ_PLUGIN_PATH=\${MOZ_PLUGIN_PATH:-/usr/$(get_libdir)/$PLUGINS_DIR}
+export MOZ_DISABLE_PANGO=1
+exec /usr/libexec/mozilla-launcher "\$@"
+EOF
+	fi
 	chmod 0755 ${D}/usr/bin/${name}
+}
+
+warn_mozilla_launcher_stub() {
+
+	elog "Not all locales support the disabling of pango."
+	elog "If your locale does not support disabling pango,"
+	elog "please open a bug report on http://bugs.gentoo.org"
+	elog "Then we can filter around the problem with those"
+	elog "specific locales."
 }
