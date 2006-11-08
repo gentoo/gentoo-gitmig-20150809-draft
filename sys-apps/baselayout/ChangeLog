@@ -1,9 +1,15 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.361 2006/11/06 13:14:27 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.362 2006/11/08 23:49:12 uberlord Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+*baselayout-1.13.0_alpha6 (08 Nov 2006)
+
+  08 Nov 2006; Roy Marples <uberlord@gentoo.org>
+  +baselayout-1.13.0_alpha6.ebuild:
+  New alpha release, we now keep svcdir mounted in ram all the time.
 
 *baselayout-1.13.0_alpha5-r1 (06 Nov 2006)
 
