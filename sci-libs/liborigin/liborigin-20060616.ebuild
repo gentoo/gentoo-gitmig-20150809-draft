@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/liborigin-20060616.ebuild,v 1.1 2006/11/07 20:23:52 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/liborigin-20060616.ebuild,v 1.2 2006/11/08 08:26:14 george Exp $
 
 
-DESCRIPTION="Library for reading Origin spreadshits"
+DESCRIPTION="A library for reading OriginLab OPJ project files"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://sourceforge.net/projects/liborigin/"
 
