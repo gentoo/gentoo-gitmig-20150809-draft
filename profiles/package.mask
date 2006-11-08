@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6216 2006/11/08 02:33:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6217 2006/11/08 10:32:31 opfer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -24,7 +24,11 @@
 # Seemant Kulleen <seemant@gentoo.org> (07 Nov 2006)
 # Masked because there's a digest mismatch, and who knows what the real
 # checksum is supposed to be
-=net-print/cups-1.2.6
+# Christian Faulhammer <opfer@gentoo.org> (07 Nov 2006)
+# unmasked by request of jakub in bug #154445
+# Seemant, please don't kill me, jakub got on his knees and
+# told me it was urgent
+#=net-print/cups-1.2.6
 
 # Stefan Schweizer <genstef@gentoo.org> (07 Nov 2006)
 # This has many bugs, find rc5 in the overlay: layman -a voip
