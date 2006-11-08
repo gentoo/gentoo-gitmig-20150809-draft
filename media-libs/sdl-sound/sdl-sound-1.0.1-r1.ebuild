@@ -1,8 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.1-r1.ebuild,v 1.7 2006/11/07 19:17:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.1-r1.ebuild,v 1.8 2006/11/08 21:31:55 mr_bones_ Exp $
 
-WANT_AUTOMAKE="1.5"
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 inherit autotools
 
 MY_P="${P/sdl-/SDL_}"
@@ -40,6 +41,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc CHANGELOG CREDITS README TODO
 }
