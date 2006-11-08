@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogviewer/elogviewer-0.5.1.ebuild,v 1.1 2006/11/08 08:18:55 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogviewer/elogviewer-0.5.1.ebuild,v 1.2 2006/11/08 09:28:49 opfer Exp $
 
-DESCRIPTION="GTK based utility to parse the contents of elogs created by Portage"
+DESCRIPTION="GTK+ based utility to parse the contents of elogs created by Portage"
 HOMEPAGE="http://sourceforge.net/projects/elogviewer/"
 
 SRC_URI="mirror://sourceforge/elogviewer/${P}.tar.gz"
