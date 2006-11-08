@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ircservices-5.0.57.ebuild,v 1.3 2006/11/07 22:10:33 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ircservices-5.0.57.ebuild,v 1.4 2006/11/08 14:22:01 swegener Exp $
 
 inherit eutils fixheadtails flag-o-matic toolchain-funcs
 
@@ -20,6 +20,8 @@ RDEPEND=""
 pkg_setup() {
 	enewgroup ircservices
 	enewuser ircservices -1 -1 -1 ircservices
+	# this is needed, because old ebuilds added the user with ircservices:users
+	usermod -g ircservices ircservices
 }
 
 src_unpack() {
