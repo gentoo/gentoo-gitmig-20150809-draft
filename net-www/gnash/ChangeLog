@@ -1,6 +1,10 @@
 # ChangeLog for net-www/gnash
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.24 2006/11/07 16:28:20 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.25 2006/11/08 22:09:57 genstef Exp $
+
+  08 Nov 2006; Stefan Schweizer <genstef@gentoo.org>
+  gnash-0.7.1_p20099999.ebuild:
+  Fix WANT_AUTOMAKE
 
   07 Nov 2006; Stefan Schweizer <genstef@gentoo.org>
   gnash-0.7.1_p20099999.ebuild:
