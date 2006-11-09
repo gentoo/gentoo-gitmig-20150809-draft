@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6220 2006/11/09 01:03:02 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6221 2006/11/09 03:11:48 augustus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -622,13 +622,16 @@ media-sound/mpd-svn
 # until Gnome 2.16 is unmasked
 =media-sound/bmpx-0.3*
 
-# Chris Gianelloni <wolf31o2@gentoo.org> (25 Sep 2006)
+# Kris Kersey <augustus@gentoo.org> (08 Nov 2006)
 # Masking this version of the drivers since it is BETA. This driver version
 # adds GLX_EXT_texture_from_pixmap, so it works with compiz.  You will need to
 # add AddARGBGLXVisuals to the driver options.  If this causes a lockup for
 # you, read http://www.nvnews.net/vbulletin/showthread.php?t=77021 and revert
-# to the unmasked drivers.
+# to the unmasked drivers.  This version has been replaced by the non-BETA
+# 1.0.9629 but I'll leave it here for a little while.
 ~x11-drivers/nvidia-drivers-1.0.9626
+# The below BETA adds support for GeForce 8800 GTX and GeForce 8800 GTS GPUs.
+~x11-drivers/nvidia-drivers-1.0.9742
 ~media-video/nvidia-settings-1.0.20060919
 
 # Seemant Kullee <seemant@gentoo.org> (26 Oct 2006)
