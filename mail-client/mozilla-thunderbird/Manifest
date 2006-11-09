@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX firefox-1.1-uriloader-1.patch 13902 RMD160 cb816967a91e0a60a238ad11736eec5ac5da3754 SHA1 cbb5303137bf7f94ff1cfae760d5a64a810b3021 SHA256 ac9ef7ec790856d35609a051596579b0cc5a327542614ab420505a2669b388bb
 MD5 b92734c051b7734d459e23f7c4a01b63 files/firefox-1.1-uriloader-1.patch 13902
 RMD160 cb816967a91e0a60a238ad11736eec5ac5da3754 files/firefox-1.1-uriloader-1.patch 13902
@@ -161,10 +164,10 @@ EBUILD mozilla-thunderbird-1.5.0.7.ebuild 7458 RMD160 0de887b34461524f99b554af17
 MD5 11c44351c5582ada543abc3247fb2658 mozilla-thunderbird-1.5.0.7.ebuild 7458
 RMD160 0de887b34461524f99b554af178daad732cc3c42 mozilla-thunderbird-1.5.0.7.ebuild 7458
 SHA256 d65526df998afc662d2c6147c04a67a8018b98ed2128f583af9046ddf957ac6b mozilla-thunderbird-1.5.0.7.ebuild 7458
-EBUILD mozilla-thunderbird-1.5.0.8.ebuild 7686 RMD160 42a82017caaf3e7fd52bce2d55f4d3fca9c70f03 SHA1 ade2c3983b2974cae43c0e39099c3605ed695eb9 SHA256 5ce144d21d2060c956c5d25fe0798081a9c0fad4c1596a99d7e7a17df860cb1b
-MD5 04ee24839921ddb3250c573a113c17fb mozilla-thunderbird-1.5.0.8.ebuild 7686
-RMD160 42a82017caaf3e7fd52bce2d55f4d3fca9c70f03 mozilla-thunderbird-1.5.0.8.ebuild 7686
-SHA256 5ce144d21d2060c956c5d25fe0798081a9c0fad4c1596a99d7e7a17df860cb1b mozilla-thunderbird-1.5.0.8.ebuild 7686
+EBUILD mozilla-thunderbird-1.5.0.8.ebuild 7684 RMD160 ce136545588d78c2644efa7f3ee9e215697b13ab SHA1 59dff099c3fbbb1d64adec84a66ea44b178f7acd SHA256 4be3c704d580dca3c097e8d3f7f08825c2085a3bb5e3fa030e61d7eab4165551
+MD5 91f33019a54558d05a881da03c45def8 mozilla-thunderbird-1.5.0.8.ebuild 7684
+RMD160 ce136545588d78c2644efa7f3ee9e215697b13ab mozilla-thunderbird-1.5.0.8.ebuild 7684
+SHA256 4be3c704d580dca3c097e8d3f7f08825c2085a3bb5e3fa030e61d7eab4165551 mozilla-thunderbird-1.5.0.8.ebuild 7684
 EBUILD mozilla-thunderbird-2.0_alpha1-r1.ebuild 7760 RMD160 f7242ea7c4a48779b272645bd9334d26a23e378e SHA1 2408241f0e4de52cd3aba77ecff91d86b1458689 SHA256 a98c9f81299e30149a799936307ba0a878336d24eb7f49fd524f9506bf2a607f
 MD5 4abf2aa9fe1f52bc505a084cfad917b9 mozilla-thunderbird-2.0_alpha1-r1.ebuild 7760
 RMD160 f7242ea7c4a48779b272645bd9334d26a23e378e mozilla-thunderbird-2.0_alpha1-r1.ebuild 7760
@@ -173,10 +176,10 @@ EBUILD mozilla-thunderbird-2.0_alpha1.ebuild 7760 RMD160 fdeb2f5bb154709075962c7
 MD5 fc7b701dfc1f5df0e3d3918609d59803 mozilla-thunderbird-2.0_alpha1.ebuild 7760
 RMD160 fdeb2f5bb154709075962c76e07855aaf6490d27 mozilla-thunderbird-2.0_alpha1.ebuild 7760
 SHA256 5f5e958223a11294a5f62d1c1a49c3ad71e392edf3c1fd546a3ce2db7d12044b mozilla-thunderbird-2.0_alpha1.ebuild 7760
-MISC ChangeLog 22067 RMD160 24dca4c79afb4cc1eb5ecdb7812b360aa2bc8bf0 SHA1 d4c8f5d97014acb1539dd902f09f3569417e51cd SHA256 599c36a0b5925476bcc882cb8d60639748edb20a0b364fcbce1081f6db7ce0e1
-MD5 dd0ecbfd49b5d680d5a810658970462f ChangeLog 22067
-RMD160 24dca4c79afb4cc1eb5ecdb7812b360aa2bc8bf0 ChangeLog 22067
-SHA256 599c36a0b5925476bcc882cb8d60639748edb20a0b364fcbce1081f6db7ce0e1 ChangeLog 22067
+MISC ChangeLog 22195 RMD160 a8679768f5eea47e327df637b890c16b1a8f2b88 SHA1 64d26765d6e011f22835102d3e98d23ab3f8ce7a SHA256 8299cd703de0e672c76e7f17b40ce9549093e86b10f335fcc7698ce996ef5f42
+MD5 f1a3c34f7c2d71ebfc88e17a9ba5ff7d ChangeLog 22195
+RMD160 a8679768f5eea47e327df637b890c16b1a8f2b88 ChangeLog 22195
+SHA256 8299cd703de0e672c76e7f17b40ce9549093e86b10f335fcc7698ce996ef5f42 ChangeLog 22195
 MISC metadata.xml 160 RMD160 d5a9f0bf8989621c2bde30facb53bcae00aba709 SHA1 5015c07af2083f20f9552d7fb11afb5ea69af345 SHA256 0cc5126362a12cee42ec1197c528a804cf36859329dd2c6d9225726831d14b8b
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
 RMD160 d5a9f0bf8989621c2bde30facb53bcae00aba709 metadata.xml 160
@@ -202,3 +205,10 @@ SHA256 5ca5785d980c7bbf1b82cb578bccd3d2f5ef4b79f18a64fc0d9cd6e01a6e6c09 files/di
 MD5 bd480c79adc796491bf60aa1ce95e7ee files/digest-mozilla-thunderbird-2.0_alpha1-r1 611
 RMD160 71b8fcb4cd286c7b43e65e4ff78692fbd12c3a9d files/digest-mozilla-thunderbird-2.0_alpha1-r1 611
 SHA256 6d5975b2c6fae311ebc819b04fcafca77b5d5c79f010e4cade7c0bc26afd7b77 files/digest-mozilla-thunderbird-2.0_alpha1-r1 611
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFUxs5NQqtfCuFneMRAilmAJ9oNq/xIab1zVa07wOvlDTWv7di7ACeIv6z
+JukF0H9mLmbBB4PzlLzFseE=
+=Z3Aa
+-----END PGP SIGNATURE-----
