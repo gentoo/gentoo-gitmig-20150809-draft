@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmenc15/kmenc15-0.04.ebuild,v 1.3 2005/11/07 10:02:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmenc15/kmenc15-0.04.ebuild,v 1.4 2006/11/09 17:30:12 aballier Exp $
 
 inherit eutils kde
 
@@ -14,6 +14,7 @@ DEPEND="media-video/mplayer"
 IUSE=""
 
 src_compile() {
+	epatch "${FILESDIR}/${PN}-wcondiff.diff"
 	emake || die
 }
 
