@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2316 2006/11/09 15:00:30 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2317 2006/11/09 15:03:14 beandog Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -262,7 +262,6 @@ dev-games/ogre:cegui - build the cegui samples
 dev-games/ogre:cg - nvidia toolkit plugin
 dev-games/ogre:devil - image loading support with DevIL
 dev-games/ogre:double-precision - more precise calculations at the expense of speed
-dev-games/ogre:openexr - support for the openexr file format
 dev-haskell/gtk2hs:glade - Enable libglade bindings compilation
 dev-java/ant-tasks:javamail - Enable JavaMail Ant task
 dev-java/ant-tasks:noantlr - Disable ANTLR Ant task -- Warning: Enabling this could break some of the Java packages!!
@@ -595,20 +594,15 @@ kde-base/kbugbuster:kcal - Support for kcal (calendar) format.
 kde-base/kcontrol:logitech-mouse - Build the Control Center module to configure logitech mice.
 kde-base/kdeartwork-kscreensaver:xscreensaver - Detection of xscreensavers.
 kde-base/kdeartwork:xscreensaver - Detection of xscreensavers.
-kde-base/kdebase-kioslaves:openexr - Support for the OpenEXR graphics file format (www.openexr.com).
 kde-base/kdebase:logitech-mouse - Build the Control Center module to configure logitech mice
-kde-base/kdebase:openexr - Support for the OpenEXR graphics file format (www.openexr.com).
 kde-base/kdebase:xcomposite - Support for the Xorg composite extension.
 kde-base/kdebase:xscreensaver - support for the XScreenSaver extension.
 kde-base/kdebase:zeroconf - Support for DNS Service Discovery (DNS-SD).
 kde-base/kdeedu:kig-scripting - Support Python scripting in kig.
-kde-base/kdegraphics-kfile-plugins:openexr - Support for the OpenEXR graphics file format (www.openexr.com).
 kde-base/kdegraphics-meta:povray - Install KPovModeler, which needs POV-Ray.
-kde-base/kdegraphics:openexr - Support for the OpenEXR graphics file format (www.openexr.com).
 kde-base/kdegraphics:povray - Install KPovModeler, which needs POV-Ray.
 kde-base/kdelibs:legacyssl - Support for some deprecated ciphers. Don't use this flag unless you really need it.
 kde-base/kdelibs:noutempter - Don't write login records. Don't use this flag, unless you know exactly what you do.
-kde-base/kdelibs:openexr - Support for the OpenEXR graphics file format (www.openexr.com).
 kde-base/kdelibs:utempter - Records everytime a user logins in. Useful on multi-user systems.
 kde-base/kdelibs:zeroconf - Support for DNS Service Discovery (DNS-SD).
 kde-base/kdemultimedia:akode - Support for the aKode audio-decoding frame-work.
@@ -725,7 +719,6 @@ mail-mta/qmail:notlsbeforeauth - If you do NOT want to require STARTTLS before o
 mail-mta/ssmtp:md5sum - Enables MD5 summing for ssmtp
 media-fonts/intlfonts:bdf - Installs BDF fonts in addition to PCF
 media-gfx/blender:blender-game - Adds game engine support to blender
-media-gfx/blender:openexr - Adds support for openexr
 media-gfx/comix:rar - Pulls app-arch/unrar for rar file support
 media-gfx/digikam:nfs - Create sqlite db within ~/.kde, instead in the albums base directory.
 media-gfx/gimp:gimpprint - Enable gimp-print printing support
@@ -745,11 +738,9 @@ media-gfx/inkscape:inkjar - enables inkjar support
 media-gfx/inkscape:plugin - enables extra plugins
 media-gfx/iscan:gimp - Build a plugin for the GIMP
 media-gfx/iscan:udev - Install as an udev helper instead of a hotplug helper
-media-gfx/k3d:openexr - build OpenEXR plug-ins
 media-gfx/k3d:plib - build plib-based import/export library
 media-gfx/maya:bundled-libs - Use the bundled versions of libs rather than system ones (libstdc++, libgcc_s, libqt, and libXm)
 media-gfx/maya:maya-shaderlibrary - Install the maya shader library
-media-gfx/pixie:openexr - build OpenEXR display module
 media-gfx/pstoedit:emf - enables media-libs/libemf support
 media-gfx/sane-frontends:gimp - Build a plugin for the GIMP
 media-gfx/showimg:kipi - Support for the KDE Image Plugin Interface.
@@ -757,7 +748,6 @@ media-gfx/splashutils:kdgraphics - Use KD_GRAPHICS for silent mode. This will co
 media-gfx/ufraw:exiv2 - Use exiv2 for exif reading (support for Canon .crw)
 media-gfx/ufraw:gimp - Build a plugin for the GIMP
 media-gfx/xsane:gimp - Build a plugin for the GIMP
-media-gfx/yafray:openexr - support for the openexr file format
 media-libs/a52dec:djbfft - Prefer D.J. Bernstein's library for fourier transforms
 media-libs/cal3d:16bit-indices - Enables use of 16bit indices
 media-libs/coin:fontconfig - Support for mananging custom fonts via fontconfig.

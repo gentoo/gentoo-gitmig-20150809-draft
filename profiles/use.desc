@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.313 2006/11/09 15:00:30 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.314 2006/11/09 15:03:14 beandog Exp $
 
 # Keep them sorted
 
@@ -240,6 +240,7 @@ offensive - Enables potentially offensive items in packages
 ofx - Enable support for importing (and exporting) OFX (Open Financial eXchange) data files
 ogg - Adds support for the Ogg container format (commonly used by Vorbis, Theora and flac)
 openal - Adds support for the Open Audio Library
+openexr - Support for the OpenEXR graphics file format
 opengl - Adds support for OpenGL (3D graphics)
 oracle7 - Adds support for the Oracle 7 Database
 oracle - Enable Oracle Database support
