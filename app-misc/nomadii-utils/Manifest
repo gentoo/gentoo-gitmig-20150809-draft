@@ -1,7 +1,27 @@
-MD5 390265b783c4d1b6da3d4b787ed9ba9d ChangeLog 1049
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 2754c9fa5ddb18c9111db9c6bbc7ea9c nomadii-utils-0.8-r1.ebuild 1535
-MD5 deb1a561b30f34aa5c8e2eabc018a6c2 nomadii-utils-0.8.ebuild 1428
-MD5 282c7694de28329ace49de28cf586ee6 files/digest-nomadii-utils-0.8-r1 65
-MD5 282c7694de28329ace49de28cf586ee6 files/digest-nomadii-utils-0.8 65
+AUX nomadii-utils-0.8-struct.diff 744 RMD160 d2a6897d35ad207427087997183e0a8976d0db39 SHA1 abfacbef77da28a12fcfe5542bc6972f76c3b1d7 SHA256 17e0cf4646e9de7d1ca26af47400329c083eccdda6eac5b9977c96fc112a3de7
 MD5 aeba2df545b8a3b93a9eeb102ba4ecf3 files/nomadii-utils-0.8-struct.diff 744
+RMD160 d2a6897d35ad207427087997183e0a8976d0db39 files/nomadii-utils-0.8-struct.diff 744
+SHA256 17e0cf4646e9de7d1ca26af47400329c083eccdda6eac5b9977c96fc112a3de7 files/nomadii-utils-0.8-struct.diff 744
+DIST nomadII-utils-0.8.tgz 87551
+EBUILD nomadii-utils-0.8-r1.ebuild 1535 RMD160 b837bfc1c09437309a7d5df783aff223007bad3d SHA1 4a01fa8bc0ad547ab9695857965db410e1714c3f SHA256 1197485da7db3c5c19169b692facfe5a2de4136f170f1a27da5127eeffc2c471
+MD5 2754c9fa5ddb18c9111db9c6bbc7ea9c nomadii-utils-0.8-r1.ebuild 1535
+RMD160 b837bfc1c09437309a7d5df783aff223007bad3d nomadii-utils-0.8-r1.ebuild 1535
+SHA256 1197485da7db3c5c19169b692facfe5a2de4136f170f1a27da5127eeffc2c471 nomadii-utils-0.8-r1.ebuild 1535
+EBUILD nomadii-utils-0.8.ebuild 1428 RMD160 b77aaa5ceafc48c2681b4b0f68a490bcb418fbb3 SHA1 34a3f05f9e9b6bf0ef6646dd55be584eed13a2c2 SHA256 2195e309aabf819328a3567ffff59a616a1a9428cdd896f18b11ddb33a5a1f13
+MD5 deb1a561b30f34aa5c8e2eabc018a6c2 nomadii-utils-0.8.ebuild 1428
+RMD160 b77aaa5ceafc48c2681b4b0f68a490bcb418fbb3 nomadii-utils-0.8.ebuild 1428
+SHA256 2195e309aabf819328a3567ffff59a616a1a9428cdd896f18b11ddb33a5a1f13 nomadii-utils-0.8.ebuild 1428
+MISC ChangeLog 1049 RMD160 2bd07a91b513ef6f90597ee46c8996fd4575f62b SHA1 aa7b3932fd2d9347b271b10889c2279625536da5 SHA256 7afe52fcf41e556fa08c4cd5e0d30e0f148e1b0063dfa0b4afc56d298ef637ae
+MD5 390265b783c4d1b6da3d4b787ed9ba9d ChangeLog 1049
+RMD160 2bd07a91b513ef6f90597ee46c8996fd4575f62b ChangeLog 1049
+SHA256 7afe52fcf41e556fa08c4cd5e0d30e0f148e1b0063dfa0b4afc56d298ef637ae ChangeLog 1049
+MISC metadata.xml 314 RMD160 25181cde297628576a9545bea3a76601485bfaf3 SHA1 ac16b621acf5a22b64859e3323d466fb556fc4c8 SHA256 736baab77aea9c4da199c01e3cd6877c271bd02357ff9b41b537a2232c6e96d7
+MD5 38cacf4270b8a100918bf328ed9154d3 metadata.xml 314
+RMD160 25181cde297628576a9545bea3a76601485bfaf3 metadata.xml 314
+SHA256 736baab77aea9c4da199c01e3cd6877c271bd02357ff9b41b537a2232c6e96d7 metadata.xml 314
+MD5 282c7694de28329ace49de28cf586ee6 files/digest-nomadii-utils-0.8 65
+RMD160 cce82d12ea7534fc73f851821d747e8ad8b6f842 files/digest-nomadii-utils-0.8 65
+SHA256 68719e3266fd57a0bec7526251cf52837d4567e1bad2fceeae6c37afdeaca46f files/digest-nomadii-utils-0.8 65
+MD5 282c7694de28329ace49de28cf586ee6 files/digest-nomadii-utils-0.8-r1 65
+RMD160 cce82d12ea7534fc73f851821d747e8ad8b6f842 files/digest-nomadii-utils-0.8-r1 65
+SHA256 68719e3266fd57a0bec7526251cf52837d4567e1bad2fceeae6c37afdeaca46f files/digest-nomadii-utils-0.8-r1 65
