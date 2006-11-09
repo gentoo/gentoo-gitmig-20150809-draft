@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.7-r1.ebuild,v 1.19 2006/10/28 12:00:01 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.7-r1.ebuild,v 1.20 2006/11/09 09:38:15 zzam Exp $
 
-WANT_AUTOMAKE=1.9
-WANT_AUTOCONF=2.5
+WANT_AUTOMAKE=latest
+WANT_AUTOCONF=latest
 
 inherit libtool eutils autotools
 
