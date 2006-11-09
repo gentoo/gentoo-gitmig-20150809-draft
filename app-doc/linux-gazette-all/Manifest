@@ -9,20 +9,31 @@ EBUILD linux-gazette-all-129.ebuild 3769 RMD160 f5f3fcd2931086764d378297b06d70ef
 MD5 f636ea406e9f5a1b846aac3e4983f696 linux-gazette-all-129.ebuild 3769
 RMD160 f5f3fcd2931086764d378297b06d70ef01da1d02 linux-gazette-all-129.ebuild 3769
 SHA256 e352ecba64dc4f3dbd6cb4760927999367deaa10838dc19eb0d668d49ed543d3 linux-gazette-all-129.ebuild 3769
-MISC ChangeLog 574 RMD160 0af99b12a08f80eb29bc09dee94d4723408957d4 SHA1 07bc14a03b1587a7bb09629a63e046fdc5012059 SHA256 cdaddc81ca0ebae828a27166f98f5e88e4fb3a069e5d2bbc4884a3b89c3770a1
-MD5 f82e63a6b814baa852ef0e455822aad2 ChangeLog 574
-RMD160 0af99b12a08f80eb29bc09dee94d4723408957d4 ChangeLog 574
-SHA256 cdaddc81ca0ebae828a27166f98f5e88e4fb3a069e5d2bbc4884a3b89c3770a1 ChangeLog 574
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-linux-gazette-all-113 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-linux-gazette-all-113 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-linux-gazette-all-113 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-linux-gazette-all-129 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-linux-gazette-all-129 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-linux-gazette-all-129 1
+EBUILD linux-gazette-all-132.ebuild 3854 RMD160 4a6ae653b5d2dace0717e919c861f7d0ee1064aa SHA1 f1d7c6b3ed0407bbd98746934cec7d82fa31e4a5 SHA256 65d6609928d69042b41f43453a43827f83d7056b7e8d079e7bfbed7f05b76fca
+MD5 7090c7f28b39047b5b55b7a6370e977e linux-gazette-all-132.ebuild 3854
+RMD160 4a6ae653b5d2dace0717e919c861f7d0ee1064aa linux-gazette-all-132.ebuild 3854
+SHA256 65d6609928d69042b41f43453a43827f83d7056b7e8d079e7bfbed7f05b76fca linux-gazette-all-132.ebuild 3854
+MISC ChangeLog 393 RMD160 b7d3df8bd8b200e4a11b519d1f101b4dc21333e0 SHA1 2f6d992895a381ebe965afe465de80d0c7ac00d6 SHA256 b04d24442f4de6d32090403ceca82e25c7a49a1c161d64f80c0dc787bc1f4441
+MD5 b1e1448a8bf91b6f7a027718185a074d ChangeLog 393
+RMD160 b7d3df8bd8b200e4a11b519d1f101b4dc21333e0 ChangeLog 393
+SHA256 b04d24442f4de6d32090403ceca82e25c7a49a1c161d64f80c0dc787bc1f4441 ChangeLog 393
+MISC metadata.xml 200 RMD160 e618972986cf2dd6c8d0cdf2248299f3a5bd2dc9 SHA1 289d5d94a8c473ae8e9d0c671becbbfbf336c55f SHA256 eb63f2affd0b8e3f5149df2f2f964910eb2127b650919a9e7892fae011e2b22b
+MD5 f97af7d1a35411666ebb1dd880419cf5 metadata.xml 200
+RMD160 e618972986cf2dd6c8d0cdf2248299f3a5bd2dc9 metadata.xml 200
+SHA256 eb63f2affd0b8e3f5149df2f2f964910eb2127b650919a9e7892fae011e2b22b metadata.xml 200
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-linux-gazette-all-113 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-linux-gazette-all-113 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-linux-gazette-all-113 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-linux-gazette-all-129 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-linux-gazette-all-129 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-linux-gazette-all-129 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-linux-gazette-all-132 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-linux-gazette-all-132 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-linux-gazette-all-132 0
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFE55S8/NoSW7FuNV8RAk7IAKC4uinai78jtbRPrPrvX6htWBxVGACfYmBQ
-ZjwdC1UlmAYsDFTFT1vevZU=
-=CTJY
+iD8DBQFFUrRZamhnQswr0vIRAjtaAJ4mmz61xaUovbVqpbioi2/LGhL7uACfcpxQ
+SlbQWFL9YF87r0hnnf8fHeU=
+=ZlmW
 -----END PGP SIGNATURE-----
