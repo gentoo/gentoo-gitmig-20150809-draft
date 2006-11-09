@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.134 2006/11/07 20:39:54 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.135 2006/11/09 08:41:10 vapier Exp $
+
+  09 Nov 2006; Mike Frysinger <vapier@gentoo.org> netpbm-10.36.0.ebuild:
+  Cleanup previous commit and make jbig/urt optional via USE=jbig/rle #154535.
 
   07 Nov 2006; Petteri Räty <betelgeuse@gentoo.org> ChangeLog:
   Added the jpeg2k use flag to make the media-libs/jasper dependency optional.

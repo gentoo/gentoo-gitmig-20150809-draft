@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.36.0.ebuild,v 1.3 2006/11/07 20:39:54 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.36.0.ebuild,v 1.4 2006/11/09 08:41:10 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils multilib
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="svga jpeg jpeg2k tiff png xml zlib"
+IUSE="jbig jpeg jpeg2k png rle svga tiff xml zlib"
 
 DEPEND="jpeg? ( >=media-libs/jpeg-6b )
 	jpeg2k? ( media-libs/jasper )
@@ -22,8 +22,8 @@ DEPEND="jpeg? ( >=media-libs/jpeg-6b )
 	xml? ( dev-libs/libxml2 )
 	zlib? ( sys-libs/zlib )
 	svga? ( media-libs/svgalib )
-	media-libs/jbigkit
-	media-libs/urt"
+	jbig? ( media-libs/jbigkit )
+	rle? ( media-libs/urt )"
 
 netpbm_libtype() {
 	case ${CHOST} in
@@ -42,11 +42,11 @@ netpbm_ldshlib() {
 	esac
 }
 netpbm_config() {
-	use $1 && echo -l${2:-$1} || echo NONE
-}
-
-netpbm_jasper() {
-	use !jpeg2k && echo NONE
+	if use $1 ; then
+		[[ $2 != "!" ]] && echo -l${2:-$1}
+	else
+		echo NONE
+	fi
 }
 
 src_unpack() {
@@ -82,13 +82,11 @@ src_unpack() {
 	ZLIB = $(netpbm_config zlib z)
 	LINUXSVGALIB = $(netpbm_config svga vga)
 	XML2_LIBS = $(netpbm_config xml xml2)
-
-	# Use system versions instead of bundled
 	JBIGLIB = -ljbig
-	JBIGHDR_DIR =
+	JBIGHDR_DIR = $(netpbm_config jbig "!")
 	JASPERLIB = -ljasper
-	JASPERHDR_DIR = $(netpbm_jasper)
-	URTLIB = -lrle
+	JASPERHDR_DIR = $(netpbm_config jpeg2k "!")
+	URTLIB = $(netpbm_config rle)
 	URTHDR_DIR =
 	EOF
 }
