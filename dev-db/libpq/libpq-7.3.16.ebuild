@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/libpq-7.3.16.ebuild,v 1.2 2006/11/09 17:48:09 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/libpq-7.3.16.ebuild,v 1.3 2006/11/09 18:04:27 chtekk Exp $
 
 inherit eutils gnuconfig flag-o-matic toolchain-funcs
 
@@ -14,7 +14,7 @@ LICENSE="POSTGRESQL"
 SLOT="3"
 IUSE="kerberos nls pam pg-intdatetime readline ssl zlib"
 
-RDEPEND="!<=dev-db/postgresql-7.3.15
+RDEPEND="!<=dev-db/postgresql-7.3.15-r1
 		kerberos? ( virtual/krb5 )
 		pam? ( virtual/pam )
 		readline? ( >=sys-libs/readline-4.1 )
