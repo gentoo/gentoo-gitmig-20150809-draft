@@ -1,18 +1,17 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/libdvdread-0.9.7.ebuild,v 1.3 2006/11/09 04:17:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/libdvdread-0.9.7.ebuild,v 1.4 2006/11/09 04:24:36 vapier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.9"
-
 inherit eutils libtool autotools
 
-DESCRIPTION="Provides a simple foundation for reading DVD-Video images."
-SRC_URI="http://www.dtek.chalmers.se/groups/dvd/dist/${P}.tar.gz"
+DESCRIPTION="Provides a simple foundation for reading DVD-Video images"
 HOMEPAGE="http://www.dtek.chalmers.se/groups/dvd/"
+SRC_URI="http://www.dtek.chalmers.se/groups/dvd/dist/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 IUSE=""
 
@@ -21,11 +20,8 @@ DEPEND=">=media-libs/libdvdcss-1.1.1"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	epatch "${FILESDIR}/${P}-udfsymbols.patch"
-
+	epatch "${FILESDIR}"/${P}-udfsymbols.patch
 	eautoreconf
-	elibtoolize
 }
 
 src_compile() {
@@ -36,12 +32,11 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die "make install failed"
-
-	dobin src/.libs/*  # install executables
-	cd ${D}usr/bin
-	mv ./ifo_dump ./ifo_dump_dvdread
-
-	cd ${S}
+	emake install DESTDIR="${D}" || die "make install failed"
 	dodoc AUTHORS ChangeLog NEWS README TODO
+
+	# install executables
+	dobin src/.libs/* || die
+	cd "${D}"/usr/bin
+	mv ifo_dump ifo_dump_dvdread || die
 }
