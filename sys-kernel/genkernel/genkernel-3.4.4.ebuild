@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.4.ebuild,v 1.1 2006/10/25 22:56:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.4.ebuild,v 1.2 2006/11/09 14:39:16 wolf31o2 Exp $
 
 inherit eutils
 
@@ -23,11 +23,12 @@ SRC_URI="http://dev.gentoo.org/~wolf31o2/sources/genkernel/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
-#KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
+#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE="ibm"
 
 DEPEND="sys-fs/e2fsprogs"
+RDEPEND="${DEPEND} app-arch/cpio"
 
 src_unpack() {
 	unpack ${P}.tar.bz2

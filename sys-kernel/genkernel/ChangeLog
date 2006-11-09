@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.154 2006/10/25 22:56:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.155 2006/11/09 14:39:16 wolf31o2 Exp $
+
+  09 Nov 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  genkernel-3.4.1.ebuild, -genkernel-3.4.2.ebuild, -genkernel-3.4.3.ebuild,
+  genkernel-3.4.4.ebuild:
+  Marking stable since it is required for 2.6.18 support. This closes bug
+  #148498 and bug #153801. Cleaning up older ebuilds.
 
 *genkernel-3.4.4 (25 Oct 2006)
 
