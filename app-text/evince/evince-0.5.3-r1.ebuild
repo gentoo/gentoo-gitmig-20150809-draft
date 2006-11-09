@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.5.3-r1.ebuild,v 1.10 2006/10/20 22:21:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.5.3-r1.ebuild,v 1.11 2006/11/09 02:41:13 cardoe Exp $
 
 inherit eutils gnome2
 
@@ -19,7 +19,8 @@ RDEPEND="
 		app-text/tetex
 		t1lib? ( >=media-libs/t1lib-5.0.0 )
 	)
-	dbus? ( >=sys-apps/dbus-0.33 )
+	dbus? ( || ( >=dev-libs/dbus-glib-0.71
+		( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.33 ) ) )
 	tiff? ( >=media-libs/tiff-3.6 )
 	>=app-text/poppler-bindings-0.5.2
 	>=dev-libs/glib-2

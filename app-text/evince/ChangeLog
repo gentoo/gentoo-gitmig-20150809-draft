@@ -1,6 +1,10 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.70 2006/10/22 16:25:47 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.71 2006/11/09 02:41:13 cardoe Exp $
+
+  09 Nov 2006; Doug Goldstein <cardoe@gentoo.org> evince-0.5.3-r1.ebuild,
+  evince-0.6.0.ebuild, evince-0.6.1.ebuild:
+  Update D-Bus depends to new bindings
 
   22 Oct 2006; Daniel Gryniewicz <dang@gentoo.org>
   -files/evince-0.4.0-display-menu.patch, -files/evince-0.4.0-no-tiff.patch,
