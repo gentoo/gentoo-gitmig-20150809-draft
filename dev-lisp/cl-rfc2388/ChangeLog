@@ -1,6 +1,13 @@
 # ChangeLog for dev-lisp/cl-rfc2388
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rfc2388/ChangeLog,v 1.4 2005/05/24 18:48:35 mkennedy Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rfc2388/ChangeLog,v 1.5 2006/11/09 04:20:01 mkennedy Exp $
+
+*cl-rfc2388-0.9.20060727 (09 Nov 2006)
+
+  09 Nov 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/20060727-sbcl-external-format.patch,
+  +cl-rfc2388-0.9.20060727.ebuild:
+  New upstream version.
 
   24 May 2005; <mkennedy@gentoo.org> cl-rfc2388-0.9.ebuild:
   Keywording ~sparc
