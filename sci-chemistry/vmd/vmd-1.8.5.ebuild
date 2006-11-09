@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.5.ebuild,v 1.1 2006/08/26 14:56:33 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.5.ebuild,v 1.2 2006/11/09 14:08:51 markusle Exp $
 
 inherit eutils toolchain-funcs python
 
@@ -95,7 +95,7 @@ src_unpack() {
 		-e "s:LINUXAMD64:LINUX:g" \
 		-i ${S}/bin/vmd || die "failed setting up vmd wrapper script"
 
-	local myconfig="LINUX OPENGL FLTK TK TCL PTHREADS PYTHON"
+	local myconfig="LINUX OPENGL FLTK TK TCL PTHREADS PYTHON IMD"
 
 	rm -f configure.options && echo $myconfig >> configure.options
 
