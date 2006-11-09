@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.27 2006/10/24 09:08:36 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.28 2006/11/09 03:09:32 augustus Exp $
+
+*nvidia-drivers-1.0.9742 (09 Nov 2006)
+*nvidia-drivers-1.0.9629 (09 Nov 2006)
+
+  09 Nov 2006; Kristopher Kersey <augustus@gentoo.org>
+  +nvidia-drivers-1.0.9629.ebuild, +nvidia-drivers-1.0.9742.ebuild:
+  Added new stable driver 1.0.9629 and unstable driver 1.0.9742.
 
   24 Oct 2006; Simon Stelling <blubb@gentoo.org>
   nvidia-drivers-1.0.8776.ebuild:
