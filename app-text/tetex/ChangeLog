@@ -1,6 +1,11 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.133 2006/11/08 22:44:46 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.134 2006/11/09 00:09:28 fmccor Exp $
+
+  08 Nov 2006; Ferris McCormick <fmccor@gentoo.org> tetex-3.0-r3.ebuild,
+  tetex-3.0_p1-r3.ebuild:
+  Stable sparc for the version I thought I was making stable --- Bug #154489 ---
+  thanks to opfer@gentoo.org for pointing this out to me.
 
   08 Nov 2006; Timothy Redaelli <drizzt@gentoo.org> tetex-3.0_p1-r3.ebuild:
   Stable on ppc. Bug 154489.
