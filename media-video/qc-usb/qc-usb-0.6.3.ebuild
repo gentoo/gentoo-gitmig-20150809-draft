@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/qc-usb-0.6.3.ebuild,v 1.7 2006/05/03 22:56:02 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/qc-usb-0.6.3.ebuild,v 1.8 2006/11/09 15:00:59 dsd Exp $
 
 inherit linux-mod eutils multilib
 
@@ -31,6 +31,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-linux-2.6.16.patch
 	convert_to_m ${S}/Makefile
 	epatch ${FILESDIR}/qc-usb-gcc4.patch
+	epatch ${FILESDIR}/qc-usb-linux-2.6.18-1.patch
+	epatch ${FILESDIR}/qc-usb-linux-2.6.18-2.patch
 }
 
 src_install() {

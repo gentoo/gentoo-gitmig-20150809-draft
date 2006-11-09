@@ -1,6 +1,9 @@
 # ChangeLog for media-video/qc-usb
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/ChangeLog,v 1.18 2006/10/20 19:07:01 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/ChangeLog,v 1.19 2006/11/09 15:00:59 dsd Exp $
+
+  09 Nov 2006; Daniel Drake <dsd@gentoo.org> qc-usb-0.6.3.ebuild:
+  Backport 2.6.18 fix to stable tree
 
   20 Oct 2006; Stefan Schweizer <genstef@gentoo.org>
   +files/qc-usb-linux-2.6.18-1.patch, +files/qc-usb-linux-2.6.18-2.patch,
