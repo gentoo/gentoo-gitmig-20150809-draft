@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.8.ebuild,v 1.1 2006/11/08 20:43:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.8.ebuild,v 1.2 2006/11/09 13:00:37 kloeri Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 
@@ -93,7 +93,7 @@ src_unpack() {
 
 	linguas
 	for X in ${linguas}; do
-		[[ ${X} != en ]] && xpi_unpack firefox-${X}-${PV}.xpi
+		[[ ${X} != en ]] && xpi_unpack ${P}-${X}.xpi
 	done
 
 	# Apply our patches
@@ -213,7 +213,7 @@ src_install() {
 
 	linguas
 	for X in ${linguas}; do
-		[[ ${X} != en ]] && xpi_install ${WORKDIR}/firefox-${X}-${PV}
+		[[ ${X} != en ]] && xpi_install ${WORKDIR}/${P}-${X}
 	done
 
 	local LANG=${linguas%% *}

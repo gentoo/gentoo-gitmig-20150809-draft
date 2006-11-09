@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.210 2006/11/09 00:36:01 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.211 2006/11/09 13:00:37 kloeri Exp $
+
+  09 Nov 2006; Bryan Østergaard <kloeri@gentoo.org>
+  mozilla-firefox-1.5.0.8.ebuild:
+  Fix LINGUAS support, bug 154547.
 
   09 Nov 2006; Bryan Østergaard <kloeri@gentoo.org>
   mozilla-firefox-2.0.ebuild:
