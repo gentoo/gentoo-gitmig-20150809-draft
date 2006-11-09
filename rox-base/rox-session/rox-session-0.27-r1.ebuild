@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.27-r1.ebuild,v 1.1 2006/11/08 14:53:23 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.27-r1.ebuild,v 1.2 2006/11/09 17:02:44 lack Exp $
 
 # ROX-Session-0.27 now is compatible with dbus >=0.3
 # This version is all python, no more compiling
@@ -23,7 +23,7 @@ MY_PN="ROX-Session"
 APPNAME=${MY_PN}
 
 pkg_setup() {
-	if ! has_version dev-python/dbus-python -a \
+	if ! has_version dev-python/dbus-python && \
 		! built_with_use sys-apps/dbus python
 	then
 		einfo "Rox-Session requires dbus to be built with python support."
