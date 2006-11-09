@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.ebuild,v 1.7 2006/10/31 20:32:08 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.ebuild,v 1.8 2006/11/09 00:36:01 kloeri Exp $
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime mozextension autotools
 
@@ -89,7 +89,7 @@ pkg_setup(){
 
 	[[ `uname -m` = "ppc64" ]] && die "Building on a ppc64 host requires linux32."
 
-
+	use moznopango && warn_mozilla_launcher_stub
 }
 
 src_unpack() {
