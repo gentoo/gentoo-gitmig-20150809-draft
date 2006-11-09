@@ -1,0 +1,8 @@
+# ChangeLog for x11-misc/obmenu
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obmenu/ChangeLog,v 1.1 2006/11/09 02:26:05 omp Exp $
+
+  09 Nov 2006; David Shakaryan <omp@gentoo.org> +metadata.xml,
+  +obmenu-1.0.ebuild:
+  Add x11-misc/obmenu to tree. Initial ebuild by me.
+
