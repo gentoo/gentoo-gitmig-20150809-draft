@@ -1,13 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2315 2006/11/09 04:56:21 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2316 2006/11/09 15:00:30 beandog Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 
 # Keep it sorted.
 
-app-accessibility/dasher:cairo - adds cairo support
 app-accessibility/festival:asterisk - adds a new command named tts_textasterisk that is required by net-misc/asterisk to communicate with the Festival server
 app-accessibility/festival:mbrola - Adds support for mbrola voices
 app-accessibility/freetts:mbrola - Adds support for mbrola voices
@@ -193,11 +192,9 @@ app-office/imposter:iksemel - Enable externel iksemel parsing support.
 app-office/kmymoney2:hbci - Adds HBCI online banking support
 app-office/openoffice:binfilter - Enable support for legacy StarOffice 5.x and earlier file formats
 app-office/openoffice:branding - Enable Gentoo branded splash screen
-app-office/openoffice:cairo - Enable cairo support
 app-office/openoffice:odk - Build the Office Development Kit
 app-office/openoffice:sound - Enable sound support through portaudio and libsndfile
 app-office/openoffice:webdav - Enable webdav support
-app-office/scribus:cairo - Enable cairo support.
 app-office/tpp:figlet - Installs app-misc/figlet to support the --huge command
 app-pda/multisync:gnokii - Address synchronization with mobile phones via Gnokii.
 app-pda/multisync:irmc - Adds support for Mobile Client synchronization via IrDa/IrMC/Bluetooth (eg: SonyEricsson T39/T68i)
@@ -226,7 +223,6 @@ app-text/hyperestraier:mecab - Enable mecab support for Estraier
 app-text/namazu:kakasi - Enable kakasi support for namazu
 app-text/noweb:icon - Enable icon language support for noweb
 app-text/pdftk:nodrm - Decrypt a document with the user_pw even if it has an owner_pw set
-app-text/poppler-bindings:cairo - Enable the cairo backend for poppler
 app-text/sword-modules:intl - Enable different languages
 app-text/sword:icu - Enable icu support for sword
 app-text/sword:lucene - Enable lucene support for faster searching
@@ -301,7 +297,6 @@ dev-java/diablo-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength
 dev-java/fop:jai - Enable jai support
 dev-java/fop:jimi - Enable jimi support
 dev-java/gjdoc:xmldoclet - Also build support for the xml doclet that generates output in xml instead of the traditional html javadoc.
-dev-java/gnu-classpath:cairo - Compile classpath gtk-peer with support for cairo
 dev-java/gnu-classpath:dssi - Enable the DSSI midi synthesizer provider
 dev-java/hibernate:c3p0 - Enable c3p0 support
 dev-java/hibernate:dbcp - Enable Database Connection Pooling support
@@ -327,7 +322,6 @@ dev-java/quartz:struts - Enable struts support
 dev-java/rxtx:lfd - Installs and uses LockFileServer daemon (lfd)
 dev-java/sun-jaxp-bin:dom4j - Enable dom4j
 dev-java/sun-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength Policy files
-dev-java/swt:cairo - Enable Cairo rendering backend
 dev-java/xstream:java5 - Enable Java 5 specific features
 dev-lang/gdl:hdf - Adds support for the Hierarchical Data Format
 dev-lang/gdl:hdf5 - Adds support for the Hierarchical Data Format v 5
@@ -458,7 +452,6 @@ dev-ruby/ruby-sdl:image - enable sdl-image support
 dev-ruby/ruby-sdl:mixer - enable sdl-mixer support
 dev-ruby/ruby-sdl:sge - enable sdl-sge support
 dev-scheme/drscheme:backtrace - support GC backtrace dumps
-dev-scheme/drscheme:cairo - Enable cairo support.
 dev-scheme/drscheme:sgc - use Senora GC instead of the Boehm GC
 dev-scheme/gauche-gl:cg - enable NVidia Cg binding
 dev-scheme/gauche-gtk:glgd - enable GL graph draw
@@ -471,7 +464,6 @@ dev-util/cvs:server - Enable server support
 dev-util/debootstrap:nodpkg - Don't install dpkg (useful for building a non-debian system)
 dev-util/eclipse-sdk:atk - Enable atk (accessibility) support
 dev-util/eclipse-sdk:branding - Enable Gentoo branded splash screen
-dev-util/eclipse-sdk:cairo - adds cairo support
 dev-util/eclipse-sdk:nodoc - Don't include documentation
 dev-util/eclipse-sdk:nosrc - Don't include source code
 dev-util/eclipse-sdk:no-seamonkey - Don't use seamonkey for embedded browser support
@@ -743,7 +735,6 @@ media-gfx/graphicsmagick:depth16 - use 16-bit color depth as default
 media-gfx/graphicsmagick:depth32 - use 32-bit color depth as default
 media-gfx/graphicsmagick:gs - enable ghostscript support
 media-gfx/graphicsmagick:lzw - enable LZW support
-media-gfx/graphviz:cairo - enable cairo support
 media-gfx/graphviz:dynagraph - enable dynagraph support
 media-gfx/gwenview:kipi - Support for the KDE Image Plugin Interface.
 media-gfx/imagemagick:fpx - enable libfpx support
@@ -1833,7 +1824,6 @@ x11-drivers/nvidia-drivers:dlloader - Installs dynamically linked synaptics Xorg
 x11-drivers/nvidia-legacy-drivers:dlloader - Installs dynamically linked synaptics Xorg driver
 x11-drivers/synaptics:dlloader - Installs dynamically linked synaptics Xorg driver
 x11-libs/cairo:glitz - Build with glitz support
-x11-libs/evas:cairo - Build the cairo graphical engine
 x11-libs/fltk:noxft - Disables fltk; use for non-english characters
 x11-libs/gtkmathview:t1lib - Enable t1lib support
 x11-libs/libmatchbox:pango - Enable pango support
@@ -1847,7 +1837,6 @@ x11-libs/wxGTK:wxgtk1 - Add gtk1 support in addition to optional gtk2ansi and gt
 x11-misc/adesklets:ctrlmenu - force CTRL to be pressed to fire context menu
 x11-misc/linuxwacom:dlloader - Installs dynamically linked linuxwacom Xorg driver
 x11-misc/linuxwacom:sdk - Builds wacom X11 driver against installed X11 SDK
-x11-misc/matchbox-keyboard:cairo - Enable cairo support
 x11-misc/openclipart:gzip - Compresses clip art using gzip
 x11-misc/rss-glx:xscreensaver - Enable detection of xscreensavers
 x11-misc/vnc2swf:x11vnc - Install script that depends on x11vnc
