@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.195 2006/11/05 00:20:01 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.196 2006/11/09 16:05:49 joshuabaergen Exp $
+
+*xorg-server-1.1.1-r2 (09 Nov 2006)
+
+  09 Nov 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/1.1.1-fix_acpi_tokenize.patch, +xorg-server-1.1.1-r2.ebuild:
+  Fix X crashes when opening/closing laptop lids on some laptops.  (Bug #152184,
+  Wendall Cada for the report)
 
   05 Nov 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   +files/1.2.99.0-fix-sysconfdir-references.patch:
