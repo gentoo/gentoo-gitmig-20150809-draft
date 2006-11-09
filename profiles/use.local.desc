@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2312 2006/11/08 21:44:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2313 2006/11/09 00:31:44 kloeri Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -668,6 +668,7 @@ mail-client/mail-notification:sylpheed - Enable support for MH mailboxes used by
 mail-client/mozilla-thunderbird:branding - Enable official branding
 mail-client/mozilla-thunderbird:mozcalendar - Enable build in calendar (also firefox, thunderbird)
 mail-client/mozilla-thunderbird:mozdom - Enable mozilla DOM
+mail-client/mozilla-thunderbird:moznopango - Disable pango during runtime
 mail-client/mozilla-thunderbird:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
 mail-client/mutt:buffysize - Enables buffysize workaround, see bug 72422
 mail-client/mutt:gpgme - Enable support for gpgme
