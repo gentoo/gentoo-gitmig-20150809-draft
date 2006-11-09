@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/glipper
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/ChangeLog,v 1.1 2006/11/09 15:05:28 swegener Exp $
+
+*glipper-0.89 (09 Nov 2006)
+
+  09 Nov 2006; Sven Wegener <swegener@gentoo.org>
+  +files/0.89-as-needed.patch, +metadata.xml, +glipper-0.89.ebuild:
+  Initial commit, bug #134991. Written by Paul Bredbury, with some
+  modifications by me.
