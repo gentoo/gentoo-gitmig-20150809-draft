@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla-launcher.eclass,v 1.14 2006/11/09 00:07:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla-launcher.eclass,v 1.15 2006/11/09 04:04:20 cardoe Exp $
 
 inherit nsplugins multilib
 
@@ -70,7 +70,7 @@ install_mozilla_launcher_stub() {
 
 	dodir /usr/bin
 
-	if [[ ${PN: -4} == "-bin" ]]  | use ! moznopango; then
+	if [[ ${PN: -4} == "-bin" ]]  || ! use moznopango; then
 	cat <<EOF >${D}/usr/bin/${name}
 #!/bin/sh
 #
