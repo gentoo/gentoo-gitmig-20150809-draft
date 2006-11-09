@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.4.1.ebuild,v 1.4 2006/11/04 23:20:52 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.4.1.ebuild,v 1.5 2006/11/09 15:15:34 stefaan Exp $
 
 inherit eutils linux-mod versionator toolchain-funcs
 
@@ -24,6 +24,9 @@ CONFIG_CHECK="!DEBUG_RODATA"
 DEBUG_RODATA_ERROR="OpenAFS is incompatible with linux' CONFIG_DEBUG_RODATA option"
 
 pkg_setup() {
+	if kernel_is ge 2 6 18; then
+		die "This version of OpenAFS does not work with linux >= 2.6.18"
+	fi
 	linux-mod_pkg_setup
 }
 
