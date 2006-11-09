@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-power-manager
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.22 2006/11/09 02:30:34 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.23 2006/11/09 05:41:00 leio Exp $
+
+  09 Nov 2006; Mart Raudsepp <leio@gentoo.org>
+  gnome-power-manager-2.16.2.ebuild:
+  Adjust some dependencies to not allow downgrading of them as low to break
+  ABI expectations silently used at compile time by the package.
 
 *gnome-power-manager-2.16.2 (09 Nov 2006)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.16.2.ebuild,v 1.1 2006/11/09 02:30:34 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.16.2.ebuild,v 1.2 2006/11/09 05:41:00 leio Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="doc libnotify"
 
 RDEPEND=">=dev-libs/glib-2.6.0
-		 >=x11-libs/gtk+-2.6.0
+		 >=x11-libs/gtk+-2.10.0
 		 >=gnome-base/libgnome-2.14.0
 		 >=gnome-base/libgnomeui-2.10.0
 		 >=sys-apps/dbus-0.61
@@ -24,10 +24,10 @@ RDEPEND=">=dev-libs/glib-2.6.0
 		 >=x11-libs/libwnck-2.10.0
 		 >=x11-libs/cairo-1.0.0
 		 >=gnome-base/gconf-2
-		x11-libs/libX11
-		x11-libs/libXext
+		 x11-libs/libX11
+		 x11-libs/libXext
 		 libnotify? (
-		 				>=x11-libs/libnotify-0.4.2
+						>=x11-libs/libnotify-0.4.3
 						>=x11-misc/notification-daemon-0.2.1
 					)"
 DEPEND="${RDEPEND}
