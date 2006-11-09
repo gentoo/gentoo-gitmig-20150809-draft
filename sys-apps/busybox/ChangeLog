@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.113 2006/09/27 17:33:03 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.114 2006/11/09 01:27:10 iluxa Exp $
+
+  09 Nov 2006; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
+  busybox-1.2.1.ebuild:
+  Stable on mips
 
   27 Sep 2006; Fernando J. Pereda <ferdy@gentoo.org> busybox-1.2.1.ebuild:
   Stable on alpha wrt bug #149053
