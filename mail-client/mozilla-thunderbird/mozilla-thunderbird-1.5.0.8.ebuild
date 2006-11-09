@@ -1,39 +1,33 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0_alpha1.ebuild,v 1.2 2006/11/09 00:34:04 kloeri Exp $
-
-#
-# There are no linguas supported in alpha builds
-# Anarchy ( Jory A. Pratt )
-#
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.8.ebuild,v 1.1 2006/11/09 00:34:04 kloeri Exp $
 
 unset ALLOWED_FLAGS	 # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib autotools mozextension
 
-#LANGS="bg ca cs da de el en-GB es-AR es-ES eu fi fr ga-IE gu-IN he hu it ja ko lt mk nb-NO nl pa-IN pl pt-BR ru sk sl sv-SE tr zh-CN"
-#SHORTLANGS="es-ES ga-IE nb-NO sv-SE"
-PVER="1.0"
-MY_PV=${PV/_alpha1/a1}
+LANGS="bg ca cs da de el en-GB es-AR es-ES eu fi fr ga-IE gu-IN he hu it ja ko lt mk nb-NO nl pa-IN pl pt-BR ru sk sl sv-SE tr zh-CN"
+SHORTLANGS="es-ES ga-IE nb-NO sv-SE"
+PVER="0.1"
 
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="http://www.mozilla.org/projects/thunderbird/"
-SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${MY_PV}/source/thunderbird-${MY_PV}-source.tar.bz2
-	http://gentooexperimental.org/~genstef/dist/${P}-patches-${PVER}.tar.bz2"
+SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/source/thunderbird-${PV}-source.tar.bz2
+	mirror://gentoo/${P}-patches-${PVER}.tar.bz2"
 
 KEYWORDS="~amd64 ~ia64 ~mips ~ppc ~sparc ~x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
-IUSE="ldap crypt branding mozdom"
+IUSE="ldap crypt"
 
-#for X in ${LANGS} ; do
-#	SRC_URI="${SRC_URI} linguas_${X/-/_}? ( mirror://gentoo/thunderbird-${X}-${PV}.xpi )"
-#	IUSE="${IUSE} linguas_${X/-/_}"
-#done
+for X in ${LANGS} ; do
+	SRC_URI="${SRC_URI} linguas_${X/-/_}? ( mirror://gentoo/thunderbird-${X}-${PV}.xpi )"
+	IUSE="${IUSE} linguas_${X/-/_}"
+done
 
-#for X in ${SHORTLANGS} ; do
-#	SRC_URI="${SRC_URI} linguas_${X%%-*}? ( mirror://gentoo/thunderbird-${X}-${PV}.xpi )"
-#	IUSE="${IUSE} linguas_${X%%-*}"
-#done
+for X in ${SHORTLANGS} ; do
+	SRC_URI="${SRC_URI} linguas_${X%%-*}? ( mirror://gentoo/thunderbird-${X}-${PV}.xpi )"
+	IUSE="${IUSE} linguas_${X%%-*}"
+done
 
 RDEPEND=">=www-client/mozilla-launcher-1.39
 	>=dev-libs/nss-3.10
@@ -51,48 +45,49 @@ export BUILD_OFFICIAL=1
 export MOZILLA_OFFICIAL=1
 export MOZ_CO_PROJECT=mail
 
-#linguas() {
-#	linguas=
-#	local LANG
-#	for LANG in ${LINGUAS}; do
-#		if hasq ${LANG} en en_US; then
-#			hasq en ${linguas} || \
-#				linguas="${linguas:+"${linguas} "}en"
-#			continue
-#		elif hasq ${LANG} ${LANGS//-/_}; then
-#			hasq ${LANG//_/-} ${linguas} || \
-#				linguas="${linguas:+"${linguas} "}${LANG//_/-}"
-#			continue
-#		else
-#			local SLANG
-#			for SLANG in ${SHORTLANGS}; do
-#				if [[ ${LANG} == ${SLANG%%-*} ]]; then
-#					hasq ${SLANG} ${linguas} || \
-#						linguas="${linguas:+"${linguas} "}${SLANG}"
-#					continue 2
-#				fi
-#			done
-#		fi
-#		ewarn "Sorry, but mozilla-thunderbird does not support the ${LANG} LINGUA"
-#	done
-#}
+linguas() {
+	linguas=
+	local LANG
+	for LANG in ${LINGUAS}; do
+		if hasq ${LANG} en en_US; then
+			hasq en ${linguas} || \
+				linguas="${linguas:+"${linguas} "}en"
+			continue
+		elif hasq ${LANG} ${LANGS//-/_}; then
+			hasq ${LANG//_/-} ${linguas} || \
+				linguas="${linguas:+"${linguas} "}${LANG//_/-}"
+			continue
+		else
+			local SLANG
+			for SLANG in ${SHORTLANGS}; do
+				if [[ ${LANG} == ${SLANG%%-*} ]]; then
+					hasq ${SLANG} ${linguas} || \
+						linguas="${linguas:+"${linguas} "}${SLANG}"
+					continue 2
+				fi
+			done
+		fi
+		ewarn "Sorry, but mozilla-thunderbird does not support the ${LANG} LINGUA"
+	done
+}
 
 pkg_setup() {
 	use moznopango && warn_mozilla_launcher_stub
 }
 
 src_unpack() {
-	unpack thunderbird-${MY_PV}-source.tar.bz2 ${P}-patches-${PVER}.tar.bz2
+	unpack thunderbird-${PV}-source.tar.bz2 ${P}-patches-${PVER}.tar.bz2
 
-#	linguas
-#	for X in ${linguas}; do
-#		[[ ${X} != en ]] && xpi_unpack thunderbird-${X}-${PV}.xpi
-#	done
+	linguas
+	for X in ${linguas}; do
+		[[ ${X} != en ]] && xpi_unpack thunderbird-${X}-${PV}.xpi
+	done
 
 	cd ${S} || die "cd failed"
-
 	# Apply our patches
-	EPATCH_FORCE="yes" epatch "${WORKDIR}"/patch
+	EPATCH_SUFFIX="patch" \
+	EPATCH_FORCE="yes" \
+	epatch ${WORKDIR}/patch
 
 	# Fix a compilation issue using the 32-bit userland with 64-bit kernel on
 	# PowerPC, because with that configuration, it detects a ppc64 system.
@@ -123,21 +118,12 @@ src_compile() {
 	# tb-specific settings
 	mozconfig_use_enable ldap
 	mozconfig_use_enable ldap ldap-experimental
+	mozconfig_annotate '' --enable-extensions=default
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
 	mozconfig_annotate '' --with-user-appdir=.thunderbird
 	mozconfig_annotate '' --with-system-nspr
 	mozconfig_annotate '' --with-system-nss
-
-	# Bug #72667
-	if use mozdom; then
-		mozconfig_annotate '' --enable-extensions=default,inspector
-	else
-		mozconfig_annotate '' --enable-extensions=default
-	fi
-
-	if use branding; then
-		mozconfig_annotate '' --enable-official-branding
-	fi
+	mozconfig_annotate '' --enable-official-branding
 
 	# Finalize and report settings
 	mozconfig_final
@@ -153,15 +139,25 @@ src_compile() {
 	####################################
 	append-flags -freorder-blocks -fno-reorder-functions
 
+	# Export CPU_ARCH_TEST	as it is not exported by default.
+	case $(tc-arch) in
+	amd64) [[ ${ABI} == "x86" ]] && CPU_ARCH_TEST="x86" || CPU_ARCH_TEST="x86_64" ;;
+	ia64) CPU_ARCH_TEST="ia64" ;;
+	ppc) CPU_ARCH_TEST="ppc" ;;
+	*) CPU_ARCH_TEST=$(tc-arch) ;;
+	esac
+
+	export CPU_ARCH_TEST
+
 	CPPFLAGS="${CPPFLAGS}" \
 	CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" \
-	econf || die "econf failed"
+	econf || die
 
 	# This removes extraneous CFLAGS from the Makefiles to reduce RAM
 	# requirements while compiling
 	edit_makefiles
 
-	emake || die "emake failed"
+	emake || die
 }
 
 pkg_preinst() {
@@ -183,19 +179,19 @@ src_install() {
 	dodir ${MOZILLA_FIVE_HOME}
 	cp -RL "${S}/dist/bin/"* "${D}${MOZILLA_FIVE_HOME}" || die "Copy of files failed"
 
-#	linguas
-#	for X in ${linguas}; do
-#		[[ ${X} != en ]] && xpi_install ${WORKDIR}/thunderbird-${X}-${PV}
-#	done
+	linguas
+	for X in ${linguas}; do
+		[[ ${X} != en ]] && xpi_install ${WORKDIR}/thunderbird-${X}-${PV}
+	done
 
-#	local LANG=${linguas%% *}
-#	if [[ ${LANG} != "" && ${LANG} != "en" ]]; then
-#		ebegin "Setting default locale to ${LANG}"
-#		sed -i "s:pref(\"general.useragent.locale\", \"en-US\"):pref(\"general.useragent.locale\", \"${LANG}\"):" \
-#			${D}${MOZILLA_FIVE_HOME}/defaults/pref/all-thunderbird.js \
-#			${D}${MOZILLA_FIVE_HOME}/defaults/pref/all-l10n.js
-#		eend $? || die "sed failed to change locale"
-#	fi
+	local LANG=${linguas%% *}
+	if [[ ${LANG} != "" && ${LANG} != "en" ]]; then
+		ebegin "Setting default locale to ${LANG}"
+		sed -i "s:pref(\"general.useragent.locale\", \"en-US\"):pref(\"general.useragent.locale\", \"${LANG}\"):" \
+			${D}${MOZILLA_FIVE_HOME}/defaults/pref/all-thunderbird.js \
+			${D}${MOZILLA_FIVE_HOME}/defaults/pref/all-l10n.js
+		eend $? || die "sed failed to change locale"
+	fi
 
 	# Create directory structure to support portage-installed extensions.
 	# See update_chrome() in mozilla-launcher
@@ -234,7 +230,6 @@ src_install() {
 
 	# Warn user that remerging enigmail is neccessary on USE=crypt
 	use crypt && ewarn "Please remerge x11-plugins/enigmail after updating mozilla-thunderbird."
-
 }
 
 pkg_postinst() {
