@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6224 2006/11/09 18:04:11 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6225 2006/11/09 20:39:03 dev-zero Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ## 
+
+# Tiziano Müller <dev-zero@gentoo.org> (09 Nov 2006)
+# masked pending unresolved bugs #154320, #93316 et.al.
+# plus upstream bugs & unmaintained since 2002,
+# alternatives are: pgpool, pgpool2
+dev-db/dbbalancer
 
 # Caleb Tennis <caleb@gentoo.org> (09 Nov 2006)
 # Readding dbus support, and masking until dbus goes stable
