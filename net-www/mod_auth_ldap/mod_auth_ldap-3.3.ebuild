@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_ldap/mod_auth_ldap-3.3.ebuild,v 1.7 2006/05/23 20:11:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_ldap/mod_auth_ldap-3.3.ebuild,v 1.8 2006/11/09 22:53:24 kloeri Exp $
 
 inherit eutils apache-module
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.muquit.com/muquit/software/${PN}/${PN}${PV}.tar.gz"
 KEYWORDS="ppc ppc64 ~sparc x86"
 LICENSE="as-is"
 SLOT="0"
-IUSE="apache2 berkdb disk-cache gdbm mem-cache"
+IUSE="apache2 berkdb diskcache gdbm memcache"
 
 DEPEND=">=net-nds/openldap-2.0.25"
 RDEPEND=""
@@ -31,11 +31,11 @@ need_apache
 src_compile() {
 	local myconf="--with-apache-dir=/usr --with-ldap-dir=/usr"
 
-	if ! use disk-cache; then
+	if ! use diskcache; then
 		if use berkdb || use gdbm; then
-			ewarn "Enabling disk-cache for berkdb/gdbm support"
+			ewarn "Enabling diskcache for berkdb/gdbm support"
 		else
-			myconf="${myconf} --without-disk-cache"
+			myconf="${myconf} --without-diskcache"
 		fi
 	fi
 
@@ -45,10 +45,10 @@ src_compile() {
 		myconf="${myconf} --with-apache-ver=1 --with-apxs=${APXS1}"
 	fi
 
-	myconf="${myconf} `use_with gdbm` `use_with berkdb db` `use_with mem-cache`"
+	myconf="${myconf} `use_with gdbm` `use_with berkdb db` `use_with memcache`"
 
 	econf ${myconf} || die "econf failed"
 
-	use mem-cache && emake libghthash.a
+	use memcache && emake libghthash.a
 	emake || die "emake failed"
 }
