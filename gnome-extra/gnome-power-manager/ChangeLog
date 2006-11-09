@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gnome-power-manager
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.21 2006/11/07 20:46:17 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.22 2006/11/09 02:30:34 metalgod Exp $
+
+*gnome-power-manager-2.16.2 (09 Nov 2006)
+
+  09 Nov 2006; Luis Medinas <metalgod@gentoo.org>
+  +gnome-power-manager-2.16.2.ebuild:
+  Version Bump. This release fixes bug #151493. Update Homepage and libnotify
+  dependency.
 
   07 Nov 2006; Daniel Gryniewicz <dang@gentoo.org>
   gnome-power-manager-2.14.3.ebuild, gnome-power-manager-2.14.3-r1.ebuild,
