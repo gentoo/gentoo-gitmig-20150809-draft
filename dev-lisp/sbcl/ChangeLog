@@ -1,6 +1,65 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.94 2006/09/30 04:56:25 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.95 2006/11/09 03:22:23 mkennedy Exp $
+
+*sbcl-0.9.18 (09 Nov 2006)
+
+  09 Nov 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  -files/0.9.7/README.Gentoo,
+  -files/0.9.7/customize-target-features.lisp-suffix,
+  -files/0.9.7/customize-target-features.lisp-prefix,
+  -files/0.9.7/install-clc.lisp, -files/0.9.7/sbcl.sh,
+  -files/0.9.7/sbcl-gentoo.patch, -files/0.9.7/sbclrc,
+  -files/0.9.8/README.Gentoo,
+  -files/0.9.8/customize-target-features.lisp-prefix,
+  -files/0.9.8/customize-target-features.lisp-suffix,
+  -files/0.9.8/install-clc.lisp, -files/0.9.8/sbcl.sh,
+  -files/0.9.8/sbcl-gentoo.patch, -files/0.9.8/sbclrc,
+  -files/0.9.9/README.Gentoo,
+  -files/0.9.9/customize-target-features.lisp-prefix,
+  -files/0.9.9/customize-target-features.lisp-suffix,
+  -files/0.9.9/install-clc.lisp, -files/0.9.9/sbcl.sh,
+  -files/0.9.9/sbcl-gentoo.patch, -files/0.9.9/sbclrc,
+  -files/0.9.11/README.Gentoo,
+  -files/0.9.11/customize-target-features.lisp-prefix,
+  -files/0.9.11/customize-target-features.lisp-suffix,
+  -files/0.9.11/install-clc.lisp, -files/0.9.11/sbcl.sh,
+  -files/0.9.11/sbcl-gentoo.patch, -files/0.9.11/sbclrc,
+  -files/0.9.12/README.Gentoo,
+  -files/0.9.12/customize-target-features.lisp-prefix,
+  -files/0.9.12/customize-target-features.lisp-suffix,
+  -files/0.9.12/disable-tests-gentoo.patch, -files/0.9.12/install-clc.lisp,
+  -files/0.9.12/sbcl.sh, -files/0.9.12/sbclrc, -files/0.9.13/README.Gentoo,
+  -files/0.9.13/customize-target-features.lisp-prefix,
+  -files/0.9.13/customize-target-features.lisp-suffix,
+  -files/0.9.13/disable-tests-gentoo.patch, -files/0.9.13/install-clc.lisp,
+  -files/0.9.13/sbcl.sh, -files/0.9.13/sbclrc,
+  -files/0.9.13/vanilla-module-install-source-gentoo.patch,
+  -files/0.9.14/README.Gentoo,
+  -files/0.9.14/customize-target-features.lisp-prefix,
+  -files/0.9.14/customize-target-features.lisp-suffix,
+  -files/0.9.14/disable-tests-gentoo.patch, -files/0.9.14/install-clc.lisp,
+  -files/0.9.14/sbcl.sh, -files/0.9.14/sbclrc,
+  -files/0.9.14/vanilla-module-install-source-gentoo.patch,
+  -files/0.9.15/README.Gentoo,
+  -files/0.9.15/customize-target-features.lisp-prefix,
+  -files/0.9.15/customize-target-features.lisp-suffix,
+  -files/0.9.15/disable-tests-gentoo.patch, -files/0.9.15/install-clc.lisp,
+  -files/0.9.15/sbcl.sh, -files/0.9.15/sbclrc,
+  -files/0.9.15/vanilla-module-install-source-gentoo.patch,
+  -files/0.9.16/README.Gentoo,
+  -files/0.9.16/customize-target-features.lisp-prefix,
+  -files/0.9.16/customize-target-features.lisp-suffix,
+  -files/0.9.16/disable-tests-gentoo.patch, -files/0.9.16/install-clc.lisp,
+  -files/0.9.16/sbcl.sh, -files/0.9.16/sbclrc,
+  -files/0.9.16/vanilla-module-install-source-gentoo.patch,
+  +files/disable-tests-gentoo.patch,
+  +files/vanilla-module-install-source-gentoo.patch, -sbcl-0.9.7.ebuild,
+  -sbcl-0.9.8.ebuild, -sbcl-0.9.9.ebuild, -sbcl-0.9.11.ebuild,
+  -sbcl-0.9.12.ebuild, -sbcl-0.9.13.ebuild, -sbcl-0.9.14.ebuild,
+  -sbcl-0.9.15.ebuild, -sbcl-0.9.16.ebuild, +sbcl-0.9.18.ebuild:
+  New upstream version; Remove support for Common Lisp Controller; Remove old
+  ebuilds.
 
 *sbcl-0.9.17 (30 Sep 2006)
 
