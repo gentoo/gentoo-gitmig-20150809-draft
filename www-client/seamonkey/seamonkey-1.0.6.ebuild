@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.0.6.ebuild,v 1.1 2006/11/08 21:46:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.0.6.ebuild,v 1.2 2006/11/09 00:41:09 kloeri Exp $
 
 unset ALLOWED_FLAGS  # Stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozcoreconf mozconfig-2 mozilla-launcher makeedit multilib autotools
@@ -34,6 +34,10 @@ DEPEND="${RDEPEND}
 	!www-client/mozilla"
 
 S=${WORKDIR}/mozilla
+
+pkg_setup() {
+	use moznopango && warn_mozilla_launcher_stub
+}
 
 src_unpack() {
 	unpack ${P}.source.tar.bz2 ${P}-patches-${PVER}.tar.bz2
