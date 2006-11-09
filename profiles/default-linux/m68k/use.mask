@@ -61,3 +61,4 @@ ruby
 ocaml
 guile
 lua
+djvu
