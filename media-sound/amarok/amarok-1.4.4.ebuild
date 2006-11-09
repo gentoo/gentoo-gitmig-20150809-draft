@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.4.ebuild,v 1.4 2006/11/08 12:02:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.4.ebuild,v 1.5 2006/11/09 15:19:02 gustavoz Exp $
 
 LANGS="af ar az bg br ca cs cy da de el en_GB es et fi fr ga gl he hi hu is it
 ja ka km ko lt ms nb nl nn pa pl pt pt_BR ro ru rw sk sl sq sr sr@Latn sv ta tg
@@ -23,7 +23,7 @@ SRC_URI="mirror://kde/stable/amarok/${PV}/src/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~sparc ~x86 ~x86-fbsd"
 IUSE="aac kde mysql noamazon opengl postgres
 visualization ipod ifp real njb mtp"
 # kde: enables compilation of the konqueror sidebar plugin
