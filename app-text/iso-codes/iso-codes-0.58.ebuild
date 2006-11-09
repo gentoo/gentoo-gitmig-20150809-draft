@@ -1,7 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/iso-codes-0.58.ebuild,v 1.1 2006/11/02 19:55:04 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/iso-codes-0.58.ebuild,v 1.2 2006/11/09 22:27:27 allanonjl Exp $
 
+WANT_AUTOMAKE="latest"
 inherit eutils autotools
 
 DESCRIPTION="Provides the list of country and language names"
