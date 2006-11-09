@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/libiec61883-1.1.0.ebuild,v 1.3 2006/11/02 13:29:04 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/libiec61883-1.1.0.ebuild,v 1.4 2006/11/09 09:29:22 zzam Exp $
 
-WANT_AUTOMAKE="1.9"
+WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
 
 inherit autotools eutils

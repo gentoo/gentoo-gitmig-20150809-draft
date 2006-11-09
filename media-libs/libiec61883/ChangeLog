@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libiec61883
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/ChangeLog,v 1.15 2006/11/02 13:29:04 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/ChangeLog,v 1.16 2006/11/09 09:29:22 zzam Exp $
+
+  09 Nov 2006; Matthias Schwarzott <zzam@gentoo.org>
+  libiec61883-1.0.0-r1.ebuild, libiec61883-1.1.0.ebuild:
+  Changed automake-dependency to latest.
 
   02 Nov 2006; Matthias Schwarzott <zzam@gentoo.org>
   libiec61883-1.0.0-r1.ebuild, libiec61883-1.1.0.ebuild:

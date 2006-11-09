@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.9.ebuild,v 1.17 2006/11/02 10:45:36 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.9.ebuild,v 1.18 2006/11/09 09:25:36 zzam Exp $
 
-WANT_AUTOMAKE="1.9"
+WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
 
 inherit eutils autotools

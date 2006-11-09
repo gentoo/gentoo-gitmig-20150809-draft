@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvdcss
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.59 2006/11/02 10:45:36 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.60 2006/11/09 09:25:36 zzam Exp $
+
+  09 Nov 2006; Matthias Schwarzott <zzam@gentoo.org> libdvdcss-1.2.9.ebuild:
+  Changed automake-dependency to latest.
 
   02 Nov 2006; Matthias Schwarzott <zzam@gentoo.org> libdvdcss-1.2.9.ebuild:
   Added correct automake-dependency.
