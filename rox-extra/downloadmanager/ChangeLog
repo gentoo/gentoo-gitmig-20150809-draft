@@ -1,6 +1,10 @@
 # ChangeLog for rox-extra/downloadmanager
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/downloadmanager/ChangeLog,v 1.4 2006/11/08 14:44:41 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/downloadmanager/ChangeLog,v 1.5 2006/11/09 17:09:22 lack Exp $
+
+  09 Nov 2006; Jim Ramsay <lack@gentoo.org> downloadmanager-0.1.2-r1.ebuild:
+  Fixed typo = Use '&&' not '-a' if you're not in a [[ ... ]] block, and added
+  missing eutils class
 
 *downloadmanager-0.1.2-r1 (08 Nov 2006)
 
