@@ -1,5 +1,0 @@
-(lambda (list)
-(flet ((enable (x)
-(pushnew x list))
-(disable (x)
-(setf list (remove x list))))
