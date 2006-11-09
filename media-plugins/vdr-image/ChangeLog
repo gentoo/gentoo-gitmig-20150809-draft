@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-image
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/ChangeLog,v 1.13 2006/08/02 19:19:35 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/ChangeLog,v 1.14 2006/11/09 14:48:04 zzam Exp $
+
+  09 Nov 2006; Matthias Schwarzott <zzam@gentoo.org> vdr-image-0.2.4.ebuild,
+  vdr-image-0.2.6-r1.ebuild:
+  Added missing things to RDEPEND.
 
   02 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
   Assigned package to VDR-Project.
