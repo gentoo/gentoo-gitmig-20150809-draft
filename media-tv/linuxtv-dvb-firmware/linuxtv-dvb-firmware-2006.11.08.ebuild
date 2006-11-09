@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-2006.11.08.ebuild,v 1.1 2006/11/08 19:33:50 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-2006.11.08.ebuild,v 1.2 2006/11/09 17:24:59 zzam Exp $
 
 DESCRIPTION="Firmware files needed for operation of some dvb-devices"
 HOMEPAGE="http://www.linuxtv.org"
@@ -10,7 +10,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dvb_cards_sp887x? ( >=app-arch/unshield-0.4 )"
+UNSHIELD_DEPEND=">=app-arch/unshield-0.4"
+DEPEND="dvb_cards_sp887x? ( ${UNSHIELD_DEPEND} )"
 
 RDEPEND=""
 
@@ -153,8 +154,8 @@ FW_URLS=(
 
 SRC_URI=""
 NEGATIVE_USE_FLAGS=""
+NEGATIVE_END_BRACKETS=""
 ALL_URLS=""
-NUMBER_OF_USE_FLAGS=0
 
 for ((CARD=0; CARD < ${#FW_USE_FLAGS[*]}; CARD++)) do
 	URL="${FW_URLS[CARD]}"
@@ -167,7 +168,7 @@ for ((CARD=0; CARD < ${#FW_USE_FLAGS[*]}; CARD++)) do
 
 	IUSE="${IUSE} dvb_cards_${FW_USE_FLAGS[CARD]}"
 	NEGATIVE_USE_FLAGS="${NEGATIVE_USE_FLAGS} !dvb_cards_${FW_USE_FLAGS[CARD]}? ( "
-	NUMBER_OF_USE_FLAGS=$((NUMBER_OF_USE_FLAGS+1))
+	NEGATIVE_END_BRACKETS="${NEGATIVE_END_BRACKETS} )"
 	ALL_URLS="${ALL_URLS} ${URL}"
 
 	GET_PARAM="${FW_GET_PARAMETER[CARD]}"
@@ -178,13 +179,13 @@ for ((CARD=0; CARD < ${#FW_USE_FLAGS[*]}; CARD++)) do
 done
 
 
-SRC_URI="${SRC_URI} ${NEGATIVE_USE_FLAGS} ${ALL_URLS}"
+SRC_URI="${SRC_URI} ${NEGATIVE_USE_FLAGS} ${ALL_URLS} ${NEGATIVE_END_BRACKETS}"
 
-# add closing brackets for negative use flags
-for ((NR=0; NR < ${NUMBER_OF_USE_FLAGS}; NR++)) do
-	SRC_URI="${SRC_URI} )"
-done
-
+DEPEND="${DEPEND}
+	${NEGATIVE_USE_FLAGS}
+		${UNSHIELD_DEPEND}
+		app-arch/unzip
+	${NEGATIVE_END_BRACKETS}"
 
 install_dvb_card() {
 	[[ -z ${DVB_CARDS} ]] || use dvb_cards_${1}
