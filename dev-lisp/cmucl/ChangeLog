@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/cmucl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.22 2006/09/21 15:55:13 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.23 2006/11/09 02:28:47 mkennedy Exp $
+
+*cmucl-19d_pre1 (09 Nov 2006)
+
+  09 Nov 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/19d-gentoo.patch, +cmucl-19d_pre1.ebuild:
+  New upstream version; Remove support for Common Lisp Controller.
 
   21 Sep 2006; <ticho@gentoo.org> cmucl-19c.ebuild:
   Stable on x86, bug #146102.
