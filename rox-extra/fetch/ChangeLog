@@ -1,6 +1,10 @@
 # ChangeLog for rox-extra/fetch
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/fetch/ChangeLog,v 1.13 2006/11/08 14:46:20 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/fetch/ChangeLog,v 1.14 2006/11/09 17:07:43 lack Exp $
+
+  09 Nov 2006; Jim Ramsay <lack@gentoo.org> fetch-0.3.1-r1.ebuild:
+  We do not need to warn about dbus here - rox-extra/downloadmanager pulls it
+  in as appropriate
 
 *fetch-0.3.1-r1 (08 Nov 2006)
 

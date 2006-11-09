@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/fetch/fetch-0.3.1-r1.ebuild,v 1.1 2006/11/08 14:46:20 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/fetch/fetch-0.3.1-r1.ebuild,v 1.2 2006/11/09 17:07:43 lack Exp $
 
 ROX_VER=2.1.2
 ROX_LIB_VER=2.0.2
@@ -18,18 +18,4 @@ IUSE=""
 
 APPNAME=Fetch
 S=${WORKDIR}
-
-pkg_postinst() {
-	rox_pkg_postinst
-	if ! has_version dev-python/dbus-python -a \
-		! built_with_use sys-apps/dbus python
-	then
-		ewarn "dbus python modules are NOT installed. ${APPNAME} will run"
-		ewarn "however, integration with the Download Manager module will"
-		ewarn "be possible and the program will crash if you try and set"
-		ewarn "that option. If integration with the Download Manager is"
-		ewarn "desired, please emerge dbus and then Download Manager and"
-		ewarn "then ${APPNAME} should work fine!"
-	fi
-}
 
