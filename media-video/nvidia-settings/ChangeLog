@@ -1,6 +1,13 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.29 2006/10/30 15:22:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.30 2006/11/10 15:34:19 augustus Exp $
+
+*nvidia-settings-1.0.20061102 (10 Nov 2006)
+
+  10 Nov 2006; Kristopher Kersey <augustus@gentoo.org>
+  +nvidia-settings-1.0.20061102.ebuild:
+  Added new version of nvidia-settings.  Bug #154402.  This should be marked
+  stable once nvidia-drivers-1.0.9629 is marked stable.
 
   30 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   nvidia-settings-1.0.20051122-r3.ebuild,
