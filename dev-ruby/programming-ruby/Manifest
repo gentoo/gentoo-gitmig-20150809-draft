@@ -1,12 +1,26 @@
-MD5 012ace7367d9d80eaec900bdde23507a ChangeLog 1280
-RMD160 b6ffa719d33bbbf702f56e1ab830e31eaa4a0721 ChangeLog 1280
-SHA256 6cc2c76aea8ce9334e738a7180d61b34556a060f8fd56d7e3bd9b12065f83dc7 ChangeLog 1280
-MD5 1dd3f75c7b3cc939cdcf5675f3135537 files/digest-programming-ruby-0.4 250
-RMD160 6c75a49c54443b741b423cb13614fe3ede2f7062 files/digest-programming-ruby-0.4 250
-SHA256 65eb036d476a0d6828fe24a5d39785945cfccfcd8d2ee36db8f8823dbc66db3a files/digest-programming-ruby-0.4 250
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST ProgrammingRuby-0.4.tgz 803146 RMD160 0f178a623adddc335d74dcccbe4750e612b0a197 SHA256 c25cbb902e2bc6b29a8fa48ca3ef583e168f253f6e6b1160ca6853cbb894db84
+EBUILD programming-ruby-0.4.ebuild 641 RMD160 305c5fa028ac260f8441d1f21e5ffada0d72cbe3 SHA1 a6c848d3c6ce9dd6a09dc9ba36bd59048c10e66d SHA256 2c7f90b848534b31b166d8fe4bd53b704096f7b573bf8892de65753843fc21ab
+MD5 cb97bbd73f900cef265f0193d5f88dee programming-ruby-0.4.ebuild 641
+RMD160 305c5fa028ac260f8441d1f21e5ffada0d72cbe3 programming-ruby-0.4.ebuild 641
+SHA256 2c7f90b848534b31b166d8fe4bd53b704096f7b573bf8892de65753843fc21ab programming-ruby-0.4.ebuild 641
+MISC ChangeLog 1381 RMD160 c0336a35f4d85d4d06c368a7a20579092b1541c5 SHA1 4dd83375454916f38fedf3bab79312b6ef12aae1 SHA256 000d76480f9cee5d4fa1f9f79d7c10e3d3d87a6a7d4b518d119357f30ec77d97
+MD5 56fb5c818b397a5b15a7ba5c21982570 ChangeLog 1381
+RMD160 c0336a35f4d85d4d06c368a7a20579092b1541c5 ChangeLog 1381
+SHA256 000d76480f9cee5d4fa1f9f79d7c10e3d3d87a6a7d4b518d119357f30ec77d97 ChangeLog 1381
+MISC metadata.xml 157 RMD160 5d9e2c7ecba96ffebd936d38acedf859cdea84e1 SHA1 8ce15dcc608eeb5616aeec610dc695cbe6f93e02 SHA256 11fba03a217e2d996f5cd8895493a5692ece8ddac2c1a2dfc71d0e830555121c
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 RMD160 5d9e2c7ecba96ffebd936d38acedf859cdea84e1 metadata.xml 157
 SHA256 11fba03a217e2d996f5cd8895493a5692ece8ddac2c1a2dfc71d0e830555121c metadata.xml 157
-MD5 7fcc8476d139f01d6578963ebd5c4716 programming-ruby-0.4.ebuild 644
-RMD160 cbbea7a3cb5897ee5089eb03b8be2ed2e528c688 programming-ruby-0.4.ebuild 644
-SHA256 455ec701440939572bea35e962eba6d7d44caa7bb62323921c30eff9357434ef programming-ruby-0.4.ebuild 644
+MD5 1dd3f75c7b3cc939cdcf5675f3135537 files/digest-programming-ruby-0.4 250
+RMD160 6c75a49c54443b741b423cb13614fe3ede2f7062 files/digest-programming-ruby-0.4 250
+SHA256 65eb036d476a0d6828fe24a5d39785945cfccfcd8d2ee36db8f8823dbc66db3a files/digest-programming-ruby-0.4 250
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFVGozwLwTda5NScMRAkeqAJ9CUnpnVhyAewnh0/nUdCHqrxg2lACgqAae
++6AI1twjS/L4gHzY/f717zU=
+=0wzo
+-----END PGP SIGNATURE-----
