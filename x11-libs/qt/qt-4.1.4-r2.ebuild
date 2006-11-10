@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.1.4-r2.ebuild,v 1.9 2006/10/30 18:18:37 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.1.4-r2.ebuild,v 1.10 2006/11/10 00:55:23 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.trolltech.com/"
 SRC_URI="ftp://ftp.trolltech.com/pub/qt/source/qt-x11-${SRCTYPE}-${PV}.tar.gz"
 S=${WORKDIR}/qt-x11-${SRCTYPE}-${PV}
 
-LICENSE="|| ( QPL-1.0 GPL-2 )"
+LICENSE="GPL-2"
 SLOT="4"
 KEYWORDS="amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="accessibility cups debug doc examples firebird gif jpeg mng mysql nas nis odbc opengl png postgres sqlite xinerama zlib"
