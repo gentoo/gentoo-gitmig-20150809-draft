@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6230 2006/11/10 13:35:07 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6231 2006/11/10 15:48:20 george Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -231,7 +231,7 @@ dev-java/bluej-bin
 =dev-ada/asis-3.4.6
 =dev-ada/asis-3.4.6.2006
 # Masked for removal as old style gnat is going to be masked soon. 
-=dev-ada/asis-3.44
+dev-ada/asis
 
 # Doug Goldstein <cardoe@gentoo.org> (25 Oct 2006)
 # Masked pending removal on 25 Nov 2006. See bug #134621
