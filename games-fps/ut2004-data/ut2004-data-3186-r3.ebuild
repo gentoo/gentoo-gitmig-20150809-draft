@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r3.ebuild,v 1.10 2006/10/24 22:54:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r3.ebuild,v 1.11 2006/11/10 12:00:46 nyhm Exp $
 
 inherit eutils games games-ut2k4mod
 
@@ -13,6 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 RESTRICT="strip"
 IUSE=""
+QA_TEXTRELS="${GAMES_PREFIX_OPT:1}/ut2004/System/libSDL-1.2.so.0"
 
 DEPEND="games-util/uz2unpack"
 PDEPEND="games-fps/ut2004"
@@ -86,7 +87,7 @@ src_unpack() {
 }
 
 src_install() {
-	local diskno srcdir varname
+	local diskno srcdir varname j
 
 	# Disk 1
 	einfo "Copying files from Disk 1..."
@@ -104,7 +105,7 @@ src_install() {
 		|| die "copying Benchmark files"
 	cdrom_load_next_cd
 
-	for diskno in 2 3 4 5 ; do
+	for diskno in {2..5} ; do
 		einfo "Copying files from Disk ${diskno}..."
 		varname="DISK${diskno}"
 		srcdir=${!varname}
@@ -119,44 +120,46 @@ src_install() {
 	# Create empty files in Benchmark
 	for j in {CSVs,Logs,Results}
 	do
-		dodir "${dir}/Benchmark/${j}"
-		touch "${Ddir}/Benchmark/${j}"/DO_NOT_DELETE.ME || die "creating dummy files"
+		keepdir "${dir}"/Benchmark/${j}
 	done
 
 	# Install extra help files
 	insinto "${dir}"/Help
-	doins "${S}"/Unreal.bmp
+	doins Unreal.bmp
 
 	# Install EULA
 	insinto "${dir}"
-	doins "${S}"/UT2004_EULA.txt
+	doins UT2004_EULA.txt
+
+	# Installing documentation/icon
+	doins README.linux ut2004.xpm || die "copying readme/icon"
+	dodoc README.linux || die "dodoc README.linux"
+	doicon ut2004.xpm
 
 	# Install System.inis
 	insinto "${dir}"/System
-	doins "${S}"/ini-{det,est,frt,int,itt,kot,smt,tmt}.tar
+	doins ini-{det,est,frt,int,itt,kot,smt,tmt}.tar
 
 	# Copy ut2004
 	exeinto "${dir}"
-	doexe "${S}"/bin/ut2004 || die "copying ut2004"
+	doexe bin/ut2004 || die "copying ut2004"
 
 	exeinto "${dir}"/System
 	# We install the provided libraries because upstream wants it that way.
 	# If you want to use your own system binaries, then feel free to uncomment
-	# the following.  You will also want to comment the doexe lines below that
+	# the following.  You will also want to comment the doexe line below that
 	# installs the libraries.
-#	newexe "${S}"/System/openal.so openal.so-binary
-#	newexe "${S}"/System/libSDL-1.2.so.0 libSDL-1.2.so.0-binary
-	doexe ${S}/System/{libSDL-1.2.so.0,openal.so} \
+#	newexe System/openal.so openal.so-binary
+#	newexe System/libSDL-1.2.so.0 libSDL-1.2.so.0-binary
+	doexe System/{libSDL-1.2.so.0,openal.so} \
 		|| die "copying libraries"
-	doexe "${S}"/System/{u{cc,t2004}-bin} \
-		|| die "copying libs/ucc/ut2004"
 
 	# Uncompressing files
 	einfo "Uncompressing files... this *will* take a while..."
 	for j in {Animations,Maps,Sounds,StaticMeshes,Textures}
 	do
-		chmod -R u+w "${Ddir}/${j}" || die "chmod in uncompress"
-		games_ut_unpack "${Ddir}/${j}" || die "uncompressing files"
+		fperms -R u+w "${dir}"/${j} || die "fperms in uncompress"
+		games_ut_unpack "${Ddir}"/${j}
 	done
 
 	# Removing unneccessary files
@@ -171,13 +174,13 @@ src_install() {
 	rm -f "${Ddir}"/Help/UT2004Logo.bmp
 	rm -f "${Ddir}"/System/{ALAudio.kot,AS-{Convoy,FallenCity,Glacier}.kot,bonuspack.{det,est,frt},BonusPack.{int,itt,u}}
 	rm -f "${Ddir}"/System/{Build.ini,CacheRecords.ucl,Core.{est,frt,int,itt,u},CTF-January.kot,D3DDrv.kot,DM-1on1-Squader.kot}
-	rm -f "${Ddir}"/System/{{Editor,Engine,Gameplay,GamePlay,UnrealGame,UT2k4Assault,XInterface,XPickups,xVoting,XVoting,XWeapons,XWebAdmin}.{det,est,frt,int,itt,u}}
+	rm -f "${Ddir}"/System/{Editor,Engine,Gameplay,GamePlay,UnrealGame,UT2k4Assault,XInterface,XPickups,xVoting,XVoting,XWeapons,XWebAdmin}.{det,est,frt,int,itt,u}
 	rm -f "${Ddir}"/System/{Fire.u,IpDrv.u,License.int,ONS-ArcticStronghold.kot}
-	rm -f "${Ddir}"/System/{{OnslaughtFull,onslaughtfull,UT2k4AssaultFull}.{det,est,frt,itt,u}}
-	rm -f "${Ddir}"/System/{{GUI2K4,Onslaught,skaarjpack,SkaarjPack,XGame}.{det,est,frt,int,itt,kot,u}}
-	rm -f "${Ddir}"/System/{{Setup,Window}.{det,est,frt,int,itt,kot}}
-	rm -f "${Ddir}"/System/{XPlayers.{det,est,frt,int,itt}}
-	rm -f "${Ddir}"/System/{ucc-bin,UnrealEd.u,ut2004-bin,UTClassic.u,UTV2004c.u,UTV2004s.u,UWeb.u,Vehicles.kot,Vehicles.u,Xweapons.itt}
+	rm -f "${Ddir}"/System/{OnslaughtFull,onslaughtfull,UT2k4AssaultFull}.{det,est,frt,itt,u}
+	rm -f "${Ddir}"/System/{GUI2K4,Onslaught,skaarjpack,SkaarjPack,XGame}.{det,est,frt,int,itt,kot,u}
+	rm -f "${Ddir}"/System/{Setup,Window}.{det,est,frt,int,itt,kot}
+	rm -f "${Ddir}"/System/XPlayers.{det,est,frt,int,itt}
+	rm -f "${Ddir}"/System/{UnrealEd.u,UTClassic.u,UTV2004c.u,UTV2004s.u,UWeb.u,Vehicles.kot,Vehicles.u,Xweapons.itt}
 	rm -f "${Ddir}"/System/{XAdmin.kot,XAdmin.u,XMaps.det,XMaps.est}
 	rm -f "${Ddir}"/Web/ServerAdmin/{admins_home.htm,current_bots.htm,ut2003.css}
 	rm -f "${Ddir}"/Web/ServerAdmin/ClassicUT/current_bots.htm
@@ -194,12 +197,6 @@ src_install() {
 	rm -f "${Ddir}"/System/{ONS-Adara.int,ONS-IslandHop.int,ONS-Tricky.int,ONS-Urban.int,OnslaughtBP.int,xaplayersl3.upl}
 	rm -f "${Ddir}"/Textures/{AW-2k4XP,BenTex02,BenTropical01,BonusParticles,CicadaTex,Construction_S}.utx
 	rm -f "${Ddir}"/Textures/{HourAdaraTexor,ONSBPTextures,ONSBP_DestroyedVehicles,PC_UrbanTex,UT2004ECEPlayerSkins}.utx
-
-	# Installing documentation/icon
-	dodoc "${S}"/README.linux || die "dodoc README.linux"
-	doicon "${S}"/ut2004.xpm || die "doicon ut2004.xpm"
-	insinto "${dir}"
-	doins "${S}"/{README.linux,ut2004.xpm} || die "copying readme/icon"
 
 	# Now, since these files are coming off a CD, the times/sizes/md5sums won't
 	# be different ... that means portage will try to unmerge some files (!)
