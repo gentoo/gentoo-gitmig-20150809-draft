@@ -1,0 +1,26 @@
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-deathball/ut2004-deathball-2.3-r1.ebuild,v 1.1 2006/11/10 17:08:27 wolf31o2 Exp $
+
+MOD_DESC="Death Ball mod"
+MOD_NAME="Death Ball"
+MOD_BINS="deathb"
+MOD_TBZ2="death.ball"
+MOD_ICON="deathball".png
+
+inherit games games-mods
+
+HOMEPAGE="http://www.deathball.net/"
+SRC_URI="mirror://liflg/${MOD_TBZ2}_${PV}-english-2.run"
+
+LICENSE="freedist"
+
+KEYWORDS="~amd64 ~x86"
+
+RDEPEND="games-fps/ut2004"
+
+src_unpack() {
+	games-mods_src_unpack
+	# We don't want this file
+	rm 3339_patch
+}
