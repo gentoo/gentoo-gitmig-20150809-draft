@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/cloop-2.04.ebuild,v 1.1 2006/10/19 17:30:35 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/cloop-2.04.ebuild,v 1.2 2006/11/10 23:54:37 ticho Exp $
 
 inherit linux-mod eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://packages.debian.org/unstable/source/cloop http://www.knopper.ne
 SRC_URI="mirror://debian/pool/main/c/cloop/${PN}_${PV}-1+eb.1-7.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 S=${WORKDIR}/${P}-1+eb.1
