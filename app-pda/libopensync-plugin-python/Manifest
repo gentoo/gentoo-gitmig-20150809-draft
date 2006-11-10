@@ -1,12 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST libopensync-plugin-python-0.19.tar.gz 317508 RMD160 7162428ebd366a27d6db2f2c92d43eadc1c36a66 SHA1 419f81cecde4e53a7efa60cfad54ea87389d4e24 SHA256 bf81122f7713054cb2d7e55f8fdc51ef6e8dcae8f1aa03f80fd9a780d6ccf431
-EBUILD libopensync-plugin-python-0.19.ebuild 662 RMD160 1e958bdd669047073b2a6fa34964b4734a6e1a2e SHA1 8b72c291a40fe7f101ffdeeaffbecd85d6d78970 SHA256 c97f7d7f98f9f5eaf4dcffe87f49d050e72f786821474bfa95e0d0c4a168e6dc
-MD5 6e4a0d2aed2bbfb62b4a68c4371d30ad libopensync-plugin-python-0.19.ebuild 662
-RMD160 1e958bdd669047073b2a6fa34964b4734a6e1a2e libopensync-plugin-python-0.19.ebuild 662
-SHA256 c97f7d7f98f9f5eaf4dcffe87f49d050e72f786821474bfa95e0d0c4a168e6dc libopensync-plugin-python-0.19.ebuild 662
-MISC ChangeLog 411 RMD160 1c2b7db1f439cb86e9829ff2362a68a943a4faab SHA1 d775b57c28f9eea06901b657752490278234b930 SHA256 0f2f7109435da6c276d7e26763f4b1f393e4eb7d4fd24ddbee40c452d4493570
-MD5 eaf837afa48f6b986fcc96d634a198e5 ChangeLog 411
-RMD160 1c2b7db1f439cb86e9829ff2362a68a943a4faab ChangeLog 411
-SHA256 0f2f7109435da6c276d7e26763f4b1f393e4eb7d4fd24ddbee40c452d4493570 ChangeLog 411
+DIST libopensync-plugin-python-0.20.tar.gz 317880 RMD160 739f3fd8f66420235ce8e850cdc970c8c1ad59d3 SHA1 9fa0f5d4b24e08967c5d12f32a9b1195447720f3 SHA256 2f7e87c32ebc5ef681ba60a8f1661c8dafaa638bd2f28e974940ea893f0e966c
+EBUILD libopensync-plugin-python-0.19.ebuild 664 RMD160 ab9567e99cb3b8ce51933baeca39e4b64aa75538 SHA1 8e3940d96bbdcf040994456e3b8fc5a2e4c29290 SHA256 00ae204eb1ccd2c33405c5c0123b8e16fa692338b9659e29e7e3df92bc8ddb48
+MD5 8f0757e9fbf0cee8b3348173683eabce libopensync-plugin-python-0.19.ebuild 664
+RMD160 ab9567e99cb3b8ce51933baeca39e4b64aa75538 libopensync-plugin-python-0.19.ebuild 664
+SHA256 00ae204eb1ccd2c33405c5c0123b8e16fa692338b9659e29e7e3df92bc8ddb48 libopensync-plugin-python-0.19.ebuild 664
+EBUILD libopensync-plugin-python-0.20.ebuild 664 RMD160 46a33d6eb0e1c0c2c8ba65f38cb6c0a2b7c4d423 SHA1 7ef92cd3da5a76ec5c208535172da772dcd00e73 SHA256 bef5e227be5c53f2714fbeb7b9c0fd50e68b8dd5de4794fb9d22080395553047
+MD5 b143b8cb1e653fabdba2520e7b05e94f libopensync-plugin-python-0.20.ebuild 664
+RMD160 46a33d6eb0e1c0c2c8ba65f38cb6c0a2b7c4d423 libopensync-plugin-python-0.20.ebuild 664
+SHA256 bef5e227be5c53f2714fbeb7b9c0fd50e68b8dd5de4794fb9d22080395553047 libopensync-plugin-python-0.20.ebuild 664
+MISC ChangeLog 611 RMD160 881533803710fae61d2c1ce51bd0e5f683c2047d SHA1 83d4e5b667b8ec839809c5c9b1e793f2b8c0c268 SHA256 1d339925c6184d61e31d34e3fdd0b9d01e0f9ab33d061b80097c6dfdcaa7d297
+MD5 95aa84ce760c67c24a9b6573cb08328e ChangeLog 611
+RMD160 881533803710fae61d2c1ce51bd0e5f683c2047d ChangeLog 611
+SHA256 1d339925c6184d61e31d34e3fdd0b9d01e0f9ab33d061b80097c6dfdcaa7d297 ChangeLog 611
 MISC metadata.xml 304 RMD160 1da32fded95735800bc96b0ff4c0a3af4691a724 SHA1 b96c72c417192c099990a616b12a1d2f55a06064 SHA256 7fa8df0f64197f3f6c018ed0d6c4cc4da014fbcc9af2da9b633f71657470236a
 MD5 45ae331a9c100ecabad1b4cd916f3d37 metadata.xml 304
 RMD160 1da32fded95735800bc96b0ff4c0a3af4691a724 metadata.xml 304
@@ -14,3 +22,13 @@ SHA256 7fa8df0f64197f3f6c018ed0d6c4cc4da014fbcc9af2da9b633f71657470236a metadata
 MD5 fc04cbc4f4210d162ac011aedb12c66e files/digest-libopensync-plugin-python-0.19 292
 RMD160 18ed1814e6ef5dd0d97f810a3e30d7647f0c650f files/digest-libopensync-plugin-python-0.19 292
 SHA256 3318b9ae0396acfd8e2d3e4420a1cdfa6ecaed36430d4166741c1200df3b94ba files/digest-libopensync-plugin-python-0.19 292
+MD5 14c74fdafa2149100d4cd8d58f7a8c77 files/digest-libopensync-plugin-python-0.20 292
+RMD160 b1c2b70490e6859491eba56e0515ec69967ffabb files/digest-libopensync-plugin-python-0.20 292
+SHA256 51d3eceef8400437094340a437d9dd90e37023d4d93a2d2518aee4b1bf81642c files/digest-libopensync-plugin-python-0.20 292
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFVMlMppoStNGKGywRAtKrAJ410+q18Sb6YKAyhNR6HKohz03GbwCdErzJ
+6Jj8iALxp+z7qIBPxPQlO3A=
+=sYv7
+-----END PGP SIGNATURE-----

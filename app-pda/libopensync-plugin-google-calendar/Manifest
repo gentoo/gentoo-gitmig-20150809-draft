@@ -1,12 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST libopensync-plugin-google-calendar-0.19.tar.gz 318241 RMD160 697d93460f8073b3f826a7fe0b5e852b2dfdb32d SHA1 c55493bf109f745b9f42dfe02f228769386571d0 SHA256 132234148b4053e7ba2fdd345a8f2493dd0c308cdae431606e633165608b74be
-EBUILD libopensync-plugin-google-calendar-0.19.ebuild 661 RMD160 2a35d5fca07bedc109955062b92aa60bc498a751 SHA1 8fa7c2d44570a676149051b0ef31313030ea57f4 SHA256 8effb7cf7c8c6feccedc9f0bdf7b97e75f4aa9babe7ea33430e03b895cba57c1
-MD5 eef07796bc5bfd2b944889e492970e6d libopensync-plugin-google-calendar-0.19.ebuild 661
-RMD160 2a35d5fca07bedc109955062b92aa60bc498a751 libopensync-plugin-google-calendar-0.19.ebuild 661
-SHA256 8effb7cf7c8c6feccedc9f0bdf7b97e75f4aa9babe7ea33430e03b895cba57c1 libopensync-plugin-google-calendar-0.19.ebuild 661
-MISC ChangeLog 447 RMD160 a4b4d4a8330919099f7e8b12df7914fc1d598935 SHA1 1cf57eebe6d88d82afed1f1bcf6fc1fac84e9627 SHA256 c84489ddac97ce351c69f27cb0b94b4b94366851ec4c75af94464785d52b0d16
-MD5 33e4d5f56a7fad52305cd89660153498 ChangeLog 447
-RMD160 a4b4d4a8330919099f7e8b12df7914fc1d598935 ChangeLog 447
-SHA256 c84489ddac97ce351c69f27cb0b94b4b94366851ec4c75af94464785d52b0d16 ChangeLog 447
+DIST libopensync-plugin-google-calendar-0.20a.tar.gz 318519 RMD160 7cd1f0132751e64872ffb8f0f48305cb8be489ac SHA1 bde5c21e993f987369fd83696aed5f4a7ebd96be SHA256 1f10abb4acac65138c0191615aaeb3b07fc57802da2bd5d14a5e77c63241bb63
+EBUILD libopensync-plugin-google-calendar-0.19.ebuild 686 RMD160 c0d0bd3292c29aee4a899bee2afffef67876d07b SHA1 7e9a5a331c647612a33840fb6ae2b80f848c453e SHA256 991783b94f3c60810cf14cf1a06218964c6bb49582d92f966bb5b6c1344b3365
+MD5 54b28042d55feac42813c6aa684ed06d libopensync-plugin-google-calendar-0.19.ebuild 686
+RMD160 c0d0bd3292c29aee4a899bee2afffef67876d07b libopensync-plugin-google-calendar-0.19.ebuild 686
+SHA256 991783b94f3c60810cf14cf1a06218964c6bb49582d92f966bb5b6c1344b3365 libopensync-plugin-google-calendar-0.19.ebuild 686
+EBUILD libopensync-plugin-google-calendar-0.20a.ebuild 686 RMD160 5c6ff741ffc4922ace2431dc71680b7cc492c7e7 SHA1 d9a6c01d66e624c1c8509cd5c96280c66da105be SHA256 5846e72f1833f850e2d05f2a8043a77d29448dd506776466bf990a759be71961
+MD5 dd248beaccb176cfbd688c7d59879543 libopensync-plugin-google-calendar-0.20a.ebuild 686
+RMD160 5c6ff741ffc4922ace2431dc71680b7cc492c7e7 libopensync-plugin-google-calendar-0.20a.ebuild 686
+SHA256 5846e72f1833f850e2d05f2a8043a77d29448dd506776466bf990a759be71961 libopensync-plugin-google-calendar-0.20a.ebuild 686
+MISC ChangeLog 676 RMD160 0e6b56e8437e8aedb281d9d426086883c8dea38f SHA1 b6df8092da6daa749adbddce03bdba7a6ab20c44 SHA256 b49253e141d5368423bca97b8894441faa003d5f39f410c4ce2ab0b60a76d2c3
+MD5 1c45894bf19f601edb3c877699597cc8 ChangeLog 676
+RMD160 0e6b56e8437e8aedb281d9d426086883c8dea38f ChangeLog 676
+SHA256 b49253e141d5368423bca97b8894441faa003d5f39f410c4ce2ab0b60a76d2c3 ChangeLog 676
 MISC metadata.xml 304 RMD160 1da32fded95735800bc96b0ff4c0a3af4691a724 SHA1 b96c72c417192c099990a616b12a1d2f55a06064 SHA256 7fa8df0f64197f3f6c018ed0d6c4cc4da014fbcc9af2da9b633f71657470236a
 MD5 45ae331a9c100ecabad1b4cd916f3d37 metadata.xml 304
 RMD160 1da32fded95735800bc96b0ff4c0a3af4691a724 metadata.xml 304
@@ -14,3 +22,13 @@ SHA256 7fa8df0f64197f3f6c018ed0d6c4cc4da014fbcc9af2da9b633f71657470236a metadata
 MD5 7b984fd88b76b0ccb11869d09a516ff2 files/digest-libopensync-plugin-google-calendar-0.19 319
 RMD160 04b8147774cb8f37e94c770156dab55a465cb791 files/digest-libopensync-plugin-google-calendar-0.19 319
 SHA256 1eae02c726c9c3b5e984a59a16c602b95e6c1e15c19997eb22ecb7597bf0c641 files/digest-libopensync-plugin-google-calendar-0.19 319
+MD5 09fd12d48a424e8f68aa77b1f3a0eede files/digest-libopensync-plugin-google-calendar-0.20a 322
+RMD160 820146e15c955ef4a0fa9d598717b3efcd7bf0cd files/digest-libopensync-plugin-google-calendar-0.20a 322
+SHA256 ee07cf5522ae1086dbb4cc184018f629ac72077a99562c3ca90043deed25e190 files/digest-libopensync-plugin-google-calendar-0.20a 322
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFVMheppoStNGKGywRAi+cAJ96g7+5/GbEwhh63uWziMiqpCUnzACgs1Q4
+Z4/7Vq+kMABF3FqV/4MFDV0=
+=dxA/
+-----END PGP SIGNATURE-----
