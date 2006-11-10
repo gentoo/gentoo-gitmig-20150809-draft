@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.5.ebuild,v 1.11 2006/11/07 10:36:54 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.5.ebuild,v 1.12 2006/11/10 14:39:30 uberlord Exp $
 
 inherit eutils toolchain-funcs
 
@@ -52,6 +52,9 @@ src_unpack() {
 
 	# Change the default driver to wext for Linux systems.
 	epatch "${FILESDIR}/${P}-default_driver.patch"
+
+	# Move the PF_UNIX: Address in use warning to where it's needed
+	epatch "${FILESDIR}/${P}-inuse-warning.patch"
 
 	# net/bpf.h needed for net-libs/libpcap on Gentoo FreeBSD
 	sed -i \
