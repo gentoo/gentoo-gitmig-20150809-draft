@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.4.5.4.ebuild,v 1.1 2006/10/04 04:05:00 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.4.5.4.ebuild,v 1.2 2006/11/10 23:11:26 rl03 Exp $
 
 inherit webapp
 MY_P="Metadot${PV}"
@@ -33,7 +33,6 @@ RDEPEND="<dev-db/mysql-5
 	>=dev-perl/IO-stringy-2.108
 	dev-perl/MailTools
 	dev-perl/MIME-tools
-	>=dev-perl/Msql-Mysql-modules-1.1835
 	>=dev-perl/Unicode-String-2.07
 	>=dev-perl/Spreadsheet-WriteExcel-0.41
 	>=dev-perl/Date-Calc-5.3
