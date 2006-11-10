@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance/pydance-1.0.3.ebuild,v 1.2 2006/01/24 13:59:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance/pydance-1.0.3.ebuild,v 1.3 2006/11/10 23:04:21 mr_bones_ Exp $
 
 inherit games
 
@@ -27,6 +27,8 @@ src_unpack() {
 		-e "s:/etc/:${GAMES_SYSCONFDIR}/:" \
 		pydance.py constants.py docs/man/pydance.6 \
 		|| die "sed failed"
+	# http://bugs.debian.org/cgi-bin/bugreport.cgi/bugreport.cgi?bug=375651
+	epatch "${FILESDIR}/${P}-debian.patch"
 }
 
 src_install() {
