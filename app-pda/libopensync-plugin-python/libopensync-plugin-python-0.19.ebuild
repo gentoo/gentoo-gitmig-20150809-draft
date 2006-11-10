@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-python/libopensync-plugin-python-0.19.ebuild,v 1.1 2006/10/23 19:42:18 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-python/libopensync-plugin-python-0.19.ebuild,v 1.2 2006/11/10 18:50:14 peper Exp $
 
 DESCRIPTION="OpenSync Python Module"
 HOMEPAGE="http://www.opensync.org/"
@@ -11,12 +11,11 @@ SLOT="0"
 LICENSE="LGPL-2.1"
 IUSE=""
 
-DEPEND=">=dev-lang/python-2.0
-	>=app-pda/libopensync-0.19"
-
+DEPEND="=app-pda/libopensync-${PV}*
+	>=dev-lang/python-2.0"
 RDEPEND="${DEPEND}"
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog COPYING NEWS README
 }

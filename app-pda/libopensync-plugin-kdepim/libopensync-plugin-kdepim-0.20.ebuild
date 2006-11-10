@@ -1,30 +1,28 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-palm/libopensync-plugin-palm-0.19.ebuild,v 1.2 2006/11/10 18:49:16 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-kdepim/libopensync-plugin-kdepim-0.20.ebuild,v 1.1 2006/11/10 18:48:23 peper Exp $
 
-inherit autotools
+inherit qt3
 
-DESCRIPTION="OpenSync Palm Plugin"
+DESCRIPTION="OpenSync Kdepim Plugin"
 HOMEPAGE="http://www.opensync.org/"
 SRC_URI="http://dev.gentooexperimental.org/~peper/distfiles/${P}.tar.gz"
 
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
-LICENSE="LGPL-2.1"
-IUSE=""
+LICENSE="GPL-2"
+IUSE="arts"
 
 DEPEND="=app-pda/libopensync-${PV}*
-	>=app-pda/pilot-link-0.11.8
-	dev-libs/libxml2"
+	kde-base/libkcal"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+# interactive and broken
+RESTRICT="test"
 
-	# Patch fixing includedir for pisock
-	epatch "${FILESDIR}/${P}-include_pisock.patch"
-	eautoreconf
+src_compile() {
+	econf $(use_with arts)
+	emake || die "emake failed"
 }
 
 src_install() {
