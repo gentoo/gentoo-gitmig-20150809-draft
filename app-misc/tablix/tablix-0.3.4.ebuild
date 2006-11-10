@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tablix/tablix-0.3.4.ebuild,v 1.1 2006/11/10 18:05:45 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tablix/tablix-0.3.4.ebuild,v 1.2 2006/11/10 19:37:05 dirtyepic Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ S="${WORKDIR}/${MY_PV}"
 pkg_setup() {
 	if ! use pvm; then
 		ewarn
-		ewarn "Without parallel virtual machine support, tablix will not be	able"
+		ewarn "Without parallel virtual machine support, tablix will not be able"
 		ewarn "to solve even moderately complex problems.  Even if you are using"
 		ewarn "a single machine, USE=pvm is highly recommended."
 		ewarn
