@@ -1,6 +1,13 @@
 # ChangeLog for sys-block/mpt-status
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/mpt-status/ChangeLog,v 1.1 2006/03/25 19:06:36 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/mpt-status/ChangeLog,v 1.2 2006/11/10 09:48:28 robbat2 Exp $
+
+*mpt-status-1.2.0 (10 Nov 2006)
+
+  10 Nov 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +files/mpt-status-1.2.0-gentoo.patch, +mpt-status-1.2.0.ebuild:
+  New version from upstream. Placed into the tree, and used for the new Gentoo
+  bugzilla hardware [IBM HS20 blades] :-).
 
 *mpt-status-1.1.6 (25 Mar 2006)
 
