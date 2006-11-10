@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ogmrip
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ChangeLog,v 1.15 2006/11/01 05:44:29 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ChangeLog,v 1.16 2006/11/10 08:26:20 beandog Exp $
+
+*ogmrip-0.10.0-r1 (10 Nov 2006)
+
+  10 Nov 2006; Steve Dibb <beandog@gentoo.org> +ogmrip-0.10.0-r1.ebuild:
+  Add mplayer patch to detect correct versions, bug 152496, thanks to Olivier
 
   01 Nov 2006; Steve Dibb <beandog@gentoo.org>
   -files/ogmrip-0.10.0_rc4-amd64.patch, -ogmrip-0.10.0_rc3.ebuild,
