@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.0.0.ebuild,v 1.1 2006/11/10 04:27:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.0.0.ebuild,v 1.2 2006/11/10 06:20:51 cardoe Exp $
 
 WANT_AUTOCONF=2.5
 inherit eutils multilib debug autotools
@@ -93,6 +93,7 @@ pkg_postinst() {
 	elog "To start the D-Bus system-wide messagebus by default"
 	elog "you should add it to the default runlevel :"
 	elog "\`rc-update add dbus default\`"
+	elog
 	elog "Currently have it installed and running?"
 	elog "Run etc-update and then run the following:"
 	elog "\`/etc/init.d/dbus reload\`"
@@ -100,4 +101,8 @@ pkg_postinst() {
 	elog "not run the newest version you just installed."
 	elog "You must tell it to restart for that to happen,"
 	elog "however not all apps can handle a D-Bus restart."
+	elog
+	ewarn
+	ewarn "You MUST run 'revdep-rebuild' after emerging this package"
+	ewarn
 }
