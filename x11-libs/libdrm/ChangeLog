@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.38 2006/11/02 23:49:33 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.39 2006/11/10 03:48:39 joshuabaergen Exp $
+
+*libdrm-2.3.0 (10 Nov 2006)
+
+  10 Nov 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  -libdrm-2.2.0.ebuild, +libdrm-2.3.0.ebuild:
+  Version bump for 7.2RC2 with support for upcoming X servers.  Adds drmOpenOnce
+  and drmCloseOnce and support for the server to use the system libdrm, instead
+  of the (now) removed internal one.  These changes are only important for GIT
+  head or >=1.2.99.0 servers.
 
 *libdrm-2.2.0 (02 Nov 2006)
 
