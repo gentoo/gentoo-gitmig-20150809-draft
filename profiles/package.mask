@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6226 2006/11/10 00:06:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6227 2006/11/10 00:09:59 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1063,11 +1063,6 @@ net-im/wildfire
 # Stefan Schweizer <genstef@gentoo.org> (29 Jun 2006)
 # 1.0.* is the stable version, we do not want to break any users
 >=net-libs/loudmouth-1.1.0
-
-# Diego Pettenò <flameeyes@gentoo.org> (25 Jun 2006)
-# confcache really needs more work before prime-time
-# please don't file bugs for this unless you also have a solution
-dev-util/confcache
 
 # Colin Kingsley <tercel@gentoo.org> (24 Jun 2006)
 # Masked for testing
