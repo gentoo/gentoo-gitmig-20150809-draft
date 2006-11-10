@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lxdvdrip/lxdvdrip-1.62.ebuild,v 1.1 2006/11/09 18:53:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lxdvdrip/lxdvdrip-1.62.ebuild,v 1.2 2006/11/10 09:26:37 aballier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,7 +12,8 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE=""
 
-DEPEND="media-libs/libdvdread"
+DEPEND="media-libs/libdvdread
+	media-libs/libdvdnav"
 RDEPEND="${DEPEND}
 	>=media-video/dvdauthor-0.6.9
 	media-video/streamdvd
