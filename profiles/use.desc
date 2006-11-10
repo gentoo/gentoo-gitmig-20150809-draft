@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.315 2006/11/10 02:52:25 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.316 2006/11/10 15:43:03 beandog Exp $
 
 # Keep them sorted
 
@@ -181,6 +181,7 @@ libcaca - Add support for colored ASCII-art graphics
 libedit - Use the libedit library (replacement for readline)
 libg++ - Adds C++ modules in dev-db/postgresql (libpq++)
 libgda - Adds GNU Data Access (CORBA wrapper) support for gnumeric
+libnotify - Enable notification support
 libwww - Adds libwww support (General purpose WEB API)
 lirc - Adds support for lirc (Linux's Infra-Red Remote Control)
 livecd - !!internal use only!! DO NOT SET THIS FLAG YOURSELF!, used during livecd building.

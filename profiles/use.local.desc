@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2321 2006/11/10 12:34:17 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2322 2006/11/10 15:43:03 beandog Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -46,7 +46,6 @@ app-backup/rdiff-backup:xattr - if you want extended attributes enabled
 app-benchmarks/bootchart:acct - Enable process accounting
 app-cdr/brasero:beagle - Enable Beagle support for searches.
 app-cdr/brasero:gdl - Enable gld support for customisable GUI.
-app-cdr/brasero:libnotify - Enable libinotify support for system notifications.
 app-cdr/brasero:totem - Enable support for Totem playlists.
 app-cdr/cdrdao:pccts - Use dev-util/pccts instead of the built-in substitution.
 app-cdr/cdrtools:on-the-fly-crypt - On the fly AES encryption for CD-Rs.
@@ -566,7 +565,6 @@ gnome-extra/evolution-data-server:keyring - Use gnome-keyring for password stora
 gnome-extra/evolution-data-server:nntp - Add suppoort fot nntp
 gnome-extra/gnome-games:artworkextra - Add extra Artwork to gnome-games
 gnome-extra/gnome-games:avahi - Support for avahi mdns daemon.
-gnome-extra/gnome-power-manager:libnotify - Enable libnotify support
 gnome-extra/libgda:mdb - Enable Microsoft Access DB support for GnomeDB.
 gnome-extra/libgda:xbase - Enable support for xbase databases (dBase, FoxPro, etc)
 gnome-extra/nautilus-sendto:gaim - Build a gaim plugin for nautilus-sendto
@@ -574,10 +572,8 @@ gnome-extra/nautilus-sendto:gajim - Enable support for gajim client
 gnome-extra/nautilus-sendto:sylpheed - Enable support for sylpheed mail client
 gnome-extra/nautilus-sendto:thunderbird - Enable support for thunderbird
 gnome-extra/sensors-applet:hddtemp - Enable support the hddtemp daemon
-gnome-extra/sensors-applet:libnotify - Enable libnotify support
 gnome-extra/sensors-applet:nvidia - Enable support for nvidia sensors
 gnome-extra/yelp:beagle - Enable beagle support
-gnome-extra/zenity:libnotify - Enable libinotify support for system notifications.
 gnustep-apps/gnumail:emoticon - Enable extra Emoticon Bundle to see smiley's in e-mail messages.
 gnustep-base/gnustep-back-art:xim - Enable X11 XiM input method
 gnustep-base/gnustep-back-xlib:xim - Enable X11 XiM input method
@@ -794,7 +790,6 @@ media-plugins/alsa-plugins:libsamplerate - Build with libsamplerate support
 media-plugins/alsa-plugins:pulseaudio - Enable support for PulseAudio output plugin
 media-plugins/audacious-crossfade:libsamplerate - Build with libsamplerate support
 media-plugins/audacious-plugins:chardet - Character set detection support for non-UTF8 ID3 tags
-media-plugins/audacious-plugins:libnotify - Enable libnotify support
 media-plugins/audacious-plugins:modplug - Build with modplug support
 media-plugins/audacious-plugins:musepack - Build with musepack support
 media-plugins/audacious-plugins:pulseaudio - Enable support for PulseAudio output plugin
@@ -836,7 +831,6 @@ media-sound/banshee:ipod - Build with ipod support
 media-sound/banshee:njb - Build with njb audio player support
 media-sound/beep-media-player:old-eq - Use old-style XMMS equalizer (not recommended)
 media-sound/bmpx:gaim - Enable support for sending songs over gaim
-media-sound/bmpx:libnotify - Enable libnotify popup balloons
 media-sound/bmpx:musepack - Support for musepack (mpc) files
 media-sound/bmpx:ofa - Build with ofa/PUID checking support for MusicBrainz metadata
 media-sound/bmpx:p2p - Enable support for downloading songs from the SoulSeek p2p network with museekd/mooseekd
@@ -891,7 +885,6 @@ media-sound/rezound:soundtouch - compile with support for soundtouch
 media-sound/rhythmbox:avahi - support for avahi mdns daemon
 media-sound/rhythmbox:daap - support for daap
 media-sound/rhythmbox:ipod - support for ipod devices via libgpod
-media-sound/rhythmbox:libnotify - support for libnotify
 media-sound/rhythmbox:musicbrainz - support for muzicbrains
 media-sound/rhythmbox:tagwriting - support for tag wriring in certian audio files
 media-sound/snd:gsl - Use the GNU scientific library for calculations
@@ -1188,10 +1181,8 @@ net-im/gaim:meanwhile - Enable meanwhile support for Sametime protocol.
 net-im/gaim:silc - Enable SILC protocol support
 net-im/gaim:xscreensaver - Enable X idle time support instead of gaim idle time.
 net-im/gaim:qq - Enable QQ protocol support.
-net-im/gajim:libnotify - Enable libnotify popup balloons
 net-im/gajim:srv - SRV capabilities
 net-im/gnugadu:tlen - Enable Tlen.pl protocol support
-net-im/gossip:libnotify - Enable libnotify popup balloons
 net-im/jabberd:memdebug - Enable nad and pool debug
 net-im/jabberd:pipe - Enable pipe auth
 net-im/kadu:amarok - Enables amarok support in kadu
@@ -1240,7 +1231,6 @@ net-irc/ircd-hybrid:contrib - Build contrib modules (eg. cloaking)
 net-irc/ngircd:ident - Enables support for libident
 net-irc/srvx:bahamut - Choose bahamut protocol over p10 protocol
 net-irc/unrealircd:hub - Enable hub support
-net-irc/xchat-gnome:libnotify - Enable libnotify support
 net-irc/xchat-gnome:libsexy - Enable libsexy support
 net-irc/xchat-xsys:audacious - Enables Audacious (media player) integration
 net-irc/xchat-xsys:buttons - Enables the buttons near the nickname list
@@ -1398,7 +1388,6 @@ net-misc/zaptel:zapnet - Enable SyncPPP, CiscoHDLC and Frame-Relay support
 net-misc/zaptel:zapras - Enable PPP support for Remote-Access-Service
 net-nds/openldap:overlays - Enable contributed OpenLDAP overlays
 net-nds/openldap:smbkrb5passwd - Enable overlay for syncing ldap, unix and lanman passwords
-net-news/liferea:libnotify - Enable notification support
 net-nntp/inn:innkeywords - Enable automatic keyword generation support
 net-nntp/inn:inntaggedhash - Use tagged hash table for history (disables large file support)
 net-nntp/slrn:uudeview - Add support for yEnc coding and more using dev-libs/uulib
@@ -1477,7 +1466,6 @@ rox-extra/archive:zip - Enable .zip support via zip and unzip packages
 rox-extra/archive:ace - Enable .ace support via unace package
 rox-extra/archive:rpm - Enable .rpm extraction via rpm2cpio from the rpm package
 rox-extra/archive:cpio - Enable .cpio extraction via cpio package
-rox-extra/memo:libnotify - Enable libnotify support for alarm notifications
 sci-astronomy/orsa:cln - Use the Class Library for Numbers for calculations
 sci-astronomy/orsa:gsl - Use the GNU scientific library for calculations
 sci-astronomy/predict:xforms - Add a "map" client which uses the xforms library for its GUI
