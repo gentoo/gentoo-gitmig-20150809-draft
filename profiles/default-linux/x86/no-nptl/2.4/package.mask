@@ -1,9 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.30 2006/11/10 13:58:08 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.31 2006/11/10 17:22:38 opfer Exp $
 
 # Christian Faulhammer <opfer@gentoo.org>
-# dependency >=gnome-base/libgnome-2.16.0 not supported
+# dependency >=gnome-base/libgnome-2.16.0 not
+# supported in this profile
 >=net-irc/xchat-gnome-0.15
 
 #Joshua Jackson <tsunam@gentoo.org>
