@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.92 2006/11/08 18:36:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.93 2006/11/10 14:03:59 gustavoz Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -190,3 +190,8 @@ mpe-sdk
 
 # uses libaio
 romio
+
+# Gustavo Zacarias <gustavoz@gentoo.org> - 10 Nov 2006
+# Mask BSDisms, used in net-proxy/squid for example
+ipf-transparent
+pf-transparent
