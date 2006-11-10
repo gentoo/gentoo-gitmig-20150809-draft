@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.9 2006/11/06 13:55:04 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.10 2006/11/10 15:56:59 uberlord Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 #
@@ -131,15 +131,15 @@ get_bmake() {
 }
 
 # Portable method of getting mount names and points.
-# Returns as "point node fs"
+# Returns as "point node fs options"
 # Remember to convert 040 back to a space.
 get_mounts() {
-	local point= node= fs= foo=
+	local point= node= fs= opts= foo=
 
 	# Linux has /proc/mounts which should always exist
 	if [[ $(uname -s) == "Linux" ]] ; then
-		while read node point fs foo ; do
-			echo "${point} ${node} ${fs}" 
+		while read node point fs opts foo ; do
+			echo "${point} ${node} ${fs} ${opts}" 
 		done < /proc/mounts
 		return 
 	fi
@@ -153,7 +153,9 @@ get_mounts() {
 	# of the spaces and we should not force a /proc either.
 	local IFS=$'\t'
 	LC_ALL=C mount -p | while read node point fs foo ; do
-		echo "${point// /\040} ${node// /\040} ${fs%% *}"
+		opts=${fs#* }
+		fs=${fs%% *}
+		echo "${point// /\040} ${node// /\040} ${fs%% *} ${opts// /\040}"
 	done
 }
 
