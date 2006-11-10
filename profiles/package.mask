@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6232 2006/11/10 17:19:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6233 2006/11/10 17:48:44 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -35,6 +35,10 @@ dev-db/dbbalancer
 # Caleb Tennis <caleb@gentoo.org> (09 Nov 2006)
 # Readding dbus support, and masking until dbus goes stable
 =x11-libs/qt-4.2.1-r1
+
+# Kris Kersey <augustus@gentoo.org> (08 Nov 2006)
+# The below BETA adds support for GeForce 8800 GTX and GeForce 8800 GTS GPUs.
+~x11-drivers/nvidia-drivers-1.0.9742
 
 # Bryan Østergaard <kloeri@gentoo.org> (08 Nov 2006)
 # Masked waiting for thunderbird-2.0 to get unmasked.
@@ -618,19 +622,7 @@ media-sound/mpd-svn
 # until Gnome 2.16 is unmasked
 =media-sound/bmpx-0.3*
 
-# Kris Kersey <augustus@gentoo.org> (08 Nov 2006)
-# Masking this version of the drivers since it is BETA. This driver version
-# adds GLX_EXT_texture_from_pixmap, so it works with compiz.  You will need to
-# add AddARGBGLXVisuals to the driver options.  If this causes a lockup for
-# you, read http://www.nvnews.net/vbulletin/showthread.php?t=77021 and revert
-# to the unmasked drivers.  This version has been replaced by the non-BETA
-# 1.0.9629 but I'll leave it here for a little while.
-~x11-drivers/nvidia-drivers-1.0.9626
-# The below BETA adds support for GeForce 8800 GTX and GeForce 8800 GTS GPUs.
-~x11-drivers/nvidia-drivers-1.0.9742
-~media-video/nvidia-settings-1.0.20060919
-
-# Seemant Kullee <seemant@gentoo.org> (26 Oct 2006)
+# Seemant Kulleen <seemant@gentoo.org> (26 Oct 2006)
 # swfdec is stale, according to upstream as well, and these need to follow
 # mozilla out of the door.
 media-libs/swfdec
