@@ -1,5 +1,8 @@
---- configure	2004-01-03 08:53:39.000000000 -0600
-+++ configure	2006-06-04 23:50:41.000000000 -0500
+this shit is wrong, but so was original ... this needs to be
+rewritten so that $HOST_ARCH/$TARGET_ARCH aren't even needed ...
+
+--- configure
++++ configure
 @@ -129,8 +129,13 @@
  #
  # 0. Figure out architecture (one of i386, alpha, sparc, arm, m68k, mips)
@@ -12,7 +15,7 @@
 +if (test "$HOST_ARCH" = "sparc64" && test "$TARGET_ARCH" = "sparc") ; then
 +	TARGET_ARCH="sparc64"
 +fi
-+echo "ARCH=${TARGET_ARCH/i?86/i386}" >> make_include
++echo "ARCH=${TARGET_ARCH}" | sed -e 's:i.86:i386:' >> make_include
  
  #
  # 1. Do we have <locale.h>?
