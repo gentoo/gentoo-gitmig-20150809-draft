@@ -45,6 +45,9 @@ sys-apps/keyutils
 x11-drivers/xf86-input-evdev
 >=app-misc/lcdproc-0.5.0
 
+# requires >=gnome-base/libgnome-2.16.0 
+>=net-irc/xchat-gnome-0.15
+
 # Mart Raudsepp <leio@gentoo.org>
 # GNOME-2.16 is not supported on 2.4 kernels, as per bug #147707
 >=gnome-base/gnome-2.16.0

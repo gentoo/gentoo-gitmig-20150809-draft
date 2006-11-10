@@ -1,6 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.29 2006/11/03 04:33:29 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.30 2006/11/10 13:58:08 opfer Exp $
+
+# Christian Faulhammer <opfer@gentoo.org>
+# dependency >=gnome-base/libgnome-2.16.0 not supported
+>=net-irc/xchat-gnome-0.15
 
 #Joshua Jackson <tsunam@gentoo.org>
 #Gnome-2.16 is not supported in 2.4 kernels as per bug #147707
