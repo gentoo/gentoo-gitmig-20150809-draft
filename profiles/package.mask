@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6225 2006/11/09 20:39:03 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6226 2006/11/10 00:06:33 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -588,11 +588,6 @@ games-emulation/qmamecat
 # Markus Ullmann <jokey@gentoo.org> (4 Oct 2006)
 # Needs testing according to upstream
 app-misc/g15composer
-
-# Diego Pettenò <flameeyes@gentoo.org> (4 Oct 2006)
-# Masked pending deletion in 30 days
-# Unmaintained, violating QA, and for 2.4 kernel only.
-media-sound/fobbit
 
 # Robin H. Johnson <robbat2@gentoo.org> (3 Oct 2006)
 # Bug 144560
