@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.8 2006/11/08 14:43:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.9 2006/11/10 17:04:55 wolf31o2 Exp $
 
 # Variables to specify in an ebuild which uses this eclass:
 # GAME - (doom3, quake4 or ut2004, etc), unless ${PN} starts with e.g. "doom3-"
@@ -325,14 +325,24 @@ games-mods_src_install() {
 			directories=$(cd "${D}"/"${INS_DIR}";find . -maxdepth 1 -type d -printf '%P ')
 			for i in ${directories}
 			do
-				if [ -d "${GAMES_PREFIX_OPT}"/"${GAME}"/${i} ]
+				if [ -s "${GAMES_PREFIX_OPT}"/"${GAME}"/${i} ]
+				then
+					# Skip this directory, and just run a symlink
+					dosym "${INS_DIR}"/${i} \
+						"${GAMES_PREFIX_OPT}"/"${GAME}"/${i} || die
+				elif [ -d "${GAMES_PREFIX_OPT}"/"${GAME}"/${i} ]
 				then
 					dodir "${GAMES_PREFIX_OPT}"/"${GAME}"/${i}
 					cd "${D}"/"${INS_DIR}"/${i}
 					files="$(find . -type f -printf '%P ')"
 					for j in ${files}
 					do
-						if [ ! -e "${GAMES_PREFIX_OPT}"/"${GAME}"/${i}/${j} ]
+						if has_version ${CATEGORY}/${PN}
+						then
+							dosym "${INS_DIR}"/${i}/${j} \
+								"${GAMES_PREFIX_OPT}"/"${GAME}"/${i}/${j} \
+								|| die
+						elif [ ! -e "${GAMES_PREFIX_OPT}"/"${GAME}"/${i}/${j} ]
 						then
 							dosym "${INS_DIR}"/${i}/${j} \
 								"${GAMES_PREFIX_OPT}"/"${GAME}"/${i}/${j} \
@@ -348,16 +358,13 @@ games-mods_src_install() {
 			files=$(cd "${D}"/"${INS_DIR}";find . -maxdepth 1 -type f -printf '%P ')
 			for i in ${files}
 			do
-				if [ ! -e "${GAMES_PREFIX_OPT}"/"${GAME}"/${i} ]
-				then
-				# Why don´t we use symlinks? Because these use ./$bin when they
-				# run and that doesn't work if the binary is in GAMES_PREFIX_OPT
-				# but the mod is in GAMES_DATADIR.
+				# Why don´t we use symlinks? Because these use ./$bin when
+				# they run and that doesn't work if the binary is in
+				# GAMES_PREFIX_OPT but the mod is in GAMES_DATADIR.
 				#	dosym "${INS_DIR}"/${i} \
 				#		"${GAMES_PREFIX_OPT}"/"${GAME}"/${i} || die
 					cp -a "${D}"/"${INS_DIR}"/${i} \
 						${D}/"${GAMES_PREFIX_OPT}"/"${GAME}"/${i} || die
-				fi
 			done
 		elif [ ! -f "${GAMES_PREFIX_OPT}"/"${GAME}"/${mod} ]
 		then
