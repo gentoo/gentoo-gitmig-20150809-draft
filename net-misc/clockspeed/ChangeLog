@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/clockspeed
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/ChangeLog,v 1.19 2006/10/19 10:04:22 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/ChangeLog,v 1.20 2006/11/10 16:50:21 bangert Exp $
+
+  10 Nov 2006; Thilo Bangert <bangert@gentoo.org> clockspeed-0.62-r4.ebuild:
+  fix install of leapsecs.dat - bug #154659
 
   19 Oct 2006; Thilo Bangert <bangert@gentoo.org> files/ntpclockset,
   +metadata.xml, clockspeed-0.62-r3.ebuild, clockspeed-0.62-r4.ebuild:

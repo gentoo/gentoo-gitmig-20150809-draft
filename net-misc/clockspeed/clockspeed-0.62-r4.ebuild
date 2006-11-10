@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/clockspeed-0.62-r4.ebuild,v 1.2 2006/10/19 10:04:22 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/clockspeed-0.62-r4.ebuild,v 1.3 2006/11/10 16:50:21 bangert Exp $
 
 inherit eutils flag-o-matic
 
@@ -37,5 +37,5 @@ src_install() {
 	dodoc BLURB CHANGES INSTALL README THANKS TODO
 
 	insinto /var/lib/clockspeed
-	doins "${FILESDIR}"/leapsecs.dat.20060525
+	newins "${FILESDIR}"/leapsecs.dat."$LEAPSECONDS_DATE" leapsecs.dat
 }
