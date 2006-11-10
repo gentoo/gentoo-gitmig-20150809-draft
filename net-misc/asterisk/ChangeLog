@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.134 2006/11/06 00:49:44 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.135 2006/11/10 23:37:40 genstef Exp $
+
+  10 Nov 2006; Stefan Schweizer <genstef@gentoo.org>
+  asterisk-1.2.13-r1.ebuild:
+  Removed the bri patching bug that was introduced in -r1. Better not change
+  quoting - it can lead to serious bugs
 
 *asterisk-1.0.12 (06 Nov 2006)
 

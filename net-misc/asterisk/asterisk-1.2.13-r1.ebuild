@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.13-r1.ebuild,v 1.1 2006/11/02 15:05:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.13-r1.ebuild,v 1.2 2006/11/10 23:37:40 genstef Exp $
 
 inherit eutils multilib
 
@@ -248,7 +248,7 @@ src_unpack() {
 		einfo "Patching asterisk w/ BRI stuff"
 
 		epatch "${WORKDIR}"/${MY_P}-bristuff-${BRI_VERSION}.diff
-		epatch "${S_BRI}"/patches/asterisk.patch
+		#epatch "${S_BRI}"/patches/asterisk.patch
 	fi
 
 	#
