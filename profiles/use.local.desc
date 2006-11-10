@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2320 2006/11/10 02:20:56 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2321 2006/11/10 12:34:17 s4t4n Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1562,9 +1562,8 @@ sys-apps/pcmcia-cs:trusted - Assume all users are trusted (Build unsafe user-spa
 sys-apps/pcmcia-cs:xforms - Enable building the xforms based cardinfo binary
 sys-apps/pcmciautils:staticsocket - Add support for static sockets
 sys-apps/pcmciautils:udev - Install as an udev helper instead of a hotplug helper
-sys-apps/qingy:crypto_libgcrypt - Encrypt communications between qingy and its GUI using GNU libgcrypt
-sys-apps/qingy:crypto_openssl - Encrypt communications between qingy and its GUI using OpenSSL
 sys-apps/qingy:logrotate - Enable logrotate file installation
+sys-apps/qingy:opensslcrypt - Encrypt communications between qingy and its GUI using OpenSSL
 sys-apps/qtparted:jfs - Include JFS support
 sys-apps/qtparted:ntfs - Include NTFS support
 sys-apps/qtparted:reiserfs - Include ReiserFS support
