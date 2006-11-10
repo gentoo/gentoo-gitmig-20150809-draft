@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ogmrip
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ChangeLog,v 1.16 2006/11/10 08:26:20 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ChangeLog,v 1.17 2006/11/10 16:13:50 beandog Exp $
+
+  10 Nov 2006; Steve Dibb <beandog@gentoo.org> ogmrip-0.10.0-r1.ebuild:
+  Add the patch to SRC_URI
 
 *ogmrip-0.10.0-r1 (10 Nov 2006)
 

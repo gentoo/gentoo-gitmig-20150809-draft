@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-0.10.0-r1.ebuild,v 1.1 2006/11/10 08:26:20 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-0.10.0-r1.ebuild,v 1.2 2006/11/10 16:13:50 beandog Exp $
 
 inherit gnome2 eutils autotools
 
 DESCRIPTION="Graphical frontend and libraries for ripping DVDs and encoding to AVI/OGM/MKV/MP4"
 HOMEPAGE="http://ogmrip.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
+	mirror://gentoo/${PN}-0.10.0-mplayer-rc.patch"
 LICENSE="LGPL-2.1"
 
 SLOT="0"
