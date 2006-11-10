@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.7.4.ebuild,v 1.5 2006/10/13 10:39:24 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.7.4.ebuild,v 1.6 2006/11/10 12:36:03 s4t4n Exp $
 
 DESCRIPTION="a DirectFB getty replacement"
 HOMEPAGE="http://qingy.sourceforge.net/"
@@ -9,13 +9,13 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64"
-IUSE="crypto_openssl crypto_libgcrypt emacs gpm pam static"
+IUSE="crypt emacs gpm opensslcrypt pam static"
 
 RDEPEND=">=dev-libs/DirectFB-0.9.18
-	crypto_openssl?   ( >=dev-libs/openssl-0.9.7e )
-	crypto_libgcrypt? ( >=dev-libs/libgcrypt-1.2.1 )
-	emacs?            ( virtual/emacs )
-	pam?              ( >=sys-libs/pam-0.75-r11 )
+	opensslcrypt? ( >=dev-libs/openssl-0.9.7e )
+	crypt?        ( >=dev-libs/libgcrypt-1.2.1 )
+	emacs?        ( virtual/emacs )
+	pam?          ( >=sys-libs/pam-0.75-r11 )
 	>=sys-libs/ncurses-5.4-r6
 	|| ( (
 		x11-libs/libX11
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 
 src_unpack()
 {
-	if use crypto_openssl && use crypto_libgcrypt; then
+	if use opensslcrypt && use crypt; then
 		echo
 		eerror "You can have openssl or libgcrypt as a crypto library, not both."
 		eerror "Please check your USE flags..."
@@ -43,8 +43,8 @@ src_compile()
 {
 	local crypto_support="--disable-crypto"
 
-	use crypto_openssl   && crypto_support="--enable-crypto=openssl"
-	use crypto_libgcrypt && crypto_support="--enable-crypto=libgcrypt"
+	use opensslcrypt && crypto_support="--enable-crypto=openssl"
+	use crypt        && crypto_support="--enable-crypto=libgcrypt"
 
 	econf                                \
 		--sbindir=/sbin                  \
@@ -86,7 +86,7 @@ pkg_postinst()
 	ewarn "and http://bugs.gentoo.org/show_bug.cgi?id=60402"
 	ewarn "Use either a 2.6.5 or a >=2.6.8 kernel!"
 
-	if use crypto_libgcrypt; then
+	if use crypt; then
 		echo
 		einfo "You will have to create a key pair using 'qingy-keygen'"
 	fi
