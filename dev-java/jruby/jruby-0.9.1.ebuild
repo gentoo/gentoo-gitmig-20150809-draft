@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-0.9.1.ebuild,v 1.1 2006/10/22 22:48:36 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-0.9.1.ebuild,v 1.2 2006/11/10 21:05:02 betelgeuse Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="Java based ruby interpreter implementation"
-HOMEPAGE="http://${PN}.codehaus.org/"
+HOMEPAGE="http://jruby.codehaus.org/"
 SRC_URI="http://dist.codehaus.org/${PN}/${PN}-src-${PV}.tar.gz"
 
 LICENSE="|| ( CPL-1.0 GPL-2 LGPL-2.1 )"
@@ -55,8 +55,7 @@ src_test() {
 }
 
 src_install() {
-	java-pkg_dojar "lib/${PN}.jar"
-	java-pkg_dojar "lib/plaincharset.jar"
+	java-pkg_dojar "lib/${PN}.jar" "lib/plaincharset.jar"
 
 	dodoc README COPYING COPYING.CPL COPYING.GPL COPYING.LGPL
 
@@ -66,7 +65,7 @@ src_install() {
 		dodoc docs/*
 	fi
 	use source && java-pkg_dosrc src/org
-	java-pkg_dolauncher jruby \
+	java-pkg_dolauncher ${PN} \
 		--main 'org.jruby.Main' \
 		--java_args '-Djruby.base=/usr/share/jruby -Djruby.home=/usr/share/jruby -Djruby.lib=/usr/share/jruby/lib -Djruby.script=jruby -Djruby.shell=/bin/sh'
 	newbin ${S}/bin/gem jgem
