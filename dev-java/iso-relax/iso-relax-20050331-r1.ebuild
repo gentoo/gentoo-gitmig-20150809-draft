@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/iso-relax/iso-relax-20050331-r1.ebuild,v 1.2 2006/07/20 17:45:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/iso-relax/iso-relax-20050331-r1.ebuild,v 1.3 2006/11/10 15:39:24 nelchael Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://gentoo/${P}-gentoo.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86"
 IUSE="source"
 
 DEPEND=">=virtual/jdk-1.4
