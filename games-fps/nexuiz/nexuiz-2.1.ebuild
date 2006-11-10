@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-2.1.ebuild,v 1.2 2006/11/10 13:21:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-2.1.ebuild,v 1.3 2006/11/10 13:23:44 wolf31o2 Exp $
 
 inherit eutils flag-o-matic games
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip
 	http://www.alientrap.org/Releases/${MY_P}.zip"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="alsa dedicated opengl oss sdl"
 
 UIRDEPEND="alsa? ( media-libs/alsa-lib )
