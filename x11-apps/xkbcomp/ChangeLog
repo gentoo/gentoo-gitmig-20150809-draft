@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xkbcomp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkbcomp/ChangeLog,v 1.32 2006/11/07 03:07:06 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkbcomp/ChangeLog,v 1.33 2006/11/10 01:32:05 joshuabaergen Exp $
+
+*xkbcomp-1.0.3 (10 Nov 2006)
+
+  10 Nov 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  -xkbcomp-1.0.2-r1.ebuild, +xkbcomp-1.0.3.ebuild:
+  Bump for 7.2RC2 with some minor fixes.
 
 *xkbcomp-1.0.2-r1 (07 Nov 2006)
 
