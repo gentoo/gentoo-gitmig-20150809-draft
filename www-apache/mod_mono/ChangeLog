@@ -1,6 +1,14 @@
 # ChangeLog for www-apache/mod_mono
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.24 2006/10/27 13:57:30 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.25 2006/11/10 01:55:58 jurek Exp $
+
+*mod_mono-1.1.17-r1 (10 Nov 2006)
+
+  10 Nov 2006; Jurek Bartuszek <jurek@gentoo.org>
+  files/1.1.17/70_mod_mono.conf, +files/mono_auto_application_aspnet2.patch,
+  -mod_mono-1.1.17.ebuild, +mod_mono-1.1.17-r1.ebuild:
+  Added aspnet2 local USE flag. AutoHosting using mod-mono-server2 is now
+  possible. Added some descriptive comments to the 1.1.17 config file.
 
 *mod_mono-1.1.17 (27 Oct 2006)
 *mod_mono-1.1.13.5 (27 Oct 2006)
