@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.4.ebuild,v 1.2 2006/11/09 14:39:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.4.ebuild,v 1.3 2006/11/10 17:24:49 wolf31o2 Exp $
 
 inherit eutils
 
@@ -81,5 +81,8 @@ pkg_postinst() {
 	ewarn "work and we don't plan on fixing it since reiser4 is the one that is"
 	ewarn "broken in this regard.  Try using a sane filesystem like ext3 or"
 	ewarn "even reiser3."
+	echo
+	ewarn "The LUKS support has changed from versions prior to 3.4.4.  Now,"
+	ewarn "you use crypt_root=/dev/blah instead of real_root=luks:/dev/blah."
 	echo
 }
