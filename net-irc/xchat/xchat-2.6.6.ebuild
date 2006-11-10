@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.6.6.ebuild,v 1.11 2006/11/05 09:08:22 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.6.6.ebuild,v 1.12 2006/11/10 06:45:58 cardoe Exp $
 
 inherit eutils versionator gnome2
 
@@ -21,7 +21,8 @@ RDEPEND=">=dev-libs/glib-2.6.0
 	perl? ( >=dev-lang/perl-5.6.1 )
 	python? ( >=dev-lang/python-2.2 )
 	tcl? ( dev-lang/tcl )
-	dbus? ( >=sys-apps/dbus-0.35 )
+	dbus? ( || ( >=dev-libs/dbus-glib-0.71
+			( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.35 ) ) )
 	spell? ( app-text/enchant )
 	!<net-irc/xchat-gnome-0.9"
 
