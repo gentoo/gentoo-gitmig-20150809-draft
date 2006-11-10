@@ -55,3 +55,29 @@ diff -ur mercury-extras-0.13.0.orig/graphics/mercury_opengl/Mmakefile.mtogl merc
  
  depend: mtogl.depend
  
+--- mercury-extras-0.13.0.orig/graphics/mercury_opengl/togl.c	2003-08-13 17:49:46.000000000 +1200
++++ mercury-extras-0.13.0/graphics/mercury_opengl/togl.c	2006-11-10 20:37:29.000000000 +1300
+@@ -274,22 +274,7 @@
+ #include <tcl.h>
+ #include <tk.h>
+ #if defined(X11)
+-#if TK_MAJOR_VERSION==4 && TK_MINOR_VERSION==0
+-#  include "tkInt4.0.h"
+-#  define NO_TK_CURSOR
+-#elif TK_MAJOR_VERSION==4 && TK_MINOR_VERSION==1
+-#  include "tkInt4.1.h"
+-#elif TK_MAJOR_VERSION==4 && TK_MINOR_VERSION==2
+-#  include "tkInt4.2.h"
+-#elif TK_MAJOR_VERSION==8 && TK_MINOR_VERSION==0 && TK_RELEASE_SERIAL==0
+-#  include "tkInt8.0.h"
+-#elif TK_MAJOR_VERSION==8 && TK_MINOR_VERSION==0 && TK_RELEASE_SERIAL==2
+-#  include "tkInt8.0p2.h"
+-#elif TK_MAJOR_VERSION==8 && TK_MINOR_VERSION==0 && TK_RELEASE_SERIAL==5
+-#  include "tkInt8.0p5.h"
+-#else
+-   Sorry, you will have to edit togl.c to include the right tkInt.h file
+-#endif
++#include <tkInt.h>
+ #elif defined(WIN32)
+ #if TK_MAJOR_VERSION<8
+    Sorry Windows version requires Tcl/Tk ver 8.0 or higher.
