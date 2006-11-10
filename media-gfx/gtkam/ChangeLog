@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gtkam
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.38 2006/04/27 22:56:52 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.39 2006/11/10 12:43:53 allanonjl Exp $
+
+  10 Nov 2006; John N. Laliberte <allanonjl@gentoo.org>
+  -gtkam-0.1.10-r1.ebuild, -gtkam-0.1.11.ebuild, -gtkam-0.1.12.ebuild,
+  gtkam-0.1.12-r1.ebuild, gtkam-0.1.12-r2.ebuild:
+  remove old versions, use gnome2_src_unpack to fix #154631 , cleanup ebuilds
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-gtkam-0.1.10-r1, files/digest-gtkam-0.1.11,

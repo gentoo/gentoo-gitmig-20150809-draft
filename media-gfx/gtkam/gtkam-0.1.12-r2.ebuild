@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.12-r2.ebuild,v 1.5 2006/03/09 23:53:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.12-r2.ebuild,v 1.6 2006/11/10 12:43:53 allanonjl Exp $
 
 inherit eutils gnome2
 
@@ -17,6 +17,7 @@ RDEPEND=">=x11-libs/gtk+-2
 	>=media-libs/libgphoto2-2.1.6
 	exif? ( media-libs/libexif-gtk media-libs/libexif )
 	gnome? ( >=gnome-base/libbonobo-2 >=gnome-base/libgnomeui-2 )"
+
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
@@ -24,20 +25,24 @@ DEPEND="${RDEPEND}
 DOCS="ABOUT-NLS AUTHORS MANUAL NEWS README"
 
 pkg_setup() {
-	G2CONF="${G2CONF} $(use_enable nls) $(use_enable exif) $(use_with gnome) \
-			$(use_with gnome bonobo) --with-rpmbuild=/bin/false --without-gimp"
+	G2CONF="${G2CONF} \
+			$(use_enable nls) \
+			$(use_enable exif) \
+			$(use_with gnome) \
+			$(use_with gnome bonobo) \
+			--with-rpmbuild=/bin/false --without-gimp"
 }
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
+	gnome2_src_unpack
 
-	epatch ${FILESDIR}/${PN}-0.1.10-norpm.patch
-	epatch ${FILESDIR}/${PN}-0.1.12-helpdoc.patch
-	epatch ${FILESDIR}/${PN}-0.1.12-desktop-image.patch
+	epatch "${FILESDIR}/${PN}-0.1.10-norpm.patch"
+	epatch "${FILESDIR}/${PN}-0.1.12-helpdoc.patch"
+	epatch "${FILESDIR}/${PN}-0.1.12-desktop-image.patch"
 }
 
 src_install() {
 	gnome2_src_install
+
 	rm -rf ${D}/usr/share/doc/gtkam
 }

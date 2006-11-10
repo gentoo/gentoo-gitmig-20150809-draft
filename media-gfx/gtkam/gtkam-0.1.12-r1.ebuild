@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.12-r1.ebuild,v 1.4 2006/01/05 14:31:11 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.12-r1.ebuild,v 1.5 2006/11/10 12:43:53 allanonjl Exp $
 
 inherit eutils gnome2
 
@@ -24,10 +24,10 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-0.1.10-norpm.patch
-	epatch ${FILESDIR}/${PN}-0.1.12-helpdoc.patch
+	gnome2_src_unpack
+
+	epatch "${FILESDIR}/${PN}-0.1.10-norpm.patch"
+	epatch "${FILESDIR}/${PN}-0.1.12-helpdoc.patch"
 }
 
 src_compile() {
@@ -37,6 +37,7 @@ src_compile() {
 		$(use_with gnome gnome) \
 		$(use_with gnome bonobo) \
 		--with-rpmbuild=/bin/false --without-gimp
+
 	emake || die
 }
 
