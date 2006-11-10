@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-7.3-r1.ebuild,v 1.1 2006/07/23 09:50:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-7.3-r1.ebuild,v 1.2 2006/11/10 00:21:17 vapier Exp $
 
 DESCRIPTION="Analyzes and Reports on system logs"
 HOMEPAGE="http://www.logwatch.org/"
@@ -63,4 +63,13 @@ src_install() {
 
 	doman logwatch.8
 	dodoc project/CHANGES README HOWTO-Customize-LogWatch
+}
+
+pkg_postinst() {
+	if [[ -e ${ROOT}/etc/cron.daily/logwatch ]] ; then
+		local md5=$(md5sum "${ROOT}"/etc/cron.daily/logwatch)
+		[[ ${md5} == "edb003cbc0686ed4cf37db16025635f3" ]] \
+			&& rm -f "${ROOT}"/etc/cron.daily/logwatch \
+			|| ewarn "You have two logwatch files in /etc/cron.daily/"
+	fi
 }
