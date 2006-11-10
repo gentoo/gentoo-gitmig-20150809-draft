@@ -557,7 +557,7 @@ java-pkg_dolauncher() {
 		if [[ "${var:0:2}" == "--" ]]; then
 			local var=${var:2}
 			echo "gjl_${var}=\"${value}\"" >> "${var_tmp}"
-			local gjl_${var}=${value}
+			local gjl_${var}="${value}"
 		elif [[ "${var}" == "-into" ]]; then
 			target_dir="${value}"
 		elif [[ "${var}" == "-pre" ]]; then
