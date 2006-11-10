@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/whoischk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whoischk/ChangeLog,v 1.5 2006/11/09 15:24:29 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whoischk/ChangeLog,v 1.6 2006/11/10 18:42:47 kang Exp $
+
+  10 Nov 2006; Guillaume Destuynder <kang@gentoo.org>
+  whoischk-0.2.4-r1.ebuild:
+  moved inherit on top
 
 *whoischk-0.2.4-r1 (09 Nov 2006)
 
