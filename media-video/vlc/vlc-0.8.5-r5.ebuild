@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.5-r5.ebuild,v 1.9 2006/11/04 03:35:57 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.5-r5.ebuild,v 1.10 2006/11/11 00:19:53 flameeyes Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -125,6 +125,9 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	has_version '>=dev-libs/libcdio-0.78' || \
+		export EPATCH_EXCLUDE="230_all_libcdio-0.78.2.patch"
 
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 	AT_M4DIR="m4" eautoreconf

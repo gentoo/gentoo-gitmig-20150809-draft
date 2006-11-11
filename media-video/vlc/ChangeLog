@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.189 2006/11/04 03:35:57 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.190 2006/11/11 00:19:53 flameeyes Exp $
+
+  11 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.5-r5.ebuild:
+  Ignore patch 230_all_libcdio-0.78.2.patch when using older versions of
+  libcdio. Closes bug #154193.
 
   04 Nov 2006; Patrick McLean <chutzpah@gentoo.org> vlc-0.8.5-r5.ebuild:
   Add patch to allow compilation with media-video/vlc-0.8.5-r5 (bug #153931).
