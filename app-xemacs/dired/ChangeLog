@@ -1,6 +1,12 @@
 # ChangeLog for app-xemacs/dired
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/dired/ChangeLog,v 1.8 2005/09/29 06:36:33 josejx Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/dired/ChangeLog,v 1.9 2006/11/11 10:14:13 graaff Exp $
+
+*dired-1.17 (11 Nov 2006)
+
+  11 Nov 2006; Hans de Graaff <graaff@gentoo.org> -dired-1.12.ebuild,
+  +dired-1.17.ebuild:
+  Version bump, may fix bug #127362; remove old files.
 
   29 Sep 2005; Joseph Jezak <josejx@gentoo.org> dired-1.13.ebuild:
   Marked ppc stable.
