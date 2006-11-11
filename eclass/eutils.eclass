@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.260 2006/11/11 14:51:47 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.261 2006/11/11 15:13:46 kanaka Exp $
 #
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
@@ -1413,7 +1413,7 @@ _cdrom_locate_file_on_cd() {
 				export CDROM_SET=${i}
 				export CDROM_MATCH=${cdset[${i}]}
 				return
-			done < $(get_mounts)
+			done < <(get_mounts)
 
 			((++i))
 		done
