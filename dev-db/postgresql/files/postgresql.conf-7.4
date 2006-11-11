@@ -1,6 +1,13 @@
 # PostgreSQL's Database Directory
 PGDATA="/var/lib/postgresql/data"
 
+# Alternate database data locations
+# Please read http://www.postgresql.org/docs/7.4/static/manage-ag-alternate-locs.html
+# for more information.
+# Example:
+#   PGDATA_ALT="PGDATA_RAID=/mnt/superfastraid"
+PGDATA_ALT=
+
 # Logfile path (NOTE: This must be owned by the uid/gid of $PGUSER!)
 PGLOG="/var/lib/postgresql/data/postgresql.log"
 
