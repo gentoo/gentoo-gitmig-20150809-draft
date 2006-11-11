@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aria2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.6 2006/10/30 03:10:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.7 2006/11/11 14:32:36 nixnut Exp $
+
+  11 Nov 2006; nixnut <nixnut@gentoo.org> aria2-0.8.1.ebuild:
+  Added ~ppc keyword wrt bug 149658
 
   30 Oct 2006; Jason Wever <weeve@gentoo.org> aria2-0.8.1.ebuild:
   Added ~sparc keyword wrt bug #149658.
