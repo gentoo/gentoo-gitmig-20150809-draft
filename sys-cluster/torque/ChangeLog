@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.37 2006/10/11 01:16:59 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.38 2006/11/11 00:34:09 ticho Exp $
+
+  11 Nov 2006; Andrej Kacian <ticho@gentoo.org> torque-2.1.2-r2.ebuild:
+  Stable on x86, security bug #152104.
 
   11 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/2.1.2-queue-recov-freemem-fix.patch, torque-2.1.2-r2.ebuild:
