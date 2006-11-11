@@ -1,20 +1,21 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.42a.ebuild,v 1.6 2006/11/11 13:44:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.42a-r1.ebuild,v 1.1 2006/11/11 13:44:48 lu_zero Exp $
 
 inherit multilib flag-o-matic eutils python
 
 #IUSE="sdl jpeg png mozilla truetype static fmod"
 IUSE="openal sdl openexr jpeg png nls iconv blender-game ffmpeg"
-
+FFMPEG_SNAP="0.4.9-p20061016"
 DESCRIPTION="3D Creation/Animation/Publishing System"
 HOMEPAGE="http://www.blender.org/"
-SRC_URI="http://download.blender.org/source/${P}.tar.gz"
+SRC_URI="http://download.blender.org/source/${P}.tar.gz
+		 mirror://gentoo/ffmpeg-${FFMPEG_SNAP}.tar.bz2"
 
 
 SLOT="0"
 LICENSE="|| ( GPL-2 BL )"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 
 RDEPEND="
@@ -27,8 +28,8 @@ RDEPEND="
 	openal? ( ~media-libs/openal-0.0.8
 			   media-libs/freealut )
 	sdl? ( >=media-libs/libsdl-1.2 )
-	ffmpeg? ( ~media-video/ffmpeg-0.4.9_p20060530 )
-	~media-libs/x264-svn-20060612
+	ffmpeg? ( ~media-video/ffmpeg-${FFMPEG_SNAP/-/_}
+			  ~media-libs/x264-svn-20061014 )
 	>=dev-libs/openssl-0.9.6
 	>=media-gfx/yafray-0.0.7
 	nls? ( >=media-libs/ftgl-2.1 )
@@ -55,7 +56,7 @@ return 0
 }
 
 src_unpack() {
-	unpack ${A}
+	unpack ${P}.tar.gz
 	mkdir -p ${WORKDIR}/install/linux2/plugins/
 #	chmod 755 bmake
 #	rm -fR include
@@ -64,6 +65,12 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/blender-2.37-dirs.patch
 #	mkdir -p ${WORKDIR}/build/linux2/{extern,intern,source}
+
+	#ffmpeg update!
+	cd ${S}/extern
+	cp ffmpeg/Makefile ffmpeg/common.mak ${T}
+	unpack ffmpeg-${FFMPEG_SNAP}.tar.bz2
+	cp ${T}/Makefile ${T}/common.mak ffmpeg
 }
 
 
