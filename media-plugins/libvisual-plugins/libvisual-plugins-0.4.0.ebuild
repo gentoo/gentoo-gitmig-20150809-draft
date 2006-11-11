@@ -1,8 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0.ebuild,v 1.10 2006/11/06 23:02:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0.ebuild,v 1.11 2006/11/11 22:06:48 flameeyes Exp $
 
-inherit eutils
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
+
+inherit eutils autotools
 
 DESCRIPTION="Visualization plugins for use with the libvisual framework."
 HOMEPAGE="http://libvisual.sourceforge.net/"
@@ -33,6 +36,9 @@ src_unpack() {
 	unpack ${A}
 
 	epatch "${FILESDIR}/${P}-cxxflags.patch"
+
+	cd "${S}"
+	eautoreconf
 }
 
 src_compile() {
