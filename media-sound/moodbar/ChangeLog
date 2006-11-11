@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/moodbar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moodbar/ChangeLog,v 1.1 2006/10/27 12:17:49 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moodbar/ChangeLog,v 1.2 2006/11/11 12:22:27 malc Exp $
+
+  11 Nov 2006; <malc@gentoo.org> moodbar-0.1.1.ebuild:
+  Add ~amd64, bug #153910
 
 *moodbar-0.1.1 (27 Oct 2006)
 
