@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-0.10.0-r1.ebuild,v 1.2 2006/11/10 16:13:50 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-0.10.0-r1.ebuild,v 1.3 2006/11/11 22:07:12 vivo Exp $
 
 inherit gnome2 eutils autotools
 
@@ -58,6 +58,6 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-mplayer-rc.patch"
+	epatch "${DISTDIR}/${P}-mplayer-rc.patch"
 	eautoreconf
 }
