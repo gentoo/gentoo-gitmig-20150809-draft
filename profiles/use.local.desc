@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2324 2006/11/10 18:02:18 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2325 2006/11/11 00:28:35 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1601,15 +1601,11 @@ sys-cluster/util-vserver:legacy - Enable legacy API used in 2.4 kernels and earl
 sys-cluster/vserver-utils:diet - Enables linking against dietlibc
 sys-cluster/vzctl:logrotate - Enable logrotate file installation
 sys-cluster/vzctl:udev - Enable udev rules file installation
-sys-devel/binutils-bfin:multislot - Allow for multiple versions of binutils to be emerged at once for same CTARGET
-sys-devel/binutils-bfin:multitarget - Adds support to binutils for cross compiling (does not work with gas)
 sys-devel/binutils-nios2:multislot - Allow for multiple versions of binutils to be emerged at once for same CTARGET
 sys-devel/binutils-nios2:multitarget - Adds support to binutils for cross compiling (does not work with gas)
 sys-devel/binutils:multislot - Allow for multiple versions of binutils to be emerged at once for same CTARGET
 sys-devel/binutils:multitarget - Adds support to binutils for cross compiling (does not work with gas)
 sys-devel/distcc:crosscompile - Change distcc-config to create shell script not links for proper invokation on cross compile setups
-sys-devel/gcc-bfin:multislot - Allow for SLOTs to include minor version (3.3.4 instead of just 3.3)
-sys-devel/gcc-bfin:objc - Build support for the Objective C code language
 sys-devel/gcc-nios2:multislot - Allow for SLOTs to include minor version (3.3.4 instead of just 3.3)
 sys-devel/gcc-nios2:objc - Build support for the Objective C code language
 sys-devel/gcc:ip28 - Enable building a compiler capable of building a kernel for SGI Indigo2 Impact R10000 (IP28)
