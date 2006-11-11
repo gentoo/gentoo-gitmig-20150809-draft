@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6233 2006/11/10 17:48:44 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6234 2006/11/11 00:56:19 ticho Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -592,11 +592,6 @@ app-misc/g15composer
 # It was only available in mm kernels, up to 2.6.13-mm2.
 # Scheduled for removal on 2006/11/03
 sys-apps/perfctr
-
-# Andrej Kacian <ticho@gentoo.org> (3 Oct 2006)
-# As mpd-0.12 is out, there's no need to keep SVN snapshots around anymore.
-# Package will be removed in a month.
-media-sound/mpd-svn
 
 # Roy Marples <uberlord@gentoo.org> (02 Oct 2006)
 # masked for testing due to major ebuild and installation changes
