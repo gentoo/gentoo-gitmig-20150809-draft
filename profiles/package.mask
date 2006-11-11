@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6238 2006/11/11 14:39:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6239 2006/11/11 20:26:23 aballier Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -884,6 +884,7 @@ app-admin/eselect-compiler
 >=media-video/ffmpeg-0.4.9_p20060816
 >=media-libs/libquicktime-0.9.9-r1
 >=media-gfx/blender-2.42a-r1
+>=media-video/mpeg4ip-1.5.0.1-r1
 
 # Ioannis Aslanidis <deathwing00@gentoo.org> (11 Aug 2006)
 # k3b pre-release versions. Apart from being pre-release,
