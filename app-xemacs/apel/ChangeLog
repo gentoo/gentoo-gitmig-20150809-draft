@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/apel
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/apel/ChangeLog,v 1.9 2006/11/05 13:08:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/apel/ChangeLog,v 1.10 2006/11/11 13:13:28 graaff Exp $
+
+*apel-1.32 (11 Nov 2006)
+
+  11 Nov 2006; Hans de Graaff <graaff@gentoo.org> +apel-1.32.ebuild:
+  Version bump.
 
   05 Nov 2006; Hans de Graaff <graaff@gentoo.org> -apel-1.25.ebuild:
   Remove old version.
