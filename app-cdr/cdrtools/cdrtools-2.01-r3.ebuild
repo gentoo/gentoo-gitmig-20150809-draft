@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01-r3.ebuild,v 1.6 2006/09/05 16:45:43 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01-r3.ebuild,v 1.7 2006/11/11 14:50:31 pylon Exp $
 
 inherit eutils gnuconfig versionator toolchain-funcs
 
@@ -92,10 +92,19 @@ src_install() {
 	insinto /usr/include/scsilib/scg
 	doins include/scg/*.h
 
-	cd ${S}
-	dodoc ABOUT Changelog README README.{ATAPI,audio,cdplus,cdrw,cdtext,cdclone,copy,DiskT@2,linux,linux-shm,multi,parallel,raw,rscsi,sony,verify} START
+	cd "${S}"
+	dodoc ABOUT Changelog README START READMEs/README.linux
+	dodoc README.{ATAPI,audio,cdplus,cdrw,cdtext,clone,copy,DiskT@2,linux-shm,mkisofs,multi,parallel,raw,rscsi,sony,verify}
 	doman */*.1
 	doman */*.8
+
+	cd "${S}"/mkisofs
+	docinto mkisofs
+	dodoc README*
+
+	cd "${S}"/cdda2wav
+	docinto cdda2wav
+	dodoc FAQ Frontends HOWTOUSE README TODO
 
 	cd ${S}/doc
 	dodoc cdrecord-1.8.1_de-doc_0.1.tar

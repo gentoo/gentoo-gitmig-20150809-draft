@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.159 2006/10/28 15:16:01 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.160 2006/11/11 14:50:31 pylon Exp $
+
+  11 Nov 2006; Lars Weiler <pylon@gentoo.org> cdrtools-2.01-r1.ebuild,
+  cdrtools-2.01-r3.ebuild, cdrtools-2.01.01_alpha10.ebuild,
+  cdrtools-2.01.01_alpha11.ebuild, cdrtools-2.01.01_alpha18.ebuild:
+  Added installation of missing documents; bug #154032.
 
   28 Oct 2006; Lars Weiler <pylon@gentoo.org> files/mkisofs-iconv-18.patch,
   cdrtools-2.01.01_alpha18.ebuild:
