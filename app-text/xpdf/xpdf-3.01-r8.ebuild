@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.01-r8.ebuild,v 1.15 2006/11/07 23:20:24 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.01-r8.ebuild,v 1.16 2006/11/11 09:48:14 genstef Exp $
 
 inherit eutils flag-o-matic
 
@@ -27,10 +27,8 @@ linguas_he linguas_ja linguas_ko linguas_la linguas_th linguas_tr"
 
 RDEPEND=">=app-text/poppler-0.5.1
 	virtual/motif
-	|| (
-		( x11-libs/libX11 x11-libs/libXpm )
-		virtual/x11
-	)"
+	x11-libs/libX11
+	x11-libs/libXpm"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
@@ -50,7 +48,7 @@ src_install() {
 	newins ${FILESDIR}/sample-xpdfrc xpdfrc
 	dodoc README ANNOUNCE CHANGES
 
-	use linguas_ar && install_lang turkish
+	use linguas_ar && install_lang arabic
 	use linguas_zh_CN && install_lang chinese-simplified
 	use linguas_zh_TW && install_lang chinese-traditional
 	use linguas_ru && install_lang cyrillic
