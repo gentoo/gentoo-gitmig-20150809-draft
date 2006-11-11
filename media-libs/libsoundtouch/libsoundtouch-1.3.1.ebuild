@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/libsoundtouch-1.3.1.ebuild,v 1.2 2006/10/04 15:56:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/libsoundtouch-1.3.1.ebuild,v 1.3 2006/11/11 02:08:54 ticho Exp $
 
 inherit autotools toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.surina.net/soundtouch/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~ppc-macos"
+KEYWORDS="~amd64 ~ppc x86 ~ppc-macos"
 
 RDEPEND="virtual/libc"
 DEPEND="app-arch/unzip"
