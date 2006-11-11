@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.41 2006/10/25 05:56:41 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.42 2006/11/11 21:00:24 mcummings Exp $
+
+  11 Nov 2006; Michael Cummings <mcummings@gentoo.org>
+  pulseaudio-0.9.5-r4.ebuild:
+  Marking amd64 stable, dep for mpd
 
   25 Oct 2006; Joshua Jackson <tsunam@gentoo.org>
   pulseaudio-0.9.5-r4.ebuild:
