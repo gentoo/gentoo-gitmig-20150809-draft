@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre23.ebuild,v 1.1 2006/10/15 16:53:19 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre23.ebuild,v 1.2 2006/11/11 09:31:59 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -52,9 +52,10 @@ DEPEND="${RDEPEND}
 src_unpack (){
 	unpack ${A}; cd "${S}"
 
+	epatch "${FILESDIR}"/configure-LANG.patch #131440
+
 	if use unicode ; then
 		epatch "${WORKDIR}/${PN}-2.1pre22-utf8.diff"
-		export LANG=C
 		cd "${S}/intl" && ./gen-intl && cd .. || die "gen-intl filed"
 	fi
 }
@@ -102,8 +103,8 @@ src_compile (){
 	emake || die "make failed"
 }
 
-src_install (){
-	einstall
+src_install() {
+	einstall || die
 
 	# Only install links icon if X driver was compiled in ...
 	use X && doicon graphics/links.xpm
@@ -117,8 +118,7 @@ src_install (){
 
 
 pkg_postinst() {
-	if use svga
-	then
+	if use svga ; then
 		einfo "You had the svga USE flag enabled, but for security reasons"
 		einfo "the links2 binary is NOT setuid by default. In order to"
 		einfo "enable links2 to work in SVGA, please change the permissions"
