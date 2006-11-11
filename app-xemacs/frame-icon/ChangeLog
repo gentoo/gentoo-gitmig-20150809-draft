@@ -1,6 +1,12 @@
 # ChangeLog for app-xemacs/frame-icon
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/frame-icon/ChangeLog,v 1.6 2005/01/01 17:04:47 eradicator Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/frame-icon/ChangeLog,v 1.7 2006/11/11 17:50:26 graaff Exp $
+
+*frame-icon-1.11 (11 Nov 2006)
+
+  11 Nov 2006; Hans de Graaff <graaff@gentoo.org> +metadata.xml,
+  +frame-icon-1.11.ebuild:
+  Version bump; add metadata.
 
   02 Oct 2003; Aron Griffis <agriffis@gentoo.org> frame-icon-1.09.ebuild:
   Stable on alpha
