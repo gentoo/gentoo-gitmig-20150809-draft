@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/cairo-clock
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/cairo-clock/ChangeLog,v 1.1 2006/11/11 23:04:17 omp Exp $
+
+  11 Nov 2006; David Shakaryan <omp@gentoo.org> +cairo-clock-0.3.2.ebuild,
+  +metadata.xml:
+  Add x11-misc/cairo-clock to tree. Loosely based on Samuli Suominen's ebuild.
+  (bug #126181)
+
