@@ -1,7 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.42.ebuild,v 1.14 2006/08/15 17:41:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.42.ebuild,v 1.15 2006/11/11 00:43:53 vapier Exp $
 
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 inherit eutils autotools flag-o-matic multilib games
 
 DESCRIPTION="SNES (Super Nintendo) emulator that uses x86 assembly"
@@ -29,7 +31,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"/src
 	cp "icons/48x48x32.png" "${T}/zsnes.png"
-	epatch "${FILESDIR}"/${PV}-configure.patch \
+	epatch \
+		"${FILESDIR}"/${PV}-configure.patch \
 		"${FILESDIR}"/${P}-execStack.patch \
 		"${FILESDIR}"/${P}-memfix.patch
 	eautoreconf
