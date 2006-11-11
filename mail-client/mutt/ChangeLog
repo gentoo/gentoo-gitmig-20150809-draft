@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mutt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.97 2006/10/28 10:45:40 tomk Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.98 2006/11/11 13:28:48 eroyf Exp $
+
+  11 Nov 2006; Alexander H. Færøy <eroyf@gentoo.org>
+  mutt-1.5.13-r1.ebuild:
+  Stable on MIPS. Bug 152657.
 
   28 Oct 2006; Tom Knight <tomk@gentoo.org> mutt-1.5.13-r1.ebuild:
   Stable on amd64. Bug #152657
