@@ -1,9 +1,16 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.363 2006/11/10 21:01:07 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.364 2006/11/11 15:25:41 uberlord Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+*baselayout-1.13.0_alpha7-r1 (11 Nov 2006)
+
+  11 Nov 2006; Roy Marples <uberlord@gentoo.org>
+  +files/baselayout-1.13.0_alpha7-2380.patch,
+  +baselayout-1.13.0_alpha7-r1.ebuild:
+  Fix adding ipv6 addresses to virtual interfaces and restarting postgresql
 
 *baselayout-1.13.0_alpha7 (10 Nov 2006)
 
