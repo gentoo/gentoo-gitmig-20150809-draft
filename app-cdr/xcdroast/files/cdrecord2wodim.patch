@@ -69,3 +69,19 @@ diff -urNad xcdroast-0.98alpha15.orig/src/xcdroast.h xcdroast-0.98alpha15/src/xc
  #define CDDA2WAV "bin/cdda2wav"
  #define READCD "bin/readcd"
  #define MKISOFS "bin/mkisofs"
+diff -urNad xcdroast-0.98alpha15.orig/src/io.c xcdroast-0.98alpha15/src/io.c
+--- xcdroast-0.98alpha15.orig/src/io.c	2006-11-11 13:39:27.000000000 +0100
++++ xcdroast-0.98alpha15/src/io.c	2006-11-11 13:40:59.000000000 +0100
+@@ -348,6 +348,12 @@
+ 		return;
+ 	}
+ 
++	/* as of cdrkit-1.0_pre5 we need to test for wodim: as well */
++	strcpy(tmp,"wodim: ");
++	if (strncmp(line, tmp, strlen(tmp)) == 0) {
++		return;
++	}
++
+ 	/* a line with device-info found (by checking for ")")*/
+ 	p1 = index(line,')');
+ 	if (p1 != NULL && !strstr(line,")\"") && 

@@ -1,18 +1,18 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r4.ebuild,v 1.1 2006/11/11 04:51:57 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r4.ebuild,v 1.2 2006/11/11 13:01:30 pylon Exp $
 
 inherit eutils
 
 S=${WORKDIR}/${P/_/}
-DESCRIPTION="Menu based front-end to mkisofs and cdrecord"
+DESCRIPTION="Old-school menu based front-end for CD and DVD writing"
 HOMEPAGE="http://www.xcdroast.org/"
 SRC_URI="mirror://sourceforge/xcdroast/${P/_/}.tar.gz
 	mirror://gentoo/${P}_new_configure.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
-IUSE="nls dvdr"
+IUSE="nls"
 
 DEPEND=">=x11-libs/gtk+-2.0.3
 	dev-util/pkgconfig"
@@ -57,12 +57,4 @@ src_install() {
 	newins ${S}/xpms/xcdricon.xpm xcdroast.xpm
 
 	make_desktop_entry xcdroast "X-CD-Roast" xcdroast "AudioVideo;DiscBurning"
-}
-
-pkg_postinst() {
-	if use dvdr; then
-		einfo "As both cdrkit and cdrtools are capable of DVD writing they"
-		einfo "can be used with xcdroast.  But you have to start xcdroast"
-		einfo "with the option '-n' to skip the version check."
-	fi
 }
