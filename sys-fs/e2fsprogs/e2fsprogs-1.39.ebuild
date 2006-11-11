@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.39.ebuild,v 1.2 2006/09/09 10:28:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.39.ebuild,v 1.3 2006/11/11 09:22:33 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -37,6 +37,7 @@ src_unpack() {
 	cd "${S}"
 	# Fix locale issues while running tests #99766
 	epatch "${FILESDIR}"/${PN}-1.38-tests-locale.patch
+	epatch "${FILESDIR}"/${PN}-1.38-locale.patch #131462
 	# Fix a cosmetic error in mk_cmds's help output.
 	epatch "${FILESDIR}"/e2fsprogs-1.32-mk_cmds-cosmetic.patch
 	chmod u+w po/*.po # Userpriv fix #27348
