@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.299 2006/11/11 12:15:02 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.300 2006/11/11 13:39:14 dev-zero Exp $
+
+  11 Nov 2006; Tiziano Müller <dev-zero@gentoo.org>
+  files/pg_autovacuum.conf-7.4, files/pg_autovacuum.init-7.4,
+  files/pg_autovacuum.conf-8.0, files/pg_autovacuum.init-8.0:
+  Added PGPORT var for pg_autovacuum: bug #53443, thanks to Paul Komarek
 
   11 Nov 2006; Tiziano Müller <dev-zero@gentoo.org>
   files/postgresql.conf-7.4, files/postgresql.init-7.4:

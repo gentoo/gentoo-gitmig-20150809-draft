@@ -4,6 +4,10 @@ PG_AUTOVACUUM_LOG="/var/lib/postgresql/data/pg_autovacuum.log"
 # PostgreSQL user
 PGUSER="postgres"
 
+# If you changed the default database port, you have to set
+# PGPORT to the new port number, otherwise pg_autovacuum won't work.
+#PGPORT=5432
+
 # See the pg_autovacuum documentation for the details of how these
 # parameters affect pg_autovacuum's aggressiveness.
 

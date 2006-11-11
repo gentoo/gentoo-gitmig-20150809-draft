@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/files/pg_autovacuum.init-7.4,v 1.2 2006/11/07 22:48:22 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/files/pg_autovacuum.init-7.4,v 1.3 2006/11/11 13:39:14 dev-zero Exp $
 
 depend() {
 	need postgresql logger
@@ -27,7 +27,7 @@ start() {
 		fi
 	done
 
-	start-stop-daemon -o --chuid $PGUSER --start --quiet --exec /usr/bin/pg_autovacuum -- -D -v $VACUUM_BASE -V $VACUUM_SCALE -s $SLEEP_BASE -S $SLEEP_SCALE -L $PG_AUTOVACUUM_LOG
+	start-stop-daemon -o --chuid $PGUSER --start --quiet --exec /usr/bin/pg_autovacuum -- -D ${PGPORT:+-p ${PGPORT}} -v $VACUUM_BASE -V $VACUUM_SCALE -s $SLEEP_BASE -S $SLEEP_SCALE -L $PG_AUTOVACUUM_LOG
 
 	sleep 1
 	pidof /usr/bin/pg_autovacuum > /dev/null
