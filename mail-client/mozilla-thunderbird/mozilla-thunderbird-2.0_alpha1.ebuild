@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0_alpha1.ebuild,v 1.2 2006/11/09 00:34:04 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0_alpha1.ebuild,v 1.3 2006/11/11 00:51:57 kloeri Exp $
 
 #
 # There are no linguas supported in alpha builds
@@ -161,7 +161,7 @@ src_compile() {
 	# requirements while compiling
 	edit_makefiles
 
-	emake || die "emake failed"
+	emake -j1 || die "emake failed"
 }
 
 pkg_preinst() {

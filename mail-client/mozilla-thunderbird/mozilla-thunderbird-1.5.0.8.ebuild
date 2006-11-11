@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.8.ebuild,v 1.5 2006/11/10 09:18:21 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.8.ebuild,v 1.6 2006/11/11 00:51:57 kloeri Exp $
 
 unset ALLOWED_FLAGS	 # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib autotools mozextension
@@ -157,7 +157,7 @@ src_compile() {
 	# requirements while compiling
 	edit_makefiles
 
-	emake || die
+	emake -j1 || die
 }
 
 pkg_preinst() {
