@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-gtklibs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.26 2006/11/11 08:21:26 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.27 2006/11/11 20:56:49 tester Exp $
+
+*emul-linux-x86-gtklibs-2.10.6.1 (11 Nov 2006)
+
+  11 Nov 2006; Olivier Crête <tester@gentoo.org>
+  -emul-linux-x86-gtklibs-2.10.6.ebuild,
+  +emul-linux-x86-gtklibs-2.10.6.1.ebuild:
+  Re-add forgotten gtk+ 1.2 and ignore execstack problem
 
 *emul-linux-x86-gtklibs-2.10.6 (11 Nov 2006)
 
