@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6234 2006/11/11 00:56:19 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6235 2006/11/11 08:52:50 mrness Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -635,12 +635,6 @@ dev-util/xmingw-gcc
 dev-util/xmingw-runtime
 dev-util/xmingw-w32api
 dev-libs/wxactivex
-
-# Alin Nastac <mrness@gentoo.org> (20 Sep 2006)
-# Masked due to its proven inability to work with squid-2.6.
-# Pending for removal on 20 Oct 2006.
-# Please uninstall it and emerge net-proxy/squidclamav instead.
-net-proxy/squidclam
 
 # Luis Medinas <metalgod@gentoo.org> (19 Sep 2006)
 # Mask Banshee 0.11 series and dependencies for testing
