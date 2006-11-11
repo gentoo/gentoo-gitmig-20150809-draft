@@ -1,6 +1,14 @@
 # ChangeLog for app-cdr/xcdroast
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.48 2006/10/28 14:56:25 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.49 2006/11/11 04:51:57 pylon Exp $
+
+*xcdroast-0.98_alpha15-r4 (11 Nov 2006)
+
+  11 Nov 2006; Lars Weiler <pylon@gentoo.org> +files/cdrecord2wodim.patch,
+  +files/cdrecord_versions.patch, +files/modern_cdrtools.patch,
+  xcdroast-0.98_alpha15-r3.ebuild, +xcdroast-0.98_alpha15-r4.ebuild:
+  Added some patches (from upstream and from Debian) so that xcdroast works
+  with current cdrkit and cdrtools.
 
   28 Oct 2006; Lars Weiler <pylon@gentoo.org>
   xcdroast-0.98_alpha15-r3.ebuild:

@@ -1,0 +1,71 @@
+diff -urNad xcdroast-0.98+0alpha15~/src/io.c xcdroast-0.98+0alpha15/src/io.c
+--- xcdroast-0.98+0alpha15~/src/io.c	2006-09-09 16:24:37.000000000 +0200
++++ xcdroast-0.98+0alpha15/src/io.c	2006-09-09 16:26:32.000000000 +0200
+@@ -1273,7 +1273,7 @@
+ 	drvcount = 0;
+ 
+ 	get_wrap_path_cdrecord(line);
+-	strcat(line," driver=help 2>&1");
++	strcat(line," driver=help 2>&1 | sed -n '/Driver types:/,//p'");
+ 
+ 	dodebug(1, "calling: %s\n", line);
+         if ((fpin = popen(line,"r")) == NULL) {
+@@ -5856,7 +5856,7 @@
+ 	drvcount = 0;
+ 
+ 	get_wrap_path_cdrecord(line);
+-	strcat(line," blank=help 2>&1");
++	strcat(line," blank=help 2>&1 | sed -n '/Blanking options:/,//p'");
+ 
+ 	dodebug(1, "calling: %s\n", line);
+ 
+@@ -9913,7 +9913,7 @@
+ 	} else {
+ 		get_wrap_path("CDRECORD",line);
+ 	}
+-	strcat(line," -version 2>/dev/null");
++	strcat(line," -version 2>&1");
+ 
+ 	dodebug(1, "calling: %s\n", line);
+         if ((fpin = popen(line,"r")) == NULL) {
+@@ -10137,7 +10137,7 @@
+ 
+ 	strcpy(ver,"");
+ 	get_wrap_path("READCD",line);
+-	strcat(line," -version 2>/dev/null");
++	strcat(line," -version 2>/dev/null | head -n 1");
+ 
+ 	dodebug(1, "calling: %s\n", line);
+         if ((fpin = popen(line,"r")) == NULL) {
+
+diff -urNad xcdroast-0.98alpha15.orig/src/main.c xcdroast-0.98alpha15/src/main.c
+--- xcdroast-0.98alpha15.orig/src/main.c	2006-11-11 04:38:39.000000000 +0100
++++ xcdroast-0.98alpha15/src/main.c	2006-11-11 04:39:33.000000000 +0100
+@@ -586,13 +586,13 @@
+         }
+ 
+         /* if we are in DVD mode, check if the security-key is set */
+-        if (curset.isProDVD == 1) {
++        /* if (curset.isProDVD == 1) {
+                 keyenv = getenv("CDR_SECURITY");
+                 if (keyenv == NULL) {
+ 			show_dialog(ICO_WARN, _("Warning: You have not entered a cdrecord-ProDVD key in setup.\nPlease see the FAQ on how to obtain your free key.\nYou also have to renew the key every few months because it got an\nexpire date. You will not be able to properly write DVDs without it."), T_OK, NULL, NULL, 0); 
+                 }
+ 
+-	}
++	} */
+ 
+ 	dolog(1,"Starting X-CD-Roast\n");
+ 
+diff -urNad xcdroast-0.98alpha15.orig/src/xcdroast.h xcdroast-0.98alpha15/src/xcdroast.h
+--- xcdroast-0.98alpha15.orig/src/xcdroast.h	2006-11-11 04:38:39.000000000 +0100
++++ xcdroast-0.98alpha15/src/xcdroast.h	2006-11-11 04:38:51.000000000 +0100
+@@ -113,7 +113,7 @@
+    /usr/local/lib/xcdroast-0.98/bin/cdrecord) */
+ 
+ #define CDRECORD "bin/cdrecord" 
+-#define CDRECORDPRODVD "bin/cdrecord.prodvd" 
++#define CDRECORDPRODVD "bin/cdrecord" 
+ #define CDDA2WAV "bin/cdda2wav"
+ #define READCD "bin/readcd"
+ #define MKISOFS "bin/mkisofs"
