@@ -1,12 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/libgksu-2.0.0.ebuild,v 1.4 2006/10/13 19:01:04 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/libgksu-2.0.0.ebuild,v 1.5 2006/11/12 04:54:49 vapier Exp $
 
 inherit gnome2
 
 MY_PN="${PN}2"
 MY_P="${MY_PN}-${PV}"
-
 
 DESCRIPTION="A library for integration of su into applications"
 HOMEPAGE="http://www.nongnu.org/gksu/"
@@ -14,8 +13,8 @@ SRC_URI="http://people.debian.org/~kov/gksu/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
-IUSE="${IUSE} nls doc"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~sparc ~x86"
+IUSE="nls doc"
 
 DEPEND="doc? ( >=dev-util/gtk-doc-1.2-r1 )
 	nls? ( >=sys-devel/gettext-0.14.1 )
@@ -26,7 +25,6 @@ DEPEND="doc? ( >=dev-util/gtk-doc-1.2-r1 )
 	>=gnome-base/libglade-2
 	>=dev-util/pkgconfig-0.19
 	x11-libs/startup-notification"
-
 RDEPEND="${DEPEND}
 	app-admin/sudo
 	dev-util/intltool"
