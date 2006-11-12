@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.28-r3.ebuild,v 1.2 2006/11/11 14:41:49 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.28-r3.ebuild,v 1.3 2006/11/12 07:22:41 pva Exp $
 
 inherit eutils flag-o-matic
 
@@ -125,5 +125,5 @@ src_install() {
 	mv "${D}/usr/bin/readdisk" "${D}/usr/bin/e-readdisk"
 	mv "${D}/usr/share/uae" "${D}/usr/share/${PN}"
 
-	dodoc docs/* README ChangeLog CHANGES
+	dodoc docs/* README ChangeLog
 }
