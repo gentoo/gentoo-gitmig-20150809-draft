@@ -129,3 +129,10 @@ ivtv
 
 #2006/10/11 - corsair - bug #150925
 graphlcd
+
+
+# conky dependencies missing keywords related (dragonheart -20061112)
+# media-sound/mpd
+mpd
+# app-admin/hddtemp
+hddtemp

@@ -122,3 +122,9 @@ graphlcd
 # masking p2p USE flag until media-libs/moodriver can get
 # keyworded
 p2p
+
+# conky dependencies missing keywords related (dragonheart -20061112)
+# media-sound/mpd
+mpd
+# app-admin/hddtemp
+hddtemp

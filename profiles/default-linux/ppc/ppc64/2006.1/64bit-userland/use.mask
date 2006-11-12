@@ -71,3 +71,8 @@ pcmcia
 # # work on ppc64 so I'm masking it's USE flag.
 ivtv
 
+# conky dependencies missing keywords related (dragonheart -20061112)
+# media-sound/mpd
+mpd
+# app-admin/hddtemp
+hddtemp
