@@ -1,26 +1,24 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.2.0.ebuild,v 1.2 2006/10/25 11:38:31 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.2.0.ebuild,v 1.3 2006/11/12 03:41:02 vapier Exp $
 
 inherit eutils
 
-DESCRIPTION="memcached is a high-performance, distributed memory object caching system, generic in nature, but intended for use in speeding up dynamic web applications by alleviating database load."
-
-HOMEPAGE="http://www.danga.com/memcached/"
-
 MY_PV="${PV/_pre/-pre}"
 MY_P="${PN}-${MY_PV}"
+DESCRIPTION="high-performance, distributed memory object caching system, generic in nature, but intended for use in speeding up dynamic web applications by alleviating database load"
+HOMEPAGE="http://www.danga.com/memcached/"
 SRC_URI="http://www.danga.com/memcached/dist/${MY_P}.tar.gz"
 
 LICENSE="BSD"
-
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="static perl doc"
 
 DEPEND=">=dev-libs/libevent-0.6
 	perl? ( dev-perl/Cache-Memcached )"
-S="${WORKDIR}/${MY_P}"
+
+S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	local myconf=""
