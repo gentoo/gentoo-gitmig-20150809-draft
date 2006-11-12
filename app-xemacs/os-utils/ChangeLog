@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/os-utils
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/os-utils/ChangeLog,v 1.8 2006/11/12 11:09:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/os-utils/ChangeLog,v 1.9 2006/11/12 18:25:44 graaff Exp $
+
+  12 Nov 2006; Hans de Graaff <graaff@gentoo.org> os-utils-1.37.ebuild:
+  Add ~ppc64 keyword due to mh-e dependency
 
 *os-utils-1.37 (12 Nov 2006)
 
