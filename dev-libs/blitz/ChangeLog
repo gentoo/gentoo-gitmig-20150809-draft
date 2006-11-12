@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/blitz
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.27 2006/11/06 18:38:55 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.28 2006/11/12 11:28:49 dragonheart Exp $
+
+  12 Nov 2006; Daniel Black <dragonheart@gentoo.org> blitz-0.9.ebuild:
+  removed doc support - access violation - thanks Manuel Herzog bug 88042#c6
 
   06 Nov 2006; Daniel Black <dragonheart@gentoo.org> blitz-0.9.ebuild:
   -m added doc to IUSE - thanks Jakub
