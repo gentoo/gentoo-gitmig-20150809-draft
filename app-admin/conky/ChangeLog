@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.34 2006/11/12 11:07:37 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.35 2006/11/12 12:24:35 dragonheart Exp $
+
+  12 Nov 2006; Daniel Black <dragonheart@gentoo.org>
+  -files/conky-1.3.4-arraybounds.patch, -files/conky-1.3.4-miscbug.patch,
+  -conky-1.3.4-r2.ebuild, -conky-1.3.5-r1.ebuild, -conky-1.4.1.ebuild,
+  conky-1.4.3.ebuild:
+  added USE=vim-syntax -bug #152275 + old version cleanout
 
 *conky-1.4.3 (12 Nov 2006)
 
