@@ -37,10 +37,10 @@ DIST jack-audio-connection-kit-0.101.1.tar.gz 724598 RMD160 54bcb565419f032715a9
 DIST jack-audio-connection-kit-0.102.20.tar.gz 761792 RMD160 5a343fa8c54f629418f3e21165870d7e8a75a4a6 SHA1 97255192331f1189a9879d78b1aecbb42468dcf2 SHA256 e4506a9f46cd6fa4896e76482f17b7bddeeda3eb35add176d6db479e5c4f8530
 DIST jack-audio-connection-kit-0.99.0.tar.gz 722399 RMD160 7d32d77dc58497436d30f6782d0214b26854bb8a SHA1 dc98d8cc65dfb998eb2b035c29c4019963173b59 SHA256 2096acc56c314e689faad0036bbc1d86dea1b9d9620f711d471de76b1dd6859e
 DIST netjack-0.12rc1.tar.bz2 25634 RMD160 4d41929aedb80a64964641f0de1e6a806b071015 SHA1 489b91ac0ef9e2b16c5f9698396585e566ec072e SHA256 631ffe87f3631495bde730069b2529da668ab5993d6574dafbb60e50b5b9497e
-EBUILD jack-audio-connection-kit-0.101.1-r1.ebuild 4300 RMD160 03752a311294edb1f93a32604ad894753a30bf3c SHA1 5dc930dedf47d4babf77c5788060be38f52a404c SHA256 7cf8eda72415f9abad714c97a921392f1181d3b3ce6f0fc038a9c9eb7806677b
-MD5 367ddb7ff8a82651ef3fe2ac6a2748c2 jack-audio-connection-kit-0.101.1-r1.ebuild 4300
-RMD160 03752a311294edb1f93a32604ad894753a30bf3c jack-audio-connection-kit-0.101.1-r1.ebuild 4300
-SHA256 7cf8eda72415f9abad714c97a921392f1181d3b3ce6f0fc038a9c9eb7806677b jack-audio-connection-kit-0.101.1-r1.ebuild 4300
+EBUILD jack-audio-connection-kit-0.101.1-r1.ebuild 4295 RMD160 b7a7e6b31ef87e1883e8e6c25a151fc844d1430a SHA1 5fe2010d3bf4b8334b5a490721d39c14f45371c8 SHA256 8ab7d6c1d2738ec8c634adb3381c8fd7791fcc7932065cfa813fe4e562c17cf9
+MD5 2df60a098b66e21b231b49c43f86797b jack-audio-connection-kit-0.101.1-r1.ebuild 4295
+RMD160 b7a7e6b31ef87e1883e8e6c25a151fc844d1430a jack-audio-connection-kit-0.101.1-r1.ebuild 4295
+SHA256 8ab7d6c1d2738ec8c634adb3381c8fd7791fcc7932065cfa813fe4e562c17cf9 jack-audio-connection-kit-0.101.1-r1.ebuild 4295
 EBUILD jack-audio-connection-kit-0.102.20.ebuild 3909 RMD160 b92dded1b23e100de7449c3b85f853dbf5d10f17 SHA1 1c49d9a1dac6cea2b295892158bb59a90af985a8 SHA256 a1bdffee5a8421f3ee660f152703b3e8e6a02de855c26a5c8bb383a200cfcf2f
 MD5 2cb27455f556ed627ed61fefc3753cc0 jack-audio-connection-kit-0.102.20.ebuild 3909
 RMD160 b92dded1b23e100de7449c3b85f853dbf5d10f17 jack-audio-connection-kit-0.102.20.ebuild 3909
@@ -83,7 +83,7 @@ SHA256 d04628356c94d8ae7aff997a114e19b465a72df80e8cdcdd314cccff439fd492 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFVjfjtG5z4I8BtQoRApbPAJwI/bbTRTAAWb4nkyAwh4Q+EjnJewCfTceL
-apguqUuCR/9IpvLrtKHuoUU=
-=Jdqa
+iD8DBQFFVqziamhnQswr0vIRAqTwAKCI2p9upBLIYnY2XGyVyCXunZAmxACfWsym
+E4ZZKl9IjFYwflrps5g0oX4=
+=sdJA
 -----END PGP SIGNATURE-----
