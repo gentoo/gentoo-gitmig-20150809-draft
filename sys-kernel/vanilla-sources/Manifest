@@ -53,14 +53,14 @@ EBUILD vanilla-sources-2.6.16.14.ebuild 506 RMD160 e55c8001555623914bccedf23a39f
 MD5 2cf181ca76735c61a965ad0c3bc95203 vanilla-sources-2.6.16.14.ebuild 506
 RMD160 e55c8001555623914bccedf23a39f1176240dc24 vanilla-sources-2.6.16.14.ebuild 506
 SHA256 29237d275bf27afef39e1303f086eabdaa091d7549bf19f98c7c7a1a02d3a000 vanilla-sources-2.6.16.14.ebuild 506
-EBUILD vanilla-sources-2.6.16.16.ebuild 508 RMD160 d91eeab8448f3e3eb56c931dbff34390a013c703 SHA1 a9b701f04dcd984a9e4bdfaf2b803d9a877ecdfa SHA256 9e24004c9fee595076eac7b2adaa44053e9bd2aadb3fb769563a85b40c649ece
-MD5 562a772895305b57a4ec6d5d739a2738 vanilla-sources-2.6.16.16.ebuild 508
-RMD160 d91eeab8448f3e3eb56c931dbff34390a013c703 vanilla-sources-2.6.16.16.ebuild 508
-SHA256 9e24004c9fee595076eac7b2adaa44053e9bd2aadb3fb769563a85b40c649ece vanilla-sources-2.6.16.16.ebuild 508
-EBUILD vanilla-sources-2.6.16.19.ebuild 502 RMD160 502b43a037fb8eb47813c446ec5dfdc6a697bda6 SHA1 2dba03a9b41413c5efdfaa8b018fe9ed0fbc77db SHA256 978f7a948933c992581cd46e09757e47c82a084e34b49eb83b243392e151e3a2
-MD5 29cd3bfa88151c72fa2f361829b08e86 vanilla-sources-2.6.16.19.ebuild 502
-RMD160 502b43a037fb8eb47813c446ec5dfdc6a697bda6 vanilla-sources-2.6.16.19.ebuild 502
-SHA256 978f7a948933c992581cd46e09757e47c82a084e34b49eb83b243392e151e3a2 vanilla-sources-2.6.16.19.ebuild 502
+EBUILD vanilla-sources-2.6.16.16.ebuild 507 RMD160 99f88aec93ea4d425c8111e295f6cecefb4c9f40 SHA1 a021a3038031219c0a39665c98d6be628ab113ee SHA256 8fc9e869c7ace7f8334842bc0833f69253d28a5c0e70caad48bfce50ce9663b5
+MD5 89b6c24c83e18030aaee32a0bdfe4753 vanilla-sources-2.6.16.16.ebuild 507
+RMD160 99f88aec93ea4d425c8111e295f6cecefb4c9f40 vanilla-sources-2.6.16.16.ebuild 507
+SHA256 8fc9e869c7ace7f8334842bc0833f69253d28a5c0e70caad48bfce50ce9663b5 vanilla-sources-2.6.16.16.ebuild 507
+EBUILD vanilla-sources-2.6.16.19.ebuild 501 RMD160 efc5689df2f3f357d914a71a42b4e949090bfcbb SHA1 3f95bdb94980f9752d971eb638b3c1f14505efb4 SHA256 7d0df881cd09386ca737a057a46c0039eb6beb6622e27d589bd5e7d934101f3e
+MD5 3973ce431f9648f5a12a6f817eaad6a6 vanilla-sources-2.6.16.19.ebuild 501
+RMD160 efc5689df2f3f357d914a71a42b4e949090bfcbb vanilla-sources-2.6.16.19.ebuild 501
+SHA256 7d0df881cd09386ca737a057a46c0039eb6beb6622e27d589bd5e7d934101f3e vanilla-sources-2.6.16.19.ebuild 501
 EBUILD vanilla-sources-2.6.16.20.ebuild 506 RMD160 25d8680d150afe9e1fba3e5d9ef7404ebf9b9bf9 SHA1 3bde5b410fe16cfa52864aebf74f7622fca9f3cc SHA256 b1efc310a059b420adffe0e2034809385c4cd83e3632a092712d938c894d9698
 MD5 6812f1043ef8a4d5909dc41c55c1b307 vanilla-sources-2.6.16.20.ebuild 506
 RMD160 25d8680d150afe9e1fba3e5d9ef7404ebf9b9bf9 vanilla-sources-2.6.16.20.ebuild 506
@@ -85,14 +85,14 @@ EBUILD vanilla-sources-2.6.17.12.ebuild 501 RMD160 27be2fb642afb80d588e249acd650
 MD5 fa07be92abf786d4d778b374df93bb39 vanilla-sources-2.6.17.12.ebuild 501
 RMD160 27be2fb642afb80d588e249acd6508410fdea29d vanilla-sources-2.6.17.12.ebuild 501
 SHA256 b64fd30ffc76e2bb202cfedeffd4bb6562c9fc963bfcfe2822463a88eb5fb5f4 vanilla-sources-2.6.17.12.ebuild 501
-EBUILD vanilla-sources-2.6.17.13.ebuild 499 RMD160 9dd451f4bc9032bce471cfbfa401120ec7e8371c SHA1 61d2d9cc0b0ec44d29e8503bd4b55255e30f08a0 SHA256 72493bac56292aaafce9e6bae8039317012f7e1e35a463f743b9c9389c3e6dce
-MD5 19e0e8cff1b3c400b8b06bb1d7d7e673 vanilla-sources-2.6.17.13.ebuild 499
-RMD160 9dd451f4bc9032bce471cfbfa401120ec7e8371c vanilla-sources-2.6.17.13.ebuild 499
-SHA256 72493bac56292aaafce9e6bae8039317012f7e1e35a463f743b9c9389c3e6dce vanilla-sources-2.6.17.13.ebuild 499
-EBUILD vanilla-sources-2.6.17.6.ebuild 501 RMD160 a50696a858c8e9a646f1ef566d85b757547e44e5 SHA1 2db5a49f32ba40dfdf45f5b114d35e6affa00e1f SHA256 2f1736aa703974cb058978e77e666020b5483791c53ec8487e8c628ca00e2740
-MD5 7e81b561325ca12f4fbf742da6ee8eb6 vanilla-sources-2.6.17.6.ebuild 501
-RMD160 a50696a858c8e9a646f1ef566d85b757547e44e5 vanilla-sources-2.6.17.6.ebuild 501
-SHA256 2f1736aa703974cb058978e77e666020b5483791c53ec8487e8c628ca00e2740 vanilla-sources-2.6.17.6.ebuild 501
+EBUILD vanilla-sources-2.6.17.13.ebuild 497 RMD160 fcf90af5adfe72045b2cb2d62c9c35419d433bf0 SHA1 57e6f0f8529e52eb28a225dee1d354a05d911d19 SHA256 6b673a0138f1ef61a0ce7d5e18c86ccd15a02fed30b0760279cca759c6c60a2b
+MD5 4f7eeab4017698c2628cf00a73c6c303 vanilla-sources-2.6.17.13.ebuild 497
+RMD160 fcf90af5adfe72045b2cb2d62c9c35419d433bf0 vanilla-sources-2.6.17.13.ebuild 497
+SHA256 6b673a0138f1ef61a0ce7d5e18c86ccd15a02fed30b0760279cca759c6c60a2b vanilla-sources-2.6.17.13.ebuild 497
+EBUILD vanilla-sources-2.6.17.6.ebuild 498 RMD160 85d6bd159563a4d4dcc5500f03978263a64b845e SHA1 54104f9aeb44a11d0ea90c178f5c7c7623606d93 SHA256 9faf663c3645eaea7424696c2a2a7309b82e06b20520a8b4a639956fb2c10cb9
+MD5 e3b35966dd445a9c64a29a5ab2db9ed8 vanilla-sources-2.6.17.6.ebuild 498
+RMD160 85d6bd159563a4d4dcc5500f03978263a64b845e vanilla-sources-2.6.17.6.ebuild 498
+SHA256 9faf663c3645eaea7424696c2a2a7309b82e06b20520a8b4a639956fb2c10cb9 vanilla-sources-2.6.17.6.ebuild 498
 EBUILD vanilla-sources-2.6.17.7.ebuild 497 RMD160 394e84a101bad9a2a1b8d9fbccc0d26829de78fd SHA1 0b7fb419525af93623f124658beaa08521bdb9c5 SHA256 d6ed95ca178e14e6be4679869080e85c693233e5efee3d20e238a9cb959d6291
 MD5 a5ff232cb6b481dc9764a433c7943f39 vanilla-sources-2.6.17.7.ebuild 497
 RMD160 394e84a101bad9a2a1b8d9fbccc0d26829de78fd vanilla-sources-2.6.17.7.ebuild 497
@@ -220,9 +220,9 @@ MD5 a3c78be6b3896e05c4864be6b5fa48b9 files/digest-vanilla-sources-2.6.19_rc5 491
 RMD160 767d9cfde79e71491a6b5cc2a7f6024710c7b9e4 files/digest-vanilla-sources-2.6.19_rc5 491
 SHA256 e4f613d21437c2af41ce5749c385f2d042e0ee402b6cbbab4f4afe74bdac3eae files/digest-vanilla-sources-2.6.19_rc5 491
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFUbGOp5vW4rUFj5oRAhIfAKCN6alFMQ022uUGmmJA+CxpO6npHQCfes50
-ROHvRm4ztoOEvGwpKe6jUos=
-=zBz8
+iD8DBQFFVqxDamhnQswr0vIRAmcPAKCphGpu0mOtooEfIhxuiJnZmmg/gQCfbaAn
+RqmKQVpXuUzc3deG0y5OshA=
+=2MIW
 -----END PGP SIGNATURE-----
