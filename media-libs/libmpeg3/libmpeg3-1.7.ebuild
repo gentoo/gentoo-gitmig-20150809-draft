@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.7.ebuild,v 1.5 2006/10/20 21:48:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.7.ebuild,v 1.6 2006/11/12 05:11:11 vapier Exp $
 
 inherit eutils autotools toolchain-funcs
 
@@ -8,11 +8,11 @@ PATCHLEVEL="1"
 DESCRIPTION="An mpeg library for linux"
 HOMEPAGE="http://heroinewarrior.com/libmpeg3.php3"
 SRC_URI="mirror://sourceforge/heroines/${P}-src.tar.bz2
-			mirror://gentoo/${P}-gentoo.tar.bz2"
+	mirror://gentoo/${P}-gentoo.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~x86"
 IUSE="mmx"
 
 RDEPEND="sys-libs/zlib
