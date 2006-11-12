@@ -1,28 +1,25 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/cdk-perl/cdk-perl-20031210.ebuild,v 1.10 2006/10/25 03:40:43 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/cdk-perl/cdk-perl-20031210.ebuild,v 1.11 2006/11/12 05:40:40 vapier Exp $
 
 inherit perl-module
 
-IUSE=""
-
-DESCRIPTION="Perl extension for Cdk."
-SRC_URI="ftp://invisible-island.net/cdk/${P}.tgz"
+DESCRIPTION="Perl extension for Cdk"
 HOMEPAGE="http://dickey.his.com/cdk/cdk.html"
+SRC_URI="ftp://invisible-island.net/cdk/${P}.tgz"
 
-SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~alpha amd64 ia64 ppc ~s390 sparc x86"
+SLOT="0"
+KEYWORDS="~alpha amd64 ia64 ppc s390 sparc x86"
+IUSE=""
 
 DEPEND=">=dev-libs/cdk-4.9.10.20031210
 	dev-lang/perl"
 
-mydoc="CHANGES COPYING MANIFEST"
+mydoc="CHANGES MANIFEST"
 
-src_unpack()
-{
+src_unpack() {
 	unpack ${P}.tgz
-	cd ${S}
+	cd "${S}"
 	sed -i -e "s:/usr/local:/usr:g" Makefile.PL
 }
-
