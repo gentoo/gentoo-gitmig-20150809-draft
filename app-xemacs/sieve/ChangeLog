@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/sieve
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/sieve/ChangeLog,v 1.7 2006/11/12 13:15:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/sieve/ChangeLog,v 1.8 2006/11/12 18:31:22 graaff Exp $
+
+  12 Nov 2006; Hans de Graaff <graaff@gentoo.org> ChangeLog:
+  Add ~ppc64 keyword due to new gnus dependency
 
 *sieve-1.18 (12 Nov 2006)
 

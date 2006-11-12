@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/sasl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/sasl/ChangeLog,v 1.7 2006/11/12 12:25:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/sasl/ChangeLog,v 1.8 2006/11/12 18:30:18 graaff Exp $
+
+  12 Nov 2006; Hans de Graaff <graaff@gentoo.org> ChangeLog:
+  Add ~ppc64 keyword due to new gnus dependency
 
 *sasl-1.16 (12 Nov 2006)
 

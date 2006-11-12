@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/pgg
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/pgg/ChangeLog,v 1.7 2006/11/12 11:54:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/pgg/ChangeLog,v 1.8 2006/11/12 18:32:23 graaff Exp $
+
+  12 Nov 2006; Hans de Graaff <graaff@gentoo.org> pgg-1.06.ebuild:
+  Add ~ppc64 keyword due to new gnus dependency
 
 *pgg-1.06 (12 Nov 2006)
 
