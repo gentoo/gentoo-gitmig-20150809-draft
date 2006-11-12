@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/enigmail
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.39 2006/10/23 21:54:50 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.40 2006/11/12 22:56:40 kloeri Exp $
+
+  12 Nov 2006; Bryan Østergaard <kloeri@gentoo.org>
+  enigmail-0.94.1-r1.ebuild:
+  Add ~alpha keyword.
 
 *enigmail-0.94.1-r1 (23 Oct 2006)
 
