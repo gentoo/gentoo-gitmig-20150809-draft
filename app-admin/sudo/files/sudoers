@@ -46,9 +46,9 @@ root	ALL=(ALL) ALL
 # Same thing without a password
 # %wheel	ALL=(ALL)	NOPASSWD: ALL
 
-# Users in group www are allowed to  edit httpd.conf and ftpd.conf
-# using sudoedit, or sudo -e, without a password.
-# %www		ALL=(ALL)	NOPASSWD: sudoedit /etc/httpd.conf, /etc/ftpd.conf
+# Users in group www are allowed to edit httpd.conf using sudoedit, or
+# sudo -e, without a password.
+# %www		ALL=(ALL)	NOPASSWD: sudoedit /etc/httpd.conf
 
 # Samples
 # %users  ALL=/sbin/mount /cdrom,/sbin/umount /cdrom
