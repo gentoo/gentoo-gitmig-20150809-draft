@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX gnome-cups-manager.desktop 313 RMD160 d3b200d93c454c9a59e23c59610f68e047be6eab SHA1 45f87cb6d09739ade0f9e2228621672da5dd65eb SHA256 972bb844f9317cc5bc64c86d0799903df695d75290518cf925343f0924df33fd
 MD5 4a5b7a95a2dab91d403eab46700c0e87 files/gnome-cups-manager.desktop 313
 RMD160 d3b200d93c454c9a59e23c59610f68e047be6eab files/gnome-cups-manager.desktop 313
@@ -9,10 +12,10 @@ EBUILD gnome-cups-manager-0.30.ebuild 894 RMD160 775974bdb9b8424f86642af105e8577
 MD5 cf99fca3122a87ef1f6a2414f7c2e2a8 gnome-cups-manager-0.30.ebuild 894
 RMD160 775974bdb9b8424f86642af105e85775f5d9625a gnome-cups-manager-0.30.ebuild 894
 SHA256 9cd3afa2fc2163d76750d671ed3d3f1d847311c07cb4c0e02ffbfe19ca1e4d1c gnome-cups-manager-0.30.ebuild 894
-EBUILD gnome-cups-manager-0.31-r1.ebuild 1827 RMD160 e4255c4cdfa118f2962d579ca6f0a48c9bc6131b SHA1 3814463a53a180166d03d5c5641a07ba8ecbf7a2 SHA256 8cacf6fcbe8527aca8171bb9bb03f3ca2bc0cd2581163788bb312f8577ffac06
-MD5 e27ab07977f4005a695911ac5fb82425 gnome-cups-manager-0.31-r1.ebuild 1827
-RMD160 e4255c4cdfa118f2962d579ca6f0a48c9bc6131b gnome-cups-manager-0.31-r1.ebuild 1827
-SHA256 8cacf6fcbe8527aca8171bb9bb03f3ca2bc0cd2581163788bb312f8577ffac06 gnome-cups-manager-0.31-r1.ebuild 1827
+EBUILD gnome-cups-manager-0.31-r1.ebuild 1831 RMD160 6805ae1838b8ae4e1c5a29efd564400bd13d7428 SHA1 a17280099618e141a8e6da3f749b1af1591ef532 SHA256 133c54f05afaf5937c7a11b72287d3c7d53c7aac428e02a39786d4618a2188e8
+MD5 12488b035cc983724fc975c34bcb0e93 gnome-cups-manager-0.31-r1.ebuild 1831
+RMD160 6805ae1838b8ae4e1c5a29efd564400bd13d7428 gnome-cups-manager-0.31-r1.ebuild 1831
+SHA256 133c54f05afaf5937c7a11b72287d3c7d53c7aac428e02a39786d4618a2188e8 gnome-cups-manager-0.31-r1.ebuild 1831
 EBUILD gnome-cups-manager-0.31.ebuild 1307 RMD160 ddbba332f1c432ab3c326b9ecd08208675450bc1 SHA1 f0b324e89a8a7ac5c712589d30114f95cb3296eb SHA256 f351ff3902d3658f80fc890cb384bdf2275a384b74fd7c545c9298ea5253f596
 MD5 48137bfc45f2b2e91b682e1184e5975e gnome-cups-manager-0.31.ebuild 1307
 RMD160 ddbba332f1c432ab3c326b9ecd08208675450bc1 gnome-cups-manager-0.31.ebuild 1307
@@ -34,3 +37,10 @@ SHA256 27b28cccfbefbb24b491bb522cf005d476a784bdee1e1339dcfffff5fb53b404 files/di
 MD5 2be6fa81ea7e472d7fc8b295e8951e48 files/digest-gnome-cups-manager-0.31-r1 584
 RMD160 adf243ffd021f92532aee5b1ba4354164169d8e6 files/digest-gnome-cups-manager-0.31-r1 584
 SHA256 de98f8fd36f6db920763f8e2776d7011bab005158fd052234bc35b050e25c198 files/digest-gnome-cups-manager-0.31-r1 584
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFVqkFamhnQswr0vIRAv8AAKCtFRl9DCpc7YIWkdtOqTXAWAXJmQCfcsLI
+PdqtQuP4Y39P8wf8FfPquRQ=
+=1d3W
+-----END PGP SIGNATURE-----
