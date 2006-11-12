@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.19.ebuild,v 1.9 2006/09/16 13:55:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.19.ebuild,v 1.10 2006/11/12 11:15:35 nyhm Exp $
 
 inherit eutils games
 
@@ -55,6 +55,8 @@ RDEPEND="esd? ( media-sound/esound )
 DEPEND="${RDEPEND}
 	|| (
 		(
+			x11-apps/bdftopcf
+			x11-apps/mkfontdir
 			x11-proto/xproto
 			x11-proto/xf86vidmodeproto
 			x11-proto/xextproto
