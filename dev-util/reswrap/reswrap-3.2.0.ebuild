@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/reswrap/reswrap-3.2.0.ebuild,v 1.4 2006/11/05 18:48:02 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/reswrap/reswrap-3.2.0.ebuild,v 1.5 2006/11/12 02:00:11 gmsoft Exp $
 
 FOX_COMPONENT="utils"
 FOX_PV="1.4.12"
@@ -11,7 +11,7 @@ DESCRIPTION="Utility to wrap icon resources into C++ code, from the FOX Toolkit"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 RDEPEND="virtual/libc"
