@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6242 2006/11/12 19:48:05 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6243 2006/11/12 20:53:21 kloeri Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -662,7 +662,7 @@ net-im/ohphone
 
 # Alastair Tse <liquidx@gentoo.org> (19 Sep 2006)
 # You must run python-updater for this, masking until we 
-# get the word out
+# get the word out. Also see bug 148333 for packages that still needs to fixed
 >=dev-lang/python-2.5
 >=dev-python/python-docs-2.5
 
