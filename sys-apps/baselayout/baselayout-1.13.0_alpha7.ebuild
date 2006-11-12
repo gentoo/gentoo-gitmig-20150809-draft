@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.13.0_alpha7.ebuild,v 1.1 2006/11/10 21:01:07 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.13.0_alpha7.ebuild,v 1.2 2006/11/12 16:28:24 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -264,6 +264,16 @@ pkg_postinst() {
 		ewarn "Consult ${ROOT}etc/conf.d/net.example for details about how"
 		ewarn "to apply dns/nis information to the loopback interface."
 	fi
+
+	echo
+	einfo "baselayout-1.13 and higher have dropped the RC_STRICT_NET_CHECKING"
+	einfo "variable from /etc/conf.d/rc. ${lo} now provides \"net\" and so does"
+	einfo "each net script linked to it."
+	einfo "The net dependency is now satisfied by any net.* scripts in the default"
+	einfo "runlevel, otherwise it's the last net.* script running which includes"
+	einfo "${lo}. So if you need to restart a net script that is listed in the"
+	einfo "runlevel you are in and not restart anything that needs it then you"
+	einfo "will need to use the --nodeps command line option."
 
 	echo
 	ewarn "baselayout-1.13 and higher now force \$svcdir to be mounted ramdisk."
