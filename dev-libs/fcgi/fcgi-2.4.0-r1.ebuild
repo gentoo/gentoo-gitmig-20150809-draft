@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/fcgi-2.4.0-r1.ebuild,v 1.4 2006/11/04 17:21:45 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/fcgi-2.4.0-r1.ebuild,v 1.5 2006/11/12 03:46:08 vapier Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -13,7 +13,7 @@ SRC_URI="http://www.fastcgi.com/dist/${P}.tar.gz"
 
 LICENSE="FastCGI"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 sh ~sparc ~x86 ~x86-fbsd"
 IUSE="html"
 
 DEPEND=""
@@ -32,7 +32,7 @@ src_unpack() {
 src_install() {
 	make DESTDIR="${D}" install LIBRARY_PATH="${D}"/usr/lib || die
 
-	dodoc LICENSE.TERMS README
+	dodoc README
 
 	# install the manpages into the right place
 	doman doc/*.[13]
