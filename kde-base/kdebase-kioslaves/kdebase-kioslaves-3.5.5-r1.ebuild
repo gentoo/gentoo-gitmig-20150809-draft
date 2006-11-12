@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-3.5.5-r1.ebuild,v 1.1 2006/10/16 21:58:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-3.5.5-r1.ebuild,v 1.2 2006/11/12 20:49:56 caleb Exp $
 
 KMNAME=kdebase
 KMMODULE=kioslave
@@ -17,7 +17,7 @@ IUSE="hal ldap samba openexr"
 DEPEND="ldap? ( net-nds/openldap )
 	samba? ( >=net-fs/samba-3.0.1 )
 	>=dev-libs/cyrus-sasl-2
-	hal? ( || ( dev-libs/dbus-qt3-old >=sys-apps/dbus-0.33 )
+	hal? ( || ( dev-libs/dbus-qt3-old ( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.34 ) )
 		   =sys-apps/hal-0.5*
 		   sys-apps/pmount )
 	openexr? ( >=media-libs/openexr-1.2.2-r2 )"
