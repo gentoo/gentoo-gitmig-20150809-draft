@@ -1,0 +1,19 @@
+diff -Nuar kdocker-orig/kdocker.desktop kdocker/kdocker.desktop
+--- kdocker-orig/kdocker.desktop	2004-11-22 16:11:49.000000000 +0000
++++ kdocker/kdocker.desktop	2006-01-27 19:03:05.000000000 +0000
+@@ -1,10 +1,14 @@
+ [Desktop Entry]
+ Name=KDocker
++Name[pl]=KDocker
+ GenericName=Docking utility
++GenericName[pl]=Program dokujący aplikacje
+ Comment=Docks any application into system tray
++Comment[pl]=Pozwala umieścić dowolną aplikację w zasobniku systemowym
+ Exec=kdocker
+ TryExec=kdocker
+-Icon=/usr/local/share/kdocker/icons/kdocker.png
++Icon=/usr/share/kdocker/icons/kdocker.png
+ Terminal=false
+ Type=Application
+ Categories=Application;Utility;
++X-KDE-StartupNotify=false

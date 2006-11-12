@@ -1,0 +1,23 @@
+--- kdocker.pro.orig	2005-04-06 12:43:59.000000000 +0000
++++ kdocker.pro	2005-04-06 12:44:29.000000000 +0000
+@@ -4,7 +4,7 @@
+ LIBPATH += /usr/X11/lib /usr/X11R6/lib
+ LIBS = -lX11 -lXpm -lXmu
+ TARGET = kdocker
+-INSTALL_PATH = /usr/local/share/kdocker
++INSTALL_PATH = /usr/share/kdocker
+ DOCS_PATH = $$INSTALL_PATH/docs
+ 
+ # Defines
+@@ -27,9 +27,9 @@
+ desktop.path = /usr/share/applications
+ desktop.files = kdocker.desktop
+ 
+-target.path = /usr/local/bin
++target.path = /usr/bin
+ 
+-INSTALLS += target icons docs translations desktop
++INSTALLS += target icons desktop
+ 
+ # Input
+ HEADERS += src/customtraylabel.h \
