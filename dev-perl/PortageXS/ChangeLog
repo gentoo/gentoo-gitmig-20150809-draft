@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PortageXS
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/ChangeLog,v 1.2 2006/11/12 18:56:11 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/ChangeLog,v 1.3 2006/11/12 19:46:11 dertobi123 Exp $
+
+  12 Nov 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  PortageXS-0.02.01.ebuild:
+  Added ~ppc as per ian's request
 
 *PortageXS-0.02.01 (12 Nov 2006)
 
