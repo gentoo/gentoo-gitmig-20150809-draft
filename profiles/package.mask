@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6239 2006/11/11 20:26:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6240 2006/11/12 10:56:16 pva Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ## 
+
+# Peter Volkov <pva@gentoo.org> (12 Nov 2006)
+# app-emulation/uae for bug(s) 153191, 112675, 140707, 137018
+# Upstream is going to help and fix bugs in 0.8.25... Until use e-uae.
+app-emulation/uae
 
 # Robin H. Johnson <robbat2@gentoo.org> (11 Nov 2006)
 # Temporarily block while testing
@@ -187,7 +192,6 @@ x11-misc/commonbox-utils
 
 # Alec Warner <antarus@gentoo.org> (28 Oct 2006)
 # Mask the following packages for removal by treecleaners:
-# app-emulation/uae for bug(s) 153191, 112675, 140707, 137018
 # app-laptop/xpmumon for bug(s) 153198, 112675, 117782
 # media-gfx/radiance for bug(s) 106158, 112675
 # net-mail/cvm-vmailmgr for bug(s) 113245
@@ -205,7 +209,6 @@ x11-misc/commonbox-utils
 # x11-plugins/gkrellm-giFT for bug(s) 97869
 # media-video/winki for bug(s) 94902
 # net-misc/qadsl for bug(s) 94295
-# app-emulation/uae -> Don't mask this quite yet
 app-laptop/xpmumon
 media-gfx/radiance
 net-mail/cvm-vmailmgr
