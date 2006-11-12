@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.72_pre1.ebuild,v 1.1 2006/11/06 21:04:21 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.72_pre1.ebuild,v 1.2 2006/11/12 16:55:17 drizzt Exp $
 
-inherit flag-o-matic eutils linux-mod
+inherit flag-o-matic eutils linux-mod toolchain-funcs
 
 DESCRIPTION="MOL (Mac-on-Linux) lets PPC users run MacOS (X) under Linux (rsync snapshot)"
 HOMEPAGE="http://mac-on-linux.sourceforge.net/"
@@ -56,6 +56,7 @@ src_unpack() {
 }
 
 src_compile() {
+	tc-export CC
 	filter-flags -fsigned-char
 	append-flags -D_FILE_OFFSET_BITS=64
 	append-flags -D_LARGE_FILES
