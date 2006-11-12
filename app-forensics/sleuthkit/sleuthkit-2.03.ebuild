@@ -1,17 +1,17 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/sleuthkit-2.03.ebuild,v 1.6 2006/09/05 20:42:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/sleuthkit-2.03.ebuild,v 1.7 2006/11/12 05:39:22 vapier Exp $
 
 inherit toolchain-funcs eutils
 
 DESCRIPTION="A collection of file system and media management forensic analysis tools"
 HOMEPAGE="http://www.sleuthkit.org/sleuthkit/"
 SRC_URI="mirror://sourceforge/sleuthkit/${P}.tar.gz
-		mirror://gentoo/${P}_dbtool.patch.bz2"
+	mirror://gentoo/${P}_dbtool.patch.bz2"
 
 LICENSE="GPL-2 IBM"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ppc ~s390 sparc x86"
+KEYWORDS="amd64 arm hppa ppc s390 sparc x86"
 IUSE=""
 
 RDEPEND="dev-perl/DateManip"
