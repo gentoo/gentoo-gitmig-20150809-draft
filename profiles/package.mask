@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6240 2006/11/12 10:56:16 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6241 2006/11/12 16:52:10 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -563,11 +563,6 @@ app-admin/sus
 # netraverse don't support gentoo more, and users can 
 # use the w4l installer.
 app-emulation/win4lin
-
-# Diego Pettenò <flameeyes@gentoo.org> (12 Oct 2006)
-# Masked pending removal for 12 Nov 2006.
-# Use >=kde-base/kopete-3.5.5 that is newer now.
-net-im/kopete
 
 # Donnie Berkholz <dberkholz@gentoo.org> (10 Oct 2006)
 # Masked for removal (bug #135473)
