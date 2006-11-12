@@ -1,6 +1,12 @@
 # ChangeLog for app-xemacs/sounds-au
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/sounds-au/ChangeLog,v 1.6 2005/01/01 17:16:05 eradicator Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/sounds-au/ChangeLog,v 1.7 2006/11/12 13:30:44 graaff Exp $
+
+*sounds-au-1.12 (12 Nov 2006)
+
+  12 Nov 2006; Hans de Graaff <graaff@gentoo.org> +metadata.xml,
+  +sounds-au-1.12.ebuild:
+  Version bump; add metadata.
 
   02 Oct 2003; Aron Griffis <agriffis@gentoo.org> sounds-au-1.10.ebuild:
   Stable on alpha
