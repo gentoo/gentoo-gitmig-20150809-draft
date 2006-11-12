@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/XML-LibXML-1.61.003.ebuild,v 1.1 2006/09/25 22:11:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/XML-LibXML-1.61.003.ebuild,v 1.2 2006/11/12 05:05:34 vapier Exp $
 
 inherit perl-module eutils versionator
 
@@ -9,12 +9,13 @@ MY_P="${PN}-$(delete_version_separator 2)"
 S=${WORKDIR}/${MY_S}
 
 DESCRIPTION="A Perl module to parse XSL Transformational sheets using gnome's libXSLT"
-SRC_URI="mirror://cpan/authors/id/P/PA/PAJAS/${MY_P}.tar.gz"
 HOMEPAGE="http://cpan.org/modules/by-module/XML/${MY_P}.readme"
-IUSE=""
-SLOT="0"
+SRC_URI="mirror://cpan/authors/id/P/PA/PAJAS/${MY_P}.tar.gz"
+
 LICENSE="Artistic"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE=""
 
 DEPEND=">=dev-perl/XML-SAX-0.12
 	dev-perl/XML-LibXML-Common
@@ -31,11 +32,7 @@ SRC_TEST="do"
 mytargets="pure_install doc_install"
 
 pkg_postinst() {
-
 	perl-module_pkg_postinst
-
 	perl -MXML::SAX \
 		-e "XML::SAX->add_parser(q(XML::LibXML::SAX::Parser))->save_parsers()"
-
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/XML-Simple-2.16.ebuild,v 1.1 2006/11/06 17:03:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/XML-Simple-2.16.ebuild,v 1.2 2006/11/12 05:05:29 vapier Exp $
 
 inherit perl-module
 
@@ -10,9 +10,8 @@ SRC_URI="mirror://cpan/authors/id/G/GR/GRANTM/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE=""
-SRC_TEST="do"
 
 DEPEND="virtual/perl-Storable
 	dev-perl/XML-SAX
@@ -22,3 +21,5 @@ DEPEND="virtual/perl-Storable
 	dev-lang/perl
 	>=perl-core/Test-Simple-0.41"
 RDEPEND="${DEPEND}"
+
+SRC_TEST="do"
