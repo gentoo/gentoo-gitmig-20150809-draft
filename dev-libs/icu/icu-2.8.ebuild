@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-2.8.ebuild,v 1.20 2006/09/22 14:11:17 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-2.8.ebuild,v 1.21 2006/11/12 16:52:14 chtekk Exp $
 
 KEYWORDS="alpha amd64 ia64 ppc ppc64 s390 sparc x86"
 
@@ -19,10 +19,10 @@ S="${WORKDIR}/${PN}/source"
 
 src_compile() {
 	econf || die "econf failed"
-	emake || die "emake failed"
+	emake -j1 || die "emake failed"
 }
 
-src_install () {
+src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dohtml ../readme.html ../license.html
 }

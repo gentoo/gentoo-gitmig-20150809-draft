@@ -1,22 +1,21 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-3.6.ebuild,v 1.2 2006/11/12 04:58:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-3.6.ebuild,v 1.3 2006/11/12 16:52:14 chtekk Exp $
 
-MY_PV=${PV/./_}
-
-DESCRIPTION="IBM Internationalization Components for Unicode"
-HOMEPAGE="http://ibm.com/software/globalization/icu/"
-SRC_URI="ftp://ftp.software.ibm.com/software/globalization/icu/${PV}/icu4c-${MY_PV}-src.tgz"
-
-LICENSE="as-is"
-SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~mips ppc ~ppc-macos ~ppc64 ~s390 ~sh sparc x86"
+
+DESCRIPTION="IBM Internationalization Components for Unicode."
+HOMEPAGE="http://ibm.com/software/globalization/icu/"
+SRC_URI="ftp://ftp.software.ibm.com/software/globalization/icu/${PV}/icu4c-${PV/./_}-src.tgz"
+
+SLOT="0"
+LICENSE="as-is"
 IUSE=""
 
 DEPEND=""
 RDEPEND=""
 
-S=${WORKDIR}/${PN}/source
+S="${WORKDIR}/${PN}/source"
 
 src_compile() {
 	econf || die "econf failed"
