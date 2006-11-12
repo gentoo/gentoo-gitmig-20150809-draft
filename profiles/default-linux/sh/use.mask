@@ -38,6 +38,7 @@ eds
 firefox
 nvtv
 xine
+ocaml
 
 # Luca Longinotti <chtekk@gentoo.org>
 # mask Oracle
