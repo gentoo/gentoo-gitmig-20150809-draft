@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.10.6.ebuild,v 1.1 2006/10/07 23:14:39 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.10.6.ebuild,v 1.2 2006/11/12 06:16:48 dberkholz Exp $
 
 inherit gnome.org flag-o-matic eutils debug autotools virtualx
 
@@ -147,10 +147,6 @@ pkg_postinst() {
 		ewarn "  gtk-query-immodules-2.0  > gtk.immodules"
 		ewarn "  gdk-pixbuf-query-loaders > gdk-pixbuf.loaders"
 	fi
-
-	einfo "If you experience text corruption issues, turn off RenderAccel"
-	einfo "in your xorg.conf.  NVIDIA is working on this issue. "
-	einfo "See http://bugs.gentoo.org/113123 for more information."
 
 	if [ -e /usr/lib/gtk-2.0/2.[^1]* ]; then
 		elog "You need to rebuild ebuilds that installed into" /usr/lib/gtk-2.0/2.[^1]*
