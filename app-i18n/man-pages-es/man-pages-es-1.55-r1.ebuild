@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-es/man-pages-es-1.55-r1.ebuild,v 1.6 2006/11/05 20:17:03 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-es/man-pages-es-1.55-r1.ebuild,v 1.7 2006/11/12 00:31:34 ferdy Exp $
 
 manpagesextra=${PN}-extra-0.8a
 S2=${WORKDIR}/${manpagesextra}
@@ -24,7 +24,7 @@ src_install() {
 	local d f toencoding
 
 	# These are provided by sys-apps/shadow, see bug #154140
-	rm -f man{1/{passwd,su,newgrp,login}.1,8/{vigr,vipw}.8}
+	rm -f {"${S}","${S2}"}/man{1/{passwd,su,newgrp,login}.1,8/{vigr,vipw}.8}
 
 	dodoc man?/{LEAME,README}
 

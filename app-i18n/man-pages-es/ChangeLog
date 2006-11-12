@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/man-pages-es
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-es/ChangeLog,v 1.7 2006/11/05 20:17:03 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-es/ChangeLog,v 1.8 2006/11/12 00:31:34 ferdy Exp $
+
+  12 Nov 2006; Fernando J. Pereda <ferdy@gentoo.org>
+  man-pages-es-1.55-r1.ebuild:
+  Now really fix #154140
 
   05 Nov 2006; Fernando J. Pereda <ferdy@gentoo.org>
   man-pages-es-1.55-r1.ebuild:
