@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-2.5.6.ebuild,v 1.2 2006/10/29 22:46:17 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-2.5.6.ebuild,v 1.3 2006/11/12 13:25:25 genone Exp $
 
 IUSE="gnome dillo crypt spell ssl ldap ipv6 pda clamav xface kde imap spamassassin doc startup-notification bogofilter"
 
@@ -140,6 +140,10 @@ pkg_postinst() {
 			ewarn "    mail-client/sylpheed-claws-$x"
 		done
 		ewarn
+		elog "You can use"
+		elog "    /bin/bash ${FILESDIR}/plugins-rebuild.sh"
+		elog "to automatically handle this."
+		elog
 		epause 5
 		ebeep 3
 	fi
