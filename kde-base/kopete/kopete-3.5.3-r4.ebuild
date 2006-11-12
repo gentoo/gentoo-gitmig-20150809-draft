@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.3-r4.ebuild,v 1.2 2006/10/01 17:25:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.3-r4.ebuild,v 1.3 2006/11/12 21:03:35 flameeyes Exp $
 
 KMNAME=kdenetwork
 MAXKDEVER=$PV
@@ -14,7 +14,7 @@ DESCRIPTION="KDE multi-protocol IM client"
 HOMEPAGE="http://kopete.kde.org/"
 
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="sametime ssl xmms kernel_linux"
+IUSE="sametime ssl kernel_linux"
 
 # The kernel_linux? ( ) conditional dependencies are for webcams, not supported
 # on other kernels AFAIK
@@ -24,7 +24,6 @@ BOTH_DEPEND="dev-libs/libxslt
 	>=dev-libs/glib-2
 	app-crypt/qca
 	sametime? ( =net-libs/meanwhile-0.4* )
-	xmms? ( media-sound/xmms )
 	|| ( (
 		x11-libs/libX11
 		x11-libs/libXext
@@ -61,9 +60,8 @@ pkg_setup() {
 src_compile() {
 	# External libgadu support - doesn't work, kopete requires a specific development snapshot of libgadu.
 	# Maybe we can enable it in the future.
-	# The nowlistening plugin has xmms support.
 	local myconf="$(use_enable sametime sametime-plugin)
-		$(use_with xmms) --without-external-libgadu"
+		--without-xmms --without-external-libgadu"
 
 	kde-meta_src_compile
 }

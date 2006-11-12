@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.4.ebuild,v 1.3 2006/10/01 17:19:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.4.ebuild,v 1.4 2006/11/12 21:11:00 flameeyes Exp $
 
 inherit kde-dist eutils flag-o-matic
 
 DESCRIPTION="KDE network applications: Kopete, KPPP, KGet,..."
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="rdesktop sametime slp ssl wifi xmms"
+IUSE="rdesktop sametime slp ssl wifi"
 
 SRC_URI="${SRC_URI}
 	mirror://gentoo/kdenetwork-3.5-patchset-01.tar.bz2"
@@ -19,7 +19,6 @@ BOTH_DEPEND="~kde-base/kdebase-${PV}
 	>=dev-libs/glib-2
 	app-crypt/qca
 	sametime? ( =net-libs/meanwhile-0.4* )
-	xmms? ( media-sound/xmms )
 	slp? ( net-libs/openslp )
 	wifi? ( net-wireless/wireless-tools )
 	|| ( (
@@ -64,7 +63,7 @@ src_compile() {
 	local myconf="--with-libidn
 				  $(use_enable sametime sametime-plugin)
 				  $(use_enable slp) $(use_with wifi)
-				  $(use_with xmms) --without-external-libgadu"
+				  --without-xmms --without-external-libgadu"
 
 	kde_src_compile
 }

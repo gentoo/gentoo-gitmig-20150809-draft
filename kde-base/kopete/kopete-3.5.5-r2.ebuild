@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.5-r2.ebuild,v 1.2 2006/11/06 17:18:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.5-r2.ebuild,v 1.3 2006/11/12 21:03:35 flameeyes Exp $
 
 KMNAME=kdenetwork
 MAXKDEVER=$PV
@@ -14,7 +14,7 @@ DESCRIPTION="KDE multi-protocol IM client"
 HOMEPAGE="http://kopete.kde.org/"
 
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="jingle sametime ssl xmms xscreensaver slp kernel_linux latex crypt
+IUSE="jingle sametime ssl xscreensaver slp kernel_linux latex crypt
 	  winpopup sms irc yahoo gadu groupwise netmeeting statistics autoreplace
 	  connectionstatus contactnotes translator webpresence texteffect highlight
 	  alias autoreplace history nowlistening addbookmarks"
@@ -27,7 +27,6 @@ BOTH_DEPEND="dev-libs/libxslt
 	>=dev-libs/glib-2
 	app-crypt/qca
 	sametime? ( =net-libs/meanwhile-1.0* )
-	xmms? ( media-sound/xmms )
 	jingle? (
 		>=media-libs/speex-1.1.6
 		dev-libs/expat
@@ -111,10 +110,9 @@ src_unpack() {
 src_compile() {
 	# External libgadu support - doesn't work, kopete requires a specific development snapshot of libgadu.
 	# Maybe we can enable it in the future.
-	# The nowlistening plugin has xmms support.
 	local myconf="$(use_enable jingle)
 		$(use_enable sametime sametime-plugin)
-		$(use_with xmms) --without-external-libgadu
+		--without-xmms --without-external-libgadu
 		$(use_with xscreensaver) $(use_enable sms smsgsm)
 		$(use_enable debug testbed)"
 
