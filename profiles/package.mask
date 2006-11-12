@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6243 2006/11/12 20:53:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6244 2006/11/12 21:47:33 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -842,11 +842,6 @@ app-emacs/weather
 >=dev-libs/dbus-glib-0.71
 >=dev-python/dbus-python-0.71
 dev-libs/dbus-qt3-old
-
-# Stefan Schweizer <genstef@gentoo.org> (17 Aug 2006)
-# still breaks some compilations, please update ebuilds to 
-# support xulrunner because it will be important in future
-net-libs/xulrunner
 
 # Ned Ludd <solar/gentoo.org> (Aug 14 2006)
 # This pkg breaks working systems and eradicator
