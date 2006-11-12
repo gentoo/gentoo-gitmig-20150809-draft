@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r12.ebuild,v 1.10 2006/11/05 05:46:22 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r12.ebuild,v 1.11 2006/11/12 03:27:56 vapier Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
 WANT_AUTOMAKE=1.4
@@ -12,7 +12,7 @@ SRC_URI="${SRC_URI} http://www.ibiblio.org/gentoo/distfiles/gtk+-1.2.10-r8-gento
 
 LICENSE="LGPL-2.1"
 SLOT="1"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="nls debug"
 
 # Supported languages and translated documentation
@@ -20,23 +20,17 @@ IUSE="nls debug"
 MY_AVAILABLE_LINGUAS=" az ca cs da de el es et eu fi fr ga gl hr hu it ja ko lt nl nn no pl pt_BR pt ro ru sk sl sr sv tr uk vi"
 IUSE="${IUSE} ${MY_AVAILABLE_LINGUAS// / linguas_}"
 
-RDEPEND="||	(
-				(
-					x11-libs/libXi
-					x11-libs/libXt
-				)
-				virtual/x11
-			)
-		 =dev-libs/glib-1.2*"
+RDEPEND="=dev-libs/glib-1.2*
+	||	(
+		( x11-libs/libXi x11-libs/libXt )
+		virtual/x11
+	)"
 DEPEND="${RDEPEND}
-		||	(
-				(
-					x11-proto/inputproto
-					x11-proto/xextproto
-				)
-				virtual/x11
-			)
-		nls? ( sys-devel/gettext dev-util/intltool )"
+	||	(
+		( x11-proto/inputproto x11-proto/xextproto )
+		virtual/x11
+	)
+	nls? ( sys-devel/gettext dev-util/intltool )"
 
 src_unpack() {
 	unpack ${P}.tar.gz
