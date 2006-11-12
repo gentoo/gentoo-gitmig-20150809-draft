@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fox-wrapper
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox-wrapper/ChangeLog,v 1.3 2006/11/05 18:49:39 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox-wrapper/ChangeLog,v 1.4 2006/11/12 02:01:27 gmsoft Exp $
+
+  12 Nov 2006; Guy Martin <gmsoft@gentoo.org> fox-wrapper-1.ebuild:
+  Stable on hppa.
 
   05 Nov 2006; Daniel Gryniewicz <dang@gentoo.org> fox-wrapper-1.ebuild:
   Marked stable on amd64 for bug #145046
