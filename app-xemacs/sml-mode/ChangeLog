@@ -1,6 +1,12 @@
 # ChangeLog for app-xemacs/sml-mode
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/sml-mode/ChangeLog,v 1.7 2005/08/07 13:20:02 hansmi Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/sml-mode/ChangeLog,v 1.8 2006/11/12 13:28:03 graaff Exp $
+
+*sml-mode-0.12 (12 Nov 2006)
+
+  12 Nov 2006; Hans de Graaff <graaff@gentoo.org> +metadata.xml,
+  -sml-mode-0.05.ebuild, +sml-mode-0.12.ebuild:
+  Version bump; remove old version; add metadata.
 
   07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> sml-mode-0.07.ebuild:
   Stable on ppc.
