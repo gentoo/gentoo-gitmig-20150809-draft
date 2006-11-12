@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/urlview/urlview-0.9.ebuild,v 1.25 2006/10/15 12:52:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/urlview/urlview-0.9.ebuild,v 1.26 2006/11/12 04:45:38 vapier Exp $
 
 inherit eutils
 
@@ -10,35 +10,22 @@ SRC_URI="ftp://gd.tuwien.ac.at/infosys/mail/mutt/contrib/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ~ppc-macos ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm ia64 ppc ~ppc-macos ppc64 s390 sh sparc x86"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.2"
 
-src_compile() {
-	epatch ${FILESDIR}/no-trailing-newline.patch
-	epatch ${FILESDIR}/include-fix.patch
-
-	./configure \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--host=${CHOST} || die "Configure Failed"
-
-	 emake || die "Parallel Make Failed"
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/no-trailing-newline.patch
+	epatch "${FILESDIR}"/include-fix.patch
+	epatch "${FILESDIR}"/${P}-DESTDIR.patch
 }
 
-src_install () {
-	dodir /usr/share/man/man1
-
-	make infodir=${D}/usr/share/info \
-		mandir=${D}/usr/share/man \
-		prefix=${D}/usr \
-		sysconfdir=${D}/etc \
-		install || die "Installation Failed"
-
-	dodoc README INSTALL ChangeLog AUTHORS COPYING sample.urlview
+src_install() {
+	emake install DESTDIR="${D}" || die
+	dodoc README INSTALL ChangeLog AUTHORS sample.urlview
 	dobin url_handler.sh
 }
 
@@ -51,4 +38,3 @@ pkg_postinst() {
 	einfo "your ~/.muttrc to prevent garbled URLs."
 	echo
 }
-
