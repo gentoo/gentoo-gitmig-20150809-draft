@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/normalize
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/ChangeLog,v 1.18 2006/02/11 08:04:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/ChangeLog,v 1.19 2006/11/12 17:00:41 aballier Exp $
+
+*normalize-0.7.7 (12 Nov 2006)
+
+  12 Nov 2006; Alexis Ballier <aballier@gentoo.org> +normalize-0.7.7.ebuild:
+  Version bump, thanks to Stefan Nickl <snickl@snickl.freaks.de>, bug #129208
 
   11 Feb 2006; Markus Rothe <corsair@gentoo.org> normalize-0.7.6-r2.ebuild:
   Stable on ppc64
