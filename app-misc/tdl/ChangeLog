@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/tdl
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/ChangeLog,v 1.16 2005/04/21 19:43:47 blubb Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/ChangeLog,v 1.17 2006/11/12 20:50:12 dragonheart Exp $
+
+  12 Nov 2006; Daniel Black <dragonheart@gentoo.org> tdl-1.4.1.ebuild,
+  tdl-1.5.2.ebuild:
+  remove prepallman as per bug #140697
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> tdl-1.5.2.ebuild:
   stable on amd64
