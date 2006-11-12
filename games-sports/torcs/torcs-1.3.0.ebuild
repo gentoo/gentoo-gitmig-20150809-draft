@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/torcs-1.3.0.ebuild,v 1.1 2006/11/07 21:12:21 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/torcs-1.3.0.ebuild,v 1.2 2006/11/12 12:13:50 nyhm Exp $
 
 inherit eutils multilib games
 
@@ -17,7 +17,7 @@ DEPEND=">=media-libs/plib-1.8.4
 	virtual/opengl
 	virtual/glu
 	virtual/glut
-	media-libs/openal
+	>=media-libs/openal-0.0.8-r1
 	media-libs/freealut
 	media-libs/libpng
 	x11-libs/libXrandr"
