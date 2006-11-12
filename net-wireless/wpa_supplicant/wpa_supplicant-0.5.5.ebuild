@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.5.ebuild,v 1.12 2006/11/10 14:39:30 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.5.ebuild,v 1.13 2006/11/12 14:08:04 uberlord Exp $
 
 inherit eutils toolchain-funcs
 
@@ -197,8 +197,14 @@ pkg_postinst() {
 	einfo "An example configuration file is available as"
 	einfo "/usr/share/doc/${PF}/wpa_supplicant.conf.gz"
 
+	if [[ -e ${ROOT}etc/wpa_supplicant.conf ]] ; then
+		echo
+		ewarn "WARNING: your old configuration file ${ROOT}etc/wpa_supplicant.conf"
+		ewarn "needs to be moved to ${ROOT}etc/wpa_supplicant/wpa_supplicant.conf"
+	fi
+
 	if use madwifi; then
-		einfo
+		echo
 		einfo "This package now compiles against the headers installed by"
 		einfo "the madwifi driver. You should reemerge ${PN} after"
 		einfo "upgrading your madwifi driver."
