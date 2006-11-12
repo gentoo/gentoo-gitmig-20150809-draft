@@ -2,10 +2,10 @@
 Hash: SHA1
 
 DIST ttf-sil-abyssinica-1.0.tgz 730808 RMD160 e4b96d71aeff0a06ecfc1adfe16c4e502e540824 SHA1 3c8ec4eb3a2b01a49860b3d72d38a871c923d625 SHA256 c8fa9e6886f897c0fef55a8ed05b2a5850680d76369d7d14a15df0e1baaaf079
-EBUILD ttf-sil-abyssinica-1.0.ebuild 665 RMD160 b2b476df719cb6ef24caebaf2aa5c3ecd762cddd SHA1 bf1c36307baa036884fcb35dae960205faca5895 SHA256 9de4d3147f99febeb3466739febb9dfdc9d12d381b8836d707b9af0e17719342
-MD5 ecc653aa9ce85c73fda154b7462112c6 ttf-sil-abyssinica-1.0.ebuild 665
-RMD160 b2b476df719cb6ef24caebaf2aa5c3ecd762cddd ttf-sil-abyssinica-1.0.ebuild 665
-SHA256 9de4d3147f99febeb3466739febb9dfdc9d12d381b8836d707b9af0e17719342 ttf-sil-abyssinica-1.0.ebuild 665
+EBUILD ttf-sil-abyssinica-1.0.ebuild 682 RMD160 28d0029aec185f2a451140e16103f2279d8cbfd4 SHA1 be6f1b7c075e2f22740fd5c1a7778756dce350e9 SHA256 d39977d0cd292e71e49b16595f1a510b2fcff5981cfceeedcd8510b32f526b6b
+MD5 df438a4c8196b766318546ceb64f376a ttf-sil-abyssinica-1.0.ebuild 682
+RMD160 28d0029aec185f2a451140e16103f2279d8cbfd4 ttf-sil-abyssinica-1.0.ebuild 682
+SHA256 d39977d0cd292e71e49b16595f1a510b2fcff5981cfceeedcd8510b32f526b6b ttf-sil-abyssinica-1.0.ebuild 682
 MISC ChangeLog 979 RMD160 fb4de09c1ab11adabeaf39783e68b0951f63dd05 SHA1 c610450ccc2aebe396bee6924aebe7d560cfdeae SHA256 73a7b8ed3c013a94b00e16bd1a755ff1cd010a3a17c7fb7e2ef0aa09b9b32a3b
 MD5 627c7c09abd693b2ef25c6850210c061 ChangeLog 979
 RMD160 fb4de09c1ab11adabeaf39783e68b0951f63dd05 ChangeLog 979
@@ -20,7 +20,7 @@ SHA256 c4f8af784149d3ee8c2011b6f1dd82957dbc38666d2956c631174ac3adb85d47 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFTkjeNQqtfCuFneMRAm5rAJwMe+ck7Gn0NpjigiaTN7TucA9wkACfWHQx
-ilWY89OPAJ5yJzBTfUTyA/g=
-=XEV1
+iD8DBQFFVuuhamhnQswr0vIRAqJQAJ9WwUDjDaHlH8gyJNtk/oZuARdDmwCfYepD
+nPafct/jvGYFuGRzZ6A82lc=
+=s/uS
 -----END PGP SIGNATURE-----
