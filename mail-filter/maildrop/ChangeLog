@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/maildrop
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.67 2006/10/30 17:36:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.68 2006/11/13 20:10:52 killerfox Exp $
+
+  13 Nov 2006; René Nussbaumer <killerfox@gentoo.org>
+  maildrop-2.0.2-r1.ebuild:
+  Stable on hppa. See bug #153896.
 
   30 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   maildrop-2.0.2-r1.ebuild:
