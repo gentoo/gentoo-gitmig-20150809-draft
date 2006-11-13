@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6260 2006/11/13 22:23:02 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6261 2006/11/13 23:32:53 jokey Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -596,10 +596,6 @@ sys-apps/sal-client
 # Masked pending removal on Oct 30. No longer developed upstream
 # and doesn't build.  Will be eventually replaced by qmc2.
 games-emulation/qmamecat
-
-# Markus Ullmann <jokey@gentoo.org> (4 Oct 2006)
-# Needs testing according to upstream
-app-misc/g15composer
 
 # Robin H. Johnson <robbat2@gentoo.org> (3 Oct 2006)
 # Bug 144560
