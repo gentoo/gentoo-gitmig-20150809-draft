@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sjog/sjog-0.6-r1.ebuild,v 1.1 2005/07/29 22:58:07 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sjog/sjog-0.6-r1.ebuild,v 1.2 2006/11/13 19:26:22 ticho Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://sjog.sourceforge.net/"
 SRC_URI="mirror://sourceforge/sjog/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 DEPEND="=x11-libs/gtk+-1.2*
 	media-libs/gdk-pixbuf
