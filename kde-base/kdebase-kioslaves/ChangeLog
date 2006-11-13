@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-kioslaves
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.72 2006/11/12 20:49:56 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.73 2006/11/13 12:05:37 opfer Exp $
+
+  13 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  kdebase-kioslaves-3.5.5-r1.ebuild:
+  "Stable x86, bug #147570"
 
   12 Nov 2006; Caleb Tennis <caleb@gentoo.org>
   kdebase-kioslaves-3.5.5-r1.ebuild:

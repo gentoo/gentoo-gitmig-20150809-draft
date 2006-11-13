@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ksysguard-3.5.5.ebuild,v 1.1 2006/10/03 12:22:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ksysguard-3.5.5.ebuild,v 1.2 2006/11/13 12:18:27 opfer Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -11,7 +11,7 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/kdebase-3.5-patchset-03.tar.bz2"
 
 DESCRIPTION="KSysguard is a network enabled task manager and system monitor application, with the additional functionality of top."
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="lm_sensors zeroconf"
 DEPEND="lm_sensors? ( sys-apps/lm_sensors )
 	zeroconf? ( net-misc/mDNSResponder )"

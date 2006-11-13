@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kmenuedit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmenuedit/ChangeLog,v 1.48 2006/10/07 17:01:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmenuedit/ChangeLog,v 1.49 2006/11/13 12:07:41 opfer Exp $
+
+  13 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  kmenuedit-3.5.5.ebuild:
+  "Stable x86, bug #147570"
 
   07 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   files/digest-kmenuedit-3.5.5, Manifest:

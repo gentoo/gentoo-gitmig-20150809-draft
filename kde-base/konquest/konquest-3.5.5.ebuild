@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konquest/konquest-3.5.5.ebuild,v 1.1 2006/10/03 11:32:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konquest/konquest-3.5.5.ebuild,v 1.2 2006/11/13 13:05:19 opfer Exp $
 KMNAME=kdegames
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="Galactic Strategy KDE Game"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE=""
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdegames)"
 

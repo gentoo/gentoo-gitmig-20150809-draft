@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kbounce
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/ChangeLog,v 1.51 2006/10/03 09:23:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/ChangeLog,v 1.52 2006/11/13 12:51:29 opfer Exp $
+
+  13 Nov 2006; Christian Faulhammer <opfer@gentoo.org> kbounce-3.5.5.ebuild:
+  "Stable x86, bug #147570"
 
 *kbounce-3.5.5 (03 Oct 2006)
 

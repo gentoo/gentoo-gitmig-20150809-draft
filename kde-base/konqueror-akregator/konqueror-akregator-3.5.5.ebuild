@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror-akregator/konqueror-akregator-3.5.5.ebuild,v 1.1 2006/10/03 11:31:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror-akregator/konqueror-akregator-3.5.5.ebuild,v 1.2 2006/11/13 11:38:15 opfer Exp $
 KMNAME=kdeaddons
 KMNOMODULE=true
 KMEXTRA="konq-plugins/akregator"
@@ -9,7 +9,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="konqueror's akregator plugin"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE=""
 DEPEND="$(deprange-dual $PV $MAXKDEVER kde-base/konqueror)"
 RDEPEND="${DEPEND}

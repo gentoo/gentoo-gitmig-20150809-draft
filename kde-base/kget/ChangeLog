@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kget
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.52 2006/10/03 10:41:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.53 2006/11/13 13:51:39 opfer Exp $
+
+  13 Nov 2006; Christian Faulhammer <opfer@gentoo.org> kget-3.5.5.ebuild:
+  "Stable x86, bug #147570"
 
 *kget-3.5.5 (03 Oct 2006)
 
