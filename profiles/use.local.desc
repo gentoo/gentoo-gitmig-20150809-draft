@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2331 2006/11/13 19:46:57 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2332 2006/11/13 20:46:32 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -15,7 +15,6 @@ app-accessibility/gnopernicus:brltty - Adds support for braille displays using b
 app-admin/conky:audacious - enable monitoring of audio tracks that are playing (media-sound/audacious)
 app-admin/conky:bmpx - enable monitoring of audio tracks that are playing (media-sound/bmpx)
 app-admin/conky:hddtemp - enable monitoring of hdd temperature (app-admin/hddtemp)
-app-admin/conky:infopipe - enable monitoring of audio tracks that are playing (media-sound/xmms-infopipe) conky versions less than 1.4.3 only
 app-admin/conky:mpd - enable monitoring mpd controlled music  (media-sound/mpd)
 app-admin/diradm:automount - Support for automount data in LDAP
 app-admin/diradm:irixpasswd - Support for storing seperate IRIX passwords
