@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2333 2006/11/13 20:50:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2334 2006/11/13 22:01:37 peper Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -197,6 +197,8 @@ app-office/openoffice:odk - Build the Office Development Kit
 app-office/openoffice:sound - Enable sound support through portaudio and libsndfile
 app-office/openoffice:webdav - Enable webdav support
 app-office/tpp:figlet - Installs app-misc/figlet to support the --huge command
+app-pda/libsyncml:http - Enable http transports.
+app-pda/libsyncml:obex - Enable obex transports.
 app-pda/multisync:gnokii - Address synchronization with mobile phones via Gnokii.
 app-pda/multisync:irmc - Adds support for Mobile Client synchronization via IrDa/IrMC/Bluetooth (eg: SonyEricsson T39/T68i)
 app-pda/multisync:kdepim - Adds support for KDEPIM sync.
