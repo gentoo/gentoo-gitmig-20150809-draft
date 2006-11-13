@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/meanwhile
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.37 2006/11/07 04:24:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.38 2006/11/13 10:27:17 opfer Exp $
+
+  13 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  meanwhile-1.0.2.ebuild:
+  stable x86, for KDE 3.5.5, see bug #147570
 
   07 Nov 2006; Jeroen Roovers <jer@gentoo.org> meanwhile-1.0.2.ebuild:
   Marked ~hppa (bug #151052).
