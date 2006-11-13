@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-esd/eselect-esd-20060719.ebuild,v 1.18 2006/11/11 20:51:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-esd/eselect-esd-20060719.ebuild,v 1.19 2006/11/13 01:55:23 josejx Exp $
 
 DESCRIPTION="Manages configuration of ESounD implementation or PulseAudio wrapper"
 HOMEPAGE="http://www.gentoo.org/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://gentoo/esd.eselect-${PVR}.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ~ppc ~ppc-macos ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ~ppc-macos ppc64 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=app-admin/eselect-1.0.2
