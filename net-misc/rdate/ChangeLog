@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/rdate
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.34 2006/07/13 14:35:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.35 2006/11/13 10:38:19 robbat2 Exp $
+
+*rdate-1.4-r2 (13 Nov 2006)
+
+  13 Nov 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +files/rdate-initd-1.4-r2, +rdate-1.4-r2.ebuild:
+  Bug #153235, fix param handling in init.d script.
 
   13 Jul 2006; Aron Griffis <agriffis@gentoo.org> rdate-1.4-r1.ebuild:
   Mark 1.4-r1 stable on ia64. #129091
