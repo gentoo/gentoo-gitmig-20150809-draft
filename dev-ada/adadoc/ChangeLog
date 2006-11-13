@@ -1,6 +1,11 @@
 # ChangeLog for dev-ada/adadoc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adadoc/ChangeLog,v 1.8 2006/05/13 20:41:36 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adadoc/ChangeLog,v 1.9 2006/11/13 16:49:02 george Exp $
+
+*adadoc-2.1 (13 Nov 2006)
+
+  13 Nov 2006; George Shapovalov <george@gentoo.org> +adadoc-2.1.ebuild:
+  new version, ebuild converted to work with new gnat.eclass
 
   13 May 2006; George Shapovalov <george@gentoo.org> adadoc-2.01.ebuild:
   removed inherit gnat until adapted for new eclass
