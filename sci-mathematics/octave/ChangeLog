@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.41 2006/11/03 15:44:39 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.42 2006/11/13 02:55:48 metalgod Exp $
+
+  13 Nov 2006; Luis Medinas <metalgod@gentoo.org> octave-2.1.73.ebuild:
+  Stable on amd64. Bug #141446.
 
   03 Nov 2006; Markus Dittrich <markusle@gentoo.org> ChangeLog:
   Fixed test case that failed inside the sandbox and added dejagnu
