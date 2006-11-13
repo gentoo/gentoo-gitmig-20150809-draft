@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/tigcc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/ChangeLog,v 1.15 2006/11/04 13:07:05 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/ChangeLog,v 1.16 2006/11/13 15:13:10 swegener Exp $
+
+  13 Nov 2006; Sven Wegener <swegener@gentoo.org> tigcc-0.96_beta7.ebuild:
+  Fix mirror:// SRC_URI.
 
 *tigcc-0.96_beta7 (04 Nov 2006)
 
