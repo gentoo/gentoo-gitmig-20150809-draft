@@ -1,22 +1,58 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0113cf37ab0d92b5517bbc3dd35e3406 ChangeLog 3389
-MD5 e79a63b27d38fa0f7b5574641a61738a files/digest-streamtuner-0.12.4 70
-MD5 a205326a0f0276838f0354f0cffd8dcc files/digest-streamtuner-0.99 68
-MD5 157193917ec6da747d3c44498bbc5d8b files/digest-streamtuner-0.99.99 71
-MD5 f43644f88f5023db6919c8e93c60beef files/digest-streamtuner-0.99.99-r1 147
+AUX streamtuner-0.12.3-gcc34.patch 413 RMD160 ceca613491efe11e853065bb391e904900e6d7bc SHA1 64081f8a49b424f2a4d60a3f06d1431efe5eab8a SHA256 30a94686e2ee91d2bbf2c35846606c56615fd4b72aee2bfd89a28929b18458ef
 MD5 58f85470334ffd6799ca3330c1f87f5c files/streamtuner-0.12.3-gcc34.patch 413
+RMD160 ceca613491efe11e853065bb391e904900e6d7bc files/streamtuner-0.12.3-gcc34.patch 413
+SHA256 30a94686e2ee91d2bbf2c35846606c56615fd4b72aee2bfd89a28929b18458ef files/streamtuner-0.12.3-gcc34.patch 413
+AUX streamtuner-0.99.99-sedfix.patch 796 RMD160 5c10850f5dc981fa1d6ff6072aba1a098c7b472b SHA1 dab75fa59b42291d31bb4e93f4ae7b2fe1c9898c SHA256 5d285bdf7656b0f6a7e5e7891058218d0e9fcd0004168922599b648ef8f33f1a
 MD5 849257e447f1dea0c2e215fd81890064 files/streamtuner-0.99.99-sedfix.patch 796
+RMD160 5c10850f5dc981fa1d6ff6072aba1a098c7b472b files/streamtuner-0.99.99-sedfix.patch 796
+SHA256 5d285bdf7656b0f6a7e5e7891058218d0e9fcd0004168922599b648ef8f33f1a files/streamtuner-0.99.99-sedfix.patch 796
+DIST streamtuner-0.12.4.tar.gz 677752
+DIST streamtuner-0.99.99-pygtk-2.6.diff 437
+DIST streamtuner-0.99.99.tar.gz 948075
+DIST streamtuner-0.99.tar.gz 782084
+EBUILD streamtuner-0.12.4.ebuild 796 RMD160 f81cdce05c96872ba7a0df737ab840e9a525cbf0 SHA1 5af01e98de4a1a3f5f6cc5544aaf4e7fe88d1a28 SHA256 0f3ead76ec7c1c42dd4f9e2652b291fdf4cdc5ce9cd8e4080f1b964caaaf020d
+MD5 c8acb662d1a0b247cef023642fbc466b streamtuner-0.12.4.ebuild 796
+RMD160 f81cdce05c96872ba7a0df737ab840e9a525cbf0 streamtuner-0.12.4.ebuild 796
+SHA256 0f3ead76ec7c1c42dd4f9e2652b291fdf4cdc5ce9cd8e4080f1b964caaaf020d streamtuner-0.12.4.ebuild 796
+EBUILD streamtuner-0.99.99-r1.ebuild 907 RMD160 c9ba5678e6f660353e85ab602f4c1104212c3cd5 SHA1 296fbf6587126b2972d9c41dfb0f245edda55923 SHA256 587a22ad96eff07db40bb9048fcf7d8fdcc84834ef398ebc18b4894572c54df6
+MD5 5f7424e3ed090040632b801e1d765406 streamtuner-0.99.99-r1.ebuild 907
+RMD160 c9ba5678e6f660353e85ab602f4c1104212c3cd5 streamtuner-0.99.99-r1.ebuild 907
+SHA256 587a22ad96eff07db40bb9048fcf7d8fdcc84834ef398ebc18b4894572c54df6 streamtuner-0.99.99-r1.ebuild 907
+EBUILD streamtuner-0.99.99.ebuild 812 RMD160 6ca50675a25bca817272bb5ee85b8747acd91d6b SHA1 a8fb9f984126ab6f388259cead6b1a130c4a182f SHA256 8ea46e2b3dc3437d0ef1242d68518879019d9443ea3163595a8d0f9e01485ef4
+MD5 2c0ef29406915d5aec217b9b1b92ab1c streamtuner-0.99.99.ebuild 812
+RMD160 6ca50675a25bca817272bb5ee85b8747acd91d6b streamtuner-0.99.99.ebuild 812
+SHA256 8ea46e2b3dc3437d0ef1242d68518879019d9443ea3163595a8d0f9e01485ef4 streamtuner-0.99.99.ebuild 812
+EBUILD streamtuner-0.99.ebuild 730 RMD160 5253d96671e5012ff582041f04038c77cd41f72b SHA1 e8ed442bbce0b44e84b7a67ee1b54fd9566d1ef7 SHA256 4456c8675894f57d95c8e7c25ff3d0d6300605575e821ab07b6fa38c06d92ef0
+MD5 61cb86bfd6bcac69d4f828bba4033a27 streamtuner-0.99.ebuild 730
+RMD160 5253d96671e5012ff582041f04038c77cd41f72b streamtuner-0.99.ebuild 730
+SHA256 4456c8675894f57d95c8e7c25ff3d0d6300605575e821ab07b6fa38c06d92ef0 streamtuner-0.99.ebuild 730
+MISC ChangeLog 3582 RMD160 ca8691bbe9a9c976652669876bf2c0cd1e1fd36b SHA1 9882e980174e6dc50486365ae8ae4c1c5419c8e3 SHA256 11ac97bccb135a40c7e6cec31e957e7725faacbe299b8a24c09dbccf84ac9f92
+MD5 f96bb71b0ef74761b5d3d65b415f4844 ChangeLog 3582
+RMD160 ca8691bbe9a9c976652669876bf2c0cd1e1fd36b ChangeLog 3582
+SHA256 11ac97bccb135a40c7e6cec31e957e7725faacbe299b8a24c09dbccf84ac9f92 ChangeLog 3582
+MISC metadata.xml 158 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e SHA1 703cea5a2109d41f7c87993c1f01d418a4c85174 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 b9d5b6d47e76fc165bd0b4950dcac8f8 streamtuner-0.12.4.ebuild 829
-MD5 b88c233d3fd6cde441231a0b1a9bf621 streamtuner-0.99.99-r1.ebuild 958
-MD5 5f7a918011fc771913cd76a8f341b4e8 streamtuner-0.99.99.ebuild 865
-MD5 70e93a189cd3a0009eb3b8cddffca184 streamtuner-0.99.ebuild 783
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 e79a63b27d38fa0f7b5574641a61738a files/digest-streamtuner-0.12.4 70
+RMD160 0dc15503da0b39704154a5bad7736d4f4e42e2b9 files/digest-streamtuner-0.12.4 70
+SHA256 5d57f996f11497856ad9009e1f01d4c28b5be020fb234368bdcb2dae27bd31e4 files/digest-streamtuner-0.12.4 70
+MD5 a205326a0f0276838f0354f0cffd8dcc files/digest-streamtuner-0.99 68
+RMD160 81c697942438d4ff2f4b35e0e26a712d9e626e76 files/digest-streamtuner-0.99 68
+SHA256 8195d074d361773d188aa346842ed480fd8e35ac865a6ab1246c72bd1a4c0a0d files/digest-streamtuner-0.99 68
+MD5 157193917ec6da747d3c44498bbc5d8b files/digest-streamtuner-0.99.99 71
+RMD160 56f86342cdc69e797d24b5f967fd6895e36d4a43 files/digest-streamtuner-0.99.99 71
+SHA256 f8cc033c963f6076acbde947ed89fc1b56625d36c7496af5fca4bbad3a807674 files/digest-streamtuner-0.99.99 71
+MD5 f43644f88f5023db6919c8e93c60beef files/digest-streamtuner-0.99.99-r1 147
+RMD160 7ce458e4a93ff039917a2fa07dbf640d7b401122 files/digest-streamtuner-0.99.99-r1 147
+SHA256 ef6877d87b6bb29b3bc5624b44f5535e1a05ca9e9742809a7c798a6e92de7af0 files/digest-streamtuner-0.99.99-r1 147
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFDXNDxI1lqEGTUzyQRAjhIAJ9rxs3D22UdBI2HoSblT21nS9oZWQCgw9Ce
-VU2p2pOoHeucriRNI5QgT74=
-=hXEK
+iD8DBQFFWIuqAiZjviIA2XgRAsEsAKDpLpvfcXKiDXjFHr/IkA3G3PxUSgCfRwRN
+fpTtEjWIiDYjtedJn6/v66k=
+=4xfp
 -----END PGP SIGNATURE-----
