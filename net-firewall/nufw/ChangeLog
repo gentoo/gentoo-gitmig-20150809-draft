@@ -1,0 +1,11 @@
+# ChangeLog for net-firewall/nufw
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/ChangeLog,v 1.1 2006/11/13 22:36:25 cedk Exp $
+
+*nufw-2.0.10 (13 Nov 2006)
+
+  13 Nov 2006; Cedric Krier <ced@ced.homedns.org> +files/nuauth-conf.d,
+  +files/nuauth-init.d, +files/nufw-conf.d, +files/nufw-init.d,
+  +metadata.xml, +nufw-2.0.10.ebuild:
+  New ebuild
+
