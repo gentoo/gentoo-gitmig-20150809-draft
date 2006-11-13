@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10.ebuild,v 1.12 2006/09/25 21:30:55 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10.ebuild,v 1.13 2006/11/13 15:08:43 flameeyes Exp $
 
 inherit eutils qt3
 
-IUSE="ssl crypt xscreensaver extras xmms insecure-patches"
+IUSE="ssl crypt xscreensaver extras insecure-patches"
 LANGS="ar bg ca cs da de el eo es et fi fr it hu mk nl pl pt pt_BR ru se sk sl
 sr sr sw_TZ vi zh"
 for X in ${LANGS} ; do
@@ -53,8 +53,7 @@ KEYWORDS="amd64 hppa ppc ppc64 sparc x86"
 
 DEPEND=">=app-crypt/qca-1.0-r2
 	$(qt_min_version 3.3)
-	xscreensaver? ( x11-misc/xscreensaver )
-	extras? ( xmms? ( media-sound/xmms ) )"
+	xscreensaver? ( x11-misc/xscreensaver )"
 
 RDEPEND="${DEPEND}
 	ssl? ( >=app-crypt/qca-tls-1.0-r2 )
@@ -218,7 +217,6 @@ src_unpack() {
 			epatch ${PATCHDIR}/psi-auto_responder_by_message.patch
 			# by nelchael
 			epatch ${PATCHDIR}/psi-nelchael-exec_command.patch
-			use xmms && epatch ${PATCHDIR}/psi-nelchael-xmms-status.patch
 
 			if use insecure-patches; then
 				# from http://www.uni-bonn.de/~nieuwenh/

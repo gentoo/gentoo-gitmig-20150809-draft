@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.1-r1.ebuild,v 1.2 2006/02/11 14:41:36 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.1-r1.ebuild,v 1.3 2006/11/13 15:08:04 flameeyes Exp $
 
 inherit flag-o-matic eutils
 
@@ -9,7 +9,6 @@ TABS="rev38"				#http://gov.one.pl/svnsnap
 AMAROK="1.13"				#http://scripts.one.pl/amarok
 WEATHER="2.02"				#http://www.kadu.net/~blysk/
 EXT_INFO="2.0beta5"			#http://kadu-ext-info.berlios.de
-XMMS="1.25"					#http://scripts.one.pl/xmms
 XOSD_NOTIFY="050607"		#http://www.kadu.net/~joi/xosd_notify
 MAIL="0.2.0"				#http://michal.gov.one.pl/mail
 SPELLCHECKER="0.15"			#http://scripts.one.pl/spellchecker
@@ -38,7 +37,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-IUSE="X debug alsa arts esd voice speech nas oss spell ssl tcltk xmms xosd amarok extraicons extramodules mail"
+IUSE="X debug alsa arts esd voice speech nas oss spell ssl tcltk xosd amarok extraicons extramodules mail"
 
 DEPEND="=x11-libs/qt-3*
 	media-libs/libsndfile
@@ -51,7 +50,6 @@ DEPEND="=x11-libs/qt-3*
 	ssl? ( dev-libs/openssl )
 	speech? ( app-accessibility/powiedz )
 	tcltk? ( >=dev-lang/tcl-8.4.0 >=dev-lang/tk-8.4.0 )
-	xmms? ( media-sound/xmms )
 	xosd? ( x11-libs/xosd )"
 
 SRC_URI="http://kadu.net/download/stable/${P}.tar.bz2
@@ -79,7 +77,6 @@ SRC_URI="http://kadu.net/download/stable/${P}.tar.bz2
 		http://obeny.kicks-ass.net/obeny/kadu/modules/contacts/contacts-${CONTACTS}.tar.bz2
 		http://www.kadu.net/~joi/kde_transparency.tar.bz2
 		http://www.kadu.net/~pan_wojtas/osdhints_notify/download/kadu-osdhints_notify-${OSD_NOTIFY}.tar.gz )
-	xmms? ( http://scripts.one.pl/xmms/devel/0.4.0/xmms-${XMMS}.tar.gz )
 	xosd? ( http://www.kadu.net/~joi/xosd_notify/packages/xosd_notify-${XOSD_NOTIFY}.tar.bz2 )
 	mail? ( http://michal.kernel-panic.cjb.net/mail/tars/release/mail-${MAIL}.tar.bz2 )
 	spell? (
@@ -124,7 +121,6 @@ src_unpack() {
 
 	enable_module amarok amarok
 	enable_module spell spellchecker
-	enable_module xmms xmms
 	enable_module xosd xosd_notify
 	enable_module mail mail
 	enable_module tcltk "tcl_scripting"
