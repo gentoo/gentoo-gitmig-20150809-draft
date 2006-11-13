@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/dvb_cards.desc,v 1.2 2006/11/08 19:31:20 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/dvb_cards.desc,v 1.3 2006/11/13 14:14:19 zzam Exp $
 
 # This file contains descriptions of DVB_CARDS USE_EXPAND flags.
 
@@ -21,6 +21,7 @@ ttpci - DVB_CARDS setting to add support for the Full-Featured Cards built by Te
 ttusb-dec - DVB_CARDS setting to add support for the ttusb-dec chip (WinTV NOVA-T USB2)
 usb-a800 - DVB_CARDS setting to add support for the usb-a800 USB DVB-T-device (AVerMedia AVerTV)
 usb-bluebird -  DVB_CARDS setting to add support for the bluebird usb-device (DViCO bluebird)
+usb-dib0700 - DVB_CARDS setting to add support for the usb-dib0700 USB DVB-T-device (Hauppauge Nova-T Stick)
 usb-dtt200u - DVB_CARDS setting to add support for the usb-dtt200u USB DVB-T-devices (Yakumo, Yuan, Hama, TYPHOON, WideView, V-Gear)
 usb-umt - DVB_CARDS setting to add support for the usb-umt USB2.0-DVB-T-device (Hanftek)
 usb-vp702x - DVB_CARDS setting to add support for the usb-vp702x USB DVB-S-devices (TwinhanDTV, DigitalRise, TYPHOON)
