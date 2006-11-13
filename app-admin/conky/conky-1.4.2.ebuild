@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.2.ebuild,v 1.3 2006/06/11 20:23:09 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.2.ebuild,v 1.4 2006/11/13 14:40:52 flameeyes Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/conky/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="truetype X ipv6 bmpx xmms infopipe audacious"
+IUSE="truetype X ipv6 bmpx audacious"
 
 DEPEND_COMMON="
 	virtual/libc
@@ -30,8 +30,6 @@ DEPEND_COMMON="
 				>=sys-apps/dbus-0.35
 			)
 		audacious? ( media-sound/audacious )
-		infopipe? ( media-plugins/xmms-infopipe )
-		xmms? ( media-sound/xmms )
 	)"
 
 RDEPEND="${DEPEND_COMMON}"
@@ -66,12 +64,11 @@ src_compile() {
 		--enable-mpd --enable-mldonkey"
 	econf \
 		${myconf} \
+		--disable-xmms --disable-infopipe \
 		$(use_enable truetype xft) \
 		$(use_enable X x11) \
 		$(use_enable bmpx) \
-		$(use_enable xmms) \
 		$(use_enable audacious) \
-		$(use_enable infopipe) \
 		$(use_enable !ipv6 portmon) || die "econf failed"
 	emake ${mymake} || die "compile failed"
 }

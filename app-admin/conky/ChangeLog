@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.35 2006/11/12 12:24:35 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.36 2006/11/13 14:40:52 flameeyes Exp $
+
+  13 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> conky-1.4.0-r1.ebuild,
+  conky-1.4.2.ebuild:
+  Remove xmms and infopipe useflags.
 
   12 Nov 2006; Daniel Black <dragonheart@gentoo.org>
   -files/conky-1.3.4-arraybounds.patch, -files/conky-1.3.4-miscbug.patch,
