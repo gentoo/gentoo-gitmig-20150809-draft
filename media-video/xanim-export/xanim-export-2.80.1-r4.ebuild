@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim-export/xanim-export-2.80.1-r4.ebuild,v 1.3 2006/11/07 20:31:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim-export/xanim-export-2.80.1-r4.ebuild,v 1.4 2006/11/13 04:51:08 josejx Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 strip-flags -finline-functions
@@ -63,7 +63,7 @@ SRC_URI="http://heroine.linuxave.net/${MY_P}.tar.gz
 
 LICENSE="XAnim"
 SLOT="0"
-KEYWORDS="~ppc sparc x86"
+KEYWORDS="ppc sparc x86"
 IUSE=""
 
 RDEPEND="virtual/libc
