@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/streamtuner
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.24 2005/10/18 23:21:11 chainsaw Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.25 2006/11/13 15:13:37 flameeyes Exp $
+
+  13 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  streamtuner-0.12.4.ebuild, streamtuner-0.99.ebuild,
+  streamtuner-0.99.99.ebuild, streamtuner-0.99.99-r1.ebuild:
+  Remove xmms useflag.
 
   18 Oct 2005; Tony Vroon <chainsaw@gentoo.org>
   streamtuner-0.99.99-r1.ebuild:

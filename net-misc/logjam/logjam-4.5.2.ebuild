@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/logjam-4.5.2.ebuild,v 1.3 2006/11/02 21:07:51 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/logjam-4.5.2.ebuild,v 1.4 2006/11/13 15:15:01 flameeyes Exp $
 
-IUSE="gtk gtkhtml spell sqlite svg xmms"
+IUSE="gtk gtkhtml spell sqlite svg"
 
 inherit
 
@@ -21,7 +21,6 @@ RDEPEND=">=dev-libs/libxml2-2.0
 	gtkhtml? ( >=gnome-extra/gtkhtml-3 )
 	spell? ( app-text/gtkspell )
 	svg? ( >=gnome-base/librsvg-2.2.3 )
-	xmms? ( media-sound/xmms )
 	sqlite? ( >=dev-db/sqlite-3 )"
 
 DEPEND="${RDEPEND}
@@ -41,7 +40,7 @@ src_compile() {
 	`use_with spell gtkspell` \
 	`use_with svg librsvg` \
 	`use_with sqlite sqlite3` \
-	`use_with xmms` || die
+	--without-xmms || die
 	emake || die
 }
 

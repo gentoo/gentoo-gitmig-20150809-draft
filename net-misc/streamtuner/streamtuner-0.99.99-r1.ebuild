@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/streamtuner-0.99.99-r1.ebuild,v 1.3 2005/10/24 12:17:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/streamtuner-0.99.99-r1.ebuild,v 1.4 2006/11/13 15:13:37 flameeyes Exp $
 
-IUSE="xmms"
+IUSE=""
 
 inherit gnome2 eutils
 
@@ -15,16 +15,13 @@ SLOT="0"
 LICENSE="BSD"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
-DEPEND=">=x11-libs/gtk+-2.4
+RDEPEND=">=x11-libs/gtk+-2.4
 	>=net-misc/curl-7.10.8
 	>=app-text/scrollkeeper-0.3.0
 	dev-libs/libxml2
 	>=media-libs/taglib-1.2"
 
-RDEPEND="${DEPEND}
-	 xmms? ( media-sound/xmms )"
-
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
