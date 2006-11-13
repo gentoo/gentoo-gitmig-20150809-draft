@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/libmaitretarot
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libmaitretarot/ChangeLog,v 1.4 2005/01/01 18:01:20 eradicator Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libmaitretarot/ChangeLog,v 1.5 2006/11/13 15:33:07 nyhm Exp $
+
+  13 Nov 2006; Tristan Heaven <nyhm@gentoo.org>
+  libmaitretarot-0.1.98.ebuild:
+  Add pkgconfig to DEPEND, bug #155021
 
   19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   libmaitretarot-0.1.98.ebuild:
