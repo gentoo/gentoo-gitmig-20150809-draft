@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14-r1.ebuild,v 1.2 2006/06/12 19:06:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14-r1.ebuild,v 1.3 2006/11/13 14:35:35 flameeyes Exp $
 
 inherit eutils
 
@@ -13,15 +13,11 @@ SRC_URI="mirror://debian/pool/main/x/xosd/${PN}_${PV}.orig.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="xinerama xmms"
+IUSE="xinerama"
 
 RDEPEND="|| ( ( x11-libs/libX11
 	x11-libs/libXext )
-	virtual/x11 )
-	xmms? (
-		media-sound/xmms
-		>=media-libs/gdk-pixbuf-0.22.0
-	)"
+	virtual/x11 )"
 
 DEPEND="|| ( (
 	x11-libs/libX11
@@ -40,7 +36,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-m4.patch
-	epatch "${FILESDIR}"/2.2.8-xmms-trackpos.patch
 	epatch "${DISTDIR}"/${PN}_${PV}-1.diff.gz
 
 	export WANT_AUTOMAKE=1.8
@@ -54,7 +49,7 @@ src_unpack() {
 src_compile() {
 	econf \
 		`use_enable xinerama` \
-		`use_enable xmms new-xmms` \
+		--disable-new-xmms \
 	emake || die "emake failed"
 }
 

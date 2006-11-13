@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.8-r1.ebuild,v 1.10 2006/06/22 21:49:56 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.8-r1.ebuild,v 1.11 2006/11/13 14:35:35 flameeyes Exp $
 
 inherit eutils
 
-IUSE="xinerama xmms"
+IUSE="xinerama"
 
 DESCRIPTION="Library for overlaying text/glyphs in X-Windows X-On-Screen-Display plus binary for sending text from command line"
 HOMEPAGE="http://www.ignavus.net/"
@@ -20,13 +20,11 @@ DEPEND="|| ( (
 	x11-proto/xextproto
 	x11-proto/xineramaproto
 	x11-proto/xproto )
-	virtual/x11 )
-	xmms? ( media-sound/xmms >=media-libs/gdk-pixbuf-0.22.0 )"
+	virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch "${FILESDIR}"/${PV}-xmms-trackpos.patch
 	epatch "${FILESDIR}"/${P}-libxosd.patch
 }
 
@@ -35,7 +33,7 @@ src_compile() {
 
 	use xinerama || myconf="${myconf} --disable-xinerama"
 
-	use xmms || myconf="${myconf} --disable-new-plugin"
+	myconf="${myconf} --disable-new-plugin"
 
 	econf ${myconf} || die
 
