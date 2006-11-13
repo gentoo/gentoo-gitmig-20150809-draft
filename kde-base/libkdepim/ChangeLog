@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkdepim
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.62 2006/10/13 22:41:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.63 2006/11/13 09:50:09 opfer Exp $
+
+  13 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  libkdepim-3.5.5-r1.ebuild:
+  "Stable x86, bug #147570"
 
 *libkdepim-3.5.5-r1 (13 Oct 2006)
 

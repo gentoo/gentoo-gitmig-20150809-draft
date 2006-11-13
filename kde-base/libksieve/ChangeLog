@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libksieve
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libksieve/ChangeLog,v 1.38 2006/10/03 13:02:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libksieve/ChangeLog,v 1.39 2006/11/13 09:59:33 opfer Exp $
+
+  13 Nov 2006; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
+  "Stable x86, bug #147570"
 
   03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> libksieve-3.5.0.ebuild:
   Bump to 3.5.5 (pre-release).
