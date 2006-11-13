@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canuum/canuum-3.7_p2.ebuild,v 1.6 2006/10/14 10:00:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canuum/canuum-3.7_p2.ebuild,v 1.7 2006/11/13 14:46:02 flameeyes Exp $
 
 MY_P="Canna${PV//[._]/}"
 S="${WORKDIR}/${MY_P}/${PN}"
@@ -17,7 +17,8 @@ IUSE=""
 RDEPEND="app-i18n/canna
 	dev-libs/libspt"
 DEPEND="${RDEPEND}
-	x11-misc/imake"
+	x11-misc/imake
+	x11-misc/gccmakedep"
 
 src_compile() {
 	xmkmf -a || die "xmkmf canuum failed"
