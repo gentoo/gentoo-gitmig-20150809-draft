@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/sysfsutils-2.0.0.ebuild,v 1.1 2006/05/19 06:59:21 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/sysfsutils-2.0.0.ebuild,v 1.2 2006/11/13 20:21:25 vapier Exp $
 
-inherit eutils libtool
+inherit toolchain-funcs
 
 DESCRIPTION="System Utilities Based on Sysfs"
 HOMEPAGE="http://linux-diag.sourceforge.net/Sysfsutils.html"
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND=""
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS CREDITS ChangeLog NEWS README TODO docs/libsysfs.txt
 
 	# We do not distribute this
