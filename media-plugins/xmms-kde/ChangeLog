@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-kde
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-kde/ChangeLog,v 1.14 2006/06/12 00:08:12 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-kde/ChangeLog,v 1.15 2006/11/13 15:26:08 flameeyes Exp $
+
+  13 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> xmms-kde-3.1.ebuild:
+  Remove xmms useflag.
 
   12 Jun 2006; Luis Medinas <metalgod@gentoo.org>
   -files/xmms-kde-3.1_beta1-libsuffix-fix.patch, -xmms-kde-3.1_beta1.ebuild,
