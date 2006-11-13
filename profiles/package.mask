@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6246 2006/11/13 02:29:45 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6247 2006/11/13 02:52:49 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -262,11 +262,6 @@ dev-ada/asis
 # Doug Goldstein <cardoe@gentoo.org> (25 Oct 2006)
 # Masked pending removal on 25 Nov 2006. See bug #134621
 net-www/netscape-plugger
-
-# Diego Pettenò <flameeyes@gentoo.org> (24 Oct 2006)
-# pam_console on its own ebuild, so that it can be used with PAM 0.99
-# even without patching it with RedHat patches.
-sys-auth/pam_console
 
 # Markus Ullmann <jokey@gentoo.org> (24 Oct 2006)
 # package doesn't compile currently, upstream is going to
@@ -1135,11 +1130,6 @@ sys-kernel/kurobox-sources
 # Tavis Ormandy <taviso@gentoo.org> (21 Apr 2006)
 # unresolved security issues #125491
 net-analyzer/tcpick
-
-# Diego Pettenò <flameeyes@gentoo.org> (21 Apr 2006)
-# Missing pam_console module, userdb module requiring some work.
-=sys-libs/pam-0.99*
-sys-auth/pam_userdb
 
 # Benedikt Böhm <hollow@gentoo> (20 Apr 2006)
 # Upstream dead; obsoleted by sys-apps/lomoco
