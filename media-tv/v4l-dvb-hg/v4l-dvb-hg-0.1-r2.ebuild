@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/v4l-dvb-hg-0.1-r2.ebuild,v 1.4 2006/09/09 19:45:47 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/v4l-dvb-hg-0.1-r2.ebuild,v 1.5 2006/11/13 22:28:10 zzam Exp $
 
 
-: ${EHG_REPO_URI:=http://linuxtv.org/hg/v4l-dvb}
+: ${EHG_REPO_URI:=${V4l_DVB_HG_REPO_URI:-http://linuxtv.org/hg/v4l-dvb}}
 
 inherit linux-mod eutils toolchain-funcs mercurial
 
@@ -19,7 +19,7 @@ IUSE=""
 DEPEND="virtual/linux-sources"
 RDEPEND=""
 
-S=${WORKDIR}/v4l-dvb/v4l
+S=${WORKDIR}/${EHG_REPO_URI##*/}/v4l
 
 pkg_setup()
 {
@@ -44,12 +44,10 @@ pkg_setup()
 
 src_unpack() {
 	# download and copy files
-	S=${WORKDIR}/v4l-dvb mercurial_src_unpack
-
-	cd ${WORKDIR}
-	epatch ${FILESDIR}/${PN}-fix-makefile-recursion.diff
+	mercurial_src_unpack
 
 	cd ${S}
+	epatch ${FILESDIR}/${PN}-fix-makefile-recursion.diff
 
 	export ARCH=$(tc-arch-kernel)
 	make allmodconfig ${BUILD_PARAMS}
@@ -77,7 +75,7 @@ src_unpack() {
 	echo
 
 	einfo "Removing autoload-entry from stradis-driver."
-	sed -i ${WORKDIR}/v4l-dvb/linux/drivers/media/video/stradis.c -e '/MODULE_DEVICE_TABLE/d'
+	sed -i ${S}/../linux/drivers/media/video/stradis.c -e '/MODULE_DEVICE_TABLE/d'
 
 	cd ${S}
 	sed -e 's#/lib/modules/$(KERNELRELEASE)/kernel/drivers/media#$(DESTDIR)/$(DEST)#' \
