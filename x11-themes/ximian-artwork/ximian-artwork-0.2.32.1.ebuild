@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ximian-artwork-0.2.32.1.ebuild,v 1.4 2006/10/21 19:32:14 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ximian-artwork-0.2.32.1.ebuild,v 1.5 2006/11/13 14:48:59 flameeyes Exp $
 
 inherit rpm eutils versionator
 
@@ -9,13 +9,13 @@ inherit rpm eutils versionator
 MY_PV=$(get_version_component_range 1-3)
 RPM_V=$(get_version_component_range 4)
 
-DESCRIPTION="Ximian Desktop's GTK, Galeon, GDM, Metacity, Nautilus, XMMS themes, icons and cursors."
+DESCRIPTION="Ximian Desktop's GTK, Galeon, GDM, Metacity, Nautilus, icons and cursors."
 HOMEPAGE="http://www.novell.com/products/desktop/"
 SRC_URI="http://apt.sw.be/packages/ximian-artwork/ximian-artwork-${MY_PV}-${RPM_V}.rf.src.rpm"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ppc sparc ~x86"
-IUSE="xmms"
+IUSE=""
 
 DEPEND="sys-devel/autoconf
 	sys-devel/automake
@@ -60,7 +60,7 @@ src_install () {
 	mv ${D}/usr/share/icons/Industrial/cursors ${D}/usr/share/cursors/${X11_IMPLEM}/Industrial
 
 	# remove xmms skin if unneeded
-	use xmms || rm -rf ${D}/usr/share/xmms
+	rm -rf ${D}/usr/share/xmms
 
 	cd ${S}
 	dodoc COPYING ChangeLog

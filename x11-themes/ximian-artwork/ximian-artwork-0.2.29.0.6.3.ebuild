@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ximian-artwork-0.2.29.0.6.3.ebuild,v 1.14 2005/08/17 03:24:57 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ximian-artwork-0.2.29.0.6.3.ebuild,v 1.15 2006/11/13 14:48:59 flameeyes Exp $
 
 inherit rpm eutils
 
@@ -11,13 +11,13 @@ END_V=${PV/${MY_PV}./}
 RPM_V=${END_V%.[0-9]*.[0-9]*}
 XIMIAN_V=${END_V#[0-9]*.}
 
-DESCRIPTION="Ximian Desktop's GTK, Galeon, GDM, Metacity, Nautilus, XMMS themes, icons and cursors."
+DESCRIPTION="Ximian Desktop's GTK, Galeon, GDM, Metacity, Nautilus, icons and cursors."
 HOMEPAGE="http://www.novell.com/products/desktop/"
 SRC_URI="ftp://ftp.ximian.com/pub/xd2/redhat-9-i386/source/${PN}-${MY_PV}-${RPM_V}.ximian.${XIMIAN_V}.src.rpm"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc amd64 ppc"
-IUSE="xmms"
+IUSE=""
 
 DEPEND="sys-devel/autoconf
 	sys-devel/automake
@@ -61,7 +61,7 @@ src_install () {
 	mv ${D}/usr/share/icons/Industrial/cursors ${D}/usr/share/cursors/${X11_IMPLEM}/Industrial
 
 	# remove xmms skin if unneeded
-	use xmms || rm -rf ${D}/usr/share/xmms
+	rm -rf ${D}/usr/share/xmms
 
 	cd ${S}
 	dodoc COPYING ChangeLog

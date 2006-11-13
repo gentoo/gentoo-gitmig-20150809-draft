@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.131.ebuild,v 1.9 2006/09/03 08:39:25 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.131.ebuild,v 1.10 2006/11/13 14:43:42 flameeyes Exp $
 
 inherit eutils rpm versionator kde-functions
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="alpha amd64 ~hppa ia64 ppc sparc x86"
-IUSE="gtk kde xmms"
+IUSE="gtk kde"
 
 RDEPEND=">=x11-libs/gtk+-2.0
 	gtk? ( >=media-libs/gdk-pixbuf-0.2.5
@@ -128,7 +128,7 @@ src_install () {
 	done
 
 	# remove xmms skin if unneeded
-	use xmms || rm -rf "${D}/usr/share/xmms"
+	rm -rf "${D}/usr/share/xmms"
 
 	cd ${S}
 	dodoc AUTHORS NEWS README ChangeLog

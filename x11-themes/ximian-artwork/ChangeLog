@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/ximian-artwork
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ChangeLog,v 1.26 2006/10/21 19:32:14 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ChangeLog,v 1.27 2006/11/13 14:48:59 flameeyes Exp $
+
+  13 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  ximian-artwork-0.2.29.0.6.3.ebuild, ximian-artwork-0.2.32.1.ebuild:
+  Remove xmms useflag.
 
   21 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   ximian-artwork-0.2.32.1.ebuild:
