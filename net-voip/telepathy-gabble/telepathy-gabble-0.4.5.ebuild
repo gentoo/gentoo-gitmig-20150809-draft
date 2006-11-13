@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.4.5.ebuild,v 1.1 2006/11/13 12:01:44 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.4.5.ebuild,v 1.2 2006/11/13 14:04:13 peper Exp $
 
 DESCRIPTION="A Jabber/XMPP connection manager, this handles single and multi user chats and voice calls."
 HOMEPAGE="http://telepathy.freedesktop.org"
@@ -16,13 +16,21 @@ DEPEND=">=dev-libs/glib-2.4
 	loudmouth? ( >=net-libs/loudmouth-1.1.1 )"
 RDEPEND="${DEPEND}"
 
-src_compile(){
+src_compile() {
 	econf \
 		$(use_enable debug) \
 		$(use_enable debug handle-leak-debug) \
 		$(use_enable loudmouth) \
 		|| die "econf failed"
 	emake || die "emake failed"
+}
+
+src_test() {
+	vecho ">>> Test phase [check]: ${CATEGORY}/${PF}"
+	if ! dbus-launch emake -j1 check; then
+		hasq test $FEATURES && die "Make check failed. See above for details."
+		hasq test $FEATURES || eerror "Make check failed.  See above for details."
+	fi
 }
 
 src_install() {
