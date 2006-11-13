@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-2.0.3.ebuild,v 1.2 2006/10/15 18:08:02 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-2.0.3.ebuild,v 1.3 2006/11/13 19:06:02 josejx Exp $
 
 inherit kde
 
@@ -26,6 +26,9 @@ done
 
 src_unpack() {
 	kde_src_unpack
+
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-znow.patch
 
 	local MAKE_LANGS
 	cd "${WORKDIR}/${P}/translations"

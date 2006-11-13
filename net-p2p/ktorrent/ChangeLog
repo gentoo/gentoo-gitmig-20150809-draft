@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.27 2006/10/20 17:20:13 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.28 2006/11/13 19:06:02 josejx Exp $
+
+  13 Nov 2006; Joseph Jezak <josejx@gentoo.org> +files/ktorrent-znow.patch,
+  ktorrent-2.0.3.ebuild:
+  Added patch for bug #151851.
 
   20 Oct 2006; <nixnut@gentoo.org> ktorrent-2.0.2.ebuild:
   Stable on ppc wrt bug 146038
