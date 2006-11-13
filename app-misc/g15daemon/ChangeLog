@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/g15daemon
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.5 2006/10/31 22:29:10 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.6 2006/11/13 23:18:01 jokey Exp $
+
+*g15daemon-1.2.5 (13 Nov 2006)
+
+  13 Nov 2006; Markus Ullmann <jokey@gentoo.org>
+  -files/g15daemon-1.2.1.initd, +files/g15daemon-1.2.5.confd,
+  +files/g15daemon-1.2.5.initd, -g15daemon-1.2.1-r2.ebuild,
+  +g15daemon-1.2.5.ebuild:
+  Version bump
 
 *g15daemon-1.2.3 (31 Oct 2006)
 
