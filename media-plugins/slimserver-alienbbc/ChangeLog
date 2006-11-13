@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/slimserver-alienbbc
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/slimserver-alienbbc/ChangeLog,v 1.1 2006/11/13 19:58:25 twp Exp $
+
+*slimserver-alienbbc-1.06 (13 Nov 2006)
+
+  13 Nov 2006; <twp@gentoo.org> +metadata.xml,
+  +slimserver-alienbbc-1.06.ebuild:
+  Initial commit.  Bug # 119891.
+
