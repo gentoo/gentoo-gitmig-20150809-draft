@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/gxemul
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/gxemul/ChangeLog,v 1.6 2006/11/06 23:07:38 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/gxemul/ChangeLog,v 1.7 2006/11/13 17:21:13 drizzt Exp $
+
+  13 Nov 2006; Timothy Redaelli <drizzt@gentoo.org> gxemul-0.4.3.ebuild:
+  Fixed digest on Manifest for 0.4.2.
+  Used toolchain-funcs to export CC.
 
 *gxemul-0.4.3 (06 Nov 2006)
 

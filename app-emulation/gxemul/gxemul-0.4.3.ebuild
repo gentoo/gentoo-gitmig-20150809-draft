@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/gxemul/gxemul-0.4.3.ebuild,v 1.1 2006/11/06 23:07:38 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/gxemul/gxemul-0.4.3.ebuild,v 1.2 2006/11/13 17:21:13 drizzt Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A Machine Emulator, Mainly emulates MIPS, but supports other CPU types."
 HOMEPAGE="http://gavare.se/gxemul/"
@@ -23,6 +23,7 @@ DEPEND="${RDEPEND}
 		X? ( || ( x11-proto/xproto virtual/x11 ) )"
 
 src_compile() {
+	tc-export CC
 	local myconf=""
 
 	use X || myconf="${myconf} --disable-x"
