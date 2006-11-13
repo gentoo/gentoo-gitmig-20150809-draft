@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-tvonscreen/vdr-tvonscreen-0.7.1.ebuild,v 1.2 2006/10/19 21:36:16 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-tvonscreen/vdr-tvonscreen-0.7.1.ebuild,v 1.3 2006/11/13 09:48:52 zzam Exp $
 
 IUSE=""
 inherit vdr-plugin
@@ -8,7 +8,7 @@ inherit vdr-plugin
 DESCRIPTION="VDR plugin: Show EPG like a TV guide"
 HOMEPAGE="http://www.js-home.org/vdr/tvonscreen"
 SRC_URI="http://beejay.vdr-developer.org/patches/${P}.tar.gz"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 SLOT="0"
 LICENSE="GPL-2"
 
