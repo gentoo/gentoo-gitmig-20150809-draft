@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/DFB++
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DFB++/ChangeLog,v 1.4 2005/10/28 00:29:00 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DFB++/ChangeLog,v 1.5 2006/11/13 21:01:11 vapier Exp $
+
+*DFB++-0.9.25 (13 Nov 2006)
+
+  13 Nov 2006; Mike Frysinger <vapier@gentoo.org> +DFB++-0.9.25.ebuild:
+  Version bump.
 
 *DFB++-0.9.23 (28 Oct 2005)
 
