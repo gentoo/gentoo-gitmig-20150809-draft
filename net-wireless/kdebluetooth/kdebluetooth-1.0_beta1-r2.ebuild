@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-1.0_beta1-r2.ebuild,v 1.9 2006/08/20 09:10:06 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-1.0_beta1-r2.ebuild,v 1.10 2006/11/13 15:17:41 flameeyes Exp $
 
 inherit kde autotools
 
@@ -15,12 +15,11 @@ SRC_URI="mirror://sourceforge/kde-bluetooth/${MY_P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ~hppa ppc sparc x86"
-IUSE="xmms irmc"
+IUSE="irmc"
 
 DEPEND=">=dev-libs/openobex-1.1
 	>=net-wireless/bluez-libs-2.15
 	>=media-libs/libvorbis-1.0
-	xmms? ( >=media-sound/xmms-1.2.10 )
 	irmc? ( || ( >=kde-base/kitchensync-3.4_beta1 >=kde-base/kdepim-3.4_beta1 ) )"
 
 RDEPEND="${DEPEND}
@@ -44,7 +43,7 @@ src_compile() {
 	sed -i -e 's,/etc/init\.d/bluez-utils,/etc/init\.d/bluetooth,' \
 		"${S}/kdebluetooth/kbluetoothd/kcm_btpaired/pairedtab.cpp" || die
 
-	local myconf="$(use_with xmms) $(use_enable irmc irmcsynckonnector)"
+	local myconf="--without-xmms $(use_enable irmc irmcsynckonnector)"
 
 	kde_src_compile
 }
@@ -55,7 +54,4 @@ pkg_postinst() {
 	einfo 'you have to edit "/etc/bluetooth/hcid.conf" and change the line'
 	einfo '"pin_helper oldbluepin;" to "pin_helper /usr/lib/kdebluetooth/kbluepin;".'
 	einfo 'Then restart hcid to make the change take effect.'
-	einfo ''
-	einfo 'The bemused server (avaible with the "xmms" USE flag enabled) only works with'
-	einfo 'Symbian OS phones'
 }
