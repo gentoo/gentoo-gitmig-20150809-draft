@@ -1,25 +1,22 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-att-remover/sylpheed-claws-att-remover-1.0.3.ebuild,v 1.1 2006/10/03 14:29:41 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-att-remover/sylpheed-claws-att-remover-1.0.3.ebuild,v 1.2 2006/11/13 17:03:04 ticho Exp $
 
 inherit eutils
 
-MY_PN="${PN#sylpheed-claws-}"
-MY_PN="${MY_PN/-/_}"
-MY_P="${MY_PN}-${PV}"
-SC_BASE="2.5.2"
-SC_BASE_NAME="sylpheed-claws-extra-plugins-${SC_BASE}"
+MY_P="${P#sylpheed-claws-}"
+MY_P="${MY_P/-/_}"
 
 DESCRIPTION="This plugin lets you remove attachments from mails."
 HOMEPAGE="http://claws.sylpheed.org"
-SRC_URI="mirror://sourceforge/sylpheed-claws/${SC_BASE_NAME}.tar.bz2"
+SRC_URI="http://www.claws-mail.org/downloads/plugins/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
-DEPEND=">=mail-client/sylpheed-claws-${SC_BASE}"
+DEPEND=">=mail-client/sylpheed-claws-2.5.2"
 
-S="${WORKDIR}/${SC_BASE_NAME}/${MY_P}"
+S="${WORKDIR}/${MY_P}"
 
 src_install() {
 	pwd

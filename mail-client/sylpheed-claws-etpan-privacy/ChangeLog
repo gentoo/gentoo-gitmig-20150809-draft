@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/sylpheed-claws-etpan-privacy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-etpan-privacy/ChangeLog,v 1.7 2006/10/14 04:05:18 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-etpan-privacy/ChangeLog,v 1.8 2006/11/13 17:11:41 ticho Exp $
+
+  13 Nov 2006; Andrej Kacian <ticho@gentoo.org>
+  sylpheed-claws-etpan-privacy-0.15.3.ebuild:
+  Use separate tarball instead of the whole extra-plugins package.
 
   14 Oct 2006; Marius Mauch <genone@gentoo.org> metadata.xml:
   update maintainer info
