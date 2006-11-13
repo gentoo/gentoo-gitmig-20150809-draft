@@ -1,8 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-0.20.ebuild,v 1.2 2006/11/13 21:41:23 peper Exp $
-
-inherit multilib
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-0.20.ebuild,v 1.3 2006/11/13 21:49:34 peper Exp $
 
 DESCRIPTION="OpenSync synchronisation framework library"
 HOMEPAGE="http://www.opensync.org/"
@@ -44,10 +42,6 @@ src_compile() {
 }
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-
-	# Intall pkgconfig files
-	insinto /usr/$(get_libdir)/pkgconfig
-	doins *-1.0.pc
 
 	dodoc AUTHORS ChangeLog NEWS README TODO
 	use doc && dohtml docs/html/*
