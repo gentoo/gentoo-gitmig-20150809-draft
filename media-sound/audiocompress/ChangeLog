@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/audiocompress
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/ChangeLog,v 1.15 2006/08/25 17:04:57 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/ChangeLog,v 1.16 2006/11/13 15:20:28 flameeyes Exp $
+
+  13 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  audiocompress-1.5.1.ebuild, audiocompress-1.5.2.ebuild:
+  Remove xmms useflag. Remove -amd64 as the reported failure was in the
+  now-gone xmms plugin.
 
 *audiocompress-1.5.2 (25 Aug 2006)
 
