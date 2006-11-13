@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5.ebuild,v 1.14 2006/09/28 12:19:43 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5.ebuild,v 1.15 2006/11/13 15:26:43 flameeyes Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/quake/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="ppc x86"
-IUSE="cdinstall debug 3dfx fbcon opengl sdl svga X ncurses vorbis zlib ipv6 xv dga xmms alsa oss"
+IUSE="cdinstall debug 3dfx fbcon opengl sdl svga X ncurses vorbis zlib ipv6 xv dga alsa oss"
 RESTRICT="userpriv"
 
 RDEPEND="3dfx? ( media-libs/glide-v3 )
@@ -39,7 +39,6 @@ RDEPEND="3dfx? ( media-libs/glide-v3 )
 		|| (
 			x11-libs/libXxf86dga
 			virtual/x11 ) )
-	xmms? ( media-sound/xmms )
 	alsa? ( media-libs/alsa-lib )"
 DEPEND="${RDEPEND}
 	cdinstall? ( games-fps/quake1-data )
@@ -99,7 +98,7 @@ src_compile() {
 		$(use_enable xv vidmode) \
 		$(use_enable dga) \
 		$(use_enable sdl) \
-		$(use_enable xmms) \
+		--disable-xmms \
 		$(use_enable alsa) \
 		$(use_enable oss) \
 		--enable-sound \

@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/qudos
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/ChangeLog,v 1.3 2006/10/19 21:00:14 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/ChangeLog,v 1.4 2006/11/13 15:27:31 flameeyes Exp $
+
+  13 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> qudos-0.40.1.ebuild,
+  qudos-9999.ebuild:
+  Remove xmms useflag.
 
   19 Oct 2006; <tupone@gentoo.org> qudos-0.40.1.ebuild:
   Added ~amd64 keyword. Bug #140726 by Michael Boone

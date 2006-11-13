@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-0.40.1.ebuild,v 1.3 2006/10/19 21:00:14 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-0.40.1.ebuild,v 1.4 2006/11/13 15:27:31 flameeyes Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -16,7 +16,7 @@ SRC_URI="http://qudos.quakedev.com/linux/${MY_PN}/engines/QuDos/${FILE_STEM}.tar
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="alsa cdinstall debug dedicated demo dga ipv6 joystick mods opengl qmax oss sdl textures xmms"
+IUSE="alsa cdinstall debug dedicated demo dga ipv6 joystick mods opengl qmax oss sdl textures"
 
 UIDEPEND="alsa? ( media-libs/alsa-lib )
 	opengl? (
@@ -34,8 +34,7 @@ UIDEPEND="alsa? ( media-libs/alsa-lib )
 			x11-libs/libXxf86dga
 			x11-libs/libXxf86vm )
 		virtual/x11 )"
-COMMON="${UIDEPEND}
-	xmms? ( media-sound/xmms )"
+COMMON="${UIDEPEND}"
 RDEPEND="${COMMON}
 	cdinstall? ( games-fps/quake2-data )
 	demo? ( games-fps/quake2-demodata )
@@ -131,7 +130,7 @@ src_compile() {
 		BUILD_ALSA_SND=$(yesno alsa) \
 		BUILD_SDL_SND=$(yesno sdl) \
 		BUILD_OSS_SND=$(yesno oss) \
-		WITH_XMMS=$(yesno xmms) \
+		WITH_XMMS=NO \
 		WITH_DGA_MOUSE=$(yesno dga) \
 		WITH_JOYSTICK=$(yesno joystick) \
 		TYPE="${type}" \
