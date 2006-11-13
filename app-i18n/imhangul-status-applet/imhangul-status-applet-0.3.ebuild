@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul-status-applet/imhangul-status-applet-0.3.ebuild,v 1.2 2005/01/01 14:30:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul-status-applet/imhangul-status-applet-0.3.ebuild,v 1.3 2006/11/13 14:38:50 flameeyes Exp $
 
 inherit gnome2
 
@@ -15,7 +15,9 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 
-DEPEND=">=app-i18n/imhangul-0.9.4"
+RDEPEND=">=app-i18n/imhangul-0.9.4"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 

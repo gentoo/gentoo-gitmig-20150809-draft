@@ -1,6 +1,34 @@
-MD5 aa85273c64309cfc1ea07fa20e8a53ec ChangeLog 1476
-MD5 68b47979276028a623320504975e348a imhangul-status-applet-0.2-r1.ebuild 641
-MD5 eea2a2b36c9b684229a829cfcead1b60 imhangul-status-applet-0.3.ebuild 640
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST imhangul_status_applet-0.2.tar.gz 323837
+DIST imhangul_status_applet-0.3.tar.gz 447992
+EBUILD imhangul-status-applet-0.2-r1.ebuild 681 RMD160 f1e2ed32bf5f1087748cc9a923a2442d580b131e SHA1 ae9386a704d74c17506380d2fdadd132efb9406a SHA256 dd551d495df16fe775e7c810228c841bdb90a0e191c5792ebfda3ef8e741d5c9
+MD5 9bbd24dc2e7cb505921194e48487125e imhangul-status-applet-0.2-r1.ebuild 681
+RMD160 f1e2ed32bf5f1087748cc9a923a2442d580b131e imhangul-status-applet-0.2-r1.ebuild 681
+SHA256 dd551d495df16fe775e7c810228c841bdb90a0e191c5792ebfda3ef8e741d5c9 imhangul-status-applet-0.2-r1.ebuild 681
+EBUILD imhangul-status-applet-0.3.ebuild 680 RMD160 869aa66b6899ed6ca3371652716feb31dd5090aa SHA1 87708792990fe5fd0f91eadc899b067725dac116 SHA256 37249ead8eb86381f815e5502bddf9ddc6a1bb3d89f4bce24c90225b15afcf38
+MD5 0f05dba4d31cd148cd8542eb1535072c imhangul-status-applet-0.3.ebuild 680
+RMD160 869aa66b6899ed6ca3371652716feb31dd5090aa imhangul-status-applet-0.3.ebuild 680
+SHA256 37249ead8eb86381f815e5502bddf9ddc6a1bb3d89f4bce24c90225b15afcf38 imhangul-status-applet-0.3.ebuild 680
+MISC ChangeLog 1681 RMD160 7fca8ca37f415fddb47a7f7453c55845debc0e77 SHA1 842650944b8ab7b3606c1dea7efbad4d8cafdc62 SHA256 02c6504db53c6c165064e6c6dea13136dc471af9acd9ba36ffda7a4b47dbcd8f
+MD5 e0554c15b76218f865ffe6922dfb8b75 ChangeLog 1681
+RMD160 7fca8ca37f415fddb47a7f7453c55845debc0e77 ChangeLog 1681
+SHA256 02c6504db53c6c165064e6c6dea13136dc471af9acd9ba36ffda7a4b47dbcd8f ChangeLog 1681
+MISC metadata.xml 156 RMD160 8adcf0a760a605cd42501f53097ca3a1c4e8daad SHA1 8ccc2b0f20743002b783b1f7b5162c71f7f54c2e SHA256 815820f2e5866d973fafb29a8b8027d022ccea43023309b6dc294cf077598215
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+RMD160 8adcf0a760a605cd42501f53097ca3a1c4e8daad metadata.xml 156
+SHA256 815820f2e5866d973fafb29a8b8027d022ccea43023309b6dc294cf077598215 metadata.xml 156
 MD5 69fbeb094e6d6302b406919b30035ffe files/digest-imhangul-status-applet-0.2-r1 78
+RMD160 a51ec841a5e7b387003826d0f758a30513d55f0f files/digest-imhangul-status-applet-0.2-r1 78
+SHA256 bbbc81b04eda66cc805373162d9e163165effc995c0e13d25de040ce9c67df41 files/digest-imhangul-status-applet-0.2-r1 78
 MD5 286112e2d46b28b175e9bd96a5d5d67b files/digest-imhangul-status-applet-0.3 78
+RMD160 9015b9a09d076136e28963790cefcc33409ea082 files/digest-imhangul-status-applet-0.3 78
+SHA256 9957dd625246a933e088fb14bc3d4d93274488117e5508bc07a3573aa81023a9 files/digest-imhangul-status-applet-0.3 78
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFWIOAAiZjviIA2XgRAlqGAJ9BplZxgOP045LCXfQDzPso0wcYLgCeOkwc
+3+h3NQZwIqO05FVzUHGvAGo=
+=1U29
+-----END PGP SIGNATURE-----
