@@ -1,0 +1,56 @@
+--- configure.ac
++++ configure.ac
+@@ -129,7 +129,7 @@
+ dnl Check openAL audio library (currently default)
+ dnl ------------------------
+ AC_CHECK_HEADER(AL/al.h, AC_DEFINE([OPENAL_HEADER], [], [OpenAL headers]))
+-AC_CHECK_LIB(openal, alGetError, soundlibs="-lopenal $soundlibs";AC_DEFINE([HAVE_LIBOPENAL], [], [OpenAL Lib]))
++AC_CHECK_LIB(openal, alGetError, soundlibs="-lopenal -lalut $soundlibs";AC_DEFINE([HAVE_LIBOPENAL], [], [OpenAL Lib]))
+ 
+ if test "x$soundlibs" = "x" ; then
+ 
+--- ultimatestunts/sndsample.cpp
++++ ultimatestunts/sndsample.cpp
+@@ -96,10 +96,7 @@
+ 	//data (and default values)
+ 	void *wave = NULL;
+ 	ALsizei
+-		format = AL_FORMAT_MONO16,
+-		size = 0,
+-		bits = 0,
+-		freq = 44100;
++		size = 0;
+ 
+ 	CString extension = realfile.mid(realfile.length() - 4);
+ 	extension.toLower();
+@@ -108,7 +105,7 @@
+ 	{
+ 		//the loading proc
+ 		ALboolean (*alutLoadVorbis)(ALuint, ALvoid *, ALint) =
+-			(ALboolean (*)(ALuint, ALvoid *, ALint))alGetProcAddress((ALubyte *) VORBISFUNC);
++			(ALboolean (*)(ALuint, ALvoid *, ALint))alGetProcAddress(VORBISFUNC);
+ 
+ 		if(alutLoadVorbis == NULL)
+ 		{
+@@ -134,7 +131,7 @@
+ 	{
+ 		//the loading proc
+ 		ALboolean (*alutLoadMP3)(ALuint, ALvoid *, ALint) =
+-			(ALboolean (*)(ALuint, ALvoid *, ALint))alGetProcAddress((ALubyte *) MP3FUNC);
++			(ALboolean (*)(ALuint, ALvoid *, ALint))alGetProcAddress(MP3FUNC);
+ 
+ 		if(alutLoadMP3 == NULL)
+ 		{
+@@ -158,9 +155,9 @@
+ 	}
+ 	else //default: load as wave file
+ 	{
+-		alGenBuffers(1, &m_Buffer);
+-		alutLoadWAV(realfile.c_str(), &wave, &format, &size, &bits, &freq);
+-		alBufferData(m_Buffer, format, wave, size, freq);
++		m_Buffer = alutCreateBufferFromFile(realfile.c_str());
++		if(m_Buffer == AL_NONE)
++			printf("%s\n", alutGetErrorString(alutGetError()));
+ 	}
+ 
+ 	free(wave);
