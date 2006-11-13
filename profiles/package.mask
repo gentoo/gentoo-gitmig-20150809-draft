@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6249 2006/11/13 07:47:32 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6250 2006/11/13 08:02:20 dberkholz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -744,8 +744,6 @@ dev-cpp/cairomm
 
 # Donnie Berkholz <dberkholz@gentoo.org> (05 Sep 2006)
 # Masked until it gets some testing
-## authconfig depends on pam 0.95, do not unmask until it is
-app-admin/authconfig
 ## Below here safe to unmask after testing
 app-admin/firstboot
 app-admin/system-config-keyboard
