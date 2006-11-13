@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6247 2006/11/13 02:52:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6248 2006/11/13 07:22:48 compnerd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -962,11 +962,6 @@ mail-client/mahogany
 # Masked for testing
 # See bug 140207
 >=dev-libs/libnl-1.0_pre5
-
-# John N. Laliberte <allanonjl@gentoo.org> (15 Jul 2006)
-# old, unsupported upstream.  Use evince.
-# possible security problems in the future.
-app-text/gpdf
 
 # Matthew Kennedy <mkennedy@gentoo.org>
 # libecl.so linking problem
