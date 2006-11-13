@@ -1,0 +1,10 @@
+# ChangeLog for app-pda/libopensync-plugin-gpe
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-gpe/ChangeLog,v 1.1 2006/11/13 20:10:19 peper Exp $
+
+*libopensync-plugin-gpe-0.20 (13 Nov 2006)
+
+  13 Nov 2006; Piotr Jaroszyński <peper@gentoo.org> +metadata.xml,
+  +libopensync-plugin-gpe-0.20.ebuild:
+  New package.
+
