@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/karm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/ChangeLog,v 1.56 2006/10/17 09:25:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/ChangeLog,v 1.57 2006/11/13 14:23:08 opfer Exp $
+
+  13 Nov 2006; Christian Faulhammer <opfer@gentoo.org> karm-3.5.5.ebuild:
+  "Stable x86, bug #147570"
 
   17 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> karm-3.5.2.ebuild,
   karm-3.5.3.ebuild, karm-3.5.4.ebuild, karm-3.5.5.ebuild:

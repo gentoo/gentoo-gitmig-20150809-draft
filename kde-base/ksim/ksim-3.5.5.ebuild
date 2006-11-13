@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksim/ksim-3.5.5.ebuild,v 1.1 2006/10/03 12:07:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksim/ksim-3.5.5.ebuild,v 1.2 2006/11/13 14:51:24 opfer Exp $
 
 KMNAME=kdeutils
 MAXKDEVER=$PV
@@ -8,7 +8,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE system monitoring applets."
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="snmp"
 DEPEND="snmp? ( net-analyzer/net-snmp )"
 

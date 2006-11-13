@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaddons-meta
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/ChangeLog,v 1.70 2006/10/03 09:58:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/ChangeLog,v 1.71 2006/11/13 15:13:41 opfer Exp $
+
+  13 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  kdeaddons-meta-3.5.5.ebuild:
+  "Stable x86, bug #147570"
 
   03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   kdeaddons-meta-3.5.5.ebuild:

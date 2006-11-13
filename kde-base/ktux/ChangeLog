@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktux
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.48 2006/10/03 12:34:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.49 2006/11/13 14:17:01 opfer Exp $
+
+  13 Nov 2006; Christian Faulhammer <opfer@gentoo.org> ktux-3.5.5.ebuild:
+  "Stable x86, bug #147570"
 
 *ktux-3.5.5 (03 Oct 2006)
 

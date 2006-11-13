@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-emoticons
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-emoticons/ChangeLog,v 1.39 2006/10/03 09:42:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-emoticons/ChangeLog,v 1.40 2006/11/13 14:54:20 opfer Exp $
+
+  13 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  kdeartwork-emoticons-3.5.4.ebuild:
+  "Stable x86, bug #147570"
 
   03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   kdeartwork-emoticons-3.5.4.ebuild:

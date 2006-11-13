@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/lisa
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/lisa/ChangeLog,v 1.53 2006/10/03 13:06:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/lisa/ChangeLog,v 1.54 2006/11/13 14:05:42 opfer Exp $
+
+  13 Nov 2006; Christian Faulhammer <opfer@gentoo.org> lisa-3.5.5.ebuild:
+  "Stable x86, bug #147570"
 
 *lisa-3.5.5 (03 Oct 2006)
 
