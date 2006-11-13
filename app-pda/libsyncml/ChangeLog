@@ -1,0 +1,10 @@
+# ChangeLog for app-pda/libsyncml
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/ChangeLog,v 1.1 2006/11/13 22:02:11 peper Exp $
+
+*libsyncml-0.4.2 (13 Nov 2006)
+
+  13 Nov 2006; Piotr Jaroszyński <peper@gentoo.org> +metadata.xml,
+  +libsyncml-0.4.2.ebuild:
+  New package.
+
