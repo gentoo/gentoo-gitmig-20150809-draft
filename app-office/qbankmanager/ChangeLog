@@ -1,6 +1,10 @@
 # ChangeLog for app-office/qbankmanager
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qbankmanager/ChangeLog,v 1.23 2006/10/11 22:26:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qbankmanager/ChangeLog,v 1.24 2006/11/13 13:27:37 gustavoz Exp $
+
+  13 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  qbankmanager-0.9.38.ebuild:
+  Stable on sparc
 
   11 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   qbankmanager-0.9.38.ebuild:
