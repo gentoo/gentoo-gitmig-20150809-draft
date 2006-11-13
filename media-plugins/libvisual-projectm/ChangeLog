@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/libvisual-projectm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-projectm/ChangeLog,v 1.1 2006/11/06 23:31:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-projectm/ChangeLog,v 1.2 2006/11/13 18:56:18 ticho Exp $
+
+  13 Nov 2006; Andrej Kacian <ticho@gentoo.org>
+  libvisual-projectm-0.99.ebuild:
+  Added ~x86 keyword, bug #154846.
 
 *libvisual-projectm-0.99 (06 Nov 2006)
 
