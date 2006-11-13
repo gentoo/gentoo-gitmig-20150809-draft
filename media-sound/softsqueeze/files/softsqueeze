@@ -1,0 +1,2 @@
+#!/bin/sh
+( cd /opt/slimserver/HTML/EN/html/softsqueeze && java -jar SoftSqueeze.jar )
