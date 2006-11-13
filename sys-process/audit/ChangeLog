@@ -1,6 +1,16 @@
 # ChangeLog for sys-process/audit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.12 2006/06/22 07:41:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.13 2006/11/13 11:41:07 robbat2 Exp $
+
+*audit-1.2.9 (13 Nov 2006)
+*audit-1.2.5 (13 Nov 2006)
+
+  13 Nov 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +files/audit-0.9.14-header.patch, +files/audit.h-2.6.18-rc4,
+  +files/elf-em.h-2.6.18-rc4, audit-1.1.6.ebuild, audit-1.2.3.ebuild,
+  +audit-1.2.5.ebuild, +audit-1.2.9.ebuild:
+  Bug #142460, combined with version bumping. Audit finally builds again
+  against headers and kernels found in the tree!.
 
 *audit-1.2.3 (22 Jun 2006)
 
