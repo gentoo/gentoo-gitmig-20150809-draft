@@ -17,14 +17,14 @@ EBUILD kdemultimedia-kfile-plugins-3.5.4.ebuild 689 RMD160 804adb789a3c71f45721a
 MD5 3fd128e2a90b3a033822e5c37df0c4b1 kdemultimedia-kfile-plugins-3.5.4.ebuild 689
 RMD160 804adb789a3c71f45721ac567585a0fdc07d495b kdemultimedia-kfile-plugins-3.5.4.ebuild 689
 SHA256 da25b5f4faeb3f131802723ae54797159d016c1d9ecff92c60483397f1f86f47 kdemultimedia-kfile-plugins-3.5.4.ebuild 689
-EBUILD kdemultimedia-kfile-plugins-3.5.5.ebuild 689 RMD160 3805d6f25fb50c4a72b08fe76daf6d1a92a7ae3d SHA1 b00863b967cd532bf974aa0cf425dcbec5cd00c8 SHA256 1b78bad242bee70411b955f3868cac03d22fead63b9d77f94851ac83c8be4c08
-MD5 dc4849ea58c5a0ead2d834c560530fd9 kdemultimedia-kfile-plugins-3.5.5.ebuild 689
-RMD160 3805d6f25fb50c4a72b08fe76daf6d1a92a7ae3d kdemultimedia-kfile-plugins-3.5.5.ebuild 689
-SHA256 1b78bad242bee70411b955f3868cac03d22fead63b9d77f94851ac83c8be4c08 kdemultimedia-kfile-plugins-3.5.5.ebuild 689
-MISC ChangeLog 8255 RMD160 c312a08211276ed92836bfdbb53e6c581fe36441 SHA1 aa772beb6f949e745a190638ce7ddc8b06ec38a7 SHA256 0a36054b58bee27d7f48b2d787ee0e3b3c247ffe96e1fdf107124ac8a027892f
-MD5 b14f7924c9337fd08f5ac3193fc309a2 ChangeLog 8255
-RMD160 c312a08211276ed92836bfdbb53e6c581fe36441 ChangeLog 8255
-SHA256 0a36054b58bee27d7f48b2d787ee0e3b3c247ffe96e1fdf107124ac8a027892f ChangeLog 8255
+EBUILD kdemultimedia-kfile-plugins-3.5.5.ebuild 684 RMD160 e9573ab9d98d0f512a6142ea5c7aead4520c7dd4 SHA1 0a79baaa7e809adc986fb795f0735fb7f483f1bc SHA256 57c0099476db51b5cc28a8af7a42690e6469c0fba4eaa3299ff9a96808713ecc
+MD5 72a68fd16e37242e65996da618774bf4 kdemultimedia-kfile-plugins-3.5.5.ebuild 684
+RMD160 e9573ab9d98d0f512a6142ea5c7aead4520c7dd4 kdemultimedia-kfile-plugins-3.5.5.ebuild 684
+SHA256 57c0099476db51b5cc28a8af7a42690e6469c0fba4eaa3299ff9a96808713ecc kdemultimedia-kfile-plugins-3.5.5.ebuild 684
+MISC ChangeLog 8379 RMD160 b4bb06e862575e53c0cb2301d5f1fa24fa2ada6a SHA1 a71f9830a6193844d8aa2d72e1b0d52fb871f04b SHA256 b8c6cbdc18c884d51ef73f95c4e9e06eec38a3f412b7ce5d1b4fb011b5bb4179
+MD5 59f0418f9fb5f92575e2f16af85771b3 ChangeLog 8379
+RMD160 b4bb06e862575e53c0cb2301d5f1fa24fa2ada6a ChangeLog 8379
+SHA256 b8c6cbdc18c884d51ef73f95c4e9e06eec38a3f412b7ce5d1b4fb011b5bb4179 ChangeLog 8379
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
@@ -44,7 +44,7 @@ SHA256 111420f825959311ddc64c7db1fd49d34f2e21b5cf5187fdba09feef59f83ddc files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFIjY7AiZjviIA2XgRAojcAJ9/fS60nOXkLftX+OcSWN8L1kZFQwCbB9qQ
-iXYxQSIlaQQVXpvIcLZAd30=
-=Kiox
+iD8DBQFFWHbfNQqtfCuFneMRApcJAJ9LHJKz/Tj6+pIImaTPRtkhvvZkywCdGWzR
+pcwksCrfz+7GND+EohGeEbc=
+=n7UE
 -----END PGP SIGNATURE-----
