@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/scapy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/ChangeLog,v 1.9 2006/09/24 10:12:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/ChangeLog,v 1.10 2006/11/13 16:57:55 lcars Exp $
+
+*scapy-1.0.5 (13 Nov 2006)
+
+  13 Nov 2006; Andrea Barisani <lcars@gentoo.org> +scapy-1.0.5.ebuild:
+  Version bump, fixes bug #139015.
 
   24 Sep 2006; <blubb@gentoo.org> scapy-1.0.4.ebuild:
   marked ~amd64
