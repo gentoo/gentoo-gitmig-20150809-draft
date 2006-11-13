@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce4-session
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.36 2006/07/20 07:35:01 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.37 2006/11/13 22:16:51 kloeri Exp $
+
+  13 Nov 2006; Bryan Østergaard <kloeri@gentoo.org>
+  xfce4-session-4.2.3.ebuild:
+  Stable on Alpha.
 
   20 Jul 2006; Daniel Ostrow <dostrow@gentoo.org>
   xfce4-session-4.3.90.1.ebuild, xfce4-session-4.3.90.2.ebuild:
