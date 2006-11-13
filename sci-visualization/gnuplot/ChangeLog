@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/gnuplot
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.6 2006/11/13 02:49:20 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.7 2006/11/13 02:55:13 dberkholz Exp $
+
+  13 Nov 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  gnuplot-4.2_rc1.ebuild:
+  First try at separating RDEPEND and DEPEND; add pkgconfig to DEPEND.
 
   13 Nov 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   gnuplot-4.2_rc1.ebuild:
