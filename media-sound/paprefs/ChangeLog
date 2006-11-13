@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/paprefs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/paprefs/ChangeLog,v 1.4 2006/10/13 23:27:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/paprefs/ChangeLog,v 1.5 2006/11/13 03:13:32 flameeyes Exp $
+
+  13 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> paprefs-0.9.5.ebuild:
+  Remove -*, might be misleading.
 
   13 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> paprefs-0.9.5.ebuild:
   Remove old version and add missing dependency over gnome-icon-theme.
