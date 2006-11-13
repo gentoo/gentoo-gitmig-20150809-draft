@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.262 2006/11/12 00:29:48 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.263 2006/11/13 20:58:41 vapier Exp $
 #
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
@@ -757,11 +757,7 @@ enewgroup() {
 #
 # edos2unix(file, <more files> ...)
 edos2unix() {
-	for f in "$@"
-	do
-		cp "${f}" ${T}/edos2unix
-		sed 's/\r$//' ${T}/edos2unix > "${f}"
-	done
+	echo "$@" | xargs sed -i 's/\r$//'
 }
 
 
