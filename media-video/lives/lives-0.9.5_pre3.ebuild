@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-0.9.5_pre3.ebuild,v 1.2 2006/05/28 16:10:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-0.9.5_pre3.ebuild,v 1.3 2006/11/13 15:24:20 flameeyes Exp $
 
 inherit flag-o-matic
 
@@ -20,7 +20,7 @@ SLOT="0"
 
 KEYWORDS="~x86 ~ppc ~amd64"
 
-IUSE="xmms matroska ogg theora libvisual"
+IUSE="matroska ogg theora libvisual"
 
 DEPEND=">=media-video/mplayer-0.90-r2
 		>=media-gfx/imagemagick-5.5.6
@@ -30,7 +30,6 @@ DEPEND=">=media-video/mplayer-0.90-r2
 		>=media-video/ffmpeg-0.4.8
 		>=media-libs/jpeg-6b-r3
 		>=media-sound/sox-12.17.3-r3
-		xmms? ( >=media-sound/xmms-1.2.7-r20 )
 		virtual/cdrtools
 		theora? ( media-libs/libtheora )
 		>=dev-lang/python-2.3.4
