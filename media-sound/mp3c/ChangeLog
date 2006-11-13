@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3c
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3c/ChangeLog,v 1.18 2006/11/13 13:24:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3c/ChangeLog,v 1.19 2006/11/13 15:48:56 josejx Exp $
+
+  13 Nov 2006; Joseph Jezak <josejx@gentoo.org> mp3c-0.29-r1.ebuild:
+  Marked ppc stable for bug #154365.
 
   13 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org> mp3c-0.29-r1.ebuild:
   Stable on sparc wrt #154365
