@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsutils/hfsutils-3.2.6-r5.ebuild,v 1.2 2006/09/19 02:11:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsutils/hfsutils-3.2.6-r5.ebuild,v 1.3 2006/11/13 09:09:19 josejx Exp $
 
 inherit eutils toolchain-funcs
 
@@ -26,10 +26,15 @@ src_unpack() {
 
 src_compile() {
 	tc-export CC CPP LD RANLIB
-	econf \
-		$(use_with tcl) \
-		$(use_with tk) \
-		|| die
+	### use tk implies --with-tcl - bug #150437
+	if use tk; then
+		econf --with-tcl --with-tk || die
+	else
+		econf \
+			$(use_with tcl) \
+			$(use_with tk) \
+			|| die
+	fi
 	emake PREFIX=/usr MANDIR=/usr/share/man || die
 	emake -C hfsck PREFIX=/usr MANDIR=/usr/share/man || die
 }
