@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-0.20.ebuild,v 1.1 2006/11/10 18:38:53 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-0.20.ebuild,v 1.2 2006/11/13 21:41:23 peper Exp $
 
 inherit multilib
 
@@ -33,17 +33,14 @@ src_compile() {
 		--enable-engine \
 		--enable-tools \
 		$(use_enable python) \
-		# Tests are broken in 0.20
-		#$(use_enable test unit-tests)
 		$(use_enable debug) \
-		$(use_enable debug tracing)
+		$(use_enable debug tracing) \
+		|| die "econf failed"
+		#$(use_enable test unit-tests)
 
 	emake || die "emake failed"
 
-	# Create API docs if needed and possible
-	if use doc; then
-		doxygen Doxyfile
-	fi
+	use doc && doxygen Doxyfile
 }
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
