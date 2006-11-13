@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/xmlada-1.0-r4.ebuild,v 1.3 2006/06/12 15:17:58 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/xmlada-1.0-r4.ebuild,v 1.4 2006/11/13 17:12:22 george Exp $
 
 inherit gnat versionator
 
@@ -95,13 +95,4 @@ src_install ()
 	cd ${D}/usr/share/info
 	mv xml.info.gz ${PN}.info.gz
 
-}
-
-pkg_postinst() {
-	eselect gnat update
-	einfo "The environment has been set up to make gnat automatically find files for"
-	einfo "XmlAda. In order to immediately activate these settings please do:"
-	einfo "env-update"
-	einfo "source /etc/profile"
-	einfo "Otherwise the settings will become active next time you login"
 }
