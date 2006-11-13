@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/helpblocks
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/helpblocks/ChangeLog,v 1.1 2006/08/18 13:58:01 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/helpblocks/ChangeLog,v 1.2 2006/11/13 09:41:42 mrness Exp $
+
+*helpblocks-1.19 (13 Nov 2006)
+
+  13 Nov 2006; Alin Nastac <mrness@gentoo.org> +helpblocks-1.19.ebuild:
+  Version bump. Add ~amd64 keyword.
 
 *helpblocks-1.18 (18 Aug 2006)
 

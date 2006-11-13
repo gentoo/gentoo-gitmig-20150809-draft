@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/dialogblocks
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/ChangeLog,v 1.1 2006/08/18 13:35:54 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/ChangeLog,v 1.2 2006/11/13 09:37:21 mrness Exp $
+
+*dialogblocks-3.12 (13 Nov 2006)
+
+  13 Nov 2006; Alin Nastac <mrness@gentoo.org> +dialogblocks-3.12.ebuild:
+  Version bump. Add ~amd64 keyword.
 
 *dialogblocks-3.06 (18 Aug 2006)
 
