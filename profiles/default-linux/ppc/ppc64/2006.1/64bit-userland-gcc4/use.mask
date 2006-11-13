@@ -1,0 +1,78 @@
+# this is a list of USE flags
+# that should not be used on PPC64
+# Tom Gall <tgall@gentoo.org> manages this list
+directfb
+krb4
+
+pda
+prelude
+mzscheme
+chasen
+mono
+beagle
+rar
+multilib
+
+# dietlibc
+diet
+
+#pyste has untested/unkeyworded deps on ppc64
+pyste
+
+# we don't have hardware to test. also see bug #113398
+dvb
+
+# mask mozilla/firefox (bug #108020)
+mozilla
+firefox
+seamonkey
+
+# 2006/03/20 - Donnie Berkholz <dberkholz@gentoo.org>
+# Modular X: mask for architectures on which they aren't available
+video_cards_apm
+video_cards_ark
+video_cards_chips
+video_cards_cirrus
+video_cards_cyrix
+video_cards_glint
+video_cards_i128
+video_cards_i740
+video_cards_i810
+video_cards_imstt
+video_cards_neomagic
+video_cards_newport
+video_cards_nsc
+video_cards_rendition
+video_cards_s3
+video_cards_s3virge
+video_cards_savage
+video_cards_siliconmotion
+video_cards_sis
+video_cards_tdfx
+video_cards_tga
+video_cards_trident
+video_cards_tseng
+video_cards_vesa
+video_cards_vga
+video_cards_via
+video_cards_voodoo
+
+#until netbeans is keyworded
+netbeans
+
+#build is busted
+pike
+
+# mask pcmcia (bug #131306)
+pcmcia
+
+# 20 Sep 2006 Doug Goldstein <cardoe@gentoo.org>
+# # Someone tagged MythTV as ~ppc64 but media-tv/ivtv does not
+# # work on ppc64 so I'm masking it's USE flag.
+ivtv
+
+# conky dependencies missing keywords related (dragonheart -20061112)
+# media-sound/mpd
+mpd
+# app-admin/hddtemp
+hddtemp
