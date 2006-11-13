@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/nspluginwrapper-0.9.90.3.ebuild,v 1.4 2006/10/23 17:47:08 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/nspluginwrapper-0.9.90.3.ebuild,v 1.5 2006/11/13 15:29:21 chutzpah Exp $
 
 inherit nsplugins flag-o-matic multilib
 
@@ -18,8 +18,7 @@ RDEPEND=">=x11-libs/gtk+-2
 	app-emulation/emul-linux-x86-gtklibs
 	sys-apps/setarch"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	!app-admin/eselect-compiler"
+	dev-util/pkgconfig"
 
 TARGET_CPU="i386"
 TARGET_ABI="x86"
@@ -88,7 +87,7 @@ pkg_prerm() {
 }
 
 pkg_postrm() {
-	if has_version "${CATEGORY}/${PN}"; then
+	if [[ -x /usr/bin/nspluginwrapper ]]; then
 		einfo "Auto installing 32bit plugins"
 		nspluginwrapper -v -a -i
 	fi
