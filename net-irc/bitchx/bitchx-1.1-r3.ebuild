@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.1-r3.ebuild,v 1.9 2006/11/07 14:32:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.1-r3.ebuild,v 1.10 2006/11/13 14:55:14 flameeyes Exp $
 
 inherit flag-o-matic eutils
 
@@ -13,12 +13,11 @@ SRC_URI="http://www.bitchx.org/files/source/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ppc sh sparc x86"
-IUSE="cdrom cjk esd gnome gtk ipv6 ncurses ssl xmms"
+IUSE="cdrom cjk esd gnome gtk ipv6 ncurses ssl"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	ncurses? ( sys-libs/ncurses )
-	xmms? ( media-sound/xmms )
 	esd? (
 		>=media-sound/esound-0.2.5
 		>=media-libs/audiofile-0.1.5
