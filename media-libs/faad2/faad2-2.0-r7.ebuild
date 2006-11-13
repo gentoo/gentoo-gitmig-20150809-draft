@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0-r7.ebuild,v 1.10 2006/11/04 11:24:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0-r7.ebuild,v 1.11 2006/11/13 15:33:36 flameeyes Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -11,11 +11,9 @@ SRC_URI="mirror://sourceforge/faac/${PN}-${PV/_/-}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha ~amd64 arm ~hppa ia64 ~mips ppc ppc64 ~sparc ~x86"
-IUSE="xmms"
+IUSE=""
 
-RDEPEND="xmms? ( >=media-sound/xmms-1.2.7
-		media-libs/id3lib )
-	!media-video/mpeg4ip"
+RDEPEND="!media-video/mpeg4ip"
 
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4.0.7
@@ -37,9 +35,6 @@ src_unpack() {
 
 	cd ${S}/common/mp4v2
 	epatch ${FILESDIR}/mp4atom-sliver.patch
-
-	cd ${S}/plugins/xmms/src
-	epatch ${FILESDIR}/${P}-noext.patch
 
 	cd ${S}
 	epatch ${FILESDIR}/${P}-amd64.patch
@@ -64,10 +59,9 @@ src_compile() {
 	econf \
 		--with-mp4v2 \
 		--with-drm \
-		`use_with xmms` \
+		--without-xmms \
 		|| die
 
-	# emake causes xmms plugin building to fail
 	emake || die
 
 }

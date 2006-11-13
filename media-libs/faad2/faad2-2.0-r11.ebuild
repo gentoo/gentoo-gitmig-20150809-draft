@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0-r11.ebuild,v 1.14 2006/11/12 03:31:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0-r11.ebuild,v 1.15 2006/11/13 15:33:36 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -17,11 +17,9 @@ SRC_URI="mirror://sourceforge/faac/${PN}-${PV/_/-}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
-IUSE="xmms"
+IUSE=""
 
-RDEPEND="xmms? ( >=media-sound/xmms-1.2.7
-		media-libs/id3lib )
-	media-libs/libmp4v2"
+RDEPEND="media-libs/libmp4v2"
 
 DEPEND="${RDEPEND}"
 
@@ -43,7 +41,8 @@ src_compile() {
 	# drm needed for nothing but doesn't hurt
 	econf \
 		--with-drm \
-		$(use_with xmms) \
+		--without-xmms \
+		|| die "econf failed"
 
 	emake || die
 }
