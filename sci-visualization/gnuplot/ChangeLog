@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/gnuplot
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.5 2006/10/10 21:48:15 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.6 2006/11/13 02:49:20 dberkholz Exp $
+
+  13 Nov 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  gnuplot-4.2_rc1.ebuild:
+  (#154673) Properly support wxGTK rather than autodetecting it.
 
 *gnuplot-4.2_rc1 (10 Oct 2006)
 
