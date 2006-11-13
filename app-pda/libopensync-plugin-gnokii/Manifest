@@ -1,0 +1,26 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST libopensync-plugin-gnokii-0.20.tar.gz 333173 RMD160 3dcb2501bc0ab3875dbaee9e794cdd21ccb487a5 SHA1 2c038e4b6211bc07a4dc2ab6f621807b29519d83 SHA256 9ab58a2fcf4be18a59cc778955f04bd0563dd7154770bd2e206ea6c378a5f7f4
+EBUILD libopensync-plugin-gnokii-0.20.ebuild 658 RMD160 079a996f1083689ae490eb413a27a70d544c787e SHA1 7367a00ab2a54363001fa9379a99f5b5c2fe1f7b SHA256 625aa1416b435de56e5cc4ea6c405b25e61fcc58ef35fea24ebbdc4dd484f1ac
+MD5 7d5016e772115b686371549481af7768 libopensync-plugin-gnokii-0.20.ebuild 658
+RMD160 079a996f1083689ae490eb413a27a70d544c787e libopensync-plugin-gnokii-0.20.ebuild 658
+SHA256 625aa1416b435de56e5cc4ea6c405b25e61fcc58ef35fea24ebbdc4dd484f1ac libopensync-plugin-gnokii-0.20.ebuild 658
+MISC ChangeLog 411 RMD160 92c221cbefd57a4eccd62435f91974aee6b9ba12 SHA1 2f2a14f02b351b260a31f978fb1352436111acdd SHA256 579b9878cd1d922e100c30de1a7f3f0d53df71932b90eee95ef0e2d5b9a3b3ad
+MD5 8e36c91ee952cf54ef7873adab60295a ChangeLog 411
+RMD160 92c221cbefd57a4eccd62435f91974aee6b9ba12 ChangeLog 411
+SHA256 579b9878cd1d922e100c30de1a7f3f0d53df71932b90eee95ef0e2d5b9a3b3ad ChangeLog 411
+MISC metadata.xml 304 RMD160 1da32fded95735800bc96b0ff4c0a3af4691a724 SHA1 b96c72c417192c099990a616b12a1d2f55a06064 SHA256 7fa8df0f64197f3f6c018ed0d6c4cc4da014fbcc9af2da9b633f71657470236a
+MD5 45ae331a9c100ecabad1b4cd916f3d37 metadata.xml 304
+RMD160 1da32fded95735800bc96b0ff4c0a3af4691a724 metadata.xml 304
+SHA256 7fa8df0f64197f3f6c018ed0d6c4cc4da014fbcc9af2da9b633f71657470236a metadata.xml 304
+MD5 79162426028e96074eb735d5d6c07252 files/digest-libopensync-plugin-gnokii-0.20 292
+RMD160 2f80c6ec1ce0d263ca8fa4fdbb8ac5d5fd985f47 files/digest-libopensync-plugin-gnokii-0.20 292
+SHA256 d09713ef18ad98a62b44eeb27c131a3dcb0e3cf9152ff8816aa63a54dbfc3867 files/digest-libopensync-plugin-gnokii-0.20 292
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFWNdFppoStNGKGywRAq1sAJ9jD3N82cmNMzxBHZFKWNXMl3TKIACgrMVn
+i2exfSFrXbIl97rrhUeegOk=
+=Uc7K
+-----END PGP SIGNATURE-----
