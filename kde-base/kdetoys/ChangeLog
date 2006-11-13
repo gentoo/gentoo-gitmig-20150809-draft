@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdetoys
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.158 2006/10/03 14:30:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.159 2006/11/13 11:08:08 opfer Exp $
+
+  13 Nov 2006; Christian Faulhammer <opfer@gentoo.org> kdetoys-3.5.5.ebuild:
+  "Stable x86, bug #147570"
 
 *kdetoys-3.5.5 (03 Oct 2006)
 
