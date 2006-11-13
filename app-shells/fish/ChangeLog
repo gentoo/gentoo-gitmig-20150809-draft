@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/fish
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.24 2006/09/24 06:00:27 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.25 2006/11/13 04:36:55 dberkholz Exp $
+
+*fish-1.22.1 (13 Nov 2006)
+
+  13 Nov 2006; Donnie Berkholz <dberkholz@gentoo.org>; +fish-1.22.1.ebuild:
+  Bump.
 
 *fish-1.21.12 (24 Sep 2006)
 
