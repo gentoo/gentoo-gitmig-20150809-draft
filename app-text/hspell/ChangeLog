@@ -1,6 +1,9 @@
 # ChangeLog for app-text/hspell
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/ChangeLog,v 1.24 2006/11/05 18:01:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/ChangeLog,v 1.25 2006/11/13 08:26:56 opfer Exp $
+
+  13 Nov 2006; Christian Faulhammer <opfer@gentoo.org> hspell-1.0.ebuild:
+  stable x86, for KDE 3.5.5, see bug #147570
 
   05 Nov 2006; Jeroen Roovers <jer@gentoo.org> hspell-1.0-r1.ebuild:
   Marked ~hppa (bug #152274).
