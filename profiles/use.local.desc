@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2330 2006/11/13 18:29:12 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2331 2006/11/13 19:46:57 twp Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -891,6 +891,8 @@ media-sound/rhythmbox:daap - support for daap
 media-sound/rhythmbox:ipod - support for ipod devices via libgpod
 media-sound/rhythmbox:musicbrainz - support for muzicbrains
 media-sound/rhythmbox:tagwriting - support for tag wriring in certian audio files
+media-sound/slismerver:alac - Enable support for alac
+media-sound/slismerver:musepack - Enable support for musepack audio codec
 media-sound/snd:gsl - Use the GNU scientific library for calculations
 media-sound/timidity++:ao - Use libao for sound playback
 media-sound/zinf:corba - Enables corba interface support
