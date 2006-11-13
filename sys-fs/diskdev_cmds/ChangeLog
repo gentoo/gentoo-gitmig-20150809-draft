@@ -1,0 +1,10 @@
+# ChangeLog for sys-fs/diskdev_cmds
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/diskdev_cmds/ChangeLog,v 1.1 2006/11/13 04:20:31 josejx Exp $
+
+*diskdev_cmds-332.14 (13 Nov 2006)
+
+  13 Nov 2006; Joseph Jezak <josejx@gentoo.org> +metadata.xml,
+  +diskdev_cmds-332.14.ebuild:
+  Initial commit, fixes bug #46342!
+
