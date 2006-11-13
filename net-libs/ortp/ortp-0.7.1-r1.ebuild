@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ortp-0.7.1-r1.ebuild,v 1.7 2006/10/30 23:55:12 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ortp-0.7.1-r1.ebuild,v 1.8 2006/11/13 13:56:18 opfer Exp $
 
 DESCRIPTION="Open Real-time Transport Protocol (RTP) stack"
 HOMEPAGE="http://www.linphone.org/index.php/v2/code_review/ortp/"
@@ -9,7 +9,7 @@ SRC_URI="http://www.linphone.org/ortp/sources/${P}.tar.gz"
 IUSE="ipv6"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 
 DEPEND="=dev-libs/glib-2*
 		>=dev-util/pkgconfig-0.9.0"

@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ortp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.14 2006/10/30 23:55:12 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.15 2006/11/13 13:56:18 opfer Exp $
+
+  13 Nov 2006; Christian Faulhammer <opfer@gentoo.org> ortp-0.7.1-r1.ebuild:
+  stable x86 for KDE 3.5.5, see bug #147570
 
   30 Oct 2006; Piotr Jaroszyński <peper@gentoo.org> ortp-0.7.1-r1.ebuild,
   ortp-0.11.0.ebuild:
