@@ -1,6 +1,10 @@
 # ChangeLog for app-text/convmv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/convmv/ChangeLog,v 1.24 2006/11/13 19:09:49 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/convmv/ChangeLog,v 1.25 2006/11/13 20:55:18 grobian Exp $
+
+  13 Nov 2006; Fabian Groffen <grobian@gentoo.org> convmv-1.08.ebuild,
+  convmv-1.09.ebuild, convmv-1.10.ebuild:
+  Dropped ppc-macos keyword, see you in prefix.
 
   13 Nov 2006; Andrej Kacian <ticho@gentoo.org> convmv-1.10.ebuild:
   Stable on x86, bug #154981.
