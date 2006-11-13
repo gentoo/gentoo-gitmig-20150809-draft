@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/teknap
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/teknap/ChangeLog,v 1.12 2004/09/18 17:47:46 weeve Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/teknap/ChangeLog,v 1.13 2006/11/13 14:55:42 flameeyes Exp $
+
+  13 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> teknap-1.4.1-r1.ebuild:
+  Remove xmms useflag.
 
   18 Sep 2004; Jason Wever <weeve@gentoo.org> teknap-1.4.1-r1.ebuild:
   Added ~sparc keyword, resolves bug #62294.
