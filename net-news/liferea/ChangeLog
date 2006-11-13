@@ -1,6 +1,13 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.65 2006/11/13 18:14:07 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.66 2006/11/13 18:58:42 dang Exp $
+
+*liferea-1.2_rc1-r1 (13 Nov 2006)
+
+  13 Nov 2006; Daniel Gryniewicz <dang@gentoo.org> -liferea-1.1.7.ebuild,
+  +liferea-1.2_rc1-r1.ebuild:
+  Drop old version; add xulrunner support; temporarily drop ppc, ppc64, and
+  sparc until xulrunner can be worked out (bug #155053)
 
   13 Nov 2006; Daniel Gryniewicz <dang@gentoo.org> liferea-1.1.9-r1.ebuild,
   liferea-1.2_rc1.ebuild:
