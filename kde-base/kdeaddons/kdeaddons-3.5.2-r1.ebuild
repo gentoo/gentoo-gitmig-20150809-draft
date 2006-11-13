@@ -1,20 +1,19 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.5.2-r1.ebuild,v 1.11 2006/09/10 00:16:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.5.2-r1.ebuild,v 1.12 2006/11/13 15:37:11 flameeyes Exp $
 
 inherit kde-dist
 
 DESCRIPTION="KDE addon modules: plugins for konqueror, noatun etc."
 
 KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86"
-IUSE="arts berkdb sdl xmms"
+IUSE="arts berkdb sdl"
 
 DEPEND="~kde-base/kdepim-${PV}
 	~kde-base/kdemultimedia-${PV}
 	~kde-base/kdegames-${PV}
 	arts? ( ~kde-base/arts-${PV} )
 	sdl? ( >=media-libs/libsdl-1.2 )
-	xmms? ( media-sound/xmms )
 	berkdb? ( || ( =sys-libs/db-4.3*
 	               =sys-libs/db-4.2* ) )
 	!kde-misc/metabar"
@@ -22,7 +21,7 @@ DEPEND="~kde-base/kdepim-${PV}
 PATCHES="${FILESDIR}/konq-plugins-3.5.2-arkplugin-crash-fix.diff"
 
 src_compile() {
-	local myconf="$(use_with sdl) $(use_with xmms)"
+	local myconf="$(use_with sdl) --without-xmms"
 
 	if use berkdb; then
 		if has_version "=sys-libs/db-4.3*"; then
