@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kuiviewer
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.40 2006/10/03 12:36:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.41 2006/11/13 10:42:24 opfer Exp $
+
+  13 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  kuiviewer-3.5.5.ebuild:
+  "Stable x86, bug #147570"
 
 *kuiviewer-3.5.5 (03 Oct 2006)
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kde-i18n
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.112 2006/11/07 23:54:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.113 2006/11/13 10:47:37 opfer Exp $
+
+  13 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  kde-i18n-3.5.5.ebuild:
+  "Stable x86, bug #147570"
 
   07 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   kde-i18n-3.5.2-r1.ebuild, kde-i18n-3.5.3.ebuild, kde-i18n-3.5.4.ebuild,
