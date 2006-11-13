@@ -1,0 +1,15 @@
+--- SlimServer_v6.5.0/Slim/bootstrap.pm	2006-09-19 10:09:13.000000000 +0200
++++ SlimServer/Slim/bootstrap.pm	2006-11-13 20:38:53.000000000 +0100
+@@ -171,7 +171,11 @@
+ 
+ 		print "The following modules failed to load: $failed\n\n";
+ 
+-		print "To download and compile them, please run: $libPath/Bin/build-perl-modules.pl $failed\n\n";
++		my @gentoo_required_really_failed = map { s/::/-/g; "dev-perl/$_" } @required_really_failed;
++		my $gentoo_failed = join(' ', @gentoo_required_really_failed);
++		$gentoo_failed =~ s/dev-perl\/XML-Parser-Expat/dev-perl\/XML-Parser/;
++		$gentoo_failed =~ s/dev-perl\/Time-HiRes/perl-core\/Time-HiRes/;
++		print "To download and compile them, please run: emerge $gentoo_failed\n\n";
+ 		print "Exiting..\n";
+ 
+ 		exit;
