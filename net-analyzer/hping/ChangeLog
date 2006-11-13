@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/hping
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.37 2005/08/25 01:55:23 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.38 2006/11/13 23:11:41 jokey Exp $
+
+*hping-3_pre20051105 (13 Nov 2006)
+
+  13 Nov 2006; Markus Ullmann <jokey@gentoo.org>
+  +files/hping-3_pre20051105.patch, metadata.xml,
+  +hping-3_pre20051105.ebuild:
+  Version bump thanks to Robert Buchholz
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org> files/bytesex.h.patch,
   hping-2.0.0_rc3-r1.ebuild:
