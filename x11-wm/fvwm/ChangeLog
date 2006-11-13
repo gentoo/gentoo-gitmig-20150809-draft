@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.124 2006/11/05 03:39:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.125 2006/11/13 22:12:39 taviso Exp $
+
+*fvwm-2.5.18-r1 (13 Nov 2006)
+
+  13 Nov 2006; Tavis Ormandy <taviso@gentoo.org>
+  +files/fvwm-menu-directory-security.diff, +fvwm-2.5.18-r1.ebuild:
+  add security patch to fvwm-menu-directory from debian
+  http://article.gmane.org/gmane.comp.window-managers.fvwm.devel/2419
 
   05 Nov 2006; Brent Baude <ranger@gentoo.org> fvwm-2.5.18.ebuild:
   marking fvwm-2.5.18 ppc64 stable for bug 152758
