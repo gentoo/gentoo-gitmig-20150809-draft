@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/beecrypt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.38 2006/10/24 20:40:11 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.39 2006/11/13 19:04:04 sanchan Exp $
+
+  13 Nov 2006; Sandro Bonazzola <sanchan@gentoo.org> metadata.xml,
+  beecrypt-4.1.2-r1.ebuild:
+  Adding missing dependencies on virtual/jdk and virtual/jre. Inheriting
+  java-pkg-opt-2 fixing bug# 153750. Thanks to Petteri Räty for his help and
+  Sawk for reporting.
 
   24 Oct 2006; Alon Bar-Lev <alonbl@gentoo.org>
   files/beecrypt-4.1.2-build.patch:
