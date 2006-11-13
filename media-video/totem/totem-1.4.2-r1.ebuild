@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.4.2-r1.ebuild,v 1.11 2006/10/20 17:59:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.4.2-r1.ebuild,v 1.12 2006/11/13 05:31:00 vapier Exp $
 
 inherit autotools eutils multilib gnome2
 
@@ -9,12 +9,12 @@ HOMEPAGE="http://gnome.org/projects/totem/"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ~ppc64 sh sparc x86"
 
 # pitdfall has not come out with a 0.10 release, should be soon though -AJL
 #IUSE="a52 dbus dvd flac gnome lirc mad mpeg nsplugin nvtv ogg theora vorbis win32codecs xine xv"
 
-IUSE="a52 dbus dvd firefox flac gnome lirc mad mpeg nsplugin nvtv ogg theora vorbis xine xv"
+IUSE="a52 dbus dvd ffmpeg firefox flac gnome lirc mad mpeg nsplugin nvtv ogg theora vorbis xine xv"
 
 RDEPEND=">=dev-libs/glib-2.6.3
 	>=x11-libs/gtk+-2.6
@@ -52,7 +52,7 @@ RDEPEND=">=dev-libs/glib-2.6.3
 				>=media-libs/gst-plugins-good-0.10
 				>=media-plugins/gst-plugins-pango-0.10
 				>=media-plugins/gst-plugins-gconf-0.10
-				!sparc? ( >=media-plugins/gst-plugins-ffmpeg-0.10 )
+				!sparc? ( ffmpeg? ( >=media-plugins/gst-plugins-ffmpeg-0.10 ) )
 				>=media-plugins/gst-plugins-gnomevfs-0.10
 				a52? ( >=media-plugins/gst-plugins-a52dec-0.10 )
 				!sparc?	(
