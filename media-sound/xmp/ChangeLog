@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/xmp
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmp/ChangeLog,v 1.10 2005/09/10 15:50:36 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmp/ChangeLog,v 1.11 2006/11/13 15:23:07 flameeyes Exp $
+
+  13 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  xmp-2.0.5_pre3-r1.ebuild:
+  Remove xmms useflag.
 
   10 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   xmp-2.0.5_pre3-r1.ebuild:

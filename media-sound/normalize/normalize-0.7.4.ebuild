@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/normalize-0.7.4.ebuild,v 1.12 2005/02/05 10:56:45 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/normalize-0.7.4.ebuild,v 1.13 2006/11/13 15:19:05 flameeyes Exp $
 
-IUSE="xmms"
+IUSE=""
 
 DESCRIPTION="Audio file volume normalizer"
 HOMEPAGE="http://www.cs.columbia.edu/~cvaill/normalize"
@@ -12,8 +12,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 
-RDEPEND="xmms? ( >=media-sound/xmms-1.2.7-r6 )
-	>=media-libs/audiofile-0.2.3-r1
+RDEPEND=">=media-libs/audiofile-0.2.3-r1
 	>=media-sound/madplay-0.14.2b-r1"
 
 # NOTE: the "audiofile" and "mad" dependencies are NOT

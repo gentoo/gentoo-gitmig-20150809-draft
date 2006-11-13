@@ -1,21 +1,19 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/waif-0.59.7.ebuild,v 1.15 2005/05/28 17:37:23 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/waif-0.59.7.ebuild,v 1.16 2006/11/13 15:21:07 flameeyes Exp $
 
 inherit eutils
 
 S=${WORKDIR}/${PN}
-S2=${WORKDIR}/wfxmms
 
 DESCRIPTION="Why Another Infernal Frontend -- console front end for various media-players"
 HOMEPAGE="http://eds.org/~straycat/waif.html"
-SRC_URI="http://www.eds.org/~straycat/${P}.tar.gz
-	xmms? ( http://www.eds.org/~straycat/wfxmms-0.6.tgz )"
+SRC_URI="http://www.eds.org/~straycat/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~ppc x86 sparc amd64"
-IUSE="xmms ogg"
+IUSE="ogg"
 
 DEPEND="dev-lang/tcl
 	dev-tcltk/expect"
@@ -26,18 +24,11 @@ RDEPEND="dev-tcltk/expect
 	media-libs/id3lib
 	media-sound/id3v2
 	media-sound/id3ed
-	xmms? ( media-sound/xmms )
 	ogg? ( media-sound/vorbis-tools )"
 
 src_compile() {
 	cd Waif
 	./mkindex.sh || die
-
-	if use xmms
-	then
-		cd ${S2}
-		make || die
-	fi
 }
 
 src_install() {
@@ -55,14 +46,4 @@ src_install() {
 	dodoc CHANGES FAQ INSTALL README* TODO WHATSNEW
 	docinto Documentation
 	dodoc Documentation/*
-
-	if use xmms
-	then
-		cd ${S2}
-		into /usr
-		dobin wfxmms
-
-		docinto wfxmms
-		dodoc BUGS CHANGES README
-	fi
 }

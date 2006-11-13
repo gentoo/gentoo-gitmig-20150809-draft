@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmp/xmp-2.0.5_pre3-r1.ebuild,v 1.7 2005/09/10 15:50:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmp/xmp-2.0.5_pre3-r1.ebuild,v 1.8 2006/11/13 15:23:07 flameeyes Exp $
 
-IUSE="xmms arts esd nas X oss"
+IUSE="arts esd nas X oss"
 
 inherit eutils
 
@@ -21,8 +21,7 @@ KEYWORDS="-amd64 x86 -sparc"
 DEPEND="X? ( virtual/x11 )
 	esd? ( media-sound/esound )
 	nas? ( media-libs/nas )
-	arts? ( kde-base/arts )
-	xmms? ( media-sound/xmms )"
+	arts? ( kde-base/arts )"
 
 #	Nobody uses alsa5, but if they do, they can hand edit this...
 #	alsa? ( =media-libs/alsa-lib-0.5* )
@@ -56,9 +55,7 @@ src_compile() {
 		&& myconf="${myconf} --enable-oss" \
 		|| myconf="${myconf} --disable-oss"
 
-	use xmms \
-		&& myconf="${myconf} --enable-xmms" \
-		|| myconf="${myconf} --disable-xmms"
+	myconf="${myconf} --disable-xmms"
 
 	use X \
 		&& myconf="${myconf} --with-x" \
