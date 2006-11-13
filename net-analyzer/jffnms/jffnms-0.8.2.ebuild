@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jffnms/jffnms-0.8.2.ebuild,v 1.2 2006/10/08 23:02:06 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jffnms/jffnms-0.8.2.ebuild,v 1.3 2006/11/13 23:04:11 jokey Exp $
 
 inherit eutils
 
@@ -50,12 +50,20 @@ pkg_setup() {
 }
 
 src_install(){
-	MY_DESTDIR="${D}opt/jffnms"
+	INSTALL_DIR="/opt/${PN}"
+	IMAGE_DIR="${D}${INSTALL_DIR}"
 
-	dodir "${MY_DESTDIR}"
-	cp -r * "${MY_DESTDIR}" || die
-	chown -R jffnms:apache "${MY_DESTDIR}" || die
-	chmod -R ug+rw "${MY_DESTDIR}" || die
+	dodir "${INSTALL_DIR}"
+	cp -r * "${IMAGE_DIR}" || die
+	rm -f "${IMAGE_DIR}/LICENSE"
+
+	# Clean up windows related stuff
+	rm -f "${IMAGE_DIR}/*.win32.txt"
+	rm -rf "${IMAGE_DIR}/docs/windows"
+	rm -rf "${IMAGE_DIR}/engine/windows"
+
+	chown -R jffnms:apache "${IMAGE_DIR}" || die
+	chmod -R ug+rw "${IMAGE_DIR}" || die
 
 	einfo "JFFNMS has been partialy installed on your system. However you"
 	einfo "still need proceed with final installation and configuration."
