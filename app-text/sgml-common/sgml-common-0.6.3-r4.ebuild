@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r4.ebuild,v 1.33 2006/10/30 13:55:24 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r4.ebuild,v 1.34 2006/11/14 10:22:13 leonardop Exp $
 
+WANT_AUTOCONF="2.1"
 WANT_AUTOMAKE="1.5"
+
 inherit autotools
 
 DESCRIPTION="Base ISO character entities and utilities for SGML"
