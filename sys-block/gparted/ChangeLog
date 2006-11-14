@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/gparted
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.30 2006/09/26 13:28:06 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.31 2006/11/14 21:50:37 ticho Exp $
+
+  14 Nov 2006; Andrej Kacian <ticho@gentoo.org> gparted-0.3.1.ebuild:
+  Stable on x86, bug #155079.
 
   26 Sep 2006; Simon Stelling <blubb@gentoo.org>
   +files/gparted-0.3.1-llabs.patch, gparted-0.3.1.ebuild:
