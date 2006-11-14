@@ -1,6 +1,16 @@
 # ChangeLog for app-text/ptex
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.60 2006/10/23 12:03:36 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.61 2006/11/14 17:36:42 usata Exp $
+
+*ptex-3.1.10_beta3 (14 Nov 2006)
+
+  14 Nov 2006; Mamoru KOMACHI <usata@gentoo.org> files/20texmf-cmap.cnf,
+  +files/ptex-xdvi-vfontmap-ja-ipafonts,
+  +files/ptex-xdvi-vfontmap-kochi-substitute, ptex-3.1.5-r1.ebuild,
+  ptex-3.1.5-r2.ebuild, -ptex-3.1.8.1.ebuild, ptex-3.1.8.1_p20050418.ebuild,
+  +ptex-3.1.10_beta3.ebuild:
+  Updated not to block app-text/tetex. Added explicit blocks to app-text/tetex
+  to old versions. Added several dirs to CMap search path. Removed old ebuild.
 
   23 Oct 2006; Mamoru KOMACHI <usata@gentoo.org> +files/xdvi-xorg-7.0.patch,
   ptex-3.1.5-r2.ebuild, ptex-3.1.8.1_p20050418.ebuild:

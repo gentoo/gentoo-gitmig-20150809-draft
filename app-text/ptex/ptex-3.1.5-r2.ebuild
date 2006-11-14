@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.5-r2.ebuild,v 1.2 2006/10/23 12:03:36 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.5-r2.ebuild,v 1.3 2006/11/14 17:36:42 usata Exp $
 
 PTEX_TEXMF_PV=2.3
 TETEX_PV=2.0.2
@@ -26,7 +26,8 @@ IUSE="X"
 
 DEPEND="X? ( >=media-libs/freetype-2
 	>=media-fonts/kochi-substitute-20030809-r3 )
-	!app-text/xdvik"
+	!app-text/xdvik
+	!app-text/tetex"
 
 src_unpack() {
 	unpack ${PTETEX}.tar.gz

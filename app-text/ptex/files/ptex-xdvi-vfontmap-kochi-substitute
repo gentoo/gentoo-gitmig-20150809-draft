@@ -1,0 +1,126 @@
+%
+% Sample "vfontmap"
+%
+
+% [single style]
+% "tfm" "enc" "font"
+
+% [multi style]
+% "/font/file/name"
+%    "tfm1" "enc"
+%    "tfm2" "enc"
+
+% "enc" is one of following.
+% "JIS-H" "Unicode-H" "Identity-H"
+% "JIS-V" "Unicode-V" "Identity-V"
+
+
+%/usr/local/share/texmf/dvipdfm/CIDFont/HiraMinPro-W3.otf
+%/usr/X11R6/lib/X11/fonts/truetype/kochi-mincho-subst.ttf
+%/usr/X11R6/lib/X11/fonts/TrueType/kochi-mincho.ttf
+/usr/share/fonts/kochi-substitute/kochi-mincho-subst.ttf
+	rml  JIS-H
+	rmlv JIS-V
+%/usr/local/share/texmf/dvipdfm/CIDFont/HiraKakuPro-W6.otf
+%/usr/X11R6/lib/X11/fonts/truetype/kochi-gothic-subst.ttf
+%/usr/X11R6/lib/X11/fonts/TrueType/kochi-gothic.ttf
+/usr/share/fonts/kochi-substitute/kochi-gothic-subst.ttf
+	gbm  JIS-H
+	gbmv JIS-V
+
+min     JIS-H /usr/share/fonts/kochi-substitute/kochi-mincho-subst.ttf
+nmin    JIS-H /usr/share/fonts/kochi-substitute/kochi-mincho-subst.ttf
+goth    JIS-H /usr/share/fonts/kochi-substitute/kochi-gothic-subst.ttf
+tmin    JIS-H /usr/share/fonts/kochi-substitute/kochi-mincho-subst.ttf
+tgoth   JIS-H /usr/share/fonts/kochi-substitute/kochi-gothic-subst.ttf
+ngoth   JIS-H /usr/share/fonts/kochi-substitute/kochi-gothic-subst.ttf
+jis     JIS-H /usr/share/fonts/kochi-substitute/kochi-mincho-subst.ttf
+jisg    JIS-H /usr/share/fonts/kochi-substitute/kochi-gothic-subst.ttf
+dm      JIS-H /usr/share/fonts/kochi-substitute/kochi-mincho-subst.ttf
+dg      JIS-H /usr/share/fonts/kochi-substitute/kochi-gothic-subst.ttf
+mgoth   JIS-H /usr/share/fonts/kochi-substitute/kochi-gothic-subst.ttf
+fmin    JIS-H /usr/share/fonts/kochi-substitute/kochi-mincho-subst.ttf
+fgoth   JIS-H /usr/share/fonts/kochi-substitute/kochi-gothic-subst.ttf
+maru	JIS-H /usr/share/fonts/kochi-substitute/kochi-gothic-subst.ttf
+
+% UTF package
+/usr/local/share/texmf/dvipdfm/CIDFont/HiraMinPro-W3.otf
+	unijmin-h  Unicode-H    % \UTF font
+	unijmin-v  Unicode-V    % \UTF font
+	cidmin-h   Identity-H   % \CID font
+	cidmin-v   Identity-V   % \CID font
+	hmr        JIS-H
+	hmrv       JIS-V
+
+/usr/local/share/texmf/dvipdfm/CIDFont/HiraKakuPro-W6.otf
+	unijgoth-h  Unicode-H   % \UTF font
+	unijgoth-v  Unicode-V   % \UTF font
+	cidgoth-h   Identity-H  % \CID font
+	cidgoth-v   Identity-V  % \CID font
+	hkb         JIS-H
+	hkbv        JIS-V
+
+% OTF package
+/usr/local/share/texmf/dvipdfm/CIDFont/HiraMinPro-W3.otf
+	otf-ujmr-h  Unicode-H
+	otf-ujmr-v  Unicode-V
+	otf-cjmr-h  Identity-H
+	otf-cjmr-v  Identity-V
+	hminr-h     JIS-H
+	hminr-v     JIS-V
+
+/usr/local/share/texmf/dvipdfm/CIDFont/HiraKakuPro-W3.otf
+	otf-ujgr-h  Unicode-H
+	otf-ujgr-v  Unicode-V
+	otf-cjgr-h  Identity-H
+	otf-cjgr-v  Identity-V
+	hgothr-h    JIS-H
+	hgothr-v    JIS-V
+
+/usr/local/share/texmf/dvipdfm/CIDFont/HiraMinPro-W6.otf
+	otf-ujmb-h  Unicode-H
+	otf-ujmb-v  Unicode-V
+	otf-cjmb-h  Identity-H
+	otf-cjmb-v  Identity-V
+	hminb-h     JIS-H
+	hminb-v     JIS-V
+
+/usr/local/share/texmf/dvipdfm/CIDFont/HiraKakuPro-W6.otf
+	otf-ujgb-h  Unicode-H
+	otf-ujgb-v  Unicode-V
+	otf-cjgb-h  Identity-H
+	otf-cjgb-v  Identity-V
+	hgothb-h    JIS-H
+	hgothb-v    JIS-V
+
+/usr/local/share/texmf/dvipdfm/CIDFont/HiraMaruPro-W4.otf
+	otf-ujmgr-h  Unicode-H
+	otf-ujmgr-v  Unicode-V
+	otf-cjmgr-h  Identity-H
+	otf-cjmgr-v  Identity-V
+	hmgothr-h    JIS-H
+	hmgothr-v    JIS-V
+
+/usr/local/share/texmf/dvipdfm/CIDFont/MSungStd-Light-Acro.otf
+	otf-utmr-h  Unicode-H
+	otf-utmr-v  Unicode-V
+
+/usr/local/share/texmf/dvipdfm/CIDFont/MHei-Medium.otf
+	otf-utgr-h  Unicode-H
+	otf-utgr-v  Unicode-V
+
+/usr/local/share/texmf/dvipdfm/CIDFont/STSongStd-Light-Acro.otf
+	otf-ucmr-h  Unicode-H
+	otf-ucmr-v  Unicode-V
+
+/usr/local/share/texmf/dvipdfm/CIDFont/STHeiti-Regular.otf
+	otf-ucgr-h  Unicode-H
+	otf-ucgr-v  Unicode-V
+
+/usr/local/share/texmf/dvipdfm/CIDFont/HYSMyeongJoStd-Medium-Acro.otf
+	otf-ukmr-h  Unicode-H
+	otf-ukmr-v  Unicode-V
+
+/usr/local/share/texmf/dvipdfm/CIDFont/HYGoThic-Medium-UniKS.otf
+	otf-ukgr-h  Unicode-H
+	otf-ukgr-v  Unicode-V

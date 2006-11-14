@@ -1,3 +1,3 @@
 
-CMAPINPUTS = .;/opt/Acrobat5/Resource/Font//;/usr/share/xpdf//
+CMAPINPUTS = .;/usr/share/ghostscript//;/opt/Acrobat5/Resource//;/opt/Acrobat7/Resource//;/usr/share/xpdf//
 
