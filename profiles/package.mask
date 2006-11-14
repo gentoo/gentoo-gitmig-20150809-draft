@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6261 2006/11/13 23:32:53 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6262 2006/11/14 14:00:26 george Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -27,6 +27,7 @@
 <=dev-ada/xmlada-1.0
 =dev-ada/adadoc-2.01
 <dev-ada/gps-bin-2.1
+=dev-ada/aunit-1.01
 
 # Luca Barbato <lu_zero@gentoo.org> (13 Nov 2006)
 # Cell stuff, not for consumption yet.
