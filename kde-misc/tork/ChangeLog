@@ -1,6 +1,15 @@
 # ChangeLog for kde-misc/tork
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.10 2006/10/24 19:57:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.11 2006/11/14 12:27:10 flameeyes Exp $
+
+*tork-0.11 (14 Nov 2006)
+
+  14 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/tork-0.08-crash.patch, -files/tork-0.08-geoip.patch,
+  +files/tork-0.11-external-tsocks.patch, -tork-0.08.ebuild,
+  -tork-0.09.ebuild, +tork-0.11.ebuild:
+  Version bump, add dependency over tsocks (that upstream ships and builds
+  inline), and remove old versions.
 
 *tork-0.10 (24 Oct 2006)
 

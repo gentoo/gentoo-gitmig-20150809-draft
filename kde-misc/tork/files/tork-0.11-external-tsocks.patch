@@ -1,0 +1,40 @@
+Index: tork-0.11/configure.in.in
+===================================================================
+--- tork-0.11.orig/configure.in.in
++++ tork-0.11/configure.in.in
+@@ -251,7 +251,11 @@ AM_CONDITIONAL([EXTERNAL_GEOIP], [test "
+ 
+ 
+ 
++AC_ARG_WITH(external-tsocks,
++	AC_HELP_STRING([--with-external-tsocks], [Don't build the internal copy of TSocks]))
++AM_CONDITIONAL([EXTERNAL_TSOCKS], [test "x$with_external_tsocks" = "xyes"])
+ 
++if test "x$with_external_tsocks" != "xyes"; then
+ 
+ dnl Process this file with autoconf to produce a configure script.
+ 
+@@ -624,3 +628,5 @@ SPECIALLIBS=${LIBS}
+ AC_SUBST(SPECIALLIBS)
+ LIBS=${SIMPLELIBS}
+ 
++fi
++
+Index: tork-0.11/src/Makefile.am
+===================================================================
+--- tork-0.11.orig/src/Makefile.am
++++ tork-0.11/src/Makefile.am
+@@ -11,7 +11,12 @@ geoiplib=GeoIP-1.4.0/libGeoIP/libGeoIP.l
+ geoipdir=GeoIP-1.4.0
+ endif
+ 
+-SUBDIRS=icons about arkollon $(geoipdir) tsocks .
++if EXTERNAL_TSOCKS
++else
++tsocks=tsocks
++endif
++
++SUBDIRS=icons about arkollon $(geoipdir) $(tsocks) .
+ 
+ # set the include path for X, qt and KDE
+ INCLUDES         = $(all_includes)
