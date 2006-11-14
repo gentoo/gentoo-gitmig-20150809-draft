@@ -1,15 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/nesc/nesc-1.2.7a.ebuild,v 1.2 2006/08/10 20:20:48 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/nesc/nesc-1.2.7a.ebuild,v 1.3 2006/11/14 21:32:58 sanchan Exp $
 
-inherit eutils
+inherit eutils java-pkg-2
 
 DESCRIPTION="An extension to gcc that knows how to compile nesC applications"
 HOMEPAGE="http://nescc.sourceforge.net/"
 SRC_URI="mirror://sourceforge/nescc/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="doc"
 DEPEND=">=dev-lang/perl-5.8.5-r2
 	>=dev-tinyos/tos-1.1.0
@@ -39,6 +39,13 @@ pkg_setup() {
 	else
 		einfo "Building nesC for ${TOSDIR}"
 	fi
+	java-pkg-2_pkg_setup
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-alignment.patch
 }
 
 src_compile() {
