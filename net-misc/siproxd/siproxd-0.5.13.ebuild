@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/siproxd-0.5.13.ebuild,v 1.1 2006/11/14 22:10:51 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/siproxd-0.5.13.ebuild,v 1.2 2006/11/14 22:32:52 drizzt Exp $
 
 inherit eutils autotools
 
@@ -53,7 +53,7 @@ src_install() {
 	fowners siproxd:siproxd /var/{lib,run}/siproxd
 }
 
-pkg_postinst() {
+pkg_setup() {
 	enewgroup siproxd
 	enewuser siproxd -1 -1 /dev/null siproxd
 }
