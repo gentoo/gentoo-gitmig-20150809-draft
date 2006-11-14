@@ -17,14 +17,14 @@ EBUILD kdeaccessibility-iconthemes-3.5.4.ebuild 508 RMD160 4178d78d6e77999e5a246
 MD5 9b768842a892eb4af4c3c1f523b0369c kdeaccessibility-iconthemes-3.5.4.ebuild 508
 RMD160 4178d78d6e77999e5a24660b8cd2512ce2963deb kdeaccessibility-iconthemes-3.5.4.ebuild 508
 SHA256 09dd8dfea5db9489217758fed794d76a024ebd95dc4d56e0f33c775bb74bf1a0 kdeaccessibility-iconthemes-3.5.4.ebuild 508
-EBUILD kdeaccessibility-iconthemes-3.5.5.ebuild 503 RMD160 2cac5e068e446a78c9a0d5b552c26d056392c8c2 SHA1 cf029f3ce83a78aa56c6ce97af40c0ff3c0c0cba SHA256 2488d186ae93723121e40d2e747b555b1ac577e7266367735901e031e44b76aa
-MD5 cee9624644dc97de475a23fce2b3ed09 kdeaccessibility-iconthemes-3.5.5.ebuild 503
-RMD160 2cac5e068e446a78c9a0d5b552c26d056392c8c2 kdeaccessibility-iconthemes-3.5.5.ebuild 503
-SHA256 2488d186ae93723121e40d2e747b555b1ac577e7266367735901e031e44b76aa kdeaccessibility-iconthemes-3.5.5.ebuild 503
-MISC ChangeLog 7512 RMD160 04fc81c637c79f7487f535947f338bc6dc1c8db2 SHA1 60fd63ff8870e2dfe4666e96c86e418cf6259fbd SHA256 4c383bf8a7513703f7b967290dcbb1a595511eb7b50cd0a2135ae9a7f61f082d
-MD5 9b0e378fab5d5aa70d1f56a475b53c81 ChangeLog 7512
-RMD160 04fc81c637c79f7487f535947f338bc6dc1c8db2 ChangeLog 7512
-SHA256 4c383bf8a7513703f7b967290dcbb1a595511eb7b50cd0a2135ae9a7f61f082d ChangeLog 7512
+EBUILD kdeaccessibility-iconthemes-3.5.5.ebuild 506 RMD160 220d2fc7ee344e62e75ad9b46369afce7a08a0fd SHA1 1d84467909ff0550e44e665b2df789fac6f08f7a SHA256 558d41acceda7ece81f3fa321769993e685d4644fafb3229b65bf6cd41dd465c
+MD5 80d683aa55e67b011dd34ec82bad2d55 kdeaccessibility-iconthemes-3.5.5.ebuild 506
+RMD160 220d2fc7ee344e62e75ad9b46369afce7a08a0fd kdeaccessibility-iconthemes-3.5.5.ebuild 506
+SHA256 558d41acceda7ece81f3fa321769993e685d4644fafb3229b65bf6cd41dd465c kdeaccessibility-iconthemes-3.5.5.ebuild 506
+MISC ChangeLog 7655 RMD160 6ee666f44ee9b4a0ab4d9e4115b7e6cb16a141b3 SHA1 91beb88301b320fbc84ca39de3439f121cbe82f3 SHA256 9e74fb48742b956a894f53fec09051235a34e3944ff51b756321454aaa5fd41b
+MD5 f109e751b72a03fb4bff717c8027ba35 ChangeLog 7655
+RMD160 6ee666f44ee9b4a0ab4d9e4115b7e6cb16a141b3 ChangeLog 7655
+SHA256 9e74fb48742b956a894f53fec09051235a34e3944ff51b756321454aaa5fd41b ChangeLog 7655
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
@@ -42,9 +42,9 @@ MD5 f6d9853154d3d5dfd940eabddb4941ae files/digest-kdeaccessibility-iconthemes-3.
 RMD160 94dabeb7744105ec7590e6c71bf32df43a8752c8 files/digest-kdeaccessibility-iconthemes-3.5.5 274
 SHA256 b24c7119e463c022ad3f57df25309fa419465f02d90a5d11527540046b32d62d files/digest-kdeaccessibility-iconthemes-3.5.5 274
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
+Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFFWEXBNQqtfCuFneMRAjqmAJ9lC2Yo/VDrpqj/Nc9WR/IONCwrMwCdEMjx
-A0BRoRSZbDFe4p9hYy9BSGI=
-=Bx5S
+iD8DBQFFWQIH5mJXAu5GbtIRAq+RAJwMyDbxaZaQ75M7CWd2MTacll5AzACeLu6J
+QWr7LrpGMLdeAv+qjEYpqXQ=
+=m2Ai
 -----END PGP SIGNATURE-----

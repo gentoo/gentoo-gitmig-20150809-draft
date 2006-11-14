@@ -17,14 +17,14 @@ EBUILD knewsticker-scripts-3.5.4.ebuild 529 RMD160 ea3fefccb73a7a230e1c5ab44ecfe
 MD5 f5f8beba9c5ccef765ebc5c38ecfc6bc knewsticker-scripts-3.5.4.ebuild 529
 RMD160 ea3fefccb73a7a230e1c5ab44ecfe7658257df9f knewsticker-scripts-3.5.4.ebuild 529
 SHA256 3d1096e3d46e75d38fd76d9571a7934228e0b805156a1833ae9622301dfaef07 knewsticker-scripts-3.5.4.ebuild 529
-EBUILD knewsticker-scripts-3.5.5.ebuild 522 RMD160 b52f30dd0c4e7d1275a0b54dfc6b05e4cf43d76f SHA1 1a7308134b03afb885de42d06921b581a47cb75b SHA256 86718baaaeab7fc25137163f7aa3c2a550900b1f294a0220fdf49a25410a40fc
-MD5 2ed0bf8543fc721851d7c09b914471d1 knewsticker-scripts-3.5.5.ebuild 522
-RMD160 b52f30dd0c4e7d1275a0b54dfc6b05e4cf43d76f knewsticker-scripts-3.5.5.ebuild 522
-SHA256 86718baaaeab7fc25137163f7aa3c2a550900b1f294a0220fdf49a25410a40fc knewsticker-scripts-3.5.5.ebuild 522
-MISC ChangeLog 7333 RMD160 ab2a4dbb9a0e45636dd8bc44f6a80eff3634337c SHA1 7de9bf93bf5bc5f206efff9d4fa50fbc3efc1e98 SHA256 79bbfabc67b680c1b77bfa6d7cf46866b4e7c40ff217729283e009d1c9081c83
-MD5 c4d56675b343cc69018d19566ed1acba ChangeLog 7333
-RMD160 ab2a4dbb9a0e45636dd8bc44f6a80eff3634337c ChangeLog 7333
-SHA256 79bbfabc67b680c1b77bfa6d7cf46866b4e7c40ff217729283e009d1c9081c83 ChangeLog 7333
+EBUILD knewsticker-scripts-3.5.5.ebuild 525 RMD160 fb2c403c25dc4ab2148b09d90cc5d5d6f2b87b3a SHA1 ec4849a1242f083a5150586478c442402bd2116c SHA256 d20c5ff62db71fa7551a566022e2581aff85bc503a6989cdde4e27baa9011b8a
+MD5 dd39267f35a45dfce184f5907e07082b knewsticker-scripts-3.5.5.ebuild 525
+RMD160 fb2c403c25dc4ab2148b09d90cc5d5d6f2b87b3a knewsticker-scripts-3.5.5.ebuild 525
+SHA256 d20c5ff62db71fa7551a566022e2581aff85bc503a6989cdde4e27baa9011b8a knewsticker-scripts-3.5.5.ebuild 525
+MISC ChangeLog 7468 RMD160 670cb16ed8b3fd1e8f0554d7e11fed905afea828 SHA1 f6408a06b65ee86ce151aaa1652505d247801e6b SHA256 a42f2be25133dd9a2e8931711adf44abf58314879db70d636472aba2b8303b4b
+MD5 6f494c39bdd1ae708ae767e02bb337a3 ChangeLog 7468
+RMD160 670cb16ed8b3fd1e8f0554d7e11fed905afea828 ChangeLog 7468
+SHA256 a42f2be25133dd9a2e8931711adf44abf58314879db70d636472aba2b8303b4b ChangeLog 7468
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
@@ -42,9 +42,9 @@ MD5 74a264eca23da09ef8febd7884c40a2c files/digest-knewsticker-scripts-3.5.5 253
 RMD160 4ef371a17bfcbf20707fe2ad2f011c2342d15451 files/digest-knewsticker-scripts-3.5.5 253
 SHA256 2a883db9168cd0a8f0ead521c7d361100a92ab587c9e45b3cdef06b5e5def354 files/digest-knewsticker-scripts-3.5.5 253
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
+Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFFWFf2NQqtfCuFneMRAr6BAKCKmOMldeiChR6TFgH/rp60X/LyXQCfeBg8
-lDAliqklBVw2UuTzzYaJMCI=
-=dv0N
+iD8DBQFFWQdm5mJXAu5GbtIRApC1AJ0afT1V0x8hR94odBedEPe6HgRpgQCfQpH7
+q5+9Q1Oi+3TzlXirVwldkI0=
+=LD6q
 -----END PGP SIGNATURE-----

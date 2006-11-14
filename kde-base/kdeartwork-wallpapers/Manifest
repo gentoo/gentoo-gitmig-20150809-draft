@@ -17,14 +17,14 @@ EBUILD kdeartwork-wallpapers-3.5.4.ebuild 467 RMD160 b2aacfa91e84e3b8ab4cb33f904
 MD5 35a63a827428eced03ec71a1a89dbedf kdeartwork-wallpapers-3.5.4.ebuild 467
 RMD160 b2aacfa91e84e3b8ab4cb33f904e303550f74858 kdeartwork-wallpapers-3.5.4.ebuild 467
 SHA256 60d2c44178fb951a5080eef9ad7f363044350043950f54c638663c474ce7e462 kdeartwork-wallpapers-3.5.4.ebuild 467
-EBUILD kdeartwork-wallpapers-3.5.5.ebuild 462 RMD160 e031b6ee2d15de84ccb0968b9db3f6fb85b3dda7 SHA1 f6efa0c21cc73a44ebf90a8c563c651708221521 SHA256 9e08c6fd5db2c38a1c91d55065860173ae759c91d53924aa02fa29c546a9123d
-MD5 61476410ffd05ce410542802201c14d5 kdeartwork-wallpapers-3.5.5.ebuild 462
-RMD160 e031b6ee2d15de84ccb0968b9db3f6fb85b3dda7 kdeartwork-wallpapers-3.5.5.ebuild 462
-SHA256 9e08c6fd5db2c38a1c91d55065860173ae759c91d53924aa02fa29c546a9123d kdeartwork-wallpapers-3.5.5.ebuild 462
-MISC ChangeLog 6397 RMD160 d2062e62261510315b6e32f2af47893e4155af24 SHA1 4118e220c19379458841d64ae2f82e313c58f981 SHA256 7d5c45ad2257d79b12aaaf10e023043eb2a3fb14d36103231188be9da82c856b
-MD5 374005d0dd98c49c7a7eeffda4e24687 ChangeLog 6397
-RMD160 d2062e62261510315b6e32f2af47893e4155af24 ChangeLog 6397
-SHA256 7d5c45ad2257d79b12aaaf10e023043eb2a3fb14d36103231188be9da82c856b ChangeLog 6397
+EBUILD kdeartwork-wallpapers-3.5.5.ebuild 465 RMD160 9e893ff9f9fc2bf37ddce3c486cacec8aa02bb8d SHA1 bb746fd902711fc57f10ad0ebc4a643a1ce73c95 SHA256 c8bc813c041c9d4771eaf211e85f8c43e38be2d0b3e792dd652dcadbcb3fac84
+MD5 b631dedeb9052dbbf06e9a79c68b6222 kdeartwork-wallpapers-3.5.5.ebuild 465
+RMD160 9e893ff9f9fc2bf37ddce3c486cacec8aa02bb8d kdeartwork-wallpapers-3.5.5.ebuild 465
+SHA256 c8bc813c041c9d4771eaf211e85f8c43e38be2d0b3e792dd652dcadbcb3fac84 kdeartwork-wallpapers-3.5.5.ebuild 465
+MISC ChangeLog 6534 RMD160 38a8da943bbcf9184cd69b8b1c67218e27d890dd SHA1 fac460d566d18ecba3393d5735fdde68f5217871 SHA256 5307eea33a46657628e4fdd33d4af9554cd0a52c51b3ad77442369dee14ab07b
+MD5 693dcce3248113fac4b2e6d200938070 ChangeLog 6534
+RMD160 38a8da943bbcf9184cd69b8b1c67218e27d890dd ChangeLog 6534
+SHA256 5307eea33a46657628e4fdd33d4af9554cd0a52c51b3ad77442369dee14ab07b ChangeLog 6534
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
@@ -42,9 +42,9 @@ MD5 ed15f30770562979e25d4bfd5001f873 files/digest-kdeartwork-wallpapers-3.5.5 25
 RMD160 c6f43c7dd9a5232dab348ce3e07a5683ccea5e16 files/digest-kdeartwork-wallpapers-3.5.5 259
 SHA256 135a611738d8c0efafae715a4650aeac10e6896576ca512da0efe0dd40f21e5a files/digest-kdeartwork-wallpapers-3.5.5 259
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
+Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFFWIifNQqtfCuFneMRAsbEAKCWR6d0jtLleD4BgMskM/l0Oo7jNgCdEPDV
-J2pkkuzcYoBeJ3jgv9PVeYE=
-=OdUC
+iD8DBQFFWSGp5mJXAu5GbtIRAjnjAJ4xvPi+FVBt1/xaoQSbissx3+NnxwCfdG/g
+ZUPxzMgulfdWkgrhYo1YtIc=
+=8v3d
 -----END PGP SIGNATURE-----
