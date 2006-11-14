@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/iptraf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.47 2006/10/16 22:11:48 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.48 2006/11/14 20:25:34 cedk Exp $
+
+*iptraf-3.0.0-r3 (14 Nov 2006)
+
+  14 Nov 2006; Cedric Krier <ced@ced.homedns.org>
+  +files/iptraf-3.0.0-ncursesw.patch, +files/iptraf-3.0.0-setlocale.patch,
+  +iptraf-3.0.0-r3.ebuild:
+  Fixed UTF-8 display bug 152883
 
   16 Oct 2006; Jose Luis Rivero <yoswink@gentoo.org> iptraf-3.0.0-r2.ebuild:
   Stable on alpha wrt bug #146939
