@@ -1,6 +1,10 @@
 # ChangeLog for dev-tinyos/channelgen
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/channelgen/ChangeLog,v 1.2 2006/02/16 19:10:18 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/channelgen/ChangeLog,v 1.3 2006/11/14 21:09:11 sanchan Exp $
+
+  14 Nov 2006; Sandro Bonazzola <sanchan@gentoo.org>
+  -channelgen-1.1.14.ebuild, channelgen-1.1.15.ebuild:
+  Removing obsolete version. Keywording ~amd64.
 
   22 Jan 2006; Sandro Bonazzola <sanchan@gentoo.org> +metadata.xml,
   +channelgen-1.1.14.ebuild, +channelgen-1.1.15.ebuild:
