@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.39 2006/09/24 19:52:23 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.40 2006/11/14 19:47:41 ticho Exp $
+
+  14 Nov 2006; Andrej Kacian <ticho@gentoo.org> kvirc-3.2.5.ebuild:
+  Stable on x86, bug #155139, by Mike Pagano <mpagano at gmail.com>.
 
   24 Sep 2006; <jokey@gentoo.org> kvirc-3.2.0.ebuild, kvirc-3.2.3.ebuild,
   kvirc-3.2.4.ebuild, kvirc-3.2.5.ebuild, kvirc-9999.ebuild:
