@@ -3,11 +3,11 @@
 <pkgmetadata>
 <herd>dev-embedded</herd>
 <maintainer>
-  <email>sanchan@gentoo.org</email>
+	<email>sanchan@gentoo.org</email>
 </maintainer>
-  <longdescription>
-    TinyOS is a small operating system written in NesC language for embedded system like wireless sensor.
-    This package provides the sources of the tos directory of the TinyOS distribution, which contains the core
-    system, and the doc directory with the TinyOS documentation.
-  </longdescription>
+<longdescription>
+	TinyOS is a small operating system written in NesC language for embedded system like wireless sensor.
+	This package provides the sources of the tos directory of the TinyOS distribution, which contains the core
+	system, and the doc directory with the TinyOS documentation.
+</longdescription>
 </pkgmetadata>

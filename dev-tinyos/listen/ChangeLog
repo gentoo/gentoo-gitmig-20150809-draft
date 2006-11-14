@@ -1,6 +1,10 @@
 # ChangeLog for dev-tinyos/listen
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/listen/ChangeLog,v 1.1 2006/01/24 19:10:22 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/listen/ChangeLog,v 1.2 2006/11/14 21:14:32 sanchan Exp $
+
+  14 Nov 2006; Sandro Bonazzola <sanchan@gentoo.org> metadata.xml,
+  listen-1.1.15.ebuild:
+  Keywording ~amd64.
 
 *listen-1.1.15 (24 Jan 2006)
 
