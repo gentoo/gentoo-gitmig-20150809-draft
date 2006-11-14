@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2003-ded/ut2003-ded-2225-r2.ebuild,v 1.7 2006/03/31 21:47:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2003-ded/ut2003-ded-2225-r2.ebuild,v 1.8 2006/11/14 17:58:27 wolf31o2 Exp $
 
 inherit games
 
@@ -8,6 +8,7 @@ DESCRIPTION="Unreal Tournament 2003 Linux Dedicated Server"
 HOMEPAGE="http://www.ut2003.com/"
 SRC_URI="http://games.gci.net/pub/UT2003/ut2003-lnxded-${PV}.tar.bz2
 	mirror://3dgamers/unrealtourn2/ut2003-lnxded-${PV}.tar.bz2
+	mirror://gentoo/UT2003CrashFix.zip
 	http://download.factoryunreal.com/mirror/UT2003CrashFix.zip"
 
 LICENSE="ut2003"
@@ -62,7 +63,7 @@ pkg_postinst() {
 	games_pkg_postinst
 	ewarn "NOTE: To have your server authenticate properly, you"
 	ewarn "      MUST visit the following site and request a key."
-	ewarn "http://ut2003master.epicgames.com/ut2003server/cdkey.php"
+	ewarn "http://ut2003.epicgames.com/ut2003server/cdkey.php"
 	echo
 	ewarn "If you are not installing for the first time and you plan on running"
 	ewarn "a server, you will probably need to edit your"

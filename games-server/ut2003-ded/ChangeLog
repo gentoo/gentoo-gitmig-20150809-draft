@@ -1,6 +1,10 @@
 # ChangeLog for games-server/ut2003-ded
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2003-ded/ChangeLog,v 1.11 2006/03/31 21:47:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2003-ded/ChangeLog,v 1.12 2006/11/14 17:58:27 wolf31o2 Exp $
+
+  14 Nov 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2003-ded-2225-r2.ebuild:
+  Added Gentoo mirrors to mirror list for the crash fix and closing bug #153805.
 
   31 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   ut2003-ded-2225-r2.ebuild:
