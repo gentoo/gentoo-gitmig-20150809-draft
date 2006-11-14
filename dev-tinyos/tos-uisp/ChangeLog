@@ -1,6 +1,9 @@
 # ChangeLog for dev-tinyos/tos-uisp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/tos-uisp/ChangeLog,v 1.1 2006/02/12 18:07:25 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/tos-uisp/ChangeLog,v 1.2 2006/11/14 22:02:09 sanchan Exp $
+
+  14 Nov 2006; Sandro Bonazzola <sanchan@gentoo.org> tos-uisp-1.1.15.ebuild:
+  Keywording ~amd64.
 
 *tos-uisp-1.1.15 (12 Feb 2006)
 
