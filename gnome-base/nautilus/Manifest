@@ -45,6 +45,10 @@ AUX nautilus-2.16.0-idl_include.patch 575 RMD160 8ee41c84f597683e2d34eea5acdb43f
 MD5 c496549444ef2727f6c0555b590ef4fe files/nautilus-2.16.0-idl_include.patch 575
 RMD160 8ee41c84f597683e2d34eea5acdb43f5592d3262 files/nautilus-2.16.0-idl_include.patch 575
 SHA256 07cd75e4cf1c34c5fcd3f4d2257ae1d9c578cb2c2f014e69280e511de28862f0 files/nautilus-2.16.0-idl_include.patch 575
+AUX nautilus-2.16.2-desktop-icon-position.patch 902 RMD160 16b9a019f89535f659ee14f4c9498aaed9f34f6f SHA1 48799304e8e2abafd4c2cc709557c7787218618c SHA256 6068a3fce125cf509753c5be16c3b22ebfd19f5afaba1121b03c51ffdc717de6
+MD5 d502695e15c21e2389b4a6d34c6de286 files/nautilus-2.16.2-desktop-icon-position.patch 902
+RMD160 16b9a019f89535f659ee14f4c9498aaed9f34f6f files/nautilus-2.16.2-desktop-icon-position.patch 902
+SHA256 6068a3fce125cf509753c5be16c3b22ebfd19f5afaba1121b03c51ffdc717de6 files/nautilus-2.16.2-desktop-icon-position.patch 902
 AUX nautilus-2.9.90-icon_view_gst.patch 8136 RMD160 adc024c514ce2dd2af2962caa8941fce250ab2b1 SHA1 ca768f9ba16908d487abbdbc941082a58a528ed9 SHA256 b6e7eef6e3ff11a9e3490e371ec06a9cd24b9251b7cad7262204071ff67a8a31
 MD5 76cc1af40c4dc75ce99179ae9b25a2cd files/nautilus-2.9.90-icon_view_gst.patch 8136
 RMD160 adc024c514ce2dd2af2962caa8941fce250ab2b1 files/nautilus-2.9.90-icon_view_gst.patch 8136
@@ -80,14 +84,18 @@ EBUILD nautilus-2.16.1.ebuild 2017 RMD160 8ba20c4ac9a9916c01a14b6cc91e62d6ef072a
 MD5 0ee9164e780891a9b01b443d16e4d6e0 nautilus-2.16.1.ebuild 2017
 RMD160 8ba20c4ac9a9916c01a14b6cc91e62d6ef072a37 nautilus-2.16.1.ebuild 2017
 SHA256 6d3ca1781ad178c8d3603c20092828876c1166e35a6b6217a30bb6b4bdd4c946 nautilus-2.16.1.ebuild 2017
+EBUILD nautilus-2.16.2-r1.ebuild 2141 RMD160 492af117e5ab23a1edf929ff206fbc06a93a3a98 SHA1 0c36e7b440d69b43cde164ea301036ab0c0f55fd SHA256 72c945fe736aef49f46bffa151fa1248d7195aa8d3022750c728defc52b1d6bf
+MD5 3434de2e33bb77f74a6711b794c66034 nautilus-2.16.2-r1.ebuild 2141
+RMD160 492af117e5ab23a1edf929ff206fbc06a93a3a98 nautilus-2.16.2-r1.ebuild 2141
+SHA256 72c945fe736aef49f46bffa151fa1248d7195aa8d3022750c728defc52b1d6bf nautilus-2.16.2-r1.ebuild 2141
 EBUILD nautilus-2.16.2.ebuild 2019 RMD160 33ec47f5bd60cfde38890acad4564d6928c7f10f SHA1 d1c079f674ac87e5a3b086ab0a0d49d81f375dfa SHA256 761af93869a2a9b0b62fabeca36bb862a02ca20969edb4c11fd0e5446826260b
 MD5 532cf360c889c245ccac555d255c3e49 nautilus-2.16.2.ebuild 2019
 RMD160 33ec47f5bd60cfde38890acad4564d6928c7f10f nautilus-2.16.2.ebuild 2019
 SHA256 761af93869a2a9b0b62fabeca36bb862a02ca20969edb4c11fd0e5446826260b nautilus-2.16.2.ebuild 2019
-MISC ChangeLog 26832 RMD160 b60d225c13f01caf5e5f01989feeb4f6f1faa33e SHA1 6c905a9eab8132e7d30140aac88dd05041d3ae16 SHA256 402b0c631ee1b0cdb6d73ca34cbc6ef5a34c8235be2a67f650900082d42e1d7d
-MD5 760de7922a3e87ee2ea947af412ad908 ChangeLog 26832
-RMD160 b60d225c13f01caf5e5f01989feeb4f6f1faa33e ChangeLog 26832
-SHA256 402b0c631ee1b0cdb6d73ca34cbc6ef5a34c8235be2a67f650900082d42e1d7d ChangeLog 26832
+MISC ChangeLog 27068 RMD160 a439a304fabeb43aa4f7bf0f18f4e643c66cc391 SHA1 05bada3bee5ee91a0dfda6ef3452ae3c43b72876 SHA256 ca795e14eeb4faf485773478607148474ca51e459076dc3e71d1da68db3956b8
+MD5 33629182f2fdd9d4418d74b9b0f0359e ChangeLog 27068
+RMD160 a439a304fabeb43aa4f7bf0f18f4e643c66cc391 ChangeLog 27068
+SHA256 ca795e14eeb4faf485773478607148474ca51e459076dc3e71d1da68db3956b8 ChangeLog 27068
 MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
@@ -113,10 +121,13 @@ SHA256 dab5793faff426a9f24597616494d8c4362e6f94f2f621656f465d11bf06e210 files/di
 MD5 3803821dbfe023094f40d89f7aa2dcc6 files/digest-nautilus-2.16.2 253
 RMD160 4789bc87b36d1ca16489bde892d37e97eae0095b files/digest-nautilus-2.16.2 253
 SHA256 452b53217e9351b7b431a30aef5d74ad60ba687e11fb948a9fa0d07cdd005f39 files/digest-nautilus-2.16.2 253
+MD5 3803821dbfe023094f40d89f7aa2dcc6 files/digest-nautilus-2.16.2-r1 253
+RMD160 4789bc87b36d1ca16489bde892d37e97eae0095b files/digest-nautilus-2.16.2-r1 253
+SHA256 452b53217e9351b7b431a30aef5d74ad60ba687e11fb948a9fa0d07cdd005f39 files/digest-nautilus-2.16.2-r1 253
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFUObewUpWvClEHQoRAhiQAJ4/Wg8WrqPG/4bfMNFBUKVvnxqADACghIOD
-vrehmJbbWxxIKk3rkYlFhSs=
-=yi9e
+iD8DBQFFWie8wUpWvClEHQoRAoUhAKCECLxA5Ct3+Sq0uaOaYTNnvszSwQCgipED
+uAAAiRUuwlYtdGKCRVaJGGU=
+=QVk3
 -----END PGP SIGNATURE-----
