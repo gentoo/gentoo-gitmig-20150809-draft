@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.36 2006/11/13 14:40:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.37 2006/11/14 11:11:40 dragonheart Exp $
+
+*conky-1.4.4 (14 Nov 2006)
+
+  14 Nov 2006; Daniel Black <dragonheart@gentoo.org> -conky-1.4.3.ebuild,
+  +conky-1.4.4.ebuild:
+  version bump with new vim-syntax - yay. bug #154949 and ebuild thanks to
+  Philip Kovacs. removed 1.4.3 for convience
 
   13 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> conky-1.4.0-r1.ebuild,
   conky-1.4.2.ebuild:
