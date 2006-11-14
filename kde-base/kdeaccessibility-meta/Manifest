@@ -1,6 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+- -----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 EBUILD kdeaccessibility-meta-3.5.2.ebuild 848 RMD160 8e6b0ff02d064d5425a1596fa0d4b7f1274e3c85 SHA1 1b8118c4fb576b787613c4e3c57662b883e6e1b6 SHA256 a088e91f0c83ee9db2f271b265aa9de139333ddce34dfe163129f06d7ea1f052
 MD5 4bdfe7231113eeafe2e303277e3d0555 kdeaccessibility-meta-3.5.2.ebuild 848
 RMD160 8e6b0ff02d064d5425a1596fa0d4b7f1274e3c85 kdeaccessibility-meta-3.5.2.ebuild 848
@@ -37,10 +40,17 @@ SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/di
 MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeaccessibility-meta-3.5.5 1
 RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeaccessibility-meta-3.5.5 1
 SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeaccessibility-meta-3.5.5 1
------BEGIN PGP SIGNATURE-----
+- -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.4 (GNU/Linux)
 
 iD8DBQFFWSNx5mJXAu5GbtIRAktOAJ9Udq+7Fqd4texZigKH/Iq+cEYJ6QCeLyJr
 UCyyXY3J9y3PbmVPNpiksQ8=
 =LnLG
+- -----END PGP SIGNATURE-----
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4 (GNU/Linux)
+
+iD8DBQFFWSWd5mJXAu5GbtIRAlslAJ4riuRoayyKiSuo9Z2qH8mc9CKfLACaAuxH
+ImdZyt3BXv8dEs8NW+Au46U=
+=XQsJ
 -----END PGP SIGNATURE-----
