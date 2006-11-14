@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2339 2006/11/14 22:12:08 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2340 2006/11/14 22:15:48 beandog Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -885,7 +885,6 @@ media-tv/xawtv:xext - Enable use of XFree extentions (DGA,VidMode,DPMS)
 media-tv/xawtv:zvbi - Enable VBI Decoding Library for Zapping
 media-tv/xdtv:aqua_theme - Enable graphic theme Aqua-style
 media-tv/xdtv:carbone_theme - Adds the Carbone pixmaps theme for the GUI
-media-tv/xdtv:x264 - Enable h264 encoding using x264
 media-tv/xdtv:zvbi - Enable VBI Decoding Library for Zapping
 media-tv/xmltv:be - Belgium and Luxemburg tv listing grabber
 media-tv/xmltv:br - Brazil tv listing grabber
@@ -925,7 +924,6 @@ media-video/dvdrip:subtitles - Enables support for subtitle ripping
 media-video/dxr3player:dxr3 - Support for DXR3 mpeg accelleration cards
 media-video/ffmpeg:amr - Enables Adaptive Multi-Rate Audio support
 media-video/ffmpeg:network - Enables network streaming support
-media-video/ffmpeg:x264 - Enables h264 encoding using x264
 media-video/flumotion:gstreamer08 - Use GStreamer 0.8 over GStreamer 0.10
 media-video/gpac:amr - Adaptive Multi-Rate Audio support (commonly used in telephony)
 media-video/linux-uvc:isight - Apply patch to work _only_ with the Apple iSight
@@ -940,7 +938,6 @@ media-video/mpeg4ip:mp4live - Build the live streaming/encoding software
 media-video/mpeg4ip:mpeg2 - Support mpeg2 in the player
 media-video/mpeg4ip:player - Build the player
 media-video/mpeg4ip:v4l2 - Enable video4linux2 support for mp4live
-media-video/mpeg4ip:x264 - Enable x264 codec for mp4live (using x264-svn)
 media-video/mplayer:3dnowext - Enables 3dnow extensions in mplayer
 media-video/mplayer:amr - Enables Adaptive Multi-Rate Audio support
 media-video/mplayer:bl - Enables Blinkenlights support in mplayer
@@ -957,7 +954,6 @@ media-video/mplayer:rtc - Enables usage of the linux real time clock.  The alter
 media-video/mplayer:subtitles - Enables support for SSA/ASS subtitles
 media-video/mplayer:tga - Enables tga output support
 media-video/mplayer:v4l2 - Enables video4linux2 support
-media-video/mplayer:x264 - Enables h264 encoding using x264
 media-video/mplayer:xanim - Enables support for xanim based codecs
 media-video/mplayer:xvmc - Enables X-Video Motion Compensation support
 media-video/ogmrip:srt - Support for SRT subtitle format
