@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2338 2006/11/14 22:08:44 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2339 2006/11/14 22:12:08 beandog Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -829,7 +829,6 @@ media-sound/bmpx:p2p - Enable support for downloading songs from the SoulSeek p2
 media-sound/bmpx:raptor - Enable usage of raptor for rlq container plugin
 media-sound/bmpx:sid - Build with SID (Commodore 64 Audio) support
 media-sound/bmpx:stream - Build with support for streaming audio
-media-sound/cmus:ao - Use libao for sound playback
 media-sound/cmus:modplug - Build with modplug support
 media-sound/darkice:twolame - Build with twolame support
 media-sound/freewheeling:fluidsynth - compile with support for fluidsynth
@@ -843,9 +842,7 @@ media-sound/lastfm-ripper:amazon - Enable advanced tagging using amazon webservi
 media-sound/lastfm-ripper:tagwriting - Enable MP3 tagging
 media-sound/lilypond:vim - Enable installation of lilypond vim plugins
 media-sound/listen:ipod - Support for ipod devices via libgpod
-media-sound/mpd:ao - Use libao for sound playback
 media-sound/mpd:icecast - Enable support for Icecast2
-media-sound/mpd-svn:ao - Use libao for sound playback
 media-sound/mpd-svn:icecast - Enable support for Icecast2
 media-sound/mt-daapd:avahi - Use avahi instead of howl as mdns daemon
 media-sound/musepack-tools:16bit - Higher quality sound output using dithering and noise-shaping
@@ -871,7 +868,6 @@ media-sound/rhythmbox:musicbrainz - support for muzicbrains
 media-sound/rhythmbox:tagwriting - support for tag wriring in certian audio files
 media-sound/slismerver:alac - Enable support for alac
 media-sound/snd:gsl - Use the GNU scientific library for calculations
-media-sound/timidity++:ao - Use libao for sound playback
 media-sound/zinf:corba - Enables corba interface support
 media-tv/gentoo-vdr-scripts:nvram - Add support for using nvram-wakeup to set wakeup time in bios
 media-tv/kdetv:zvbi - Enable VBI Decoding Library for Zapping
@@ -1336,7 +1332,6 @@ net-misc/quagga:ospfapi - Enable OSPFAPI support for client applications accessi
 net-misc/quagga:realms - Enable realms support (see http://vcalinus.gemenii.ro/quaggarealms.html)
 net-misc/quagga:tcp-zebra - Enable TCP zserv interface on port 2600 for Zebra/protocol-daemon communication. Unix domain sockets are choosen otherwise.
 net-misc/quagga:tcpmd5 - Enable TCP MD5 checksumming
-net-misc/rdesktop:ao - Use libao for sound playback
 net-misc/scponly:subversion - Enable support for the subversion version control system
 net-misc/sitecopy:gssapi - Enables GSSAPI (Generic Security Services Application Programming Interface).  This is a client-server authentication method that promotes a standard API for authentication systems.  This is included in kerbos distributions and allows vendors to define a specific system with a more generic API layer to coordinate with other authentication systems.
 net-misc/sitecopy:rsh - This allows the use of rsh (remote shell) and rcp (remote copy) for authoring websites.  sftp is a much more secure protocol and is prefered.
