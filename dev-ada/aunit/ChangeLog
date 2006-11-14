@@ -1,6 +1,11 @@
 # ChangeLog for dev-ada/aunit
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/aunit/ChangeLog,v 1.5 2006/05/13 20:48:11 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/aunit/ChangeLog,v 1.6 2006/11/14 13:57:53 george Exp $
+
+*aunit-1.03 (14 Nov 2006)
+
+  14 Nov 2006; George Shapovalov <george@gentoo.org> +aunit-1.03.ebuild:
+  new version, uses gnat.eclass
 
   13 May 2006; George Shapovalov <george@gentoo.org> ChangeLog:
   removed inherit gnat until adapted for new eclass
