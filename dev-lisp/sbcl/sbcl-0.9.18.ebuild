@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.18.ebuild,v 1.1 2006/11/09 03:22:23 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.18.ebuild,v 1.2 2006/11/14 06:27:31 mkennedy Exp $
 
 inherit common-lisp-common-3 eutils flag-o-matic
 
@@ -146,7 +146,7 @@ src_compile() {
 src_install() {
 	unset SBCL_HOME
 	dodir /etc/
-	cat >${D}/sbclrc <<EOF
+	cat >${D}/etc/sbclrc <<EOF
 ;;; The following is required if you want source location functions to
 ;;; work in SLIME, for example.
 
