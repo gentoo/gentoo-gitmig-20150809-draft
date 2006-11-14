@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-gtklibs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.28 2006/11/12 17:46:05 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.29 2006/11/14 16:59:28 tester Exp $
+
+  14 Nov 2006; Olivier Crête <tester@gentoo.org>
+  emul-linux-x86-gtklibs-2.8.8.ebuild:
+  Added QA_EXECSTACKS to ignore executable stack on gtk+ 1 binary
 
 *emul-linux-x86-gtklibs-2.10.6.2 (12 Nov 2006)
 
