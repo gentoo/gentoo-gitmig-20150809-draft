@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.99.902.ebuild,v 1.1 2006/11/13 23:39:16 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.99.902.ebuild,v 1.2 2006/11/14 06:03:06 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -289,9 +289,6 @@ pkg_setup() {
 	# from ebuild.sh
 	# sysconfdir is used for the xorg.conf location; same applies
 	# --enable-install-setuid needed because sparcs default off
-	# Disable xorgcfg for now since it doesn't build. Upstream looks
-	# like they've given up on it for the time being as well.
-	# $(use_enable !minimal xorgcfg)
 	CONFIGURE_OPTIONS="
 		$(use_enable ipv6)
 		$(use_enable dmx)
@@ -303,7 +300,7 @@ pkg_setup() {
 		$(use_enable xorg)
 		$(use_enable xprint)
 		$(use_enable nptl glx-tls)
-		--disable-xorgcfg
+		$(use_enable !minimal xorgcfg)
 		--sysconfdir=/etc/X11
 		--localstatedir=/var
 		--enable-install-setuid
