@@ -21,7 +21,7 @@ gitweb should show. The example below defines a project located in
 
 ( Note the use of the plus sign (``+``) )
 
-Also you may want to create the file ``index/text.html``. This file will
+Also you may want to create the file ``indextext.html``. This file will
 be included in the header of the project listing page in gitweb.
 
 Webserver configuration
