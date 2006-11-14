@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/ut2003-demo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ChangeLog,v 1.25 2006/10/03 20:20:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ChangeLog,v 1.26 2006/11/14 18:27:21 wolf31o2 Exp $
+
+  14 Nov 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2003-demo-2206-r3.ebuild:
+  Added sys-devel/bc to RDEPEND for the benchmark scripts and closing bug
+  #154824.
 
   03 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   ut2003-demo-2206-r3.ebuild:
