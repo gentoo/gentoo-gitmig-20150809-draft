@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6263 2006/11/14 21:16:47 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6264 2006/11/14 21:56:06 chutzpah Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ## 
+
+# Patrick McLean <chutzpah@gentoo.org> (13 Nov 2006)
+# Mask beta versions, final should be coming out in a day or two
+=dev-scheme/drscheme-259*
 
 # George Shapovalov <george@gentoo.org> (13 Nov 2006)
 # Masked "old style" lib versions for removal 
