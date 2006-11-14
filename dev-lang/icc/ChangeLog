@@ -1,10 +1,10 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.34 2006/11/14 21:45:09 zeypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.35 2006/11/14 22:15:22 zeypher Exp $
 
 *icc-9.1.044 (14 Nov 2006)
 
-  14 Nov 2006; <zeypher@gentoo.org> +files/9.1.044/05icc-ifc,
+  14 Nov 2006; Matthew Snelham <zeypher@gentoo.org> +files/9.1.044/05icc-ifc,
   +files/9.1.044/icc, +files/9.1.044/icpc, +icc-9.1.044.ebuild:
   Version bump. Added pkg_nofetch, closes #66514
 
