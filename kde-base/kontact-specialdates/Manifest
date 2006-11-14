@@ -17,14 +17,14 @@ EBUILD kontact-specialdates-3.5.4.ebuild 1167 RMD160 31456c51725b8dcf96252c9007e
 MD5 6765f3f17b502dd5981291b44ea445cf kontact-specialdates-3.5.4.ebuild 1167
 RMD160 31456c51725b8dcf96252c9007eccb45158daefa kontact-specialdates-3.5.4.ebuild 1167
 SHA256 c9b99848b6d0255937d631e2ca233df4f96e35a654fada03a532effc3f22d56c kontact-specialdates-3.5.4.ebuild 1167
-EBUILD kontact-specialdates-3.5.5.ebuild 1165 RMD160 faebe01f54b69763f4bcebfc69574abbf0725885 SHA1 923a87884fdf1c89b9b254c97e5f895753d5702a SHA256 7f528faa3578605e076a13ea6efb69da87454a5ccb1f81ccc6b683267e0e53a2
-MD5 7ae2da7cacfedef35100d12aa8d6b058 kontact-specialdates-3.5.5.ebuild 1165
-RMD160 faebe01f54b69763f4bcebfc69574abbf0725885 kontact-specialdates-3.5.5.ebuild 1165
-SHA256 7f528faa3578605e076a13ea6efb69da87454a5ccb1f81ccc6b683267e0e53a2 kontact-specialdates-3.5.5.ebuild 1165
-MISC ChangeLog 8190 RMD160 760ac6aef66bf05e4f169b5128fc362adaadbf04 SHA1 50d098f52f8c6d7dccef94bf0db8305cdb344f00 SHA256 aafe536cdb4e86d3af453c8d2063ce080267edcda32d0937bdda742348e3f14a
-MD5 47b8db2bf24ae854ca474a257092220f ChangeLog 8190
-RMD160 760ac6aef66bf05e4f169b5128fc362adaadbf04 ChangeLog 8190
-SHA256 aafe536cdb4e86d3af453c8d2063ce080267edcda32d0937bdda742348e3f14a ChangeLog 8190
+EBUILD kontact-specialdates-3.5.5.ebuild 1163 RMD160 8aa0c6a15d4624d375a2c82b0a8296f8830e0b55 SHA1 f9ca50fac0d7bd224aeb98b64632f9496c4fef81 SHA256 7f3b471a94328cb4722e2cb5dcd4d3afcf548223ab744efbdaa55b9a7809b92c
+MD5 0cb0adf40efd0d04abb287cfe490b574 kontact-specialdates-3.5.5.ebuild 1163
+RMD160 8aa0c6a15d4624d375a2c82b0a8296f8830e0b55 kontact-specialdates-3.5.5.ebuild 1163
+SHA256 7f3b471a94328cb4722e2cb5dcd4d3afcf548223ab744efbdaa55b9a7809b92c kontact-specialdates-3.5.5.ebuild 1163
+MISC ChangeLog 8311 RMD160 bbfd4aafa8ee4708f9e06918a440d5d200acdc07 SHA1 d444cf98c12d5bbbef6a6e0619607cd3d5bf9176 SHA256 17373578e9f49400e2e96168ca53f13aaecc9a3199ca1b42e0332c44f86e8f36
+MD5 15d9de8a97ffc7ac79fe01cc7614e498 ChangeLog 8311
+RMD160 bbfd4aafa8ee4708f9e06918a440d5d200acdc07 ChangeLog 8311
+SHA256 17373578e9f49400e2e96168ca53f13aaecc9a3199ca1b42e0332c44f86e8f36 ChangeLog 8311
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
@@ -42,9 +42,9 @@ MD5 805592bb13fc869af5c4ae1670b84edd files/digest-kontact-specialdates-3.5.5 247
 RMD160 431fdb9163eb9f1552e68f14b4f4c1deb467c7bf files/digest-kontact-specialdates-3.5.5 247
 SHA256 79f3b37a9c00197e5c3d06173ef9526420d44109e12c7b0e69e1b3e5efce6daf files/digest-kontact-specialdates-3.5.5 247
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
+Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFFWR4U5mJXAu5GbtIRAjo7AJ9tEFvEifyjNBWDbkauXoEbDObY1gCfcP32
-hTAwuZ7slPXew5KjotXN34M=
-=TiV3
+iD8DBQFFWfBcKRy60XGEcJIRAgIaAJ9DPvwyIsAL1s7ljdE5JOAxUXHp/wCeNN6D
+amBstNBkvWtJgJlUtEv0dMk=
+=zgc9
 -----END PGP SIGNATURE-----
