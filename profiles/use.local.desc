@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2337 2006/11/14 22:01:40 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2338 2006/11/14 22:08:44 beandog Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -759,7 +759,6 @@ media-libs/giflib:rle - Build converters for RLE format (utah raster toolkit)
 media-libs/glide-v3:voodoo1 - Support 3DFX Voodoo1 video cards
 media-libs/glide-v3:voodoo2 - Support 3DFX Voodoo2 video cards
 media-libs/glide-v3:voodoo5 - Support 3DFX Voodoo4 and Voodoo5 video cards
-media-libs/libao:pulseaudio - Enable support for PulseAudio output plugin
 media-libs/libggi:vis - Enables sparc vis support for libggi
 media-libs/libgphoto2:nousb - Disable USB support
 media-libs/libifp:module - Build kernel module for non-root usage
@@ -786,13 +785,10 @@ media-libs/x264-svn:mp4 - Enables mp4 encoding support
 media-libs/xine-lib:asf - Support for ASF demuxer (required for win32codecs)
 media-libs/xine-lib:dxr3 - Support for DXR3 mpeg accelleration cards
 media-libs/xine-lib:modplug - Build with modplug support
-media-libs/xine-lib:pulseaudio - Enable support for PulseAudio output plugin
 media-libs/xine-lib:vidix - Support for vidix video output
 media-libs/xine-lib:xvmc - Support for XVideo Motion Compensation (accelerated mpeg playback)
-media-plugins/alsa-plugins:pulseaudio - Enable support for PulseAudio output plugin
 media-plugins/audacious-plugins:chardet - Character set detection support for non-UTF8 ID3 tags
 media-plugins/audacious-plugins:modplug - Build with modplug support
-media-plugins/audacious-plugins:pulseaudio - Enable support for PulseAudio output plugin
 media-plugins/audacious-plugins:sid - Build with SID (Commodore 64 Audio) support
 media-plugins/audacious-plugins:timidity - Build with Timidity++ (MIDI sequencer) support
 media-plugins/audacious-plugins:wma - Build with WMA (Windows Media Audio) support
@@ -849,10 +845,8 @@ media-sound/lilypond:vim - Enable installation of lilypond vim plugins
 media-sound/listen:ipod - Support for ipod devices via libgpod
 media-sound/mpd:ao - Use libao for sound playback
 media-sound/mpd:icecast - Enable support for Icecast2
-media-sound/mpd:pulseaudio - Enable pulseaudio support
 media-sound/mpd-svn:ao - Use libao for sound playback
 media-sound/mpd-svn:icecast - Enable support for Icecast2
-media-sound/mpd-svn:pulseaudio - Enable pulseaudio support
 media-sound/mt-daapd:avahi - Use avahi instead of howl as mdns daemon
 media-sound/musepack-tools:16bit - Higher quality sound output using dithering and noise-shaping
 media-sound/museseq:fluidsynth - compile with support for fluidsynth

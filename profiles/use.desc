@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.319 2006/11/14 22:01:40 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.320 2006/11/14 22:08:44 beandog Exp $
 
 # Keep them sorted
 
@@ -269,6 +269,7 @@ postgres - Adds support for the postgresql database
 ppds - Adds support for automatically generated ppd (printing driver) files
 prelude - Adds support/bindings for the Prelude Intrusion Detection System
 profile - Adds profile support to builds of packages (will likely vary from ebuild to ebuild in support)
+pulseaudio - Adds support for PulseAudio sound server
 python - Adds support/bindings for the Python language
 qdbm - Adds support for the qdbm (Quick Database Manager) library
 qt3 - Adds support for the Qt GUI/Application Toolkit version 3.x
