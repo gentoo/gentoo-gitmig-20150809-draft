@@ -62,8 +62,6 @@ xvmc
 -ppcsha1
 -x264
 
-
-# new keyword zrtp related to
-# net-libs/libzrtpcpp package
-# masked pending testing - bug #149793
-zrtp
+# Modular X: unmask for architectures on which they are available
+-input_devices_synaptics
+-input_devices_wacom
