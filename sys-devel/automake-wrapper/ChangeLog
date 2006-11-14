@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/automake-wrapper
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/ChangeLog,v 1.24 2006/11/13 13:20:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/ChangeLog,v 1.25 2006/11/14 05:19:10 tgall Exp $
+
+  13 Nov 2006; Tom Gall <tgall@gentoo.org>
+  automake-wrapper-2-r1.ebuild:
+  Stable on ppc64 wrt #153936
 
   13 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   automake-wrapper-2-r1.ebuild:
