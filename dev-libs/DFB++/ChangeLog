@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/DFB++
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DFB++/ChangeLog,v 1.5 2006/11/13 21:01:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DFB++/ChangeLog,v 1.6 2006/11/14 06:57:50 opfer Exp $
+
+  14 Nov 2006; Christian Faulhammer <opfer@gentoo.org> DFB++-0.9.23.ebuild:
+  stable x86, bug #155070
 
 *DFB++-0.9.25 (13 Nov 2006)
 
