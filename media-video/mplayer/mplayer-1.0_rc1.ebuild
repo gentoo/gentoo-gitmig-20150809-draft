@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1.ebuild,v 1.12 2006/11/07 19:21:10 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1.ebuild,v 1.13 2006/11/14 12:05:46 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -464,8 +464,8 @@ src_install() {
 
 	# Install the default Skin and Gnome menu entry
 	if use gtk; then
-		dodir /usr/share/mplayer/skin
-		cp -r ${WORKDIR}/Blue ${D}/usr/share/mplayer/skin/default || die
+		dodir /usr/share/mplayer/skins
+		cp -r ${WORKDIR}/Blue ${D}/usr/share/mplayer/skins/default || die
 
 		# Fix the symlink
 		rm -rf ${D}/usr/bin/gmplayer
