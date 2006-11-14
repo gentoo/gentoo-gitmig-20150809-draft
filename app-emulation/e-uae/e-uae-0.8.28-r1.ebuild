@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.28-r1.ebuild,v 1.7 2006/09/09 22:49:55 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.28-r1.ebuild,v 1.8 2006/11/14 13:33:36 pva Exp $
 
 inherit eutils flag-o-matic
 
@@ -31,7 +31,7 @@ RDEPEND="X? ( || ( ( x11-libs/libXt
 		gtk? ( >=x11-libs/gtk+-2.0 )
 		capslib? ( games-emulation/caps )
 		sys-libs/zlib
-		app-cdr/cdrtools"
+		virtual/cdrtools"
 
 DEPEND="$RDEPEND
 		X? ( dga? ( x11-proto/xf86vidmodeproto

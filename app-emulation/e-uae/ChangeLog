@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/e-uae
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/ChangeLog,v 1.23 2006/11/14 08:48:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/ChangeLog,v 1.24 2006/11/14 13:33:36 pva Exp $
+
+  14 Nov 2006; Peter Volkov <pva@gentoo.org> e-uae-0.8.28-r1.ebuild,
+  e-uae-0.8.28-r2.ebuild, e-uae-0.8.28-r3.ebuild,
+  e-uae-0.8.29_pre20060812.ebuild:
+  cdrtools became virtual. pre20060812 also modified to use autotools eclass.
 
   14 Nov 2006; Peter Volkov <pva@gentoo.org>
   e-uae-0.8.29_pre20060812.ebuild:

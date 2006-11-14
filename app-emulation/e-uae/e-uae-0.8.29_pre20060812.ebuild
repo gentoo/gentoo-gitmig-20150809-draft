@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.29_pre20060812.ebuild,v 1.2 2006/11/14 08:48:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.29_pre20060812.ebuild,v 1.3 2006/11/14 13:33:36 pva Exp $
 
-inherit eutils flag-o-matic
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="1.7"
+inherit eutils flag-o-matic autotools
 
 my_ver=${PV%%_pre*}
 snap_ver=${PV##*_pre}
@@ -35,7 +37,7 @@ RDEPEND="X? ( || ( ( x11-libs/libXt
 		gtk? ( >=x11-libs/gtk+-2.0 )
 		capslib? ( >=games-emulation/caps-20060612 )
 		sys-libs/zlib
-		app-cdr/cdrtools"
+		virtual/cdrtools"
 
 DEPEND="$RDEPEND
 		X? ( dga? ( x11-proto/xf86vidmodeproto
@@ -103,7 +105,11 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-xkb-rules-dir-detection.patch
-	autoreconf
+	AT_M4DIR="m4"
+	eaclocal
+	# Remove -I m4 in subsequent calls or autoconf in src/tools fails.
+	AT_M4DIR=""
+	eautoconf
 }
 
 src_compile() {
