@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/qmailadmin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/ChangeLog,v 1.13 2006/11/13 20:10:12 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/ChangeLog,v 1.14 2006/11/14 06:10:38 opfer Exp $
+
+  14 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  qmailadmin-1.2.10.ebuild:
+  stable x86, security bug #153896
 
   13 Nov 2006; René Nussbaumer <killerfox@gentoo.org>
   qmailadmin-1.2.10.ebuild:
