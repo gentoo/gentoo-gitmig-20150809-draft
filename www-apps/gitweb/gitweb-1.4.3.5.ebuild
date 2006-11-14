@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gitweb/gitweb-1.4.3.5.ebuild,v 1.1 2006/11/14 10:21:19 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gitweb/gitweb-1.4.3.5.ebuild,v 1.2 2006/11/14 10:44:02 lu_zero Exp $
 
 inherit webapp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://git.or.cz/"
 SRC_URI="mirror://kernel/software/scm/git/git-${GIT_VERSION}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
