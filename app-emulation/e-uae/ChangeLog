@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/e-uae
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/ChangeLog,v 1.22 2006/11/12 07:22:41 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/ChangeLog,v 1.23 2006/11/14 08:48:06 pva Exp $
+
+  14 Nov 2006; Peter Volkov <pva@gentoo.org>
+  e-uae-0.8.29_pre20060812.ebuild:
+  Use versioned tarball distributed through our mirrors.
 
   12 Nov 2006; Peter Volkov <pva@gentoo.org> e-uae-0.8.28-r3.ebuild:
   Removed nonexistend doc (CHANGES) from dodoc. Thank Markus Meier for report.
