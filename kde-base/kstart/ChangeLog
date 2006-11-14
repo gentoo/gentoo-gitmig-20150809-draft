@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kstart
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.40 2006/10/03 12:19:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.41 2006/11/14 00:28:37 kugelfang Exp $
+
+  13 Nov 2006; Danny van Dyk <kugelfang@gentoo.org> ChangeLog:
+  Marked stable on amd64 wrt bug #147570.
 
   03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> kstart-3.5.0.ebuild:
   Bump to 3.5.5 (pre-release).

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kstars
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.58 2006/11/13 12:45:45 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.59 2006/11/14 00:42:05 kugelfang Exp $
+
+  13 Nov 2006; Danny van Dyk <kugelfang@gentoo.org> kstars-3.5.5.ebuild:
+  Marked stable on amd64 wrt bug #147570.
 
   13 Nov 2006; Christian Faulhammer <opfer@gentoo.org> kstars-3.5.5.ebuild:
   "Stable x86, bug #147570"

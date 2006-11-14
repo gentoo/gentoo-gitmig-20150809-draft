@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.5.5-r1.ebuild,v 1.2 2006/11/13 14:28:16 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.5.5-r1.ebuild,v 1.3 2006/11/14 01:34:19 kugelfang Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -11,7 +11,7 @@ SRC_DIR="${SRC_DIR}
 	mirror://gentoo/kdepim-3.5-patchset-02.tar.bz2"
 
 DESCRIPTION="KDE mail client"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="crypt"
 DEPEND="$(deprange 3.5.4 $MAXKDEVER kde-base/libkdenetwork)
 	$(deprange $PV $MAXKDEVER kde-base/libkdepim)

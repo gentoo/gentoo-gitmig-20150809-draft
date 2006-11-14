@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kpovmodeler
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpovmodeler/ChangeLog,v 1.54 2006/11/13 13:31:02 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpovmodeler/ChangeLog,v 1.55 2006/11/14 01:05:44 kugelfang Exp $
+
+  13 Nov 2006; Danny van Dyk <kugelfang@gentoo.org>
+  kpovmodeler-3.5.5.ebuild:
+  Marked stable on amd64 wrt bug #147570.
 
   13 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
   kpovmodeler-3.5.5.ebuild:

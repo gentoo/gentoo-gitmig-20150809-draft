@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kreadconfig
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kreadconfig/ChangeLog,v 1.38 2006/10/03 11:55:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kreadconfig/ChangeLog,v 1.39 2006/11/14 00:26:12 kugelfang Exp $
+
+  13 Nov 2006; Danny van Dyk <kugelfang@gentoo.org> ChangeLog:
+  Marked stable on amd64 wrt bug #147570.
 
   03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   kreadconfig-3.5.0.ebuild:
