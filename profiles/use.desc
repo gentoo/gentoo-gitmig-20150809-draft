@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.322 2006/11/14 22:15:48 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.323 2006/11/14 22:18:32 beandog Exp $
 
 # Keep them sorted
 
@@ -43,6 +43,7 @@ calendar - Adds support for calendars (not using mcal!)
 canna - Adds support for the Canna kana to kanji conversion engine
 caps - Use Linux capabilities library to control privileges.
 cdb - Adds support for the CDB database engine from the author of qmail
+cddb - Access cddb servers to retrieve and submit information about compact disks
 cdinstall - Copies files from the CD rather than asking the user to copy them, mostly used with games
 cdparanoia - Enables cdparanoia (audio CD ripper) support
 cdr - Adds support for CD writer hardware

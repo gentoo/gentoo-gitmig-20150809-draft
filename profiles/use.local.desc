@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2340 2006/11/14 22:15:48 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2341 2006/11/14 22:18:32 beandog Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -53,7 +53,6 @@ app-cdr/cdrtools:on-the-fly-crypt - On the fly AES encryption for CD-Rs.
 app-cdr/disc-cover:cdrom - Enable audio CD support. This is not needed to make www-apps/disc-cover work.
 app-cdr/k3b:css - Enables ripping of encrypted dvds
 app-cdr/k3b:musicbrainz - Enable support for MusicBrainz audio lookups (musicbrainz.org)
-app-cdr/koverartist:cddb - Enable support for cddb for audio-cd
 app-cdr/pxlinux:gnuplot - enable gnuplot support
 app-cdr/serpentine:muine - Enable Muine support
 app-crypt/ccid:chipcard2 - Enable libchipcard support
@@ -372,7 +371,6 @@ dev-libs/cyrus-sasl:srp - Enables SRP in cyrus-sasl
 dev-libs/cyrus-sasl:urandom - Use /dev/urandom instead of /dev/random
 dev-libs/fcgi:html - Adds HTML documentation.
 dev-libs/klibc:n32 - Force klibc to 32bit if on mips64 if not n32 userland.
-dev-libs/libcdio:cddb - Access cddb servers to retrieve and submit information about compact disks.
 dev-libs/libjit:interpreter - Enable the libjit interpreter
 dev-libs/libjit:long-double - Enable the use of long double for jit_nfloat
 dev-libs/libjit:new-reg-alloc - Enable new register allocator
@@ -641,7 +639,6 @@ kde-base/krdc:rdesktop - Support for the remote desktop protocol.
 kde-base/ksysguard:zeroconf - Support for DNS Service Discovery (DNS-SD).
 kde-base/kttsd:akode - Support for the aKode audio-decoding frame-work.
 kde-base/kwin:xcomposite - Support for Xorg composite extension.
-kde-misc/tellico:cddb - Access cddb servers to retrieve and submit information about compact discs.
 mail-client/balsa:gtkspell - Use gtkspell for dictionary support
 mail-client/evolution:bogofilter - Use bogofilter instead of spamassassin
 mail-client/evolution:nntp - Enable evolution nntp (news) functionality
@@ -986,7 +983,6 @@ media-video/vdr:vfat - Allow vdr to store its recordings on vfat filesystems.
 media-video/vdr:yaepg - Enables support for the plugin vdr-yaepg.
 media-video/vlc:avahi - Support for avahi mdns daemon.
 media-video/vlc:cdda - Enables libcdda cd audio playback support.
-media-video/vlc:cddb - Access cddb servers to retrieve and submit information about compact disks.
 media-video/vlc:corba - Enables corba interface support.
 media-video/vlc:daap - Enables DAAP shares services discovery support.
 media-video/vlc:httpd - Enables a web based interface for vlc.
