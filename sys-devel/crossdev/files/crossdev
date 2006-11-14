@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.78 2006/10/11 21:46:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.79 2006/11/14 17:04:06 lu_zero Exp $
 
 cd /
 
@@ -141,12 +141,12 @@ parse_target() {
 		      ${CROSSDEV} -t spu-elf || exit 1
 		      exit 0;;
 		spu*) TARCH=ppc64;
-		      GPKG="gcc-cell";
+		      GVER="4.3.0_alpha20061111"; BVER="2.17.50.0.6";
 		      KPKG="[none]";
 		      LPKG="newlib";;
 		ppu*) TARCH=ppc64;
 		      CPRE=powerpc64;
-		      GPKG="gcc-cell";;
+		      GVER="4.3.0_alpha20061111"; BVER="2.17.50.0.6";;
 
 		ps2*) einfo "The ps2 target is really an alias for the ee/iop/dvp targets"
 		      ${CROSSDEV} -t ee  || exit 1
@@ -189,6 +189,7 @@ parse_target() {
 			   - msp430   http://mspgcc.sourceforge.net/
 			   - nios2    http://www.altera.com/products/ip/processors/nios2/ni2-index.html
 			   - ee / iop / dvp (ps2) [Playstation 2 targets]
+			   - ppu / spu (cell) [Cell/Playstation 3 targets]
 			Softfloat toolchains:
 			   Set the 'vendor' field to 'softfloat'
 			   e.g. armeb-softfloat-linux-uclibc

@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/crossdev
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.42 2006/10/11 21:46:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.43 2006/11/14 17:04:06 lu_zero Exp $
+
+  14 Nov 2006; Luca Barbato <lu_zero@gentoo.org> files/crossdev:
+  Cell update, not bumping version yet.
 
 *crossdev-0.9.17-r2 (11 Oct 2006)
 
