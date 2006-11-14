@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.317 2006/11/13 20:45:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.318 2006/11/14 21:59:12 beandog Exp $
 
 # Keep them sorted
 
@@ -221,6 +221,7 @@ msql - Adds support for the MSQL database server
 mssql - Adds support for Microsoft SQL Server database
 mule - Adds multi-language support to XEmacs
 multilib - On 64bit systems, if you want to be able to compile 32bit and 64bit binaries
+musepack - Enable support for the musepack audio codec
 mysql - Adds mySQL Database support
 mysqli - Adds support for the improved mySQL libraries
 nas - Adds support for network audio sound
