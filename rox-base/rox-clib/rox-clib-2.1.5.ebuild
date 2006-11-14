@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/rox-clib-2.1.5.ebuild,v 1.1 2005/10/03 10:30:52 svyatogor Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/rox-clib-2.1.5.ebuild,v 1.2 2006/11/14 20:55:54 lack Exp $
 
 DESCRIPTION="A library for ROX applications written in C."
 
@@ -25,7 +25,15 @@ DEPEND=$RDEPEND
 S=${WORKDIR}/ROX-CLib
 
 src_compile() {
-	./AppRun --compile || die
+	# Most rox self-compiles have a 'read' call to wait for the user to
+	# press return if the compile fails.
+	# Find and remove this:
+	sed -i.bak -e 's/\<read WAIT\>/#read/' AppRun
+
+	./AppRun --compile || die "Could not make ROX-CLib. Sorry."
+
+	# Restore the original AppRun
+	mv AppRun.bak AppRun
 }
 
 src_install() {
