@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.8-r5.ebuild,v 1.7 2006/11/14 10:40:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.8-r5.ebuild,v 1.8 2006/11/14 15:46:22 kloeri Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
