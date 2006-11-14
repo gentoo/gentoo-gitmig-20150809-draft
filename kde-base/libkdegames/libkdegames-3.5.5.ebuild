@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdegames/libkdegames-3.5.5.ebuild,v 1.3 2006/11/13 23:25:37 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdegames/libkdegames-3.5.5.ebuild,v 1.4 2006/11/14 16:23:40 gustavoz Exp $
 KMNAME=kdegames
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="Base library common to many KDE games."
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 DEPEND=""
 

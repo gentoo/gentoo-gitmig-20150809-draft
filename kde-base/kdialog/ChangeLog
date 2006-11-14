@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdialog
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.51 2006/11/14 00:17:23 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.52 2006/11/14 15:37:45 gustavoz Exp $
+
+  14 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org> kdialog-3.5.5.ebuild:
+  Stable on sparc wrt #147570
 
   13 Nov 2006; Danny van Dyk <kugelfang@gentoo.org> kdialog-3.5.5.ebuild:
   Marked stable on amd64 wrt bug #147570.

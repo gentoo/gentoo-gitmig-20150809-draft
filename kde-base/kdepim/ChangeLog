@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.228 2006/11/13 23:40:40 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.229 2006/11/14 18:47:35 gustavoz Exp $
+
+  14 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  kdepim-3.5.5-r2.ebuild:
+  Stable on sparc wrt #147570
 
   13 Nov 2006; Danny van Dyk <kugelfang@gentoo.org> kdepim-3.5.5-r2.ebuild:
   Marked stable on amd64 wrt bug #147570.

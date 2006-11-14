@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kgpg
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgpg/ChangeLog,v 1.55 2006/11/14 01:44:28 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgpg/ChangeLog,v 1.56 2006/11/14 16:49:28 gustavoz Exp $
+
+  14 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org> kgpg-3.5.5.ebuild:
+  Stable on sparc wrt #147570
 
   13 Nov 2006; Danny van Dyk <kugelfang@gentoo.org> kgpg-3.5.5.ebuild:
   Marked stable on amd64 wrt bug #147570.
