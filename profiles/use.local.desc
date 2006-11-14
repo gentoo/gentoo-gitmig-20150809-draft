@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2336 2006/11/14 21:59:12 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2337 2006/11/14 22:01:40 beandog Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -789,9 +789,7 @@ media-libs/xine-lib:modplug - Build with modplug support
 media-libs/xine-lib:pulseaudio - Enable support for PulseAudio output plugin
 media-libs/xine-lib:vidix - Support for vidix video output
 media-libs/xine-lib:xvmc - Support for XVideo Motion Compensation (accelerated mpeg playback)
-media-plugins/alsa-plugins:libsamplerate - Build with libsamplerate support
 media-plugins/alsa-plugins:pulseaudio - Enable support for PulseAudio output plugin
-media-plugins/audacious-crossfade:libsamplerate - Build with libsamplerate support
 media-plugins/audacious-plugins:chardet - Character set detection support for non-UTF8 ID3 tags
 media-plugins/audacious-plugins:modplug - Build with modplug support
 media-plugins/audacious-plugins:pulseaudio - Enable support for PulseAudio output plugin
@@ -826,7 +824,6 @@ media-sound/audacious:modplug - Build with modplug support
 media-sound/audacious:sid - Build with SID (Commodore 64 Audio) support
 media-sound/audacious:timidity - Build with Timidity++ (MIDI sequencer) support
 media-sound/audacious:wma - Build with WMA (Windows Media Audio) support
-media-sound/audacity:libsamplerate - Build with libsamplerate support
 media-sound/banshee:daap - Build with Daap support
 media-sound/banshee:ipod - Build with ipod support
 media-sound/banshee:njb - Build with njb audio player support
@@ -839,9 +836,7 @@ media-sound/bmpx:stream - Build with support for streaming audio
 media-sound/cmus:ao - Use libao for sound playback
 media-sound/cmus:modplug - Build with modplug support
 media-sound/darkice:twolame - Build with twolame support
-media-sound/ecasound:libsamplerate - Build with libsamplerate support
 media-sound/freewheeling:fluidsynth - compile with support for fluidsynth
-media-sound/gnusound:libsamplerate - Build gnusound with support for converting sample rates using libsamplerate
 media-sound/gpodder:ipod - Build with ipod support
 media-sound/jack-audio-connection-kit:coreaudio - Build the CoreAudio driver on Mac OS X systems
 media-sound/jack-audio-connection-kit:cpudetection - Enables runtime cpudetection
@@ -852,8 +847,6 @@ media-sound/lastfm-ripper:amazon - Enable advanced tagging using amazon webservi
 media-sound/lastfm-ripper:tagwriting - Enable MP3 tagging
 media-sound/lilypond:vim - Enable installation of lilypond vim plugins
 media-sound/listen:ipod - Support for ipod devices via libgpod
-media-sound/mhwaveedit:libsamplerate - Build with libsamplerate support
-media-sound/moc:libsamplerate - Support for libsamplerate (Sampling Conversion)
 media-sound/mpd:ao - Use libao for sound playback
 media-sound/mpd:icecast - Enable support for Icecast2
 media-sound/mpd:pulseaudio - Enable pulseaudio support
