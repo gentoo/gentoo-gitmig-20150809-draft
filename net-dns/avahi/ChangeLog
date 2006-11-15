@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.81 2006/11/15 13:21:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.82 2006/11/15 15:37:33 swegener Exp $
+
+  15 Nov 2006; Sven Wegener <swegener@gentoo.org>
+  -files/0.6.13-svn-fixes.patch, -avahi-0.6.10.ebuild, -avahi-0.6.11.ebuild,
+  -avahi-0.6.12.ebuild, -avahi-0.6.13.ebuild, -avahi-0.6.14.ebuild:
+  Cleanup.
 
   15 Nov 2006; Markus Rothe <corsair@gentoo.org> avahi-0.6.15.ebuild:
   Stable on ppc64; bug #154322
