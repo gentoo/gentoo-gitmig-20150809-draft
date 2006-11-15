@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-359.200.ebuild,v 1.1 2006/11/14 22:01:31 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-359.200.ebuild,v 1.2 2006/11/15 20:07:16 chutzpah Exp $
 
 inherit eutils multilib flag-o-matic
 
@@ -36,15 +36,6 @@ src_unpack() {
 	cd "${WORKDIR}/plt-${PV}"
 
 	epatch "${FILESDIR}/${PN}-350-fPIC.patch"
-
-	if ! use opengl ; then
-		# move aside the opengl-dependent stuff or install will fail
-		mkdir collects-disabled
-
-		for dir in ${GL_COLLECTS}; do
-			mv -f collects/${dir} collects-disabled/$(basename ${dir})
-		done
-	fi
 }
 
 src_compile() {
