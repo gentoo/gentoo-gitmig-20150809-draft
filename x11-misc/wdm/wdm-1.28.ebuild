@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/wdm-1.28.ebuild,v 1.8 2006/05/23 22:47:27 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/wdm-1.28.ebuild,v 1.9 2006/11/15 20:15:51 nelchael Exp $
 
 inherit eutils pam
 
@@ -16,6 +16,8 @@ LICENSE="GPL-2"
 
 RDEPEND=">=x11-wm/windowmaker-0.70.0
 	truetype? ( virtual/xft )
+	x11-libs/libXt
+	x11-libs/libXpm
 	pam? ( virtual/pam )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
