@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2.ebuild,v 1.27 2006/02/16 11:28:26 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2.ebuild,v 1.28 2006/11/15 19:59:12 nelchael Exp $
 
 inherit eutils
 
@@ -22,6 +22,7 @@ KEYWORDS="x86 sparc ppc amd64"
 # The dependencies following the gentoo policy as suggested by gbevin
 DEPEND="=dev-libs/glib-1.2*
 	=x11-libs/gtk+-1.2*
+	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )
 	sys-devel/gnuconfig
 	sys-devel/automake"
