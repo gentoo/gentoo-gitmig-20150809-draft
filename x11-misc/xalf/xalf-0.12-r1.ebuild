@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xalf/xalf-0.12-r1.ebuild,v 1.17 2005/11/03 12:23:42 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xalf/xalf-0.12-r1.ebuild,v 1.18 2006/11/15 20:40:33 nelchael Exp $
 
 IUSE="gnome"
 
@@ -12,6 +12,7 @@ SLOT="0"
 KEYWORDS="~ppc sparc x86"
 
 DEPEND="=x11-libs/gtk+-1.2*
+	x11-libs/libXmu
 	gnome? ( >=gnome-base/gnome-core-1.4.0.4-r1
 		gnome-base/control-center )"
 

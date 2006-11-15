@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xalf
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xalf/ChangeLog,v 1.10 2005/11/03 12:23:42 nelchael Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xalf/ChangeLog,v 1.11 2006/11/15 20:40:33 nelchael Exp $
+
+  15 Nov 2006; Krzysiek Pawlik <nelchael@gentoo.org> xalf-0.12-r1.ebuild:
+  Add missing x11-libs/libXmu, see bug #155213.
 
   03 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> xalf-0.12-r1.ebuild:
   Fixed dodoc not to install COPYING and/or INSTALL.
