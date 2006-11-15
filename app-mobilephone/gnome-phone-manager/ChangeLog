@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/gnome-phone-manager
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/ChangeLog,v 1.13 2006/10/07 15:50:55 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/ChangeLog,v 1.14 2006/11/15 22:19:05 mrness Exp $
+
+  15 Nov 2006; Alin Nastac <mrness@gentoo.org>
+  gnome-phone-manager-0.8.ebuild:
+  Stable on x86.
 
   07 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   gnome-phone-manager-0.8.ebuild:

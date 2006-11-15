@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.14.ebuild,v 1.1 2006/09/12 07:52:14 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.14.ebuild,v 1.2 2006/11/15 22:16:59 mrness Exp $
 
 inherit eutils flag-o-matic linux-info
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.gnokii.org/download/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="nls bluetooth ical irda sms postgres mysql usb X"
 
 RESTRICT="test" #test fails; maybe it will work in the future, but till then...
@@ -23,7 +23,8 @@ RDEPEND="X? ( >=x11-libs/gtk+-2.8.19 )
 	     )
 	ical? ( >=dev-libs/libical-0.26.6 )
 	usb? ( >=dev-libs/libusb-0.1.11 )"
-DEPEND="irda? ( virtual/os-headers )
+DEPEND="${RDEPEND}
+	irda? ( virtual/os-headers )
 	nls? ( >=sys-devel/gettext-0.14.5 )
 	>=sys-devel/autoconf-2.59-r7
 	>=app-text/recode-3.6-r2"
