@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.3.6.ebuild,v 1.6 2006/10/27 21:20:20 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.3.6.ebuild,v 1.7 2006/11/15 22:08:12 flameeyes Exp $
 
-inherit eutils alternatives
+inherit eutils alternatives libtool
 
 DESCRIPTION="SQLite: An SQL Database Engine in a C Library"
 HOMEPAGE="http://www.sqlite.org/"
@@ -45,6 +45,8 @@ src_unpack() {
 	# Fix broken tests that are not portable to 64 arches
 	epatch ${FILESDIR}/sqlite-64bit-test-fix.patch
 	epatch ${FILESDIR}/sqlite-64bit-test-fix2.patch
+
+	elibtoolize
 	epunt_cxx
 }
 
