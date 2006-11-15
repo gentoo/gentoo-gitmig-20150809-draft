@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfm/xfm-1.4.3.ebuild,v 1.9 2006/10/21 22:00:51 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfm/xfm-1.4.3.ebuild,v 1.10 2006/11/15 20:35:16 nelchael Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
+	x11-libs/libXaw
 	x11-libs/libXmu
 	x11-libs/libXt
 	x11-libs/libXext
