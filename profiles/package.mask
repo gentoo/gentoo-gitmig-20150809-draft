@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6269 2006/11/15 19:48:27 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6270 2006/11/15 20:16:59 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ## 
+
+# Doug Goldstein <cardoe@gentoo.org> (15 Nov 2006)
+# Completely broken. Upstream removed and changed binary files
+# diff kinda doesn't work with binary files. Gonna have to make
+# a tarball of changed binary files and overlay it
+=media-plugins/mytharchive-0.20_p11671
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (15 Nov 2006)
 # This is masked so I can get some more testing before unleashing it on the
