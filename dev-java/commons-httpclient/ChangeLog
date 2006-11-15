@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/commons-httpclient
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.32 2006/11/15 04:18:29 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.33 2006/11/15 18:29:31 wltjr Exp $
+
+  15 Nov 2006; William L. Thomson Jr. <wltjr@gentoo.org>
+  commons-httpclient-3.0.1.ebuild:
+  Fixed invalid iuse per bug #155268, changed from junit to test. However
+  tests don't seem to be compiled or run :(, still needs luv there
 
   15 Nov 2006; William L. Thomson Jr. <wltjr@gentoo.org>
   +files/commons-httpclient-3.0.1-gentoo.patch:
