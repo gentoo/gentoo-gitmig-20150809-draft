@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/pax-utils.eclass,v 1.1 2006/01/22 14:18:48 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/pax-utils.eclass,v 1.2 2006/11/15 22:14:25 kevquinn Exp $
 
 # Author:
 #	Kevin F. Quinn <kevquinn@gentoo.org>
@@ -11,82 +11,45 @@
 inherit eutils
 
 ##### pax-mark ####
-# Mark a file for PaX with the given flags.
-# Tries chpax (EI_FLAGS) and paxctl (PT_FLAGS) if they are installed.
-# If neither are installed, returns 0 (i.e. has no effect on non-PaX
-# systems unless the owner has installed chpax and/or paxctl).
-# Deliberately does _not_ check whether the build system is PaX or not.
+# Mark a file for PaX, with the provided flags, and log it into
+# a PaX database.  Returns non-zero if flag marking failed.
 #
-# Syntax:
-#   pax-mark [-q] {<flags>} [{<files>}]
-#
-# -q: do things quietly (no einfo/ewarn)
-#
-# There must be at least one <flags>, and can include:
-#     -execstack           equivalent to -E
-#     -execheap            equivalent to -m
-#     -unrestricted        equivalent to -psmxer
-#     -{[pPsSmMxXeErR]}    as used direcly by chpax/paxctl
-#
-# Where more than one flag is given they are concatenated.
-#
-# {<files>} may be empty, so it's safe to use for example the results
-# of a find that may not return any results.
-#
-# Return codes:
-#  0: for all files, all installed utilities succeed.
-#  1: No flags specified
-# >1: bit 2 => chpax failed, bit 3 => paxctl failed
+# If paxctl is installed, but not chpax, then the legacy
+# EI flags (which are not strip-safe) will not be set.
+# If neither are installed, falls back to scanelf (which
+# is always present, but currently doesn't quite do all
+# that paxctl can do).
 
 pax-mark() {
-	local flags ret quiet
-	# Fail if no parameters at all (especially no flags)
-	[[ -z $1 ]] && return 1
-	flags=
-	ret=0
-	quiet=
-	while [[ ${1:0:1} == "-" ]]; do
-		case ${1} in
-		-execstack)
-			flags="${flags}E"
-			;;
-		-execheap)
-			flags="${flags}m"
-			;;
-		-unrestricted)
-			flags="${flags}psmxer"
-			;;
-		-q)
-			quiet="/bin/false "
-			;;
-		*)
-			flags="${flags}${1:1}"
-			;;
-		esac
-		shift
-	done
-	# Fail if no flags given
-	[[ -z ${flags} ]] && return 1
-	# Quietly exit if no files given
-	[[ -z $1 ]] && return 0
+	local flags fail=0
+	flags=$1
+	shift
 	if [[ -x /sbin/chpax ]]; then
-		if /sbin/chpax -${flags} $*; then
-			${quiet} einfo "PaX EI flags set to ${flags} on $*"
-		else
-			${quiet} ewarn "Failed to set EI flags to ${flags} on $*"
-			(( ret=${ret}|2 ))
-		fi
+		einfo "Legacy EI PaX marking $* with ${flags}"
+		/sbin/chpax -${flags} $* || fail=1
 	fi
 	if [[ -x /sbin/paxctl ]]; then
-		# Steal PT_GNU_STACK if paxctl supports it
-		/sbin/paxctl -v 2>&1 | grep PT_GNU_STACK > /dev/null && \
-			flags="c${flags}"
-		if /sbin/paxctl -${flags} $*; then
-			${quiet} einfo "PaX PT flags set to ${flags} on $*"
-		else
-			${quiet} ewarn "Failed to set PT flags to ${flags} on $*"
-			(( ret=${ret}|4))
-		fi
+		einfo "PT PaX marking $* with ${flags}"
+		/sbin/paxctl -${flags} $* ||
+		/sbin/paxctl -c${flags} $* ||
+		/sbin/paxctl -C${flags} $* || fail=1
+	elif [[ -x /usr/bin/scanelf ]]; then
+		einfo "Fallback PaX marking $* with ${flags}"
+		/usr/bin/scanelf -Xxz ${flags} $*
+	else
+		ewarn "Failed to set PaX markings ${flags} for files $*.  Executables may be killed by PaX kernels."
+		fail=1
 	fi
-	return ${ret}
+	return ${fail}
+}
+
+##### host-is-pax
+# Indicates whether the build machine has PaX or not; intended for use
+# where the build process must be modified conditionally in order to satisfy PaX.
+host-is-pax() {
+	# We need procfs to work this out.  PaX is only available on Linux,
+	# so result is always false on non-linux machines (e.g. Gentoo/*BSD)
+	[[ -e /proc/self/status ]] || return 1
+	grep ^PaX: /proc/self/status > /dev/null
+	return $?
 }
