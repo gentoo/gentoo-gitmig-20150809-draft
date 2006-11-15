@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.4.ebuild,v 1.1 2006/11/14 11:11:40 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.4.ebuild,v 1.2 2006/11/15 06:54:54 dragonheart Exp $
 
 inherit eutils
 # used for epause
@@ -37,7 +37,8 @@ DEPEND_COMMON="
 RDEPEND="${DEPEND_COMMON}
 	hddtemp? ( app-admin/hddtemp )
 	mpd? ( media-sound/mpd )
-	vim-syntax? ( app-editors/vim )"
+	vim-syntax? ( || ( app-editors/vim
+		app-editors/gvim ) )"
 
 DEPEND="
 	${DEPEND_COMMON}
@@ -84,7 +85,7 @@ src_install() {
 		doins "${S}"/extras/vim/ftdetect/conkyrc.vim
 
 		insinto /usr/share/vim/vimfiles/syntax
-		doins "${S}"/extras/vim/syntax/conkyrc.vim 
+		doins "${S}"/extras/vim/syntax/conkyrc.vim
 	fi
 }
 

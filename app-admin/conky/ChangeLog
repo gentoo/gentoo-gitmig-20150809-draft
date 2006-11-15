@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.37 2006/11/14 11:11:40 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.38 2006/11/15 06:54:54 dragonheart Exp $
+
+  15 Nov 2006; Daniel Black <dragonheart@gentoo.org> conky-1.4.4.ebuild:
+  gvim or vim for RDEPEND - bug #155154 thanks to Zack Elan
 
 *conky-1.4.4 (14 Nov 2006)
 
