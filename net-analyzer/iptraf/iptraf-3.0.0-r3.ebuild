@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-3.0.0-r3.ebuild,v 1.1 2006/11/14 20:25:34 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-3.0.0-r3.ebuild,v 1.2 2006/11/15 23:06:53 cedk Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="IPTraf is an ncurses-based IP LAN monitor"
 HOMEPAGE="http://iptraf.seul.org/"
@@ -12,9 +12,16 @@ SRC_URI="ftp://iptraf.seul.org/pub/iptraf/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="ipv6 suid"
+IUSE="ipv6 suid unicode"
 
 DEPEND=">=sys-libs/ncurses-5.2-r1"
+
+pkg_setup() {
+	if use unicode && ! built_with_use sys-libs/ncurses unicode; then
+		eerror "sys-libs/ncurses must be build with unicode"
+		die "${PN} requires sys-libs/ncurses with USE=unicode"
+	fi
+}
 
 src_unpack() {
 	unpack ${P}.tar.gz
@@ -25,7 +32,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-bnep.patch
 	epatch ${FILESDIR}/${P}-Makefile.patch
 	# bug 152883
-	epatch "${FILESDIR}/${P}-ncursesw.patch"
+	use unicode && epatch "${FILESDIR}/${P}-ncursesw.patch"
 	epatch "${FILESDIR}/${P}-setlocale.patch"
 
 	# bug 128965
@@ -53,7 +60,7 @@ src_compile() {
 	if use suid ; then
 		append-flags -DALLOWUSERS
 	fi
-	emake CFLAGS="$CFLAGS" -C src || die "emake failed"
+	emake CFLAGS="$CFLAGS" CC="$(tc-getCC)" -C src || die "emake failed"
 }
 
 src_install() {
