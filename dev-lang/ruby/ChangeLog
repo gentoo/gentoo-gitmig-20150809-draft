@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.236 2006/11/13 20:06:02 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.237 2006/11/15 13:00:47 corsair Exp $
+
+  15 Nov 2006; Markus Rothe <corsair@gentoo.org> ruby-1.8.5-r3.ebuild:
+  Stable on ppc64; bug #153497
 
   13 Nov 2006; René Nussbaumer <killerfox@gentoo.org> ruby-1.8.5-r3.ebuild:
   Stable on hppa. See bug #153497.
