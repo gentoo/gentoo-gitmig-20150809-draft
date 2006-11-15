@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/convmv/convmv-1.10.ebuild,v 1.7 2006/11/15 00:38:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/convmv/convmv-1.10.ebuild,v 1.8 2006/11/15 01:58:47 robbat2 Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ src_install() {
 
 src_test() {
 	cd ${S}
-	tar xf testsuite.tar
+	unpack ./testsuite.tar
 	# Never make assumptions as to the ordering of files inside a directory!
 	epatch ${FILESDIR}/${PN}-1.10-testcase-cleanup.patch
 	cd ${S}/suite
