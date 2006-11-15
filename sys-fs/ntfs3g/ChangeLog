@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.14 2006/10/31 03:42:07 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.15 2006/11/15 03:23:23 chutzpah Exp $
+
+*ntfs3g-0.20061115 (15 Nov 2006)
+
+  15 Nov 2006; Patrick McLean <chutzpah@gentoo.org>
+  +ntfs3g-0.20061115.ebuild:
+  Version bump, update FUSE depend to 2.6.0.
 
 *ntfs3g-0.20061031 (31 Oct 2006)
 
