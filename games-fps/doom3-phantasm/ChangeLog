@@ -1,0 +1,11 @@
+# ChangeLog for games-fps/doom3-phantasm
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-phantasm/ChangeLog,v 1.1 2006/11/15 20:00:33 wolf31o2 Exp $
+
+*doom3-phantasm-1.2 (15 Nov 2006)
+
+  15 Nov 2006; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +doom3-phantasm-1.2.ebuild:
+  Initial import. Ebuild by Paul Bredbury <brebs@sent.com>. Closing bug
+  #154152.
+
