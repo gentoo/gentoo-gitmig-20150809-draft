@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/sendEmail
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendEmail/ChangeLog,v 1.8 2006/09/19 08:14:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendEmail/ChangeLog,v 1.9 2006/11/15 20:19:19 mrness Exp $
+
+*sendEmail-1.54 (15 Nov 2006)
+
+  15 Nov 2006; Alin Nastac <mrness@gentoo.org> -sendEmail-1.42.ebuild,
+  +sendEmail-1.54.ebuild:
+  Remove old version. Version bump, with TLS support enabled
+  by ssl USE flag.
 
   19 Sep 2006; Alin Nastac <mrness@gentoo.org> metadata.xml,
   sendEmail-1.52.ebuild:
