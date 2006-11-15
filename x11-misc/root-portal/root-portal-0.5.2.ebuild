@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/root-portal-0.5.2.ebuild,v 1.6 2006/09/21 11:57:58 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/root-portal-0.5.2.ebuild,v 1.7 2006/11/15 19:57:07 nelchael Exp $
 
 inherit gnome2 debug
 
@@ -19,6 +19,7 @@ RDEPEND=">=x11-libs/gtk+-2
 	>=gnome-base/orbit-2
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/gnome-panel-2
+	x11-libs/libXpm
 	dev-libs/libxml"
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
