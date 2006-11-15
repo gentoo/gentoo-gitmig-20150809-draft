@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.17.1-r1.ebuild,v 1.2 2006/07/04 13:01:03 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.17.1-r1.ebuild,v 1.3 2006/11/15 03:04:42 nerdboy Exp $
 
 inherit eutils
 
@@ -30,6 +30,9 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${P}.tar.gz
+	# backport patch for file-io error (fixed in current trunk)
+	EPATCH_OPTS="-d ${S} -p1"
+	epatch ${FILESDIR}/${P}-io-error.patch
 
 	# Fix for coreutils change of tail syntax
 	cd ${S}
