@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.77 2006/11/15 19:24:53 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.78 2006/11/15 19:25:45 caleb Exp $
+
+  15 Nov 2006; Caleb Tennis <caleb@gentoo.org> -PyQt-3.16.ebuild:
+  remove old version
 
 *PyQt-3.17 (15 Nov 2006)
 
