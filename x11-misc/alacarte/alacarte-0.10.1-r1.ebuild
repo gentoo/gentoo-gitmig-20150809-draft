@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.10.1-r1.ebuild,v 1.1 2006/11/15 02:28:30 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.10.1-r1.ebuild,v 1.2 2006/11/15 19:42:49 metalgod Exp $
 
-inherit gnome2 python
+inherit autotools gnome2 python
 
 DESCRIPTION="Simple GNOME menu editor"
 HOMEPAGE="http://www.realistanew.com/projects/alacarte"
@@ -28,4 +28,5 @@ src_unpack() {
 
 	# Patch to support python 2.5 bgo (#148833)
 	epatch ${FILESDIR}/${P}-python25.patch
+	eautoreconf
 }
