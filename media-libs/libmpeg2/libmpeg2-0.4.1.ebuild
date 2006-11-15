@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.1.ebuild,v 1.1 2006/11/14 21:54:42 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.1.ebuild,v 1.2 2006/11/15 12:01:47 zzam Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -48,9 +48,6 @@ src_unpack() {
 }
 
 src_compile() {
-	# x86 asm + 64bit binary == no worky (fixes bug 69227)
-	use amd64 && myconf="--disable-accel-detect"
-
 	econf \
 		--enable-shared \
 		--disable-dependency-tracking \
