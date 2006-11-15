@@ -1,0 +1,9 @@
+# ChangeLog for sys-apps/lsparisc
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsparisc/ChangeLog,v 1.1 2006/11/15 23:31:07 jer Exp $
+
+*lsparisc-0.2 (15 Nov 2006)
+
+  15 Nov 2006; Jeroen Roovers <jer@gentoo.org> +lsparisc-0.2.ebuild:
+  Initial commit. Thanks go to nephros for bringing this tool to our attention.
+
