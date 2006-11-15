@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-mga/xf86-video-mga-1.4.1.ebuild,v 1.6 2006/10/11 00:27:00 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-mga/xf86-video-mga-1.4.1.ebuild,v 1.7 2006/11/15 14:29:30 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -19,6 +19,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-proto/xproto
 	dri? ( x11-proto/xf86driproto
+			x11-proto/glproto
 			>=x11-libs/libdrm-2 )"
 
 CONFIGURE_OPTIONS="$(use_enable dri)"
