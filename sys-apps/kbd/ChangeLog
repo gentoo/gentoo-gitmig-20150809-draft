@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.60 2006/11/02 10:22:52 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.61 2006/11/15 13:01:53 corsair Exp $
+
+  15 Nov 2006; Markus Rothe <corsair@gentoo.org> kbd-1.12-r8.ebuild:
+  Stable on ppc64; bug #153556
 
   02 Nov 2006; Timothy Redaelli <drizzt@gentoo.org> kbd-1.12-r8.ebuild:
   Stable for ppc (bug #153556).
