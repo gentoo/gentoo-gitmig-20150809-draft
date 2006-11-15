@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/bmpx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.49 2006/11/12 23:05:21 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.50 2006/11/15 18:48:10 chutzpah Exp $
+
+*bmpx-0.34.4 (15 Nov 2006)
+
+  15 Nov 2006; Patrick McLean <chutzpah@gentoo.org> -bmpx-0.30.3.ebuild,
+  +bmpx-0.34.4.ebuild:
+  Version bump, clean out old versions that were always masked anyway.
 
 *bmpx-0.34.3 (12 Nov 2006)
 
