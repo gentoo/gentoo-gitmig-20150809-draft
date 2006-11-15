@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.323 2006/11/14 22:18:32 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.324 2006/11/15 15:36:42 beandog Exp $
 
 # Keep them sorted
 
@@ -20,6 +20,7 @@ afs - Adds OpenAFS support (distributed file system)
 aim - Enable AIM IM protocol support
 alsa - Adds support for media-libs/alsa-lib (Advanced Linux Sound Architecture)
 altivec - Adds support for optimizations for G4 and G5/ppc970 processors
+ao - Use libao audio output library for sound playback
 apache - Chooses Apache1 support when a package optionally supports Apache1
 apache2 - Chooses Apache2 support when a package supports both Apache1 and Apache2
 apm - Adds APM (Advanced Power Management) support
@@ -178,7 +179,6 @@ lcms - Adds lcms support (color management engine)
 ldap - Adds LDAP support (Lightweight Directory Access Protocol)
 leim - Adds input methods support to Emacs
 lesstif - Use lesstif over openmotif in cases where a program supports both
-libao - Use libao audio output library for sound playback
 libcaca - Add support for colored ASCII-art graphics
 libedit - Use the libedit library (replacement for readline)
 libg++ - Adds C++ modules in dev-db/postgresql (libpq++)
