@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6265 2006/11/14 22:15:48 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6266 2006/11/15 15:15:39 markusle Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ## 
+
+# Markus Dittrich <markusle@gentoo.org> (15 Nov 2006)
+# masked sci-mathematics/gturing; last release was
+# in 2002, it uses functions missing in >=gnome-2.14 and, 
+# therefore, refuses to compile. Unless somebody steps up 
+# to fix it we should probably remove it from the tree.
+sci-mathematics/gturing
 
 # George Shapovalov <george@gentoo.org> (14 Nov 2006)
 # dead upstream, should be replaced by PolyORB
