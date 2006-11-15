@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.151 2006/10/18 11:54:09 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.152 2006/11/15 01:01:39 marineam Exp $
+
+*ck-sources-2.6.18_p1-r2 (15 Nov 2006)
+
+  15 Nov 2006; Michael Marineau <marineam@gentoo.org>
+  -ck-sources-2.6.18_p1.ebuild, -ck-sources-2.6.18_p1-r1.ebuild,
+  +ck-sources-2.6.18_p1-r2.ebuild:
+  Enable STRICTORDER because the order was changing for some people. Bump to
+  genpatches 3 which includes 2.6.18.2. Closes bug #152102.
 
   18 Oct 2006; Christian Heim <phreak@gentoo.org> Manifest:
   Fixing the Manifest.
