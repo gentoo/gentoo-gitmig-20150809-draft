@@ -11,3 +11,4 @@ move sys-apps/dbus-core sys-apps/dbus
 move net-misc/NetworkManager net-misc/networkmanager
 move net-www/bugport www-apps/bugport
 move sys-devel/gcc-hppa64 sys-devel/kgcc64
+move net-misc/asterisk-chan_capi-cm net-misc/asterisk-chan_capi
