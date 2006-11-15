@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.583 2006/11/14 18:59:20 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.584 2006/11/15 14:43:44 lu_zero Exp $
+
+  15 Nov 2006; Luca Barbato <lu_zero@gentoo.org>
+  gcc-4.3.0_alpha20061111.ebuild:
+  Fixed spu build
 
   14 Nov 2006; Andrej Kacian <ticho@gentoo.org> gcc-4.1.1-r1.ebuild:
   Stable on x86, bug #155090.
