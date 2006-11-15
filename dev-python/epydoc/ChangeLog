@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/epydoc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/ChangeLog,v 1.17 2006/01/30 19:19:26 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/ChangeLog,v 1.18 2006/11/15 00:19:03 jer Exp $
+
+  15 Nov 2006; Jeroen Roovers <jer@gentoo.org> epydoc-2.1-r2.ebuild:
+  Stable for HPPA.
 
   30 Jan 2006; Patrick McLean <chutzpah@gentoo.org> epydoc-2.1-r2.ebuild:
   Added to ~amd64 (bug #98196).
