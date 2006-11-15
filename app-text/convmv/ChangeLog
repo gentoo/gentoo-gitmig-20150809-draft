@@ -1,6 +1,9 @@
 # ChangeLog for app-text/convmv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/convmv/ChangeLog,v 1.27 2006/11/15 01:58:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/convmv/ChangeLog,v 1.28 2006/11/15 03:33:00 tgall Exp $
+
+  15 Nov 2006; Tom Gall <tgall@gentoo.org> convmv-1.10.ebuild:
+  stable on ppc64, bug 154981
 
   15 Nov 2006; Robin H. Johnson <robbat2@gentoo.org> convmv-1.10.ebuild:
   Change to use unpack instead of tar in src_test.
