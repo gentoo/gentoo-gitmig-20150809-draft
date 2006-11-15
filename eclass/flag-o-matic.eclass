@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.111 2006/10/14 20:27:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.112 2006/11/15 22:17:56 vapier Exp $
 #
 # Maintainer: base-system@gentoo.org
 
@@ -571,28 +571,6 @@ raw-ldflags() {
 		set -- "$@" ${x//,/ }
 	done
 	echo "$@"
-}
-
-# This is thanks to great work from Paul de Vrieze <gentoo-user@devrieze.net>,
-# bug #9016.  Also thanks to Jukka Salmi <salmi@gmx.net> (bug #13907) for more
-# fixes.
-#
-# Export CFLAGS and CXXFLAGS that are compadible with gcc-2.95.3
-gcc2-flags() {
-	if [[ $(tc-arch) == "x86" || $(tc-arch) == "amd64" ]] ; then
-		CFLAGS=${CFLAGS//-mtune=/-mcpu=}
-		CXXFLAGS=${CXXFLAGS//-mtune=/-mcpu=}
-	fi
-
-	replace-cpu-flags k6-{2,3} k6
-	replace-cpu-flags athlon{,-{tbird,4,xp,mp}} i686
-
-	replace-cpu-flags pentium-mmx i586
-	replace-cpu-flags pentium{2,3,4} i686
-
-	replace-cpu-flags ev6{7,8} ev6
-
-	export CFLAGS CXXFLAGS
 }
 
 # Gets the flags needed for "NOW" binding
