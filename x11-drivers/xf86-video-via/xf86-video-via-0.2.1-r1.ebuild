@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-via/xf86-video-via-0.2.1-r1.ebuild,v 1.6 2006/10/13 23:15:48 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-via/xf86-video-via-0.2.1-r1.ebuild,v 1.7 2006/11/15 14:30:09 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -19,6 +19,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-proto/xproto
 	dri? ( x11-proto/xf86driproto
+		x11-proto/glproto
 		>=x11-libs/libdrm-2
 		x11-libs/libX11 )"
 

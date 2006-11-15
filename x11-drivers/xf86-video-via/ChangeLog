@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-via
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-via/ChangeLog,v 1.29 2006/10/22 18:12:49 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-via/ChangeLog,v 1.30 2006/11/15 14:30:09 dberkholz Exp $
+
+  15 Nov 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  xf86-video-via-0.1.33.2.ebuild, xf86-video-via-0.2.1-r1.ebuild,
+  xf86-video-via-0.2.2.ebuild:
+  (#155219) Add missing dep on glproto when USE=dri.
 
 *xf86-video-via-0.2.2 (21 Oct 2006)
 
