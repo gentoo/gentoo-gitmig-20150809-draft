@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doom3-dungeon
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-dungeon/ChangeLog,v 1.1 2006/11/01 15:29:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-dungeon/ChangeLog,v 1.2 2006/11/15 20:05:56 wolf31o2 Exp $
+
+  15 Nov 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  doom3-dungeon-8.01.ebuild:
+  Changed wrapper to use fs_game_base d3xp, which should fix this.
 
 *doom3-dungeon-8.01 (01 Nov 2006)
 
