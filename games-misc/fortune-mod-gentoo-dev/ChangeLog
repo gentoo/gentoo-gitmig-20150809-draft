@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/fortune-mod-gentoo-dev
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-dev/ChangeLog,v 1.23 2006/09/04 02:25:27 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-dev/ChangeLog,v 1.24 2006/11/15 07:36:35 avenj Exp $
+
+  15 Nov 2006; Jon Portnoy <avenj@gentoo.org> fortune-mod-gentoo-dev-20061115.ebuild :
+  My last gentoo-dev fortunes update :)
 
   03 Sep 2006; Jon Portnoy <avenj@gentoo.org> fortune-mod-gentoo-dev-20051222.ebuild,
   fortune-mod-gentoo-dev-20050503.ebuild, fortune-mod-gentoo-dev-20050106.ebuild :
