@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/commons-collections
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.34 2006/10/17 03:42:19 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.35 2006/11/15 03:52:59 wltjr Exp $
+
+*commons-collections-3.2 (15 Nov 2006)
+
+  15 Nov 2006; William L. Thomson Jr. <wltjr@gentoo.org>
+  +commons-collections-3.2.ebuild:
+  Revision bump, moved ebuild from overlay.
 
   17 Oct 2006; Joshua Nichols <nichoj@gentoo.org>
   commons-collections-3.1-r1.ebuild:
