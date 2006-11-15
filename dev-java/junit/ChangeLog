@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/junit
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.27 2006/11/15 03:46:13 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.28 2006/11/15 11:02:15 nelchael Exp $
+
+  15 Nov 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/junit-3.8.2-build.xml:
+  Add junit-3.8.2-build.xml to fix bug 155194.
 
 *junit-3.8.2 (15 Nov 2006)
 
