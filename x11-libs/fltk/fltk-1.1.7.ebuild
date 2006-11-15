@@ -1,8 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.7.ebuild,v 1.10 2006/08/09 19:49:08 jer Exp $
-
-IUSE="noxft opengl debug"
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.7.ebuild,v 1.11 2006/11/15 11:46:20 nelchael Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -21,6 +19,8 @@ SLOT="${PV_MAJOR}.${PV_MINOR}"
 INCDIR=/usr/include/fltk-${SLOT}
 LIBDIR=/usr/$(get_libdir)/fltk-${SLOT}
 
+IUSE="noxft opengl debug"
+
 DEPEND="|| ( (
 		x11-libs/libXext
 		x11-libs/libICE
@@ -36,7 +36,10 @@ DEPEND="|| ( (
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/libs-1.7.diff || die "patch failed"
+	epatch "${FILESDIR}/libs-1.7.diff" || die "patch failed"
+	use amd64 && {
+		epatch "${FILESDIR}/${P}-amd64.patch" || die "patch failed"
+	}
 }
 
 src_compile() {
