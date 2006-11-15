@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/gturing
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gturing/ChangeLog,v 1.4 2006/04/14 20:06:19 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gturing/ChangeLog,v 1.5 2006/11/15 15:18:04 markusle Exp $
+
+  15 Nov 2006; Markus Dittrich <markusle@gentoo.org> gturing-0.1.1.ebuild:
+  Added dependencies on pkgconfig and scrollkeeper. 
+  This fixes bug #155233. Also, moved gturing into package.mask
+  since it uses macros that are missing in gnome >=2.14 and
+  won't compile any more (see bug #130579).
 
   14 Apr 2006; Marcus D. Hanwell <cryos@gentoo.org>
   +files/gturing-0.1.1-gcc-41.patch, gturing-0.1.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gturing/gturing-0.1.1.ebuild,v 1.3 2006/04/14 20:06:19 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gturing/gturing-0.1.1.ebuild,v 1.4 2006/11/15 15:18:04 markusle Exp $
 
 inherit eutils
 
@@ -13,7 +13,9 @@ SLOT="0"
 KEYWORDS="x86 amd64"
 IUSE=""
 
-DEPEND=">=gnome-base/libgnomeui-2.0.0"
+DEPEND=">=gnome-base/libgnomeui-2.0.0
+		dev-util/pkgconfig
+		app-text/scrollkeeper"
 
 src_unpack() {
 	unpack ${A}
