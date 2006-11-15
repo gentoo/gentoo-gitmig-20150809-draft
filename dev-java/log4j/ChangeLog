@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/log4j
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.42 2006/10/17 02:53:44 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.43 2006/11/15 03:41:53 wltjr Exp $
+
+*log4j-1.2.14 (15 Nov 2006)
+
+  15 Nov 2006; William L. Thomson Jr. <wltjr@gentoo.org>
+  +log4j-1.2.14.ebuild:
+  Revision bump, moved ebuild from overlay. Dropped ~sparc keyword due to
+  bad/missin dep issues
 
   17 Oct 2006; Joshua Nichols <nichoj@gentoo.org> log4j-1.2.13-r1.ebuild:
   Keyworded ~ia64.
