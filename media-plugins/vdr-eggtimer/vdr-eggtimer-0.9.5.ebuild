@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-eggtimer/vdr-eggtimer-0.9.5.ebuild,v 1.1 2006/09/28 20:44:53 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-eggtimer/vdr-eggtimer-0.9.5.ebuild,v 1.2 2006/11/15 13:44:38 zzam Exp $
 
 inherit vdr-plugin
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://vaasa.wi-bw.tfh-wildau.de/~pjuszack/digicam/#eggtimer"
 SRC_URI="http://194.95.44.38/~pjuszack/digicam/download/${P}.tgz"
 LICENSE="GPL-2"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=media-video/vdr-1.4.0"
 
