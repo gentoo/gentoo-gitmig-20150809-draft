@@ -51,5 +51,5 @@ root	ALL=(ALL) ALL
 # %www		ALL=(ALL)	NOPASSWD: sudoedit /etc/httpd.conf
 
 # Samples
-# %users  ALL=/sbin/mount /cdrom,/sbin/umount /cdrom
+# %users  ALL=/bin/mount /cdrom,/bin/umount /cdrom
 # %users  localhost=/sbin/shutdown -h now

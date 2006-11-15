@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.97 2006/11/12 11:50:16 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.98 2006/11/15 21:29:29 taviso Exp $
+
+  15 Nov 2006; Tavis Ormandy <taviso@gentoo.org> files/sudoers:
+  fix #155298, wrong path in samples for mount command.
 
   12 Nov 2006; Tavis Ormandy <taviso@gentoo.org> files/sudoers:
   multiple sudoedit targets dont work, correct example.
