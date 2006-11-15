@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IO-Compress-Base
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Compress-Base/ChangeLog,v 1.5 2006/11/15 02:45:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Compress-Base/ChangeLog,v 1.6 2006/11/15 13:12:48 corsair Exp $
+
+  15 Nov 2006; Markus Rothe <corsair@gentoo.org>
+  IO-Compress-Base-2.001.ebuild:
+  Added ~ppc64; bug #154244
 
   15 Nov 2006; Jeroen Roovers <jer@gentoo.org>
   IO-Compress-Base-2.001.ebuild:

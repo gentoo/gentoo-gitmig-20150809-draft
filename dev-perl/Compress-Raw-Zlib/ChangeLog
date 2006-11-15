@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Compress-Raw-Zlib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Raw-Zlib/ChangeLog,v 1.6 2006/11/15 02:48:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Raw-Zlib/ChangeLog,v 1.7 2006/11/15 13:12:09 corsair Exp $
+
+  15 Nov 2006; Markus Rothe <corsair@gentoo.org>
+  Compress-Raw-Zlib-2.001.ebuild:
+  Added ~ppc64; bug #154244
 
   15 Nov 2006; Jeroen Roovers <jer@gentoo.org>
   Compress-Raw-Zlib-2.001.ebuild:
