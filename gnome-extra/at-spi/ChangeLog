@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.131 2006/11/01 23:26:42 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.132 2006/11/15 19:51:10 leonardop Exp $
+
+  15 Nov 2006; Leonardo Boshell <leonardop@gentoo.org>
+  +files/at-spi-1.7.12-tests.patch, at-spi-1.7.12.ebuild:
+  Added patch to fix tests (bug #140235).
 
 *at-spi-1.7.12 (01 Nov 2006)
 

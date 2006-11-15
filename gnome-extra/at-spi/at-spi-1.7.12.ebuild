@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.7.12.ebuild,v 1.1 2006/11/01 23:26:42 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.7.12.ebuild,v 1.2 2006/11/15 19:51:10 leonardop Exp $
 
-inherit virtualx gnome2
+WANT_AUTOMAKE="1.9"
+
+inherit virtualx autotools eutils gnome2
 
 DESCRIPTION="The Gnome Accessibility Toolkit"
 HOMEPAGE="http://developer.gnome.org/projects/gap/"
@@ -37,6 +39,15 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
+
+src_unpack() {
+	gnome2_src_unpack
+
+	epatch "${FILESDIR}"/${P}-tests.patch
+
+	cp aclocal.m4 old_macros.m4
+	AT_M4DIR="." eautoreconf
+}
 
 src_test() {
 	Xmake check || die "Testing phase failed"
