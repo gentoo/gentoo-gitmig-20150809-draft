@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/rox-clib-2.1.5.ebuild,v 1.2 2006/11/14 20:55:54 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/rox-clib-2.1.5.ebuild,v 1.3 2006/11/15 15:57:54 lack Exp $
 
 DESCRIPTION="A library for ROX applications written in C."
 
@@ -20,7 +20,8 @@ IUSE=""
 
 RDEPEND=">=rox-base/rox-2.1.0"
 
-DEPEND=$RDEPEND
+DEPEND="$RDEPEND
+	>=dev-util/pkgconfig-0.20"
 
 S=${WORKDIR}/ROX-CLib
 

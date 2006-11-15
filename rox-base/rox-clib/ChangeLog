@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/rox-clib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/ChangeLog,v 1.10 2006/11/14 20:55:54 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/ChangeLog,v 1.11 2006/11/15 15:57:54 lack Exp $
+
+  15 Nov 2006; Jim Ramsay <lack@gentoo.org> rox-clib-2.1.5.ebuild,
+  rox-clib-2.1.7.ebuild, rox-clib-2.1.8.ebuild:
+  Bug 155251 - Added pkgconfig build dependency
 
   14 Nov 2006; Jim Ramsay <lack@gentoo.org> -rox-clib-2.1.1.ebuild,
   rox-clib-2.1.5.ebuild, rox-clib-2.1.7.ebuild, rox-clib-2.1.8.ebuild:
