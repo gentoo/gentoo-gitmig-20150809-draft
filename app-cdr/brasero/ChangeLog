@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.6 2006/11/04 18:45:40 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.7 2006/11/15 20:43:28 metalgod Exp $
+
+*brasero-0.5.1 (15 Nov 2006)
+
+  15 Nov 2006; Luis Medinas <metalgod@gentoo.org> +brasero-0.5.1.ebuild:
+  Version Bump. Closes bug #152214.
 
   04 Nov 2006; Luis Medinas <metalgod@gentoo.org> -brasero-0.4.2.ebuild,
   brasero-0.4.4.ebuild, brasero-0.4.90.ebuild:
