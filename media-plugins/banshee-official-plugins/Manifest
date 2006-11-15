@@ -1,6 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+- -----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST banshee-official-plugins-0.11.2.tar.gz 452035 RMD160 f1c8a139eb937b364bab961689e76df7d078ef8b SHA1 7d5f052b27e9b56e2d3bd5808aca7a7802d30075 SHA256 8cc5cd5780dcfccb1688b5618200c7cf5f2fe428b1bac091b2e93d6e5b1039a5
 EBUILD banshee-official-plugins-0.11.2.ebuild 657 RMD160 a9fd19fdb3ab9d1c294da2fab2bf05dbf7222b22 SHA1 6c1486657a713f30a6d3ade4e4e534cea11a78c6 SHA256 3b7558ab4b834479c666b096aa259b53de7f8e72e57e81b1fcc234017f035efb
 MD5 228ad5e02b6db80327ac23eabc87be6f banshee-official-plugins-0.11.2.ebuild 657
@@ -17,10 +20,17 @@ SHA256 50e382a1cdc9b8d5bd7a6e62bae3e8b57cf36e157f70d0136b57d50edf2e8041 metadata
 MD5 b3b93593044f4341f1bf3b873584b884 files/digest-banshee-official-plugins-0.11.2 295
 RMD160 8606ba0201efc3a6cb9a6ec226b19a9c0596c24b files/digest-banshee-official-plugins-0.11.2 295
 SHA256 d65fcb1fcc7d68327fbf48bcfe491f9e40045ffd3c7d8ca1bd0f432b7517ffe3 files/digest-banshee-official-plugins-0.11.2 295
------BEGIN PGP SIGNATURE-----
+- -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
 iD8DBQFFVgUbwUpWvClEHQoRAsnjAKCIYwhqvHpi35tN92h0/HPK89BXyACeLJZR
 +u+8Dz+IWNSB4GvpTwWNevg=
 =1URR
+- -----END PGP SIGNATURE-----
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFW3vXI1lqEGTUzyQRAgpnAJ9But9edxM9YfTGo23YF2K7+sFSjQCgghSg
+QnJpMk2SYU4J29OYCKKUDBw=
+=UA8u
 -----END PGP SIGNATURE-----
