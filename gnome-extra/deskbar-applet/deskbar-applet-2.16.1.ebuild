@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.16.1.ebuild,v 1.1 2006/11/06 10:35:04 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.16.1.ebuild,v 1.2 2006/11/15 16:43:50 dang Exp $
 
 inherit gnome2 eutils autotools python
 
@@ -40,6 +40,8 @@ src_unpack() {
 	# Fix installing libs into pythondir
 	epatch ${FILESDIR}/${PN}-2.15.3-multilib.patch
 	epatch ${FILESDIR}/${PN}-2.16-fix_encoding.patch
+	# Unset DISPLAY before tests; bug #148056
+	epatch ${FILESDIR}/${P}-display.patch
 
 	AT_M4DIR="m4" eautoreconf
 }
