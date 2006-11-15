@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.243-r1.ebuild,v 1.9 2006/11/13 14:43:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.243-r1.ebuild,v 1.10 2006/11/15 20:32:47 nelchael Exp $
 
 inherit eutils rpm versionator kde-functions
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="alpha amd64 ~hppa ia64 ppc sparc x86"
-IUSE="gtk kde"
+IUSE="gtk kde audacious"
 
 # See end of src_install():
 IUSE="${IUSE} gdm kdm cursors icons nautilus"
@@ -151,8 +151,12 @@ src_install () {
 		dosym /usr/share/cursors/${X11_IMPLEM}/${x}/cursors /usr/share/icons/${x}/cursors
 	done
 
-	# remove xmms skin if unneeded
-	rm -rf "${D}/usr/share/xmms"
+	# remove audacious skin if unneeded
+	if ! use audacious; then
+		rm -rf "${D}/usr/share/xmms"
+	else
+		mv "${D}/usr/share/xmms" "${D}/usr/share/audacious"
+	fi
 
 	cd ${S}
 	dodoc AUTHORS NEWS README ChangeLog
