@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libX11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.57 2006/11/04 06:15:56 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.58 2006/11/15 03:04:49 joshuabaergen Exp $
+
+*libX11-1.0.99.2-r1 (15 Nov 2006)
+
+  15 Nov 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/1.0.99.2-xcb_callback_fix.patch, -libX11-1.0.99.2.ebuild,
+  +libX11-1.0.99.2-r1.ebuild:
+  Add a locking fix from upstream.  Fixes more issues when xcb is enabled.
 
 *libX11-1.0.3-r1 (04 Nov 2006)
 
