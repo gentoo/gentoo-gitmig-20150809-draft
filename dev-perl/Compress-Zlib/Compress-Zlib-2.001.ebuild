@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Zlib/Compress-Zlib-2.001.ebuild,v 1.4 2006/11/12 03:19:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Zlib/Compress-Zlib-2.001.ebuild,v 1.5 2006/11/15 02:50:53 jer Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://cpan/modules/by-module/Compress/${P}.tar.gz"
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
 #KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-KEYWORDS="~amd64 ~arm ~ia64 ~m68k ~mips ~ppc ~s390 ~sh ~sparc x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~s390 ~sh ~sparc x86"
 IUSE=""
 
 DEPEND="sys-libs/zlib

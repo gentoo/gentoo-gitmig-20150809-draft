@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Compress-Zlib
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Zlib/ChangeLog,v 1.58 2006/11/10 13:58:04 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Zlib/ChangeLog,v 1.59 2006/11/15 02:50:53 jer Exp $
+
+  15 Nov 2006; Jeroen Roovers <jer@gentoo.org> Compress-Zlib-2.001.ebuild:
+  Marked ~hppa (bug #154244).
 
   10 Nov 2006; nixnut <nixnut@gentoo.org> Compress-Zlib-2.001.ebuild:
   Added ~ppc keyword wrt bug 154244
