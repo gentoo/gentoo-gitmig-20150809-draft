@@ -1,6 +1,10 @@
 # ChangeLog for games-board/ggz-kde-client
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-kde-client/ChangeLog,v 1.5 2006/10/17 00:26:16 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-kde-client/ChangeLog,v 1.6 2006/11/15 11:43:12 nyhm Exp $
+
+  15 Nov 2006; Tristan Heaven <nyhm@gentoo.org>
+  ggz-kde-client-0.0.13.ebuild:
+  Add arts USE flag
 
 *ggz-kde-client-0.0.13 (17 Oct 2006)
 
