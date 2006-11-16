@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vdrcd/vdr-vdrcd-0.0.10.1-r1.ebuild,v 1.1 2006/01/29 21:36:07 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vdrcd/vdr-vdrcd-0.0.10.1-r1.ebuild,v 1.2 2006/11/16 10:17:40 zzam Exp $
 
 inherit vdr-plugin
 
@@ -15,12 +15,7 @@ IUSE=""
 
 DEPEND=">=media-video/vdr-1.3.22"
 
-src_unpack() {
-
-	vdr-plugin_src_unpack
-
-	epatch ${FILESDIR}/${P}-mp3ng.diff
-}
+PATCHES="${FILESDIR}/${P}-mp3ng.diff"
 
 src_install() {
 
