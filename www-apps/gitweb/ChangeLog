@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/gitweb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gitweb/ChangeLog,v 1.15 2006/11/14 10:44:02 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gitweb/ChangeLog,v 1.16 2006/11/16 12:37:10 ferdy Exp $
+
+*gitweb-1.4.4 (16 Nov 2006)
+
+  16 Nov 2006; Fernando J. Pereda <ferdy@gentoo.org> files/README.gentoo,
+  +files/apache.htaccess, -gitweb-1.4.3.5.ebuild, +gitweb-1.4.4.ebuild:
+  New upstream version. Remove 1.4.3.5
 
   14 Nov 2006; Luca Barbato <lu_zero@gentoo.org> gitweb-1.4.3.5.ebuild:
   Marked ~ppc and ~ppc64

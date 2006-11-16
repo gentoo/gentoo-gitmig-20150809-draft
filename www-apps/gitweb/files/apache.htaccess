@@ -1,0 +1,3 @@
+Options +ExecCGI -Indexes
+SetHandler cgi-script
+DirectoryIndex gitweb.cgi
