@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeartwork
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.173 2006/11/14 18:55:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.174 2006/11/16 02:37:25 josejx Exp $
+
+  16 Nov 2006; Joseph Jezak <josejx@gentoo.org> kdeartwork-3.5.5.ebuild:
+  Marked ppc stable for bug #147570.
 
   14 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   kdeartwork-3.5.5.ebuild:
