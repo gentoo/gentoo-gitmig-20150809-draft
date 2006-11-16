@@ -20,3 +20,14 @@
  # And here we go.
  exec "$SystemInstallDir/program/$Binary", @ooo_argv
  
+--- patches/src680/apply 
++++ patches/src680/apply 
+@@ -69,7 +69,7 @@
+ Frugalware64: FrugalwareBase, 64bit
+ QiLinux: LinuxCommon, GlobalDesktopFiles, FilePickers
+ #Gentoo
+-GentooBase : LinuxCommon, GentooOnly, NotDebian, Lockdown, CalcSolver, SystemJavaBits
++GentooBase : LinuxCommon, GentooOnly, NotDebian, Lockdown, CalcSolver, SystemJavaBits, ICU36
+ GentooUnstable: GentooBase, GentooExperimental, BerkeleyDB43, STLport5, 64bit
+ Gentoo : GentooBase
+ Gentoo64: GentooBase, 64bit

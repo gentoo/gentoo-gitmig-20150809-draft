@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4.ebuild,v 1.13 2006/11/10 06:46:58 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4.ebuild,v 1.14 2006/11/16 17:57:22 suka Exp $
 
 inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions multilib toolchain-funcs
 
 IUSE="binfilter branding cairo cups dbus eds firefox gnome gstreamer gtk kde ldap sound odk pam webdav"
 
-MY_PV="${PV}.4"
+MY_PV="${PV}.6"
 PATCHLEVEL="OOD680"
 SRC="OOO_2_0_4"
 S="${WORKDIR}/ooo"
@@ -284,7 +284,7 @@ src_install() {
 	doins fonts/*.ttf
 
 	# Fix the permissions for security reasons
-	chown -R root:root ${D} || die
+	chown -R root:root ${D}
 
 }
 
