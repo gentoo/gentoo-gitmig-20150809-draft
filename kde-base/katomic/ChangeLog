@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/katomic
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/katomic/ChangeLog,v 1.55 2006/11/14 18:27:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/katomic/ChangeLog,v 1.56 2006/11/16 04:00:27 josejx Exp $
+
+  16 Nov 2006; Joseph Jezak <josejx@gentoo.org> katomic-3.5.5.ebuild:
+  Marked ppc stable for bug #147570.
 
   14 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org> katomic-3.5.5.ebuild:
   Stable on sparc wrt #147570

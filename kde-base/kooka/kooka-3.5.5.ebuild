@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kooka/kooka-3.5.5.ebuild,v 1.4 2006/11/14 17:06:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kooka/kooka-3.5.5.ebuild,v 1.5 2006/11/16 04:17:43 josejx Exp $
 
 KMNAME=kdegraphics
 MAXKDEVER=$PV
@@ -8,7 +8,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="Kooka is a KDE application which provides access to scanner hardware"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 sparc x86"
 IUSE=""
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkscan)
 	media-libs/tiff"
