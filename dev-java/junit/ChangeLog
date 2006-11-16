@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/junit
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.28 2006/11/15 11:02:15 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.29 2006/11/16 17:27:50 ticho Exp $
+
+  16 Nov 2006; Andrej Kacian <ticho@gentoo.org> junit-3.8.1-r3.ebuild:
+  Stable on x86, bug #155261.
 
   15 Nov 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   +files/junit-3.8.2-build.xml:
