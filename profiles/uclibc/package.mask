@@ -1,8 +1,10 @@
 sys-libs/glibc
 # breaks gcc and such
 dev-libs/libiconv
+
+# doesnt seem to work
 =app-arch/tar-1.15.91
 >=sys-fs/xfsprogs-2.8.10
-# We hate it.
-app-admin/eselect-compiler
->=sys-devel/gcc-config-2
+
+# newer versions require stropts.h which uclibc doesnt implement [yet]
+>=sys-fs/udev-090
