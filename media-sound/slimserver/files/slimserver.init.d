@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/slimserver/files/slimserver.init.d,v 1.1 2006/11/13 19:41:57 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/slimserver/files/slimserver.init.d,v 1.2 2006/11/16 12:27:44 twp Exp $
 
 SLIMSERVER_PIDFILE="/var/run/slimserver/slimserver.pid"
 
@@ -17,8 +17,7 @@ start() {
 	[[ -n "${SLIMSERVER_PLAYLISTDIR}" ]] \
 		&& myopts="${myopts} --playlistdir ${SLIMSERVER_PLAYLISTDIR}"
 	ebegin "Starting slimserver"
-	start-stop-daemon --start \
-		--env HOME=/opt/slimserver \
+	HOME=/opt/slimserver start-stop-daemon --start \
 		--exec /opt/slimserver/slimserver.pl \
 		--pidfile ${SLIMSERVER_PIDFILE} \
 		-- \
