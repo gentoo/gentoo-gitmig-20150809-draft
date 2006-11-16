@@ -17,14 +17,14 @@ EBUILD kdemultimedia-kappfinder-data-3.5.4.ebuild 503 RMD160 47d4a3d9af61423a09a
 MD5 6ef4721629fd777ade86665f82148724 kdemultimedia-kappfinder-data-3.5.4.ebuild 503
 RMD160 47d4a3d9af61423a09a2f2ccb2d1e83c1e0df4e0 kdemultimedia-kappfinder-data-3.5.4.ebuild 503
 SHA256 c4cce01a7d13cfc8434bb10e27c10ef82839450a1f537d7624c37545aebae8a6 kdemultimedia-kappfinder-data-3.5.4.ebuild 503
-EBUILD kdemultimedia-kappfinder-data-3.5.5.ebuild 499 RMD160 5975efdbf76f4372ce20244dd6c40ae27be49c8f SHA1 b70c060023806f6eeae1b1ce088cbf09e7f2244e SHA256 46f37b9faf0ed536cd1f6c174c0358624ec11f1067628cd5a106e34abcc76764
-MD5 25d2c79851a5392113cb9964cf64cf84 kdemultimedia-kappfinder-data-3.5.5.ebuild 499
-RMD160 5975efdbf76f4372ce20244dd6c40ae27be49c8f kdemultimedia-kappfinder-data-3.5.5.ebuild 499
-SHA256 46f37b9faf0ed536cd1f6c174c0358624ec11f1067628cd5a106e34abcc76764 kdemultimedia-kappfinder-data-3.5.5.ebuild 499
-MISC ChangeLog 8520 RMD160 8bfdaa4adb872b9f5df2b76c9f3e55ae002c7d3f SHA1 31d177bd1f1bcaa4594100a76ecaf430f2e12178 SHA256 b9dcb58e679700e45b1b93d1b68d63adf6f587dead1658fac257ddd4094e8e98
-MD5 feb0b7bc84655b76760e0ccdffde08d9 ChangeLog 8520
-RMD160 8bfdaa4adb872b9f5df2b76c9f3e55ae002c7d3f ChangeLog 8520
-SHA256 b9dcb58e679700e45b1b93d1b68d63adf6f587dead1658fac257ddd4094e8e98 ChangeLog 8520
+EBUILD kdemultimedia-kappfinder-data-3.5.5.ebuild 496 RMD160 cf7e4c6cb65e5584a2702769da3b47752236d0a1 SHA1 e9902f360c9a3b86f4cfae68c0ad3f70b2686965 SHA256 eafe89752fda932568f12325f4b11ffbb5b028047f28a22a6ef54df631d5e9bd
+MD5 a00795c7d3bc89446e540c6ff82e4cc6 kdemultimedia-kappfinder-data-3.5.5.ebuild 496
+RMD160 cf7e4c6cb65e5584a2702769da3b47752236d0a1 kdemultimedia-kappfinder-data-3.5.5.ebuild 496
+SHA256 eafe89752fda932568f12325f4b11ffbb5b028047f28a22a6ef54df631d5e9bd kdemultimedia-kappfinder-data-3.5.5.ebuild 496
+MISC ChangeLog 8650 RMD160 aeb2cc61fb3a968e6bda80cab54c626a1ab95080 SHA1 23019cbc5eeaf26eb5cb36da16c5a724b5faf066 SHA256 bf0b275848fcdc1c6528ba13fe9c3801c7cca5f1f3e15b714ba2f9789d1d3d30
+MD5 679a76d07320d54239a927a9bddaf23a ChangeLog 8650
+RMD160 aeb2cc61fb3a968e6bda80cab54c626a1ab95080 ChangeLog 8650
+SHA256 bf0b275848fcdc1c6528ba13fe9c3801c7cca5f1f3e15b714ba2f9789d1d3d30 ChangeLog 8650
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
@@ -42,9 +42,9 @@ MD5 bb57e866bc990bddc1cdc63fe142e497 files/digest-kdemultimedia-kappfinder-data-
 RMD160 ef29f6429dedc81798491e528124510ee9fdd065 files/digest-kdemultimedia-kappfinder-data-3.5.5 265
 SHA256 111420f825959311ddc64c7db1fd49d34f2e21b5cf5187fdba09feef59f83ddc files/digest-kdemultimedia-kappfinder-data-3.5.5 265
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFWgDSKRy60XGEcJIRAo33AJ4wuUvttfnnoejGfA4iyFug0hLRrACeKjDI
-FS1cRtEYpWv1L4m22p/HYYw=
-=g1RW
+iD8DBQFFW+hQcsIHjyDViGQRAqGsAJ9LuzoYbW4NGAAZmgVXRol5Bp2U8ACfXMyi
+TIxQxOnOXSV2UhVlvwI5Z2E=
+=jEfq
 -----END PGP SIGNATURE-----

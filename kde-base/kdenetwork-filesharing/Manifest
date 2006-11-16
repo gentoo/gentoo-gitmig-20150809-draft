@@ -17,14 +17,14 @@ EBUILD kdenetwork-filesharing-3.5.4.ebuild 499 RMD160 769cdcf0df118d86e51e2baa45
 MD5 634b7cef897512295dbc326c7f7e3373 kdenetwork-filesharing-3.5.4.ebuild 499
 RMD160 769cdcf0df118d86e51e2baa4524f720d102355a kdenetwork-filesharing-3.5.4.ebuild 499
 SHA256 2b2dc435fe570983f23cb8f029dbad794d4a6306f00ccf7733db2b04cefbbeaf kdenetwork-filesharing-3.5.4.ebuild 499
-EBUILD kdenetwork-filesharing-3.5.5.ebuild 495 RMD160 7a224367c21ea80801be06802a933e083cc18715 SHA1 116fdf11e555b1bcefc6fa5b5ff0c3799904a437 SHA256 62f6b96a0263060b92611726985273c6304fb0ff911136822d164a2180ab9f80
-MD5 080fc44e6ae3bd8739cb04a54fd2d944 kdenetwork-filesharing-3.5.5.ebuild 495
-RMD160 7a224367c21ea80801be06802a933e083cc18715 kdenetwork-filesharing-3.5.5.ebuild 495
-SHA256 62f6b96a0263060b92611726985273c6304fb0ff911136822d164a2180ab9f80 kdenetwork-filesharing-3.5.5.ebuild 495
-MISC ChangeLog 7777 RMD160 52e31dab3ff1209de8d03a7a7a452eef0f1563ea SHA1 3098e1e1ed9cfc945e961e1d97f3b19a304c8bf9 SHA256 538cabc73a97649a597de8c8b3ca705eadb82689b93ae31a7d0c3427b95950a6
-MD5 b1bc4a123b8fea0795b43614f503c559 ChangeLog 7777
-RMD160 52e31dab3ff1209de8d03a7a7a452eef0f1563ea ChangeLog 7777
-SHA256 538cabc73a97649a597de8c8b3ca705eadb82689b93ae31a7d0c3427b95950a6 ChangeLog 7777
+EBUILD kdenetwork-filesharing-3.5.5.ebuild 492 RMD160 f6c3dd3e2f80390f8c128c54a84b0033de8ffcc4 SHA1 3e5da5e10dd79b3c94ed91afd75771c5ec4b7531 SHA256 8e1f2dd5c376c5fab8790c75c2f478903e4555dd71070d73730e35c14fa3a863
+MD5 25f90cb82750b130c9c1edd2d7cc546f kdenetwork-filesharing-3.5.5.ebuild 492
+RMD160 f6c3dd3e2f80390f8c128c54a84b0033de8ffcc4 kdenetwork-filesharing-3.5.5.ebuild 492
+SHA256 8e1f2dd5c376c5fab8790c75c2f478903e4555dd71070d73730e35c14fa3a863 kdenetwork-filesharing-3.5.5.ebuild 492
+MISC ChangeLog 7900 RMD160 1b0cffeecaba09ed3392c1aecfd9d0d2de5bf17b SHA1 90cd93e2040acc825dc5612ee0622a9ea87dc12c SHA256 e54ae6d7808b1e3ccd2685e5c98e96e10652a8bbacc3ce625bbb82afbfa210f4
+MD5 f99d93c0ae946f5ae8d3a89efb53a037 ChangeLog 7900
+RMD160 1b0cffeecaba09ed3392c1aecfd9d0d2de5bf17b ChangeLog 7900
+SHA256 e54ae6d7808b1e3ccd2685e5c98e96e10652a8bbacc3ce625bbb82afbfa210f4 ChangeLog 7900
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
@@ -42,9 +42,9 @@ MD5 1ebf1c8fa2263113c04677eb11e7f627 files/digest-kdenetwork-filesharing-3.5.5 2
 RMD160 76a9cb82198bc9155818fd606697461973f2c319 files/digest-kdenetwork-filesharing-3.5.5 256
 SHA256 64b6a68abeb7c279962ba59f88e31312dc4d1a4481371fd6cd87cb9f8f7a2730 files/digest-kdenetwork-filesharing-3.5.5 256
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFWdpLKRy60XGEcJIRAgrwAJwM0JE2o2CmiMj7sQ18V1+t0nR/MwCdHA+y
-oFYMGkLzFkySpu1Zn/yptAw=
-=SpUN
+iD8DBQFFW+kNcsIHjyDViGQRAiR7AJ9ODwsex4/8MPQVUfxmVWRLTpsIegCfcZWl
+uhs7rFITfdNNzoCWV39IqME=
+=Zrys
 -----END PGP SIGNATURE-----
