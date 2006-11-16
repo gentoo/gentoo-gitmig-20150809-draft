@@ -1,0 +1,52 @@
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/wmclockmon-0.8.0-r1.ebuild,v 1.1 2006/11/16 12:03:35 s4t4n Exp $
+
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
+
+inherit autotools
+
+IUSE="gtk"
+
+DESCRIPTION="digital clock dockapp with seven different styles with a LCD or LED display. Also has a Internet Time feature."
+SRC_URI="http://tnemeth.free.fr/projets/programmes/${P}.tar.gz"
+HOMEPAGE="http://tnemeth.free.fr/projets/dockapps.html"
+
+SLOT="0"
+KEYWORDS="~x86 ~sparc ~amd64 ~ppc ~ppc64"
+LICENSE="GPL-2"
+
+RDEPEND="gtk? ( =x11-libs/gtk+-1.2* )
+	|| ( (
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXpm
+		x11-libs/libXdmcp
+		x11-libs/libXau )
+	virtual/x11 )"
+
+DEPEND="${RDEPEND}
+	!gtk? ( >=sys-apps/sed-4.1.4-r1 )
+	|| ( (
+		x11-proto/xproto
+		x11-proto/xextproto )
+	virtual/x11 )"
+
+
+src_compile()
+{
+	if ! use gtk; then
+		econf || die "Configuration failed"
+		sed -i 's/doc wmclockmon-config wmclockmon-cal styles/doc styles/' Makefile.am
+	fi
+
+	econf || die "Configuration failed"
+	emake || die "Compilation failed"
+}
+
+src_install ()
+{
+	einstall || die "make install failed"
+	dodoc AUTHORS BUGS ChangeLog THANKS TODO doc/sample.wmclockmonrc
+}

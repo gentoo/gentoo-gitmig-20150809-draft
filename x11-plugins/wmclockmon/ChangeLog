@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/wmclockmon
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/ChangeLog,v 1.18 2006/01/24 22:43:20 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/ChangeLog,v 1.19 2006/11/16 12:03:35 s4t4n Exp $
+
+*wmclockmon-0.8.0-r1 (16 Nov 2006)
+
+  16 Nov 2006; Michele Noberasco <s4t4n@gentoo.org> wmclockmon-0.8.0-r1.ebuild:
+  Revision bump, fixing modular X dependancies again. Also, added support for
+  'gtk' USE flag making compilation of configururator program optional.
+  This way it is possible to have wmclockmon without bringing in obsolete gtk+-1
+  libraries...
 
   24 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   -wmclockmon-0.7.2.ebuild, wmclockmon-0.8.0.ebuild:
