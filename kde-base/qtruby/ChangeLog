@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/qtruby
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.50 2006/11/14 19:25:56 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.51 2006/11/16 05:20:41 josejx Exp $
+
+  16 Nov 2006; Joseph Jezak <josejx@gentoo.org> qtruby-3.5.5.ebuild:
+  Marked ppc stable for bug #147570.
 
   14 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org> qtruby-3.5.5.ebuild:
   Stable on sparc wrt #147570
