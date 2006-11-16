@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/libgnomecanvas-2.14.0.ebuild,v 1.11 2006/10/20 14:11:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/libgnomecanvas-2.14.0.ebuild,v 1.12 2006/11/16 19:36:03 leonardop Exp $
 
 inherit virtualx gnome2
 
@@ -16,18 +16,19 @@ RDEPEND=">=gnome-base/libglade-2
 	>=x11-libs/gtk+-2.0.3
 	>=x11-libs/pango-1.0.1
 	>=media-libs/libart_lgpl-2.3.8"
+
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/pkgconfig-0.9
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 DOCS="AUTHORS ChangeLog NEWS README"
-USE_DESTDIR="1"
+
 
 pkg_setup() {
-	G2CONF="${G2CONF} $(use_enable static)"
+	G2CONF="$(use_enable static)"
 }
 
 src_test() {
-	Xmake check
+	Xmake check || die "Test phase failed"
 }
