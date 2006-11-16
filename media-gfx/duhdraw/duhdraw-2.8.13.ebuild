@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/duhdraw/duhdraw-2.8.13.ebuild,v 1.1 2006/11/16 09:01:44 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/duhdraw/duhdraw-2.8.13.ebuild,v 1.2 2006/11/16 09:12:19 jokey Exp $
 
 inherit toolchain-funcs eutils
 
@@ -19,7 +19,7 @@ RDEPEND=${DEPEND}
 src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}/${P}"-macos.patch
-	epatch "${FILESDIR}/${P}-2.8.12"-prestrip.patch
+	epatch "${FILESDIR}/${P}"-prestrip.patch
 }
 
 src_compile() {
