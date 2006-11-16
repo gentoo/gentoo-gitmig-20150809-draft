@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.3.0.ebuild,v 1.17 2006/09/09 16:56:26 christel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.3.0.ebuild,v 1.18 2006/11/16 17:45:04 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -48,9 +48,7 @@ src_compile() {
 	local myconf
 	use userland_GNU || myconf=" --program-prefix=g"
 
-	if ([[ ${ELIBC} == "glibc" ]] && has_version '>=sys-libs/glibc-2.3') \
-	   || [[ ${ELIBC} == "uclibc" ]]
-	then
+	if echo "#include <regex.h>" | $(tc-getCPP) > /dev/null ; then
 		myconf="${myconf} --without-included-regex"
 	fi
 
