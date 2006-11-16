@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.14.1.ebuild,v 1.16 2006/10/20 17:06:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.14.1.ebuild,v 1.17 2006/11/16 21:29:51 leonardop Exp $
 
-inherit virtualx gnome2 eutils
+inherit virtualx eutils gnome2
 
 DESCRIPTION="A file manager for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/projects/nautilus/"
@@ -56,8 +56,9 @@ PDEPEND="gnome? ( >=x11-themes/gnome-icon-theme-1.1.91 )"
 
 DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS README THANKS TODO"
 
+
 pkg_setup() {
-	G2CONF="${G2CONF} --disable-update-mimedb $(use_enable beagle)"
+	G2CONF="--disable-update-mimedb $(use_enable beagle)"
 }
 
 src_unpack() {
@@ -69,7 +70,6 @@ src_unpack() {
 }
 
 src_test() {
-	if hasq userpriv $FEATURES ; then
-		Xmake check || die "Test phase failed"
-	fi
+	addwrite "/root/.gnome2_private"
+	Xmake check || die "Test phase failed"
 }
