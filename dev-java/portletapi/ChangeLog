@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/portletapi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/portletapi/ChangeLog,v 1.2 2006/10/09 01:52:04 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/portletapi/ChangeLog,v 1.3 2006/11/16 22:41:29 opfer Exp $
+
+  16 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  portletapi-1.0.ebuild:
+  stable x86, bug #154819
 
   09 Oct 2006; Joshua Nichols <nichoj@gentoo.org> portletapi-1.0.ebuild:
   Added ~ppc and ~ppc64. Changed dependency from ant-core to ant, because it
