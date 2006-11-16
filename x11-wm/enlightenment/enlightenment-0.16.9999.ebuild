@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.22 2006/10/03 13:16:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.23 2006/11/16 02:12:20 vapier Exp $
 
 #ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
 ECVS_SERVER="anoncvs.enlightenment.org:/var/cvs/e"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.enlightenment.org/"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="-*"
-IUSE="esd nls xinerama xrandr doc"
+IUSE="doc esd nls xcomposite xinerama xrandr"
 
 RDEPEND="esd? ( >=media-sound/esound-0.2.19 )
 	=media-libs/freetype-2*
@@ -29,6 +29,7 @@ RDEPEND="esd? ( >=media-sound/esound-0.2.19 )
 	x11-libs/libXrender
 	x11-misc/xbitmaps
 	xinerama? ( x11-libs/libXinerama )
+	xcomposite? ( x11-libs/libXcomposite )
 	nls? ( virtual/libintl )
 	virtual/libiconv"
 DEPEND="${RDEPEND}
@@ -57,6 +58,7 @@ src_compile() {
 		$(use_enable esd sound) \
 		$(use_enable xinerama) \
 		$(use_enable xrandr) \
+		$(use_enable xcomposite composite) \
 		--enable-upgrade \
 		--enable-hints-ewmh \
 		--enable-fsstd \

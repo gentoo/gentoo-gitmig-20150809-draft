@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.8.4.ebuild,v 1.1 2006/10/16 23:52:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.8.4.ebuild,v 1.2 2006/11/16 02:12:20 vapier Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/enlightenment/e16-${PV/_/-}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="esd nls xinerama xrandr doc"
+IUSE="doc esd nls xcomposite xinerama xrandr"
 
 RDEPEND="esd? ( >=media-sound/esound-0.2.19 )
 	=media-libs/freetype-2*
@@ -28,12 +28,14 @@ RDEPEND="esd? ( >=media-sound/esound-0.2.19 )
 	x11-libs/libXrender
 	x11-misc/xbitmaps
 	xinerama? ( x11-libs/libXinerama )
+	xcomposite? ( x11-libs/libXcomposite )
 	nls? ( virtual/libintl )
 	virtual/libiconv"
 DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-proto/xf86vidmodeproto
 	xinerama? ( x11-proto/xineramaproto )
+	xcomposite? ( x11-proto/compositeproto )
 	x11-proto/xproto
 	nls? ( sys-devel/gettext )"
 PDEPEND="doc? ( app-doc/edox-data )"
@@ -50,6 +52,7 @@ src_compile() {
 		$(use_enable esd sound) \
 		$(use_enable xinerama) \
 		$(use_enable xrandr) \
+		$(use_enable xcomposite composite) \
 		--enable-upgrade \
 		--enable-hints-ewmh \
 		--enable-fsstd \
