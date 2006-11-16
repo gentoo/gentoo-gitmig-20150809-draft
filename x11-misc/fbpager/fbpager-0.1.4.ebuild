@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpager/fbpager-0.1.4.ebuild,v 1.9 2006/10/31 05:42:58 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpager/fbpager-0.1.4.ebuild,v 1.10 2006/11/16 06:22:57 omp Exp $
 
 inherit eutils
 
@@ -13,9 +13,10 @@ SLOT="0"
 KEYWORDS="x86 ~sparc ~mips ~amd64 ppc"
 IUSE=""
 
-RDEPEND="x11-libs/libXrender
-	x11-libs/libSM"
-DEPEND="${RDEPEND}"
+DEPEND="x11-libs/libXrender
+	x11-libs/libSM
+	x11-libs/libXt"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
