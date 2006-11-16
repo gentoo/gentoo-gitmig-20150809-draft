@@ -1,8 +1,9 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.10_p20040917-r1.ebuild,v 1.2 2005/12/16 13:06:00 flameeyes Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.10_p20040917-r1.ebuild,v 1.3 2006/11/16 08:44:52 jokey Exp $
+WANT_AUTOCONF='2.5'
+WANT_AUTOMAKE='1.7'
+inherit eutils autotools
 
 DESCRIPTION="AIDE (Advanced Intrusion Detection Environment) is a replacement for Tripwire"
 HOMEPAGE="http://aide.sourceforge.net/"
@@ -32,9 +33,7 @@ src_unpack() {
 	use postgres && epatch ${FILESDIR}/${PF}-fix-psql.diff
 	epatch ${FILESDIR}/${MY_PF}-gentoo.diff
 
-	export WANT_AUTOCONF='2.5'
-	export WANT_AUTOMAKE='1.7'
-	sh autogen.sh || die "autogen.sh failed"
+	eautoreconf
 }
 
 src_compile() {

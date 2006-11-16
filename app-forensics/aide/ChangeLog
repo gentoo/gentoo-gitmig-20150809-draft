@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/aide
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.18 2005/12/16 13:06:00 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.19 2006/11/16 08:44:52 jokey Exp $
+
+  16 Nov 2006; Markus Ullmann <jokey@gentoo.org>
+  aide-0.10_p20040917-r1.ebuild:
+  Fix autotools, bug #151271
 
   16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   aide-0.10_p20040917-r1.ebuild:
