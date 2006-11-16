@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6272 2006/11/15 20:39:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6273 2006/11/16 13:41:11 kang Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ## 
+
+# Guillaume Destuynder <kang@gentoo.org> (16 Nov 2006)
+# Deprecated: upstream dead, unsupported, doesn't compile anymore.
+# See #146571
+net-p2p/gtkhx
 
 # Doug Goldstein <cardoe@gentoo.org> (15 Nov 2006)
 # Test version to resolve some bugs before the HAL-9000
@@ -116,6 +121,7 @@ x11-plugins/replytolist
 =sys-apps/portage-2.1.1-r2
 
 # Alexis Ballier <aballier@gentoo.org< (07 Nov 2006)
+>>>>>>> 1.6272
 # Needs some testing
 =media-libs/openexr-1.4.0a
 
