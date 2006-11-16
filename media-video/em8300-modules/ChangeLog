@@ -1,6 +1,13 @@
 # ChangeLog for media-video/em8300-modules
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/ChangeLog,v 1.26 2006/06/13 10:34:05 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/ChangeLog,v 1.27 2006/11/16 19:24:59 flameeyes Exp $
+
+*em8300-modules-0.15.3-r1 (16 Nov 2006)
+
+  16 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml,
+  +em8300-modules-0.15.3-r1.ebuild:
+  Fix for building with newer kernels, thanks to Samuli Suominen in bug
+  #155117, who's going to take care of this until arj come back at least.
 
   13 Jun 2006; Roy Marples <uberlord@gentoo.org>
   em8300-modules-0.13.0.ebuild, em8300-modules-0.15.2.ebuild,

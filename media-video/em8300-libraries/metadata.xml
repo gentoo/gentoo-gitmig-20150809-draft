@@ -2,8 +2,16 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>video</herd>
+
 <maintainer>
-<email>arj@gentoo.org</email>
-<name>Anders Rune Jensen</name>
+  <email>sasuomin@uusikaupunki.fi</email>
+  <name>Samuli Suominen</name>
+  <description>Proxied maintainer</description>
+</maintainer>
+
+<maintainer>
+  <email>flameeyes@gentoo.org</email>
+  <name>Diego Pettenò</name>
+  <description>Proxying maintainer</description>
 </maintainer>
 </pkgmetadata>
