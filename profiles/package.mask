@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6277 2006/11/16 20:17:47 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6278 2006/11/16 20:59:06 compnerd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -152,7 +152,7 @@ x11-themes/nautilus-themes
 <gnome-base/librsvg-2
 <gnome-base/nautilus-2
 <gnome-base/orbit-2
-<gnome-extra/gal-2
+<gnome-extra/gal-1.99.11
 <gnome-extra/gnome-games-2
 <gnome-extra/gnome-media-2
 <gnome-extra/gnome-utils-2
