@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-timeline
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-timeline/ChangeLog,v 1.7 2006/11/16 10:59:25 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-timeline/ChangeLog,v 1.8 2006/11/16 13:15:34 zzam Exp $
+
+  16 Nov 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-timeline-1.0.141-german.diff, vdr-timeline-1.0.141.ebuild:
+  Added german translation.
 
 *vdr-timeline-1.0.141 (16 Nov 2006)
 
