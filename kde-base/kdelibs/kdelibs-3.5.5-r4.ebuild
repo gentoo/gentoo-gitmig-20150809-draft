@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5-r4.ebuild,v 1.1 2006/10/25 20:29:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5-r4.ebuild,v 1.2 2006/11/16 01:18:40 josejx Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -12,7 +12,7 @@ SRC_URI="mirror://kde/stable/${PV}/src/${P}.tar.bz2
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.5"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="acl alsa arts cups doc jpeg2k kerberos legacyssl utempter openexr spell ssl tiff
 zeroconf kernel_linux fam lua"
 
