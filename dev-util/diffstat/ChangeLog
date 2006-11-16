@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/diffstat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.50 2006/11/16 15:45:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.51 2006/11/16 20:02:46 ticho Exp $
+
+  16 Nov 2006; Andrej Kacian <ticho@gentoo.org> diffstat-1.43.ebuild:
+  Stable on x86, bug #155304.
 
   16 Nov 2006; Joseph Jezak <josejx@gentoo.org> diffstat-1.43.ebuild:
   Marked ppc stable for bug #155304.
