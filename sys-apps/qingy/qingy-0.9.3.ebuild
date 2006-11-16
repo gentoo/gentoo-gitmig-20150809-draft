@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.9.3.ebuild,v 1.1 2006/11/10 12:36:03 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.9.3.ebuild,v 1.2 2006/11/16 10:01:22 s4t4n Exp $
 
 inherit eutils
 
@@ -115,6 +115,9 @@ src_install()
 		insinto /etc/logrotate.d
 		newins ${FILESDIR}/${PN}-logrotate ${PN} || die "Log rotation policy installation failed"
 	fi
+
+	# Replace qingy pam file with a more up-to-date one: see bug #155205
+	cp ${FILESDIR}/qingy-pam ${D}/etc/pam.d/qingy
 }
 
 pkg_postinst()

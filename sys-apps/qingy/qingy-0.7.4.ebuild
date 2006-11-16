@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.7.4.ebuild,v 1.6 2006/11/10 12:36:03 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.7.4.ebuild,v 1.7 2006/11/16 10:01:22 s4t4n Exp $
 
 DESCRIPTION="a DirectFB getty replacement"
 HOMEPAGE="http://qingy.sourceforge.net/"
@@ -71,6 +71,9 @@ src_install()
 	# Set the settings file umask to 600, in case somebody
 	# wants to make use of the autologin feature
 	/bin/chmod 600 ${D}/etc/qingy/settings
+
+	# Replace qingy pam file with a more up-to-date one: see bug #155205
+	cp ${FILESDIR}/qingy-pam ${D}/etc/pam.d/qingy
 }
 
 pkg_postinst()
