@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.23.ebuild,v 1.1 2006/11/10 21:06:14 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.23.ebuild,v 1.2 2006/11/16 06:34:29 keri Exp $
 
 inherit eutils
 
@@ -41,6 +41,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-portage-r1.patch
 	epatch "${FILESDIR}"/${PN}-CFLAGS-r3.patch
 	epatch "${FILESDIR}"/${PN}-PLBASE-r2.patch
+	epatch "${FILESDIR}"/${PN}-PL_EV_THREADFINISHED.patch
 	epatch "${FILESDIR}"/${PN}-cppproxy-r1.patch
 	epatch "${FILESDIR}"/${PN}-jpl-PLARCH.patch
 	epatch "${FILESDIR}"/${PN}-jpl-LDPATH.patch

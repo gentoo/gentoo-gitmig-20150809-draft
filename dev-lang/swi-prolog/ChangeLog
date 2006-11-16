@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.51 2006/11/15 07:01:49 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.52 2006/11/16 06:34:29 keri Exp $
+
+  16 Nov 2006; keri <keri@gentoo.org>
+  +files/swi-prolog-PL_EV_THREADFINISHED.patch, swi-prolog-5.6.23.ebuild:
+  Disable PL_EV_THREADFINISHED event hook in single-threaded engine. Reported
+  by Ferris McCormick <fmccor@gentoo.org> in #155242
 
   15 Nov 2006; keri <keri@gentoo.org> +files/swi-prolog-CFLAGS-r3.patch:
   Add missing patch file. Thanks to fmccor@gentoo.org in #155150.
