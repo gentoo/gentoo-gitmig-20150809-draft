@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/nvemftp/nvemftp-0.1.3.ebuild,v 1.6 2006/07/22 09:46:46 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/nvemftp/nvemftp-0.1.3.ebuild,v 1.7 2006/11/16 14:22:31 flameeyes Exp $
 
 inherit kde
 
@@ -12,6 +12,8 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="-amd64 ~sparc ~x86"
 IUSE=""
+
+PATCHES="${FILESDIR}/${P}+qt-3.3.5.patch"
 
 need-qt 3
 
