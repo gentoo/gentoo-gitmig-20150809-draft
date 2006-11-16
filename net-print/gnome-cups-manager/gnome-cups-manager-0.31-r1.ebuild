@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.31-r1.ebuild,v 1.5 2006/11/12 04:54:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.31-r1.ebuild,v 1.6 2006/11/16 21:45:42 genstef Exp $
 
 inherit eutils gnome2 flag-o-matic
 
@@ -49,6 +49,11 @@ src_unpack() {
 	mkdir ${WORKDIR}/ubuntu
 	cd ${WORKDIR}/ubuntu
 	cp -r ${S}/{po,ChangeLog,gnome-cups-manager} .
+	# Remove the ubuntu functions that require external
+	# scripts fixing bug 147972 (removes LAN browsing detection)
+	sed -i \
+		-e '/^---.*ui_browse_share_ctl.patch/,/^---/{/^---.*ui_browse_share_ctl.patch/!d;}' \
+	 	${WORKDIR}/gnome-cups-manager_0.31-1.1ubuntu14.diff
 	epatch ${WORKDIR}/gnome-cups-manager_0.31-1.1ubuntu14.diff
 	# gksudo does not always work
 	sed -i "s:gksudo:gksu:" debian/patches/change-su-command.patch
