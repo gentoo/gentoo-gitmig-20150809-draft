@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/rox-2.5.ebuild,v 1.3 2006/11/13 17:25:59 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/rox-2.5.ebuild,v 1.4 2006/11/16 16:30:30 lack Exp $
 
 inherit eutils
 
@@ -34,6 +34,12 @@ ROXAPPDIR="/usr/lib/rox"
 MIMEDIR="/usr/share/mime"
 MIMECONFDIR="/etc/xdg/rox.sourceforge.net"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch "${FILESDIR}"/${P}-nostrip.patch
+}
+
 src_compile() {
 
 	cd ROX-Filer
@@ -45,7 +51,12 @@ src_compile() {
 
 	./AppRun --compile || die "make failed"
 	(cd src; make clean) > /dev/null
-	# don't need this directory anymore
+	# don't need these directories anymore
+	if [ -n "${KEEP_SRC}" ]; then
+		(cd src; make clean) > /dev/null
+	else
+		rm -rf src
+	fi
 	rm -fr build
 
 	# Restore the original AppRun
