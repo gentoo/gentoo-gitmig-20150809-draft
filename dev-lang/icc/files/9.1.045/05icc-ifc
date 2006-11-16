@@ -1,0 +1,7 @@
+IA32ROOT=/opt/intel/compiler91
+INTEL_FLEXLM_LICENSE=/opt/intel/compiler91/licenses
+LDPATH=/opt/intel/compiler91/lib
+MANPATH=/opt/intel/compiler91/man
+PATH=/opt/intel/compiler91/bin
+ROOTPATH=/opt/intel/compiler91/bin
+
