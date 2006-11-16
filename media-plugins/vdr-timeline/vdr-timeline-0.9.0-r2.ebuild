@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-timeline/vdr-timeline-0.9.0-r2.ebuild,v 1.4 2006/04/17 13:27:55 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-timeline/vdr-timeline-0.9.0-r2.ebuild,v 1.5 2006/11/16 13:44:57 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -27,4 +27,6 @@ src_unpack() {
 	has_version ">=media-video/vdr-1.3.32" && epatch ${FILESDIR}/vdr-1.3.32-${P}.diff
 
 	has_version ">=media-video/vdr-1.3.37" && epatch ${FILESDIR}/vdr-1.3.37-${P}.diff
+
+	epatch ${FILESDIR}/vdr-timeline-fix-crash-no-timer.diff
 }
