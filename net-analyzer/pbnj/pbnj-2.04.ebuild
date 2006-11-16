@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pbnj/pbnj-2.04.ebuild,v 1.1 2006/11/16 17:17:20 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pbnj/pbnj-2.04.ebuild,v 1.2 2006/11/16 17:37:54 jokey Exp $
 
 inherit perl-module
 
@@ -15,8 +15,6 @@ IUSE=""
 
 DEPEND="net-analyzer/nmap
 	dev-lang/perl
-	dev-perl/Text-Diff
-	dev-perl/List-MoreUtils
 	dev-perl/yaml
 	dev-perl/DBI
 	dev-perl/DBD-SQLite
