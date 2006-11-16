@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/libao-pulse
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libao-pulse/ChangeLog,v 1.9 2006/11/13 18:15:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libao-pulse/ChangeLog,v 1.10 2006/11/16 00:29:19 jer Exp $
+
+  16 Nov 2006; Jeroen Roovers <jer@gentoo.org> libao-pulse-0.9.3.ebuild:
+  Marked ~hppa (bug #149806).
 
   13 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   libao-pulse-0.9.3.ebuild:
