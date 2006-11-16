@@ -15,5 +15,6 @@
                                              "parser"
                                              "optimize"
                                              "gen"
-                                             "closure"))))
+                                             "closure")))
+    :depends-on (#:cl-plus))
 
