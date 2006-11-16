@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/bfilter-1.0.6.ebuild,v 1.1 2006/09/20 17:54:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/bfilter-1.0.6.ebuild,v 1.2 2006/11/16 21:23:13 mrness Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/bfilter/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="X debug"
 
 RDEPEND="sys-libs/zlib
@@ -44,11 +44,6 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	if has_version "=${CATEGORY}/${PN}-0.9.4" ; then
-		ewarn "Please note that the filtering configuration files have been changed."
-		ewarn "Any custom settings defined in the rules and rules.local files"
-		ewarn "need to be converted to the new url and url.local files"
-		ewarn "(the old rules and rules.local can then be deleted). "
-		ewarn "See http://bfilter.sourceforge.net/doc/url-patterns.php for further details."
-	fi
+	einfo "The documentation is available at"
+	einfo "   http://bfilter.sourceforge.net/documentation.php"
 }

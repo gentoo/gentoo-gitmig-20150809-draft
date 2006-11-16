@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/bfilter
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/ChangeLog,v 1.6 2006/09/20 17:54:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/ChangeLog,v 1.7 2006/11/16 21:23:13 mrness Exp $
+
+  16 Nov 2006; Alin Nastac <mrness@gentoo.org> -bfilter-0.10.3.ebuild,
+  bfilter-1.0.6.ebuild:
+  Remove old version. Rewrite post-install message. Stable on x86.
 
 *bfilter-1.0.6 (20 Sep 2006)
 
