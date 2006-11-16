@@ -7,14 +7,14 @@ EBUILD kdeartwork-icewm-themes-3.5.0.ebuild 564 RMD160 f8f692aa3e1447df9e92681fb
 MD5 855e89f93bba2913222db14683ef7f9a kdeartwork-icewm-themes-3.5.0.ebuild 564
 RMD160 f8f692aa3e1447df9e92681fb6ea50bd304974c6 kdeartwork-icewm-themes-3.5.0.ebuild 564
 SHA256 e62b19339089afe37a23896fbc1b376e2dcae8239f683d71642dbd26a918001a kdeartwork-icewm-themes-3.5.0.ebuild 564
-EBUILD kdeartwork-icewm-themes-3.5.5.ebuild 564 RMD160 2af84b4953ba8c8688ee6ca0c34c0983dd70fa7e SHA1 f9d86d121b0c3fd0ea822894c2016b5c3b42bc8b SHA256 60f1798bcaed21b0a2401ccf4912fc9147e14b435fbe2b55afb6b40a90e6f5e6
-MD5 d0c551c047d17d870f59e2cc196e2b2e kdeartwork-icewm-themes-3.5.5.ebuild 564
-RMD160 2af84b4953ba8c8688ee6ca0c34c0983dd70fa7e kdeartwork-icewm-themes-3.5.5.ebuild 564
-SHA256 60f1798bcaed21b0a2401ccf4912fc9147e14b435fbe2b55afb6b40a90e6f5e6 kdeartwork-icewm-themes-3.5.5.ebuild 564
-MISC ChangeLog 6041 RMD160 2b864d01dcfe872dd890237cade73a8f40946952 SHA1 f47ef4e52320e55fd28579a47cf9c646473c6926 SHA256 314fdece3b514909817bfb242be5f468ef3987b9446018d123741fbb4725d6e3
-MD5 390791a677ca3e23291d891becc20ba7 ChangeLog 6041
-RMD160 2b864d01dcfe872dd890237cade73a8f40946952 ChangeLog 6041
-SHA256 314fdece3b514909817bfb242be5f468ef3987b9446018d123741fbb4725d6e3 ChangeLog 6041
+EBUILD kdeartwork-icewm-themes-3.5.5.ebuild 561 RMD160 6da907f14a5e133e55a54300b63b84caba335cdb SHA1 574f0bc3e918b5398c70b648dc85c390ed596bd4 SHA256 afddc8e9395c471f4ac9b942d747479cd0f755f1d32c737a4ceaf6d8684461b4
+MD5 24dad1ed23403df04747a512790736a8 kdeartwork-icewm-themes-3.5.5.ebuild 561
+RMD160 6da907f14a5e133e55a54300b63b84caba335cdb kdeartwork-icewm-themes-3.5.5.ebuild 561
+SHA256 afddc8e9395c471f4ac9b942d747479cd0f755f1d32c737a4ceaf6d8684461b4 kdeartwork-icewm-themes-3.5.5.ebuild 561
+MISC ChangeLog 6165 RMD160 0fb17bd3a59b17549a729e14287c019dfd483365 SHA1 1b76a8c3e544f29e80633b4c1267f90bec5db867 SHA256 6bf069818d744b13856afddfbeb7190da536df2a2a79c3fbbbb0ff0792bedfcd
+MD5 7fec5eebe93acd336efb2085182c7445 ChangeLog 6165
+RMD160 0fb17bd3a59b17549a729e14287c019dfd483365 ChangeLog 6165
+SHA256 6bf069818d744b13856afddfbeb7190da536df2a2a79c3fbbbb0ff0792bedfcd ChangeLog 6165
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
@@ -26,9 +26,9 @@ MD5 ed15f30770562979e25d4bfd5001f873 files/digest-kdeartwork-icewm-themes-3.5.5 
 RMD160 c6f43c7dd9a5232dab348ce3e07a5683ccea5e16 files/digest-kdeartwork-icewm-themes-3.5.5 259
 SHA256 135a611738d8c0efafae715a4650aeac10e6896576ca512da0efe0dd40f21e5a files/digest-kdeartwork-icewm-themes-3.5.5 259
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFWf4ZKRy60XGEcJIRAoBGAJoDcVrLki10qGTDEhPq9LQCnPjRXgCfYZh2
-c2Pl43lzzjOOrRIu1qIYNJE=
-=gZgV
+iD8DBQFFW/NjcsIHjyDViGQRArlAAKChpij0HX1pxn1saFmRFlNYHYk9RgCguoLR
+kffbBkxmVXr+d1DY42XvESA=
+=YcnE
 -----END PGP SIGNATURE-----

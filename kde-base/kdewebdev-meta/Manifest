@@ -13,34 +13,34 @@ EBUILD kdewebdev-meta-3.5.4.ebuild 779 RMD160 ac5464f4bb2ef1ede7bd8868d5ae8ac363
 MD5 1757a58d3e234d79d4305d3a7e0c0cb8 kdewebdev-meta-3.5.4.ebuild 779
 RMD160 ac5464f4bb2ef1ede7bd8868d5ae8ac363405605 kdewebdev-meta-3.5.4.ebuild 779
 SHA256 05a7cb983a782c4e8ab8a02fec4661f72e38fa91bc1348764356ead477b83ccf kdewebdev-meta-3.5.4.ebuild 779
-EBUILD kdewebdev-meta-3.5.5.ebuild 775 RMD160 7d0e3f261adb4cf28804e7e52b924bdcce02420d SHA1 30b87a19a08cc3b065408b800e21a82671ce9588 SHA256 7fcba2002af1fb70d39c4128f6d2b978d2e6399cfb709e3e374c0747a3840920
-MD5 74f48a7cbd5615ba9a6db96473c80101 kdewebdev-meta-3.5.5.ebuild 775
-RMD160 7d0e3f261adb4cf28804e7e52b924bdcce02420d kdewebdev-meta-3.5.5.ebuild 775
-SHA256 7fcba2002af1fb70d39c4128f6d2b978d2e6399cfb709e3e374c0747a3840920 kdewebdev-meta-3.5.5.ebuild 775
-MISC ChangeLog 7518 RMD160 2c7f5b27ad7ee5edd5bfa029cbea3b1540305b18 SHA1 8b1e15589c3ed24355e5cb021e1310c123fd0a00 SHA256 0e20e67b12c70f0771acded1e370267f821e91dd6680b1c0ac10eb681975898a
-MD5 4605bbaf114c1ffa55238bece5ecd3b8 ChangeLog 7518
-RMD160 2c7f5b27ad7ee5edd5bfa029cbea3b1540305b18 ChangeLog 7518
-SHA256 0e20e67b12c70f0771acded1e370267f821e91dd6680b1c0ac10eb681975898a ChangeLog 7518
+EBUILD kdewebdev-meta-3.5.5.ebuild 772 RMD160 d10095f303333a7e4d82baf71dbce72d94d29594 SHA1 c8d1c5abb52f0865e0f93c4f0302c4e90e6720d1 SHA256 8fd92565ec0c895b064ef6b43cc03864ec0abdba1c56cc2b357cdd887a44bec9
+MD5 2978d955280b42f660060364f30d8a80 kdewebdev-meta-3.5.5.ebuild 772
+RMD160 d10095f303333a7e4d82baf71dbce72d94d29594 kdewebdev-meta-3.5.5.ebuild 772
+SHA256 8fd92565ec0c895b064ef6b43cc03864ec0abdba1c56cc2b357cdd887a44bec9 kdewebdev-meta-3.5.5.ebuild 772
+MISC ChangeLog 7631 RMD160 50ace3ea166ab9ccee0e1354add7ce1f95818884 SHA1 5a42773df4cce903eb9376fff68d0649f0ff89b1 SHA256 ed8a84a06de09adb7613e727eb2510dfe7da0137695abebd531939bb36b265b2
+MD5 30ad5a894e02075c79d86ee78f6b0a87 ChangeLog 7631
+RMD160 50ace3ea166ab9ccee0e1354add7ce1f95818884 ChangeLog 7631
+SHA256 ed8a84a06de09adb7613e727eb2510dfe7da0137695abebd531939bb36b265b2 ChangeLog 7631
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdewebdev-meta-3.5.2 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdewebdev-meta-3.5.2 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdewebdev-meta-3.5.2 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdewebdev-meta-3.5.3 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdewebdev-meta-3.5.3 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdewebdev-meta-3.5.3 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdewebdev-meta-3.5.4 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdewebdev-meta-3.5.4 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdewebdev-meta-3.5.4 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdewebdev-meta-3.5.5 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdewebdev-meta-3.5.5 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdewebdev-meta-3.5.5 1
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdewebdev-meta-3.5.2 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdewebdev-meta-3.5.2 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdewebdev-meta-3.5.2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdewebdev-meta-3.5.3 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdewebdev-meta-3.5.3 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdewebdev-meta-3.5.3 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdewebdev-meta-3.5.4 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdewebdev-meta-3.5.4 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdewebdev-meta-3.5.4 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdewebdev-meta-3.5.5 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdewebdev-meta-3.5.5 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdewebdev-meta-3.5.5 0
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFWfySKRy60XGEcJIRAtOPAJ4y1ZmajQe5dGLJMpyUYt77nwE2fwCffZ+y
-LJ7mhTDYEmYzOxPG6/7ZwLM=
-=PLzW
+iD8DBQFFW/btcsIHjyDViGQRAvByAJwK9g38JGW6l65VdUeo07Ntqa3UMACfVZGu
+B500eDX15E9ndq6wW347Sfk=
+=pXf3
 -----END PGP SIGNATURE-----

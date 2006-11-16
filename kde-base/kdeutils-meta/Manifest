@@ -13,34 +13,34 @@ EBUILD kdeutils-meta-3.5.4.ebuild 1294 RMD160 d523b0eebbf4635057e8807e9d523c7bed
 MD5 f8e2cbf11e7b378ece55a7a019ad0212 kdeutils-meta-3.5.4.ebuild 1294
 RMD160 d523b0eebbf4635057e8807e9d523c7bed3879df kdeutils-meta-3.5.4.ebuild 1294
 SHA256 691a7712f062923b7e902e8f2f3accbd1c0304c5f089cdafee92af4dc0b50448 kdeutils-meta-3.5.4.ebuild 1294
-EBUILD kdeutils-meta-3.5.5.ebuild 1290 RMD160 ef5a01c0a5742872dd753d9917e6f6aa9854f363 SHA1 e0c732f782747a8345f22198a564d6319be79561 SHA256 1f45d892691e16f2b11adbac992712d1f7425b3e6a68d80dad9a21c869f75de9
-MD5 63a5eae8ac00c9998349aa30df59eab0 kdeutils-meta-3.5.5.ebuild 1290
-RMD160 ef5a01c0a5742872dd753d9917e6f6aa9854f363 kdeutils-meta-3.5.5.ebuild 1290
-SHA256 1f45d892691e16f2b11adbac992712d1f7425b3e6a68d80dad9a21c869f75de9 kdeutils-meta-3.5.5.ebuild 1290
-MISC ChangeLog 7491 RMD160 2e4f45ad0a612f0dd5c8a2fd0ef2618aca65627c SHA1 bf76ae1d95d3ffba446b58d116f3b1cfac2c85a3 SHA256 c552e707ecc557f68d9b897908e5d418b09a6ec66a78873a833ee1eeda88c0bb
-MD5 4ed69edc3cc4e5559ece06abe199480e ChangeLog 7491
-RMD160 2e4f45ad0a612f0dd5c8a2fd0ef2618aca65627c ChangeLog 7491
-SHA256 c552e707ecc557f68d9b897908e5d418b09a6ec66a78873a833ee1eeda88c0bb ChangeLog 7491
+EBUILD kdeutils-meta-3.5.5.ebuild 1287 RMD160 aa720f6c77380f9ebbf3b5740b693e9e2701e4d4 SHA1 c6cb59868618f522269ce61323c73777d7cdede1 SHA256 a9a09349ae81b3e70b2c9c58a5f18b914d1ce67235d93e246bdaae6eb34229ce
+MD5 217548b4d7fb0ca28a92ced7ec61db9a kdeutils-meta-3.5.5.ebuild 1287
+RMD160 aa720f6c77380f9ebbf3b5740b693e9e2701e4d4 kdeutils-meta-3.5.5.ebuild 1287
+SHA256 a9a09349ae81b3e70b2c9c58a5f18b914d1ce67235d93e246bdaae6eb34229ce kdeutils-meta-3.5.5.ebuild 1287
+MISC ChangeLog 7603 RMD160 97240aa29118addc4c0508cbf8458af3c1640380 SHA1 6a68b20b60a079d7a737cc2224f1a096a58b3b74 SHA256 f24009c93a1354510087a77eec9714de976b91d2c8931455d8ba2f2e7ff0256c
+MD5 f602c056af373399ea55d0c657b94c9e ChangeLog 7603
+RMD160 97240aa29118addc4c0508cbf8458af3c1640380 ChangeLog 7603
+SHA256 f24009c93a1354510087a77eec9714de976b91d2c8931455d8ba2f2e7ff0256c ChangeLog 7603
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeutils-meta-3.5.2 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeutils-meta-3.5.2 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeutils-meta-3.5.2 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeutils-meta-3.5.3 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeutils-meta-3.5.3 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeutils-meta-3.5.3 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeutils-meta-3.5.4 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeutils-meta-3.5.4 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeutils-meta-3.5.4 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeutils-meta-3.5.5 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeutils-meta-3.5.5 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeutils-meta-3.5.5 1
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeutils-meta-3.5.2 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeutils-meta-3.5.2 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeutils-meta-3.5.2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeutils-meta-3.5.3 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeutils-meta-3.5.3 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeutils-meta-3.5.3 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeutils-meta-3.5.4 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeutils-meta-3.5.4 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeutils-meta-3.5.4 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeutils-meta-3.5.5 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeutils-meta-3.5.5 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeutils-meta-3.5.5 0
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFWfZnKRy60XGEcJIRAjX8AJsEn291Zq+PzC5ueSlnTp15yGyPIgCfezM3
-gGVXDuM+Hk2fVuK0aLv3CYE=
-=ZX6z
+iD8DBQFFW/a7csIHjyDViGQRAo1HAJ96KHwzY6i8qLbuE7Pf5DstjmX9kgCfU1Rd
+ThmIdv7HwWJu2a+833TVw4E=
+=Dsls
 -----END PGP SIGNATURE-----

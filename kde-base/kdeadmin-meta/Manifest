@@ -13,34 +13,34 @@ EBUILD kdeadmin-meta-3.5.4.ebuild 995 RMD160 83e293618223b22f98e0d6bff792a20b2dc
 MD5 8cbc36e1f8d576e2302eafb4e77790d3 kdeadmin-meta-3.5.4.ebuild 995
 RMD160 83e293618223b22f98e0d6bff792a20b2dc25790 kdeadmin-meta-3.5.4.ebuild 995
 SHA256 1336b7802f635f9de1d9a7835bd4566536fcee108fb2046909a1bf3126307c1f kdeadmin-meta-3.5.4.ebuild 995
-EBUILD kdeadmin-meta-3.5.5.ebuild 989 RMD160 413044c43c725c430d97dbbcad9b1b57291f59c8 SHA1 d3edc741210f563c42b471ca11bc75890c9fa3e9 SHA256 bc7fb021adf1859acf3662ec8dcb5664d21cc04571c3b0be2de6f395ef07439a
-MD5 d8ab63b8f779ebf1623005a7a48fddc4 kdeadmin-meta-3.5.5.ebuild 989
-RMD160 413044c43c725c430d97dbbcad9b1b57291f59c8 kdeadmin-meta-3.5.5.ebuild 989
-SHA256 bc7fb021adf1859acf3662ec8dcb5664d21cc04571c3b0be2de6f395ef07439a kdeadmin-meta-3.5.5.ebuild 989
-MISC ChangeLog 7966 RMD160 1af0eff3f871a76ec52a156559be1ef09c8e3411 SHA1 50e4dbf522c0e1c548f39c49bd4a7127bab4d317 SHA256 b94f7eed908ea2ae5a9e8b85ebaa0dc95fdde2ae4fbc0c4451a0c7ee1842c709
-MD5 07003683c5b1d7924dde6c6a82f75e18 ChangeLog 7966
-RMD160 1af0eff3f871a76ec52a156559be1ef09c8e3411 ChangeLog 7966
-SHA256 b94f7eed908ea2ae5a9e8b85ebaa0dc95fdde2ae4fbc0c4451a0c7ee1842c709 ChangeLog 7966
+EBUILD kdeadmin-meta-3.5.5.ebuild 986 RMD160 bc9b356d4f96e18c5207e72e3dcbc9e126ae458a SHA1 93354435807e9b810986d2aad71979cc1c17558f SHA256 079ec811ed5f75efb1e0ea8e5ebf15454f2f3b5189f3c79ae52f56aaba2be613
+MD5 50765229456b15a038fa36a37761d55f kdeadmin-meta-3.5.5.ebuild 986
+RMD160 bc9b356d4f96e18c5207e72e3dcbc9e126ae458a kdeadmin-meta-3.5.5.ebuild 986
+SHA256 079ec811ed5f75efb1e0ea8e5ebf15454f2f3b5189f3c79ae52f56aaba2be613 kdeadmin-meta-3.5.5.ebuild 986
+MISC ChangeLog 8078 RMD160 f51ebe29c4580b92ff22d940148ca1c01063bae6 SHA1 a3e7be0dd4d3ab99893e20bef844454d2ff74ce1 SHA256 2cc208b21c0a9177632f8f0d998a8b453ec3fb7773fc1aa99364985820e81f9b
+MD5 d158419f9c587896a5c290de6198e041 ChangeLog 8078
+RMD160 f51ebe29c4580b92ff22d940148ca1c01063bae6 ChangeLog 8078
+SHA256 2cc208b21c0a9177632f8f0d998a8b453ec3fb7773fc1aa99364985820e81f9b ChangeLog 8078
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeadmin-meta-3.5.2 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeadmin-meta-3.5.2 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeadmin-meta-3.5.2 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeadmin-meta-3.5.3 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeadmin-meta-3.5.3 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeadmin-meta-3.5.3 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeadmin-meta-3.5.4 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeadmin-meta-3.5.4 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeadmin-meta-3.5.4 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeadmin-meta-3.5.5 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeadmin-meta-3.5.5 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeadmin-meta-3.5.5 1
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.5.2 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeadmin-meta-3.5.2 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeadmin-meta-3.5.2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.5.3 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeadmin-meta-3.5.3 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeadmin-meta-3.5.3 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.5.4 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeadmin-meta-3.5.4 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeadmin-meta-3.5.4 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.5.5 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeadmin-meta-3.5.5 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeadmin-meta-3.5.5 0
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFWfs7KRy60XGEcJIRAkR/AKCWspd8FNzi4QohUYKrRImzW/5+UQCffVPG
-BkGkSdiRpF3ScnV4/d1gqOs=
-=olmp
+iD8DBQFFW/WucsIHjyDViGQRArlSAJ9jewvJacgoGliV4EGn7sUdvSPQqQCfSLcZ
+NioLvyIkV8rvHS8FlONB99Y=
+=9GrO
 -----END PGP SIGNATURE-----

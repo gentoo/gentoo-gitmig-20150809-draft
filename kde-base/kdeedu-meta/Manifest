@@ -13,34 +13,34 @@ EBUILD kdeedu-meta-3.5.4.ebuild 1375 RMD160 fffa79ca41a52871944c1a74355065f6cd1a
 MD5 9e38e8d9379d3161558a5b68388fa6f6 kdeedu-meta-3.5.4.ebuild 1375
 RMD160 fffa79ca41a52871944c1a74355065f6cd1abb5a kdeedu-meta-3.5.4.ebuild 1375
 SHA256 1086ba30420eb6efb10fff221836ecf1b3b1ba944e0d3fbd4fe623c1646afd3e kdeedu-meta-3.5.4.ebuild 1375
-EBUILD kdeedu-meta-3.5.5.ebuild 1369 RMD160 68b10da376f02904a7aa505fd637e6bea3376cd6 SHA1 8db4ee00e6efb8defa97a37d62f1954179e7eafc SHA256 de7cbc005ecbfb285097bb9aee9bdb71521465d5c3b8b14dcec32de553ca6f88
-MD5 bd72ca4b13fdf00df0a72980332233e7 kdeedu-meta-3.5.5.ebuild 1369
-RMD160 68b10da376f02904a7aa505fd637e6bea3376cd6 kdeedu-meta-3.5.5.ebuild 1369
-SHA256 de7cbc005ecbfb285097bb9aee9bdb71521465d5c3b8b14dcec32de553ca6f88 kdeedu-meta-3.5.5.ebuild 1369
-MISC ChangeLog 7959 RMD160 16e7f3a4d86e13319ded03b174217221e0490928 SHA1 e868cdd49c5042d1a8949ecdd297ec5b32b14f5e SHA256 98681fe311e9e58b8574726280831980fd8c743e82d02430a70ac923f4258e56
-MD5 93a7edd6ea35a6020dad214dc8ac90cb ChangeLog 7959
-RMD160 16e7f3a4d86e13319ded03b174217221e0490928 ChangeLog 7959
-SHA256 98681fe311e9e58b8574726280831980fd8c743e82d02430a70ac923f4258e56 ChangeLog 7959
+EBUILD kdeedu-meta-3.5.5.ebuild 1366 RMD160 90f25e07e99303b0bc4d7789b827162a4efdb2ed SHA1 dc53bbc447dafc323352606ae83c9098aff4b6ab SHA256 a4bd75c186d070abf499b02ce5b1197bb424f03ca514b4bcc344b477355183c3
+MD5 1c2f5f278b5b6b6b8e12ee19b06efab4 kdeedu-meta-3.5.5.ebuild 1366
+RMD160 90f25e07e99303b0bc4d7789b827162a4efdb2ed kdeedu-meta-3.5.5.ebuild 1366
+SHA256 a4bd75c186d070abf499b02ce5b1197bb424f03ca514b4bcc344b477355183c3 kdeedu-meta-3.5.5.ebuild 1366
+MISC ChangeLog 8069 RMD160 cebc54deaf1e7a93ee91ac5e2dea0e63edaa4fe0 SHA1 8506f51b07de0c808c28ac1befb50281eb3a8583 SHA256 6d83bd35ef5e0cfaf1bd72ba41391a5505923e8c4535209e8b22230cb10d2afb
+MD5 5d4a2bc5d7c2d58a96540eac38554c2f ChangeLog 8069
+RMD160 cebc54deaf1e7a93ee91ac5e2dea0e63edaa4fe0 ChangeLog 8069
+SHA256 6d83bd35ef5e0cfaf1bd72ba41391a5505923e8c4535209e8b22230cb10d2afb ChangeLog 8069
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeedu-meta-3.5.2 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeedu-meta-3.5.2 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeedu-meta-3.5.2 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeedu-meta-3.5.3 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeedu-meta-3.5.3 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeedu-meta-3.5.3 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeedu-meta-3.5.4 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeedu-meta-3.5.4 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeedu-meta-3.5.4 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeedu-meta-3.5.5 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeedu-meta-3.5.5 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeedu-meta-3.5.5 1
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeedu-meta-3.5.2 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeedu-meta-3.5.2 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeedu-meta-3.5.2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeedu-meta-3.5.3 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeedu-meta-3.5.3 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeedu-meta-3.5.3 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeedu-meta-3.5.4 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeedu-meta-3.5.4 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeedu-meta-3.5.4 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeedu-meta-3.5.5 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeedu-meta-3.5.5 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeedu-meta-3.5.5 0
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFWde5KRy60XGEcJIRAvlZAKCYwimsIOfVwwyKuwp+Ut74j0vRgQCglrgr
-l0BN/QpgHPlKeH544tfK9Sg=
-=i/Zu
+iD8DBQFFW/XpcsIHjyDViGQRArAlAKDmqMjpeNfZPdK7NW34cg+VKGslKQCglQQF
+ord2TlGX5IHKWeFeLNa3K1Y=
+=XZVD
 -----END PGP SIGNATURE-----
