@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6283 2006/11/17 01:33:38 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6284 2006/11/17 02:05:20 compnerd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -85,7 +85,7 @@ gnome-extra/merlin-cpufire
 gnome-extra/users-guide
 mail-client/sylpheed-claws-ghostscript-viewer
 mail-client/sylpheed-claws-pgpinline
-media-gfc/danpei
+media-gfx/danpei
 media-gfx/ee
 media-gfx/gnome-iconedit
 media-libs/gdk-pixbuf
@@ -118,6 +118,7 @@ net-nntp/gnewspost
 net-p2p/fidelio
 net-wireless/gkismet
 net-wireless/wavelan-applet
+sci-chemistry/coot
 sci-calculators/snac
 sci-misc/oww
 www-client/ochusha
@@ -144,6 +145,7 @@ x11-themes/nautilus-themes
 <dev-util/glademm-2
 <dev-util/memprof-0.5.1
 <dev-ml/lablgtk-2
+<dev-python/pygtk-2
 <dev-python/gnome-python-2
 <gnome-base/control-center-2
 <gnome-base/eel-2
