@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6_beta2.ebuild,v 1.1 2006/11/17 01:47:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6_beta2.ebuild,v 1.2 2006/11/17 13:39:06 flameeyes Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -105,10 +105,7 @@ RDEPEND="
 		)
 		libnotify? ( x11-libs/libnotify )"
 
-# For a series of reason, libtool breaks stuff with plugins and
-# shared libvlc. Until that can be sorted out, remove VLC before
 DEPEND="${RDEPEND}
-	!<media-video/vlc-${PV}
 	X? ( xinerama? ( || ( x11-proto/xineramaproto <virtual/x11-7 ) ) )
 	dev-util/pkgconfig"
 
@@ -239,7 +236,9 @@ src_compile () {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Installation failed!"
+	# First install the library, to avoid screwups during relinking.select
+	emake -C src DESTDIR="${D}" install || die "make -C src install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	dodoc AUTHORS MAINTAINERS HACKING THANKS TODO NEWS README \
 		doc/fortunes.txt doc/intf-cdda.txt doc/intf-vcd.txt
