@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/lua
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.50 2006/10/16 11:26:53 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.51 2006/11/17 21:56:51 mabi Exp $
+
+  17 Nov 2006; Matti Bickel <mabi@gentoo.org> +files/lua-5.1.1-make.patch,
+  +files/lua-5.1.1-readline.patch, +file/lua-5.1.1-module_paths.patch,
+  +lua-5.1.1.ebuild, Changelog, metadata.xml:
+  Version bump (bug #124719); exg is retired, i'll try to help out
 
   16 Oct 2006; Emanuele Giaquinta <exg@gentoo.org>
   -files/lua-5.0.2-gentoo.patch, +files/lua-5.0.3-destdir.patch,
