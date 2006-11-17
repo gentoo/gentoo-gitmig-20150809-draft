@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/oroborox-0.9.7.9.ebuild,v 1.4 2006/10/29 18:08:26 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/oroborox-0.9.7.9.ebuild,v 1.5 2006/11/17 14:39:51 lack Exp $
+
+ROX_LIB_VER=1.9.14
+inherit rox
 
 MY_PN="OroboROX"
 
@@ -49,12 +52,7 @@ RDEPEND="
 	"
 
 S=${WORKDIR}
-ROX_LIB_VER=1.9.14
-SET_PERM=TRUE
-
 APPNAME=${MY_PN}
-
-inherit rox
 
 # OroboROX fails to build if CHOICESPATH is set to any path.
 # see bug #124133
