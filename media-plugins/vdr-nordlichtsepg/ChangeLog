@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-nordlichtsepg
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-nordlichtsepg/ChangeLog,v 1.12 2006/08/15 10:18:02 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-nordlichtsepg/ChangeLog,v 1.13 2006/11/17 12:07:23 zzam Exp $
+
+  17 Nov 2006; Matthias Schwarzott <zzam@gentoo.org>
+  -vdr-nordlichtsepg-0.4.ebuild:
+  Cleanup of older versions.
 
   15 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
   Assigned to Gentoo VDR Project.
