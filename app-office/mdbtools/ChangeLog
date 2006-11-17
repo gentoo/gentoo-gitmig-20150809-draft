@@ -1,6 +1,13 @@
 # ChangeLog for app-office/mdbtools
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.20 2006/05/28 22:21:14 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.21 2006/11/17 19:30:35 leonardop Exp $
+
+*mdbtools-0.6_pre1-r1 (17 Nov 2006)
+
+  17 Nov 2006; Leonardo Boshell <leonardop@gentoo.org>
+  -mdbtools-0.6_pre1.ebuild, +mdbtools-0.6_pre1-r1.ebuild:
+  Run eautoreconf() since the tarball was created with a buggy libtool,
+  creating libraries with incorrect names in some platforms (e.g. amd64).
 
   28 May 2006; Mark Loeser <halcy0n@gentoo.org>
   +files/mdbtools-0.6_pre1-gcc41.patch, mdbtools-0.6_pre1.ebuild:
