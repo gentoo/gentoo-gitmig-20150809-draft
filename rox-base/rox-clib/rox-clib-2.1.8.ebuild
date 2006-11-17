@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/rox-clib-2.1.8.ebuild,v 1.4 2006/11/15 15:57:54 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/rox-clib-2.1.8.ebuild,v 1.5 2006/11/17 00:44:02 ticho Exp $
 
 MY_PN="ROX-CLib"
 DESCRIPTION="A library for ROX applications written in C."
@@ -9,7 +9,7 @@ SRC_URI="http://www.kerofin.demon.co.uk/rox/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.0.1
