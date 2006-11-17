@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2svn/cvs2svn-1.5.0.ebuild,v 1.1 2006/11/17 21:00:39 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2svn/cvs2svn-1.5.0.ebuild,v 1.2 2006/11/17 21:09:31 dev-zero Exp $
 
 inherit distutils
 
@@ -17,6 +17,18 @@ DEPEND="dev-lang/python
 	!<dev-util/subversion-1.0.9"
 RDEPEND="${DEPEND}
 	app-text/rcs"
+
+src_install() {
+	distutils_src_install
+	insinto "/usr/share/${PN}"
+	doins -r contrib cvs2svn-example.options {profile-repos,show-db,verify-cvs2svn}.py
+	doman cvs2svn.1
+}
+
+pkg_postinst() {
+	elog "Additional scripts and examples have been installed to:"
+	elog "  ${ROOT}usr/share/${PN}/"
+}
 
 src_test() {
 	# Need this because subversion is localized, but the tests aren't
