@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.68.ebuild,v 1.4 2006/10/06 22:10:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.68.ebuild,v 1.5 2006/11/17 22:00:35 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -44,7 +44,7 @@ SRC_URI="linguas_fr? (
 
 LICENSE="NWN-EULA"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE="sou hou"
 RESTRICT="mirror strip"
 
