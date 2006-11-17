@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.11-r1.ebuild,v 1.2 2006/09/05 04:08:01 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.11-r1.ebuild,v 1.3 2006/11/17 18:11:02 dang Exp $
 
 inherit libtool eutils
 
@@ -18,6 +18,7 @@ RDEPEND=">=x11-libs/gtk+-2
 
 DEPEND="${RDEPEND}
 	sys-devel/autoconf
+	dev-util/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1
 		=app-text/docbook-xml-dtd-4.2* )"
 
