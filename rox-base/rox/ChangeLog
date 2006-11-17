@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/rox
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.26 2006/11/17 00:38:36 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.27 2006/11/17 12:40:55 nixnut Exp $
+
+  17 Nov 2006; nixnut <nixnut@gentoo.org> rox-2.5.ebuild:
+  Stable on ppc wrt bug 155015
 
   17 Nov 2006; Andrej Kacian <ticho@gentoo.org> rox-2.5.ebuild:
   Stable on x86, bug #155015.
