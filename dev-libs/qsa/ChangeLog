@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/qsa
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qsa/ChangeLog,v 1.13 2005/07/25 15:40:59 caleb Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qsa/ChangeLog,v 1.14 2006/11/17 13:37:42 opfer Exp $
+
+  17 Nov 2006; Christian Faulhammer <opfer@gentoo.org> qsa-1.1.1.ebuild:
+  stable x86, bug #123939
 
   25 Jul 2005; Caleb Tennis <caleb@gentoo.org> qsa-1.0.1.ebuild,
   qsa-1.1.1.ebuild:
