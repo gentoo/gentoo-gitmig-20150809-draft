@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/confuse
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/confuse/ChangeLog,v 1.17 2006/09/12 18:43:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/confuse/ChangeLog,v 1.18 2006/11/17 15:36:10 flameeyes Exp $
+
+  17 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> confuse-2.5.ebuild:
+  Add ~sparc-fbsd keyword.
 
   12 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> confuse-2.5.ebuild:
   Stable on hppa

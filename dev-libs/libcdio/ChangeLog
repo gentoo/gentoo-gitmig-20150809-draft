@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.66 2006/11/01 16:19:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.67 2006/11/17 15:37:27 flameeyes Exp $
+
+  17 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> libcdio-0.78.2.ebuild:
+  Add ~sparc-fbsd keyword.
 
 *libcdio-0.78.2 (01 Nov 2006)
 
