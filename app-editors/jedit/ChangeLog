@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/jedit
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.67 2006/11/17 15:53:03 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.68 2006/11/17 19:10:30 nichoj Exp $
+
+*jedit-4.3_pre7-r1 (17 Nov 2006)
+
+  17 Nov 2006; Joshua Nichols <nichoj@gentoo.org> +jedit-4.3_pre7-r1.ebuild:
+  Fixed gnu-regexp not getting on the classpath and fixed building of javadoc,
+  bug #155443.
 
   17 Nov 2006; nixnut <nixnut@gentoo.org> jedit-4.2-r2.ebuild:
   Stable on ppc wrt bug 154857
