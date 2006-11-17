@@ -1,12 +1,16 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.17.ebuild,v 1.3 2006/10/19 17:29:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.17.ebuild,v 1.4 2006/11/17 23:05:35 aballier Exp $
 
-inherit eutils libtool
+WANT_AUTOCONF=2.5
+WANT_AUTOMAKE=1.9
+
+inherit eutils libtool autotools
 
 DESCRIPTION="A C library for reading and writing files containing sampled sound"
 HOMEPAGE="http://www.mega-nerd.com/libsndfile/"
-SRC_URI="http://www.mega-nerd.com/libsndfile/${P}.tar.gz"
+SRC_URI="http://www.mega-nerd.com/libsndfile/${P}.tar.gz
+	mirror://gentoo/${P}+flac-1.1.3.patch.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -14,7 +18,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-
 IUSE="sqlite flac alsa"
 RESTRICT="test"
 
-RDEPEND="flac? ( ~media-libs/flac-1.1.2 )
+RDEPEND="flac? ( media-libs/flac )
 	alsa? ( media-libs/alsa-lib )
 	sqlite? ( >=dev-db/sqlite-3.2 )"
 
@@ -22,7 +26,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	elibtoolize
+	epatch "${WORKDIR}/${P}+flac-1.1.3.patch"
+	eautoreconf
 	epunt_cxx
 }
 
