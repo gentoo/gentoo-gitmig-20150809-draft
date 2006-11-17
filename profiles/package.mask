@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6285 2006/11/17 05:09:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6286 2006/11/17 05:51:39 mrness Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ## 
+
+# Alin Nastac <mrness@gentoo.org> (17 Nov 2006)
+# This package is merely a hack that adds anti-virus support to the
+# old version of dansguardian (2.8).
+# Since >net-proxy/dansguardian-2.9 have better AV support,
+# I'm masking dgav with the intention of removing it on 17 Dec 2006.
+net-proxy/dansguardian-dgav
 
 # Doug Goldstein <cardoe@gentoo.org>
 # New stable Cairo
