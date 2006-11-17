@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/unixODBC
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.58 2006/10/09 18:33:11 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.59 2006/11/17 23:23:41 compnerd Exp $
+
+  17 Nov 2006; Saleem Abdulrasool <compnerd@gentoo.org> unixODBC-2.2.6.ebuild,
+  unixODBC-2.2.6-r1.ebuild, unixODBC-2.2.8.ebuild, unixODBC-2.2.11.ebuild,
+  unixODBC-2.2.11-r1.ebuild:
+  Dropping gnome useflag for gnome-1.x removal
 
   09 Oct 2006; <malc@gentoo.org> unixODBC-2.2.11-r1.ebuild:
   Fix multilib-strict QA checks - bug #149983

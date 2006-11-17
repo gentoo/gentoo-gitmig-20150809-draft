@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.11-r1.ebuild,v 1.14 2006/10/09 18:33:11 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.11-r1.ebuild,v 1.15 2006/11/17 23:23:41 compnerd Exp $
 
 inherit eutils
 
@@ -11,12 +11,11 @@ SRC_URI="http://www.unixodbc.org/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha ~amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-IUSE="qt3 gnome"
+IUSE="qt3"
 
 DEPEND="virtual/libc
 	>=sys-libs/readline-4.1
 	>=sys-libs/ncurses-5.2
-	gnome? ( gnome-base/gnome-libs )
 	qt3? ( =x11-libs/qt-3* )"
 
 # the configure.in patch is required for 'use qt3'
@@ -51,39 +50,10 @@ src_compile() {
 		    ${myconf} || die
 
 	make || die
-
-	if use gnome;
-	then
-		# Symlink for configure
-		ln -s ${S}/odbcinst/.libs ./lib
-		# Symlink for libtool
-		ln -s ${S}/odbcinst/.libs ./lib/.libs
-		cd gODBCConfig
-		./configure --host=${CHOST} \
-				--with-odbc=${S} \
-				--prefix=/usr \
-				--x-libraries=/usr/lib \
-				--libdir=/usr/$(get_libdir) \
-				--sysconfdir=/etc/unixODBC \
-				${myconf} || die
-
-		# not sure why these symlinks are needed. busted configure, i guess...
-		ln -s ../depcomp .
-		ln -s ../libtool .
-		make || die
-		cd ..
-	fi
 }
 
 src_install() {
 	make DESTDIR=${D} install || die
-
-	if use gnome;
-	then
-		cd gODBCConfig
-		make DESTDIR=${D} install || die
-		cd ..
-	fi
 
 	dodoc AUTHORS ChangeLog NEWS README*
 	find doc/ -name "Makefile*" -exec rm '{}' \;
