@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-9999.ebuild,v 1.15 2006/10/05 15:16:00 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-9999.ebuild,v 1.16 2006/11/17 20:08:46 uberlord Exp $
 
 inherit linux-mod cvs
 
@@ -16,7 +16,7 @@ KEYWORDS="-* ~amd64 ~x86"
 RDEPEND="net-wireless/wireless-tools"
 
 IUSE_RT2X00_DEVICES="rt2400pci rt2500pci rt2500usb rt61pci rt73usb"
-IUSE_RT2X00_EXTRA="rfkill"
+IUSE_RT2X00_EXTRA="eeprom rfkill"
 IUSE="asm debug"
 
 for x in ${IUSE_RT2X00_DEVICES} ${IUSE_RT2X00_EXTRA} ; do
@@ -94,6 +94,10 @@ src_compile() {
 
 		if [[ ${m} == "d80211" || ${full} == "y" ]] || use "${m}" ; then
 			yn="y"
+		fi
+		if [[ ${m} == "eeprom" ]] ; then
+			m="eeprom_93cx6"
+			M="EEPROM_93CX6"
 		fi
 		echo "CONFIG_${M}=${yn}" >> config
 		echo "CONFIG_${M}_ASM=${asm}" >> config
