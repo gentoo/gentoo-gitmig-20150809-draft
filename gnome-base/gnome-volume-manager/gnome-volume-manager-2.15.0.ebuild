@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/gnome-volume-manager-2.15.0.ebuild,v 1.4 2006/10/21 23:43:44 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/gnome-volume-manager-2.15.0.ebuild,v 1.5 2006/11/17 09:09:00 compnerd Exp $
 
 inherit gnome2 eutils autotools
 
@@ -14,7 +14,10 @@ IUSE="crypt debug doc"
 
 RDEPEND="gnome-base/nautilus
 	>=gnome-base/libgnomeui-2.1.5
-	>=sys-apps/dbus-0.31
+	||  (
+			>=dev-libs/dbus-glib-0.71
+			( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.31 )
+		)
 	>=sys-apps/hal-0.5.6
 	>=x11-libs/gtk+-2.6
 	>=gnome-base/libglade-2
