@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.3.0.ebuild,v 1.13 2006/09/03 08:47:48 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.3.0.ebuild,v 1.14 2006/11/17 13:25:54 drizzt Exp $
 
 inherit gnuconfig flag-o-matic eutils toolchain-funcs
 
@@ -21,7 +21,6 @@ RDEPEND=">=x11-libs/gtk+-2.2
 	>=media-libs/id3lib-3.8.3
 	>=gnome-base/libgnomeui-2.2.0
 	>=gnome-base/orbit-2
-	gnome-base/libghttp
 	net-misc/curl
 	vorbis? ( media-sound/vorbis-tools )"
 

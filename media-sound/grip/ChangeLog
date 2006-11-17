@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/grip
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.65 2006/09/03 08:47:48 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.66 2006/11/17 13:25:54 drizzt Exp $
+
+  17 Nov 2006; Timothy Redaelli <drizzt@gentoo.org> grip-3.3.0.ebuild,
+  grip-3.3.1.ebuild:
+  Removed libghttp dep wrt bug #155428.
+  Authorized by Tony Vroon.
 
   03 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org> grip-3.3.0.ebuild:
   hppa stable
