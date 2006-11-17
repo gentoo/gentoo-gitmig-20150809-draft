@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2345 2006/11/17 06:48:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2346 2006/11/17 07:10:10 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1302,7 +1302,6 @@ net-misc/nx-x11-bin:rdesktop - Add support for connecting to Windows Terminal Se
 net-misc/nx-x11-bin:vnc - Add support for connecting to VNC servers
 net-misc/nx-x11:rdesktop - Add support for connecting to Windows Terminal Server
 net-misc/nx-x11:vnc - Add support for connecting to VNC servers
-net-misc/nxclient:xft - Use the xft-enabled version of nxclient
 net-misc/nxserver-business:prebuilt - Use the libraries shipped by nomachine, instead of building them locally
 net-misc/nxserver-enterprise:prebuilt - Use the libraries shipped by nomachine, instead of building them locally
 net-misc/nxserver-freenx:commercial - Add support for the commercial nxclient
