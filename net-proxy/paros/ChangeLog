@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/paros
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/paros/ChangeLog,v 1.13 2006/09/20 12:44:50 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/paros/ChangeLog,v 1.14 2006/11/17 21:05:12 mrness Exp $
+
+  17 Nov 2006; Alin Nastac <mrness@gentoo.org> -paros-3.2.10.ebuild,
+  paros-3.2.13.ebuild:
+  Remove old version. Stable on x86.
 
 *paros-3.2.13 (20 Sep 2006)
 
