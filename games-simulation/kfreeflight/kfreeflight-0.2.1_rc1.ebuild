@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/kfreeflight/kfreeflight-0.2.1_rc1.ebuild,v 1.3 2006/10/31 23:11:41 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/kfreeflight/kfreeflight-0.2.1_rc1.ebuild,v 1.4 2006/11/17 12:51:52 nyhm Exp $
 
-inherit eutils kde games
+inherit eutils kde-functions games
 
 MY_P=${P//_/}
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/kfreeflight/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="arts"
 
 RDEPEND="games-simulation/flightgear"
 
@@ -22,18 +22,20 @@ S=${WORKDIR}/${PN}-${PV%_*}
 need-kde 3.5.2
 
 src_compile() {
-	local myconf
-	kde_src_compile myconf
-	egamesconf $myconf || die "egamesconf failed"
+	egamesconf \
+		--datadir=/usr/share \
+		$(use_with arts) \
+		|| die
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS NEWS TODO
 
-	rm -rf ${D}/usr/share/applnk
-	make_desktop_entry ${PN}
+	rm -rf "${D}"/usr/share/applnk
+	newicon src/hi64-app-kfreeflight.png ${PN}.png
+	make_desktop_entry ${PN} KFreeFlight
 
 	prepgamesdirs
 }

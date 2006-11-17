@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/kfreeflight
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/kfreeflight/ChangeLog,v 1.3 2006/10/31 23:11:41 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/kfreeflight/ChangeLog,v 1.4 2006/11/17 12:51:52 nyhm Exp $
+
+  17 Nov 2006; Tristan Heaven <nyhm@gentoo.org>
+  kfreeflight-0.2.1_rc1.ebuild:
+  Fix install location
 
   31 Oct 2006; <tupone@gentoo.org> kfreeflight-0.2.1_rc1.ebuild:
   Added ~amd64 keyword. Bug #153461 by Zaba Zabov
