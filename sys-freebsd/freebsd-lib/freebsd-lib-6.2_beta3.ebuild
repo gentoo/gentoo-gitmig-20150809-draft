@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2_beta3.ebuild,v 1.1 2006/11/01 16:09:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2_beta3.ebuild,v 1.2 2006/11/17 15:42:39 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -207,7 +207,7 @@ src_install() {
 		fi
 		cd "${csudir}"
 		$(freebsd_get_bmake) ${mymakeopts} DESTDIR="${D}" install \
-			FILESDIR="/usr/${CTARGET}/usr/lib" || die "Install csu failed"
+			FILESDIR="/usr/${CTARGET}/usr/lib" LIBDIR="/usr/${CTARGET}/usr/lib" || die "Install csu failed"
 
 		cd "${S}/libc"
 		$(freebsd_get_bmake) ${mymakeopts} DESTDIR="${D}" install NO_MAN= \
