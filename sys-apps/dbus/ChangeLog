@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.150 2006/11/17 00:31:43 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.151 2006/11/17 23:43:48 steev Exp $
+
+*dbus-1.0.1 (17 Nov 2006)
+
+  17 Nov 2006; Steev Klimaszewski <steev@gentoo.org> -dbus-1.0.0.ebuild,
+  +dbus-1.0.1.ebuild:
+  New point release of D-Bus. Fixes an issue with dbus_threads_init_default
+  asserting when called. It also cleans up the uuid documentation and makes
+  uuid's conform to the spec.
 
   17 Nov 2006; Andrej Kacian <ticho@gentoo.org> dbus-0.62-r1.ebuild:
   Stable on x86, bug #154522.
