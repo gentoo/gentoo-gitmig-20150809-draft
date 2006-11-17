@@ -1,15 +1,26 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.1.ebuild,v 1.4 2006/11/08 22:25:25 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.1.ebuild,v 1.5 2006/11/17 12:11:35 opfer Exp $
 
 inherit eutils multilib flag-o-matic elisp-common versionator
+
+# NOTE: When bumping you need to adjust the *_VER strings in
+#  src_install() to honour newer versions in the package (they
+#  are maintained separately upstream).
+#  As High Performance Erlang (HiPE) messes around a lot with
+#  assembler, it breaks hardened and some normal systems, so it has
+#  been disabled.  Try with newer versions though.
+#  If you need symlinks for binaries please tell me or open up a bug
+#  I can then let one be created. 
 
 #erlang uses a really weird versioning scheme which caused quite a few problems already
 #Thus we do a slight modification converting all letters to digits to make it more sane (see e.g. #26420)
 #the next line selects the right source.
 MY_PV="R$(get_major_version)B-$(get_version_component_range 3)"
+
 # ATTN!! Take care when processing the C, etc version!
 MY_P=otp_src_${MY_PV}
+
 DESCRIPTION="Erlang programming language, runtime environment, and large collection of libraries"
 HOMEPAGE="http://www.erlang.org/"
 SRC_URI="http://www.erlang.org/download/${MY_P}.tar.gz
@@ -74,6 +85,8 @@ src_compile() {
 
 src_install() {
 	local ERL_LIBDIR=/usr/$(get_libdir)/erlang
+	local ERL_INTERFACE_VER=3.5.5.1
+	local ERL_ERTS_VER=5.5.1
 
 	make INSTALL_PREFIX="${D}" install || die
 	dodoc AUTHORS EPLICENCE README
@@ -84,6 +97,8 @@ src_install() {
 	dosym ${ERL_LIBDIR}/bin/elink /usr/bin/elink
 	dosym ${ERL_LIBDIR}/bin/ear /usr/bin/ear
 	dosym ${ERL_LIBDIR}/bin/escript /usr/bin/escript
+	dosym ${ERL_LIBDIR}/lib/erl_interface-${ERL_INTERFACE_VER}/bin/erl_call	/usr/bin/erl_call
+	dosym ${ERL_LIBDIR}/erts-${ERL_ERTS_VER}/bin/beam /usr/bin/beam
 
 	## Remove ${D} from the following files
 	dosed ${ERL_LIBDIR}/bin/erl
