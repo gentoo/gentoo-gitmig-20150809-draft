@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/jasspa-microemacs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/ChangeLog,v 1.17 2006/11/03 13:52:38 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/ChangeLog,v 1.18 2006/11/17 10:32:31 opfer Exp $
+
+  17 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  jasspa-microemacs-20050505-r3.ebuild:
+  added dependency on x11-libs/libXt, found by Patrick Lauer
+  <bugs@dev.gentooexperimental.org>, reported in bug #154992
 
   03 Nov 2006; nixnut <nixnut@gentoo.org>
   jasspa-microemacs-20050505-r3.ebuild:

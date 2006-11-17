@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/jasspa-microemacs-20050505-r3.ebuild,v 1.3 2006/11/03 13:52:38 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/jasspa-microemacs-20050505-r3.ebuild,v 1.4 2006/11/17 10:32:31 opfer Exp $
 
 inherit eutils
 
@@ -24,7 +24,11 @@ IUSE="X"
 
 DEPEND="virtual/libc
 	sys-libs/ncurses
-	X? ( || ( x11-libs/libX11 virtual/x11 ) )"
+	X? ( || ( ( x11-libs/libX11
+			x11-libs/libXt
+		)
+		  virtual/x11 )
+	)"
 
 S="${WORKDIR}/me${PV:2}/src"
 
