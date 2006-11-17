@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.16.1-r1.ebuild,v 1.4 2006/11/07 20:46:17 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.16.1-r1.ebuild,v 1.5 2006/11/17 09:49:42 compnerd Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
 
@@ -18,16 +18,19 @@ RDEPEND=">=dev-libs/glib-2.6.0
 		 >=x11-libs/gtk+-2.6.0
 		 >=gnome-base/libgnome-2.14.0
 		 >=gnome-base/libgnomeui-2.10.0
-		 >=sys-apps/dbus-0.61
 		 >=sys-apps/hal-0.5.7-r1
 		 >=gnome-base/libglade-2.5.0
 		 >=x11-libs/libwnck-2.10.0
 		 >=x11-libs/cairo-1.0.0
 		 >=gnome-base/gconf-2
-		x11-libs/libX11
-		x11-libs/libXext
+		 x11-libs/libX11
+		 x11-libs/libXext
+		 || (
+				>=dev-libs/dbus-glib-0.71
+				( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.61 )
+			)
 		 libnotify? (
-		 				>=x11-libs/libnotify-0.3
+						>=x11-libs/libnotify-0.3
 						>=x11-misc/notification-daemon-0.2.1
 					)"
 DEPEND="${RDEPEND}
@@ -35,10 +38,10 @@ DEPEND="${RDEPEND}
 		dev-util/pkgconfig
 		>=dev-util/intltool-0.35
 		doc? (
-			app-text/xmlto
-			app-text/gnome-doc-utils
-			app-text/docbook-sgml-utils
-		)"
+				app-text/xmlto
+				app-text/gnome-doc-utils
+				app-text/docbook-sgml-utils
+			 )"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
