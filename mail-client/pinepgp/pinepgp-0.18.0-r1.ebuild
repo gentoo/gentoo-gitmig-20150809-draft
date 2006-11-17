@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pinepgp/pinepgp-0.18.0-r1.ebuild,v 1.6 2005/06/05 11:52:19 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pinepgp/pinepgp-0.18.0-r1.ebuild,v 1.7 2006/11/17 01:06:22 ticho Exp $
+
+inherit eutils
 
 DESCRIPTION="Use GPG/PGP with Pine"
 HOMEPAGE="http://www.megaloman.com/~hany/software/pinepgp/"
@@ -11,6 +13,12 @@ KEYWORDS="ppc x86"
 IUSE=""
 
 DEPEND="mail-client/pine app-crypt/gnupg"
+
+src_unpack()	{
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-makefile-sed-fix.patch
+}
 
 src_compile()	{
 	econf || die "configure problem"
