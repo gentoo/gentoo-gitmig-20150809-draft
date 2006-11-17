@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/galago-daemon/galago-daemon-0.5.0.ebuild,v 1.1 2006/08/08 04:04:23 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/galago-daemon/galago-daemon-0.5.0.ebuild,v 1.2 2006/11/17 08:46:06 compnerd Exp $
 
 inherit eutils autotools
 
@@ -15,7 +15,10 @@ IUSE="test"
 
 RDEPEND=">=dev-libs/glib-2.8
 		 >=dev-libs/libgalago-0.5.0
-		 >=sys-apps/dbus-0.36"
+		 || (
+				>=dev-libs/dbus-glib-0.71
+				( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.36 )
+			)"
 DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.9
 		test? ( dev-libs/check )"
