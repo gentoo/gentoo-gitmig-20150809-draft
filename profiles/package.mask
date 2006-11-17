@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6290 2006/11/17 13:32:40 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6291 2006/11/17 17:18:54 dang Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -183,7 +183,7 @@ x11-themes/nautilus-themes
 <media-sound/galan-0.3
 <media-sound/gqmpeg-0.91.1
 <media-sound/gqradio-1.9.2
-<media-video/coriander-2
+=media-video/coriander-1*
 <media-video/dvdrip-0.98.1
 <media-video/lives-0.9.1
 <media-video/ogle-gui-0.9.2
