@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/zsh-completion
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completion/ChangeLog,v 1.15 2006/09/20 05:45:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completion/ChangeLog,v 1.16 2006/11/17 15:11:40 flameeyes Exp $
+
+  17 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  zsh-completion-20060618.ebuild:
+  Add ~sparc-fbsd keyword.
 
   20 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
   zsh-completion-20060618.ebuild:
