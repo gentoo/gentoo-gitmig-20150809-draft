@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5-r4.ebuild,v 1.3 2006/11/17 18:36:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5-r6.ebuild,v 1.1 2006/11/17 18:36:35 flameeyes Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -12,9 +12,9 @@ SRC_URI="mirror://kde/stable/${PV}/src/${P}.tar.bz2
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.5"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64"
 IUSE="acl alsa arts cups doc jpeg2k kerberos legacyssl utempter openexr spell ssl tiff
-zeroconf kernel_linux fam lua"
+zeroconf avahi kernel_linux fam lua linguas_he"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
 # so we recreate the entire DEPEND from scratch.
@@ -25,7 +25,7 @@ RDEPEND="$(qt_min_version 3.3.3)
 	app-arch/bzip2
 	>=media-libs/freetype-2
 	media-libs/fontconfig
-	>=dev-libs/libxslt-1.1.15
+	>=dev-libs/libxslt-1.1.16
 	>=dev-libs/libxml2-2.6.6
 	>=dev-libs/libpcre-4.2
 	media-libs/libart_lgpl
@@ -44,7 +44,8 @@ RDEPEND="$(qt_min_version 3.3.3)
 	utempter? ( sys-libs/libutempter )
 	!kde-base/kde-env
 	lua? ( dev-lang/lua )
-	spell? ( app-text/aspell app-dicts/aspell-en )"
+	spell? ( app-text/aspell app-dicts/aspell-en
+		linguas_he? ( >=app-text/hspell-1.0 ) )"
 
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
@@ -52,6 +53,8 @@ DEPEND="${RDEPEND}
 
 RDEPEND="${RDEPEND}
 	|| ( ( x11-apps/rgb x11-apps/iceauth ) <virtual/x11-7 ) "
+
+PDEPEND="zeroconf? ( avahi? ( kde-misc/kdnssd-avahi ) )"
 
 # Testing code is rather broken and merely for developer purposes, so disable it.
 RESTRICT="test"
@@ -105,10 +108,22 @@ src_compile() {
 			$(use_with alsa) $(use_with arts)
 			$(use_with kerberos gssapi) $(use_with tiff)
 			$(use_with jpeg2k jasper) $(use_with openexr)
-			$(use_enable cups) $(use_enable zeroconf dnssd)
+			$(use_enable cups)
 			$(use_with utempter) $(use_with lua)
 			$(use_enable kernel_linux sendfile) --enable-mitshm
-			$(use_with spell aspell) --without-hspell"
+			$(use_with spell aspell)"
+
+	if use zeroconf && ! use avahi; then
+		myconf="${myconf} --disable-dnssd"
+	else
+		myconf="${myconf} --enable-dnssd"
+	fi
+
+	if use spell; then
+		myconf="${myconf} $(use_with linguas_he hspell)"
+	else
+		myconf="${myconf} --without-hspell"
+	fi
 
 	if has_version x11-apps/rgb; then
 		myconf="${myconf} --with-rgbfile=/usr/share/X11/rgb.txt"

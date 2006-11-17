@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.2-r6.ebuild,v 1.15 2006/09/18 16:17:49 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.2-r6.ebuild,v 1.16 2006/11/17 18:36:35 flameeyes Exp $
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
 
@@ -40,7 +40,7 @@ RDEPEND="$(qt_min_version 3.3.3)
 	openexr? ( >=media-libs/openexr-1.2 )
 	spell? ( || (  ( app-text/aspell app-dicts/aspell-en )
 	              app-text/ispell ) )
-	zeroconf? ( net-misc/mDNSResponder )
+	zeroconf? (	!avahi? ( net-misc/mDNSResponder !kde-base/kdnssd ) )
 	virtual/fam
 	virtual/ghostscript
 	~kde-base/kde-env-3"

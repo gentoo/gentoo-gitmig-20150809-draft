@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.383 2006/11/16 13:29:01 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.384 2006/11/17 18:36:35 flameeyes Exp $
+
+*kdelibs-3.5.5-r6 (17 Nov 2006)
+
+  17 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdelibs-3.5.2-r6.ebuild, kdelibs-3.5.5-r4.ebuild, kdelibs-3.5.5-r5.ebuild,
+  +kdelibs-3.5.5-r6.ebuild:
+  Add new version, that with avahi useflag use kde-misc/kdnssd-avahi rather
+  tha building the internal kdnssd support. Thanks to Nathan Caldwell in bug
+  #118178.
 
   16 Nov 2006; Joseph Jezak <josejx@gentoo.org> kdelibs-3.5.5-r4.ebuild:
   Marked ppc stable for bug #147570.
