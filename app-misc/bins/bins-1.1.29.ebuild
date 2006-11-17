@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.29.ebuild,v 1.11 2006/10/21 19:46:41 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.29.ebuild,v 1.12 2006/11/17 23:52:18 compnerd Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://zubro.chez.tiscali.fr/BINS/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ppc sparc x86"
-IUSE="gtk"
+IUSE=""
 
 DEPEND=">=dev-lang/perl-5.6.1-r6
 	>=media-gfx/imagemagick-6.2.2.0
@@ -30,7 +30,6 @@ DEPEND=">=dev-lang/perl-5.6.1-r6
 	>=dev-perl/XML-DOM-1.39-r1
 	>=dev-perl/XML-Grove-0.46_alpha
 	>=dev-perl/XML-Handler-YAWriter-0.23
-	gtk? ( dev-perl/gtk-perl-glade )
 	>=dev-perl/XML-XQL-0.67
 	dev-perl/TimeDate
 	>=sys-apps/sed-4"
