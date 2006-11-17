@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.55.ebuild,v 1.1 2006/10/21 10:28:25 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.55.ebuild,v 1.2 2006/11/17 20:44:53 genstef Exp $
 
 WANT_AUTOMAKE=1.6
 inherit autotools elisp-common eutils versionator flag-o-matic
@@ -46,6 +46,7 @@ S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A/adobe-cmaps-200406.tar.gz acro5-cmaps-2001.tar.gz}
+	ln -s ${S}/{,src}/Makefile.in
 	if use cjk; then
 		cat ${FILESDIR}/ghostscript-esp-8.15.2-cidfmap.cjk >> ${S}/lib/cidfmap
 		cat ${FILESDIR}/ghostscript-esp-8.15.2-FAPIcidfmap.cjk >> ${S}/lib/FAPIcidfmap
@@ -74,7 +75,6 @@ src_unpack() {
 		sed -i -e 's:EXTRALIBS=.*:\0 -lcups -lcupsimage:' src/Makefile.in || die "sed failed"
 	fi
 	cd ${S}
-	ln -s Makefile.in src/Makefile.in
 
 	if ! use gtk; then
 		sed -i "s:\$(GSSOX)::" src/*.mak || die "gsx sed failed"
