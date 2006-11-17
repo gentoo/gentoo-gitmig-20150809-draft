@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.16.0.ebuild,v 1.5 2006/10/13 21:57:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.16.0.ebuild,v 1.6 2006/11/17 09:21:34 compnerd Exp $
 
 inherit eutils gnome2
 
@@ -12,8 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="debug doc xinerama opengl pam"
 
-RDEPEND=">=sys-apps/dbus-0.35.2
-		 >=gnome-base/gconf-2.6.1
+RDEPEND=">=gnome-base/gconf-2.6.1
 		 >=x11-libs/gtk+-2.8
 		 >=gnome-base/gnome-vfs-2.12
 		 >=gnome-base/libgnomeui-2.12
@@ -28,6 +27,10 @@ RDEPEND=">=sys-apps/dbus-0.35.2
 		 x11-proto/xextproto
 		 x11-proto/randrproto
 		 x11-proto/scrnsaverproto
+		 || (
+				>=dev-libs/dbus-glib-0.71
+				( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.35.2 )
+			)
 		 opengl?	( virtual/opengl )
 		 xinerama?	(
 						x11-libs/libXinerama
