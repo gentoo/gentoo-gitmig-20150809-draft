@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-radio/files/rc-addon.sh,v 1.2 2006/07/22 19:57:21 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-radio/files/rc-addon.sh,v 1.3 2006/11/17 13:23:19 zzam Exp $
 #
 # rc-addon plugin-startup-skript for vdr-radio
 # 
@@ -12,8 +12,3 @@ plugin_pre_vdr_start() {
     add_plugin_param "-f ${RADIO_BACKGROUND_DIR}"
 
 }
-					
-# make it comp to old VDR Versions
-if [[ ${SCRIPT_API:-1} -lt 2 ]]; then
-    plugin_pre_vdr_start
-fi 
