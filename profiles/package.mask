@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6289 2006/11/17 13:26:06 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6290 2006/11/17 13:32:40 drizzt Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -104,7 +104,6 @@ media-plugins/gst-plugins-swfdec
 media-radio/gmfsk
 media-sound/digitaldj
 media-sound/gnusound
-media-sound/grip
 media-sound/orpheus
 media-sound/psindustrializer
 media-video/gsubedit
