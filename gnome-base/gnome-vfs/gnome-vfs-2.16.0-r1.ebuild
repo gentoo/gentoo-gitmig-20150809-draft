@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.16.0-r1.ebuild,v 1.7 2006/10/30 16:30:11 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.16.0-r1.ebuild,v 1.8 2006/11/17 18:45:01 dang Exp $
 
 inherit eutils gnome2 autotools
 
@@ -40,6 +40,7 @@ RDEPEND=">=gnome-base/gconf-2
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/intltool-0.35
+	=sys-devel/automake-1.9*
 	>=dev-util/pkgconfig-0.9
 	doc? ( >=dev-util/gtk-doc-1 )"
 PDEPEND="hal? ( >=gnome-base/gnome-mount-0.4 )"
