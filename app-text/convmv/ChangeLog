@@ -1,6 +1,9 @@
 # ChangeLog for app-text/convmv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/convmv/ChangeLog,v 1.28 2006/11/15 03:33:00 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/convmv/ChangeLog,v 1.29 2006/11/17 13:14:05 nixnut Exp $
+
+  17 Nov 2006; nixnut <nixnut@gentoo.org> convmv-1.10.ebuild:
+  Stable on ppc wrt bug 154981
 
   15 Nov 2006; Tom Gall <tgall@gentoo.org> convmv-1.10.ebuild:
   stable on ppc64, bug 154981
