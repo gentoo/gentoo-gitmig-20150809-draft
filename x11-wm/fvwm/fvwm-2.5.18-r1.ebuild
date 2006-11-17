@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.18-r1.ebuild,v 1.6 2006/11/15 13:40:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.18-r1.ebuild,v 1.7 2006/11/17 17:34:15 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,16 +14,15 @@ KEYWORDS="alpha ~amd64 ia64 ~ppc ppc64 sparc x86"
 IUSE="bidi debug gtk imlib nls perl png readline rplay stroke tk truetype xinerama"
 
 RDEPEND="readline? ( sys-libs/readline sys-libs/ncurses )
-		gtk? ( =x11-libs/gtk+-1.2*
-				imlib? ( media-libs/gdk-pixbuf
-						media-libs/imlib ) )
+		gtk? ( =x11-libs/gtk+-1.2* imlib? ( media-libs/imlib ) )
 		rplay? ( media-sound/rplay )
 		bidi? ( dev-libs/fribidi )
 		png? ( media-libs/libpng )
 		stroke? ( dev-libs/libstroke )
-		perl? ( tk? ( dev-lang/tk
-						dev-perl/perl-tk
-						>=dev-perl/X11-Protocol-0.56 ) )
+		perl? ( tk? (
+					dev-lang/tk
+					dev-perl/perl-tk
+					>=dev-perl/X11-Protocol-0.56 ) )
 		truetype? ( virtual/xft media-libs/fontconfig )
 		dev-lang/perl
 		sys-libs/zlib
