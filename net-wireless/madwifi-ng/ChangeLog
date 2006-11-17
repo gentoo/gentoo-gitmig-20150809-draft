@@ -1,6 +1,15 @@
 # ChangeLog for net-wireless/madwifi-ng
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.16 2006/09/24 09:32:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.17 2006/11/17 18:36:53 genstef Exp $
+
+  17 Nov 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/madwifi-ng-0.9.2-ath_intr.diff,
+  +files/madwifi-ng-0.9.2-config.h.diff,
+  +files/madwifi-ng-0.9.2-crypto_cipher_encrypt_one.diff,
+  madwifi-ng-0.9.2.ebuild:
+  Add 2.6.19 support patches thanks to Horst Schirmeier
+  <gentoo@schirmeier.com> and Martin Heimburger <vispillo@vispillo.org> in bug
+  152595
 
   24 Sep 2006; Michael Hanselmann <hansmi@gentoo.org>
   madwifi-ng-0.9.2.ebuild:

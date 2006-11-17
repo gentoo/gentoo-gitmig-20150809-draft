@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.2.ebuild,v 1.7 2006/09/24 09:32:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.2.ebuild,v 1.8 2006/11/17 18:36:53 genstef Exp $
 
 inherit linux-mod
 
@@ -68,6 +68,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+	epatch ${FILESDIR}/${P}-{ath_intr,config.h,crypto_cipher_encrypt_one}.diff
 	for dir in ath net80211 ath_rate/amrr ath_rate/onoe ath_rate/sample; do
 		convert_to_m ${S}/${dir}/Makefile
 	done
