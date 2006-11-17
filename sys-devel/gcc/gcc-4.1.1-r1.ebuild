@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.1-r1.ebuild,v 1.12 2006/11/16 06:11:10 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.1-r1.ebuild,v 1.13 2006/11/17 00:03:51 vapier Exp $
 
-PATCH_VER="1.7"
+PATCH_VER="1.7.1"
 UCLIBC_VER="1.1"
 
 ETYPE="gcc-compiler"
