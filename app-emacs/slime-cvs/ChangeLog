@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/slime-cvs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime-cvs/ChangeLog,v 1.19 2006/04/12 16:47:17 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime-cvs/ChangeLog,v 1.20 2006/11/17 10:46:06 opfer Exp $
+
+*slime-cvs-0-r5 (17 Nov 2006)
+
+  17 Nov 2006; Christian Faulhammer <opfer@gentoo.org> +files/swank-r5.asd,
+  +slime-cvs-0-r5.ebuild:
+  repair through modified swank.asd plus a bump, as reported in bug #153597 by
+  Anton Kazennikov <kazennikov@gmail.com>
 
   12 Apr 2006; Matthew Kennedy <mkennedy@gentoo.org>
   files/70slime-gentoo.el, +files/README.Gentoo, files/swank.asd,
