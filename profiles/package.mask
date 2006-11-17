@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6286 2006/11/17 05:51:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6287 2006/11/17 10:17:38 compnerd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ## 
+
+# Saleem Abdulrasool <compnerd@gentoo.org> (17 Nov 2006)
+# Hard D-BUS dependency (0.90)
+>=app-misc/tomboy-0.50
 
 # Alin Nastac <mrness@gentoo.org> (17 Nov 2006)
 # This package is merely a hack that adds anti-virus support to the
