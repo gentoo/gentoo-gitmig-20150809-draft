@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.4.4-r1.ebuild,v 1.5 2006/05/19 23:01:45 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.4.4-r1.ebuild,v 1.6 2006/11/17 10:18:09 opfer Exp $
 
 inherit elisp eutils
 
@@ -19,9 +19,11 @@ KEYWORDS="alpha ~amd64 ppc sparc x86"
 DEPEND="virtual/w3m"
 
 pkg_setup() {
-	if built_with_use www-client/w3m async; then
+	if has_version www-client/w3m; then
+	   if built_with_use www-client/w3m async; then
 		eerror "emacs-w3m hangs if you build w3m with async support."
 		die "re-emerge www-client/w3m with USE=\"-async\""
+	   fi
 	fi
 }
 
