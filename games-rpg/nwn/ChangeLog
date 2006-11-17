@@ -1,6 +1,14 @@
 # ChangeLog for games-rpg/nwn
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.50 2006/10/06 22:10:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.51 2006/11/17 20:02:08 wolf31o2 Exp $
+
+*nwn-1.68-r1 (17 Nov 2006)
+
+  17 Nov 2006; Chris Gianelloni <wolf31o2@gentoo.org> +nwn-1.68-r1.ebuild:
+  This is the initial import of the new nwn ebuild which goes with the new
+  nwn-data ebuild. Between the two, this should resolve quite a few bugs, as
+  mentioned on the nwn-data ChangeLog. I still plan on adding more support,
+  but this should be a good start.
 
   06 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org> nwn-1.68.ebuild:
   Removed virtual/x11 from dependencies.
