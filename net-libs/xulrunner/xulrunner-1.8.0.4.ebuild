@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.0.4.ebuild,v 1.2 2006/11/12 21:26:59 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.0.4.ebuild,v 1.3 2006/11/17 14:36:50 nixnut Exp $
 
 inherit flag-o-matic toolchain-funcs eutils makeedit multilib autotools mozconfig-2 java-pkg-opt-2
 PVER="0.8"
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/${PN}/releases/${PV}/source/${P}-
 
 LICENSE="MPL-1.1 NPL-1.1"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 ~ppc ~x86"
 
 RDEPEND=">=sys-libs/zlib-1.1.4
 	>=sys-devel/binutils-2.16.1
