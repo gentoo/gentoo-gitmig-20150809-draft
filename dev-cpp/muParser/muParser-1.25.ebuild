@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/muParser/muParser-1.25.ebuild,v 1.4 2006/11/03 15:46:12 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/muParser/muParser-1.25.ebuild,v 1.5 2006/11/17 16:40:30 swegener Exp $
 
 DESCRIPTION="Library for parsing mathematical expressions"
 HOMEPAGE="http://muparser.sourceforge.net/"
@@ -15,7 +15,7 @@ S="${WORKDIR}/${PN}"
 
 src_compile() {
 	econf --disable-samples || die "econf failed"
-	MAKEOPTS="$MAKEOPTS -j1" emake CXXFLAGS="${CXXFLAGS}" || die "emake failed"
+	emake -j1 CXXFLAGS="${CXXFLAGS}" || die "emake failed"
 	if use doc; then
 		make documentation || die "make documentation failed"
 	fi
