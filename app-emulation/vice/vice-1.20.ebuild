@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.20.ebuild,v 1.2 2006/10/26 00:26:20 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.20.ebuild,v 1.3 2006/11/17 23:06:10 compnerd Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.zimmers.net/anonftp/pub/cbm/crossplatform/emulators/VICE/${P
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="Xaw3d alsa arts esd gnome nls png readline sdl"
+IUSE="Xaw3d alsa arts esd nls png readline sdl"
 
 RDEPEND="media-libs/giflib
 	media-libs/jpeg
@@ -29,7 +29,6 @@ RDEPEND="media-libs/giflib
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
 	esd? ( media-sound/esound )
-	gnome? ( gnome-base/libgnomeui )
 	nls? ( virtual/libintl )
 	png? ( media-libs/libpng )
 	readline? ( sys-libs/readline )
@@ -64,7 +63,6 @@ src_compile() {
 		--enable-realdevice \
 		--with-resid \
 		--without-midas \
-		$(use_enable gnome gnomeui) \
 		$(use_enable nls) \
 		$(use_with Xaw3d xaw3d) \
 		$(use_with alsa) \
