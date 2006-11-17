@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/rox-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/ChangeLog,v 1.9 2006/11/17 00:41:27 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/ChangeLog,v 1.10 2006/11/17 12:53:50 nixnut Exp $
+
+  17 Nov 2006; nixnut <nixnut@gentoo.org> rox-lib-2.0.3-r1.ebuild:
+  Stable on ppc wrt bug 155035
 
   17 Nov 2006; Andrej Kacian <ticho@gentoo.org> rox-lib-2.0.3-r1.ebuild:
   Stable on x86, bug #155035.
