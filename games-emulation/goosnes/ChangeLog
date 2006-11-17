@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/goosnes
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/goosnes/ChangeLog,v 1.8 2006/10/18 18:53:31 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/goosnes/ChangeLog,v 1.9 2006/11/17 10:01:29 nyhm Exp $
+
+  17 Nov 2006; Tristan Heaven <nyhm@gentoo.org>
+  +files/goosnes-0.5.2-gtk2.patch, goosnes-0.5.2.ebuild:
+  Don't require gtk+-1, bug #155432
 
   18 Oct 2006; Tristan Heaven <nyhm@gentoo.org> goosnes-0.5.2.ebuild:
   Use autotools eclass
