@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvd/vdr-dvd-0.3.7_pre20060719.ebuild,v 1.2 2006/10/30 14:21:18 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvd/vdr-dvd-0.3.7_pre20060719.ebuild,v 1.3 2006/11/17 13:01:44 hd_brummy Exp $
 
 inherit vdr-plugin
 
 S="${WORKDIR}/dvd"
 
-DESCRIPTION="Video Disk Recorder DVD-Player PlugIn"
+DESCRIPTION="VDR Plugin: DVD-Player"
 HOMEPAGE="http://sourceforge.net/projects/dvdplugin"
 SRC_URI="http://vdr.websitec.de/download/${PN}/${P}.tar.gz"
 
