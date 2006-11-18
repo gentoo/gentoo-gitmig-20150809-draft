@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/pavuk-0.9.32.ebuild,v 1.7 2006/02/25 20:27:37 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/pavuk-0.9.32.ebuild,v 1.8 2006/11/18 04:17:57 compnerd Exp $
 
 inherit eutils
 
@@ -17,7 +17,6 @@ DEPEND=">=sys-apps/sed-4
 	sys-devel/gettext
 	sys-libs/zlib
 	ssl? ( dev-libs/openssl )
-	gnome? ( gnome-base/gnome-libs )
 	mozilla? ( www-client/mozilla )"
 
 src_compile() {
@@ -27,7 +26,6 @@ src_compile() {
 		--disable-gtk \
 		--disable-socks \
 		$(use_enable ssl) \
-		$(use_enable gnome) \
 		$(use_enable mozilla js) \
 		$(use_enable nls) \
 		|| die "econf failed"

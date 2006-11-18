@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/pavuk-0.9.34-r1.ebuild,v 1.2 2006/10/27 13:23:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/pavuk-0.9.34-r1.ebuild,v 1.3 2006/11/18 04:17:57 compnerd Exp $
 
 inherit eutils
 
@@ -11,12 +11,11 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc sparc ~x86"
-IUSE="gnome gtk nls ssl"
+IUSE="gtk nls ssl"
 
 DEPEND=">=sys-apps/sed-4
 	sys-devel/gettext
 	ssl? ( dev-libs/openssl )
-	gnome? ( gnome-base/gnome-libs )
 	=dev-libs/glib-1.2*
 	gtk? (	>=x11-libs/gtk+-2.8.8
 		( || (	x11-proto/xproto
@@ -30,8 +29,7 @@ RDEPEND="gtk? ( >=x11-libs/gtk+-2.8.8
 		virtual/x11 )
 	)
 	virtual/libintl
-	ssl? ( dev-libs/openssl )
-	gnome? ( gnome-base/gnome-libs )"
+	ssl? ( dev-libs/openssl )"
 
 src_unpack() {
 	unpack ${A}
@@ -45,7 +43,6 @@ src_compile() {
 		--disable-socks \
 		$(use_enable gtk) \
 		$(use_enable ssl) \
-		$(use_enable gnome) \
 		$(use_enable nls) \
 		|| die "econf failed"
 
