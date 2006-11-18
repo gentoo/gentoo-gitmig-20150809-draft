@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6298 2006/11/18 07:07:03 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6299 2006/11/18 07:16:41 compnerd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -147,6 +147,8 @@ x11-plugins/wmappkill
 x11-plugins/wmdeskguide
 x11-plugins/wmspaceclock
 x11-terms/multi-gnome-terminal
+x11-themes/gtk-engines-smooth
+x11-themes/mandrake-artwork
 x11-themes/nautilus-themes
 
 <app-crypt/tinyca-2
