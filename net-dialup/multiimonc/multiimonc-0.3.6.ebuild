@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/multiimonc/multiimonc-0.3.6.ebuild,v 1.7 2006/03/12 18:37:26 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/multiimonc/multiimonc-0.3.6.ebuild,v 1.8 2006/11/18 12:58:08 mrness Exp $
 
 inherit eutils
 
@@ -22,10 +22,11 @@ src_unpack() {
 	cd "${S}/src"
 	epatch "${FILESDIR}/${PV}-TextScrollWindow.diff" || die "epatch failed"
 	cd "${S}"
+	epatch "${FILESDIR}/${P}-as-needed.patch" || die "epatch failed"
 }
 
 src_compile() {
-	econf || die "could not configure"
+	econf --with-wx-config=wxgtk2-2.4-config || die "could not configure"
 	emake || die "emake failed"
 }
 

@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/multiimonc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/multiimonc/ChangeLog,v 1.8 2006/03/12 18:37:26 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/multiimonc/ChangeLog,v 1.9 2006/11/18 12:58:08 mrness Exp $
+
+  18 Nov 2006; Alin Nastac <mrness@gentoo.org>
+  +files/multiimonc-0.3.6-as-needed.patch, multiimonc-0.3.6.ebuild:
+  Force usage of wxGTK-2.4 by using wxgtk2-2.4-config script. Fix broken
+  linkage when --as-needed is used.
 
   12 Mar 2006; Alin Nastac <mrness@gentoo.org> multiimonc-0.3.6.ebuild:
   Remove virtual/libc dependency. Quote $S, $FILESDIR and $D.

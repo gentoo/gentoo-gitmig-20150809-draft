@@ -1,0 +1,12 @@
+diff -Nru MultiImonC-0.3.6.orig/configure.in MultiImonC-0.3.6/configure.in
+--- MultiImonC-0.3.6.orig/configure.in	2005-02-20 13:21:24.000000000 +0200
++++ MultiImonC-0.3.6/configure.in	2006-11-18 14:46:43.311666500 +0200
+@@ -46,7 +46,7 @@
+ CPPFLAGS="$CPPFLAGS $WX_CPPFLAGS"
+ CXXFLAGS="$CXXFLAGS $WX_CXXFLAGS_ONLY -Wall -fno-rtti"
+ CFLAGS="$CFLAGS $WX_CFLAGS_ONLY"
+-LDFLAGS="$LDFLAGS $WX_LIBS"
++LIBS="$LIBS $WX_LIBS"
+ 
+ WX_PREFIX=`$WX_CONFIG_NAME --prefix`
+ WX_VERSION=`$WX_CONFIG_NAME --version`
