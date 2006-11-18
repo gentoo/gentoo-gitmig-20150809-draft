@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.5.2.ebuild,v 1.5 2006/06/21 17:30:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.5.2.ebuild,v 1.6 2006/11/18 04:54:33 compnerd Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc"
-IUSE="X debug doc fortran gnome ifc itcl java jpeg octave png python tcltk tetex truetype"
+IUSE="X debug doc fortran ifc itcl java jpeg octave png python tcltk tetex truetype"
 
 RDEPEND="virtual/libc
 		 dev-lang/perl
@@ -35,7 +35,6 @@ RDEPEND="virtual/libc
 						 dev-lang/tk
 						itcl? ( dev-tcltk/itcl )
 						)
-				gnome? ( gnome-base/gnome-libs )
 			   )"
 
 DEPEND="${RDEPEND}
@@ -136,7 +135,7 @@ src_compile() {
 			EXTRA_CONF="${EXTRA_CONF} --disable-tk"
 			EXTRA_CONF="${EXTRA_CONF} --disable-itcl"
 		fi
-		EXTRA_CONF="${EXTRA_CONF} $(use_enable gnome)"
+		EXTRA_CONF="${EXTRA_CONF} --disable-gnome"
 	else
 		EXTRA_CONF="${EXTRA_CONF} --without-x"
 		EXTRA_CONF="${EXTRA_CONF} --disable-tcl"
