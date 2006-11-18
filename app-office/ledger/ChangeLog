@@ -1,0 +1,15 @@
+# ChangeLog for app-office/ledger
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ChangeLog,v 1.1 2006/11/18 10:53:51 wrobel Exp $
+
+  18 Nov 2006; <wrobel@gentoo.org> +files/50ledger-mode-gentoo.el,
+  +metadata.xml, +ledger-2.5.ebuild:
+  app-office/ledger-2.5 now in the tree. License added, local use flags
+  described and ebuild fixed.
+
+*ledger-2.5 (18 Nov 2006)
+
+  18 Nov 2006; <wrobel@gentoo.org> +files/50ledger-mode-gentoo.el,
+  +metadata.xml, +ledger-2.5.ebuild:
+  Added app-office/ledger-2.5 to the tree.
+
