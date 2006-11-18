@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2352 2006/11/18 10:49:20 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2353 2006/11/18 21:49:22 betelgeuse Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -767,6 +767,7 @@ media-libs/libsdl:novideo - Allow users to disable video support completely (at 
 media-libs/libvorbis:aotuv - Allow users to enable aoTuV encoder enhancements
 media-libs/mesa:xcb - Support the X C-language Binding, a replacement for Xlib
 media-libs/mlt:lame - Support LAME mp3 encoding
+media-libs/netpbm:rle - Build converters for the RLE format (utah raster toolkit)
 media-libs/panda3d:fmod - Enables support for using mod files for audio support
 media-libs/panda3d:nspr - Enables support for the Netscape Portable Runtime, used in network interface functionality (ie. multiplayer online game networking).
 media-libs/ploticus:cpulimit - Limit cpu usage when generating graphics
