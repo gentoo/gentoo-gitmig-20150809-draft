@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-1.8.0.ebuild,v 1.1 2006/11/18 00:13:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-1.8.0.ebuild,v 1.2 2006/11/18 10:31:36 aballier Exp $
 
 inherit eutils wxwidgets flag-o-matic
 
@@ -18,6 +18,7 @@ DEPEND=">=dev-libs/libebml-0.7.7
 	media-libs/libogg
 	media-libs/libvorbis
 	dev-libs/expat
+	dev-libs/libpcre
 	sys-libs/zlib
 	wxwindows? ( =x11-libs/wxGTK-2.6* )
 	flac? ( media-libs/flac )
