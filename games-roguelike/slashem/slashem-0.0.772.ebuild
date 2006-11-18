@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/slashem-0.0.772.ebuild,v 1.2 2006/10/06 16:28:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/slashem-0.0.772.ebuild,v 1.3 2006/11/18 02:01:59 compnerd Exp $
 
 inherit eutils flag-o-matic games
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/slashem/${SE_PN}
 LICENSE="nethack"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="X gnome sdl opengl"
+IUSE="X sdl opengl"
 
 XDEPEND="x11-libs/libXaw
 	x11-libs/libXmu
@@ -34,7 +34,6 @@ XDEPEND="x11-libs/libXaw
 #	qt? ( =x11-libs/qt-2* ) this version has overflow bugs #79720
 RDEPEND=">=sys-libs/ncurses-5.2-r5
 	X? ( ${XDEPEND} )
-	gnome? ( >=gnome-base/gnome-libs-1.4.1.4-r2 )
 	opengl? ( virtual/opengl
 		media-libs/libsdl )
 	sdl? ( media-libs/libsdl )"
@@ -73,8 +72,8 @@ src_unpack() {
 	if use X ; then
 		./config X11 ../.. || die "X config"
 	fi
-	# Gnome and SDL require X11
-	for v in gnome sdl ; do #qt
+	# SDL require X11
+	for v in sdl ; do #qt
 		use ${v} && { ./config ${v} ../.. || die "${v} config"; }
 		./config X11 ../.. || die "X config"
 	done
@@ -153,7 +152,6 @@ src_install() {
 	doins ${FILESDIR}/${SE_VER}/dot.slashemrc
 
 	local windowtypes="tty"
-	use gnome  && windowtypes="${windowtypes} gnome"
 	#use qt     && windowtypes="${windowtypes} qt"
 	use X      && windowtypes="${windowtypes} x11"
 	use sdl    && windowtypes="${windowtypes} sdl"
