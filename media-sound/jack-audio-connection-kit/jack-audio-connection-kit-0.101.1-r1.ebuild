@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.101.1-r1.ebuild,v 1.10 2006/11/13 01:22:24 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.101.1-r1.ebuild,v 1.11 2006/11/18 12:47:24 eldad Exp $
 
 inherit flag-o-matic eutils multilib
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/jackit/${P}.tar.gz http://netjack.sourceforge.net/
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 arm ppc ~ppc-macos ppc64 sh sparc x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc-macos ~ppc64 ~sh ~sparc ~x86"
 IUSE="altivec alsa caps coreaudio doc debug jack-tmpfs mmx oss portaudio sndfile sse netjack cpudetection"
 
 RDEPEND="dev-util/pkgconfig
@@ -85,14 +85,22 @@ src_compile() {
 			-maltivec -mabi=altivec -mhard-float -mpowerpc-gfxopt
 	fi
 
-	# CPU Detection (dynsimd) uses asm routines which requires 3dnow.
+	# CPU Detection (dynsimd) uses asm routines which requires 3dnow, mmx and sse.
+	# Also, without -O2 it will not compile as well.
 	# we test if it is present before enabling the configure flag.
 	if use cpudetection ; then
 		if (! grep 3dnow /proc/cpuinfo >/dev/null) ; then
 			ewarn "Can't build cpudetection (dynsimd) without cpu 3dnow support. see bug #136565."
+		elif (! grep sse /proc/cpuinfo >/dev/null) ; then
+			ewarn "Can't build cpudetection (dynsimd) without cpu sse support. see bug #136565."
+		elif (! grep mmx /proc/cpuinfo >/dev/null) ; then
+			ewarn "Can't build cpudetection (dynsimd) without cpu mmx support. see bug #136565."
 		else
-			einfo "Enabling cpudetection (dynsimd)"
+			einfo "Enabling cpudetection (dynsimd). Adding -mmmx, -msse, -m3dnow and -O2 to CFLAGS."
 			myconf="${myconf} --enable-dynsimd"
+
+			filter-flags -O*
+			append-flags -mmmx -msse -m3dnow -O2
 		fi
 	fi
 
