@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-sysinfo/vdr-sysinfo-0.1.0a-r1.ebuild,v 1.2 2006/07/08 19:28:42 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-sysinfo/vdr-sysinfo-0.1.0a-r1.ebuild,v 1.3 2006/11/18 08:27:03 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://kikko77.altervista.org/sections/Download/[12]_sysinfo/${P}.tgz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND=">=media-video/vdr-1.3.7"
