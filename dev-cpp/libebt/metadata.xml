@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>cpp</herd>
+	<maintainer><email>spb@gentoo.org</email></maintainer>
 	<longdescription lang="en">
 The libebt library provides a clean way of getting human-readable backtrace
 messages in C++. It uses the RAII (resource acquisition is initialisation)
