@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/prelink
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.45 2006/07/25 11:57:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.46 2006/11/18 20:48:16 dirtyepic Exp $
+
+  18 Nov 2006; <dirtyepic@gentoo.org>
+  +files/prelink-20060712-cache-segfault.patch, prelink-20060712.ebuild:
+  Added upstream patch fixing segfault during automated run. (bug #143753)
 
 *prelink-20060712 (25 Jul 2006)
 

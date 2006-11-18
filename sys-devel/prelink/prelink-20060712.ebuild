@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20060712.ebuild,v 1.1 2006/07/25 11:57:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20060712.ebuild,v 1.2 2006/11/18 20:48:16 dirtyepic Exp $
 
 inherit eutils
 
@@ -27,6 +27,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-20040707-init.patch
 	epatch ${FILESDIR}/${PN}-20060213-symloop.patch
+	epatch ${FILESDIR}/${PN}-20060712-cache-segfault.patch
 
 	# Build our /etc/env.d/60prelink
 	cat > "${S}/60prelink" <<-EOF
