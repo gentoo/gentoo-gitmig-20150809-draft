@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6294 2006/11/18 02:41:30 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6295 2006/11/18 03:13:49 dang Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -940,19 +940,6 @@ www-apps/drupal
 # Roy Marples <uberlord@gentoo.org> (07 Sep 2006)
 # Mask dhcp alpha version
 =net-misc/dhcp-3.1.0_alpha*
-
-# Daniel Gryniewicz <dang@gentoo.org> (06 Sep 2006)
-# GNOME 2.16 mask for testing
->=dev-cpp/glibmm-2.9.1
->=dev-cpp/gconfmm-2.16.0
->=dev-cpp/gnome-vfsmm-2.16.0
->=dev-cpp/gtkmm-2.10.1
-dev-cpp/cairomm
->=dev-cpp/libgnomecanvasmm-2.16.0
->=dev-cpp/libgnomemm-2.16.0
->=dev-cpp/libgnomeuimm-2.16.0
->=dev-cpp/libglademm-2.6.3
->=dev-cpp/libxmlpp-2.13.1
 
 # Saleem Abdulrasool <compnerd@gentoo.org> (07 Aug 2006)
 # New Galago Release
