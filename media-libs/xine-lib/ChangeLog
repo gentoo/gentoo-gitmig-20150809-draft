@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.413 2006/11/13 20:15:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.414 2006/11/18 13:12:28 flameeyes Exp $
+
+  18 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  xine-lib-1.1.3_pre20061112.ebuild:
+  Don't restrict the dependency to flac 1.1.2, as the current snapshot works
+  with 1.1.3.
 
   13 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   -xine-lib-1.1.3_pre20060929.ebuild, xine-lib-1.1.3_pre20061112.ebuild:
