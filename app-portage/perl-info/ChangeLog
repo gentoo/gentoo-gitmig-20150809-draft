@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/perl-info
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/perl-info/ChangeLog,v 1.6 2006/11/15 02:20:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/perl-info/ChangeLog,v 1.7 2006/11/18 10:42:21 nixnut Exp $
+
+  18 Nov 2006; nixnut <nixnut@gentoo.org> perl-info-0.13.ebuild:
+  Added ~ppc keyword wrt bug 154918
 
   15 Nov 2006; Jeroen Roovers <jer@gentoo.org> perl-info-0.13.ebuild:
   Marked ~hppa (bug #154918).
