@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/systemtap
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.1 2006/03/27 04:53:44 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.2 2006/11/18 00:02:08 genstef Exp $
+
+*systemtap-20061111 (18 Nov 2006)
+
+  18 Nov 2006; Stefan Schweizer <genstef@gentoo.org>
+  -systemtap-20060325.ebuild, +systemtap-20061111.ebuild:
+  Version bump fixes bugs 74396, 141629, 143736 and 155114 thanks to Lasse
+  Bigum <zenith@cs.aau.dk>
 
   26 Mar 2006; Chris Aniszczyk <zx@gentoo.org> ChangeLog:
   systemtap-20060325.ebuild Initial Import
