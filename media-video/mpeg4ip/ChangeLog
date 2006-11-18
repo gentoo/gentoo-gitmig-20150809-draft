@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mpeg4ip
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.44 2006/11/11 20:29:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.45 2006/11/18 21:11:19 tester Exp $
+
+  18 Nov 2006; Olivier Crête <tester@gentoo.org>
+  +files/mpeg4ip-1.5.0.1-lX11.patch, +files/mpeg4ip-1.5.0.1-newffmpeg.patch,
+  -mpeg4ip-1.5.0.1.ebuild, mpeg4ip-1.5.0.1-r1.ebuild:
+  Add const_cast for newer ffmpeg and -lX11 for newer SDL
 
 *mpeg4ip-1.5.0.1-r1 (11 Nov 2006)
 

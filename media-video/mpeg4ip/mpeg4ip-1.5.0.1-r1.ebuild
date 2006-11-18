@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.5.0.1-r1.ebuild,v 1.1 2006/11/11 20:29:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.5.0.1-r1.ebuild,v 1.2 2006/11/18 21:11:19 tester Exp $
 
-inherit eutils multilib
+inherit eutils multilib autotools
 
 DESCRIPTION="MPEG 4 implementation library"
 
@@ -60,8 +60,12 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/mpeg4ip-1.4.1-disable-faac-test.patch
+	epatch "${FILESDIR}/mpeg4ip-1.4.1-disable-faac-test.patch"
 	epatch "${FILESDIR}/${P}-x264.patch"
+	epatch "${FILESDIR}/mpeg4ip-1.5.0.1-newffmpeg.patch"
+	epatch "${FILESDIR}/mpeg4ip-1.5.0.1-lX11.patch"
+
+	eautomake
 }
 
 src_compile() {
