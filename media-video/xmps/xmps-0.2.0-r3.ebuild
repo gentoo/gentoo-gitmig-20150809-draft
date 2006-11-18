@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xmps/xmps-0.2.0-r3.ebuild,v 1.7 2006/02/15 16:17:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xmps/xmps-0.2.0-r3.ebuild,v 1.8 2006/11/18 02:15:07 compnerd Exp $
 
 inherit eutils
 
-IUSE="nls gnome"
+IUSE="nls"
 
 DESCRIPTION="X Movie Player System"
 SRC_URI="http://xmps.sourceforge.net/sources/${P}.tar.gz"
@@ -14,7 +14,6 @@ RDEPEND="=x11-libs/gtk+-1.2*
 	x86? ( >=dev-lang/nasm-0.98 )
 	>=dev-libs/popt-1.5
 	>=media-libs/smpeg-0.4.4-r1
-	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
 	nls? ( virtual/libintl )"
 
 DEPEND="${RDEPEND}
@@ -36,8 +35,6 @@ src_unpack() {
 src_compile() {
 
 	local myconf
-
-	use gnome && myconf="--enable-gnome"
 
 	use nls || myconf="${myconf} --disable-nls"
 
