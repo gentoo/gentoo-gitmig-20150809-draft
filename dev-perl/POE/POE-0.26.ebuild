@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.26.ebuild,v 1.17 2006/10/24 21:57:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.26.ebuild,v 1.18 2006/11/18 01:15:47 compnerd Exp $
 
-IUSE="gtk ipv6 libwww ncurses tk"
+IUSE="ipv6 libwww ncurses tk"
 
 inherit perl-module
 
@@ -24,7 +24,6 @@ DEPEND="dev-perl/ExtUtils-AutoInstall
 	dev-perl/FreezeThaw
 	ipv6? ( dev-perl/Socket6 )
 	tk? ( dev-perl/perl-tk )
-	gtk? ( dev-perl/gtk-perl )
 	libwww? ( dev-perl/libwww-perl )
 	ncurses? ( dev-perl/Curses )
 	dev-lang/perl"

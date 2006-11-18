@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.32.02.ebuild,v 1.11 2006/10/24 21:57:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.32.02.ebuild,v 1.12 2006/11/18 01:15:47 compnerd Exp $
 
-IUSE="gtk ipv6 libwww ncurses tk"
+IUSE="ipv6 libwww ncurses tk"
 
 inherit perl-module
 MY_PV=${PV/.02/02}
@@ -32,7 +32,6 @@ DEPEND="dev-perl/ExtUtils-AutoInstall
 	>=dev-perl/TermReadKey-2.21
 	ipv6? ( >=dev-perl/Socket6-0.14 )
 	tk? ( >=dev-perl/perl-tk-800.027 )
-	gtk? ( >=dev-perl/gtk-perl-0.7009 )
 	libwww? ( >=dev-perl/libwww-perl-5.79
 		>=dev-perl/URI-1.30 )
 	ncurses? ( >=dev-perl/Curses-1.08 )
