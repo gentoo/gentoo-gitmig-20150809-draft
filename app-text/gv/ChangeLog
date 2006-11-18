@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.54 2006/11/18 10:21:50 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.55 2006/11/18 18:31:01 opfer Exp $
+
+  18 Nov 2006; Christian Faulhammer <opfer@gentoo.org> gv-3.6.2-r1.ebuild:
+  stable x86, security bug #154573
 
 *gv-3.6.2-r1 (18 Nov 2006)
 
