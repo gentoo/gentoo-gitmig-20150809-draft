@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta4-r1.ebuild,v 1.2 2006/10/23 04:25:37 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta4-r1.ebuild,v 1.3 2006/11/18 07:42:50 cardoe Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib mono autotools perl-app gnome2
 
@@ -20,7 +20,10 @@ IUSE="avahi bonjour cjk crypt dbus debug doc eds gadu gnutls gstreamer meanwhile
 RDEPEND="
 	bonjour? ( !avahi? ( net-misc/howl )
 		   avahi? ( net-dns/avahi ) )
-	dbus? ( >=sys-apps/dbus-0.35
+	dbus? ( || (
+				( >=dev-libs/dbus-glib-0.71 >=dev-python/dbus-python-0.71 )
+				( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.35 )
+				)
 		>=dev-lang/python-2.4 )
 	>=x11-libs/gtk+-2.0
 	>=dev-libs/glib-2.0
