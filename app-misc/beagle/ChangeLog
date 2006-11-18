@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/beagle
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.38 2006/11/02 11:44:23 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.39 2006/11/18 02:38:04 metalgod Exp $
+
+*beagle-0.2.12-r1 (18 Nov 2006)
+
+  18 Nov 2006; Luis Medinas <metalgod@gentoo.org> +beagle-0.2.12-r1.ebuild:
+  Added support for thunderbird and developer docs.
 
 *beagle-0.2.12 (02 Nov 2006)
 
