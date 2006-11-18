@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.384 2006/11/17 18:36:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.385 2006/11/18 13:41:38 flameeyes Exp $
+
+  18 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdelibs-3.5.5-r6.ebuild:
+  Remove the libkdnssd libraries when kdnssd-avahi is supposed to provide
+  them. Add ~x86-fbsd keyword.
 
 *kdelibs-3.5.5-r6 (17 Nov 2006)
 

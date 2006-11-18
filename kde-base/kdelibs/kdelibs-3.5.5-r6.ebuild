@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5-r6.ebuild,v 1.1 2006/11/17 18:36:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5-r6.ebuild,v 1.2 2006/11/18 13:41:38 flameeyes Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -12,7 +12,7 @@ SRC_URI="mirror://kde/stable/${PV}/src/${P}.tar.bz2
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.5"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86-fbsd"
 IUSE="acl alsa arts cups doc jpeg2k kerberos legacyssl utempter openexr spell ssl tiff
 zeroconf avahi kernel_linux fam lua linguas_he"
 
@@ -156,6 +156,11 @@ src_install() {
 	# Needed to create lib -> lib64 symlink for amd64 2005.0 profile
 	if [ "${SYMLINK_LIB}" = "yes" ]; then
 		dosym $(get_abi_LIBDIR ${DEFAULT_ABI}) ${KDEDIR}/lib
+	fi
+
+	# Get rid of the disabled version of the kdnsd libraries
+	if use zeroconf && use avahi; then
+		rm -rf "${D}/${PREFIX}"/$(get_libdir)/libkdnssd.*
 	fi
 
 	dodir /etc/env.d
