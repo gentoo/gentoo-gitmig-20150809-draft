@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/gkrellm-plugins-1.2.11-r1.ebuild,v 1.11 2006/10/27 00:09:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/gkrellm-plugins-1.2.11-r1.ebuild,v 1.12 2006/11/18 05:21:39 compnerd Exp $
 
-IUSE="gnome"
+IUSE=""
 
 S=${WORKDIR}/${P//gkrellm-}
 DESCRIPTION="emerge this package to install all of the gkrellm plugins"
@@ -26,5 +26,4 @@ DEPEND="=app-admin/gkrellm-1.2*
 		x11-plugins/gkrellmwho
 		!sparc? ( x11-plugins/gkrellmwireless )
 		x11-plugins/gkrellshoot
-		x11-plugins/gkrellweather
-		gnome? ( x11-plugins/gkrellm-gnome )"
+		x11-plugins/gkrellweather"
