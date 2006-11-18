@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/lcms
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.65 2006/11/18 09:50:08 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.66 2006/11/18 22:09:56 flameeyes Exp $
+
+  18 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> lcms-1.15.ebuild:
+  Don't do inverse arch dependencies for x86-fbsd, you'll just mask the issue
+  for us.
 
   18 Nov 2006; Stefan Schweizer <genstef@gentoo.org> lcms-1.15.ebuild:
   Add new swig to DEPEND to fix python-2.5 compile thanks to marienz in bug
