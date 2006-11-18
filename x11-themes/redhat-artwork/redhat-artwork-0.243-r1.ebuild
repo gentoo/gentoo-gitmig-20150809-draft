@@ -1,25 +1,23 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.243-r1.ebuild,v 1.10 2006/11/15 20:32:47 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.243-r1.ebuild,v 1.11 2006/11/18 08:34:09 compnerd Exp $
 
 inherit eutils rpm versionator kde-functions
 
 MY_PV="${PV}-2"
-DESCRIPTION="RedHat's Bluecurve theme for GTK1, GTK2, KDE, GDM, Metacity and Nautilus"
+DESCRIPTION="RedHat's Bluecurve theme for GTK2, KDE, GDM, Metacity and Nautilus"
 HOMEPAGE="http://www.redhat.com"
 SRC_URI="http://download.fedora.redhat.com/pub/fedora/linux/core/development/source/SRPMS/${PN}-${MY_PV}.src.rpm"
 LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="alpha amd64 ~hppa ia64 ppc sparc x86"
-IUSE="gtk kde audacious"
+IUSE="kde audacious"
 
 # See end of src_install():
 IUSE="${IUSE} gdm kdm cursors icons nautilus"
 
 RDEPEND=">=x11-libs/gtk+-2.0
-	gtk? ( >=media-libs/gdk-pixbuf-0.2.5
-	       >=x11-libs/gtk+-1.2.9 )
 	kde? ( || ( ( kde-base/kcontrol kde-base/kwin )
 	            kde-base/kdebase ) )"
 
@@ -82,20 +80,18 @@ src_compile() {
 			art/Makefile.am
 	fi
 
-	if ! use gtk; then
-		sed -i -e "s|AM_PATH_GTK(1.2.9, ,||" \
-		       -e "s|AC_MSG_ERROR(.*GTK+-1.*||" \
-		       -e "s|AC_CHECK_LIB(gtk, gtk_style_set_prop_experimental, :,||" \
-		       -e "s|AC_MSG_ERROR(.*gtk_style.*||" \
-		       -e "s|             \$GTK_LIBS)||" \
-		       -e "s|AM_PATH_GDK_PIXBUF||" \
-		       -e "s|art/gtk/Bluecurve1/Makefile||" \
-		       -e "s|art/gtk/Bluecurve1/gtk/Makefile||" \
-			configure.in
+	sed -i -e "s|AM_PATH_GTK(1.2.9, ,||" \
+	       -e "s|AC_MSG_ERROR(.*GTK+-1.*||" \
+	       -e "s|AC_CHECK_LIB(gtk, gtk_style_set_prop_experimental, :,||" \
+	       -e "s|AC_MSG_ERROR(.*gtk_style.*||" \
+	       -e "s|             \$GTK_LIBS)||" \
+	       -e "s|AM_PATH_GDK_PIXBUF||" \
+	       -e "s|art/gtk/Bluecurve1/Makefile||" \
+	       -e "s|art/gtk/Bluecurve1/gtk/Makefile||" \
+		configure.in
 
-		sed -i -e "s|Bluecurve1||" \
-			art/gtk/Makefile.am
-	fi
+	sed -i -e "s|Bluecurve1||" \
+		art/gtk/Makefile.am
 
 	sed -i -e 's| $(datadir)| $(DESTDIR)$(datadir)|' \
 		art/cursor/Bluecurve/Makefile.am \
