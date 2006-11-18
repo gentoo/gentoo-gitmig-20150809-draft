@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.1.5.ebuild,v 1.1 2006/08/30 20:37:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.1.5.ebuild,v 1.2 2006/11/18 21:45:38 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -209,7 +209,7 @@ pkg_postinst() {
 	elog "you can enable them in /etc/mail/spamassassin/init.pre"
 
 	if has_version '>=dev-lang/perl-5.8.8'; then
-		elog "A not from the SA developers:"
+		elog "A note from the SA developers:"
 		elog "Perl 5.8 now uses Unicode internally by default, which causes trouble for"
 		elog "SpamAssassin (and almost all other reasonably complex pieces of perl"
 		elog "code!)."
