@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kdnssd-avahi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdnssd-avahi/ChangeLog,v 1.2 2006/11/18 13:41:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdnssd-avahi/ChangeLog,v 1.3 2006/11/18 15:46:08 opfer Exp $
+
+  18 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  kdnssd-avahi-0.1.2.ebuild:
+  keyworded ~x86, bug #155505
 
   18 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   kdnssd-avahi-0.1.2.ebuild:
