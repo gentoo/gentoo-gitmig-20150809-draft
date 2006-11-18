@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.2.6.ebuild,v 1.1 2006/11/18 06:58:08 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.2.6.ebuild,v 1.2 2006/11/18 07:02:29 cardoe Exp $
 
 inherit eutils flag-o-matic debug
 
@@ -30,7 +30,7 @@ RDEPEND="media-libs/fontconfig
 		svg? ( dev-libs/libxml2 )"
 
 DEPEND="${RDEPEND}
-		>=dev-util/pkgconfig-0.9
+		>=dev-util/pkgconfig-0.19
 		X? ( x11-proto/renderproto )
 		doc?	(
 					>=dev-util/gtk-doc-1.3
