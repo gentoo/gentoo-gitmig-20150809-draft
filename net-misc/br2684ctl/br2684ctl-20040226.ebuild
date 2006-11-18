@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/br2684ctl/br2684ctl-20040226.ebuild,v 1.6 2006/03/08 20:38:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/br2684ctl/br2684ctl-20040226.ebuild,v 1.7 2006/11/18 07:34:12 mrness Exp $
 
 inherit eutils toolchain-funcs linux-info
 
@@ -9,13 +9,13 @@ DEBIANPKG_PATCH="${PN}_${PV}-1.diff.gz"
 DEBIANPKG_BASE="mirror://debian/pool/main/${PN:0:1}/${PN}"
 
 DESCRIPTION="Utility for configuring RFC 2684 ATM/Ethernet bridging"
-HOMEPAGE="http://packages.debian.org/unstable/net/${PN}"
+HOMEPAGE="http://packages.debian.org/stable/net/br2684ctl"
 SRC_URI="${DEBIANPKG_BASE}/${DEBIANPKG_TARBALL}
 		 ${DEBIANPKG_BASE}/${DEBIANPKG_PATCH}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND=">=net-dialup/linux-atm-2.4.1"
