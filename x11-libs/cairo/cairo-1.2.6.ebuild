@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.2.4.ebuild,v 1.2 2006/11/18 06:58:08 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.2.6.ebuild,v 1.1 2006/11/18 06:58:08 cardoe Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic debug
 
 DESCRIPTION="A vector graphics library with cross-device output support"
 HOMEPAGE="http://cairographics.org/"
@@ -20,23 +20,18 @@ RDEPEND="media-libs/fontconfig
 		>=media-libs/freetype-2.1.4
 		media-libs/libpng
 		X?	(
-				||	(
-						(
-							x11-libs/libXrender
-							x11-libs/libXext
-							x11-libs/libX11
-						)
-						virtual/x11
-					)
+				x11-libs/libXrender
+				x11-libs/libXext
+				x11-libs/libX11
 				virtual/xft
 			)
 		directfb? ( >=dev-libs/DirectFB-0.9.24 )
 		glitz? ( >=media-libs/glitz-0.5.1 )
-		svg? ( dev-libs/libxml2 )
-		!<x11-libs/cairo-0.2"
+		svg? ( dev-libs/libxml2 )"
+
 DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.9
-		X? ( || ( x11-proto/renderproto virtual/x11 ) )
+		X? ( x11-proto/renderproto )
 		doc?	(
 					>=dev-util/gtk-doc-1.3
 					 ~app-text/docbook-xml-dtd-4.2
@@ -47,7 +42,7 @@ src_compile() {
 	append-flags -finline-limit=1200
 
 	econf $(use_enable X xlib) $(use_enable doc gtk-doc) $(use_enable directfb) \
-		  $(use_enable svg) $(use_enable pdf) \
+		  $(use_enable debug) $(use_enable svg) $(use_enable pdf) \
 		  $(use_enable glitz) --enable-png --enable-freetype --enable-ps \
 		  || die "configure failed"
 
