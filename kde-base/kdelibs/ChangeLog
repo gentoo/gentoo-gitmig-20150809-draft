@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.385 2006/11/18 13:41:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.386 2006/11/18 15:50:21 opfer Exp $
+
+  18 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  kdelibs-3.5.5-r6.ebuild:
+  keyworded ~x86, bug #155505
 
   18 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   kdelibs-3.5.5-r6.ebuild:
