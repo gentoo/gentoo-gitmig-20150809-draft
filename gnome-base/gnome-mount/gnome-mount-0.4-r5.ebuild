@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/gnome-mount-0.4-r5.ebuild,v 1.3 2006/10/21 23:43:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/gnome-mount-0.4-r5.ebuild,v 1.4 2006/11/18 22:04:19 compnerd Exp $
 
 inherit eutils gnome2
 
@@ -14,12 +14,15 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="debug"
 
 RDEPEND=">=gnome-base/libgnomeui-2.13
-	>=sys-apps/dbus-0.60
 	>=sys-apps/hal-0.5.7-r1
 	>=x11-libs/gtk+-2.8
 	gnome-base/gnome-keyring
 	>=gnome-base/libglade-2
-	>=gnome-base/gconf-2"
+	>=gnome-base/gconf-2
+	||  (
+			>=dev-libs/dbus-glib-0.71
+			( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.60 )
+		)"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
