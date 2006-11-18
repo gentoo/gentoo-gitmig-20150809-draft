@@ -1,6 +1,9 @@
 # ChangeLog for dev-ada/gtkada
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/ChangeLog,v 1.18 2006/11/13 17:19:15 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/ChangeLog,v 1.19 2006/11/18 12:05:24 george Exp $
+
+  18 Nov 2006; George Shapovalov <george@gentoo.org> gtkada-2.4.0-r2.ebuild:
+  corrected SRC_URI to use the right mirror:// syntax
 
   13 Nov 2006; George Shapovalov <george@gentoo.org>
   -gtkada-2.4.0-r1.ebuild, gtkada-2.4.0-r2.ebuild:

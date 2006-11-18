@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.4.0-r2.ebuild,v 1.2 2006/11/13 17:19:15 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.4.0-r2.ebuild,v 1.3 2006/11/18 12:05:24 george Exp $
 
 inherit eutils gnat
 
 Name="GtkAda"
 DESCRIPTION="Gtk+ bindings to the Ada language"
 HOMEPAGE="https://libre2.adacore.com/GtkAda/"
-SRC_URI="https://libre2.adacore.com/${Name}/${Name}-${PV}.tgz"
+SRC_URI="mirror://gentoo/${Name}-${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="2"
