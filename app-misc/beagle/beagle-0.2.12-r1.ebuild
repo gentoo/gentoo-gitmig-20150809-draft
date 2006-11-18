@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.12-r1.ebuild,v 1.1 2006/11/18 02:38:04 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.12-r1.ebuild,v 1.2 2006/11/18 15:28:38 metalgod Exp $
 
 inherit gnome.org eutils autotools mono
 
@@ -99,13 +99,12 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		$(use_enable gtk-doc doc) \
+		$(use_enable doc gtk-doc) \
 		$(use_enable thunderbird) \
 		$(use_enable evo evolution) \
 		$(use_enable gtk gui) \
 		$(use_enable python ) \
 		--enable-libbeagle \
-		--enable-gtk-doc \
 		|| die "configure failed"
 	emake || die "Make failed"
 }
