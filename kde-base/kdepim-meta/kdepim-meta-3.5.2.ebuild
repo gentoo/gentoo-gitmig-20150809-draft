@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/kdepim-meta-3.5.2.ebuild,v 1.9 2006/09/03 16:13:10 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/kdepim-meta-3.5.2.ebuild,v 1.10 2006/11/18 17:24:41 flameeyes Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.kde.org/"
 LICENSE="GPL-2"
 SLOT="3.5"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
-IUSE="pda"
+IUSE=""
 
 RDEPEND="
 	$(deprange $PV $MAXKDEVER kde-base/akregator)
@@ -33,7 +33,6 @@ RDEPEND="
 	$(deprange $PV $MAXKDEVER kde-base/kontact-specialdates)
 	$(deprange $PV $MAXKDEVER kde-base/korganizer)
 	$(deprange $PV $MAXKDEVER kde-base/korn)
-	pda? ( $(deprange $PV $MAXKDEVER kde-base/kpilot) )
 	$(deprange $PV $MAXKDEVER kde-base/ksync)
 	$(deprange $PV $MAXKDEVER kde-base/ktnef)
 	$(deprange $PV $MAXKDEVER kde-base/libkcal)

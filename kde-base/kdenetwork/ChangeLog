@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.227 2006/11/16 01:48:23 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.228 2006/11/18 17:12:38 flameeyes Exp $
+
+  18 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -kdenetwork-3.5.3-r4.ebuild, -kdenetwork-3.5.4.ebuild,
+  -kdenetwork-3.5.5.ebuild:
+  Remove old versions.
 
   16 Nov 2006; Joseph Jezak <josejx@gentoo.org> kdenetwork-3.5.5-r1.ebuild:
   Marked ppc stable for bug #147570.

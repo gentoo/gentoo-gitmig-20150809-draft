@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kjots
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kjots/ChangeLog,v 1.52 2006/11/16 05:08:24 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kjots/ChangeLog,v 1.53 2006/11/18 17:56:27 flameeyes Exp $
+
+  18 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> -kjots-3.5.4.ebuild:
+  Remove old versions.
 
   16 Nov 2006; Joseph Jezak <josejx@gentoo.org> kjots-3.5.5.ebuild:
   Marked ppc stable for bug #147570.

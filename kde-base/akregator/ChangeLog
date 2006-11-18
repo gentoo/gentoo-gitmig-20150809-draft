@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/akregator
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.64 2006/11/16 03:03:28 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.65 2006/11/18 15:58:52 flameeyes Exp $
+
+  18 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -akregator-3.5.3.ebuild, -akregator-3.5.4.ebuild:
+  Remove old versions.
 
   16 Nov 2006; Joseph Jezak <josejx@gentoo.org> akregator-3.5.5.ebuild:
   Marked ppc stable for bug #147570.
