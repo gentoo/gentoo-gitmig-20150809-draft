@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmenu/wmmenu-1.2-r1.ebuild,v 1.5 2006/01/15 17:57:41 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmenu/wmmenu-1.2-r1.ebuild,v 1.6 2006/11/18 05:37:41 compnerd Exp $
 
 inherit eutils
 
-IUSE="gnome"
+IUSE=""
 S=${WORKDIR}/${PN}
 DESCRIPTION="WindowMaker DockApp: Provides a popup menu of icons like in AfterStep, as a dockable application."
 SRC_URI="http://www.fcoutant.freesurf.fr/download/${P}.tar.gz"
@@ -12,8 +12,7 @@ HOMEPAGE="http://www.fcoutant.freesurf.fr/wmmenu.html"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 x86"
-DEPEND="x11-libs/libdockapp
-	gnome? ( media-libs/gdk-pixbuf )"
+DEPEND="x11-libs/libdockapp"
 
 src_unpack()
 {
@@ -25,12 +24,7 @@ src_unpack()
 
 src_compile()
 {
-	GDKPIXBUF=""
-	if use gnome; then
-		GDKPIXBUF="GDKPIXBUF=1"
-	fi
-
-	emake ${GDKPIXBUF} EXTRACFLAGS="${CFLAGS}" || die "Compilation failed"
+	emake EXTRACFLAGS="${CFLAGS}" || die "Compilation failed"
 }
 
 src_install ()
