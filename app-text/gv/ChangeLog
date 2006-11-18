@@ -1,6 +1,11 @@
 # ChangeLog for app-text/gv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.53 2006/10/17 20:17:55 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.54 2006/11/18 10:21:50 genstef Exp $
+
+*gv-3.6.2-r1 (18 Nov 2006)
+
+  18 Nov 2006; Stefan Schweizer <genstef@gentoo.org> +gv-3.6.2-r1.ebuild:
+  Fix stack overflow, bug 154573
 
 *gv-3.6.2 (17 Oct 2006)
 
