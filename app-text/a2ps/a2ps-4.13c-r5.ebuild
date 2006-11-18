@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r5.ebuild,v 1.3 2006/09/01 21:42:32 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r5.ebuild,v 1.4 2006/11/18 11:25:03 genstef Exp $
 
 inherit gnuconfig eutils autotools
 
@@ -63,6 +63,12 @@ src_unpack() {
 }
 
 src_compile() {
+	addpredict /usr/$(get_libdir)/mozilla-firefox/components/xpti.dat
+	addpredict /usr/$(get_libdir)/mozilla-firefox/components/xpti.dat.tmp
+	addpredict /usr/$(get_libdir)/mozilla-firefox/components/compreg.dat.tmp
+
+	addpredict /usr/$(get_libdir)/mozilla/components/xpti.dat
+	addpredict /usr/$(get_libdir)/mozilla/components/xpti.dat.tmp
 
 	#export YACC=yacc
 	econf --sysconfdir=/etc/a2ps \
