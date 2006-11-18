@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/subterfugue/subterfugue-0.2.1a.ebuild,v 1.2 2005/09/08 15:20:26 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/subterfugue/subterfugue-0.2.1a.ebuild,v 1.3 2006/11/18 22:33:01 compnerd Exp $
 
 inherit distutils eutils
 
-IUSE="gtk"
+IUSE=""
 
 DESCRIPTION="strace meets expect"
 SRC_URI="mirror://sourceforge/subterfugue/${P}.tgz"
@@ -13,9 +13,7 @@ KEYWORDS="-amd64 -ppc x86"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND=">=dev-lang/python-2.0
-	gtk? ( =x11-libs/gtk+-1.2*
-		=dev-python/pygtk-0.6* )"
+DEPEND=">=dev-lang/python-2.0"
 
 src_unpack() {
 	unpack ${A}
