@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.3.3.ebuild,v 1.1 2006/09/08 06:35:05 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.3.3.ebuild,v 1.2 2006/11/18 13:27:12 mrness Exp $
 
 inherit eutils autotools flag-o-matic
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.poptop.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="tcpd gre-extreme-debug"
 
 DEPEND="net-dialup/ppp
