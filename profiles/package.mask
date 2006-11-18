@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6302 2006/11/18 22:29:24 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6303 2006/11/18 22:55:03 compnerd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -211,6 +211,8 @@ x11-themes/nautilus-themes
 <sci-mathematics/scilab-3
 =media-libs/swfdec-0.2.2
 =x11-wm/sawfish-1.0.1-r6
+# Broken in more than one way
+mail-client/spruce
 
 # Guillaume Destuynder <kang@gentoo.org> (16 Nov 2006)
 # Deprecated: upstream dead, unsupported, doesn't compile anymore.
