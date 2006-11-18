@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.15 2006/10/06 17:26:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.16 2006/11/18 01:47:57 compnerd Exp $
 
 inherit eutils toolchain-funcs flag-o-matic games
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/nethack/${PN}-${MY_PV}-src.tgz"
 LICENSE="nethack"
 SLOT="0"
 KEYWORDS="amd64 ~hppa ppc ~ppc-macos sparc x86 ~x86-fbsd"
-IUSE="X qt3 gnome"
+IUSE="X qt3"
 
 RDEPEND="virtual/libc
 	>=sys-libs/ncurses-5.2-r5
@@ -22,8 +22,7 @@ RDEPEND="virtual/libc
 		x11-libs/libXpm
 		x11-libs/libXt
 	)
-	qt3? ( =x11-libs/qt-3* )
-	gnome? ( >=gnome-base/gnome-libs-1.4.1.4-r2 )"
+	qt3? ( =x11-libs/qt-3* )"
 DEPEND="${RDEPEND}
 	X? ( x11-proto/xproto )"
 
@@ -65,9 +64,6 @@ src_unpack() {
 		epatch "${FILESDIR}/${PV}-X-support.patch"
 		if use qt3 ; then
 			epatch "${FILESDIR}/${PV}-QT-support.patch"
-			use gnome && epatch "${FILESDIR}/${PV}-QT-GNOME-support.patch"
-		elif use gnome ; then
-			epatch "${FILESDIR}/${PV}-GNOME-support.patch"
 		fi
 	fi
 }
@@ -135,7 +131,6 @@ src_install() {
 	doins "${FILESDIR}/dot.nethackrc"
 
 	local windowtypes="tty"
-	use gnome && windowtypes="${windowtypes} gnome"
 	use qt3 && windowtypes="${windowtypes} qt"
 	use X && windowtypes="${windowtypes} x11"
 	set -- ${windowtypes}
