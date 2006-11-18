@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-bin/ChangeLog,v 1.21 2006/11/18 14:42:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-bin/ChangeLog,v 1.22 2006/11/18 14:42:50 flameeyes Exp $
+
+  18 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Remove 6.2_beta2.
 
   18 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Remove 6.2_beta2.
