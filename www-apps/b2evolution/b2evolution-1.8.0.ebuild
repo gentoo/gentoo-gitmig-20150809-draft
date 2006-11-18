@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/b2evolution-1.8.0.ebuild,v 1.1 2006/07/24 15:59:53 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/b2evolution-1.8.0.ebuild,v 1.2 2006/11/18 21:33:31 dsd Exp $
 
 inherit webapp eutils
 
@@ -19,6 +19,16 @@ DEPEND="${DEPEND} ${RDEPEND}
 	app-arch/unzip"
 
 S="${WORKDIR}/${PN}"
+
+pkg_setup() {
+	webapp_pkg_setup
+	has_php
+	if [[ ${PHP_VERSION} == "4" ]]; then
+		require_php_with_use expat
+	else
+		require_php_with_use xml
+	fi
+}
 
 pkg_setup() {
 	webapp_pkg_setup
