@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/euses
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/euses/ChangeLog,v 1.17 2006/11/18 05:13:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/euses/ChangeLog,v 1.18 2006/11/18 22:28:00 jer Exp $
+
+*euses-2.5.0-r1 (18 Nov 2006)
+
+  18 Nov 2006; Jeroen Roovers <jer@gentoo.org> +files/euses-2.5.0.patch,
+  +euses-2.5.0-r1.ebuild:
+  Patched 2.5.0 with fixes suggested on bug #140321. Removed redundant
+  src_compile().
 
   18 Nov 2006; Jeroen Roovers <jer@gentoo.org> -euses-2.5.0_pre1.ebuild:
   Removed ancient preview.
