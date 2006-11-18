@@ -1,12 +1,12 @@
 # Copyright 2004-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-subtitles/vdr-subtitles-0.3.10.ebuild,v 1.4 2006/04/24 20:38:32 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-subtitles/vdr-subtitles-0.3.10.ebuild,v 1.5 2006/11/18 09:19:59 zzam Exp $
 
 inherit vdr-plugin eutils
 
 IUSE=""
 
-DESCRIPTION="Video Disk Recorder Subtitles PlugIn"
+DESCRIPTION="VDR Plugin: Decode and display DVB subtitles"
 HOMEPAGE="http://virtanen.org/vdr/subtitles/"
 SRC_URI="http://virtanen.org/vdr/subtitles/files/${P}.tgz
 		mirror://vdrfiles/${PN}/${P}.tgz"
