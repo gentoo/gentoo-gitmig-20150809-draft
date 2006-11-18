@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/flute
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/flute/ChangeLog,v 1.4 2005/05/23 21:00:25 luckyduck Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/flute/ChangeLog,v 1.5 2006/11/18 13:30:55 betelgeuse Exp $
+
+*flute-1.3-r1 (18 Nov 2006)
+
+  18 Nov 2006; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
+  +flute-1.3-r1.ebuild:
+  Migrated to generation 2 and removed compnerd from metadata.xml. Thanks to
+  <nathanegge@yahoo.com>. Fixes bug #143175.
 
   23 May 2005; Jan Brinkmann <luckyduck@gentoo.org> flute-1.3.ebuild:
   stable on amd64 and x86
