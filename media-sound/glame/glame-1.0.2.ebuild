@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-1.0.2.ebuild,v 1.15 2005/12/26 15:03:52 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-1.0.2.ebuild,v 1.16 2006/11/18 02:07:35 compnerd Exp $
 
-IUSE="nls gnome vorbis debug alsa"
+IUSE="nls vorbis debug alsa"
 
 inherit eutils
 
@@ -24,7 +24,6 @@ RDEPEND=">=dev-util/guile-1.4-r3
 	media-sound/madplay
 	media-libs/ladspa-sdk
 	vorbis? ( >=media-libs/libvorbis-1.0 )
-	gnome? ( <gnome-base/libglade-2 gnome-base/gnome-libs )
 	alsa? ( media-libs/alsa-lib )"
 
 DEPEND="${RDEPEND}
@@ -55,20 +54,10 @@ src_unpack() {
 src_compile() {
 	local myconf="--enable-ladspa"
 
-	if use gnome
-	then
-		# Use a valid icon for the GNOME menu entry
-		cp src/gui/glame.desktop src/gui/glame.desktop.old
-		sed -e 's:glame.png:glame-logo.jpg:' \
-			src/gui/glame.desktop.old > src/gui/glame.desktop
-		rm src/gui/glame.desktop.old
-	fi
-
 	use nls	&& myconf="--enable-nls" \
 		|| myconf="--disable-nls"
 
-	use gnome && myconf="${myconf} --enable-gui" \
-		|| myconf="${myconf} --disable-gui"
+	myconf="${myconf} --disable-gui"
 
 	use debug && myconf="${myconf} --enable-swapfiledebug --enable-debug" \
 		|| myconf="${myconf} --disable-swapfiledebug --disable-debug"
@@ -82,13 +71,6 @@ src_compile() {
 
 src_install () {
 	einstall || die "Installation failed"
-
-	if use gnome
-	then
-		dodir /usr/share/pixmaps
-		dosym ../glame/pixmaps/glame-logo.jpg \
-		      /usr/share/pixmaps/glame-logo.jpg
-	fi
 
 	dodoc AUTHORS BUGS CREDITS ChangeLog MAINTAINERS \
 		NEWS README TODO
