@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/soundtracker-0.6.7-r1.ebuild,v 1.3 2006/04/28 12:08:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/soundtracker-0.6.7-r1.ebuild,v 1.4 2006/11/18 02:12:15 compnerd Exp $
 
-IUSE="nls esd gnome oss alsa jack"
+IUSE="nls esd oss alsa jack"
 
 inherit eutils flag-o-matic
 
@@ -18,7 +18,6 @@ RDEPEND="sys-libs/zlib
 	media-libs/libsndfile
 	alsa? ( media-libs/alsa-lib )
 	esd? ( media-sound/esound )
-	gnome? ( >=gnome-base/gnome-libs-1.4.1.7 )
 	jack? ( media-sound/jack-audio-connection-kit )
 	nls? ( virtual/libintl )"
 
@@ -51,7 +50,7 @@ src_compile() {
 	use esd || myconf="${myconf} --disable-esd"
 	use nls || myconf="${myconf} --disable-nls"
 	use alsa || myconf="${myconf} --disable-alsa"
-	use gnome || myconf="${myconf} --disable-gnome"
+	myconf="${myconf} --disable-gnome"
 	use x86 || myconf="${myconf} --disable-asm"
 
 	econf ${myconf} || die "configure failed"
