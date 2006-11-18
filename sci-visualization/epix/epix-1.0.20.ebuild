@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.0.20.ebuild,v 1.1 2006/11/09 14:43:11 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.0.20.ebuild,v 1.2 2006/11/18 15:32:33 markusle Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -24,6 +24,9 @@ src_unpack() {
 
 	sed -e 's:doc/${PACKAGE_TARNAME}:doc/${PACKAGE_TARNAME}-${PACKAGE_VERSION}:' \
 	-i configure || die "sed on configure failed"
+
+	sed -e "s:stdout:null:" -e "s:stderr:null:" -i epix-lib.sh || \
+		die "failed to fix epix-lib"
 }
 
 src_install() {
