@@ -1,6 +1,12 @@
 # ChangeLog for games-strategy/scorched3d
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.38 2006/11/15 11:08:05 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.39 2006/11/18 19:34:18 nyhm Exp $
+
+*scorched3d-40.1d (18 Nov 2006)
+
+  18 Nov 2006; Tristan Heaven <nyhm@gentoo.org>
+  +files/scorched3d-40.1d-freealut.patch, +scorched3d-40.1d.ebuild:
+  Version bump
 
 *scorched3d-40.1c (15 Nov 2006)
 
