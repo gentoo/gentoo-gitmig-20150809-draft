@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/traceroute
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.39 2006/11/09 02:45:11 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.40 2006/11/18 12:37:33 eldad Exp $
+
+  18 Nov 2006; Eldad Zack <eldad@gentoo.org>
+  +files/traceroute-1.4a12-let_kernel_find_address.patch,
+  traceroute-1.4_p12-r5.ebuild:
+  Added a patch to fix wrong outgoing IP address in traceroute when using an
+  interface secondary addresses. Closes bug #131723.
 
   09 Nov 2006; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
   traceroute-1.4_p12-r5.ebuild:
