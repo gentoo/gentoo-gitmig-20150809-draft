@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.387 2006/11/18 19:51:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.388 2006/11/18 22:20:58 flameeyes Exp $
+
+  18 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdelibs-3.5.2-r6.ebuild, kdelibs-3.5.5-r4.ebuild, kdelibs-3.5.5-r5.ebuild:
+  Remove wrong reference to avahi useflag from older versions. Thanks Jakub.
 
   18 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   -kdelibs-3.5.3-r4.ebuild, -kdelibs-3.5.4-r3.ebuild,
