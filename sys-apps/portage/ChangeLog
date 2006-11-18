@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.299 2006/11/15 15:03:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.300 2006/11/18 02:46:24 zmedico Exp $
+
+*portage-2.1.2_rc2 (18 Nov 2006)
+
+  18 Nov 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1.2_rc2.ebuild:
+  2.1.2_rc2 release.  This fixes bugs #141118, #153591, #155477, and #155484.
+  Implicit RDEPEND behavior has been reverted back to the way it was in
+  <portage-2.0.52.  portage-2.1.1-r2 has the same behavior change and has been
+  unmasked in coordination with this release.  Please refer to bug #153591 and
+  the postinst ewarn message for more information.
 
   15 Nov 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   portage-2.1.1-r2.ebuild:
