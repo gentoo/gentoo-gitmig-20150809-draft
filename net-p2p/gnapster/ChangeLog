@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gnapster
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnapster/ChangeLog,v 1.8 2006/05/12 14:50:47 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnapster/ChangeLog,v 1.9 2006/11/18 04:39:10 compnerd Exp $
+
+  18 Nov 2006; Saleem Abdulrasool <compnerd@gentoo.org>
+  gnapster-1.5.0-r2.ebuild:
+  Drop gnome and gtk useflags for gnome-1.x removal
 
   12 May 2006; Jon Hood <squinky86@gentoo.org> gnapster-1.5.0-r2.ebuild:
   Fix homepage and src_uri, bug #127024. Thanks Ryan Abbott
