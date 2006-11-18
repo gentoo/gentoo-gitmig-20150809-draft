@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/olsrd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/ChangeLog,v 1.1 2006/11/16 21:27:01 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/ChangeLog,v 1.2 2006/11/18 13:27:25 cedk Exp $
+
+  18 Nov 2006; Cedric Krier <cedk@gentoo.org> olsrd-0.4.10.ebuild:
+  add license.txt
 
 *olsrd-0.4.10 (16 Nov 2006)
 
