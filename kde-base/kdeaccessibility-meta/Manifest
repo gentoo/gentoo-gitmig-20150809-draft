@@ -5,22 +5,14 @@ EBUILD kdeaccessibility-meta-3.5.2.ebuild 848 RMD160 8e6b0ff02d064d5425a1596fa0d
 MD5 4bdfe7231113eeafe2e303277e3d0555 kdeaccessibility-meta-3.5.2.ebuild 848
 RMD160 8e6b0ff02d064d5425a1596fa0d4b7f1274e3c85 kdeaccessibility-meta-3.5.2.ebuild 848
 SHA256 a088e91f0c83ee9db2f271b265aa9de139333ddce34dfe163129f06d7ea1f052 kdeaccessibility-meta-3.5.2.ebuild 848
-EBUILD kdeaccessibility-meta-3.5.3.ebuild 858 RMD160 416ce3a94a55739f958830a59fdc836146ddf0fb SHA1 b04a4a23a138814fb7782e2d34d6f6130f525ef9 SHA256 f97c3166730344802b4e18e5a4ac51c0892af6fadb628ba1fee20115392ee2be
-MD5 1bee802f0a0b00be2905a02091cd3e3b kdeaccessibility-meta-3.5.3.ebuild 858
-RMD160 416ce3a94a55739f958830a59fdc836146ddf0fb kdeaccessibility-meta-3.5.3.ebuild 858
-SHA256 f97c3166730344802b4e18e5a4ac51c0892af6fadb628ba1fee20115392ee2be kdeaccessibility-meta-3.5.3.ebuild 858
-EBUILD kdeaccessibility-meta-3.5.4.ebuild 858 RMD160 1ef5398d56e1b2c2ffa042bface1f311ea8f8c89 SHA1 b302cb39e6c9e7581967c335534f54f56032aa08 SHA256 63577188f92088361323a3e0303d5eb952847417ff5499005fa34be12a595db6
-MD5 1a9a17d600feb0dd29560ef8ff50fc71 kdeaccessibility-meta-3.5.4.ebuild 858
-RMD160 1ef5398d56e1b2c2ffa042bface1f311ea8f8c89 kdeaccessibility-meta-3.5.4.ebuild 858
-SHA256 63577188f92088361323a3e0303d5eb952847417ff5499005fa34be12a595db6 kdeaccessibility-meta-3.5.4.ebuild 858
 EBUILD kdeaccessibility-meta-3.5.5.ebuild 851 RMD160 43d4c5fd360215cee8c8a7fe850b685b4f88beb9 SHA1 01f7710ec994535d1623f9b0d74bfa91c7a32871 SHA256 fbc767334e39b69347d9d1eb6dfa45823eeae11017e61fc919eabbc9c9568394
 MD5 c27c5e081d34a66d95a284872e7f7768 kdeaccessibility-meta-3.5.5.ebuild 851
 RMD160 43d4c5fd360215cee8c8a7fe850b685b4f88beb9 kdeaccessibility-meta-3.5.5.ebuild 851
 SHA256 fbc767334e39b69347d9d1eb6dfa45823eeae11017e61fc919eabbc9c9568394 kdeaccessibility-meta-3.5.5.ebuild 851
-MISC ChangeLog 8589 RMD160 dc02b7ce4722f37bb389b49258a14966d677edfb SHA1 ac09fb3250f24e4f5c8bf1430c2f0b770e0ee7ab SHA256 95c9102d006695f8137e22c8d7a9c9e21e8f1e3b8870bbcab80cb21ece3bb84b
-MD5 e5561760cc709bb72e63c27ecfb767ed ChangeLog 8589
-RMD160 dc02b7ce4722f37bb389b49258a14966d677edfb ChangeLog 8589
-SHA256 95c9102d006695f8137e22c8d7a9c9e21e8f1e3b8870bbcab80cb21ece3bb84b ChangeLog 8589
+MISC ChangeLog 8745 RMD160 f600947be6fafe0d6f739efc30a3c8571bd7493d SHA1 d7b6ced710a54a556650ee7c3545b6411c1fdb4e SHA256 f38a9f315dded8e271515c522e8a152106d10068a87f0a751212c3a91709f98f
+MD5 c471f5fc9ff00763873997c56597bc39 ChangeLog 8745
+RMD160 f600947be6fafe0d6f739efc30a3c8571bd7493d ChangeLog 8745
+SHA256 f38a9f315dded8e271515c522e8a152106d10068a87f0a751212c3a91709f98f ChangeLog 8745
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
@@ -28,19 +20,13 @@ SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.5.2 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeaccessibility-meta-3.5.2 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeaccessibility-meta-3.5.2 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.5.3 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeaccessibility-meta-3.5.3 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeaccessibility-meta-3.5.3 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.5.4 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeaccessibility-meta-3.5.4 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeaccessibility-meta-3.5.4 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.5.5 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeaccessibility-meta-3.5.5 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeaccessibility-meta-3.5.5 0
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFW/cGcsIHjyDViGQRAjtYAKDcnhcmvgDYME4XVQMolOk+qnzmpQCeIcgx
-aeeaOhxUDGEEbALIKMSw5VQ=
-=ByRr
+iD8DBQFFXzdVAiZjviIA2XgRAocPAKCU3ed88FgOHRfUCBQ46092kKt3oQCgyqJy
+ZKMYTbT9lkMZTHPzu7k9Ezs=
+=h1hP
 -----END PGP SIGNATURE-----
