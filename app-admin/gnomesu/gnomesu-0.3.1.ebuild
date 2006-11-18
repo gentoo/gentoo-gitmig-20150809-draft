@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnomesu/gnomesu-0.3.1.ebuild,v 1.23 2006/09/06 04:51:40 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnomesu/gnomesu-0.3.1.ebuild,v 1.24 2006/11/18 21:29:52 compnerd Exp $
 
 inherit gnome2 eutils
 
 DESCRIPTION="GNOME2 interface to su, previously xsu and xsu2"
-HOMEPAGE="http://sourceforge.net/projects/xsu/"
+HOMEPAGE="http://xsu.sourceforge.net/"
 SRC_URI="mirror://sourceforge/xsu/${P}.tar.gz"
 
 LICENSE="GPL-2"
