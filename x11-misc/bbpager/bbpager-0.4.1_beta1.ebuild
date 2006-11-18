@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbpager/bbpager-0.4.1_beta1.ebuild,v 1.2 2006/11/18 18:01:17 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbpager/bbpager-0.4.1_beta1.ebuild,v 1.3 2006/11/18 21:05:57 omp Exp $
 
 MY_P=${P/_beta/beta}
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
-DEPEND="virtual/blackbox"
+DEPEND="x11-wm/blackbox"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
