@@ -9,18 +9,18 @@ EBUILD gnome-cups-manager-0.30.ebuild 894 RMD160 775974bdb9b8424f86642af105e8577
 MD5 cf99fca3122a87ef1f6a2414f7c2e2a8 gnome-cups-manager-0.30.ebuild 894
 RMD160 775974bdb9b8424f86642af105e85775f5d9625a gnome-cups-manager-0.30.ebuild 894
 SHA256 9cd3afa2fc2163d76750d671ed3d3f1d847311c07cb4c0e02ffbfe19ca1e4d1c gnome-cups-manager-0.30.ebuild 894
-EBUILD gnome-cups-manager-0.31-r1.ebuild 2100 RMD160 e3477c8b110fdb573de8f7f143d363c5b1dd2cf4 SHA1 c313a03f43b5351037c06c13405a948691dbf6e1 SHA256 838cbf70b58659cedf27b4b0ed680a000c1cb0dac49b7778a4f9c32980a99323
-MD5 d6643cacb5f3949eb47fda3c5eb775d4 gnome-cups-manager-0.31-r1.ebuild 2100
-RMD160 e3477c8b110fdb573de8f7f143d363c5b1dd2cf4 gnome-cups-manager-0.31-r1.ebuild 2100
-SHA256 838cbf70b58659cedf27b4b0ed680a000c1cb0dac49b7778a4f9c32980a99323 gnome-cups-manager-0.31-r1.ebuild 2100
+EBUILD gnome-cups-manager-0.31-r2.ebuild 2117 RMD160 9dbf09da094ba0ebbceead62fc802647c378e8dd SHA1 5458aaffbb7574ef73d8b3358ed58b5dffeadafc SHA256 6530a5e446d46a98e9943ad49efe50e5c37dfb8c888a44a02685b0be3393b41d
+MD5 f677935ebeca89827947fc62a5d5ab1d gnome-cups-manager-0.31-r2.ebuild 2117
+RMD160 9dbf09da094ba0ebbceead62fc802647c378e8dd gnome-cups-manager-0.31-r2.ebuild 2117
+SHA256 6530a5e446d46a98e9943ad49efe50e5c37dfb8c888a44a02685b0be3393b41d gnome-cups-manager-0.31-r2.ebuild 2117
 EBUILD gnome-cups-manager-0.31.ebuild 1307 RMD160 ddbba332f1c432ab3c326b9ecd08208675450bc1 SHA1 f0b324e89a8a7ac5c712589d30114f95cb3296eb SHA256 f351ff3902d3658f80fc890cb384bdf2275a384b74fd7c545c9298ea5253f596
 MD5 48137bfc45f2b2e91b682e1184e5975e gnome-cups-manager-0.31.ebuild 1307
 RMD160 ddbba332f1c432ab3c326b9ecd08208675450bc1 gnome-cups-manager-0.31.ebuild 1307
 SHA256 f351ff3902d3658f80fc890cb384bdf2275a384b74fd7c545c9298ea5253f596 gnome-cups-manager-0.31.ebuild 1307
-MISC ChangeLog 7921 RMD160 602468b9ca1ed8b1a55f57f755262c81e2bbccbe SHA1 745918140bf7c42d6e4dad2cd75d9de0a6cac200 SHA256 bd95dd8a8bce27dbe3702a5f173ec11e238b95c9e1600e31e4c39753c3bebf69
-MD5 0e4fe61d61255590706d0b5971c6dae2 ChangeLog 7921
-RMD160 602468b9ca1ed8b1a55f57f755262c81e2bbccbe ChangeLog 7921
-SHA256 bd95dd8a8bce27dbe3702a5f173ec11e238b95c9e1600e31e4c39753c3bebf69 ChangeLog 7921
+MISC ChangeLog 8114 RMD160 3e1e3264fa76ccb6c316220ca854e659c9327deb SHA1 993e22228014fa2cc3a5966cf4e7d24ec50199cd SHA256 f359f6cf9454af65fdb4a3fb39a5fbed7d259e730e214bea3d78a71f29be70de
+MD5 e63eae19dbd4d19ebd76772401b0abce ChangeLog 8114
+RMD160 3e1e3264fa76ccb6c316220ca854e659c9327deb ChangeLog 8114
+SHA256 f359f6cf9454af65fdb4a3fb39a5fbed7d259e730e214bea3d78a71f29be70de ChangeLog 8114
 MISC metadata.xml 180 RMD160 082aa46c6fe033d8548d5351c7073d98a11e952b SHA1 f006fd73fec1f95de0831e1d942d6078620fe43f SHA256 21576b6f9d195cfd7a7f38ef661ffad9e39e979c1c98c9af12ce85398fc133a9
 MD5 574309004015c52c39e2f4e8122c18a3 metadata.xml 180
 RMD160 082aa46c6fe033d8548d5351c7073d98a11e952b metadata.xml 180
@@ -31,6 +31,6 @@ SHA256 0a02ff4e6fce7eae637d50ad1c8b8c6d56f5a5e17b23eb3d59d7578eeb3d21e9 files/di
 MD5 27b3864e7d4ec89b9a8ea112a67b0c22 files/digest-gnome-cups-manager-0.31 274
 RMD160 fac6b18157f487dc66e37bfb3427df767503e28f files/digest-gnome-cups-manager-0.31 274
 SHA256 27b28cccfbefbb24b491bb522cf005d476a784bdee1e1339dcfffff5fb53b404 files/digest-gnome-cups-manager-0.31 274
-MD5 2be6fa81ea7e472d7fc8b295e8951e48 files/digest-gnome-cups-manager-0.31-r1 584
-RMD160 adf243ffd021f92532aee5b1ba4354164169d8e6 files/digest-gnome-cups-manager-0.31-r1 584
-SHA256 de98f8fd36f6db920763f8e2776d7011bab005158fd052234bc35b050e25c198 files/digest-gnome-cups-manager-0.31-r1 584
+MD5 2be6fa81ea7e472d7fc8b295e8951e48 files/digest-gnome-cups-manager-0.31-r2 584
+RMD160 adf243ffd021f92532aee5b1ba4354164169d8e6 files/digest-gnome-cups-manager-0.31-r2 584
+SHA256 de98f8fd36f6db920763f8e2776d7011bab005158fd052234bc35b050e25c198 files/digest-gnome-cups-manager-0.31-r2 584
