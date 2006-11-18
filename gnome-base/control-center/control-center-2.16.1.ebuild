@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.16.1.ebuild,v 1.3 2006/11/05 04:37:14 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.16.1.ebuild,v 1.4 2006/11/18 22:12:11 compnerd Exp $
 
 inherit eutils gnome2 autotools
 
@@ -34,12 +34,15 @@ RDEPEND=">=gnome-base/gnome-vfs-2.2
 		>=gnome-base/gnome-menus-2.11.1
 		media-sound/esound
 		>=sys-apps/hal-0.5.6
-		>=sys-apps/dbus-0.60
 		>=x11-wm/metacity-2.8.6-r1
 		>=x11-libs/libxklavier-2.91
 		>=gnome-base/libgnome-2.2
 		media-libs/freetype
 		>=gnome-base/orbit-2.12.4
+		||  (
+				>=dev-libs/dbus-glib-0.71
+				( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.60 )
+			)
 		eds? ( >=gnome-extra/evolution-data-server-1.7 )
 		!arm? ( alsa? ( >=media-libs/alsa-lib-0.9 ) )
 		>=media-libs/gst-plugins-base-0.10.2
