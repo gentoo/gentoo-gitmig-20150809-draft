@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/AxKit-1.6.1.ebuild,v 1.22 2006/08/04 22:34:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/AxKit-1.6.1.ebuild,v 1.23 2006/11/18 01:01:22 compnerd Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ S=${WORKDIR}/${PN}-${MY_PV}
 DESCRIPTION="The Apache AxKit Perl Module"
 SRC_URI="http://axkit.org/download/${P}.tar.gz"
 HOMEPAGE="http://axkit.org/"
-IUSE="gnome"
+IUSE=""
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="x86 amd64 ~alpha sparc ppc ~ppc64"
@@ -19,7 +19,6 @@ KEYWORDS="x86 amd64 ~alpha sparc ppc ~ppc64"
 DEPEND=">=www-apache/libapreq-1.0
 	>=dev-perl/Compress-Zlib-1.10
 	>=dev-perl/Error-0.13
-	gnome? ( >=dev-perl/HTTP-GHTTP-1.06 )
 	>=dev-perl/libwww-perl-5.64-r1
 	>=virtual/perl-Storable-1.0.7
 	>=dev-perl/XML-XPath-1.04
