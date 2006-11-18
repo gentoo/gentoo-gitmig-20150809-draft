@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/warsow
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.1 2006/11/07 08:06:41 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.2 2006/11/18 19:17:26 peper Exp $
+
+  18 Nov 2006; Piotr Jaroszyński <peper@gentoo.org> warsow-0.21.ebuild:
+  Add ~amd64 wrt bug #154362.
 
 *warsow-0.21 (07 Nov 2006)
 
