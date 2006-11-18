@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-rrdtool/py-rrdtool-0.2.1-r1.ebuild,v 1.4 2006/06/05 17:51:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-rrdtool/py-rrdtool-0.2.1-r1.ebuild,v 1.5 2006/11/18 12:50:26 cedk Exp $
 
 inherit eutils distutils
 
@@ -14,11 +14,10 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 
 DEPEND="virtual/python
-	<net-analyzer/rrdtool-1.2
-	!=net-analyzer/rrdtool-1.2*"
+	>=net-analyzer/rrdtool-1.2"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch ${FILESDIR}/${PN}-rrdtool12.patch
 }
