@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.11.ebuild,v 1.1 2006/11/17 18:20:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.11.ebuild,v 1.2 2006/11/19 16:50:09 drizzt Exp $
 
 inherit toolchain-funcs eutils linux-mod
 
@@ -83,11 +83,20 @@ pkg_setup() {
 	einfo "Running pre-flight checks..."
 
 	# basic zaptel checks
-	if ! linux_chkconfig_present CRC_CCITT; then
-		echo
-		eerror "Your kernel lacks CRC_CCIT support!"
-		eerror "Enable CONFIG_CRC_CCIT!"
-		result=$((result+1))
+	if kernel_is 2 4 ; then
+		if ! linux_chkconfig_present CRC32; then
+			echo
+			eerror "Your kernel lacks CRC32 support!"
+			eerror "Enable CONFIG_CRC32!"
+			result=$((result+1))
+		fi
+	else
+		if ! linux_chkconfig_present CRC_CCITT; then
+			echo
+			eerror "Your kernel lacks CRC_CCIT support!"
+			eerror "Enable CONFIG_CRC_CCIT!"
+			result=$((result+1))
+		fi
 	fi
 
 	# check if multiple echo cancellers have been selected
@@ -257,6 +266,7 @@ src_compile() {
 }
 
 src_install() {
+	kernel_is 2 4 && cp /etc/modules.conf ${D}/etc
 	make INSTALL_PREFIX=${D} ARCH=$(tc-arch-kernel) \
 	     KVERS=${KV_FULL} KSRC=/usr/src/linux install || die
 
