@@ -1,6 +1,9 @@
 # ChangeLog for games-board/blokish
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/blokish/ChangeLog,v 1.2 2006/11/05 18:46:43 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/blokish/ChangeLog,v 1.3 2006/11/19 21:43:50 nyhm Exp $
+
+  19 Nov 2006; Tristan Heaven <nyhm@gentoo.org> blokish-0.9.3.ebuild:
+  Use wxwidgets eclass and install desktop entry
 
   05 Nov 2006; Piotr Jaroszyński <peper@gentoo.org> blokish-0.9.3.ebuild:
   Add ~amd64 wrt bug #154033.
