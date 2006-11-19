@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.2.ebuild,v 1.1 2006/09/15 19:21:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.2.ebuild,v 1.2 2006/11/19 22:49:44 ticho Exp $
 
 DESCRIPTION="A secure audio ripper for linux"
 HOMEPAGE="http://rubyforge.org/projects/rubyripper/"
@@ -8,7 +8,7 @@ SRC_URI="http://rubyforge.org/frs/download.php/12158/${P}.tar.bz2"
 IUSE="flac mp3 vorbis"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 RDEPEND="dev-ruby/ruby-libglade2
 	 dev-ruby/ruby-freedb
 	 virtual/cdrtools
