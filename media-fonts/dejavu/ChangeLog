@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/dejavu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/ChangeLog,v 1.41 2006/11/19 15:30:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/ChangeLog,v 1.42 2006/11/19 22:29:56 ticho Exp $
+
+  19 Nov 2006; Andrej Kacian <ticho@gentoo.org> dejavu-2.11.ebuild:
+  Stable on x86, bug #155673.
 
 *dejavu-2.12 (19 Nov 2006)
 
