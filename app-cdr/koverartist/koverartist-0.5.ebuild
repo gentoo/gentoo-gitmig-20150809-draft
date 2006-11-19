@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/koverartist/koverartist-0.5.ebuild,v 1.2 2006/11/15 19:50:53 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/koverartist/koverartist-0.5.ebuild,v 1.3 2006/11/19 14:33:04 mattepiu Exp $
 
 inherit kde eutils
 
@@ -14,8 +14,8 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="cddb"
 
 DEPEND="!app-cdr/kover
-	|| ( kde-base/kdemultimedia-kioslaves kde-base/kdemultimedia )
-	cddb?  ( || ( kde-base/libkcddb kde-base/kdemultimedia ) )"
+	cddb?  ( || ( ( kde-base/libkcddb kde-base/kdemultimedia-kioslaves )
+			kde-base/kdemultimedia ) )"
 
 need-kde 3.3
 
