@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sysklogd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.47 2006/11/14 20:43:24 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.48 2006/11/19 12:01:47 hansmi Exp $
+
+  19 Nov 2006; Michael Hanselmann <hansmi@gentoo.org> sysklogd-1.4.2.ebuild:
+  Added to ~hppa. Don't drop keywords, please.
 
   14 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org> sysklogd-1.4.2.ebuild:
   Stable on sparc
