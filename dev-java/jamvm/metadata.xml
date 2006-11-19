@@ -2,13 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 
 <pkgmetadata>
-<herd>java</herd>
-<maintainer>
-  <email>karltk@gentoo.org</email>
-  <description>Primary maintainer</description>
-</maintainer>
-
-<longdescription>
-
-</longdescription>
+	<herd>java</herd>
 </pkgmetadata>
