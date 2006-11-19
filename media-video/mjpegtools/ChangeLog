@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.122 2006/11/03 16:27:53 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.123 2006/11/19 17:22:56 zzam Exp $
+
+*mjpegtools-1.8.0-r2 (19 Nov 2006)
+
+  19 Nov 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/mjpegtools-1.8.0-fix-lav2mpeg.patch,
+  +files/mjpegtools-1.8.0-lavrec-memleak.patch, +mjpegtools-1.8.0-r2.ebuild:
+  Added fixes for various bugs (#152568, #128404 and #137530).
 
   03 Nov 2006; Matthias Schwarzott <zzam@gentoo.org>
   mjpegtools-1.8.0-r1.ebuild:
