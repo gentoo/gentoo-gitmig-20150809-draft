@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/wxchtdecoder/wxchtdecoder-1.5.ebuild,v 1.1 2006/04/23 07:56:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/wxchtdecoder/wxchtdecoder-1.5.ebuild,v 1.2 2006/11/19 22:01:03 nyhm Exp $
+
+inherit wxwidgets
 
 DESCRIPTION="A program to decode .CHT files in Snes9x and ZNSES to plain text"
 HOMEPAGE="http://games.technoplaza.net/chtdecoder/"
@@ -11,9 +13,16 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/wxGTK-2.4.2"
-DEPEND="${RDEPEND}
-	>=sys-devel/gcc-3.3.1"
+DEPEND=">=x11-libs/wxGTK-2.6"
+
+pkg_setup() {
+	WX_GTK_VER=2.6 need-wxwidgets gtk2
+}
+
+src_compile() {
+	econf --with-wx-config=${WX_CONFIG} || die
+	emake || die "emake failed"
+}
 
 src_install() {
 	dobin src/wxchtdecoder || die "dobin failed"
