@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.218 2006/11/10 06:45:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.219 2006/11/19 01:27:17 swegener Exp $
+
+*xchat-2.6.8-r1 (19 Nov 2006)
+
+  19 Nov 2006; Sven Wegener <swegener@gentoo.org> +files/xc268-fix-ja.diff,
+  +files/xc268-fix-teprivmsg.diff, +files/xchat-2.6.8-fe-text.patch,
+  +xchat-2.6.8-r1.ebuild:
+  Revision bump, with three patches from upstream. Closes bug #152138.
 
   10 Nov 2006; Doug Goldstein <cardoe@gentoo.org> xchat-2.6.6.ebuild,
   xchat-2.6.8.ebuild:
