@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-rrdtool/py-rrdtool-0.2.1-r1.ebuild,v 1.5 2006/11/18 12:50:26 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-rrdtool/py-rrdtool-0.2.1-r1.ebuild,v 1.6 2006/11/19 18:51:53 opfer Exp $
 
 inherit eutils distutils
 
@@ -9,7 +9,7 @@ DESCRIPTION="Python wrapper for RRDtool"
 SRC_URI="mirror://sourceforge/py-rrdtool/${P}.tar.gz"
 HOMEPAGE="http://sourceforge.net/projects/py-rrdtool/"
 
-KEYWORDS="~ia64 ~ppc ~x86"
+KEYWORDS="~ia64 ~ppc x86"
 LICENSE="LGPL-2.1"
 SLOT="0"
 
