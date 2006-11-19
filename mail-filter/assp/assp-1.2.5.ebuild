@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/assp-1.2.5.ebuild,v 1.1 2006/11/19 00:07:03 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/assp-1.2.5.ebuild,v 1.2 2006/11/19 06:00:30 wltjr Exp $
 
 inherit eutils
 
@@ -13,11 +13,7 @@ SLOT="0"
 
 KEYWORDS="~amd64 ~x86"
 
-# Commented out till I can find or make an srs ebuild :)
-#IUSE="ldap spf srs"
-#	srs? ( dev-perl/Mail-SRS )
-
-IUSE="ldap spf"
+IUSE="ldap spf srs"
 
 DEPEND="app-arch/unzip"
 
@@ -29,6 +25,7 @@ RDEPEND="dev-lang/perl
 	virtual/perl-Digest-MD5
 	perl-core/Time-HiRes
 	spf? ( dev-perl/Mail-SPF-Query )
+	srs? ( dev-perl/Mail-SRS )
 	ldap? ( dev-perl/perl-ldap )"
 
 S=${WORKDIR}/${MY_PN}
