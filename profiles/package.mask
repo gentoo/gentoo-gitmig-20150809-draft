@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6303 2006/11/18 22:55:03 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6304 2006/11/19 00:02:10 george Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ## 
+
+# George Shapovalov <george@gentoo.org> (19 Nov 2006)
+# dead upstream, does not compile anymore (and seems not 64bt clean)
+# masked for removal
+dev-ada/adabindx
+dev-ada/adaopengl
 
 # Alin Nastac <mrness@gentoo.org> (18 Nov 2006)
 # Masked because kernel 2.6.17 contains the base and M105 drivers.
