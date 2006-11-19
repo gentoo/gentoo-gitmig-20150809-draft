@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/gnome-system-monitor
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.128 2006/10/20 22:05:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.129 2006/11/19 19:26:19 leio Exp $
+
+  19 Nov 2006; Mart Raudsepp <leio@gentoo.org>
+  -files/gnome-system-monitor-2.10.1-icon_warning.patch,
+  -gnome-system-monitor-2.10.1.ebuild, -gnome-system-monitor-2.12.2.ebuild,
+  -gnome-system-monitor-2.16.0.ebuild:
+  Remove old versions
 
   20 Oct 2006; Aron Griffis <agriffis@gentoo.org>
   gnome-system-monitor-2.14.4.ebuild:
