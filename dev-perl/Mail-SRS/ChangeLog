@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Sys-Hostname-Long
+# Copyright 2000-2006 DataCore GmbH; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SRS/ChangeLog,v 1.1 2006/11/19 05:32:51 wltjr Exp $
+
+  19 Nov 2006; William L. Thomson Jr. <wltjr@gentoo.org> ChangeLog:
+  Initial ebuild, needed as a dep for another package already in tree.
+
+* Mail-SRS-0.30 (20 May 2004)
+
+  20 May 2004; Amir Guindehi <amir@datacore.ch> Mail-SRS-0.30.ebuild
+  First release.
