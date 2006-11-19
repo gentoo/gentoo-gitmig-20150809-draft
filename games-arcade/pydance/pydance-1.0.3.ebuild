@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance/pydance-1.0.3.ebuild,v 1.3 2006/11/10 23:04:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance/pydance-1.0.3.ebuild,v 1.4 2006/11/19 15:44:30 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="pyDance is a DDR clone for linux written in Python"
 HOMEPAGE="http://www.icculus.org/pyddr/"
