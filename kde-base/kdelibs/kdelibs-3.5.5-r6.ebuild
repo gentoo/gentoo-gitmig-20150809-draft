@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5-r6.ebuild,v 1.3 2006/11/18 15:50:21 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5-r6.ebuild,v 1.4 2006/11/19 15:42:41 flameeyes Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -114,9 +114,9 @@ src_compile() {
 			$(use_with spell aspell)"
 
 	if use zeroconf && ! use avahi; then
-		myconf="${myconf} --disable-dnssd"
-	else
 		myconf="${myconf} --enable-dnssd"
+	else
+		myconf="${myconf} --disable-dnssd"
 	fi
 
 	if use spell; then
