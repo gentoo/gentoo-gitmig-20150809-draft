@@ -1,11 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jasperreports/jasperreports-0.6.1-r4.ebuild,v 1.4 2005/12/18 17:33:04 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jasperreports/jasperreports-0.6.1-r4.ebuild,v 1.5 2006/11/19 14:51:49 betelgeuse Exp $
 
 inherit java-pkg
 
 DESCRIPTION="JasperReports is a powerful report-generating tool that has the ability to deliver rich content onto the screen, to the printer or into PDF, HTML, XLS, CSV and XML files."
-HOMEPAGE="http://jasperreports.sourceforge.net/"
+HOMEPAGE="http://jasperforge.org/sf/projects/jasperreports"
 SRC_URI="mirror://sourceforge/jasperreports/${P}-project.zip"
 LICENSE="LGPL-2.1"
 SLOT="0"
