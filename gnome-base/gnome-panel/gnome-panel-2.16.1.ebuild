@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.16.1.ebuild,v 1.2 2006/10/14 21:13:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.16.1.ebuild,v 1.3 2006/11/19 20:40:36 cardoe Exp $
 
 inherit gnome2
 
@@ -24,7 +24,8 @@ RDEPEND=">=gnome-base/gnome-desktop-2.11.92
 	>=gnome-base/gconf-2.6.1
 	>=gnome-base/gnome-menus-2.11.1
 	>=gnome-base/libbonobo-2
-	>=sys-apps/dbus-0.60
+	|| ( >=dev-libs/dbus-glib-0.71
+		( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.60 ) )
 	>=x11-libs/cairo-1.0.0
 	media-libs/libpng
 	eds? ( >=gnome-extra/evolution-data-server-1.6 )"
