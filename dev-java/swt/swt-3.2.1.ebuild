@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2.1.ebuild,v 1.1 2006/11/19 18:41:13 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2.1.ebuild,v 1.2 2006/11/19 18:59:50 betelgeuse Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -52,8 +52,6 @@ S="${WORKDIR}"
 src_unpack() {
 	unzip -jq "${DISTDIR}/${A}" "*src.zip" || die "unable to extract distfile"
 
-	# Unpack the sources
-	einfo "Unpacking src.zip to ${S}"
 	unpack ./src.zip
 
 	# Cleanup the redirtied directory structure
@@ -69,6 +67,10 @@ src_unpack() {
 
 	# https://bugs.eclipse.org/bugs/show_bug.cgi?id=165097
 	epatch "${FILESDIR}"/${PN}-3.2.1-remove-stripping.patch
+
+	epatch "${FILESDIR}"/${PN}-3.2.1-libswt-xpcomgcc4.patch
+
+	epatch "${FILESDIR}"/${PN}-3.2.1-firefox.patch
 
 	if [[ ${ARCH} == "amd64" ]] ; then
 		epatch "${FILESDIR}"/${PN}-3.2-cairo-signedness-x86_64.patch
