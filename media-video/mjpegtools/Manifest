@@ -5,10 +5,10 @@ AUX mjpegtools-1.8.0-as-needed.patch 1015 RMD160 10c6f59d6a30c33d9ce18eab603b7fa
 MD5 8f77bff6eec4cc801c85063d5d13a238 files/mjpegtools-1.8.0-as-needed.patch 1015
 RMD160 10c6f59d6a30c33d9ce18eab603b7faca5f238f6 files/mjpegtools-1.8.0-as-needed.patch 1015
 SHA256 ee21d2d19e3eaa446d0c6708f496ea9b485da51d487863ea198c04d991e2a2b6 files/mjpegtools-1.8.0-as-needed.patch 1015
-AUX mjpegtools-1.8.0-fix-lav2mpeg.patch 917 RMD160 de3d13fec902f188459273d46f45ac7bc2796462 SHA1 8a6c749baf4c76c1ae4b677d3d9cac3c260863eb SHA256 7e77c9e7f6fbc13f2bfc6d64a1c8521d40112db09b6f1d47b87b1d74146786ad
-MD5 51efcd77e826efed19bf40a1f1863c1f files/mjpegtools-1.8.0-fix-lav2mpeg.patch 917
-RMD160 de3d13fec902f188459273d46f45ac7bc2796462 files/mjpegtools-1.8.0-fix-lav2mpeg.patch 917
-SHA256 7e77c9e7f6fbc13f2bfc6d64a1c8521d40112db09b6f1d47b87b1d74146786ad files/mjpegtools-1.8.0-fix-lav2mpeg.patch 917
+AUX mjpegtools-1.8.0-fix-lav2mpeg.patch 1092 RMD160 50b58be0662d7a004f712f942cae94a0c2caaa3f SHA1 49ba0dc9483e750edabb355042b89124bab95101 SHA256 8d9a19106b3fe3e64f238c1aa0008a584cb792c9f783995eea18bbd4ffa605b6
+MD5 3faa626bcfd841cde625fffd399c6705 files/mjpegtools-1.8.0-fix-lav2mpeg.patch 1092
+RMD160 50b58be0662d7a004f712f942cae94a0c2caaa3f files/mjpegtools-1.8.0-fix-lav2mpeg.patch 1092
+SHA256 8d9a19106b3fe3e64f238c1aa0008a584cb792c9f783995eea18bbd4ffa605b6 files/mjpegtools-1.8.0-fix-lav2mpeg.patch 1092
 AUX mjpegtools-1.8.0-gcc41.patch 420 RMD160 e48e6d716f21e450cc26e7039c703005ed9a0bd9 SHA1 b1bd9604fa0eb6c8b54ee9d0836b0c61b233ffff SHA256 5e748deceb1af3179025ab42d274cc2941fe85bb0b7b512b49263a9ff6754446
 MD5 803eccd889c60a442ee23ba65951fadc files/mjpegtools-1.8.0-gcc41.patch 420
 RMD160 e48e6d716f21e450cc26e7039c703005ed9a0bd9 files/mjpegtools-1.8.0-gcc41.patch 420
@@ -39,10 +39,10 @@ EBUILD mjpegtools-1.8.0-r2.ebuild 2809 RMD160 2233b82fb042b5976633adde1ad3c5bbba
 MD5 f547088b082bf9438aee582085e34d07 mjpegtools-1.8.0-r2.ebuild 2809
 RMD160 2233b82fb042b5976633adde1ad3c5bbbaf4251e mjpegtools-1.8.0-r2.ebuild 2809
 SHA256 be302c170a99c6431a598e0754f66075bd57ee79a86b57c8086f7e949abb1a56 mjpegtools-1.8.0-r2.ebuild 2809
-MISC ChangeLog 22007 RMD160 b49c41b96ac990ce186c67bdc86b5dcbd0430b5f SHA1 ccf1556a0359f835e8adfb36861d229099cdeb77 SHA256 61d6ff6b552a2058dff9b42371f4dd619744896f76b14bae4ddedc886c6cd76f
-MD5 680fd6b1098a681117647fb95786fc0a ChangeLog 22007
-RMD160 b49c41b96ac990ce186c67bdc86b5dcbd0430b5f ChangeLog 22007
-SHA256 61d6ff6b552a2058dff9b42371f4dd619744896f76b14bae4ddedc886c6cd76f ChangeLog 22007
+MISC ChangeLog 22153 RMD160 8abd8eeaeed38ec910c0967d0d656edec0049b48 SHA1 c05cd0d83ed67d6f2d28f72cd701c895ca6a4595 SHA256 befcbad8272e4b4eb35c8e3eb23ba608e8725680575f2ea1e0985015d0371f3f
+MD5 21e7785c2024880d3f35c77428ce874b ChangeLog 22153
+RMD160 8abd8eeaeed38ec910c0967d0d656edec0049b48 ChangeLog 22153
+SHA256 befcbad8272e4b4eb35c8e3eb23ba608e8725680575f2ea1e0985015d0371f3f ChangeLog 22153
 MISC metadata.xml 311 RMD160 5d2d2fac1a97018f75e5ff1e8e7c90fb02511cb9 SHA1 228093feb5989936d0480ac2bc543df959b06dfa SHA256 74869f2267904c0a7409e16cc0d2e54f41b186683c4f5bb6e0127b275e66b4b0
 MD5 fe49014257499366bdc6903a9aa33fe5 metadata.xml 311
 RMD160 5d2d2fac1a97018f75e5ff1e8e7c90fb02511cb9 metadata.xml 311
@@ -56,7 +56,7 @@ SHA256 4b2cc5ce3875c7bd8e06e9dda7c0e3cc89ccd78dc4c8e163c42066537a25d175 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFYJMDt2vP6XvVdOcRAn1oAKDXdxbN/Hx6Axtlj4krCv1TeoBkAwCggL+z
-b1mBX1OL5+H3uaLJMwIHcRI=
-=eGU0
+iD8DBQFFYJf+t2vP6XvVdOcRAkZBAKCwhua4WGVJnEK/fuV229yuslCx/gCgmNI6
+v5/DfpzMdHLxok6lfZiGCxk=
+=6QgG
 -----END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.123 2006/11/19 17:22:56 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.124 2006/11/19 17:44:23 zzam Exp $
+
+  19 Nov 2006; Matthias Schwarzott <zzam@gentoo.org>
+  files/mjpegtools-1.8.0-fix-lav2mpeg.patch:
+  Added lost hunk to patch for Bug #137530 :).
 
 *mjpegtools-1.8.0-r2 (19 Nov 2006)
 
