@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome2-user-docs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome2-user-docs/ChangeLog,v 1.70 2006/10/29 03:53:27 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome2-user-docs/ChangeLog,v 1.71 2006/11/19 22:15:40 leio Exp $
+
+  19 Nov 2006; Mart Raudsepp <leio@gentoo.org>
+  -gnome2-user-docs-2.8.1.ebuild, -gnome2-user-docs-2.14.0.ebuild:
+  Remove old versions
 
   29 Oct 2006; John N. Laliberte <allanonjl@gentoo.org>
   gnome2-user-docs-2.14.2.ebuild, -gnome2-user-docs-2.16.0.ebuild,
