@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.16.ebuild,v 1.10 2006/09/19 02:03:02 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.16.ebuild,v 1.11 2006/11/19 02:27:20 compnerd Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,12 +11,10 @@ SRC_URI="ftp://ftp.fvwm.org/pub/fvwm/version-2/${P}.tar.bz2 mirror://gentoo/fvwm
 LICENSE="GPL-2 FVWM"
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
-IUSE="bidi debug gtk imlib nls perl png readline rplay stroke tk truetype xinerama"
+IUSE="bidi debug gtk nls perl png readline rplay stroke tk truetype xinerama"
 
 RDEPEND="readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.3-r1 )
-		gtk? ( =x11-libs/gtk+-1.2*
-				imlib? ( >=media-libs/gdk-pixbuf-0.21.0
-						>=media-libs/imlib-1.9.14-r1 ) )
+		gtk? ( =x11-libs/gtk+-1.2* )
 		rplay? ( >=media-sound/rplay-3.3.2 )
 		bidi? ( >=dev-libs/fribidi-0.10.4 )
 		png? ( >=media-libs/libpng-1.0.12-r2 )
@@ -74,10 +72,8 @@ src_compile() {
 	if ! use gtk; then
 		myconf="${myconf} --disable-gtk --without-gnome"
 	else
-		if ! use imlib; then
-			einfo "ATTN: You can safely ignore any imlib related configure errors."
-			myconf="${myconf} --with-imlib-prefix=${T}"
-		fi
+		einfo "ATTN: You can safely ignore any imlib related configure errors."
+		myconf="${myconf} --with-imlib-prefix=${T}"
 		myconf="${myconf} --without-gnome"
 	fi
 
