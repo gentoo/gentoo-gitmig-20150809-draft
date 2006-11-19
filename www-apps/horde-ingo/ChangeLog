@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/horde-ingo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-ingo/ChangeLog,v 1.15 2006/11/18 11:09:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-ingo/ChangeLog,v 1.16 2006/11/19 13:06:22 killerfox Exp $
+
+  19 Nov 2006; René Nussbaumer <killerfox@gentoo.org>
+  horde-ingo-1.1.2.ebuild:
+  Stable on hppa. See bug #153927.
 
   18 Nov 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   horde-ingo-1.1.2.ebuild:
