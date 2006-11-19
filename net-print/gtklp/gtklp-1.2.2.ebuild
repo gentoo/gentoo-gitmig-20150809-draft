@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/gtklp-1.2.2.ebuild,v 1.1 2006/06/05 22:19:49 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/gtklp-1.2.2.ebuild,v 1.2 2006/11/19 23:01:04 ticho Exp $
 
 DESCRIPTION="A GUI for cupsd"
 SRC_URI="mirror://sourceforge/gtklp/${P}.src.tar.gz"
 HOMEPAGE="http://gtklp.sourceforge.net"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~amd64"
 LICENSE="GPL-2"
 IUSE="nls ssl"
 
