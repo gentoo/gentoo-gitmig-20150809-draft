@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/jamvm-1.4.4.ebuild,v 1.1 2006/11/19 19:58:16 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/jamvm-1.4.4.ebuild,v 1.2 2006/11/19 20:00:44 nichoj Exp $
 
 inherit eutils flag-o-matic multilib java-vm-2
 
@@ -16,6 +16,7 @@ IUSE="debug"
 RDEPEND=">=dev-java/gnu-classpath-0.19
 	dev-libs/libffi"
 DEPEND="${DEPEND}"
+PDEPEND="=dev-java/eclipse-ecj-3.2* dev-java/gjdoc"
 
 src_compile() {
 	filter-flags "-fomit-frame-pointer"
