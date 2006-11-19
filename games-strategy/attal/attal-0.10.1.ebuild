@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/attal-0.10.1.ebuild,v 1.1 2006/09/11 21:19:38 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/attal-0.10.1.ebuild,v 1.2 2006/11/19 13:06:44 nyhm Exp $
 
-inherit qt4 eutils games
+inherit eutils toolchain-funcs qt4 games
 
 MY_P="${PN}-src-${PV}"
 DESCRIPTION="turn-based strategy game project"
@@ -33,11 +33,19 @@ src_unpack() {
 		server/duel.cpp \
 		|| die "sed failed"
 
+	sed -i \
+		-e "1i QMAKE_CXXFLAGS_RELEASE=${CXXFLAGS}" \
+		-e "1i QMAKE_LFLAGS_RELEASE=${LDFLAGS}" \
+		$(find . -type f -name '*.pro') \
+		|| die "sed failed"
 	qmake -o Makefile Makefile.pro || die "qmake failed"
 }
 
 src_compile() {
-	emake -j1 || die "emake failed" #disable parallel builds
+	emake -j1 \
+		CXX=$(tc-getCXX) \
+		LINK=$(tc-getCXX) \
+		|| die "emake failed"
 }
 
 src_install() {
