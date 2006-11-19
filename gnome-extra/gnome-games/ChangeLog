@@ -1,6 +1,20 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.175 2006/11/09 02:21:35 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.176 2006/11/19 19:00:47 leio Exp $
+
+*gnome-games-2.16.2 (19 Nov 2006)
+
+  19 Nov 2006; Mart Raudsepp <leio@gentoo.org>
+  -files/gnome-games-2.9.6-nohowl.patch,
+  -files/gnome-games-2.10.1-no_esd.patch,
+  -files/gnome-games-2.11.4-nohowl.patch,
+  -files/gnome-games-2.12.0-guile_switch.patch,
+  -files/gnome-games-2.12.0-no_lazy_bindings.patch,
+  -gnome-games-2.10.1.ebuild, -gnome-games-2.10.1-r1.ebuild,
+  -gnome-games-2.12.3.ebuild, -gnome-games-2.16.1.1.ebuild,
+  +gnome-games-2.16.2.ebuild:
+  Version bump to 2.16.2 - avahi support is now disabled upstream due to
+  crashes. Remove old versions
 
 *gnome-games-2.16.1.1 (09 Nov 2006)
 
