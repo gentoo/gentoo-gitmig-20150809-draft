@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/libperl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.122 2006/11/18 16:29:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.123 2006/11/19 19:27:21 mcummings Exp $
+
+  19 Nov 2006; Michael Cummings <mcummings@gentoo.org>
+  +files/libperl-5.8.8-gcc42-command-line.patch, libperl-5.8.8-r1.ebuild:
+  Bug 144965, gcc-4.2 bug/patch, patch provided by dirtyepic
 
   18 Nov 2006; Michael Cummings <mcummings@gentoo.org>
   -files/libperl-reorder-INC.patch, libperl-5.8.8-r1.ebuild:

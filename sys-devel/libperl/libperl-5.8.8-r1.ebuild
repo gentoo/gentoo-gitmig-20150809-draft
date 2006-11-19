@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.8-r1.ebuild,v 1.18 2006/11/18 16:29:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.8-r1.ebuild,v 1.19 2006/11/19 19:27:21 mcummings Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -141,6 +141,7 @@ src_unpack() {
 	[[ ${CHOST} == *-dragonfly* ]] && cd ${S} && epatch ${FILESDIR}/${P}-dragonfly-clean.patch
 	[[ ${CHOST} == *-freebsd* ]] && cd ${S} && epatch ${FILESDIR}/${P}-fbsdhints.patch
 	cd ${S}; epatch ${FILESDIR}/${P}-cplusplus.patch
+	has_version '>=sys-devel/gcc-4.2' && epatch ${FILESDIR}/${P}-gcc42-command-line.patch
 }
 
 myconf() {
