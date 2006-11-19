@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-DB_File
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-DB_File/ChangeLog,v 1.7 2006/10/25 01:56:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-DB_File/ChangeLog,v 1.8 2006/11/19 18:35:28 mcummings Exp $
+
+  19 Nov 2006; Michael Cummings <mcummings@gentoo.org>
+  perl-DB_File-1.814.ebuild:
+  Updating virtual to catch perls built without berkdb
 
   25 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   -perl-DB_File-1.811.ebuild, perl-DB_File-1.813.ebuild:
