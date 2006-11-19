@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/GStreamer
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GStreamer/ChangeLog,v 1.1 2006/11/19 19:10:46 mcummings Exp $
+
+*GStreamer-0.09 (19 Nov 2006)
+
+  19 Nov 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +GStreamer-0.09.ebuild:
+  Bug 110995 for metalgod, ebuild originally from Ed
+
