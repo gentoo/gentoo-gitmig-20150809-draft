@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6304 2006/11/19 00:02:10 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6305 2006/11/19 06:05:42 wltjr Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1209,10 +1209,6 @@ net-wireless/aircrack
 # Fairly limited comments about it in /etc/sandbox.conf and
 # /etc/sandbox.d/00default.
 >=sys-apps/sandbox-1.2.20_alpha1
-
-# Michael Sterrett <mr_bones_@gentoo.org> (07 Jul 2006)
-# Added back mask for dev-util/netbeans-4 until tomcat is fixed up
->=dev-util/netbeans-4.0
 
 # Diego Pettenò <flameeyes@gentoo.org> (5 Jul 2006)
 # Beta version

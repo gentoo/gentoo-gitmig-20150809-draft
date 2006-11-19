@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2353 2006/11/18 21:49:22 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2354 2006/11/19 06:05:42 wltjr Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -675,6 +675,8 @@ mail-client/sylpheed-claws:bogofilter - Build bogofilter plugin
 mail-client/sylpheed-claws:dillo - Enables support for inline http email viewing with a plugin (which depends on the dillo browser)
 mail-client/sylpheed-claws:spamassassin - Build spamassassin plugin
 mail-filter/ask:procmail - Adds support for procmail
+mail-filter/assp:spf - Adds support for Sender Policy Framework
+mail-filter/assp:srs - Adds support for Sender Rewriting Scheme
 mail-filter/bogofilter:gsl - Use the GNU scientific library for calculations
 mail-filter/bsfilter:mecab - Adds support for mecab
 mail-filter/clamassassin:clamd - Use the ClamAV daemon for virus checking.
