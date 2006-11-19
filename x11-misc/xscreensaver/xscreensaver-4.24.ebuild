@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.24.ebuild,v 1.15 2006/10/22 01:06:57 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.24.ebuild,v 1.16 2006/11/19 12:44:39 nelchael Exp $
+
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="1.4"
 
 inherit eutils flag-o-matic pam fixheadtails autotools
 
@@ -37,7 +40,6 @@ DEPEND="${RDEPEND}
 	x11-proto/scrnsaverproto
 	x11-proto/recordproto
 	x11-proto/xf86miscproto
-	=sys-devel/automake-1.4*
 	sys-devel/bc
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )

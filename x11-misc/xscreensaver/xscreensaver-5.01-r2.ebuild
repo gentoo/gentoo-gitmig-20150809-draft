@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.01-r2.ebuild,v 1.1 2006/11/08 10:57:49 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.01-r2.ebuild,v 1.2 2006/11/19 12:44:39 nelchael Exp $
+
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="1.4"
 
 inherit eutils flag-o-matic pam fixheadtails autotools
 
