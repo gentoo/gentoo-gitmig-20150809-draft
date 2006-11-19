@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/String-Approx
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/String-Approx/ChangeLog,v 1.1 2006/11/19 18:11:09 mcummings Exp $
+
+*String-Approx-3.26 (19 Nov 2006)
+
+  19 Nov 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +String-Approx-3.26.ebuild:
+  Bug 154392, dep for fuzzocr, ebuild from tomk
+
