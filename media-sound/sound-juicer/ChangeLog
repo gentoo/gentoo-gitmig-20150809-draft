@@ -1,6 +1,16 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.92 2006/10/20 20:05:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.93 2006/11/19 15:53:00 leio Exp $
+
+*sound-juicer-2.16.2 (19 Nov 2006)
+
+  19 Nov 2006; Mart Raudsepp <leio@gentoo.org>
+  -files/sound-juicer-2.12.2-file-chooser-3.patch,
+  -sound-juicer-2.10.1.ebuild, -sound-juicer-2.12.2-r1.ebuild,
+  -sound-juicer-2.12.3.ebuild, -sound-juicer-2.14.0.ebuild,
+  -sound-juicer-2.14.2.ebuild, -sound-juicer-2.16.0.ebuild,
+  +sound-juicer-2.16.2.ebuild:
+  Version bump. Clean up old.
 
   20 Oct 2006; Aron Griffis <agriffis@gentoo.org>
   sound-juicer-2.14.4.ebuild:
