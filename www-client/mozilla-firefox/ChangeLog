@@ -1,6 +1,12 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.218 2006/11/15 05:34:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.219 2006/11/19 15:26:01 redhatter Exp $
+
+*mozilla-firefox-2.0-r1 (19 Nov 2006)
+
+  19 Nov 2006; Stuart Longland <redhatter@gentoo.org>
+  +mozilla-firefox-2.0-r1.ebuild:
+  Added new Firefox ebuild (on Anarchy's behalf).  Resolves bug #154906.
 
   15 Nov 2006; Jeroen Roovers <jer@gentoo.org>
   mozilla-firefox-1.5.0.8.ebuild:
