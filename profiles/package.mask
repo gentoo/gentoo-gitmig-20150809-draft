@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6308 2006/11/19 17:31:44 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6309 2006/11/19 22:09:23 rl03 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -735,14 +735,6 @@ dev-ruby/rudl
 # Alec Warner <antarus@gentoo.org> (19 Oct 2006)
 # Masked app-editors/xwpe for treecleaners, bug # 124298
 app-editors/xwpe
-
-# Renat Lumpau <rl03@gentoo.org> (19 Oct 2006)
-# dead upstream, bug #152024
-www-apps/back-end
-
-# Renat Lumpau <rl03@gentoo.org> (19 Oct 2006)
-# maintainer missing, bug #134759
-www-apps/issue-tracker
 
 # Diego Pettenò <flameeyes@gentoo.org> (19 Oct 2006)
 # beta version, breaks API badly with other software.
