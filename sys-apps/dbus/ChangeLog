@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.153 2006/11/19 14:48:46 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.154 2006/11/19 17:32:33 cardoe Exp $
+
+*dbus-1.0.1-r1 (19 Nov 2006)
+
+  19 Nov 2006; Doug Goldstein <cardoe@gentoo.org> -files/dbus.init-0.95,
+  -files/dbus-0.95-pass-context.patch, +files/dbus.init-1.0,
+  +files/dbus-1.0.1-pthread-holder-fix.diff, -dbus-0.95.ebuild,
+  dbus-1.0.1.ebuild, +dbus-1.0.1-r1.ebuild:
+  pthreads assertion fix from upstream
 
   19 Nov 2006; Lars Weiler <pylon@gentoo.org> dbus-0.62-r1.ebuild:
   Reverting to ~ppc due to build-failure with current stable qt
