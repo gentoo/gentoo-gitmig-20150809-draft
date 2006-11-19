@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.152 2006/11/18 10:10:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.153 2006/11/19 14:48:46 pylon Exp $
+
+  19 Nov 2006; Lars Weiler <pylon@gentoo.org> dbus-0.62-r1.ebuild:
+  Reverting to ~ppc due to build-failure with current stable qt
+  (x11-libs/qt-4.1.4-r2); see bug #154522.
 
   18 Nov 2006; nixnut <nixnut@gentoo.org> dbus-0.62-r1.ebuild:
   Stable on ppc wrt bug 154522
