@@ -1,12 +1,12 @@
---- tools/hal-system-power-suspend	2006-02-19 00:00:55.000000000 +0100
-+++ tools/hal-system-power-suspend2	2006-09-23 11:22:42.000000000 +0200
-@@ -62,6 +62,9 @@
+--- tools/hal-system-power-hibernate	2006-01-16 07:47:40.000000000 -0500
++++ tools/hal-system-power-hibernate-new	2006-11-19 18:50:43.000000000 -0500
+@@ -36,6 +36,9 @@
  	elif [ -x "/usr/sbin/pmi" ] ; then
- 	    /usr/sbin/pmi action suspend force
- 	    RET=$?
+ 		/usr/sbin/pmi action hibernate force
+ 		RET=$?
 +	elif [ -x "/usr/sbin/hibernate-ram" ] ; then
-+	    /usr/sbin/hibernate-ram
-+	    RET=$?
- 	elif [ -w "/sys/power/state" ] ; then
- 	    # Use the raw kernel sysfs interface
- 	    echo "mem" > /sys/power/state
++		/usr/sbin/hibernate-ram
++		RET=$?
+ 	elif [ -x "/usr/sbin/pm-hibernate" ] ; then
+ 		/usr/sbin/pm-hibernate
+ 		RET=$?
