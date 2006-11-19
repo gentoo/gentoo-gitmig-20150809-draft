@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/japitools/japitools-0.9.5-r1.ebuild,v 1.1 2006/08/22 19:54:57 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/japitools/japitools-0.9.5-r1.ebuild,v 1.2 2006/11/19 10:31:56 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="Java API compatibility testing tools"
-HOMEPAGE="http://www.kaffe.org/~stuart/japi/"
+HOMEPAGE="http://sab39.netreach.com/japi/"
 
 SRC_URI="http://www.kaffe.org/~stuart/japi/${P}.tar.gz"
 LICENSE="GPL-2"

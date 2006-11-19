@@ -3,15 +3,15 @@
 <pkgmetadata>
 <herd>java</herd>
 
-<maintainer> 
+<maintainer>
 <email>betelgeuse@gentoo.org</email>
 <name>Petteri Räty</name>
 </maintainer>
 
 <longdescription>
-Japitools consists of two simple tools designed to test for compatibility 
-between Java APIs. They were originally designed for testing free implementations 
-of Java itself for compatibility with Sun's JDK, but they can also be used for 
+Japitools consists of two simple tools designed to test for compatibility
+between Java APIs. They were originally designed for testing free implementations
+of Java itself for compatibility with Sun's JDK, but they can also be used for
 testing backward compatibility between versions of any API.
 </longdescription>
 
