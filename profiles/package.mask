@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6307 2006/11/19 14:03:59 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6308 2006/11/19 17:31:44 tester Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -756,10 +756,6 @@ www-apps/issue-tracker
 # paraview is a new package and needs to be tested 
 # a bit more before we unleash it (see bug #118130)
 sci-visualization/paraview
-
-# Olivier Crete <tester@tester.ca> (16 Oct 2006)
-# Has been broken for a long time (see bug #67273)
-sys-devel/odinmp
 
 # Andrej Kacian <ticho@gentoo.org> (16 Oct 2006)
 # Release candidates, no unsuspecting users should use these.
