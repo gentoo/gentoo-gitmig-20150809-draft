@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.176 2006/11/15 12:51:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.177 2006/11/19 16:04:44 flameeyes Exp $
+
+  19 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/amarok-1.4.4-asneeded.patch, amarok-1.4.4.ebuild:
+  Add patch to fix building with libgpod and --as-needed (bug #154022). Thanks
+  to Timothy (drizzt) who gave me the patch.
 
   15 Nov 2006; Markus Rothe <corsair@gentoo.org> amarok-1.4.4.ebuild:
   Added ~ppc64; bug #153024
