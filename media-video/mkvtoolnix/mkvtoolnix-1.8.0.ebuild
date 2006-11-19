@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-1.8.0.ebuild,v 1.2 2006/11/18 10:31:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-1.8.0.ebuild,v 1.3 2006/11/19 12:37:08 aballier Exp $
 
 inherit eutils wxwidgets flag-o-matic
 
@@ -30,6 +30,13 @@ pkg_setup() {
 	if use wxwindows; then
 		need-wxwidgets gtk2
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-wxgtk.patch"
 }
 
 src_compile() {
