@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.2_rc1.ebuild,v 1.1 2006/11/19 01:48:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.2_rc1.ebuild,v 1.2 2006/11/19 17:02:29 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic eutils
 
@@ -109,7 +109,7 @@ src_install() {
 	# in the wrong place, just put it in the doc directory.
 	mkinstall DOCDIR=/usr/share/doc/${PF} || die "Install failed"
 
-	for util in nfs nfsmount rpcbind syslogd moused powerd syscons; do
+	for util in nfs nfsmount rpcbind syslogd moused powerd syscons rarpd; do
 		newinitd ${FILESDIR}/${util}.initd ${util}
 		[[ -e ${FILESDIR}/${util}.confd ]] && \
 			newconfd ${FILESDIR}/${util}.confd ${util}

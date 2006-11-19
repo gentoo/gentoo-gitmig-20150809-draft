@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-usbin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.31 2006/11/19 01:48:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.32 2006/11/19 17:02:29 flameeyes Exp $
+
+  19 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> +files/rarpd.confd,
+  +files/rarpd.initd, freebsd-usbin-6.2_rc1.ebuild:
+  Add init.d and conf.d files for reverse ARP daemon (rarpd).
 
 *freebsd-usbin-6.2_rc1 (19 Nov 2006)
 
