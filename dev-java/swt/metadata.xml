@@ -5,6 +5,6 @@
 	<longdescription>
 		SWT is the software component that delivers native widget functionality for the
 		Eclipse platform in an operating system independent manner.  It is analogous to
-		AWT/Swing in Java with a difference - SWT uses a rich set of native widgets. 
+		AWT/Swing in Java with a difference - SWT uses a rich set of native widgets.
 	</longdescription>
 </pkgmetadata>
