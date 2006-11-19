@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/gkrellsun
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellsun/ChangeLog,v 1.17 2006/10/16 11:44:30 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellsun/ChangeLog,v 1.18 2006/11/19 15:26:12 mabi Exp $
+
+  19 Nov 2006; Matti Bickel <mabi@gentoo.org> gkrellsun-0.9.1.ebuild,
+  gkrellsun-1.0.0.ebuild:
+  Stable on ppc (bug #133806), move 0.9.1 to slot 1 as this package does not
+  work with multiple versions installed (bug #121016)
 
 *gkrellsun-1.0.0 (16 Oct 2006)
 
