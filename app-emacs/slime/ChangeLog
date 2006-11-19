@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/slime
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.27 2006/08/06 04:24:39 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.28 2006/11/19 06:41:01 mkennedy Exp $
+
+*slime-2.0.0.20061118 (19 Nov 2006)
+
+  19 Nov 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/70slime-gentoo.el, +files/new-slime-ball,
+  +slime-2.0.0.20061118.ebuild:
+  New refresh with upstream; Adjust installation so that no modification to
+  SLIME is necessary.
 
 *slime-2.0.0.20060805 (06 Aug 2006)
 
