@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.25.ebuild,v 1.1 2006/04/09 01:29:21 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.25.ebuild,v 1.2 2006/11/19 02:45:23 compnerd Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ SLOT="0"
 
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
-IUSE="esd gnome imlib nls spell truetype xinerama silverxp"
+IUSE="esd imlib nls spell truetype xinerama silverxp"
 
 RDEPEND="|| ( (
 		x11-libs/libXau
@@ -33,7 +33,6 @@ RDEPEND="|| ( (
 		x11-libs/libXdmcp )
 	virtual/x11 )
 	esd? ( media-sound/esound )
-	gnome? ( gnome-base/gnome-libs gnome-base/gnome-desktop dev-util/pkgconfig )
 	imlib? ( >=media-libs/imlib-1.9.10-r1 )
 	nls? ( sys-devel/gettext )
 	truetype? ( >=media-libs/freetype-2.0.9 )
@@ -82,8 +81,6 @@ src_compile(){
 		$(use_enable spell GtkSpell) \
 		$(use_enable x86 x86-asm) \
 		$(use_enable xinerama) \
-		$(use_enable gnome menus-gnome1) \
-		$(use_enable gnome menus-gnome2) \
 		${myconf} || die "configure failed"
 
 	sed -i "s:/icewm-\$(VERSION)::" src/Makefile || die "patch failed"
