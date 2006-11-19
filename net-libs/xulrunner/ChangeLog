@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.4 2006/11/17 14:36:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.5 2006/11/19 15:09:43 redhatter Exp $
+
+  19 Nov 2006; Stuart Longland <redhatter@gentoo.org>
+  xulrunner-1.8.0.4.ebuild:
+  Minor tweaks committed on Anarchy's behalf: relocated WANT_AUTOCONF
+  variable, force -j1 when compiling.
 
   17 Nov 2006; nixnut <nixnut@gentoo.org> xulrunner-1.8.0.4.ebuild:
   Added ~ppc keyword wrt bug 155053

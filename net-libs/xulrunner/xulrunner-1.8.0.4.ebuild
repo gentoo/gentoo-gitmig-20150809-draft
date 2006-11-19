@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.0.4.ebuild,v 1.3 2006/11/17 14:36:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.0.4.ebuild,v 1.4 2006/11/19 15:09:43 redhatter Exp $
+
+WANT_AUTOCONF="2.1"
 
 inherit flag-o-matic toolchain-funcs eutils makeedit multilib autotools mozconfig-2 java-pkg-opt-2
 PVER="0.8"
@@ -55,8 +57,7 @@ src_unpack() {
 			${S}/security/coreconf/arch.mk
 	fi
 
-	WANT_AUTOCONF="2.1" \
-		eautoreconf || die "failed  running eautoreconf"
+	eautoreconf || die "failed  running eautoreconf"
 }
 
 src_compile() {
@@ -134,7 +135,7 @@ src_compile() {
 	# requirements while compiling
 	edit_makefiles
 
-	emake || die
+	emake -j1 || die
 }
 
 src_install() {
