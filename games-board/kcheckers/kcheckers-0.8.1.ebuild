@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/kcheckers/kcheckers-0.8.1.ebuild,v 1.1 2006/11/19 11:25:25 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/kcheckers/kcheckers-0.8.1.ebuild,v 1.2 2006/11/19 12:02:31 nyhm Exp $
 
 inherit eutils toolchain-funcs qt4 games
 
@@ -26,6 +26,7 @@ src_unpack() {
 		main.cc toplevel.cc || die "sed failed"
 
 	echo "QMAKE_CXXFLAGS_RELEASE = ${CXXFLAGS}" >> kcheckers.pro
+	echo "QMAKE_LFLAGS_RELEASE = ${LDFLAGS}" >> kcheckers.pro
 }
 
 src_compile() {
