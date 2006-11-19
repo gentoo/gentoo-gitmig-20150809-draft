@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.8 2006/10/30 10:07:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.9 2006/11/19 16:05:41 leio Exp $
+
+*pygobject-2.12.3 (19 Nov 2006)
+
+  19 Nov 2006; Mart Raudsepp <leio@gentoo.org> +pygobject-2.12.3.ebuild:
+  Version bump
 
   30 Oct 2006; Robin H. Johnson <robbat2@gentoo.org>
   pygobject-2.12.2.ebuild:
