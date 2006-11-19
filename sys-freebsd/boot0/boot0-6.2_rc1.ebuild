@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/boot0-6.2_rc1.ebuild,v 1.1 2006/11/19 01:33:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/boot0-6.2_rc1.ebuild,v 1.2 2006/11/19 13:35:02 drizzt Exp $
 
 inherit bsdmk freebsd
 
@@ -24,8 +24,9 @@ PATCHES="${FILESDIR}/boot0-6.0-gentoo.patch
 src_unpack() {
 	freebsd_src_unpack
 
-	grep -Zlr -- -ffreestanding "${S}" | xargs -0 sed -i -e \
-		"s:-ffreestanding:-ffreestanding $(test-flags -fno-stack-protector -fno-stack-protector-all):g"
+	grep -lr --null -- -ffreestanding "${S}" | xargs -0 sed -i -e \
+		"s:-ffreestanding:-ffreestanding $(test-flags -fno-stack-protector -fno-stack-protector-all):g" || die
+	sed -i -e '/-fomit-frame-pointer/d' "${S}"/i386/boot2/Makefile || die
 }
 
 src_install() {

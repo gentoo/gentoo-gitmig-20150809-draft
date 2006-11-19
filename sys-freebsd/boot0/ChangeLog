@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/boot0
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/ChangeLog,v 1.16 2006/11/19 01:33:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/ChangeLog,v 1.17 2006/11/19 13:35:02 drizzt Exp $
+
+  19 Nov 2006; Timothy Redaelli <drizzt@gentoo.org> boot0-6.2_rc1.ebuild:
+  Patched to make it compile on GCC 4.
 
 *boot0-6.2_rc1 (19 Nov 2006)
 
