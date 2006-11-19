@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Cairo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/ChangeLog,v 1.8 2006/10/25 14:55:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/ChangeLog,v 1.9 2006/11/19 16:13:47 mcummings Exp $
+
+*Cairo-1.02.1 (19 Nov 2006)
+
+  19 Nov 2006; Michael Cummings <mcummings@gentoo.org> +Cairo-1.02.1.ebuild:
+  Version bump
 
   25 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> Cairo-1.00.ebuild:
   Stable on sparc
