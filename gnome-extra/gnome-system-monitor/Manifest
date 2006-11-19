@@ -1,52 +1,34 @@
-AUX gnome-system-monitor-2.10.1-icon_warning.patch 503 RMD160 ea651090e1c7f905e5a99d8fe0e70d09d12aed6d SHA1 dd5f8ea657ed6200eb21793b074ce6987cb510f1 SHA256 15d0a9186aefd14c3c9882a217a64241acc642d24c20516d0bdce2c5efb457ae
-MD5 1717d3423ff0c95f21dd6037d93a26cf files/gnome-system-monitor-2.10.1-icon_warning.patch 503
-RMD160 ea651090e1c7f905e5a99d8fe0e70d09d12aed6d files/gnome-system-monitor-2.10.1-icon_warning.patch 503
-SHA256 15d0a9186aefd14c3c9882a217a64241acc642d24c20516d0bdce2c5efb457ae files/gnome-system-monitor-2.10.1-icon_warning.patch 503
-DIST gnome-system-monitor-2.10.1.tar.bz2 766187
-DIST gnome-system-monitor-2.12.2.tar.bz2 786092 RMD160 1582e197a97f130e50be9d458a8aa910930eb85d SHA1 57b8ab2ac8395b3415ccb296cc1b536c72654f06 SHA256 c0c18d1f9e29c11c02adac83dcfffdb1f839d9c5575496d0f5beb8de09a31d1f
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST gnome-system-monitor-2.14.4.tar.bz2 1418587 RMD160 1c4f4fca82e74e8e45e75dd0f8d18b0fdcc5b28c SHA1 c4650c608426f4c4b8c2cd1b99a3b5acfbbfbfda SHA256 28994f2d5fde0f7b95c133d60fbc1ca09a2d2d4186d8184f9d7415d2b0124525
-DIST gnome-system-monitor-2.16.0.tar.bz2 1497646 RMD160 a6ad13d03fa5535d2b853912c322f2cfd1d45de2 SHA1 3e6898d8616ec9dfef7a4bb7ab7d54670ee9d514 SHA256 9b5c8951f46985d29e3b709d19d10b6b46324f330216b89f8b99615c9386e81a
 DIST gnome-system-monitor-2.16.1.tar.bz2 1480061 RMD160 5449edd88aec35c549e647ba4aad4453a4abce14 SHA1 65c409e30640b70e7fcf0f12ef450dd723e671e6 SHA256 1be70e1ae696e3607dfeda186298e7034cca4e0c8020bf92c7485b8c6450504c
-EBUILD gnome-system-monitor-2.10.1.ebuild 919 RMD160 9df7c82ca062413192c16adc723d1962cd329a8f SHA1 cb9da6b1bb8fc1180a37f7c8367b7b0b756501eb SHA256 056785abea1cb03bd0920122b81a559e1c225054d19092b0f212349eb4af9fff
-MD5 9a65f08accd2d5ca7bd2c12929c554f6 gnome-system-monitor-2.10.1.ebuild 919
-RMD160 9df7c82ca062413192c16adc723d1962cd329a8f gnome-system-monitor-2.10.1.ebuild 919
-SHA256 056785abea1cb03bd0920122b81a559e1c225054d19092b0f212349eb4af9fff gnome-system-monitor-2.10.1.ebuild 919
-EBUILD gnome-system-monitor-2.12.2.ebuild 782 RMD160 12c237dfabb927722cbbfde14ca2f4d6f8152ea5 SHA1 c38212557c57084e7569aa5ac12d779636beea3e SHA256 268b5904609cc0482b978527f8a5c3ea8e496df211ba92981863b317a4c9d925
-MD5 5cad25a4f004be7dd22c7f596f72961c gnome-system-monitor-2.12.2.ebuild 782
-RMD160 12c237dfabb927722cbbfde14ca2f4d6f8152ea5 gnome-system-monitor-2.12.2.ebuild 782
-SHA256 268b5904609cc0482b978527f8a5c3ea8e496df211ba92981863b317a4c9d925 gnome-system-monitor-2.12.2.ebuild 782
 EBUILD gnome-system-monitor-2.14.4.ebuild 792 RMD160 be16a7c4c28bddfb5a868bb5e3674811ae79a248 SHA1 e6389a1ae17bcadd94d59fe4e5f786c2aac76215 SHA256 18a73609329240203a9f610bbacef2273724f6a582217a661788ca366c26b7cd
 MD5 24b2ea0b2c4ef51a42bbf5e4a3228e98 gnome-system-monitor-2.14.4.ebuild 792
 RMD160 be16a7c4c28bddfb5a868bb5e3674811ae79a248 gnome-system-monitor-2.14.4.ebuild 792
 SHA256 18a73609329240203a9f610bbacef2273724f6a582217a661788ca366c26b7cd gnome-system-monitor-2.14.4.ebuild 792
-EBUILD gnome-system-monitor-2.16.0.ebuild 833 RMD160 13da2619c48b785f7b61ddd351f82cfe025bdfc0 SHA1 4307472b39262f849a6d8e60c74efde6cddc2aa5 SHA256 d623366be08418dd527907b15d100deee0ca7458e5e72018f6790ed529e60069
-MD5 2afff3bb89d37b0dccd39a7ea5f66906 gnome-system-monitor-2.16.0.ebuild 833
-RMD160 13da2619c48b785f7b61ddd351f82cfe025bdfc0 gnome-system-monitor-2.16.0.ebuild 833
-SHA256 d623366be08418dd527907b15d100deee0ca7458e5e72018f6790ed529e60069 gnome-system-monitor-2.16.0.ebuild 833
 EBUILD gnome-system-monitor-2.16.1.ebuild 835 RMD160 f82a2c9f0df24750bc1c8d6454f1874231d2375e SHA1 6fdf28185658b027129c120c29472400904b715a SHA256 8125af0667c3ff657d4e751f223a7671ddd47082556368e03f0663ca37dd037a
 MD5 33e5e704d95484a49fbfe6473d0a01ab gnome-system-monitor-2.16.1.ebuild 835
 RMD160 f82a2c9f0df24750bc1c8d6454f1874231d2375e gnome-system-monitor-2.16.1.ebuild 835
 SHA256 8125af0667c3ff657d4e751f223a7671ddd47082556368e03f0663ca37dd037a gnome-system-monitor-2.16.1.ebuild 835
-MISC ChangeLog 16745 RMD160 63e51cd35587e88b7ddf80a84356189969553366 SHA1 732efa275678e8fab8b4aafed861b192415f03f9 SHA256 988151ef8fcda00e61897c225c66ecbf85a615d330b8a089d2715d363d0041c8
-MD5 324474fd711af8f409966b6ff66a95c8 ChangeLog 16745
-RMD160 63e51cd35587e88b7ddf80a84356189969553366 ChangeLog 16745
-SHA256 988151ef8fcda00e61897c225c66ecbf85a615d330b8a089d2715d363d0041c8 ChangeLog 16745
+MISC ChangeLog 16983 RMD160 13b3283ee4a8b999b1ab31132b8a6905a755fe6f SHA1 44281ca64ce509c0a25e8b86d91f7db358f3bc72 SHA256 55974a0f7f0631702fc8bca545ea6c0d0f5d1734d9b6d5c08dafd5e03daf5bbe
+MD5 e0b7df1a27da5447b114fcc1139a4933 ChangeLog 16983
+RMD160 13b3283ee4a8b999b1ab31132b8a6905a755fe6f ChangeLog 16983
+SHA256 55974a0f7f0631702fc8bca545ea6c0d0f5d1734d9b6d5c08dafd5e03daf5bbe ChangeLog 16983
 MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
-MD5 4ce03a83c4231e4b30b504c9e3e8faf2 files/digest-gnome-system-monitor-2.10.1 80
-RMD160 1340b81d672f94bb10acc1093d4cdd3841fca8e9 files/digest-gnome-system-monitor-2.10.1 80
-SHA256 a5b5d92a0eea119b14d59471d3baec7c3f2574d2cf7120fde3b25a46d1b83fad files/digest-gnome-system-monitor-2.10.1 80
-MD5 538c3a3cf9fdafdcd4113629e1abf13e files/digest-gnome-system-monitor-2.12.2 286
-RMD160 bfa424f6c458aaef7205af946942b1f77687cd29 files/digest-gnome-system-monitor-2.12.2 286
-SHA256 71a484444a61c2c16b7511c44da07c2f1a4989dd2caa013aff07effe8bf294b7 files/digest-gnome-system-monitor-2.12.2 286
 MD5 3e808eacd7fb1461e65562c7a3085e52 files/digest-gnome-system-monitor-2.14.4 289
 RMD160 a7e52e95cea21bd4c7cb5d489fb81547c8255f96 files/digest-gnome-system-monitor-2.14.4 289
 SHA256 15ac4682c01426ff67b8f7c10cbde86d4dd30fa9bd05f04e5a737d9f597240b2 files/digest-gnome-system-monitor-2.14.4 289
-MD5 7e746d687d92b89748c500ea9ce9102a files/digest-gnome-system-monitor-2.16.0 289
-RMD160 e1d73f14da1eeef5aac37afd7573875e7699d5ac files/digest-gnome-system-monitor-2.16.0 289
-SHA256 fa6efadffb63bf51cbb153c4bb17c4d28cdbace5a2057ec12f248783ed82e667 files/digest-gnome-system-monitor-2.16.0 289
 MD5 78c1d63acd3cbe31ea377ead0ed89d5a files/digest-gnome-system-monitor-2.16.1 289
 RMD160 2d225b43ef633deb3e3a6c6c0c30bedcc86ea6b6 files/digest-gnome-system-monitor-2.16.1 289
 SHA256 9e43889a40425e4e999cf13c052e9be18ead5a53c5195694e9c1d207a3b94c81 files/digest-gnome-system-monitor-2.16.1 289
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFYK/xkeYb6olFHJcRAp5rAKDqdskMcinATRZkY+PrNI2X5EBUIQCfQSRG
+JLUd2+BFPFax+tdxYbFxRdw=
+=KRh/
+-----END PGP SIGNATURE-----
