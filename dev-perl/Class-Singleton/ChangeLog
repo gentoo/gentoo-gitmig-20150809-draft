@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Singleton
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Singleton/ChangeLog,v 1.13 2006/08/07 00:22:29 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Singleton/ChangeLog,v 1.14 2006/11/19 23:27:25 flameeyes Exp $
+
+  19 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  Class-Singleton-1.03.ebuild:
+  Add ~x86-fbsd keyword.
 
   07 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Class-Singleton-1.03.ebuild:
