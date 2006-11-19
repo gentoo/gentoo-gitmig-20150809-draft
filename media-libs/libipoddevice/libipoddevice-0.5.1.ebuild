@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/libipoddevice-0.5.1.ebuild,v 1.3 2006/10/30 17:41:16 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/libipoddevice-0.5.1.ebuild,v 1.4 2006/11/19 20:26:29 cardoe Exp $
 
 inherit multilib eutils
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND="|| ( >=dev-libs/dbus-glib-0.71 <sys-apps/dbus-0.90 )
+RDEPEND="|| ( >=dev-libs/dbus-glib-0.71
+			( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.30 ) )
 	>=sys-apps/hal-0.5.2
 	sys-apps/pmount
 	virtual/eject"
@@ -32,8 +33,10 @@ src_unpack() {
 	fi
 }
 pkg_setup() {
-	if ! built_with_use sys-apps/dbus gtk; then
-		die "need sys-libs/dbus built with gtk USE flag"
+	if [ ! -z $(best_version =sys-apps/dbus-0.62*) ]; then
+		if ! built_with_use "=sys-apps/dbus-0.62*" gtk; then
+			die "need sys-libs/dbus built with gtk USE flag"
+		fi
 	fi
 }
 src_compile() {
