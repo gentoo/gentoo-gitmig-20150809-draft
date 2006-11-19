@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/knoda-0.7.4-r1.ebuild,v 1.6 2005/12/24 14:22:46 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/knoda-0.7.4-r1.ebuild,v 1.7 2006/11/19 14:32:11 flameeyes Exp $
 
 inherit kde eutils
 
@@ -24,5 +24,5 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-makefile.patch"
 
 	# For the makefile patch
-	make -f admin/Makefile.common || die
+	rm -f "${S}/configure"
 }
