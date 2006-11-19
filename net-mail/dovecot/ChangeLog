@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.71 2006/11/12 20:35:23 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.72 2006/11/19 11:37:11 uberlord Exp $
+
+*dovecot-1.0_rc15 (19 Nov 2006)
+
+  19 Nov 2006; Roy Marples <uberlord@gentoo.org> +dovecot-1.0_rc15.ebuild:
+  New release. Fixes a off-by-one buffer overflow in cache file handling.
+  The code is executed only with mmap_disable=yes and only if index files
+  are used (ie. INDEX=MEMORY is safe).
 
 *dovecot-1.0_rc14 (12 Nov 2006)
 
