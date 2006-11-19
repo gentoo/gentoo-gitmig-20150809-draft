@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xvidcap
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/ChangeLog,v 1.28 2006/11/16 22:55:00 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/ChangeLog,v 1.29 2006/11/19 12:32:17 nelchael Exp $
+
+  19 Nov 2006; Krzysiek Pawlik <nelchael@gentoo.org> xvidcap-1.1.4.ebuild:
+  Add missing app-text/scrollkeeper, see bug #155547.
 
 *xvidcap-1.1.4 (16 Nov 2006)
 
