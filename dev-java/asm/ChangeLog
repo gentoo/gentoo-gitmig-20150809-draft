@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/asm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.27 2006/09/28 02:08:26 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.28 2006/11/19 05:26:41 nichoj Exp $
+
+*asm-2.2.3-r1 (19 Nov 2006)
+
+  19 Nov 2006; Joshua Nichols <nichoj@gentoo.org>
+  +files/asm-2.2.3-commons.patch, +asm-2.2.3-r1.ebuild:
+  Updated to be able to build with 1.4. See bug #153971.
 
   28 Sep 2006; Joshua Nichols <nichoj@gentoo.org> asm-2.2.3.ebuild:
   Fixed JDK dependency, bug #148848.
