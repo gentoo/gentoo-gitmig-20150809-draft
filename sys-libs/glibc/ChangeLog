@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.488 2006/11/13 16:13:05 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.489 2006/11/20 12:34:22 gmsoft Exp $
+
+  20 Nov 2006; Guy Martin <gmsoft@gentoo.org> glibc-2.3.6-r5.ebuild:
+  Stable on hppa.
 
   13 Nov 2006; Tom Gall <tgall@gentoo.org> glibc-2.4-r4.ebuild:
   stable on ppc64
