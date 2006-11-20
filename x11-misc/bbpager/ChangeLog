@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbpager
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbpager/ChangeLog,v 1.18 2006/11/18 21:05:57 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbpager/ChangeLog,v 1.19 2006/11/20 20:07:10 nixnut Exp $
+
+  20 Nov 2006; nixnut <nixnut@gentoo.org> bbpager-0.4.1_beta1.ebuild:
+  Stable on ppc wrt bug 140244
 
   18 Nov 2006; David Shakaryan <omp@gentoo.org> bbpager-0.4.1_beta1.ebuild:
   Fix blackbox dependency.
