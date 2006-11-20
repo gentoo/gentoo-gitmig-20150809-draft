@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/cairomm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.3 2006/09/28 19:39:41 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.4 2006/11/20 02:28:40 ranger Exp $
+
+  20 Nov 2006; Brent Baude <ranger@gentoo.org> cairomm-1.2.2.ebuild:
+  Cleaning up broken repoman deps.  Marking cairomm ~ppc64
 
   28 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> cairomm-1.2.2.ebuild:
   Keyworded ~sparc
