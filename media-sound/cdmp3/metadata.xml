@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
+<herd>sound</herd>
+<maintainer>
+	<email>sound@gentoo.org</email>
+</maintainer>
 <longdescription>
 cdmp3 uses cdparanoia or cdda2wav to extract single tracks or even a
 whole CD and converts them on-the-fly into MP3 or Ogg Vorbis files.
