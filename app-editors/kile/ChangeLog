@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/kile
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.83 2006/11/20 13:47:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.84 2006/11/20 13:53:07 gustavoz Exp $
+
+  20 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org> kile-1.9.2-r1.ebuild:
+  Stable on sparc wrt security #155613
 
   20 Nov 2006; Jeroen Roovers <jer@gentoo.org> kile-1.9.2-r1.ebuild:
   Stable for HPPA (bug #155613).
