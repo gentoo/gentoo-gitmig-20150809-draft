@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6314 2006/11/20 07:56:45 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6315 2006/11/20 16:54:02 mcummings Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ## 
+
+# Michael Cummings <mcummings@gentoo.org>
+# Masked for removal
+dev-perl/Msql-Mysql-modules
 
 # Christian Faulhammer <opfer@gentoo.org>
 # upstream changed versioning, masked for tests
