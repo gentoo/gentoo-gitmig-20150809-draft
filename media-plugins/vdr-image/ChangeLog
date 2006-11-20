@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-image
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/ChangeLog,v 1.14 2006/11/09 14:48:04 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/ChangeLog,v 1.15 2006/11/20 12:11:45 zzam Exp $
+
+  20 Nov 2006; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-image-0.2.6-r1.ebuild:
+  Marked stable on x86, due to Bug #153413.
 
   09 Nov 2006; Matthias Schwarzott <zzam@gentoo.org> vdr-image-0.2.4.ebuild,
   vdr-image-0.2.6-r1.ebuild:
