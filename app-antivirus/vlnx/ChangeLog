@@ -1,6 +1,14 @@
 # ChangeLog for app-antivirus/vlnx
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/vlnx/ChangeLog,v 1.12 2005/08/13 19:30:29 ticho Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/vlnx/ChangeLog,v 1.13 2006/11/20 17:28:10 drizzt Exp $
+
+*vlnx-4510e (20 Nov 2006)
+
+  20 Nov 2006; Timothy Redaelli <drizzt@gentoo.org> files/uvscan.cron,
+  files/uvscan.sh, metadata.xml, +vlnx-4510e.ebuild:
+  Taked maintainership wrt bug 117650.
+  Version bump.
+  Changed updater script wrt bug 117650.
 
   13 Aug 2005; Andrej Kacian <ticho@gentoo.org> vlnx-432e-r2.ebuild:
   Don't install crontab task by default, inform user about the possibility

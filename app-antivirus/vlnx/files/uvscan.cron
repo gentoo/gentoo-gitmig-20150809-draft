@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
-/opt/vlnx/check-updates.sh
-/opt/vlnx/uvscan --config /etc/uvscan.conf /home
+/opt/vlnx/virusscan_updater.sh
+/opt/bin/uvscan --config /etc/uvscan.conf /home

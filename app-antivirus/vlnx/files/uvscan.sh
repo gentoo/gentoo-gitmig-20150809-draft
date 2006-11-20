@@ -1,3 +1,3 @@
 #!/bin/sh
 
-exec /opt/vlnx/uvscan ${@+"$@"}
+LD_LIBRARY_PATH="/opt/vlnx:${LD_LIBRARY_PATH}" exec /opt/vlnx/uvscan ${@+"$@"}
