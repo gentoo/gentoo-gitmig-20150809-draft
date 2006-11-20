@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.221 2006/11/20 11:30:10 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.222 2006/11/20 12:42:14 gustavoz Exp $
+
+  20 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  phpmyadmin-2.9.1.1.ebuild:
+  Stable on sparc wrt security #155468
 
   20 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
   phpmyadmin-2.9.1.1.ebuild:
