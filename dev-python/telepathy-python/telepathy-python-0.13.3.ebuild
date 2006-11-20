@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/telepathy-python/telepathy-python-0.13.3.ebuild,v 1.2 2006/11/20 17:48:17 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/telepathy-python/telepathy-python-0.13.3.ebuild,v 1.3 2006/11/20 18:03:33 peper Exp $
 
 inherit distutils
 
@@ -17,3 +17,12 @@ DEPEND="|| ( >=dev-libs/dbus-python-0.71
 		( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.34 ) )"
 
 RDEPEND="${DEPEND}"
+
+pkg_setup() {
+	if has_version <sys-apps/dbus-0.90; then
+		if ! built_with_use sys-apps/dbus python; then
+			eerror "You need to build dbus with USE=python."
+			die "dbus needs python bindings"
+		fi
+	fi
+}
