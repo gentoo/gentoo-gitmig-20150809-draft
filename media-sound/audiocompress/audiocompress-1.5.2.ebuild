@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/audiocompress-1.5.2.ebuild,v 1.2 2006/11/13 15:20:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/audiocompress-1.5.2.ebuild,v 1.3 2006/11/20 20:40:00 blubb Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ SRC_URI="http://beesbuzz.biz/code/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 #-sparc: 1.5.5 - Gdk-ERROR **: BadValue (integer parameter out of range for operation) serial 7 error_code 2 request_code 1 minor_code 0
-KEYWORDS="~ppc -sparc x86"
+KEYWORDS="~amd64 ~ppc -sparc x86"
 
 DEPEND="media-sound/esound"
 

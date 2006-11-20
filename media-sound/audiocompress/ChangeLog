@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audiocompress
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/ChangeLog,v 1.16 2006/11/13 15:20:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/ChangeLog,v 1.17 2006/11/20 20:40:01 blubb Exp $
+
+  20 Nov 2006; <blubb@gentoo.org> audiocompress-1.5.2.ebuild:
+  bug 131438; marking ~amd64
 
   13 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   audiocompress-1.5.1.ebuild, audiocompress-1.5.2.ebuild:
