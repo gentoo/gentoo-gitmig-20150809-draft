@@ -1,6 +1,16 @@
 # ChangeLog for net-www/nspluginwrapper
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/ChangeLog,v 1.5 2006/11/13 15:29:21 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/ChangeLog,v 1.6 2006/11/20 20:51:14 chutzpah Exp $
+
+*nspluginwrapper-0.9.90.4 (20 Nov 2006)
+
+  20 Nov 2006; Patrick McLean <chutzpah@gentoo.org>
+  +files/nspluginwrapper-0.9.90.4-gentoo.patch,
+  +nspluginwrapper-0.9.90.4.ebuild:
+  Version bump, rework ebuild somewhat since the new version has a more
+  automated build system. Remove the "-v" from the calls to nspluginwrapper so
+  merging and unmerging doesn't print useless verbose info about the plugins
+  being installed.
 
   13 Nov 2006; Patrick McLean <chutzpah@gentoo.org>
   nspluginwrapper-0.9.90.3.ebuild:

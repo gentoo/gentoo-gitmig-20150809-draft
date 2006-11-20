@@ -1,0 +1,90 @@
+diff -ur nspluginwrapper-0.9.90.4-orig/configure nspluginwrapper-0.9.90.4/configure
+--- nspluginwrapper-0.9.90.4-orig/configure	2006-11-19 02:40:07.000000000 -0500
++++ nspluginwrapper-0.9.90.4/configure	2006-11-20 14:12:16.000000000 -0500
+@@ -198,8 +198,8 @@
+ 
+ # check for 32-bit Glib 2.0 compile CFLAGS (assumed Linux system)
+ if test "$biarch" = "yes"; then
+-    GLIB_CFLAGS_32=`echo "$GLIB_CFLAGS" | sed -e "s|/$lib64\([ /]\)|/$lib32\1|g"`
+-    GLIB_LDFLAGS_32=`echo "$GLIB_LDFLAGS" | sed -e "s|/$lib64\([ /]\)|/$lib32\1|g"`
++    GLIB_CFLAGS_32="$GLIB_CFLAGS"
++    GLIB_LDFLAGS_32="-L/emul/linux/x86/usr/lib $GLIB_LDFLAGS"
+     cat > $TMPC << EOF
+ #include <glib.h>
+ int main(void) {
+@@ -208,17 +208,18 @@
+ }
+ EOF
+     if ! $cc $CFLAGS_32 $GLIB_CFLAGS_32 $GLIB_LDFLAGS_32 $TMPC -o $TMPE > /dev/null 2>&1; then
+-        echo "32-bit GLIB 2.0 environment not usable, disabling bi-arch build"
++        echo "32-bit GLIB 2.0 environment not usable, bi-arch support unavailable"
+         rm -f $TMPC
+-        biarch="no"
++	# On gentoo, we want to die when biarch isn't available
++	exit 2
+     fi
+     rm -f $TMPC $TMPE
+ fi
+ 
+ # check for 32-bit GTK+ 2.0 compile CFLAGS (assumed Linux system)
+ if test "$biarch" = "yes"; then
+-    GTK_CFLAGS_32=`echo "$GTK_CFLAGS" | sed -e "s|/$lib64\([ /]\)|/$lib32\1|g"`
+-    GTK_LDFLAGS_32=`echo "$GTK_LDFLAGS" | sed -e "s|/$lib64\([ /]\)|/$lib32\1|g"`
++    GTK_CFLAGS_32="$GTK_CFLAGS"
++    GTK_LDFLAGS_32="-L/emul/linux/x86/usr/lib $GTK_LDFLAGS"
+     cat > $TMPC << EOF
+ #include <gtk/gtk.h>
+ int main(void) {
+@@ -227,9 +228,10 @@
+ }
+ EOF
+     if ! $cc $CFLAGS_32 $GTK_CFLAGS_32 $GTK_LDFLAGS_32 $TMPC -o $TMPE > /dev/null 2>&1; then
+-        echo "32-bit GTK+ 2.0 environment not usable, disabling bi-arch build"
++        echo "32-bit GTK+ 2.0 environment not usable, bi-arch support unavailable"
+         rm -f $TMPC
+-        biarch="no"
++	# On gentoo, we want to die when biarch isn't available
++	exit 2
+     fi
+     rm -f $TMPC $TMPE
+ fi
+@@ -365,7 +367,7 @@
+ echo "VERSION=$VERSION" >>$config_mak
+ echo "#define NPW_VERSION \"$VERSION\"" >> $config_h
+ 
+-pkglibdir="$prefix/lib/$PACKAGE"
++pkglibdir="$prefix/$lib64/$PACKAGE"
+ echo "pkglibdir=$pkglibdir" >> $config_mak
+ echo "#define NPW_LIBDIR \"$pkglibdir\"" >> $config_h
+ 
+diff -ur nspluginwrapper-0.9.90.4-orig/src/npw-config.c nspluginwrapper-0.9.90.4/src/npw-config.c
+--- nspluginwrapper-0.9.90.4-orig/src/npw-config.c	2006-11-19 02:40:07.000000000 -0500
++++ nspluginwrapper-0.9.90.4/src/npw-config.c	2006-11-20 14:16:35.000000000 -0500
+@@ -80,17 +80,7 @@
+ 
+ static const char *get_system_mozilla_plugin_dir(void)
+ {
+-  static const char default_dir[] = LIBDIR "/mozilla/plugins";
+-  const char *dir;
+-
+-  if (access("/etc/SuSE-release", F_OK) == 0) {
+-	dir = LIBDIR "/firefox/plugins";			// new plugins location (10.1?)
+-	if (access(dir, F_OK) != 0)
+-	  dir = "/opt/MozillaFirefox/lib/plugins";	// XXX not lib64 aware?
+-  }
+-  else
+-	dir = default_dir;							// Mandriva Linux
+-
++  static const char dir[] = LIBDIR "/nsbrowser/plugins";
+   return dir;
+ }
+ 
+@@ -109,6 +99,8 @@
+ static const char **get_mozilla_plugin_dirs(void)
+ {
+   static const char *default_dirs[] = {
++	"/usr/lib32/nsbrowser/plugins",
++	"/usr/lib64/nsbrowser/plugins",
+ 	"/usr/lib/mozilla/plugins",
+ 	"/usr/lib64/mozilla/plugins",
+ 	"/usr/lib/browser-plugins",
