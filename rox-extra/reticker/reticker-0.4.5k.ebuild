@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/reticker/reticker-0.4.5k.ebuild,v 1.1 2006/10/10 13:20:40 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/reticker/reticker-0.4.5k.ebuild,v 1.2 2006/11/20 18:29:17 opfer Exp $
 
 ROX_LIB_VER="1.9.13"
 inherit rox
@@ -12,7 +12,7 @@ SRC_URI="http://absorb.it/${MY_PN}/${MY_PN}_${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 APPNAME=${MY_PN}

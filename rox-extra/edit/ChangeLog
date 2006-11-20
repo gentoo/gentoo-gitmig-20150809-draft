@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/edit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/edit/ChangeLog,v 1.8 2006/11/17 14:51:26 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/edit/ChangeLog,v 1.9 2006/11/20 18:21:07 opfer Exp $
+
+  20 Nov 2006; Christian Faulhammer <opfer@gentoo.org> edit-2.0.ebuild:
+  stable x86, bug #155521
 
   17 Nov 2006; Jim Ramsay <lack@gentoo.org> edit-1.9.5.ebuild,
   edit-2.0.ebuild:

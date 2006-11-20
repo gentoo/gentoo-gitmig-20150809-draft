@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/ripper/ripper-007.ebuild,v 1.1 2006/10/30 17:40:11 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/ripper/ripper-007.ebuild,v 1.2 2006/11/20 18:30:29 opfer Exp $
 
 ROX_LIB_VER=2.0.0
 inherit rox
@@ -12,7 +12,7 @@ SRC_URI="http://www.hayber.us/rox/ripper/${MY_PN}-${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~ppc x86"
 IUSE="mp3 ogg cdparanoia"
 
 RDEPEND="

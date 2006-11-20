@@ -1,6 +1,10 @@
 # ChangeLog for rox-extra/archive
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/archive/ChangeLog,v 1.9 2006/11/02 16:54:32 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/archive/ChangeLog,v 1.10 2006/11/20 18:18:36 opfer Exp $
+
+  20 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  archive-2.1-r1.ebuild:
+  stable x86, bug #155521
 
 *archive-2.1-r1 (02 Nov 2006)
 

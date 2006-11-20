@@ -1,6 +1,10 @@
 # ChangeLog for rox-extra/downloadmanager
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/downloadmanager/ChangeLog,v 1.5 2006/11/09 17:09:22 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/downloadmanager/ChangeLog,v 1.6 2006/11/20 18:23:13 opfer Exp $
+
+  20 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  downloadmanager-0.1.2-r1.ebuild:
+  stable x86, bug #155521
 
   09 Nov 2006; Jim Ramsay <lack@gentoo.org> downloadmanager-0.1.2-r1.ebuild:
   Fixed typo = Use '&&' not '-a' if you're not in a [[ ... ]] block, and added

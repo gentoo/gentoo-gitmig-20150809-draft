@@ -1,6 +1,10 @@
 # ChangeLog for rox-extra/reticker
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/reticker/ChangeLog,v 1.2 2006/11/01 17:25:02 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/reticker/ChangeLog,v 1.3 2006/11/20 18:29:17 opfer Exp $
+
+  20 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  reticker-0.4.5k.ebuild:
+  stable x86, bug #155521
 
   01 Nov 2006; Jim Ramsay <lack@gentoo.org> metadata.xml:
   Now owned by new rox herd
