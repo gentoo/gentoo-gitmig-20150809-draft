@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/v4l-dvb-hg-0.1-r2.ebuild,v 1.5 2006/11/13 22:28:10 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/v4l-dvb-hg-0.1-r2.ebuild,v 1.6 2006/11/20 09:19:12 zzam Exp $
 
 
 : ${EHG_REPO_URI:=${V4l_DVB_HG_REPO_URI:-http://linuxtv.org/hg/v4l-dvb}}
@@ -81,7 +81,12 @@ src_unpack() {
 	sed -e 's#/lib/modules/$(KERNELRELEASE)/kernel/drivers/media#$(DESTDIR)/$(DEST)#' \
 		-e '/-install::/s:rminstall::' \
 		-i Makefile
-	sed -e '/depmod/d' -i Makefile* scripts/make_makefile.pl
+
+	einfo "Removing depmod-calls"
+	sed -e '/depmod/d' -i Makefile* scripts/make_makefile.pl scripts/make_kconfig.pl \
+	|| die "Failed removing depmod call from Makefile"
+
+	grep depmod * && die "Not removed depmod found."
 }
 
 src_install() {
