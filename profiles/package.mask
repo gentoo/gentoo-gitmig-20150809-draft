@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6319 2006/11/20 22:24:13 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6320 2006/11/20 23:01:58 agriffis Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ## 
+
+# Aron Griffis <agriffis@gentoo.org>
+# Masked for testing new enablement via eselect
+=app-shells/bash-completion-20060301-r1
 
 # Patrick McLean <chutzpah@gentoo.org>
 # Masked pending resolution of bugs 155794, 155792, 155698 and 155552
