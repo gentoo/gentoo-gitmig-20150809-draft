@@ -6,7 +6,6 @@
   <maintainer>
     <email>cardoe@gentoo.org</email>
     <name>Doug Goldstein</name>
-    <description>driver for Hauppauge tv tuner cards</description>
   </maintainer>
   <longdescription>
     Driver for ivtv based tv tuner cards, currently supports Hauppauge 
