@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-1.0.0-r1.ebuild,v 1.4 2006/11/20 18:22:37 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-1.0.0-r1.ebuild,v 1.5 2006/11/20 21:54:19 blubb Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.afterstep.org/apps/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ppc ppc64 sparc ~x86"
+KEYWORDS="amd64 ~mips ppc ppc64 sparc ~x86"
 IUSE="background cjk xgetdefault"
 
 RDEPEND="media-libs/jpeg

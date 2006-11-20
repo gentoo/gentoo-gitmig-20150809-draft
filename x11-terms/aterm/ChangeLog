@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.85 2006/11/20 18:22:37 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.86 2006/11/20 21:54:19 blubb Exp $
+
+  20 Nov 2006; <blubb@gentoo.org> aterm-1.0.0-r1.ebuild:
+  stable on amd64
 
   20 Nov 2006; nixnut <nixnut@gentoo.org> aterm-1.0.0-r1.ebuild:
   Stable on ppc wrt bug 155757
