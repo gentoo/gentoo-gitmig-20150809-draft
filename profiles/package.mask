@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6313 2006/11/20 04:45:49 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6314 2006/11/20 07:56:45 opfer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ## 
+
+# Christian Faulhammer <opfer@gentoo.org>
+# upstream changed versioning, masked for tests
+=app-editors/emacs-cvs-22.0.91
 
 # William L. Thomson Jr. <wltjr@gentoo.org> (19 Nov 2006)
 # Alpha sources from upstream. Tested minimally, but not
