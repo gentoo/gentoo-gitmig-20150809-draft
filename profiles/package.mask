@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6316 2006/11/20 19:53:20 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6317 2006/11/20 20:49:38 chutzpah Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ## 
+
+# Patrick McLean <chutzpah@gentoo.org>
+# Masked pending resolution of bugs 155794, 155792, 155698 and 155552
+=app-emulation/emul-linux-x86-baselibs-2.5.3
+=app-emulation/emul-linux-x86-gtklibs-2.10.6.2
 
 # Michael Cummings <mcummings@gentoo.org>
 # Masked for removal
