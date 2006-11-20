@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smclone/smclone-0.97.ebuild,v 1.2 2005/08/27 05:15:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smclone/smclone-0.97.ebuild,v 1.3 2006/11/20 20:42:12 blubb Exp $
 
 inherit eutils games
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/smclone/SMC_${PV}_source.zip
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="media-libs/libsdl
