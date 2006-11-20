@@ -1,6 +1,13 @@
 # ChangeLog for games-arcade/smclone
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smclone/ChangeLog,v 1.10 2006/11/20 20:42:12 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smclone/ChangeLog,v 1.11 2006/11/20 22:15:18 nyhm Exp $
+
+*smclone-0.99.3 (20 Nov 2006)
+
+  20 Nov 2006; Tristan Heaven <nyhm@gentoo.org>
+  +files/smclone-0.99.3-build.patch, +files/smclone-0.99.3-paths.patch,
+  +smclone-0.99.3.ebuild:
+  Version bump, bug #138483
 
   20 Nov 2006; <blubb@gentoo.org> smclone-0.97.ebuild:
   stable on amd64
