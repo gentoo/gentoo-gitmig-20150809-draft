@@ -128,3 +128,4 @@ x11-drivers/xf86-input-evdev
 >=gnome-base/gnome-light-2.16.0
 >=app-accessibility/orca-1
 x11-wm/compiz
+>=dev-dotnet/evolution-sharp-0.12.0
