@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.47 2006/11/17 20:49:15 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.48 2006/11/20 22:10:15 cedk Exp $
+
+  20 Nov 2006; Cedric Krier <cedk@gentoo.org> ntop-3.2-r2.ebuild:
+  fix sslwatchdog and add einfo about pwd
 
 *ntop-3.2-r2 (17 Nov 2006)
 

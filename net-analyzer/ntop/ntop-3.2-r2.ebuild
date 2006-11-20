@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.2-r2.ebuild,v 1.1 2006/11/17 20:49:15 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.2-r2.ebuild,v 1.2 2006/11/20 22:10:15 cedk Exp $
 
 inherit eutils autotools
 
@@ -81,7 +81,7 @@ src_compile() {
 		$(use_enable ipv6) \
 		$(use_enable nls i18n) \
 		$(use_enable snmp) \
-		$(use_with ssl) $(use_enable ssl sslv3) $(use_enable sslwatchdog) \
+		$(use_with ssl) $(use_enable ssl sslv3) $(use_enable ssl sslwatchdog) \
 		$(use_with tcpd) \
 		$(use_with zlib) \
 		|| die "configure problem"
@@ -103,4 +103,7 @@ src_install() {
 pkg_postinst() {
 	fowners ntop:ntop /var/lib/ntop
 	fperms 750 /var/lib/ntop
+
+	einfo "You need to set a password first by running"
+	einfo "ntop --set-admin-password"
 }
