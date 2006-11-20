@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/assp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/ChangeLog,v 1.4 2006/11/20 00:19:52 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/ChangeLog,v 1.5 2006/11/20 22:48:33 wltjr Exp $
+
+*assp-1.2.5-r3 (20 Nov 2006)
+
+  20 Nov 2006; William L. Thomson Jr. <wltjr@gentoo.org>
+  +assp-1.2.5-r3.ebuild:
+  Final got security fix into place. Fixed missing slash from end of multiline
+  sed command.
 
 *assp-1.2.5-r2 (20 Nov 2006)
 
