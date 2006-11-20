@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r2.ebuild,v 1.1 2006/11/19 17:22:56 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r2.ebuild,v 1.2 2006/11/20 13:02:30 zzam Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -46,6 +46,7 @@ src_unpack() {
 	has_version ">=media-libs/libquicktime-0.9.9" && epatch "${FILESDIR}/${P}-libquicktime.patch"
 	epatch "${FILESDIR}/${P}-fix-lav2mpeg.patch"
 	epatch "${FILESDIR}/${P}-lavrec-memleak.patch"
+	epatch "${FILESDIR}/${P}-no-jpeg-mmx.patch"
 
 	# eautoreconf instead of elibtoolize
 	# as pkg-config-patch changes configure.in
@@ -81,6 +82,7 @@ src_compile() {
 		$(use_with dv libdv /usr) \
 		$(use_enable mmx simd-accel) \
 		--enable-largefile \
+		--without-jpeg-mmx \
 		${myconf} || die "configure failed"
 
 	emake || die "emake failed"
