@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.0.16.ebuild,v 1.7 2006/11/01 00:10:40 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.0.16.ebuild,v 1.8 2006/11/20 23:07:24 dang Exp $
 
 inherit gnome2 eutils autotools
 
@@ -20,7 +20,9 @@ RDEPEND=">=x11-libs/gtk+-2.4.0
 	gtkhtml? ( =gnome-extra/gtkhtml-2* )
 	!seamonkey? ( !firefox? ( =gnome-extra/gtkhtml-2* ) )
 	>=gnome-base/gconf-2
-	dbus? ( >=sys-apps/dbus-0.30 )"
+	dbus? ( || ( >=dev-libs/dbus-glib-0.71
+		( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.36 ) )
+	)"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
