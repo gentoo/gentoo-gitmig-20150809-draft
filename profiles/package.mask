@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6318 2006/11/20 21:18:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6319 2006/11/20 22:24:13 drizzt Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -39,12 +39,6 @@ dev-perl/Msql-Mysql-modules
 # with any webapps beyond the shipped ones. jni USE flag
 # does not work yet, help there is appreciated
 >=www-servers/tomcat-6.0.2
-
-# Elfyn McBratney <beu@gentoo.org> (19 Nov 2006)
-# Lacks an active maintainer, missing distfiles and linked with
-# `-rpath .'  Will be removed on 19 Dev 2006 if noone steps up to
-# maintain it.
-app-antivirus/vlnx
 
 # George Shapovalov <george@gentoo.org> (19 Nov 2006)
 # dead upstream, does not compile anymore (and seems not 64bt clean)
