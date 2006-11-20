@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/jack-audio-connection-kit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.82 2006/11/18 12:47:24 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.83 2006/11/20 22:56:14 mr_bones_ Exp $
+
+  20 Nov 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  jack-audio-connection-kit-0.101.1-r1.ebuild:
+  fix keyword revert from eldad
 
   18 Nov 2006; Eldad Zack <eldad@gentoo.org>
   jack-audio-connection-kit-0.101.1-r1.ebuild,
