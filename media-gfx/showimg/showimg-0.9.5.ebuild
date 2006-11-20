@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/showimg-0.9.5.ebuild,v 1.6 2006/09/05 18:34:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/showimg-0.9.5.ebuild,v 1.7 2006/11/20 20:47:19 genstef Exp $
 
 inherit kde eutils
 
@@ -28,7 +28,14 @@ DEPEND="|| ( kde-base/libkonq kde-base/kdebase )
 	media-libs/libexif"
 need-kde 3.4
 
-src_compile(){
+
+src_unpack() {
+	unpack "${A}"
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-as-needed.patch"
+}
+
+src_compile() {
 	local myconf="--with-showimgdb \
 		$(use_enable exif kexif) \
 		$(use_enable kipi libkipi) \

@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/showimg
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/ChangeLog,v 1.36 2006/09/05 18:34:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/ChangeLog,v 1.37 2006/11/20 20:47:19 genstef Exp $
+
+  20 Nov 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/showimg-0.9.5-as-needed.patch, showimg-0.9.5.ebuild:
+  as-needed patch thanks to Krzysztof Nowicki <krissn@op.pl> in bug 147731
 
   05 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> showimg-0.9.5.ebuild:
   Stable on sparc
