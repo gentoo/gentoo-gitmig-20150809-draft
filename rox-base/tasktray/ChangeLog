@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/tasktray
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/tasktray/ChangeLog,v 1.4 2006/11/04 00:01:24 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/tasktray/ChangeLog,v 1.5 2006/11/20 18:16:24 opfer Exp $
+
+  20 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  tasktray-0.3.6.ebuild:
+  stable x86, bug #155521
 
 *tasktray-0.3.7 (04 Nov 2006)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/thumbs/thumbs-0.1.3.ebuild,v 1.2 2006/10/04 14:34:52 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/thumbs/thumbs-0.1.3.ebuild,v 1.3 2006/11/20 18:17:15 opfer Exp $
 
 ROX_LIB="2.0.0"
 inherit rox
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 APPNAME=${MY_PN}
 S=${WORKDIR}
