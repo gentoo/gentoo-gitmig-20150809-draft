@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-stream-engine/telepathy-stream-engine-0.3.13.ebuild,v 1.1 2006/11/16 17:21:14 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-stream-engine/telepathy-stream-engine-0.3.13.ebuild,v 1.2 2006/11/20 17:39:47 peper Exp $
 
 DESCRIPTION="A Telepathy client that handles channels of type 'StreamedMedia'"
 HOMEPAGE="http://telepathy.freedesktop.org/"
@@ -16,7 +16,9 @@ DEPEND=">=dev-libs/glib-2.4
 	>=media-libs/farsight-0.1.8
 	=media-libs/gst-plugins-base-0.10*
 	>=net-libs/libtelepathy-0.0.33
-	>=sys-apps/dbus-0.60"
+	|| ( >=dev-libs/dbus-glib-0.71
+		( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.60 ) )"
+
 RDEPEND="${DEPEND}"
 
 src_install() {
