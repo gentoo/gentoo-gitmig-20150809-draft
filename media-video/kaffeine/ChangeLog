@@ -1,6 +1,11 @@
 # ChangeLog for media-video/kaffeine
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.62 2006/11/07 22:42:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.63 2006/11/20 20:54:17 genstef Exp $
+
+  20 Nov 2006; Stefan Schweizer <genstef@gentoo.org>
+  kaffeine-0.8.2-r1.ebuild:
+  replace-flags -O3 -O2 thanks to Andrew de Quincey <adq_dvb@lidskialf.net> in
+  bug 143168
 
   07 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/kaffeine-0.8.2-fbsd.patch, kaffeine-0.8.2-r1.ebuild:

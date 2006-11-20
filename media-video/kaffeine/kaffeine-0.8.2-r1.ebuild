@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.2-r1.ebuild,v 1.3 2006/11/07 22:42:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.2-r1.ebuild,v 1.4 2006/11/20 20:54:17 genstef Exp $
 
-inherit eutils kde
+inherit eutils kde flag-o-matic
 
 DESCRIPTION="Media player for KDE using xine and gstreamer backends."
 HOMEPAGE="http://kaffeine.sourceforge.net/"
@@ -49,6 +49,8 @@ src_unpack() {
 }
 
 src_compile() {
+	# see bug #143168
+	replace-flags -O3 -O2
 	# It re-runs configure because of messed-up timestamps
 	rm -f "${S}/configure"
 
