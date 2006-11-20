@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.32 2006/11/20 01:07:12 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.33 2006/11/20 21:55:35 mr_bones_ Exp $
 
 # Christian Faulhammer <opfer@gentoo.org>
 # dependency >=gnome-base/libgnome-2.16.0 not
@@ -134,6 +134,7 @@ sys-cluster/gfs-kernel
 sys-cluster/gnbd-kernel
 media-sound/banshee
 x11-drivers/linuxwacom
+>=sys-process/audit-1.2.9
 
 # Masked since rootstrap is masked
 dev-util/pbuilder
