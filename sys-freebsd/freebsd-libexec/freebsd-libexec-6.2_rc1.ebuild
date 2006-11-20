@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/freebsd-libexec-6.2_rc1.ebuild,v 1.1 2006/11/19 01:37:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/freebsd-libexec-6.2_rc1.ebuild,v 1.2 2006/11/20 14:27:10 flameeyes Exp $
 
 inherit bsdmk freebsd pam
 
@@ -53,6 +53,9 @@ REMOVE_SUBDIRS="smrsh mail.local tcpd telnetd rshd rlogind lukemftpd ftpd"
 
 src_install() {
 	freebsd_src_install
+
+	newinitd "${FILESDIR}/bootpd.initd"
+	newconfd "${FILESDIR}/bootpd.confd"
 
 	insinto /etc
 	cd "${WORKDIR}/etc"

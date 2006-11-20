@@ -1,0 +1,28 @@
+#!/sbin/runscript
+# Copyright 2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/files/bootpd.initd,v 1.1 2006/11/20 14:27:10 flameeyes Exp $
+
+depend() {
+	 need net
+}
+
+start() {
+	local bootptab=${BOOTPTAB_FILE:-/etc/bootptab}
+
+	if ! [[ -f ${bootptab} ]]; then
+		eerror "Unable to find the bootptab file: ${bootptab}"
+		eend 1
+		return 1
+	fi
+
+	ebegin "Starting BOOTP server"
+	start-stop-daemon --start --exec /usr/libexec/bootpd -- ${BOOTPD_OPTS} ${bootptab}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping BOOTP server"
+	start-stop-daemon --stop --exec /usr/libexec/bootpd
+	eend $?
+}
