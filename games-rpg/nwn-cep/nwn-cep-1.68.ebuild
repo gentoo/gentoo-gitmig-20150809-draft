@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/nwn-cep-1.68.ebuild,v 1.2 2006/11/06 18:44:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/nwn-cep-1.68.ebuild,v 1.3 2006/11/20 17:11:21 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="cepv152_man.zip cepv153.zip CEP168.zip"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE="hou sou"
 RESTRICT="fetch"
 
