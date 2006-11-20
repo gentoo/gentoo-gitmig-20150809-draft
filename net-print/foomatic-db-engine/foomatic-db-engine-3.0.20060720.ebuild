@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/foomatic-db-engine-3.0.20060720.ebuild,v 1.1 2006/07/20 08:44:56 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/foomatic-db-engine-3.0.20060720.ebuild,v 1.2 2006/11/20 15:06:58 gustavoz Exp $
 
 inherit perl-app eutils versionator
 
@@ -12,7 +12,7 @@ SRC_URI="http://gentooexperimental.org/~genstef/dist/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh sparc ~x86"
 IUSE=""
 
 RDEPEND="dev-libs/libxml2
