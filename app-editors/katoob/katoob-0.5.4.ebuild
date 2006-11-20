@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/katoob-0.5.4.ebuild,v 1.1 2006/11/01 00:17:15 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/katoob-0.5.4.ebuild,v 1.2 2006/11/20 23:32:24 leonardop Exp $
 
 inherit eutils
 
@@ -21,7 +21,9 @@ RDEPEND=">=dev-cpp/gtkmm-2.6
 		>=net-print/cups-1.1.23
 		>=x11-libs/pango-1 )
 	bzip2? ( app-arch/bzip2 )
-	dbus? ( sys-apps/dbus )"
+	dbus? ( || (
+		dev-libs/dbus-glib
+		~sys-apps/dbus-0.62 ) )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.28
