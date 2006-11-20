@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttt/ttt-1.8.1-r1.ebuild,v 1.2 2006/02/17 16:50:14 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttt/ttt-1.8.1-r1.ebuild,v 1.3 2006/11/20 23:10:45 cedk Exp $
 
 inherit eutils
 
@@ -34,10 +34,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
-	use ipv6 && myconf="${myconf} --enable-ipv6"
-
-	econf ${myconf} || die "./configure failed"
+	econf $(use_enable ipv6) || die "econf failed"
 	emake || die "make failed"
 }
 
@@ -47,5 +44,4 @@ src_install() {
 	dodir /usr/lib/ttt
 	dodir /usr/share/man/man1
 	einstall exec_prefix="${D}"/usr install-man || die "make install failed"
-	prepall
 }
