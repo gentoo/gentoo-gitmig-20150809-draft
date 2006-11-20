@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/snd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.26 2006/11/15 21:36:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.27 2006/11/20 21:16:25 blubb Exp $
+
+  20 Nov 2006; <blubb@gentoo.org> snd-7.15.ebuild:
+  stable on amd64
 
 *snd-7.15-r1 (15 Nov 2006)
 
