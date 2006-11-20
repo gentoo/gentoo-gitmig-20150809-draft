@@ -1,8 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/adesklets-0.6.1.ebuild,v 1.8 2006/11/20 14:09:18 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/adesklets-0.6.1-r1.ebuild,v 1.1 2006/11/20 14:09:18 s4t4n Exp $
 
-inherit eutils perl-module
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
+
+inherit eutils perl-module autotools
 
 DESCRIPTION="An interactive Imlib2 console for the X Window system"
 HOMEPAGE="http://adesklets.sf.net/"
@@ -10,8 +13,8 @@ SRC_URI="mirror://sourceforge/adesklets/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~sparc x86"
-IUSE="X python perl debug ctrlmenu"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+IUSE="X python perl debug ctrlmenu fontconfig"
 
 RDEPEND="X? ( || ( (
 		x11-libs/libX11
@@ -20,11 +23,11 @@ RDEPEND="X? ( || ( (
 	virtual/x11 )
 	python? ( >=dev-lang/python-2.4.3-r1 )
 	perl? ( >=dev-lang/perl-5.8.2 )
+	fontconfig? ( >=media-libs/fontconfig-2.3.2-r1 )
 	>=media-libs/imlib2-1.2.0-r2
 	>=x11-apps/xwininfo-1.0.2 )
 	>=sys-apps/sed-4.1.4-r1
 	>=sys-apps/coreutils-5.94-r1
-	<media-libs/fontconfig-2.4
 	>=sys-process/procps-3.2.6"
 
 DEPEND="${RDEPEND}
@@ -41,6 +44,13 @@ src_unpack()
 
 	#Fix for bug #131813: linker flags ordering
 	epatch ${FILESDIR}/${P}-fix-as-needed.patch
+
+	#Fix for bug #148988: fontconfig >= 2.4 support
+	use fontconfig &&
+	{
+		epatch ${FILESDIR}/${P}-fontconfig.patch
+		eautoreconf
+	}
 
 	# when performing minor changes to src/adesklets.c or src/commands.c,
 	# touching these files will avoid unneeded processing

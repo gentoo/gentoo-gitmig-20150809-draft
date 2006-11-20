@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/adesklets
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/ChangeLog,v 1.29 2006/08/30 08:13:56 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/ChangeLog,v 1.30 2006/11/20 14:09:18 s4t4n Exp $
+
+*adesklets-0.6.1-r1 (20 Nov 2006)
+
+  20 Nov 2006; Michele Noberasco <s4t4n@gentoo.org> +adesklets-0.6.1-r1.ebuild:
+  Revision bump. Added patch to use fontconfig >= 2.4. See bug #148988. Also,
+  made fontconfig support optional and revisited package dependancies. See bug #150669.
+  adesklets-0.6.1.ebuild:
+  Revisited package dependancies. See bug #150669.
 
   30 Aug 2006; Michele Noberasco <s4t4n@gentoo.org> adesklets-0.6.1.ebuild:
   Moved xwifinfo dep to fix bug #128018 again.
