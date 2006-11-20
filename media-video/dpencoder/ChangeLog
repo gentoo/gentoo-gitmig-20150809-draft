@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dpencoder
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dpencoder/ChangeLog,v 1.6 2006/07/15 11:09:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dpencoder/ChangeLog,v 1.7 2006/11/20 06:30:33 beandog Exp $
+
+  20 Nov 2006; Steve Dibb <beandog@gentoo.org> metadata.xml:
+  Add to media-video herd
 
   15 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove rphillips from metadata.xml as he's retired.
