@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsoundtouch
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/ChangeLog,v 1.10 2006/11/11 02:08:54 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/ChangeLog,v 1.11 2006/11/20 21:04:20 blubb Exp $
+
+  20 Nov 2006; <blubb@gentoo.org> libsoundtouch-1.3.1.ebuild:
+  stable on amd64
 
   11 Nov 2006; Andrej Kacian <ticho@gentoo.org> libsoundtouch-1.3.1.ebuild:
   Stable on x86, byg #146950.
