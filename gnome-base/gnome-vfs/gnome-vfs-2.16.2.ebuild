@@ -1,7 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.16.2.ebuild,v 1.3 2006/11/17 18:45:01 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.16.2.ebuild,v 1.4 2006/11/20 01:58:17 leio Exp $
 
+WANT_AUTOMAKE=1.9
 inherit eutils gnome2 autotools
 
 DESCRIPTION="Gnome Virtual Filesystem"
@@ -40,7 +41,6 @@ RDEPEND=">=gnome-base/gconf-2
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/intltool-0.35
-	=sys-devel/automake-1.9*
 	>=dev-util/pkgconfig-0.9
 	doc? ( >=dev-util/gtk-doc-1 )"
 PDEPEND="hal? ( >=gnome-base/gnome-mount-0.4 )"
