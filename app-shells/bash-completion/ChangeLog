@@ -1,6 +1,18 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.133 2006/03/02 12:03:27 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.134 2006/11/20 23:06:15 agriffis Exp $
+
+*bash-completion-20060301-r1 (20 Nov 2006)
+
+  20 Nov 2006; Aron Griffis <agriffis@gentoo.org> +files/bash-completion.sh,
+  +bash-completion-20060301-r1.ebuild:
+  Break /etc/bash_completion into /usr/share/bash-completion/{.pre,base,.post}
+  so that the base definitions can be eselected. Rename
+  /etc/profile.d/bash-completion to have a .sh extension so it's loaded
+  automatically by /etc/profile. This is okay because it doesn't do anything
+  until modules have been eselected. All of this makes it possible to
+  configure bash-completions entirely with eselect instead of needing to add
+  snippets to one's .bashrc
 
 *bash-completion-20060301 (02 Mar 2006)
 
