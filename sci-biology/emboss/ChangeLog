@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/emboss
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/ChangeLog,v 1.39 2006/11/15 13:04:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/ChangeLog,v 1.40 2006/11/20 20:57:29 blubb Exp $
+
+  20 Nov 2006; <blubb@gentoo.org> emboss-4.0.0.ebuild:
+  stable on amd64
 
   15 Nov 2006; Markus Rothe <corsair@gentoo.org> emboss-4.0.0.ebuild:
   Stable on ppc64; bug #153766
