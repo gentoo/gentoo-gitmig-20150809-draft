@@ -1,6 +1,16 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.75 2006/11/04 21:07:30 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.76 2006/11/20 04:32:22 wltjr Exp $
+
+*tomcat-6.0.2 (20 Nov 2006)
+
+  20 Nov 2006; William L. Thomson Jr. <wltjr@gentoo.org>
+  +files/6.0.2/build-xml.patch, +files/6.0.2/tomcat.conf,
+  +files/6.0.2/tomcat.init, +tomcat-6.0.2.ebuild:
+  Initial ebuild for Tomcat 6.0.2 alpha, despite sources/ebuild not named as
+  such. Compiles, runs and should be some what useable. Although will be
+  package masked, since it's alpha sources. jni USE flag should not be used,
+  still working on that part, help there appreciated
 
   04 Nov 2006; William L. Thomson Jr. <wltjr@gentoo.org>
   -tomcat-5.5.20.ebuild, -tomcat-5.5.20-r1.ebuild:

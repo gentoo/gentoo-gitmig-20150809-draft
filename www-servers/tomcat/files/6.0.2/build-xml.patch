@@ -1,0 +1,30 @@
+--- build.xml	2006-11-15 18:33:20.000000000 -0500
++++ ../build.xml	2006-11-19 16:47:58.000000000 -0500
+@@ -446,11 +446,16 @@
+ 
+   <target name="deploy" depends="build-only,build-docs">
+ 
++<!--
+     <copy tofile="${tomcat.build}/bin/tomcat-native.tar.gz"
+             file="${tomcat-native.tar.gz}" />
++-->
+ 
+     <copy todir="${tomcat.build}/bin" file="${commons-daemon.jar}" />
++
++<!--
+     <copy todir="${tomcat.build}/bin" file="${commons-daemon.jsvc.tar.gz}" />
++-->
+ 
+   	<!-- Copy scripts -->
+     <copy todir="${tomcat.build}/bin">
+@@ -489,8 +494,10 @@
+              excludes="**/CVS/**,**/.svn/**">
+     </javac>
+ 
++<!--
+   	<copy file="${tomcat-dbcp.jar}" todir="${tomcat.build}/lib" />
+     <copy file="${jasper-jdt.jar}" todir="${tomcat.build}/lib" />
++-->
+ 
+   </target>
+ 
