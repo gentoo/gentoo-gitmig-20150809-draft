@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.42 2006/11/21 18:43:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.43 2006/11/21 20:12:36 jer Exp $
+
+  21 Nov 2006; Jeroen Roovers <jer@gentoo.org> wv-1.2.3-r1.ebuild:
+  Stable for HPPA (bug #153800).
 
   21 Nov 2006; Brent Baude <ranger@gentoo.org> wv-1.2.3-r1.ebuild:
   Marking wv-1.2.3-r1 ppc64 for bug 153800
