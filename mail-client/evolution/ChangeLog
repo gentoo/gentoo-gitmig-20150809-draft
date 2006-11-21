@@ -1,6 +1,16 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.149 2006/10/26 15:33:07 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.150 2006/11/21 01:40:57 leonardop Exp $
+
+  21 Nov 2006; Leonardo Boshell <leonardop@gentoo.org>
+  evolution-2.6.2-r1.ebuild, evolution-2.8.1.1.ebuild:
+  Adjusted dbus dependency (bug #154521).
+
+  21 Nov 2006; Leonardo Boshell <leonardop@gentoo.org>
+  evolution-2.6.2-r1.ebuild:
+  Set evolution-data-server dependecy version to =1.6*, since the internal
+  structure of EContactPhoto is different in >=1.7.90, breaking compilation
+  (bug #148431).
 
   26 Oct 2006; Daniel Gryniewicz <dang@gentoo.org> evolution-2.8.1.1.ebuild:
   evo 2.8 needs glib 2.10 or better

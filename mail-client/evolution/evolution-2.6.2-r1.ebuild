@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.6.2-r1.ebuild,v 1.9 2006/10/20 23:03:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.6.2-r1.ebuild,v 1.10 2006/11/21 01:40:57 leonardop Exp $
 
 inherit eutils flag-o-matic alternatives gnome2 autotools
 
@@ -15,15 +15,18 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="bogofilter crypt dbus debug doc gstreamer hal ipv6 kerberos krb4 ldap mono nntp pda profile spell ssl widescreen"
 
 # Pango dependency required to avoid font rendering problems
+
 # evolution-data-server dep is 1.5 because in the e-utils directories,
-# the includes reference locations only present in eds > 1.5
+# the includes reference locations only present in eds > 1.5.
+# See also bug #148431.
+
 RDEPEND=">=x11-themes/gnome-icon-theme-1.2
 	dev-libs/atk
 	>=gnome-extra/gtkhtml-3.9.90
 	>=dev-libs/glib-2
 	>=gnome-base/orbit-2.9.8
 	>=gnome-base/libbonobo-2
-	>=gnome-extra/evolution-data-server-1.5.90
+	=gnome-extra/evolution-data-server-1.6*
 	>=gnome-base/libbonoboui-2.4.2
 	>=gnome-base/gnome-vfs-2.4
 	>=gnome-base/libgnomeui-2
@@ -51,7 +54,9 @@ RDEPEND=">=x11-themes/gnome-icon-theme-1.2
 	gstreamer? (
 		>=media-libs/gstreamer-0.10
 		>=media-libs/gst-plugins-base-0.10 )
-	dbus? ( sys-apps/dbus )
+	dbus? ( || (
+		dev-libs/dbus-glib
+		( >=sys-apps/dbus-0.61 <sys-apps/dbus-0.90 ) ) )
 	mono? ( >=dev-lang/mono-1 )
 	bogofilter? ( mail-filter/bogofilter )
 	!bogofilter? ( mail-filter/spamassassin )"

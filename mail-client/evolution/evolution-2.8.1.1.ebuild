@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.8.1.1.ebuild,v 1.2 2006/10/26 15:33:07 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.8.1.1.ebuild,v 1.3 2006/11/21 01:40:57 leonardop Exp $
 
 inherit eutils flag-o-matic alternatives gnome2 autotools
 
@@ -16,8 +16,6 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="bogofilter crypt dbus debug doc hal ipv6 kerberos krb4 ldap mono nntp pda profile spell ssl"
 
 # Pango dependency required to avoid font rendering problems
-# evolution-data-server dep is 1.5 because in the e-utils directories,
-# the includes reference locations only present in eds > 1.5
 RDEPEND=">=x11-themes/gnome-icon-theme-1.2
 	dev-libs/atk
 	>=gnome-extra/gtkhtml-3.9.90
@@ -45,12 +43,15 @@ RDEPEND=">=x11-themes/gnome-icon-theme-1.2
 		>=app-pda/gnome-pilot-conduits-2 )
 	spell? ( >=app-text/gnome-spell-1.0.5 )
 	crypt? ( >=app-crypt/gnupg-1.2.2 )
-	ssl? ( >=dev-libs/nspr-4.6.1
-		   >=dev-libs/nss-3.11 )
+	ssl? (
+		>=dev-libs/nspr-4.6.1
+		>=dev-libs/nss-3.11 )
 	ldap? ( >=net-nds/openldap-2 )
 	kerberos? ( virtual/krb5 )
 	krb4? ( virtual/krb5 )
-	dbus? ( sys-apps/dbus )
+	dbus? ( || (
+		dev-libs/dbus-glib
+		~sys-apps/dbus-0.62 ) )
 	mono? ( >=dev-lang/mono-1 )
 	bogofilter? ( mail-filter/bogofilter )
 	!bogofilter? ( mail-filter/spamassassin )"
