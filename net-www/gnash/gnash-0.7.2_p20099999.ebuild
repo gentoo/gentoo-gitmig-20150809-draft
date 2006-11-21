@@ -1,9 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.2_p20099999.ebuild,v 1.1 2006/11/18 20:58:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.2_p20099999.ebuild,v 1.2 2006/11/21 11:56:41 genstef Exp $
 
 WANT_AUTOCONF=latest
-inherit nsplugins autotools cvs
+inherit nsplugins autotools cvs kde-functions
+set-kdedir
 
 DESCRIPTION="Gnash is a GNU Flash movie player that supports many SWF v7 features"
 HOMEPAGE="http://www.gnu.org/software/gnash"
@@ -17,7 +18,7 @@ S=${WORKDIR}/${PN}
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-*"
-IUSE="agg gstreamer ffmpeg nsplugin xml video_cards_i810"
+IUSE="agg gstreamer ffmpeg kde nsplugin xml video_cards_i810"
 #dmalloc, broken see bug 142939
 #dmalloc? ( dev-libs/dmalloc )
 #		$(use_enable dmalloc) \
@@ -53,6 +54,7 @@ RDEPEND="
 	>x11-libs/gtk+-2
 	x11-libs/pango
 	!agg? ( virtual/opengl x11-libs/gtkglext )
+	kde? ( kde-base/kdelibs )
 	agg? ( x11-libs/agg )"
 	#cairo? ( x11-libs/cairo )
 
@@ -94,13 +96,12 @@ src_compile() {
 		myconf="${myconf} --with-mp3-decoder=ffmpeg"
 	fi
 
-	# klash is broken, thus we do not offer it
 	econf \
 		$(use_enable nsplugin plugin) \
 		$(use_enable xml) \
 		$(use_enable video_cards_i810 i810-lod-bias) \
 		--without-gcc-arch \
-		--disable-klash \
+		$(use_enable kde klash) \
 		${myconf} || die "econf failed"
 	emake -j1 || die "emake failed"
 }

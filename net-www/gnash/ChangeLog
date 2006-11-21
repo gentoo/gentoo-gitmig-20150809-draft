@@ -1,6 +1,11 @@
 # ChangeLog for net-www/gnash
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.29 2006/11/18 20:58:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.30 2006/11/21 11:56:41 genstef Exp $
+
+  21 Nov 2006; Stefan Schweizer <genstef@gentoo.org> gnash-0.7.2.ebuild,
+  gnash-0.7.2_p20099999.ebuild:
+  Readd kde support on popular demand. Drizztbsd and others say that it is
+  working
 
 *gnash-0.7.2_p20099999 (18 Nov 2006)
 
