@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgpod
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.22 2006/11/18 21:46:49 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.23 2006/11/21 07:46:22 opfer Exp $
+
+  21 Nov 2006; Christian Faulhammer <opfer@gentoo.org> libgpod-0.4.0.ebuild:
+  stable x86, bug #154832
 
   18 Nov 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   libgpod-0.4.0.ebuild:
