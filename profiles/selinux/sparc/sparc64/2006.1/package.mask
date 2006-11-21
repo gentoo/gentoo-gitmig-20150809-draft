@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/sparc/sparc64/2006.1/package.mask,v 1.2 2006/10/08 18:58:04 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/sparc/sparc64/2006.1/package.mask,v 1.3 2006/11/21 07:22:04 mr_bones_ Exp $
 
 # Jason Wever <weeve@gentoo.org>
 # gradm requires 64 bit support, which doesn't exist in this profile
@@ -9,3 +9,6 @@
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # To avoid odd toolchain mixups
 <dev-libs/libffi-3.4.3
+
+# needs stable >=sys-libs/glibc-2.4
+=sys-libs/libselinux-1.30.29
