@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/bsdiff
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/ChangeLog,v 1.17 2006/10/09 19:11:28 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/ChangeLog,v 1.18 2006/11/21 15:40:47 drizzt Exp $
+
+*bsdiff-4.3-r1 (21 Nov 2006)
+
+  21 Nov 2006; Timothy Redaelli <drizzt@gentoo.org> metadata.xml,
+  +bsdiff-4.3-r1.ebuild:
+  Taken maintainership.
+  Revision bump: added support for large files (>2**32);
+  respect CFLAGS and LDFLAGS.
 
   09 Oct 2006; Timothy Redaelli <drizzt@gentoo.org> bsdiff-4.3.ebuild:
   Added ~x86-fbsd keyword.
