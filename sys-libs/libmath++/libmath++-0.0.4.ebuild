@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libmath++/libmath++-0.0.4.ebuild,v 1.8 2006/11/09 17:40:27 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libmath++/libmath++-0.0.4.ebuild,v 1.9 2006/11/21 20:49:42 dev-zero Exp $
+
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
 
 inherit autotools
 
@@ -12,9 +15,6 @@ LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="ppc s390 x86 amd64"
 IUSE="doc"
-
-WANT_AUTOMAKE="1.10"
-WANT_AUTOCONF="2.10"
 
 DEPEND="doc? ( app-doc/doxygen )"
 RDEPEND=""

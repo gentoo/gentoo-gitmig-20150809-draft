@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libmath++
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libmath++/ChangeLog,v 1.11 2006/11/09 17:40:27 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libmath++/ChangeLog,v 1.12 2006/11/21 20:49:42 dev-zero Exp $
+
+  21 Nov 2006; Tiziano Müller <dev-zero@gentoo.org> libmath++-0.0.4.ebuild:
+  Fixing automake/autoconf deps again, bug #154567
 
   09 Nov 2006; Tiziano Müller <dev-zero@gentoo.org> libmath++-0.0.4.ebuild:
   WANT_AUTOMAKE/AUTOCONF added, bug #154567 thanks to Patrick Nagel
