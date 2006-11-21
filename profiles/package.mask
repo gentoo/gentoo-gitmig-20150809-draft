@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6322 2006/11/21 05:40:32 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6323 2006/11/21 05:51:12 opfer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -33,10 +33,6 @@
 # Michael Cummings <mcummings@gentoo.org>
 # Masked for removal
 dev-perl/Msql-Mysql-modules
-
-# Christian Faulhammer <opfer@gentoo.org>
-# upstream changed versioning, masked for tests
-=app-editors/emacs-cvs-22.0.91
 
 # William L. Thomson Jr. <wltjr@gentoo.org> (19 Nov 2006)
 # Alpha sources from upstream. Tested minimally, but not
