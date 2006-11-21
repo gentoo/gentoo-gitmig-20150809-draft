@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6321 2006/11/20 23:30:57 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6322 2006/11/21 05:40:32 antarus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -764,11 +764,6 @@ sci-visualization/paraview
 # Andrej Kacian <ticho@gentoo.org> (16 Oct 2006)
 # Release candidates, no unsuspecting users should use these.
 =app-antivirus/clamav-0.90_rc*
-
-# J. Alberto Suárez López <bass@gentoo.org> (15 Oct 2006)
-# masking net-misc/klapjack dead stream
-# pending removal 15 Oct 2006
-net-misc/klapjack
 
 # Christian Heim <phreak@gentoo.org> (14 Oct 2006)
 # masking app-misc/gpsdrive for treecleaners, bug(s) 142710
