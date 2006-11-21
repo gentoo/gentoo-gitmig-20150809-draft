@@ -1,6 +1,14 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.101 2006/11/20 13:10:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.102 2006/11/21 08:16:05 remi Exp $
+
+*gtkmm-2.10.2-r1 (21 Nov 2006)
+
+  21 Nov 2006; Remi Cardona <remi@gentoo.fr>
+  +files/gtkmm-2.10.2-remove_atk_from_gtk_pc_during_configure.patch,
+  +gtkmm-2.10.2-r1.ebuild:
+  Patch for bug #153294 (remove atkmm from gtkmm-2.4.pc if -accessibility is set)
+  Submitted patch upstream : http://bugzilla.gnome.org/show_bug.cgi?id=366930
 
   20 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> gtkmm-2.10.2.ebuild:
   Remove ~x86-fbsd keyword till I can get glibmm to build.
