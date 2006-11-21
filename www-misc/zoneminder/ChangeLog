@@ -1,6 +1,11 @@
 # ChangeLog for www-misc/zoneminder
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.17 2006/11/01 22:18:08 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.18 2006/11/21 22:36:05 rl03 Exp $
+
+  21 Nov 2006; Renat Lumpau <rl03@gentoo.org> files/postinstall-2.txt,
+  files/init.d, -files/postinstall.txt, -files/zmconfig-gentoo.txt,
+  -zoneminder-1.21.4.ebuild:
+  Housekeeping
 
   01 Nov 2006; Renat Lumpau <rl03@gentoo.org> files/postinstall-2.txt:
   Fix postinstall instructions, bug #153585.
