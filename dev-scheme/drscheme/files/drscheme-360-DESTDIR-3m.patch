@@ -1,0 +1,17 @@
+--- src/mred/Makefile.in.orig	2006-11-21 16:41:53.000000000 -0500
++++ src/mred/Makefile.in	2006-11-21 16:42:16.000000000 -0500
+@@ -289,11 +289,11 @@
+ 	echo "no dynamic libs"
+ 
+ install-lib3m:
+-	cd ..; $(ICP) mred/libmred3m.@LIBSFX@ "$(libdir)"
++	cd ..; $(ICP) mred/libmred3m.@LIBSFX@ "$(DESTDIR)$(libdir)"
+ 
+ install-3m_wx_xt:
+-	cd ..; $(ICP) mred/mred3m "$(bindir)"
+-	$(MZSCHEME) -mvqu "$(srcdir)/../mzscheme/collects-path.ss" "$(bindir)/mred3m@EXE_SUFFIX@" @COLLECTS_PATH@
++	cd ..; $(ICP) mred/mred3m "$(DESTDIR)$(bindir)"
++	$(MZSCHEME) -mvqu "$(srcdir)/../mzscheme/collects-path.ss" "$(DESTDIR)$(bindir)/mred3m@EXE_SUFFIX@" @COLLECTS_PATH@
+ 	$(MAKE) @MRLIBINSTALL@3m
+ 
+ install-3m_wx_mac:

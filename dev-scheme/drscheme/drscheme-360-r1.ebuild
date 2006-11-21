@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-360.ebuild,v 1.2 2006/11/21 23:12:24 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-360-r1.ebuild,v 1.1 2006/11/21 23:12:24 chutzpah Exp $
 
-inherit eutils multilib flag-o-matic
+inherit eutils multilib flag-o-matic libtool
 
 DESCRIPTION="DrScheme programming environment.  Includes mzscheme."
 HOMEPAGE="http://www.plt-scheme.org/software/drscheme/"
@@ -11,7 +11,7 @@ SRC_URI="http://download.plt-scheme.org/bundles/${PV}/plt/plt-${PV}-src-unix.tgz
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="backtrace cairo jpeg opengl perl png sgc"
+IUSE="3m backtrace cairo jpeg opengl perl png sgc"
 
 RDEPEND="x11-libs/libICE
 	x11-libs/libSM
@@ -28,13 +28,20 @@ RDEPEND="x11-libs/libICE
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/plt-${PV}/src"
-GL_COLLECTS="sgl games/gobblet games/checkers games/jewel games/gl-board-game"
 
 src_unpack() {
 	unpack ${A}
-	cd "${WORKDIR}/plt-${PV}"
+	cd "${S}/.."
 
 	epatch "${FILESDIR}/${PN}-350-fPIC.patch"
+	epatch "${FILESDIR}/${P}-DESTDIR-3m.patch"
+
+	cd "${S}/mzscheme/gc"
+	elibtoolize
+	cd "${S}"
+
+	# lib dir fixups
+	sed -ie 's:-rpath ${absprefix}/lib:-rpath ${absprefix}/'$(get_libdir)':g' configure
 }
 
 src_compile() {
@@ -47,6 +54,8 @@ src_compile() {
 	replace-flags -O? -O2
 
 	econf --enable-mred \
+		--enable-shared \
+		--enable-lt=/usr/bin/libtool \
 		$(use_enable backtrace) \
 		$(use_enable cairo) \
 		$(use_enable jpeg libjpeg) \
@@ -57,10 +66,19 @@ src_compile() {
 		|| die "econf failed"
 
 	emake || die "emake failed"
+
+	if use 3m; then
+		MAKEOPTS="${MAKEOPTS} -j1" emake 3m || die "emake 3m failed"
+	fi
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
+
+	if use 3m; then
+		make DESTDIR="${D}" install-3m || die "make install failed"
+	fi
+
 	dodoc ${WORKDIR}/plt/{readme.txt,src/README}
 
 	mv -f "${D}"/usr/share/plt/doc/* "${D}/usr/share/doc/${PF}/"
@@ -70,6 +88,6 @@ src_install() {
 	keepdir /usr/share/plt
 	dosym "/usr/share/doc/${PF}" "/usr/share/plt/doc"
 
-	newicon "${WORKDIR}/plt/collects/icons/PLT-206.png" drscheme.png
+	newicon "${WORKDIR}/plt-${PV}/collects/icons/PLT-206.png" drscheme.png
 	make_desktop_entry drscheme "DrScheme" drscheme.png "Development"
 }

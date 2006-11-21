@@ -1,6 +1,15 @@
 # ChangeLog for dev-scheme/drscheme
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.38 2006/11/21 16:56:26 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.39 2006/11/21 23:12:24 chutzpah Exp $
+
+*drscheme-360-r1 (21 Nov 2006)
+
+  21 Nov 2006; Patrick McLean <chutzpah@gentoo.org>
+  +files/drscheme-360-DESTDIR-3m.patch, drscheme-360.ebuild,
+  +drscheme-360-r1.ebuild:
+  Update cairo dep to 1.2.3, Version bump, add "3m" USE flag to build support
+  for 3m garbage collection (builds a second binary called drscheme3m) (bug
+  #148673). Also will now build shared libraries rather than static ones.
 
 *drscheme-360 (21 Nov 2006)
 
