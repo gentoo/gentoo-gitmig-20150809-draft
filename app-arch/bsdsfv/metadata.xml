@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-<email>maintainer-needed@gentoo.org</email>
+  <email>drizzt@gentoo.org</email>
 </maintainer>
 <longdescription>A all in one SFV utility.</longdescription>
 </pkgmetadata>
