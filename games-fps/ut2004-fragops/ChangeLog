@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/ut2004-fragops
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-fragops/ChangeLog,v 1.5 2006/09/28 18:59:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-fragops/ChangeLog,v 1.6 2006/11/21 16:15:38 wolf31o2 Exp $
+
+*ut2004-fragops-2.16-r1 (21 Nov 2006)
+
+  21 Nov 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +ut2004-fragops-2.16-r1.ebuild:
+  Added new revision for testing which uses the brand-spankin-new
+  games-mods.eclass to reduce ebuild code.
 
   28 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   ut2004-fragops-2.16.ebuild:
