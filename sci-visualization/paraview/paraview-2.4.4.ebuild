@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-2.4.4.ebuild,v 1.1 2006/10/18 17:45:29 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-2.4.4.ebuild,v 1.2 2006/11/21 02:18:09 markusle Exp $
 
 inherit distutils eutils flag-o-matic toolchain-funcs versionator python
 
@@ -11,11 +11,12 @@ SRC_URI="http://www.${PN}.org/files/v2.4/${P}.tar.gz"
 LICENSE="BSD"
 KEYWORDS="~x86"
 SLOT="0"
-IUSE="mpi python hdf5 doc examples"
+IUSE="mpi python hdf5 doc examples ffmpeg threads"
 RDEPEND="hdf5? ( sci-libs/hdf5 )
 	doc? ( app-doc/doxygen )
 	mpi? ( sys-cluster/mpich )
 	python? ( >=dev-lang/python-2.0 )
+	ffmpeg? ( media-video/ffmpeg )
 	media-libs/libpng
 	media-libs/jpeg
 	media-libs/tiff
@@ -30,7 +31,7 @@ RDEPEND="hdf5? ( sci-libs/hdf5 )
 DEPEND="${RDEPEND}
 		>=dev-util/cmake-2.4.3"
 
-
+PVLIBDIR="$(get_libdir)/${PN}-$(get_version_component_range 1-2)"
 BUILDDIR="${WORKDIR}/build"
 
 src_unpack() {
@@ -44,6 +45,8 @@ src_unpack() {
 src_compile() {
 	cd "${BUILDDIR}"
 	local CMAKE_VARIABLES=""
+	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DPV_INSTALL_LIB_DIR:PATH=/${PVLIBDIR}"
+	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DCMAKE_SKIP_RPATH:BOOL=YES"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DCMAKE_INSTALL_PREFIX:PATH=/usr"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DBUILD_SHARED_LIBS:BOOL=ON"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_SYSTEM_FREETYPE:BOOL=ON"
@@ -68,12 +71,24 @@ src_compile() {
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DPYTHON_LIBRARY:PATH=/usr/$(get_libdir)/libpython${PYVER}.so"
 	fi
 
+	if use ffmpeg; then
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_FFMPEG_ENCODER:BOOL=ON"
+	else
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_FFMPEG_ENCODER:BOOL=OFF"
+	fi
+
 	use doc && CMAKE_VARIABLES="${CMAKE_VARIABLES} -DBUILD_DOCUMENTATION:BOOL=ON"
 
 	if use examples; then
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DBUILD_EXAMPLES:BOOL=ON"
 	else
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DBUILD_EXAMPLES:BOOL=OFF"
+	fi
+
+	if use threads; then
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DCMAKE_USE_PTHREADS:BOOL=ON"
+	else
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DCMAKE_USE_PTHREADS:BOOL=OFF"
 	fi
 
 	cmake ${CMAKE_VARIABLES} ${S} \
@@ -86,4 +101,8 @@ src_compile() {
 src_install() {
 	cd ${BUILDDIR}
 	make DESTDIR=${D} install || die "make install failed"
+
+	# set up the environment
+	echo "LDPATH=/usr/${PVLIBDIR}" >> ${T}/40${PN}
+	doenvd ${T}/40${PN}
 }
