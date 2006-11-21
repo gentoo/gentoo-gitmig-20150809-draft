@@ -5,4 +5,8 @@
 <maintainer>
  <email>flameeyes@gentoo.org</email>
 </maintainer>
+<maintainer>
+ <email>drizzt@gentoo.org</email>
+ <description>Secondary Maintainer</description>
+</maintainer>
 </pkgmetadata>
