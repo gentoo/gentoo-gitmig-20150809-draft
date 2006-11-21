@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.29 2006/11/21 02:43:06 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.30 2006/11/21 07:41:32 opfer Exp $
+
+  21 Nov 2006; Christian Faulhammer <opfer@gentoo.org> pycairo-1.2.2.ebuild:
+  stable x86, bug #155544
 
   21 Nov 2006; Joseph Jezak <josejx@gentoo.org> pycairo-1.2.2.ebuild:
   Marked ppc stable for bug #155713.
