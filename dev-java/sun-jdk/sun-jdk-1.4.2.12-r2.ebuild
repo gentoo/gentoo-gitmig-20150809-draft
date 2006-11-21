@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.12-r2.ebuild,v 1.2 2006/10/14 01:47:39 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.12-r2.ebuild,v 1.3 2006/11/21 21:53:45 nichoj Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit java-vm-2 eutils
@@ -81,7 +81,7 @@ src_unpack() {
 		fi
 	fi
 	#Search for the ELF Header
-	testExp=`echo -e "\177\105\114\106\001\001\001"`
+	testExp=$'\177\105\114\106\001\001\001'
 	startAt=`grep -aonm 1 ${testExp}  ${DISTDIR}/${At} | cut -d: -f1`
 	tail -n +${startAt} ${DISTDIR}/${At} > install.sfx
 	chmod +x install.sfx
