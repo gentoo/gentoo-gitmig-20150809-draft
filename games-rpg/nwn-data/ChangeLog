@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/nwn-data
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/ChangeLog,v 1.20 2006/11/17 19:24:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/ChangeLog,v 1.21 2006/11/21 17:20:33 wolf31o2 Exp $
+
+  21 Nov 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  nwn-data-1.29-r1.ebuild:
+  Fixed my misspelled linguas, and (hopefully) fixed support for the Diamond
+  DVD for bug #155831.
 
 *nwn-data-1.29-r1 (17 Nov 2006)
 
