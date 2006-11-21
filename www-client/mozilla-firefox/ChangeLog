@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.219 2006/11/19 15:26:01 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.220 2006/11/21 06:42:19 genstef Exp $
+
+  21 Nov 2006; Stefan Schweizer <genstef@gentoo.org>
+  -mozilla-firefox-2.0.ebuild, mozilla-firefox-2.0-r1.ebuild:
+  Fix autoconf usage ad remove old 2.0 thanks to anarchy
 
 *mozilla-firefox-2.0-r1 (19 Nov 2006)
 
