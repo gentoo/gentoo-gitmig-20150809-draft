@@ -1,6 +1,9 @@
 # ChangeLog for app-text/txt2man
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2man/ChangeLog,v 1.10 2006/10/26 08:35:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2man/ChangeLog,v 1.11 2006/11/21 13:35:32 flameeyes Exp $
+
+  21 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Give back to maintainer-needed.
 
 *txt2man-1.5.1 (26 Oct 2006)
 
