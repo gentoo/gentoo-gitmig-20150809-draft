@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.1.1.ebuild,v 1.2 2006/11/18 10:55:05 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.1.1.ebuild,v 1.3 2006/11/21 14:47:10 mabi Exp $
 
 inherit eutils portability
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.lua.org/ftp/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
-IUSE="readline"
+IUSE="readline static"
 
 RDEPEND="readline? ( sys-libs/readline )"
 DEPEND="${RDEPEND}"
@@ -27,6 +27,14 @@ src_unpack() {
 
 	if ! use readline ; then
 		epatch "${FILESDIR}"/${P}-readline.patch
+	fi
+
+	# Using dynamic linked lua is not recommended upstream for performance
+	# reasons. http://article.gmane.org/gmane.comp.lang.lua.general/18519
+	# Mainly, this is of concern if your arch is poor with GPRs, like x86
+	# Note that the lua compiler is build statically anyway
+	if use static ; then
+		epatch "${FILESDIR}"/${P}-make_static.patch
 	fi
 }
 
