@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/bsdsfv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/ChangeLog,v 1.25 2006/10/29 01:22:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/ChangeLog,v 1.26 2006/11/21 12:31:07 flameeyes Exp $
+
+  21 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Move to maintainer-needed.
 
   29 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> -bsdsfv-1.18.ebuild:
   Remove old version.
