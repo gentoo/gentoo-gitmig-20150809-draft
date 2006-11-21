@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1.ebuild,v 1.13 2006/11/14 12:05:46 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1.ebuild,v 1.14 2006/11/21 20:43:05 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -30,6 +30,9 @@ SRC_URI="mirror://mplayer/releases/${MY_P}.tar.bz2
 	!truetype? ( mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
 				 mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
 				 mirror://mplayer/releases/fonts/font-arial-cp1250.tar.bz2 )
+	!iconv? ( mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
+			  mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
+			  mirror://mplayer/releases/fonts/font-arial-cp1250.tar.bz2 )
 	svga? ( http://mplayerhq.hu/~alex/svgalib_helper-${SVGV}-mplayer.tar.bz2 )
 	gtk? ( mirror://mplayer/Skin/Blue-${BLUV}.tar.bz2 )
 	amr? ( ${AMR_URI}/26_series/26.104/26104-510.zip
@@ -127,7 +130,7 @@ pkg_setup() {
 		REALLIBDIR="/opt/RealPlayer/codecs"
 	fi
 
-	if use truetype && ! use iconv; then
+	if use truetype && ! use iconv ; then
 		ewarn "You enabled the 'truetype' USE flag, but support will be"
 		ewarn "disabled unless you also use 'iconv'."
 	fi
@@ -137,9 +140,11 @@ src_unpack() {
 
 	unpack ${MY_P}.tar.bz2
 
-	use truetype || unpack font-arial-iso-8859-1.tar.bz2 \
-							font-arial-iso-8859-2.tar.bz2 \
-							font-arial-cp1250.tar.bz2
+	if ! use truetype || ! use iconv ; then
+		unpack font-arial-iso-8859-1.tar.bz2 \
+			   font-arial-iso-8859-2.tar.bz2 \
+			   font-arial-cp1250.tar.bz2
+	fi
 
 	use svga && unpack svgalib_helper-${SVGV}-mplayer.tar.bz2
 
@@ -476,7 +481,7 @@ src_install() {
 		insinto /usr/share/applications
 		doins ${FILESDIR}/mplayer.desktop
 	fi
-	if ! use truetype
+	if ! use truetype || ! use iconv
 	then
 		dodir /usr/share/mplayer/fonts
 		local x=
@@ -495,11 +500,14 @@ src_install() {
 	newins ${S}/etc/example.conf mplayer.conf
 	dosed -e 's/include =/#include =/' /etc/mplayer.conf
 	dosed -e 's/fs=yes/fs=no/' /etc/mplayer.conf
-	use truetype && cat >> ${D}/etc/mplayer.conf << EOT
+	if use truetype && use iconv
+	then
+		cat >> ${D}/etc/mplayer.conf << EOT
 fontconfig=1
 subfont-osd-scale=4
 subfont-text-scale=3
 EOT
+	fi
 	dosym ../../../etc/mplayer.conf /usr/share/mplayer/mplayer.conf
 
 	#mv the midentify script to /usr/bin for emovix.
