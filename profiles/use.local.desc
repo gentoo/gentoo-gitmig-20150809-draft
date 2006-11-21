@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2359 2006/11/20 23:49:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2360 2006/11/21 05:34:33 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -328,7 +328,6 @@ dev-lang/gdl:hdf - Adds support for the Hierarchical Data Format
 dev-lang/gdl:hdf5 - Adds support for the Hierarchical Data Format v 5
 dev-lang/gforth:force-reg - Enable a possibly unstable GCC flag for possibly large performance gains
 dev-lang/icon:iplsrc - install the icon programming library source
-dev-lang/mono:icu - Enable internationalization support via ICU lib.
 dev-lang/ocaml:latex - Add ocamldoc support for latex
 dev-lang/perl:ithreads - Enable Perl threads, has some compatibility problems
 dev-lang/perl:perlsuid - Enable Perl SUID install. Has some risks associated.
