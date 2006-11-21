@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/telepathy-python/telepathy-python-0.13.3.ebuild,v 1.3 2006/11/20 18:03:33 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/telepathy-python/telepathy-python-0.13.3.ebuild,v 1.4 2006/11/21 17:24:36 genstef Exp $
 
 inherit distutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="|| ( >=dev-libs/dbus-python-0.71
+DEPEND="|| ( >=dev-python/dbus-python-0.71
 		( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.34 ) )"
 
 RDEPEND="${DEPEND}"
