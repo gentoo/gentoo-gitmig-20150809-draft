@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.13.ebuild,v 1.1 2006/11/20 22:13:23 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.13.ebuild,v 1.2 2006/11/21 09:15:26 metalgod Exp $
 
 inherit gnome.org eutils autotools mono
 
@@ -91,7 +91,6 @@ src_unpack() {
 		's/defaultLevel = LogLevel.Debug/defaultLevel = LogLevel.Info/' \
 		Util/Logger.cs
 
-	epatch ${FILESDIR}/${PN}-0.2.4-CVE-2006-1296.patch
 	epatch ${FILESDIR}/${PN}-0.2.7-crawltweek.patch
 
 	eautoreconf
