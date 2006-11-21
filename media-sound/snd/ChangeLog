@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/snd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.27 2006/11/20 21:16:25 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.28 2006/11/21 18:05:29 josejx Exp $
+
+  21 Nov 2006; Joseph Jezak <josejx@gentoo.org> snd-7.15-r1.ebuild:
+  Marked ppc stable for bug #153205.
 
   20 Nov 2006; <blubb@gentoo.org> snd-7.15.ebuild:
   stable on amd64
