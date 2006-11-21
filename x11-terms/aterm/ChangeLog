@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.86 2006/11/20 21:54:19 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.87 2006/11/21 07:33:16 opfer Exp $
+
+  21 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  aterm-1.0.0-r1.ebuild:
+  stable x86, bug #155757
 
   20 Nov 2006; <blubb@gentoo.org> aterm-1.0.0-r1.ebuild:
   stable on amd64
