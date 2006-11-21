@@ -1,0 +1,669 @@
+--- configure.in.orig	2006-11-20 19:34:10.000000000 -0600
++++ configure.in	2006-11-20 21:07:29.000000000 -0600
+@@ -2,22 +2,21 @@
+ # Process this file with autoconf to produce a configure script.
+ # This file is part of Tracker.
+ 
+-AC_PREREQ(2.57)
+-AC_INIT([tracker],[0.5.2],[tracker-list@gnome.org])
++AC_PREREQ([2.57])
++AC_INIT([tracker], [0.5.2], [tracker-list@gnome.org])
++
++AM_CONFIG_HEADER([config.h])
+ AC_CONFIG_SRCDIR([src/trackerd/trackerd.c])
+ AM_INIT_AUTOMAKE(AC_PACKAGE_NAME, AC_PACKAGE_VERSION)
+ 
+ AC_SUBST(PACKAGE_URL, [http://www.gnome.org/~jamiemcc/tracker/])
+ 
+-AM_CONFIG_HEADER(config.h)
+-
+-CFLAGS="$CFLAGS"
+-
+ # Checks for programs.
+ AC_PROG_CC
+-AC_HEADER_STDC
+-
+-AM_PROG_LIBTOOL
++AC_PROG_LN_S
++AC_PROG_INSTALL
++AC_PROG_LIBTOOL
++AC_PROG_MAKE_SET
+ 
+ # Checks for header files.
+ AC_HEADER_STDC
+@@ -26,59 +25,50 @@
+ # Checks for functions
+ AC_CHECK_FUNCS([getline])
+ 
+-# Check for glib 2.0
+-
++dnl Library Checks
++DBUS_REQUIRED=0.60
+ GLIB_REQUIRED=2.9.1
++PANGO_REQUIRED=1.0.0
++GMIME_REQUIRED=2.1.0
+ 
+-PKG_CHECK_MODULES(GLIB2, [ glib-2.0 >= 2.9.1 ])
++PKG_CHECK_MODULES(GLIB2, [ glib-2.0 >= $GLIB_REQUIRED ])
+ AC_SUBST(GLIB2_CFLAGS)
+ AC_SUBST(GLIB2_LIBS)
+ 
+ # Check for gthread 2.0
+-PKG_CHECK_MODULES(GTHREAD, [ gthread-2.0 >= 2.9.1 ])
++PKG_CHECK_MODULES(GTHREAD, [ gthread-2.0 >= $GLIB_REQUIRED ])
+ AC_SUBST(GTHREAD_CFLAGS)
+ AC_SUBST(GTHREAD_LIBS)
+ 
+ # Check for gobject 2.0
+-PKG_CHECK_MODULES(GOBJECT, [ gobject-2.0 >= 2.9.1 ])
++PKG_CHECK_MODULES(GOBJECT, [ gobject-2.0 >= $GLIB_REQUIRED ])
+ AC_SUBST(GOBJECT_CFLAGS)
+ AC_SUBST(GOBJECT_LIBS)
+ 
+ #Check for pango
+-PKG_CHECK_MODULES(PANGO, [ pango >= 1.0.0 ])
++PKG_CHECK_MODULES(PANGO, [ pango >= $PANGO_REQUIRED ])
+ AC_SUBST(PANGO_CFLAGS)
+ AC_SUBST(PANGO_LIBS)
+ 
+ # Check for GMime
+-PKG_CHECK_MODULES(GMIME, [ gmime-2.0 >= 2.1.0 ])
++PKG_CHECK_MODULES(GMIME, [ gmime-2.0 >= $GMIME_REQUIRED ])
+ AC_SUBST(GMIME_CFLAGS)
+ AC_SUBST(GMIME_LIBS)
+ 
+ # Check for Dbus 0.50 or higher
+-PKG_CHECK_MODULES(DBUS, [dbus-1 >= 0.50 dbus-glib-1 >= 0.50 ])
++PKG_CHECK_MODULES(DBUS, [ dbus-1 >= $DBUS_REQUIRED dbus-glib-1 >= $DBUS_REQUIRED ])
+ AC_SUBST(DBUS_CFLAGS)
+ AC_SUBST(DBUS_LIBS)
+ 
+ ####################################################################
+ # Compiler warning checks
+ ####################################################################
+-warning_support=yes
+-AC_ARG_ENABLE(warnings, [  --disable-warnings      compile without using gcc warnings],
+-			[
+-				warning_support=no
+-			]
+-		)
+-
+-
+-if test "$warning_support" = "yes"; 
+-then
+-	CFLAGS="\
+-	-Wall \
+-	-Wchar-subscripts \
+-	-Wnested-externs -Wpointer-arith \
+-	-Wsign-compare \
+-	$CFLAGS"
++AC_ARG_ENABLE(warnings,
++              AC_HELP_STRING([--disable-warnings], [disable GCC warnings]),,
++              [enable_warnings=yes])
+ 
++if test "x$enable_warnings" != "xno" ; then
++   CFLAGS="$CFLAGS -Wall -Wchar-subscripts -Wnested-externs -Wpointer-arith -Wsign-compare"
+ fi
+ 
+ ####################################################################
+@@ -118,288 +108,243 @@
+ ####################################################################
+ RECENT_GLIB=2.12.0
+ 
+-PKG_CHECK_MODULES(glib2, [
+-               glib-2.0 >= RECENT_GLIB],
+-               [have_recent_glib=yes] , [have_recent_glib=no])
++PKG_CHECK_MODULES(glib2, [ glib-2.0 >= RECENT_GLIB ],
++                  [have_recent_glib=yes], [have_recent_glib=no])
++
++if test "x$have_recent_glib" = "xyes" ; then
++   AC_DEFINE(HAVE_RECENT_GLIB, 1, [Define if we have recent glib])
++fi
+ 
+ AM_CONDITIONAL(HAVE_RECENT_GLIB, test "$have_recent_glib" = "yes")
+-test "$have_recent_glib" = "yes" && AC_DEFINE(HAVE_RECENT_GLIB, [], [Define if we have recent glib])
+ 
+ ####################################################################
+-# check for GStreamer or Xine. Otherwise, call an external video
+-# player (Totem or MPlayer).
++# video handler
+ ####################################################################
+ 
+-use_gstreamer=yes
+-use_libxine=no
+-
+-AC_ARG_ENABLE(libxine,   [  --enable-libxine        build using libXine for metadata extraction of video files],
+-			[
+-				use_libxine=yes
+-				use_gstreamer=no
+-			]
+-		)
+-
+-AC_ARG_ENABLE(gstreamer, [  --enable-gstreamer      build using GStreamer for metadata extraction of video files],
+-			[
+-				use_libxine=no
+-				use_gstreamer=yes
+-			]
+-		)
+-
+-videos_are_handled="no"
+-videos_handler="_"
+-
+-AM_CONDITIONAL(USING_GSTREAMER, false)
+-AM_CONDITIONAL(USING_LIBXINE, false)
+-AM_CONDITIONAL(USING_EXTERNAL_VIDEO_PLAYER, false)
+-
+-have_libgstreamer=no
+-have_libxine=no
+-
+-if test "$use_gstreamer" = "yes";
+-then
+-	PKG_CHECK_MODULES(GSTREAMER, [
+-		gstreamer-0.10 >= 0.10.0],
+-		[have_libgstreamer=yes] , [have_libgstreamer=no])
+-
+-	if test "$have_libgstreamer" = "yes";
+-	then
+-		AM_CONDITIONAL(USING_GSTREAMER, true)
+-		AC_SUBST(GSTREAMER_CFLAGS)
+-		AC_SUBST(GSTREAMER_LIBS)
+-
+-		videos_are_handled="yes"
+-		videos_handler="GStreamer"
+-
+-		AC_DEFINE(HAVE_GSTREAMER, [], [Define if we have GStreamer])
+-	fi
+-
+-elif test "$use_libxine" = "yes";
+-then
+-	PKG_CHECK_MODULES(XINE, [
+-		libxine >= 1.0 ],
+-		[have_libxine=yes] , [have_libxine=no])
+-
+-	if test "$have_libxine" = "yes";
+-	then
+-		AM_CONDITIONAL(USING_LIBXINE, true)
+-		AC_SUBST(XINE_CFLAGS)
+-		AC_SUBST(XINE_LIBS)
+-
+-		videos_are_handled="yes"
+-		videos_handler="Xine"
+-
+-		AC_DEFINE(HAVE_LIBXINE, [], [Define if we have Libxine])
+-	fi
+-fi
+-
+-if test "$have_libgstreamer" = "no" && test "$have_libxine" = "no";
+-then
+-	AM_CONDITIONAL(USING_EXTERNAL_VIDEO_PLAYER, true)
+-
+-	videos_are_handled="?"
+-	videos_handler="An external video player will be called"
+-
+-	AC_DEFINE(USING_EXTERNAL_VIDEO_PLAYER, [], [Define that Tracker will try to use external video players])
++VIDEO_HANDLER=""
++XINE_REQUIRED=1.0
++GSTREAMER_REQUIRED=0.10.0
++
++AC_ARG_ENABLE(libxine,
++              AC_HELP_STRING([--enable-libxine], [build using libXine for metadata extraction of video files]),,
++              [enable_libxine=yes enable_gstreamer=no])
++
++AC_ARG_ENABLE(gstreamer,
++              AC_HELP_STRING([--enable-gstreamer], [build using GStreamer for metadata extraction of video files]),,
++              [enable_libxine=no enable_gstreamer=yes])
++
++if test "x$enable_gstreamer" != "xno" ; then
++   PKG_CHECK_MODULES(GSTREAMER, [gstreamer-0.10 >= $GSTREAMER_REQUIRED])
++   AC_SUBST([GSTREAMER_CFLAGS])
++   AC_SUBST([GSTREAMER_LIBS])
++
++   VIDEO_HANDLER="gstreamer"
++   AC_DEFINE(HAVE_GSTREAMER, 1, [Define if we have GStreamer])
++elif test "x$enable_libxine" != "xno" ; then
++   PKG_CHECK_MODULES(XINE, [ libxine >= $XINE_REQUIRED ])
++   AC_SUBST([XINE_CFLAGS])
++   AC_SUBST([XINE_LIBS])
+ 
++   VIDEO_HANDLER="libxine"
++   AC_DEFINE(HAVE_LIBXINE, 1, [Define if we have Libxine])
++else
++   VIDEO_HANDLER="external"
++   AC_DEFINE(USING_EXTERNAL_VIDEO_PLAYER, 1, [Define that Tracker will try to use external video players])
+ fi
+ 
++AM_CONDITIONAL(USING_GSTREAMER, test "x$enable_gstreamer" = "xyes" && test "x$enable_libxine" = "xno")
++AM_CONDITIONAL(USING_LIBXINE, test "x$enable_gstreamer" = "xno" && test "x$enable_libxine" = "xyes")
++AM_CONDITIONAL(USING_EXTERNAL_VIDEO_PLAYER, test "x$enable_gstreamer" = "xno" && test "x$enable_gstreamer" = "xno")
+ 
+ ####################################################################
+ # Optional database/indexer component checks
+ ####################################################################
+ 
+-external_sqlite=no
+-AC_DEFINE(USING_SQLITE, [], [Define if we are using sqlite])
++AC_DEFINE(USING_SQLITE, 1, [Define if we are using sqlite])
+ AM_CONDITIONAL(USING_SQLITE, true)
+-AM_CONDITIONAL(USING_EXTERNAL_SQLITE, false)
+ 
+-AM_CONDITIONAL(BUILD_TEST, false)
++SQLITE_REQUIRED=3.2
+ 
+-AC_ARG_ENABLE(test, [  --enable-test           build test suite],
+-			 [
+-				AM_CONDITIONAL(BUILD_TEST, true)
+-				AC_DEFINE(BUILD_TEST, [], [Define if we are building test stuff])
+-			 ]
+-	 	)
++AC_ARG_ENABLE(external_sqlite,
++              AC_HELP_STRING([--enable-external-sqlite], [build against system SQLite (must be thread safe)]),,
++              [enable_external_sqlite=no])
++
++if test "x$enable_external_sqlite" != "xno" ; then
++   PKG_CHECK_MODULES(SQLITE3, [ sqlite3 >= $SQLITE_REQUIRED ])
++   AC_SUBST([SQLITE3_CFLAGS])
++   AC_SUBST([SQLITE3_LIBS])
++fi
+ 
++AM_CONDITIONAL(USING_EXTERNAL_SQLITE, true)
+ 
+-AC_ARG_ENABLE(external_sqlite, [  --enable-external-sqlite       build using system's sqlite which must be a threadsafe version],
+-			 [
+-				external_sqlite=yes
+-			 ]
+-	 	)
+ 
++dnl #############################################################
++dnl # Test Suite
++dnl #############################################################
+ 
+-if test "$external_sqlite" = "yes"; 
+-then
+-	AM_CONDITIONAL(USING_EXTERNAL_SQLITE, true)
+-	
+-	# Check for SQLite3
+-	PKG_CHECK_MODULES(SQLITE3, [ sqlite3 >= 3.2 ])
+-	AC_SUBST(SQLITE3_CFLAGS)
+-	AC_SUBST(SQLITE3_LIBS)
+-fi		
++AC_ARG_ENABLE([tests],
++              AC_HELP_STRING([--enable-tests], [Build the test suite]),,
++              [enable_tests=no])
++
++if test "x$enable_tests" != "xno" ; then
++   AC_DEFINE(BUILD_TEST, 1, [Define if we are building test stuff])
++fi
++
++AM_CONDITIONAL(BUILD_TEST, test "x$enable_tests" != "xno")
+ 
+ ###############################################################################
+ # Check for file monitor backends
+ ###############################################################################
+-AM_CONDITIONAL(HAVE_INOTIFY, false)
+-AM_CONDITIONAL(HAVE_INOTIFY_LINUX, false)
+-AM_CONDITIONAL(HAVE_FAM, false)
++FS_MONITORING_BACKENDS=""
++PRIMARY_BACKEND="polling only"
+ 
+ ##################################################################
+ # check for inotify
+ ##################################################################
+ 
+-inotify_support=no
+-inotify_linux=no
+-inotify_header=none
+-fs_monitor_backends=""
+-primary_backend="polling only"
+-
+-AC_CHECK_HEADERS([linux/inotify.h],
+-		 [
+-		 inotify_linux=yes
+-		 inotify_support=yes
+-		 AC_DEFINE(HAVE_INOTIFY_LINUX, [], [Define if we have inotify and header is linux/inotify.h])
+-		 AM_CONDITIONAL(HAVE_INOTIFY_LINUX, true)
+-		 inotify_header=linux/inotify.h
+-		 ])
+-
+-AC_CHECK_HEADERS([sys/inotify.h],
+-		 [
+-		 inotify_support=yes
+-		 inotify_linux=no
+-		 inotify_header=sys/inotify.h
+-		 ])
++AC_ARG_ENABLE(inotify,
++              AC_HELP_STRING([--disable-inotify], [Disable inotify support]),,
++              [enable_inotify=yes])
++
++if test "x$enable_inotify" != "xno" ; then
++   AC_CHECK_HEADERS([linux/inotify.h])
++
++   if test "x$ac_cv_header_linux_inotify_h" = "xno" ; then
++      AC_CHECK_HEADERS([sys/inotify.h])
++
++      if test "x$ac_cv_header_sys_inotify_h" = "xyes" ; then
++         HAVE_INOTIFY=yes
++         INOTIFY_HEADER="sys/inotify.h"
++      fi
++   else
++      HAVE_INOTIFY=yes
++      INOTIFY_LINUX=yes
++      INOTIFY_HEADER="linux/inotify.h"
+ 
++      AC_DEFINE(HAVE_INOTIFY_LINUX, 1, [Define if we have inotify and header is linux/inotify.h])
++   fi
++fi
+ 
++if test "x$HAVE_INOTIFY" = "xyes" ; then
++   AC_DEFINE([HAVE_INOTIFY], 1, [Define if we have inotify])
+ 
+-AC_ARG_ENABLE(inotify, [  --disable-inotify       build without enabling inotify for file monitoring],
+-			 [
+-				inotify_support=no
+-			 ]
+-	 	)
+-
+-
+-if test "$inotify_support" = "yes"; 
+-then
+-	AC_DEFINE(HAVE_INOTIFY, [], [Define if we have inotify])
+-	AM_CONDITIONAL(HAVE_INOTIFY, true)
+-	AC_ARG_ENABLE(debug, [  --enable-inotify-debug  turn on inotify debugging],
+-              [AC_DEFINE(LIBINOTIFY_DEBUG,, [is debugging enabled?])],)
+-	fs_monitor_backends="${fs_monitor_backends}inotify "
+-	primary_backend="inotify"
++   AC_ARG_ENABLE(inotify-debug,
++                 AC_HELP_STRING([--enable-inotify-debug], [enable debugging of inotify backend]),
++                 AC_DEFINE(LIBNOTIFY_DEBUG, 1, [Enable libnotify debug]),
++                 AC_DEFINE(LIBNOTIFY_DEBUG, 0, [Disable libnotify debug]))
++
++   PRIMARY_BACKEND="inotify"
++   FS_MONITORING_BACKENDS="inotify"
++elif test "x$enable_inotify" != "xno" ; then
++   AC_MSG_ERROR([inotify headers were not found])
+ fi
+ 
++AM_CONDITIONAL(HAVE_INOTIFY, test "x$HAVE_INOTIFY" = "xyes")
++AM_CONDITIONAL(HAVE_INOTIFY_LINUX, test "x$HAVE_INOTIFY_LINUX" = "xyes")
+ 
+ 
+ ##################################################################
+ # check for FAM/GAMIN
+ ##################################################################
+ 
+-FAM_LIBS=
+-disable_fam=no
+-AC_ARG_ENABLE(fam, [  --disable-fam           build without enabling fam for file monitoring],
+-			 [
+-				disable_fam=yes
+-			 ]
+-	 	)
++GAMIN_REQUIRED=0.1.1
+ 
+-if  test "$disable_fam" = "no"
+-then
+-	PKG_CHECK_MODULES(GAMIN, 
+-		gamin,
+-		[have_fam=yes] , [have_fam=no])
+-
+-	if test x"$have_fam" = "xyes"
+-	then       
+-		AC_DEFINE(HAVE_FAM, [], [Define if we have FAM])
+-		AM_CONDITIONAL(HAVE_FAM, true)
+-		if test "$fs_monitor_backends" = ""; then
+-			primary_backend="gamin"
+-			FAM_LIBS="-lgamin-1"
+-		fi 
+-        	fs_monitor_backends="${fs_monitor_backends}gamin"
+-	else
+-       		AC_CHECK_LIB(fam, FAMOpen,
+-			[AC_CHECK_HEADERS(fam.h,
+-			[AC_DEFINE(HAVE_FAM, [], [Define if we have FAM])
+-			AM_CONDITIONAL(HAVE_FAM, true)
+-			if test "$fs_monitor_backends" = ""; then
+-				primary_backend="fam"
+-				FAM_LIBS="-lfam"
+-			fi 
+- 	        	fs_monitor_backends="${fs_monitor_backends}fam"],
+-	    		AC_MSG_WARN(FAM support will not be built (header files not found)))],
+-	  		AC_MSG_WARN(FAM support will not be built (FAM library not found)))
+-	fi
++AC_ARG_ENABLE([fam],
++              AC_HELP_STRING([--disable-fam], [Disable FAM/GAMIN support]),,
++              [enable_fam=yes])
++
++if test "x$enable_fam" != "xno" ; then
++   PKG_CHECK_MODULES(FAM, [gamin >= $GAMIN_REQUIRED],
++                     [have_gamin=yes], [have_gamin=no])
++
++   if test "x$have_gamin" = "xno" ; then
++      AC_CHECK_HEADERS([fam.h])
++
++      LIBS_SAVE="$LIBS"
++      AC_CHECK_LIB([fam], [FAMOpen], [FAM_LIBS="-lfam"], [AC_MSG_ERROR([FAM or GAMIN not found])])
++      LIBS="$LIBS_SAVE"
++
++      if test "x$FS_MONITORING_BACKENDS" = "x" ; then
++         PRIMARY_BACKEND="FAM"
++         FS_MONITORING_BACKENDS="FAM"
++      else
++         FS_MONITORING_BACKENDS="$FS_MONITORING_BACKENDS, FAM"
++      fi
++   else
++      if test "x$FS_MONITORING_BACKENDS" = "x" ; then
++         PRIMARY_BACKEND="gamin"
++         FS_MONITORING_BACKENDS="gaim"
++      else
++         FS_MONITORING_BACKENDS="FS_MONITORING_BACKENDS, gamin"
++      fi
++   fi
++
++   AC_SUBST(FAM_LIBS)
+ fi
+-	
+-AC_SUBST(FAM_LIBS)
+ 
++AC_DEFINE(HAVE_FAM, 1, [Define if we have FAM])
++AM_CONDITIONAL(HAVE_FAM, test "x$enable_fam" != "xno")
+ 
+ ##################################################################
+ # check for GNOME/GTK dependencies to build tracker search tool (Gnome client)
+ ##################################################################
+ 
+ GTK_REQUIRED=2.8.0
+-LIBGNOME_DESKTOP_REQUIRED=2.9.91
+-LIBGNOME_REQUIRED=2.13.2
+-LIBGNOMEUI_REQUIRED=2.13.7
+ LIBGLADE_REQUIRED=2.5.0
+-GNOMEVFS_REQUIRED=2.8.4
++GNOMEVFS_REQUIRED=2.10.0
++LIBGNOME_REQUIRED=2.14.0
++LIBGNOMEUI_REQUIRED=2.14.0
++LIBGNOME_DESKTOP_REQUIRED=2.10.0
++
++AC_ARG_ENABLE(gui,
++              AC_HELP_STRING([--disable-gui], [Dont build the GTK+ GUI]),,
++              [enable_gui=yes])
++
++if test "x$enable_gui" != "xno" ; then
++   PKG_CHECK_MODULES(GNOME_UTILS, [gtk+-2.0 >= $GTK_REQUIRED,
++                                   libgnome-2.0 >= $LIBGNOME_REQUIRED,
++                                   libgnomeui-2.0 >= $LIBGNOMEUI_REQUIRED])
++   AC_SUBST(GNOME_UTILS_CFLAGS)
++   AC_SUBST(GNOME_UTILS_LIBS)
++
++   PKG_CHECK_MODULES(GNOMEVFS, [gtk+-2.0 >= $GTK_REQUIRED,
++                                libgnome-2.0 >= $LIBGNOME_REQUIRED,
++                                libgnomeui-2.0 >= $LIBGNOMEUI_REQUIRED])
++   AC_SUBST(GNOMEVFS_CFLAGS)
++   AC_SUBST(GNOMEVFS_LIBS)
++
++   PKG_CHECK_MODULES(GNOMEDESKTOP, [gnome-desktop-2.0 >= $LIBGNOME_DESKTOP_REQUIRED])
++   AC_SUBST(GNOMEDESKTOP_CFLAGS)
++   AC_SUBST(GNOMEDESKTOP_LIBS)
+ 
+-PKG_CHECK_MODULES(GNOME_UTILS, [
+-        gtk+-2.0 >= $GTK_REQUIRED
+-        libgnome-2.0 >= $LIBGNOME_REQUIRED
+-        libgnomeui-2.0 >= $LIBGNOMEUI_REQUIRED],
+-        [have_gnome=yes] , [have_gnome=no])
+-
+-PKG_CHECK_MODULES(GNOMEVFS, [
+-        gnome-vfs-2.0 >= $GNOMEVFS_REQUIRED
+-        gnome-vfs-module-2.0 >= $GNOMEVFS_REQUIRED],
+-        [have_gnome=yes] , [have_gnome=no])
+-
+-PKG_CHECK_MODULES(GNOMEDESKTOP, [
+-        gnome-desktop-2.0 >= $LIBGNOME_DESKTOP_REQUIRED],
+-        [have_gnome=yes] , [have_gnome=no])
+-
+-
+-AM_CONDITIONAL(HAVE_GNOME, test "$have_gnome" = "yes")
+-AC_SUBST(GNOME_UTILS_CFLAGS)
+-AC_SUBST(GNOME_UTILS_LIBS)
+-AC_SUBST(GNOMEVFS_CFLAGS)
+-AC_SUBST(GNOMEVFS_LIBS)
+-AC_SUBST(GNOMEDESKTOP_CFLAGS)
+-AC_SUBST(GNOMEDESKTOP_LIBS)
+-
+-if test "$have_gnome" = "yes"; then
+    GNOME_COMMON_INIT
+ fi
+ 
++AM_CONDITIONAL(HAVE_GNOME, test "x$enable_gui" != "xno")
+ 
+ ##################################################################
+ # check for poppler's glib bingings
+ ##################################################################
+ 
+-POPPLER_GLIB_REQUIRED=0.4.5
+-CAIRO_REQUIRED=1.0
+ GDK_REQUIRED=1.0
++CAIRO_REQUIRED=1.0
++POPPLER_GLIB_REQUIRED=0.4.5
+ 
+-PKG_CHECK_MODULES(POPPLER_GLIB, [
+-	poppler-glib >= $POPPLER_GLIB_REQUIRED
+-	cairo >= $CAIRO_REQUIRED
+-	gdk-2.0 >= $GDK_REQUIRED],
+-	[have_poppler=yes] , [have_poppler=no])
+-
+-AM_CONDITIONAL(HAVE_POPPLER_GLIB, test "$have_poppler" = "yes")
+-AC_SUBST(POPPLER_GLIB_CFLAGS)
+-AC_SUBST(POPPLER_GLIB_LIBS)
+-test "$have_poppler" = "yes" && AC_DEFINE(HAVE_POPPLER, [], [Define if we have poppler])
++AC_ARG_ENABLE([pdf],
++              AC_HELP_STRING([--disable-pdf], [Disable PDF data extractor]),,
++              [enable_pdf=yes])
++
++if test "x$enable_pdf" != "xno" ; then
++   PKG_CHECK_MODULES(POPPLER_GLIB, [poppler-glib >= $POPPLER_GLIB_REQUIRED,
++                                    cairo >= $CAIRO_REQUIRED,
++                                    gdk-2.0 >= $GDK_REQUIRED])
++   AC_SUBST(POPPLER_GLIB_CFLAGS)
++   AC_SUBST(POPPLER_GLIB_LIBS)
+ 
++   AC_DEFINE(HAVE_POPPLER, 1, [Define if we have poppler])
++fi
++
++AM_CONDITIONAL(HAVE_POPPLER_GLIB, test "x$enable_pdf" != "xno")
+ 
+ ##################################################################
+ # check for libpng
+@@ -407,15 +352,20 @@
+ 
+ LIBPNG_REQUIRED=1.2
+ 
+-PKG_CHECK_MODULES(LIBPNG, [
+-	libpng >= $LIBPNG_REQUIRED],
+-	[have_libpng=yes] , [have_png=no])
+-
+-AM_CONDITIONAL(HAVE_LIBPNG, test "$have_libpng" = "yes")
+-AC_SUBST(LIBPNG_CFLAGS)
+-AC_SUBST(LIBPNG_LIBS)
+-test "$have_libpng" = "yes" && AC_DEFINE(HAVE_LIBPNG, [], [Define if we have libpng])
++AC_ARG_ENABLE([png],
++              AC_HELP_STRING([--disable-png], [Disable PNG data extractor]),,
++              [enable_png=yes])
++
++if test "x$enable_png" != "xno" ; then
++   PKG_CHECK_MODULES(LIBPNG, [libpng >= $LIBPNG_REQUIRED])
++
++   AC_SUBST(LIBPNG_CFLAGS)
++   AC_SUBST(LIBPNG_LIBS)
++
++   AC_DEFINE(HAVE_LIBPNG, 1, [Define if we have libpng])
++fi
+ 
++AM_CONDITIONAL(HAVE_LIBPNG, test "x$enable_png" != "xno")
+ 
+ ##################################################################
+ # check for libexif
+@@ -423,14 +373,20 @@
+ 
+ LIBEXIF_REQUIRED=0.6
+ 
+-PKG_CHECK_MODULES(LIBEXIF, [
+-	libexif >= $LIBEXIF_REQUIRED],
+-	[have_libexif=yes] , [have_libexif=no])
+-
+-AM_CONDITIONAL(HAVE_LIBEXIF, test "$have_libexif" = "yes")
+-AC_SUBST(LIBEXIF_CFLAGS)
+-AC_SUBST(LIBEXIF_LIBS)
+-test "$have_libexif" = "yes" && AC_DEFINE(HAVE_LIBEXIF, [], [Define if we have libexif])
++AC_ARG_ENABLE(exif,
++              AC_HELP_STRING([--disable-exif], [Disable exif data extractor]),,
++              [enable_exif=yes])
++
++if test "x$enable_exif" != "xno" ; then
++   PKG_CHECK_MODULES(LIBEXIF, [libexif >= $LIBEXIF_REQUIRED])
++
++   AC_SUBST(LIBEXIF_CFLAGS)
++   AC_SUBST(LIBEXIF_LIBS)
++
++   AC_DEFINE(HAVE_LIBEXIF, 1, [Define if we have libexif])
++fi
++
++AM_CONDITIONAL(HAVE_LIBEXIF, test "x$enabel_exif" != "xno")
+ 
+ ##################################################################
+ # check for libgsf
+@@ -438,14 +394,20 @@
+ 
+ LIBGSF_REQUIRED=1.13
+ 
+-PKG_CHECK_MODULES(LIBGSF, [
+-	libgsf-1 >= $LIBGSF_REQUIRED],
+-	[have_libgsf=yes] , [have_libgsf=no])
+-
+-AM_CONDITIONAL(HAVE_LIBGSF, test "$have_libgsf" = "yes")
+-AC_SUBST(LIBGSF_CFLAGS)
+-AC_SUBST(LIBGSF_LIBS)
+-test "$have_libgsf" = "yes" && AC_DEFINE(HAVE_LIBGSF, [], [Define if we have libgsf])
++AC_ARG_ENABLE(gsf,
++              AC_HELP_STRING([--disable-gsf], [Disable GSF data extractor]),,
++              [enable_gsf=yes])
++
++if test "x$enable_gsf" != "xno" ; then
++   PKG_CHECK_MODULES(LIBGSF, [libgsf-1 >= $LIBGSF_REQUIRED])
++
++   AC_SUBST(LIBGSF_CFLAGS)
++   AC_SUBST(LIBGSF_LIBS)
++
++   AC_DEFINE(HAVE_LIBGSF, 1, [Define if we have libgsf])
++fi
++
++AM_CONDITIONAL(HAVE_LIBGSF, test "x$enable_gsf" != "xno")
+ 
+ ####################################################################
+ # Check ioprio support
+@@ -505,8 +467,8 @@
+ 	compiler:				${CC}
+ 	enable gcc warnings:			$warning_support
+ 	database engine:			SQLite
+-	available file mointor backends:	$fs_monitor_backends
+-	file monitor backend to be used:	$primary_backend
++	available file mointor backends:	$FS_MONITORING_BACKENDS
++	file monitor backend to be used:	$PRIMARY_BACKEND
+ 	inotify header location:		$inotify_header
+ 	ioprio support:				$ioprio_support
+ 	build search tool (GNOME):		$have_gnome
