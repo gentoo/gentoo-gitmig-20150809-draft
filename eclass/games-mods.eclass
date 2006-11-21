@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.9 2006/11/10 17:04:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.10 2006/11/21 22:35:22 wolf31o2 Exp $
 
 # Variables to specify in an ebuild which uses this eclass:
 # GAME - (doom3, quake4 or ut2004, etc), unless ${PN} starts with e.g. "doom3-"
@@ -325,7 +325,7 @@ games-mods_src_install() {
 			directories=$(cd "${D}"/"${INS_DIR}";find . -maxdepth 1 -type d -printf '%P ')
 			for i in ${directories}
 			do
-				if [ -s "${GAMES_PREFIX_OPT}"/"${GAME}"/${i} ]
+				if [ -h "${GAMES_PREFIX_OPT}"/"${GAME}"/${i} ]
 				then
 					# Skip this directory, and just run a symlink
 					dosym "${INS_DIR}"/${i} \
