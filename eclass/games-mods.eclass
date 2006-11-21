@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.10 2006/11/21 22:35:22 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.11 2006/11/21 23:27:35 wolf31o2 Exp $
 
 # Variables to specify in an ebuild which uses this eclass:
 # GAME - (doom3, quake4 or ut2004, etc), unless ${PN} starts with e.g. "doom3-"
@@ -101,7 +101,7 @@ default_client() {
 }
 
 games-mods_pkg_setup() {
-	[ -z "${MOD_NAME}" ] && die "what is the name of this mod?"
+	[[ -z "${MOD_NAME}" ]] && die "what is the name of this mod?"
 
 	games_pkg_setup
 
@@ -168,6 +168,8 @@ games-mods_src_unpack() {
 			done
 		done
 	done
+	# Since we remove all of these anyway, let's move it to the eclass
+	rm -f 3355_patch
 }
 
 games-mods_src_install() {
@@ -193,7 +195,7 @@ games-mods_src_install() {
 	# If we have a README, install it
 	for readme in README*
 	do
-		if [ -e "${readme}" ]
+		if [[ -e "${readme}" ]]
 		then
 			dodoc "${readme}" || die "dodoc failed"
 		fi
@@ -313,11 +315,11 @@ games-mods_src_install() {
 	# be ${GAMES_DATADIR}/${GAME}/${MOD_DIR} in most cases, and symlinking it
 	# into ${GAMES_PREFIX_OPT}/${GAME}/${MOD_DIR} for each game.  This should
 	# allow us to support both binary and source-based games easily.
-	if [ -d "${GAMES_PREFIX_OPT}"/"${GAME}" ]
+	if [[ -d "${GAMES_PREFIX_OPT}"/"${GAME}" ]]
 	then
 		dodir "${GAMES_PREFIX_OPT}"/"${GAME}"
 		mod=$(echo "${INS_DIR}" | sed -e "s:${GAMES_DATADIR}/${GAME}::" -e "s:^/::" )
-		if [ -z "${mod}" ]
+		if [[ -z "${mod}" ]]
 		then
 			# Our mod doesn't have its own directory.  We now traverse the
 			# directory structure and try to symlink everything to
@@ -325,12 +327,12 @@ games-mods_src_install() {
 			directories=$(cd "${D}"/"${INS_DIR}";find . -maxdepth 1 -type d -printf '%P ')
 			for i in ${directories}
 			do
-				if [ -h "${GAMES_PREFIX_OPT}"/"${GAME}"/${i} ]
+				if [[ -h "${GAMES_PREFIX_OPT}"/"${GAME}"/${i} ]]
 				then
 					# Skip this directory, and just run a symlink
 					dosym "${INS_DIR}"/${i} \
 						"${GAMES_PREFIX_OPT}"/"${GAME}"/${i} || die
-				elif [ -d "${GAMES_PREFIX_OPT}"/"${GAME}"/${i} ]
+				elif [[ -d "${GAMES_PREFIX_OPT}"/"${GAME}"/${i} ]]
 				then
 					dodir "${GAMES_PREFIX_OPT}"/"${GAME}"/${i}
 					cd "${D}"/"${INS_DIR}"/${i}
@@ -342,7 +344,7 @@ games-mods_src_install() {
 							dosym "${INS_DIR}"/${i}/${j} \
 								"${GAMES_PREFIX_OPT}"/"${GAME}"/${i}/${j} \
 								|| die
-						elif [ ! -e "${GAMES_PREFIX_OPT}"/"${GAME}"/${i}/${j} ]
+						elif [[ ! -e "${GAMES_PREFIX_OPT}"/"${GAME}"/${i}/${j} ]]
 						then
 							dosym "${INS_DIR}"/${i}/${j} \
 								"${GAMES_PREFIX_OPT}"/"${GAME}"/${i}/${j} \
@@ -366,7 +368,7 @@ games-mods_src_install() {
 					cp -a "${D}"/"${INS_DIR}"/${i} \
 						${D}/"${GAMES_PREFIX_OPT}"/"${GAME}"/${i} || die
 			done
-		elif [ ! -f "${GAMES_PREFIX_OPT}"/"${GAME}"/${mod} ]
+		elif [[ ! -f "${GAMES_PREFIX_OPT}"/"${GAME}"/${mod} ]]
 		then
 			elog "Creating symlink for ${mod}"
 			dosym "${INS_DIR}" "${GAMES_PREFIX_OPT}"/"${GAME}" || die
@@ -482,7 +484,8 @@ EOF
 }
 
 games-mods_make_conf.d() {
-	if [ -e ${FILESDIR}/${GAME_EXE}-${MOD_DIR}.conf.d ] ; then
+	if [[ -e ${FILESDIR}/${GAME_EXE}-${MOD_DIR}.conf.d ]]
+	then
 		cp ${FILESDIR}/${GAME_EXE}-${MOD_DIR}.conf.d \
 			"${T}"/${GAME_EXE}-${MOD_DIR}-ded.conf.d
 		return 0
