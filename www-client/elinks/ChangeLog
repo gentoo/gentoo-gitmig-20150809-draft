@@ -1,6 +1,11 @@
 # ChangeLog for www-client/elinks
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.53 2006/11/21 16:58:29 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.54 2006/11/21 17:05:39 spock Exp $
+
+  21 Nov 2006; Michał Januszewski <spock@gentoo.org> elinks-0.10.6.ebuild,
+  elinks-0.11.0.ebuild, elinks-0.11.1.ebuild:
+  Add a fix for bug #155733 (fixes compilation issues when the 'debug' flag is
+  used).
 
 *elinks-0.11.2 (21 Nov 2006)
 

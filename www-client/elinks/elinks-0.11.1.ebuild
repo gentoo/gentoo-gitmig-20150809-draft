@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.11.1.ebuild,v 1.9 2006/11/04 20:01:17 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.11.1.ebuild,v 1.10 2006/11/21 17:05:39 spock Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.4"
@@ -53,6 +53,7 @@ src_unpack() {
 	if use unicode ; then
 		epatch ${FILESDIR}/elinks-0.10.1-utf_8_io-default.patch
 	fi
+	sed -i -e 's/-Werror//' configure*
 }
 
 src_compile() {
