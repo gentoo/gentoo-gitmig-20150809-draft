@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.48 2006/11/10 14:15:40 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.49 2006/11/21 14:36:11 phreak Exp $
+
+*openvz-sources-028.005 (21 Nov 2006)
+
+  21 Nov 2006; Christian Heim <phreak@gentoo.org>
+  +openvz-sources-028.005.ebuild:
+  Version bump, adding FUSE support for VE's, fixing critical scheduler bugs,
+  misc. bug and compilation fixes.
 
 *openvz-sources-028.003 (10 Nov 2006)
 
