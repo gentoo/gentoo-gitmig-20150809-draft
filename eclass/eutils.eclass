@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.264 2006/11/14 12:04:48 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.265 2006/11/21 16:58:57 wolf31o2 Exp $
 #
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
@@ -816,7 +816,7 @@ make_desktop_entry() {
 
 			games)
 				case ${catmin} in
-					action)     type=ActionGame;;
+					action|fps) type=ActionGame;;
 					arcade)     type=ArcadeGame;;
 					board)      type=BoardGame;;
 					kids)       type=KidsGame;;
