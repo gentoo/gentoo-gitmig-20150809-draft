@@ -1,6 +1,25 @@
 # ChangeLog for media-video/vdr
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.72 2006/11/07 20:36:30 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.73 2006/11/21 19:27:34 zzam Exp $
+
+  21 Nov 2006; Matthias Schwarzott <zzam@gentoo.org>
+  -files/vdr-add-svdrp-down-0.1.diff,
+  -files/1.3.27/vdr-1.3.27-SourceCaps.diff,
+  -files/1.3.27/vdr-1.3.27-SourceCaps-lnb-sharing.diff,
+  -files/vdr-1.3.32-daemon.patch,
+  -files/1.3.34/SourceCaps-1.3.33-lnb-sharing.patch,
+  -files/1.3.34/SourceCaps-1.3.33.patch,
+  -files/1.3.34/vdr-1.3.34-shutdown-retry.diff,
+  -files/vdr-1.3.36-SourceCaps.patch,
+  -files/vdr-1.3.36-SourceCaps-for-lnb-sharing.patch,
+  -files/vdr-1.3.36-low-space-crash.diff, -vdr-1.3.27.ebuild,
+  -vdr-1.3.34.ebuild, -vdr-1.3.34-r1.ebuild, -vdr-1.3.34-r2.ebuild,
+  -vdr-1.3.36.ebuild, -vdr-1.3.36-r1.ebuild, -vdr-1.3.36-r2.ebuild,
+  -vdr-1.3.41.ebuild, -vdr-1.3.41-r1.ebuild, -vdr-1.3.41-r2.ebuild,
+  -vdr-1.3.44.ebuild, -vdr-1.3.45.ebuild, -vdr-1.3.45-r1.ebuild,
+  -vdr-1.4.0.ebuild, -vdr-1.4.0-r1.ebuild, -vdr-1.4.1.ebuild,
+  -vdr-1.4.1-r1.ebuild:
+  Now did cleanup of old vdr-ebuilds.
 
   07 Nov 2006; Matthias Schwarzott <zzam@gentoo.org> vdr-1.4.3.ebuild:
   Marked stable on x86.
