@@ -6,6 +6,11 @@
 <email>flameeyes@gentoo.org</email>
 <name>Diego Pettenò</name>
 </maintainer>
+<maintainer>
+ <email>drizzt@gentoo.org</email>
+ <name>Timothy Redaelli</name>
+ <description>Secondary Maintainer</description>
+</maintainer>
 <longdescription lang="en">
 Console BitTorrent client using ncurses based on libtorrent written in C++.
 </longdescription>
