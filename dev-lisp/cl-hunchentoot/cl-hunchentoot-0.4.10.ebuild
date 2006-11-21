@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-hunchentoot/cl-hunchentoot-0.4.10.ebuild,v 1.1 2006/11/21 04:23:25 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-hunchentoot/cl-hunchentoot-0.4.10.ebuild,v 1.2 2006/11/21 04:29:22 mkennedy Exp $
 
 inherit common-lisp
 
@@ -10,6 +10,7 @@ SRC_URI="mirror://gentoo/hunchentoot_${PV}.orig.tar.gz"
 LICENSE="BSD"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
+
 DEPEND="dev-lisp/cl-md5
 	dev-lisp/cl-base64
 	dev-lisp/cl-rfc2388
