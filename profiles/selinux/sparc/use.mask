@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/sparc/use.mask,v 1.1 2006/10/08 18:37:25 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/sparc/use.mask,v 1.2 2006/11/21 01:50:02 mr_bones_ Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -150,6 +150,10 @@ video_cards_vga
 # Jason Wever <weeve@gentoo.org> - 10 April 2006
 # Mask ifp use flag for amarok until someone can confirm it works
 ifp
+
+# Gustavo Zacarias <gustavoz@gentoo.org> - 8 November 2006
+# Same applies to mtp wrt amarok above
+mtp
 
 # Jason Wever <weeve@gentoo.org> - 01 May 2006
 # Mask nforce2 use flag as NVIDIA doesn't make mobos for SPARC CPUs (yet :-P)
