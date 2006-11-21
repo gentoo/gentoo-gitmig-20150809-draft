@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6325 2006/11/21 10:59:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6326 2006/11/21 16:55:47 chutzpah Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -280,10 +280,6 @@ sci-mathematics/gturing
 # dead upstream, should be replaced by PolyORB
 # masked for removal
 dev-ada/adabroker
-
-# Patrick McLean <chutzpah@gentoo.org> (13 Nov 2006)
-# Mask beta versions, final should be coming out in a day or two
-=dev-scheme/drscheme-259*
 
 # George Shapovalov <george@gentoo.org> (13 Nov 2006)
 # Masked "old style" lib versions for removal 
