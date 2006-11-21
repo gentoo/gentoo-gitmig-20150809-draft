@@ -1,6 +1,10 @@
 # ChangeLog for net-print/pykota
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/ChangeLog,v 1.17 2006/11/18 11:37:10 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/ChangeLog,v 1.18 2006/11/21 22:14:21 genstef Exp $
+
+  21 Nov 2006; Stefan Schweizer <genstef@gentoo.org>
+  pykota-1.24_p2174.ebuild:
+  Fix bug 155865 thanks to linuxkrn and Matthias Bethke <matthias@towiski.de>
 
   18 Nov 2006; Stefan Schweizer <genstef@gentoo.org>
   -pykota-1.22_p1548.ebuild, -pykota-1.23_p1869.ebuild,

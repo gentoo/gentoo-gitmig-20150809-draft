@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.24_p2174.ebuild,v 1.3 2006/08/24 14:36:03 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.24_p2174.ebuild,v 1.4 2006/11/21 22:14:21 genstef Exp $
 
 inherit python eutils distutils
 
@@ -39,6 +39,9 @@ src_install() {
 	init_dir=/usr/share/doc/${P}/initscripts
 	insinto ${init_dir}
 	cp -pPR initscripts/* "${D}"/${init_dir}
+
+	# Fixes permissions for bug 155865 
+	chmod 700 "${D}"/usr/share/pykota/cupspykota
 
 	for doc in ${DOCS}; do
 		rm -f "${D}"/usr/share/doc/${PN}/${doc}
