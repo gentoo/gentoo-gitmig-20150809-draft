@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/rsibreak
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/ChangeLog,v 1.20 2006/10/29 00:23:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/ChangeLog,v 1.21 2006/11/21 12:35:36 flameeyes Exp $
+
+  21 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Give this back to kde herd.
 
   29 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> rsibreak-0.8.0.ebuild:
   Add support for LINGUAS variable to select translations and documentation

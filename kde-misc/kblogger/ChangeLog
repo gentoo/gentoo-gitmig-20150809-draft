@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kblogger
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kblogger/ChangeLog,v 1.8 2006/09/06 17:54:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kblogger/ChangeLog,v 1.9 2006/11/21 12:33:38 flameeyes Exp $
+
+  21 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Give this back to kde herd.
 
   06 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> kblogger-0.6.2.ebuild:
   Fix dependencies for monolithic KDE, thanks to Thorsten Becker in bug #146575.
