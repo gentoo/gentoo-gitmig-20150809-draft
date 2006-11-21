@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6324 2006/11/21 10:57:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6325 2006/11/21 10:59:46 robbat2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ## 
+
+# Robin H. Johnson <robbat2@gentoo.org> (21 Nov 2006)
+# bug #149660, scheduled for removal 2006-Dec-21.
+net-nds/migrationtools
 
 # Robin H. Johnson <robbat2@gentoo.org> (21 Nov 2006)
 # Block. It breaks badly on bigendian boxes.
