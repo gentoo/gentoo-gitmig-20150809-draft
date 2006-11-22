@@ -56,10 +56,10 @@ EBUILD gentoo-sources-2.6.18-r2.ebuild 1235 RMD160 fd41fcdc8e4ba7d96b7d7ac24622d
 MD5 c7458050f31f12af0f4a8ccb82d170ef gentoo-sources-2.6.18-r2.ebuild 1235
 RMD160 fd41fcdc8e4ba7d96b7d7ac24622d88a038f48c0 gentoo-sources-2.6.18-r2.ebuild 1235
 SHA256 c49b0a79592f5f0a1f31b98f8a72f30a72931d838a038771f39afbf2e77b74f2 gentoo-sources-2.6.18-r2.ebuild 1235
-EBUILD gentoo-sources-2.6.18-r3.ebuild 1233 RMD160 c373260a1a620aa1fa355f8112117a222745eca9 SHA1 a5faba1e752a768cc0b4fb208d2477f2c2aad181 SHA256 c2fffda416751c3213f437bf01b9cff20abbf6b326715aa997f1f1373090d92f
-MD5 dc700687b3594a6acbb9770585e87b8f gentoo-sources-2.6.18-r3.ebuild 1233
-RMD160 c373260a1a620aa1fa355f8112117a222745eca9 gentoo-sources-2.6.18-r3.ebuild 1233
-SHA256 c2fffda416751c3213f437bf01b9cff20abbf6b326715aa997f1f1373090d92f gentoo-sources-2.6.18-r3.ebuild 1233
+EBUILD gentoo-sources-2.6.18-r3.ebuild 1231 RMD160 b88cb9e3c42873c60335b46382fd20e75ff1c738 SHA1 d70b86950c3e9a1187c80ee10866b85bc7904239 SHA256 1da0178d4451f91f05a68acebebf264e5d161b1faa24e7b0d2ffde1da7e8fa90
+MD5 76e4bd90164bd1ff58270ab6b34dece4 gentoo-sources-2.6.18-r3.ebuild 1231
+RMD160 b88cb9e3c42873c60335b46382fd20e75ff1c738 gentoo-sources-2.6.18-r3.ebuild 1231
+SHA256 1da0178d4451f91f05a68acebebf264e5d161b1faa24e7b0d2ffde1da7e8fa90 gentoo-sources-2.6.18-r3.ebuild 1231
 EBUILD gentoo-sources-2.6.18.ebuild 1232 RMD160 1370fa2c089e32f71fa27b1c9fe64ac1774503ed SHA1 dc2f7cdabf6ede50f0c3344badaedda3f4b5015e SHA256 13ae33b8034a4b176d83fae30a298aed96e40d36aa7660f740f51f01f0bee5d0
 MD5 7b4cf466c45ac4e8c1625d31fdf9b05a gentoo-sources-2.6.18.ebuild 1232
 RMD160 1370fa2c089e32f71fa27b1c9fe64ac1774503ed gentoo-sources-2.6.18.ebuild 1232
