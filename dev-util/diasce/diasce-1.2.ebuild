@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diasce/diasce-1.2.ebuild,v 1.10 2006/11/22 17:11:13 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diasce/diasce-1.2.ebuild,v 1.11 2006/11/22 18:22:09 masterdriverz Exp $
 
 MY_P=${PN}2-${PV}
 S=${WORKDIR}/${MY_P}
