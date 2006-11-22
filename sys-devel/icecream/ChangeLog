@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/icecream
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/ChangeLog,v 1.6 2006/10/11 01:50:50 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/ChangeLog,v 1.7 2006/11/22 19:24:16 dberkholz Exp $
+
+  22 Nov 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  icecream-0.7.14.ebuild:
+  (#154532) icemon isn't in portage yet, so don't suggest emerging it.
 
 *icecream-0.7.14 (11 Oct 2006)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/icecream-0.7.14.ebuild,v 1.1 2006/10/11 01:50:50 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/icecream-0.7.14.ebuild,v 1.2 2006/11/22 19:24:16 dberkholz Exp $
 
 inherit autotools eutils flag-o-matic
 
@@ -88,6 +88,6 @@ pkg_postinst() {
 	elog
 	elog "Further usage instructions: http://www.opensuse.org/icecream"
 	elog
-	elog "The icecream monitor is no longer included in this package, emerge"
-	elog "kde-misc/icemon if you wish to graphically monitor your compile cluster."
+	elog "The icecream monitor is no longer included in this package."
+	elog "See http://bugs.gentoo.org/show_bug.cgi?id=139432 for more info."
 }
