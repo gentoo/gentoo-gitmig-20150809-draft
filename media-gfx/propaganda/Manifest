@@ -1,3 +1,30 @@
-MD5 8b8a904398098f3dd1001bc04584d389 ChangeLog 785
-MD5 e6bb4f6d0d76baa9aba520b1bacd4926 files/digest-propaganda-1.0 1040
+DIST Propaganda-13.tar.gz 4143608
+DIST Propaganda-14.tar.gz 3734658
+DIST Propaganda-For-E.tar.gz 4234559
+DIST Propaganda-Vol-01.tar.gz 1086117
+DIST Propaganda-Vol-02.tar.gz 335094
+DIST Propaganda-Vol-03.tar.gz 1186808
+DIST Propaganda-Vol-04.tar.gz 1136867
+DIST Propaganda-Vol-05.tar.gz 1020372
+DIST Propaganda-Vol-06.tar.gz 1165404
+DIST Propaganda-Vol-07.tar.gz 1736281
+DIST Propaganda-Vol-08.tar.gz 1486421
+DIST Propaganda-Vol-09.tar.gz 1664869
+DIST Propaganda-Vol-10.tar.gz 6376914
+DIST Propaganda-Vol-11.tar.gz 3030910
+DIST Propaganda-Vol-12.tar.gz 3140955
+EBUILD propaganda-1.0.ebuild 1930 RMD160 d533b0b36df8bdd7a2179cd60eabb7f6cd5bfe85 SHA1 a5a8c55eea7532dcb1b33116aeb77094735db28a SHA256 ae5ee50cdd1d12fe866aa167a9131e98cd281a52abf470e499978b5c2352c1d6
 MD5 7d99236320b1830433f3adf990b27082 propaganda-1.0.ebuild 1930
+RMD160 d533b0b36df8bdd7a2179cd60eabb7f6cd5bfe85 propaganda-1.0.ebuild 1930
+SHA256 ae5ee50cdd1d12fe866aa167a9131e98cd281a52abf470e499978b5c2352c1d6 propaganda-1.0.ebuild 1930
+MISC ChangeLog 785 RMD160 981a5f1c6604205851ec4ea9f9bb1e72e80a4537 SHA1 a2c83ca882d6176fc5cc0f6d4f992dccc0eeac63 SHA256 fbc6430b2af270b8a5cf008edfa64ee5c266dd42f93ef179d9c8e46ef096d8c7
+MD5 8b8a904398098f3dd1001bc04584d389 ChangeLog 785
+RMD160 981a5f1c6604205851ec4ea9f9bb1e72e80a4537 ChangeLog 785
+SHA256 fbc6430b2af270b8a5cf008edfa64ee5c266dd42f93ef179d9c8e46ef096d8c7 ChangeLog 785
+MISC metadata.xml 210 RMD160 c9fe92a44d079ef04bcdd31de9867de5bb9f26e5 SHA1 efa00493ddec7289a21bc4cbcc6e95ec4de749d5 SHA256 90082fe26a119a63ca8fbe227f66c33ba74167b6cf28e2cef02dea6c4f656c39
+MD5 c667f921ee8d48ce17ebef0f8d601ea4 metadata.xml 210
+RMD160 c9fe92a44d079ef04bcdd31de9867de5bb9f26e5 metadata.xml 210
+SHA256 90082fe26a119a63ca8fbe227f66c33ba74167b6cf28e2cef02dea6c4f656c39 metadata.xml 210
+MD5 e6bb4f6d0d76baa9aba520b1bacd4926 files/digest-propaganda-1.0 1040
+RMD160 b885f2b8b489e8908e89e5ac74c343a317acfd3c files/digest-propaganda-1.0 1040
+SHA256 51d679b11f42d13f64174d0dd6a1700ca3f02ce78f44a6be1930e438c3bcb91c files/digest-propaganda-1.0 1040
