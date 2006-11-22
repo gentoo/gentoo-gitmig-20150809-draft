@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.0.ebuild,v 1.7 2006/11/06 03:57:08 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.0.ebuild,v 1.8 2006/11/22 03:23:20 markusle Exp $
 
 inherit eutils fortran toolchain-funcs multilib autotools java-pkg-opt-2
 
@@ -10,7 +10,7 @@ SRC_URI="http://scilabsoft.inria.fr/download/stable/${P}-src.tar.gz"
 HOMEPAGE="http://www.scilab.org/"
 
 SLOT="0"
-IUSE="ocaml tcltk gtk Xaw3d java"
+IUSE="ocaml tk gtk Xaw3d java"
 KEYWORDS="~x86 ~ppc"
 
 RDEPEND="virtual/blas
@@ -25,7 +25,7 @@ RDEPEND="virtual/blas
 		x11-libs/vte
 		=gnome-extra/gtkhtml-2*
 	)
-	tcltk? ( >=dev-lang/tk-8.4
+	tk? ( >=dev-lang/tk-8.4
 		>=dev-lang/tcl-8.4 )
 	Xaw3d? ( x11-libs/Xaw3d )
 	ocaml? ( dev-lang/ocaml )
@@ -35,9 +35,9 @@ DEPEND="${RDEPEND}
 	app-text/sablotron"
 
 pkg_setup() {
-	if ! use gtk && ! use tcltk; then
+	if ! use gtk && ! use tk; then
 		echo
-		eerror 'scilab must be built with either USE="gtk" or USE="tcltk"'
+		eerror 'scilab must be built with either USE="gtk" or USE="tk"'
 		die
 	fi
 	java-pkg-opt-2_pkg_setup
@@ -51,6 +51,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-makefile.patch
 	epatch "${FILESDIR}"/${P}-gtk-fix.patch
 	epatch "${FILESDIR}"/${P}-configure-gfortran.patch
+	epatch "${FILESDIR}"/${P}-java-pic.patch
 
 	# fix gfortran problems on ppc
 	if [[ "${ARCH}" == "ppc" ]];then
@@ -80,7 +81,7 @@ src_compile() {
 		myopts="${myopts} --with-gfortran"
 	fi
 
-	econf $(use_with tcltk tk) \
+	econf $(use_with tk) \
 		$(use_with Xaw3d xaw3d) \
 		$(use_with gtk gtk2 ) \
 		$(use_with ocaml) \
