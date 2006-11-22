@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/asmon
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmon/ChangeLog,v 1.15 2006/10/10 19:35:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmon/ChangeLog,v 1.16 2006/11/22 15:22:53 josejx Exp $
+
+  22 Nov 2006; Joseph Jezak <josejx@gentoo.org> asmon-0.7.ebuild:
+  Marked ppc stable for bug #153218.
 
 *asmon-0.7 (10 Oct 2006)
 
