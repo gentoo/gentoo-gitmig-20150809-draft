@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/qemu-softmmu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.26 2006/08/18 12:23:59 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.27 2006/11/22 11:18:28 kevquinn Exp $
+
+  22 Nov 2006; Kevin F. Quinn <kevquinn@gentoo.org>
+  qemu-softmmu-0.8.2-r1.ebuild:
+  Add QA variables indicating which files contain textrels, require
+  execstack, and contain WX PT_LOAD segments.  The TEXTRELs are a feature of how
+  qemu works.  The execstack/wx_load markings are for a foreign binary.
 
   18 Aug 2006; Luca Barbato <lu_zero@gentoo.org> qemu-softmmu-0.8.2.ebuild:
   remove stray dep
@@ -80,7 +86,7 @@
   x86 stable for qemu-softmmu-0.8.0 bug #123972.
 
   08 Jan 2006; Luca Barbato <lu_zero@gentoo.org> qemu-softmmu-0.8.0.ebuild:
-  Disable gcc checks, thanks to Robert Führicht <the_master_of_disaster@gmx.at>
+  Disable gcc checks, thanks to Robert FÃŒhricht <the_master_of_disaster@gmx.at>
 
 *qemu-softmmu-0.8.0 (23 Dec 2005)
 

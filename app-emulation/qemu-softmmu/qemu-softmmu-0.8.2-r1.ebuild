@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.8.2-r1.ebuild,v 1.2 2006/08/17 08:09:42 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.8.2-r1.ebuild,v 1.3 2006/11/22 11:18:28 kevquinn Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -23,6 +23,15 @@ DEPEND="virtual/libc
 RDEPEND="sdl? ( media-libs/libsdl )"
 
 S="${WORKDIR}/${P/-softmmu/}"
+
+QA_TEXTRELS="usr/bin/qemu
+	usr/bin/qemu-system-sparc
+	usr/bin/qemu-system-arm
+	usr/bin/qemu-system-ppc
+	usr/bin/qemu-system-mips
+	usr/bin/qemu-system-x86_64"
+QA_EXECSTACK="usr/share/qemu/openbios-sparc32"
+QA_WX_LOAD="usr/share/qemu/openbios-sparc32"
 
 set_target_list() {
 	TARGET_LIST="i386-softmmu ppc-softmmu sparc-softmmu x86_64-softmmu arm-softmmu mips-softmmu"
