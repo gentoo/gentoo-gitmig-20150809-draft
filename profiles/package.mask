@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6331 2006/11/22 00:07:58 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6332 2006/11/22 00:48:42 beandog Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -242,7 +242,6 @@ dev-python/python-gtkextra
 <media-sound/gqmpeg-0.91.1
 <media-sound/gqradio-1.9.2
 =media-video/coriander-1*
-<media-video/dvdrip-0.98.1
 <media-video/lives-0.9.1
 <media-video/ogle-gui-0.9.2
 <net-im/gabber-1
