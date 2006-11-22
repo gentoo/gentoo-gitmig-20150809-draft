@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-launch
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-launch/ChangeLog,v 1.8 2006/11/19 07:34:13 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-launch/ChangeLog,v 1.9 2006/11/22 03:16:34 mkennedy Exp $
+
+*cl-launch-2.03 (22 Nov 2006)
+
+  22 Nov 2006; Matthew Kennedy <mkennedy@gentoo.org> +cl-launch-2.03.ebuild:
+  New upstream version.
 
 *cl-launch-2.02 (19 Nov 2006)
 
