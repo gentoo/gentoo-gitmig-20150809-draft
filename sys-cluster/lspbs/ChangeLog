@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/lspbs
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lspbs/ChangeLog,v 1.5 2005/07/05 20:19:20 robbat2 Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lspbs/ChangeLog,v 1.6 2006/11/22 19:46:02 dberkholz Exp $
+
+*lspbs-1.1 (22 Nov 2006)
+
+  22 Nov 2006; Donnie Berkholz <dberkholz@gentoo.org>; +lspbs-1.1.ebuild:
+  (#153627) Bump, with a bit of ebuild cleanup to make it stop sucking.
 
 *lspbs-1.0-r1 (05 Jul 2005)
 
