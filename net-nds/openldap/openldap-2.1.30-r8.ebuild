@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.30-r8.ebuild,v 1.2 2006/11/21 21:45:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.30-r8.ebuild,v 1.3 2006/11/22 02:55:18 robbat2 Exp $
 
 inherit eutils
 
@@ -100,7 +100,7 @@ src_unpack() {
 	EPATCH_OPTS="-p0 -d ${S}" epatch ${FILESDIR}/${PN}-2.3.27-CVE-2006-5779.patch
 
 	# reconf compat and current for RPATH solve
-	cd ${WORKDIR}/${S}
+	cd ${S}
 	einfo "Running libtoolize on ${S}"
 	libtoolize --copy --force
 	einfo "Running aclocal on ${S}"

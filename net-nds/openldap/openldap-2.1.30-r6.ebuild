@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.30-r6.ebuild,v 1.10 2006/10/18 23:02:30 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.30-r6.ebuild,v 1.11 2006/11/22 02:55:18 robbat2 Exp $
 
 inherit eutils
 
@@ -97,7 +97,7 @@ src_unpack() {
 	EPATCH_OPTS="-p0 -d ${S}" epatch ${FILESDIR}/${PN}-2.1.30-autoconf25.patch
 
 	# reconf compat and current for RPATH solve
-	cd ${WORKDIR}/${S}
+	cd ${S}
 	einfo "Running libtoolize on ${S}"
 	libtoolize --copy --force
 	einfo "Running aclocal on ${S}"
