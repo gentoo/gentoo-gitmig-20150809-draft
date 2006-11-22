@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/freecdb
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freecdb/ChangeLog,v 1.12 2005/05/13 07:03:19 mr_bones_ Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freecdb/ChangeLog,v 1.13 2006/11/22 18:59:54 masterdriverz Exp $
+
+  22 Nov 2006; Charlie Shepherd <masterdriverz@gentoo.org> ChangeLog:
+  Add blocker with dev-db/cdb, thanks to Tuan Van for reporting, bug 115594
 
   13 May 2005; Michael Sterrett <mr_bones_@gentoo.org> freecdb-0.62.ebuild:
   remove bogus PROVIDE; tidy
