@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/wildfire/wildfire-3.1.0.ebuild,v 1.4 2006/11/22 01:43:08 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/wildfire/wildfire-3.1.1.ebuild,v 1.1 2006/11/22 01:43:08 humpback Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -52,33 +52,33 @@ src_compile() {
 	# Jikes doesn't support -source 1.5
 	java-pkg_filter-compiler jikes
 
-	eant -f build/build.xml jar plugins $(use_doc)
+	eant -f build/build.xml wildfire plugins plugins-dev $(use_doc)
 }
 
 src_install() {
 	dodir /opt/wildfire
-
+	
 	doinitd ${FILESDIR}/init.d/wildfire
 	doconfd ${FILESDIR}/conf.d/wildfire
 
 	dodir /opt/wildfire/conf
 	insinto /opt/wildfire/conf
-	newins target/conf/wildfire.xml wildfire.xml.sample
+	newins target/wildfire/conf/wildfire.xml wildfire.xml.sample
 
 	dodir /opt/wildfire/logs
 	keepdir /opt/wildfire/logs
 
 	dodir /opt/wildfire/lib
 	insinto /opt/wildfire/lib
-	doins target/lib/*
+	doins target/wildfire/lib/*
 
 	dodir /opt/wildfire/plugins
 	insinto /opt/wildfire/plugins
-	doins -r target/plugins/*
+	doins -r target/wildfire/plugins/*
 
 	dodir /opt/wildfire/resources
 	insinto /opt/wildfire/resources
-	doins -r target/resources/*
+	doins -r target/wildfire/resources/*
 
 	if use doc; then
 		dohtml -r documentation/docs/*
