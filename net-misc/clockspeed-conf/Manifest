@@ -1,4 +1,20 @@
-MD5 61836cee91d55bb2625cbaeebb8a0252 ChangeLog 592
-MD5 d41701b14b08b67884275965b79d3b5e clockspeed-conf-0.4.5-r1.ebuild 764
-MD5 fcff2d4f599d8921bf32f06e71cf1860 files/digest-clockspeed-conf-0.4.5-r1 71
+AUX clockspeed-conf-0.4.5-gentoo.patch 674 RMD160 49aa749237ab8d5f5a25b1fb5e59dd883ba672ea SHA1 7378096fbc780de83096ece2ee703399fa03b8b0 SHA256 6ff1a21eb60969f3dfce2990ef9427a57ca9f061c4c380441df107f11b020533
 MD5 d7846d884b197274ba50d50473217534 files/clockspeed-conf-0.4.5-gentoo.patch 674
+RMD160 49aa749237ab8d5f5a25b1fb5e59dd883ba672ea files/clockspeed-conf-0.4.5-gentoo.patch 674
+SHA256 6ff1a21eb60969f3dfce2990ef9427a57ca9f061c4c380441df107f11b020533 files/clockspeed-conf-0.4.5-gentoo.patch 674
+DIST clockspeed-conf-0.4.5.tar.gz 7190
+EBUILD clockspeed-conf-0.4.5-r1.ebuild 764 RMD160 dc5248a21aad3f2a8ef08b6575a13d52ba45a287 SHA1 cb1a0484724d770eb97ae61e712552895e8043de SHA256 64ecd633ca94bcfdb60f73214d9ec7c61f4f3fe646fa6beeeee84645367fb321
+MD5 d41701b14b08b67884275965b79d3b5e clockspeed-conf-0.4.5-r1.ebuild 764
+RMD160 dc5248a21aad3f2a8ef08b6575a13d52ba45a287 clockspeed-conf-0.4.5-r1.ebuild 764
+SHA256 64ecd633ca94bcfdb60f73214d9ec7c61f4f3fe646fa6beeeee84645367fb321 clockspeed-conf-0.4.5-r1.ebuild 764
+MISC ChangeLog 592 RMD160 e62ebed69f5286d032d815d5f2ebbc04dc3c4cbe SHA1 42e413a83aad0937e48c144dae5d1173713ddb5f SHA256 3891202c90f25dffe34794e198ae65a709def8fd9d27d2a495b4f2b9bc91132c
+MD5 61836cee91d55bb2625cbaeebb8a0252 ChangeLog 592
+RMD160 e62ebed69f5286d032d815d5f2ebbc04dc3c4cbe ChangeLog 592
+SHA256 3891202c90f25dffe34794e198ae65a709def8fd9d27d2a495b4f2b9bc91132c ChangeLog 592
+MISC metadata.xml 210 RMD160 c9fe92a44d079ef04bcdd31de9867de5bb9f26e5 SHA1 efa00493ddec7289a21bc4cbcc6e95ec4de749d5 SHA256 90082fe26a119a63ca8fbe227f66c33ba74167b6cf28e2cef02dea6c4f656c39
+MD5 c667f921ee8d48ce17ebef0f8d601ea4 metadata.xml 210
+RMD160 c9fe92a44d079ef04bcdd31de9867de5bb9f26e5 metadata.xml 210
+SHA256 90082fe26a119a63ca8fbe227f66c33ba74167b6cf28e2cef02dea6c4f656c39 metadata.xml 210
+MD5 fcff2d4f599d8921bf32f06e71cf1860 files/digest-clockspeed-conf-0.4.5-r1 71
+RMD160 8956549019c301daf885cbd583af1259b2f4b669 files/digest-clockspeed-conf-0.4.5-r1 71
+SHA256 78b122f133c1c70ff28d8796b9127b9f98bf957a5c0dae57ef1ff4677f50fab2 files/digest-clockspeed-conf-0.4.5-r1 71
