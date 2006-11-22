@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vmware.eclass,v 1.15 2006/10/14 20:27:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vmware.eclass,v 1.16 2006/11/22 17:16:14 wolf31o2 Exp $
 
 # This eclass is for all vmware-* ebuilds in the tree and should contain all
 # of the common components across the multiple packages.
@@ -90,11 +90,13 @@ vmware_determine_product() {
 
 vmware_pkg_setup() {
 	vmware_determine_product
+	# We create a group for VMware users due to bugs #104480 and #106170
+	enewgroup "${VMWARE_GROUP}"
+}
+
+vmware_src_unpack() {
+	vmware_determine_product
 	case "${product}" in
-		vmware|vmware-console)
-			# We create a group for VMware users due to bugs #104480 and #106170
-			enewgroup "${VMWARE_GROUP}"
-			;;
 		vmware-tools)
 			# We grab our tarball from "CD"
 			einfo "You will need ${TARBALL} from the VMware installation."
@@ -102,13 +104,15 @@ vmware_pkg_setup() {
 			cdrom_get_cds ${TARBALL}
 			;;
 	esac
-}
-
-vmware_src_unpack() {
 	# If there is anything to unpack, at all, then we should be using MY_P.
 	if [[ -n "${MY_P}" ]]
 	then
-		unpack "${MY_P}".tar.gz
+		if [[ -e "${CDROM_ROOT}"/${MY_P}.tar.gz ]]
+		then
+			tar xzf "${CDROM_ROOT}"/${MY_P}.tar.gz
+		else
+			unpack "${MY_P}".tar.gz
+		fi
 
 		if [[ -n "${ANY_ANY}" ]]
 		then
@@ -151,11 +155,18 @@ vmware_src_unpack() {
 				epatch "${FILESDIR}"/${patch}
 			done
 		fi
-		# Unpack our new libs.
-		[ -f "${DISTDIR}"/vmware-libssl.so.0.9.7l.tar.bz2 ] && \
-			unpack vmware-libssl.so.0.9.7l.tar.bz2
-		[ -f "${DISTDIR}"/vmware-libcrypto.so.0.9.7l.tar.bz2 ] && \
-			unpack vmware-libcrypto.so.0.9.7l.tar.bz2
+		# Unpack our new libs
+		for a in ${A}
+		do
+			case ${a} in
+				vmware-libssl.so.0.9.7l.tar.bz2)
+					unpack vmware-libssl.so.0.9.7l.tar.bz2
+					;;
+				/vmware-libcrypto.so.0.9.7l.tar.bz2)
+					unpack vmware-libcrypto.so.0.9.7l.tar.bz2
+					;;
+			esac
+		done
 	fi
 }
 
@@ -195,14 +206,14 @@ vmware_src_install() {
 	cd "${S}"
 
 	# We remove the shipped libssl for bug #148682
-	if [ -d "${S}"/lib/lib/libssl.so.0.9.7 ]
+	if [ -d "${S}"/libssl.so.0.9.7 ]
 	then
 		rm -rf "${S}"/lib/lib/libssl.so.0.9.7
 		# Now, we move in our own
 		cp -pPR "${S}"/libssl.so.0.9.7 "${S}"/lib/lib
 	fi
 	# We remove the shipped libcrypto for bug #148682
-	if [ -d "${S}"/lib/lib/libcrypto.so.0.9.7 ]
+	if [ -d "${S}"/libcrypto.so.0.9.7 ]
 	then
 		rm -rf "${S}"/lib/lib/libcrypto.so.0.9.7
 		# Now, we move in our own
