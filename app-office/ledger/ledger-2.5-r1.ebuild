@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ledger-2.5-r1.ebuild,v 1.1 2006/11/20 09:28:56 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ledger-2.5-r1.ebuild,v 1.2 2006/11/22 15:09:10 peper Exp $
 
 inherit eutils elisp
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.newartisans.com/software.html"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="NewArtisans"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE="emacs debug gnuplot ofx xml"
 
