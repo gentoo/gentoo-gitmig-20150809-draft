@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ptrtd/ptrtd-0.5.2.ebuild,v 1.6 2005/07/30 18:23:19 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ptrtd/ptrtd-0.5.2.ebuild,v 1.7 2006/11/22 20:18:56 beandog Exp $
 
 DESCRIPTION="Portable Transport Relay Translator Daemon for IPv6"
 HOMEPAGE="http://v6web.litech.org/ptrtd/"
