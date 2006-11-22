@@ -1,25 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+DIST zisofs-tools-1.0.4.tar.bz2 40951
+DIST zisofs-tools-1.0.6.tar.bz2 53138
+EBUILD zisofs-tools-1.0.4-r1.ebuild 733 RMD160 d38cafa477c070004884aa95fb4e91320c7258df SHA1 5b46f6dc1dd2c206f029eecb4bbc4ebea30a4fe8 SHA256 da25385af4ee2b6fe304cf9264afeb225b700109bc5f3a55baf36c5dab7dc0ad
+MD5 51722fef1496cb52c43ce88e5f92b05a zisofs-tools-1.0.4-r1.ebuild 733
+RMD160 d38cafa477c070004884aa95fb4e91320c7258df zisofs-tools-1.0.4-r1.ebuild 733
+SHA256 da25385af4ee2b6fe304cf9264afeb225b700109bc5f3a55baf36c5dab7dc0ad zisofs-tools-1.0.4-r1.ebuild 733
+EBUILD zisofs-tools-1.0.6.ebuild 752 RMD160 921b9c3a3cca8dcdfdb168ff599ed80100dfb631 SHA1 32bbb5322f7cc03cf4e92bd437623fc553631c37 SHA256 ba7e7028592f3a1f275a7d27e8403060d05b051fc52158feb00604a55db68b4b
+MD5 134b7a6565da75a382b4d46d838ce5c3 zisofs-tools-1.0.6.ebuild 752
+RMD160 921b9c3a3cca8dcdfdb168ff599ed80100dfb631 zisofs-tools-1.0.6.ebuild 752
+SHA256 ba7e7028592f3a1f275a7d27e8403060d05b051fc52158feb00604a55db68b4b zisofs-tools-1.0.6.ebuild 752
+MISC ChangeLog 2568 RMD160 af065d9d53834a5c913d221e95fb4250462c97df SHA1 6b1b66087fc40814a78825193127c5578025130c SHA256 f76bf3358e6eac95fa8e995a4108d9e2e0577410dddc99e53c82e9215c299d51
 MD5 bee740508a57ac7ae1598e3fe23b5430 ChangeLog 2568
 RMD160 af065d9d53834a5c913d221e95fb4250462c97df ChangeLog 2568
 SHA256 f76bf3358e6eac95fa8e995a4108d9e2e0577410dddc99e53c82e9215c299d51 ChangeLog 2568
+MISC metadata.xml 210 RMD160 c9fe92a44d079ef04bcdd31de9867de5bb9f26e5 SHA1 efa00493ddec7289a21bc4cbcc6e95ec4de749d5 SHA256 90082fe26a119a63ca8fbe227f66c33ba74167b6cf28e2cef02dea6c4f656c39
+MD5 c667f921ee8d48ce17ebef0f8d601ea4 metadata.xml 210
+RMD160 c9fe92a44d079ef04bcdd31de9867de5bb9f26e5 metadata.xml 210
+SHA256 90082fe26a119a63ca8fbe227f66c33ba74167b6cf28e2cef02dea6c4f656c39 metadata.xml 210
 MD5 b62467b86e7d52b16211e0170b39e94d files/digest-zisofs-tools-1.0.4-r1 70
 RMD160 ecae647c8505955fc38b10d8a8dd47d277b43dc3 files/digest-zisofs-tools-1.0.4-r1 70
 SHA256 d3d44dbe03d5659020b14c81a698d487ff9e57ddde74f647e0effd0060d95458 files/digest-zisofs-tools-1.0.4-r1 70
 MD5 f6a64dc4d04cf4ef74e7b4c385bf60c3 files/digest-zisofs-tools-1.0.6 70
 RMD160 2c2a01f6d7a7bec2e85acd75e721193097aa0e25 files/digest-zisofs-tools-1.0.6 70
 SHA256 7740406464e286594a283dee2500b8f51c9435b1e4dff8d3aa1163692044a049 files/digest-zisofs-tools-1.0.6 70
-MD5 51722fef1496cb52c43ce88e5f92b05a zisofs-tools-1.0.4-r1.ebuild 733
-RMD160 d38cafa477c070004884aa95fb4e91320c7258df zisofs-tools-1.0.4-r1.ebuild 733
-SHA256 da25385af4ee2b6fe304cf9264afeb225b700109bc5f3a55baf36c5dab7dc0ad zisofs-tools-1.0.4-r1.ebuild 733
-MD5 134b7a6565da75a382b4d46d838ce5c3 zisofs-tools-1.0.6.ebuild 752
-RMD160 921b9c3a3cca8dcdfdb168ff599ed80100dfb631 zisofs-tools-1.0.6.ebuild 752
-SHA256 ba7e7028592f3a1f275a7d27e8403060d05b051fc52158feb00604a55db68b4b zisofs-tools-1.0.6.ebuild 752
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEPDn+2+ySkm8kpY0RAtCrAJ92pQWEYW3Zy6UatJv80W8z+Y0HSQCgrl9Z
-2truW/IeLcPaiWIsH0fjxP0=
-=USDF
------END PGP SIGNATURE-----
