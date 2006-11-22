@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.10 2006/10/28 22:29:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.11 2006/11/22 11:21:37 flameeyes Exp $
 #
 # Diego Pettenò <flameeyes@gentoo.org>
 
@@ -55,16 +55,13 @@ freebsd_get_bmake() {
 	echo ${bmake}
 }
 
-freebsd_src_unpack() {
-	unpack ${A}
-	cd ${S}
-
+freebsd_do_patches() {
 	for patch in ${PATCHES}; do
 		epatch ${patch}
 	done
+}
 
-	dummy_mk ${REMOVE_SUBDIRS}
-
+freebsd_rename_libraries() {
 	ebegin "Renaming libraries"
 	# We don't use libtermcap, we use libncurses
 	find ${S} -name Makefile -print0 | xargs -0 \
@@ -74,6 +71,16 @@ freebsd_src_unpack() {
 		sed -i -e 's:-ll:-lfl:g; s:{LIBL}:{LIBFL}:g'
 
 	eend $?
+}
+
+freebsd_src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	dummy_mk ${REMOVE_SUBDIRS}
+
+	freebsd_do_patches
+	freebsd_rename_libraries
 }
 
 freebsd_src_compile() {
