@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.11-r1.ebuild,v 1.3 2006/11/17 18:11:02 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.11-r1.ebuild,v 1.4 2006/11/22 11:05:33 foser Exp $
 
 inherit libtool eutils
 
@@ -30,6 +30,8 @@ src_unpack() {
 
 	# use enchant as backend
 	epatch ${FILESDIR}/${PN}-2.0.11-enchant.patch
+	# build on systems without nls (#134467)
+	epatch ${FILESDIR}/${PN}-2.0.11-nonls.patch
 
 	autoconf || die
 	libtoolize --copy --force
