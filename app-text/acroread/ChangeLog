@@ -1,9 +1,16 @@
 # ChangeLog for app-text/acroread
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.86 2006/11/18 11:16:49 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.87 2006/11/22 00:58:48 kevquinn Exp $
+
+*acroread-7.0.8-r1 (22 Nov 2006)
+
+  22 Nov 2006; Kevin F. Quinn <kevquinn@gentoo.org>
+  +acroread-7.0.8-r1.ebuild:
+  Rework to support multiple languages; resolve long-standing default language
+  problem - see bug #125366
 
   18 Nov 2006; Stefan Schweizer <genstef@gentoo.org> acroread-7.0.8.ebuild:
-  Use linguas_nb instead of no thanks to Alexander Nicolaysen Sørnes
+  Use linguas_nb instead of no thanks to Alexander Nicolaysen SÃžrnes
   <alex@thehandofagony.com> in bug 152671
 
   01 Oct 2006; Stefan Schweizer <genstef@gentoo.org>
@@ -127,7 +134,7 @@
   Version Bump Fix Security bug #102730. Removed mozilla use flag and added
   nsplugin local use flag to fix bug #101165.
 
-  11 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> acroread-5.10.ebuild,
+  11 Aug 2005; Diego PettenÃ² <flameeyes@gentoo.org> acroread-5.10.ebuild,
   acroread-7.0.0.2-r2.ebuild:
   Call has_multilib_profile from pkg_setup instead of global scope.
 
