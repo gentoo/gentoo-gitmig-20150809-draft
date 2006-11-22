@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/gnopernicus-1.0.4.ebuild,v 1.11 2006/11/01 04:29:17 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/gnopernicus-1.0.4.ebuild,v 1.12 2006/11/22 18:23:07 leonardop Exp $
 
-WANT_AUTOMAKE=1.8
+WANT_AUTOMAKE="1.8"
 
 inherit autotools gnome2
 
@@ -43,7 +43,10 @@ src_unpack() {
 	# Add gdk-2.0 to the list of dependencies for libke (bug #150120)
 	epatch "${FILESDIR}"/${P}-libke_deps.patch
 
-	eautoreconf
+	sed -n -e '/GTK_DOC_CHECK/,/AC_PROG_INTLTOOL/p' aclocal.m4 > gtk-doc.m4
+	sed -n -e '/GNOME_COMPILE/,$p' aclocal.m4 > gnome-macros.m4
+
+	AT_M4DIR="." eautoreconf
 }
 
 pkg_setup() {
