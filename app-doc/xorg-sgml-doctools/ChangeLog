@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/xorg-sgml-doctools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-sgml-doctools/ChangeLog,v 1.9 2006/11/13 17:40:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-sgml-doctools/ChangeLog,v 1.10 2006/11/22 04:17:57 jer Exp $
+
+  22 Nov 2006; Jeroen Roovers <jer@gentoo.org>
+  xorg-sgml-doctools-1.1.1.ebuild:
+  Marked ~hppa (bug #154626).
 
   13 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   xorg-sgml-doctools-1.1.1.ebuild:
