@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-contrib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-contrib/ChangeLog,v 1.19 2006/11/22 00:21:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-contrib/ChangeLog,v 1.20 2006/11/22 12:10:46 flameeyes Exp $
+
+  22 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-contrib-6.2_rc1.ebuild:
+  Learn from kde-meta, extract just the part of code we need, cuts the time
+  needed to build freebsd-contrib to about an half.
 
 *freebsd-contrib-6.1-r1 (22 Nov 2006)
 

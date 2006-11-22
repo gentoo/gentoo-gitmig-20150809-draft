@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-contrib/freebsd-contrib-6.2_rc1.ebuild,v 1.2 2006/11/22 00:21:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-contrib/freebsd-contrib-6.2_rc1.ebuild,v 1.3 2006/11/22 12:10:46 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic
 
@@ -20,17 +20,37 @@ DEPEND="=sys-freebsd/freebsd-sources-${RV}*
 
 S="${WORKDIR}/gnu"
 
-REMOVE_SUBDIRS="lib/libg2c lib/libgcc lib/libgcc_r lib/libgcov lib/libiberty lib/csu
-	lib/libobjc lib/libreadline lib/libregex lib/libstdc++ lib/libsupc++ usr.bin/bc
-	usr.bin/binutils usr.bin/cc usr.bin/cpio usr.bin/cvs usr.bin/dc usr.bin/dialog
-	usr.bin/diff usr.bin/diff3 usr.bin/gdb usr.bin/gperf usr.bin/grep usr.bin/groff
-	usr.bin/gzip usr.bin/man usr.bin/rcs usr.bin/sdiff usr.bin/send-pr
-	usr.bin/tar usr.bin/texinfo"
+src_unpack() {
+	echo ">>> Unpacking needed parts of ${GNU}.tar.bz2 to ${WORKDIR}"
+	tar -jxpf "${DISTDIR}/${GNU}.tar.bz2" gnu/lib/libdialog gnu/usr.bin/sort gnu/usr.bin/patch
+	echo ">>> Unpacking needed parts of ${CONTRIB}.tar.bz2 to ${WORKDIR}"
+	tar -jxpf "${DISTDIR}/${CONTRIB}.tar.bz2" contrib/gnu-sort
+
+	freebsd_do_patches
+	freebsd_rename_libraries
+}
+
+src_compile() {
+	cd "${S}/lib/libdialog"
+	freebsd_src_compile
+
+	cd "${S}/usr.bin/sort"
+	freebsd_src_compile
+
+	cd "${S}/usr.bin/patch"
+	freebsd_src_compile
+}
 
 src_install() {
-	freebsd_src_install
+	use profile || mymakeopts="${mymakeopts} NO_PROFILE= "
+	mymakeopts="${mymakeopts} NO_MANCOMPRESS= NO_INFOCOMPRESS= "
 
-	# Move these to /bin for boot access
-	dodir /bin
-	mv "${D}/usr/bin/sort" "${D}/bin/" || die "mv failed"
+	cd "${S}/lib/libdialog"
+	mkinstall || die "libdialog install failed"
+
+	cd "${S}/usr.bin/sort"
+	mkinstall DESTDIR="${D}/bin/" || die "libdialog install failed"
+
+	cd "${S}/usr.bin/patch"
+	mkinstall DESTDIR="${D}/usr/bin/" || die "libdialog install failed"
 }
