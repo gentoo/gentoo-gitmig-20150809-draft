@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smbget/smbget-0.6.ebuild,v 1.6 2005/06/26 08:41:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smbget/smbget-0.6.ebuild,v 1.7 2006/11/22 02:48:16 beandog Exp $
 
 DESCRIPTION="a simple wget-like tool for the SMB/CIFS protocol"
 HOMEPAGE="http://jelmer.vernstok.nl/oss/smbget/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~sparc x86"
 IUSE=""
 
-DEPEND="net-fs/samba
+DEPEND="<net-fs/samba-3.0.20
 	dev-libs/popt"
 
 src_compile() {
