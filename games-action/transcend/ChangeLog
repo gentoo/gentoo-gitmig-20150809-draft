@@ -1,6 +1,9 @@
 # ChangeLog for games-action/transcend
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/transcend/ChangeLog,v 1.4 2006/01/28 21:19:10 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/transcend/ChangeLog,v 1.5 2006/11/22 15:18:18 peper Exp $
+
+  22 Nov 2006; Piotr Jaroszyński <peper@gentoo.org> transcend-0.3.ebuild:
+  Add ~amd64 wrt bug #155890.
 
   28 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   transcend-0.2.ebuild, transcend-0.3.ebuild:
