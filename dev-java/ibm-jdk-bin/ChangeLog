@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.96 2006/10/18 03:20:20 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.97 2006/11/22 13:31:57 caster Exp $
+
+*ibm-jdk-bin-1.5.0.3-r1 (22 Nov 2006)
+
+  22 Nov 2006; Vlastimil Babka <caster@gentoo.org>
+  +files/ibm-jdk-bin-1.5.0.3-jawt-h.patch, -ibm-jdk-bin-1.5.0.2.ebuild,
+  +ibm-jdk-bin-1.5.0.3-r1.ebuild:
+  Revbump to fix bug #126105 with jawt.h patch. Thanks to Ed Catmur
+  <ed@catmur.co.uk> for the initial report and patch, and everyone else in the
+  bug. Also removed old version.
 
   18 Oct 2006; Joshua Nichols <nichoj@gentoo.org>
   ibm-jdk-bin-1.5.0.3.ebuild:
