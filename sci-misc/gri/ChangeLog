@@ -1,6 +1,12 @@
 # ChangeLog for sci-misc/gri
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/ChangeLog,v 1.5 2006/05/19 19:39:27 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/ChangeLog,v 1.6 2006/11/22 16:42:58 opfer Exp $
+
+  22 Nov 2006; Christian Faulhammer <opfer@gentoo.org> gri-2.12.7.ebuild,
+  gri-2.12.9.ebuild, gri-2.12.11.ebuild:
+  hard dependency on app-text/ghostscript-esp, as that is the only version
+  working from virtual/ghostscript, fixex bug #155236 reported by Patrick
+  Lauer <bugs@dev.gentooexperimental.org>
 
 *gri-2.12.11 (19 May 2006)
 
