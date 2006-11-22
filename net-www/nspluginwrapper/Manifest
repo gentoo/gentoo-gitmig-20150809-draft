@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX nspluginwrapper-0.9.90.3-gentoo.patch 2105 RMD160 469406b7935e59ef77835a0af0a7e9aba06832d1 SHA1 cf99704cf7bcb04a74e685a676006aea43fe1574 SHA256 32b2edeb3bc1533bc93217178e952e572b77c28cf380e10327024d718d0abe7c
 MD5 99c0c63392eedc59c8987bba8c436e66 files/nspluginwrapper-0.9.90.3-gentoo.patch 2105
 RMD160 469406b7935e59ef77835a0af0a7e9aba06832d1 files/nspluginwrapper-0.9.90.3-gentoo.patch 2105
@@ -30,3 +33,10 @@ SHA256 51a00327c66f935d5fada6fd50a72ceed17653f33e602c32ce313ba18268fc04 files/di
 MD5 161f42760672d29d5d08f1e6378fc5d0 files/digest-nspluginwrapper-0.9.90.4 274
 RMD160 fba56222f919cdf664da74f3bf3c7591699e00f8 files/digest-nspluginwrapper-0.9.90.4 274
 SHA256 77f8ec491c306d7889de155a6fd2f660036b41245d39debbf8726b0aaa33f0c8 files/digest-nspluginwrapper-0.9.90.4 274
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFZHPSWt/XSf2CZdkRAq1MAKCV8J6w3c//gFKUvdrIUczRvxfnigCfSSEk
+RXT0eAeadRbHnR7N2zzKSvs=
+=huIq
+-----END PGP SIGNATURE-----
