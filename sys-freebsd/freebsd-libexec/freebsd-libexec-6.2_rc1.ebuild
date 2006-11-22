@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/freebsd-libexec-6.2_rc1.ebuild,v 1.2 2006/11/20 14:27:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/freebsd-libexec-6.2_rc1.ebuild,v 1.3 2006/11/22 13:24:42 flameeyes Exp $
 
 inherit bsdmk freebsd pam
 
@@ -26,6 +26,14 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/libexec"
 
+PATCHES="${FILESDIR}/${PN}-setXid.patch
+	${FILESDIR}/${PN}-nossp.patch
+	${FILESDIR}/${PN}-6.1-libfallback.patch
+	${FILESDIR}/${PN}-6.2-sparc64.patch"
+
+# Remove sendmail, tcp_wrapper and other useless stuff
+REMOVE_SUBDIRS="smrsh mail.local tcpd telnetd rshd rlogind lukemftpd ftpd"
+
 pkg_setup() {
 	use pam || mymakeopts="${mymakeopts} NO_PAM= "
 	use ssl || mymakeopts="${mymakeopts} NO_OPENSSL= NO_CRYPT= "
@@ -36,20 +44,17 @@ pkg_setup() {
 	mymakeopts="${mymakeopts} NO_SENDMAIL= NO_PF= "
 }
 
+src_unpack() {
+	freebsd_src_unpack
+
+	ln -s /usr/include "${WORKDIR}/include"
+}
+
 src_compile() {
 	NOSSP_FLAGS="$(test-flags -fno-stack-protector -fno-stack-protector-all)"
 	export NOSSP_FLAGS
 	freebsd_src_compile
 }
-
-PATCHES="${FILESDIR}/${PN}-setXid.patch
-	${FILESDIR}/${PN}-5.3_rc1-ypxfr-makefile.patch
-	${FILESDIR}/${PN}-nossp.patch
-	${FILESDIR}/${PN}-6.1-libfallback.patch
-	${FILESDIR}/${PN}-6.2-sparc64.patch"
-
-# Remove sendmail, tcp_wrapper and other useless stuff
-REMOVE_SUBDIRS="smrsh mail.local tcpd telnetd rshd rlogind lukemftpd ftpd"
 
 src_install() {
 	freebsd_src_install
@@ -58,6 +63,5 @@ src_install() {
 	newconfd "${FILESDIR}/bootpd.confd"
 
 	insinto /etc
-	cd "${WORKDIR}/etc"
-	doins gettytab
+	doins "${WORKDIR}/etc/gettytab"
 }
