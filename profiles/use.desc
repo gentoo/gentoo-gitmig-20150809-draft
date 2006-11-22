@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.326 2006/11/22 03:04:12 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.327 2006/11/22 03:11:54 beandog Exp $
 
 # Keep them sorted
 
@@ -281,6 +281,7 @@ qt4 - Adds support for the Qt GUI/Application Toolkit version 4.x
 quicktime - Adds support for OpenQuickTime
 radius - Adds support for RADIUS authentication"
 readline - Enables support for libreadline, a GNU line-editing library that almost everyone wants
+rdesktop - Adds support for the remote desktop protocol, usually used to connect to Windows servers
 recode - Enables support for the GNU recode library
 ruby - Adds support/bindings for the Ruby language
 samba - Adds support for SAMBA (Windows File and Printer sharing)
