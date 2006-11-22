@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.64 2006/11/12 12:13:01 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.65 2006/11/22 23:32:21 flameeyes Exp $
+
+  22 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  timidity++-2.13.2-r2.ebuild:
+  Fix quoting, install init.d script only when alsa support is used, add
+  ~x86-fbsd keyword.
 
   12 Nov 2006; Guy Martin <gmsoft@gentoo.org> timidity++-2.13.2-r2.ebuild:
   Stable on hppa.

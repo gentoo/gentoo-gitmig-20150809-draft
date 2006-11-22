@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r2.ebuild,v 1.18 2006/11/12 12:13:01 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r2.ebuild,v 1.19 2006/11/22 23:32:21 flameeyes Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/timidity/${MY_P}.tar.bz2 mirror://gentoo/${P}-exit
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ppc ppc64 sparc x86"
+KEYWORDS="amd64 ~arm hppa ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="oss nas esd motif X gtk gtk vorbis tcltk slang alsa arts jack portaudio emacs ao speex flac ncurses"
 
 RDEPEND="ncurses? ( >=sys-libs/ncurses-5.0 )
@@ -44,9 +44,9 @@ PDEPEND="|| ( media-sound/timidity-eawpatches media-sound/timidity-shompatches )
 src_unpack() {
 	unpack ${MY_P}.tar.bz2
 	cd ${S}
-	epatch ${DISTDIR}/${P}-exiterror.patch
-	epatch ${FILESDIR}/${P}-gtk26.patch
-	epatch ${FILESDIR}/${P}-gcc4.patch
+	epatch "${DISTDIR}/${P}-exiterror.patch"
+	epatch "${FILESDIR}/${P}-gtk26.patch"
+	epatch "${FILESDIR}/${P}-gcc4.patch"
 
 	# fix header location of speex
 	sed -i -e "s:#include <speex:#include <speex/speex:g" configure* timidity/speex_a.c
@@ -106,23 +106,26 @@ src_install() {
 	make DESTDIR="${D}" install || die
 
 	dodoc AUTHORS ChangeLog*
-	dodoc NEWS README* ${FILESDIR}/timidity.cfg
+	dodoc NEWS README* "${FILESDIR}/timidity.cfg"
 
-	newconfd ${FILESDIR}/conf.d.timidity timidity
-	newinitd ${FILESDIR}/init.d.timidity timidity
+	# these are only for the ALSA sequencer mode
+	if use alsa; then
+		newconfd "${FILESDIR}/conf.d.timidity" timidity
+		newinitd "${FILESDIR}/init.d.timidity" timidity
+	fi
 
 	insinto /etc
-	newins ${FILESDIR}/timidity.cfg-r1 timidity.cfg
+	newins "${FILESDIR}/timidity.cfg-r1" timidity.cfg
 
 	dodir /usr/share/timidity
 	dosym /etc/timidity.cfg /usr/share/timidity/timidity.cfg
 
-	newbin ${FILESDIR}/timidity-update timidity-update
+	newbin "${FILESDIR}/timidity-update" timidity-update
 
 	if use emacs ; then
 		dosed 's:/usr/local/bin/timidity:/usr/bin/timidity:g' /usr/share/emacs/site-lisp/timidity.el
 	else
-		rm ${D}/timidity.el
+		rm "${D}/timidity.el"
 	fi
 }
 
@@ -135,9 +138,12 @@ pkg_postinst() {
 	einfo
 	einfo "The tool 'timidity-update' can be used to switch between installed patchsets."
 	einfo
-	einfo "An init script for the alsa timidity sequencer has been installed."
-	einfo "If you wish to use the timidity virtual sequencer, edit /etc/conf.d/timidity"
-	einfo "and run 'rc-update add timidity <runlevel> && /etc/init.d/timidity start'"
+
+	if use alsa; then
+		einfo "An init script for the alsa timidity sequencer has been installed."
+		einfo "If you wish to use the timidity virtual sequencer, edit /etc/conf.d/timidity"
+		einfo "and run 'rc-update add timidity <runlevel> && /etc/init.d/timidity start'"
+	fi
 
 	if use sparc; then
 		ewarn "sparc support is experimental. oss, alsa, esd, and portaudio do not work."
