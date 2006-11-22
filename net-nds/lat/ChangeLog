@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/lat
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/lat/ChangeLog,v 1.2 2006/11/21 22:34:50 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/lat/ChangeLog,v 1.3 2006/11/22 12:40:23 bass Exp $
+
+  22 Nov 2006; J. Alberto Suárez López <bass@gentoo.org>
+  lat-1.2.1.1.ebuild:
+  fixed atom in deps
 
 *lat-1.2.1.1 (21 Nov 2006)
 
