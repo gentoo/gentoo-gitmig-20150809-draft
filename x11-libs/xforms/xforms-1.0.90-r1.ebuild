@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-1.0.90-r1.ebuild,v 1.7 2006/09/25 08:30:33 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-1.0.90-r1.ebuild,v 1.8 2006/11/22 17:44:14 masterdriverz Exp $
+
+inherit autotools
 
 DESCRIPTION="A graphical user interface toolkit for X"
 HOMEPAGE="http://www.nongnu.org/xforms/"
@@ -23,6 +25,13 @@ DEPEND=" || (
 	opengl? ( virtual/opengl )
 	media-libs/jpeg"
 
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-as-needed.patch
+	eautoreconf || die 'eautoreconf failed'
+}
 
 src_compile () {
 	local myopts
