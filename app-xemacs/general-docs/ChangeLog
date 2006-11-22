@@ -1,0 +1,10 @@
+# ChangeLog for app-xemacs/general-docs
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/general-docs/ChangeLog,v 1.1 2006/11/22 21:45:45 graaff Exp $
+
+*general-docs-1.04 (22 Nov 2006)
+
+  22 Nov 2006; Hans de Graaff <graaff@gentoo.org> +metadata.xml,
+  +general-docs-1.04.ebuild:
+  Initial version.
+
