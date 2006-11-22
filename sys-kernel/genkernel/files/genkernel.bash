@@ -65,7 +65,7 @@ _genkernel()
     # recreate COMPREPLY
     if [[ $cur == "$lhs"* ]]; then
 	COMPREPLY=( "${args[@]}" )
-    else
+    elif [[ ${#args[@]} -gt 0 ]]; then
 	COMPREPLY=( "${args[@]/#/$lhs}" )
     fi
 }
