@@ -1,6 +1,17 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.16 2006/11/22 18:12:52 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.17 2006/11/22 22:48:17 chainsaw Exp $
+
+*audacious-plugins-1.2.4 (22 Nov 2006)
+
+  22 Nov 2006; Tony Vroon <chainsaw@gentoo.org>
+  -audacious-plugins-1.2.3.ebuild, +audacious-plugins-1.2.4.ebuild:
+  Alright then, as mr. Petteno already suggested in bug #155961, some patching
+  to the wavpack plugin made sure it actually worked with the 4.31 release in
+  portage. nenolod developed against wavpack SVN, which has extern C
+  protection in the headers. No such luxuries in older releases. Although I
+  believe the technical term is a brown paper bag release, I thought it was
+  more <voice=homer>Ah crap</voice>.
 
 *audacious-plugins-1.2.3 (22 Nov 2006)
 
