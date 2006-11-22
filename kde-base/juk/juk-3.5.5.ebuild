@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/juk-3.5.5.ebuild,v 1.5 2006/11/16 04:23:20 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/juk-3.5.5.ebuild,v 1.6 2006/11/22 21:04:37 masterdriverz Exp $
 
 KMNAME=kdemultimedia
 MAXKDEVER=$PV
@@ -8,23 +8,23 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 SRC_URI="${SRC_URI}
-	mirror://gentoo/kdemultimedia-3.5-patchset-01.tar.bz2"
+	mirror://gentoo/kdemultimedia-3.5-patchset-02.tar.bz2"
 
 DESCRIPTION="Jukebox and music manager for KDE."
 KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="akode flac gstreamer mp3 vorbis"
 
 DEPEND="media-libs/taglib
-	gstreamer? ( =media-libs/gstreamer-0.8*
-				 =media-libs/gst-plugins-0.8* )
+	gstreamer? ( >=media-libs/gstreamer-0.8*
+				 >=media-libs/gst-plugins-0.8* )
 	akode? ( media-libs/akode )
 	!arts? ( !gstreamer? ( media-libs/akode ) )"
 
 RDEPEND="${DEPEND}
-	gstreamer? ( mp3? ( =media-plugins/gst-plugins-mad-0.8* )
-			 vorbis? ( =media-plugins/gst-plugins-ogg-0.8*
-				  =media-plugins/gst-plugins-vorbis-0.8* )
-			 flac? ( =media-plugins/gst-plugins-flac-0.8* ) )"
+	gstreamer? ( mp3? ( >=media-plugins/gst-plugins-mad-0.8* )
+			 vorbis? ( >=media-plugins/gst-plugins-ogg-0.8*
+				  >=media-plugins/gst-plugins-vorbis-0.8* )
+			 flac? ( >=media-plugins/gst-plugins-flac-0.8* ) )"
 
 KMEXTRACTONLY="arts/configure.in.in"
 
