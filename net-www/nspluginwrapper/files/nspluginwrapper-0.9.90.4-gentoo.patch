@@ -1,6 +1,6 @@
 diff -ur nspluginwrapper-0.9.90.4-orig/configure nspluginwrapper-0.9.90.4/configure
 --- nspluginwrapper-0.9.90.4-orig/configure	2006-11-19 02:40:07.000000000 -0500
-+++ nspluginwrapper-0.9.90.4/configure	2006-11-20 14:12:16.000000000 -0500
++++ nspluginwrapper-0.9.90.4/configure	2006-11-22 10:54:17.000000000 -0500
 @@ -198,8 +198,8 @@
  
  # check for 32-bit Glib 2.0 compile CFLAGS (assumed Linux system)
@@ -12,11 +12,13 @@ diff -ur nspluginwrapper-0.9.90.4-orig/configure nspluginwrapper-0.9.90.4/config
      cat > $TMPC << EOF
  #include <glib.h>
  int main(void) {
-@@ -208,17 +208,18 @@
+@@ -207,18 +207,19 @@
+     return 0;
  }
  EOF
-     if ! $cc $CFLAGS_32 $GLIB_CFLAGS_32 $GLIB_LDFLAGS_32 $TMPC -o $TMPE > /dev/null 2>&1; then
+-    if ! $cc $CFLAGS_32 $GLIB_CFLAGS_32 $GLIB_LDFLAGS_32 $TMPC -o $TMPE > /dev/null 2>&1; then
 -        echo "32-bit GLIB 2.0 environment not usable, disabling bi-arch build"
++    if ! $cc $CFLAGS_32 $GLIB_CFLAGS_32 $GLIB_LDFLAGS_32 $TMPC -o $TMPE > /dev/null; then
 +        echo "32-bit GLIB 2.0 environment not usable, bi-arch support unavailable"
          rm -f $TMPC
 -        biarch="no"
@@ -35,11 +37,13 @@ diff -ur nspluginwrapper-0.9.90.4-orig/configure nspluginwrapper-0.9.90.4/config
      cat > $TMPC << EOF
  #include <gtk/gtk.h>
  int main(void) {
-@@ -227,9 +228,10 @@
+@@ -226,10 +227,11 @@
+     return 0;
  }
  EOF
-     if ! $cc $CFLAGS_32 $GTK_CFLAGS_32 $GTK_LDFLAGS_32 $TMPC -o $TMPE > /dev/null 2>&1; then
+-    if ! $cc $CFLAGS_32 $GTK_CFLAGS_32 $GTK_LDFLAGS_32 $TMPC -o $TMPE > /dev/null 2>&1; then
 -        echo "32-bit GTK+ 2.0 environment not usable, disabling bi-arch build"
++    if ! $cc $CFLAGS_32 $GTK_CFLAGS_32 $GTK_LDFLAGS_32 $TMPC -o $TMPE > /dev/null; then
 +        echo "32-bit GTK+ 2.0 environment not usable, bi-arch support unavailable"
          rm -f $TMPC
 -        biarch="no"
@@ -57,9 +61,10 @@ diff -ur nspluginwrapper-0.9.90.4-orig/configure nspluginwrapper-0.9.90.4/config
  echo "pkglibdir=$pkglibdir" >> $config_mak
  echo "#define NPW_LIBDIR \"$pkglibdir\"" >> $config_h
  
+Only in nspluginwrapper-0.9.90.4-orig/: nspluginwrapper-0.9.90.4
 diff -ur nspluginwrapper-0.9.90.4-orig/src/npw-config.c nspluginwrapper-0.9.90.4/src/npw-config.c
 --- nspluginwrapper-0.9.90.4-orig/src/npw-config.c	2006-11-19 02:40:07.000000000 -0500
-+++ nspluginwrapper-0.9.90.4/src/npw-config.c	2006-11-20 14:16:35.000000000 -0500
++++ nspluginwrapper-0.9.90.4/src/npw-config.c	2006-11-22 10:53:48.000000000 -0500
 @@ -80,17 +80,7 @@
  
  static const char *get_system_mozilla_plugin_dir(void)
