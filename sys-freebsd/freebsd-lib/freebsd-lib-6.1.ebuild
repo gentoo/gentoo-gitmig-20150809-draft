@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.1.ebuild,v 1.14 2006/10/26 18:21:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.1.ebuild,v 1.15 2006/11/22 12:52:55 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -77,7 +77,6 @@ pkg_setup() {
 }
 
 PATCHES="${FILESDIR}/${PN}-bsdxml.patch
-	${FILESDIR}/${PN}-fixmp.patch
 	${FILESDIR}/${PN}-6.0-pmc.patch
 	${FILESDIR}/${PN}-6.0-gccfloat.patch
 	${FILESDIR}/${PN}-6.0-flex-2.5.31.patch
@@ -107,7 +106,7 @@ REMOVE_SUBDIRS="libncurses libform libmenu libpanel \
 src_unpack() {
 	freebsd_src_unpack
 
-	sed -i -e 's:-o/dev/stdout:-t:' ${S}/libc/net/Makefile.inc
+	sed -i -e 's:-o/dev/stdout:-t:' "${S}"/libc/net/Makefile.inc
 
 	use build && return 0
 

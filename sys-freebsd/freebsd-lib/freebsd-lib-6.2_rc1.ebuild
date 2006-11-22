@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2_rc1.ebuild,v 1.1 2006/11/19 01:36:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2_rc1.ebuild,v 1.2 2006/11/22 12:52:55 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -77,7 +77,6 @@ pkg_setup() {
 }
 
 PATCHES="${FILESDIR}/${PN}-bsdxml.patch
-	${FILESDIR}/${PN}-fixmp.patch
 	${FILESDIR}/${PN}-6.0-pmc.patch
 	${FILESDIR}/${PN}-6.0-gccfloat.patch
 	${FILESDIR}/${PN}-6.0-flex-2.5.31.patch
@@ -109,14 +108,14 @@ REMOVE_SUBDIRS="libncurses libform libmenu libpanel \
 src_unpack() {
 	freebsd_src_unpack
 
-	sed -i -e 's:-o/dev/stdout:-t:' ${S}/libc/net/Makefile.inc
+	sed -i -e 's:-o/dev/stdout:-t:' "${S}/libc/net/Makefile.inc"
 
 	use build && return 0
 
 	if [[ ${CTARGET} == ${CHOST} ]]; then
 		ln -s "/usr/src/sys-${RV}" "${WORKDIR}/sys"
 	else
-		sed -i -e 's:/usr/include:/usr/'${CTARGET}'/usr/include:g' \
+		sed -i -e "s:/usr/include:/usr/${CTARGET}/usr/include:g" \
 			"${S}/libc/"{yp,rpc}"/Makefile.inc"
 	fi
 
