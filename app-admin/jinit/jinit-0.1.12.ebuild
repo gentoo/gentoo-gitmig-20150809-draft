@@ -1,26 +1,21 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-200666666 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/jinit/jinit-0.1.12.ebuild,v 1.2 2005/01/01 11:06:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/jinit/jinit-0.1.12.ebuild,v 1.3 2006/11/22 19:23:14 masterdriverz Exp $
 
 DESCRIPTION="An alternative to sysvinit which supports the need(8) concept"
-HOMEPAGE="http://homepage.ntlworld.com/john.fremlin/programs/linux/jinit/ http://www.atnf.csiro.au/~rgooch/linux/boot-scripts/"
-SRC_URI="http://homepage.ntlworld.com/john.fremlin/programs/linux/jinit/download/${P}.tar.gz"
+HOMEPAGE="http://john.fremlin.de/programs/linux/jinit/"
+SRC_URI="http://john.fremlin.de/programs/linux/jinit/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 RDEPEND=""
 
-src_compile() {
-	econf || die "econf failed"
-	make || die
-}
-
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR=${D} install || die
 	mv ${D}/usr/sbin ${D}/
 	mv ${D}/sbin/init ${D}/sbin/jinit
 	dodoc AUTHORS ChangeLog NEWS README TODO

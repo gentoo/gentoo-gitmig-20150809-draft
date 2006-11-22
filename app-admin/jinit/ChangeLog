@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/jinit
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/jinit/ChangeLog,v 1.13 2006/09/02 22:55:05 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/jinit/ChangeLog,v 1.14 2006/11/22 19:23:14 masterdriverz Exp $
+
+  22 Nov 2006; Charlie Shepherd <masterdriverz@gentoo.org> ChangeLog:
+  Remove old ebuild, fix up ebuild (including homepage - bug 91389), see cvs
+  log for full fixes
 
   02 Sep 2006; Jason Wever <weeve@gentoo.org> jinit-0.1.11.ebuild:
   Changed stable SPARC keyword back to testing SPARC keyword wrt bug #142335.
