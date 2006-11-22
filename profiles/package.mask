@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6332 2006/11/22 00:48:42 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6333 2006/11/22 14:43:00 agriffis Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -39,7 +39,7 @@ net-nds/migrationtools
 
 # Aron Griffis <agriffis@gentoo.org>
 # Masked for testing new enablement via eselect
-=app-shells/bash-completion-20060301-r1
+>app-shells/bash-completion-20060301
 
 # Patrick McLean <chutzpah@gentoo.org>
 # Masked pending resolution of bugs 155794, 155792, 155698 and 155552
