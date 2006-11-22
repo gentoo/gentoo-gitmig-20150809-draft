@@ -28,7 +28,7 @@ ipsecdoit() {
 	then
 		echo "$IPSEC_confreadstatus -- \`$1' aborted" |
 			logger -s -p daemon.error -t ipsec_setup
-		exit 1
+		return 1
 	fi
 	IPSECsyslog=${IPSECsyslog-daemon.error}
 	export IPSECsyslog

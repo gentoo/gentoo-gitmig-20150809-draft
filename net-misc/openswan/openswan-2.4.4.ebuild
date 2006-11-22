@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.4.4.ebuild,v 1.3 2006/10/16 02:46:58 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.4.4.ebuild,v 1.4 2006/11/22 19:09:55 masterdriverz Exp $
 
 inherit eutils linux-info
 
@@ -81,6 +81,5 @@ src_install() {
 
 	dosym /etc/ipsec/ipsec.d /etc/ipsec.d
 
-	exeinto /etc/init.d/
-	doexe ${FILESDIR}/ipsec
+	doinitd ${FILESDIR}/ipsec
 }

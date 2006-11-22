@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openswan
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.30 2006/10/16 02:46:58 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.31 2006/11/22 19:09:55 masterdriverz Exp $
+
+  22 Nov 2006; Charlie Shepherd <masterdriverz@gentoo.org> ChangeLog:
+  Change "exit" to "return" in init script and use doinitd. Thanks to Tomasz
+  Orzechowski for reporting and Sérgio Luís for init script. Closes Bug
+  99138
 
   16 Oct 2006; Daniel Drake <dsd@gentoo.org> openswan-2.4.4.ebuild:
   Use linux-mod, to fix bug #149197 reported by DominikBuerkle
