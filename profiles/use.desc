@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.324 2006/11/15 15:36:42 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.325 2006/11/22 02:59:53 beandog Exp $
 
 # Keep them sorted
 
@@ -104,6 +104,7 @@ firefox - Build against Firefox instead of Seamonkey/Mozilla
 flac - Adds support for the flac audio codec
 flash - Adds support for creating flash files using Ming
 flatfile - Adds dbm support for flat files
+fltk - Adds support for the Fast Light Toolkit gui interface
 foomaticdb - Adds support for the foomatic printing driver database
 fortran - Adds support for fortran (formally f77)
 freetds - Adds support for the TDS protocol to connect to MSSQL/Sybase databases
