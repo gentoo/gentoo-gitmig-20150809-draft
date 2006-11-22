@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2365 2006/11/22 02:59:53 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2366 2006/11/22 03:04:12 beandog Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -562,7 +562,6 @@ gnome-base/gnome-session:branding - Enable a custom gentoo branded splashscreen
 gnome-base/gnome-vfs:avahi - Support for avahi mdns daemon.
 gnome-base/nautilus:beagle - Enable support for beagle searching
 gnome-extra/evolution-data-server:keyring - Use gnome-keyring for password storage
-gnome-extra/evolution-data-server:nntp - Add suppoort fot nntp
 gnome-extra/gnome-games:artworkextra - Add extra Artwork to gnome-games
 gnome-extra/gnome-games:avahi - Support for avahi mdns daemon.
 gnome-extra/libgda:mdb - Enable Microsoft Access DB support for GnomeDB.
@@ -640,7 +639,6 @@ kde-base/kttsd:akode - Support for the aKode audio-decoding frame-work.
 kde-base/kwin:xcomposite - Support for Xorg composite extension.
 mail-client/balsa:gtkspell - Use gtkspell for dictionary support
 mail-client/evolution:bogofilter - Use bogofilter instead of spamassassin
-mail-client/evolution:nntp - Enable evolution nntp (news) functionality
 mail-client/evolution:widescreen - Enable widescreen support
 mail-client/mail-notification:evolution - Provide an Evolution plugin
 mail-client/mail-notification:gmail - Enable Gmail mailbox checking
@@ -654,12 +652,10 @@ mail-client/mozilla-thunderbird:moznoxft - Disable XFT support in mozilla (also 
 mail-client/mozilla-thunderbird:replytolist - Enable reply-to-list plugin
 mail-client/mutt:buffysize - Enables buffysize workaround, see bug 72422
 mail-client/mutt:gpgme - Enable support for gpgme
-mail-client/mutt:nntp - Adds support for nntp via patch
 mail-client/mutt:pop - Enable support for pop
 mail-client/mutt:smime - Enable support for smime
 mail-client/muttng:buffysize - Enables buffysize workaround, see bug 72422
 mail-client/muttng:gpgme - Enable support for gpgme
-mail-client/muttng:nntp - Enable support for nntp
 mail-client/muttng:pop - Enable support for pop
 mail-client/muttng:smime - Enable support for smime
 mail-client/muttng:smtp - Enable support for smtp
@@ -1230,7 +1226,6 @@ net-mail/cyrus-imapd:autocreate - Enable not supported (by upstream) patch from 
 net-mail/cyrus-imapd:autosieve - Enable not supported (by upstream) patch from University of Athens for "on demand" creation of any folder requested by a sieve filter
 net-mail/cyrus-imapd:drac - Enable dynamic relay support in the cyrus imap server
 net-mail/cyrus-imapd:idled - Enable idled vs poll IMAP IDLE method
-net-mail/cyrus-imapd:nntp - Enable NNTP support
 net-mail/cyrus-imapd:unsupported_8bit - Enable 8bit not supported patch
 net-mail/dovecot:pop3d - Build pop3d support
 net-mail/dovecot:vpopmail - Add vpopmail support
@@ -1705,7 +1700,6 @@ www-apps/websvn:enscript - Add enscript support to colourize code stored in the 
 www-client/elinks:bittorrent - Enable support for the BitTorrent protocol
 www-client/elinks:finger - Enable support for the finger protocol
 www-client/elinks:gopher - Enable support for the gopher protocol
-www-client/elinks:nntp - Enable support for the NNTP
 www-client/kazehakase:hyperestraier - enable hyperestraier support for full-text search in history.
 www-client/kazehakase:thumbnail - enable thumbnail support.
 www-client/mozilla-firefox:mozbranding - Enable official branding
