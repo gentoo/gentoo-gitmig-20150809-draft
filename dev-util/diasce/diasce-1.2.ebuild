@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diasce/diasce-1.2.ebuild,v 1.9 2004/07/14 23:17:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diasce/diasce-1.2.ebuild,v 1.10 2006/11/22 17:11:13 masterdriverz Exp $
 
 MY_P=${PN}2-${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="The C/C++ Code editor for Gnome"
-HOMEPAGE="http://diasce.es.gnome.org/"
-SRC_URI="http://diasce.es.gnome.org/downloads/${MY_P}.tar.gz"
+HOMEPAGE="http://diasce.sourceforge.net/"
+SRC_URI="mirror://sourceforge/diasce/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
