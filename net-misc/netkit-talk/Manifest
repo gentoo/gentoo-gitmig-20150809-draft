@@ -1,9 +1,39 @@
-MD5 715ac030f285da43262ad15f592bf500 ChangeLog 2783
-MD5 f9741e7983e4fe51c414f040fcca811d netkit-talk-0.17-r3.ebuild 1091
-MD5 826446b1af5ce81d298ef61922750aed netkit-talk-0.17-r4.ebuild 1160
-MD5 c6c3a77378ec32d3369c56827fdb9cdf files/netkit-talk-0.17-r4-gentoo.diff 274
-MD5 3d0dd3176e4b560813366a5f3ec7e914 files/digest-netkit-talk-0.17-r4 68
-MD5 c6c3a77378ec32d3369c56827fdb9cdf files/netkit-talk-0.17-r3-gentoo.diff 274
+AUX netkit-talk-0.17-ipv6.diff 1752 RMD160 859da2e955d8c1e95c2fc74c9a1a74cfc735ce3f SHA1 79e66476b7d6eb7573f32453686a5b5dba1e2a0d SHA256 729ec1075760da6235bcaf5c20bf94f0341e1aa97715642292ab0103a44e98bd
 MD5 f1b37f406f793eec620d29d082d7bf7b files/netkit-talk-0.17-ipv6.diff 1752
-MD5 3d0dd3176e4b560813366a5f3ec7e914 files/digest-netkit-talk-0.17-r3 68
+RMD160 859da2e955d8c1e95c2fc74c9a1a74cfc735ce3f files/netkit-talk-0.17-ipv6.diff 1752
+SHA256 729ec1075760da6235bcaf5c20bf94f0341e1aa97715642292ab0103a44e98bd files/netkit-talk-0.17-ipv6.diff 1752
+AUX netkit-talk-0.17-r3-gentoo.diff 274 RMD160 a8bb669b349274881de9c7c7e26bebda9854fbcf SHA1 ddfcef8f8a8b14464e28371a49c75df060468dc9 SHA256 b1bc92efabdeb49563c665cd7c0fee5a3c01cf0953dbc2d60b63588437d26896
+MD5 c6c3a77378ec32d3369c56827fdb9cdf files/netkit-talk-0.17-r3-gentoo.diff 274
+RMD160 a8bb669b349274881de9c7c7e26bebda9854fbcf files/netkit-talk-0.17-r3-gentoo.diff 274
+SHA256 b1bc92efabdeb49563c665cd7c0fee5a3c01cf0953dbc2d60b63588437d26896 files/netkit-talk-0.17-r3-gentoo.diff 274
+AUX netkit-talk-0.17-r4-gentoo.diff 274 RMD160 a8bb669b349274881de9c7c7e26bebda9854fbcf SHA1 ddfcef8f8a8b14464e28371a49c75df060468dc9 SHA256 b1bc92efabdeb49563c665cd7c0fee5a3c01cf0953dbc2d60b63588437d26896
+MD5 c6c3a77378ec32d3369c56827fdb9cdf files/netkit-talk-0.17-r4-gentoo.diff 274
+RMD160 a8bb669b349274881de9c7c7e26bebda9854fbcf files/netkit-talk-0.17-r4-gentoo.diff 274
+SHA256 b1bc92efabdeb49563c665cd7c0fee5a3c01cf0953dbc2d60b63588437d26896 files/netkit-talk-0.17-r4-gentoo.diff 274
+AUX talk.xinetd 265 RMD160 9cfd18a1ac8fa1a516d876bd31b7fe8e26fa0dfa SHA1 f5a4577cedeaf09ec185b8da46c315a321f75204 SHA256 6ce5286c8d51ce80c7c0833d4fdbf2f29657ad3dd3c58b6fb6da7b444766baa7
 MD5 c2bea2eb9cd8008b29f499010a39c62e files/talk.xinetd 265
+RMD160 9cfd18a1ac8fa1a516d876bd31b7fe8e26fa0dfa files/talk.xinetd 265
+SHA256 6ce5286c8d51ce80c7c0833d4fdbf2f29657ad3dd3c58b6fb6da7b444766baa7 files/talk.xinetd 265
+DIST netkit-ntalk-0.17.tar.gz 37396
+EBUILD netkit-talk-0.17-r3.ebuild 1091 RMD160 612089d128ff06c7af1994ea45fbf7eb5597dc3e SHA1 76ea5c55bdb3b643fd32a9785c0aabb4c5f89bae SHA256 0205bd4c9079e03eeecb84601f9f30510fb18ae588e149eeb3e2a5f2648d368a
+MD5 f9741e7983e4fe51c414f040fcca811d netkit-talk-0.17-r3.ebuild 1091
+RMD160 612089d128ff06c7af1994ea45fbf7eb5597dc3e netkit-talk-0.17-r3.ebuild 1091
+SHA256 0205bd4c9079e03eeecb84601f9f30510fb18ae588e149eeb3e2a5f2648d368a netkit-talk-0.17-r3.ebuild 1091
+EBUILD netkit-talk-0.17-r4.ebuild 1160 RMD160 20fcf8c08164f25fabe3ec7098143a8ca8fefd19 SHA1 30ddcd675d245cf30050351bdb6221398cad56b7 SHA256 aa884ae603d5c505fcbb55b5ee18cf06c6c2b71b47e1debe74b167c8a82c189b
+MD5 826446b1af5ce81d298ef61922750aed netkit-talk-0.17-r4.ebuild 1160
+RMD160 20fcf8c08164f25fabe3ec7098143a8ca8fefd19 netkit-talk-0.17-r4.ebuild 1160
+SHA256 aa884ae603d5c505fcbb55b5ee18cf06c6c2b71b47e1debe74b167c8a82c189b netkit-talk-0.17-r4.ebuild 1160
+MISC ChangeLog 2783 RMD160 5c7d53b2ec7a03e34b96f795525d62ebedd5cab6 SHA1 e3a1ec388b3d4efeda2b1e9f1d92868ceea197d3 SHA256 c06dfec7cdff8df1fc0cc4f4eb285f371b1d49d06def1e26bdc3545898d18355
+MD5 715ac030f285da43262ad15f592bf500 ChangeLog 2783
+RMD160 5c7d53b2ec7a03e34b96f795525d62ebedd5cab6 ChangeLog 2783
+SHA256 c06dfec7cdff8df1fc0cc4f4eb285f371b1d49d06def1e26bdc3545898d18355 ChangeLog 2783
+MISC metadata.xml 210 RMD160 c9fe92a44d079ef04bcdd31de9867de5bb9f26e5 SHA1 efa00493ddec7289a21bc4cbcc6e95ec4de749d5 SHA256 90082fe26a119a63ca8fbe227f66c33ba74167b6cf28e2cef02dea6c4f656c39
+MD5 c667f921ee8d48ce17ebef0f8d601ea4 metadata.xml 210
+RMD160 c9fe92a44d079ef04bcdd31de9867de5bb9f26e5 metadata.xml 210
+SHA256 90082fe26a119a63ca8fbe227f66c33ba74167b6cf28e2cef02dea6c4f656c39 metadata.xml 210
+MD5 3d0dd3176e4b560813366a5f3ec7e914 files/digest-netkit-talk-0.17-r3 68
+RMD160 b1e89026354caee5dd8b6c8da25de91e77a03054 files/digest-netkit-talk-0.17-r3 68
+SHA256 4896c377754f571970d1448639d06aaf8b9a00e5886cc5fa628a8c72fc2f9d90 files/digest-netkit-talk-0.17-r3 68
+MD5 3d0dd3176e4b560813366a5f3ec7e914 files/digest-netkit-talk-0.17-r4 68
+RMD160 b1e89026354caee5dd8b6c8da25de91e77a03054 files/digest-netkit-talk-0.17-r4 68
+SHA256 4896c377754f571970d1448639d06aaf8b9a00e5886cc5fa628a8c72fc2f9d90 files/digest-netkit-talk-0.17-r4 68
