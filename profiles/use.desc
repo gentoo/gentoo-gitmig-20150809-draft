@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.327 2006/11/22 03:11:54 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.328 2006/11/22 03:15:14 beandog Exp $
 
 # Keep them sorted
 
@@ -155,6 +155,7 @@ inifile - Adds dbm support for .ini files
 innodb - Adds innodb support for mySQL (transaction support)
 interbase - Adds support for Interbase database
 iodbc - Adds support for iODBC library
+ipod - Enable support for iPod device access
 ipv6 - Adds support for IP version 6
 jabber - Enable jabber IM protocol support
 jack - Adds support for the JACK Audio Connection Kit

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2367 2006/11/22 03:11:54 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2368 2006/11/22 03:15:14 beandog Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -795,7 +795,6 @@ media-radio/xastir:ax25 - Enable ax25 support
 media-radio/xastir:festival - Enable festival support
 media-radio/xastir:shape - Enable shapelib support
 media-sound/amarok:ifp - Enable support for iRiver devices access through libifp
-media-sound/amarok:ipod - Enable support for iPod devices access through libgpod
 media-sound/amarok:mtp - Enable support for libMTP (Plays4Sure) devices access through libmtp
 media-sound/amarok:njb - Enable support for NJB (Creative) devices access through libnjb
 media-sound/amarok:noamazon - Disable support for downloading covers from amazon.com
@@ -807,7 +806,6 @@ media-sound/audacious:sid - Build with SID (Commodore 64 Audio) support
 media-sound/audacious:timidity - Build with Timidity++ (MIDI sequencer) support
 media-sound/audacious:wma - Build with WMA (Windows Media Audio) support
 media-sound/banshee:daap - Build with Daap support
-media-sound/banshee:ipod - Build with ipod support
 media-sound/banshee:njb - Build with njb audio player support
 media-sound/bmpx:gaim - Enable support for sending songs over gaim
 media-sound/bmpx:ofa - Build with ofa/PUID checking support for MusicBrainz metadata
@@ -818,7 +816,6 @@ media-sound/bmpx:stream - Build with support for streaming audio
 media-sound/cmus:modplug - Build with modplug support
 media-sound/darkice:twolame - Build with twolame support
 media-sound/freewheeling:fluidsynth - compile with support for fluidsynth
-media-sound/gpodder:ipod - Build with ipod support
 media-sound/jack-audio-connection-kit:coreaudio - Build the CoreAudio driver on Mac OS X systems
 media-sound/jack-audio-connection-kit:cpudetection - Enables runtime cpudetection
 media-sound/jack-audio-connection-kit:jack-tmpfs - Compile in a tmpf path
@@ -827,7 +824,6 @@ media-sound/lame:mp3rtp - Build the mp3-to-RTP streaming utility. **UNSUPPORTED*
 media-sound/lastfm-ripper:amazon - Enable advanced tagging using amazon webservices
 media-sound/lastfm-ripper:tagwriting - Enable MP3 tagging
 media-sound/lilypond:vim - Enable installation of lilypond vim plugins
-media-sound/listen:ipod - Support for ipod devices via libgpod
 media-sound/mpd:icecast - Enable support for Icecast2
 media-sound/mt-daapd:avahi - Use avahi instead of howl as mdns daemon
 media-sound/musepack-tools:16bit - Higher quality sound output using dithering and noise-shaping
@@ -848,7 +844,6 @@ media-sound/rezound:16bittmp - Use 16bit temporary files (default 32bit float), 
 media-sound/rezound:soundtouch - compile with support for soundtouch
 media-sound/rhythmbox:avahi - support for avahi mdns daemon
 media-sound/rhythmbox:daap - support for daap
-media-sound/rhythmbox:ipod - support for ipod devices via libgpod
 media-sound/rhythmbox:musicbrainz - support for muzicbrains
 media-sound/rhythmbox:tagwriting - support for tag wriring in certian audio files
 media-sound/slismerver:alac - Enable support for alac
