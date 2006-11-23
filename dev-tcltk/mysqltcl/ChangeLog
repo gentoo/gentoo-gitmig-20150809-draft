@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/mysqltcl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/mysqltcl/ChangeLog,v 1.10 2006/06/04 02:49:37 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/mysqltcl/ChangeLog,v 1.11 2006/11/23 17:37:23 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> mysqltcl-2.40.ebuild,
+  mysqltcl-2.50.ebuild, mysqltcl-3.02.ebuild:
+  dev-db/mysql => virtual/mysql
 
 *mysqltcl-3.02 (04 Jun 2006)
 

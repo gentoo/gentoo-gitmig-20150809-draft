@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-sql/tcl-sql-20000114.ebuild,v 1.3 2004/08/30 23:36:11 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-sql/tcl-sql-20000114.ebuild,v 1.4 2006/11/23 17:37:59 vivo Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND="dev-lang/tcl
-	dev-db/mysql"
+	virtual/mysql"
 
 S=${WORKDIR}/${PN}
 
