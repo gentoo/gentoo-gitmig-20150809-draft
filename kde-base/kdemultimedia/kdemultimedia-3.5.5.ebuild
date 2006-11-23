@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.5.5.ebuild,v 1.9 2006/11/23 10:00:25 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.5.5.ebuild,v 1.10 2006/11/23 19:21:58 masterdriverz Exp $
 
 inherit kde-dist flag-o-matic
 
@@ -18,7 +18,7 @@ DEPEND="~kde-base/kdebase-${PV}
 	alsa? ( media-libs/alsa-lib )
 	theora? ( media-libs/libtheora )
 	gstreamer? ( =media-libs/gstreamer-0.10*
-				 =media-libs/gst-plugins-0.8* )
+				 =media-libs/gst-plugins-base-0.10* )
 	encode? ( mp3? ( media-sound/lame )
 			  vorbis? ( media-sound/vorbis-tools )
 			  flac? ( >=media-libs/flac-1.1.2 ) )
