@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-canna
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-canna/ChangeLog,v 1.8 2006/11/22 22:41:49 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-canna/ChangeLog,v 1.9 2006/11/23 18:45:03 blubb Exp $
+
+  23 Nov 2006; <blubb@gentoo.org> scim-canna-1.0.0.ebuild:
+  stable on amd64
 
   22 Nov 2006; MATSUU Takuto <matsuu@gentoo.org> -scim-canna-0.1.1.ebuild,
   -scim-canna-0.1.3.ebuild:
