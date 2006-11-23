@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.391 2006/11/22 18:14:30 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.392 2006/11/23 11:00:15 gmsoft Exp $
+
+  23 Nov 2006; Guy Martin <gmsoft@gentoo.org> kdelibs-3.5.5-r5.ebuild:
+  Stable on hppa.
 
   22 Nov 2006; Joseph Jezak <josejx@gentoo.org> kdelibs-3.5.5-r6.ebuild:
   Marked ~ppc for bug #155505.
