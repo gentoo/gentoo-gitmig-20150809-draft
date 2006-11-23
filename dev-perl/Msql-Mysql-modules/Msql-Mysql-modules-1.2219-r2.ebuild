@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Msql-Mysql-modules/Msql-Mysql-modules-1.2219-r2.ebuild,v 1.10 2006/08/17 01:35:29 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Msql-Mysql-modules/Msql-Mysql-modules-1.2219-r2.ebuild,v 1.11 2006/11/23 15:48:09 vivo Exp $
 
 inherit perl-module eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE=""
 
 DEPEND=">=dev-perl/Data-ShowTable-3.3
-	>=dev-db/mysql-3.23.30
+	virtual/mysql
 	>=dev-perl/DBI-1.14
 	dev-lang/perl"
 RDEPEND="${DEPEND}"

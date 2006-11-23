@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/DBD-mysql-2.9007.ebuild,v 1.13 2006/10/09 14:00:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/DBD-mysql-2.9007.ebuild,v 1.14 2006/11/23 15:46:27 vivo Exp $
 
 inherit perl-module
 
@@ -15,7 +15,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 DEPEND="dev-perl/DBI
-	dev-db/mysql
+	virtual/mysql
 	dev-lang/perl"
 
 mydoc="ToDo"

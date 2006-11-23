@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eidetic/Eidetic-2.003003.ebuild,v 1.8 2006/10/22 20:05:45 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eidetic/Eidetic-2.003003.ebuild,v 1.9 2006/11/23 15:47:18 vivo Exp $
 
 inherit perl-module webapp eutils
 
@@ -23,7 +23,7 @@ DEPEND="dev-lang/perl
 		>=dev-perl/Sort-Tree-1.07
 		>=dev-perl/Template-Toolkit-2.08
 		dev-perl/Crypt-SmbHash
-		mysql? ( dev-db/mysql )
+		mysql? ( virtual/mysql )
 		auth? ( dev-perl/Apache-AuthTicket )"
 RDEPEND="${DEPEND}"
 
