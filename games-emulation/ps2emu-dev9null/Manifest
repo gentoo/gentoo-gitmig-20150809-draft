@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST dev9null03.rar 65356
 EBUILD ps2emu-dev9null-0.3.ebuild 909 RMD160 def04e25d4b861ff99f381c6278eae0ddf7a74a4 SHA1 64fffd64eb5a930e4c5be105537e03afcfcdfdd9 SHA256 cd57a88f5442a7e3d1c72a06431c31f37a8690029ee00152f01d86d3d0bf08ee
 MD5 354573e7d082378ee68cabe683a679bf ps2emu-dev9null-0.3.ebuild 909
@@ -14,3 +17,10 @@ SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata
 MD5 4d8f1cca2e70b968b53f8444aa1988bf files/digest-ps2emu-dev9null-0.3 58
 RMD160 dd970e793bc4c9bc5e2b311af91978b234b8d76a files/digest-ps2emu-dev9null-0.3 58
 SHA256 310eb080f85a3c6faba4e6fcaf41cf30b38ff4ad6d7aaa4e605c1213b3aa0727 files/digest-ps2emu-dev9null-0.3 58
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFZhoGdz7hIScOURERAk4gAJkBxJG/ALw65kCy+yNU9GJbxf7OQQCffEvy
+35I4JN/gPWfizRYhnOda1lw=
+=Wdbu
+-----END PGP SIGNATURE-----
