@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/phpsyslogng/phpsyslogng-2.8.ebuild,v 1.2 2006/01/21 19:52:05 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/phpsyslogng/phpsyslogng-2.8.ebuild,v 1.3 2006/11/23 15:09:00 vivo Exp $
 
 inherit webapp
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86"
 IUSE="mysql"
 
 RDEPEND="virtual/httpd-php
-		mysql? ( >=dev-db/mysql-4.1 )"
+		mysql? ( >=virtual/mysql-4.1 )"
 
 src_install() {
 	webapp_src_preinst

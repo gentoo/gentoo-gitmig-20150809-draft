@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.8.10.ebuild,v 1.11 2005/09/07 03:34:55 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.8.10.ebuild,v 1.12 2006/11/23 15:11:25 vivo Exp $
 
 inherit flag-o-matic
 
@@ -19,7 +19,7 @@ RDEPEND="virtual/libc
 	<dev-libs/libprelude-0.9.0_rc1
 	ssl? ( dev-libs/openssl )
 	doc? ( dev-util/gtk-doc )
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql )"
 
 DEPEND="${RDEPEND}

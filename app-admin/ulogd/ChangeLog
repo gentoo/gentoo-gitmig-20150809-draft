@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/ulogd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.37 2006/08/08 23:27:34 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.38 2006/11/23 15:12:29 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> ulogd-1.02.ebuild,
+  ulogd-1.02-r1.ebuild, ulogd-1.23.ebuild:
+  dev-db/mysql => virtual/mysql
 
   08 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org> ulogd-1.23.ebuild:
   Stable on amd64 wrt bug #141441.

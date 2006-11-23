@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/prelude-manager
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/ChangeLog,v 1.37 2006/04/30 10:15:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/ChangeLog,v 1.38 2006/11/23 15:11:25 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org>
+  prelude-manager-0.8.10.ebuild:
+  dev-db/mysql => virtual/mysql
 
   30 Apr 2006; Simon Stelling <blubb@gentoo.org>
   prelude-manager-0.9.1-r1.ebuild:

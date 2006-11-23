@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.8.13.ebuild,v 1.14 2006/02/10 16:57:25 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.8.13.ebuild,v 1.15 2006/11/23 15:07:20 vivo Exp $
 
 inherit multilib
 
@@ -27,7 +27,7 @@ RDEPEND="dev-libs/libxml
 	sys-libs/zlib
 	app-arch/bzip2
 	dev-lang/perl
-	mysql? ( >=dev-db/mysql-3.23.26 )"
+	mysql? ( virtual/mysql )"
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
