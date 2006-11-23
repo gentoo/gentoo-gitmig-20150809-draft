@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-mysql/libnss-mysql-1.5.ebuild,v 1.2 2006/03/20 23:53:15 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-mysql/libnss-mysql-1.5.ebuild,v 1.3 2006/11/23 17:23:11 vivo Exp $
 
 inherit multilib
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="virtual/libc
-	>=dev-db/mysql-3.2
+	virtual/mysql
 	!sys-libs/nss-mysql"
 
 src_install() {
