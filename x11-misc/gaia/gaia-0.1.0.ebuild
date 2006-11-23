@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/gaia-0.1.0.ebuild,v 1.1 2006/11/23 12:21:39 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/gaia-0.1.0.ebuild,v 1.2 2006/11/23 12:23:30 opfer Exp $
 
 inherit eutils libtool
 
 DESCRIPTION="opensource 3D interface to the planet, based on Google Earth data"
-HOMEPAGE="http://gaia.serezhkin.com/index.html/"
+HOMEPAGE="http://gaia.serezhkin.com/"
 SRC_URI="http://gaia.serezhkin.com/${P}.tar.bz2"
 
 
