@@ -18,10 +18,6 @@ MD5 e4ea6addca252136730df42c0368209b files/0verkill-0.16-underflow-check.patch 6
 RMD160 cff920abbc084cfb4632cca17791a3fdf6228f49 files/0verkill-0.16-underflow-check.patch 675
 SHA256 e918e3b2b632632cca8c337caf019b0c2565ded120b8055a4d31677d446ef8e5 files/0verkill-0.16-underflow-check.patch 675
 DIST 0verkill-0.16.tgz 276579
-EBUILD 0verkill-0.16-r2.ebuild 1572 RMD160 36827f4c0147c2c59aa3002da06ade6559a7215e SHA1 58a282fcc844fce523c266ea54d9d6a98773b1bc SHA256 05012ec63c1d54e29c5d566a0f6a341ebabc8f7faadf2dc5a96207b98ea7c626
-MD5 201460db6904bcdc2f3099dc8e70836f 0verkill-0.16-r2.ebuild 1572
-RMD160 36827f4c0147c2c59aa3002da06ade6559a7215e 0verkill-0.16-r2.ebuild 1572
-SHA256 05012ec63c1d54e29c5d566a0f6a341ebabc8f7faadf2dc5a96207b98ea7c626 0verkill-0.16-r2.ebuild 1572
 EBUILD 0verkill-0.16-r3.ebuild 1565 RMD160 44f7618ebc3788eb18e8895ccd2c206f79d17375 SHA1 9c764b50decd547e3e7d15ed2c11984833616c45 SHA256 c7fb94e492a6c09894e38a730933f07d9f62fee1e182bbef1b3e4238fae09a29
 MD5 a3c522ee240edcbae2bdaaf8ec04a449 0verkill-0.16-r3.ebuild 1565
 RMD160 44f7618ebc3788eb18e8895ccd2c206f79d17375 0verkill-0.16-r3.ebuild 1565
@@ -34,16 +30,13 @@ MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be525
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
 SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
-MD5 032b2b4357f281b2da9c0046ada0a03a files/digest-0verkill-0.16-r2 62
-RMD160 94483173c2c0bd99e4352a42df9c5ad981eb7256 files/digest-0verkill-0.16-r2 62
-SHA256 57dd1007a2b3fcf2881c6b07abbf24e9c732e53e5845d4552ad5ca040a45b2e2 files/digest-0verkill-0.16-r2 62
 MD5 032b2b4357f281b2da9c0046ada0a03a files/digest-0verkill-0.16-r3 62
 RMD160 94483173c2c0bd99e4352a42df9c5ad981eb7256 files/digest-0verkill-0.16-r3 62
 SHA256 57dd1007a2b3fcf2881c6b07abbf24e9c732e53e5845d4552ad5ca040a45b2e2 files/digest-0verkill-0.16-r3 62
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFEisD42+ySkm8kpY0RAv/dAJ0b1jXLA4X6lI3/xoVGqJg5rNbCKwCgs6Ue
-E6piYgIGf1XtAN+Jo4twr1c=
-=2YFb
+iD8DBQFFZfb0dz7hIScOURERAozTAJ4tRLX6QBcgF9l1Qs/xM7gWwEwK7gCdHMQT
+uxks1q5i+eEMzgRcXzq1AXo=
+=9wGV
 -----END PGP SIGNATURE-----
