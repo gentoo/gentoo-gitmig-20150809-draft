@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.65 2006/11/05 01:04:32 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.66 2006/11/23 12:45:07 deathwing00 Exp $
+
+*digikam-0.9.0_rc1 (23 Nov 2006)
+
+  23 Nov 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  +digikam-0.9.0_rc1.ebuild:
+  Version bump. Added media-libs/libpng as a dependency. Added versions for
+  some of the dependencies. KDE dependency increased to 3.5.
 
   05 Nov 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
   digikam-0.9.0_beta3.ebuild:
