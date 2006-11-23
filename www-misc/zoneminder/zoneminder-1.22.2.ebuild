@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.22.2.ebuild,v 1.2 2006/08/03 16:39:31 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.22.2.ebuild,v 1.3 2006/11/23 17:21:13 vivo Exp $
 
 inherit eutils webapp autotools depend.php
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
 IUSE="mpeg mysql"
 
-DEPEND="mysql? ( >=dev-db/mysql-3 )
+DEPEND="mysql? ( virtual/mysql )
 	>=media-libs/jpeg-6b
 	>=net-www/apache-1.3.27-r3
 	>=dev-lang/perl-5.6.0
