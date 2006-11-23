@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.68-r3.ebuild,v 1.6 2006/10/28 21:27:16 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.68-r3.ebuild,v 1.7 2006/11/23 19:47:32 vivo Exp $
 
 WANT_AUTOMAKE="1.6"
 WANT_AUTOCONF="latest"
@@ -18,7 +18,7 @@ IUSE="mysql postgres debug ssl"
 RDEPEND="sys-apps/tcp-wrappers
 	sys-libs/zlib
 	sys-devel/flex
-	!postgres? ( mysql? ( dev-db/mysql ) )
+	!postgres? ( mysql? ( virtual/mysql ) )
 	!mysql? ( postgres? ( dev-db/postgresql ) )
 	ssl? ( dev-libs/openssl )"
 

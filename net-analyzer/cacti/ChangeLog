@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.77 2006/10/31 23:31:07 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.78 2006/11/23 19:46:07 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org>
+  cacti-0.8.6h_p20060108-r2.ebuild, cacti-0.8.6i.ebuild:
+  dev-db/mysql => virtual/mysql
 
   01 Nov 2006; Markus Ullmann <jokey@gentoo.org>
   cacti-0.8.6h_p20060108-r2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-cactid/cacti-cactid-0.8.6e.ebuild,v 1.5 2006/10/31 23:23:02 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-cactid/cacti-cactid-0.8.6e.ebuild,v 1.6 2006/11/23 19:46:52 vivo Exp $
 
 WANT_AUTOCONF="latest"
 inherit autotools
@@ -17,8 +17,8 @@ IUSE=""
 
 DEPEND="net-analyzer/net-snmp
 		net-analyzer/rrdtool
-		!>=dev-db/mysql-5
-		dev-db/mysql
+		!>=virtual/mysql-5.0
+		virtual/mysql
 		>=sys-devel/autoconf-2.53"
 RDEPEND="net-analyzer/cacti"
 

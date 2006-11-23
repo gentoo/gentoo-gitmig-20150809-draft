@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.1.ebuild,v 1.10 2006/08/14 09:49:25 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.1.ebuild,v 1.11 2006/11/23 19:51:53 vivo Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="ssl samba mysql postgres ldap snmp nagios-dns nagios-ntp nagios-ping
 nagios-ssh nagios-game ups ipv6 radius"
 
 DEPEND="ldap? ( >=net-nds/openldap-2.0.25 )
-	mysql? ( >=dev-db/mysql-3.23.52-r1 )
+	mysql? ( virtual/mysql )
 	postgres? ( >=dev-db/postgresql-7.2 )
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	radius? ( >=net-dialup/radiusclient-0.3.2 )"

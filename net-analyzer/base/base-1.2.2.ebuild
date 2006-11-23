@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/base-1.2.2.ebuild,v 1.1 2006/01/28 20:16:52 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/base-1.2.2.ebuild,v 1.2 2006/11/23 19:45:10 vivo Exp $
 
 inherit webapp versionator eutils depend.apache depend.php
 
@@ -22,7 +22,7 @@ DEPEND=">=app-arch/tar-1.14
 	>=app-arch/gzip-1.3.5-r4
 	>=sys-apps/coreutils-5.2.1-r2
 	>=sys-apps/sed-4.0.9
-	mysql? ( >=dev-db/mysql-3.23.0 )
+	mysql? ( virtual/mysql )
 	postgres? ( >=dev-db/postgresql-7.1.0 )"
 	# A local database isn't necessary, so we only require one when the user
 	# has use-flags set for one of the supported DBs.

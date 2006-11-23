@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/barnyard
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/ChangeLog,v 1.15 2006/07/23 22:25:50 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/ChangeLog,v 1.16 2006/11/23 19:44:04 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> barnyard-0.2.0-r1.ebuild,
+  barnyard-0.2.0-r2.ebuild:
+  dev-db/mysql => virtual/mysql
 
   23 Jul 2006; Marcelo Goes <vanquirius@gentoo.org> -barnyard-0.1.0.ebuild,
   -barnyard-0.2.0.ebuild:

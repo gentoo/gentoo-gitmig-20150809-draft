@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/base-1.2.4.ebuild,v 1.2 2006/06/21 19:00:26 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/base-1.2.4.ebuild,v 1.3 2006/11/23 19:45:10 vivo Exp $
 
 inherit webapp versionator eutils depend.apache depend.php
 
@@ -40,7 +40,7 @@ RDEPEND="${DEPEND}
 		    >=dev-php/PEAR-Image_Canvas-0.2.4
 		    >=dev-php/PEAR-Image_Graph-0.7.1
 		    >=media-libs/gd-2.0.32
-	mysql? ( >=dev-db/mysql-3.23.0 )
+	mysql? ( virtual/mysql )
 	postgres? ( >=dev-db/postgresql-7.1.0 ) )"
 	# A local database isn't necessary, so only require one when the user
 	# has use-flags set for one of the supported DBs.

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/rtg
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtg/ChangeLog,v 1.8 2006/06/01 22:26:33 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtg/ChangeLog,v 1.9 2006/11/23 19:53:19 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> rtg-0.7.4-r2.ebuild:
+  dev-db/mysql => virtual/mysql
 
 *rtg-0.7.4-r2 (01 Jun 2006)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.9-r1.ebuild,v 1.9 2005/11/01 03:12:27 soulse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.9-r1.ebuild,v 1.10 2006/11/23 19:43:25 vivo Exp $
 
 inherit webapp eutils
 
@@ -31,7 +31,7 @@ DEPEND=">=dev-lang/perl-5.8.4
 	dev-perl/Proc-Simple
 	dev-perl/DBI
 	dev-perl/Unix-Syslog
-	mysql? ( dev-db/mysql dev-perl/DBD-mysql )
+	mysql? ( virtual/mysql dev-perl/DBD-mysql )
 	samba? ( net-fs/samba )
 	http? ( apache2? ( =net-www/apache-2* ) !apache2? ( =net-www/apache-1* ) )"
 

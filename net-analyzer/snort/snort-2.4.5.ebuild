@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.4.5.ebuild,v 1.7 2006/10/09 00:39:39 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.4.5.ebuild,v 1.8 2006/11/23 19:54:19 vivo Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -24,7 +24,7 @@ DEPEND="virtual/libc
 	virtual/libpcap
 	flexresp? ( ~net-libs/libnet-1.0.2a )
 	postgres? ( || ( dev-db/postgresql dev-db/libpq ) )
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	ssl? ( dev-libs/openssl )
 	prelude? ( >=dev-libs/libprelude-0.9.0 )
 	odbc? ( dev-db/unixODBC )

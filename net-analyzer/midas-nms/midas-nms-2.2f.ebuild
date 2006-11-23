@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/midas-nms-2.2f.ebuild,v 1.11 2006/03/04 17:02:59 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/midas-nms-2.2f.ebuild,v 1.12 2006/11/23 19:49:31 vivo Exp $
 
 inherit webapp
 
@@ -12,7 +12,7 @@ LICENSE="MIT"
 
 KEYWORDS="~ppc ~x86"
 
-DEPEND="dev-db/mysql
+DEPEND="virtual/mysql
 	virtual/libpcap
 	media-libs/gd"
 RDEPEND="net-www/apache

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jffnms/jffnms-0.8.2.ebuild,v 1.3 2006/11/13 23:04:11 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jffnms/jffnms-0.8.2.ebuild,v 1.4 2006/11/23 19:48:53 vivo Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86"
 IUSE="mysql postgres snmp"
 
 DEPEND="net-www/apache
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql )
 	net-analyzer/rrdtool
 	media-libs/gd

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtg/rtg-0.7.4-r2.ebuild,v 1.1 2006/06/01 22:26:33 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtg/rtg-0.7.4-r2.ebuild,v 1.2 2006/11/23 19:53:19 vivo Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~amd64 ~ppc"
 IUSE=""
 
-DEPEND=">=dev-db/mysql-3.23.52-r1
+DEPEND="virtual/mysql
 	>=net-analyzer/net-snmp-5.0.9-r1"
 
 src_compile() {

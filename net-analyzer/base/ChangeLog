@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/base
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/ChangeLog,v 1.4 2006/06/21 19:00:26 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/ChangeLog,v 1.5 2006/11/23 19:45:10 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> base-1.2.2.ebuild,
+  base-1.2.2-r1.ebuild, base-1.2.4.ebuild:
+  dev-db/mysql => virtual/mysql
 
   21 Jun 2006; <nixnut@gentoo.org> base-1.2.4.ebuild:
   Added ~ppc wrt bug #134568

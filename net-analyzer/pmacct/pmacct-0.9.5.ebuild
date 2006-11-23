@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/pmacct-0.9.5.ebuild,v 1.4 2006/02/15 23:48:55 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/pmacct-0.9.5.ebuild,v 1.5 2006/11/23 19:52:40 vivo Exp $
 
 MY_P="${P%_*}"
 S="${WORKDIR}/${MY_P}"
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ppc x86"
 IUSE="64bit debug ipv6 mmap mysql postgres"
 
 RDEPEND="net-libs/libpcap
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql )"
 DEPEND="${RDEPEND}"
 

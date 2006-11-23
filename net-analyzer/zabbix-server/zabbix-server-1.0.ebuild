@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.0.ebuild,v 1.2 2005/12/31 13:46:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.0.ebuild,v 1.3 2006/11/23 19:55:20 vivo Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE="snmp mysql postgres"
 
 DEPEND="snmp? ( net-analyzer/net-snmp )
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql )"
 
 # Run-time dependencies, same as DEPEND if RDEPEND isn't defined:"

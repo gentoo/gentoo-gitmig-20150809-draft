@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.1.ebuild,v 1.2 2006/06/07 10:10:46 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.1.ebuild,v 1.3 2006/11/23 19:55:20 vivo Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE="ldap mysql oracle postgres snmp"
 DEPEND="virtual/libc
 	snmp? ( net-analyzer/net-snmp )
 	ldap? ( net-nds/openldap )
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql )"
 RDEPEND="${RDEPEND} net-analyzer/fping"
 

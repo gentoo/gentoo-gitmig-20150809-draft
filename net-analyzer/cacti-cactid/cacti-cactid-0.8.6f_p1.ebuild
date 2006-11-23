@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-cactid/cacti-cactid-0.8.6f_p1.ebuild,v 1.10 2006/10/31 23:23:02 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-cactid/cacti-cactid-0.8.6f_p1.ebuild,v 1.11 2006/11/23 19:46:52 vivo Exp $
 
 WANT_AUTOCONF="latest"
 inherit autotools
@@ -17,13 +17,13 @@ KEYWORDS="~ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="net-analyzer/net-snmp
-		!>=dev-db/mysql-5
-		dev-db/mysql
+		!>=virtual/mysql-5.0
+		virtual/mysql
 		>=sys-devel/autoconf-2.59"
 RDEPEND="net-analyzer/cacti
 		net-analyzer/net-snmp
-		!>=dev-db/mysql-5
-		dev-db/mysql"
+		!>=virtual/mysql-5.0
+		virtual/mysql"
 
 src_unpack() {
 	unpack ${A} ; mv ${WORKDIR}/${PN}-${MY_PV} ${S} ; cd ${S}
