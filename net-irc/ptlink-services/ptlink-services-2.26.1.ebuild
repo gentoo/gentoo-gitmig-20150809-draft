@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-services/ptlink-services-2.26.1.ebuild,v 1.1 2005/04/10 11:34:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-services/ptlink-services-2.26.1.ebuild,v 1.2 2006/11/23 17:29:06 vivo Exp $
 
 inherit fixheadtails eutils versionator
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE="mysql"
 
-DEPEND="mysql? ( dev-db/mysql )"
+DEPEND="mysql? ( virtual/mysql )"
 
 S=${WORKDIR}/${MY_P}
 

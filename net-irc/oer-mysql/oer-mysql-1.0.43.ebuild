@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/oer-mysql/oer-mysql-1.0.43.ebuild,v 1.2 2005/09/11 14:01:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/oer-mysql/oer-mysql-1.0.43.ebuild,v 1.3 2006/11/23 17:28:21 vivo Exp $
 
 inherit fixheadtails versionator
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 ~ppc"
 IUSE="debug static"
 
 RDEPEND="virtual/libc
-	 >=dev-db/mysql-3.23.52-r1"
+	 virtual/mysql"
 DEPEND="${RDEPEND}
 	 >=sys-apps/sed-4"
 

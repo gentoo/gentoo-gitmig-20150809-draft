@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/oer-mysql
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/oer-mysql/ChangeLog,v 1.9 2005/09/11 14:01:00 swegener Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/oer-mysql/ChangeLog,v 1.10 2006/11/23 17:28:21 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> oer-mysql-1.0.43.ebuild:
+  dev-db/mysql => virtual/mysql
 
   11 Sep 2005; Sven Wegener <swegener@gentoo.org> -oer-mysql-1.0.42.ebuild,
   oer-mysql-1.0.43.ebuild:

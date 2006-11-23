@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.18-r1.ebuild,v 1.3 2006/10/06 17:07:51 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.18-r1.ebuild,v 1.4 2006/11/23 17:27:38 vivo Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ IUSE="debug static mysql postgres ssl vanilla"
 
 DEPEND="dev-lang/tcl
 	!vanilla? (
-		mysql? ( dev-db/mysql )
+		mysql? ( virtual/mysql )
 		postgres? ( dev-db/postgresql )
 		ssl? ( dev-libs/openssl )
 	)"
