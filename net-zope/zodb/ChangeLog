@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zodb
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.23 2006/08/16 10:12:20 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.24 2006/11/23 19:36:12 blubb Exp $
+
+  23 Nov 2006; <blubb@gentoo.org> zodb-3.3.1.ebuild:
+  stable on amd64
 
   16 Aug 2006; Alastair Tse <liquidx@gentoo.org> zodb-3.6.0.ebuild:
   stable for x86
