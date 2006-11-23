@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.256 2006/10/30 16:21:05 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.257 2006/11/23 15:59:30 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> samba-3.0.14a-r2.ebuild,
+  samba-3.0.20b.ebuild, samba-3.0.21a.ebuild, samba-3.0.21b-r1.ebuild,
+  samba-3.0.22.ebuild, samba-3.0.22-r2.ebuild, samba-3.0.22-r3.ebuild,
+  samba-3.0.23.ebuild:
+  dev-db/mysql => virtual/mysql
 
   30 Oct 2006; Roy Marples <uberlord@gentoo.org> samba-3.0.23a.ebuild:
   Added ~sparc-fbsd keyword.

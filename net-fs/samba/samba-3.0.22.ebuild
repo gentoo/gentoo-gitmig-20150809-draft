@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.22.ebuild,v 1.14 2006/06/08 10:51:02 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.22.ebuild,v 1.15 2006/11/23 15:59:30 vivo Exp $
 
 inherit eutils versionator
 
@@ -33,7 +33,7 @@ RDEPEND="dev-libs/popt
 	acl?       ( kernel_linux? ( sys-apps/acl ) )
 	cups?      ( net-print/cups )
 	ldap?      ( kerberos? ( virtual/krb5 ) net-nds/openldap )
-	mysql?     ( dev-db/mysql sys-libs/zlib )
+	mysql?     ( virtual/mysql sys-libs/zlib )
 	pam?       ( virtual/pam )
 	postgres?  ( dev-db/postgresql sys-libs/zlib )
 	python?    ( dev-lang/python )
