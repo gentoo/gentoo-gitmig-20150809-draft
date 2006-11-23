@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdljump/sdljump-1.0.0.ebuild,v 1.1 2006/10/03 09:23:40 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdljump/sdljump-1.0.0.ebuild,v 1.2 2006/11/23 21:17:25 blubb Exp $
 
 inherit eutils versionator games
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.savannah.nongnu.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl
