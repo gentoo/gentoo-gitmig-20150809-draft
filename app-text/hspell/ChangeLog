@@ -1,6 +1,9 @@
 # ChangeLog for app-text/hspell
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/ChangeLog,v 1.28 2006/11/15 21:55:07 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/ChangeLog,v 1.29 2006/11/23 09:00:15 gmsoft Exp $
+
+  23 Nov 2006; Guy Martin <gmsoft@gentoo.org> hspell-1.0-r1.ebuild:
+  Stable on hppa.
 
   15 Nov 2006; Luis Medinas <metalgod@gentoo.org> hspell-1.0.ebuild,
   hspell-1.0-r1.ebuild:
