@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.18.6.ebuild,v 1.8 2006/10/24 15:58:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.18.6.ebuild,v 1.9 2006/11/23 16:29:29 vivo Exp $
 
 inherit webapp
 
@@ -16,7 +16,7 @@ IUSE="apache2 mysql"
 # http://www.bugzilla.org/docs218/html/stepbystep.html to verify dependancies
 # updated list of deps: http://www.bugzilla.org/releases/2.18/release-notes.html
 RDEPEND="
-	mysql? ( >=dev-db/mysql-3.23.41 )
+	mysql? ( virtual/mysql )
 	>=dev-lang/perl-5.6.0
 	<=dev-perl/DBD-mysql-3.0002
 	>=dev-perl/AppConfig-1.52

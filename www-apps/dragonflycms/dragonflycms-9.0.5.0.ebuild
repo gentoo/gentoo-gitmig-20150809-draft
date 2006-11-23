@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/dragonflycms-9.0.5.0.ebuild,v 1.4 2005/08/16 05:15:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/dragonflycms-9.0.5.0.ebuild,v 1.5 2006/11/23 16:32:32 vivo Exp $
 
 inherit webapp
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="~arm ~ppc ~s390 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-db/mysql-3.23.32 <dev-db/mysql-5.1
+RDEPEND="virtual/mysql <virtual/mysql-5.1
 	 virtual/httpd-php"
 DEPEND=""
 

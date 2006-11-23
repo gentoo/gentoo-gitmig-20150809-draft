@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ampache-3.3.2.1.ebuild,v 1.1 2006/10/17 15:27:32 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ampache-3.3.2.1.ebuild,v 1.2 2006/11/23 16:22:07 vivo Exp $
 
 inherit webapp depend.php
 
@@ -13,7 +13,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="virtual/httpd-php
-	dev-db/mysql"
+	virtual/mysql"
 DEPEND=""
 
 need_php

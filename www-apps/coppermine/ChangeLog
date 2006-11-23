@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/coppermine
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/ChangeLog,v 1.13 2006/09/05 20:12:45 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/ChangeLog,v 1.14 2006/11/23 16:31:14 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> coppermine-1.4.8.ebuild,
+  coppermine-1.4.9.ebuild:
+  dev-db/mysql => virtual/mysql
 
 *coppermine-1.4.9 (05 Sep 2006)
 

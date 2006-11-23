@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/coppermine-1.4.9.ebuild,v 1.1 2006/09/05 20:12:45 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/coppermine-1.4.9.ebuild,v 1.2 2006/11/23 16:31:14 vivo Exp $
 
 inherit webapp versionator
 
@@ -16,7 +16,7 @@ DEPEND="app-arch/unzip"
 
 RDEPEND=">=net-www/apache-1.3.24-r1
 	virtual/httpd-php
-	dev-db/mysql
+	virtual/mysql
 	imagemagick? ( media-gfx/imagemagick )"
 
 S=${WORKDIR}/cpg$(delete_all_version_separators)

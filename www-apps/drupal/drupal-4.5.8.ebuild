@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-4.5.8.ebuild,v 1.3 2006/10/28 12:27:56 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-4.5.8.ebuild,v 1.4 2006/11/23 16:34:54 vivo Exp $
 
 inherit webapp eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="virtual/php"
-RDEPEND="|| ( dev-db/mysql dev-db/postgresql )
+RDEPEND="|| ( virtual/mysql dev-db/postgresql )
 	>=net-www/apache-1.3"
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugs-bug-genie/bugs-bug-genie-1.7.2.ebuild,v 1.1 2006/02/06 15:05:54 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugs-bug-genie/bugs-bug-genie-1.7.2.ebuild,v 1.2 2006/11/23 16:27:36 vivo Exp $
 
 inherit webapp
 S=${WORKDIR}/bugs_${PV}
@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~ppc ~sparc"
 DEPEND="app-arch/unzip"
 RDEPEND=">=net-www/apache-1.3
 		virtual/php
-		mysql? ( >=dev-db/mysql-4 )"
+		mysql? ( >=virtual/mysql-4.0 )"
 
 LICENSE="MPL-1.1"
 

@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.72 2006/10/24 15:58:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.73 2006/11/23 16:29:29 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> bugzilla-2.18.5.ebuild,
+  bugzilla-2.18.6.ebuild, bugzilla-2.20.3.ebuild, bugzilla-2.22.1.ebuild:
+  dev-db/mysql => virtual/mysql
 
   24 Oct 2006; Simon Stelling <blubb@gentoo.org> bugzilla-2.18.6.ebuild:
   stable on amd64 wrt bug 151563

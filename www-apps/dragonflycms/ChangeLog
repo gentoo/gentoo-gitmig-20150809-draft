@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/dragonflycms
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/ChangeLog,v 1.11 2006/07/15 10:56:18 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/ChangeLog,v 1.12 2006/11/23 16:32:32 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org>
+  dragonflycms-9.0.3.0.ebuild, dragonflycms-9.0.4.0.ebuild,
+  dragonflycms-9.0.5.0.ebuild, dragonflycms-9.0.6.1.ebuild:
+  dev-db/mysql => virtual/mysql
 
   15 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove SeJo from metadata.xml as he's retired.

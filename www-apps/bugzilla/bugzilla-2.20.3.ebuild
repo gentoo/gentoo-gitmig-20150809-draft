@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.20.3.ebuild,v 1.1 2006/10/20 01:59:50 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.20.3.ebuild,v 1.2 2006/11/23 16:29:29 vivo Exp $
 
 inherit webapp
 
@@ -16,7 +16,7 @@ IUSE="apache2 graphviz mysql postgres"
 RDEPEND="
 	>=dev-lang/perl-5.6.1
 	postgres? ( >=dev-db/postgresql-7.3 >=dev-perl/DBD-Pg-1.43 )
-	mysql? ( >=dev-db/mysql-3.23.41 <=dev-perl/DBD-mysql-3.0002 )
+	mysql? ( virtual/mysql <=dev-perl/DBD-mysql-3.0002 )
 	apache2? ( >=net-www/apache-2.0 )
 	!apache2? ( =net-www/apache-1* )
 	graphviz? ( media-gfx/graphviz )

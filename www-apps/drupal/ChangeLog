@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/drupal
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.28 2006/10/28 12:27:56 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.29 2006/11/23 16:34:54 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> drupal-4.5.7.ebuild,
+  drupal-4.5.8.ebuild, drupal-4.6.2.ebuild, drupal-4.6.3.ebuild,
+  drupal-4.6.5.ebuild, drupal-4.6.6.ebuild, drupal-4.6.8.ebuild,
+  drupal-4.6.9.ebuild, drupal-4.7.0.ebuild, drupal-4.7.2.ebuild,
+  drupal-4.7.3.ebuild:
+  dev-db/mysql => virtual/mysql
 
   28 Oct 2006; Sven Wegener <swegener@gentoo.org> drupal-4.5.7.ebuild,
   drupal-4.5.8.ebuild, drupal-4.6.2.ebuild, drupal-4.6.3.ebuild,

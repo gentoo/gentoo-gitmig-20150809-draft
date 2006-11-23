@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/ampache
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.15 2006/10/17 15:27:32 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.16 2006/11/23 16:22:07 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> ampache-3.3.1.7.ebuild,
+  ampache-3.3.2.1.ebuild:
+  dev-db/mysql => virtual/mysql
 
 *ampache-3.3.2.1 (17 Oct 2006)
 
