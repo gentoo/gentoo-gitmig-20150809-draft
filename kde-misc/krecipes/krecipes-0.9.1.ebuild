@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/krecipes-0.9.1.ebuild,v 1.6 2006/04/10 00:46:37 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/krecipes-0.9.1.ebuild,v 1.7 2006/11/23 17:39:26 vivo Exp $
 
 inherit kde
 
@@ -16,7 +16,7 @@ IUSE="mysql postgres sqlite"
 DEPEND="sqlite? ( dev-db/sqlite )
 		!sqlite? ( !mysql? ( !postgres? ( dev-db/sqlite ) ) )"
 RDEPEND="${DEPEND}
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql )"
 
 need-kde 3
