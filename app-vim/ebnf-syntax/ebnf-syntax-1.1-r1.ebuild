@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/ebnf-syntax/ebnf-syntax-1.1-r1.ebuild,v 1.6 2005/09/29 21:09:20 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/ebnf-syntax/ebnf-syntax-1.1-r1.ebuild,v 1.7 2006/11/23 08:26:25 wormo Exp $
 
 inherit vim-plugin
 
 DESCRIPTION="vim plugin: EBNF (ISO/IEC 14997) file syntax highlighting"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=545"
 LICENSE="as-is"
-KEYWORDS="alpha amd64 ia64 mips ~ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 mips ppc ppc64 sparc x86"
 IUSE=""
 
 VIM_PLUGIN_HELPTEXT=\
