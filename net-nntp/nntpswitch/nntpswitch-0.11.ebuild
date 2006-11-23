@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nntpswitch/nntpswitch-0.11.ebuild,v 1.2 2005/05/16 17:23:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nntpswitch/nntpswitch-0.11.ebuild,v 1.3 2006/11/23 16:47:06 vivo Exp $
 
 inherit toolchain-funcs
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="ldap mysql postgres"
 
-RDEPEND="mysql? ( dev-db/mysql )
+RDEPEND="mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql )
 	ldap? ( net-nds/openldap )"
 
