@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.16.0_rc2.ebuild,v 1.2 2006/11/23 17:30:26 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.16.0_rc2.ebuild,v 1.3 2006/11/23 20:15:27 zzam Exp $
 
 inherit eutils linux-info
 
@@ -46,8 +46,7 @@ src_install () {
 
 	dodoc README-modoptions README-modules.conf
 
-	insinto /usr/sbin
-	newins devices.sh em8300-devices.sh
+	newsbin devices.sh em8300-devices.sh
 
 	insinto /etc/modules.d
 	newins ${FILESDIR}/modules.em8300 em8300
