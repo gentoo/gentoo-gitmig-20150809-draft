@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.127 2006/10/15 06:17:24 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.128 2006/11/23 16:48:09 yvasilev Exp $
+
+  23 Nov 2006; <yvasilev@gentoo.org> wxGTK-2.6.3.3.ebuild:
+  Keyworded arm on request by leio.
 
   15 Oct 2006; Mart Raudsepp <leio@gentoo.org> -wxGTK-2.6.3.2.ebuild:
   Remove old version with broken wxrc build
