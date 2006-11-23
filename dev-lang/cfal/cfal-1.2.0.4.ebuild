@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cfal/cfal-1.2.0.4.ebuild,v 1.6 2005/08/24 07:45:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cfal/cfal-1.2.0.4.ebuild,v 1.7 2006/11/23 06:40:08 masterdriverz Exp $
 
 IUSE=""
 
@@ -117,7 +117,6 @@ src_install() {
 	dosym /usr/lib/compaq/cfal/fpp /lib/fpp
 
 	prepalldocs
-	prepallman
 }
 
 pkg_postinst () {
