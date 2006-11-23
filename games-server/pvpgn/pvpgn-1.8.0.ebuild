@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/pvpgn-1.8.0.ebuild,v 1.1 2006/11/15 15:54:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/pvpgn-1.8.0.ebuild,v 1.2 2006/11/23 19:40:00 vivo Exp $
 
 inherit eutils games
 
@@ -16,7 +16,7 @@ KEYWORDS="~ppc ~x86"
 IUSE="mysql postgres"
 
 DEPEND="sys-libs/zlib
-	mysql? ( >=dev-db/mysql-3.23 )
+	mysql? ( virtual/mysql )
 	postgres? ( >=dev-db/postgresql-7 )"
 
 S=${WORKDIR}/${PN}-${PV/_/}

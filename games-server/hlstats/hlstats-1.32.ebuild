@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/hlstats/hlstats-1.32.ebuild,v 1.2 2005/08/18 02:23:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/hlstats/hlstats-1.32.ebuild,v 1.3 2006/11/23 19:39:18 vivo Exp $
 
 inherit games webapp
 
@@ -14,7 +14,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="dev-lang/perl
-	dev-db/mysql
+	virtual/mysql
 	net-www/apache
 	virtual/php"
 
