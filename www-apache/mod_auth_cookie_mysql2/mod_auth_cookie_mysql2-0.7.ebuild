@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_cookie_mysql2/mod_auth_cookie_mysql2-0.7.ebuild,v 1.1 2006/06/13 16:31:01 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_cookie_mysql2/mod_auth_cookie_mysql2-0.7.ebuild,v 1.2 2006/11/23 16:50:00 vivo Exp $
 
 inherit eutils apache-module
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-DEPEND="dev-db/mysql"
+DEPEND="virtual/mysql"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${P/-/_}"
