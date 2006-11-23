@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.16.0_rc2.ebuild,v 1.1 2006/11/17 16:30:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.16.0_rc2.ebuild,v 1.2 2006/11/23 17:30:26 zzam Exp $
 
 inherit eutils linux-info
 
@@ -32,21 +32,22 @@ src_compile ()  {
 
 src_install () {
 	insinto "/usr/include/linux"
-	doins ../include/linux/em8300.h
+	doins include/linux/em8300.h
 
-	check_KV
+	cd modules
 
-	# The driver goes into the standard modules location
-	insinto "/lib/modules/${KV}/kernel/drivers/video"
+	insinto "/lib/modules/${KV_FULL}/kernel/drivers/video"
 
-	if [ "${KV:0:3}" == "2.6" ]
-	then
-		doins em8300.ko bt865.ko adv717x.ko
+	if kernel_is 2 6; then
+		doins *.ko
 	else
-		doins em8300.o bt865.o adv717x.o
+		die "Unsupported kernel."
 	fi
 
-	dodoc README-modoptions README-modules.conf devfs_symlinks
+	dodoc README-modoptions README-modules.conf
+
+	insinto /usr/sbin
+	newins devices.sh em8300-devices.sh
 
 	insinto /etc/modules.d
 	newins ${FILESDIR}/modules.em8300 em8300
@@ -65,11 +66,7 @@ pkg_postinst () {
 	elog "directory of your currently running kernel.  They haven't been"
 	elog "loaded.  Please read the documentation, and if you would like"
 	elog "to have the modules load at startup, add em8300, bt865, adv717x"
-	elog "to your /etc/modules.autoload they may need module options to "
-	elog "work correctly on your system.  You will also need to add"
-	elog "the contents of /usr/share/doc/${P}/devfs_symlinks.gz"
-	elog "to your devfsd.conf so that the em8300 devices will be linked"
-	elog "correctly."
+	elog "to your /etc/modules.autoload.d."
 	elog
 	elog "You will also need to have the i2c kernel modules compiled for"
 	elog "this to be happy, no need to patch any kernel though just turn"
