@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/mysql-5.1.ebuild,v 1.1 2006/11/23 13:40:04 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/mysql-5.1.ebuild,v 1.2 2006/11/23 13:41:59 vivo Exp $
 
 DESCRIPTION="Virtual for MySQL client or database"
 HOMEPAGE="http://dev.mysql.com"
@@ -16,4 +16,5 @@ RDEPEND="|| (
 	=dev-db/mysql-community-${PV}*
 	=dev-db/mysql-${PV}*
 )"
+
 
