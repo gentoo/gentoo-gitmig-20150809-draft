@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.375 2006/11/17 19:52:43 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.376 2006/11/23 22:30:25 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org>
+  -mysql-5.1.13_alpha20061018.ebuild:
+  5.1.13 is bitkeeper sources, I do assume these are to be considered community
 
   17 Nov 2006; <blubb@gentoo.org> mysql-5.0.26-r1.ebuild:
   stable on amd64
