@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/knoda
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/ChangeLog,v 1.40 2006/11/19 14:32:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/ChangeLog,v 1.41 2006/11/23 10:23:44 opfer Exp $
+
+  23 Nov 2006; Christian Faulhammer <opfer@gentoo.org> knoda-0.8.1.ebuild:
+  stable x86, bug #152247
 
   19 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> knoda-0.7.4-r1.ebuild:
   Remove configure script, leave autotools re-run to the eclass.
