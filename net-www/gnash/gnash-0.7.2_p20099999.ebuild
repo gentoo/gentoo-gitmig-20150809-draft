@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.2_p20099999.ebuild,v 1.2 2006/11/21 11:56:41 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.2_p20099999.ebuild,v 1.3 2006/11/23 21:31:29 genstef Exp $
 
 WANT_AUTOCONF=latest
 inherit nsplugins autotools cvs kde-functions
@@ -57,6 +57,14 @@ RDEPEND="
 	kde? ( kde-base/kdelibs )
 	agg? ( x11-libs/agg )"
 	#cairo? ( x11-libs/cairo )
+
+pkg_setup() {
+	if use agg && use kde; then
+		eerror "Building klash with the agg based renderer is not supportet"
+		eerror "Please USE -kde or -agg"
+		die "kde and agg not supported at the same time"
+	fi
+}
 
 src_unpack() {
 	cvs_src_unpack
