@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/auctex
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.45 2006/11/22 07:57:41 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.46 2006/11/23 18:55:23 blubb Exp $
+
+  23 Nov 2006; <blubb@gentoo.org> auctex-11.83.ebuild:
+  stable on amd64
 
 *auctex-11.83-r1 (22 Nov 2006)
 
