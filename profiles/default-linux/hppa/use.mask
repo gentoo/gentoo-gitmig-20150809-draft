@@ -199,6 +199,7 @@ esoob
 filepro
 frontbase
 hyperwave
+ibm
 informix
 ingres
 oracle7
