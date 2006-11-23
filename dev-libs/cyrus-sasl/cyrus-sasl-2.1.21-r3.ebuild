@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.21-r3.ebuild,v 1.1 2006/08/04 00:24:29 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.21-r3.ebuild,v 1.2 2006/11/23 20:14:22 vivo Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg multilib
 
@@ -22,7 +22,7 @@ RDEPEND="virtual/libc
 	berkdb? ( >=sys-libs/db-3.2 )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	ldap? ( >=net-nds/openldap-2.0.25 )
-	mysql? ( >=dev-db/mysql-3.23.51 )
+	mysql? ( virtual/mysql )
 	postgres? ( >=dev-db/postgresql-7.2 )
 	pam? ( virtual/pam )
 	ssl? ( >=dev-libs/openssl-0.9.6d )

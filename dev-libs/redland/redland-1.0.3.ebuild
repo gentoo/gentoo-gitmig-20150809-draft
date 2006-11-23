@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.3.ebuild,v 1.1 2006/02/26 05:29:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.3.ebuild,v 1.2 2006/11/23 20:16:57 vivo Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="berkdb mysql sqlite ssl threads"
 
-DEPEND="mysql? ( dev-db/mysql )
+DEPEND="mysql? ( virtual/mysql )
 	sqlite? ( =dev-db/sqlite-3* )
 	berkdb? ( sys-libs/db )
 	dev-libs/libxml2

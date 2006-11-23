@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-0.9.8.ebuild,v 1.1 2006/07/01 03:50:52 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-0.9.8.ebuild,v 1.2 2006/11/23 20:15:58 vivo Exp $
 
 inherit flag-o-matic
 
@@ -16,7 +16,7 @@ IUSE="doc mysql postgres perl python"
 DEPEND="virtual/libc
 	>=dev-libs/libprelude-0.9.9
 	doc? ( dev-util/gtk-doc )
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql )"
 
 src_compile() {

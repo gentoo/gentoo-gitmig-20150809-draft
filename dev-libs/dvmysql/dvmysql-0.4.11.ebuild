@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvmysql/dvmysql-0.4.11.ebuild,v 1.1 2005/05/13 01:40:29 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvmysql/dvmysql-0.4.11.ebuild,v 1.2 2006/11/23 20:15:08 vivo Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND="virtual/libc
-	dev-db/mysql
+	virtual/mysql
 	dev-libs/dvutil"
 
 src_install() {
