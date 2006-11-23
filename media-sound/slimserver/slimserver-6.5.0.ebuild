@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/slimserver/slimserver-6.5.0.ebuild,v 1.2 2006/11/23 17:44:38 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/slimserver/slimserver-6.5.0.ebuild,v 1.3 2006/11/23 20:19:02 blubb Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.slimdevices.com/slimserver/"
 SRC_URI="http://www.slimdevices.com/downloads/${MY_P}/${MY_P}.no-cpan-arch.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="aac alac encode ffmpeg flac musepack ogg shorten"
 DEPEND="sys-apps/findutils"
 RDEPEND="
