@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 0.0.11-makefile.patch 777 RMD160 b69f0158733e3d0cc74fd9bdc68ffe4c887da879 SHA1 974499732549addd9cd8d26bfd8de43edcfa1902 SHA256 6bfb84a9bfb92a3b3ced4897d487a3bed9ecd4dcb11df01d93836821c5d56c71
 MD5 c49253cc21948dd1647e4eef78e28327 files/0.0.11-makefile.patch 777
 RMD160 b69f0158733e3d0cc74fd9bdc68ffe4c887da879 files/0.0.11-makefile.patch 777
@@ -18,3 +21,10 @@ SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata
 MD5 03ab6f3c37f5bf55ab81ca05c265ae52 files/digest-defendguin-0.0.11 256
 RMD160 202c93639ee25f336d6bfd38fd923163feafaa76 files/digest-defendguin-0.0.11 256
 SHA256 bdf2b11b014faf642aaa68bfb46340e40c0dafd4aba5ac7969bb63b4777a93bc files/digest-defendguin-0.0.11 256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFZftRdz7hIScOURERAjNVAJ94PW9RdIDGGDOYQMUutVe6YyctGgCeO+0l
+rvfuPP6/ZGPFUzN4OQyh4+I=
+=xDT+
+-----END PGP SIGNATURE-----
