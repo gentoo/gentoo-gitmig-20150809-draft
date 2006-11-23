@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_vdbh/mod_vdbh-1.0.3-r1.ebuild,v 1.4 2006/01/18 07:01:22 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_vdbh/mod_vdbh-1.0.3-r1.ebuild,v 1.5 2006/11/23 16:16:19 vivo Exp $
 
 inherit eutils apache-module
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="ppc x86"
 IUSE=""
 
-DEPEND=">=dev-db/mysql-3.23
+DEPEND="virtual/mysql
 	>=sys-libs/zlib-1.1.4"
 
 APXS2_ARGS="-DHAVE_STDDEF_H -I/usr/include/mysql -Wl,-lmysqlclient -c ${PN}.c"

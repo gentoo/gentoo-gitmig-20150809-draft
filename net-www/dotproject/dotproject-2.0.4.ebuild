@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dotproject/dotproject-2.0.4.ebuild,v 1.1 2006/07/27 16:28:55 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dotproject/dotproject-2.0.4.ebuild,v 1.2 2006/11/23 16:13:31 vivo Exp $
 
 inherit webapp
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 RDEPEND="net-www/apache
 	virtual/httpd-php
-	>=dev-db/mysql-3.23"
+	virtual/mysql"
 
 S=${WORKDIR}/${PN}
 LICENSE="GPL-2"

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_log_sql/mod_log_sql-1.100.ebuild,v 1.9 2006/06/04 18:37:03 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_log_sql/mod_log_sql-1.100.ebuild,v 1.10 2006/11/23 16:14:58 vivo Exp $
 
 inherit eutils apache-module
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE="apache2 dbi ssl"
 
-DEPEND=">=dev-db/mysql-3.23.30
+DEPEND="virtual/mysql
 		dbi? ( >=dev-db/libdbi-0.7.0 )
 		ssl? ( dev-libs/openssl !apache2? ( net-www/mod_ssl ) )"
 RDEPEND="${DEPEND}"

@@ -1,6 +1,9 @@
 # ChangeLog for net-www/dotproject
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dotproject/ChangeLog,v 1.11 2006/07/27 16:30:38 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dotproject/ChangeLog,v 1.12 2006/11/23 16:13:31 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> dotproject-2.0.4.ebuild:
+  dev-db/mysql => virtual/mysql
 
   27 Jul 2006; Stuart Herbert <stuart@gentoo.org> -dotproject-2.0.3.ebuild:
   Removed old, vulnerable version from the tree.
