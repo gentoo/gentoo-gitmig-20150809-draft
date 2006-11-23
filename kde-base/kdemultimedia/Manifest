@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX artsplugin-akode-3.5.2-memleak.patch 797 RMD160 593b8a40af0b373259d37410f57989cdfb9ec568 SHA1 40e58675d2417c92bcb1e0351489da7ab17a82ae SHA256 1a6d341f130430ca7faef4188899e4fe98c4ba808ea9702d352a9b28eb2b3642
 MD5 d860129d92634080c3f7368ed282e098 files/artsplugin-akode-3.5.2-memleak.patch 797
 RMD160 593b8a40af0b373259d37410f57989cdfb9ec568 files/artsplugin-akode-3.5.2-memleak.patch 797
@@ -28,10 +25,10 @@ EBUILD kdemultimedia-3.5.2-r2.ebuild 2697 RMD160 e0f67a34bae9a8e4d7c030ce99ae689
 MD5 2116882db5ac7ebe0a4cd88a81b12edf kdemultimedia-3.5.2-r2.ebuild 2697
 RMD160 e0f67a34bae9a8e4d7c030ce99ae689745d5c273 kdemultimedia-3.5.2-r2.ebuild 2697
 SHA256 47420cba523696d527f1f06d40855f69f705b7e17d119dfc3383e3ebb1cedb81 kdemultimedia-3.5.2-r2.ebuild 2697
-EBUILD kdemultimedia-3.5.5.ebuild 2773 RMD160 35dff49426a545d3a13d728f70591edeabda149b SHA1 e32e2734250a22adb9b5815c22898cd1bb2d3e2c SHA256 c700ba2b232a8ccb7273370a7537dfcf4cf9cfa72f112d9f7fffd036ce037e1e
-MD5 0da17b37388a66d18e560c30c3341283 kdemultimedia-3.5.5.ebuild 2773
-RMD160 35dff49426a545d3a13d728f70591edeabda149b kdemultimedia-3.5.5.ebuild 2773
-SHA256 c700ba2b232a8ccb7273370a7537dfcf4cf9cfa72f112d9f7fffd036ce037e1e kdemultimedia-3.5.5.ebuild 2773
+EBUILD kdemultimedia-3.5.5.ebuild 2731 RMD160 7ece739fb32ed6f75f164d78f82eca46f800f316 SHA1 1b96ce87a397e06b3659ca5aa866e34abda543a1 SHA256 8e54e1c732ba459a6fa36d2fcdbe0f9304614a76c7f72229dc9d04920d6be64d
+MD5 a6255c31dac843a24ccddcce03c8ed79 kdemultimedia-3.5.5.ebuild 2731
+RMD160 7ece739fb32ed6f75f164d78f82eca46f800f316 kdemultimedia-3.5.5.ebuild 2731
+SHA256 8e54e1c732ba459a6fa36d2fcdbe0f9304614a76c7f72229dc9d04920d6be64d kdemultimedia-3.5.5.ebuild 2731
 MISC ChangeLog 33031 RMD160 69eff5443fadeda045bd8598eb6585a105e45a8a SHA1 824de632e324a1e66cb5b832d86c51749984144f SHA256 eba5c16239d80f74c59df77c1083061f9cce43799a9426ce723eb231d4394cc1
 MD5 47016c5009ffca32e9eb1c6871dcace4 ChangeLog 33031
 RMD160 69eff5443fadeda045bd8598eb6585a105e45a8a ChangeLog 33031
@@ -46,10 +43,3 @@ SHA256 56c78bc8daf3dd1f556ee8992785d6dba57452393113180723c50be5ad691b8a files/di
 MD5 bb57e866bc990bddc1cdc63fe142e497 files/digest-kdemultimedia-3.5.5 265
 RMD160 ef29f6429dedc81798491e528124510ee9fdd065 files/digest-kdemultimedia-3.5.5 265
 SHA256 111420f825959311ddc64c7db1fd49d34f2e21b5cf5187fdba09feef59f83ddc files/digest-kdemultimedia-3.5.5 265
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-
-iD8DBQFFXz3hAiZjviIA2XgRAo8IAJsFXAT9cF2HV8XyyDMwRsYaGLBMmQCfSCWm
-gj15EpbN96tKzUrMSOtgV/0=
-=G3Mg
------END PGP SIGNATURE-----
