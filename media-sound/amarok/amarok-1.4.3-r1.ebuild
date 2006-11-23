@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.3-r1.ebuild,v 1.9 2006/11/06 22:44:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.3-r1.ebuild,v 1.10 2006/11/23 17:40:51 vivo Exp $
 
 LANGS="az bg br ca cs cy da de el en_GB es et fi fr ga gl he hi hu is it ja ka
 km ko lt ms nb nl nn pa pl pt pt_BR ro ru rw sl sr sr@Latn sv ta tg th tr uk uz
@@ -31,7 +31,7 @@ visualization ipod ifp real njb"
 DEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase ) )
 	>=media-libs/xine-lib-1.1.2_pre20060328-r8
 	>=media-libs/taglib-1.4
-	mysql? ( >=dev-db/mysql-4.0.16 )
+	mysql? ( >=virtual/mysql-4.0 )
 	postgres? ( dev-db/postgresql )
 	opengl? ( virtual/opengl )
 	visualization? ( media-libs/libsdl

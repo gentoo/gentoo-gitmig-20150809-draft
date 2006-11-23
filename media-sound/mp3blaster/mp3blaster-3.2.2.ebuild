@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.2.ebuild,v 1.3 2006/05/01 22:37:46 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.2.ebuild,v 1.4 2006/11/23 17:42:23 vivo Exp $
 
 inherit toolchain-funcs
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 IUSE="lirc mysql vorbis"
 
 DEPEND=">=sys-libs/ncurses-5.2
-	mysql? ( >=dev-db/mysql-3.23.36 )
+	mysql? ( virtual/mysql )
 	lirc? ( app-misc/lirc )
 	vorbis? ( >=media-libs/libvorbis-1.0_beta1 )"
 #	nas? ( >=media-libs/nas-1.4.1 )

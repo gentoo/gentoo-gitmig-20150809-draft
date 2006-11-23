@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/prokyon3/prokyon3-0.9.2.ebuild,v 1.13 2006/03/08 20:29:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/prokyon3/prokyon3-0.9.2.ebuild,v 1.14 2006/11/23 17:43:55 vivo Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE="vorbis"
 RESTRICT="primaryuri"
 
 DEPEND="=x11-libs/qt-3*
-	dev-db/mysql
+	virtual/mysql
 	>=media-libs/id3lib-3.8.2
 	vorbis? ( >=media-libs/libvorbis-1.0 )"
 

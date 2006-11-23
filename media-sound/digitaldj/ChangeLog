@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/digitaldj
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/digitaldj/ChangeLog,v 1.14 2006/10/23 11:11:01 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/digitaldj/ChangeLog,v 1.15 2006/11/23 17:41:34 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> digitaldj-0.7.3-r1.ebuild,
+  digitaldj-0.7.5.ebuild:
+  dev-db/mysql => virtual/mysql
 
   23 Oct 2006; <vivo@gentoo.org>
   +files/digitaldj-remove_obsolete_CLK_TCK.patch, digitaldj-0.7.3-r1.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/digitaldj/digitaldj-0.7.3-r1.ebuild,v 1.10 2006/10/25 08:51:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/digitaldj/digitaldj-0.7.3-r1.ebuild,v 1.11 2006/11/23 17:41:34 vivo Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SLOT="0"
 #-amd64: 0.7.3-r1: segfault when "attempt to configure database->yes"
 KEYWORDS="alpha -amd64 ~hppa sparc x86"
 IUSE="lirc"
-DEPEND="dev-db/mysql
+DEPEND="virtual/mysql
 	lirc? ( app-misc/lirc )
 	gnome-base/libghttp
 	media-libs/gdk-pixbuf
