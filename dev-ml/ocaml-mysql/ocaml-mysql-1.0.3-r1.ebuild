@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-mysql/ocaml-mysql-1.0.3-r1.ebuild,v 1.2 2005/08/17 12:51:53 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-mysql/ocaml-mysql-1.0.3-r1.ebuild,v 1.3 2006/11/23 17:14:59 vivo Exp $
 
 inherit findlib eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://raevnos.pennmush.org/code/${PN}/${P}.tar.gz"
 HOMEPAGE="http://raevnos.pennmush.org/code/ocaml-mysql/index.html"
 
 DEPEND=">=dev-lang/ocaml-3.06
-	>=dev-db/mysql-4.0.12"
+	>=virtual/mysql-4.0"
 
 RDEPEND="$DEPEND"
 
