@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmjsql/wmjsql-0.5.ebuild,v 1.8 2006/01/31 19:36:49 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmjsql/wmjsql-0.5.ebuild,v 1.9 2006/11/23 16:50:44 vivo Exp $
 
 IUSE=""
 
@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}
 		x11-proto/xproto
 		x11-proto/xextproto )
 	virtual/x11 )
-	>=dev-db/mysql-4.0.20"
+	>=virtual/mysql-4.0"
 
 SLOT="0"
 LICENSE="GPL-2"
