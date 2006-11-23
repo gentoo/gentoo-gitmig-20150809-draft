@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.19.ebuild,v 1.1 2006/11/11 21:53:41 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.19.ebuild,v 1.2 2006/11/23 04:14:41 tester Exp $
 
 inherit gnome2 eutils
 
@@ -29,7 +29,8 @@ RDEPEND="|| ( x11-libs/libXScrnSaver
 	>=net-libs/loudmouth-1
 	spell? ( app-text/aspell )
 	libnotify? ( >=x11-libs/libnotify-0.3.2 )
-	dbus? ( >=sys-apps/dbus-0.60 )"
+	dbus? ( || ( >=dev-libs/dbus-glib-0.71
+		( <sys-apps/dbus-0.90  >=sys-apps/dbus-0.60 ) ) )"
 
 DEPEND="${RDEPEND}
 	>=app-text/gnome-doc-utils-0.3.2
