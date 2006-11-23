@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libole2/libole2-0.2.4-r1.ebuild,v 1.9 2005/04/18 17:01:54 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libole2/libole2-0.2.4-r1.ebuild,v 1.10 2006/11/23 21:50:16 blubb Exp $
 
 inherit gnome.org
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ppc alpha"
+KEYWORDS="alpha ~amd64 ppc sparc x86"
 
 DEPEND="=dev-libs/glib-1.2*
 	dev-util/gtk-doc"
