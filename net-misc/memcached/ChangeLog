@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/memcached
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.32 2006/10/25 11:38:31 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.33 2006/11/23 19:51:55 dertobi123 Exp $
+
+  23 Nov 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  memcached-1.1.12-r2.ebuild:
+  ppc stable
 
   25 Oct 2006; Roy Marples <uberlord@gentoo.org> memcached-1.2.0.ebuild:
   Added ~sparc-fbsd keyword

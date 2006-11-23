@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.1.12-r2.ebuild,v 1.7 2006/11/12 03:41:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.1.12-r2.ebuild,v 1.8 2006/11/23 19:51:55 dertobi123 Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.danga.com/memcached/dist/${P}.tar.gz"
 LICENSE="BSD"
 
 SLOT="0"
-KEYWORDS="amd64 arm ~hppa ia64 ~mips ~ppc ppc64 sh sparc x86"
+KEYWORDS="amd64 arm ~hppa ia64 ~mips ppc ppc64 sh sparc x86"
 IUSE="static perl doc"
 
 DEPEND=">=dev-libs/libevent-0.6
