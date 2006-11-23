@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-softdevice
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.28 2006/11/14 09:27:13 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.29 2006/11/23 12:44:16 zzam Exp $
+
+*vdr-softdevice-0.3.1-r2 (23 Nov 2006)
+
+  23 Nov 2006; Matthias Schwarzott <zzam@gentoo.org> files/rc-addon.sh,
+  -vdr-softdevice-0.3.1-r1.ebuild, +vdr-softdevice-0.3.1-r2.ebuild:
+  No longer kill ShmClient at vdr-restart, as it seems to work now without that.
 
 *vdr-softdevice-0.3.1-r1 (14 Nov 2006)
 
