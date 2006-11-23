@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.7-r2.ebuild,v 1.2 2005/09/01 17:01:52 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.7-r2.ebuild,v 1.3 2006/11/23 17:12:49 vivo Exp $
 
 inherit eutils flag-o-matic linux-info
 
@@ -17,7 +17,7 @@ RDEPEND="X? ( =x11-libs/gtk+-1.2* )
 	bluetooth? ( net-wireless/bluez-libs )
 	sms? ( >=dev-libs/glib-2
 	       postgres? ( dev-db/postgresql )
-	       mysql? ( dev-db/mysql )
+	       mysql? ( virtual/mysql )
 	     )"
 DEPEND="${RDEPEND}
 	irda? ( virtual/os-headers )

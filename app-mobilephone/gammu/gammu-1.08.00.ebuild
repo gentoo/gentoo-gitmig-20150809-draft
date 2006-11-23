@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.08.00.ebuild,v 1.2 2006/11/15 20:44:05 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.08.00.ebuild,v 1.3 2006/11/23 17:10:28 vivo Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ia64 ~ppc x86"
 IUSE="debug bluetooth irda mysql"
 
 RDEPEND="bluetooth? ( net-wireless/bluez-libs )
-	mysql? ( dev-db/mysql )"
+	mysql? ( virtual/mysql )"
 DEPEND="${RDEPEND}
 	irda? ( virtual/os-headers )"
 

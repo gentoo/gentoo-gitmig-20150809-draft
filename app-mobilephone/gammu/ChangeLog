@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/gammu
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.25 2006/11/15 20:44:05 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.26 2006/11/23 17:10:28 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> gammu-1.05.00.ebuild,
+  gammu-1.06.00.ebuild, gammu-1.07.00.ebuild, gammu-1.08.00.ebuild:
+  dev-db/mysql => virtual/mysql
 
   15 Nov 2006; Alin Nastac <mrness@gentoo.org> gammu-1.08.00.ebuild:
   Stable on x86.
