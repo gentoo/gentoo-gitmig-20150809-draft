@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6335 2006/11/23 14:11:45 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6336 2006/11/23 20:45:39 nyhm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1265,7 +1265,7 @@ dev-db/mergeant
 # There are still some work to be done, but should
 # be able to build.
 app-text/texlive
- 
+
 # Stefan Cornelius <dercorny@gentoo.org> (27 May 2006)
 # Masked because of security bug #131866
 sys-apps/resmgr
@@ -1760,11 +1760,6 @@ app-portage/abeni
 # Tihs package is conflict with postgresql at the moment
 # and waiting on implementing virtual/postgresql.
 dev-db/pgcluster
-
-# <pylon@gentoo.org> (13 Feb 2005)
-# From website: "We know that 0.4.x is a bit buggy on trades :), for people who
-# wish to play a stable game, please use 0.3.2"
-=games-board/gtkatlantic-0.4.1
 
 # Aron Griffis <agriffis@gentoo.org> (07 Feb 2005)
 # Mask offlineimap testing versions
