@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/xlc
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xlc/ChangeLog,v 1.3 2005/10/15 08:42:22 mrness Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xlc/ChangeLog,v 1.4 2006/11/23 20:32:51 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> xlc-1.0.6.ebuild:
+  dev-db/mysql => virtual/mysql
 
   15 Oct 2005; Alin Nastac <mrness@gentoo.org> xlc-1.0.6.ebuild:
   Fix dependency on x11-libs/gtk+-1.2 (#108147).

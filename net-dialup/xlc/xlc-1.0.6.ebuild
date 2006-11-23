@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xlc/xlc-1.0.6.ebuild,v 1.3 2005/10/15 08:42:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xlc/xlc-1.0.6.ebuild,v 1.4 2006/11/23 20:32:51 vivo Exp $
 
 DESCRIPTION="GTK client for LineControl server"
 HOMEPAGE="http://linecontrol.sourceforge.net"
@@ -12,7 +12,7 @@ KEYWORDS="x86"
 IUSE="mysql"
 
 DEPEND="=x11-libs/gtk+-1.2*
-	mysql? ( dev-db/mysql )"
+	mysql? ( virtual/mysql )"
 
 src_compile() {
 	econf `use_enable mysql` || die "could not configure"

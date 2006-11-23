@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.9_pre20060124.ebuild,v 1.5 2006/09/11 09:30:46 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.9_pre20060124.ebuild,v 1.6 2006/11/23 20:31:38 vivo Exp $
 
 inherit eutils multilib gnuconfig linux-info
 
@@ -20,7 +20,7 @@ IUSE="X activefilter mschap ipppd isdnlog eurofile usb pcmcia"
 # TODO: mysql postgres oracle radius
 SLOT="0"
 
-# mysql? ( dev-db/mysql )
+# mysql? ( virtual/mysql )
 # oracle? ( dev-db/oracle-instantclient-basic )
 # postgres? ( dev-db/postgresql )
 

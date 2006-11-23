@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/isdn4k-utils
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.56 2006/09/11 09:30:46 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.57 2006/11/23 20:31:38 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org>
+  isdn4k-utils-3.8_pre20050821.ebuild, isdn4k-utils-3.9_pre20060124.ebuild:
+  dev-db/mysql => virtual/mysql
 
   11 Sep 2006; Stefan Schweizer <genstef@gentoo.org>
   isdn4k-utils-3.8_pre20050821.ebuild, isdn4k-utils-3.9_pre20060124.ebuild:

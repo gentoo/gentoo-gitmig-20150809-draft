@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.1.3-r1.ebuild,v 1.1 2006/10/21 07:32:50 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.1.3-r1.ebuild,v 1.2 2006/11/23 20:29:59 vivo Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -19,7 +19,7 @@ DEPEND="!net-dialup/cistronradius
 	sys-libs/gdbm
 	dev-lang/perl
 	snmp? ( net-analyzer/net-snmp )
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql )
 	pam? ( sys-libs/pam )
 	ssl? ( dev-libs/openssl )
