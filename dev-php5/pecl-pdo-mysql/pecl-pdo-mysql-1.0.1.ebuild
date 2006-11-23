@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-mysql/pecl-pdo-mysql-1.0.1.ebuild,v 1.11 2006/02/24 13:58:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-mysql/pecl-pdo-mysql-1.0.1.ebuild,v 1.12 2006/11/23 20:18:03 vivo Exp $
 
 PHP_EXT_NAME="pdo_mysql"
 PHP_EXT_PECL_PKG="PDO_MYSQL"
@@ -17,7 +17,7 @@ IUSE=""
 
 DEPEND="${DEPEND}
 		dev-php5/pecl-pdo
-		dev-db/mysql"
+		virtual/mysql"
 
 need_php_by_category
 
