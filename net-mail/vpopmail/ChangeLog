@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.74 2006/05/11 12:35:07 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.75 2006/11/23 16:12:33 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> vpopmail-5.4.6-r1.ebuild,
+  vpopmail-5.4.13.ebuild, vpopmail-5.4.16.ebuild:
+  dev-db/mysql => virtual/mysql
 
   11 May 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   vpopmail-5.4.16.ebuild:

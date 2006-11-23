@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/perdition/perdition-1.17.ebuild,v 1.1 2005/10/23 11:40:57 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/perdition/perdition-1.17.ebuild,v 1.2 2006/11/23 16:08:32 vivo Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ DEPEND="!net-mail/mailx
 	ssl? ( dev-libs/openssl )
 	odbc? ( dev-db/unixODBC )
 	gdbm? ( sys-libs/gdbm )
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql )
 	ldap? ( net-nds/openldap )
 	pam? ( sys-libs/pam )

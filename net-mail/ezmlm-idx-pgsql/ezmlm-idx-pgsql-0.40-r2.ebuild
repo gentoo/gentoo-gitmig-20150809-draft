@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx-pgsql/ezmlm-idx-pgsql-0.40-r2.ebuild,v 1.10 2006/02/20 00:34:35 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx-pgsql/ezmlm-idx-pgsql-0.40-r2.ebuild,v 1.11 2006/11/23 16:06:46 vivo Exp $
 
 # NOTE: ezmlm-idx, ezmlm-idx-mysql and ezmlm-idx-pgsql all supported by this single ebuild
 # (Please keep them in sync)
@@ -31,8 +31,8 @@ then
 	RDEPEND="$RDEPEND dev-db/postgresql"
 elif [ "$PN" = "${PB}-mysql" ]
 then
-	DEPEND="$DEPEND dev-db/mysql"
-	RDEPEND="$RDEPEND dev-db/mysql"
+	DEPEND="$DEPEND virtual/mysql"
+	RDEPEND="$RDEPEND virtual/mysql"
 fi
 
 src_unpack() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-0.6-r2.ebuild,v 1.2 2005/09/16 02:48:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-0.6-r2.ebuild,v 1.3 2006/11/23 16:07:44 vivo Exp $
 
 inherit eutils
 DESCRIPTION="A useful collection of mail servers, clients, and filters."
@@ -16,7 +16,7 @@ DEPEND="!virtual/mailx
 	!mail-client/elm
 	dev-util/guile
 	gdbm? ( sys-libs/gdbm )
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql )
 	nls? ( sys-devel/gettext )
 	virtual/mta"

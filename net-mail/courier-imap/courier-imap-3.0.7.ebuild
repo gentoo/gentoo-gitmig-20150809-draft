@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.7.ebuild,v 1.18 2005/03/03 18:57:31 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.7.ebuild,v 1.19 2006/11/23 16:02:51 vivo Exp $
 
 inherit eutils gnuconfig
 
@@ -20,7 +20,7 @@ RDEPEND="virtual/libc
 	pam? ( >=sys-libs/pam-0.75 )
 	berkdb? ( sys-libs/db )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
-	mysql? ( >=dev-db/mysql-3.23.36 )
+	mysql? ( virtual/mysql )
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	postgres? ( >=dev-db/postgresql-7.2 )
 	>=dev-tcltk/expect-5.33.0
