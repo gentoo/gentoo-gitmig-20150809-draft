@@ -1,0 +1,13 @@
+# ChangeLog for dev-db/mysql
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/ChangeLog,v 1.1 2006/11/23 13:58:06 vivo Exp $
+
+*mysql-community-5.1.13_alpha20061018 (23 Nov 2006)
+*mysql-community-5.0.27 (23 Nov 2006)
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> +files/my.cnf-4.1,
+  +files/mysql.conf.d, +files/mysqlmanager.conf.d, +files/mysqlmanager.rc6,
+  +metadata.xml, +mysql-community-5.0.27.ebuild,
+  +mysql-community-5.1.13_alpha20061018.ebuild:
+  Starting with mysql-5.0.27 MySQL is splitted in enterprise and community
+
