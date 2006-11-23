@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/meanwhile
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.41 2006/11/15 23:06:55 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.42 2006/11/23 10:21:48 gmsoft Exp $
+
+  23 Nov 2006; Guy Martin <gmsoft@gentoo.org> meanwhile-1.0.2.ebuild:
+  Stable on hppa.
 
   15 Nov 2006; Joseph Jezak <josejx@gentoo.org> meanwhile-1.0.2.ebuild:
   Marked ppc stable.
