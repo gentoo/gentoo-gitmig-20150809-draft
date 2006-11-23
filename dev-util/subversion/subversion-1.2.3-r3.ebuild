@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.2.3-r3.ebuild,v 1.14 2006/06/24 15:35:50 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.2.3-r3.ebuild,v 1.15 2006/11/23 17:03:29 grobian Exp $
 
 inherit elisp-common libtool python eutils bash-completion flag-o-matic depend.apache perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="http://subversion.tigris.org/tarballs/${P/_rc/-rc}.tar.bz2"
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm hppa ia64 ~mips ~ppc ~ppc-macos ppc64 ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~arm hppa ia64 ~mips ~ppc ppc64 ~sparc ~x86"
 IUSE="apache2 berkdb python emacs perl java nls nowebdav zlib ruby"
 RESTRICT="test"
 
