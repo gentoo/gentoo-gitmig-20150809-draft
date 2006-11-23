@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.10.0.ebuild,v 1.3 2006/10/31 22:20:25 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.10.0.ebuild,v 1.4 2006/11/23 15:42:47 vivo Exp $
 
 #inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND="png? ( media-libs/libpng
 			   media-libs/gd )
 		X? ( x11-libs/libX11 )
 		usb? ( dev-libs/libusb )
-		mysql? ( dev-db/mysql )"
+		mysql? ( virtual/mysql )"
 #		python? ( dev-lang/python )
 # mpd is needed soon
 # python is broken

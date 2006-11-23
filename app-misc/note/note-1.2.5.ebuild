@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/note/note-1.2.5.ebuild,v 1.5 2005/11/28 12:09:19 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/note/note-1.2.5.ebuild,v 1.6 2006/11/23 15:43:46 vivo Exp $
 
 inherit perl-app
 
@@ -14,5 +14,5 @@ KEYWORDS="x86"
 DEPEND="dev-perl/TermReadKey
 		dev-perl/Term-ReadLine-Perl
 		crypt? ( dev-perl/crypt-cbc dev-perl/Crypt-Blowfish )
-		mysql? ( dev-db/mysql dev-perl/DBD-mysql )"
+		mysql? ( virtual/mysql dev-perl/DBD-mysql )"
 

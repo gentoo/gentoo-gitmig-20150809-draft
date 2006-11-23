@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lcd4linux
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.17 2006/10/31 22:20:25 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.18 2006/11/23 15:42:47 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> lcd4linux-0.10.0.ebuild:
+  dev-db/mysql => virtual/mysql
 
   31 Oct 2006; Markus Ullmann <jokey@gentoo.org> lcd4linux-0.9.11.ebuild,
   lcd4linux-0.10.0.ebuild:

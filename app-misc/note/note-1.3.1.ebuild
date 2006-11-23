@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/note/note-1.3.1.ebuild,v 1.5 2006/02/11 21:23:59 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/note/note-1.3.1.ebuild,v 1.6 2006/11/23 15:43:46 vivo Exp $
 
 inherit perl-app
 
@@ -19,7 +19,7 @@ DEPEND="dev-perl/TermReadKey
 	virtual/perl-Storable
 	dev-perl/config-general
 	crypt? ( dev-perl/crypt-cbc dev-perl/Crypt-Blowfish dev-perl/Crypt-DES )
-	mysql? ( dev-db/mysql dev-perl/DBD-mysql )"
+	mysql? ( virtual/mysql dev-perl/DBD-mysql )"
 
 src_install() {
 	perl-module_src_install || die "perl-module_src_install failed"
