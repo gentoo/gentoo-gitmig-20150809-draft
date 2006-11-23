@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/pike
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/ChangeLog,v 1.29 2006/10/20 21:48:16 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/ChangeLog,v 1.30 2006/11/23 16:34:47 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> pike-7.6.86-r1.ebuild:
+  dev-db/mysql => virtual/mysql
 
   20 Oct 2006; Luis F. Araujo <araujo@gentoo.org> pike-7.6.86-r1.ebuild:
   Fixing bug #151598

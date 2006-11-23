@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/yap
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.5 2006/09/17 02:02:00 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.6 2006/11/23 16:35:54 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> yap-5.1.1.ebuild:
+  dev-db/mysql => virtual/mysql
 
   17 Sep 2006; keri <keri@gentoo.org> yap-5.0.1.ebuild, yap-5.1.1.ebuild:
   tcltk USE flag split. Bug #17808.

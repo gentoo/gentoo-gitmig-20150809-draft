@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-5.1.1.ebuild,v 1.2 2006/09/17 02:02:00 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-5.1.1.ebuild,v 1.3 2006/11/23 16:35:54 vivo Exp $
 
 inherit autotools eutils
 
@@ -18,7 +18,7 @@ IUSE="debug doc gmp java mpi mysql odbc readline static tk threads"
 DEPEND="gmp? ( dev-libs/gmp )
 	java? ( virtual/jdk )
 	mpi? ( virtual/mpi )
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	odbc? ( dev-db/unixODBC )
 	readline? ( sys-libs/readline )"
 
