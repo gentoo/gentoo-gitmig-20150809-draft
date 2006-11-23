@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/viewcvs-1.0_pre20050929.ebuild,v 1.4 2006/04/12 00:08:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/viewcvs-1.0_pre20050929.ebuild,v 1.5 2006/11/23 17:32:16 vivo Exp $
 
 inherit webapp depend.apache eutils
 
@@ -23,7 +23,7 @@ RDEPEND="|| ( >=dev-util/cvs-1.11
 		cvsgraph? ( dev-util/cvsgraph )
 		enscript? ( app-text/enscript )
 		apache2? ( mod_python? ( dev-python/mod_python ) )
-		mysql? ( dev-db/mysql
+		mysql? ( virtual/mysql
 				 dev-python/mysql-python )
 		!apache? ( !apache2? ( www-servers/lighttpd ) )"
 
@@ -103,9 +103,9 @@ src_install() {
 	webapp_postinst_txt en ${FILESDIR}/postinstall-new-en.txt
 	webapp_hook_script ${FILESDIR}/reconfig
 
-	if use mysql && has_version "=dev-db/mysql-4.0*" ; then
+	if use mysql && has_version "<virtual/mysql-4.1" ; then
 		webapp_sqlscript mysql ${FILESDIR}/viewcvs-mysql-4.0.sql
-	elif use mysql && has_version "=dev-db/mysql-4.1*" ; then
+	else
 		webapp_sqlscript mysql ${FILESDIR}/viewcvs-mysql-4.1.sql
 	fi
 

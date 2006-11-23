@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/knowledgetree/knowledgetree-3.0.3.ebuild,v 1.2 2006/07/24 08:38:55 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/knowledgetree/knowledgetree-3.0.3.ebuild,v 1.3 2006/11/23 17:13:59 vivo Exp $
 
 inherit webapp
 
@@ -17,7 +17,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE="office opendoc pdf ps"
 
 DEPEND="virtual/httpd-php
-		dev-db/mysql
+		virtual/mysql
 		office? ( >=app-text/catdoc-0.94.1 )
 		ps? ( app-text/pstotext )
 		pdf? ( app-text/poppler )

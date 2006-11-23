@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/phprojekt-5.1.2.ebuild,v 1.1 2006/10/04 04:00:16 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/phprojekt-5.1.2.ebuild,v 1.2 2006/11/23 17:24:26 vivo Exp $
 
 inherit webapp
 
@@ -18,7 +18,7 @@ S=${WORKDIR}/${PN}${PV}
 DEPEND="app-arch/unzip"
 RDEPEND="net-www/apache
 		postgres? ( dev-db/postgresql )
-		mysql? ( dev-db/mysql )
+		mysql? ( virtual/mysql )
 		virtual/php"
 
 pkg_setup () {

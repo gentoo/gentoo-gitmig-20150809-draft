@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.0.6.ebuild,v 1.1 2006/11/01 22:23:23 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.0.6.ebuild,v 1.2 2006/11/23 17:16:29 vivo Exp $
 
 inherit webapp
 
@@ -16,7 +16,7 @@ S=${WORKDIR}/${MY_P}
 KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND="
-	mysql? ( >=dev-db/mysql-3.23.32 )
+	mysql? ( virtual/mysql )
 	postgres? ( >=dev-db/postgresql-7 )
 	net-www/apache
 	virtual/httpd-php

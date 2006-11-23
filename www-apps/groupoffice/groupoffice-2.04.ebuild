@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/groupoffice/groupoffice-2.04.ebuild,v 1.2 2005/03/28 13:54:54 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/groupoffice/groupoffice-2.04.ebuild,v 1.3 2006/11/23 17:12:29 vivo Exp $
 
 inherit webapp-apache
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc alpha ~amd64 ~sparc ~hppa"
 
 DEPEND="virtual/php
-	dev-db/mysql"
+	virtual/mysql"
 
 pkg_setup() {
 	webapp-detect || NO_WEBSERVER=1

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/joomla-1.0.11.ebuild,v 1.1 2006/09/02 18:50:30 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/joomla-1.0.11.ebuild,v 1.2 2006/11/23 17:13:15 vivo Exp $
 
 inherit webapp depend.php
 
@@ -14,7 +14,7 @@ S="${WORKDIR}"
 
 IUSE="mysql"
 
-RDEPEND="mysql? ( dev-db/mysql )
+RDEPEND="mysql? ( virtual/mysql )
 	virtual/php
 	net-www/apache"
 

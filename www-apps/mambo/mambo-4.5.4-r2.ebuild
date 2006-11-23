@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/mambo-4.5.4-r2.ebuild,v 1.1 2006/09/12 03:50:33 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/mambo-4.5.4-r2.ebuild,v 1.2 2006/11/23 17:15:39 vivo Exp $
 
 inherit webapp depend.php
 
@@ -17,7 +17,7 @@ S=${WORKDIR}
 
 IUSE="mysql"
 
-RDEPEND="mysql? ( dev-db/mysql )
+RDEPEND="mysql? ( virtual/mysql )
 	virtual/httpd-php
 	net-www/apache"
 

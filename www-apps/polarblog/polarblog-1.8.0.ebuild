@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/polarblog/polarblog-1.8.0.ebuild,v 1.1 2006/09/12 03:44:16 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/polarblog/polarblog-1.8.0.ebuild,v 1.2 2006/11/23 17:25:49 vivo Exp $
 
 inherit webapp
 
@@ -15,7 +15,7 @@ SRC_URI="http://polarblog.polarlava.com/releases/pb_v${MY_PV}.tgz"
 KEYWORDS="~x86 ~ppc ~sparc"
 
 RDEPEND="
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	virtual/php
 "
 

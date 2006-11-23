@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.4.15.ebuild,v 1.2 2006/08/30 15:38:14 tchiwam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.4.15.ebuild,v 1.3 2006/11/23 17:17:48 vivo Exp $
 
 inherit webapp depend.php
 
@@ -17,7 +17,7 @@ S="${WORKDIR}/${P/.0_/}"
 DEPEND="math? ( >=dev-lang/ocaml-3.0.6 )"
 
 RDEPEND="virtual/php
-		 >=dev-db/mysql-4
+		 >=virtual/mysql-4.0
 		 math? ( virtual/tetex
 		 		 virtual/ghostscript
 				 media-gfx/imagemagick )

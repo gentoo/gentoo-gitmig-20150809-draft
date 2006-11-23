@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/lxr
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/ChangeLog,v 1.10 2006/06/15 03:50:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/ChangeLog,v 1.11 2006/11/23 17:14:56 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> lxr-0.9.4-r1.ebuild,
+  lxr-0.9.5.ebuild:
+  dev-db/mysql => virtual/mysql
 
 *lxr-0.9.5 (15 Jun 2006)
 

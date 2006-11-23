@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.42 2006/10/04 04:19:37 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.43 2006/11/23 17:28:21 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> rt-3.2.1.ebuild,
+  rt-3.4.5.ebuild, rt-3.6.1.ebuild:
+  dev-db/mysql => virtual/mysql
 
   04 Oct 2006; Renat Lumpau <rl03@gentoo.org> rt-3.6.1.ebuild:
   Fix bug #147721.

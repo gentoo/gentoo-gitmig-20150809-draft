@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.10.1.ebuild,v 1.3 2006/11/13 17:43:47 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.10.1.ebuild,v 1.4 2006/11/23 17:31:14 vivo Exp $
 
 inherit distutils webapp
 
@@ -27,7 +27,7 @@ DEPEND="${DEPEND}
 	dev-libs/clearsilver
 	>=dev-util/subversion-1.3.2
 	mysql? (
-		>=dev-db/mysql-4.1
+		>=virtual/mysql-4.1
 		>=dev-python/mysql-python-1.2.1
 	)
 	sqlite? (

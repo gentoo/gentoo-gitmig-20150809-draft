@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/otrs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.24 2006/11/21 22:01:32 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.25 2006/11/23 17:22:59 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> otrs-2.0.4.ebuild,
+  otrs-2.1.2.ebuild, otrs-2.1.3.ebuild:
+  dev-db/mysql => virtual/mysql
 
 *otrs-2.1.3 (21 Nov 2006)
 

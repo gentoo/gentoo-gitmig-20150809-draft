@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpcollab/phpcollab-2.5_rc3.ebuild,v 1.1 2005/08/22 21:06:25 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpcollab/phpcollab-2.5_rc3.ebuild,v 1.2 2006/11/23 17:23:45 vivo Exp $
 
 inherit webapp
 
@@ -17,7 +17,7 @@ KEYWORDS="~x86 ~ppc"
 
 RDEPEND="
 	>=net-www/apache-1.3
-	|| ( >=dev-db/mysql-3.23 >=dev-db/postgresql-7 )
+	|| ( virtual/mysql >=dev-db/postgresql-7 )
 	virtual/httpd-php
 "
 

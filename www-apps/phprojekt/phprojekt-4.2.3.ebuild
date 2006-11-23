@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/phprojekt-4.2.3.ebuild,v 1.3 2006/07/09 21:03:33 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/phprojekt-4.2.3.ebuild,v 1.4 2006/11/23 17:24:26 vivo Exp $
 
 inherit webapp eutils
 
@@ -16,7 +16,7 @@ IUSE="postgres mysql"
 
 RDEPEND="net-www/apache
 		postgres? ( dev-db/postgresql )
-		mysql? ( dev-db/mysql )
+		mysql? ( virtual/mysql )
 		virtual/php"
 DEPEND="app-arch/unzip"
 

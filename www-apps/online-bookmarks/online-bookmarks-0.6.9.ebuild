@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/online-bookmarks/online-bookmarks-0.6.9.ebuild,v 1.1 2006/07/18 21:38:57 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/online-bookmarks/online-bookmarks-0.6.9.ebuild,v 1.2 2006/11/23 17:20:29 vivo Exp $
 
 inherit webapp depend.php
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~ppc"
 IUSE="mysql"
 
 RDEPEND=">=virtual/httpd-php-4.3.0
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	dev-php/PEAR-Auth
 	dev-php/PEAR-DB
 "

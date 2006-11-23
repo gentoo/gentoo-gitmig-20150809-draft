@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/groupoffice/groupoffice-2.13.ebuild,v 1.3 2006/07/09 20:58:23 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/groupoffice/groupoffice-2.13.ebuild,v 1.4 2006/11/23 17:12:29 vivo Exp $
 
 inherit eutils webapp
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~sparc"
 IUSE=""
 DEPEND="virtual/php
-	>=dev-db/mysql-4.0
+	>=virtual/mysql-4.0
 	net-www/apache"
 
 pkg_setup() {

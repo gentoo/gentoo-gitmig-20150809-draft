@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/phpcollab
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpcollab/ChangeLog,v 1.7 2005/09/11 13:59:54 rl03 Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpcollab/ChangeLog,v 1.8 2006/11/23 17:23:45 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> phpcollab-2.4.ebuild,
+  phpcollab-2.5_rc3.ebuild:
+  dev-db/mysql => virtual/mysql
 
   11 Sep 2005; Renat Lumpau <rl03@gentoo.org> phpcollab-2.4.ebuild:
   Fixed php deps wrt bug #105419.

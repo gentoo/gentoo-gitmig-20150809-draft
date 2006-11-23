@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/sitebar-3.3.8-r1.ebuild,v 1.2 2006/08/18 15:47:42 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/sitebar-3.3.8-r1.ebuild,v 1.3 2006/11/23 17:29:00 vivo Exp $
 
 inherit webapp eutils
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-${PV}.tar.bz2"
 
 DEPEND="net-www/apache
 		virtual/php
-		mysql? ( >=dev-db/mysql-3.23 )"
+		mysql? ( virtual/mysql )"
 LICENSE="GPL-2"
 
 src_unpack() {

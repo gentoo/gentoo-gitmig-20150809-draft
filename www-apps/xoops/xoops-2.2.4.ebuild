@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/xoops/xoops-2.2.4.ebuild,v 1.1 2006/04/23 22:34:25 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/xoops/xoops-2.2.4.ebuild,v 1.2 2006/11/23 17:33:22 vivo Exp $
 
 inherit webapp
 
@@ -17,7 +17,7 @@ IUSE="mysql"
 
 RDEPEND="virtual/php
 	net-www/apache
-	mysql? ( dev-db/mysql )"
+	mysql? ( virtual/mysql )"
 
 src_unpack() {
 	unpack ${A} && cd ${S}

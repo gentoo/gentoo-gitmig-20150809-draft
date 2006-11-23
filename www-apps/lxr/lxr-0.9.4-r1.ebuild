@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/lxr-0.9.4-r1.ebuild,v 1.1 2006/01/26 20:45:45 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/lxr-0.9.4-r1.ebuild,v 1.2 2006/11/23 17:14:56 vivo Exp $
 
 inherit webapp multilib eutils
 
@@ -24,7 +24,7 @@ RDEPEND="dev-util/ctags
 		dev-perl/File-MMagic
 		cvs? ( app-text/rcs )
 		postgres? ( dev-db/postgresql dev-perl/DBD-Pg )
-		mysql? ( >=dev-db/mysql-4 dev-perl/DBD-mysql )
+		mysql? ( >=virtual/mysql-4.0 dev-perl/DBD-mysql )
 "
 src_unpack() {
 	unpack ${A}

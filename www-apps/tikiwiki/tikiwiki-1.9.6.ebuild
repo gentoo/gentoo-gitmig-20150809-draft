@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/tikiwiki-1.9.6.ebuild,v 1.2 2006/11/08 07:38:47 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/tikiwiki-1.9.6.ebuild,v 1.3 2006/11/23 17:29:54 vivo Exp $
 
 inherit webapp depend.php
 
@@ -13,7 +13,7 @@ IUSE="mysql postgres graphviz"
 KEYWORDS="~amd64 ppc ~sparc ~x86"
 
 RDEPEND="virtual/php
-	mysql? ( >=dev-db/mysql-4 )
+	mysql? ( >=virtual/mysql-4.0 )
 	postgres? ( dev-db/postgresql )
 	graphviz? ( media-gfx/graphviz )
 "

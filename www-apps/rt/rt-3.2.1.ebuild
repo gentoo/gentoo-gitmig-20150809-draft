@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.2.1.ebuild,v 1.8 2005/09/11 17:49:54 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.2.1.ebuild,v 1.9 2006/11/23 17:28:21 vivo Exp $
 
 inherit webapp eutils
 
@@ -59,7 +59,7 @@ DEPEND="
 RDEPEND="
 	${DEPEND}
 	virtual/mta
-	mysql? ( >=dev-db/mysql-4.0.13 >=dev-perl/DBD-mysql-2.0416 )
+	mysql? ( >=virtual/mysql-4.0 >=dev-perl/DBD-mysql-2.0416 )
 	postgres? ( >=dev-db/postgresql-7.4.2-r1 dev-perl/DBD-Pg )
 	fastcgi? ( dev-perl/FCGI net-www/mod_fastcgi )
 	!fastcgi? ( =www-apache/libapreq-1* )

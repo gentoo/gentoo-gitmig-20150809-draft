@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/phprojekt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/ChangeLog,v 1.21 2006/10/04 04:00:16 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/ChangeLog,v 1.22 2006/11/23 17:24:26 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> phprojekt-4.2.3.ebuild,
+  phprojekt-5.1.2.ebuild:
+  dev-db/mysql => virtual/mysql
 
 *phprojekt-5.1.2 (04 Oct 2006)
 

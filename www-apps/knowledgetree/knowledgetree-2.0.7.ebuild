@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/knowledgetree/knowledgetree-2.0.7.ebuild,v 1.2 2005/08/09 13:20:13 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/knowledgetree/knowledgetree-2.0.7.ebuild,v 1.3 2006/11/23 17:13:59 vivo Exp $
 
 inherit webapp
 
@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND="
 		virtual/php
-		dev-db/mysql
+		virtual/mysql
 		>=dev-php/PEAR-DB-1.6.4
 		>=dev-php/PEAR-Log-1.8.3
 		"
