@@ -1,0 +1,63 @@
+--- mercury-compiler-0.13.0.orig/compiler/modules.m	2006-05-23 18:46:52.000000000 +1200
++++ mercury-compiler-0.13.0/compiler/modules.m	2006-11-23 21:45:11.000000000 +1300
+@@ -3384,27 +3384,32 @@
+             ForeignImportedModules = [_ | _],
+             (
+                 Target = il,
+-                ForeignImportTarget = DllFileName,
++                ForeignImportTargets = [DllFileName],
+                 ForeignImportExt = ".dll"
+             ;
+                 Target = java,
+-                ForeignImportTarget = ClassFileName,
++                ForeignImportTargets = [ClassFileName],
+                 ForeignImportExt = ".java"
+             ;
+                 Target = c,
+-                ForeignImportTarget = ObjFileName,
++                ForeignImportTargets = [ObjFileName, PicObjFileName],
+                 ForeignImportExt = ".mh"
+             ;
+                 Target = asm,
+-                ForeignImportTarget = ObjFileName,
++                ForeignImportTargets = [ObjFileName, PicObjFileName],
+                 ForeignImportExt = ".mh"
+             ),
+-            io.write_string(DepStream, "\n\n", !IO),
+-            io.write_string(DepStream, ForeignImportTarget, !IO),
+-            io.write_string(DepStream, " : ", !IO),
+-            write_dependencies_list(ForeignImportedModules, ForeignImportExt,
+-                DepStream, !IO),
+-            io.write_string(DepStream, "\n\n", !IO)
++            WriteForeignImportTarget = (pred(ForeignImportTarget::in,
++                    !.IO::di, !:IO::uo) is det :-
++                io.write_string(DepStream, "\n\n", !IO),
++                io.write_string(DepStream, ForeignImportTarget, !IO),
++                io.write_string(DepStream, " : ", !IO),
++                write_dependencies_list(ForeignImportedModules,
++                    ForeignImportExt, DepStream, !IO),
++                io.write_string(DepStream, "\n\n", !IO)
++            ),
++            list.foldl(WriteForeignImportTarget, ForeignImportTargets,
++                !IO)
+         ),
+ 
+         (
+@@ -5242,7 +5247,7 @@
+     module_name_to_file_name(ModuleName, ".dv", no, DvFileName, !IO),
+     
+     io.write_strings(DepStream, [
+-        InitFileName, " : ", DepFileName, "\n",
++        InitFileName, " : ", DepFileName, " $(", MakeVarName, ".cs)\n",
+         "\techo > ", InitFileName, "\n"
+     ], !IO),
+ 
+@@ -5266,7 +5271,7 @@
+     TmpInitCFileName = InitCFileName ++ ".tmp",
+     io.write_strings(DepStream, [
+         ForceC2InitTarget, " :\n\n",
+-        InitCFileName, " : ", ForceC2InitTarget, "\n",
++        InitCFileName, " : ", ForceC2InitTarget, " $(", MakeVarName, ".init_cs)\n",
+         "\t@$(C2INIT) $(ALL_GRADEFLAGS) $(ALL_C2INITFLAGS) ",
+             "--init-c-file ", TmpInitCFileName,
+             " $(", MakeVarName, ".init_cs) $(ALL_C2INITARGS)\n",

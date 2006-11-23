@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.12.2-r3.ebuild,v 1.12 2006/10/23 03:13:04 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.12.2-r3.ebuild,v 1.13 2006/11/23 09:16:40 keri Exp $
 
 inherit eutils
 
@@ -65,6 +65,7 @@ src_compile() {
 
 	einfo "Performing stage 2 bootstrap"
 	cp "${S}"/compiler/mercury_compile "${S}"/mercury_compile
+	epatch "${FILESDIR}"/${P}-pic_o-dependencies.patch
 	econf \
 		${myconf} \
 		BOOTSTRAP_STAGE="2" \

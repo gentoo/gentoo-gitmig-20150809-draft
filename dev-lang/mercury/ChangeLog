@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.63 2006/11/10 05:48:28 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.64 2006/11/23 09:16:40 keri Exp $
+
+  23 Nov 2006; keri <keri@gentoo.org>
+  +files/mercury-0.12.2-pic_o-dependencies.patch,
+  +files/mercury-0.13.0-pic_o-dependencies.patch, mercury-0.12.2-r3.ebuild,
+  mercury-0.13.0.ebuild:
+  Generate dependencies on .mh files for both .o and .pic_o files. Reported by
+  M. Edward Borasky <znmeb@cesmail.net> in #154523.
 
   10 Nov 2006; keri <keri@gentoo.org> mercury-0.13.0.ebuild:
   Generate _init.c files after all C files have been generated.
