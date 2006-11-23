@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r1.eclass,v 1.22 2006/01/26 06:06:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r1.eclass,v 1.23 2006/11/23 14:02:50 vivo Exp $
 #
 # eclass/php5-sapi-r1.eclass
 #               Eclass for building different php5 SAPI instances
@@ -47,7 +47,7 @@ DEPEND="$DEPEND
 	mime? ( sys-apps/file )
 	ming? ( media-libs/ming )
 	mssql? ( dev-db/freetds )
-	mysql? ( >=dev-db/mysql-3.23.26 )
+	mysql? ( virtual/mysql )
 	ncurses? ( sys-libs/ncurses )
 	nls? ( sys-devel/gettext )
 	odbc? ( >=dev-db/unixODBC-1.8.13 )
