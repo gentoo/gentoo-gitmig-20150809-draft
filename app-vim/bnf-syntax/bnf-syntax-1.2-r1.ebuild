@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/bnf-syntax/bnf-syntax-1.2-r1.ebuild,v 1.7 2005/12/07 21:30:45 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/bnf-syntax/bnf-syntax-1.2-r1.ebuild,v 1.8 2006/11/23 08:15:13 wormo Exp $
 
 inherit vim-plugin
 
 DESCRIPTION="vim plugin: BNF file syntax highlighting"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=250"
 LICENSE="as-is"
-KEYWORDS="alpha amd64 ia64 mips ~ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 mips ppc ppc64 sparc x86"
 IUSE=""
 
 VIM_PLUGIN_HELPTEXT=\
