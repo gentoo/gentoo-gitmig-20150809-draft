@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/entropy_rsa/entropy_rsa-0.9.1.439.ebuild,v 1.2 2005/10/25 04:14:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/entropy_rsa/entropy_rsa-0.9.1.439.ebuild,v 1.3 2006/11/23 17:29:58 vivo Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="mysql"
 
-DEPEND="mysql? ( dev-db/mysql )"
+DEPEND="mysql? ( virtual/mysql )"
 RDEPEND="${DEPEND}
 	app-admin/sudo"
 

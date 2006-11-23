@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/phxd/phxd-0.0.1_pre26062005.ebuild,v 1.3 2005/06/27 08:17:26 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/phxd/phxd-0.0.1_pre26062005.ebuild,v 1.4 2006/11/23 17:31:41 vivo Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="mysql"
 
 DEPEND="dev-python/twisted
 	dev-python/twisted-web
-	mysql? ( dev-db/mysql )"
+	mysql? ( virtual/mysql )"
 
 RDEPEND=""
 

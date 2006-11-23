@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.0d-r1.ebuild,v 1.3 2006/07/12 15:23:45 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.0d-r1.ebuild,v 1.4 2006/11/23 17:30:57 vivo Exp $
 
 inherit eutils libtool
 
@@ -23,7 +23,7 @@ DEPEND=">=dev-libs/libgcrypt-1.2.0
 	gtk? ( >=x11-libs/gtk+-2.6.10 )
 	sys-apps/sed
 	ncurses? ( sys-libs/ncurses )
-	mysql? ( >=dev-db/mysql-4.0.24 )
+	mysql? ( >=virtual/mysql-4.0 )
 	sqlite? ( >=dev-db/sqlite-3.0.8 )
 	guile? ( >=dev-util/guile-1.6.0 )
 	nls? ( sys-devel/gettext )"
