@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/pyflag
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/pyflag/ChangeLog,v 1.5 2006/06/28 23:35:59 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/pyflag/ChangeLog,v 1.6 2006/11/23 15:33:03 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> pyflag-0.80.1.ebuild,
+  pyflag-0.82.ebuild:
+  dev-db/mysql => virtual/mysql
 
 *pyflag-0.82 (28 Jun 2006)
 
