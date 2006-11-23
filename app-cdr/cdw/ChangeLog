@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdw
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.18 2006/10/22 21:36:51 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.19 2006/11/23 15:26:29 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> cdw-0.2.4.ebuild:
+  dev-db/mysql => virtual/mysql
 
   22 Oct 2006; <vivo@gentoo.org> cdw-0.2.4.ebuild:
   added DEPEND upon dev-perl/XML-Parser
