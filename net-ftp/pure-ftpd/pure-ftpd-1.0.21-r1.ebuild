@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.21-r1.ebuild,v 1.1 2006/09/23 23:12:14 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.21-r1.ebuild,v 1.2 2006/11/23 16:46:22 vivo Exp $
 
 inherit eutils confutils
 
@@ -18,7 +18,7 @@ IUSE="caps charconv ldap mysql noiplog pam paranoidmsg postgres selinux ssl vchr
 DEPEND="caps? ( sys-libs/libcap )
 		charconv? ( virtual/libiconv )
 		ldap? ( >=net-nds/openldap-2.0.25 )
-		mysql? ( >=dev-db/mysql-3 )
+		mysql? ( virtual/mysql )
 		pam? ( virtual/pam )
 		postgres? ( >=dev-db/postgresql-7.2.2 )
 		ssl? ( >=dev-libs/openssl-0.9.6g )

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10-r7.ebuild,v 1.12 2006/09/23 19:07:05 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10-r7.ebuild,v 1.13 2006/11/23 16:45:27 vivo Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -20,7 +20,7 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="ldap? ( >=net-nds/openldap-1.2.11 )
-		mysql? ( >=dev-db/mysql-3.23.26 )
+		mysql? ( virtual/mysql )
 		ncurses? ( sys-libs/ncurses )
 		pam? ( virtual/pam )
 		postgres? ( >=dev-db/postgresql-7.3 )
