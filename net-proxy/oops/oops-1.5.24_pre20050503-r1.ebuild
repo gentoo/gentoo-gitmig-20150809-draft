@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/oops-1.5.24_pre20050503-r1.ebuild,v 1.5 2006/09/06 05:48:04 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/oops-1.5.24_pre20050503-r1.ebuild,v 1.6 2006/11/23 20:03:48 vivo Exp $
 
 inherit eutils flag-o-matic
 
@@ -18,7 +18,7 @@ IUSE="mysql postgres"
 
 RDEPEND="dev-libs/libpcre
 	>=sys-libs/db-3
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql )"
 DEPEND="${RDEPEND}
 	sys-devel/flex"
