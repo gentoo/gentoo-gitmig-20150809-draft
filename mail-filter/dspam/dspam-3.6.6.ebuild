@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.6.ebuild,v 1.4 2006/08/23 03:02:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.6.ebuild,v 1.5 2006/11/23 15:52:21 vivo Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="berkdb clamav cyrus daemon debug large-domain ldap logrotate mysql oci8 po
 DEPEND="berkdb? ( >=sys-libs/db-4.0 )
 	clamav? ( >=app-antivirus/clamav-0.86 )
 	ldap? ( >=net-nds/openldap-2.2 )
-	daemon? ( || ( mysql? ( >=dev-db/mysql-3.23 ) ) ( postgres? ( >=dev-db/postgresql-7.4.3 ) ) )
+	daemon? ( || ( mysql? ( virtual/mysql ) ) ( postgres? ( >=dev-db/postgresql-7.4.3 ) ) )
 	sqlite? ( <dev-db/sqlite-3 )
 	sqlite3? ( =dev-db/sqlite-3* )"
 

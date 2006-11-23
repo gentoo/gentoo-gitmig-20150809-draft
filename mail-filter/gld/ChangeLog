@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/gld
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/ChangeLog,v 1.33 2006/05/03 17:22:55 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/ChangeLog,v 1.34 2006/11/23 15:53:19 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> gld-1.5.2.ebuild,
+  gld-1.6.ebuild, gld-1.7.ebuild:
+  dev-db/mysql => virtual/mysql
 
 *gld-1.7 (03 May 2006)
 
