@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-40.ebuild,v 1.5 2006/10/17 15:26:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-40.ebuild,v 1.6 2006/11/23 20:20:21 vivo Exp $
 
 inherit eutils wxwidgets games
 
@@ -23,7 +23,7 @@ DEPEND="virtual/opengl
 	media-libs/sdl-net
 	>=x11-libs/wxGTK-2.6
 	>=media-libs/freetype-2
-	mysql? ( dev-db/mysql )"
+	mysql? ( virtual/mysql )"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/scorched

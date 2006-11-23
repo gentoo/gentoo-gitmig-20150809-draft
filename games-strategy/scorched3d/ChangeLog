@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/scorched3d
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.39 2006/11/18 19:34:18 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.40 2006/11/23 20:20:21 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> scorched3d-40.ebuild,
+  scorched3d-40.1d.ebuild:
+  dev-db/mysql => virtual/mysql
 
 *scorched3d-40.1d (18 Nov 2006)
 

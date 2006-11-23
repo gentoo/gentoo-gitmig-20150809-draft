@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.0.8-r2.ebuild,v 1.8 2006/11/12 14:20:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.0.8-r2.ebuild,v 1.9 2006/11/23 20:19:33 vivo Exp $
 
 inherit eutils games
 
@@ -37,7 +37,7 @@ RDEPEND="readline? ( sys-libs/readline )
 		)
 		esd? ( >=media-sound/esound-0.2 )
 		sdl? ( >=media-libs/sdl-mixer-1.2 )
-		auth? ( dev-db/mysql )
+		auth? ( virtual/mysql )
 	)"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
