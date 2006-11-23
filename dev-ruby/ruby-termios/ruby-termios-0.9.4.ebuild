@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-termios/ruby-termios-0.9.4.ebuild,v 1.14 2006/03/21 12:52:54 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-termios/ruby-termios-0.9.4.ebuild,v 1.15 2006/11/23 19:32:05 blubb Exp $
 
 inherit ruby eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://arika.org/ruby/termios"	# trailing / isn't needed
 SRC_URI="http://arika.org/archive/${P}.tar.gz"
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ~mips ~ppc ~sparc x86"
+KEYWORDS="alpha amd64 ~hppa ia64 ~mips ~ppc ~sparc x86"
 IUSE=""
 USE_RUBY="ruby16 ruby18 ruby19"
 DEPEND="virtual/ruby"
