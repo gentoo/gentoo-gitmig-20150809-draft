@@ -1,6 +1,15 @@
 # ChangeLog for sys-cluster/openmpi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.2 2006/09/25 15:29:11 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.3 2006/11/23 07:50:57 dberkholz Exp $
+
+*openmpi-1.1.2 (23 Nov 2006)
+
+  23 Nov 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  +openmpi-1.1.2.ebuild:
+  (#153968) Bump. Interesting changes include correctness and performance
+  fixes for heterogenous nodes as well as TCP updates to support non-uniform
+  TCP environments. More info at
+  http://www.open-mpi.org/community/lists/announce/2006/10/0008.php.
 
   25 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; openmpi-1.1.1.ebuild:
   Add MPI to the description, drop some capital letters.
