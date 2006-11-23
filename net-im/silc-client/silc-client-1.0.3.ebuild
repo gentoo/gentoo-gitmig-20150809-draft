@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-1.0.3.ebuild,v 1.3 2006/11/17 19:56:08 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-1.0.3.ebuild,v 1.4 2006/11/23 21:48:54 dertobi123 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://silcnet.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 IUSE="ipv6 perl debug"
 
 DEPEND="=dev-libs/glib-1.2*
