@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/mysql-python-1.2.0.ebuild,v 1.7 2006/01/29 16:49:52 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/mysql-python-1.2.0.ebuild,v 1.8 2006/11/23 16:37:31 vivo Exp $
 
 inherit distutils
 
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ia64 ppc sparc x86"
 IUSE=""
 
 DEPEND="virtual/python
-	>=dev-db/mysql-3.22.19"
+	virtual/mysql"
 
 src_compile() {
 	export mysqlclient="mysqlclient_r"

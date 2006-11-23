@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/mysql-python-1.2.0-r1.ebuild,v 1.11 2006/10/20 20:35:00 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/mysql-python-1.2.0-r1.ebuild,v 1.12 2006/11/23 16:37:31 vivo Exp $
 
 inherit distutils eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="dev-lang/python
-	>=dev-db/mysql-3.22.19"
+	virtual/mysql"
 
 src_unpack() {
 	unpack ${A}
