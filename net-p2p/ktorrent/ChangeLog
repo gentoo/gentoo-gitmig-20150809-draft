@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.28 2006/11/13 19:06:02 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.29 2006/11/23 13:42:03 deathwing00 Exp $
+
+  23 Nov 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  +files/ktorrent-2.0.3-znow.patch, ktorrent-2.0.3.ebuild:
+  Corrected patch name to conform standards so that it does not interfere with
+  other application versions.
 
   13 Nov 2006; Joseph Jezak <josejx@gentoo.org> +files/ktorrent-znow.patch,
   ktorrent-2.0.3.ebuild:

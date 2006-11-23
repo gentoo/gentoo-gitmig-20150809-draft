@@ -1,0 +1,23 @@
+diff -Naur ktorrent-2.0.3/configure.in /home/jjezak/ktorrent-2.0.3.patched/configure.in
+--- ktorrent-2.0.3/configure.in	2006-10-09 12:09:08.000000000 -0400
++++ /home/jjezak/ktorrent-2.0.3.patched/configure.in	2006-11-13 04:48:43.000000000 -0500
+@@ -65,7 +65,7 @@
+ 
+ #MIN_CONFIG(3.3)
+ CXXFLAGS="$CXXFLAGS $KDE_DEFAULT_CXXFLAGS $USE_EXCEPTIONS $USE_RTTI"
+-LDFLAGS="$LDFLAGS -Wl -z now"
++LDFLAGS="$LDFLAGS -Wl,-z,now"
+ 
+ dnl PACKAGE set before
+ 
+diff -Naur ktorrent-2.0.3/configure.in.in /home/jjezak/ktorrent-2.0.3.patched/configure.in.in
+--- ktorrent-2.0.3/configure.in.in	2006-10-09 12:04:11.000000000 -0400
++++ /home/jjezak/ktorrent-2.0.3.patched/configure.in.in	2006-11-13 04:48:48.000000000 -0500
+@@ -1,6 +1,6 @@
+ #MIN_CONFIG(3.3)
+ CXXFLAGS="$CXXFLAGS $KDE_DEFAULT_CXXFLAGS $USE_EXCEPTIONS $USE_RTTI"
+-LDFLAGS="$LDFLAGS -Wl -z now"
++LDFLAGS="$LDFLAGS -Wl,-z,now"
+ 
+ AM_INIT_AUTOMAKE(ktorrent,2.0.3)
+ 
