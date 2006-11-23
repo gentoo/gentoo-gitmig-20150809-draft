@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.1.0.ebuild,v 1.5 2006/10/26 19:33:10 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.1.0.ebuild,v 1.6 2006/11/23 16:49:13 vivo Exp $
 
 inherit eutils autotools
 
@@ -32,7 +32,7 @@ RDEPEND=">=sys-devel/make-3.80
 	    virtual/lapack )
 	jpeg? ( media-libs/jpeg )
 	motif? ( x11-libs/openmotif )
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	ncurses? ( >=sys-libs/ncurses-5.3 )
 	nls? ( x11-terms/mlterm )
 	odbc? ( >=dev-db/unixODBC-2.0.6 )

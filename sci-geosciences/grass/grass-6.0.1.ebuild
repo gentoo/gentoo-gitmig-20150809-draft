@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.0.1.ebuild,v 1.6 2006/11/11 14:45:10 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.0.1.ebuild,v 1.7 2006/11/23 16:49:13 vivo Exp $
 
 inherit eutils
 
@@ -33,7 +33,7 @@ RDEPEND=">=sys-devel/make-3.80
 	fftw? ( =sci-libs/fftw-2* )
 	jpeg? ( media-libs/jpeg )
 	postgres? ( >=dev-db/postgresql-7.3 )
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	odbc? ( >=dev-db/unixODBC-2.0.6 )
 	png? ( >=media-libs/libpng-1.2.2 )
 	readline? ( sys-libs/readline )

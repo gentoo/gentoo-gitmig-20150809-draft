@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-5.4.0.ebuild,v 1.7 2006/06/21 17:34:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-5.4.0.ebuild,v 1.8 2006/11/23 16:49:13 vivo Exp $
 
 inherit eutils toolchain-funcs
 
@@ -31,7 +31,7 @@ RDEPEND=">=sys-devel/make-3.80
 	jpeg? ( media-libs/jpeg )
 	tiff? ( media-libs/tiff )
 	png? ( >=media-libs/libpng-1.2.2 )
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	odbc? ( >=dev-db/unixODBC-2.0.6 )
 	postgres? ( >=dev-db/postgresql-7.3 )
 	nls? ( x11-terms/mlterm )
