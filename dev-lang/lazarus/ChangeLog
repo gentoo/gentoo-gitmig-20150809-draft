@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/lazarus
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.9 2006/11/17 13:31:23 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.10 2006/11/23 07:14:50 truedfx Exp $
+
+  22 Nov 2006; Harald van Dĳk <truedfx@gentoo.org> lazarus-0.9.20.ebuild:
+  Add a warning to change the LCL interface (#155564)
 
 *lazarus-0.9.20 (17 Nov 2006)
 

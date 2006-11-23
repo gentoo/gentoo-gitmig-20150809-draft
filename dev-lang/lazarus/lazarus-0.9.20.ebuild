@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.20.ebuild,v 1.1 2006/11/17 13:31:23 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.20.ebuild,v 1.2 2006/11/23 07:14:50 truedfx Exp $
 
 inherit eutils
 
@@ -51,4 +51,10 @@ src_install() {
 	dosym ../lazarus/images/mainicon.xpm /usr/share/pixmaps/lazarus.xpm
 
 	make_desktop_entry startlazarus "Lazarus IDE" "lazarus.xpm" || die "Failed making desktop entry!"
+}
+
+pkg_postinst() {
+	ewarn "Although this version of Lazarus uses GTK2, its default interface"
+	ewarn "for projects is still GTK1. Please make sure to change this if you"
+	ewarn "wish to build GTK2 applications."
 }
