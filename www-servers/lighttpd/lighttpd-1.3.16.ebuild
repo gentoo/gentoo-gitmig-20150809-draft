@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.3.16.ebuild,v 1.11 2006/03/20 22:10:35 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.3.16.ebuild,v 1.12 2006/11/23 20:43:03 vivo Exp $
 
 inherit eutils depend.php
 
@@ -20,7 +20,7 @@ RDEPEND="app-arch/bzip2
 		>=sys-libs/zlib-1.1
 		xattr? ( sys-apps/attr )
 		ldap? ( >=net-nds/openldap-2.1.26 )
-		mysql? ( >=dev-db/mysql-4.0.0 )
+		mysql? ( >=virtual/mysql-4.0 )
 		ssl? ( >=dev-libs/openssl-0.9.7 )
 		php? (
 			virtual/httpd-php
