@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/cinepaint-0.21.1.ebuild,v 1.1 2006/10/20 18:20:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/cinepaint-0.21.1.ebuild,v 1.2 2006/11/23 10:11:36 aballier Exp $
 
 inherit eutils versionator flag-o-matic autotools
 
@@ -19,6 +19,7 @@ DEPEND="=x11-libs/gtk+-1*
 	png? ( >=media-libs/libpng-1.2 )
 	zlib? ( sys-libs/zlib )
 	media-libs/openexr
+	media-libs/lcms
 	media-libs/tiff
 	media-libs/jpeg
 	x11-libs/fltk"
