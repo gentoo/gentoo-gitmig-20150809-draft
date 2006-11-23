@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/nufw-2.0.10.ebuild,v 1.1 2006/11/13 22:36:25 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/nufw-2.0.10.ebuild,v 1.2 2006/11/23 19:56:36 vivo Exp $
 
 inherit ssl-cert
 
@@ -22,7 +22,7 @@ DEPEND=">=dev-libs/glib-2
 	gdbm? ( sys-libs/gdbm )
 	ident? ( net-libs/libident )
 	ldap? ( >=net-nds/openldap-2 )
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	pam? ( sys-libs/pam )
 	pam_nuauth? ( sys-libs/pam )
 	postgres? ( dev-db/postgresql )
