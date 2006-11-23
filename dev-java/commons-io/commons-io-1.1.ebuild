@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/commons-io-1.1.ebuild,v 1.1 2005/12/04 18:38:25 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/commons-io-1.1.ebuild,v 1.2 2006/11/23 19:41:08 blubb Exp $
 
 inherit java-pkg eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://apache/jakarta/commons/io/source/${MY_P}.tar.gz"
 
 LICENSE="Apache-1.1"
 SLOT="1"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc jikes source"
 
 DEPEND="jikes? ( >=dev-java/jikes-1.21 )

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/commons-io-1.1-r1.ebuild,v 1.4 2006/11/23 19:28:29 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/commons-io-1.1-r1.ebuild,v 1.5 2006/11/23 19:41:08 blubb Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://apache/jakarta/commons/io/source/${MY_P}.tar.gz"
 
 LICENSE="Apache-1.1"
 SLOT="1"
-KEYWORDS="~amd64 ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE="doc source"
 
 DEPEND="dev-java/ant-core
