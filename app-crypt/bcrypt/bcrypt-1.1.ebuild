@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcrypt/bcrypt-1.1.ebuild,v 1.9 2005/09/20 19:42:04 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcrypt/bcrypt-1.1.ebuild,v 1.10 2006/11/23 13:11:29 drizzt Exp $
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A file encryption utility using Paul Kocher's implementation of the blowfish algorithm"
 HOMEPAGE="http://bcrypt.sourceforge.net/"
@@ -10,10 +12,18 @@ LICENSE="BSD"
 KEYWORDS="alpha amd64 ppc ~ppc-macos sparc x86"
 IUSE=""
 DEPEND="sys-libs/zlib"
+RDEPEND="${DEPEND}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-Makefile.patch
+}
 
 src_compile() {
-	sed -i -e "s:CFLAGS = -O2 -Wall:CFLAGS = -Wall ${CFLAGS}:" Makefile
-	make || die
+	tc-export CC
+	emake || die
 }
 
 src_install() {

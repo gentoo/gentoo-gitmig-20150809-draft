@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/bcrypt
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcrypt/ChangeLog,v 1.6 2005/09/20 19:42:04 grobian Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcrypt/ChangeLog,v 1.7 2006/11/23 13:11:29 drizzt Exp $
+
+  23 Nov 2006; Timothy Redaelli <drizzt@gentoo.org>
+  +files/bcrypt-1.1-Makefile.patch, bcrypt-1.1.ebuild:
+  Added support for custom LDFLAGS and CC.
 
   20 Sep 2005; Fabian Groffen <grobian@gentoo.org> bcrypt-1.1.ebuild:
   Marking ~ppc-macos (bug #106599)
