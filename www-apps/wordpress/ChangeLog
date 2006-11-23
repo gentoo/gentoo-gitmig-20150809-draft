@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/wordpress
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.65 2006/11/23 16:33:11 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.66 2006/11/23 21:50:54 vivo Exp $
+
+  23 Nov 2006; vivo ChangeLog:
+  dev-db/mysql => virtual/mysql corrections
 
   23 Nov 2006; Steve Dibb <beandog@gentoo.org> -wordpress-2.0.3.ebuild,
   -wordpress-2.0.4.ebuild:
