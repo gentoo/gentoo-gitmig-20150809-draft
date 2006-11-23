@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r3.ebuild,v 1.6 2006/10/05 17:30:15 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r3.ebuild,v 1.7 2006/11/23 20:02:54 vivo Exp $
 
 WANT_AUTOMAKE="1.4"
 WANT_AUTOCONF="latest"
@@ -20,7 +20,7 @@ IUSE="ssl mysql"
 
 RDEPEND="dev-lang/perl
 	>=sys-libs/zlib-1.1.4
-	mysql? ( >=dev-db/mysql-3.23.26 )
+	mysql? ( virtual/mysql )
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
 DEPEND="!dev-libs/9libs
 	>=sys-devel/autoconf-2.13

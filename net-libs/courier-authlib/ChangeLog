@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.57 2006/10/14 11:34:16 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.58 2006/11/23 20:00:22 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org>
+  courier-authlib-0.53.ebuild, courier-authlib-0.54.20050224.ebuild,
+  courier-authlib-0.55.ebuild, courier-authlib-0.55.20050320.ebuild,
+  courier-authlib-0.56.ebuild, courier-authlib-0.57.ebuild,
+  courier-authlib-0.57-r1.ebuild, courier-authlib-0.57-r2.ebuild,
+  courier-authlib-0.57.20051116.ebuild, courier-authlib-0.58.ebuild:
+  dev-db/mysql => virtual/mysql
 
   14 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove swtaylor from metadata.xml due to retiring.

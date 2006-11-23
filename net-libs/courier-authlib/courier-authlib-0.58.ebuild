@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.58.ebuild,v 1.9 2006/04/24 17:24:35 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.58.ebuild,v 1.10 2006/11/23 20:00:22 vivo Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -21,7 +21,7 @@ DEPEND="virtual/libc
 		!gdbm? ( >=sys-devel/autoconf-2.5 sys-libs/db )
 		>=dev-libs/openssl-0.9.6
 		pam? ( >=sys-libs/pam-0.75 )
-		mysql? ( >=dev-db/mysql-3.23.36 )
+		mysql? ( virtual/mysql )
 		ldap? ( >=net-nds/openldap-1.2.11 )
 		postgres? ( >=dev-db/postgresql-7.2 )"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cvm/cvm-0.32-r1.ebuild,v 1.3 2005/09/26 04:30:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cvm/cvm-0.32-r1.ebuild,v 1.4 2006/11/23 20:01:22 vivo Exp $
 
 inherit toolchain-funcs
 
@@ -16,7 +16,7 @@ IUSE="mysql postgres"
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
 		>=dev-libs/bglibs-1.019
-		mysql? ( dev-db/mysql )
+		mysql? ( virtual/mysql )
 		postgres? ( dev-db/postgresql )"
 
 
