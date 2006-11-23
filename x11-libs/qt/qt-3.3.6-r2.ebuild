@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.6-r2.ebuild,v 1.3 2006/10/06 12:58:19 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.6-r2.ebuild,v 1.4 2006/11/23 20:09:56 vivo Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -37,7 +37,7 @@ DEPEND="|| ( ( x11-libs/libXcursor
 	>=media-libs/freetype-2
 	sys-libs/zlib
 	nas? ( >=media-libs/nas-1.5 )
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	firebird? ( dev-db/firebird )
 	opengl? ( virtual/opengl virtual/glu )
 	postgres? ( dev-db/postgresql )

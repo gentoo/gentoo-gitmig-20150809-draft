@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.1.ebuild,v 1.14 2006/11/10 00:55:23 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.1.ebuild,v 1.15 2006/11/23 20:09:56 vivo Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -35,7 +35,7 @@ DEPEND="x11-libs/libXrandr
 	mng? ( >=media-libs/libmng-1.0.9 )
 	nas? ( >=media-libs/nas-1.5 )
 	odbc? ( dev-db/unixODBC )
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	firebird? ( dev-db/firebird )
 	opengl? ( virtual/opengl virtual/glu )
 	postgres? ( dev-db/libpq )
