@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/clock
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/clock/ChangeLog,v 1.9 2006/11/20 18:19:23 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/clock/ChangeLog,v 1.10 2006/11/23 21:25:48 blubb Exp $
+
+  23 Nov 2006; <blubb@gentoo.org> clock-2.1.7.ebuild:
+  added ~amd64
 
   20 Nov 2006; Christian Faulhammer <opfer@gentoo.org> clock-2.1.7.ebuild:
   stable x86, bug #155521
