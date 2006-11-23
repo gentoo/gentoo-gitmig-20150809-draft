@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0_rc15.ebuild,v 1.5 2006/11/22 17:32:32 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0_rc15.ebuild,v 1.6 2006/11/23 15:56:15 uberlord Exp $
 
 inherit autotools eutils
 
@@ -38,11 +38,12 @@ pkg_setup() {
 }
 
 src_compile() {
-	local myconf="--sysconfdir=/etc/dovecot --with-ioloop=best --with-poll=best"
+	local myconf=
 	use ssl && myconf="${myconf} --with-ssl=openssl" \
 		|| myconf="${myconf} --without-ssl"
 
-	econf --localstatedir=/var \
+		econf --localstatedir=/var --sysconfdir=/etc/dovecot \
+		--with-ioloop=best --with-poll=best \
 		$(use_enable debug) \
 		$(use_enable ipv6) \
 		$(use_with kerberos gssapi) \
@@ -83,7 +84,7 @@ src_install () {
 	# .maildir is the Gentoo default, but we need to support mbox to
 	local mail_location="maildir:~/.maildir"
 	if use mbox ; then
-		mail_loctation="mbox:/var/spool/mail/%u:INDEX=/var/dovecot/%u"
+		mail_location="mbox:/var/spool/mail/%u:INDEX=/var/dovecot/%u"
 		keepdir /var/dovecot
 		sed -i -e 's|#mail_extra_groups =|mail_extra_groups = mail|' "${conf}"
 	fi
