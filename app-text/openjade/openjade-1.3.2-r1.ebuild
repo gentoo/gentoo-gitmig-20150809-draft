@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.32 2006/04/05 20:04:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.33 2006/11/23 02:37:18 leonardop Exp $
 
 inherit libtool sgml-catalog eutils flag-o-matic multilib
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 ~x86-f
 IUSE=""
 
 RDEPEND="app-text/sgml-common
-	>=app-text/opensp-1.5-r1"
+	>=app-text/opensp-1.5.1"
 DEPEND="dev-lang/perl
 	${RDEPEND}"
 
