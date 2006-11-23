@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.0.5.ebuild,v 1.1 2006/07/14 09:12:19 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.0.5.ebuild,v 1.2 2006/11/23 14:06:44 uberlord Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Very Secure FTP Daemon written with speed, size and security in mind"
 HOMEPAGE="http://vsftpd.beasts.org/"
@@ -48,7 +48,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake CFLAGS="${CFLAGS}" || die
+	emake CFLAGS="${CFLAGS}" CC="$(tc-getCC)" || die
 }
 
 src_install() {
