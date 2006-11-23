@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0_rc15.ebuild,v 1.6 2006/11/23 15:56:15 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0_rc15.ebuild,v 1.7 2006/11/23 16:17:20 vivo Exp $
 
 inherit autotools eutils
 
@@ -25,7 +25,7 @@ DEPEND=">=sys-apps/sed-4
 	pam? ( virtual/pam )
 	ssl? ( dev-libs/openssl )
 	postgres? ( dev-db/postgresql )
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	vpopmail? ( net-mail/vpopmail )"
 
 RDEPEND="${DEPEND}
