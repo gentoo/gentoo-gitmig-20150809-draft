@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/units
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.5 2006/03/12 20:40:00 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.6 2006/11/23 03:02:37 jer Exp $
+
+  23 Nov 2006; Jeroen Roovers <jer@gentoo.org> units-1.85.ebuild:
+  Stable for HPPA.
 
 *units-1.85 (12 Mar 2006)
 
