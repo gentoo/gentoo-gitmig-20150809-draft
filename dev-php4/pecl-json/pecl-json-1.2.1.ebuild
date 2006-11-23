@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-json/pecl-json-1.2.1.ebuild,v 1.1 2006/04/27 20:41:20 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-json/pecl-json-1.2.1.ebuild,v 1.2 2006/11/23 00:38:51 tomk Exp $
 
 PHP_EXT_NAME="json"
 PHP_EXT_INI="yes"
@@ -8,7 +8,7 @@ PHP_EXT_ZENDEXT="no"
 
 inherit php-ext-pecl-r1
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 DESCRIPTION="PHP extension for JSON serialisation."
 LICENSE="PHP"
 SLOT="0"
