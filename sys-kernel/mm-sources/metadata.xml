@@ -11,8 +11,7 @@
 		<name>Konstantin V. Arkhipov</name>
 	</maintainer>
 	<longdescription>
-		This kernel is based on Andrew Morton's tree.
-		It includes a large number of patches to vanilla 2.6 + bk,
-		most notably scheduler work by Con Kolivas.
+		Andrew Morton's patchset for 2.6. It contains experimental features,
+		cleanups, and other interesting patches.
 	</longdescription>
 </pkgmetadata>
