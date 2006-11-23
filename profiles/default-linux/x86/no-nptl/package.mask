@@ -6,6 +6,10 @@ app-cdr/bonfire
 media-sound/banshee
 media-plugins/banshee-official-plugins
 
+
+# Requires a too new version of linux-headers
+sys-apps/inputd
+
 # Shouldn't be merging these SELinux packages on this profile
 # but this keeps repoman happy since they require >=glibc-2.4
 # 20061009 pebenito
