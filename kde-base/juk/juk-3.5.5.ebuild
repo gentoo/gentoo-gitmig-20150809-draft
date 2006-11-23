@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/juk-3.5.5.ebuild,v 1.8 2006/11/23 05:52:20 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/juk-3.5.5.ebuild,v 1.9 2006/11/23 19:14:50 masterdriverz Exp $
 
 KMNAME=kdemultimedia
 MAXKDEVER=$PV
@@ -16,7 +16,7 @@ IUSE="akode flac gstreamer mp3 vorbis"
 
 DEPEND="media-libs/taglib
 	gstreamer? ( =media-libs/gstreamer-0.10*
-				 >=media-libs/gst-plugins-0.8 )
+				 =media-libs/gst-plugins-base-0.10* )
 	akode? ( media-libs/akode )
 	!arts? ( !gstreamer? ( media-libs/akode ) )"
 
