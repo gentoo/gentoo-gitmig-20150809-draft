@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/gaia-0.1.0.ebuild,v 1.2 2006/11/23 12:23:30 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/gaia-0.1.0.ebuild,v 1.3 2006/11/23 20:17:44 hansmi Exp $
 
 inherit eutils libtool
 
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="GPL-2"
 
 IUSE="gps doc examples"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 RDEPEND="media-libs/jpeg
 	media-libs/libpng
@@ -51,7 +51,8 @@ src_install() {
 	dobin gaia
 	dodoc COPYING ChangeLog README TODO
 
-	cp -r data "${D}/usr/share/gaia/" || die
+	mkdir -p "${D}/usr/share/gaia/" || die
+	cp -r data/* "${D}/usr/share/gaia/" || die
 	use doc && cp -r doc/html/*.{html,css,png,gif} "${D}/usr/share/doc/${PF}/"
 
 	if use examples; then
