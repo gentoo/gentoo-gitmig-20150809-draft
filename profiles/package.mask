@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6334 2006/11/22 23:23:48 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6335 2006/11/23 14:11:45 opfer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ## 
+
+# Christian Faulhammer <opfer@gentoo.org> (23 Nov 2006)
+# Masked for testing
+x11-misc/gaia
+
 
 # Kevin F. Quinn <kevquinn@gentoo.org> (21 Nov 2006)
 # Mask for initial testing; bug #125366
