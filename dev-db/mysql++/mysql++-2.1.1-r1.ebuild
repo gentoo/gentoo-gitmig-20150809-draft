@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-2.1.1-r1.ebuild,v 1.1 2006/11/22 23:22:52 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-2.1.1-r1.ebuild,v 1.2 2006/11/23 14:44:19 vivo Exp $
 
 inherit eutils gnuconfig
 
@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND=">=sys-devel/gcc-3"
 RDEPEND="${DEPEND}
-		>=dev-db/mysql-4.0"
+		>=virtual/mysql-4.0"
 
 src_unpack() {
 	unpack "${A}"
