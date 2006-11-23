@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/acgmake/acgmake-1.2-r1.ebuild,v 1.1 2006/09/19 15:12:37 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/acgmake/acgmake-1.2-r1.ebuild,v 1.2 2006/11/23 19:01:59 blubb Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Build system for large projects"
@@ -9,7 +9,7 @@ SRC_URI="http://www-i8.informatik.rwth-aachen.de/software/acgmake/${P}.tgz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND="app-shells/bash
