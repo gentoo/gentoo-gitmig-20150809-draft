@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/httping
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/ChangeLog,v 1.29 2006/11/23 11:23:10 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/ChangeLog,v 1.30 2006/11/23 13:42:56 ranger Exp $
+
+  23 Nov 2006; Brent Baude <ranger@gentoo.org> httping-1.2.1.ebuild:
+  Marking httping-1.2.1 ppc64 stable per bug 155904
 
   23 Nov 2006; Christian Faulhammer <opfer@gentoo.org> httping-1.2.1.ebuild:
   stable x86, bug #155904
