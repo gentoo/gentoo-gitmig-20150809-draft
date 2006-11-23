@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-4.02.00.ebuild,v 1.1 2006/07/02 23:31:19 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-4.02.00.ebuild,v 1.2 2006/11/23 20:05:43 vivo Exp $
 
 inherit flag-o-matic eutils
 
@@ -23,7 +23,7 @@ RDEPEND="|| (
 	>=media-libs/freetype-2.0.9
 	sys-apps/shadow
 	opengl? ( virtual/opengl virtual/glu )
-	mysql? ( >=dev-db/mysql-3.23.49 )
+	mysql? ( virtual/mysql )
 	postgres? ( >=dev-db/postgresql-7.1.3-r4 )
 	!amd64? ( afs? ( net-fs/openafs ) )
 	kerberos? ( app-crypt/mit-krb5 )
