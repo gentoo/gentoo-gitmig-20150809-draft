@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.11-r1.ebuild,v 1.6 2006/10/21 11:42:20 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.11-r1.ebuild,v 1.7 2006/11/23 20:34:02 vivo Exp $
 
 inherit autotools eutils versionator
 
@@ -20,7 +20,7 @@ DEPEND=">=net-im/jabber-base-0.01
 	net-dns/libidn
 	ldap? ( net-nds/openldap )
 	>=sys-libs/db-4.1.25
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql )
 	sqlite? ( =dev-db/sqlite-3* )
 	!=net-im/jabberd-2.0.11"
