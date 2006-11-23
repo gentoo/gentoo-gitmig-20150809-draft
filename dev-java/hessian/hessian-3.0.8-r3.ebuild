@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hessian/hessian-3.0.8-r3.ebuild,v 1.2 2006/08/02 04:28:10 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hessian/hessian-3.0.8-r3.ebuild,v 1.3 2006/11/23 13:35:55 opfer Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.caucho.com/hessian/download/${P}-src.jar"
 
 LICENSE="Apache-1.1"
 SLOT="3.0.8"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="doc source"
 
 COMMON_DEP="=dev-java/servletapi-2.3*
