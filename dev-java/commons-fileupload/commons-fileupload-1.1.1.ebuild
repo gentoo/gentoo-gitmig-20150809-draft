@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/commons-fileupload-1.1.1.ebuild,v 1.3 2006/11/16 22:45:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/commons-fileupload-1.1.1.ebuild,v 1.4 2006/11/23 19:36:40 dertobi123 Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -17,7 +17,7 @@ RDEPEND=">=virtual/jre-1.3"
 LICENSE="Apache-2.0"
 SLOT="0"
 # Missing dependencies: need package for javax.portlet.
-KEYWORDS="~amd64 ~ppc ~ppc64 x86"
+KEYWORDS="~amd64 ppc ~ppc64 x86"
 IUSE="doc source"
 
 src_unpack() {
