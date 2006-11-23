@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.12.ebuild,v 1.1 2006/11/06 00:49:44 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.12.ebuild,v 1.2 2006/11/23 20:36:14 vivo Exp $
 
 inherit eutils perl-app
 
@@ -35,12 +35,12 @@ DEPEND="dev-libs/newt
 	bri? ( <net-libs/libpri-1.2
 		<net-misc/zaptel-1.2 )
 	alsa? ( media-libs/alsa-lib )
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	speex? ( media-libs/speex )
 	zaptel? ( <net-misc/zaptel-1.2 )
 	postgres? ( dev-db/postgresql )
-	vmdbmysql? ( dev-db/mysql )
-	mysqlfriends? ( dev-db/mysql )
+	vmdbmysql? ( virtual/mysql )
+	mysqlfriends? ( virtual/mysql )
 	vmdbpostgres? ( dev-db/postgresql )
 	resperl? ( dev-lang/perl
 		   <net-misc/zaptel-1.2 )"

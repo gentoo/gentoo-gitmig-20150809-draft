@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-rate_engine/asterisk-rate_engine-0.5.4.ebuild,v 1.3 2005/08/27 20:30:28 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-rate_engine/asterisk-rate_engine-0.5.4.ebuild,v 1.4 2006/11/23 20:37:34 vivo Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
 DEPEND="dev-libs/libpcre
-	dev-db/mysql
+	virtual/mysql
 	>=net-misc/asterisk-1.0.5-r1
 	!>=net-misc/asterisk-1.1.0"
 

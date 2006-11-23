@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.13.ebuild,v 1.3 2006/10/20 18:42:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.13.ebuild,v 1.4 2006/11/23 20:36:14 vivo Exp $
 
 inherit eutils multilib
 
@@ -45,7 +45,7 @@ RDEPEND="dev-libs/newt
 	alsa? ( media-libs/alsa-lib )
 	curl? ( net-misc/curl )
 	odbc? ( dev-db/unixODBC )
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	speex? ( media-libs/speex )
 	sqlite? ( <dev-db/sqlite-3.0.0 )
 	zaptel? ( >=net-misc/zaptel-1.2.8 )
