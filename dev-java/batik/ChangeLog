@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/batik
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.39 2006/11/10 13:16:22 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.40 2006/11/23 18:49:51 blubb Exp $
+
+  23 Nov 2006; <blubb@gentoo.org> batik-1.5-r1.ebuild,
+  batik-1.5.1-r5.ebuild, batik-1.6-r1.ebuild:
+  stable on amd64
 
   10 Nov 2006; nixnut <nixnut@gentoo.org> batik-1.5.1-r5.ebuild,
   batik-1.6-r1.ebuild:
