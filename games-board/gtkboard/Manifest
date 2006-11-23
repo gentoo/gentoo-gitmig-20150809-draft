@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX gtkboard-0.11_pre0-gcc41.patch 583 RMD160 a96cdfcd1805ac4b56f12eaf48e9c10afcda9bc0 SHA1 ae184df64745e77dd647e6ea16d8ffe85f1bfc87 SHA256 3af90808f928e689729e3a88f01bd2681e6a92a4279afc008422f72599385e90
 MD5 bfb1dddfb72973089855ddeccae165fc files/gtkboard-0.11_pre0-gcc41.patch 583
 RMD160 a96cdfcd1805ac4b56f12eaf48e9c10afcda9bc0 files/gtkboard-0.11_pre0-gcc41.patch 583
@@ -18,3 +21,10 @@ SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata
 MD5 cc6e508cd6a4908902ca8f3b2b3b2bdf files/digest-gtkboard-0.11_pre0 253
 RMD160 8aa2696f1334c4f64eacdc8008f2d01eb837f70d files/digest-gtkboard-0.11_pre0 253
 SHA256 9f483eb6580bfef6d52fc6410e67609da87d8518913ce1318d3b02528216da11 files/digest-gtkboard-0.11_pre0 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFZgkvdz7hIScOURERAmB7AKDGzVmEg6Gin39ynhP3XNf194vurgCg4cLv
+BEvxsjBFlbuNLy4ZrfyKUIM=
+=CHJx
+-----END PGP SIGNATURE-----
