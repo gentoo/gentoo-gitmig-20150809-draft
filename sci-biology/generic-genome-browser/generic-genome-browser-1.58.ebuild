@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/generic-genome-browser/generic-genome-browser-1.58.ebuild,v 1.7 2006/02/13 15:09:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/generic-genome-browser/generic-genome-browser-1.58.ebuild,v 1.8 2006/11/23 17:22:04 vivo Exp $
 
 inherit perl-app
 
@@ -36,7 +36,7 @@ DEPEND="
 		)
 	mysql?
 		(
-			>=dev-db/mysql-4
+			>=virtual/mysql-4.0
 			dev-perl/DBD-mysql
 		)
 	>=net-www/apache-2.0.47"
