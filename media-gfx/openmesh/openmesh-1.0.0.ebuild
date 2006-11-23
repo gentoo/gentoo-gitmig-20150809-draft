@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/openmesh-1.0.0.ebuild,v 1.1 2006/09/19 15:11:12 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/openmesh-1.0.0.ebuild,v 1.2 2006/11/23 19:02:36 blubb Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www-i8.informatik.rwth-aachen.de/${MY_PN}/downloads/${MY_P}.tgz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 ~x86"
 IUSE="qt4 debug"
 
 RDEPEND="qt4? ( x11-libs/qt )"
