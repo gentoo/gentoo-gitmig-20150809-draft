@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/rt2x00
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/ChangeLog,v 1.17 2006/11/17 20:08:46 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/ChangeLog,v 1.18 2006/11/23 14:53:03 uberlord Exp $
+
+  23 Nov 2006; Roy Marples <uberlord@gentoo.org> rt2x00-9999.ebuild:
+  Drop the eeprom USE flag and build the module when any pci devices are built.
 
   17 Nov 2006; Roy Marples <uberlord@gentoo.org> rt2x00-9999.ebuild:
   Add eeprom USE flag for reading EEPROM settings from PCI cards.

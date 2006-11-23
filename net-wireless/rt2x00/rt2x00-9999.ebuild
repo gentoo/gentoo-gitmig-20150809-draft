@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-9999.ebuild,v 1.16 2006/11/17 20:08:46 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-9999.ebuild,v 1.17 2006/11/23 14:53:03 uberlord Exp $
 
 inherit linux-mod cvs
 
@@ -16,7 +16,7 @@ KEYWORDS="-* ~amd64 ~x86"
 RDEPEND="net-wireless/wireless-tools"
 
 IUSE_RT2X00_DEVICES="rt2400pci rt2500pci rt2500usb rt61pci rt73usb"
-IUSE_RT2X00_EXTRA="eeprom rfkill"
+IUSE_RT2X00_EXTRA="rfkill"
 IUSE="asm debug"
 
 for x in ${IUSE_RT2X00_DEVICES} ${IUSE_RT2X00_EXTRA} ; do
@@ -89,15 +89,18 @@ src_compile() {
 		MODULE_NAMES="${MODULE_NAMES} crc-itu-t(rt2x00:)"
 	fi
 
+	# rt2400pci, rt2500pci and rt61pci require the EEPROM module
+	if use rt2400pci || use rt2500pci || use rt61pci ; then
+		echo "CONFIG_EEPROM_93CX6=y" >> config
+		echo "CONFIG_EEPROM_93CX6_ASM=${asm}" >> config
+		MODULE_NAMES="${MODULE_NAMES} eeprom_93cx6(rt2x00:)"
+	fi
+
 	for m in d80211 ${IUSE_RT2X00_EXTRA} ${IUSE_RT2X00_DEVICES} ; do
 		local yn="n" M=$(echo "${m}" | tr '[:lower:]' '[:upper:]')
 
 		if [[ ${m} == "d80211" || ${full} == "y" ]] || use "${m}" ; then
 			yn="y"
-		fi
-		if [[ ${m} == "eeprom" ]] ; then
-			m="eeprom_93cx6"
-			M="EEPROM_93CX6"
 		fi
 		echo "CONFIG_${M}=${yn}" >> config
 		echo "CONFIG_${M}_ASM=${asm}" >> config
