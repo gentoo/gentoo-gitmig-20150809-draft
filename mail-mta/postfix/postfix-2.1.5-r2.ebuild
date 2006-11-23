@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.1.5-r2.ebuild,v 1.14 2005/12/26 20:55:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.1.5-r2.ebuild,v 1.15 2006/11/23 20:28:34 vivo Exp $
 
 inherit eutils ssl-cert toolchain-funcs
 
@@ -29,7 +29,7 @@ DEPEND=">=sys-libs/db-3.2
 	>=dev-libs/libpcre-3.4
 	>=sys-apps/sed-4
 	ldap? ( >=net-nds/openldap-1.2 )
-	mysql? ( >=dev-db/mysql-3.23.51 )
+	mysql? ( virtual/mysql )
 	postgres? ( >=dev-db/postgresql-7.1 )
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	sasl? ( >=dev-libs/cyrus-sasl-2 )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.62.ebuild,v 1.5 2006/11/21 16:22:42 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.62.ebuild,v 1.6 2006/11/23 20:25:35 vivo Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ DEPEND=">=sys-apps/sed-4.0.5
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	gnutls? ( net-libs/gnutls )
 	ldap? ( >=net-nds/openldap-2.0.7 )
-	mysql? ( >=dev-db/mysql-3.23.28 )
+	mysql? ( virtual/mysql )
 	postgres? ( >=dev-db/postgresql-7 )
 	sasl? ( >=dev-libs/cyrus-sasl-2.1.14 )
 	spf? ( >=mail-filter/libspf2-1.2.5-r1 )

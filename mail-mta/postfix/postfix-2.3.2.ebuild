@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.3.2.ebuild,v 1.1 2006/08/01 18:42:51 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.3.2.ebuild,v 1.2 2006/11/23 20:28:34 vivo Exp $
 
 # NOTE: this ebuild is regular ebuild without mailer-config support
 # comment lines below "regular ebuild" and uncomment lines below "mailer-config support"
@@ -44,7 +44,7 @@ DEPEND="cdb? ( || ( >=dev-db/cdb-0.75-r1 >=dev-db/tinycdb-0.74 ) )
 	>=dev-libs/libpcre-3.4
 	pam? ( virtual/pam )
 	ldap? ( >=net-nds/openldap-1.2 )
-	mysql? ( >=dev-db/mysql-3.23.51 )
+	mysql? ( virtual/mysql )
 	postgres? ( >=dev-db/postgresql-7.1 )
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	sasl? (  >=dev-libs/cyrus-sasl-2 )"

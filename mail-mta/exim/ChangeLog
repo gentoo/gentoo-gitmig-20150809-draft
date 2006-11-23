@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.78 2006/11/21 16:22:42 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.79 2006/11/23 20:25:35 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> exim-4.60-r1.ebuild,
+  exim-4.61.ebuild, exim-4.62.ebuild, exim-4.63.ebuild:
+  dev-db/mysql => virtual/mysql
 
   21 Nov 2006; Michael Hanselmann <hansmi@gentoo.org> exim-4.62.ebuild:
   Stable on hppa, ppc.
