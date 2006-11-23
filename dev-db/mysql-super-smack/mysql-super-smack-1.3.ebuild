@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-super-smack/mysql-super-smack-1.3.ebuild,v 1.3 2006/08/15 21:34:13 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-super-smack/mysql-super-smack-1.3.ebuild,v 1.4 2006/11/23 20:02:01 vivo Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="mysql postgres"
 
-DEPEND="mysql? ( dev-db/mysql )
+DEPEND="mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql )"
 
 S="${WORKDIR}/${MY_P}"

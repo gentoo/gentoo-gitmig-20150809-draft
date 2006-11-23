@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.7.1.ebuild,v 1.7 2006/10/16 10:06:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.7.1.ebuild,v 1.8 2006/11/23 19:55:29 vivo Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ KEYWORDS="x86 ppc amd64"
 IUSE="mysql postgres sqlite odbc doc"
 
 # At least one of the following is required
-RDEPEND="mysql? ( >=dev-db/mysql-3.23.54a )
+RDEPEND="mysql? ( virtual/mysql )
 	postgres? ( >=dev-db/postgresql-7.3 )
 	sqlite? ( =dev-db/sqlite-2* )
 	odbc? ( >=dev-db/unixODBC-2.0.6 )"

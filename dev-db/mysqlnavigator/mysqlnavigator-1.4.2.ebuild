@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/mysqlnavigator-1.4.2.ebuild,v 1.15 2006/04/18 12:16:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/mysqlnavigator-1.4.2.ebuild,v 1.16 2006/11/23 20:00:20 vivo Exp $
 
 inherit eutils qt3
 
@@ -13,9 +13,9 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ppc sparc x86"
 
-DEPEND=">=dev-db/mysql-3.23.49
+DEPEND="virtual/mysql
 		$(qt_min_version 3.1)"
-		#!=dev-db/mysql-4*
+		#!>=virtual/mysql-4.0
 
 src_unpack() {
 	unpack ${A}

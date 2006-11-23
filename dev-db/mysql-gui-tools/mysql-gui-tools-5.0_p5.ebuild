@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/mysql-gui-tools-5.0_p5.ebuild,v 1.1 2006/11/05 00:33:45 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/mysql-gui-tools-5.0_p5.ebuild,v 1.2 2006/11/23 19:59:25 vivo Exp $
 
 GCONF_DEBUG="no"
 
@@ -26,7 +26,7 @@ RDEPEND=">=x11-libs/gtk+-2.6
 	=dev-cpp/glibmm-2.12*
 	=dev-cpp/gtkmm-2.10*
 	=gnome-extra/gtkhtml-3.12*
-	>=dev-db/mysql-5	"
+	>=virtual/mysql-5.0"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.15
 	>=app-text/scrollkeeper-0.3.11"

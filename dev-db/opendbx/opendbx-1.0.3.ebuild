@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/opendbx-1.0.3.ebuild,v 1.1 2006/11/06 19:24:47 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/opendbx-1.0.3.ebuild,v 1.2 2006/11/23 20:02:47 vivo Exp $
 
 DESCRIPTION="OpenDBX - A database abstraction layer"
 HOMEPAGE="http://www.linuxnetworks.de/opendbx/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="mysql postgres sqlite sqlite3"
 
-DEPEND="mysql? ( dev-db/mysql )
+DEPEND="mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql )
 	sqlite? ( <dev-db/sqlite-3 )
 	sqlite3? ( =dev-db/sqlite-3* )"

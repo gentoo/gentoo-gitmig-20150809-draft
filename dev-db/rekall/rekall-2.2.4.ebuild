@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/rekall/rekall-2.2.4.ebuild,v 1.4 2005/09/24 12:17:31 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/rekall/rekall-2.2.4.ebuild,v 1.5 2006/11/23 20:06:03 vivo Exp $
 
 inherit kde
 
@@ -15,11 +15,11 @@ IUSE="mysql postgres xbase"
 
 DEPEND="sys-apps/sed
 	virtual/python
-	mysql? ( >=dev-db/mysql-3.23.57-r1 )
+	mysql? ( virtual/mysql )
 	postgres? ( >=dev-db/postgresql-7.3.4-r1 )
 	xbase? ( =dev-db/xbsql-0.11 )"
 RDEPEND="virtual/python
-	mysql? ( >=dev-db/mysql-3.23.57-r1 )
+	mysql? ( virtual/mysql )
 	postgres? ( >=dev-db/postgresql-7.3.4-r1 )
 	xbase? ( =dev-db/xbsql-0.11 )"
 need-kde 3

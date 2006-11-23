@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/gmyclient
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gmyclient/ChangeLog,v 1.13 2006/10/22 16:49:03 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gmyclient/ChangeLog,v 1.14 2006/11/23 19:54:13 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> gmyclient-0.3.ebuild:
+  dev-db/mysql => virtual/mysql
 
   22 Oct 2006; <vivo@gentoo.org> +files/0.3-gcc41.patch,
   gmyclient-0.3.ebuild:

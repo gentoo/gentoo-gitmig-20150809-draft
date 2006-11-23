@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gmyclient/gmyclient-0.3.ebuild,v 1.18 2006/10/22 16:49:03 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gmyclient/gmyclient-0.3.ebuild,v 1.19 2006/11/23 19:54:13 vivo Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="ppc sparc x86"
 IUSE="nls"
 
 DEPEND=">=gnome-base/gnome-libs-1.2
-		>=dev-db/mysql-3
+		virtual/mysql
 		=gnome-base/libglade-0*
 		media-libs/giflib"
 

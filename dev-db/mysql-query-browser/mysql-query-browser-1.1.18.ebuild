@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/mysql-query-browser-1.1.18.ebuild,v 1.8 2006/10/27 16:50:02 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/mysql-query-browser-1.1.18.ebuild,v 1.9 2006/11/23 20:01:16 vivo Exp $
 
 inherit gnome2 eutils flag-o-matic
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND=">=dev-db/mysql-4.0
+RDEPEND=">=virtual/mysql-4.0
 	>=dev-libs/libpcre-4.4
 	>=dev-libs/libxml2-2.6.2
 	>=gnome-base/libglade-2
