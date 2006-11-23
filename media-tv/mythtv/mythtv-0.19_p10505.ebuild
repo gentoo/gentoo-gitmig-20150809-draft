@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p10505.ebuild,v 1.9 2006/10/05 21:42:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p10505.ebuild,v 1.10 2006/11/23 16:43:19 vivo Exp $
 
 inherit flag-o-matic multilib eutils debug qt3
 
@@ -38,7 +38,7 @@ RDEPEND=">=media-libs/freetype-2.0
 		video_cards_i810? ( || ( x11-drivers/xf86-video-i810 virtual/x11 ) )
 	)
 	$(qt_min_version 3.3)
-	dev-db/mysql
+	virtual/mysql
 	alsa? ( >=media-libs/alsa-lib-0.9 )
 	dvd? ( 	media-libs/libdvdnav
 		media-libs/libdts )
