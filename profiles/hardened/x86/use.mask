@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/use.mask,v 1.23 2006/07/19 18:21:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/use.mask,v 1.24 2006/11/23 14:07:36 opfer Exp $
 
 -3dnow
 -3dnowext
@@ -37,6 +37,10 @@ gulm
 # 2006/06/22 Chris Gianelloni <wolf31o2@gentoo.org>
 # # Masking for bug #136866
 pmount
+
+# Christian Faulhammer <opfer@gentoo.org> (23 Nov 2006)
+# only available for ppc64, see bug #156000
+ibm
 
 #input_devices_wacom
 -x264
