@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/zoom/zoom-1.0.4a.ebuild,v 1.2 2006/01/29 00:11:39 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/zoom/zoom-1.0.4a.ebuild,v 1.3 2006/11/23 22:59:13 nyhm Exp $
 
 inherit flag-o-matic games
 
@@ -13,17 +13,13 @@ SLOT="0"
 KEYWORDS="ppc x86"
 IUSE=""
 
-RDEPEND="|| ( ( x11-libs/libSM
-				x11-libs/libXft )
-			virtual/x11 )
+RDEPEND="x11-libs/libSM
+	x11-libs/libXft
 	media-libs/fontconfig
-	>=media-libs/t1lib-1.3.1
-	sys-libs/zlib
-	>=media-libs/libpng-1.2.4"
+	>=media-libs/t1lib-5
+	media-libs/libpng"
 DEPEND="${RDEPEND}
-	>=sys-devel/bison-1.34
-	dev-lang/perl
-	|| ( x11-proto/xextproto virtual/x11 )"
+	x11-proto/xextproto"
 
 src_compile() {
 	filter-flags -ffast-math
@@ -32,7 +28,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 	dohtml -r manual
 	prepgamesdirs
