@@ -1,0 +1,11 @@
+# ChangeLog for dev-ruby/tzinfo
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.1 2006/11/23 00:44:22 flameeyes Exp $
+
+*tzinfo-0.3.2 (23 Nov 2006)
+
+  23 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +tzinfo-0.3.2.ebuild:
+  Initial import of tzinfo gem package (future dependency of rbot, and thus in
+  portage).
+
