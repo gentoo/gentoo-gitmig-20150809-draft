@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/mydns
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/ChangeLog,v 1.20 2006/10/22 18:52:44 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/ChangeLog,v 1.21 2006/11/23 17:18:54 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> mydns-1.1.0.ebuild:
+  dev-db/mysql => virtual/mysql
 
   22 Oct 2006; <vivo@gentoo.org> +files/mydns-1.1.0-gcc41.patch,
   mydns-1.1.0.ebuild:

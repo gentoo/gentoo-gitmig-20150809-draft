@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/mydns-1.1.0.ebuild,v 1.6 2006/10/22 18:52:44 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/mydns-1.1.0.ebuild,v 1.7 2006/11/23 17:18:54 vivo Exp $
 
 inherit eutils
 
@@ -17,9 +17,9 @@ RDEPEND="virtual/libc
 	ssl? ( dev-libs/openssl )
 	zlib? ( sys-libs/zlib )
 	|| (
-		mysql? ( dev-db/mysql )
+		mysql? ( virtual/mysql )
 		postgres? ( dev-db/postgresql )
-		!postgres? ( dev-db/mysql )
+		!postgres? ( virtual/mysql )
 	)"
 DEPEND="${RDEPEND}
 	sys-devel/bison"

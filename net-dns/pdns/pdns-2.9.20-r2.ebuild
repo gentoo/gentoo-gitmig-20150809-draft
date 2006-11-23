@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.20-r2.ebuild,v 1.3 2006/11/06 23:25:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.20-r2.ebuild,v 1.4 2006/11/23 17:19:49 vivo Exp $
 
 inherit multilib eutils autotools
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug doc ldap mysql postgres sqlite static tdb opendbx"
 
-DEPEND="mysql? ( >=dev-db/mysql-3.23.54a )
+DEPEND="mysql? ( virtual/mysql )
 	postgres? ( >=dev-cpp/libpqpp-4.0-r1 )
 	ldap? ( >=net-nds/openldap-2.0.27-r4 )
 	sqlite? ( =dev-db/sqlite-2.8* )
