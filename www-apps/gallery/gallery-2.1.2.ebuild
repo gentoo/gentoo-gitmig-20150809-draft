@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.1.2.ebuild,v 1.9 2006/10/20 02:31:42 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.1.2.ebuild,v 1.10 2006/11/23 17:07:00 vivo Exp $
 
 inherit webapp eutils depend.php
 
@@ -18,7 +18,7 @@ RDEPEND="virtual/httpd-php
 	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20051216 )
 	gd? ( >=media-libs/gd-2 )
 	imagemagick? ( >=media-gfx/imagemagick-5.4.9.1-r1 )
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	netpbm? ( >=media-libs/netpbm-9.12 >=media-gfx/jhead-2.2 )
 	postgres? ( >=dev-db/postgresql-7 )
 	unzip? ( app-arch/unzip )

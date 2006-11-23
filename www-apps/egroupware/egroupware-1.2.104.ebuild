@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.2.104.ebuild,v 1.2 2006/09/12 04:00:48 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.2.104.ebuild,v 1.3 2006/11/23 17:06:02 vivo Exp $
 
 inherit webapp depend.php
 
@@ -17,7 +17,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="gd jpgraph ldap mysql postgres"
 
 RDEPEND="
-	mysql? ( >=dev-db/mysql-4 )
+	mysql? ( >=virtual/mysql-4.0 )
 	postgres? ( >=dev-db/postgresql-7.2 )
 	ldap? ( net-nds/openldap )
 	gd? ( media-libs/gd )

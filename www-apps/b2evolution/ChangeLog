@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/b2evolution
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/ChangeLog,v 1.19 2006/11/23 16:23:46 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/ChangeLog,v 1.20 2006/11/23 17:05:10 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> ChangeLog:
+  dev-db/mysql => virtual/mysql
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> b2evolution-0.9.1.ebuild,
   b2evolution-0.9.2.ebuild, b2evolution-1.8.0.ebuild:

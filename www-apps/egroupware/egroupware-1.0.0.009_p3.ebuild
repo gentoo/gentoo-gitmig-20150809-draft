@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.0.0.009_p3.ebuild,v 1.7 2006/07/09 20:53:05 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.0.0.009_p3.ebuild,v 1.8 2006/11/23 17:06:02 vivo Exp $
 
 inherit webapp #depend.php
 
@@ -16,7 +16,7 @@ KEYWORDS="alpha amd64 ~hppa ppc ~sparc x86"
 IUSE="gd ldap"
 
 RDEPEND="virtual/php
-	|| ( >=dev-db/mysql-3.23 >=dev-db/postgresql-7.2 )
+	|| ( virtual/mysql >=dev-db/postgresql-7.2 )
 	ldap? ( net-nds/openldap )
 	gd? ( media-libs/gd )
 	net-www/apache"
