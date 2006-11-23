@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.100 2006/11/20 22:33:27 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.101 2006/11/23 16:39:12 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> libgda-1.2.3.ebuild:
+  dev-db/mysql => virtual/mysql
 
   20 Nov 2006; Leonardo Boshell <leonardop@gentoo.org>
   -files/libgda-1.2.1-mdb_fix.patch, +files/libgda-1.2.3-mdb_api.patch,

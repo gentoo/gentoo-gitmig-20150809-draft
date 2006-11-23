@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-1.2.3.ebuild,v 1.13 2006/11/20 22:33:27 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-1.2.3.ebuild,v 1.14 2006/11/23 16:39:12 vivo Exp $
 
 inherit autotools eutils gnome2
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/glib-2
 	dev-libs/popt
 	berkdb? ( sys-libs/db )
 	odbc? ( >=dev-db/unixODBC-2.0.6 )
-	mysql? ( >=dev-db/mysql-3.23.51 )
+	mysql? ( virtual/mysql )
 	postgres? ( >=dev-db/postgresql-7.2.1 )
 	freetds? ( >=dev-db/freetds-0.62 )
 	x86? ( firebird? ( dev-db/firebird ) )
