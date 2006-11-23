@@ -1,19 +1,46 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1f22101e6d6e8952b31c2ee1e71e7434 updatedd-2.3.ebuild 822
-MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
-MD5 cf11b7bc6764b987bd22fcdcce00761e ChangeLog 855
-MD5 42fd7ce75fcc4f025bad17f2ed2a3ca4 updatedd-2.4.ebuild 635
-MD5 26604e31927eb89e6d37f9c933f02e38 updatedd-2.5.ebuild 635
-MD5 eb4a7c2c05f74ce62fcb00391abd19d5 files/digest-updatedd-2.3 64
+AUX updatedd-2.3-makefile.patch 3527 RMD160 c4a43e5ec00947643bd2961fb32acf369f285cbe SHA1 7facf1d0102f35781eaccad14345e6e832940507 SHA256 b267c2a83f2a0cce6dd97c0193e189052edf098efe12a05acb3b77f75089db3d
 MD5 82a2354d2d4b5f0fcd5c117f1e7377f7 files/updatedd-2.3-makefile.patch 3527
+RMD160 c4a43e5ec00947643bd2961fb32acf369f285cbe files/updatedd-2.3-makefile.patch 3527
+SHA256 b267c2a83f2a0cce6dd97c0193e189052edf098efe12a05acb3b77f75089db3d files/updatedd-2.3-makefile.patch 3527
+DIST updatedd_2.3.tar.gz 360089
+DIST updatedd_2.4.tar.gz 360054
+DIST updatedd_2.5.tar.gz 364788 RMD160 5b13fa3a0d360fc481a09f0e324b481b22b550a5 SHA1 ae3752892738c7a17864ec62e9b58e0b8e32b5c2 SHA256 d67db9c6b3e03f1a9801e9279a606ff516eba4c8c44d3fe71e923c18a1e5ed09
+EBUILD updatedd-2.3.ebuild 822 RMD160 fca939ba86e080b1d8bf42979ea6c1b3f270d971 SHA1 57bc465d7a518fdc0f8f299dfe0000bebb36b8a1 SHA256 fc7779d8ca3ac48f9d0767e4ae7b0ddad862f14586de24bef5767bc4e7e354e5
+MD5 1f22101e6d6e8952b31c2ee1e71e7434 updatedd-2.3.ebuild 822
+RMD160 fca939ba86e080b1d8bf42979ea6c1b3f270d971 updatedd-2.3.ebuild 822
+SHA256 fc7779d8ca3ac48f9d0767e4ae7b0ddad862f14586de24bef5767bc4e7e354e5 updatedd-2.3.ebuild 822
+EBUILD updatedd-2.4.ebuild 635 RMD160 fe595f2f1037292f449b2cec61d7e4c6ad4dbdf0 SHA1 094a6a342734e85c6ffee42fd2a432107034814f SHA256 a67bc2b88be5ed17ea5a005dd0f518d8b093dbd85c2e362aa95222493377a88f
+MD5 42fd7ce75fcc4f025bad17f2ed2a3ca4 updatedd-2.4.ebuild 635
+RMD160 fe595f2f1037292f449b2cec61d7e4c6ad4dbdf0 updatedd-2.4.ebuild 635
+SHA256 a67bc2b88be5ed17ea5a005dd0f518d8b093dbd85c2e362aa95222493377a88f updatedd-2.4.ebuild 635
+EBUILD updatedd-2.5.ebuild 628 RMD160 985b98fcd8caabfa85f3970daa55fddcc550b804 SHA1 90d30ae2fc2d0ff083fc51cabe3d13efceb3764e SHA256 52957d1d2e3590a647bafd84c7a14c1e97964a0eb5fc922fb79f97e5ee6713cf
+MD5 77aed7f6e2b128b88ec274931119ca58 updatedd-2.5.ebuild 628
+RMD160 985b98fcd8caabfa85f3970daa55fddcc550b804 updatedd-2.5.ebuild 628
+SHA256 52957d1d2e3590a647bafd84c7a14c1e97964a0eb5fc922fb79f97e5ee6713cf updatedd-2.5.ebuild 628
+MISC ChangeLog 952 RMD160 474c906f68ce485f242b6c3a88f1f5a9a25a1e57 SHA1 ba6c5498c2edd71335d7c59361e7584cef34aabc SHA256 47630f04b71ad0f87bcb8bd6b8385320db43bf981305962bc79f33238296dee7
+MD5 c76538a72afe1428acc83c4643c086c5 ChangeLog 952
+RMD160 474c906f68ce485f242b6c3a88f1f5a9a25a1e57 ChangeLog 952
+SHA256 47630f04b71ad0f87bcb8bd6b8385320db43bf981305962bc79f33238296dee7 ChangeLog 952
+MISC metadata.xml 403 RMD160 48afb924f8ddebfd4ea31a43eca3b277a30b62b6 SHA1 ec604212b5eb7dde6256c827184a228eaa8161d5 SHA256 148b8bb5514a7787fab372ad8a71c93c67db9ce84ed2aa5953691c2104ca788a
+MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
+RMD160 48afb924f8ddebfd4ea31a43eca3b277a30b62b6 metadata.xml 403
+SHA256 148b8bb5514a7787fab372ad8a71c93c67db9ce84ed2aa5953691c2104ca788a metadata.xml 403
+MD5 eb4a7c2c05f74ce62fcb00391abd19d5 files/digest-updatedd-2.3 64
+RMD160 3e9c44050bdd1440c8b25309abaeeccb4d1d37c3 files/digest-updatedd-2.3 64
+SHA256 8e7625e4f3e5caf14b6e74126dc7621759bec5866894f36bcab57299cd53552b files/digest-updatedd-2.3 64
 MD5 c1531435ba5db6f10d5e88fc32eee7f1 files/digest-updatedd-2.4 64
-MD5 5c62db5fb0f7ea62e0bc73ad00e6983a files/digest-updatedd-2.5 64
+RMD160 2178956f1eb1118c14efdba1eac2e8991b24eda9 files/digest-updatedd-2.4 64
+SHA256 9f104be44d6ac559644b53bbdb92cc9fba02bb17426e6cd36345752ab06557f2 files/digest-updatedd-2.4 64
+MD5 2237a694c82c507e3752c1a7de2a4f14 files/digest-updatedd-2.5 238
+RMD160 be23938fd1b486b71e2bc1a096cc332b23ab5b1e files/digest-updatedd-2.5 238
+SHA256 a89c2d61c62e2690c22e2a0e24cafa6d32833cceb54bfec20cd9c0c8d44c9484 files/digest-updatedd-2.5 238
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFCh0wUmdTrptrqvGERAtY7AJ4+bko/hI6xDd1zgebeGxV81wMLTwCeK6Go
-hn3E0GoOVDZvzi46ZkqOT5k=
-=RIrF
+iD8DBQFFZX4UNQqtfCuFneMRAsmhAJ9MAwem2AfPnBUcY/euZXnVfiX1NwCggeeK
+RXgQfXVbAKr/Twea5kq81p8=
+=gCf1
 -----END PGP SIGNATURE-----

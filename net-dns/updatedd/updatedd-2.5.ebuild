@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/updatedd/updatedd-2.5.ebuild,v 1.1 2005/05/15 13:17:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/updatedd/updatedd-2.5.ebuild,v 1.2 2006/11/23 10:55:11 opfer Exp $
 
 DESCRIPTION="Dynamic DNS client with plugins for several dynamic dns services"
 HOMEPAGE="http://updatedd.philipp-benner.de/"
@@ -8,7 +8,7 @@ SRC_URI="http://savannah.nongnu.org/download/updatedd/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="virtual/libc"
