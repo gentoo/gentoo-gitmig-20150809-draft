@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/kexi-1.5.1.ebuild,v 1.5 2006/09/07 14:11:11 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/kexi-1.5.1.ebuild,v 1.6 2006/11/23 19:30:37 vivo Exp $
 
 MAXKOFFICEVER=${PV}
 KMNAME=koffice
@@ -16,7 +16,7 @@ IUSE="mysql postgres"
 
 RDEPEND="$(deprange $PV $MAXKOFFICEVER app-office/koffice-libs)
 	sys-libs/readline
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	postgres? ( dev-libs/libpqxx )
 	dev-lang/python"
 

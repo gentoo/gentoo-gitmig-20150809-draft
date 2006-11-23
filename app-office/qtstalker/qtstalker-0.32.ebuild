@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qtstalker/qtstalker-0.32.ebuild,v 1.1 2006/09/28 21:29:29 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qtstalker/qtstalker-0.32.ebuild,v 1.2 2006/11/23 19:35:58 vivo Exp $
 
 inherit qt3 eutils
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~x86"
 
 DEPEND="$(qt_min_version 3.3)
-	mysql? ( dev-db/mysql )"
+	mysql? ( virtual/mysql )"
 
 S="${WORKDIR}/${PN}"
 

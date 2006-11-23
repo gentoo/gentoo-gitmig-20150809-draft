@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.5.1-r1.ebuild,v 1.7 2006/08/17 19:36:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.5.1-r1.ebuild,v 1.8 2006/11/23 19:34:31 vivo Exp $
 
 inherit kde
 
@@ -26,7 +26,7 @@ RDEPEND=">=media-gfx/imagemagick-5.5.2
 	dev-libs/libxml2
 	dev-libs/libxslt
 	sys-libs/readline
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	postgres? ( dev-libs/libpqxx )
 	virtual/python
 	dev-lang/ruby

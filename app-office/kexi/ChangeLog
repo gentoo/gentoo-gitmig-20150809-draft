@@ -1,6 +1,11 @@
 # ChangeLog for app-office/kexi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.60 2006/10/24 15:20:57 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.61 2006/11/23 19:30:37 vivo Exp $
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> kexi-1.4.2.ebuild,
+  kexi-1.4.2-r1.ebuild, kexi-1.5.1.ebuild, kexi-1.5.2.ebuild,
+  kexi-1.6.0.ebuild:
+  dev-db/mysql => virtual/mysql
 
   24 Oct 2006; Simon Stelling <blubb@gentoo.org> kexi-1.5.2.ebuild:
   stable on amd64
