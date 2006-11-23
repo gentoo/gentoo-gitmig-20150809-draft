@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/hdf-4.2.0-r4.ebuild,v 1.3 2006/11/01 22:24:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/hdf-4.2.0-r4.ebuild,v 1.4 2006/11/23 20:44:38 dertobi123 Exp $
 
 inherit autotools flag-o-matic fortran
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.ncsa.uiuc.edu/HDF/pub/outgoing/hdf4/hdf${MY_PV}/hdf${MY_PV}.t
 HOMEPAGE="http://hdf.ncsa.uiuc.edu/hdf4.html"
 
 LICENSE="NCSA-HDF"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 SLOT="0"
 IUSE="szip"
 
