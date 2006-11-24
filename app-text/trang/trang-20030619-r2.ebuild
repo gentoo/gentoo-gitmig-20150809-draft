@@ -1,24 +1,23 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/trang/trang-20030619-r1.ebuild,v 1.7 2006/11/24 18:56:29 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/trang/trang-20030619-r2.ebuild,v 1.1 2006/11/24 18:56:30 opfer Exp $
 
-inherit java-pkg
+inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="Trang: Multi-format schema converter based on RELAX NG"
 HOMEPAGE="http://thaiopensource.com/relaxng/trang.html"
-SRC_URI="http://www.thaiopensource.com/download/trang-${PV}.zip"
+SRC_URI="http://www.thaiopensource.com/download/${P}.zip"
 LICENSE="BSD Apache-1.1"
 SLOT="0"
-KEYWORDS="x86 amd64"
-IUSE="jikes"
+KEYWORDS="~x86 ~amd64"
+IUSE=""
 RDEPEND=">=virtual/jre-1.4
 	=dev-java/xerces-1.3*
 	=dev-java/xerces-2*"
 
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}
-	app-arch/unzip
-	jikes? ( dev-java/jikes )"
+	app-arch/unzip"
 
 src_unpack() {
 	unpack ${A}
@@ -29,25 +28,18 @@ src_unpack() {
 	cp ${FILESDIR}/build.xml src
 
 	cd src/lib
-	rm *.jar
 	java-pkg_jar-from xerces-1.3 xerces.jar
 	java-pkg_jar-from xerces-2 xercesImpl.jar xerces.jar
 }
 
 src_compile() {
 	cd ${S}/src
-	antflags="jar"
-	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
-	ant ${antflags} || die "failed to build"
+
+	eant jar
 }
 
 src_install() {
-	cd ${S}
 	java-pkg_dojar jar/trang.jar
-	cat >trang <<'EOF'
-#!/bin/sh
-exec `java-config --java` -jar `java-config -p trang` "$@"
-EOF
-	dobin trang
+	java-pkg_dolauncher trang --jar ${PN}.jar
 	java-pkg_dohtml *.html
 }
