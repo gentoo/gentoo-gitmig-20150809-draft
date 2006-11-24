@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PPI
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPI/ChangeLog,v 1.13 2006/10/14 00:59:02 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPI/ChangeLog,v 1.14 2006/11/24 18:14:45 mcummings Exp $
+
+  24 Nov 2006; Michael Cummings <mcummings@gentoo.org> PPI-1.118.ebuild:
+  amd64 stable
 
   14 Oct 2006; Michael Cummings <mcummings@gentoo.org> -PPI-1.110.ebuild,
   -PPI-1.112.ebuild, -PPI-1.115.ebuild, PPI-1.117.ebuild:

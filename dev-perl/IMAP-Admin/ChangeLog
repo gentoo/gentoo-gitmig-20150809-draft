@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IMAP-Admin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IMAP-Admin/ChangeLog,v 1.1 2006/09/30 11:08:52 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IMAP-Admin/ChangeLog,v 1.2 2006/11/24 17:55:50 mcummings Exp $
+
+  24 Nov 2006; Michael Cummings <mcummings@gentoo.org>
+  IMAP-Admin-1.6.4.ebuild:
+  amd64 stable
 
 *IMAP-Admin-1.6.4 (30 Sep 2006)
 

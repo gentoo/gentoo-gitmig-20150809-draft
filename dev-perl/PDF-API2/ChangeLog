@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PDF-API2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDF-API2/ChangeLog,v 1.4 2006/10/24 05:46:27 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDF-API2/ChangeLog,v 1.5 2006/11/24 18:10:25 mcummings Exp $
+
+  24 Nov 2006; Michael Cummings <mcummings@gentoo.org> PDF-API2-0.55.ebuild:
+  amd64 stable
 
   24 Oct 2006; Joshua Jackson <tsunam@gentoo.org> PDF-API2-0.55.ebuild:
   ADDED ~x86; bug #152023

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Deep
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Deep/ChangeLog,v 1.8 2006/10/15 12:59:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Deep/ChangeLog,v 1.9 2006/11/24 18:26:59 mcummings Exp $
+
+  24 Nov 2006; Michael Cummings <mcummings@gentoo.org>
+  Test-Deep-0.096.ebuild:
+  amd64 stable
 
   15 Oct 2006; Aron Griffis <agriffis@gentoo.org> Test-Deep-0.096.ebuild:
   Mark 0.096 ~ia64. #139107
