@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX monsterz-0.7.0-gentoo.patch 1366 RMD160 52fbfef6b10adf93fa2b8a3c21caf957157476e5 SHA1 4269d6dae640d99b3592d2b6111a2a0c3015f7ea SHA256 f2eac0cbba236af6acd36b673e47e014e6f589b7840ae0d12b42391eb6036456
 MD5 37ff3ef4f2958095feaffc4751066fe8 files/monsterz-0.7.0-gentoo.patch 1366
 RMD160 52fbfef6b10adf93fa2b8a3c21caf957157476e5 files/monsterz-0.7.0-gentoo.patch 1366
@@ -18,3 +21,10 @@ SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata
 MD5 a8231df344790c63796fd81bba35b6ef files/digest-monsterz-0.7.0 247
 RMD160 aa270043edf476a218a88bba115fab2dd2e6b17e files/digest-monsterz-0.7.0 247
 SHA256 94c7352bc8afa2ffbaa2182f7ce353f5bb50982f4c80b1d8c5540e985dfcfd3a files/digest-monsterz-0.7.0 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFZwvQdz7hIScOURERAtNHAJ9heSNRUMJoxDa3bJ7c9Y9Cug/G+gCfejCP
+8Ky+J4sG5LmWJ3th0y9RJPg=
+=SrBk
+-----END PGP SIGNATURE-----
