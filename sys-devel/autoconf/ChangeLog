@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.87 2006/11/17 20:17:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.88 2006/11/24 16:26:29 corsair Exp $
+
+  24 Nov 2006; Markus Rothe <corsair@gentoo.org> autoconf-2.60.ebuild:
+  Stable on ppc64; bug #144467
 
 *autoconf-2.61 (17 Nov 2006)
 
