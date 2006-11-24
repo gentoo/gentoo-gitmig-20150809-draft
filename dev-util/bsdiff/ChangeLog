@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/bsdiff
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/ChangeLog,v 1.18 2006/11/21 15:40:47 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/ChangeLog,v 1.19 2006/11/24 15:23:21 drizzt Exp $
+
+  24 Nov 2006; Timothy Redaelli <drizzt@gentoo.org> bsdiff-4.3-r1.ebuild:
+  Oops, i forgot to remove debugging echos.
+  Thanks to David Morgan wrt BUG #156136.
+  Fixed RDEPEND, thanks to jakub.
 
 *bsdiff-4.3-r1 (21 Nov 2006)
 
