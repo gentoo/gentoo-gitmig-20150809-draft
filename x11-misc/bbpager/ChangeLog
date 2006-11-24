@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbpager
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbpager/ChangeLog,v 1.21 2006/11/24 16:18:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbpager/ChangeLog,v 1.22 2006/11/24 23:41:23 omp Exp $
+
+  24 Nov 2006; David Shakaryan <omp@gentoo.org> -bbpager-0.3.1.ebuild:
+  Remove old version due to incompatibility with blackbox in portage.
 
   24 Nov 2006; Markus Rothe <corsair@gentoo.org> bbpager-0.4.1_beta1.ebuild:
   Stable on ppc64; bug #140244
