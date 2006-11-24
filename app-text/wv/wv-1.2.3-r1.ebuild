@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-1.2.3-r1.ebuild,v 1.7 2006/11/22 17:27:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-1.2.3-r1.ebuild,v 1.8 2006/11/24 18:18:56 kloeri Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/wvware/${P}.tar.gz"
 HOMEPAGE="http://wvware.sourceforge.net/"
 
 IUSE="wmf"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 SLOT="0"
 LICENSE="GPL-2"
 
