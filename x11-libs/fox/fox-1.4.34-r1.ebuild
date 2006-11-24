@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.4.34-r1.ebuild,v 1.6 2006/11/12 02:03:38 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.4.34-r1.ebuild,v 1.7 2006/11/24 16:36:34 corsair Exp $
 
 inherit eutils fox
 
 LICENSE="LGPL-2.1"
 SLOT="1.4"
-KEYWORDS="~alpha amd64 hppa ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ppc ppc64 ~sparc x86"
 IUSE="bzip2 cups jpeg opengl png threads tiff truetype zlib"
 
 RDEPEND="x11-libs/libXrandr
