@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IPC-Run3
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run3/ChangeLog,v 1.15 2006/11/24 18:00:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run3/ChangeLog,v 1.16 2006/11/24 18:01:03 mcummings Exp $
+
+  24 Nov 2006; Michael Cummings <mcummings@gentoo.org>
+  IPC-Run3-0.036.ebuild:
+  sparc stable
 
   24 Nov 2006; Michael Cummings <mcummings@gentoo.org>
   IPC-Run3-0.036.ebuild:

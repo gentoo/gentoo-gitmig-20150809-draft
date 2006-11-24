@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.55.ebuild,v 1.13 2006/08/05 20:16:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.55.ebuild,v 1.14 2006/11/24 18:23:17 mcummings Exp $
 
 IUSE=""
 
@@ -20,7 +20,6 @@ DEPEND="dev-perl/XML-Parser
 	dev-perl/MIME-Lite
 	dev-perl/MIME-tools
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	(echo yes) | perl-module_src_compile || perl-module_src_compile || die "compile failed"

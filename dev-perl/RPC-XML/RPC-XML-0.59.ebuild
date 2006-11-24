@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/RPC-XML-0.59.ebuild,v 1.3 2006/11/24 18:17:35 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/RPC-XML-0.59.ebuild,v 1.4 2006/11/24 18:19:12 mcummings Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~rjray/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc sparc ~x86 ~x86-fbsd"
 IUSE="modperl apache2"
 
 #SRC_TEST="do"
@@ -21,7 +21,6 @@ DEPEND=">=dev-perl/libwww-perl-5.801
 	dev-perl/net-server
 	modperl? ( !apache2? ( <www-apache/mod_perl-1.99 ) )
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 pkg_postinst() {
 	perl-module_pkg_postinst

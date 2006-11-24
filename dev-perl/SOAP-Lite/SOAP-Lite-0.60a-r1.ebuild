@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.60a-r1.ebuild,v 1.15 2006/08/05 20:16:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.60a-r1.ebuild,v 1.16 2006/11/24 18:23:17 mcummings Exp $
 
 IUSE="jabber ssl"
 
@@ -38,7 +38,6 @@ DEPEND="dev-perl/XML-Parser
 	dev-perl/Compress-Zlib
 	>=dev-perl/MIME-tools-5.413
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
