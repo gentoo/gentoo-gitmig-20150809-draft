@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Calendar-Simple
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Calendar-Simple/ChangeLog,v 1.9 2006/10/25 14:53:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Calendar-Simple/ChangeLog,v 1.10 2006/11/24 15:35:45 mcummings Exp $
+
+  24 Nov 2006; Michael Cummings <mcummings@gentoo.org>
+  Calendar-Simple-1.17.ebuild:
+  Marking amd64 stable
 
   25 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   Calendar-Simple-1.14.ebuild:

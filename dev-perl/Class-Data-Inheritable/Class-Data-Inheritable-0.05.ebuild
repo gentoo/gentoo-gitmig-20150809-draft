@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Data-Inheritable/Class-Data-Inheritable-0.05.ebuild,v 1.6 2006/10/21 11:02:47 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Data-Inheritable/Class-Data-Inheritable-0.05.ebuild,v 1.7 2006/11/24 15:40:29 mcummings Exp $
 
 inherit perl-module
 
@@ -15,4 +15,3 @@ IUSE=""
 
 export OPTIMIZE="${CFLAGS}"
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"

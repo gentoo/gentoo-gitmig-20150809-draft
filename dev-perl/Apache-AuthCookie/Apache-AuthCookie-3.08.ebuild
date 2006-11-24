@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-AuthCookie/Apache-AuthCookie-3.08.ebuild,v 1.9 2006/10/22 20:02:44 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-AuthCookie/Apache-AuthCookie-3.08.ebuild,v 1.10 2006/11/24 15:33:38 mcummings Exp $
 
 inherit perl-module
 
@@ -15,4 +15,3 @@ IUSE=""
 
 DEPEND=">=www-apache/mod_perl-2
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
