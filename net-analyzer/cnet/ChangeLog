@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/cnet
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/ChangeLog,v 1.10 2006/04/21 01:00:59 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/ChangeLog,v 1.11 2006/11/24 22:38:17 cedk Exp $
+
+  24 Nov 2006; Cedric Krier <cedk@gentoo.org>
+  +files/cnet-2.0.9-parser.patch, cnet-2.0.9.ebuild:
+  patch for bug #153245
 
 *cnet-2.0.10 (21 Apr 2006)
 

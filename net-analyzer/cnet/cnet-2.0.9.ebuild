@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/cnet-2.0.9.ebuild,v 1.2 2005/01/31 13:55:30 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/cnet-2.0.9.ebuild,v 1.3 2006/11/24 22:38:17 cedk Exp $
 
 inherit eutils
 
@@ -26,6 +26,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-gentoo.patch
 	sed -i.orig -e "s/^CFLAGS.*/CFLAGS=${CFLAGS}/" ${S}/src/Makefile.linux
+	epatch "${FILESDIR}/${P}-parser.patch"
 }
 
 src_install() {
