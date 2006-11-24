@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/gaim-encryption
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-encryption/ChangeLog,v 1.85 2006/11/24 03:08:15 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-encryption/ChangeLog,v 1.86 2006/11/24 03:11:09 tester Exp $
+
+  24 Nov 2006; Olivier Crête <tester@gentoo.org>
+  -files/gaim-encryption-3.0beta4-configure.patch,
+  -files/gaim-encryption-3.0beta4-encrypt.patch,
+  -files/encryption_icon_fix.diff, -gaim-encryption-3.0_beta5.ebuild,
+  -gaim-encryption-3.0_beta6-r1.ebuild:
+  Remove stale files
 
   24 Nov 2006; Olivier Crête <tester@gentoo.org>
   gaim-encryption-3.0_beta5.ebuild, gaim-encryption-3.0_beta6-r1.ebuild,
