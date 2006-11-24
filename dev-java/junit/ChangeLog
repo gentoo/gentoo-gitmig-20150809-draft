@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/junit
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.31 2006/11/23 20:20:46 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.32 2006/11/24 21:45:43 corsair Exp $
+
+  24 Nov 2006; Markus Rothe <corsair@gentoo.org> junit-3.8.1-r3.ebuild:
+  Stable on ppc64; bug #155261
 
   23 Nov 2006; <blubb@gentoo.org> junit-3.8.1-r3.ebuild:
   stable on amd64
