@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-UUID/Data-UUID-0.11.ebuild,v 1.11 2006/10/11 19:45:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-UUID/Data-UUID-0.11.ebuild,v 1.12 2006/11/24 17:06:18 mcummings Exp $
 
 inherit perl-module
 
@@ -16,4 +16,3 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"

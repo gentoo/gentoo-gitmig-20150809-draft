@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DBD-mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.62 2006/11/23 15:46:27 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.63 2006/11/24 17:11:35 mcummings Exp $
+
+  24 Nov 2006; Michael Cummings <mcummings@gentoo.org>
+  DBD-mysql-3.0007.ebuild:
+  amd64 stable
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> DBD-mysql-2.9007.ebuild,
   DBD-mysql-3.0004.ebuild, DBD-mysql-3.0006.ebuild, DBD-mysql-3.0007.ebuild,

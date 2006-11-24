@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DCOP-Amarok
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DCOP-Amarok/ChangeLog,v 1.1 2006/10/24 00:34:54 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DCOP-Amarok/ChangeLog,v 1.2 2006/11/24 17:16:38 mcummings Exp $
+
+  24 Nov 2006; Michael Cummings <mcummings@gentoo.org>
+  DCOP-Amarok-0.035.ebuild:
+  amd64 stable
 
 *DCOP-Amarok-0.035 (24 Oct 2006)
 
