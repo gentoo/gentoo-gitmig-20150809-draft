@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.5.11.ebuild,v 1.1 2006/10/24 19:33:26 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.5.11.ebuild,v 1.2 2006/11/24 15:13:07 alonbl Exp $
 
-inherit eutils
+inherit eutils multilib
 
 MY_PN="Botan"
 MY_P="${MY_PN}-${PV}"
@@ -72,7 +72,10 @@ src_compile() {
 	einfo "Enabling modules: " ${modules}
 
 	# FIXME: We might actually be on *BSD or OS X...
-	./configure.pl --noauto gcc-linux-${CHOSTARCH} --modules=$modules ||
+	./configure.pl \
+		--noauto gcc-linux-${CHOSTARCH} \
+		--libdir=/usr/$(get_libdir) \
+		--modules=$modules ||
 			die "configure.pl failed"
 	emake "LIB_OPT=${CXXFLAGS}" "MACH_OPT=" || die "emake failed"
 }
