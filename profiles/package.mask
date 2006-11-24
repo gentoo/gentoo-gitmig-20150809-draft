@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6339 2006/11/24 16:06:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6340 2006/11/24 22:47:45 masterdriverz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1039,7 +1039,8 @@ app-admin/eselect-compiler
 # Ioannis Aslanidis <deathwing00@gentoo.org> (11 Aug 2006)
 # k3b pre-release versions. Apart from being pre-release,
 # i18n support and encoders/decoders are missing.
->=app-cdr/k3b-1.0_pre1
+=app-cdr/k3b-1.0_pre*
+=app-cdr/k3b-1.0_beta*
 
 # Tuấn Văn <langthang@gentoo.org> (10 Aug 2006)
 # Security mask
