@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/resin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.29 2006/11/24 21:23:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.30 2006/11/24 21:52:37 nelchael Exp $
+
+  24 Nov 2006; Krzysiek Pawlik <nelchael@gentoo.org> -files/3.0.8/21resin,
+  -files/3.0.8/resin.conf, -files/3.0.8/resin.init,
+  -files/3.0.8/wrapper.pl.diff, -resin-3.0.8-r1.ebuild:
+  Remove old version.
 
   24 Nov 2006; Markus Rothe <corsair@gentoo.org> resin-3.0.21.ebuild:
   Stable on ppc64; bug #154682
