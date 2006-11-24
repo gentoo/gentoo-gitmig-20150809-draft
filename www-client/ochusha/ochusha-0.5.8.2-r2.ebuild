@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/ochusha/ochusha-0.5.8.2-r2.ebuild,v 1.1 2006/10/29 19:41:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/ochusha/ochusha-0.5.8.2-r2.ebuild,v 1.2 2006/11/24 22:33:02 usata Exp $
 
 inherit flag-o-matic eutils
 
@@ -18,7 +18,6 @@ RDEPEND="virtual/xft
 	>=x11-libs/gtk+-2.2.4
 	>=dev-libs/glib-2.2.3
 	>=dev-libs/libxml2-2.5.0
-	>=gnome-base/libghttp-1.0.9
 	sys-libs/zlib
 	nls? ( virtual/libintl )
 	ssl? ( dev-libs/openssl )"
