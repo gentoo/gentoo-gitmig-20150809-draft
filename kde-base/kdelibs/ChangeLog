@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.394 2006/11/24 18:57:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.395 2006/11/24 21:57:28 corsair Exp $
+
+  24 Nov 2006; Markus Rothe <corsair@gentoo.org> kdelibs-3.5.5-r6.ebuild,
+  kdelibs-3.5.5-r7.ebuild:
+  Added ~ppc64; bug #155505
 
   24 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   kdelibs-3.5.5-r7.ebuild:
