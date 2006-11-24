@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/monsterz/monsterz-0.7.0.ebuild,v 1.1 2006/05/12 23:11:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/monsterz/monsterz-0.7.0.ebuild,v 1.2 2006/11/24 18:46:22 nyhm Exp $
 
 inherit eutils games
 
@@ -35,7 +35,9 @@ src_install() {
 	local dir=${GAMES_DATADIR}/${PN}
 	insinto "${dir}"
 	doins -r graphics sound || die "doins failed"
-	newgamesbin monsterz.py ${PN} || die "dobin failed"
+	newgamesbin monsterz.py ${PN} || die "newgamesbin failed"
+	newicon graphics/icon.png ${PN}.png
+	make_desktop_entry ${PN} Monsterz
 	dodoc README AUTHORS TODO
 	prepgamesdirs
 }
