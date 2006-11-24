@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5-r7.ebuild,v 1.1 2006/11/24 15:10:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5-r7.ebuild,v 1.2 2006/11/24 18:57:36 flameeyes Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -100,7 +100,7 @@ src_unpack() {
 
 	# xinerama patch from Lubos Lunak
 	# http://ktown.kde.org/~seli/xinerama/
-	epatch "${DISTDIR}/${P}-seli-xinerama.patch"
+	epatch "${DISTDIR}/${P}-seli-xinerama.patch.bz2"
 }
 
 src_compile() {
