@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/pam_userdb-0.99.6.3.ebuild,v 1.8 2006/11/12 05:16:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/pam_userdb-0.99.6.3.ebuild,v 1.9 2006/11/24 20:30:48 corsair Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -22,7 +22,7 @@ SRC_URI="http://www.kernel.org/pub/linux/libs/pam/pre/library/${MY_P}.tar.bz2
 
 LICENSE="PAM"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ia64 ~m68k ~ppc ~s390 ~sh ~x86"
+KEYWORDS="~amd64 ~arm ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~x86"
 IUSE="nls elibc_FreeBSD"
 
 RDEPEND="nls? ( virtual/libintl )
