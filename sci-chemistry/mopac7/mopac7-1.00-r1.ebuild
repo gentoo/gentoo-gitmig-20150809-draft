@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.00-r1.ebuild,v 1.2 2005/08/06 09:09:24 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.00-r1.ebuild,v 1.3 2006/11/24 21:41:10 beandog Exp $
 
 inherit flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://sourceforge.net/projects/mopac7/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 LICENSE="mopac7"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 DEPEND="dev-libs/libf2c
 	sys-devel/autoconf

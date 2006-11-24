@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/mopac7
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/ChangeLog,v 1.11 2006/09/20 05:09:00 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/ChangeLog,v 1.12 2006/11/24 21:41:10 beandog Exp $
+
+  24 Nov 2006; Steve Dibb <beandog@gentoo.org> mopac7-1.00-r1.ebuild,
+  mopac7-1.10.ebuild, mopac7-1.10-r1.ebuild:
+  Add ~amd64, bug 133268
 
   20 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   (#148281) Change herd to sci-chemistry from sci.
