@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.37 2006/11/19 01:46:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.38 2006/11/24 12:51:44 flameeyes Exp $
+
+  24 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  files/freebsd-ubin-setXid.patch:
+  Fix setXid patch, thanks to yngwin on freenode for reporting.
 
 *freebsd-ubin-6.2_rc1 (19 Nov 2006)
 

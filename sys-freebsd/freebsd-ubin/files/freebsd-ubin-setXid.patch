@@ -98,27 +98,6 @@ diff -ur usr.bin.orig/passwd/Makefile usr.bin.setXid/passwd/Makefile
  beforeinstall:
  .for i in passwd yppasswd
  	[ ! -e ${DESTDIR}${BINDIR}/$i ] || \
-diff -ur usr.bin.orig/rlogin/Makefile usr.bin.setXid/rlogin/Makefile
---- usr.bin.orig/rlogin/Makefile	Thu Apr  7 20:52:58 2005
-+++ usr.bin.setXid/rlogin/Makefile	Thu Apr  7 21:25:46 2005
-@@ -8,4 +8,6 @@
- BINMODE=4555
- INSTALLFLAGS=-fschg
- 
-+LDFLAGS+=-Wl,-z,now
-+
- .include <bsd.prog.mk>
-diff -ur usr.bin.orig/rsh/Makefile usr.bin.setXid/rsh/Makefile
---- usr.bin.orig/rsh/Makefile	Thu Apr  7 20:52:58 2005
-+++ usr.bin.setXid/rsh/Makefile	Thu Apr  7 21:25:53 2005
-@@ -9,4 +9,6 @@
- BINMODE=4555
- INSTALLFLAGS=-fschg
- 
-+LDFLAGS+=-Wl,-z,now
-+
- .include <bsd.prog.mk>
-diff -ur usr.bin.orig/su/Makefile usr.bin.setXid/su/Makefile
 --- usr.bin.orig/su/Makefile	Thu Apr  7 20:52:58 2005
 +++ usr.bin.setXid/su/Makefile	Thu Apr  7 21:26:00 2005
 @@ -10,4 +10,6 @@
