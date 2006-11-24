@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/mailcrypt
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mailcrypt/ChangeLog,v 1.10 2005/01/01 13:53:04 eradicator Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mailcrypt/ChangeLog,v 1.11 2006/11/24 09:45:33 opfer Exp $
+
+*mailcrypt-3.5.8-r1 (24 Nov 2006)
+
+  24 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  +mailcrypt-3.5.8-r1.ebuild:
+  added test USE flag to pull in dev-python/py-gnupg and modified src_test().
+  Reverted amd64 to ~amd64 as they don't have dev-python/py-gnupg in stable,
+  all other arches stay
 
   31 Oct 2004; Jason Wever <weeve@gentoo.org> mailcrypt-3.5.8.ebuild:
   Stable on sparc.
