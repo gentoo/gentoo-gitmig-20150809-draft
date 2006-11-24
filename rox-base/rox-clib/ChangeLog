@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/rox-clib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/ChangeLog,v 1.14 2006/11/23 21:24:43 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/ChangeLog,v 1.15 2006/11/24 17:04:12 lack Exp $
+
+  24 Nov 2006; Jim Ramsay <lack@gentoo.org> -rox-clib-2.1.5.ebuild,
+  -rox-clib-2.1.7.ebuild:
+  Old version cleanup
 
   23 Nov 2006; <blubb@gentoo.org> rox-clib-2.1.8.ebuild:
   added ~amd64 as of bug 155984
