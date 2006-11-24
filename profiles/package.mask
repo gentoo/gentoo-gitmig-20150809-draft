@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6336 2006/11/23 20:45:39 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6337 2006/11/24 03:03:36 tester Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -45,11 +45,6 @@ net-nds/migrationtools
 # Aron Griffis <agriffis@gentoo.org>
 # Masked for testing new enablement via eselect
 >app-shells/bash-completion-20060301
-
-# Patrick McLean <chutzpah@gentoo.org>
-# Masked pending resolution of bugs 155794, 155792, 155698 and 155552
-=app-emulation/emul-linux-x86-baselibs-2.5.3
-=app-emulation/emul-linux-x86-gtklibs-2.10.6.2
 
 # Michael Cummings <mcummings@gentoo.org>
 # Masked for removal
