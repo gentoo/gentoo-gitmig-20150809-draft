@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses/Curses-1.14.ebuild,v 1.8 2006/10/20 18:59:54 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses/Curses-1.14.ebuild,v 1.9 2006/11/24 17:03:27 mcummings Exp $
 
 inherit perl-module eutils
 
 DESCRIPTION="Curses interface modules for Perl"
-HOMEPAGE="http://search.cpan.org/~giraffed/${P}/"
+HOMEPAGE="http://search.cpan.org/~giraffed/"
 SRC_URI="mirror://cpan/authors/id/G/GI/GIRAFFED/${P}.tgz"
 
 LICENSE="Artistic"
@@ -15,7 +15,6 @@ IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 SRC_TEST="do"
 
