@@ -1,6 +1,11 @@
 # ChangeLog for rox-base/rox-clib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/ChangeLog,v 1.15 2006/11/24 17:04:12 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/ChangeLog,v 1.16 2006/11/24 17:25:25 lack Exp $
+
+*rox-clib-2.1.9 (24 Nov 2006)
+
+  24 Nov 2006; Jim Ramsay <lack@gentoo.org> +rox-clib-2.1.9.ebuild:
+  New version released - 2.1.9
 
   24 Nov 2006; Jim Ramsay <lack@gentoo.org> -rox-clib-2.1.5.ebuild,
   -rox-clib-2.1.7.ebuild:
