@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/gaia-0.1.0.ebuild,v 1.5 2006/11/24 09:18:14 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/gaia-0.1.0.ebuild,v 1.6 2006/11/24 11:05:07 opfer Exp $
+
+inherit eutils
 
 DESCRIPTION="opensource 3D interface to the planet, based on Google Earth data"
 HOMEPAGE="http://gaia.serezhkin.com/"
@@ -29,6 +31,7 @@ src_unpack() {
 	cd ${S}
 	sed -i "s/\.\/data/\/usr\/share\/gaia/" src/config.h
 	sed -i "/libgefetch_examples/a\SConsignFile()" SConstruct
+	epatch "${FILESDIR}"/${PN}-respect_CFLAGS.patch
 }
 
 src_compile() {
