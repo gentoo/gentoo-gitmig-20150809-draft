@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.4.11.ebuild,v 1.12 2006/10/20 21:04:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.4.11.ebuild,v 1.13 2006/11/24 15:50:27 chtekk Exp $
 
 inherit depend.php
 
@@ -9,7 +9,7 @@ CONSOLE_GETOPT="1.2"
 PEAR="1.4.11"
 XML_RPC="1.5.0"
 
-[ -z "${PEAR_CACHEDIR}" ] && PEAR_CACHEDIR="/var/cache/pear"
+[[ -z "${PEAR_CACHEDIR}" ]] && PEAR_CACHEDIR="/var/cache/pear"
 
 DESCRIPTION="PEAR Base System (PEAR, Archive_Tar, Console_Getopt, XML_RPC)."
 HOMEPAGE="http://pear.php.net/"
@@ -119,7 +119,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	if has_version "<${PV}" ; then
+	if has_version "<dev-php/PEAR-PEAR-1.3.6-r2" ; then
 		ewarn "The location of the local PEAR repository has been changed"
 		ewarn "from /usr/lib/php to /usr/share/php."
 	fi
