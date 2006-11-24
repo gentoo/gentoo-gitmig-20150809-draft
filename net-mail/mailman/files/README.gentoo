@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/files/README.gentoo,v 1.9 2004/07/07 15:57:02 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/files/README.gentoo,v 1.10 2006/11/24 20:08:16 hanno Exp $
 
 Follow these instructions to finish setting up mailman. This file and the
 original ebuild were tweaked by me <lamer@gentoo.org> but were graciously
@@ -15,11 +15,8 @@ this you will need to modify the INSTALLDIR variable in the ebuild and the
 locations in the mailman.conf file.
 
 1) If this is your first time installing mailman, after your "emerge mailman",
-**and you are using apache 1.x**, you will need to run:
-
-ebuild /var/db/pkg/net-mail/mailman-$VERSION/mailman-$VERSION.ebuild config
-
-This will add an Include in your apache.conf to mailman.conf
+you need to add -D MAILMAN to /etc/conf.d/apache or /etc/conf.d/apache2 and restart
+apache.
 
 2) In your /etc/conf.d/apache (for apache 1.x)
 	or /etc/conf.d/apache2 (for apache 2.x) 
@@ -63,7 +60,10 @@ Add this to /etc/mail/aliases (and see point 9 for notes):
      mailman-request:      "|/usr/local/mailman/mail/mailman request mailman"
      mailman-subscribe:    "|/usr/local/mailman/mail/mailman subscribe mailman"
      mailman-unsubscribe:  "|/usr/local/mailman/mail/mailman unsubscribe mailman"
-  
+
+For courier, the aliases have to go to /etc/courier/aliases and you have to skip
+the quotes.
+
 Run newaliases (only if you use sendmail).
 
 	newaliases
@@ -93,6 +93,9 @@ replace <list-name> with the name of the list:
 	<list-name>-request: "|/usr/local/mailman/mail/mailman request <list-name>"
      	<list-name>-subscribe: "|/usr/local/mailman/mail/mailman subscribe <list-name>"
 	<list-name>-unsubscribe: "|/usr/local/mailman/mail/mailman unsubscribe <list-name>"
+
+For courier, the aliases have to go to /etc/courier/aliases and you have to skip
+the quotes.
 
 Run newaliases:
 
@@ -129,3 +132,16 @@ run "bin/check_perms -f" from the root mailman directory
 (/usr/local/mailman) to check and fix permission problems.
 
 The INSTALL file is located in /usr/share/doc/mailman-$VERSION/ 
+
+Postfix notes
+-------------
+If you're using Postfix, don't manually change your /etc/mail/aliases
+file, as described above. Instead, follow these instructions:
+
+http://list.org/mailman-install/node13.html
+
+This will set up Mailman and Postfix to automatically generate the new
+aliases when you create new lists. It will also make sure that Postfix
+uses the correct group ID when it's talking to Mailman, otherwise you
+will get security errors from Mailman.
+
