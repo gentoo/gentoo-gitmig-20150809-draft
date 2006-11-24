@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xcb-proto
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.4 2006/11/24 09:39:07 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.5 2006/11/24 15:34:06 flameeyes Exp $
+
+  24 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> xcb-proto-1.0.ebuild:
+  Add ~x86-fbsd keyword.
 
 *xcb-proto-1.0 (24 Nov 2006)
 
