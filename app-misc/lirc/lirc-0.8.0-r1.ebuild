@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r1.ebuild,v 1.12 2006/10/05 12:02:09 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r1.ebuild,v 1.13 2006/11/24 23:58:10 zzam Exp $
 
-WANT_AUTOMAKE=1.5
-WANT_AUTOCONF=2.5
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
 inherit eutils linux-mod flag-o-matic autotools
 
 DESCRIPTION="LIRC is a package that allows you to decode and send infra-red \
