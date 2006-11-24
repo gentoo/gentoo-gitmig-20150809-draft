@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/pax-utils.eclass,v 1.2 2006/11/15 22:14:25 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/pax-utils.eclass,v 1.3 2006/11/24 15:11:55 kevquinn Exp $
 
 # Author:
 #	Kevin F. Quinn <kevquinn@gentoo.org>
@@ -19,26 +19,49 @@ inherit eutils
 # If neither are installed, falls back to scanelf (which
 # is always present, but currently doesn't quite do all
 # that paxctl can do).
+_pax_list_files() {
+	local m cmd
+	m=$1 ; shift
+	for f in $*; do
+		${cmd} "  ${f}"
+	done
+}
 
 pax-mark() {
-	local flags fail=0
-	flags=$1
+	local f flags fail=0 failures=""
+	flags=${1//-}
 	shift
 	if [[ -x /sbin/chpax ]]; then
-		einfo "Legacy EI PaX marking $* with ${flags}"
-		/sbin/chpax -${flags} $* || fail=1
+		einfo "Legacy EI PaX marking -${flags}"
+		_pax_list_files echo $*
+		for f in $*; do
+			/sbin/chpax -${flags} ${f} && continue
+			fail=1
+			failures="${failures} ${f}"
+		done
 	fi
 	if [[ -x /sbin/paxctl ]]; then
-		einfo "PT PaX marking $* with ${flags}"
-		/sbin/paxctl -${flags} $* ||
-		/sbin/paxctl -c${flags} $* ||
-		/sbin/paxctl -C${flags} $* || fail=1
+		einfo "PT PaX marking -${flags}"
+		_pax_list_files echo $*
+		for f in $*; do
+			/sbin/paxctl -q${flags} ${f} && continue
+			/sbin/paxctl -qc${flags} ${f} && continue
+			/sbin/paxctl -qC${flags} ${f} && continue
+			fail=1
+			failures="${failures} ${f}"
+		done
 	elif [[ -x /usr/bin/scanelf ]]; then
-		einfo "Fallback PaX marking $* with ${flags}"
+		einfo "Fallback PaX marking -${flags}"
+		_pax_list_files echo $*
 		/usr/bin/scanelf -Xxz ${flags} $*
 	else
-		ewarn "Failed to set PaX markings ${flags} for files $*.  Executables may be killed by PaX kernels."
+		failures="$*"
 		fail=1
+	fi
+	if [[ ${fail} == 1 ]]; then
+		ewarn "Failed to set PaX markings -${flags} for:"
+		_pax_list_files ewarn ${failures}
+		ewarn "Executables may be killed by PaX kernels."
 	fi
 	return ${fail}
 }
