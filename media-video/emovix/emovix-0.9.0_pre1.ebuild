@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/emovix/emovix-0.9.0_pre1.ebuild,v 1.5 2005/09/10 15:41:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/emovix/emovix-0.9.0_pre1.ebuild,v 1.6 2006/11/24 22:41:07 corsair Exp $
 
 MY_P="${P/_/}"
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/movix/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE="win32codecs"
 DEPEND=">=dev-lang/perl-5.0
 	sys-apps/gawk"
