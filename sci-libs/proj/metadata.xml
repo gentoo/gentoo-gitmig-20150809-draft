@@ -3,8 +3,8 @@
 <pkgmetadata>
 <herd>sci-geosciences</herd>
 <maintainer>
-  <email>twp@gentoo.org</email>
-  <name>Tom Payne</name>
+  <email>djay@gentoo.org</email>
+  <name>Gerald Fenoy</name>
   <description>Primary Maintainer</description>
 </maintainer>
 <longdescription>Proj.4 cartograpic projection code for forward and inverse 
