@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libghemical
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libghemical/ChangeLog,v 1.11 2006/11/01 00:50:24 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libghemical/ChangeLog,v 1.12 2006/11/24 21:49:01 beandog Exp $
+
+  24 Nov 2006; Steve Dibb <beandog@gentoo.org> libghemical-2.00.ebuild:
+  ~amd64 keyword, bug 133244
 
   01 Nov 2006; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
   Update for my nick change spyderous -> dberkholz.
