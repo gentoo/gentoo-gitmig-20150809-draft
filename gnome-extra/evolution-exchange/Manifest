@@ -1,47 +1,38 @@
-AUX evolution-exchange-2.4.0-kerb.patch 576 RMD160 2f25a9f7c40862b380bc8faf4e14adf787f2df47 SHA1 f907a451f33fcfd2320f78576ec9efdce2e9b6f1 SHA256 e3f81df5b0e6065937fb75c82253f357c904a534403defd1848aabfd9214d4e0
-MD5 8e9cb8386aac62d3a0124200f562db09 files/evolution-exchange-2.4.0-kerb.patch 576
-RMD160 2f25a9f7c40862b380bc8faf4e14adf787f2df47 files/evolution-exchange-2.4.0-kerb.patch 576
-SHA256 e3f81df5b0e6065937fb75c82253f357c904a534403defd1848aabfd9214d4e0 files/evolution-exchange-2.4.0-kerb.patch 576
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX evolution-exchange-2.6.2-fix-loop.patch 1030 RMD160 9f822ac3e0dcf16ac7352b5e0b48b02e00eb2e18 SHA1 d0a2c08bf3f0415463ebf96d9d6ceb76bc395bbc SHA256 8569558d23737de244b2153f6330c1270a652060c89cbd3a94cb4f2e5e92d605
 MD5 ba3d4ac6da724c5c2115b0f506f1bb55 files/evolution-exchange-2.6.2-fix-loop.patch 1030
 RMD160 9f822ac3e0dcf16ac7352b5e0b48b02e00eb2e18 files/evolution-exchange-2.6.2-fix-loop.patch 1030
 SHA256 8569558d23737de244b2153f6330c1270a652060c89cbd3a94cb4f2e5e92d605 files/evolution-exchange-2.6.2-fix-loop.patch 1030
-DIST evolution-exchange-2.4.2.tar.bz2 1100845 RMD160 fe407079dd08ef572dd37cae9b4b9bcf11df7d6a SHA1 e94180aa541a807b37dad74847b67a8adfaf284d SHA256 beaa8e806e5babb2cd479446720ea492ed854db65036df678d7717c682cc332c
 DIST evolution-exchange-2.6.2.tar.bz2 977972 RMD160 c833a220a5eebf4c9adf00b69333aea15b6b4e2d SHA1 e93d2e0ad7aa4790d65fffd7fee0a0c89b9e8024 SHA256 78130edc5b7390c29883e405c1ae0a19bae656c46f1c20224220dee167c49d56
 DIST evolution-exchange-2.8.1.tar.bz2 1029601 RMD160 29bfeb3873e9a6924bab14f1175e459ea5ada782 SHA1 2e5a523ae7427686b387d1a24ea2da427515886c SHA256 f891a7a0c3aae94942a70f646ba3f6386d55e7234b67bae62b2f03a4c0df06e0
-EBUILD evolution-exchange-2.4.2.ebuild 1339 RMD160 3af0f1090fefce091d2698d4b96e529689e8e52f SHA1 8542fc9e6535f9d1b5ad84d84db09e7504170432 SHA256 fcba6b75ec873c499e3732e181c36b200a68a077c84fed11fe390e3d2b49f744
-MD5 0ac3c9713b1ad86e806428b64d0a8830 evolution-exchange-2.4.2.ebuild 1339
-RMD160 3af0f1090fefce091d2698d4b96e529689e8e52f evolution-exchange-2.4.2.ebuild 1339
-SHA256 fcba6b75ec873c499e3732e181c36b200a68a077c84fed11fe390e3d2b49f744 evolution-exchange-2.4.2.ebuild 1339
 EBUILD evolution-exchange-2.6.2-r1.ebuild 1421 RMD160 b7cb447a178e730508417e6fe9aba2acccfaa1ed SHA1 4ac2443b657d96ecfacd7f9d20128a4ddfe423d3 SHA256 98d0a9ac855830fb72a57a85ecd76e7ea6821a957a9e2a7ca112ce3cf6c57c45
 MD5 4170326ed05bffcd82373fe5e3477105 evolution-exchange-2.6.2-r1.ebuild 1421
 RMD160 b7cb447a178e730508417e6fe9aba2acccfaa1ed evolution-exchange-2.6.2-r1.ebuild 1421
 SHA256 98d0a9ac855830fb72a57a85ecd76e7ea6821a957a9e2a7ca112ce3cf6c57c45 evolution-exchange-2.6.2-r1.ebuild 1421
-EBUILD evolution-exchange-2.6.2.ebuild 1268 RMD160 062180c5f6e102188eaad0590917604d1edebbdf SHA1 0e1da28805d24792cd1a8815892af2d756012c94 SHA256 1590a9086fa1a4651a13924d1dee72d43d39ae0bae8d96b429fe0b0422fdf4b5
-MD5 02085dc84adc46dcf4b4911087aadeb6 evolution-exchange-2.6.2.ebuild 1268
-RMD160 062180c5f6e102188eaad0590917604d1edebbdf evolution-exchange-2.6.2.ebuild 1268
-SHA256 1590a9086fa1a4651a13924d1dee72d43d39ae0bae8d96b429fe0b0422fdf4b5 evolution-exchange-2.6.2.ebuild 1268
 EBUILD evolution-exchange-2.8.1.ebuild 1312 RMD160 51a0024737368bdb0add051faf7e853b5622aed5 SHA1 12d073cf70fe60fabf5f782ac25bc400b861454a SHA256 4103f768e18682af95c41342aa2436922ffaed5d5fbbdaadae7e3bf55391bbde
 MD5 d9bb66998cc24bedb9ec283fe6e98632 evolution-exchange-2.8.1.ebuild 1312
 RMD160 51a0024737368bdb0add051faf7e853b5622aed5 evolution-exchange-2.8.1.ebuild 1312
 SHA256 4103f768e18682af95c41342aa2436922ffaed5d5fbbdaadae7e3bf55391bbde evolution-exchange-2.8.1.ebuild 1312
-MISC ChangeLog 3799 RMD160 6d073d69652bb807bf6773e5c3b9d2cd38ccfbf3 SHA1 ed3f33a58aec5bafeeb7520d8b39c1ac53c12919 SHA256 7f77678bfe46bb92ebcc167846876ee33bf00d07bf8fac4e8c8b3c445ecc6d2f
-MD5 fcd209af727122010d865f380755b0c6 ChangeLog 3799
-RMD160 6d073d69652bb807bf6773e5c3b9d2cd38ccfbf3 ChangeLog 3799
-SHA256 7f77678bfe46bb92ebcc167846876ee33bf00d07bf8fac4e8c8b3c445ecc6d2f ChangeLog 3799
+MISC ChangeLog 3984 RMD160 cdaed69e1e8a2c89c4dd8024a9e8ade8df84e464 SHA1 8e3396ddc8d3c3921ce8e33987bbcb907885c88e SHA256 1c8c5715c72200d732d4fe054072a6697388f472ca4838afe48ae046ddc14875
+MD5 8824466d10720293176619a35b4a09ac ChangeLog 3984
+RMD160 cdaed69e1e8a2c89c4dd8024a9e8ade8df84e464 ChangeLog 3984
+SHA256 1c8c5715c72200d732d4fe054072a6697388f472ca4838afe48ae046ddc14875 ChangeLog 3984
 MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
-MD5 97d94b8ef6747da25d3bbcfecc5c799e files/digest-evolution-exchange-2.4.2 280
-RMD160 397fc8a23572555e0d2144d6b4c749315c516350 files/digest-evolution-exchange-2.4.2 280
-SHA256 c5bccbba00f6141b32592461178f80329a8ee87fa30140b941702deba5391181 files/digest-evolution-exchange-2.4.2 280
-MD5 de73d84e76f6d2ebbc9762babcc919ec files/digest-evolution-exchange-2.6.2 277
-RMD160 c9a83e910476d43746b88dac336d86437704ed85 files/digest-evolution-exchange-2.6.2 277
-SHA256 d931b00ead8b992440c76f3d00b44c1395ec0c4fab31d6901c73911448beb3c7 files/digest-evolution-exchange-2.6.2 277
 MD5 de73d84e76f6d2ebbc9762babcc919ec files/digest-evolution-exchange-2.6.2-r1 277
 RMD160 c9a83e910476d43746b88dac336d86437704ed85 files/digest-evolution-exchange-2.6.2-r1 277
 SHA256 d931b00ead8b992440c76f3d00b44c1395ec0c4fab31d6901c73911448beb3c7 files/digest-evolution-exchange-2.6.2-r1 277
 MD5 95ee7a1cc0de9571981d3c0bcee73119 files/digest-evolution-exchange-2.8.1 280
 RMD160 a1981d1f94bca4df30d5d4d3dc2dda016625a2d8 files/digest-evolution-exchange-2.8.1 280
 SHA256 2bcd3d39200021209c1b6d4b8e10715d5743e72bd10d83bb06fb2d1432a5967a files/digest-evolution-exchange-2.8.1 280
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFZod6keYb6olFHJcRAm9qAJ4s9e1wkm0MN9NLoQ0zxUFebeUVzACfa2w2
+JuTqvHdkTLMK+xQn6L0r6+4=
+=Imj9
+-----END PGP SIGNATURE-----
