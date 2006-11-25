@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.138 2006/11/20 11:10:53 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.139 2006/11/25 23:11:43 kloeri Exp $
+
+  25 Nov 2006; Bryan Østergaard <kloeri@gentoo.org> totem-2.16.3.ebuild:
+  Add ~alpha keyword.
 
   20 Nov 2006; Mart Raudsepp <leio@gentoo.org> -totem-2.16.1.ebuild,
   -totem-2.16.2.ebuild:
