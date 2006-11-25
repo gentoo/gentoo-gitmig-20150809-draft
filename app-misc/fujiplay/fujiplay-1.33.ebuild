@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fujiplay/fujiplay-1.33.ebuild,v 1.11 2005/01/08 13:57:42 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fujiplay/fujiplay-1.33.ebuild,v 1.12 2006/11/25 01:11:15 masterdriverz Exp $
 
 inherit eutils
 
@@ -22,10 +22,6 @@ src_unpack() {
 	unpack ${PN}.tgz
 	cd ${S}
 	epatch ${FILESDIR}/${P}-unterminated-strings.patch
-}
-
-src_compile() {
-	emake || die
 }
 
 src_install() {
