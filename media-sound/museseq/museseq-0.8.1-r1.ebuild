@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.8.1-r1.ebuild,v 1.1 2006/05/15 20:45:44 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.8.1-r1.ebuild,v 1.2 2006/11/25 09:37:37 opfer Exp $
 
 inherit kde-functions virtualx eutils
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.muse-sequencer.org/"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="doc lash debug"
 
 DEPEND="$(qt_min_version 3.2)
