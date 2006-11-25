@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/cscope
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.76 2006/10/18 14:36:19 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.77 2006/11/25 09:06:24 opfer Exp $
+
+*cscope-15.5.20060927-r1 (25 Nov 2006)
+
+  25 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  +cscope-15.5.20060927-r1.ebuild:
+  added autoconf dependency, as reported by Wolfram Schlich
+  <wschlich@gentoo.org> in bug #155731
 
   18 Oct 2006; Roy Marples <uberlord@gentoo.org>
   cscope-15.5.20060927.ebuild:
