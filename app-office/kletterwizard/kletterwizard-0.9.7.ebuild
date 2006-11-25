@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/kletterwizard-0.9.7.ebuild,v 1.4 2006/11/25 19:43:25 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/kletterwizard-0.9.7.ebuild,v 1.5 2006/11/25 19:52:08 masterdriverz Exp $
 
 inherit kde
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="amd64 ~ppc ~sparc x86"
-IUSE=""
+IUSE="kdeenablefinal"
 
 DEPEND="virtual/tetex
 	|| ( kde-base/kghostview kde-base/kdegraphics )"

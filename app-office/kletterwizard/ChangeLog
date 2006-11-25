@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kletterwizard
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/ChangeLog,v 1.19 2006/11/25 19:44:43 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/ChangeLog,v 1.20 2006/11/25 19:52:08 masterdriverz Exp $
+
+  25 Nov 2006; Charlie Shepherd <masterdriverz@gentoo.org>
+  kletterwizard-0.9.7.ebuild:
+  Add kdeenablefinal USE flag
 
   25 Nov 2006; Charlie Shepherd <masterdriverz@gentoo.org> metadata.xml:
   Kde gets this...
