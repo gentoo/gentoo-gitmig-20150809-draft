@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.21.ebuild,v 1.1 2006/11/25 12:49:02 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.21.ebuild,v 1.2 2006/11/25 12:58:16 mrness Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND=">=dev-util/scons-0.96.91"
 
-S=${WORKDIR}/${P}-src
+S="${WORKDIR}"/${P}-src
 
 pkg_setup() {
 	if ! has_version cross-mingw32/gcc; then
@@ -39,5 +39,5 @@ src_compile() {
 src_install() {
 	scons PREFIX=/usr PREFIX_CONF=/etc PREFIX_DOC="/usr/share/doc/${P}" \
 		PREFIX_DEST="${D}" SKIPPLUGINS=System install || die "scons install failed"
-	fperms -R go-w,a-x,a+X "/usr/share/${PN}/" /usr/share/doc/${P}/ /etc/nsisconf.nsh
+	fperms -R go-w,a-x,a+X /usr/share/${PN}/ /usr/share/doc/${P}/ /etc/nsisconf.nsh
 }
