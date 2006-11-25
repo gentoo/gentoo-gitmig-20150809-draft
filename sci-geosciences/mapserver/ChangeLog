@@ -1,0 +1,22 @@
+# ChangeLog for sci-geosciences/mapserver
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.1 2006/11/25 03:39:43 djay Exp $
+
+*mapserver-4.10.0 (25 Nov 2006)
+
+  25 Nov 2006; <djay@gentoo.org> +files/mapserver-4.10.0_php.patch,
+  +files/mapserver_tcl.patch, +mapserver-4.10.0.ebuild:
+  Initial import of mapserver.
+  Thanks to :
+   * Romeu Henrique Capparelli Fonseca <rhcappf@yahoo.com.br>,
+   * Miroslav <miroslav.sulc@startnet.cz>,
+   * Paul Sumner <paul@zanfx.com>,
+   * Kevin Okamoto <kevino@migcom.com>,
+   * Lorinc Czegledi <lorinc.czegledi@mail.cpst.hu>,
+   * Ehud Shabtai <eshabtai@gmail.com>,
+   * Matteo Spreafico <matteo@fsfe.org>,
+   * Umberto <unicoletti@prometeo.it>,
+   * Aran Deltac <bluefeet@gmail.com>,
+   * Luca <luca.casagrande@gmail.com>
+   for their help (bug #69417).
+
