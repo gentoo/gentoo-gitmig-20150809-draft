@@ -1,6 +1,10 @@
 # ChangeLog for games-server/tetrix
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/tetrix/ChangeLog,v 1.5 2005/05/17 18:53:27 wolf31o2 Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/tetrix/ChangeLog,v 1.6 2006/11/25 14:00:41 gmsoft Exp $
+
+  25 Nov 2006; Guy Martin <gmsoft@gentoo.org>
+  tetrix-1.13.16.1.40c-r2.ebuild:
+  Stable on hppa.
 
   17 May 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   files/1.13.16.1.40c-droproot.patch, -tetrix-1.13.16.1.40c-r1.ebuild,
