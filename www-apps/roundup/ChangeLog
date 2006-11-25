@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/roundup
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.8 2006/11/23 22:34:33 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.9 2006/11/25 03:05:37 beandog Exp $
+
+  25 Nov 2006; Steve Dibb <beandog@gentoo.org> metadata.xml:
+  Add to web-apps herd, fix copyright header
 
   23 Nov 2006; Charlie Shepherd <masterdriverz@gentoo.org> ChangeLog:
   Fix post-install instructions, thanks to James McArthur, bug 108946
