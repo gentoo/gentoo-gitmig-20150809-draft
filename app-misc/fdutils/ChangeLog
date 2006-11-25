@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/fdutils
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/ChangeLog,v 1.18 2006/04/02 23:06:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/ChangeLog,v 1.19 2006/11/25 18:41:12 masterdriverz Exp $
+
+  25 Nov 2006; Charlie Shepherd <masterdriverz@gentoo.org> metadata.xml:
+  Kernel's got this one...
 
   02 Apr 2006; Robin H. Johnson <robbat2@gentoo.org>
   files/fdutils-5.5-destdirfix.patch, fdutils-5.5.ebuild:
