@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-02.08.01b.ebuild,v 1.1 2006/05/17 03:09:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-02.08.01b.ebuild,v 1.2 2006/11/25 18:49:03 kloeri Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -15,7 +15,7 @@ SRC_URI="http://ezix.org/software/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="gtk static"
 
 DEPEND="gtk? ( >=x11-libs/gtk+-2 )"
