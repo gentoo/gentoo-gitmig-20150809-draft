@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
+<herd>kernel</herd>
 <maintainer>
-  <email>maintainer-needed@gentoo.org</email>
+	<email>masterdriverz@gentoo.org</email>
+	<name>Charlie Shepherd</name>
 </maintainer>
 <longdescription>A script to apply kernel patch sets</longdescription>
 </pkgmetadata>
