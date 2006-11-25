@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.84 2006/11/12 14:08:04 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.85 2006/11/25 09:53:06 uberlord Exp $
+
+*wpa_supplicant-0.5.6 (25 Nov 2006)
+
+  25 Nov 2006; Roy Marples <uberlord@gentoo.org>
+  +files/wpa_supplicant-0.5.6-sigpoll.patch, +wpa_supplicant-0.5.6.ebuild:
+  New upstream release.
 
   12 Nov 2006; Roy Marples <uberlord@gentoo.org>
   wpa_supplicant-0.5.5.ebuild:
