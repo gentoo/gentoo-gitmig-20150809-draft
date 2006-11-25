@@ -1,15 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 72dc70e6dca25676a595fec821083659 ChangeLog 2165
-MD5 0c58d548c0e64f8bf92ae514770de156 files/digest-kgraphspace-0.3.0_pre1 75
+AUX kgraphspace-0.3.0_pre1-configure.patch 3567 RMD160 76250faca4ae9b66f82e0e6931dd37d4b19bef35 SHA1 f14dda92ee79ca1890ca34aeabfe487399098cb9 SHA256 62fbec960ecca221b63d062f448571a09b956204b79f8b3296bdb61c2c32ad59
 MD5 8aeb4c1ce5b9fab4d89167227f68d932 files/kgraphspace-0.3.0_pre1-configure.patch 3567
-MD5 9128e21232ac3c49ec41c9f67ee224e9 kgraphspace-0.3.0_pre1.ebuild 581
+RMD160 76250faca4ae9b66f82e0e6931dd37d4b19bef35 files/kgraphspace-0.3.0_pre1-configure.patch 3567
+SHA256 62fbec960ecca221b63d062f448571a09b956204b79f8b3296bdb61c2c32ad59 files/kgraphspace-0.3.0_pre1-configure.patch 3567
+DIST kgraphspace-0.3.0-pre1.tar.bz2 513076
+EBUILD kgraphspace-0.3.0_pre1.ebuild 640 RMD160 45a81c4ba965e18dd32c08a7683cd78d4849264c SHA1 b7171536dc1480c80440b675b60375b5097c47fe SHA256 7287b1acb9ca4ba369334cbbbc22dec2caef26770fdf9458ef93212e9717684c
+MD5 76f691466f7ce4f71a67299ddbe69a60 kgraphspace-0.3.0_pre1.ebuild 640
+RMD160 45a81c4ba965e18dd32c08a7683cd78d4849264c kgraphspace-0.3.0_pre1.ebuild 640
+SHA256 7287b1acb9ca4ba369334cbbbc22dec2caef26770fdf9458ef93212e9717684c kgraphspace-0.3.0_pre1.ebuild 640
+MISC ChangeLog 2351 RMD160 0c516b8b9770f7cbeb59fbacdf16345227cb1957 SHA1 55606201d2b0f64b427e6e8d596a6f4d8d622f0b SHA256 feef3a24408457293b0c48bdf8722fca3190aee134e16df6b58af05529c3b7c2
+MD5 af98cdc866ff409b711250d87b389a95 ChangeLog 2351
+RMD160 0c516b8b9770f7cbeb59fbacdf16345227cb1957 ChangeLog 2351
+SHA256 feef3a24408457293b0c48bdf8722fca3190aee134e16df6b58af05529c3b7c2 ChangeLog 2351
+MISC metadata.xml 157 RMD160 9258d9691830e58ee00ca89f0a6df9ce077f2439 SHA1 b2ca0d856f38a09bf6d2e58ee77b344552585862 SHA256 e0e268ca18fef286617fcfe97773d5df5b8fbdb5fbcb9a29adc5e8b0baea4292
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDl3OzntT9W3vfTuoRAu+kAJ47d8Qhp+kt2jS1pbvYHnVb5ZD7XwCdETg6
-n/ZbYmgsie8/MdH2vUw5UYo=
-=1cap
------END PGP SIGNATURE-----
+RMD160 9258d9691830e58ee00ca89f0a6df9ce077f2439 metadata.xml 157
+SHA256 e0e268ca18fef286617fcfe97773d5df5b8fbdb5fbcb9a29adc5e8b0baea4292 metadata.xml 157
+MD5 0c58d548c0e64f8bf92ae514770de156 files/digest-kgraphspace-0.3.0_pre1 75
+RMD160 9e8d56b961cb1aa9472a6412ec351b56a4a402f6 files/digest-kgraphspace-0.3.0_pre1 75
+SHA256 c6ed1f820d2878b9abfd9badd2cd5f8b6aef143d5e4ddffd4695f24a102d7ff0 files/digest-kgraphspace-0.3.0_pre1 75
