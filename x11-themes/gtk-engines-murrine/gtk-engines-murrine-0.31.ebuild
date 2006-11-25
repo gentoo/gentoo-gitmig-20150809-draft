@@ -1,8 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-murrine/gtk-engines-murrine-0.31.ebuild,v 1.1 2006/11/25 02:47:11 nichoj Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-murrine/gtk-engines-murrine-0.31.ebuild,v 1.2 2006/11/25 16:48:58 nichoj Exp $
 
 MY_PN="murrine"
 MY_P="${MY_PN}-${PV}"
