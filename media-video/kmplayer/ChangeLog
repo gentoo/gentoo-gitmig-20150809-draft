@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kmplayer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.75 2006/10/14 07:03:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.76 2006/11/25 01:47:08 masterdriverz Exp $
+
+  25 Nov 2006; Charlie Shepherd <masterdriverz@gentoo.org>
+  kmplayer-0.9.3.ebuild:
+  Add libXv to DEPEND for Bug 152558, thanks to Harald van Dijk
 
   14 Oct 2006; Markus Rothe <corsair@gentoo.org> kmplayer-0.9.3.ebuild:
   Added ~ppc64
