@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6341 2006/11/25 12:09:18 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6342 2006/11/25 13:07:05 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -584,129 +584,6 @@ games-fps/quake3-reaction
 # hopefully with better luck.
 dev-db/monetdb
 
-# Diego Pettenò <flameeyes@gentoo.org> (23 Oct 2006)
-# Pending removal 23 November for multiple bugs
-# Use anything but this, like media-sound/audacious
-# media-sound/amarok media-sound/mpd media-sound/rhythmbox
-# media-sound/muine media-sound/banshee
-dev-perl/Xmms-Perl
-dev-python/pyxmms
-gnome-extra/gxmms
-media-plugins/dumb-xmms
-media-plugins/efxmms
-media-plugins/eq-xmms
-media-plugins/modplugxmms
-media-plugins/xalbumlist
-media-plugins/xmmplayer
-media-plugins/xmms-adplug
-media-plugins/xmms-alarm
-media-plugins/xmms-arts
-media-plugins/xmms-blursk
-media-plugins/xmms-btexmms
-media-plugins/xmms-cdcover
-media-plugins/xmms-cdread
-media-plugins/xmms-coverviewer
-media-plugins/xmms-crossfade
-media-plugins/xmms-crystality
-media-plugins/xmms-dflowers
-media-plugins/xmms-dscope
-media-plugins/xmms-dspectogram
-media-plugins/xmms-dspectral
-media-plugins/xmms-extra
-media-plugins/xmms-fc
-media-plugins/xmms-find
-media-plugins/xmms-finespectrum
-media-plugins/xmms-fmradio
-media-plugins/xmms-gdancer
-media-plugins/xmms-goom
-media-plugins/xmms-idcin
-media-plugins/xmms-imms
-media-plugins/xmms-infinity
-media-plugins/xmms-infopipe
-media-plugins/xmms-iris
-media-plugins/xmms-itouch
-media-plugins/xmms-jack
-media-plugins/xmms-jess
-media-plugins/xmms-kde
-media-plugins/xmms-kjofol
-media-plugins/xmms-ladspa
-media-plugins/xmms-libvisual
-media-plugins/xmms-lirc
-media-plugins/xmms-liveice
-media-plugins/xmms-liveplugin
-media-plugins/xmms-lyrc
-media-plugins/xmms-mad
-media-plugins/xmms-midi
-media-plugins/xmms-morestate
-media-plugins/xmms-mp3cue
-media-plugins/xmms-musepack
-media-plugins/xmms-nas
-media-plugins/xmms-nebulus
-media-plugins/xmms-null
-media-plugins/xmms-oggre
-media-plugins/xmms-outpost
-media-plugins/xmms-pipe
-media-plugins/xmms-realrandom
-media-plugins/xmms-repeatit
-media-plugins/xmms-scrobbler
-media-plugins/xmms-shell
-media-plugins/xmms-shn
-media-plugins/xmms-sid
-media-plugins/xmms-smpeg
-media-plugins/xmms-sndfile
-media-plugins/xmms-spc
-media-plugins/xmms-speex
-media-plugins/xmms-tfmx
-media-plugins/xmms-volnorm
-media-plugins/xmms-wakeup
-media-plugins/xmms-wma
-media-plugins/xmms-wmdiscotux
-media-plugins/xmms-xf86audio
-media-plugins/xmms-xmmsd
-media-plugins/xmms-xmmsmplayer
-media-sound/ctrlxmms
-media-sound/longplayer
-media-sound/madman
-media-sound/xmms
-x11-plugins/gaim-xmms-remote
-x11-themes/xmms-themes
-# These weren't rdepending on xmms at all
-media-plugins/xmms-synaesthesia
-media-plugins/xmms-ir
-x11-plugins/desklet-cornerxmms
-media-plugins/xmms-mpg123
-media-plugins/xmms-crossfade
-media-plugins/xmms-nsf
-media-plugins/xmms-status-plugin
-media-sound/xmmsctrl
-x11-plugins/wmalbum
-x11-plugins/wmusic
-x11-plugins/wmxmms
-rox-extra/roxmms
-media-plugins/xmms-cdaudio
-media-plugins/xmms-mpg123
-media-plugins/xmms-opengl-spectrum
-media-plugins/xmms-vorbis
-media-plugins/xmms-alsa
-media-plugins/xmms-blur-scope
-media-plugins/xmms-disk-writer
-media-plugins/xmms-echo
-media-plugins/xmms-esd
-media-plugins/xmms-joystick
-media-plugins/xmms-mikmod
-media-plugins/xmms-oss
-media-plugins/xmms-sanalyzer
-media-plugins/xmms-song-change
-media-plugins/xmms-stereo
-media-plugins/xmms-tonegen
-media-plugins/xmms-voice
-media-plugins/xmms-wav
-app-misc/livetools
-xfce-extra/xfce4-xmms
-xfce-extra/xfce4-xmms-controller
-# This is an extra one
-media-sound/noxmms
-
 # Piotr Jaroszyński <peper@gentoo.org> (22 Oct 2006)
 # telepathy-gabble has masked dep(net-libs/loudmouth)
 net-voip/telepathy-gabble
@@ -1095,10 +972,6 @@ sys-fs/dmraid
 =app-pda/synce-0.9.2
 =app-pda/synce-librapi2-0.9.2
 =app-pda/synce-libsynce-0.9.2
-
-# Luis Medinas <metalgod@gentoo.org> (23 Jul 2006)
-# Marked for removal see bug #132449
-=media-plugins/xmms-xmmsd-0.3
 
 # Christian Andreetta <satya@gentoo.org> (20 Jul 2006)
 # Masked due to authentication and wins name mapping
@@ -1546,7 +1419,6 @@ dev-php5/pecl-pdo-firebird
 # Kathryn Kulick <gothgirl@gentoo.org> (20 Dec 2005)
 # Gaim 2.0.0 beta1 plugins.
 >=x11-plugins/gaim-encryption-3.0_beta1
->=x11-plugins/gaim-xmms-remote-1.9_beta1
 >=x11-plugins/guifications-2.13_beta1
 
 # Kathryn Kulick <gothgirl@gentoo.org> (19 Dec 2005)
