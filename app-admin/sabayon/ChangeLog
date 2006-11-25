@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sabayon
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.5 2006/11/22 18:03:21 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.6 2006/11/25 23:16:01 kloeri Exp $
+
+  25 Nov 2006; Bryan Østergaard <kloeri@gentoo.org> sabayon-2.12.4.ebuild:
+  Add ~alpha keyword.
 
   22 Nov 2006; Mart Raudsepp <leio@gentoo.org> metadata.xml:
   Put under gnome herd maintenance
