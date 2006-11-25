@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.16 2006/11/16 03:40:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.17 2006/11/25 11:28:33 masterdriverz Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -35,6 +35,7 @@ et - Estonian locale
 eu - Basque locale
 fa - Persian locale
 fi - Finnish locale
+fo -  Faroese locale
 fr - French locale
 fy - Frisian locale
 fy_NL - Frisian language locale for the Netherlands
