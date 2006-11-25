@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.391 2006/11/24 15:05:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.392 2006/11/25 11:01:12 flameeyes Exp $
+
+  25 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> files/digest-qt-4.2.1,
+  files/digest-qt-4.2.1-r1, Manifest:
+  Fix digests (hopefully).
 
   24 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> qt-3.3.6-r5.ebuild:
   Fix keywording.
