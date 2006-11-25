@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-2.10.2-r1.ebuild,v 1.1 2006/11/21 08:16:05 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-2.10.2-r1.ebuild,v 1.2 2006/11/25 14:43:10 kloeri Exp $
 
 inherit gnome2 autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gtkmm.sourceforge.net/"
 
 LICENSE="LGPL-2.1"
 SLOT="2.4"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~sh ~sparc ~x86"
 IUSE="accessibility doc examples"
 
 RDEPEND=">=dev-cpp/glibmm-2.12.1
