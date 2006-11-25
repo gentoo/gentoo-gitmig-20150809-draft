@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/ebuild-mode
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ebuild-mode/ChangeLog,v 1.4 2006/11/25 19:53:46 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ebuild-mode/ChangeLog,v 1.5 2006/11/25 19:59:23 mkennedy Exp $
+
+  25 Nov 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  files/digest-ebuild-mode-1.1, Manifest:
+  Digest fix.
 
 *ebuild-mode-1.1 (25 Nov 2006)
 
