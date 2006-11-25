@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.3.0.53-r1.ebuild,v 1.1 2006/10/19 13:40:49 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.3.0.53-r1.ebuild,v 1.2 2006/11/25 17:58:23 humpback Exp $
 
 inherit eutils qt3
 
@@ -113,14 +113,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Have a look at ${PORTDIR}/licenses/${LICENSE} before running this software"
 	einfo "If you have sound problems please visit: "
 	einfo "http://forum.skype.com/bb/viewtopic.php?t=4489"
-	# This will always be true in future, since skype stores the contacts in
-	# the peer-to-peer network.
-	ewarn "If you are upgrading and skype does not autologin do a manual login"
-	ewarn "you will not lose your contacts."
-
+	einfo "These kernel options are reported to help"
+	einfo "Processor type and features --->"
+	einfo "-- Preemption Model (Preemptible Kernel (Low-Latency Desktop))"
+	einfo "-- Timer frequency (250 HZ)"
 	ewarn ""
 	ewarn "This release no longer uses the old wrapper because skype now uses
 	ALSA"
