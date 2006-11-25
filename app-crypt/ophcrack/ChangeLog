@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/ophcrack
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ChangeLog,v 1.4 2006/09/02 12:27:23 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ChangeLog,v 1.5 2006/11/25 17:49:48 ikelos Exp $
+
+*ophcrack-2.3.3 (25 Nov 2006)
+
+  25 Nov 2006; Mike Auty <ikelos@gentoo.org>
+  +files/ophcrack-2.3.3-linuxtools-install-path.patch,
+  +ophcrack-2.3.3.ebuild:
+  Version bump, compiling bkhive and samdump from source to fix bug 156119.
 
 *ophcrack-2.3.1 (02 Sep 2006)
 
