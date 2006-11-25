@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.30.1.ebuild,v 1.1 2006/11/25 00:29:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.30.1.ebuild,v 1.2 2006/11/25 19:36:01 aballier Exp $
 
 inherit eutils qt4 toolchain-funcs
 
@@ -31,12 +31,15 @@ src_unpack() {
 	sed -ie "s:^\(\#define\ RESOURCES_DIR\) \(.*\):\1 \"/usr/share/traverso\":" src/config.h
 	sed -ie "s:^\(target.path\ =\) \(.*\):\1 /usr/bin:" src/traverso/traverso.pro
 	sed -ie "s:^\(DESTDIR_TARGET\ =\) \(.*\):\1 /usr/bin:" src/traverso/traverso.pro
+	#  Removing forced cxxflags
+	sed -ie "s:^\(.*QMAKE_CXXFLAGS_RELEASE.*\):#\1:" src/base.pri
+	# adding our cxxflags
+	sed -ie "s:^\(.*release\ {.*\):\1\n QMAKE_CXXFLAGS_RELEASE\ =\ ${CXXFLAGS}:" src/base.pri
 }
 
 src_compile() {
 	QMAKE="/usr/bin/qmake"
-	$QMAKE traverso.pro -after\
-	"QMAKE_CXXFLAGS_RELEASE=\"${CXXFLAGS}\" QMAKE_STRIP=\"/usr/bin/true\"" || die "qmake failed"
+	$QMAKE traverso.pro -after "QMAKE_STRIP=\"/usr/bin/true\"" || die "qmake failed"
 	# No no, this is not a typo, LFLAGS is what they use as LDFLAGS...
 	emake CC=$(tc-getCC) CXX=$(tc-getCXX) LINK=$(tc-getCXX) LFLAGS="${LDFLAGS}" || die "emake failed"
 }
