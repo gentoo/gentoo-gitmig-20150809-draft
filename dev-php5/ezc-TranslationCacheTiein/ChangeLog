@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/ezc-TranslationCacheTiein
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-TranslationCacheTiein/ChangeLog,v 1.8 2006/11/20 15:44:00 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-TranslationCacheTiein/ChangeLog,v 1.9 2006/11/25 22:22:52 kloeri Exp $
+
+  25 Nov 2006; Bryan Østergaard <kloeri@gentoo.org>
+  ezc-TranslationCacheTiein-1.1.1.ebuild:
+  Add ~alpha + ~ia64 keywords, bug 134717.
 
 *ezc-TranslationCacheTiein-1.1.1 (20 Nov 2006)
 
