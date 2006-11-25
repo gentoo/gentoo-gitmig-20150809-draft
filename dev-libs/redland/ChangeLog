@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/redland
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.15 2006/11/25 08:33:03 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.16 2006/11/25 13:21:53 blubb Exp $
+
+  25 Nov 2006; <blubb@gentoo.org> redland-1.0.4.ebuild:
+  going back to ~amd64 until the issue in bug 151935 comment 6 is fixed
 
   25 Nov 2006; <blubb@gentoo.org> redland-1.0.4.ebuild:
   stable on amd64
