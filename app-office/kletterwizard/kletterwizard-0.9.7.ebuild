@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/kletterwizard-0.9.7.ebuild,v 1.3 2006/06/25 16:52:15 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/kletterwizard-0.9.7.ebuild,v 1.4 2006/11/25 19:43:25 masterdriverz Exp $
 
 inherit kde
 
@@ -20,7 +20,8 @@ need-kde 3.4
 
 src_unpack() {
 	kde_src_unpack
-	patch -p0 < ${FILESDIR}/${PN}-0.9.6-gentoo.diff
+	epatch "${FILESDIR}/${PN}-0.9.6-gentoo.diff"
+	epatch "${FILESDIR}/${P}-gcc-4.1.patch"
 }
 
 src_compile() {
