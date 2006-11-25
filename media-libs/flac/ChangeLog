@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/flac
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.95 2006/11/07 16:15:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.96 2006/11/25 11:07:23 flameeyes Exp $
+
+  25 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> flac-1.1.2-r3.ebuild,
+  flac-1.1.2-r8.ebuild, flac-1.1.3_beta2.ebuild:
+  Force the XMMS plugin disabled, now that XMMS is removed, see bug #156187.
 
   07 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> flac-1.1.2-r3.ebuild,
   flac-1.1.2-r8.ebuild, flac-1.1.3_beta2.ebuild:

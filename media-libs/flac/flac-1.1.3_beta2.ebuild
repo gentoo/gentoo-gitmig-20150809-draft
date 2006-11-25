@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.3_beta2.ebuild,v 1.2 2006/11/07 16:15:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.3_beta2.ebuild,v 1.3 2006/11/25 11:07:23 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -39,6 +39,9 @@ src_unpack() {
 	[[ $(gcc-major-version)$(gcc-minor-version) -ge 41 ]] || \
 		export EPATCH_EXCLUDE="130_all_visibility.patch 160_all_protected.patch"
 
+	# Hard-disable the XMMS plugin now that XMMS is removed.
+	sed -i -e '/AM_PATH_XMMS/d' "${S}/configure.in"
+
 	EPATCH_SUFFIX="patch" \
 	epatch "${WORKDIR}/patches"
 	AT_M4DIR="m4" eautoreconf
@@ -71,6 +74,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "If you've upgraded from a previous version of flac, you may need to re-emerge"
-	elog "packages that linked against flac by running revdep-rebuild"
+	ewarn "If you've upgraded from a previous version of flac, you may need to re-emerge"
+	ewarn "packages that linked against flac by running revdep-rebuild"
 }
