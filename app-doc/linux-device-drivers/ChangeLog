@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/linux-device-drivers
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-device-drivers/ChangeLog,v 1.3 2005/04/23 18:58:28 wormo Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-device-drivers/ChangeLog,v 1.4 2006/11/25 18:37:48 masterdriverz Exp $
+
+  25 Nov 2006; Charlie Shepherd <masterdriverz@gentoo.org> metadata.xml:
+  Kernel's got this one...
 
   23 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   linux-device-drivers-2.ebuild, linux-device-drivers-3.ebuild:
