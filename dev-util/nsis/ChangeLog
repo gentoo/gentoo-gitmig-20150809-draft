@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/nsis
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/ChangeLog,v 1.1 2006/11/25 12:49:02 mrness Exp $
+
+*nsis-2.21 (25 Nov 2006)
+
+  25 Nov 2006; Alin Nastac <mrness@gentoo.org>
+  +files/nsis-2.21-config.patch, +metadata.xml, +nsis-2.21.ebuild:
+  Initial import from Sunrise, thanks to Cédric Krier <cedk@gentoo.org>
+  (#136035).
+
