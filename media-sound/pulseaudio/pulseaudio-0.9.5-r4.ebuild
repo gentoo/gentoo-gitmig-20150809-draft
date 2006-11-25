@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.5-r4.ebuild,v 1.11 2006/11/15 22:48:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.5-r4.ebuild,v 1.12 2006/11/25 11:12:59 flameeyes Exp $
 
 inherit eutils libtool # autotools
 
@@ -31,6 +31,10 @@ RDEPEND="X? ( || ( x11-libs/libX11 <virtual/x11-7 ) )
 	sys-devel/libtool" # it's a valid RDEPEND, libltdl.so is used
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+# This is for the alsasound init.d script (see bug #155707)
+RDEPEND="${RDEPEND}
+	alsa? ( media-sound/alsa-utils )"
 
 pkg_setup() {
 	if use avahi && ! built_with_use net-dns/avahi dbus ; then
