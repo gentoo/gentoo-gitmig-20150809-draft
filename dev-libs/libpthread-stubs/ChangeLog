@@ -1,10 +1,13 @@
 # ChangeLog for dev-libs/libpthread-stubs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpthread-stubs/ChangeLog,v 1.1 2006/11/24 09:57:12 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpthread-stubs/ChangeLog,v 1.2 2006/11/25 07:58:38 dberkholz Exp $
+
+  25 Nov 2006; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
+  Add credit for ebuild.
 
 *libpthread-stubs-0.1 (24 Nov 2006)
 
   24 Nov 2006; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
   +libpthread-stubs-0.1.ebuild:
-  New package: Pthread functions stubs for platforms missing them.
-
+  New package: Pthread functions stubs for platforms missing them. Ebuild by
+  Diego Pettenò.
