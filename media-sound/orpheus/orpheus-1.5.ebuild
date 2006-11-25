@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/orpheus-1.5.ebuild,v 1.13 2006/10/18 20:57:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/orpheus-1.5.ebuild,v 1.14 2006/11/25 16:22:31 aballier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,8 +16,7 @@ IUSE="ogg"
 DEPEND=">=sys-libs/ncurses-5.2
 	ogg? ( >=media-libs/libvorbis-1.0_beta1 )
 	virtual/mpg123
-	media-sound/vorbis-tools
-	gnome-base/libghttp"
+	media-sound/vorbis-tools"
 #	nas? ( >=media-libs/nas-1.4.1 )
 
 src_unpack() {
@@ -26,6 +25,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${PV}-gcc34.patch"
 	epatch "${FILESDIR}/${PV}-amd64.patch"
+	epatch "${FILESDIR}/${P}-nolibghttp.patch"
 
 	#if use nas; then
 	#	cd src

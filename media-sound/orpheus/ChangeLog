@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/orpheus
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/ChangeLog,v 1.19 2006/10/18 20:57:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/ChangeLog,v 1.20 2006/11/25 16:22:31 aballier Exp $
+
+*orpheus-1.6 (25 Nov 2006)
+
+  25 Nov 2006; Alexis Ballier <aballier@gentoo.org>
+  +files/orpheus-1.5-nolibghttp.patch, +files/orpheus-1.6-nolibghttp.patch,
+  orpheus-1.5.ebuild, +orpheus-1.6.ebuild:
+  Version bump, removed libghttp deps, patching configure to force it to not
+  use it
 
   18 Oct 2006; Alexis Ballier <aballier@gentoo.org> +files/1.5-amd64.patch,
   orpheus-1.5.ebuild:
