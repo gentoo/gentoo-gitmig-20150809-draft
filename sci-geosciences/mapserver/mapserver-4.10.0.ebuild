@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-4.10.0.ebuild,v 1.1 2006/11/25 03:39:43 djay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-4.10.0.ebuild,v 1.2 2006/11/25 04:28:19 djay Exp $
 
 PHP_EXT_NAME="php_mapscript php_proj"
 RUBY_OPTIONAL="yes"
@@ -19,7 +19,7 @@ KEYWORDS="~x86"
 
 #I must check for mygis use flag availability 
 #"mono"
-IUSE="xml pdf proj geos tiff gdal xpm threads postgis ming php python perl ruby tcl java"
+IUSE="xml pdf proj geos tiff gdal xpm postgis ming php python perl ruby tcl java"
 
 
 DEPEND="media-libs/libpng
@@ -74,10 +74,6 @@ src_unpack() {
 	unpack "${A}"
 	cd "${S}"
 
-	local MY_PUSE,MY_GPUSE
-	MY_PUSE="wmsserver wmsclient"
-	MY_GPUSE="wfs wcs wmsclient wfsclient"
-
 	if (use tcl); then
 		epatch "${FILESDIR}"/${PN}_tcl.patch
 	fi
@@ -99,25 +95,29 @@ src_compile() {
 
 	AT_GNUCONF_UPDATE="no" eautoreconf
 
-	my_conf="--with-httpd=${APACHECTL/'ctl'/} --with-freetype"
+	local myconf
+	myconf="--with-httpd=${APACHECTL/'ctl'/} --with-freetype"
 
 	if use geos; then
-		my_conf="${my_conf} --with-geos=$(which geos-config)"
+		myconf="${myconf} --with-geos=$(which geos-config)"
 	fi
 
+	local MYPUSE="wmsserver wmsclient"
+	local MYGPUSE="wfs wcs wmsclient wfsclient"
+
 	if (use gdal && use proj); then
-		my_conf="--with-ogr ${my_conf}";
-		for i in ${MY_GPUSE}; do
-			my_conf="${my_conf} --with-${i}"
+		myconf="--with-ogr ${myconf}";
+		for i in ${MYGPUSE}; do
+			myconf="${myconf} --with-${i}"
 		done
 	fi
 
 	if (use proj); then
-		for i in ${MY_ProjUSE}; do
-			my_conf="${my_conf} --with-${i}"
+		for i in ${MYPUSE}; do
+			myconf="${myconf} --with-${i}"
 		done
 		if (use xml); then
-			my_conf="${my_conf} --with-sos"
+			myconf="${myconf} --with-sos"
 		fi
 	fi
 
@@ -126,15 +126,15 @@ src_compile() {
 		if [ ${np} -eq 2 ] ; then
 			for i in 4 5; do
 				uses_php${i}
-				my_conf="${my_conf} --with-php${i}=${PHPPREFIX}"
+				myconf="${myconf} --with-php${i}=${PHPPREFIX}"
 			done
 		else
-			my_conf="${my_conf} --with-php=${PHPPREFIX}/include/php"
+			myconf="${myconf} --with-php=${PHPPREFIX}/include/php"
 		fi
 	fi
 
 	if (use perl || use python || use ruby || use tcl || use php) ; then
-		my_conf="${my_conf} --with-mapscript";
+		myconf="${myconf} --with-mapscript";
 	fi
 
 	cd "${S}"
@@ -149,12 +149,13 @@ src_compile() {
 		$(use_with pdf)\
 		$(use_with ming)\
 		$(use_with java)\
-		${my_conf}\
+		${myconf}\
 		|| die "econf failed"
 
 	make || die "make failed"
 
 	if (use php && use proj); then
+	    cd "${S}"/mapscript/php3/
 		if [ ${np} -eq 2 ]; then
 			cp *.so ../php4/ || die "Unable to copy php4 mapscript object files"
 		fi
