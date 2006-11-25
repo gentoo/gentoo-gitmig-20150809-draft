@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmodplug
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/ChangeLog,v 1.22 2006/11/24 23:12:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/ChangeLog,v 1.23 2006/11/25 09:09:30 opfer Exp $
+
+  25 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  libmodplug-0.8-r1.ebuild:
+  stable x86, security bug #143404
 
   24 Nov 2006; Markus Rothe <corsair@gentoo.org> libmodplug-0.8-r1.ebuild:
   Stable on ppc64; bug #143404
