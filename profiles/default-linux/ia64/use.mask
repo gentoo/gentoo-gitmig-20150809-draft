@@ -37,6 +37,7 @@ frontbase
 hyperwave
 informix
 ingres
+oci8
 pfpro
 solid
 sybase
