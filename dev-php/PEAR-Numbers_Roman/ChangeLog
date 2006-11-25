@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Numbers_Roman
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Numbers_Roman/ChangeLog,v 1.4 2006/05/27 11:09:35 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Numbers_Roman/ChangeLog,v 1.5 2006/11/25 19:30:15 kloeri Exp $
+
+  25 Nov 2006; Bryan Østergaard <kloeri@gentoo.org>
+  PEAR-Numbers_Roman-1.0.1.ebuild:
+  Add ~alpha + ~ia64 keywords, bug 134270.
 
   27 May 2006; Luca Longinotti <chtekk@gentoo.org> ChangeLog:
   Added to ~amd64. See bug #134270.
