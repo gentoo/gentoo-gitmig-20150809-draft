@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-sony-misc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-sony-misc/ChangeLog,v 1.14 2006/07/11 15:39:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-sony-misc/ChangeLog,v 1.15 2006/11/25 21:55:53 ticho Exp $
+
+  25 Nov 2006; Andrej Kacian <ticho@gentoo.org> font-sony-misc-1.0.0.ebuild:
+  Stable on x86, bug #156206.
 
   11 Jul 2006; Aron Griffis <agriffis@gentoo.org>
   font-sony-misc-1.0.0.ebuild:
