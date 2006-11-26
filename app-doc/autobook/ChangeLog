@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/autobook
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/autobook/ChangeLog,v 1.7 2006/11/19 21:19:04 dirtyepic Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/autobook/ChangeLog,v 1.8 2006/11/26 12:27:56 vapier Exp $
+
+  26 Nov 2006; Mike Frysinger <vapier@gentoo.org> autobook-1.5.ebuild:
+  Add support for installing examples via USE=examples.
 
 *autobook-1.5 (19 Nov 2006)
 
