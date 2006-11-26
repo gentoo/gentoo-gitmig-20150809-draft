@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/docbook-sgml-dtd-4.3-r2.ebuild,v 1.6 2006/11/10 20:07:12 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/docbook-sgml-dtd-4.3-r2.ebuild,v 1.7 2006/11/26 17:37:12 beandog Exp $
 
 inherit sgml-catalog eutils
 
 MY_P="docbook-${PV}"
 DESCRIPTION="Docbook SGML DTD 4.3"
-HOMEPAGE="http://www.docbook.org/sgml/index.html"
+HOMEPAGE="http://www.docbook.org/sgml/"
 SRC_URI="http://www.docbook.org/sgml/${PV}/${MY_P}.zip"
 
 LICENSE="X11"
