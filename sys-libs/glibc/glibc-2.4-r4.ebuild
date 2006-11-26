@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r4.ebuild,v 1.13 2006/11/25 15:41:29 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r4.ebuild,v 1.14 2006/11/26 16:26:33 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -705,9 +705,9 @@ setup_flags() {
 	filter-ldflags -pie
 
 	# Lock glibc at -O2 -- linuxthreads needs it and we want to be
-	# conservative here
+	# conservative here.  -fno-strict-aliasing is to work around #155906
 	filter-flags -O?
-	append-flags -O2
+	append-flags -O2 -fno-strict-aliasing
 }
 
 check_kheader_version() {
