@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.2.7.ebuild,v 1.9 2006/10/21 18:35:16 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.2.7.ebuild,v 1.10 2006/11/26 12:17:53 hattya Exp $
+
+WANT_AUTOMAKE=1.4
 
 inherit autotools eutils
 
