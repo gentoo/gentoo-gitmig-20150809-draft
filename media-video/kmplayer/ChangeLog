@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kmplayer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.79 2006/11/26 00:09:26 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.80 2006/11/26 10:18:55 opfer Exp $
+
+  26 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  kmplayer-0.9.3.ebuild:
+  stable x86, bug #152558
 
   26 Nov 2006; Charlie Shepherd <masterdriverz@gentoo.org> ChangeLog,
   Manifest:
