@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrw-base/cdrw-base-0.2.ebuild,v 1.11 2006/07/08 22:32:42 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrw-base/cdrw-base-0.2.ebuild,v 1.12 2006/11/26 17:17:02 beandog Exp $
 
 DESCRIPTION="Configuration files to make CD recording easier"
-HOMEPAGE="www.gentoo.org"
+HOMEPAGE="http://www.gentoo.org"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc ~sparc alpha hppa amd64"
