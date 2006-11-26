@@ -3,7 +3,8 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-<email>maintainer-needed@gentoo.org</email>
+	<email>masterdriverz@gentoo.org</email>
+	<name>Charlie Shepherd</name>
 </maintainer>
 <longdescription lang="en">
 Simple shell script that creates a manpage starting from a simple structured
