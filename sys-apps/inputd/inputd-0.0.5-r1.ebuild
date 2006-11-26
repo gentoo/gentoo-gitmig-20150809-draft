@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/inputd/inputd-0.0.5-r1.ebuild,v 1.2 2006/11/23 11:41:00 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/inputd/inputd-0.0.5-r1.ebuild,v 1.3 2006/11/26 21:32:31 killerfox Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ src_install() {
 	emake DESTDIR=${D} install || die 'installation failed.'
 
 	newinitd ${FILESDIR}/inputd.init inputd
-	dodoc README FAQ NEWS
+	dodoc README doc/FAQ NEWS
 
 	insinto /etc
 	doins doc/inputd.conf
