@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/dejavu-2.12.ebuild,v 1.1 2006/11/19 15:30:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/dejavu-2.12.ebuild,v 1.2 2006/11/26 21:13:11 flameeyes Exp $
 
 inherit font
 
@@ -19,3 +19,6 @@ DOCS="AUTHORS BUGS NEWS README status.txt langcover.txt unicover.txt"
 FONT_SUFFIX="ttf"
 S="${WORKDIR}/${MY_P}"
 FONT_S="${S}"
+
+# Only installs fonts
+RESTRICT="strip binchecks"
