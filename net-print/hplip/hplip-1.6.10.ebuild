@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-1.6.10.ebuild,v 1.1 2006/10/20 18:38:05 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-1.6.10.ebuild,v 1.2 2006/11/26 20:10:02 genstef Exp $
 
 inherit eutils
 
@@ -21,9 +21,8 @@ IUSE="foomaticdb snmp X qt3 ppds scanner"
 DEPEND=">=dev-lang/python-2.2.0
 	snmp? ( >=net-analyzer/net-snmp-5.0.9 )
 	!net-print/hpijs
-	!net-print/hpoj"
-
-RDEPEND="virtual/ghostscript
+	!net-print/hpoj
+	virtual/ghostscript
 	scanner? (
 		>=media-gfx/sane-backends-1.0.9
 		|| (
@@ -36,8 +35,8 @@ RDEPEND="virtual/ghostscript
 	sys-apps/hotplug-base
 	net-print/cups
 	foomaticdb? ( net-print/foomatic-db-engine )
-	>=net-print/foomatic-filters-3.0.2
-	${DEPEND}"
+	>=net-print/foomatic-filters-3.0.2"
+RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	# avoid collisions with cups-1.2 compat symlinks
@@ -117,7 +116,7 @@ pkg_preinst() {
 	if use scanner; then
 		insinto /etc/sane.d
 		[ -e /etc/sane.d/dll.conf ] && cp /etc/sane.d/dll.conf .
-		[ -e ${ROOT}/etc/sane.d/dll.conf ] && ${ROOT}/etc/sane.d/dll.conf .
+		[ -e ${ROOT}/etc/sane.d/dll.conf ] && cp ${ROOT}/etc/sane.d/dll.conf .
 		grep -q hpaio dll.conf || echo hpaio >> dll.conf
 		doins dll.conf
 	fi
