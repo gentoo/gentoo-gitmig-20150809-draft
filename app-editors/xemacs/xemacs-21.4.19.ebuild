@@ -1,8 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.19.ebuild,v 1.1 2006/06/21 04:11:15 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.19.ebuild,v 1.2 2006/11/26 13:39:50 graaff Exp $
 
-inherit eutils
+export WANT_AUTOCONF="2.1"
+inherit autotools eutils
 
 DESCRIPTION="highly customizable open source text editor and application development system"
 HOMEPAGE="http://www.xemacs.org/"
@@ -14,7 +15,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="gpm postgres ldap xface nas dnd X jpeg tiff png mule motif freewnn canna athena neXt Xaw3d berkdb"
 
-X_DEPEND="x11-libs/libXt x11-libs/libXmu x11-libs/libXext"
+X_DEPEND="x11-libs/libXt x11-libs/libXmu x11-libs/libXext x11-misc/xbitmaps"
 
 DEPEND="virtual/libc
 	!virtual/xemacs
@@ -54,8 +55,14 @@ src_unpack() {
 
 	# see bug 58350
 	epatch ${FILESDIR}/${PN}-21.4.17-gdbm.patch
-	autoconf-2.13
-	use neXt && cp ${WORKDIR}/NeXT.XEmacs/xemacs-icons/* ${S}/etc/toolbar/
+
+	# Run autoconf. XEmacs tries to be smart by proivding a stub
+	# configure.ac file for autoconf 2.59 but this throws our
+	# autotools eclass so it must be removed first.
+	rm "${S}"/configure.ac
+	eautoconf
+
+	use neXt && cp "${WORKDIR}"/NeXT.XEmacs/xemacs-icons/* "${S}"/etc/toolbar/
 }
 
 src_compile() {
@@ -144,7 +151,7 @@ src_compile() {
 
 	use ppc64 && myconf="${myconf} --with-system-malloc"
 
-	./configure ${myconf} \
+	./configure ${myconf} ${EXTRA_ECONF} \
 		--prefix=/usr \
 		--with-pop \
 		--with-ncurses \
@@ -154,15 +161,13 @@ src_compile() {
 		--with-site-modules=yes \
 		|| die
 
-	# emake dont work on faster boxes it seems
-	# azarah (04 Aug 2002)
-	make || die
+	emake || die
 }
 
 src_install() {
-	make prefix=${D}/usr \
-		mandir=${D}/usr/share/man/man1 \
-		infodir=${D}/usr/share/info \
+	make prefix="${D}"/usr \
+		mandir="${D}"/usr/share/man/man1 \
+		infodir="${D}"/usr/share/info \
 		install gzip-el || die
 
 	# install base packages directories

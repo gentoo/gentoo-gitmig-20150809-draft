@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.65 2006/09/04 03:40:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.66 2006/11/26 13:39:50 graaff Exp $
+
+  26 Nov 2006; Hans de Graaff <graaff@gentoo.org> xemacs-21.4.19.ebuild:
+  Use autotools class to handle support for correct version of autoconf. Support
+  EXTRA_ECONF, fixing #145205. Use emake again as parallel builds have been
+  fixed upstream. Add x11-misc/xbitmaps to X dependencies. Quote variables that
+  may contain spaces.
 
   04 Sep 2006; Michael Sterrett <mr_bones_@gentoo.org>
   -files/xemacs-21.4.8-ppc.diff, -files/xemacs-21.4.9-ppc.diff,
