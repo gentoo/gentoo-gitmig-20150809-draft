@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/obexftp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.18 2006/10/24 07:18:51 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.19 2006/11/26 09:16:12 mrness Exp $
+
+  26 Nov 2006; Alin Nastac <mrness@gentoo.org> obexftp-0.21.ebuild:
+  Add ruby USE flag (#156041).
 
   24 Oct 2006; Alin Nastac <mrness@gentoo.org> obexftp-0.19-r1.ebuild,
   obexftp-0.21.ebuild:
