@@ -1,0 +1,10 @@
+# ChangeLog for app-xemacs/oo-browser
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/oo-browser/ChangeLog,v 1.1 2006/11/26 08:24:49 graaff Exp $
+
+*oo-browser-1.04 (26 Nov 2006)
+
+  26 Nov 2006; Hans de Graaff <graaff@gentoo.org> +metadata.xml,
+  +oo-browser-1.04.ebuild:
+  Initial version.
+
