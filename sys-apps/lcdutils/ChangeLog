@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lcdutils
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdutils/ChangeLog,v 1.3 2004/06/24 22:13:16 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdutils/ChangeLog,v 1.4 2006/11/26 18:17:52 beandog Exp $
+
+  26 Nov 2006; Steve Dibb <beandog@gentoo.org> lcdutils-0.2.ebuild:
+  Update homepage
 
   10 Jun 2004; Joshua Kinard <kumba@gentoo.org> lcdutils-0.2.ebuild:
   Changed the ebuild to allow installation on x86 systems, since newer Cobalt
