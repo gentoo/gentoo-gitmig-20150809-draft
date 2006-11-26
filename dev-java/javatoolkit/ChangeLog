@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/javatoolkit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javatoolkit/ChangeLog,v 1.18 2006/10/18 00:30:52 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javatoolkit/ChangeLog,v 1.19 2006/11/26 11:27:29 betelgeuse Exp $
+
+  26 Nov 2006; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
+  -javatoolkit-0.1.0.ebuild:
+  Removed an old version and fixed ChangeLog syntax for the 0.1.9 version bump.
 
   18 Oct 2006; Joshua Jackson <tsunam@gentoo.org>
   javatoolkit-0.1.9-r1.ebuild:
@@ -51,6 +55,8 @@
 
   05 Jul 2006; Thomas Cort <tcort@gentoo.org> javatoolkit-0.1.9.ebuild:
   Drop ~alpha keyword since we don't have java 1.4.
+
+*javatoolkit-0.1.9 (25 Jun 2006)
 
   25 Jun 2006; <nichoj@gentoo.org> +javatoolkit-0.1.9.ebuild:
   Version bump.
