@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.4.ebuild,v 1.7 2006/11/25 13:21:53 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.4.ebuild,v 1.8 2006/11/26 14:23:34 vapier Exp $
 
 inherit eutils
 
@@ -25,6 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-1.0.3-configure.patch
+	epatch "${FILESDIR}"/${PN}-1.0.4-CFLAGS.patch
 	rm -r "${S}"/{raptor,rasqal}
 }
 
