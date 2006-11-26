@@ -1,11 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX ac-wrapper-3.2.sh 3242 RMD160 9fb11d8fcac9b33e9d9eda56e663e26bc8ef4b48 SHA1 af1a44f0f82739ec449dab75871528caceb9e63d SHA256 4fecc535d7dd0f0424e637a2e3a8f0837832a32ec517ac0912b28a428f00941e
 MD5 0a542dd224e861aba771526c9b75edca files/ac-wrapper-3.2.sh 3242
 RMD160 9fb11d8fcac9b33e9d9eda56e663e26bc8ef4b48 files/ac-wrapper-3.2.sh 3242
 SHA256 4fecc535d7dd0f0424e637a2e3a8f0837832a32ec517ac0912b28a428f00941e files/ac-wrapper-3.2.sh 3242
-AUX ac-wrapper-4.sh 4298 RMD160 5efa3c29b52eb3125f7e0b1075718691f55b3b79 SHA1 f6b8d3174fc91c923bb55ebc85be837b459f89fa SHA256 cebcfc33a6271057daf9a064b50a239c27654a5997968d9703feb0694e3753dd
-MD5 0317a88508af09cb817f67ce78d864bd files/ac-wrapper-4.sh 4298
-RMD160 5efa3c29b52eb3125f7e0b1075718691f55b3b79 files/ac-wrapper-4.sh 4298
-SHA256 cebcfc33a6271057daf9a064b50a239c27654a5997968d9703feb0694e3753dd files/ac-wrapper-4.sh 4298
+AUX ac-wrapper-4.sh 4298 RMD160 6dd4c587191a5ff3d1231c1900783cff1665a99b SHA1 4bd7d8738dfa391ba2597e02fdf12dd651153972 SHA256 227328e6debb1f224b7af70d9c24ed92e942e7b43330d16e88707daac1e384df
+MD5 21320f1b76762c298f2846c214e0ae69 files/ac-wrapper-4.sh 4298
+RMD160 6dd4c587191a5ff3d1231c1900783cff1665a99b files/ac-wrapper-4.sh 4298
+SHA256 227328e6debb1f224b7af70d9c24ed92e942e7b43330d16e88707daac1e384df files/ac-wrapper-4.sh 4298
 EBUILD autoconf-wrapper-3.2-r2.ebuild 875 RMD160 1c0e50a7ad012d4eefebf793281465775c976063 SHA1 6954588c7c8ed620a3e0c3f2f27879700751c59b SHA256 a4175e2a926ebadf4463e7bb180e03899eba47a6acec278f447b23178c159eba
 MD5 ee5d62186a059bfb877e17053938cf6a autoconf-wrapper-3.2-r2.ebuild 875
 RMD160 1c0e50a7ad012d4eefebf793281465775c976063 autoconf-wrapper-3.2-r2.ebuild 875
@@ -14,24 +17,31 @@ EBUILD autoconf-wrapper-3.2.ebuild 811 RMD160 ba39e87c02681c04d247298efbfb056451
 MD5 cc6b3037a9ca81c88ec00a38190e768a autoconf-wrapper-3.2.ebuild 811
 RMD160 ba39e87c02681c04d247298efbfb0564515e73d9 autoconf-wrapper-3.2.ebuild 811
 SHA256 bf6968012027f744ee0d940747baf3763bbbc94a2a59d9155c1d4d14a5dbbb11 autoconf-wrapper-3.2.ebuild 811
-EBUILD autoconf-wrapper-4-r2.ebuild 809 RMD160 e35ff38c3e98e63cad345c824b4136499c250a98 SHA1 206f2e4a52dc1fbc2d2d49698f343b849fc799ad SHA256 f13e83b65546e1493ffddc1879dc30b22a32323f13543209934d34ca35dd86ca
-MD5 46262c064a9c73b9cf7f64e1429524fe autoconf-wrapper-4-r2.ebuild 809
-RMD160 e35ff38c3e98e63cad345c824b4136499c250a98 autoconf-wrapper-4-r2.ebuild 809
-SHA256 f13e83b65546e1493ffddc1879dc30b22a32323f13543209934d34ca35dd86ca autoconf-wrapper-4-r2.ebuild 809
-MISC ChangeLog 5980 RMD160 691e9158506beae8e62b8e49103e3f8ee25b3a2d SHA1 b0e23fccaf79fc67c475bb835766c933c7cbc87e SHA256 3829d7fd962db10986d5ffd1c5f7743fbc72fd7f14519ac4e19b460390dc34ec
-MD5 01e1c60b151e457fabca4af46a7bdc6b ChangeLog 5980
-RMD160 691e9158506beae8e62b8e49103e3f8ee25b3a2d ChangeLog 5980
-SHA256 3829d7fd962db10986d5ffd1c5f7743fbc72fd7f14519ac4e19b460390dc34ec ChangeLog 5980
+EBUILD autoconf-wrapper-4-r3.ebuild 809 RMD160 ce65f645651a7fa2e3ed769d55bc2a816f5608d2 SHA1 e8ef75c49461eb8c92db0399011cd1d0868347a6 SHA256 6822924984b2ec1a401a9ceb63a742fc73c062722b6718f22a942b7c9bafeb2a
+MD5 1def875dfc35e63f4db938367d458491 autoconf-wrapper-4-r3.ebuild 809
+RMD160 ce65f645651a7fa2e3ed769d55bc2a816f5608d2 autoconf-wrapper-4-r3.ebuild 809
+SHA256 6822924984b2ec1a401a9ceb63a742fc73c062722b6718f22a942b7c9bafeb2a autoconf-wrapper-4-r3.ebuild 809
+MISC ChangeLog 6182 RMD160 5537a95c0294672468a44c27bab31fe15a81ff06 SHA1 9f2ad261bbe681c42d9c5e48ffe5b0702667b1e3 SHA256 726552cac0de45e135f276fdb8ccce0bd8894672bdcf767afc61657ce8f8715e
+MD5 dfb6d1454436f390ed0a4168e6b8d26c ChangeLog 6182
+RMD160 5537a95c0294672468a44c27bab31fe15a81ff06 ChangeLog 6182
+SHA256 726552cac0de45e135f276fdb8ccce0bd8894672bdcf767afc61657ce8f8715e ChangeLog 6182
 MISC metadata.xml 164 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 SHA1 9c213f5803676c56439df3716be07d6692588856 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-autoconf-wrapper-3.2 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-autoconf-wrapper-3.2 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-autoconf-wrapper-3.2 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-autoconf-wrapper-3.2-r2 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-autoconf-wrapper-3.2-r2 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-autoconf-wrapper-3.2-r2 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-autoconf-wrapper-4-r2 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-autoconf-wrapper-4-r2 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-autoconf-wrapper-4-r2 1
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-autoconf-wrapper-3.2 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-autoconf-wrapper-3.2 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-autoconf-wrapper-3.2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-autoconf-wrapper-3.2-r2 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-autoconf-wrapper-3.2-r2 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-autoconf-wrapper-3.2-r2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-autoconf-wrapper-4-r3 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-autoconf-wrapper-4-r3 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-autoconf-wrapper-4-r3 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFaacUamhnQswr0vIRAlrxAKCB7siAv1bHqxybBBtx3JGVqT0gVQCgqfPF
+u7sxjq2D9x+8+KSbrqaeOAU=
+=iXc9
+-----END PGP SIGNATURE-----
