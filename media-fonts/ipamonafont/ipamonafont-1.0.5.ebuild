@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ipamonafont/ipamonafont-1.0.5.ebuild,v 1.1 2006/10/21 10:18:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ipamonafont/ipamonafont-1.0.5.ebuild,v 1.2 2006/11/26 22:51:44 flameeyes Exp $
 
 inherit font
 
@@ -13,9 +13,12 @@ LICENSE="grass-ipafonts as-is"
 RESTRICT="nomirror"
 
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~s390 ~sh ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~s390 ~sh ~x86 ~x86-fbsd"
 IUSE=""
 
 S="${WORKDIR}"
 FONT_SUFFIX="ttf"
 FONT_S="${S}/${MY_PN}-${PV}/fonts"
+
+# Only installs fonts
+RESTRICT="strip binchecks"

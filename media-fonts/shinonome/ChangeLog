@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/shinonome
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/shinonome/ChangeLog,v 1.17 2006/09/07 17:57:36 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/shinonome/ChangeLog,v 1.18 2006/11/26 23:04:38 flameeyes Exp $
+
+  26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  shinonome-0.9.11.ebuild:
+  Add ~x86-fbsd keyword, restrict binchecks and strip.
 
   07 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   shinonome-0.9.11.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/efont-unicode/efont-unicode-0.4.2-r1.ebuild,v 1.9 2006/10/30 12:13:30 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/efont-unicode/efont-unicode-0.4.2-r1.ebuild,v 1.10 2006/11/26 22:47:31 flameeyes Exp $
 
 inherit font font-ebdftopcf
 
@@ -15,9 +15,12 @@ SRC_URI="http://openlab.jp/efont/dist/unicode-bdf/${MY_P}.tar.bz2"
 # naga10 has free-noncomm license
 LICENSE="public-domain BAEKMUK X11 as-is"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ia64 ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha amd64 arm ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 
 S="${WORKDIR}/${MY_P}"
 FONT_S=${S}
 FONT_SUFFIX="pcf.gz"
 DOCS="README* COPYRIGHT ChangeLog INSTALL"
+
+# Only installs fonts
+RESTRICT="strip binchecks"

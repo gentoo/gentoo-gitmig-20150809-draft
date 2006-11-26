@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/mplus-fonts
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-fonts/ChangeLog,v 1.50 2006/10/20 21:26:27 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-fonts/ChangeLog,v 1.51 2006/11/26 23:03:15 flameeyes Exp $
+
+  26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  mplus-fonts-2.2.4.ebuild:
+  Add ~x86-fbsd keyword, restrict binchecks and strip.
 
   20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   mplus-fonts-2.2.4.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/kochi-substitute
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/kochi-substitute/ChangeLog,v 1.24 2006/04/02 17:47:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/kochi-substitute/ChangeLog,v 1.25 2006/11/26 22:57:20 flameeyes Exp $
+
+  26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kochi-substitute-20030809-r3.ebuild:
+  Add ~x86-fbsd keyword, restrict binchecks and strip.
 
   02 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   kochi-substitute-20030809-r3.ebuild:

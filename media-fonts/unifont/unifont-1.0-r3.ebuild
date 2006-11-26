@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/unifont-1.0-r3.ebuild,v 1.10 2006/11/26 20:12:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/unifont-1.0-r3.ebuild,v 1.11 2006/11/26 23:10:11 flameeyes Exp $
 
 inherit eutils
 
@@ -23,9 +23,12 @@ RDEPEND=""
 FONTPATH="/usr/share/fonts/${PN}"
 S="${WORKDIR}/${PN}-dvdeug-${PV}"
 
+# Only installs fonts
+RESTRICT="strip binchecks"
+
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch "${WORKDIR}/${P/-/_}-1.diff"
 }
 
@@ -37,5 +40,5 @@ src_compile() {
 src_install() {
 	insinto ${FONTPATH}
 	doins unifont*.gz
-	use X && mkfontdir ${D}${FONTPATH}
+	use X && mkfontdir "${D}${FONTPATH}"
 }
