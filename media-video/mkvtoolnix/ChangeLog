@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.65 2006/11/19 12:37:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.66 2006/11/26 17:19:33 aballier Exp $
+
+*mkvtoolnix-1.8.1 (26 Nov 2006)
+
+  26 Nov 2006; Alexis Ballier <aballier@gentoo.org>
+  +mkvtoolnix-1.8.1.ebuild:
+  Version bump, bug fix release and support of
+  --with-wx-config=/path/to/wx/config
 
   19 Nov 2006; Alexis Ballier <aballier@gentoo.org>
   +files/mkvtoolnix-1.8.0-wxgtk.patch, mkvtoolnix-1.8.0.ebuild:
