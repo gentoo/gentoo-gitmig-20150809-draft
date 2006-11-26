@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font-ttf/mikachan-font-ttf-8.9-r1.ebuild,v 1.6 2006/10/12 23:26:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font-ttf/mikachan-font-ttf-8.9-r1.ebuild,v 1.7 2006/11/26 21:45:37 flameeyes Exp $
 
 inherit font
 
@@ -21,6 +21,9 @@ IUSE=""
 S="${WORKDIR}"
 FONT_S="${S}"
 FONT_SUFFIX="ttf"
+
+# Only installs fonts
+RESTRICT="strip binchecks"
 
 src_install() {
 	insinto /usr/share/fonts/${PN}
