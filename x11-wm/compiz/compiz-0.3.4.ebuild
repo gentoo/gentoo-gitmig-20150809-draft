@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.3.4.ebuild,v 1.1 2006/11/22 22:59:10 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.3.4.ebuild,v 1.2 2006/11/26 15:56:21 hanno Exp $
 
 inherit eutils gnome2
 
@@ -18,6 +18,7 @@ DEPEND=">=media-libs/mesa-6.5.1-r1
 	x11-libs/libXdamage
 	x11-libs/libXrandr
 	x11-libs/libXcomposite
+	x11-libs/libXinerama
 	media-libs/libpng
 	>=x11-libs/libwnck-2.16.1
 	>=gnome-base/control-center-2.16.1
