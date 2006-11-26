@@ -1,11 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shapecfg/shapecfg-36.ebuild,v 1.1 2005/11/15 00:48:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shapecfg/shapecfg-36.ebuild,v 1.2 2006/11/26 18:16:00 beandog Exp $
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="configuration tool for setting traffic bandwidth parameters"
-HOMEPAGE=""
+HOMEPAGE="ftp://archive.download.redhat.com/pub/redhat/linux/9/en/os/i386/SRPMS http://sourceforge.net/projects/cbqinit"
 SRC_URI="mirror://gentoo/shaper.${PV}.tar.gz"
 
 LICENSE="GPL-2"

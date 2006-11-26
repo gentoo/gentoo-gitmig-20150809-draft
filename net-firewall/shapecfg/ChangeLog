@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/shapecfg
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shapecfg/ChangeLog,v 1.1 2005/11/15 00:48:55 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shapecfg/ChangeLog,v 1.2 2006/11/26 18:16:00 beandog Exp $
+
+  26 Nov 2006; Steve Dibb <beandog@gentoo.org> +metadata.xml,
+  shapecfg-36.ebuild:
+  Update homepage
 
 *shapecfg-36 (14 Nov 2005)
 
