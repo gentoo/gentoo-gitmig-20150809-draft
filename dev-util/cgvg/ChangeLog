@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/cgvg
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cgvg/ChangeLog,v 1.1 2006/11/26 08:16:41 gregkh Exp $
+
+*cgvg-1.6.2 (26 Nov 2006)
+
+  26 Nov 2006; Greg Kroah-Hartman <gregkh@gentoo.org> +metadata.xml,
+  +cgvg-1.6.2.ebuild:
+  initial version of the ebuild
+
