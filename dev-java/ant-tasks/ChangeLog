@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/ant-tasks
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.40 2006/11/26 21:40:44 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.41 2006/11/26 21:45:04 betelgeuse Exp $
+
+  26 Nov 2006; Petteri Räty <betelgeuse@gentoo.org>
+  ant-tasks-1.6.5-r2.ebuild:
+  Changing sun-javamail-bin dependency to >=1.3.1-r1 as java-pkg.eclass used
+  to produce bad package.env files. Hopefully will get to more people this
+  way.
 
   26 Nov 2006; Petteri Räty <betelgeuse@gentoo.org> -files/1.6.2-scp.patch,
   -ant-tasks-1.6.2-r9.ebuild, -ant-tasks-1.6.2-r10.ebuild,
