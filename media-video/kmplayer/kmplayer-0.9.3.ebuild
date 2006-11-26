@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.9.3.ebuild,v 1.5 2006/11/25 23:47:36 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.9.3.ebuild,v 1.6 2006/11/26 00:08:35 masterdriverz Exp $
 
 inherit kde eutils
 
@@ -27,10 +27,10 @@ RDEPEND="mplayer? ( || ( media-video/mplayer media-video/mplayer-bin ) )
 need-kde 3.5.4
 
 pkg_setup() {
-	if ! use mplayer && ! use xine ; then
+	if ! use mplayer && ! use xine && ! use gstreamer; then
 		echo
-		ewarn "Neither mplayer nor xine use flag is set. Either one is needed."
-		ewarn "You can install mplayer later, though.\n"
+		ewarn "Neither the mplayer, xine or gstreamer use flags have been set."
+		ewarn "One is needed, you can install mplayer later, though.\n"
 	fi
 }
 
