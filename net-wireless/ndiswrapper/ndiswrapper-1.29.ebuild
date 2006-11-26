@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.29.ebuild,v 1.1 2006/11/25 09:13:15 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.29.ebuild,v 1.2 2006/11/26 10:33:53 betelgeuse Exp $
 
 inherit eutils linux-mod
 
@@ -55,7 +55,14 @@ src_compile() {
 
 	use usb || params="DISABLE_USB=1"
 
-	BUILD_PARAMS="${BUILD_PARAMS} ${params}" linux-mod_src_compile
+	# Does not like parallel builds
+	# http://bugs.gentoo.org/show_bug.cgi?id=154213
+
+	# KBUILD trick needed to build against sources where only make
+	# modules_prepare has been run so /lib/modules/$(uname -r) does
+	# not exists yet
+
+	BUILD_PARAMS="KBUILD='${KERNEL_DIR}' ${BUILD_PARAMS} ${params} -j1" linux-mod_src_compile
 }
 
 src_install() {
