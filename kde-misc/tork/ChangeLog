@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/tork
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.12 2006/11/21 12:36:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.13 2006/11/26 15:44:24 flameeyes Exp $
+
+*tork-0.12 (26 Nov 2006)
+
+  26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/tork-0.11-external-tsocks.patch, -tork-0.11.ebuild,
+  +tork-0.12.ebuild:
+  Version bump (and remove 0.11 with the patch that's now merged).
 
   21 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Give this back to kde herd.
