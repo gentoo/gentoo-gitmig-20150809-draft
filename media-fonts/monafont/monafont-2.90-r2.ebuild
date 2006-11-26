@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/monafont-2.90-r2.ebuild,v 1.11 2006/10/30 11:55:39 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/monafont-2.90-r2.ebuild,v 1.12 2006/11/26 22:13:41 flameeyes Exp $
 
 inherit font
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="truetype"
 
 DEPEND="|| ( ( x11-apps/bdftopcf x11-apps/mkfontdir ) <virtual/x11-7 )
@@ -27,9 +27,12 @@ FONT_S="${WORKDIR}"
 FONT_SUFFIX="ttf"
 FONTDIR="/usr/share/fonts/${PN}"
 
+# Only installs fonts
+RESTRICT="strip binchecks"
+
 src_unpack() {
 	unpack ${A}
-	sed -i -e 's:$(X11BINDIR)/mkdirhier:/bin/mkdir -p:' ${S}/Makefile
+	sed -i -e 's:$(X11BINDIR)/mkdirhier:/bin/mkdir -p:' "${S}/Makefile"
 }
 
 src_compile() {
@@ -52,19 +55,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "You need to add following line into 'Section \"Files\"' in"
-	einfo "XF86Config and reboot X Window System, to use these fonts."
-	einfo
-	einfo "\tFontPath \"${FONTDIR}\""
-	einfo
-}
-
-pkg_postrm() {
-	einfo
-	einfo "You need to remove following line in 'Section \"Files\"' in"
-	einfo "XF86Config, to unmerge this package completely."
-	einfo
-	einfo "\tFontPath \"${FONTDIR}\""
-	einfo
+	elog
+	elog "You need to add following line into 'Section \"Files\"' in"
+	elog "XF86Config and reboot X Window System, to use these fonts."
+	elog
+	elog "\tFontPath \"${FONTDIR}\""
+	elog
 }
