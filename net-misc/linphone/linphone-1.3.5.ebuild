@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/linphone-1.3.5.ebuild,v 1.9 2006/07/01 11:08:57 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/linphone-1.3.5.ebuild,v 1.10 2006/11/26 20:48:22 drizzt Exp $
+
+WANT_AUTOCONF=latest
+WANT_AUTOMAKE=latest
 
 inherit eutils autotools
 
@@ -36,19 +39,21 @@ S_ILBC="${WORKDIR}/${PN}-plugin-ilbc-1.2.0"
 
 src_unpack() {
 	unpack ${A}
-	grep " \-Werror" * -Rl | xargs sed -i "s: -Werror::"
+	grep -Rl --null " \-Werror" . | xargs -0 sed -i "s: -Werror::"
 
-	cd ${S}
+	cd "${S}"
 	# fix #99083
-	epatch ${FILESDIR}/${PN}-1.0.1-ipv6-include.diff
+	epatch "${FILESDIR}"/${PN}-1.0.1-ipv6-include.diff
+	# fix #132824
+	epatch "${FILESDIR}"/${P}-docs.diff
 
 	if use ilbc; then
-		cd ${S_ILBC}
+		cd "${S_ILBC}"
 		# add -fPIC and custom cflags to ilbc makefile
-		epatch ${FILESDIR}/ilbc-1.2.0-makefile.diff
-		cd ${S}
+		epatch "${FILESDIR}"/ilbc-1.2.0-makefile.diff
+		cd "${S}"
 	fi
-	AT_M4DIR="${S}/m4" eautoreconf
+	./autogen.sh
 }
 
 src_compile() {
@@ -75,26 +80,28 @@ src_compile() {
 
 	emake || die "Unable to make"
 
-	use ilbc && \
-		emake LINPHONE_SOURCE=${S} \
+	if use ilbc; then
+		emake LINPHONE_SOURCE="${S}" \
 		PLUGINS_INSTALL_PATH=/usr/$(get_libdir)/linphone/plugins/mediastreamer \
-		-C ${S_ILBC} || die
+		-C "${S_ILBC}" || die
+	fi
 }
 
 src_install () {
-	make DESTDIR=${D} install || die "Failed to install"
+	emake DESTDIR="${D}" install || die "Failed to install"
 
-	use ilbc && \
-		make LINPHONE_SOURCE=${S} \
+	if use ilbc; then
+		emake LINPHONE_SOURCE="${S}" \
 		PLUGINS_INSTALL_PATH=/usr/$(get_libdir)/linphone/plugins/mediastreamer \
-		DESTDIR=${D} -C ${S_ILBC} install || die
+		DESTDIR="${D}" -C "${S_ILBC}" install || die
+	fi
 
 	dodoc ABOUT-NLS AUTHORS BUGS ChangeLog COPYING INSTALL NEWS README
 	dodoc README.arm TODO
 
 	# don't install ortp includes, docs and pkgconfig files
 	# to avoid conflicts with net-libs/ortp
-	rm -rf ${D}/usr/include/ortp
-	rm -rf ${D}/usr/share/gtk-doc/html/ortp
-	rm -rf ${D}/usr/$(get_libdir)/linphone/pkgconfig
+	rm -rf "${D}"/usr/include/ortp
+	rm -rf "${D}"/usr/share/gtk-doc/html/ortp
+	rm -rf "${D}"/usr/$(get_libdir)/linphone/pkgconfig
 }
