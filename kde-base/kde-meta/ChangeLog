@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kde-meta
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.64 2006/11/26 12:03:00 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.65 2006/11/26 12:30:02 masterdriverz Exp $
+
+  26 Nov 2006; Charlie Shepherd <masterdriverz@gentoo.org>
+  kde-meta-3.5.5.ebuild:
+  Comment out nls use flag, pending RFC on -dev
 
   26 Nov 2006; Charlie Shepherd <masterdriverz@gentoo.org>
   kde-meta-3.5.5.ebuild:
