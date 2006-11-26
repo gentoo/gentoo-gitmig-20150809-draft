@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smclone/smclone-0.99.3.ebuild,v 1.1 2006/11/20 22:15:18 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smclone/smclone-0.99.3.ebuild,v 1.2 2006/11/26 19:16:50 nyhm Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND="dev-games/cegui
+RDEPEND=">=dev-games/cegui-0.5.0
 	virtual/opengl
 	virtual/glu
 	media-libs/libsdl
