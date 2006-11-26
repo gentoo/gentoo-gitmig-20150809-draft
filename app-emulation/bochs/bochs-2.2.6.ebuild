@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.2.6.ebuild,v 1.2 2006/06/11 21:01:38 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.2.6.ebuild,v 1.3 2006/11/26 20:47:10 lu_zero Exp $
 
 inherit eutils wxwidgets
 
@@ -91,7 +91,7 @@ src_compile() {
 		--enable-sse=2 --enable-3dnow --enable-plugins \
 		--enable-cpu-level=6 --enable-all-optimizations \
 		--enable-ne2000 --enable-sb16=linux --enable-clgd54xx \
-		--enable-smp --enable-apic --enable-compressed-hd \
+		--enable-apic --enable-compressed-hd \
 		--enable-pni --enable-sep --host=${CHOST} \
 		--libdir=/usr/$(get_libdir) --prefix=/usr \
 		${myconf} || die "configure failed"
