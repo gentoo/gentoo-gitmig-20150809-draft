@@ -1,18 +1,19 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-resume/mplayer-resume-1.3.ebuild,v 1.1 2006/10/25 16:27:09 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-resume/mplayer-resume-1.3.ebuild,v 1.2 2006/11/26 15:47:08 beandog Exp $
 
 inherit depend.php
 
 DESCRIPTION="MPlayer wrapper script to save/resume playback position"
-HOMEPAGE="http://www.wonkabar.org/~steve/downloads/mplayer-resume/"
-SRC_URI="http://www.wonkabar.org/~steve/downloads/${PN}/${P}.tar.gz"
+HOMEPAGE="http://www.spaceparanoids.org/trac/bend/wiki/mplayer-resume"
+SRC_URI="http://spaceparanoids.org/downloads/mplayer-resume/${P}.tar.gz"
 LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 DEPEND=""
-RDEPEND="app-misc/lirc media-video/mplayer"
+RDEPEND="app-misc/lirc
+	media-video/mplayer"
 
 need_php_cli
 
@@ -23,8 +24,8 @@ pkg_setup() {
 	if ! built_with_use media-video/mplayer lirc
 	then
 		eerror "media-video/mplayer must also be compiled with the"
-		eerror "lirc USE flag to work properly with mplayer-resume."
-		die "Fix mplayer USE flags and re-emerge"
+		eerror "lirc use flag to work properly with mplayer-resume."
+		die "Fix mplayer use flags and re-emerge"
 	fi
 }
 
