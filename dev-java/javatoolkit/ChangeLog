@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/javatoolkit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javatoolkit/ChangeLog,v 1.19 2006/11/26 11:27:29 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javatoolkit/ChangeLog,v 1.20 2006/11/26 11:31:33 betelgeuse Exp $
+
+  26 Nov 2006; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
+  Moving under the java herd umbrella.
 
   26 Nov 2006; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
   -javatoolkit-0.1.0.ebuild:
