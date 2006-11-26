@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.46 2006/11/26 21:31:00 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.47 2006/11/26 21:59:41 betelgeuse Exp $
 
 inherit multilib
 
@@ -262,11 +262,11 @@ java-pkg_dojar()
 				# the cause.
 				if [ -z "${cp_append}" ] ; then
 					cp_append=$(grep "CLASSPATH=" "${sharepath}/${i}/package.env" \
-						| sed -e "s/CLASSPATH=//" -e 's/"//')
+						| sed -e "s/CLASSPATH=//" -e 's/"//g')
 				else
 					cp_append="${cp_append}:$(grep "CLASSPATH=" \
 					"${sharepath}/${i}/package.env" \
-						| sed -e "s/CLASSPATH=//" -e 's/"//')"
+						| sed -e "s/CLASSPATH=//" -e 's/"//g')"
 				fi
 			else
 				debug-print "Error:  Package ${i} not found."
