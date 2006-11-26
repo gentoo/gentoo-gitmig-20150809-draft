@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/arphicfonts
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.29 2006/10/20 23:56:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.30 2006/11/26 22:25:40 flameeyes Exp $
+
+  26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  arphicfonts-0.1.20060928.ebuild:
+  Add ~x86-fbsd keyword, restrict binchecks and strip.
 
 *arphicfonts-0.1.20060928 (20 Oct 2006)
 

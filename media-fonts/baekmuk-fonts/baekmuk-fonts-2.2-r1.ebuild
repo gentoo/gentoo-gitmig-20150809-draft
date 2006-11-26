@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/baekmuk-fonts-2.2-r1.ebuild,v 1.6 2006/09/07 15:41:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/baekmuk-fonts-2.2-r1.ebuild,v 1.7 2006/11/26 22:29:12 flameeyes Exp $
 
 inherit font font-ebdftopcf
 
@@ -21,12 +21,15 @@ IUSE="unicode X"
 
 S=${WORKDIR}
 
+# Only installs fonts
+RESTRICT="strip binchecks"
+
 src_unpack() {
 	unpack ${BDF_P}.tar.gz
 	use X && unpack ${TTF_P}.tar.gz
 
 	if use unicode ; then
-		cd ${WORKDIR}/${BDF_P}/bdf
+		cd "${WORKDIR}/${BDF_P}/bdf"
 		unpack ${UNI_P}.tar.bz2
 	fi
 }
@@ -37,6 +40,6 @@ src_compile() {
 }
 
 src_install () {
-	use X && FONT_S=${S}/${TTF_P}/ttf FONT_SUFFIX="ttf" font_src_install
-	FONT_S=${S}/${BDF_P}/bdf FONT_SUFFIX="pcf.gz" font_src_install
+	use X && FONT_S="${S}/${TTF_P}/ttf" FONT_SUFFIX="ttf" font_src_install
+	FONT_S="${S}/${BDF_P}/bdf" FONT_SUFFIX="pcf.gz" font_src_install
 }

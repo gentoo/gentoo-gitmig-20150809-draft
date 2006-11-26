@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sazanami/sazanami-20040629.ebuild,v 1.10 2006/09/03 06:43:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sazanami/sazanami-20040629.ebuild,v 1.11 2006/11/26 22:18:58 flameeyes Exp $
 
 inherit font
 
@@ -12,15 +12,17 @@ SRC_URI="mirror://sourceforge.jp/efont/10087/${P}.tar.bz2"
 # shinonome, ayu, kappa -> public-domain
 LICENSE="as-is public-domain"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ppc ~ppc-macos ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm ia64 ppc ~ppc-macos ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 FONT_SUFFIX="ttf"
 
 DOCS="docs/README"
 
-src_install() {
+# Only installs fonts
+RESTRICT="strip binchecks"
 
+src_install() {
 	font_src_install
 
 	cd doc
@@ -28,5 +30,4 @@ src_install() {
 		docinto $d
 		dodoc $d/*
 	done
-
 }
