@@ -1,8 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/linphone-1.5.1.ebuild,v 1.1 2006/11/26 15:17:55 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/linphone-1.5.1.ebuild,v 1.2 2006/11/26 16:36:18 drizzt Exp $
 
 MY_DPV="${PV%.*}.x"
+
+WANT_AUTOCONF="2.5"
+WANT_AUTOMAKE="1.9"
+
+inherit eutils autotools
 
 DESCRIPTION="Linphone is a SIP phone with a GNOME interface."
 HOMEPAGE="http://www.linphone.org"
@@ -31,6 +36,14 @@ RDEPEND="dev-libs/glib
 #	portaudio? ( >=media-libs/portaudio-19_pre )"
 
 DEPEND="${RDEPEND}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-pkgconfig.patch
+	./autogen.sh
+}
 
 src_compile() {
 	local withgnome myconf=""

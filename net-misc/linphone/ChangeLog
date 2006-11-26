@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/linphone
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/ChangeLog,v 1.17 2006/11/26 15:17:55 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/ChangeLog,v 1.18 2006/11/26 16:36:18 drizzt Exp $
+
+  26 Nov 2006; Timothy Redaelli <drizzt@gentoo.org>
+  +files/linphone-1.5.1-pkgconfig.patch, linphone-1.5.1.ebuild:
+  Added an explicit call to PKG_PROG_PKG_CONFIG (thx to Flameeyes) in
+  configure.in.
 
 *linphone-1.5.1 (26 Nov 2006)
 
