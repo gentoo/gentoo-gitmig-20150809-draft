@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvipdfmx/xdvipdfmx-0.3.ebuild,v 1.6 2006/11/06 13:46:39 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvipdfmx/xdvipdfmx-0.3.ebuild,v 1.7 2006/11/26 17:42:24 beandog Exp $
 
 DESCRIPTION="Extended xdvi for use with XeTeX and other unicode TeXs."
-HOMEPAGE="somewhere"
+HOMEPAGE="http://scripts.sil.org/svn-view/xdvipdfmx/"
 SRC_URI="http://scripts.sil.org/svn-view/xdvipdfmx/TAGS/${P}.tar.gz"
 
 LICENSE="GPL-2-with-linking-exception"
