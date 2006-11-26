@@ -7,4 +7,9 @@ dev-libs/libiconv
 >=sys-fs/xfsprogs-2.8.10
 
 # newer versions require stropts.h which uclibc doesnt implement [yet]
->=sys-fs/udev-090
+~sys-fs/udev-090
+~sys-fs/udev-094
+~sys-fs/udev-096
+~sys-fs/udev-098
+~sys-fs/udev-099
+~sys-fs/udev-100
