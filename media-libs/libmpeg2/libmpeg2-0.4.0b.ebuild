@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.34 2006/11/06 07:22:15 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.35 2006/11/26 13:37:15 aballier Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -62,7 +62,7 @@ src_compile() {
 		${myconf} \
 		|| die
 	# builds non-pic library by default? (bug #44934)
-	emake LIBMPEG2_CFLAGS= || die "emake failed"
+	emake OPT_CFLAGS="${CFLAGS}" MPEG2DEC_CFLAGS="${CFLAGS}" LIBMPEG2_CFLAGS= || die "emake failed"
 }
 
 src_install() {

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmpeg2
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/ChangeLog,v 1.52 2006/11/15 12:01:47 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/ChangeLog,v 1.53 2006/11/26 13:37:15 aballier Exp $
+
+  26 Nov 2006; Alexis Ballier <aballier@gentoo.org> libmpeg2-0.4.0b.ebuild,
+  libmpeg2-0.4.1.ebuild:
+  Honour cflags, bug #156252
 
   15 Nov 2006; Matthias Schwarzott <zzam@gentoo.org> libmpeg2-0.4.1.ebuild:
   Removed amd64-specific hack to disable acceleration.
