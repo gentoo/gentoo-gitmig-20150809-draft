@@ -1,6 +1,14 @@
 # ChangeLog for app-portage/elogv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.4 2006/11/17 13:33:59 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.5 2006/11/26 09:59:56 opfer Exp $
+
+*elogv-0.5 (26 Nov 2006)
+*elogv-0.4.2 (26 Nov 2006)
+
+  26 Nov 2006; Christian Faulhammer <opfer@gentoo.org> +elogv-0.4.2.ebuild,
+  +elogv-0.5.ebuild:
+  version bumps, no big changes, some usability improvements. Reported by Luca
+  Marturana <lucamarturana@gmail.com> in bug #156253
 
   17 Nov 2006; Tobias Scherbaum <dertobi123@gentoo.org> elogv-0.4.1.ebuild:
   Added ~ppc
