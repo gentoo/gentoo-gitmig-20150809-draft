@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rarpd/rarpd-1.1-r2.ebuild,v 1.10 2006/10/13 05:42:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rarpd/rarpd-1.1-r2.ebuild,v 1.11 2006/11/26 19:49:44 corsair Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.dementia.org/pub/net-tools/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ppc ~ppc64 sparc x86"
+KEYWORDS="~amd64 ~hppa ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND=">=net-libs/libnet-1.0.2a-r3
