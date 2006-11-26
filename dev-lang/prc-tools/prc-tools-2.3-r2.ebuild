@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/prc-tools-2.3-r2.ebuild,v 1.2 2006/11/23 09:27:33 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/prc-tools-2.3-r2.ebuild,v 1.3 2006/11/26 18:05:55 opfer Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -116,8 +116,8 @@ src_install() {
 	rm -rf "${D}"/usr/share/locale/
 	rm -f "${D}"/usr/share/info/gdb.info*
 	rm -f "${D}"/usr/share/info/gdbint*
-	rm -f "${D}"/usr/share/info/standards.info.gz
-	rm -f "${D}"/usr/share/info/stabs.info.gz
+	rm -f "${D}"/usr/share/info/standards.info*
+	rm -f "${D}"/usr/share/info/stabs.info*
 }
 
 pkg_postinst() {
