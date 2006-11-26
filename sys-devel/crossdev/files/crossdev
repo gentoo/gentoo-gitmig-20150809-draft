@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.80 2006/11/16 21:58:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.81 2006/11/26 15:54:07 vapier Exp $
 
 cd /
 
@@ -457,7 +457,7 @@ einfo "PORTAGE_TMPDIR:        ${PORTAGE_TMPDIR}"
 hr
 ) >& ${PORT_LOGDIR}/cross-${CTARGET}-info.log || exit 1
 cat ${PORT_LOGDIR}/cross-${CTARGET}-info.log
-emerge --info >> ${PORT_LOGDIR}/cross-${CTARGET}-info.log
+emerge -v --info >> ${PORT_LOGDIR}/cross-${CTARGET}-info.log
 
 ####################################
 ### Fix up portage files / paths ###
