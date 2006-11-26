@@ -1,6 +1,14 @@
 # ChangeLog for media-video/kmplayer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.77 2006/11/25 23:47:36 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.78 2006/11/26 00:08:35 masterdriverz Exp $
+
+  26 Nov 2006; Charlie Shepherd <masterdriverz@gentoo.org>
+  kmplayer-0.9.3.ebuild:
+  Make pkg_setup warn only if mplayer, xine and gstreamer flags are unset
+
+  26 Nov 2006; Charlie Shepherd <masterdriverz@gentoo.org>
+  kmplayer-0.9.3.ebuild:
+  Make pkg_setup warn only if mplayer, xine and gstreamer flags are unset
 
   25 Nov 2006; Timothy Redaelli <drizzt@gentoo.org> kmplayer-0.9.3.ebuild:
   Stable on ppc wrt bug #152558.
