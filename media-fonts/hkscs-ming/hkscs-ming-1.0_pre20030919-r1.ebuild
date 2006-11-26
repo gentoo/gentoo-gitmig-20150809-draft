@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/hkscs-ming/hkscs-ming-1.0_pre20030919-r1.ebuild,v 1.9 2006/11/26 21:58:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/hkscs-ming/hkscs-ming-1.0_pre20030919-r1.ebuild,v 1.10 2006/11/26 22:03:35 flameeyes Exp $
 
 inherit rpm font
 
@@ -25,8 +25,8 @@ FONT_SUFFIX="ttf"
 
 src_unpack() {
 	# complicated and convoluted unpack procedure
-	LINENUMBER=237
-	cd "${S}"; tail -n +${LINENUMBER} "${DISTDIR}/${A}" | tar zxvf - || die "unpack failed"
+	local linenumber=237
+	cd "${S}"; tail -n +${linenumber} "${DISTDIR}/${A}" | tar zxvf - || die "unpack failed"
 
 	# then we rpm_unpack the fonts package
 	rpm_unpack "${S}/package_rh/imfont-${RPM_V}-0.i386.rpm"

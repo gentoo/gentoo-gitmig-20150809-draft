@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/hkscs-ming
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/hkscs-ming/ChangeLog,v 1.9 2006/11/26 21:58:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/hkscs-ming/ChangeLog,v 1.10 2006/11/26 22:03:35 flameeyes Exp $
+
+  26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  hkscs-ming-1.0_pre20030919-r1.ebuild:
+  Declare linenumber a locak to shut up Timothy.
 
   26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   hkscs-ming-1.0_pre20030919-r1.ebuild:
