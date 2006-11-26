@@ -1,0 +1,10 @@
+# ChangeLog for app-xemacs/hyperbole
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/hyperbole/ChangeLog,v 1.1 2006/11/26 08:12:44 graaff Exp $
+
+*hyperbole-1.16 (26 Nov 2006)
+
+  26 Nov 2006; Hans de Graaff <graaff@gentoo.org> +metadata.xml,
+  +hyperbole-1.16.ebuild:
+  Initial version.
+
