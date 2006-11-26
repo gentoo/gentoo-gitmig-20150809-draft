@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r5.ebuild,v 1.4 2006/10/31 17:33:55 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r5.ebuild,v 1.5 2006/11/26 11:26:01 opfer Exp $
 
 inherit flag-o-matic eutils alternatives toolchain-funcs
 
@@ -53,15 +53,15 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/emacs-21.3-xorg.patch
-	epatch ${FILESDIR}/emacs-21.3-amd64.patch
-	epatch ${FILESDIR}/emacs-21.3-hppa.patch
-	epatch ${FILESDIR}/emacs-21.2-sh.patch
-	epatch ${FILESDIR}/emacs-21.4-libungif-gif-gentoo.patch
+	epatch "${FILESDIR}/emacs-21.3-xorg.patch"
+	epatch "${FILESDIR}/emacs-21.3-amd64.patch"
+	epatch "${FILESDIR}/emacs-21.3-hppa.patch"
+	epatch "${FILESDIR}/emacs-21.2-sh.patch"
+	epatch "${FILESDIR}/emacs-21.4-libungif-gif-gentoo.patch"
 
-	use ppc64 && epatch ${FILESDIR}/emacs-21.3-ppc64.patch
+	use ppc64 && epatch "${FILESDIR}/emacs-21.3-ppc64.patch"
 
-	epatch ${FILESDIR}/emacs-subdirs-el-gentoo.diff
+	epatch "${FILESDIR}/emacs-subdirs-el-gentoo.diff"
 
 	# This will need to be updated for X-Compilation
 	sed -i -e "s:/usr/lib/\([^ ]*\).o:/usr/$(get_libdir)/\1.o:g" \
