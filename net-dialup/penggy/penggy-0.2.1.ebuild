@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/penggy/penggy-0.2.1.ebuild,v 1.10 2006/09/24 07:55:51 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/penggy/penggy-0.2.1.ebuild,v 1.11 2006/11/26 18:11:36 beandog Exp $
 
 inherit eutils autotools
 
 DESCRIPTION="Provide access to Internet using the AOL/Compuserve network."
-HOMEPAGE="None available"
+HOMEPAGE="http://savannah.nongnu.org/projects/pengfork/"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
