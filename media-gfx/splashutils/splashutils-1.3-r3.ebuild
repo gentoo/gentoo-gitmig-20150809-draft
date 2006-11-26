@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.3-r3.ebuild,v 1.2 2006/11/26 17:31:52 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.3-r3.ebuild,v 1.3 2006/11/26 17:34:49 spock Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -104,7 +104,7 @@ src_unpack() {
 	# Fix path to klibc headers on multilib systems
 	sed -i -e "s:/lib/klibc:/$(get_libdir)/klibc:" ${S}/Makefile
 
-	# Do not display a list of services to be started during boot.
+	# Do not display a list of services to be started during boot
 	sed -i -e '509 d' ${SG}/splash-functions.sh
 }
 
