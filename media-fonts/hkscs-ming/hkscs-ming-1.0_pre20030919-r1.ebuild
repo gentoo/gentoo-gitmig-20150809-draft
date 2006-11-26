@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/hkscs-ming/hkscs-ming-1.0_pre20030919-r1.ebuild,v 1.8 2006/09/03 06:38:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/hkscs-ming/hkscs-ming-1.0_pre20030919-r1.ebuild,v 1.9 2006/11/26 21:58:45 flameeyes Exp $
 
 inherit rpm font
 
-RESTRICT="nomirror nostrip"
+RESTRICT="nomirror strip binchecks"
 
 RPM_V=1.0
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.info.gov.hk/digital21/chi/hkscs/download/linux_redhat/setup.
 
 LICENSE="HKSCS"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm ia64 ppc s390 sh x86"
+KEYWORDS="alpha ~amd64 arm ia64 ppc s390 sh x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
@@ -26,26 +26,24 @@ FONT_SUFFIX="ttf"
 src_unpack() {
 	# complicated and convoluted unpack procedure
 	LINENUMBER=237
-	cd ${S}; tail -n +${LINENUMBER} ${DISTDIR}/${A} | tar zxv || die "unpack failed"
+	cd "${S}"; tail -n +${LINENUMBER} "${DISTDIR}/${A}" | tar zxvf - || die "unpack failed"
 
 	# then we rpm_unpack the fonts package
-	rpm_unpack ${S}/package_rh/imfont-${RPM_V}-0.i386.rpm
+	rpm_unpack "${S}/package_rh/imfont-${RPM_V}-0.i386.rpm"
 }
 
-src_compile() {
-	return
-}
+src_compile() { :; }
 
 pkg_postinst() {
-	einfo "The font name installed is 'Ming(for ISO10646)'. To add make it"
-	einfo "the default Chinese font, you should add entries to your"
-	einfo "/etc/fonts/local.conf similar to:"
-	einfo
-	einfo "<alias>"
-	einfo "    <family>Luxi Sans</family>"
-	einfo "    <family>Bitstream Vera Sans</family>"
-	einfo "    <family>Ming(for ISO10646)</family>"
-	einfo "    <default><family>sans-serif</family></default>"
-	einfo "</alias>"
-	einfo
+	elog "The font name installed is 'Ming(for ISO10646)'. To add make it"
+	elog "the default Chinese font, you should add entries to your"
+	elog "/etc/fonts/local.conf similar to:"
+	elog
+	elog "<alias>"
+	elog "	   <family>Luxi Sans</family>"
+	elog "	   <family>Bitstream Vera Sans</family>"
+	elog "	   <family>Ming(for ISO10646)</family>"
+	elog "	   <default><family>sans-serif</family></default>"
+	elog "</alias>"
+	elog
 }
