@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/aquapfont
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquapfont/ChangeLog,v 1.19 2006/07/11 11:15:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquapfont/ChangeLog,v 1.20 2006/11/26 22:07:47 flameeyes Exp $
+
+  26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  aquapfont-2.5-r1.ebuild:
+  Add ~x86-fbsd keyword, fix quoting, add binchecks and strip restricts.
 
   11 Jul 2006; Aron Griffis <agriffis@gentoo.org> aquapfont-2.5-r1.ebuild:
   Mark 2.5-r1 stable on ia64
