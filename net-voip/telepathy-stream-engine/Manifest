@@ -1,34 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-DIST telepathy-stream-engine-0.3.13.tar.gz 365613 RMD160 285a973ceae0fe0fb5680ab39307330671fa2be0 SHA1 e02aad0533a33c0f49cd9ba6785be9498c29aa9a SHA256 080a1f3df65787ca7cee8f647e03cca8272bd4f56ee73a9696c7be00e2edbb3a
 DIST telepathy-stream-engine-0.3.14.tar.gz 365846 RMD160 c602064a63555879a8b96b35cbc9ceb6b2842eab SHA1 4cebad4905b83a5262d85f1f694fac05b9458087 SHA256 dd4759a002785f1dc538695b99a9da4442c9059fabeb476e83fb078fabd1acca
-EBUILD telepathy-stream-engine-0.3.13.ebuild 965 RMD160 28525e0cd74b3235fa1f3c32e2761701822cf06d SHA1 5ee4427e22e12e678a2f4042569cf0998eacfe07 SHA256 8dbe0d74e67e9bd3f0cead3dc4811dfba0c9cc775f148d3e8fecde7cbea86e7e
-MD5 13f8ec6adf9c8837c8159b9d60c8df72 telepathy-stream-engine-0.3.13.ebuild 965
-RMD160 28525e0cd74b3235fa1f3c32e2761701822cf06d telepathy-stream-engine-0.3.13.ebuild 965
-SHA256 8dbe0d74e67e9bd3f0cead3dc4811dfba0c9cc775f148d3e8fecde7cbea86e7e telepathy-stream-engine-0.3.13.ebuild 965
+DIST telepathy-stream-engine-0.3.15.tar.gz 364932 RMD160 71dee9adb16d199640429787ee68e5fecc55796b SHA1 445f9655d332605c5cc488719c27d25b0a23b88c SHA256 f3563499789dc5d212a1aa4948e24dd4820627d5e67e1eb9532c42e5cf8543bc
 EBUILD telepathy-stream-engine-0.3.14.ebuild 965 RMD160 2f32422a91a832e71ff238ff530b478da71ba7a6 SHA1 3b5f68cc959e2e9d0f643c16c7f9590dd84546f6 SHA256 720b948dfb28ccd9851cf359f910b89c94330b06830bf8bd3f566764b47060a3
 MD5 2b89ef0097705be5d9e143482c424997 telepathy-stream-engine-0.3.14.ebuild 965
 RMD160 2f32422a91a832e71ff238ff530b478da71ba7a6 telepathy-stream-engine-0.3.14.ebuild 965
 SHA256 720b948dfb28ccd9851cf359f910b89c94330b06830bf8bd3f566764b47060a3 telepathy-stream-engine-0.3.14.ebuild 965
-MISC ChangeLog 1550 RMD160 140e41e8c2305df3452215c0ee24da322a5b0f89 SHA1 1e36e6ae06af6792c0c356a7e49b678f04bc6734 SHA256 72ff39a4b72b84591984dc50ea2d2e1ef6c97e284ab395fded65c762ae301cf0
-MD5 ff0c20de6e0f5d30c4434d12412ded12 ChangeLog 1550
-RMD160 140e41e8c2305df3452215c0ee24da322a5b0f89 ChangeLog 1550
-SHA256 72ff39a4b72b84591984dc50ea2d2e1ef6c97e284ab395fded65c762ae301cf0 ChangeLog 1550
+EBUILD telepathy-stream-engine-0.3.15.ebuild 965 RMD160 90d125a9077f4b7e5f238eb532ee6fb2493a62db SHA1 718e8210e38f45759a6b62c49b98b68049a584f5 SHA256 8d0b32c483f2bdefee151dce36a715734755cfa3f5d6a604dfc4edd2b9e7e238
+MD5 22ec12404c6ec5142eee45360088b207 telepathy-stream-engine-0.3.15.ebuild 965
+RMD160 90d125a9077f4b7e5f238eb532ee6fb2493a62db telepathy-stream-engine-0.3.15.ebuild 965
+SHA256 8d0b32c483f2bdefee151dce36a715734755cfa3f5d6a604dfc4edd2b9e7e238 telepathy-stream-engine-0.3.15.ebuild 965
+MISC ChangeLog 1751 RMD160 3acb3f9464fdd43050deadfde0f1b16e4a3396f7 SHA1 bdc17c90c78bb81f718fbeee3898729d30e66be1 SHA256 7bed090029391a2233644dc8892fed3b9ea112d4b05f6834f3d8275111dc1f5e
+MD5 b6dcf65a77a918ecf442f61b182a9a91 ChangeLog 1751
+RMD160 3acb3f9464fdd43050deadfde0f1b16e4a3396f7 ChangeLog 1751
+SHA256 7bed090029391a2233644dc8892fed3b9ea112d4b05f6834f3d8275111dc1f5e ChangeLog 1751
 MISC metadata.xml 305 RMD160 3cefb2764dc78feb295addb8303d83b7d71b1667 SHA1 16cd8bdf5dc735bf68dad2d62fe4132f08527087 SHA256 8067602a9c13faf07e0e9e40d41df3b348c6a6351e2787491c703288c44d1ff0
 MD5 bbeaba2a7fbf9117ecc86cfd6217a61e metadata.xml 305
 RMD160 3cefb2764dc78feb295addb8303d83b7d71b1667 metadata.xml 305
 SHA256 8067602a9c13faf07e0e9e40d41df3b348c6a6351e2787491c703288c44d1ff0 metadata.xml 305
-MD5 0486bd445d63e24d75b0797d5221fb5b files/digest-telepathy-stream-engine-0.3.13 292
-RMD160 bb19feff75fbd5c92b641aad1ae504f35381b103 files/digest-telepathy-stream-engine-0.3.13 292
-SHA256 a21038435568c00f67fe198312305ba19277fefd092b843f9fcff07d61aa46ec files/digest-telepathy-stream-engine-0.3.13 292
 MD5 89e8ceab33903fc70163fc8ddbc0402c files/digest-telepathy-stream-engine-0.3.14 292
 RMD160 c5f959674753668e41c2f6a62309f563db8d471c files/digest-telepathy-stream-engine-0.3.14 292
 SHA256 9f1c5c95c24d5e2545ebd4af59d3978fba42869c7052e5e15b02bf2bbb168417 files/digest-telepathy-stream-engine-0.3.14 292
+MD5 2cfbe05f77b7208ac1a1ab43e3fa5fe1 files/digest-telepathy-stream-engine-0.3.15 292
+RMD160 5abb556f634e77e59cd271120017de1fe7c1abc9 files/digest-telepathy-stream-engine-0.3.15 292
+SHA256 27f351f381569209f196fbec293d7b7561d232bdc71651fd788c495242b4538f files/digest-telepathy-stream-engine-0.3.15 292
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFZF/tppoStNGKGywRAuGyAKDTaG4JwOx8bgB/MU8gCzp1yhQGPgCePVps
-dsKks8b2mcLOn9EaKm6i0QI=
-=kBVX
+iD8DBQFFahVLppoStNGKGywRAgAbAKCwhsXk6U1QYvaJnRMbpaQBGna37ACfRNaM
+CTuMQf46veZFrBbkiohfnHI=
+=LCNG
 -----END PGP SIGNATURE-----
