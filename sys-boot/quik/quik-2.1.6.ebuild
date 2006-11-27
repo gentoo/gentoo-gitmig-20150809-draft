@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/quik/quik-2.1.6.ebuild,v 1.1 2005/05/26 15:15:26 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/quik/quik-2.1.6.ebuild,v 1.2 2006/11/27 21:58:35 josejx Exp $
 
 inherit toolchain-funcs mount-boot eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.shiner.info/files/Yellow%20Dog%20Linux%204/quik/quik-${MY_PV
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="-* ~ppc"
+KEYWORDS="-* ppc"
 IUSE=""
 
 DEPEND="virtual/libc
