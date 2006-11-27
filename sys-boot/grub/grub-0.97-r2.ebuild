@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r2.ebuild,v 1.9 2006/09/21 14:28:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r2.ebuild,v 1.10 2006/11/27 00:35:21 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -123,13 +123,12 @@ src_install() {
 setup_boot_dir() {
 	local dir="${1}"
 
-	[[ ! -e "${dir}" ]] && die "${dir} does not exist!"
-
-	[[ ! -e "${dir}/grub" ]] && mkdir "${dir}/grub"
+	[[ ! -e ${dir} ]] && die "${dir} does not exist!"
+	[[ ! -e ${dir}/grub ]] && mkdir "${dir}/grub"
 
 	# change menu.lst to grub.conf
-	if [[ ! -e "${dir}/grub/grub.conf" && -e "${dir}/grub/menu.lst" ]] ; then
-		mv -f "${dir}/grub/menu.lst ${dir}/grub/grub.conf"
+	if [[ ! -e ${dir}/grub/grub.conf ]] && [[ -e ${dir}/grub/menu.lst ]] ; then
+		mv -f "${dir}"/grub/menu.lst "${dir}"/grub/grub.conf
 		ewarn
 		ewarn "*** IMPORTANT NOTE: menu.lst has been renamed to grub.conf"
 		ewarn
