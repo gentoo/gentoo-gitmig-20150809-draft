@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/formencode/formencode-0.6.ebuild,v 1.1 2006/11/27 23:34:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/formencode/formencode-0.6.ebuild,v 1.2 2006/11/27 23:35:40 kloeri Exp $
 
 # TODO: Add pudge support via "doc" flag
 #       currently broken with 0.6 release
@@ -20,7 +20,6 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/python-2.3"
-#DEPEND=">=dev-python/setuptools-0.6_rc3"
 
 PYTHON_MODNAME=$MY_PN
 S="${WORKDIR}/${MY_P}"
@@ -39,5 +38,3 @@ src_install() {
 	insinto /usr/share/doc/${PF}
 	doins -r examples
 }
-
-# src_test: requires py.test from py lib
