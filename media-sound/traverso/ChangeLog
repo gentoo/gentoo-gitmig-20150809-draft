@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/traverso
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/ChangeLog,v 1.2 2006/11/25 19:36:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/ChangeLog,v 1.3 2006/11/27 06:38:24 aballier Exp $
+
+  27 Nov 2006; Alexis Ballier <aballier@gentoo.org>
+  +files/traverso-0.30.1-nojack.patch, traverso-0.30.1.ebuild:
+  ~x86 keyword, patch to build without jack
 
   25 Nov 2006; Alexis Ballier <aballier@gentoo.org> traverso-0.30.1.ebuild:
   Fix compile issues with qt-4.1

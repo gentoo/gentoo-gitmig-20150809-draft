@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.30.1.ebuild,v 1.2 2006/11/25 19:36:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.30.1.ebuild,v 1.3 2006/11/27 06:38:24 aballier Exp $
 
 inherit eutils qt4 toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://vt.shuis.tudelft.nl/~remon/traverso/${P}.tar.gz"
 IUSE="alsa jack sse"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND="$(qt4_min_version 4)
 	alsa? ( media-libs/alsa-lib )
@@ -25,6 +25,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}/${P}-nojack.patch"
 	use jack || sed -ie "s:^\(DEFINES\ +=\ JACK_SUPPORT.*\):#\1:" src/base.pri
 	use alsa || sed -ie "s:^\(DEFINES\ +=\ ALSA_SUPPORT.*\):#\1:" src/base.pri
 	use sse || sed -ie "s:^\(.*DEFINES\ +=\ SSE_OPTIMIZATIONS.*\):#\1:" src/base.pri
