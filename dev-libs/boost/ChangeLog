@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.95 2006/11/05 00:22:09 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.96 2006/11/27 16:06:54 dev-zero Exp $
+
+  27 Nov 2006; Tiziano Müller <dev-zero@gentoo.org> boost-1.33.1-r1.ebuild:
+  Added icu USE-flag and dependency, bug #141170
 
   05 Nov 2006; Tiziano Müller <dev-zero@gentoo.org> boost-1.33.1-r1.ebuild:
   Added python version override to fix bug 149250

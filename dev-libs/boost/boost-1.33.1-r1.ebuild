@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.33.1-r1.ebuild,v 1.3 2006/11/05 00:22:09 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.33.1-r1.ebuild,v 1.4 2006/11/27 16:06:54 dev-zero Exp $
 
 inherit eutils distutils multilib python versionator
 
@@ -12,12 +12,13 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="freedist Boost-1.0"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="bcp bjam debug doc pyste threads threadsonly"
+IUSE="bcp bjam debug doc icu pyste threads threadsonly"
 
 # Overriding var from python.eclass
 PYVER="2.4"
 
-DEPEND="sys-libs/zlib
+DEPEND="icu? ( >=dev-libs/icu-3.2 )
+		sys-libs/zlib
 		=dev-lang/python-2.4*"
 RDEPEND="${DEPEND}
 		pyste? ( dev-cpp/gccxml dev-python/elementtree )"
@@ -78,6 +79,10 @@ pkg_setup() {
 
 	if ! use threads ; then
 		BUILD="${BUILD} <threading>single"
+	fi
+
+	if use icu ; then
+		ADDITIONAL_OPTIONS="-sHAVE_ICU=1 -sICU_PATH=${ROOT}/usr"
 	fi
 
 }
