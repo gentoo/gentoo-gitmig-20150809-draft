@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/ascpu
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/ascpu/ChangeLog,v 1.20 2006/11/27 00:50:33 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/ascpu/ChangeLog,v 1.21 2006/11/27 12:51:44 gustavoz Exp $
+
+  27 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org> ascpu-1.11.ebuild:
+  Stable on sparc wrt #153218
 
   27 Nov 2006; <malc@gentoo.org> ascpu-1.11.ebuild:
   Add amd64 - bug #153218
