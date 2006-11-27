@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/smclone
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smclone/ChangeLog,v 1.12 2006/11/26 19:16:50 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smclone/ChangeLog,v 1.13 2006/11/27 23:42:09 nyhm Exp $
+
+  27 Nov 2006; Tristan Heaven <nyhm@gentoo.org> smclone-0.99.3.ebuild:
+  Install all of the xsd files used by xerces-c
 
   26 Nov 2006; Tristan Heaven <nyhm@gentoo.org> smclone-0.99.3.ebuild:
   Needs cegui-0.5.0, bug #156272
