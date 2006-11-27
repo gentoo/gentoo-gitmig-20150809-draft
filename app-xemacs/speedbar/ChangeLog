@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/speedbar
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/speedbar/ChangeLog,v 1.9 2006/11/12 13:40:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/speedbar/ChangeLog,v 1.10 2006/11/27 19:59:43 graaff Exp $
+
+  27 Nov 2006; Hans de Graaff <graaff@gentoo.org> metadata.xml:
+  Use correct metadata.
 
 *speedbar-1.28 (12 Nov 2006)
 
