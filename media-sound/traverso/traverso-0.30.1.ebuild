@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.30.1.ebuild,v 1.3 2006/11/27 06:38:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.30.1.ebuild,v 1.4 2006/11/27 20:25:09 aballier Exp $
 
 inherit eutils qt4 toolchain-funcs
 
@@ -26,6 +26,12 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-nojack.patch"
+
+	# remove exec stacks
+	mv "${S}/src/engine/sse_functions.s" "${S}/src/engine/sse_functions.S"
+	epatch "${FILESDIR}/${P}-execstack.patch"
+
+
 	use jack || sed -ie "s:^\(DEFINES\ +=\ JACK_SUPPORT.*\):#\1:" src/base.pri
 	use alsa || sed -ie "s:^\(DEFINES\ +=\ ALSA_SUPPORT.*\):#\1:" src/base.pri
 	use sse || sed -ie "s:^\(.*DEFINES\ +=\ SSE_OPTIMIZATIONS.*\):#\1:" src/base.pri
