@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/ascpu/ascpu-1.11.ebuild,v 1.4 2006/11/24 20:39:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/ascpu/ascpu-1.11.ebuild,v 1.5 2006/11/27 00:50:33 malc Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.tigr.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~mips ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 ~mips ppc ppc64 ~sparc x86"
 
 RDEPEND="x11-libs/libXpm
 	x11-libs/libSM
