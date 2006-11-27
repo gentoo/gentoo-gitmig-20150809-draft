@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.50.ebuild,v 1.1 2005/04/27 12:30:37 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.50.ebuild,v 1.2 2006/11/27 23:33:26 jokey Exp $
 
 inherit perl-module flag-o-matic gnuconfig eutils
 
@@ -11,14 +11,14 @@ SRC_URI="http://people.ee.ethz.ch/%7Eoetiker/webtools/${PN}/pub/rrdtool-1.0.x/${
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
-IUSE="perl tcltk"
+IUSE="perl tcl"
 
 DEPEND="perl? ( dev-lang/perl )
 	sys-apps/gawk
 	>=media-libs/gd-1.8.3"
-RDEPEND="tcltk? ( dev-lang/tcl )"
+RDEPEND="tcl? ( dev-lang/tcl )"
 
-TCLVER=""
+TCL_VER=""
 
 pkg_setup() {
 	use perl && perl-module_pkg_setup
@@ -41,9 +41,11 @@ src_compile() {
 	local myconf
 	myconf="${myconf} --datadir=/usr/share --enable-shared"
 
-	use tcltk \
-		&& myconf="${myconf} --with-tcllib=/usr/lib" \
-		|| myconf="${myconf} --without-tcllib"
+	if use tcl ; then
+		myconf="${myconf} --with-tcllib=/usr/lib"
+	else
+		myconf="${myconf} --without-tcllib"
+	fi
 
 	if use perl; then
 		econf ${myconf} --with-perl-options='PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D}' || die "econf failed"
@@ -89,7 +91,7 @@ src_install() {
 		rm -Rf ${D}/usr/lib/perl
 	fi
 
-	if use tcltk ; then
+	if use tcl ; then
 #		mv ${S}/tcl/tclrrd.so ${S}/tcl/tclrrd${PV}.so
 #		insinto /usr/lib/tcl${TCL_VER}/tclrrd${PV}
 #		doins ${S}/tcl/tclrrd${PV}.so

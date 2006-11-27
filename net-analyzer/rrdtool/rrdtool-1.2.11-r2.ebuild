@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.2.11-r2.ebuild,v 1.8 2006/11/12 03:43:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.2.11-r2.ebuild,v 1.9 2006/11/27 23:33:26 jokey Exp $
 
 inherit perl-module flag-o-matic gnuconfig eutils multilib
 
@@ -11,9 +11,9 @@ SRC_URI="http://people.ee.ethz.ch/~oetiker/webtools/${PN}/pub/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha ~amd64 arm ~hppa ia64 ~mips ppc ppc64 sh ~sparc ~x86"
-IUSE="doc perl python tcltk"
+IUSE="doc perl python tcl"
 
-RDEPEND="tcltk? ( dev-lang/tcl )
+RDEPEND="tcl? ( dev-lang/tcl )
 	>=sys-libs/zlib-1.2.1
 	>=media-libs/freetype-2.1.5
 	>=media-libs/libart_lgpl-2.3.16
@@ -53,9 +53,11 @@ src_compile() {
 	local myconf
 	myconf="--datadir=/usr/share --enable-shared"
 
-	use tcltk \
-		&& myconf="${myconf} --with-tcllib=/usr/$(get_libdir)" \
-		|| myconf="${myconf} --without-tcllib"
+	if use tcl ; then
+		myconf="${myconf} --with-tcllib=/usr/$(get_libdir)"
+	else
+		myconf="${myconf} --without-tcllib"
+	fi
 
 	use python || myconf="${myconf} --disable-python"
 
@@ -94,7 +96,7 @@ src_install() {
 		rm -Rf "${D}"/usr/lib/perl
 	fi
 
-	if use tcltk ; then
+	if use tcl ; then
 		mv "${S}"/bindings/tcl/tclrrd.so "${S}"/bindings/tcl/tclrrd${PV}.so
 		insinto /usr/$(get_libdir)/tcl${TCL_VER}/tclrrd${PV}
 		doins "${S}"/bindings/tcl/tclrrd${PV}.so
