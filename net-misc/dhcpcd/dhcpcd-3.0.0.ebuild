@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-3.0.0.ebuild,v 1.1 2006/11/27 21:18:26 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-3.0.0.ebuild,v 1.2 2006/11/27 21:40:05 uberlord Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ src_unpack() {
 	cd "${S}"
 
 	# Redefine the location of ntp.drift
-	sed -i -e 's,#define NTPDRIFTFILE .*,#define NTPDRIFTFILE \"/var/lib/ntp/ntp.drift\",' \
+	sed -i -e 's,#define NTPDRIFTFILE\t.*,#define NTPDRIFTFILE\t\t\"/var/lib/ntp/ntp.drift\",' \
 		pathnames.h || die "sed failed"
 }
 
