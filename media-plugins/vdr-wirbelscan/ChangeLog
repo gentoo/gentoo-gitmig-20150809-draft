@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/vdr-wirbelscan
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-wirbelscan/ChangeLog,v 1.1 2006/11/27 12:27:21 zzam Exp $
+
+*vdr-wirbelscan-0.0.1 (27 Nov 2006)
+
+  27 Nov 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-wirbelscan-0.0.1-include.diff, +metadata.xml,
+  +vdr-wirbelscan-0.0.1.ebuild:
+  Initial import of ebuild written by me.
+
