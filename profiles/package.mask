@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6351 2006/11/27 08:02:39 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6352 2006/11/27 14:11:16 gustavoz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -522,14 +522,6 @@ net-misc/qadsl
 # Rename NetworkManager to networkmanager for consistency.
 net-misc/dhcdbd
 net-misc/networkmanager
-
-# Gustavo Zacarias <gustavoz@gentoo.org> (27 Oct 2006)
-# Masked for removal, bugs #101983, #150032 and almost dead upstream
-net-misc/minisip
-net-misc/libmutil
-net-misc/libmnetutil
-net-misc/libmikey
-net-misc/libmsip
 
 # Donnie Berkholz <dberkholz@gentoo.org> (26 Oct 2006)
 # Only works on 2.4, masked for removal
