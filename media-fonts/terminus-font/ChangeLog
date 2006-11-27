@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/terminus-font
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.43 2006/10/23 13:24:21 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.44 2006/11/26 23:53:56 flameeyes Exp $
+
+  26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  terminus-font-4.20.ebuild:
+  Add ~x86-fbsd keyword.
 
   23 Oct 2006; Emanuele Giaquinta <exg@gentoo.org>
   terminus-font-4.20.ebuild:

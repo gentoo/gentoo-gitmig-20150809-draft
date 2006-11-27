@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/ttf-gentium
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-gentium/ChangeLog,v 1.7 2006/09/15 13:29:56 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-gentium/ChangeLog,v 1.8 2006/11/26 23:55:11 flameeyes Exp $
+
+  26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  ttf-gentium-1.0.2.ebuild:
+  Add ~x86-fbsd keyword.
 
 *ttf-gentium-1.0.2 (15 Sep 2006)
 

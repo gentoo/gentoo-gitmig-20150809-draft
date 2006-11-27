@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/mikachan-font
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font/ChangeLog,v 1.18 2006/10/20 21:25:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font/ChangeLog,v 1.19 2006/11/26 23:50:05 flameeyes Exp $
+
+  26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  mikachan-font-9.1.ebuild:
+  Add ~x86-fbsd keyword.
 
   20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   mikachan-font-9.1.ebuild:

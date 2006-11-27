@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-bitstream-100dpi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bitstream-100dpi/ChangeLog,v 1.18 2006/10/04 15:23:27 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bitstream-100dpi/ChangeLog,v 1.19 2006/11/26 23:32:12 flameeyes Exp $
+
+  26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  font-bitstream-100dpi-1.0.0.ebuild:
+  Add ~x86-fbsd keyword.
 
   04 Oct 2006; Simon Stelling <blubb@gentoo.org>
   font-bitstream-100dpi-1.0.0.ebuild:

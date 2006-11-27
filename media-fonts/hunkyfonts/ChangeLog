@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/hunkyfonts
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/hunkyfonts/ChangeLog,v 1.6 2006/09/01 18:08:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/hunkyfonts/ChangeLog,v 1.7 2006/11/26 23:46:53 flameeyes Exp $
+
+  26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  hunkyfonts-0.3.1.ebuild:
+  Add ~x86-fbsd keyword.
 
   01 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   hunkyfonts-0.3.1.ebuild:

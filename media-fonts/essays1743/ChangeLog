@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/essays1743
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/essays1743/ChangeLog,v 1.8 2006/09/01 18:15:19 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/essays1743/ChangeLog,v 1.9 2006/11/26 23:24:54 flameeyes Exp $
+
+  26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> essays1743-1.0.ebuild:
+  Add ~x86-fbsd keyword.
 
   01 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   essays1743-1.0.ebuild:

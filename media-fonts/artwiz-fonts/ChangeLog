@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/artwiz-fonts
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/ChangeLog,v 1.17 2006/08/23 13:33:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/ChangeLog,v 1.18 2006/11/26 23:22:22 flameeyes Exp $
+
+  26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  artwiz-fonts-2.4-r3.ebuild:
+  Add ~x86-fbsd keyword.
 
   23 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   artwiz-fonts-2.4-r1.ebuild:
