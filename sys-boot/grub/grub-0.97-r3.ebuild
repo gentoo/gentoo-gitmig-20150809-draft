@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r3.ebuild,v 1.3 2006/09/21 14:28:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r3.ebuild,v 1.4 2006/11/27 00:35:02 vapier Exp $
 
-WANT_AUTOCONF="2.5"
-WANT_AUTOMAKE="1.9"
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 inherit mount-boot eutils flag-o-matic toolchain-funcs autotools
 
 PATCHVER="1.3"
