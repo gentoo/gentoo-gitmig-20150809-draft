@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.5.ebuild,v 1.3 2006/11/20 16:01:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.5.ebuild,v 1.4 2006/11/27 00:06:11 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.phys.uu.nl/~rombouts/pdnsd/releases/${P}-par.tar.gz"
 
 LICENSE="|| ( BSD GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ppc ~s390 sparc x86"
+KEYWORDS="~alpha ~amd64 arm ~ppc s390 sparc x86"
 IUSE="ipv6 debug isdn nptl underscores"
 
 pkg_setup() {
@@ -21,10 +21,7 @@ pkg_setup() {
 src_compile() {
 	local myconf=""
 
-	if use debug; then
-	 	myconf="${myconf} --with-debug=3"
-		CFLAGS="${CFLAGS} -g"
-	fi
+	use debug && myconf="${myconf} --with-debug=3"
 	use nptl && myconf="${myconf} --with-thread-lib=NPTL"
 
 	[ -c /dev/urandom ] && myconf="${myconf} --with-random-device=/dev/urandom"
