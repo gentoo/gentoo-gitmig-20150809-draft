@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/frotz/frotz-2.43.ebuild,v 1.12 2006/11/07 14:40:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/frotz/frotz-2.43.ebuild,v 1.13 2006/11/27 14:20:12 gustavoz Exp $
 
 inherit toolchain-funcs games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ifarchive.org/if-archive/infocom/interpreters/frotz/${P}.tar
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc-macos ~sparc x86"
+KEYWORDS="amd64 ppc ppc-macos sparc x86"
 IUSE="alsa oss"
 
 DEPEND="sys-libs/ncurses
