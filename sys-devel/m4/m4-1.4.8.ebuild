@@ -1,8 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.8.ebuild,v 1.1 2006/11/26 12:49:05 vapier Exp $
-
-#inherit toolchain-funcs
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.8.ebuild,v 1.2 2006/11/27 00:27:57 vapier Exp $
 
 DESCRIPTION="GNU macro processor"
 HOMEPAGE="http://www.gnu.org/software/m4/m4.html"
@@ -14,8 +12,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="nls"
 
-DEPEND="nls? ( sys-devel/gettext )
-	>=sys-devel/autoconf-2.61"
+# remember: cannot dep on autoconf since it needs us
+DEPEND="nls? ( sys-devel/gettext )"
 RDEPEND=""
 
 src_compile() {
@@ -26,10 +24,10 @@ src_compile() {
 		--enable-changeword \
 		${myconf} \
 		|| die
-	emake || die #AR="$(tc-getAR)" || die
+	emake || die
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die
+	emake install DESTDIR="${D}" || die
 	dodoc BACKLOG ChangeLog NEWS README* THANKS TODO
 }
