@@ -1,0 +1,15 @@
+--- setup.py.org	2005-10-17 13:00:43.570677240 -0700
++++ setup.py	2005-10-17 13:02:11.089372376 -0700
+@@ -1,6 +1,9 @@
+-from ez_setup import use_setuptools
+-use_setuptools()
+-from setuptools import setup
++try:
++    from ez_setup import use_setuptools
++    use_setuptools()
++    from setuptools import setup
++except:
++    from distutils.core import setup
+ 
+ setup(name="FormEncode",
+       version="0.2.2",
