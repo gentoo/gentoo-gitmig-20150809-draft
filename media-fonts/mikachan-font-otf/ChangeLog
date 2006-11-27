@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/mikachan-font-otf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font-otf/ChangeLog,v 1.10 2006/11/27 12:28:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font-otf/ChangeLog,v 1.11 2006/11/27 15:56:18 opfer Exp $
+
+  27 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  mikachan-font-otf-9.1.ebuild:
+  stable x86, bug #156357
 
   27 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   mikachan-font-otf-9.1.ebuild:
