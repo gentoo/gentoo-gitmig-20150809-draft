@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6348 2006/11/26 23:08:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6349 2006/11/27 04:53:32 metalgod Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -798,10 +798,6 @@ www-apps/drupal
 # Saleem Abdulrasool <compnerd@gentoo.org> (07 Aug 2006)
 # New Galago Release
 >=x11-plugins/gaim-galago-0.5.0
-
-# Luis Medinas <metalgod@gentoo.org> (06 Sep 2006)
-# Mask Brasero 0.5 series for testing
->=app-cdr/brasero-0.5.1
 
 # Donnie Berkholz <dberkholz@gentoo.org> (05 Sep 2006)
 # Masked until it gets some testing
