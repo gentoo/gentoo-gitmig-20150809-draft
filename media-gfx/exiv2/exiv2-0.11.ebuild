@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/exiv2-0.11.ebuild,v 1.2 2006/10/17 22:44:53 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/exiv2-0.11.ebuild,v 1.3 2006/11/27 15:57:31 flameeyes Exp $
 
 inherit eutils
 
@@ -13,7 +13,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="doc unicode"
 
-DEPEND="sys-libs/zlib"
+DEPEND="sys-libs/zlib
+	virtual/libiconv"
+RDEPEND="sys-libs/zlib"
 
 src_unpack() {
 	unpack ${A}
@@ -22,7 +24,7 @@ src_unpack() {
 	if use unicode; then
 		einfo "Converting docs to UTF-8"
 		for i in doc/cmd.txt; do
-			iconv -f latin1 -t utf8 -o "${i}~" "${i}" && mv -f "${i}~" "${i}" || rm -f "${i}~"
+			iconv -f LATIN1 -t UTF-8 "${i}" > "${i}~" && mv -f "${i}~" "${i}" || rm -f "${i}~"
 		done
 	fi
 }
