@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/balsa
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.40 2006/08/29 09:19:53 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.41 2006/11/27 14:24:07 gustavoz Exp $
+
+  27 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org> balsa-2.3.13.ebuild:
+  Stable on sparc
 
   29 Aug 2006; Fernando J. Pereda <ferdy@gentoo.org> balsa-2.3.13.ebuild:
   Re-add ~alpha as per bug #144346
