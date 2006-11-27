@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asapm/asapm-2.10.ebuild,v 1.9 2004/06/28 20:32:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asapm/asapm-2.10.ebuild,v 1.10 2006/11/27 13:14:08 gustavoz Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.tigr.net/afterstep/list.pl"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="x86 sparc "
+KEYWORDS="-sparc x86"
 
 DEPEND="virtual/libc virtual/x11"
 
