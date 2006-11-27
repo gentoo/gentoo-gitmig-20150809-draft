@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lshw
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.37 2006/11/27 00:46:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.38 2006/11/27 12:58:49 gustavoz Exp $
+
+  27 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org> lshw-02.08.01b.ebuild:
+  Stable on sparc wrt #156269
 
 *lshw-02.09b (27 Nov 2006)
 
