@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.83-r1.ebuild,v 1.1 2006/11/22 07:57:41 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.83-r1.ebuild,v 1.2 2006/11/27 16:55:27 opfer Exp $
 
 inherit elisp eutils latex-package autotools
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="preview-latex"
 
-DEPEND="preview-latex? ( !dev-tex/preview-latex
+DEPEND="virtual/tetex
+	preview-latex? ( !dev-tex/preview-latex
 		app-text/dvipng
 		virtual/ghostscript )"
 
@@ -26,9 +27,16 @@ src_unpack() {
 }
 
 src_compile() {
+	# Don't install in the main tree, as this causes file collisions
+	# with app-text/tetex, see bug #155944
+	# Does no harm when used with USE=-preview-latex 
+	local PREVIEW_TEXMFDIR="${D}`kpsewhich -var-value=TEXMFSITE`"
+	mkdir -p "${PREVIEW_TEXMFDIR}"
+
 	econf --disable-build-dir-test \
-		--with-auto-dir=${D}/var/lib/auctex \
-		--with-lispdir=${D}/usr/share/emacs/site-lisp \
+		--with-auto-dir="${D}/var/lib/auctex" \
+		--with-lispdir="${D}/usr/share/emacs/site-lisp" \
+		--with-texmf-dir="${PREVIEW_TEXMFDIR}" \
 		$(use_enable preview-latex preview) || die "econf failed"
 	emake || die
 }
