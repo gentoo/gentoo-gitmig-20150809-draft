@@ -1,8 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libjingle/libjingle-0.3.9.ebuild,v 1.3 2006/10/08 18:06:11 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libjingle/libjingle-0.3.9.ebuild,v 1.4 2006/11/27 20:07:42 drizzt Exp $
 
-inherit autotools
+WANT_AUTOCONF=latest
+WANT_AUTOMAKE=latest
+
+inherit autotools eutils
 
 DESCRIPTION="Google's jabber voice extension library modified by Tapioca"
 HOMEPAGE="http://tapioca-voip.sourceforge.net/"
@@ -22,10 +25,15 @@ RDEPEND="dev-libs/openssl
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_compile() {
-	epatch ${FILESDIR}/libjingle-build.diff
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
 
-	eautoreconf || die "eautoreconf failed"
+	epatch "${FILESDIR}"/libjingle-build.diff
+	eautoreconf
+}
+
+src_compile() {
 	econf $(use_enable ortp linphone) \
 		$(use_enable ortp) \
 		$(use_with ilbc) \
@@ -35,6 +43,6 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die "install failed"
+	emake install DESTDIR="${D}" || die "install failed"
 	dodoc AUTHORS ChangeLog NEWS README
 }
