@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.1.1.ebuild,v 1.4 2006/11/24 21:59:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.1.1.ebuild,v 1.5 2006/11/27 23:02:36 mabi Exp $
 
 inherit eutils portability
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.lua.org/ftp/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~ppc ppc64 ~x86"
+KEYWORDS="~ppc ~ppc64 ~x86"
 IUSE="readline static"
 
 RDEPEND="readline? ( sys-libs/readline )"
@@ -62,6 +62,8 @@ src_compile() {
 			LIB_LIBS="${liblibs}" \
 			V=${PV} \
 			gentoo_all || die "emake failed"
+
+	mv lua_test ../test/lua.static
 }
 
 src_install() {
@@ -85,10 +87,10 @@ src_test() {
 
 	cd "${S}"
 	for test in ${positive}; do
-		src/${P} test/${test}.lua &> /dev/null || die "test $test failed"
+		test/lua.static test/${test}.lua &> /dev/null || die "test $test failed"
 	done
 
 	for test in ${negative}; do
-		src/${P} test/${test}.lua &> /dev/null && die "test $test failed"
+		test/lua.static test/${test}.lua &> /dev/null && die "test $test failed"
 	done
 }
