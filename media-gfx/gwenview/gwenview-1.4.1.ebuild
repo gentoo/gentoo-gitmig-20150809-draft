@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/gwenview-1.4.1.ebuild,v 1.1 2006/11/26 22:53:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/gwenview-1.4.1.ebuild,v 1.2 2006/11/27 10:03:18 flameeyes Exp $
 
 inherit kde
 
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="kipi"
 
 DEPEND="kipi? ( >=media-plugins/kipi-plugins-0.1.0_beta2 )
-	media-libs/libexif"
+	media-gfx/exiv2"
 
 need-kde 3
 
