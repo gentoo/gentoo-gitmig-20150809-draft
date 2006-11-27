@@ -1,6 +1,14 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.502 2006/11/03 01:33:32 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.503 2006/11/27 02:45:56 vericgar Exp $
+
+*apache-2.2.3-r1 (27 Nov 2006)
+
+  27 Nov 2006; Michael Stewart <vericgar@gentoo.org>
+  +apache-2.2.3-r1.ebuild:
+  This should now be feature complete: Completed init script, linked
+  apache2ctl to init script, added example virtual host configurations, added
+  USE=srvdir support
 
 *apache-2.0.59-r2 (02 Nov 2006)
 
