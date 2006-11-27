@@ -1,0 +1,14 @@
+# ChangeLog for net-libs/libssh2
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.1 2006/11/27 23:57:08 jokey Exp $
+
+*libssh2-0.14 (27 Nov 2006)
+
+  27 Nov 2006; Markus Ullmann <jokey@gentoo.org>
+  +files/libssh2-0.14-banner-wait.patch,
+  +files/libssh2-0.14-channel-failure.patch,
+  +files/libssh2-0.14-configure.patch,
+  +files/libssh2-0.14-peer-shutdown.patch, +metadata.xml,
+  +libssh2-0.14.ebuild:
+  Import from sunrise for bug 113844 thanks to Joe and cedk
+
