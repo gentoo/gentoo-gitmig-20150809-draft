@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/tk707
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tk707/ChangeLog,v 1.7 2005/12/17 11:50:53 flameeyes Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tk707/ChangeLog,v 1.8 2006/11/27 00:33:53 malc Exp $
+
+  27 Nov 2006; <malc@gentoo.org> tk707-0.8-r1.ebuild:
+  Add ~amd64 - bug #134049
 
   17 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> tk707-0.8-r1.ebuild:
   Use mirror://gentoo/ instead of not giving any url for the files. Close bug
