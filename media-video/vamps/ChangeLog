@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vamps
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vamps/ChangeLog,v 1.16 2006/06/25 12:59:01 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vamps/ChangeLog,v 1.17 2006/11/27 10:18:09 opfer Exp $
+
+  27 Nov 2006; Christian Faulhammer <opfer@gentoo.org> vamps-0.99.2.ebuild:
+  stable x86, bug #148925
 
 *vamps-0.99.2 (25 Jun 2006)
 
