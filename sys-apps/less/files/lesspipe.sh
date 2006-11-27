@@ -136,6 +136,7 @@ lesspipe() {
 
 		# Allow people to flip color off if they dont want it
 		case ${LESSCOLOR} in
+			always)              LESSCOLOR=2;;
 			[yY][eE][sS]|1|true) LESSCOLOR=1;;
 			[nN][oO]|0|false)    LESSCOLOR=0;;
 			*)                   LESSCOLOR=1;; # default to colorize
@@ -146,7 +147,12 @@ lesspipe() {
 			exit 0
 		fi
 
-		# Only colorize if we know less will handle raw codes
+		# Only colorize if user forces it ...
+		if [[ ${LESSCOLOR} == "2" ]]; then
+			${LESSCOLORIZER} "$1"
+			exit 0
+		fi
+		# ... or we know less will handle raw codes
 		for opt in ${LESS} ; do
 			if [[ ${opt} == "-r" || ${opt} == "-R" ]] ; then
 				${LESSCOLORIZER} "$1"
@@ -187,10 +193,10 @@ if [[ -z $1 ]] ; then
 	echo "Usage: lesspipe.sh <file>"
 elif [[ $1 == "-V" ]] ; then
 	Id="cvsid"
-	cvsid="$Id: lesspipe.sh,v 1.19 2006/11/05 21:58:50 vapier Exp $"
+	cvsid="$Id: lesspipe.sh,v 1.20 2006/11/27 00:33:09 vapier Exp $"
 	cat <<-EOF
 		$cvsid
-		Copyright 2001-2005 Gentoo Foundation
+		Copyright 2001-2006 Gentoo Foundation
 		Mike Frysinger <vapier@gentoo.org>
 		     (with plenty of ideas stolen from other projects/distros)
 		
