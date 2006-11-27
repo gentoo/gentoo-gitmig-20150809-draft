@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sipsak/sipsak-0.9.6_p1.ebuild,v 1.2 2006/03/13 01:33:38 deltacow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sipsak/sipsak-0.9.6_p1.ebuild,v 1.3 2006/11/27 21:49:19 drizzt Exp $
 
 IUSE="gnutls"
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.berlios.de/sipsak/${P/_p/-}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc-macos ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc-macos ~sparc ~x86 ~x86-fbsd"
 
 RDEPEND="gnutls? ( net-libs/gnutls )
 		net-dns/c-ares"
