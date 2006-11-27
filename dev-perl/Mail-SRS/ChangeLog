@@ -1,6 +1,6 @@
-# ChangeLog for dev-perl/Sys-Hostname-Long
+# ChangeLog for dev-perl/Mail-SRS
 # Copyright 2000-2006 DataCore GmbH; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SRS/ChangeLog,v 1.2 2006/11/19 08:44:51 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SRS/ChangeLog,v 1.3 2006/11/27 09:15:09 swegener Exp $
 
   19 Nov 2006; Christian Hartmann <ian@gentoo.org> Mail-SRS-0.31.ebuild:
   added tests, rdep, iuse
