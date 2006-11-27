@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.8.3c.ebuild,v 1.1 2006/11/04 17:33:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.8.3c.ebuild,v 1.2 2006/11/27 23:06:13 kloeri Exp $
 
 inherit distutils eutils
 
@@ -40,6 +40,9 @@ src_install() {
 	dodir "${SITEPATH}/wxglade"
 	touch "${D}${SITEPATH}/wxglade/__init__.py"
 	ln -svf "../../pychecker" "${D}${SITEPATH}/_spe/plugins/pychecker"
+
+	doicon "${S}/build/lib/_spe/images/spe.png"
+	make_desktop_entry "${PN}" "SPE - Stani's Python Editor" "spe" "Development"
 }
 
 pkg_postinst() {
