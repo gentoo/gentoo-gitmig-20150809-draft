@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vompserver/vdr-vompserver-0.2.5.ebuild,v 1.1 2006/11/27 12:51:00 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vompserver/vdr-vompserver-0.2.5.ebuild,v 1.2 2006/11/27 13:02:32 zzam Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ inherit vdr-plugin
 DESCRIPTION="VDR Plugin: server part for MediaMVP device"
 #HOMEPAGE="http://vomp.sourceforge.net"
 HOMEPAGE="http://www.vdr-wiki.de/wiki/index.php/Vompserver-plugin"
-SRC_URI="mirror://vdrfiles/${PN}/${P}.tgz"
+SRC_URI="mirror://gentoo/${P}.tgz mirror://vdrfiles/${PN}/${P}.tgz"
 KEYWORDS="~x86 ~amd64"
 SLOT="0"
 LICENSE="GPL-2"
