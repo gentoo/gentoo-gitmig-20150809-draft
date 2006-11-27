@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cplay
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/ChangeLog,v 1.17 2006/06/05 19:33:38 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/ChangeLog,v 1.18 2006/11/27 18:09:00 flameeyes Exp $
+
+  27 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> cplay-1.47.ebuild,
+  cplay-1.49.ebuild:
+  Fix HOMEPAGE/SRC_URI, thanks to Samuli Suominen.
 
   05 Jun 2006; Stefan Schweizer <genstef@gentoo.org> cplay-1.49.ebuild:
   new use flags thanks to Samuli Suominen <sasuomin@uusikaupunki.fi> in bug
