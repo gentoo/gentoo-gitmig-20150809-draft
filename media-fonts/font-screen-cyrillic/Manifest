@@ -1,24 +1,34 @@
-DIST font-screen-cyrillic-1.0.0.tar.bz2 42895
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST font-screen-cyrillic-1.0.0.tar.bz2 42895 RMD160 7e36d184c1a0fe03f0381a683e59cfd2bae418ee SHA1 75fec98ad7f6fd57dcdf60cfa003a71aae52ffc4 SHA256 0dccdb6bf3845ccd5d336e7d2fe93dcb4caacd871dba2d4b49265d3343de4dd6
 DIST font-screen-cyrillic-1.0.1.tar.bz2 45471 RMD160 3342c62acba97a31b11b0a584572a5a6ff7e8595 SHA1 d6eb7c366ab1cb8198df93aa661f295ebe09669f SHA256 d9575f0f302a183590d2bad82a8f260aed06fd93695a1faf79f1842a6a16c51f
 EBUILD font-screen-cyrillic-1.0.0.ebuild 489 RMD160 d0d07f3a5a8c34e7a3a25243519bffa736959999 SHA1 cdfdd5b852dde29ca56ababcb64bd18bb3db56ec SHA256 c550b9c56a000da6eaaf7b95aaab64e1cf0505fc85bd97cdd9666bf0c5b2ba92
 MD5 d6d5c2db4feccffd2979f2bc572c5d74 font-screen-cyrillic-1.0.0.ebuild 489
 RMD160 d0d07f3a5a8c34e7a3a25243519bffa736959999 font-screen-cyrillic-1.0.0.ebuild 489
 SHA256 c550b9c56a000da6eaaf7b95aaab64e1cf0505fc85bd97cdd9666bf0c5b2ba92 font-screen-cyrillic-1.0.0.ebuild 489
-EBUILD font-screen-cyrillic-1.0.1.ebuild 501 RMD160 7e4351872a02cdb6259fd844caadfd15f6491ac8 SHA1 0a9e41675f57161705f3f7e3bd0d1f72a4263482 SHA256 355ad3b40bac42aa4781b5d2d8312c60245dd81019d17ae2c77351ca4d8b212c
-MD5 33532f9206d409c84041240418ea2104 font-screen-cyrillic-1.0.1.ebuild 501
-RMD160 7e4351872a02cdb6259fd844caadfd15f6491ac8 font-screen-cyrillic-1.0.1.ebuild 501
-SHA256 355ad3b40bac42aa4781b5d2d8312c60245dd81019d17ae2c77351ca4d8b212c font-screen-cyrillic-1.0.1.ebuild 501
-MISC ChangeLog 2388 RMD160 ebee4242ca40d94cf4b380761cee5be91d95d5e2 SHA1 9cefa3d504019153d432e15d666a3f92e9d9105f SHA256 7dc45744f067347416f63ad3c4bea2a9793e55a009645b91cf45c5ebce57897f
-MD5 6ad63f0aefacf43194496555493aae73 ChangeLog 2388
-RMD160 ebee4242ca40d94cf4b380761cee5be91d95d5e2 ChangeLog 2388
-SHA256 7dc45744f067347416f63ad3c4bea2a9793e55a009645b91cf45c5ebce57897f ChangeLog 2388
+EBUILD font-screen-cyrillic-1.0.1.ebuild 507 RMD160 bd702a34b7db769004db885b45869d4e222cc75f SHA1 62639a8d446ff2a94c209675bd96725ffc242e90 SHA256 f191bd06cd9b8c47534eeb8882b0d7d3d137312a4fe6267ce6b32ab0248d45a1
+MD5 a88c94fc6a47f4c67d492db769c25184 font-screen-cyrillic-1.0.1.ebuild 507
+RMD160 bd702a34b7db769004db885b45869d4e222cc75f font-screen-cyrillic-1.0.1.ebuild 507
+SHA256 f191bd06cd9b8c47534eeb8882b0d7d3d137312a4fe6267ce6b32ab0248d45a1 font-screen-cyrillic-1.0.1.ebuild 507
+MISC ChangeLog 2500 RMD160 06b93c73f0fd9af33c47eaf39f5cd7c73d197fd3 SHA1 c28681dd0cfbec8fd5d6a5bde886a44237fc4001 SHA256 371dfaca1633887f6cdff65634b3393d03b09df8d39196be9584cf9b73dd7f3a
+MD5 d2fe25532179415ef6e64f2872079635 ChangeLog 2500
+RMD160 06b93c73f0fd9af33c47eaf39f5cd7c73d197fd3 ChangeLog 2500
+SHA256 371dfaca1633887f6cdff65634b3393d03b09df8d39196be9584cf9b73dd7f3a ChangeLog 2500
 MISC metadata.xml 156 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 SHA1 6f78f604e3d079d39189b40aaaa1ddb06182ad91 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 ee640c3fdbc84bdfdb51fe5563d38dd0 files/digest-font-screen-cyrillic-1.0.0 78
-RMD160 fb411c6eb80de7b8ca8ea3d10f08c762611c29a8 files/digest-font-screen-cyrillic-1.0.0 78
-SHA256 8e9097eb9ae0b3517a58ed47c79ca5e644f8ab8004fd66230c130f30c48c5d1a files/digest-font-screen-cyrillic-1.0.0 78
+MD5 79da52d49eb19bd06031781f9daac816 files/digest-font-screen-cyrillic-1.0.0 280
+RMD160 d268facc44b075a41395171c2559473dbcf83a9c files/digest-font-screen-cyrillic-1.0.0 280
+SHA256 65d3d49540db970b8ebc9a6ca8f1304270cf72895e460af8e612d226c48ef333 files/digest-font-screen-cyrillic-1.0.0 280
 MD5 83eebf2e4118d16b6c1e7c45d79bc457 files/digest-font-screen-cyrillic-1.0.1 280
 RMD160 a3e5547c773aa5155f69e16e18ea5d8207dbb815 files/digest-font-screen-cyrillic-1.0.1 280
 SHA256 f3e87bfca1163e5022e2edc0918231f8e9fc1c3fb6769d7af4e5b10e3124eff7 files/digest-font-screen-cyrillic-1.0.1 280
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFaiZqAiZjviIA2XgRAtcjAKDksLL3FDOnIJuQOnWR/aewagXhAACdEu5q
+801NP//sOt1nLkmj9vvbuOc=
+=4U2P
+-----END PGP SIGNATURE-----
