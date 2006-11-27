@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/m4
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.66 2006/11/27 13:17:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.67 2006/11/27 16:10:38 opfer Exp $
+
+  27 Nov 2006; Christian Faulhammer <opfer@gentoo.org> m4-1.4.7.ebuild:
+  stable x86, bug #156293
 
   27 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org> m4-1.4.7.ebuild:
   Stable on sparc wrt #156293
