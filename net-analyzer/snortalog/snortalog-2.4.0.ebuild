@@ -1,40 +1,42 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/snortalog-2.4.0.ebuild,v 1.8 2006/02/13 14:53:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/snortalog-2.4.0.ebuild,v 1.9 2006/11/27 23:09:10 jokey Exp $
 
 inherit eutils
 
 MY_P="${PN}_v${PV}"
 
 DESCRIPTION="a powerful perl script that summarizes snort logs"
-SRC_URI="http://jeremy.chartier.free.fr/${PN}/${MY_P}.tgz
-	tcltk? ( mirror://gentoo/${P}-fix-gui.diff.gz )"
+SRC_URI="http://jeremy.chartier.free.fr/snortalog/${MY_P}.tgz
+	tk? ( mirror://gentoo/${P}-fix-gui.diff.gz )"
 HOMEPAGE="http://jeremy.chartier.free.fr/snortalog/"
 
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="tcltk"
+IUSE="tk"
 
-S="${WORKDIR}/${MY_P%.?}"
-
-RDEPEND="dev-lang/perl
+DEPEND="dev-lang/perl
 	virtual/perl-Getopt-Long
 	virtual/perl-DB_File
 	dev-perl/HTML-HTMLDoc
-	tcltk? ( dev-perl/perl-tk
-			 dev-perl/GDGraph )"
+	tk? ( dev-perl/perl-tk dev-perl/GDGraph )"
+RDEPEND=${DEPEND}
+
+S="${WORKDIR}"
 
 src_unpack() {
-	[[ -d ${S} ]] || mkdir ${S}
-	cd ${S}
 	unpack ${A}
+	cd "${S}"
 
 	# one file created at a time ( pdf or html )
-	epatch ${FILESDIR}/${P}-limit-args.diff
+	epatch "${FILESDIR}/${P}-limit-args.diff"
 
-	use tcltk || epatch ${FILESDIR}/${P}-notcltk.diff
-	use tcltk && epatch ${DISTDIR}/${P}-fix-gui.diff.gz
+	if use tk ; then
+		epatch "${DISTDIR}/${P}-fix-gui.diff.gz"
+	else
+		epatch "${FILESDIR}/${P}-notcltk.diff"
+	fi
 
 	# fix paths, erroneous can access message
 	sed -i -e "s:\(modules/\):/usr/lib/snortalog/${PV}/\1:g" \
@@ -50,15 +52,14 @@ src_unpack() {
 src_install () {
 	dobin snortalog.pl || die
 
-	insinto /etc/${PN}
+	insinto /etc/snortalog
 	doins conf/{domains,hw,lang,rules}
 
-	insinto /etc/${PN}/picts
+	insinto /etc/snortalog/picts
 	doins picts/*
 
-	insinto /usr/lib/${PN}/${PV}/modules
+	insinto /usr/lib/snortalog/${PV}/modules
 	doins -r modules/*
 
-	cd doc
-	dodoc CHANGES
+	dodoc doc/CHANGES
 }
