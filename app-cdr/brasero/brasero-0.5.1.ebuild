@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.5.1.ebuild,v 1.3 2006/11/18 14:35:00 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.5.1.ebuild,v 1.4 2006/11/27 04:44:07 metalgod Exp $
 
 inherit gnome2
 
@@ -14,8 +14,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="beagle gdl libnotify totem nls"
 
 RDEPEND=">=x11-libs/gtk+-2.10
-	>=gnome-base/libgnome-2.14
-	>=gnome-base/libgnomeui-2.14
+	>=gnome-base/libgnome-2.10
+	>=gnome-base/libgnomeui-2.10
 	>=gnome-base/gnome-vfs-2.14.2
 	>=media-libs/gstreamer-0.10.6
 	>=media-libs/gst-plugins-base-0.10.6
