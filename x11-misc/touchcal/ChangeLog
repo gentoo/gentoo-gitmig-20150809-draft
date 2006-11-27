@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/touchcal
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/touchcal/ChangeLog,v 1.1 2006/11/08 14:23:37 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/touchcal/ChangeLog,v 1.2 2006/11/27 16:14:15 dsd Exp $
+
+  27 Nov 2006; Daniel Drake <dsd@gentoo.org> touchcal-0.31.ebuild:
+  Stable on amd64
 
 *touchcal-0.31 (08 Nov 2006)
 
