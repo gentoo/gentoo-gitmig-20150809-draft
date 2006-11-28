@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/uudeview-0.5.20.ebuild,v 1.11 2005/11/26 20:30:29 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/uudeview-0.5.20.ebuild,v 1.12 2006/11/28 18:03:03 opfer Exp $
 
-IUSE="X tcltk debug"
+IUSE="X tcl tk debug"
 
 DESCRIPTION="uu, xx, base64, binhex decoder"
 HOMEPAGE="http://www.fpx.de/fp/Software/UUDeview/"
@@ -12,7 +12,8 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ppc ~ppc-macos sparc x86"
 
-RDEPEND="tcltk? ( dev-lang/tcl X? ( dev-lang/tk ) )"
+RDEPEND="tcl? dev-lang/tcl
+	tk? dev-lang/tk"
 
 DEPEND="${RDEPEND}
 	sys-devel/autoconf"
@@ -28,13 +29,13 @@ src_compile() {
 		myconf="--enable-optimize"
 	fi
 
-	if use tcltk && use X
+	if use tk && use X
 	then
 		myconf="${myconf} --enable-tk"
 	fi
 
 	econf \
-		`use_enable tcltk tcl` \
+		`use_enable tcl tcl` \
 		`use_enable debug optimize` \
 		$myconf || die
 	emake || die "emake failed"
