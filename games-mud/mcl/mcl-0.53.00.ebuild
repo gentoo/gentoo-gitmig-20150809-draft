@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/mcl-0.53.00.ebuild,v 1.13 2006/10/20 01:11:22 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/mcl-0.53.00.ebuild,v 1.14 2006/11/28 20:29:04 nyhm Exp $
 
 inherit eutils games
 
@@ -20,10 +20,12 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${P}-fPIC.patch"
-	epatch "${FILESDIR}/${PV}-vc.patch"
-	epatch "${FILESDIR}/${P}-gcc34.patch"
-	epatch "${FILESDIR}/${PV}-dynacomplete.patch"
+	epatch \
+		"${FILESDIR}"/${P}-fPIC.patch \
+		"${FILESDIR}"/${PV}-vc.patch \
+		"${FILESDIR}"/${P}-gcc34.patch \
+		"${FILESDIR}"/${PV}-dynacomplete.patch \
+		"${FILESDIR}"/${P}-libdir.patch
 
 	sed -i \
 		-e "/MCL_LIBRARY_PATH/ s:/usr/lib/mcl:${GAMES_LIBDIR}/${PN}:" \
@@ -40,7 +42,7 @@ src_compile() {
 }
 
 src_install () {
-	emake INSTALL_ROOT="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc \
 		doc/{Changes,Chat,Embedded,Examples,Modules,Plugins,README,TODO} \
 		|| die "dodoc failed"

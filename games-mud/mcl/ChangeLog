@@ -1,6 +1,10 @@
 # ChangeLog for games-mud/mcl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/ChangeLog,v 1.14 2006/10/20 01:11:22 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/ChangeLog,v 1.15 2006/11/28 20:29:04 nyhm Exp $
+
+  28 Nov 2006; Tristan Heaven <nyhm@gentoo.org>
+  +files/mcl-0.53.00-libdir.patch, mcl-0.53.00.ebuild:
+  Fix install paths, bug #156488
 
   20 Oct 2006; Tristan Heaven <nyhm@gentoo.org> mcl-0.53.00.ebuild:
   Remove gnuconfig_update
