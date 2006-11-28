@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fahrenheit/fahrenheit-0.1.ebuild,v 1.5 2006/10/14 11:26:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fahrenheit/fahrenheit-0.1.ebuild,v 1.6 2006/11/28 00:12:33 flameeyes Exp $
+
+ARTS_REQUIRED="never"
 
 inherit kde
 
@@ -11,7 +13,7 @@ SRC_URI="http://www.kde-look.org/content/files/2108-${P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 need-kde 3.2
