@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/thinkeramik/thinkeramik-3.2.1.ebuild,v 1.13 2006/10/17 12:30:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/thinkeramik/thinkeramik-3.2.1.ebuild,v 1.14 2006/11/28 01:03:35 flameeyes Exp $
 
 ARTS_REQUIRED="never"
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-KEYWORDS="x86 ppc ~amd64 ~sparc"
+KEYWORDS="~amd64 ppc ~sparc x86 ~x86-fbsd"
 
 DEPEND="|| ( kde-base/kwin kde-base/kdebase )"
 
