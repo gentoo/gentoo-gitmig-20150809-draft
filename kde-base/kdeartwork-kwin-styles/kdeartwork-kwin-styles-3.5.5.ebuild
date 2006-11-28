@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kwin-styles/kdeartwork-kwin-styles-3.5.5.ebuild,v 1.6 2006/11/26 22:42:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kwin-styles/kdeartwork-kwin-styles-3.5.5.ebuild,v 1.7 2006/11/28 00:52:04 flameeyes Exp $
+
+ARTS_REQUIRED="never"
 
 KMMODULE=kwin-styles
 KMNAME=kdeartwork
