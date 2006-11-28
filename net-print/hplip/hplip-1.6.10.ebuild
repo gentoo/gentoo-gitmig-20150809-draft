@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-1.6.10.ebuild,v 1.2 2006/11/26 20:10:02 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-1.6.10.ebuild,v 1.3 2006/11/28 21:51:36 genstef Exp $
 
 inherit eutils
 
@@ -92,6 +92,7 @@ src_install() {
 		rm -f "${D}"/usr/$(get_libdir)/libsane-hpaio.so
 		rm -f "${D}"/usr/$(get_libdir)/libsane-hpaio.so.1
 		rm -f "${D}"/usr/$(get_libdir)/libsane-hpaio.so.1.0.0
+		rm -f "${D}"/etc/sane.d/dll.conf
 	fi
 
 	# bug 106035
