@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fusionx-aqua/fusionx-aqua-1.1.ebuild,v 1.17 2006/11/28 00:15:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fusionx-aqua/fusionx-aqua-1.1.ebuild,v 1.18 2006/11/28 00:16:44 flameeyes Exp $
 
 MY_P="FusionX-Aqua-${PV}"
 S=${WORKDIR}/${MY_P}
@@ -16,6 +16,8 @@ IUSE=""
 
 RDEPEND="|| ( kde-base/kwin kde-base/kdebase )"
 DEPEND=""
+
+RESTRICT="binchecks strip"
 
 src_compile() { :; }
 

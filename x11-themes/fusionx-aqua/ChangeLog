@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/fusionx-aqua
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fusionx-aqua/ChangeLog,v 1.12 2006/11/28 00:15:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fusionx-aqua/ChangeLog,v 1.13 2006/11/28 00:16:44 flameeyes Exp $
+
+  28 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  fusionx-aqua-1.1.ebuild:
+  Restrict binchecks as the package only installs datafiles.
 
   28 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   fusionx-aqua-1.1.ebuild:
