@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.9.1.ebuild,v 1.2 2006/11/06 07:24:13 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.9.1.ebuild,v 1.3 2006/11/28 19:19:34 nyhm Exp $
 
 inherit eutils games
 
@@ -73,7 +73,7 @@ src_install() {
 	insinto "${GAMES_DATADIR}"/${PN}/engines
 	doins gui/themes/modern.*
 	doicon icons/scummvm.xpm
-	make_desktop_entry scummvm ScummVM scummvm.xpm
+	make_desktop_entry scummvm ScummVM scummvm.xpm "Game;AdventureGame"
 	prepgamesdirs
 }
 
