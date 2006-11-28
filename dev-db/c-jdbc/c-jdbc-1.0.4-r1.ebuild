@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/c-jdbc-1.0.4-r1.ebuild,v 1.11 2006/09/14 19:32:14 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/c-jdbc-1.0.4-r1.ebuild,v 1.12 2006/11/28 04:25:04 nichoj Exp $
 
 inherit java-pkg eutils
 
@@ -25,7 +25,7 @@ RDEPEND=">=virtual/jre-1.3
 	=dev-java/jfreechart-0.9.21*
 	>=dev-java/kunststoff-2.0.2
 	>=dev-java/log4j-1.2.8
-	=dev-java/mx4j-2.1*
+	=dev-java/mx4j-3.0*
 	=dev-java/jakarta-regexp-1.3*
 	>=dev-java/xalan-2.5.2
 	dev-java/xml-commons
@@ -69,7 +69,7 @@ src_unpack() {
 	java-pkg_jar-from dom4j-1
 
 	cd ${S}/lib/jmx
-	java-pkg_jar-from mx4j-2.1
+	java-pkg_jar-from mx4j-3.0
 	java-pkg_jar-from xalan
 	java-pkg_jar-from xml-commons xml-apis.jar
 
