@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.86 2006/10/20 00:17:06 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.87 2006/11/28 13:53:05 jer Exp $
+
+  28 Nov 2006; Jeroen Roovers <jer@gentoo.org> elfutils-0.118.ebuild:
+  Stable for HPPA (bug #130121).
 
   20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> elfutils-0.118.ebuild:
   Stable on Alpha.
