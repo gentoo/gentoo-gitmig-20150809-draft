@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/ifpgui
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ifpgui/ChangeLog,v 1.1 2006/11/12 22:16:53 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ifpgui/ChangeLog,v 1.2 2006/11/28 21:53:49 troll Exp $
+
+  28 Nov 2006; Przemysław Maciąg <troll@gentoo.org> ifpgui-0.10.8.ebuild:
+  Replaced ebuild config with emerge --config
 
 *ifpgui-0.10.8 (12 Nov 2006)
 
