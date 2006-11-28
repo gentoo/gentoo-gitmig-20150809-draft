@@ -1,6 +1,14 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.68 2006/11/28 19:04:43 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.69 2006/11/28 20:51:54 dang Exp $
+
+*liferea-1.2_rc3-r1 (28 Nov 2006)
+*liferea-1.2_rc3 (28 Nov 2006)
+
+  28 Nov 2006; Daniel Gryniewicz <dang@gentoo.org> liferea-1.2_rc1.ebuild,
+  liferea-1.2_rc1-r1.ebuild, +liferea-1.2_rc3.ebuild,
+  +liferea-1.2_rc3-r1.ebuild:
+  Bump to 1.2_rc3; both with and without xulrunner
 
   28 Nov 2006; Daniel Gryniewicz <dang@gentoo.org> +liferea-1.2_rc1.ebuild:
   Oops, just noticed that non-xulrunner version was removed

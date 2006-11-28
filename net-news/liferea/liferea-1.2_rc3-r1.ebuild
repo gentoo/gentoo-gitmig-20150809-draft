@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.2_rc1.ebuild,v 1.5 2006/11/28 20:51:54 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.2_rc3-r1.ebuild,v 1.1 2006/11/28 20:51:54 dang Exp $
 
 inherit gnome2 flag-o-matic eutils autotools
 
@@ -11,8 +11,8 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="dbus firefox gtkhtml seamonkey libnotify gnutls"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="dbus firefox gtkhtml seamonkey libnotify gnutls xulrunner"
 
 RDEPEND=">=x11-libs/gtk+-2.8
 	x11-libs/pango
@@ -20,11 +20,14 @@ RDEPEND=">=x11-libs/gtk+-2.8
 	>=dev-libs/libxml2-2.5.10
 	dev-libs/libxslt
 	>=dev-libs/glib-2
-	firefox? ( www-client/mozilla-firefox )
-	!firefox? ( seamonkey? ( www-client/seamonkey ) )
-	!firefox? ( !seamonkey? ( =gnome-extra/gtkhtml-2* ) )
+	xulrunner? ( net-libs/xulrunner )
+	!xulrunner? ( firefox? ( www-client/mozilla-firefox ) )
+	!xulrunner? ( !firefox? ( seamonkey? ( www-client/seamonkey ) ) )
+	!xulrunner? ( !firefox? ( !seamonkey? ( =gnome-extra/gtkhtml-2* ) ) )
 	gtkhtml? ( =gnome-extra/gtkhtml-2* )
-	dbus? ( >=sys-apps/dbus-0.30 )
+	dbus? ( || ( >=dev-libs/dbus-glib-0.71
+		( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.36 ) )
+	)
 	libnotify? ( >=x11-libs/libnotify-0.3.2 )
 	gnutls? ( net-libs/gnutls )"
 
@@ -55,8 +58,10 @@ pkg_setup() {
 		G2CONF="${G2CONF} --disable-gtkhtml2"
 	fi
 
-	# we prefer firefox over seamonkey
-	if use firefox ; then
+	# we prefer xulrunner over firefox over seamonkey
+	if use xulrunner ; then
+		G2CONF="${G2CONF} --enable-gecko=xulrunner"
+	elif use firefox ; then
 		G2CONF="${G2CONF} --enable-gecko=firefox"
 	elif use seamonkey ; then
 		G2CONF="${G2CONF} --enable-gecko=seamonkey"
