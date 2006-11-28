@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-validator
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/ChangeLog,v 1.31 2006/11/23 13:23:32 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/ChangeLog,v 1.32 2006/11/28 04:36:07 nichoj Exp $
+
+  28 Nov 2006; Joshua Nichols <nichoj@gentoo.org>
+  commons-validator-1.1.4-r1.ebuild:
+  Stabilized on amd64 (see bug #155622).
 
   23 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
   commons-validator-1.1.4-r1.ebuild:
