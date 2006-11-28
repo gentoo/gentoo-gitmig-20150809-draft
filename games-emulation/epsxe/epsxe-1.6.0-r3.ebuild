@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/epsxe/epsxe-1.6.0-r3.ebuild,v 1.8 2006/09/18 00:11:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/epsxe/epsxe-1.6.0-r3.ebuild,v 1.9 2006/11/28 18:36:58 nyhm Exp $
 
 inherit games
 
@@ -44,6 +44,5 @@ src_install() {
 	insinto "${GAMES_LIBDIR}/psemu/cheats"
 	doins cheats/* || die "doins failed"
 	dodoc docs/*
-	games_make_wrapper epsxe ./epsxe "${dir}" "${dir}"
 	prepgamesdirs
 }
