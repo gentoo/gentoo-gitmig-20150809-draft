@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/lshw
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.39 2006/11/27 15:02:46 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.40 2006/11/28 17:38:08 opfer Exp $
+
+  28 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  lshw-02.08.01b.ebuild:
+  stable x86, bug #156269
 
   27 Nov 2006; Steve Dibb <beandog@gentoo.org> lshw-02.08.01b.ebuild:
   amd64 stable, bug 156269
