@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6354 2006/11/28 04:26:21 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6355 2006/11/28 13:02:03 drizzt Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ## 
+
+# Timothy Redaelli <drizzt@gentoo.org> (28 Nov 2006)
+# Masked for testing.
+=media-libs/spandsp-0.0.3*
 
 # Marien Zwart <marienz@gentoo.org> (28 Nov 2006)
 # Release candidate.
