@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.5.5.ebuild,v 1.11 2006/11/28 19:52:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.5.5.ebuild,v 1.12 2006/11/28 23:33:43 flameeyes Exp $
 
 inherit kde
 
@@ -37,7 +37,7 @@ src_unpack() {
 	fi
 
 	# Override kde_src_unpack.
-	unpack ${A}
+	[[ -n ${A} ]] && unpack ${A}
 
 	# Work around KDE bug 126311.
 	for dir in `ls "${WORKDIR}"`; do
