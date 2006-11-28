@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/transkode
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/ChangeLog,v 1.1 2006/11/28 23:43:39 flameeyes Exp $
+
+*transkode-0.6_beta2 (28 Nov 2006)
+
+  28 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +transkode-0.6_beta2.ebuild:
+  Initial import, transcoding frontend for KDE, with Amarok integration.
+
