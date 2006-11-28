@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.134 2006/11/20 21:31:11 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.135 2006/11/28 07:22:30 omp Exp $
+
+  28 Nov 2006; David Shakaryan <omp@gentoo.org> fvwm-2.5.16.ebuild,
+  fvwm-2.5.18.ebuild, fvwm-2.5.18-r1.ebuild:
+  Remove calling of prepallman. (bug #140697)
 
   20 Nov 2006; <blubb@gentoo.org> fvwm-2.5.18-r1.ebuild:
   stable on amd64

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.18-r1.ebuild,v 1.9 2006/11/20 21:31:11 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.18-r1.ebuild,v 1.10 2006/11/28 07:22:30 omp Exp $
 
 inherit eutils flag-o-matic
 
@@ -156,9 +156,6 @@ src_install() {
 	docs/fvwm.lsm
 
 	dodoc ${FILESDIR}/README.transluceny
-
-	# fix a couple of symlinks.
-	prepallman
 }
 
 pkg_postinst() {
