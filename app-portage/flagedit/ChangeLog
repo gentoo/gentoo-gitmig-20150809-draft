@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/flagedit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/flagedit/ChangeLog,v 1.11 2006/10/25 17:22:01 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/flagedit/ChangeLog,v 1.12 2006/11/28 22:59:05 dev-zero Exp $
+
+  28 Nov 2006; Tiziano Müller <dev-zero@gentoo.org> flagedit-0.0.7.ebuild:
+  ~x86-fbsd keyword added.
 
   25 Oct 2006; Damien Krotkine <dams@gentoo.org> -flagedit-0.0.2.ebuild,
   -flagedit-0.0.3.ebuild, -flagedit-0.0.4.ebuild:
