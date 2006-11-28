@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fusionx-aqua/fusionx-aqua-1.1.ebuild,v 1.18 2006/11/28 00:16:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fusionx-aqua/fusionx-aqua-1.1.ebuild,v 1.19 2006/11/28 00:38:15 flameeyes Exp $
 
 MY_P="FusionX-Aqua-${PV}"
 S=${WORKDIR}/${MY_P}
@@ -14,12 +14,11 @@ SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND="|| ( kde-base/kwin kde-base/kdebase )"
+RDEPEND="|| ( kde-base/kwin kde-base/kdebase )
+	|| ( kde-base/kdeartwork-kwin-styles kde-base/kdeartwork )"
 DEPEND=""
 
 RESTRICT="binchecks strip"
-
-src_compile() { :; }
 
 src_install() {
 	insinto /usr/share/apps/kstyle
