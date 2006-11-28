@@ -4,7 +4,7 @@ service svn
     wait            = no
     user            = apache
     group           = apache
-	umask           = 002
+    umask           = 002
     protocol        = tcp
     log_on_failure += USERID HOST
     port            = 3690
