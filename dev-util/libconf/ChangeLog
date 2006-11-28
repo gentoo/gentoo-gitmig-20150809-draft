@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/libconf
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/ChangeLog,v 1.41 2006/06/07 21:10:21 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/ChangeLog,v 1.42 2006/11/28 20:06:20 dev-zero Exp $
+
+  28 Nov 2006; Tiziano Müller <dev-zero@gentoo.org>
+  -libconf-0.42.00.ebuild, -libconf-0.42.00-r1.ebuild,
+  -libconf-0.42.10.ebuild, libconf-0.42.10-r1.ebuild:
+  Dropped old versions. Cleaned up the ebuild.
 
   07 Jun 2006; Damien Krotkine <dams@gentoo.org> libconf-0.40.00.ebuild:
   added xml IUSE, bug #135972
