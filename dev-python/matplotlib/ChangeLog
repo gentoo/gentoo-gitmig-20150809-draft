@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.23 2006/07/17 15:59:42 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.24 2006/11/28 21:52:12 marienz Exp $
+
+  28 Nov 2006; Marien Zwart <marienz@gentoo.org> matplotlib-0.80-r1.ebuild:
+  Adding freetype dependency for bug #152051. Thanks to Evil Compile Person
+  for reporting.
 
 *matplotlib-0.87.4 (17 Jul 2006)
 
