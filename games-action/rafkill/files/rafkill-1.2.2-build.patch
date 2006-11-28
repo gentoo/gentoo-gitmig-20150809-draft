@@ -1,10 +1,11 @@
 --- SConstruct
 +++ SConstruct
-@@ -46,7 +46,11 @@
+@@ -46,7 +46,12 @@
  # print "Install directory = $prefix"
  # print "Directory where symlinked binary will go = $bin"
  
 -flags = [ '-g3', '-Wall', '-fno-rtti', '-Woverloaded-virtual', '-O2', '-DINSTALL_DIR=\\\"$prefix\\\"' ];
++SConsignFile()
 +env.Replace(CXX = os.environ['CXX'])
 +if os.environ.get('CXXFLAGS'):
 +	env.Replace(CPPFLAGS = os.environ['CXXFLAGS'])
