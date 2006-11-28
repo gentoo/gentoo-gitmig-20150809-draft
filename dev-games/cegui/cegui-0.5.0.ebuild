@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.5.0.ebuild,v 1.1 2006/11/20 15:51:59 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.5.0.ebuild,v 1.2 2006/11/28 21:46:39 nyhm Exp $
 
 inherit eutils
 
@@ -72,7 +72,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog README TODO
-	use doc && dohtml -r documentation/api_reference/*
+	use doc && dohtml -r documentation/api_reference
 	if use examples ; then
 		insinto /usr/share/doc/${PF}/Samples
 		doins -r Samples.clean/* || die "doins failed"
