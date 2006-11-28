@@ -1,16 +1,16 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.2-r1.ebuild,v 1.17 2006/11/17 23:44:55 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.2-r1.ebuild,v 1.18 2006/11/28 18:08:14 opfer Exp $
 
-IUSE="sdl ssl opengl python tcltk perl"
+IUSE="sdl ssl opengl python tk perl"
 
 DESCRIPTION="An XML Framework"
 SRC_URI="http://www.entity.cx/Download/files/${P}.tar.gz"
-HOMEPAGE="http://www.entity.cx"
+HOMEPAGE="http://www.entity.cx/"
 
 DEPEND=">=media-libs/imlib-1.9.10-r1
 	>=dev-libs/libpcre-3.2
-	tcltk? ( >=dev-lang/tk-8.1.1 )
+	tk? ( >=dev-lang/tk-8.1.1 )
 	perl? ( >=dev-lang/perl-5.6 )
 	python? ( >=dev-lang/python-2.0-r4 )
 	sdl? ( >=media-libs/libsdl-1.1.7 )
@@ -25,7 +25,7 @@ KEYWORDS="x86 sparc"
 src_compile() {
 
 	local myconf
-	use tcltk \
+	use tk \
 		&& myconf="--enable-tcl=module --with-tcl=/usr/lib" \
 		|| myconf="--enable-tcl=no"
 
