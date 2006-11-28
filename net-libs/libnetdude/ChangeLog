@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libnetdude
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetdude/ChangeLog,v 1.2 2006/02/18 22:14:30 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetdude/ChangeLog,v 1.3 2006/11/28 00:14:26 jokey Exp $
+
+*libnetdude-0.9 (28 Nov 2006)
+
+  28 Nov 2006; Markus Ullmann <jokey@gentoo.org> +libnetdude-0.9.ebuild:
+  Version bump
 
   18 Feb 2006; Marcelo Goes <vanquirius@gentoo.org> libnetdude-0.8.ebuild:
   Really install docs if doc USE flag is set.
