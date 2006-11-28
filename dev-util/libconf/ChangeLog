@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/libconf
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/ChangeLog,v 1.42 2006/11/28 20:06:20 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/ChangeLog,v 1.43 2006/11/28 22:57:13 dev-zero Exp $
+
+  28 Nov 2006; Tiziano Müller <dev-zero@gentoo.org>
+  +files/0.42.10-fbsd.patch, libconf-0.42.10-r1.ebuild:
+  Added fixes and patch for FreeBSD. ~x86-fbsd keyword added.
 
   28 Nov 2006; Tiziano Müller <dev-zero@gentoo.org>
   -libconf-0.42.00.ebuild, -libconf-0.42.00-r1.ebuild,

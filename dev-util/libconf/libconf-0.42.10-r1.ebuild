@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/libconf-0.42.10-r1.ebuild,v 1.2 2006/11/28 20:06:20 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/libconf-0.42.10-r1.ebuild,v 1.3 2006/11/28 22:57:13 dev-zero Exp $
 
-inherit multilib toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
 MY_P=perl-Libconf-${PV}
 
@@ -12,7 +12,7 @@ SRC_URI="http://libconf.net/download/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
 
 IUSE="python ruby"
 DEPEND="dev-lang/perl
@@ -25,7 +25,7 @@ S=${WORKDIR}/${MY_P}
 
 bindings() {
 	local mybindings
-	mybindings="c bash"
+	mybindings="bash"
 	use python && mybindings="${mybindings} python"
 	use ruby && mybindings="${mybindings} ruby"
 	echo ${mybindings}
@@ -35,20 +35,34 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	[[ ${USERLAND} == *BSD ]] && epatch "${FILESDIR}/${PV}-fbsd.patch"
+
 	# Multilib fix
 	sed -i \
 		-e "/^LIB_DIR/ { s:lib:$(get_libdir): }" \
 		-e 's/^CF=-Wall/CF=$(CFLAGS)/' \
-		bindings/c/src/Makefile || die "bad sed"
+		bindings/c/src/Makefile || die "sed failed"
+
+	sed -i \
+		-e 's/        /\t/' \
+		perl-Libconf/Makefile || die "sed failed"
+
+	sed -i \
+		-e '/^MAKE =/d' \
+		Makefile perl-Libconf/Makefile || die "sed failed"
 }
 src_compile() {
 	emake \
 		BINDINGS="$(bindings)" \
-		CC=$(tc-getCC) || die "make failed"
+		CC=$(tc-getCC) \
+		|| die "make failed"
 }
 
 src_install() {
-	emake BINDINGS="$(bindings)" PREFIX="${D}/usr" DESTDIR="${D}" ROOT="${D}" install || die "emake install failed"
+	emake \
+		BINDINGS="$(bindings)" \
+		PREFIX="${D}/usr" DESTDIR="${D}" ROOT="${D}" \
+		CPA="cp -pR" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog \
 		bindings/ruby/src/{AUTHORS,README} \
 		bindings/python/src/README
