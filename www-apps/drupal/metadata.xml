@@ -4,7 +4,8 @@
 <pkgmetadata>
 <herd>web-apps</herd>
 <maintainer>
-  <email>st_lim@gentoo.org</email>
-    <description>Primary maintainer</description>
+  <email>uberlord@gentoo.org</email>
+  <name>Roy Marples</name>
+  <description>Primary maintainer</description>
 </maintainer>
 </pkgmetadata>
