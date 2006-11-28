@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/freecol-0.5.2.ebuild,v 1.1 2006/11/28 02:35:28 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/freecol-0.5.2.ebuild,v 1.2 2006/11/28 18:10:20 nyhm Exp $
 
 inherit eutils java-ant-2 java-pkg-2 games
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND=">=virtual/jre-1.4"
-DEPEND=">=virtual/jdk-1.4
+RDEPEND=">=virtual/jre-1.5"
+DEPEND=">=virtual/jdk-1.5
 	dev-java/ant"
 
 S=${WORKDIR}/${PN}
