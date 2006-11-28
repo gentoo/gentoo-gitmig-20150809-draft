@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.10.0.ebuild,v 1.1 2006/11/28 19:59:27 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.10.0.ebuild,v 1.2 2006/11/28 22:05:13 hansmi Exp $
 
 inherit bash-completion
 
@@ -15,7 +15,7 @@ IUSE="doc pink selinux qa ruby glsa"
 
 DEPEND="
 	dev-cpp/libebt
-	dev-cpp/libwrapiter
+	>=dev-cpp/libwrapiter-1.0.0
 	>=app-shells/bash-3
 	>=sys-devel/autoconf-2.59
 	=sys-devel/automake-1.9*
