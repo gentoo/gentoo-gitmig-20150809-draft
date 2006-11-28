@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6356 2006/11/28 14:43:50 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6357 2006/11/28 14:57:04 uberlord Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -779,10 +779,6 @@ sci-biology/emboss-kaptain
 # masked new snapshot for further testing (see bug #144314)
 >=sci-libs/blas-atlas-3.7.17
 >=sci-libs/lapack-atlas-3.7.17
-
-# Christel Dahlskjaer <christel@gentoo.org> (09 Sep 2006)
-# Serious QA issues; see bug #98524
-www-apps/drupal
 
 # Mike Kelly <pioto@gentoo.org> (09 Sep 2006)
 # The 2.x branch changes how it interacts with vim and other plugins. Masking
