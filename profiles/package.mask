@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6353 2006/11/28 04:23:42 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6354 2006/11/28 04:26:21 marienz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ## 
+
+# Marien Zwart <marienz@gentoo.org> (28 Nov 2006)
+# Release candidate.
+=dev-util/bzr-0.13*
+=dev-util/bzrtools-0.13*
 
 # Stuart Herbert <stuart@gentoo.org> (27 Nov 2006)
 # Deprecated: no longer supported
