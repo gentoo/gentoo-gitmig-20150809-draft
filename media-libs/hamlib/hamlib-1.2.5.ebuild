@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.5.ebuild,v 1.1 2006/07/06 23:34:41 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.5.ebuild,v 1.2 2006/11/28 18:17:28 opfer Exp $
 
 inherit eutils multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~x86"
-IUSE="doc gd python tcltk X"
+IUSE="doc gd python tk X"
 
 RESTRICT="test"
 
@@ -19,8 +19,7 @@ RDEPEND="virtual/libc
 	gd? ( media-libs/gd )
 	python? ( dev-lang/python
 		dev-lang/tcl )
-	tcltk? ( dev-lang/tk
-		dev-lang/tcl )"
+	tk? dev-lang/tk"
 DEPEND=">=sys-devel/libtool-1.5
 	>=sys-devel/autoconf-2.54
 	>=sys-devel/automake-1.7
@@ -44,7 +43,7 @@ src_compile() {
 		--without-rpc-backends \
 		--without-perl-binding \
 		$(use_with python python-binding) \
-		$(use_with tcltk tcl-binding) \
+		$(use_with tk tcl-binding) \
 		$(use_with gd rigmatrix) \
 		$(use_with X x) \
 		|| die "configure failed"
