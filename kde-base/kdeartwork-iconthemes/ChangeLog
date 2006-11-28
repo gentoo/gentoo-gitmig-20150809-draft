@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-iconthemes
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-iconthemes/ChangeLog,v 1.57 2006/11/26 22:44:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-iconthemes/ChangeLog,v 1.58 2006/11/28 01:17:57 flameeyes Exp $
+
+  28 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdeartwork-iconthemes-3.5.5.ebuild:
+  Remove arts useflag and restrict binchecks and strips.
 
   26 Nov 2006; Markus Rothe <corsair@gentoo.org>
   kdeartwork-iconthemes-3.5.5.ebuild:

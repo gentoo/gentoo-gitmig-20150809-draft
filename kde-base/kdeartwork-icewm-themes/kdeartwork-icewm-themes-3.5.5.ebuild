@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-icewm-themes/kdeartwork-icewm-themes-3.5.5.ebuild,v 1.7 2006/11/26 22:43:51 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-icewm-themes/kdeartwork-icewm-themes-3.5.5.ebuild,v 1.8 2006/11/28 01:21:55 flameeyes Exp $
+
+ARTS_REQUIRED="never"
+RESTRICT="binchecks strip"
 
 KMMODULE=icewm-themes
 KMNAME=kdeartwork

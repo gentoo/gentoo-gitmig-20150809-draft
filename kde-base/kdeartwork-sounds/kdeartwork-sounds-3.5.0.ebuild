@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-sounds/kdeartwork-sounds-3.5.0.ebuild,v 1.19 2006/10/03 09:47:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-sounds/kdeartwork-sounds-3.5.0.ebuild,v 1.20 2006/11/28 01:26:27 flameeyes Exp $
+
+ARTS_REQUIRED="never"
+RESTRICT="binchecks strip"
 
 KMMODULE=sounds
 KMNAME=kdeartwork
