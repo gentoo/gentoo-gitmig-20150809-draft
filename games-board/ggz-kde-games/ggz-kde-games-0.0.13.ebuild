@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-kde-games/ggz-kde-games-0.0.13.ebuild,v 1.2 2006/11/15 11:44:57 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-kde-games/ggz-kde-games-0.0.13.ebuild,v 1.3 2006/11/28 01:14:02 nyhm Exp $
 
 inherit kde-functions games
 
@@ -24,6 +24,8 @@ src_unpack() {
 	sed -i 's:@prefix@:/usr:' \
 		$(find . -name module.dsc.in) \
 		|| die "sed failed"
+	# bug 155184
+	sed -i '/^\/\//d' koenig/ai.c || die "sed ai.c failed"
 }
 
 src_compile() {

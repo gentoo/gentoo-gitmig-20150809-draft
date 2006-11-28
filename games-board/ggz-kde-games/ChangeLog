@@ -1,6 +1,9 @@
 # ChangeLog for games-board/ggz-kde-games
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-kde-games/ChangeLog,v 1.6 2006/11/15 11:44:57 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-kde-games/ChangeLog,v 1.7 2006/11/28 01:14:02 nyhm Exp $
+
+  28 Nov 2006; Tristan Heaven <nyhm@gentoo.org> ggz-kde-games-0.0.13.ebuild:
+  Remove a C99 comment, bug #155184
 
   15 Nov 2006; Tristan Heaven <nyhm@gentoo.org> ggz-kde-games-0.0.13.ebuild:
   Add arts USE flag
