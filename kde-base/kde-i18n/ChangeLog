@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-i18n
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.120 2006/11/27 23:04:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.121 2006/11/28 19:52:51 flameeyes Exp $
+
+  28 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> kde-i18n-3.5.5.ebuild:
+  Fix the workaround, thanks to Nicholas Doyle for reporting.
 
   27 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> kde-i18n-3.5.5.ebuild:
   Don't die if LINGUAS is set to just 'en'.

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.5.5.ebuild,v 1.10 2006/11/27 23:04:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.5.5.ebuild,v 1.11 2006/11/28 19:52:51 flameeyes Exp $
 
 inherit kde
 
@@ -24,7 +24,7 @@ for X in ${LANGS} ; do
 done
 
 src_unpack() {
-	if [ -z "${A}" && LINGUAS != "en"]; then
+	if [[ -z "${A}" && "${LINGUAS}" != "en" ]]; then
 		echo
 		eerror "You must set the LINGUAS environment variable to a list of valid"
 		eerror "language codes, one for each language you would like to install."
