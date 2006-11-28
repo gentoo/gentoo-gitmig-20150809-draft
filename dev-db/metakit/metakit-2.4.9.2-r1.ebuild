@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.2-r1.ebuild,v 1.9 2005/06/17 21:23:56 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.2-r1.ebuild,v 1.10 2006/11/28 18:05:42 opfer Exp $
 
 DESCRIPTION="Embedded database library"
 HOMEPAGE="http://www.equi4.com/metakit/"
@@ -9,11 +9,11 @@ SRC_URI="http://www.equi4.com/pub/mk/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="x86 ~ppc hppa"
-IUSE="python tcltk"
+IUSE="python tcl"
 
 DEPEND=">=sys-apps/sed-4
 	python? ( >=dev-lang/python-2.2.1 )
-	tcltk? ( >=dev-lang/tcl-8.3.3-r2 )"
+	tcl? ( >=dev-lang/tcl-8.3.3-r2 )"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
@@ -29,7 +29,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 	use python && myconf="--with-python"
-	use tcltk && myconf="${myconf} --with-tcl=/usr/include"
+	use tcl && myconf="${myconf} --with-tcl=/usr/include"
 
 	CXXFLAGS="${CXXFLAGS}" unix/configure \
 		${myconf} \
