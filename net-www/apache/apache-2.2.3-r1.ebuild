@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.3-r1.ebuild,v 1.1 2006/11/27 02:45:56 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.3-r1.ebuild,v 1.2 2006/11/28 03:35:16 vericgar Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib autotools
 
@@ -89,16 +89,18 @@ src_unpack() {
 		${GENTOO_PATCHDIR}/{conf/httpd.conf,init/*,patches/config.layout,scripts/Makefile.suexec,scripts/suexec2-config} \
 		|| die "libdir sed failed"
 
-	# Use /srv/<FQDN>/www instead of /var/www/<FQDN> if USE=srvdir
-	useq srvdir && sed -i -e "s:/var/www/localhost:/srv/localhost/www:g" \
-		${GENTOO_PATCHDIR}/{conf/httpd.conf,conf/modules.d/*,conf/vhosts.d/*,patches/config.layout,init/apache2.confd} \
-		|| die "srvdir sed failed (1)"
-	useq srvdir && sed -i -e "s:/var/www/example.com:/srv/example.com/www:g" \
-		${GENTOO_PATCHDIR}/conf/vhosts.d/*.example \
-		|| die "srvdir sed failed (2)"
-	useq srvdir && sed -i -e "s:/var/www:/srv:g" \
-		${GENTOO_PATCHDIR}/{conf/httpd.conf,conf/suexec-conf,conf/vhosts.d/*.example,scripts/suexec2-config} \
-		|| die "srvdir sed failed (3)"
+	if useq srvdir; then
+		# Use /srv/<FQDN>/www instead of /var/www/<FQDN> if USE=srvdir
+		sed -i -e "s:/var/www/localhost:/srv/localhost/www:g" \
+			${GENTOO_PATCHDIR}/{conf/httpd.conf,conf/modules.d/*,conf/vhosts.d/*,patches/config.layout,init/apache2.confd} \
+			|| die "srvdir sed failed (1)"
+		sed -i -e "s:/var/www/example.com:/srv/example.com/www:g" \
+			${GENTOO_PATCHDIR}/conf/vhosts.d/*.example \
+			|| die "srvdir sed failed (2)"
+		sed -i -e "s:/var/www:/srv:g" \
+			${GENTOO_PATCHDIR}/{conf/httpd.conf,conf/suexec-conf,conf/vhosts.d/*.example,scripts/suexec2-config} \
+			|| die "srvdir sed failed (3)"
+	fi
 
 	#### Patch Organization
 	# 00-19 Gentoo specific  (00_all_some-title.patch)
