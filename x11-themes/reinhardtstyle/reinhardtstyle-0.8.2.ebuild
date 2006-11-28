@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/reinhardtstyle/reinhardtstyle-0.8.2.ebuild,v 1.7 2006/10/17 12:32:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/reinhardtstyle/reinhardtstyle-0.8.2.ebuild,v 1.8 2006/11/28 00:46:35 flameeyes Exp $
 
 ARTS_REQUIRED="never"
 
@@ -19,7 +19,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-KEYWORDS="x86 ~ppc sparc"
+KEYWORDS="~amd64 ~ppc sparc x86 ~x86-fbsd"
 
 DEPEND="|| ( kde-base/kwin kde-base/kdebase )"
 
