@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.6.0-r1.ebuild,v 1.1 2006/07/08 09:27:04 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.6.0-r1.ebuild,v 1.2 2006/11/28 20:16:27 opfer Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.inria.fr/INRIA/Projects/cristal/${MY_PN}/${MY_P}.tgz"
 HOMEPAGE="http://pauillac.inria.fr/advi/"
 LICENSE="LGPL-2.1"
 
-IUSE="cjk tcltk"
+IUSE="cjk tk"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
@@ -28,19 +28,19 @@ DOCS="README TODO"
 
 pkg_setup() {
 
-	# warn those who have USE="tcltk" but no ocaml tcltk support
-	# because we cant force ocaml to be build with tcltk.
-	if use tcltk; then
+	# warn those who have USE="tk" but no ocaml tk support
+	# because we cant force ocaml to be build with tk.
+	if use tk; then
 		if [ ! -d /usr/lib/ocaml/labltk ]; then
 
 			echo ""
-			ewarn "You have requested tcltk support, but it appears"
-			ewarn "your ocaml wasnt compiled with tcltk support, "
+			ewarn "You have requested tk support, but it appears"
+			ewarn "your ocaml wasnt compiled with tk support, "
 			ewarn "so it can't be included for active-dvi."
 			echo ""
 			ewarn "Please stop this build, and emerge ocaml with "
-			ewarn "USE=\"tcltk\" ocaml"
-			ewarn "before emerging active-dvi if you want tcltk support."
+			ewarn "USE=\"tk\" ocaml"
+			ewarn "before emerging active-dvi if you want tk support."
 			echo ""
 			# give the user some time to read this, but leave the
 			# choice up to them

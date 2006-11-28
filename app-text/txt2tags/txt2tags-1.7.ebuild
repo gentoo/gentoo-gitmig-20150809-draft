@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/txt2tags-1.7.ebuild,v 1.7 2005/07/09 19:41:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/txt2tags-1.7.ebuild,v 1.8 2006/11/28 20:20:38 opfer Exp $
 
 inherit elisp-common
 
-IUSE="emacs tcltk"
+IUSE="emacs tk"
 
 DESCRIPTION="Txt2tags is a tool for generating marked up documents (HTML, SGML, ...) from a plain text file with markup."
 SRC_URI="http://txt2tags.sourceforge.net/src/${P}.tgz"
@@ -15,19 +15,19 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc ~ppc"
 DEPEND="virtual/python
-	tcltk? ( dev-lang/tk )
+	tk? ( dev-lang/tk )
 	emacs? ( virtual/emacs )"
 
 pkg_setup() {
 
-	# need to test if the tcltk support in python is working
-	if use tcltk; then
+	# need to test if the tk support in python is working
+	if use tk; then
 		if ! python -c "import _tkinter" 2>&1 > /dev/null ; then
 			echo
-			eerror "You have requested tcltk, but your build of Python"
+			eerror "You have requested tk, but your build of Python"
 			eerror "doesnt support import _tkinter. You may need to"
 			eerror "remerge dev-lang/python, or build ${P}"
-			eerror "with USE=\"-tcltk\""
+			eerror "with USE=\"-tk\""
 			die
 		fi
 	fi
