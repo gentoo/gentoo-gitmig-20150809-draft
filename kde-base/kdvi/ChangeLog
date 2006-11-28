@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdvi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdvi/ChangeLog,v 1.58 2006/11/18 17:35:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdvi/ChangeLog,v 1.59 2006/11/28 22:02:10 corsair Exp $
+
+  28 Nov 2006; Markus Rothe <corsair@gentoo.org> kdvi-3.5.5.ebuild:
+  Stable on ppc64
 
   18 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> -kdvi-3.5.3.ebuild,
   -kdvi-3.5.4.ebuild:

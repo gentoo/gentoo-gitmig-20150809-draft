@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kviewshell
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kviewshell/ChangeLog,v 1.61 2006/11/18 19:15:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kviewshell/ChangeLog,v 1.62 2006/11/28 22:01:08 corsair Exp $
+
+  28 Nov 2006; Markus Rothe <corsair@gentoo.org> kviewshell-3.5.5.ebuild:
+  Stable on ppc64
 
   18 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   -kviewshell-3.5.3.ebuild, -kviewshell-3.5.4.ebuild:
