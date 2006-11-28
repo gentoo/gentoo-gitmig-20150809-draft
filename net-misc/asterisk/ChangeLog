@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.137 2006/11/23 20:36:14 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.138 2006/11/28 13:41:48 drizzt Exp $
+
+  28 Nov 2006; Timothy Redaelli <drizzt@gentoo.org>
+  asterisk-1.2.12.1.ebuild, asterisk-1.2.13.ebuild,
+  asterisk-1.2.13-r1.ebuild:
+  Removed -lssl from LIBS if compiled with USE=-ssl wrt bug #155333. Installed
+  asterisk.h in /usr/include/asterisk to make plugins compile. Added
+  codec_gsm.so to QA_TEXTRELS_x86 and QA_EXECSTACK_x86 to make asterisk
+  compile with FEATURES=stricter. Added CC=$(tc-getCC) to make it compile with
+  cross-distcc.
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> asterisk-1.0.11_p1.ebuild,
   asterisk-1.0.12.ebuild, asterisk-1.2.12.1.ebuild, asterisk-1.2.13.ebuild:

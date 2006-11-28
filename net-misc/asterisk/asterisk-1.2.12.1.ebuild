@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.12.1.ebuild,v 1.7 2006/11/23 20:36:14 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.12.1.ebuild,v 1.8 2006/11/28 13:41:48 drizzt Exp $
 
 inherit eutils multilib
 
@@ -413,7 +413,6 @@ src_install() {
 		${D}/usr/share/doc/${PF}/{conf/misdn.conf,configs/misdn.conf.sample.gz,README.misdn.gz}
 	rm -f ${D}/usr/include/asterisk/chan_capi{,_app}.h \
 		${D}/usr/share/doc/${PF}/{conf/capi.conf,configs/capi.conf.sample.gz}
-	
 }
 
 pkg_preinst() {

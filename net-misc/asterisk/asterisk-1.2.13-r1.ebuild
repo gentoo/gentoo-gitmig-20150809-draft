@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.13-r1.ebuild,v 1.3 2006/11/14 07:51:25 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.13-r1.ebuild,v 1.4 2006/11/28 13:41:48 drizzt Exp $
 
-inherit eutils multilib
+inherit eutils multilib toolchain-funcs
 
 IUSE="alsa bri curl debug doc gtk genericjb h323 hardened lowmem mmx \
 	nosamples odbc osp postgres pri speex sqlite ssl ukcid zaptel \
@@ -61,6 +61,9 @@ DEPEND="${RDEPEND}
 
 #asterisk uses special mpg123 functions and does not work with mpeg321, bug #42703
 PDEPEND="|| ( media-sound/mpg123 net-misc/asterisk-addons )"
+
+QA_TEXTRELS_x86="usr/lib/asterisk/modules/codec_gsm.so"
+QA_EXECSTACK_x86="usr/lib/asterisk/modules/codec_gsm.so"
 
 #
 # List of modules to ignore during scan (because they have been removed in 1.2.x)
@@ -219,8 +222,8 @@ src_unpack() {
 
 	if ! use ssl; then
 		einfo "Disabling crypto support"
-		sed -i -e "s:^#\(NOCRYPTO=yes\):\1:" \
-			Makefile
+		sed -i -e 's:^#\(NOCRYPTO=yes\):\1:' \
+			-e '/^LIBS+=-lssl/d' Makefile || die
 	fi
 
 	#
@@ -280,6 +283,7 @@ src_compile() {
 
 	einfo "Building Asterisk..."
 	make \
+		CC=$(tc-getCC) \
 		NOTRACE=1 \
 		OPTIMIZE="${CFLAGS}" \
 		PWLIBDIR=/usr/share/pwlib \
@@ -383,6 +387,10 @@ src_install() {
 
 	# install asterisk-updater
 	dosbin "${FILESDIR}"/1.2.0/asterisk-updater
+
+	# install asterisk.h, a lot of external modules need this
+	insinto /usr/include/asterisk
+	doins   include/asterisk.h
 
 	# make sure misdn/capi stuff is not installed, provided by asterisk-chan_..
 	rm -f "${D}"/etc/asterisk/misdn.conf "${D}"/usr/lib/asterisk/modules/chan_misdn.so \
