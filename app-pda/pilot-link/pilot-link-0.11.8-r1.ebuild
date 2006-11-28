@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.8-r1.ebuild,v 1.16 2006/09/16 14:19:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.8-r1.ebuild,v 1.17 2006/11/28 17:34:39 peper Exp $
 
 inherit perl-module eutils
 
@@ -11,13 +11,13 @@ SRC_URI="http://pilot-link.org/source/${P}.tar.bz2"
 LICENSE="|| ( GPL-2 LGPL-2 )"
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ~sparc ~x86"
-IUSE="perl java tcltk python png readline"
+IUSE="perl java tk python png readline"
 
 DEPEND="virtual/libc
 	sys-libs/ncurses
 	perl? ( dev-lang/perl )
 	java? ( virtual/jre )
-	tcltk? ( dev-lang/tcl dev-tcltk/itcl dev-lang/tk )
+	tk? ( dev-lang/tcl dev-tcltk/itcl dev-lang/tk )
 	python? ( dev-lang/python )
 	png? ( media-libs/libpng )
 	readline? ( sys-libs/readline )"
@@ -59,7 +59,7 @@ src_compile() {
 		&& myconf="${myconf} --with-python=yes" \
 		|| myconf="${myconf} --with-python=no"
 
-	use tcltk \
+	use tk \
 		&& myconf="${myconf} --with-tcl=/usr/lib --with-itcl=yes --with-tk=yes" \
 		|| myconf="${myconf} --with-tcl=no --with-itcl=no --with-tk=no"
 

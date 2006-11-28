@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/pilot-link
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.25 2006/09/16 14:19:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.26 2006/11/28 17:34:39 peper Exp $
+
+  28 Nov 2006; Piotr Jaroszyński <peper@gentoo.org>
+  pilot-link-0.11.8.ebuild, pilot-link-0.11.8-r1.ebuild:
+  Change useflag: tcltk -> tk, bug #17808.
 
   16 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   pilot-link-0.11.8-r1.ebuild:
