@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/muse
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/muse/ChangeLog,v 1.8 2006/11/28 03:56:43 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/muse/ChangeLog,v 1.9 2006/11/28 04:45:06 wrobel Exp $
+
+*muse-3.02.8 (28 Nov 2006)
+
+  28 Nov 2006; <wrobel@gentoo.org> +muse-3.02.8.ebuild:
+  Added muse-3.02.8
 
 *muse-3.02.93 (28 Nov 2006)
 
