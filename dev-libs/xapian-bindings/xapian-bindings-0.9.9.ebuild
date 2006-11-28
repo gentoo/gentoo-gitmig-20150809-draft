@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-0.9.6-r1.ebuild,v 1.2 2006/11/28 21:35:54 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-0.9.9.ebuild,v 1.1 2006/11/28 21:35:54 marienz Exp $
 
-inherit mono eutils autotools java-pkg-opt-2
+inherit mono java-pkg-opt-2
 
 DESCRIPTION="SWIG and JNI bindings for Xapian"
 HOMEPAGE="http://www.xapian.org/"
@@ -14,7 +14,7 @@ KEYWORDS="~x86"
 IUSE="python php tcl mono java ruby"
 
 COMMONDEPEND="=dev-libs/xapian-${PV}
-	python? ( >=dev-lang/python-2.1 )
+	python? ( >=dev-lang/python-2.2 )
 	php? ( >=dev-lang/php-4 )
 	tcl? ( >=dev-lang/tcl-8.1 )
 	mono? ( >=dev-lang/mono-1.0.8 )
@@ -28,35 +28,11 @@ RDEPEND="${COMMONDEPEND}
 	java? ( >=virtual/jre-1.3 )"
 
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	# applied upstream
-	epatch "${FILESDIR}/${P}-parallel-make.patch"
-	cd java
-	# from upstream
-	epatch "${FILESDIR}/${P}-java-array-delete.patch"
-	cd ../php
-	# from upstream
-	epatch "${FILESDIR}/${P}-php-tests.patch"
-	# submitted upstream
-	epatch "${FILESDIR}/${P}-php-tests-2.patch"
-	cd ..
-
-	# Force a regeneration of the bindings with our patched swig.
-	touch python/*.i
-
-	eautoreconf
-}
-
 src_compile() {
 	if use java; then
 		CXXFLAGS="${CXXFLAGS} $(java-pkg_get-jni-cflags)"
 	fi
-	# maintainer-mode to regenerate swig-generated files.
 	econf \
-		$(use_enable python maintainer-mode) \
 		$(use_with python) \
 		$(use_with php) \
 		$(use_with tcl) \
