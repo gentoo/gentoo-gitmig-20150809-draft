@@ -1,8 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fusionx-aqua/fusionx-aqua-1.1.ebuild,v 1.16 2006/01/12 14:48:35 gustavoz Exp $
-
-inherit kde
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fusionx-aqua/fusionx-aqua-1.1.ebuild,v 1.17 2006/11/28 00:15:06 flameeyes Exp $
 
 MY_P="FusionX-Aqua-${PV}"
 S=${WORKDIR}/${MY_P}
@@ -13,40 +11,38 @@ SRC_URI="http://www.kdelook.org/content/files/5296-${MY_P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc sparc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="|| ( kde-base/kwin kde-base/kdebase )"
+RDEPEND="|| ( kde-base/kwin kde-base/kdebase )"
+DEPEND=""
 
-need-kde 3.1
-
-src_compile() {
-	# nothing to compile, but don't want the eclass to try to compile anything
-	return 0
-}
+src_compile() { :; }
 
 src_install() {
-	mkdir -p ${D}/${KDEDIR}/share/apps/kstyle
-	cp -R -f ${WORKDIR}/${MY_P}/pixmaps ${D}/${KDEDIR}/share/apps/kstyle/ || die
-	cp -R -f ${WORKDIR}/${MY_P}/themes ${D}/${KDEDIR}/share/apps/kstyle/ || die
-	mkdir -p ${D}/${KDEDIR}/share/apps/kwin
-	cp -R -f ${WORKDIR}/${MY_P}/icewm-themes ${D}/${KDEDIR}/share/apps/kwin || die
-	mkdir -p ${D}/${KDEDIR}/share/apps/kdisplay
-	cp -R -f ${WORKDIR}/${MY_P}/color-schemes ${D}/${KDEDIR}/share/apps/kdisplay || die
-	dodoc ${WORKDIR}/${MY_P}/{CREDITS,README,CHANGELOG}
+	insinto /usr/share/apps/kstyle
+	doins -r pixmaps themes || die "doins pixmap themes failed"
+
+	insinto /usr/share/apps/kwin
+	doins -r icewm-themes || die "doins icewm-themes failed"
+
+	insinto /usr/share/apps/kdisplay
+	doins -r color-schemes
+
+	dodoc CREDITS README CHANGELOG
 }
 
 pkg_postinst() {
-	einfo "This theme is an IceWM pixmap theme for KDE."
-	einfo ""
-	einfo "To use this theme set the following options in the"
-	einfo "KDE Control Center:"
-	einfo " o Appearance & Themes"
-	einfo "   - Style = \"fusionx-aqua\""
-	einfo "   - Window Decorations = \"IceWM\""
-	einfo "     - Configuration [IceWM] = \"fusionX-aqua\""
-	einfo ""
-	einfo "To make the theme visible execute the following command"
-	einfo "from a shell or the KDE \"Run Command\" dialog:"
-	einfo "   kinstalltheme"
+	elog "This theme is an IceWM pixmap theme for KDE."
+	elog ""
+	elog "To use this theme set the following options in the"
+	elog "KDE Control Center:"
+	elog " o Appearance & Themes"
+	elog "	  - Style = \"fusionx-aqua\""
+	elog "	  - Window Decorations = \"IceWM\""
+	elog "		- Configuration [IceWM] = \"fusionX-aqua\""
+	elog ""
+	elog "To make the theme visible execute the following command"
+	elog "from a shell or the KDE \"Run Command\" dialog:"
+	elog "	  kinstalltheme"
 }
