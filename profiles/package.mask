@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6352 2006/11/27 14:11:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6353 2006/11/28 04:23:42 compnerd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -164,7 +164,6 @@ gnome-base/bonobo-activation
 gnome-base/gnome-core
 gnome-base/gnome-libs
 gnome-base/gnome-print
-gnome-base/libghttp
 gnome-base/oaf
 gnome-extra/battstat
 gnome-extra/bonobo-conf
