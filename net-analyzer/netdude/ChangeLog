@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/netdude
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netdude/ChangeLog,v 1.3 2006/11/28 00:21:36 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netdude/ChangeLog,v 1.4 2006/11/28 00:24:24 jokey Exp $
+
+  28 Nov 2006; Markus Ullmann <jokey@gentoo.org> netdude-0.4.6.ebuild,
+  netdude-0.4.7.ebuild:
+  adding missing tcpdump dependency wrt bug 141849
 
 *netdude-0.4.7 (28 Nov 2006)
 
