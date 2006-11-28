@@ -3,7 +3,13 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>maintainer-needed@gentoo.org</email>
+  <email>pappy@gentoo.org</email>
+  <name>Alexander Gabert</name>
+  <description>author and contact for support and feature requests</description>
 </maintainer>
-<longdescription>Script and included programs designed to ease creation and administration of multiple chroots on developer systems.</longdescription>
+<longdescription>
+This is a bash script for making the maintenance
+and administration of chroots easier using screen sessions
+on Gentoo development machines.
+</longdescription>
 </pkgmetadata>

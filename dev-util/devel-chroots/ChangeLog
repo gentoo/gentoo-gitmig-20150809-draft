@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/devel-chroots
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devel-chroots/ChangeLog,v 1.20 2006/11/28 18:20:30 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devel-chroots/ChangeLog,v 1.21 2006/11/28 19:44:27 pappy Exp $
+
+  28 Nov 2006; Alexander Gabert <pappy@gentoo.org> metadata.xml:
+  updated metadata.xml, herd is no-herd until one of the following
+  herds accept the package: sysadmin, shell-tools, dev-tools.
 
   28 Nov 2006; Alexander Gabert <pappy@gentoo.org> ChangeLog:
   taking over maintenance of the package again if you don't mind
