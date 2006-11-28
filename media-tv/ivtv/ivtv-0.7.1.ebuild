@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.7.1.ebuild,v 1.3 2006/11/28 03:30:17 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.7.1.ebuild,v 1.4 2006/11/28 03:39:32 beandog Exp $
 
 inherit eutils linux-mod
 
@@ -20,15 +20,8 @@ DEPEND="app-arch/unzip"
 PDEPEND="media-tv/pvr-firmware"
 
 pkg_setup() {
-	linux-mod_pkg_setup
-	MODULE_NAMES="ivtv(extra:${S}/driver) \
-			saa717x(extra:${S}/i2c-drivers)"
 
-	if kernel_is 2 6 17; then
-		CONFIG_CHECK="EXPERIMENTAL VIDEO_DEV I2C VIDEO_V4L1 VIDEO_V4L2 FW_LOADER"
-		CONFIG_CHECK="${CONFIG_CHECK} VIDEO_WM8775 VIDEO_MSP3400 VIDEO_CX25840 VIDEO_TUNER"
-		CONFIG_CHECK="${CONFIG_CHECK} VIDEO_SAA711X VIDEO_SAA7127 VIDEO_TVEEPROM"
-	else
+	if ! kernel_is 2 6 17; then
 		eerror "Each IVTV driver branch will only work with a specific"
 		eerror "linux kernel branch."
 		eerror ""
@@ -45,6 +38,14 @@ pkg_setup() {
 		eerror "See http://ivtvdriver.org/ for more information"
 		die "This only works on 2.6.17 kernels"
 	fi
+
+	linux-mod_pkg_setup
+	MODULE_NAMES="ivtv(extra:${S}/driver) \
+			saa717x(extra:${S}/i2c-drivers)"
+
+	CONFIG_CHECK="EXPERIMENTAL VIDEO_DEV I2C VIDEO_V4L1 VIDEO_V4L2 FW_LOADER"
+	CONFIG_CHECK="${CONFIG_CHECK} VIDEO_WM8775 VIDEO_MSP3400 VIDEO_CX25840 VIDEO_TUNER"
+	CONFIG_CHECK="${CONFIG_CHECK} VIDEO_SAA711X VIDEO_SAA7127 VIDEO_TVEEPROM"
 
 	linux_chkconfig_present FB && \
 	MODULE_NAMES="${MODULE_NAMES} ivtv-fb(extra:${S}/driver)"

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.4.7.ebuild,v 1.3 2006/11/28 03:30:17 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.4.7.ebuild,v 1.4 2006/11/28 03:39:32 beandog Exp $
 
 inherit eutils linux-mod
 
@@ -21,7 +21,6 @@ DEPEND="app-arch/unzip"
 PDEPEND="media-tv/pvr-firmware"
 
 pkg_setup() {
-	MODULE_NAMES="ivtv(extra:${S}/driver)"
 
 	if kernel_is gt 2 6 15; then
 		eerror "Each IVTV driver branch will only work with a specific"
@@ -42,6 +41,8 @@ pkg_setup() {
 		ewarn "You must use 0.6.x with a 2.6.16 kernel."
 		die "This does not work with kernel versions higher then 2.6.15"
 	fi
+
+	MODULE_NAMES="ivtv(extra:${S}/driver)"
 
 	if kernel_is le 2 6 14; then
 		MODULE_NAMES="${MODULE_NAMES}

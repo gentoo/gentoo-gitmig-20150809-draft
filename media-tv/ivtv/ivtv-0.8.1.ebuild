@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.8.1.ebuild,v 1.2 2006/11/28 03:30:17 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.8.1.ebuild,v 1.3 2006/11/28 03:39:32 beandog Exp $
 
 inherit eutils linux-mod
 
@@ -25,7 +25,6 @@ CONFIG_CHECK="${CONFIG_CHECK} VIDEO_SAA711X VIDEO_CX2341X VIDEO_SAA7127 VIDEO_TV
 #CONFIG_CHECK="${CONFIG_CHECK} VIDEO_UPD64083"
 
 pkg_setup() {
-	linux-mod_pkg_setup
 
 	if ! kernel_is 2 6 18; then
 		eerror "Each IVTV driver branch will only work with a specific"
@@ -44,6 +43,8 @@ pkg_setup() {
 		eerror "See http://ivtvdriver.org/ for more information"
 		die "This only works on 2.6.18 kernels"
 	fi
+
+	linux-mod_pkg_setup
 
 	linux_chkconfig_present FB && \
 	MODULE_NAMES="${MODULE_NAMES} ivtv-fb(extra:${S}/driver)"

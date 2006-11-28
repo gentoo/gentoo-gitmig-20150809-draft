@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.6.3.ebuild,v 1.3 2006/11/28 03:30:17 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.6.3.ebuild,v 1.4 2006/11/28 03:39:32 beandog Exp $
 
 inherit eutils linux-mod
 
@@ -30,12 +30,8 @@ RDEPEND="sys-apps/hotplug"
 DEPEND="app-arch/unzip"
 
 pkg_setup() {
-	linux-mod_pkg_setup
-	MODULE_NAMES="ivtv(extra:${S}/driver)"
 
-	if kernel_is 2 6 16; then
-		CONFIG_CHECK="${CONFIG_CHECK} VIDEO_DECODER VIDEO_AUDIO_DECODER VIDEO_BT848"
-	else
+	if ! kernel_is 2 6 16; then
 		eerror "Each IVTV driver branch will only work with a specific"
 		eerror "linux kernel branch."
 		eerror ""
@@ -53,6 +49,10 @@ pkg_setup() {
 		echo ""
 		die "This only works on 2.6.16 kernels"
 	fi
+
+	linux-mod_pkg_setup
+	MODULE_NAMES="ivtv(extra:${S}/driver)"
+	CONFIG_CHECK="${CONFIG_CHECK} VIDEO_DECODER VIDEO_AUDIO_DECODER VIDEO_BT848"
 
 	linux_chkconfig_present FB && \
 	MODULE_NAMES="${MODULE_NAMES} ivtv-fb(extra:${S}/driver)"
