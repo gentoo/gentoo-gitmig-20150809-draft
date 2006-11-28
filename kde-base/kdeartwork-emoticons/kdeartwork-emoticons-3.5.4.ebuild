@@ -1,6 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-emoticons/kdeartwork-emoticons-3.5.4.ebuild,v 1.8 2006/11/26 22:41:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-emoticons/kdeartwork-emoticons-3.5.4.ebuild,v 1.9 2006/11/28 01:06:37 flameeyes Exp $
+
+ARTS_REQUIRED="never"
+
+RESTRICT="binchecks strip"
 
 KMMODULE=emoticons
 KMNAME=kdeartwork
