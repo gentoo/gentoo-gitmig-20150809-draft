@@ -1,14 +1,7 @@
 
 ;;; muse-mode site-lisp configuration
 
+(add-to-list 'load-path "@SITELISP@")
 
-(require 'muse-mode)     ; load authoring mode
-
-(require 'muse-project)
-
-(require 'muse-html)     ; load publishing styles I use
-(require 'muse-latex)
-(require 'muse-texinfo)
-(require 'muse-docbook)
-
+(require 'muse-autoloads)
 
