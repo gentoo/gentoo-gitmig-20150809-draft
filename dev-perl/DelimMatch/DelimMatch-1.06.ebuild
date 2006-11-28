@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DelimMatch/DelimMatch-1.06.ebuild,v 1.13 2006/08/05 02:49:51 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DelimMatch/DelimMatch-1.06.ebuild,v 1.14 2006/11/28 22:26:00 dev-zero Exp $
 
 inherit perl-module
 MY_P=${P}a
@@ -11,7 +11,7 @@ HOMEPAGE="http://search.cpan.org/~nwalsh/${MY_P}"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 
