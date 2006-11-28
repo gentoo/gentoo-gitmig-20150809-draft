@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liboop
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboop/ChangeLog,v 1.8 2006/09/04 18:28:53 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboop/ChangeLog,v 1.9 2006/11/28 18:11:43 opfer Exp $
+
+  28 Nov 2006; Christian Faulhammer <opfer@gentoo.org> liboop-1.0.ebuild:
+  moved tcltk USE flag over to separate tk and tcl flags, see bug #17808
 
   04 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> liboop-1.0.ebuild:
   Stable on sparc
