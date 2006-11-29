@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6369 2006/11/29 19:47:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6370 2006/11/29 20:27:47 nyhm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ## 
+
+# Tristan Heaven <nyhm@gentoo.org> (29 Nov 2006)
+# Not ready
+=media-libs/allegro-4.2.1
 
 # Markus Ullmann <jokey@gentoo.org> (29 Nov 2006)
 # unable to obtain IP, see bug #156515
