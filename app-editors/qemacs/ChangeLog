@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/qemacs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.22 2006/10/30 19:12:48 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.23 2006/11/29 16:00:18 opfer Exp $
+
+  29 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  qemacs-0.3.1-r3.ebuild:
+  inherited flag-o-matic correctly as found by Timothy Redaelli
+  <drizzt@gentoo.org>; added some quotes around variables
 
   30 Oct 2006; Christian Faulhammer <opfer@gentoo.org>
   qemacs-0.3.1-r3.ebuild:

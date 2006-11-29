@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.3.1-r3.ebuild,v 1.5 2006/10/30 19:12:48 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.3.1-r3.ebuild,v 1.6 2006/11/29 16:00:18 opfer Exp $
 
-inherit eutils versionator
+inherit eutils versionator flag-o-matic
 
 DESCRIPTION="QEmacs (for Quick Emacs) is a very small but powerful UNIX editor."
 HOMEPAGE="http://fabrice.bellard.free.fr/qemacs/"
@@ -30,24 +30,24 @@ src_unpack() {
 	# with app-editors/qe.
 	# Also removes forced march setting and align-functions on x86, as
 	# they would override user's CFLAGS..
-	epatch ${FILESDIR}/${P}-Makefile-gentoo.patch
+	epatch "${FILESDIR}/${P}-Makefile-gentoo.patch"
 	# Change the references to the qe binary to reflect the installed name
 	# qemacs.
-	epatch ${FILESDIR}/${P}-manpage-ref-fix.patch
+	epatch "${FILESDIR}/${P}-manpage-ref-fix.patch"
 	# Set the datadir to qemacs, upstream installs in to qe which conflicts
 	# with files installed in app-editors/qe.  Currently no breakage
 	# occurs, but it makes sense to change before that happens.
-	epatch ${FILESDIR}/${P}-qemacs-datadir.patch
-	epatch ${FILESDIR}/${P}-configure-gentoo.patch
-	epatch ${FILESDIR}/${P}-make_backup.patch
-	useq unicode && epatch ${FILESDIR}/${P}-tty_utf8.patch
-	epatch ${FILESDIR}/${P}-gcc-3.4.patch
+	epatch "${FILESDIR}/${P}-qemacs-datadir.patch"
+	epatch "${FILESDIR}/${P}-configure-gentoo.patch"
+	epatch "${FILESDIR}/${P}-make_backup.patch"
+	useq unicode && epatch "${FILESDIR}/${P}-tty_utf8.patch"
+	epatch "${FILESDIR}/${P}-gcc-3.4.patch"
 	# Patches to avoid compilation errors with GCC 4, see bug #141292
-	epatch ${FILESDIR}/${P}-gcc4_tty_c.patch
-	epatch ${FILESDIR}/${P}-gcc4_x11_c.patch
-	epatch ${FILESDIR}/${P}-gcc4_charset_c.patch
+	epatch "${FILESDIR}/${P}-gcc4_tty_c.patch"
+	epatch "${FILESDIR}/${P}-gcc4_x11_c.patch"
+	epatch "${FILESDIR}/${P}-gcc4_charset_c.patch"
 	# port to new libpng API, see bug #141566
-	useq png && epatch ${FILESDIR}/${P}-libpng-1_2.patch
+	useq png && epatch "${FILESDIR}/${P}-libpng-1_2.patch"
 	# Change the manpage to reference a /real/ file instead of just an
 	# approximation.  Purely cosmetic!
 	sed -i "s,^/usr/share/doc/qemacs,&-${PVR}," qe.1
