@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/syck
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/ChangeLog,v 1.10 2006/10/04 15:10:07 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/ChangeLog,v 1.11 2006/11/29 12:11:15 yuval Exp $
+
+  29 Nov 2006; Yuval Yaari <yuval@gentoo.org> -syck-0.53.ebuild,
+  -syck-0.55.ebuild, -syck-0.55-r1.ebuild, -syck-0.55-r2.ebuild:
+  Cleaning up a bit...
 
 *syck-0.55-r3 (04 Oct 2006)
 
