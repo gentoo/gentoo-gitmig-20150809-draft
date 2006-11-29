@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-2.1.12.ebuild,v 1.4 2005/12/16 08:12:48 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-2.1.12.ebuild,v 1.5 2006/11/29 15:47:50 opfer Exp $
 
 inherit elisp-common flag-o-matic eutils toolchain-funcs
 
@@ -10,13 +10,13 @@ SRC_URI="http://ftp.gnu.org/gnu/smalltalk/smalltalk-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~sparc x86"
-IUSE="tcltk readline emacs gtk gmp"
+IUSE="tk readline emacs gtk gmp"
 
 DEPEND="sys-libs/gdbm
 	sys-apps/debianutils
 	emacs? ( virtual/emacs )
 	readline? ( sys-libs/readline )
-	tcltk? ( dev-lang/tcl dev-lang/tk )
+	tk? ( dev-lang/tk )
 	gtk? ( =x11-libs/gtk+-2* )
 	gmp? ( dev-libs/gmp )"
 RDEPEND=""
@@ -33,7 +33,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
-	if use tcltk; then
+	if use tk; then
 		myconf="
 		`use_with tcltk tcl=/usr/lib` \
 		`use_with tcltk tk=/usr/lib`"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gnu-smalltalk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.18 2006/11/05 17:14:22 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.19 2006/11/29 15:47:50 opfer Exp $
+
+  29 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  gnu-smalltalk-2.1.12.ebuild, gnu-smalltalk-2.2-r1.ebuild:
+  moved tcltk USE flag over to separate tk and tcl flags, see bug #17808
 
   05 Nov 2006; Luis F. Araujo <araujo@gentoo.org> -gnu-smalltalk-2.2.ebuild:
   Removing broken version.
