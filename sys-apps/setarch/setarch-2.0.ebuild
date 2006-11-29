@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/setarch/setarch-2.0.ebuild,v 1.3 2006/11/27 00:16:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/setarch/setarch-2.0.ebuild,v 1.4 2006/11/29 01:56:36 vapier Exp $
 
 inherit eutils
 
@@ -27,5 +27,5 @@ src_unpack() {
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die
+	emake install DESTDIR="${D}" || die
 }
