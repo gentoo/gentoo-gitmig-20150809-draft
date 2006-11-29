@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6361 2006/11/29 13:38:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6362 2006/11/29 14:40:56 zzam Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ## 
+
+# Matthias Schwarzott <zzam@gentoo.org> (29 Nov 2006)
+# Pending removal Dec 29 2006
+# No longer supported from upstream.
+# Are all replaced by the app vlc.
+media-video/vlms
+media-video/vls
 
 # Tony Vroon <chainsaw@gentoo.org> (28 Nov 2006)
 # Broken release, Flameeyes will release an -r1
