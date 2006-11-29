@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libherdstat
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libherdstat/ChangeLog,v 1.10 2006/02/09 01:05:07 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libherdstat/ChangeLog,v 1.11 2006/11/29 21:51:54 dev-zero Exp $
+
+  29 Nov 2006; Tiziano Müller <dev-zero@gentoo.org> metadata.xml:
+  Set herd as maintainer
 
   09 Feb 2006; Mark Loeser <halcy0n@gentoo.org>
   +files/libherdstat-0.2.0-gcc.patch, libherdstat-0.2.0.ebuild:
