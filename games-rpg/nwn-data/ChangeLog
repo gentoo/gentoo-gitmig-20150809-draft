@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/nwn-data
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/ChangeLog,v 1.22 2006/11/29 15:36:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/ChangeLog,v 1.23 2006/11/29 21:38:38 wolf31o2 Exp $
+
+  29 Nov 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  nwn-data-1.29-r1.ebuild:
+  Fix the download URL for the language packs (again). Thanks to Denis
+  Dupeyron <calchan@gentoo.org> for finding this.
 
   29 Nov 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   nwn-data-1.29-r1.ebuild:

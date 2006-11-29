@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r1.ebuild,v 1.3 2006/11/29 15:36:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r1.ebuild,v 1.4 2006/11/29 21:38:38 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -21,13 +21,13 @@ NOWIN_SRC_URI="${UPDATE_BASEURL}/nwresources${MY_PV}.tar.gz
 	http://163.22.12.40/FreeBSD/distfiles/nwresources${MY_PV}.tar.gz"
 
 LINGUAS_SRC_URI="linguas_fr? (
-		${UPDATE_BASEURL}/${MY_PV}/nwfrench${MY_PV}.tar.gz )
+		${UPDATE_BASEURL}/nwfrench${MY_PV}.tar.gz )
 	linguas_it? (
-		${UPDATE_BASEURL}/${MY_PV}/nwitalian${MY_PV}.tar.gz )
+		${UPDATE_BASEURL}/nwitalian${MY_PV}.tar.gz )
 	linguas_es? (
-		${UPDATE_BASEURL}/${MY_PV}/nwspanish${MY_PV}.tar.gz )
+		${UPDATE_BASEURL}/nwspanish${MY_PV}.tar.gz )
 	linguas_de? (
-		${UPDATE_BASEURL}/${MY_PV}/nwgerman${MY_PV}.tar.gz )"
+		${UPDATE_BASEURL}/nwgerman${MY_PV}.tar.gz )"
 
 DESCRIPTION="Neverwinter Nights Data Files"
 HOMEPAGE="http://nwn.bioware.com/downloads/linuxclient.html"
