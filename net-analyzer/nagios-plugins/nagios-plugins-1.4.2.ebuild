@@ -1,8 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.2.ebuild,v 1.8 2006/11/23 19:51:53 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.2.ebuild,v 1.9 2006/11/29 21:25:16 cedk Exp $
 
-inherit eutils
+WANT_AUTOCONF=2.58
+WANT_AUTOMAKE=1.8
+
+inherit eutils autotools
 
 DESCRIPTION="Nagios $PV plugins - Pack of plugins to make Nagios work properly"
 HOMEPAGE="http://www.nagios.org/"
@@ -44,11 +47,10 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	if ! use radius; then
-		EPATCH_OPTS="-p0 -d ${S}" epatch ${FILESDIR}/nagios-plugins-1.4-noradius.patch
+		EPATCH_OPTS="-p0 -d ${S}" epatch ${FILESDIR}/nagios-plugins-1.4-noradius.patch \
+			"${FILESDIR}"/nagios-plugins-1.4-autoconf-fix.patch
 	fi
 	if ! use radius; then
-		export WANT_AUTOCONF=2.5
-		export WANT_AUTMAKE=1.8
 		cd ${S}
 		aclocal -I m4 || die "Failed to run aclocal"
 		autoconf || die "Failed to run autoconf"
