@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.87.4.ebuild,v 1.2 2006/11/29 01:01:55 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.87.7.ebuild,v 1.1 2006/11/29 01:01:55 marienz Exp $
+
+NEED_PYTHON=2.3
 
 inherit distutils python
 
@@ -13,18 +15,17 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 LICENSE="PYTHON"
 
-DEPEND="virtual/python
-		|| (
+DEPEND="|| (
 		>=dev-python/numeric-23
 		dev-python/numarray
 		dev-python/numpy
-		)
-		>=media-libs/freetype-2.1.7
-		media-libs/libpng
-		sys-libs/zlib
-		gtk? ( >=dev-python/pygtk-2.2 )
-		dev-python/pytz
-		dev-python/python-dateutil"
+	)
+	>=media-libs/freetype-2.1.7
+	media-libs/libpng
+	sys-libs/zlib
+	gtk? ( >=dev-python/pygtk-2.2 )
+	dev-python/pytz
+	dev-python/python-dateutil"
 
 
 pkg_setup() {
@@ -38,14 +39,12 @@ src_unpack() {
 	cd "${S}"
 
 	# disable autodetection, rely on USE instead
-	epatch "${FILESDIR}/${PN}-0.86.2-no-autodetect.patch"
+	epatch "${FILESDIR}/${PN}-0.87.7-no-autodetect.patch"
 	sed -i \
 		-e "/^BUILD_GTK/s/'auto'/$(use gtk && echo 1 || echo 0)/" \
 		-e "/^BUILD_WX/s/'auto'/0/" \
 		-e "/^BUILD_TK/s/'auto'/$(use tk && echo 1 || echo 0)/" \
 		setup.py
-
-	epatch ${FILESDIR}/${PN}-0.87.4-fix-bad-win32-detect.patch
 }
 
 src_install() {
