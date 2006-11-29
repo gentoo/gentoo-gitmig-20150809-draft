@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glazedlists/glazedlists-1.5.0.ebuild,v 1.1 2006/10/28 23:32:32 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glazedlists/glazedlists-1.5.0.ebuild,v 1.2 2006/11/29 02:11:28 caster Exp $
 
 # java-ant-2 not needed - build.xml sets source/target properly
 inherit java-pkg-2 eutils
@@ -15,12 +15,15 @@ KEYWORDS="~x86"
 IUSE="doc source test"
 RDEPEND=">=virtual/jre-1.4"
 DEPEND=">=virtual/jdk-1.4
-	dev-java/ant-core
-	test? ( dev-java/junit )
+	test? (
+		dev-java/junit
+		dev-java/ant
+	)
+	!test? ( dev-java/ant-core )
 	app-arch/unzip"
 S="${WORKDIR}"
 
-# looks like tests are not 1.4 ready (expect autoboxing)
+# tests need X otherwise fail
 RESTRICT="test"
 
 src_unpack() {
@@ -32,8 +35,10 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-build.xml.patch"
 
 	if use test; then
+		# make testcases -source 1.4 friendly
+		epatch "${FILESDIR}/${P}-tests.patch"
 		cd extensions
-		java-pkg_jar-from junit junit.jar
+		java-pkg_jar-from --build-only junit junit.jar
 	fi
 }
 
@@ -46,7 +51,7 @@ src_test() {
 }
 
 src_install() {
-	java-pkg_newjar "${PN}_java14.jar" "${PN}.jar"
+	java-pkg_newjar "${PN}_java14.jar"
 	if use doc; then
 		dohtml readme.html
 		java-pkg_dohtml -r docs/api
