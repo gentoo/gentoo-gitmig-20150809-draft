@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.60 2006/11/01 08:51:16 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.61 2006/11/29 20:13:19 nyhm Exp $
+
+*allegro-4.2.1 (29 Nov 2006)
+
+  29 Nov 2006; Tristan Heaven <nyhm@gentoo.org>
+  +files/allegro-4.2.1-exec-stack.patch, +files/allegro-4.2.1-flags.patch,
+  +allegro-4.2.1.ebuild:
+  Version bump
 
   01 Nov 2006; Tristan Heaven <nyhm@gentoo.org> allegro-4.2.0-r2.ebuild:
   Doesn't like parallel make install
