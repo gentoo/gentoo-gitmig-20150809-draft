@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.55 2006/11/27 17:07:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.56 2006/11/29 21:54:58 drizzt Exp $
+
+  29 Nov 2006; Timothy Redaelli <drizzt@gentoo.org>
+  emacs-cvs-23.0.0-r1.ebuild:
+  Removed ~x86-fbsd keyword since it will not compile with the new
+  freebsd-contrib.
 
   27 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   emacs-cvs-23.0.0-r1.ebuild:
