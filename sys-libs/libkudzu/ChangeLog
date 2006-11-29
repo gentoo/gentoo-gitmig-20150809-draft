@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libkudzu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/ChangeLog,v 1.20 2006/09/05 20:41:37 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/ChangeLog,v 1.21 2006/11/29 22:43:06 wolf31o2 Exp $
+
+  29 Nov 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  libkudzu-1.1.62-r1.ebuild:
+  Added patch from Joe Jezak <josejx@gentoo.org> from bug #147364 and closing
+  that bug. Thanks Joe.
 
   05 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   libkudzu-1.1.62-r1.ebuild:

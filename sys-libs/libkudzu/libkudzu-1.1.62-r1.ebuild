@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/libkudzu-1.1.62-r1.ebuild,v 1.14 2006/09/05 20:41:37 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/libkudzu-1.1.62-r1.ebuild,v 1.15 2006/11/29 22:43:06 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -33,7 +33,11 @@ src_compile() {
 	# Fix the modules directory to match Gentoo layout.
 	perl -pi -e 's|/etc/modutils/kudzu|/etc/modules.d/kudzu|g' *.*
 
-	emake libkudzu.a ARCH=$(tc-arch-kernel) RPM_OPT_FLAGS="${CFLAGS}" || die
+	if [ $(tc-arch-kernel) == "powerpc" ]; then
+		emake libkudzu.a ARCH="ppc" RPM_OPT_FLAGS="${CFLAGS}" || die
+	else
+		emake libkudzu.a ARCH=$(tc-arch-kernel) RPM_OPT_FLAGS="${CFLAGS}" || die
+	fi
 }
 
 src_install() {
