@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/orpheus-1.6.ebuild,v 1.1 2006/11/25 16:22:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/orpheus-1.6.ebuild,v 1.2 2006/11/29 19:39:59 aballier Exp $
 
 WANT_AUTOCONF=2.5
 WANT_AUTOMAKE=1.8
@@ -14,11 +14,12 @@ SRC_URI="http://konst.org.ua/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
-IUSE=""
+IUSE="cddb"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	>=media-libs/libvorbis-1.0_beta1
 	virtual/mpg123
+	cddb? ( gnome-base/libghttp )
 	media-sound/vorbis-tools"
 
 src_unpack() {
@@ -36,7 +37,7 @@ src_unpack() {
 
 	# force not using deprecated libghttp
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-nolibghttp.patch"
+	use cddb || epatch "${FILESDIR}/${P}-nolibghttp.patch"
 }
 
 src_compile() {
