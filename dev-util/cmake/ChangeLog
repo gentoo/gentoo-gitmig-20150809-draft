@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cmake
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.40 2006/10/21 16:00:03 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.41 2006/11/29 19:24:18 genstef Exp $
+
+*cmake-2.4.4 (29 Nov 2006)
+
+  29 Nov 2006; Stefan Schweizer <genstef@gentoo.org> +cmake-2.4.4.ebuild:
+  Version bump thanks to    Didier Link <didier.link@wanadoo.fr> in bug 156582
 
   21 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org> cmake-2.2.1.ebuild:
   ppc stable
