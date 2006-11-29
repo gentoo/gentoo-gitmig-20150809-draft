@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5.2-r3.ebuild,v 1.12 2006/10/20 21:48:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5.2-r3.ebuild,v 1.13 2006/11/29 13:15:41 zzam Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -21,6 +21,16 @@ RDEPEND="sys-libs/zlib
 	media-libs/a52dec"
 DEPEND="${RDEPEND}
 	mmx? ( dev-lang/nasm )"
+
+pkg_setup() {
+	if use x86; then
+		if is-flagq -O3 || is-flagq -finline-functions; then
+			# with flag -fforce-addr we have too less registers for mmx-asm-code on x86 (Bug #141323)
+			is-flagq -fforce-addr && einfo "Removing flag -fforce-addr to get enough registers for mmx-code."
+			filter-flags -fforce-addr
+		fi
+	fi
+}
 
 src_unpack() {
 	unpack ${A}

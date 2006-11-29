@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmpeg3
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.56 2006/11/29 12:22:44 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.57 2006/11/29 13:15:41 zzam Exp $
+
+  29 Nov 2006; Matthias Schwarzott <zzam@gentoo.org>
+  libmpeg3-1.5.2-r3.ebuild:
+  Now added sophisicated logic to filter out -fforce-addr based on comment #17
+  in Bug #141323.
 
   29 Nov 2006; Matthias Schwarzott <zzam@gentoo.org> -libmpeg3-1.5.2.ebuild:
   Removed older ebuild, now all ebuilds block gcc-3.3, solving Bug #132651.
