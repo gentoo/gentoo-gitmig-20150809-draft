@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/lomoco-1.0-r1.ebuild,v 1.1 2006/04/30 09:41:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/lomoco-1.0-r1.ebuild,v 1.2 2006/11/29 06:21:52 tester Exp $
 
 inherit autotools eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://lomoco.linux-gamers.net/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~x86"
+KEYWORDS="~alpha amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-libs/libusb"
