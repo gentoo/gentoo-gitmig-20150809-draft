@@ -1,10 +1,9 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.314 2006/11/23 23:53:06 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.315 2006/11/29 06:10:13 masterdriverz Exp $
 
-  23 Nov 2006; Charlie Shepherd <masterdriverz@gentoo.org> ChangeLog:
-  Update metadata.xml longdescription to something more up to date, though
-  more generic
+  29 Nov 2006; Charlie Shepherd <masterdriverz@gentoo.org> metadata.xml:
+  Add myself to metadata.xml
 
   23 Nov 2006; Charlie Shepherd <masterdriverz@gentoo.org> ChangeLog:
   Update metadata.xml longdescription to something more up to date, though
@@ -480,7 +479,7 @@
 
 *mm-sources-2.6.13_rc3-r1 (15 Jul 2005)
 
-  15 Jul 2005; Michał Januszewski <spock@gentoo.org>
+  15 Jul 2005; MichaÅ Januszewski <spock@gentoo.org>
   +mm-sources-2.6.13_rc3-r1.ebuild:
   Version bump.
 
@@ -509,7 +508,7 @@
 
 *mm-sources-2.6.12-r2 (28 Jun 2005)
 
-  28 Jun 2005; Michał Januszewski <spock@gentoo.org>
+  28 Jun 2005; MichaÅ Januszewski <spock@gentoo.org>
   +mm-sources-2.6.12-r2.ebuild:
   Version bump.
 
