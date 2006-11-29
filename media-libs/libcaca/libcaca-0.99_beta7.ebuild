@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta7.ebuild,v 1.3 2006/10/28 00:38:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta7.ebuild,v 1.4 2006/11/29 10:11:33 zzam Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -61,6 +61,6 @@ src_compile() {
 
 src_install() {
 	mv doc/man/man3caca doc/man/man3
-	emake install DESTDIR="${D}" || die "emake install failed"
+	emake -j1 install DESTDIR="${D}" || die "emake install failed"
 	dodoc AUTHORS BUGS ChangeLog NEWS NOTES README TODO
 }
