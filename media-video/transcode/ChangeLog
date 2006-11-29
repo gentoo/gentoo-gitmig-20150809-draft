@@ -1,6 +1,10 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.156 2006/10/24 12:19:24 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.157 2006/11/29 15:17:45 gustavoz Exp $
+
+  29 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  transcode-1.0.2-r3.ebuild:
+  Stable on sparc wrt #151836
 
   24 Oct 2006; Simon Stelling <blubb@gentoo.org> transcode-1.0.2-r3.ebuild:
   don't enforce 3dnow on amd64, EM64T doesn't have it
