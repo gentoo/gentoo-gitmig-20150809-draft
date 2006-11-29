@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/faad2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.80 2006/11/13 15:33:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.81 2006/11/29 11:21:02 chainsaw Exp $
+
+*faad2-2.5 (29 Nov 2006)
+
+  29 Nov 2006; Tony Vroon <chainsaw@gentoo.org>
+  +files/faad2-2.5-missing-include.patch,
+  +files/faad2-2.5-no-xmms-or-bmp.patch, +faad2-2.5.ebuild:
+  New upstream release, closes bug #146485.
 
   13 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/faad2-2.0-noext.patch, -faad2-2.0-r3.ebuild, faad2-2.0-r7.ebuild,
