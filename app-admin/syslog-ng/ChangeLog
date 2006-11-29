@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.136 2006/11/02 20:51:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.137 2006/11/29 17:43:29 betelgeuse Exp $
+
+*syslog-ng-2.0.0-r1 (29 Nov 2006)
+*syslog-ng-1.6.11-r1 (29 Nov 2006)
+
+  29 Nov 2006; Petteri Räty <betelgeuse@gentoo.org>
+  +files/syslog-ng.rc6-r1, +syslog-ng-1.6.11-r1.ebuild,
+  -syslog-ng-2.0.0.ebuild, +syslog-ng-2.0.0-r1.ebuild:
+  Fixed bug #156585 where the init.d script could call eend twice with only
+  one ebegin.
 
 *syslog-ng-2.0.0 (02 Nov 2006)
 
