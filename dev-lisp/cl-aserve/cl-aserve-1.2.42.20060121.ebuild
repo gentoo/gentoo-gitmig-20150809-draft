@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aserve/cl-aserve-1.2.42.20060121.ebuild,v 1.1 2006/05/11 21:24:51 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aserve/cl-aserve-1.2.42.20060121.ebuild,v 1.2 2006/11/29 02:58:05 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -31,6 +31,10 @@ src_install() {
 	common-lisp-install aserve/*.cl aserve/*.asd
 	common-lisp-system-symlink
 	dodoc ChangeLog README README.cmucl INSTALL.lisp logical-hostnames.lisp
-	docinto examples
-	dodoc contrib/*.lisp
+	insinto /usr/share/doc/${PF}/contrib
+	doins contrib/*.lisp
+	insinto /usr/share/doc/${PF}/examples
+	doins aserve/examples/*
+	insinto /usr/share/doc/${PF}/doc
+	doins aserve/doc/*
 }
