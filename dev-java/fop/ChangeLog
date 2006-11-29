@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fop
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.32 2006/11/29 00:02:35 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.33 2006/11/29 00:06:10 nichoj Exp $
+
+  29 Nov 2006; Joshua Nichols <nichoj@gentoo.org> fop-0.20.5-r7.ebuild:
+  Added ~ia64.
 
   29 Nov 2006; Joshua Nichols <nichoj@gentoo.org> -fop-0.20.5-r1.ebuild,
   -fop-0.20.5-r6.ebuild:
