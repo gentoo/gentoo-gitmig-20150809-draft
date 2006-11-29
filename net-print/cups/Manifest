@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX cups-1.1.23-bindnow.patch 2087 RMD160 35c18c1bbeb7c79f9207ecbd69c004f2ddf68f80 SHA1 6f3c24500c50016c0bb2f1913b7c3cb6384c6b21 SHA256 fb932b7e9d04dfe7d52bd455f3514818a3bba1eaa3a3342b5c6b840bf957e67b
 MD5 b22c12cb42113ddc40988cfbe93e3519 files/cups-1.1.23-bindnow.patch 2087
 RMD160 35c18c1bbeb7c79f9207ecbd69c004f2ddf68f80 files/cups-1.1.23-bindnow.patch 2087
@@ -82,3 +85,10 @@ SHA256 3f7f97c3ff4a6096c1b2209892b447540a6dca6b1e53d03232340d5e74cdc60a files/di
 MD5 c1386f5c1290c35314c41cf8600fbae1 files/digest-cups-1.2.7 259
 RMD160 7edcb0f5504aa572d0493a43e31aa696a1d95470 files/digest-cups-1.2.7 259
 SHA256 64b0ad8d15b34845d9191c0b960a2fd6f9f1a96ba62f67634bc53e17d9214e94 files/digest-cups-1.2.7 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFbaHXWt/XSf2CZdkRAiYmAJ4vOxWBKh04aLsXKqd4v1ju3uL7+gCcD6sy
+6ZV4r5cnE0oNBv5u2GbddBs=
+=Whc5
+-----END PGP SIGNATURE-----
