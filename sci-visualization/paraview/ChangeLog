@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.2 2006/11/21 02:18:09 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.3 2006/11/29 02:07:21 markusle Exp $
+
+  29 Nov 2006; Markus Dittrich <markusle@gentoo.org>
+  +files/paraview-2.4.4-python-wrap.patch, paraview-2.4.4.ebuild:
+  Added patch that insures that all dynamic libs needed for pvpython
+  are present.
 
   20 Nov 2006; Markus Dittrich <markusle@gentoo.org> paraview-2.4.4.ebuild:
   Added ffmpeg and threads USE flags. Also, added paraview libdir
