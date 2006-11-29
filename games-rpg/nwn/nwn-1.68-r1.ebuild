@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.68-r1.ebuild,v 1.1 2006/11/17 20:02:08 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.68-r1.ebuild,v 1.2 2006/11/29 15:50:05 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -179,10 +179,9 @@ src_unpack() {
 			fi
 			if [ -n "$currentlocale" ]
 			then
-				(touch ".metadata/linguas_${currentlocale}" &&
-				mkdir -p "${currentlocale}" &&
-				cd "${currentlocale}" &&
-				unpack "${a}" ) || die "unpack ${a}"
+				mkdir -p "${currentlocale}"
+				cd "${currentlocale}"
+				unpack "${a}" || die "unpack ${a}"
 			fi
 		fi
 	done
