@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/mod_suphp-0.6.1-r2.ebuild,v 1.2 2006/06/05 21:08:18 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/mod_suphp-0.6.1-r2.ebuild,v 1.3 2006/11/29 05:22:18 vericgar Exp $
 
 inherit apache-module eutils
 
@@ -27,7 +27,7 @@ APXS2_S="${S}/src/apache2"
 APACHE2_MOD_CONF="70_${PN}"
 APACHE2_MOD_DEFINE="SUPHP"
 
-need_apache2
+need_apache 2.0
 
 pkg_setup() {
 	modecnt=0

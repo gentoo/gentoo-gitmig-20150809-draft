@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/mod_suphp-0.6.1-r1.ebuild,v 1.5 2006/11/29 05:22:18 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/mod_suphp-0.6.2.ebuild,v 1.1 2006/11/29 05:22:18 vericgar Exp $
 
 inherit apache-module eutils
 
@@ -27,7 +27,7 @@ APXS2_S="${S}/src/apache2"
 APACHE2_MOD_CONF="70_${PN}"
 APACHE2_MOD_DEFINE="SUPHP"
 
-need_apache 2.0
+need_apache 2.x
 
 pkg_setup() {
 	modecnt=0
@@ -70,17 +70,6 @@ pkg_setup() {
 	: ${SUPHP_LOGFILE:="/var/log/apache2/suphp_log"}
 }
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
-
-	epatch "${FILESDIR}/suphp-apache22-compat.patch"
-	if has_version ">=dev-libs/apr-1.0.0" ; then
-		sed -e "s|apr-config|apr-1-config|g" -i configure
-	fi
-}
-
 src_compile() {
 	local myargs=
 	use checkpath || myargs="${myargs} --disable-checkpath"
@@ -91,14 +80,9 @@ src_compile() {
 	        --with-min-gid=${SUPHP_MINGID} \
 	        --with-apache-user=${SUPHP_APACHEUSER} \
 	        --with-logfile=${SUPHP_LOGFILE} \
-	        --with-apxs=${APXS2}"
-	if has_version ">=dev-libs/apr-1.0.0" ; then
-		CFLAGS="$(apr-1-config --includes) $(apu-1-config --includes)" \
-		econf ${myargs} || die "econf failed"
-	else
-		CFLAGS="$(apr-config --includes) $(apu-config --includes)" \
-		econf ${myargs} || die "econf failed"
-	fi
+	        --with-apxs=${APXS2} \
+			--with-apr=/usr"
+	econf ${myargs} || die "econf failed"
 
 	emake || die "make failed"
 }
@@ -119,4 +103,6 @@ src_install() {
 pkg_postinst() {
 	# make suphp setuid
 	chmod 4755 /usr/sbin/suphp
+
+	apache-module_pkg_postinst
 }
