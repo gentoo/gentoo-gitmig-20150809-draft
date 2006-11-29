@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/redland-bindings-1.0.0.2.ebuild,v 1.6 2006/09/29 10:18:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/redland-bindings-1.0.0.2.ebuild,v 1.7 2006/11/29 01:46:03 vapier Exp $
 
 inherit eutils mono
 
@@ -11,14 +11,14 @@ SRC_URI="http://www.redland.opensource.ac.uk/dist/source/${P}.tar.gz"
 LICENSE="LGPL-2 MPL-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="perl python java tcltk php ruby mono"
+IUSE="perl python java tcl php ruby mono"
 
 DEPEND=">=dev-libs/redland-1.0.0
 	dev-lang/swig
 	perl? ( dev-lang/perl )
 	python? ( dev-lang/python )
 	java? ( virtual/jdk )
-	tcltk? ( dev-lang/tcl )
+	tcl? ( dev-lang/tcl )
 	php? ( virtual/php )
 	ruby? ( dev-lang/ruby dev-ruby/log4r )
 	mono? ( dev-lang/mono )"
@@ -38,7 +38,7 @@ src_compile() {
 		$(use_with python) \
 		$(use_with java) \
 		$(use_with java jdk ${JAVA_HOME}) \
-		$(use_with tcltk tcl) \
+		$(use_with tcl tcl) \
 		$(use_with php) \
 		$(use_with ruby) \
 		$(use_with mono ecma-cli mono) \
