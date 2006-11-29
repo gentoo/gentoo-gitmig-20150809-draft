@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/batik
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.41 2006/11/28 23:59:23 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.42 2006/11/29 00:00:42 nichoj Exp $
+
+  29 Nov 2006; Joshua Nichols <nichoj@gentoo.org> batik-1.5-r1.ebuild:
+  Added ~ia64.
 
   29 Nov 2006; Joshua Nichols <nichoj@gentoo.org> -batik-1.5.ebuild,
   -batik-1.5.1-r4.ebuild, -batik-1.6.ebuild:
