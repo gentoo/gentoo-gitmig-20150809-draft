@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl-cvs/gcl-cvs-2.7.0.ebuild,v 1.4 2006/02/13 21:43:28 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl-cvs/gcl-cvs-2.7.0.ebuild,v 1.5 2006/11/29 15:44:17 opfer Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/gcl"
@@ -16,7 +16,7 @@ SRC_URI=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="emacs readline debug X tcltk custreloc dlopen gprof doc"
+IUSE="emacs readline debug X tk custreloc dlopen gprof doc"
 RESTRICT="$RESTRICT nostrip"
 
 DEPEND=">=app-text/texi2html-1.64
@@ -25,7 +25,7 @@ DEPEND=">=app-text/texi2html-1.64
 	readline? ( sys-libs/readline )
 	>=dev-libs/gmp-4.1
 	doc? ( virtual/tetex )
-	tcltk? ( dev-lang/tk )
+	tk? ( dev-lang/tk )
 	sys-devel/autoconf
 	sys-devel/automake
 	sys-devel/libtool"
@@ -109,7 +109,7 @@ src_compile() {
 #		--disable-statsysbfd"
 #	fi
 
-	if use tcltk; then
+	if use tk; then
 		myconfig="${myconfig}
 		--enable-tkconfig=/usr/lib
 		--enable-tclconfig=/usr/lib"
@@ -151,7 +151,7 @@ src_install() {
 
 	exeinto /usr/bin
 
-	if use tcltk; then
+	if use tk; then
 		newexe ${FILESDIR}/gcl gcl
 		dosed "s,@TKVER@,/usr/lib/tk$(source /usr/lib/tkConfig.sh; echo $TK_VERSION),g" \
 			/usr/bin/gcl

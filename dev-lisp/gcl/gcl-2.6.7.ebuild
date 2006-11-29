@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7.ebuild,v 1.7 2006/04/08 23:37:58 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7.ebuild,v 1.8 2006/11/29 15:42:17 opfer Exp $
 
 inherit elisp-common flag-o-matic autotools
 
@@ -11,13 +11,13 @@ SRC_URI="ftp://ftp.gnu.org/gnu/gcl/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc amd64 sparc"
-IUSE="emacs readline debug X tcltk custreloc dlopen gprof doc ansi"
+IUSE="emacs readline debug X tk custreloc dlopen gprof doc ansi"
 
 RDEPEND="emacs? ( virtual/emacs )
 	X? ( || ( ( x11-libs/libXt x11-libs/libXext x11-libs/libXmu x11-libs/libXaw ) virtual/x11 ) )
 	readline? ( sys-libs/readline )
 	>=dev-libs/gmp-4.1
-	tcltk? ( dev-lang/tk )"
+	tk? ( dev-lang/tk )"
 
 DEPEND="$RDEPEND
 	doc? ( virtual/tetex )
@@ -102,7 +102,7 @@ src_compile() {
 		myconfig="${myconfig} --enable-locbfd --disable-dynsysbfd --disable-statsysbfd"
 	fi
 
-	if use tcltk; then
+	if use tk; then
 		myconfig="${myconfig}
 		--enable-tkconfig=/usr/lib
 		--enable-tclconfig=/usr/lib"
