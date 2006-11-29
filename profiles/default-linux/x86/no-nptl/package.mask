@@ -15,6 +15,7 @@ sys-apps/inputd
 >=sys-libs/libselinux-1.30.29 
 >=sys-libs/libsemanage-1.6.17
 >=sys-apps/policycoreutils-1.30.30
+>=sys-apps/checkpolicy-1.30.12
 sec-policy/selinux-acpi
 >=sec-policy/selinux-apache-20060101
 >=sec-policy/selinux-arpwatch-20060101

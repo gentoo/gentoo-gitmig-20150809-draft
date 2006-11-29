@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.14 2006/11/22 05:46:22 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.15 2006/11/29 21:47:49 pebenito Exp $
 
 # This file is additional masking for the hardened profile
 
@@ -37,6 +37,7 @@ media-video/nvidia-settings
 >=sys-libs/libselinux-1.30.29
 >=sys-libs/libsemanage-1.6.17
 >=sys-apps/policycoreutils-1.30.30
+>=sys-apps/checkpolicy-1.30.12
 sec-policy/selinux-acpi
 >=sec-policy/selinux-apache-20060101
 >=sec-policy/selinux-arpwatch-20060101
