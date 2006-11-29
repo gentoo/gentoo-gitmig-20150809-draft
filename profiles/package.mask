@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6362 2006/11/29 14:40:56 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6363 2006/11/29 16:06:08 beandog Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1466,10 +1466,6 @@ www-apps/open-xchange
 # Diego Pettenò <flameeyes@gentoo.org> (22 Aug 2005)
 # Pre-release heavy patched
 =media-video/avidemux-2.1_pre*
-
-# Diego Pettenò <flameeyes@gentoo.org> (18 August 2005)
-# Toxine needs to be verified with upstream for a few issues.
-media-video/toxine
 
 # Rob Cakebread <pythonhead@gentoo.org> (04 Aug 2005)
 # Needs testing, in particular svn, cvs and darcs control
