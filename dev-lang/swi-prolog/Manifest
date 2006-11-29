@@ -58,6 +58,10 @@ AUX swi-prolog-gmp-sparc-alignment.patch 418 RMD160 feaedc52024748c0a7060c248d4c
 MD5 8c1630ee80c99b96cd7b1e7caa57e285 files/swi-prolog-gmp-sparc-alignment.patch 418
 RMD160 feaedc52024748c0a7060c248d4c7f1e390ebcfb files/swi-prolog-gmp-sparc-alignment.patch 418
 SHA256 5547a1c05e3ed1353e6cceca5f57a77786ab0acd978e0254a4af2bfced9af32a files/swi-prolog-gmp-sparc-alignment.patch 418
+AUX swi-prolog-jpl-LDPATH-r1.patch 1321 RMD160 64d27f8a16eadc2a482799f8d7bfaac2ef194cc5 SHA1 6d43903c60d021d7716a080bce1ecc0d8edb34fe SHA256 3df8cbd22044eef1ae4f4fd8859b807d8b5a04e4eeaac3bdc2429e69c46b1040
+MD5 3c22c81c4aab0ff719a64e20bb396264 files/swi-prolog-jpl-LDPATH-r1.patch 1321
+RMD160 64d27f8a16eadc2a482799f8d7bfaac2ef194cc5 files/swi-prolog-jpl-LDPATH-r1.patch 1321
+SHA256 3df8cbd22044eef1ae4f4fd8859b807d8b5a04e4eeaac3bdc2429e69c46b1040 files/swi-prolog-jpl-LDPATH-r1.patch 1321
 AUX swi-prolog-jpl-LDPATH.patch 1184 RMD160 b80d7d4267e5bcdf9d8522dd8dab3862942429fe SHA1 9a1da78c7f9fe8f474a70bc7722d0775d666ae00 SHA256 368abd48148cbb62e00ceb519d8a04e3ebc429aa26596392302bb5a0ff154dca
 MD5 919da80fcc4982596c0523b8887ee13b files/swi-prolog-jpl-LDPATH.patch 1184
 RMD160 b80d7d4267e5bcdf9d8522dd8dab3862942429fe files/swi-prolog-jpl-LDPATH.patch 1184
@@ -70,6 +74,10 @@ AUX swi-prolog-jpl-install.patch 557 RMD160 db14237ac6951b5bb26276759114ef575776
 MD5 689af0808e7024052c262d6be879076c files/swi-prolog-jpl-install.patch 557
 RMD160 db14237ac6951b5bb26276759114ef575776415b files/swi-prolog-jpl-install.patch 557
 SHA256 497b5c80dd316f55a21c5c954208449543bd6988d40e71719a067278daeeab78 files/swi-prolog-jpl-install.patch 557
+AUX swi-prolog-jpl-junit.patch 355 RMD160 5d0a0de90ab8a095d16794d9a841e40d57ef0c10 SHA1 0e67fd95764996b5c048879ce47d1f0c899187d1 SHA256 e21c7269ba76e6d6e7bac060ce1b07b5de21ae66fa6c40c3e56a32e4ccc61dc2
+MD5 220a02a2354beaa53c2bf03ae6e28870 files/swi-prolog-jpl-junit.patch 355
+RMD160 5d0a0de90ab8a095d16794d9a841e40d57ef0c10 files/swi-prolog-jpl-junit.patch 355
+SHA256 e21c7269ba76e6d6e7bac060ce1b07b5de21ae66fa6c40c3e56a32e4ccc61dc2 files/swi-prolog-jpl-junit.patch 355
 AUX swi-prolog-jpl-ppc.patch 2472 RMD160 16066b6d0ac2bfc4e892ab4b434d43bdc5365077 SHA1 be3fd617f6a502cd3ded8e64872640ec3e9f2038 SHA256 0f979e5b4963815a7f48fb1615a960af94d58a09149e07ad3d8a5a2d5c705828
 MD5 8cad07a25d271d9f5caea4c3d1a79266 files/swi-prolog-jpl-ppc.patch 2472
 RMD160 16066b6d0ac2bfc4e892ab4b434d43bdc5365077 files/swi-prolog-jpl-ppc.patch 2472
@@ -118,6 +126,10 @@ AUX swi-prolog-xpce-parallel-build.patch 411 RMD160 9d4ca51028ea39851e6083cb8290
 MD5 3befddaf3b1ecec41b725b155a75736a files/swi-prolog-xpce-parallel-build.patch 411
 RMD160 9d4ca51028ea39851e6083cb8290c6fe1ef9b690 files/swi-prolog-xpce-parallel-build.patch 411
 SHA256 a373b88daf830e477ac08b2f6dac2a09ac0295b087725c22ece8f6f3150e5b64 files/swi-prolog-xpce-parallel-build.patch 411
+AUX swi-prolog-xpce-test-r1.patch 4823 RMD160 4fd79ef84f49d34b833b6c07cfd2492d242253df SHA1 3d147e7602afd981f18d83a32de10cd973ebd610 SHA256 c1a5baa842cf40f5c88ed193ddc8278023aacda5f401607f7b4abfd3d72bb1dc
+MD5 b4122f9659c87bbfd8b5b910bc225664 files/swi-prolog-xpce-test-r1.patch 4823
+RMD160 4fd79ef84f49d34b833b6c07cfd2492d242253df files/swi-prolog-xpce-test-r1.patch 4823
+SHA256 c1a5baa842cf40f5c88ed193ddc8278023aacda5f401607f7b4abfd3d72bb1dc files/swi-prolog-xpce-test-r1.patch 4823
 AUX swi-prolog-xpce-test.patch 4534 RMD160 2d2b04ae715eb04e53825d8eb4ce3f60e4c253f1 SHA1 590d36578596e3f46b6c53bea240ff1888086d37 SHA256 315591c9375734f4ed06096b58ee696df3b4e560236564b8538e71377bc94d3c
 MD5 3ef8db1add28c3d49a27892307e86794 files/swi-prolog-xpce-test.patch 4534
 RMD160 2d2b04ae715eb04e53825d8eb4ce3f60e4c253f1 files/swi-prolog-xpce-test.patch 4534
@@ -129,6 +141,7 @@ DIST pl-5.6.20.tar.gz 11528418 RMD160 3f8b25d8370485c7fc8f15d0c55d5a873869a93a S
 DIST pl-5.6.21.tar.gz 11543471 RMD160 f3d164199a727abf4603cb809f5b67aeb511709a SHA1 7a93a82ac9ba78fff3497e64486bfd8fae538f14 SHA256 e83326fee55b3026fd389a89c10a09110f318c430fd88056ca5dff2e7ab11ac1
 DIST pl-5.6.22.tar.gz 11553934 RMD160 bd45af82adc55b66eacaf41c3a256a0db5baa609 SHA1 be5e2a21cb56577ad958b912d064613b1ba450bb SHA256 0efb8fb7aa349d3626fa244557d121b9db18ff0a8d139a56b018c51e98b25523
 DIST pl-5.6.23.tar.gz 11547357 RMD160 51b52d8d6c8a2ddd7e245f4b7c3a1104bba999ce SHA1 8822763f50a78d8b006a74e7e0331e7d85509427 SHA256 45a16a49290401e69a47584e154eb2b0588f65a141de53b15c762cdf7afe7c9a
+DIST pl-5.6.24.tar.gz 11561664 RMD160 d26af2674bff916747bcc84a2f7df6119036c113 SHA1 85737b3b9ef29aeac97c3e334e6ed18df3426d35 SHA256 7fb4548d86595825b67cebb9a02e5009cc4e1f6851df8aba433bff4707fff85f
 EBUILD swi-prolog-5.6.17-r1.ebuild 3743 RMD160 4fa0e1604760af2775a01e5a7a797e30f904d324 SHA1 9db4c70d9b1855de3234fa1ece83150ecb735674 SHA256 f3f4a2b29d29dc8ebf3ac2dd7cdf5edb6b2815cf7afd8ba7d68a05c2f751c47f
 MD5 c1ebf8f765ce99d7ae9f428a47eab81d swi-prolog-5.6.17-r1.ebuild 3743
 RMD160 4fa0e1604760af2775a01e5a7a797e30f904d324 swi-prolog-5.6.17-r1.ebuild 3743
@@ -157,10 +170,14 @@ EBUILD swi-prolog-5.6.23.ebuild 3415 RMD160 ac82fc676f59a6abb13bfb0b55b3e210d93a
 MD5 2bbfd236d2bc7b9cf71fcf6dea6befd3 swi-prolog-5.6.23.ebuild 3415
 RMD160 ac82fc676f59a6abb13bfb0b55b3e210d93a7d19 swi-prolog-5.6.23.ebuild 3415
 SHA256 396859850682fd79efbc25df982145e8dab1a78b45dfa3ca8769d2b48518ca70 swi-prolog-5.6.23.ebuild 3415
-MISC ChangeLog 10300 RMD160 a28d511160905f6d46c47ebd36f7c6d71c999ad7 SHA1 15c07020beee66ad2d8ab8e01a885a273a342da3 SHA256 6814d034b3cac0f582c7199397a69cc485a9baf9837d3e3d4048d92f2a71c771
-MD5 a5bc0d8ac57ac4c5f23d3a875274ba76 ChangeLog 10300
-RMD160 a28d511160905f6d46c47ebd36f7c6d71c999ad7 ChangeLog 10300
-SHA256 6814d034b3cac0f582c7199397a69cc485a9baf9837d3e3d4048d92f2a71c771 ChangeLog 10300
+EBUILD swi-prolog-5.6.24.ebuild 3427 RMD160 b56ed79ceea825b2ad4e923dab90c0513ddd8b66 SHA1 cde09cf3fbe01c00c999ddf9824656b3487682ba SHA256 7fb1f5e52fbdc6559a438b25ae11aedf0864319667d3754f6734febd62579b11
+MD5 171154881ffaef618a019afe1f33a652 swi-prolog-5.6.24.ebuild 3427
+RMD160 b56ed79ceea825b2ad4e923dab90c0513ddd8b66 swi-prolog-5.6.24.ebuild 3427
+SHA256 7fb1f5e52fbdc6559a438b25ae11aedf0864319667d3754f6734febd62579b11 swi-prolog-5.6.24.ebuild 3427
+MISC ChangeLog 10532 RMD160 cf923a53f73055d19e24c72c8cb9e1afa6fda9a5 SHA1 69820d1440c7bd2b690a1968b923c5b0d72ae55e SHA256 ba19bc2d66774a6070c6aeef3e5b629fbb2fd41c073898dda6f8bdeeb95ad37e
+MD5 fe2d7a58111488c772fa6fe69c0fd588 ChangeLog 10532
+RMD160 cf923a53f73055d19e24c72c8cb9e1afa6fda9a5 ChangeLog 10532
+SHA256 ba19bc2d66774a6070c6aeef3e5b629fbb2fd41c073898dda6f8bdeeb95ad37e ChangeLog 10532
 MISC metadata.xml 159 RMD160 38d27fd1c5faabedefa5507dfd83cb4c952fbc8c SHA1 52b92682cf41e53e71bf432537a16215bd9546b1 SHA256 851bf218a4283a1d8ea6ef98af0119a40eaa78bfaaec49c2f3440437f52889ba
 MD5 9187f53634e60ab7eb2ac7e98b0b19f7 metadata.xml 159
 RMD160 38d27fd1c5faabedefa5507dfd83cb4c952fbc8c metadata.xml 159
@@ -186,3 +203,6 @@ SHA256 8a3021a9a941de70bf1f19197347e45617a9a8bf18ba7684e4b29b790345dbfb files/di
 MD5 5b8632722756c76b88a703972cb296ca files/digest-swi-prolog-5.6.23 235
 RMD160 e7707a55b62610482fdb0352022f0fbfff34792e files/digest-swi-prolog-5.6.23 235
 SHA256 03e00cdce17c1fe2bb70a96610387d5b90734ab93c5958e376779a2be0281e2e files/digest-swi-prolog-5.6.23 235
+MD5 ff2fed7dd818675ca14887296ab0bb9f files/digest-swi-prolog-5.6.24 235
+RMD160 1dd0c5d7be3cba6f89855b3b05f18e3d9aea4817 files/digest-swi-prolog-5.6.24 235
+SHA256 7a995ec1086f26d1aa65eba3f7b178a02101a74f69b705ee92ab613c70f92b07 files/digest-swi-prolog-5.6.24 235
