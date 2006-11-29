@@ -1,6 +1,13 @@
 # ChangeLog for media-video/recordmydesktop
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/recordmydesktop/ChangeLog,v 1.1 2006/11/29 13:27:05 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/recordmydesktop/ChangeLog,v 1.2 2006/11/29 16:23:57 zzam Exp $
+
+*recordmydesktop-0.3.0.2 (29 Nov 2006)
+
+  29 Nov 2006; Matthias Schwarzott <zzam@gentoo.org>
+  -files/recordmydesktop-0.2.5-nosound.patch, -recordmydesktop-0.2.5.ebuild,
+  +recordmydesktop-0.3.0.2.ebuild:
+  Version bumped to up to date version.
 
 *recordmydesktop-0.2.5 (29 Nov 2006)
 
