@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r1.ebuild,v 1.2 2006/11/21 17:20:33 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r1.ebuild,v 1.3 2006/11/29 15:36:58 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -47,9 +47,10 @@ RDEPEND="virtual/opengl
 	amd64? (
 		app-emulation/emul-linux-x86-baselibs )"
 DEPEND="${RDEPEND}
-	games-util/biounzip
-	app-arch/unshield
-	amd64? ( ~app-arch/unshield-0.2 )
+	cdinstall? (
+		games-util/biounzip
+		app-arch/unshield )
+	amd64? ( cdinstall? ( ~app-arch/unshield-0.2 ) )
 	app-arch/unzip"
 
 QA_TEXTRELS="${GAMES_PREFIX_OPT:1}/nwn/lib/libSDL-1.2.so.0.0.5
@@ -329,6 +330,7 @@ src_unpack() {
 		esac
 	elif use nowin
 	then
+		unpack nwclient${MY_PV}.tar.gz
 		cd "${WORKDIR}"
 		unpack nwresources${MY_PV}.tar.gz \
 			|| die "unpacking nwresources${MY_PV}.tar.gz"
