@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xinput
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xinput/ChangeLog,v 1.7 2006/03/23 22:16:15 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xinput/ChangeLog,v 1.8 2006/11/29 19:02:13 genstef Exp $
+
+  29 Nov 2006; Stefan Schweizer <genstef@gentoo.org> xinput-1.2.ebuild:
+  Add mising gccmakedep to dep thanks to Wilfried Holzke <gentoo@holzke.net>
+  in bug 144415
 
   23 Mar 2006; Krzysiek Pawlik <nelchael@gentoo.org> xinput-1.2.ebuild:
   Added missing rman DEPEND, fixes bug #127360.
