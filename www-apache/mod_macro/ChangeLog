@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_macro
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_macro/ChangeLog,v 1.7 2005/09/18 19:27:22 vericgar Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_macro/ChangeLog,v 1.8 2006/11/29 21:03:22 swegener Exp $
+
+  29 Nov 2006; Sven Wegener <swegener@gentoo.org> mod_macro-1.1.2.ebuild,
+  mod_macro-1.1.6.ebuild:
+  Add ~amd64 keyword.
 
   18 Sep 2005; Michael Stewart <vericgar@gentoo.org> mod_macro-1.1.6.ebuild:
   Stable on x86
