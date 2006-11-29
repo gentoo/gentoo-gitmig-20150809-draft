@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dvssl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvssl/ChangeLog,v 1.14 2006/10/21 23:24:05 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvssl/ChangeLog,v 1.15 2006/11/29 21:39:21 dev-zero Exp $
+
+  29 Nov 2006; Tiziano Müller <dev-zero@gentoo.org> metadata.xml:
+  Set herd as maintainer
 
   21 Oct 2006; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
   Bug #151932 fixed. Small cleanups and dependency corrections. Old versions

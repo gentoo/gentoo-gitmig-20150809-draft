@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dvnet
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvnet/ChangeLog,v 1.15 2005/11/22 12:46:41 ka0ttic Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvnet/ChangeLog,v 1.16 2006/11/29 21:38:38 dev-zero Exp $
+
+  29 Nov 2006; Tiziano Müller <dev-zero@gentoo.org> metadata.xml:
+  Set herd as maintainer
 
   22 Nov 2005; Aaron Walker <ka0ttic@gentoo.org> metadata.xml:
   Add to cpp herd.
