@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.21.11-r1.ebuild,v 1.1 2006/11/04 05:14:23 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.21.11-r1.ebuild,v 1.2 2006/11/29 12:21:40 opfer Exp $
 
 inherit gnuconfig eutils autotools
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/gpsim/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86"
 
 IUSE="doc gtk"
 
