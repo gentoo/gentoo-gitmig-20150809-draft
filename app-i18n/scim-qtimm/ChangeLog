@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-qtimm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/ChangeLog,v 1.35 2006/10/30 15:21:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/ChangeLog,v 1.36 2006/11/29 05:11:35 jer Exp $
+
+  29 Nov 2006; Jeroen Roovers <jer@gentoo.org> scim-qtimm-0.9.4.ebuild:
+  Marked ~hppa (bug #151413).
 
   30 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   scim-qtimm-0.9.4.ebuild:

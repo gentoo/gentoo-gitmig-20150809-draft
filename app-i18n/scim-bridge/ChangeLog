@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-bridge
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/ChangeLog,v 1.5 2006/11/06 19:49:47 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/ChangeLog,v 1.6 2006/11/29 05:13:43 jer Exp $
+
+  29 Nov 2006; Jeroen Roovers <jer@gentoo.org> scim-bridge-0.4.7.ebuild:
+  Marked ~hppa (bug #151413).
 
   06 Nov 2006; Mamoru KOMACHI <usata@gentoo.org> scim-bridge-0.4.7.ebuild:
   Added doc USE flag and doxygen dependency for systems without doxygen.
