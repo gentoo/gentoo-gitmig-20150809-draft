@@ -134,6 +134,11 @@ scan_nondevfs() {
 }
 
 start() {
+	if get_bootparam "nohdparm" ; then
+		ewarn "Skipping hdparm init as requested in kernel cmdline"
+		return 0
+	fi
+
 	if [[ -e /dev/.devfsd ]] && [[ -d /dev/ide ]] ; then
 		scan_devfs
 	else
