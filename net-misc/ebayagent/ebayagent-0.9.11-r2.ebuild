@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ebayagent/ebayagent-0.9.11-r2.ebuild,v 1.3 2006/02/13 15:00:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ebayagent/ebayagent-0.9.11-r2.ebuild,v 1.4 2006/11/29 11:45:22 yuval Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/ebayagent/eBayAgent-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="tcltk"
+IUSE="tk"
 KEYWORDS="x86"
 
 DEPEND="dev-lang/perl
@@ -18,7 +18,7 @@ DEPEND="dev-lang/perl
 	>=dev-perl/URI-1.35
 	>=dev-perl/Crypt-SSLeay-0.49
 	>=dev-perl/libwww-perl-5.79
-	tcltk? ( dev-perl/perl-tk )
+	tk? ( dev-perl/perl-tk )
 	>=dev-perl/TimeDate-1.16"
 
 S=${WORKDIR}/eBayAgent-${PV}
@@ -44,7 +44,7 @@ src_install() {
 	newdoc ${S}/Tools/README.Debian README_Tools.Debian
 
 	# perl-tk (disable XeBayAgent.pl)
-	if ! use tcltk ; then
+	if ! use tk ; then
 		rm -rf ${D}/usr/bin/XeBayAgent
 	fi
 
