@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.2-r9.ebuild,v 1.9 2006/11/15 13:27:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.2-r9.ebuild,v 1.10 2006/11/29 13:59:06 nattfodd Exp $
 
 inherit tetex-2 flag-o-matic
 
@@ -36,6 +36,9 @@ src_unpack() {
 
 	# bug 80985
 	EPATCH_OPTS="-d ${S} -p1" epatch ${FILESDIR}/${P}-use-system-libtool.patch
+
+	# bug 115775 (from comment 17)
+	EPATCH_OPTS="-d ${S} -p1" epatch ${FILESDIR}/${P}-skip_bibtex_test.patch
 
 }
 
