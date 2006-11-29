@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/gnusound
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/ChangeLog,v 1.10 2006/06/16 21:21:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/ChangeLog,v 1.11 2006/11/29 19:23:12 aballier Exp $
+
+*gnusound-0.7.4 (29 Nov 2006)
+
+  29 Nov 2006; Alexis Ballier <aballier@gentoo.org>
+  +files/gnusound-0.7.4-amd64.patch, +files/gnusound-0.7.4-automagic.patch,
+  +files/gnusound-0.7.4-destdir.patch,
+  +files/gnusound-0.7.4-ffmpeg-struct.patch, +gnusound-0.7.4.ebuild:
+  Version bump, using gnome2, with patches from mandriva, plus a patch
+  removing automagic dependencies
 
   16 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> gnusound-0.6.2.ebuild,
   gnusound-0.7.ebuild:
