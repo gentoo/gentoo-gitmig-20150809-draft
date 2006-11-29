@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6363 2006/11/29 16:06:08 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6364 2006/11/29 16:35:32 beandog Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -729,10 +729,6 @@ net-im/ohphone
 # get the word out. Also see bug 148333 for packages that still needs to fixed
 >=dev-lang/python-2.5
 >=dev-python/python-docs-2.5
-
-# Alexandre Buisse <nattfodd@gentoo.org> (16 Sep 2006)
-# Too buggy
-media-gfx/alg
 
 # Elfyn McBratney <beu@gentoo.org> (16 Sep 2006)
 # Long-awaited update for AxKit; requires testing, and may steal your
