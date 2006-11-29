@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.2.0-r1.ebuild,v 1.1 2005/09/26 10:37:03 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.2.0-r1.ebuild,v 1.2 2006/11/29 20:00:09 beandog Exp $
 
 inherit debug flag-o-matic qt3 toolchain-funcs eutils
 
