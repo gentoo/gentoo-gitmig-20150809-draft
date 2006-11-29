@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_cband/mod_cband-0.9.7.5.ebuild,v 1.1 2006/11/19 11:46:10 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_cband/mod_cband-0.9.7.5.ebuild,v 1.2 2006/11/29 21:10:57 swegener Exp $
 
 inherit apache-module
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://cband.linux.pl/"
 LICENSE="GPL-2"
 SRC_URI="http://cband.linux.pl/download/mod-cband-${PV}.tgz"
 
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 SLOT="0"
 
