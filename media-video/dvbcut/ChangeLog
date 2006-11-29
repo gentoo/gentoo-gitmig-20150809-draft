@@ -1,6 +1,14 @@
 # ChangeLog for media-video/dvbcut
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/ChangeLog,v 1.1 2006/09/14 08:54:16 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/ChangeLog,v 1.2 2006/11/29 09:14:22 zzam Exp $
+
+*dvbcut-0.5.3-r1 (29 Nov 2006)
+
+  29 Nov 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/dvbcut-0.5.3-ac3-buffer.patch, -dvbcut-0.5.3.ebuild,
+  +dvbcut-0.5.3-r1.ebuild:
+  Added patch to enlarge ac3-buffer, thanks to Artur Wegele
+  <A.Wegele@tu-bs.de>, Bug #156237.
 
 *dvbcut-0.5.3 (14 Sep 2006)
 
