@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/compiz
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.9 2006/11/26 15:56:21 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.10 2006/11/29 23:20:52 hanno Exp $
+
+  29 Nov 2006; Hanno Boeck <hanno@gentoo.org> +files/compiz-start,
+  compiz-0.3.4.ebuild:
+  Add generic compiz start script.
 
   26 Nov 2006; Hanno Boeck <hanno@gentoo.org> compiz-0.3.4.ebuild:
   Add dependency to libXinerama.

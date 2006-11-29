@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.3.4.ebuild,v 1.2 2006/11/26 15:56:21 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.3.4.ebuild,v 1.3 2006/11/29 23:20:52 hanno Exp $
 
 inherit eutils gnome2
 
@@ -43,7 +43,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin ${FILESDIR}/compiz-{aiglx,xgl,nvidia}
+	dobin ${FILESDIR}/compiz-{aiglx,xgl,nvidia,start}
 
 	gnome2_src_install
 }
