@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/setarch
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/setarch/ChangeLog,v 1.4 2006/11/07 21:41:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/setarch/ChangeLog,v 1.5 2006/11/29 01:57:00 vapier Exp $
+
+  29 Nov 2006; Mike Frysinger <vapier@gentoo.org> files/Makefile:
+  Fix manpage symlink error #156530 by James Browning.
 
   07 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org> setarch-2.0.ebuild:
   Stable on sparc

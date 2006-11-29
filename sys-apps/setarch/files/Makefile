@@ -16,8 +16,8 @@ install: setarch
 	install -m755 setarch $(DESTDIR)$(bindir)
 	install -m644 setarch.8 $(DESTDIR)$(mandir)/man8
 	for x in `cat links` ; do \
-		$(LN_S) setarch $(DESTDIR)$(bindir)/$$x || exit 1 ; \
-		$(LN_S) setarch.8 $(DESTDIR)$(mandir)/man8/$$x || exit 1 ; \
+		$(LN_S) setarch $(DESTDIR)$(bindir)/$$x || exit $$? ; \
+		$(LN_S) setarch.8 $(DESTDIR)$(mandir)/man8/$$x.8 || exit $$? ; \
 	done
 
 clean:
