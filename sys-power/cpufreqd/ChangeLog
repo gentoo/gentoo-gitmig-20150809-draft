@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/cpufreqd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.46 2006/11/30 16:42:10 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.47 2006/11/30 17:16:24 peper Exp $
+
+  30 Nov 2006; Piotr Jaroszyński <peper@gentoo.org> cpufreqd-2.2.1.ebuild:
+  No need to sed the config any more, thanks to Alon Bar-Lev
+  <alonbl@gentoo.org>, bug #156096.
 
 *cpufreqd-2.2.1 (30 Nov 2006)
 
