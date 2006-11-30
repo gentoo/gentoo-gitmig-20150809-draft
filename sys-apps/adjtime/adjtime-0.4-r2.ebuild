@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/adjtime/adjtime-0.4-r2.ebuild,v 1.1 2006/02/15 03:31:48 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/adjtime/adjtime-0.4-r2.ebuild,v 1.2 2006/11/30 06:09:13 nerdboy Exp $
 
-DESCRIPTION="A script to adjust the clock tick on the Kurobox and LinkStation hardware clock."
+DESCRIPTION="A perl script to adjust the clock tick of the hardware clock on the system board (should work on most platforms)."
 HOMEPAGE="http://groups.yahoo.com/group/LinkStation_General/"
 
 LICENSE="as-is"
@@ -11,7 +11,7 @@ KEYWORDS="ppc"
 IUSE=""
 
 RDEPEND="dev-lang/perl
-	=net-misc/ntp-4.2.0*"
+	>=net-misc/ntp-4.2"
 
 src_install() {
 	dodir /usr/sbin
@@ -23,13 +23,13 @@ pkg_postinst() {
 	ewarn "(the shell environment for perl is dorked up).  The suggested"
 	ewarn "method is to use ntp-date rather than ntpd at startup, and"
 	ewarn "add the following two lines to local.start instead:"
-	einfo
-	einfo "/usr/bin/perl /usr/sbin/adjtime.pl -v -s ntp_host -i 60"
-	einfo
-	einfo "/etc/init.d/ntpd start"
-	einfo
-	einfo "replacing ntp_host with your preferred ntp server.  Remember,"
-	einfo "since adjtime uses ntp-date, ntpd must be stopped (or not yet"
-	einfo "started) prior to running the adjtime script."
+	ewarn
+	ewarn "/usr/bin/perl /usr/sbin/adjtime.pl -v -s ntp_host -i 60"
+	ewarn
+	ewarn "/etc/init.d/ntpd start"
+	ewarn
+	ewarn "replacing ntp_host with your preferred ntp server.  Remember,"
+	ewarn "since adjtime uses ntp-date, ntpd must be stopped (or not yet"
+	ewarn "started) prior to running the adjtime script."
 }
 

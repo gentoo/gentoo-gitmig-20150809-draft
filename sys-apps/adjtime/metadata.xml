@@ -6,5 +6,8 @@
     <email>nerdboy@gentoo.org</email>
     <name>Steve Arnold</name>
 </maintainer>
-<longdescription>A perl script to adjust the tick on the Kurobox and LinkStation hardware clock (required to keep an accurate clock).</longdescription>
+<longdescription>A perl script to adjust the tick on the Kurobox and 
+ LinkStation hardware clock (required to keep an accurate clock).
+ Should work on most hardware platforms.
+</longdescription>
 </pkgmetadata>
