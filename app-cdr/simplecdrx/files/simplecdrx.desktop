@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=SimpleCDR-X
-Comment=Utility to Burn CDs
-Exec=simplecdrx
-Icon=simplecdrx.png
-Terminal=0
-Type=Application
-Categories=GTK;AudioVideo;DiscBurning
