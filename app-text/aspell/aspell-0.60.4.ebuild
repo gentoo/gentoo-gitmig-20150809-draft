@@ -1,6 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.4.ebuild,v 1.8 2006/06/05 03:26:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.4.ebuild,v 1.9 2006/11/30 19:03:31 kevquinn Exp $
+
+# N.B. This is before inherit of autotools, as autotools.eclass adds the
+# relevant dependencies to DEPEND.
+WANT_AUTOMAKE="1.9"
 
 inherit libtool eutils flag-o-matic autotools
 
