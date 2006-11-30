@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cpptasks/cpptasks-1.0_beta4.ebuild,v 1.3 2006/11/05 19:22:10 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cpptasks/cpptasks-1.0_beta4.ebuild,v 1.4 2006/11/30 15:33:52 caster Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -15,7 +15,7 @@ IUSE="doc source examples"
 
 RDEPEND=">=virtual/jre-1.4
 	 >=dev-java/ant-core-1.5
-	 =dev-java/xerces-2*"
+	 >=dev-java/xerces-2.7"
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}
 	source? ( app-arch/zip )"

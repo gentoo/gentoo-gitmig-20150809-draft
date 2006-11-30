@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/j2ssh/j2ssh-0.2.7-r1.ebuild,v 1.9 2005/12/11 19:21:26 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/j2ssh/j2ssh-0.2.7-r1.ebuild,v 1.10 2006/11/30 15:41:34 caster Exp $
 
 inherit java-pkg
 
@@ -15,7 +15,7 @@ IUSE="doc examples jikes source"
 
 RDEPEND=">=virtual/jre-1.3
 	dev-java/commons-logging
-	>=dev-java/xerces-2.6"
+	>=dev-java/xerces-2.7"
 DEPEND=">=virtual/jdk-1.3
 	${RDEPEND}
 	dev-java/ant-core

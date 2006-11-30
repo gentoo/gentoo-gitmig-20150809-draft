@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.0.06.ebuild,v 1.1 2006/09/23 05:07:46 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.0.06.ebuild,v 1.2 2006/11/30 15:40:35 caster Exp $
 
 inherit versionator java-pkg-2 java-ant-2
 
@@ -18,7 +18,7 @@ IUSE="source"
 COMMON_DEPS="
 	=dev-java/asm-2.2*
 	>=dev-java/antlr-2.7.5
-	>=dev-java/xerces-2.4
+	>=dev-java/xerces-2.7
 	>=dev-java/ant-core-1.6.5
 	>=dev-java/xstream-1.1.1
 	>=dev-java/junit-3.8.1

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/commons-jelly-1.0-r1.ebuild,v 1.1 2006/07/22 22:54:58 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/commons-jelly-1.0-r1.ebuild,v 1.2 2006/11/30 15:30:43 caster Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -26,7 +26,7 @@ RDEPEND=">=virtual/jre-1.4
 	dev-java/commons-collections
 	=dev-java/dom4j-1*
 	=dev-java/jaxen-1.1*
-	=dev-java/xerces-2*"
+	>=dev-java/xerces-2.7"
 
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core

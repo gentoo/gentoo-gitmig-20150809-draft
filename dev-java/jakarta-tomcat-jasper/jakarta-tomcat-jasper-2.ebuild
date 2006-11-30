@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-tomcat-jasper/jakarta-tomcat-jasper-2.ebuild,v 1.4 2005/12/12 03:53:08 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-tomcat-jasper/jakarta-tomcat-jasper-2.ebuild,v 1.5 2006/11/30 15:42:32 caster Exp $
 
 inherit eutils java-pkg
 
@@ -17,7 +17,7 @@ IUSE="doc jikes source"
 RDEPEND=">=virtual/jdk-1.4
 	=dev-java/servletapi-2.4*
 	=dev-java/xerces-1.3*
-	>=dev-java/xerces-2.6
+	>=dev-java/xerces-2.7
 	dev-java/xml-commons
 	dev-java/commons-collections
 	dev-java/commons-daemon

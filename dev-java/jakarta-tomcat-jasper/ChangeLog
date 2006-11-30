@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jakarta-tomcat-jasper
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-tomcat-jasper/ChangeLog,v 1.3 2005/12/12 03:53:08 nichoj Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-tomcat-jasper/ChangeLog,v 1.4 2006/11/30 15:42:32 caster Exp $
+
+  30 Nov 2006; Vlastimil Babka <caster@gentoo.org>
+  jakarta-tomcat-jasper-2.ebuild:
+  Update xerces dep for upcoming 2.6 slotmove.
 
   12 Dec 2005; Joshua Nichols <nichoj@gentoo.org>
   jakarta-tomcat-jasper-2.ebuild:

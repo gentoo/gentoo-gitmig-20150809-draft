@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-betwixt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-betwixt/ChangeLog,v 1.7 2006/07/22 21:37:10 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-betwixt/ChangeLog,v 1.8 2006/11/30 15:29:05 caster Exp $
+
+  30 Nov 2006; Vlastimil Babka <caster@gentoo.org>
+  -commons-betwixt-0.7.ebuild, commons-betwixt-0.7-r1.ebuild:
+  Update xerces dep for upcoming 2.6 slotmove.
 
   22 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   commons-betwixt-0.6-r2.ebuild, commons-betwixt-0.7-r1.ebuild:

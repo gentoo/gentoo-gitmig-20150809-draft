@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/adaptx
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/ChangeLog,v 1.21 2006/10/05 15:03:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/ChangeLog,v 1.22 2006/11/30 15:20:12 caster Exp $
+
+  30 Nov 2006; Vlastimil Babka <caster@gentoo.org>
+  adaptx-0.9.13_p20041105-r1.ebuild, adaptx-0.9.13_p20041105-r2.ebuild:
+  Update xerces dep for upcoming 2.6 slotmove.
 
   05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   adaptx-0.9.13_p20041105-r1.ebuild, adaptx-0.9.13_p20041105-r2.ebuild:

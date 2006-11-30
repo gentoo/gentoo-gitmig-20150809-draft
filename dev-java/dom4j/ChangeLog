@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/dom4j
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.32 2006/10/05 15:37:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.33 2006/11/30 15:35:51 caster Exp $
+
+  30 Nov 2006; Vlastimil Babka <caster@gentoo.org> dom4j-1.6.1.ebuild,
+  -dom4j-1.6.1-r1.ebuild, dom4j-1.6.1-r2.ebuild:
+  Update xerces dep for upcoming 2.6 slotmove.
 
   05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> dom4j-1.4-r1.ebuild,
   dom4j-1.5.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/dom4j-1.6.1.ebuild,v 1.8 2006/03/14 05:00:53 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/dom4j-1.6.1.ebuild,v 1.9 2006/11/30 15:35:51 caster Exp $
 
 inherit java-pkg
 
@@ -19,7 +19,7 @@ RDEPEND="|| ( =virtual/jre-1.4* =virtual/jre-1.3* )
 	dev-java/xpp2
 	dev-java/xpp3
 	dev-java/relaxng-datatype
-	=dev-java/xerces-2*
+	>=dev-java/xerces-2.7
 	dev-java/xsdlib"
 DEPEND="|| (  =virtual/jdk-1.4* =virtual/jdk-1.3* )
 	dev-java/ant-core

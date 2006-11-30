@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-jelly
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/ChangeLog,v 1.3 2006/07/22 22:54:58 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/ChangeLog,v 1.4 2006/11/30 15:30:43 caster Exp $
+
+  30 Nov 2006; Vlastimil Babka <caster@gentoo.org>
+  -commons-jelly-1.0.ebuild, commons-jelly-1.0-r1.ebuild:
+  Update xerces dep for upcoming 2.6 slotmove.
 
 *commons-jelly-1.0-r1 (22 Jul 2006)
 
