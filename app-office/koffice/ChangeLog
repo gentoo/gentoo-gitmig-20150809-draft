@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.197 2006/11/30 09:43:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.198 2006/11/30 20:39:45 corsair Exp $
+
+  30 Nov 2006; Markus Rothe <corsair@gentoo.org> koffice-1.4.2-r8.ebuild:
+  Stable on ppc64; bug #155914
 
 *koffice-1.6.0-r3 (30 Nov 2006)
 *koffice-1.4.2-r8 (30 Nov 2006)
