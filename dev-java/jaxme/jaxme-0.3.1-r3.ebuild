@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/jaxme-0.3.1-r3.ebuild,v 1.1 2006/10/04 03:10:56 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/jaxme-0.3.1-r3.ebuild,v 1.2 2006/11/30 16:44:14 caster Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -17,7 +17,7 @@ IUSE="doc source"
 
 COMMON_DEP="
 	dev-db/hsqldb
-	>=dev-java/xerces-2.6
+	>=dev-java/xerces-2.7
 	dev-java/junit
 	dev-java/gnu-crypto
 	>=dev-java/log4j-1.2.8

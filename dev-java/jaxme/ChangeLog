@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jaxme
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/ChangeLog,v 1.14 2006/10/04 03:10:56 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/ChangeLog,v 1.15 2006/11/30 16:44:14 caster Exp $
+
+  30 Nov 2006; Vlastimil Babka <caster@gentoo.org> jaxme-0.3.1.ebuild,
+  -jaxme-0.3.1-r2.ebuild, jaxme-0.3.1-r3.ebuild:
+  Update xerces dep for upcoming 2.6 slotmove.
 
 *jaxme-0.3.1-r3 (04 Oct 2006)
 
