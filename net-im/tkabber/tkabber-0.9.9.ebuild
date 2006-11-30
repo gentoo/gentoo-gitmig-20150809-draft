@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.9.9.ebuild,v 1.2 2006/11/28 14:41:19 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.9.9.ebuild,v 1.3 2006/11/30 18:55:49 gustavoz Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ DEPEND=">=dev-lang/tcl-8.3.3
 	>=dev-tcltk/tkTheme-1.0"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 sparc x86"
 SLOT="0"
 
 pkg_setup() {
