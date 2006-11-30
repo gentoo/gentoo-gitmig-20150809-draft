@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptypes/ptypes-2.0.2-r1.ebuild,v 1.1 2006/10/22 19:46:22 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptypes/ptypes-2.0.2-r1.ebuild,v 1.2 2006/11/30 19:08:15 opfer Exp $
 
 inherit eutils toolchain-funcs
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 x86"
 
 DESCRIPTION="PTypes (C++ Portable Types Library) is a simple alternative to the STL that includes multithreading and networking."
 HOMEPAGE="http://www.melikyan.com/ptypes/"
