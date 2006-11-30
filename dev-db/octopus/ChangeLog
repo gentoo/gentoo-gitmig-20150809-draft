@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/octopus
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/octopus/ChangeLog,v 1.2 2005/01/29 21:17:48 luckyduck Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/octopus/ChangeLog,v 1.3 2006/11/30 15:17:59 caster Exp $
+
+  30 Nov 2006; Vlastimil Babka <caster@gentoo.org> octopus-3.0.1.ebuild:
+  Update xerces dep for upcoming 2.6 slotmove.
 
   29 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> octopus-3.0.1.ebuild:
   updated (R)DEPEND to reflect rhino SLOT changes.

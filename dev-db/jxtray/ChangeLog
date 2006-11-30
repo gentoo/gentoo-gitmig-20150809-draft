@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/jxtray
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/ChangeLog,v 1.8 2005/12/11 17:46:20 nichoj Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/ChangeLog,v 1.9 2006/11/30 15:16:08 caster Exp $
+
+  30 Nov 2006; Vlastimil Babka <caster@gentoo.org> jxtray-0.5.ebuild:
+  Update xerces dep for upcoming 2.6 slotmove.
 
   11 Dec 2005; Joshua Nichols <nichoj@gentoo.org> jxtray-0.5.ebuild:
   Loosened xerces dependency.
