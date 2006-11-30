@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jasperreports/jasperreports-1.0.1.ebuild,v 1.5 2006/11/19 14:51:49 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jasperreports/jasperreports-1.0.1.ebuild,v 1.6 2006/11/30 16:41:52 caster Exp $
 
 inherit java-pkg
 
@@ -25,7 +25,7 @@ COMMONDEP="
 	>=dev-java/commons-logging-1.0.4
 	~dev-java/servletapi-2.3
 	>=dev-java/xalan-2.5.2
-	>=dev-java/xerces-2.6.2-r1"
+	>=dev-java/xerces-2.7"
 DEPEND=">=virtual/jdk-1.4
 	>=app-arch/unzip-5.50
 	${COMMONDEP}
