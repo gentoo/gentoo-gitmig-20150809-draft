@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.16.2.ebuild,v 1.1 2006/10/31 23:33:04 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.16.2.ebuild,v 1.2 2006/11/30 01:58:00 compnerd Exp $
 
 inherit gnome2
 
@@ -37,3 +37,7 @@ DEPEND="${RDEPEND}
 	>=app-text/gnome-doc-utils-0.3"
 
 DOCS="AUTHORS BUGS ChangeLog MAINTAINERS NEWS README THANKS TODO"
+
+if [[ "${ARCH}" == "PPC" ]] ; then
+	MAKEOPTS="${MAKEOPTS} -j1"
+fi
