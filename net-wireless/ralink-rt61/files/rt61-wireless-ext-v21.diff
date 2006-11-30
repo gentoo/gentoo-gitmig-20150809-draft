@@ -1,0 +1,13 @@
+diff -Nur RT61_Linux_STA_Drv1.1.0.0.old/Module/rtmp_main.c RT61_Linux_STA_Drv1.1.0.0/Module/rtmp_main.c
+--- RT61_Linux_STA_Drv1.1.0.0.old/Module/rtmp_main.c	2006-11-22 03:19:57.000000000 +0100
++++ RT61_Linux_STA_Drv1.1.0.0/Module/rtmp_main.c	2006-11-30 20:56:15.000000000 +0100
+@@ -194,7 +194,9 @@
+     net_dev->get_stats = RT61_get_ether_stats;
+ 
+ #if WIRELESS_EXT >= 12
++#if WIRELESS_EXT < 17
+     net_dev->get_wireless_stats = RT61_get_wireless_stats;
++#endif
+     net_dev->wireless_handlers = (struct iw_handler_def *) &rt61_iw_handler_def;
+ #endif
+ 

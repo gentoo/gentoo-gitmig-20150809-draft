@@ -1,0 +1,11 @@
+# ChangeLog for net-wireless/ralink-rt61
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ralink-rt61/ChangeLog,v 1.1 2006/11/30 21:50:53 genstef Exp $
+
+*ralink-rt61-1.1.0.0 (30 Nov 2006)
+
+  30 Nov 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/rt61-wireless-ext-v21.diff, +metadata.xml,
+  +ralink-rt61-1.1.0.0.ebuild:
+  New ebuild thanks to Sebastian <sebastian_ml@gmx.net> in bug 151560
+
