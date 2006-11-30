@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/syck-php-bindings/syck-php-bindings-0.55.ebuild,v 1.2 2006/11/29 16:39:01 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/syck-php-bindings/syck-php-bindings-0.55.ebuild,v 1.3 2006/11/30 02:30:36 mcummings Exp $
 
 PHP_EXT_NAME="syck"
 PHP_EXT_INI="yes"
@@ -16,7 +16,7 @@ LICENSE="BSD"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 
 DEPEND="~dev-libs/syck-${PV}
 	!=dev-libs/syck-0.55-r1"
