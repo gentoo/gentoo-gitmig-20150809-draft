@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.165 2006/11/30 01:58:00 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.166 2006/11/30 02:00:15 compnerd Exp $
+
+  30 Nov 2006; Saleem Abdulrasool <compnerd@gentoo.org> -gedit-2.16.1.ebuild:
+  prune unneeded version
 
   30 Nov 2006; Saleem Abdulrasool <compnerd@gentoo.org> gedit-2.14.4.ebuild,
   gedit-2.16.2.ebuild:
