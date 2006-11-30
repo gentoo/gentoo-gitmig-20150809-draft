@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/ptypes
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptypes/ChangeLog,v 1.13 2006/11/30 19:08:15 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptypes/ChangeLog,v 1.14 2006/11/30 20:30:14 dev-zero Exp $
+
+  30 Nov 2006; Tiziano Müller <dev-zero@gentoo.org> -ptypes-1.7.5.ebuild,
+  -ptypes-2.0.2.ebuild:
+  Dropping old versions.
 
   30 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
   ptypes-2.0.2-r1.ebuild:
