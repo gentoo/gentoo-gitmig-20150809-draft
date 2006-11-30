@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.2_p20099999.ebuild,v 1.3 2006/11/23 21:31:29 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.2_p20099999.ebuild,v 1.4 2006/11/30 17:45:25 genstef Exp $
 
 WANT_AUTOCONF=latest
 inherit nsplugins autotools cvs kde-functions
@@ -66,15 +66,8 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	cvs_src_unpack
-	cd ${S}
-	AT_M4DIR=macros AT_NO_RECURSIVE=1 eautoreconf
-	cd libltdl
-	eautoreconf
-}
-
 src_compile() {
+	./autogen.sh
 	local myconf
 
 	use nsplugin && myconf="${myconf} --with-plugindir=/opt/netscape/plugins"

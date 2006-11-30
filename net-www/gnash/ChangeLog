@@ -1,6 +1,11 @@
 # ChangeLog for net-www/gnash
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.31 2006/11/23 21:31:29 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.32 2006/11/30 17:45:25 genstef Exp $
+
+  30 Nov 2006; Stefan Schweizer <genstef@gentoo.org>
+  gnash-0.7.2_p20099999.ebuild:
+  Use ./autogen.sh instead of eautoreconf in the cvs ebuild because it works
+  more reliable, thanks to expose
 
   23 Nov 2006; Stefan Schweizer <genstef@gentoo.org> gnash-0.7.2.ebuild,
   gnash-0.7.2_p20099999.ebuild:
