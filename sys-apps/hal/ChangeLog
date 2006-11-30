@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.110 2006/11/20 22:16:30 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.111 2006/11/30 07:57:31 dberkholz Exp $
+
+  30 Nov 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/hal-0.5.5.1-RBC.patch, +files/hal-unmount.dev:
+  Restore a couple of files needed for 0.5.5.1-r3 that must've been
+  accidentally removed.
 
   20 Nov 2006; Saleem Abdulrasool <compnerd@gentoo.org> hal-0.5.7-r3.ebuild:
   Fix dbus dependencies for dbus-1.0 release
