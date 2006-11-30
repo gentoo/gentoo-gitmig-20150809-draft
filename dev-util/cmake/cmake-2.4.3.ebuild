@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.4.3.ebuild,v 1.4 2006/11/30 18:27:32 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.4.3.ebuild,v 1.5 2006/11/30 21:11:20 corsair Exp $
 
 inherit toolchain-funcs eutils versionator
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.cmake.org/files/v$(get_version_component_range 1-2)/${P}.tar
 
 LICENSE="CMake"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 src_compile() {
