@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.275 2006/11/30 10:36:41 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.276 2006/11/30 23:15:33 suka Exp $
+
+  30 Nov 2006; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.0.4.ebuild:
+  Updates coming fast these days, ooo-build-2.0.4.9. Higlight of this 
+  release: New tangoish Icons for the Menu-entries ;)
 
   30 Nov 2006; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.0.4.ebuild:
