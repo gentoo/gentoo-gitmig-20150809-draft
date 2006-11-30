@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetstats/ChangeLog,v 1.1 2006/11/27 11:43:28 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetstats/ChangeLog,v 1.2 2006/11/30 17:39:32 corsair Exp $
+
+  30 Nov 2006; Markus Rothe <corsair@gentoo.org> knetstats-1.6.1.ebuild:
+  Added ~ppc64
 
 *knetstats-1.6.1 (27 Nov 2006)
 
