@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/trang/trang-20030619-r3.ebuild,v 1.1 2006/11/25 18:52:55 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/trang/trang-20030619-r3.ebuild,v 1.2 2006/11/30 15:12:19 caster Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -14,7 +14,7 @@ IUSE="doc source"
 
 COMMON_DEP="
 	=dev-java/xerces-1.3*
-	=dev-java/xerces-2*"
+	>=dev-java/xerces-2.7.1"
 
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"

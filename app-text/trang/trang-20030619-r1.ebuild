@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/trang/trang-20030619-r1.ebuild,v 1.7 2006/11/24 18:56:29 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/trang/trang-20030619-r1.ebuild,v 1.8 2006/11/30 15:12:19 caster Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,7 @@ KEYWORDS="x86 amd64"
 IUSE="jikes"
 RDEPEND=">=virtual/jre-1.4
 	=dev-java/xerces-1.3*
-	=dev-java/xerces-2*"
+	>=dev-java/xerces-2.7.1"
 
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}
