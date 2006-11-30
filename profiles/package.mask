@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6373 2006/11/30 03:06:57 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6374 2006/11/30 07:01:29 aballier Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -396,10 +396,6 @@ dev-db/dbbalancer
 # Bryan Østergaard <kloeri@gentoo.org> (08 Nov 2006)
 # Masked waiting for thunderbird-2.0 to get unmasked.
 x11-plugins/replytolist
-
-# Alexis Ballier <aballier@gentoo.org< (07 Nov 2006)
-# Needs some testing
-=media-libs/openexr-1.4.0a
 
 # Stefan Schweizer <genstef@gentoo.org> (07 Nov 2006)
 # This has many bugs, find rc5 in the overlay: layman -a voip
