@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-1.1.13.7.ebuild,v 1.1 2006/10/27 13:40:34 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-1.1.13.7.ebuild,v 1.2 2006/11/30 18:24:07 opfer Exp $
 
 inherit mono autotools eutils versionator
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.go-mono.com/sources/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc x86"
 
 IUSE=""
 
