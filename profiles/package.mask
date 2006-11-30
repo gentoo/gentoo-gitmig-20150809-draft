@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6370 2006/11/29 20:27:47 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6371 2006/11/30 02:46:05 beandog Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -475,69 +475,10 @@ sci-biology/generic-genome-browser
 # Multiple bugs, not active maintainer in Gentoo.
 media-sound/bpmdj
 
-# Michael Sterrett <mr_bones_@gentoo.org> (29 Oct 2006)
-# Masked pending removal on 2006-11-28.
-# Doesn't work with latest libvorbis and occasionally segfaults
-# even with the work-around for the libvorbis issue.  Binary game
-# so there's not much to do about it either.
-# see http://bugs.gentoo.org/show_bug.cgi?id=150431
-games-action/phobiaiii
-
-# Michael Sterrett <mr_bones_@gentoo.org> (29 Oct 2006)
-# Masked pending removal on 2006-11-28.
-# Doesn't work with latest build environment and unused
-# by any package in portage.
-# see http://bugs.gentoo.org/show_bug.cgi?id=136513
-media-libs/allegttf
-
-# Michael Sterrett <mr_bones_@gentoo.org> (29 Oct 2006)
-# Masked pending removal on 2006-11-28.
-# Doesn't work with stratagus-2.1 which is the only version in portage
-# see http://bugs.gentoo.org/show_bug.cgi?id=110542
-games-strategy/magnant
-
-# David Shakaryan <omp@gentoo.org> (29 Oct 2006)
-# Masking x11-misc/commonbox-utils as upstream is dead
-# and many alternative *box configuration tools exist.
-# Pending removal on 29 Nov 2006.
-x11-misc/commonbox-utils
-
 # Alec Warner <antarus@gentoo.org> (28 Oct 2006)
 # Mask the following packages for removal by treecleaners:
-# app-laptop/xpmumon for bug(s) 153198, 112675, 117782
-# media-gfx/radiance for bug(s) 106158, 112675
-# net-mail/cvm-vmailmgr for bug(s) 113245
-# app-cdr/cdrx for bug(s) 108072 
-# app-emacs/liece for bug(s) 152911, use riece
 # net-analyzer/tptest for bug(s) 152549
-# net-wireless/aircrack for bug(s) 152806 Use aircrack-ng
-# net-misc/aesop for bug(s) 152505 
-# app-crypt/outguess for bug(s) 143897
-# dev-util/sashxb for bug(s) 138848
-# app-editors/cute for bug(s) 128270, 117482
-# x11-plugins/gkrellm-newsticker for bug(s) 102695
-# app-misc/pms for bug(s) 102314
-# app-misc/largorecipes for bug(s) 101536
-# x11-plugins/gkrellm-giFT for bug(s) 97869
-# media-video/winki for bug(s) 94902
-# net-misc/qadsl for bug(s) 94295
-app-laptop/xpmumon
-media-gfx/radiance
-net-mail/cvm-vmailmgr
-app-cdr/cdrx
-app-emacs/liece
 net-analyzer/tptest
-net-wireless/aircrack
-net-misc/aesop
-app-crypt/outguess
-dev-util/sashxb
-app-editors/cute
-x11-plugins/gkrellm-newsticker
-app-misc/pms
-app-misc/largorecipes
-media-video/winki
-x11-plugins/gkrellm-giFT
-net-misc/qadsl
 
 # Luis Medinas <metalgod@gentoo.org> (28 Oct 2006)
 # Mask dhcdbd and NetworkManager for testing
@@ -545,10 +486,6 @@ net-misc/qadsl
 # Rename NetworkManager to networkmanager for consistency.
 net-misc/dhcdbd
 net-misc/networkmanager
-
-# Donnie Berkholz <dberkholz@gentoo.org> (26 Oct 2006)
-# Only works on 2.4, masked for removal
-x11-drivers/kyro-drivers
 
 # Steve Dibb <beandog@gentoo.org> (26 Oct 2006)
 # Masked for removal (treecleaner), see bug #65923
@@ -563,10 +500,6 @@ dev-java/bluej-bin
 # Masked for removal as old style gnat is going to be masked soon. 
 dev-ada/asis
 
-# Doug Goldstein <cardoe@gentoo.org> (25 Oct 2006)
-# Masked pending removal on 25 Nov 2006. See bug #134621
-net-www/netscape-plugger
-
 # Markus Ullmann <jokey@gentoo.org> (24 Oct 2006)
 # package doesn't compile currently, upstream is going to
 # provide a patch soonish
@@ -576,10 +509,6 @@ net-www/netscape-plugger
 # Masking alpha version of mozilla-thunderbird-2.0 and enigmail for it.
 =x11-plugins/enigmail-0.94.1-r1
 >=mail-client/mozilla-thunderbird-2.0_alpha1
-
-# Chris Gianelloni <wolf31o2@gentoo.org> (23 Oct 2006)
-# Masked pending removal on Nov 23. Use games-fps/tremulous instead.
-games-fps/quake3-tremulous
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (23 Oct 2006)
 # I am masking all of this so it can all be unmasked at once.  All of the new
@@ -631,10 +560,6 @@ dev-lang/swi-prolog-lite
 # beta psi, with jingle support
 >=net-im/psi-0.11_pre20061020
 
-# Alec Warner <antarus@gentoo.org> (19 Oct 2006)
-# Masked app-editors/xwpe for treecleaners, bug # 124298
-app-editors/xwpe
-
 # Diego Pettenò <flameeyes@gentoo.org> (19 Oct 2006)
 # beta version, breaks API badly with other software.
 >=media-libs/flac-1.1.3_beta2
@@ -671,16 +596,6 @@ app-misc/gpsdrive
 # This is a release candidate version for testing
 # purpose mainly.
 =dev-haskell/hs-plugins-1.0_rc0
-
-# Christian Heim <phreak@gentoo.org> (5 Oct 2006)
-# masking sys-apps/sal-client for treecleaners, bug(s) 67364
-# Pending removal Nov 5th. Please use sys-process/audit instead!
-sys-apps/sal-client
-
-# Michael Sterrett <mr_bones_@gentoo.org> (05 Oct 2006)
-# Masked pending removal on Oct 30. No longer developed upstream
-# and doesn't build.  Will be eventually replaced by qmc2.
-games-emulation/qmamecat
 
 # Robin H. Johnson <robbat2@gentoo.org> (3 Oct 2006)
 # Bug 144560
@@ -762,13 +677,6 @@ net-misc/linux-igd
 <virtual/opengl-7
 <virtual/x11-7
 <virtual/xft-7
-
-# Matthias Schwarzott <zzam@gentoo.org> (13 Sep 2006)
-# Masked for removal. It has open gcc-4 Bug (#146692),
-# does unconditionally depend on virtual/x11,
-# and upstream has done no newer releases.
-# Sources seem to be tarred in Oct 1999.
-media-video/mpeg-movie
 
 # Olivier Fisette <ribosome@gentoo.org> (12 Sept 2006)
 # Do not compile with GCC4.
@@ -1000,11 +908,6 @@ mail-client/mahogany
 # libecl.so linking problem
 =dev-lisp/ecls-0.9i
 
-# Luis Medinas <metalgod@gentoo.org> (08 Jul 2006)
-# Dead upstream it needs to be removed.
-# There's lot's of another applications like this.
-app-cdr/simplecdrx
-
 # Krzysiek Pawlik <nelchael@gentoo.org> (08 Jul 2006)
 # Masked, because there's no compatible eclipse-sdk in tree,
 # please use builtin update manager to install plugins for now.
@@ -1020,11 +923,6 @@ app-cdr/dvdrtools
 # Masked for testing
 # Please see bug 136250 for more details
 >=net-analyzer/snort-2.6.0
-
-# Marcelo Goes <vanquirius@gentoo.org> (07 Jul 2006)
-# Pending removal
-# Please migrate to net-wireless/aircrack-ng
-net-wireless/aircrack
 
 # Martin Schlemmer <azarah@gentoo.org> (07 Jul 2006)
 # Testing release to get some feedback.  New features include:
@@ -1095,11 +993,6 @@ app-misc/rolo
 # awstats 6.6 is completely unusable - bug #134296
 =net-www/awstats-6.6
 
-# Mark Loeser <halcy0n@gentoo.org> (29 May 2006)
-# Masked pending removal.  Dead upstream, doesn't compile with gcc-3.4
-# bug #120303
-media-libs/nurbs++
-
 # Leonardo Boshell <leonardop@gentoo.org> (28 May 2006)
 # Waiting for a stable release after libgda/libgnomedb 2.0 are out.
 dev-db/mergeant
@@ -1149,10 +1042,6 @@ sys-kernel/kurobox-sources
 # Tavis Ormandy <taviso@gentoo.org> (21 Apr 2006)
 # unresolved security issues #125491
 net-analyzer/tcpick
-
-# Benedikt Böhm <hollow@gentoo> (20 Apr 2006)
-# Upstream dead; obsoleted by sys-apps/lomoco
-sys-apps/lmctl
 
 ## Daniel Ostrow <dostrow@gentoo.org> (20 Apr 2006)
 ## XFCE 4.4 beta1
@@ -1340,10 +1229,6 @@ net-print/hpoj
 # older versions have problems, leaving only the last in series,
 # now that 3.45 is stable
 <=dev-lang/gnat-3.15p-r4
-
-# Thierry Carrez <koon@gentoo.org> (18 Jan 2006)
-# Package contains insecure tmpfile handling, bug #108072
-app-cdr/cdrx
 
 # Marius Mauch <genone@gentoo.org> (17 Jan 2006)
 # Development version
