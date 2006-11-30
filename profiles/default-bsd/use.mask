@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.24 2006/09/23 13:32:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.25 2006/11/30 17:10:22 drizzt Exp $
 
 # Linux-dependant flags
 selinux
@@ -96,3 +96,7 @@ video_cards_nvidia
 
 # Apache's MPM-itk requires sys-libs/libcap
 mpm-itk
+
+# USE flags only valid on Mac OS X
+aqua
+coreaudio
