@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libvorbis
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.68 2006/11/28 14:01:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.69 2006/11/30 21:09:34 corsair Exp $
+
+  30 Nov 2006; Markus Rothe <corsair@gentoo.org> libvorbis-1.1.2.ebuild:
+  Stable on ppc64; bug #155258
 
   28 Nov 2006; Jeroen Roovers <jer@gentoo.org> libvorbis-1.1.2.ebuild:
   Stable for HPPA (bug #155258).
