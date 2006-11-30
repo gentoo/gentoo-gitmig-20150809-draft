@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletmanager/kwalletmanager-3.5.5.ebuild,v 1.6 2006/11/16 05:11:15 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletmanager/kwalletmanager-3.5.5.ebuild,v 1.7 2006/11/30 10:03:02 corsair Exp $
 
 KMNAME=kdeutils
 KMMODULE=kwallet
@@ -12,5 +12,5 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/kdeutils-3.5-patchset-01.tar.bz2"
 
 DESCRIPTION="KDE Wallet Management Tool"
-KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
