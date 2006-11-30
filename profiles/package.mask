@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6375 2006/11/30 07:35:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6376 2006/11/30 13:24:49 uberlord Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -24,10 +24,6 @@
 # Tristan Heaven <nyhm@gentoo.org> (29 Nov 2006)
 # Not ready
 =media-libs/allegro-4.2.1
-
-# Markus Ullmann <jokey@gentoo.org> (29 Nov 2006)
-# unable to obtain IP, see bug #156515
-=net-misc/dhcpcd-3.0.0
 
 # Matthias Schwarzott <zzam@gentoo.org> (29 Nov 2006)
 # Pending removal Dec 29 2006
