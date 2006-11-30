@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/pmd-3.7.ebuild,v 1.2 2006/10/05 14:40:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/pmd-3.7.ebuild,v 1.3 2006/11/30 16:06:11 caster Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -17,7 +17,7 @@ RDEPEND=">=virtual/jre-1.3
 	=dev-java/jaxen-1.0*
 	dev-java/saxpath
 	dev-java/xml-commons
-	>=dev-java/xerces-2.6
+	>=dev-java/xerces-2.7
 	=dev-java/jakarta-oro-2.0*
 	"
 DEPEND=">=virtual/jdk-1.3

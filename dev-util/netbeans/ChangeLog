@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.40 2006/11/04 10:01:54 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.41 2006/11/30 16:03:05 caster Exp $
+
+  30 Nov 2006; Vlastimil Babka <caster@gentoo.org> netbeans-4.0-r2.ebuild:
+  Update xerces dep for upcoming 2.6 slotmove.
 
 *netbeans-5.5 (04 Nov 2006)
 

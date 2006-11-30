@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/j/j-0.20.2.ebuild,v 1.8 2005/11/23 04:32:50 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/j/j-0.20.2.ebuild,v 1.9 2006/11/30 16:02:26 caster Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,7 @@ KEYWORDS="x86 ~amd64 ~ppc"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.4
-	dev-java/xerces"
+	>=dev-java/xerces-2.7"
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}"
 
