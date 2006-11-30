@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/xerces
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.67 2006/11/04 06:54:11 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.68 2006/11/30 22:26:58 caster Exp $
+
+*xerces-2.6.2-r3 (30 Nov 2006)
+
+  30 Nov 2006; Vlastimil Babka <caster@gentoo.org>
+  +files/xerces-2.6.2-gentoo.patch, -files/xerces-2.6.2-r2-gentoo.patch,
+  -xerces-2.6.2-r1.ebuild, -xerces-2.6.2-r2.ebuild, +xerces-2.6.2-r3.ebuild:
+  Revbump for slotmove to 2.6. Also fixes bugs #82561 and #131141 for this slot.
 
 *xerces-2.8.1 (04 Nov 2006)
 
