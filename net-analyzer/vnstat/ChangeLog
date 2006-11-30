@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/vnstat
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.16 2006/09/08 11:07:46 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.17 2006/11/30 13:07:44 gustavoz Exp $
+
+  30 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org> vnstat-1.4-r2.ebuild:
+  Keyworded ~sparc myself since lisa is afraid :P
 
   08 Sep 2006; <blubb@gentoo.org> vnstat-1.4-r1.ebuild:
   stable on amd64
