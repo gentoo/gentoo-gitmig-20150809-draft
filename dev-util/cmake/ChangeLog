@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.42 2006/11/29 20:00:09 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.43 2006/11/30 11:12:30 pylon Exp $
+
+  30 Nov 2006; Lars Weiler <pylon@gentoo.org> cmake-2.4.3.ebuild:
+  Stable on ppc; bug #155307.
 
   29 Nov 2006; Steve Dibb <beandog@gentoo.org> cmake-2.4.3.ebuild:
   amd64 stable, fixed some copyright headers too, bug 155307
