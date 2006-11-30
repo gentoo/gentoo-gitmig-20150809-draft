@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.3.7.ebuild,v 1.1 2006/11/07 20:16:22 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.3.7.ebuild,v 1.2 2006/11/30 21:56:56 zzam Exp $
 
 inherit eutils
 
@@ -87,7 +87,7 @@ pkg_postinst() {
 		ewarn
 		ewarn "A shutdown-file has been changed."
 		ewarn "You really have to execute"
-		ewarn "    emerge --config gentoo-vdr-scripts"
+		ewarn "\temerge --config gentoo-vdr-scripts"
 		ewarn "to keep shutdown working."
 		ewarn
 
@@ -95,10 +95,10 @@ pkg_postinst() {
 	else
 		elog
 		elog "To make shutdown work add this line to /etc/sudoers"
-		elog "    $VDRSUDOENTRY"
+		elog "\t$VDRSUDOENTRY"
 		elog
 		elog "or execute this command:"
-		elog "    emerge --config gentoo-vdr-scripts"
+		elog "\temerge --config gentoo-vdr-scripts"
 		elog
 	fi
 
@@ -115,6 +115,14 @@ pkg_postinst() {
 		einfo
 		einfo "Smart updating should have moved all your settings"
 		einfo
+	fi
+
+	if [[ -f "${ROOT}/etc/init.d/dvbsplash" ]]; then
+		ewarn
+		ewarn "You have dvbsplash installed!"
+		ewarn "Please delete /etc/init.d/dvbsplash with:"
+		ewarn "\trm /etc/init.d/dvbsplash"
+		ewarn
 	fi
 }
 
