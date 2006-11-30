@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jdom
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.35 2006/10/05 17:37:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.36 2006/11/30 15:50:24 caster Exp $
+
+  30 Nov 2006; Vlastimil Babka <caster@gentoo.org> jdom-1.0_beta6.ebuild,
+  jdom-1.0_beta6-r1.ebuild, jdom-1.0_beta9-r1.ebuild,
+  jdom-1.0_beta9-r2.ebuild, jdom-1.0_beta10-r3.ebuild,
+  jdom-1.0_beta10-r4.ebuild, jdom-1.0.ebuild, jdom-1.0-r1.ebuild:
+  Update xerces dep for upcoming 2.6 slotmove.
 
   05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   jdom-1.0_beta9-r1.ebuild, jdom-1.0_beta9-r2.ebuild,

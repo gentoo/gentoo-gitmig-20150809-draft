@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0_beta6.ebuild,v 1.7 2006/09/11 22:11:06 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0_beta6.ebuild,v 1.8 2006/11/30 15:50:24 caster Exp $
 
 inherit java-pkg
 
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 x86"
 RDEPEND=">=virtual/jre-1.3
 		dev-java/saxpath
 		dev-java/xalan
-		>=dev-java/xerces-2.6.2-r1"
+		>=dev-java/xerces-2.7"
 DEPEND=">=virtual/jdk-1.3
 		dev-java/ant-core
 		jikes? ( >=dev-java/jikes-1.15 )

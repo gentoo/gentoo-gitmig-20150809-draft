@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/nekohtml
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/nekohtml/ChangeLog,v 1.1 2006/10/12 04:47:24 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/nekohtml/ChangeLog,v 1.2 2006/11/30 15:50:50 caster Exp $
+
+  30 Nov 2006; Vlastimil Babka <caster@gentoo.org> nekohtml-0.9.5.ebuild:
+  Update xerces dep for upcoming 2.6 slotmove.
 
 *nekohtml-0.9.5 (12 Oct 2006)
 

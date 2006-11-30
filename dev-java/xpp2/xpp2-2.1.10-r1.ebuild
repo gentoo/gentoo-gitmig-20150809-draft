@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp2/xpp2-2.1.10-r1.ebuild,v 1.3 2006/09/14 03:53:52 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp2/xpp2-2.1.10-r1.ebuild,v 1.4 2006/11/30 16:01:20 caster Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc source"
 S="${WORKDIR}/${MY_P}"
 
-CDEPEND=">=dev-java/xerces-2.6.2-r2"
+CDEPEND=">=dev-java/xerces-2.7"
 DEPEND=">=virtual/jdk-1.3
 	>=dev-java/ant-core-1.6
 	${CDEPEND}"

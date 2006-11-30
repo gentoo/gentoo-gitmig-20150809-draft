@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/nekohtml/nekohtml-0.9.5.ebuild,v 1.1 2006/10/12 04:47:24 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/nekohtml/nekohtml-0.9.5.ebuild,v 1.2 2006/11/30 15:50:50 caster Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.apache.org/~andyc/neko/${P}.tar.gz"
 DEPEND=">=virtual/jdk-1.3
 		dev-java/ant-core"
 RDEPEND=">=virtual/jre-1.3
-		=dev-java/xerces-2*
+		>=dev-java/xerces-2.7
 		dev-java/xalan"
 LICENSE="CyberNeko-1.0"
 SLOT="0"

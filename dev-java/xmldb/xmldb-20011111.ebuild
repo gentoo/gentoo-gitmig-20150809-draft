@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/xmldb-20011111.ebuild,v 1.11 2006/03/11 20:00:54 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/xmldb-20011111.ebuild,v 1.12 2006/11/30 15:59:46 caster Exp $
 
 inherit java-pkg eutils
 
@@ -20,8 +20,8 @@ IUSE="doc jikes source"
 DEPEND=">=virtual/jdk-1.4
 	jikes? ( dev-java/jikes )
 	source? ( app-arch/zip )
-	>=dev-java/xerces-2.6
-	>=dev-java/xalan-2.6
+	>=dev-java/xerces-2.7
+	>=dev-java/xalan-2.7
 	dev-java/ant-core
 	>=dev-java/junit-3.8"
 RDEPEND=">=virtual/jre-1.4"

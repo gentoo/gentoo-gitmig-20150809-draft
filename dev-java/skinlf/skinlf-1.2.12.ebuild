@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/skinlf/skinlf-1.2.12.ebuild,v 1.2 2006/03/19 22:19:32 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/skinlf/skinlf-1.2.12.ebuild,v 1.3 2006/11/30 15:55:27 caster Exp $
 
 inherit java-pkg eutils
 
@@ -18,7 +18,7 @@ IUSE="source"
 RDEPEND=">=virtual/jre-1.3
 	dev-java/javacc
 	dev-java/xalan
-	dev-java/xerces
+	>=dev-java/xerces-2.7
 	dev-java/sun-jimi"
 
 DEPEND=">=virtual/jdk-1.3

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/xmldb-20011111-r1.ebuild,v 1.3 2006/09/14 04:17:10 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/xmldb-20011111-r1.ebuild,v 1.4 2006/11/30 15:59:46 caster Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -19,8 +19,8 @@ IUSE="doc source"
 # TODO please make compiling the junit tests optional
 DEPEND=">=virtual/jdk-1.4
 	source? ( app-arch/zip )
-	>=dev-java/xerces-2.6
-	>=dev-java/xalan-2.6
+	>=dev-java/xerces-2.7
+	>=dev-java/xalan-2.7
 	dev-java/ant-core
 	=dev-java/junit-3.8*"
 RDEPEND=">=virtual/jre-1.4"
