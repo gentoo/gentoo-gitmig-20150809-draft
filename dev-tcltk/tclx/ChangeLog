@@ -1,6 +1,15 @@
 # ChangeLog for dev-tcltk/tclx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/ChangeLog,v 1.30 2006/11/01 19:35:43 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/ChangeLog,v 1.31 2006/11/30 20:00:19 jokey Exp $
+
+*tclx-8.4-r1 (30 Nov 2006)
+
+30 Nov 2006; Markus Ullmann <jokey@gentoo.org> -files/tclx-8.3-argv.patch,
+  -files/tclx-8.3-makecfg.patch, +files/tclx-8.4-relid.patch,
+  +files/tclx-8.4-varinit.patch, -tclx-8.3-r1.ebuild, -tclx-8.4.ebuild,
+  +tclx-8.4-r1.ebuild:
+  Cleaning up and using improved ebuild from bug #95845 thanks to Sebastien
+  Fabbro
 
 *tclx-8.4 (01 Nov 2006)
 
