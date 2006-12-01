@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r4.ebuild,v 1.12 2006/10/03 20:25:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r4.ebuild,v 1.13 2006/12/01 21:58:28 wolf31o2 Exp $
 
-# To use system libraries, uncomment the following lien and comment the one
+# To use system libraries, uncomment the following line and comment the one
 # below it.
 #inherit eutils multilib games
 inherit eutils games
@@ -24,7 +24,7 @@ QA_EXECSTACK_x86="${GAMES_PREFIX_OPT:1}/ut2004/System/ut2004-bin
 QA_EXECSTACK_amd64="${GAMES_PREFIX_OPT:1}/ut2004/System/ut2004-bin
 	${GAMES_PREFIX_OPT:1}/ut2004/System/ucc-bin"
 RESTRICT="mirror strip"
-IUSE="opengl"
+IUSE="dedicated opengl"
 
 RDEPEND=">=games-fps/ut2004-data-3186-r2
 	>=games-fps/ut2004-bonuspack-ece-1-r1
