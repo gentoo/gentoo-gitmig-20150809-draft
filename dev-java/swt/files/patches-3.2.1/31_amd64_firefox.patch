@@ -1,3 +1,4 @@
+# fix building with seamonkey, bug #156716 and #155725
 diff -u -r1.33.2.1 make_linux.mak
 --- make_linux.mak	26 Jul 2006 16:33:23 -0000	1.33.2.1
 +++ make_linux.mak	29 Sep 2006 13:21:51 -0000
@@ -100,10 +101,10 @@ diff -u -r1.29.2.1 xpcom.cpp
  
 -#ifndef NO_NS_1InitEmbedding
 -JNIEXPORT jint JNICALL XPCOM_NATIVE(NS_1InitEmbedding)
--	(JNIEnv *env, jclass that, jint arg0, jint arg1)
+-	(JNIEnv *env, jclass that, jlong arg0, jlong arg1)
 +#ifndef NO_NS_1InitXPCOM3
 +JNIEXPORT jint JNICALL XPCOM_NATIVE(NS_1InitXPCOM3)
-+	(JNIEnv *env, jclass that, jint arg0, jint arg1, jint arg2, jint arg3, jint arg4)
++	(JNIEnv *env, jclass that, jlong arg0, jlong arg1, jlong arg2, jlong arg3, jlong arg4)
  {
  	jint rc = 0;
 -	XPCOM_NATIVE_ENTER(env, that, NS_1InitEmbedding_FUNC);
