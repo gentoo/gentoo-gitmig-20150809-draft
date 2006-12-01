@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6_rc1.ebuild,v 1.1 2006/12/01 02:40:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6_rc1.ebuild,v 1.2 2006/12/01 13:16:06 caster Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -238,6 +238,7 @@ src_compile () {
 		--disable-x264 \
 		--enable-utf8 \
 		--enable-libtool \
+		$(use_enable nsplugin mozilla) \
 		XPIDL="${XPIDL}" MOZILLA_CONFIG="${MOZILLA_CONFIG}" \
 		${myconf} || die "configuration failed"
 
@@ -255,12 +256,14 @@ src_install() {
 	dodoc AUTHORS MAINTAINERS HACKING THANKS TODO NEWS README \
 		doc/fortunes.txt doc/intf-cdda.txt doc/intf-vcd.txt
 
-	dodir "/usr/$(get_libdir)/${PLUGINS_DIR}"
-	mv "${D}"/usr/$(get_libdir)/mozilla/{components,plugins}/* \
-		"${D}/usr/$(get_libdir)/${PLUGINS_DIR}/"
+	if use nsplugin; then
+		dodir "/usr/$(get_libdir)/${PLUGINS_DIR}"
+		mv "${D}"/usr/$(get_libdir)/mozilla/{components,plugins}/* \
+			"${D}/usr/$(get_libdir)/${PLUGINS_DIR}/"
 
-	rm -rf "${D}/usr/share/doc/vlc" \
-		"${D}"/usr/share/vlc/vlc{16x16,32x32,48x48,128x128}.{png,xpm,ico}
+		rm -rf "${D}/usr/share/doc/vlc" \
+			"${D}"/usr/share/vlc/vlc{16x16,32x32,48x48,128x128}.{png,xpm,ico}
+	fi
 
 	use skins || rm -rf "${D}/usr/share/vlc/skins2"
 

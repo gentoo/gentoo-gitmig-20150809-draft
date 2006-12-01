@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.195 2006/12/01 02:40:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.196 2006/12/01 13:16:06 caster Exp $
+
+  01 Dec 2006; Vlastimil Babka <caster@gentoo.org> vlc-0.8.6_rc1.ebuild:
+  Hopefully fixed the nsplugin building (bug #156067) this time.
 
 *vlc-0.8.6_rc1 (01 Dec 2006)
 
