@@ -1,0 +1,16 @@
+--- src/mount_davfs.c	2006-11-07 19:44:22.000000000 +0100
++++ src/mount_davfs.c.new	2006-11-29 11:55:18.000000000 +0100
+@@ -572,9 +572,12 @@
+             setpwent();
+             pw = getpwent();
+             while (pw != NULL) {
++                // On gentoo the home directory of nobody is '/', so we
++                // ignore the user 'nobody'
+                 if (pw->pw_dir != NULL && pw->pw_uid != args->uid
+                         && strlen(pw->pw_dir) > 0
+-                        && strstr(mpoint, pw->pw_dir) == mpoint)
++                        && strstr(mpoint, pw->pw_dir) == mpoint
++                        && strcmp(pw->pw_name, "nobody") != 0)
+                     error(EXIT_FAILURE, 0,
+                           "You can't mount into another users home directory.\n"
+                           "  \"%s\" is the home directory of user %s.",
