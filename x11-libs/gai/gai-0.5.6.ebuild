@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gai/gai-0.5.6.ebuild,v 1.2 2006/05/08 10:26:01 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gai/gai-0.5.6.ebuild,v 1.3 2006/12/01 22:53:25 masterdriverz Exp $
 
 IUSE="opengl gnome"
 
@@ -15,7 +15,8 @@ KEYWORDS="x86 ppc"
 
 DEPEND=">=x11-libs/gtk+-2.0.0
 	opengl? ( >=x11-libs/gtkglext-1.0.5 )
-	gnome? ( >=gnome-base/gnome-panel-2.0.0 )"
+	gnome? ( >=gnome-base/gnome-panel-2.0.0 )
+	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 
