@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3-r10.ebuild,v 1.4 2006/10/31 21:28:37 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3-r10.ebuild,v 1.5 2006/12/01 23:06:45 cedk Exp $
 
 inherit eutils flag-o-matic
 
@@ -51,6 +51,11 @@ src_unpack() {
 
 	# bug 125084
 	epatch ${FILESDIR}/${PN}-httppostfix.patch
+
+	# bug #146573
+	if has_version '>=dev-libs/openssl-0.9.8'; then
+		epatch "${FILESDIR}"/${PV}-openssl.patch
+	fi
 }
 
 src_compile() {
