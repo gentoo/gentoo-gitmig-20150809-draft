@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/cmatrix
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cmatrix/ChangeLog,v 1.14 2006/11/25 21:38:02 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cmatrix/ChangeLog,v 1.15 2006/12/01 23:11:41 masterdriverz Exp $
+
+  01 Dec 2006; Charlie Shepherd <masterdriverz@gentoo.org>
+  cmatrix-1.2a.ebuild:
+  Clean up ebuild, add || die and inherit autotools, bug 151291
 
   25 Nov 2006; Charlie Shepherd <masterdriverz@gentoo.org> metadata.xml:
   Mine ... all mine!!
