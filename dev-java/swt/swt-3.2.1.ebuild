@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2.1.ebuild,v 1.3 2006/11/20 01:02:33 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2.1.ebuild,v 1.4 2006/12/01 00:40:33 caster Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -62,24 +62,8 @@ src_unpack() {
 	cp "${FILESDIR}"/build.xml ${S}/build.xml || die "Unable to update build.xml"
 	mkdir ${S}/src && mv ${S}/org ${S}/src || die "Unable to restructure SWT sources"
 
-	# Patch for GCC 4.x warnings
-	epatch "${FILESDIR}"/${PN}-3.2-gcc-4.x-warning-fix.patch
-
-	# https://bugs.eclipse.org/bugs/show_bug.cgi?id=165097
-	epatch "${FILESDIR}"/${PN}-3.2.1-remove-stripping.patch
-
-	# bug #155725
-	if use x86; then
-		epatch "${FILESDIR}"/${PN}-3.2.1-libswt-xpcomgcc4.patch
-
-		epatch "${FILESDIR}"/${PN}-3.2.1-firefox.patch
-	fi
-
-	if [[ ${ARCH} == "amd64" ]] ; then
-		epatch "${FILESDIR}"/${PN}-3.2-cairo-signedness-x86_64.patch
-	else
-		epatch "${FILESDIR}"/${PN}-3.2-cairo-signedness-x86.patch
-	fi
+	# apply all the patches, including arch-specific
+	EPATCH_SOURCE="${FILESDIR}/patches-${PV}" EPATCH_SUFFIX="patch" epatch
 
 	sed -i "s/CFLAGS = -O -Wall/CFLAGS = ${CFLAGS} -Wall/" \
 		make_linux.mak \
