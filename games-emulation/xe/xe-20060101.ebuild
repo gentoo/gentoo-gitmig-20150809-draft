@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xe/xe-20060101.ebuild,v 1.3 2006/03/31 20:34:13 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xe/xe-20060101.ebuild,v 1.4 2006/12/01 21:47:48 wolf31o2 Exp $
 
 inherit games
 
@@ -15,9 +15,8 @@ KEYWORDS="-* ~x86"
 IUSE=""
 RESTRICT="strip"
 
-RDEPEND="|| ( ( x11-libs/libXv
-				x11-libs/libXxf86vm )
-			virtual/x11 )
+RDEPEND="x11-libs/libXv
+	x11-libs/libXxf86vm
 	sys-libs/zlib
 	=x11-libs/gtk+-2*"
 DEPEND="${RDEPEND}
