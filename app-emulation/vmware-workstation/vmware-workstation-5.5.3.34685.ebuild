@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.3.34685.ebuild,v 1.1 2006/11/20 21:38:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.3.34685.ebuild,v 1.2 2006/12/01 17:01:20 wolf31o2 Exp $
 
 inherit vmware eutils
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://vmware/software/wkst/${MY_P}.tar.gz
 
 LICENSE="vmware"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE=""
 # Even with all of the QA_* variables below, we still need this because there is
 # no QA variable for setXid lazy bindings.  Sorry, guys.
