@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-2.1.12.ebuild,v 1.5 2006/11/29 15:47:50 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-2.1.12.ebuild,v 1.6 2006/12/01 10:38:55 araujo Exp $
 
 inherit elisp-common flag-o-matic eutils toolchain-funcs
 
@@ -32,19 +32,14 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf=""
-	if use tk; then
-		myconf="
-		`use_with tcltk tcl=/usr/lib` \
-		`use_with tcltk tk=/usr/lib`"
-	fi
 	replace-flags '-O3' '-O2'
 	./configure --prefix=/usr \
 		`use_with emacs emacs` \
 		`use_with readline readline` \
 		`use_with gmp gmp` \
+		`use_with tk tcl=/usr/lib` \
+		`use_with tk tk=/usr/lib` \
 		`use_enable gtk gtk` \
-		${myconf} \
 		|| die
 	emake || die "emake failed"
 	use emacs && elisp-compile *.el
