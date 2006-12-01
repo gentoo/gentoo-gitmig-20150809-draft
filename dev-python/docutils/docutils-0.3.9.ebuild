@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3.9.ebuild,v 1.10 2006/12/01 00:31:56 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3.9.ebuild,v 1.11 2006/12/01 19:13:03 gustavoz Exp $
 
 inherit distutils eutils elisp-common multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/docutils/${P}.tar.gz
 
 LICENSE="public-domain PYTHON BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm ~hppa ia64 m68k ~mips ppc ~ppc-macos ~ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 m68k ~mips ppc ~ppc-macos ~ppc64 s390 sh sparc x86"
 IUSE="glep emacs"
 DEPEND=">=dev-lang/python-2.3
 	emacs? ( virtual/emacs )"
