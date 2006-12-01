@@ -3,11 +3,11 @@
 <pkgmetadata>
 <herd>java</herd>
 <longdescription lang="en">
-Kaffe is a clean room open source implementation of the Java virtual 
-machine, plus it includes the class libraries from the GNU Classpath project. 
+Kaffe is a clean room open source implementation of the Java virtual
+machine, plus it includes the class libraries from the GNU Classpath project.
 </longdescription>
 <longdescription lang="fi">
-Kaffe on tyhjästä kirjoitettu avoimen lähdekoodin Java virtuaalikone. 
+Kaffe on tyhjästä kirjoitettu avoimen lähdekoodin Java virtuaalikone.
 Kaffe sisältää myös luokkakirjastot GNU Classpath -projektista.
 </longdescription>
 </pkgmetadata>
