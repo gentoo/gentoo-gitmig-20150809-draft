@@ -2,5 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>no-herd</herd>
+	<maintainer>
+	<email>drizzt@gentoo.org</email>
+	</maintainer>
 	<longdescription>UPX is a versatile executable packer with a excellent compression ratio</longdescription>
 </pkgmetadata>
