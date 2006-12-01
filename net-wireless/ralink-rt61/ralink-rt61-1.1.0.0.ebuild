@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ralink-rt61/ralink-rt61-1.1.0.0.ebuild,v 1.1 2006/11/30 21:50:53 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ralink-rt61/ralink-rt61-1.1.0.0.ebuild,v 1.2 2006/12/01 19:06:00 genstef Exp $
 
 inherit eutils linux-mod
 
@@ -16,7 +16,9 @@ KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 SLOT="0"
 
-RDEPEND="net-wireless/wireless-tools"
+DEPEND=""
+RDEPEND="net-wireless/wireless-tools
+	!net-wireless/rt61"
 
 S="${WORKDIR}/${MY_P}"
 
