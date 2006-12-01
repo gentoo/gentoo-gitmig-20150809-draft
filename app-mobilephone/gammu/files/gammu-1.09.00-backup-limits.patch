@@ -1,0 +1,15 @@
+diff -Nru gammu-1.09.00.orig/common/service/backup/backgen.h gammu-1.09.00/common/service/backup/backgen.h
+--- gammu-1.09.00.orig/common/service/backup/backgen.h	2005-11-22 03:39:40.000000000 +0200
++++ gammu-1.09.00/common/service/backup/backgen.h	2006-12-01 08:56:19.271796651 +0200
+@@ -14,9 +14,9 @@
+ #include "../gsmmisc.h"
+ #include "../sms/gsmsms.h"
+ 
+-#define GSM_BACKUP_MAX_PHONEPHONEBOOK 	501
++#define GSM_BACKUP_MAX_PHONEPHONEBOOK 	1001
+ #define GSM_BACKUP_MAX_SIMPHONEBOOK 	251
+-#define GSM_BACKUP_MAX_CALLER	 	6
++#define GSM_BACKUP_MAX_CALLER	 	20
+ #define GSM_BACKUP_MAX_SMSC		10
+ #define GSM_BACKUP_MAX_WAPBOOKMARK	40
+ #define GSM_BACKUP_MAX_WAPSETTINGS	30
