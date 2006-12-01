@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xfreecell/xfreecell-1.0.5b.ebuild,v 1.10 2006/04/23 06:47:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xfreecell/xfreecell-1.0.5b.ebuild,v 1.11 2006/12/01 21:01:47 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -14,9 +14,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ppc64 x86"
 IUSE=""
 
-RDEPEND="|| ( x11-libs/libXext virtual/x11 )"
+RDEPEND="x11-libs/libXext"
 DEPEND="${RDEPEND}
-	|| ( x11-proto/xextproto virtual/x11 )"
+	x11-proto/xextproto"
 
 S=${WORKDIR}/${PN}
 

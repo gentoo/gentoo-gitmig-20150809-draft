@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xfrisk/xfrisk-1.2.ebuild,v 1.7 2006/08/22 08:05:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xfrisk/xfrisk-1.2.ebuild,v 1.8 2006/12/01 21:05:02 wolf31o2 Exp $
 
 inherit games
 
@@ -13,10 +13,10 @@ KEYWORDS="amd64 ppc sparc x86"
 SLOT="0"
 IUSE=""
 
-RDEPEND="|| ( x11-libs/libXmu virtual/x11 )
+RDEPEND="x11-libs/libXmu
 	x11-libs/Xaw3d"
 DEPEND="${RDEPEND}
-	|| ( x11-libs/libXaw virtual/x11 )"
+	x11-libs/libXaw"
 
 S=${WORKDIR}/XFrisk
 
