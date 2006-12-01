@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt61/rt61-1.1.0_beta1.ebuild,v 1.2 2006/07/13 22:04:49 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt61/rt61-1.1.0_beta1.ebuild,v 1.3 2006/12/01 19:05:20 genstef Exp $
 
 inherit linux-mod
 
@@ -14,7 +14,9 @@ SRC_URI="mirror://sourceforge/rt2400/${MY_P}.tar.gz"
 
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="debug"
-RDEPEND="net-wireless/wireless-tools"
+DEPEND=""
+RDEPEND="net-wireless/wireless-tools
+	!net-wireless/ralink-rt61"
 S="${WORKDIR}/${MY_P}"
 MODULE_NAMES="rt61(net:${S}/Module)"
 
