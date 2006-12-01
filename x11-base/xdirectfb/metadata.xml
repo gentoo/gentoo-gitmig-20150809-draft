@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>X11</herd>
+<herd>no-herd</herd>
 <longdescription>XDirectFB is a rootless XServer on top of DirectFB. This is an alternative to XFree86.</longdescription>
 </pkgmetadata>
