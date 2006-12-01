@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5-r5.ebuild,v 1.15 2006/11/26 14:35:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5-r5.ebuild,v 1.16 2006/12/01 19:08:34 flameeyes Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -14,7 +14,7 @@ LICENSE="GPL-2 LGPL-2"
 SLOT="3.5"
 KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="acl alsa arts cups doc jpeg2k kerberos legacyssl utempter openexr spell ssl tiff
-zeroconf kernel_linux fam lua linguas_he"
+zeroconf kernel_linux fam lua linguas_he kdehiddenvisibility"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
 # so we recreate the entire DEPEND from scratch.
@@ -174,7 +174,7 @@ pkg_postinst() {
 		elog "To make zeroconf support available in KDE make sure that the 'mdnsd' daemon"
 		elog "is running. Make sure also that multicast dns lookups are enabled by editing"
 		elog "the 'hosts:' line in /etc/nsswitch.conf to include 'mdns', e.g.:"
-		elog "  hosts: files mdns dns"
+		elog "	hosts: files mdns dns"
 		echo
 	fi
 }

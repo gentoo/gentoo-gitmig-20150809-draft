@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.2-r6.ebuild,v 1.18 2006/11/19 17:55:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.2-r6.ebuild,v 1.19 2006/12/01 19:08:34 flameeyes Exp $
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://kde/stable/${PV}/src/${P}.tar.bz2
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.5"
 KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="acl alsa arts cups doc jpeg2k kerberos legacyssl openexr spell ssl tiff zeroconf"
+IUSE="acl alsa arts cups doc jpeg2k kerberos legacyssl openexr spell ssl tiff zeroconf kdehiddenvisibility"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
 # so we recreate the entire DEPEND from scratch.
@@ -39,7 +39,7 @@ RDEPEND="$(qt_min_version 3.3.3)
 	jpeg2k? ( media-libs/jasper )
 	openexr? ( >=media-libs/openexr-1.2 )
 	spell? ( || (  ( app-text/aspell app-dicts/aspell-en )
-	              app-text/ispell ) )
+				  app-text/ispell ) )
 	zeroconf? (	net-misc/mDNSResponder !kde-misc/kdnssd-avahi )
 	virtual/fam
 	virtual/ghostscript
@@ -94,14 +94,14 @@ src_compile() {
 	# and then fails because of missing required functions
 
 	myconf="--with-distribution=Gentoo
-	        --enable-libfam $(use_enable kernel_linux dnotify)
-	        --with-libart --with-libidn --with-utempter
-	        $(use_with acl) $(use_with ssl)
-	        $(use_with alsa) $(use_with arts)
-	        $(use_with kerberos gssapi) $(use_with tiff)
-	        $(use_with jpeg2k jasper) $(use_with openexr)
-	        $(use_enable cups) $(use_enable zeroconf dnssd)
-	        --without-hspell"
+			--enable-libfam $(use_enable kernel_linux dnotify)
+			--with-libart --with-libidn --with-utempter
+			$(use_with acl) $(use_with ssl)
+			$(use_with alsa) $(use_with arts)
+			$(use_with kerberos gssapi) $(use_with tiff)
+			$(use_with jpeg2k jasper) $(use_with openexr)
+			$(use_enable cups) $(use_enable zeroconf dnssd)
+			--without-hspell"
 
 	if use spell && has_version app-text/aspell; then
 		myconf="${myconf} --with-aspell"

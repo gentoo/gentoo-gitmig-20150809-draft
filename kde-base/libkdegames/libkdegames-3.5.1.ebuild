@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdegames/libkdegames-3.5.1.ebuild,v 1.11 2006/09/03 12:19:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdegames/libkdegames-3.5.1.ebuild,v 1.12 2006/12/01 20:19:20 flameeyes Exp $
 KMNAME=kdegames
 MAXKDEVER=3.5.2
 KM_DEPRANGE="$PV $MAXKDEVER"
@@ -8,7 +8,7 @@ inherit kde-meta
 
 DESCRIPTION="library common to many KDE games"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
-IUSE=""
+IUSE="kdehiddenvisibility"
 DEPEND=""
 
 src_compile() {

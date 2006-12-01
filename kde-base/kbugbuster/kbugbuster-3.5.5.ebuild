@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbugbuster/kbugbuster-3.5.5.ebuild,v 1.6 2006/11/30 09:13:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbugbuster/kbugbuster-3.5.5.ebuild,v 1.7 2006/12/01 18:57:02 flameeyes Exp $
 
 KMNAME=kdesdk
 MAXKDEVER=$PV
@@ -9,7 +9,7 @@ inherit kde-meta eutils
 
 DESCRIPTION="KBugBuster - A tool for checking and reporting KDE apps' bugs"
 KEYWORDS="amd64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="kcal"
+IUSE="kcal kdehiddenvisibility"
 
 
 DEPEND="kcal? ( $(deprange $PV $MAXKDEVER kde-base/libkcal) )"

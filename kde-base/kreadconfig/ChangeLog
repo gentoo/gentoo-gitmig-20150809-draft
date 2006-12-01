@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kreadconfig
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kreadconfig/ChangeLog,v 1.39 2006/11/14 00:26:12 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kreadconfig/ChangeLog,v 1.40 2006/12/01 19:45:38 flameeyes Exp $
+
+  01 Dec 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kreadconfig-3.5.0.ebuild:
+  Make support for hidden visibility explicit.
 
   13 Nov 2006; Danny van Dyk <kugelfang@gentoo.org> ChangeLog:
   Marked stable on amd64 wrt bug #147570.

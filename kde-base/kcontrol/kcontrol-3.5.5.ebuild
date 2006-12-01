@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.5.ebuild,v 1.7 2006/11/30 08:57:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.5.ebuild,v 1.8 2006/12/01 18:59:57 flameeyes Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -12,7 +12,7 @@ SRC_URI="${SRC_URI}
 
 DESCRIPTION="The KDE Control Center"
 KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="ssl arts ieee1394 logitech-mouse opengl"
+IUSE="ssl arts ieee1394 logitech-mouse opengl kdehiddenvisibility"
 
 DEPEND=">=media-libs/freetype-2
 	media-libs/fontconfig

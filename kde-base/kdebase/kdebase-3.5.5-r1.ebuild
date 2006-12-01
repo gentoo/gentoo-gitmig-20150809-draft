@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.5-r1.ebuild,v 1.8 2006/11/23 11:14:25 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.5-r1.ebuild,v 1.9 2006/12/01 19:04:28 flameeyes Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -11,7 +11,7 @@ DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror...
 
 KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ppc ~ppc64 sparc x86"
 IUSE="arts cups java ldap ieee1394 hal lm_sensors logitech-mouse openexr opengl
-pam samba ssl zeroconf xcomposite xscreensaver xinerama"
+pam samba ssl zeroconf xcomposite xscreensaver xinerama	kdehiddenvisibility"
 # hal: enables hal backend for 'media:' ioslave
 
 DEPEND="arts? ( ~kde-base/arts-${PV} )

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/kdeutils-3.5.5.ebuild,v 1.7 2006/11/23 12:29:45 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/kdeutils-3.5.5.ebuild,v 1.8 2006/12/01 19:19:31 flameeyes Exp $
 
 inherit kde-dist eutils
 
@@ -10,7 +10,7 @@ SRC_URI="${SRC_URI}
 DESCRIPTION="KDE utilities."
 
 KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ppc ~ppc64 sparc x86"
-IUSE="crypt snmp pbbuttonsd"
+IUSE="crypt kdehiddenvisibility pbbuttonsd snmp"
 
 BOTH_DEPEND="~kde-base/kdebase-${PV}
 	snmp? ( net-analyzer/net-snmp )

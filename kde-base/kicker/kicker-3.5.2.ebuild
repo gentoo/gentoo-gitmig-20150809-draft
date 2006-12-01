@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/kicker-3.5.2.ebuild,v 1.13 2006/09/03 10:51:39 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/kicker-3.5.2.ebuild,v 1.14 2006/12/01 19:27:55 flameeyes Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -9,7 +9,7 @@ inherit kde-meta eutils
 
 DESCRIPTION="KDE panel housing varous applets"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="xcomposite"
+IUSE="kdehiddenvisibility xcomposite"
 
 RDEPEND="
 $(deprange $PV $MAXKDEVER kde-base/libkonq)

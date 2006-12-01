@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.2.ebuild,v 1.10 2006/09/03 10:53:45 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.2.ebuild,v 1.11 2006/12/01 18:59:57 flameeyes Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -9,7 +9,7 @@ inherit kde-meta eutils
 
 DESCRIPTION="The KDE Control Center"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="ssl arts ieee1394 logitech-mouse opengl"
+IUSE="ssl arts ieee1394 logitech-mouse opengl kdehiddenvisibility"
 
 DEPEND=">=media-libs/freetype-2
 	media-libs/fontconfig
@@ -30,11 +30,11 @@ $(deprange $PV $MAXKDEVER kde-base/libkonq)
 $(deprange $PV $MAXKDEVER kde-base/kicker)"
 
 KMEXTRACTONLY="kwin/kwinbindings.cpp
-	    kicker/kicker/core/kickerbindings.cpp
+		kicker/kicker/core/kickerbindings.cpp
 		kicker/taskbar/taskbarbindings.cpp
-	    kdesktop/kdesktopbindings.cpp
-	    klipper/klipperbindings.cpp
-	    kxkb/kxkbbindings.cpp
+		kdesktop/kdesktopbindings.cpp
+		klipper/klipperbindings.cpp
+		kxkb/kxkbbindings.cpp
 		kicker/taskmanager"
 
 KMEXTRA="doc/kinfocenter"
@@ -47,7 +47,7 @@ KMCOPYLIB="libkonq libkonq
 
 src_compile() {
 	myconf="$myconf `use_with ssl` `use_with arts` `use_with opengl gl`
-	        `use_with ieee1394 libraw1394` `use_with logitech-mouse libusb`
+			`use_with ieee1394 libraw1394` `use_with logitech-mouse libusb`
 			--with-usbids=/usr/share/misc/usb.ids"
 	kde-meta_src_compile
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/kicker-3.5.5.ebuild,v 1.6 2006/11/26 19:41:33 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/kicker-3.5.5.ebuild,v 1.7 2006/12/01 19:27:55 flameeyes Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -12,7 +12,7 @@ SRC_URI="${SRC_URI}
 
 DESCRIPTION="Kicker is the KDE application starter panel and is also capable of some useful applets and extensions."
 KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="xcomposite"
+IUSE="kdehiddenvisibility xcomposite"
 
 RDEPEND="
 $(deprange $PV $MAXKDEVER kde-base/libkonq)
