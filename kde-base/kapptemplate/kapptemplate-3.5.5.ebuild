@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/kapptemplate-3.5.5.ebuild,v 1.7 2006/11/25 14:26:03 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/kapptemplate-3.5.5.ebuild,v 1.8 2006/12/01 18:29:47 flameeyes Exp $
+
+ARTS_REQUIRED="no"
+RESTRICT="binchecks strip"
 
 KMNAME=kdesdk
 MAXKDEVER=3.5.5
