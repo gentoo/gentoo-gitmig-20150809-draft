@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.4_beta1-r3.ebuild,v 1.3 2006/10/31 21:28:37 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.4_beta1-r3.ebuild,v 1.4 2006/12/01 23:16:06 cedk Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="A collection of tools for network auditing and penetration testing"
 HOMEPAGE="http://monkey.org/~dugsong/dsniff/"
@@ -46,7 +46,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/2.3-makefile.patch
 
 	# Bug 125084
-	epatch ${FILESDIR}/${PN}-httppostfix.patch
+	epatch "${FILESDIR}"/${PN}-httppostfix.patch
 
 	# Allow amd64 compilation
 	append-ldflags -lresolv
@@ -59,13 +59,13 @@ src_compile() {
 	econf \
 	    $(use_with X x) \
 	    || die "econf failed"
-	emake || die "emake failed"
+	emake CC="$(tc-getCC)" || die "emake failed"
 }
 
 src_install() {
-	make install install_prefix="${D}" || die
+	make install install_prefix="${D}" || die "make install failed"
 	dodir /etc/dsniff
 	cp "${D}"/usr/share/dsniff/{dnsspoof.hosts,dsniff.{magic,services}} \
-	"${D}"/etc/dsniff/
+		"${D}"/etc/dsniff/
 	dodoc CHANGES README TODO
 }
