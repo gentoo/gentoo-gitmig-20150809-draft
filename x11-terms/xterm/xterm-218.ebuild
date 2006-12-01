@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-218.ebuild,v 1.11 2006/10/09 18:26:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-218.ebuild,v 1.12 2006/12/01 14:34:39 beandog Exp $
 
 inherit flag-o-matic
 
@@ -79,7 +79,8 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	dodoc README{,.i18n} ctlseqs.txt xterm.log.html
+	dodoc README{,.i18n} ctlseqs.txt
+	dohtml xterm.log.html
 
 	# Fix permissions -- it grabs them from live system, and they can
 	# be suid or sgid like they were in pre-unix98 pty or pre-utempter days,
