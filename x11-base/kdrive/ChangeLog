@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/kdrive
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/ChangeLog,v 1.41 2006/07/07 02:33:31 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/ChangeLog,v 1.42 2006/12/01 19:19:47 dberkholz Exp $
+
+  01 Dec 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Typo in herd.
 
   07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
   Update to my new email address.
