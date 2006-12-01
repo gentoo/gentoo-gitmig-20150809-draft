@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-bg
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-bg/ChangeLog,v 1.1 2005/05/19 21:11:48 arj Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-bg/ChangeLog,v 1.2 2006/12/01 01:25:35 kevquinn Exp $
+
+  01 Dec 2006; Kevin F. Quinn <kevquinn@gentoo.org> aspell-bg-0.50.0.ebuild:
+  Ebuild cleanups for bug #132718
 
 *aspell-bg-0.50.0 (19 Mar 2005)
 

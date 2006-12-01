@@ -1,9 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-no/aspell-no-0.50.2.ebuild,v 1.5 2005/01/01 12:44:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-no/aspell-no-0.50.2.ebuild,v 1.6 2006/12/01 01:40:58 kevquinn Exp $
 
 ASPELL_LANG="Norwegian"
 
 inherit aspell-dict
 
 LICENSE="GPL-2"
+
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
+

@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-et
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-et/ChangeLog,v 1.1 2006/01/07 02:22:54 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-et/ChangeLog,v 1.2 2006/12/01 01:33:14 kevquinn Exp $
+
+  01 Dec 2006; Kevin F. Quinn <kevquinn@gentoo.org>
+  aspell-et-0.1.21.1.ebuild:
+  Ebuild cleanups for bug #132718
 
 *aspell-et-0.1.21.1 (06 Jan 2006)
 

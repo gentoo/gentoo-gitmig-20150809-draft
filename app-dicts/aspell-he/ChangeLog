@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-he
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-he/ChangeLog,v 1.8 2005/02/20 10:23:13 arj Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-he/ChangeLog,v 1.9 2006/12/01 01:37:23 kevquinn Exp $
+
+  01 Dec 2006; Kevin F. Quinn <kevquinn@gentoo.org> aspell-he-0.8.0.ebuild,
+  aspell-he-0.9.0.ebuild:
+  Ebuild cleanups for bug #132718
 
   20 Feb 2005; Anders Rune Jensen <arj@gentoo.org> aspell-he-0.9.0.ebuild.
   aspell-he-0.8.0.ebuild:
