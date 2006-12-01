@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xmille/xmille-2.0-r1.ebuild,v 1.10 2006/04/23 07:03:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xmille/xmille-2.0-r1.ebuild,v 1.11 2006/12/01 21:13:02 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -15,11 +15,10 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
-RDEPEND="|| ( x11-libs/libXext virtual/x11 )"
+RDEPEND="x11-libs/libXext"
 DEPEND="${RDEPEND}
-	|| ( ( app-text/rman
-			x11-misc/imake )
-		virtual/x11 )"
+	app-text/rman
+	x11-misc/imake"
 
 S=${WORKDIR}/${P}.orig
 
