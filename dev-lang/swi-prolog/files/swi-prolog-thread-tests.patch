@@ -4,7 +4,7 @@
  	    client/1			% +Address
  	  ]).
  
-+:- (   current_prolog_flag(system_thread_id, _)
++:- (   current_prolog_flag(threads, true)
 +   ->  true
 +   ;   format('Disabling tcp_test on single-threaded engine~n~n', []),
 +       halt
@@ -20,7 +20,7 @@
  	    test/2
  	  ]).
 +
-+:- (   current_prolog_flag(system_thread_id, _)
++:- (   current_prolog_flag(threads, true)
 +   ->  true
 +   ;   format('Disabling literal map test on single-threaded engine~n~n', []),
 +       halt
@@ -35,7 +35,7 @@
      Copyright (C) 1996 University of Amsterdam. All rights reserved.
  */
  
-+:- (   current_prolog_flag(system_thread_id, _)
++:- (   current_prolog_flag(threads, true)
 +   ->  true
 +   ;   format('Disabling RDF_DB test suite on single-threaded engine~n~n', []),
 +       halt
@@ -50,7 +50,7 @@
      the GNU General Public License.
  */
  
-+:- (   current_prolog_flag(system_thread_id, _)
++:- (   current_prolog_flag(threads, true)
 +   ->  true
 +   ;   format('Disabling SSL test on single-threaded engine~n~n', []),
 +       halt
