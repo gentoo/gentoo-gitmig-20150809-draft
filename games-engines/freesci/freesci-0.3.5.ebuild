@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/freesci/freesci-0.3.5.ebuild,v 1.1 2006/02/24 01:37:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/freesci/freesci-0.3.5.ebuild,v 1.2 2006/12/01 22:21:25 wolf31o2 Exp $
 
 inherit flag-o-matic games
 
@@ -16,11 +16,9 @@ IUSE="X ggi directfb alsa sdl ncurses"
 
 RDEPEND="
 	X? (
-		|| ( ( x11-libs/libXi
-				x11-libs/libXrender )
-			virtual/x11 )
-		=media-libs/freetype-2*
-	)
+		x11-libs/libXi
+		x11-libs/libXrender
+		=media-libs/freetype-2* )
 	ggi? ( media-libs/libggi )
 	directfb? ( dev-libs/DirectFB )
 	alsa? ( >=media-libs/alsa-lib-0.5.0 )
@@ -28,10 +26,8 @@ RDEPEND="
 	ncurses? ( sys-libs/ncurses )"
 DEPEND="${RDEPEND}
 	X? (
-		|| ( ( x11-libs/libXft
-				x11-libs/libXt )
-			virtual/x11 )
-	)"
+		x11-libs/libXft
+		x11-libs/libXt )"
 
 src_compile() {
 	use X && append-flags -I/usr/include/freetype2
