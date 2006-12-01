@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.4.ebuild,v 1.6 2006/10/18 13:34:40 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.4.ebuild,v 1.7 2006/12/01 00:31:56 genone Exp $
 
-inherit distutils eutils elisp-common
+inherit distutils eutils elisp-common multilib
 
 DESCRIPTION="Set of python tools for processing plaintext docs into HTML, XML, etc."
 HOMEPAGE="http://docutils.sourceforge.net/"
@@ -94,11 +94,11 @@ src_install() {
 	then
 		distutils_python_version
 		dobin ${GLEP_SRC}/glep.py || die "newbin failed"
-		insinto /usr/lib/python${PYVER}/site-packages/docutils/readers
+		insinto /usr/$(get_libdir)/python${PYVER}/site-packages/docutils/readers
 		newins ${GLEP_SRC}/glepread.py glep.py || die "newins reader failed"
-		insinto /usr/lib/python${PYVER}/site-packages/docutils/transforms
+		insinto /usr/$(get_libdir)/python${PYVER}/site-packages/docutils/transforms
 		newins ${GLEP_SRC}/glepstrans.py gleps.py || "newins transform failed"
-		insinto /usr/lib/python${PYVER}/site-packages/docutils/writers
+		insinto /usr/$(get_libdir)/python${PYVER}/site-packages/docutils/writers
 		doins -r ${GLEP_SRC}/glep_html || die "doins writer failed"
 	fi
 
