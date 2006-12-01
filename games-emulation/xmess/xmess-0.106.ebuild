@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.106.ebuild,v 1.4 2006/06/08 00:06:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.106.ebuild,v 1.5 2006/12/01 22:04:28 wolf31o2 Exp $
 
 inherit flag-o-matic toolchain-funcs eutils games
 
@@ -18,12 +18,9 @@ IUSE="alsa arts dga esd expat ggi joystick lirc mmx net opengl sdl svga X xinera
 RDEPEND="sys-libs/zlib
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
-	dga? ( || ( ( x11-libs/libXxf86dga
-				x11-libs/libXxf86vm
-			)
-			virtual/x11
-		)
-	)
+	dga? (
+		x11-libs/libXxf86dga
+		x11-libs/libXxf86vm )
 	esd? ( >=media-sound/esound-0.2.29 )
 	expat? ( dev-libs/expat )
 	ggi? ( media-libs/libggi )
@@ -33,18 +30,15 @@ RDEPEND="sys-libs/zlib
 		virtual/glu )
 	sdl? ( >=media-libs/libsdl-1.2.0 )
 	svga? ( media-libs/svgalib )
-	xinerama? ( || ( x11-libs/libXinerama virtual/x11 ) )
-	xv? ( || ( x11-libs/libXv virtual/x11 ) )
-	X? ( || ( x11-libs/libXext virtual/x11 ) )"
+	xinerama? ( x11-libs/libXinerama )
+	xv? ( x11-libs/libXv )
+	X? ( x11-libs/libXext )"
 DEPEND="${RDEPEND}
-	dga? ( || ( ( x11-proto/xf86dgaproto
-				x11-proto/xf86vidmodeproto
-			)
-			virtual/x11
-		)
-	)
-	xinerama? ( || ( x11-proto/xineramaproto virtual/x11 ) )
-	xv? ( || ( x11-proto/videoproto virtual/x11 ) )
+	dga? (
+		x11-proto/xf86dgaproto
+		x11-proto/xf86vidmodeproto )
+	xinerama? ( x11-proto/xineramaproto )
+	xv? ( x11-proto/videoproto )
 	x86? ( dev-lang/nasm )"
 # Icc sucks. bug #41342
 #	icc? ( dev-lang/icc )
