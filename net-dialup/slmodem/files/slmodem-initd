@@ -2,8 +2,7 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
 
-if [ "${MODULE}" = "alsa" ];
-then
+if [ "${MODULE}" = "alsa" ]; then
 	needalsasound="alsasound"
 fi
 depend() {
@@ -22,7 +21,7 @@ function loadsalsa {
 	ebegin "Starting slmodemd for ${DEV}"
 	start-stop-daemon --start --background --nicelevel=${NICE} --make-pidfile \
 		--pidfile /var/run/slmodemd.pid --startas /usr/sbin/slmodemd \
-		-- -country=${COUNTRY} -g=${GROUP} --alsa ${HW_SLOT}
+		-- -country=${COUNTRY} -g=${GROUP} ${SLMODEM_OPTS} --alsa ${HW_SLOT}
 	return ${?}
 }
 
@@ -49,7 +48,7 @@ function loadsmodule {
 	ebegin "Starting slmodemd for ${DEV}"
 	start-stop-daemon --start --background --nicelevel=${NICE} --make-pidfile \
 		--pidfile /var/run/slmodemd.pid --startas /usr/sbin/slmodemd \
-		-- -country=${COUNTRY} -g=${GROUP} ${MDEV}
+		-- -country=${COUNTRY} -g=${GROUP} ${SLMODEM_OPTS} ${MDEV}
 	return ${?}
 }
 

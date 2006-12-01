@@ -30,3 +30,8 @@ NICE=-6
 # MODULE=slamr
 # or
 # MODULE=slusb
+
+# Include extra slmodemd options here:
+# -r   = enables ring detection (needed for Hylafax faxgetty to answer)
+# -l 5 = Logging Level
+SLMODEM_OPTS=""
