@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6376 2006/11/30 13:24:49 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6377 2006/12/01 02:36:11 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -145,6 +145,7 @@ net-proxy/dansguardian-dgav
 # Diego Pettenò <flameeyes@gentoo.org>
 # Masking pre-releases before final release
 =media-video/vlc-0.8.6_beta*
+=media-video/vlc-0.8.6_rc*
 
 # Saleem Abdulrasool <compnerd@gentoo.org> (16 Nov 2006)
 # GNOME 1.x Removal Mask (15 Dec 2006)
