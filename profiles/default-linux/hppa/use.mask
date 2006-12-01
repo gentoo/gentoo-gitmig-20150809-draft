@@ -1,3 +1,7 @@
+# 2006/12/01 Gustavo Zacarias <gustavoz@gentoo.org>
+# glitz basically unusable since we lack hardware GL see #155544
+glitz
+
 # 2006/08/18 Saleem Abdulrasool <compnerd@gentoo.org>
 # dvdr hardware not available - masking with permission from GMsoft
 dvdr
