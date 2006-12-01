@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2-r2.ebuild,v 1.22 2006/10/30 11:39:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2-r2.ebuild,v 1.23 2006/12/01 01:21:14 flameeyes Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
@@ -88,6 +88,7 @@ DEPEND="${RDEPEND}
 		)
 	v4l? ( virtual/os-headers )
 	dev-util/pkgconfig
+	sys-devel/libtool
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
@@ -96,7 +97,7 @@ src_unpack() {
 
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 
-	WANT_AUTOMAKE="1.9" AT_M4DIR="m4" eautoreconf
+	AT_M4DIR="m4" eautoreconf
 }
 
 # check for the X11 path for a given library
