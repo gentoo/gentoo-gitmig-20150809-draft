@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.43.ebuild,v 1.4 2006/07/07 01:18:52 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.43.ebuild,v 1.5 2006/12/01 19:04:21 genstef Exp $
 
 inherit linux-mod rpm eutils
 
@@ -114,6 +114,7 @@ src_unpack() {
 		sed -i "s:\$(PWD)/../lib/driver-lib.o:${S}/e2220pc/lib/driver-lib.o:" ${i}
 		convert_to_m ${i}
 	done
+	find -name \*.[hc] -print0 | xargs -0 sed -i 's:#include <linux/config\.h>:#include <linux/autoconf.h>:'
 }
 
 src_install() {
