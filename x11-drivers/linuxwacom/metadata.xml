@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>X11-drivers</herd>
+<herd>x11-drivers</herd>
 <longdescription>linuxwacom is an open-source XFree86 input driver for Wacom tablets.</longdescription>
 </pkgmetadata>
