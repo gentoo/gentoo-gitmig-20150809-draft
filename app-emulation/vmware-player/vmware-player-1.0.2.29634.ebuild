@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-1.0.2.29634.ebuild,v 1.3 2006/10/03 13:22:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-1.0.2.29634.ebuild,v 1.4 2006/12/01 19:00:09 wolf31o2 Exp $
 
 inherit eutils vmware
 
@@ -21,7 +21,7 @@ SRC_URI="http://download3.vmware.com/software/vmplayer/${MY_P}.tar.gz
 LICENSE="vmware"
 IUSE=""
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 # Even with all of the QA_* variables below, we still need this because there is
 # no QA variable for setXid lazy bindings.  Sorry, guys.
 RESTRICT="stricter strip"
