@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/linpopup/linpopup-2.0.4-r1.ebuild,v 1.1 2005/01/01 22:14:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/linpopup/linpopup-2.0.4-r1.ebuild,v 1.2 2006/12/01 23:47:43 masterdriverz Exp $
 
 inherit gnome2 eutils
 
@@ -17,7 +17,8 @@ RDEPEND=">=x11-libs/gtk+-2
 	>=dev-libs/glib-2
 	>=net-fs/samba-2.2.8a"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	x11-libs/libXmu"
 
 DOCS="AUTHORS BUGS ChangeLog INSTALL MANUAL NEWS README THANKS TODO"
 
