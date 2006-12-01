@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.2.ebuild,v 1.22 2006/11/12 03:44:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.2.ebuild,v 1.23 2006/12/01 17:21:29 mabi Exp $
 
-inherit eutils
+inherit eutils portability
 
 DESCRIPTION="A powerful light-weight programming language designed for extending applications"
 HOMEPAGE="http://www.lua.org/"
@@ -28,7 +28,7 @@ src_unpack() {
 	if ! use ppc-macos; then
 		sed -i config \
 			-e 's:^#\(LOADLIB= -DUSE_DLOPEN=1\):\1:' \
-			-e 's:^#\(DLLIB= -ldl\):\1:' \
+			-e "s:^#\(DLLIB=\) -ldl:\1 $(dlopen_lib):" \
 			-e 's:^#\(MYLDFLAGS= -Wl,-E\):\1:' \
 			-e "s:^#\(LDFLAGS=\).*:\1 ${LDFLAGS}:" \
 			-e 's:^#\(POPEN= -DUSE_POPEN=1\)$:\1:' \

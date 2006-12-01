@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.1.1.ebuild,v 1.5 2006/11/27 23:02:36 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.1.1.ebuild,v 1.6 2006/12/01 17:21:29 mabi Exp $
 
 inherit eutils portability
 
@@ -46,7 +46,7 @@ src_compile() {
 		mycflags="${mycflags} -DLUA_USE_MACOSX"
 	else # building for standard linux (and bsd too)
 		mycflags="${mycflags} -DLUA_USE_LINUX"
-		liblibs="${liblibs} -ldl"
+		liblibs="${liblibs} $(dlopen_lib)"
 	fi
 
 	# what to link to the executables

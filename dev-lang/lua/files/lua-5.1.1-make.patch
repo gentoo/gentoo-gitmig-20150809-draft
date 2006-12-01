@@ -30,14 +30,14 @@
 +	cd src; $(MAKE) $@
 +
 +gentoo_test: gentoo_linux
-+	src/lua-$(V) test/hello.lua
++	test/lua.static test/hello.lua
 +
 +gentoo_install:
 +	mkdir -p $(INSTALL_BIN) $(INSTALL_INC) $(INSTALL_LIB) $(INSTALL_MAN)
 +	cd src; $(LIBTOOL) --mode=install $(INSTALL_EXEC) lua luac $(INSTALL_BIN)
 +	cd src; $(INSTALL_DATA) $(TO_INC) $(INSTALL_INC)
-+	cd src; $(LIBTOOL) --mode=install $(INSTALL_DATA) liblua.la $(INSTALL_LIB)
-+	cd src; $(LIBTOOL) --mode=install $(INSTALL_DATA) liblua.a $(INSTALL_LIB)
++	cd src; $(LIBTOOL) --mode=install $(INSTALL_DATA) liblualib.la $(INSTALL_LIB)
++	cd src; $(LIBTOOL) --mode=install $(INSTALL_DATA) liblualib.a $(INSTALL_LIB)
 --- /home/mabi/gentoo/lua-5.1.1.orig/src/Makefile	2006-03-22 01:41:49.000000000 +0100
 +++ ./src/Makefile	2006-11-16 02:10:27.000000000 +0100
 @@ -176,3 +176,36 @@
@@ -51,7 +51,7 @@
 +# The following rules use libtool for compiling and linking in order to
 +# provide shared library support.
 +
-+LIB_NAME = liblua.la
++LIB_NAME = liblualib.la
 +LIB_OBJS = $(CORE_O:.o=.lo) $(LIB_O:.o=.lo)
 +
 +%.lo %.o: %.c
@@ -65,7 +65,7 @@
 +	$(LIBTOOL) --mode=link $(CC) -static -o $(LIB_NAME:.la=.a) $(LIB_OBJS)
 +
 +lua: $(LUA_O) $(LIB_NAME)
-+	$(LIBTOOL) --mode=link $(CC) -Wl,-E -o $@ $(LUA_O) $(LUA_LIBS) -llua
++	$(LIBTOOL) --mode=link $(CC) -Wl,-E -o $@ $(LUA_O) $(LUA_LIBS) -llualib
 +
 +lua_test: $(LUA_O) $(LIB_NAME)
 +	$(LIBTOOL) --mode=link $(CC) -static -Wl,-E -o $@ $(LUA_O) $(LIB_NAME) $(LUA_LIBS)
