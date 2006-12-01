@@ -1,6 +1,10 @@
 # ChangeLog for app-office/koffice-data
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-data/ChangeLog,v 1.55 2006/10/24 15:19:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-data/ChangeLog,v 1.56 2006/12/01 01:46:36 flameeyes Exp $
+
+  01 Dec 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -koffice-data-1.4.2.ebuild, -koffice-data-1.5.1.ebuild:
+  Remove old versions.
 
   24 Oct 2006; Simon Stelling <blubb@gentoo.org> koffice-data-1.5.2.ebuild:
   stable on amd64
