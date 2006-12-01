@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ruby-mode-1.8.4.ebuild,v 1.2 2006/07/07 02:43:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ruby-mode-1.8.4.ebuild,v 1.3 2006/12/01 16:20:56 corsair Exp $
 
 inherit elisp
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://ruby/ruby-${PV}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc-macos ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc-macos ~ppc64 ~x86 ~x86-fbsd"
 DEPEND="virtual/emacs"
 
 SITEFILE=50ruby-mode-gentoo.el
