@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.3_pre20061129.ebuild,v 1.3 2006/12/01 02:27:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.3_pre20061129.ebuild,v 1.4 2006/12/01 03:10:24 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -49,7 +49,7 @@ RDEPEND="
 	sdl? ( >=media-libs/libsdl-1.1.5 )
 	dxr3? ( >=media-libs/libfame-0.9.0 )
 	vorbis? ( media-libs/libogg media-libs/libvorbis )
-	theora? ( media-libs/libogg media-libs/libvorbis media-libs/libtheora )
+	theora? ( media-libs/libogg media-libs/libvorbis >=media-libs/libtheora-1.0_alpha6 )
 	speex? ( media-libs/libogg media-libs/libvorbis media-libs/speex )
 	libcaca? ( >=media-libs/libcaca-0.99_beta1 )
 	samba? ( net-fs/samba )
