@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-1.10.8.20041007.ebuild,v 1.6 2005/08/28 21:20:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-1.10.8.20041007.ebuild,v 1.7 2006/12/01 20:08:50 wolf31o2 Exp $
 
 GAMES_USE_SDL="nojoystick"
 inherit flag-o-matic games
@@ -16,8 +16,6 @@ IUSE="dedicated"
 
 RDEPEND="virtual/libc
 	!dedicated? ( virtual/opengl )"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}

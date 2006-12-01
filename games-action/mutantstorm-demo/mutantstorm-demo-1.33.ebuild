@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/mutantstorm-demo/mutantstorm-demo-1.33.ebuild,v 1.9 2006/09/02 10:05:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/mutantstorm-demo/mutantstorm-demo-1.33.ebuild,v 1.10 2006/12/01 20:19:01 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -21,14 +21,12 @@ RDEPEND="virtual/opengl
 		app-emulation/emul-linux-x86-compat
 		app-emulation/emul-linux-x86-sdl )
 	x86? (
-		|| (
-			(
-				x11-libs/libX11
-				x11-libs/libXext )
-			virtual/x11 ) )"
+		x11-libs/libX11
+		x11-libs/libXext )"
+
+S=${WORKDIR}
 
 GAMES_CHECK_LICENSE="yes"
-S=${WORKDIR}
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
 

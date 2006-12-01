@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot-ng/xpilot-ng-4.6.6.ebuild,v 1.3 2006/01/25 03:00:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot-ng/xpilot-ng-4.6.6.ebuild,v 1.4 2006/12/01 20:01:36 wolf31o2 Exp $
 
 inherit games
 
@@ -13,12 +13,9 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="openal sdl"
 
-RDEPEND="|| (
-	(
-		x11-libs/libX11
-		x11-libs/libICE
-		x11-libs/libSM )
-	virtual/x11 )
+RDEPEND="x11-libs/libX11
+	x11-libs/libICE
+	x11-libs/libSM 
 	>=dev-libs/expat-1.1
 	>=sys-libs/zlib-1.1.3
 	openal? ( media-libs/openal )
@@ -28,12 +25,9 @@ RDEPEND="|| (
 		>=media-libs/sdl-image-1.0
 		>=media-libs/sdl-ttf-2.0 )"
 DEPEND="${RDEPEND}
-	|| (
-		(
-			x11-proto/xextproto
-			x11-proto/xproto
-			x11-libs/libXt )
-		virtual/x11 )"
+	x11-proto/xextproto
+	x11-proto/xproto
+	x11-libs/libXt"
 
 src_compile() {
 	egamesconf \

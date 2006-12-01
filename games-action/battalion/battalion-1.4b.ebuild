@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/battalion/battalion-1.4b.ebuild,v 1.10 2006/01/28 21:19:10 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/battalion/battalion-1.4b.ebuild,v 1.11 2006/12/01 19:58:01 wolf31o2 Exp $
 
 inherit games
 
@@ -13,11 +13,8 @@ SLOT="0"
 KEYWORDS="ppc x86"
 IUSE=""
 
-RDEPEND="|| ( x11-libs/libXext virtual/x11 )
+RDEPEND="x11-libs/libXext
 	virtual/opengl"
-
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 S="${WORKDIR}/${PN}${PV}"
 dir="${GAMES_DATADIR}/${PN}"

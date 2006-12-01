@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/abuse_sdl/abuse_sdl-0.7.0-r2.ebuild,v 1.10 2006/04/18 12:14:14 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/abuse_sdl/abuse_sdl-0.7.0-r2.ebuild,v 1.11 2006/12/01 20:06:10 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -16,9 +16,8 @@ IUSE=""
 
 RDEPEND=">=media-libs/libsdl-1.1.6"
 DEPEND="${RDEPEND}
-	|| ( x11-libs/libXt virtual/x11 )
-	virtual/opengl
-	>=sys-apps/sed-4"
+	x11-libs/libXt
+	virtual/opengl"
 
 DATA="${WORKDIR}/datafiles"
 

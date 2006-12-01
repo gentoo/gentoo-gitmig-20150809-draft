@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-2.0.8.ebuild,v 1.2 2006/10/30 09:38:45 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-2.0.8.ebuild,v 1.3 2006/12/01 20:08:50 wolf31o2 Exp $
 
 inherit eutils flag-o-matic games
 
@@ -17,19 +17,16 @@ UIDEPEND="virtual/opengl
 	virtual/glu
 	media-libs/libsdl
 	media-libs/sdl-image
-	|| (
-		(
-			x11-libs/libICE
-			x11-libs/libSM
-			x11-libs/libX11
-			x11-libs/libXau
-			x11-libs/libXdmcp
-			x11-libs/libXext
-			x11-libs/libXi
-			x11-libs/libXmu
-			x11-libs/libXt
-			x11-libs/libXxf86vm )
-		virtual/x11 )"
+	x11-libs/libICE
+	x11-libs/libSM
+	x11-libs/libX11
+	x11-libs/libXau
+	x11-libs/libXdmcp
+	x11-libs/libXext
+	x11-libs/libXi
+	x11-libs/libXmu
+	x11-libs/libXt
+	x11-libs/libXxf86vm"
 
 DEPEND=">=net-misc/curl-7.15.0
 	sys-libs/ncurses

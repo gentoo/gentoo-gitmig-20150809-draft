@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-1.34.0.ebuild,v 1.15 2006/01/28 21:19:10 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-1.34.0.ebuild,v 1.16 2006/12/01 20:14:29 wolf31o2 Exp $
 
 inherit toolchain-funcs eutils games
 
@@ -18,10 +18,10 @@ SLOT="0"
 KEYWORDS="ppc x86"
 IUSE=""
 
-RDEPEND="|| ( x11-libs/libXpm virtual/x11 )
+RDEPEND="x11-libs/libXpm
 	>=media-sound/esound-0.2.23"
 DEPEND="${RDEPEND}
-	|| ( x11-proto/xextproto virtual/x11 )"
+	x11-proto/xextproto"
 
 S=${WORKDIR}/${MY_P}
 

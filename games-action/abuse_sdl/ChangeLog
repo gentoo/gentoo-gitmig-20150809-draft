@@ -1,6 +1,10 @@
 # ChangeLog for games-action/abuse_sdl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/abuse_sdl/ChangeLog,v 1.10 2006/04/18 12:14:12 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/abuse_sdl/ChangeLog,v 1.11 2006/12/01 20:06:10 wolf31o2 Exp $
+
+  01 Dec 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  abuse_sdl-0.7.0-r2.ebuild:
+  Removing old virtual/x11 dependency.
 
   18 Apr 2006; Jason Wever <weeve@gentoo.org> abuse_sdl-0.7.0-r2.ebuild:
   Stable on SPARC.

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bomberclone/bomberclone-0.11.7.ebuild,v 1.1 2006/08/25 20:09:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bomberclone/bomberclone-0.11.7.ebuild,v 1.2 2006/12/01 20:04:00 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -16,7 +16,7 @@ IUSE="X"
 DEPEND=">=media-libs/libsdl-1.1.0
 	media-libs/sdl-image
 	media-libs/sdl-mixer
-	X? ( || ( x11-libs/libXt virtual/x11 ) )"
+	X? ( x11-libs/libXt )"
 
 src_unpack() {
 	unpack ${A}
