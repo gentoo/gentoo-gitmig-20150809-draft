@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/stepmania-3.9.ebuild,v 1.5 2006/11/17 06:06:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/stepmania-3.9.ebuild,v 1.6 2006/12/01 22:19:28 wolf31o2 Exp $
 
 inherit eutils autotools games
 
@@ -28,6 +28,11 @@ DEPEND="gtk? ( >=x11-libs/gtk+-2.0 )
 	mpeg? ( media-video/ffmpeg )
 	vorbis? ( media-libs/libvorbis )
 	virtual/opengl"
+
+pkg_setup() {
+	built_with_use media-libs/libsdl opengl || \
+		die "You need to compile meida-libs/libsdl with USE=opengl."
+}
 
 src_unpack() {
 	unpack ${A}
