@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/audacious-themes
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/audacious-themes/ChangeLog,v 1.6 2006/11/30 13:11:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/audacious-themes/ChangeLog,v 1.7 2006/12/01 12:40:44 mcummings Exp $
+
+  01 Dec 2006; Michael Cummings <mcummings@gentoo.org>
+  audacious-themes-0.0.3.ebuild:
+  amd64 stable, bug 156663
 
   30 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   audacious-themes-0.0.3.ebuild:
