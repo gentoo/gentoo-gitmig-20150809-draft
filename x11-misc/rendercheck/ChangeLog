@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/rendercheck
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rendercheck/ChangeLog,v 1.4 2005/06/20 00:39:02 wormo Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rendercheck/ChangeLog,v 1.5 2006/12/01 23:35:02 joshuabaergen Exp $
+
+*rendercheck-1.2 (01 Dec 2006)
+
+  01 Dec 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +rendercheck-1.2.ebuild:
+  Version bump.  Includes a new test, better test control, and better reporting.
 
   20 Jun 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   rendercheck-1.0.3.ebuild:
