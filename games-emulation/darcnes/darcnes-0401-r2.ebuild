@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/darcnes/darcnes-0401-r2.ebuild,v 1.10 2006/02/10 19:43:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/darcnes/darcnes-0401-r2.ebuild,v 1.11 2006/12/01 21:22:33 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -14,16 +14,12 @@ KEYWORDS="-ppc x86"
 IUSE="gtk svga X"
 
 RDEPEND="svga? ( >=media-libs/svgalib-1.4.2 )
-		!svga? ( !gtk? ( || ( x11-libs/libXaw
-							  virtual/x11 ) ) )
-		X? ( || ( x11-libs/libXaw
-				  virtual/x11 ) )
+		!svga? ( !gtk? ( x11-libs/libXaw ) )
+		X? ( x11-libs/libXaw )
 		gtk? ( =x11-libs/gtk+-1.2* )"
 DEPEND="${RDEPEND}
-	!svga? ( || ( x11-proto/xextproto
-				  virtual/x11 ) )
-	X? ( || ( x11-proto/xextproto
-			  virtual/x11 ) )"
+	!svga? ( x11-proto/xextproto )
+	X? ( x11-proto/xextproto )"
 
 S=${WORKDIR}/${PN}
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mekanix/mekanix-070.ebuild,v 1.4 2006/09/19 19:05:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mekanix/mekanix-070.ebuild,v 1.5 2006/12/01 21:30:35 wolf31o2 Exp $
 
 inherit games
 
@@ -15,9 +15,7 @@ RESTRICT="strip"
 IUSE=""
 
 RDEPEND="media-libs/libpng
-	|| (
-		x11-libs/libXpm
-		virtual/x11 )"
+	x11-libs/libXpm"
 
 S=${WORKDIR}/${PN}
 
