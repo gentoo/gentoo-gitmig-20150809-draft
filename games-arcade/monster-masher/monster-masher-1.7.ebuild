@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monster-masher/monster-masher-1.7.ebuild,v 1.5 2006/01/29 00:00:27 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monster-masher/monster-masher-1.7.ebuild,v 1.6 2006/12/01 20:28:59 wolf31o2 Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~ppc x86"
 IUSE=""
 
-DEPEND="|| ( x11-libs/libSM virtual/x11 )
+DEPEND="x11-libs/libSM
 	=dev-cpp/gtkmm-2.4*
 	=dev-cpp/libgnomemm-2.6*
 	=dev-cpp/libgnomeuimm-2.6*

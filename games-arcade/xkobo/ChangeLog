@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/xkobo
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xkobo/ChangeLog,v 1.6 2006/01/29 00:38:40 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xkobo/ChangeLog,v 1.7 2006/12/01 20:50:02 wolf31o2 Exp $
+
+  01 Dec 2006; Chris Gianelloni <wolf31o2@gentoo.org> xkobo-1.11.ebuild:
+  Removing old virtual/x11 dependency.
 
   29 Jan 2006; Ferris McCormick <fmccor@gentoo.org> xkobo-1.11.ebuild:
   Add ~sparc keyword.  Builds and runs fine on sparc.

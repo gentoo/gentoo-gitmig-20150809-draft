@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertux/supertux-0.1.3.ebuild,v 1.6 2006/09/27 18:28:05 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertux/supertux-0.1.3.ebuild,v 1.7 2006/12/01 20:29:58 wolf31o2 Exp $
 
 GAMES_USE_SDL="nojoystick" #bug #100372
 inherit eutils games
@@ -19,7 +19,7 @@ RDEPEND=">=media-libs/libsdl-1.2.4
 	>=media-libs/sdl-mixer-1.2.5
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
-	|| ( x11-libs/libXt virtual/x11 )"
+	x11-libs/libXt"
 
 pkg_setup() {
 	if ! built_with_use media-libs/sdl-mixer mikmod ; then

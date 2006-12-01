@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pacmanarena/pacmanarena-0.15.ebuild,v 1.11 2006/01/29 00:00:27 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pacmanarena/pacmanarena-0.15.ebuild,v 1.12 2006/12/01 20:32:47 wolf31o2 Exp $
 
 inherit games
 
@@ -19,7 +19,7 @@ RDEPEND="virtual/opengl
 	>=media-libs/sdl-net-1.2.4
 	vorbis? ( media-libs/libvorbis )"
 DEPEND="${RDEPEND}
-	|| ( x11-libs/libXt virtual/x11 )
+	x11-libs/libXt
 	app-arch/unzip"
 
 S=${WORKDIR}/pacman

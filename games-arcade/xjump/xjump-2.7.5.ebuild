@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xjump/xjump-2.7.5.ebuild,v 1.8 2006/10/09 16:19:35 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xjump/xjump-2.7.5.ebuild,v 1.9 2006/12/01 20:26:00 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -15,25 +15,18 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-DEPEND="|| (
-		( x11-libs/libX11
-		x11-libs/libXaw
-		x11-libs/libXpm
-		x11-libs/libXt
-		x11-proto/xproto )
-		virtual/x11
-	)"
+DEPEND="x11-libs/libX11
+	x11-libs/libXaw
+	x11-libs/libXpm
+	x11-libs/libXt
+	x11-proto/xproto"
 
-RDEPEND="|| (
-		( x11-libs/libX11
-		x11-libs/libXaw
-		x11-libs/libXext
-		x11-libs/libXmu
-		x11-libs/libXpm
-		x11-libs/libXt )
-		virtual/x11
-	)"
-
+RDEPEND="x11-libs/libX11
+	x11-libs/libXaw
+	x11-libs/libXext
+	x11-libs/libXmu
+	x11-libs/libXpm
+	x11-libs/libXt"
 
 S=${WORKDIR}/${P}.orig
 

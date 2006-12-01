@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xgalaga/xgalaga-2.0.34-r6.ebuild,v 1.3 2006/01/22 19:19:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xgalaga/xgalaga-2.0.34-r6.ebuild,v 1.4 2006/12/01 20:27:26 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -15,15 +15,12 @@ SLOT="0"
 KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE=""
 
-DEPEND="|| (
-	(
-		x11-libs/libX11
-		x11-libs/libXmu
-		x11-libs/libXpm
-		x11-proto/xproto
-		x11-libs/libXext
-		x11-libs/libXt )
-	virtual/x11 )"
+DEPEND="x11-libs/libX11
+	x11-libs/libXmu
+	x11-libs/libXpm
+	x11-proto/xproto
+	x11-libs/libXext
+	x11-libs/libXt"
 
 src_unpack() {
 	unpack ${A}
