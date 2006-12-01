@@ -1,0 +1,2 @@
+# Options to pass to the irexec process
+IREXEC_OPTS=""

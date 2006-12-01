@@ -1,6 +1,16 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.118 2006/11/30 16:59:45 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.119 2006/12/01 14:35:19 zzam Exp $
+
+*lirc-0.8.0-r7 (01 Dec 2006)
+
+  01 Dec 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/lirc-0.8.0-too-many-connections-overflow.diff, +files/irexec-confd,
+  +files/irexec-initd, +files/lirc-remotewonderplus.patch,
+  -lirc-0.8.0-r6.ebuild, +lirc-0.8.0-r7.ebuild:
+  Fixing overflow, Bug #123704. Allow building more than one driver (with big
+  warning), Bug #144951. Added irexec-initscript, Bug #124295. Added support
+  for remotewonderplus-device, Bug #149130.
 
 *lirc-0.8.0-r6 (30 Nov 2006)
 

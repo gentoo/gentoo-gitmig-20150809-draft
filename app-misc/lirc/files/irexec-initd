@@ -1,0 +1,22 @@
+#!/sbin/runscript
+# Copyright 2003 Martin Hierling <mad@cc.fh-lippe.de>
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/files/irexec-initd,v 1.1 2006/12/01 14:35:19 zzam Exp $
+
+
+depend() {
+	need lircd
+}
+
+start() {
+	ebegin "Starting irexec"
+	/usr/bin/irexec --daemon ${IREXEC_OPTS}
+	eend $? "Failed to start irexec."
+}
+
+stop() {
+	ebegin "Stopping irexec"
+	killall irexec
+	eend $? "Failed to stop irexec."
+}
+
