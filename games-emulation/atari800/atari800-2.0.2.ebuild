@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/atari800/atari800-2.0.2.ebuild,v 1.5 2006/11/23 21:39:23 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/atari800/atari800-2.0.2.ebuild,v 1.6 2006/12/01 22:13:34 wolf31o2 Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ppc sparc x86"
+KEYWORDS="alpha ~amd64 ppc sparc x86"
 IUSE="sdl"
 
 RDEPEND="sdl? ( >=media-libs/libsdl-1.2.0 )
