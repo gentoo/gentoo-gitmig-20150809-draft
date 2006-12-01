@@ -54,3 +54,6 @@ pike
 
 # xattr pulls in some deps that probably won't ever fly on OSX #121092
 xattr
+
+# portage uses it, we don't keyword it
+epydoc
