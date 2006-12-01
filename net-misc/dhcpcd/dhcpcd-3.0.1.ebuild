@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-3.0.1.ebuild,v 1.2 2006/11/30 18:17:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-3.0.1.ebuild,v 1.3 2006/12/01 16:33:20 corsair Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.berlios.de/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
