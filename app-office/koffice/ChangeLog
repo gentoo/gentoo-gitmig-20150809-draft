@@ -1,6 +1,10 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.199 2006/11/30 20:43:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.200 2006/12/01 01:25:07 flameeyes Exp $
+
+  01 Dec 2006; Diego Pettenò <flameeyes@gentoo.org>
+  koffice-1.6.0-r3.ebuild:
+  Fix dependency for mysql.
 
   30 Nov 2006; Markus Rothe <corsair@gentoo.org> ChangeLog:
   Fix digest (I have had a broken tarball in distfiles..)
