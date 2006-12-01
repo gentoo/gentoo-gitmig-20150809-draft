@@ -1,0 +1,19 @@
+Index: src/main.c
+===================================================================
+RCS file: /cvsroot/gauche/Gauche/src/main.c,v
+retrieving revision 1.92
+retrieving revision 1.93
+diff -u -I$.*$ -r1.92 -r1.93
+--- src/main.c	13 Nov 2006 22:38:12 -0000	1.92
++++ src/main.c	18 Nov 2006 01:20:03 -0000	1.93
+@@ -442,7 +442,10 @@
+             if (r > 0) {
+                 ScmObj res = epak.results[0];
+                 if (SCM_INTP(res)) exit_code = SCM_INT_VALUE(res);
++                else exit_code = 70;  /* EX_SOFTWARE, see SRFI-22. */
+             } else {
++                /* NB: better error reporting for uncaptured errors? */
++                Scm_ReportError(epak.exception);
+                 exit_code = 70;  /* EX_SOFTWARE, see SRFI-22. */
+             }
+         }
