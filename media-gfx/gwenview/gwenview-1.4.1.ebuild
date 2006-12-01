@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/gwenview-1.4.1.ebuild,v 1.2 2006/11/27 10:03:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/gwenview-1.4.1.ebuild,v 1.3 2006/12/01 18:29:47 masterdriverz Exp $
 
 inherit kde
 
@@ -25,7 +25,7 @@ I18N="${PN}-i18n-${PV}"
 
 LANGS="ar az bg br ca cs cy da de el en_GB es et fi fo fr ga gl he hi hu
 is it ja ka ko lt nb nl nso pa pl pt pt_BR ro ru rw sk sr sr@Latn sv ta
-th tr uk ven xh zh_CN zh_TW zu"
+th tr uk xh zh_CN zh_TW zu"
 
 for X in ${LANGS}; do
 	SRC_URI="${SRC_URI} linguas_${X}? ( mirror://sourceforge/${PN}/${I18N}.tar.bz2 )"
