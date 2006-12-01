@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/libstroke-0.5.1.ebuild,v 1.16 2006/01/22 16:05:30 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/libstroke-0.5.1.ebuild,v 1.17 2006/12/01 23:38:22 masterdriverz Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="A Stroke and Gesture recognition Library"
 HOMEPAGE="http://www.etla.net/libstroke/"
@@ -13,18 +13,17 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND="virtual/libc
-	=x11-libs/gtk+-1*
-	|| ( x11-proto/xproto
-	     virtual/x11
-	)"
+DEPEND="|| ( x11-proto/xproto virtual/x11 )"
 
 src_unpack() {
-	unpack ${A}
+	unpack "${A}"
+	cd "${S}"
 	epatch ${FILESDIR}/${P}-m4_syntax.patch
+	epatch ${FILESDIR}/${P}-no_gtk1.patch
+	eautoreconf || die 'eautoreconf failed'
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
-	dodoc CREDITS ChangeLog README{,.libgstroke}
+	emake DESTDIR=${D} install || die
+	dodoc CREDITS ChangeLog README
 }
