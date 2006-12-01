@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/commons-modeler
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/ChangeLog,v 1.15 2006/10/05 15:30:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/ChangeLog,v 1.16 2006/12/01 16:09:26 wltjr Exp $
+
+*commons-modeler-1.1-r2 (01 Dec 2006)
+
+  01 Dec 2006; William L. Thomson Jr. <wltjr@gentoo.org>
+  +commons-modeler-1.1-r2.ebuild:
+  Switched from dep of fetch restricted sun-jmx to mx4j for now. Later will
+  dep on a virtual :). Dropped ~ppc64 due to lack of mx4j-3.0 for that arch.
 
   05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   commons-modeler-1.1.ebuild, commons-modeler-1.1-r1.ebuild:
