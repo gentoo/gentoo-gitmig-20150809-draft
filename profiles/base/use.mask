@@ -79,6 +79,3 @@ elibc_OpenBSD
 elibc_Darwin
 elibc_DragonFly
 kernel_FreeBSD
-
-# Mask for testing of dev-python/epydoc.
-epydoc
