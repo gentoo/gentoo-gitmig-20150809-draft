@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/lirc_devices.desc,v 1.3 2006/07/27 17:21:25 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/lirc_devices.desc,v 1.4 2006/12/01 14:26:21 zzam Exp $
 
 # This file contains descriptions of LIRC_DEVICES USE_EXPAND flags.
 
@@ -83,6 +83,7 @@ pixelview_pro - LIRC_DEVICES setting to add support for pixelview_pro receiver d
 provideo - LIRC_DEVICES setting to add support for provideo receiver device
 realmagic - LIRC_DEVICES setting to add support for realmagic receiver device
 remotemaster - LIRC_DEVICES setting to add support for remotemaster receiver device
+remote_wonder_plus - LIRC_DEVICES setting to add support for Remote Wonder Plus (atiusb-based) receiver device
 sa1100 - LIRC_DEVICES setting to add support for sa1100 receiver device
 sasem - LIRC_DEVICES setting to add support for sasem receiver device
 serial - LIRC_DEVICES setting to add support for serial receiver device
