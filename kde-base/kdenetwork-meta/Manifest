@@ -1,22 +1,32 @@
-EBUILD kdenetwork-meta-3.5.2.ebuild 1305 RMD160 aab781891b79f51cfc1c2dfc80ba4f4f5dbe9c21 SHA1 5b7c1f82621797f13cda0907a5ac5e50229b1ccc SHA256 4e063c17b9c99f79bffe8f48a4c6387bba7ef6cec8f1ce9b82728153fad5e8d7
-MD5 a49ad0e0a8d18e4c50d014a28b3bf18c kdenetwork-meta-3.5.2.ebuild 1305
-RMD160 aab781891b79f51cfc1c2dfc80ba4f4f5dbe9c21 kdenetwork-meta-3.5.2.ebuild 1305
-SHA256 4e063c17b9c99f79bffe8f48a4c6387bba7ef6cec8f1ce9b82728153fad5e8d7 kdenetwork-meta-3.5.2.ebuild 1305
-EBUILD kdenetwork-meta-3.5.5.ebuild 1307 RMD160 f6a9d332280edde083874b183a75b9494d07d899 SHA1 b8a68d82d1f20c9d3817fd43cfb49131628f33dd SHA256 5a1d61b13d066017ac669d81ae30c44de532534fd7f7ae0e8f155c3d505462e2
-MD5 010232d4bf5b655cca4a386d454f06ad kdenetwork-meta-3.5.5.ebuild 1307
-RMD160 f6a9d332280edde083874b183a75b9494d07d899 kdenetwork-meta-3.5.5.ebuild 1307
-SHA256 5a1d61b13d066017ac669d81ae30c44de532534fd7f7ae0e8f155c3d505462e2 kdenetwork-meta-3.5.5.ebuild 1307
-MISC ChangeLog 8477 RMD160 80f9e3e8d4ed8b938df52bac0ddffe682b28ea5a SHA1 951ef56afaea2883c73a42003b11cc681a4b3742 SHA256 e6eea451a7d7d6fa2de1883dd41014a7576459df43af1a99d2b9b2859bcdbf93
-MD5 7fbb412fcfb532a3f04b000b52df97ad ChangeLog 8477
-RMD160 80f9e3e8d4ed8b938df52bac0ddffe682b28ea5a ChangeLog 8477
-SHA256 e6eea451a7d7d6fa2de1883dd41014a7576459df43af1a99d2b9b2859bcdbf93 ChangeLog 8477
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+EBUILD kdenetwork-meta-3.5.2.ebuild 1287 RMD160 0defa7813e9ded92365abe2e2c62c45f0ad7ee44 SHA1 faf1d771a205cd33cd40eaa5c002cc1135ea7be6 SHA256 55a0be5b36dc1a16420f8d298b4ba3561eb54ade51be376990e6d0d5d42317eb
+MD5 5a47d9a6f6eb46d5fa7f5427f6e6304d kdenetwork-meta-3.5.2.ebuild 1287
+RMD160 0defa7813e9ded92365abe2e2c62c45f0ad7ee44 kdenetwork-meta-3.5.2.ebuild 1287
+SHA256 55a0be5b36dc1a16420f8d298b4ba3561eb54ade51be376990e6d0d5d42317eb kdenetwork-meta-3.5.2.ebuild 1287
+EBUILD kdenetwork-meta-3.5.5.ebuild 1288 RMD160 74d08c5cb7b545cae4205733ec7ef64e05691737 SHA1 48e884fb25a0919b2306530627680c589ce8b95c SHA256 3978e48bf271ee8d7d1a4d7a9bfc9b0ce9da859c8218c734a90447bf7efedd64
+MD5 73029ce2883cf0897bc19cab4206d171 kdenetwork-meta-3.5.5.ebuild 1288
+RMD160 74d08c5cb7b545cae4205733ec7ef64e05691737 kdenetwork-meta-3.5.5.ebuild 1288
+SHA256 3978e48bf271ee8d7d1a4d7a9bfc9b0ce9da859c8218c734a90447bf7efedd64 kdenetwork-meta-3.5.5.ebuild 1288
+MISC ChangeLog 8657 RMD160 e1349a152ddea90e4600bb14e7380e09b6c85cab SHA1 659df5f44b4f6ec4f76220bd00690f7090ea1e2c SHA256 f2e43ba1064132bf17c1df9acd97e0c5717e689d1d6c326b74aca49d843ae978
+MD5 8a4900d8f3ab74e2700ff71ab9c33dbe ChangeLog 8657
+RMD160 e1349a152ddea90e4600bb14e7380e09b6c85cab ChangeLog 8657
+SHA256 f2e43ba1064132bf17c1df9acd97e0c5717e689d1d6c326b74aca49d843ae978 ChangeLog 8657
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdenetwork-meta-3.5.2 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdenetwork-meta-3.5.2 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdenetwork-meta-3.5.2 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdenetwork-meta-3.5.5 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdenetwork-meta-3.5.5 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdenetwork-meta-3.5.5 1
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdenetwork-meta-3.5.2 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdenetwork-meta-3.5.2 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdenetwork-meta-3.5.2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdenetwork-meta-3.5.5 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdenetwork-meta-3.5.5 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdenetwork-meta-3.5.5 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFcHAsAiZjviIA2XgRAla3AJ9NtlYdC48FxjvznW7/IEgWJR9oPwCg7rK1
+Bks+C6VDIpcxTT4tE/wCt0E=
+=OxV5
+-----END PGP SIGNATURE-----
