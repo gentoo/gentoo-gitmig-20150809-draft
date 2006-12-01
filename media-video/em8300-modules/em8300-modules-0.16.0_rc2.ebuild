@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.16.0_rc2.ebuild,v 1.3 2006/11/23 20:15:27 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.16.0_rc2.ebuild,v 1.4 2006/12/01 20:31:02 zzam Exp $
 
-inherit eutils linux-info
+inherit eutils linux-mod
 
 MY_P="${P/_/-}" ; MY_P="${MY_P/-modules/}"
 
@@ -17,25 +17,9 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-S="${WORKDIR}/${MY_P}"
-
-src_compile ()  {
-	check_KV
-	set_arch_to_kernel
-	for file in autotools/config.guess configure modules/ldm modules/Makefile modules/INSTALL; do
-		sed -i -e 's/uname[[:space:]]*-r/echo ${KV}/' $file
-	done
-	cd modules
-	emake || die "emake failed."
-	set_arch_to_portage
-}
+S="${WORKDIR}/${MY_P}/modules"
 
 src_install () {
-	insinto "/usr/include/linux"
-	doins include/linux/em8300.h
-
-	cd modules
-
 	insinto "/lib/modules/${KV_FULL}/kernel/drivers/video"
 
 	if kernel_is 2 6; then
@@ -43,6 +27,11 @@ src_install () {
 	else
 		die "Unsupported kernel."
 	fi
+
+	cd ${S}/..
+
+	insinto "/usr/include/linux"
+	doins include/linux/em8300.h
 
 	dodoc README-modoptions README-modules.conf
 
@@ -56,10 +45,7 @@ src_install () {
 }
 
 pkg_postinst () {
-	if [ "${ROOT}" = "/" ]
-	then
-		/sbin/modules-update
-	fi
+	linux-mod_pkg_postinst
 
 	elog "The em8300 kernel modules have been installed into the modules"
 	elog "directory of your currently running kernel.  They haven't been"
