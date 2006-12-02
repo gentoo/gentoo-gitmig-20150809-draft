@@ -1,0 +1,27 @@
+lirc: Fix build in sandbox
+
+From: Daniel Drake <dsd@gentoo.org>
+
+
+Index: lirc-0.8.0/acinclude.m4
+===================================================================
+--- lirc-0.8.0.orig/acinclude.m4
++++ lirc-0.8.0/acinclude.m4
+@@ -36,14 +36,14 @@ AC_DEFUN([AC_PATH_KERNEL_SOURCE_SEARCH],
+       echo "lirc_tell_me_what_cc_is:" >>${ac_pkss_makefile}
+       echo "	echo \$(CC)" >>${ac_pkss_makefile}
+ 
+-      kernelcc=`make -s -C ${kerneldir} -f ${ac_pkss_makefile} lirc_tell_me_what_cc_is`
++      kernelcc=$(make -s -C ${kerneldir} -f ${ac_pkss_makefile} lirc_tell_me_what_cc_is M=$(pwd))
+ 
+       echo "lirc_tell_me_what_version_is:" >>${ac_pkss_makefile}
+       echo "	echo \$(VERSION)" >>${ac_pkss_makefile}
+       echo "lirc_tell_me_what_patchlevel_is:" >>${ac_pkss_makefile}
+       echo "	echo \$(PATCHLEVEL)" >>${ac_pkss_makefile}
+-      version=`make -s -C ${kerneldir} -f ${ac_pkss_makefile} lirc_tell_me_what_version_is`
+-      patchlevel=`make -s -C ${kerneldir} -f ${ac_pkss_makefile} lirc_tell_me_what_patchlevel_is`
++      version=$(make -s -C ${kerneldir} -f ${ac_pkss_makefile} lirc_tell_me_what_version_is M=$(pwd))
++      patchlevel=$(make -s -C ${kerneldir} -f ${ac_pkss_makefile} lirc_tell_me_what_patchlevel_is M=$(pwd))
+       if test ${version} -eq 2; then
+         if test ${patchlevel} -lt 5; then
+           kernelext=o
