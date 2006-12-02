@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/nvidia-cg-toolkit
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/ChangeLog,v 1.16 2006/08/10 07:30:40 reb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/ChangeLog,v 1.17 2006/12/02 18:19:29 vanquirius Exp $
+
+*nvidia-cg-toolkit-1.5.0 (02 Dec 2006)
+
+  02 Dec 2006; Marcelo Goes <vanquirius@gentoo.org>
+  +nvidia-cg-toolkit-1.5.0.ebuild:
+  1.5 version bump for bug 149513. Thanks to Frank Richter <res at
+  crystalspace3d dot org>.
 
 *nvidia-cg-toolkit-1.4.1 (10 Aug 2006)
 
