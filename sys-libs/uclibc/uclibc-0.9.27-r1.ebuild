@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27-r1.ebuild,v 1.19 2006/09/29 23:50:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27-r1.ebuild,v 1.20 2006/12/02 23:24:07 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -25,7 +25,7 @@ fi
 
 MY_P=uClibc-${PV}
 SVN_VER="20050114"
-PATCH_VER="1.5"
+PATCH_VER="1.6"
 DESCRIPTION="C library for developing embedded Linux systems"
 HOMEPAGE="http://www.uclibc.org/"
 SRC_URI="http://www.kernel.org/pub/linux/libs/uclibc/${MY_P}.tar.bz2
@@ -123,9 +123,9 @@ src_unpack() {
 	check_cpu_opts
 
 	echo
-	einfo "Runtime Prefix: $(alt_rprefix)"
-	einfo "Kernel Prefix:  $(alt_kprefix)"
-	einfo "Devel Prefix:   $(alt_prefix)"
+	einfo "Runtime Prefix: /"
+	einfo "Devel Prefix:   /usr"
+	einfo "Kernel Prefix:  $(alt_build_kprefix)"
 	einfo "CBUILD:         ${CBUILD}"
 	einfo "CHOST:          ${CHOST}"
 	einfo "CTARGET:        ${CTARGET}"
