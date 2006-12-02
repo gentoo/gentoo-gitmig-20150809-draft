@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6380 2006/12/02 00:05:42 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6381 2006/12/02 17:52:14 alonbl Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -377,7 +377,7 @@ app-emulation/uae
 
 # Robin H. Johnson <robbat2@gentoo.org> (11 Nov 2006)
 # Temporarily block while testing
-=app-crypt/gnupg-2.0.0
+>=app-crypt/gnupg-2.0.0
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (10 Nov 2006)
 # Masked pending removal on Dec 10. This game has been broken for quite some
