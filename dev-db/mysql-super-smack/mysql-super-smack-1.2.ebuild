@@ -1,12 +1,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-super-smack/mysql-super-smack-1.2.ebuild,v 1.6 2006/11/23 20:02:01 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-super-smack/mysql-super-smack-1.2.ebuild,v 1.7 2006/12/02 21:03:12 chtekk Exp $
 
-inherit eutils
+WANT_AUTOMAKE="1.4"
+
+inherit eutils autotools
 
 MY_PN="super-smack"
 MY_P="${MY_PN}-${PV}"
-DESCRIPTION="MySQL Super Smack is a benchmarking, stress testing, and load generation tool for MySQL & PostGreSQL"
+DESCRIPTION="MySQL Super Smack is a benchmarking, stress testing, and load generation tool for MySQL & PostGreSQL."
 HOMEPAGE="http://jeremy.zawodny.com/mysql/${MY_PN}/"
 SRC_URI="http://jeremy.zawodny.com/mysql/${MY_PN}/${MY_P}.tar.gz"
 
@@ -16,9 +18,10 @@ KEYWORDS="x86"
 IUSE="mysql postgres"
 
 DEPEND="mysql? ( virtual/mysql )
-	postgres? ( dev-db/postgresql )"
+		postgres? ( dev-db/postgresql )"
+RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	use !mysql && use !postgres && die "You need to use at least one of USE=mysql or USE=postgres for benchmarking!"
@@ -26,22 +29,25 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}.destdir.patch
-	cd ${S}
-	automake
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}.destdir.patch"
+
+	autotools_set_versions
+	automake || die "automake failed"
 }
 
 src_compile() {
-	local myconf
+	local myconf=""
 	use mysql && myconf="${myconf} --with-mysql"
 	use postgres && myconf="${myconf} --with-pgsql"
 	myconf="${myconf} --with-datadir=/var/tmp/${MY_PN}"
 	myconf="${myconf} --with-smacks-dir=/usr/share/${MY_PN}"
-	econf ${myconf} || die
-	emake || die
+	econf ${myconf} || die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc CHANGES INSTALL MANUAL README TUTORIAL
 }
