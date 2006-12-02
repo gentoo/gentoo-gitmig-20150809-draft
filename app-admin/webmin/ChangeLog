@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.134 2006/10/24 10:47:58 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.135 2006/12/02 01:28:41 antarus Exp $
+
+*webmin-1.300-r1 (02 Dec 2006)
+*webmin-1.290-r1 (02 Dec 2006)
+
+  02 Dec 2006; Alec Warner <antarus@gentoo.org> files/webmin-pam,
+  +webmin-1.290-r1.ebuild, +webmin-1.300-r1.ebuild:
+  bump for 142293, fix webmin-pam
 
   24 Oct 2006; Thomas Cort <tcort@gentoo.org> webmin-1.300.ebuild:
   Stable on alpha wrt security Bug #145829.
