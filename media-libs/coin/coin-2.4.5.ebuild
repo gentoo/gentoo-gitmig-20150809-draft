@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-2.4.5.ebuild,v 1.2 2006/09/13 01:10:40 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-2.4.5.ebuild,v 1.3 2006/12/02 21:52:10 beandog Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.coin3d.org/pub/coin/src/all/${MY_P}.tar.gz"
 
 LICENSE="|| ( GPL-2 PEL )"
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="bzip2 debug doc fontconfig openal opengl X zlib" # java javascript
 
 RDEPEND="media-libs/freetype

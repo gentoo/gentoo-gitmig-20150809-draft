@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/SoQt-1.3.0.ebuild,v 1.2 2006/01/04 20:52:01 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/SoQt-1.3.0.ebuild,v 1.3 2006/12/02 21:56:46 beandog Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.coin3d.org/"
 
 SLOT="0"
 LICENSE="|| ( GPL-2 PEL )"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 RDEPEND="=x11-libs/qt-3*

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/SoQt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/ChangeLog,v 1.15 2006/02/17 13:43:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/ChangeLog,v 1.16 2006/12/02 21:56:46 beandog Exp $
+
+  02 Dec 2006; Steve Dibb <beandog@gentoo.org> SoQt-1.3.0.ebuild:
+  Add ~amd64, bug 117756
 
   17 Feb 2006; Gustavo Zacarias <gustavoz@gentoo.org> SoQt-1.0.2.ebuild:
   Taking back sparc keyword wrt #117756
