@@ -4,8 +4,8 @@
 <pkgmetadata>
   <herd>base-system</herd>
   <maintainer>
-    <email>eradicator@gentoo.org</email>
-    <name>Jeremy Huddleston</name>
+    <email>dev-zero@gentoo.org</email>
+    <name>Tiziano Müller</name>
   </maintainer>
   <longdescription>
     evms is a volume management system written by IBM, it's open source
