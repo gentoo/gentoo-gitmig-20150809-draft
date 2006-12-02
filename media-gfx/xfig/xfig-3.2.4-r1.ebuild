@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.4-r1.ebuild,v 1.11 2006/02/11 16:36:56 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.4-r1.ebuild,v 1.12 2006/12/02 00:30:11 masterdriverz Exp $
 
 inherit eutils
 
@@ -40,13 +40,13 @@ src_unpack() {
 
 src_compile() {
 	xmkmf || die
-	make || die
+	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR=${D} install || die
 
-	make \
+	emake \
 		DESTDIR=${D} \
 		MANDIR=/usr/share/man/man1 \
 		MANSUFFIX=1 \
