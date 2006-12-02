@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/loop-aes
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.17 2006/11/01 20:44:29 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.18 2006/12/02 16:11:19 alonbl Exp $
+
+  02 Dec 2006; Alon Bar-Lev <alonbl@gentoo.org> loop-aes-3.1e.ebuild:
+  KBUILD_OUTPUT awareness, relates bug#156892, thanks to Zhang Le
 
   01 Nov 2006; Alon Bar-Lev <alonbl@gentoo.org> loop-aes-3.1e.ebuild:
   Fix build process to use kbuild

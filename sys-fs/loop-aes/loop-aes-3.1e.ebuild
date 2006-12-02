@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.1e.ebuild,v 1.2 2006/11/01 20:44:29 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.1e.ebuild,v 1.3 2006/12/02 16:11:19 alonbl Exp $
 
 inherit linux-mod eutils
 
@@ -39,7 +39,10 @@ pkg_setup() {
 		ewarn ""
 	fi
 
-	BUILD_PARAMS="LINUX_SOURCE=${KERNEL_DIR} USE_KBUILD=y MODINST=n RUNDM=n"
+	BUILD_PARAMS="
+		LINUX_SOURCE=${KERNEL_DIR}
+		KBUILD_OUTPUT=${KBUILD_OUTPUT}
+		USE_KBUILD=y MODINST=n RUNDM=n"
 	use keyscrub && BUILD_PARAMS="${BUILD_PARAMS} KEYSCRUB=y"
 	use padlock && BUILD_PARAMS="${BUILD_PARAMS} PADLOCK=y"
 }
