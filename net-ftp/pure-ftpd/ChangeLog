@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.64 2006/12/01 17:46:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.65 2006/12/02 17:36:02 eroyf Exp $
+
+  02 Dec 2006; Alexander H. Færøy <eroyf@gentoo.org>
+  pure-ftpd-1.0.21-r1.ebuild:
+  Stable on Alpha; bug #156718
 
   01 Dec 2006; Markus Rothe <corsair@gentoo.org> pure-ftpd-1.0.21-r1.ebuild:
   Stable on ppc64; bug #156718
