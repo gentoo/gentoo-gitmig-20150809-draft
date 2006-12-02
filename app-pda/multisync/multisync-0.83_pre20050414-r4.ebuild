@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.83_pre20050414-r4.ebuild,v 1.6 2006/09/26 13:02:53 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.83_pre20050414-r4.ebuild,v 1.7 2006/12/02 17:54:02 peper Exp $
 
-inherit versionator kde-functions eutils multilib
+WANT_AUTOMAKE="1.7"
+
+inherit versionator kde-functions eutils multilib autotools
 
 CVS_VERSION="${PV/*_pre/}"
 
@@ -46,7 +48,6 @@ DEPEND=">=gnome-base/libbonobo-2.2
 		nokia6600? ( >=dev-libs/libwbxml-0.9.0 )"
 
 S="${WORKDIR}/${PN}"
-export WANT_AUTOMAKE=1.7
 
 make_plugin_list() {
 	local evoversion
