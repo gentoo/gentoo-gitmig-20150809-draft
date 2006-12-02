@@ -2,16 +2,16 @@ AUX notes_applet.c.patch 285 RMD160 ccdc6f6fa9fabb306b599bfa3e123a2f96093ff3 SHA
 MD5 26718c962f6a184d14efff98f76c2bd7 files/notes_applet.c.patch 285
 RMD160 ccdc6f6fa9fabb306b599bfa3e123a2f96093ff3 files/notes_applet.c.patch 285
 SHA256 97128cc77617c8e1fc1a493faaa1ecdf12796f3bb73c1f4ca53bd78652571dee files/notes_applet.c.patch 285
-DIST xfce4-notes-plugin-0.10.0.tar.gz 327653
+DIST xfce4-notes-plugin-0.10.0.tar.gz 327653 RMD160 6eb18b34e865d0eb45f294d8e9193a1192aab141 SHA1 e4c6e4a80fe66cb887e6754bfb902be38c62b679 SHA256 56c6348628b0f9ef76dd7289424b69e34f6cc531aeb0b9c34e336f2453772e1a
 DIST xfce4-notes-plugin-0.9.7.tar.gz 326290
 EBUILD xfce4-notes-0.10.0-r1.ebuild 466 RMD160 5af395917a78054437b31c0709588b3b15c9158f SHA1 2a4daf96b8f67409568f35e057d12759b4fd17e3 SHA256 5f36a76c31426c823be7f6d929bc7b141d2ed683ee522d93129cb2aaf0c707b9
 MD5 9278d13a9225aa157f615695ee8ae7e0 xfce4-notes-0.10.0-r1.ebuild 466
 RMD160 5af395917a78054437b31c0709588b3b15c9158f xfce4-notes-0.10.0-r1.ebuild 466
 SHA256 5f36a76c31426c823be7f6d929bc7b141d2ed683ee522d93129cb2aaf0c707b9 xfce4-notes-0.10.0-r1.ebuild 466
-EBUILD xfce4-notes-0.10.0-r2.ebuild 472 RMD160 0f3be545c6d7597c0ddcd83170dac36bbbb7dc6f SHA1 589f6f52c2f47c9f6ae2ea2cd0e181a6ff7689ee SHA256 5b12d5ffc1dce23fd4d4ef802e79ba6f895f0f7497642552150173880c9d8f78
-MD5 046dadc9c89e2656858ddcc9b9839d37 xfce4-notes-0.10.0-r2.ebuild 472
-RMD160 0f3be545c6d7597c0ddcd83170dac36bbbb7dc6f xfce4-notes-0.10.0-r2.ebuild 472
-SHA256 5b12d5ffc1dce23fd4d4ef802e79ba6f895f0f7497642552150173880c9d8f78 xfce4-notes-0.10.0-r2.ebuild 472
+EBUILD xfce4-notes-0.10.0-r2.ebuild 484 RMD160 3ea6591747293271d1eedbecb366af9a29c658d2 SHA1 c770ca6edbba756c8d851572bce2197278b7d0f7 SHA256 7842c8e17610b00fd753b31d21e8d4d0db517ec0769bbf0110844fde197c02f0
+MD5 3297240d68d3c7eac326140a77a9c409 xfce4-notes-0.10.0-r2.ebuild 484
+RMD160 3ea6591747293271d1eedbecb366af9a29c658d2 xfce4-notes-0.10.0-r2.ebuild 484
+SHA256 7842c8e17610b00fd753b31d21e8d4d0db517ec0769bbf0110844fde197c02f0 xfce4-notes-0.10.0-r2.ebuild 484
 EBUILD xfce4-notes-0.10.0.ebuild 377 RMD160 c04b27836ed296356bdf3c4f5baf049d6ccd625a SHA1 ea03838a2ded0a53f76608aabc856b1ff98856ae SHA256 a00644628bfcaa2cbadaa9174efc3463f733b8d468376cf39ced791f289effac
 MD5 0fced766f6059422ee6ef0b868484c74 xfce4-notes-0.10.0.ebuild 377
 RMD160 c04b27836ed296356bdf3c4f5baf049d6ccd625a xfce4-notes-0.10.0.ebuild 377
@@ -20,23 +20,23 @@ EBUILD xfce4-notes-0.9.7-r1.ebuild 384 RMD160 6f462f41466dba55416e7cf9583ade2dc0
 MD5 cd15f6abd7facb85375a0b3111c12a19 xfce4-notes-0.9.7-r1.ebuild 384
 RMD160 6f462f41466dba55416e7cf9583ade2dc01d22b1 xfce4-notes-0.9.7-r1.ebuild 384
 SHA256 4ba4a4892fbbbf26d0d78ef85e2c42e9cd02a1fff04777dde30cb1e20ad0f370 xfce4-notes-0.9.7-r1.ebuild 384
-MISC ChangeLog 1685 RMD160 18d72e3ad5a526db3f7eb5943cc9193c0af65c73 SHA1 07457c45dd0e537a0a172f89568f1021d3b4e35a SHA256 be59c7d0820b04df164aa18e207f757cfe014c0dd4ca5d877a70d4b3461ec4bc
-MD5 8032df3bec249cf0042aca3f2c6eb790 ChangeLog 1685
-RMD160 18d72e3ad5a526db3f7eb5943cc9193c0af65c73 ChangeLog 1685
-SHA256 be59c7d0820b04df164aa18e207f757cfe014c0dd4ca5d877a70d4b3461ec4bc ChangeLog 1685
+MISC ChangeLog 1797 RMD160 01e4ebe5f1934f2a82ea76582323fb9a646a280a SHA1 ac99a3a146c002a442d9a4d26dbb57120c5c2111 SHA256 bcb2b93a61db5e32372db67f2238bce557f2f4bb41ddea31a6c34c43e45afc09
+MD5 43852ae34ca73aee2c3d8bc7bb493150 ChangeLog 1797
+RMD160 01e4ebe5f1934f2a82ea76582323fb9a646a280a ChangeLog 1797
+SHA256 bcb2b93a61db5e32372db67f2238bce557f2f4bb41ddea31a6c34c43e45afc09 ChangeLog 1797
 MISC metadata.xml 157 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 SHA1 7eae91f2588bdae8667d37a98fb3090d539eeca1 SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
 SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
-MD5 ac9ea5633311f8effbd11a24724d9cb4 files/digest-xfce4-notes-0.10.0 77
-RMD160 45277e1edaced6d2f75ed58265e0272eb5cdfdb8 files/digest-xfce4-notes-0.10.0 77
-SHA256 9643e2d1f10dea6bda839a6aaeb209e86789fc58b418c2071906d1cd6e3b4fbc files/digest-xfce4-notes-0.10.0 77
-MD5 ac9ea5633311f8effbd11a24724d9cb4 files/digest-xfce4-notes-0.10.0-r1 77
-RMD160 45277e1edaced6d2f75ed58265e0272eb5cdfdb8 files/digest-xfce4-notes-0.10.0-r1 77
-SHA256 9643e2d1f10dea6bda839a6aaeb209e86789fc58b418c2071906d1cd6e3b4fbc files/digest-xfce4-notes-0.10.0-r1 77
-MD5 ac9ea5633311f8effbd11a24724d9cb4 files/digest-xfce4-notes-0.10.0-r2 77
-RMD160 45277e1edaced6d2f75ed58265e0272eb5cdfdb8 files/digest-xfce4-notes-0.10.0-r2 77
-SHA256 9643e2d1f10dea6bda839a6aaeb209e86789fc58b418c2071906d1cd6e3b4fbc files/digest-xfce4-notes-0.10.0-r2 77
+MD5 ce0eaab861858fb4c1c38dd56d97f4d3 files/digest-xfce4-notes-0.10.0 277
+RMD160 fb866637209b9a68e23374a7d0ee69aa5b33ccc6 files/digest-xfce4-notes-0.10.0 277
+SHA256 127dd1fcd7a6e64dd5a6bfb07dec2b0f4e27fb44d704bb9aaf347e93fb993f2f files/digest-xfce4-notes-0.10.0 277
+MD5 ce0eaab861858fb4c1c38dd56d97f4d3 files/digest-xfce4-notes-0.10.0-r1 277
+RMD160 fb866637209b9a68e23374a7d0ee69aa5b33ccc6 files/digest-xfce4-notes-0.10.0-r1 277
+SHA256 127dd1fcd7a6e64dd5a6bfb07dec2b0f4e27fb44d704bb9aaf347e93fb993f2f files/digest-xfce4-notes-0.10.0-r1 277
+MD5 ce0eaab861858fb4c1c38dd56d97f4d3 files/digest-xfce4-notes-0.10.0-r2 277
+RMD160 fb866637209b9a68e23374a7d0ee69aa5b33ccc6 files/digest-xfce4-notes-0.10.0-r2 277
+SHA256 127dd1fcd7a6e64dd5a6bfb07dec2b0f4e27fb44d704bb9aaf347e93fb993f2f files/digest-xfce4-notes-0.10.0-r2 277
 MD5 6b41a6e0f0f511c726ef91eb894a79cd files/digest-xfce4-notes-0.9.7-r1 76
 RMD160 72095c434bc77c6cf7bb78ac1f867879a90b81cf files/digest-xfce4-notes-0.9.7-r1 76
 SHA256 fbfd36ae2aa9dfc1c4ef6a0c9e18dd133dd74c20bf6cfe709576b71759024a7e files/digest-xfce4-notes-0.9.7-r1 76
