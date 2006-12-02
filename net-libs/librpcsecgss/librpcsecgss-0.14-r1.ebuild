@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/librpcsecgss/librpcsecgss-0.14-r1.ebuild,v 1.3 2006/10/23 22:26:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/librpcsecgss/librpcsecgss-0.14-r1.ebuild,v 1.4 2006/12/02 23:47:09 vapier Exp $
 
 inherit eutils
 
@@ -13,7 +13,9 @@ SLOT="0"
 KEYWORDS="alpha ~amd64 arm ~hppa ia64 ~mips ~ppc ~ppc64 s390 sh ~sparc ~x86"
 IUSE=""
 
-DEPEND=">=app-crypt/libgssapi-0.9"
+RDEPEND=">=app-crypt/libgssapi-0.9"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
