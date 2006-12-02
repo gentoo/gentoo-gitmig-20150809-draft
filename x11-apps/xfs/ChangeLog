@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xfs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/ChangeLog,v 1.22 2006/10/22 17:55:49 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/ChangeLog,v 1.23 2006/12/02 15:54:33 joshuabaergen Exp $
+
+*xfs-1.0.4 (02 Dec 2006)
+
+  02 Dec 2006; Joshua Baergen <joshuabaergen@gentoo.org> +xfs-1.0.4.ebuild:
+  Version bump for 7.2RC3.  Includes a minor build fix.
 
 *xfs-1.0.3 (21 Oct 2006)
 
