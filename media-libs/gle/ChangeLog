@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gle
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/ChangeLog,v 1.25 2006/10/29 23:41:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/ChangeLog,v 1.26 2006/12/02 00:51:14 masterdriverz Exp $
+
+  02 Dec 2006; Charlie Shepherd <masterdriverz@gentoo.org>
+  gle-3.1.0-r1.ebuild:
+  Fix doc install location, thanks to Chris Mayo for the patch, bug 154900
 
   29 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> gle-3.1.0-r1.ebuild:
   Fix autotools dependencies. Closes bug #150142.

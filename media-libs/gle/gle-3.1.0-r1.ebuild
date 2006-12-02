@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/gle-3.1.0-r1.ebuild,v 1.3 2006/10/29 23:41:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/gle-3.1.0-r1.ebuild,v 1.4 2006/12/02 00:51:14 masterdriverz Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.4"
@@ -41,11 +41,16 @@ src_compile() {
 		--x-libraries=/usr/$(get_libdir)/opengl/xorg-x11 \
 		|| die "econf failed."
 
+	if use doc; then
+		sed -i -e 's:\$(datadir)/doc/gle:\$(datadir)/doc/${PF}:' doc/Makefile
+		sed -i -e 's:\$(datadir)/doc/gle/html:\$(datadir)/doc/${PF}/html:' doc/html/Makefile
+	fi
+
 	emake || die "emake failed."
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed."
+	emake DESTDIR="${D}" install || die "make install failed."
 	dodoc AUTHORS ChangeLog NEWS README
-	use doc || rm -rf "${D}"/usr/share/doc/gle
+	rm -rf "${D}/usr/share/doc/gle"
 }
