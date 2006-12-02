@@ -1,6 +1,15 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.66 2006/11/26 13:39:50 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.67 2006/12/02 14:16:32 graaff Exp $
+
+*xemacs-21.4.19-r1 (02 Dec 2006)
+
+  02 Dec 2006; Hans de Graaff <graaff@gentoo.org> +files/xemacs.desktop,
+  +xemacs-21.4.19-r1.ebuild:
+  Only unpack NeXT icons when needed. Add pop and gif USE flags. Add eolconv USE
+  flag; closes #64734. Modernize handling of some configuration options. Remove
+  unneeded info files; closes #109945. Add a desktop file and icon; closes
+  #152968.
 
   26 Nov 2006; Hans de Graaff <graaff@gentoo.org> xemacs-21.4.19.ebuild:
   Use autotools class to handle support for correct version of autoconf. Support
