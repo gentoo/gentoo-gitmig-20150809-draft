@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/wml-2.0.9-r1.ebuild,v 1.10 2006/10/22 21:33:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/wml-2.0.9-r1.ebuild,v 1.11 2006/12/02 00:04:55 masterdriverz Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="amd64 ia64 ppc s390 sparc x86"
 IUSE=""
 
-RDEPEND="dev-libs/libpcre
+DEPEND="dev-libs/libpcre
 	dev-lang/perl"
 
 src_unpack() {
