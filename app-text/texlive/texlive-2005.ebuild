@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2005.ebuild,v 1.2 2006/11/28 20:23:13 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2005.ebuild,v 1.3 2006/12/02 13:07:32 opfer Exp $
 
 inherit eutils flag-o-matic toolchain-funcs versionator virtualx
 
@@ -16,7 +16,7 @@ SRC_URI="http://dev.gentoo.org/~ehmsen/texlive/${P}-src.tar.bz2
 	http://dev.gentoo.org/~ehmsen/texlive/${P}-texmf.tar.bz2"
 
 KEYWORDS="~amd64 ~x86"
-IUSE="X doc tcl Xaw3d lesstif motif neXt"
+IUSE="X doc tk Xaw3d lesstif motif neXt"
 
 # This is less than an ideal name
 PROVIDE="virtual/tetex"
