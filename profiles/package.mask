@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6379 2006/12/01 11:37:56 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6380 2006/12/02 00:05:42 antarus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -467,11 +467,6 @@ sci-biology/generic-genome-browser
 # Diego Pettenò <flameeyes@gentoo.org> (30 Oct 2006)
 # Multiple bugs, not active maintainer in Gentoo.
 media-sound/bpmdj
-
-# Alec Warner <antarus@gentoo.org> (28 Oct 2006)
-# Mask the following packages for removal by treecleaners:
-# net-analyzer/tptest for bug(s) 152549
-net-analyzer/tptest
 
 # Luis Medinas <metalgod@gentoo.org> (28 Oct 2006)
 # Mask dhcdbd and NetworkManager for testing
