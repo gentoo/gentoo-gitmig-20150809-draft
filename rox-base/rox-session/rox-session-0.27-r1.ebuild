@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.27-r1.ebuild,v 1.3 2006/11/20 18:14:03 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.27-r1.ebuild,v 1.4 2006/12/02 21:54:00 cardoe Exp $
 
 # ROX-Session-0.27 now is compatible with dbus >=0.3
 # This version is all python, no more compiling
@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="~ppc x86"
 IUSE=""
 
-RDEPEND="|| ( >=dev-python/dbus-python-0.71 >=sys-apps/dbus-0.3 )"
+RDEPEND="|| ( >=dev-python/dbus-python-0.71
+		( >=sys-apps/dbus-0.3 <sys-apps/dbus-0.90 ) )"
 
 MY_PN="ROX-Session"
 APPNAME=${MY_PN}
