@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/pax-utils.eclass,v 1.4 2006/12/02 11:33:04 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/pax-utils.eclass,v 1.5 2006/12/02 12:24:50 kevquinn Exp $
 
 # Author:
 #	Kevin F. Quinn <kevquinn@gentoo.org>
@@ -89,9 +89,9 @@ pax-mark() {
 	# Try chpax, for (deprecated) EI legacy marking.
 	if type -p chpax > /dev/null && hasq EI ${PAX_MARKINGS}; then
 		einfo "Legacy EI PaX marking -${flags}"
-		_pax_list_files echo "$@"
+		_pax_list_files elog "$@"
 		for f in "$@"; do
-			/sbin/chpax -${flags} "${f}" && continue
+			chpax -${flags} "${f}" && continue
 			fail=1
 			failures="${failures} ${f}"
 		done
@@ -101,22 +101,22 @@ pax-mark() {
 	if type -p paxctl > /dev/null && hasq PT ${PAX_MARKINGS}; then
 		# Try paxctl, the upstream supported tool.
 		einfo "PT PaX marking -${flags}"
-		_pax_list_files echo "$@"
+		_pax_list_files elog "$@"
 		for f in "$@"; do
-			/sbin/paxctl -q${flags} "${f}" && continue
-			/sbin/paxctl -qc${flags} "${f}" && continue
-			/sbin/paxctl -qC${flags} "${f}" && continue
+			paxctl -q${flags} "${f}" && continue
+			paxctl -qc${flags} "${f}" && continue
+			paxctl -qC${flags} "${f}" && continue
 			fail=1
 			failures="${failures} ${f}"
 		done
-	elif type -p scanelf > /dev/null && [[ -n ${PAX_MARKINGS} ]]; then
+	elif type -p scanelf > /dev/null && [[ ${PAX_MARKINGS} != "none" ]]; then
 		# Try scanelf, Gentoo's swiss-army knife ELF utility
 		# Currently this sets EI and PT if it can, no option to
 		# control what it does.
 		einfo "Fallback PaX marking -${flags}"
-		_pax_list_files echo "$@"
-		/usr/bin/scanelf -Xxz ${flags} "$@"
-	else
+		_pax_list_files elog "$@"
+		scanelf -Xxz ${flags} "$@"
+	elif [[ ${PAX_MARKINGS} != "none" ]]; then
 		# Out of options!
 		failures="$*"
 		fail=1
