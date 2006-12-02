@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/misdn-1.0.4.ebuild,v 1.1 2006/11/18 20:58:48 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/misdn-1.0.4.ebuild,v 1.2 2006/12/02 14:06:17 mrness Exp $
 
 inherit eutils linux-mod
 
@@ -114,8 +114,11 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
 
+	cd "${WORKDIR}"
+	epatch "${FILESDIR}"/${P}-kernel-2.6.19.patch
+
+	cd "${S}"
 	if use ecaggressive; then
 		sed -i -e "s:.*#define \(AGGRESSIVE_SUPPRESSOR\):#define \1:m" dsp.h
 	fi
@@ -140,7 +143,7 @@ src_install() {
 	linux-mod_src_install
 
 	insinto /usr/include/linux
-	doins "${WORKDIR}/${MY_P}/include/linux/"*.h
+	doins "${WORKDIR}/${MY_P}/"include/linux/*.h
 
 	dodir /etc/udev/rules.d
 	echo 'KERNEL=="obj-*", NAME="mISDN", GROUP="dialout", MODE="0660"' \
@@ -158,12 +161,12 @@ src_install() {
 }
 
 pkg_preinst() {
-	if [ -e ${ROOT}/etc/misdn-init.conf ]; then
-		cp ${ROOT}/etc/misdn-init.conf ${IMAGE}/etc
+	if [ -e "${ROOT}"/etc/misdn-init.conf ]; then
+		cp "${ROOT}"/etc/misdn-init.conf "${IMAGE}"/etc
 	else
-		sed -i -e "s:/etc/misdn-init.conf:${IMAGE}\0:" ${IMAGE}/usr/sbin/misdn-init
-		${IMAGE}/usr/sbin/misdn-init config
-		sed -i -e "s:${IMAGE}/etc/misdn-init.conf:/etc/misdn-init.conf:" ${IMAGE}/usr/sbin/misdn-init
+		sed -i -e "s:/etc/misdn-init.conf:${IMAGE}\0:" "${IMAGE}"/usr/sbin/misdn-init
+		"${IMAGE}"/usr/sbin/misdn-init config
+		sed -i -e "s:${IMAGE}/etc/misdn-init.conf:/etc/misdn-init.conf:" "${IMAGE}"/usr/sbin/misdn-init
 	fi
 }
 
