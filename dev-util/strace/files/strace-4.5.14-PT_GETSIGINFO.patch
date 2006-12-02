@@ -5,14 +5,14 @@ linux architectures so we can no longer assume PT_GETSIGINFO == ia64.
 
 http://bugs.gentoo.org/149945
 
---- strace.c
-+++ strace.c
-@@ -2251,7 +2251,7 @@
+--- strace.c	11 Oct 2006 22:55:25 -0000	1.71
++++ strace.c	11 Oct 2006 23:11:44 -0000	1.72
+@@ -2261,7 +2261,7 @@ Process %d attached (waiting for parent)
  			if (!cflag
  			    && (qual_flags[WSTOPSIG(status)] & QUAL_SIGNAL)) {
  				unsigned long addr = 0, pc = 0;
 -#ifdef PT_GETSIGINFO
-+#ifdef PT_CR_IPSR
++#if defined(PT_CR_IPSR) && defined(PT_CR_IIP) && defined(PT_GETSIGINFO)
  #				define PSR_RI	41
  				struct siginfo si;
  				unsigned long psr;
