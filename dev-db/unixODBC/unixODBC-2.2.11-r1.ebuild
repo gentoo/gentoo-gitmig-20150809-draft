@@ -1,8 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.11-r1.ebuild,v 1.16 2006/12/01 16:51:11 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.11-r1.ebuild,v 1.17 2006/12/02 17:55:52 chtekk Exp $
 
-inherit eutils multilib
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit eutils multilib autotools
 
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 
@@ -28,8 +31,9 @@ src_unpack() {
 	# braindead check in configure fails - hackish approach
 	epatch "${FILESDIR}/${P}-configure.in.patch"
 	epatch "${FILESDIR}/${P}-Makefile.am.patch"
-	aclocal && \
-	libtoolize -c -f && \
+	autotools_set_versions
+	aclocal --force && \
+	libtoolize --copy --force && \
 	automake && \
 	autoconf || die "autotools failed"
 }
@@ -38,13 +42,13 @@ src_compile() {
 	local myconf
 
 	if use qt3 && ! use mips ; then
-		myconf="--enable-gui=yes --x-libraries=/usr/lib"
+		myconf="--enable-gui=yes --x-libraries=/usr/$(get_libdir)"
 	else
 		myconf="--enable-gui=no"
 	fi
 
 	econf --prefix=/usr \
-		--sysconfdir=/etc/unixODBC \
+		--sysconfdir=/etc/${PN} \
 		--libdir=/usr/$(get_libdir) \
 		${myconf} || die "econf failed"
 
