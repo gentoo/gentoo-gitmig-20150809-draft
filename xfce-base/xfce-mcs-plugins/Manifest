@@ -1,5 +1,5 @@
 DIST xfce-mcs-plugins-4.2.1.tar.gz 662653
-DIST xfce-mcs-plugins-4.2.2.tar.gz 857474
+DIST xfce-mcs-plugins-4.2.2.tar.gz 857474 RMD160 1dea0f61303534ae796dbb8919cfd2f918147635 SHA1 05532dcfd01f04d15644cf26eb9db46f6f84375c SHA256 693166e49eac35a85e66a7ad5dee046657f08937dc0a9144ecd26148ab9917a9
 DIST xfce-mcs-plugins-4.2.3.tar.gz 1009785 RMD160 0e9b69dba25ec43800a4585b6976f43f381cb2e4 SHA1 981a3a38d9063f3b9de32f13384677bf631d135a SHA256 57dffc6ac2d44a8feb11e30f4a12810ab3a22b436b38ea873d3706a62caea169
 DIST xfce-mcs-plugins-4.3.90.1.tar.bz2 795725 RMD160 656a86730c508c92f90ac2d1b2479c3c02949de5 SHA256 5a51389cc0199e30559fed587faa89522e4651a3d2a591d0b0f1fea96bf1536d
 DIST xfce-mcs-plugins-4.3.90.2.tar.bz2 829957 RMD160 ed89644090ec8e08f8d2b02349110d9779e9038b SHA1 6705431aeea65a9edafdf7b61a4ab51e5f0ae698 SHA256 adbb0db22c083e42c4cba07ebe90e92b377a250d05b1c7994b7c01362502f871
@@ -7,18 +7,18 @@ EBUILD xfce-mcs-plugins-4.2.1.ebuild 479 RMD160 c5a33984fe677ed14dd4095f11f9dff9
 MD5 7a2c62be7503504520f6a47342fcb6d8 xfce-mcs-plugins-4.2.1.ebuild 479
 RMD160 c5a33984fe677ed14dd4095f11f9dff92d2b7b4f xfce-mcs-plugins-4.2.1.ebuild 479
 SHA256 8df5b1e5e671876fb25ab1f5f772bec7d5b6417c1185969e1adfad82865d67b0 xfce-mcs-plugins-4.2.1.ebuild 479
-EBUILD xfce-mcs-plugins-4.2.2-r1.ebuild 771 RMD160 920242211070a1f3b6d5031a4618665e48a27719 SHA1 e1cdfe17f76e09f28d84c78f3f3ca550757bc5f8 SHA256 9ed99018bf5fb755060bb294d1abc9f946d974a3697e6ec9c77f95e99fc10224
-MD5 adc5aaac80724dd76844da408166c463 xfce-mcs-plugins-4.2.2-r1.ebuild 771
-RMD160 920242211070a1f3b6d5031a4618665e48a27719 xfce-mcs-plugins-4.2.2-r1.ebuild 771
-SHA256 9ed99018bf5fb755060bb294d1abc9f946d974a3697e6ec9c77f95e99fc10224 xfce-mcs-plugins-4.2.2-r1.ebuild 771
+EBUILD xfce-mcs-plugins-4.2.2-r1.ebuild 783 RMD160 2fc363e446283e0fa00d12c16e5906e5df76af00 SHA1 339175eeddc1cdd3322495e0ae1c2bfca3a3c67d SHA256 9688fd0c6a8104dc4265dbe55534b03c6afa4789e36237ba0bcf8dfa9b493be6
+MD5 755963695d990f754bb7ab87acbd4ebc xfce-mcs-plugins-4.2.2-r1.ebuild 783
+RMD160 2fc363e446283e0fa00d12c16e5906e5df76af00 xfce-mcs-plugins-4.2.2-r1.ebuild 783
+SHA256 9688fd0c6a8104dc4265dbe55534b03c6afa4789e36237ba0bcf8dfa9b493be6 xfce-mcs-plugins-4.2.2-r1.ebuild 783
 EBUILD xfce-mcs-plugins-4.2.2.ebuild 469 RMD160 0b2e029d21f06cf6d66d6bd628cab3498368eca0 SHA1 cc6c63ee9de6d5d6a27744cd76b4b4d375828676 SHA256 4cdc2135d524636c08c323f46d74123e04d11c31de2a5e17fba42f2196eea808
 MD5 31785b5bc50f581c889745deceb9299a xfce-mcs-plugins-4.2.2.ebuild 469
 RMD160 0b2e029d21f06cf6d66d6bd628cab3498368eca0 xfce-mcs-plugins-4.2.2.ebuild 469
 SHA256 4cdc2135d524636c08c323f46d74123e04d11c31de2a5e17fba42f2196eea808 xfce-mcs-plugins-4.2.2.ebuild 469
-EBUILD xfce-mcs-plugins-4.2.3.ebuild 760 RMD160 2837c990ab7301e8a1fbfc8041b201e000c6dacb SHA1 827750cebefe2345d4a202ad47817a52e1031fff SHA256 9b9d32c8ac7ab1fa16dfc16d1e03bed166c8f7b7df7c4c7a7cffb664eda9bcb4
-MD5 883dcd474e67d4d974824474fb05cb7c xfce-mcs-plugins-4.2.3.ebuild 760
-RMD160 2837c990ab7301e8a1fbfc8041b201e000c6dacb xfce-mcs-plugins-4.2.3.ebuild 760
-SHA256 9b9d32c8ac7ab1fa16dfc16d1e03bed166c8f7b7df7c4c7a7cffb664eda9bcb4 xfce-mcs-plugins-4.2.3.ebuild 760
+EBUILD xfce-mcs-plugins-4.2.3.ebuild 772 RMD160 31f7e6c4f0576c4c20d1dc57e47f0b630b89e79f SHA1 61f1077a51ff74aa28d06ecff78fab30f62c8cbd SHA256 4dc341da8659a636fb5cfda99f26f9f97f0a07751753b3933de24f038d8ae71b
+MD5 31c888d9b98a004cca0c441f6a775299 xfce-mcs-plugins-4.2.3.ebuild 772
+RMD160 31f7e6c4f0576c4c20d1dc57e47f0b630b89e79f xfce-mcs-plugins-4.2.3.ebuild 772
+SHA256 4dc341da8659a636fb5cfda99f26f9f97f0a07751753b3933de24f038d8ae71b xfce-mcs-plugins-4.2.3.ebuild 772
 EBUILD xfce-mcs-plugins-4.3.90.1.ebuild 1060 RMD160 02904f0d5d4a5c4749efdac152795f4788e8533a SHA1 fe5d20bafd5da34caf89f326273eb223134787f8 SHA256 6e50472f39b81323b8fb29e97f7092882864e8171084e9a38e3969b98cdea99c
 MD5 83ef8a3f56b57744495b6d772b216c23 xfce-mcs-plugins-4.3.90.1.ebuild 1060
 RMD160 02904f0d5d4a5c4749efdac152795f4788e8533a xfce-mcs-plugins-4.3.90.1.ebuild 1060
@@ -27,10 +27,10 @@ EBUILD xfce-mcs-plugins-4.3.90.2.ebuild 1059 RMD160 7a8080cb04f2aa2015ce5fc1f621
 MD5 e1e618f44118fb75a0de59541b210d97 xfce-mcs-plugins-4.3.90.2.ebuild 1059
 RMD160 7a8080cb04f2aa2015ce5fc1f621442e022701d2 xfce-mcs-plugins-4.3.90.2.ebuild 1059
 SHA256 6b11395b4815c08faa0dd7f4619c1a064233b425787a6d470c3fd6db12ba4291 xfce-mcs-plugins-4.3.90.2.ebuild 1059
-MISC ChangeLog 8647 RMD160 2b82eb334759be1ebe28c1f72243fa43df8b3acd SHA1 2bce1c87a947f876a9fa5675b0e702df192cfd91 SHA256 1875334082521261124d1b0e72d2363f49a259beaa75a845c6f8a6eb45ecff09
-MD5 b0245c52a12d67fa33685a14eb081afe ChangeLog 8647
-RMD160 2b82eb334759be1ebe28c1f72243fa43df8b3acd ChangeLog 8647
-SHA256 1875334082521261124d1b0e72d2363f49a259beaa75a845c6f8a6eb45ecff09 ChangeLog 8647
+MISC ChangeLog 8796 RMD160 28f91b45fb86e886f0b51188ded07bdcaa36a49d SHA1 6e9dc582661ff2b0f5abb35e6182e218cb4cf216 SHA256 687803bb12311fe9622c2aecbdddc405a0d4803ad5dd0f3544a5bb07470a72ca
+MD5 49cd4fa1a96d405413a78d7d666b87b2 ChangeLog 8796
+RMD160 28f91b45fb86e886f0b51188ded07bdcaa36a49d ChangeLog 8796
+SHA256 687803bb12311fe9622c2aecbdddc405a0d4803ad5dd0f3544a5bb07470a72ca ChangeLog 8796
 MISC metadata.xml 157 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 SHA1 7eae91f2588bdae8667d37a98fb3090d539eeca1 SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
@@ -38,12 +38,12 @@ SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata
 MD5 103c43e0a9b46b65ec2f821e01c208ea files/digest-xfce-mcs-plugins-4.2.1 74
 RMD160 15839c863bb17d6f251bf76a12112207832e8629 files/digest-xfce-mcs-plugins-4.2.1 74
 SHA256 000d8eb661642db2a20bca0300690a68bbb87ffa4bf60844185ae1abd6ce9b4f files/digest-xfce-mcs-plugins-4.2.1 74
-MD5 aa32d9ca701ecd219eb4e66f1d6bde0a files/digest-xfce-mcs-plugins-4.2.2 74
-RMD160 8ef73a7654571b842d251cd19a1309725026f86a files/digest-xfce-mcs-plugins-4.2.2 74
-SHA256 66fa31fd1702d1a4566907dcae7a5bf6a716785b51586c4f98fcadfbb75ae8ff files/digest-xfce-mcs-plugins-4.2.2 74
-MD5 aa32d9ca701ecd219eb4e66f1d6bde0a files/digest-xfce-mcs-plugins-4.2.2-r1 74
-RMD160 8ef73a7654571b842d251cd19a1309725026f86a files/digest-xfce-mcs-plugins-4.2.2-r1 74
-SHA256 66fa31fd1702d1a4566907dcae7a5bf6a716785b51586c4f98fcadfbb75ae8ff files/digest-xfce-mcs-plugins-4.2.2-r1 74
+MD5 3d7da295a23b9ebbc1de1846dda6fdb4 files/digest-xfce-mcs-plugins-4.2.2 268
+RMD160 ec0ae5fe7765c7ef682d84e6401774f47161e556 files/digest-xfce-mcs-plugins-4.2.2 268
+SHA256 f7d628d213bd8301c061e6378c6b6a6ef0e7783fa3ea680f1eb645abcb78884c files/digest-xfce-mcs-plugins-4.2.2 268
+MD5 3d7da295a23b9ebbc1de1846dda6fdb4 files/digest-xfce-mcs-plugins-4.2.2-r1 268
+RMD160 ec0ae5fe7765c7ef682d84e6401774f47161e556 files/digest-xfce-mcs-plugins-4.2.2-r1 268
+SHA256 f7d628d213bd8301c061e6378c6b6a6ef0e7783fa3ea680f1eb645abcb78884c files/digest-xfce-mcs-plugins-4.2.2-r1 268
 MD5 c1617e3998719791117df1660ac3983d files/digest-xfce-mcs-plugins-4.2.3 271
 RMD160 4033d87f3f130da787c574121e69c2f6f9fd4f01 files/digest-xfce-mcs-plugins-4.2.3 271
 SHA256 08d4bc13661cdfafcb4e69b68b20703eb5b31eb8a11d41c878da929689c32a8a files/digest-xfce-mcs-plugins-4.2.3 271
