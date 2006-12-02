@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/epdfview-0.1.5.ebuild,v 1.2 2006/11/30 02:57:57 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/epdfview-0.1.5.ebuild,v 1.3 2006/12/02 13:27:56 kloeri Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ RDEPEND="${COMMON_DEPEND}
 
 pkg_setup() {
 	if ! built_with_use app-text/poppler-bindings gtk; then
-		eerror "Please re-emerge app-text/poppler-binding with the gtk USE flag set."
+		eerror "Please re-emerge app-text/poppler-bindings with the gtk USE flag set."
 		die "poppler-bindings needs gtk flag set."
 	fi
 }
