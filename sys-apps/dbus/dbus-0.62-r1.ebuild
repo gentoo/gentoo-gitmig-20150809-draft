@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.62-r1.ebuild,v 1.14 2006/12/01 03:00:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.62-r1.ebuild,v 1.15 2006/12/02 20:21:29 cardoe Exp $
 
 WANT_AUTOCONF=2.5
-inherit eutils mono python multilib debug qt3 autotools
+inherit eutils mono python multilib debug qt3 autotools flag-o-matic
 
 DESCRIPTION="A message bus system, a simple way for applications to talk to each other"
 HOMEPAGE="http://dbus.freedesktop.org/"
@@ -32,6 +32,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	PKG_CONFIG_PATH="${QTDIR}/lib/pkgconfig"
+	filter-flags -fstack-protector-all
 }
 
 src_unpack() {
