@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nxtvepg/nxtvepg-2.7.6.ebuild,v 1.2 2006/11/24 11:51:26 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nxtvepg/nxtvepg-2.7.6.ebuild,v 1.3 2006/12/02 09:50:28 dev-zero Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="receive and browse free TV programme listings via bttv for tv networks in Europe"
 HOMEPAGE="http://nxtvepg.sourceforge.net/"
@@ -25,16 +25,16 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/nxtvepg-db.patch
+	cd "${S}"
+	epatch "${FILESDIR}/nxtvepg-db.patch"
 }
 
 src_compile() {
-	make prefix="/usr" || die "make failed"
+	emake -j1 CC=$(tc-getCC) prefix="/usr" || die "emake failed"
 }
 
 src_install() {
-	make install ROOT=${D} prefix="/usr" || die "install failed"
-	dodoc README COPYRIGHT CHANGES TODO
-	dohtml manual.html
+	emake ROOT="${D}" prefix="/usr" install || die "emake install failed"
+	dodoc README CHANGES TODO
+	dohtml manual*.html
 }

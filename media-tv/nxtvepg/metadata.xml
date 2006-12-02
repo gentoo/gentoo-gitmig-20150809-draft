@@ -3,7 +3,8 @@
 <pkgmetadata>
 <herd>media-tv</herd>
 <maintainer>
-  <email>phosphan@gentoo.org</email>
+  <email>dev-zero@gentoo.org</email>
+  <name>Tiziano Müller</name>
 </maintainer>
 <maintainer>
   <email>pylon@gentoo.org</email>
