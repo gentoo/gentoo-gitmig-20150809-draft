@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/gpsbabel-1.3.2.ebuild,v 1.1 2006/11/24 21:43:08 djay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/gpsbabel-1.3.2.ebuild,v 1.2 2006/12/02 22:03:09 beandog Exp $
 
 inherit eutils autotools
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE="doc usb debug"
 
