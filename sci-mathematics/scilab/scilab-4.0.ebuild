@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.0.ebuild,v 1.9 2006/11/22 18:21:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.0.ebuild,v 1.10 2006/12/02 21:12:51 beandog Exp $
 
 inherit eutils fortran toolchain-funcs multilib autotools java-pkg-opt-2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.scilab.org/"
 
 SLOT="0"
 IUSE="ocaml tk gtk Xaw3d java"
-KEYWORDS="~ppc x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 RDEPEND="virtual/blas
 	virtual/lapack
