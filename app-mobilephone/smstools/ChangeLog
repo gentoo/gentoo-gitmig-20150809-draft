@@ -1,6 +1,14 @@
 # ChangeLog for app-mobilephone/smstools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/ChangeLog,v 1.6 2006/10/20 13:14:15 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/ChangeLog,v 1.7 2006/12/02 14:46:29 mrness Exp $
+
+*smstools-2.2.12 (02 Dec 2006)
+
+  02 Dec 2006; Alin Năstac <mrness@gentoo.org>
+  +files/2.2.12-buffer-overflow.patch, -smstools-2.2.1-r3.ebuild,
+  -smstools-2.2.3.ebuild, +smstools-2.2.12.ebuild:
+  Version bump. Fix buffer overflow, thanks to Niclas Felske <nfelske@gmx.de>
+  (#155928).
 
 *smstools-2.2.9 (20 Oct 2006)
 
