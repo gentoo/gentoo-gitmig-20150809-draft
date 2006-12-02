@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>base-system</herd>
-<herd>X11</herd>
+<herd>x11</herd>
 <maintainer>
   <email>seemant@gentoo.org</email>
 </maintainer>
