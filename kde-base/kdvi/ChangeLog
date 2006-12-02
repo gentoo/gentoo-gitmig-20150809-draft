@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdvi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdvi/ChangeLog,v 1.59 2006/11/28 22:02:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdvi/ChangeLog,v 1.60 2006/12/02 12:17:03 masterdriverz Exp $
+
+  02 Dec 2006; Charlie Shepherd <masterdriverz@gentoo.org>
+  kdvi-3.5.5.ebuild:
+  Collapse tetex dependencies to virtual/tetex, thanks to Sebastian Schubert
+  for reporting, bug 152069
 
   28 Nov 2006; Markus Rothe <corsair@gentoo.org> kdvi-3.5.5.ebuild:
   Stable on ppc64

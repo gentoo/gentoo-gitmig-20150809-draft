@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdvi/kdvi-3.5.5.ebuild,v 1.6 2006/11/28 22:02:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdvi/kdvi-3.5.5.ebuild,v 1.7 2006/12/02 12:17:03 masterdriverz Exp $
 
 KMNAME=kdegraphics
 MAXKDEVER=$PV
@@ -15,11 +15,6 @@ DEPEND="
 $(deprange $PV $MAXKDEVER kde-base/kviewshell)
 >=media-libs/freetype-2"
 RDEPEND="${DEPEND}
-	tetex? (
-	|| ( >=app-text/tetex-2
-	app-text/ptex
-	app-text/cstetex
-	app-text/dvipdfm )
-	)"
+	tetex? ( virtual/tetex )"
 
 KMCOMPILEONLY="kviewshell/"
