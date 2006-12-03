@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.2.ebuild,v 1.5 2006/09/26 08:07:09 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.2.ebuild,v 1.6 2006/12/03 20:04:56 corsair Exp $
 
 inherit autotools eutils fortran flag-o-matic multilib portability
 
@@ -24,7 +24,7 @@ RDEPEND="${DEPEND}
 	!crypt? ( net-misc/netkit-rsh )"
 
 SLOT="6"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ppc ppc64 ~sparc x86"
 LICENSE="as-is"
 # confcache breaks the make process
 RESTRICT="confcache"
