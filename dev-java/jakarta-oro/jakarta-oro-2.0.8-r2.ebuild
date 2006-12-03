@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-oro/jakarta-oro-2.0.8-r2.ebuild,v 1.5 2006/10/17 02:28:37 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-oro/jakarta-oro-2.0.8-r2.ebuild,v 1.6 2006/12/03 15:42:23 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="A set of text-processing Java classes that provide Perl5 compatible regular expressions, AWK-like regular expressions, glob expressions, and utility classes for performing substitutions, splits, filtering filenames, etc."
+DESCRIPTION="A set of text-processing Java classes."
 HOMEPAGE="http://jakarta.apache.org/oro/index.html"
 SRC_URI="mirror://apache/jakarta/oro/source/${P}.tar.gz"
 
