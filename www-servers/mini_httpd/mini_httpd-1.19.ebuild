@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mini_httpd/mini_httpd-1.19.ebuild,v 1.6 2006/07/05 03:58:23 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mini_httpd/mini_httpd-1.19.ebuild,v 1.7 2006/12/03 06:26:15 vapier Exp $
 
 DESCRIPTION="Small forking webserver with optional ssl and ipv6 support"
 HOMEPAGE="http://www.acme.com/software/mini_httpd/"
@@ -8,11 +8,10 @@ SRC_URI="http://www.acme.com/software/mini_httpd/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="ppc ~s390 x86"
+KEYWORDS="ppc s390 x86"
 IUSE="ssl ipv6"
 
-DEPEND="virtual/libc
-	ssl? ( dev-libs/openssl )"
+DEPEND="ssl? ( dev-libs/openssl )"
 
 src_compile() {
 	## we need to hack a bit to have the correct install-dir -- no autoconf :(
@@ -47,10 +46,8 @@ src_install() {
 	mv ${D}/usr/sbin/{,mini_}htpasswd
 	mv ${D}/usr/share/man/man1/{,mini_}htpasswd.1
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/mini_httpd.init mini_httpd
-	insinto /etc/conf.d
-	newins ${FILESDIR}/mini_httpd.confd-${PV} mini_httpd
+	newinitd "${FILESDIR}"/mini_httpd.init mini_httpd
+	newconfd "${FILESDIR}"/mini_httpd.confd-${PV} mini_httpd
 	dodoc README
 	newdoc ${FILESDIR}/mini_httpd.conf.sample-${PV} mini_httpd.conf.sample
 }
