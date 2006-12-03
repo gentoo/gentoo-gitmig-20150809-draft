@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.7.2-r3.ebuild,v 1.11 2006/09/03 20:34:27 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.7.2-r3.ebuild,v 1.12 2006/12/03 22:20:43 dev-zero Exp $
+
+WANT_AUTOMAKE=1.8
+WANT_AUTOCONF=latest
 
 inherit autotools libtool eutils virtualx toolchain-funcs
 
@@ -60,10 +63,10 @@ src_compile() {
 		--libexecdir=/usr/sbin \
 		${myconf} || die "econf failed"
 
-	emake || die
+	emake || die "emake failed"
 
 	# Compile the added password checker:
-	cd ${S}/lib/kadm5
+	cd lib/kadm5
 	tc-export CC
 	${CC} -shared -fPIC \
 		${CFLAGS} -I${S}/include \
@@ -84,9 +87,9 @@ src_test() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die "emake install failed"
 
-	dolib ${S}/lib/kadm5/sample_passwd_check.so
+	dolib lib/kadm5/sample_passwd_check.so
 
 	dodoc ChangeLog README NEWS TODO
 
@@ -124,7 +127,7 @@ src_install() {
 	insinto /etc
 	newins ${GENTOODIR}/configs/krb5.conf krb5.conf.example
 
-	sed -i "s:/lib:/$(get_libdir):" ${D}/etc/krb5.conf.example
+	sed -i "s:/lib:/$(get_libdir):" ${D}/etc/krb5.conf.example || die "sed failed"
 
 	if use ldap; then
 		insinto /etc/openldap/schema

@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.114 2006/09/03 20:34:27 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.115 2006/12/03 22:20:43 dev-zero Exp $
+
+  03 Dec 2006; Tiziano Müller <dev-zero@gentoo.org> -heimdal-0.7.2.ebuild,
+  -heimdal-0.7.2-r2.ebuild, heimdal-0.7.2-r3.ebuild:
+  Added WANT_AUTOMAKE to fix bug #148904, dropped old versions.
 
   04 Sep 2006; Joshua Kinard <kumba@gentoo.org> heimdal-0.7.2-r3.ebuild:
   Marked stable on mips.
