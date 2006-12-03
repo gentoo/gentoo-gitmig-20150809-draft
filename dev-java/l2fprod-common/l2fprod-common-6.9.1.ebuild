@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/l2fprod-common/l2fprod-common-6.9.1.ebuild,v 1.1 2006/10/17 09:14:52 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/l2fprod-common/l2fprod-common-6.9.1.ebuild,v 1.2 2006/12/03 00:49:56 beandog Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://common.l2fprod.com/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant

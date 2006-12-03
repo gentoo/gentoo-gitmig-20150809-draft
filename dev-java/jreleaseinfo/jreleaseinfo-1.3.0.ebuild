@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jreleaseinfo/jreleaseinfo-1.3.0.ebuild,v 1.1 2006/10/16 21:36:16 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jreleaseinfo/jreleaseinfo-1.3.0.ebuild,v 1.2 2006/12/03 00:50:33 beandog Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://${PN}.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip"
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="source"
 DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip
