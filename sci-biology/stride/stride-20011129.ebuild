@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/stride/stride-20011129.ebuild,v 1.3 2006/07/28 18:48:24 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/stride/stride-20011129.ebuild,v 1.4 2006/12/03 00:53:21 beandog Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.ebi.ac.uk/pub/software/unix/${PN}/src/${PN}.tar.gz
 	mirror://gentoo/${PN}-20060723-update.patch.bz2"
 
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 S="${WORKDIR}"
