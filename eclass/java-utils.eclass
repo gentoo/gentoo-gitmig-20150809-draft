@@ -6,6 +6,8 @@
 # Copyright (c) 2004, Gentoo Foundation
 #
 # Licensed under the GNU General Public License, v2
+#
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils.eclass,v 1.11 2006/12/03 13:09:16 betelgeuse Exp $
 
 inherit eutils
 
