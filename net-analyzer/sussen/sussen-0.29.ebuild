@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.29.ebuild,v 1.5 2006/11/03 16:16:21 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.29.ebuild,v 1.6 2006/12/03 15:20:38 pva Exp $
 
 inherit eutils gnome2 mono
 
@@ -18,7 +18,7 @@ RDEPEND="=dev-lang/mono-1.1*
 			 >=dev-dotnet/gconf-sharp-2.4
 			 >=dev-dotnet/glade-sharp-2.4
 			 gnome-base/gnome-panel )
-	dbus? ( sys-apps/dbus )"
+	dbus? ( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.34 )"
 
 DEPEND="${RDEPEND}
 	doc? ( >=dev-util/monodoc-1.1.8 )
