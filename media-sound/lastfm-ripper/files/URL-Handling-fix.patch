@@ -5,7 +5,7 @@
    elsif (!$streaming)
    {
 +    # from http://piglet.uccs.edu/~cs301/perl/re.htm
-+    $mp3_host=~m|(\w+)://([^/:]+)(:\d+)?/(.*)|;
++    $stream_url=~m|(\w+)://([^/:]+)(:\d+)?/(.*)|;
 +    $mp3_host = $2;
 +    $mp3_url= "/".$4;
 +    debug("mp3_host=$mp3_host, mp3_url=$mp3_url\n");
