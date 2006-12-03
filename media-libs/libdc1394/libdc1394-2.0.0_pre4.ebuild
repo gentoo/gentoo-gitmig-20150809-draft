@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-2.0.0_pre4.ebuild,v 1.11 2006/05/03 14:34:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-2.0.0_pre4.ebuild,v 1.12 2006/12/03 06:28:45 vapier Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="alpha ~amd64 arm ~hppa ia64 ~ppc ppc64 ~sparc ~x86"
 IUSE="X"
 
 DEPEND=">=sys-libs/libraw1394-0.9.0
