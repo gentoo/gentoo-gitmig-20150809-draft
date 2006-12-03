@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r5.ebuild,v 1.6 2006/12/01 20:47:07 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r5.ebuild,v 1.7 2006/12/03 06:30:27 vapier Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="2.1"
@@ -15,10 +15,10 @@ HOMEPAGE="http://www.xiph.org/paranoia/"
 SRC_URI="http://www.xiph.org/paranoia/download/${MY_P}.src.tgz
 	mirror://gentoo/${P}-fbsd-2.patch.bz2"
 
-IUSE="kernel_linux"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+IUSE="kernel_linux"
 
 src_unpack() {
 	unpack ${A}
