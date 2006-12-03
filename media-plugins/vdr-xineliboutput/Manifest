@@ -5,6 +5,10 @@ AUX confd-1.0.0_pre6 856 RMD160 0d48271fe6041316f7ad95267f180f896b76c78b SHA1 5d
 MD5 9c6ae841c1edf3cf7d8199b0e77c8e09 files/confd-1.0.0_pre6 856
 RMD160 0d48271fe6041316f7ad95267f180f896b76c78b files/confd-1.0.0_pre6 856
 SHA256 fd30a70c06553463414e93771306a59fdabbcf674218dac49d4af46096d6089b files/confd-1.0.0_pre6 856
+AUX vdr-xineliboutput-1.0.0_pre6-frontend-close.diff 757 RMD160 9b29811415313726d3202daf1d460e1569752ba5 SHA1 3f7a950198fe326db3cfe547bfac34c1e9b9d627 SHA256 be30d77e27afef1cf3a74ee2be62086817dc88cdbacd7c830e6d97f4e0391b96
+MD5 044bc03b4437d776720aaf62289c5c6f files/vdr-xineliboutput-1.0.0_pre6-frontend-close.diff 757
+RMD160 9b29811415313726d3202daf1d460e1569752ba5 files/vdr-xineliboutput-1.0.0_pre6-frontend-close.diff 757
+SHA256 be30d77e27afef1cf3a74ee2be62086817dc88cdbacd7c830e6d97f4e0391b96 files/vdr-xineliboutput-1.0.0_pre6-frontend-close.diff 757
 AUX vdr-xineliboutput-1.0.0_pre6-uint64.diff 578 RMD160 aadccee14a7f8d2a521a3f57de5a2c5bc1a0112e SHA1 cb530366c58e0beb9dcaa5cea3173fbe7ada27ed SHA256 b701192054d2aa2ead5c77534fdf3a13a3d33d58254e5b0c81523995a6e188b5
 MD5 1726eca863d3c81e7d0327a7000dab36 files/vdr-xineliboutput-1.0.0_pre6-uint64.diff 578
 RMD160 aadccee14a7f8d2a521a3f57de5a2c5bc1a0112e files/vdr-xineliboutput-1.0.0_pre6-uint64.diff 578
@@ -14,10 +18,14 @@ EBUILD vdr-xineliboutput-1.0.0_pre6-r1.ebuild 1965 RMD160 c441a24fce66419c89631a
 MD5 50c77abb64b33b1fed61e6a7729e94d2 vdr-xineliboutput-1.0.0_pre6-r1.ebuild 1965
 RMD160 c441a24fce66419c89631a19ab2c7d987c3bdc87 vdr-xineliboutput-1.0.0_pre6-r1.ebuild 1965
 SHA256 b8115523cb2c900d311a6424eb6bbe1738b9f1164b875f2c80cbbf5694bc9e35 vdr-xineliboutput-1.0.0_pre6-r1.ebuild 1965
-MISC ChangeLog 4203 RMD160 124741c2721b0ebe08eb59f52f2cfcf3d49bf686 SHA1 2de3e19beddc49aaf7117e85e648db1b12f22aae SHA256 ef1598d1e7b8a13ed5f77d1f3ed1bdff78231761f7d399f543dc61ed39493d70
-MD5 7b14be71d104d4169f95272e75efa43c ChangeLog 4203
-RMD160 124741c2721b0ebe08eb59f52f2cfcf3d49bf686 ChangeLog 4203
-SHA256 ef1598d1e7b8a13ed5f77d1f3ed1bdff78231761f7d399f543dc61ed39493d70 ChangeLog 4203
+EBUILD vdr-xineliboutput-1.0.0_pre6-r2.ebuild 2003 RMD160 87124ddf37117ffa6c36e716b423a59fdb9c2b49 SHA1 87e52ae4b68898218161db94eedbfe071f1c4a81 SHA256 7a06f4949616bf58fb4951a2c73a8af45ea1fcae1ff9f44707569ec6eaf7c7c3
+MD5 c979f7db68437f2fc4d388cdde6062a5 vdr-xineliboutput-1.0.0_pre6-r2.ebuild 2003
+RMD160 87124ddf37117ffa6c36e716b423a59fdb9c2b49 vdr-xineliboutput-1.0.0_pre6-r2.ebuild 2003
+SHA256 7a06f4949616bf58fb4951a2c73a8af45ea1fcae1ff9f44707569ec6eaf7c7c3 vdr-xineliboutput-1.0.0_pre6-r2.ebuild 2003
+MISC ChangeLog 4484 RMD160 9d5fa11c052e9752246fa390bd148efe7ed0f12a SHA1 df4a9823472d131e0a708e1ad42130a70de760b7 SHA256 23aa5a12a91c47a0d7afec3d526547616a04b182865720ef81eff8d1736638de
+MD5 74b001741b5623785d5819f842f38817 ChangeLog 4484
+RMD160 9d5fa11c052e9752246fa390bd148efe7ed0f12a ChangeLog 4484
+SHA256 23aa5a12a91c47a0d7afec3d526547616a04b182865720ef81eff8d1736638de ChangeLog 4484
 MISC metadata.xml 353 RMD160 8098dcdec4e7d627012ff4cc0e1a70fc0061228e SHA1 a8466ebe913ea08351d9415bca28ee107e54a7cb SHA256 48731babb71989233956af5f82f8bd1b24625eab7b26493e43d753621c9ec359
 MD5 3ca7be3c0a30822246151344759d8d7e metadata.xml 353
 RMD160 8098dcdec4e7d627012ff4cc0e1a70fc0061228e metadata.xml 353
@@ -25,10 +33,13 @@ SHA256 48731babb71989233956af5f82f8bd1b24625eab7b26493e43d753621c9ec359 metadata
 MD5 fd45b66ef259466d00d5a2c17c68a2a2 files/digest-vdr-xineliboutput-1.0.0_pre6-r1 274
 RMD160 0b9a7728d31ce996bf3ba7f638349e28f20f7a10 files/digest-vdr-xineliboutput-1.0.0_pre6-r1 274
 SHA256 631fa9722e66e214233b9793ba998e6af7d068db0113273d00344248dc94e0d0 files/digest-vdr-xineliboutput-1.0.0_pre6-r1 274
+MD5 fd45b66ef259466d00d5a2c17c68a2a2 files/digest-vdr-xineliboutput-1.0.0_pre6-r2 274
+RMD160 0b9a7728d31ce996bf3ba7f638349e28f20f7a10 files/digest-vdr-xineliboutput-1.0.0_pre6-r2 274
+SHA256 631fa9722e66e214233b9793ba998e6af7d068db0113273d00344248dc94e0d0 files/digest-vdr-xineliboutput-1.0.0_pre6-r2 274
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFcuJlt2vP6XvVdOcRAl/WAJsHZgBOFY1SGWilHTlFtUuChtQmOwCgp+cU
-VQoDwrAgbLrPImTpjVng6i0=
-=LTkW
+iD8DBQFFcuOWt2vP6XvVdOcRAsG3AKC0PIpRci6TGy3fCvrXz93zIvFSsQCfZPG9
+d+nabj4Swk1zHznJnD/cxdk=
+=M6bP
 -----END PGP SIGNATURE-----
