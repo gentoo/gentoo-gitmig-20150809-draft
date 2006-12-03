@@ -1,6 +1,6 @@
 # ChangeLog for dev-embedded/pikdev
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/ChangeLog,v 1.27 2006/11/02 13:04:05 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/ChangeLog,v 1.28 2006/12/03 18:25:30 tove Exp $
 
 *pikdev-0.9.2.1 (02 Nov 2006)
 
@@ -9,7 +9,7 @@
   version bump as per bug #110496 thanks to Renato Caldas, Torbjorn Svensson,
   Gabriel Devenyi, Urriellu
 
-  22 Oct 2006; Piotr JaroszyÅski <peper@gentoo.org> pikdev-0.7.1-r2.ebuild:
+  22 Oct 2006; Piotr Jaroszyński <peper@gentoo.org> pikdev-0.7.1-r2.ebuild:
   Add ~amd64 keyword. Bug #110498.
 
   14 Jun 2006; Robin H. Johnson <robbat2@gentoo.org> pikdev-0.7.1.ebuild,
@@ -57,7 +57,7 @@
   ~x86 keyworded due to bug #57472
 
   18 Jul 2004; Daniel Black <dragonheart@gentoo.org> pikdev-0.6.6a.ebuild:
-  removed Dependancy overlap. Fixes bug #54809. Thanks to Diego PettenÃ²
+  removed Dependancy overlap. Fixes bug #54809. Thanks to Diego Pettenò
   <dgp85@users.sourceforge.net>
 
 *pikdev-0.6.6a (18 Jul 2004)
