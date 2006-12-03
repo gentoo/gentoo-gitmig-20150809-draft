@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/corkscrew
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/corkscrew/ChangeLog,v 1.4 2006/07/02 20:59:48 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/corkscrew/ChangeLog,v 1.5 2006/12/03 00:37:39 beandog Exp $
+
+  03 Dec 2006; Steve Dibb <beandog@gentoo.org> corkscrew-2.0.ebuild:
+  Add ~amd64, bug 145570
 
   02 Jul 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
   Japanese metadata.xml translation.  Thanks to Yoshino-san in bug #134208.
