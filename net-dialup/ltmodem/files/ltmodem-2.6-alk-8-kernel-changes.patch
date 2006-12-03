@@ -22,6 +22,15 @@ diff -Nru ltmodem-2.6-alk-8.orig/lt_modem.c ltmodem-2.6-alk-8/lt_modem.c
 diff -Nru ltmodem-2.6-alk-8.orig/serial.c ltmodem-2.6-alk-8/serial.c
 --- ltmodem-2.6-alk-8.orig/serial.c	2005-12-12 03:07:17.000000000 +0200
 +++ ltmodem-2.6-alk-8/serial.c	2006-09-21 21:53:08.055717500 +0300
+@@ -99,7 +99,7 @@
+ */
+ 
+ #include <linux/version.h>
+-#include <linux/config.h>
++#include <linux/autoconf.h>
+ #include <linux/module.h>
+ #include <linux/tty.h>
+ #include <linux/ioport.h>
 @@ -732,7 +732,9 @@
  	.devfs_name		= "tts/LT",
  	.dev_name		= "ttyLT",
