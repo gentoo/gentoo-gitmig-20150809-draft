@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.1.2.ebuild,v 1.10 2006/11/30 21:09:34 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.1.2.ebuild,v 1.11 2006/12/03 03:22:17 vapier Exp $
 
 inherit libtool flag-o-matic eutils toolchain-funcs
 
@@ -11,24 +11,24 @@ SRC_URI="http://downloads.xiph.org/releases/vorbis/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~x86-fbsd"
 IUSE="aotuv"
 
 RDEPEND=">=media-libs/libogg-1.0"
 DEPEND="${RDEPEND}
 	sys-apps/sed"
 
-S="${WORKDIR}/${P/_*/}"
+S=${WORKDIR}/${P/_*/}
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	cd ${S}
+	cd "${S}"
 
 	# Fix a gcc crash.  With the new atexit patch to gcc, it
 	# seems it does not handle -mno-ieee-fp very well.
 	sed -i -e "s:-mno-ieee-fp::g" configure
 
-	use aotuv && epatch ${DISTDIR}/aotuvb4.51-${P}.diff.bz2
+	use aotuv && epatch "${DISTDIR}"/aotuvb4.51-${P}.diff.bz2
 
 	elibtoolize
 
