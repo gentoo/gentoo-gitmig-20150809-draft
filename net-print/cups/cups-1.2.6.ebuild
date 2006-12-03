@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.6.ebuild,v 1.9 2006/12/01 18:06:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.6.ebuild,v 1.10 2006/12/03 18:56:19 dertobi123 Exp $
 
 WANT_AUTOMAKE=latest
 
@@ -15,7 +15,7 @@ SRC_URI="http://gentooexperimental.org/~genstef/dist/${MY_P}-source.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ia64 m68k ~mips ~ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="ssl slp pam php samba nls dbus tiff png ppds jpeg X"
 
 DEP="pam? ( virtual/pam )
