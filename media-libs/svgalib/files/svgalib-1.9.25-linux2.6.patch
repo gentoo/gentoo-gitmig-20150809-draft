@@ -4,6 +4,7 @@
 	- dont include headers that dont exist in 2.4.x kernels
 	- use module_param() for 2.6.x and MODULE_PARM() for all others
 	- dont declare all_devices as static since it is exported
+	- dont include <linux/config.h> as the build system does it for us
 
 --- svgalib/kernel/svgalib_helper/Makefile
 +++ svgalib/kernel/svgalib_helper/Makefile
@@ -61,6 +62,12 @@
  # else
 --- svgalib/kernel/svgalib_helper/main.c
 +++ svgalib/kernel/svgalib_helper/main.c
+@@ -1,5 +1,3 @@
+-#include <linux/config.h>
+-
+ #if defined (CONFIG_MODVERSIONS) && !defined (MODVERSIONS)
+ # define MODVERSIONS
+ #endif
 @@ -19,15 +19,22 @@
  #include <linux/ioport.h>
  #include <linux/interrupt.h>
