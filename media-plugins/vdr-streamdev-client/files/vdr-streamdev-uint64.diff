@@ -1,0 +1,12 @@
+diff -ru streamdev-20051219-orig/client/socket.c streamdev-20051219/client/socket.c
+--- streamdev-20051219-orig/client/socket.c	2006-12-03 16:38:44.044459126 +0100
++++ streamdev-20051219/client/socket.c	2006-12-03 16:38:58.315865440 +0100
+@@ -54,7 +54,7 @@
+ 		return false;
+ 	}
+ 
+-	uint64 elapsed = starttime.Elapsed();
++	uint64_t elapsed = starttime.Elapsed();
+ 	if (Expected != 0) { // XXX+ What if elapsed > TimeoutMs?
+ 		TimeoutMs -= elapsed;
+ 		return Expect(Expected, NULL, TimeoutMs);
