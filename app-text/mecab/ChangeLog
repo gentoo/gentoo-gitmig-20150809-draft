@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mecab
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.29 2006/11/03 10:17:30 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.30 2006/12/03 18:25:06 corsair Exp $
+
+  03 Dec 2006; Markus Rothe <corsair@gentoo.org> mecab-0.92.ebuild:
+  Stable on ppc64
 
   03 Nov 2006; Akinori Hattori <hattya@gentoo.org> files/digest-mecab-0.92,
   Manifest:
