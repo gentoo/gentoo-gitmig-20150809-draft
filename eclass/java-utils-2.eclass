@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.30 2006/12/03 17:42:53 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.31 2006/12/03 18:41:25 betelgeuse Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -290,7 +290,6 @@ java-pkg_newjar() {
 	java-pkg_dojar "${new_jar_dest}"
 }
 
-
 # ------------------------------------------------------------------------------
 # @ebuild-function java-pkg_addcp
 #
@@ -431,8 +430,10 @@ java-pkg_dohtml() {
 
 	[[ ${#} -lt 1 ]] &&  die "At least one argument required for ${FUNCNAME}"
 
-	# TODO-nichoj find out what exactly -f package-list does
+	# from /usr/lib/portage/bin/dohtml -h
+	#  -f   Set list of allowed extensionless file names.
 	dohtml -f package-list "$@"
+
 	# this probably shouldn't be here but it provides
 	# a reasonable way to catch # docs for all of the
 	# old ebuilds.
@@ -809,7 +810,7 @@ java-pkg_getjars() {
 	# Only record jars that aren't build-only
 	if [[ -z "${build_only}" ]]; then
 		oldifs="${IFS}"
-		IFS=":"
+		IFS=","
 		for pkg in ${pkgs}; do
 			java-pkg_record-jar_ "${pkg}"
 		done
