@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/diablo-jdk/diablo-jdk-1.5.0.07.01.ebuild,v 1.2 2006/12/03 16:49:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/diablo-jdk/diablo-jdk-1.5.0.07.01.ebuild,v 1.3 2006/12/03 16:51:21 flameeyes Exp $
 
 inherit java-vm-2 eutils versionator
 
@@ -16,7 +16,7 @@ SRC_URI="$javafile"
 LICENSE="sun-bcla-java-vm"
 SLOT="1.5"
 KEYWORDS="-* ~x86-fbsd"
-RESTRICT="fetch nofetch"
+RESTRICT="fetch"
 IUSE="X examples nsplugin jce"
 
 QA_TEXTRELS_x86="opt/${P}/jre/lib/i386/motif21/libmawt.so opt/${P}/jre/lib/i386/server/libjvm.so opt/${P}/jre/lib/i386/client/libjvm.so"
