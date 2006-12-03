@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/sessreg
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/sessreg/ChangeLog,v 1.25 2006/12/01 23:37:47 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/sessreg/ChangeLog,v 1.26 2006/12/03 15:52:05 joshuabaergen Exp $
+
+  03 Dec 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  sessreg-1.0.2.ebuild:
+  Don't need to reconf, since the patch that requires it is gone.  This fixes
+  bug #156958. (csreg for the find)
 
 *sessreg-1.0.2 (01 Dec 2006)
 
