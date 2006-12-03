@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX gst-plugins-pango-0.8.8-sub_position.patch 1648 RMD160 1065fdfd7ede5de1a3b7a5252a9d10539187706c SHA1 fabac17683b7998deac629f7cb8704cc4253bd0b SHA256 d50414a724d1331bc0df80ea209e65ab043ca59450f7b0677f0d9aeb4740ba6a
 MD5 ed95a2d8b0c203bc1b8b72118101a97b files/gst-plugins-pango-0.8.8-sub_position.patch 1648
 RMD160 1065fdfd7ede5de1a3b7a5252a9d10539187706c files/gst-plugins-pango-0.8.8-sub_position.patch 1648
@@ -29,10 +32,10 @@ EBUILD gst-plugins-pango-0.10.7.ebuild 430 RMD160 5856e7c1c1b76c17a1d8e0b6f3fb8e
 MD5 9e91517b380f8b5d0d442c429e061a3f gst-plugins-pango-0.10.7.ebuild 430
 RMD160 5856e7c1c1b76c17a1d8e0b6f3fb8edd15081e38 gst-plugins-pango-0.10.7.ebuild 430
 SHA256 a5c709c55610c93ec6f6b10223ea70588cf6ab75589f735b1ec920e8a6d8774a gst-plugins-pango-0.10.7.ebuild 430
-EBUILD gst-plugins-pango-0.10.8.ebuild 437 RMD160 e26b020283b5c814c1a659d970437e1b1856eaa1 SHA1 d86741855aca94f1bfe8c59e5baf70deebb1cc6e SHA256 11b769a57aae4e3e8c00a909ba6429e9ef3aa0195ca2dc55ecdd639ed9ef5a59
-MD5 06187d39d886525f553acced1b75a8a7 gst-plugins-pango-0.10.8.ebuild 437
-RMD160 e26b020283b5c814c1a659d970437e1b1856eaa1 gst-plugins-pango-0.10.8.ebuild 437
-SHA256 11b769a57aae4e3e8c00a909ba6429e9ef3aa0195ca2dc55ecdd639ed9ef5a59 gst-plugins-pango-0.10.8.ebuild 437
+EBUILD gst-plugins-pango-0.10.8.ebuild 431 RMD160 c49aacde5dd43e74275a934e15823b747722eab3 SHA1 ab0cb6b6490f23cdfd280e13aa81d320d62f49cd SHA256 cb8fa8f1799a96e132f5dae382c690feca194f386f2c5692a99fa2c61654fb87
+MD5 5420bdf5508159418357978b94dfd12c gst-plugins-pango-0.10.8.ebuild 431
+RMD160 c49aacde5dd43e74275a934e15823b747722eab3 gst-plugins-pango-0.10.8.ebuild 431
+SHA256 cb8fa8f1799a96e132f5dae382c690feca194f386f2c5692a99fa2c61654fb87 gst-plugins-pango-0.10.8.ebuild 431
 EBUILD gst-plugins-pango-0.10.9.ebuild 434 RMD160 71bf74a0ff4aa2ea94ad709ed907cb1678804567 SHA1 69248e7a302e96946d3974403aa9291cc605ebcf SHA256 8580a5abafb9ae75e21ee7875b36a9036770b240225ab7a8415b3ac7274c7846
 MD5 db898ca392e426407f14b5222d7ce965 gst-plugins-pango-0.10.9.ebuild 434
 RMD160 71bf74a0ff4aa2ea94ad709ed907cb1678804567 gst-plugins-pango-0.10.9.ebuild 434
@@ -105,3 +108,10 @@ SHA256 c01a4735d25772dd72951e305eb31200b883b20ad3993cf453e8d9e73c6207de files/di
 MD5 b040ebb3cb8e5116893f8166bd8c8bcb files/digest-gst-plugins-pango-0.8.9 259
 RMD160 0498e9b7c85e28f0a0f740355b037b27ecdd4969 files/digest-gst-plugins-pango-0.8.9 259
 SHA256 e542b7466fb2485c94556f3570067f75055906e3a02650a77037290a1c774141 files/digest-gst-plugins-pango-0.8.9 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFckNHamhnQswr0vIRAnQmAJ9cXN4vM5v6xBAaB0SdgvKLeKdd0ACfdpoF
+NaWIlKmdbta8b0+/ik4dbt8=
+=4wRZ
+-----END PGP SIGNATURE-----
