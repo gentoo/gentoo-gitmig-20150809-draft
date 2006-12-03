@@ -1,0 +1,10 @@
+# ChangeLog for app-cdr/dvd95
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd95/ChangeLog,v 1.1 2006/12/03 05:20:29 pylon Exp $
+
+*dvd95-1.1_p1 (03 Dec 2006)
+
+  03 Dec 2006; Lars Weiler <pylon@gentoo.org> +metadata.xml,
+  +dvd95-1.1_p1.ebuild:
+  New ebuild from Bug #141704.
+
