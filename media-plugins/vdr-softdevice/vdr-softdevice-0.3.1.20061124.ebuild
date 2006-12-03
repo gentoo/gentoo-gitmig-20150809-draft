@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.3.1.20061124.ebuild,v 1.1 2006/11/24 21:51:36 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.3.1.20061124.ebuild,v 1.2 2006/12/03 14:23:57 zzam Exp $
 
 inherit vdr-plugin
 
@@ -48,7 +48,8 @@ DEPEND="${RDEPEND}
 PATCHES="
 		${FILESDIR}/vdr-softdevice-0.2.3-shm-fullscreen.diff
 		${FILESDIR}/softdevice-cvs-xinerama-configure-opts.patch
-		${FILESDIR}/vdr-softdevice-0.3.1-osdmode-software-default.diff"
+		${FILESDIR}/vdr-softdevice-0.3.1-osdmode-software-default.diff
+		${FILESDIR}/vdr-softdevice-0.3.1-uint64.diff"
 
 pkg_setup() {
 	vdr-plugin_pkg_setup
