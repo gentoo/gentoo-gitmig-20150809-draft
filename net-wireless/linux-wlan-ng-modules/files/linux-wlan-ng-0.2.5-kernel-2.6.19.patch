@@ -1,0 +1,247 @@
+Index: src/include/wlan/wlan_compat.h
+===================================================================
+--- src/include/wlan/wlan_compat.h	(revision 1800)
++++ src/include/wlan/wlan_compat.h	(working copy)
+@@ -89,6 +89,11 @@
+ #endif
+ 
+ #if defined(__KERNEL__)
++
++#ifndef AUTOCONF_INCLUDED
++#include <linux/config.h>
++#endif
++
+ #if defined(__x86_64__)
+ 	#define WLAN_CPU_FAMILY		WLAN_x86_64
+ 	#define WLAN_SYSARCH		WLAN_PCAT
+@@ -276,6 +281,12 @@
+ 
+ #if defined(__KERNEL__)
+ 
++#if (LINUX_VERSION_CODE < KERNEL_VERSION(2,6,19))
++#define PT_REGS    , struct pt_regs *regs
++#else
++#define PT_REGS
++#endif
++
+ #if (LINUX_VERSION_CODE < KERNEL_VERSION(2,6,7))
+ #  define del_singleshot_timer_sync(a)  del_timer_sync(a)
+ #endif
+Index: src/p80211/p80211conv.c
+===================================================================
+--- src/p80211/p80211conv.c	(revision 1800)
++++ src/p80211/p80211conv.c	(working copy)
+@@ -54,7 +54,7 @@
+ 
+ #define __NO_VERSION__		/* prevent the static definition */
+ 
+-#include <linux/config.h>
++
+ #include <linux/version.h>
+ 
+ #include <linux/module.h>
+Index: src/p80211/p80211netdev.c
+===================================================================
+--- src/p80211/p80211netdev.c	(revision 1800)
++++ src/p80211/p80211netdev.c	(working copy)
+@@ -53,7 +53,7 @@
+ /*================================================================*/
+ /* System Includes */
+ 
+-#include <linux/config.h>
++
+ #include <linux/version.h>
+ 
+ #include <linux/module.h>
+Index: src/p80211/p80211req.c
+===================================================================
+--- src/p80211/p80211req.c	(revision 1800)
++++ src/p80211/p80211req.c	(working copy)
+@@ -53,7 +53,7 @@
+ /*================================================================*/
+ /* System Includes */
+ 
+-#include <linux/config.h>
++
+ #include <linux/version.h>
+ 
+ #include <linux/module.h>
+Index: src/p80211/p80211wext.c
+===================================================================
+--- src/p80211/p80211wext.c	(revision 1800)
++++ src/p80211/p80211wext.c	(working copy)
+@@ -37,7 +37,7 @@
+ /*================================================================*/
+ /* System Includes */
+ 
+-#include <linux/config.h>
++
+ #include <linux/version.h>
+ 
+ #include <linux/kernel.h>
+Index: src/p80211/p80211wep.c
+===================================================================
+--- src/p80211/p80211wep.c	(revision 1800)
++++ src/p80211/p80211wep.c	(working copy)
+@@ -48,7 +48,7 @@
+ /*================================================================*/
+ /* System Includes */
+ 
+-#include <linux/config.h>
++
+ #include <linux/version.h>
+ 
+ #include <linux/netdevice.h>
+Index: src/p80211/p80211mod.c
+===================================================================
+--- src/p80211/p80211mod.c	(revision 1800)
++++ src/p80211/p80211mod.c	(working copy)
+@@ -56,7 +56,7 @@
+ /*================================================================*/
+ /* System Includes */
+ 
+-#include <linux/config.h>
++
+ #include <linux/version.h>
+ 
+ #include <linux/module.h>
+Index: src/prism2/driver/hfa384x_usb.c
+===================================================================
+--- src/prism2/driver/hfa384x_usb.c	(revision 1800)
++++ src/prism2/driver/hfa384x_usb.c	(working copy)
+@@ -116,7 +116,7 @@
+ 
+ #include <wlan/version.h>
+ 
+-#include <linux/config.h>
++
+ #include <linux/version.h>
+ 
+ #include <linux/module.h>
+Index: src/prism2/driver/prism2_cs.c
+===================================================================
+--- src/prism2/driver/prism2_cs.c	(revision 1800)
++++ src/prism2/driver/prism2_cs.c	(working copy)
+@@ -41,7 +41,7 @@
+ #else
+ dev_link_t	*prism2sta_attach(void);
+ static void	prism2sta_detach(dev_link_t *link);
+-static int	prism2sta_config(dev_link_t *link);
++static void	prism2sta_config(dev_link_t *link);
+ static void	prism2sta_release(u_long arg);
+ static int 	prism2sta_event (event_t event, int priority, event_callback_args_t *args);
+ 
+@@ -243,14 +243,13 @@
+ 	prism2sta_ifstate(wlandev, P80211ENUM_ifstate_disable);
+ #else
+ 	wlandev = link->priv;
+-#endif
+-	wlandev = link->priv;
+ 
+         link->state |= DEV_SUSPEND;
+         if (link->state & DEV_CONFIG) {	
+ 		prism2sta_ifstate(wlandev, P80211ENUM_ifstate_disable);
+ 		pcmcia_release_configuration(link->handle);
+ 	}
++#endif
+ 
+ 	DBFEXIT;
+ 
+Index: src/prism2/driver/prism2mgmt.c
+===================================================================
+--- src/prism2/driver/prism2mgmt.c	(revision 1800)
++++ src/prism2/driver/prism2mgmt.c	(working copy)
+@@ -63,7 +63,7 @@
+ 
+ #include <wlan/version.h>
+ 
+-#include <linux/config.h>
++
+ #include <linux/version.h>
+ 
+ #include <linux/if_arp.h>
+Index: src/prism2/driver/prism2mib.c
+===================================================================
+--- src/prism2/driver/prism2mib.c	(revision 1800)
++++ src/prism2/driver/prism2mib.c	(working copy)
+@@ -56,7 +56,7 @@
+ 
+ #include <wlan/version.h>
+ 
+-#include <linux/config.h>
++
+ #include <linux/version.h>
+ 
+ #include <linux/module.h>
+Index: src/prism2/driver/prism2sta.c
+===================================================================
+--- src/prism2/driver/prism2sta.c	(revision 1800)
++++ src/prism2/driver/prism2sta.c	(working copy)
+@@ -56,7 +56,7 @@
+ 
+ #include <wlan/version.h>
+ 
+-#include <linux/config.h>
++
+ #include <linux/version.h>
+ 
+ #include <linux/module.h>
+Index: src/prism2/driver/hfa384x.c
+===================================================================
+--- src/prism2/driver/hfa384x.c	(revision 1800)
++++ src/prism2/driver/hfa384x.c	(working copy)
+@@ -120,7 +120,7 @@
+ #define WLAN_DBVAR	prism2_debug
+ #include <wlan/version.h>
+ 
+-#include <linux/config.h>
++
+ #include <linux/version.h>
+ 
+ #include <linux/module.h>
+@@ -3210,7 +3210,7 @@
+ * Call context:
+ *	Ummm, could it be interrupt?
+ ----------------------------------------------------------------*/
+-irqreturn_t hfa384x_interrupt(int irq, void *dev_id, struct pt_regs *regs)
++irqreturn_t hfa384x_interrupt(int irq, void *dev_id PT_REGS)
+ {
+ 	int			reg;
+ 	wlandevice_t		*wlandev = (wlandevice_t*)dev_id;
+Index: src/README
+===================================================================
+--- src/README	(revision 1800)
++++ src/README	(working copy)
+@@ -53,4 +53,3 @@
+ src/prism2	- source for the Intersil PRISM2 MAC specific driver
+ src/shared	- source files (.c) that are shared among two or more components
+ src/wlanctl	- source for the wlanctl user-mode utility
+-src/wland	- source for the wland user-mode utility
+Index: CHANGES
+===================================================================
+--- CHANGES	(revision 1800)
++++ CHANGES	(working copy)
+@@ -41,6 +41,11 @@
+ * Intersil Corporation as part of PRISM(R) chipset product development.
+ *
+ * --------------------------------------------------------------------
++ - 2.6.19+ uses a different IRQ handler function prototype.
++ - linux/config.h is no more on 2.6.19+ kernels.
++0.2.6
++ - Fix another error that affected <2.6.15 builds on some compilers
++ - Fix a cut-n-paste error that broke 2.6.18 builds.
+ 0.2.5
+  - 2.6.18-rc fixes.
+  - A few tweaks for Wireless-Extensions-21
+Index: config.in
+===================================================================
+--- config.in	(revision 1800)
++++ config.in	(working copy)
+@@ -1,6 +1,6 @@
+ WLAN_VERSION=0
+ WLAN_PATCHLEVEL=2
+-WLAN_SUBLEVEL=5
++WLAN_SUBLEVEL=6
+ WLAN_EXTRAVERSION=
+ #LINUX_SRC=/usr/src/linux
+ PCMCIA_SRC=
