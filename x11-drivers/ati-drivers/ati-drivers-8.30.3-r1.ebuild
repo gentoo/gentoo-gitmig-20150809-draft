@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.30.3-r1.ebuild,v 1.1 2006/11/02 18:22:52 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.30.3-r1.ebuild,v 1.2 2006/12/03 15:51:37 lu_zero Exp $
 
 IUSE="acpi doc opengl"
 
-inherit eutils rpm multilib linux-mod linux-info toolchain-funcs
+inherit eutils rpm multilib linux-mod toolchain-funcs
 
 DESCRIPTION="Ati precompiled drivers for r350, r300, r250 and r200 chipsets"
 HOMEPAGE="http://www.ati.com"
@@ -27,10 +27,10 @@ DEPEND=">=virtual/linux-sources-2.4
 
 PROVIDE="virtual/opengl"
 
+S="${WORKDIR}/common/lib/modules/fglrx/build_mod"
+
 ATIBIN="${D}/opt/ati/bin"
 RESTRICT="nostrip multilib-pkg-force stricter"
-
-MODULE_NAMES="fglrx(video:${WORKDIR}/common/lib/modules/fglrx/build_mod)"
 
 QA_EXECSTACK_x86="usr/lib/xorg/modules/dri/fglrx_dri.so"
 QA_EXECSTACK_amd64="usr/lib64/xorg/modules/dri/fglrx_dri.so usr/lib32/xorg/modules/dri/fglrx_dri.so"
@@ -78,38 +78,22 @@ choose_driver_paths() {
 
 pkg_setup(){
 	#check kernel and sets up KV_OBJ
+	MODULE_NAMES="fglrx(video)"
+	BUILD_TARGETS="kmod_build"
 	linux-mod_pkg_setup
-	local agp
-	ebegin "Checking for MTRR support enabled"
-	linux_chkconfig_present MTRR
-	eend $?
-	if [[ $? -ne 0 ]] ; then
-	ewarn "You don't have MTRR support enabled, the direct rendering"
-	ewarn "will not work."
+	BUILD_PARAMS="GCC_VER_MAJ=$(gcc-major-version) KVER=${KV_FULL} KDIR=${KV_DIR}"
+
+	if ! linux_checkconfig_present MTRR; then
+		ewarn "You don't have MTRR support enabled, the direct rendering will not work."
 	fi
 
-	ebegin "Checking for AGP support enabled"
-	linux_chkconfig_present AGP
-	eend $?
-
-	if [[ $? -ne 0 ]] ; then
-
-		ebegin "Checking for PCI Express support enabled"
-		linux_chkconfig_present PCIEPORTBUS
-		eend $?
-
-		if [[ $? -ne 0 ]] ; then
-			ewarn "If you don't have either AGP or PCI Express support enabled, direct rendering"
-			ewarn "could work only using the internal support."
-		fi
-
+	if linux_chkconfig_builtin DRM; then
+		ewarn "You have DRM support enabled builtin, the direct rendering will not work."
 	fi
-	ebegin "Checking for DRM support disabled"
-	! linux_chkconfig_builtin DRM
-	eend $?
-	if [[ $? -ne 0 ]] ; then
-	ewarn "You have DRM support enabled builtin, the direct rendering"
-	ewarn "will not work."
+
+	if ! linux_chkconfig_present AGP && ! linux_chkconfig_present PCIEPORTBUS ;then
+		ewarn "If you don't have either AGP or PCI Express support enabled, direct rendering"
+		ewarn "could work only using the internal support."
 	fi
 
 	# Set up X11 implementation
@@ -142,6 +126,8 @@ src_unpack() {
 
 	rm -rf ${ARCH_DIR}/usr/X11R6/bin/{fgl_glxgears,fireglcontrolpanel}
 
+	epatch ${FILESDIR}/${PN}-2.6.19.patch
+
 	if use acpi
 	then
 		sed -i \
@@ -158,28 +144,17 @@ src_unpack() {
 
 src_compile() {
 	einfo "Building the DRM module..."
-	cd ${WORKDIR}/common/lib/modules/fglrx/build_mod
 	ln -s \
 	${ARCH_DIR}/lib/modules/fglrx/build_mod/libfglrx_ip.a.GCC$(gcc-major-version) \
 	|| die "cannot find precompiled core"
 
-	if kernel_is 2 6
-	then
-		set_arch_to_kernel
-		addwrite "/usr/src/${FK}"
+	export _POSIX2_VERSION="199209"
+
+	if kernel_is 2 6; then
 		cp 2.6.x/Makefile .
-		export _POSIX2_VERSION="199209"
-		if use_m ;
-		then
-			make -C ${KV_DIR} M="`pwd`" GCC_VER_MAJ=$(gcc-major-version) \
-				modules || ewarn "DRM module not built"
-		else
-			make -C ${KV_DIR} SUBDIRS="`pwd`" GCC_VER_MAJ=$(gcc-major-version) \
-				modules || ewarn "DRM module not built"
-		fi
-		set_arch_to_portage
+		convert_to_m Makefile
+		linux-mod_src_compile
 	else
-		export _POSIX2_VERSION="199209"
 		# That is the dirty way to avoid the id -u check
 		sed -e 's:`id -u`:0:' \
 			-e "s:\`uname -r\`:${KV_FULL}:" \
@@ -200,7 +175,6 @@ pkg_preinst() {
 
 src_install() {
 	local ATI_LIBGL_PATH=""
-	cd ${WORKDIR}/common/lib/modules/fglrx/build_mod
 	linux-mod_src_install
 
 	cd ${WORKDIR}
