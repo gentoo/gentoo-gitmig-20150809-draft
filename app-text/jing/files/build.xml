@@ -9,7 +9,7 @@
 			destdir="build"
 			source="1.4">
 			<classpath>
-				<pathelement path="bin/isorelax.jar:bin/saxon.jar:bin/xerces.jar" />
+				<fileset dir="bin" includes="*.jar"/>
 			</classpath>
 		</javac>
 		
