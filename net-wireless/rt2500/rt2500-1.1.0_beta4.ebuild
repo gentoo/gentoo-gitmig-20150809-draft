@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/rt2500-1.1.0_beta4.ebuild,v 1.5 2006/11/19 16:55:29 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/rt2500-1.1.0_beta4.ebuild,v 1.6 2006/12/03 20:33:00 uberlord Exp $
 
 inherit eutils linux-mod kde-functions
 set-qtdir 3
@@ -29,6 +29,15 @@ pkg_setup() {
 		BUILD_TARGETS="modules"
 	else
 		die "please use a kernel >=2.6.6"
+	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	if kernel_is ge 2 6 19 ; then
+		sed -i -e '/^#include <linux\/config.h> .*/ d' Module/rt_config.h || die
 	fi
 }
 
