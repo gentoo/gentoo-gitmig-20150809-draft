@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.29 2006/12/03 13:05:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.30 2006/12/03 17:42:53 betelgeuse Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -305,7 +305,6 @@ java-pkg_addcp() {
 	java-pkg_do_write_
 }
 
-
 # ------------------------------------------------------------------------------
 # @ebuild-function java-pkg_doso
 #
@@ -440,7 +439,17 @@ java-pkg_dohtml() {
 	java-pkg_recordjavadoc
 }
 
-# TODO document
+# ------------------------------------------------------------------------------
+# @ebuild-function java-pkg_dojavadoc
+#
+# Installs javadoc documentation. This should be controlled by the doc use flag.
+#
+# @param $1: - The javadoc root directory.
+#
+# @example:
+#	java-pkg_dojavadoc docs/api
+#
+# ------------------------------------------------------------------------------
 java-pkg_dojavadoc() {
 	local dir="$1"
 
@@ -766,43 +775,47 @@ java-pkg_jarfrom() {
 # that have to be present only at build time and are not needed on runtime
 # (junit testing etc).
 #
-# Example: Get the classpath for xerces-2,
-#	java-pkg_getjars xerces-2 xalan
+# Example: Get the classpath for xerces-2 and xalan,
+#	java-pkg_getjars xerces-2,xalan
 # Example Return:
 #	/usr/share/xerces-2/lib/xml-apis.jar:/usr/share/xerces-2/lib/xmlParserAPIs.jar:/usr/share/xalan/lib/xalan.jar
 #
 # @param $1 - (optional) "--build-only" makes the jar(s) not added into
 #	package.env DEPEND line.
-# @param $@ - list of packages to get jars from
+# @param $2 - list of packages to get jars from
+#   (passed to java-config --classpath)
 # ------------------------------------------------------------------------------
 java-pkg_getjars() {
 	debug-print-function ${FUNCNAME} $*
 
-	local build_only=""
+	[[ ${#} -lt 1 || ${#} -gt 2 ]] && die "${FUNCNAME} takes only one or two arguments"
 
 	if [[ "${1}" = "--build-only" ]]; then
-		build_only="true"
+		local build_only="true"
 		shift
 	fi
 
-	[[ ${#} -lt 1 ]] && die "At least one argument needed"
+	local classpath pkgs="${1}"
+	jars="$(java-config --classpath=${pkgs})"
+	[[ -z "${jars}" ]] && die "java-config --classpath=${pkgs} failed"
+	debug-print "${pkgs}:${jars}"
 
-	# NOTE could probably just pass $@ to java-config --classpath. and return it
-	local classpath pkg
-	for pkg in ${@//,/ }; do
-	#for pkg in $(echo "$@" | tr ',' ' '); do
-		jars="$(java-config --classpath=${pkg})"
-		[[ -z "${jars}" ]] && die "java-config --classpath=${pkg} failed"
-		debug-print "${pkg}:${jars}"
+	if [[ -z "${classpath}" ]]; then
+		classpath="${jars}"
+	else
+		classpath="${classpath}:${jars}"
+	fi
 
-		if [[ -z "${classpath}" ]]; then
-			classpath="${jars}"
-		else
-			classpath="${classpath}:${jars}"
-		fi
-		# Only record jars that aren't build-only
-		[[ -z "${build_only}" ]] && java-pkg_record-jar_ "${pkg}"
-	done
+	# Only record jars that aren't build-only
+	if [[ -z "${build_only}" ]]; then
+		oldifs="${IFS}"
+		IFS=":"
+		for pkg in ${pkgs}; do
+			java-pkg_record-jar_ "${pkg}"
+		done
+		IFS="${oldifs}"
+	fi
+
 	echo "${classpath}"
 }
 
