@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.78.2.ebuild,v 1.2 2006/11/17 15:37:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.78.2.ebuild,v 1.3 2006/12/03 18:44:27 zzam Exp $
 
 inherit eutils libtool
 
@@ -48,3 +48,10 @@ src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog NEWS README THANKS
 }
+
+pkg_postinst() {
+	ewarn "If you've upgraded from a previous version of ${PN}, you may need to re-emerge"
+	ewarn "packages that linked against ${PN} (vlc, vcdimager and more) by running:"
+	ewarn "\trevdep-rebuild"
+}
+
