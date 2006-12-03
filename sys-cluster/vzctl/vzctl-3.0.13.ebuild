@@ -1,18 +1,16 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.13.ebuild,v 1.1 2006/11/29 22:17:20 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.13.ebuild,v 1.2 2006/12/03 08:33:48 hollow Exp $
 
 inherit bash-completion eutils flag-o-matic multilib
 
 DESCRIPTION="OpenVZ VPS control utility"
 HOMEPAGE="http://openvz.org/"
 SRC_URI="http://download.openvz.org/utils/${PN}/${PV}/src/${P}.tar.bz2"
-#	http://dev.gentoo.org/~phreak/distfiles/${PN}-patches-${PVR}.tar.bz2
-#	http://dev.gentoo.org/~hollow/distfiles/${PN}-patches-${PVR}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~sparc ~x86"
 IUSE="bash-completion logrotate udev"
 
 RDEPEND="logrotate? ( app-admin/logrotate )
@@ -25,14 +23,7 @@ RDEPEND="logrotate? ( app-admin/logrotate )
 
 DEPEND="${RDEPEND}"
 
-src_unpack() {
-	unpack ${A}
-
-#	epatch "${WORKDIR}/patches"/*.patch
-}
-
 src_compile() {
-	append-flags -Wall -g2
 	emake CFLAGS="${CFLAGS}" || die
 }
 
@@ -52,15 +43,8 @@ src_install() {
 	rm -rf "${D}"/etc/bash_completion.d
 	dobashcompletion "${S}"/etc/bash_completion.d/vzctl.sh vzctl
 
-	# Remove the logrotate entr unless USE=logrotate
+	# Remove the logrotate entry unless USE=logrotate
 	use logrotate || rm -rf "${D}"/etc/logrotate.d
-
-	# Provide a symlink for vz.conf (fixing #138462)
-#	dosym /etc/vz/vz.conf /etc/conf.d/vz
-
-	# Remove cruftie sysconfig entries
-	# We can get rid of that once ovz #254 is solved
-	rm -rf "${D}"/etc/sysconfig
 }
 
 pkg_postinst() {
