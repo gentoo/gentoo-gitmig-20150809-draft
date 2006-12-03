@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/xdirectfb-1.0_rc5-r1.ebuild,v 1.5 2005/08/25 00:06:53 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/xdirectfb-1.0_rc5-r1.ebuild,v 1.6 2006/12/03 10:57:28 swegener Exp $
 
 inherit eutils
 
@@ -71,7 +71,7 @@ src_install() {
 	doins ${S}/XDirectFB.1x
 	dodir /etc/skel
 	dodir /etc/X11/xinit
-	cp ${FILESDIR}/.dfbserverrc ${D}/etc/skel
+	cp ${FILESDIR}/dotdfbserverrc ${D}/etc/skel/.dfbserverrc
 	cp ${FILESDIR}/dfbserverrc ${D}/etc/X11/xinit
 
 	dohtml ${S}/programs/Xserver/hw/directfb/XDirectFB.1x.html
