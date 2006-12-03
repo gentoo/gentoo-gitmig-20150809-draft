@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuetools/cuetools-1.3.1.ebuild,v 1.3 2006/11/03 20:27:56 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuetools/cuetools-1.3.1.ebuild,v 1.4 2006/12/03 07:35:17 pylon Exp $
 
 inherit eutils
 
@@ -10,10 +10,19 @@ SRC_URI="http://download.berlios.de/cuetools/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND=""
+
+src_unpack() {
+	unpack ${A}
+
+	if use ppc; then
+		cd ${S}
+		epatch ${FILESDIR}/ppc.patch.bz2
+	fi
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die "install failed"
