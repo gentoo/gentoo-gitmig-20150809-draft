@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.14.7.ebuild,v 1.7 2006/12/01 19:30:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.14.7.ebuild,v 1.8 2006/12/03 03:25:28 vapier Exp $
 
 inherit eutils gnome2
 
@@ -9,29 +9,23 @@ HOMEPAGE="http://www.pango.org/"
 
 LICENSE="LGPL-2 FTL"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="doc"
 
-RDEPEND="|| (
-				(
-					x11-libs/libXrender
-					x11-libs/libX11
-					x11-libs/libXft
-				)
-				virtual/x11
-			)
+RDEPEND="x11-libs/libXrender
+	x11-libs/libX11
+	x11-libs/libXft
 	>=dev-libs/glib-2.10.0
 	>=media-libs/fontconfig-1.0.1
 	>=media-libs/freetype-2
 	>=x11-libs/cairo-1.2.2"
-
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
-	|| ( x11-proto/xproto virtual/x11 )
-	doc?	(
-				>=dev-util/gtk-doc-1
-				~app-text/docbook-xml-dtd-4.1.2
-			)"
+	x11-proto/xproto
+	doc? (
+		>=dev-util/gtk-doc-1
+		~app-text/docbook-xml-dtd-4.1.2
+	)"
 
 DOCS="AUTHORS ChangeLog* NEWS README TODO*"
 
