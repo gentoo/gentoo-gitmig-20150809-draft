@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/timidity-eawpatches
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/ChangeLog,v 1.29 2006/12/03 17:12:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/ChangeLog,v 1.30 2006/12/03 18:53:20 flameeyes Exp $
+
+  03 Dec 2006; Diego Pettenò <flameeyes@gentoo.org>
+  timidity-eawpatches-12-r5.ebuild:
+  Restrict binchecks and strip, only installs datafiles.
 
   03 Dec 2006; Diego Pettenò <flameeyes@gentoo.org>
   timidity-eawpatches-12-r5.ebuild:
