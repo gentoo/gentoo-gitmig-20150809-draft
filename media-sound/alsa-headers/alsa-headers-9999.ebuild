@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/alsa-headers-9999.ebuild,v 1.3 2006/10/15 12:29:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/alsa-headers-9999.ebuild,v 1.4 2006/12/03 18:55:49 flameeyes Exp $
 
 inherit eutils mercurial
 
@@ -14,6 +14,8 @@ IUSE=""
 
 DEPEND=""
 
+RESTRICT="binchecks strip"
+
 EHG_PROJECT="alsa-driver"
 
 S="${WORKDIR}"
@@ -21,7 +23,7 @@ S="${WORKDIR}"
 # Remove the sound symlink workaround...
 pkg_setup() {
 	if [[ -L "${ROOT}/usr/include/sound" ]]; then
-		rm  "${ROOT}/usr/include/sound"
+		rm	"${ROOT}/usr/include/sound"
 	fi
 }
 
