@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-1.4.6.ebuild,v 1.1 2006/11/11 16:49:19 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-1.4.6.ebuild,v 1.2 2006/12/03 18:33:33 opfer Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -14,7 +14,7 @@ IUSE="doc source"
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core
