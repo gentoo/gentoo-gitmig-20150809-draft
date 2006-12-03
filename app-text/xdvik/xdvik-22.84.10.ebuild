@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.10.ebuild,v 1.11 2006/12/02 03:19:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.10.ebuild,v 1.12 2006/12/03 03:08:17 vapier Exp $
 
 WANT_AUTOCONF=2.1
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://sourceforge.net/projects/xdvi/ http://xdvi.sourceforge.jp/"
 SRC_URI="mirror://sourceforge/xdvi/${P}.tar.gz
 	cjk? ( mirror://sourceforge.jp/xdvi/20703/${XDVIK_JP} )"
 
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 ~ppc ~ppc64 sh ~sparc ~x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="cjk motif neXt Xaw3d emacs"
@@ -32,7 +32,7 @@ RDEPEND=">=media-libs/t1lib-5.0.2
 	!app-text/texlive"
 DEPEND="${RDEPEND}"
 
-pkg_setup () {
+pkg_setup() {
 	if has_version virtual/tetex && built_with_use virtual/tetex X ; then
 		eerror "tetex provides xdvik when built with the X flag."
 		eerror "To install this version of xdvik re-install tetex"
@@ -41,7 +41,7 @@ pkg_setup () {
 	fi
 }
 
-src_unpack () {
+src_unpack() {
 	unpack ${P}.tar.gz
 	cd "${S}"
 	if use cjk ; then
@@ -69,7 +69,7 @@ src_unpack () {
 	eautoconf -m ../etc/autoconf
 }
 
-src_compile () {
+src_compile() {
 
 	local TEXMF_PATH=$(kpsewhich --expand-var='$TEXMFMAIN')
 	local myconf toolkit
@@ -96,7 +96,7 @@ src_compile () {
 	use emacs && elisp-compile xdvi-search.el
 }
 
-src_install () {
+src_install() {
 
 	dodir /etc/texmf/xdvi /etc/X11/app-defaults
 
