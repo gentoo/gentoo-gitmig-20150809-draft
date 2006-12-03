@@ -114,7 +114,7 @@ amd64		hardened/amd64					stable
 amd64		hardened/amd64/multilib				stable
 ppc		hardened/ppc					dev
 ppc64		hardened/ppc64					dev
-x86		hardened/x86					stable
+#x86		hardened/x86					stable
 x86		hardened/x86/2.6				stable
 
 # selinux profiles
