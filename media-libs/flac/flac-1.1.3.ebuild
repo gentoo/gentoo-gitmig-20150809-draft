@@ -1,16 +1,18 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.2-r8.ebuild,v 1.4 2006/12/03 15:09:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.3.ebuild,v 1.1 2006/12/03 15:09:50 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
-inherit libtool eutils flag-o-matic autotools
+inherit libtool eutils toolchain-funcs autotools
 
-PATCHLEVEL="8"
+MY_P="${P/_beta/-beta}"
+
+PATCHLEVEL="10"
 DESCRIPTION="free lossless audio encoder and decoder"
 HOMEPAGE="http://flac.sourceforge.net/"
-SRC_URI="mirror://sourceforge/flac/${P}.tar.gz
+SRC_URI="mirror://sourceforge/flac/${MY_P}.tar.gz
 	mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
@@ -27,16 +29,15 @@ DEPEND="${RDEPEND}
 
 RESTRICT="test"
 
+S="${WORKDIR}/${MY_P}"
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
 	# Enable only for GCC 4.1 and later
 	[[ $(gcc-major-version)$(gcc-minor-version) -ge 41 ]] || \
-		export EPATCH_EXCLUDE="130_all_visibility.patch 140_all_visibility-xmms.patch 160_all_protected.patch"
-
-	# Hard-disable the XMMS plugin now that XMMS is removed.
-	sed -i -e '/AM_PATH_XMMS/s:^.*$:true:' "${S}/configure.in"
+		export EPATCH_EXCLUDE="130_all_visibility.patch 160_all_protected.patch"
 
 	EPATCH_SUFFIX="patch" \
 	epatch "${WORKDIR}/patches"
@@ -50,7 +51,7 @@ src_compile() {
 		$(use_enable sse) \
 		$(use_enable 3dnow) \
 		$(use_enable debug) \
-		$(use_enable doc) \
+		$(use_enable doc doxygen-docs) \
 		--disable-dependency-tracking || die
 
 	# the man page ebuild requires docbook2man... yick!
@@ -64,11 +65,12 @@ src_install() {
 		install || die "make install failed"
 	dodoc AUTHORS README
 
+	use doc || rm -rf "${D}/usr/share/doc/${PF}/api"
+
 	doman man/{flac,metaflac}.1
 }
 
 pkg_postinst() {
 	ewarn "If you've upgraded from a previous version of flac, you may need to re-emerge"
-	ewarn "packages that linked against flac by running:"
-	ewarn "revdep-rebuild"
+	ewarn "packages that linked against flac by running revdep-rebuild"
 }

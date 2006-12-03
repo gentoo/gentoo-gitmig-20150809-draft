@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.2-r3.ebuild,v 1.14 2006/11/25 11:07:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.2-r3.ebuild,v 1.15 2006/12/03 15:09:50 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -30,7 +30,7 @@ src_unpack() {
 	cd "${S}"
 
 	# Hard-disable the XMMS plugin now that XMMS is removed.
-	sed -i -e '/AM_PATH_XMMS/d' "${S}/configure.in"
+	sed -i -e '/AM_PATH_XMMS/s:^.*$:true:' "${S}/configure.in"
 
 	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/patches
 
