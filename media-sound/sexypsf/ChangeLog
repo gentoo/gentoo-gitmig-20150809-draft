@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/sexypsf
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sexypsf/ChangeLog,v 1.20 2006/11/04 06:55:53 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sexypsf/ChangeLog,v 1.21 2006/12/03 18:04:19 tove Exp $
 
   04 Nov 2006; Harald van Dĳk <truedfx@gentoo.org> -sexypsf-0.4.5.ebuild,
   -sexypsf-0.4.6.ebuild:
@@ -19,32 +19,32 @@
   files/digest-sexypsf-0.4.6, files/digest-sexypsf-0.4.7, Manifest:
   Fixing SHA256 digest, pass four
 
-  19 Feb 2006; Harald van DÄ³k <truedfx@gentoo.org>
+  19 Feb 2006; Harald van Dĳk <truedfx@gentoo.org>
   files/sexypsf-0.4.7-misc.patch, sexypsf-0.4.7.ebuild:
   Remove bmp support as beep-media-player is going away
   Get rid of a bunch of warnings
 
-  26 Jan 2006; Harald van DÄ³k <truedfx@gentoo.org> sexypsf-0.4.7.ebuild:
+  26 Jan 2006; Harald van Dĳk <truedfx@gentoo.org> sexypsf-0.4.7.ebuild:
   Fix parallel build issue (bug #119240)
 
   15 Nov 2005; Danny van Dyk <kugelfang@gentoo.org> sexypsf-0.4.7.ebuild:
   This works on amd64 as of version 0.4.7, marked accordingly.
 
-  12 Nov 2005; Harald van DÄ³k <truedfx@gentoo.org>
+  12 Nov 2005; Harald van Dĳk <truedfx@gentoo.org>
   files/sexypsf-0.4.7-misc.patch:
   Even more potential 64-bit issues
 
-  06 Nov 2005; Harald van DÄ³k <truedfx@gentoo.org>
+  06 Nov 2005; Harald van Dĳk <truedfx@gentoo.org>
   files/sexypsf-0.4.7-misc.patch, sexypsf-0.4.7.ebuild:
   Add bmp support
 
-  02 Nov 2005; Harald van DÄ³k <truedfx@gentoo.org>
+  02 Nov 2005; Harald van Dĳk <truedfx@gentoo.org>
   files/sexypsf-0.4.7-misc.patch:
   Some more 64-bit problems
 
 *sexypsf-0.4.7 (26 Oct 2005)
 
-  26 Oct 2005; Harald van DÄ³k <truedfx@gentoo.org>
+  26 Oct 2005; Harald van Dĳk <truedfx@gentoo.org>
   +files/sexypsf-0.4.7-misc.patch, metadata.xml, +sexypsf-0.4.7.ebuild:
   Version bump plus gcc4 and 64bit fixes
   And marking myself as maintainer

@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/darkice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.28 2006/10/08 05:43:03 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.29 2006/12/03 18:05:36 tove Exp $
 
 *darkice-0.17.1 (08 Oct 2006)
 
@@ -37,7 +37,7 @@
   26 Dec 2005; Luca Barbato <lu_zero@gentoo.org> darkice-0.14.ebuild:
   oggvorbis Cleanup
 
-  07 Nov 2005; Diego Petten嘆 <flameeyes@gentoo.org> darkice-0.14.ebuild:
+  07 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> darkice-0.14.ebuild:
   Don't install COPYING file.
 
   14 Sep 2005; Aron Griffis <agriffis@gentoo.org> darkice-0.14.ebuild:
