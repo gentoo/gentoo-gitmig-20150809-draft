@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/xerces
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.68 2006/11/30 22:26:58 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.69 2006/12/03 03:04:24 caster Exp $
+
+*xerces-2.6.2-r4 (03 Dec 2006)
+
+  03 Dec 2006; Vlastimil Babka <caster@gentoo.org> +xerces-2.6.2-r4.ebuild:
+  Revision bump to gen-2 java eclasses for slot 2.6.
 
 *xerces-2.6.2-r3 (30 Nov 2006)
 
