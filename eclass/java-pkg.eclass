@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.47 2006/11/26 21:59:41 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.48 2006/12/03 15:27:48 betelgeuse Exp $
 
 inherit multilib
 
@@ -11,6 +11,13 @@ EXPORT_FUNCTIONS pkg_setup
 
 # First we make sure java-config-1 will be used
 export WANT_JAVA_CONFIG="1"
+
+# We can't depend on java-config directly because some packages use this eclass
+# only with the java use flag.
+# http://bugs.gentoo.org/show_bug.cgi?id=137971
+#DEPEND="
+#	=dev-java/java-config-1.3*
+#	=dev-java/java-config-2*"
 
 # During pkg_setup, we need to do a few extra things to ensure things work in a
 # mixed generation-1/generation-2 environment
