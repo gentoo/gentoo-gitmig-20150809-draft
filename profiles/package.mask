@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6382 2006/12/03 15:26:27 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6383 2006/12/03 19:58:24 kloeri Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ## 
+
+# Bryan Østergaard <kloeri@gentoo.org> (03 Dec 2006)
+# Dead upstream, I'll remove the package in 30 days
+dev-lang/prothon
 
 # Timothy Redaelli <drizzt@gentoo.org> (01 Dec 2006)
 # Beta versions
