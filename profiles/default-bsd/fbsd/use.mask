@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.28 2006/12/03 18:56:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.29 2006/12/03 18:57:43 flameeyes Exp $
 
 # Someone who knows kerberos is needed to make sure that this works
 kerberos
@@ -11,9 +11,6 @@ firebird
 
 # Apache defaults to Apache 1.x, mask it for the time
 apache
-
-# Unlikely that we'll ever get xmms working
-xmms
 
 # fftw requires sinl and cosl function, not present in FreeBSD
 fftw
