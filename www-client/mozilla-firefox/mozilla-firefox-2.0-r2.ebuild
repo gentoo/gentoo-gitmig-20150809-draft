@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0-r2.ebuild,v 1.1 2006/12/01 21:57:56 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0-r2.ebuild,v 1.2 2006/12/03 17:02:55 genstef Exp $
 
 WANT_AUTOCONF="2.1"
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime mozextension autotools
 
-PATCH="${PN}-2.0-patches-0.3"
+PATCH="${PN}-2.0-patches-0.4"
 LANGS="ar bg ca cs da de el en-GB es-AR es-ES eu fi fr fy-NL ga-IE gu-IN hu it ja ko lt mk mn nb-NO nl nn-NO pl pt-BR pt-PT ru sk sl sv-SE tr zh-CN zh-TW"
 NOSHORTLANGS="en-GB es-AR pt-BR zh-TW"
 
@@ -20,6 +20,7 @@ IUSE="java mozdevelop mozbranding xforms restrict-javascript"
 
 MOZ_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/${PV}"
 SRC_URI="${MOZ_URI}/source/firefox-${PV}-source.tar.bz2
+	http://dev.gentooexperimental.org/~anarchy/dist/${PATCH}.tar.bz2
 	mirror://gentoo/${PATCH}.tar.bz2"
 
 # These are in

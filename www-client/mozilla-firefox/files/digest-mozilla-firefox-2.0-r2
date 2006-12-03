@@ -79,9 +79,9 @@ SHA256 a0ecd0fa64f79f9312fa2876a8c8b1e1dcdf8a68df63157a77fe4c8b86c92b84 mozilla-
 MD5 9a9aff8e105e003043b03db93de6de07 mozilla-firefox-2.0-nn-NO.xpi 160799
 RMD160 ff3d51f9a15c36ad0e029be42294007397143790 mozilla-firefox-2.0-nn-NO.xpi 160799
 SHA256 ca9877adddce4fcbe4a5f20beb168f46d865751548f9e122558d0515e49c15d6 mozilla-firefox-2.0-nn-NO.xpi 160799
-MD5 f6d3b4e7b13c7f8a232125130b4e15d8 mozilla-firefox-2.0-patches-0.3.tar.bz2 33402
-RMD160 5b3ac326c338091a7fb785a8349d1203a8937214 mozilla-firefox-2.0-patches-0.3.tar.bz2 33402
-SHA256 a884b20b91ae7fe447e243791932fc9c1a4fb96e970fdb2b948e00e4a6c49f66 mozilla-firefox-2.0-patches-0.3.tar.bz2 33402
+MD5 31d2588152916b968ad60286eaab30c6 mozilla-firefox-2.0-patches-0.4.tar.bz2 32820
+RMD160 b8d952cc2d183f64a56c6f8a95ebe542341f2af3 mozilla-firefox-2.0-patches-0.4.tar.bz2 32820
+SHA256 f6e15ad6779d0a16c5c6fd647f283e220acf0bb48acca5cafa3a2ab4b9772dd1 mozilla-firefox-2.0-patches-0.4.tar.bz2 32820
 MD5 f17083b5012fc7fbe36fad0b7b440e65 mozilla-firefox-2.0-pl.xpi 171073
 RMD160 776edfa2440cb11b0db9b21a258c450915ba1a8a mozilla-firefox-2.0-pl.xpi 171073
 SHA256 d62608aff8551d182c7c5636672eaa4e181b2e974c53d4b8e86047f12a8831ca mozilla-firefox-2.0-pl.xpi 171073
