@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/epydoc-2.1-r2.ebuild,v 1.5 2006/12/01 18:04:52 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/epydoc-2.1-r2.ebuild,v 1.6 2006/12/03 17:44:49 flameeyes Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/epydoc/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm hppa ia64 m68k ~ppc ~ppc64 s390 sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 m68k ~ppc ~ppc64 s390 sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc pdf"
 
 RDEPEND="virtual/python
