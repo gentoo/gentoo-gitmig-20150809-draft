@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Address/Email-Address-1.87.1.ebuild,v 1.3 2006/11/24 17:33:53 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Address/Email-Address-1.87.1.ebuild,v 1.4 2006/12/04 13:51:54 mcummings Exp $
 
 inherit perl-module versionator
 
@@ -18,7 +18,7 @@ KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 sparc ~x86"
 IUSE="test"
 SRC_TEST="do"
 
-DEPEND="test? ( perl-core/Test-Simple )
+DEPEND="test? ( virtual/perl-Test-Simple )
 	dev-lang/perl"
 RDEPEND="dev-lang/perl"
 
