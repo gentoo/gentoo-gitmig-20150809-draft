@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6394 2006/12/04 00:19:03 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6395 2006/12/04 00:20:01 omp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -536,11 +536,6 @@ dev-db/mysql-gui-tools
 # Mike Doty <kingtaco@gentoo.org> (22 Oct 2006)
 # gspca is beta
 media-video/gspcav1
-
-# Keri Harris <keri@gentoo.org> (22 Oct 2006)
-# Masked for removal 22 Nov 2006.
-# swi-prolog-lite is deprecated in favour of dev-lang/swi-prolog
-dev-lang/swi-prolog-lite
 
 # Stefan Schweizer <genstef@gentoo.org> (21 Aug 2006)
 # beta psi, with jingle support
