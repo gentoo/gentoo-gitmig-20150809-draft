@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.1.0_rc1.ebuild,v 1.2 2006/12/04 01:48:24 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.1.0_rc1.ebuild,v 1.3 2006/12/04 13:02:51 suka Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -50,6 +50,11 @@ DEPEND="${RDEPEND}
 PROVIDE="virtual/ooo"
 RESTRICT="nostrip"
 
+QA_EXECSTACK="usr/lib/openoffice/program/*"
+QA_TEXTRELS="usr/lib/openoffice/program/libvclplug_gen680li.so.1.1 \
+	usr/lib/openoffice/program/python-core-2.3.4/lib/lib-dynload/_curses_panel.so \
+	usr/lib/openoffice/program/python-core-2.3.4/lib/lib-dynload/_curses.so"
+
 src_unpack() {
 
 	unpack ${A}
@@ -90,15 +95,15 @@ src_install () {
 
 	#Menu entries, icons and mime-types
 	cd ${D}${INSTDIR}/share/xdg/
-	sed -i -e s/'Exec=openoffice.org-2.0-printeradmin'/'Exec=oopadmin2'/g printeradmin.desktop || die
+	sed -i -e s/'Exec=openoffice.org-2.1-printeradmin'/'Exec=oopadmin2'/g printeradmin.desktop || die
 
 	for desk in base calc draw impress math printeradmin writer; do
-		mv ${desk}.desktop openoffice.org-2.0-${desk}.desktop
-		sed -i -e s/openoffice.org-2.0/ooffice2/g openoffice.org-2.0-${desk}.desktop || die
-		sed -i -e s/openofficeorg-20-${desk}/ooo-${desk}2/g openoffice.org-2.0-${desk}.desktop || die
-		domenu openoffice.org-2.0-${desk}.desktop
+		mv ${desk}.desktop openoffice.org-2.1-${desk}.desktop
+		sed -i -e s/openoffice.org-2.1/ooffice2/g openoffice.org-2.1-${desk}.desktop || die
+		sed -i -e s/openofficeorg-21-${desk}/ooo-${desk}2/g openoffice.org-2.1-${desk}.desktop || die
+		domenu openoffice.org-2.1-${desk}.desktop
 		insinto /usr/share/pixmaps
-		newins ${WORKDIR}/usr/share/icons/gnome/48x48/apps/openofficeorg-20-${desk}.png ooo-${desk}2.png
+		newins ${WORKDIR}/usr/share/icons/gnome/48x48/apps/openofficeorg-21-${desk}.png ooo-${desk}2.png
 	done
 
 	insinto /usr/share/mime/packages
