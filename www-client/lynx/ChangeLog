@@ -1,6 +1,13 @@
 # ChangeLog for www-client/lynx
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.47 2006/10/13 12:55:39 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.48 2006/12/04 14:49:04 drizzt Exp $
+
+*lynx-2.8.6-r2 (04 Dec 2006)
+
+  04 Dec 2006; Timothy Redaelli <drizzt@gentoo.org> metadata.xml,
+  +lynx-2.8.6-r2.ebuild:
+  Updated to rel.4.
+  Fixed bug #154234.
 
 *lynx-2.8.6-r1 (13 Oct 2006)
 
