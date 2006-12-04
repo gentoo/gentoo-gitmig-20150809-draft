@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.3.0.ebuild,v 1.5 2006/12/01 16:29:57 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.3.0.ebuild,v 1.6 2006/12/04 12:33:08 gustavoz Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.hispalinux.es/~data/files/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="~amd64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND=">=media-sound/id3-0.12
