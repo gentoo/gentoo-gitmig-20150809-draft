@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9629.ebuild,v 1.1 2006/11/09 03:09:32 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9629.ebuild,v 1.2 2006/12/04 16:22:08 wolf31o2 Exp $
 
 inherit eutils multilib versionator linux-mod
 
@@ -35,23 +35,29 @@ QA_TEXTRELS_x86="usr/lib/xorg/libXvMCNVIDIA.so.${PV}
 	usr/lib/opengl/nvidia/lib/libGLcore.so.${PV}
 	usr/lib/opengl/nvidia/tls/libnvidia-tls.so.${PV}
 	usr/lib/opengl/nvidia/no-tls/libnvidia-tls.so.${PV}
+	usr/lib/libXvMCNVIDIA.so.${PV}
+	usr/lib/xorg/modules/drivers/nvidia_drv.so
 	usr/lib/opengl/nvidia/extensions/libglx.so"
+
 QA_EXECSTACK_x86="usr/lib/opengl/nvidia/lib/libGL.so.${PV}
 	usr/lib/opengl/nvidia/lib/libGLcore.so.${PV}
 	usr/lib/opengl/nvidia/extensions/libglx.so"
-
 
 QA_TEXTRELS_amd64="usr/lib64/xorg/libXvMCNVIDIA.so.${PV}
 	usr/lib64/opengl/nvidia/lib/libGL.so.${PV}
 	usr/lib64/opengl/nvidia/lib/libGLcore.so.${PV}
 	usr/lib64/opengl/nvidia/tls/libnvidia-tls.so.${PV}
 	usr/lib64/opengl/nvidia/no-tls/libnvidia-tls.so.${PV}
+	usr/lib64/libXvMCNVIDIA.so.${PV}
+	usr/lib64/xorg/modules/drivers/nvidia_drv.so
 	usr/lib64/opengl/nvidia/extensions/libglx.so
 	usr/lib32/xorg/libXvMCNVIDIA.so.${PV}
 	usr/lib32/opengl/nvidia/lib/libGL.so.${PV}
 	usr/lib32/opengl/nvidia/lib/libGLcore.so.${PV}
 	usr/lib32/opengl/nvidia/tls/libnvidia-tls.so.${PV}
 	usr/lib32/opengl/nvidia/no-tls/libnvidia-tls.so.${PV}
+	usr/lib32/libXvMCNVIDIA.so.${PV}
+	usr/lib32/xorg/modules/drivers/nvidia_drv.so
 	usr/lib32/opengl/nvidia/extensions/libglx.so"
 
 QA_EXECSTACK_amd64="usr/lib64/opengl/nvidia/lib/libGL.so.${PV}
