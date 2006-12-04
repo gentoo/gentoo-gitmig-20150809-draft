@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.1.ebuild,v 1.6 2006/11/23 06:45:35 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.1.ebuild,v 1.7 2006/12/04 00:46:10 opfer Exp $
 
 inherit eutils multilib flag-o-matic elisp-common versionator
 
@@ -59,8 +59,7 @@ src_unpack() {
 #	epatch "${DISTDIR}"/otp_src_${MY_PV}_epoll.patch
 
 	# bug 151612
-	einfo "fixing hardcoded GLIBC_MINOR value dependency on signal
-	handling (#151612)"
+	einfo "fixing hardcoded GLIBC_MINOR value dependency on signal handling (#151612)"
 	sed -i "s/__GLIBC_MINOR__\ ==\ 3/__GLIBC_MINOR__\ \>=\ 3/g" \
 	    ${S}/erts/emulator/hipe/hipe_x86_signal.c
 }
@@ -103,8 +102,8 @@ src_install() {
 	## Remove ${D} from the following files
 	dosed ${ERL_LIBDIR}/bin/erl
 	dosed ${ERL_LIBDIR}/bin/start
-	cd ${ERL_LIBDIR}/erts-*
-	grep -rle "${D}" "${D}"/${ERL_LIBDIR}/erts-* | xargs sed -i -e "s:${D}::g"
+	cd "${D}"/${ERL_LIBDIR}/erts-${ERL_ERTS_VER}
+	grep -rle "${D}" "${D}"/${ERL_LIBDIR}/erts-${ERL_ERTS_VER} | xargs sed -i -e "s:${D}::g"
 
 	## Clean up the no longer needed files
 	rm "${D}"/${ERL_LIBDIR}/Install
@@ -134,7 +133,7 @@ pkg_postinst() {
 	use emacs && elisp-site-regen
 	einfo
 	einfo "If you need a symlink to one of erlang's binaries,"
-	einfo "please open a bug and tell the maintainers so."
+	einfo "please open a bug and tell the maintainers."
 	einfo
 }
 
