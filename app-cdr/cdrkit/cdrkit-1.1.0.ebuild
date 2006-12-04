@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/cdrkit-1.1.0.ebuild,v 1.2 2006/12/03 21:16:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/cdrkit-1.1.0.ebuild,v 1.3 2006/12/04 17:18:08 pylon Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://cdrkit.org/releases/${P}.tar.gz"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="hfs unicode kernel_linux kernel_darwin kernel_FreeBSD"
+IUSE="hfs unicode kernel_linux kernel_FreeBSD"
 
 DEPEND=">=dev-util/cmake-2.4
 	!app-cdr/cdrtools
