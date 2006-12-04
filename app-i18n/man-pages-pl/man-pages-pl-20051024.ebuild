@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/man-pages-pl-20051024.ebuild,v 1.4 2006/11/01 09:06:04 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/man-pages-pl-20051024.ebuild,v 1.5 2006/12/04 20:02:39 spock Exp $
 
 DESCRIPTION="A collection of Polish translations of Linux manual pages."
 HOMEPAGE="http://ptm.linux.pl/"
@@ -24,10 +24,10 @@ src_unpack() {
 	sed -i -e '/\tpasswd.1/ d' man1/Makefile.am
 
 	# manpages provided by other packages
-	mans="groups.1 apropos.1 man.1 su.1 newgrp.1 whatis.1 gpasswd.1 chsh.1 \
+	mans="gendiff.1 groups.1 apropos.1 man.1 su.1 newgrp.1 whatis.1 gpasswd.1 chsh.1 \
 			chfn.1 limits.5 login.1 expiry.1 porttime.5 lastlog.8 faillog.8 logoutd.8 \
-			rpm.8 rpm2cpio.8 evim.1 vim.1 vimdiff.1 vimtutor.1 ex.1 rview.1 \
-			rvim.1 view.1 suauth.5"
+			rpm.8 rpmdeps.8 rpmbuild.8 rpmcache.8 rpmgraph.8 rpm2cpio.8 evim.1 vim.1 \
+			vimdiff.1 vimtutor.1 ex.1 rview.1 rvim.1 view.1 suauth.5"
 	for page in ${mans} ; do
 		sed -i -e "/\\t${page}/ d" man${page: -1}/Makefile.am
 	done
