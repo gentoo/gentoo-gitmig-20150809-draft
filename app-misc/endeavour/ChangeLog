@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/endeavour
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/ChangeLog,v 1.23 2006/08/08 23:15:33 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/ChangeLog,v 1.24 2006/12/04 21:56:35 masterdriverz Exp $
+
+*endeavour-2.7.3 (04 Dec 2006)
+
+  04 Dec 2006; Charlie Shepherd <masterdriverz@gentoo.org>
+  +endeavour-2.7.3.ebuild:
+  Update to 2.7.3, fix some deps and add joystick useflag. Bug 97812
 
   08 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   endeavour-2.4.6.ebuild:
