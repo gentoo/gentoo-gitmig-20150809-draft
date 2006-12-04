@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/memo/memo-1.9.7.ebuild,v 1.2 2006/10/31 03:47:17 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/memo/memo-1.9.7.ebuild,v 1.3 2006/12/04 16:25:33 lack Exp $
 
 ROX_LIB_VER=1.9.8
 inherit rox
@@ -15,6 +15,20 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE="libnotify"
 
-RDEPEND="libnotify? ( >=sys-apps/dbus-0.60 x11-misc/notification-daemon )"
+RDEPEND="libnotify? (
+			|| ( >=dev-python/dbus-python-0.71
+				( >=sys-apps/dbus-0.60 <sys-apps/dbus-0.90 ) )
+			x11-misc/notification-daemon )"
 
 APPNAME=${MY_PN}
+
+pkg_setup() {
+	if ! has_version dev-python/dbus-python && \
+		! built_with_use sys-apps/dbus python
+	then
+		einfo "${APPNAME} requires dbus to be built with python support."
+		einfo "Please rebuild dbus with USE=\"python\"."
+		die "python dbus modules missing"
+	fi
+}
+
