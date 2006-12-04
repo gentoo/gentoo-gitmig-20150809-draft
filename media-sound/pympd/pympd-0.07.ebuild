@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/pympd-0.07.ebuild,v 1.2 2006/09/09 18:55:40 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/pympd-0.07.ebuild,v 1.3 2006/12/04 00:49:38 ticho Exp $
 
 inherit toolchain-funcs python
 
@@ -15,6 +15,16 @@ IUSE=""
 
 RDEPEND=">=virtual/python-2.4
 	>=dev-python/pygtk-2.6"
+
+pkg_setup() {
+	if ! built_with_use '=gtk+-2*' jpeg; then
+		echo
+		ewarn "If you want album cover art displayed in pympd,"
+		ewarn "you must build gtk+-2.x with \"jpeg\" USE flag."
+		echo
+		ebeep 3
+	fi
+}
 
 src_compile() {
 	# Honor CFLAGS in make.conf
