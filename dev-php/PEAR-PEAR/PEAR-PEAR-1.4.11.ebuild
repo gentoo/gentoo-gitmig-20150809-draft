@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.4.11.ebuild,v 1.13 2006/11/24 15:50:27 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.4.11.ebuild,v 1.14 2006/12/04 21:35:50 chtekk Exp $
 
 inherit depend.php
 
@@ -11,6 +11,8 @@ XML_RPC="1.5.0"
 
 [[ -z "${PEAR_CACHEDIR}" ]] && PEAR_CACHEDIR="/var/cache/pear"
 
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86"
+
 DESCRIPTION="PEAR Base System (PEAR, Archive_Tar, Console_Getopt, XML_RPC)."
 HOMEPAGE="http://pear.php.net/"
 SRC_URI="http://pear.php.net/get/Archive_Tar-${ARCHIVE_TAR}.tgz
@@ -20,12 +22,13 @@ SRC_URI="http://pear.php.net/get/Archive_Tar-${ARCHIVE_TAR}.tgz
 
 LICENSE="PHP"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 # we deliberately force people to remove their old PEAR installations,
 # and any package which may have put an old-style PEAR installation onto
-# the box
+# their box
+# we also depend on a recent sandbox version to mitigate problems users
+# have been experiencing
 
 DEPEND="dev-lang/php
 		!dev-php/php
@@ -34,7 +37,9 @@ DEPEND="dev-lang/php
 		!<dev-php/PEAR-PEAR-1.3.6-r2
 		!dev-php/PEAR-Archive_Tar
 		!dev-php/PEAR-Console_Getopt
-		!dev-php/PEAR-XML_RPC"
+		!dev-php/PEAR-XML_RPC
+		>=sys-apps/sandbox-1.2.17"
+RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	# we call this here, to ensure that the eclass picks the right
