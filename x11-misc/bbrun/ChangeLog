@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/bbrun
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/ChangeLog,v 1.17 2005/03/17 08:35:26 hansmi Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/ChangeLog,v 1.18 2006/12/04 01:22:16 omp Exp $
+
+  04 Dec 2006; David Shakaryan <omp@gentoo.org> -bbrun-1.4.ebuild,
+  bbrun-1.6.ebuild:
+  Add dev-util/pkgconfig to DEPEND and remove older version.
 
   17 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> bbrun-1.6.ebuild:
   Stable on ppc.
