@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/darkplaces/darkplaces-20060616_beta1.ebuild,v 1.2 2006/06/27 19:53:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/darkplaces/darkplaces-20060616_beta1.ebuild,v 1.3 2006/12/04 22:59:10 wolf31o2 Exp $
 
 inherit eutils flag-o-matic versionator games
 
@@ -26,25 +26,19 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="alsa cdinstall cdsound dedicated demo dpmod lights opengl oss sdl textures"
 
-UIDEPEND="|| (
-	(
-		x11-proto/xextproto
-		x11-proto/xf86dgaproto
-		x11-proto/xf86vidmodeproto
-		x11-proto/xproto )
-	virtual/x11 )"
+UIDEPEND="x11-proto/xextproto
+	x11-proto/xf86dgaproto
+	x11-proto/xf86vidmodeproto
+	x11-proto/xproto"
 UIRDEPEND="alsa? ( media-libs/alsa-lib )
 	media-libs/libogg
 	media-libs/libvorbis
-	|| (
-		(
-			x11-libs/libX11
-			x11-libs/libXau
-			x11-libs/libXdmcp
-			x11-libs/libXext
-			x11-libs/libXxf86dga
-			x11-libs/libXxf86vm )
-		virtual/x11 )"
+	x11-libs/libX11
+	x11-libs/libXau
+	x11-libs/libXdmcp
+	x11-libs/libXext
+	x11-libs/libXxf86dga
+	x11-libs/libXxf86vm"
 COMMON="media-libs/jpeg
 	sdl? (
 		media-libs/libsdl

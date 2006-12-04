@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomlegacy/doomlegacy-1.42.ebuild,v 1.4 2006/02/13 21:22:53 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomlegacy/doomlegacy-1.42.ebuild,v 1.5 2006/12/04 23:03:00 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -17,8 +17,7 @@ IUSE="X dga esd" #sdl - broken with recent sdl-mixer releases
 RDEPEND="
 	virtual/opengl
 	virtual/glu
-	|| ( x11-libs/libXxf86vm
-		 virtual/x11 )
+	x11-libs/libXxf86vm
 	esd? ( media-sound/esound )"
 	# broken with recent sdl-mixer releases
 	#sdl? (
@@ -27,14 +26,9 @@ RDEPEND="
 	#)"
 DEPEND="${RDEPEND}
 	x86? ( >=dev-lang/nasm-0.98 )
-	|| (
-		 (
-		   x11-proto/xextproto
-	       x11-proto/xf86vidmodeproto
-		   dga? ( x11-proto/xf86dgaproto )
-		 )
-		 virtual/x11
-	   )"
+	x11-proto/xextproto
+    x11-proto/xf86vidmodeproto
+	dga? ( x11-proto/xf86dgaproto )"
 
 S=${WORKDIR}/doomlegacy_${PV/.}_src
 
