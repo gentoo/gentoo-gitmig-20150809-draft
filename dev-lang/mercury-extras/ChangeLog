@@ -1,6 +1,23 @@
 # ChangeLog for dev-lang/mercury-extras
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.57 2006/11/10 07:42:06 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.58 2006/12/04 09:07:13 keri Exp $
+
+*mercury-extras-0.13.1 (04 Dec 2006)
+
+  04 Dec 2006; keri <keri@gentoo.org>
+  +files/mercury-extras-0.13.1-concurrency.patch,
+  +files/mercury-extras-0.13.1-curs.patch,
+  +files/mercury-extras-0.13.1-dynamic_linking.patch,
+  +files/mercury-extras-0.13.1-lex.patch,
+  +files/mercury-extras-0.13.1-mercury_glut.patch,
+  +files/mercury-extras-0.13.1-mercury_opengl.patch,
+  +files/mercury-extras-0.13.1-mercury_tcltk.patch,
+  +files/mercury-extras-0.13.1-odbc.patch,
+  +files/mercury-extras-0.13.1-posix.patch,
+  +files/mercury-extras-0.13.1-references.patch,
+  +files/mercury-extras-0.13.1-trailed_update.patch,
+  +mercury-extras-0.13.1.ebuild:
+  Version bump.
 
   10 Nov 2006; keri <keri@gentoo.org>
   files/mercury-extras-0.13.0-mercury_opengl.patch:

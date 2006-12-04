@@ -1,0 +1,18 @@
+--- mercury-extras-0.13.1.orig/odbc/Mmakefile	2006-04-04 13:49:14.000000000 +1200
++++ mercury-extras-0.13.1/odbc/Mmakefile	2006-12-04 22:05:56.000000000 +1300
+@@ -48,10 +48,13 @@
+ 	# note: on a DEC Alpha using OSF1 remove the -ldl.
+ endif
+ 
+-MAIN_TARGET=odbc_test
++MAIN_TARGET=libodbc
+ 
+ .PHONY: depend
+-depend: odbc_test.depend
++depend: odbc.depend
++
++.PHONY: install
++install: libodbc.install
+ 
+ .PHONY: check
+ check:

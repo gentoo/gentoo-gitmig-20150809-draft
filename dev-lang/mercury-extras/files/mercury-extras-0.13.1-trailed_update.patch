@@ -1,0 +1,23 @@
+--- mercury-extras-0.13.1.orig/trailed_update/Mmakefile	2004-07-30 19:03:46.000000000 +1200
++++ mercury-extras-0.13.1/trailed_update/Mmakefile	2006-12-04 22:07:58.000000000 +1300
+@@ -4,6 +4,10 @@
+ # Public License - see the file COPYING.LIB in the Mercury distribution.
+ #-----------------------------------------------------------------------------#
+ 
++LIBGRADES := 	$(foreach grade,$(LIBGRADES), \
++		$(subst .tr.,$(grade),$(findstring .tr.,$(grade))) \
++		$(filter %.tr,$(grade)))
++
+ GRADEFLAGS += --use-trail
+ 
+ # enable C debugging
+@@ -30,6 +34,9 @@
+ 	cd samples && mmake $(MMAKEFLAGS) check
+ 	cd tests && mmake $(MMAKEFLAGS) check
+ 
++.PHONY: install
++install: libtrailed_update.install
++
+ .PHONY: clean
+ clean:
+ 	cd samples && mmake $(MMAKEFLAGS) clean

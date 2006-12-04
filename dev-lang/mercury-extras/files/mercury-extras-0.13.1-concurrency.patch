@@ -1,0 +1,11 @@
+--- mercury-extras-0.13.1.orig/concurrency/Mmakefile	2006-04-20 19:43:31.000000000 +1200
++++ mercury-extras-0.13.1/concurrency/Mmakefile	2006-12-04 21:56:38.000000000 +1300
+@@ -8,6 +8,8 @@
+ 
+ TESTS = philo philo2 philo3 midimon
+ 
++LIBGRADES := $(LIBGRADES:hlc.gc=)
++
+ -include ../Mmake.params
+ 
+ default_target: all
