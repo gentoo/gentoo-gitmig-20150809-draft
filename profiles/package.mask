@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6402 2006/12/04 13:01:07 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6403 2006/12/04 13:47:51 caleb Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -392,7 +392,7 @@ dev-db/dbbalancer
 
 # Caleb Tennis <caleb@gentoo.org> (09 Nov 2006)
 # Readding dbus support, and masking until dbus goes stable
-=x11-libs/qt-4.2.1-r1
+>=x11-libs/qt-4.2.1-r1
 
 # Kris Kersey <augustus@gentoo.org> (08 Nov 2006)
 # The below BETA adds support for GeForce 8800 GTX and GeForce 8800 GTS GPUs.
