@@ -1,0 +1,61 @@
+--- rezound-0.12.2beta/configure.ac.old	2006-12-04 18:20:25.000000000 +0100
++++ rezound-0.12.2beta/configure.ac	2006-12-04 18:25:53.000000000 +0100
+@@ -505,12 +505,20 @@
+ AC_LANG_PUSH(C) # xiph needs to include vorbisenc.h as well if C++ is going to compile the code
+ 
+ AH_TEMPLATE(HAVE_LIBOGG)
++
++AC_ARG_ENABLE(vorbis, AC_HELP_STRING([--disable-vorbis], [disable support for vorbis (default=autodetect)]), [ enable_vorbis=$enableval ], [ enable_vorbis=yes ])
++
++
+ # this macro detects libogg and does an AC_SUBST on OGG_CFLAGS and OGG_LIBS, so I put these variables in src/backend/Makefile.am for substitution
++if test "x$enable_vorbis" = "xyes"; then
+ XIPH_PATH_OGG(AC_DEFINE(HAVE_LIBOGG),AC_MSG_NOTICE([Ogg Vorbis website: http://www.xiph.org]))
++fi
+ 
+ AH_TEMPLATE(HAVE_LIBVORBIS)
+ # this macro detects libvorbis and does an AC_SUBST on VORBIS_CFLAGS, VORBIS_LIBS, VORBISFILE_LIBS and VORBISENC_LIBS, so I put these variables in src/backend/Makefile.am for substitution
++if test "x$enable_vorbis" = "xyes"; then
+ XIPH_PATH_VORBIS(AC_DEFINE(HAVE_LIBVORBIS),AC_MSG_NOTICE([Ogg Vorbis website: http://www.xiph.org]))
++fi
+ 
+ AC_LANG_POP(C)
+ 
+@@ -524,7 +532,12 @@
+ AH_TEMPLATE(HAVE_LIBFLACPP)
+ AH_TEMPLATE(HAVE_LIBFLAC)
+ 
++AC_ARG_ENABLE(flac, AC_HELP_STRING([--disable-flac], [disable support for flac (default=autodetect)]), [ enable_flac=$enableval ], [ enable_flac=yes ])
++
++
++
+ # look for libFLAC and if it's found then look for libFLAC++
++if test "x$enable_flac" = "xyes"; then
+ AM_PATH_LIBFLAC(
+ 	[
+ 		AC_DEFINE(HAVE_LIBFLAC)
+@@ -532,8 +545,7 @@
+ 	],
+ 	AC_MSG_NOTICE([FLAC website: http://flac.sourceforge.net])
+ )
+-
+-
++fi
+ 
+ 
+ 
+@@ -603,9 +615,13 @@
+ dnl ############################################################################
+ dnl # Handle the flags for a library to to tempo/pitch changing independantly  *
+ dnl ############################################################################
+-AM_PATH_SOUNDTOUCH([],[],AC_MSG_WARN([***** libSoundTouch not found -- tempo and pitch changing will be disabled (http://www.iki.fi/oparviai/soundtouch) *****]))
++AC_ARG_ENABLE(soundtouch, AC_HELP_STRING([--disable-soundtouch], [disable support for soundtouch (default=autodetect)]), [ enable_soundtouch=$enableval ], [ enable_soundtouch=yes ])
+ 
+ 
++if test "x$enable_soundtouch" = "xyes"; then
++AM_PATH_SOUNDTOUCH([],[],AC_MSG_WARN([***** libSoundTouch not found -- tempo and pitch changing will be disabled (http://www.iki.fi/oparviai/soundtouch) *****]))
++fi
++
+ 
+ 
+ 
