@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6386 2006/12/04 00:05:27 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6387 2006/12/04 00:07:07 omp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -257,7 +257,6 @@ x11-misc/xalf
 x11-misc/gtkdiff
 x11-misc/whitebox
 x11-plugins/gkrellm-gnome
-x11-plugins/wmalbum
 x11-plugins/wmappkill
 x11-plugins/wmdeskguide
 x11-plugins/wmspaceclock
