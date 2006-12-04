@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6392 2006/12/04 00:16:35 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6393 2006/12/04 00:17:59 omp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -667,7 +667,6 @@ net-misc/linux-igd
 # Olivier Fisette <ribosome@gentoo.org> (12 Sept 2006)
 # Do not compile with GCC4.
 sci-biology/cbcanalyzer
-sci-biology/ecell
 
 # Olivier Fisette <ribosome@gentoo.org> (11 Sep 2006)
 # A number of issues remain with PHYLIP programs and
