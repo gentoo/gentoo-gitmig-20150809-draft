@@ -1,0 +1,339 @@
+--- gnusound-0.7.4/configure.ac.old	2006-12-01 09:22:39.000000000 +0100
++++ gnusound-0.7.4/configure.ac	2006-12-01 09:22:44.000000000 +0100
+@@ -200,12 +200,26 @@
+ AC_ARG_ENABLE(flac, AC_HELP_STRING([--disable-flac], [disable support for flac (default=autodetect)]), [ enable_flac=$enableval ], [ enable_flac=yes ])
+ 
+ if test "x$enable_flac" = "xyes"; then
++AC_TRY_RUN([
++#include <FLAC/export.h>
++int main () { return FLAC_API_VERSION_CURRENT<8; }
++],legacy_flac=no,legacy_flac=yes,legacy_flac=no)
++
++if test "x$legacy_flac" = xyes; then
+ AC_CHECK_HEADER([FLAC/format.h],
+   [AC_CHECK_LIB([FLAC], [FLAC__file_decoder_new],
+     [AC_DEFINE(HAVE_FLAC)
+      echo "-lFLAC -lm" > ${module_path}/.file_flac.cflags
+      file_drivers="flac $file_drivers"], 
+     [echo > ${module_path}/.file_flac.cflags], [-lm])])
++else
++AC_CHECK_HEADER([FLAC/format.h],
++  [AC_CHECK_LIB([FLAC], [FLAC__stream_decoder_new],
++    [AC_DEFINE(HAVE_FLAC)
++     echo "-lFLAC -lm" > ${module_path}/.file_flac.cflags
++     file_drivers="flac $file_drivers"], 
++    [echo > ${module_path}/.file_flac.cflags], [-lm])])
++fi
+ fi
+ 
+ if test "x${file_drivers}" = "x"; then
+--- gnusound-0.7.4/modules/file_flac.c.old	2006-12-01 09:22:42.000000000 +0100
++++ gnusound-0.7.4/modules/file_flac.c	2006-12-01 09:23:20.000000000 +0100
+@@ -32,11 +32,22 @@
+ 
+ #include <FLAC/all.h>
+ 
++#if !defined(FLAC_API_VERSION_CURRENT) || FLAC_API_VERSION_CURRENT < 8
++#define LEGACY_FLAC
++#else
++#undef LEGACY_FLAC
++#endif
++
++
+ struct flac_data {
+ 
+     /* Decoder support. */
+ 
++#ifdef LEGACY_FLAC
+     FLAC__FileDecoder *decoder;
++#else
++    FLAC__StreamDecoder *decoder;
++#endif
+     
+     int dec_inited;
+     int dec_error;
+@@ -51,7 +62,11 @@
+ 
+     /* Encoder support */
+ 
++#ifdef LEGACY_FLAC
+     FLAC__FileEncoder *encoder;
++#else
++    FLAC__StreamEncoder *encoder;
++#endif
+ 
+     int enc_inited;
+     int enc_error;
+@@ -95,11 +110,19 @@
+         } \
+     }
+ 
++#ifdef LEGACY_FLAC
+ static FLAC__StreamDecoderWriteStatus 
+ flac_dec_write_callback(const FLAC__FileDecoder *decoder,
+                         const FLAC__Frame *frame,
+                         const FLAC__int32 * const buffer[],
+                         void *client_data) {
++#else
++static FLAC__StreamDecoderWriteStatus 
++flac_dec_write_callback(const FLAC__StreamDecoder *decoder,
++                        const FLAC__Frame *frame,
++                        const FLAC__int32 * const buffer[],
++                        void *client_data) {
++#endif
+     struct flac_data *flac_data = ((struct file *)client_data)->driver_data;
+     int i, j, count, channels;
+     void *dst;
+@@ -131,8 +154,13 @@
+     return FLAC__STREAM_DECODER_WRITE_STATUS_CONTINUE;
+ }
+ 
++#ifdef LEGACY_FLAC
+ static void 
+ flac_dec_metadata_callback(const FLAC__FileDecoder *decoder,
++#else
++static void 
++flac_dec_metadata_callback(const FLAC__StreamDecoder *decoder,
++#endif
+                            const FLAC__StreamMetadata *metadata,
+                            void *client_data) {    
+     struct flac_data *flac_data = ((struct file *)client_data)->driver_data;
+@@ -173,10 +201,17 @@
+     }
+ }
+ 
++#ifdef LEGACY_FLAC
+ static void
+ flac_dec_error_callback(const FLAC__FileDecoder *decoder,
+                         FLAC__StreamDecoderErrorStatus status,
+                         void *client_data) {
++#else
++static void
++flac_dec_error_callback(const FLAC__StreamDecoder *decoder,
++                        FLAC__StreamDecoderErrorStatus status,
++                        void *client_data) {
++#endif
+     struct flac_data *flac_data = ((struct file *)client_data)->driver_data;
+ 
+     flac_data->dec_error = 1;
+@@ -186,8 +221,8 @@
+ flac_open_for_reading(struct file *file,
+                       struct file_params *params) {
+     struct flac_data *flac_data = file->driver_data;
++#ifdef LEGACY_FLAC
+     FLAC__FileDecoder *decoder;
+-
+     decoder = FLAC__file_decoder_new();
+     
+     FLAC__file_decoder_set_md5_checking(decoder, false);
+@@ -204,12 +239,31 @@
+     
+     if(!FLAC__file_decoder_process_until_end_of_metadata(decoder))
+         return cmd_new_error_val("Could not process FLAC metadata: %s", FLAC__FileDecoderStateString[FLAC__file_decoder_get_state(decoder)]);
+-    
++#else
++    FLAC__StreamDecoder *decoder;
++    decoder = FLAC__stream_decoder_new();
++
++    FLAC__stream_decoder_set_md5_checking(decoder, true);
++    FLAC__stream_decoder_set_metadata_ignore_all(decoder);
++    FLAC__stream_decoder_set_metadata_respond(decoder, FLAC__METADATA_TYPE_STREAMINFO);
++    FLAC__stream_decoder_set_metadata_respond(decoder, FLAC__METADATA_TYPE_VORBIS_COMMENT);
++    
++    if(FLAC__stream_decoder_init_file(decoder, file->name,  flac_dec_write_callback, flac_dec_metadata_callback, flac_dec_error_callback, file) != FLAC__STREAM_DECODER_INIT_STATUS_OK) 
++        return cmd_new_error_val("Could not initialize FLAC decoder: %s", FLAC__StreamDecoderStateString[FLAC__stream_decoder_get_state(decoder)]);
++
++    if(!FLAC__stream_decoder_process_until_end_of_metadata(decoder))
++        return cmd_new_error_val("Could not process FLAC metadata: %s", FLAC__StreamDecoderStateString[FLAC__stream_decoder_get_state(decoder)]);
++#endif
+     flac_data->decoder = decoder;
+     
+     if(!flac_data->dec_inited || flac_data->dec_error) {
++#ifdef LEGACY_FLAC
+         FLAC__file_decoder_finish(decoder);
+         FLAC__file_decoder_delete(decoder);
++#else
++        FLAC__stream_decoder_finish(decoder);
++        FLAC__stream_decoder_delete(decoder);
++#endif
+         return cmd_new_error_val("Could not find STREAM info or "
+                                  "STREAM info was invalid");
+     }
+@@ -217,8 +271,13 @@
+     /* This is highly unlikely. */
+ 
+     if(flac_data->dec_max_blocksize > SAVE_BUF_SIZE) {
++#ifdef LEGACY_FLAC
+         FLAC__file_decoder_finish(decoder);
+         FLAC__file_decoder_delete(decoder);
++#else
++        FLAC__stream_decoder_finish(decoder);
++        FLAC__stream_decoder_delete(decoder);
++#endif
+         return cmd_new_error_val("The maximum blocksize (%d) for this file "
+                                  "is larger than SAVE_BUF_SIZE (%d), increase "
+                                  "SAVE_BUF_SIZE and recompile", 
+@@ -239,7 +298,11 @@
+     struct flac_data *flac_data = file->driver_data;
+     struct cmd_value *r;
+     int err, bits_per_sample;
++#ifdef LEGACY_FLAC
+     FLAC__FileEncoder *encoder;
++#else
++    FLAC__StreamEncoder *encoder;
++#endif
+     const char *status;
+     int max_lpc_order = 0,
+         blocksize = 1152,
+@@ -258,13 +321,22 @@
+     if(!flac_data->enc_buffer) 
+         return cmd_new_error_val("Could not allocate encoder buffer");
+ 
++#ifdef LEGACY_FLAC
+     encoder = FLAC__file_encoder_new();
++#else
++    encoder = FLAC__stream_encoder_new();
++#endif
+ 
+     /* Standard properties. */
+ 
++#ifdef LEGACY_FLAC
+     FLAC__file_encoder_set_filename(encoder, file->name);
+     FLAC__file_encoder_set_channels(encoder, params->channels);
+     FLAC__file_encoder_set_sample_rate(encoder, params->sample_rate);
++#else
++    FLAC__stream_encoder_set_channels(encoder, params->channels);
++    FLAC__stream_encoder_set_sample_rate(encoder, params->sample_rate);
++#endif
+     switch(params->sample_type) {
+     case SAMPLE_TYPE_INT_8:
+         bits_per_sample = 8;
+@@ -281,7 +353,11 @@
+         bits_per_sample = 24;
+         break;
+     }
++#ifdef LEGACY_FLAC
+     FLAC__file_encoder_set_bits_per_sample(encoder, bits_per_sample);
++#else
++    FLAC__stream_encoder_set_bits_per_sample(encoder, bits_per_sample);
++#endif
+ 
+     /* FLAC encoding parameters. */
+ 
+@@ -348,6 +424,7 @@
+         break;
+     }
+     
++#ifdef LEGACY_FLAC
+     FLAC__file_encoder_set_do_exhaustive_model_search(encoder, exhaustive_model_search);
+     FLAC__file_encoder_set_blocksize(encoder, blocksize);
+     FLAC__file_encoder_set_max_lpc_order(encoder, max_lpc_order);
+@@ -359,7 +436,6 @@
+     }
+     
+     if((err = FLAC__file_encoder_init(encoder)) != FLAC__FILE_ENCODER_OK) {
+-
+         /* Initialization failed, get error condition. */
+ 
+         if(flac_data->enc_buffer)
+@@ -384,6 +460,39 @@
+         return r;
+         
+     }
++#else
++    FLAC__stream_encoder_set_do_exhaustive_model_search(encoder, exhaustive_model_search);
++    FLAC__stream_encoder_set_blocksize(encoder, blocksize);
++    FLAC__stream_encoder_set_max_lpc_order(encoder, max_lpc_order);
++    FLAC__stream_encoder_set_min_residual_partition_order(encoder, residual_partition_order_min);
++    FLAC__stream_encoder_set_max_residual_partition_order(encoder, residual_partition_order_max);
++    if(params->channels == 2) {
++        FLAC__stream_encoder_set_do_mid_side_stereo(encoder, mid_side);
++        FLAC__stream_encoder_set_loose_mid_side_stereo(encoder, adaptive_mid_side);
++    }
++    
++    if((err = FLAC__stream_encoder_init_file(encoder, file->name, NULL, NULL)) != FLAC__STREAM_DECODER_INIT_STATUS_OK) {
++        /* Initialization failed, get error condition. */
++
++        if(flac_data->enc_buffer)
++            mem_free(flac_data->enc_buffer);
++        
++        if(FLAC__stream_encoder_get_state(encoder) != 
++	 FLAC__STREAM_ENCODER_OK) {
++                status = FLAC__StreamEncoderStateString[FLAC__stream_encoder_get_state(encoder)];
++        } else {
++            status = FLAC__StreamEncoderStateString[FLAC__stream_encoder_get_state(encoder)];
++        }
++        
++        FAIL("encoder initialization failure: %s\n", status);
++        r = cmd_new_error_val("Could not initialize encoder: %s", status);
++
++        FLAC__stream_encoder_delete(encoder);
++
++        return r;
++        
++    }
++#endif
+     
+     flac_data->encoder = encoder;
+     flac_data->enc_sample_type = params->sample_type;
+@@ -419,7 +528,11 @@
+      * buffer. 
+      */
+ 
++#ifdef LEGACY_FLAC
+     if(!FLAC__file_decoder_process_single(flac_data->decoder))
++#else
++    if(!FLAC__stream_decoder_process_single(flac_data->decoder))
++#endif
+         return -1;
+ 
+     if(flac_data->dec_error)
+@@ -463,11 +576,21 @@
+         break;
+     }
+ 
++#ifdef LEGACY_FLAC
+     err = FLAC__file_encoder_process_interleaved(flac_data->encoder,
+                                                  flac_data->enc_buffer,
+                                                  count);
++#else
++    err = FLAC__stream_encoder_process_interleaved(flac_data->encoder,
++                                                 flac_data->enc_buffer,
++                                                 count);
++#endif
+     if(!err) {
++#ifdef LEGACY_FLAC
+         FAIL("encoder failure: %s\n", FLAC__FileEncoderStateString[FLAC__file_encoder_get_state(flac_data->encoder)]);
++#else
++        FAIL("encoder failure: %s\n", FLAC__StreamEncoderStateString[FLAC__stream_encoder_get_state(flac_data->encoder)]);
++#endif
+         return -1;
+     }
+     
+@@ -479,16 +602,26 @@
+     struct flac_data *flac_data = file->driver_data;
+ 
+     if(flac_data->dec_inited) {
++#ifdef LEGACY_FLAC
+         FLAC__file_decoder_finish(flac_data->decoder);
+         FLAC__file_decoder_delete(flac_data->decoder);
++#else
++        FLAC__stream_decoder_finish(flac_data->decoder);
++        FLAC__stream_decoder_delete(flac_data->decoder);
++#endif
+         //        if(flac_data->dec_buffer)
+         //            mem_free(flac_data->dec_buffer);
+         flac_data->dec_inited = 0;
+     }
+ 
+     if(flac_data->enc_inited) {
++#ifdef LEGACY_FLAC
+         FLAC__file_encoder_finish(flac_data->encoder);
+         FLAC__file_encoder_delete(flac_data->encoder);
++#else
++        FLAC__stream_encoder_finish(flac_data->encoder);
++        FLAC__stream_encoder_delete(flac_data->encoder);
++#endif
+         if(flac_data->enc_buffer)
+             mem_free(flac_data->enc_buffer);
+         flac_data->enc_inited = 0;
