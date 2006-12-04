@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/midentd/midentd-2.3.1-r1.ebuild,v 1.5 2005/08/31 18:59:24 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/midentd/midentd-2.3.1-r1.ebuild,v 1.6 2006/12/04 02:30:15 vapier Exp $
 
 inherit eutils
 
@@ -17,11 +17,12 @@ RDEPEND="dev-lang/perl"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-pidfile.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-pidfile.patch
 	sed -i \
 		-e 's:/usr/local:/usr:' \
 		-e 's:service ident:service auth:' \
+		-e 's:disable = no:disable = yes:' \
 		midentd.xinetd
 }
 
@@ -29,15 +30,13 @@ src_install() {
 	dosbin midentd midentd.logcycle || die
 
 	insinto /etc/xinetd.d
-	doins midentd.xinetd
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/midentd.rc midentd
-	insinto /etc/conf.d
-	newins ${FILESDIR}/midentd.conf.d midentd
+	newins midentd.xinetd midentd
+	newinitd "${FILESDIR}"/midentd.rc midentd
+	newconfd "${FILESDIR}"/midentd.conf.d midentd
 
 	dodoc CHANGELOG README
 
 	dodir /var/log
-	touch ${D}/var/log/midentd.log
+	touch "${D}"/var/log/midentd.log
 	fowners nobody:nobody /var/log/midentd.log
 }
