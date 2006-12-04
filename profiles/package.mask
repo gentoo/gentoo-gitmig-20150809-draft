@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6399 2006/12/04 06:03:44 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6400 2006/12/04 06:46:19 omp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -421,12 +421,10 @@ x11-wm/xpde
 # Christian Heim <phreak@gentoo.org> (04 Nov 2006)
 # masking the following packages for treecleaners and bugs
 # Pending removal Dec 04th 2006:
-# #72585 - x11-wm/qvwm
 # #117662 - media-libs/janus
 # #125491 - net-analyzer/tcpick
 media-libs/janus
 net-analyzer/tcpick
-x11-wm/qvwm
 
 # Christian Heim <phreak@gentoo.org> (04 Nov 2006)
 # Masking for further testing
