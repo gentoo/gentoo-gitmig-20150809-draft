@@ -1,0 +1,30 @@
+--- tmpreaper.c.orig	2005-11-13 13:30:35.000000000 -0800
++++ tmpreaper.c	2005-11-13 13:31:29.000000000 -0800
+@@ -464,13 +464,6 @@
+ 		    continue;
+ 		}
+ 
+-		if (S_ISDIR (sb.st_mode)) {
+-		    cleanupDirectory (ent->d_name, killTime, flags);
+-		    message (LOG_VERBOSE,
+-			     "(PID %u) Back from recursing down `%s'.\n",
+-			     (u_int) getpid(), ent->d_name);
+-		}
+-
+ 		if (FLAGS_PROTECT_P (flags)) {
+ 		    skip = i = 0;
+ 		    do {
+@@ -486,6 +479,13 @@
+ 			continue;
+ 		}
+ 
++		if (S_ISDIR (sb.st_mode)) {
++		    cleanupDirectory (ent->d_name, killTime, flags);
++		    message (LOG_VERBOSE,
++			     "(PID %u) Back from recursing down `%s'.\n",
++			     (u_int) getpid(), ent->d_name);
++		}
++
+ 		/* Decide whether to remove the file or not */
+ 		/* check for mtime on directory instead of atime if requested */
+ 		if ( FLAGS_MTIME_P(flags) ||
