@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/ripper/ripper-004.ebuild,v 1.1 2006/10/30 17:40:11 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/ripper/ripper-004.ebuild,v 1.2 2006/12/04 20:59:49 lack Exp $
 
 ROX_LIB_VER=1.9.8
 inherit rox
@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~ppc"
 IUSE="mp3 ogg"
 
 RDEPEND="
-	app-cdr/cdrtools
+	virtual/cdrtools
 	mp3? ( media-sound/lame )
 	ogg? ( media-sound/vorbis-tools )"
 
