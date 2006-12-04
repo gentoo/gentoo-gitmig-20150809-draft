@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6385 2006/12/04 00:02:25 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6386 2006/12/04 00:05:27 omp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -284,7 +284,6 @@ dev-python/python-gtkextra
 <gnome-base/control-center-2
 <gnome-base/eel-2
 <gnome-base/gconf-2
-<gnome-base/gnome-2
 <gnome-base/gnome-applets-2
 <gnome-base/gnome-common-2
 <gnome-base/gnome-panel-2
