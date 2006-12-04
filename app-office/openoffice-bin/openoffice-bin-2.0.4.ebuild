@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.4.ebuild,v 1.1 2006/10/13 13:57:01 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.4.ebuild,v 1.2 2006/12/04 01:48:24 solar Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -48,7 +48,7 @@ DEPEND="${RDEPEND}
 	>=app-admin/eselect-oodict-20060706"
 
 PROVIDE="virtual/ooo"
-RESTRICT="nostrip binchecks"
+RESTRICT="nostrip"
 
 src_unpack() {
 
