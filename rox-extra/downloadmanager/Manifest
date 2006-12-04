@@ -1,33 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+AUX uk.co.demon.kerofin.DownloadManager.service 98 RMD160 2a4be9c97d976f9d5edbf59d360e44b6eef2c248 SHA1 f752d35c00751a1d2c37bcace4d534958b303b61 SHA256 0605ad385379a5c4c8186df788070e17e8fb1f24cb40e38948a5e68c4a31f3d7
+MD5 2b5e57b6518a623c72dddb8820c2bf3f files/uk.co.demon.kerofin.DownloadManager.service 98
+RMD160 2a4be9c97d976f9d5edbf59d360e44b6eef2c248 files/uk.co.demon.kerofin.DownloadManager.service 98
+SHA256 0605ad385379a5c4c8186df788070e17e8fb1f24cb40e38948a5e68c4a31f3d7 files/uk.co.demon.kerofin.DownloadManager.service 98
 DIST DownloadManager-0.1.2.tar.gz 21413 RMD160 cbf77280807783f71b65ae51e795ec59ccf95885 SHA1 a45f278db0138a1444d131a6aeb90b246445aab1 SHA256 ba9cd74486e517bb0268d8322a8eea2d70306cdeb82f1b8142337361707a6421
-EBUILD downloadmanager-0.1.2-r1.ebuild 984 RMD160 1b2dd7be6bf5fb97ec65e9cdba005681c18c356b SHA1 5c42d71678e304a6d542773edbd3c983d3e1c01e SHA256 5ecbdea12f99d829e3d83cd5373183630fbec20eeec5f4e7a66ee919deda4e70
-MD5 5e38b9795aa64a4080ec294ef01b57ec downloadmanager-0.1.2-r1.ebuild 984
-RMD160 1b2dd7be6bf5fb97ec65e9cdba005681c18c356b downloadmanager-0.1.2-r1.ebuild 984
-SHA256 5ecbdea12f99d829e3d83cd5373183630fbec20eeec5f4e7a66ee919deda4e70 downloadmanager-0.1.2-r1.ebuild 984
-EBUILD downloadmanager-0.1.2.ebuild 641 RMD160 6b43a0bf0a7fbdd25f1c0b5df7e7e72444bc0e56 SHA1 5da8f160b26a41770c54e9758e5ec1489917f43f SHA256 867108df577d328a2535cc16f519e91d9584ad44a0c381b1f7bd8e01d5091220
-MD5 18d902738b5e5b50d7eb61581274752a downloadmanager-0.1.2.ebuild 641
-RMD160 6b43a0bf0a7fbdd25f1c0b5df7e7e72444bc0e56 downloadmanager-0.1.2.ebuild 641
-SHA256 867108df577d328a2535cc16f519e91d9584ad44a0c381b1f7bd8e01d5091220 downloadmanager-0.1.2.ebuild 641
-MISC ChangeLog 1158 RMD160 4b1f12703e2cfd2a3c05b97c827485fb9ba78078 SHA1 bc22ee9077451f833d83852156e5dc761e190003 SHA256 18bd1294199a7166d784de486afd52970942fdbd95480da28b03e035d5afed15
-MD5 d205103ec106210be057ef5cdfc6aa69 ChangeLog 1158
-RMD160 4b1f12703e2cfd2a3c05b97c827485fb9ba78078 ChangeLog 1158
-SHA256 18bd1294199a7166d784de486afd52970942fdbd95480da28b03e035d5afed15 ChangeLog 1158
+EBUILD downloadmanager-0.1.2-r2.ebuild 1179 RMD160 54339be1927410f2275ddd6babbcc6feb85beec0 SHA1 774ee1f6d76aaae1e1caf70c1c362a9e5ed07154 SHA256 96871db6971a8ec35a2735079664c0fca0200c0100c47335126816693f19359e
+MD5 4943760e7e1b48fc270a3fd90eaa9ed4 downloadmanager-0.1.2-r2.ebuild 1179
+RMD160 54339be1927410f2275ddd6babbcc6feb85beec0 downloadmanager-0.1.2-r2.ebuild 1179
+SHA256 96871db6971a8ec35a2735079664c0fca0200c0100c47335126816693f19359e downloadmanager-0.1.2-r2.ebuild 1179
+MISC ChangeLog 1545 RMD160 5c154bd5ed465dcff7d3e1c793cf7d86b7d661cd SHA1 f4f9c6b0d48da361ea009237df8064c10498e43f SHA256 6cdea426408a1eef40c19d87e8ae55bfec9e9be47e1a54145c5e0c7f92203a19
+MD5 2a32f50bccecdf0303c490f7a68b619a ChangeLog 1545
+RMD160 5c154bd5ed465dcff7d3e1c793cf7d86b7d661cd ChangeLog 1545
+SHA256 6cdea426408a1eef40c19d87e8ae55bfec9e9be47e1a54145c5e0c7f92203a19 ChangeLog 1545
 MISC metadata.xml 157 RMD160 fd6d83b802caa82822e8bb4d1752063fcda9b47f SHA1 54ccd31d923f052c9111f04c1a7d8b8f04f0a7b2 SHA256 941fe96a972d5a4f49555c01cbfab71d51e81ade3a53322fee549061aa17012c
 MD5 94ae74afbf5ec6b3f8cdcb4ea7c917bb metadata.xml 157
 RMD160 fd6d83b802caa82822e8bb4d1752063fcda9b47f metadata.xml 157
 SHA256 941fe96a972d5a4f49555c01cbfab71d51e81ade3a53322fee549061aa17012c metadata.xml 157
-MD5 bc18e15cf8aa702fe3d5627732379141 files/digest-downloadmanager-0.1.2 262
-RMD160 08a594c2c553b6bc9612cdad9640166e754c305d files/digest-downloadmanager-0.1.2 262
-SHA256 67f696dcb5edee0d27e836d9d3e8f8a1bdd6ec9407caddfa3625aacdafdfa001 files/digest-downloadmanager-0.1.2 262
-MD5 bc18e15cf8aa702fe3d5627732379141 files/digest-downloadmanager-0.1.2-r1 262
-RMD160 08a594c2c553b6bc9612cdad9640166e754c305d files/digest-downloadmanager-0.1.2-r1 262
-SHA256 67f696dcb5edee0d27e836d9d3e8f8a1bdd6ec9407caddfa3625aacdafdfa001 files/digest-downloadmanager-0.1.2-r1 262
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-
-iD8DBQFFcfgmoeSe8B0zEfwRAmLOAJ9WBUCoOteJWn6RG6vKf6wXjivyHwCeL4Lz
-Ul9RZMurpAVwD6Ib8XAEFPE=
-=0TC2
------END PGP SIGNATURE-----
+MD5 bc18e15cf8aa702fe3d5627732379141 files/digest-downloadmanager-0.1.2-r2 262
+RMD160 08a594c2c553b6bc9612cdad9640166e754c305d files/digest-downloadmanager-0.1.2-r2 262
+SHA256 67f696dcb5edee0d27e836d9d3e8f8a1bdd6ec9407caddfa3625aacdafdfa001 files/digest-downloadmanager-0.1.2-r2 262
