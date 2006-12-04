@@ -1,0 +1,11 @@
+--- Doxyfile	2006-12-04 10:21:23.000000000 +0100
++++ ../Doxyfile	2006-12-04 10:21:06.000000000 +0100
+@@ -459,7 +459,7 @@
+ # directories like "/usr/src/myproject". Separate the files or directories 
+ # with spaces.
+ 
+-INPUT                  = src
++INPUT                  = programs/gaia
+ 
+ # If the value of the INPUT tag contains directories, you can use the 
+ # FILE_PATTERNS tag to specify one or more wildcard pattern (like *.cpp 
