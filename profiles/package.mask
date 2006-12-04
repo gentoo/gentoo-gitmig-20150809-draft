@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6388 2006/12/04 00:09:13 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6389 2006/12/04 00:10:31 omp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -186,7 +186,6 @@ dev-perl/HTTP-GHTTP
 dev-php4/php-gtk
 dev-python/bonobo-python
 dev-python/orbit-python
-dev-python/pygthon-gtkextra
 dev-ruby/ruby-gnome
 dev-ruby/ruby-libglade
 dev-ruby/ruby-panel-applet
