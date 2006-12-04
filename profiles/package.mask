@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6396 2006/12/04 00:20:57 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6397 2006/12/04 00:24:37 omp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -350,7 +350,6 @@ dev-ada/adabroker
 =dev-ada/adadoc-2.01
 <dev-ada/gps-bin-2.1
 =dev-ada/aunit-1.01
-=dev-ada/cbind-6
 
 # Luca Barbato <lu_zero@gentoo.org> (13 Nov 2006)
 # Cell stuff, not for consumption yet.
