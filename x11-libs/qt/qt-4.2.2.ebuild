@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.2.ebuild,v 1.1 2006/12/04 15:40:24 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.2.ebuild,v 1.2 2006/12/04 18:18:50 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -17,7 +17,7 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE_INPUT_DEVICES="input_devices_wacom"
 
-IUSE="accessibility cups dbus debug doc examples firebird gif glib jpeg mng mysql nas nis odbc opengl pch png postgres qt3 sqlite xinerama zlib ${IUSE_INPUT_DEVICES}"
+IUSE="accessibility cups dbus debug doc examples firebird gif glib jpeg mng mysql nas nis odbc opengl pch png postgres qt3 sqlite sqlite3 xinerama zlib ${IUSE_INPUT_DEVICES}"
 
 DEPEND="x11-libs/libXrandr
 	x11-libs/libXcursor
@@ -36,6 +36,8 @@ DEPEND="x11-libs/libXrandr
 	odbc? ( dev-db/unixODBC )
 	mysql? ( virtual/mysql )
 	firebird? ( dev-db/firebird )
+	sqlite3? ( =dev-db/sqlite-3* )
+	sqlite? ( =dev-db/sqlite-2* )
 	opengl? ( virtual/opengl virtual/glu )
 	postgres? ( dev-db/libpq )
 	cups? ( net-print/cups )
@@ -157,7 +159,8 @@ src_compile() {
 	use mysql	&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/$(get_libdir)/mysql" || myconf="${myconf} -no-sql-mysql"
 	use postgres	&& myconf="${myconf} -plugin-sql-psql -I/usr/include/postgresql/pgsql" || myconf="${myconf} -no-sql-psql"
 	use firebird	&& myconf="${myconf} -plugin-sql-ibase" || myconf="${myconf} -no-sql-ibase"
-	use sqlite	&& myconf="${myconf} -plugin-sql-sqlite" || myconf="${myconf} -no-sql-sqlite"
+	use sqlite3	&& myconf="${myconf} -plugin-sql-sqlite -system-sqlite" || myconf="${myconf} -no-sql-sqlite"
+	use sqlite	&& myconf="${myconf} -plugin-sql-sqlite2" || myconf="${myconf} -no-sql-sqlite2"
 	use odbc	&& myconf="${myconf} -plugin-sql-odbc" || myconf="${myconf} -no-sql-odbc"
 
 	use dbus	&& myconf="${myconf} -qdbus" || myconf="${myconf} -no-qdbus"

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.396 2006/12/04 17:51:27 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.397 2006/12/04 18:18:50 caleb Exp $
+
+  04 Dec 2006; Caleb Tennis <caleb@gentoo.org> qt-4.2.2.ebuild:
+  Fix up sqlite and sqlite3 use flags to pull in proper dependencies and use
+  proper config options to build proper plugins (from bug #156123)
 
   04 Dec 2006; Caleb Tennis <caleb@gentoo.org> -qt-3.3.6-r1.ebuild,
   -qt-3.3.6-r2.ebuild, -qt-3.3.6-r3.ebuild:
