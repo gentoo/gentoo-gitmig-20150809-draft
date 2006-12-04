@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libcddb
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcddb/ChangeLog,v 1.30 2006/09/28 12:39:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcddb/ChangeLog,v 1.31 2006/12/04 21:32:57 genstef Exp $
+
+*libcddb-1.3.0 (04 Dec 2006)
+
+  04 Dec 2006; Stefan Schweizer <genstef@gentoo.org> -libcddb-0.9.4.ebuild,
+  -libcddb-0.9.5.ebuild, +libcddb-1.3.0.ebuild:
+  version bump thanks to stillunknown in irc and Maarten Maathuis
+  <madman2003@gmail.com> and Mark Knecht <markknecht@gmail.com> in bug 156904,
+  also fixes #154179 thanks to Paolo Pedroni <paolo.pedroni@iol.it>
 
   28 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> libcddb-1.2.1.ebuild:
   Fix circular dependency with libcdio as reported by Mike Lundy in bug
