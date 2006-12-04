@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4.ebuild,v 1.18 2006/11/30 23:15:33 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4.ebuild,v 1.19 2006/12/04 11:01:40 suka Exp $
 
 inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions multilib toolchain-funcs
 
@@ -44,7 +44,10 @@ COMMON_DEPEND="!app-office/openoffice-bin
 	x11-libs/libXinerama
 	virtual/libc
 	>=dev-lang/perl-5.0
-	dbus? ( >=sys-apps/dbus-0.60 )
+	dbus? ( || (
+				>=dev-libs/dbus-glib-0.71
+				( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.61 )
+			) )
 	gnome? ( >=x11-libs/gtk+-2.4
 		>=gnome-base/gnome-vfs-2.6
 		>=gnome-base/gconf-2.0 )
