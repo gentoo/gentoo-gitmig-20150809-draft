@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.2.ebuild,v 1.2 2006/12/04 18:18:50 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.2.ebuild,v 1.3 2006/12/04 18:25:56 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -17,7 +17,7 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE_INPUT_DEVICES="input_devices_wacom"
 
-IUSE="accessibility cups dbus debug doc examples firebird gif glib jpeg mng mysql nas nis odbc opengl pch png postgres qt3 sqlite sqlite3 xinerama zlib ${IUSE_INPUT_DEVICES}"
+IUSE="accessibility cups dbus debug doc examples firebird gif glib jpeg mng mysql nas nis odbc opengl pch png postgres qt3support sqlite sqlite3 xinerama zlib ${IUSE_INPUT_DEVICES}"
 
 DEPEND="x11-libs/libXrandr
 	x11-libs/libXcursor
@@ -165,7 +165,7 @@ src_compile() {
 
 	use dbus	&& myconf="${myconf} -qdbus" || myconf="${myconf} -no-qdbus"
 	use glib	&& myconf="${myconf} -glib" || myconf="${myconf} -no-glib"
-	use qt3		&& myconf="${myconf} -qt3support" || myconf="${myconf} -no-qt3support"
+	use qt3support		&& myconf="${myconf} -qt3support" || myconf="${myconf} -no-qt3support"
 
 	use pch		&& myconf="${myconf} -pch"
 
