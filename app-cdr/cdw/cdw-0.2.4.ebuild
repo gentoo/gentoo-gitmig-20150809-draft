@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.2.4.ebuild,v 1.8 2006/11/23 15:26:29 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.2.4.ebuild,v 1.9 2006/12/04 10:21:23 mr_bones_ Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 MY_P=${PN}-${PV/_/-}
 DESCRIPTION="gtk2 and ncurses-based console frontend to cdrecord and mkisofs"
@@ -39,6 +39,8 @@ src_unpack() {
 src_compile() {
 	local myconf
 
+	strip-flags
+	replace-flags -O? -O1
 	use vorbis \
 		&& myconf="${myconf} --with-oggenc=/usr/bin/oggenc" \
 		|| myconf="${myconf} $(use_with vorbis oggenc)"
