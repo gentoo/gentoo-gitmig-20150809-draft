@@ -1,8 +1,36 @@
-MD5 7eeaadab95922c5daebb115416675099 ChangeLog 907
-MD5 f5644cc8e3c13d2297667661ab2bb656 chess-2.0_beta3.ebuild 981
-MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 9bc1b0e3c15bbdb8d9b5e691e9a0a1fe chess-2.0_beta5.ebuild 1061
-MD5 9126e1d41dd1cb51f77ee832df3a9a85 files/50chess-gentoo.el 436
-MD5 627b245c618bd76c6fe27edf4a1e4d3c files/digest-chess-2.0_beta3 215
-MD5 b700f2e5f5faba5be8731c6fe65427da files/digest-chess-2.0_beta5 215
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX 2.0_beta5-byte-compiling-files-gentoo.patch 934 RMD160 fbc3b15ff7ab4e91531e5e11a18b74bb525d0176 SHA1 0673d5ae25d348bf213e1f93b35863851c3439a2 SHA256 77c6a0d94fe5b5c7f2ab11ba853d8089fbf5cb8c4234a4221e8e20c32f9e4bb5
 MD5 6435dfdb192fd42d7a225d2a1ff4753d files/2.0_beta5-byte-compiling-files-gentoo.patch 934
+RMD160 fbc3b15ff7ab4e91531e5e11a18b74bb525d0176 files/2.0_beta5-byte-compiling-files-gentoo.patch 934
+SHA256 77c6a0d94fe5b5c7f2ab11ba853d8089fbf5cb8c4234a4221e8e20c32f9e4bb5 files/2.0_beta5-byte-compiling-files-gentoo.patch 934
+AUX 50chess-gentoo.el 436 RMD160 8f938fe4fd9cef37c42a986b1980e24bdeb6dc8a SHA1 7cb2df27bdb12fffd88b072554d04ef7b180e755 SHA256 df4666c3378537325f21480b3e9cae3eb7803b78330586162b02120197887b25
+MD5 9126e1d41dd1cb51f77ee832df3a9a85 files/50chess-gentoo.el 436
+RMD160 8f938fe4fd9cef37c42a986b1980e24bdeb6dc8a files/50chess-gentoo.el 436
+SHA256 df4666c3378537325f21480b3e9cae3eb7803b78330586162b02120197887b25 files/50chess-gentoo.el 436
+DIST chess-2.0b5.tar.bz2 620380
+DIST emacs-chess-pieces-2.0.tar.bz2 297687
+DIST emacs-chess-sounds-2.0.tar.bz2 3390098
+EBUILD chess-2.0_beta5.ebuild 1061 RMD160 108b80ade203602b0ddcbd2ad786455c3f27e209 SHA1 3b8a3da061c9def3a820720d1def69c7d64cae00 SHA256 09800de1f196a4ea46d9f19baefb52e56dd582ea20572a4095d63299099db133
+MD5 9bc1b0e3c15bbdb8d9b5e691e9a0a1fe chess-2.0_beta5.ebuild 1061
+RMD160 108b80ade203602b0ddcbd2ad786455c3f27e209 chess-2.0_beta5.ebuild 1061
+SHA256 09800de1f196a4ea46d9f19baefb52e56dd582ea20572a4095d63299099db133 chess-2.0_beta5.ebuild 1061
+MISC ChangeLog 1011 RMD160 f0ada6a369b03a93b8d71b0765114f7bf60d566e SHA1 9473a9bffab490cea25ba40c33fe15a50856948a SHA256 f22a0b9d4a4245b91a28cef9ed755bc97fae1241a615d586428306337da7a328
+MD5 7a7f68bb30de017ea8f7032fcacb5b98 ChangeLog 1011
+RMD160 f0ada6a369b03a93b8d71b0765114f7bf60d566e ChangeLog 1011
+SHA256 f22a0b9d4a4245b91a28cef9ed755bc97fae1241a615d586428306337da7a328 ChangeLog 1011
+MISC metadata.xml 158 RMD160 415d172437ca754d24fc5ab186ba8e77934d96e4 SHA1 61f6eff9729cd87a725c2a70c81aca4270a17fc4 SHA256 1393bdef3a74343fdb40a112c7096a1af16f67e7a43413250de28dfe73810eab
+MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+RMD160 415d172437ca754d24fc5ab186ba8e77934d96e4 metadata.xml 158
+SHA256 1393bdef3a74343fdb40a112c7096a1af16f67e7a43413250de28dfe73810eab metadata.xml 158
+MD5 b700f2e5f5faba5be8731c6fe65427da files/digest-chess-2.0_beta5 215
+RMD160 77ee73d53b0e9c9ef586e6e3e6b754e0c763ff8d files/digest-chess-2.0_beta5 215
+SHA256 2b7f2d46e2858d7738944b5c9eb80fecb3047ccf947a8ae4081d138a89b97a60 files/digest-chess-2.0_beta5 215
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFdAlONQqtfCuFneMRAhm5AJ9+B0bkgL4KtaGcFzwkAQLRtHs0pwCgnNin
+zZXYzkkyErozathcEbG37hE=
+=Czt2
+-----END PGP SIGNATURE-----
