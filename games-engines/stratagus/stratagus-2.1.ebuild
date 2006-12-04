@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.1.ebuild,v 1.12 2006/10/19 19:18:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.1.ebuild,v 1.13 2006/12/04 20:14:19 wolf31o2 Exp $
 
 inherit games
 
@@ -25,7 +25,7 @@ RDEPEND="app-arch/bzip2
 	ogg? ( vorbis? ( media-libs/libogg media-libs/libvorbis ) )"
 
 DEPEND="${RDEPEND}
-	|| ( x11-libs/libXt virtual/x11 )
+	x11-libs/libXt
 	doc? ( app-doc/doxygen )"
 
 S=${WORKDIR}/stratagus-${MY_PV}
