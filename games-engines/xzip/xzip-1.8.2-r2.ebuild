@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/xzip/xzip-1.8.2-r2.ebuild,v 1.7 2006/01/20 21:05:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/xzip/xzip-1.8.2-r2.ebuild,v 1.8 2006/12/04 22:30:52 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -13,9 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
-RDEPEND="|| (
-	x11-libs/libX11
-	virtual/x11 )"
+RDEPEND="x11-libs/libX11"
 
 S=${WORKDIR}/xzip
 
