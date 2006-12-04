@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.14.1-r1.ebuild,v 1.9 2006/02/22 14:10:35 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.14.1-r1.ebuild,v 1.10 2006/12/04 17:46:49 caleb Exp $
 
 inherit distutils eutils
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE="debug doc examples"
 
-RDEPEND="x11-libs/qt
+RDEPEND="=x11-libs/qt-3*
 	~dev-python/sip-4.2.1
 	dev-python/qscintilla"
 DEPEND="${RDEPEND}
