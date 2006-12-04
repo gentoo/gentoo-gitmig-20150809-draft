@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/sonata
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.6 2006/11/27 02:55:37 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.7 2006/12/04 00:26:45 ticho Exp $
+
+  04 Dec 2006; <ticho@gentoo.org> -sonata-0.6.ebuild, -sonata-0.7.1.ebuild,
+  -sonata-0.8.ebuild, -sonata-0.8.1.ebuild, sonata-0.9.ebuild:
+  Warn user if GTK+ was built without jpeg USE flag. Warning suggested by
+  Avuton Olrich <avuton at gmail.com>. Removed old ebuilds.
 
 *sonata-0.9 (27 Nov 2006)
 
