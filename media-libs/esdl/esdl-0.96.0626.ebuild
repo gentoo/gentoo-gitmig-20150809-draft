@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/esdl/esdl-0.96.0626.ebuild,v 1.2 2006/07/16 09:10:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/esdl/esdl-0.96.0626.ebuild,v 1.3 2006/12/04 00:50:34 opfer Exp $
 
 inherit fixheadtails multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/esdl/${P}.src.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND=">=dev-lang/erlang-9b
