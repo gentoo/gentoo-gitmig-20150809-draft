@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/freeze
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/ChangeLog,v 1.14 2005/11/13 03:51:26 weeve Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/ChangeLog,v 1.15 2006/12/04 22:35:10 masterdriverz Exp $
+
+  04 Dec 2006; Charlie Shepherd <masterdriverz@gentoo.org>
+  freeze-2.5.0.ebuild:
+  Stop Makefile stripping files, thanks to Jakub for the patch, bug 152224
 
   13 Nov 2005; Jason Wever <weeve@gentoo.org> freeze-2.5.0.ebuild:
   Stable on SPARC.
