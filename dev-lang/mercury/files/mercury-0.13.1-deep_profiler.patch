@@ -1,0 +1,75 @@
+--- mercury-compiler-0.13.1.orig/configure	2006-12-01 22:37:01.000000000 +1300
++++ mercury-compiler-0.13.1/configure	2006-12-04 21:00:23.000000000 +1300
+@@ -8666,14 +8666,14 @@
+ esac
+ 
+ case $enable_deep_profiler in
+-	default)
+-		if test -d $mercury_cv_default_cgi_dir; then
+-			mercury_cv_enable_deep_profiler=$mercury_cv_can_enable_deep_profiler
+-			mercury_cv_cgi_dir=$mercury_cv_default_cgi_dir
+-		else
+-			mercury_cv_enable_deep_profiler=no
+-		fi
+-		;;
++#	default)
++#		if test -d $mercury_cv_default_cgi_dir; then
++#			mercury_cv_enable_deep_profiler=$mercury_cv_can_enable_deep_profiler
++#			mercury_cv_cgi_dir=$mercury_cv_default_cgi_dir
++#		else
++#			mercury_cv_enable_deep_profiler=no
++#		fi
++#		;;
+ 	no)
+ 		mercury_cv_enable_deep_profiler=no
+ 		;;
+@@ -8698,17 +8698,17 @@
+ 		;;
+ esac
+ 
+-if test $mercury_cv_enable_deep_profiler = yes; then
+-	if test -d $mercury_cv_cgi_dir; then
+-		true
+-	else
+-		echo "$as_me:$LINENO: result: $enable_deep_profiler" >&5
+-echo "${ECHO_T}$enable_deep_profiler" >&6
+-		{ { echo "$as_me:$LINENO: error: CGI script directory $mercury_cv_cgi_dir does not exist" >&5
+-echo "$as_me: error: CGI script directory $mercury_cv_cgi_dir does not exist" >&2;}
+-   { (exit 1); exit 1; }; }
+-	fi
+-fi
++#if test $mercury_cv_enable_deep_profiler = yes; then
++#	if test -d $mercury_cv_cgi_dir; then
++#		true
++#	else
++#		echo "$as_me:$LINENO: result: $enable_deep_profiler" >&5
++#echo "${ECHO_T}$enable_deep_profiler" >&6
++#		{ { echo "$as_me:$LINENO: error: CGI script directory $mercury_cv_cgi_dir does not exist" >&5
++#echo "$as_me: error: CGI script directory $mercury_cv_cgi_dir does not exist" >&2;}
++#   { (exit 1); exit 1; }; }
++#	fi
++#fi
+ 
+ echo "$as_me:$LINENO: result: $mercury_cv_enable_deep_profiler" >&5
+ echo "${ECHO_T}$mercury_cv_enable_deep_profiler" >&6
+--- mercury-compiler-0.13.1.orig/deep_profiler/Mmakefile	2005-12-16 18:49:39.000000000 +1300
++++ mercury-compiler-0.13.1/deep_profiler/Mmakefile	2006-12-04 21:00:35.000000000 +1300
+@@ -155,12 +155,12 @@
+ 	# executed when we do the install. The mv is of course expected to
+ 	# fail during a first-time installation. The rm is before the move
+ 	# in case this is the third or later installation.
+-	-if test $(ENABLE_DEEP_PROFILER) = yes ; then \
+-		rm $(INSTALL_CGI_DIR)/mdprof_cgi.was ; \
+-		mv $(INSTALL_CGI_DIR)/mdprof_cgi \
+-			$(INSTALL_CGI_DIR)/mdprof_cgi.was ; \
+-		cp mdprof_cgi $(INSTALL_CGI_DIR) ; \
+-	fi
++	#-if test $(ENABLE_DEEP_PROFILER) = yes ; then \
++	#	rm $(INSTALL_CGI_DIR)/mdprof_cgi.was ; \
++	#	mv $(INSTALL_CGI_DIR)/mdprof_cgi \
++	#		$(INSTALL_CGI_DIR)/mdprof_cgi.was ; \
++	#	cp mdprof_cgi $(INSTALL_CGI_DIR) ; \
++	#fi
+ 	# We also install mdprof_cgi in $(INSTALL_MERC_BIN_DIR).
+ 	# This is done just so that it can easily get put in the
+ 	# binary distribution (even if the step above failed).

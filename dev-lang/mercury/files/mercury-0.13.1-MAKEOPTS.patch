@@ -1,0 +1,19 @@
+--- mercury-compiler-0.13.1.orig/Makefile	2005-08-22 15:38:34.000000000 +1200
++++ mercury-compiler-0.13.1/Makefile	2006-12-04 21:26:37.000000000 +1300
+@@ -15,7 +15,7 @@
+ #
+ #-----------------------------------------------------------------------------#
+ 
+-
++PARALLEL=	$(MAKEOPTS)
+ SHELL=		/bin/sh
+ MMAKE=		MMAKE_DIR=`pwd`/scripts scripts/mmake 
+ MMAKE_SUBDIR=	MMAKE_DIR=`pwd`/../scripts ../scripts/mmake $(PARALLEL)
+@@ -69,6 +69,6 @@
+ 	$(MMAKE) uninstall
+ 
+ .DEFAULT:
+-	$(MMAKE) $@
++	$(MMAKE) MMAKEFLAGS=$(PARALLEL) $@
+ 
+ #-----------------------------------------------------------------------------#

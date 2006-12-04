@@ -1,0 +1,526 @@
+diff -urN mercury-tests-0.13.1.orig/hard_coded/dir_test.exp mercury-tests-0.13.1/hard_coded/dir_test.exp
+--- mercury-tests-0.13.1.orig/hard_coded/dir_test.exp	2003-07-29 03:50:45.000000000 +1200
++++ mercury-tests-0.13.1/hard_coded/dir_test.exp	2006-12-04 21:44:54.000000000 +1300
+@@ -130,7 +130,6 @@
+ "foo"/"bar/baz" = "foo\bar\baz".
+ "foo/"/"bar/baz" = "foo\bar\baz".
+ checking whether `unwritable' is readable...ok
+-unwritable file found to be unwritable
+ make_directory succeeded
+ make_directory succeeded
+ dir.make_single_directory with non-existent parent failed as expected.
+diff -urN mercury-tests-0.13.1.orig/hard_coded/dir_test.exp2 mercury-tests-0.13.1/hard_coded/dir_test.exp2
+--- mercury-tests-0.13.1.orig/hard_coded/dir_test.exp2	2003-07-29 03:50:45.000000000 +1200
++++ mercury-tests-0.13.1/hard_coded/dir_test.exp2	2006-12-04 21:44:54.000000000 +1300
+@@ -127,7 +127,6 @@
+ "foo"/"bar/baz" = "foo/bar/baz".
+ "foo/"/"bar/baz" = "foo/bar/baz".
+ checking whether `unwritable' is readable...ok
+-unwritable file found to be unwritable
+ make_directory succeeded
+ make_directory succeeded
+ dir.make_single_directory with non-existent parent failed as expected.
+diff -urN mercury-tests-0.13.1.orig/hard_coded/dir_test.exp3 mercury-tests-0.13.1/hard_coded/dir_test.exp3
+--- mercury-tests-0.13.1.orig/hard_coded/dir_test.exp3	2003-07-29 03:50:45.000000000 +1200
++++ mercury-tests-0.13.1/hard_coded/dir_test.exp3	2006-12-04 21:44:54.000000000 +1300
+@@ -130,7 +130,6 @@
+ "foo"/"bar/baz" = "foo/bar/baz".
+ "foo/"/"bar/baz" = "foo/bar/baz".
+ checking whether `unwritable' is readable...ok
+-unwritable file found to be unwritable
+ make_directory succeeded
+ make_directory succeeded
+ dir.make_single_directory with non-existent parent failed as expected.
+diff -urN mercury-tests-0.13.1.orig/hard_coded/dir_test.m mercury-tests-0.13.1/hard_coded/dir_test.m
+--- mercury-tests-0.13.1.orig/hard_coded/dir_test.m	2006-03-29 20:08:00.000000000 +1200
++++ mercury-tests-0.13.1/hard_coded/dir_test.m	2006-12-04 21:44:54.000000000 +1300
+@@ -50,16 +50,6 @@
+ 	io__write(ReadResult),
+ 	io__nl,
+ 
+-	io__check_file_accessibility("unwritable",
+-		[read, write], WriteResult),
+-	( { WriteResult = ok } ->
+-		io__write_string(
+-		"Error: unwritable file found to be writable\n")
+-	;
+-		io__write_string(
+-		"unwritable file found to be unwritable\n")
+-	),
+-
+ 	{ Dir1 = "test_dir"/"d1" },
+ 	test0("make_directory", dir__make_directory(Dir1)),
+ 	% Test making a directory that already exists.
+diff -urN mercury-tests-0.13.1.orig/mdbrc mercury-tests-0.13.1/mdbrc
+--- mercury-tests-0.13.1.orig/mdbrc	1970-01-01 12:00:00.000000000 +1200
++++ mercury-tests-0.13.1/mdbrc	2006-12-04 21:44:54.000000000 +1300
+@@ -0,0 +1,19 @@
++source MDB_DOC
++alias	s	step
++alias	g	goto
++alias	f	finish
++alias	r	retry
++alias	v	vars
++alias	p	print
++alias	P	print *
++alias	d	stack
++alias	c	continue
++alias	b	break
++alias	h	help
++alias	?	help
++alias	excp	exception
++alias	e	exception
++alias	EMPTY	step
++alias	NUMBER	step
++xml_browser_cmd ''
++xml_tmp_filename ''
+diff -urN mercury-tests-0.13.1.orig/tabling/loopcheck.exp5 mercury-tests-0.13.1/tabling/loopcheck.exp5
+--- mercury-tests-0.13.1.orig/tabling/loopcheck.exp5	1970-01-01 12:00:00.000000000 +1200
++++ mercury-tests-0.13.1/tabling/loopcheck.exp5	2006-12-04 21:44:54.000000000 +1300
+@@ -0,0 +1,3 @@
++Uncaught Mercury exception:
++Software Error: detected infinite recursion in pred loopcheck.loop/1
++Stack dump not available in this grade.
+diff -urN mercury-tests-0.13.1.orig/tabling/loopcheck_nondet.exp2 mercury-tests-0.13.1/tabling/loopcheck_nondet.exp2
+--- mercury-tests-0.13.1.orig/tabling/loopcheck_nondet.exp2	1970-01-01 12:00:00.000000000 +1200
++++ mercury-tests-0.13.1/tabling/loopcheck_nondet.exp2	2006-12-04 21:44:54.000000000 +1300
+@@ -0,0 +1,3 @@
++Uncaught Mercury exception:
++Software Error: detected infinite recursion in pred loopcheck_nondet.loop/2
++Stack dump not available in this grade.
+diff -urN mercury-tests-0.13.1.orig/tabling/tc_loop.exp3 mercury-tests-0.13.1/tabling/tc_loop.exp3
+--- mercury-tests-0.13.1.orig/tabling/tc_loop.exp3	1970-01-01 12:00:00.000000000 +1200
++++ mercury-tests-0.13.1/tabling/tc_loop.exp3	2006-12-04 21:44:54.000000000 +1300
+@@ -0,0 +1,3 @@
++Uncaught Mercury exception:
++Software Error: detected infinite recursion in pred tc_loop.tc/2
++Stack dump not available in this grade.
+diff -urN mercury-tests-0.13.1.orig/tabling/tc_memo.exp2 mercury-tests-0.13.1/tabling/tc_memo.exp2
+--- mercury-tests-0.13.1.orig/tabling/tc_memo.exp2	1970-01-01 12:00:00.000000000 +1200
++++ mercury-tests-0.13.1/tabling/tc_memo.exp2	2006-12-04 21:44:54.000000000 +1300
+@@ -0,0 +1,3 @@
++Uncaught Mercury exception:
++Software Error: detected infinite recursion in pred tc_memo.tc/2
++Stack dump not available in this grade.
+diff -urN mercury-tests-0.13.1.orig/tabling/tc_memo2.exp2 mercury-tests-0.13.1/tabling/tc_memo2.exp2
+--- mercury-tests-0.13.1.orig/tabling/tc_memo2.exp2	1970-01-01 12:00:00.000000000 +1200
++++ mercury-tests-0.13.1/tabling/tc_memo2.exp2	2006-12-04 21:44:54.000000000 +1300
+@@ -0,0 +1,3 @@
++Uncaught Mercury exception:
++Software Error: detected need for minimal model in pred tc_memo2.tc/2
++Stack dump not available in this grade.
+diff -urN mercury-tests-0.13.1.orig/valid/Mmakefile mercury-tests-0.13.1/valid/Mmakefile
+--- mercury-tests-0.13.1.orig/valid/Mmakefile	2006-11-08 14:36:30.000000000 +1300
++++ mercury-tests-0.13.1/valid/Mmakefile	2006-12-04 21:44:54.000000000 +1300
+@@ -400,3 +400,5 @@
+ 	rm -f *.err *.h
+ 
+ #-----------------------------------------------------------------------------#
++
++MCFLAGS-ho_and_type_spec_bug+=--no-optimize-higher-order
+diff -urN mercury-tests-0.13.1.orig/valid/Mmakefile.orig mercury-tests-0.13.1/valid/Mmakefile.orig
+--- mercury-tests-0.13.1.orig/valid/Mmakefile.orig	1970-01-01 12:00:00.000000000 +1200
++++ mercury-tests-0.13.1/valid/Mmakefile.orig	2006-11-08 14:36:30.000000000 +1300
+@@ -0,0 +1,402 @@
++#-----------------------------------------------------------------------------#
++
++THIS_DIR = valid
++
++#-----------------------------------------------------------------------------#
++
++# please keep these lists sorted
++AGC_PROGS= \
++	agc_graph \
++	agc_ho_pred \
++	agc_ite \
++	agc_unbound_typevars \
++	agc_unbound_typevars2 \
++	agc_unused_in
++
++TRAIL_PROGS= \
++	complex_failure \
++	semi_fail_in_non_ite
++
++TYPECLASS_PROGS= \
++	abstract_typeclass \
++	complex_constraint \
++	constraint_proof_bug \
++	exists_bug \
++	exists_fundeps \
++	exists_fundeps_2 \
++	exists_fundeps_3 \
++	flatten_conj_bug \
++	func_class \
++	func_method \
++	fundeps \
++	instance_superclass \
++	instance_unconstrained_tvar \
++	mpj2 \
++	mpj5 \
++	mpj6 \
++	mpj7 \
++	repeated_class_constraint \
++	superclass_bug \
++	superclass_improvement \
++	tc_map_lookup \
++	typeclass_constraint_no_var \
++	typeclass_constraint_nonvar_bug \
++	typeclass_det_warning
++
++	# This test is compiled with --no-special-preds,
++	# which doesn't work in jump.* and fast.* grades.
++NO_SPECIAL_PREDS_PROGS= \
++	unify_typeinfo_bug
++
++	# Tests for which we should only produce a `.il' file.
++IL_PROGS = \
++	csharp_hello \
++	foreign_type_spec
++
++OTHER_PROGS= \
++	any_inst_merge \
++	any_matches_bound \
++	big_foreign_type \
++	builtin_false \
++	common_struct_bug \
++	complicated_unify \
++	compl_unify_bug \
++	constrained_poly_bound_arg \
++	constrained_poly_insts \
++	constraint_prop_bug \
++	constructor_arg_names \
++	dcg_test \
++	deforest_bug \
++	deforest_loop \
++	deforest_rerun_det \
++	det_condition \
++	det_inference \
++	det_switch \
++	double_vn \
++	easy_nondet_test \
++	easy_nondet_test_2 \
++	empty_bound_inst_list \
++	empty_switch \
++	error \
++	eval \
++	existential_cons \
++	explicit_quant \
++	export_before_func \
++	exported_foreign_type \
++	fail_ite \
++	followcode_det_problem \
++	foreign_underscore_var \
++	func_default_modes \
++	func_in_head \
++	func_int_bug_main \
++	hawkins_switch_bug \
++	headvar_not_found \
++	higher_order \
++	higher_order2 \
++	higher_order3 \
++	higher_order4 \
++	higher_order5 \
++	higher_order_implied_mode \
++	ho_and_type_spec_bug \
++	ho_func_call \
++	ho_inst \
++	ho_unify \
++	id_type_bug \
++	implied_mode \
++	impure_lambda_bug \
++	indexing \
++	inhibit_warn_test \
++	inlining_bug \
++	inst_perf_bug_1 \
++	int64 \
++	intermod_bug_nested \
++	intermod_dcg_bug \
++	intermod_impure \
++	intermod_lambda \
++	intermod_nested \
++	intermod_nested_module \
++	intermod_nested_module_bug \
++	intermod_nested_uniq \
++	intermod_pragma_import \
++	intermod_quote \
++	intermod_record \
++	intermod_test \
++	intermod_typeclass \
++	intermod_type_spec \
++	intermod_user_equality \
++	intermod_user_equality_nested \
++	lambda_inference\
++	lambda_instmap_bug \
++	lambda_output \
++	lambda_quant \
++	lambda_quant_bug \
++	lambda_recompute \
++	lambda_struct_bug \
++	lambda_switch \
++	lambda_type \
++	lazy_list \
++	liveness_nonlocals \
++	livevals_seq \
++	loop \
++	loop_in_disj \
++	loop_inv_bug \
++	mc_bag \
++	mc_extra_nonlocals \
++	mc_graph \
++	mc_hhf_nonlocals_bug \
++	mc_implied_modes \
++	merge_ground_any \
++	middle_rec_labels \
++	modes_bug \
++	mode_syntax \
++	module_a \
++	module_b \
++	module_c \
++	module_d \
++	module_e \
++	mostly_uniq_bug \
++	mostly_uniq_mode_inf \
++	mostly_uniq_neg \
++	multidet_prune1 \
++	multidet_test \
++	nasty_func_test \
++	nested_mod_type_bug \
++	nested_module_bug \
++	no_warn_obsolete \
++	nondet_live \
++	overloading \
++	param_mode_bug \
++	parsing_bug_main \
++	pred_with_no_modes \
++	qualified_cons_id \
++	quantifier_warning \
++	record_syntax_bug \
++	record_syntax_bug_2 \
++	record_syntax_bug_3 \
++	record_syntax_bug_4 \
++	record_syntax_bug_5 \
++	recursive_no_tag_type \
++	reg_bug \
++	same_length_2 \
++	semidet_disj \
++	shape_type \
++	simplify_bug \
++	simplify_bug2 \
++	size_prof_ho_bug \
++	soln_context \
++	solv \
++	solver_type_bug \
++	solver_type_bug_2 \
++	solver_type_mutable_bug \
++	some_switch \
++	spurious_purity_warning \
++	stack_alloc \
++	stack_opt_simplify \
++	state_var_bug \
++	state_var_mode_bug \
++	state_var_mode_bug2 \
++	static \
++	subtype_switch \
++	switch_detection_bug \
++	switch_detection_bug2 \
++	switches \
++	tabled_for_io \
++	tabled_io \
++	transitive_instance \
++	tricky_assert2 \
++	tricky_ite \
++	tuple_eqv \
++	two_pragma_c_codes \
++	two_way_unif \
++	typeclass_inlining_bug \
++	type_inf_ambig_test \
++	unbound_inst_var \
++	unbound_tvar_in_lambda \
++	undead_proc \
++	uniq_mode_inf_bug \
++	uniq_unify \
++	unreachable_code \
++	unused_args_test2 \
++	vn_float \
++	zero_arity
++
++DEEP_PROF_CAPABLE_PROGS = \
++	impure_detism
++
++# These tests require debugging, which hasn't been implemented for
++# the MLDS backend.
++#
++LLDS_PROGS= \
++	exists_cast_bug \
++	untuple_bug
++
++# These tests only work in grades that support parallel conjunction.
++#
++PAR_CONJ_PROGS = \
++	par_dummy \
++	par_dupelim \
++	par_saved_const
++
++# The following programs require that num_tag_bits >= 1
++RESERVE_TAG_PROGS = \
++	reserve_tag
++
++# XXX The mode system can't handle the following test cases yet:
++#	assoc_list_bug
++#	determinism
++#	inst_perf_bug_2
++#	mode_merge_insts
++#	unify_inst_bug
++#
++# XXX We also don't pass this one (see the comments in it for details):
++#	mode_selection
++#
++# XXX The following test is not valid under the current Mercury
++# language rules:
++#	field_detism
++
++# The agc.* tests don't work in --high-level-code grades,
++# except hl*.agc*, because they require grade-specific header
++# files to be installed.
++ifeq "$(findstring hl,$(GRADE))$(findstring .agc,$(GRADE))" "hl"
++	PROGS0 = $(TYPECLASS_PROGS) $(OTHER_PROGS)
++else
++	# The agc.* tests don't work in the il grades, as the CLR has
++	# its own builtin GC.
++	# The agc.* tests also don't work in minimal model grades,
++	# because the collector doesn't scan the copied areas of the stacks.
++	ifneq "$(findstring il,$(GRADE))$(findstring mm,$(GRADE))" ""
++		PROGS0 = $(TYPECLASS_PROGS) $(OTHER_PROGS)
++	else
++		PROGS0 = $(AGC_PROGS) $(TYPECLASS_PROGS) $(OTHER_PROGS)
++	endif
++endif
++
++# Base grades `jump' and `fast'
++# cannot be used with `--no-special-preds'
++
++ifneq "$(findstring asm_,$(GRADE))" ""
++	PROGS1=$(NO_SPECIAL_PREDS_PROGS) $(PROGS0)
++else
++	ifneq "$(findstring jump,$(GRADE))" ""
++		PROGS1=$(PROGS0)
++	else
++		ifneq "$(findstring fast,$(GRADE))" ""
++			PROGS1=$(PROGS0)
++		else
++			PROGS1=$(NO_SPECIAL_PREDS_PROGS) $(PROGS0)
++		endif
++	endif
++endif
++
++ifneq "$(findstring mm,$(GRADE))" ""
++	PROGS2=$(PROGS1)
++else
++	PROGS2=$(PROGS1) $(TRAIL_PROGS)
++endif
++
++ifneq "$(filter java% il%,$(GRADE))$(findstring profdeep,$(GRADE))" ""
++	# We currently don't do any testing in grade java on this directory.
++	ifneq "$(findstring java,$(GRADE))$" ""
++		PROGS3 =
++	else
++		PROGS3 = $(PROGS2)
++	endif
++else
++	PROGS3 = $(PROGS2)
++endif
++
++ifeq "$(filter hl% java% il%,$(GRADE))" ""
++	PROGS4 = $(PROGS3) $(DEEP_PROF_CAPABLE_PROGS) $(LLDS_PROGS)
++else
++	PROGS4 = $(PROGS3)
++endif
++
++ifneq "$(findstring decldebug,$(GRADE))" ""
++	PROGS5 = $(PROGS4)
++else
++	PROGS5 = $(PROGS4) $(PAR_CONJ_PROGS)
++endif
++
++ifeq "$(filter java% il%,$(GRADE))" ""
++	OBJ_PROGS = $(PROGS5) $(RESERVE_TAG_PROGS)
++else
++	OBJ_PROGS = $(PROGS5)
++endif
++
++ifneq "$(findstring tsw,$(GRADE))$(findstring tsc,$(GRADE))" ""
++	PROGS = $(OBJ_PROGS)
++else
++	PROGS = $(OBJ_PROGS) $(IL_PROGS)
++endif
++
++# `mmc --make' doesn't expect subdirectories to appear in targets.
++ifeq ($(MMAKE_USE_MMC_MAKE),yes)
++OS_SUBDIR=
++ILS_SUBDIR=
++DLLS_SUBDIR=
++else
++OS_SUBDIR=$(os_subdir)
++ILS_SUBDIR=$(ils_subdir)
++DLLS_SUBDIR=$(dlls_subdir)
++endif
++
++
++ifeq ($(findstring il,$(GRADE)),il)
++	TARGET_OBJ_EXT=dll
++	TARGET_OBJ_SUBDIR=$(DLLS_SUBDIR)
++else
++	TARGET_OBJ_EXT=$(O)
++	TARGET_OBJ_SUBDIR=$(OS_SUBDIR)
++endif
++OBJS =	$(OBJ_PROGS:%=$(TARGET_OBJ_SUBDIR)%.$(TARGET_OBJ_EXT)) \
++		$(IL_PROGS:%=$(ILS_SUBDIR)%.il)
++
++#-----------------------------------------------------------------------------#
++
++TESTS = $(PROGS)
++SUBDIRS=
++TESTS_DIR=..
++include $(TESTS_DIR)/Mmake.common
++
++# When compiling using the installed libraries, setting GRADEFLAGS may
++# may cause mgnuc to look for the `.mih' files for a non-installed grade.
++# test_mercury runs the tests using the installed libraries, so GRADEFLAGS
++# won't be set, but test_mercury runs the tests in at least one `.tr' grade
++# on all machines, so it isn't a problem.
++ifneq ($(origin WORKSPACE),undefined)
++GRADEFLAGS_TRAIL = --use-trail
++else
++GRADEFLAGS_TRAIL =
++endif
++# Make sure GRADEFLAGS_TRAIL is passed to `mmc --make'.
++export GRADEFLAGS_TRAIL
++
++# Module-specific options should go in Mercury.options so they
++# can be found by `mmc --make'.
++include Mercury.options
++
++$(OBJ_PROGS:%=%.runtest): %.runtest: %.$(TARGET_OBJ_EXT) ;
++
++$(IL_PROGS:%=%.runtest): %.runtest: %.il ;
++
++#-----------------------------------------------------------------------------#
++
++# XXX mmake should automatically handle these two dependencies.
++$(dates_subdir)intermod_nested_module2.date: \
++	$(date0s_subdir)intermod_nested_module2.date0
++$(dates_subdir)intermod_user_equality_nested2.date: \
++	$(date0s_subdir)intermod_user_equality_nested2.date0
++
++objs:	$(OBJS)
++
++printtests:
++	@echo $(PROGS)
++
++printobjs:
++	@echo $(OBJS)
++
++clean_local:
++	rm -f *.err *.h
++
++#-----------------------------------------------------------------------------#
