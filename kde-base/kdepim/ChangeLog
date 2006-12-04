@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.233 2006/12/03 19:38:34 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.234 2006/12/04 18:47:48 caleb Exp $
+
+  04 Dec 2006; Caleb Tennis <caleb@gentoo.org>
+  files/kmail-3.5.5-dimap-mail-loss.patch:
+  revise the patch slightly per bug #157049 (and the KDE bug referenced therein
 
   03 Dec 2006; Markus Rothe <corsair@gentoo.org> kdepim-3.5.5-r2.ebuild:
   Stable on ppc64

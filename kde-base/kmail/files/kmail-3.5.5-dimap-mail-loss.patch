@@ -2,14 +2,6 @@ Index: kmail/kmfoldercachedimap.cpp
 ===================================================================
 --- kmail/kmfoldercachedimap.cpp	(revision 597658)
 +++ kmail/kmfoldercachedimap.cpp	(revision 597659)
-@@ -75,6 +75,7 @@
- #include <globalsettings.h>
- 
- #define UIDCACHE_VERSION 1
-+#define MAIL_LOSS_DEBUGGING 0
- 
- static QString incidencesForToString( KMFolderCachedImap::IncidencesFor r ) {
-   switch (r) {
 @@ -150,10 +151,22 @@
      mFolderRemoved( false ),
      /*mHoldSyncs( false ),*/ mRecurse( true ),
