@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/apache-mode/apache-mode-1.1.ebuild,v 1.6 2005/10/24 13:24:26 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/apache-mode/apache-mode-1.1.ebuild,v 1.7 2006/12/04 11:30:53 opfer Exp $
 
 inherit elisp
 
 IUSE=""
 
 DESCRIPTION="Major mode for editing Apache configuration files"
-HOMEPAGE="http://www.keelhaul.demon.co.uk/linux/#apachemode"
+HOMEPAGE="http://www.keelhaul.me.uk/linux/#apachemode"
 SRC_URI="mirror://gentoo/${P}.el.gz"
 LICENSE="GPL-2"
 SLOT="0"

@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/apache-mode
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/apache-mode/ChangeLog,v 1.10 2005/10/24 13:24:26 josejx Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/apache-mode/ChangeLog,v 1.11 2006/12/04 11:30:53 opfer Exp $
+
+  04 Dec 2006; Christian Faulhammer <opfer@gentoo.org>
+  -apache-mode-1.0.ebuild, apache-mode-1.1.ebuild:
+  clean up old versions and corrected Homepage
 
   24 Oct 2005; Joseph Jezak <josejx@gentoo.org> apache-mode-1.1.ebuild:
   Marked ~ppc.
