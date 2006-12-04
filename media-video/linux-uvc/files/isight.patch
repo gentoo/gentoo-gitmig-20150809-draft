@@ -1,0 +1,486 @@
+Index: uvcvideo.c
+===================================================================
+--- uvcvideo.c	(revision 40)
++++ uvcvideo.c	(working copy)
+@@ -49,7 +49,7 @@
+ 
+ #define DRIVER_AUTHOR		"Laurent Pinchart <laurent.pinchart@skynet.be>"
+ #define DRIVER_DESC		"USB Video Class driver"
+-#define DRIVER_VERSION		"0.1.0"
++#define DRIVER_VERSION		"0.1.0-e"
+ #define DRIVER_VERSION_NUMBER	KERNEL_VERSION(0, 1, 0)
+ 
+ #define UVC_CTRL_TIMEOUT	300
+@@ -73,6 +73,10 @@
+ 				 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71}
+ #define UVC_GUID_FORMAT_YUY2	{0x59, 0x55, 0x59, 0x32, 0x00, 0x00, 0x10, 0x00, \
+ 				 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71}
++#define UVC_GUID_FORMAT_YUY2A	{0x59, 0x55, 0x59, 0x32, 0x00, 0x00, 0x10, 0x00, \
++				 0x00, 0x80, 0x71, 0x9b, 0x38, 0x00, 0xaa, 0x00}
++#define UVC_GUID_FORMAT_UYVY    {0x55, 0x59, 0x56, 0x59, 0x00, 0x00, 0x10, 0x00, \
++				 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71}
+ #define UVC_GUID_FORMAT_NV12	{0x4e, 0x56, 0x31, 0x32, 0x00, 0x00, 0x10, 0x00, \
+ 				 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71}
+ 
+@@ -564,10 +568,14 @@
+ 		.fcc		= V4L2_PIX_FMT_YUYV,
+ 	},
+ 	{
+-		.guid		= UVC_GUID_FORMAT_YUY2,
+-		.fcc		= V4L2_PIX_FMT_YUYV,
++		.guid		= UVC_GUID_FORMAT_YUY2A,
++		.fcc		= V4L2_PIX_FMT_UYVY,
+ 	},
+ 	{
++		.guid		= UVC_GUID_FORMAT_UYVY,
++		.fcc		= V4L2_PIX_FMT_UYVY,
++	},
++	{
+ 		.guid		= UVC_GUID_FORMAT_NV12,
+ 		.fcc		= V4L2_PIX_FMT_NV12,
+ 	},
+@@ -1271,24 +1279,38 @@
+ 		struct uvc_buffer *buf, const __u8 *data, unsigned int len)
+ {
+ 	unsigned int maxlen, nbytes;
+-	void *mem;
+-	__u8 fid;
++	__u8 *mem;
++	__u8 fid = queue->last_fid;
++	int hlen = 0, flags = 0, is_header = 0;
++	static const __u8 hdr[] = { 0x11, 0x22, 0x33, 0x44,
++				    0xde, 0xad, 0xbe, 0xef,
++				    0xde, 0xad, 0xfa, 0xce };
+ 
+ 	/* Sanity checks:
+ 	 * - packet must be at least 2 bytes long
+ 	 * - bHeaderLength value must be at least 2 bytes (see above)
+ 	 * - bHeaderLength value can't be larger than the packet size.
+ 	 */
+-	if (len < 2 || data[0] < 2 || data[0] > len)
+-		return -EINVAL;
++	if ((len >= 14 && memcmp (&data[3], hdr, 12) == 0) ||
++	    (len >= 13 && memcmp (&data[2], hdr, 12) == 0)) {
++		uvc_trace(UVC_TRACE_FRAME, "Detecting new header");
++		hlen = (data[3] == 0x11) ? data[1] : data[0];
++		if (hlen > len - 1 || hlen < 2)
++			return -EINVAL;
++		flags = (data[3] == 0x11) ? data[2] : data[1];
++		is_header = 1;
++	}
+ 
+ 	/* Skip payloads marked with the error bit ("error frames"). */
+-	if (data[1] & UVC_STREAM_ERR) {
++	if (hlen != 0 && flags & UVC_STREAM_ERR) {
+ 		uvc_trace(UVC_TRACE_FRAME, "Dropping packet (error bit set).\n");
+-		return 0;
++
++		//return 0;
+ 	}
+ 
+-	fid = data[1] & UVC_STREAM_FID;
++	if (hlen != 0) {
++		fid = flags & UVC_STREAM_FID;
++	}
+ 
+ 	/* Store the packet FID bit and return immediately when the buffer is
+ 	 * NULL.
+@@ -1334,28 +1356,33 @@
+ 				"toggled).\n");
+ 		buf->state = UVC_BUF_STATE_DONE;
+ 		return -EAGAIN;
++	} else if (is_header && buf->buf.bytesused > 0) {
++		buf->state = UVC_BUF_STATE_DONE;
++		return -EAGAIN;
+ 	}
+ 
+ 	queue->last_fid = fid;
+ 
+ 	/* Copy the video data to the buffer. */
+-	len -= data[0];
++	len -= hlen;
+ 	maxlen = buf->buf.length - buf->buf.bytesused;
+-	mem = queue->mem + buf->buf.m.offset + buf->buf.bytesused;
+-	nbytes = min(len, maxlen);
+-	memcpy(mem, data + data[0], nbytes);
+-	buf->buf.bytesused += nbytes;
++	if (!is_header) { /* we skip headers, they do not contain data */
++		mem = queue->mem + buf->buf.m.offset + buf->buf.bytesused;
++		nbytes = min(len - hlen, maxlen);
++		memmove(mem, data + hlen, nbytes);
++		buf->buf.bytesused += nbytes;
++	}
+ 
+ 	/* Drop the current frame if the buffer size was exceeded. */
+-	if (len > maxlen) {
++	if (len - hlen > maxlen || buf->buf.bytesused == buf->buf.length) {
+ 		uvc_trace(UVC_TRACE_FRAME, "Frame complete (overflow).\n");
+ 		buf->state = UVC_BUF_STATE_DONE;
+ 	}
+ 
+ 	/* Mark the buffer as done if the EOF marker is set. */
+-	if (data[1] & UVC_STREAM_EOF && buf->buf.bytesused != 0) {
++	if (hlen != 0 && (flags & UVC_STREAM_EOF && buf->buf.bytesused != 0)) {
+ 		uvc_trace(UVC_TRACE_FRAME, "Frame complete (EOF found).\n");
+-		if (data[0] == len)
++		if (hlen != 0 && hlen == len)
+ 			printk("EOF in empty packet.\n");
+ 		buf->state = UVC_BUF_STATE_DONE;
+ 	}
+@@ -1593,7 +1620,7 @@
+ 
+ 	if (ret != size) {
+ 		uvc_printk(KERN_ERR, "Failed to query (%u) UVC control %u "
+-			"(unit %u) : %d.\n", query, cs, unit, ret);
++			"(unit %u) : %d (exp: %u).\n", query, cs, unit, ret, size);
+ 		return -EIO;
+ 	}
+ 
+@@ -1883,8 +1910,10 @@
+ 
+ 	/* Get the minimum and maximum values for compression settings. */
+ 	if ((ret = uvc_get_video_ctrl(video, &probe_min, 1, GET_MIN)) < 0 ||
+-	    (ret = uvc_get_video_ctrl(video, &probe_max, 1, GET_MAX)) < 0)
++	    (ret = uvc_get_video_ctrl(video, &probe_max, 1, GET_MAX)) < 0) {
++		ret = 0;
+ 		goto done;
++	}
+ 
+ 	probe->wCompQuality = probe_max.wCompQuality;
+ 
+@@ -1942,7 +1971,7 @@
+ 		return ret;
+ 
+ 	/* Retrieve the default format and commit it. */
+-	if ((ret = uvc_get_video_ctrl(video, probe, 1, GET_DEF)) < 0)
++	if ((ret = uvc_get_video_ctrl(video, probe, 1, GET_CUR)) < 0)
+ 		return ret;
+ 	if ((ret = uvc_set_video_ctrl(video, probe, 0)) < 0)
+ 		return ret;
+@@ -2214,6 +2243,11 @@
+ 	if ((ret = uvc_set_video_ctrl(video, &probe, 0)) < 0)
+ 		return ret;
+ 
++	if (probe.dwMaxVideoFrameSize == 0)
++		probe.dwMaxVideoFrameSize =
++			video->streaming->format[probe.bFormatIndex - 1].
++				frame[probe.bFrameIndex - 1].dwMaxVideoFrameBufferSize;
++
+ 	memcpy(&video->streaming->ctrl, &probe, sizeof probe);
+ 	video->streaming->cur_format = format;
+ 	video->streaming->cur_frame = frame;
+@@ -3506,6 +3540,13 @@
+ 
+ 	if (!found) {
+ 		uvc_printk(KERN_INFO, "No valid video chain found.\n");
++		if (dev->udev->descriptor.idVendor == 0x05ac &&
++		    dev->udev->descriptor.idProduct == 0x8300) {
++			uvc_printk (KERN_ERR, "Possible an Apple iSight "
++				    "without firmware loaded; please read "
++				    "the documentation, load the firmware "
++				    "and re-load the driver.");
++		}
+ 		return -1;
+ 	}
+ 
+@@ -3757,6 +3798,19 @@
+ 	  .bInterfaceClass	= USB_CLASS_VENDOR_SPEC,
+ 	  .bInterfaceSubClass	= 1,
+ 	  .bInterfaceProtocol	= 0 },
++	/* Apple iSight (built-in in Macintels) */
++	{ .match_flags		= USB_DEVICE_ID_MATCH_DEVICE,
++	  .idVendor		= 0x05ac,
++	  .idProduct		= 0x8501 },
++	/* same, but without firmware loaded (will give useful warning)
++	 * when the firmware is not loaded in the pre-instal step). */
++	{ .match_flags		= USB_DEVICE_ID_MATCH_DEVICE
++				| USB_DEVICE_ID_MATCH_INT_INFO,
++	  .idVendor		= 0x05ac,
++	  .idProduct		= 0x8300,
++	  .bInterfaceClass	= USB_CLASS_VENDOR_SPEC,
++	  .bInterfaceSubClass	= 0xff,
++	  .bInterfaceProtocol	= 0xff },
+ 	/* Generic USB Video Class */
+ 	{ USB_INTERFACE_INFO(USB_CLASS_VIDEO, 1, 0) },
+ 	{}
+Index: Makefile
+===================================================================
+--- Makefile	(revision 40)
++++ Makefile	(working copy)
+@@ -1,7 +1,7 @@
+ KERNEL_VERSION	:= `uname -r`
+ KERNEL_DIR	:= /lib/modules/$(KERNEL_VERSION)/build
+ INSTALL_MOD_DIR	:= usb/media
+-
++DRIVER_VERSION	:= `grep DRIVER_VERSION uvcvideo.c | grep define | grep -v DRIVER_VERSION_NUMBER | cut -d"\"" -f2`
+ PWD		:= $(shell pwd)
+ 
+ obj-m		:= uvcvideo.o
+@@ -9,7 +9,7 @@
+ %.o : %.c
+ 	gcc $(TEST_CFLAGS) -c -o $@ $<
+ 
+-all: uvcvideo
++all: uvcvideo extract
+ 
+ uvcvideo:
+ 	@echo "Building USB Video Class driver..."
+@@ -24,3 +24,12 @@
+ 	-rm -f *.o *.ko .*.cmd .*.flags *.mod.c Modules.symvers
+ 	-rm -rf .tmp_versions
+ 
++extract: extract.c
++	gcc -Wall -g `pkg-config --cflags --libs libusb glib-2.0` -lgcrypt -o extract extract.c
++
++dist:
++	rm -fr linux-uvc-${DRIVER_VERSION}
++	mkdir linux-uvc-${DRIVER_VERSION}
++	cp uvcvideo.[ch] Makefile extract.c linux-uvc-${DRIVER_VERSION}/
++	tar -zcf linux-uvc-${DRIVER_VERSION}.tar.gz linux-uvc-${DRIVER_VERSION}
++	rm -fr linux-uvc-${DRIVER_VERSION}
+--- /extract.c
++++ extract.c
+@@ -0,0 +1,243 @@
++/*
++ * Apple iSight (the one built in the screen of Macbooks) firmware loader
++ * Copyright (C) 2006 Ronald S. Bultje <rbultje@ronald.bitfreak.net>
++ *
++ * Special thanks to Johannes Berg <johannes@sipsolutions.net> for helping
++ * to find out how to load the firmware; see his website on
++ * http://johannes.sipsolutions.net/MacBook/iSight for details.
++ * Basic structure of firmware data: <len:2><off:2><data:len>, where
++ * the $data of size $len is to be put at position $off in the device.
++ *
++ * This program is free software; you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License as published by
++ * the Free Software Foundation; either version 2 of the License, or
++ * (at your option) any later version.
++ *
++ * This program is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ * GNU General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this program; if not, write to the Free Software
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
++ * MA 02110-1301, USA
++ */
++
++#include <stdlib.h>
++#include <stdio.h>
++#include <sys/types.h>
++#include <sys/stat.h>
++#include <fcntl.h>
++#include <errno.h>
++#include <string.h>
++#include <gcrypt.h>
++#include <glib.h>
++
++#include <usb.h>
++#define TIMEOUT 300
++
++static int
++read_fw (struct usb_dev_handle *dev, char *filename, long off)
++{
++	int fd, len, req, llen, res, ret = -1;
++	unsigned char data[4], rdata[1024], *ptr;
++
++	if ((fd = open (filename, O_RDONLY)) == -1) {
++		perror ("Opening file");
++		return -1;
++	} else if (lseek (fd, off, SEEK_SET) != off) {
++		perror ("Seeking");
++		close (fd);
++		return -1;
++	}
++
++	if ((res = usb_control_msg (dev, 0x40, 0xA0, 0xe600, 0,
++				    "\1", 1, TIMEOUT)) != 1) {
++		perror ("Firmware load init failed");
++		close (fd);
++		return -1;
++	}
++	while (1) {
++		if ((len = read (fd, data, 4)) != 4) {
++			if (len == 0) {
++				fprintf (stderr,
++					 "Unexpected eos - corrupt driver?\n");
++				goto end;
++			} else {
++				perror("Reading firmware header chunk failed");
++				goto end;
++			}
++		}
++		len = (data[0] << 8) | data[1];
++		req = (data[2] << 8) | data[3];
++		if (len == 0x8001)
++			break; /* success */
++		else if (len == 0)
++			continue;
++		else if (len < 0 || len >= 1024) {
++			fprintf (stderr,
++				 "Invalid firmware data_length %d, load aborted\n",
++				 len);
++			goto end;
++		} else if (read (fd, rdata, len) != len) {
++			perror ("Error reading firmware data");
++			goto end;
++		}
++
++		/* upload to usb bus */
++		for (ptr = rdata; len > 0; req += 50, ptr += 50) {
++			llen = len > 50 ? 50 : len;
++			len -= llen;
++
++			if ((res = usb_control_msg (dev, 0x40, 0xA0, req, 0,
++						    (char *) ptr, llen,
++						    TIMEOUT)) != llen) {
++				fprintf (stderr,
++					 "firmware load req=0x%x failed: %s\n",
++					 req, strerror (errno));
++				goto end;
++			}
++		}
++	}
++
++	ret = 0;
++end:
++	if ((res = usb_control_msg (dev, 0x40, 0xA0, 0xe600, 0,
++				    "\0", 1, TIMEOUT)) != 1) {
++		perror ("Firmware finish-up failed");
++		ret = -1;
++	}
++
++	close (fd);
++
++	return ret;
++}
++
++static int
++probe_dev (struct usb_device *dev, char *fw_filename, long off)
++{
++	int n, total = 0, res;
++
++	if (dev->descriptor.idVendor == 0x05ac &&
++	    dev->descriptor.idProduct == 0x8300 &&
++	    dev->descriptor.bDeviceClass == 0xff &&
++	    dev->descriptor.bDeviceSubClass == 0xff &&
++	    dev->descriptor.bDeviceProtocol == 0xff) {
++		usb_dev_handle *h;
++
++		/* load firmware */
++		if (!(h = usb_open (dev))) {
++			perror ("Opening iSight");
++			return -1;
++		}
++		printf ("Loading firmware for iSight...\n");
++		if (read_fw (h, fw_filename, off) == 0) {
++			printf ("done\n");
++			total++;
++		}
++		usb_close (h);
++	} else if (dev->descriptor.idVendor == 0x05ac &&
++		   dev->descriptor.idProduct == 0x8501) {
++		printf ("Apple iSight with firmware already loaded found\n");
++		total++;
++	}
++
++	for (n = 0; n < dev->num_children; n++) {
++		res = probe_dev (dev->children[n], fw_filename, off);
++		if (res != -1)
++			total += res;
++	}
++
++	return total;
++}
++
++int
++main (int argc, char *argv[])
++{
++	int n, found = 0, res, err = 0;
++	unsigned char *digest;
++	GMappedFile *file;
++	GError *gerr = NULL;
++	struct usb_bus *bus;
++	struct usb_device *dev;
++	static const struct {
++		unsigned char sha1sum[20];
++		long off;
++	} offsets[] = {
++		{ { 0x86, 0x43, 0x0c, 0x04, 0xf9, 0xb6, 0x7c, 0x5c,
++		    0x3d, 0x84, 0x40, 0x91, 0x38, 0xa7, 0x67, 0x98,
++		    0x27, 0x02, 0x5e, 0xc2 }, 5172 /* 0x1434 */ },
++		{ { 0xa1, 0x4c, 0x15, 0x9b, 0x17, 0x6d, 0x27, 0xa6,
++		    0xe9, 0x8d, 0xcb, 0x5d, 0xea, 0x5d, 0x78, 0xb8,
++		    0x1e, 0x15, 0xad, 0x41 }, 9176 /* 0x23D8 */ },
++		{ { 0xc6, 0xc9, 0x4d, 0xd7, 0x7b, 0x86, 0x4f, 0x8b,
++		    0x2d, 0x31, 0xab, 0xf3, 0xcb, 0x2d, 0xe4, 0xc9,
++		    0xd1, 0x39, 0xe1, 0xbf }, 0x1434 },
++		{ { 0x01, 0xe2, 0x91, 0xd5, 0x29, 0xe7, 0xc1, 0x8d,
++		    0xee, 0xa2, 0xeb, 0xa2, 0x52, 0xd1, 0x81, 0x14,
++		    0xe0, 0x96, 0x27, 0x6e }, 0x2060 },
++	}, *offset;
++
++	if (argc != 2) {
++		fprintf(stderr, "Usage: %s <firmware file>\n", argv[0]);
++		fprintf(stderr, "Firmware can usually be found on your Mac "
++			"partition in /System/Library/Extensions/"
++			"IOUSBFamily.kext/Contents/PlugIns/"
++			"AppleUSBVideoSupport.kext/Contents/MacOS/"
++			"AppleUSBVideoSupport\n");
++		return -1;
++	}
++	
++	/* check sha1sum on firmware, to prevent loading crap into the
++	 * iSight and thus possibly damaging it. */
++	digest = malloc (gcry_md_get_algo_dlen (GCRY_MD_SHA1));
++	if (!(file = g_mapped_file_new (argv[1], FALSE, &gerr))) {
++		fprintf (stderr, "Error opening firmware file: %s\n",
++			 gerr ? gerr->message : "?");
++		return -1;
++	}
++	gcry_md_hash_buffer (GCRY_MD_SHA1, digest,
++			     g_mapped_file_get_contents (file),
++			     g_mapped_file_get_length (file));
++	g_mapped_file_free (file);
++	for (n = 0; n < G_N_ELEMENTS (offsets); n++)
++		if (!memcmp (offsets[n].sha1sum, digest, 20))
++			break;
++	free (digest);
++	if (n == G_N_ELEMENTS (offsets)) {
++		fprintf (stderr, "Sha1sum check on firmware file failed\n");
++		return -1;
++	}
++	offset = &offsets[n];
++
++	/* init usb */
++	usb_init ();
++	if (usb_find_busses () == 0) {
++		fprintf (stderr, "No USB busses found\n");
++		return -1;
++	} else if (usb_find_devices () == 0) {
++		fprintf (stderr, "No USB devices found\n");
++		return -1;
++	}
++
++	/* find iSight */
++	for (bus = usb_busses; bus != NULL; bus = bus->next) {
++		if (bus->devices != NULL) {
++			for (dev = bus->devices; dev != NULL;
++			     dev = dev->next) {
++				res += probe_dev (dev, argv[1], offset->off);
++				if (res == -1)
++					err++;
++				else
++					found += res;
++			}
++		}
++	}
++	if (found == 0 && err == 0) {
++		fprintf (stderr, "No Apple iSight found!\n");
++		return -1;
++	}
++
++	return 0;
++}
