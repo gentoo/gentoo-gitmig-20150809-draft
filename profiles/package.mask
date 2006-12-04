@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6404 2006/12/04 16:46:43 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6405 2006/12/04 21:47:34 chutzpah Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ## 
+
+# Patrick McLean <chutzpah@gentoo.org> (04 Dec 2006)
+# masked pending removal as there is no bmpx that deps on
+# this anymore and it is deprecated
+x11-themes/bmpx-themes
 
 # Christian Faulhammer <opfer@gentoo.org> (04 Dec 2006)
 # masked for testing, as it is beta
@@ -596,11 +601,6 @@ sys-apps/perfctr
 # Ioannis Aslanidis <deathwing00@gentoo.org> (29 Sep 2006)
 # Preview version: Needs to be tested, has known crashes.
 =kde-misc/katalog-0.4_pre1
-
-# Patrick McLean <chutzpah@gentoo.org> (25 Sep 2006)
-# This depends on dev-cpp/cairomm which is in the Gnome 2.16 mask, so masking
-# until Gnome 2.16 is unmasked
-=media-sound/bmpx-0.3*
 
 # Seemant Kulleen <seemant@gentoo.org> (26 Oct 2006)
 # swfdec is stale, according to upstream as well, and these need to follow
