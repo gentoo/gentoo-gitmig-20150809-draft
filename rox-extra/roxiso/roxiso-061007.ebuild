@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxiso/roxiso-061007.ebuild,v 1.3 2006/11/23 22:50:09 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxiso/roxiso-061007.ebuild,v 1.4 2006/12/04 15:29:16 lack Exp $
 
 ROX_LIB_VER=1.9.13
 inherit rox
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-RDEPEND="app-cdr/cdrtools"
+RDEPEND="virtual/cdrtools"
 
 APPNAME=RoxISO
 S="${WORKDIR}"
