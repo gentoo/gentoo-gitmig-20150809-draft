@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-0.40.1.ebuild,v 1.4 2006/11/13 15:27:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-0.40.1.ebuild,v 1.5 2006/12/05 17:54:40 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -27,19 +27,15 @@ UIDEPEND="alsa? ( media-libs/alsa-lib )
 	media-libs/libogg
 	media-libs/libpng
 	media-libs/libvorbis
-	|| (
-		(
-			x11-libs/libX11
-			x11-libs/libXext
-			x11-libs/libXxf86dga
-			x11-libs/libXxf86vm )
-		virtual/x11 )"
-COMMON="${UIDEPEND}"
-RDEPEND="${COMMON}
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXxf86dga
+	x11-libs/libXxf86vm"
+RDEPEND="${UIDEPEND}
 	cdinstall? ( games-fps/quake2-data )
 	demo? ( games-fps/quake2-demodata )
 	textures? ( games-fps/quake2-textures )"
-DEPEND="${COMMON}"
+DEPEND="${UIDEPEND}"
 
 S=${WORKDIR}/${FILE_STEM}
 dir=${GAMES_DATADIR}/${MY_PN}

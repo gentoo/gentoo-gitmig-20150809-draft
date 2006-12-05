@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.19 2006/10/24 22:53:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.20 2006/12/05 18:00:16 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -18,13 +18,10 @@ DEPEND="sys-libs/glibc
 	games-util/loki_patch"
 RDEPEND="virtual/opengl
 	x86? (
-		|| (
-			(
-				x11-libs/libX11
-				x11-libs/libXext
-				x11-libs/libXau
-				x11-libs/libXdmcp )
-			virtual/x11 )
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXau
+		x11-libs/libXdmcp
 		media-libs/libvorbis
 		media-libs/libogg
 		media-libs/smpeg )

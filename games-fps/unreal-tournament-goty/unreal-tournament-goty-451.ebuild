@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/unreal-tournament-goty-451.ebuild,v 1.14 2006/10/24 22:58:44 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/unreal-tournament-goty-451.ebuild,v 1.15 2006/12/05 18:10:05 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -15,15 +15,12 @@ KEYWORDS="~amd64 x86"
 IUSE="3dfx S3TC nls opengl"
 
 RDEPEND="!amd64? (
-		|| (
-			(
-				x11-libs/libXext
-				x11-libs/libX11
-				x11-libs/libXau
-				x11-libs/libXdmcp )
-			virtual/x11 )
-		=media-libs/libsdl-1.2*
-		opengl? ( virtual/opengl ) )
+	x11-libs/libXext
+	x11-libs/libX11
+	x11-libs/libXau
+	x11-libs/libXdmcp
+	=media-libs/libsdl-1.2*
+	opengl? ( virtual/opengl ) )
 	amd64? ( app-emulation/emul-linux-x86-sdl
 		app-emulation/emul-linux-x86-baselibs
 		app-emulation/emul-linux-x86-xlibs )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/tremulous-1.1.0.ebuild,v 1.3 2006/11/10 13:26:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/tremulous-1.1.0.ebuild,v 1.4 2006/12/05 18:03:48 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -18,16 +18,12 @@ IUSE="dedicated openal opengl vorbis"
 
 UIDEPEND="openal? ( media-libs/openal )
 	media-libs/libsdl
-	vorbis? (
-		media-libs/libogg
-		media-libs/libvorbis )
+	vorbis? ( media-libs/libogg media-libs/libvorbis )
 	virtual/opengl
-	|| ( (
-			x11-libs/libX11
-			x11-libs/libXau
-			x11-libs/libXdmcp
-			x11-libs/libXext )
-		virtual/x11 )"
+	x11-libs/libX11
+	x11-libs/libXau
+	x11-libs/libXdmcp
+	x11-libs/libXext"
 RDEPEND="opengl? ( ${UIDEPEND} )
 	!opengl? ( !dedicated? ( ${UIDEPEND} ) )
 	!games-fps/tremulous-bin"

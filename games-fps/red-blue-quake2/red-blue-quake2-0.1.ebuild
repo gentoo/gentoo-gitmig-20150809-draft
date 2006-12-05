@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/red-blue-quake2/red-blue-quake2-0.1.ebuild,v 1.9 2006/05/06 22:51:12 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/red-blue-quake2/red-blue-quake2-0.1.ebuild,v 1.10 2006/12/05 17:55:35 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -14,9 +14,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-RDEPEND="|| (
-	x11-libs/libX11
-	virtual/x11 )"
+RDEPEND="x11-libs/libX11"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 

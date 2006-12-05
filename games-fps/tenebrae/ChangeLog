@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/tenebrae
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tenebrae/ChangeLog,v 1.7 2006/03/20 23:00:31 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tenebrae/ChangeLog,v 1.8 2006/12/05 18:02:09 wolf31o2 Exp $
+
+  05 Dec 2006; Chris Gianelloni <wolf31o2@gentoo.org> tenebrae-1.04.ebuild:
+  Removing old virtual/x11 dependency.
 
   20 Mar 2006; <Tupone@gentoo.org> tenebrae-1.04.ebuild:
   Modular X dependency fix, bug #123115 by P. Nienaber. Thanks UncleOwen
