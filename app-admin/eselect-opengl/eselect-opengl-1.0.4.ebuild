@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.0.4.ebuild,v 1.2 2006/10/08 13:11:41 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.0.4.ebuild,v 1.3 2006/12/05 15:02:09 wolf31o2 Exp $
 
 inherit multilib
 
@@ -25,7 +25,7 @@ IUSE=""
 RESTRICT="multilib-pkg-force"
 
 DEPEND="app-arch/bzip2"
-RDEPEND=">=app-admin/eselect-1.0.3"
+RDEPEND=">=app-admin/eselect-1.0.5"
 
 S=${WORKDIR}
 
