@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6408 2006/12/04 23:57:48 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6409 2006/12/05 00:55:29 omp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -420,7 +420,6 @@ x11-plugins/replytolist
 x11-libs/nucleo
 x11-wm/golem
 x11-wm/integrity
-x11-wm/lwm
 x11-wm/metisse
 x11-wm/papuawm
 x11-wm/pawm
