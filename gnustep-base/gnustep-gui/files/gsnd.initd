@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2006 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/files/gsnd.initd,v 1.1 2006/03/25 08:57:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/files/gsnd.initd,v 1.2 2006/12/05 20:22:42 grobian Exp $
 
 service_name="GNUstep sound daemon"
 
@@ -21,7 +21,7 @@ start() {
 		# Source GNUstep makefile
 		. ${GNUSTEP_SYSTEM_ROOT}/Makefiles/GNUstep.sh
 	else
-		exit 1
+		return 1
 	fi
 
 	if [ -z "$GNUSTEP_FLATTENED" ];
@@ -41,5 +41,5 @@ stop() {
 	ebegin "Stopping ${service_name}"
 
 	# Kill processes
-	killall gnustep_sndd
+	killall gnustep_sndd >& /dev/null
 }
