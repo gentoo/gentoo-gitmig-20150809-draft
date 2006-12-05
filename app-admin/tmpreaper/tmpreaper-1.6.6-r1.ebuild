@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpreaper/tmpreaper-1.6.6-r1.ebuild,v 1.1 2006/12/04 22:13:07 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpreaper/tmpreaper-1.6.6-r1.ebuild,v 1.2 2006/12/05 19:21:10 masterdriverz Exp $
+
+inherit eutils
 
 DESCRIPTION="A utility for removing files based on when they were last accessed"
 HOMEPAGE="http://packages.debian.org/stable/admin/tmpreaper.html"
