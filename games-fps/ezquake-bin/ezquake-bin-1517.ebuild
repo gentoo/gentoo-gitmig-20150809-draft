@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ezquake-bin/ezquake-bin-1517.ebuild,v 1.3 2006/09/19 19:19:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ezquake-bin/ezquake-bin-1517.ebuild,v 1.4 2006/12/05 14:58:59 wolf31o2 Exp $
 
 inherit games
 
@@ -22,27 +22,18 @@ QA_EXECSTACK_amd64="${GAMES_PREFIX_OPT:1}/ezquake-bin/ezquake-gl.glx
 	${GAMES_PREFIX_OPT:1}/ezquake-bin/ezquake.svga"
 
 RDEPEND=">=dev-libs/expat-2.0
-	!svga? (
-		|| (
-			x11-libs/libXext
-			virtual/x11 ) )
-	svga? (
-		media-libs/svgalib )
-	opengl? (
-		virtual/opengl
-		|| (
-			x11-libs/libXext
-			virtual/x11 ) )
-	cdinstall? (
-		games-fps/quake1-data )"
+	!svga? ( x11-libs/libXext )
+	svga? ( media-libs/svgalib )
+	opengl? ( virtual/opengl x11-libs/libXext )
+	cdinstall? ( games-fps/quake1-data )"
 
 S=${WORKDIR}/${PN}
 
 dir=${GAMES_PREFIX_OPT}/${PN}
 
 src_install() {
-	exeinto ${dir}
-	insinto ${dir}
+	exeinto "${dir}"
+	insinto "${dir}"
 	BINS="ezquake-gl.glx ezquake.x11 ezquake.svga"
 	doexe ${BINS} ezquake-security.so || die "doexe"
 	doins -r ezquake qw || die "cp dirs"
