@@ -1,0 +1,20 @@
+--- datavision.sh	2005-11-08 08:01:37.000000000 -0500
++++ /wlt/gentoo/gentoo-x86/dev-java/datavision/files/datavision.sh	2006-12-04 19:09:32.000000000 -0500
+@@ -1,6 +1,13 @@
+-#! /bin/sh
++#!/bin/bash
+ 
+-classpath="$CLASSPATH":lib/DataVision.jar:lib/jcalendar.jar:lib/jruby.jar:lib/iText.jar:lib/bsf.jar
++JAVA=`java-config -J`
++
++localclasspath=${CLASSPATH}
++localclasspath=${localclasspath}:`java-config -p datavision-1.0`
++localclasspath=${localclasspath}:`java-config -p minml2-0.3`
++localclasspath=${localclasspath}:`java-config -p jcalendar-1.2`
++localclasspath=${localclasspath}:`java-config -p jruby`
++localclasspath=${localclasspath}:`java-config -p bsf-2.3`
++localclasspath=${localclasspath}:`java-config -p gnu-regexp-1`
++localclasspath=${localclasspath}:`java-config -p itext`
+ 
+-cd `dirname $0`
+-java -classpath $classpath jimm.datavision.DataVision $*
