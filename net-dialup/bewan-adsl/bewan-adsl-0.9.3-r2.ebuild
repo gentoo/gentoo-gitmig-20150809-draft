@@ -1,11 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/bewan-adsl-0.9.3-r2.ebuild,v 1.2 2006/10/20 19:46:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/bewan-adsl-0.9.3-r2.ebuild,v 1.3 2006/12/05 21:19:15 mrness Exp $
 
 inherit eutils linux-mod
 
 DESCRIPTION="Bewan ADSL PCI&USB st driver"
-SRC_URI="http://www.bewan.com/bewan/drivers/A1012-A1006-A904-A888-A983-${PV}.tgz"
+SRC_URI="http://www.bewan.com/bewan/drivers/A1012-A1006-A904-A888-A983-${PV}.tgz
+	mirror://gentoo/${P}-patches-20061205.tar.gz"
 HOMEPAGE="http://www.bewan.com/"
 
 LICENSE="GPL-2"
@@ -38,14 +39,14 @@ src_unpack() {
 	cd "${S}"
 	# Fix "unresolved symbol set_cpus_allowed" on SMP kernels (#122103)
 	# Upstream consider actual version to be thread safe
-	epatch "${FILESDIR}/${P}-smp.patch"
+	epatch "${WORKDIR}/patches/${P}-smp.patch"
 
 	local f
 	for f in msw/*.cpp amu/*.cpp ; do
 		mv ${f} ${f%pp}
 	done
-	epatch "${FILESDIR}/${P}-kernel-2.6.18.patch"
-	epatch "${FILESDIR}/${P}-no-strip.patch"
+	epatch "${WORKDIR}/patches/${P}-kernel-changes.patch"
+	epatch "${WORKDIR}/patches/${P}-no-strip.patch"
 
 	# Declare desired COPTIONS in the Makefile for the PCI module
 	use kt400 && sed -i 's/^\(COPTIONS *= *\)/\1 -DKT400/g' "${PCI_S}/Makefile"
