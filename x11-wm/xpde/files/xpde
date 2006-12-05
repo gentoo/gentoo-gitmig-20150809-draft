@@ -1,9 +1,0 @@
-#!/bin/bash
-
-if [ ! -d ${HOME}/.xpde ]
-then
-	tar jxf /usr/share/xpde/homedirsettings.tar.bz2 -C ${HOME}
-fi
-
-/opt/xpde/startXPDE&
-/opt/xpde/startXPWM
