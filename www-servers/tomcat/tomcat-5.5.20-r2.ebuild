@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r2.ebuild,v 1.4 2006/11/28 04:44:39 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r2.ebuild,v 1.5 2006/12/05 00:07:04 wltjr Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -10,7 +10,7 @@ MY_P="apache-${P}-src"
 SLOT="5.5"
 SRC_URI="mirror://apache/${PN}/${PN}-5/v${PV}/src/${MY_P}.tar.gz"
 HOMEPAGE="http://jakarta.apache.org/tomcat"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 -ppc -ppc64"
 LICENSE="Apache-2.0"
 
 IUSE="admin java5 doc examples source test"
@@ -46,7 +46,6 @@ RDEPEND="=dev-java/eclipse-ecj-3.1*
 DEPEND="java5? ( >=virtual/jdk-1.5 )
 	!java5? ( =virtual/jdk-1.4* )
 	${RDEPEND}
-	sys-apps/sed
 	dev-java/ant"
 
 if ! use java5; then
@@ -65,6 +64,8 @@ pkg_setup() {
 	# new user for tomcat
 	enewgroup tomcat
 	enewuser tomcat -1 -1 /dev/null tomcat
+
+	java-pkg_filter ecj-3.1  ecj-3.2
 
 	if use java5; then
 		JAVA_PKG_WANT_SOURCE="1.5"
