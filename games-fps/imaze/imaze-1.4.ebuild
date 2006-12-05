@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/imaze/imaze-1.4.ebuild,v 1.11 2006/03/14 02:59:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/imaze/imaze-1.4.ebuild,v 1.12 2006/12/05 15:24:41 wolf31o2 Exp $
 
 inherit games
 
@@ -14,15 +14,15 @@ KEYWORDS="ppc x86"
 IUSE="Xaw3d joystick"
 
 RDEPEND="
-	|| ( ( x11-libs/libXmu x11-libs/libX11 x11-libs/libXaw x11-libs/libXt )
-
-		virtual/x11 )
+	x11-libs/libXmu
+	x11-libs/libX11
+	x11-libs/libXaw
+	x11-libs/libXt
 	|| (
 		Xaw3d? ( x11-libs/Xaw3d )
-		x11-libs/xview
-	)"
+		x11-libs/xview )"
 DEPEND="${RDEPEND}
-	|| ( x11-proto/xproto virtual/x11 )"
+	x11-proto/xproto"
 
 S=${WORKDIR}/${P}/source
 
