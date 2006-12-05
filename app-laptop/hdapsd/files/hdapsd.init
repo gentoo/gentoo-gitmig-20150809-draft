@@ -34,7 +34,7 @@ checkconfig() {
 start() {
     checkconfig || return 1
 
-    ebegin "Starting hdapsd"
+    ebegin "Starting Hard Drive Active Protection System daemon"
     start-stop-daemon --start --exec /usr/sbin/hdapsd \
 	--pidfile /var/run/hdapsd.pid \
 	-- -b -p -d "${DISK}" -s "${THRESHOLD}" ${OPTIONS}
@@ -42,7 +42,7 @@ start() {
 }
 	
 stop() {
-    ebegin "Stopping hdaps daemon"
+    ebegin "Stopping Hard Drive Active Protection System daemon"
     start-stop-daemon --stop --exec /usr/sbin/hdapsd \
 	--pidfile /var/run/hdapsd.pid
     eend $?
