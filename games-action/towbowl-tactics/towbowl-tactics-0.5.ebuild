@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/towbowl-tactics/towbowl-tactics-0.5.ebuild,v 1.7 2006/11/27 02:02:57 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/towbowl-tactics/towbowl-tactics-0.5.ebuild,v 1.8 2006/12/05 18:15:51 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -20,8 +20,7 @@ RDEPEND="virtual/libc
 	>=media-libs/sdl-image-1.2.3
 	>=media-libs/sdl-mixer-1.2.5"
 DEPEND="${RDEPEND}
-	app-arch/unzip
-	>=sys-apps/sed-4"
+	app-arch/unzip"
 
 S="${WORKDIR}/tbt/src"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/formido/formido-1.0.ebuild,v 1.6 2006/09/21 21:52:49 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/formido/formido-1.0.ebuild,v 1.7 2006/12/05 18:12:34 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -17,8 +17,6 @@ IUSE=""
 RDEPEND=">=media-libs/libsdl-1.2.5
 	>=media-libs/sdl-image-1.2.2
 	>=media-libs/sdl-mixer-1.2.4"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${P}.tar.bz2
