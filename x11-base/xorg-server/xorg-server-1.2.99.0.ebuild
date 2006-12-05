@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.2.99.0.ebuild,v 1.8 2006/11/04 23:54:49 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.2.99.0.ebuild,v 1.9 2006/12/05 20:05:25 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -178,7 +178,7 @@ DEPEND="${RDEPEND}
 	x11-proto/trapproto
 	>=x11-proto/xineramaproto-1.1-r1
 	x11-proto/fontsproto
-	>=x11-proto/kbproto-1.0-r1
+	>=x11-proto/kbproto-1.0.3
 	>=x11-proto/inputproto-1.4
 	x11-proto/bigreqsproto
 	x11-proto/xcmiscproto
