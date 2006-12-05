@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6409 2006/12/05 00:55:29 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6410 2006/12/05 01:15:25 omp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -413,20 +413,6 @@ x11-plugins/replytolist
 # This has many bugs, find rc5 in the overlay: layman -a voip
 # #154329, #154324, #14991, #145345, #150878
 ~net-im/wengophone-2.0_rc2
-
-# David Shakaryan <omp@gentoo.org> (05 Nov 2006)
-# Masking several packages for removal on 05 Dec 2006.
-# See bug #153388 and bugs listed in its description.
-x11-libs/nucleo
-x11-wm/golem
-x11-wm/integrity
-x11-wm/metisse
-x11-wm/papuawm
-x11-wm/pawm
-x11-wm/pwm
-x11-wm/trswm
-x11-wm/wmi
-x11-wm/xpde
 
 # Christian Heim <phreak@gentoo.org> (04 Nov 2006)
 # masking the following packages for treecleaners and bugs
