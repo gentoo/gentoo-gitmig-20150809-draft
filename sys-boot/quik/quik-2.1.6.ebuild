@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/quik/quik-2.1.6.ebuild,v 1.2 2006/11/27 21:58:35 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/quik/quik-2.1.6.ebuild,v 1.3 2006/12/05 04:51:38 josejx Exp $
 
 inherit toolchain-funcs mount-boot eutils
 
@@ -31,6 +31,7 @@ src_unpack() {
 	cd ${WORKDIR}/quik-2.1
 	epatch ${WORKDIR}/quik_2.1-6.diff.gz
 	epatch ${FILESDIR}/md-fix.diff
+	epatch ${FILESDIR}/headers.patch
 }
 
 src_compile() {
