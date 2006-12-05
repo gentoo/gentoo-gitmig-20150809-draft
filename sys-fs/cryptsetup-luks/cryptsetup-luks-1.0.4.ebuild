@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/cryptsetup-luks-1.0.4.ebuild,v 1.1 2006/11/03 02:24:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/cryptsetup-luks-1.0.4.ebuild,v 1.2 2006/12/05 11:00:24 strerror Exp $
 
 inherit linux-info eutils flag-o-matic multilib
 
@@ -17,6 +17,7 @@ RESTRICT="confcache"
 DEPEND=">=sys-fs/device-mapper-1.00.07-r1
 	>=dev-libs/libgcrypt-1.1.42
 	>=dev-libs/libgpg-error-1.0-r1
+	>=dev-libs/popt-1.7
 	selinux? ( sys-libs/libselinux )
 	!sys-fs/cryptsetup"
 
