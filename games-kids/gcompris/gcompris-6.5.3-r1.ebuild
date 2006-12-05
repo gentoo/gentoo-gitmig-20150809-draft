@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-6.5.3-r1.ebuild,v 1.3 2006/05/23 17:06:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-6.5.3-r1.ebuild,v 1.4 2006/12/05 18:13:13 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-RDEPEND="|| ( x11-libs/libXrandr virtual/x11 )
+RDEPEND="x11-libs/libXrandr
 	>=dev-libs/glib-2.0
 	=x11-libs/gtk+-2*
 	>=gnome-base/libgnomecanvas-2.0.2
