@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-	<herd>desktop-wm</herd>
-	<longdescription>
-	Golem is an X11 Window Manager. Design goals are that it be fast, 
-	lightweight, and customizable (without sacrificing speed).
-	</longdescription>	
-</pkgmetadata>
