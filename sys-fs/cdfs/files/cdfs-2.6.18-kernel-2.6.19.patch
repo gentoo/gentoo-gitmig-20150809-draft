@@ -1,0 +1,48 @@
+diff -Nur cdfs-2.6.18.orig/audio.c cdfs-2.6.18/audio.c
+--- cdfs-2.6.18.orig/audio.c	2006-12-05 17:59:10.000000000 +0100
++++ cdfs-2.6.18/audio.c	2006-12-05 17:59:25.000000000 +0100
+@@ -167,7 +167,7 @@
+ /***************************************************************************/
+ 
+ struct file_operations cdfs_cdda_file_operations = {
+-    .read = generic_file_read,
++    .read = generic_file_aio_read,
+     .mmap = generic_file_mmap,
+ };
+ 
+diff -Nur cdfs-2.6.18.orig/cddata.c cdfs-2.6.18/cddata.c
+--- cdfs-2.6.18.orig/cddata.c	2006-12-05 17:59:10.000000000 +0100
++++ cdfs-2.6.18/cddata.c	2006-12-05 17:59:25.000000000 +0100
+@@ -76,7 +76,7 @@
+ 
+ 
+ struct file_operations cdfs_cddata_file_operations = {
+-  .read             = generic_file_read,
++  .read             = generic_file_aio_read,
+ #ifdef OLD_KERNEL
+   .mmap             = generic_file_mmap
+ #else
+diff -Nur cdfs-2.6.18.orig/cdXA.c cdfs-2.6.18/cdXA.c
+--- cdfs-2.6.18.orig/cdXA.c	2006-12-05 17:59:10.000000000 +0100
++++ cdfs-2.6.18/cdXA.c	2006-12-05 17:59:25.000000000 +0100
+@@ -26,7 +26,7 @@
+ #include "cdfs.h"
+ 
+ struct file_operations cdfs_cdXA_file_operations = {
+-    .read = generic_file_read,
++    .read = generic_file_aio_read,
+     .mmap = generic_file_mmap,
+ };
+ 
+diff -Nur cdfs-2.6.18.orig/hfs.c cdfs-2.6.18/hfs.c
+--- cdfs-2.6.18.orig/hfs.c	2006-12-05 17:59:10.000000000 +0100
++++ cdfs-2.6.18/hfs.c	2006-12-05 17:59:25.000000000 +0100
+@@ -194,7 +194,7 @@
+ /***************************************************************************/
+ 
+ struct file_operations cdfs_cdhfs_file_operations = {
+-  .read             = generic_file_read,
++  .read             = generic_file_aio_read,
+   .mmap             = generic_file_mmap
+ };
+ 
