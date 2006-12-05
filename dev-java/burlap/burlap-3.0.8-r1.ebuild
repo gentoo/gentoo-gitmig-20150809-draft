@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/burlap/burlap-3.0.8-r1.ebuild,v 1.4 2006/11/28 04:01:33 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/burlap/burlap-3.0.8-r1.ebuild,v 1.5 2006/12/05 01:51:51 caster Exp $
 
 inherit java-pkg-2
 
@@ -28,7 +28,7 @@ DEPEND="=virtual/jdk-1.4*
 	${COMMON_DEP}"
 
 src_compile() {
-	eant jar $(use_doc) -Dclasspath=$(java-pkg_getjar servletapi-2.3 servlet.jar):$(java-pkg_getjars hessian-3.0.8, caucho-services-3.0)
+	eant jar $(use_doc) -Dclasspath=$(java-pkg_getjar servletapi-2.3 servlet.jar):$(java-pkg_getjars hessian-3.0.8,caucho-services-3.0)
 }
 
 src_install() {
