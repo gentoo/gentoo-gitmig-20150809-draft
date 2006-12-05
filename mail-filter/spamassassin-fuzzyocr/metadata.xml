@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>perl</herd>
+	<maintainer>
+		<email>tomk@gentoo.org</email>
+		<name>Tom Knight</name>
+	</maintainer>
+	<longdescription>This plugin checks for specific keywords in image/gif,
+	image/jpeg or image/png attachments, using gocr (an optical character
+	recognition program).
+	This plugin can be used to detect spam that puts all the real spam
+	content in an attached image. The mail itself only random text and
+	random html, without any URL's or identifiable information.</longdescription>
+</pkgmetadata>
