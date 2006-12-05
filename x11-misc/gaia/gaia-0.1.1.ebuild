@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/gaia-0.1.1.ebuild,v 1.2 2006/12/04 12:01:34 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/gaia-0.1.1.ebuild,v 1.3 2006/12/05 08:16:05 opfer Exp $
 
 inherit eutils
 
@@ -70,6 +70,7 @@ src_install() {
 		doins ${S}/doc/html/*
 	fi
 
+	export CCFLAGS=${CFLAGS}
 	# local defines if there is installation requested, while prefix determines the
 	# target 
 	scons local=no  prefix="${D}/usr" install
