@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/fox
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.66 2006/11/24 16:36:34 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.67 2006/12/05 17:54:38 gustavoz Exp $
+
+  05 Dec 2006; Gustavo Zacarias <gustavoz@gentoo.org> fox-1.2.18-r1.ebuild,
+  fox-1.4.34-r1.ebuild:
+  Stable on sparc
 
   24 Nov 2006; Markus Rothe <corsair@gentoo.org> fox-1.2.18-r1.ebuild,
   fox-1.4.34-r1.ebuild:
