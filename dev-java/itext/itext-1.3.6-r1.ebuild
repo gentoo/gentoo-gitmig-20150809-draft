@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-1.3.6-r1.ebuild,v 1.3 2006/12/04 23:19:40 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-1.3.6-r1.ebuild,v 1.4 2006/12/05 08:23:21 zmedico Exp $
 
 inherit java-pkg-2 java-ant-2
 
