@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r1.ebuild,v 1.1 2006/12/05 05:00:46 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r1.ebuild,v 1.2 2006/12/05 11:29:36 caster Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -48,7 +48,7 @@ SLOT="5.5"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug doc"
 
-RDEPEND=">=virtual/jre-1.5*
+RDEPEND=">=virtual/jre-1.5
 		dev-java/antlr
 		dev-java/commons-el
 		=dev-java/commons-beanutils-1.6*
@@ -82,7 +82,7 @@ RDEPEND=">=virtual/jre-1.5*
 		=www-servers/tomcat-5.5*
 		   "
 DEPEND="${RDEPEND}
-		>=virtual/jdk-1.5*
+		>=virtual/jdk-1.5
 		>=dev-java/ant-1.6.2
 		  dev-util/pmd
 		  dev-libs/libxslt
