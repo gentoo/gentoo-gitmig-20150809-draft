@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/mips/mips64/2006.1/packages,v 1.1 2006/10/08 18:37:25 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/mips/mips64/2006.1/packages,v 1.2 2006/12/05 02:48:55 mr_bones_ Exp $
 
 # mips64 o32 packages
 
@@ -11,3 +11,7 @@
 # Sometimes necessary to trick programs into thinking we're really
 # a mips32 system.
 *sys-apps/setarch
+
+# Since the only stable 1.30.29 version is masked for this profile, allow
+# the older stable version to be available.
+->=sys-libs/libselinux-1.30.29
