@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.13.0.ebuild,v 1.1 2006/09/03 21:10:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.13.0.ebuild,v 1.2 2006/12/05 18:32:38 grobian Exp $
 
 inherit gnustep autotools
 
@@ -120,10 +120,10 @@ src_install() {
 
 	newinitd "${FILESDIR}"/gnustep.initd gnustep
 
-	dodir /etc/revdep
-	sed -e 's/$GNUSTEP_SEARCH_DIRS/'"$GNUSTEP_PATHLIST"'/' \
+	dodir /etc/revdep-rebuild
+	sed -e 's|$GNUSTEP_SEARCH_DIRS|'"$GNUSTEP_PATHLIST"'|' \
 		"${FILESDIR}"/50-gnustep-revdep \
-		> "${D}/etc/revdep/50-gnustep-revdep"
+		> "${D}/etc/revdep-rebuild/50-gnustep-revdep"
 
 	egnustep_package_config
 }
