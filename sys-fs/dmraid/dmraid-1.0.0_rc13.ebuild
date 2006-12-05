@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/dmraid-1.0.0_rc13.ebuild,v 1.1 2006/11/02 16:13:41 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/dmraid-1.0.0_rc13.ebuild,v 1.2 2006/12/05 06:17:41 vapier Exp $
 
 inherit linux-info flag-o-matic
 
@@ -22,12 +22,12 @@ DEPEND="sys-fs/device-mapper
 S=${WORKDIR}/${PN}/${MY_PV}
 
 pkg_setup() {
-	if kernel_is lt 2 6; then
+	if kernel_is lt 2 6 ; then
 		ewarn "You are using a kernel < 2.6"
 		ewarn "DMraid uses recently introduced Device-Mapper features."
 		ewarn "These might be unavailable in the kernel you are running now."
 	fi
-	if use static && use selinux; then
+	if use static && use selinux ; then
 		eerror "ERROR - cannot compile static with libselinux / libsepol"
 		die "USE flag conflicts."
 	fi
@@ -35,29 +35,27 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/dmraid-destdir-fix.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/dmraid-destdir-fix.patch
 }
 
 src_compile() {
-	#inlining doesnt seem to work for dmraid
-	filter-flags -fno-inline
-
-	econf   $(use_enable static static_link) \
+	econf \
+		$(use_enable static static_link) \
 		$(use_enable selinux libselinux) \
-		$(use_enable selinux libsepol) || die "econf failed"
+		$(use_enable selinux libsepol) \
+		|| die "econf failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
+	dodoc CHANGELOG README TODO KNOWN_BUGS doc/*
 
 	# Put the distfile into /usr/share/genkernel/pkg for genkernel
 	# in case the user wants to uuse this instead of genkernel's internal version
-	dodir /usr/share/genkernel/pkg
-	cp ${DISTDIR}/${A} ${D}/usr/share/genkernel/pkg/${A}
-
-	dodoc CHANGELOG README TODO KNOWN_BUGS doc/*
+	insinto /usr/share/genkernel/pkg
+	doins "${DISTDIR}"/${A} || die
 }
 
 pkg_postinst() {
