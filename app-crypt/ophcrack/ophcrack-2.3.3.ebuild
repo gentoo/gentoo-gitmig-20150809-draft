@@ -1,16 +1,16 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ophcrack-2.3.3.ebuild,v 1.1 2006/11/25 17:49:48 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ophcrack-2.3.3.ebuild,v 1.2 2006/12/05 13:46:59 jokey Exp $
 
 inherit toolchain-funcs eutils
 
 DESCRIPTION="A time-memory-trade-off-cracker"
 HOMEPAGE="http://ophcrack.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
-		 mirror://sourceforge/${PN}/bkhive2.tar.gz
-		 http://www.studenti.unina.it/~ncuomo/syskey/samdump2_linux.tgz
-		 !ophsmall?(http://lasecwww.epfl.ch/SSTIC04-5k.zip)
-		 ophsmall?(http://lasecwww.epfl.ch/SSTIC04-10k.zip)"
+	mirror://sourceforge/${PN}/bkhive2.tar.gz
+	http://www.studenti.unina.it/~ncuomo/syskey/samdump2_linux.tgz
+	!ophsmall? ( http://lasecwww.epfl.ch/SSTIC04-5k.zip )
+	ophsmall? ( http://lasecwww.epfl.ch/SSTIC04-10k.zip )"
 
 LICENSE="GPL-2"
 SLOT="0"
