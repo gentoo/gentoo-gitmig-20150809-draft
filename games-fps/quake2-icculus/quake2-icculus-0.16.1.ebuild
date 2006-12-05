@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1.ebuild,v 1.16 2006/06/27 21:46:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1.ebuild,v 1.17 2006/12/05 17:22:39 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -21,18 +21,20 @@ RDEPEND="opengl? ( virtual/opengl )
 	svga? ( media-libs/svgalib )
 	sdl? ( media-libs/libsdl )
 	aalib? ( media-libs/aalib )
-	X? ( || (
-		( x11-libs/libX11 x11-libs/libXext x11-libs/libXxf86dga x11-libs/libXxf86vm )
-		virtual/x11
-	) )
+	X? (
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXxf86dga
+		x11-libs/libXxf86vm )
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
 	media-libs/jpeg"
 DEPEND="${RDEPEND}
-	X? ( || (
-		( x11-proto/xproto x11-proto/xextproto x11-proto/xf86dgaproto x11-proto/xf86vidmodeproto )
-		virtual/x11
-	) )
+	X? (
+		x11-proto/xproto
+		x11-proto/xextproto
+		x11-proto/xf86dgaproto
+		x11-proto/xf86vidmodeproto )
 	rogue? ( || ( sys-freebsd/freebsd-ubin app-arch/sharutils ) )
 	xatrix? ( || ( sys-freebsd/freebsd-ubin app-arch/sharutils ) )"
 

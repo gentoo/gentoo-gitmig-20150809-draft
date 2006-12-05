@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.11 2006/03/22 17:28:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.12 2006/12/05 17:08:32 wolf31o2 Exp $
 
 inherit toolchain-funcs games
 
@@ -15,24 +15,18 @@ KEYWORDS="x86"
 IUSE=""
 
 RDEPEND="virtual/opengl
-	|| (
-		(
-			media-libs/mesa
-			x11-libs/libXxf86dga
-			x11-libs/libXext
-			x11-libs/libX11
-			x11-libs/libXxf86vm )
-		virtual/x11 )
+	media-libs/mesa
+	x11-libs/libXxf86dga
+	x11-libs/libXext
+	x11-libs/libX11
+	x11-libs/libXxf86vm
 	media-libs/libpng
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
-	|| (
-		(
-			x11-proto/xf86dgaproto
-			x11-proto/xextproto
-			x11-proto/xf86vidmodeproto
-			x11-proto/xproto )
-		virtual/x11 )
+	x11-proto/xf86dgaproto
+	x11-proto/xextproto
+	x11-proto/xf86vidmodeproto
+	x11-proto/xproto
 	app-arch/unzip"
 
 S=${WORKDIR}/industri_BIN

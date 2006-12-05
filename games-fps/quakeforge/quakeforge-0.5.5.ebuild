@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5.ebuild,v 1.15 2006/11/13 15:26:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5.ebuild,v 1.16 2006/12/05 17:24:01 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -19,26 +19,17 @@ RDEPEND="3dfx? ( media-libs/glide-v3 )
 	sdl? ( media-libs/libsdl )
 	svga? ( media-libs/svgalib )
 	X? (
-		|| (
-			(
-				x11-libs/libX11
-				x11-libs/libXext
-				x11-libs/libXxf86vm )
-			virtual/x11 ) )
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXxf86vm )
 	ncurses? ( sys-libs/ncurses )
 	vorbis? ( media-libs/libogg media-libs/libvorbis )
 	zlib? ( sys-libs/zlib )
 	xv? (
-		|| (
-			(
-				x11-libs/libX11
-				x11-libs/libXext
-				x11-libs/libXxf86vm )
-			virtual/x11 ) )
-	dga? (
-		|| (
-			x11-libs/libXxf86dga
-			virtual/x11 ) )
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXxf86vm )
+	dga? ( x11-libs/libXxf86dga )
 	alsa? ( media-libs/alsa-lib )"
 DEPEND="${RDEPEND}
 	cdinstall? ( games-fps/quake1-data )

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.2 2006/06/27 21:46:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.3 2006/12/05 17:22:39 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -27,10 +27,11 @@ RDEPEND="${UIDEPEND}
 	cdinstall? ( games-fps/quake2-data )
 	demo? ( games-fps/quake2-demodata )"
 DEPEND="${UIDEPEND}
-	X? ( || (
-		( x11-proto/xproto x11-proto/xextproto x11-proto/xf86dgaproto x11-proto/xf86vidmodeproto )
-		virtual/x11
-	) )
+	X? (
+		x11-proto/xproto
+		x11-proto/xextproto
+		x11-proto/xf86dgaproto
+		x11-proto/xf86vidmodeproto )
 	rogue? ( || ( sys-freebsd/freebsd-ubin app-arch/sharutils ) )
 	xatrix? ( || ( sys-freebsd/freebsd-ubin app-arch/sharutils ) )"
 

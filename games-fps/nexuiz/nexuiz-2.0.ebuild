@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-2.0.ebuild,v 1.3 2006/06/28 21:57:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-2.0.ebuild,v 1.4 2006/12/05 17:14:21 wolf31o2 Exp $
 
 inherit eutils flag-o-matic games
 
@@ -20,22 +20,16 @@ IUSE="alsa dedicated opengl oss sdl"
 UIRDEPEND="alsa? ( media-libs/alsa-lib )
 	media-libs/libogg
 	media-libs/libvorbis
-	|| (
-		(
-			x11-libs/libX11
-			x11-libs/libXau
-			x11-libs/libXdmcp
-			x11-libs/libXext
-			x11-libs/libXxf86dga
-			x11-libs/libXxf86vm )
-		virtual/x11 )"
-UIDEPEND="|| (
-	(
-		x11-proto/xextproto
-		x11-proto/xf86dgaproto
-		x11-proto/xf86vidmodeproto
-		x11-proto/xproto )
-	virtual/x11 )"
+	x11-libs/libX11
+	x11-libs/libXau
+	x11-libs/libXdmcp
+	x11-libs/libXext
+	x11-libs/libXxf86dga
+	x11-libs/libXxf86vm"
+UIDEPEND="x11-proto/xextproto
+	x11-proto/xf86dgaproto
+	x11-proto/xf86vidmodeproto
+	x11-proto/xproto"
 RDEPEND="media-libs/jpeg
 	sys-libs/glibc
 	sys-libs/zlib
