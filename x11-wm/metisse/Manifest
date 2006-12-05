@@ -1,7 +1,0 @@
-MD5 349cec38fdb4f27b3b0a231d5cb2d828 ChangeLog 2044
-MD5 bd188a43cc088ca73161889614be3035 metisse-0.3.4.ebuild 1112
-MD5 e7307c1653035014c1e36a27ca8ccb45 metadata.xml 163
-MD5 072de6949a16bf1ce0d0a93bc644dbac metisse-0.3.5.ebuild 1316
-MD5 9b064fb7563ea3a27b17c5c02871eba9 files/digest-metisse-0.3.5 67
-MD5 417e224f0ecd4c48bc9f5cffdeaa7787 files/digest-metisse-0.3.4 67
-MD5 ba83f501db0ce112a985289ca34a7bb4 files/metisse-0.3.5-mmx-config.patch 2038
