@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/cowsay-3.03.ebuild,v 1.15 2006/05/12 00:31:40 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/cowsay-3.03.ebuild,v 1.16 2006/12/06 17:21:07 wolf31o2 Exp $
 
 inherit bash-completion
 
@@ -13,7 +13,6 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa mips ppc ~ppc-macos ppc64 sparc x86"
 IUSE=""
 
-DEPEND=">=sys-apps/sed-4"
 RDEPEND=">=dev-lang/perl-5"
 
 src_unpack() {
