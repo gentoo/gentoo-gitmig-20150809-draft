@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.0.6.ebuild,v 1.2 2006/07/18 05:20:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.0.6.ebuild,v 1.3 2006/12/06 17:25:28 wolf31o2 Exp $
 
 inherit flag-o-matic games
 
@@ -14,10 +14,8 @@ KEYWORDS="~amd64 ~ppc ~ppc-macos ~sparc ~x86 ~x86-fbsd"
 IUSE="X gtk"
 
 DEPEND=">=sys-libs/ncurses-5
-	gtk? (
-		=x11-libs/gtk+-1.2*
-	)
-	X? ( || ( x11-libs/libXaw virtual/x11 ) )"
+	gtk? ( =x11-libs/gtk+-1.2* )
+	X? ( x11-libs/libXaw )"
 
 src_compile() {
 	egamesconf \

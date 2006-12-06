@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/hengband/hengband-1.6.2-r1.ebuild,v 1.1 2006/07/30 21:17:25 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/hengband/hengband-1.6.2-r1.ebuild,v 1.2 2006/12/06 17:27:54 wolf31o2 Exp $
 
 inherit toolchain-funcs eutils games
 
@@ -15,9 +15,9 @@ SLOT="0"
 IUSE="X linguas_ja"
 
 RDEPEND=">=sys-libs/ncurses-5
-	X? ( || ( x11-libs/libX11 virtual/x11 ) )"
+	X? ( x11-libs/libX11 )"
 DEPEND="${RDEPEND}
-	X? ( || ( x11-libs/libXt virtual/x11 ) )"
+	X? ( x11-libs/libXt )"
 
 src_unpack() {
 	unpack ${A}
