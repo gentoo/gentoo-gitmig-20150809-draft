@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/thoggen/thoggen-0.6.0.ebuild,v 1.2 2006/11/01 16:49:06 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/thoggen/thoggen-0.6.0.ebuild,v 1.3 2006/12/06 18:45:53 hanno Exp $
 
 inherit gnome2
 
@@ -23,14 +23,8 @@ DEPEND=">=gnome-base/libglade-2.4.0
 	>=media-plugins/gst-plugins-vorbis-0.10.10
 	>=media-plugins/gst-plugins-ogg-0.10.10
 	>=sys-apps/hal-0.4
+	dev-libs/dbus-glib
 	>=media-libs/libdvdread-0.9.4"
-
-pkg_setup() {
-	if ! built_with_use sys-apps/dbus gtk; then
-		eerror "Please merge sys-apps/dbus with 'gtk' in USE flags."
-		die "Need glib support in dbus!"
-	fi
-}
 
 G2CONF="--disable-element-checks"
 DOCS="AUTHORS ChangeLog NEWS README TODO"
