@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/atlas-0.3.0.ebuild,v 1.2 2006/03/25 01:13:01 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/atlas-0.3.0.ebuild,v 1.3 2006/12/06 21:14:26 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -17,13 +17,8 @@ IUSE=""
 DEPEND=">=games-simulation/flightgear-0.9.4
 	>=media-libs/libpng-1.2.5
 	media-libs/jpeg
-	|| (
-		(
-			x11-libs/libXi
-			x11-libs/libXmu
-		)
-		virtual/x11
-	)"
+	x11-libs/libXi
+	x11-libs/libXmu"
 
 S=${WORKDIR}/${MY_P}
 
