@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfce44.eclass,v 1.3 2006/12/05 16:22:45 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfce44.eclass,v 1.4 2006/12/06 03:24:30 nichoj Exp $
 
 # Xfce44 Eclass
 #
@@ -35,7 +35,8 @@ xfce44_gzipped() {
 
 ## adds the -plugin string to $P and adds the depend on panel version
 xfce44_plugin() {
-	[[ -z ${MY_P} ]] && MY_P="${PN}-plugin-${PV}"
+	[[ -z ${MY_PN} ]] && MY_PN="${PN}-plugin"
+	[[ -z ${MY_P} ]] && MY_P="${MY_PN}-${PV}"
 	S="${WORKDIR}/${MY_P}"
 	[[ -z ${XFCE_MASTER_VERSION} ]] && XFCE_MASTER_VERSION=${XFCE_VERSION}
 	[[ -z ${THUNAR_MASTER_VERSION} ]] && THUNAR_MASTER_VERSION=${THUNAR_VERSION}
@@ -53,8 +54,7 @@ xfce44_thunar_plugin() {
 
 ## sets SRC_URI and HOMEPAGE to berlios
 xfce44_goodies() {
-	SRC_URI="http://download.berlios.de/xfce-goodies/${MY_P:-${P}}${COMPRESS}"
-	[[ -z ${HOMEPAGE} ]] && HOMEPAGE="http://xfce-goodies.berlios.de/"
+	[[ -z ${HOMEPAGE} ]] && HOMEPAGE="http://goodies.xfce.org"
 	S="${WORKDIR}/${MY_P:-${P}}"
 }
 
@@ -62,12 +62,14 @@ xfce44_goodies() {
 xfce44_goodies_panel_plugin() {
 	xfce44_panel_plugin
 	xfce44_goodies
+	SRC_URI="http://goodies.xfce.org/releases/${MY_PN}/${MY_P}${COMPRESS}"
 }
 
 ## calls thunar_plugin and goodies funtions in correct order
 xfce44_goodies_thunar_plugin() {
 	xfce44_thunar_plugin
 	xfce44_goodies
+	SRC_URI="http://download.berlios.de/xfce-goodies/file-manager-plugins/thunar/${MY_P:-${P}}${COMPRESS}"
 }
 
 ## sets SRC_URI and HOMPAGE for all Xfce core pacgages
