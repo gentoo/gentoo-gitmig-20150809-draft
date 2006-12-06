@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/insaneodyssey
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/insaneodyssey/ChangeLog,v 1.4 2006/03/07 20:36:13 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/insaneodyssey/ChangeLog,v 1.5 2006/12/06 17:02:08 wolf31o2 Exp $
+
+  06 Dec 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  insaneodyssey-000311.ebuild:
+  Removed sed-4 from *DEPEND.
 
   07 Mar 2006; <Tupone@gentoo.org>
   files/insaneodyssey-000311-datafiles.patch:

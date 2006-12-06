@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/insaneodyssey/insaneodyssey-000311.ebuild,v 1.4 2004/08/03 11:50:43 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/insaneodyssey/insaneodyssey-000311.ebuild,v 1.5 2006/12/06 17:02:08 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -19,12 +19,9 @@ RDEPEND=">=media-libs/libsdl-1.2.7
 	>=media-libs/sdl-mixer-1.2.5
 	>=media-libs/sdl-image-1.2.3"
 
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+S=${WORKDIR}/${PN}
 
-S="${WORKDIR}/${PN}"
-
-DEST_DIR="${GAMES_DATADIR}/${PN}"
+DEST_DIR=${GAMES_DATADIR}/${PN}
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/rockdodger/rockdodger-0.6.0a-r1.ebuild,v 1.4 2006/09/20 16:49:12 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rockdodger/rockdodger-0.6.0a-r1.ebuild,v 1.5 2006/12/06 17:06:04 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -17,11 +17,9 @@ RDEPEND=">=media-libs/libsdl-1.2.2
 	>=media-libs/sdl-image-1.2
 	>=media-libs/sdl-mixer-1.2"
 
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+GAME_DEST_DIR=${GAMES_DATADIR}/${PN}
 
 src_unpack() {
-	GAME_DEST_DIR="${GAMES_DATADIR}/${PN}"
 	unpack ${A}
 	cd "${S}"
 

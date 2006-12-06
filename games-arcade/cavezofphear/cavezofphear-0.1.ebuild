@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/cavezofphear/cavezofphear-0.1.ebuild,v 1.9 2006/10/05 21:19:15 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/cavezofphear/cavezofphear-0.1.ebuild,v 1.10 2006/12/06 17:01:11 wolf31o2 Exp $
 
 inherit games
 
@@ -14,14 +14,12 @@ KEYWORDS="amd64 ppc ppc64 ~sparc x86"
 IUSE=""
 
 RDEPEND="sys-libs/ncurses"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
-S="${WORKDIR}/${P/cavezof/}"
+S=${WORKDIR}/${P/cavezof/}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	sed -i \
 		-e 's/cd src.*/$(MAKE) -C src/' Makefile \
@@ -43,8 +41,8 @@ src_unpack() {
 src_install() {
 	dogamesbin src/phear || die "dogamesbin failed"
 	newgamesbin src/editor phear-editor || die "newgamesbin failed"
-	dodir ${GAMES_DATADIR}/${PN}
-	cp -r data/ ${D}/${GAMES_DATADIR}/${PN} || die "cp failed"
+	dodir "${GAMES_DATADIR}"/${PN}
+	cp -r data/ ${D}/"${GAMES_DATADIR}"/${PN} || die "cp failed"
 	dodoc AUTHORS ChangeLog README* TODO
 	prepgamesdirs
 }

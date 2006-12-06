@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlroids/sdlroids-1.3.4-r3.ebuild,v 1.8 2005/09/11 02:54:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlroids/sdlroids-1.3.4-r3.ebuild,v 1.9 2006/12/06 17:09:46 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -15,8 +15,6 @@ IUSE=""
 
 RDEPEND=">=media-libs/libsdl-1.1.8
 	media-libs/sdl-mixer"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}

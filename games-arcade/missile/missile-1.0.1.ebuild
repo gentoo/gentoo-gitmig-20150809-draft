@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/missile/missile-1.0.1.ebuild,v 1.12 2006/05/11 22:33:46 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/missile/missile-1.0.1.ebuild,v 1.13 2006/12/06 17:04:44 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -17,8 +17,6 @@ RDEPEND=">=media-libs/libsdl-1.2.4
 	>=media-libs/sdl-image-1.2.1
 	>=media-libs/sdl-mixer-1.2.4
 	media-libs/libpng"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
