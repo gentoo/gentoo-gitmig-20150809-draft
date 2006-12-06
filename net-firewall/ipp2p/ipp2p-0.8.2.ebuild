@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ipp2p-0.8.2.ebuild,v 1.2 2006/12/05 12:58:59 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ipp2p-0.8.2.ebuild,v 1.3 2006/12/06 08:12:33 corsair Exp $
 
 inherit linux-mod eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ipp2p.org/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="~amd64 ~ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="virtual/modutils
