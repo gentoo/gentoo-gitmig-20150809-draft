@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.34.9.ebuild,v 1.1 2006/12/04 21:46:40 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.34.9.ebuild,v 1.2 2006/12/06 18:15:05 chutzpah Exp $
 
 inherit fdo-mime eutils versionator
 
@@ -13,7 +13,7 @@ SRC_URI="http://files.beep-media-player.org/releases/${MY_PR}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="aac alsa cdparanoia debug flac ffmpeg hal mad modplug musepack nls ofa ogg
+IUSE="aac alsa cdparanoia dbus debug flac ffmpeg hal mad modplug musepack nls ofa ogg
 	oss p2p python sid theora vorbis"
 
 RDEPEND=">=dev-libs/glib-2.10
