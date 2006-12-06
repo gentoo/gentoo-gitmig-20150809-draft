@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.2.1.ebuild,v 1.11 2006/12/05 22:56:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.2.1.ebuild,v 1.12 2006/12/06 20:49:33 kloeri Exp $
 
 inherit eutils kde-functions flag-o-matic multilib elisp-common
 
@@ -13,7 +13,7 @@ SRC_URI="http://uim.freedesktop.org/releases/${MY_P}.tar.gz"
 
 LICENSE="BSD GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ppc ppc64 sparc x86"
+KEYWORDS="alpha ~amd64 hppa ~ppc ppc64 sparc x86"
 IUSE="anthy canna eb emacs gnome gtk libedit m17n-lib nls prime qt3 X"
 
 RDEPEND="X? ( || ( (
