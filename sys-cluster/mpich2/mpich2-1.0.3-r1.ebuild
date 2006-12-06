@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.3-r1.ebuild,v 1.7 2006/12/06 23:48:55 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.3-r1.ebuild,v 1.8 2006/12/06 23:50:00 dberkholz Exp $
 
 inherit fortran distutils eutils autotools toolchain-funcs
 
@@ -23,7 +23,9 @@ RDEPEND="${DEPEND}
 	dev-lang/perl
 	crypt? ( net-misc/openssh )
 	!crypt? ( net-misc/netkit-rsh )
-	!virtual/mpi
+	!sys-cluster/mpich
+	!sys-cluster/lam-mpi
+	!sys-cluster/openmpi
 	!media-sound/mpd
 	!media-sound/mpd-svn"
 DEPEND="${RDEPEND}"
