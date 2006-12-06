@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.10.0.ebuild,v 1.4 2006/11/23 15:42:47 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.10.0.ebuild,v 1.5 2006/12/06 11:31:16 jokey Exp $
 
-#inherit eutils
+inherit eutils
 
 DESCRIPTION="Shows system and ISDN information on an external display or in a X11 window"
 HOMEPAGE="http://ssl.bulix.org/projects/lcd4linux/"
@@ -15,10 +15,10 @@ KEYWORDS="~x86"
 IUSE="kde png X usb mysql python"
 
 DEPEND="png? ( media-libs/libpng
-			   media-libs/gd )
-		X? ( x11-libs/libX11 )
-		usb? ( dev-libs/libusb )
-		mysql? ( virtual/mysql )"
+	media-libs/gd )
+	X? ( x11-libs/libX11 )
+	usb? ( dev-libs/libusb )
+	mysql? ( virtual/mysql )"
 #		python? ( dev-lang/python )
 # mpd is needed soon
 # python is broken
@@ -26,6 +26,13 @@ DEPEND="png? ( media-libs/libpng
 pkg_preinst() {
 	einfo "If you wish to compile only specific drivers or plugins, please use"
 	einfo "the LCD4LINUX_PLUGINS and LCD4LINUX_DRIVERS environment variables."
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-gcc4-compat.patch"
 }
 
 src_compile() {
@@ -106,3 +113,4 @@ src_install() {
 	insopts -o root -g root -m 0600
 	newins lcd4linux.conf.sample lcd4linux.conf
 }
+

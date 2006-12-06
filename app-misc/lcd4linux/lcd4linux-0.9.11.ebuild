@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.9.11.ebuild,v 1.11 2006/10/31 22:20:25 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.9.11.ebuild,v 1.12 2006/12/06 11:31:16 jokey Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 inherit eutils autotools
 
 DESCRIPTION="Shows system and ISDN information on an external display or in a X11 window"
-HOMEPAGE="http://lcd4linux.sourceforge.net/"
+HOMEPAGE="http://ssl.bulix.org/projects/lcd4linux/"
 SRC_URI="mirror://sourceforge/lcd4linux/${P}.tar.gz"
 
 LICENSE="GPL-2"
