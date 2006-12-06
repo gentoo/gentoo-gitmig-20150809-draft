@@ -94,3 +94,16 @@ alsa_cards_powermac
 alsa_cards_sun-amd7930
 alsa_cards_sun-cs4231
 alsa_cards_sun-dbri
+# Mask specific ARM drivers
+alsa_cards_pxa2xx-i2sound
+alsa_cards_pxa2xx-soc
+alsa_cards_pxa2xx-soc-corgi
+alsa_cards_pxa2xx-soc-poodle
+alsa_cards_pxa2xx-soc-spitz
+alsa_cards_pxa2xx-soc-tosa
+alsa_cards_sa11xx-uda1341ts
+alsa_cards_armaaci
+alsa_cards_at91-soc
+alsa_cards_at91-soc-eti-b1-wm8731
+# Mask specific HPPA drivers
+alsa_cards_harmony
