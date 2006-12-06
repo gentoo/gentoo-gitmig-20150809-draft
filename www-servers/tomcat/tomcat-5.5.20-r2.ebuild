@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r2.ebuild,v 1.5 2006/12/05 00:07:04 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r2.ebuild,v 1.6 2006/12/06 14:43:49 betelgeuse Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -65,7 +65,7 @@ pkg_setup() {
 	enewgroup tomcat
 	enewuser tomcat -1 -1 /dev/null tomcat
 
-	java-pkg_filter ecj-3.1  ecj-3.2
+	java-pkg_filter-compiler ecj-3.1  ecj-3.2
 
 	if use java5; then
 		JAVA_PKG_WANT_SOURCE="1.5"
