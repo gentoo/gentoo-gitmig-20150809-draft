@@ -75,3 +75,8 @@ p2p
 # Modular X: unmask for architectures on which they are available
 -input_devices_synaptics
 -input_devices_wacom
+
+# Diego Pettenò <flameeyes@gentoo.org> (6 Dec 2006)
+# Mask ALSA drivers depending on PNP functions (not available on PPC)
+alsa_cards_interwave
+alsa_cards_interwave-stb
