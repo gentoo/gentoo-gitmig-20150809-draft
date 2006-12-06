@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.94 2006/12/06 17:48:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.95 2006/12/06 20:49:51 flameeyes Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -200,3 +200,36 @@ pf-transparent
 # Unmask the Sun-specific drivers
 -alsa_cards_sun-cs4231
 -alsa_cards_sun-dbri
+# Mask ALSA drivers for ISA cards
+alsa_cards_cs4232
+alsa_cards_msnd-pinnacle
+alsa_cards_cs4231-lib
+alsa_cards_adlib
+alsa_cards_ad1816a
+alsa_cards_ad1848
+alsa_cards_als100
+alsa_cards_azt2320
+alsa_cards_cmi8330
+alsa_cards_cs4231
+alsa_cards_cs4236
+alsa_cards_dt019x
+alsa_cards_es968
+alsa_cards_es1688
+alsa_cards_es18xx
+alsa_cards_gusclassic
+alsa_cards_gusextreme
+alsa_cards_gusmax
+alsa_cards_interwave
+alsa_cards_interwave-stb
+alsa_cards_opl3sa2
+alsa_cards_opti92x-ad1848
+alsa_cards_opti92x-cs4231
+alsa_cards_opti93x
+alsa_cards_miro
+alsa_cards_sb8
+alsa_cards_sb16
+alsa_cards_sbawe
+alsa_cards_sb16_csp
+alsa_cards_sgalaxy
+alsa_cards_sscape
+alsa_cards_wavefront
