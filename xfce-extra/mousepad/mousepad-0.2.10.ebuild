@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/mousepad/mousepad-0.2.10.ebuild,v 1.2 2006/12/05 20:31:38 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/mousepad/mousepad-0.2.10.ebuild,v 1.3 2006/12/06 12:20:31 beu Exp $
 
 inherit xfce44
 
 xfce44_beta
 
 DESCRIPTION="Xfce4 text editor"
+SRC_URI="http://www.xfce.org/archive/xfce-${XFCE_MASTER_VERSION}/src/${P}${COMPRESS}"
 HOMEPAGE="http://www.xfce.org"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
