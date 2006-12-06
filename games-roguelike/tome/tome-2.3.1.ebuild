@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.3.1.ebuild,v 1.4 2006/02/27 23:34:27 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.3.1.ebuild,v 1.5 2006/12/06 19:25:46 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -15,9 +15,9 @@ KEYWORDS="~amd64 ppc ~ppc-macos x86"
 IUSE=""
 
 RDEPEND=">=sys-libs/ncurses-5
-	|| ( x11-libs/libX11 virtual/x11 )"
+	x11-libs/libX11"
 DEPEND="${REDEPEND}
-	|| ( x11-misc/makedepend virtual/x11 )"
+	x11-misc/makedepend"
 
 S="${WORKDIR}/tome-${MY_PV}-src"
 

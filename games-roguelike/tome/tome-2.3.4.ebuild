@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.3.4.ebuild,v 1.1 2006/11/24 15:44:07 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.3.4.ebuild,v 1.2 2006/12/06 19:25:46 wolf31o2 Exp $
 
 inherit eutils flag-o-matic games
 
@@ -20,8 +20,7 @@ RDEPEND=">=sys-libs/ncurses-5
 	sdl? (
 		media-libs/sdl-ttf
 		media-libs/sdl-image
-		media-libs/libsdl
-	)
+		media-libs/libsdl )
 	gtk? ( !amd64? ( =x11-libs/gtk+-1.2* ) )"
 DEPEND="${REDEPEND}
 	x11-misc/makedepend"

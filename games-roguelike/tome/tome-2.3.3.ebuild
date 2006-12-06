@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.3.3.ebuild,v 1.3 2006/10/08 20:54:22 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.3.3.ebuild,v 1.4 2006/12/06 19:25:46 wolf31o2 Exp $
 
 inherit eutils flag-o-matic games
 
@@ -15,16 +15,15 @@ KEYWORDS="~amd64 ~ppc ~ppc-macos ~x86"
 IUSE="X Xaw3d gtk sdl"
 
 RDEPEND=">=sys-libs/ncurses-5
-	X? ( || ( x11-libs/libX11 virtual/x11 ) )
-	Xaw3d? ( || ( x11-libs/libXaw virtual/x11 ) )
+	X? ( x11-libs/libX11 )
+	Xaw3d? ( x11-libs/libXaw )
 	sdl? (
 		media-libs/sdl-ttf
 		media-libs/sdl-image
-		media-libs/libsdl
-	)
+		media-libs/libsdl )
 	gtk? ( !amd64? ( =x11-libs/gtk+-1.2* ) )"
 DEPEND="${REDEPEND}
-	|| ( x11-misc/makedepend virtual/x11 )"
+	x11-misc/makedepend"
 
 S="${WORKDIR}/tome-${MY_PV}-src"
 
