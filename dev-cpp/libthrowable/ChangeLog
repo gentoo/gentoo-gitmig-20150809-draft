@@ -1,0 +1,10 @@
+# ChangeLog for dev-cpp/libthrowable
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libthrowable/ChangeLog,v 1.1 2006/12/06 19:06:21 opfer Exp $
+
+*libthrowable-0.9.6 (06 Dec 2006)
+
+  06 Dec 2006; Christian Faulhammer <opfer@gentoo.org> +metadata.xml,
+  +libthrowable-0.9.6.ebuild:
+  initial commit
+
