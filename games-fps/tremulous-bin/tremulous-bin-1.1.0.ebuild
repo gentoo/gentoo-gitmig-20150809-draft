@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous-bin/tremulous-bin-1.1.0.ebuild,v 1.2 2006/12/05 18:05:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous-bin/tremulous-bin-1.1.0.ebuild,v 1.3 2006/12/06 20:16:45 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -49,15 +49,6 @@ install_client() {
 		return 0
 	fi
 	return 1
-}
-
-pkg_setup() {
-	games_pkg_setup
-
-	if install_client && has_version =media-libs/openal-20050504* ; then
-		eerror "Upgrade media-libs/openal to a later version, e.g. openal-0.0.8"
-		die "Need a more recent version of media-libs/openal"
-	fi
 }
 
 src_install() {
