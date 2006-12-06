@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/lincity
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity/ChangeLog,v 1.15 2006/10/05 18:39:07 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity/ChangeLog,v 1.16 2006/12/06 20:19:32 wolf31o2 Exp $
+
+  06 Dec 2006; Chris Gianelloni <wolf31o2@gentoo.org> lincity-1.12.1.ebuild:
+  Remove old virtual/x11 dependency.
 
   05 Oct 2006; Tristan Heaven <nyhm@gentoo.org> lincity-1.12.1.ebuild:
   Fix gettext dependency

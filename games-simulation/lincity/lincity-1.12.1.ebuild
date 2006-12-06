@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity/lincity-1.12.1.ebuild,v 1.6 2006/10/05 18:39:07 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity/lincity-1.12.1.ebuild,v 1.7 2006/12/06 20:19:32 wolf31o2 Exp $
 
 inherit games
 
@@ -17,23 +17,11 @@ IUSE="nls svga X"
 RDEPEND="nls? ( virtual/libintl )
 	svga? ( media-libs/svgalib )
 	X? (
-			|| (
-				(
-					x11-libs/libXext
-					x11-libs/libSM
-				)
-				virtual/x11
-			)
-		)
+		x11-libs/libXext
+		x11-libs/libSM )
 	!svga? (
-			|| (
-				(
-					x11-libs/libXext
-					x11-libs/libSM
-				)
-				virtual/x11
-			)
-		)"
+		x11-libs/libXext
+		x11-libs/libSM )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
