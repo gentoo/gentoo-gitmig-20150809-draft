@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX networkmanager-0.6.4-Gentoo-checklo.patch 586 RMD160 69e8cd3a7e4a9ce355a62ffc367a952208ebcc5e SHA1 c366a2c6bbb7e42624cd7312112defa35fd80e64 SHA256 2ca85439e66f8f283d677e48bf52926ccae55a7d8ac3d783881501ca66cb0d96
 MD5 0922450ee12f81ad78dd18dcb6f84709 files/networkmanager-0.6.4-Gentoo-checklo.patch 586
 RMD160 69e8cd3a7e4a9ce355a62ffc367a952208ebcc5e files/networkmanager-0.6.4-Gentoo-checklo.patch 586
@@ -9,6 +6,10 @@ AUX networkmanager-0.6.4-confchanges.patch 2057 RMD160 546d22e915113ea956f7a9d2c
 MD5 cb31b2b2d7df59f5efe9b28544dddea0 files/networkmanager-0.6.4-confchanges.patch 2057
 RMD160 546d22e915113ea956f7a9d2cef9cca3b495d25d files/networkmanager-0.6.4-confchanges.patch 2057
 SHA256 daf919f2f17f020b4419e51f8deb1f6c131c1328c03283599320dae4987710dc files/networkmanager-0.6.4-confchanges.patch 2057
+AUX networkmanager-0.6.4-dbus-1.patch 661 RMD160 df2ef0607cadf5ecaf48837f07c98d5e9e1a13bc SHA1 10f25693d1abf89c3133adc3035ecba2ac6612d9 SHA256 4bdf8f0d5db1a5d539e4ad67d024a5bef84ce98f4882bbe6113fc8dae38bec00
+MD5 afc8af9056b46908ef7fdd6a5b1c5e0b files/networkmanager-0.6.4-dbus-1.patch 661
+RMD160 df2ef0607cadf5ecaf48837f07c98d5e9e1a13bc files/networkmanager-0.6.4-dbus-1.patch 661
+SHA256 4bdf8f0d5db1a5d539e4ad67d024a5bef84ce98f4882bbe6113fc8dae38bec00 files/networkmanager-0.6.4-dbus-1.patch 661
 AUX networkmanager-0.6.4-gentooinitscript.patch 271 RMD160 806934a0e78466cc68e1a961ce9e0be26702bed5 SHA1 0113fe5566232b92449c061ec5b9ac403a0ace81 SHA256 bc91ea870f0ce42f8971b0635160845903e289d8ad5c96d5dcb9fe1f589cafc3
 MD5 61b505ba3ddf9d140259778cd52033ec files/networkmanager-0.6.4-gentooinitscript.patch 271
 RMD160 806934a0e78466cc68e1a961ce9e0be26702bed5 files/networkmanager-0.6.4-gentooinitscript.patch 271
@@ -26,18 +27,18 @@ MD5 e9879921dd5b0669337e27ca2196cfd4 files/networkmanager-use-kernel-headers.pat
 RMD160 cd16279966d4e3594a20aa0b89d08f3baa3c2e58 files/networkmanager-use-kernel-headers.patch 466
 SHA256 952948f41676fafcf76210cbef46728cbb219d6c851d5417d892b984fd725402 files/networkmanager-use-kernel-headers.patch 466
 DIST NetworkManager-0.6.4_pre20061028.tar.bz2 1780993 RMD160 eef9c8fedaacba413b833b98ee56af5bd74ada2b SHA1 ddbdb4579908f2ce73ee9c6ce31b79fd4082e8a6 SHA256 4a7114367d0f14eeaee094e3c08bfb728a175fd23ac6b97a5868aa734011583c
-EBUILD networkmanager-0.6.4_pre20061028-r1.ebuild 2633 RMD160 adab38a9917fc1958955432531172dc99a4ada86 SHA1 43affc18212b7f56de64d218bbc1bd3423e8adc2 SHA256 ac51373e05fb3023fd7397f806868e851fa1c3c0f0877e75a841aab231b09a31
-MD5 ec22520d9a0449b2666e95769a6ad4ad networkmanager-0.6.4_pre20061028-r1.ebuild 2633
-RMD160 adab38a9917fc1958955432531172dc99a4ada86 networkmanager-0.6.4_pre20061028-r1.ebuild 2633
-SHA256 ac51373e05fb3023fd7397f806868e851fa1c3c0f0877e75a841aab231b09a31 networkmanager-0.6.4_pre20061028-r1.ebuild 2633
+EBUILD networkmanager-0.6.4_pre20061028-r1.ebuild 2684 RMD160 c5390372eeeec9f6b33a389db752e1c7725ccf55 SHA1 74971a3da2f9a985083c380521bee3f1b5d17926 SHA256 4a3acba5f8821203ffa0409423b6442f1d1e9ad32084275a10fbd4699ed878b5
+MD5 c2b16d0fe342af933a43c787f07e3f1d networkmanager-0.6.4_pre20061028-r1.ebuild 2684
+RMD160 c5390372eeeec9f6b33a389db752e1c7725ccf55 networkmanager-0.6.4_pre20061028-r1.ebuild 2684
+SHA256 4a3acba5f8821203ffa0409423b6442f1d1e9ad32084275a10fbd4699ed878b5 networkmanager-0.6.4_pre20061028-r1.ebuild 2684
 EBUILD networkmanager-0.6.4_pre20061028.ebuild 2636 RMD160 ba41c070a450e92311729897e47b2e71c48cdda1 SHA1 a0a4c30475d831f94abf9deb4311a76bddbd1060 SHA256 b26b7feb40affa517523c85c2f6a9952ab8bac6559b08c1b1d3313764b65d208
 MD5 10291e9996aae33a7e28980653010bd6 networkmanager-0.6.4_pre20061028.ebuild 2636
 RMD160 ba41c070a450e92311729897e47b2e71c48cdda1 networkmanager-0.6.4_pre20061028.ebuild 2636
 SHA256 b26b7feb40affa517523c85c2f6a9952ab8bac6559b08c1b1d3313764b65d208 networkmanager-0.6.4_pre20061028.ebuild 2636
-MISC ChangeLog 2143 RMD160 0c41d5c0290b4f9df02eb74824eca2f4beefab86 SHA1 88fbaabd3e4595c2d579ee1584cf6cbc47d69c5b SHA256 3c2aac218e8404425787ae0953bb3e4dc2fc4b9dc9b28809233130e664882eeb
-MD5 28c54e1752c5986dacf0dd2bc1ae8573 ChangeLog 2143
-RMD160 0c41d5c0290b4f9df02eb74824eca2f4beefab86 ChangeLog 2143
-SHA256 3c2aac218e8404425787ae0953bb3e4dc2fc4b9dc9b28809233130e664882eeb ChangeLog 2143
+MISC ChangeLog 2430 RMD160 8497ac1a6d981bab42f5bea55e0a58fd081b67bf SHA1 3a19a837442e4e24f99a0e15ab9a69b4353ecfa9 SHA256 21bf90206be344c5318ca0cdacaa7adbb1f1deeeabac1c9057123d2d7e79065b
+MD5 68edd1ac01c0330d8346107b73f0ef91 ChangeLog 2430
+RMD160 8497ac1a6d981bab42f5bea55e0a58fd081b67bf ChangeLog 2430
+SHA256 21bf90206be344c5318ca0cdacaa7adbb1f1deeeabac1c9057123d2d7e79065b ChangeLog 2430
 MISC metadata.xml 382 RMD160 6502df804c9513d3b87069f5da390438254d794e SHA1 65051b628c33b7327089bb5893b0f49aafd4a1d1 SHA256 a9fca86b318190e2eaccf17e969626e2b9f71629c3e941e487520eda9b0801fc
 MD5 99b5f59e416ba77f0e3bc6b5ef912ec3 metadata.xml 382
 RMD160 6502df804c9513d3b87069f5da390438254d794e metadata.xml 382
@@ -48,10 +49,3 @@ SHA256 f06e1d714c3ceb634d637c0927c02176da3f4144d7fafb66ab646562102d43f7 files/di
 MD5 25e40b69e15e1d17224bf3a584bd3038 files/digest-networkmanager-0.6.4_pre20061028-r1 304
 RMD160 991b9fdcb07c2cc321db6e8c26cb5860b9905844 files/digest-networkmanager-0.6.4_pre20061028-r1 304
 SHA256 f06e1d714c3ceb634d637c0927c02176da3f4144d7fafb66ab646562102d43f7 files/digest-networkmanager-0.6.4_pre20061028-r1 304
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-
-iD8DBQFFdAWawUpWvClEHQoRAkdfAJ9UaGNNozjYNQ3mClFOrkLy+kq2+ACcDHVQ
-6dVncMvIYu9FbM3MKM3BHmw=
-=U2ES
------END PGP SIGNATURE-----
