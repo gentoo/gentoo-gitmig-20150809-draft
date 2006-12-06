@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fakenes/fakenes-0.3.1.ebuild,v 1.2 2004/09/12 10:04:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fakenes/fakenes-0.3.1.ebuild,v 1.3 2006/12/06 17:12:19 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -17,7 +17,6 @@ RDEPEND=">=media-libs/allegro-4.1
 	zlib? ( sys-libs/zlib )
 	dev-games/hawknl"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
 	x86? ( dev-lang/nasm )"
 
 src_unpack() {

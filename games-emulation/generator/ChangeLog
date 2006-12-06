@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/generator
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/ChangeLog,v 1.15 2006/10/04 22:37:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/ChangeLog,v 1.16 2006/12/06 17:15:36 wolf31o2 Exp $
+
+  06 Dec 2006; Chris Gianelloni <wolf31o2@gentoo.org> generator-0.35.ebuild,
+  generator-0.35-r2.ebuild:
+  Removed sed-4 from *DEPEND.
 
 *generator-0.35-r3 (04 Oct 2006)
 

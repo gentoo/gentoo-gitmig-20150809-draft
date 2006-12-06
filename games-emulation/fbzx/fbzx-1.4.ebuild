@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fbzx/fbzx-1.4.ebuild,v 1.8 2005/09/26 17:44:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fbzx/fbzx-1.4.ebuild,v 1.9 2006/12/06 17:14:00 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -14,8 +14,6 @@ KEYWORDS="~ppc x86"
 IUSE=""
 
 RDEPEND="media-libs/libsdl"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 S="${WORKDIR}/${PN}"
 

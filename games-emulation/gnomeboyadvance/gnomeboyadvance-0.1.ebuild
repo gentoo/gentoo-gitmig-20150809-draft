@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomeboyadvance/gnomeboyadvance-0.1.ebuild,v 1.8 2006/03/31 20:31:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomeboyadvance/gnomeboyadvance-0.1.ebuild,v 1.9 2006/12/06 17:16:27 wolf31o2 Exp $
 
 inherit games
 
@@ -19,8 +19,6 @@ RDEPEND=">=dev-lang/python-2.2
 	 >=dev-python/gnome-python-1.99
 	 >=dev-python/pygtk-1.99
 	 games-emulation/visualboyadvance"
-
-DEPEND=">=sys-apps/sed-4"
 
 S=${WORKDIR}/gnomeBoyAdvance-0.1
 

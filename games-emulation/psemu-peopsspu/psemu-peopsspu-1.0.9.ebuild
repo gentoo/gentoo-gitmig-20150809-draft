@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopsspu/psemu-peopsspu-1.0.9.ebuild,v 1.1 2004/12/07 06:02:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopsspu/psemu-peopsspu-1.0.9.ebuild,v 1.2 2006/12/06 17:18:11 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -17,7 +17,6 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	app-arch/unzip
 	=x11-libs/gtk+-1*"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
 	sys-devel/automake"
 
 S="${WORKDIR}"

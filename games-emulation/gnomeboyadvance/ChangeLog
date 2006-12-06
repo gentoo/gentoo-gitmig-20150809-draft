@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/gnomeboyadvance
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomeboyadvance/ChangeLog,v 1.7 2006/03/31 20:31:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomeboyadvance/ChangeLog,v 1.8 2006/12/06 17:16:27 wolf31o2 Exp $
+
+  06 Dec 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  gnomeboyadvance-0.1.ebuild:
+  Removed sed-4 from *DEPEND.
 
   31 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   gnomeboyadvance-0.1.ebuild:

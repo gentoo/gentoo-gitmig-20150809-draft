@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35.ebuild,v 1.13 2005/05/17 17:50:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35.ebuild,v 1.14 2006/12/06 17:15:36 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -14,14 +14,10 @@ KEYWORDS="x86 ppc ~amd64"
 IUSE="svga gtk"
 
 RDEPEND="virtual/libc
-	gtk? (
-		=x11-libs/gtk+-1*
-		media-libs/libsdl
-	)
+	gtk? ( =x11-libs/gtk+-1* media-libs/libsdl )
 	svga? ( media-libs/svgalib )
 	media-libs/jpeg"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
 	x86? ( dev-lang/nasm )"
 
 src_unpack() {
