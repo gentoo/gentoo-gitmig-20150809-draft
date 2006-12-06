@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ultimatestunts-0.6.1-r1.ebuild,v 1.2 2006/12/06 20:23:34 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ultimatestunts-0.6.1-r1.ebuild,v 1.3 2006/12/06 20:30:06 wolf31o2 Exp $
 
 inherit eutils versionator games
 
@@ -21,16 +21,13 @@ DEPEND="media-libs/libsdl
 	media-libs/freealut
 	virtual/opengl
 	virtual/glu
-	|| (
-		(
-			x11-libs/libSM
-			x11-libs/libICE
-			x11-libs/libX11
-			x11-libs/libXi
-			x11-libs/libXext
-			x11-libs/libXmu
-			x11-libs/libXt )
-		virtual/x11 )"
+	x11-libs/libSM
+	x11-libs/libICE
+	x11-libs/libX11
+	x11-libs/libXi
+	x11-libs/libXext
+	x11-libs/libXmu
+	x11-libs/libXt"
 
 S=${WORKDIR}/${MY_P}
 

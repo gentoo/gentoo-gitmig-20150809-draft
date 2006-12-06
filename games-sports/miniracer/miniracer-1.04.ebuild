@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/miniracer/miniracer-1.04.ebuild,v 1.3 2006/05/14 10:43:58 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/miniracer/miniracer-1.04.ebuild,v 1.4 2006/12/06 20:28:17 wolf31o2 Exp $
 
 inherit games
 
@@ -14,25 +14,17 @@ KEYWORDS="x86"
 IUSE=""
 
 RDEPEND="virtual/opengl
-	|| (
-		( x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXxf86dga
-		x11-libs/libXxf86vm )
-		virtual/x11
-	)
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXxf86dga
+	x11-libs/libXxf86vm
 	media-libs/libsdl
 	media-libs/sdl-mixer"
 DEPEND="${RDEPEND}
-	|| (
-		( media-libs/mesa
-		x11-proto/xf86dgaproto
-		x11-proto/xf86vidmodeproto
-		x11-proto/xproto )
-		virtual/x11
-	)"
-
-
+	media-libs/mesa
+	x11-proto/xf86dgaproto
+	x11-proto/xf86vidmodeproto
+	x11-proto/xproto"
 
 src_unpack() {
 	unpack ${A}

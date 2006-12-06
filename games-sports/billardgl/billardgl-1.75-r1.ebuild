@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/billardgl/billardgl-1.75-r1.ebuild,v 1.8 2006/09/28 21:33:00 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/billardgl/billardgl-1.75-r1.ebuild,v 1.9 2006/12/06 20:27:01 wolf31o2 Exp $
 
 inherit eutils games
 
-DESCRIPTION="A OpenGL billards game"
+DESCRIPTION="an OpenGL billards game"
 HOMEPAGE="http://www.billardgl.de/"
 SRC_URI="mirror://sourceforge/billardgl/BillardGL-${PV}.tar.gz"
 
@@ -13,9 +13,8 @@ KEYWORDS="amd64 x86 ppc"
 SLOT="0"
 IUSE=""
 
-DEPEND="|| ( ( x11-libs/libXi
-				x11-libs/libXmu )
-			virtual/x11 )
+DEPEND="x11-libs/libXi
+	x11-libs/libXmu
 	virtual/opengl
 	virtual/glu
 	virtual/glut"
