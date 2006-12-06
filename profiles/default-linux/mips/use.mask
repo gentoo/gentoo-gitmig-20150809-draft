@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.68 2006/11/06 20:24:08 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.69 2006/12/06 18:59:10 flameeyes Exp $
 
 # Untested on mips, masking for now.
 cdb
@@ -299,3 +299,7 @@ qa
 # disable until tested
 # bug 148402
 pcsc-lite
+
+# Diego Pettenò <flameeyes@gentoo.org> (6 Dec 2006)
+# Unmask specific MIPS ALSA drivers
+-alsa_cards_au1x00
