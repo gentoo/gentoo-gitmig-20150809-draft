@@ -107,3 +107,5 @@ alsa_cards_at91-soc
 alsa_cards_at91-soc-eti-b1-wm8731
 # Mask specific HPPA drivers
 alsa_cards_harmony
+# Mask specific MIPS drivers
+alsa_cards_au1x00
