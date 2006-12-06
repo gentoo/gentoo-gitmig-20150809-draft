@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.9.6.ebuild,v 1.2 2006/11/23 20:38:59 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.9.6.ebuild,v 1.3 2006/12/06 10:43:13 drizzt Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -52,6 +52,8 @@ src_unpack() {
 	cd "${S}"
 	use ipv6 || \
 		sed -i -e "s/-DUSE_IPV6//g" Makefile.defs || die
+	sed -i -e 's/\(CFLAGS+=-mcpu=ultrasparc\) -minline-all-stringops/\1/g' \
+		Makefile.defs || die	#157109
 
 	# external modules
 	extmodules="silomail ethz"
