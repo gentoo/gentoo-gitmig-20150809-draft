@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.42.ebuild,v 1.5 2006/07/20 12:33:52 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.42.ebuild,v 1.6 2006/12/06 20:36:50 wolf31o2 Exp $
 
 inherit multilib flag-o-matic eutils python
 
@@ -24,8 +24,8 @@ RDEPEND="
 	nls? ( >=media-libs/freetype-2.0
 			virtual/libintl )
 	iconv? ( virtual/libiconv )
-	openal? ( ~media-libs/openal-0.0.8
-			   media-libs/freealut )
+	openal? ( media-libs/openal
+			  media-libs/freealut )
 	sdl? ( >=media-libs/libsdl-1.2 )
 	ffmpeg? ( media-video/ffmpeg )
 	>=dev-libs/openssl-0.9.6
