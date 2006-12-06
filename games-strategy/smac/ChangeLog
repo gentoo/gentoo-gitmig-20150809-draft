@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/smac
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/ChangeLog,v 1.9 2006/10/24 23:08:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/ChangeLog,v 1.10 2006/12/06 21:03:46 wolf31o2 Exp $
+
+  06 Dec 2006; Chris Gianelloni <wolf31o2@gentoo.org> smac-6.0a.ebuild:
+  Remove old virtual/x11 dependency.
 
   24 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org> smac-6.0a.ebuild:
   Moved cdrom_get_cds to src_unpack since binary packages don't require the

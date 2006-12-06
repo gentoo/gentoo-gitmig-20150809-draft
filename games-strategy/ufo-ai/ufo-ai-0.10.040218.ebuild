@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-0.10.040218.ebuild,v 1.17 2006/02/23 22:33:15 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-0.10.040218.ebuild,v 1.18 2006/12/06 21:06:04 wolf31o2 Exp $
 
 inherit eutils flag-o-matic games
 
@@ -14,17 +14,12 @@ SLOT="0"
 KEYWORDS="~ppc ~x86"
 IUSE=""
 
-RDEPEND="|| (
-		(
-			x11-libs/libXxf86dga
-			x11-libs/libXxf86vm
-		)
-		virtual/x11
-	)
+RDEPEND="x11-libs/libXxf86dga
+	x11-libs/libXxf86vm
 	media-libs/jpeg
 	media-libs/libvorbis"
 DEPEND="${RDEPEND}
-	|| ( x11-proto/xextproto virtual/x11 )
+	x11-proto/xextproto
 	media-libs/libogg
 	virtual/opengl
 	virtual/glu
