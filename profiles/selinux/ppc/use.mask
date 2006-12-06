@@ -69,3 +69,17 @@ graphlcd
 
 # Masked p2p for bug #155302
 p2p
+
+# Diego Pettenò <flameeyes@gentoo.org> (6 Dec 2006)
+# Mask ALSA drivers depending on PNP functions (not available on PPC)
+alsa_cards_interwave
+alsa_cards_interwave-stb
+# Unmask the Apple drivers
+-alsa_cards_aoa
+-alsa_cards_aoa-fabric-layout
+-alsa_cards_aoa-onyx
+-alsa_cards_aoa-soundbus
+-alsa_cards_aoa-soundbus-i2s
+-alsa_cards_aoa-tas
+-alsa_cards_aoa-toonie
+-alsa_cards_powermac
