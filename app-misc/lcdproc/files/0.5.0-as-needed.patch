@@ -1,0 +1,36 @@
+diff -Nuar lcdproc-0.5.0-orig/clients/lcdexec/Makefile.am lcdproc-0.5.0/clients/lcdexec/Makefile.am
+--- lcdproc-0.5.0-orig/clients/lcdexec/Makefile.am	2006-01-16 20:30:03.000000000 +0100
++++ lcdproc-0.5.0/clients/lcdexec/Makefile.am	2006-11-19 20:55:30.000000000 +0100
+@@ -4,7 +4,7 @@
+ 
+ lcdexec_SOURCES = lcdexec.c menu.c menu.h
+ 
+-lcdexec_LDADD = @ldap_libs@ ../../shared/libLCDstuff.a
++lcdexec_LDADD = ../../shared/libLCDstuff.a @ldap_libs@
+ 
+ AM_CPPFLAGS = -I$(top_srcdir)
+ 
+diff -Nuar lcdproc-0.5.0-orig/clients/lcdproc/Makefile.am lcdproc-0.5.0/clients/lcdproc/Makefile.am
+--- lcdproc-0.5.0-orig/clients/lcdproc/Makefile.am	2006-02-18 15:46:45.000000000 +0100
++++ lcdproc-0.5.0/clients/lcdproc/Makefile.am	2006-11-19 20:55:42.000000000 +0100
+@@ -4,7 +4,7 @@
+ 
+ lcdproc_SOURCES = main.c main.h mode.c mode.h batt.c batt.h chrono.c chrono.h cpu.c cpu.h cpu_smp.c cpu_smp.h disk.c disk.h load.c load.h mem.c mem.h machine.h machine_Linux.c machine_OpenBSD.c machine_FreeBSD.c machine_NetBSD.c machine_Darwin.c machine_SunOS.c util.c util.h
+ 
+-lcdproc_LDADD = @ldap_libs@ ../../shared/libLCDstuff.a
++lcdproc_LDADD =  ../../shared/libLCDstuff.a @ldap_libs@
+ 
+ if DARWIN
+ AM_LDFLAGS = -framework CoreFoundation -framework IOKit
+diff -Nuar lcdproc-0.5.0-orig/server/Makefile.am lcdproc-0.5.0/server/Makefile.am
+--- lcdproc-0.5.0-orig/server/Makefile.am	2006-02-04 20:06:43.000000000 +0100
++++ lcdproc-0.5.0/server/Makefile.am	2006-11-19 20:55:09.000000000 +0100
+@@ -6,7 +6,7 @@
+ 
+ LCDd_SOURCES= client.c client.h clients.c clients.h input.c input.h main.c main.h menuitem.c menuitem.h menu.c menu.h menuscreens.c menuscreens.h parse.c parse.h render.c render.h screen.c screen.h screenlist.c screenlist.h serverscreens.c serverscreens.h sock.c sock.h widget.c widget.h drivers.c drivers.h driver.c driver.h
+ 
+-LDADD = @ldap_libs@ ../shared/libLCDstuff.a commands/libLCDcommands.a
++LDADD = ../shared/libLCDstuff.a commands/libLCDcommands.a @ldap_libs@
+ 
+ if !DARWIN
+ AM_LDFLAGS = -rdynamic -uget_args
