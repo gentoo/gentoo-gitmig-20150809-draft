@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-0.5.0_rc2.ebuild,v 1.3 2006/12/06 05:44:19 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-0.5.0_rc2.ebuild,v 1.4 2006/12/06 12:31:15 beu Exp $
 
 inherit xfce44 versionator
 
@@ -12,6 +12,7 @@ MY_P="${MY_PN}-${MY_PV}"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="Xfce 4 file manager"
+SRC_URI="http://www.xfce.org/archive/xfce-${XFCE_MASTER_VERSION}/src/${MY_P}${COMPRESS}"
 HOMEPAGE="http://thunar.xfce.org"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
