@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-0.7-r1.ebuild,v 1.2 2006/09/12 20:08:23 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-0.7-r1.ebuild,v 1.3 2006/12/06 22:35:23 genstef Exp $
 
 inherit kde eutils
 
 MY_PN="gtk-qt-engine"
 DESCRIPTION="GTK+2 Qt Theme Engine"
-HOMEPAGE="http://www.freedesktop.org/Software/gtk-qt"
+HOMEPAGE="http://gtk-qt.ecs.soton.ac.uk"
 SRC_URI="http://www.freedesktop.org/~davidsansome/${MY_PN}-${PV}.tar.bz2"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc ~ppc ~amd64"
