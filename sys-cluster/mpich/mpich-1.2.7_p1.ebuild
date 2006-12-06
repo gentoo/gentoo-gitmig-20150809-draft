@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.7_p1.ebuild,v 1.11 2006/12/06 23:42:49 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.7_p1.ebuild,v 1.12 2006/12/06 23:44:04 dberkholz Exp $
 
 inherit autotools eutils
 
@@ -27,8 +27,7 @@ RDEPEND="${DEPEND}
 	!sys-cluster/lam-mpi
 	!sys-cluster/openmpi
 	!sys-cluster/mpich2
-	|| ( x11-libs/libX11
-		virtual/x11 )"
+	x11-libs/libX11"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
