@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/castle-combat/castle-combat-0.7.4.ebuild,v 1.7 2005/05/01 18:24:10 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/castle-combat/castle-combat-0.7.4.ebuild,v 1.8 2006/12/06 17:28:56 wolf31o2 Exp $
 
 inherit games
 
@@ -19,12 +19,10 @@ RDEPEND="virtual/libc
 	media-libs/libsdl
 	media-libs/sdl-net
 	media-libs/sdl-mixer"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# dist file seems to include a copy of SDL_net.  Take it out so we link
 	# against the system copy instead.
 	sed -i \
