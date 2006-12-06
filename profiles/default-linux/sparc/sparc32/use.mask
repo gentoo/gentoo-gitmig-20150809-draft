@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/use.mask,v 1.18 2006/12/06 17:48:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/use.mask,v 1.19 2006/12/06 20:50:14 flameeyes Exp $
 
 # nptl on sparc requires the v9 ABI which requires sun4u
 nptl
@@ -29,3 +29,4 @@ pmount
 # Diego Pettenò <flameeyes@gentoo.org> (6 Dec 2006)
 # Unmask the Sun-specific drivers
 -alsa_cards_sun-amd7930
+-alsa_cards_sun-dbri
