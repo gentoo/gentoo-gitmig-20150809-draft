@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/crossfire-server-1.9.0.ebuild,v 1.3 2006/04/16 22:55:02 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/crossfire-server-1.9.0.ebuild,v 1.4 2006/12/06 20:15:39 wolf31o2 Exp $
 
 inherit games
 
@@ -15,20 +15,16 @@ SLOT="0"
 KEYWORDS="ppc x86"
 IUSE="X"
 
-DEPEND="
-	X? (
-		|| (
-			(
-				x11-libs/libX11
-				x11-libs/libXext
-				x11-libs/libICE
-				x11-libs/libSM
-				x11-libs/libXt
-				x11-libs/libXmu
-				x11-libs/libXaw
-				x11-libs/libXpm )
-			virtual/x11 )
-		media-libs/libpng )"
+DEPEND="X? (
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libICE
+	x11-libs/libSM
+	x11-libs/libXt
+	x11-libs/libXmu
+	x11-libs/libXaw
+	x11-libs/libXpm
+	media-libs/libpng )"
 
 S=${WORKDIR}/${MY_P}
 
