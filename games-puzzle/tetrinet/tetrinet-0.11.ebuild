@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tetrinet/tetrinet-0.11.ebuild,v 1.9 2005/01/21 21:09:03 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tetrinet/tetrinet-0.11.ebuild,v 1.10 2006/12/06 17:27:19 wolf31o2 Exp $
 
-inherit games flag-o-matic
+inherit flag-o-matic games
 
 DESCRIPTION="console based tetrinet inc. standalone server"
 HOMEPAGE="http://tetrinet.or.cz/"
@@ -14,13 +14,11 @@ KEYWORDS="x86 ~amd64 ppc"
 IUSE="ipv6"
 
 RDEPEND=">=sys-libs/ncurses-5"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
 	return 0
-	cd ${S}
+	cd "${S}"
 
 	# for now, make sure IPv6 is always on #32860
 	use ipv6 && append-flags -DHAVE_IPV6
