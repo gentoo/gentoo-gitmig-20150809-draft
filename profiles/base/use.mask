@@ -90,3 +90,7 @@ alsa_cards_aoa-soundbus-i2s
 alsa_cards_aoa-tas
 alsa_cards_aoa-toonie
 alsa_cards_powermac
+# Mask specific Sun drivers
+alsa_cards_sun-amd7930
+alsa_cards_sun-cs4231
+alsa_cards_sun-dbri
