@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r1.ebuild,v 1.3 2006/12/05 13:17:14 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r1.ebuild,v 1.4 2006/12/06 22:45:30 betelgeuse Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -152,6 +152,9 @@ set_env() {
 
 src_unpack () {
 	unpack ${MAINTARBALL}
+
+	epatch "${MY_FDIR}/jdbcstorage-build.xml-comments.patch"
+	epatch "${MY_FDIR}/mdrant-build.xml-comments.patch"
 
 	if use doc; then
 		mkdir javadoc && cd javadoc
