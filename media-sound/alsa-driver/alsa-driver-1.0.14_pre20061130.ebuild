@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.14_pre20061130.ebuild,v 1.1 2006/11/30 20:33:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.14_pre20061130.ebuild,v 1.2 2006/12/06 11:43:47 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -18,14 +18,34 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 
 KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~x86"
-IUSE="oss doc debug"
+IUSE="oss debug"
+
+IUSE_CARDS="seq-dummy dummy virmidi mtpav mts64 serial-u16550 mpu401 serialmidi loopback
+portman2x4 pcsp ad1848-lib cs4231-lib adlib ad1816a ad1848 als100 azt2320 cmi8330
+cs4231 cs4232 cs4236 dt019x es968 es1688 es18xx gusclassic gusextreme gusmax
+interwave interwave-stb opl3sa2 opti92x-ad1848 opti92x-cs4231 opti93x miro
+sb8 sb16 sbawe sgalaxy sscape wavefront pc98-cs4232 msnd-pinnacle ad1889 als300
+als4000 ali5451 atiixp atiixp-modem au8810 au8820 au8830 azt3328 bt87x ca0106 cmipci
+cs4281 cs46xx cs5535audio darla20 gina20 layla20 darla24 gina24 layla24 mona mia
+echo3g indigo indigoio indigodj emu10k1 emu10k1x ens1370 ens1371 es1938 es1968
+fm801 fm801-tea575x hda-intel hdsp hdspm ice1712 ice1724 intel8x0 intel8x0m korg1212
+maestro3 mixart nm256 pcxhr riptide rme32 rme96 rme9652 sonicvibes trident via82xx
+via82xx-modem vx222 ymfpci pdplus asihpi powermac aoa aoa-fabric-layout aoa-onyx
+aoa-tas aoa-toonie aoa-soundbus aoa-soundbus-i2s sa11xx-uda1341 armaaci
+s3c2410 pxa2xx-i2sound au1x00 usb-audio usb-usx2y vxpocket pdaudiocf sun-amd7930
+sun-cs4231 sun-dbri harmony soc at91-soc at91-soc-eti-b1-wm8731 pxa2xx-soc
+pxa2xx-soc-corgi pxa2xx-soc-spitz pxa2xx-soc-poodle pxa2xx-soc-tosa"
+
+for iuse_card in ${IUSE_CARDS}; do
+	IUSE="${IUSE} alsa_cards_${iuse_card}"
+done
+
 
 RDEPEND="virtual/modutils
 	 ~media-sound/alsa-headers-${PV}
 	 !media-sound/snd-aoa"
 DEPEND="${RDEPEND}
 	virtual/linux-sources
-	sparc? ( >=sys-devel/autoconf-2.50 )
 	sys-apps/debianutils"
 
 PROVIDE="virtual/alsa"
@@ -42,22 +62,36 @@ pkg_setup() {
 
 	# Which drivers need PNP
 	local PNP_DRIVERS="interwave interwave-stb"
+	local FW_DRIVERS="emu10k1"
 
-	CONFIG_CHECK="SOUND"
-	SND_ERROR="ALSA is already compiled into the kernel."
-	SOUND_ERROR="Your kernel doesn't have sound support enabled."
-	SOUND_PRIME_ERROR="Your kernel is configured to use the deprecated OSS drivers.	 Please disable them and re-emerge alsa-driver."
-	PNP_ERROR="Some of the drivers you selected require PNP in your kernel (${PNP_DRIVERS}).  Either enable PNP in your kernel or trim which drivers get compiled using ALSA_CARDS in /etc/make.conf."
+	local CONFIG_CHECK="SOUND"
+	local SND_ERROR="ALSA is already compiled into the kernel."
+	local SOUND_ERROR="Your kernel doesn't have sound support enabled."
+	local SOUND_PRIME_ERROR="Your kernel is configured to use the deprecated OSS drivers.	 Please disable them and re-emerge alsa-driver."
+	local PNP_ERROR="Some of the drivers you selected require PnP support in your kernel (${PNP_DRIVERS}). Either enable PnP in your kernel or trim which drivers get compiled using ALSA_CARDS in /etc/make.conf."
+	local FW_LOADER_ERROR="Some of the drivers you selected require 'Userspace firmware loading support' in your kernel (${FW_DRIVERS}). Either enable that feature or trim which drivers get compiled using ALSA_CARDS in /etc/make.conf."
 
 	if [[ "${ALSA_CARDS}" == "all" ]]; then
-
 		# Ignore PNP checks for ppc architecture, as PNP can't be enabled there.
-		if [[ ${ARCH} != "ppc" ]]; then
-			CONFIG_CHECK="${CONFIG_CHECK} PNP"
-		fi
+		case ${ARCH} in
+			ppc|ppc64) ;;
+			*)
+				CONFIG_CHECK="${CONFIG_CHECK} PNP"
+				;;
+		esac
+		CONFIG_CHECK="${CONFIG_CHECK} FW_LOADER"
 	else
 		for pnpdriver in ${PNP_DRIVERS}; do
-			hasq ${pnpdriver} ${ALSA_CARDS} && CONFIG_CHECK="${CONFIG_CHECK} PNP"
+			if use alsa_cards_${pnpdriver}; then
+				CONFIG_CHECK="${CONFIG_CHECK} PNP"
+				break;
+			fi
+		done
+		for fwdriver in ${FW_DRIVERS}; do
+			if use alsa_cards_${fwdriver}; then
+				CONFIG_CHECK="${CONFIG_CHECK} FW_LOADER"
+				break;
+			fi
 		done
 	fi
 
@@ -118,69 +152,42 @@ src_compile() {
 	emake LDFLAGS="$(raw-ldflags)" HOSTCC=$(tc-getBUILD_CC) CC=$(tc-getCC) || die "Make Failed"
 	ARCH=$(tc-arch)
 	ABI=${myABI}
-
-	if use doc;
-	then
-		ebegin "Building Documentation"
-		cd ${S}/scripts
-		emake || die Failed making docs in ${S}/scripts
-
-		cd ${S}/doc/DocBook
-		emake || die Failed making docs in ${S}/doc/DocBook
-		eend $?
-	fi
 }
 
 
 src_install() {
-	emake DESTDIR=${D} install-modules || die "make install failed"
+	emake DESTDIR="${D}" install-modules || die "make install failed"
 
 	dodoc CARDS-STATUS FAQ README WARNING TODO
 
-	if use doc; then
-		docinto doc
-		dodoc doc/*
-		rm ${D}/usr/share/doc/${PF}/doc/Makefile.gz
-
-		docinto DocBook
-		dodoc doc/DocBook/*
-		rm ${D}/usr/share/doc/${PF}/DocBook/Makefile.gz
-
-		docinto Documentation
-		dodoc sound/Documentation/*
-	fi
-
 	if kernel_is 2 6; then
 		# mv the drivers somewhere they won't be killed by the kernel's make modules_install
-		mv ${D}/lib/modules/${KV_FULL}/kernel/sound ${D}/lib/modules/${KV_FULL}/${PN}
-		rmdir ${D}/lib/modules/${KV_FULL}/kernel &> /dev/null
+		mv "${D}/lib/modules/${KV_FULL}/kernel/sound" "${D}/lib/modules/${KV_FULL}/${PN}"
+		rmdir "${D}/lib/modules/${KV_FULL}/kernel" &> /dev/null
 	fi
 }
 
 pkg_postinst() {
-	einfo
-	einfo "The alsasound initscript and modules.d/alsa have now moved to alsa-utils"
-	einfo
-	einfo "Also, remember that all mixer channels will be MUTED by default."
-	einfo "Use the 'alsamixer' program to unmute them."
-	einfo
-	einfo "Version 1.0.3 and above should work with version 2.6 kernels."
-	einfo "If you experience problems, please report bugs to http://bugs.gentoo.org."
-	einfo
+	elog
+	elog "The alsasound initscript and modules.d/alsa have now moved to alsa-utils"
+	elog
+	elog "Also, remember that all mixer channels will be MUTED by default."
+	elog "Use the 'alsamixer' program to unmute them."
+	elog
+	elog "If you experience problems, please report bugs to http://bugs.gentoo.org."
+	elog
 
 	linux-mod_pkg_postinst
 
-	einfo "Check out the ALSA installation guide availible at the following URL:"
-	einfo "http://www.gentoo.org/doc/en/alsa-guide.xml"
+	elog "Check out the ALSA installation guide availible at the following URL:"
+	elog "http://www.gentoo.org/doc/en/alsa-guide.xml"
 
-	if kernel_is 2 6 && [ -e ${ROOT}/lib/modules/${KV_FULL}/kernel/sound ]; then
+	if kernel_is 2 6 && [ -e "${ROOT}/lib/modules/${KV_FULL}/kernel/sound" ]; then
 		# Cleanup if they had older alsa installed
-		for file in $(find ${ROOT}/lib/modules/${KV_FULL}/${PN} -type f); do
+		for file in $(find "${ROOT}/lib/modules/${KV_FULL}/${PN}" -type f); do
 			rm -f ${file//${KV_FULL}\/${PN}/${KV_FULL}\/kernel\/sound}
 		done
 
-		for dir in $(find ${ROOT}/lib/modules/${KV_FULL}/kernel/sound -type d | tac); do
-			rmdir ${dir} &> /dev/null
-		done
+		find "${ROOT}/lib/modules/${KV_FULL}/kernel/sound" -type d -print0 | xargs rmdir
 	fi
 }

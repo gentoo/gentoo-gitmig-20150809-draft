@@ -1,6 +1,19 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.239 2006/12/03 19:52:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.240 2006/12/06 11:43:47 flameeyes Exp $
+
+  06 Dec 2006; Diego Pettenò <flameeyes@gentoo.org>
+  alsa-driver-1.0.14_pre20061130.ebuild:
+  Important change: make ALSA_CARDS an use-expanded variable, so list all the
+  available drivers during emerge -pv output; the default for all profiles now
+  is to build all drivers (ALSA_CARDS unset), but in the next days proper
+  default subsets will appear on the architecture profiles. Also fix bug
+  #156729 (remove doc useflag as it's mostly internal drivers documentation
+  that is available on the site and rarely useful to users, in case it can be
+  re-added as app-doc/alsa-driver-docs), and bug #156757 (add check for
+  CONFIG_FW_LOADER when using emu10k1 driver as it's now needed, thanks to
+  Stefan Wimmer for reporting). Fix quoting, cleanup decisions for kernel
+  checks, remove very ancient einfo message, use elog instead of einfo.
 
   03 Dec 2006; Markus Rothe <corsair@gentoo.org> alsa-driver-1.0.13.ebuild:
   Stable on ppc64
