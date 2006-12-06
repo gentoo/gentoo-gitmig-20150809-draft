@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation and Thomas Capricelli <orzel@kde.org>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/boson-0.11-r1.ebuild,v 1.2 2006/06/15 21:56:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/boson-0.11-r1.ebuild,v 1.3 2006/12/06 20:26:37 wolf31o2 Exp $
 
 inherit kde
 
@@ -14,8 +14,9 @@ KEYWORDS="ppc -sparc x86"
 IUSE="opengl"
 
 DEPEND="media-libs/lib3ds
-	~media-libs/openal-0.0.8
+	media-libs/openal
 	opengl? ( virtual/opengl )"
+
 need-kde 3
 
 S=${WORKDIR}/${PN}-all-${PV}

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-40.ebuild,v 1.6 2006/11/23 20:20:21 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-40.ebuild,v 1.7 2006/12/06 20:27:53 wolf31o2 Exp $
 
 inherit eutils wxwidgets games
 
@@ -17,7 +17,7 @@ DEPEND="virtual/opengl
 	virtual/glu
 	media-libs/libogg
 	media-libs/libvorbis
-	~media-libs/openal-0.0.8
+	media-libs/openal
 	media-libs/freealut
 	media-libs/libsdl
 	media-libs/sdl-net
