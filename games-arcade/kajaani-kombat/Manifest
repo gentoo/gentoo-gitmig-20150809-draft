@@ -1,8 +1,42 @@
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 a78c0abfb3c30e8afa3e46565174aad1 kajaani-kombat-0.6.6.6.ebuild 1156
-MD5 b124c6055037d3a2f45669ff91e1ed30 ChangeLog 1092
-MD5 dd740fd537d7a11741f4985a145dc355 kajaani-kombat-0.7.ebuild 1094
-MD5 faafb1ee86f70e1133d5c2487c71b8f1 files/digest-kajaani-kombat-0.6.6.6 75
-MD5 3998958edef3b2641a9b77ab7740c60b files/digest-kajaani-kombat-0.7 71
-MD5 d94c39a6595bb52a6aed0c975ff0eb20 files/0.7-makefile.patch 547
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX 0.6.6.6-makefile.patch 547 RMD160 dc147408e46fbd66b0336b6074a8ed4d1f5167bd SHA1 318bfa99e3eb04cf7801d6d9bbd8fa18a341ad84 SHA256 84f31df2bcb3657ec57c482caab82c9b533efe54f49e22b28cbe862f6c6cb530
 MD5 d94c39a6595bb52a6aed0c975ff0eb20 files/0.6.6.6-makefile.patch 547
+RMD160 dc147408e46fbd66b0336b6074a8ed4d1f5167bd files/0.6.6.6-makefile.patch 547
+SHA256 84f31df2bcb3657ec57c482caab82c9b533efe54f49e22b28cbe862f6c6cb530 files/0.6.6.6-makefile.patch 547
+AUX 0.7-makefile.patch 547 RMD160 dc147408e46fbd66b0336b6074a8ed4d1f5167bd SHA1 318bfa99e3eb04cf7801d6d9bbd8fa18a341ad84 SHA256 84f31df2bcb3657ec57c482caab82c9b533efe54f49e22b28cbe862f6c6cb530
+MD5 d94c39a6595bb52a6aed0c975ff0eb20 files/0.7-makefile.patch 547
+RMD160 dc147408e46fbd66b0336b6074a8ed4d1f5167bd files/0.7-makefile.patch 547
+SHA256 84f31df2bcb3657ec57c482caab82c9b533efe54f49e22b28cbe862f6c6cb530 files/0.7-makefile.patch 547
+DIST kajaani-kombat-0.6.6.6.tar.gz 1800663
+DIST kajaani-kombat-0.7.tar.gz 1805504
+EBUILD kajaani-kombat-0.6.6.6.ebuild 1117 RMD160 6ec0a33c0954f650349f3547884df268f34e3abe SHA1 a90170019af30f10019c46b373ac2c525671e08a SHA256 949ce6bb06782d41f18a1b4a0427eabcf4f374f2bdb27fd1d9363783f997cddc
+MD5 6b2ac5c45d872095d541662ce866205e kajaani-kombat-0.6.6.6.ebuild 1117
+RMD160 6ec0a33c0954f650349f3547884df268f34e3abe kajaani-kombat-0.6.6.6.ebuild 1117
+SHA256 949ce6bb06782d41f18a1b4a0427eabcf4f374f2bdb27fd1d9363783f997cddc kajaani-kombat-0.6.6.6.ebuild 1117
+EBUILD kajaani-kombat-0.7.ebuild 1094 RMD160 cb4deba91b6e1ba251576c37f6e4213fe3f260d3 SHA1 ee340a340790b1566a3dd9e28623f88bc6b1508e SHA256 d7f48b70c2aadf8599224cd76fefa0766d6eb281bc9b309e7a3598f33ccadac1
+MD5 dd740fd537d7a11741f4985a145dc355 kajaani-kombat-0.7.ebuild 1094
+RMD160 cb4deba91b6e1ba251576c37f6e4213fe3f260d3 kajaani-kombat-0.7.ebuild 1094
+SHA256 d7f48b70c2aadf8599224cd76fefa0766d6eb281bc9b309e7a3598f33ccadac1 kajaani-kombat-0.7.ebuild 1094
+MISC ChangeLog 1209 RMD160 28ff3e0eef6e33f9ba2e116210f5e55635012c29 SHA1 cb871d219509e6a7f6b0df01f3b9c67fe6c6b83c SHA256 83331544cd6221f0397accba91001982ff8a6886d7420621b32e95232b99da33
+MD5 13ad5334d5109999dbc172f0ceda4022 ChangeLog 1209
+RMD160 28ff3e0eef6e33f9ba2e116210f5e55635012c29 ChangeLog 1209
+SHA256 83331544cd6221f0397accba91001982ff8a6886d7420621b32e95232b99da33 ChangeLog 1209
+MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be5251fa1dacef5c41b74761bb1c8c54fb633b9e SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+MD5 faafb1ee86f70e1133d5c2487c71b8f1 files/digest-kajaani-kombat-0.6.6.6 75
+RMD160 9b5f01e7acf140f072853c418c066566bd914dab files/digest-kajaani-kombat-0.6.6.6 75
+SHA256 28b41c051696514173aaab5d8c630b0d17ecb51d3a59e8771e1a5451d86c8de8 files/digest-kajaani-kombat-0.6.6.6 75
+MD5 3998958edef3b2641a9b77ab7740c60b files/digest-kajaani-kombat-0.7 71
+RMD160 f3a9016c450e16e5e6638ad15f2e9f77caab916d files/digest-kajaani-kombat-0.7 71
+SHA256 11b88084573bbf68be5509c19e11517873cc87672acabd3821df16101d4bb3df files/digest-kajaani-kombat-0.7 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFdvfukT4lNIS36YERAnybAKCYWvja9HVJkyr5vobA4xmJThFCGQCfY6Ft
+pk0hZP7RbH1eoDj0z2oovDY=
+=89lP
+-----END PGP SIGNATURE-----
