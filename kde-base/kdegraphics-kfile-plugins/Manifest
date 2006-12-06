@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX configure-fix-kdegraphics-openexr.patch 704 RMD160 6b0414d2709b3efe5ca7c7a9c7a41905b19d0be6 SHA1 3ef597020cbd3f264625839b07023ddd72a60adc SHA256 b0a2bfee291d830ad6f936ad112eecd4cc4325d218508a7faa2c10d5cbb105f1
 MD5 d34b4b86b659b21184ada6cc00ec5569 files/configure-fix-kdegraphics-openexr.patch 704
 RMD160 6b0414d2709b3efe5ca7c7a9c7a41905b19d0be6 files/configure-fix-kdegraphics-openexr.patch 704
@@ -15,18 +12,18 @@ EBUILD kdegraphics-kfile-plugins-3.5.2.ebuild 836 RMD160 e74a3c1d3a0d9bc03d67eed
 MD5 40d9a5addabf3b0fbbbfc7f4b15fdf3a kdegraphics-kfile-plugins-3.5.2.ebuild 836
 RMD160 e74a3c1d3a0d9bc03d67eed8bb7e1a390fb467cf kdegraphics-kfile-plugins-3.5.2.ebuild 836
 SHA256 4baaa6fba727fd2434c45147c819a1b2b9bda4b5f38737e6d3245af02732890c kdegraphics-kfile-plugins-3.5.2.ebuild 836
-EBUILD kdegraphics-kfile-plugins-3.5.5-r1.ebuild 894 RMD160 f94b93a7e6523034e5d388d8d6ac9f6a6de9c5fd SHA1 808add7c97315daf497e5761e5e6bf34e270c227 SHA256 ca621768d68d00d149e04dc8ef261c96264e587314db46248ec763b0cd55e4e5
-MD5 5aaae5cb08dc9f762d4149a6babbe9e3 kdegraphics-kfile-plugins-3.5.5-r1.ebuild 894
-RMD160 f94b93a7e6523034e5d388d8d6ac9f6a6de9c5fd kdegraphics-kfile-plugins-3.5.5-r1.ebuild 894
-SHA256 ca621768d68d00d149e04dc8ef261c96264e587314db46248ec763b0cd55e4e5 kdegraphics-kfile-plugins-3.5.5-r1.ebuild 894
+EBUILD kdegraphics-kfile-plugins-3.5.5-r1.ebuild 895 RMD160 e8053464ac684ea216128a9a3b1d27f2a11aceb0 SHA1 93ef660b41ca89887579407a7eb177ab47aedba5 SHA256 fb1ddeeaf7cbffe47722d46bef6531930e5426ab32a5e206897c7c6517a26759
+MD5 3a3ebb9e7c6c4f9f2ae8aa24d6cd37d5 kdegraphics-kfile-plugins-3.5.5-r1.ebuild 895
+RMD160 e8053464ac684ea216128a9a3b1d27f2a11aceb0 kdegraphics-kfile-plugins-3.5.5-r1.ebuild 895
+SHA256 fb1ddeeaf7cbffe47722d46bef6531930e5426ab32a5e206897c7c6517a26759 kdegraphics-kfile-plugins-3.5.5-r1.ebuild 895
 EBUILD kdegraphics-kfile-plugins-3.5.5.ebuild 838 RMD160 f76d5e1818f80adf6b80ba7956827f3507264868 SHA1 4806c47857c84174bc73396c0baa9874d56f1f81 SHA256 294312cdc9d3658629bd8aa55f8e46a29223c331664d80062e3fed6105efa1a7
 MD5 1c3732f2661eee816ea8e73ed750d7b8 kdegraphics-kfile-plugins-3.5.5.ebuild 838
 RMD160 f76d5e1818f80adf6b80ba7956827f3507264868 kdegraphics-kfile-plugins-3.5.5.ebuild 838
 SHA256 294312cdc9d3658629bd8aa55f8e46a29223c331664d80062e3fed6105efa1a7 kdegraphics-kfile-plugins-3.5.5.ebuild 838
-MISC ChangeLog 9502 RMD160 5c5f27b3173d76f49cd00fcc0f69a9b26908312d SHA1 72796da10a831ed0a1917b5e2f02b1cf28f6c0b0 SHA256 5379ec80f565e075cf52ffa6bd4d67a10ea952d2c43fb4202d99df5390c30995
-MD5 20232ef704283e15b283aa864cb1b5da ChangeLog 9502
-RMD160 5c5f27b3173d76f49cd00fcc0f69a9b26908312d ChangeLog 9502
-SHA256 5379ec80f565e075cf52ffa6bd4d67a10ea952d2c43fb4202d99df5390c30995 ChangeLog 9502
+MISC ChangeLog 9630 RMD160 d3dd0be3027b52c442a8c37de991345f02444300 SHA1 7416bdec6beb7a2e620a7090f921a9c3357df696 SHA256 3b793a9b1cae20113a706131f55c8ec6bd7ee72b854e0bd793dcaa9347ee48b5
+MD5 6a8cd47b1c9d234250656bdffae771c8 ChangeLog 9630
+RMD160 d3dd0be3027b52c442a8c37de991345f02444300 ChangeLog 9630
+SHA256 3b793a9b1cae20113a706131f55c8ec6bd7ee72b854e0bd793dcaa9347ee48b5 ChangeLog 9630
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
@@ -40,10 +37,3 @@ SHA256 5f1d4470a3e6814d9f1f1ccbaaa1dc86001c6d16985f48f21c1063a2b5968686 files/di
 MD5 a3aaa0343f00484f85258058e8ac348c files/digest-kdegraphics-kfile-plugins-3.5.5-r1 259
 RMD160 2a9a22c3f7376170cd8d44cb1979ef76636fb43d files/digest-kdegraphics-kfile-plugins-3.5.5-r1 259
 SHA256 5f1d4470a3e6814d9f1f1ccbaaa1dc86001c6d16985f48f21c1063a2b5968686 files/digest-kdegraphics-kfile-plugins-3.5.5-r1 259
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-
-iD8DBQFFdnaxNQqtfCuFneMRAqe+AJ40K4JLbZOgpL9VHxj0iC6vKCYm5gCfWsM3
-T1ahYrFzuSAUoH6jUxKsMe0=
-=XJN/
------END PGP SIGNATURE-----
