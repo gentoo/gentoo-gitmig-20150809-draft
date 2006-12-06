@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.14_pre20061130.ebuild,v 1.2 2006/12/06 11:43:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.14_pre20061130.ebuild,v 1.3 2006/12/06 17:03:08 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -58,7 +58,13 @@ pkg_setup() {
 	#
 	#	env ALSA_CARDS='emu10k1 intel8x0 ens1370' emerge alsa-driver
 	#
-	ALSA_CARDS=${ALSA_CARDS:-all}
+	ALSA_CARDS=${ALSA_CARDS:-${IUSE_ALSA_CARDS}}
+
+	local TMP_ALSA_CARDS
+	for card in ${ALSA_CARDS}; do
+		has alsa_cards_${card} ${IUSE} && use alsa_cards_${card} && TMP_ALSA_CARDS="${TMP_ALSA_CARDS} ${card}"
+	done
+	ALSA_CARDS="${TMP_ALSA_CARDS}"
 
 	# Which drivers need PNP
 	local PNP_DRIVERS="interwave interwave-stb"
@@ -71,29 +77,18 @@ pkg_setup() {
 	local PNP_ERROR="Some of the drivers you selected require PnP support in your kernel (${PNP_DRIVERS}). Either enable PnP in your kernel or trim which drivers get compiled using ALSA_CARDS in /etc/make.conf."
 	local FW_LOADER_ERROR="Some of the drivers you selected require 'Userspace firmware loading support' in your kernel (${FW_DRIVERS}). Either enable that feature or trim which drivers get compiled using ALSA_CARDS in /etc/make.conf."
 
-	if [[ "${ALSA_CARDS}" == "all" ]]; then
-		# Ignore PNP checks for ppc architecture, as PNP can't be enabled there.
-		case ${ARCH} in
-			ppc|ppc64) ;;
-			*)
-				CONFIG_CHECK="${CONFIG_CHECK} PNP"
-				;;
-		esac
-		CONFIG_CHECK="${CONFIG_CHECK} FW_LOADER"
-	else
-		for pnpdriver in ${PNP_DRIVERS}; do
-			if use alsa_cards_${pnpdriver}; then
-				CONFIG_CHECK="${CONFIG_CHECK} PNP"
-				break;
-			fi
-		done
-		for fwdriver in ${FW_DRIVERS}; do
-			if use alsa_cards_${fwdriver}; then
-				CONFIG_CHECK="${CONFIG_CHECK} FW_LOADER"
-				break;
-			fi
-		done
-	fi
+	for pnpdriver in ${PNP_DRIVERS}; do
+		if use alsa_cards_${pnpdriver}; then
+			CONFIG_CHECK="${CONFIG_CHECK} PNP"
+			break;
+		fi
+	done
+	for fwdriver in ${FW_DRIVERS}; do
+		if use alsa_cards_${fwdriver}; then
+			CONFIG_CHECK="${CONFIG_CHECK} FW_LOADER"
+			break;
+		fi
+	done
 
 	linux-mod_pkg_setup
 
