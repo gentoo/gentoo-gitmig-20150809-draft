@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.78 2006/12/01 20:02:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.79 2006/12/06 13:14:33 kloeri Exp $
+
+  06 Dec 2006; <kloeri@gentoo.org> kwin-3.5.5-r1.ebuild:
+  Stable on Alpha.
 
   01 Dec 2006; Diego Pettenò <flameeyes@gentoo.org> kwin-3.5.2-r2.ebuild,
   kwin-3.5.5-r1.ebuild, kwin-3.5.5-r2.ebuild:
