@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.1.1.ebuild,v 1.2 2006/09/25 15:29:11 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.1.1.ebuild,v 1.3 2006/12/06 23:33:02 dberkholz Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs fortran
 
@@ -16,8 +16,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="pbs fortran threads"
 PROVIDE="virtual/mpi"
-DEPEND="virtual/libc
+RDEPEND="virtual/libc
 		pbs? ( virtual/pbs )"
+DEPEND="${RDEPEND}"
 
 FORTRAN="ifc gfortran g77"
 
