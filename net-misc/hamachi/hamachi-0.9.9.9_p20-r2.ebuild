@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hamachi/hamachi-0.9.9.9_p20-r2.ebuild,v 1.1 2006/09/20 12:02:02 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hamachi/hamachi-0.9.9.9_p20-r2.ebuild,v 1.2 2006/12/06 13:03:02 caleb Exp $
 
-inherit eutils linux-info 
+inherit eutils linux-info
 
 # gHamachi GUI
 
@@ -21,19 +21,19 @@ RESTRICT="nostrip nomirror"
 
 # Set workdir for both hamachi versions
 if use pentium; then
-  S=${WORKDIR}/${MY_P}-pentium
+	S=${WORKDIR}/${MY_P}-pentium
 else
-  S=${WORKDIR}/${MY_P}
+	S=${WORKDIR}/${MY_P}
 fi
 
 pkg_preinst() {
 	# Add group "hamachi" & user "hamachi"
-        enewgroup ${PN}
+	enewgroup ${PN}
 	enewuser ${PN} -1 -1 /dev/null ${PN}
 }
 
 
-pkg_setup() { 
+pkg_setup() {
 	einfo "Checking your kernel configuration for TUN/TAP support."
 	CONFIG_CHECK="TUN"
 	check_extra_config
@@ -42,35 +42,34 @@ pkg_setup() {
 src_unpack() {
 	# Unpack the correct Hamachi version
 	if use !pentium; then
-	  unpack ${MY_P}.tar.gz
+		unpack ${MY_P}.tar.gz
 	else
-	  unpack ${MY_P}-pentium.tar.gz 
+		unpack ${MY_P}-pentium.tar.gz
 	fi
 }
 
-src_compile() { 
+src_compile() {
 	# Compile Tuncfg
 	make -sC ${S}/tuncfg || die "Compiling of tunecfg failed"
 }
 
 src_install() {
-	
 	# Hamachi
 	einfo "Installing Hamachi"
 	insinto /usr/bin
 	insopts -m0755
 	doins hamachi
 	dosym /usr/bin/hamachi /usr/bin/hamachi-init
-	
+
 	# Tuncfg
 	einfo "Installing Tuncfg"
 	insinto /usr/sbin
 	insopts -m0700
 	doins tuncfg/tuncfg
-	
+
 	# Create log directory
 	dodir /var/log/${PN}
-	
+
 	# Config files
 	einfo "Installing config files"
 	exeinto /etc/init.d; newexe ${FILESDIR}/tuncfg.initd tuncfg
@@ -93,11 +92,11 @@ pkg_postinst() {
 	if use !pentium; then
 	ewarn "If you are seeing 'illegal instruction' error when trying"
 	ewarn "to run Hamachi client, set the pentium USE flag!"
-	ewarn "It enables binaries built specifically for older" 
+	ewarn "It enables binaries built specifically for older"
 	ewarn "x86 platforms, like Intel Pentium or AMD K6,"
 	ewarn "with all optimizations turned off."
 	fi
-	
+
 	einfo "To start Hamachi just type:"
 	einfo "/etc/init.d/hamachi start"
 }
