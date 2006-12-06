@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2-demo/dominions2-demo-2.08.ebuild,v 1.1 2006/04/18 18:40:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2-demo/dominions2-demo-2.08.ebuild,v 1.2 2006/12/06 20:33:26 wolf31o2 Exp $
 
 inherit games
 
@@ -14,7 +14,7 @@ KEYWORDS="x86"
 IUSE="arts esd"
 RESTRICT="strip"
 
-DEPEND="|| ( x11-libs/libXext virtual/x11 )
+DEPEND="x11-libs/libXext
 	virtual/opengl
 	virtual/glu
 	esd? ( media-sound/esound )
