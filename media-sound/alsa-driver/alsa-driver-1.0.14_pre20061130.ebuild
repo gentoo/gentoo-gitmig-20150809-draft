@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.14_pre20061130.ebuild,v 1.3 2006/12/06 17:03:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.14_pre20061130.ebuild,v 1.4 2006/12/06 20:04:13 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -60,35 +60,36 @@ pkg_setup() {
 	#
 	ALSA_CARDS=${ALSA_CARDS:-${IUSE_ALSA_CARDS}}
 
+	local PNP_DRIVERS="interwave interwave-stb"
+	local PNP_ERROR="Some of the drivers you selected require PnP support in your kernel (${PNP_DRIVERS}). Either enable PnP in your kernel or trim which drivers get compiled using ALSA_CARDS in /etc/make.conf."
+
+	local ISA_DRIVERS="cs4232 msnd-pinnacle cs4231-lib adlib ad1816a ad1848 als100 azt2320
+		cmi8330 cs4231 cs4236 dt019x  es968 es1688 es18xx gusclassic gusextreme gusmax
+		interwave interwave-stb opl3sa2 opti92x-ad1848 opti92x-cs4231 opti93x miro sb8
+		sb16 sbawe sb16_csp sgalaxy sscape wavefront"
+	local ISA_ERROR="Some of the drivers you selected require ISA support in your kernel ($(echo $ISA_DRIVERS)). Either enable ISA in your kernel or trim which drivers get compiled using ALSA_CARDS in /etc/make.conf."
+
+	local FW_DRIVERS="emu10k1"
+	local FW_LOADER_ERROR="Some of the drivers you selected require 'Userspace firmware loading support' in your kernel (${FW_DRIVERS}). Either enable that feature or trim which drivers get compiled using ALSA_CARDS in /etc/make.conf."
+
 	local TMP_ALSA_CARDS
+	local CHECK_PNP
+	local CHECK_ISA
+	local CHECK_FW
 	for card in ${ALSA_CARDS}; do
-		has alsa_cards_${card} ${IUSE} && use alsa_cards_${card} && TMP_ALSA_CARDS="${TMP_ALSA_CARDS} ${card}"
+		if has alsa_cards_${card} ${IUSE} && use alsa_cards_${card}; then
+			TMP_ALSA_CARDS="${TMP_ALSA_CARDS} ${card}"
+			has ${card} ${PNP_DRIVERS} && CHECK_PNP="PNP"
+			has ${card} ${ISA_DRIVERS} && CHECK_ISA="ISA"
+			has ${card} ${FW_DRIVERS} && CHECK_FW="FW_LOADER"
+		fi
 	done
 	ALSA_CARDS="${TMP_ALSA_CARDS}"
 
-	# Which drivers need PNP
-	local PNP_DRIVERS="interwave interwave-stb"
-	local FW_DRIVERS="emu10k1"
-
-	local CONFIG_CHECK="SOUND"
+	local CONFIG_CHECK="!SND SOUND ${CHECK_PNP} ${CHECK_ISA} ${CHECK_FW}"
 	local SND_ERROR="ALSA is already compiled into the kernel."
 	local SOUND_ERROR="Your kernel doesn't have sound support enabled."
 	local SOUND_PRIME_ERROR="Your kernel is configured to use the deprecated OSS drivers.	 Please disable them and re-emerge alsa-driver."
-	local PNP_ERROR="Some of the drivers you selected require PnP support in your kernel (${PNP_DRIVERS}). Either enable PnP in your kernel or trim which drivers get compiled using ALSA_CARDS in /etc/make.conf."
-	local FW_LOADER_ERROR="Some of the drivers you selected require 'Userspace firmware loading support' in your kernel (${FW_DRIVERS}). Either enable that feature or trim which drivers get compiled using ALSA_CARDS in /etc/make.conf."
-
-	for pnpdriver in ${PNP_DRIVERS}; do
-		if use alsa_cards_${pnpdriver}; then
-			CONFIG_CHECK="${CONFIG_CHECK} PNP"
-			break;
-		fi
-	done
-	for fwdriver in ${FW_DRIVERS}; do
-		if use alsa_cards_${fwdriver}; then
-			CONFIG_CHECK="${CONFIG_CHECK} FW_LOADER"
-			break;
-		fi
-	done
 
 	linux-mod_pkg_setup
 
