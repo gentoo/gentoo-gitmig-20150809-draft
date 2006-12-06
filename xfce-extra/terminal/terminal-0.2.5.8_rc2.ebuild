@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/terminal-0.2.5.8_rc2.ebuild,v 1.1 2006/12/05 16:28:38 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/terminal-0.2.5.8_rc2.ebuild,v 1.2 2006/12/06 05:51:45 nichoj Exp $
 
 inherit gnome2 xfce44 versionator
 
@@ -24,7 +24,9 @@ RDEPEND=">=dev-libs/glib-2
 	media-libs/fontconfig
 	media-libs/freetype
 	media-libs/libpng
-	dbus? ( >=sys-apps/dbus-0.34 )
+	dbus? ( || 	( >=dev-libs/dbus-glib-0.71
+				( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.34 ) )
+	)
 	|| ( ( x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libX11
