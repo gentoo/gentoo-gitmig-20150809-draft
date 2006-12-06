@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9742.ebuild,v 1.2 2006/12/04 16:22:08 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9742.ebuild,v 1.3 2006/12/06 21:59:55 wolf31o2 Exp $
 
 inherit eutils multilib versionator linux-mod
 
@@ -257,8 +257,9 @@ src_install-libs() {
 
 	local usrpkglibdir=usr/${pkglibdir}
 	local libdir=usr/X11R6/${pkglibdir}
-	local drvdir=${libdir}/modules/drivers
-	local extdir=${libdir}/modules/extensions
+	local modules=${libdir}/modules
+	local drvdir=${modules}/drivers
+	local extdir=${modules}/extensions
 	local incdir=usr/include/GL
 	local sover=${PV}
 	local NV_ROOT="/usr/${inslibdir}/opengl/nvidia"
@@ -342,6 +343,8 @@ src_install-libs() {
 			/usr/${inslibdir}/libXvMCNVIDIA.so
 
 	exeinto ${NV_ROOT}/extensions
+	[[ -f ${modules}/libnvidia-wfb.so.${sover} ]] && \
+		newexe ${modules}/libnvidia-wfb.so.${sover} libwfb.so
 	[[ -f ${extdir}/libglx.so.${sover} ]] && \
 		newexe ${extdir}/libglx.so.${sover} libglx.so
 
