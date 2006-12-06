@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmouse/nwmouse-0.1.ebuild,v 1.3 2006/09/15 20:05:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmouse/nwmouse-0.1.ebuild,v 1.4 2006/12/06 20:09:38 wolf31o2 Exp $
 
 inherit games
 
-DESCRIPTION="Hardware mouse cursors for Neverwinter Nights"
+DESCRIPTION="hardware mouse cursors for Neverwinter Nights"
 HOMEPAGE="http://home.woh.rr.com/nwmovies/nwmouse/"
 SRC_URI="http://home.woh.rr.com/nwmovies/cursors.tar.gz
 	http://dev.gentoo.org/~wolf31o2/sources/dump/${P}.tar.bz2"
@@ -27,12 +27,9 @@ RDEPEND="sys-libs/glibc
 		app-emulation/emul-linux-x86-sdl )
 	games-rpg/nwn
 	x86? (
-		|| (
-			(
-				x11-libs/libXcursor
-				x11-libs/libXext
-				x11-libs/libX11 )
-			virtual/x11 )
+		x11-libs/libXcursor
+		x11-libs/libXext
+		x11-libs/libX11
 		media-libs/libsdl )"
 
 S="${WORKDIR}/${PN}"
