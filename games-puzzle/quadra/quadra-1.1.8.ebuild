@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/quadra-1.1.8.ebuild,v 1.14 2006/09/14 07:20:20 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/quadra-1.1.8.ebuild,v 1.15 2006/12/06 17:18:47 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -13,11 +13,11 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE="svga"
 
-RDEPEND="|| ( x11-libs/libXpm virtual/x11 )
+RDEPEND="x11-libs/libXpm
 	>=media-libs/libpng-1.2.1
 	svga? ( media-libs/svgalib )"
 DEPEND="${RDEPEND}
-	|| ( x11-proto/xextproto virtual/x11 )"
+	x11-proto/xextproto"
 
 src_unpack() {
 	unpack ${A}

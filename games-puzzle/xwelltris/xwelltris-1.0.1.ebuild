@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xwelltris/xwelltris-1.0.1.ebuild,v 1.12 2006/06/29 16:22:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xwelltris/xwelltris-1.0.1.ebuild,v 1.13 2006/12/06 17:23:52 wolf31o2 Exp $
 
 inherit games
 
@@ -13,22 +13,14 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="sdl"
 
-RDEPEND="|| (
-	(
-		x11-misc/xbitmaps
-		x11-proto/xproto
-		x11-libs/libX11
-		x11-libs/libXt
-		x11-libs/libXmu
-		x11-libs/libXaw )
-	virtual/x11 )
-	sdl? (
-		media-libs/libsdl
-		media-libs/sdl-image )"
+RDEPEND="x11-misc/xbitmaps
+	x11-libs/libX11
+	x11-libs/libXt
+	x11-libs/libXmu
+	x11-libs/libXaw
+	sdl? ( media-libs/libsdl media-libs/sdl-image )"
 DEPEND="${RDEPEND}
-	|| (
-		x11-libs/libX11
-		virtual/x11 )"
+	x11-proto/xproto"
 
 src_unpack() {
 	unpack ${A}
