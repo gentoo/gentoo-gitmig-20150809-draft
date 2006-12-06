@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.0.4.ebuild,v 1.4 2006/11/19 15:09:43 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.0.4.ebuild,v 1.5 2006/12/06 06:12:26 weeve Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/${PN}/releases/${PV}/source/${P}-
 
 LICENSE="MPL-1.1 NPL-1.1"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~ppc ~x86"
+KEYWORDS="-* ~amd64 ~ppc ~sparc ~x86"
 
 RDEPEND=">=sys-libs/zlib-1.1.4
 	>=sys-devel/binutils-2.16.1
