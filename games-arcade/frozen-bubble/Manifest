@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX 1.0.0-no-chainreaction.patch 357 RMD160 49e017082d91488cd9d069d8566cba869013c700 SHA1 ae5dd0dbcdeab78788a5c729f4da24391b9ac15e SHA256 610811d88be84319f6e61ec73ffbb93c261b5b5be3d8c12aa7c26da1bd8f24c6
 MD5 c30d59b06b6112e4d3ca9ba2117c3202 files/1.0.0-no-chainreaction.patch 357
 RMD160 49e017082d91488cd9d069d8566cba869013c700 files/1.0.0-no-chainreaction.patch 357
@@ -17,13 +14,7 @@ AUX frozen-bubble-1.0.0-sdl-perl-2.patch 3919 RMD160 24fc0d83d901fefcfe642773cdc
 MD5 5c883c8dd838b13190b3115a7649333d files/frozen-bubble-1.0.0-sdl-perl-2.patch 3919
 RMD160 24fc0d83d901fefcfe642773cdcb148a3fc611ea files/frozen-bubble-1.0.0-sdl-perl-2.patch 3919
 SHA256 2c7199a227aedd59d056ca849d97a426c9ff364c76ee20a85510c9138bd2d272 files/frozen-bubble-1.0.0-sdl-perl-2.patch 3919
-AUX frozen-bubble-2.0.0-build.patch 1499 RMD160 58f7477d8e39a3bbcc584e7590dc56ffc9b8b514 SHA1 0d4b3f2efa52725c3094df368127ec7bb6e9385d SHA256 241a424806e3f5549f4eebc0ae86cd7c904206643b2d3a73f484cd699c9f20e7
-MD5 212fb7fd8da971f9cd78e6c5481127c7 files/frozen-bubble-2.0.0-build.patch 1499
-RMD160 58f7477d8e39a3bbcc584e7590dc56ffc9b8b514 files/frozen-bubble-2.0.0-build.patch 1499
-SHA256 241a424806e3f5549f4eebc0ae86cd7c904206643b2d3a73f484cd699c9f20e7 files/frozen-bubble-2.0.0-build.patch 1499
 DIST frozen-bubble-1.0.0.tar.bz2 7321135 RMD160 eeea4dceef9f205a94688913099a25bba7b50faa SHA1 8b58efc26778732580e40406d25720d4d0102e47 SHA256 fe7e46e529c7c3c969946c41efb519462f98dd5c280e247bd98ff629dcca1433
-DIST frozen-bubble-2.0.0-colourblind-mini-balls.tar.bz2 16611 RMD160 e197354f353470a935bbc6908153b5416d6efe58 SHA1 bfaf9caac74dfb1733f8c01703f871f557e8fcd3 SHA256 ae86fe29604e6bfaad7e61a58dcd8539a7d5673542df417d26791ea3f14793fb
-DIST frozen-bubble-2.0.0.tar.bz2 19841986 RMD160 eae7c46df27b7af3d363e64dcac8fe824c67185b SHA1 f5b8e6e39494fe189615089cc9903dd5e0c8c292 SHA256 7c6f9406cec25ba9a2971ac406f62ff43ac702479817ab3020b64ab03e225235
 DIST frozen-bubble-2.1.0.tar.bz2 19886184 RMD160 0d0b9c57aa609df48d1ea294f9f05979c8ceb279 SHA1 4fa45612e430f65d996b89959fdfbda9d629eb3e SHA256 efb6b72e1d3caa414c3b6591be2208c8c39e25b296cd4af295e5ada063e3bbe3
 DIST frozen-bubble-client-0.0.3.tar.bz2 59680 RMD160 bbaa980fa890b93da5efe57f1b9678a6b16b2660 SHA1 44585ed4724dc989b28d09230d5fcccf1f0cb665 SHA256 4c649196f5ef7fe4f5cc0fa96a44d3bf729e58de97cb74b9af6e797760fa69f0
 DIST frozen-bubble-server-0.0.3.tar.bz2 5772 RMD160 9aa0501c04d895942520ff2b94225a909cb5370a SHA1 48434e599ed214ef37d8e4e06742bab87e9a2a5d SHA256 5619a828bc6fab06df6a7aa62ddc4eb71c259a5448370f2794fdbec2f6418f07
@@ -31,10 +22,6 @@ EBUILD frozen-bubble-1.0.0-r6.ebuild 3241 RMD160 d9fa5e70c21fbea8bec3acaa6d1c8cc
 MD5 d8f12176649f0500350f94ebc78c0f5f frozen-bubble-1.0.0-r6.ebuild 3241
 RMD160 d9fa5e70c21fbea8bec3acaa6d1c8cc3e2c7ccb3 frozen-bubble-1.0.0-r6.ebuild 3241
 SHA256 6abb271d9db7671cebb55ccb6148916b3e15d3dea763d661d4b026bd04ed214c frozen-bubble-1.0.0-r6.ebuild 3241
-EBUILD frozen-bubble-2.0.0.ebuild 2012 RMD160 778ac7d7aca77a76bb94f44b83354b91c4118129 SHA1 048adac4850d8e752b8a1879c9dfeacc61dae312 SHA256 e318e19a693a3d6cf9e6fb4416204224123b1ae5dd6722e066d49681ea7bc6ff
-MD5 b2a6f6fcf0785002b2c032f390084206 frozen-bubble-2.0.0.ebuild 2012
-RMD160 778ac7d7aca77a76bb94f44b83354b91c4118129 frozen-bubble-2.0.0.ebuild 2012
-SHA256 e318e19a693a3d6cf9e6fb4416204224123b1ae5dd6722e066d49681ea7bc6ff frozen-bubble-2.0.0.ebuild 2012
 EBUILD frozen-bubble-2.1.0.ebuild 1895 RMD160 e6bc954250c61cf4c08208e089aab538ea7327be SHA1 febd0c3aab0724d6991c0fdbcc75694caa98c3d3 SHA256 5b8feb666cc98f2997d1f2a0ac9450bd7a267df6ec505c15b65ed70236a8aec4
 MD5 4802d4cbaa9682e1e555c8cb9874c4b5 frozen-bubble-2.1.0.ebuild 1895
 RMD160 e6bc954250c61cf4c08208e089aab538ea7327be frozen-bubble-2.1.0.ebuild 1895
@@ -50,16 +37,6 @@ SHA256 63337ec457363a86ff999264ec10ee614f5156160a57371d278122c167470602 metadata
 MD5 cbc6956c1b99904d1ef3d4ce79abc214 files/digest-frozen-bubble-1.0.0-r6 822
 RMD160 149cd7dc37e708a597885b6eb51ae5acb27391cc files/digest-frozen-bubble-1.0.0-r6 822
 SHA256 d5bc4171f6949e4cf0884c5dbca3813eb49fcce410ccfc4b8636a2a1197e6825 files/digest-frozen-bubble-1.0.0-r6 822
-MD5 85e6587dd90f6a84e66d098801ae03a8 files/digest-frozen-bubble-2.0.0 596
-RMD160 e680acb88603a7fdc7e236f9d3f3ee6b5e322898 files/digest-frozen-bubble-2.0.0 596
-SHA256 e2ed4a0c5f29844a509da3d32b72bcfe591e47a3f6b5bab3a0b4e920a970f3d9 files/digest-frozen-bubble-2.0.0 596
 MD5 746982879467518d05aa447e75c030b7 files/digest-frozen-bubble-2.1.0 268
 RMD160 e4c48864a07c9e2e6da0d0b7173b9d78be60fbbc files/digest-frozen-bubble-2.1.0 268
 SHA256 e644cef82dbff81f1ec0ed3086a5543a69ade922646d0f1f56e70a7387831d32 files/digest-frozen-bubble-2.1.0 268
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-
-iD8DBQFFa6+TamhnQswr0vIRAnKtAKCqp1Ce2auiSTo7iJemSgPBA9F4bQCeIPfE
-KAQpgocGMgzbfZ2XOiZ73lA=
-=ZCEr
------END PGP SIGNATURE-----
