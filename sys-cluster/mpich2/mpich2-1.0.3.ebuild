@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.3.ebuild,v 1.9 2006/09/26 01:16:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.3.ebuild,v 1.10 2006/12/06 23:48:55 dberkholz Exp $
 
 inherit eutils autotools
 
@@ -15,16 +15,12 @@ KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="crypt cxx doc debug mpe threads"
 
 PROVIDE="virtual/mpi"
-DEPEND="virtual/libc
-	sys-devel/autoconf
-	sys-devel/automake
-	sys-devel/libtool"
-RDEPEND="${DEPEND}
-	crypt? ( net-misc/openssh )
+RDEPEND="crypt? ( net-misc/openssh )
 	!crypt? ( net-misc/netkit-rsh )
 	!virtual/mpi
 	!media-sound/mpd
 	!media-sound/mpd-svn"
+DEPEND="${RDEPEND}"
 
 pkg_setup() {
 	if [ -n "${MPICH_CONFIGURE_OPTS}" ]; then
