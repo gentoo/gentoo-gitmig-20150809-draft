@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/cube-20040522.ebuild,v 1.8 2005/11/21 20:29:58 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/cube-20040522.ebuild,v 1.9 2006/12/06 17:20:15 wolf31o2 Exp $
 
 inherit eutils flag-o-matic games
 
@@ -23,8 +23,7 @@ RDEPEND="virtual/opengl
 	sys-libs/zlib
 	media-libs/libpng"
 DEPEND="${RDEPEND}
-	app-arch/unzip
-	>=sys-apps/sed-4"
+	app-arch/unzip"
 
 S="${WORKDIR}/cube"
 CUBE_DATADIR="${GAMES_DATADIR}/${PN}/"
