@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<product name="ut2004" desc="Unreal Tournament 2004" xmlversion="1.6" root="/opt/ut2004" update_url="http://unreal.epicgames.com/updates/ut2004/updates.txt">
-  <component name="__CDKEY__" version="3186" default="yes">
+<product name="ut2004" desc="Unreal Tournament 2004" xmlversion="1.6" root="GAMES_PREFIX_OPT/ut2004" update_url="http://unreal.epicgames.com/updates/ut2004/updates.txt">
+  <component name="__CDKEY__" version="3369" default="yes">
     <option name="English"></option>
     <option name="__CDKEY__" tag="__CDKEY__"></option>
   </component>
