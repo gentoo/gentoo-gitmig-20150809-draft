@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6417 2006/12/06 05:21:14 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6418 2006/12/06 12:02:24 opfer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -53,6 +53,10 @@ xfce-extra/xfce4-xfapplet
 # masked pending removal as there is no bmpx that deps on
 # this anymore and it is deprecated
 x11-themes/bmpx-themes
+
+# Christian Faulhammer <opfer@gentoo.org> (06 Dec 2006)
+# we test it, as the ebuild has been revamped
+~dev-lang/erlang-11.2.2
 
 # Christian Faulhammer <opfer@gentoo.org> (04 Dec 2006)
 # masked for testing, as it is beta
