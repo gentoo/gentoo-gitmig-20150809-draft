@@ -1,0 +1,21 @@
+diff -ru tinyerp-client-4.0.0~/setup.py tinyerp-client-4.0.0/setup.py
+--- tinyerp-client-4.0.0~/setup.py	2006-12-06 20:09:41.000000000 +0100
++++ tinyerp-client-4.0.0/setup.py	2006-12-06 20:10:22.000000000 +0100
+@@ -48,7 +48,7 @@
+              (opj('share', 'pixmaps', 'tinyerp-client', 'icons'),
+                      glob.glob('bin/icons/*.png')),
+              (opj('share', 'tinyerp-client'),
+-              ['bin/terp.glade', 'bin/tipoftheday.txt'])]
++              ['bin/terp.glade', 'bin/tipoftheday.txt'] + glob.glob('bin/*.png'))]
+     return files
+ 
+ included_plugins = ['workflow_print']
+@@ -83,7 +83,7 @@
+ Programming Language :: Python
+ """
+ 
+-check_modules()
++#check_modules()
+ 
+ # create startup script
+ start_script = \
