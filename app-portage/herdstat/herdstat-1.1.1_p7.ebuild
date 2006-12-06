@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.1_p7.ebuild,v 1.8 2006/08/22 01:57:39 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.1_p7.ebuild,v 1.9 2006/12/06 21:44:02 eroyf Exp $
 
 inherit bash-completion toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.berlios.de/herdstat/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~mips ppc sparc x86"
+KEYWORDS="alpha amd64 hppa mips ppc sparc x86"
 IUSE="debug doc"
 
 RDEPEND=">=dev-libs/xmlwrapp-0.5.0"
