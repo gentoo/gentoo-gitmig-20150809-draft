@@ -1,0 +1,128 @@
+# Copyright 2006 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/alsa_cards.desc,v 1.1 2006/12/06 12:36:25 flameeyes Exp $
+
+# This file contains descriptions of ALSA_CARDS USE_EXPAND flags.
+
+# Keep it sorted.
+
+ad1816a - Analog Devices SoundPort AD1816
+ad1848 - Generic AD1848/CS4248 drive
+ad1848-lib - Missing description
+ad1889 - Analog Devices AD188
+adlib - AdLib FM car
+ali5451 - ALi M5451 PCI Audio Controlle
+als100 - Avance Logic ALS100/ALS12
+als300 - Avance Logic ALS300/ALS300
+als4000 - Avance Logic ALS400
+aoa - Apple Onboard Audio drive
+aoa-onyx - support Onyx chi
+aoa-soundbus - Apple Soundbus suppor
+aoa-soundbus-i2s - I2S bus suppor
+aoa-tas - support TAS chip
+aoa-toonie - support Toonie chi
+armaaci - ARM PrimeCell PL041 AC Link suppor
+atiixp - ATI IXP AC97 Controlle
+atiixp-modem - ATI IXP Mode
+au8810 - Aureal Advantag
+au8820 - Aureal Vorte
+au8830 - Aureal Vortex 
+azt2320 - Aztech Systems AZT232
+azt3328 - Aztech AZF3328 / PCI168 (EXPERIMENTAL
+bt87x - Bt87x Audio Captur
+ca0106 - SB Audigy LS / Live 24bi
+cmi8330 - C-Media CMI833
+cmipci - C-Media 8738, 833
+cs4231 - Generic Cirrus Logic CS4231 drive
+cs4231-lib - Missing description
+cs4232 - Generic Cirrus Logic CS4232 drive
+cs4236 - Generic Cirrus Logic CS4236+ drive
+cs4281 - Cirrus Logic (Sound Fusion) CS428
+cs46xx - Cirrus Logic (Sound Fusion) CS4280/CS461x/CS462x/CS463
+cs5535audio - CS5535/CS5536 Audi
+darla20 - (Echoaudio) Darla2
+darla24 - (Echoaudio) Darla2
+dt019x - Diamond Technologies DT-019X, Avance Logic ALS-00
+dummy - Dummy (/dev/null) soundcar
+echo3g - (Echoaudio) 3G card
+emu10k1 - Emu10k1 (SB Live!, Audigy, E-mu APS
+emu10k1x - Emu10k1X (Dell OEM Version
+ens1370 - (Creative) Ensoniq AudioPCI 137
+ens1371 - (Creative) Ensoniq AudioPCI 1371/137
+es1688 - Generic ESS ES688/ES1688 drive
+es18xx - Generic ESS ES18xx drive
+es1938 - ESS ES1938/1946/1969 (Solo-1
+es1968 - ESS ES1968/1978 (Maestro-1/2/2E
+es968 - Generic ESS ES968 drive
+fm801 - ForteMedia FM80
+fm801-tea575x - Missing description
+gina20 - (Echoaudio) Gina2
+gina24 - (Echoaudio) Gina2
+gusclassic - Gravis UltraSound Classi
+gusextreme - Gravis UltraSound Extrem
+gusmax - Gravis UltraSound MA
+gus-synth - Missing description
+harmony - Harmony/Vivace sound chi
+hda-intel - Intel HD Audi
+hdspm - RME Hammerfall DSP MAD
+hdsp - RME Hammerfall DSP Audi
+ice1712 - ICEnsemble ICE1712 (Envy24
+ice1724 - ICE/VT1724/1720 (Envy24HT/PT
+indigodj - (Echoaudio) Indigo D
+indigo - (Echoaudio) Indig
+indigoio - (Echoaudio) Indigo I
+intel8x0 - Intel/SiS/nVidia/AMD/ALi AC97 Controlle
+intel8x0m - Intel/SiS/nVidia/AMD MC97 Mode
+interwave - AMD InterWave, Gravis UltraSound Pn
+interwave-stb - AMD InterWave + TEA6330T (UltraSound 32-Pro
+korg1212 - Korg 1212 I
+layla20 - (Echoaudio) Layla2
+layla24 - (Echoaudio) Layla2
+maestro3 - ESS Allegro/Maestro
+mia - (Echoaudio) Mi
+miro - Miro miroSOUND PCM1pro/PCM12/PCM20radio drive
+mixart - Digigram miXar
+mona - (Echoaudio) Mon
+mpu401 - Generic MPU-401 UART drive
+mpu401-uart - Missing description
+mtpav - MOTU MidiTimePiece AV multiport MID
+mts64 - ESI Miditerminal 4140 drive
+nm256 - NeoMagic NM256AV/Z
+opl3-lib - Missing description
+opl3sa2 - Yamaha OPL3-SA2/SA
+opl4-lib - Missing description
+opti92x-ad1848 - OPTi 82C92x - AD184
+opti92x-cs4231 - OPTi 82C92x - CS423
+opti93x - OPTi 82C93
+pcxhr - Digigram PCXH
+pdaudiocf - Sound Core PDAudioC
+powermac - PowerMac (AWACS, DACA, Burgundy, Tumbler, Keywest
+pxa2xx-ac97 - AC97 driver for the Intel PXA2xx chi
+pxa2xx-pcm - Missing description
+riptide - Conexant Riptid
+rme32 - RME Digi32, 32/8, 32 PR
+rme9652 - RME Digi9652 (Hammerfall
+rme96 - RME Digi96, 96/8, 96/8 PR
+sa11xx-uda1341 - SA11xx UDA1341TS driver (iPaq H3600
+sb16 - Sound Blaster 16 (PnP
+sb8 - Sound Blaster 1.0/2.0/Pro (8-bit
+sbawe - Sound Blaster AWE (32,64) (PnP
+serial-u16550 - UART16550 serial MIDI drive
+sgalaxy - Aztech Sound Galax
+sonicvibes - S3 SonicVibe
+sscape - Ensoniq SoundScape PnP drive
+sun-amd7930 - Sun AMD793
+sun-cs4231 - Sun CS423
+sun-dbri - Sun DBR
+"support Topaz chip
+trident - Trident 4D-Wave DX/NX; SiS 701
+usb-audio - USB Audio/MIDI drive
+usb-usx2y - Tascam US-122, US-224 and US-428 USB drive
+via82xx-modem - VIA 82C686A/B, 8233 based Modem
+via82xx - VIA 82C686A/B, 8233/8235 AC97 Controlle
+virmidi - Virtual MIDI soundcar
+vx222 - Digigram VX22
+vx-lib - Missing description
+vxpocket - Digigram VXpocke
+wavefront - Turtle Beach Maui,Tropez,Tropez+ (Wavefront
+ymfpci - Yamaha YMF724/740/744/75
