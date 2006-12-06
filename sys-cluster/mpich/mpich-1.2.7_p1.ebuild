@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.7_p1.ebuild,v 1.10 2006/12/06 23:41:52 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.7_p1.ebuild,v 1.11 2006/12/06 23:42:49 dberkholz Exp $
 
 inherit autotools eutils
 
@@ -21,10 +21,6 @@ KEYWORDS="~amd64 ppc ppc64 x86"
 IUSE="doc crypt"
 
 PROVIDE="virtual/mpi"
-DEPEND="virtual/libc
-	sys-devel/autoconf
-	sys-devel/automake
-	sys-devel/libtool"
 RDEPEND="${DEPEND}
 	crypt? ( net-misc/openssh )
 	!crypt? ( net-misc/netkit-rsh )
@@ -33,6 +29,7 @@ RDEPEND="${DEPEND}
 	!sys-cluster/mpich2
 	|| ( x11-libs/libX11
 		virtual/x11 )"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
