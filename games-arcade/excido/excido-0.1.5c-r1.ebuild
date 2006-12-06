@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/excido/excido-0.1.5c-r1.ebuild,v 1.6 2006/08/14 06:45:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/excido/excido-0.1.5c-r1.ebuild,v 1.7 2006/12/06 20:14:40 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -18,7 +18,7 @@ DEPEND="dev-games/physfs
 	media-libs/sdl-mixer
 	media-libs/sdl-ttf
 	media-libs/sdl-image
-	~media-libs/openal-0.0.8
+	media-libs/openal
 	media-libs/freealut"
 
 src_unpack() {
