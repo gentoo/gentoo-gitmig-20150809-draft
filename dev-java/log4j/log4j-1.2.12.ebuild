@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/log4j-1.2.12.ebuild,v 1.5 2006/10/05 18:05:36 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/log4j-1.2.12.ebuild,v 1.6 2006/12/07 22:52:07 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -23,7 +23,7 @@ RDEPEND=">=virtual/jre-1.4
 #	jms? ( || (=dev-java/openjms-0.7.6* =dev-java/openjms-bin-0.7.6* ))"
 
 # Needs the a newer ant-core because otherwise source 1.1 and target 1.1 fails
-# on at least blackdown-jdk-1.4.2.02. The other way to go around this is to 
+# on at least blackdown-jdk-1.4.2.02. The other way to go around this is to
 # explicitly set the javac.source and javac.target properties in the ebuild.
 
 DEPEND=">=virtual/jdk-1.4
