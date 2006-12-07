@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/x264-svn-encoder/x264-svn-encoder-20061014.ebuild,v 1.1 2006/12/07 12:55:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/x264-svn-encoder/x264-svn-encoder-20061014.ebuild,v 1.2 2006/12/07 14:00:48 aballier Exp $
 
 inherit multilib eutils toolchain-funcs
 
@@ -16,16 +16,15 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
-RDEPEND=""
+RDEPEND="mp4? ( >=media-video/gpac-0.4.1_pre20060122 )
+	gtk? ( >=x11-libs/gtk+-2.6.10 >=dev-libs/glib-2.10.3 )
+	~media-libs/${X264_SVN_P}"
 
 DEPEND="${RDEPEND}
-	~media-libs/${X264_SVN_P}
 	!<=media-libs/x264-svn-20061014
 	amd64? ( dev-lang/yasm )
 	x86? ( dev-lang/nasm )
-	x86-fbsd? ( dev-lang/nasm )
-	mp4? ( >=media-video/gpac-0.4.1_pre20060122 )
-	gtk? ( >=x11-libs/gtk+-2.6.10 >=dev-libs/glib-2.10.3 ) "
+	x86-fbsd? ( dev-lang/nasm )"
 
 S=${WORKDIR}/${PN/-encoder/}
 
