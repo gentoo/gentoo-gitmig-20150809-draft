@@ -1,12 +1,26 @@
-MD5 8fd73e5acc7af4074c8fdb268d7814bc ChangeLog 3717
-RMD160 ee3d3ed3b601c43684f2d2d1a197c4ecf1cf5c83 ChangeLog 3717
-SHA256 047b57b13569f06014dd87774fc7619651d452d92ea081cd42108425695edf3c ChangeLog 3717
-MD5 289bb295f82dad69e4e6e8fde23c562b commonbox-styles-0.6.ebuild 799
-RMD160 acd2c8e71b864c096e406bbe48e2f2732fa47539 commonbox-styles-0.6.ebuild 799
-SHA256 f5d08ab24b546aac6868170357516cbad2cc2d54b42f80e6722fa9dd58fafa5f commonbox-styles-0.6.ebuild 799
-MD5 989ada9b740edc1d97963d0c5589d8ad files/digest-commonbox-styles-0.6 265
-RMD160 1b969c08a1527cce9815fc74554007e16e10ce53 files/digest-commonbox-styles-0.6 265
-SHA256 3b55c62a4d8308d35fe902ffec0e7640d69f95471c66e06e96a8808dae00168a files/digest-commonbox-styles-0.6 265
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST commonbox-styles-0.6.tar.bz2 106381 RMD160 06f9bcead0a058cd2e9fe34fd9ff4d1429d19ea7 SHA256 cd5eb6ed59e7e8d840e8208885b7e7841a9fb9af63eaf1561733410830d02423
+EBUILD commonbox-styles-0.6.ebuild 810 RMD160 b0bd5249614bc63f14ee8a3e3a429b09902206ff SHA1 1ddb18cd11af9ea5d1301376efc0190e6a84e6db SHA256 ead56d8fc70348eafa4fc90733cccacd15efca8a0587efac6f8ff1591a0cfa8b
+MD5 14225e5ab6ed1cf6800bafa45530f099 commonbox-styles-0.6.ebuild 810
+RMD160 b0bd5249614bc63f14ee8a3e3a429b09902206ff commonbox-styles-0.6.ebuild 810
+SHA256 ead56d8fc70348eafa4fc90733cccacd15efca8a0587efac6f8ff1591a0cfa8b commonbox-styles-0.6.ebuild 810
+MISC ChangeLog 3900 RMD160 93fd7a995254f322e66f8e87008f195bbfad68f1 SHA1 18f9b1a2a6568937d3a34f07c45cbcb2bad15fbf SHA256 42428fdfbffa0b110b15ba9c90ae4642aaac747bd5ac66d6f284a855afba4c4c
+MD5 e053359096e7b81fcd42dd5e255c4e4b ChangeLog 3900
+RMD160 93fd7a995254f322e66f8e87008f195bbfad68f1 ChangeLog 3900
+SHA256 42428fdfbffa0b110b15ba9c90ae4642aaac747bd5ac66d6f284a855afba4c4c ChangeLog 3900
+MISC metadata.xml 256 RMD160 29b79a5fece06cf2bc5eb6f9c5efd5c3d6b479de SHA1 e56fb933bc9151762c3d29565947672cf6859753 SHA256 7d455038be5fd92a701ce9703bfd2a2748b6e2fd72c6e529f9487e9539e35c93
 MD5 de081dca0e5f4a2b0813ff1f7f7ebfab metadata.xml 256
 RMD160 29b79a5fece06cf2bc5eb6f9c5efd5c3d6b479de metadata.xml 256
 SHA256 7d455038be5fd92a701ce9703bfd2a2748b6e2fd72c6e529f9487e9539e35c93 metadata.xml 256
+MD5 989ada9b740edc1d97963d0c5589d8ad files/digest-commonbox-styles-0.6 265
+RMD160 1b969c08a1527cce9815fc74554007e16e10ce53 files/digest-commonbox-styles-0.6 265
+SHA256 3b55c62a4d8308d35fe902ffec0e7640d69f95471c66e06e96a8808dae00168a files/digest-commonbox-styles-0.6 265
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFd3c5AiZjviIA2XgRAlIjAJwL5vuxOto/5WXFI8a2LXGLhoQFZACfa9W0
+/r5iERuBeAv3VgRaFG4XI8E=
+=lPub
+-----END PGP SIGNATURE-----
