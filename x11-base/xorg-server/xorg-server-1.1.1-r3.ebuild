@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r3.ebuild,v 1.1 2006/12/07 03:38:13 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r3.ebuild,v 1.2 2006/12/07 16:49:11 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -278,8 +278,7 @@ pkg_setup() {
 		${FILESDIR}/${PV}-fix-xrandr-zoom-keys.patch
 		${FILESDIR}/${PV}-sparc64-ati-lockups.patch
 		${FILESDIR}/xorg-conf-example.patch
-		${FILESDIR}/${PV}-fix_acpi_tokenize.patch
-		${FILESDIR}/${PV}-fix_big_endian_glx.patch"
+		${FILESDIR}/${PV}-fix_acpi_tokenize.patch"
 
 	# Patches required for compiz to work with AIGLX,
 	# but they slow EXA down (bug #147841).
@@ -292,6 +291,7 @@ pkg_setup() {
 			${FILESDIR}/04-mesa-copy-sub-buffer.patch
 			${FILESDIR}/05-offscreen-pixmaps.patch
 			${FILESDIR}/06-aiglx-happy-vt-switch.patch
+			${FILESDIR}/${PV}-fix_big_endian_glx.patch
 			${PATCHES}"
 	fi
 
