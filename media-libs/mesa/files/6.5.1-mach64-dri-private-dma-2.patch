@@ -1,0 +1,141 @@
+--- src/mesa/drivers/dri/mach64/mach64_ioctl.c	2006-04-01 05:37:38.000000000 +0300
++++ src/mesa/drivers/dri/mach64-tst/mach64_ioctl.c	2006-07-18 19:43:10.000000000 +0300
+@@ -105,7 +105,7 @@ void mach64FlushVerticesLocked( mach64Co
+    int prim = mmesa->hw_primitive;
+    int fd = mmesa->driScreen->fd;
+    drm_mach64_vertex_t vertex;
+-   int i, ret;
++   int i;
+ 
+    mmesa->num_verts = 0;
+    mmesa->vert_used = 0;
+@@ -123,6 +123,9 @@ void mach64FlushVerticesLocked( mach64Co
+       mmesa->dirty |= MACH64_UPLOAD_CLIPRECTS;
+ 
+    if ( !count || !(mmesa->dirty & MACH64_UPLOAD_CLIPRECTS) ) {
++      int to = 0;
++      int ret;
++
+       /* FIXME: Is this really necessary */
+       if ( nbox == 1 )
+ 	 mmesa->sarea->nbox = 0;
+@@ -133,7 +136,10 @@ void mach64FlushVerticesLocked( mach64Co
+       vertex.buf = buffer;
+       vertex.used = count;
+       vertex.discard = 1;
+-      ret = drmCommandWrite( fd, DRM_MACH64_VERTEX, &vertex, sizeof(drm_mach64_vertex_t) );
++      do {
++	 ret = drmCommandWrite( fd, DRM_MACH64_VERTEX,
++				&vertex, sizeof(drm_mach64_vertex_t) );
++      } while ( ( ret == -EAGAIN ) && ( to++ < MACH64_TIMEOUT ) );
+       if ( ret ) {
+ 	 UNLOCK_HARDWARE( mmesa );
+ 	 fprintf( stderr, "Error flushing vertex buffer: return = %d\n", ret );
+@@ -146,6 +152,8 @@ void mach64FlushVerticesLocked( mach64Co
+ 	 int nr = MIN2( i + MACH64_NR_SAREA_CLIPRECTS, nbox );
+ 	 drm_clip_rect_t *b = mmesa->sarea->boxes;
+ 	 int discard = 0;
++	 int to = 0;
++	 int ret;
+ 
+ 	 mmesa->sarea->nbox = nr - i;
+ 	 for ( ; i < nr ; i++ ) {
+@@ -164,7 +172,10 @@ void mach64FlushVerticesLocked( mach64Co
+ 	 vertex.buf = buffer;
+ 	 vertex.used = count;
+ 	 vertex.discard = discard;
+-	 ret = drmCommandWrite( fd, DRM_MACH64_VERTEX, &vertex, sizeof(drm_mach64_vertex_t) );
++	 do {
++	    ret = drmCommandWrite( fd, DRM_MACH64_VERTEX,
++				   &vertex, sizeof(drm_mach64_vertex_t) );
++	 } while ( ( ret == -EAGAIN ) && ( to++ < MACH64_TIMEOUT ) );
+ 	 if ( ret ) {
+ 	    UNLOCK_HARDWARE( mmesa );
+ 	    fprintf( stderr, "Error flushing vertex buffer: return = %d\n", ret );
+@@ -180,14 +191,15 @@ void mach64FlushVerticesLocked( mach64Co
+  * Texture uploads
+  */
+ 
+-void mach64FireBlitLocked( mach64ContextPtr mmesa, drmBufPtr buffer,
++void mach64FireBlitLocked( mach64ContextPtr mmesa, void *buffer,
+ 			   GLint offset, GLint pitch, GLint format,
+ 			   GLint x, GLint y, GLint width, GLint height )
+ {
+    drm_mach64_blit_t blit;
+-   GLint ret;
++   int to = 0;
++   int ret;
+ 
+-   blit.idx = buffer->idx;
++   blit.buf = buffer;
+    blit.offset = offset;
+    blit.pitch = pitch;
+    blit.format = format;
+@@ -196,8 +208,10 @@ void mach64FireBlitLocked( mach64Context
+    blit.width = width;
+    blit.height = height;
+ 
+-   ret = drmCommandWrite( mmesa->driFd, DRM_MACH64_BLIT, 
+-                          &blit, sizeof(drm_mach64_blit_t) );
++   do {
++      ret = drmCommandWrite( mmesa->driFd, DRM_MACH64_BLIT, 
++			     &blit, sizeof(drm_mach64_blit_t) );
++   } while ( ( ret == -EAGAIN ) && ( to++ < MACH64_TIMEOUT ) );
+ 
+    if ( ret ) {
+       UNLOCK_HARDWARE( mmesa );
+--- src/mesa/drivers/dri/mach64/mach64_ioctl.h	2005-02-01 01:40:05.000000000 +0200
++++ src/mesa/drivers/dri/mach64-tst/mach64_ioctl.h	2006-04-11 18:52:56.000000000 +0300
+@@ -74,7 +74,7 @@ static __inline void *mach64AllocDmaLock
+    return head;
+ }
+ 
+-extern void mach64FireBlitLocked( mach64ContextPtr mmesa, drmBufPtr buffer,
++extern void mach64FireBlitLocked( mach64ContextPtr mmesa, void *buffer,
+ 				  GLint offset, GLint pitch, GLint format,
+ 				  GLint x, GLint y, GLint width, GLint height );
+ 
+--- src/mesa/drivers/dri/mach64/mach64_screen.c	2005-10-19 05:46:42.000000000 +0300
++++ src/mesa/drivers/dri/mach64-tst/mach64_screen.c	2006-07-16 04:58:55.000000000 +0300
+@@ -520,7 +520,7 @@ void * __driCreateNewScreen_20050727( __
+    __DRIscreenPrivate *psp;
+    static const __DRIversion ddx_expected = { 6, 4, 0 };
+    static const __DRIversion dri_expected = { 4, 0, 0 };
+-   static const __DRIversion drm_expected = { 1, 0, 0 };
++   static const __DRIversion drm_expected = { 2, 0, 0 };
+ 
+    dri_interface = interface;
+ 
+--- src/mesa/drivers/dri/mach64/mach64_texmem.c	2004-06-03 01:45:00.000000000 +0300
++++ src/mesa/drivers/dri/mach64-tst/mach64_texmem.c	2006-04-11 18:54:09.000000000 +0300
+@@ -569,27 +569,17 @@ static void mach64UploadLocalSubImage( m
+ 	 remaining > 0 ;
+ 	 remaining -= rows, y += rows, i++ )
+    {
+-       drmBufPtr buffer;
+-       CARD32 *dst;
+-
+        height = MIN2(remaining, rows);
+ 
+-       /* Grab the dma buffer for the texture blit */
+-       buffer = mach64GetBufferLocked( mmesa );
+-
+-       dst = (CARD32 *)((char *)buffer->address + MACH64_HOSTDATA_BLIT_OFFSET);
+-
+        assert(image->Data);
+ 
+        {
+           const GLubyte *src = (const GLubyte *) image->Data +
+              (y * image->Width + x) * image->TexFormat->TexelBytes;
+-          const GLuint bytes = width * height * image->TexFormat->TexelBytes;
+-          memcpy(dst, src, bytes);
+-       }
+ 
+-       mach64FireBlitLocked( mmesa, buffer, offset, pitch, format,
+-			     x, y, width, height );
++          mach64FireBlitLocked( mmesa, (void *)src, offset, pitch, format,
++				x, y, width, height );
++       }
+ 
+    }
+ 

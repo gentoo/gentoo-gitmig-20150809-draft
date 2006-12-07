@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.128 2006/12/04 23:40:17 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.129 2006/12/07 03:08:42 joshuabaergen Exp $
+
+*mesa-6.5.1-r3 (07 Dec 2006)
+
+  07 Dec 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/6.5.1-mach64-dri-private-dma-2.patch, +mesa-6.5.1-r3.ebuild:
+  Fix compiling against newer libdrms (2.2.0+).  Thanks for Mart Raudsepp for
+  the discovery of the patch.  (Fixes bug #154827)
 
 *mesa-6.5.2 (04 Dec 2006)
 
