@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.32 2006/12/07 02:14:46 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.33 2006/12/07 02:27:22 flameeyes Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -25,6 +25,8 @@
 # -----------------------------------------------------------------------------
 
 inherit eutils versionator multilib
+
+IUSE="elibc_FreeBSD"
 
 # -----------------------------------------------------------------------------
 # @section-begin variables
@@ -1272,9 +1274,11 @@ java-pkg_javac-args() {
 java-pkg_get-jni-cflags() {
 	local flags="-I${JAVA_HOME}/include"
 
+	local platform="linux"
+	use elibc_FreeBSD && platform="freebsd"
+
 	# TODO do a check that the directories are valid
-	# TODO figure out how to cope with other things than linux...
-	flags="${flags} -I${JAVA_HOME}/include/linux"
+	flags="${flags} -I${JAVA_HOME}/include/${platform}"
 
 	echo ${flags}
 }
