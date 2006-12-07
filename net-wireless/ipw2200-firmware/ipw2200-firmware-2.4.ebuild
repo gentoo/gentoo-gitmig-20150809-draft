@@ -1,25 +1,81 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200-firmware/ipw2200-firmware-2.4.ebuild,v 1.2 2005/11/17 13:36:14 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200-firmware/ipw2200-firmware-2.4.ebuild,v 1.3 2006/12/07 11:06:56 uberlord Exp $
+
+inherit bsdmk
 
 MY_P=${P/firmware/fw}
 S=${WORKDIR}
 
 DESCRIPTION="Firmware for the Intel PRO/Wireless 2200BG/2915ABG miniPCI and 2225BG PCI adapters"
 
-HOMEPAGE="http://ipw2200.sourceforge.net"
+HOMEPAGE="http://ipw2200.sourceforge.net/"
 SRC_URI="http://www.bughost.org/firmware/${MY_P}.tgz"
 
 LICENSE="ipw2200-fw"
-SLOT="${PV}"
-KEYWORDS="~amd64 x86"
+SLOT="0"
+KEYWORDS="~amd64 x86 ~x86-fbsd"
 
-IUSE=""
-DEPEND=">=sys-apps/hotplug-20040923"
+IUSE="kernel_linux kernel_FreeBSD"
+DEPEND="kernel_linux? ( >=sys-apps/hotplug-20040923 )
+	kernel_FreeBSD? ( >=sys-freebsd/freebsd-sources-6.2_rc1 )"
+
+src_unpack() {
+	unpack ${A}
+
+	if use kernel_FreeBSD ; then
+		# We create a Makefile for each firmware file
+		# and get FreeBSD to make each kernel module
+		local fw fwname kmod d mfile
+		for fw in "boot:boot" "bss:bss" "bss_ucode:ucode_bss" \
+			"ibss:ibss" "ibss_ucode:ucode_ibss" \
+			"sniffer:monitor" "sniffer_ucode:ucode_monitor"; do
+			fwname="ipw-${PV}-${fw%%:*}.fw"
+			kmod="iwi_${fw#*:}"
+			d="${S}/${kmod}"
+			mkdir "${d}" || die
+			echo "KMOD=${kmod}" > "${d}/Makefile" || die
+			echo "FIRMWS=${fwname}:${kmod}:${PV}" \
+				>> "${d}/Makefile" || die
+			echo ".include <bsd.kmod.mk>" >> "${d}/Makefile" || die
+			mv "${S}/${fwname}" "${d}" || die
+		done
+	fi
+}
+
+src_compile() {
+	if use kernel_FreeBSD ; then
+		local kmod
+		for kmod in boot bss ucode_bss ibss ucode_ibss \
+		monitor ucode_monitor; do
+			cd "${S}/iwi_${kmod}"; mkmake all || die
+		done
+	fi
+}
 
 src_install() {
-	insinto /lib/firmware
-	doins *.fw
+	dodoc LICENSE
 
-	newins LICENSE ipw-${PV}-LICENSE
+	if use kernel_linux ; then
+		insinto /lib/firmware
+		doins *.fw
+	fi
+
+	if use kernel_FreeBSD ; then
+		mkdir -p "${D}/boot/kernel"
+		local kmod
+		for kmod in boot bss ucode_bss ibss ucode_ibss monitor ucode_monitor; do
+			cd "${S}/iwi_${kmod}"; mkmake DESTDIR="${D}" install || die
+		done
+
+		# We never want to own this file
+		rm "${D}/boot/kernel/linker.hints"
+	fi
+}
+
+pkg_postinst() {
+	if use kernel_FreeBSD ; then
+		# Rebuild the linker.hints
+		kldxref "${ROOT}/boot/kernel"
+	fi
 }
