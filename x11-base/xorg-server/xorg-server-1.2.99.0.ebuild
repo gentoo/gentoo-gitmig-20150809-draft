@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.2.99.0.ebuild,v 1.9 2006/12/05 20:05:25 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.2.99.0.ebuild,v 1.10 2006/12/07 03:45:32 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -10,7 +10,7 @@ inherit x-modular multilib
 OPENGL_DIR="xorg-x11"
 
 MESA_PN="Mesa"
-MESA_PV="6.5.2_pre20061102"
+MESA_PV="6.5.2"
 MESA_P="${MESA_PN}-${MESA_PV}"
 MESA_SRC_P="${MESA_PN}Lib-${MESA_PV}"
 
@@ -127,7 +127,7 @@ RDEPEND="x11-libs/libXfont
 	x11-libs/libXrender
 	x11-libs/libXi
 	media-libs/freetype
-	>=media-libs/mesa-6.5.2_pre20061102
+	>=media-libs/mesa-6.5.2
 	media-fonts/font-adobe-75dpi
 	media-fonts/font-misc-misc
 	media-fonts/font-cursor-misc
