@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6420 2006/12/06 19:46:15 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6421 2006/12/07 01:12:07 nichoj Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ## 
+
+# Joshua Nichols <nichoj@gentoo.org> (05 Dec 2006)
+# Archive tool for XFCE 4.4
+xfce-extra/xarchiver
 
 # Patrick Kursawe <phosphan@gentoo.org> (06 Dec 2006)
 # Only partially working, see bug #153667
