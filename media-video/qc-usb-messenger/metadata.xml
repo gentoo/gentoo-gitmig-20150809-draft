@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>video</herd>
+
+<maintainer>
+  <email>sasuomin@uusikaupunki.fi</email>
+  <name>Samuli Suominen</name>
+  <description>Proxied maintainer</description>
+</maintainer>
+
+<maintainer>
+  <email>zzam@gentoo.org</email>
+  <name>Matthias Schwarzott</name>
+  <description>Proxying maintainer</description>
+</maintainer>
+</pkgmetadata>

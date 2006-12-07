@@ -1,0 +1,44 @@
+diff -ur qc-usb-messenger-1.5.orig/Makefile qc-usb-messenger-1.5/Makefile
+--- qc-usb-messenger-1.5.orig/Makefile	2006-10-15 00:23:07.000000000 +0300
++++ qc-usb-messenger-1.5/Makefile	2006-12-06 16:39:02.000000000 +0200
+@@ -44,11 +44,7 @@
+ #RELEASE := $(shell awk -F \" '/[ 	]*\#[ 	]*define[ 	]*UTS_RELEASE[ 	]*/ { print $$2 }' $(LINUX_DIR)/include/linux/version.h|tail -n 1)
+ # This seem to work better
+ #LINUX_DIR := /usr/src/linux
+-RELEASE := $(shell if test -r $(LINUX_DIR)/include/linux/version.h && fgrep -q UTS_RELEASE $(LINUX_DIR)/include/linux/version.h; then \
+-		((echo "\#include <linux/version.h>" ; echo "kernsrcver=UTS_RELEASE") | cpp -I $(LINUX_DIR)/include | grep "^kernsrcver=" | cut -d \" -f 2); \
+-	elif test -r $(LINUX_DIR)/include/linux/utsrelease.h && fgrep -q UTS_RELEASE $(LINUX_DIR)/include/linux/utsrelease.h; then \
+-		((echo "\#include <linux/utsrelease.h>"; echo "kernsrcver=UTS_RELEASE") | cpp -I $(LINUX_DIR)/include | grep "^kernsrcver=" | cut -d \" -f 2); \
+-	fi)
++RELEASE := $(shell awk -F \" '/[       ]*\#[   ]*define[       ]*UTS_RELEASE[  ]*/ { print $$2 }' $(OUTPUT_DIR)/include/linux/version.h|tail -n 1)
+ MODULE_DIR := /lib/modules/$(RELEASE)
+ endif
+ endif
+@@ -58,6 +54,10 @@
+ LINUX_DIR := $(MODULE_DIR)/build
+ endif
+ 
++ifndef OUTPUT_DIR
++OUTPUT_DIR := $(LINUX_DIR)
++endif
++
+ HAVE_UTSRELEASE_H := $(shell if test -r $(LINUX_DIR)/include/linux/version.h && fgrep -q UTS_RELEASE $(LINUX_DIR)/include/linux/version.h; then \
+ 		echo 0; \
+ 	elif test -r $(LINUX_DIR)/include/linux/utsrelease.h && fgrep -q UTS_RELEASE $(LINUX_DIR)/include/linux/utsrelease.h; then \
+@@ -108,6 +108,7 @@
+ 	@echo "Current configuration:"
+ 	@echo "Driver source directory (PWD):         $(PWD)"
+ 	@echo "Kernel source directory (LINUX_DIR):   $(LINUX_DIR)"
++	@echo "Kernel output directory (OUTPUT_DIR):  $(OUTPUT_DIR)"
+ 	@echo "Module install directory (MODULE_DIR): $(MODULE_DIR)"
+ 	@echo "Utility install directory (PREFIX):    $(PREFIX)"
+ 	@echo "User options (USER_OPT):               $(USER_OPT)"
+@@ -131,7 +132,7 @@
+ else
+ # No, 2.4.x or older
+ 
+-MODULE_INC    := -I$(LINUX_DIR)/include -nostdinc -iwithprefix include
++MODULE_INC    := -I$(LINUX_DIR)/include -I$(OUTPUT_DIR)/include -nostdinc -iwithprefix include
+ MODULE_DEF    := -DMODULE -D__KERNEL__ -DNOKERNEL
+ MODULE_OPT    := -O2 -fomit-frame-pointer -fno-strict-aliasing -fno-common
+ MODULE_WARN   := -Wall -Wstrict-prototypes -Wno-trigraphs
