@@ -1,17 +1,20 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_mysql/mod_auth_mysql-3.0.0-r1.ebuild,v 1.2 2006/11/23 16:14:15 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_mysql/mod_auth_mysql-3.0.0-r1.ebuild,v 1.3 2006/12/07 16:36:01 chtekk Exp $
 
-inherit eutils apache-module
+inherit apache-module
 
-DESCRIPTION="Basic authentication for Apache using a MySQL database"
+KEYWORDS="amd64 x86"
+
+DESCRIPTION="Basic authentication for Apache using a MySQL database."
 HOMEPAGE="http://modauthmysql.sourceforge.net/"
 SRC_URI="mirror://sourceforge/modauthmysql/${P}.tar.gz"
-
-DEPEND="virtual/mysql"
 LICENSE="Apache-1.1"
-KEYWORDS="~amd64 ~x86"
 SLOT="0"
+
+DEPEND="virtual/mysql
+		sys-libs/zlib"
+RDEPEND="${DEPEND}"
 
 BASE_CONFIG_PVR="2.8.1"
 
@@ -28,14 +31,13 @@ DOCFILES="README"
 need_apache
 
 pkg_postinst() {
-	if ! useq apache2; then
-		ewarn "With regard to bug #132391 the behaviour of mod_auth_mysql"
-		ewarn "has changed for apache-1.3.x"
-		ewarn
-		ewarn "You need to enable mod_auth_ldap in your .htaccess files"
-		ewarn "explicitely using:"
-		ewarn
-		ewarn "  AuthMySQLEnable On"
-		ewarn
+	if ! useq apache2 ; then
+		elog "With regard to bug #132391 the behaviour of ${PN}"
+		elog "has changed for Apache-1.3.XX."
+		elog
+		elog "You now need to enable ${PN} in your .htaccess"
+		elog "files explicitely using:"
+		elog
+		elog "  AuthMySQLEnable On"
 	fi
 }
