@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/gaia-0.1.2.ebuild,v 1.1 2006/12/06 11:47:39 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/gaia-0.1.2.ebuild,v 1.2 2006/12/07 12:17:41 opfer Exp $
 
 inherit eutils
 
@@ -69,14 +69,7 @@ src_install() {
 		doins ${S}/doc/html/*
 	fi
 
-	# local defines if there is installation requested, while prefix determines the
-	# target 
+	# prefix determines the target directory
 	export CCFLAGS=${CFLAGS}
-	scons local=no  prefix="${D}/usr" install
-}
-
-pkg_postinst() {
-	einfo
-	einfo "Please set color depth of X11 to 24 or 32 bpp"
-	einfo
+	scons prefix="${D}/usr" install
 }

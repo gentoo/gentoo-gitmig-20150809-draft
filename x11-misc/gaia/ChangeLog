@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/gaia
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/ChangeLog,v 1.13 2006/12/06 11:51:22 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/ChangeLog,v 1.14 2006/12/07 12:17:41 opfer Exp $
+
+  07 Dec 2006; Christian Faulhammer <opfer@gentoo.org> gaia-0.1.2.ebuild:
+  removed postinstallation message, as Gaia now works on non-24 or non-32 bit
+  color settings; also the local=no for installation isn't needed anymore
 
   06 Dec 2006; Christian Faulhammer <opfer@gentoo.org>
   -files/gaia-0.1.1-correct_doxygen_path.patch,
