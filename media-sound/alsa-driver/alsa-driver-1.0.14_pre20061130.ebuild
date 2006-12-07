@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.14_pre20061130.ebuild,v 1.4 2006/12/06 20:04:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.14_pre20061130.ebuild,v 1.5 2006/12/07 08:07:13 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -69,7 +69,7 @@ pkg_setup() {
 		sb16 sbawe sb16_csp sgalaxy sscape wavefront"
 	local ISA_ERROR="Some of the drivers you selected require ISA support in your kernel ($(echo $ISA_DRIVERS)). Either enable ISA in your kernel or trim which drivers get compiled using ALSA_CARDS in /etc/make.conf."
 
-	local FW_DRIVERS="emu10k1"
+	local FW_DRIVERS="emu10k1 asihpi"
 	local FW_LOADER_ERROR="Some of the drivers you selected require 'Userspace firmware loading support' in your kernel (${FW_DRIVERS}). Either enable that feature or trim which drivers get compiled using ALSA_CARDS in /etc/make.conf."
 
 	local TMP_ALSA_CARDS
