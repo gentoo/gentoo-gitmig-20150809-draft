@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-cli
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/ChangeLog,v 1.24 2006/10/05 15:19:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/ChangeLog,v 1.25 2006/12/07 22:34:34 flameeyes Exp $
+
+  07 Dec 2006; Diego Pettenò <flameeyes@gentoo.org>
+  commons-cli-1.0-r5.ebuild:
+  Add ~x86-fbsd keyword.
 
   05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   commons-cli-1.0-r4.ebuild, commons-cli-1.0-r5.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.5-r2.ebuild,v 1.11 2006/11/26 21:45:04 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.5-r2.ebuild,v 1.12 2006/12/07 22:35:26 flameeyes Exp $
 
 inherit java-pkg-2 eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://apache/ant/source/apache-ant-${PV}-src.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc ppc64 x86"
+KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
 IUSE="javamail noantlr nobcel nobeanutils nobsh nobsf nocommonsnet nocommonslogging nojdepend nojsch nojython nolog4j nooro noregexp norhino noxalan noxerces"
 
 RDEPEND=">=virtual/jre-1.4
