@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ieee80211-1.1.13-r1.ebuild,v 1.3 2006/10/13 12:22:10 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ieee80211-1.1.13-r1.ebuild,v 1.4 2006/12/07 19:40:29 phreak Exp $
 
 inherit eutils linux-mod
 
@@ -73,9 +73,12 @@ src_unpack() {
 	local debug="n"
 
 	unpack ${A}
-
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-*.patch
+
+	epatch "${FILESDIR}/ieee80211-1.1.13-cflags.patch"
+	epatch "${FILESDIR}/ieee80211-1.1.13-tkip.patch"
+	# bug 157076 (ieee80211 doesn't compile against 2.6.19)
+	epatch "${FILESDIR}/ieee80211-1.1.13-linux-2.6.19.patch"
 
 	use debug && debug="y"
 	sed -i \
