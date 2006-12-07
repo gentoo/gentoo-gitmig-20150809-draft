@@ -1,0 +1,10 @@
+--- src/mesa/drivers/dri/i965/bufmgr_fake.c.orig	2006-11-29 00:41:37.000000000 +0200
++++ src/mesa/drivers/dri/i965/bufmgr_fake.c	2006-11-29 00:43:12.000000000 +0200
+@@ -1242,7 +1242,6 @@
+    LOCK(bm);
+    {
+       struct block *block, *tmp;
+-      assert(intel->locked);
+ 
+       foreach_s (block, tmp, &bm->referenced) {
+ 
