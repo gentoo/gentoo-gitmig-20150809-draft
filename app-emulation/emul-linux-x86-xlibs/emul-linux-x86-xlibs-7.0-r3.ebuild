@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-7.0-r3.ebuild,v 1.1 2006/11/23 03:44:29 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-7.0-r3.ebuild,v 1.2 2006/12/07 04:02:27 tester Exp $
 
 inherit multilib
 
@@ -22,7 +22,7 @@ SRC_URI="mirror://gentoo/emul-linux-x86-xlibs-${PVR}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64"
 
 IUSE_VIDEO_CARDS="
 	video_cards_i810
