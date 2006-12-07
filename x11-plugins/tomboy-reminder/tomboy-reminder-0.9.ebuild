@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/tomboy-reminder/tomboy-reminder-0.9.ebuild,v 1.1 2006/12/07 20:43:16 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/tomboy-reminder/tomboy-reminder-0.9.ebuild,v 1.2 2006/12/07 20:51:08 compnerd Exp $
 
 inherit mono eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/mono-1.0
-		   app-misc/tomboy"
+		 >=app-misc/tomboy-0.3.2"
 DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.19"
 
