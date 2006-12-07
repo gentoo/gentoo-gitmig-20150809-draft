@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.3_p2-r1.ebuild,v 1.18 2006/06/27 01:09:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.3_p2-r1.ebuild,v 1.19 2006/12/07 08:44:26 flameeyes Exp $
 
 inherit eutils flag-o-matic ccc pam
 
@@ -31,7 +31,7 @@ RDEPEND="pam? ( virtual/pam )
 	selinux? ( >=sys-libs/libselinux-1.28 )
 	skey? ( >=app-admin/skey-1.1.5-r1 )
 	ldap? ( net-nds/openldap )
-	libedit? ( || ( dev-libs/libedit sys-freebsd/freebsd-lib ) )
+	libedit? ( dev-libs/libedit )
 	>=dev-libs/openssl-0.9.6d
 	>=sys-libs/zlib-1.2.3
 	smartcard? ( dev-libs/opensc )
