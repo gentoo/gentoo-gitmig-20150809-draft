@@ -1,0 +1,15 @@
+Index: build.xml
+===================================================================
+--- build.xml	(revision 483551)
++++ build.xml	(working copy)
+@@ -150,8 +150,8 @@
+ 
+ 
+   <target name="compile-only" >
+-    <available property="ant16.available"  classname="org.apache.tools.ant.PropertyHelper" />
+-    <available property="digester.available"  classname="org.apache.commons.digester.Digester" />
++    <available property="ant16.available"  classname="org.apache.tools.ant.PropertyHelper" classpathref="compile.classpath" />
++    <available property="digester.available"  classname="org.apache.commons.digester.Digester" classpathref="compile.classpath" />
+ 
+     <javac  srcdir="${source.home}"
+            destdir="${build.home}/classes"
