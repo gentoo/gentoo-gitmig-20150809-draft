@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.12.ebuild,v 1.1 2006/08/01 09:09:34 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.12.ebuild,v 1.2 2006/12/07 17:18:12 compnerd Exp $
 
-inherit gnome2
+inherit toolchain-funcs gnome2
 
 DESCRIPTION="An API documentation browser for GNOME 2"
 HOMEPAGE="http://developer.imendio.com/wiki/Devhelp"
@@ -37,5 +37,10 @@ pkg_setup() {
 		G2CONF="${G2CONF} --with-gecko=firefox"
 	else
 		G2CONF="${G2CONF} --with-gecko=seamonkey"
+	fi
+
+	# ICC is crazy, silence warnings (bug #154010)
+	if [[ $(tc-getCC) == "icc" ]] ; then
+		G2CONF="${G2CONF} --with-compile-warnings=no"
 	fi
 }
