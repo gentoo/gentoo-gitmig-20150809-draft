@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2.1.ebuild,v 1.5 2006/12/06 21:22:11 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2.1.ebuild,v 1.6 2006/12/07 11:40:09 caster Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -8,9 +8,9 @@ MY_DMF="R-${PV}-200609210945"
 PATCHSET="${P}-gentoo-patches"
 DESCRIPTION="GTK based SWT Library"
 HOMEPAGE="http://www.eclipse.org/"
-SRC_URI="x86? ( http://download.eclipse.org/downloads/drops/${MY_DMF}/swt-${PV}-gtk-linux-x86.zip )
-		amd64? ( http://download.eclipse.org/downloads/drops/${MY_DMF}/swt-${PV}-gtk-linux-x86_64.zip )
-		ppc? ( http://download.eclipse.org/downloads/drops/${MY_DMF}/swt-${PV}-gtk-linux-ppc.zip )
+SRC_URI="x86? ( http://download.eclipse.org/downloads/drops/${MY_DMF}/${P}-gtk-linux-x86.zip )
+		amd64? ( http://download.eclipse.org/downloads/drops/${MY_DMF}/${P}-gtk-linux-x86_64.zip )
+		ppc? ( http://download.eclipse.org/downloads/drops/${MY_DMF}/${P}-gtk-linux-ppc.zip )
 		mirror://gentoo/${PATCHSET}.tar.bz2"
 
 SLOT="3"
@@ -51,10 +51,14 @@ RDEPEND=">=virtual/jre-1.4
 S="${WORKDIR}"
 
 src_unpack() {
-	unzip -jq "${DISTDIR}/${A}" "*src.zip" || die "unable to extract distfile"
-	unpack "${PATCHSET}.tar.bz2"
-
+	# determine the right file to unpack from $A
+	local DISTFILE=${A/${PATCHSET}.tar.bz2/}
+	# just in case patchset is ordered before distfile
+	DISTFILE=${DISTFILE## }
+	unzip -jq "${DISTDIR}"/${DISTFILE} "*src.zip" || die "unable to extract distfile"
 	unpack ./src.zip
+
+	unpack "${PATCHSET}.tar.bz2"
 
 	# Cleanup the redirtied directory structure
 	rm -rf about_files/
