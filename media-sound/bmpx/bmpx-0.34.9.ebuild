@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.34.9.ebuild,v 1.2 2006/12/06 18:15:05 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.34.9.ebuild,v 1.3 2006/12/07 16:49:54 chutzpah Exp $
 
 inherit fdo-mime eutils versionator
 
@@ -13,7 +13,7 @@ SRC_URI="http://files.beep-media-player.org/releases/${MY_PR}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="aac alsa cdparanoia dbus debug flac ffmpeg hal mad modplug musepack nls ofa ogg
+IUSE="aac alsa cdparanoia debug flac ffmpeg hal mad modplug musepack nls ofa ogg
 	oss p2p python sid theora vorbis"
 
 RDEPEND=">=dev-libs/glib-2.10
@@ -36,8 +36,8 @@ RDEPEND=">=dev-libs/glib-2.10
 	>=media-libs/musicbrainz-2.1.1
 	>=media-libs/gstreamer-0.10.10
 	virtual/fam
-	dbus? ( || ( ( >=dev-libs/dbus-glib-0.72 )
-		( <sys-apps/dbus-1 >=sys-apps/dbus-0.62 ) ) )
+	|| ( ( >=dev-libs/dbus-glib-0.72 )
+		( <sys-apps/dbus-1 >=sys-apps/dbus-0.62 ) )
 	>=dev-libs/libxml2-2.6.1
 	>=net-misc/neon-0.25.5
 	media-sound/cdparanoia
