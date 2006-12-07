@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-0.8.ebuild,v 1.2 2006/10/24 13:49:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-0.8.ebuild,v 1.3 2006/12/07 04:24:49 compnerd Exp $
 
 inherit gnome2 eutils autotools
 
@@ -14,7 +14,6 @@ IUSE="bluetooth eds gaim gajim sylpheed thunderbird"
 
 RDEPEND=">=x11-libs/gtk+-2.4
 		 >=dev-libs/glib-2.4
-		 >=sys-apps/dbus-0.60
 		 >=gnome-base/libglade-2.5.1
 		 >=gnome-base/libbonobo-2.13.0
 		 >=gnome-base/libbonoboui-2.13.0
@@ -22,6 +21,10 @@ RDEPEND=">=x11-libs/gtk+-2.4
 		 >=gnome-base/libgnomeui-2.13.0
 		 >=gnome-base/nautilus-2.13.3
 		 >=gnome-base/gconf-2.13.0
+		 ||	(
+				>=dev-libs/dbus-glib-0.71
+				( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.60 )
+			)
 		 bluetooth? ( >=net-wireless/gnome-bluetooth-0.6 )
 		 eds? ( >=gnome-extra/evolution-data-server-1.5.3 )
 		 gaim? ( net-im/gaim )
