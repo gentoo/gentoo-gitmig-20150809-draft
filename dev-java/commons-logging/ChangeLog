@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-logging
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.44 2006/10/26 11:17:39 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.45 2006/12/07 22:49:43 flameeyes Exp $
+
+  07 Dec 2006; Diego Pettenò <flameeyes@gentoo.org>
+  commons-logging-1.1-r2.ebuild:
+  Add ~x86-fbsd keyword.
 
   26 Oct 2006; Vlastimil Babka <caster@gentoo.org>
   commons-logging-1.1-r2.ebuild:
