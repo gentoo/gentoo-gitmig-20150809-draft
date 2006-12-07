@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/files/rpcbind.initd,v 1.2 2006/10/03 14:43:39 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/files/rpcbind.initd,v 1.3 2006/12/07 18:00:15 uberlord Exp $
 
 depend() {
 	need localmount
@@ -12,7 +12,7 @@ depend() {
 
 start() {
 	ebegin "Starting rpcbind"
-	rpcbind
+	start-stop-daemon --start --exec /usr/sbin/rpcbind
 	local ret=$?
 	eend ${ret}
 	
@@ -25,6 +25,6 @@ start() {
 
 stop() {
 	ebegin "Stopping rpcbind"
-	killall rpcbind
+	start-stop-daemon --stop --exec /usr/sbin/rpcbind
 	eend $?
 }
