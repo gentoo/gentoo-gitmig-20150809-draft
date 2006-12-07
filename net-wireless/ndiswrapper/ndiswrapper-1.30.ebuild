@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.30.ebuild,v 1.1 2006/11/29 17:47:50 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.30.ebuild,v 1.2 2006/12/07 18:45:41 betelgeuse Exp $
 
 inherit eutils linux-mod
 
@@ -61,8 +61,9 @@ src_compile() {
 	# KBUILD trick needed to build against sources where only make
 	# modules_prepare has been run so /lib/modules/$(uname -r) does
 	# not exists yet
-
-	BUILD_PARAMS="KBUILD='${KERNEL_DIR}' ${BUILD_PARAMS} ${params} -j1" linux-mod_src_compile
+	# KBUILD value can't be quoted or amd64 fails
+	# http://bugs.gentoo.org/show_bug.cgi?id=156319
+	BUILD_PARAMS="KBUILD=${KERNEL_DIR} ${BUILD_PARAMS} ${params} -j1" linux-mod_src_compile
 }
 
 src_install() {
