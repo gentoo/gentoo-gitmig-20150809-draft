@@ -6,6 +6,11 @@
   <email>pfeifer@gentoo.org</email>
   <name>Jay Pfeifer</name>
 </maintainer>
+<maintainer>
+  <email>mrness@gentoo.org</email>
+  <name>Alin Năstac</name>
+  <description>Backup maintainer</description>
+</maintainer>
 <longdescription>From the Openswan web site: Openswan is an Open Source 
 implementation of IPsec for the Linux operating system. Is it a code fork 
 of the FreeS/WAN project, started by a few of the developers who were 
