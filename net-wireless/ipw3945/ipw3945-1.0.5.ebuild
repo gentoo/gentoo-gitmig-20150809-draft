@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ipw3945-1.0.5.ebuild,v 1.2 2006/06/05 13:07:55 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ipw3945-1.0.5.ebuild,v 1.3 2006/12/07 21:04:16 phreak Exp $
 
-inherit linux-mod
+inherit linux-mod eutils
 
 IEEE80211_VERSION="1.1.13-r1"
 UCODE_VERSION="1.13"
@@ -57,6 +57,10 @@ src_unpack() {
 	local debug="n"
 
 	unpack ${A}
+	cd "${S}"
+
+	# bug 157076 (ipw3945 doesn't compile against 2.6.19)
+	epatch "${FILESDIR}/ipw3945-1.0.5-linux-2.6.19.patch"
 
 	sed -i \
 		-e "s:^#\(CONFIG_IPW3945_QOS\)=.*:\1=y:" \

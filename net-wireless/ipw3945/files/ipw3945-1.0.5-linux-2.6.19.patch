@@ -1,0 +1,14 @@
+Index: ipw3945-1.0.5/ipw3945.h
+===================================================================
+--- ipw3945-1.0.5.orig/ipw3945.h
++++ ipw3945-1.0.5/ipw3945.h
+@@ -29,7 +29,9 @@
+ 
+ #include <linux/module.h>
+ #include <linux/moduleparam.h>
++#ifndef AUTOCONF_INCLUDED
+ #include <linux/config.h>
++#endif
+ #include <linux/init.h>
+ 
+ #include <linux/version.h>
