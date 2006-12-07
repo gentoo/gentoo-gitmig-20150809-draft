@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6421 2006/12/07 01:12:07 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6422 2006/12/07 03:48:33 joshuabaergen Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -464,7 +464,6 @@ media-sound/snd-aoa
 # X input hotplug and related packages
 # Some of these may already be covered by other masks - please leave them
 # anyway
->=media-libs/mesa-6.5.2_pre0
 >=x11-base/xorg-server-1.2.99
 >=x11-drivers/xf86-input-keyboard-1.2
 
