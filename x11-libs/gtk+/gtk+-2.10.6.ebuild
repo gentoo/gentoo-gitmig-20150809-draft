@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.10.6.ebuild,v 1.10 2006/12/07 03:43:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.10.6.ebuild,v 1.11 2006/12/07 12:59:49 leio Exp $
 
 inherit gnome.org flag-o-matic eutils debug autotools virtualx
 
@@ -150,6 +150,6 @@ pkg_postinst() {
 	if [ -e /usr/lib/gtk-2.0/2.[^1]* ]; then
 		elog "You need to rebuild ebuilds that installed into" /usr/lib/gtk-2.0/2.[^1]*
 		elog "to do that you can use qfile from portage-utils:"
-		elog "emerge -va1 \$(qfile -qC" /usr/lib/gtk-2.0/2.[^1]* ")"
+		elog "emerge -va1 \$(qfile -qC /usr/lib/gtk-2.0/2.[^1]*)"
 	fi
 }

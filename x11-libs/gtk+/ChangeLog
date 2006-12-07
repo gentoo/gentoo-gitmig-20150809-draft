@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.289 2006/12/07 03:43:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.290 2006/12/07 12:59:49 leio Exp $
+
+  07 Dec 2006; Mart Raudsepp <leio@gentoo.org> gtk+-2.10.6.ebuild:
+  Fix the broken syntax in elog for the module rebuild suggestion, bug #157419
 
   07 Dec 2006; Doug Goldstein <cardoe@gentoo.org> gtk+-2.10.6.ebuild:
   Removed pdf USE flag check since cairo no longer has the pdf USE flag
