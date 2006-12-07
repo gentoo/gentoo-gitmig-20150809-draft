@@ -1,11 +1,12 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.67 2006/12/07 09:12:39 tchiwam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.68 2006/12/07 16:51:13 tchiwam Exp $
 
 
 *mediawiki-1.8.2 (05 Dec 2006)
   05 Dec 2006; Philippe Trottier <tchiwam@gentoo.org> mediawiki-1.8.2.ebuild:
   version update, support for postgres, bug#156334, bug#152089, bug#147668
+  big thank you to dev-zero to test this.
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> mediawiki-1.4.15.ebuild,
   mediawiki-1.5.8.ebuild, mediawiki-1.6.8.ebuild, mediawiki-1.7.1.ebuild:
