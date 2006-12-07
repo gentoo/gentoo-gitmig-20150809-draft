@@ -1,0 +1,87 @@
+Index: coriander-2.0.0-rc1/configure.in
+===================================================================
+--- coriander-2.0.0-rc1.orig/configure.in
++++ coriander-2.0.0-rc1/configure.in
+@@ -315,34 +315,43 @@ AC_DEFUN([AC_CHECK_LFS],[
+ ])
+ 
+ AC_DEFUN([AC_CHECK_FFMPEG],[
++	PKG_CHECK_MODULES(FFMPEG, libavformat libavcodec,
++		have_ffmpeg=yes, have_ffmpeg=no)
+ 	AC_SUBST(FFMPEG_CFLAGS)
+ 	AC_SUBST(FFMPEG_LIBS)
+-	AC_CHECK_PROG(have_ffmpeg_config, ffmpeg-config, "found", "no")
+-	if test x$have_ffmpeg_config = xfound; then 
+-	     AC_MSG_CHECKING(ffmpeg version)    
+-	     AC_TRY_COMPILE([
+-	     #include <ffmpeg/avformat.h>
+-	     ],[
+-	     int main(void) {
+-               AVFormatContext *oc;
+-	       AVCodecContext *c;
+-               AVStream *st;
+-               st = av_new_stream(oc, 0);
+-  	       c = st->codec;
+-               return 0;
+-	     }
+-	     ],ffmpeg=ok,ffmpeg=outdated);
+-	     AC_MSG_RESULT($ffmpeg)
+- 	     if test x$ffmpeg = xok; then
+-	          FFMPEG_LIBS=`ffmpeg-config --libs avformat avcodec`
+-	          FFMPEG_CFLAGS=`ffmpeg-config --cflags`
+-	          AC_DEFINE(HAVE_FFMPEG,1,[defined if ffmpeg is available])
+-	     else
+-                  AC_ERROR([ffmpeg is too old. 
++
++	# Older ffmpeg releases have ffmpeg-config rather than installing .pc files
++	if test x$have_ffmpeg = xno; then
++		AC_CHECK_PROG(have_ffmpeg, ffmpeg-config, "yes", "no")
++		if test x$have_ffmpeg = xyes; then
++			FFMPEG_LIBS=`ffmpeg-config --libs avformat avcodec`
++			FFMPEG_CFLAGS=`ffmpeg-config --cflags`
++		fi
++	fi
++
++	if test x$have_ffmpeg = xyes; then
++		AC_MSG_CHECKING(ffmpeg version)
++		AC_TRY_COMPILE([#include <ffmpeg/avformat.h>],[
++			int main(void) {
++			AVFormatContext *oc;
++			AVCodecContext *c;
++			AVStream *st;
++			st = av_new_stream(oc, 0);
++			c = st->codec;
++			return 0;
++			}
++			],ffmpeg=ok,ffmpeg=outdated);
++		AC_MSG_RESULT($ffmpeg)
++		if test x$ffmpeg = xok; then
++			AC_DEFINE(HAVE_FFMPEG,1,[defined if ffmpeg is available])
++		else
++			if test "x$want_ffmpeg" = "xyes"; then
++				AC_ERROR([ffmpeg is too old.
+ **************************************************************************
+ **   Please install ffmpeg version 0.4.9 minimum                        **
+ **************************************************************************])
+-             fi
++			fi
++		fi
+ 	else
+ 	  AC_MSG_RESULT([ffmpeg required for MPEG video saving.
+ **************************************************************************
+@@ -371,7 +380,14 @@ AC_CHECK_LIBRAW
+ AC_CHECK_LIBDC
+ AC_CHECK_FTPLIB
+ AC_CHECK_SDLLIB
+-AC_CHECK_FFMPEG
++
++AC_ARG_ENABLE(ffmpeg,
++	AS_HELP_STRING(--enable-ffmpeg, [enable MPEG video saving (default auto)]),
++	want_ffmpeg=$enableval, want_ffmpeg=auto)
++
++if test "x$want_ffmpeg" != "xno"; then
++	AC_CHECK_FFMPEG
++fi
+ 
+ dnl deprecated:
+ dnl AC_CHECK_GDK_PIXBUF
