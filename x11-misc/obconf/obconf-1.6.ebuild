@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-1.6.ebuild,v 1.9 2006/11/27 14:07:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-1.6.ebuild,v 1.10 2006/12/07 02:07:50 flameeyes Exp $
 
 DESCRIPTION="ObConf is a tool for configuring the Openbox window manager."
 HOMEPAGE="http://tr.openmonkey.com/pages/obconf"
@@ -8,7 +8,7 @@ SRC_URI="http://tr.openmonkey.com/files/obconf/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc sparc x86"
+KEYWORDS="~alpha amd64 ppc sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=gnome-base/libglade-2

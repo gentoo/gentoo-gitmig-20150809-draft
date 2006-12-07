@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpager/fbpager-0.1.4.ebuild,v 1.10 2006/11/16 06:22:57 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpager/fbpager-0.1.4.ebuild,v 1.11 2006/12/07 02:13:14 flameeyes Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://fluxbox.org/download/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~mips ~amd64 ppc"
+KEYWORDS="~amd64 ~mips ppc ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="x11-libs/libXrender
