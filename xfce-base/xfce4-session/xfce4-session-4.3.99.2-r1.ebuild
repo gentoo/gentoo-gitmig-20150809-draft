@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.3.99.2-r1.ebuild,v 1.2 2006/12/07 03:22:49 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.3.99.2-r1.ebuild,v 1.3 2006/12/07 03:30:43 beu Exp $
 
 inherit xfce44
 
@@ -19,5 +19,5 @@ RDEPEND="|| ( ( x11-libs/libX11
 DEPEND="${RDEPEND}
 		|| ( x11-libs/libXt virtual/x11 )"
 
-XFCE_CONFIG="$(use_with hal shutdown-style hal)"
+XFCE_CONFIG="${XFCE_CONFIG} $(use_with hal shutdown-style hal)"
 xfce44_core_package
