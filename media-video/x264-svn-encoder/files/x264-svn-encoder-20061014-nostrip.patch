@@ -1,0 +1,14 @@
+--- x264-svn.orig/configure	2006-10-14 23:20:20.000000000 +0200
++++ x264-svn/configure	2006-10-14 23:20:30.000000000 +0200
+@@ -313,11 +313,6 @@
+     ASFLAGS="$ASFLAGS -D__PIC__"
+ fi
+ 
+-if [ "$debug" != "yes" -a "$gprof" != "yes" ]; then
+-    CFLAGS="$CFLAGS -s -fomit-frame-pointer"
+-    LDFLAGS="$LDFLAGS -s"
+-fi
+-
+ if [ "$debug" = "yes" ]; then
+     CFLAGS="-O1 -g $CFLAGS"
+ else
