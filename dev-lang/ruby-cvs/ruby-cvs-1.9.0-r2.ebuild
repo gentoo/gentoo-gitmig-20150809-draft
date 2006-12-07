@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ruby-cvs-1.9.0-r2.ebuild,v 1.5 2005/07/10 21:21:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ruby-cvs-1.9.0-r2.ebuild,v 1.6 2006/12/07 19:42:11 pclouds Exp $
 
-IUSE="socks5 tcltk doc threads"
+IUSE="socks5 tk doc threads"
 
 inherit flag-o-matic cvs
 
@@ -20,7 +20,7 @@ DEPEND="virtual/libc
 	>=sys-libs/ncurses-5.2
 	dev-util/gperf
 	socks5? ( >=net-proxy/dante-1.1.13 )
-	tcltk?  ( dev-lang/tk )
+	tk?  ( dev-lang/tk )
 	sys-apps/findutils
 	>=dev-ruby/ruby-config-0.3.1"
 RDEPEND="${DEPEND}
