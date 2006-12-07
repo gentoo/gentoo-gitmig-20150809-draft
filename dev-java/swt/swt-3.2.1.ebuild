@@ -1,14 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2.1.ebuild,v 1.6 2006/12/07 11:40:09 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2.1.ebuild,v 1.7 2006/12/07 22:18:45 betelgeuse Exp $
 
-inherit eutils java-pkg-2 java-ant-2
+inherit eutils java-pkg-2 java-ant-2 toolchain-funcs
 
 MY_DMF="R-${PV}-200609210945"
 PATCHSET="${P}-gentoo-patches"
 DESCRIPTION="GTK based SWT Library"
 HOMEPAGE="http://www.eclipse.org/"
 SRC_URI="x86? ( http://download.eclipse.org/downloads/drops/${MY_DMF}/${P}-gtk-linux-x86.zip )
+		x86-fbsd? ( http://download.eclipse.org/downloads/drops/${MY_DMF}/${P}-gtk-linux-x86.zip )
 		amd64? ( http://download.eclipse.org/downloads/drops/${MY_DMF}/${P}-gtk-linux-x86_64.zip )
 		ppc? ( http://download.eclipse.org/downloads/drops/${MY_DMF}/${P}-gtk-linux-ppc.zip )
 		mirror://gentoo/${PATCHSET}.tar.bz2"
@@ -78,6 +79,11 @@ src_unpack() {
 	sed -i "s/MOZILLACFLAGS = -O/MOZILLACFLAGS = ${CXXFLAGS}/" \
 		make_linux.mak \
 		|| die "Failed to tweak make_linux.mak"
+
+	cp make_linux.mak make_freebsd.mak
+
+	#  https://bugs.eclipse.org/bugs/show_bug.cgi?id=167173
+	epatch "${FILESDIR}/${P}-fbsd.patch"
 }
 
 src_compile() {
@@ -92,9 +98,9 @@ src_compile() {
 	elif [[ ! -z "$(java-config --java-version | grep 'GNU libgcj')" ]] ; then
 		export AWT_LIB_PATH=$JAVA_HOME/$(get_libdir)
 	else
-		if [[ ${ARCH} == 'x86' ]] ; then
+		if [[ $(tc-arch) == 'x86' ]] ; then
 			export AWT_LIB_PATH=$JAVA_HOME/jre/lib/i386
-		elif [[ ${ARCH} == 'ppc' ]] ; then
+		elif [[ $(tc-arch) == 'ppc' ]] ; then
 			export AWT_LIB_PATH=$JAVA_HOME/jre/lib/ppc
 		else
 			export AWT_LIB_PATH=$JAVA_HOME/jre/lib/amd64
@@ -108,7 +114,11 @@ src_compile() {
 	# Fix the pointer size for AMD64
 	[[ ${ARCH} == 'amd64' ]] && export SWT_PTR_CFLAGS=-DSWT_PTR_SIZE_64
 
-	local make="emake -f make_linux.mak NO_STRIP=y"
+	local platform="linux"
+
+	use elibc_FreeBSD && platform="freebsd"
+
+	local make="emake -f make_${platform}.mak NO_STRIP=y"
 
 	einfo "Building AWT library"
 	${make} make_awt || die "Failed to build AWT support"

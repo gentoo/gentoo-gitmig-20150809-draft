@@ -1,0 +1,68 @@
+Index: work/build.sh
+===================================================================
+--- work.orig/build.sh
++++ work/build.sh
+@@ -31,6 +31,10 @@ case $OS in
+ 		SWT_OS=solaris
+ 		MAKEFILE=make_solaris.mak
+ 		;;
++	"FreeBSD")
++		SWT_OS=freebsd
++		MAKEFILE=make_freebsd.mak
++		;;
+ 	*)
+ 		SWT_OS=`uname -s | tr -s '[:upper:]' '[:lower:]'`
+ 		MAKEFILE=make_linux.mak
+Index: work/make_freebsd.mak
+===================================================================
+--- work.orig/make_freebsd.mak
++++ work/make_freebsd.mak
+@@ -78,7 +78,7 @@ MOZILLACFLAGS = -march=athlon64 -O2 -ftr
+ 	-fPIC \
+ 	-I. \
+ 	-I$(JAVA_HOME)/include \
+-	-I$(JAVA_HOME)/include/linux \
++	-I$(JAVA_HOME)/include/freebsd \
+ 	${SWT_PTR_CFLAGS}
+ MOZILLALIBS = -shared -Wl,--version-script=mozilla_exports -Bsymbolic
+ 	
+@@ -98,9 +98,9 @@ GLX_OBJECTS = swt.o glx.o glx_structs.o 
+ CFLAGS = -march=athlon64 -O2 -ftracer -pipe -ftree-vectorize -Wformat=2 -Wno-error -Wno-pointer-sign -g -ggdb -Wstrict-aliasing=2 -Wno-format-zero-length -Wall \
+ 		-DSWT_VERSION=$(SWT_VERSION) \
+ 		$(NATIVE_STATS) \
+-		-DLINUX -DGTK \
++		-DFREEBSD -DGTK \
+ 		-I$(JAVA_HOME)/include \
+-		-I$(JAVA_HOME)/include/linux \
++		-I$(JAVA_HOME)/include/freebsd \
+ 		-fPIC \
+ 		${SWT_PTR_CFLAGS}
+ LIBS = -shared -fPIC
+Index: work/src/org/eclipse/swt/internal/gtk/OS.java
+===================================================================
+--- work.orig/src/org/eclipse/swt/internal/gtk/OS.java
++++ work/src/org/eclipse/swt/internal/gtk/OS.java
+@@ -23,18 +23,20 @@ public class OS extends Platform {
+ 	}
+ 	
+ 	/** OS Constants */
+-	public static final boolean IsAIX, IsSunOS, IsLinux, IsHPUX;
++	public static final boolean IsAIX, IsSunOS, IsLinux, IsHPUX, IsFreeBSD;
+ 	static {
+ 		
+ 		/* Initialize the OS flags and locale constants */
++		/* make bootstrap compatible with `uname -s` for FreeBSD */
+ 		String osName = System.getProperty ("os.name");
+-		boolean isAIX = false, isSunOS = false, isLinux = false, isHPUX = false;
++		boolean isAIX = false, isSunOS = false, isLinux = false, isHPUX = false, isFreeBSD = false;
+ 		if (osName.equals ("Linux")) isLinux = true;
++		if (osName.equals ("FreeBSD")) isFreeBSD = true;
+ 		if (osName.equals ("AIX")) isAIX = true;
+ 		if (osName.equals ("Solaris")) isSunOS = true;
+ 		if (osName.equals ("SunOS")) isSunOS = true;
+ 		if (osName.equals ("HP-UX")) isHPUX = true;
+-		IsAIX = isAIX;  IsSunOS = isSunOS;  IsLinux = isLinux;  IsHPUX = isHPUX;
++		IsAIX = isAIX;  IsSunOS = isSunOS;  IsLinux = isLinux;  IsFreeBSD = isFreeBSD;  IsHPUX = isHPUX;
+ 	}
+ 
+ 	/** Constants */
