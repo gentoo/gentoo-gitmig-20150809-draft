@@ -6,5 +6,10 @@
   <email>pfeifer@gentoo.org</email>
   <name>Jay Pfeifer</name>
 </maintainer>
+<maintainer>
+  <email>pylon@gentoo.org</email>
+  <name>Lars weiler</name>
+  <description>Backup maintainer</description>
+</maintainer>
 <longdescription>strongSwan is an OpenSource IPsec implementation for the Linux operating system. It is based on the discontinued FreeS/WAN project and the X.509 patch which we developed over the last three years. In order to have a stable IPsec platform to base our future extensions of the X.509 capability on, we decided to lauch the strongSwan project.</longdescription>
 </pkgmetadata>
