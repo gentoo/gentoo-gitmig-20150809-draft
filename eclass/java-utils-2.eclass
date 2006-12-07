@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.31 2006/12/03 18:41:25 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.32 2006/12/07 02:14:46 caster Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -1844,9 +1844,10 @@ java-pkg_switch-vm() {
 				GENTOO_VM="$(depend-java-query --get-vm "${JAVA_PKG_NV_DEPEND:-${DEPEND}}")"
 			fi
 			if [[ -z "${GENTOO_VM}" || "${GENTOO_VM}" == "None" ]]; then
-				eerror "Unable to determine VM for building from dependencies."
+				eerror "Unable to determine VM for building from dependencies:"
 				echo "NV_DEPEND: ${JAVA_PKG_NV_DEPEND:-${DEPEND}}"
 				echo "VNEED: ${JAVA_PKG_VNEED}"
+				die "Failed to determine VM for building."
 			else
 				export GENTOO_VM
 			fi
