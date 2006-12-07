@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.1-r4.ebuild,v 1.1 2006/12/07 04:23:58 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.1-r4.ebuild,v 1.2 2006/12/07 04:26:12 joshuabaergen Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability
 
@@ -122,7 +122,7 @@ src_unpack() {
 
 	# Fix compile against newer libdrm bug #154827
 	epatch "${FILESDIR}"/${PV}-mach64-dri-private-dma-2.patch
-	
+
 	# Fix 965 driver bug #156569
 	epatch "${FILESDIR}"/${PV}-i965-bufmgr.patch
 
