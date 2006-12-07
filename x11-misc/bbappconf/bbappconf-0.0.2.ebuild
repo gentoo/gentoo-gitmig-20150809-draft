@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbappconf/bbappconf-0.0.2.ebuild,v 1.7 2005/01/19 15:34:25 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbappconf/bbappconf-0.0.2.ebuild,v 1.8 2006/12/07 02:20:52 flameeyes Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://bbtools.windsofstorm.net/sources/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ppc"
+KEYWORDS="ppc sparc x86 ~x86-fbsd"
 IUSE="debug"
 
 DEPEND="virtual/blackbox"
