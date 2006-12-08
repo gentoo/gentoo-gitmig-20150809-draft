@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asclock/asclock-2.0.12.ebuild,v 1.12 2006/01/02 10:53:52 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asclock/asclock-2.0.12.ebuild,v 1.13 2006/12/08 22:49:02 mr_bones_ Exp $
 
 IUSE=""
 DESCRIPTION="Clock applet for AfterStep"
@@ -10,7 +10,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc ppc mips"
 
-DEPEND="virtual/libc virtual/x11"
+DEPEND="x11-libs/libXpm"
+RDEPEND="${DEPEND}
+	x11-proto/xextproto
+	x11-proto/xproto"
 
 src_unpack() {
 	unpack ${P}.tar.gz
