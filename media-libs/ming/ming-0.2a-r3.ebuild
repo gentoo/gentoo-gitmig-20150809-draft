@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.2a-r3.ebuild,v 1.1 2006/06/11 12:19:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.2a-r3.ebuild,v 1.2 2006/12/08 23:34:28 drizzt Exp $
 
 inherit eutils toolchain-funcs flag-o-matic python
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.opaque.net/ming/${P}.tgz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="python"
 
 RDEPEND="python? ( virtual/python )
@@ -24,6 +24,7 @@ src_unpack() {
 	EPATCH_OPTS="-p0 -d${S}" epatch "${FILESDIR}"/${P}-gentoo.diff
 	sed -e 's,gcc -g -Wall,$(CC) $(CFLAGS),g' -i ${S}/py_ext/Makefile
 	EPATCH_OPTS="-p1 -d${S}" epatch "${FILESDIR}"/${P}-linking.patch
+	EPATCH_OPTS="-p1 -d${S}" epatch "${FILESDIR}"/${P}-make.patch
 }
 
 src_compile() {
