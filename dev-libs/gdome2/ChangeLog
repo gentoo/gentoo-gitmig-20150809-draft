@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/gdome2
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.26 2006/08/17 18:50:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.27 2006/12/08 18:46:52 masterdriverz Exp $
+
+*gdome2-0.8.1-r2 (08 Dec 2006)
+
+  08 Dec 2006; Charlie Shepherd <masterdriverz@gentoo.org>
+  +files/gdome2-0.8.1-gdome2-config.patch, -gdome2-0.8.1-r1.ebuild,
+  +gdome2-0.8.1-r2.ebuild:
+  Fix configure.in so that gdome2-conf --version works correctly, thanks to
+  Daniel Westermann-Clark; bug 114542
 
   17 Aug 2006; Jeroen Roovers <jer@gentoo.org> gdome2-0.8.1-r1.ebuild:
   Stable for HPPA (bug #144120).
