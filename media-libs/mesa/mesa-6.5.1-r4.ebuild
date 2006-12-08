@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.1-r4.ebuild,v 1.2 2006/12/07 04:26:12 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.1-r4.ebuild,v 1.3 2006/12/08 05:01:09 joshuabaergen Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability
 
@@ -44,7 +44,7 @@ RDEPEND="dev-libs/expat
 	x11-libs/libXxf86vm
 	x11-libs/libXi
 	x11-libs/libXmu
-	>=x11-libs/libdrm-2.0.2
+	>=x11-libs/libdrm-2.2
 	x11-libs/libICE
 	app-admin/eselect-opengl
 	motif? ( virtual/motif )
