@@ -1,8 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/gjdoc-0.7.7-r1.ebuild,v 1.4 2006/12/08 10:10:09 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/gjdoc-0.7.7-r1.ebuild,v 1.5 2006/12/08 14:53:41 caster Exp $
 
-inherit java-pkg-2
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
+
+inherit eutils autotools java-pkg-2
 
 DESCRIPTION="A javadoc compatible Java source documentation generator."
 HOMEPAGE="http://www.gnu.org/software/cp-tools/"
@@ -28,6 +31,14 @@ DEPEND=">=dev-java/antlr-2.7.1
 
 RDEPEND=">=virtual/jre-1.4
 		>=dev-java/antlr-2.7.1"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-gcp.patch"
+	AT_M4DIR="m4" eautoreconf
+}
 
 src_compile() {
 	# I think that configure will do --enable-native if it finds gcj
