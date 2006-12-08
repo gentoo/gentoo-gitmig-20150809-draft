@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mmix
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/ChangeLog,v 1.9 2006/04/20 17:06:38 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/ChangeLog,v 1.10 2006/12/08 20:47:44 masterdriverz Exp $
+
+  08 Dec 2006; Charlie Shepherd <masterdriverz@gentoo.org>
+  mmix-20060324.ebuild:
+  Fix tetex dependency, thanks to David Klempner for reporting; bug 136559
 
 *mmix-20060324 (20 Apr 2006)
 
