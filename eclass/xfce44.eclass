@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfce44.eclass,v 1.5 2006/12/07 01:21:36 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfce44.eclass,v 1.6 2006/12/08 21:44:48 nichoj Exp $
 
 # Xfce44 Eclass
 #
@@ -15,6 +15,7 @@ inherit debug
 
 COMPRESS=".tar.bz2"
 
+CONFIGURE="econf"
 INSTALL="make DESTDIR=${D} install"
 
 XFCE_BETA_VERSION="4.3.99.2"
@@ -110,7 +111,7 @@ xfce44_src_compile() {
 	## XFCE_CONFIG sets extra config parameters
 	## JOBS is unset and defaults to make.conf settings
 	## unless set by single_make
-	econf ${XFCE_CONFIG} || die
+	${CONFIGURE} ${XFCE_CONFIG} || die
 	emake ${JOBS} || die
 }
 
