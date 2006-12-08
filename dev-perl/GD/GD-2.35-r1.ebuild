@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.35-r1.ebuild,v 1.1 2006/12/08 14:28:20 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.35-r1.ebuild,v 1.2 2006/12/08 14:54:10 mcummings Exp $
 
 inherit eutils perl-module
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="animgif gif jpeg png truetype xpm"
 
-DEPEND=">=media-libs/gd-2.0.28
+DEPEND=">=media-libs/gd-2.0.33
 	png? ( media-libs/libpng sys-libs/zlib )
 	jpeg? ( media-libs/jpeg )
 	truetype? ( =media-libs/freetype-2* )
