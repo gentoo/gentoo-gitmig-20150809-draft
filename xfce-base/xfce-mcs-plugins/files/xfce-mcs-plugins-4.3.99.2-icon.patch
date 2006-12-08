@@ -1,0 +1,11 @@
+diff -ru xfce-mcs-plugins-4.3.99.2/icons/48x48/Makefile.am xfce-mcs-plugins-4.3.99.2-patched/icons/48x48/Makefile.am
+--- xfce-mcs-plugins-4.3.99.2/icons/48x48/Makefile.am	2006-11-05 08:49:30.000000000 -0500
++++ xfce-mcs-plugins-4.3.99.2-patched/icons/48x48/Makefile.am	2006-12-08 15:52:24.000000000 -0500
+@@ -2,7 +2,6 @@
+ 
+ iconsdir = $(datadir)/icons/hicolor/48x48/apps
+ icons_DATA =								\
+-	xfce-filemanager.png						\
+ 	xfce4-display.png						\
+ 	xfce4-keyboard.png						\
+ 	xfce4-mouse.png							\
