@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-2.2-r1.ebuild,v 1.3 2006/12/01 10:38:55 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-2.2-r1.ebuild,v 1.4 2006/12/08 23:04:00 araujo Exp $
 
 inherit elisp-common flag-o-matic eutils toolchain-funcs
 
@@ -39,8 +39,8 @@ src_compile() {
 		`use_with emacs emacs` \
 		`use_with readline readline` \
 		`use_with gmp gmp` \
-		`use_with tk tcl=/usr/lib` \
-		`use_with tk tk=/usr/lib` \
+		`use_with tk tcl /usr/lib` \
+		`use_with tk tk /usr/lib` \
 		`use_enable gtk gtk` \
 		|| die
 	emake || die "emake failed"
