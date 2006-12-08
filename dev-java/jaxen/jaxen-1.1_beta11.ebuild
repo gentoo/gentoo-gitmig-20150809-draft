@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.1_beta11.ebuild,v 1.6 2006/12/08 11:38:56 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.1_beta11.ebuild,v 1.7 2006/12/08 19:10:46 caster Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -66,11 +66,5 @@ src_install() {
 }
 
 src_test() {
-	if ! use test; then
-		ewarn "You must be using the 'test' USE flag in order to"
-		ewarn "get the dependencies to run tests."
-		ewarn "Skipping tests..."
-	else
-		eant test -Dnoget=true
-	fi
+	eant test -Dnoget=true
 }
