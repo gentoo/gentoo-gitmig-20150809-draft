@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/krename-3.0.12.ebuild,v 1.2 2006/12/08 13:01:04 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/krename-3.0.13.ebuild,v 1.1 2006/12/08 13:01:04 deathwing00 Exp $
 
 inherit kde
 
@@ -17,7 +17,20 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc"
 
-need-kde 3.5
+LANGS="bs de es fr hu it ja nl pl pt_BR ru sl sv tr zh_CN zh_TW"
+
+for X in ${LANGS} ; do
+	IUSE="${IUSE} linguas_${X}"
+done
+
+src_unpack() {
+	kde_src_unpack
+	cd "${WORKDIR}/${P}/po"
+	for X in ${LANGS} ; do
+		use linguas_${X} || rm -f "${X}."*
+	done
+	rm -f "${S}/configure"
+}
 
 src_install() {
 	kde_src_install
@@ -27,3 +40,6 @@ src_install() {
 		doins ${DISTDIR}/${DOC}
 	fi
 }
+
+need-kde 3.5
+
