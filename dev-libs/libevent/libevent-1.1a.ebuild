@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-1.1a.ebuild,v 1.13 2006/10/30 17:30:59 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-1.1a.ebuild,v 1.14 2006/12/08 23:25:39 masterdriverz Exp $
 
 inherit libtool
 
@@ -12,6 +12,9 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE=""
+
+DEPEND=""
+RDEPEND="!dev-libs/9libs"
 
 pkg_setup() {
 	prevver=$(best_version ${CATEGORY}/${PN})
