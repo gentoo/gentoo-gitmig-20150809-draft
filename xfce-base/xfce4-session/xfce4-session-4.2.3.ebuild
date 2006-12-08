@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.2.3.ebuild,v 1.12 2006/12/02 09:40:07 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.2.3.ebuild,v 1.13 2006/12/08 22:07:25 nichoj Exp $
 
 inherit xfce42
 
@@ -9,7 +9,8 @@ KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86 ~x86-fbsd"
 
 RDEPEND="|| ( ( x11-libs/libX11
 	x11-libs/libICE
-	x11-libs/libSM )
+	x11-libs/libSM 
+	x11-apps/iceauth )
 	virtual/x11 )
 	~xfce-base/xfce-utils-${PV}"
 DEPEND="${RDEPEND}
