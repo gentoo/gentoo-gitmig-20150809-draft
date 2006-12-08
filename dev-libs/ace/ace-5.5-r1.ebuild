@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.5-r1.ebuild,v 1.2 2006/11/06 20:47:30 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.5-r1.ebuild,v 1.3 2006/12/08 10:04:23 opfer Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.cs.wustl.edu/~schmidt/ACE.html"
 
 SLOT="0"
 LICENSE="BSD as-is"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc x86"
 IUSE="X ipv6 tao"
 
 DEPEND="dev-libs/openssl"

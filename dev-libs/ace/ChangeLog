@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ace
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.40 2006/11/09 20:39:21 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.41 2006/12/08 10:04:23 opfer Exp $
+
+  08 Dec 2006; Christian Faulhammer <opfer@gentoo.org> ace-5.5-r1.ebuild:
+  stable x86, bug #148898
 
 *ace-5.5.3-r1 (10 Nov 2006)
 
