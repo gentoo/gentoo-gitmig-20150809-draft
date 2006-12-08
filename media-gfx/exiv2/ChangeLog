@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/exiv2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.13 2006/11/27 16:01:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.14 2006/12/08 19:24:27 sbriesen Exp $
+
+*exiv2-0.12 (08 Dec 2006)
+
+  08 Dec 2006; Stefan Briesenick <sbriesen@gentoo.org> +exiv2-0.12.ebuild:
+  version bump, solving #157515.
 
   27 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> exiv2-0.11.ebuild:
   Add ~x86-fbsd keyword.
