@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/5.5.17/tomcat.init,v 1.6 2006/09/26 19:48:17 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/6/tomcat.init,v 1.1 2006/12/08 07:00:55 wltjr Exp $
 
 init_env_vars() {
 	# Set some sane defaults
@@ -19,15 +19,13 @@ init_env_vars() {
 	fi
 
 	# Populate the classpath
-	CLASSPATH="${CLASSPATH}:${CATALINA_HOME}/server/lib:${JAVA_HOME}/lib/tools.jar"
+	CLASSPATH="${CLASSPATH}:${CATALINA_HOME}/lib:${JAVA_HOME}/lib/tools.jar"
 	if [[ -n "${JSSE_HOME}" ]]; then
 		CLASSPATH="${CLASSPATH}:${JSSE_HOME}/lib/jcert.jar:${JSSE_HOME}/lib/jnet.jar:${JSSE_HOME}/lib/jsse.jar"
 	fi
-	CLASSPATH="${CLASSPATH}:${CATALINA_HOME}/bin/bootstrap.jar:${CATALINA_HOME}/bin/commons-logging-api.jar"
+	CLASSPATH="${CLASSPATH}:${CATALINA_HOME}/bin/bootstrap.jar:${CATALINA_HOME}/bin/tomcat-juli.jar"
 
-	OPTS_CP="${JAVA_OPTS} ${CATALINA_OPTS} \
-			 -Djava.endorsed.dirs=${CATALINA_HOME}/common/endorsed \
-			 -classpath ${CLASSPATH}"
+	OPTS_CP="${JAVA_OPTS} ${CATALINA_OPTS} -classpath ${CLASSPATH}"
 
 	CATALINA_ARGS="-Dcatalina.base=${CATALINA_BASE} \
 				   -Dcatalina.home=${CATALINA_HOME} \
@@ -38,7 +36,7 @@ init_env_vars() {
 start-helper() {
 	local executor=${1}
 	shift
-	local arguments="--start --quiet --background --chuid tomcat:tomcat \
+	local arguments="--start --quiet --background --chuid ${CATALINA_USER}:${CATALINA_GROUP} \
 		--make-pidfile --pidfile /var/run/tomcat.pid"
 	start-stop-daemon ${arguments} --exec ${executor} -- ${OPTS_CP} "$@" ${CATALINA_ARGS} ${TOMCAT_START}
 	return $?
