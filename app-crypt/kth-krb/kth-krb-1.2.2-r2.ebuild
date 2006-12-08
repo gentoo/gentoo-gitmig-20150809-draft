@@ -1,8 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/kth-krb-1.2.2-r2.ebuild,v 1.12 2006/08/12 23:58:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/kth-krb-1.2.2-r2.ebuild,v 1.13 2006/12/08 16:01:00 seemant Exp $
 
-inherit eutils
+WANT_AUTOMAKE=1.6
+inherit eutils autotools
 
 DESCRIPTION="Kerberos 4 implementation from KTH"
 HOMEPAGE="http://www.pdc.kth.se/kth-krb/"
