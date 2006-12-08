@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.2.1.ebuild,v 1.1 2006/12/07 02:18:27 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.2.1.ebuild,v 1.2 2006/12/08 07:12:16 compnerd Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -54,6 +54,7 @@ src_unpack() {
 	# Remove dummy ltconfig and let libtool handle it
 	rm -f ${S}/libgc/ltconfig
 
+	einfo "Regenerating the build files, this will take some time..."
 	eautoreconf
 }
 
