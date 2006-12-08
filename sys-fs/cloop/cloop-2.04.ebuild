@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/cloop-2.04.ebuild,v 1.3 2006/12/07 19:41:51 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/cloop-2.04.ebuild,v 1.4 2006/12/08 07:06:04 zmedico Exp $
 
 inherit linux-mod eutils
 
