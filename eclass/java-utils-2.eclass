@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.33 2006/12/07 02:27:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.34 2006/12/08 12:12:04 betelgeuse Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -263,7 +263,6 @@ java-pkg_regjar() {
 
 	java-pkg_do_write_
 }
-
 
 # ------------------------------------------------------------------------------
 # @ebuild-function java-pkg_newjar
@@ -1294,7 +1293,9 @@ java-pkg_ensure-gcj() {
 }
 
 java-pkg_ensure-test() {
-	if hasq test ${FEATURES} && ! hasq -test ${FEATURES} && ! use test; then
+	if hasq test ${FEATURES} && ! hasq -test ${FEATURES} \
+		&& hasq test ${IUSE} && ! use test;
+	then
 		eerror "You specified FEATURES=test, but USE=test is needed"
 		eerror "to pull in the additional dependencies for testing"
 		die "Need USE=test enabled"
