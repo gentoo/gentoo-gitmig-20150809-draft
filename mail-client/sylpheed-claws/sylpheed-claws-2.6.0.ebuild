@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-2.6.0.ebuild,v 1.2 2006/11/12 13:25:25 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-2.6.0.ebuild,v 1.3 2006/12/08 11:22:38 genone Exp $
 
 IUSE="gnome dillo crypt spell ssl ldap ipv6 pda clamav xface kde imap spamassassin doc startup-notification bogofilter"
 
@@ -43,7 +43,8 @@ DEPEND="${COMMONDEPEND}
 
 RDEPEND="${COMMONDEPEND}
 	app-misc/mime-types
-	x11-misc/shared-mime-info"
+	x11-misc/shared-mime-info
+	!mail-client/claws-mail"
 
 PROVIDE="virtual/sylpheed"
 

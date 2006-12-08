@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-1.0.5-r1.ebuild,v 1.8 2006/01/22 17:29:36 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-1.0.5-r1.ebuild,v 1.9 2006/12/08 11:22:38 genone Exp $
 
 IUSE="nls gnome dillo crypt spell imlib ssl ldap ipv6 pda clamav pdf maildir xface kde" # mbox
 
@@ -41,7 +41,8 @@ DEPEND="${COMMONDEPEND}
 RDEPEND="${COMMONDEPEND}
 	app-misc/mime-types
 	net-mail/metamail
-	x11-misc/shared-mime-info"
+	x11-misc/shared-mime-info
+	!mail-client/claws-mail"
 
 PDEPEND="pdf? ( =mail-client/${PN}-${GS_VERSION} )
 		 maildir? ( =mail-client/${PN}-${MAILDIR_VERSION} )
