@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.4.ebuild,v 1.1 2006/12/08 07:00:27 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.4.ebuild,v 1.2 2006/12/08 10:08:00 betelgeuse Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -59,7 +59,7 @@ src_unpack() {
 }
 
 src_compile(){
-	# Prevent out of memory/heap space errors 
+	# Prevent out of memory/heap space errors
 	java-pkg_force-compiler ecj-3.2
 
 	local antflags="build-jasper-jdt build-only -Dbase.path=${T}"

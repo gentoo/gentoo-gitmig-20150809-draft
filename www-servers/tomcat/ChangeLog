@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.84 2006/12/08 07:00:27 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.85 2006/12/08 10:08:00 betelgeuse Exp $
+
+*tomcat-5.5.20-r3 (08 Dec 2006)
+
+  08 Dec 2006; Petteri Räty <betelgeuse@gentoo.org>
+  +tomcat-5.5.20-r3.ebuild:
+  Using new splitted mx4j-core to reduce the dependencies when the java5 use
+  flag is off. Dropped amd64 keywords because mx4j-core is not keyworded yet.
 
 *tomcat-6.0.4 (08 Dec 2006)
 
