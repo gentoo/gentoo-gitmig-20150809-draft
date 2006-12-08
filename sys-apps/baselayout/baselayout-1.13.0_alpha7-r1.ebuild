@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.13.0_alpha7-r1.ebuild,v 1.2 2006/11/12 16:28:24 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.13.0_alpha7-r1.ebuild,v 1.3 2006/12/08 17:22:02 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -60,7 +60,7 @@ src_unpack() {
 
 make_opts() {
 	# Standard options
-	local opts="DESTDIR=\"${ROOT}\" ARCH=\"$(tc-arch)\""
+	local opts="DESTDIR=\"${ROOT}\" ARCH=\"$(tc-arch)\" CC=\"$(tc-getCC)\""
 	local libdir="lib"
 
 	[[ ${SYMLINK_LIB} == "yes" ]] && libdir=$(get_abi_LIBDIR "${DEFAULT_ABI}")
