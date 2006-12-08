@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-1.4.2.ebuild,v 1.3 2006/06/30 04:01:41 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-1.4.2.ebuild,v 1.4 2006/12/08 12:41:49 deathwing00 Exp $
 
 inherit kde eutils
 
 DESCRIPTION="MSN Messenger clone for KDE"
-HOMEPAGE="http://kmess.sourceforge.net"
+HOMEPAGE="http://www.kmess.org"
 SRC_URI="mirror://sourceforge/kmess/${P}.tar.gz"
 LICENSE="GPL-2"
 
