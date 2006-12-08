@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.66 2006/11/23 12:45:07 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.67 2006/12/08 20:48:22 deathwing00 Exp $
+
+*digikam-0.9.0_rc2 (08 Dec 2006)
+
+  08 Dec 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  +digikam-0.9.0_rc2.ebuild:
+  Version bump. Increased dependency of media-gfx/exiv2 to 0.12.
 
 *digikam-0.9.0_rc1 (23 Nov 2006)
 
