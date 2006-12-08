@@ -3,10 +3,15 @@
 <pkgmetadata>
 <herd>media-tv</herd>
 <maintainer>
+<email>christian.gmeiner@gmail.com</email>
+<name>Christian Gmeiner</name>
+<description>Proxied maintainer</description>
+</maintainer>
+
+<maintainer>
 <email>vdr@gentoo.org</email>
 <name>Gentoo VDR Project</name>
+<description>Proxying maintainer</description>
 </maintainer>
-<longdescription lang="en">
-</longdescription>
 </pkgmetadata>
 
