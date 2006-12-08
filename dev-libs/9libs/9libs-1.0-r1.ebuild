@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/9libs/9libs-1.0-r1.ebuild,v 1.1 2006/01/21 02:18:41 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/9libs/9libs-1.0-r1.ebuild,v 1.2 2006/12/08 23:14:02 masterdriverz Exp $
 
 DESCRIPTION="A package of Plan 9 compatibility libraries"
 HOMEPAGE="http://www.netlib.org/research/9libs/9libs-1.0.README"
@@ -16,6 +16,9 @@ DEPEND="|| (
 	>=x11-libs/libX11-1.0.0
 	>=x11-libs/libXt-1.0.0 )
 	virtual/x11 )"
+
+RDEPEND="$DEPEND
+	!dev-libs/libevent"
 
 src_compile() {
 	econf \
