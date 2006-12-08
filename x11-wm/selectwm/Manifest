@@ -1,17 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ae72ec6118916ff0ace210f6c7e80598 selectwm-0.4.1.ebuild 669
-MD5 14c75dbe4d203b600fbc1b324a7e7cea selectwm-0.4.ebuild 689
-MD5 85dfd891f1217371e8301849fbd04a12 ChangeLog 1648
+DIST selectwm-0.3.tar.bz2 88061
+DIST selectwm-0.4.1.tar.bz2 151454
+EBUILD selectwm-0.3-r1.ebuild 661 RMD160 a9ebb795902b8cc9c2054c9d447a7afe246b01f8 SHA1 0930f635e0cc53fd17fc5849c3640f2004d0351e SHA256 ac4919e6f5815566d7d60641fd17b6779dbe1b597bd0cce00a3a1be17df7cdda
 MD5 22a92aa03f7869cec53a6b9362a4ea57 selectwm-0.3-r1.ebuild 661
+RMD160 a9ebb795902b8cc9c2054c9d447a7afe246b01f8 selectwm-0.3-r1.ebuild 661
+SHA256 ac4919e6f5815566d7d60641fd17b6779dbe1b597bd0cce00a3a1be17df7cdda selectwm-0.3-r1.ebuild 661
+EBUILD selectwm-0.4.1.ebuild 716 RMD160 e07513b965ec9cac32c0300b9f8123189618d753 SHA1 9a2c6ab5a8e59b8fc0e569fb695a808000828e27 SHA256 b89fc32fc0fbce29b7daf60ced2a84490be9af22aa07800b579cbda5828c9e91
+MD5 6ebaf15b702273b046c796868e7f9a62 selectwm-0.4.1.ebuild 716
+RMD160 e07513b965ec9cac32c0300b9f8123189618d753 selectwm-0.4.1.ebuild 716
+SHA256 b89fc32fc0fbce29b7daf60ced2a84490be9af22aa07800b579cbda5828c9e91 selectwm-0.4.1.ebuild 716
+MISC ChangeLog 1834 RMD160 4768abd16e32c9d81ca9b11bb0af5918dca343df SHA1 ac9870bef0d8d667733dfd74ce939552f5903121 SHA256 3f182f5f5e3ae891b8d09f51a3afc57e6e1bd9b09a2971289b5c780421f9691c
+MD5 1670f54a0bbedacb10dfe6adf7a629af ChangeLog 1834
+RMD160 4768abd16e32c9d81ca9b11bb0af5918dca343df ChangeLog 1834
+SHA256 3f182f5f5e3ae891b8d09f51a3afc57e6e1bd9b09a2971289b5c780421f9691c ChangeLog 1834
 MD5 6315bbb263ca7f8c9ae1edd8abbb8c22 files/digest-selectwm-0.3-r1 64
+RMD160 fc9589a5ef99fe7225c4fa62b87745908df0d0ec files/digest-selectwm-0.3-r1 64
+SHA256 242d3b3efef7f4e4ae14f98f8c1374af47f87fd295abab3bdd78cbc5f4996fe3 files/digest-selectwm-0.3-r1 64
 MD5 23df09d920f180bf1663aa02426bd19c files/digest-selectwm-0.4.1 67
-MD5 b193344baf56453336881050b77a025e files/digest-selectwm-0.4 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCfinP2G5bA0cA/ScRAp2zAKCdB5PRlxWdiviR0pW6lBa4LzZTOgCgqwRe
-SYh3xnwuVVn90MJdOPVXle4=
-=AfDo
------END PGP SIGNATURE-----
+RMD160 0e3aa03e0b59c83e6f89b46e866337bdf97b9da0 files/digest-selectwm-0.4.1 67
+SHA256 a310391d8abbe70c4b3b603921a4307aa804d6c7c628b8fea9338da5d69c5f4b files/digest-selectwm-0.4.1 67
