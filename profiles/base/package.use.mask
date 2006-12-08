@@ -4,3 +4,6 @@ dev-java/sun-jdk nsplugin
 dev-java/sun-jre-bin nsplugin
 dev-java/ibm-jdk-bin nsplugin 
 dev-java/ibm-jre-bin nsplugin
+
+# These are for BSD only
+net-proxy/squid -pf-transparent pf-transparent
