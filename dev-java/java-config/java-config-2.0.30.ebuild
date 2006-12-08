@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.0.30.ebuild,v 1.8 2006/10/15 18:23:57 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.0.30.ebuild,v 1.9 2006/12/08 01:33:38 caster Exp $
 
 inherit base distutils eutils
 
@@ -20,8 +20,11 @@ RDEPEND="${DEPEND}
 src_install() {
 	distutils_src_install
 
+	# this file will be included directly in the next version
+	cp "${FILESDIR}/jdk-defaults-x86-fbsd.conf" config/
+
 	insinto /usr/share/java-config-2/config/
-	for i in alpha amd64 hppa ia64 ppc ppc64 sparc x86; do
+	for i in alpha amd64 hppa ia64 ppc ppc64 sparc x86 x86-fbsd; do
 		if use ${i}; then
 			newins config/jdk-defaults-${i}.conf jdk-defaults.conf || die "arch	config not found"
 		fi
