@@ -8,4 +8,7 @@
 
 # Run vdradmin-am as this user:
 #
+# If you want vdradmin to run on a port below 1024 you
+# should nevertheless have vdradmin running as root.
+#
 VDRADMIN_USER="vdradmin"
