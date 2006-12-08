@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjsw/libjsw-1.5.6.ebuild,v 1.3 2006/10/31 19:36:31 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjsw/libjsw-1.5.6.ebuild,v 1.4 2006/12/08 17:32:46 mr_bones_ Exp $
 
 inherit eutils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://wolfpack.twu.net/users/wolfpack/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86"
 IUSE="gtk"
 
 DEPEND="gtk? ( =x11-libs/gtk+-1.2* )"
