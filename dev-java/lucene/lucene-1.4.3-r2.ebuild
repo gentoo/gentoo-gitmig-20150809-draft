@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-1.4.3-r2.ebuild,v 1.7 2006/10/29 21:42:12 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-1.4.3-r2.ebuild,v 1.8 2006/12/08 12:14:53 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -16,18 +16,12 @@ DEPEND=">=virtual/jdk-1.2
 	test? ( dev-java/junit dev-java/ant-tasks )"
 RDEPEND=">=virtual/jdk-1.2"
 
-pkg_setup() {
-	java-pkg_ensure-test
-	java-pkg-2_pkg_setup
-}
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}/lib
 	rm -f *.jar
 	use test && java-pkg_jar-from junit
 }
-
 
 src_compile() {
 	eant jar-core $(use_doc javadocs)
