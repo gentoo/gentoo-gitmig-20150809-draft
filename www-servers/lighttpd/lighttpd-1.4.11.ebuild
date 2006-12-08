@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.11.ebuild,v 1.17 2006/11/23 21:03:22 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.11.ebuild,v 1.18 2006/12/08 21:23:40 beu Exp $
 
 inherit eutils autotools depend.php
 
@@ -35,7 +35,6 @@ RDEPEND=">=sys-libs/zlib-1.1
 	xattr? ( kernel_linux? ( sys-apps/attr ) )"
 
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
 	doc?  ( dev-python/docutils )
 	test? (
 		virtual/perl-Test-Harness
