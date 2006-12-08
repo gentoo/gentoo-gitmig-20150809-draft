@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20060326.ebuild,v 1.1 2006/04/06 08:30:05 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20060326.ebuild,v 1.2 2006/12/08 22:09:03 twp Exp $
 
 inherit eutils
 
@@ -17,6 +17,7 @@ DEPEND="
 	|| (
 		(
 			x11-libs/libICE
+			x11-libs/libSM
 			x11-libs/libXext
 			iontruetype? ( x11-libs/libXft )
 			xinerama? ( x11-libs/libXinerama )
