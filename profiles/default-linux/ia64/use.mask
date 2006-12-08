@@ -43,7 +43,6 @@ solid
 sybase
 sybase-ct
 fdftk
-cpdflib
 qdbm
 
 hardened

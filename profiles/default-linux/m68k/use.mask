@@ -12,7 +12,6 @@ java
 php
 adabas
 birdstep
-cpdflib
 db2
 dbmaker
 empress

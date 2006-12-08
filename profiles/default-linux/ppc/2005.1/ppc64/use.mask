@@ -34,7 +34,6 @@ guile
 # architecture.
 adabas
 birdstep
-cpdflib
 db2
 dbmaker
 empress
