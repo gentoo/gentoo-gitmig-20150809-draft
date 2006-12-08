@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asclock/asclock-2.0.12-r1.ebuild,v 1.4 2006/11/27 12:50:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asclock/asclock-2.0.12-r1.ebuild,v 1.5 2006/12/08 00:01:45 drizzt Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.tigr.net/afterstep/download/asclock/${P}.tar.gz"
 HOMEPAGE="http://www.tigr.net/afterstep/list.pl"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~mips ~ppc sparc x86"
+KEYWORDS="~mips ppc sparc x86"
 
 DEPEND="x11-libs/libXpm"
 RDEPEND="${DEPEND}
