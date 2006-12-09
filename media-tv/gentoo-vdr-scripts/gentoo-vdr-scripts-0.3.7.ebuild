@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.3.7.ebuild,v 1.2 2006/11/30 21:56:56 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.3.7.ebuild,v 1.3 2006/12/09 12:15:21 zzam Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SLOT="0"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
 	http://dev.gentoo.org/~zzam/distfiles/${P}.tar.bz2"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 RDEPEND="nvram? ( x86? ( sys-power/nvram-wakeup ) )
 		app-admin/sudo
