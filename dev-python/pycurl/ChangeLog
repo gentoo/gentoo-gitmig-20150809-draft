@@ -1,6 +1,17 @@
 # ChangeLog for dev-python/pycurl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.35 2006/12/08 22:35:27 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.36 2006/12/09 03:02:29 dragonheart Exp $
+
+*pycurl-7.15.5.1 (09 Dec 2006)
+*pycurl-7.15.4.2-r1 (09 Dec 2006)
+
+  09 Dec 2006; Daniel Black <dragonheart@gentoo.org>
+  +files/pycurl-7.15.4.2-locking.patch, -pycurl-7.13.1.ebuild,
+  pycurl-7.15.1.ebuild, -pycurl-7.15.2.ebuild, -pycurl-7.15.4.2.ebuild,
+  +pycurl-7.15.4.2-r1.ebuild, +pycurl-7.15.5.1.ebuild:
+  removed old version. Fixed locking problem as per bug #154969 Thanks Donnie
+  + Bastian Kleineidam (debian bug #380156). Note all versions fail against
+  curl-7.16.0 - reported upstream on sf
 
   08 Dec 2006; Timothy Redaelli <drizzt@gentoo.org> pycurl-7.15.4.2.ebuild:
   Add ~x86-fbsd keyword

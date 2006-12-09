@@ -1,0 +1,11 @@
+--- pycurl.c_	2006-08-07 20:28:46.694127911 +0200
++++ pycurl.c	2006-08-07 20:28:56.333679645 +0200
+@@ -416,7 +416,7 @@
+ 
+ static int pycurl_ssl_mutex_lock(void **m)
+ {
+-    return PyThread_acquire_lock(*((PyThread_type_lock *) m), 1);
++    return !PyThread_acquire_lock(*((PyThread_type_lock *) m), 1);
+ }
+ 
+ static int pycurl_ssl_mutex_unlock(void **m)
