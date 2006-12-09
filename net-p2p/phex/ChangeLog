@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/phex
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/phex/ChangeLog,v 1.8 2006/01/17 21:14:39 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/phex/ChangeLog,v 1.9 2006/12/09 09:17:28 mr_bones_ Exp $
+
+  09 Dec 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  -phex-2.1.2.79.ebuild, -phex-2.1.4.80.ebuild, -phex-2.6.4.89.ebuild:
+  clean out some ebuilds
 
 *phex-2.8.2.92 (17 Jan 2006)
 
