@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/gcl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.39 2006/11/29 15:42:17 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.40 2006/12/09 21:53:12 mkennedy Exp $
+
+*gcl-2.6.7-r2 (09 Dec 2006)
+
+  09 Dec 2006; Matthew Kennedy <mkennedy@gentoo.org> +gcl-2.6.7-r2.ebuild:
+  Sync up with Debian versioning; Remove extraneous USE flags.
 
   29 Nov 2006; Christian Faulhammer <opfer@gentoo.org> gcl-2.6.7.ebuild,
   gcl-2.6.7-r1.ebuild:
