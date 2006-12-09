@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r4.ebuild,v 1.1 2006/12/04 22:31:12 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r4.ebuild,v 1.2 2006/12/09 09:09:17 dev-zero Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -24,7 +24,7 @@ RDEPEND="virtual/libc
 	gtk? ( =x11-libs/gtk+-1*
 		=dev-libs/glib-1* )
 	ncurses? ( sys-libs/ncurses
-		=dev-libs/glib-2* )"
+		>=dev-libs/glib-2.12.4-r1 )"
 DEPEND="${RDEPEND}"
 
 src_unpack() {
