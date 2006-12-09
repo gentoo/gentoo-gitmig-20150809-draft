@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.15.5.ebuild,v 1.1 2006/10/22 16:22:11 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.15.5.ebuild,v 1.2 2006/12/09 03:30:39 dragonheart Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
 
@@ -76,7 +76,7 @@ src_compile() {
 	fi
 
 	if use kerberos; then
-	   myconf="${myconfg} --with-gssapi=/usr"
+	   myconf="${myconf} --with-gssapi=/usr"
 	fi
 
 	econf ${myconf} || die 'configure failed'
@@ -90,6 +90,6 @@ src_install() {
 	doins docs/libcurl/libcurl.m4
 
 	dodoc CHANGES README
-	dodoc docs/FEATURES docs/INTERNALS docs/LIBCURL
+	dodoc docs/FEATURES docs/INTERNALS
 	dodoc docs/MANUAL docs/FAQ docs/BUGS docs/CONTRIBUTE
 }
