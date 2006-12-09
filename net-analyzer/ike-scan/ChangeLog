@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/ike-scan
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ike-scan/ChangeLog,v 1.4 2006/03/05 20:44:18 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ike-scan/ChangeLog,v 1.5 2006/12/09 04:59:46 vanquirius Exp $
+
+*ike-scan-1.8-r1 (09 Dec 2006)
+
+  09 Dec 2006; Marcelo Goes <vanquirius@gentoo.org> -ike-scan-1.7.ebuild,
+  -ike-scan-1.8.ebuild, +ike-scan-1.8-r1.ebuild:
+  Pass --disable-lookup option to configure, to prevent ike-scan from phoning
+  home. Fixes bug 157507, reported by Richard van den Berg <richard at vdberg
+  dot org>.
 
   05 Mar 2006; Markus Ullmann <jokey@gentoo.org> ike-scan-1.7.ebuild:
   INSTALL cleanup
