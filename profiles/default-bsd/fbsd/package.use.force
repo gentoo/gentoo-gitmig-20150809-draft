@@ -1,0 +1,3 @@
+# Diego Pettenò <flameeyes@gentoo.org> (9 Dec 2006)
+# Force Java5 support as we don't have any 1.4 JDK
+www-servers/tomcat java5
