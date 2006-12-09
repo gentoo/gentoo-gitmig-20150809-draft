@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/freej/freej-0.7.ebuild,v 1.3 2005/11/13 18:08:38 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/freej/freej-0.7.ebuild,v 1.4 2006/12/09 23:09:08 dirtyepic Exp $
 
 inherit eutils
 
@@ -16,20 +16,24 @@ IUSE="v4l debug"
 DEPEND=">=media-libs/libsdl-1.2.0
 	>=media-libs/libpng-1.2.0
 	>=media-libs/freetype-2
-	media-video/ffmpeg"
+	media-video/ffmpeg
+	sys-libs/slang"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
 	# fixes missing errno defines
-	epatch ${FILESDIR}/${P}-errno.patch
+	epatch "${FILESDIR}"/${P}-errno.patch
 
 	# fixes bad hacking with type casting
-	epatch ${FILESDIR}/${P}-fastmemcpy.patch
+	epatch "${FILESDIR}"/${P}-fastmemcpy.patch
 
 	# fixes some v4l defines
-	epatch ${FILESDIR}/${P}-v4l.patch
+	epatch "${FILESDIR}"/${P}-v4l.patch
+
+	# GCC 4.1 - bug #135497
+	epatch "${FILESDIR}"/${P}-gcc41.patch
 }
 
 src_compile() {
