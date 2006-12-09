@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/mysql-community-5.0.27.ebuild,v 1.1 2006/11/23 13:58:06 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/mysql-community-5.0.27.ebuild,v 1.2 2006/12/09 22:38:54 vivo Exp $
 
 # Leave this empty
 MYSQL_VERSION_ID=""
 MYSQL_RERELEASE=""
 # Set the patchset revision to use, must be either empty or a decimal number
 MYSQL_PATCHSET_REV="1"
+BASE_URI="mirror://mysql/Downloads/MySQL-${PV%.*}"
 
 inherit mysql
 
