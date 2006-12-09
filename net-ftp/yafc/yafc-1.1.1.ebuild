@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/yafc-1.1.1.ebuild,v 1.3 2006/07/08 14:09:15 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/yafc-1.1.1.ebuild,v 1.4 2006/12/09 11:09:28 masterdriverz Exp $
 
-inherit flag-o-matic
+inherit eutils
 
 DESCRIPTION="Console ftp client with a lot of nifty features"
 HOMEPAGE="http://yafc.sourceforge.net/"
@@ -19,6 +19,12 @@ DEPEND="readline? ( >=sys-libs/readline-4.1-r4 )
 	socks5? ( net-proxy/dante )"
 RDEPEND=">=net-misc/openssh-3.0
 	${DEPEND}"
+
+src_unpack() {
+	unpack "${A}"
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gcc4.patch"
+}
 
 src_compile() {
 	local myconf=""

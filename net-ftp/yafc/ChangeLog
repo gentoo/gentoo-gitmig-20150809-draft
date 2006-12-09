@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/yafc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.19 2006/07/08 14:09:15 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.20 2006/12/09 11:09:28 masterdriverz Exp $
+
+  09 Dec 2006; Charlie Shepherd <masterdriverz@gentoo.org>
+  +files/yafc-1.1.1-gcc4.patch, yafc-1.1.1.ebuild:
+  Add fix for gcc-4; thanks to P Nienaber for reporting; bug 127634
 
   08 Jul 2006; Lars Weiler <pylon@gentoo.org> yafc-1.1.1.ebuild:
   Stable on ppc; it's better for our default unicode-support.
