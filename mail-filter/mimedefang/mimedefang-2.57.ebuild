@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/mimedefang/mimedefang-2.57.ebuild,v 1.1 2006/07/26 05:43:20 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/mimedefang/mimedefang-2.57.ebuild,v 1.2 2006/12/09 11:29:21 ticho Exp $
 
 inherit eutils
 
@@ -15,10 +15,8 @@ IUSE=""
 
 DEPEND="|| ( mail-filter/libmilter >=mail-mta/sendmail-8.13 )
 	>=dev-perl/MIME-tools-5.413
-	>=perl-core/MIME-Base64-3.03
+	virtual/perl-MIME-Base64
 	dev-perl/Digest-SHA"
-
-S=${WORKDIR}/${P}
 
 pkg_setup() {
 	enewgroup defang
