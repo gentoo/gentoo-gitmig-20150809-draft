@@ -1,0 +1,11 @@
+--- ./plucker_desktop/proxy_wizardpage.h.orig	2006-07-15 20:30:35.000000000 +0100
++++ ./plucker_desktop/proxy_wizardpage.h	2006-07-15 20:31:05.000000000 +0100
+@@ -71,7 +71,7 @@
+     /*!
+         \return TRUE if proxy is valid.
+      */
+-    bool proxy_wizardpage::is_proxy_valid();
++    bool is_proxy_valid();
+ 
+     //! Writes the proxy settings collected. into their configuration file keys.         
+     void        write_configuration(); 

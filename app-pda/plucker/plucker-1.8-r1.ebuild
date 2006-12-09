@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/plucker/plucker-1.8-r1.ebuild,v 1.8 2005/06/23 13:03:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/plucker/plucker-1.8-r1.ebuild,v 1.9 2006/12/09 20:19:37 dirtyepic Exp $
 
 IUSE="gtk"
 
@@ -13,10 +13,12 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 DEPEND=">=dev-lang/python-1.5.2
-	gtk? ( >=x11-libs/gtk+-2.2 x11-libs/wxGTK )
+	gtk? ( >=x11-libs/gtk+-2.2
+		=x11-libs/wxGTK-2.4* )
 	sys-devel/autoconf"
 RDEPEND=">=dev-lang/python-1.5.2
-	gtk? ( >=x11-libs/gtk+-2.2 x11-libs/wxGTK )
+	gtk? ( >=x11-libs/gtk+-2.2
+		=x11-libs/wxGTK-2.4* )
 	|| (
 		>=media-gfx/imagemagick-5.4.4
 		>=dev-python/imaging-1.1
@@ -29,6 +31,9 @@ src_unpack() {
 
 	# Repair broken Makefile.in
 	epatch ${FILESDIR}/plucker-1.8-Makefile.in.patch
+
+	# GCC 4 - extra qualification - Bug #138370
+	epatch "${FILESDIR}"/${P}-gcc4.patch
 
 	# Repair documentation installation path
 	sed -i "/^DOCSDIR/s/packages/${PF}/" plucker_desktop/Makefile.in || die "sed 1 failed"
