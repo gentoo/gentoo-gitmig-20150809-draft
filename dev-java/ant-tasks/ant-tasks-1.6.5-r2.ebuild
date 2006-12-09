@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.5-r2.ebuild,v 1.12 2006/12/07 22:35:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.5-r2.ebuild,v 1.13 2006/12/09 12:57:15 caster Exp $
 
 inherit java-pkg-2 eutils
 
@@ -16,8 +16,8 @@ SLOT="0"
 KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
 IUSE="javamail noantlr nobcel nobeanutils nobsh nobsf nocommonsnet nocommonslogging nojdepend nojsch nojython nolog4j nooro noregexp norhino noxalan noxerces"
 
-RDEPEND=">=virtual/jre-1.4
-	=dev-java/ant-core-${PV}*
+
+CDEPEND="=dev-java/ant-core-${PV}*
 	>=dev-java/junit-3.8
 	!nolog4j? ( >=dev-java/log4j-1.2.8 )
 	!noxerces? ( >=dev-java/xerces-2.7.1 )
@@ -36,9 +36,12 @@ RDEPEND=">=virtual/jre-1.4
 	!noregexp? ( >=dev-java/jakarta-regexp-1.3-r2 )
 	!nojython? ( >=dev-java/jython-2.1-r5 )
 	javamail? ( >=dev-java/sun-javamail-bin-1.3.1-r1 )"
+RDEPEND=">=virtual/jre-1.4
+	${CDEPEND}"
 DEPEND=">=virtual/jdk-1.4
 	>=dev-java/java-config-1.2
-	${RDEPEND}"
+	!dev-java/ant-optional
+	${CDEPEND}"
 
 S="${WORKDIR}/apache-ant-${MY_PV}"
 
