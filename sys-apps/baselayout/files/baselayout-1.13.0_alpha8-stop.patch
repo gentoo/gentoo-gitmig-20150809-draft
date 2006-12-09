@@ -1,0 +1,69 @@
+Index: init.d/halt.sh
+===================================================================
+--- init.d/halt.sh	(revision 2411)
++++ init.d/halt.sh	(working copy)
+@@ -49,7 +49,7 @@
+ [[ ${RC_GOT_SERVICES} != yes ]] && . "${svclib}"/sh/rc-services.sh
+ eindent
+ if [[ $(uname) == "Linux" ]] ; then
+-	do_unmount "mount -n -o remount,ro" "^(/dev|/dev/pts|/proc|/proc/bus/usb|/sys)$"
++	do_unmount "mount -n -o remount,ro" "^(/dev|/dev/pts|/proc|/proc/.*|/sys)$"
+ else
+ 	do_unmount "mount -u -o ro" "^/dev$"
+ fi
+Index: init.d/localmount
+===================================================================
+--- init.d/localmount	(revision 2411)
++++ init.d/localmount	(working copy)
+@@ -71,7 +71,7 @@
+ stop() {
+ 	# We never unmount / or /dev or $svcdir
+ 	NO_UMOUNTS="/|/dev|${svcdir}${NO_UMOUNTS:+|}${NO_UMOUNTS// /|}"
+-	[[ $(uname) == "Linux" ]] && NO_UMOUNTS="${NO_UMOUNTS}|/dev/pts|/proc|/sys"
++	[[ $(uname) == "Linux" ]] && NO_UMOUNTS="${NO_UMOUNTS}|/dev/pts|/proc|/proc/.*|/sys"
+ 	NO_UMOUNTS="^(${NO_UMOUNTS})$"
+ 
+ 	# Flush all pending disk writes now
+Index: src/start-stop-daemon.c
+===================================================================
+--- src/start-stop-daemon.c	(revision 2411)
++++ src/start-stop-daemon.c	(working copy)
+@@ -601,8 +601,14 @@
+ 	int fd = -1;
+ 
+ 	/* We no longer use stat inodes as we may have upgraded the program
+-	   so it will no longer work. We cannot use the exe link either for
+-	   the same reason. */
++	   so it will no longer work. We test the exe link first, then the
++	   cmdline. */
++	snprintf (cmdline, sizeof (cmdline), "/proc/%u/exe", pid);
++	memset (buf, 0, sizeof (buf));
++	if (readlink (cmdline, buf, sizeof (buf)) != -1
++	    && strcmp (name, buf) == 0)
++	  return 1;
++
+ 	snprintf (cmdline, sizeof (cmdline), "/proc/%u/cmdline", pid);
+ 	if ((fd = open (cmdline, O_RDONLY)) < 0)
+ 	  return 0;
+@@ -772,7 +778,7 @@
+ 		if (fscanf(f, "%d", &pid) == 1)
+ 			check(pid);
+ 		fclose(f);
+-	} else if (errno != ENOENT || stop != 0)
++	} else if (errno != ENOENT || (stop != 0 && schedule == NULL))
+ 		errx(2, "open pidfile %s: %s", name, strerror(errno));
+ 
+ }
+Index: sh/rc-daemon.sh
+===================================================================
+--- sh/rc-daemon.sh	(revision 2411)
++++ sh/rc-daemon.sh	(working copy)
+@@ -227,6 +227,8 @@
+ 		fi
+ 	fi
+ 
++	[[ -n ${name} ]] && cmd="${name}"
++
+ 	local timeout=$((${RC_WAIT_ON_STOP} * 10))
+ 	while [[ ${timeout} -gt 0 ]] ; do
+ 		((timeout--))
