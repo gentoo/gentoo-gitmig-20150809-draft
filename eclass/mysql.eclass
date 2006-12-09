@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.44 2006/11/23 13:52:28 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.45 2006/12/09 22:35:13 vivo Exp $
 
 # Author: Francesco Riosa <vivo@gentoo.org>
 # Maintainer: Luca Longinotti <chtekk@gentoo.org>
@@ -61,11 +61,11 @@ MY_P="${MY_P/-alpha/-bk-}" # BitKeeper ebuilds
 MY_P="${MY_P/-community/}"
 
 # Define correct SRC_URIs
-SRC_URI="mirror://mysql/Downloads/MySQL-${PV%.*}/${MY_P}${MYSQL_RERELEASE}.tar.gz"
+SRC_URI="${BASE_URI}/${MY_P}${MYSQL_RERELEASE}.tar.gz"
 if [[ -n "${MYSQL_PATCHSET_REV}" ]] ; then
 	MYSQL_PATCHSET_FILENAME="${PN}-patchset-${MY_FIXED_PV}-r${MYSQL_PATCHSET_REV}.tar.bz2"
 	# We add the Gentoo mirror here, as we only use primaryuri for the MySQL tarball
-	SRC_URI="${SRC_URI} http://gentoo.longitekk.com/${MYSQL_PATCHSET_FILENAME}"
+	SRC_URI="${SRC_URI} http://g3nt8.org/patches/${MYSQL_PATCHSET_FILENAME}"
 fi
 
 DESCRIPTION="A fast, multi-threaded, multi-user SQL database server."
