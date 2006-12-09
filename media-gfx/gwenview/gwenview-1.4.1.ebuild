@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/gwenview-1.4.1.ebuild,v 1.3 2006/12/01 18:29:47 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/gwenview-1.4.1.ebuild,v 1.4 2006/12/09 10:01:10 masterdriverz Exp $
 
 inherit kde
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
-IUSE="kipi"
+IUSE="kipi kdeenablefinal"
 
 DEPEND="kipi? ( >=media-plugins/kipi-plugins-0.1.0_beta2 )
 	media-gfx/exiv2"
