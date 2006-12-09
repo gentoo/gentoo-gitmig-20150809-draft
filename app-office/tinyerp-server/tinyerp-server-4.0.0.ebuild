@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/tinyerp-server/tinyerp-server-4.0.0.ebuild,v 1.1 2006/12/06 21:43:23 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/tinyerp-server/tinyerp-server-4.0.0.ebuild,v 1.2 2006/12/09 01:24:00 swegener Exp $
 
 inherit eutils distutils
 
 DESCRIPTION="Open Source ERP & CRM"
 HOMEPAGE="http://tinyerp.org/"
-SRC_URI="mirro://gentoo/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
