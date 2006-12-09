@@ -1,8 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/libieee1284-0.2.8.ebuild,v 1.3 2005/07/10 01:00:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/libieee1284-0.2.8.ebuild,v 1.4 2006/12/09 21:21:38 dev-zero Exp $
 
-inherit libtool eutils gnuconfig
+WANT_AUTOMAKE=1.7
+WANT_AUTOCONF=2.58
+
+inherit autotools eutils gnuconfig
 
 DESCRIPTION="Library to query devices using IEEE1284"
 HOMEPAGE="http://cyberelk.net/tim/libieee1284/index.html"
@@ -19,20 +22,17 @@ DEPEND="${RDEPEND}
 		doc? ( app-text/docbook-sgml-utils
 		>=app-text/docbook-sgml-dtd-4.1
 		app-text/docbook-dsssl-stylesheets
-		dev-perl/XML-RegExp )
-		>=sys-devel/autoconf-2.58"
+		dev-perl/XML-RegExp )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${DISTDIR}/${P}-dbjh-v4.diff.bz2
-	aclocal || die
-	autoconf || die
-	libtoolize --copy --force || die
+	cd "${S}"
+	epatch "${DISTDIR}/${P}-dbjh-v4.diff.bz2"
+	eautoreconf
 	gnuconfig_update
 }
 
 src_install () {
-	einstall || die
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS NEWS README* TODO doc/interface*
 }
