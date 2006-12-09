@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+<email>araujo@gentoo.org</email>
+<name>Luis F. Araujo</name>
+</maintainer>
+<longdescription lang="en">
+Io is a small, prototype-based programming language. The ideas in Io are mostly
+inspired by Smalltalk (all values are objects), Self (prototype-based),
+NewtonScript (differential inheritance), Act1 (actors and futures for
+concurrency), LISP (code is a runtime inspectable/modifiable tree) and Lua
+(small, embeddable).
+</longdescription>
+</pkgmetadata>
+
