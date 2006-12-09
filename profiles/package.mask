@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6425 2006/12/09 03:07:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6426 2006/12/09 15:02:59 drizzt Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ## 
+
+# Timothy Redaelli <drizzt@gentoo.org> (09 Dec 2006)
+# pending removal (#156989)
+# can't fix rpath, application checks its checksum
+app-antivirus/vlnx
 
 # Daniel Black <dragonheart@gentoo.org> (09 Dec 2006)
 # needs more compatibilty testing
