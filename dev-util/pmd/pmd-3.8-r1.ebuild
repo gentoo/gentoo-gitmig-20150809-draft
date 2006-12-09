@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/pmd-3.8-r1.ebuild,v 1.1 2006/12/08 00:54:45 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/pmd-3.8-r1.ebuild,v 1.2 2006/12/09 09:31:36 flameeyes Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://pmd.sourceforge.net"
 SRC_URI="mirror://sourceforge/pmd/${PN}-src-${PV}.zip"
 LICENSE="pmd"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="doc source test"
 
 CDEPEND="=dev-java/jaxen-1.1*

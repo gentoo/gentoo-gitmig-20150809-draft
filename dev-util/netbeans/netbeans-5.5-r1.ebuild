@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r1.ebuild,v 1.4 2006/12/06 22:45:30 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r1.ebuild,v 1.5 2006/12/09 09:29:34 flameeyes Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -45,7 +45,7 @@ SRC_URI="${BASELOCATION}/${MAINTARBALL}
 
 LICENSE="Apache-1.1 Apache-2.0 SPL W3C sun-bcla-j2eeeditor sun-bcla-javac sun-javac as-is docbook sun-resolver"
 SLOT="5.5"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="debug doc"
 
 RDEPEND=">=virtual/jre-1.5
