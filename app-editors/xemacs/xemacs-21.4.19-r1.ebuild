@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.19-r1.ebuild,v 1.2 2006/12/09 14:53:05 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.19-r1.ebuild,v 1.3 2006/12/09 15:52:18 graaff Exp $
 
 export WANT_AUTOCONF="2.1"
 inherit autotools eutils
@@ -70,10 +70,10 @@ src_compile() {
 
 	if use X; then
 
-		myconf="--with-widgets=lucid"
-		myconf="${myconf} --with-dialogs=lucid"
-		myconf="${myconf} --with-scrollbars=lucid"
+		myconf="${myconf} --with-widgets=athena"
+		myconf="${myconf} --with-dialogs=athena"
 		myconf="${myconf} --with-menubars=lucid"
+		myconf="${myconf} --with-scrollbars=lucid"
 		if use motif ; then
 			myconf="--with-widgets=motif"
 			myconf="${myconf} --with-dialogs=motif"
@@ -81,17 +81,15 @@ src_compile() {
 			myconf="${myconf} --with-menubars=lucid"
 		fi
 		if use athena ; then
-			myconf="--with-widgets=athena"
-			if use Xaw3d ; then
-				myconf="${myconf} --with-athena=xaw3d"
-			elif use neXt ; then
-				myconf="${myconf} --with-athena=next"
-			else
-				myconf="${myconf} --with-athena=3d"
-			fi
-			myconf="${myconf} --with-dialogs=athena"
-			myconf="${myconf} --with-scrollbars=lucid"
-			myconf="${myconf} --with-menubars=lucid"
+			myconf="--with-scrollbars=athena"
+		fi
+
+		if use Xaw3d; then
+			myconf="${myconf} --with-athena=3d"
+		elif use neXt; then
+			myconf="${myconf} --with-athena=next"
+		else
+			myconf="${myconf} --with-athena=xaw"
 		fi
 
 		use dnd && myconf="${myconf} --with-dragndrop --with-offix"
