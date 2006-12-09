@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/commons-modeler-1.1-r3.ebuild,v 1.1 2006/12/07 20:40:38 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/commons-modeler-1.1-r3.ebuild,v 1.2 2006/12/09 09:15:13 flameeyes Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -20,7 +20,7 @@ DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}
 	source? ( app-arch/zip )"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~x86-fbsd"
 IUSE="commons-digester doc source test"
 
 S=${WORKDIR}/${P}-src

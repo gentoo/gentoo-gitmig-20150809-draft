@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jdom
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.36 2006/11/30 15:50:24 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.37 2006/12/09 09:20:55 flameeyes Exp $
+
+  09 Dec 2006; Diego Pettenò <flameeyes@gentoo.org> jdom-1.0-r1.ebuild:
+  Add ~x86-fbsd keyword.
 
   30 Nov 2006; Vlastimil Babka <caster@gentoo.org> jdom-1.0_beta6.ebuild,
   jdom-1.0_beta6-r1.ebuild, jdom-1.0_beta9-r1.ebuild,

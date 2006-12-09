@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/rhino
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.41 2006/10/05 18:13:53 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.42 2006/12/09 09:24:24 flameeyes Exp $
+
+  09 Dec 2006; Diego Pettenò <flameeyes@gentoo.org> rhino-1.6.1-r3.ebuild:
+  Add ~x86-fbsd keyword.
 
   05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> rhino-1.5.5-r1.ebuild,
   rhino-1.5.5-r2.ebuild, rhino-1.5.5-r3.ebuild, rhino-1.5.5-r4.ebuild,

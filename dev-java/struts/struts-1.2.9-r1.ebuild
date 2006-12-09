@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.2.9-r1.ebuild,v 1.3 2006/11/28 04:39:56 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.2.9-r1.ebuild,v 1.4 2006/12/09 09:25:00 flameeyes Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -27,7 +27,7 @@ DEPEND=">=virtual/jdk-1.4
 	>=dev-java/ant-1.6.0
 	source? ( app-arch/zip )"
 IUSE="doc examples source"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 
 S="${WORKDIR}/${MY_P}"
 
