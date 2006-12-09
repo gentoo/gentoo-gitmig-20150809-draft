@@ -39,7 +39,7 @@
  sub have_package($) {
  	my ($cp) = @_;
  	return $packages{$cp};
-@@ -213,6 +216,7 @@
+@@ -216,6 +213,7 @@
  			redo PARENT;
  		}
  	}
@@ -47,7 +47,7 @@
  }
  
  sub read_sh($) {
-@@ -299,7 +301,14 @@
+@@ -301,7 +299,15 @@
  	for my $dir(@profiles) {
  		for(noncomments "$dir/use.mask") {
  			my $off = s/^-//;
@@ -58,6 +58,7 @@
 +			my($pkg, @flags) = split;
 +			for(@flags) {
 +				my $off = s/^-//;
++				$use_masked_flags{$_}{''} ||= 0;
 +				$use_masked_flags{$_}{$pkg} = !$off;
 +			}
  		}
