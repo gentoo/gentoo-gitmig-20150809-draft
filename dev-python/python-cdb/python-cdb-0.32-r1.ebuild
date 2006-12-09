@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-cdb/python-cdb-0.32-r1.ebuild,v 1.1 2006/09/25 18:41:34 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-cdb/python-cdb-0.32-r1.ebuild,v 1.2 2006/12/09 14:19:37 drizzt Exp $
 
 inherit distutils eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://pilcrow.madison.wi.us/#pycdb"
 SLOT="0"
 IUSE=""
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc-macos ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc-macos ~sparc ~x86 ~x86-fbsd"
 
 DEPEND=">=dev-lang/python-2.2
 	dev-db/cdb"
