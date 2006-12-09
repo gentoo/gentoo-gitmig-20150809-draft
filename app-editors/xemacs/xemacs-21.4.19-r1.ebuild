@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.19-r1.ebuild,v 1.1 2006/12/02 14:16:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.19-r1.ebuild,v 1.2 2006/12/09 14:53:05 graaff Exp $
 
 export WANT_AUTOCONF="2.1"
 inherit autotools eutils
@@ -51,7 +51,7 @@ src_unpack() {
 	use neXt && unpack NeXT_XEmacs.tar.gz
 
 	cd "${S}"
-	epatch ${FILESDIR}/emodules.info-21.4.8-gentoo.patch
+	epatch ${FILESDIR}/xemacs-21.4.19-texi.patch
 
 	# see bug 58350
 	epatch ${FILESDIR}/${PN}-21.4.17-gdbm.patch
@@ -167,6 +167,15 @@ src_install() {
 		infodir="${D}"/usr/share/info \
 		install gzip-el || die
 
+	# Rename some applications installed in bin so that it is clear
+	# which application installed them and so that conflicting
+	# packages (emacs) can't clobber the actual applications.
+	# Addresses bug #62991.
+	for i in b2m ctags etags rcs-checkin ; do
+		mv "${D}"/usr/bin/${i} "${D}"/usr/bin/${i}-xemacs || die "mv ${i} failed"
+		dosym /usr/bin/${i}-xemacs /usr/bin/${i}
+	done
+
 	# install base packages directories
 	dodir /usr/lib/xemacs/xemacs-packages/
 	dodir /usr/lib/xemacs/site-packages/
@@ -185,7 +194,6 @@ src_install() {
 	cd "${S}"
 	dodoc BUGS CHANGES-* ChangeLog GETTING* INSTALL PROBLEMS README*
 	dodoc "${FILESDIR}"/README.Gentoo
-	rm -f "${D}"/usr/share/info/emodules.info~*
 
 	insinto /usr/share/pixmaps
 	newins "${S}"/etc/${PN}-icon.xpm ${PN}.xpm
