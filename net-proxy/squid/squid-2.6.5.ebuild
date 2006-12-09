@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.6.5.ebuild,v 1.2 2006/12/09 07:14:23 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.6.5.ebuild,v 1.3 2006/12/09 21:13:54 corsair Exp $
 
 inherit eutils pam toolchain-funcs flag-o-matic autotools linux-info
 
@@ -18,7 +18,7 @@ SRC_URI="http://www.squid-cache.org/Versions/v2/${S_PV}/${S_PP}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="pam ldap sasl nis ssl snmp selinux logrotate zero-penalty-hit \
 	pf-transparent ipf-transparent \
 	elibc_uclibc kernel_linux \
