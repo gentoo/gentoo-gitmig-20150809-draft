@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.5.5-r2.ebuild,v 1.8 2006/12/06 12:20:04 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.5.5-r2.ebuild,v 1.9 2006/12/09 18:59:07 flameeyes Exp $
 
 inherit kde-dist
 
@@ -18,7 +18,7 @@ DEPEND="~kde-base/kdebase-${PV}
 	pda? ( app-pda/pilot-link dev-libs/libmal )
 	gnokii? ( app-mobilephone/gnokii )
 	crypt? ( >=app-crypt/gpgme-1.1.2-r1
-		 <app-crypt/gnupg-1.9 )
+		|| ( >=app-crypt/gnupg-2.0.1-r1 <app-crypt/gnupg-1.9 ) )
 		x11-libs/libXScrnSaver"
 
 RDEPEND="${DEPEND}
