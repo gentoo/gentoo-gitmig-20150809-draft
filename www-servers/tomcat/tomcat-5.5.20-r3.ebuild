@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r3.ebuild,v 1.1 2006/12/08 10:08:00 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r3.ebuild,v 1.2 2006/12/09 09:29:03 flameeyes Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -10,7 +10,7 @@ MY_P="apache-${P}-src"
 SLOT="5.5"
 SRC_URI="mirror://apache/${PN}/${PN}-5/v${PV}/src/${MY_P}.tar.gz"
 HOMEPAGE="http://jakarta.apache.org/tomcat"
-KEYWORDS="-ppc -ppc64 ~x86"
+KEYWORDS="-ppc -ppc64 ~x86 ~x86-fbsd"
 LICENSE="Apache-2.0"
 
 IUSE="admin java5 doc examples source test"
