@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-3_pre20051105.ebuild,v 1.1 2006/11/13 23:11:41 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-3_pre20051105.ebuild,v 1.2 2006/12/09 13:25:04 cedk Exp $
 
 inherit eutils toolchain-funcs
 
@@ -34,7 +34,7 @@ src_unpack() {
 src_compile() {
 
 	myconf=""
-	use tcltk || myconf="--no-tcl"
+	use tcl || myconf="--no-tcl"
 	econf ${myconf} || die "configure failed"
 
 	if use debug; then
