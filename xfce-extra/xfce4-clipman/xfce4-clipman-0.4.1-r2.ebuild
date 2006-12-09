@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-clipman/xfce4-clipman-0.4.1-r2.ebuild,v 1.6 2006/12/03 06:32:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-clipman/xfce4-clipman-0.4.1-r2.ebuild,v 1.7 2006/12/09 05:06:23 jer Exp $
 
 inherit xfce42
 
 DESCRIPTION="Xfce4 panel clipboard manager plugin"
-KEYWORDS="~alpha ~amd64 arm ~hppa ~ia64 ~mips ~ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 arm hppa ~ia64 ~mips ~ppc ppc64 sparc x86 ~x86-fbsd"
 
 goodies_plugin
