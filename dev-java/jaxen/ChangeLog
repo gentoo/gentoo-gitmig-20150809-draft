@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jaxen
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.36 2006/12/09 09:19:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.37 2006/12/09 15:30:19 nixnut Exp $
+
+  09 Dec 2006; nixnut <nixnut@gentoo.org> jaxen-1.1_beta11.ebuild:
+  Stable on ppc wrt bug 156504
 
   09 Dec 2006; Diego Pettenò <flameeyes@gentoo.org>
   jaxen-1.1_beta11.ebuild:
