@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.36 2006/12/07 02:34:54 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.37 2006/12/09 20:39:39 swegener Exp $
 
 # Saleem Abdulrasool <compnerd@gentoo.org>
 # Requires GNOME 2.16
@@ -10,6 +10,10 @@
 # dependency >=gnome-base/libgnome-2.16.0 not
 # supported in this profile
 >=net-irc/xchat-gnome-0.15
+
+# Sven Wegener <swegener@gentoo.org>
+# Needs gnome-extra/gtkhtml-3.12
+dev-db/mysql-gui-tools
 
 #Joshua Jackson <tsunam@gentoo.org>
 #Gnome-2.16 is not supported in 2.4 kernels as per bug #147707
