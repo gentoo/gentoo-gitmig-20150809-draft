@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/suspend2-sources-2.6.18-r1.ebuild,v 1.1 2006/12/09 09:31:15 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/suspend2-sources-2.6.18-r1.ebuild,v 1.2 2006/12/09 09:44:48 phreak Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
@@ -20,8 +20,6 @@ SUSPEND2_URI="http://www.suspend2.net/downloads/all/${SUSPEND2_SRC}.patch.bz2"
 
 UNIPATCH_LIST="${DISTDIR}/${SUSPEND2_SRC}.patch.bz2"
 UNIPATCH_STRICTORDER="yes"
-UNIPATCH_DOCS="${WORKDIR}/patches/${SUSPEND2_SRC}/Changelog.txt
-${WORKDIR}/patches/${SUSPEND2_SRC}/ToDo"
 
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${SUSPEND2_URI}"
 
