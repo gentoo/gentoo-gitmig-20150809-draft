@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6.ebuild,v 1.11 2006/08/14 17:27:15 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6.ebuild,v 1.12 2006/12/09 17:38:08 drizzt Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig versionator
 
@@ -174,7 +174,7 @@ src_unpack() {
 	fi
 
 	# Misdesign in libstdc++ (Redhat)
-	cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
+	cp -pPR ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
 
 	cd ${S}; ./contrib/gcc_update --touch &> /dev/null
 	gnuconfig_update
