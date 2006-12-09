@@ -1,0 +1,20 @@
+Index: src/rc-depend.c
+===================================================================
+--- src/rc-depend.c	(revision 2408)
++++ src/rc-depend.c	(working copy)
+@@ -597,7 +597,6 @@
+ 		    {
+ 		      di = get_depinfo (deptree, lp->item);
+ 		      if (di && (strcmp (type->item, "ineed") == 0 ||
+-				 strcmp (type->item, "iuse") == 0 ||
+ 				 valid_service (di->service)))
+ 			visit_service (deptree, types, sorted, visited, di,
+ 				       true);
+@@ -606,7 +605,6 @@
+ 		}
+ 	      else
+ 		if (di && (strcmp (type->item, "ineed") == 0 ||
+-			   strcmp (type->item, "iuse") == 0 ||
+ 			   valid_service (service)))
+ 		  visit_service (deptree, types, sorted, visited, di, true);
+ 	    }
