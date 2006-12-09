@@ -1,54 +1,30 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-AUX mysql-gui-tools-5.0_p4-lua-modules.patch 672 RMD160 5e791119f37792ad554d0ddb9e28eeaad8512277 SHA1 49b8bd2f6fa9fdd7ccb26b3beb9bd6dea29f48c6 SHA256 705caeef8cdbe855f9c7d652e346872517ffa08d57d534846c008c53aa2ee6db
-MD5 8b68b8882a62149d03e657256cef6bcd files/mysql-gui-tools-5.0_p4-lua-modules.patch 672
-RMD160 5e791119f37792ad554d0ddb9e28eeaad8512277 files/mysql-gui-tools-5.0_p4-lua-modules.patch 672
-SHA256 705caeef8cdbe855f9c7d652e346872517ffa08d57d534846c008c53aa2ee6db files/mysql-gui-tools-5.0_p4-lua-modules.patch 672
-AUX mysql-gui-tools-5.0_p5-lua-modules.patch 672 RMD160 8f9ab9c747b89441ec43dd510a17f87717163e5b SHA1 74ab139f02678a2da6105be85466986e0b5584c4 SHA256 6cc9672b06cb660819fdd9ea8338b1b80f74500d96e0854575bb52e16b3a5f7c
-MD5 b2d3422d623f14410816af469793ccaf files/mysql-gui-tools-5.0_p5-lua-modules.patch 672
-RMD160 8f9ab9c747b89441ec43dd510a17f87717163e5b files/mysql-gui-tools-5.0_p5-lua-modules.patch 672
-SHA256 6cc9672b06cb660819fdd9ea8338b1b80f74500d96e0854575bb52e16b3a5f7c files/mysql-gui-tools-5.0_p5-lua-modules.patch 672
 AUX mysql-gui-tools-5.0_p6-lua-modules.patch 672 RMD160 6a5aed0f34bb2d4bada62851dfb18ba329693e47 SHA1 d6b13610e25bbe3e22af040fc3c46d25564f0693 SHA256 2e3e271de504562db3f3d3ef33297ce454a6e1a223f98e4c4480cb2361dcbf28
 MD5 ecde06bbc6210d4fd339eed19b03e516 files/mysql-gui-tools-5.0_p6-lua-modules.patch 672
 RMD160 6a5aed0f34bb2d4bada62851dfb18ba329693e47 files/mysql-gui-tools-5.0_p6-lua-modules.patch 672
 SHA256 2e3e271de504562db3f3d3ef33297ce454a6e1a223f98e4c4480cb2361dcbf28 files/mysql-gui-tools-5.0_p6-lua-modules.patch 672
-DIST mysql-gui-tools-5.0r4.tar.gz 22666771 RMD160 e31f297f92a044c76122adc5d6a3b8d45005b4bf SHA1 a85b86d93bceb3f62edc5d6edbca80bc9eebab8f SHA256 d1cfad4a2380a21830b93c981ac8f7bfe918069b17e20f1e69a6ee56788d26ae
-DIST mysql-gui-tools-5.0r5.tar.gz 22825487 RMD160 e2ebe27931d424895346d588d43b46136011dfcb SHA1 b971dce75ae595d51d8b2d93a088a41a3c63c818 SHA256 513b31f68e66534cebff296cd83d2c166b6f4b41c9813376672cbef128835295
 DIST mysql-gui-tools-5.0r6.tar.gz 22832216 RMD160 27a899d4c4b8a5fcea088d78bf50d1ac1f6a7080 SHA1 69c02a327d80274ebb1a55f8aa81fe6e0d1362e2 SHA256 d3da7654de5d9966659b4de94267342c8590c86c667d9ac95275129886cdabd6
-EBUILD mysql-gui-tools-5.0_p4.ebuild 1624 RMD160 3c295487efce1eda0d1b8d039e1ba794d7c88ef4 SHA1 4aea728edb7f7f937dd8542de043b42420214f28 SHA256 cc9359c705b7468cf500320e00ae1876dfa2d40c028831d2d87aca4728627eea
-MD5 4cfe8c9e817c9a1748433829f1245025 mysql-gui-tools-5.0_p4.ebuild 1624
-RMD160 3c295487efce1eda0d1b8d039e1ba794d7c88ef4 mysql-gui-tools-5.0_p4.ebuild 1624
-SHA256 cc9359c705b7468cf500320e00ae1876dfa2d40c028831d2d87aca4728627eea mysql-gui-tools-5.0_p4.ebuild 1624
-EBUILD mysql-gui-tools-5.0_p5.ebuild 1624 RMD160 ebab231c38150fe58179a8ea42cd0bf1a23045b2 SHA1 fe6be59b9c061feca0b77fd3f2af2159d638ab4c SHA256 048e9508be7054553ca25c0f07930886b7d29bb9a77d8f64189ef876aadcede5
-MD5 c2b4159c8791332a0c67313203ce9ae1 mysql-gui-tools-5.0_p5.ebuild 1624
-RMD160 ebab231c38150fe58179a8ea42cd0bf1a23045b2 mysql-gui-tools-5.0_p5.ebuild 1624
-SHA256 048e9508be7054553ca25c0f07930886b7d29bb9a77d8f64189ef876aadcede5 mysql-gui-tools-5.0_p5.ebuild 1624
 EBUILD mysql-gui-tools-5.0_p6.ebuild 1628 RMD160 a84010d192ae95ca482f90930a582c2588253969 SHA1 4454917d01493a3fd7d85fa66747eebef847a916 SHA256 18f7bf76b2e2518f413026451a3f95efdd947cc33eba03ce362601496207fe5d
 MD5 21f3f7764c2980e48a40b5bcb54d7907 mysql-gui-tools-5.0_p6.ebuild 1628
 RMD160 a84010d192ae95ca482f90930a582c2588253969 mysql-gui-tools-5.0_p6.ebuild 1628
 SHA256 18f7bf76b2e2518f413026451a3f95efdd947cc33eba03ce362601496207fe5d mysql-gui-tools-5.0_p6.ebuild 1628
-MISC ChangeLog 977 RMD160 70cdcdf0d69dceb960c6fe812b1369b390890afb SHA1 1a60fa7e59d91f6570e4a4d64d077f7925f82ab3 SHA256 123c2860287fdc087a71876aea60e2baaeed5a7421adcdb2dbcc9f8e9d0cd269
-MD5 dd8ec58ca5262eb0699e26ce15cafffa ChangeLog 977
-RMD160 70cdcdf0d69dceb960c6fe812b1369b390890afb ChangeLog 977
-SHA256 123c2860287fdc087a71876aea60e2baaeed5a7421adcdb2dbcc9f8e9d0cd269 ChangeLog 977
+MISC ChangeLog 1207 RMD160 786f0a9a0be5af5d49c56b92fc16d053a8bf263a SHA1 99f933bbe526b081c7c3cff80ced5b560d97b516 SHA256 930378c5ff2c89232eb30216b6138141a266d1e07152a910bb1e0c8511a1af48
+MD5 a9b075160894976d4e07ae0fd1a71f88 ChangeLog 1207
+RMD160 786f0a9a0be5af5d49c56b92fc16d053a8bf263a ChangeLog 1207
+SHA256 930378c5ff2c89232eb30216b6138141a266d1e07152a910bb1e0c8511a1af48 ChangeLog 1207
 MISC metadata.xml 272 RMD160 a64205312656df8afaa21bdbf37e15aaec949ced SHA1 7701e9d8d21b6250ae0664d90bebabaa231e908e SHA256 6968e5eb7b4a6b2de487f8942f82c8941a8714f6220f36c72082374ae66baeb4
 MD5 a7f4f1fdfeaf295779bf8da23d2732b7 metadata.xml 272
 RMD160 a64205312656df8afaa21bdbf37e15aaec949ced metadata.xml 272
 SHA256 6968e5eb7b4a6b2de487f8942f82c8941a8714f6220f36c72082374ae66baeb4 metadata.xml 272
-MD5 d1ef1feb19a11248698413b073db12f0 files/digest-mysql-gui-tools-5.0_p4 271
-RMD160 a4e036d98be82cf21f7df4dfe340b3e06fb65a8a files/digest-mysql-gui-tools-5.0_p4 271
-SHA256 29f860ed456ebd8b1dee9279e65ab7e45532f9dcf3e825e091d57ff78f80d7dc files/digest-mysql-gui-tools-5.0_p4 271
-MD5 352c8d75754a7fda0dd85e56c3692633 files/digest-mysql-gui-tools-5.0_p5 271
-RMD160 75723b36566b90afffaa3991f430eff07e58f89c files/digest-mysql-gui-tools-5.0_p5 271
-SHA256 fdf79cbdd9753ba8ef50d756cf57fa8ee78bbc143b8883d2b318cd2c209d1a16 files/digest-mysql-gui-tools-5.0_p5 271
 MD5 3352477bd6b608ec257ac8da026e668a files/digest-mysql-gui-tools-5.0_p6 271
 RMD160 fbcc02966f9e246a270a58b253d4813e27080b63 files/digest-mysql-gui-tools-5.0_p6 271
 SHA256 c7edb0bcd156c9239f770a5438adde7ab3995be464447357491cd40ea5240ca2 files/digest-mysql-gui-tools-5.0_p6 271
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFarBMI1lqEGTUzyQRAvcoAKCDqGxfIHg87JVChsU8BcHPD3Z1WQCfTJfF
-z6P0J3A429QB4siMEHoDpKs=
-=wmPd
+iD8DBQFFex+QI1lqEGTUzyQRArYmAJ9dzLJ/3doGSlspliLK41jeASHLbQCggqKK
+BxUQzHgKisXg4oQ5Mua87OE=
+=BNbH
 -----END PGP SIGNATURE-----
