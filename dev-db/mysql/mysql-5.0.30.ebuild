@@ -1,18 +1,18 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.26-r1.ebuild,v 1.13 2006/12/09 22:33:45 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.30.ebuild,v 1.1 2006/12/09 22:33:45 vivo Exp $
 
 # Leave this empty
 MYSQL_VERSION_ID=""
 MYSQL_RERELEASE=""
 # Set the patchset revision to use, must be either empty or a decimal number
-MYSQL_PATCHSET_REV="3"
-BASE_URI="mirror://mysql/Downloads/MySQL-${PV%.*}"
+MYSQL_PATCHSET_REV="1"
+BASE_URI="ftp://ftp.mysql.com/pub/mysql/src"
 
 inherit mysql
 
 #REMEMBER!!!: update also eclass/mysql*.eclass prior to commit
-KEYWORDS="~alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 
 src_test() {
 	cd "${S}"
@@ -23,9 +23,7 @@ src_test() {
 		local retstatus
 		addpredict /this-dir-does-not-exist/t9.MYI
 
-		cd mysql-test
-		sed -i -e "s|PORT=3306|PORT=3307|g" mysql-test-run
-		./mysql-test-run
+		make test-force-pl
 		retstatus=$?
 
 		# Just to be sure ;)
