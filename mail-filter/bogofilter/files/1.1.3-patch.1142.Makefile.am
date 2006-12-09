@@ -1,0 +1,59 @@
+Index: src/Makefile.am
+===================================================================
+RCS file: /cvsroot/bogofilter/bogofilter/src/Makefile.am,v
+retrieving revision 1.141
+retrieving revision 1.142
+diff -u -B -r1.141 -r1.142
+--- src/Makefile.am	30 Nov 2006 00:14:16 -0000	1.141
++++ src/Makefile.am	9 Dec 2006 13:53:57 -0000	1.142
+@@ -12,22 +12,6 @@
+ 
+ noinst_LIBRARIES = libbogofilter.a
+ 
+-if NEED_GSL
+-libbf_gsl_a_CFLAGS=$(AM_CFLAGS) -DRENAMEFILES
+-libbf_gsl_a_SOURCES= \
+-../gsl/cdf/chisq.c ../gsl/cdf/gamma.c \
+-../gsl/specfunc/gamma_inc.c ../gsl/err/error.c \
+-../gsl/sys/infnan.c ../gsl/sys/fdiv.c \
+-../gsl/specfunc/exp.c ../gsl/specfunc/trig.c \
+-../gsl/specfunc/log.c ../gsl/specfunc/psi.c \
+-../gsl/specfunc/zeta.c ../gsl/specfunc/elementary.c \
+-../gsl/err/stream.c ../gsl/specfunc/expint.c \
+-../gsl/specfunc/erfc.c ../gsl/sys/coerce.c \
+-../gsl/sys/pow_int.c ../gsl/sys/minmax.c
+-noinst_LIBRARIES += libbf_gsl.a
+-libbf_gsl_a_CPPFLAGS= -I$(top_srcdir)
+-endif
+-
+ if USE_GCC4
+ AM_CPPFLAGS = -iquote$(top_srcdir)/gnugetopt -iquote$(top_srcdir)/trio \
+ 	      -I$(srcdir) @GSL_CFLAGS@ -I$(top_srcdir)/gsl/specfunc -I$(top_srcdir)
+@@ -59,8 +43,27 @@
+ bogofilter_LDADD = $(LDADD) $(LIBDB) $(GSL_LIBS)
+ bogoutil_LDADD = $(LDADD) $(LIBDB)
+ configtest_LDADD = $(LDADD) $(LIBDB)
++bogofilter_DEPENDENCIES = $(LDADD)
++
++if NEED_GSL
++libbf_gsl_a_CFLAGS=$(AM_CFLAGS) -DRENAMEFILES
++libbf_gsl_a_SOURCES= \
++../gsl/cdf/chisq.c ../gsl/cdf/gamma.c \
++../gsl/specfunc/gamma_inc.c ../gsl/err/error.c \
++../gsl/sys/infnan.c ../gsl/sys/fdiv.c \
++../gsl/specfunc/exp.c ../gsl/specfunc/trig.c \
++../gsl/specfunc/log.c ../gsl/specfunc/psi.c \
++../gsl/specfunc/zeta.c ../gsl/specfunc/elementary.c \
++../gsl/err/stream.c ../gsl/specfunc/expint.c \
++../gsl/specfunc/erfc.c ../gsl/sys/coerce.c \
++../gsl/sys/pow_int.c ../gsl/sys/minmax.c
++noinst_LIBRARIES += libbf_gsl.a
++libbf_gsl_a_CPPFLAGS= -I$(top_srcdir)
++bogofilter_DEPENDENCIES += libbf_gsl.a
++endif
+ 
+ EXTRA_PROGRAMS=panicenv
++
+ panicenv_SOURCES=panicenv.c
+ panicenv_LDADD=$(LIBDB)
+ 

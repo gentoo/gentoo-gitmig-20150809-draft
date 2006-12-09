@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.92.8.ebuild,v 1.12 2006/10/29 09:18:20 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.92.8.ebuild,v 1.13 2006/12/09 15:48:01 tove Exp $
 
 DESCRIPTION="Bayesian spam filter designed with fast algorithms, and tuned for speed."
 HOMEPAGE="http://bogofilter.sourceforge.net/"
@@ -14,7 +14,7 @@ IUSE="doc"
 RDEPEND="virtual/libc
 	>=sys-libs/db-3.2"
 DEPEND="${DEPEND}
-	!ppc64? ( doc? ( app-text/xmlto ) )"
+	doc? ( app-text/xmlto )"
 
 src_compile() {
 	econf --with-included-gsl || die "configure failed"
