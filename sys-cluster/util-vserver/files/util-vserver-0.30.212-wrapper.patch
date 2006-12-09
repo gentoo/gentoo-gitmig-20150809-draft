@@ -1,0 +1,46 @@
+Index: /home/bene/work/vserver/util-vserver/scripts/vserver-wrapper
+===================================================================
+--- scripts/vserver-wrapper	(revision 2423)
++++ scripts/vserver-wrapper	(working copy)
+@@ -29,7 +29,7 @@
+ 
+ if test -e /etc/init.d/functions; then
+     . /etc/init.d/functions
+-    _beginResult() { echo -n "$@"; }
++    _beginResult() { echo -n "$@ ..."; }
+     lockfile=/var/lock/subsys/$LOCKFILE
+ elif test -e /etc/gentoo-release; then
+     . /sbin/functions.sh
+@@ -39,7 +39,7 @@
+     failure() { eend "$@"; }
+     lockfile=/var/lock/vservers/$LOCKFILE
+ else
+-    _beginResult() { echo -n "$@"; }
++    _beginResult() { echo -n "$@ ..."; }
+     success() { echo .; }
+     passed()  { echo .; }
+     failure() { echo ERROR; }
+@@ -54,13 +54,12 @@
+ 	(2)	passed; rc=0;;
+ 	(*)	failure;;
+     esac
+-    echo
+     return $rc
+ }
+ 
+ function start()
+ {
+-    _beginResult $"Starting vservers of type '$MARK'..."
++    _beginResult $"Starting vservers of type '$MARK'"
+     $_START_VSERVERS -m "$MARK" -j "$NUMPARALLEL" --all --start
+     _tellResult $?
+     local rc=$?
+@@ -70,7 +69,7 @@
+ 
+ function stop()
+ {
+-    _beginResult $"Stopping vservers of type '$MARK'..."
++    _beginResult $"Stopping vservers of type '$MARK'"
+     $_START_VSERVERS -m "$MARK" -j "$NUMPARALLEL" --all --stop
+     _tellResult $?
+     local rc=$?
