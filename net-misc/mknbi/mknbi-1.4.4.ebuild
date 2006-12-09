@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/mknbi-1.4.4.ebuild,v 1.1 2005/11/25 18:31:11 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/mknbi-1.4.4.ebuild,v 1.2 2006/12/09 12:05:10 masterdriverz Exp $
 
 inherit toolchain-funcs eutils
 
@@ -15,7 +15,8 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/perl-5.6.1
-	dev-lang/nasm"
+	dev-lang/nasm
+	!sys-boot/netboot"
 
 src_unpack() {
 	unpack ${A}
