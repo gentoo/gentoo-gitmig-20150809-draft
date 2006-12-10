@@ -5,6 +5,7 @@ dev-libs/libiconv
 # doesnt seem to work
 =app-arch/tar-1.15.91
 =app-arch/tar-1.16-r2
+=app-arch/tar-1.16.1
 >=sys-fs/xfsprogs-2.8.10
 
 # newer versions require stropts.h which uclibc doesnt implement [yet]
