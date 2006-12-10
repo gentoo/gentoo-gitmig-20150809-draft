@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/adns/adns-1.3.ebuild,v 1.2 2006/09/30 21:48:54 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/adns/adns-1.3.ebuild,v 1.3 2006/12/10 00:42:44 drizzt Exp $
 
 inherit eutils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.chiark.greenend.org.uk/users/ian/adns/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~ia64 ~amd64 ~ppc64"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-ppc"
 IUSE=""
 
 DEPEND="virtual/libc"
