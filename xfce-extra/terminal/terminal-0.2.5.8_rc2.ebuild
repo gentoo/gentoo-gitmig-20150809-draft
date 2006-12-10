@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/terminal-0.2.5.8_rc2.ebuild,v 1.2 2006/12/06 05:51:45 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/terminal-0.2.5.8_rc2.ebuild,v 1.3 2006/12/10 20:33:32 nichoj Exp $
 
 inherit gnome2 xfce44 versionator
 
@@ -34,7 +34,7 @@ RDEPEND=">=dev-libs/glib-2
 	x11-libs/libXrender )
 	virtual/x11 )
 	startup-notification? ( >=x11-libs/startup-notification-0.5 )
-	x11-libs/vte
+	>=x11-libs/vte-0.11.11
 	xslt? ( dev-libs/libxslt )
 	>=xfce-extra/exo-0.3.1.12_rc2"
 
