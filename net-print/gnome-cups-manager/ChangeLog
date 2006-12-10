@@ -1,6 +1,9 @@
 # ChangeLog for net-print/gnome-cups-manager
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/ChangeLog,v 1.64 2006/12/03 19:15:52 dertobi123 Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/ChangeLog,v 1.65 2006/12/10 00:51:34 leio Exp $
+
+  10 Dec 2006; Mart Raudsepp <leio@gentoo.org> ChangeLog:
+  Restoring accidentally deleted ChangeLog entries
 
   03 Dec 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   gnome-cups-manager-0.31-r2.ebuild:
@@ -10,3 +13,259 @@
   -gnome-cups-manager-0.31.ebuild:
   old
 
+  25 Nov 2006; Bryan Østergaard <kloeri@gentoo.org>
+  gnome-cups-manager-0.31.ebuild, gnome-cups-manager-0.31-r2.ebuild:
+  Add ~alpha keyword.
+
+  20 Nov 2006; <blubb@gentoo.org> gnome-cups-manager-0.31-r2.ebuild:
+  stable on amd64
+
+  20 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnome-cups-manager-0.31-r2.ebuild:
+  Stable on sparc wrt #155159
+
+  20 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  gnome-cups-manager-0.31-r2.ebuild:
+  stable x86, bug #155159
+
+  18 Nov 2006; Stefan Schweizer <genstef@gentoo.org>
+  -gnome-cups-manager-0.31-r1.ebuild, +gnome-cups-manager-0.31-r2.ebuild:
+  Fix src_install and push out branding and ubuntu scripts fixes
+
+  16 Nov 2006; Stefan Schweizer <genstef@gentoo.org>
+  gnome-cups-manager-0.31-r1.ebuild:
+  Fix bug 147972 by removing the non working parts of the patch thanks to Greg
+  Watson (linuxkrn)
+
+  02 Nov 2006; Stefan Schweizer <genstef@gentoo.org>
+  gnome-cups-manager-0.31-r1.ebuild:
+  remove wrong ubuntu branding thanks to Paul <PLRCA2@gmail.com> in bug 153784
+
+  03 Oct 2006; Aron Griffis <agriffis@gentoo.org>
+  gnome-cups-manager-0.31-r1.ebuild:
+  Mark 0.31-r1 ~ia64
+
+  01 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  gnome-cups-manager-0.31-r1.ebuild:
+  Added ~hppa, bug #147484
+
+*gnome-cups-manager-0.31-r1 (13 Sep 2006)
+
+  13 Sep 2006; Stefan Schweizer <genstef@gentoo.org>
+  +gnome-cups-manager-0.31-r1.ebuild:
+  Use gksu instead of the unmaintained gnomesu, add ubuntu patches with many
+  fixes, drop arches that do not have gksu keyworded, bug 147484
+
+  06 Sep 2006; Joshua Kinard <kumba@gentoo.org>
+  gnome-cups-manager-0.30.ebuild, gnome-cups-manager-0.31.ebuild:
+  Removing mips keywords as gnome is no longer supported on mips.
+
+  06 Aug 2006; Simon Stelling <blubb@gentoo.org>
+  gnome-cups-manager-0.30.ebuild, gnome-cups-manager-0.31.ebuild:
+  disable optimization to fix bug 141929
+
+  28 Jan 2006; Saleem Abdulrasool <compnerd@gentoo.org>
+  gnome-cups-manager-0.31.ebuild:
+  Adding warning about moving to stable for bug #107525
+
+*gnome-cups-manager-0.31 (27 Sep 2005)
+
+  27 Sep 2005; Leonardo Boshell <leonardop@gentoo.org>
+  files/gnome-cups-manager.desktop, +gnome-cups-manager-0.31.ebuild:
+  New version. Added DOCS variable. Updated dependencies. Fixed slight syntax
+  problem in .desktop file.
+
+  12 Jul 2005; Stephen P. Becker <geoman@gentoo.org>
+  gnome-cups-manager-0.30.ebuild:
+  stable on mips
+
+  12 Jun 2005; Heinrich Wendel <lanius@gentoo.org>
+  gnome-cups-manager-0.30.ebuild:
+  Stable on amd64
+
+  12 Jun 2005; Bryan Østergaard <kloeri@gentoo.org>
+  gnome-cups-manager-0.30.ebuild:
+  Stable on alpha.
+
+  12 Jun 2005; Tobias Scherbaum <dertobi123@gentoo.org>
+  gnome-cups-manager-0.30.ebuild:
+  Stable on ppc.
+
+  09 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnome-cups-manager-0.30.ebuild:
+  Stable on sparc
+
+  07 Jun 2005; Heinrich Wendel <lanius@gentoo.org>
+  gnome-cups-manager-0.30.ebuild:
+  mark x86
+
+  25 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
+  gnome-cups-manager-0.28.ebuild:
+  Stable on alpha.
+
+  01 Apr 2005; Lars Weiler <pylon@gentoo.org>
+  gnome-cups-manager-0.28.ebuild:
+  Stable on ppc.
+
+  17 Mar 2005; Heinrich Wendel <lanius@gentoo.org>
+  gnome-cups-manager-0.28.ebuild:
+  fix libgnomecups dependecy
+
+  11 Mar 2005; Heinrich Wendel <lanius@gentoo.org>
+  gnome-cups-manager-0.28.ebuild, gnome-cups-manager-0.30.ebuild:
+  move gnome-cups-manager.desktop to /usr/share/applications
+
+  10 Mar 2005; Heinrich Wendel <lanius@gentoo.org>
+  +files/gnome-cups-manager.desktop, gnome-cups-manager-0.28.ebuild,
+  gnome-cups-manager-0.30.ebuild:
+  install control-center menu entry, bug #53817
+
+*gnome-cups-manager-0.30 (09 Mar 2005)
+
+  09 Mar 2005; Heinrich Wendel <lanius@gentoo.org>
+  +gnome-cups-manager-0.30.ebuild:
+  version bump
+
+  06 Mar 2005; Heinrich Wendel <lanius@gentoo.org>
+  gnome-cups-manager-0.28.ebuild:
+  stable on amd64
+
+  21 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnome-cups-manager-0.28.ebuild:
+  Stable on sparc
+
+  21 Jan 2005; Mike Gardiner <obz@gentoo.org>
+  gnome-cups-manager-0.28.ebuild:
+  Marked stable on x86
+
+  16 Jan 2005; Guy Martin <gmsoft@gentoo.org> gnome-cups-manager-0.23.ebuild:
+  Stable on hppa.
+
+  27 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnome-cups-manager-0.23.ebuild:
+  Stable on sparc
+
+  26 Dec 2004; Joe McCann <joem@gentoo.org> gnome-cups-manager-0.28.ebuild:
+  bump libgnomecups dep to minimum requirement, closes bug 75677. Also bumping
+  intltool dep to 0.29, when the xml-parser dep was added.
+
+  13 Nov 2004; Hardave Riar <hardave@gentoo.org>
+  gnome-cups-manager-0.23.ebuild:
+  Re-added ~mips keyword that was removed.
+
+*gnome-cups-manager-0.28 (24 Dec 2004)
+
+  24 Dec 2004; Heinrich Wendel <lanius@gentoo.org>
+  gnome-cups-manager-0.23.ebuild, +gnome-cups-manager-0.28.ebuild:
+  version bump; mark 0.23 stable on x86
+
+  08 Oct 2004; Guy Martin <gmsoft@gentoo.org> gnome-cups-manager-0.18.ebuild:
+  Marked stable on hppa.
+
+  08 Oct 2004; Alastair Tse <liquidx@gentoo.org>
+  gnome-cups-manager-0.23.ebuild:
+  removing mips keyword for 0.23 until they mark gnomesu
+
+  22 Sep 2004; Heinrich Wendel <lanius@gentoo.org>
+  gnome-cups-manager-0.17.ebuild, gnome-cups-manager-0.23.ebuild:
+  apply gcc 3.4 patch to version 0.17
+
+  26 Aug 2004; Heinrich Wendel <lanius@gentoo.org>
+  gnome-cups-manager-0.23.ebuild:
+  add gnomesu to depend, bug #61747
+
+  24 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnome-cups-manager-0.18.ebuild:
+  Stable on sparc
+
+  24 Aug 2004; Heinrich Wendel <lanius@gentoo.org>
+  gnome-cups-manager-0.18.ebuild:
+  stable on x86
+
+*gnome-cups-manager-0.23 (19 Aug 2004)
+
+  19 Aug 2004; Heinrich Wendel <lanius@gentoo.org>
+  gnome-cups-manager-0.23.ebuild:
+  version bump
+
+  09 Jun 2004; Dylan Carlson <absinthe@gentoo.org>
+  -gnome-cups-manager-0.17-r03202004.ebuild:
+  Removed hardmask and unnecessary ebuild.
+
+*gnome-cups-manager-0.18 (09 Jun 2004)
+
+  09 Jun 2004; Dylan Carlson <absinthe@gentoo.org>
+  +files/gnome-cups-manager-0.18-paren.patch, +gnome-cups-manager-0.18.ebuild:
+  Version bump.  Stable on amd64.  Fixes bug #49242 (cheers Robert Moss).
+
+  14 May 2004; Stephen P. Becker <geoman@gentoo.org>
+  gnome-cups-manager-0.17.ebuild:
+  Stable on mips.
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  gnome-cups-manager-0.17.ebuild:
+  Add inherit eutils
+
+  21 Mar 2004; foser <foser@gentoo.org> gnome-cups-manager-0.17.ebuild :
+  Add patch to fix issues with gtk+-2.4 deprecations (#45259)
+
+  20 Mar 2004; foser <foser@gentoo.org> gnome-cups-manager-0.17-r03202004.ebuild :
+  Add hicolor theme dep, to make sure the icons work
+
+*gnome-cups-manager-0.17-r03202004 (20 Mar 2004)
+
+  20 Mar 2004; foser <foser@gentoo.org> gnome-cups-manager-0.17-r03202004.ebuild :
+  CVS snapshot of HEAD, needed to compile to nautilus view in gnome 2.6
+  Updated deps
+
+  15 Mar 2004; Stephen P. Becker <geoman@gentoo.org>
+  gnome-cups-manager-0.17.ebuild:
+  Added ~mips keyword.
+
+  29 Nov 2003; Brad House <brad_mssw@gentoo.org>
+  gnome-cups-manager-0.17.ebuild:
+  mark stable on amd64
+
+  14 Nov 2003; Aron Griffis <agriffis@gentoo.org>
+  gnome-cups-manager-0.17.ebuild:
+  Stable on ia64
+
+  22 Oct 2003; Bartosch Pixa <darkspecter@gentoo.org>
+  gnome-cups-manager-0.17.ebuild:
+  set ppc in keywords
+
+  17 Oct 2003; Aron Griffis <agriffis@gentoo.org>
+  gnome-cups-manager-0.17.ebuild:
+  Stable on alpha
+
+  08 Oct 2003; Mike Gardiner <obz@gentoo.org> gnome-cups-manager-0.17.ebuild:
+  Tweaked libgnomeui depend to version 2.2, see bug #30110
+
+  05 Oct 2003; Mike Gardiner <obz@gentoo.org> gnome-cups-manager-0.17.ebuild:
+  Marked stable on x86
+
+  16 Sep 2003; Jason Wever <weeve@gentoo.org> gnome-cups-manager-0.17.ebuild:
+  Added ~sparc keyword
+
+  12 Sep 2003; Aron Griffis <agriffis@gentoo.org>
+  gnome-cups-manager-0.17.ebuild:
+  Add ~alpha
+
+  13 Aug 2003; Luca Barbato <lu_zero@gentoo.org>
+  gnome-cups-manager-0.17.ebuild:
+  Marked ~ppc
+
+  11 Jul 2003; Alastair Tse <liquidx@gentoo.org>
+  gnome-cups-manager-0.16.ebuild, gnome-cups-manager-0.17.ebuild:
+  lets have a more serious description
+
+*gnome-cups-manager-0.17 (05 Jul 2003)
+
+  05 Jul 2003; Alastair Tse <liquidx@gentoo.org>
+  gnome-cups-manager-0.17.ebuild:
+  version bump. should start work now with natilius' printer://
+
+*gnome-cups-manager-0.16 (24 Jun 2003)
+
+  24 Jun 2003; foser <foser@gentoo.org> gnome-cups-manager-0.16.ebuild, ChangeLog :
+  Initial commit, cups frontend
