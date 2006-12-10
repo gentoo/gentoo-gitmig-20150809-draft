@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Nmap-Parser/Nmap-Parser-1.05.ebuild,v 1.3 2006/11/17 20:47:56 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Nmap-Parser/Nmap-Parser-1.05.ebuild,v 1.4 2006/12/10 12:31:51 yuval Exp $
 
 inherit perl-module
 
@@ -16,6 +16,6 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND="dev-lang/perl
-	perl-core/Storable
+	virtual/perl-Storable
 	>=dev-perl/XML-Twig-3.16"
 RDEPEND="${DEPEND}"
