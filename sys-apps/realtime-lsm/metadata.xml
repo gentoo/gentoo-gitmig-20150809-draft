@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<longdescription>
+	<herd>sound</herd>
+	<maintainer>
+		<email>sound@gentoo.org</email>
+	</maintainer>
+  <longdescription>
 Realtime Linux Security Module
 
 This Linux Security Module (LSM) enables realtime capabilities.
@@ -29,5 +32,5 @@ used in conjunction with any of the other options.
 The JACK Audio Connection Kit (jackit.sourceforge.net) includes a
 jackstart program which uses CAP_SETPCAP to run the JACK daemon
 and its clients with realtime capabilities.
-</longdescription>
+  </longdescription>
 </pkgmetadata>
