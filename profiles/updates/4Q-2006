@@ -15,5 +15,6 @@ move sys-devel/gcc-hppa64 sys-devel/kgcc64
 move dev-php5/pecl-sdo dev-php5/pecl-sca_sdo
 move net-misc/asterisk-chan_capi-cm net-misc/asterisk-chan_capi
 slotmove =dev-java/xerces-2.6* 2 2.6
+move sys-fs/ecryptfs-util sys-fs/ecryptfs-utils
 move dev-java/datavision-bin dev-java/datavision
 move dev-java/jgoodies-looks-bin dev-java/jgoodies-looks
