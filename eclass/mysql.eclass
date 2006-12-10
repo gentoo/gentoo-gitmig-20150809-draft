@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.46 2006/12/10 01:11:47 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.47 2006/12/10 02:33:30 vivo Exp $
 
 # Author: Francesco Riosa <vivo@gentoo.org>
 # Maintainer: Luca Longinotti <chtekk@gentoo.org>
@@ -167,6 +167,13 @@ configure_minimal() {
 	done
 	myconf="${myconf} --with-extra-charsets=none"
 	myconf="${myconf} --enable-local-infile"
+
+	if useq "static" ; then
+		myconf="${myconf} --with-client-ldflags=-all-static"
+		myconf="${myconf} --disable-shared"
+	else
+		myconf="${myconf} --enable-shared --enable-static"
+	fi
 }
 
 configure_common() {
