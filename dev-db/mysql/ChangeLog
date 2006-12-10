@@ -1,6 +1,22 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.379 2006/12/10 02:25:09 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.380 2006/12/10 13:33:48 vivo Exp $
+
+*mysql-4.1.22 (10 Dec 2006)
+
+  10 Dec 2006; Francesco Riosa <vivo@gentoo.org> +mysql-4.1.22.ebuild:
+  As everybody already know mysql is now splitted in community and enterprise
+  to better serve their customers, both versions are still under the GPL
+  umbrella
+  and there is already a lot of information in internet aabout this.
+  The "cs" and "en" sources are packaged as dev-db/mysql,
+  dev-db/mysql-community.
+  Now 4.1.22 homepage show it as community sources but it will appear here too,
+  the motivations are listed below:
+  - gentoo-team were told by upstream that {cs,en} split only apply to >= 5.0.27
+  - comparing the sources with previous don't show differences in fex
+    "mysql.info" file, the same file instead is different in 5.0.{27,28} and add
+    an explanation of differences between the two releases.
 
   10 Dec 2006; Francesco Riosa <vivo@gentoo.org> mysql-3.23.58-r1.ebuild,
   mysql-5.0.30.ebuild:
