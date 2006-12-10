@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.5.1-r1.ebuild,v 1.4 2006/10/22 17:25:15 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.5.1-r1.ebuild,v 1.5 2006/12/10 19:23:34 ribosome Exp $
 
 inherit perl-module eutils
 
@@ -14,12 +14,12 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="mysql gd"
 
 DEPEND="
-	perl-core/File-Temp
+	virtual/perl-File-Temp
 	dev-perl/HTML-Parser
 	dev-perl/IO-String
 	dev-perl/IO-stringy
 	dev-perl/SOAP-Lite
-	perl-core/Storable
+	virtual/perl-Storable
 	dev-perl/XML-DOM
 	dev-perl/XML-Parser
 	dev-perl/XML-Writer
