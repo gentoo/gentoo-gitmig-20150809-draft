@@ -1,0 +1,11 @@
+--- giram-0.3.5.fbsd/src/tools/tool_disc.c	2006-12-10 01:15:56.000000000 -0200
++++ giram-0.3.5/src/tools/tool_disc.c	2006-12-10 01:23:21.000000000 -0200
+@@ -33,7 +33,7 @@
+ 
+ #include "giramintl.h"
+ 
+-static int DiscWithHoleFlag;
++int DiscWithHoleFlag;
+ 
+ static double Xorg, Yorg, Radius, HoleRadius;
+ static guint id;

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/giram/giram-0.3.5.ebuild,v 1.3 2005/12/15 22:09:59 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/giram/giram-0.3.5.ebuild,v 1.4 2006/12/10 03:30:54 vanquirius Exp $
 
 inherit eutils libtool
 
@@ -23,6 +23,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}"/${P}-fbsd.patch
+	# bug 154273
+	epatch "${FILESDIR}"/${PN}-0.3.5-tool_disc.diff
 	cd "${S}"/povfront
 	sed -i -e "s:strlen (g_config_file_to_parse) == 0:g_config_file_to_parse == NULL:" povfront.c
 	cd "${S}"; elibtoolize
