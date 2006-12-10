@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-1.0.1.ebuild,v 1.1 2006/10/19 07:46:53 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-1.0.1.ebuild,v 1.2 2006/12/10 09:46:45 beu Exp $
 
 inherit eutils
 DESCRIPTION="Varnish is an HTTP accelerator"
@@ -11,8 +11,7 @@ LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="sys-libs/ncurses"
-RDEPEND="${DEPEND}"
+
 src_compile() {
 	econf || die "econf failed"
 	emake || die "emake failed"
