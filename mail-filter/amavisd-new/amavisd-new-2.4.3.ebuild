@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.4.3.ebuild,v 1.1 2006/10/04 14:17:25 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.4.3.ebuild,v 1.2 2006/12/10 20:48:12 ticho Exp $
 
 inherit eutils
 
@@ -109,12 +109,6 @@ src_install() {
 			/etc/amavisd.conf
 	else
 		dosed "s:^#\\?\\\$mydomain[^;]*;:\$mydomain = '$(dnsdomainname)';:" \
-			/etc/amavisd.conf
-	fi
-	if ! $(has_version mail-filter/spamassassin) ; then
-		einfo "Disabling anti-spam code in amavisd.conf..."
-
-		dosed "s:^#[\t ]*@bypass_spam_checks_maps[\t ]*=[\t ]*(1);:\@bypass_spam_checks_maps = (1);:" \
 			/etc/amavisd.conf
 	fi
 

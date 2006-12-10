@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.96 2006/10/20 21:18:51 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.97 2006/12/10 20:48:12 ticho Exp $
+
+  10 Dec 2006; Andrej Kacian <ticho@gentoo.org> amavisd-new-2.3.3-r2.ebuild,
+  amavisd-new-2.4.1.ebuild, amavisd-new-2.4.2.ebuild,
+  amavisd-new-2.4.2-r1.ebuild, amavisd-new-2.4.3.ebuild:
+  Do not change config file to disable spam checks - amavisd-new disables them
+  automagically if SA is not present. Suggested by Andrew Gaffney <agaffney at
+  gentoo.org>.
 
   20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   amavisd-new-2.4.1.ebuild:
