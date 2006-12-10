@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.92 2006/11/20 01:29:30 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.93 2006/12/10 20:22:46 ticho Exp $
+
+  10 Dec 2006; Andrej Kacian <ticho@gentoo.org> epiphany-2.16.2.ebuild:
+  Stable on x86, bug #156662.
 
 *epiphany-2.16.2 (20 Nov 2006)
 
