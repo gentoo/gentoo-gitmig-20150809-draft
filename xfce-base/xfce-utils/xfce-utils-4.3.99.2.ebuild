@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.3.99.2.ebuild,v 1.1 2006/12/05 17:01:42 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.3.99.2.ebuild,v 1.2 2006/12/10 20:06:37 nichoj Exp $
 
 inherit eutils xfce44
 
@@ -15,10 +15,11 @@ RDEPEND="|| ( x11-apps/xrdb
 	dev-libs/dbh
 	>=dev-libs/glib-2.2
 	>=x11-libs/gtk+-2.2
+	media-libs/libpng
 	~xfce-base/libxfce4util-${PV}
 	~xfce-base/libxfcegui4-${PV}
-	media-libs/libpng
-	~xfce-base/libxfce4mcs-${PV}"
+	~xfce-base/libxfce4mcs-${PV}
+	~xfce-base/xfce-mcs-manager-${PV}"
 
 XFCE_CONFIG="--enable-gdm --with-vendor-info=Gentoo"
 
@@ -31,7 +32,7 @@ src_unpack() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	xfce44_src_install
 
 	insinto /usr/share/xfce4/
 	newins ${FILESDIR}/Gentoo Gentoo
