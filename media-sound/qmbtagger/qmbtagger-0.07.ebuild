@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/qmbtagger-0.07.ebuild,v 1.10 2006/10/28 00:57:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/qmbtagger-0.07.ebuild,v 1.11 2006/12/10 15:58:24 aballier Exp $
 
 inherit eutils kde-functions
 
@@ -15,7 +15,7 @@ KEYWORDS="amd64 ~ppc x86"
 IUSE="ogg debug"
 
 RDEPEND="=x11-libs/qt-3*
-	~media-libs/flac-1.1.2
+	media-libs/flac
 	media-libs/id3lib
 	media-libs/musicbrainz
 	media-libs/libmad
@@ -29,6 +29,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-errno.patch"
+	epatch "${FILESDIR}/${P}+flac-1.1.3.patch"
 
 	rm -rf "${S}/admin"
 	ln -s "${WORKDIR}/admin" "${S}/admin"

@@ -1,0 +1,98 @@
+diff -ru qmbtagger-0.07/configure.in qmbtagger-0.07-b2/configure.in
+--- qmbtagger-0.07/configure.in	2004-06-15 16:50:14.000000000 -0700
++++ qmbtagger-0.07-b2/configure.in	2004-06-15 16:50:14.000000000 -0700
+@@ -140,7 +140,7 @@
+ 		AC_MSG_RESULT($have_lib)
+ 		if test $have_lib = yes; then
+ 			AC_DEFINE(USE_FLAC, 1, [FLAC support on])
+-			BLIBS="$BLIBS -lFLAC++ -lFLAC"
++			BLIBS="$BLIBS -lFLAC++ -lFLAC -logg"
+ 			use_FLAC=1
+ 		fi
+ 	])
+diff -ru qmbtagger-0.07/configure.in.in qmbtagger-0.07-b2/configure.in.in
+--- qmbtagger-0.07/configure.in.in	2004-06-15 16:50:14.000000000 -0700
++++ qmbtagger-0.07-b2/configure.in.in	2004-06-15 16:50:14.000000000 -0700
+@@ -136,7 +136,7 @@
+ 		AC_MSG_RESULT($have_lib)
+ 		if test $have_lib = yes; then
+ 			AC_DEFINE(USE_FLAC, 1, [FLAC support on])
+-			BLIBS="$BLIBS -lFLAC++ -lFLAC"
++			BLIBS="$BLIBS -lFLAC++ -lFLAC -logg"
+ 			use_FLAC=1
+ 		fi
+ 	])
+diff -ru qmbtagger-0.07/src/qmbflacfile.cpp qmbtagger-0.07-b2/src/qmbflacfile.cpp
+--- qmbtagger-0.07/src/qmbflacfile.cpp	2004-05-01 13:18:00.000000000 -0700
++++ qmbtagger-0.07-b2/src/qmbflacfile.cpp	2006-10-31 23:12:28.000000000 -0800
+@@ -23,6 +23,7 @@
+ 
+ #include "qmbflacfile.h"
+ #include "qmbfile.h"
++#include <errno.h>
+ #include <stdio.h>
+ #include <fstream>
+ #include <qapplication.h>
+@@ -30,6 +31,13 @@
+ #include <musicbrainz/mb_c.h>
+ #include <FLAC++/metadata.h>
+ 
++/* by LEGACY_FLAC we mean before FLAC 1.1.3 when the APIs were simplified. */
++#if !defined(FLACPP_API_VERSION_CURRENT) || FLACPP_API_VERSION_CURRENT < 6
++#define LEGACY_FLAC
++#else
++#undef LEGACY_FLAC
++#endif
++
+ QMBFLACFile::QMBFLACFile()
+ 	: QMBFile(), FLAC::Decoder::File(), offset(0), decode_error(false)
+ {
+@@ -66,13 +74,16 @@
+ 	int lastslash = filename.findRev('/');
+ 	metadata.SetFileName(filename.right(filename.length() - lastslash - 1));
+ 
++#ifdef LEGACY_FLAC
+ 	//set the filename with the FLAC::Decoder::File class
+ 	set_filename(fullfilename.latin1());
++#endif
+ 
+ 	//tell the decoder to call the metadata callback on vorbis comments so we can get the metadata already stored in the file
+ 	set_metadata_respond(FLAC__METADATA_TYPE_VORBIS_COMMENT);
+ 	
+ 	//Start reading the FLAC file
++#ifdef LEGACY_FLAC
+ 	FLAC__FileDecoderState state = init();
+ 	
+ 	if (state != FLAC__FILE_DECODER_OK) {
+@@ -80,11 +91,19 @@
+ 		finish();
+ 		return -1;
+ 	}
++#else
++	FLAC__StreamDecoderInitStatus status = init(fullfilename.latin1());
++	
++	if (status != FLAC__STREAM_DECODER_INIT_STATUS_OK) {
++		qWarning("QMBFLACFile::Extract(): error opening file: %i (%s).", status, FLAC__StreamDecoderInitStatusString[status]);
++		finish();
++		return -1;
++	}
++#endif
+ 	
+ 	//read through all the metadata so our callback can catch it all
+ 	if(!process_until_end_of_metadata ()) {
+-		state = get_state();
+-		qWarning("QMBFLACFile::Extract(): error getting metadata: %i (%s).", state, FLAC__FileDecoderStateString[state]);
++		qWarning("QMBFLACFile::Extract(): error getting metadata: (%s).", get_state().as_cstring());
+ 		decode_error = true;
+ 		finish();
+ 		return -2;
+@@ -116,8 +135,7 @@
+ 	//now lets get the data from the FLAC file
+ 	while (!decode_error && offset < (unsigned long) bufferlen) {
+ 		if (!process_single()) {
+-			state = get_state();
+-			qWarning("QMBFLACFile::Extract(): error getting raw data: %i (%s).", state, FLAC__FileDecoderStateString[state]);
++			qWarning("QMBFLACFile::Extract(): error getting raw data: (%s).", get_state().as_cstring());
+ 			decode_error = true;
+ 			finish();
+ 			return -2;
