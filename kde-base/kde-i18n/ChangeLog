@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kde-i18n
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.124 2006/12/06 12:28:04 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.125 2006/12/10 15:32:32 deathwing00 Exp $
+
+  10 Dec 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  kde-i18n-3.5.5.ebuild:
+  Removed death message when there were issues with the LINGUAS environment
+  variable. Now, if LINGUAS is not set or it contains _only_ unsupported
+  languages, an informative message is shown and the package works the same
+  way as if LINGUAS had only the 'en' locale code. When there is only the 'en'
+  locale code, the ebuild marks itself as installed, even if it doesn't
+  actually pull anything. Complements bug #137297.
 
   06 Dec 2006; <kloeri@gentoo.org> kde-i18n-3.5.5.ebuild:
   Stable on Alpha.
