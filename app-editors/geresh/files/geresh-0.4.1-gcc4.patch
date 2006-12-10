@@ -1,0 +1,21 @@
+diff -Naur geresh-0.4.1-orig/editbox.h geresh-0.4.1/editbox.h
+--- geresh-0.4.1-orig/editbox.h	2006-12-10 07:42:48.000000000 -0600
++++ geresh-0.4.1/editbox.h	2006-12-10 07:43:09.000000000 -0600
+@@ -671,7 +671,7 @@
+ 			    int para_num
+ 			);
+ 
+-    void EditBox::redraw_unwrapped_paragraph(
++    void redraw_unwrapped_paragraph(
+ 			    Paragraph &p,
+ 			    int window_start_line,
+ 			    bool only_cursor,
+@@ -683,7 +683,7 @@
+ 			    bool eop_is_selected
+ 			);
+ 
+-    void EditBox::redraw_wrapped_paragraph(
++    void redraw_wrapped_paragraph(
+ 			    Paragraph &p,
+ 			    int window_start_line,
+ 			    bool only_cursor,
