@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfm-ripper/lastfm-ripper-1.2.1-r3.ebuild,v 1.1 2006/12/03 03:29:47 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfm-ripper/lastfm-ripper-1.2.1-r3.ebuild,v 1.2 2006/12/10 05:52:59 pclouds Exp $
 
 inherit perl-module eutils
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="amazon tagwriting minimal"
 
-DEPEND="perl-core/Getopt-Long
-	perl-core/Digest-MD5
+DEPEND="virtual/perl-Getopt-Long
+	virtual/perl-Digest-MD5
 	!minimal? ( dev-perl/Term-ReadPassword )
 	tagwriting? ( dev-perl/MP3-Tag )
 	amazon? ( dev-perl/MP3-Tag dev-perl/Net-Amazon )"
