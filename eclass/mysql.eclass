@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.45 2006/12/09 22:35:13 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.46 2006/12/10 01:11:47 vivo Exp $
 
 # Author: Francesco Riosa <vivo@gentoo.org>
 # Maintainer: Luca Longinotti <chtekk@gentoo.org>
@@ -157,15 +157,16 @@ mysql_init_vars() {
 }
 
 configure_minimal() {
-		# These are things we exclude from a minimal build, please
-		# note that the server actually does get built and installed,
-		# but we then delete it before packaging.
-		local minimal_exclude_list="server embedded-server extra-tools innodb bench berkeley-db row-based-replication"
+	# These are things we exclude from a minimal build, please
+	# note that the server actually does get built and installed,
+	# but we then delete it before packaging.
+	local minimal_exclude_list="server embedded-server extra-tools innodb bench berkeley-db row-based-replication"
 
-		for i in ${minimal_exclude_list} ; do
-			myconf="${myconf} --without-${i}"
-		done
-		myconf="${myconf} --with-extra-charsets=none"
+	for i in ${minimal_exclude_list} ; do
+		myconf="${myconf} --without-${i}"
+	done
+	myconf="${myconf} --with-extra-charsets=none"
+	myconf="${myconf} --enable-local-infile"
 }
 
 configure_common() {
