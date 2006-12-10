@@ -1,9 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.37 2006/12/09 20:39:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.38 2006/12/10 07:34:03 compnerd Exp $
 
 # Saleem Abdulrasool <compnerd@gentoo.org>
 # Requires GNOME 2.16
+>=dev-dotnet/gnome-sharp-2.16.0
 >=dev-dotnet/gnomevfs-sharp-2.16.0
 
 # Christian Faulhammer <opfer@gentoo.org>
