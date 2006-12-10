@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/jxtray
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/ChangeLog,v 1.9 2006/11/30 15:16:08 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/ChangeLog,v 1.10 2006/12/10 22:26:52 wltjr Exp $
+
+*jxtray-0.5-r1 (10 Dec 2006)
+
+  10 Dec 2006; William L. Thomson Jr. <wltjr@gentoo.org> metadata.xml,
+  +jxtray-0.5-r1.ebuild:
+  Initial package migration to gen 2. Might still need some cleanups and etc.
+  Possibly a stale package but still works. Upstream has not had a release
+  since 12/05.
 
   30 Nov 2006; Vlastimil Babka <caster@gentoo.org> jxtray-0.5.ebuild:
   Update xerces dep for upcoming 2.6 slotmove.
