@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-1.10.ebuild,v 1.2 2006/05/16 18:46:07 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-1.10.ebuild,v 1.3 2006/12/10 09:34:17 beu Exp $
 
 inherit flag-o-matic
 
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64"
 IUSE="ssl msdav unsafe static"
 
-DEPEND="virtual/libc
-	ssl? ( dev-libs/openssl )"
+DEPEND="ssl? ( dev-libs/openssl )"
 
 S="${WORKDIR}/${MY_P}"
 
