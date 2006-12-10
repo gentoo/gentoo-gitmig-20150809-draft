@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.7.5.ebuild,v 1.1 2006/12/10 03:43:03 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.7.5.ebuild,v 1.2 2006/12/10 21:48:12 cedk Exp $
 
 inherit distutils
 
@@ -21,6 +21,7 @@ src_install() {
 
 	newinitd files/gentoo-initd fail2ban
 	dodoc CHANGELOG README TODO
+	doman man/*.1
 }
 
 pkg_postinst() {
