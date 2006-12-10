@@ -1,19 +1,25 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/gigabase-3.52.ebuild,v 1.2 2006/12/10 18:30:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/gigabase-3.54.ebuild,v 1.1 2006/12/10 18:30:36 pva Exp $
 
-inherit multilib
+inherit eutils multilib
 
 DESCRIPTION="OO-DBMS with interfaces for C/C++/Java/PHP/Perl"
 HOMEPAGE="http://www.garret.ru/~knizhnik/gigabase.html"
 SRC_URI="mirror://sourceforge/gigabase/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~s390 ~x86"
+KEYWORDS="~amd64 ~s390 ~x86"
 IUSE="doc"
 DEPEND=""
 
 S="${WORKDIR}"/gigabase
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-cli.h-redudant-typedef-fix.patch
+}
 
 src_compile() {
 	mf="${S}/Makefile"
