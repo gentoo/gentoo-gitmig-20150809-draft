@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb-messenger/qc-usb-messenger-1.5.ebuild,v 1.1 2006/12/07 19:30:29 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb-messenger/qc-usb-messenger-1.5.ebuild,v 1.2 2006/12/10 08:34:45 zzam Exp $
 
 inherit eutils linux-mod
 
@@ -16,6 +16,9 @@ KEYWORDS="~x86 ~amd64"
 CONFIG_CHECK="USB VIDEO_DEV VIDEO_V4L1_COMPAT"
 MODULE_NAMES="quickcam(usb:)"
 BUILD_TARGETS="all"
+
+DEPEND="virtual/linux-sources
+	!media-video/qc-usb"
 
 pkg_setup() {
 	ABI=${KERNEL_ABI}
