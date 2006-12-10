@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2409 2006/12/10 20:18:09 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2410 2006/12/10 22:46:38 metalgod Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -827,6 +827,7 @@ media-sound/audacious:modplug - Build with modplug support
 media-sound/audacious:sid - Build with SID (Commodore 64 Audio) support
 media-sound/audacious:timidity - Build with Timidity++ (MIDI sequencer) support
 media-sound/audacious:wma - Build with WMA (Windows Media Audio) support
+media-sound/banshee:boo - Use external Boo instead of the bundled one
 media-sound/banshee:daap - Build with Daap support
 media-sound/banshee:njb - Build with njb audio player support
 media-sound/bmpx:ofa - Build with ofa/PUID checking support for MusicBrainz metadata
