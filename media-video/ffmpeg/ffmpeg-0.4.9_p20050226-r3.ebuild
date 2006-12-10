@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050226-r3.ebuild,v 1.16 2006/02/15 13:54:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050226-r3.ebuild,v 1.17 2006/12/10 18:29:46 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -127,7 +127,7 @@ src_install() {
 	done
 
 	cd ${S_SHARED}
-	dodoc ChangeLog README INSTALL
+	dodoc Changelog README INSTALL
 	dodoc doc/*
 
 	cd ${S_STATIC}/libavcodec/libpostproc
