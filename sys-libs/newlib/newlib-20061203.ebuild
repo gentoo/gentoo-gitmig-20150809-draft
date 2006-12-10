@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/newlib-20061203.ebuild,v 1.1 2006/12/04 00:27:25 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/newlib-20061203.ebuild,v 1.2 2006/12/10 00:46:54 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -71,5 +71,6 @@ src_install() {
 	emake -j1 DESTDIR="${D}" install
 	env -uRESTRICT CHOST=${CTARGET} prepallstrip
 	# minor hack to keep things clean
+	rm -fR "${D}"/usr/share/info
 	rm -fR "${D}"/usr/info
 }
