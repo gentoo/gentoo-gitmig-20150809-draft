@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/libvisual-0.2.0.ebuild,v 1.9 2006/02/24 23:53:38 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/libvisual-0.2.0.ebuild,v 1.10 2006/12/10 16:15:43 opfer Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="Libvisual is an abstraction library that comes between applications and audio visualisation plugins."
 HOMEPAGE="http://libvisual.sourceforge.net/"
@@ -23,6 +23,8 @@ src_unpack() {
 }
 
 src_compile() {
+	# force MMX on x86 to fix compilation, see bug 146335 
+	use x86 && append-flags -mmmx
 	econf $(use_enable static) || die
 	emake || die
 }
