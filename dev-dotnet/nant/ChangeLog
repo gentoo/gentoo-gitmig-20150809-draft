@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/nant
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/ChangeLog,v 1.7 2006/09/16 18:11:55 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/ChangeLog,v 1.8 2006/12/10 02:38:37 compnerd Exp $
+
+*nant-0.85 (10 Dec 2006)
+
+  10 Dec 2006; Saleem Abdulrasool <compnerd@gentoo.org> +nant-0.85.ebuild:
+  Version bump from upstream (bug #137443)
 
   16 Sep 2006; Peter Johanson <latexer@gentoo.org>
   +files/nant-0.85_rc3-assignfix.diff, -nant-0.85_rc2.ebuild,
