@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.58-r1.ebuild,v 1.20 2006/04/12 04:12:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.58-r1.ebuild,v 1.21 2006/12/10 02:25:09 vivo Exp $
 
 inherit flag-o-matic eutils
 
@@ -14,7 +14,7 @@ DESCRIPTION="A fast, multi-threaded, multi-user SQL database server."
 HOMEPAGE="http://www.mysql.com/"
 SRC_URI="ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/${SDIR}/${P}.tar.gz
 	ftp://mysql.valueclick.com/pub/mysql/Downloads/${SDIR}/${P}.tar.gz
-	mirror://gentoo/mysql-extras-20050920.tar.bz2"
+	mirror://gentoo/mysql-extras-20061210.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -47,6 +47,9 @@ src_unpack() {
 	epatch ${MY_PATCH_SOURCE}/mysql-3.23-my-print-defaults.diff || die
 	#patch -p1 < ${MY_PATCH_SOURCE}/mysql-3.23.51-tcpd.patch || die
 	#epatch ${MY_PATCH_SOURCE}/mysql-4.0.14-security-28394.patch
+	epatch ${MY_PATCH_SOURCE}/020_all_gentoo-nptl.patch || die
+	sed -e "s|res=.grep Linuxthreads|res=1 #\`grep Linuxthreads|" \
+	-i  ${S}/configure
 
 	# security fix from http://lists.mysql.com/internals/15185
 	# gentoo bug #60744
