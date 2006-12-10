@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/XML-Twig-3.22.ebuild,v 1.13 2006/10/25 20:25:35 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/XML-Twig-3.22.ebuild,v 1.14 2006/12/10 13:48:03 mcummings Exp $
 
 inherit perl-module
 
@@ -17,7 +17,7 @@ SRC_TEST="do"
 
 # Twig ONLY works with expat 1.95.5
 DEPEND=">=dev-perl/XML-Parser-2.31
-	perl-core/Scalar-List-Utils
+	virtual/perl-Scalar-List-Utils
 	>=dev-libs/expat-1.95.5
 	dev-perl/Tie-IxHash
 	dev-perl/XML-SAX-Writer
