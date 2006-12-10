@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/boa-0.94.14_rc21.ebuild,v 1.1 2005/07/28 15:36:15 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/boa-0.94.14_rc21.ebuild,v 1.2 2006/12/10 09:06:58 beu Exp $
 
 inherit eutils
 
@@ -14,14 +14,9 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="tetex"
 S=${WORKDIR}/${PN}-${MY_PV}
-DEPEND="virtual/libc
-	sys-devel/flex
+DEPEND="sys-devel/flex
 	sys-devel/bison
-	sys-apps/texinfo
 	tetex? ( virtual/tetex )"
-
-
-RDEPEND="virtual/libc"
 
 src_compile() {
 	econf || die "econf failed"
