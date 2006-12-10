@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/fwlanusb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/fwlanusb/ChangeLog,v 1.4 2006/08/10 22:55:46 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/fwlanusb/ChangeLog,v 1.5 2006/12/10 23:36:55 sbriesen Exp $
+
+*fwlanusb-0.09.00_beta-r2 (10 Dec 2006)
+
+  10 Dec 2006; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/fwlanusb-0.09.00_beta-kernel_2.6.19.diff,
+  +fwlanusb-0.09.00_beta-r2.ebuild:
+  patches for kernel 2.6.19 + SMP fixes + support for newer sticks.
 
 *fwlanusb-0.09.00_beta-r1 (10 Aug 2006)
 

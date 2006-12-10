@@ -1,0 +1,184 @@
+diff -Naur src.orig/buffers.c src/buffers.c
+--- src.orig/buffers.c	2005-12-23 15:12:09.000000000 +0100
++++ src/buffers.c	2006-12-11 00:25:07.000000000 +0100
+@@ -29,8 +29,8 @@
+ 
+ /*---------------------------------------------------------------------------*\
+ \*---------------------------------------------------------------------------*/
+-#define	lock_pool(p)	spin_lock_irqsave(p->lock, flags)
+-#define	unlock_pool(p)	spin_unlock_irqrestore(p->lock, flags)
++#define	lock_pool(p)	spin_lock_irqsave(&p->lock, flags)
++#define	unlock_pool(p)	spin_unlock_irqrestore(&p->lock, flags)
+ 
+ /*---------------------------------------------------------------------------*\
+ \*---------------------------------------------------------------------------*/
+@@ -200,7 +200,7 @@
+ 		if (pool->ubf[ix].flag == URB_SUBMITTED) {
+ 			num++;
+ 			if (async) {
+-				pool->ubf[ix].urb->transfer_flags |= URB_ASYNC_UNLINK;
++				/* pool->ubf[ix].urb->transfer_flags |= URB_ASYNC_UNLINK; */
+ 				usb_unlink_urb (pool->ubf[ix].urb);
+ 			} else {
+ 				usb_kill_urb (pool->ubf[ix].urb);
+diff -Naur src.orig/driver.c src/driver.c
+--- src.orig/driver.c	2005-12-23 15:12:09.000000000 +0100
++++ src/driver.c	2006-12-11 00:07:09.000000000 +0100
+@@ -60,9 +60,15 @@
+ int net_tx (struct sk_buff *skb, struct net_device *dev);
+ struct net_device_stats *net_stats (struct net_device *dev);
+ 
++#if (LINUX_VERSION_CODE < KERNEL_VERSION(2,6,19))
+ static void usb_cmd_complete (struct urb *purb, struct pt_regs *ptr);
+ static void usb_read_complete (struct urb *purb, struct pt_regs *ptr);
+ static void usb_write_complete (struct urb *purb, struct pt_regs *ptr);
++#else
++static void usb_cmd_complete (struct urb *purb);
++static void usb_read_complete (struct urb *purb);
++static void usb_write_complete (struct urb *purb);
++#endif
+ 
+ //static void rx_task (unsigned long data);
+ //static void tx_task (unsigned long data);
+@@ -473,7 +479,11 @@
+ 
+ /*--U------------------------------------------------------------------------*\
+ \*---------------------------------------------------------------------------*/
++#if (LINUX_VERSION_CODE < KERNEL_VERSION(2,6,19))
+ static void usb_write_complete (struct urb *purb1, struct pt_regs *ptr) {
++#else
++static void usb_write_complete (struct urb *purb1) {
++#endif
+ 
+ #ifdef LOG_USB	
+ 	LOG("usb_write_complete: TX URB %p completed.\n", purb1);
+@@ -516,7 +526,11 @@
+ 
+ /*---------------------------------------------------------------------------*\
+ \*---------------------------------------------------------------------------*/
++#if (LINUX_VERSION_CODE < KERNEL_VERSION(2,6,19))
+ static void usb_read_complete (struct urb *purb1, struct pt_regs *ptr) {
++#else
++static void usb_read_complete (struct urb *purb1) {
++#endif
+ 
+ #ifdef LOG_USB	
+ 	LOG("usb_read_complete: RX URB %p completed.\n", purb1);
+@@ -597,13 +611,17 @@
+ 
+ /*---------------------------------------------------------------------------*\
+ \*---------------------------------------------------------------------------*/
++#if (LINUX_VERSION_CODE < KERNEL_VERSION(2,6,19))
+ static void usb_cmd_complete (struct urb *purb1, struct pt_regs *ptr) {
++#else
++static void usb_cmd_complete (struct urb *purb1) {
++#endif
+ 
+ #ifdef LOG_USB	
+ 	LOG ("usb_cmd_complete: USB cmd complete for URB: %p\n", purb1);
+ #endif
+ 	
+-	UNUSED_ARG (ptr);
++	/* UNUSED_ARG (ptr); */
+ 	assert (purb1 != NULL);
+ 
+ 	os_protect_lock (wlan_card, wlan_card->system_lock);
+diff -Naur src.orig/lib.c src/lib.c
+--- src.orig/lib.c	2005-12-23 15:12:09.000000000 +0100
++++ src/lib.c	2006-12-11 00:22:28.000000000 +0100
+@@ -399,7 +399,7 @@
+ 	}
+ #endif
+ 	
+-	spin_lock_irqsave (lock_data->lock, local_flags);
++	spin_lock_irqsave (&lock_data->lock, local_flags);
+ 	lock_data->flags = local_flags;
+ }
+ 	
+@@ -423,7 +423,7 @@
+ 	}
+ #endif
+ 	
+-	spin_unlock_irqrestore (lock_data->lock, lock_data->flags);
++	spin_unlock_irqrestore (&lock_data->lock, lock_data->flags);
+ }
+ 
+ /*---------------------------------------------------------------------------*\
+diff -Naur src.orig/main.c src/main.c
+--- src.orig/main.c	2005-12-23 15:12:10.000000000 +0100
++++ src/main.c	2006-12-11 00:07:09.000000000 +0100
+@@ -20,6 +20,7 @@
+  * Contact: AVM GmbH, Alt-Moabit 95, 10559 Berlin, Germany, email: info@avm.de
+  */
+ 
++#include <linux/version.h>
+ #include <linux/kernel.h>
+ #include <linux/sched.h>
+ #include <linux/slab.h>
+@@ -38,6 +39,7 @@
+ #define	VENDOR_ID_AVM		0x057C
+ #if defined (__fwlanusb__)
+ # define	PRODUCT_ID	0x5601
++# define	PRODUCT_ID2	0x6201
+ #else
+ # error You have to define a card identifier!
+ #endif
+@@ -57,16 +59,22 @@
+ static struct usb_device_id usb_id_table[] = {
+ 
+ 	{ USB_DEVICE(VENDOR_ID_AVM, PRODUCT_ID) },
++	{ USB_DEVICE(VENDOR_ID_AVM, PRODUCT_ID2) },
+ 	{ /* Terminating entry */ }
+ } ;
+ 
+ struct usb_driver usb_driver = {
+ 
++#if (LINUX_VERSION_CODE < KERNEL_VERSION(2,6,16))
+ 	.owner =	THIS_MODULE,
++#endif
+ 	.name =		TARGET,
+ 	.id_table =	usb_id_table,
+ 	.probe =	fwlanusb_probe,
+ 	.disconnect =	fwlanusb_disconnect,
++#if (LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,16))
++	.no_dynamic_id = 1,
++#endif
+ } ;
+ 
+ MODULE_DEVICE_TABLE (usb, usb_id_table);
+@@ -114,7 +122,8 @@
+ 
+ 	/* Device identification */
+ 	if ((VENDOR_ID_AVM != dev->descriptor.idVendor)
+-	||  (PRODUCT_ID != dev->descriptor.idProduct)) 
++	|| ( (PRODUCT_ID != dev->descriptor.idProduct) 
++	&& (PRODUCT_ID2 != dev->descriptor.idProduct))) 
+ 	{
+ 		ERROR("Unknown device!\n");
+ exit_nodev:
+diff -Naur src.orig/tools.h src/tools.h
+--- src.orig/tools.h	2005-12-23 15:12:10.000000000 +0100
++++ src/tools.h	2006-12-11 00:07:09.000000000 +0100
+@@ -25,6 +25,7 @@
+ 
+ #include <asm/atomic.h>
+ #include <linux/types.h>
++#include <linux/version.h>
+ #include <linux/spinlock.h>
+ #include <stdarg.h>
+ #include "defs.h"
+@@ -72,12 +73,14 @@
+ 
+ /*---------------------------------------------------------------------------*\
+ \*---------------------------------------------------------------------------*/
++#if (LINUX_VERSION_CODE < KERNEL_VERSION(2,6,16))
+ static inline unsigned long atomic_xchg (
+ 	volatile atomic_t *	v, 
+ 	unsigned		value
+ ) {
+ 	return __xchg (value, &v->counter, sizeof (unsigned));
+ } /* atomic_xchg */
++#endif
+ 
+ /*---------------------------------------------------------------------------*\
+ \*---------------------------------------------------------------------------*/
