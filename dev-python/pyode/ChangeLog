@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyode
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyode/ChangeLog,v 1.7 2006/09/04 18:01:13 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyode/ChangeLog,v 1.8 2006/12/10 02:25:25 dirtyepic Exp $
+
+  10 Dec 2006; Ryan Hill <dirtyepic@gentoo.org> pyode-1.1.0.ebuild,
+  pyode-1.1.0_p20060728.ebuild:
+  Fix GCC-4.x build error and update dependencies. Thanks to peper gentoo org
+  in bug #135029
 
   04 Sep 2006; Javier Villavicencio <the_paya@gentoo.org>
   pyode-1.1.0_p20060728.ebuild:

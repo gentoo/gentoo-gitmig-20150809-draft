@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyode/pyode-1.1.0_p20060728.ebuild,v 1.2 2006/09/04 18:01:13 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyode/pyode-1.1.0_p20060728.ebuild,v 1.3 2006/12/10 02:25:25 dirtyepic Exp $
 
 inherit distutils
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND="virtual/python
 	>=dev-games/ode-0.5
-	>=dev-python/pyrex-0.9.3"
+	>=dev-python/pyrex-0.9.4.1"
 
 S="$WORKDIR/${PN}"
 

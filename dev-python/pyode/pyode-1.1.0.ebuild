@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyode/pyode-1.1.0.ebuild,v 1.3 2005/10/22 05:57:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyode/pyode-1.1.0.ebuild,v 1.4 2006/12/10 02:25:25 dirtyepic Exp $
 
 inherit distutils
 
@@ -15,8 +15,8 @@ KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="virtual/python
-	>=dev-games/ode-0.5
-	>=dev-python/pyrex-0.9.3"
+	~dev-games/ode-0.5
+	>=dev-python/pyrex-0.9.4.1"
 
 S=${WORKDIR}/${MY_P}
 
@@ -26,6 +26,11 @@ src_unpack() {
 	sed -i \
 		-e "s:#ODE_BASE = .*:ODE_BASE = '/usr/share/ode-0.5':" \
 		setup.py || die
+
+	# These files were generated with pyrex-0.9.3, which is incompatable with
+	# GCC-4.x.  We delete them so they will be regenerated with
+	# >=pyrex-0.9.4.1.  Bug #135029
+	rm ode_notrimesh.c ode_trimesh.c
 }
 
 src_install() {
