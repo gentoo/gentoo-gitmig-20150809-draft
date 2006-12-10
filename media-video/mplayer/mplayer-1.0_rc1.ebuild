@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1.ebuild,v 1.15 2006/12/01 16:32:04 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1.ebuild,v 1.16 2006/12/10 17:07:42 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -63,6 +63,7 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 		media-sound/lame
 		dv? ( >=media-libs/libdv-0.9.5 )
 		x264? ( >=media-libs/x264-svn-20061014 )
+		aac? ( media-libs/faac )
 		)
 	esd? ( media-sound/esound )
 	enca? ( app-i18n/enca )
@@ -235,8 +236,10 @@ src_compile() {
 		myconf="${myconf} --enable-mencoder"
 		use dv || myconf="${myconf} --disable-libdv"
 		use x264 || myconf="${myconf} --disable-x264"
+		use aac || myconf="${myconf} --disable-faac"
 	else
-		myconf="${myconf} --disable-mencoder --disable-libdv --disable-x264"
+		myconf="${myconf} --disable-mencoder --disable-libdv --disable-x264
+		--disable-faac"
 	fi
 
 	myconf="${myconf} $(use_enable gtk gui)"
