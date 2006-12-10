@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mytop
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/ChangeLog,v 1.14 2006/02/13 10:36:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/ChangeLog,v 1.15 2006/12/10 17:09:25 vivo Exp $
+
+  10 Dec 2006; Francesco Riosa <vivo@gentoo.org> mytop-1.4.ebuild:
+  fix dev-db/mytop-1.4 - wrong perl-core/Getopt-Long dependency bug #157674,
+  thanks Jakub
 
   13 Feb 2006; <mcumming@gentoo.org> mytop-1.4.ebuild:
   Virtual for perl-core dep

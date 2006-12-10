@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/mytop-1.4.ebuild,v 1.15 2006/02/13 10:36:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/mytop-1.4.ebuild,v 1.16 2006/12/10 17:09:25 vivo Exp $
 
 inherit perl-app
 
@@ -14,7 +14,7 @@ SLOT="0"
 IUSE=""
 
 DEPEND="dev-perl/DBD-mysql
-	perl-core/Getopt-Long
+	virtual/perl-Getopt-Long
 	dev-perl/TermReadKey
 	dev-perl/Term-ANSIColor
 	virtual/perl-Time-HiRes
