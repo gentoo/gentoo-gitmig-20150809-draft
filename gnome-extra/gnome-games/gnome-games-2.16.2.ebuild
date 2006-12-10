@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.16.2.ebuild,v 1.1 2006/11/19 19:00:47 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.16.2.ebuild,v 1.2 2006/12/10 18:56:47 ticho Exp $
 
 # make sure games is inherited first so that the gnome2
 # functions will be called if they are not overridden
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc x86"
 IUSE="artworkextra guile" #avahi disabled upstream due to crashes
 
 RDEPEND=">=gnome-base/gconf-2
