@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6428 2006/12/09 20:39:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6429 2006/12/10 00:21:21 compnerd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -320,7 +320,6 @@ net-wireless/gkismet
 net-wireless/wavelan-applet
 sci-chemistry/coot
 sci-calculators/snac
-sci-misc/oww
 sci-visualization/scigraphica
 www-client/ochusha
 x11-libs/gtk-canvas
@@ -385,6 +384,7 @@ dev-python/python-gtkextra
 <sci-chemistry/ghemical-2
 <sci-electronics/gerbv-1
 <sci-mathematics/scilab-3
+<sci-misc/oww-0.81.9
 =media-libs/swfdec-0.2.2
 =x11-wm/sawfish-1.0.1-r6
 # Broken in more than one way
