@@ -1,13 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.29.ebuild,v 1.1 2006/12/06 17:03:50 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.29.ebuild,v 1.2 2006/12/11 18:12:00 beandog Exp $
 
 inherit eutils
 
 DESCRIPTION="Ice Window Manager with Themes"
 
-HOMEPAGE="http://www.icewm.org/
-	http://sourceforge.net/projects/icewmsilverxp/"
+HOMEPAGE="http://www.icewm.org/"
 
 #fix for icewm preversion package names
 S=${WORKDIR}/${P/_}
@@ -19,7 +18,7 @@ SLOT="0"
 
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
-IUSE="esd imlib nls spell truetype xinerama silverxp"
+IUSE="esd imlib nls spell truetype xinerama"
 
 RDEPEND="|| ( (
 		x11-libs/libXau
@@ -30,7 +29,8 @@ RDEPEND="|| ( (
 		x11-libs/libXrender
 		x11-libs/libXft
 		x11-libs/libXt
-		x11-libs/libXdmcp )
+		x11-libs/libXdmcp
+		xinerama? ( x11-libs/libXinerama ) )
 	virtual/x11 )
 	esd? ( media-sound/esound )
 	imlib? ( >=media-libs/imlib-1.9.10-r1 )
@@ -43,7 +43,7 @@ DEPEND="${RDEPEND}
 	|| ( (
 		x11-proto/xproto
 		x11-proto/xextproto
-		x11-proto/xineramaproto )
+		xinerama? ( x11-proto/xineramaproto ) )
 	virtual/x11 )
 	>=sys-apps/sed-4"
 
@@ -51,9 +51,6 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}/src
-	if use silverxp ; then
-		epatch ${FILESDIR}/${P/_}.ybutton.cc.patch
-	fi
 
 	echo "#!/bin/sh" > $T/icewm
 	echo "/usr/bin/icewm-session" >> $T/icewm
@@ -89,7 +86,7 @@ src_compile(){
 }
 
 src_install(){
-	make DESTDIR=${D} install || die  "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	dodoc AUTHORS BUGS CHANGES FAQ PLATFORMS README* TODO VERSION
 	dohtml -a html,sgml doc/*
