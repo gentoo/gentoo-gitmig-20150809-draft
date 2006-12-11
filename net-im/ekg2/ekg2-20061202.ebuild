@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-20061202.ebuild,v 1.1 2006/12/10 21:38:36 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-20061202.ebuild,v 1.2 2006/12/11 17:36:05 sekretarz Exp $
 
 DESCRIPTION="Text based Instant Messenger and IRC client that supports protocols like Jabber and Gadu-Gadu"
 HOMEPAGE="http://dev.null.pl/ekg2/"
@@ -8,7 +8,7 @@ SRC_URI="http://dev.null.pl/ekg2/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~x86"
 
 IUSE="gpm jabber ssl spell jpeg gsm python unicode sqlite sqlite3 gif nogg
 gtk perl xosd debug expat static"
@@ -20,8 +20,8 @@ use perl && inherit perl-module
 DEPEND="jabber? ( >=dev-libs/expat-1.95.6 )
 	expat? ( >=dev-libs/expat-1.95.6 )
 	gpm? ( >=sys-libs/gpm-1.20.1 )
-	ssl? ( >=dev-libs/openssl-0.9.6m
-			jabber? ( >=net-libs/gnutls-1.0.17 ) )
+	ssl? ( >=dev-libs/openssl-0.9.6m \
+		jabber? ( >=net-libs/gnutls-1.0.17 ) )
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
 	spell? ( >=app-text/aspell-0.50.5 )
 	!nogg? ( >=net-libs/libgadu-1.7.0 )
@@ -42,6 +42,9 @@ pkg_setup() {
 }
 
 src_compile() {
+	libtoolize --copy --force
+	epatch ${FILESDIR}/${P}-intl.patch
+
 	# Ekg2 has no debug configure option
 	# Instead it features a runtime option which defaults to on
 	! use debug && epatch ${FILESDIR}/${P}-no-default-debug.patch

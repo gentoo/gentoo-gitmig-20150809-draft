@@ -1,0 +1,13 @@
+--- configure.ac.old	2006-12-10 14:17:30.000000000 +0100
++++ configure.ac	2006-12-10 14:18:25.000000000 +0100
+@@ -484,7 +484,9 @@
+  	COMMON_PLUGINS_CFLAGS="-DPLUGIN_SHARED_LIBS"
+ dnl 	LIBS="$LIBS -no-undefined"
+ fi
+- 
++
++LIBS="$LIBS $LIBINTL"
++
+ AC_OUTPUT
+ 
+ echo
