@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.11.3.ebuild,v 1.2 2006/12/11 02:34:12 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.11.3.ebuild,v 1.3 2006/12/11 02:50:56 metalgod Exp $
 
 inherit autotools eutils gnome2 mono
 
@@ -69,8 +69,6 @@ pkg_setup() {
 
 	if use boo; then
 		G2CONF="${G2CONF} --enable-external-boo"
-		else
-		G2CONF="${G2CONF}"
 	fi
 
 	G2CONF="${G2CONF} --disable-helix \
