@@ -1,0 +1,10 @@
+# Copyright 2003-2005 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/dev/ppc64/2007.0/64bit-userland/packages,v 1.1 2006/12/11 15:53:58 tgall Exp $
+# Maintained by Tom Gall <tgall@gentoo.org>
+
+*>=sys-devel/binutils-2.16
+*>=sys-devel/gcc-4.1.1
+*>=sys-libs/glibc-2.5
+
+

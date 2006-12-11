@@ -1,0 +1,11 @@
+# Copyright 2003-2005 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/dev/ppc64/2007.0/multilib/packages,v 1.1 2006/12/11 15:53:58 tgall Exp $
+
+*>=sys-devel/binutils-2.15.90.0.3-r4
+*>=sys-devel/gcc-3.4.4
+*sys-libs/libstdc++-v3
+*>=sys-libs/glibc-2.3.4.20041102-r2
+*>=sys-kernel/linux-headers-2.6.11
+*sys-fs/mac-fdisk
+*sys-fs/hfsutils

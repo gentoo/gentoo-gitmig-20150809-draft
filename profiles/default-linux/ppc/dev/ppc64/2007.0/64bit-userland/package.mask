@@ -1,0 +1,15 @@
+# Copyright 2003-2005 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/dev/ppc64/2007.0/64bit-userland/package.mask,v 1.1 2006/12/11 15:53:58 tgall Exp $
+
+# Mask multilib ppc64 things
+# Maintained by Yuta Satoh <nigoro@gentoo.org>
+
+app-emulation/emul-linux-ppc-baselibs
+app-emulation/emul-linux-ppc-compat
+app-emulation/emul-linux-ppc-glibc
+app-emulation/emul-linux-ppc-gtklibs
+app-emulation/emul-linux-ppc-qtlibs
+app-emulation/emul-linux-ppc-sdl
+app-emulation/emul-linux-ppc-soundlibs
+app-emulation/emul-linux-ppc-xlibs
