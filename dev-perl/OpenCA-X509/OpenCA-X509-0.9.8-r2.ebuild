@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenCA-X509/OpenCA-X509-0.9.8-r2.ebuild,v 1.10 2006/08/05 19:42:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenCA-X509/OpenCA-X509-0.9.8-r2.ebuild,v 1.11 2006/12/11 11:51:42 yuval Exp $
 
 inherit perl-module
 
 DESCRIPTION="The perl OpenCA::X509 Module"
 SRC_URI="mirror://cpan/authors/id/M/MA/MADWOLF/${P}.tar.gz"
-HOMEPAGE="http://www.cpan.org/authors/id/M/MA/MADWOLF/${P}.readme"
+HOMEPAGE="http://search.cpan.org/~madwolf/${P}/X509.pm"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"

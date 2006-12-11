@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/OpenCA-OpenSSL
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenCA-OpenSSL/ChangeLog,v 1.22 2006/08/05 19:40:58 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenCA-OpenSSL/ChangeLog,v 1.23 2006/12/11 11:44:47 yuval Exp $
+
+  11 Dec 2006; Yuval Yaari <yuval@gentoo.org>
+  OpenCA-OpenSSL-0.8.43-r1.ebuild, OpenCA-OpenSSL-0.9.91.ebuild:
+  Fixed homepage URLs, bug #157104
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   OpenCA-OpenSSL-0.8.43-r1.ebuild, OpenCA-OpenSSL-0.9.91.ebuild:
