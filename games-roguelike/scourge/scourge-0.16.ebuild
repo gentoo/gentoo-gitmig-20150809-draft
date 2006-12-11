@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/scourge-0.16.ebuild,v 1.2 2006/12/11 23:42:25 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/scourge-0.16.ebuild,v 1.3 2006/12/11 23:54:43 nyhm Exp $
 
 inherit eutils wxwidgets games
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.src.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="wxwindows"
+IUSE="editor"
 
 DEPEND="x11-libs/libXmu
 	x11-libs/libXi
@@ -22,19 +22,19 @@ DEPEND="x11-libs/libXmu
 	>=media-libs/libsdl-1.2
 	media-libs/sdl-net
 	media-libs/sdl-mixer
-	wxwindows? ( >=x11-libs/wxGTK-2.6 )"
+	editor? ( >=x11-libs/wxGTK-2.6 )"
 
 S=${WORKDIR}/${PN}
 
 pkg_setup() {
 	games_pkg_setup
-	use wxwindows && WX_GTK_VER="2.6" need-wxwidgets unicode
+	use editor && WX_GTK_VER="2.6" need-wxwidgets unicode
 }
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	if use wxwindows ; then
+	if use editor ; then
 		sed -i \
 			-e "/WXWIDGET_CFLAGS/s:wx-config:${WX_CONFIG}:" \
 			-e "/WXWIDGET_LIBS/s:wx-config:${WX_CONFIG}:" \
@@ -45,15 +45,15 @@ src_unpack() {
 src_compile() {
 	egamesconf \
 		--with-data-dir="${GAMES_DATADIR}/${PN}" \
-		$(use_enable wxwindows editor) \
+		$(use_enable editor) \
 		|| die
 	emake || die "emake failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	use wxwindows && mv "${D}/${GAMES_BINDIR}"/{tools,${PN}-tools}
-	insinto "${GAMES_DATADIR}"/${PN}
+	use editor && mv "${D}/${GAMES_BINDIR}"/{tools,${PN}-tools}
+	insinto "${GAMES_DATADIR}/${PN}"
 	doins -r ../scourge_data/* || die "doins failed"
 	doicon assets/scourge.png
 	make_desktop_entry scourge S.C.O.U.R.G.E.
