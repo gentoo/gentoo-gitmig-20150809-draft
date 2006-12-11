@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.8.9-r1.ebuild,v 1.10 2006/12/11 03:33:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.8.9-r1.ebuild,v 1.11 2006/12/11 03:40:48 vapier Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="nls python"
 
-DEPEND=""
+DEPEND="python? ( dev-lang/python )"
 
 S=${WORKDIR}/${MY_P}
 
