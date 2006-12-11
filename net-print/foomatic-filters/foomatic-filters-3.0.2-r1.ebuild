@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-3.0.2-r1.ebuild,v 1.10 2006/10/19 16:38:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-3.0.2-r1.ebuild,v 1.11 2006/12/11 10:11:15 genstef Exp $
 
 inherit eutils
 
@@ -21,8 +21,7 @@ DEPEND="samba? ( net-fs/samba )
 		app-text/a2ps
 		app-text/mpage
 	)
-	virtual/ghostscript
-	!<net-print/foomatic-db-20050910"
+	virtual/ghostscript"
 
 src_unpack() {
 	unpack ${A}
