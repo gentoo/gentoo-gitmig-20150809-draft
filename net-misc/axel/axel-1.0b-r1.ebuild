@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/axel-1.0b-r1.ebuild,v 1.1 2006/10/24 16:07:34 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/axel-1.0b-r1.ebuild,v 1.2 2006/12/11 11:13:46 drizzt Exp $
 
 inherit toolchain-funcs
 
@@ -11,10 +11,11 @@ SRC_URI="http://wilmer.gaast.net/downloads/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="debug"
+IUSE="debug nls"
 
-DEPEND=""
-RDEPEND=""
+RDEPEND="nls? ( virtual/libintl )"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
@@ -27,16 +28,24 @@ src_compile() {
 	local myconf
 
 	use debug && myconf="--debug=1"
+	use nls && myconf="--i18n=1"
 	econf \
 		--strip=0 \
 		--etcdir=/etc \
 		${myconf} \
 		|| die
 
-	emake CFLAGS="${CFLAGS}" CC="`tc-getCC`" || die "emake failed"
+	emake CFLAGS="${CFLAGS}" CC="$(tc-getCC)" || die "emake failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc API CHANGES CREDITS README axelrc.example
+}
+
+pkg_postinst() {
+	einfo 'To use axel with portage, try these settings in your make.conf'
+	einfo
+	einfo ' FETCHCOMMAND="/usr/bin/axel -a -o \${DISTDIR}/\${FILE} \${URI}"'
+	einfo ' RESUMECOMMAND="${FETCHCOMMAND}"'
 }
