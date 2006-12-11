@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.0.4.ebuild,v 1.1 2006/11/08 08:34:32 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.0.4.ebuild,v 1.2 2006/12/11 07:28:02 opfer Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86"
 IUSE="alsa ao arts debug flac mad modplug mp3 musepack oss vorbis"
 
 DEPEND="sys-libs/ncurses
-	flac? ( >=media-libs/flac-1.1.2 )
+	flac? ( ~media-libs/flac-1.1.2 )
 	mad? ( >=media-libs/libmad-0.14 )
 	modplug? ( >=media-libs/libmodplug-0.7 )
 	mp3? ( >=media-libs/libmad-0.14 )
