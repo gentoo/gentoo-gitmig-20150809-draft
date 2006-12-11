@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-3.5.5.ebuild,v 1.9 2006/12/06 15:37:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-3.5.5.ebuild,v 1.10 2006/12/11 14:42:03 kloeri Exp $
 
 KMNAME=kdebase
 KMNOMODULE=true
@@ -13,7 +13,7 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/kdebase-3.5-patchset-03.tar.bz2"
 
 DESCRIPTION="startkde script, which starts a complete KDE session, and associated scripts"
-KEYWORDS="alpha amd64 ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 # The kde apps called from the startkde script.
