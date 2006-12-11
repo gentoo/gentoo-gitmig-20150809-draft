@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/sqliteodbc-0.70.ebuild,v 1.1 2006/11/13 03:15:47 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/sqliteodbc-0.70.ebuild,v 1.2 2006/12/11 01:46:08 dberkholz Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.ch-werner.de/sqliteodbc/"
 SRC_URI="http://www.ch-werner.de/sqliteodbc/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="sqlite sqlite3"
 
 DEPEND="sqlite? ( =dev-db/sqlite-2* )
