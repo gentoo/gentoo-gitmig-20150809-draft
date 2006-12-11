@@ -1,6 +1,12 @@
 # ChangeLog for app-doc/howto-html
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html/ChangeLog,v 1.15 2005/05/05 03:38:43 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html/ChangeLog,v 1.16 2006/12/11 03:08:22 beu Exp $
+
+*howto-html-20061210 (11 Dec 2006)
+
+  11 Dec 2006; Elfyn McBratney <beu@gentoo.org> metadata.xml,
+  howto-html-20050504.ebuild, +howto-html-20061210.ebuild:
+  Update metadata.xml; Quote ${D} / cosmetic.  Bump version.
 
 *howto-html-20050504 (05 May 2005)
 
