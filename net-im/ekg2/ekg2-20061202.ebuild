@@ -1,8 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-20061202.ebuild,v 1.4 2006/12/11 21:16:36 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-20061202.ebuild,v 1.5 2006/12/11 21:54:45 sekretarz Exp $
 
-inherit eutils perl-module
+WANT_AUTOCONF=latest
+WANT_AUTOMAKE=latest
+
+inherit eutils perl-module autotools
 
 DESCRIPTION="Text based Instant Messenger and IRC client that supports protocols like Jabber and Gadu-Gadu"
 HOMEPAGE="http://dev.null.pl/ekg2/"
@@ -30,7 +33,8 @@ DEPEND="jabber? ( >=dev-libs/expat-1.95.6 )
 	sqlite3? ( >=dev-db/sqlite-3 )
 	gif? ( media-libs/giflib )
 	gtk? ( >=x11-libs/gtk+-2.4 )
-	xosd? ( x11-libs/xosd )"
+	xosd? ( x11-libs/xosd )
+	virtual/libintl"
 
 pkg_setup() {
 	if use unicode && ! built_with_use ncurses unicode; then
@@ -39,13 +43,19 @@ pkg_setup() {
 	fi
 }
 
-src_compile() {
-	libtoolize --copy --force
-	epatch ${FILESDIR}/${P}-intl.patch
+src_unpack() {
+	unpack ${A}
+	cd ${S}
 
 	# Ekg2 has no debug configure option
 	# Instead it features a runtime option which defaults to on
 	! use debug && epatch ${FILESDIR}/${P}-no-default-debug.patch
+
+	epatch ${FILESDIR}/${P}-intl.patch
+	AT_M4DIR=m4 eautoreconf
+}
+
+src_compile() {
 
 	econf \
 		--with-pthread \
