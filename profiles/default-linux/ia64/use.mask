@@ -11,6 +11,7 @@ pcmcia
 # The rest should work in theory. Feel free to test and remove.
 # No hardware to test
 pda
+sms
 
 # No apm support on ia64
 apm
