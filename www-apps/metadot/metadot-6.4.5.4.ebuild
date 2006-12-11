@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.4.5.4.ebuild,v 1.3 2006/11/23 17:19:01 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.4.5.4.ebuild,v 1.4 2006/12/11 02:16:31 rl03 Exp $
 
 inherit webapp
 MY_P="Metadot${PV}"
@@ -51,6 +51,7 @@ RDEPEND="<virtual/mysql-5
 	dev-perl/Text-CSV_XS
 	dev-perl/HTML-Tree
 	dev-perl/HTML-Format
+	dev-perl/Data-ShowTable
 "
 
 LICENSE="GPL-2"
