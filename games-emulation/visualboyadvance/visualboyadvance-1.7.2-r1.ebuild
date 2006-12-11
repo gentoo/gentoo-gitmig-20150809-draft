@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2-r1.ebuild,v 1.10 2006/10/18 23:19:44 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2-r1.ebuild,v 1.11 2006/12/11 22:27:52 nyhm Exp $
 
 inherit eutils flag-o-matic games
 
@@ -11,27 +11,43 @@ SRC_URI="mirror://sourceforge/vba/VisualBoyAdvance-src-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="mmx gtk"
+IUSE="gtk mmx nls"
 
 RDEPEND="media-libs/libpng
-	sys-libs/zlib
 	media-libs/libsdl
 	gtk? (
 		>=x11-libs/gtk+-2.4
 		>=dev-cpp/gtkmm-2.4
 		>=dev-cpp/libglademm-2.4
-	)"
+	)
+	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
-	mmx? ( dev-lang/nasm )"
+	dev-util/pkgconfig
+	mmx? ( dev-lang/nasm )
+	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/VisualBoyAdvance-${PV}
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${PV}-homedir.patch"
-	epatch "${FILESDIR}/${PV}-gcc34.patch"
-	epatch "${FILESDIR}/${PV}-gcc41.patch"
+
+	sed -i \
+		-e 's:$(localedir):/usr/share/locale:' \
+		-e 's:$(datadir)/locale:/usr/share/locale:' \
+		$(find . -name 'Makefile.in*') \
+		|| die "sed failed"
+
+	cat >> src/i386/2xSaImmx.asm <<-EOF
+		%ifidn __OUTPUT_FORMAT__,elf
+		section .note.GNU-stack noalloc noexec nowrite progbits
+		%endif
+	EOF
+
+	epatch \
+		"${FILESDIR}"/${PV}-homedir.patch \
+		"${FILESDIR}"/${PV}-gcc34.patch \
+		"${FILESDIR}"/${PV}-gcc41.patch
 }
 
 src_compile() {
@@ -40,14 +56,20 @@ src_compile() {
 
 	# Removed --enable-c-core as it *should* determine this based on arch
 	egamesconf \
+		--disable-dependency-tracking \
 		$(use_with mmx) \
 		$(use_enable gtk gtk 2.4) \
+		$(use_enable nls) \
 		|| die
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS README README-win.txt
+	if use gtk ; then
+		newicon src/gtk/images/vba-64.png ${PN}.png
+		make_desktop_entry gvba VisualBoyAdvance
+	fi
 	prepgamesdirs
 }
