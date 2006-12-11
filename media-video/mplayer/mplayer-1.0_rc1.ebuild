@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1.ebuild,v 1.16 2006/12/10 17:07:42 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1.ebuild,v 1.17 2006/12/11 03:08:29 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -280,7 +280,7 @@ src_compile() {
 	myconf="${myconf} $(use_enable rtc)"
 	myconf="${myconf} $(use_enable samba smb)"
 	myconf="${myconf} $(use_enable truetype freetype)"
-	use v4l  || myconf="${myconf} --disable-tv-v4l1"
+	use v4l	 || myconf="${myconf} --disable-tv-v4l1"
 	use v4l2 || myconf="${myconf} --disable-tv-v4l2"
 	use jack || myconf="${myconf} --disable-jack"
 
@@ -430,6 +430,7 @@ src_compile() {
 	fi
 
 	CFLAGS="$CFLAGS" ./configure \
+		"--cc=$(tc-getCC)" "--host-cc=$(tc-getBUILD_CC)" \
 		--prefix=/usr \
 		--confdir=/usr/share/mplayer \
 		--datadir=/usr/share/mplayer \
@@ -557,13 +558,13 @@ pkg_postrm() {
 
 	# Cleanup stale symlinks
 	if [ -L ${ROOT}/usr/share/mplayer/font -a \
-	     ! -e ${ROOT}/usr/share/mplayer/font ]
+		 ! -e ${ROOT}/usr/share/mplayer/font ]
 	then
 		rm -f ${ROOT}/usr/share/mplayer/font
 	fi
 
 	if [ -L ${ROOT}/usr/share/mplayer/subfont.ttf -a \
-	     ! -e ${ROOT}/usr/share/mplayer/subfont.ttf ]
+		 ! -e ${ROOT}/usr/share/mplayer/subfont.ttf ]
 	then
 		rm -f ${ROOT}/usr/share/mplayer/subfont.ttf
 	fi
