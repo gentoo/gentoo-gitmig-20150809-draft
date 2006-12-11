@@ -1,0 +1,9 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/dev/ppc32/2007.0/G4/make.defaults,v 1.1 2006/12/11 15:43:58 tgall Exp $
+
+CFLAGS="-O2 -mtune=G4 -mcpu=G4 -maltivec -mabi=altivec -pipe"
+CXXFLAGS="${CFLAGS}"
+
+STAGE1_USE="altivec unicode"
+USE="${STAGE1_USE} ${USE}"

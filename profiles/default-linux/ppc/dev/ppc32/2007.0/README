@@ -1,0 +1,6 @@
+This is the testing profile for 2006.1 on ppc32.  The toolchain will be
+upgraded to gcc-4.1.1 and glibc-2.4.  It is considered to be testing until
+2006.1 has been released.  You are free to test and report bugs, but we can't
+guarantee that everything will work.
+
+-- pylon@gentoo.org

@@ -1,0 +1,28 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/dev/ppc32/make.defaults,v 1.1 2006/12/11 15:43:58 tgall Exp $
+
+# All extra USE/etc should be specified in sub-profiles.
+# DO NOT POLLUTE USE ON THIS PROFILE.
+
+ARCH="ppc"
+ACCEPT_KEYWORDS="ppc"
+
+CHOST="powerpc-unknown-linux-gnu"
+CFLAGS="-O2 -pipe"
+CXXFLAGS="${CFLAGS}"
+
+FEATURES="sandbox sfperms"
+
+STAGE1_USE="unicode"
+USE="${STAGE1_USE} berkdb crypt ipv6 ncurses nls nptl perl python readline ssl tcpd zlib"
+
+# 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
+# Defaults for video drivers
+VIDEO_CARDS="ati chips dummy fbdev glint imstt mga nv s3 s3virge savage \
+	sisusb tdfx trident v4l voodoo"
+
+# 2006/12/06 - Diego Pettenò <flameeyes@gentoo.org>
+# Defaults for PowerPC sound driver
+ALSA_CARDS="aoa aoa-fabric-layout aoa-onyx aoa-soundbus aoa-soundbus-i2s aoa-tas
+	aoa-toonie powermac usb-audio via82xx"
