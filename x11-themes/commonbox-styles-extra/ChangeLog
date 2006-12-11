@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/commonbox-styles-extra
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles-extra/ChangeLog,v 1.25 2006/12/11 20:44:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles-extra/ChangeLog,v 1.26 2006/12/11 20:50:46 mr_bones_ Exp $
+
+  11 Dec 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  -commonbox-styles-extra-0.2-r1.ebuild:
+  clean old, non-modX ebuild
 
   11 Dec 2006; Bryan Østergaard <kloeri@gentoo.org>
   commonbox-styles-extra-0.2-r2.ebuild:
