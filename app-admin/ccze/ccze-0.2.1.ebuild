@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ccze-0.2.1.ebuild,v 1.14 2006/03/11 23:34:05 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ccze-0.2.1.ebuild,v 1.15 2006/12/11 15:43:03 joker Exp $
 
 inherit fixheadtails autotools
 
@@ -13,9 +13,7 @@ SLOT="0"
 KEYWORDS="x86 sparc amd64 ppc"
 IUSE=""
 
-DEPEND="virtual/libc
-	sys-libs/ncurses
-	dev-libs/libpcre"
+DEPEND="dev-libs/libpcre"
 
 src_unpack() {
 	unpack ${A}
