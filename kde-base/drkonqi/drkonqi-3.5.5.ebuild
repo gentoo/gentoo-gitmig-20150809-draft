@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/drkonqi-3.5.5.ebuild,v 1.8 2006/12/06 12:59:28 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/drkonqi-3.5.5.ebuild,v 1.9 2006/12/11 11:43:55 kloeri Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -11,6 +11,6 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/kdebase-3.5-patchset-02.tar.bz2"
 
 DESCRIPTION="KDE crash handler gives the user feedback if a program crashed"
-KEYWORDS="alpha amd64 ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="kdehiddenvisibility"
 
