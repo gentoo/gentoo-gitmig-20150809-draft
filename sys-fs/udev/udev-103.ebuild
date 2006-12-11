@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-103.ebuild,v 1.5 2006/12/06 05:07:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-103.ebuild,v 1.6 2006/12/11 16:05:36 gustavoz Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm hppa ia64 m68k ~mips ~ppc ppc64 s390 sh ~sparc x86"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 m68k ~mips ~ppc ppc64 s390 sh sparc x86"
 IUSE="selinux"
 
 # still rely on hotplug (need to fix that), but now we implement coldplug
