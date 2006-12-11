@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.0.ebuild,v 1.3 2006/10/09 20:58:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.0.ebuild,v 1.4 2006/12/11 22:45:30 weeve Exp $
 
 inherit elisp-common eutils
 
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 hppa ~ppc sparc ~x86"
 IUSE="emacs"
 
 DEPEND="|| ( ( x11-libs/libXinerama x11-libs/libXtst ) virtual/x11 )
-	perl-core/PodParser
+	virtual/perl-PodParser
 	emacs? ( virtual/emacs )"
 
 SITEFILE=50ratpoison-gentoo.el
