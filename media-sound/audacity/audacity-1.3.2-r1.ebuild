@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.2-r1.ebuild,v 1.1 2006/11/16 16:49:50 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.2-r1.ebuild,v 1.2 2006/12/11 19:32:31 aballier Exp $
 
 inherit eutils autotools
 
@@ -39,6 +39,7 @@ src_unpack() {
 		epatch "${FILESDIR}"/${P}-no-msse.patch
 		epatch "${FILESDIR}"/${P}-disable-optimization.patch
 	fi
+	epatch "${FILESDIR}/${P}+flac-1.1.3.patch"
 
 	eautoreconf || die
 	pushd "${S}"/lib-src/soundtouch
