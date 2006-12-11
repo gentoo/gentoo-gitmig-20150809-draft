@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.15-r3.ebuild,v 1.1 2006/12/11 10:31:20 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.15-r3.ebuild,v 1.2 2006/12/11 10:33:44 pva Exp $
 
 inherit eutils versionator
 
@@ -32,7 +32,7 @@ src_unpack() {
 	EPATCH_SOURCE="${WORKDIR}"/arpwatch-patchset/
 	EPATCH_SUFFIX="patch"
 	epatch
-	mv "${WORKDIR}"/arpwatch-patchset/*.8 .
+	cp "${WORKDIR}"/arpwatch-patchset/*.8 . || die "Failed to get man-pages from arpwatch-patchset."
 }
 
 src_compile() {
