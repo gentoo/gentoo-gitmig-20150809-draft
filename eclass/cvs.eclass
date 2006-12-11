@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.67 2006/12/11 00:11:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.68 2006/12/11 00:16:28 vapier Exp $
 #
 # Maintainer: vapier@gentoo.org (and anyone who wants to help)
 
@@ -488,7 +488,8 @@ cvs_src_unpack() {
 		ECVS_LOCALNAME="$ECVS_MODULE"
 	fi
 
-	local offline_pkg_var="ECVS_OFFLINE_${PN}"
+	local sanitized_pn=$(echo "${PN}" | LC_ALL=C sed -e 's:[^A-Za-z0-9_]:_:g')
+	local offline_pkg_var="ECVS_OFFLINE_${sanitized_pn}"
 	if [ "${!offline_pkg_var}" == "1" -o "$ECVS_OFFLINE" == "1" -o "$ECVS_SERVER" == "offline" ]; then
 		# We're not required to fetch anything; the module already
 		# exists and shouldn't be updated.
