@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-4.0.5.ebuild,v 1.1 2006/10/27 15:18:49 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-4.0.5.ebuild,v 1.2 2006/12/11 02:06:48 rl03 Exp $
 
 inherit webapp eutils
 
@@ -21,11 +21,11 @@ RDEPEND=">=dev-lang/perl-5.8
 		sys-apps/diffutils
 		dev-perl/Algorithm-Diff
 		>=virtual/perl-CGI-3.20
-		perl-core/File-Spec
+		virtual/perl-File-Spec
 		dev-perl/Text-Diff
-		perl-core/Time-Local
+		virtual/perl-Time-Local
 		dev-perl/CGI-Session
-		perl-core/digest-base
+		virtual/perl-digest-base
 		dev-perl/Digest-SHA1
 		dev-perl/locale-maketext-lexicon
 		virtual/perl-libnet
