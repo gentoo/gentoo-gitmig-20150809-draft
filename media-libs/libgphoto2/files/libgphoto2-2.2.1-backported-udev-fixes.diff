@@ -1,0 +1,125 @@
+# Backported udev-rules-0.98 from libgphoto2-2.3.0
+# Backported PTP-Matching code from SVN (http://gphoto.svn.sourceforge.net/viewvc/gphoto/trunk/libgphoto2/packaging/generic/)
+
+diff -ruN libgphoto2-2.2.1-orig/packaging/generic/check_ptp_camera libgphoto2-2.2.1/packaging/generic/check_ptp_camera
+--- libgphoto2-2.2.1-orig/packaging/generic/check_ptp_camera	1970-01-01 01:00:00.000000000 +0100
++++ libgphoto2-2.2.1/packaging/generic/check_ptp_camera	2006-12-08 10:23:35.000000000 +0100
+@@ -0,0 +1,20 @@
++#!/bin/sh
++ 
++# check if any interface of this device is a PTP camera interface (06)
++INTERFACE="${1:-06/01/01}"
++
++BASENAME=${PHYSDEVPATH##*/}
++for d in /sys/${PHYSDEVPATH}/${BASENAME}:*; do
++	[[ -d ${d} ]] || continue
++	INTERFACEID="$(< ${d}/bInterfaceClass)"
++	INTERFACEID="${INTERFACEID}/$(< ${d}/bInterfaceSubClass)"
++	INTERFACEID="${INTERFACEID}/$(< ${d}/bInterfaceProtocol)"
++
++	#echo ${d}: ${INTERFACEID}
++	if [[ ${INTERFACE} == ${INTERFACEID} ]]; then
++		# Found interface
++		exit 0
++	fi
++done
++ 
++exit 1
+diff -ruN libgphoto2-2.2.1-orig/packaging/generic/Makefile.am libgphoto2-2.2.1/packaging/generic/Makefile.am
+--- libgphoto2-2.2.1-orig/packaging/generic/Makefile.am	2006-12-08 10:04:43.000000000 +0100
++++ libgphoto2-2.2.1/packaging/generic/Makefile.am	2006-12-08 10:24:29.000000000 +0100
+@@ -2,6 +2,7 @@
+ #       policies
+ utilsdir = $(libdir)/$(PACKAGE)
+ utils_PROGRAMS = print-camera-list
++EXTRA_DIST = check_ptp_camera
+ 
+ # print_camera_list_CPPFLAGS = -I$(top_srcdir) -I$(top_builddir)
+ print_camera_list_SOURCE = print-camera-list.c
+diff -ruN libgphoto2-2.2.1-orig/packaging/generic/print-camera-list.c libgphoto2-2.2.1/packaging/generic/print-camera-list.c
+--- libgphoto2-2.2.1-orig/packaging/generic/print-camera-list.c	2006-12-08 10:04:43.000000000 +0100
++++ libgphoto2-2.2.1/packaging/generic/print-camera-list.c	2006-12-08 13:40:57.000000000 +0100
+@@ -105,7 +105,6 @@
+ 	} while (0)
+ #endif /* __GNUC__ */
+ 
+-
+ /* print_usb_usermap
+  *
+  * Print out lines that can be included into usb.usermap 
+@@ -262,13 +261,14 @@
+ 
+ 
+ static int
+-udev_begin_func (const func_params_t *params)
++udev_098_begin_func (const func_params_t *params)
+ {
+-	printf ("# udev rules file for libgphoto2\n#\n");
+-	printf ("BUS!=\"usb\", ACTION!=\"add\", GOTO=\"libgphoto2_rules_end\"\n\n");	
++	printf ("# udev rules file for libgphoto2 devices (udev >= 0.98)\n#\n");
++	printf ("ACTION!=\"add\", GOTO=\"libgphoto2_rules_end\"\n");
++	printf ("SUBSYSTEM!=\"usb*\", GOTO=\"libgphoto2_rules_end\"\n\n");
+ 	return 0;
+ }
+-
++			
+ static int
+ udev_end_func (const func_params_t *params)
+ {
+@@ -280,7 +280,7 @@
+ 
+ 
+ static int
+-udev_camera_func (const func_params_t *params, 
++udev_098_camera_func (const func_params_t *params, 
+ 		  const int i,
+ 		  const CameraAbilities *a)
+ {
+@@ -324,22 +324,18 @@
+ 	}
+ 	
+ 	if (flags & GP_USB_HOTPLUG_MATCH_INT_CLASS) {
+-		printf("SYSFS{bInterfaceClass}==\"%02x\", ", class);
+-		if (flags & GP_USB_HOTPLUG_MATCH_INT_SUBCLASS) {
+-			printf("SYSFS{bInterfaceSubClass}==\"%02x\", ", subclass);
+-		}
+-		if (flags & GP_USB_HOTPLUG_MATCH_INT_PROTOCOL) {
+-			printf("SYSFS{bInterfaceProtocol}==\"%02x\", ", proto);
+-			}
++		if ((flags & (GP_USB_HOTPLUG_MATCH_INT_CLASS|GP_USB_HOTPLUG_MATCH_INT_SUBCLASS|GP_USB_HOTPLUG_MATCH_INT_PROTOCOL)) == (GP_USB_HOTPLUG_MATCH_INT_CLASS|GP_USB_HOTPLUG_MATCH_INT_SUBCLASS|GP_USB_HOTPLUG_MATCH_INT_PROTOCOL))
++			printf("PROGRAM=\"check_ptp_camera %02d/%02d/%02d\", ", class, subclass, proto);
++		else
++			fprintf(stderr,"unhandled interface match flags %x\n", flags);
+ 	} else {
+-		printf ("SYSFS{idVendor}==\"%04x\", SYSFS{idProduct}==\"%04x\", ",
++		printf ("ATTRS{idVendor}==\"%04x\", ATTRS{idProduct}==\"%04x\", ",
+ 			a->usb_vendor, a->usb_product);
+ 	}
+-	printf("RUN+=\"%s\"\n", hotplug_script);
++	printf("MODE=\"660\", GROUP=\"plugdev\"\n");
+ 	return 0;
+ }
+ 
+-
+ static int
+ empty_begin_func (const func_params_t *params)
+ {
+@@ -647,12 +643,12 @@
+ 	 camera_func: fdi_device_camera_func,
+ 	 end_func: fdi_device_end_func
+ 	},
+-	{name: "udev-rules",
+-	 descr: "udev rules file",
+-	 help: "Put it into /etc/udev/libgphoto2.rules",
+-	 paramdescr: "<PATH_TO_HOTPLUG_SCRIPT>",
+-	 begin_func: udev_begin_func, 
+-	 camera_func: udev_camera_func,
++	{name: "udev-rules-0.98",
++	 descr: "udev >= 0.98 rules file",
++	 help: "Put it into /etc/udev/libgphoto2.rules, for udev >= 0.98",
++	 paramdescr: "( <PATH_TO_SCRIPT> | [mode <mode>|owner <owner>|group <group>]* ) ",
++	 begin_func: udev_098_begin_func, 
++	 camera_func: udev_098_camera_func,
+ 	 end_func: udev_end_func
+ 	},
+ 	{name: "idlist",
