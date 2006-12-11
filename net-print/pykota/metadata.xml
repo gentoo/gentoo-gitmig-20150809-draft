@@ -11,6 +11,7 @@
 	<name>Christian Andreetta</name>
 </maintainer>
 <longdescription>
-PyKota is a complete GPLed Print Quota and Accounting Software Solution for the Common UNIX Printing System (aka CUPS), LPR Next Generation (aka LPRng) and lpd BSD printer servers
+PyKota is a complete GPLed Print Quota and Accounting Software Solution for the
+Common UNIX Printing System (CUPS).
 </longdescription>
 </pkgmetadata>

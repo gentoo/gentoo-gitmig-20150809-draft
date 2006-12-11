@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.24_p2174.ebuild,v 1.4 2006/11/21 22:14:21 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.24_p2174.ebuild,v 1.5 2006/12/11 11:11:48 aross Exp $
 
 inherit python eutils distutils
 
-DESCRIPTION="PyKota - Python print Quota for CUPS, LPRng and BSD printer servers"
+DESCRIPTION="Flexible print quota and accounting package for use with CUPS."
 SRC_URI="http://www.gentoo.org/~satya/packages/pykota/${P}.tar.bz2"
-HOMEPAGE="http://www.librelogiciel.com/software/PyKota/Presentation/action_Presentation"
+HOMEPAGE="http://www.pykota.com"
 LICENSE="GPL-2"
 
 IUSE="ldap mysql postgres snmp sqlite snmp xml"
