@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles-extra/commonbox-styles-extra-0.2-r2.ebuild,v 1.7 2006/11/20 20:45:44 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles-extra/commonbox-styles-extra-0.2-r2.ebuild,v 1.8 2006/12/11 20:44:37 kloeri Exp $
 
 IUSE=""
 DESCRIPTION="Extra styles pack for flux|black|open(box)."
@@ -10,7 +10,7 @@ HOMEPAGE="http://mkeadle.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ~hppa ~ia64 ppc ~ppc-macos ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~hppa ia64 ppc ~ppc-macos ppc64 sparc x86"
 
 # xv is there so *box can convert backgrounds/textures to use
 DEPEND=""
