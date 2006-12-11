@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.29.ebuild,v 1.2 2006/12/11 18:12:00 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.29.ebuild,v 1.3 2006/12/11 18:53:13 beandog Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ SLOT="0"
 
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
-IUSE="esd imlib nls spell truetype xinerama"
+IUSE="esd imlib nls spell truetype xinerama minimal debug"
 
 RDEPEND="|| ( (
 		x11-libs/libXau
@@ -47,37 +47,46 @@ DEPEND="${RDEPEND}
 	virtual/x11 )
 	>=sys-apps/sed-4"
 
+pkg_setup() {
+	if use truetype && use minimal; then
+		ewarn "You have both 'truetype' and 'minimal' use flags enabled."
+		ewarn "If you really want a minimal install, you will have to turn off"
+		ewarn "the truetype flag for this package."
+	fi
+}
+
 src_unpack() {
 	unpack ${A}
-
 	cd ${S}/src
 
 	echo "#!/bin/sh" > $T/icewm
 	echo "/usr/bin/icewm-session" >> $T/icewm
-
 }
 
-src_compile(){
+src_compile() {
 
 	if use truetype
 	then
 		myconf="${myconf} --enable-gradients --enable-shape --enable-movesize-fx --enable-shaped-decorations"
 	else
-		myconf="${myconf} --disable-xfreetype --enable-corefonts"
+		myconf="${myconf} --disable-xfreetype --enable-corefonts
+			$(use_enable minimal lite)"
 	fi
 
-	CXXFLAGS="${CXXFLAGS}" econf \
-		--with-libdir=/usr/share/icewm \
-		--with-cfgdir=/etc/icewm \
-		--with-docdir=/usr/share/doc/${PF}/html \
-		$(use_with esd esd-config /usr/bin/esd-config) \
-		$(use_enable nls) \
-		$(use_enable nls i18n) \
-		$(use_with imlib) \
-		$(use_enable spell GtkSpell) \
-		$(use_enable x86 x86-asm) \
-		$(use_enable xinerama) \
-		${myconf} || die "configure failed"
+	myconf="${myconf}
+		--with-libdir=/usr/share/icewm
+		--with-cfgdir=/etc/icewm
+		--with-docdir=/usr/share/doc/${PF}/html
+		$(use_with esd esd-config /usr/bin/esd-config)
+		$(use_enable nls)
+		$(use_enable nls i18n)
+		$(use_with imlib)
+		$(use_enable spell GtkSpell)
+		$(use_enable x86 x86-asm)
+		$(use_enable xinerama)
+		$(use_enable debug)"
+
+	CXXFLAGS="${CXXFLAGS}" econf ${myconf} || die "configure failed"
 
 	sed -i "s:/icewm-\$(VERSION)::" src/Makefile || die "patch failed"
 	sed -i "s:ungif:gif:" src/Makefile || die "libungif fix failed"
