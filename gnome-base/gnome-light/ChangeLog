@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-light
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.28 2006/11/19 21:30:38 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.29 2006/12/11 17:20:25 leio Exp $
+
+*gnome-light-2.16.1 (11 Dec 2006)
+
+  11 Dec 2006; Mart Raudsepp <leio@gentoo.org> +gnome-light-2.16.1.ebuild:
+  Add 2.16.1 reflecting package versions as was for upstream 2.16.1
 
   19 Nov 2006; Mart Raudsepp <leio@gentoo.org> -gnome-light-2.6.2.ebuild,
   -gnome-light-2.8.0.ebuild, -gnome-light-2.8.1.ebuild,
