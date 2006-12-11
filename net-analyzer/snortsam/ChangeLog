@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snortsam
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/ChangeLog,v 1.18 2006/12/09 16:03:26 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/ChangeLog,v 1.19 2006/12/11 10:29:01 kloeri Exp $
+
+  11 Dec 2006; <kloeri@gentoo.org> snortsam-2.50-r1.ebuild:
+  Add ~alpha keyword.
 
 *snortsam-2.50-r1 (09 Dec 2006)
 
