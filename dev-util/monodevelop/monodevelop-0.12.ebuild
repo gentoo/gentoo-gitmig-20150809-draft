@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.12.ebuild,v 1.2 2006/12/10 04:28:56 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.12.ebuild,v 1.3 2006/12/11 01:03:43 compnerd Exp $
 
 inherit mono eutils fdo-mime
 
@@ -20,7 +20,7 @@ DEPEND=">=dev-dotnet/gtksourceview-sharp-0.10
 	>=dev-dotnet/gconf-sharp-2.4.0
 	>=dev-dotnet/gtkhtml-sharp-2.4.0
 	>=dev-dotnet/glade-sharp-2.4.0
-	>=x11-wm/metacity
+	x11-wm/metacity
 	boo? ( >=dev-lang/boo-0.7.6 )
 	java? ( || ( >=dev-dotnet/ikvm-bin-0.14 >=dev-dotnet/ikvm-0.14.0.1-r1 ) )"
 
