@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/conserver-8.1.14.ebuild,v 1.9 2006/10/25 23:52:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/conserver-8.1.14.ebuild,v 1.10 2006/12/11 22:54:52 weeve Exp $
 
 inherit ssl-cert eutils
 
@@ -27,7 +27,7 @@ src_unpack() {
 
 src_compile() {
 	use amd64 && \
-		einfo "debug use flag is disabled on amd64 since deps cannot be met."
+		ewarn "debug use flag is disabled on amd64 since deps cannot be met."
 
 	econf \
 		$(use_with ssl openssl) \
@@ -82,5 +82,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Config-file formats _changed_ with version 8.0 !"
+	ewarn "Config-file formats _changed_ with version 8.0 !"
 }
