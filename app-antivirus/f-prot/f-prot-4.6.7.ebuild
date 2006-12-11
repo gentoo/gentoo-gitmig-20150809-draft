@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/f-prot-4.6.7.ebuild,v 1.2 2006/12/10 10:02:47 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/f-prot-4.6.7.ebuild,v 1.3 2006/12/11 17:04:06 welp Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ PROVIDE="virtual/antivirus"
 
 SLOT="0"
 LICENSE="F-PROT"
-KEYWORDS="~amd64 -ppc -sparc x86"
+KEYWORDS="amd64 -ppc -sparc x86"
 
 src_install() {
 	cd ${S}
