@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mp3blaster
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/ChangeLog,v 1.26 2006/11/23 17:42:23 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/ChangeLog,v 1.27 2006/12/11 19:41:57 beandog Exp $
+
+*mp3blaster-3.2.3 (11 Dec 2006)
+
+  11 Dec 2006; Steve Dibb <beandog@gentoo.org> +mp3blaster-3.2.3.ebuild:
+  Version bump
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> mp3blaster-3.1.3.ebuild,
   mp3blaster-3.2.0.ebuild, mp3blaster-3.2.2.ebuild:
