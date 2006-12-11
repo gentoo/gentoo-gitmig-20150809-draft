@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.8.2.ebuild,v 1.3 2006/12/07 16:51:13 tchiwam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.8.2.ebuild,v 1.4 2006/12/11 10:51:52 tchiwam Exp $
 
 inherit webapp depend.php
 
@@ -47,8 +47,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/jobindexlength-mysql4.patch
-	epatch ${FILESDIR}/jobindexlength-mysql5.patch
+	epatch ${FILESDIR}/jobindexlength-mysql.patch
 }
 
 src_compile() {
