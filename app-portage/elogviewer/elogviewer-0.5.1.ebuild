@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogviewer/elogviewer-0.5.1.ebuild,v 1.3 2006/11/17 13:38:48 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogviewer/elogviewer-0.5.1.ebuild,v 1.4 2006/12/11 11:47:02 opfer Exp $
 
 DESCRIPTION="GTK+ based utility to parse the contents of elogs created by Portage"
 HOMEPAGE="http://sourceforge.net/projects/elogviewer/"
@@ -13,8 +13,7 @@ KEYWORDS="~ppc ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND=">=dev-lang/python-2.3
-	>=sys-apps/portage-2.1
+RDEPEND=">=sys-apps/portage-2.1
 	>=dev-python/pygtk-2.0"
 
 src_install() {

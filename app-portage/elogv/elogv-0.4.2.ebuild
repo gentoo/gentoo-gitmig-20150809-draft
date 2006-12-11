@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/elogv-0.4.2.ebuild,v 1.1 2006/11/26 09:59:56 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/elogv-0.4.2.ebuild,v 1.2 2006/12/11 11:44:25 opfer Exp $
 
 inherit eutils
 
@@ -13,8 +13,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND=">=dev-lang/python-2.4
-	>=sys-apps/portage-2.1"
+RDEPEND=">=sys-apps/portage-2.1"
 
 pkg_setup() {
 	if ! built_with_use dev-lang/python ncurses; then
