@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mustang/mustang-3.ebuild,v 1.1 2006/10/21 06:22:19 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mustang/mustang-3.ebuild,v 1.2 2006/12/11 06:18:35 dberkholz Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ MY_P="${MY_PN}_v.${PV}"
 DESCRIPTION="MUltiple STructural AligNment AlGorithm."
 HOMEPAGE="http://www.cs.mu.oz.au/~arun/mustang/"
 SRC_URI="${HOMEPAGE}${SRC_P}.tgz"
-LICENSE="Intel"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
@@ -33,4 +33,10 @@ src_test() {
 src_install() {
 	newbin bin/MUSTANG_v.3 mustang
 	dodoc README.txt
+}
+
+pkg_postinst() {
+	elog "If you use this program for an academic paper, please cite:"
+	elog "Arun S. Konagurthu, James C. Whisstock, Peter J. Stuckey, and Arthur M. Lesk"
+	elog "Proteins: Structure, Function, and Bioinformatics. 64(3):559-574, Aug. 2006"
 }
