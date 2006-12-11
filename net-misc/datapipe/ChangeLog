@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/datapipe
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/datapipe/ChangeLog,v 1.5 2005/05/30 18:43:18 kugelfang Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/datapipe/ChangeLog,v 1.6 2006/12/11 07:59:49 beu Exp $
+
+  11 Dec 2006; Elfyn McBratney <beu@gentoo.org> datapipe-1.0.ebuild:
+  Kill redundant DEPEND.
 
   30 May 2005; Danny van Dyk <kugelfang@gentoo.org> datapipe-1.0.ebuild:
   Fixed deprecated usage of gcc.eclass. (BUG #92745)
