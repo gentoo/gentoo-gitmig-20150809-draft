@@ -9,11 +9,27 @@ SRCLXDVDRIP= lxdvdrip.c streamanalyze.c ifo.c dvdinfo.c\
 OBJLXDVDRIP= $(SRCLXDVDRIP:.c=.o)
 
 
+SRCLXVAMPS= vamps/vamps_lxdvdrip.c vamps/tcmemcpy.c vamps/strlcpy.c\
+            vamps/strlcat.c vamps/requant.c vamps/cputest.c
+
+OBJLXVAMPS= $(SRCLXVAMPS:.c=.o)
+	    
+
+SRCLXPLAYCELL= vamps/play_cell_lxdvdrip.c vamps/tcmemcpy.c vamps/cputest.c\
+               vamps/strlcpy.c vamps/strlcat.c
+
+OBJLXPLAYCELL= $(SRCLXPLAYCELL:.c=.o)
+
+
 SRCLXAC3SCAN= lxac3scan.c
 
 OBJLXAC3SCAN= $(SRCLXAC3SCAN:.c=.o)
 
 
-all: $(OBJLXAC3SCAN) $(OBJLXDVDRIP)
+all: $(OBJLXAC3SCAN) $(OBJLXDVDRIP) $(OBJLXVAMPS) $(OBJLXPLAYCELL)
 	$(CC) $(CFLAGS) $(LDFLAGS) -o lxdvdrip $(OBJLXDVDRIP) -lm -ldvdread -ldvdnav -lpthread -o lxdvdrip
 	$(CC) $(CFLAGS) $(LDFLAGS) -o lxac3scan $(OBJLXAC3SCAN)
+	$(CC) $(CFLAGS) $(LDFLAGS) -o vamps/vamps_lxdvdrip $(OBJLXVAMPS) -lm -ldvdread -lpthread -o vamps/vamps_lxdvdrip
+	$(CC) $(CFLAGS) $(LDFLAGS) -o vamps/play_cell_lxdvdrip $(OBJLXPLAYCELL) -lm -ldvdread -lpthread -o vamps/play_cell_lxdvdrip
+
+
