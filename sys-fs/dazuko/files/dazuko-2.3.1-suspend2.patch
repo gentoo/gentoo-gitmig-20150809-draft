@@ -1,6 +1,6 @@
-diff -urNp dazuko-2.3.1.org/configure dazuko-2.3.1/configure
---- dazuko-2.3.1.org/configure	2006-10-04 00:48:18.000000000 +0200
-+++ dazuko-2.3.1/configure	2006-11-08 15:11:38.000000000 +0200
+diff -urNp dazuko-2.3.2.org/configure dazuko-2.3.2/configure
+--- dazuko-2.3.2.org/configure	2006-10-04 00:48:18.000000000 +0200
++++ dazuko-2.3.2/configure	2006-12-12 13:49:04.000000000 +0200
 @@ -590,21 +590,20 @@ do_linux26()
  		then
  			LINUX26_USE_SUSPEND=1
@@ -16,8 +16,7 @@ diff -urNp dazuko-2.3.1.org/configure dazuko-2.3.1/configure
 +		grep "try_to_freeze.*(.*void.*)" "$SRC_PATH" > /dev/null 2>&1
  		if [ $? -eq 0 ]
  		then
--			LINUX26_USE_SUSPEND=2
-+			LINUX26_USE_SUSPEND=1
+ 			LINUX26_USE_SUSPEND=2
  		fi
  	fi
  
@@ -31,22 +30,25 @@ diff -urNp dazuko-2.3.1.org/configure dazuko-2.3.1/configure
  	if [ $LOCAL_DPATH -eq 2 ]
  	then
  		LOCAL_DPATH=1
-@@ -705,11 +704,6 @@ do_linux26()
+@@ -700,12 +699,12 @@ do_linux26()
+ 		echo "EXTRA_CFLAGS += -DNO_CAPABILITIES" >> Makefile
+ 	fi
+ 
+-	if [ ${LINUX26_USE_SUSPEND} -eq 1 ]
++	if [ -n "${LINUX26_USE_SUSPEND}" ]
+ 	then
  		echo "EXTRA_CFLAGS += -DUSE_TRYTOFREEZEVOID" >> Makefile
  	fi
  
 -	if [ ${LINUX26_USE_SUSPEND} -eq 2 ]
--	then
--		echo "EXTRA_CFLAGS += -DUSE_SUSPEND2" >> Makefile
--	fi
--
- 	if [ ${LINUX26_USE_CLASS} -eq 1 ]
++	if [ "${LINUX26_USE_SUSPEND}" -eq 2 ]
  	then
- 		echo "EXTRA_CFLAGS += -DUSE_CLASS" >> Makefile
-diff -urNp dazuko-2.3.1.org/dazuko_linux26.c dazuko-2.3.1/dazuko_linux26.c
---- dazuko-2.3.1.org/dazuko_linux26.c	2006-07-29 12:13:03.000000000 +0300
-+++ dazuko-2.3.1/dazuko_linux26.c	2006-11-08 15:15:25.000000000 +0200
-@@ -37,7 +37,7 @@
+ 		echo "EXTRA_CFLAGS += -DUSE_SUSPEND2" >> Makefile
+ 	fi
+diff -urNp dazuko-2.3.2.org/dazuko_linux26.c dazuko-2.3.2/dazuko_linux26.c
+--- dazuko-2.3.2.org/dazuko_linux26.c	2006-11-15 10:11:20.000000000 +0200
++++ dazuko-2.3.2/dazuko_linux26.c	2006-12-12 13:51:04.000000000 +0200
+@@ -37,9 +37,12 @@
  #include <linux/devfs_fs_kernel.h>
  #endif
  #include <linux/device.h>
@@ -54,8 +56,13 @@ diff -urNp dazuko-2.3.1.org/dazuko_linux26.c dazuko-2.3.1/dazuko_linux26.c
 +#if !defined(USE_TRYTOFREEZEVOID)
  #include <linux/suspend.h>
  #endif
++#if USE_SUSPEND2
++#include <linux/freezer.h>
++#endif
  #include <asm/uaccess.h>
-@@ -178,10 +178,7 @@ inline int xp_wait_until_condition(struc
+ 
+ 
+@@ -178,10 +181,7 @@ inline int xp_wait_until_condition(struc
  		{
  			ret = wait_event_interruptible(queue->queue, cfunction(cparam) != 0);
  
