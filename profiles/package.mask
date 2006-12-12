@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6440 2006/12/12 15:48:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6441 2006/12/12 21:35:17 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -947,13 +947,6 @@ mail-client/mahogany
 # Marinus Schraal <foser@gentoo.org> (19 Jun 2006)
 # removes internal API headers, breaks stuff that depends on internals
 >=media-libs/freetype-2.2
-
-# Michael Sterrett <mr_bones_@gentoo.org> (17 Jun 2006)
-# Needs newer linux-headers.  masked until then
-=sys-process/audit-1.1*
-=sys-process/audit-1.2.1*
-=sys-process/audit-1.2.3*
-=sys-process/audit-1.2.5*
 
 # Mike Frysinger <games@gentoo.org> (17 Jun 2006)
 # Use quakeforge or another quake1 client
