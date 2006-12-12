@@ -6,6 +6,10 @@
 	<email>ka0ttic@gentoo.org</email>
 	<name>Aaron Walker</name>
 </maintainer>
+<maintainer>
+	<email>pioto@gentoo.org</email>
+	<name>Mike Kelly</name>
+</maintainer>
 <longdescription>
   Since v2.04, bash has allowed you to intelligently program and extend its
   standard completion behavior to achieve complex command lines with just a
