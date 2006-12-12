@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.314 2006/12/12 05:24:37 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.315 2006/12/12 12:22:22 zmedico Exp $
+
+*portage-2.1.2_rc3-r4 (12 Dec 2006)
+
+  12 Dec 2006; Zac Medico <zmedico@gentoo.org> +files/bug_157897.patch,
+  -portage-2.1.2_rc3-r3.ebuild, +portage-2.1.2_rc3-r4.ebuild:
+  2.1.2_rc3-r4 revbump just to fix bug #157897. This patch fixes a KeyError
+  exception may occur when emerge is calculating dependencies.
 
 *portage-2.1.2_rc3-r3 (12 Dec 2006)
 
