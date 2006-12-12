@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.29.ebuild,v 1.3 2006/12/11 18:53:13 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.29.ebuild,v 1.4 2006/12/12 15:36:15 beandog Exp $
 
 inherit eutils
 
@@ -97,7 +97,7 @@ src_compile() {
 src_install(){
 	emake DESTDIR="${D}" install || die "make install failed"
 
-	dodoc AUTHORS BUGS CHANGES FAQ PLATFORMS README* TODO VERSION
+	dodoc AUTHORS BUGS CHANGES PLATFORMS README* TODO VERSION
 	dohtml -a html,sgml doc/*
 
 	exeinto /etc/X11/Sessions
