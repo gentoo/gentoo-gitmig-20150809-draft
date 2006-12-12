@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/libgksu-2.0.0.ebuild,v 1.9 2006/12/10 19:55:19 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/libgksu-2.0.0.ebuild,v 1.10 2006/12/12 16:51:20 dang Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 MY_PN="${PN}2"
 MY_P="${MY_PN}-${PV}"
@@ -31,3 +31,9 @@ RDEPEND="${DEPEND}
 
 USEDESTDIR="1"
 G2CONF="$(use_enable nls)"
+
+src_unpack() {
+	gnome2_src_unpack
+
+	epatch "${FILESDIR}/${P}-fbsd.patch"
+}

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libgksu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.22 2006/12/10 19:55:19 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.23 2006/12/12 16:51:20 dang Exp $
+
+  12 Dec 2006; Daniel Gryniewicz <dang@gentoo.org>
+  +files/libgksu-2.0.0-fbsd.patch, libgksu-2.0.0.ebuild:
+  Needs gthread on fbsd; bug #157915
 
   10 Dec 2006; Andrej Kacian <ticho@gentoo.org> libgksu-2.0.0.ebuild:
   Stable on x86, bug #156662.
