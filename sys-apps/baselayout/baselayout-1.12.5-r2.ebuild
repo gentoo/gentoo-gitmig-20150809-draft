@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.5-r2.ebuild,v 1.2 2006/09/28 12:52:33 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.5-r2.ebuild,v 1.3 2006/12/12 17:16:09 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -455,7 +455,7 @@ pkg_postinst() {
 
 		# Create temp device nodes
 		echo
-		einfo "Making device node tarball (this could take a couple minutes)"
+		einfo "Making device node tarball (this could take a couple of minutes)"
 		PATH=${ROOT}/sbin:${PATH} create_dev_nodes
 
 		# Now create tarball that can also be used for udev.
