@@ -1,12 +1,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ccze-0.2.1-r1.ebuild,v 1.4 2006/12/12 17:32:29 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ccze-0.2.1-r1.ebuild,v 1.5 2006/12/12 18:04:56 joker Exp $
 
 inherit fixheadtails autotools eutils
 
 DESCRIPTION="A flexible and fast logfile colorizer"
 HOMEPAGE="http://bonehunter.rulez.org/software/ccze/"
 SRC_URI="ftp://bonehunter.rulez.org/pub/ccze/stable/${P}.tar.gz"
+
+RESTRICT="test"
 
 LICENSE="GPL-2"
 SLOT="0"
