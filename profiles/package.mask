@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6439 2006/12/12 15:22:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6440 2006/12/12 15:48:19 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -457,11 +457,6 @@ app-emulation/uae
 # Robin H. Johnson <robbat2@gentoo.org> (11 Nov 2006)
 # Temporarily block while testing
 >=app-crypt/gnupg-2.0.0
-
-# Chris Gianelloni <wolf31o2@gentoo.org> (10 Nov 2006)
-# Masked pending removal on Dec 10. This game has been broken for quite some
-# time, and upstream is completely dead.  Sorry, folks.
-games-fps/ut2004-domain2049
 
 # Tiziano Müller <dev-zero@gentoo.org> (09 Nov 2006)
 # masked pending unresolved bugs #154320, #93316 et.al.
