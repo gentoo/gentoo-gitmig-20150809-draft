@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/paxctl-0.4.ebuild,v 1.5 2006/09/30 18:57:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/paxctl-0.4.ebuild,v 1.6 2006/12/12 00:31:09 solar Exp $
 
 inherit flag-o-matic
 
 DESCRIPTION="Manages various PaX related program header flags for Elf32, Elf64, binaries."
 SRC_URI="http://pax.grsecurity.net/paxctl-${PV}.tar.gz"
 HOMEPAGE="http://pax.grsecurity.net"
-KEYWORDS="~amd64 arm ~hppa ia64 ~mips ppc ppc64 s390 sh ~sparc x86"
+KEYWORDS="amd64 arm ~hppa ia64 ~mips ppc ppc64 s390 sh ~sparc x86"
 IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
