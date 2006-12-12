@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/files/vpnclient.rc,v 1.7 2006/07/19 21:11:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/files/vpnclient.rc,v 1.8 2006/12/12 15:08:12 wolf31o2 Exp $
 
 opts="start stop status"
 
@@ -63,7 +63,7 @@ start() {
 		if [ "$?" != "0" ] ; then
 			eerror "Failed (ifconfig)"
 			/sbin/rmmod ${VPNMOD}
-			exit 1
+			eend 1
 		fi
 	fi
 
