@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.3.0_alpha20061209.ebuild,v 1.1 2006/12/12 03:46:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.3.0_alpha20061209.ebuild,v 1.2 2006/12/12 18:42:06 vapier Exp $
 
 ETYPE="gcc-compiler"
-PATCH_VER="0.2"
+
 inherit toolchain
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
