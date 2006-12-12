@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.16.1-r1.ebuild,v 1.2 2006/12/10 20:23:53 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.16.1-r1.ebuild,v 1.3 2006/12/12 16:57:01 wolf31o2 Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/epiphany/extensions.html"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc x86"
+KEYWORDS="amd64 ~hppa ~ppc ~sparc x86"
 IUSE="debug pcre python"
 
 RDEPEND=">=www-client/epiphany-2.16
