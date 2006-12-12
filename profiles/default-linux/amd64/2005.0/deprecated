@@ -1,0 +1,15 @@
+default-linux/amd64/2006.1/desktop
+# There are several possible profiles that you can use to replace this one.
+
+# default-linux/amd64/2006.1
+# default-linux/amd64/2006.1/desktop
+# default-linux/amd64/2006.1/server
+
+# By default, we use the desktop profile.
+
+# emerge -n '>=sys-apps/portage-2.0.51'
+# cd /etc
+# rm make.profile
+# ln -s ../usr/portage/profiles/default-linux/amd64/2006.1/desktop make.profile
+
+# This profile is deprecated and will be removed on or after January 1st, 2007.

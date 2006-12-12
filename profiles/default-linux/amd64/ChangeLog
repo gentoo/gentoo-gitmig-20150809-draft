@@ -1,6 +1,12 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.41 2006/11/15 19:59:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.42 2006/12/12 16:50:13 wolf31o2 Exp $
+
+  12 Dec 2006; Chris Gianelloni <wolf31o2@gentoo.org> +2005.0/deprecated,
+  2005.0/no-multilib/package.mask, +2005.1/deprecated,
+  2005.1/no-multilib/package.mask, 2006.0/no-multilib/package.mask:
+  Copied package.mask from 2006.1/no-multilib into older profiles and
+  deprecated 2005.x profiles.
 
   15 Nov 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   2005.0/no-multilib/package.mask, 2005.1/no-multilib/package.mask,
