@@ -1,0 +1,30 @@
+diff -r -u xfce4-weather-plugin-0.4.9/panel-plugin/scrollbox.c xfce4-weather-plugin-0.4.9-updated/panel-plugin/scrollbox.c
+--- xfce4-weather-plugin-0.4.9/panel-plugin/scrollbox.c	2006-06-11 12:27:28.000000000 +0100
++++ xfce4-weather-plugin-0.4.9-updated/panel-plugin/scrollbox.c	2006-06-11 12:26:19.000000000 +0100
+@@ -17,7 +17,7 @@
+ void free_label(struct label *lbl)
+ {
+         if (lbl->pixmap)
+-                g_free(lbl->pixmap);
++                g_object_unref(lbl->pixmap);
+         if (lbl->msg)
+                 g_free(lbl->msg);
+ }
+@@ -305,7 +305,7 @@
+                 {
+                         struct label *lbl = (struct label*)g_ptr_array_index(self->labels, i); 
+ 
+-                        g_free(lbl->pixmap);
++                        g_object_unref(lbl->pixmap);
+                         g_free(lbl->msg);
+                 }
+                 g_ptr_array_free(self->labels, TRUE);
+@@ -337,7 +337,7 @@
+                 newpixmap = make_pixmap(self, lbl->msg);
+ 
+                 if (lbl->pixmap)
+-                        g_free(lbl->pixmap);
++                        g_object_unref(lbl->pixmap);
+ 
+                 lbl->pixmap = newpixmap;
+         }
