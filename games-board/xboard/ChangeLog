@@ -1,6 +1,13 @@
 # ChangeLog for games-board/xboard
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.11 2006/10/20 22:14:59 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.12 2006/12/12 22:40:27 wolf31o2 Exp $
+
+*xboard-4.2.7-r1 (12 Dec 2006)
+
+  12 Dec 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +xboard-4.2.7-r1.ebuild:
+  Added an updated ebuild from Ali Polatel <polatel@nerdshack.com> and closing
+  bug #157875.
 
   20 Oct 2006; <tupone@gentoo.org> xboard-4.2.7.ebuild:
   Test phase restricted. Bug #124112 by Matthew Wesley
