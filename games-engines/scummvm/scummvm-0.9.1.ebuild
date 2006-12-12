@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.9.1.ebuild,v 1.3 2006/11/28 19:19:34 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.9.1.ebuild,v 1.4 2006/12/12 22:41:29 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -29,6 +29,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/flac-1.1.3.patch
 	if use x86 ; then
 		local f
 		for f in graphics/scaler/{hq3x_i386.asm,hq2x_i386.asm}
