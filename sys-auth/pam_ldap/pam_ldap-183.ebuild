@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/pam_ldap-183.ebuild,v 1.4 2006/12/12 13:07:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/pam_ldap-183.ebuild,v 1.5 2006/12/12 19:30:17 welp Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -13,7 +13,7 @@ SRC_URI="http://www.padl.com/download/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 LGPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~mips ~ppc ppc64 sparc x86"
 IUSE="ssl sasl"
 DEPEND=">=sys-libs/glibc-2.1.3
 		>=sys-libs/pam-0.72
