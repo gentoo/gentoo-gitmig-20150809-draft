@@ -1,5 +1,0 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/2005.1/make.defaults,v 1.10 2006/10/28 13:29:59 flameeyes Exp $
-
-USE="alsa apm arts avi bitmap-fonts cups eds emboss encode fortran foomaticdb gdbm gif gnome gpm gstreamer gtk gtk2 imlib jpeg kde libg++ libwww mad mikmod motif mp3 mpeg ogg oggvorbis opengl oss pdflib png qt3 qt4 quicktime sdl spell truetype truetype-fonts type1-fonts vorbis X xml2 xv"

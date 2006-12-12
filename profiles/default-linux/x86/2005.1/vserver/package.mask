@@ -1,5 +1,0 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/2005.1/vserver/package.mask,v 1.1 2005/11/12 13:32:24 hollow Exp $
-
-# Benedikt Boehm <hollow@gentoo.org>
-# Mask baselayout in vservers. Use baselayout-vserver instead!
-sys-apps/baselayout
