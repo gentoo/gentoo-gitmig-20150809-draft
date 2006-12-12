@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/beecrypt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.40 2006/12/12 11:05:32 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.41 2006/12/12 14:15:35 gustavoz Exp $
+
+  12 Dec 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  beecrypt-4.1.2-r1.ebuild:
+  Stable on sparc wrt #157858
 
   12 Dec 2006; Christian Faulhammer <opfer@gentoo.org>
   beecrypt-4.1.2-r1.ebuild:
