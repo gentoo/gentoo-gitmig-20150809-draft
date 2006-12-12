@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.1-r2.ebuild,v 1.10 2006/12/12 22:35:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.1-r2.ebuild,v 1.11 2006/12/12 22:46:38 wolf31o2 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="flac mikmod vorbis speex physfs mp3 mpeg"
 
 RDEPEND=">=media-libs/libsdl-1.2
-	flac? ( ~media-libs/flac-1.1.2 )
+	flac? ( media-libs/flac )
 	mikmod? ( >=media-libs/libmikmod-3.1.9 media-libs/libmodplug )
 	vorbis? ( >=media-libs/libvorbis-1.0_beta4 )
 	speex? ( media-libs/speex media-libs/libogg )
