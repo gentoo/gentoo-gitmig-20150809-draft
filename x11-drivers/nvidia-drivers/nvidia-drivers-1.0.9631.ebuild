@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9631.ebuild,v 1.1 2006/12/05 17:27:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9631.ebuild,v 1.2 2006/12/12 14:46:27 wolf31o2 Exp $
 
-inherit eutils multilib versionator linux-mod
+inherit eutils multilib versionator linux-mod flag-o-matic
 
 NV_V="${PV/1.0./1.0-}"
 X86_NV_PACKAGE="NVIDIA-Linux-x86-${NV_V}"
@@ -38,6 +38,13 @@ QA_TEXTRELS_x86="usr/lib/xorg/libXvMCNVIDIA.so.${PV}
 	usr/lib/libXvMCNVIDIA.so.${PV}
 	usr/lib/xorg/modules/drivers/nvidia_drv.so
 	usr/lib/opengl/nvidia/extensions/libglx.so"
+
+QA_TEXTRELS_x86_fbsd="boot/modules/nvidia.ko
+	usr/lib/opengl/nvidia/lib/libGL.so.1
+	usr/lib/opengl/nvidia/lib/libGLcore.so.1
+	usr/lib/opengl/nvidia/no-tls/libnvidia-tls.so.1
+	usr/lib/opengl/nvidia/extensions/libglx.so
+	usr/lib/xorg/modules/drivers/nvidia_drv.so"
 
 QA_EXECSTACK_x86="usr/lib/opengl/nvidia/lib/libGL.so.${PV}
 	usr/lib/opengl/nvidia/lib/libGLcore.so.${PV}
@@ -168,7 +175,8 @@ src_compile() {
 	# it by itself, pass this.
 	if use x86-fbsd; then
 		cd "${WORKDIR}/${NV_PACKAGE}${PKG_V}/src"
-		MAKE="$(get_bmake)" emake CC="$(tc-getCC)" LD="$(tc-getLD)"
+		echo LDFLAGS="$(raw-ldflags)"
+		MAKE="$(get_bmake)" emake CC="$(tc-getCC)" LD="$(tc-getLD)" LDFLAGS="$(raw-ldflags)" || die
 	else
 		linux-mod_src_compile
 	fi
@@ -219,13 +227,12 @@ src_install() {
 		dodoc usr/share/doc/Copyrights usr/share/doc/NVIDIA_Changelog
 		dodoc usr/share/doc/XF86Config.sample
 		dohtml usr/share/doc/html/*
+		# nVidia want bug reports using this script
+		dobin usr/bin/nvidia-bug-report.sh
 	else
-		dodoc doc/README doc/README.Linux doc/XF86Config.sample
+		dodoc doc/{README,XF86Config.sample,Copyrights}
+		dohtml doc/html/*
 	fi
-
-	# nVidia want bug reports using this script
-	exeinto /usr/bin
-	doexe usr/bin/nvidia-bug-report.sh
 }
 
 # Install nvidia library:
