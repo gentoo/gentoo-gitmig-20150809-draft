@@ -1,6 +1,14 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.147 2006/12/04 13:02:51 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.148 2006/12/12 12:50:09 suka Exp $
+
+*openoffice-bin-2.1.0 (12 Dec 2006)
+
+  12 Dec 2006; Andreas Proschofsky <suka@gentoo.org>
+  +files/2.1.0/50-openoffice-bin, -files/2.1.0_rc1/50-openoffice-bin,
+  +files/2.1.0/ooo-wrapper2, -files/2.1.0_rc1/ooo-wrapper2,
+  -openoffice-bin-2.1.0_rc1.ebuild, +openoffice-bin-2.1.0.ebuild:
+  OpenOffice.org 2.1.0 is here.
 
   04 Dec 2006; Andreas Proschofsky <suka@gentoo.org>
   openoffice-bin-2.1.0_rc1.ebuild:
