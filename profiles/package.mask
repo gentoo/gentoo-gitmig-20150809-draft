@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6437 2006/12/11 21:43:46 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6438 2006/12/12 12:56:02 suka Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -170,10 +170,6 @@ net-p2p/gtkhx
 # recommends using app-xemacs/riece instead, will remove 
 # in a month.
 app-xemacs/liece
-
-# Andreas Proschofsky <suka@gentoo.org> (25 Nov 2006)
-# Mask OpenOffice.org pre-releases
->=app-office/openoffice-bin-2.1.0_rc1
 
 # Charlie Shepherd <masterdriverz@gentoo.org> (25 Nov 2006)
 # Won't compile - bug 152525, nothing depends on it, 
