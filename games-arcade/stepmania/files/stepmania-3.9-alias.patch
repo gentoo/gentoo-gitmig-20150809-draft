@@ -1,0 +1,149 @@
+diff -u StepMania-3.9-src-orig/src/Difficulty.cpp StepMania-3.9-src/src/Difficulty.cpp
+--- StepMania-3.9-src-orig/src/Difficulty.cpp	2004-07-11 09:21:29.000000000 +0200
++++ StepMania-3.9-src/src/Difficulty.cpp	2006-11-27 00:15:25.000000000 +0100
+@@ -57,7 +57,7 @@
+ 
+ CourseDifficulty GetNextShownCourseDifficulty( CourseDifficulty cd )
+ {
+-	for( CourseDifficulty d=(CourseDifficulty)(cd+1); d<NUM_DIFFICULTIES; ((int&)d)++ )
++	for( CourseDifficulty d=(CourseDifficulty)(cd+1); d<NUM_DIFFICULTIES; enum_add(d, 1) )
+ 	{
+ 		if( GAMESTATE->IsCourseDifficultyShown(d) )
+ 			return d;
+diff -u StepMania-3.9-src-orig/src/PlayerNumber.cpp StepMania-3.9-src/src/PlayerNumber.cpp
+--- StepMania-3.9-src-orig/src/PlayerNumber.cpp	2004-07-18 00:15:39.000000000 +0200
++++ StepMania-3.9-src/src/PlayerNumber.cpp	2006-11-27 00:15:25.000000000 +0100
+@@ -22,41 +22,33 @@
+ 
+ PlayerNumber GetNextHumanPlayer( PlayerNumber pn )
+ {
+-	for( PlayerNumber p=(PlayerNumber)(pn+1); p<NUM_PLAYERS; ((int&)p)++ )
+-	{
+-		if( GAMESTATE->IsHumanPlayer(p) )
+-			return p;
+-	}
++	for( enum_add(pn, 1); pn < NUM_PLAYERS; enum_add(pn, 1) )
++		if( GAMESTATE->IsHumanPlayer(pn) )
++			return pn;
+ 	return PLAYER_INVALID;
+ }
+ 
+ PlayerNumber GetNextEnabledPlayer( PlayerNumber pn )
+ {
+-	for( PlayerNumber p=(PlayerNumber)(pn+1); p<NUM_PLAYERS; ((int&)p)++ )
+-	{
+-		if( GAMESTATE->IsPlayerEnabled(p) )
+-			return p;
+-	}
++	for( enum_add(pn, 1); pn < NUM_PLAYERS; enum_add(pn, 1) )
++		if( GAMESTATE->IsPlayerEnabled(pn) )
++			return pn;
+ 	return PLAYER_INVALID;
+ }
+ 
+ PlayerNumber GetNextCpuPlayer( PlayerNumber pn )
+ {
+-	for( PlayerNumber p=(PlayerNumber)(pn+1); p<NUM_PLAYERS; ((int&)p)++ )
+-	{
+-		if( GAMESTATE->IsCpuPlayer(p) )
+-			return p;
+-	}
++	for( enum_add(pn, 1); pn < NUM_PLAYERS; enum_add(pn, 1) )
++		if( GAMESTATE->IsCpuPlayer(pn) )
++			return pn;
+ 	return PLAYER_INVALID;
+ }
+ 
+ PlayerNumber GetNextPotentialCpuPlayer( PlayerNumber pn )
+ {
+-	for( PlayerNumber p=(PlayerNumber)(pn+1); p<NUM_PLAYERS; ((int&)p)++ )
+-	{
+-		if( !GAMESTATE->IsHumanPlayer(p) )
+-			return p;
+-	}
++	for( enum_add(pn, 1); pn < NUM_PLAYERS; enum_add(pn, 1) )
++		if( !GAMESTATE->IsHumanPlayer(pn) )
++			return pn;
+ 	return PLAYER_INVALID;
+ }
+ 
+diff -u StepMania-3.9-src-orig/src/RageUtil.h StepMania-3.9-src/src/RageUtil.h
+--- StepMania-3.9-src-orig/src/RageUtil.h	2004-10-07 19:56:16.000000000 +0200
++++ StepMania-3.9-src/src/RageUtil.h	2006-11-27 00:15:25.000000000 +0100
+@@ -53,6 +53,14 @@
+ 	return false;
+ }
+ 
++template<class T>
++inline bool ENUM_CLAMP( T &x, T l, T h )
++{
++	if (x > h)	{ x = h; return true; }
++	else if (x < l) { x = l; return true; }
++	return false;
++}
++
+ inline void wrap( int &x, int n)
+ {
+ 	if (x<0)
+diff -u StepMania-3.9-src-orig/src/ScreenBookkeeping.cpp StepMania-3.9-src/src/ScreenBookkeeping.cpp
+--- StepMania-3.9-src-orig/src/ScreenBookkeeping.cpp	2004-08-22 18:28:19.000000000 +0200
++++ StepMania-3.9-src/src/ScreenBookkeeping.cpp	2006-11-27 00:15:25.000000000 +0100
+@@ -74,14 +74,14 @@
+ void ScreenBookkeeping::MenuLeft( PlayerNumber pn )
+ {
+ 	m_View = (View)(m_View-1);
+-	CLAMP( (int&)m_View, 0, NUM_VIEWS-1 );
++	ENUM_CLAMP( m_View, View(0), View(NUM_VIEWS-1) );
+ 	ChangeView( m_View );
+ }
+ 
+ void ScreenBookkeeping::MenuRight( PlayerNumber pn )
+ {
+ 	m_View = (View)(m_View+1);
+-	CLAMP( (int&)m_View, 0, NUM_VIEWS-1 );
++	ENUM_CLAMP( m_View, View(0), View(NUM_VIEWS-1) );
+ 	ChangeView( m_View );
+ }
+ 
+diff -u StepMania-3.9-src-orig/src/ScreenSetTime.cpp StepMania-3.9-src/src/ScreenSetTime.cpp
+--- StepMania-3.9-src-orig/src/ScreenSetTime.cpp	2004-08-31 10:29:34.000000000 +0200
++++ StepMania-3.9-src/src/ScreenSetTime.cpp	2006-11-27 00:15:25.000000000 +0100
+@@ -160,7 +160,7 @@
+ 	SetTimeSelection OldSelection = m_Selection;
+ 	enum_add<SetTimeSelection>( m_Selection, iDirection );
+ 
+-	CLAMP( (int&)m_Selection, 0, NUM_SET_TIME_SELECTIONS-1 );
++	ENUM_CLAMP( m_Selection, SetTimeSelection(0), SetTimeSelection(NUM_SET_TIME_SELECTIONS-1) );
+ 	if( iDirection != 0 && m_Selection == OldSelection )
+ 		return; // can't move any more
+ 
+diff -u StepMania-3.9-src-orig/src/Song.cpp StepMania-3.9-src/src/Song.cpp
+--- StepMania-3.9-src-orig/src/Song.cpp	2004-12-20 23:25:12.000000000 +0100
++++ StepMania-3.9-src/src/Song.cpp	2006-11-27 00:15:25.000000000 +0100
+@@ -916,22 +916,22 @@
+ 	if( pSteps )
+ 		return pSteps;
+ 	newDC = (Difficulty)(dc-1);
+-	CLAMP( (int&)newDC, 0, NUM_DIFFICULTIES-1 );
++	ENUM_CLAMP( newDC, Difficulty(0), Difficulty(NUM_DIFFICULTIES-1) );
+ 	pSteps = GetStepsByDifficulty( st, newDC );
+ 	if( pSteps )
+ 		return pSteps;
+ 	newDC = (Difficulty)(dc+1);
+-	CLAMP( (int&)newDC, 0, NUM_DIFFICULTIES-1 );
++	ENUM_CLAMP( newDC, Difficulty(0), Difficulty(NUM_DIFFICULTIES-1) );
+ 	pSteps = GetStepsByDifficulty( st, newDC );
+ 	if( pSteps )
+ 		return pSteps;
+ 	newDC = (Difficulty)(dc-2);
+-	CLAMP( (int&)newDC, 0, NUM_DIFFICULTIES-1 );
++	ENUM_CLAMP( newDC, Difficulty(0), Difficulty(NUM_DIFFICULTIES-1) );
+ 	pSteps = GetStepsByDifficulty( st, newDC );
+ 	if( pSteps )
+ 		return pSteps;
+ 	newDC = (Difficulty)(dc+2);
+-	CLAMP( (int&)newDC, 0, NUM_DIFFICULTIES-1 );
++	ENUM_CLAMP( newDC, Difficulty(0), Difficulty(NUM_DIFFICULTIES-1) );
+ 	pSteps = GetStepsByDifficulty( st, newDC );
+ 	return pSteps;
+ }
