@@ -56,7 +56,7 @@ diff -urNp dazuko-2.3.2.org/dazuko_linux26.c dazuko-2.3.2/dazuko_linux26.c
 +#if !defined(USE_TRYTOFREEZEVOID)
  #include <linux/suspend.h>
  #endif
-+#if USE_SUSPEND2
++#if defined(USE_SUSPEND2)
 +#include <linux/freezer.h>
 +#endif
  #include <asm/uaccess.h>
