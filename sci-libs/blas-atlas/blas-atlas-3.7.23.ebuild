@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.23.ebuild,v 1.1 2006/12/09 13:50:15 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.23.ebuild,v 1.2 2006/12/12 13:20:57 markusle Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -83,6 +83,7 @@ src_unpack() {
 	compdefs="${compdefs} -C sm '$(tc-getCC)' -F sm '${CFLAGS}'"
 	compdefs="${compdefs} -C dm '$(tc-getCC)' -F dm '${CFLAGS}'"
 	compdefs="${compdefs} -C if '${FORTRANC}' -F if '${FFLAGS}'"
+	compdefs="${compdefs} -Ss pmake '\$(MAKE) ${MAKEOPTS}'"
 	compdefs="${compdefs} -Si cputhrchk 0 ${archselect}"
 
 	cd ${BLD_DIR} && ../configure ${compdefs} \
@@ -91,7 +92,7 @@ src_unpack() {
 
 src_compile() {
 	cd ${BLD_DIR}
-	make || die "make failed"
+	emake -j1 || die "make failed"
 
 	make shared-strip RPATH=${RPATH}/atlas || \
 		die "failed to build shared libraries"
