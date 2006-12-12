@@ -1,3 +1,7 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST xarchiver-0.4.2rc2.tar.bz2 646034 RMD160 f82a79ca73619bbab9a28b5fd72f204124467675 SHA1 8174d8e9cf178480a926ebd0dd18e6396475b769 SHA256 1ecae62e181400cdc712ceab44743dbed77e498d76e0f6045f11eaa0a433113d
 EBUILD xarchiver-0.4.2_rc2.ebuild 728 RMD160 d994864be2e0c5eff2ddbffc3989b47885d01918 SHA1 6540a0e6a7c0d59e220fc800e9289349935903cf SHA256 88008a4339ba3901e8f9e71b774cef6bb396cdfcbf3fac7b86519ffc00352577
 MD5 05cbfec5b65c72b6b5d5e4a1a2fb9358 xarchiver-0.4.2_rc2.ebuild 728
 RMD160 d994864be2e0c5eff2ddbffc3989b47885d01918 xarchiver-0.4.2_rc2.ebuild 728
@@ -10,6 +14,13 @@ MISC metadata.xml 157 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 SHA1 7eae9
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
 SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-xarchiver-0.4.2_rc2 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-xarchiver-0.4.2_rc2 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-xarchiver-0.4.2_rc2 0
+MD5 4f005ddb0d0261ffaae4d4fa73c3d6b3 files/digest-xarchiver-0.4.2_rc2 259
+RMD160 f82d2416c07f00be50a272a3b625a286064893ec files/digest-xarchiver-0.4.2_rc2 259
+SHA256 f15d531be01c633c86bfdc59e4eb8a55352b9359d7c5e479d99f448074eaab5c files/digest-xarchiver-0.4.2_rc2 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.6 (GNU/Linux)
+
+iD8DBQFFfztL/ejvha5XGaMRAoMtAJ9cylreQYDpJ5MfbUdekgjODWo5uQCguTz0
+mzXysmktuwNHUGmbx/7g8g8=
+=m/iJ
+-----END PGP SIGNATURE-----
