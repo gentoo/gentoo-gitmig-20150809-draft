@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3c/mp3c-0.31-r1.ebuild,v 1.3 2006/12/12 13:22:18 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3c/mp3c-0.31-r1.ebuild,v 1.4 2006/12/12 19:07:34 welp Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ RDEPEND="mp3? ( media-sound/lame
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc sparc x86"
+KEYWORDS="amd64 ~ppc sparc x86"
 
 LANGS="de es it pl pt"
 
