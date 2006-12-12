@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/gtk+extra-2.1.1.ebuild,v 1.4 2006/11/29 12:18:13 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/gtk+extra-2.1.1.ebuild,v 1.5 2006/12/12 00:19:31 pylon Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/scigraphica/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ia64 ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.0
