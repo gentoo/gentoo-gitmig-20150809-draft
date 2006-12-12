@@ -1,0 +1,87 @@
+diff -Nur vpnclient/IPSecDrvOS_linux.c vpnclient.new/IPSecDrvOS_linux.c
+--- vpnclient/IPSecDrvOS_linux.c	2005-11-22 10:52:00.000000000 +0100
++++ vpnclient.new/IPSecDrvOS_linux.c	2006-12-06 16:25:49.000000000 +0100
+@@ -11,7 +11,7 @@
+ *   
+ *
+ ***************************************************************************/
+-#include <linux/config.h>
++#include <linux/autoconf.h>
+ #include <linux/version.h>
+ #include <linux/vmalloc.h>
+ #include <linux/sched.h>
+diff -Nur vpnclient/frag.c vpnclient.new/frag.c
+--- vpnclient/frag.c	2005-11-22 10:52:00.000000000 +0100
++++ vpnclient.new/frag.c	2006-12-06 16:25:32.000000000 +0100
+@@ -1,4 +1,4 @@
+-#include <linux/config.h>
++#include <linux/autoconf.h>
+ #include <linux/version.h>
+ #include <linux/netdevice.h>
+ #include <linux/etherdevice.h>
+diff -Nur vpnclient/interceptor.c vpnclient.new/interceptor.c
+--- vpnclient/interceptor.c	2005-11-22 10:52:00.000000000 +0100
++++ vpnclient.new/interceptor.c	2006-12-07 09:13:29.000000000 +0100
+@@ -8,7 +8,7 @@
+ ***************************************************************************
+ * This module implements the linux driver.
+ ***************************************************************************/
+-#include <linux/config.h>
++#include <linux/autoconf.h>
+ #include <linux/version.h>
+ #include <linux/module.h>
+ #include <linux/init.h>
+@@ -33,6 +33,14 @@
+ #include "mtu.h"
+ #include "unixkernelapi.h"
+ 
++// With linux 2.6.19, they renamed CHECKSUM_HW to CHECKSUM_COMPLETE
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,19)
++  #define CHECKSUM_HW CHECKSUM_COMPLETE
++  #define SKB_CHECKSUM_HELP(a,b)	skb_checksum_help((a))
++#else
++  #define SKB_CHECKSUM_HELP(a,b)	skb_checksum_help((a),(b))
++#endif
++
+ static uint8_t interceptor_eth_addr[] = { 0x00, 0x0b, 0xfc, 0xf8, 0x01, 0x8f };
+ 
+ // packet statistics 
+@@ -554,9 +562,9 @@
+     {
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,7)
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,10)
+-       if (skb_checksum_help(skb,1))
++       if (SKB_CHECKSUM_HELP(skb,1))
+ #else
+-       if (skb_checksum_help(&skb,1))
++       if (SKB_CHECKSUM_HELP(&skb,1))
+ #endif // LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,10)
+        {
+            dev_kfree_skb(skb);
+@@ -680,11 +688,11 @@
+     if (skb->ip_summed == CHECKSUM_HW)
+     {
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,10)
+-       if (skb_checksum_help(skb,0))
++       if (SKB_CHECKSUM_HELP(skb,0))
+ #elif LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,7)
+-       if (skb_checksum_help(&skb,0))
++       if (SKB_CHECKSUM_HELP(&skb,0))
+ #else
+-       if ((skb = skb_checksum_help(skb)) == NULL)
++       if ((skb = SKB_CHECKSUM_HELP(skb)) == NULL)
+ #endif //LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,7)
+        {
+            goto exit_gracefully;
+diff -Nur vpnclient/linuxcniapi.c vpnclient.new/linuxcniapi.c
+--- vpnclient/linuxcniapi.c	2005-11-22 10:52:00.000000000 +0100
++++ vpnclient.new/linuxcniapi.c	2006-12-06 16:24:51.000000000 +0100
+@@ -9,7 +9,7 @@
+  * This module implements a translation layer between the CNI API and the
+  * Linux Interceptor driver.
+  ***************************************************************************/
+-#include <linux/config.h>
++#include <linux/autoconf.h>
+ #include <linux/version.h>
+ #include <linux/netdevice.h>
+ #include <linux/if.h>
