@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.5.0.ebuild,v 1.2 2006/09/28 21:36:52 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.5.0.ebuild,v 1.3 2006/12/12 17:23:48 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -44,6 +44,7 @@ src_unpack() {
 	CHOICE_debug_VALUE='nodebug'
 	CHOICE_graphics_VALUE='${myopengl}'
 	CHOICE_sound_VALUE='mixsdl'
+	CHOICE_accel_VALUE='plainc'
 	INPUT_install_prefix_VALUE='${GAMES_PREFIX}'
 	INPUT_install_bindir_VALUE='\$prefix/bin'
 	INPUT_install_libdir_VALUE='\$prefix/lib'
