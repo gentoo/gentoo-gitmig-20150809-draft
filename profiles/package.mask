@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6438 2006/12/12 12:56:02 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6439 2006/12/12 15:22:33 jer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ## 
+
+# Jeroen Roovers <jer@gentoo.org> (12 Dec 2006)
+# Only put your backups at risk if you know very well what you are doing.
+=app-backup/amanda-2.5*
 
 # Peter Volkov <pva@gentoo.org> (11 Dec 2006)
 # needs some testing
