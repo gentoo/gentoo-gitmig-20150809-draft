@@ -1,0 +1,78 @@
+--- ./osiris-4.2.2/src/osirismd/Makefile.am.orig	2006-12-12 06:38:09.000000000 +1100
++++ ./osiris-4.2.2/src/osirismd/Makefile.am	2006-12-12 06:39:25.000000000 +1100
+@@ -25,14 +25,14 @@
+                           -I$(top_srcdir)/src/libosirisctl \
+                           -I$(top_srcdir)/src/libosirisdb \
+                           -I$(top_srcdir)/src/libosirism \
+-                          -I$(top_srcdir)/src/db-4.2.52/build_unix
++                          -I/usr/include/db4.2
+ 
+ osirismd_LDADD 		= -L$(top_srcdir)/src/libfileapi -lfileapi \
+                           -L$(top_srcdir)/src/libosirisctl -losirisctl \
+                           -L$(top_srcdir)/src/libosirisdb -losirisdb \
+                           -L$(top_srcdir)/src/libosirism -losirism \
+                           -L$(top_srcdir)/src/libosiris -losiris \
+-                          -L$(top_srcdir)/src/db-4.2.52/build_unix -ldb
++                          -ldb-4.2
+ 
+ osirismd_DEPENDENCIES	= $(top_srcdir)/src/libosiris/libosiris.a \
+                           $(top_srcdir)/src/libfileapi/libfileapi.a \
+--- ./osiris-4.2.2/src/tools/Makefile.am.orig	2006-12-12 06:34:27.000000000 +1100
++++ ./osiris-4.2.2/src/tools/Makefile.am	2006-12-12 06:35:55.000000000 +1100
+@@ -6,7 +6,7 @@
+                                   -I$(top_srcdir)/src/libosiris \
+                                   -I$(top_srcdir)/src/libosirisctl \
+                                   -I$(top_srcdir)/src/libosirism \
+-                                  -I$(top_srcdir)/src/db-4.2.52/build_unix
++                                  -I/usr/include/db4.2/
+ 
+ printdb_SOURCES			= printdb.c 
+ 
+@@ -14,7 +14,7 @@
+                                   -L$(top_srcdir)/src/libfileapi -lfileapi \
+                                   -L$(top_srcdir)/src/libosirism -losirism \
+                                   -L$(top_srcdir)/src/libosiris -losiris \
+-                                  -L$(top_srcdir)/src/db-4.2.52/build_unix -ldb
++                                  -ldb-4.2
+ 
+ printdb_DEPENDENCIES            = $(top_srcdir)/src/libosiris/libosiris.a \
+                                   $(top_srcdir)/src/libfileapi/libfileapi.a \
+--- ./osiris-4.2.2/src/libosirisdb/Makefile.am.orig	2006-12-12 06:38:37.000000000 +1100
++++ ./osiris-4.2.2/src/libosirisdb/Makefile.am	2006-12-12 06:39:37.000000000 +1100
+@@ -7,5 +7,5 @@
+                           -I$(top_srcdir)/src/libosirisctl \
+                           -I$(top_srcdir)/src/libosirism \
+                           -I$(top_srcdir)/src/libfileapi \
+-                          -I$(top_srcdir)/src/db-4.2.52/build_unix
++                          -I/usr/include/db4.2
+ 
+--- ./osiris-4.2.2/src/cli/Makefile.am.orig	2006-12-12 06:36:13.000000000 +1100
++++ ./osiris-4.2.2/src/cli/Makefile.am	2006-12-12 06:36:45.000000000 +1100
+@@ -7,7 +7,7 @@
+                       -I$(top_srcdir)/src/libosirism \
+                       -I$(top_srcdir)/src/libosiris \
+                       -I$(top_srcdir)/src/libosirisdb \
+-                      -I$(top_srcdir)/src/db-4.2.52/build_unix
++                      -I/usr/include/db4.2/
+ 
+ 
+ osiris_SOURCES			= osiris.c osiris.h get_user_input.c
+@@ -17,7 +17,7 @@
+                                   -L$(top_srcdir)/src/libfileapi -lfileapi \
+                                   -L$(top_srcdir)/src/libosiris -losiris \
+                                   -L$(top_srcdir)/src/libosirisdb -losirisdb \
+-                                  -L$(top_srcdir)/src/db-4.2.52/build_unix -ldb @LIBREADLINE@
++                                  -ldb-4.2 @LIBREADLINE@
+ 
+ 
+ osiris_DEPENDENCIES             = $(top_srcdir)/src/libosiris/libosiris.a \
+--- ./osiris-4.2.2/src/Makefile.am.orig	2006-12-12 06:37:06.000000000 +1100
++++ ./osiris-4.2.2/src/Makefile.am	2006-12-12 06:37:17.000000000 +1100
+@@ -6,7 +6,6 @@
+                       libosirisdb \
+                       libosirisctl \
+                       libosirism \
+-                      db-4.2.52 \
+                       osirisd \
+                       osirismd \
+              		  cli 
