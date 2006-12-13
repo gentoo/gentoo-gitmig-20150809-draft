@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.48 2006/12/10 18:32:03 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.49 2006/12/13 11:11:26 vivo Exp $
 
 # Author: Francesco Riosa <vivo@gentoo.org>
 # Maintainer: Luca Longinotti <chtekk@gentoo.org>
@@ -621,7 +621,7 @@ mysql_pkg_config() {
 
 	[[ -z "${DATADIR}" ]] && die "Sorry, unable to find DATADIR"
 
-	if built_with_use dev-db/mysql minimal ; then
+	if built_with_use ${CATEGORY}/${PN} minimal ; then
 		die "Minimal builds do NOT include the MySQL server"
 	fi
 
@@ -726,5 +726,5 @@ mysql_pkg_config() {
 }
 
 mysql_pkg_postrm() {
-	mysql_lib_symlinks
+	: #mysql_lib_symlinks
 }
