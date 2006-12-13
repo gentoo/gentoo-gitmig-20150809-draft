@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.23.ebuild,v 1.2 2006/11/23 15:59:30 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.23.ebuild,v 1.3 2006/12/13 23:40:57 masterdriverz Exp $
 
 inherit eutils versionator
 
@@ -43,7 +43,7 @@ RDEPEND="dev-libs/popt
 	swat?      ( sys-apps/xinetd )
 	syslog?    ( virtual/logger )
 	xml?       ( dev-libs/libxml2 sys-libs/zlib )
-	"
+	!dev-libs/tdb"
 
 DEPEND="${RDEPEND}
 	sys-devel/autoconf
