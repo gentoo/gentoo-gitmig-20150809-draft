@@ -1,6 +1,14 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.43 2006/11/13 13:42:06 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.44 2006/12/13 02:44:55 markusle Exp $
+
+*octave-2.1.73-r2 (12 Dec 2006)
+
+  12 Dec 2006; Markus Dittrich <markusle@gentoo.org>
+  +octave-2.1.73-r2.ebuild:
+  Several users have reported problems with octave's internal lapack
+  and blas routines. Hence, removed the blas USE flag and forced the
+  use of external blas and lapack.
 
   13 Nov 2006; Ferris McCormick <fmccor@gentoo.org> octave-2.1.73-r1.ebuild:
   Stable on sparc --- Bug #141446 --- I am bypassing 2.1.73 for 2.1.73-r1
