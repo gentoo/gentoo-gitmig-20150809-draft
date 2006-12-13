@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.8.2.ebuild,v 1.5 2006/12/11 12:16:27 tchiwam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.8.2.ebuild,v 1.6 2006/12/13 00:21:58 mr_bones_ Exp $
 
 inherit webapp depend.php
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/wikipedia/${P/.0_/}.tar.gz"
 RESTRICT="nomirror"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="imagemagick math mysql postgres"
+IUSE="imagemagick math mysql postgres restrict"
 
 S="${WORKDIR}/${P/.0_/}"
 
