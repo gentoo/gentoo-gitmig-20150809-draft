@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2419 2006/12/13 00:16:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2420 2006/12/13 11:27:24 wschlich Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -147,7 +147,7 @@ app-i18n/uim:prime - Enable PRIME support
 app-laptop/pbbuttonsd:ibam - Enable support for Intelligent Battery Monitoring
 app-laptop/tp_smapi:hdaps - Install a compatible HDAPS module
 app-laptop/tpctl:tpctlir - enable support for thinkpad models 760 and 765
-app-misc/bbgallery:gimp - Engables support for the gimp via extra libraries
+app-misc/bbgallery:gimp - Enables support for the gimp via extra libraries
 app-misc/beagle:chm - Enable indexing of MS HTML Help files (.chm)
 app-misc/beagle:galago - Enable desktop presence via galago
 app-misc/beagle:ole - Enable ole support
@@ -733,6 +733,7 @@ mail-mta/ssmtp:md5sum - Enables MD5 summing for ssmtp
 media-fonts/intlfonts:bdf - Installs BDF fonts in addition to PCF
 media-gfx/blender:blender-game - Adds game engine support to blender
 media-gfx/comix:rar - Pulls app-arch/unrar for rar file support
+media-gfx/dcraw:gimp - Builds rawphoto plugin for the GIMP
 media-gfx/digikam:nfs - Create sqlite db within ~/.kde, instead in the albums base directory.
 media-gfx/gimp:gimpprint - Enable gimp-print printing support
 media-gfx/gimp:print - Enable print plug-in
