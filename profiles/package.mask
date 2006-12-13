@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6444 2006/12/13 07:09:07 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6445 2006/12/13 18:35:25 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ## 
+
+# Michael Sterrett <mr_bones_@gentoo.org> (13 Dec 2006)
+# doomlegacy has numerous bugs open about it and doesn't
+# build with gcc4.  Masking for removal unless someone
+# steps up to fix all the open bugs.
+# bugs #88804, #72799, #103323, #82716, #150403, and #119844
+games-fps/doomlegacy
 
 # Jeff Gardner <je_fro@gentoo.org> (13 Dec 2006)
 # Broken for now...hope to fix and add again later.
