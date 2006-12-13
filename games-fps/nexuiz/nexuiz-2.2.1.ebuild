@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-2.2.1.ebuild,v 1.1 2006/12/13 18:01:36 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-2.2.1.ebuild,v 1.2 2006/12/13 20:26:15 nyhm Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -76,7 +76,7 @@ src_unpack() {
 }
 
 src_compile() {
-	if use opengl || ! use dedicated && ! use sdl ; then
+	if use opengl || (! use dedicated && ! use sdl) ; then
 		emake cl-${PN} || die "emake cl-${PN} failed"
 	fi
 
@@ -94,7 +94,7 @@ src_install() {
 		newicon darkplaces72x72.png ${PN}.png
 	fi
 
-	if use opengl || ! use dedicated && ! use sdl ; then
+	if use opengl || (! use dedicated && ! use sdl) ; then
 		dogamesbin ${PN}-glx || die "dogamesbin glx failed"
 		make_desktop_entry ${PN}-glx "Nexuiz (GLX)"
 		dosym "${GAMES_BINDIR}"/{${PN}-glx,${PN}}
