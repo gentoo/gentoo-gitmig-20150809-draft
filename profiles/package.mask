@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6442 2006/12/13 03:37:41 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6443 2006/12/13 07:08:03 je_fro Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,8 @@
 ##
 ##   End example
 ## 
+
+x11-drivers/xf86-video-ivtvdev
 
 # Daniel Drake <dsd@gentoo.org> (12 Dec 2006)
 # Broken again with new kernel release, no maintainer, no upstream
