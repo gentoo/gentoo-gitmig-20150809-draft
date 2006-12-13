@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2421 2006/12/13 19:34:34 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2422 2006/12/13 21:18:59 welp Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1864,6 +1864,7 @@ xfce-base/xfdesktop:panel-plugin - Enable the xfdesktop menu plugin for xfce4-pa
 xfce-base/xfdesktop:thunar-vfs - Enable thunar-vfs support for desktop icons.
 xfce-base/xfprint:lpr - Build LPr/LPd support instead of CUPS support.
 xfce-base/xfwm4:xcomposite - Support for Xorg composite extension.
+xfce-extra/xarchiver:arj - Adds support for arj archices
 xfce-extra/xarchiver:ace - Adds support for ace archives
 xfce-extra/xarchiver:rar - Adds support for rar archives
 xfce-extra/xarchiver:7zip - Adds support for 7zip archives
