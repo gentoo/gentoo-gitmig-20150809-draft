@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.62-r1.ebuild,v 1.16 2006/12/10 15:56:04 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.62-r1.ebuild,v 1.17 2006/12/13 00:36:10 cardoe Exp $
 
 WANT_AUTOCONF=2.5
 inherit eutils mono python multilib debug qt3 autotools flag-o-matic
@@ -11,7 +11,7 @@ SRC_URI="http://dbus.freedesktop.org/releases/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="|| ( GPL-2 AFL-2.1 )"
-KEYWORDS="~alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="doc gtk mono python qt3 qt4 selinux X"
 
 RDEPEND=">=dev-libs/glib-2.6
