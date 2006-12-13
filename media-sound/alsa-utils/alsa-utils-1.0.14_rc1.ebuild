@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.14_rc1.ebuild,v 1.1 2006/12/11 19:44:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.14_rc1.ebuild,v 1.2 2006/12/13 10:27:34 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -17,7 +17,7 @@ IUSE="nls"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	dev-util/dialog
-	>=media-libs/alsa-lib-1.0.12"
+	>=media-libs/alsa-lib-1.0.14_rc1"
 RDEPEND="${DEPEND}
 	sys-apps/pciutils"
 
