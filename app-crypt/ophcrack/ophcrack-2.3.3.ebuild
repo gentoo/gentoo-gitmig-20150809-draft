@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ophcrack-2.3.3.ebuild,v 1.2 2006/12/05 13:46:59 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ophcrack-2.3.3.ebuild,v 1.3 2006/12/13 10:02:13 ikelos Exp $
 
 inherit toolchain-funcs eutils
 
@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="ophsmall"
 
-DEPEND="dev-libs/openssl
+DEPEND="app-arch/unzip
+		dev-libs/openssl
 		net-libs/netwib"
 RDEPEND=""
 
