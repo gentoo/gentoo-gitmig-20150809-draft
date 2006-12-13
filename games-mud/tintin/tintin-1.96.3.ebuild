@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/tintin-1.96.3.ebuild,v 1.1 2006/11/02 17:55:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/tintin-1.96.3.ebuild,v 1.2 2006/12/13 18:15:17 mr_bones_ Exp $
 
 inherit games
 
 DESCRIPTION="(T)he k(I)cki(N) (T)ickin d(I)kumud clie(N)t"
-HOMEPAGE="http://www.scandum.com/tintin/"
+HOMEPAGE="http://tintin.sourceforge.net/"
 SRC_URI="mirror://sourceforge/tintin/${P}.tar.gz"
 
 LICENSE="GPL-2"
