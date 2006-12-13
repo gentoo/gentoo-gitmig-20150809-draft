@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/tuxpaint
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/ChangeLog,v 1.28 2006/11/01 02:51:16 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/ChangeLog,v 1.29 2006/12/13 02:41:03 leonardop Exp $
+
+*tuxpaint-0.9.16-r1 (13 Dec 2006)
+
+  13 Dec 2006; Leonardo Boshell <leonardop@gentoo.org>
+  +files/tuxpaint-0.9.16-gentoo-r1.patch, +tuxpaint-0.9.16-r1.ebuild:
+  Drop 'gnome' and 'kde' USE flags. Always install the .desktop file and icons
+  in standard places recognized by both desktops (related to bug #157619).
+  Call gnome2_icon_cache_update() from pkg_postinst().
 
 *tuxpaint-0.9.16 (01 Nov 2006)
 
