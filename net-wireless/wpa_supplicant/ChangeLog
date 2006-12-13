@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.87 2006/12/11 13:01:41 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.88 2006/12/13 18:26:50 uberlord Exp $
+
+  13 Dec 2006; Roy Marples <uberlord@gentoo.org>
+  wpa_supplicant-0.5.6.ebuild:
+  Only qt-4.2.2 supports qt3support, #155548 thanks to Jakub Moc.
 
   11 Dec 2006; Roy Marples <uberlord@gentoo.org>
   wpa_supplicant-0.5.6.ebuild:

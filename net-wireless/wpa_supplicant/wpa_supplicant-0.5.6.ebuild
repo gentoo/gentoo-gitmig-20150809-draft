@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.6.ebuild,v 1.3 2006/12/11 13:01:41 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.6.ebuild,v 1.4 2006/12/13 18:26:50 uberlord Exp $
 
 inherit eutils toolchain-funcs
 
@@ -37,9 +37,11 @@ pkg_setup() {
 		einfo "You have USE=\"qt3 qt4\" selected, defaulting to USE=\"qt4\""
 	fi
 
-	if use qt4 && ! built_with_use x11-libs/qt qt3support ; then
-		eerror "qt4 requires qt3support"
-		die "rebuild x11-libs/qt with the qt3support USE flag"
+	if use qt4 && has_version ">=x11-libs/qt-4.2.2" ; then
+		if ! built_with_use x11-libs/qt qt3support ; then
+			eerror ">=qt4.2.2 requires qt3support"
+			die "rebuild >=x11-libs/qt-4.2.2 with the qt3support USE flag"
+		fi
 	fi
 }
 
