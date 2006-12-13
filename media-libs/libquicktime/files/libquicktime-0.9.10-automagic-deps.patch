@@ -1,15 +1,13 @@
 diff -ru libquicktime-0.9.10-orig/configure.ac libquicktime-0.9.10/configure.ac
 --- libquicktime-0.9.10-orig/configure.ac	2006-12-13 17:27:44.000000000 +0100
-+++ libquicktime-0.9.10/configure.ac	2006-12-13 19:53:21.000000000 +0100
-@@ -153,8 +153,12 @@
-  
++++ libquicktime-0.9.10/configure.ac	2006-12-13 20:25:22.000000000 +0100
+@@ -154,7 +154,11 @@
  have_vorbis=false
  AH_TEMPLATE([HAVE_VORBIS], [Vorbis libraries are there])
--  
+   
++AC_ARG_ENABLE([vorbis], AS_HELP_STRING([--disable-vorbis], [Build without vorbis library (default: test)]))
 +
-+AC_ARG_WITH([vorbis], AS_HELP_STRING([--without-vorbis], [Build without vorbis library (default: test)]))
-+
-+if test "x$with_vorbis" != "xno"; then
++if test "x$enable_vorbis" != "xno"; then
  XIPH_PATH_VORBIS(have_vorbis=true)
 +fi
  AM_CONDITIONAL(HAVE_VORBIS, test x$have_vorbis = xtrue)

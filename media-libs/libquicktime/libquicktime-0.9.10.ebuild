@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.10.ebuild,v 1.3 2006/12/13 19:01:29 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.10.ebuild,v 1.4 2006/12/13 19:31:17 zzam Exp $
 
 WANT_AUTOCONF="latest"
 inherit libtool eutils autotools
@@ -75,7 +75,7 @@ src_compile() {
 		$(use_with aac faad2) \
 		$(use_with png) \
 		$(use_with jpeg) \
-		$(use_with vorbis) \
+		$(use_enable vorbis) \
 		$(use_with lame) \
 		$(use_with x264) \
 		$(use_with ffmpeg) \
