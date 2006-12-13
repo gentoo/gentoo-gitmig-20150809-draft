@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.61-r1.ebuild,v 1.2 2006/09/23 22:31:59 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.61-r1.ebuild,v 1.3 2006/12/13 23:45:52 masterdriverz Exp $
 
 inherit eutils bash-completion autotools
 
 DESCRIPTION="A HTTP regression testing and benchmarking utility"
-HOMEPAGE="http://www.joedog.org/siege/"
+HOMEPAGE="http://www.joedog.org/JoeDog/Siege"
 SRC_URI="ftp://sid.joedog.org/pub/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
