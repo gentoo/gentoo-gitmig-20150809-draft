@@ -1,0 +1,28 @@
+Index: net.BSD/ifconfig.sh
+===================================================================
+--- net.BSD/ifconfig.sh	(revision 2414)
++++ net.BSD/ifconfig.sh	(working copy)
+@@ -319,7 +319,8 @@
+ 				x="-net ${x}"
+ 			elif [[ ${y} == *.*.*.*/32 ]] ; then
+ 				x="-host ${x}"
+-			elif [[ ${y} == *.*.*.*/* ]] ; then
++			elif [[ ${y} == *.*.*.*/* || ${y} == "0.0.0.0" \
++				|| ${y} == "default" ]] ; then
+ 				x="-net ${x}"
+ 			else
+ 				# Given the lack of a netmask, we assume a host
+Index: net.Linux/ifconfig.sh
+===================================================================
+--- net.Linux/ifconfig.sh	(revision 2414)
++++ net.Linux/ifconfig.sh	(working copy)
+@@ -370,7 +370,8 @@
+ 				x="-net ${x}"
+ 			elif [[ ${y} == *.*.*.*/32 ]] ; then
+ 				x="-host ${x}"
+-			elif [[ ${y} == *.*.*.*/* ]] ; then
++			elif [[ ${y} == *.*.*.*/* || ${y} == "0.0.0.0" \
++				|| ${y} == "default" ]] ; then
+ 				x="-net ${x}"
+ 			else
+ 				# Given the lack of a netmask, we assume a host

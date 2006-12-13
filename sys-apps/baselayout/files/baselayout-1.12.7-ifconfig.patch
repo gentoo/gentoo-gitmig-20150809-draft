@@ -1,0 +1,11 @@
+--- lib/rcscripts/net/ifconfig.sh	(revision 2415)
++++ lib/rcscripts/net/ifconfig.sh	(working copy)
+@@ -364,7 +364,7 @@
+ 				x="-net ${x}"
+ 			elif [[ ${y} == *.*.*.*/32 ]] ; then
+ 				x="-host ${x}"
+-			elif [[ ${y} == *.*.*.*/* ]] ; then
++			elif [[ ${y} == *.*.*.*/* || ${y} == "default" || ${y} == "0.0.0.0" ]] ; then
+ 				x="-net ${x}"
+ 			else
+ 				# Given the lack of a netmask, we assume a host
