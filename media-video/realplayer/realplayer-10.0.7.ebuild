@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-10.0.7.ebuild,v 1.3 2006/10/02 07:31:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-10.0.7.ebuild,v 1.4 2006/12/13 17:00:50 beandog Exp $
 
 inherit nsplugins eutils rpm
 
@@ -71,6 +71,10 @@ src_install() {
 		exeinto /opt/netscape/plugins
 		doexe nphelix.so
 		inst_plugin /opt/netscape/plugins/nphelix.so
+
+		insinto /opt/netscape/plugins
+		doins nphelix.xpt
+		inst_plugin /opt/netscape/plugins/nphelix.xpt
 	fi
 
 	# Language resources
