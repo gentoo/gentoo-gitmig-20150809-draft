@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd/mtd-20050519.ebuild,v 1.4 2006/12/03 06:32:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd/mtd-20050519.ebuild,v 1.5 2006/12/13 07:33:34 opfer Exp $
 
 DESCRIPTION="JFFS2 is a log-structured file system designed for use on flash devices in embedded systems."
 HOMEPAGE="http://sources.redhat.com/jffs2/"
 SRC_URI="ftp://ftp.uk.linux.org/pub/people/dwmw2/mtd/cvs/${PN}-snapshot-${PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ~mips ppc ~x86"
+KEYWORDS="amd64 arm ~mips ppc x86"
 IUSE=""
 
 S=${WORKDIR}/${PN}
