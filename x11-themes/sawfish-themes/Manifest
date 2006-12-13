@@ -1,15 +1,76 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+DIST Adept-0.28.tar.gz 5866
+DIST Eazel-blue-0.30.tar.gz 13575
+DIST absolutedarkness-0.30.tar.gz 40691
+DIST adaptblue-0.30.tar.gz 4513
+DIST ampullacu-0.30.tar.gz 80354
+DIST antarctic_-0.30.tar.gz 13674
+DIST aquagraphite_-0.30.tar.gz 26618
+DIST aquaified-0.30.tar.gz 20804
+DIST aquax-0.30.tar.gz 48059
+DIST arctic___-0.30.tar.gz 11738
+DIST bedoon_ism_bordered-0.30.tar.gz 12702
+DIST blueberry-0.30.tar.gz 11737
+DIST c2h8-0.30.tar.gz 11827
+DIST circles-0.30.tar.gz 19788
+DIST clean__-0.30.tar.gz 6049
+DIST coral-0.30.tar.gz 9453
+DIST cyrus__-0.30.tar.gz 38736
+DIST dirtchamber-0.30.tar.gz 652285
+DIST doublehelix-0.30.tar.gz 6379
+DIST dragdome-0.30.tar.gz 10434
+DIST eazel-0.30.tar.gz 11169
+DIST eazelblue-0.30.tar.gz 13575
+DIST flatgnome-0.30.tar.gz 31791
+DIST flatsaw-0.30.tar.gz 7364
+DIST friday-0.30.tar.gz 20903
+DIST gets-0.30.tar.gz 8463
+DIST glass__-0.30.tar.gz 5355
+DIST gleam-0.30.tar.gz 20039
+DIST greyneon-0.30.tar.gz 10433
+DIST latem-0.30.tar.gz 6290
+DIST lines_-0.30.tar.gz 1097
+DIST liquidgraphite-0.30.tar.gz 20894
+DIST lunatic-0.30.tar.gz 35210
+DIST marble___-0.30.tar.gz 26422
+DIST moonice_-0.30.tar.gz 4398
+DIST mozillamodern_-0.30.tar.gz 14065
+DIST omonster-0.30.tar.gz 25750
+DIST openstep-0.30.tar.gz 21321
+DIST origami-0.30.tar.gz 7475
+DIST platinum_-0.30.tar.gz 9016
+DIST qnx11-0.30.tar.gz 14505
+DIST roman_-0.30.tar.gz 7138
+DIST sawbench-0.30.tar.gz 4801
+DIST shinyfusion-0.30.tar.gz 29220
+DIST simpleelegant_-0.30.tar.gz 10667
+DIST stirling-0.30.tar.gz 3999
+DIST stpflat-0.30.tar.gz 5369
+DIST surgical-0.1.tar.gz 5532
+DIST titanium__-0.30.tar.gz 12572
+DIST triangle-0.30.tar.gz 13456
+DIST twm-0.30.tar.gz 2259
+DIST ultraclean-0.30.tar.gz 661214
+DIST whistlerk_-0.30.tar.gz 6896
+DIST win98-0.30.tar.gz 5176
+EBUILD sawfish-themes-0.0.1-r1.ebuild 805 RMD160 1c878f65086524e9156f49dfd20000c4b07353f3 SHA1 875b4f90cfe38ea720f1e2f7508d4f8c1b283981 SHA256 9eeeb7a05cd8b64beb46de3ac9e224fd3b9e536b3becdcfa9c03e46dbfba3c88
 MD5 821ef6f91e185f716145ffa6d4bfb277 sawfish-themes-0.0.1-r1.ebuild 805
+RMD160 1c878f65086524e9156f49dfd20000c4b07353f3 sawfish-themes-0.0.1-r1.ebuild 805
+SHA256 9eeeb7a05cd8b64beb46de3ac9e224fd3b9e536b3becdcfa9c03e46dbfba3c88 sawfish-themes-0.0.1-r1.ebuild 805
+EBUILD sawfish-themes-0.0.1-r3.ebuild 3006 RMD160 65ac5a6eb50393c5ad22caee76fe612c609817ad SHA1 bcb061f711f4f8022082a291909fba3ee5b3c469 SHA256 d5031f5099f3451f32b5f07efb4579edb8f9183f3bb5be61ed6909f29e6490f5
 MD5 d84a7c4b6c0913866c2aaf0fb8a22493 sawfish-themes-0.0.1-r3.ebuild 3006
+RMD160 65ac5a6eb50393c5ad22caee76fe612c609817ad sawfish-themes-0.0.1-r3.ebuild 3006
+SHA256 d5031f5099f3451f32b5f07efb4579edb8f9183f3bb5be61ed6909f29e6490f5 sawfish-themes-0.0.1-r3.ebuild 3006
+MISC ChangeLog 2267 RMD160 8fcdeb5aec0e7d6adfcf739a7fd6cbebc0f410c3 SHA1 2c6e7235391cca2eb720bc18cd207c2be5312b98 SHA256 a6770bd4f253ad987f4a61d3fecbda6700445e2781f7469fbbba851c5243f618
 MD5 99cac4650543b28d62c7e50a36447b4c ChangeLog 2267
+RMD160 8fcdeb5aec0e7d6adfcf739a7fd6cbebc0f410c3 ChangeLog 2267
+SHA256 a6770bd4f253ad987f4a61d3fecbda6700445e2781f7469fbbba851c5243f618 ChangeLog 2267
+MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
 MD5 e051461e73b1005dcc5e3ef5f4ee000b files/digest-sawfish-themes-0.0.1-r1 126
+RMD160 c4d5148ec16e5abc14ece4bc978b36e7765df866 files/digest-sawfish-themes-0.0.1-r1 126
+SHA256 39688ca8ab8df58c00396eeff59fa783f73d521aa7c45e4e079b432e91b73a26 files/digest-sawfish-themes-0.0.1-r1 126
 MD5 bf3a142da50a69d2f147e1b9c8527e8b files/digest-sawfish-themes-0.0.1-r3 3329
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDLsCdKRy60XGEcJIRAmp5AJ9YtWv0Tm4mA/fPSpnPwaBzqovGCwCgqReP
-Sfm/CpebhEqzDtSAnlXlxTY=
-=FqBw
------END PGP SIGNATURE-----
+RMD160 02938f240c2d901ef6ea1849f149a6bf69e36c88 files/digest-sawfish-themes-0.0.1-r3 3329
+SHA256 7b3688111c7fa6028110643d211e5461755cc62df0027edf6dd60446b06f1f90 files/digest-sawfish-themes-0.0.1-r3 3329
