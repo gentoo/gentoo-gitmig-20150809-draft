@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/tftp-hpa
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.20 2006/11/19 19:05:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.21 2006/12/13 22:57:03 masterdriverz Exp $
+
+*tftp-hpa-0.44 (13 Dec 2006)
+
+  13 Dec 2006; Charlie Shepherd <masterdriverz@gentoo.org>
+  -files/in.tftpd.confd-0.42, +files/in.tftpd.confd-0.44,
+  -tftp-hpa-0.42.ebuild, -tftp-hpa-0.42-r1.ebuild, +tftp-hpa-0.44.ebuild:
+  Bump to version 0.44; bug 156322; thanks to Axel Dyks
 
   19 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
   tftp-hpa-0.42-r1.ebuild:
