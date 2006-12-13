@@ -1,0 +1,53 @@
+diff -ur qc-usb-0.6.6.orig/Makefile qc-usb-0.6.6/Makefile
+--- qc-usb-0.6.6.orig/Makefile	2006-10-24 05:06:19.000000000 +0300
++++ qc-usb-0.6.6/Makefile	2006-12-10 10:19:06.000000000 +0200
+@@ -44,11 +44,7 @@
+ #RELEASE := $(shell awk -F \" '/[ 	]*\#[ 	]*define[ 	]*UTS_RELEASE[ 	]*/ { print $$2 }' $(LINUX_DIR)/include/linux/version.h|tail -n 1)
+ # This seem to work better
+ #LINUX_DIR := /usr/src/linux
+-RELEASE := $(shell if test -r $(LINUX_DIR)/include/linux/version.h && fgrep -q UTS_RELEASE $(LINUX_DIR)/include/linux/version.h; then \
+-		((echo "\#include <linux/version.h>" ; echo "kernsrcver=UTS_RELEASE") | cpp -I $(LINUX_DIR)/include | grep "^kernsrcver=" | cut -d \" -f 2); \
+-	elif test -r $(LINUX_DIR)/include/linux/utsrelease.h && fgrep -q UTS_RELEASE $(LINUX_DIR)/include/linux/utsrelease.h; then \
+-		((echo "\#include <linux/utsrelease.h>"; echo "kernsrcver=UTS_RELEASE") | cpp -I $(LINUX_DIR)/include | grep "^kernsrcver=" | cut -d \" -f 2); \
+-	fi)
++RELEASE := $(shell awk -F \" '/[       ]*\#[   ]*define[       ]*UTS_RELEASE[  ]*/ { print $$2 }' $(OUTPUT_DIR)/include/linux/version.h|tail -n 1)
+ MODULE_DIR := /lib/modules/$(RELEASE)
+ endif
+ endif
+@@ -58,6 +54,10 @@
+ LINUX_DIR := $(MODULE_DIR)/build
+ endif
+ 
++ifndef OUTPUT_DIR
++OUTPUT_DIR := $(LINUX_DIR)
++endif
++
+ HAVE_UTSRELEASE_H := $(shell if test -r $(LINUX_DIR)/include/linux/version.h && fgrep -q UTS_RELEASE $(LINUX_DIR)/include/linux/version.h; then \
+ 		echo 0; \
+ 	elif test -r $(LINUX_DIR)/include/linux/utsrelease.h && fgrep -q UTS_RELEASE $(LINUX_DIR)/include/linux/utsrelease.h; then \
+@@ -75,7 +75,7 @@
+ DEPMOD  := $(shell which depmod || which /sbin/depmod || echo "true You should now run depmod")
+ 
+ # Get VERSION_CODE (from version.h in kernel source directory)
+-VERSION_CODE := $(shell awk '/[ 	]*\#[ 	]*define[ 	]*LINUX_VERSION_CODE[ 	]*/ { print $$3 }' $(LINUX_DIR)/include/linux/version.h|tail -n 1)
++VERSION_CODE := $(shell awk '/[ 	]*\#[ 	]*define[ 	]*LINUX_VERSION_CODE[ 	]*/ { print $$3 }' $(OUTPUT_DIR)/include/linux/version.h|tail -n 1)
+ 
+ ifeq ($(shell if [ $(VERSION_CODE) -ge 132608 ]; then echo y; fi),y)
+ MODULE_NAME := quickcam.ko	# for 2.6.x
+@@ -91,6 +91,7 @@
+ 	@echo "make all - Compile driver and utilities against current running kernel"
+ 	@echo "make all USER_OPT=-DDEBUG - Compile with debugging code and messages"
+ 	@echo "make all LINUX_DIR=/usr/src/linux - Compile against specified kernel source"
++	@echo "make all OUTPUT_DIR=/var/tmp/kernel-output/2.6.19 - Specify binary output dir"
+ 	@echo "make install - Copy driver and utilities into standard locations (needs root)"
+ 	@echo "make install PREFIX=/usr - Copy utilities to /usr/bin instead of /usr/local/bin"
+ 	@echo "make install MODULE_DIR=/lib/modules/2.4.0 - Copy module to /lib/modules/2.4.0/misc"
+@@ -130,7 +131,7 @@
+ else
+ # No, 2.4.x or older
+ 
+-MODULE_INC    := -I$(LINUX_DIR)/include -nostdinc -iwithprefix include
++MODULE_INC    := -I$(LINUX_DIR)/include -I$(OUTPUT_DIR)/include -nostdinc -iwithprefix include
+ MODULE_DEF    := -DMODULE -D__KERNEL__ -DNOKERNEL
+ MODULE_OPT    := -O2 -fomit-frame-pointer -fno-strict-aliasing -fno-common
+ MODULE_WARN   := -Wall -Wstrict-prototypes -Wno-trigraphs
