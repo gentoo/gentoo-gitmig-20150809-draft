@@ -1,0 +1,31 @@
+diff --exclude-from=/home/dang/.diffrc -up -ruN gnome-keyring-0.6.0.orig/gnome-keyring.c gnome-keyring-0.6.0/gnome-keyring.c
+--- gnome-keyring-0.6.0.orig/gnome-keyring.c	2006-08-28 06:04:36.000000000 -0400
++++ gnome-keyring-0.6.0/gnome-keyring.c	2006-12-13 17:49:57.000000000 -0500
+@@ -275,9 +275,9 @@ write_credentials_byte_sync (int socket)
+   msg.msg_control = (caddr_t) &cmsg;
+   msg.msg_controllen = CMSG_SPACE (sizeof (struct cmsgcred));
+   memset (&cmsg, 0, sizeof (cmsg));
+-  cmsg->cmsg_len = CMSG_LEN (sizeof (struct cmsgcred));
+-  cmsg->cmsg_level = SOL_SOCKET;
+-  cmsg->cmsg_type = SCM_CREDS;
++  cmsg.hdr.cmsg_len = CMSG_LEN (sizeof (struct cmsgcred));
++  cmsg.hdr.cmsg_level = SOL_SOCKET;
++  cmsg.hdr.cmsg_type = SCM_CREDS;
+ #endif
+ 
+  again:
+@@ -324,10 +324,10 @@ write_credentials_byte (GnomeKeyringOper
+ 
+   msg.msg_control = (caddr_t) &cmsg;
+   msg.msg_controllen = CMSG_SPACE (sizeof (struct cmsgcred));
+-  memset (cmsg, 0, sizeof (cmsg));
+-  cmsg->cmsg_len = CMSG_LEN (sizeof (struct cmsgcred));
+-  cmsg->cmsg_level = SOL_SOCKET;
+-  cmsg->cmsg_type = SCM_CREDS;
++  memset (&cmsg, 0, sizeof (cmsg));
++  cmsg.hdr.cmsg_len = CMSG_LEN (sizeof (struct cmsgcred));
++  cmsg.hdr.cmsg_level = SOL_SOCKET;
++  cmsg.hdr.cmsg_type = SCM_CREDS;
+ #endif
+ 
+  again:
