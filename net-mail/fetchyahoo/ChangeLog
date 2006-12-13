@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/fetchyahoo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchyahoo/ChangeLog,v 1.40 2006/09/21 20:44:06 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchyahoo/ChangeLog,v 1.41 2006/12/13 21:43:17 kanaka Exp $
+
+*fetchyahoo-2.10.6 (13 Dec 2006)
+
+  13 Dec 2006; Joel Martin <kanaka@gentoo.org> -fetchyahoo-2.10.0.ebuild,
+  -fetchyahoo-2.10.2.ebuild, fetchyahoo-2.10.5.ebuild,
+  +fetchyahoo-2.10.6.ebuild:
+  Remove non-working 2.10.0 and 2.10.2. Stabalize 2.10.5 and add new version
+  2.10.6.
 
 *fetchyahoo-2.10.5 (21 Sep 2006)
 
