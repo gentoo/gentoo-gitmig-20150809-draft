@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r5.ebuild,v 1.1 2006/12/11 22:06:32 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r5.ebuild,v 1.2 2006/12/13 03:13:45 wltjr Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -56,7 +56,6 @@ fi
 
 S=${WORKDIR}/${MY_P}
 
-TOMCAT_HOME="/usr/share/${PN}-${SLOT}"
 TOMCAT_NAME="${PN}-${SLOT}"
 WEBAPPS_DIR="/var/lib/${TOMCAT_NAME}/webapps"
 
@@ -192,7 +191,7 @@ src_install() {
 	keepdir ${CATALINA_BASE}/shared/lib
 	keepdir ${CATALINA_BASE}/shared/classes
 
-	keepdir /usr/share/${TOMCAT_NAME}/${CATALIA_HOME}/common/lib
+	keepdir /usr/share/${TOMCAT_NAME}/common/lib
 
 	dodir   /etc/${TOMCAT_NAME}
 	fperms  750 /etc/${TOMCAT_NAME}
