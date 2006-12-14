@@ -1,5 +1,5 @@
---- generate-modprobe.conf.old	2004-11-22 01:21:02.457213616 -0800
-+++ generate-modprobe.conf	2004-11-22 01:23:26.803269680 -0800
+--- generate-modprobe.conf
++++ generate-modprobe.conf
 @@ -1,20 +1,33 @@
 -#! /bin/sh -e
 -
@@ -17,7 +17,7 @@
 +#
 +# Updated 07 May 2004 by Aron Griffis <agriffis@gentoo.org> to support
 +# --assume-kernel option for Gentoo LiveCD building.  See
-+# http://bugs.gentoo.org/show_bug.cgi?id=49927
++# http://bugs.gentoo.org/49927
  
 +# Parse command-line
  STDIN=
