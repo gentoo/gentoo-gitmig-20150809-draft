@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-2.1.0.ebuild,v 1.1 2006/11/08 20:38:22 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-2.1.0.ebuild,v 1.2 2006/12/14 15:13:33 beu Exp $
 
 DESCRIPTION="NXClient is a X11/VNC/NXServer client especially tuned for using
 remote desktops over low-bandwidth links such as the Internet"
@@ -30,9 +30,7 @@ RDEPEND="
 	x11-libs/libXau
 	x11-libs/libXext
 	=x11-libs/qt-3*
-	sys-libs/lib-compat
-	sys-libs/zlib
-"
+	sys-libs/lib-compat"
 
 S=${WORKDIR}/NX
 
