@@ -1,8 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.5.ebuild,v 1.2 2006/10/28 22:15:59 omp Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.5.ebuild,v 1.3 2006/12/14 04:07:16 omp Exp $
 
 DESCRIPTION="A small window mananger based on aewm++"
 HOMEPAGE="http://www.pekwm.org/"
@@ -14,7 +12,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="debug perl truetype xinerama"
 
-DEPEND="media-libs/imlib2
+DEPEND="media-libs/jpeg
+	media-libs/libpng
 	x11-libs/libXpm
 	x11-libs/libXrandr
 	x11-libs/libXrender
@@ -23,24 +22,19 @@ DEPEND="media-libs/imlib2
 	xinerama? ( x11-libs/libXinerama )"
 RDEPEND="${DEPEND}"
 
-pkg_setup() {
-	if ! built_with_use media-libs/imlib2 X ; then
-		eerror "media-libs/imlib2 must be built with X support."
-		die "missing X USE flag for media-libs/imlib2"
-	fi
-}
-
 src_compile() {
 	econf \
-		$(use_enable truetype xft) \
-		$(use_enable perl pcre) \
-		$(use_enable xinerama) \
 		$(use_enable debug) \
-		--enable-menus \
+		$(use_enable perl pcre) \
+		$(use_enable truetype xft) \
+		$(use_enable xinerama) \
 		--enable-harbour \
+		--enable-image-jpeg \
+		--enable-image-png \
+		--enable-image-xpm \
+		--enable-menus \
 		--enable-shape \
-		--enable-xrandr \
-		--enable-imlib2 || die "econf failed"
+		--enable-xrandr || die "econf failed"
 
 	emake || die "emake failed"
 }
