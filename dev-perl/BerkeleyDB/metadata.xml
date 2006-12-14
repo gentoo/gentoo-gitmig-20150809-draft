@@ -6,9 +6,5 @@
 		<email>perl@gentoo.org</email>
 		<description>Secondary Maintainer</description>
 	</maintainer>
-	<maintainer>
-		<email>stuart@gentoo.org</email>
-		<description>Primary Maintainer</description>
-	</maintainer>
 	<longdescription></longdescription>
 </pkgmetadata>
