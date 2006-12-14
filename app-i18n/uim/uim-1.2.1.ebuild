@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.2.1.ebuild,v 1.12 2006/12/06 20:49:33 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.2.1.ebuild,v 1.13 2006/12/14 15:54:10 matsuu Exp $
 
 inherit eutils kde-functions flag-o-matic multilib elisp-common
 
@@ -50,7 +50,10 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	if use qt3 && ! built_with_use =x11-libs/qt-3* immqt-bc && ! built_with_use =x11-libs/qt-3* immqt; then
-		die "You need to rebuild >=x11-libs/qt-3.3.4 with immqt-bc(recommended) or immqt USE flag enabled."
+		eerror "To support qt3 in this package is required to have"
+		eerror "=x11-libs/qt-3* compiled with immqt-bc(recommended) or immqt USE flag."
+		die "Please reemerge =x11-libs/qt-3* with USE=\"immqt-bc\" or USE=\"immqt\"."
+
 	fi
 	# An arch specific config directory is used on multilib systems
 	has_multilib_profile && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
