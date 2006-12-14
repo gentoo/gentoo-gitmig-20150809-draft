@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/clearsilver
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.25 2006/09/27 22:10:30 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.26 2006/12/14 08:44:31 dju Exp $
+
+*clearsilver-0.10.4 (14 Dec 2006)
+
+  14 Dec 2006; <dju@gentoo.org> -clearsilver-0.10.2.ebuild,
+  +clearsilver-0.10.4.ebuild:
+  Version bump to 0.10.4, removing 0.10.2 ebuild.
 
 *clearsilver-0.10.3 (27 Sep 2006)
 
