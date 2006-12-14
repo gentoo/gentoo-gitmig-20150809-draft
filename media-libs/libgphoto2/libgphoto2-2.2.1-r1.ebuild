@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.2.1-r1.ebuild,v 1.7 2006/12/11 16:20:03 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.2.1-r1.ebuild,v 1.8 2006/12/14 10:36:30 zzam Exp $
 
 inherit libtool eutils autotools
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/gphoto/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="nls doc exif usb hal udev"
+IUSE="nls doc exif usb hal"
 RESTRICT="test confcache"
 
 # needs >usbutils-0.11-r2 to avoid /usr/lib/libusb*
@@ -145,14 +145,12 @@ src_install() {
 				|| die "failed to create hal-fdi"
 		fi
 
-		if use udev; then
-			einfo "Generating UDEV-rules ..."
-			mkdir -p ${D}/${UDEV_RULES%/*}
-			${D}/usr/$(get_libdir)/libgphoto2/print-camera-list udev-rules-0.98 >> ${D}/${UDEV_RULES} \
-				|| die "failed to create udev-rules"
-			exeinto /lib/udev
-			doexe ${S}/packaging/generic/check_ptp_camera
-		fi
+		einfo "Generating UDEV-rules ..."
+		mkdir -p ${D}/${UDEV_RULES%/*}
+		${D}/usr/$(get_libdir)/libgphoto2/print-camera-list udev-rules-0.98 >> ${D}/${UDEV_RULES} \
+			|| die "failed to create udev-rules"
+		exeinto /lib/udev
+		doexe ${S}/packaging/generic/check_ptp_camera
 	else
 		eerror "Unable to find ${ROOT}/usr/$(get_libdir)/libgphoto2/print-camera-list"
 		eerror "and therefore unable to generate hotplug usermap or HAL FDI files."
