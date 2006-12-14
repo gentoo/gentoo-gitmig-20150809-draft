@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/usbirboy/usbirboy-0.2.1-r1.ebuild,v 1.9 2006/09/24 09:20:38 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/usbirboy/usbirboy-0.2.1-r1.ebuild,v 1.10 2006/12/14 11:11:26 zzam Exp $
 
 inherit linux-mod eutils
 
@@ -52,11 +52,9 @@ src_install() {
 	doins ../mcubin/usbirboy.s19
 
 	# Add configuration for udev
-	if [ -e ${ROOT}dev/.udev ]; then
-		dodir /etc/udev/rules.d
-		echo 'KERNEL=="usbirboy", NAME="%k", SYMLINK="lirc"' \
-			> "${D}etc/udev/rules.d/55-${PN}.rules"
-	fi
+	dodir /etc/udev/rules.d
+	echo 'KERNEL=="usbirboy", NAME="%k", SYMLINK="lirc"' \
+		> "${D}etc/udev/rules.d/55-${PN}.rules"
 }
 
 pkg_postinst() {
