@@ -3,9 +3,7 @@
 <pkgmetadata>
 <herd>nx</herd>
 <maintainer>
-  <email>stuart@gentoo.org</email>
-  <name>Stuart Herbert</name>
-  <description>Maintainer</description> 
+  <email>nx@gentoo.org</email>
 </maintainer>
 <longdescription>Special versions of the X11 libraries to support NX compression</longdescription>
 </pkgmetadata>
