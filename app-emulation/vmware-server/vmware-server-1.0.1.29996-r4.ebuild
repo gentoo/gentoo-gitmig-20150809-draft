@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/vmware-server-1.0.1.29996-r4.ebuild,v 1.2 2006/10/30 15:53:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/vmware-server-1.0.1.29996-r4.ebuild,v 1.3 2006/12/14 18:36:59 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -15,9 +15,9 @@ DESCRIPTION="VMware Server for Linux"
 HOMEPAGE="http://www.vmware.com/"
 SRC_URI="http://download3.vmware.com/software/vmserver/${MY_P}.tar.gz
 		http://ftp.cvut.cz/vmware/${ANY_ANY}.tar.gz
-		http://ftp.cvut.cz/vmware/obselete/${ANY_ANY}.tar.gz
+		http://ftp.cvut.cz/vmware/obsolete/${ANY_ANY}.tar.gz
 		http://knihovny.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
-		http://knihovny.cvut.cz/ftp/pub/vmware/obselete/${ANY_ANY}.tar.gz
+		http://knihovny.cvut.cz/ftp/pub/vmware/obsolete/${ANY_ANY}.tar.gz
 		http://dev.gentoo.org/~ikelos/devoverlay-distfiles/${PN}-perl-fixed-rpath-libs.tar.bz2
 		mirror://gentoo/${PN}-perl-fixed-rpath-libs.tar.bz2
 		http://dev.gentoo.org/~wolf31o2/sources/dump/vmware-libssl.so.0.9.7l.tar.bz2

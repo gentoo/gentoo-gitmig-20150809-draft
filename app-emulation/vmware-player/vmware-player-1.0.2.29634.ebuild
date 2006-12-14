@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-1.0.2.29634.ebuild,v 1.4 2006/12/01 19:00:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-1.0.2.29634.ebuild,v 1.5 2006/12/14 18:36:47 wolf31o2 Exp $
 
 inherit eutils vmware
 
@@ -10,9 +10,9 @@ DESCRIPTION="Emulate a complete PC on your PC without the usual performance over
 HOMEPAGE="http://www.vmware.com/products/player/"
 SRC_URI="http://download3.vmware.com/software/vmplayer/${MY_P}.tar.gz
 	http://ftp.cvut.cz/vmware/${ANY_ANY}.tar.gz
-	http://ftp.cvut.cz/vmware/obselete/${ANY_ANY}.tar.gz
+	http://ftp.cvut.cz/vmware/obsolete/${ANY_ANY}.tar.gz
 	http://knihovny.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
-	http://knihovny.cvut.cz/ftp/pub/vmware/obselete/${ANY_ANY}.tar.gz
+	http://knihovny.cvut.cz/ftp/pub/vmware/obsolete/${ANY_ANY}.tar.gz
 	http://dev.gentoo.org/~wolf31o2/sources/dump/vmware-libssl.so.0.9.7l.tar.bz2
 	mirror://gentoo/vmware-libssl.so.0.9.7l.tar.bz2
 	http://dev.gentoo.org/~wolf31o2/sources/dump/vmware-libcrypto.so.0.9.7l.tar.bz2
