@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.54.ebuild,v 1.8 2006/12/12 23:36:44 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.54.ebuild,v 1.9 2006/12/14 19:13:36 genstef Exp $
 
 WANT_AUTOMAKE=1.6
 
@@ -84,6 +84,7 @@ src_unpack() {
 		unpack gsdjvu-${GSDJVU_PV}.tar.gz
 		cp gsdjvu-${GSDJVU_PV}/gsdjvu ${S}
 		cp gsdjvu-${GSDJVU_PV}/gdevdjvu.c ${S}/src
+		epatch ${FILESDIR}/djvu-gs-gpl.patch
 		cp gsdjvu-${GSDJVU_PV}/ps2utf8.ps ${S}/lib
 		cp ${S}/src/contrib.mak ${S}/src/contrib.mak.gsdjvu
 		grep -q djvusep ${S}/src/contrib.mak || \

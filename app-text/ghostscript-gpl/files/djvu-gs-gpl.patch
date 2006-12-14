@@ -1,0 +1,74 @@
+diff -ur ghostscript-8.54-gpl.orig/gsdjvu ghostscript-8.54-gpl/gsdjvu
+--- ghostscript-8.54-gpl.orig/gsdjvu	2006-12-14 19:14:43.000000000 +0100
++++ ghostscript-8.54-gpl/gsdjvu	2006-12-14 19:23:16.000000000 +0100
+@@ -56,4 +56,4 @@
+ # Step 2 -- execute ghostscript
+ 
+ gsdir="$progdir"
+-GS_LIB="$gsdir/lib:$gsdir/fonts:$gsdir" exec "$gsdir/bin/gs" "$@"
++GS_LIB="$gsdir/lib:$gsdir/fonts:$gsdir" exec "/usr/bin/gs" "$@"
+diff -ur ghostscript-8.54-gpl.orig/src/gdevdjvu.c ghostscript-8.54-gpl/src/gdevdjvu.c
+--- ghostscript-8.54-gpl.orig/src/gdevdjvu.c	2006-12-14 19:14:17.000000000 +0100
++++ ghostscript-8.54-gpl/src/gdevdjvu.c	2006-12-14 19:20:17.000000000 +0100
+@@ -133,7 +133,7 @@
+ private void 
+ lbassertfail(const char *file, int line)
+ {
+-    fprintf(stderr,"Internal error at %s:%d\n", file, line);
++    //printf("Internal error at %s:%d\n", file, line);
+     abort();
+ }
+ 
+@@ -164,6 +164,8 @@
+ #define p2mem_log2_align  log2_obj_align_mod
+ #define p2mem_align       obj_align_mod
+ 
++gs_memory_t *gs_memory_t_default;
++#define gs_memory_default (*gs_memory_t_default)
+ /* Parent allocator */
+ #define p2mem_parent_alloc(size) \
+   (void *)gs_alloc_bytes_immovable(&gs_memory_default, size, "p2mem")
+@@ -4920,12 +4922,6 @@
+                            0, cdev->width-1, 0, cdev->height-1, comment);
+         if (code < 0) return code;
+     }
+-    /* Print message */
+-    if (! cdev->quiet) {
+-        fprintf(stdout,"Page %dx%d (%s )\n", 
+-                cdev->width, cdev->height, comment);
+-        fflush(stdout);
+-    }
+     /* Terminate */
+     runmap_free(fgmap);
+ #ifdef DEBUG
+@@ -5322,12 +5318,6 @@
+         if (code < 0) 
+             return code; 
+     }
+-    /* Print message */
+-    if (! cdev->quiet) {
+-        fprintf(stdout,"Page %dx%d (%s )\n",
+-                cdev->width, cdev->height, comment);
+-        fflush(stdout);
+-    }
+     /* Terminate */
+     runmap_free(fgmap);
+ #ifdef DEBUG
+@@ -5383,7 +5373,7 @@
+         push(1);
+         glyph = gs_text_current_glyph(osenum);
+         if (glyph != gs_no_glyph)
+-            glyph_ref(glyph, op);
++            glyph_ref(imemory, glyph, op);
+         else
+             make_int(op, gs_text_current_char(osenum));
+         return 0;
+@@ -5498,7 +5488,7 @@
+     /* Check argument types */
+     check_op(5);
+     if ( (code = num_params(op, 4, xy)) < 0 ||
+-         (code = obj_string_data(op - 4, &utf8, &utf8len)) < 0 )
++         (code = obj_string_data(imemory, op - 4, &utf8, &utf8len)) < 0 )
+         return code;
+     /* Check that current device is djvusep */
+     dev = gs_currentdevice(igs);
