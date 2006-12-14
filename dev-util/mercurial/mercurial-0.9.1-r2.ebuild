@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-0.9.1-r2.ebuild,v 1.3 2006/10/21 16:02:31 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-0.9.1-r2.ebuild,v 1.4 2006/12/14 20:06:07 genstef Exp $
 
-inherit bash-completion distutils elisp-common
+inherit bash-completion distutils elisp-common flag-o-matic
 
 MY_PV=${PV//_p/.}
 
@@ -28,6 +28,8 @@ else
 fi
 
 src_compile() {
+	filter-flags -ftracer -ftree-vectorize
+
 	distutils_src_compile
 
 	if use emacs; then
