@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/gamess
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.17 2006/09/26 14:43:09 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.18 2006/12/14 14:52:07 markusle Exp $
+
+*gamess-20060907.4 (14 Dec 2006)
+
+  14 Dec 2006; Markus Dittrich <markusle@gentoo.org>
+  +files/gamess-20060907.4.gentoo.patch, +gamess-20060907.4.ebuild:
+  Version bump. This version includes the NEO code.
 
 *gamess-20060222.5 (26 Sep 2006)
 
