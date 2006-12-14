@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.2-r1.ebuild,v 1.2 2006/12/11 19:32:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.2-r1.ebuild,v 1.3 2006/12/14 20:31:14 aballier Exp $
 
 inherit eutils autotools
 
@@ -40,6 +40,7 @@ src_unpack() {
 		epatch "${FILESDIR}"/${P}-disable-optimization.patch
 	fi
 	epatch "${FILESDIR}/${P}+flac-1.1.3.patch"
+	epatch "${FILESDIR}/${P}-libnyquistp.patch"
 
 	eautoreconf || die
 	pushd "${S}"/lib-src/soundtouch
@@ -68,8 +69,7 @@ src_compile() {
 		$(use_with flac flac system) \
 		${myconf} || die
 
-	# parallel borks
-	emake -j1 || die
+	emake || die
 }
 
 src_install() {

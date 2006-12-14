@@ -1,0 +1,40 @@
+diff -urd /tmp/audacity-src-1.3.2-beta/lib-src/libnyquist/Makefile.in audacity-src-1.3.2-beta/lib-src/libnyquist/Makefile.in
+--- /tmp/audacity-src-1.3.2-beta/lib-src/libnyquist/Makefile.in	2006-10-29 01:05:50.000000000 +0200
++++ audacity-src-1.3.2-beta/lib-src/libnyquist/Makefile.in	2006-11-17 19:14:04.430148792 +0100
+@@ -338,16 +338,16 @@
+ 	$(CC) -c tran/pluck.c -o tran/pluck.o $(CFLAGS)
+ 
+ tran/abs.o: tran/abs.c tran/abs.h nyqsrc/sound.h nyqsrc/falloc.h nyqsrc/cque.h
+-	cc -c tran/abs.c -o tran/abs.o $(CFLAGS)
++	$(CC) -c tran/abs.c -o tran/abs.o $(CFLAGS)
+ 
+ tran/sqrt.o: tran/sqrt.c tran/sqrt.h nyqsrc/sound.h nyqsrc/falloc.h nyqsrc/cque.h
+-	cc -c tran/sqrt.c -o tran/sqrt.o $(CFLAGS)
++	$(CC) -c tran/sqrt.c -o tran/sqrt.o $(CFLAGS)
+ 
+ tran/alpasscv.o: tran/alpasscv.c tran/alpasscv.h nyqsrc/sound.h nyqsrc/falloc.h nyqsrc/cque.h
+-	cc -c tran/alpasscv.c -o tran/alpasscv.o $(CFLAGS)
++	$(CC) -c tran/alpasscv.c -o tran/alpasscv.o $(CFLAGS)
+ 
+ tran/alpassvc.o: tran/alpassvc.c tran/alpassvc.h nyqsrc/sound.h nyqsrc/falloc.h nyqsrc/cque.h
+-	cc -c tran/alpassvc.c -o tran/alpassvc.o $(CFLAGS)
++	$(CC) -c tran/alpassvc.c -o tran/alpassvc.o $(CFLAGS)
+ 
+ nyqsrc/sndfnint.o: nyqsrc/sndfnint.c 
+ 	$(CC) -c nyqsrc/sndfnint.c -o nyqsrc/sndfnint.o $(CFLAGS)
+@@ -493,6 +493,14 @@
+ nyqsrc/seqfnintptrs.h: $(CMTHDRS) misc/intgen
+ 	$(INTGEN) nyqsrc/seqfnint $(CMTHDRS)
+ 
++nyqsrc/sndfnintdefs.h : nyqsrc/sndfnintptrs.h
++
++nyqsrc/seqfnintdefs.h : nyqsrc/seqfnintptrs.h
++
++nyqsrc/sndfnint.c : nyqsrc/sndfnintptrs.h
++
++nyqsrc/seqfnint.c : nyqsrc/seqfnintptrs.h
++
+ clean:
+ 	rm -f libnyquist.a
+ 	cd misc; $(MAKE) clean
+
