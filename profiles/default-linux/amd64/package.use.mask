@@ -2,7 +2,7 @@
 
 # Oct 23th 2006; blubb@gentoo.org
 # the asm is 64bit save, but it doesn't compile anyway
-games-emulation/visualboyadvance
+games-emulation/visualboyadvance mmx
 
 # Oct 23th 2006; blubb@gentoo.org
 # upstream forces sse2 for amd64; mmx flag does nothing
