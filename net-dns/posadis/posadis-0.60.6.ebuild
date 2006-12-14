@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/posadis/posadis-0.60.6.ebuild,v 1.5 2006/11/04 11:34:15 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/posadis/posadis-0.60.6.ebuild,v 1.6 2006/12/14 23:03:43 blubb Exp $
 
-inherit libtool eutils
+inherit libtool eutils multilib autotools
 
 DESCRIPTION="An authoritative/caching Domain Name Server"
 HOMEPAGE="http://www.posadis.org/posadis"
@@ -21,10 +21,15 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-
+	
 	#fix makefile problem
 	cd ${S}/libltdl
 	WANT_AUTOCONF="2.5" autoconf || die "libltdl autoconf failed"
+
+	cd ../
+	find . -name 'Makefile.am' -or -name 'configure.in' | xargs sed -i -e "s:/lib/:/$(get_libdir)/:g"
+
+	eautoreconf || die "eautoreconf failed"
 }
 
 src_compile() {
