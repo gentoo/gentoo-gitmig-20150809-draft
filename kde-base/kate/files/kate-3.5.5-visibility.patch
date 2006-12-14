@@ -1,0 +1,77 @@
+SVN commit 599194 by dhaumann:
+
+fix missing KDE_EXPORTs which caused undefined references for kate plugins.
+
+CCMAIL: kwrite-devel@kde.org
+
+
+ M  +1 -1      application.h  
+ M  +1 -1      documentmanager.h  
+ M  +2 -2      plugin.h  
+ M  +1 -1      pluginconfiginterface.h  
+ M  +1 -1      pluginconfiginterfaceextension.h  
+
+
+--- branches/KDE/3.5/kdebase/kate/interfaces/application.h #599193:599194
+@@ -72,7 +72,7 @@
+  * Returns the application object
+  * @return Application application object
+  */
+-Application *application ();
++KDE_EXPORT Application *application ();
+ 
+ }
+ 
+--- branches/KDE/3.5/kdebase/kate/interfaces/documentmanager.h #599193:599194
+@@ -104,7 +104,7 @@
+  * Returns the document manager object
+  * @return DocumentManager document manager object
+  */
+-DocumentManager *documentManager ();
++KDE_EXPORT DocumentManager *documentManager ();
+ 
+ }
+ 
+--- branches/KDE/3.5/kdebase/kate/interfaces/plugin.h #599193:599194
+@@ -52,7 +52,7 @@
+     unsigned int myPluginNumber;
+ };
+ 
+-Plugin *createPlugin ( const char* libname, Application *application = 0, const char *name = 0,const QStringList &args = QStringList() );
++KDE_EXPORT Plugin *createPlugin ( const char* libname, Application *application = 0, const char *name = 0,const QStringList &args = QStringList() );
+ 
+ /*
+  * view plugin class
+@@ -80,7 +80,7 @@
+     unsigned int myPluginViewInterfaceNumber;
+ };
+ 
+-PluginViewInterface *pluginViewInterface (Plugin *plugin);
++KDE_EXPORT PluginViewInterface *pluginViewInterface (Plugin *plugin);
+ 
+ }
+ 
+--- branches/KDE/3.5/kdebase/kate/interfaces/pluginconfiginterface.h #599193:599194
+@@ -56,7 +56,7 @@
+ };
+ 
+ class Plugin;
+-PluginConfigInterface *pluginConfigInterface (Plugin *plugin);
++KDE_EXPORT PluginConfigInterface *pluginConfigInterface (Plugin *plugin);
+ 
+ }
+ 
+--- branches/KDE/3.5/kdebase/kate/interfaces/pluginconfiginterfaceextension.h #599193:599194
+@@ -97,7 +97,7 @@
+ };
+ 
+ class Plugin;
+-PluginConfigInterfaceExtension *pluginConfigInterfaceExtension (Plugin *plugin);
++KDE_EXPORT PluginConfigInterfaceExtension *pluginConfigInterfaceExtension (Plugin *plugin);
+ 
+ }
+ 
+_______________________________________________
+KWrite-Devel mailing list
+KWrite-Devel@kde.org
+https://mail.kde.org/mailman/listinfo/kwrite-devel
