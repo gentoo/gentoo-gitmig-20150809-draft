@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/rtorrent
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.68 2006/12/13 15:37:56 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.69 2006/12/14 02:06:04 ranger Exp $
+
+  14 Dec 2006; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking rtorrent-0.6.4 ppc64 stable for bug 158007
 
   13 Dec 2006; Christian Faulhammer <opfer@gentoo.org>
   rtorrent-0.6.4.ebuild:
