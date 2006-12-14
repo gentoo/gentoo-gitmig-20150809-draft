@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.99.5-r1.ebuild,v 1.9 2005/05/09 16:24:55 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.99.5-r1.ebuild,v 1.10 2006/12/14 18:37:36 masterdriverz Exp $
 
 inherit eutils
 
@@ -23,8 +23,10 @@ RDEPEND=">=sys-apps/pciutils-2.1.0
 
 src_unpack() {
 	unpack ${A}
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 	epatch powertweak-0.99.5-cvs20040417.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-exec-stack.patch"
 }
 
 src_compile() {
