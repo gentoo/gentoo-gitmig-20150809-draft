@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.18.ebuild,v 1.11 2006/12/14 02:19:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.18.ebuild,v 1.12 2006/12/14 21:06:19 welp Exp $
 
 inherit eutils distutils libtool
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gw.com/mirrors/pub/unix/file/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="python"
 RESTRICT="mirror" #let upstream tarballs settle first
 
