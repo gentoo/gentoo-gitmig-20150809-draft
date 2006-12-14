@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/nxcomp-1.5.0-r2.ebuild,v 1.2 2006/05/01 22:05:45 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/nxcomp-1.5.0-r2.ebuild,v 1.3 2006/12/14 15:10:54 beu Exp $
 
 inherit eutils
 
@@ -24,8 +24,7 @@ RDEPEND="|| ( ( x11-libs/libX11
 	)
 	>=media-libs/jpeg-6b-r4
 	>=media-libs/libpng-1.2.8
-	>=sys-libs/zlib-1.2.3
-	virtual/libc"
+	>=sys-libs/zlib-1.2.3"
 DEPEND="${RDEPEND}
 	|| ( ( x11-proto/xproto
 			x11-proto/xf86vidmodeproto
