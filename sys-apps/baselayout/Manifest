@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX baselayout-1.11.0-split-out-udev.patch 7413 RMD160 48eef541397ec0a21230de93518eed8a1ea63c16 SHA1 2dfa7e66c361459c8fce482b70d9e75ee51180bd SHA256 397221c066cbbb65d572df431b4babde766dc92d9177005e522e0df8faa25030
 MD5 8d10a229861f862fca52cd8e3bc655d9 files/baselayout-1.11.0-split-out-udev.patch 7413
 RMD160 48eef541397ec0a21230de93518eed8a1ea63c16 files/baselayout-1.11.0-split-out-udev.patch 7413
@@ -85,10 +82,10 @@ AUX baselayout-1.12.5-dmesg.patch 5202 RMD160 ce0b8e91590888fa6f9f0cc84ed29bd3a6
 MD5 05e23d7d8cd139821113afb7d6ef56cc files/baselayout-1.12.5-dmesg.patch 5202
 RMD160 ce0b8e91590888fa6f9f0cc84ed29bd3a6007156 files/baselayout-1.12.5-dmesg.patch 5202
 SHA256 837ed3be21597ae44de1debe5f48460945039cf1f4b7de9f067d5e78bb83a0c6 files/baselayout-1.12.5-dmesg.patch 5202
-AUX baselayout-1.12.7-ifconfig.patch 402 RMD160 4d639843b92e4dccfe32ebcf77f01df7f28d7763 SHA1 4e41d991db75a4dbbf2d123922b247f8d8c6cc55 SHA256 0934a0af47cd01e4acab97d70b6861470257ae16775028818ef4ae6102cfc064
-MD5 914f4eee76ac09bf5554a4a85cdd9daf files/baselayout-1.12.7-ifconfig.patch 402
-RMD160 4d639843b92e4dccfe32ebcf77f01df7f28d7763 files/baselayout-1.12.7-ifconfig.patch 402
-SHA256 0934a0af47cd01e4acab97d70b6861470257ae16775028818ef4ae6102cfc064 files/baselayout-1.12.7-ifconfig.patch 402
+AUX baselayout-1.12.7-ifconfig.patch 750 RMD160 283b5dc2a670d8e8758e9e50b42e930abfa0134f SHA1 83487679190eb24acf0570c37e4e6b0f6c5282eb SHA256 a6e271caa6ce5ea4060e152a324ff2cb9ab9b297570164c4dceabb94974403e3
+MD5 d949ca62bb6fa3fc155e4462f47255d2 files/baselayout-1.12.7-ifconfig.patch 750
+RMD160 283b5dc2a670d8e8758e9e50b42e930abfa0134f files/baselayout-1.12.7-ifconfig.patch 750
+SHA256 a6e271caa6ce5ea4060e152a324ff2cb9ab9b297570164c4dceabb94974403e3 files/baselayout-1.12.7-ifconfig.patch 750
 AUX baselayout-1.13.0_alpha7-2380.patch 1245 RMD160 9569358ba672b873cbfdc055ef5be856493565b5 SHA1 993001c59552cff32599b55086cbde58faedcbe3 SHA256 9e08046a07819462f8042e4bf23322d1e56594fa49aa6bd5fe223d7977808074
 MD5 f58aed630c19dbfe0178f9fb69d670d7 files/baselayout-1.13.0_alpha7-2380.patch 1245
 RMD160 9569358ba672b873cbfdc055ef5be856493565b5 files/baselayout-1.13.0_alpha7-2380.patch 1245
@@ -239,10 +236,3 @@ SHA256 4c4a40b16d79de524bcec0efd55b0e0c383fc84b92937b2491074bcdab90ead9 files/di
 MD5 8a931a7d421a3df91acb570f378fa464 files/digest-baselayout-1.13.0_alpha9-r2 277
 RMD160 e2949b9445e60b6d9902b07504b4a4c2120747c9 files/digest-baselayout-1.13.0_alpha9-r2 277
 SHA256 4c4a40b16d79de524bcec0efd55b0e0c383fc84b92937b2491074bcdab90ead9 files/digest-baselayout-1.13.0_alpha9-r2 277
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-
-iD8DBQFFgLkqamhnQswr0vIRAmFvAJ9RF0lOgaoJ6KCNT8qI91bln9e6xwCfSKpD
-w2LAPKUlV4QAt8j3IwYI6yY=
-=mkpJ
------END PGP SIGNATURE-----
