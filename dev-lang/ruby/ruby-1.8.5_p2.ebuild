@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.5_p2.ebuild,v 1.9 2006/12/14 00:29:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.5_p2.ebuild,v 1.10 2006/12/14 14:20:08 pclouds Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
-ONIGURUMA="onigd2_5_4"
+ONIGURUMA="onigd2_5_7"
 
-inherit flag-o-matic alternatives eutils multilib autotools
+inherit flag-o-matic alternatives eutils multilib autotools versionator
 
 MY_P="${P/_p/-p}"
 
@@ -44,6 +44,7 @@ src_unpack() {
 		pushd ${WORKDIR}/oniguruma
 #		epatch ${FILESDIR}/oniguruma-2.3.1-gentoo.patch
 		econf --with-rubydir=${S} || die "econf failed"
+		MY_PV=$(get_version_component_range 1-2)
 		make ${MY_PV/./}
 		popd
 	fi
