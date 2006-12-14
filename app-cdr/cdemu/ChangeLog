@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/cdemu
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.9 2005/04/21 17:52:49 blubb Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.10 2006/12/14 03:07:24 vapier Exp $
+
+*cdemu-0.8 (14 Dec 2006)
+
+  14 Dec 2006; Mike Frysinger <vapier@gentoo.org> +cdemu-0.8.ebuild:
+  Version bump #143749.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> cdemu-0.7.ebuild:
   stable on amd64
