@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.56 2006/11/01 10:58:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.57 2006/12/14 00:33:10 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -143,7 +143,7 @@ eautoheader() {
 	# Check if we should run autoheader
 	[[ -n $(autotools_check_macro "AC_CONFIG_HEADERS") ]] || return 0
 	autotools_set_versions
-	autotools_run_tool autoheader "$@"
+	NOFAIL=1 autotools_run_tool autoheader "$@"
 }
 
 eautoconf() {
@@ -231,7 +231,7 @@ autotools_run_tool() {
 	ris=$?
 	eend ${ris}
 
-	if [[ ${ris} != 0 ]]; then
+	if [[ ${ris} != 0 && ${NO_FAIL} != 1 ]]; then
 		echo
 		eerror "Failed Running $1 !"
 		eerror
