@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6447 2006/12/13 23:48:01 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6448 2006/12/14 02:15:09 dberkholz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -352,11 +352,9 @@ net-nntp/gnewspost
 net-p2p/fidelio
 net-wireless/gkismet
 net-wireless/wavelan-applet
-sci-chemistry/coot
 sci-calculators/snac
 sci-visualization/scigraphica
 www-client/ochusha
-x11-libs/gtk-canvas
 <x11-libs/rep-gtk-0.18
 x11-misc/xalf
 x11-misc/gtkdiff
