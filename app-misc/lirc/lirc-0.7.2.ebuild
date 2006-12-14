@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.2.ebuild,v 1.3 2006/01/03 02:43:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.2.ebuild,v 1.4 2006/12/14 10:31:58 zzam Exp $
 
 inherit eutils linux-mod flag-o-matic
 
@@ -125,9 +125,8 @@ src_install() {
 	insinto /etc/conf.d
 	newins ${FILESDIR}/lircd.conf lircd
 
-	has_version sys-fs/udev && (
-		insinto /etc/udev/rules.d/;
-		newins ${S}/contrib/lirc.rules 10-lirc.rules )
+	insinto /etc/udev/rules.d/
+	newins ${S}/contrib/lirc.rules 10-lirc.rules
 
 	if use doc ; then
 		dohtml doc/html/*.html

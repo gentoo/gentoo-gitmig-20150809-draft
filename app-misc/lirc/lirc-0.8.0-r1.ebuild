@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r1.ebuild,v 1.13 2006/11/24 23:58:10 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r1.ebuild,v 1.14 2006/12/14 10:31:58 zzam Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.lirc.org"
 
 SLOT="0"
 LICENSE="GPL-2"
-IUSE="debug doc X hardware-carrier transmitter udev"
+IUSE="debug doc X hardware-carrier transmitter"
 KEYWORDS="~alpha amd64 ia64 ppc ppc64 x86"
 SRC_URI="mirror://sourceforge/lirc/${P/_pre/pre}.tar.bz2"
 
@@ -233,10 +233,8 @@ src_install() {
 	newinitd ${FILESDIR}/lircmd lircmd
 	newconfd ${FILESDIR}/lircd.conf lircd
 
-	if use udev; then
-		insinto /etc/udev/rules.d/
-		newins ${S}/contrib/lirc.rules 10-lirc.rules
-	fi
+	insinto /etc/udev/rules.d/
+	newins ${S}/contrib/lirc.rules 10-lirc.rules
 
 	if use doc ; then
 		dohtml doc/html/*.html

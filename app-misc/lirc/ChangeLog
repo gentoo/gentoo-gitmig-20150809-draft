@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.120 2006/12/02 12:04:13 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.121 2006/12/14 10:31:58 zzam Exp $
+
+  14 Dec 2006; Matthias Schwarzott <zzam@gentoo.org> lirc-0.7.2.ebuild,
+  lirc-0.8.0-r1.ebuild, lirc-0.8.0-r5.ebuild, lirc-0.8.0-r8.ebuild:
+  Unconditionally installing udev-rules due to Bug #158114.
 
 *lirc-0.8.0-r8 (02 Dec 2006)
 
