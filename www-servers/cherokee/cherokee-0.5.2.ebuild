@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.5.2.ebuild,v 1.1 2006/04/17 10:53:27 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.5.2.ebuild,v 1.2 2006/12/14 17:37:32 beu Exp $
 
 inherit eutils pam
 
@@ -8,8 +8,8 @@ NAME=cherokee
 S="${WORKDIR}/${NAME}-${PV}"
 
 DESCRIPTION="An extremely fast and tiny web server."
-SRC_URI="http://www.0x50.org/download/${PV%.*}/${PV}/${NAME}-${PV}.tar.gz"
-HOMEPAGE="http://www.0x50.org/"
+SRC_URI="http://www.cherokee-project.com/download/${PV%.*}/${PV}/${NAME}-${PV}.tar.gz"
+HOMEPAGE="http://www.cherokee-project.com/"
 
 LICENSE="GPL-2"
 SLOT="0"
