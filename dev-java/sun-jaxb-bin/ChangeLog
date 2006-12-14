@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/sun-jaxb-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jaxb-bin/ChangeLog,v 1.3 2006/09/10 15:28:40 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jaxb-bin/ChangeLog,v 1.4 2006/12/14 11:40:38 nelchael Exp $
+
+*sun-jaxb-bin-2.0-r2 (14 Dec 2006)
+
+  14 Dec 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  -sun-jaxb-bin-2.0-r1.ebuild, +sun-jaxb-bin-2.0-r2.ebuild:
+  Add a symlink to sun-jaf jar.
 
   10 Sep 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   -sun-jaxb-bin-2.0.ebuild, sun-jaxb-bin-2.0-r1.ebuild:
