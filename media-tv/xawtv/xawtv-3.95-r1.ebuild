@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.19 2006/11/11 09:00:39 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.20 2006/12/14 23:03:25 kloeri Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -20,7 +20,7 @@ SRC_URI="http://dl.bytesex.org/releases/xawtv/${P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ia64 ~ppc ~sparc x86"
+KEYWORDS="alpha amd64 ia64 ~ppc ~sparc x86"
 
 RDEPEND=">=sys-libs/ncurses-5.1
 	>=media-libs/jpeg-6b
