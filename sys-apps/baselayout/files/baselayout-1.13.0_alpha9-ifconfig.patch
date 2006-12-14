@@ -1,8 +1,18 @@
 Index: net.BSD/ifconfig.sh
 ===================================================================
---- net.BSD/ifconfig.sh	(revision 2414)
+--- net.BSD/ifconfig.sh	(revision 2420)
 +++ net.BSD/ifconfig.sh	(working copy)
-@@ -319,7 +319,8 @@
+@@ -268,9 +268,6 @@
+ 		config[0]="inet add ${config[0]}"
+ 	fi
+ 
+-	# Ensure that the interface is up so we can add IPv6 addresses
+-	interface_up "${iface}"
+-
+ 	# Finally add the address
+ 	ifconfig "${iface}" ${config[@]}
+ }
+@@ -319,7 +316,8 @@
  				x="-net ${x}"
  			elif [[ ${y} == *.*.*.*/32 ]] ; then
  				x="-host ${x}"
@@ -14,7 +24,7 @@ Index: net.BSD/ifconfig.sh
  				# Given the lack of a netmask, we assume a host
 Index: net.Linux/ifconfig.sh
 ===================================================================
---- net.Linux/ifconfig.sh	(revision 2414)
+--- net.Linux/ifconfig.sh	(revision 2420)
 +++ net.Linux/ifconfig.sh	(working copy)
 @@ -370,7 +370,8 @@
  				x="-net ${x}"
@@ -26,3 +36,17 @@ Index: net.Linux/ifconfig.sh
  				x="-net ${x}"
  			else
  				# Given the lack of a netmask, we assume a host
+@@ -437,11 +438,8 @@
+ 	fi
+ 
+ 	# Some kernels like to apply lo with an address when they are brought up
+-	if [[ ${config[@]} == "127.0.0.1 netmask 255.0.0.0 broadcast 127.255.255.255" ]]; then
+-		if is_loopback "${real_iface}" ; then
+-			ifconfig "${real_iface}" ${config[@]}
+-			return 0
+-		fi
++	if [[ ${config[@]} == "127.0.0.1/8 brd 127.255.255.255" ]]; then
++		is_loopback "${real_iface}" && ifconfig "${real_iface}" 0.0.0.0
+ 	fi
+ 
+ 	ifconfig "${iface}" ${config[@]}
