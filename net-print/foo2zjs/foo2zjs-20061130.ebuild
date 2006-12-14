@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20061130.ebuild,v 1.1 2006/12/03 15:25:36 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20061130.ebuild,v 1.2 2006/12/14 18:50:28 genstef Exp $
 
 inherit eutils
 
@@ -36,18 +36,18 @@ SRC_URI="
 RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="cups foomaticdb udev usb
+IUSE="cups foomaticdb usb
 	foo2zjs_devices_hp2600n foo2zjs_devices_hp1600
 	foo2zjs_devices_km2430 foo2zjs_devices_km2300
 	foo2zjs_devices_km2200 foo2zjs_devices_kmcpwl
 	foo2zjs_devices_hp1020 foo2zjs_devices_hp1018
 	foo2zjs_devices_hp1005 foo2zjs_devices_hp1000"
-DEPEND="app-arch/unzip"
+DEPEND="app-arch/unzip
+	app-editors/vim"
 RDEPEND="cups? ( net-print/cups )
 	foomaticdb? ( net-print/foomatic-db-engine )
 	net-print/foomatic-filters
-	udev? ( sys-fs/udev )
-	usb? ( || ( sys-fs/udev sys-apps/hotplug ) )"
+	sys-fs/udev"
 KEYWORDS="~x86 ~amd64 ~ppc"
 S=${WORKDIR}/${PN}
 
@@ -98,18 +98,6 @@ src_install() {
 
 	use cups && dodir /usr/share/cups/model
 
-	emake DESTDIR=${D} install \
-		|| die "make install failed"
-
-	if use udev; then
-		emake DESTDIR=${D} install-udev \
-			|| die "make install-udev failed"
-	elif use usb; then
-		emake DESTDIR=${D} install-hotplug \
-			|| die "make install-hotplug failed"
-	fi
-}
-
-pkg_postinst() {
-	rm -f ${ROOT}/etc/udev/rules.d/58-foo2zjs.rules
+	emake DESTDIR=${D} install install-udev \
+		|| die "emake install failed"
 }
