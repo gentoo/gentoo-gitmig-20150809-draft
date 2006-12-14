@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
+<herd>nx</herd>
 <maintainer>
-  <email>stuart@gentoo.org</email>
-  <name>Stuart Herbert</name>
-  <description>Maintainer</description> 
+  <email>nx@gentoo.org</email>
 </maintainer>
 <longdescription>X11 protocol compression library wrapper</longdescription>
 </pkgmetadata>
