@@ -1,0 +1,23 @@
+diff -Naur sussen-0.33.orig/agent/Main.cs sussen-0.33/agent/Main.cs
+--- sussen-0.33.orig/agent/Main.cs	2006-11-10 18:05:58.000000000 +0300
++++ sussen-0.33/agent/Main.cs	2006-12-14 14:47:43.000000000 +0300
+@@ -302,9 +302,16 @@
+ 			Config config = new Config ("windows");
+ #endif
+ 
+-
+-            config.XmlDirectory = ConfigurationManager.AppSettings.Get("sussenXmlDirectory");
+-            config.DownloadDirectory = ConfigurationManager.AppSettings.Get("sussenDownloadDirectory");
++			try {
++				config.XmlDirectory = ConfigurationManager.AppSettings.Get("sussenXmlDirectory");
++				config.DownloadDirectory = ConfigurationManager.AppSettings.Get("sussenDownloadDirectory");
++			} catch {
++#if MONO_BUILD
++				// Mono 1.1.13.x doesn't like the above two lines. Use old method if it fails.
++				config.XmlDirectory = ConfigurationSettings.AppSettings.Get ("sussenXmlDirectory");
++				config.DownloadDirectory = ConfigurationSettings.AppSettings.Get ("sussenDownloadDirectory");
++#endif
++			}
+ 
+ 			Repository.Initialize (config.XmlDirectory);
+ 			config.DefinitionsFile = Repository.GetResource (definitionFile);

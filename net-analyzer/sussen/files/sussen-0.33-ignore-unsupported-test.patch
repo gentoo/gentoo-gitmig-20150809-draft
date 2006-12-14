@@ -1,0 +1,12 @@
+diff -Naur sussen-0.33.orig/oval/Sussen.Oval/DataCollector.cs sussen-0.33/oval/Sussen.Oval/DataCollector.cs
+--- sussen-0.33.orig/oval/Sussen.Oval/DataCollector.cs	2006-12-03 01:00:37.000000000 +0300
++++ sussen-0.33/oval/Sussen.Oval/DataCollector.cs	2006-12-11 19:04:44.000000000 +0300
+@@ -106,6 +106,8 @@
+                                 Log.Debug(e);
+                                 docs.SystemCharacteristics.WrongPlatform.Add(testElement.ID, testElement.ID);
+                                 docs.SystemCharacteristics.WriteCollectedObject(oe.ID, oe.Version, Flags.NotApplicable);
++                            } catch (Exception ie) {
++			    	// do nothing for now
+                             }
+                         }
+ 
