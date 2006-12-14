@@ -1,7 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX freeradius-1.1.3-nostrip.patch 363 RMD160 4bfd89636fe7839bc48c034460ce12665bcab40f SHA1 8fb6d4f1e5ac76ed8bceb856423545cf267032b8 SHA256 9314dc0dcd6899300e05d6ea5f6d04d082d1f2b178a0bee002d4eb9f10ac8d51
 MD5 220be96adb949dd48e1c9ef40b31a0db files/freeradius-1.1.3-nostrip.patch 363
 RMD160 4bfd89636fe7839bc48c034460ce12665bcab40f files/freeradius-1.1.3-nostrip.patch 363
 SHA256 9314dc0dcd6899300e05d6ea5f6d04d082d1f2b178a0bee002d4eb9f10ac8d51 files/freeradius-1.1.3-nostrip.patch 363
+AUX freeradius-1.1.3-ssl.patch 549 RMD160 a243c303419129e0dafbb25b20188ede3bc99b6e SHA1 537f16eca49f29bbc080634510509ce5c958cdcf SHA256 1c600ee64d1f6220655751fddd8291e4d1f550f81d7f8cabe2150c097415025b
+MD5 43f4a06c1e13cc3704a655cd4e17a168 files/freeradius-1.1.3-ssl.patch 549
+RMD160 a243c303419129e0dafbb25b20188ede3bc99b6e files/freeradius-1.1.3-ssl.patch 549
+SHA256 1c600ee64d1f6220655751fddd8291e4d1f550f81d7f8cabe2150c097415025b files/freeradius-1.1.3-ssl.patch 549
 AUX freeradius-1.1.3-versionless-la-files.patch 1624 RMD160 85f0cf2bb091c0869c833d465ea1ea8e7bb23ef1 SHA1 5d04d7752e32a6a0e22d305f8fe35aecb0829833 SHA256 f30beee574985ddfccdbdd1e89e4590d889ccd2672ec27ea4eecc223dad4bb68
 MD5 2c8394cf46c55712e0f068fabfd7da2e files/freeradius-1.1.3-versionless-la-files.patch 1624
 RMD160 85f0cf2bb091c0869c833d465ea1ea8e7bb23ef1 files/freeradius-1.1.3-versionless-la-files.patch 1624
@@ -19,10 +26,14 @@ EBUILD freeradius-1.1.3-r1.ebuild 4832 RMD160 9be8b337a0cec52730e1de7a450024e2c7
 MD5 0df3e14e12aed846cd22901391ade2b2 freeradius-1.1.3-r1.ebuild 4832
 RMD160 9be8b337a0cec52730e1de7a450024e2c7c83eca freeradius-1.1.3-r1.ebuild 4832
 SHA256 52dcf409e1c88919f51caa28e3d876b350cc7610dd137bddc60648e584e0398b freeradius-1.1.3-r1.ebuild 4832
-MISC ChangeLog 10621 RMD160 0993ed8aab7dec67729e610523893a966ce61fab SHA1 b667c4a163cd07698cf72a1db83909dabd4bb47e SHA256 05ecbd49a8fac4783a7020c736c5ded750bdb071c6a0272cf3d978738d47acc0
-MD5 9ab6a704122faee6703b5fd5ddc09ce3 ChangeLog 10621
-RMD160 0993ed8aab7dec67729e610523893a966ce61fab ChangeLog 10621
-SHA256 05ecbd49a8fac4783a7020c736c5ded750bdb071c6a0272cf3d978738d47acc0 ChangeLog 10621
+EBUILD freeradius-1.1.3-r2.ebuild 3901 RMD160 3d8242f0a4aea30d11a30825a441b1811cbbd89c SHA1 93e46cd619291633414a1601a24384d3b83a3e2f SHA256 7bbfd5ed059489157f09ac2db86b813b3049a3d58c0c64e569f40e7f2db08f1b
+MD5 9c8f52b996ebff36a6b351d2a0b138bb freeradius-1.1.3-r2.ebuild 3901
+RMD160 3d8242f0a4aea30d11a30825a441b1811cbbd89c freeradius-1.1.3-r2.ebuild 3901
+SHA256 7bbfd5ed059489157f09ac2db86b813b3049a3d58c0c64e569f40e7f2db08f1b freeradius-1.1.3-r2.ebuild 3901
+MISC ChangeLog 10810 RMD160 c5c9a5078dae5c717bcb2452a632f3d4288d8cc0 SHA1 7cdb1b683507bf80dfe34e1d03c4e4277a7a7b87 SHA256 f0dbb9c4fbb7e156176c269c50be6746668947ae8e39885dd23d3c64716369f3
+MD5 caf9d78f445b64dfa2a799892c89a763 ChangeLog 10810
+RMD160 c5c9a5078dae5c717bcb2452a632f3d4288d8cc0 ChangeLog 10810
+SHA256 f0dbb9c4fbb7e156176c269c50be6746668947ae8e39885dd23d3c64716369f3 ChangeLog 10810
 MISC metadata.xml 252 RMD160 aaf9aae6ca234ce5c447d0a6c29d732a5b2a58f0 SHA1 6b1b24914e633321a409132870aea89053fac655 SHA256 5c0974054864b2e9a572cd3c30b97aadae0b2781da4dabec791e23afdfa5ee76
 MD5 1542bf76e28581e9d6bcfdc75e46f33d metadata.xml 252
 RMD160 aaf9aae6ca234ce5c447d0a6c29d732a5b2a58f0 metadata.xml 252
@@ -30,3 +41,13 @@ SHA256 5c0974054864b2e9a572cd3c30b97aadae0b2781da4dabec791e23afdfa5ee76 metadata
 MD5 51c1a43e2ddb45d5b0709b0d2dcdb3ee files/digest-freeradius-1.1.3-r1 253
 RMD160 4562c10776eeed3a5a89d26db33f977c61b420b4 files/digest-freeradius-1.1.3-r1 253
 SHA256 f2c8dde98762ea60836e714eaf453c239dd1a9e21d96432f5412d2845809a08c files/digest-freeradius-1.1.3-r1 253
+MD5 51c1a43e2ddb45d5b0709b0d2dcdb3ee files/digest-freeradius-1.1.3-r2 253
+RMD160 4562c10776eeed3a5a89d26db33f977c61b420b4 files/digest-freeradius-1.1.3-r2 253
+SHA256 f2c8dde98762ea60836e714eaf453c239dd1a9e21d96432f5412d2845809a08c files/digest-freeradius-1.1.3-r2 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFgZBC3sf9c6kjmR8RAiE5AJ4pqL8FoNb4nrWGV8iwzMmKYSjz/ACgpH5Z
++UaKQntqn3EBnknHqueP5yQ=
+=omTe
+-----END PGP SIGNATURE-----
