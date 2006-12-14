@@ -1,4 +1,4 @@
---- lib/rsccripts/net/ifconfig.sh	(revision 2420)
+--- lib/rcscripts/net/ifconfig.sh	(revision 2418)
 +++ lib/rcscripts/net/ifconfig.sh	(working copy)
 @@ -364,7 +364,7 @@
  				x="-net ${x}"
@@ -9,12 +9,20 @@
  				x="-net ${x}"
  			else
  				# Given the lack of a netmask, we assume a host
-@@ -434,7 +434,7 @@
- 	interface_up "${real_iface}"
- 
- 	# Some kernels like to apply lo with an address when they are brought up
--	if [[ ${config[@]} == "127.0.0.1 netmask 255.0.0.0 broadcast 127.255.255.255" ]]; then
-+	if [[ ${config[@]} == "127.0.0.1/8 brd 127.255.255.255" ]]; then
- 		is_loopback "${iface}" && ifconfig "${iface}" 0.0.0.0
+@@ -430,12 +430,12 @@
+ 		config=( "${config[@]//peer/pointopoint}" )
  	fi
  
+-	# Ensure that the interface is up so we can add IPv6 addresses
+-	interface_up "${real_iface}"
+-
+ 	# Some kernels like to apply lo with an address when they are brought up
+ 	if [[ ${config[@]} == "127.0.0.1 netmask 255.0.0.0 broadcast 127.255.255.255" ]]; then
+-		is_loopback "${iface}" && ifconfig "${iface}" 0.0.0.0
++		if is_loopback "${real_iface}" ; then
++			ifconfig "${real_iface}" ${config[@]}
++			return 0
++		fi
+ 	fi
+ 
+ 	ifconfig "${iface}" ${config[@]}
