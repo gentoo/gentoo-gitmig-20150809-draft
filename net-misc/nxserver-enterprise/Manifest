@@ -1,14 +1,55 @@
-MD5 d5a7c33318e6c27e3f908949b2cae636 ChangeLog 1960
+AUX 1.2.2/50nxserver 112 RMD160 3d88fe508f138e37891d14b38099911e3eb7ed65 SHA1 e4c594e9f3723adebd656715943c03d6c7208ce8 SHA256 3f69529a29f72c72601f53611868c3b4c7da6aa982be9318192ac9791f10f20e
 MD5 ee31d8c4c8dd69f1d7895fedfd87ccf2 files/1.2.2/50nxserver 112
+RMD160 3d88fe508f138e37891d14b38099911e3eb7ed65 files/1.2.2/50nxserver 112
+SHA256 3f69529a29f72c72601f53611868c3b4c7da6aa982be9318192ac9791f10f20e files/1.2.2/50nxserver 112
+AUX 1.3.0/50nxserver 84 RMD160 b43d4cd4af670755cb492ef052c66ca3832ff76e SHA1 e01a960d45c9b831bdb08bfa625ee285f7ca2d53 SHA256 a5e3d8480cc1cf15037125e3706dd0926fd2530323b2ae375e1802ebcb051683
 MD5 3d3179cfb8373d562ceb43a610c1ba7d files/1.3.0/50nxserver 84
-MD5 0aeacfe24d9a36beec2c4a2554b5cc24 files/digest-nxserver-enterprise-1.3.0-r2 72
-MD5 54ad805b560daec38ef45d90481d7ea4 files/digest-nxserver-enterprise-1.3.2 72
-MD5 54ad805b560daec38ef45d90481d7ea4 files/digest-nxserver-enterprise-1.3.2-r1 72
-MD5 c1747c7576e20dce793ddd011483a233 files/digest-nxserver-enterprise-1.4.0 73
-MD5 5638b32b32a8ef8c0547ae8661d47235 files/digest-nxserver-enterprise-1.5.0 83
-MD5 77fd36d93b0a1b9f35abbe6a1c146561 metadata.xml 482
+RMD160 b43d4cd4af670755cb492ef052c66ca3832ff76e files/1.3.0/50nxserver 84
+SHA256 a5e3d8480cc1cf15037125e3706dd0926fd2530323b2ae375e1802ebcb051683 files/1.3.0/50nxserver 84
+DIST nxserver-1.3.0-25.i386.rpm 5377961
+DIST nxserver-1.3.2-25.i386.rpm 4812354
+DIST nxserver-1.4.0-107.i386.rpm 5498146
+DIST nxserver-enterprise-1.5.0-91.i386.rpm 9442653
+EBUILD nxserver-enterprise-1.3.0-r2.ebuild 517 RMD160 0f8ed7dfc68ecdfeddd3d830ff4388c84e39b5e4 SHA1 15c0e61e7758cea0b01f51f1bc9da60a79faa4c0 SHA256 f3c00614c0d9c340ec5d1eae865a3ed02939dc5ac0968e63352ef1b2ead17a5c
 MD5 45271483897aa643cd6e79fab6469a82 nxserver-enterprise-1.3.0-r2.ebuild 517
+RMD160 0f8ed7dfc68ecdfeddd3d830ff4388c84e39b5e4 nxserver-enterprise-1.3.0-r2.ebuild 517
+SHA256 f3c00614c0d9c340ec5d1eae865a3ed02939dc5ac0968e63352ef1b2ead17a5c nxserver-enterprise-1.3.0-r2.ebuild 517
+EBUILD nxserver-enterprise-1.3.2-r1.ebuild 526 RMD160 83ecdd0f27fbd4e75c17ac3fda8ab4c200bf20ab SHA1 c183cab799afb2fbe9b8b9d5b0ed69a690fcdc11 SHA256 b4c3dac068bf8bee1b77e8560b73ea014ae61164be032878604ade8a8f4a0b09
 MD5 6cbf4125d665abc506df18b57ad2affc nxserver-enterprise-1.3.2-r1.ebuild 526
+RMD160 83ecdd0f27fbd4e75c17ac3fda8ab4c200bf20ab nxserver-enterprise-1.3.2-r1.ebuild 526
+SHA256 b4c3dac068bf8bee1b77e8560b73ea014ae61164be032878604ade8a8f4a0b09 nxserver-enterprise-1.3.2-r1.ebuild 526
+EBUILD nxserver-enterprise-1.3.2.ebuild 470 RMD160 55c9f4377f37185c4c75fb043e1989d1f4a9295d SHA1 1170abcb2c3f27e3d60f53d5b8e6a106270d74cd SHA256 433696967e596e9c013e4f3a3e92f75669085349057927fd1056cc180c7c68d2
 MD5 f145b671bb42bf9da8a145b7337d10ed nxserver-enterprise-1.3.2.ebuild 470
+RMD160 55c9f4377f37185c4c75fb043e1989d1f4a9295d nxserver-enterprise-1.3.2.ebuild 470
+SHA256 433696967e596e9c013e4f3a3e92f75669085349057927fd1056cc180c7c68d2 nxserver-enterprise-1.3.2.ebuild 470
+EBUILD nxserver-enterprise-1.4.0.ebuild 520 RMD160 0a2b122f42333acab67ce5a8be5bea34634f07d5 SHA1 8180293ae0462a4509f82a16ac3f10c587a2d2c1 SHA256 ce945d9eeb7e36fb8a53f72c236d95363dd99b4ec9b31d06ebee255ffd551c99
 MD5 6a2492964d3da620f423cd93640f330f nxserver-enterprise-1.4.0.ebuild 520
+RMD160 0a2b122f42333acab67ce5a8be5bea34634f07d5 nxserver-enterprise-1.4.0.ebuild 520
+SHA256 ce945d9eeb7e36fb8a53f72c236d95363dd99b4ec9b31d06ebee255ffd551c99 nxserver-enterprise-1.4.0.ebuild 520
+EBUILD nxserver-enterprise-1.5.0.ebuild 667 RMD160 d79e9acddb02fca5ffeae8b347457e3864741c64 SHA1 eb452f5c5b65503857806a9618a691dbbebc693a SHA256 f272fd1f1b0cbf933ee771f3556725aef9760806db5e0c5a2ab96ad077e77c4b
 MD5 2fcbe58b313faab6545ac0fc1b4a3f66 nxserver-enterprise-1.5.0.ebuild 667
+RMD160 d79e9acddb02fca5ffeae8b347457e3864741c64 nxserver-enterprise-1.5.0.ebuild 667
+SHA256 f272fd1f1b0cbf933ee771f3556725aef9760806db5e0c5a2ab96ad077e77c4b nxserver-enterprise-1.5.0.ebuild 667
+MISC ChangeLog 1960 RMD160 272229a32a14381e031de3558fd1173d719e19cd SHA1 cb06d8940a02311e7d07056e63ce1f1afde675c7 SHA256 330a569fa5adc1ff50454463176b1c2b2a7bd4ddd9381252c827670698995c3c
+MD5 d5a7c33318e6c27e3f908949b2cae636 ChangeLog 1960
+RMD160 272229a32a14381e031de3558fd1173d719e19cd ChangeLog 1960
+SHA256 330a569fa5adc1ff50454463176b1c2b2a7bd4ddd9381252c827670698995c3c ChangeLog 1960
+MISC metadata.xml 410 RMD160 6deb2bd741f83af3e9153cf47cbb87f3f0385b68 SHA1 fa7f171aa1bfcb0b21c81f75315c150293ba4aa8 SHA256 52c577df459acd879beb4e602ce2561eebb770ac21ca83dbefe094d1326a5214
+MD5 e6ff0bffa2d0047e0811094f9dc46274 metadata.xml 410
+RMD160 6deb2bd741f83af3e9153cf47cbb87f3f0385b68 metadata.xml 410
+SHA256 52c577df459acd879beb4e602ce2561eebb770ac21ca83dbefe094d1326a5214 metadata.xml 410
+MD5 0aeacfe24d9a36beec2c4a2554b5cc24 files/digest-nxserver-enterprise-1.3.0-r2 72
+RMD160 4c17bf0382ff7e6ae75bd276020d5e67bd9a487a files/digest-nxserver-enterprise-1.3.0-r2 72
+SHA256 99618dfbab5e180fb66bd5f65d00db0d738c5fc3150839a9b7fe063fe58d8f70 files/digest-nxserver-enterprise-1.3.0-r2 72
+MD5 54ad805b560daec38ef45d90481d7ea4 files/digest-nxserver-enterprise-1.3.2 72
+RMD160 d64cfd48fb68fd3dd7455f9c5960b25edc5e85f2 files/digest-nxserver-enterprise-1.3.2 72
+SHA256 359a8d1657f50322e0ece03da03d7e118c053500cdfdc0060f6d4a941f3c3b86 files/digest-nxserver-enterprise-1.3.2 72
+MD5 54ad805b560daec38ef45d90481d7ea4 files/digest-nxserver-enterprise-1.3.2-r1 72
+RMD160 d64cfd48fb68fd3dd7455f9c5960b25edc5e85f2 files/digest-nxserver-enterprise-1.3.2-r1 72
+SHA256 359a8d1657f50322e0ece03da03d7e118c053500cdfdc0060f6d4a941f3c3b86 files/digest-nxserver-enterprise-1.3.2-r1 72
+MD5 c1747c7576e20dce793ddd011483a233 files/digest-nxserver-enterprise-1.4.0 73
+RMD160 2824b623296ad23bdf1733b4d9081adbdecea5b8 files/digest-nxserver-enterprise-1.4.0 73
+SHA256 29c39948e79f92d861e782f3c558e4a495b1acef56889c50d18383b6a23dfcbf files/digest-nxserver-enterprise-1.4.0 73
+MD5 5638b32b32a8ef8c0547ae8661d47235 files/digest-nxserver-enterprise-1.5.0 83
+RMD160 12206c6f24c5665164dadebdc0a88adf24c294a3 files/digest-nxserver-enterprise-1.5.0 83
+SHA256 ad8d6767f84a96401f3db434ef4ac843657ee31fb672a48033f43930e3cc8dca files/digest-nxserver-enterprise-1.5.0 83

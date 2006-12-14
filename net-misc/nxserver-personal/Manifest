@@ -1,19 +1,74 @@
-MD5 38a1a052a358e7a27da7eccfd28d4620 ChangeLog 3496
+AUX 1.3.0/50nxserver 84 RMD160 b43d4cd4af670755cb492ef052c66ca3832ff76e SHA1 e01a960d45c9b831bdb08bfa625ee285f7ca2d53 SHA256 a5e3d8480cc1cf15037125e3706dd0926fd2530323b2ae375e1802ebcb051683
 MD5 3d3179cfb8373d562ceb43a610c1ba7d files/1.3.0/50nxserver 84
-MD5 72b387787421250be0b0261cb9227c3e files/digest-nxserver-personal-1.3.0-r2 72
-MD5 5a3eba15c7064c53c5a177d558d1c4c8 files/digest-nxserver-personal-1.3.2 72
-MD5 5a3eba15c7064c53c5a177d558d1c4c8 files/digest-nxserver-personal-1.3.2-r1 72
-MD5 f005c855f1e87dad4bb53f79c3f69139 files/digest-nxserver-personal-1.4.0 72
-MD5 42974d617d0425b965a9bf9c16d28c02 files/digest-nxserver-personal-1.4.0-r1 73
-MD5 c1747c7576e20dce793ddd011483a233 files/digest-nxserver-personal-1.4.0-r2 73
-MD5 c1747c7576e20dce793ddd011483a233 files/digest-nxserver-personal-1.4.0-r3 73
-MD5 d20221e1901e4ad865230415d55ea78b files/digest-nxserver-personal-1.5.0 81
-MD5 77fd36d93b0a1b9f35abbe6a1c146561 metadata.xml 482
+RMD160 b43d4cd4af670755cb492ef052c66ca3832ff76e files/1.3.0/50nxserver 84
+SHA256 a5e3d8480cc1cf15037125e3706dd0926fd2530323b2ae375e1802ebcb051683 files/1.3.0/50nxserver 84
+DIST nxserver-1.3.0-25.i386.rpm 5378076
+DIST nxserver-1.3.2-25.i386.rpm 4811922
+DIST nxserver-1.4.0-103.i386.rpm 5475883
+DIST nxserver-1.4.0-107.i386.rpm 5498146
+DIST nxserver-1.4.0-66.i386.rpm 5625817
+DIST nxserver-personal-1.5.0-91.i386.rpm 9442653
+EBUILD nxserver-personal-1.3.0-r2.ebuild 513 RMD160 0a1043f728183a1d2804bf230ad4a093783dca3b SHA1 499969f5997ab060e469f6e264e9cbc3c2db9da0 SHA256 f40d0409548998f68a2b7d81b56354b86c6e60ad8a4b9a148e7ad7a6ecb4a672
 MD5 66c5729f0548d5ed6ba3f1c28eaeda96 nxserver-personal-1.3.0-r2.ebuild 513
+RMD160 0a1043f728183a1d2804bf230ad4a093783dca3b nxserver-personal-1.3.0-r2.ebuild 513
+SHA256 f40d0409548998f68a2b7d81b56354b86c6e60ad8a4b9a148e7ad7a6ecb4a672 nxserver-personal-1.3.0-r2.ebuild 513
+EBUILD nxserver-personal-1.3.2-r1.ebuild 546 RMD160 320cd461d4f1171b1d963b4d053e1374809283a9 SHA1 3b01bbb0302e35bc711746b4bc9a3e26a81edcc4 SHA256 e518e9a5bddf93288cbd6fe253e8bb3e73ff089f16e6f997ba47c9291fc1d7f5
 MD5 3a054f86c7901004e444778e96a8a6df nxserver-personal-1.3.2-r1.ebuild 546
+RMD160 320cd461d4f1171b1d963b4d053e1374809283a9 nxserver-personal-1.3.2-r1.ebuild 546
+SHA256 e518e9a5bddf93288cbd6fe253e8bb3e73ff089f16e6f997ba47c9291fc1d7f5 nxserver-personal-1.3.2-r1.ebuild 546
+EBUILD nxserver-personal-1.3.2.ebuild 516 RMD160 b45ac60f4f5451ed94956b4613bc48ff4d282798 SHA1 cd3e80bf6d633efeb67043d42fd8b19e579898d0 SHA256 5ef9ffd00c300e31e70e2cb979d26c05e082b8fb06dd7167fa1882dd8ab876cc
 MD5 c3df17746c60c751a1fc33753578663e nxserver-personal-1.3.2.ebuild 516
+RMD160 b45ac60f4f5451ed94956b4613bc48ff4d282798 nxserver-personal-1.3.2.ebuild 516
+SHA256 5ef9ffd00c300e31e70e2cb979d26c05e082b8fb06dd7167fa1882dd8ab876cc nxserver-personal-1.3.2.ebuild 516
+EBUILD nxserver-personal-1.4.0-r1.ebuild 568 RMD160 948eadba6bf062e6e0e04c39da06ca173f25b55a SHA1 4892d9ac547a319eae4292785390fc1564f16388 SHA256 6878b3f00ed75e097782c6a30b775cbaf6564c0c5e5f7ee2798073e170c2570f
 MD5 33d8e27f7a2cfc8869741be5b0efa926 nxserver-personal-1.4.0-r1.ebuild 568
+RMD160 948eadba6bf062e6e0e04c39da06ca173f25b55a nxserver-personal-1.4.0-r1.ebuild 568
+SHA256 6878b3f00ed75e097782c6a30b775cbaf6564c0c5e5f7ee2798073e170c2570f nxserver-personal-1.4.0-r1.ebuild 568
+EBUILD nxserver-personal-1.4.0-r2.ebuild 568 RMD160 02c33d7d62de3bb45f2ba7458d074192a1be1ed3 SHA1 6924a20bddd6cc04a9353f7f612d9a8a2b48a903 SHA256 e3f9f9b92791b3cf505d8146840a4bc0e5f86589cd79d7230be0737b17e045a7
 MD5 526b9d1650c3b586715c01618e7faee5 nxserver-personal-1.4.0-r2.ebuild 568
+RMD160 02c33d7d62de3bb45f2ba7458d074192a1be1ed3 nxserver-personal-1.4.0-r2.ebuild 568
+SHA256 e3f9f9b92791b3cf505d8146840a4bc0e5f86589cd79d7230be0737b17e045a7 nxserver-personal-1.4.0-r2.ebuild 568
+EBUILD nxserver-personal-1.4.0-r3.ebuild 517 RMD160 c552a1f9eab19dae7a4b57deb66235c3817779ff SHA1 932ddc5fafa9d7f4139efcd55f10614a88b4c055 SHA256 129ef423647a9079cca00a96f3f860127ff8f3ef9ff372a5c7f18efc0196adff
 MD5 00e74e94177f1e29d2badc8a89a2faec nxserver-personal-1.4.0-r3.ebuild 517
+RMD160 c552a1f9eab19dae7a4b57deb66235c3817779ff nxserver-personal-1.4.0-r3.ebuild 517
+SHA256 129ef423647a9079cca00a96f3f860127ff8f3ef9ff372a5c7f18efc0196adff nxserver-personal-1.4.0-r3.ebuild 517
+EBUILD nxserver-personal-1.4.0.ebuild 555 RMD160 7a2f4ab53021ce3ff1edd71e1e508040be9fed46 SHA1 7c0d83bbe6b2e0aec648d3b022416facd242b385 SHA256 2d15a8fd59a6f723905cf5b296642794c5ac6f004da5197f3b22593da541f2cc
 MD5 520c2fe3e5535619302ebd05d62b0693 nxserver-personal-1.4.0.ebuild 555
+RMD160 7a2f4ab53021ce3ff1edd71e1e508040be9fed46 nxserver-personal-1.4.0.ebuild 555
+SHA256 2d15a8fd59a6f723905cf5b296642794c5ac6f004da5197f3b22593da541f2cc nxserver-personal-1.4.0.ebuild 555
+EBUILD nxserver-personal-1.5.0.ebuild 659 RMD160 cfcfbbc6505179649833c32096bd7be2d71b1948 SHA1 ef7c970a637cfdc9a0fce57936dccacf5b2ea01f SHA256 1791e596a5e7444de3554aebcb41a64b5a2002e231222c47f1198512af86b9bd
 MD5 35af85ac8b180af83c8b04f3adef4314 nxserver-personal-1.5.0.ebuild 659
+RMD160 cfcfbbc6505179649833c32096bd7be2d71b1948 nxserver-personal-1.5.0.ebuild 659
+SHA256 1791e596a5e7444de3554aebcb41a64b5a2002e231222c47f1198512af86b9bd nxserver-personal-1.5.0.ebuild 659
+MISC ChangeLog 3496 RMD160 0f3e02d4cedb22df4e9141db6a448a85cdbaf26f SHA1 4d729a6569a68a2b7bd1337b3e9aba0103f93697 SHA256 82f4efd689e2746a2399c6139587a844f43ad3ff5fc35794ca48992c5068b3e7
+MD5 38a1a052a358e7a27da7eccfd28d4620 ChangeLog 3496
+RMD160 0f3e02d4cedb22df4e9141db6a448a85cdbaf26f ChangeLog 3496
+SHA256 82f4efd689e2746a2399c6139587a844f43ad3ff5fc35794ca48992c5068b3e7 ChangeLog 3496
+MISC metadata.xml 410 RMD160 6deb2bd741f83af3e9153cf47cbb87f3f0385b68 SHA1 fa7f171aa1bfcb0b21c81f75315c150293ba4aa8 SHA256 52c577df459acd879beb4e602ce2561eebb770ac21ca83dbefe094d1326a5214
+MD5 e6ff0bffa2d0047e0811094f9dc46274 metadata.xml 410
+RMD160 6deb2bd741f83af3e9153cf47cbb87f3f0385b68 metadata.xml 410
+SHA256 52c577df459acd879beb4e602ce2561eebb770ac21ca83dbefe094d1326a5214 metadata.xml 410
+MD5 72b387787421250be0b0261cb9227c3e files/digest-nxserver-personal-1.3.0-r2 72
+RMD160 5830557e59f104bcb4661aef4d364e772cd7af7d files/digest-nxserver-personal-1.3.0-r2 72
+SHA256 22373bb08e4a7bd68eeec9f8abb6f67a440550005336e50bd17d9b570a1f04da files/digest-nxserver-personal-1.3.0-r2 72
+MD5 5a3eba15c7064c53c5a177d558d1c4c8 files/digest-nxserver-personal-1.3.2 72
+RMD160 7d4b0d45f212cc1ead4c0b3536b8b8b0085bf6ae files/digest-nxserver-personal-1.3.2 72
+SHA256 73086bf127737ac76ccec082d9d278d801590737694980af695823014bb6a42a files/digest-nxserver-personal-1.3.2 72
+MD5 5a3eba15c7064c53c5a177d558d1c4c8 files/digest-nxserver-personal-1.3.2-r1 72
+RMD160 7d4b0d45f212cc1ead4c0b3536b8b8b0085bf6ae files/digest-nxserver-personal-1.3.2-r1 72
+SHA256 73086bf127737ac76ccec082d9d278d801590737694980af695823014bb6a42a files/digest-nxserver-personal-1.3.2-r1 72
+MD5 f005c855f1e87dad4bb53f79c3f69139 files/digest-nxserver-personal-1.4.0 72
+RMD160 dcc1a5d601b408c52836101054a0b84908299b82 files/digest-nxserver-personal-1.4.0 72
+SHA256 e0b1d6db7dd84468e9faf7f022770352718518cfe411a748979c2397ca74a28e files/digest-nxserver-personal-1.4.0 72
+MD5 42974d617d0425b965a9bf9c16d28c02 files/digest-nxserver-personal-1.4.0-r1 73
+RMD160 d7cfcce5b1c79a9f9afa353eae7d271c4b2f3481 files/digest-nxserver-personal-1.4.0-r1 73
+SHA256 9dbf18ff55de8cf22e8f5509330bcfd605e3483ee2ceafcf5af20831f95f3858 files/digest-nxserver-personal-1.4.0-r1 73
+MD5 c1747c7576e20dce793ddd011483a233 files/digest-nxserver-personal-1.4.0-r2 73
+RMD160 2824b623296ad23bdf1733b4d9081adbdecea5b8 files/digest-nxserver-personal-1.4.0-r2 73
+SHA256 29c39948e79f92d861e782f3c558e4a495b1acef56889c50d18383b6a23dfcbf files/digest-nxserver-personal-1.4.0-r2 73
+MD5 c1747c7576e20dce793ddd011483a233 files/digest-nxserver-personal-1.4.0-r3 73
+RMD160 2824b623296ad23bdf1733b4d9081adbdecea5b8 files/digest-nxserver-personal-1.4.0-r3 73
+SHA256 29c39948e79f92d861e782f3c558e4a495b1acef56889c50d18383b6a23dfcbf files/digest-nxserver-personal-1.4.0-r3 73
+MD5 d20221e1901e4ad865230415d55ea78b files/digest-nxserver-personal-1.5.0 81
+RMD160 17c11597748608fc18d5e51c93b9dc29616f26cd files/digest-nxserver-personal-1.5.0 81
+SHA256 81759e277862368e72d05518a1386f4e2f96b0a35e3040879bee2b1420adfbb5 files/digest-nxserver-personal-1.5.0 81
