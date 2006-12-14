@@ -8,7 +8,7 @@ Abort generate-modprobe.conf if modprobe fails, bug #68689.
  
 +modprobe_abort()
 +{
-+    echo Failed to to run modprobe.  Giving up. 2>&1
++    echo Failed to to run modprobe.  Giving up. 1>&2
 +    exit 1
 +}
 +
