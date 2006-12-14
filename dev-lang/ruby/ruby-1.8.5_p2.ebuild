@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.5_p2.ebuild,v 1.8 2006/12/05 08:07:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.5_p2.ebuild,v 1.9 2006/12/14 00:29:00 vapier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -18,7 +18,7 @@ SRC_URI="ftp://ftp.ruby-lang.org/pub/ruby/${MY_P}.tar.gz
 
 LICENSE="Ruby"
 SLOT="1.8"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ~ppc-macos ppc64 ~s390 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc-macos ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="debug socks5 tk cjk doc threads examples ipv6"
 RESTRICT="confcache"
 
@@ -94,10 +94,10 @@ src_install() {
 	done
 	export LD_LIBRARY_PATH RUBYLIB
 
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 
 	if use doc; then
-		make DESTDIR=${D} install-doc || die "make install-doc failed"
+		make DESTDIR="${D}" install-doc || die "make install-doc failed"
 	fi
 
 	if use examples; then
@@ -113,7 +113,7 @@ src_install() {
 		dosym libruby${SLOT/./}.so.${PV%_*} /usr/$(get_libdir)/libruby.so.${PV%_*}
 	fi
 
-	dodoc COPYING* ChangeLog MANIFEST README* ToDo
+	dodoc ChangeLog MANIFEST README* ToDo
 }
 
 pkg_postinst() {
