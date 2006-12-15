@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.1.ebuild,v 1.14 2006/12/12 22:47:21 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.1.ebuild,v 1.15 2006/12/15 01:26:25 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 MY_PV=040702
 DESCRIPTION="A realtime strategy game engine"
