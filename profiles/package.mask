@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6450 2006/12/15 03:26:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6451 2006/12/16 02:02:36 pylon Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -97,10 +97,6 @@ mail-client/claws-mail-perl
 mail-client/claws-mail-rssyl
 mail-client/claws-mail-smime
 mail-client/claws-mail-vcalendar
-
-# Lars Weiler <pylon@gentoo.org> (07 Dec 2006)
-# Connection error, debugging needed
->=net-misc/strongswan-2.8
 
 # Joshua Nichols <nichoj@gentoo.org> (05 Dec 2006)
 # Archive tool for XFCE 4.4
