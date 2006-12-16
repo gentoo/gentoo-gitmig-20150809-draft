@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Lingua-EN-NameParse
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-EN-NameParse/ChangeLog,v 1.13 2006/10/10 19:45:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-EN-NameParse/ChangeLog,v 1.14 2006/12/16 16:52:34 mcummings Exp $
+
+*Lingua-EN-NameParse-1.23 (16 Dec 2006)
+
+  16 Dec 2006; Michael Cummings <mcummings@gentoo.org>
+  Lingua-EN-NameParse-1.22.ebuild, +Lingua-EN-NameParse-1.23.ebuild:
+  Lingua-EN-NameParse
 
   10 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   -Lingua-EN-NameParse-1.20.ebuild, Lingua-EN-NameParse-1.22.ebuild:
