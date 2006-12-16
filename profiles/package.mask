@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6452 2006/12/16 10:36:26 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6453 2006/12/16 14:14:17 markusle Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -738,11 +738,6 @@ sci-biology/cbcanalyzer
 # Daniel Gryniewicz <dang@gentoo.org> (11 Sep 2006)
 # orbit 2.14.3 is broken.  bug #146929
 =gnome-base/orbit-2.14.3
-
-# Markus Dittrich <markusle@gentoo.org> (10 Sep 2006)
-# masked new snapshot for further testing (see bug #144314)
->=sci-libs/blas-atlas-3.7.17
->=sci-libs/lapack-atlas-3.7.17
 
 # Mike Kelly <pioto@gentoo.org> (09 Sep 2006)
 # The 2.x branch changes how it interacts with vim and other plugins. Masking
