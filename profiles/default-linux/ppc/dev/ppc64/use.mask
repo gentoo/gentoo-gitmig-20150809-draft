@@ -1,0 +1,2 @@
+# Unmask the "ibm" USE flag on ppc64
+-ibm
