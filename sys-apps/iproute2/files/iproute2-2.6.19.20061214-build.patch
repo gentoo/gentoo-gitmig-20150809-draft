@@ -1,0 +1,12 @@
+--- Makefile.orig
++++ Makefile
+@@ -32,7 +32,8 @@
+ LIBNETLINK=../lib/libnetlink.a ../lib/libutil.a
+ 
+ all: Config
+-	@for i in $(SUBDIRS); \
++	@set -e; \
++	for i in $(SUBDIRS); \
+ 	do $(MAKE) $(MFLAGS) -C $$i; done
+ 
+ Config:
