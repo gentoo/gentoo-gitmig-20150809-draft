@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/liquid/liquid-0.9.7.ebuild,v 1.10 2006/10/14 11:28:21 flameeyes Exp $
-
-inherit kde
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/liquid/liquid-0.9.7.ebuild,v 1.11 2006/12/16 16:22:59 masterdriverz Exp $
 
 ARTS_REQUIRED="never"
+
+inherit kde
 
 DESCRIPTION="Liquid theme, revamped for KDE 3.2"
 HOMEPAGE="http://developer.berlios.de/projects/liquid/"
