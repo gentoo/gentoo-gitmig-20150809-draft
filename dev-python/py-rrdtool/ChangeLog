@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/py-rrdtool
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-rrdtool/ChangeLog,v 1.13 2006/12/16 10:34:22 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-rrdtool/ChangeLog,v 1.14 2006/12/16 11:17:15 cedk Exp $
+
+  16 Dec 2006; Cedric Krier <cedk@gentoo.org> -py-rrdtool-0.2.1.ebuild:
+  Remove old version
 
 *py-rrdtool-1.0_beta1 (16 Dec 2006)
 
