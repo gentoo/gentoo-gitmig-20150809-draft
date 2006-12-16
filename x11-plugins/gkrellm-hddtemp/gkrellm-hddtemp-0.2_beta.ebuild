@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/gkrellm-hddtemp-0.2_beta.ebuild,v 1.19 2005/09/19 23:00:42 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/gkrellm-hddtemp-0.2_beta.ebuild,v 1.20 2006/12/16 21:55:39 masterdriverz Exp $
 
 inherit multilib
 
@@ -8,15 +8,14 @@ IUSE=""
 MY_P=${P/_beta/-beta}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="a GKrellM2 plugin for hddtemp (which reads the temperature of SMART capable hard drives)"
-SRC_URI="http://coredump.free.fr/linux/${MY_P}.tar.gz"
-HOMEPAGE="http://coredump.free.fr/linux/hddtemp.php"
+SRC_URI="http://www.guzu.net/linux/${MY_P}.tar.gz"
+HOMEPAGE="http://www.guzu.net/linux/hddtemp.php"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ppc sparc x86"
 
-DEPEND="=app-admin/gkrellm-2*
-	>=sys-apps/sed-4"
+DEPEND="=app-admin/gkrellm-2*"
 RDEPEND=">=app-admin/hddtemp-0.3_beta6"
 
 src_unpack() {

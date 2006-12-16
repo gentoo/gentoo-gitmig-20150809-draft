@@ -1,15 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+DIST gkrellm-hddtemp-0.1.tar.gz 9974
+DIST gkrellm-hddtemp-0.2-beta.tar.gz 10923
+EBUILD gkrellm-hddtemp-0.1.ebuild 1019 RMD160 90bcb35addbf6ed27a3e35ae57215cc0efac6d0b SHA1 304bb142032c47354c3fea3ffaa8bca7618a14e1 SHA256 237b7a79c3fbf2ce9f186731cce0819f46e5dfd708a27150591da7999a8f71d8
 MD5 183eb23a7000b353665294228d7d8e93 gkrellm-hddtemp-0.1.ebuild 1019
-MD5 9d203ba7661a3f1705cf827ed890c0cb gkrellm-hddtemp-0.2_beta.ebuild 1576
-MD5 dc971e270a74b2bf7a0d747d50ee614b ChangeLog 2544
+RMD160 90bcb35addbf6ed27a3e35ae57215cc0efac6d0b gkrellm-hddtemp-0.1.ebuild 1019
+SHA256 237b7a79c3fbf2ce9f186731cce0819f46e5dfd708a27150591da7999a8f71d8 gkrellm-hddtemp-0.1.ebuild 1019
+EBUILD gkrellm-hddtemp-0.2_beta.ebuild 1558 RMD160 ad4df1d0a199d4fa4f06dc339d31333c2a9a684e SHA1 c74aca318e17f2ebbec6cab6a468e8c6e6fe409a SHA256 0b577a075a06f7989defc76dafa930671520f29e39c479084786559211d2782a
+MD5 0a571f699a30eebfa701778946e35bb8 gkrellm-hddtemp-0.2_beta.ebuild 1558
+RMD160 ad4df1d0a199d4fa4f06dc339d31333c2a9a684e gkrellm-hddtemp-0.2_beta.ebuild 1558
+SHA256 0b577a075a06f7989defc76dafa930671520f29e39c479084786559211d2782a gkrellm-hddtemp-0.2_beta.ebuild 1558
+MISC ChangeLog 2719 RMD160 36a26035901cfe20356f9d251ce15ba925bd4622 SHA1 b6af7d7fae61fac800ba48431a1d9453b07262ad SHA256 95e48654625ccd3d70f40a694f393caa99f351745dc461b7210ff0a8c5d9962c
+MD5 aea0028966db99a7f033d1d311153d3a ChangeLog 2719
+RMD160 36a26035901cfe20356f9d251ce15ba925bd4622 ChangeLog 2719
+SHA256 95e48654625ccd3d70f40a694f393caa99f351745dc461b7210ff0a8c5d9962c ChangeLog 2719
 MD5 a9f57bac01537cef132c947c68eb3977 files/digest-gkrellm-hddtemp-0.1 69
+RMD160 71ce1adeeccc847367a4f5251835a02691c6f33e files/digest-gkrellm-hddtemp-0.1 69
+SHA256 53122268458e024671cb88591b7f0d772aae4648294269686933f8371bb3bfd0 files/digest-gkrellm-hddtemp-0.1 69
 MD5 d3cc852ee5cbc0155681cecb5e3afa65 files/digest-gkrellm-hddtemp-0.2_beta 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDL0MsntT9W3vfTuoRAjYkAJ9TlHf7VW5QpQYHpYgrN8BRVAAYBwCfUSs9
-cbjRMN8RHkjil2mLJVsRamQ=
-=Xrvg
------END PGP SIGNATURE-----
+RMD160 49b7593335557b18c332ef37c3a3219979265fb9 files/digest-gkrellm-hddtemp-0.2_beta 75
+SHA256 5431ef1d8c933995b630e98f6617dc6bc22dadb69632545b1903e804a6f6903f files/digest-gkrellm-hddtemp-0.2_beta 75

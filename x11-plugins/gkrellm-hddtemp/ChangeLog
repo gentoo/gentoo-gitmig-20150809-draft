@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-hddtemp
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/ChangeLog,v 1.18 2005/09/19 23:00:42 cryos Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/ChangeLog,v 1.19 2006/12/16 21:55:39 masterdriverz Exp $
+
+  16 Dec 2006; Charlie Shepherd <masterdriverz@gentoo.org>
+  gkrellm-hddtemp-0.2_beta.ebuild:
+  Fix homepage; bug 158280; thanks to Galanomatis Ioannis for reporting
 
   19 Sep 2005; Marcus D. Hanwell <cryos@gentoo.org>
   gkrellm-hddtemp-0.2_beta.ebuild:
