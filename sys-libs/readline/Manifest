@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX bash-3.0-etc-inputrc.patch 1443 RMD160 8bf34837bef20bfc7062e32e4a23aa6af9ef2b49 SHA1 a58b9011f61e7e60be0fcd8741d91292222eff61 SHA256 b43736c32ed9d9088ee1cbbff11b78d6f6993492f9da3e1eb5151a64a082d025
 MD5 d687545889dacb43e121f4932d99a534 files/bash-3.0-etc-inputrc.patch 1443
 RMD160 8bf34837bef20bfc7062e32e4a23aa6af9ef2b49 files/bash-3.0-etc-inputrc.patch 1443
@@ -112,3 +115,10 @@ SHA256 d0a1f4592f1031c163cf2edf7a36627eae40de1971b89a9fd998f3850752d075 files/di
 MD5 4486107870b7834bebcb7c4dbd05d265 files/digest-readline-5.2_p1 455
 RMD160 ea5ec5ab739b6d3a4a962099b57749e57d0a2691 files/digest-readline-5.2_p1 455
 SHA256 c205562f5dbadc44dfe9349f3c796faf84fc063b10acac2be007a2d17129fd0a files/digest-readline-5.2_p1 455
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFg2QmK9sYciBdMQMRAtZoAJ9nH3JDx2ODO4/jKqyz92Icfnhu0ACfSp5c
+vrnLdZksc6p8FmygDdPjCKo=
+=igdA
+-----END PGP SIGNATURE-----
