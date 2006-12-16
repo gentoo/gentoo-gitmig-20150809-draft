@@ -1,11 +1,11 @@
 diff -ru libquicktime-0.9.10/configure.ac libquicktime-0.9.10-opengl-link/configure.ac
 --- libquicktime-0.9.10/configure.ac	2006-12-16 09:49:28.000000000 +0100
-+++ libquicktime-0.9.10-opengl-link/configure.ac	2006-12-16 11:19:02.000000000 +0100
++++ libquicktime-0.9.10-opengl-link/configure.ac	2006-12-16 11:43:13.000000000 +0100
 @@ -273,10 +273,13 @@
  
  if test "x$have_gl" = "xyes"; then
  AC_DEFINE(HAVE_GL,1)
-+GL_LIBS=-lGLU -lGL
++GL_LIBS="-lGLU -lGL"
  fi
  
  fi
