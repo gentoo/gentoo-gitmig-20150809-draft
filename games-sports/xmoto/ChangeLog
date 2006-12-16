@@ -1,6 +1,12 @@
 # ChangeLog for games-sports/xmoto
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.8 2006/11/13 02:52:25 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.9 2006/12/16 08:51:12 nyhm Exp $
+
+*xmoto-0.2.2-r1 (16 Dec 2006)
+
+  16 Dec 2006; Tristan Heaven <nyhm@gentoo.org> -xmoto-0.2.2.ebuild,
+  +xmoto-0.2.2-r1.ebuild:
+  Fix nls support and web access, bug #158089
 
   13 Nov 2006; Luis Medinas <metalgod@gentoo.org> xmoto-0.2.0.ebuild:
   Stable on amd64. Closes bug #153468.
