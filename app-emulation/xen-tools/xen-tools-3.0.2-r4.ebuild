@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.2-r4.ebuild,v 1.1 2006/10/14 00:00:03 aross Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.2-r4.ebuild,v 1.2 2006/12/16 04:38:32 aross Exp $
 
 inherit mount-boot flag-o-matic distutils eutils multilib
 
@@ -31,7 +31,7 @@ DEPEND="${CDEPEND}
 	vnc? ( net-libs/libvncserver )"
 
 RDEPEND="${CDEPEND}
-	>=app-emulation/xen-3.0.2
+	~app-emulation/xen-${PV}
 	sys-apps/iproute2
 	net-misc/bridge-utils
 	screen? (
