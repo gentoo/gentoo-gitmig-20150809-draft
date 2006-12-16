@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/kasumi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/ChangeLog,v 1.32 2006/12/15 00:16:42 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/ChangeLog,v 1.33 2006/12/16 10:18:16 opfer Exp $
+
+  16 Dec 2006; Christian Faulhammer <opfer@gentoo.org> kasumi-2.1.ebuild:
+  stable x86, bug #158175
 
 *kasumi-2.2 (15 Dec 2006)
 
