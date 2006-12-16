@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.49 2006/12/13 11:11:26 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.50 2006/12/16 12:34:29 chtekk Exp $
 
 # Author: Francesco Riosa <vivo@gentoo.org>
 # Maintainer: Luca Longinotti <chtekk@gentoo.org>
@@ -173,6 +173,14 @@ configure_minimal() {
 		myconf="${myconf} --disable-shared"
 	else
 		myconf="${myconf} --enable-shared --enable-static"
+	fi
+
+	if mysql_version_is_at_least "4.01.00.00" && ! useq "latin1" ; then
+		myconf="${myconf} --with-charset=utf8"
+		myconf="${myconf} --with-collation=utf8_general_ci"
+	else
+		myconf="${myconf} --with-charset=latin1"
+		myconf="${myconf} --with-collation=latin1_swedish_ci"
 	fi
 }
 
