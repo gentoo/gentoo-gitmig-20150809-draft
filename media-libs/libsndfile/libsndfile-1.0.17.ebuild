@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.17.ebuild,v 1.4 2006/11/17 23:05:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.17.ebuild,v 1.5 2006/12/16 08:57:26 aballier Exp $
 
 WANT_AUTOCONF=2.5
 WANT_AUTOMAKE=1.9
@@ -27,6 +27,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${WORKDIR}/${P}+flac-1.1.3.patch"
+	epatch "${FILESDIR}/${P}-ogg.patch"
 	eautoreconf
 	epunt_cxx
 }
