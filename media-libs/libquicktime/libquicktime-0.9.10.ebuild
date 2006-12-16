@@ -1,13 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.10.ebuild,v 1.5 2006/12/16 09:25:07 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.10.ebuild,v 1.6 2006/12/16 10:30:07 zzam Exp $
 
+WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
 inherit libtool eutils autotools
 
 DESCRIPTION="A library based on quicktime4linux with extensions"
 HOMEPAGE="http://libquicktime.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
+	mirror://gentoo/${PN}-m4-1.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -55,8 +57,10 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-x264.patch"
 	epatch "${FILESDIR}/${P}-automagic-deps.patch"
+	epatch "${FILESDIR}/${P}-opengl-link.patch"
 
-	eautoconf
+	cp ${WORKDIR}/m4/* m4/
+	AT_M4DIR="m4" eautoreconf
 }
 
 src_compile() {

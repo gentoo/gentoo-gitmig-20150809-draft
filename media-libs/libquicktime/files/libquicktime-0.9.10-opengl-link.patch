@@ -1,0 +1,29 @@
+diff -ru libquicktime-0.9.10/configure.ac libquicktime-0.9.10-opengl-link/configure.ac
+--- libquicktime-0.9.10/configure.ac	2006-12-16 09:49:28.000000000 +0100
++++ libquicktime-0.9.10-opengl-link/configure.ac	2006-12-16 11:19:02.000000000 +0100
+@@ -273,10 +273,13 @@
+ 
+ if test "x$have_gl" = "xyes"; then
+ AC_DEFINE(HAVE_GL,1)
++GL_LIBS=-lGLU -lGL
+ fi
+ 
+ fi
+ 
++AC_SUBST(GL_LIBS)
++
+ dnl
+ dnl Check for Alsa
+ dnl
+diff -ru libquicktime-0.9.10/utils/Makefile.am libquicktime-0.9.10-opengl-link/utils/Makefile.am
+--- libquicktime-0.9.10/utils/Makefile.am	2005-10-10 19:05:25.000000000 +0200
++++ libquicktime-0.9.10-opengl-link/utils/Makefile.am	2006-12-16 11:10:17.000000000 +0100
+@@ -55,7 +55,7 @@
+ 
+ lqtplay_SOURCES=lqtplay.c
+ lqtplay_LDADD=@UTIL_LIBADD@ @X_LIBS@ -lXaw -lXt @X_PRE_LIBS@ -lXext \
+-	-lXv -lGLU -lGL -lX11 @X_EXTRA_LIBS@ -lm @ALSA_LIBS@ @OSSAUDIO_LIBS@
++	-lXv @GL_LIBS@ -lX11 @X_EXTRA_LIBS@ -lm @ALSA_LIBS@ @OSSAUDIO_LIBS@
+ 
+ INCLUDES = -I$(top_srcdir)/include \
+ 	    -I$(top_builddir)/include/quicktime \
