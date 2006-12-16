@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/gle-3.1.0-r1.ebuild,v 1.4 2006/12/02 00:51:14 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/gle-3.1.0-r1.ebuild,v 1.5 2006/12/16 18:57:30 masterdriverz Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.4"
@@ -50,7 +50,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed."
+	emake DESTDIR="${D}" -j1 install || die "make install failed."
 	dodoc AUTHORS ChangeLog NEWS README
 	rm -rf "${D}/usr/share/doc/gle"
 }
