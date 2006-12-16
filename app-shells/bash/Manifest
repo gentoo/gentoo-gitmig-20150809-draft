@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX bash-2.05b-empty-herestring.patch 836 RMD160 bdeef415bb8ef5294bfdb47a00beb3523f5e33c5 SHA1 fc34260611e395caee16930e66ec13e7aae63796 SHA256 a05098a9bb85520efc5c6d108fdcf635e4a9b20369d42d9aa0803c6b1d145cae
 MD5 edf95b873162f4548435c379e4998b4e files/bash-2.05b-empty-herestring.patch 836
 RMD160 bdeef415bb8ef5294bfdb47a00beb3523f5e33c5 files/bash-2.05b-empty-herestring.patch 836
@@ -325,3 +328,10 @@ SHA256 6f411247ca686af7f7e849f1ba9a734f0402652352f00e9cab8167f207d6946b files/di
 MD5 ef1b3c02b997284cb562ba9e3eebf17c files/digest-bash-3.2_p9 2074
 RMD160 3232387aa160a9ea2ee764e929fa58618674d590 files/digest-bash-3.2_p9 2074
 SHA256 1fe387fc344fd77f445608d6e5d99d8547c8c2f0aba4150c6b54720ff7a0b7df files/digest-bash-3.2_p9 2074
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFg2RLK9sYciBdMQMRAnv6AKCHtKsl/dp547F70oOtF1W0ev6AjQCfQrWp
+mrT68SQEJNfTA3lah3pbUJ0=
+=D4bu
+-----END PGP SIGNATURE-----
