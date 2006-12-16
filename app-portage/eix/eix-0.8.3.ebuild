@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.8.3.ebuild,v 1.1 2006/12/11 10:05:27 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.8.3.ebuild,v 1.2 2006/12/16 14:15:24 drizzt Exp $
+
+inherit eutils
 
 DESCRIPTION="Small utility for searching ebuilds with indexing for fast results"
 HOMEPAGE="http://dev.croup.de/proj/eix"
@@ -13,6 +15,13 @@ IUSE="sqlite"
 
 DEPEND="sqlite? ( >=dev-db/sqlite-3 )"
 RDEPEND="${DEPEND}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-fbsd.patch
+}
 
 src_compile() {
 	econf $(use_with sqlite) || die "econf failed"

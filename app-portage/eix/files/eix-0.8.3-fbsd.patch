@@ -1,0 +1,14 @@
+--- src/eixTk/regexp.cc.orig 2006-12-15 22:13:38 +0100
++++ src/eixTk/regexp.cc	2006-12-16 14:51:28 +0100
+@@ -44,7 +44,11 @@
+ 	}
+ 
+ 	int errcode = regcomp(&m_re, regex, eflags|REG_EXTENDED);
++#ifdef REG_EMPTY
++	if((errcode != 0) && (errcode != REG_EMPTY)) {
++#else
+ 	if(errcode != 0) {
++#endif
+ 		fprintf(stderr, "regcomp(\"%s\"): %s\n", regex, get_error(errcode).c_str());
+ 		exit(1);
+ 	}
