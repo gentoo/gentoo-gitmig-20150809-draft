@@ -1,19 +1,7 @@
 diff -ru libquicktime-0.9.10-orig/configure.ac libquicktime-0.9.10/configure.ac
 --- libquicktime-0.9.10-orig/configure.ac	2006-12-13 17:27:44.000000000 +0100
-+++ libquicktime-0.9.10/configure.ac	2006-12-13 20:25:22.000000000 +0100
-@@ -154,7 +154,11 @@
- have_vorbis=false
- AH_TEMPLATE([HAVE_VORBIS], [Vorbis libraries are there])
-   
-+AC_ARG_ENABLE([vorbis], AS_HELP_STRING([--disable-vorbis], [Build without vorbis library (default: test)]))
-+
-+if test "x$enable_vorbis" != "xno"; then
- XIPH_PATH_VORBIS(have_vorbis=true)
-+fi
- AM_CONDITIONAL(HAVE_VORBIS, test x$have_vorbis = xtrue)
-   
- if test x$have_vorbis = xtrue; then
-@@ -170,6 +174,10 @@
++++ libquicktime-0.9.10/configure.ac	2006-12-16 09:49:28.000000000 +0100
+@@ -170,6 +170,10 @@
  LAME_REQUIRED="3.93"
  have_lame="false"
  
@@ -24,7 +12,7 @@ diff -ru libquicktime-0.9.10-orig/configure.ac libquicktime-0.9.10/configure.ac
  OLD_CFLAGS=$CFLAGS
  OLD_LIBS=$LIBS
  
-@@ -221,6 +229,8 @@
+@@ -221,6 +225,8 @@
  AC_SUBST(LAME_LIBS)
  AC_SUBST(LAME_REQUIRED)
  
@@ -33,7 +21,7 @@ diff -ru libquicktime-0.9.10-orig/configure.ac libquicktime-0.9.10/configure.ac
  AM_CONDITIONAL(HAVE_LAME, test x$have_lame = xtrue)
  
  dnl
-@@ -249,6 +259,10 @@
+@@ -249,6 +255,10 @@
  
  AH_TEMPLATE([HAVE_GL], [Do we have OpenGL?])
  
@@ -44,7 +32,7 @@ diff -ru libquicktime-0.9.10-orig/configure.ac libquicktime-0.9.10/configure.ac
  have_gl="yes"
  
  AC_CHECK_HEADER([GL/gl.h],[],have_gl="no")
-@@ -265,6 +279,8 @@
+@@ -265,6 +275,8 @@
  AC_DEFINE(HAVE_GL,1)
  fi
  
@@ -53,7 +41,7 @@ diff -ru libquicktime-0.9.10-orig/configure.ac libquicktime-0.9.10/configure.ac
  dnl
  dnl Check for Alsa
  dnl
-@@ -273,8 +289,15 @@
+@@ -273,8 +285,15 @@
  
  AH_TEMPLATE([HAVE_ALSA], [Do we have Alsa?])
  
@@ -71,7 +59,7 @@ diff -ru libquicktime-0.9.10-orig/configure.ac libquicktime-0.9.10/configure.ac
  AM_CONDITIONAL(HAVE_ALSA, test x$have_alsa = xtrue)
  
  if test x$have_alsa = xtrue; then
-@@ -298,7 +321,12 @@
+@@ -298,7 +317,12 @@
  dnl This is neccesary for the utils/gtk subdirectory
  dnl
  GTK_REQUIRED="2.4.0"
@@ -85,7 +73,7 @@ diff -ru libquicktime-0.9.10-orig/configure.ac libquicktime-0.9.10/configure.ac
  AM_CONDITIONAL(HAVE_GTK, test x$have_gtk = xtrue)
  AC_SUBST(GTK_REQUIRED)
  
-@@ -309,14 +337,20 @@
+@@ -309,14 +333,20 @@
  dnl Check for libdv
  dnl
  
@@ -110,7 +98,7 @@ diff -ru libquicktime-0.9.10-orig/configure.ac libquicktime-0.9.10/configure.ac
  
  AM_CONDITIONAL(HAVE_LIBDV, test x$have_libdv = xtrue)
  
-@@ -324,6 +358,10 @@
+@@ -324,6 +354,10 @@
  dnl Check for libjpeg
  dnl
  
@@ -121,7 +109,7 @@ diff -ru libquicktime-0.9.10-orig/configure.ac libquicktime-0.9.10/configure.ac
  JPEG_REQUIRED="6b"
  AC_CHECK_LIB(jpeg, jpeg_start_compress,
  	    [ JPEG_LIBS="-ljpeg"
-@@ -333,6 +371,7 @@
+@@ -333,6 +367,7 @@
  AC_SUBST(JPEG_LIBS)
  AC_SUBST(JPEG_CFLAGS)
  AC_SUBST(JPEG_REQUIRED)
@@ -129,7 +117,7 @@ diff -ru libquicktime-0.9.10-orig/configure.ac libquicktime-0.9.10/configure.ac
  AM_CONDITIONAL(HAVE_LIBJPEG, test x$have_libjpeg = xtrue)
  
  dnl
-@@ -344,6 +383,10 @@
+@@ -344,6 +379,10 @@
  
  have_libavcodec=false
  
@@ -140,7 +128,7 @@ diff -ru libquicktime-0.9.10-orig/configure.ac libquicktime-0.9.10/configure.ac
  AVCODEC_BUILD="3277056"
  
  dnl PKG_CHECK_MODULES(AVCODEC, avcodec_acl = $AVCODEC_REQUIRED, have_libavcodec="true", have_libavcodec="false")
-@@ -351,6 +394,8 @@
+@@ -351,6 +390,8 @@
  
  AVCODEC_REQUIRED=$AVCODEC_VERSION
  
@@ -149,7 +137,7 @@ diff -ru libquicktime-0.9.10-orig/configure.ac libquicktime-0.9.10/configure.ac
  AM_CONDITIONAL(HAVE_LIBAVCODEC, test x$have_libavcodec = xtrue)
  
  AC_SUBST(AVCODEC_REQUIRED)
-@@ -366,6 +411,10 @@
+@@ -366,6 +407,10 @@
  have_libpng=false
  PNG_REQUIRED="1.0.8"
  
@@ -160,7 +148,7 @@ diff -ru libquicktime-0.9.10-orig/configure.ac libquicktime-0.9.10/configure.ac
  OLD_CFLAGS=$CFLAGS
  OLD_LIBS=$LIBS
  
-@@ -395,6 +444,8 @@
+@@ -395,6 +440,8 @@
  AC_SUBST(PNG_LIBS)
  AC_SUBST(PNG_REQUIRED)
  
@@ -169,7 +157,7 @@ diff -ru libquicktime-0.9.10-orig/configure.ac libquicktime-0.9.10/configure.ac
  AM_CONDITIONAL(HAVE_LIBPNG, test x$have_libpng = xtrue)
  
  dnl
-@@ -407,6 +458,12 @@
+@@ -407,6 +454,12 @@
  
  if test $have_gpl = "true"; then
  
@@ -182,7 +170,7 @@ diff -ru libquicktime-0.9.10-orig/configure.ac libquicktime-0.9.10/configure.ac
  LIBS="$LIBS -lfaac -lm"
  CFLAGS="$CFLAGS"
  
-@@ -448,6 +505,8 @@
+@@ -448,6 +501,8 @@
  AC_SUBST(FAAC_LIBS)
  AC_SUBST(FAAC_REQUIRED)
  
@@ -191,7 +179,7 @@ diff -ru libquicktime-0.9.10-orig/configure.ac libquicktime-0.9.10/configure.ac
  AM_CONDITIONAL(HAVE_FAAC, test x$have_faac = xtrue)
  
  if test x$have_faac = xtrue; then
-@@ -464,6 +523,11 @@
+@@ -464,6 +519,11 @@
  
  if test $have_gpl = "true"; then
  
@@ -203,7 +191,7 @@ diff -ru libquicktime-0.9.10-orig/configure.ac libquicktime-0.9.10/configure.ac
  AC_MSG_CHECKING(for faad2)
  
  OLD_CFLAGS=$CFLAGS
-@@ -505,6 +569,8 @@
+@@ -505,6 +565,8 @@
  
  fi
  
@@ -212,7 +200,7 @@ diff -ru libquicktime-0.9.10-orig/configure.ac libquicktime-0.9.10/configure.ac
  AC_SUBST(FAAD2_CFLAGS)
  AC_SUBST(FAAD2_LIBS)
  AC_SUBST(FAAD2_REQUIRED)
-@@ -524,12 +590,17 @@
+@@ -524,12 +586,17 @@
  if test $have_gpl = "true"; then
  X264_REQUIRED="0.48"
  
