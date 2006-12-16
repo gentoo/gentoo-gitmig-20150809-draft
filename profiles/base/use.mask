@@ -26,6 +26,9 @@ ppcsha1
 n32
 n64
 
+# ppc64 arch specific USE flags
+ibm
+
 # sparc arch specific USE flags
 vis
 
