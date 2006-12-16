@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-2.8.0.ebuild,v 1.2 2006/12/07 20:50:23 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-2.8.0.ebuild,v 1.3 2006/12/16 02:01:18 pylon Exp $
 
 inherit eutils linux-info
 
@@ -8,7 +8,7 @@ DESCRIPTION="IPsec-based VPN Solution for Linux"
 HOMEPAGE="http://www.strongswan.org/"
 SRC_URI="http://download.strongswan.org/${P}.tar.bz2"
 
-LICENSE="GPL-2 RSA-MD2 RSA-MD5 RSA-PKCS11"
+LICENSE="GPL-2 RSA-MD2 RSA-MD5 RSA-PKCS11 DES"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="curl ldap smartcard"
@@ -51,6 +51,9 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/ipsec-path.patch.bz2
 
 	if use curl ; then
 		ebegin "Curl support requested. Enabling curl support"
