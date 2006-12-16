@@ -1,6 +1,12 @@
 # ChangeLog for app-doc/howto-html-single
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html-single/ChangeLog,v 1.14 2005/05/05 03:40:46 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html-single/ChangeLog,v 1.15 2006/12/16 13:42:49 beu Exp $
+
+*howto-html-single-20061216 (16 Dec 2006)
+
+  16 Dec 2006; Elfyn McBratney <beu@gentoo.org> metadata.xml,
+  +howto-html-single-20061216.ebuild:
+  Version bump.
 
 *howto-html-single-20050504 (05 May 2005)
 
