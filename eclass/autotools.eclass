@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.58 2006/12/14 01:11:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.59 2006/12/17 23:30:04 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -220,7 +220,6 @@ autotools_set_versions() {
 # Internal function to run an autotools' tool
 autotools_run_tool() {
 	local STDERR_TARGET="${T}/$$.out"
-	local PATCH_TARGET="${T}/$$.patch"
 	local ris
 
 	echo "***** $1 *****" > ${STDERR_TARGET%/*}/$1-${STDERR_TARGET##*/}
