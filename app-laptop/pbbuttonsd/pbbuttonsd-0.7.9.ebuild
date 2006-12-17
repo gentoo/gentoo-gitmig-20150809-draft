@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.7.9.ebuild,v 1.2 2006/10/03 02:32:04 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.7.9.ebuild,v 1.3 2006/12/17 01:42:46 josejx Exp $
 
-inherit eutils flag-o-matic
+inherit autotools flag-o-matic
 
 DESCRIPTION="Handles power management and special keys on laptops."
 HOMEPAGE="http://pbbuttons.sf.net"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/pbbuttons/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~ppc64"
+KEYWORDS="ppc ~ppc64 ~x86"
 IUSE="acpi debug alsa oss ibam"
 
 DEPEND=">=sys-apps/baselayout-1.8.6.12-r1
@@ -21,8 +21,8 @@ RDEPEND="alsa? ( >=media-libs/alsa-lib-1.0 )
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	autoconf
-	automake
+	epatch "${FILESDIR}/x86-fix.patch"
+	eautoconf
 }
 
 src_compile() {
