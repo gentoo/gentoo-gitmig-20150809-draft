@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6459 2006/12/17 17:04:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6460 2006/12/17 19:24:30 phreak Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ## 
+
+# Christian Heim <phreak@gentoo.org> (17 Dec 2006)
+# masking net-wireless/ipw3945d-1.7.22-r4 for some testing
+=net-wireless/ipw3945d-1.7.22-r4
 
 # George Shapovalov <george@gentoo.org> (16 Dec 2006)
 # masked for removal (an IO tool for an old mp3 player, 
