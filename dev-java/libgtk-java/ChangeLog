@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/libgtk-java
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgtk-java/ChangeLog,v 1.24 2006/10/14 00:11:47 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgtk-java/ChangeLog,v 1.25 2006/12/17 13:35:04 betelgeuse Exp $
+
+*libgtk-java-2.8.7-r1 (17 Dec 2006)
+
+  17 Dec 2006; Petteri Räty <betelgeuse@gentoo.org>
+  +libgtk-java-2.8.7-r1.ebuild:
+  Revision bump for bug #158249.
 
   14 Oct 2006; Joshua Nichols <nichoj@gentoo.org>
   libgtk-java-2.8.3-r1.ebuild:
