@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/euses/euses-2.5.4.ebuild,v 1.2 2006/12/08 20:50:59 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/euses/euses-2.5.4.ebuild,v 1.3 2006/12/17 20:42:10 jer Exp $
 
 inherit toolchain-funcs autotools
 
@@ -14,9 +14,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~x86 ~x86-fbsd"
 IUSE=""
-
-DEPEND="sys-devel/autoconf
-	sys-devel/autoconf-wrapper"
 
 S="${WORKDIR}"
 
