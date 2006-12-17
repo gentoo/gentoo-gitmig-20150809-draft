@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkbcomp/xkbcomp-1.0.2.ebuild,v 1.9 2006/10/10 23:55:19 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkbcomp/xkbcomp-1.0.2.ebuild,v 1.10 2006/12/17 03:45:39 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -23,4 +23,5 @@ src_install() {
 	# (#122214) We should create this directory here, since xkeyboard-config
 	# and any other set of layouts will symlink to it.
 	dodir /var/lib/xkb
+	keepdir /var/lib/xkb
 }
