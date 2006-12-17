@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/mknbi-1.4.4.ebuild,v 1.2 2006/12/09 12:05:10 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/mknbi-1.4.4.ebuild,v 1.3 2006/12/17 11:07:56 masterdriverz Exp $
 
 inherit toolchain-funcs eutils
 
@@ -22,19 +22,18 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/mknbi-1.4.3-nossp.patch
-}
-
-src_compile() {
+	epatch "${FILESDIR}"/${P}-gcc4.patch
 	sed -i -e "s:\/usr\/local:\/usr:"  Makefile
 
 	#apply modifications to CFLAGS to fix for gcc 3.4: bug #64049
 	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
 	then
-		sed -i -e "s:\-mcpu:\-mtune:" Makefile
-		sed -i -e "s:CFLAGS=:CFLAGS= -minline-all-stringops:" Makefile
+		sed -i -e 's:\-mcpu:\-mtune:' Makefile
+		sed -i -e 's:CFLAGS=:CFLAGS= -minline-all-stringops:' Makefile
 	fi
-
-	emake || die "Compile failed"
+	if [ "`gcc-major-version`" = "4" ]; then
+		sed -i -e 's:\-fno-stack-protector-all::' Makefile
+	fi
 }
 
 src_install() {
