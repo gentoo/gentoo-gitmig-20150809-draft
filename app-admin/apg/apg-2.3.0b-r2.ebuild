@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/apg-2.3.0b-r2.ebuild,v 1.5 2006/11/17 17:34:10 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/apg-2.3.0b-r2.ebuild,v 1.6 2006/12/17 18:01:29 voxus Exp $
 
 inherit eutils
 
@@ -13,12 +13,11 @@ SLOT="0"
 KEYWORDS="amd64 hppa ppc ~sparc x86"
 IUSE="cracklib"
 
-DEPEND="virtual/libc
-	cracklib? ( sys-libs/cracklib )"
+DEPEND="cracklib? ( sys-libs/cracklib )"
 
 src_unpack() {
-	unpack ${A}
-	chmod -R +w ${S}
+	unpack "${A}"
+	chmod -R 0700 "${S}"
 	cd ${S}
 	if use cracklib; then
 		epatch ${FILESDIR}/${P}-cracklib.patch
