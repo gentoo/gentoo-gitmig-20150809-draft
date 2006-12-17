@@ -2,4 +2,4 @@
 
 # Arguments to be passed to ipw3945d. See 'ipw3945d --help' for more
 # information.
-ARGS="--timeout=-1"
+ARGS="--timeout=-1 --quiet"
