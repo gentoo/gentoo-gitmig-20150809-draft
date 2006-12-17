@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.34 2006/12/08 12:12:04 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.35 2006/12/17 14:48:33 betelgeuse Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -205,6 +205,17 @@ java-pkg_dojar() {
 }
 
 
+# ------------------------------------------------------------------------------
+# @internal-function depend-java-query
+#
+# Wrapper for the depend-java-query binary to enable passing USE in env.
+# Using env variables keeps this eclass working with java-config versions that
+# do not handle use flags.
+# ------------------------------------------------------------------------------
+
+depend-java-query() {
+	USE="${USE}" $(which depend-java-query) "${@}"
+}
 
 # ------------------------------------------------------------------------------
 # @ebuild-function java-pkg_regjar
