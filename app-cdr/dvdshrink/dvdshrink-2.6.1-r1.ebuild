@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdshrink/dvdshrink-2.6.1-r1.ebuild,v 1.4 2006/10/28 11:38:47 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdshrink/dvdshrink-2.6.1-r1.ebuild,v 1.5 2006/12/17 23:19:17 kugelfang Exp $
 
 inherit eutils
 
@@ -35,7 +35,9 @@ pkg_setup() {
 src_install() {
 
 	dobin ./usr/bin/dvdshrink || die "Install of dvdshrink failed"
-	use X && ( dobin ./usr/bin/xdvdshrink.pl || die "Install of xdvdshrink.pl failed" )
+	if use X ; then
+		dobin ./usr/bin/xdvdshrink.pl || die "Install of xdvdshrink.pl failed"
+	fi
 
 	dobin ./usr/bin/dvdsfunctions || die "Install of dvdsfunctions failed"
 	dobin ./usr/bin/batchrip.sh || die "Install of batchrip.sh failed"

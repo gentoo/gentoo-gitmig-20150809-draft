@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/dvdshrink
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdshrink/ChangeLog,v 1.8 2006/10/28 12:41:45 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdshrink/ChangeLog,v 1.9 2006/12/17 23:19:17 kugelfang Exp $
+
+  17 Dec 2006; Danny van Dyk <kugelfang@gentoo.org>
+  dvdshrink-2.6.1-r1.ebuild, dvdshrink-2.6.1_p8.ebuild:
+  Removed subshelled 'die' found by qualudis.
 
 *dvdshrink-2.6.1_p8 (28 Oct 2006)
 
