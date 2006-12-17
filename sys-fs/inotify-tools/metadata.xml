@@ -8,9 +8,8 @@
 	<description>Primary maintainer</description>
 </maintainer>
 <longdescription>
-notify-tools is a set of command-line programs for Linux providing a simple
+inotify-tools is a set of command-line programs for Linux providing a simple
 interface to inotify. These programs can be used to monitor and act upon
-filesystem events. The programs are written in C and have no dependencies
-other than a Linux kernel supporting inotify.
+filesystem events. Requires a Linux kernel supporting inotify.
 </longdescription>
 </pkgmetadata>
