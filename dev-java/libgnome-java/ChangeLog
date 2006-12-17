@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/libgnome-java
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgnome-java/ChangeLog,v 1.23 2006/12/17 13:28:38 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgnome-java/ChangeLog,v 1.24 2006/12/17 13:31:28 betelgeuse Exp $
+
+  17 Dec 2006; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
+  Removed compnerd from metadata.xml
 
 *libgnome-java-2.12.5-r1 (17 Dec 2006)
 

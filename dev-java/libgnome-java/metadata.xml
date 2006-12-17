@@ -6,10 +6,6 @@
 		<email>andrew@operationaldynamics.com</email>
 		<name>Andrew Cowie</name>
 	</maintainer>
-	<maintainer>
-		<email>compnerd@gentoo.org</email>
-		<name>Saleem Abdulrasool</name>
-	</maintainer>
 	<longdescription>
 		An elegant set of language bindings to allow you to write
 		native GNOME applications in Java. Works with both traditional
