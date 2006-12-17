@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.9-r1.ebuild,v 1.4 2006/12/17 08:08:48 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.9-r1.ebuild,v 1.5 2006/12/17 09:40:42 dev-zero Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib toolchain-funcs versionator
 
@@ -47,7 +47,17 @@ pkg_setup() {
 			eerror "(database directory = ${PG_DIR})."
 			die "Remove your database directory to continue"
 		fi
+		if built_with_use dev-db/postgresql pg-hier ; then
+			eerror "The hier-patch has been dropped and your existing database"
+			eerror "can't be used without it. You have to use pg_dump to export your"
+			eerror "existing database cluster, move ${PG_DIR}/data away and then use"
+			eerror "pg_restore to re-create the database using the new version."
+			eerror "Sorry for the inconvience. Please open a bug if you really need"
+			eerror "the hier-patch."
+			die "Move your database directory to continue."
+		fi
 	fi
+
 	enewgroup postgres 70
 	enewuser postgres 70 /bin/bash /var/lib postgres
 }
