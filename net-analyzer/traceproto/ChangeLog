@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/traceproto
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceproto/ChangeLog,v 1.4 2006/02/17 16:23:58 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceproto/ChangeLog,v 1.5 2006/12/17 16:40:17 cedk Exp $
+
+*traceproto-1.1.2_beta1 (17 Dec 2006)
+
+  17 Dec 2006; Cedric Krier <cedk@gentoo.org>
+  +files/traceproto-1.1.2_beta1.patch, +traceproto-1.1.2_beta1.ebuild:
+  Version bump for bug #141586
 
   17 Feb 2006; Markus Ullmann <jokey@gentoo.org> traceproto-1.1.1.ebuild:
   Removing virtual/libpcap wrt bug #117898
