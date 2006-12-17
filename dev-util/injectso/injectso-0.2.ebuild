@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/injectso/injectso-0.2.ebuild,v 1.8 2004/07/14 23:45:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/injectso/injectso-0.2.ebuild,v 1.9 2006/12/17 22:47:09 masterdriverz Exp $
+
+inherit eutils
 
 DESCRIPTION="Inject shared libraries into running processes under Solaris and Linux"
 HOMEPAGE="http://www.securereality.com.au/"
@@ -11,11 +13,12 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 
-src_compile() {
-	econf || die
-	emake || die
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gcc4.patch"
 }
 
 src_install() {
