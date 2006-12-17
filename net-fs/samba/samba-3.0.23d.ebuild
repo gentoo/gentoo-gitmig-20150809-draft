@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.23d.ebuild,v 1.1 2006/12/17 03:26:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.23d.ebuild,v 1.2 2006/12/17 21:35:20 vapier Exp $
 
 WANT_AUTOCONF="latest"
 inherit eutils autotools versionator
@@ -210,8 +210,13 @@ src_install() {
 
 	newpamd ${CONFDIR}/samba.pam samba
 	use winbind && doins ${CONFDIR}/system-auth-winbind
-	insinto /etc/xinetd.d
-	newins ${CONFDIR}/swat.xinetd swat
+	if use swat ; then
+		insinto /etc/xinetd.d
+		newins ${CONFDIR}/swat.xinetd swat
+	else
+		rm -f "${D}"/usr/sbin/swat
+		rm -f "${D}"/usr/share/man/man8/swat.8
+	fi
 	newinitd ${CONFDIR}/samba-init samba
 	newconfd ${CONFDIR}/samba-conf samba
 	if use ldap ; then
@@ -244,17 +249,17 @@ src_install() {
 
 	if use examples ; then
 		docinto examples
-		cp -pPR ${S2}/examples/* ${D}/usr/share/doc/${PF}/examples
-		chmod -R 755 `find ${D}/usr/share/doc/${PF}/examples -type d`
-		chmod -R 644 `find ${D}/usr/share/doc/${PF}/examples ! -type d`
+		cp -pPR ${S2}/examples/* "${D}"/usr/share/doc/${PF}/examples
+		find "${D}"/usr/share/doc/${PF} -type d -print0 | xargs -0 chmod 755
+		find "${D}"/usr/share/doc/${PF}/examples ! -type d -print0 | xargs -0 chmod 644
 	fi
 
 	if ! use doc ; then
 		if ! use swat ; then
-			rm -rf ${D}/usr/share/doc/${PF}/swat
+			rm -rf "${D}"/usr/share/doc/${PF}/swat
 		else
-			rm -rf ${D}/usr/share/doc/${PF}/swat/help/{guide,howto,devel}
-			rm -rf ${D}/usr/share/doc/${PF}/swat/using_samba
+			rm -rf "${D}"/usr/share/doc/${PF}/swat/help/{guide,howto,devel}
+			rm -rf "${D}"/usr/share/doc/${PF}/swat/using_samba
 		fi
 	fi
 
