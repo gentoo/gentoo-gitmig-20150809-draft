@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgtk-java/libgtk-java-2.8.3-r1.ebuild,v 1.5 2006/10/14 00:11:47 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgtk-java/libgtk-java-2.8.3-r1.ebuild,v 1.6 2006/12/17 13:38:55 betelgeuse Exp $
 
 # Must be before the gnome.org inherit
 GNOME_TARBALL_SUFFIX="gz"
@@ -18,19 +18,20 @@ SLOT="2.8"
 KEYWORDS="amd64 ppc x86"
 IUSE="doc gcj source"
 
-DEPS=">=x11-libs/gtk+-2.8.3
-	  >=dev-java/glib-java-0.2.3
-	  >=dev-java/cairo-java-1.0.2
-	  >=dev-libs/glib-2.6.0
-	  >=x11-libs/cairo-1.0.0-r2
-		dev-util/pkgconfig"
+DEPS="
+	>=x11-libs/gtk+-2.8.3
+	>=dev-java/glib-java-0.2.3
+	>=dev-java/cairo-java-1.0.2
+	>=dev-libs/glib-2.6.0
+	>=x11-libs/cairo-1.0.0-r2
+	dev-util/pkgconfig"
 
 DEPEND=">=virtual/jdk-1.4
 		>=sys-apps/sed-4
 		source? ( app-arch/zip )
 		${DEPS}"
 RDEPEND=">=virtual/jre-1.4
-		 ${DEPS}"
+		${DEPS}"
 
 JARNAME="gtk${SLOT}.jar"
 
