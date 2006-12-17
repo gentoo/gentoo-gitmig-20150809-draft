@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.16.2.ebuild,v 1.4 2006/12/12 16:16:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.16.2.ebuild,v 1.5 2006/12/17 00:53:41 dertobi123 Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ppc ~ppc64 ~sh ~sparc x86"
 IUSE="doc spell python"
 
 RDEPEND=">=gnome-base/gconf-2
