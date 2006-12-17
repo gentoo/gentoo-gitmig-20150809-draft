@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0-r1.ebuild,v 1.1 2006/12/16 22:47:54 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0-r1.ebuild,v 1.2 2006/12/17 13:58:09 betelgeuse Exp $
 
 inherit pax-utils eutils java-vm-2
 
@@ -104,7 +104,7 @@ src_install() {
 	#chmod 644 ${D}/opt/${P}/jre/.systemPrefs/.systemRootModFile
 
 	# install control panel for Gnome/KDE
-	sed -e "s/\(Name=Java\)/\1 Control Panel (${PN}-${SLOT})/" \
+	sed -e "s/\(Name=Java\)/\1 Control Panel for Sun JRE ${SLOT}/" \
 		-e "s#Exec=.*#Exec=/opt/${P}/bin/ControlPanel#" \
 		-e "s#Icon=.*#Icon=/opt/${P}/plugin/desktop/sun_java.png#" \
 		${D}/opt/${P}/plugin/desktop/sun_java.desktop > \
