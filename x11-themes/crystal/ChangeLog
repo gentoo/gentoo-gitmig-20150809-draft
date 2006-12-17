@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/crystal
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.28 2006/07/23 17:12:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.29 2006/12/17 18:05:36 voxus Exp $
+
+*crystal-1.0.2 (17 Dec 2006)
+
+  17 Dec 2006; Konstantin V. Arkhipov <voxus@gentoo.org>
+  +crystal-1.0.2.ebuild:
+  Version bump, closing bug #155648.
 
   23 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> crystal-1.0.1.ebuild:
   Add ~x86-fbsd keyword.
