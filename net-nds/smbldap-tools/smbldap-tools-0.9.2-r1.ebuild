@@ -1,15 +1,18 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/smbldap-tools-0.9.2-r1.ebuild,v 1.6 2006/11/12 03:47:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/smbldap-tools-0.9.2-r1.ebuild,v 1.7 2006/12/17 21:37:39 vapier Exp $
 
 
 inherit eutils
 
 MY_PN=${PN/-*/}
 DESCRIPTION="Idealx samba ldap management tools"
+HOMEPAGE="http://samba.idealx.org/"
 SRC_URI="http://samba.idealx.org/dist/${P}.tgz"
-HOMEPAGE="http://samba.idealx.org"
 
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="doc"
 
 RDEPEND="
@@ -20,18 +23,13 @@ RDEPEND="
 	dev-perl/Digest-SHA1
 	dev-perl/Unicode-MapUTF8
 	"
-
 DEPEND="${DEPEND}
 	>sys-apps/sed-4
 	"
-LICENSE="GPL-2"
-SLOT="0"
-# Waiting for the test of dev-perl/Unicode-MapUTF8
-#KEYWORDS="-* ~amd64 ~arm ~mips ~s390"
-KEYWORDS="~alpha ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
 
 src_unpack() {
-	unpack ${A}; cd ${S}
+	unpack ${A}
+	cd "${S}"
 
 	# conf install path cleanup
 	sed -i "s:/etc/opt/IDEALX/\(smbldap-tools/\):/etc/\1:g" smbldap_tools.pm
@@ -51,7 +49,7 @@ src_install() {
 
 	rm -f ${D}/usr/sbin/*.spec
 	#docs
-	dodoc CONTRIBUTORS COPYING ChangeLog FILES INFRA INSTALL README TODO
+	dodoc CONTRIBUTORS ChangeLog FILES INFRA INSTALL README TODO
 	if use doc; then
 		insinto /usr/share/doc/${PF}/doc;      doins ${S}/doc/*
 		insinto /usr/share/doc/${PF}/doc/html; doins ${S}/doc/html/*
