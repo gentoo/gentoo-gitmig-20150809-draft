@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-2.14.3.ebuild,v 1.1 2006/10/08 04:38:14 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-2.14.3.ebuild,v 1.2 2006/12/17 12:43:39 betelgeuse Exp $
 
 inherit eutils
 
@@ -22,9 +22,9 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 pkg_setup() {
-	einfo "The java-gnome ebuild is a meta package which simply depends on"
-	einfo "the various ebuilds which make up the java-gnome family, to make it easy"
-	einfo "to pull them all in."
-	einfo ""
-	einfo "You can emerge libglade-java USE=-gnome to avoid the GNOME dependencies."
+	elog "The java-gnome ebuild is a meta package which simply depends on"
+	elog "the various ebuilds which make up the java-gnome family, to make it easy"
+	elog "to pull them all in."
+	elog ""
+	elog "You can emerge libglade-java USE=-gnome to avoid the GNOME dependencies."
 }
