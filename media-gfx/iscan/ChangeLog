@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/iscan
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.14 2006/12/17 22:45:20 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.15 2006/12/17 22:47:05 sbriesen Exp $
+
+  17 Dec 2006; Stefan Briesenick <sbriesen@gentoo.org> -iscan-2.1.0.ebuild,
+  -iscan-2.2.0.ebuild:
+  removed old versions.
 
 *iscan-2.4.0 (17 Dec 2006)
 
