@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.132 2006/12/08 01:33:38 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.133 2006/12/17 17:35:27 betelgeuse Exp $
+
+*java-config-2.0.31 (17 Dec 2006)
+
+  17 Dec 2006; Petteri Räty <betelgeuse@gentoo.org>
+  +java-config-2.0.31.ebuild:
+  Version bump. Fixes bug #156228 and bug #154493.
 
   08 Dec 2006; Vlastimil Babka <caster@gentoo.org>
   +files/jdk-defaults-x86-fbsd.conf, java-config-2.0.30.ebuild:
