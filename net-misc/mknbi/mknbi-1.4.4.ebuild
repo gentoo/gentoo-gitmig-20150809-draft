@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/mknbi-1.4.4.ebuild,v 1.3 2006/12/17 11:07:56 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/mknbi-1.4.4.ebuild,v 1.4 2006/12/17 11:11:01 masterdriverz Exp $
 
 inherit toolchain-funcs eutils
 
@@ -23,7 +23,9 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/mknbi-1.4.3-nossp.patch
 	epatch "${FILESDIR}"/${P}-gcc4.patch
+
 	sed -i -e "s:\/usr\/local:\/usr:"  Makefile
+	sed -i -e "s:\-mcpu:\-march:" Makefile
 
 	#apply modifications to CFLAGS to fix for gcc 3.4: bug #64049
 	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
