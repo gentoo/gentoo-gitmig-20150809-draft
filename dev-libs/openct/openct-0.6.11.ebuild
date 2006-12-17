@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.11.ebuild,v 1.1 2006/11/23 22:12:26 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.11.ebuild,v 1.2 2006/12/17 20:08:37 kaiowas Exp $
 
 inherit eutils multilib
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.opensc-project.org/files/openct/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="usb udev"
+IUSE="usb"
 
 RDEPEND="usb? (	>=dev-libs/libusb-0.1.7 >=sys-apps/hotplug-20030805-r1 )"
 
@@ -34,15 +34,13 @@ src_install() {
 		newexe etc/openct_usb openct || die
 	fi
 
-	if use udev ; then
-		sed -i 's|RUN+="/lib/udev/|RUN+="/etc/udev/scripts/|' etc/openct.udev
-		insinto /etc/udev/rules.d/
-		newins etc/openct.udev 70-openct.rules || die
-		exeinto /etc/udev/scripts/
-		newexe etc/openct_pcmcia openct_pcmcia || die
-		newexe etc/openct_serial openct_serial || die
-		newexe etc/openct_usb openct_usb || die
-	fi
+	sed -i 's|RUN+="/lib/udev/|RUN+="/etc/udev/scripts/|' etc/openct.udev
+	insinto /etc/udev/rules.d/
+	newins etc/openct.udev 70-openct.rules || die
+	exeinto /etc/udev/scripts/
+	newexe etc/openct_pcmcia openct_pcmcia || die
+	newexe etc/openct_serial openct_serial || die
+	newexe etc/openct_usb openct_usb || die
 
 	insinto /etc
 	doins etc/openct.conf || die
