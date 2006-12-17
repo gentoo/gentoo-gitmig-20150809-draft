@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.129 2006/11/23 17:17:55 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.130 2006/12/17 17:56:30 voxus Exp $
+
+*bind-9.3.3 (17 Dec 2006)
+*bind-9.2.7 (17 Dec 2006)
+
+  17 Dec 2006; Konstantin V. Arkhipov <voxus@gentoo.org>
+  +files/localhost.zone-r2, +bind-9.2.7.ebuild, +bind-9.3.3.ebuild:
+  Version bumps, wrt security bugs #158217 and #131337. Also closing #153601 and
+  #151839. Support for net-dns/resolvconf-gentoo added.
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> bind-9.2.6.ebuild,
   bind-9.2.6-r3.ebuild, bind-9.2.6-r4.ebuild, bind-9.2.6-r5.ebuild,
