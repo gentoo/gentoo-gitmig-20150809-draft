@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6456 2006/12/17 01:39:44 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6457 2006/12/17 09:08:37 dev-zero Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -500,12 +500,6 @@ app-emulation/uae
 # Robin H. Johnson <robbat2@gentoo.org> (11 Nov 2006)
 # Temporarily block while testing
 >=app-crypt/gnupg-2.0.0
-
-# Tiziano Müller <dev-zero@gentoo.org> (09 Nov 2006)
-# masked pending unresolved bugs #154320, #93316 et.al.
-# plus upstream bugs & unmaintained since 2002,
-# alternatives are: pgpool, pgpool2
-dev-db/dbbalancer
 
 # Kris Kersey <augustus@gentoo.org> (08 Nov 2006)
 # The below BETA adds support for GeForce 8800 GTX and GeForce 8800 GTS GPUs.
