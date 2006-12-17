@@ -1,5 +1,0 @@
-31c31,32
-< 
----
-> install:
-> 	install -g postgres -m 0711 dbbalancerd /usr/bin
