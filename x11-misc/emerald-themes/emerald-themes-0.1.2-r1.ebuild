@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/emerald-themes/emerald-themes-0.1.2-r1.ebuild,v 1.1 2006/12/07 21:30:38 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/emerald-themes/emerald-themes-0.1.2-r1.ebuild,v 1.2 2006/12/17 06:08:02 compnerd Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 WANT_AUTOMAKE=1.9
 
-DEPEND="=x11-wm/emerald-0.1.2"
+DEPEND="=x11-wm/emerald-0.1.2*"
 
 src_compile() {
 	unpack ${A}
