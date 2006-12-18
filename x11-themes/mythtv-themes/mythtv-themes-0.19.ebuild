@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/mythtv-themes-0.19.ebuild,v 1.3 2006/06/08 23:49:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/mythtv-themes-0.19.ebuild,v 1.4 2006/12/18 03:12:53 cardoe Exp $
 
 inherit qt3
 
@@ -20,7 +20,7 @@ S="${WORKDIR}/myththemes-${PV}"
 
 src_compile() {
 	cd ${S}
-	./configure --prefix=/usr || die "configure died"
+	./configure --prefix="${ROOT}"/usr || die "configure died"
 
 	${QTDIR}/bin/qmake QMAKE=${QTDIR}/bin/qmake -o "Makefile" myththemes.pro || die "qmake failed"
 }
