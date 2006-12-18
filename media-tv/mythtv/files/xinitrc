@@ -4,4 +4,4 @@
 /usr/bin/xset s off
 /usr/bin/xset -dpms
 /usr/bin/evilwm &
-exec /usr/bin/mythfrontend
+exec /usr/bin/mythfrontend -l /var/log/mythtv/mythfrontend.log -v important,general
