@@ -1,0 +1,42 @@
+--- ipw2100-1.2.1.orig/ipw2100.c	2006-02-22 05:46:17.000000000 +1100
++++ ipw2100-1.2.1-essid/ipw2100.c	2006-12-12 16:47:54.000000000 +1100
+@@ -7462,6 +7462,12 @@
+ 	return 0;
+ }
+ 
++#if WIRELESS_EXT > 20
++#define IW_ESSID_FIX	0
++#else
++#define IW_ESSID_FIX	1
++#endif
++
+ static int ipw2100_wx_set_essid(struct net_device *dev,
+ 				struct iw_request_info *info,
+ 				union iwreq_data *wrqu, char *extra)
+@@ -7478,7 +7484,7 @@
+ 	}
+ 
+ 	if (wrqu->essid.flags && wrqu->essid.length) {
+-		length = wrqu->essid.length - 1;
++		length = wrqu->essid.length - IW_ESSID_FIX;
+ 		essid = extra;
+ 	}
+ 
+@@ -7528,7 +7534,7 @@
+ 		IPW_DEBUG_WX("Getting essid: '%s'\n",
+ 			     escape_essid(priv->essid, priv->essid_len));
+ 		memcpy(extra, priv->essid, priv->essid_len);
+-		wrqu->essid.length = priv->essid_len;
++		wrqu->essid.length = priv->essid_len + IW_ESSID_FIX;
+ 		wrqu->essid.flags = 1;	/* active */
+ 	} else {
+ 		IPW_DEBUG_WX("Getting essid: ANY\n");
+@@ -7571,7 +7577,7 @@
+ 
+ 	struct ipw2100_priv *priv = ieee80211_priv(dev);
+ 
+-	wrqu->data.length = strlen(priv->nick) + 1;
++	wrqu->data.length = strlen(priv->nick) + IW_ESSID_FIX;
+ 	memcpy(extra, priv->nick, wrqu->data.length);
+ 	wrqu->data.flags = 1;	/* active */
+ 
