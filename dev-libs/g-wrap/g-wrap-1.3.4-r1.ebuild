@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.3.4-r1.ebuild,v 1.6 2006/05/24 15:56:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.3.4-r1.ebuild,v 1.7 2006/12/18 16:13:57 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ DESCRIPTION="A tool for exporting C libraries into Scheme"
 HOMEPAGE="http://www.gnucash.org"
 SRC_URI="http://www.gnucash.org/pub/g-wrap/source/${P}.tar.gz"
 
-SLOT="1.3"
+SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 
