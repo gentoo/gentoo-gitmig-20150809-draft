@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-1.2.1-r2.ebuild,v 1.1 2006/12/18 01:52:46 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-1.2.1-r2.ebuild,v 1.2 2006/12/18 02:12:10 phreak Exp $
 
 inherit eutils linux-mod
 
@@ -41,7 +41,7 @@ pkg_setup() {
 		die "${P} does not support building against kernel 2.4.x"
 	fi
 
-	if [[ ! -f ${ROOT}/lib/modules/${KV_FULL}/net/ieee80211/ieee80211.${KV_OBJ} ]]; then
+	if [[ ! -f "${ROOT}/lib/modules/${KV_FULL}/net/ieee80211/ieee80211.${KV_OBJ}" ]]; then
 		eerror
 		eerror "Looks like you forgot to remerge net-wireless/ieee80211 after"
 		eerror "upgrading your kernel."
@@ -64,6 +64,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-cflags.patch"
 	epatch "${FILESDIR}/${P}-double-parentheses.patch"
 	epatch "${FILESDIR}/${P}-essid.patch"
+	epatch "${FILESDIR}/${P}-config.h.patch"
 
 	use debug && debug="y"
 	sed -i -e "s:^\(CONFIG_IPW2100_DEBUG\)=.*:\1=$debug:" "${S}"/Makefile
@@ -87,7 +88,7 @@ src_install() {
 pkg_postinst() {
 	linux-mod_pkg_postinst
 
-	if [ -f ${ROOT}/lib/modules/${KV_FULL}/net/${PN}.ko ]; then
+	if [ -f "${ROOT}/lib/modules/${KV_FULL}/net/${PN}.ko" ]; then
 		einfo
 		einfo "Modules from an earlier installation detected. You will need to manually"
 		einfo "remove those modules by running the following commands:"
