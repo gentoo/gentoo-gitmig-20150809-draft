@@ -1,0 +1,10 @@
+--- configure.ac.orig	2006-03-08 15:42:30.000000000 +0200
++++ configure.ac	2006-03-08 15:42:47.000000000 +0200
+@@ -95,7 +95,7 @@
+ AM_CONDITIONAL(HAVE_SRFI_35, test "$HAVE_SRFI_35" = yes)
+ 
+ dnl Check for optional libraries
+-PKG_CHECK_MODULES(GLIB, glib, [have_glib=yes], [have_glib=no])
++PKG_CHECK_MODULES(GLIB, glib-2.0, [have_glib=yes], [have_glib=no])
+ AM_CONDITIONAL(HAVE_GLIB, test "$have_glib" = yes)
+ 
