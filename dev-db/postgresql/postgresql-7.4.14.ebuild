@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.14.ebuild,v 1.14 2006/12/18 14:34:40 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.14.ebuild,v 1.15 2006/12/18 22:56:12 dev-zero Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib toolchain-funcs versionator
 
@@ -37,15 +37,39 @@ DEPEND="${RDEPEND}
 PG_DIR="/var/lib/postgresql"
 [[ -z "${PG_MAX_CONNECTIONS}" ]] && PG_MAX_CONNECTIONS="512"
 
+cluster_exists() {
+	[[ -f "${PG_DIR}/data/PG_VERSION" ]] && return 0
+	return 1
+}
+
 pkg_setup() {
-	if [[ -f "${PG_DIR}/data/PG_VERSION" ]] ; then
-		if [[ $(cat "${PG_DIR}/data/PG_VERSION") != $(get_version_component_range 1-2) ]] ; then
-			eerror "PostgreSQL ${PV} cannot upgrade your existing databases, you must"
-			eerror "use pg_dump to export your existing databases to a file, and then"
-			eerror "pg_restore to import them when you have upgraded completely."
-			eerror "You must remove your entire database directory to continue."
-			eerror "(database directory = ${PG_DIR})."
-			die "Remove your database directory to continue"
+	if hasq pg-hier ${USE} ; then
+		ewarn "Warning: pg-hier USE-flag detected:"
+		ewarn "The hier-patch has been dropped for this version and the pg-hier USE-flag is therefore deprecated."
+		ewarn "If you really used the 'hier' patch in your database with the 'CONNECT BY' statement,"
+		ewarn "you should stop now and reconsider. You will be able to reuse your data, but not"
+		ewarn "any VIEWS or QUERIES based on that statement."
+		ewarn "Please disable the pg-hier USE-flag!"
+		ebeep 3
+		if cluster_exists ; then
+			eerror "There is already a database in '${PG_DIR}/data' and you have the pg-hier USE-flag set."
+			eerror "Please read the message above first. If you decide that the warnings there don't"
+			eerror "apply to your situation, dump the database using pg_dump and move the '${PG_DIR}/data'"
+			eerror "away. Then restart the merge. After that create a new database cluster and use pg_restore to"
+			eerror "re-import the previously dumped data."
+			eerror "Moving '${PG_DIR}/data' temporarely away or just disable the 'pg-hier' USE-flag won't work."
+			die "Can't update this database."
+		fi
+	fi
+	if cluster_exists ; then
+		local cluster_version=$(cat "${PG_DIR}/data/PG_VERSION")
+		if [[ ${cluster_version} != $(get_version_component_range 1-2) ]] ; then
+			eerror "There is a database in '${PG_DIR}/data' from PostgreSQL version ${cluster_version}."
+			eerror "PostgreSQL doesn't support upgrades between major versions, you have to use pg_dump"
+			eerror "to dump your existing database. Then move your '${PG_DIR}/data' directory away and"
+			eerror "restart the merge. After that create a new database cluster and use pg_restore to"
+			eerror "re-import the previously dumped data."
+			die "Can't update this database."
 		fi
 	fi
 
