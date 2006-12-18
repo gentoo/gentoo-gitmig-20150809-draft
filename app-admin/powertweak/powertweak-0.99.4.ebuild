@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.99.4.ebuild,v 1.14 2005/01/01 11:18:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.99.4.ebuild,v 1.15 2006/12/18 00:49:40 kugelfang Exp $
 
-inherit libtool
+inherit flag-o-matic libtool
 
 DESCRIPTION="tune your kernel and hardware settings for optimal performance"
 HOMEPAGE="http://powertweak.sourceforge.net/"
@@ -39,8 +39,7 @@ src_compile() {
 
 	use gtk || myconf="--disable-gtktest"
 
-	CFLAGS="${CPPFLAGS} -Wno-error"
-	CPPFLAGS="${CPPFLAGS} -Wno-deprecated"
+	append-flags "-Wno-error"
 
 	econf ${myconf} || die "econf failed"
 	emake || die
