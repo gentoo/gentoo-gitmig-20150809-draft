@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.27.ebuild,v 1.1 2006/12/14 01:41:18 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.27.ebuild,v 1.2 2006/12/18 10:35:41 leonardop Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -41,6 +41,9 @@ src_unpack() {
 			${S}/xstc/ \
 			|| die "Failed to install test tarballs"
 	fi
+
+	# Pass --wildcards option to tar when needed (bug #158386)
+	epatch "${FILESDIR}"/${P}-tar_in_tests.patch
 
 	epunt_cxx
 }
