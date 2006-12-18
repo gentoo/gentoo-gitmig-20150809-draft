@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2430 2006/12/17 20:09:57 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2431 2006/12/18 03:02:59 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -400,7 +400,6 @@ dev-libs/libtomcrypt:libtommath - Use the portable math library
 dev-libs/libtomcrypt:tomsfastmath - Use the optimized math library
 dev-libs/libwbxml:nokia6600 - Add support for Nokia 6600 mobile phone
 dev-libs/log4cxx:smtp - offer SMTP support via libsmtp
-dev-libs/openct:udev - enable udev rules file installation
 dev-libs/openobex:irda - enable IrDA support
 dev-libs/openobex:syslog - enable syslog support
 dev-libs/opensc:openct - build using dev-libs/openct compatibility
@@ -752,7 +751,6 @@ media-gfx/inkscape:effects - enables additional scripts (effects)
 media-gfx/inkscape:inkjar - enables inkjar support
 media-gfx/inkscape:plugin - enables extra plugins
 media-gfx/iscan:gimp - Build a plugin for the GIMP
-media-gfx/iscan:udev - Install as an udev helper instead of a hotplug helper
 media-gfx/k3d:plib - build plib-based import/export library
 media-gfx/maya:bundled-libs - Use the bundled versions of libs rather than system ones (libstdc++, libgcc_s, libqt, and libXm)
 media-gfx/maya:maya-shaderlibrary - Install the maya shader library
