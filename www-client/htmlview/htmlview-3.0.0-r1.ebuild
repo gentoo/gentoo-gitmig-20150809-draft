@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/htmlview/htmlview-3.0.0-r1.ebuild,v 1.4 2006/09/13 22:36:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/htmlview/htmlview-3.0.0-r1.ebuild,v 1.5 2006/12/18 20:40:08 eroyf Exp $
 
 inherit rpm
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://fedora/development/SRPMS/${P}-${RH_EXTRAVERSION}.src.rpm"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ppc x86"
+KEYWORDS="~amd64 ia64 ppc x86"
 
 S=${WORKDIR}
 
