@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.135 2006/12/16 23:40:36 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.136 2006/12/18 14:47:01 gustavoz Exp $
+
+  18 Dec 2006; Gustavo Zacarias <gustavoz@gentoo.org> pygtk-2.10.3.ebuild:
+  Stable on sparc
 
   16 Dec 2006; Tobias Scherbaum <dertobi123@gentoo.org> pygtk-2.10.3.ebuild:
   Stable on ppc wrt bug #156662.
