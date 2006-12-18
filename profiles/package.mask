@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6462 2006/12/18 12:55:39 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6463 2006/12/18 18:34:36 fuzzyray Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1255,10 +1255,6 @@ sys-kernel/openblocks-sources
 # Upstream bug filed:
 # http://sourceforge.net/tracker/index.php?func=detail&aid=1390988&group_id=4286&atid=104286
 =app-crypt/mhash-0.9.3*
-
-# Paul Varner <fuzzyray@gentoo.org> (21 Dec 2005)
-# porthole-0.5.0 being added to the tree for testing.
-=app-portage/porthole-0.5.0*
 
 # Markus Dittrich <markusle@gentoo.org> (21 Dec 2005)
 # mask mupad until fixed by upstream, since the binaries
