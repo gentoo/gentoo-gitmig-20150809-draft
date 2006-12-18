@@ -1,10 +1,10 @@
 # ChangeLog for app-office/rabbit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/rabbit/ChangeLog,v 1.1 2006/12/18 00:08:53 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/rabbit/ChangeLog,v 1.2 2006/12/18 00:10:04 pclouds Exp $
 
 *rabbit-0.5.0 (18 Dec 2006)
 
   18 Dec 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
   +files/50rabbit-mode-gentoo.el, +metadata.xml, +rabbit-0.5.0.ebuild:
-  New ebuild from Atzm Watanabe <sitosito@p.chan.ne.jp>
+  New ebuild from Atzm Watanabe <sitosito@p.chan.ne.jp>, bug #104787
 
