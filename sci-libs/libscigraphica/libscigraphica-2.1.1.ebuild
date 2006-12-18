@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libscigraphica/libscigraphica-2.1.1.ebuild,v 1.1 2006/12/18 07:33:17 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libscigraphica/libscigraphica-2.1.1.ebuild,v 1.2 2006/12/18 07:35:41 dberkholz Exp $
 
 inherit autotools eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://scigraphica.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=x11-libs/gtk+extra-2.1.0
 	>=dev-python/numarray-1.3.1
