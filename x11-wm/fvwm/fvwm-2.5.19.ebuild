@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.19.ebuild,v 1.1 2006/12/18 21:09:25 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.19.ebuild,v 1.2 2006/12/18 22:12:37 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -136,8 +136,9 @@ src_install() {
 	fi
 
 	# fvwm-convert-2.6 is just a stub, contains no code - remove it for now.
-	# fvwm-convert-2.2 has a man page, but the script is no longer distributed.
 	rm -f ${D}/usr/bin/fvwm-convert-2.6 ${D}/usr/share/man/man1/fvwm-convert-2.6.1
+	# XXX: incvs
+	# fvwm-convert-2.2 has a man page, but the script is no longer distributed.
 	rm -f ${D}/usr/share/man/man1/fvwm-convert-2.2.1
 
 	# ive included `exec` to save a few bytes of memory.
