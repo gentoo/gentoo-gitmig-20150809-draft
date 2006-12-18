@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.14.ebuild,v 1.13 2006/12/17 22:04:00 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.14.ebuild,v 1.14 2006/12/18 14:34:40 dev-zero Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib toolchain-funcs versionator
 
@@ -46,15 +46,6 @@ pkg_setup() {
 			eerror "You must remove your entire database directory to continue."
 			eerror "(database directory = ${PG_DIR})."
 			die "Remove your database directory to continue"
-		fi
-		if built_with_use dev-db/postgresql pg-hier ; then
-			eerror "The hier-patch has been dropped and your existing database"
-			eerror "can't be used without it. You have to use pg_dump to export your"
-			eerror "existing database cluster, move ${PG_DIR}/data away and then use"
-			eerror "pg_restore to re-create the database using the new version."
-			eerror "Sorry for the inconvience. Please open a bug if you really need"
-			eerror "the hier-patch."
-			die "Move your database directory to continue."
 		fi
 	fi
 
