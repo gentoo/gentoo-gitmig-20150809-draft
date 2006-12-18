@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6461 2006/12/18 07:37:16 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6462 2006/12/18 12:55:39 jokey Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -988,11 +988,6 @@ games-fps/quake1
 # Gustavo Zacarias <gustavoz@gentoo.org> (15 Jun 2006)
 # Masked because of crash issues bug #131686
 =app-text/wv-1.2.1
-
-# Markus Ullmann <jokey@gentoo.org> (01 Jun 2006)
-# masking older versions due to security bug #134010 and bug #133898
-# commented out, as it breaks the whole tree - carlo
-#<net-nds/openldap-2.3.24
 
 # Stefan Cornelius <dercorny@gentoo.org> (01 Jun 2006)
 # masking because of security bug #127757
