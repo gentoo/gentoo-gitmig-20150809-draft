@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.7.9.ebuild,v 1.3 2006/12/17 01:42:46 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.7.9.ebuild,v 1.4 2006/12/18 06:24:31 josejx Exp $
 
 inherit autotools flag-o-matic
 
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch "${FILESDIR}/x86-fix.patch"
+	epatch "${FILESDIR}/lm-fix.patch"
 	eautoconf
 }
 
