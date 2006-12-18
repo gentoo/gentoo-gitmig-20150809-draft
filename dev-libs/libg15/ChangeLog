@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libg15
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15/ChangeLog,v 1.6 2006/11/13 22:57:38 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15/ChangeLog,v 1.7 2006/12/18 13:45:20 jokey Exp $
+
+*libg15-1.1.1 (18 Dec 2006)
+
+  18 Dec 2006; Markus Ullmann <jokey@gentoo.org> -libg15-1.0.1.ebuild,
+  +libg15-1.1.1.ebuild:
+  Version bump and drop old
 
 *libg15-1.1.0 (13 Nov 2006)
 
