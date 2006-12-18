@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.3-r1.ebuild,v 1.2 2006/12/18 11:39:24 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.3-r1.ebuild,v 1.3 2006/12/18 12:07:26 caster Exp $
 
 inherit java-vm-2 versionator eutils rpm
 
@@ -210,7 +210,7 @@ src_unpack() {
 	cd "${S}"
 
 	# bug #126105
-	epatch "${FILESDIR}/${PN}-jawt-h.patch"
+	epatch "${FILESDIR}/${PN}-jawt.h.patch"
 }
 
 src_compile() { :; }
