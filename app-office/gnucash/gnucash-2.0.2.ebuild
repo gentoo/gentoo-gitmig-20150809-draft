@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.2.ebuild,v 1.2 2006/10/11 20:46:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.2.ebuild,v 1.3 2006/12/18 16:08:20 seemant Exp $
 
 inherit eutils gnome2
 
@@ -29,7 +29,7 @@ RDEPEND=">=dev-libs/glib-2.4.0
 	>=gnome-base/libglade-2.4
 	>=gnome-extra/gtkhtml-3.10.1
 	>=dev-libs/libxml2-2.5.10
-	>=dev-libs/g-wrap-1.3.4
+	=dev-libs/g-wrap-1.3.4*
 	>=gnome-base/gconf-2
 	>=app-text/scrollkeeper-0.3
 	>=x11-libs/goffice-0.0.4
