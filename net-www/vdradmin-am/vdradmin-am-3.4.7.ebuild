@@ -1,10 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/vdradmin-am-3.4.7.ebuild,v 1.2 2006/10/15 12:44:52 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/vdradmin-am-3.4.7.ebuild,v 1.3 2006/12/18 17:11:26 zzam Exp $
 
 inherit eutils
-
-RESTRICT="nostrip"
 
 DESCRIPTION="WWW Admin for the Video Disk Recorder"
 HOMEPAGE="http://andreas.vdr-developer.org/"
