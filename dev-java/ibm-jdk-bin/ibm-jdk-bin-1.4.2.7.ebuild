@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.6-r4.ebuild,v 1.9 2006/12/18 11:39:24 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.7.ebuild,v 1.1 2006/12/18 11:39:24 caster Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit java-vm-2 eutils versionator rpm
@@ -56,7 +56,7 @@ SRC_URI="x86? ( IBMJava2-142-ia32-SDK-${RPM_PV}.i386.rpm )
 
 LICENSE="IBM-J1.4"
 SLOT="1.4"
-KEYWORDS="-* amd64 ppc ppc64 x86"
+KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
 IUSE="X alsa doc javacomm nsplugin"
 
 RDEPEND="
@@ -105,6 +105,14 @@ pkg_nofetch() {
 	einfo "it may have been moved to ${ALT_DOWNLOADPAGE}. Lately that page"
 	einfo "isn't updated, but the files should still available through the"
 	einfo "direct link. If it doesn't work, file a bug."
+}
+
+src_unpack() {
+	rpm_src_unpack
+	cd "${S}"
+
+	# bug #126105
+	epatch "${FILESDIR}/${PN}-jawt-h.patch"
 }
 
 src_compile() { true; }

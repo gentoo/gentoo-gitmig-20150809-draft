@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.3-r1.ebuild,v 1.1 2006/11/22 13:31:57 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.3-r1.ebuild,v 1.2 2006/12/18 11:39:24 caster Exp $
 
 inherit java-vm-2 versionator eutils rpm
 
@@ -24,19 +24,25 @@ if use x86; then
 	JDK_DIST=${X86_JDK_DIST}
 	JAVACOMM_DIST=${X86_JAVACOMM_DIST}
 	S="${WORKDIR}/opt/ibm/java2-i386-50"
+	LINK_ARCH="intel"
 elif use amd64; then
 	JDK_DIST=${AMD64_JDK_DIST}
 	JAVACOMM_DIST=${AMD64_JAVACOMM_DIST}
 	S="${WORKDIR}/opt/ibm/java2-x86_64-50"
+	LINK_ARCH="amd64"
 elif use ppc; then
 	JDK_DIST=${PPC_JDK_DIST}
 	JAVACOMM_DIST=${PPC_JAVACOMM_DIST}
 	S="${WORKDIR}/opt/ibm/java2-ppc-50"
+	LINK_ARCH="ipseries32"
 elif use ppc64; then
 	JDK_DIST=${PPC64_JDK_DIST}
 	JAVACOMM_DIST=${PPC64_JAVACOMM_DIST}
 	S="${WORKDIR}/opt/ibm/java2-ppc64-50"
+	LINK_ARCH="ipseries64"
 fi
+
+DIRECT_DOWNLOAD="https://www14.software.ibm.com/webapp/iwm/web/preLogin.do?source=sdk5&S_PKG=${LINK_ARCH}5sr${SERVICE_RELEASE}&S_TACT=105AGX05&S_CMP=JDK"
 
 SLOT="1.5"
 DESCRIPTION="IBM Java Development Kit ${SLOT}"
@@ -187,13 +193,16 @@ pkg_nofetch() {
 	if use javacomm ; then
 		einfo "${JAVACOMM_DIST}"
 	fi
+
+	einfo "Direct link:"
+	einfo "${DIRECT_DOWNLOAD}"
 	einfo "Place the file(s) in: ${DISTDIR}"
-	einfo "Then run emerge =${VMHANDLE}*"
+	einfo "Then restart emerge: 'emerge --resume'"
 
 	einfo "Note: if SR${SERVICE_RELEASE} is not available at ${DOWNLOADPAGE}"
-	einfo "it may have been moved to ${ALT_DOWNLOADPAGE}"
-	einfo "If it's not even there, you can also try rewriting the link of the"
-	einfo "newer SR# into SR${SERVICE_RELEASE}, while cursing IBM."
+	einfo "it may have been moved to ${ALT_DOWNLOADPAGE}. Lately that page"
+	einfo "isn't updated, but the files should still available through the"
+	einfo "direct link. If it doesn't work, file a bug."
 }
 
 src_unpack() {
@@ -201,7 +210,7 @@ src_unpack() {
 	cd "${S}"
 
 	# bug #126105
-	epatch "${FILESDIR}/${P}-jawt-h.patch"
+	epatch "${FILESDIR}/${PN}-jawt-h.patch"
 }
 
 src_compile() { :; }
