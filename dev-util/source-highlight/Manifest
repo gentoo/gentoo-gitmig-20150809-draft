@@ -1,20 +1,36 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0c2b96c449ce3e15d417f146918666b0 ChangeLog 4074
-MD5 ec136e3bf2efb4bdb6934e287a23cd6a files/digest-source-highlight-1.11-r2 73
-MD5 28242883659cebf7a8b81de6c906067d files/digest-source-highlight-2.1.2 74
-MD5 e548a55cccb87455d6d99cadb49451da files/digest-source-highlight-2.2 72
-MD5 31e175c50dba5eee83d342be007c3871 files/source-highlight-exuberant-ctags.diff 8330
+AUX source-highlight-2.5-exuberant-ctags.diff 12551 RMD160 5ecbbeefb0b0ff2f8668c386878c41e3d044be60 SHA1 0f3e96df80568f3c0578ed5988425067743e2cb2 SHA256 2227ae46e873b68950f717bab0016bca6c22e0dfc916e3e1100fd3250d5ff25e
+MD5 22de441fb54d9c912392b6dba1646e3f files/source-highlight-2.5-exuberant-ctags.diff 12551
+RMD160 5ecbbeefb0b0ff2f8668c386878c41e3d044be60 files/source-highlight-2.5-exuberant-ctags.diff 12551
+SHA256 2227ae46e873b68950f717bab0016bca6c22e0dfc916e3e1100fd3250d5ff25e files/source-highlight-2.5-exuberant-ctags.diff 12551
+AUX source-highlight-2.5.bash-completion 2220 RMD160 a48855f3e44128fc2823be1c6ddf6b8795b03313 SHA1 46eace19e95fd866c60199633764b74dbf462d1c SHA256 9bea75f6aee602a3b65ca0fd567238af8ab29c40a8ccbba48d5fb58104bb635c
+MD5 d7230de2f997046eefa6bf7cf54059d1 files/source-highlight-2.5.bash-completion 2220
+RMD160 a48855f3e44128fc2823be1c6ddf6b8795b03313 files/source-highlight-2.5.bash-completion 2220
+SHA256 9bea75f6aee602a3b65ca0fd567238af8ab29c40a8ccbba48d5fb58104bb635c files/source-highlight-2.5.bash-completion 2220
+AUX source-highlight.bash-completion 1383 RMD160 97e3b43f3f58a3b6d9684df68ed98b89cd79f9a8 SHA1 a862f7b90e7dd1164c25319d31c2697777ccdc1e SHA256 2037b70df2c87fc6b753e4cdb2bd184687e5bdb7b13b0a1ed427da80c83355e2
 MD5 8010d26caf8fbdd5b9c6ab34da1e492b files/source-highlight.bash-completion 1383
-MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
+RMD160 97e3b43f3f58a3b6d9684df68ed98b89cd79f9a8 files/source-highlight.bash-completion 1383
+SHA256 2037b70df2c87fc6b753e4cdb2bd184687e5bdb7b13b0a1ed427da80c83355e2 files/source-highlight.bash-completion 1383
+DIST source-highlight-1.11.tar.gz 722472
+DIST source-highlight-2.5.tar.gz 681021 RMD160 f5dd7747960b0534cfb57744c036842c2643423d SHA1 4ba76ae656098f54904955cd227e53f18be454f7 SHA256 8238d03250a5a940ab3326ac6d93ae43f0359adb33eb5e8b961318840eeea9ff
+EBUILD source-highlight-1.11-r2.ebuild 1015 RMD160 9028eb461dc49f5c29ef5992f3ec8a3d8798ab1e SHA1 a28de938a439d8bfff01898efeb228e0a337b1c9 SHA256 71b1d99646d52d4d0a3200b2e3368915734816f77c927c4e11d8e24ec53b3216
 MD5 a14c15abad083ecd2d10a02282b53e71 source-highlight-1.11-r2.ebuild 1015
-MD5 5cadb4172cf419b459ffc2e2d70fe1ef source-highlight-2.1.2.ebuild 1087
-MD5 03cb02e04596db02374d9aceeedbc4cf source-highlight-2.2.ebuild 1452
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDU7PMEZCkKN40op4RAji6AJ4l4UEVEvzPy45WWHxQQXPFP5h2DgCgjpTl
-Mn2CRsYRIHeyN+vMj9uR+hs=
-=x03x
------END PGP SIGNATURE-----
+RMD160 9028eb461dc49f5c29ef5992f3ec8a3d8798ab1e source-highlight-1.11-r2.ebuild 1015
+SHA256 71b1d99646d52d4d0a3200b2e3368915734816f77c927c4e11d8e24ec53b3216 source-highlight-1.11-r2.ebuild 1015
+EBUILD source-highlight-2.5.ebuild 1234 RMD160 fc0564d4f977be2e87a894ddcdacfe01a3695973 SHA1 d21c695b091539f990425ac540b627b29f287663 SHA256 5521843830bd8a188192ae34255bc292a5192a7e138d5ccd628a18c7d58e7009
+MD5 172062f0e4327b3e77dd5a8ea4064d44 source-highlight-2.5.ebuild 1234
+RMD160 fc0564d4f977be2e87a894ddcdacfe01a3695973 source-highlight-2.5.ebuild 1234
+SHA256 5521843830bd8a188192ae34255bc292a5192a7e138d5ccd628a18c7d58e7009 source-highlight-2.5.ebuild 1234
+MISC ChangeLog 4519 RMD160 8e9f4f15d162bb3e64aff074221e32cabb418474 SHA1 fba86ae85d29a875f36733adb67ad40e4f0b0230 SHA256 2e16a3f10d40bc3d6333ec5783a28951d6f9cb3159851d17f4074f773bd79b23
+MD5 a1a4fb90981f4e1c0ad828d927e6b38f ChangeLog 4519
+RMD160 8e9f4f15d162bb3e64aff074221e32cabb418474 ChangeLog 4519
+SHA256 2e16a3f10d40bc3d6333ec5783a28951d6f9cb3159851d17f4074f773bd79b23 ChangeLog 4519
+MISC metadata.xml 258 RMD160 f41059a7f29a2b5493ad80203a94a9a519bc5dcf SHA1 ebaf62e3133e26efd7eaac694e53d0398c2bc0de SHA256 79e17085ca01237995cedc73430ae1c4bbd3092968cffe18ea41237f7a2c1939
+MD5 85ea14bf3eb159f0771ec096dc151131 metadata.xml 258
+RMD160 f41059a7f29a2b5493ad80203a94a9a519bc5dcf metadata.xml 258
+SHA256 79e17085ca01237995cedc73430ae1c4bbd3092968cffe18ea41237f7a2c1939 metadata.xml 258
+MD5 ec136e3bf2efb4bdb6934e287a23cd6a files/digest-source-highlight-1.11-r2 73
+RMD160 e1e4aab0ee8b8e89c51852d85b2b852394e62775 files/digest-source-highlight-1.11-r2 73
+SHA256 1885dda68f2dfae62afaec96db5b5c814747b2528fe8e53a5e257b33805f7796 files/digest-source-highlight-1.11-r2 73
+MD5 66963391075a9e7282ad5f916942ca5f files/digest-source-highlight-2.5 262
+RMD160 837c969e640a4f13de2c97bd0e4fc5b3636af8d2 files/digest-source-highlight-2.5 262
+SHA256 e969aae9a22e37eedeac6e7b35b92d2ef94fae22c248be629beb1e88d708caca files/digest-source-highlight-2.5 262
