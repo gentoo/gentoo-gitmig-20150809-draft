@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.59 2006/12/17 23:30:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.60 2006/12/18 13:41:12 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -39,6 +39,9 @@ unset _automake_atom _autoconf_atom
 #	AT_M4DIR		  - Additional director(y|ies) aclocal should search
 #	AM_OPTS			  - Additional options to pass to automake during
 #						eautoreconf call.
+#	AT_NOELIBTOOLIZE  - Don't run elibtoolize command if set to 'yes',
+#						useful when elibtoolize needs to be ran with
+#						particular options
 
 # Functions:
 #
