@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.6-r5.ebuild,v 1.7 2006/12/18 12:12:40 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.7.ebuild,v 1.1 2006/12/18 12:12:40 caster Exp $
 
 inherit java-vm-2 eutils versionator rpm
 
@@ -40,7 +40,7 @@ SRC_URI="x86? ( IBMJava2-142-ia32-JRE-${RPM_PV}.i386.rpm )
 
 LICENSE="IBM-J1.4"
 SLOT="1.4"
-KEYWORDS="-* amd64 ppc ppc64 x86"
+KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
 IUSE="X alsa nsplugin"
 
 RDEPEND="
