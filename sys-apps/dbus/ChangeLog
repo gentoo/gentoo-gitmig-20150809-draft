@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.171 2006/12/17 22:05:49 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.172 2006/12/18 00:04:04 kloeri Exp $
+
+  18 Dec 2006; Bryan Østergaard <kloeri@gentoo.org> Manifest:
+  Fix broken digest. Thanks to Caster reporting it in #gentoo-bugs.
 
   17 Dec 2006; Alexander H. Færøy <eroyf@gentoo.org>
   +files/dbus-0.60-decls-ansi-c.patch,
