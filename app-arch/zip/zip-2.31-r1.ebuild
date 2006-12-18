@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-2.31-r1.ebuild,v 1.13 2006/09/29 19:55:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-2.31-r1.ebuild,v 1.14 2006/12/18 21:34:47 eroyf Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.info-zip.org/pub/infozip/src/zip${PV//.}.tar.gz"
 
 LICENSE="Info-ZIP"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc-macos ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc-macos ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="crypt"
 
 DEPEND=""
