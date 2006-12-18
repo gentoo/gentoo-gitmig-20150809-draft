@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.13-r2.ebuild,v 1.1 2006/11/22 08:17:23 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.13-r2.ebuild,v 1.2 2006/12/18 08:34:18 ferdy Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -14,8 +14,7 @@ IUSE="berkdb buffysize cjk crypt debug gdbm gnutls gpgme idn imap mbox nls nntp 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-RDEPEND="nls? ( sys-devel/gettext )
-	>=sys-libs/ncurses-5.2
+RDEPEND=">=sys-libs/ncurses-5.2
 	gdbm?    ( sys-libs/gdbm )
 	!gdbm?   ( berkdb? ( >=sys-libs/db-4 ) )
 	imap?    (
