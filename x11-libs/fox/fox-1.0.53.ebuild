@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.0.53.ebuild,v 1.6 2006/12/18 09:13:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.0.53.ebuild,v 1.7 2006/12/18 16:31:31 mr_bones_ Exp $
 
 inherit toolchain-funcs flag-o-matic fox
 
@@ -38,3 +38,4 @@ src_compile() {
 	fi
 	fox_src_compile
 }
+
