@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.6.4-r1.ebuild,v 1.22 2005/04/07 04:06:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.6.4-r1.ebuild,v 1.23 2006/12/18 19:43:06 grobian Exp $
 
 inherit flag-o-matic eutils libtool
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnu.org/software/guile/"
 SRC_URI="mirror://gnu/guile/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390 ~ppc-macos"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.1
@@ -30,13 +30,6 @@ src_compile() {
 
 	if [ "${ARCH}" = "amd64" ]; then
 		epatch ${FILESDIR}/guile-amd64.patch
-	fi
-
-	if use ppc-macos ; then
-		elibtoolize
-		epatch ${FILESDIR}/guile-macos-posix.patch
-		epatch ${FILESDIR}/guile-macos-relink.patch
-		append-flags -no-cpp-precomp -Dmacosx
 	fi
 
 	if [ "${ARCH}" = "ppc" ]; then
