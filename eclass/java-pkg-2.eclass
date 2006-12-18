@@ -5,7 +5,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-2.eclass,v 1.7 2006/12/18 10:09:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-2.eclass,v 1.8 2006/12/18 10:18:56 betelgeuse Exp $
 
 inherit java-utils-2
 
@@ -62,7 +62,7 @@ java-pkg-2_src_compile() {
 		hasq doc ${IUSE} && antflags="${antflags} $(use_doc ${EANT_DOC_TARGET})"
 		eant ${antflags} -f "${EANT_BUILD_XML}"
 	else
-		vecho "${FUNCNAME}: No build.xml found so nothing to do."
+		echo "${FUNCNAME}: No build.xml found so nothing to do."
 	fi
 }
 
