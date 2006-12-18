@@ -1,0 +1,22 @@
+diff -urpwN smalltalk-2.3.1/libffi/src/x86/sysv.S smalltalk-2.3.1.chg/libffi/src/x86/sysv.S
+--- smalltalk-2.3.1/libffi/src/x86/sysv.S	2006-02-05 14:41:32.000000000 -0400
++++ smalltalk-2.3.1.chg/libffi/src/x86/sysv.S	2006-12-16 05:32:04.000000000 -0400
+@@ -376,3 +376,7 @@ ffi_closure_raw_SYSV:
+ #endif
+ 
+ #endif /* ifndef __x86_64__ */
++
++#ifdef __ELF__
++.section .note.GNU-stack,"",%progbits
++#endif
+diff -urpwN smalltalk-2.3.1/libffi/src/x86/unix64.S smalltalk-2.3.1.chg/libffi/src/x86/unix64.S
+--- smalltalk-2.3.1/libffi/src/x86/unix64.S	2006-02-05 14:41:32.000000000 -0400
++++ smalltalk-2.3.1.chg/libffi/src/x86/unix64.S	2006-12-16 05:32:12.000000000 -0400
+@@ -410,3 +410,7 @@ ffi_closure_unix64:
+ .LEFDE3:
+ 
+ #endif /* __x86_64__ */
++
++#ifdef __ELF__
++.section .note.GNU-stack,"",%progbits
++#endif
