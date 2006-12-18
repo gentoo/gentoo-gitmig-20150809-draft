@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/jacksum
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/ChangeLog,v 1.22 2006/10/05 14:24:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/ChangeLog,v 1.23 2006/12/18 10:07:25 betelgeuse Exp $
+
+  18 Dec 2006; Petteri Räty <betelgeuse@gentoo.org> jacksum-1.7.0.ebuild:
+  Using default src_compile from java-pkg-2.eclass.
 
   05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> jacksum-1.5.1.ebuild,
   jacksum-1.6.0.ebuild, jacksum-1.6.0-r1.ebuild, jacksum-1.7.0.ebuild:

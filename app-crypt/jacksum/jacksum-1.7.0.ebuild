@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/jacksum-1.7.0.ebuild,v 1.2 2006/10/05 14:24:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/jacksum-1.7.0.ebuild,v 1.3 2006/12/18 10:07:25 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -23,10 +23,6 @@ src_unpack() {
 	cd ${S}
 	unzip -qq source/${PN}-src.zip || die "failed to unpack source"
 	rm *.jar
-}
-
-src_compile() {
-	eant jar
 }
 
 src_install() {
