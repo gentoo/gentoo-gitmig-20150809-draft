@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.21 2006/10/28 22:13:35 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.22 2006/12/19 16:50:49 hanno Exp $
+
+*vpnc-0.3.4_pre20061219 (19 Dec 2006)
+
+  19 Dec 2006; Hanno Boeck <hanno@gentoo.org>
+  +vpnc-0.3.4_pre20061219.ebuild:
+  Bump to new snapshot.
 
 *vpnc-0.3.4_pre20061029 (28 Oct 2006)
 
