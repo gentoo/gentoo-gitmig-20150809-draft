@@ -1,24 +1,22 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/flexlm-9.5-r1.ebuild,v 1.1 2005/08/11 08:42:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/flexlm-9.5-r1.ebuild,v 1.2 2006/12/19 23:33:08 kugelfang Exp $
 
 inherit eutils
 
 DESCRIPTION="Macrovision FLEXlm license manager and utils"
 HOMEPAGE="http://www.macrovision.com/services/support/flexlm/lmgrd.shtml"
 SRC_URI="http://www.macrovision.com/services/support/flexlm/enduser.pdf
-	 x86? ( http://dev.gentoo.org/~eradicator/flexlm/lmgrd-x86-${PV}.Z
-	          http://dev.gentoo.org/~eradicator/flexlm/lmutil-x86-${PV}.Z )
-	 amd64? ( http://dev.gentoo.org/~eradicator/flexlm/lmgrd-amd64-${PV}.Z
-	          http://dev.gentoo.org/~eradicator/flexlm/lmutil-amd64-${PV}.Z )"
+	x86? (
+		ftp://ftp.globes.com/flexlm/unix/v${PV}/i86_s8/lmgrd.Z
+		ftp://ftp.globes.com/flexlm/unix/v${PV}/i86_s8/lmutil.Z
+	)
+	amd64? (
+		ftp://ftp.globes.com/flexlm/unix/v${PV}/amd64_s8/lmgrd.Z
+		ftp://ftp.globes.com/flexlm/unix/v${PV}/amd64_s8/lmutil.Z
+	)"
 
-# The ones in eradicator's devspace were originally:
-# ftp://ftp.globes.com/flexlm/unix/v${PV}/i86_s8/lmgrd.Z
-# ftp://ftp.globes.com/flexlm/unix/v${PV}/i86_s8/lmutil.Z
-# ftp://ftp.globes.com/flexlm/unix/v${PV}/amd64_s8/lmgrd.Z
-# ftp://ftp.globes.com/flexlm/unix/v${PV}/amd64_s8/lmutil.Z
-
-LICENSE="Macromedia"
+LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
