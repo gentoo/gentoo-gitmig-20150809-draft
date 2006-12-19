@@ -1,20 +1,23 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.10.ebuild,v 1.2 2006/12/19 00:04:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.10.ebuild,v 1.3 2006/12/19 04:29:12 jer Exp $
 
-GCONF_DEBUG="no"
 inherit eutils gnome2
-
-IUSE="qt-static spell gnome"
-
-OPERALNG="en"
-OPERAVER="9.10-20061214"
-OPERAFTPDIR="910/final/${OPERALNG}"
-OPERASUFF="521"
-
 
 DESCRIPTION="Opera web browser."
 HOMEPAGE="http://www.opera.com"
+
+SLOT="0"
+LICENSE="OPERA-9.0"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+
+IUSE="qt-static spell gnome"
+RESTRICT="strip mirror"
+
+OPERALNG="en"
+OPERASUFF="521"
+OPERAVER="9.10-20061214"
+OPERAFTPDIR="910/final/${OPERALNG}"
 
 OPERA_URI="mirror://opera/linux/${OPERAFTPDIR}/"
 SRC_URI="
@@ -25,7 +28,6 @@ SRC_URI="
 	sparc? ( ${OPERA_URI}sparc/static/${PN}-${OPERAVER}.1-static-qt.sparc-${OPERALNG}.tar.bz2 )
 	ppc? ( ${OPERA_URI}ppc/static/${PN}-${OPERAVER}.1-static-qt.ppc-${OPERALNG}.tar.bz2 )"
 
-S=${WORKDIR}/${A/.tar.bz2/}-${OPERASUFF}
 DEPEND=">=sys-apps/sed-4
 	amd64? ( sys-apps/setarch )"
 
@@ -44,33 +46,31 @@ RDEPEND="|| ( ( x11-libs/libXrandr
 			)
 	>=media-libs/fontconfig-2.1.94-r1
 	amd64? ( qt-static? ( app-emulation/emul-linux-x86-xlibs )
-	         !qt-static? ( app-emulation/emul-linux-x86-qtlibs ) )
+			 !qt-static? ( app-emulation/emul-linux-x86-qtlibs ) )
 	!amd64? ( media-libs/libexif
-	          spell? ( app-text/aspell )
-	          x86? ( !qt-static? ( =x11-libs/qt-3* ) )
+			  spell? ( app-text/aspell )
+			  x86? ( !qt-static? ( =x11-libs/qt-3* ) )
 			  media-libs/jpeg )"
 
-SLOT="0"
-LICENSE="OPERA-9.0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+S=${WORKDIR}/${A/.tar.bz2/}-${OPERASUFF}
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch "${FILESDIR}/${PN}-9.00-install.patch"
 	sed -i -e "s:config_dir=\"/etc\":config_dir=\"${D}/etc/\":g" \
-	       -e "s:/usr/share/applnk:${D}/usr/share/applnk:g" \
-	       -e "s:/usr/share/pixmaps:${D}/usr/share/pixmaps:g" \
-	       -e "s:/usr/share/icons:${D}/usr/share/icons:g" \
-	       -e "s:/etc/X11:${D}/etc/X11:g" \
-	       -e "s:/usr/share/gnome:${D}/usr/share/gnome:g" \
-	       -e "s:/opt/gnome/share:${D}/opt/gnome/share:g" \
-	       -e 's:#\(OPERA_FORCE_JAVA_ENABLED=\):\1:' \
-	       -e 's:#\(export LD_PRELOAD OPERA_FORCE_JAVA_ENABLED\):\1:' \
-		   -e 's:read str_answer:return 0:' \
-		   -e "s:/opt/kde:${D}/usr/kde:" \
-		   -e "s:\(str_localdirplugin=\).*$:\1/opt/opera/lib/opera/plugins:" \
-	       install.sh || die
+		-e "s:/usr/share/applnk:${D}/usr/share/applnk:g" \
+		-e "s:/usr/share/pixmaps:${D}/usr/share/pixmaps:g" \
+		-e "s:/usr/share/icons:${D}/usr/share/icons:g" \
+		-e "s:/etc/X11:${D}/etc/X11:g" \
+		-e "s:/usr/share/gnome:${D}/usr/share/gnome:g" \
+		-e "s:/opt/gnome/share:${D}/opt/gnome/share:g" \
+		-e 's:#\(OPERA_FORCE_JAVA_ENABLED=\):\1:' \
+		-e 's:#\(export LD_PRELOAD OPERA_FORCE_JAVA_ENABLED\):\1:' \
+		-e 's:read str_answer:return 0:' \
+		-e "s:/opt/kde:${D}/usr/kde:" \
+		-e "s:\(str_localdirplugin=\).*$:\1/opt/opera/lib/opera/plugins:" \
+		install.sh || die
 }
 
 src_compile() {
