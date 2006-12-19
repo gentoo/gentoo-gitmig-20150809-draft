@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.13.0_alpha9-r3.ebuild,v 1.1 2006/12/14 12:33:01 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.13.0_alpha9-r3.ebuild,v 1.2 2006/12/19 16:27:02 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -41,8 +41,6 @@ PROVIDE="virtual/baselayout"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	epatch "${FILESDIR}/${P}"-ifconfig.patch
 
 	# Setup unicode defaults for silly unicode users
 	if use unicode ; then
@@ -155,10 +153,6 @@ pkg_postinst() {
 	fi
 
 	if use kernel_linux ; then
-		# Ensure the new volumes init script is in the boot runlevel
-		if [[ ! -e ${ROOT}etc/runlevels/boot/volumes ]] ; then
-			ln -s ../../init.d/volumes "${ROOT}"etc/runlevels/boot
-		fi
 		if use build || use bootstrap ; then
 			# Create base directories
 			if [[ ! -e ${ROOT}/dev/.udev && ! -e ${ROOT}/dev/.devfsd ]] ; then
@@ -180,25 +174,23 @@ pkg_postinst() {
 		cp -p "${ROOT}usr/share/baselayout/${x}" ${ROOT}etc
 	done
 
-	# Reload init to fix unmounting problems of / on next reboot.
-	# This is really needed, as without the new version of init cause init
-	# not to quit properly on reboot, and causes a fsck of / on next reboot.
-	if [[ ${ROOT} == / ]] && ! use build && ! use bootstrap; then
-		# We need to copy svcdir if it's empty
-		if [[ ! -e ${ROOT}lib/rcscripts/init.d/deptree ]] ; then
-			(
-			source "${ROOT}etc/conf.d/rc"
-			svcdir="${svcdir:-/var/lib/init.d}"
-			if [[ -e ${ROOT}${svcdir}/deptree ]] ; then
-				cp -RPp "${ROOT}${svcdir}"/* ${ROOT}lib/rcscripts/init.d
-			fi
-			)
+	# We need to copy svcdir if upgrading
+	if has_version "<sys-apps/${PN}-1.13.0_alpha" ; then
+		(
+		source "${ROOT}etc/conf.d/rc"
+		svcdir="${svcdir:-/var/lib/init.d}"
+		einfo "Moving state from ${ROOT}${svcdir} to ${ROOT}lib/rcscripts/init.d"
+		cp -RPp "${ROOT}${svcdir}"/* "${ROOT}"lib/rcscripts/init.d
+		)
+		# Install our new init script and mark it started
+		if use kernel_linux ; then
+			ln -snf ../../init.d/volumes "${ROOT}"etc/runlevels/boot
+			ln -snf /etc/init.d/volumes "${ROOT}"lib/rcscripts/init.d/started
 		fi
+	fi
 
-		# Regenerate init.d dependency tree
+	if [[ ${ROOT} == / ]] && ! use build && ! use bootstrap; then
 		/sbin/depscan.sh --update >/dev/null
-	else
-		rm -f "${ROOT}"/etc/modules.conf
 	fi
 
 	# This is also written in src_install (so it's in CONTENTS), but
@@ -274,13 +266,22 @@ pkg_postinst() {
 	einfo "${lo}. So if you need to restart a net script that is listed in the"
 	einfo "runlevel you are in and not restart anything that needs it then you"
 	einfo "will need to use the --nodeps command line option."
+}
 
-	echo
-	ewarn "baselayout-1.13 and higher now force \$svcdir to be mounted ramdisk."
-	ewarn "If you downgrade to a lower version you'll need to copy the directory"
-	ewarn "  /$(get_libdir)/rcscripts/init.d"
-	ewarn "to \$svcdir as defined in /etc/conf.d/rc"
-	ewarn "  /var/lib/init.d (by default)"
-	ewarn "You should also erase /$(get_libdir)/rcscripts/init.d so that when you upgrade"
-	ewarn "again your current state is automatically copied across."
+# Handle our downgraders
+# We should remove this when <1.13 has been removed from the tree
+pkg_postrm() {
+	# Remove dir if downgrading
+	if has_version "<sys-apps/${PN}-1.13.0_alpha" ; then
+		(
+		source "${ROOT}etc/conf.d/rc"
+		svcdir="${svcdir:-/var/lib/init.d}"
+		einfo "Moving state from ${ROOT}lib/rcscripts/init.d to ${ROOT}${svcdir}"
+		mkdir -p "${ROOT}${svcdir}"
+		cp -RPp "${ROOT}lib/rcscripts/init.d"/* "${ROOT}${svcdir}"
+		umount "${ROOT}lib/rcscripts/init.d" 2>/dev/null
+		rm -rf "${ROOT}lib/rcscripts/init.d"
+		)
+		ewarn "You will need to re-emerge ${PN} to restore ${ROOT}etc/init.d/net.lo"
+	fi
 }
