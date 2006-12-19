@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/cowloop-3.0.ebuild,v 1.1 2006/12/16 21:43:50 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/cowloop-3.0.ebuild,v 1.2 2006/12/19 06:48:15 dragonheart Exp $
 
 inherit linux-mod toolchain-funcs
 
@@ -30,10 +30,16 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-cflags.patch
+	epatch ${FILESDIR}/${P}-config_h.patch
+}
+
 src_compile() {
-	linux-mod_src_compile
 	touch .gpl_license_accepted
-	CC="$(tc-getCC) ${CFLAGS}" emake utils || die "make failed"
+	linux-mod_src_compile
+	CC="$(tc-getCC)" emake utils || die "make failed"
 }
 
 src_install() {
