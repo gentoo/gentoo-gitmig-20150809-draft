@@ -1,12 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.10.ebuild,v 1.1 2006/12/18 22:45:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.10.ebuild,v 1.2 2006/12/19 00:04:02 jer Exp $
 
 GCONF_DEBUG="no"
 inherit eutils gnome2
 
 IUSE="qt-static spell gnome"
-RESTRICT="nomirror"
 
 OPERALNG="en"
 OPERAVER="9.10-20061214"
@@ -17,7 +16,7 @@ OPERASUFF="521"
 DESCRIPTION="Opera web browser."
 HOMEPAGE="http://www.opera.com"
 
-OPERA_URI="ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/"
+OPERA_URI="mirror://opera/linux/${OPERAFTPDIR}/"
 SRC_URI="
 	x86? ( qt-static? ( ${OPERA_URI}i386/static/${PN}-${OPERAVER}.1-static-qt.i386-${OPERALNG}.tar.bz2 ) )
 	x86? ( !qt-static? ( ${OPERA_URI}i386/shared/${PN}-${OPERAVER}.6-shared-qt.i386-${OPERALNG}.tar.bz2 ) )
