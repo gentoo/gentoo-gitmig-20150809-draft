@@ -8,7 +8,7 @@ Define your virtual host like this:
 	RewriteRule ^/?$ /cgi-bin/dspam.cgi [redirect,last]
 	
 	SuexecUserGroup dspam dspam
-	ScriptAlias /cgi-bin/ ${VHOST_CGIBINDIR}
+	ScriptAlias /cgi-bin/ ${VHOST_CGIBINDIR}/
 
 	<Directory "${VHOST_CGIBINDIR}">
 		Options FollowSymLinks ExecCGI
@@ -16,7 +16,7 @@ Define your virtual host like this:
 
 		AllowOverride None
 		Order deny,allow
-		Deny from all
+		Allow from all
 
 		AuthType basic
 		AuthName "DSPAM Control Center"
