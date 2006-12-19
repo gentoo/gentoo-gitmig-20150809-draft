@@ -1,3 +1,4 @@
+move x11-misc/emerald-themes x11-themes/emerald-themes
 slotmove x11-plugins/gkrellmms 2 0
 move net-misc/yate net-voip/yate
 move media-video/stan app-crypt/stan
