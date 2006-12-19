@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-7.3.ebuild,v 1.3 2006/12/19 00:35:29 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-7.3.ebuild,v 1.4 2006/12/19 21:41:35 drizzt Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.cs.wisc.edu/~larus/SPIM/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc-macos ~sparc x86"
+KEYWORDS="~amd64 ppc ~ppc-macos ~sparc x86"
 IUSE="X"
 
 RDEPEND="X? ( || ( ( x11-libs/libXaw x11-libs/libXp ) virtual/x11 ) )"
