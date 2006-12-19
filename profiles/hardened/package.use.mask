@@ -1,1 +1,16 @@
-sys-devel/gcc -hardened
+# Note that this requires portage-2.1.1+ so if you need this functionality,
+# make sure your package forces a new-enough portage.
+
+#sys-devel/gcc -hardened
+#
+# vapier added this, but it's too much.  It prevents doing things like:
+#
+#   USE=-hardened emerge --oneshot sys-devel/gcc
+#
+# which we need to be able to do in order to migrate from default-linux
+# to hardened.  USE=hardened is default on all the hardened arch profiles.
+# Note; we don't inherit from default-linux so we don't need to undo stuff
+# that is done there.
+#
+# Kevin F. Quinn <kevquinn@gentoo.org> 19 December 2005
+
