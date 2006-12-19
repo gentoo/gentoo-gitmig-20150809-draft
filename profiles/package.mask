@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6466 2006/12/19 02:40:08 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6467 2006/12/19 03:45:42 gothgirl Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -847,10 +847,6 @@ app-admin/eselect-compiler
 # Bug #132821
 mail-filter/libspf
 
-# Luis Medinas <metalgod@gentoo.org> (08 Aug 2006)
-# Mask gaim-libnotify because it only works with gaim-2.0.0
-x11-plugins/gaim-libnotify
-
 # Tim Yamin <plasmaroo@gentoo.org> (07 Aug 2006)
 # Security mask
 # Bug #138617
@@ -1266,15 +1262,6 @@ sci-mathematics/mupad
 # Doesn't work reliably with new PDO 1.0.X and is
 # in need of new upstream maintainers
 dev-php5/pecl-pdo-firebird
-
-# Kathryn Kulick <gothgirl@gentoo.org> (20 Dec 2005)
-# Gaim 2.0.0 beta1 plugins.
->=x11-plugins/gaim-encryption-3.0_beta1
->=x11-plugins/guifications-2.13_beta1
-
-# Kathryn Kulick <gothgirl@gentoo.org> (19 Dec 2005)
-# Gaim 2.0.0 beta1 added to tree for testing.
->=net-im/gaim-2.0.0_beta1
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (19 Dec 2005)
 # This is the Gentoo Linux Installer.  This is currently masked because it can
