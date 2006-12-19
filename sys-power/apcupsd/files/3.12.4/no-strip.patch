@@ -1,0 +1,63 @@
+let portage handle stripping
+
+--- src/Makefile.in
++++ src/Makefile.in
+@@ -56,9 +56,9 @@
+ install-binary: $(allexe)
+ 	@$(ECHO) "Installing daemons ..."
+ 	@$(SHELL) $(MKINSTALLDIRS) $(DESTDIR)$(sbindir)
+-	@$(INSTALL_PROGRAM) -s -m 700 apcupsd@EXEEXT@ \
++	@$(INSTALL_PROGRAM) -m 700 apcupsd@EXEEXT@ \
+ 		$(DESTDIR)$(sbindir)/apcupsd@EXEEXT@
+-	@$(INSTALL_PROGRAM) -s -m 700 apctest@EXEEXT@ \
++	@$(INSTALL_PROGRAM) -m 700 apctest@EXEEXT@ \
+ 		$(DESTDIR)$(sbindir)/apctest@EXEEXT@
+ 	@$(MAKE) DESTDIR=$(DESTDIR) install-@APCACCESS@
+ 	@$(MAKE) DESTDIR=$(DESTDIR) install-@SMTP@
+@@ -66,15 +66,15 @@
+ 	@$(MAKE) DESTDIR=$(DESTDIR) install-@CGI@
+ 
+ install-apcaccess:
+-	@$(INSTALL_PROGRAM) -s -m 755 apcaccess@EXEEXT@ \
++	@$(INSTALL_PROGRAM) -m 755 apcaccess@EXEEXT@ \
+ 		$(DESTDIR)$(sbindir)/apcaccess@EXEEXT@
+ 
+ install-smtp:
+-	@$(INSTALL_PROGRAM) -s -m 755 smtp@EXEEXT@ \
++	@$(INSTALL_PROGRAM) -m 755 smtp@EXEEXT@ \
+ 		$(DESTDIR)$(sbindir)/smtp@EXEEXT@
+ 
+ install-powerflute:
+-	@$(INSTALL_PROGRAM) -s -m 755 powerflute@EXEEXT@ \
++	@$(INSTALL_PROGRAM) -m 755 powerflute@EXEEXT@ \
+ 		$(DESTDIR)$(sbindir)/powerflute@EXEEXT@
+ install-cgi:
+ 	(cd cgi/; $(MAKE) DESTDIR=$(DESTDIR) install)
+--- src/win32/Makefile.in
++++ src/win32/Makefile.in
+@@ -63,9 +63,9 @@
+ 
+ install:
+ 	@echo "Installing executables ..."
+-	@$(INSTALL_PROGRAM) -s -m 755 popup.exe $(sbindir)/popup.exe
+-	@$(INSTALL_PROGRAM) -s -m 755 shutdown.exe $(sbindir)/shutdown.exe
+-	@$(INSTALL_PROGRAM) -s -m 755 email.exe $(sbindir)/email.exe
++	@$(INSTALL_PROGRAM) -m 755 popup.exe $(sbindir)/popup.exe
++	@$(INSTALL_PROGRAM) -m 755 shutdown.exe $(sbindir)/shutdown.exe
++	@$(INSTALL_PROGRAM) -m 755 email.exe $(sbindir)/email.exe
+ 
+ # Make a Win32 binary release 
+ binary-release:
+--- src/cgi/Makefile.in
++++ src/cgi/Makefile.in
+@@ -54,8 +54,8 @@
+ 
+ install: all-targets
+ 	@for p in $(allexe) ; do \
+-	    echo $(INSTALL_PROGRAM) -s $$p $(DESTDIR)$(cgibin); \
+-	    $(INSTALL_PROGRAM) -s $$p $(DESTDIR)$(cgibin); \
++	    echo $(INSTALL_PROGRAM) $$p $(DESTDIR)$(cgibin); \
++	    $(INSTALL_PROGRAM) $$p $(DESTDIR)$(cgibin); \
+ 	done
+ 	# don't overwrite any existing config file
+ 	@if test ! -f $(DESTDIR)$(sysconfdir)/apcupsd.css; then \

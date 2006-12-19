@@ -1,5 +1,5 @@
---- apcupsd.in	2002-09-14 14:03:18.000000000 +0200
-+++ apcupsd.in.new	2003-11-06 16:34:28.000000000 +0100
+--- platforms/gentoo/apcupsd.in
++++ platforms/gentoo/apcupsd.in
 @@ -6,6 +6,12 @@
  APCPID=@PIDDIR@/apcupsd.pid
  APCUPSD=@sbindir@/apcupsd

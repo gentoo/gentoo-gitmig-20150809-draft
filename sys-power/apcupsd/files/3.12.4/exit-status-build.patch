@@ -1,0 +1,15 @@
+if a subdir fails, we need to abort
+
+--- autoconf/targets.mak
++++ autoconf/targets.mak
+@@ -20,9 +20,7 @@
+ 	    for file in . ${subdirs}; \
+ 	    do \
+ 		(cd $$file && if test "$$file" != "."; then $(MAKE) DESTDIR=$(DESTDIR) all; fi); \
+-		  if test "$$?" != "0"; then \
+-		     break; \
+-		  fi; \
++		  test "$$?" != "0" && exit 1 ; \
+ 	    done; \
+ 	fi
+ 

@@ -1,7 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.12.4.ebuild,v 1.3 2006/10/22 19:49:01 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.12.4.ebuild,v 1.4 2006/12/19 22:19:33 vapier Exp $
 
+WEBAPP_MANUAL_SLOT="yes"
 inherit eutils webapp
 
 DESCRIPTION="APC UPS daemon with integrated tcp/ip remote shutdown"
@@ -9,13 +10,11 @@ HOMEPAGE="http://www.apcupsd.org/"
 SRC_URI="mirror://sourceforge/apcupsd/${P}.tar.gz"
 
 LICENSE="GPL-2"
-WEBAPP_MANUAL_SLOT="yes"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="doc snmp usb cgi threads ncurses nls"
 
-DEPEND="doc? ( virtual/tetex
-		dev-tex/latex2html )
+DEPEND="doc? ( virtual/tetex dev-tex/latex2html )
 	cgi? ( >=media-libs/gd-1.8.4 )
 	ncurses? ( sys-libs/ncurses )
 	nls? ( sys-devel/gettext )
@@ -29,15 +28,11 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/platforms/gentoo
-	epatch ${FILESDIR}/${PV}/apcupsd.in.patch
-
-	cd ${S}/platforms
-	epatch ${FILESDIR}/${PV}/etc.patch
-
-	# Avoid usage of install -s, leave to portage stripping binaries
-	sed -i -e 's:(INSTALL_PROGRAM) -s:(INSTALL_PROGRAM):g' \
-		${S}/src/Makefile.in ${S}/src/cgi/Makefile.in
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}/apcupsd.in.patch
+	epatch "${FILESDIR}"/${PV}/etc.patch
+	epatch "${FILESDIR}"/${PV}/exit-status-build.patch
+	epatch "${FILESDIR}"/${PV}/no-strip.patch
 }
 
 src_compile() {
@@ -80,7 +75,7 @@ src_compile() {
 src_install() {
 	use cgi && webapp_src_preinst
 
-	make DESTDIR=${D} install || die "installed failed"
+	emake DESTDIR="${D}" install || die "installed failed"
 	rm -f "${D}"/etc/init.d/halt
 
 	insinto /etc/apcupsd
