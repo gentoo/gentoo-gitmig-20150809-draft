@@ -1,0 +1,26 @@
+Index: ipw2100-1.2.1/Makefile
+===================================================================
+--- ipw2100-1.2.1.orig/Makefile
++++ ipw2100-1.2.1/Makefile
+@@ -143,9 +143,6 @@ ifdef ($(KSRC_OUTPUT)/.tmp_versions)
+ 	-cp $(KSRC_OUTPUT)/.tmp_versions/*.mod $(MODVERDIR)
+ endif
+ ifeq ($(KSRC),$(KSRC_OUTPUT)) # We're not outputting elsewhere
+-ifdef ($(KSRC)/.tmp_versions)
+-	-cp $(KSRC)/.tmp_versions/*.mod $(MODVERDIR)
+-endif
+ 	$(MAKE) -C $(KSRC) M=$(PWD) MODVERDIR=$(MODVERDIR) modules
+ else # We've got a kernel with seperate output, copy the config, and use O=
+ 	mkdir -p $(TMP)
+Index: ipw2100-1.2.1/ipw2100.c
+===================================================================
+--- ipw2100-1.2.1.orig/ipw2100.c
++++ ipw2100-1.2.1/ipw2100.c
+@@ -134,7 +134,6 @@ that only one external action is invoked
+ */
+ 
+ #include <linux/compiler.h>
+-#include <linux/config.h>
+ #include <linux/errno.h>
+ #include <linux/if_arp.h>
+ #include <linux/in6.h>
