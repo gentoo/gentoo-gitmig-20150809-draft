@@ -13,9 +13,11 @@ done
 
 DSPAM_HOMEDIR="$(grep ^dspam /etc/passwd|awk -F : '{print $6}')"
 [[ ! -d "${DSPAM_HOMEDIR}" ]] && exit 2
-if [ ! -f ${DSPAM_HOMEDIR}/*.data ]
+DSPAM_DATA_FILES=( "${DSPAM_HOMEDIR}"/*.data )
+if [ ! -f "${DSPAM_DATA_FILES[0]}" ]
 then
-	if [ -f /etc/mail/dspam/*.data ]
+	DSPAM_DATA_FILES=( /etc/mail/dspam/*.data )
+	if [ -f "${DSPAM_DATA_FILES[0]}" ]
 	then
 		DSPAM_HOMEDIR="/etc/mail/dspam"
 	fi
