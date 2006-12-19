@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.7-r4.ebuild,v 1.2 2006/12/16 19:45:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.7-r4.ebuild,v 1.3 2006/12/19 13:38:26 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -73,33 +73,6 @@ src_compile() {
 		LD="$(tc-getCC) ${LDFLAGS}" \
 		CFLAGS="${CFLAGS}" \
 		LIBDIR="${libdir}" || die
-}
-
-# ${PATH} should include where to get MAKEDEV when calling this
-# function
-create_dev_nodes() {
-	case $(tc-arch) in
-		# amd64 must use generic-i386 because amd64/x86_64 does not have
-		# a generic option at this time, and the default 'generic' ends
-		# up erroring out, because MAKEDEV internally doesn't know what
-		# to use
-		arm*)    suffix=-arm ;;
-		alpha)   suffix=-alpha ;;
-		amd64)   suffix=-i386 ;;
-		hppa)    suffix=-hppa ;;
-		ia64)    suffix=-ia64 ;;
-		m68k)    suffix=-m68k ;;
-		mips*)   suffix=-mips ;;
-		ppc*)    suffix=-powerpc ;;
-		s390*)   suffix=-s390 ;;
-		sh*)     suffix=-sh ;;
-		sparc*)  suffix=-sparc ;;
-		x86)     suffix=-i386 ;;
-	esac
-
-	einfo "Using generic${suffix} to make $(tc-arch) device nodes..."
-	MAKEDEV generic${suffix}
-	MAKEDEV sg scd rtc hde hdf hdg hdh input audio video
 }
 
 # This is a temporary workaround until bug 9849 is completely solved
