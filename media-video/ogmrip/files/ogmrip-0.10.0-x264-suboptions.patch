@@ -1,0 +1,33 @@
+--- libogmrip/ogmrip-backend.c.orig	2006-11-20 13:10:26.000000000 +0100
++++ libogmrip/ogmrip-backend.c	2006-11-20 13:12:30.000000000 +0100
+@@ -48,12 +48,15 @@
+ #define OGMRIP_LAVC_VERY_HIGH_OPTIONS "vcodec=mpeg4:autoaspect:mbd=2:vb_strategy=1:last_pred=3:mv0:preme=2:qns=2"
+ #define OGMRIP_LAVC_HIGH_OPTIONS      "vcodec=mpeg4:autoaspect:mbd=2:vb_strategy=1:last_pred=2:vqcomp=0.6"
+ #define OGMRIP_LAVC_FAST_OPTIONS      "vcodec=mpeg4:autoaspect:mbd=2"
+-/*
+-#define OGMRIP_X264_VERY_HIGH_OPTIONS "subq=6:b_pyramid:weight_b:8x8dct:frameref=5:me=3"
++
++#if MPLAYER_CHECK_VERSION(1,0,1,0)
++#define OGMRIP_X264_VERY_HIGH_OPTIONS "subq=6:b_pyramid:weight_b:8x8dct:frameref=5:me=umh"
+ #define OGMRIP_X264_HIGH_OPTIONS      "subq=5:b_pyramid:weight_b:8x8dct:frameref=2"
+-*/
++#else
+ #define OGMRIP_X264_VERY_HIGH_OPTIONS "subq=6:b_pyramid:weight_b:frameref=5:me=3"
+ #define OGMRIP_X264_HIGH_OPTIONS      "subq=5:b_pyramid:weight_b:frameref=2"
++#endif
++
+ #define OGMRIP_X264_FAST_OPTIONS      "subq=4:b_pyramid:weight_b"
+ 
+ #if MPLAYER_CHECK_VERSION(1,0,0,8)
+@@ -1141,7 +1144,11 @@
+ #endif /* MPLAYER_CHECK_VERSION(1,0,0,8) */
+ 
+   if (ogmrip_video_get_4mv (video))
++#if MPLAYER_CHECK_VERSION(1,0,0,8)
++    g_string_append (options, ":partitions=p4x4");
++#else
+     g_string_append (options, ":4x4mv");
++#endif
+   if (ogmrip_video_get_trellis (video))
+     g_string_append (options, ":trellis=1");
+   else

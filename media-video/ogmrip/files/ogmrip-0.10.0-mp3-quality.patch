@@ -1,0 +1,13 @@
+=== libogmrip/ogmrip-backend.c
+==================================================================
+--- libogmrip/ogmrip-backend.c	(revision 800)
++++ libogmrip/ogmrip-backend.c	(local)
+@@ -694,7 +694,7 @@
+   g_ptr_array_add (argv, g_strdup_printf ("%d", ogmrip_audio_get_sample_rate (audio) / 1000));
+   g_ptr_array_add (argv, g_strdup ("--preset"));
+   g_ptr_array_add (argv, g_strdup (presets[quality][0]));
+-  if (presets[quality][2])
++  if (presets[quality][1])
+     g_ptr_array_add (argv, g_strdup (presets[quality][1]));
+   g_ptr_array_add (argv, g_strdup (input));
+   g_ptr_array_add (argv, g_strdup (output));
