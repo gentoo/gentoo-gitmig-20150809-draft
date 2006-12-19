@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/galago-sharp/galago-sharp-0.5.0.ebuild,v 1.3 2006/10/16 04:59:13 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/galago-sharp/galago-sharp-0.5.0.ebuild,v 1.4 2006/12/19 22:38:57 compnerd Exp $
 
 inherit eutils mono autotools
 
@@ -21,9 +21,11 @@ DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.9"
 
 pkg_setup() {
-	if ! built_with_use 'sys-apps/dbus' mono ; then
-		eerror "Please build dbus with mono support"
-		die "dbus without mono support detected"
+	if [[ -z $(best_version '>=sys-apps/dbus-0.90') ]] ; then
+		if ! built_with_use 'sys-apps/dbus' mono ; then
+			eerror "Please build dbus with mono support"
+			die "dbus without mono support detected"
+		fi
 	fi
 }
 
