@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/d4x
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.42 2006/05/13 21:56:29 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.43 2006/12/19 13:57:51 gustavoz Exp $
+
+  19 Dec 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  -files/d4x-2.4.1-fix-statusbar-crash.patch,
+  -files/d4x-sndserv-bigendian.patch, -d4x-2.4.1-r1.ebuild,
+  d4x-2.5.7.1-r1.ebuild:
+  Cleanup and 2.5.7.1-r1 sparc stable directly to get rid of broken oldie
 
   13 May 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   files/d4x-2.5.7.1-speed.patch:
