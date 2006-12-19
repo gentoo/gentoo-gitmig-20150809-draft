@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/chpax-0.7.ebuild,v 1.11 2005/04/22 20:01:55 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/chpax-0.7.ebuild,v 1.12 2006/12/19 22:38:19 solar Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
 IUSE=""
 
-RDEPEND="virtual/libc"
+RDEPEND=""
 DEPEND="${RDEPEND}"
 
 src_unpack() {
@@ -35,8 +35,13 @@ src_install() {
 	dodoc Changelog README
 	doman chpax.1
 
-	insinto /etc/conf.d
-	newins ${FILESDIR}/pax-conf.d chpax
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/pax-init.d chpax
+	#insinto /etc/conf.d
+	#newins ${FILESDIR}/pax-conf.d chpax
+	#exeinto /etc/init.d
+	#newexe ${FILESDIR}/pax-init.d chpax
+}
+
+pkg_postinst() {
+	ewarn "chpax is now obsolete in favor of sys-apps/paxctl which uses PT_PAX_FLAGS"
+	ewarn "Please use paxctl from now on. Any bugs filed for chpax will be closed as WONTFIX"
 }
