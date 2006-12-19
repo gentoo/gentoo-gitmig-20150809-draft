@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX configure-fix-kdegraphics-openexr.patch 704 RMD160 6b0414d2709b3efe5ca7c7a9c7a41905b19d0be6 SHA1 3ef597020cbd3f264625839b07023ddd72a60adc SHA256 b0a2bfee291d830ad6f936ad112eecd4cc4325d218508a7faa2c10d5cbb105f1
 MD5 d34b4b86b659b21184ada6cc00ec5569 files/configure-fix-kdegraphics-openexr.patch 704
 RMD160 6b0414d2709b3efe5ca7c7a9c7a41905b19d0be6 files/configure-fix-kdegraphics-openexr.patch 704
@@ -12,18 +15,18 @@ EBUILD kdegraphics-kfile-plugins-3.5.2.ebuild 836 RMD160 e74a3c1d3a0d9bc03d67eed
 MD5 40d9a5addabf3b0fbbbfc7f4b15fdf3a kdegraphics-kfile-plugins-3.5.2.ebuild 836
 RMD160 e74a3c1d3a0d9bc03d67eed8bb7e1a390fb467cf kdegraphics-kfile-plugins-3.5.2.ebuild 836
 SHA256 4baaa6fba727fd2434c45147c819a1b2b9bda4b5f38737e6d3245af02732890c kdegraphics-kfile-plugins-3.5.2.ebuild 836
-EBUILD kdegraphics-kfile-plugins-3.5.5-r1.ebuild 899 RMD160 339c274e486bcef3027a84eea80d54c6a42904f0 SHA1 13e5bf72ff7797c748d044105bd181932b27c523 SHA256 d56e2cc8e7afa4786aa1a2b320ed82dfcaadcd93e6682bcdf6c4868adc5f1bab
-MD5 cea7c4cf7844da60d25fa2509cf437f6 kdegraphics-kfile-plugins-3.5.5-r1.ebuild 899
-RMD160 339c274e486bcef3027a84eea80d54c6a42904f0 kdegraphics-kfile-plugins-3.5.5-r1.ebuild 899
-SHA256 d56e2cc8e7afa4786aa1a2b320ed82dfcaadcd93e6682bcdf6c4868adc5f1bab kdegraphics-kfile-plugins-3.5.5-r1.ebuild 899
+EBUILD kdegraphics-kfile-plugins-3.5.5-r1.ebuild 898 RMD160 9f721a3a3e42ba54457e2ee18bec1fcd11836164 SHA1 be1c46d8808751c33d78b79ee1de18de20cf29ac SHA256 4706016b3228dd27ef41612a7349bffd948f6d4d4afeaba1473bff4b71a6b5ec
+MD5 e2982974126854edeca1a19a69bf08d6 kdegraphics-kfile-plugins-3.5.5-r1.ebuild 898
+RMD160 9f721a3a3e42ba54457e2ee18bec1fcd11836164 kdegraphics-kfile-plugins-3.5.5-r1.ebuild 898
+SHA256 4706016b3228dd27ef41612a7349bffd948f6d4d4afeaba1473bff4b71a6b5ec kdegraphics-kfile-plugins-3.5.5-r1.ebuild 898
 EBUILD kdegraphics-kfile-plugins-3.5.5.ebuild 835 RMD160 7770952ad708a571a05dd2747a30588313e16bca SHA1 e515765802bf2985e0f1f28525ec91eacc593651 SHA256 808e9f4a266eb4c8031fed8f53bf750e0b9a27e7920fd3682c2d97443e9a1ac3
 MD5 84d2975028d3ae3c7cfcd08cdf6b4010 kdegraphics-kfile-plugins-3.5.5.ebuild 835
 RMD160 7770952ad708a571a05dd2747a30588313e16bca kdegraphics-kfile-plugins-3.5.5.ebuild 835
 SHA256 808e9f4a266eb4c8031fed8f53bf750e0b9a27e7920fd3682c2d97443e9a1ac3 kdegraphics-kfile-plugins-3.5.5.ebuild 835
-MISC ChangeLog 10222 RMD160 edda14f6ba169e9e8c2ae605a95b6321f267bd32 SHA1 8e7f650b1c9e55e77c3440774b12c088aefb8ddf SHA256 7fe6de8d282e489af955595814ebb3b8bd7f2a38a2c2d74ca60eb0647fc1ab40
-MD5 e0a91442afe53ca2567e7ebedec0ec37 ChangeLog 10222
-RMD160 edda14f6ba169e9e8c2ae605a95b6321f267bd32 ChangeLog 10222
-SHA256 7fe6de8d282e489af955595814ebb3b8bd7f2a38a2c2d74ca60eb0647fc1ab40 ChangeLog 10222
+MISC ChangeLog 10364 RMD160 1dce247a2687cc7ce239fb522f003cf674e80113 SHA1 c1f636e74d71272ddb1a9d49d0f9d3bcd9ac5185 SHA256 7e6352e7e0518e03ad7bb85b1fddee99743cda9857a681a831798fed4c4334e7
+MD5 fb78e7e8485699c8f1f3c76b6b5c23ff ChangeLog 10364
+RMD160 1dce247a2687cc7ce239fb522f003cf674e80113 ChangeLog 10364
+SHA256 7e6352e7e0518e03ad7bb85b1fddee99743cda9857a681a831798fed4c4334e7 ChangeLog 10364
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
@@ -37,3 +40,10 @@ SHA256 5f1d4470a3e6814d9f1f1ccbaaa1dc86001c6d16985f48f21c1063a2b5968686 files/di
 MD5 a3aaa0343f00484f85258058e8ac348c files/digest-kdegraphics-kfile-plugins-3.5.5-r1 259
 RMD160 2a9a22c3f7376170cd8d44cb1979ef76636fb43d files/digest-kdegraphics-kfile-plugins-3.5.5-r1 259
 SHA256 5f1d4470a3e6814d9f1f1ccbaaa1dc86001c6d16985f48f21c1063a2b5968686 files/digest-kdegraphics-kfile-plugins-3.5.5-r1 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.6 (GNU/Linux)
+
+iD8DBQFFh0w1AiZjviIA2XgRAi9GAJ40kqXCTSKyd0SUIwsL4+xRWTd+igCgs6aP
+S/790f5uSmQpcen+RWhS7v8=
+=aaQW
+-----END PGP SIGNATURE-----
