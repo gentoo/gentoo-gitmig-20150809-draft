@@ -9,18 +9,6 @@ AUX dansguardian-2.8.0.6-gentoo.patch 886 RMD160 efe8ca9b09dd5e37eef2bcee16c4979
 MD5 0cf459b33bd205ff0e5d270cf1db72e0 files/dansguardian-2.8.0.6-gentoo.patch 886
 RMD160 efe8ca9b09dd5e37eef2bcee16c49792da6d2b30 files/dansguardian-2.8.0.6-gentoo.patch 886
 SHA256 bd79ef1899467389778c259281190922c86b186b4a87988d34b02ee845b62851 files/dansguardian-2.8.0.6-gentoo.patch 886
-AUX dansguardian-2.9.7.5-ctime.patch 2339 RMD160 3c7e4217fcb47ffd6560d66a6211bd762cff53a5 SHA1 9d0540f9f7e368b4046e3c9cb788a96f20a41ff9 SHA256 bd02098896b7bdd29b4b44e61cb0a8a1b384b3a2328efa46795a53e33999d97a
-MD5 f4e6a6ca7c7e03fd46197b97d2b6c858 files/dansguardian-2.9.7.5-ctime.patch 2339
-RMD160 3c7e4217fcb47ffd6560d66a6211bd762cff53a5 files/dansguardian-2.9.7.5-ctime.patch 2339
-SHA256 bd02098896b7bdd29b4b44e61cb0a8a1b384b3a2328efa46795a53e33999d97a files/dansguardian-2.9.7.5-ctime.patch 2339
-AUX dansguardian-2.9.7.5-lm.patch 550 RMD160 f233f63cf7a9b8a00e806e9f0436c43d5298414f SHA1 4721e771f5c889fb4b1106dfc07813f7c173c72d SHA256 71d261e2b5c9e23ef2362f268a08f7ef5bc3b079b305ce969a44274a0723f11e
-MD5 e473655e61a57a68e034688ff378bfd1 files/dansguardian-2.9.7.5-lm.patch 550
-RMD160 f233f63cf7a9b8a00e806e9f0436c43d5298414f files/dansguardian-2.9.7.5-lm.patch 550
-SHA256 71d261e2b5c9e23ef2362f268a08f7ef5bc3b079b305ce969a44274a0723f11e files/dansguardian-2.9.7.5-lm.patch 550
-AUX dansguardian-2.9.7.5_alpha-gentoo.patch 471 RMD160 e1cd4926aec2565795a1964f8516a3868466f178 SHA1 5b08e4d624d9e7b3d4094928b50d036d27faed84 SHA256 49b4ad2669533c92f34f2cecc9575f7c3f2b8f37fcae53ab3c078f82af41c524
-MD5 464be865da779c1eca85942b785599ba files/dansguardian-2.9.7.5_alpha-gentoo.patch 471
-RMD160 e1cd4926aec2565795a1964f8516a3868466f178 files/dansguardian-2.9.7.5_alpha-gentoo.patch 471
-SHA256 49b4ad2669533c92f34f2cecc9575f7c3f2b8f37fcae53ab3c078f82af41c524 files/dansguardian-2.9.7.5_alpha-gentoo.patch 471
 AUX dansguardian-2.9.8.0-gentoo.patch 471 RMD160 77c1bd7a0ae0b9b96215662b48ee0fcbb2848c07 SHA1 f68d89e528ec413db4b46288fc1e3bcd26bd33ab SHA256 94bdddce1844483b79ce1f028e239b425d57af5084439fa0f13f67afc30d5dc7
 MD5 ce3bd53599878da5c0719ef86e15586b files/dansguardian-2.9.8.0-gentoo.patch 471
 RMD160 77c1bd7a0ae0b9b96215662b48ee0fcbb2848c07 files/dansguardian-2.9.8.0-gentoo.patch 471
@@ -29,6 +17,14 @@ AUX dansguardian-2.9.8.0-uclibc++.patch 3015 RMD160 0f695f13ff620670d1fb8cf8233c
 MD5 12fe1b73b338b8e60ee5abfe35daca42 files/dansguardian-2.9.8.0-uclibc++.patch 3015
 RMD160 0f695f13ff620670d1fb8cf8233c18b50eed06e6 files/dansguardian-2.9.8.0-uclibc++.patch 3015
 SHA256 6892b0564aa06617a8e05466931c69866b6e4ea4a7f21d5ff481c590738051e5 files/dansguardian-2.9.8.0-uclibc++.patch 3015
+AUX dansguardian-2.9.8.1-gentoo.patch 472 RMD160 804343bb4e46affcc54dce496e0c9242d64aeb6a SHA1 d1bb42ad4725300dfa6d5bf6df79f1acf02d3838 SHA256 00b01aaf8b44ee1463abd4c3582eea08fcd8f08a753e1d9dddd1936762a978d3
+MD5 21c6e9803c883673729bfee3d82189fa files/dansguardian-2.9.8.1-gentoo.patch 472
+RMD160 804343bb4e46affcc54dce496e0c9242d64aeb6a files/dansguardian-2.9.8.1-gentoo.patch 472
+SHA256 00b01aaf8b44ee1463abd4c3582eea08fcd8f08a753e1d9dddd1936762a978d3 files/dansguardian-2.9.8.1-gentoo.patch 472
+AUX dansguardian-2.9.8.1-uclibc++.patch 3015 RMD160 aca841503fcad7196d2c8c51baccf3e060cfcff2 SHA1 43db84955e58864757efdae276aabac6609ed569 SHA256 08ec49571a17f577cdcd7164dfb4bf6f30acced8a20bc29b3aee3a6b232969b9
+MD5 57f1ba3c363bdfcc1eef14ff3ca99912 files/dansguardian-2.9.8.1-uclibc++.patch 3015
+RMD160 aca841503fcad7196d2c8c51baccf3e060cfcff2 files/dansguardian-2.9.8.1-uclibc++.patch 3015
+SHA256 08ec49571a17f577cdcd7164dfb4bf6f30acced8a20bc29b3aee3a6b232969b9 files/dansguardian-2.9.8.1-uclibc++.patch 3015
 AUX dansguardian-xnaughty-2.7.6-1.diff 2325 RMD160 9716fa42f87adb3f27e8009d2ff1da46ebdc8fa9 SHA1 ab7ee4f3c7f3a0865cab6913d4ac3eefa07d1989 SHA256 ae438113e94d2292e85dbf9be702b002e3f1b36b853bb7a7573e11786a1db9a7
 MD5 6313b934a33da7e4308812e834494074 files/dansguardian-xnaughty-2.7.6-1.diff 2325
 RMD160 9716fa42f87adb3f27e8009d2ff1da46ebdc8fa9 files/dansguardian-xnaughty-2.7.6-1.diff 2325
@@ -42,24 +38,24 @@ MD5 046d9ee8033553a881d5ee0586bf2a3d files/dansguardian.logrotate 188
 RMD160 c2c433f4209518a83725382f8952141a34d58d25 files/dansguardian.logrotate 188
 SHA256 124775c1a6dd20652e7b7511bb484c654ac63cc0c0a2baf2357d8ce7086867a2 files/dansguardian.logrotate 188
 DIST dansguardian-2.8.0.6.source.tar.gz 212737 RMD160 cf3493b26b4fcd5b366a6fe472e3c6c9e3cfe6d3 SHA1 6d82eed13536a64a2f6711fa221756fa0bfe19f0 SHA256 f4d51b805e979369896906b49a388bf102f56cf0755acc9cb1ec2e4176aac34b
-DIST dansguardian-2.9.7.5.tar.gz 437282 RMD160 9e05a15136a79316c59c957ef8395db426685aa1 SHA1 12c9037f0e7559546150b291a64cb0884bd237f6 SHA256 9ac89b4fd8e303607c3403bd31a39748a713715d15b569eab5ec702933d5da43
 DIST dansguardian-2.9.8.0.tar.gz 444242 RMD160 f47d3048f05126cdbd6cb51b528fc3dbef58524b SHA1 7a011e162ebc3c4233a503018e61ecb5b603e7ec SHA256 dd112f1169b7469f015b15425a879a01d83311d7659ea763e3913e149e5288f4
+DIST dansguardian-2.9.8.1.tar.gz 468288 RMD160 91377e5fa901b10266afbaf5c0e6265d6a9e2182 SHA1 214859b80d0ae8e4560f8d7c6d6a5aff901f1abf SHA256 64fd54e9416b98313c7afa30f82c44d3d6fdb4c67669cf61789299539504bde4
 EBUILD dansguardian-2.8.0.6-r1.ebuild 1308 RMD160 e39a97785ef12e03be4fbc8d1719d64d8e2ff6c8 SHA1 b7b6f037409917d04c9c6de81e5d938c12c29ef9 SHA256 64416167ee7f7197fbf642c71f023347ad78d219d8b5e90cf1ab4a063508a3d6
 MD5 d6d7a39faf1eacef321056bd39afeb5f dansguardian-2.8.0.6-r1.ebuild 1308
 RMD160 e39a97785ef12e03be4fbc8d1719d64d8e2ff6c8 dansguardian-2.8.0.6-r1.ebuild 1308
 SHA256 64416167ee7f7197fbf642c71f023347ad78d219d8b5e90cf1ab4a063508a3d6 dansguardian-2.8.0.6-r1.ebuild 1308
-EBUILD dansguardian-2.9.7.5_alpha.ebuild 3052 RMD160 31124e5066e69c7da54f683762292b7380a74e59 SHA1 16f3bcaaf0fabc12d9e7e7222b04f9657519e1c2 SHA256 6daa2a85b2a2d3454bcb42c0fadb7bd145377bd30e87b03b1f0573e3cb9cf79f
-MD5 93d569794afbf1d8dbfa3830bd19bb6a dansguardian-2.9.7.5_alpha.ebuild 3052
-RMD160 31124e5066e69c7da54f683762292b7380a74e59 dansguardian-2.9.7.5_alpha.ebuild 3052
-SHA256 6daa2a85b2a2d3454bcb42c0fadb7bd145377bd30e87b03b1f0573e3cb9cf79f dansguardian-2.9.7.5_alpha.ebuild 3052
 EBUILD dansguardian-2.9.8.0_beta.ebuild 3014 RMD160 735f5925d5052251a4c37e061ee4920069349ef8 SHA1 6020c0ec1ca29899123846acac1a970d1e0932dd SHA256 258d990e91b0fe8d3e8b3777b9d77c38cfaab7142f352aba5d76115068bcf28b
 MD5 cd7dd77dd91990a0f35e9adb7aeb4a36 dansguardian-2.9.8.0_beta.ebuild 3014
 RMD160 735f5925d5052251a4c37e061ee4920069349ef8 dansguardian-2.9.8.0_beta.ebuild 3014
 SHA256 258d990e91b0fe8d3e8b3777b9d77c38cfaab7142f352aba5d76115068bcf28b dansguardian-2.9.8.0_beta.ebuild 3014
-MISC ChangeLog 8872 RMD160 e15b79bb6e263dfeeef6c1abab5fb568161d5c76 SHA1 03842d78448e05bc082517ece9d8a969215ce84b SHA256 abd365c49c662ee7c42450574e31c11fbdec4b9a1c792464c979ae010f1db900
-MD5 b6c5ae70d7a6e53f80e2abbe6fa05bd6 ChangeLog 8872
-RMD160 e15b79bb6e263dfeeef6c1abab5fb568161d5c76 ChangeLog 8872
-SHA256 abd365c49c662ee7c42450574e31c11fbdec4b9a1c792464c979ae010f1db900 ChangeLog 8872
+EBUILD dansguardian-2.9.8.1_beta.ebuild 3014 RMD160 db68dd86fa267614738b30b6c471177ad2d0dda4 SHA1 ca852a2f2360651f564d5afb078fde068002a7ca SHA256 bf857fc841f580c9b8d758dbbe5c606c8734b75f74814432b159a8ecd6a3befe
+MD5 4c0c746bac06345fe40e9c3a73b8cbab dansguardian-2.9.8.1_beta.ebuild 3014
+RMD160 db68dd86fa267614738b30b6c471177ad2d0dda4 dansguardian-2.9.8.1_beta.ebuild 3014
+SHA256 bf857fc841f580c9b8d758dbbe5c606c8734b75f74814432b159a8ecd6a3befe dansguardian-2.9.8.1_beta.ebuild 3014
+MISC ChangeLog 9285 RMD160 2370f7554546b1e689fe50da9f3cce8ed847a8b6 SHA1 450cd5b99d33114b49780992f6dd4903bdd9f805 SHA256 85da01cc9b12facac6127944a024be677dd0c658f4f6299d939630583961af88
+MD5 15b9f51afaf9f26d4b1a58198f8c05be ChangeLog 9285
+RMD160 2370f7554546b1e689fe50da9f3cce8ed847a8b6 ChangeLog 9285
+SHA256 85da01cc9b12facac6127944a024be677dd0c658f4f6299d939630583961af88 ChangeLog 9285
 MISC metadata.xml 568 RMD160 9ccaf23e0461f24434c3d8d2375b64cf195c9f4a SHA1 e600d39cf81dbfe1885a3021da330152e1c533ed SHA256 db37880b6baac7d3294b7f8432f1ca816c85356430700e7078d891d4f100ef76
 MD5 30b14eaf02c479d70f60157c1a29a294 metadata.xml 568
 RMD160 9ccaf23e0461f24434c3d8d2375b64cf195c9f4a metadata.xml 568
@@ -67,16 +63,16 @@ SHA256 db37880b6baac7d3294b7f8432f1ca816c85356430700e7078d891d4f100ef76 metadata
 MD5 3a62712caa4316a44a434d73edfb8221 files/digest-dansguardian-2.8.0.6-r1 283
 RMD160 3e38ab8957de039d3fdcb63857efa5477ac1716d files/digest-dansguardian-2.8.0.6-r1 283
 SHA256 d3b7befbd826b0c1ba6acbd61579767cb39cbfbd7597d196998969d499c6dc4b files/digest-dansguardian-2.8.0.6-r1 283
-MD5 5e498105a2b4fee06a3758a14a843563 files/digest-dansguardian-2.9.7.5_alpha 262
-RMD160 95b5466dddbb1d666ca04c5ed9476660373d808f files/digest-dansguardian-2.9.7.5_alpha 262
-SHA256 38d77462cc2ec13e7fd4ae7c49fc43ed4d692c9a5f1cd01d52f5c3e933225616 files/digest-dansguardian-2.9.7.5_alpha 262
 MD5 737a2d16dd85daaa61920401e13f8ccc files/digest-dansguardian-2.9.8.0_beta 262
 RMD160 ea28d7554a619085b03fdf957aba4ec907d9508b files/digest-dansguardian-2.9.8.0_beta 262
 SHA256 762d64fe21f445139af1ca73b776bd0375e67ea93f380910cb9a27ba3ebe41f7 files/digest-dansguardian-2.9.8.0_beta 262
+MD5 97db3d830e0c9cf12576981c5a522d27 files/digest-dansguardian-2.9.8.1_beta 262
+RMD160 17dd4d44e4bbd2a70f7980e67a4488a96c516af8 files/digest-dansguardian-2.9.8.1_beta 262
+SHA256 885f8c2dff3f7386eebd5f1e6df36172be3c87493614aa1e601a8bfc7b92514e files/digest-dansguardian-2.9.8.1_beta 262
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
+Version: GnuPG v1.4.6 (GNU/Linux)
 
-iD8DBQFFSSra3sf9c6kjmR8RAuJiAKC65ione8t9VA8R33rrXOSGrEdPbQCeOK3J
-aM2cjJoqQBNICkUz1sgSdZ0=
-=SmmG
+iD8DBQFFiC3Z3sf9c6kjmR8RAiP0AKCwtmRBwhutSbIm5g/LHZodPueUUwCgvVyv
+SVtdr/cfUWi53F+pGfP3Jyk=
+=58RA
 -----END PGP SIGNATURE-----
