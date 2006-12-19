@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r1.ebuild,v 1.4 2006/11/29 21:38:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r1.ebuild,v 1.5 2006/12/19 16:34:08 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -32,14 +32,14 @@ LINGUAS_SRC_URI="linguas_fr? (
 DESCRIPTION="Neverwinter Nights Data Files"
 HOMEPAGE="http://nwn.bioware.com/downloads/linuxclient.html"
 SRC_URI="${CLIENT_BASEURL}/${MY_PV}/nwclient${MY_PV}.tar.gz
-	cdinstall? ( ${LINGUAS_SRC_URI} )
 	nowin? ( ${NOWIN_SRC_URI} ${LINGUAS_SRC_URI} )
+	!nowin? ( cdinstall? ( ${LINGUAS_SRC_URI} ) )
 	mirror://gentoo/nwn.png"
 
 LICENSE="NWN-EULA"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cdinstall hou nowin sou ${LANGUAGES}"
+IUSE="cdinstall hou nowin sou videos ${LANGUAGES}"
 RESTRICT="strip mirror"
 
 RDEPEND="virtual/opengl
@@ -131,12 +131,13 @@ get_nwn_set() {
 get_cd_set() {
 	while `[ -z "${NWN_SET}" ]`
 	do
-		echo "Please insert your Neverwinter Nights CD/DVD into your drive and"
+		echo "Please insert your first Neverwinter Nights CD/DVD into your drive and"
 		echo "press any key to continue"
-		read -n
+		read -n 1
 		get_nwn_set
 	done
 	# Here is where we start our CD/DVD detection for changing disks.
+	export CDROM_NAME_1="CD1" CDROM_NAME_2="CD2" CDROM_NAME_3="CD3"
 	case "${NWN_SET}" in
 	diamond_dvd)
 		einfo "Both Shadows of Undrentide and Hordes of the Underdark will"
@@ -152,9 +153,11 @@ get_cd_set() {
 		einfo "Underdark, it will be installed afterwards."
 		touch .metadata/orig || die "touch orig"
 		touch .metadata/sou || die "touch sou"
+		export CDROM_NAME_4="CD4" 
 		if use hou
 		then
 			einfo "You will also need the HoU CD for this installation."
+			export CDROM_NAME_5="HoU"
 			cdrom_get_cds ArcadeInstallNWNXP213f.EXE \
 				disk2.zip disk3.zip disk4.zip \
 				ArcadeInstallNWNXP213f.EXE
@@ -171,17 +174,20 @@ get_cd_set() {
 		if use sou && use hou
 		then
 			einfo "You will also need the SoU and HoU CDs for this installation."
+			export CDROM_NAME_4="SoU" CDROM_NAME_5="HoU"
 			cdrom_get_cds ArcadeInstallNWN109.exe disk2.bzf \
 				movies/NWNintro.bik NWNSoUInstallGuide.rtf \
 				ArcadeInstallNWNXP213f.EXE
 		elif use sou
 		then
 			einfo "You will also need the SoU CD for this installation."
+			export CDROM_NAME_4="SoU"
 			cdrom_get_cds ArcadeInstallNWN109.exe disk2.bzf \
 				movies/NWNintro.bik NWNSoUInstallGuide.rtf
 		elif use hou
 		then
 			einfo "You will also need the HoU CD for this installation."
+			export CDROM_NAME_4="HoU"
 			cdrom_get_cds ArcadeInstallNWN109.exe disk2.bzf \
 				movies/NWNintro.bik ArcadeInstallNWNXP213f.EXE
 		else
@@ -226,22 +232,19 @@ src_unpack() {
 			unzip -qo "${CDROM_ROOT}"/data/XP2.zip
 			;;
 		platinum_cd)
-			# This one isn't too bad, either.  Luckily, everything in in a ZIP.
+			# This one isn't too bad, either.  Luckily, everything is in a ZIP.
 			mkdir -p "${S}"
 			cd "${S}"
 			einfo "Unpacking files..."
 			unzip -qo "${CDROM_ROOT}"/Data_Shared.zip || die "unpacking"
 			unzip -qo "${CDROM_ROOT}"/Language_data.zip || die "unpacking"
 			unzip -qo "${CDROM_ROOT}"/Language_update.zip || die "unpacking"
-			einfo "Please insert disk 2"
 			cdrom_load_next_cd
 			einfo "Unpacking files..."
 			unzip -qo "${CDROM_ROOT}"/disk2.zip || die "unpacking"
-			einfo "Please insert disk 3"
 			cdrom_load_next_cd
 			einfo "Unpacking files..."
 			unzip -qo "${CDROM_ROOT}"/disk3.zip || die "unpacking"
-			einfo "Please inert disk 4"
 			cdrom_load_next_cd
 			einfo "Unpacking files..."
 			unzip -qo "${CDROM_ROOT}"/disk4.zip || die "unpacking"
@@ -249,7 +252,6 @@ src_unpack() {
 			unzip -qo "${CDROM_ROOT}"/xp1_data.zip || die "unpacking"
 			if use hou
 			then
-				einfo "Please insert the HoU disk"
 				cdrom_load_next_cd
 				rm -f xp1patch.key data/xp1patch.bif override/*
 				einfo "Unpacking files..."
@@ -263,7 +265,7 @@ src_unpack() {
 			# Now, we need to create our directories, since we know we'll end up
 			# needing them for our install.
 			mkdir -p ambient data dmvault docs lib localvault miles modules \
-				music nwm override texturepacks scripttemplates movies
+				music nwm override texturepacks scripttemplates
 
 			# Handle NWN CD1
 			mkdir "${S}"/disc1_tmp
@@ -279,26 +281,31 @@ src_unpack() {
 			mv -f disc1_tmp/*.bic localvault
 			mv -f disc1_tmp/*.{pdf,txt} docs
 			mv -f disc1_tmp/*.erf texturepacks
+			mv -f disc1_tmp/chitin.key .
 			rm -rf disc1_tmp
 
 			# NWN CD2
-			einfo "Please insert disk 2"
 			cdrom_load_next_cd
 			biounzip ${CDROM_ROOT}/disk2.bzf . || die "unpacking files"
 
 			# NWN CD3
-			einfo "Please insert disk 3"
 			cdrom_load_next_cd
 			einfo "Copying files from cd..."
-			for i in ambient data movies music
+			for i in ambient data music
 			do
 				cp ${CDROM_ROOT}/${i}/* "${S}"/${i} || die "error copying data"
+				chmod -x "${S}"/${i}/*
 			done
+			if use videos
+			then
+				mkdir -p "${S}"/movies
+				cp ${CDROM_ROOT}/movies/* "${S}"/movies || die "error copying data"
+				chmod -x "${S}"/movies/*
+			fi
 
 			# Now, we install HoU and SoU, if necessary
 			if use sou
 			then
-				einfo "Please insert the SoU disk"
 				cdrom_load_next_cd
 				einfo "Unpacking files..."
 				unzip -qo "${CDROM_ROOT}"/Data_Shared.zip || die "unpacking"
@@ -309,7 +316,6 @@ src_unpack() {
 			fi
 			if use hou
 			then
-				einfo "Please insert the HoU disk"
 				cdrom_load_next_cd
 				if use sou && use hou
 				then
@@ -322,14 +328,16 @@ src_unpack() {
 				touch .metadata/hou || die "touching hou"
 			fi
 			unpack nwclient${MY_PV}.tar.gz
-			cd "${WORKDIR}"
-			unpack nwresources${MY_PV}.tar.gz \
-				|| die "unpacking nwresources${MY_PV}.tar.gz"
-			cd "${S}"
 			;;
 		esac
-	elif use nowin
+	fi
+	if use nowin
 	then
+		if (use sou || use hou) && ! use cdinstall ; then
+			ewarn "If you really want to install SoU and/or HoU, you must"
+			ewarn "emerge with USE=cdinstall."
+			die "SoU and/or HoU require USE=cdinstall."
+		fi
 		unpack nwclient${MY_PV}.tar.gz
 		cd "${WORKDIR}"
 		unpack nwresources${MY_PV}.tar.gz \
@@ -368,6 +376,10 @@ src_unpack() {
 	fi
 	# These files aren't needed and come from the patches (games-rpg/nwn)
 	rm -f data/patch.bif patch.key
+
+	# Rename nwn.ini to avoid overwriting it every time
+	mv nwn.ini nwn.ini.default
+
 	sed -i -e 's,/bin/sh,/bin/bash,g' -e '\:^./nwmain .*:i \
 '"dir='${dir}';LINGUAS='${LINGUAS}'"' \
 die() { \
@@ -410,6 +422,12 @@ then \
 	done \
 fi \
 cd "${p}" || die "cd ${p}" \
+if [[ ! -a nwn.ini ]]; then \
+        cp nwn.ini.default nwn.ini \
+fi \
+if [[ -r ./nwmovies.so ]]; then \
+	export LD_PRELOAD=./nwmovies.so:$LD_PRELOAD \
+fi \
 if [[ -r ./nwmouse.so ]]; then \
 	export XCURSOR_PATH="$(pwd)" \
 	export XCURSOR_THEME=nwmouse \
@@ -424,6 +442,10 @@ src_install() {
 	rm -rf "${S}"/dialog.tlk "${S}"/dialog.TLK "${S}"/dialogf.tlk \
 		"${S}"/dmclient "${S}"/nwmain "${S}"/nwserver  "${S}"/nwm/* \
 		"${S}"/SDL-1.2.5 "${S}"/fixinstall
+	if ! use videos
+	then
+		rm -rf "${S}"/movies/*
+	fi	
 	mv "${S}"/* "${Ddir}"
 	mv "${S}"/.metadata "${Ddir}"
 	keepdir "${dir}"/servervault
@@ -432,7 +454,7 @@ src_install() {
 	keepdir "${dir}"/portraits
 	keepdir "${dir}"/hak
 	cd "${Ddir}"
-	for d in ambient data dmvault hak localvault music override portraits
+	for d in ambient data dmvault hak localvault movies music override portraits
 	do
 		if [ -d ${d} ]
 		then
@@ -467,7 +489,7 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	if ! use cdinstall || ! use nowin ; then
+	if ! use cdinstall && ! use nowin ; then
 		elog "The NWN linux client data is now installed."
 		elog "Proceed with the following steps in order to get it working:"
 		elog "1) Copy the following directories/files from your installed and"
@@ -478,9 +500,13 @@ pkg_postinst() {
 		elog "    hak/"
 		elog "    localvault/"
 		elog "    modules/"
+		if use videos
+		then
+			elog "    movies/"
+		fi
 		elog "    music/"
 		elog "    portraits/"
-		elgo "    saves/"
+		elog "    saves/"
 		elog "    servervault/"
 		elog "    texturepacks/"
 		elog "    chitin.key"
@@ -500,11 +526,22 @@ pkg_postinst() {
 		elog "    chown -R ${GAMES_USER}:${GAMES_GROUP} ${dir}"
 		elog "    chmod -R g+rwX ${dir}"
 		echo
-		elog "Or try emerging with USE=nowin"
+		elog "Or try emerging with USE=nowin and/or USE=cdinstall."
 		echo
 	else
 		einfo "The NWN linux client data is now installed."
 		echo
+	fi
+	if use cdinstall && ! use nowin ; then
+		ewarn "Some/all demo modules will be missing. You can copy them manually into :"
+		ewarn "${dir}/modules"
+		ewarn "or emerge with USE=nowin."
+ 	fi
+	if ! use cdinstall && use nowin && use videos
+	then
+		ewarn "Some/all movies will be missing. You can copy them manually into :"
+		ewarn "${dir}/movies"
+		ewarn "or emerge with USE=cdinstall and/or USE=-nowin."
 	fi
 	elog "This is only the data portion, you will also need games-rpg/nwn to"
 	elog "play Neverwinter Nights."
