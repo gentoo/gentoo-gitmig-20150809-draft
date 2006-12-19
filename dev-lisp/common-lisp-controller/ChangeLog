@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/common-lisp-controller
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/ChangeLog,v 1.32 2006/05/07 20:34:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/ChangeLog,v 1.33 2006/12/19 13:18:52 gustavoz Exp $
+
+  19 Dec 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  common-lisp-controller-4.27.ebuild:
+  Stable on sparc
 
   07 May 2006; Markus Rothe <corsair@gentoo.org>
   common-lisp-controller-4.27.ebuild:

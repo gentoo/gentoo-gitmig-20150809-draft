@@ -1,14 +1,65 @@
-MD5 35447324655cd2b97a08cac1ffb5381b ChangeLog 5419
-MD5 0e67d8cbd140744d8d483f791477a2a4 common-lisp-controller-4.15.ebuild 2759
-MD5 64aa49ce85365791b36186d8183aff4a common-lisp-controller-4.27.ebuild 2743
-MD5 76f6cfc7b6e0b2b9b4e752ec40705267 common-lisp-controller-5.13-r1.ebuild 2834
-MD5 5ab5374bddc7a382547fb6c4ce3a18cb common-lisp-controller-5.13.ebuild 2759
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX 4.15/lisp-config.lisp 32 RMD160 f4ada4b5e405bbd9c1d3ee25c0d9ba575dd8e148 SHA1 efe42caf684ab5e08497d939f9d8b51e5e635857 SHA256 11e20d2fb562054a919113705e682e86c4967b8e33aaaa78d4b6ef39ee4ab527
 MD5 18def77ecb7844b6b374ace6f1f96696 files/4.15/lisp-config.lisp 32
+RMD160 f4ada4b5e405bbd9c1d3ee25c0d9ba575dd8e148 files/4.15/lisp-config.lisp 32
+SHA256 11e20d2fb562054a919113705e682e86c4967b8e33aaaa78d4b6ef39ee4ab527 files/4.15/lisp-config.lisp 32
+AUX 4.27/lisp-config.lisp 32 RMD160 f4ada4b5e405bbd9c1d3ee25c0d9ba575dd8e148 SHA1 efe42caf684ab5e08497d939f9d8b51e5e635857 SHA256 11e20d2fb562054a919113705e682e86c4967b8e33aaaa78d4b6ef39ee4ab527
 MD5 18def77ecb7844b6b374ace6f1f96696 files/4.27/lisp-config.lisp 32
+RMD160 f4ada4b5e405bbd9c1d3ee25c0d9ba575dd8e148 files/4.27/lisp-config.lisp 32
+SHA256 11e20d2fb562054a919113705e682e86c4967b8e33aaaa78d4b6ef39ee4ab527 files/4.27/lisp-config.lisp 32
+AUX 5.13/lisp-config.lisp 32 RMD160 f4ada4b5e405bbd9c1d3ee25c0d9ba575dd8e148 SHA1 efe42caf684ab5e08497d939f9d8b51e5e635857 SHA256 11e20d2fb562054a919113705e682e86c4967b8e33aaaa78d4b6ef39ee4ab527
 MD5 18def77ecb7844b6b374ace6f1f96696 files/5.13/lisp-config.lisp 32
+RMD160 f4ada4b5e405bbd9c1d3ee25c0d9ba575dd8e148 files/5.13/lisp-config.lisp 32
+SHA256 11e20d2fb562054a919113705e682e86c4967b8e33aaaa78d4b6ef39ee4ab527 files/5.13/lisp-config.lisp 32
+AUX README.Gentoo 989 RMD160 7272e88ecfaa147c30984aa03b106a909c1af908 SHA1 997aa3895271cf7ee0962a3cdd819fb4baaf4a2f SHA256 603a4f938f88be364775a5ae9b72dac3d291a5077038a69d29a64b0b2d08c802
 MD5 e5220142eec014d0035d8bbefac9e6df files/README.Gentoo 989
-MD5 522385f0885f4699612696a4fca536a0 files/digest-common-lisp-controller-4.15 84
-MD5 8bdbce796e9bccc837d42e64697ba3a8 files/digest-common-lisp-controller-4.27 78
-MD5 a78c2ba84e673b2b040a9cada2155490 files/digest-common-lisp-controller-5.13 280
-MD5 a78c2ba84e673b2b040a9cada2155490 files/digest-common-lisp-controller-5.13-r1 280
+RMD160 7272e88ecfaa147c30984aa03b106a909c1af908 files/README.Gentoo 989
+SHA256 603a4f938f88be364775a5ae9b72dac3d291a5077038a69d29a64b0b2d08c802 files/README.Gentoo 989
+DIST common-lisp-controller_4.15sarge2.tar.gz 25058
+DIST common-lisp-controller_4.27.tar.gz 27636
+DIST common-lisp-controller_5.13.tar.gz 30846 RMD160 d68964f2a2da04ee1183d57377348f164c27517b SHA256 ec2e9c6fa566b2d5f18d2823e48e54834392ca8c76e677047f03d5d940e40249
+EBUILD common-lisp-controller-4.15.ebuild 2759 RMD160 14a1d0f28a7b03445b004082178bed8d8a1c2aef SHA1 3ea7da96a053e65047b708fcdd4f3b6c349b4f9c SHA256 1ffadbc45f8e211d416a6c59c603d707cf761b2f4a4bacb1f5e083b303495262
+MD5 0e67d8cbd140744d8d483f791477a2a4 common-lisp-controller-4.15.ebuild 2759
+RMD160 14a1d0f28a7b03445b004082178bed8d8a1c2aef common-lisp-controller-4.15.ebuild 2759
+SHA256 1ffadbc45f8e211d416a6c59c603d707cf761b2f4a4bacb1f5e083b303495262 common-lisp-controller-4.15.ebuild 2759
+EBUILD common-lisp-controller-4.27.ebuild 2743 RMD160 ce9d2aac9e62274d7934cf238d3662da1cb00ef3 SHA1 c29db1d65ae42901deeaa014c79fa63b7256231e SHA256 e62b5fa1ffc139b01cbecf9d7597b8031dd6658b44ad6ff84c7f6f339f22fed5
+MD5 742008b986c5dfcb45c4b9ce35d13c18 common-lisp-controller-4.27.ebuild 2743
+RMD160 ce9d2aac9e62274d7934cf238d3662da1cb00ef3 common-lisp-controller-4.27.ebuild 2743
+SHA256 e62b5fa1ffc139b01cbecf9d7597b8031dd6658b44ad6ff84c7f6f339f22fed5 common-lisp-controller-4.27.ebuild 2743
+EBUILD common-lisp-controller-5.13-r1.ebuild 2834 RMD160 52f59c0b30ace5b9870344c193e7c3a5fd84d2e3 SHA1 3822557494c084015e91b8a86d1090793b0d9f4b SHA256 2288bb3a639bf8d8657122022dc28467b77d1c682b96bed2f727f9b5c360cb22
+MD5 76f6cfc7b6e0b2b9b4e752ec40705267 common-lisp-controller-5.13-r1.ebuild 2834
+RMD160 52f59c0b30ace5b9870344c193e7c3a5fd84d2e3 common-lisp-controller-5.13-r1.ebuild 2834
+SHA256 2288bb3a639bf8d8657122022dc28467b77d1c682b96bed2f727f9b5c360cb22 common-lisp-controller-5.13-r1.ebuild 2834
+EBUILD common-lisp-controller-5.13.ebuild 2759 RMD160 4853f87b21118570708f68c01adceeac8c907f2b SHA1 c7256127879ec96bef90d9a2d6fc90030319c2a4 SHA256 ad5755351747c35b09749ae83bf319f3690f625ce3b9d5e919c99ec76f20dc2f
+MD5 5ab5374bddc7a382547fb6c4ce3a18cb common-lisp-controller-5.13.ebuild 2759
+RMD160 4853f87b21118570708f68c01adceeac8c907f2b common-lisp-controller-5.13.ebuild 2759
+SHA256 ad5755351747c35b09749ae83bf319f3690f625ce3b9d5e919c99ec76f20dc2f common-lisp-controller-5.13.ebuild 2759
+MISC ChangeLog 5531 RMD160 36fcb37ebc3ea4156ebc0ed9f072fb78265d97d0 SHA1 f372464b6cc2e501422a123667f7455693bc8d56 SHA256 4ed27bbefade8ed1c497b157f4448cb423123fbdfde050e85af852a166b8afa9
+MD5 26701a3c01d92ba7f28b03125e9bc91f ChangeLog 5531
+RMD160 36fcb37ebc3ea4156ebc0ed9f072fb78265d97d0 ChangeLog 5531
+SHA256 4ed27bbefade8ed1c497b157f4448cb423123fbdfde050e85af852a166b8afa9 ChangeLog 5531
+MISC metadata.xml 511 RMD160 1e22e95cc758b2d9c8c80ae6ce9a9ad73ffe564d SHA1 5222e79bece623f785247ec13373b5507579d79f SHA256 3de5d689fe537dd4339bd66b889479b1782e3048bcdc7a2ef9f6b5f1d04c08cc
 MD5 e5a9822d3fd5f5c726cc4bdc793d4e08 metadata.xml 511
+RMD160 1e22e95cc758b2d9c8c80ae6ce9a9ad73ffe564d metadata.xml 511
+SHA256 3de5d689fe537dd4339bd66b889479b1782e3048bcdc7a2ef9f6b5f1d04c08cc metadata.xml 511
+MD5 522385f0885f4699612696a4fca536a0 files/digest-common-lisp-controller-4.15 84
+RMD160 6f8196850e2cee31254d90f8e1c30d3d8cd04baf files/digest-common-lisp-controller-4.15 84
+SHA256 433519b368f480fd6a4c7ba4c9b6da2350dd3eb9ec969f1d6dc81a2cf89c491e files/digest-common-lisp-controller-4.15 84
+MD5 8bdbce796e9bccc837d42e64697ba3a8 files/digest-common-lisp-controller-4.27 78
+RMD160 537161f484c71294357ea5f6dd2220e4c8e557a0 files/digest-common-lisp-controller-4.27 78
+SHA256 f1785b81479196aa2593bc5ec829d94f9bb132d6b5aaa31f1b5f591826030209 files/digest-common-lisp-controller-4.27 78
+MD5 a78c2ba84e673b2b040a9cada2155490 files/digest-common-lisp-controller-5.13 280
+RMD160 daa8ae8dafc48e0c62c0b6d992c2667314edbc2f files/digest-common-lisp-controller-5.13 280
+SHA256 6a1dd99184179befd7be4b3116099f248a0461013237d5800774fc0ec3359e00 files/digest-common-lisp-controller-5.13 280
+MD5 a78c2ba84e673b2b040a9cada2155490 files/digest-common-lisp-controller-5.13-r1 280
+RMD160 daa8ae8dafc48e0c62c0b6d992c2667314edbc2f files/digest-common-lisp-controller-5.13-r1 280
+SHA256 6a1dd99184179befd7be4b3116099f248a0461013237d5800774fc0ec3359e00 files/digest-common-lisp-controller-5.13-r1 280
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.6-ecc01.6 (GNU/Linux)
+
+iD8DBQFFh+bCKRy60XGEcJIRAhBYAJ9DLf7SFItfsEqqrLwtPHBleLpCVgCeIte2
+FqQZRCu4q7vh8aHOKY8vbNQ=
+=XouN
+-----END PGP SIGNATURE-----
