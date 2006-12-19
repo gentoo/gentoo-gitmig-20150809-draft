@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6472 2006/12/19 19:29:27 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6473 2006/12/19 20:33:50 ticho Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -116,6 +116,7 @@ mail-client/claws-mail-gtkhtml
 mail-client/claws-mail-maildir
 mail-client/claws-mail-mailmbox
 mail-client/claws-mail-newmail
+mail-client/claws-mail-notification
 mail-client/claws-mail-perl
 mail-client/claws-mail-rssyl
 mail-client/claws-mail-smime
