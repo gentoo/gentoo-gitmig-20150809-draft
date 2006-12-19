@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.2.ebuild,v 1.6 2006/12/05 13:18:04 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.2.ebuild,v 1.7 2006/12/19 14:07:31 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -132,12 +132,6 @@ src_unpack() {
 
 	cd ${S}
 
-	if [[ "$(gcc-major-version)" == "4" ]]; then
-		einfo "Visibility support: auto"
-	else
-		einfo "Visibility support: disabled"
-		sed -i -e "s:CFG_REDUCE_EXPORTS=auto:CFG_REDUCE_EXPORTS=no:" configure
-	fi
 }
 
 src_compile() {
@@ -145,6 +139,11 @@ src_compile() {
 	export LD_LIBRARY_PATH="${S}/lib:${LD_LIBRARY_PATH}"
 
 	[ $(get_libdir) != "lib" ] && myconf="${myconf} -L/usr/$(get_libdir)"
+
+	# Disable visibility explicitly if gcc version isn't 4
+	if [[ "$(gcc-major-version)" != "4" ]]; then
+		myconf="${myconf} -no-reduce-exports"
+	fi
 
 	myconf="${myconf} $(qt_use accessibility) $(qt_use cups) $(qt_use xinerama)"
 	myconf="${myconf} $(qt_use opengl) $(qt_use nis)"
@@ -173,6 +172,11 @@ src_compile() {
 
 	myconf="${myconf} -xrender -xrandr -xkb -xshape -sm"
 
+	if ! use examples; then
+		myconf="${myconf} -nomake examples"
+	fi
+
+
 	./configure -stl -verbose -largefile -confirm-license \
 		-platform ${PLATFORM} -xplatform ${PLATFORM} \
 		-prefix ${QTPREFIXDIR} -bindir ${QTBINDIR} -libdir ${QTLIBDIR} -datadir ${QTDATADIR} \
@@ -180,10 +184,7 @@ src_compile() {
 		-sysconfdir ${QTSYSCONFDIR} -translationdir ${QTTRANSDIR} \
 		-examplesdir ${QTEXAMPLESDIR} -demosdir ${QTDEMOSDIR} ${myconf} || die
 
-	emake sub-tools-all-ordered || die
-	if use examples; then
-		emake sub-examples-all-ordered || die
-	fi
+	emake all || die
 }
 
 src_install() {
@@ -194,7 +195,6 @@ src_install() {
 
 	if use examples; then
 		make INSTALL_ROOT=${D} sub-examples-install_subtargets || die
-		make INSTALL_ROOT=${D} sub-demos-install_subtargets || die
 	fi
 
 	make INSTALL_ROOT=${D} install_qmake || die
