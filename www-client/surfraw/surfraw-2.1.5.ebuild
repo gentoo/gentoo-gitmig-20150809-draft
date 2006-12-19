@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surfraw/surfraw-2.1.5.ebuild,v 1.2 2006/12/18 20:10:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surfraw/surfraw-2.1.5.ebuild,v 1.3 2006/12/19 00:24:09 opfer Exp $
 
 inherit bash-completion eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://debian/pool/main/s/surfraw/${PN}_${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="public-domain"
-KEYWORDS="~amd64 ~ppc sparc ~x86"
+KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE=""
 
 src_unpack() {
