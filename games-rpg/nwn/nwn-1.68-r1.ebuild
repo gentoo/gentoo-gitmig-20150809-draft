@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.68-r1.ebuild,v 1.2 2006/11/29 15:50:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.68-r1.ebuild,v 1.3 2006/12/19 16:53:26 wolf31o2 Exp $
 
 inherit eutils games
+
+LANGUAGES="linguas_fr linguas_it linguas_es linguas_de linguas_en"
 
 MY_PV=${PV//.}
 PATCH_URL_BASE=http://files.bioware.com/neverwinternights/updates/linux/${MY_PV}
@@ -52,7 +54,8 @@ SRC_URI="linguas_fr? (
 LICENSE="NWN-EULA"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE="sou hou nowin"
+IUSE="sou hou ${LANGUAGES}"
+# nowin USE flag not used anymore by pkg_setup()
 RESTRICT="mirror strip"
 
 RDEPEND=">=games-rpg/nwn-data-1.29-r1
@@ -154,11 +157,10 @@ pkg_setup() {
 src_unpack() {
 	mkdir -p "${S}"
 	cd "${S}"
-	AA=""
 	mkdir -p .metadata
 	for a in ${A}
 	do
-		if [ -n "${a/*dialog*}" ]
+		if [ -z "${a/*orig*}" ]
 		then
 			currentlocale=""
 			if [ -z "${a/*German*/}" ]
@@ -182,6 +184,7 @@ src_unpack() {
 				mkdir -p "${currentlocale}"
 				cd "${currentlocale}"
 				unpack "${a}" || die "unpack ${a}"
+				cd ..
 			fi
 		fi
 	done
@@ -190,7 +193,30 @@ src_unpack() {
 	do
 		if [ -z "${a/*$SOU_NAME}" ]
 		then
-			rm -f data/patch.bif patch.key && unpack ${a}
+			currentlocale=""
+			if [ -z "${a/*German*/}" ]
+			then
+				currentlocale=de
+			elif [ -z "${a/*English*/}" ]
+			then
+				currentlocale=en
+			elif [ -z "${a/*Spanish*/}" ]
+			then
+				currentlocale=es
+			elif [ -z "${a/*Italian*/}" ]
+			then
+				currentlocale=it
+			elif [ -z "${a/*French*/}" ]
+			then
+				currentlocale=fr
+			fi
+			if [ -n "$currentlocale" ]
+			then
+				cd "${currentlocale}"
+				rm -f data/patch.bif patch.key
+				unpack "${a}" || die "unpack ${a}"
+				cd ..
+			fi
 		fi
 	done )
 	use hou && (
@@ -198,8 +224,32 @@ src_unpack() {
 	do
 		if [ -z "${a/*$HOU_NAME}" ]
 		then
-			rm -f data/patch.bif patch.key data/xp1patch.bif xp1patch.key \
-				override/* && unpack ${a}
+			currentlocale=""
+			if [ -z "${a/*German*/}" ]
+			then
+				currentlocale=de
+			elif [ -z "${a/*English*/}" ]
+			then
+				currentlocale=en
+			elif [ -z "${a/*Spanish*/}" ]
+			then
+				currentlocale=es
+			elif [ -z "${a/*Italian*/}" ]
+			then
+				currentlocale=it
+			elif [ -z "${a/*French*/}" ]
+			then
+				currentlocale=fr
+			fi
+			if [ -n "$currentlocale" ]
+			then
+				cd "${currentlocale}"
+				rm -f data/patch.bif patch.key data/xp1patch.bif xp1patch.key override/*
+				unpack "${a}" || die "unpack ${a}"
+				cd ..
+			fi
+
+
 		fi
 	done )
 	for a in ${A}
@@ -225,7 +275,7 @@ src_unpack() {
 			fi
 			if [ -n "$currentlocale" ]
 			then
-				(cd "${currentlocale}" ; unpack ${a} )
+				(cd "${currentlocale}" ; unpack ${a} ; cd .. )
 			fi
 		fi
 	done
@@ -239,11 +289,14 @@ src_install() {
 		-e "s:GENTOO_USER:${GAMES_USER}:" \
 		-e "s:GENTOO_GROUP:${GAMES_GROUP}:" \
 		-e "s:GENTOO_DIR:${GAMES_PREFIX_OPT}:" \
+		-e "s:override miles nwm:miles:" \
+		-e "s:chitin.key dialog.tlk nwmain:chitin.key:" \
+		-e "s:^chmod a-x:#chmod a-x:" \
 		"${Ddir}"/fixinstall || die "sed"
 	if use hou || use sou
 	then
 		sed -i \
-			-e "s:nwmain patch.key:nwmain:" \
+			-e "s:chitin.key patch.key:chitin.key:" \
 			"${Ddir}"/fixinstall || die "sed"
 	fi
 	fperms ug+x "${dir}"/fixinstall || die "perms"
