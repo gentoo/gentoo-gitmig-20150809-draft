@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.10.0.ebuild,v 1.5 2006/12/06 11:31:16 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.10.0.ebuild,v 1.6 2006/12/19 17:54:25 jokey Exp $
 
 inherit eutils
 
@@ -12,12 +12,13 @@ LICENSE="GPL-2"
 SLOT="0"
 # contains x86 asm, upstream is working on a portable version
 KEYWORDS="~x86"
-IUSE="kde png X usb mysql python"
+IUSE="kde png serdisp X usb mysql python"
 
 DEPEND="png? ( media-libs/libpng
 	media-libs/gd )
 	X? ( x11-libs/libX11 )
 	usb? ( dev-libs/libusb )
+	serdisp? ( dev-libs/serdisplib )
 	mysql? ( virtual/mysql )"
 #		python? ( dev-lang/python )
 # mpd is needed soon
@@ -32,6 +33,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	epatch "${FILESDIR}/${P}-kernel2.6.19.patch"
 	epatch "${FILESDIR}/${P}-gcc4-compat.patch"
 }
 
@@ -61,9 +63,10 @@ src_compile() {
 		einfo "Active drivers (overridden): ${myd}"
 	else
 		myd="all"
-		use usb || myd="${myd},!USBLCD"
-		use png || myd="${myd},!PNG"
-		use X || myd="${myd},!X11"
+		use serdisp || myd="${myd},!serdisplib"
+		use usb     || myd="${myd},!USBLCD"
+		use png     || myd="${myd},!PNG"
+		use X       || myd="${myd},!X11"
 		einfo "Active drivers: ${myd}"
 	fi
 
@@ -113,4 +116,3 @@ src_install() {
 	insopts -o root -g root -m 0600
 	newins lcd4linux.conf.sample lcd4linux.conf
 }
-
