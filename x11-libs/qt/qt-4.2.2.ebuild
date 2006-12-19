@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.2.ebuild,v 1.7 2006/12/19 14:07:31 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.2.ebuild,v 1.8 2006/12/19 14:28:11 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -110,7 +110,7 @@ src_unpack() {
 	epatch ${FILESDIR}/qt-4.1.4-sparc.patch
 	epatch ${FILESDIR}/qt4-sqlite-configure.patch
 
-	cd mkspecs/$(qt_mkspecs_dir)
+	cd ${S}/mkspecs/$(qt_mkspecs_dir)
 	# set c/xxflags and ldflags
 
 	# Don't let the user go too overboard with flags.  If you really want to, uncomment
@@ -124,11 +124,25 @@ src_unpack() {
 		qmake.conf
 
 	# Do not link with -rpath. See bug #75181.
-	sed -i -e "s:QMAKE_RPATH.*=.*:QMAKE_RPATH=:" \
-		qmake.conf
+	sed -i -e "s:QMAKE_RPATH.*=.*:QMAKE_RPATH=:" qmake.conf
 
 	# Replace X11R6/ directories, so /usr/X11R6/lib -> /usr/lib
 	sed -i -e "s:X11R6/::" qmake.conf
+
+	# The trolls moved the definitions of the above stuff for g++, so we need to edit those files
+	# separately as well.
+	cd ${S}/mkspecs/common
+
+	sed -i -e "s:QMAKE_CFLAGS_RELEASE.*=.*:QMAKE_CFLAGS_RELEASE=${CFLAGS}:" \
+		-e "s:QMAKE_CXXFLAGS_RELEASE.*=.*:QMAKE_CXXFLAGS_RELEASE=${CXXFLAGS}:" \
+		-e "s:QMAKE_LFLAGS_RELEASE.*=.*:QMAKE_LFLAGS_RELEASE=${LDFLAGS}:" \
+		g++.conf
+
+	# Do not link with -rpath. See bug #75181.
+	sed -i -e "s:QMAKE_RPATH.*=.*:QMAKE_RPATH=:" g++.conf
+
+	# Replace X11R6/ directories, so /usr/X11R6/lib -> /usr/lib
+	sed -i -e "s:X11R6/::" linux.conf
 
 	cd ${S}
 
