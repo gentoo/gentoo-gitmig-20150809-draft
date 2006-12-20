@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc32/make.defaults,v 1.5 2006/12/06 11:50:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc32/make.defaults,v 1.6 2006/12/20 18:39:13 mabi Exp $
 
 # All extra USE/etc should be specified in sub-profiles.
 # DO NOT POLLUTE USE ON THIS PROFILE.
@@ -24,5 +24,5 @@ VIDEO_CARDS="ati chips dummy fbdev glint imstt mga nv s3 s3virge savage \
 
 # 2006/12/06 - Diego Pettenò <flameeyes@gentoo.org>
 # Defaults for PowerPC sound driver
-ALSA_CARDS="aoa aoa-fabric-layout aoa-onyx aoa-soundbus aoa-soundbus-i2s aoa-tas
-	aoa-toonie powermac usb-audio via82xx"
+ALSA_CARDS="aoa aoa-fabric-layout aoa-onyx aoa-soundbus aoa-soundbus-i2s \
+	aoa-tas aoa-toonie powermac usb-audio via82xx"
