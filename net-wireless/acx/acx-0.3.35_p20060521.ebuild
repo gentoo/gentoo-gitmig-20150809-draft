@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx/acx-0.3.35_p20060521.ebuild,v 1.2 2006/10/20 02:24:29 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx/acx-0.3.35_p20060521.ebuild,v 1.3 2006/12/20 02:24:44 spb Exp $
 
 inherit linux-mod
 
@@ -11,7 +11,7 @@ SRC_URI="http://acx100.erley.org/acx-20060521.tar.bz2"
 
 LICENSE="GPL-2 as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 IUSE="debug"
 
@@ -41,6 +41,7 @@ src_unpack() {
 
 	# fix 2.6.18 compilation
 	epatch ${FILESDIR}/${P}-2.6.18.patch
+	epatch ${FILESDIR}/${P}-2.6.19.patch
 }
 
 src_install() {
