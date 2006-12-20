@@ -1,8 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.1.6.ebuild,v 1.6 2005/11/25 22:16:55 cryos Exp $
-
-inherit libtool flag-o-matic
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.1.6.ebuild,v 1.7 2006/12/20 21:59:25 zzam Exp $
 
 DESCRIPTION="free, redistributable digital camera software application"
 HOMEPAGE="http://www.gphoto.org/"
@@ -27,8 +25,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_compile() {
-	eautoreconf
-
 	# -pipe does no work
 	# liquidx: why doesn't it work? bug #?
 	# filter-flags -pipe
