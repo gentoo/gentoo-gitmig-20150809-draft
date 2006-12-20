@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.12-r1.ebuild,v 1.15 2006/11/06 21:45:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.12-r1.ebuild,v 1.16 2006/12/20 19:51:44 grobian Exp $
 
 #ECVS_SERVER="savannah.gnu.org:/cvsroot/nano"
 #ECVS_MODULE="nano"
@@ -16,7 +16,7 @@ SRC_URI="http://www.nano-editor.org/dist/v${PV:0:3}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc-macos ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="debug justify minimal ncurses nls slang spell unicode"
 
 DEPEND=">=sys-libs/ncurses-5.2
