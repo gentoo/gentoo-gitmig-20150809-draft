@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cpptasks/cpptasks-1.0_beta4.ebuild,v 1.4 2006/11/30 15:33:52 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cpptasks/cpptasks-1.0_beta4.ebuild,v 1.5 2006/12/20 23:30:36 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -36,7 +36,7 @@ src_compile() {
 	local antflags="jars"
 	use doc && antflags="${antflags} javadocs -Dbuild.javadocs=build/api"
 	eant \
-		-Dgentoo.classpath=$(java-pkg_getjars ant-core xerces-2) \
+		-Dgentoo.classpath=$(java-pkg_getjars ant-core,xerces-2) \
 		${antflags}
 
 }
