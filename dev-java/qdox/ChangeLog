@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/qdox
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.6 2006/08/06 17:06:51 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.7 2006/12/20 23:25:39 betelgeuse Exp $
+
+  20 Dec 2006; Petteri Räty <betelgeuse@gentoo.org>
+  qdox-20050104-r1.ebuild:
+  Made the ebuild call java-pkg_getjars with the proper argument format so
+  emerging it with JAVA_PKG_STRICT works again.
 
   06 Aug 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   qdox-20050104-r1.ebuild:
