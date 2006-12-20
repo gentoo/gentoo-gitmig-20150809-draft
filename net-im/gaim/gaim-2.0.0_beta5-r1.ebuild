@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta5-r1.ebuild,v 1.1 2006/12/20 05:10:49 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta5-r1.ebuild,v 1.2 2006/12/20 05:17:24 gothgirl Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib mono autotools perl-app gnome2
 
@@ -25,6 +25,7 @@ RDEPEND="
 				)
 		>=dev-lang/python-2.4 )
 	gtk? (
+		spell? ( >=app-text/gtkspell-2.0.2 )
 		>=x11-libs/gtk+-2.0
 		startup-notification? ( >=x11-libs/startup-notification-0.5 )
 		xscreensaver? (	x11-libs/libXScrnSaver )
@@ -217,7 +218,7 @@ src_compile() {
 		$(use_enable startup-notification) \
 		$(use_enable tcl) \
 		$(use_enable gtk sm) \
-		$(use_enable gtk gtkspell) \
+		$(use_enable spell gtkspell) \
 		$(use_enable tk) \
 		$(use_enable xscreensaver screensaver) \
 		$(use_enable mono) \
