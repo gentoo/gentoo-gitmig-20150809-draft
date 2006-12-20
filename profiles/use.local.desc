@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2439 2006/12/20 04:56:32 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2440 2006/12/20 08:19:47 cardoe Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -887,6 +887,7 @@ media-sound/transkode:wavpack - Add support for wavpack decoding/encoding
 media-sound/zinf:corba - Enables corba interface support
 media-tv/gentoo-vdr-scripts:nvram - Add support for using nvram-wakeup to set wakeup time in bios
 media-tv/kdetv:zvbi - Enable VBI Decoding Library for Zapping
+media-tv/mythtv:autostart - Controls whether settings are installed for autostarting MythFrontend on boot
 media-tv/mythtv:backendonly - Builds only the backend component rather then the whole suite
 media-tv/mythtv:crciprec - Enable support for Network Recorder
 media-tv/mythtv:dbox2 - Enable support for Nokia DBOX2 DVB boxes
