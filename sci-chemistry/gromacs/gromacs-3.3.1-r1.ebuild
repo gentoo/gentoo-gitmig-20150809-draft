@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-3.3.1-r1.ebuild,v 1.1 2006/12/20 04:44:52 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-3.3.1-r1.ebuild,v 1.2 2006/12/20 19:03:12 je_fro Exp $
 
 inherit eutils fortran multilib
 
@@ -20,7 +20,7 @@ KEYWORDS="~alpha ~amd64 ~ppc64 ~sparc ~x86"
 
 DEPEND=">=sci-libs/fftw-3.0.1
 	mpi? ( virtual/mpi )
-	>=sys-devel/binutils-2.12*
+	>=sys-devel/binutils-2.12
 	app-shells/tcsh
 	X? ( x11-libs/libX11
 		x11-libs/libXt
