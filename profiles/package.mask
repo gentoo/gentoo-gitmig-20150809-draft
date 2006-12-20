@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6478 2006/12/20 18:02:48 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6479 2006/12/20 23:37:07 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ## 
+
+# Diego Pettenò <flameeyes@gentoo.org> (21 Dec 2006)
+# This is an experimental ebuild, with more USE flags and
+# a new ALSA_PCM_PLUGINS variable to disable of the
+# core internal plugins.
+=media-libs/alsa-lib-1.0.14_rc1-r1
 
 # Donnie Berkholz <dberkholz@gentoo.org> (20 Dec 2006)
 # Testing for FreeBSD support
