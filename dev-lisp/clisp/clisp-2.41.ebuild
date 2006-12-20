@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.41.ebuild,v 1.1 2006/11/09 04:06:32 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.41.ebuild,v 1.2 2006/12/20 01:13:55 mkennedy Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -14,7 +14,6 @@ KEYWORDS="~amd64 ~ppc ~ppc-macos -sparc ~x86"
 IUSE="X new-clx fastcgi pcre postgres readline zlib"
 
 RDEPEND=">=dev-libs/libsigsegv-2.4
-	>=dev-lisp/common-lisp-controller-4.27
 	sys-devel/gettext
 	virtual/tetex
 	fastcgi? ( dev-libs/fcgi )
