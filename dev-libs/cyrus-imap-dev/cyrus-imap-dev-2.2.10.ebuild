@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.2.10.ebuild,v 1.6 2005/04/24 12:39:44 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.2.10.ebuild,v 1.7 2006/12/20 21:15:22 tove Exp $
 
 inherit eutils gnuconfig
 
@@ -38,6 +38,7 @@ src_unpack() {
 		epatch "${FILESDIR}/cyrus-imapd-libwrap.patch" || die "patch failed"
 	fi
 
+	epatch "${FILESDIR}"/${PV}-imapopts.h.patch || die "imapopts.h.patch failed"
 	# DB4 detection and versioned symbols.
 	#epatch "${FILESDIR}/cyrus-imapd-${PV}-db4.patch" || die "patch failed."
 
