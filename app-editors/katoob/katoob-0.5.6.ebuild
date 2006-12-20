@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/katoob-0.5.6.ebuild,v 1.1 2006/12/19 02:44:11 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/katoob-0.5.6.ebuild,v 1.2 2006/12/20 01:28:53 leonardop Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://foolab.org/pub/software/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~x86"
 IUSE="bidi bzip2 cups dbus debug highlight spell"
 
 RDEPEND=">=dev-cpp/gtkmm-2.6
