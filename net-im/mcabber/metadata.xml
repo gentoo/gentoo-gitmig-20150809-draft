@@ -3,7 +3,17 @@
 <pkgmetadata>
 <herd>net-im</herd>
 <maintainer>
-  <email>troll@gentoo.org</email>
+	<email>troll@gentoo.org</email>
+	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>Very interesting console client for the Jabber protocol.</longdescription>
+<maintainer>
+	<email>wschlich@gentoo.org</email>
+	<name>Wolfram Schlich</name>
+	<description>Secondary maintainer</description>
+</maintainer>
+<longdescription>
+MCabber is a small Jabber console client that features
+such as GPG encryption, SSL support, MUC (Multi-User Chat) support,
+history logging, commands completion, and external actions triggers.
+</longdescription>
 </pkgmetadata>
