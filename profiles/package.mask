@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6475 2006/12/20 17:30:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6476 2006/12/20 17:51:17 vapier Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1084,8 +1084,9 @@ sys-apps/ppc64-utils
 net-misc/asterisk-app_authenticate_ldap
 
 # Mark Loeser <halcy0n@gentoo.org> (11 Apr 2006)
-# GCC 4.2 snapshots; use with extreme care and only report bugs if you have
+# GCC snapshots; use with extreme care and only report bugs if you have
 # a patch
+=sys-devel/gcc-4.3*
 =sys-devel/gcc-4.2*
 
 # Carsten Lohrke <carlo@gentoo.org> (10 Apr 2006)
