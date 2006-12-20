@@ -24,10 +24,10 @@ EBUILD digikamimageplugins-0.8.1.ebuild 1742 RMD160 fdddd0989a7c2823300f27352e56
 MD5 5acdae25ccb630d88b809f34d000bc7d digikamimageplugins-0.8.1.ebuild 1742
 RMD160 fdddd0989a7c2823300f27352e5607b97a039501 digikamimageplugins-0.8.1.ebuild 1742
 SHA256 020192e040793fd92d5cd10d62f42ee5922359bb07c98505bf6abf6333a5ec04 digikamimageplugins-0.8.1.ebuild 1742
-EBUILD digikamimageplugins-0.8.2.ebuild 1741 RMD160 dd37bc6f53b4c55fd0e8d36ce4e5058ebf875f02 SHA1 dc05533ba1aeb199655bff09946fce86d0a59dbc SHA256 e778ddb37b45efbfc2e87d02ea8e3136b21f10fc4e3f04d8a5b0b5eb41a5bb5e
-MD5 2c7202450ba3106ac7a3fb4f8f2db867 digikamimageplugins-0.8.2.ebuild 1741
-RMD160 dd37bc6f53b4c55fd0e8d36ce4e5058ebf875f02 digikamimageplugins-0.8.2.ebuild 1741
-SHA256 e778ddb37b45efbfc2e87d02ea8e3136b21f10fc4e3f04d8a5b0b5eb41a5bb5e digikamimageplugins-0.8.2.ebuild 1741
+EBUILD digikamimageplugins-0.8.2.ebuild 1751 RMD160 8f71943957d2fc35333e24b4032023ce5a4eeed9 SHA1 7593dc0ea89fd85bd49ba28f73c2ae3f5d71bcd5 SHA256 ec669417e8d5f8ccd9d67c82fafc7ee481dcdebfd0d58444565b60fa4d1b6979
+MD5 784d5a646653bab5159e80d77ea4539e digikamimageplugins-0.8.2.ebuild 1751
+RMD160 8f71943957d2fc35333e24b4032023ce5a4eeed9 digikamimageplugins-0.8.2.ebuild 1751
+SHA256 ec669417e8d5f8ccd9d67c82fafc7ee481dcdebfd0d58444565b60fa4d1b6979 digikamimageplugins-0.8.2.ebuild 1751
 EBUILD digikamimageplugins-0.9.0_beta1.ebuild 1754 RMD160 a677a927bff758735f49d7613cdc17f06599a38f SHA1 edf1841f167b565f78b61425f753abdfd2100f21 SHA256 65231b1141e09b94d02942121713c4ee0b01d70acc5898fe7e62157a6e4e0f7d
 MD5 be97cc199c82e5d61a740aa10c9a4f96 digikamimageplugins-0.9.0_beta1.ebuild 1754
 RMD160 a677a927bff758735f49d7613cdc17f06599a38f digikamimageplugins-0.9.0_beta1.ebuild 1754
@@ -48,10 +48,10 @@ EBUILD digikamimageplugins-0.9.0_rc2.ebuild 1799 RMD160 a26aa9bc4375d39d56bddfb3
 MD5 4ab11b05a505ab68b7cfe5590423420c digikamimageplugins-0.9.0_rc2.ebuild 1799
 RMD160 a26aa9bc4375d39d56bddfb3689b1e5d7b4b1e19 digikamimageplugins-0.9.0_rc2.ebuild 1799
 SHA256 8037340de2b7a3827fd1921d8501545f97b37ff2c871be95d39983f51175d6d0 digikamimageplugins-0.9.0_rc2.ebuild 1799
-MISC ChangeLog 5520 RMD160 0a6f92b50c2766bc7f0ee3a07341f268fa824528 SHA1 672c37f0f222149a3a815dcbe8c3195e656bde52 SHA256 d1e72662be57eeb1f9c80e4cc448990fce2d1829b274f83a6c08caecf13e900c
-MD5 185baeb87b8c966ccc25f7017f460930 ChangeLog 5520
-RMD160 0a6f92b50c2766bc7f0ee3a07341f268fa824528 ChangeLog 5520
-SHA256 d1e72662be57eeb1f9c80e4cc448990fce2d1829b274f83a6c08caecf13e900c ChangeLog 5520
+MISC ChangeLog 5663 RMD160 51c8f6911ba2f0b57c6128e7a40d0acc210c8409 SHA1 47cb108160e8e6b5b047112ed6afaf974e3888a1 SHA256 542c207b28a6ff31db9d67484e8abb322e49f891d2f09914cbbfc9ca21cb39a7
+MD5 63f7dfc3afd0b3992b0412b942b4b579 ChangeLog 5663
+RMD160 51c8f6911ba2f0b57c6128e7a40d0acc210c8409 ChangeLog 5663
+SHA256 542c207b28a6ff31db9d67484e8abb322e49f891d2f09914cbbfc9ca21cb39a7 ChangeLog 5663
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
@@ -84,9 +84,9 @@ MD5 15378f39b0e850a6c660981a18d457a5 files/digest-digikamimageplugins-0.9.0_rc2 
 RMD160 d5a84dea88ae4c8b6c630fe3ebc4c93d01fe560f files/digest-digikamimageplugins-0.9.0_rc2 593
 SHA256 c97671a72c50e6a2c20a23d37af3be4e74fca90ae77e475ada65dd57800de692 files/digest-digikamimageplugins-0.9.0_rc2 593
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.6 (GNU/Linux)
+Version: GnuPG v1.4.6-ecc01.6 (GNU/Linux)
 
-iD8DBQFFfR/UNQqtfCuFneMRAj+tAJ0ei2iu459wEaGzpWrH6LdM1R1kmQCfeg3j
-3DZBUNCHvV/e4vcYaWJUxBA=
-=5pde
+iD8DBQFFiUd3KRy60XGEcJIRAqLOAKCvk6jL3uo34pV4crVq+F6fsCvq0gCeNtDZ
+pDPZyzXFPTL6vZOB+n7lwus=
+=4KFp
 -----END PGP SIGNATURE-----
