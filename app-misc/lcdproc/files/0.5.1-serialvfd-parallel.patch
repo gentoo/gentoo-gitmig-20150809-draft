@@ -1,0 +1,256 @@
+This patch fixes compilation errors with hardware that does not have a parallel
+port. It was proposed by serialVFD driver author Stefan Herdler and accepted
+upstream for the next release.
+
+See Gentoo bug #151308 and
+  http://thread.gmane.org/gmane.comp.sysutils.lcdproc/11184/focus=11184
+
+--- ../cvs/lcdproc/server/drivers/serialVFD.c	2006-11-11 18:03:47.000000000 +0100
++++ ./server/drivers/serialVFD.c	2006-11-11 17:07:38.000000000 +0100
+@@ -126,7 +126,7 @@ serialVFD_init (Driver *drvthis)
+ 	p->cellheight = DEFAULT_CELL_HEIGHT;
+ 	p->ccmode = CCMODE_STANDARD;
+ 	p->ISO_8859_1 = 1;
+-	p->refresh_timer = 0;
++	p->refresh_timer = 480;
+ 	p->hw_brightness = 0;
+ 
+ 	debug(RPT_INFO, "%s(%p)", __FUNCTION__, drvthis );
+@@ -134,15 +134,17 @@ serialVFD_init (Driver *drvthis)
+ /* Read config file */
+ 
+ 	p->use_parallel	= drvthis->config_get_bool( drvthis->name, "use_parallel", 0, 0 );
+-	if (p->use_parallel) {
+-		p->port	= drvthis->config_get_int( drvthis->name, "port", 0, LPTPORT );
+-	}
+-	else {
++	
+ 		/* Which device should be used */
+ 		strncpy(p->device, drvthis->config_get_string(drvthis->name, "Device", 0, DEFAULT_DEVICE), sizeof(p->device));
+ 		p->device[sizeof(p->device)-1] = '\0';
+ 		report(RPT_INFO, "%s: using Device %s", drvthis->name, p->device);
+ 
++	if (p->use_parallel) {
++		p->port	= drvthis->config_get_int( drvthis->name, "port", 0, LPTPORT );
++	}
++	else {
++
+ 		/* Which speed */
+ 		tmp = drvthis->config_get_int (drvthis->name, "Speed", 0, DEFAULT_SPEED);
+ 		if ((tmp != 1200) && (tmp != 2400) && (tmp != 9600) && (tmp != 19200) && (tmp != 115200)) {
+@@ -236,7 +238,7 @@ serialVFD_init (Driver *drvthis)
+ 		report(RPT_ERR, "%s: unable to create framebuffer backing store.", drvthis->name);
+ 		return -1;
+ 	}
+-	memset(p->backingstore, ' ', p->width * p->height);
++	memset(p->backingstore, 0, p->width * p->height);
+ 
+ //setup displayspecific data
+ 	serialVFD_load_display_data(drvthis);
+@@ -427,8 +429,7 @@ serialVFD_flush (Driver *drvthis)
+ 		Port_Function[p->use_parallel].write_fkt (drvthis, &p->hw_cmd[p->hw_brightness][1],\
+ 		p->hw_cmd[p->hw_brightness][0]); // restore brightness
+ 
+-		for (i = 0; i < (p->height * p->width); i++)
+-			p->backingstore[i]=0; // clear Backing-store
++		memset(p->backingstore, 0, p->width * p->height); // clear Backing-store
+ 
+ 		for(i=0;i<p->customchars;i++) // refresh all customcharacters
+ 			custom_char_changed[i]=1;
+@@ -659,8 +660,7 @@ serialVFD_close (Driver *drvthis)
+ {
+ 	PrivateData *p = drvthis->private_data;
+ 	if (p != NULL) {
+-		if (p->fd >= 0)
+-			close(p->fd);
++		Port_Function[p->use_parallel].close_fkt (drvthis);
+ 		if (p->framebuf)
+ 			free(p->framebuf);
+ 		if (p->backingstore)
+--- ../cvs/lcdproc/server/drivers/serialVFD.h	2006-10-02 19:48:08.000000000 +0200
++++ ./server/drivers/serialVFD.h	2006-11-12 17:17:04.000000000 +0100
+@@ -73,7 +73,7 @@ MODULE_EXPORT const char * serialVFD_get
+ 
+ typedef struct driver_private_data {
+ 	int use_parallel;		// use parallel?
+-	unsigned int port;		// Port in parallel mode
++	unsigned short port;		// Port in parallel mode
+ 	char device[200];		// Device in serial mode
+ 	int fd;
+ 	int speed;			// Speed in serial mode
+@@ -96,9 +96,9 @@ typedef struct driver_private_data {
+ 	unsigned char charmap[128];
+ 	int display_type;		// display type
+ 	int last_custom;		// last custom character written
+-	char custom_char[31][7]; 	// stored custom characters
+-	char custom_char_store[31][7]; 	// custom characters backingstore
+-	char hw_cmd[10][4]; 		// hardwarespecific commands
++	unsigned char custom_char[31][7]; 	// stored custom characters
++	unsigned char custom_char_store[31][7]; 	// custom characters backingstore
++	unsigned char hw_cmd[10][4]; 		// hardwarespecific commands
+ 	int usr_chr_dot_assignment[57];	// how to setup usercharacters
+ 	unsigned int usr_chr_mapping[31];// where to place the usercharacters (0..30) in the asciicode
+ 	int hbar_cc_offset;		// character offset of the bars
+--- ../cvs/lcdproc/server/drivers/serialVFD_io.c	2006-10-02 19:48:08.000000000 +0200
++++ ./server/drivers/serialVFD_io.c	2006-11-12 19:34:25.000000000 +0100
+@@ -33,6 +33,7 @@
+ #include "serialVFD_io.h"
+ #include "serialVFD.h"
+ #include "lcd.h"
++
+ #define WR_on  0x10
+ #define WR_off 0x11
+ #define Busy   0x80
+@@ -41,30 +42,32 @@
+ #define MAXBUSY 300
+ 
+ void
+-serialVFD_write_serial (Driver *drvthis, char *dat, size_t length)
++serialVFD_write_serial (Driver *drvthis, unsigned char *dat, size_t length)
+ {
+ 	PrivateData *p = drvthis->private_data;
+ 	write (p->fd,dat,length);
+ }
+ 
+ void
+-serialVFD_write_parallel (Driver *drvthis, char *dat, size_t length)
++serialVFD_write_parallel (Driver *drvthis, unsigned char *dat, size_t length)
+ {
++#ifdef HAVE_PCSTYLE_LPT_CONTROL
+ 	PrivateData *p = drvthis->private_data;
+ 	int i_para, j_para;
+ 
+ 	for(i_para = 0; i_para < length; i_para++) {
+ 		port_out(p->port, dat[i_para]);
+-		port_in(p->port+1);
++//		port_in(p->port+1);
+ 		port_out(p->port+2, WR_on);
+ 		port_in(p->port+1);
+ 		port_out(p->port+2, WR_off);
+-
++		port_in(p->port+1);
+ 		for(j_para=0; j_para < MAXBUSY; j_para++) {
+ 			if((port_in(p->port+1)) & Busy)
+ 				break;
+ 		}
+ 	}
++#endif
+ }
+ 
+ int
+@@ -110,18 +113,37 @@ serialVFD_init_serial (Driver *drvthis)
+ int
+ serialVFD_init_parallel (Driver *drvthis)
+ {
+-	int ret=0;
+ 	PrivateData *p = drvthis->private_data;
++#ifdef HAVE_PCSTYLE_LPT_CONTROL
+ 	debug( RPT_DEBUG, "%s: Opening parallelport at: 0x%X", __FUNCTION__, p->port);
+-//	if(port_access_multiple(p->port,3)) return -1;
+-	if(port_access(p->port) != 0) ret=-1;
+-	if(port_access(p->port+1) != 0) ret=-1;
+-	if(port_access(p->port+2) != 0) ret=-1;
+-	if(ret == -1) {
+-		report (RPT_ERR, "%s: port_access() of 0x%X failed (%s)\n", __FUNCTION__, p->port, strerror (errno));
++	if(port_access_multiple(p->port,3)) {
++		report (RPT_ERR, "%s: port_access_multiple() of 0x%X failed (%s)\n", __FUNCTION__, p->port, strerror (errno));
+ 		return -1;
+ 	}
+ 	return 0;
++#else
++	report (RPT_ERR, "%s: LCDproc was compiled without PCstyle LPT support\n", __FUNCTION__);
++	return -1;
++#endif
++}
++
++void
++serialVFD_close_serial (Driver *drvthis)
++{
++	PrivateData *p = drvthis->private_data;
++	if (p->fd >= 0)
++		close(p->fd);
+ }
+ 
++void
++serialVFD_close_parallel (Driver *drvthis)
++{
++#ifdef HAVE_PCSTYLE_LPT_CONTROL
++	PrivateData *p = drvthis->private_data;
+ 
++	debug( RPT_DEBUG, "%s: Closing parallelport at: 0x%X", __FUNCTION__, p->port);
++	if(port_deny_multiple(p->port,3)) {
++		report (RPT_ERR, "%s: port_deny_multiple() of 0x%X failed (%s)\n", __FUNCTION__, p->port, strerror (errno));
++	}
++#endif
++}
+--- ../cvs/lcdproc/server/drivers/serialVFD_io.h	2006-10-02 19:48:08.000000000 +0200
++++ ./server/drivers/serialVFD_io.h	2006-11-11 16:47:29.000000000 +0100
+@@ -44,12 +44,15 @@
+ 
+ int serialVFD_init_serial (Driver *drvthis);
+ int serialVFD_init_parallel (Driver *drvthis);
+-void serialVFD_write_serial (Driver *drvthis, char *dat, size_t length);
+-void serialVFD_write_parallel (Driver *drvthis, char *dat, size_t length);
++void serialVFD_write_serial (Driver *drvthis, unsigned char *dat, size_t length);
++void serialVFD_write_parallel (Driver *drvthis, unsigned char *dat, size_t length);
++void serialVFD_close_serial (Driver *drvthis);
++void serialVFD_close_parallel (Driver *drvthis);
+ 
+ typedef struct Port_fkt {
+-	void (*write_fkt) (Driver *drvthis, char *dat, size_t length);
++	void (*write_fkt) (Driver *drvthis, unsigned char *dat, size_t length);
+ 	int (*init_fkt) (Driver *drvthis);
++	void (*close_fkt) (Driver *drvthis);
+ } Port_fkt;
+ 
+ 
+@@ -57,8 +60,8 @@ static const Port_fkt Port_Function[] = 
+ 	// initialisation function
+ 	// write function
+ 
+-	{serialVFD_write_serial, serialVFD_init_serial},
+-	{serialVFD_write_parallel, serialVFD_init_parallel}
++	{serialVFD_write_serial, serialVFD_init_serial, serialVFD_close_serial},
++	{serialVFD_write_parallel, serialVFD_init_parallel, serialVFD_close_parallel}
+ };
+ 
+ 
+
+--- ../cvs/lcdproc/docs/lcdproc-user/drivers/serialVFD.docbook	2006-11-11 18:03:14.000000000 +0100
++++ ./docs/lcdproc-user/drivers/serialVFD.docbook	2006-10-02 19:48:01.000000000 +0200
+@@ -394,7 +394,7 @@ optional
+     <arg choice="plain"><replaceable>CUSTOM-CHARACTERS</replaceable></arg>
+   </term>
+   <listitem><para>
+-    Number of Custom-Characters [default: Display-<command>Type</command> dependent].
++Number of Custom-Characters [default: Display-<command>Type</command> dependent].
+   </para></listitem>
+ </varlistentry>
+ 
+@@ -420,7 +420,7 @@ optional
+   </term>
+   <listitem>
+     <para>
+-    Specifies the display type.[default: <literal>0</literal>]
++    Specifies the display type.[default: 0]
+     The following type codes are available:
+     </para>
+     <informaltable>
+@@ -463,7 +463,7 @@ optional
+     <arg choice="plain"><replaceable>BRIGHTNESS</replaceable></arg>
+   </term>
+   <listitem><para>
+-Set the initial brightness [default: <literal>1000</literal>; legal: <literal>0</literal> - <literal>1000</literal>]
++Set the initial brightness [default: 1000; legal: 0 - 1000]
+  (4 steps 0-250, 251-500, 501-750, 751-1000)
+   </para></listitem>
+ </varlistentry>
+@@ -474,7 +474,7 @@ Set the initial brightness [default: <li
+     <arg choice="plain"><replaceable>OFFBRIGHTNESS</replaceable></arg>
+   </term>
+   <listitem><para>
+-Set the initial off-brightness [default: <literal>0</literal>; legal: <literal>0</literal> - <literal>1000</literal>].
++Set the initial off-brightness [default: 0; legal: 0 - 1000].
+  This value is used when the display is normally
+  switched off in case LCDd is inactive.
+  (4 steps 0-250, 251-500, 501-750, 751-1000)
