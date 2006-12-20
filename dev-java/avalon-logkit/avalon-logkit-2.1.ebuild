@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-2.1.ebuild,v 1.2 2006/12/20 22:58:09 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-2.1.ebuild,v 1.3 2006/12/20 23:05:13 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -8,7 +8,7 @@ DESCRIPTION="Easy-to-use Java logging toolkit"
 HOMEPAGE="http://avalon.apache.org/"
 SRC_URI="mirror://apache/excalibur/excalibur-logkit/source/${P}-src.tar.gz"
 
-KEYWORDS="-*"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 LICENSE="Apache-2.0"
 SLOT="2.0"
 IUSE="doc source test"
@@ -36,9 +36,11 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	xml-rewrite2.py -f build.xml \
-		-c -e available -a ignoresystemclasses -v "true" \
-		-a classpathref -v 'build.classpath'|| die
+	xml-rewrite.py -f build.xml \
+		-c -e available -a ignoresystemclasses -v "true" || die
+
+	xml-rewrite.py -f build.xml	\
+		-c -e available -a classpathref -v 'build.classpath' || die
 
 	mkdir -p target/lib
 	cd target/lib
