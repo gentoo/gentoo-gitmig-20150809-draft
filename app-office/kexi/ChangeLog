@@ -1,6 +1,14 @@
 # ChangeLog for app-office/kexi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.63 2006/12/01 18:13:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.64 2006/12/20 02:27:12 masterdriverz Exp $
+
+  20 Dec 2006; Charlie Shepherd <masterdriverz@gentoo.org>
+  kexi-1.6.1.ebuild:
+  Add kdeenablefinal use flag; bug 135058
+
+  20 Dec 2006; Charlie Shepherd <masterdriverz@gentoo.org>
+  kexi-1.6.1.ebuild:
+  Add kdeenablefinal use flag; bug 135058
 
 *kexi-1.6.1 (01 Dec 2006)
 
