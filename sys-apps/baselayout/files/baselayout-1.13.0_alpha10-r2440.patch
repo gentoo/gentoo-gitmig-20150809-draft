@@ -1,0 +1,79 @@
+Index: net.Linux/pppd.sh
+===================================================================
+--- net.Linux/pppd.sh	(revision 2437)
++++ net.Linux/pppd.sh	(working copy)
+@@ -110,8 +110,9 @@
+ 	opts="linkname ${iface} ${opts}"
+ 
+ 	# Setup auth info
+-	[[ -n ${!username} ]] && opts="user '"${!username}"' ${opts}"
+-	opts="remotename ${iface} ${opts}"
++	if [[ -n ${!username} ]] ; then
++		opts="user '"${!username}"' remotename ${iface} ${opts}"
++	fi
+ 
+ 	# Load a custom interface configuration file if it exists
+ 	[[ -f "/etc/ppp/options.${iface}" ]] \
+Index: sbin/functions.sh
+===================================================================
+--- sbin/functions.sh	(revision 2437)
++++ sbin/functions.sh	(working copy)
+@@ -898,11 +898,10 @@
+ 	shift
+ 
+ 	for x in "$@" ; do
+-		if [[ -d ${x} ]] ; then
+-			is_older_than "${ref}" "${x}"/* && return 0
+-		elif [[ ${x} -nt ${ref} ]] ; then
+-			return 0
+-		fi
++		# We need to check the mtime if it's a directory too as the
++		# contents may have changed.
++		[[ ${x} -nt ${ref} ]] && return 0
++		[[ -d ${x} ]] && is_older_than "${ref}" "${x}"/* && return 0
+ 	done
+ 
+ 	return 1
+Index: sbin/rc
+===================================================================
+--- sbin/rc	(revision 2437)
++++ sbin/rc	(working copy)
+@@ -351,10 +351,12 @@
+ 
+ if [[ ${SOFTLEVEL} == "single" ]] ; then
+ 	rm -rf "${svcdir}/softscripts" "${svcdir}/softscripts.new"
+-	if is_vps_sys ; then
+-		halt -f
+-	elif [[ -x /sbin/sulogin ]] ; then
+-		/sbin/sulogin "${CONSOLE}"
++	if [[ ${RUNLEVEL} == "S" ]] ; then
++		if is_vps_sys ; then
++			halt -f
++		elif [[ -x /sbin/sulogin ]] ; then
++			/sbin/sulogin "${CONSOLE}"
++		fi
+ 	fi
+ 	exit 0
+ fi
+Index: sbin/depscan.sh
+===================================================================
+--- sbin/depscan.sh	(revision 2437)
++++ sbin/depscan.sh	(working copy)
+@@ -123,7 +123,7 @@
+ 
+ [[ -e "${mysvcdir}/deptree" ]] || update=true
+ if ! ${update} ; then
+-	check_files "${mysvcdir}/depcache" /etc/conf.d/* /etc/init.d/* \
++	check_files "${mysvcdir}/depcache" /etc/conf.d /etc/init.d \
+ 		/etc/rc.conf || update=true
+ 	if ${!update} ; then
+ 		if ! bash -n "${mysvcdir}/deptree" ; then
+@@ -167,7 +167,7 @@
+ 
+ [[ -e "${mysvcdir}/netdeptree" ]] || nupdate=true
+ if ! ${nupdate} ; then
+-	check_files "${mysvcdir}/netdepcache" "${svclib}"/net/* || nupdate=true
++	check_files "${mysvcdir}/netdepcache" "${svclib}"/net || nupdate=true
+ 	if ${!nupdate} ; then
+ 		if ! bash -n "${mysvcdir}/netdeptree" ; then
+ 			eerror "${mysvcdir}/netdeptree is not valid - recreating it"
