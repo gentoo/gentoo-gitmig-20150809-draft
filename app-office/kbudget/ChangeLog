@@ -1,9 +1,9 @@
 # ChangeLog for app-office/kbudget
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kbudget/ChangeLog,v 1.13 2006/12/20 00:55:02 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kbudget/ChangeLog,v 1.14 2006/12/20 01:00:56 masterdriverz Exp $
 
   20 Dec 2006; Charlie Shepherd <masterdriverz@gentoo.org>
-  files/digest-kbudget-0.6, Manifest:
+  kbudget-0.6.ebuild:
   Add kdeenablefinal use flag; bug 135058
 
   05 Oct 2006; Joshua Jackson <tsunam@gentoo.org> ChangeLog:
