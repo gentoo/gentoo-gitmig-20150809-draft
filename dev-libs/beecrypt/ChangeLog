@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/beecrypt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.44 2006/12/16 12:59:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.45 2006/12/20 20:20:53 sanchan Exp $
+
+  20 Dec 2006; Sandro Bonazzola <sanchan@gentoo.org>
+  beecrypt-4.1.2-r1.ebuild:
+  Fix incorrect behaviour with CHOST="i686-..." and CFLAGS="-march=athlon64
+  ...", bug #158109. Thanks to Robert Golding <robert.golding@gmail.com> for
+  reporting.
 
   16 Dec 2006; nixnut <nixnut@gentoo.org> beecrypt-4.1.2-r1.ebuild:
   Stable on ppc wrt bug 157858

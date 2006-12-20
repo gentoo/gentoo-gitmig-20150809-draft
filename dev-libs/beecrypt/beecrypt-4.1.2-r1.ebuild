@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-4.1.2-r1.ebuild,v 1.11 2006/12/16 12:59:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-4.1.2-r1.ebuild,v 1.12 2006/12/20 20:20:53 sanchan Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -51,7 +51,7 @@ src_unpack() {
 src_compile() {
 	local myarch=$(get-flag march)
 	[[ -z ${myarch} ]] && myarch=${CHOST%%-*}
-
+	[[ ${myarch} == "athlon64" ]] && [[ ${CHOST%%-*} != "x86_64" ]] && myarch=${CHOST%%-*}
 	econf \
 		$(use_enable threads) \
 		$(use_with !nocxx cplusplus) \
