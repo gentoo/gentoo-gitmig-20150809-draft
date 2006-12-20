@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tagsoup/tagsoup-0.10.2-r1.ebuild,v 1.3 2006/12/09 09:25:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tagsoup/tagsoup-0.10.2-r1.ebuild,v 1.4 2006/12/20 21:11:53 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="This is the home page of TagSoup, a SAX-compliant parser written in Java that, instead of parsing well-formed or valid XML, parses HTML as it is found in the wild: nasty and brutish, though quite often far from short."
+DESCRIPTION="A SAX-compliant parser written in Java."
 
 HOMEPAGE="http://mercury.ccil.org/~cowan/XML/tagsoup/"
 SRC_URI="http://mercury.ccil.org/~cowan/XML/tagsoup/${P}-src.zip"
@@ -12,6 +12,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="doc source"
+
+# Needs the xslt task so full ant here
 DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip
 	dev-java/ant
@@ -19,15 +21,13 @@ DEPEND=">=virtual/jdk-1.4
 RDEPEND=">=virtual/jre-1.4"
 
 src_compile() {
-	local antflags="dist"
-	use doc && antflags="${antflags} docs-api"
-	eant ${antflags} || die "compile failed"
+	eant $(use_doc docs-api) dist
 }
 
 src_install() {
 	java-pkg_newjar dist/lib/${P}.jar ${PN}.jar
 
 	dodoc CHANGES README TODO
-	use doc && java-pkg_dohtml -r docs/*
-	use source && java-pkg_dosrc src/java/*
+	use doc && java-pkg_dojavadoc docs/api
+	use source && java-pkg_dosrc src/{java,templates}/*
 }
