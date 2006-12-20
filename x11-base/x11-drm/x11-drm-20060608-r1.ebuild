@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20060608-r1.ebuild,v 1.1 2006/12/20 17:58:45 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20060608-r1.ebuild,v 1.2 2006/12/20 18:04:08 dberkholz Exp $
 
 inherit eutils x11 linux-mod
 
@@ -274,7 +274,7 @@ src_compile_linux() {
 		LINUXDIR="${KERNEL_DIR}" \
 		DRM_MODULES="${VIDCARDS}" \
 		modules || die_error
-	
+
 	if linux_chkconfig_present DRM
 	then
 		echo "Please disable in-kernel DRM support to use this package."
