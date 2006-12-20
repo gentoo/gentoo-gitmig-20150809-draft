@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/mailgraph-1.12.ebuild,v 1.4 2006/05/07 20:36:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/mailgraph-1.12.ebuild,v 1.5 2006/12/20 13:34:08 ferdy Exp $
 
 inherit eutils webapp
 
@@ -15,7 +15,8 @@ IUSE=""
 RDEPEND="dev-lang/perl
 	dev-perl/File-Tail
 	>=net-analyzer/rrdtool-1.2.2"
-DEPEND=">=sys-apps/sed-4"
+DEPEND=">=sys-apps/sed-4
+	>=net-analyzer/rrdtool-1.2.2"
 
 pkg_setup() {
 	webapp_pkg_setup
