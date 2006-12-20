@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-1.2-r1.ebuild,v 1.4 2006/10/17 03:15:36 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-1.2-r1.ebuild,v 1.5 2006/12/20 22:54:46 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -8,18 +8,18 @@ DESCRIPTION="LogKit is an easy-to-use Java logging toolkit designed for secure, 
 HOMEPAGE="http://avalon.apache.org/"
 SRC_URI="mirror://apache/avalon/logkit/v${PV}/LogKit-${PV}-src.tar.gz"
 COMMON_DEP="
-       javamail? (
-               dev-java/sun-jaf-bin
-               || (
-                       dev-java/sun-javamail-bin
-                       =dev-java/gnu-javamail-1.0*
-               )
-       )
-       jms? ( || (
-                       !ppc? ( dev-java/openjms )
-                       dev-java/sun-jms
-               )
-       )"
+	   javamail? (
+			   dev-java/sun-jaf-bin
+			   || (
+					   dev-java/sun-javamail-bin
+					   =dev-java/gnu-javamail-1.0*
+			   )
+	   )
+	   jms? ( || (
+					   !ppc? ( dev-java/openjms )
+					   dev-java/sun-jms
+			   )
+	   )"
 RDEPEND=">=virtual/jre-1.3
 	${COMMON_DEP}"
 
