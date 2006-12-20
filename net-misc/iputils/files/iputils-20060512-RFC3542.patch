@@ -1,0 +1,25 @@
+taken from upstream git repo
+
+--- ping6.c
++++ ping6.c
+@@ -80,6 +80,11 @@
+ #define SOL_ICMPV6 IPPROTO_ICMPV6
+ #endif
+ 
++/* RFC3542 */
++#ifndef ICMP6_DST_UNREACH_BEYONDSCOPE
++#define ICMP6_DST_UNREACH_BEYONDSCOPE ICMP6_DST_UNREACH_NOTNEIGHBOR
++#endif
++
+ #ifndef IPV6_SRCRT_TYPE_0
+ #define IPV6_SRCRT_TYPE_0	0
+ #endif
+@@ -829,7 +834,7 @@
+ 		case ICMP6_DST_UNREACH_ADMIN:
+ 			printf("Administratively prohibited");
+ 			break;
+-		case ICMP6_DST_UNREACH_NOTNEIGHBOR:
++		case ICMP6_DST_UNREACH_BEYONDSCOPE:
+ 			printf("Not neighbour");
+ 			break;
+ 		case ICMP6_DST_UNREACH_ADDR:
