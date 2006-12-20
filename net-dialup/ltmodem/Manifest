@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-AUX ltmodem-2.6-alk-8-kernel-changes.patch 1447 RMD160 4fe773191f9a3d6cea674d0d02d5c3b722c2be00 SHA1 9c0e34372031f2187c59a728eace6c89804d2bb9 SHA256 d8d980ba36056bbafface26739ff2cdbe39d52e905a1738f27dc3e314f7f1ea6
-MD5 e110bee99d5ffe6c738b21af7da7480f files/ltmodem-2.6-alk-8-kernel-changes.patch 1447
-RMD160 4fe773191f9a3d6cea674d0d02d5c3b722c2be00 files/ltmodem-2.6-alk-8-kernel-changes.patch 1447
-SHA256 d8d980ba36056bbafface26739ff2cdbe39d52e905a1738f27dc3e314f7f1ea6 files/ltmodem-2.6-alk-8-kernel-changes.patch 1447
+AUX ltmodem-2.6-alk-8-kernel-changes.patch 1504 RMD160 716b2341797addd64b35d830bc5446bb713bdecb SHA1 aaf528879b354d6ccc25462a2552ed109edd0703 SHA256 5423108f68bd71376b8feacb5a50f0056b5166575adb849dc8526ce4d651b4ca
+MD5 f7f23c67a757680a984bc0a79ab0ad94 files/ltmodem-2.6-alk-8-kernel-changes.patch 1504
+RMD160 716b2341797addd64b35d830bc5446bb713bdecb files/ltmodem-2.6-alk-8-kernel-changes.patch 1504
+SHA256 5423108f68bd71376b8feacb5a50f0056b5166575adb849dc8526ce4d651b4ca files/ltmodem-2.6-alk-8-kernel-changes.patch 1504
 AUX ltmodem_devfs 198 RMD160 7ee64ee62bb18124a4facd21bd76055fd4d8020d SHA1 d704f9fac0dbbcc9b5e6d0d9d430a59de8a02e41 SHA256 0ffed3039c0fa35e9f7b5a1c31c8dbf91d6ac3190c9df24aa2cd483ee001e0a1
 MD5 b990e7d5303c86f37ea21cf471d22e03 files/ltmodem_devfs 198
 RMD160 7ee64ee62bb18124a4facd21bd76055fd4d8020d files/ltmodem_devfs 198
@@ -19,10 +19,10 @@ EBUILD ltmodem-8.31_alpha10-r3.ebuild 3893 RMD160 49751a87a40296daec919f51fa03cb
 MD5 cce51c543aeb07d692ff76ae4130346c ltmodem-8.31_alpha10-r3.ebuild 3893
 RMD160 49751a87a40296daec919f51fa03cb2d7736b422 ltmodem-8.31_alpha10-r3.ebuild 3893
 SHA256 fba9614c17e9f5d6a831f95157da41ff175eb7be119b64bc442f7ad4bbe2cd1f ltmodem-8.31_alpha10-r3.ebuild 3893
-MISC ChangeLog 4590 RMD160 8e0e9e5eb9827f24bc25d368096694e40372d4e1 SHA1 f9f62bfb7a069746f38e4335839479a2c36d0c46 SHA256 4a827b9c798220c9b63dbcf137d57feee51deae7e2b80a0c16b23b6fdcb6abce
-MD5 966fde7110d705c6d674d62f312209a0 ChangeLog 4590
-RMD160 8e0e9e5eb9827f24bc25d368096694e40372d4e1 ChangeLog 4590
-SHA256 4a827b9c798220c9b63dbcf137d57feee51deae7e2b80a0c16b23b6fdcb6abce ChangeLog 4590
+MISC ChangeLog 4747 RMD160 9397b3f8c573ed76bae489a97e6fbf418061780f SHA1 4ea99c66a5d826cc5b914e6eaf8b7fc871071fdb SHA256 a7de46b3dc49de325aa652da15c77a61b5654d30d02302d1828dcb47d551b2f9
+MD5 5bf49b1ceaa3b519cc56da36f9a18838 ChangeLog 4747
+RMD160 9397b3f8c573ed76bae489a97e6fbf418061780f ChangeLog 4747
+SHA256 a7de46b3dc49de325aa652da15c77a61b5654d30d02302d1828dcb47d551b2f9 ChangeLog 4747
 MISC metadata.xml 163 RMD160 df94c60cc0bb7abe5913b464a33966b142b2fe1e SHA1 d8332605fd22c32f15438bbdf24aa622c3d2738a SHA256 1137a0fd866641cf719b0c2e9e77ca9fa4541a42f2cc851fe4659cf2677acca3
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 RMD160 df94c60cc0bb7abe5913b464a33966b142b2fe1e metadata.xml 163
@@ -31,9 +31,9 @@ MD5 953aea535f384008e6f92495cb13459d files/digest-ltmodem-8.31_alpha10-r3 503
 RMD160 5d46418bd85de3e040a27b24137321834499df54 files/digest-ltmodem-8.31_alpha10-r3 503
 SHA256 0047612953a721ec98fdafbbdcc15e4ddc34fe0e84085f001430219b0da705a6 files/digest-ltmodem-8.31_alpha10-r3 503
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
+Version: GnuPG v1.4.6 (GNU/Linux)
 
-iD8DBQFFcoNN3sf9c6kjmR8RAhSAAJ49gdnkG0KvMZ5h/PvvmFW92gJLswCfVfVD
-13RxdQW4LC4CRAYB20iqRJA=
-=yXq3
+iD8DBQFFiYcz3sf9c6kjmR8RAvShAJ9n8lByaJbl3EAbIoV4xi+LmTmk/gCgwoSA
+hI1nJnS6QaQPGSxlaLFVZ/Q=
+=KWZb
 -----END PGP SIGNATURE-----
