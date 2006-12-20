@@ -1,24 +1,34 @@
-diff -Nru work.old/slmodem-2.9.11-20061021/drivers/amrmo_init.c work/slmodem-2.9.11-20061021/drivers/amrmo_init.c
---- work.old/slmodem-2.9.11-20061021/drivers/amrmo_init.c	2006-10-21 22:15:44.000000000 +0300
-+++ work/slmodem-2.9.11-20061021/drivers/amrmo_init.c	2006-12-02 10:16:22.778347895 +0200
-@@ -43,7 +43,7 @@
+diff -Nru work.orig/slmodem-2.9.11-20061021/drivers/amrmo_init.c work/slmodem-2.9.11-20061021/drivers/amrmo_init.c
+--- work.orig/slmodem-2.9.11-20061021/drivers/amrmo_init.c	2006-12-20 20:26:38.000000000 +0200
++++ work/slmodem-2.9.11-20061021/drivers/amrmo_init.c	2006-12-20 20:28:01.000000000 +0200
+@@ -43,9 +43,11 @@
  
  /*****************************************************************************/
  
 -#include <linux/config.h>
-+#include <linux/autoconf.h>
- #include <linux/module.h>
+-#include <linux/module.h>
  #include <linux/version.h>
++#if LINUX_VERSION_CODE <= KERNEL_VERSION(2,6,18)
++#	include <linux/config.h>
++#endif
++#include <linux/module.h>
  #include <linux/init.h>
-diff -Nru work.old/ungrab-winmodem/ungrab-winmodem.c work/ungrab-winmodem/ungrab-winmodem.c
---- work.old/ungrab-winmodem/ungrab-winmodem.c	2005-09-06 16:29:11.000000000 +0300
-+++ work/ungrab-winmodem/ungrab-winmodem.c	2006-12-02 10:16:22.778347895 +0200
-@@ -11,7 +11,7 @@
+ #include <linux/pci.h>
+ #include <linux/kernel.h>
+diff -Nru work.orig/ungrab-winmodem/ungrab-winmodem.c work/ungrab-winmodem/ungrab-winmodem.c
+--- work.orig/ungrab-winmodem/ungrab-winmodem.c	2006-12-20 20:26:38.000000000 +0200
++++ work/ungrab-winmodem/ungrab-winmodem.c	2006-12-20 20:28:19.000000000 +0200
+@@ -11,9 +11,11 @@
   *
   */
  
 -#include <linux/config.h>
-+#include <linux/autoconf.h>
- #include <linux/module.h>
+-#include <linux/module.h>
  #include <linux/version.h>
++#if LINUX_VERSION_CODE <= KERNEL_VERSION(2,6,18)
++#	include <linux/config.h>
++#endif
++#include <linux/module.h>
  #include <linux/init.h>
+ #include <linux/pci.h>
+ #include <linux/kernel.h>
