@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-1.5.0.9.ebuild,v 1.1 2006/12/19 19:20:48 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-1.5.0.9.ebuild,v 1.2 2006/12/20 23:01:19 caster Exp $
 
-inherit eutils mozilla-launcher multilib
+inherit eutils mozilla-launcher multilib mozextension
 
 LANGS="bg ca cs da de el en-GB es-AR es-ES eu fi fr ga-IE gu-IN he hu it ja ko lt mk nb-NO nl pa-IN pl pt-BR ru sk sl sv-SE tr zh-CN"
 SHORTLANGS="es-ES ga-IE nb-NO sv-SE"
