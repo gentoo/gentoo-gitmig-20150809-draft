@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/aespipe/aespipe-2.2a.ebuild,v 1.8 2006/04/19 03:47:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/aespipe/aespipe-2.2a.ebuild,v 1.9 2006/12/20 00:20:14 kugelfang Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="Encrypts data from stdin to stdout."
 HOMEPAGE="http://loop-aes.sourceforge.net"
@@ -13,7 +15,7 @@ DEPEND=""
 S="${WORKDIR}/${PN}-v${PV}"
 
 src_compile() {
-	use static && export LDFLAGS="-static -s"
+	use static && append-ldflags "-static -s"
 
 	econf || die
 
