@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/terminal-0.2.5.8_rc2.ebuild,v 1.3 2006/12/10 20:33:32 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/terminal-0.2.5.8_rc2.ebuild,v 1.4 2006/12/20 16:26:46 welp Exp $
 
 inherit gnome2 xfce44 versionator
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.xfce.org"
 LICENSE="LGPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="dbus startup-notification xslt"
+IUSE="dbus startup-notification doc"
 
 RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/gtk+-2.6
@@ -35,12 +35,12 @@ RDEPEND=">=dev-libs/glib-2
 	virtual/x11 )
 	startup-notification? ( >=x11-libs/startup-notification-0.5 )
 	>=x11-libs/vte-0.11.11
-	xslt? ( dev-libs/libxslt )
+	doc? ( dev-libs/libxslt )
 	>=xfce-extra/exo-0.3.1.12_rc2"
 
 XFCE_CONFIG="$(use_enable startup-notification) $(use_enable dbus)"
 
-if use xslt; then
+if use doc; then
 	XFCE_CONFIG="${XFCE_CONFIG} --enable-xsltproc"
 fi
 
