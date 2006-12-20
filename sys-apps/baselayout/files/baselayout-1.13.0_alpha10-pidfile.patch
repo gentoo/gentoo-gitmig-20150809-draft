@@ -1,0 +1,15 @@
+Index: sh/rc-daemon.sh
+===================================================================
+--- sh/rc-daemon.sh	(revision 2440)
++++ sh/rc-daemon.sh	(working copy)
+@@ -166,8 +166,8 @@
+ 		return $?
+ 	fi
+ 	
+-	pid=$(cat "${pidfile}" 2>/dev/null)
+-	[[ -n ${pid} && " ${pids} " == *" ${pid} "* ]]
++	pid=$(sed '1q' "${pidfile}" 2>/dev/null)
++	[[ -n ${pid} && " ${pids} " == *" ${pid%% *} "* ]]
+ }
+ 
+ # int rc_start_daemon(void)
