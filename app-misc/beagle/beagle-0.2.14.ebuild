@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.14.ebuild,v 1.1 2006/12/16 02:28:10 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.14.ebuild,v 1.2 2006/12/20 18:28:24 metalgod Exp $
 
 inherit gnome.org eutils autotools mono
 
@@ -24,7 +24,6 @@ RDEPEND="
 	>=gnome-base/librsvg-2.0
 	>=media-libs/libexif-0.6.0
 	>=dev-libs/libxml2-2.6.19
-	>=dev-dotnet/gsf-sharp-0.6
 
 	||		( 	>=dev-db/sqlite-3.3.1
 				=dev-db/sqlite-2* )
@@ -45,6 +44,7 @@ RDEPEND="
 				>=dev-dotnet/gconf-sharp-2.3 )
 
 	ole?	(	>=app-text/wv-1.2.0
+				>=dev-dotnet/gsf-sharp-0.6
 				>=app-office/gnumeric-1.4.3-r3 )
 	pdf?	(	>=app-text/poppler-0.5.1 )
 	chm?	(	app-doc/chmlib )
