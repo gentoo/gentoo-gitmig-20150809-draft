@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p12288.ebuild,v 1.1 2006/12/18 18:41:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p12288.ebuild,v 1.2 2006/12/20 08:05:24 cardoe Exp $
 
 inherit mythtv flag-o-matic multilib eutils debug qt3
 
@@ -244,6 +244,8 @@ src_install() {
 pkg_preinst() {
 	enewuser mythtv -1 /bin/bash /home/mythtv ${MYTHTV_GROUPS} || die "Problem adding mythtv user"
 	usermod -a -G ${MYTHTV_GROUPS} mythtv
+
+	export CONFIG_PROTECT="${CONFIG_PROTECT} ${ROOT}/home/mythtv/"
 }
 
 pkg_postinst() {
