@@ -20,3 +20,4 @@ move sys-fs/ecryptfs-util sys-fs/ecryptfs-utils
 move dev-java/datavision-bin dev-java/datavision
 move dev-java/jgoodies-looks-bin dev-java/jgoodies-looks
 slotmove dev-libs/g-wrap 1.3 0
+move dev-ruby/rubygfe games-util/rubygfe
