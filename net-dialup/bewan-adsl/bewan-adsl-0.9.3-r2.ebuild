@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/bewan-adsl-0.9.3-r2.ebuild,v 1.3 2006/12/05 21:19:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/bewan-adsl-0.9.3-r2.ebuild,v 1.4 2006/12/20 19:33:17 mrness Exp $
 
 inherit eutils linux-mod
 
 DESCRIPTION="Bewan ADSL PCI&USB st driver"
 SRC_URI="http://www.bewan.com/bewan/drivers/A1012-A1006-A904-A888-A983-${PV}.tgz
-	mirror://gentoo/${P}-patches-20061205.tar.gz"
+	mirror://gentoo/${P}-patches-20061220.tar.gz"
 HOMEPAGE="http://www.bewan.com/"
 
 LICENSE="GPL-2"
