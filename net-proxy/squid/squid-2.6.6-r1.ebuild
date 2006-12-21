@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.6.6-r1.ebuild,v 1.1 2006/12/21 17:29:58 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.6.6-r1.ebuild,v 1.2 2006/12/21 17:34:40 mrness Exp $
 
 inherit eutils pam toolchain-funcs flag-o-matic autotools linux-info
 
@@ -130,10 +130,10 @@ src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
 	#need suid root for looking into /etc/shadow
-	fowners root:squid /usr/lib/squid/ncsa_auth
-	fowners root:squid /usr/lib/squid/pam_auth
-	fperms 4750 /usr/lib/squid/ncsa_auth
-	fperms 4750 /usr/lib/squid/pam_auth
+	fowners root:squid /usr/libexec/squid/ncsa_auth
+	fowners root:squid /usr/libexec/squid/pam_auth
+	fperms 4750 /usr/libexec/squid/ncsa_auth
+	fperms 4750 /usr/libexec/squid/pam_auth
 
 	#some clean ups
 	rm -f "${D}"/usr/bin/Run*
