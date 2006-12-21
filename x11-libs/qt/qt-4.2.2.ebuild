@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.2.ebuild,v 1.9 2006/12/19 19:11:20 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.2.ebuild,v 1.10 2006/12/21 13:21:10 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -205,12 +205,7 @@ src_install() {
 	export PATH="${S}/bin:${PATH}"
 	export LD_LIBRARY_PATH="${S}/lib:${LD_LIBRARY_PATH}"
 
-	make INSTALL_ROOT=${D} sub-tools-install_subtargets-ordered || die
-
-	if use examples; then
-		make INSTALL_ROOT=${D} sub-examples-install_subtargets || die
-	fi
-
+	make INSTALL_ROOT=${D} install_subtargets || die
 	make INSTALL_ROOT=${D} install_qmake || die
 	make INSTALL_ROOT=${D} install_mkspecs || die
 
