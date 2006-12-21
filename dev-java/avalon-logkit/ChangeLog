@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/avalon-logkit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/ChangeLog,v 1.30 2006/12/20 22:54:46 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/ChangeLog,v 1.31 2006/12/21 20:51:45 betelgeuse Exp $
+
+  21 Dec 2006; Petteri Räty <betelgeuse@gentoo.org>
+  avalon-logkit-2.1.ebuild:
+  Fixed a typo that prevented javadocs from installing. Fixes bug #158750.
 
 *avalon-logkit-2.1 (20 Dec 2006)
 
