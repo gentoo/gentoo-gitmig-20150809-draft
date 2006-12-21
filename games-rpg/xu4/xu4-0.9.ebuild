@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/xu4/xu4-0.9.ebuild,v 1.4 2004/10/22 11:30:34 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/xu4/xu4-0.9.ebuild,v 1.5 2006/12/21 23:29:29 tupone Exp $
 
 inherit eutils games
 
@@ -23,6 +23,14 @@ DEPEND="${RDEPEND}
 	app-arch/unzip"
 
 S="${WORKDIR}/u4"
+
+pkg_setup() {
+	if ! built_with_use media-libs/sdl-mixer timidity ; then
+		eerror "${PN} needs sdl-mixer compiled with timidity use-flag enabled!"
+		die "sdl-mixer without timidity detected"
+	fi
+	games_pkg_setup
+}
 
 src_unpack() {
 	# xu4 will read the data files right out of the zip files
