@@ -1,6 +1,10 @@
 # ChangeLog for app-text/scrollkeeper
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.69 2006/09/18 18:31:33 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.70 2006/12/21 02:33:10 uberlord Exp $
+
+  21 Dec 2006; Roy Marples <uberlord@gentoo.org>
+  scrollkeeper-0.3.14-r2.ebuild:
+  Added ~sparc-fbsd keyword.
 
   18 Sep 2006; Steev Klimaszewski <steev@gentoo.org>
   scrollkeeper-0.3.14-r2.ebuild:
