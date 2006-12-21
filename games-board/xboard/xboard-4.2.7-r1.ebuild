@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.2.7-r1.ebuild,v 1.1 2006/12/12 22:40:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.2.7-r1.ebuild,v 1.2 2006/12/21 05:12:14 mr_bones_ Exp $
 
-inherit eutils games
+inherit autotools eutils games
 
 DESCRIPTION="GUI for gnuchess and for internet chess servers"
 HOMEPAGE="http://www.tim-mann.org/xboard.html"
@@ -31,16 +31,19 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}*
+	eautoreconf
 }
 
 src_compile() {
-	egamesconf $(use_with Xaw3d) \
-		$(use_enable zippy) || die "econf failed"
+	egamesconf \
+		$(use_with Xaw3d) \
+		$(use_enable zippy) \
+		|| die
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc FAQ READ_ME ToDo ChangeLog*
 	use zippy && dodoc zippy.README
 	dohtml FAQ.html
