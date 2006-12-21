@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta5-r1.ebuild,v 1.2 2006/12/20 05:17:24 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta5-r1.ebuild,v 1.3 2006/12/21 14:06:56 gothgirl Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib mono autotools perl-app gnome2
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/gaim/${MY_PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="avahi bonjour cjk crypt dbus debug doc eds gadu gnutls gstreamer meanwhile mono nls perl silc startup-notification tcl tk xscreensaver custom-flags ssl qq msn gadu"
+IUSE="avahi bonjour cjk crypt dbus debug doc eds gadu gnutls gstreamer meanwhile mono nls perl silc startup-notification tcl tk xscreensaver custom-cflags spell ssl qq msn gadu"
 IUSE="${IUSE} gtk sasl console"
 
 RDEPEND="
@@ -103,9 +103,9 @@ print_gaim_warning() {
 	ewarn "Please read the gaim FAQ at http://gaim.sourceforge.net/faq.php"
 	ewarn
 	einfo
-	if  use custom-flags; then
+	if  use custom-cflags; then
 		einfo "Note that you have chosen NOT TO FILTER UNSTABLE C[XX]FLAGS."
-		einfo "DO NOT file bugs with GENTOO or UPSTREAM while using custom-flags"
+		einfo "DO NOT file bugs with GENTOO or UPSTREAM while using custom-cflags"
 		einfo
 	else
 		einfo "Note that we are now filtering all unstable flags in C[XX]FLAGS."
@@ -155,7 +155,7 @@ src_unpack() {
 
 src_compile() {
 	# Stabilize things, for your own good
-	if ! use custom-flags; then
+	if ! use custom-cflags; then
 		strip-flags
 	fi
 	replace-flags -O? -O2

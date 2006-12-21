@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.423 2006/12/20 05:10:49 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.424 2006/12/21 14:06:56 gothgirl Exp $
+
+  21 Dec 2006; <gothgirl@gentoo.org> gaim-2.0.0_beta5-r1.ebuild:
+  Resolving bug#155404 and bug#158697
 
 *gaim-2.0.0_beta5-r1 (20 Dec 2006)
 
