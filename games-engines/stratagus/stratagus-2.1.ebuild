@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.1.ebuild,v 1.15 2006/12/15 01:26:25 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.1.ebuild,v 1.16 2006/12/21 06:24:24 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug doc flac mp3 mikmod ogg opengl vorbis"
 
 RDEPEND="app-arch/bzip2
-	dev-lang/lua
+	>=dev-lang/lua-5
 	media-libs/libpng
 	media-libs/libsdl
 	sys-libs/zlib
