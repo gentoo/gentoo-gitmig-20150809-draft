@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-20060512.ebuild,v 1.1 2006/12/20 16:06:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-20060512.ebuild,v 1.2 2006/12/21 05:34:25 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -48,9 +48,8 @@ src_compile() {
 	# because when we emerge from a stage1/stage2, 
 	# it may not exist #23156
 	if use doc && type -p docbook2html ; then
-		emake -j1 html || die
+		emake -j1 html man || die
 	fi
-	emake -j1 man || die "make man failed"
 }
 
 src_install() {
@@ -68,11 +67,13 @@ src_install() {
 
 	dodoc INSTALL RELNOTES
 
-	rm -f doc/setkey.8
-	use ipv6 \
-		&& dosym ping.8 /usr/share/man/man8/ping6.8 \
-		|| rm -f doc/*6.8
-	doman doc/*.8
+	if use doc ; then
+		rm -f doc/setkey.8
+		use ipv6 \
+			&& dosym ping.8 /usr/share/man/man8/ping6.8 \
+			|| rm -f doc/*6.8
+		doman doc/*.8
 
-	use doc && dohtml doc/*.html
+		dohtml doc/*.html
+	fi
 }
