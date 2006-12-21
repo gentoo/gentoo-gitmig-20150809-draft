@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/log4j
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.46 2006/12/07 22:56:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.47 2006/12/21 21:25:52 betelgeuse Exp $
+
+*log4j-1.2.14 (21 Nov 2006)
+
+  21 Nov 2006; Petteri Räty <betelgeuse@gentoo.org> +log4j-1.2.14-r1.ebuild:
+  Forcing log4j to always build jaxp features so that JAVA_PKG_STRICT does
+  not exclude them. The >=1.4 class libraries have jaxp.
 
   07 Dec 2006; Petteri Räty <betelgeuse@gentoo.org> -log4j-1.2.11.ebuild,
   -log4j-1.2.12.ebuild, -log4j-1.2.13.ebuild, log4j-1.2.14.ebuild:
