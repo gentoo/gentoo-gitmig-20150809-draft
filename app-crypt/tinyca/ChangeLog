@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/tinyca
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tinyca/ChangeLog,v 1.13 2006/06/02 08:16:22 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tinyca/ChangeLog,v 1.14 2006/12/21 04:21:43 compnerd Exp $
+
+  21 Dec 2006; Saleem Abdulrasool <compnerd@gentoo.org>
+  -tinyca-0.5.4-r1.ebuild:
+  gnome-1.x removal
 
 *tinyca-2.0.7.3 (02 Jun 2006)
 
