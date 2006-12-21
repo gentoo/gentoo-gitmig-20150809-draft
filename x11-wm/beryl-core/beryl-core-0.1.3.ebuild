@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/beryl-core/beryl-core-0.1.3.ebuild,v 1.2 2006/12/19 21:56:33 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/beryl-core/beryl-core-0.1.3.ebuild,v 1.3 2006/12/21 15:10:12 corsair Exp $
 
 inherit autotools
 
@@ -11,7 +11,7 @@ SRC_URI="http://releases.beryl-project.org/${PV}/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND=">=x11-base/xorg-server-1.1.1-r1
