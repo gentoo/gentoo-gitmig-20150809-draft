@@ -1,7 +1,0 @@
-MD5 5806380ad2f4f13944e3d896ecd6e989 multi-gnome-terminal-1.6.2-r1.ebuild 2072
-MD5 c6908d4157f0fe8f88ccaea64f443340 ChangeLog 3671
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 d2af4e1acb1bc5842cf1b8b11cb80a3e files/digest-multi-gnome-terminal-1.6.2-r1 80
-MD5 d16349605d01294d01361abd286e360a files/multi-gnome-terminal-1.6.2-zvt_term.patch 366
-MD5 763affd4473fc41fbbfa967a23a9cbf0 files/multi-gnome-terminal-1.6.2-remove_debug.patch 2559
-MD5 a799552d002f0a012c2001e045e42a2c files/multi-gnome-terminal-1.6.2-gcc-3.4.patch 1250
