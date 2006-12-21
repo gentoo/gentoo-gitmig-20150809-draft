@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.2.1.ebuild,v 1.2 2006/12/08 07:12:16 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.2.1.ebuild,v 1.3 2006/12/21 22:05:32 compnerd Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -24,6 +24,7 @@ RDEPEND="!<dev-dotnet/pnet-0.6.12
 DEPEND="${RDEPEND}
 		  sys-devel/bc
 		>=dev-util/pkgconfig-0.19"
+PDEPEND="dev-dotnet/pe-format"
 
 # Parallel build unfriendly
 MAKEOPTS="${MAKEOPTS} -j1"
