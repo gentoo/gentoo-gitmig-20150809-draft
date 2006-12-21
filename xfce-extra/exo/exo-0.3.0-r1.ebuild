@@ -1,12 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/exo-0.3.0-r1.ebuild,v 1.3 2005/10/10 15:18:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/exo-0.3.0-r1.ebuild,v 1.4 2006/12/21 14:45:43 corsair Exp $
 
 inherit xfce42
 
 DESCRIPTION="Extension library for Xfce"
 HOMEPAGE="http://www.os-cillation.com/"
-KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~ia64 ~ppc ppc64 ~sparc ~x86"
 
 RDEPEND="|| ( ( x11-libs/libX11
 	x11-libs/libICE
