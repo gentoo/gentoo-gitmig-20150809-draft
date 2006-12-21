@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.96.ebuild,v 1.1 2006/11/24 15:40:11 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.96.ebuild,v 1.2 2006/12/21 20:13:56 tester Exp $
 
-inherit eutils fdo-mime
+inherit eutils fdo-mime gnome2-utils
 
 MY_P=${P/_rc/RC}
 S="${WORKDIR}/${MY_P}"
@@ -30,19 +30,28 @@ RDEPEND="${DEPEND}"
 src_install() {
 	make rpm-install INSTALL_PREFIX=${D}
 
-	domenu amsn.desktop
-	
-	dodir /usr/share/icons/hicolor
-	cp -r icons/*  ${D}/usr/share/icons/hicolor
-
 	dodoc AGREEMENT TODO README FAQ CREDITS
+
+	domenu amsn.desktop
+	sed -i -e s:.png:: ${D}/usr/share/applications/amsn.desktop
+	
+	cd icons
+	for i in *; do
+		if [ -e ${i}/msn.png ]; then
+			insinto /usr/share/icons/hicolor/${i}/apps
+			doins  ${i}/msn.png
+		fi
+	done
 }
 
 pkg_postinst() {
 	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
+
 	ewarn "You might have to remove ~/.amsn prior to running as user if amsn hangs on start-up."
 }
 
 pkg_postrm() {
 	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
 }
