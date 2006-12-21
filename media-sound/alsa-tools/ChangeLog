@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-tools
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.125 2006/12/11 19:45:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.126 2006/12/21 10:40:24 flameeyes Exp $
+
+  21 Dec 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -alsa-tools-1.0.10.ebuild, -alsa-tools-1.0.11.ebuild:
+  Winter cleaning, so to let arch teams know that they need to hurry up on
+  cleaning after themselves.
 
 *alsa-tools-1.0.14_rc1 (11 Dec 2006)
 
