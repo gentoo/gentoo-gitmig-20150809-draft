@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/freecraft-1.18-r3.ebuild,v 1.12 2006/10/04 22:40:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/freecraft-1.18-r3.ebuild,v 1.13 2006/12/21 08:21:53 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -33,7 +33,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PV}-setup.patch" \
-		"${FILESDIR}/${P}"-gcc41.patch
+		"${FILESDIR}/${P}"-gcc41.patch \
+		"${FILESDIR}/${P}"-Makefile.patch
 	env GENTOO_CFLAGS="${CFLAGS}" ./setup || die
 }
 
