@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.14.1.ebuild,v 1.5 2006/12/18 15:23:34 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.14.1.ebuild,v 1.6 2006/12/21 13:19:56 corsair Exp $
 
 inherit eutils gnome2 autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ppc ppc64 sparc x86"
 IUSE="debug doc python opengl"
 
 RDEPEND=">=dev-libs/glib-2.9
