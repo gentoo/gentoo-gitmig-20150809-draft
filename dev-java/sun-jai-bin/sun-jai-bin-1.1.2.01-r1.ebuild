@@ -1,25 +1,21 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/sun-jai-bin-1.1.2.01-r1.ebuild,v 1.3 2006/11/28 23:55:57 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/sun-jai-bin-1.1.2.01-r1.ebuild,v 1.4 2006/12/21 10:25:41 caster Exp $
 
 inherit java-pkg
 
+MY_PV=${PV//./_}
 DESCRIPTION="JAI is a class library for managing images."
-HOMEPAGE="http://java.sun.com/products/java-media/jai/"
-SRC_URI="jai-${PV//./_}-lib-linux-i586.tar.gz"
+HOMEPAGE="https://jai.dev.java.net/"
+SRC_URI="http://download.java.net/media/jai/builds/release/${MY_PV}/jai-${MY_PV}-lib-linux-i586.tar.gz"
 LICENSE="sun-bcla-jai"
 SLOT="0"
 KEYWORDS="amd64 ~ia64 ~ppc x86"
 DEPEND="app-arch/unzip"
 RDEPEND=">=virtual/jre-1.3"
 IUSE=""
-RESTRICT="fetch"
 
-S=${WORKDIR}/jai-${PV//./_}/
-
-pkg_nofetch() {
-	einfo "Please download ${SRC_URI} from ${HOMEPAGE} and place it in ${DISTDIR}"
-}
+S=${WORKDIR}/jai-${MY_PV}/
 
 src_unpack() {
 	unpack ${A}
