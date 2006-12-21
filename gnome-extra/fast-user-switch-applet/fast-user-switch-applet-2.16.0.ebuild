@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/fast-user-switch-applet/fast-user-switch-applet-2.16.0.ebuild,v 1.8 2006/12/18 15:43:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/fast-user-switch-applet/fast-user-switch-applet-2.16.0.ebuild,v 1.9 2006/12/21 13:41:34 corsair Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ppc sparc x86"
+KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="dev-libs/glib
