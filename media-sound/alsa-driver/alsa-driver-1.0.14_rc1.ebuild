@@ -1,11 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.14_rc1.ebuild,v 1.2 2006/12/21 15:57:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.14_rc1.ebuild,v 1.3 2006/12/21 16:13:55 flameeyes Exp $
 
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
-
-inherit linux-mod flag-o-matic eutils multilib autotools
+inherit linux-mod flag-o-matic eutils multilib
 
 MY_P="${P/_rc/rc}"
 S="${WORKDIR}/${MY_P}"
@@ -20,7 +17,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~x86"
 IUSE="oss debug"
 
-IUSE_CARDS="seq-dummy dummy virmidi mtpav mts64 serial-u16550 mpu401 serialmidi loopback
+IUSE_CARDS="seq-dummy dummy virmidi mtpav mts64 serial-u16550 mpu401 loopback
 portman2x4 pcsp ad1848-lib cs4231-lib adlib ad1816a ad1848 als100 azt2320 cmi8330
 cs4231 cs4232 cs4236 dt019x es968 es1688 es18xx gusclassic gusextreme gusmax
 interwave interwave-stb opl3sa2 opti92x-ad1848 opti92x-cs4231 opti93x miro
@@ -40,11 +37,10 @@ for iuse_card in ${IUSE_CARDS}; do
 	IUSE="${IUSE} alsa_cards_${iuse_card}"
 done
 
-
 RDEPEND="virtual/modutils
-	 ~media-sound/alsa-headers-${PV}
 	 !media-sound/snd-aoa"
 DEPEND="${RDEPEND}
+	~media-sound/alsa-headers-${PV}
 	virtual/linux-sources
 	sys-apps/debianutils"
 
@@ -104,22 +100,8 @@ src_unpack() {
 
 	cd "${S}"
 
-	if kernel_is ge 2 6 17 ; then
-		# These are needed for some drivers to build with kernel 2.6.17
-		# until a refreshed release of alsa-driver is done
-		epatch "${FILESDIR}/${PN}-1.0.11-kernel-2.6.17.patch"
-
-		# asihpi driver is broken, skip it until upstream releases something
-		# working.
-		sed -i -e 's:asihpi/::' "${S}/pci/Makefile"
-	fi
-
 	convert_to_m "${S}/Makefile"
 	sed -i -e 's:\(.*depmod\):#\1:' "${S}/Makefile"
-
-	emake -j1 all-deps || die "make all-deps failed"
-	eaclocal
-	eautoconf
 }
 
 src_compile() {
@@ -141,7 +123,7 @@ src_compile() {
 
 	ARCH=$(tc-arch-kernel)
 	ABI=${KERNEL_ABI}
-	emake LDFLAGS="$(raw-ldflags)" HOSTCC=$(tc-getBUILD_CC) CC=$(tc-getCC) || die "Make Failed"
+	emake LDFLAGS="$(raw-ldflags)" HOSTCC="$(tc-getBUILD_CC)" "CC=$(tc-getCC)" || die "Make Failed"
 	ARCH=$(tc-arch)
 	ABI=${myABI}
 }
