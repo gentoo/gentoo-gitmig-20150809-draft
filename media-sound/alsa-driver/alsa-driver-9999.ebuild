@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-9999.ebuild,v 1.1 2006/10/11 19:58:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-9999.ebuild,v 1.2 2006/12/21 15:57:53 flameeyes Exp $
 
 inherit linux-mod flag-o-matic eutils multilib autotools mercurial
 
@@ -66,11 +66,6 @@ pkg_setup() {
 src_unpack() {
 	mercurial_fetch http://hg.alsa-project.org/alsa-driver
 	mercurial_fetch http://hg.alsa-project.org/alsa-kernel alsa-driver/alsa-kernel
-
-	cd "${S}"
-	epatch "${FILESDIR}/${PN}-1.0.10_rc1-include.patch"
-
-	epatch "${FILESDIR}/${PN}-mcp55.patch"
 
 	convert_to_m "${S}/Makefile"
 	sed -i -e 's:\(.*depmod\):#\1:' "${S}/Makefile"

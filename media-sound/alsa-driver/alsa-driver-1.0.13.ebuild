@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.13.ebuild,v 1.6 2006/12/21 13:28:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.13.ebuild,v 1.7 2006/12/21 15:57:53 flameeyes Exp $
 
 inherit linux-mod flag-o-matic eutils multilib
 
@@ -70,10 +70,6 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
-
-	epatch "${FILESDIR}/${PN}-1.0.10_rc1-include.patch"
-
-	epatch "${FILESDIR}/${PN}-mcp55.patch"
 
 	if kernel_is ge 2 6 17 ; then
 		# These are needed for some drivers to build with kernel 2.6.17
