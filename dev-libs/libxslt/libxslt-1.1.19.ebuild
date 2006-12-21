@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.19.ebuild,v 1.1 2006/12/21 07:55:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.19.ebuild,v 1.2 2006/12/21 07:59:45 robbat2 Exp $
 
 inherit libtool gnome.org eutils python
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="crypt debug python"
 
-DEPEND=">=dev-libs/libxml2-2.6.25
+DEPEND=">=dev-libs/libxml2-2.6.27
 	crypt? ( >=dev-libs/libgcrypt-1.1.92 )
 	python? ( dev-lang/python )"
 
