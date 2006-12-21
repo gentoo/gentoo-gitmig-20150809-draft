@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX gst-plugins-gnomevfs-0.10.4-fix.diff 2273 RMD160 803817935d6a1a1007c1d4132fa99761ff975367 SHA1 7e58196c31b06f005b64e27b0c8c049bb0d85c6d SHA256 d0ef0fdbfc46e5849e8330582d6f690fa7cada6b164b6eeb85b8b5642b42af5b
 MD5 cadf70b870dbce1bc2812c599a30d5a6 files/gst-plugins-gnomevfs-0.10.4-fix.diff 2273
 RMD160 803817935d6a1a1007c1d4132fa99761ff975367 files/gst-plugins-gnomevfs-0.10.4-fix.diff 2273
@@ -15,10 +18,10 @@ EBUILD gst-plugins-gnomevfs-0.10.10.ebuild 483 RMD160 7a58c56bfe88752db0f4b00d65
 MD5 1aebcc3eb92e446a0535b0690e8e384d gst-plugins-gnomevfs-0.10.10.ebuild 483
 RMD160 7a58c56bfe88752db0f4b00d6579bf7a22c22afb gst-plugins-gnomevfs-0.10.10.ebuild 483
 SHA256 65bc27fc1c10fc24cb5b42af4022e7ee60e8603804623c046c3eaed9204f6c86 gst-plugins-gnomevfs-0.10.10.ebuild 483
-EBUILD gst-plugins-gnomevfs-0.10.11.ebuild 477 RMD160 c8272b388d4a141b7a788b0ba98dddc09de4283f SHA1 c7f953f333fbbd2b7116ce980e93bdacbd09c8aa SHA256 63920358a54e2e3ec38e68aae483f99aa93aec1ed63df81ba189189e035b301d
-MD5 3f166532c8c58e6bad95a2a6eceaaa0a gst-plugins-gnomevfs-0.10.11.ebuild 477
-RMD160 c8272b388d4a141b7a788b0ba98dddc09de4283f gst-plugins-gnomevfs-0.10.11.ebuild 477
-SHA256 63920358a54e2e3ec38e68aae483f99aa93aec1ed63df81ba189189e035b301d gst-plugins-gnomevfs-0.10.11.ebuild 477
+EBUILD gst-plugins-gnomevfs-0.10.11.ebuild 485 RMD160 14e03202d0f0d245c2cda3bf79093bf801761dba SHA1 d6a6f2f8f7ffbf1e901fc95a910ce9158d701891 SHA256 ed3a3263b6524a2df94241ead8592f1687c513cf57a704abb7cb782ba69d9a26
+MD5 208eb0ebefc946d72759416f41d2c5dd gst-plugins-gnomevfs-0.10.11.ebuild 485
+RMD160 14e03202d0f0d245c2cda3bf79093bf801761dba gst-plugins-gnomevfs-0.10.11.ebuild 485
+SHA256 ed3a3263b6524a2df94241ead8592f1687c513cf57a704abb7cb782ba69d9a26 gst-plugins-gnomevfs-0.10.11.ebuild 485
 EBUILD gst-plugins-gnomevfs-0.10.4.ebuild 597 RMD160 9d06793e4fff6383defaa0b43e79214de0a7cdb0 SHA1 f9f7fd8985013a8b860f8b49b6597a29219b3a22 SHA256 43f64c4d73044ec51aab98b1214d301992257f3caa9d4fd909c308e47229bac0
 MD5 65063ea4fa6792dfcd1572485b6e7657 gst-plugins-gnomevfs-0.10.4.ebuild 597
 RMD160 9d06793e4fff6383defaa0b43e79214de0a7cdb0 gst-plugins-gnomevfs-0.10.4.ebuild 597
@@ -47,10 +50,10 @@ EBUILD gst-plugins-gnomevfs-0.8.12.ebuild 417 RMD160 d362410e0ad1febb56c2eca087a
 MD5 ff8932a867953180b92869480d41df33 gst-plugins-gnomevfs-0.8.12.ebuild 417
 RMD160 d362410e0ad1febb56c2eca087ac625df123294a gst-plugins-gnomevfs-0.8.12.ebuild 417
 SHA256 3cdbc1069a4cf9a2cba5178e0edea0dfcf1054188a4aaae53d6d6c02a10fbeda gst-plugins-gnomevfs-0.8.12.ebuild 417
-MISC ChangeLog 11942 RMD160 bdc3bfe508ad28d3deea35744754c78c8a10e491 SHA1 bcc6b844131dce21229084009c8bd3b0eacb0ea0 SHA256 8b79e98050abb429a3d7d9dad056177e42e86eb0a6a122e2fdc777ac8ce12026
-MD5 79018b05e51ca5b644d80e684d5a92aa ChangeLog 11942
-RMD160 bdc3bfe508ad28d3deea35744754c78c8a10e491 ChangeLog 11942
-SHA256 8b79e98050abb429a3d7d9dad056177e42e86eb0a6a122e2fdc777ac8ce12026 ChangeLog 11942
+MISC ChangeLog 12054 RMD160 0b660c850786e5e598bdc8b2e20faa22f800f496 SHA1 0713064dcc320072f0dd627311d1839481ef1654 SHA256 52557de079dfd459e27c45661a1aabad83951813928bfc0b3060cfc4f36aa907
+MD5 e80e6b17112f377f79ac440a1cf806fa ChangeLog 12054
+RMD160 0b660c850786e5e598bdc8b2e20faa22f800f496 ChangeLog 12054
+SHA256 52557de079dfd459e27c45661a1aabad83951813928bfc0b3060cfc4f36aa907 ChangeLog 12054
 MISC metadata.xml 181 RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d SHA1 faf40c45bd66b0072b95556cf7ab097d3be19511 SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d metadata.xml 181
@@ -82,3 +85,10 @@ SHA256 e7d86d74a24b6133cfb03dded7830cdf6a1cc67109d1c87047ff45f816763f5c files/di
 MD5 0af04efffa5bac9074fe049aa3512fe1 files/digest-gst-plugins-gnomevfs-0.8.12 262
 RMD160 2131a3433f3081297079de64ac7f2335c1f82036 files/digest-gst-plugins-gnomevfs-0.8.12 262
 SHA256 bac5ba90fbb314a2f7ea2a53506021944ec1b8707b20d47545a23a6fd5f4cefd files/digest-gst-plugins-gnomevfs-0.8.12 262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.6-ecc01.6 (GNU/Linux)
+
+iD8DBQFFiplbKRy60XGEcJIRApeXAJ0TVszNAbPLCdGbyFAZFLmAWJqRYACePsmA
+pYyalG1D5XMBBUAedjDPvpY=
+=OpYf
+-----END PGP SIGNATURE-----
