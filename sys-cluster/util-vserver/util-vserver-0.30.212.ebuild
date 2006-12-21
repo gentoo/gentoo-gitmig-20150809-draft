@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.212.ebuild,v 1.1 2006/12/09 20:06:34 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.212.ebuild,v 1.2 2006/12/21 22:37:48 phreak Exp $
 
 inherit autotools eutils bash-completion
 
@@ -63,6 +63,11 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "install failed"
 	make DESTDIR="${D}" install-distribution || die "install-distribution failed"
+
+	# create the /sbin/vshelper symlink so we don't have to mess around with
+	# (a) echoing stuff to /etc/sysctl.conf
+	# (b) changing the default vshelper in the kernel sources.
+	dosym /usr/lib/util-vserver/vshelper /sbin/vshelper
 
 	# keep dirs
 	keepdir /var/run/vservers
