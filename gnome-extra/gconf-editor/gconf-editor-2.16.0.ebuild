@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/gconf-editor-2.16.0.ebuild,v 1.5 2006/12/18 15:28:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/gconf-editor-2.16.0.ebuild,v 1.6 2006/12/21 13:07:39 corsair Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.6
