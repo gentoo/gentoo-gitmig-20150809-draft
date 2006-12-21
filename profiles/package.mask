@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6480 2006/12/21 06:54:20 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6481 2006/12/21 15:37:51 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ## 
+
+# Diego Pettenò <flameeyes@gentoo.org> (21 Dec 2006)
+# Masked pending removal on 21 January 2007
+# Obsoleted by media-plugins/alsa-plugins with jack
+# useflag enabled.
+media-plugins/alsa-jack
 
 # Diego Pettenò <flameeyes@gentoo.org> (21 Dec 2006)
 # This is an experimental ebuild, with more USE flags and
