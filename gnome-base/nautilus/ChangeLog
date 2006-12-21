@@ -1,6 +1,14 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.208 2006/12/18 15:50:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.209 2006/12/21 05:34:52 compnerd Exp $
+
+  21 Dec 2006; Saleem Abdulrasool <compnerd@gentoo.org>
+  -files/nautilus-1.0.6-hyperbola.diff,
+  -files/nautilus-1.0.6-mozilla-1.0_rc1.diff,
+  -files/nautilus-1.0.6-mozilla-1.0_rc3.diff,
+  -files/nautilus-1.0.6-mozilla-embed-1.0_rc3.diff,
+  -nautilus-1.0.6-r10.ebuild:
+  gnome-1.x removal
 
   18 Dec 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   nautilus-2.16.3.ebuild:
