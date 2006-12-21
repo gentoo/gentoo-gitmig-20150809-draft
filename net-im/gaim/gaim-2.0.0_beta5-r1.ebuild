@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta5-r1.ebuild,v 1.3 2006/12/21 14:06:56 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta5-r1.ebuild,v 1.4 2006/12/21 17:43:06 gothgirl Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib mono autotools perl-app gnome2
 
@@ -141,11 +141,10 @@ pkg_setup() {
 	fi
 
 	if ! use gtk && ! use console; then
-		eerror
-		eerror "You Need to pick either gtk or console, You can have both."
-		eerror "Please enable either gtk or console useflag."
-		eerror
-		die "Configure failed"
+		einfo
+		elog "As you did not pick gtk or console use flag, building"
+		elog "console only."
+		einfo
 	fi
 }
 
@@ -210,11 +209,15 @@ src_compile() {
 			myconf="${myconf} --x-includes=/usr/include/X11"
 	fi
 
+	if ! use console && ! use gtk; then
+		myconf=${myconf} --enable-consoleui
+	else
+		myconf=${myconf} $(use_enable console consoleui) $(use_enable gtk gtkui)
+	fi
+
 	econf \
 		$(use_enable nls) \
 		$(use_enable perl) \
-		$(use_enable gtk gtkui) \
-		$(use_enable console consoleui) \
 		$(use_enable startup-notification) \
 		$(use_enable tcl) \
 		$(use_enable gtk sm) \
