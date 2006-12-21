@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/galago-sharp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/galago-sharp/ChangeLog,v 1.11 2006/12/19 22:38:57 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/galago-sharp/ChangeLog,v 1.12 2006/12/21 00:00:41 compnerd Exp $
+
+  21 Dec 2006; Saleem Abdulrasool <compnerd@gentoo.org>
+  galago-sharp-0.5.0.ebuild:
+  Add a nasty hack to prevent building of tests
 
   19 Dec 2006; Saleem Abdulrasool <compnerd@gentoo.org>
   galago-sharp-0.5.0.ebuild:

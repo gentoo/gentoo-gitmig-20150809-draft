@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/galago-sharp/galago-sharp-0.5.0.ebuild,v 1.4 2006/12/19 22:38:57 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/galago-sharp/galago-sharp-0.5.0.ebuild,v 1.5 2006/12/21 00:00:41 compnerd Exp $
 
 inherit eutils mono autotools
 
@@ -36,8 +36,11 @@ src_unpack() {
 	# Hard enable/disable tests
 	epatch ${FILESDIR}/${PN}-0.5.0-tests.patch
 
-	eautoconf
-	libtoolize --force --copy
+	# Nasty hack to prevent building of the tests
+	sed -i -e 's/ tests//' ${S}/Makefile.am
+
+	einfo "Rebuilding the build environment, this may take a few minutes..."
+	eautoreconf
 }
 
 src_compile() {
