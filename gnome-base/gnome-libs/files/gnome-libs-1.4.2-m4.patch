@@ -1,9 +1,0 @@
-Fix aclocal warning:
-/usr/share/aclocal/libart.m4:11: warning: underquoted definition of AM_PATH_LIBART
---- gnome-libs-1.4.2/libart_lgpl/libart.m4
-+++ gnome-libs-1.4.2/libart_lgpl/libart.m4
-@@ -10,3 +10,3 @@
- dnl
--AC_DEFUN(AM_PATH_LIBART,
-+AC_DEFUN([AM_PATH_LIBART],
- [dnl 
