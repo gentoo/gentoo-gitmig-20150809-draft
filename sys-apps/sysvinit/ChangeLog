@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/sysvinit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.35 2006/12/12 11:11:10 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.36 2006/12/21 10:48:03 uberlord Exp $
+
+*sysvinit-2.86-r7 (21 Dec 2006)
+
+  21 Dec 2006; Roy Marples <uberlord@gentoo.org>
+  +files/sysvinit-2.86-shutdown-single.patch, +sysvinit-2.86-r7.ebuild:
+  shutdown now goes into single user mode by default, #158615.
 
   12 Dec 2006; Roy Marples <uberlord@gentoo.org> sysvinit-2.86-r6.ebuild:
   Move sysvinit-2.86-r6 to ~ARCH.
