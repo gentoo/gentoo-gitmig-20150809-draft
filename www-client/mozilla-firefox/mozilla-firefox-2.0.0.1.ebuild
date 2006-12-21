@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.1.ebuild,v 1.1 2006/12/20 23:13:37 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.1.ebuild,v 1.2 2006/12/21 15:33:53 corsair Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -13,7 +13,7 @@ NOSHORTLANGS="en-GB es-AR pt-BR zh-TW"
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.org/projects/firefox/"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 IUSE="java mozdevelop mozbranding xforms restrict-javascript filepicker"
@@ -89,8 +89,6 @@ pkg_setup(){
 		einfo "a legal problem with mozilla foundation"
 	fi
 
-	[[ `uname -m` = "ppc64" ]] && die "Building on a ppc64 host requires linux32."
-
 	use moznopango && warn_mozilla_launcher_stub
 }
 
@@ -110,16 +108,6 @@ src_unpack() {
 
 	if use filepicker; then
 		epatch ${FILESDIR}/mozilla-filepicker.patch
-	fi
-
-	# Fix a compilation issue using the 32-bit userland with 64-bit kernel on
-	# PowerPC, because with that configuration, it detects a ppc64 system.
-	# -- hansmi, 2005-11-13
-	if use ppc && [[ "${PROFILE_ARCH}" == ppc64 ]]; then
-		sed -i -e "s#OS_TEST=\`uname -m\`\$#OS_TEST=${ARCH}#" \
-			"${S}"/configure
-		sed -i -e "s#OS_TEST :=.*uname -m.*\$#OS_TEST:=${ARCH}#" \
-			"${S}"/security/coreconf/arch.mk
 	fi
 
 	eautoreconf
