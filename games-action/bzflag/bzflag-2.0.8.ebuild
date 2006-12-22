@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-2.0.8.ebuild,v 1.4 2006/12/13 02:37:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-2.0.8.ebuild,v 1.5 2006/12/22 21:58:46 tupone Exp $
 
 inherit eutils flag-o-matic games
 
@@ -44,6 +44,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	epatch "${FILESDIR}/${P}"-gcc4.patch
 	sed -i configure \
 		-e 's:^CFLAGS=.*::' \
 		-e 's:^CXXFLAGS=.*::' \
