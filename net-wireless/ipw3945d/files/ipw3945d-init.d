@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945d/files/ipw3945d-init.d,v 1.3 2006/12/17 19:52:19 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945d/files/ipw3945d-init.d,v 1.4 2006/12/22 10:11:26 phreak Exp $
 
 PIDFILE=/var/run/ipw3945d/ipw3945d.pid
 
@@ -14,7 +14,7 @@ check() {
 	if [ -f "${PIDFILE}" ] ; then
 		eerror "The pidfile ($PIDFILE) is still present."
 		eerror "Please check that the daemon isn't running!"
-		exit 1
+		return 1
 	fi
 }
 
