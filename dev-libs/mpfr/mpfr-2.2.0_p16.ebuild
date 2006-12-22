@@ -1,7 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-2.2.0_p16.ebuild,v 1.3 2006/12/22 09:10:07 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-2.2.0_p16.ebuild,v 1.4 2006/12/22 10:29:47 vapier Exp $
 
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 inherit eutils flag-o-matic autotools
 
 MY_PV=${PV/_p*}
@@ -17,9 +19,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND=">=dev-libs/gmp-4.1.4-r2"
-DEPEND=">=dev-libs/gmp-4.1.4-r2
-		>=sys-devel/automake-1.9"
+DEPEND=">=dev-libs/gmp-4.1.4-r2"
 
 S=${WORKDIR}/${MY_P}
 
