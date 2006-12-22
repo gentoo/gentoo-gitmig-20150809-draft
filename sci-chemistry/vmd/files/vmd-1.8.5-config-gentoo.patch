@@ -1,6 +1,6 @@
 diff -Naur vmd-1.8.5/configure vmd-1.8.5-new/configure
 --- vmd-1.8.5/configure	2006-08-25 16:39:51.000000000 -0400
-+++ vmd-1.8.5-new/configure	2006-08-26 09:57:30.000000000 -0400
++++ vmd-1.8.5-new/configure	2006-12-22 08:26:32.000000000 -0500
 @@ -13,10 +13,10 @@
  $install_name = "vmd";
  
@@ -66,6 +66,17 @@ diff -Naur vmd-1.8.5/configure vmd-1.8.5-new/configure
  $fltk_libs        = "-lfltk -lX11";
  #@fltk_cc          = ('forms_ui.c');
  @fltk_ccpp        = ( 'ColorFltkMenu.C',
+@@ -797,8 +774,8 @@
+ #######################
+ $netcdf_defines     = "";
+ $netcdf_dir         = "$vmd_library_dir/netcdf";
+-$netcdf_include     = "-I$netcdf_dir/include";
+-$netcdf_library     = "-L$netcdf_dir/lib_$config_arch";
++$netcdf_include     = "-Igentoo-netcdf-include";
++$netcdf_library     = "-Lgentoo-netcdf-libs";
+ $netcdf_libs        = "-lnetcdf";
+ @netcdf_cc          = ();
+ @netcdf_ccpp        = ();
 @@ -859,9 +836,9 @@
  ###################
  $python_defines     = "-DVMDPYTHON";
