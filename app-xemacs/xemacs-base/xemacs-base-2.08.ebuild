@@ -1,0 +1,13 @@
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-base/xemacs-base-2.08.ebuild,v 1.1 2006/12/22 10:01:25 graaff Exp $
+
+SLOT="0"
+IUSE=""
+DESCRIPTION="Fundamental XEmacs support, you almost certainly need this."
+PKG_CAT="standard"
+
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+
+inherit xemacs-packages
+
