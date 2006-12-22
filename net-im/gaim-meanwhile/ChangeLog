@@ -1,6 +1,11 @@
 # ChangeLog for net-im/gaim-meanwhile
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-meanwhile/ChangeLog,v 1.25 2006/07/01 19:00:55 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-meanwhile/ChangeLog,v 1.26 2006/12/22 18:51:29 gothgirl Exp $
+
+  22 Dec 2006; <gothgirl@gentoo.org> gaim-meanwhile-1.2.3.ebuild,
+  -gaim-meanwhile-1.2.4.ebuild, -gaim-meanwhile-1.2.5.ebuild,
+  gaim-meanwhile-1.2.8.ebuild:
+  Adding pkgconfig dep and removing unnecessary ebuilds
 
   01 Jul 2006; gothgirl <gothgirl@gentoo.org> gaim-meanwhile-1.2.5.ebuild,
   gaim-meanwhile-1.2.8.ebuild:
