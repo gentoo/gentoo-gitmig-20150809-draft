@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6481 2006/12/21 15:37:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6482 2006/12/22 09:31:01 dragonheart Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ## 
+
+# Daniel Black <dragonheart@gentoo.org> (22 Dec 2006)
+# needs a bit more gcc compatibilty testing 
+>=dev-libs/mpfr-2.2.1
 
 # Diego Pettenò <flameeyes@gentoo.org> (21 Dec 2006)
 # Masked pending removal on 21 January 2007
