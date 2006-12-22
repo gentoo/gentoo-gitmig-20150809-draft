@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/sun-jai-bin-1.1.2.01-r1.ebuild,v 1.4 2006/12/21 10:25:41 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/sun-jai-bin-1.1.2.01-r1.ebuild,v 1.5 2006/12/22 23:44:27 caster Exp $
 
 inherit java-pkg
 
@@ -14,6 +14,7 @@ KEYWORDS="amd64 ~ia64 ~ppc x86"
 DEPEND="app-arch/unzip"
 RDEPEND=">=virtual/jre-1.3"
 IUSE=""
+RESTRICT="mirror"
 
 S=${WORKDIR}/jai-${MY_PV}/
 
