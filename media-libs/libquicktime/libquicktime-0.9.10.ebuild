@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.10.ebuild,v 1.8 2006/12/21 18:36:11 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.10.ebuild,v 1.9 2006/12/22 09:13:29 zzam Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -41,7 +41,8 @@ DEPEND="${RDEPEND}
 	X? (
 		x11-proto/videoproto
 		x11-proto/xextproto
-	)"
+	)
+	dev-util/pkgconfig"
 
 PROVIDE="virtual/quicktime"
 
