@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST LiVES-0.9.1-src.tar.bz2 1231884
 DIST LiVES-0.9.5-pre3.tar.bz2 1263053
 DIST LiVES-0.9.5.tar.bz2 1424494
@@ -38,3 +41,10 @@ SHA256 252279da182d0aba8542d8467a835e22648c5549bfcfcd2faf3655f5eaf3cbe9 files/di
 MD5 46708d277cd66587ab41a6b6ed3325ba files/digest-lives-0.9.7 241
 RMD160 15b749ace35ad10becea295a1a5ed14475204bcc files/digest-lives-0.9.7 241
 SHA256 4cea591228ce488cc9515d54a81b58a235ccd99636a8f9d917e248a32ddabdf7 files/digest-lives-0.9.7 241
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.6 (GNU/Linux)
+
+iD8DBQFFjCOfI1lqEGTUzyQRAu/XAJ4vKX1svTMosgzaQEpJ72xmjCwJpQCfXsY6
+tSXxs9BGK//9dXKXB7g3pmE=
+=KNMI
+-----END PGP SIGNATURE-----
