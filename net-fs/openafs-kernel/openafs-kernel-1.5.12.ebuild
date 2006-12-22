@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.5.12.ebuild,v 1.1 2006/12/03 08:14:42 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.5.12.ebuild,v 1.2 2006/12/22 14:52:24 stefaan Exp $
 
 inherit eutils linux-mod versionator toolchain-funcs
 
@@ -31,6 +31,9 @@ src_unpack() {
 	unpack ${A}; cd ${S}
 
 	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}
+
+	# fix unresolved symbol on amd64 (bug #149274)
+	epatch ${FILESDIR}/tasklist_lock_1.5.12.patch
 
 	./regen.sh || die "Failed: regenerating configure script"
 }

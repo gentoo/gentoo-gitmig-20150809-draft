@@ -1,0 +1,15 @@
+--- src/afs/afs_osi_gcpags.c.old	2006-12-14 14:05:13.000000000 +0100
++++ src/afs/afs_osi_gcpags.c	2006-12-14 14:05:28.000000000 +0100
+@@ -226,11 +226,11 @@
+ #endif
+ 
+ #if defined(AFS_LINUX22_ENV)
++extern rwlock_t tasklist_lock __attribute__((weak));
+ void
+ afs_osi_TraverseProcTable()
+ {
+ #if !defined(LINUX_KEYRING_SUPPORT)
+-    extern rwlock_t tasklist_lock __attribute__((weak));
+     struct task_struct *p;
+  
+     if (&tasklist_lock)
