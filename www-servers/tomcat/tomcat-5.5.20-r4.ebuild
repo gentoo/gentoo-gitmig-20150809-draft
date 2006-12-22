@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r4.ebuild,v 1.2 2006/12/13 03:13:45 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r4.ebuild,v 1.3 2006/12/22 00:58:23 wltjr Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -51,7 +51,7 @@ DEPEND="java5? ( >=virtual/jdk-1.5 )
 if ! use java5; then
 	JAVA_PKG_NV_DEPEND="=virtual/jdk-1.4*"
 else
-	JAVA_PKG_NV_DEPEND="=virtual/jdk-1.5*"
+	JAVA_PKG_NV_DEPEND="=virtual/jdk-1.5"
 fi
 
 S=${WORKDIR}/${MY_P}
