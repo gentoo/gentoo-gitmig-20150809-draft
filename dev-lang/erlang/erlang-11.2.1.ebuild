@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.1.ebuild,v 1.9 2006/12/04 16:55:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.1.ebuild,v 1.10 2006/12/22 14:59:47 mabi Exp $
 
 inherit eutils multilib flag-o-matic elisp-common versionator
 
@@ -31,7 +31,7 @@ SRC_URI="http://www.erlang.org/download/${MY_P}.tar.gz
 
 LICENSE="EPL"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ppc sparc x86"
 IUSE="doc emacs java odbc ssl tk"
 
 RDEPEND=">=dev-lang/perl-5.6.1
