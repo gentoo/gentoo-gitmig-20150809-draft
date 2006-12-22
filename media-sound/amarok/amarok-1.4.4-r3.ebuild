@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.3-r1.ebuild,v 1.11 2006/12/22 16:06:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.4-r3.ebuild,v 1.1 2006/12/22 16:06:09 flameeyes Exp $
 
-LANGS="az bg br ca cs cy da de el en_GB es et fi fr ga gl he hi hu is it ja ka
-km ko lt ms nb nl nn pa pl pt pt_BR ro ru rw sl sr sr@Latn sv ta tg th tr uk uz
-zh_CN zh_TW"
+LANGS="af ar az bg br ca cs cy da de el en_GB es et fi fr ga gl he hi hu is it
+ja ka km ko lt ms nb nl nn pa pl pt pt_BR ro ru rw sk sl sq sr sr@Latn sv ta tg
+th tr uk uz zh_CN zh_TW"
 LANGS_DOC="da de es et fr it nl pl pt pt_BR ru sv"
 
 USE_KEG_PACKAGING=1
@@ -19,16 +19,17 @@ S="${WORKDIR}/${P/_/-}"
 DESCRIPTION="Advanced audio player based on KDE framework."
 HOMEPAGE="http://amarok.kde.org/"
 
-SRC_URI="mirror://kde/stable/amarok/${PV}/src/${MY_P}.tar.bz2"
+SRC_URI="mirror://kde/stable/amarok/${PV}/src/${MY_P}.tar.bz2
+	mirror://gentoo/${P}-gentoo.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="aac kde mysql noamazon opengl postgres
-visualization ipod ifp real njb"
+visualization ipod ifp real njb mtp musicbrainz"
 # kde: enables compilation of the konqueror sidebar plugin
 
-DEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase ) )
+RDEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase ) )
 	>=media-libs/xine-lib-1.1.2_pre20060328-r8
 	>=media-libs/taglib-1.4
 	mysql? ( >=virtual/mysql-4.0 )
@@ -40,21 +41,18 @@ DEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase ) )
 	aac? ( media-libs/libmp4v2 )
 	ifp? ( media-libs/libifp )
 	real? ( media-video/realplayer )
-	njb? ( >=media-libs/libnjb-2.2.4 )"
+	njb? ( >=media-libs/libnjb-2.2.4 )
+	mtp? ( media-libs/libmtp )
+	musicbrainz? ( media-libs/tunepimp )
+	=dev-lang/ruby-1.8*"
 
-RDEPEND="${DEPEND}
-	dev-lang/ruby"
-
-DEPEND="${DEPEND}
-	>=dev-util/pkgconfig-0.9.0"
-
-PATCHES="${FILESDIR}/${P}-playlist-encoding.patch"
+DEPEND="${RDEPEND}"
 
 need-kde 3.3
 
-src_compile() {
-	append-flags -fno-inline
+PATCHES="${WORKDIR}/${P}-gentoo/*.patch"
 
+src_compile() {
 	# Extra, unsupported engines are forcefully disabled.
 	local myconf="$(use_enable mysql) $(use_enable postgres postgresql)
 				  $(use_with opengl) --without-xmms
@@ -65,8 +63,8 @@ src_compile() {
 				  $(use_with ifp)
 				  $(use_with real helix)
 				  $(use_with njb libnjb)
-				  --without-musicbrainz
-				  --without-libmtp
+				  $(use_with mtp libmtp)
+				  $(use_with musicbrainz)
 				  --with-xine
 				  --without-mas
 				  --without-nmm"
