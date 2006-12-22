@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/excalibur-logger/excalibur-logger-2.1.ebuild,v 1.1 2006/12/22 18:07:43 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/excalibur-logger/excalibur-logger-2.1.ebuild,v 1.2 2006/12/22 18:12:09 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -43,4 +43,5 @@ src_install() {
 	java-pkg_newjar target/${P}.jar
 	dodoc NOTICE.txt
 	use doc && java-pkg_dojavadoc dist/docs/api
+	use source && java-pkg_dosrc src/java/*
 }
