@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/saxon-8.4b-r2.ebuild,v 1.1 2006/12/22 16:42:18 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/saxon-8.4b-r2.ebuild,v 1.2 2006/12/22 16:50:35 betelgeuse Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -15,7 +15,6 @@ KEYWORDS="~ppc ~x86"
 IUSE="doc source"
 
 COMMON_DEP="
-	dev-java/sun-jaf
 	dev-java/xom
 	~dev-java/jdom-1.0
 	=dev-java/xml-commons-external-1.3*"
@@ -43,10 +42,11 @@ src_unpack() {
 
 	rm  *.jar
 	mkdir lib && cd lib
-	java-pkg_jar-from sun-jaf
 	java-pkg_jar-from jdom-1.0
 	java-pkg_jar-from xom
 	# Is not needed with 1.5 but gets pulled in by deps any way
+	# without this emerging with sun-jdk-1.4 fails with
+	# JAVA_PKG_STRICT
 	java-pkg_jar-from xml-commons-external-1.3
 }
 
