@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/aspectwerkz-2.0_rc2-r2.ebuild,v 1.2 2006/09/28 14:01:54 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/aspectwerkz-2.0_rc2-r2.ebuild,v 1.3 2006/12/22 22:34:26 betelgeuse Exp $
 
 inherit java-pkg-2 eutils
 # no java-ant-2 required since we patch build.xml to contain target/source
@@ -24,19 +24,12 @@ RDEPEND=">=virtual/jre-1.3
 	~dev-java/qdox-20050104"
 DEPEND="java5? ( >=virtual/jdk-1.5 )
 	!java5? ( >=virtual/jdk-1.3 )
+	>=dev-java/java-config-2.0.31
 	${RDEPEND}
 	>=dev-java/ant-core-1.5
 	app-arch/unzip
 	source? ( app-arch/zip )"
 IUSE="java5 source"
-
-# Explicitily set JDK depends for java-utils-2 to parse
-# because it isn't smart with use flags yet
-if use java5; then
-	JAVA_PKG_NV_DEPEND=">=virtual/jdk-1.5"
-else
-	JAVA_PKG_NV_DEPEND=">=virtual/jdk-1.4"
-fi
 
 S=${WORKDIR}/aw_2_0_2
 
