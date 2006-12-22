@@ -1,0 +1,29 @@
+Index: linuxplay.c
+===================================================================
+RCS file: /pack/xemacscvs/XEmacs/xemacs/src/linuxplay.c,v
+retrieving revision 1.13
+diff -u -B -r1.13 linuxplay.c
+--- linuxplay.c	2001/04/12 18:23:58	1.13
++++ linuxplay.c	2006/12/22 07:15:06
+@@ -290,7 +290,8 @@
+   fmtType        ffmt;
+   int            fmt,speed,tracks;
+   unsigned char *pptr,*optr,*cptr,*sptr;
+-  int            wrtn,rrtn,crtn,prtn;
++  int            wrtn,crtn;
++  size_t	 prtn,rrtn;
+   unsigned char         sndbuf[SNDBUFSZ];
+ 
+   /* We need to read at least the header information before we can start
+@@ -338,9 +339,9 @@
+                device; repeat until all data has been processed */
+   rrtn = length;
+   do {
+-    for (pptr = data; (prtn = parsesndfile((void **)&pptr,(size_t *)&rrtn,
++    for (pptr = data; (prtn = parsesndfile((void **)&pptr, &rrtn,
+ 					   (void **)&optr)) > 0; )
+-      for (cptr = optr; (crtn = sndcnv((void **)&cptr,(size_t *) &prtn,
++      for (cptr = optr; (crtn = sndcnv((void **)&cptr, &prtn,
+ 				       (void **)&sptr)) > 0; ) {
+ 	for (;;) {
+ 	  if ((wrtn = write(audio_fd,sptr,crtn)) < 0) {
