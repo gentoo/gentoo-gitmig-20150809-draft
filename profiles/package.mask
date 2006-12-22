@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6482 2006/12/22 09:31:01 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6483 2006/12/22 10:07:29 voxus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ## 
+
+# Konstantin V. Arkhipov <voxus@gentoo.org> (22 Dec 2006)
+# Stability issues on hardened systems: bugs #158217, #158664
+~net-dns/bind-9.2.7
+~net-dns/bind-tools-9.2.7
+~net-dns/bind-9.3.3
+~net-dns/bind-tools-9.3.3
 
 # Daniel Black <dragonheart@gentoo.org> (22 Dec 2006)
 # needs a bit more gcc compatibilty testing 
