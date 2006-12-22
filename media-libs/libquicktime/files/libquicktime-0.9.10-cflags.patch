@@ -1,0 +1,134 @@
+--- libquicktime-0.9.10/configure.ac	2006-12-22 14:37:15.446268575 +0100
++++ libquicktime-0.9.10-patched/configure.ac	2006-12-22 14:39:06.560191379 +0100
+@@ -174,16 +174,20 @@
+ 
+ if test "x$with_lame" != "xno"; then
+ 
+-OLD_CFLAGS=$CFLAGS
+-OLD_LIBS=$LIBS
++
++LAME_CFLAGS=""
+ 
+ if test x$have_vorbis = xtrue; then
+-LIBS="$LIBS -lmp3lame -lvorbis -lm"
++LAME_LIBS="-lmp3lame -lvorbis -lm"
+ else
+-LIBS="$LIBS -lmp3lame -lm"
++LAME_LIBS="$LIBS -lmp3lame -lm"
+ fi
+ 
++OLD_CFLAGS=$CFLAGS
++OLD_LIBS=$LIBS
++
+ dnl CFLAGS="$CFLAGS"
++LIBS="$LIBS $LAME_LIBS"
+ 
+ AC_MSG_CHECKING(for lame)
+ have_lame="false"
+@@ -210,7 +214,6 @@
+     # program could be run
+     have_lame="true"
+     AC_MSG_RESULT(yes)
+-    LAME_CFLAGS=$CFLAGS
+     LAME_LIBS=$LIBS
+ 
+   ],
+@@ -417,8 +420,11 @@
+ OLD_CFLAGS=$CFLAGS
+ OLD_LIBS=$LIBS
+ 
+-LIBS="-lpng -lm -lz"
+-CFLAGS=""
++PNG_LIBS="-lpng -lm -lz"
++PNG_CFLAGS=""
++
++LIBS="${PNG_LIBS}"
++CFLAGS="${CFLAGS} ${PNG_CFLAGS}"
+ 
+ AC_MSG_CHECKING(for libpng)
+ AC_TRY_LINK([#include <png.h>],
+@@ -430,9 +436,7 @@
+ 
+ case $have_libpng in
+   true) AC_DEFINE(HAVE_LIBPNG)
+-        AC_MSG_RESULT(yes)
+-	PNG_LIBS=$LIBS ;
+-	PNG_CFLAGS=$CFLAGS ;;
++        AC_MSG_RESULT(yes) ;;
+   false) AC_MSG_RESULT(no); PNG_LIBS=""; PNG_CFLAGS="";;
+ esac
+   
+@@ -463,8 +467,11 @@
+ OLD_CFLAGS=$CFLAGS
+ OLD_LIBS=$LIBS
+ 
+-LIBS="$LIBS -lfaac -lm"
+-CFLAGS="$CFLAGS"
++FAAC_LIBS="$LIBS -lfaac -lm"
++FAAC_CFLAGS=""
++
++LIBS="${LIBS} ${FAAC_LIBS}"
++CFLAGS="$CFLAGS ${FAAC_CFLAGS}"
+ 
+ AC_MSG_CHECKING(for faac)
+ AC_TRY_RUN([
+@@ -487,8 +494,6 @@
+     # program could be run
+     have_faac="true"
+     AC_MSG_RESULT(yes)
+-    FAAC_CFLAGS=$CFLAGS
+-    FAAC_LIBS=$LIBS
+ 
+   ],
+     # program could not be run
+@@ -532,8 +537,11 @@
+ OLD_CFLAGS=$CFLAGS
+ OLD_LIBS=$LIBS
+ 
+-CFLAGS="$CFLAGS"
+-LIBS="$LIBS -lfaad -lm"
++FAAD2_LIBS="-lfaad -lm"
++FAAD2_CFLAGS=""
++
++CFLAGS="$CFLAGS $FAAD2_CFLAGS"
++LIBS="$LIBS ${FAAD2_LIBS}"
+ 
+   AC_TRY_RUN([
+     #include "faad.h"
+@@ -556,8 +564,6 @@
+     # program could be run
+     have_faad2="true"
+     AC_MSG_RESULT(yes)
+-    FAAD2_CFLAGS=$CFLAGS
+-    FAAD2_LIBS=$LIBS
+ 
+   ],
+     # program could not be run
+@@ -622,9 +628,17 @@
+ 
+ COMMON_CFLAGS="-finline-functions -Wall -Winline"
+ 
+-dnl Optimizing flags
++if [[ ${CFLAGS} == "" ]]; then
++
++  dnl Optimizing flags
++
++  LQT_OPT_CFLAGS($host_cpu, ["-O3 -funroll-all-loops -fomit-frame-pointer"])
++
++  CFLAGS="$OPT_CFLAGS"
++
++fi
+ 
+-LQT_OPT_CFLAGS($host_cpu, ["-O3 -funroll-all-loops -fomit-frame-pointer"])
++CFLAGS="${CFLAGS} ${COMMON_CFLAGS}"
+ 
+ AH_TEMPLATE([NDEBUG],
+             [Causes debug code to e removed])
+@@ -633,7 +647,6 @@
+ AC_DEFINE(NDEBUG)
+ fi
+ 
+-CFLAGS="$OPT_CFLAGS $COMMON_CFLAGS"
+ 
+ # -L is required so that linker can find libquicktime when DESTDIR is used.
+ # libtool bug, documented at: http://www.geocrawler.com/mail/thread.php3?subject=install+phase+fails&list=404
