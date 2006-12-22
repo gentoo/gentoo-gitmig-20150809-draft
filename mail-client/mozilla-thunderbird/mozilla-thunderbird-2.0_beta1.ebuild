@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0_beta1.ebuild,v 1.1 2006/12/10 00:15:00 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0_beta1.ebuild,v 1.2 2006/12/22 15:58:17 tgall Exp $
 
 #
 # There are no linguas supported in alpha builds
@@ -12,15 +12,16 @@ inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedi
 
 #LANGS="bg ca cs da de el en-GB es-AR es-ES eu fi fr ga-IE gu-IN he hu it ja ko lt mk nb-NO nl pa-IN pl pt-BR ru sk sl sv-SE tr zh-CN"
 #SHORTLANGS="es-ES ga-IE nb-NO sv-SE"
-PVER="1.1"
+PVER="1.2"
 MY_PV=${PV/_beta1/b1}
 
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="http://www.mozilla.org/projects/thunderbird/"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/nightly/${MY_PV}-candidates/rc2/thunderbird-${MY_PV}-source.tar.bz2
+	http://dev.gentooexperimental.org/~anarchy/dist/${PN}-2.0_alpha1-patches-${PVER}.tar.bz2
 	mirror://gentoo/${PN}-2.0_alpha1-patches-${PVER}.tar.bz2"
 
-KEYWORDS="~amd64 ~ia64 ~mips ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 IUSE="ldap crypt branding mozdom replytolist"
