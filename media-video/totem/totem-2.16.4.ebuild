@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.16.4.ebuild,v 1.6 2006/12/20 19:35:05 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.16.4.ebuild,v 1.7 2006/12/22 21:00:08 chainsaw Exp $
 
 inherit autotools eutils multilib gnome2
 
@@ -37,7 +37,6 @@ RDEPEND=">=dev-libs/glib-2.8.0
 	gnome? ( >=gnome-base/nautilus-2.10 )
 	lirc? ( app-misc/lirc )
 	sparc? ( >=www-client/mozilla-firefox-1.5 )
-	ppc64? ( >=www-client/seamonkey-1.0 )
 	nsplugin?	(
 					firefox? ( >=www-client/mozilla-firefox-1.5 )
 					!sparc? ( !firefox? ( >=www-client/seamonkey-1.0 ) )
