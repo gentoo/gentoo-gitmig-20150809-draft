@@ -1,6 +1,15 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.235 2006/12/23 15:01:56 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.236 2006/12/23 16:10:26 jokey Exp $
+
+  23 Dec 2006; Markus Ullmann <jokey@gentoo.org> -openldap-2.1.30-r6.ebuild,
+  -openldap-2.1.30-r7.ebuild, openldap-2.1.30-r8.ebuild,
+  -openldap-2.2.28-r3.ebuild, -openldap-2.2.28-r4.ebuild,
+  openldap-2.2.28-r5.ebuild, -openldap-2.3.24-r2.ebuild,
+  -openldap-2.3.27.ebuild, -openldap-2.3.27-r1.ebuild,
+  -openldap-2.3.27-r2.ebuild, openldap-2.3.27-r3.ebuild,
+  -openldap-2.3.30.ebuild:
+  arm stable wrt bug# 154349 and security cleanup
 
 *openldap-2.3.31 (23 Dec 2006)
 

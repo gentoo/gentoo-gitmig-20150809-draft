@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.27-r3.ebuild,v 1.9 2006/11/27 01:13:18 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.27-r3.ebuild,v 1.10 2006/12/23 16:10:26 jokey Exp $
 
 inherit autotools eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -78,7 +78,7 @@ openldap_upgrade_howto() {
 }
 
 openldap_find_versiontags() {
-	# scan for all datadirs 
+	# scan for all datadirs
 	openldap_datadirs=""
 	if [ -f ${ROOT}/etc/openldap/slapd.conf ]; then
 		openldap_datadirs="$(awk '{if($1 == "directory") print $2 }' ${ROOT}/etc/openldap/slapd.conf)"
