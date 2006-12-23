@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/mmix-20060324.ebuild,v 1.3 2006/12/12 14:51:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/mmix-20060324.ebuild,v 1.4 2006/12/23 20:41:29 dertobi123 Exp $
 
 S=${WORKDIR}
 
@@ -14,7 +14,7 @@ RDEPEND=""
 
 SLOT="0"
 LICENSE="mmix"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="ppc ~x86"
 IUSE="doc"
 
 src_compile() {
