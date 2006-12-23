@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/libpqxx-2.6.8.ebuild,v 1.4 2006/12/21 20:41:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/libpqxx-2.6.8.ebuild,v 1.5 2006/12/23 21:00:49 dev-zero Exp $
 
 inherit eutils
 
@@ -51,5 +51,7 @@ src_test() {
 	epause 10
 
 	cd "${S}/test"
+	# Working around a mysterious bug in gcc-4.1
+	sed -i -e 's/-O2/-O1/' Makefile
 	emake -j1 check || die "emake check failed"
 }
