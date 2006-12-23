@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p12172.ebuild,v 1.1 2006/12/18 03:05:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p12172.ebuild,v 1.2 2006/12/23 21:32:56 cardoe Exp $
 
 inherit mythtv flag-o-matic multilib eutils debug qt3
 
 DESCRIPTION="Homebrew PVR project"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 
 IUSE_VIDEO_CARDS="video_cards_i810 video_cards_nvidia video_cards_via"
 
@@ -244,6 +244,8 @@ src_install() {
 pkg_preinst() {
 	enewuser mythtv -1 /bin/bash /home/mythtv ${MYTHTV_GROUPS} || die "Problem adding mythtv user"
 	usermod -a -G ${MYTHTV_GROUPS} mythtv
+
+	export CONFIG_PROTECT="${CONFIG_PROTECT} ${ROOT}/home/mythtv/"
 }
 
 pkg_postinst() {
