@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6483 2006/12/22 10:07:29 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6484 2006/12/23 16:26:42 jokey Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -276,10 +276,6 @@ net-ftp/kbear
 # Saleem Abdulrasool <compnerd@gentoo.org> (21 Nov 2006)
 # Mask for testing
 app-misc/tracker
-
-# Robin H. Johnson <robbat2@gentoo.org> (21 Nov 2006)
-# bug #149660, scheduled for removal 2006-Dec-21.
-net-nds/migrationtools
 
 # Robin H. Johnson <robbat2@gentoo.org> (21 Nov 2006)
 # Block. It breaks badly on bigendian boxes.
