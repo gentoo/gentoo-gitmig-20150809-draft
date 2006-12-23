@@ -1,0 +1,246 @@
+# patch to g-v-m 2.15.0 to fix the startx session bug which is caused by
+# gvm_local_user, where ut_line is returned as ttyN rather than :0.
+===================================================================
+RCS file: src/manager.c,v
+retrieving revision 1.152
+retrieving revision 1.153
+diff -u -r1.152 -r1.153
+--- src/manager.c	2006/08/07 13:47:31	1.152
++++ src/manager.c	2006/08/11 18:01:08	1.153
+@@ -1717,6 +1717,58 @@
+ }
+ 
+ 
++static gboolean
++gvm_mount_options (GPtrArray *options, guint32 opts, const char *type, const char *where)
++{
++	char *option, *key, *tmp, *p;
++	GSList *list, *l, *n;
++	GConfClient *gconf;
++	const char *dir;
++	
++	if (!strncmp (where, "/org/freedesktop/Hal/", 21)) {
++		/* flatten the UDI */
++		dir = p = tmp = g_strdup (where);
++		while (*p != '\0') {
++			if (*p == '/')
++				*p = '_';
++			p++;
++		}
++	} else {
++		dir = where;
++		tmp = NULL;
++	}
++	
++	key = g_strdup_printf ("/system/storage/%s/%s/mount_options", type, dir);
++	g_free (tmp);
++	
++	gconf = gconf_client_get_default ();
++	list = gconf_client_get_list (gconf, key, GCONF_VALUE_STRING, NULL);
++	g_object_unref (gconf);
++	g_free (key);
++	
++	if (list == NULL) {
++		fprintf (stderr, "no mount options found for %s::%s\n", type, where);
++		return FALSE;
++	}
++	
++	for (l = list; l != NULL; l = n) {
++		option = l->data;
++		n = l->next;
++		
++		g_ptr_array_add (options, option);
++		
++		g_slist_free_1 (l);
++	}
++	
++	if (opts & MOUNT_UID) {
++		option = g_strdup_printf ("uid=%u", getuid ());
++		g_ptr_array_add (options, option);
++	}
++	
++	return TRUE;
++}
++
++
+ /*
+  * gvm_device_mount - mount the given device.
+  *
+@@ -1761,10 +1813,13 @@
+ 		
+ 		return retval;
+ 	} else {
+-		char *mount_point, *fstype, fmask_opt[12], *charset_opt = NULL;
++		char *mount_point, *fstype, *drive, **moptions, fmask_opt[12], *charset_opt = NULL;
+ 		DBusMessage *dmesg, *reply;
++		gboolean freev = FALSE;
+ 		GPtrArray *options;
++		guint32 opts = 0;
+ 		DBusError error;
++		size_t i, j;
+ 		
+ 		if (!(dmesg = dbus_message_new_method_call ("org.freedesktop.Hal", udi,
+ 							    "org.freedesktop.Hal.Device.Volume",
+@@ -1773,26 +1828,48 @@
+ 			return FALSE;
+ 		}
+ 		
++		if ((moptions = libhal_device_get_property_strlist (hal_ctx, udi, "volume.mount.valid_options", NULL))) {
++			for (i = 0; moptions[i]; i++) {
++				for (j = 0; j < G_N_ELEMENTS (mount_options); j++) {
++					if (!strcmp (moptions[i], mount_options[j].name))
++						opts |= mount_options[j].flag;
++				}
++			}
++			
++			libhal_free_string_array (moptions);
++		}
++		
+ 		options = g_ptr_array_new ();
++		
++		/* check volume-specific mount options */
++		if (gvm_mount_options (options, opts, "volumes", udi)) {
++			freev = TRUE;
++			goto mount;
++		}
++		
++		/* check drive specific mount options */
++		if ((drive = libhal_device_get_property_string (hal_ctx, udi, "block.storage_device", NULL))) {
++			if (gvm_mount_options (options, opts, "drives", drive)) {
++				libhal_free_string (drive);
++				freev = TRUE;
++				goto mount;
++			}
++			libhal_free_string (drive);
++		}
++		
+ 		if ((fstype = libhal_device_get_property_string (hal_ctx, udi, "volume.fstype", NULL))) {
+-			char **moptions = NULL;
+ 			const char *iocharset;
+-			guint32 opts = 0;
+ 			char uid[32];
+-			size_t i, j;
+ 			mode_t mask;
+ 			
+-			if ((moptions = libhal_device_get_property_strlist (hal_ctx, udi, "volume.mount.valid_options", NULL))) {
+-				for (i = 0; moptions[i]; i++) {
+-					for (j = 0; j < G_N_ELEMENTS (mount_options); j++) {
+-						if (!strcmp (moptions[i], mount_options[j].name))
+-							opts |= mount_options[j].flag;
+-					}
+-				}
+-				
+-				libhal_free_string_array (moptions);
++			/* fall back to using fstype-specific mount options */
++			if (gvm_mount_options (options, opts, "default_options", fstype)) {
++				libhal_free_string (fstype);
++				freev = TRUE;
++				goto mount;
+ 			}
+ 			
++			/* take our best guess at what the user would want */
+ 			if (!strcmp (fstype, "vfat")) {
+ 				if (opts & MOUNT_NOEXEC)
+ 					g_ptr_array_add (options, "noexec");
+@@ -1843,9 +1920,11 @@
+ 				g_ptr_array_add (options, uid);
+ 			}
+ 			
+-			g_free (fstype);
++			libhal_free_string (fstype);
+ 		}
+ 		
++	mount:
++		
+ 		mount_point = "";
+ 		fstype = "";
+ 		
+@@ -1857,6 +1936,11 @@
+ 			return FALSE;
+ 		}
+ 		
++		if (freev) {
++			for (i = 0; i < options->len; i++)
++				g_free (options->pdata[i]);
++		}
++		
+ 		g_ptr_array_free (options, TRUE);
+ 		g_free (charset_opt);
+ 		
+@@ -3080,31 +3164,64 @@
+ }
+ 
+ 
++enum {
++	LOCAL_USER_CHECKED = (1 << 0),
++	LOCAL_USER_FOUND   = (1 << 1)
++};
++
+ /* checks that the user is logged-in at a local X session (which does not necessarily infer an *active* session) */
+ static gboolean
+ gvm_local_user (void)
+ {
+-	gboolean local = FALSE;
++	static guint32 local = 0;
++	struct dirent *dent;
+ 	struct utmp *utmp;
+ 	const char *user;
+-	size_t ulen;
++	char *vtend;
++	size_t n;
++	DIR *dir;
++	int vt;
++	
++	if (local & LOCAL_USER_CHECKED)
++		return (local & LOCAL_USER_FOUND);
+ 	
+ 	user = g_get_user_name ();
+-	ulen = strlen (user);
++	n = strlen (user);
+ 	
+-	setutent ();
++	if (!(dir = opendir (GVM_CONSOLE_AUTH_DIR)))
++		goto fallback;
+ 	
+-	while (!local && (utmp = getutent ())) {
+-		if (utmp->ut_type != USER_PROCESS || strncmp (utmp->ut_user, user, ulen) != 0)
+-			continue;
++	/* this works for pam_console ($path/user) and pam_foreground ($path/user:vt) - see bug #336932 */
++	while ((dent = readdir (dir))) {
++                if (!strncmp (user, dent->d_name, n) && dent->d_name[n] == '\0'
++		    || (dent->d_name[n] == ':' && ((vt = strtol (dent->d_name + n + 1, &vtend, 10)) >= 0) && *vtend == '\0')) {
++			local = LOCAL_USER_FOUND;
++			break;
++		}
++	}
++	
++	closedir (dir);
++	
++ fallback:
++	
++	if (!(local & LOCAL_USER_FOUND)) {
++		setutent ();
++		
++		while (!(local & LOCAL_USER_FOUND) && (utmp = getutent ())) {
++			if (utmp->ut_type != USER_PROCESS || strncmp (utmp->ut_user, user, n) != 0)
++				continue;
++			
++			/* only accept local X sessions or local tty's (user started X via `startx`) */
++			local = utmp->ut_line[0] == ':' && utmp->ut_line[1] >= '0' && utmp->ut_line[1] <= '9'
++				|| !strncmp (utmp->ut_line, "tty", 3) ? LOCAL_USER_FOUND : 0;
++		}
+ 		
+-		/* only accept local X sessions */
+-		local = utmp->ut_line[0] == ':' && utmp->ut_line[1] >= '0' && utmp->ut_line[1] <= '9';
++		endutent ();
+ 	}
+ 	
+-	endutent ();
++	local |= LOCAL_USER_CHECKED;
+ 	
+-	return local;
++	return (local & LOCAL_USER_FOUND);
+ }
+ 
+ /* checks that the user is at the local active X session */
+
