@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/gpsim
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.24 2006/11/29 12:21:40 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.25 2006/12/23 21:34:35 dertobi123 Exp $
+
+  23 Dec 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  gpsim-0.21.11-r1.ebuild:
+  Stable on ppc wrt bug #146422.
 
   29 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
   gpsim-0.21.11-r1.ebuild:
