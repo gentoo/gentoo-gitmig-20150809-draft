@@ -1,24 +1,28 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.28-r6.ebuild,v 1.1 2006/11/21 10:06:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.28-r6.ebuild,v 1.2 2006/12/23 20:20:55 jokey Exp $
 
-inherit flag-o-matic toolchain-funcs eutils multilib libtool
-
-OLD_PV="2.1.30"
-OLD_P="${PN}-${OLD_PV}"
-OLD_S="${WORKDIR}/${OLD_P}"
+WANT_AUTOMAKE="1.9"
+WANT_AUTOCONF="2.5"
+AT_M4DIR="./build"
+inherit autotools eutils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="LDAP suite of application and development tools"
 HOMEPAGE="http://www.OpenLDAP.org/"
-SRC_URI="mirror://openldap/openldap-release/${P}.tgz
-	mirror://openldap/openldap-release/${OLD_P}.tgz"
+SRC_URI="mirror://openldap/openldap-release/${P}.tgz"
 
 LICENSE="OPENLDAP"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="berkdb crypt debug gdbm ipv6 kerberos minimal odbc perl readline samba sasl slp ssl tcpd selinux"
 
-RDEPEND=">=sys-libs/ncurses-5.1
+# note that the 'samba' USE flag pulling in OpenSSL is NOT an error.  OpenLDAP
+# uses OpenSSL for LanMan/NTLM hashing (which is used in some enviroments, like
+# mine at work)!
+# Robin H. Johnson <robbat2@gentoo.org> March 8, 2004
+
+RDEPEND_BERKDB=">=sys-libs/db-4.2.52_p2-r1"
+DEPEND="sys-libs/ncurses
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	readline? ( >=sys-libs/readline-4.1 )
@@ -27,57 +31,23 @@ RDEPEND=">=sys-libs/ncurses-5.1
 	slp? ( >=net-libs/openslp-1.0 )
 	perl? ( >=dev-lang/perl-5.6 )
 	samba? ( >=dev-libs/openssl-0.9.6 )
-	kerberos? ( virtual/krb5 )"
-
-# note that the 'samba' USE flag pulling in OpenSSL is NOT an error.  OpenLDAP
-# uses OpenSSL for LanMan/NTLM hashing (which is used in some enviroments, like
-# mine at work)!
-# Robin H. Johnson <robbat2@gentoo.org> March 8, 2004
-
-# if USE=berkdb
-#	pull in sys-libs/db
-# else if USE=gdbm
-#	pull in sys-libs/gdbm
-# else
-#	pull in sys-libs/db
-RDEPEND_BERKDB=">=sys-libs/db-4.2.52_p2-r1"
-RDEPEND_GDBM=">=sys-libs/gdbm-1.8.0"
-RDEPEND="${RDEPEND}
+	kerberos? ( virtual/krb5 )
 	berkdb? ( ${RDEPEND_BERKDB} )
 	!berkdb? (
-		gdbm? ( ${RDEPEND_GDBM} )
+		gdbm? ( sys-libs/gdbm )
 		!gdbm? ( ${RDEPEND_BERKDB} )
 	)
 	selinux? ( sec-policy/selinux-openldap )"
-
-DEPEND="${RDEPEND}
-		>=sys-devel/libtool-1.5.18-r1
-		>=sys-apps/sed-4"
+RDEPEND="${DEPEND}"
 
 # for tracking versions
 OPENLDAP_VERSIONTAG="/var/lib/openldap-data/.version-tag"
 
-#DEPEND="${DEPEND} !<net-nds/openldap-2.2"
-
-openldap_upgrade_warning() {
-	ewarn "If you are upgrading from OpenLDAP-2.1, and run slapd on this"
-	ewarn "machine please see the ebuild for upgrade instructions, otherwise"
-	ewarn "you may corrupt your database!"
-	echo
-	ewarn "Part of the configuration file syntax has changed:"
-	ewarn "'access to attribute=' is now 'access to attrs='"
-	echo
-	ewarn "You must also run revdep-rebuild after upgrading from 2.1 to 2.2:"
-	ewarn "# revdep-rebuild --library liblber.so.2"
-	ewarn "# revdep-rebuild --library libldap.so.2"
-	ewarn "# revdep-rebuild --library libldap_r.so.2"
-}
-
 pkg_setup() {
 	# grab lines
 	openldap_datadirs=""
-	if [ -f ${ROOT}/etc/openldap/slapd.conf ]; then
-		openldap_datadirs="$(awk '{if($1 == "directory") print $2 }' ${ROOT}/etc/openldap/slapd.conf)"
+	if [ -f "${ROOT}etc/openldap/slapd.conf" ]; then
+		openldap_datadirs="$(awk '{if($1 == "directory") print $2 }' ${ROOT}etc/openldap/slapd.conf)"
 	fi
 	datafiles=""
 	for d in $openldap_datadirs; do
@@ -85,7 +55,7 @@ pkg_setup() {
 	done
 	# remove extra spaces
 	datafiles="$(echo ${datafiles// })"
-	# TODO: read OPENLDAP_VERSIONTAG instead in future
+
 	if has_version '<net-nds/openldap-2.2' && [ -n "$datafiles" ]; then
 		eerror "A possible old installation of OpenLDAP was detected"
 		eerror "As major version upgrades to 2.2 can corrupt your database"
@@ -109,17 +79,14 @@ pkg_setup() {
 		eerror ""
 		eerror "This install will not proceed until your old data directory"
 		eerror "is at least moved out of the way."
-		#exit 1
 		die "Warning direct upgrade unsafe!"
 	fi
-	openldap_upgrade_warning
 	if has_version "<=dev-lang/perl-5.8.8_rc1" && built_with_use dev-lang/perl minimal ; then
 		die "You must have a complete (USE='-minimal') Perl install to use the perl backend!"
 	fi
 }
 
 pkg_preinst() {
-	openldap_upgrade_warning
 	enewgroup ldap 439
 	enewuser ldap 439 -1 /usr/$(get_libdir)/openldap ldap
 }
@@ -132,85 +99,59 @@ src_unpack() {
 	# (the net result is that "passwd" can be used to change ldap passwords w/
 	#  proper pam support)
 	sed -i -e 's/$(SECURITY_LIBS) $(LDIF_LIBS) $(LUTIL_LIBS)/$(LUTIL_LIBS) $(SECURITY_LIBS) $(LDIF_LIBS)/' \
-		${S}/servers/slapd/Makefile.in
+		"${S}"/servers/slapd/Makefile.in
 
 	# Fix up DB-4.0 linking problem
 	# remember to autoconf! this expands configure by 500 lines (4 lines to m4
 	# stuff).
-	EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${PN}-2.2.14-db40.patch
+	EPATCH_OPTS="-p1 -d ${S}" epatch "${FILESDIR}"/${PN}-2.2.14-db40.patch
 
 	# supersedes old fix for bug #31202
-	EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${PN}-2.2.14-perlthreadsfix.patch
+	EPATCH_OPTS="-p1 -d ${S}" epatch "${FILESDIR}"/${PN}-2.2.14-perlthreadsfix.patch
 
 	# Security bug #96767
 	# http://bugzilla.padl.com/show_bug.cgi?id=210
-	EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${PN}-2.2.26-tls-fix-connection-test.patch
+	EPATCH_OPTS="-p1 -d ${S}" epatch "${FILESDIR}"/${PN}-2.2.26-tls-fix-connection-test.patch
 
 	# ensure correct SLAPI path by default
 	sed -i -e 's,\(#define LDAPI_SOCK\).*,\1 "/var/run/openldap/slapd.sock",' \
-		${S}/include/ldap_defaults.h
+		"${S}"/include/ldap_defaults.h
 
-	# fix up some automake stuff
-	#sed -i -e 's,^AC_CONFIG_HEADER,AM_CONFIG_HEADER,' ${S}/configure.in
-
-	# ximian connector 1.4.7 ntlm patch
-	#EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${PN}-2.2.28-ximian_connector.patch
-	EPATCH_OPTS="-p0 -d ${S}" epatch ${FILESDIR}/${PN}-2.2.6-ntlm.patch
+	EPATCH_OPTS="-p0 -d ${S}" epatch "${FILESDIR}"/${PN}-2.2.6-ntlm.patch
 
 	# fix up stuff for newer autoconf that simulates autoconf-2.13, but doesn't
 	# do it perfectly.
-	cd ${S}/build
+	cd "${S}"/build
 	ln -s shtool install
 	ln -s shtool install.sh
 
-	export WANT_AUTOMAKE="1.9"
-	export WANT_AUTOCONF="2.5"
-
 	# make files ready for new autoconf
-	EPATCH_OPTS="-p0 -d ${OLD_S}" epatch ${FILESDIR}/${PN}-2.1.30-autoconf25.patch
-	EPATCH_OPTS="-p0 -d ${S}" epatch ${FILESDIR}/${PN}-2.1.30-autoconf25.patch
+	EPATCH_OPTS="-p0 -d ${S}" epatch "${FILESDIR}"/${PN}-2.1.30-autoconf25.patch
 
 	# fix AC calls bug #114544
-	EPATCH_OPTS="-p0 -d ${OLD_S}/build" epatch ${FILESDIR}/${PN}-2.1.30-m4_underquoted.patch
-	EPATCH_OPTS="-p0 -d ${S}/build" epatch ${FILESDIR}/${PN}-2.1.30-m4_underquoted.patch
+	EPATCH_OPTS="-p0 -d ${S}/build" epatch "${FILESDIR}"/${PN}-2.1.30-m4_underquoted.patch
 
 	# make tests rpath ready
-	EPATCH_OPTS="-p0 -d ${S}/tests" epatch ${FILESDIR}/${PN}-2.2.28-tests.patch
+	EPATCH_OPTS="-p0 -d ${S}/tests" epatch "${FILESDIR}"/${PN}-2.2.28-tests.patch
 
 	# make autoconf-archive compatible
-	EPATCH_OPTS="-p0 -d ${OLD_S}" epatch ${FILESDIR}/${PN}-2.1.30-autoconf-archived-fix.patch
-	EPATCH_OPTS="-p0 -d ${S}" epatch ${FILESDIR}/${PN}-2.2.28-autoconf-archived-fix.patch
+	EPATCH_OPTS="-p0 -d ${S}" epatch "${FILESDIR}"/${PN}-2.2.28-autoconf-archived-fix.patch
 
 	# make autoconf-archive compatible
-	EPATCH_OPTS="-p1 -d ${OLD_S}" epatch ${FILESDIR}/${PN}-2.1.30-glibc24.patch
-	EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${PN}-2.1.30-glibc24.patch
+	EPATCH_OPTS="-p1 -d ${S}" epatch "${FILESDIR}"/${PN}-2.1.30-glibc24.patch
 
 	# add cleartext passwords backport bug #112554
-	EPATCH_OPTS="-p0 -d ${S}" epatch ${FILESDIR}/${PN}-2.2.28-cleartext-passwords.patch
+	EPATCH_OPTS="-p0 -d ${S}" epatch "${FILESDIR}"/${PN}-2.2.28-cleartext-passwords.patch
 
 	# CVE-2006-5779, bug #154349
-	EPATCH_OPTS="-p0 -d ${S}" epatch ${FILESDIR}/${PN}-2.3.27-CVE-2006-5779.patch
+	EPATCH_OPTS="-p0 -d ${S}" epatch "${FILESDIR}"/${PN}-2.3.27-CVE-2006-5779.patch
 
-	# reconf compat and current for RPATH solve
-	cd ${WORKDIR}/${OLD_P}
-	einfo "Running libtoolize on ${OLD_P}"
+	# reconf for RPATH solve
+	cd "${S}"
 	libtoolize --copy --force --automake
-	einfo "Running aclocal on ${OLD_P}"
-	aclocal || die "aclocal failed"
-	EPATCH_OPTS="-p0 -d ${WORKDIR}/${OLD_P}" epatch ${FILESDIR}/${PN}-2.1.30-rpath.patch
-	einfo "Running autoconf on ${OLD_P}"
-	autoconf || die "autoconf failed"
-
-	cd ${S}
-	einfo "Running libtoolize on ${P}"
-	libtoolize --copy --force --automake
-	einfo "Running aclocal on ${P}"
-	aclocal || die "aclocal failed"
-	EPATCH_OPTS="-p0 -d ${S}" epatch ${FILESDIR}/${PN}-2.1.30-rpath.patch
-	einfo "Running autoconf on ${P}"
-	autoconf || die "autoconf failed"
-
-	elibtoolize
+	eaclocal || die "aclocal failed"
+	EPATCH_OPTS="-p0 -d ${S}" epatch "${FILESDIR}"/${PN}-2.1.30-rpath.patch
+	eautoconf || die "autoconf failed"
 }
 
 src_compile() {
@@ -225,6 +166,7 @@ src_compile() {
 	# enable slapd/slurpd servers if not doing a minimal build
 	if ! use minimal; then
 		myconf="${myconf} --enable-slapd --enable-slurpd"
+
 		# base backend stuff
 		myconf="${myconf} --enable-ldbm"
 		if use berkdb; then
@@ -238,6 +180,7 @@ src_compile() {
 			ewarn "Berkeley DB for local backend"
 			myconf="${myconf} ${myconf_berkdb}"
 		fi
+
 		# extra backend stuff
 		myconf="${myconf} --enable-passwd=mod --enable-phonetic=mod"
 		myconf="${myconf} --enable-dnssrv=mod --enable-ldap"
@@ -245,23 +188,20 @@ src_compile() {
 		myconf="${myconf} --enable-null=mod --enable-shell=mod"
 		myconf="${myconf} `use_enable perl perl mod`"
 		myconf="${myconf} `use_enable odbc sql mod`"
+
 		# slapd options
 		myconf="${myconf} `use_enable crypt` `use_enable slp`"
 		myconf="${myconf} --enable-rewrite --enable-rlookups"
 		myconf="${myconf} --enable-aci --enable-modules"
 		myconf="${myconf} --enable-cleartext --enable-slapi"
 		myconf="${myconf} `use_with samba lmpasswd`"
-		# disabled options:
-		# --with-bdb-module=dynamic
-		# alas, for BSD only:
-		# --with-fetch
-		# slapd overlay options
 		myconf="${myconf} --enable-dyngroup --enable-proxycache"
 	else
 		myconf="${myconf} --disable-slapd --disable-slurpd"
 		myconf="${myconf} --disable-bdb --disable-monitor"
 		myconf="${myconf} --disable-slurpd"
 	fi
+
 	# basic functionality stuff
 	myconf="${myconf} --enable-syslog --enable-dynamic"
 	myconf="${myconf} --enable-local --enable-proctitle"
@@ -286,28 +226,11 @@ src_compile() {
 	# special kerberos stuff
 	tc-export CC
 	if ! use minimal && use kerberos ; then
-		cd ${S}/contrib/slapd-modules/passwd/ && \
+		cd "${S}"/contrib/slapd-modules/passwd/ && \
 		${CC} -shared -I../../../include ${CFLAGS} -fPIC \
 		-DHAVE_KRB5 -o pw-kerberos.so kerberos.c || \
 		die "failed to compile kerberos module"
 	fi
-
-	# now build old compat lib
-	cd ${OLD_S} && \
-	econf \
-		--disable-static --enable-shared \
-		--libexecdir=/usr/$(get_libdir)/openldap \
-		--disable-slapd --disable-aci --disable-cleartext --disable-crypt \
-		--disable-lmpasswd --disable-spasswd --enable-modules \
-		--disable-phonetic --disable-rewrite --disable-rlookups --disable-slp \
-		--disable-wrappers --disable-bdb --disable-dnssrv --disable-ldap \
-		--disable-ldbm --disable-meta --disable-monitor --disable-null \
-		--disable-passwd --disable-perl --disable-shell --disable-sql \
-		--disable-slurpd || die "configure-2.1 failed"
-	make depend || die "make-2.1 depend failed"
-	cd ${OLD_S}/libraries/liblber && make liblber.la || die "make-2.1 liblber.la failed"
-	cd ${OLD_S}/libraries/libldap && make libldap.la || die "make-2.1 libldap.la failed"
-	cd ${OLD_S}/libraries/libldap_r && make libldap_r.la || die "make-2.1 libldap_r.la failed"
 }
 
 src_test() {
@@ -318,7 +241,7 @@ src_test() {
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 
-	dodoc ANNOUNCEMENT CHANGES COPYRIGHT README LICENSE ${FILESDIR}/DB_CONFIG.fast.example
+	dodoc ANNOUNCEMENT CHANGES COPYRIGHT README LICENSE "${FILESDIR}"/DB_CONFIG.fast.example
 	docinto rfc ; dodoc doc/rfc/*.txt
 
 	# openldap modules go here
@@ -357,16 +280,16 @@ src_install() {
 		done
 		# install our own init scripts
 		exeinto /etc/init.d
-		newexe ${FILESDIR}/2.0/slapd slapd
-		newexe ${FILESDIR}/2.0/slurpd slurpd
+		newexe "${FILESDIR}"/2.0/slapd slapd
+		newexe "${FILESDIR}"/2.0/slurpd slurpd
 		if [ $(get_libdir) != lib ]; then
 			sed -e "s,/usr/lib/,/usr/$(get_libdir)/," -i ${D}/etc/init.d/{slapd,slurpd}
 		fi
 		insinto /etc/conf.d
-		newins ${FILESDIR}/2.0/slapd.conf slapd
-		if use kerberos && [ -f ${S}/contrib/slapd-modules/passwd/pw-kerberos.so ]; then
+		newins "${FILESDIR}"/2.0/slapd.conf slapd
+		if use kerberos && [ -f "${S}"/contrib/slapd-modules/passwd/pw-kerberos.so ]; then
 			insinto /usr/$(get_libdir)/openldap/openldap
-			doins ${S}/contrib/slapd-modules/passwd/pw-kerberos.so || \
+			doins "${S}"/contrib/slapd-modules/passwd/pw-kerberos.so || \
 			die "failed to install kerberos passwd module"
 		fi
 	fi
@@ -375,16 +298,13 @@ src_install() {
 	if use ssl || use samba; then
 		dodir /etc/openldap/ssl
 		exeinto /etc/openldap/ssl
-		#newexe ${FILESDIR}/gencert.sh-2.2.27 gencert.sh
-		doexe ${FILESDIR}/gencert.sh
+		doexe "${FILESDIR}"/gencert.sh
 	fi
 
-	dolib.so ${OLD_S}/libraries/liblber/.libs/liblber.so.2.0.130 || \
-	die "failed to install old liblber"
-	dolib.so ${OLD_S}/libraries/libldap/.libs/libldap.so.2.0.130 || \
-	die "failed to install old libldap"
-	dolib.so ${OLD_S}/libraries/libldap_r/.libs/libldap_r.so.2.0.130 || \
-	die "failed to install old libldap_r"
+	# keep old libs if needed
+	for each in lber.so.2.0.130 libldap.so.2.0.130 libldap_r.so.2.0.130 ; do
+		preserve_old_lib "${ROOT}usr/$(get_libdir)/${each}"
+	done
 }
 
 pkg_postinst() {
@@ -414,7 +334,6 @@ pkg_postinst() {
 		ewarn "Self-signed SSL certificates are treated harshly by OpenLDAP 2.[12]"
 		ewarn "add 'TLS_REQCERT never' if you want to use them."
 	fi
-	openldap_upgrade_warning
 
 	# Reference inclusion bug #77330
 	echo
@@ -426,4 +345,8 @@ pkg_postinst() {
 	echo
 	einfo "An example file for tuning BDB backends with openldap is:"
 	einfo "/usr/share/doc/${P}/DB_CONFIG.fast.example.gz"
+
+	for each in lber.so.2.0.130 libldap.so.2.0.130 libldap_r.so.2.0.130 ; do
+		preserve_old_lib_notify "${ROOT}usr/$(get_libdir)/${each}"
+	done
 }

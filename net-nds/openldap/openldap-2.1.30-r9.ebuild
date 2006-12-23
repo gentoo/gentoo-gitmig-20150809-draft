@@ -1,7 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.30-r9.ebuild,v 1.1 2006/11/21 10:06:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.30-r9.ebuild,v 1.2 2006/12/23 20:20:55 jokey Exp $
 
+WANT_AUTOMAKE="1.9"
+WANT_AUTOCONF="2.5"
+AT_M4DIR="./build"
 inherit eutils
 
 DESCRIPTION="LDAP suite of application and development tools"
@@ -13,8 +16,12 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="berkdb crypt debug gdbm ipv6 odbc perl readline samba sasl slp ssl tcpd selinux"
 
+# note that the 'samba' USE flag pulling in OpenSSL is NOT an error.  OpenLDAP
+# uses OpenSSL for LanMan/NTLM hashing (which is used in some enviroments, like
+# mine at work)!
+# Robin H. Johnson <robbat2@gentoo.org> March 8, 2004
+
 DEPEND=">=sys-libs/ncurses-5.1
-	>=sys-apps/sed-4
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	readline? ( >=sys-libs/readline-4.1 )
@@ -22,28 +29,14 @@ DEPEND=">=sys-libs/ncurses-5.1
 	odbc? ( dev-db/unixODBC )
 	slp? ( >=net-libs/openslp-1.0 )
 	perl? ( >=dev-lang/perl-5.6 )
-	samba? ( >=dev-libs/openssl-0.9.6 )"
-
-# note that the 'samba' USE flag pulling in OpenSSL is NOT an error.  OpenLDAP
-# uses OpenSSL for LanMan/NTLM hashing (which is used in some enviroments, like
-# mine at work)!
-# Robin H. Johnson <robbat2@gentoo.org> March 8, 2004
-
-# if USE=berkdb
-#	pull in sys-libs/db
-# else if USE=gdbm
-#	pull in sys-libs/gdbm
-# else
-#	pull in sys-libs/db
-DEPEND="${DEPEND}
+	samba? ( >=dev-libs/openssl-0.9.6 )
 	berkdb? ( >=sys-libs/db-4.1.25_p1-r3 )
 	!berkdb? (
 		gdbm? ( >=sys-libs/gdbm-1.8.0 )
 		!gdbm? ( >=sys-libs/db-4.1.25_p1-r3 )
 	)"
 
-RDEPEND="
-	${DEPEND}
+RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-openldap )"
 
 pkg_preinst() {
@@ -65,59 +58,52 @@ src_unpack() {
 	# (the net result is that "passwd" can be used to change ldap passwords w/
 	#  proper pam support)
 	sed -ie 's/$(SECURITY_LIBS) $(LDIF_LIBS) $(LUTIL_LIBS)/$(LUTIL_LIBS) $(SECURITY_LIBS) $(LDIF_LIBS)/' \
-		${S}/servers/slapd/Makefile.in
+		"${S}"/servers/slapd/Makefile.in
 
 	# Fix up DB-4.0 linking problem
 	# remember to autoconf! this expands configure by 500 lines (4 lines to m4
 	# stuff).
-	epatch ${FILESDIR}/${PN}-2.1.30-db40.patch
-	epatch ${FILESDIR}/${PN}-2.1.30-tls-activedirectory-hang-fix.patch
+	epatch "${FILESDIR}"/${PN}-2.1.30-db40.patch
+	epatch "${FILESDIR}"/${PN}-2.1.30-tls-activedirectory-hang-fix.patch
 
 	# Security bug #96767
 	# http://bugzilla.padl.com/show_bug.cgi?id=210
-	EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${PN}-2.2.26-tls-fix-connection-test.patch
+	EPATCH_OPTS="-p1 -d ${S}" epatch "${FILESDIR}"/${PN}-2.2.26-tls-fix-connection-test.patch
 
 	# supersedes old fix for bug #31202
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-2.1.27-perlthreadsfix.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-2.1.27-perlthreadsfix.patch
 
 	# fix up stuff for newer autoconf that simulates autoconf-2.13, but doesn't
 	# do it perfectly.
-	cd ${S}/build
+	cd "${S}"/build
 	ln -s shtool install
 	ln -s shtool install.sh
 
 	# ximian connector 1.4.7 ntlm patch
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-2.1.30-ximian_connector.patch
-
-	export WANT_AUTOMAKE="1.9"
-	export WANT_AUTOCONF="2.5"
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-2.1.30-ximian_connector.patch
 
 	#make files ready for new autoconf
-	EPATCH_OPTS="-p0 -d ${S}" epatch ${FILESDIR}/${PN}-2.1.30-autoconf25.patch
+	EPATCH_OPTS="-p0 -d ${S}" epatch "${FILESDIR}"/${PN}-2.1.30-autoconf25.patch
 
 	# fix AC calls bug #114544
-	EPATCH_OPTS="-p0 -d ${S}/build" epatch ${FILESDIR}/${PN}-2.1.30-m4_underquoted.patch
+	EPATCH_OPTS="-p0 -d ${S}/build" epatch "${FILESDIR}"/${PN}-2.1.30-m4_underquoted.patch
 
 	# make tests rpath ready
-	EPATCH_OPTS="-p0 -d ${S}/tests" epatch ${FILESDIR}/${PN}-2.1.30-tests.patch
+	EPATCH_OPTS="-p0 -d ${S}/tests" epatch "${FILESDIR}"/${PN}-2.1.30-tests.patch
 
 	# make autoconf-archive compatible
-	EPATCH_OPTS="-p0 -d ${S}" epatch ${FILESDIR}/${PN}-2.1.30-autoconf-archived-fix.patch
+	EPATCH_OPTS="-p0 -d ${S}" epatch "${FILESDIR}"/${PN}-2.1.30-autoconf-archived-fix.patch
 
 	# CVE-2006-5779, bug #154349
-	EPATCH_OPTS="-p0 -d ${S}" epatch ${FILESDIR}/${PN}-2.3.27-CVE-2006-5779.patch
+	EPATCH_OPTS="-p0 -d ${S}" epatch "${FILESDIR}"/${PN}-2.3.27-CVE-2006-5779.patch
 
-	# reconf compat and current for RPATH solve
-	cd ${S}
-	einfo "Running libtoolize on ${S}"
+	# reconf current for RPATH solve
 	libtoolize --copy --force
-	einfo "Running aclocal on ${S}"
-	aclocal || die "aclocal failed"
+	eaclocal || die "aclocal failed"
 	EPATCH_OPTS="-p0 -d ${S}" epatch ${FILESDIR}/${PN}-2.1.30-rpath.patch
-	einfo "Running autoconf on ${S}"
-	autoconf || die "autoconf failed"
+	eautoconf || die "autoconf failed"
 }
 
 src_compile() {
@@ -155,10 +141,6 @@ src_compile() {
 		ewarn "Berkeley DB for local backend"
 		myconf="${myconf} ${myconf_berkdb}"
 	fi
-
-	# alas, for BSD only
-	#myconf="${myconf} --with-fetch"
-
 	myconf="${myconf} --enable-dynamic --enable-modules"
 	myconf="${myconf} --enable-rewrite --enable-rlookups"
 	myconf="${myconf} --enable-passwd --enable-phonetic"
@@ -167,18 +149,14 @@ src_compile() {
 	myconf="${myconf} --enable-null --enable-shell"
 	myconf="${myconf} --enable-local --enable-proctitle"
 
-	# disabled options
-	# --with-bdb-module=dynamic
-	# --enable-dnsserv --with-dnsserv-module=dynamic
-
 	econf \
 		--enable-static \
 		--enable-shared \
 		--libexecdir=/usr/lib/openldap \
 		${myconf} || die "configure failed"
 
-	make depend || die "make depend failed"
-	make || die "make failed"
+	emake depend || die "make depend failed"
+	emake || die "make failed"
 
 }
 
@@ -188,7 +166,7 @@ src_test() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	emake DESTDIR=${D} install || die "make install failed"
 
 	dodoc ANNOUNCEMENT CHANGES COPYRIGHT README LICENSE ${FILESDIR}/DB_CONFIG.fast.example
 	docinto rfc ; dodoc doc/rfc/*.txt
@@ -258,13 +236,6 @@ pkg_postinst() {
 	chown ldap:ldap /var/lib/openldap-{data,ldbm,slurp}
 
 	# notes from bug #41297, bug #41039
-	ewarn "If you are upgrading from OpenLDAP 2.0, major changes have occured:"
-	ewarn "- bind_anon_dn is now disabled by default for security"
-	ewarn "  add 'allow bind_anon_dn' to your config for the old behavior."
-	ewarn "- Default schemas have changed, you should slapcat your entire DB to"
-	ewarn "  a file, delete your DB, and then slapadd it again. Alternatively"
-	ewarn "  you can try slapindex which should work in almost all cases. Be"
-	ewarn "  sure to check the permissions on the database files afterwards!"
 	if use ssl; then
 		ewarn "- Self-signed SSL certificates are treated harshly by OpenLDAP 2.1"
 		ewarn "  add 'TLS_REQCERT never' if you want to use them."

@@ -1,7 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.31.ebuild,v 1.1 2006/12/23 15:01:56 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.31.ebuild,v 1.2 2006/12/23 20:20:54 jokey Exp $
 
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+AT_M4DIR="./build"
 inherit autotools eutils flag-o-matic multilib toolchain-funcs versionator
 
 DESCRIPTION="LDAP suite of application and development tools"
@@ -42,10 +45,7 @@ RDEPEND="sys-libs/ncurses
 		)
 	)
 	selinux? ( sec-policy/selinux-openldap )"
-
-DEPEND="${RDEPEND}
-		>=sys-devel/libtool-1.5.18-r1
-		>=sys-apps/sed-4"
+DEPEND="${RDEPEND}"
 
 # for tracking versions
 OPENLDAP_VERSIONTAG=".version-tag"
@@ -96,7 +96,7 @@ openldap_find_versiontags() {
 	for each in ${openldap_datadirs}; do
 		CURRENT_TAGDIR=${ROOT}`echo ${each} | sed "s:\/::"`
 		CURRENT_TAG=${CURRENT_TAGDIR}/${OPENLDAP_VERSIONTAG}
-		if [ -d ${CURRENT_TAGDIR} ] &&  [ ${openldap_found_tag} == 0 ] ; then
+		if [ -d ${CURRENT_TAGDIR} ] &&	[ ${openldap_found_tag} == 0 ] ; then
 			einfo "- Checking ${each}..."
 			if [ -r ${CURRENT_TAG} ] ; then
 				# yey, we have one :)
@@ -160,11 +160,11 @@ pkg_setup() {
 	fi
 
 	if use minimal && has_version "net-nds/openldap" && built_with_use net-nds/openldap minimal ; then
-	    einfo
-	    einfo "Skipping scan for previous datadirs as requested by minimal useflag"
-	    einfo
+		einfo
+		einfo "Skipping scan for previous datadirs as requested by minimal useflag"
+		einfo
 	else
-	    openldap_find_versiontags
+		openldap_find_versiontags
 	fi
 
 }
@@ -214,8 +214,8 @@ src_unpack() {
 	# bug #116045
 	# patch contrib modules
 	if ! use minimal ; then
-	    cd ${S}/contrib
-	    epatch ${FILESDIR}/${PN}-2.3.24-contrib-smbk5pwd.patch
+		cd ${S}/contrib
+		epatch ${FILESDIR}/${PN}-2.3.24-contrib-smbk5pwd.patch
 	fi
 }
 
@@ -288,50 +288,50 @@ src_compile() {
 		--libexecdir=/usr/$(get_libdir)/openldap \
 		${myconf} || die "configure failed"
 
-	make depend || die "make depend failed"
-	make || die "make failed"
+	emake depend || die "make depend failed"
+	emake || die "make failed"
 
 	# openldap/contrib
 	tc-export CC
 	if ! use minimal ; then
 		# dsaschema
 			einfo "Building contributed dsaschema"
-			cd ${S}/contrib/slapd-modules/dsaschema
+			cd "${S}"/contrib/slapd-modules/dsaschema
 			${CC} -shared -I../../../include ${CFLAGS} -fPIC \
 			-Wall -o libdsaschema-plugin.so dsaschema.c || \
 			die "failed to compile dsaschema module"
 		# kerberos passwd
 		if use kerberos ; then
 			einfo "Building contributed pw-kerberos"
-			cd ${S}/contrib/slapd-modules/passwd/ && \
+			cd "${S}"/contrib/slapd-modules/passwd/ && \
 			${CC} -shared -I../../../include ${CFLAGS} -fPIC \
 			-DHAVE_KRB5 -o pw-kerberos.so kerberos.c || \
 			die "failed to compile kerberos password module"
 		fi
 		# netscape mta-md5 password
 			einfo "Building contributed pw-netscape"
-			cd ${S}/contrib/slapd-modules/passwd/ && \
+			cd "${S}"/contrib/slapd-modules/passwd/ && \
 			${CC} -shared -I../../../include ${CFLAGS} -fPIC \
 			-o pw-netscape.so netscape.c || \
 			die "failed to compile netscape password module"
 		# smbk5pwd overlay
 		# Note: this modules builds, but may not work with
-		#   Gentoo's MIT-Kerberos.  It was designed for Heimdal
-		#   Kerberos.
+		#	Gentoo's MIT-Kerberos.	It was designed for Heimdal
+		#	Kerberos.
 		if use smbkrb5passwd ; then
 			einfo "Building contributed smbk5pwd"
 			local mydef
 			local mykrb5inc
 			mydef="-DDO_SAMBA -DDO_KRB5"
 			mykrb5inc="-I/usr/include/heimdal/"
-			cd ${S}/contrib/slapd-modules/smbk5pwd && \
+			cd "${S}"/contrib/slapd-modules/smbk5pwd && \
 			libexecdir="/usr/$(get_libdir)/openldap" \
 			DEFS="${mydef}" KRB5_INC="${mykrb5inc}" emake || \
 			die "failed to compile smbk5pwd module"
 		fi
 		# addrdnvalues
 			einfo "Building contributed addrdnvalues"
-			cd ${S}/contrib/slapi-plugins/addrdnvalues/ && \
+			cd "${S}"/contrib/slapi-plugins/addrdnvalues/ && \
 			${CC} -shared -I../../../include ${CFLAGS} -fPIC \
 			-o libaddrdnvalues-plugin.so addrdnvalues.c || \
 			die "failed to compile addrdnvalues plugin"
@@ -339,14 +339,12 @@ src_compile() {
 }
 
 src_test() {
-	einfo
 	einfo "Doing tests"
-	einfo
 	cd tests ; make tests || die "make tests failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	dodoc ANNOUNCEMENT CHANGES COPYRIGHT README LICENSE ${FILESDIR}/DB_CONFIG.fast.example
 	docinto rfc ; dodoc doc/rfc/*.txt
@@ -372,7 +370,7 @@ src_install() {
 
 	# manually remove /var/tmp references in .la
 	# because it is packaged with an ancient libtool
-	for x in ${D}/usr/$(get_libdir)/lib*.la; do
+	for x in "${D}"/usr/$(get_libdir)/lib*.la; do
 		sed -i -e "s:-L${S}[/]*libraries::" ${x}
 	done
 
@@ -384,60 +382,60 @@ src_install() {
 	if ! use minimal; then
 		# config modifications
 		for f in /etc/openldap/slapd.conf /etc/openldap/slapd.conf.default; do
-			sed -e "s:/var/lib/run/slapd.:/var/run/openldap/slapd.:" -i ${D}/${f}
-			sed -e "/database\tbdb$/acheckpoint	32	30 # <kbyte> <min>" -i ${D}/${f}
+			sed -e "s:/var/lib/run/slapd.:/var/run/openldap/slapd.:" -i "${D}"/${f}
+			sed -e "/database\tbdb$/acheckpoint	32	30 # <kbyte> <min>" -i "${D}"/${f}
 			fowners root:ldap ${f}
 			fperms 0640 ${f}
 		done
 		# install our own init scripts
 		exeinto /etc/init.d
-		newexe ${FILESDIR}/2.0/slapd slapd
-		newexe ${FILESDIR}/2.0/slurpd slurpd
+		newexe "${FILESDIR}"/2.0/slapd slapd
+		newexe "${FILESDIR}"/2.0/slurpd slurpd
 		if [ $(get_libdir) != lib ]; then
-			sed -e "s,/usr/lib/,/usr/$(get_libdir)/," -i ${D}/etc/init.d/{slapd,slurpd}
+			sed -e "s,/usr/lib/,/usr/$(get_libdir)/," -i "${D}"/etc/init.d/{slapd,slurpd}
 		fi
 		insinto /etc/conf.d
-		newins ${FILESDIR}/2.0/slapd.conf slapd
+		newins "${FILESDIR}"/2.0/slapd.conf slapd
 		# install contributed modules
 		docinto /
-		if [ -e ${S}/contrib/slapd-modules/dsaschema/libdsaschema-plugin.so ];
+		if [ -e "${S}"/contrib/slapd-modules/dsaschema/libdsaschema-plugin.so ];
 		then
-			cd ${S}/contrib/slapd-modules/dsaschema/
+			cd "${S}"/contrib/slapd-modules/dsaschema/
 			newdoc README README.contrib.dsaschema
 			exeinto /usr/$(get_libdir)/openldap/openldap
 			doexe libdsaschema-plugin.so || \
 			die "failed to install dsaschema module"
 		fi
-		if [ -e ${S}/contrib/slapd-modules/passwd/pw-kerberos.so ]; then
-			cd ${S}/contrib/slapd-modules/passwd/
+		if [ -e "${S}"/contrib/slapd-modules/passwd/pw-kerberos.so ]; then
+			cd "${S}"/contrib/slapd-modules/passwd/
 			newdoc README README.contrib.passwd
 			exeinto /usr/$(get_libdir)/openldap/openldap
 			doexe pw-kerberos.so || \
 			die "failed to install kerberos passwd module"
 		fi
-		if [ -e ${S}/contrib/slapd-modules/passwd/pw-netscape.so ]; then
-			cd ${S}/contrib/slapd-modules/passwd/
+		if [ -e "${S}"/contrib/slapd-modules/passwd/pw-netscape.so ]; then
+			cd "${S}"/contrib/slapd-modules/passwd/
 			newdoc README README.contrib.passwd
 			exeinto /usr/$(get_libdir)/openldap/openldap
-			doexe ${S}/contrib/slapd-modules/passwd/pw-netscape.so || \
+			doexe "${S}"/contrib/slapd-modules/passwd/pw-netscape.so || \
 			die "failed to install Netscape MTA-MD5 passwd module"
 		fi
-		if [ -e ${S}/contrib/slapd-modules/smbk5pwd/.libs/smbk5pwd.so ]; then
-			cd ${S}/contrib/slapd-modules/smbk5pwd
+		if [ -e "${S}"/contrib/slapd-modules/smbk5pwd/.libs/smbk5pwd.so ]; then
+			cd "${S}"/contrib/slapd-modules/smbk5pwd
 			newdoc README.contrib.smbk5pwd
 			libexecdir="/usr/$(get_libdir)/openldap" \
-			DESTDIR="${D}" make install-mod || \
+			emake DESTDIR="${D}" install-mod || \
 			die "failed to install smbk5pwd overlay module"
 		fi
-		if [ -e ${S}/contrib/slapd-tools/statslog ]; then
-			cd ${S}/contrib/slapd-tools
+		if [ -e "${S}"/contrib/slapd-tools/statslog ]; then
+			cd "${S}"/contrib/slapd-tools
 			exeinto /usr/bin
 			newexe statslog ldapstatslog || \
 			die "failed to install ldapstatslog script"
 		fi
-		if [ -e ${S}/contrib/slapi-plugins/addrdnvalues/libaddrdnvalues-plugin.so ];
+		if [ -e "${S}"/contrib/slapi-plugins/addrdnvalues/libaddrdnvalues-plugin.so ];
 		then
-			cd ${S}/contrib/slapi-plugins/addrdnvalues
+			cd "${S}"/contrib/slapi-plugins/addrdnvalues
 			newdoc README README.contrib.addrdnvalues
 			exeinto /usr/$(get_libdir)/openldap/openldap
 			doexe libaddrdnvalues-plugin.so || \
@@ -450,55 +448,19 @@ src_install() {
 	if use ssl || use samba; then
 		dodir /etc/openldap/ssl
 		exeinto /etc/openldap/ssl
-		doexe ${FILESDIR}/gencert.sh
+		doexe "${FILESDIR}"/gencert.sh
 	fi
 
 	# keep old libs if any
-	# from 2.1
-	for each in ${ROOT}usr/$(get_libdir)/liblber.so.2.0.1* ; do
-		preserve_old_lib ${each}
-	done
-	for each in ${ROOT}usr/$(get_libdir)/libldap.so.2.0.1* ; do
-		preserve_old_lib ${each}
-	done
-	for each in ${ROOT}usr/$(get_libdir)/libldap_r.so.2.0.1* ; do
-		preserve_old_lib ${each}
-	done
-	# from 2.2
-	for each in ${ROOT}usr/$(get_libdir)/liblber-2.2* ; do
-		preserve_old_lib ${each}
-	done
-	for each in ${ROOT}usr/$(get_libdir)/libldap-2.2* ; do
-		preserve_old_lib ${each}
-	done
-	for each in ${ROOT}usr/$(get_libdir)/libldap_r-2.2* ; do
-		preserve_old_lib ${each}
+	LIBSUFFIXES=".so.2.0.130 -2.2.so.7"
+	for LIBSUFFIX in ${LIBSUFFIXES} ; do
+		for each in lber libldap libldap_r ; do
+			preserve_old_lib "${ROOT}usr/$(get_libdir)/${each}${LIBSUFFIX}"
+		done
 	done
 }
 
 pkg_postinst() {
-	# keep old libs if any
-	# from 2.1
-	for each in ${ROOT}usr/$(get_libdir)/liblber.so.2.0.1* ; do
-		preserve_old_lib_notify ${each}
-	done
-	for each in ${ROOT}usr/$(get_libdir)/libldap.so.2.0.1* ; do
-		preserve_old_lib_notify ${each}
-	done
-	for each in ${ROOT}usr/$(get_libdir)/libldap_r.so.2.0.1* ; do
-		preserve_old_lib_notify ${each}
-	done
-	# from 2.2
-	for each in ${ROOT}usr/$(get_libdir)/liblber-2.2* ; do
-		preserve_old_lib_notify ${each}
-	done
-	for each in ${ROOT}usr/$(get_libdir)/libldap-2.2* ; do
-		preserve_old_lib_notify ${each}
-	done
-	for each in ${ROOT}usr/$(get_libdir)/libldap_r-2.2* ; do
-		preserve_old_lib_notify ${each}
-	done
-
 	if use ssl; then
 		# make a self-signed ssl cert (if there isn't one there already)
 		if [ ! -e /etc/openldap/ssl/ldap.pem ]
@@ -513,15 +475,11 @@ pkg_postinst() {
 			einfo
 		fi
 	fi
-
-	# Since moving to running openldap as user ldap there are some
-	# permissions problems with directories and files.
-	# Let's make sure these permissions are correct.
-	chown ldap:ldap /var/run/openldap
-	chmod 0755 /var/run/openldap
-	chown root:ldap /etc/openldap/slapd.conf{,.default}
-	chmod 0640 /etc/openldap/slapd.conf{,.default}
-	chown ldap:ldap /var/lib/openldap-{data,ldbm,slurp}
+	chown ldap:ldap "${ROOT}"var/run/openldap
+	chmod 0755 "${ROOT}"var/run/openldap
+	chown root:ldap "${ROOT}"etc/openldap/slapd.conf{,.default}
+	chmod 0640 "${ROOT}"etc/openldap/slapd.conf{,.default}
+	chown ldap:ldap "${ROOT}"var/lib/openldap-{data,ldbm,slurp}
 
 	if use ssl; then
 		ewarn
@@ -545,10 +503,10 @@ pkg_postinst() {
 	einfo "/usr/share/doc/${P}/DB_CONFIG.fast.example.gz"
 	einfo
 
-	if has_version "<net-nds/openldap-2.3" ; then
-		echo
-		einfo
-		einfo "*** Remember to run revdep-rebuild to update your packages ***"
-		einfo
-	fi
+	LIBSUFFIXES=".so.2.0.130 -2.2.so.7"
+	for LIBSUFFIX in ${LIBSUFFIXES} ; do
+		for each in lber libldap libldap_r ; do
+			preserve_old_lib_notify "${ROOT}usr/$(get_libdir)/${each}${LIBSUFFIX}"
+		done
+	done
 }
