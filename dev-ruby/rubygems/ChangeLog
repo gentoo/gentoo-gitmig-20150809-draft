@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.38 2006/12/16 14:40:47 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.39 2006/12/23 01:27:10 pclouds Exp $
+
+  23 Dec 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  rubygems-0.9.0-r2.ebuild, rubygems-0.8.11-r5.ebuild:
+  Unset RUBYOPT before installing rubygems to prevent ruby from failing due to
+  missing auto_gem (bug #158455). Also warn people when rubygems is removed
 
 *rubygems-0.9.0-r2 (16 Dec 2006)
 
