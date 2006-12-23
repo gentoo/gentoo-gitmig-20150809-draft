@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.7.3.1-r3.ebuild,v 1.4 2006/11/26 10:55:46 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.7.3.1-r3.ebuild,v 1.5 2006/12/23 12:39:53 drizzt Exp $
 
 inherit java-pkg-2 eutils versionator java-ant-2
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="doc source"
 
 CDEP="=dev-java/servletapi-2.3*"
@@ -44,8 +44,9 @@ src_unpack() {
 		rm *.jar
 		java-pkg_jar-from servletapi-2.3
 	cd ${S}
-	sed -i -r \
-		-e "s/etc\/sysconfig/etc\/conf.d/g" \
+	sed -i \
+		-e "s:/etc/sysconfig:/etc/conf.d:" \
+		-e "s:/usr/local/etc/hsqldb.cfg:/etc/conf.d/hsqldb:" \
 			bin/hsqldb
 
 	ant -q -f build/build.xml cleanall || die "failed to clean"
