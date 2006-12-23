@@ -1,0 +1,16 @@
+--- setup.orig	2006-12-23 11:53:52.000000000 +0100
++++ setup.py	2006-12-23 11:54:43.000000000 +0100
+@@ -1,12 +1,8 @@
+-# bootstrap setuptools if necessary
+-from ez_setup import use_setuptools
+-use_setuptools()
+-
+ import os
+ 
+ execfile(os.path.join("kid", "release.py"))
+ 
+-from setuptools import setup, find_packages
++from distutils.core import setup
+ 
+ install_requires = []
+ try:
