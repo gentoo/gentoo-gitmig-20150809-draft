@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertux/supertux-0.1.3.ebuild,v 1.7 2006/12/01 20:29:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertux/supertux-0.1.3.ebuild,v 1.8 2006/12/23 01:19:37 chainsaw Exp $
 
 GAMES_USE_SDL="nojoystick" #bug #100372
 inherit eutils games
@@ -11,7 +11,7 @@ SRC_URI=" http://download.berlios.de/supertux/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc ~ppc64 sparc x86"
 IUSE="opengl"
 
 RDEPEND=">=media-libs/libsdl-1.2.4
