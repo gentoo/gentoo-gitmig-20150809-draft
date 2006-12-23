@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.4 2006/09/24 19:52:23 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.5 2006/12/23 22:13:00 jokey Exp $
 
-inherit autotools eutils kde-functions cvs
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+inherit autotools eutils kde-functions subversion
 
 DESCRIPTION="An advanced IRC Client"
 HOMEPAGE="http://www.kvirc.net/"
@@ -21,17 +23,12 @@ RDEPEND="esd? ( media-sound/esound )
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
-ECVS_SERVER="cvs.kvirc.net:/cvs"
-ECVS_MODULE="kvirccvs/kvirc"
-ECVS_TOP_DIR="${DISTDIR}/cvs-src/${P}"
-
-S="${WORKDIR}/${ECVS_MODULE}"
+ESVN_REPO_URI="https://svn.kvirc.de/svn/trunk/kvirc"
+ESVN_PROJECT="kvirc"
+ESVN_BOOTSTRAP="./autogen.sh"
 
 src_unpack() {
-	cvs_src_unpack
-	cd ${S}
-	einfo "Generating configure script, this takes a moment"
-	./autogen.sh
+	subversion_src_unpack
 	epatch ${FILESDIR}/${PN}-3.2.3-kdedir-fix.patch
 }
 
@@ -54,15 +51,12 @@ src_compile() {
 
 	[ "${ARCH}" == "x86" ] && myconf="${myconf} --with-ix86-asm"
 
-	WANT_AUTOCONF="2.5"
-	WANT_AUTOMAKE="1.5"
-
-	econf ${myconf} || die "failed to configure"
-	emake -j1 || die "failed to make"
+	econf ${myconf} || die "econf failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die "make install failed"
-	make docs DESTDIR="${D}" || die "make docs failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" docs || die "emake docs failed"
 	dodoc ChangeLog README TODO
 }

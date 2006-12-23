@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.2.0.ebuild,v 1.11 2006/09/24 19:52:23 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.2.0.ebuild,v 1.12 2006/12/23 22:13:00 jokey Exp $
 
-inherit autotools eutils kde-functions
+inherit eutils kde-functions
 
 DESCRIPTION="An advanced IRC Client"
 HOMEPAGE="http://www.kvirc.net/"
@@ -23,11 +23,7 @@ RDEPEND="esd? ( media-sound/esound )
 	=x11-libs/qt-3*"
 
 DEPEND="${RDEPEND}
-	sys-apps/gawk
-	sys-apps/grep
-	sys-devel/libtool
-	sys-devel/gettext
-	sys-apps/sed"
+	sys-devel/gettext"
 
 src_unpack() {
 	unpack ${A}
@@ -57,15 +53,12 @@ src_compile() {
 
 	[ "${ARCH}" == "x86" ] && myconf="${myconf} --with-ix86-asm"
 
-	WANT_AUTOCONF="2.5"
-	WANT_AUTOMAKE="1.5"
-
-	econf ${myconf} || die "failed to configure"
-	emake -j1 || die "failed to make"
+	econf ${myconf} || die "econf failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die "make install failed"
-	make docs DESTDIR="${D}" || die "make docs failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" docs || die "emake docs failed"
 	dodoc ChangeLog INSTALL README TODO
 }
