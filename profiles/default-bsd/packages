@@ -1,11 +1,10 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/packages,v 1.2 2006/04/07 13:57:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/packages,v 1.3 2006/12/24 22:06:11 drizzt Exp $
 
 -*virtual/modutils
 -*virtual/dev-manager
 -*sys-fs/e2fsprogs
--*sys-libs/cracklib
 -*sys-process/procps
 -*sys-process/psmisc
 -*sys-apps/shadow
