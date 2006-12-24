@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.4.4.ebuild,v 1.1 2006/12/18 17:00:35 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.4.4.ebuild,v 1.2 2006/12/24 21:16:34 ticho Exp $
 
 inherit eutils
 
@@ -145,16 +145,12 @@ src_install() {
 	done
 
 	if $(has_version mail-filter/razor) ; then
-		if [ ! -f ${AMAVIS_ROOT}/.razor/razor-agent.conf ] ; then
+		if [ ! -d ${AMAVIS_ROOT}/.razor ] ; then
 			einfo "Setting up initial razor config files..."
 
 			razor-admin -create -home=${D}/${AMAVIS_ROOT}/.razor
 			sed -i -e "s:debuglevel\([ ]*\)= .:debuglevel\1= 0:g" \
 				${D}/${AMAVIS_ROOT}/.razor/razor-agent.conf
-		else
-			einfo "Copying existing razor config files..."
-			insinto ${AMAVIS_ROOT}/.razor
-			doins ${AMAVIS_ROOT}/.razor/*.{conf,lst}
 		fi
 	fi
 
