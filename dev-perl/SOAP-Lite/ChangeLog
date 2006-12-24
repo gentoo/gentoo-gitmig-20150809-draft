@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/SOAP-Lite
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/ChangeLog,v 1.34 2006/11/24 18:23:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/ChangeLog,v 1.35 2006/12/24 00:37:44 dertobi123 Exp $
+
+  24 Dec 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  SOAP-Lite-0.67.ebuild:
+  Stable on ppc.
 
   24 Nov 2006; Michael Cummings <mcummings@gentoo.org>
   SOAP-Lite-0.55.ebuild, SOAP-Lite-0.60a-r1.ebuild, SOAP-Lite-0.66.ebuild,
