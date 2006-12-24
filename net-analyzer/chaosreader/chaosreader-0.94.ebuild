@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/chaosreader/chaosreader-0.94.ebuild,v 1.4 2005/08/12 00:08:50 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/chaosreader/chaosreader-0.94.ebuild,v 1.5 2006/12/24 16:10:29 spock Exp $
+
+inherit eutils
 
 DESCRIPTION="A tool to trace TCP/UDP/... sessions and fetch application data from snoop or tcpdump logs."
 HOMEPAGE="http://users.tpg.com.au/bdgcvb/chaosreader.html"
@@ -11,6 +13,12 @@ LICENSE="GPL-2"
 IUSE=""
 DEPEND=">=dev-lang/perl-5.8.0"
 S=${WORKDIR}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/chaosreader-0.94-zombies.patch
+}
 
 src_install() {
 	newbin ${S}/${P} chaosreader
