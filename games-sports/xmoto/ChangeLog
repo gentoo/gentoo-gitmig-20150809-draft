@@ -1,6 +1,12 @@
 # ChangeLog for games-sports/xmoto
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.9 2006/12/16 08:51:12 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.10 2006/12/24 14:51:22 genstef Exp $
+
+*xmoto-0.2.4 (24 Dec 2006)
+
+  24 Dec 2006; <stefan@gentoo.org> +xmoto-0.2.4.ebuild:
+  Version bump thanks to Franz Fellner <fellner@gmx.de> in bug 159016, works
+  now with -j2, bug 147725
 
 *xmoto-0.2.2-r1 (16 Dec 2006)
 
