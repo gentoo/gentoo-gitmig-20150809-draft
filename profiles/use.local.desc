@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2449 2006/12/24 00:56:52 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2450 2006/12/24 21:06:21 ticho Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -26,6 +26,7 @@ app-admin/testdisk:reiserfs - include reiserfs reading ability
 app-admin/webalizer:search - Include the search patch
 app-admin/webalizer:xtended - Include the 404 extension
 app-admin/webmin:webmin-minimal - Install the minimal webmin distribution
+app-antivirus/clamav:logrotate - Install logrotate script for clamav logs
 app-antivirus/clamav:onaccess - Enable support for on-access scan using dazuko kernel module.
 app-arch/bsdtar:xattr - if you want extended attributes enabled
 app-arch/dump:ermt - encrypted rmt support
