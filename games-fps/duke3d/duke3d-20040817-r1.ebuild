@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817-r1.ebuild,v 1.2 2006/09/08 04:57:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817-r1.ebuild,v 1.3 2006/12/24 11:30:56 tupone Exp $
 
 fromcvs=0
 ECVS_MODULE="duke3d"
@@ -33,6 +33,14 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${ECVS_MODULE}"
 
 use_tf() { useq ${1} && echo "true" || echo "false"; }
+
+pkg_setup() {
+	if built_with_use dev-lang/perl ithreads ; then
+		eerror "${PN} needs perl compiled with ithreads use-flag disabled!"
+		die "perl with ithreads detected"
+	fi
+	games_pkg_setup
+}
 
 src_unpack() {
 	if [ ${fromcvs} -eq 1 ] ; then
