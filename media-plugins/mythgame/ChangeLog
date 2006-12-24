@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/mythgame
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgame/ChangeLog,v 1.33 2006/09/14 05:56:00 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgame/ChangeLog,v 1.34 2006/12/24 07:57:48 cardoe Exp $
+
+  24 Dec 2006; Doug Goldstein <cardoe@gentoo.org> mythgame-0.20.ebuild:
+  Stabling for amd64, ppc, and x86
 
 *mythgame-0.20 (14 Sep 2006)
 
