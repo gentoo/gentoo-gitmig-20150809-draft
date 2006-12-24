@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kid/kid-0.9.4.ebuild,v 1.1 2006/12/23 11:06:17 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kid/kid-0.9.4.ebuild,v 1.2 2006/12/24 09:28:20 lucass Exp $
 
 inherit distutils eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.3
-	>=dev-python/elementtree-1.2.6"
+	|| ( >=dev-lang/python-2.5 dev-python/elementtree )"
 
 
 src_unpack() {
