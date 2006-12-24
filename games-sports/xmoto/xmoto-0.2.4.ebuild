@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.2.4.ebuild,v 1.1 2006/12/24 14:51:22 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.2.4.ebuild,v 1.2 2006/12/24 19:18:55 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="A challenging 2D motocross platform game"
 HOMEPAGE="http://xmoto.sourceforge.net/"
@@ -51,8 +51,4 @@ src_install() {
 	domenu extra/xmoto{,-edit}.desktop
 
 	prepgamesdirs
-
-	# please portage, QA Notice: you should let portage compress '${realname}' for you
-	cd ${D}/usr/share/man/*
-	gunzip *
 }
