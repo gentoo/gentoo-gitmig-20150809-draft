@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.1.0.ebuild,v 1.2 2006/12/24 01:03:44 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.1.0.ebuild,v 1.3 2006/12/24 01:35:09 dev-zero Exp $
 
-inherit versionator eutils toolchain-funcs multilib flag-o-matic
+inherit eutils versionator eutils toolchain-funcs multilib flag-o-matic
 
 KEYWORDS="~amd64 ~x86"
 
@@ -19,6 +19,9 @@ RDEPEND="${RDEPEND}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	# It should be save to apply this on non-ppc systems as well
+	epatch "${FILESDIR}/${P}-ppc.patch"
 
 	sed -i \
 		-e 's/\(OPT += \)-O2/\1/' \
