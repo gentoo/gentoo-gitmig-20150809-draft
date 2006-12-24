@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/wxglade-0.4.ebuild,v 1.5 2006/10/05 21:49:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/wxglade-0.4.ebuild,v 1.6 2006/12/24 21:52:00 dirtyepic Exp $
 
 inherit python
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 S="${WORKDIR}/${MY_P}"
 DEPEND=">=dev-lang/python-2.2
-	>=dev-python/wxpython-2.4.2.4"
+	>=dev-python/wxpython-2.6"
 
 src_install() {
 	python_version
