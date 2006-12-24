@@ -20,3 +20,13 @@
  # And here we go.
  exec "$SystemInstallDir/program/$Binary", @ooo_argv
  
+--- distro-configs/Gentoo.conf.in 
++++ distro-configs/Gentoo.conf.in 
+@@ -11,7 +11,6 @@
+ --with-system-libxslt
+ --with-system-stdlibs
+ --with-system-xrender-headers
+---without-system-jpeg
+ --without-nas
+ --without-myspell-dicts
+ --with-vendor=\"Gentoo Foundation\"

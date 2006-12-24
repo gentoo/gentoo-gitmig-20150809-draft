@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4.ebuild,v 1.21 2006/12/11 20:48:17 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4.ebuild,v 1.22 2006/12/24 09:18:16 suka Exp $
 
 inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions multilib toolchain-funcs
 
 IUSE="binfilter branding cairo cups dbus eds firefox gnome gstreamer gtk kde ldap sound odk pam webdav"
 
-MY_PV="${PV}.10"
+MY_PV="${PV}.11"
 PATCHLEVEL="OOD680"
 SRC="OOO_2_0_4"
 S="${WORKDIR}/ooo"
@@ -15,7 +15,6 @@ CONFFILE="${S}/distro-configs/Gentoo.conf.in"
 DESCRIPTION="OpenOffice.org, a full office productivity suite."
 
 SRC_URI="http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-core.tar.bz2
-	http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-system.tar.bz2
 	http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-lang.tar.bz2
 	binfilter? ( http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-binfilter.tar.bz2 )
 	http://go-oo.org/packages/${PATCHLEVEL}/ooo-build-${MY_PV}.tar.gz
@@ -68,12 +67,14 @@ COMMON_DEPEND="!app-office/openoffice-bin
 	>=media-libs/freetype-2.1.10-r2
 	>=media-libs/fontconfig-2.2.0
 	cups? ( net-print/cups )
+	media-libs/jpeg
 	media-libs/libpng
 	sys-devel/flex
 	sys-devel/bison
 	app-arch/zip
 	app-arch/unzip
 	>=app-text/hunspell-1.1.4-r1
+	>=app-admin/eselect-oodict-20060706
 	dev-libs/expat
 	>=dev-libs/icu-3.4
 	linguas_ja? ( >=media-fonts/kochi-substitute-20030809-r3 )
@@ -102,7 +103,6 @@ DEPEND="${COMMON_DEPEND}
 	pam? ( sys-libs/pam )
 	!dev-util/dmake
 	>=dev-lang/python-2.3.4
-	>=app-admin/eselect-oodict-20060706
 	java? ( || ( =virtual/jdk-1.4* !amd64? ( =virtual/jdk-1.5* ) )
 		dev-java/ant-core )
 	dev-libs/libxslt
