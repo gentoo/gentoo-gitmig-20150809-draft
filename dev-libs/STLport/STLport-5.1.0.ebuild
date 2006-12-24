@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.1.0.ebuild,v 1.3 2006/12/24 01:35:09 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.1.0.ebuild,v 1.4 2006/12/24 11:22:52 dev-zero Exp $
 
 inherit eutils versionator eutils toolchain-funcs multilib flag-o-matic
 
@@ -46,10 +46,15 @@ src_compile() {
 		-e "s/^\(CCFLAGS = \)/\1 ${CFLAGS} /" \
 		build/Makefiles/gmake/gcc.mak || die "sed failed"
 
-	cd "${S}/build/lib"
-
 	local myconf
-	use boost && myconf="${myconf} --with-boost=${ROOT}usr/$(get_libdir)"
+	if use boost ; then
+		myconf="${myconf} --with-boost=${ROOT}usr/include"
+		sed -i \
+			-e 'N;N;N;s:/\**\n\(#define _STLP_USE_BOOST_SUPPORT 1\)*\n\*/:\1:' \
+			stlport/stl/config/user_config.h
+	fi
+
+	cd "${S}/build/lib"
 
 	append-lfs-flags
 
