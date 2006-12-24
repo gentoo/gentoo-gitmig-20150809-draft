@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/phpBB
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/ChangeLog,v 1.25 2006/06/18 00:52:07 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/ChangeLog,v 1.26 2006/12/24 12:42:13 rl03 Exp $
+
+*phpBB-2.0.22 (24 Dec 2006)
+
+  24 Dec 2006; Renat Lumpau <rl03@gentoo.org> -phpBB-2.0.21.ebuild,
+  +phpBB-2.0.22.ebuild:
+  Version bump
 
   18 Jun 2006; Renat Lumpau <rl03@gentoo.org> phpBB-2.0.21.ebuild:
   Don't overwrite config file (bug #136770).
