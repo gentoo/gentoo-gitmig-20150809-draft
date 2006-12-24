@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/triplea-0.8.2.2.ebuild,v 1.1 2006/11/10 18:04:28 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/triplea-0.8.2.2.ebuild,v 1.2 2006/12/24 18:36:43 nyhm Exp $
 
 inherit eutils java-ant-2 java-pkg-2 versionator games
 
@@ -25,10 +25,11 @@ S=${WORKDIR}/${PN}_${MY_PV}
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"/lib
+	cd "${S}"
 
-	rm *.jar
-	java-pkg_jar-from jgoodies-looks-1.3 looks.jar looks-1.3.1.jar
+	rm lib/*.jar
+	java-pkg_jar-from jgoodies-looks-1.3 looks.jar lib/looks-1.3.1.jar
+	java-pkg_ensure-no-bundled-jars
 }
 
 src_compile() {
@@ -37,13 +38,12 @@ src_compile() {
 }
 
 src_install() {
-	games_make_wrapper ${PN} \
-		'java -cp classes:$(java-config -p jgoodies-looks-1.3) \
-			games.strategy.engine.framework.GameRunner' \
-		"${GAMES_DATADIR}"/${PN}
-
 	insinto "${GAMES_DATADIR}"/${PN}
 	doins -r classes data games images maps || die "doins failed"
+
+	java-pkg_addcp "${GAMES_DATADIR}"/${PN}/classes
+	java-pkg_dolauncher ${PN} -into "${GAMES_PREFIX}" --main \
+		games.strategy.engine.framework.GameRunner
 
 	newicon icons/triplea_icon.bmp ${PN}.bmp
 	make_desktop_entry ${PN} TripleA /usr/share/pixmaps/${PN}.bmp
