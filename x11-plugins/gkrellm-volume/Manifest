@@ -1,21 +1,44 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8c2c2de151c53f0c315e692452a87c95 gkrellm-volume-2.1.8.ebuild 647
+DIST gkrellm-volume-2.1.13.tar.gz 42087 RMD160 4ebc28a6a97f5d31d73927509ab956422e9a79de SHA1 e9ea9bdd8eac53e8d99baf7705e76c28d8c4f2c3 SHA256 85fa0ac0d242725f81316efba171315323822117d2e24d67273c3356e1b15a43
+DIST gkrellm-volume-2.1.4.tar.gz 29774
+DIST gkrellm-volume-2.1.8.tar.gz 36215
+DIST gkrellm-volume-2.1.9.tar.gz 37888 RMD160 69245cfa3f4bf973c4e08b7717948388a93e37f9 SHA1 7003c1ef3ebd141df9b15fa8e631e43d27dcca9b SHA256 c166adbfdb2eaef9956f9a41e2f79d522716ae21f4df65a8458e82964f512a79
+DIST volume-0.8.tar.gz 8395
+EBUILD gkrellm-volume-0.8-r1.ebuild 661 RMD160 a61b03b2a6bc8c7a9476f944eabb93f1f55c3935 SHA1 8f4fa43db8f518a694b2accca5df1ca8e9575f1b SHA256 a50d3bdf87bca2b2bbff8f7016beedfb0b5e4f26c99c5a5f9855515558a37e89
 MD5 8cceecdbfeda865ce3cadb2300ce8507 gkrellm-volume-0.8-r1.ebuild 661
-MD5 7230cf52887ad46af14b4ef3813d1c41 gkrellm-volume-2.1.13.ebuild 790
-MD5 4c83e76704829756afa8e8976073eaa8 ChangeLog 3179
-MD5 a2ce0703427837452e595abc088f23d0 gkrellm-volume-2.1.9.ebuild 637
+RMD160 a61b03b2a6bc8c7a9476f944eabb93f1f55c3935 gkrellm-volume-0.8-r1.ebuild 661
+SHA256 a50d3bdf87bca2b2bbff8f7016beedfb0b5e4f26c99c5a5f9855515558a37e89 gkrellm-volume-0.8-r1.ebuild 661
+EBUILD gkrellm-volume-2.1.13.ebuild 789 RMD160 38518eb1c09c34db4f4c4af3ad4864be2e565296 SHA1 636450982d9971d20a01f2b880c98adcdc582f43 SHA256 4ebc1a9f777197cd831b81880df4f51ce6c9fe985127c880650f0f2431e57f23
+MD5 075a9835d0e08a07b1422c314a73be83 gkrellm-volume-2.1.13.ebuild 789
+RMD160 38518eb1c09c34db4f4c4af3ad4864be2e565296 gkrellm-volume-2.1.13.ebuild 789
+SHA256 4ebc1a9f777197cd831b81880df4f51ce6c9fe985127c880650f0f2431e57f23 gkrellm-volume-2.1.13.ebuild 789
+EBUILD gkrellm-volume-2.1.4.ebuild 640 RMD160 7899094c19e2926fe23991b24c43e3984601177c SHA1 32c51f544a260f67d10d15e654ae4a11778a8b4e SHA256 30ff1d3278a14ac4da6be4fb3e2c75d559a5917e5439c82248caa2bc5a732892
 MD5 0814cc15c92dfe6e05aa45d42e9cc688 gkrellm-volume-2.1.4.ebuild 640
-MD5 a18cbdcd4b31d7c260d919c06bddf49f files/digest-gkrellm-volume-2.1.4 71
-MD5 f2001f12fbad1f63746f0a6ed1b3d1ca files/digest-gkrellm-volume-2.1.8 71
-MD5 1dcd8db72c24863a757ef7f71d7110da files/digest-gkrellm-volume-2.1.9 71
+RMD160 7899094c19e2926fe23991b24c43e3984601177c gkrellm-volume-2.1.4.ebuild 640
+SHA256 30ff1d3278a14ac4da6be4fb3e2c75d559a5917e5439c82248caa2bc5a732892 gkrellm-volume-2.1.4.ebuild 640
+EBUILD gkrellm-volume-2.1.8.ebuild 647 RMD160 fca03b30ced79b89d437f26dc0c4bbda4e0862ea SHA1 bb272dd95a0d6c95d6d94801bfe0912f426f6da4 SHA256 7fc5c1ab1d1dd29e86bf4d8a98309f7f2a19fec8019497c3377ba9d12e1a0142
+MD5 8c2c2de151c53f0c315e692452a87c95 gkrellm-volume-2.1.8.ebuild 647
+RMD160 fca03b30ced79b89d437f26dc0c4bbda4e0862ea gkrellm-volume-2.1.8.ebuild 647
+SHA256 7fc5c1ab1d1dd29e86bf4d8a98309f7f2a19fec8019497c3377ba9d12e1a0142 gkrellm-volume-2.1.8.ebuild 647
+EBUILD gkrellm-volume-2.1.9.ebuild 637 RMD160 1db505e2d8b20aff7401d2e0bae894fb69e5b5ce SHA1 ad70f8e5ba2b30964bae007fcb1a9e32368e875d SHA256 a19d6f7038743bdd367ea62afe13a36f97ea46c44d5c1c9137fe55d018262201
+MD5 a2ce0703427837452e595abc088f23d0 gkrellm-volume-2.1.9.ebuild 637
+RMD160 1db505e2d8b20aff7401d2e0bae894fb69e5b5ce gkrellm-volume-2.1.9.ebuild 637
+SHA256 a19d6f7038743bdd367ea62afe13a36f97ea46c44d5c1c9137fe55d018262201 gkrellm-volume-2.1.9.ebuild 637
+MISC ChangeLog 3289 RMD160 adc0a3b30cb178b4b759dbe3e4fe1000a74d5cda SHA1 329401229fd9010847692e46733f142332f8d782 SHA256 2b46508ca1e34bf62146f391e12bea069ce17809072a8305936281d237bca3f6
+MD5 50be993d6f510d1d00940d800b4bdf57 ChangeLog 3289
+RMD160 adc0a3b30cb178b4b759dbe3e4fe1000a74d5cda ChangeLog 3289
+SHA256 2b46508ca1e34bf62146f391e12bea069ce17809072a8305936281d237bca3f6 ChangeLog 3289
 MD5 c4db1e8ff3314d790cd18c87ac342d13 files/digest-gkrellm-volume-0.8-r1 60
-MD5 97cc15b2b54ba61a017e7391013319b8 files/digest-gkrellm-volume-2.1.13 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCb/Sl2G5bA0cA/ScRAkhPAJ44MnbZi/LkMgRzjNe8A/mOBaX/VwCg3ZY2
-AC1oDrl2kw5iREO4Y/vGtvY=
-=7udq
------END PGP SIGNATURE-----
+RMD160 864d37e97aa191b8e21c21af961543df880799fb files/digest-gkrellm-volume-0.8-r1 60
+SHA256 b0f198eb9e52b589b1b358fbbde2e77d3d985b91976bcc115fd1a604c51e6975 files/digest-gkrellm-volume-0.8-r1 60
+MD5 9ddca6673a5709901aac09e65e96bea1 files/digest-gkrellm-volume-2.1.13 262
+RMD160 74823f0b93467651fb3f71839da6d68fd70cf994 files/digest-gkrellm-volume-2.1.13 262
+SHA256 3c1f1b1ef4b5c6cdfaa6f18adadc22ddc703c779ddee058f8a2d90e6b7a206fb files/digest-gkrellm-volume-2.1.13 262
+MD5 a18cbdcd4b31d7c260d919c06bddf49f files/digest-gkrellm-volume-2.1.4 71
+RMD160 0e3cdd4790f25c52c5636d93e79062116b2ffc42 files/digest-gkrellm-volume-2.1.4 71
+SHA256 1e6b74615fb5567fedd3abe21e0ee0a561788ca52124c75261cd1c69d2638be8 files/digest-gkrellm-volume-2.1.4 71
+MD5 f2001f12fbad1f63746f0a6ed1b3d1ca files/digest-gkrellm-volume-2.1.8 71
+RMD160 7c87945c0c0d2fbf4d0b8925fd723d909d9d39e3 files/digest-gkrellm-volume-2.1.8 71
+SHA256 2c5dbc52f72258dacd42a7a94dbe59bd160db88db094e332487e718c4e6109c1 files/digest-gkrellm-volume-2.1.8 71
+MD5 128889f1676043760d2d2723c053300c files/digest-gkrellm-volume-2.1.9 259
+RMD160 0ec60bda7472c0c16d08886db7e9770907805154 files/digest-gkrellm-volume-2.1.9 259
+SHA256 2e6df388a66f793ed6b412391d857d32e3a0ef7b9413e92f7faa031ccd30e8e4 files/digest-gkrellm-volume-2.1.9 259
