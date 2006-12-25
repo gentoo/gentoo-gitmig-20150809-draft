@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/qc-usb-0.6.6.ebuild,v 1.1 2006/12/13 21:28:39 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/qc-usb-0.6.6.ebuild,v 1.2 2006/12/25 09:23:23 genstef Exp $
 
 inherit linux-mod eutils multilib
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 
-CONFIG_CHECK="USB VIDEO_DEV"
+CONFIG_CHECK="USB VIDEO_DEV VIDEO_V4L1_COMPAT"
 MODULE_NAMES="quickcam(usb:)"
 BUILD_TARGETS="all"
 
