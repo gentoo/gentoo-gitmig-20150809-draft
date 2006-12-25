@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/tinyerp-client/tinyerp-client-4.0.1.ebuild,v 1.1 2006/12/23 17:16:16 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/tinyerp-client/tinyerp-client-4.0.1.ebuild,v 1.2 2006/12/25 14:07:51 cedk Exp $
 
 inherit distutils eutils
 
@@ -22,6 +22,10 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-setup.patch
+
+	sed -i -e "s@\('path.share':\).*@\1 '/usr/share/tinyerp-client/',@" \
+		-e "s@\('path.pixmaps':\).*@\1 '/usr/share/tinyerp-client/',@" \
+		bin/options.py
 }
 
 src_install() {
