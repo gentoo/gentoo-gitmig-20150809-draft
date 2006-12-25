@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-2.1.12.ebuild,v 1.7 2006/12/08 23:04:00 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-2.1.12.ebuild,v 1.8 2006/12/25 20:02:52 araujo Exp $
 
-inherit elisp-common flag-o-matic eutils toolchain-funcs
+inherit multilib elisp-common flag-o-matic eutils toolchain-funcs
 
 DESCRIPTION="GNU Smalltalk"
 HOMEPAGE="http://www.gnu.org/software/smalltalk/smalltalk.html"
@@ -37,8 +37,8 @@ src_compile() {
 		`use_with emacs emacs` \
 		`use_with readline readline` \
 		`use_with gmp gmp` \
-		`use_with tk tcl /usr/lib` \
-		`use_with tk tk /usr/lib` \
+		`use_with tk tcl /usr/$(get_libdir)` \
+		`use_with tk tk /usr/$(get_libdir)` \
 		`use_enable gtk gtk` \
 		|| die
 	emake || die "emake failed"
