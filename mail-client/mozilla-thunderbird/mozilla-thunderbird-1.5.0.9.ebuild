@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.9.ebuild,v 1.4 2006/12/21 18:56:37 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.9.ebuild,v 1.5 2006/12/25 13:05:22 pingu Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -73,6 +73,12 @@ linguas() {
 }
 
 pkg_setup() {
+	if ! built_with_use x11-libs/cairo X; then
+		eerror "Cairo is not built with X useflag."
+		eerror "Please add 'X' to your USE flags, and re-emerge cairo."
+		die "Cairo needs X"
+	fi
+
 	use moznopango && warn_mozilla_launcher_stub
 }
 
