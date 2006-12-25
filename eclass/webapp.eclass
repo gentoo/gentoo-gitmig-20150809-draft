@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.45 2006/10/14 20:27:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.46 2006/12/25 08:07:06 zmedico Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -501,6 +501,8 @@ function webapp_pkg_postinst ()
 
 		if [ "${IS_UPGRADE}" = "1" ] ; then
 			elog "Removing old version ${REMOVE_PKG}"
+			ewarn "This action may result in a deadlock.  Please refer to"
+			ewarn "http://bugs.gentoo.org/show_bug.cgi?id=124440 for more information."
 
 			emerge -C "${REMOVE_PKG}"
 		fi
