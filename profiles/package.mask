@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6490 2006/12/25 13:18:21 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6491 2006/12/25 13:20:22 beu Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -133,10 +133,6 @@ sys-fs/submount
 # Peter Volkov <pva@gentoo.org> (11 Dec 2006)
 # needs some testing
 =net-analyzer/arpwatch-2.1.15-r3
-
-# Elfyn McBratney <beu@gentoo.org> (11 Dec 2006)
-# Dead upstream; removal pending 2006-12-25.
-dev-util/mergetrees
 
 # Timothy Redaelli <drizzt@gentoo.org> (09 Dec 2006)
 # pending removal (#156989)
