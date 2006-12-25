@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/sdl-gfx-2.0.14.ebuild,v 1.1 2006/12/19 23:40:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/sdl-gfx-2.0.14.ebuild,v 1.2 2006/12/25 07:05:27 nyhm Exp $
 
 inherit eutils flag-o-matic
 
@@ -38,4 +38,9 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog README
 	dohtml -r Docs/*
+}
+
+pkg_postinst() {
+	ewarn "If you upgraded from sdl-gfx-2.0.13-r1 or earlier, please run"
+	ewarn "\"revdep-rebuild\" from app-portage/gentoolkit"
 }
