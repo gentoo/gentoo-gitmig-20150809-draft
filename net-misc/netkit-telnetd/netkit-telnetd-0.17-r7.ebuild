@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r7.ebuild,v 1.1 2006/05/07 13:21:09 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r7.ebuild,v 1.2 2006/12/25 01:55:54 solar Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 PATCHLEVEL=32
 DESCRIPTION="Standard Linux telnet client and server"
@@ -48,6 +48,8 @@ src_compile() {
 	sed -i \
 		-e "s:-pipe -O2:${CFLAGS}:" \
 		-e "s:-Wpointer-arith::" \
+		-e "s:^CC=.*:CC=$(tc-getCC):" \
+		-e "s:^CXX=.*:CXX=$(tc-getCXX):" \
 		MCONFIG
 
 	make || die
