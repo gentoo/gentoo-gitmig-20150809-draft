@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.9.7.ebuild,v 1.1 2006/08/09 15:38:03 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.9.7.ebuild,v 1.2 2006/12/25 19:48:38 araujo Exp $
 
 inherit base versionator fixheadtails eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86"
 IUSE="X mmx threads iconv"
 
 DEPEND="dev-libs/libffi
-	( || ( ( x11-libs/libX11
+	X? ( || ( ( x11-libs/libX11
 		x11-libs/libXext
 		x11-libs/libXt )
 	virtual/x11 ) )"
