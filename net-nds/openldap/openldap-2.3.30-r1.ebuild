@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.30-r1.ebuild,v 1.2 2006/12/23 20:20:55 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.30-r1.ebuild,v 1.3 2006/12/25 14:49:06 jokey Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -387,15 +387,16 @@ src_install() {
 			fowners root:ldap ${f}
 			fperms 0640 ${f}
 		done
+
 		# install our own init scripts
-		exeinto /etc/init.d
-		newexe "${FILESDIR}"/2.0/slapd slapd
-		newexe "${FILESDIR}"/2.0/slurpd slurpd
+		newinitd "${FILESDIR}"/2.0/slapd slapd
+		newinitd "${FILESDIR}"/2.0/slurpd slurpd
+		newconfd "${FILESDIR}"/2.0/slapd.conf slapd
+
 		if [ $(get_libdir) != lib ]; then
 			sed -e "s,/usr/lib/,/usr/$(get_libdir)/," -i "${D}"/etc/init.d/{slapd,slurpd}
 		fi
-		insinto /etc/conf.d
-		newins "${FILESDIR}"/2.0/slapd.conf slapd
+
 		# install contributed modules
 		docinto /
 		if [ -e "${S}"/contrib/slapd-modules/dsaschema/libdsaschema-plugin.so ];

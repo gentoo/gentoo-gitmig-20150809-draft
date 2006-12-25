@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.28-r6.ebuild,v 1.2 2006/12/23 20:20:55 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.28-r6.ebuild,v 1.3 2006/12/25 14:49:06 jokey Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
@@ -220,8 +220,8 @@ src_compile() {
 		--libexecdir=/usr/$(get_libdir)/openldap \
 		${myconf} || die "configure failed"
 
-	make depend || die "make depend failed"
-	make || die "make failed"
+	emake depend || die "make depend failed"
+	emake || die "make failed"
 
 	# special kerberos stuff
 	tc-export CC
@@ -239,7 +239,7 @@ src_test() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	dodoc ANNOUNCEMENT CHANGES COPYRIGHT README LICENSE "${FILESDIR}"/DB_CONFIG.fast.example
 	docinto rfc ; dodoc doc/rfc/*.txt
@@ -255,13 +255,13 @@ src_install() {
 		fperms 0700 /var/lib/openldap-${x}
 	done
 
-	echo "OLDPF='${PF}'" >${D}${OPENLDAP_VERSIONTAG}
-	echo "# do NOT delete this. it is used" >>${D}${OPENLDAP_VERSIONTAG}
-	echo "# to track versions for upgrading." >>${D}${OPENLDAP_VERSIONTAG}
+	echo "OLDPF='${PF}'" >"${D}"${OPENLDAP_VERSIONTAG}
+	echo "# do NOT delete this. it is used" >>"${D}"${OPENLDAP_VERSIONTAG}
+	echo "# to track versions for upgrading." >>"${D}"${OPENLDAP_VERSIONTAG}
 
 	# manually remove /var/tmp references in .la
 	# because it is packaged with an ancient libtool
-	for x in ${D}/usr/$(get_libdir)/lib*.la; do
+	for x in "${D}"usr/$(get_libdir)/lib*.la; do
 		sed -i -e "s:-L${S}[/]*libraries::" ${x}
 	done
 
@@ -273,32 +273,33 @@ src_install() {
 	if ! use minimal; then
 		# config modifications
 		for f in /etc/openldap/slapd.conf /etc/openldap/slapd.conf.default; do
-			sed -e "s:/var/lib/run/slapd.:/var/run/openldap/slapd.:" -i ${D}/${f}
-			sed -e "/database\tbdb$/acheckpoint	32	30 # <kbyte> <min>" -i ${D}/${f}
+			sed -e "s:/var/lib/run/slapd.:/var/run/openldap/slapd.:" -i "${D}"${f}
+			sed -e "/database\tbdb$/acheckpoint	32	30 # <kbyte> <min>" -i "${D}"${f}
 			fowners root:ldap ${f}
 			fperms 0640 ${f}
 		done
+
 		# install our own init scripts
-		exeinto /etc/init.d
-		newexe "${FILESDIR}"/2.0/slapd slapd
-		newexe "${FILESDIR}"/2.0/slurpd slurpd
+		newinitd "${FILESDIR}"/2.0/slapd slapd
+		newinitd "${FILESDIR}"/2.0/slurpd slurpd
+		newconfd "${FILESDIR}"/2.0/slapd.conf slapd
+
 		if [ $(get_libdir) != lib ]; then
-			sed -e "s,/usr/lib/,/usr/$(get_libdir)/," -i ${D}/etc/init.d/{slapd,slurpd}
+			sed -e "s,/usr/lib/,/usr/$(get_libdir)/," -i "${D}"etc/init.d/{slapd,slurpd}
 		fi
-		insinto /etc/conf.d
-		newins "${FILESDIR}"/2.0/slapd.conf slapd
+
 		if use kerberos && [ -f "${S}"/contrib/slapd-modules/passwd/pw-kerberos.so ]; then
 			insinto /usr/$(get_libdir)/openldap/openldap
 			doins "${S}"/contrib/slapd-modules/passwd/pw-kerberos.so || \
 			die "failed to install kerberos passwd module"
 		fi
-	fi
 
-	# install MDK's ssl cert script
-	if use ssl || use samba; then
-		dodir /etc/openldap/ssl
-		exeinto /etc/openldap/ssl
-		doexe "${FILESDIR}"/gencert.sh
+		# install MDK's ssl cert script
+		if use ssl || use samba; then
+			dodir /etc/openldap/ssl
+			exeinto /etc/openldap/ssl
+			doexe "${FILESDIR}"/gencert.sh
+		fi
 	fi
 
 	# keep old libs if needed
@@ -310,9 +311,9 @@ src_install() {
 pkg_postinst() {
 	if use ssl; then
 		# make a self-signed ssl cert (if there isn't one there already)
-		if [ ! -e /etc/openldap/ssl/ldap.pem ]
+		if [ ! -e "${ROOT}"etc/openldap/ssl/ldap.pem ]
 		then
-			cd /etc/openldap/ssl
+			cd "${ROOT}"etc/openldap/ssl
 			yes "" | sh gencert.sh
 			chmod 640 ldap.pem
 			chown root:ldap ldap.pem
@@ -324,11 +325,11 @@ pkg_postinst() {
 	# Since moving to running openldap as user ldap there are some
 	# permissions problems with directories and files.
 	# Let's make sure these permissions are correct.
-	chown ldap:ldap /var/run/openldap
-	chmod 0755 /var/run/openldap
-	chown root:ldap /etc/openldap/slapd.conf{,.default}
-	chmod 0640 /etc/openldap/slapd.conf{,.default}
-	chown ldap:ldap /var/lib/openldap-{data,ldbm,slurp}
+	chown ldap:ldap "${ROOT}"var/run/openldap
+	chmod 0755 "${ROOT}"var/run/openldap
+	chown root:ldap "${ROOT}"etc/openldap/slapd.conf{,.default}
+	chmod 0640 "${ROOT}"etc/openldap/slapd.conf{,.default}
+	chown ldap:ldap "${ROOT}"var/lib/openldap-{data,ldbm,slurp}
 
 	if use ssl; then
 		ewarn "Self-signed SSL certificates are treated harshly by OpenLDAP 2.[12]"

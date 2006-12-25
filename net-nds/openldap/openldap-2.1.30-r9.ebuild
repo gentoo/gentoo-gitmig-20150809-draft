@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.30-r9.ebuild,v 1.2 2006/12/23 20:20:55 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.30-r9.ebuild,v 1.3 2006/12/25 14:49:06 jokey Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
@@ -166,9 +166,9 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
-	dodoc ANNOUNCEMENT CHANGES COPYRIGHT README LICENSE ${FILESDIR}/DB_CONFIG.fast.example
+	dodoc ANNOUNCEMENT CHANGES COPYRIGHT README LICENSE "${FILESDIR}"/DB_CONFIG.fast.example
 	docinto rfc ; dodoc doc/rfc/*.txt
 
 	# make state directories
@@ -180,7 +180,7 @@ src_install() {
 
 	# manually remove /var/tmp references in .la
 	# because it is packaged with an ancient libtool
-	for x in ${D}/usr/lib/lib*.la; do
+	for x in "${D}"usr/lib/lib*.la; do
 		sed -i -e "s:-L${S}[/]*libraries::" ${x}
 	done
 
@@ -188,34 +188,32 @@ src_install() {
 	keepdir /var/run/openldap
 	fowners ldap:ldap /var/run/openldap
 	fperms 0755 /var/run/openldap
-	for f in /etc/openldap/slapd.conf /etc/openldap/slapd.conf.default; do
-		sed -e "s:/var/lib/slapd.:/var/run/openldap/slapd.:" -i ${D}/${f}
-		sed -e "/database\tbdb$/acheckpoint	32	30 # <kbyte> <min>" -i ${D}/${f}
+	for f in etc/openldap/slapd.conf etc/openldap/slapd.conf.default; do
+		sed -e "s:/var/lib/slapd.:/var/run/openldap/slapd.:" -i "${D}"${f}
+		sed -e "/database\tbdb$/acheckpoint	32	30 # <kbyte> <min>" -i "${D}"${f}
 		fowners root:ldap ${f}
 		fperms 0640 ${f}
 	done
 
 	# install our own init scripts
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/2.0/slapd slapd
-	newexe ${FILESDIR}/2.0/slurpd slurpd
-	insinto /etc/conf.d
-	newins ${FILESDIR}/2.0/slapd.conf slapd
+	newinitd "${FILESDIR}"/2.0/slapd slapd
+	newinitd "${FILESDIR}"/2.0/slurpd slurpd
+	newconfd "${FILESDIR}"/2.0/slapd.conf slapd
 
 	# install MDK's ssl cert script
 	if use ssl || use samba; then
 		dodir /etc/openldap/ssl
 		exeinto /etc/openldap/ssl
-		doexe ${FILESDIR}/gencert.sh
+		doexe "${FILESDIR}"/gencert.sh
 	fi
 }
 
 pkg_postinst() {
 	if use ssl; then
 		# make a self-signed ssl cert (if there isn't one there already)
-		if [ ! -e /etc/openldap/ssl/ldap.pem ]
+		if [ ! -e "${ROOT}"/etc/openldap/ssl/ldap.pem ]
 		then
-			cd /etc/openldap/ssl
+			cd "${ROOT}"etc/openldap/ssl
 			yes "" | sh gencert.sh
 			chmod 640 ldap.pem
 			chown root:ldap ldap.pem
@@ -227,13 +225,13 @@ pkg_postinst() {
 	# Since moving to running openldap as user ldap there are some
 	# permissions problems with directories and files.
 	# Let's make sure these permissions are correct.
-	chown ldap:ldap /var/run/openldap
-	chmod 0755 /var/run/openldap
-	chown root:ldap /etc/openldap/slapd.conf
-	chmod 0640 /etc/openldap/slapd.conf
-	chown root:ldap /etc/openldap/slapd.conf.default
-	chmod 0640 /etc/openldap/slapd.conf.default
-	chown ldap:ldap /var/lib/openldap-{data,ldbm,slurp}
+	chown ldap:ldap "${ROOT}"var/run/openldap
+	chmod 0755 "${ROOT}"var/run/openldap
+	chown root:ldap "${ROOT}"etc/openldap/slapd.conf
+	chmod 0640 "${ROOT}"etc/openldap/slapd.conf
+	chown root:ldap "${ROOT}"etc/openldap/slapd.conf.default
+	chmod 0640 "${ROOT}"etc/openldap/slapd.conf.default
+	chown ldap:ldap "${ROOT}"var/lib/openldap-{data,ldbm,slurp}
 
 	# notes from bug #41297, bug #41039
 	if use ssl; then
