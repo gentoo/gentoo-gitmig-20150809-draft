@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-volume/gkrellm-volume-2.1.13.ebuild,v 1.3 2006/12/24 21:54:10 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-volume/gkrellm-volume-2.1.13.ebuild,v 1.4 2006/12/26 15:01:11 gustavoz Exp $
 
 inherit multilib
 
@@ -11,7 +11,7 @@ SRC_URI="http://gkrellm.luon.net/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ppc ~sparc x86"
+KEYWORDS="~alpha ~amd64 ppc sparc x86"
 
 DEPEND="=app-admin/gkrellm-2*
 	alsa? ( media-libs/alsa-lib )"
