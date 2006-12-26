@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r5.ebuild,v 1.1 2006/10/05 08:06:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r5.ebuild,v 1.2 2006/12/26 04:48:11 vapier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -25,13 +25,13 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch "${FILESDIR}/${P}-zlib.patch"
-	epatch "${FILESDIR}/${P}-test_io.patch"
-	epatch "${FILESDIR}/${P}-autoconf259.patch"
-	epatch "${FILESDIR}/${P}-doxyinput.patch"
-	epatch "${FILESDIR}/${P}-unicode16.patch"
+	epatch "${FILESDIR}"/${P}-zlib.patch
+	epatch "${FILESDIR}"/${P}-test_io.patch
+	epatch "${FILESDIR}"/${P}-autoconf259.patch
+	epatch "${FILESDIR}"/${P}-doxyinput.patch
+	epatch "${FILESDIR}"/${P}-unicode16.patch
 
 	AT_M4DIR="${S}/m4" eautoreconf
 }
@@ -47,7 +47,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "Install failed"
+	emake DESTDIR="${D}" install || die "Install failed"
 
 	dodoc AUTHORS ChangeLog HISTORY README THANKS TODO
 
