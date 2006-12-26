@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.1.7-r3.ebuild,v 1.5 2006/11/07 19:33:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.1.7-r3.ebuild,v 1.6 2006/12/26 05:01:48 vapier Exp $
 
-inherit libtool flag-o-matic perl-app
+inherit libtool flag-o-matic perl-app multilib
 
 MY_PN="GraphicsMagick"
 MY_P=${MY_PN}-${PV}
@@ -87,7 +87,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 
 	if use perl ; then
 		cd PerlMagick
@@ -95,7 +95,7 @@ src_install() {
 		cd ..
 	fi
 
-	dosym /usr/lib/${MY_P}/ /usr/lib/GraphicsMagick
+	dosym ${MY_P} /usr/$(get_libdir)/GraphicsMagick
 
 	rm -f "${D}"/usr/share/GraphicsMagick/*.txt
 	rm -rf "${D}"/usr/share/${MY_P}/www
