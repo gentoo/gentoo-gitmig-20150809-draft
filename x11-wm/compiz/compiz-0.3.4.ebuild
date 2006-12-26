@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.3.4.ebuild,v 1.3 2006/11/29 23:20:52 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.3.4.ebuild,v 1.4 2006/12/26 18:51:39 hanno Exp $
 
 inherit eutils gnome2
 
 DESCRIPTION="compiz 3D composite- and windowmanager"
-HOMEPAGE="http://en.opensuse.org/Compiz"
+HOMEPAGE="http://www.go-compiz.org/"
 SRC_URI="http://xorg.freedesktop.org/archive/individual/app/${P}.tar.bz2"
 LICENSE="X11"
 SLOT="0"
