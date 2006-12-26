@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.30 2006/12/09 16:58:50 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.31 2006/12/26 12:16:11 drizzt Exp $
 
 # Someone who knows kerberos is needed to make sure that this works
 kerberos
@@ -52,3 +52,4 @@ sametime
 sms
 mtp
 milter
+qdbm
