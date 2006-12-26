@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-2.6.1.ebuild,v 1.1 2006/12/08 11:07:55 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-2.6.1.ebuild,v 1.2 2006/12/26 20:00:09 ticho Exp $
 
 IUSE="gnome dillo crypt spell ssl ldap ipv6 pda clamav xface kde imap spamassassin doc startup-notification bogofilter"
 
@@ -108,12 +108,17 @@ src_install() {
 	if use kde; then
 		einfo "Installing kde service scripts"
 		local kdeprefix="$(kde-config --prefix)"
-		local servicescript="claws-mail-kdeservicemenu.pl"
+		local servicescript="${PN}-kdeservicemenu.pl"
+		local desktopfile="${PN}-attach-files.desktop"
 		cd ${S}/tools/kdeservicemenu
-		for f in claws-mail-attach-files.desktop; do
-			sed -e "s:SCRIPT_PATH:${kdeprefix}/bin/${servicescript}:g" template_$f > $f
-			install -m 0644 $f ${D}/${kdeprefix}/share/apps/konqueror/servicemenus/$f || die
-		done
+		sed -i -e "s:SCRIPT_PATH:${kdeprefix}/bin/${servicescript}:g" \
+			template_${desktopfile}
+		dodir /usr/share/apps/konqueror/servicemenus
+		insopts -m 0644
+		insinto /usr/share/apps/konqueror/servicemenus
+		newins template_${desktopfile} ${desktopfile} || die
+		dodir ${kdeprefix}/bin
+		insopts -m 755
 		insinto ${kdeprefix}/bin
 		doexe ${servicescript} || die
 	fi
