@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.8.ebuild,v 1.2 2006/10/12 01:15:27 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.8.ebuild,v 1.3 2006/12/26 11:57:42 drizzt Exp $
 
 CABAL_FEATURES="bin"
 inherit haskell-cabal eutils versionator
@@ -13,7 +13,7 @@ SRC_URI="http://haskell.org/haddock/${MY_PF}-src.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 IUSE="doc"
 
