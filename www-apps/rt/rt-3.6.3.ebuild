@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.6.3.ebuild,v 1.1 2006/12/22 16:30:37 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.6.3.ebuild,v 1.2 2006/12/26 18:53:05 rl03 Exp $
 
 inherit webapp eutils
 
@@ -73,6 +73,7 @@ DEPEND="
 	>=dev-perl/MailTools-1.60
 	dev-perl/text-wrapper
 	dev-perl/Time-modules
+	dev-perl/TimeDate
 	virtual/perl-Time-HiRes
 	virtual/perl-File-Temp
 	dev-perl/TermReadKey
@@ -214,7 +215,7 @@ src_compile() {
 	if grep -q "MISSING" ${T}/t; then
 		ewarn "Missing Perl dependency!"
 		ewarn
-		cat ${T}/t
+		cat ${T}/t | grep MISSING
 		ewarn
 		ewarn "Please run perl-cleaner. If the problem persists,"
 		ewarn "please file a bug in the Gentoo Bugzilla with the information above"
