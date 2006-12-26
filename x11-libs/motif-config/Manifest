@@ -25,10 +25,10 @@ AUX system.mwmrc 2960 RMD160 28c349764f104e1283032dba576c2d23b4f851f8 SHA1 d282a
 MD5 f9acef531655ae685de204817c6b3c7a files/system.mwmrc 2960
 RMD160 28c349764f104e1283032dba576c2d23b4f851f8 files/system.mwmrc 2960
 SHA256 b1c16bd2cf04ecd9183309e404f723444567e6b4582ed95bd74c9cc50f3c5835 files/system.mwmrc 2960
-EBUILD motif-config-0.10.ebuild 2611 RMD160 546729b814fbe3a92e1e98734c9bb3b85eda0e4f SHA1 47f27205892c437ee26454176c6a820a0a03d7bc SHA256 951f744cb66cceb55de4a9ade91adef4333201227028d14f87217fe57d04abc5
-MD5 42fe10fa4ae31d72a94ec8c6325df038 motif-config-0.10.ebuild 2611
-RMD160 546729b814fbe3a92e1e98734c9bb3b85eda0e4f motif-config-0.10.ebuild 2611
-SHA256 951f744cb66cceb55de4a9ade91adef4333201227028d14f87217fe57d04abc5 motif-config-0.10.ebuild 2611
+EBUILD motif-config-0.10.ebuild 2522 RMD160 a58f2b4bda5d7f7f324827ce51f8ed20a0f83396 SHA1 01bc661a0d9bde5612cc4e7f8fe61cf9da882542 SHA256 cb5ac33f2a3100328e2a66fb20ea55f61817bc7fe209eaa120d7d70ef43bfeb0
+MD5 5271f0e8e6e914e6e5042b7456bad45e motif-config-0.10.ebuild 2522
+RMD160 a58f2b4bda5d7f7f324827ce51f8ed20a0f83396 motif-config-0.10.ebuild 2522
+SHA256 cb5ac33f2a3100328e2a66fb20ea55f61817bc7fe209eaa120d7d70ef43bfeb0 motif-config-0.10.ebuild 2522
 EBUILD motif-config-0.9.ebuild 2589 RMD160 49f5b84726d5dba77759837f49f740a244387f6f SHA1 1c2c719fde60d927ecb9e97f694cc3d4d1d65f42 SHA256 6b655bef8a25793344a9b5cf2777a630ec2e40585742ed5d5c3b12a283e46756
 MD5 a01d344ad183650d4c427260ab3e85d6 motif-config-0.9.ebuild 2589
 RMD160 49f5b84726d5dba77759837f49f740a244387f6f motif-config-0.9.ebuild 2589
@@ -41,16 +41,16 @@ MISC metadata.xml 160 RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 SHA1 d6147
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 metadata.xml 160
 SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e metadata.xml 160
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-motif-config-0.10 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-motif-config-0.10 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-motif-config-0.10 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-motif-config-0.9 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-motif-config-0.9 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-motif-config-0.9 1
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-motif-config-0.10 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-motif-config-0.10 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-motif-config-0.10 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-motif-config-0.9 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-motif-config-0.9 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-motif-config-0.9 0
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
+Version: GnuPG v1.4.6 (GNU/Linux)
 
-iD8DBQFFA9bhamhnQswr0vIRApx3AJ9AF1t5/Wc+1d4NFFcBVZjEZWcG7ACfd5K0
-tLDUY7QwAKFkggFmwP0Ypcs=
-=3B1o
+iD8DBQFFkKyH8bi6rjpTunYRAkYRAKClYfMr6F/cZ783VziqZjyJ+oLrSgCgw6Fd
+I8GT9X9CKTtlR/CGT6sV2Ew=
+=BaBC
 -----END PGP SIGNATURE-----
