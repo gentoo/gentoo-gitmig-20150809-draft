@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2004g.ebuild,v 1.2 2006/01/18 23:01:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2004g.ebuild,v 1.3 2006/12/26 02:58:24 vapier Exp $
 
 inherit flag-o-matic eutils libtool
 
@@ -66,11 +66,11 @@ src_install() {
 	into /usr
 
 	# Library binary
-	dolib.a c-client/c-client.a
-	dosym /usr/$(get_libdir)/c-client.a /usr/$(get_libdir)/libc-client.a
+	dolib.a c-client/c-client.a || die
+	dosym c-client.a /usr/$(get_libdir)/libc-client.a
 
 	# Now the shared library
-	dolib.so c-client/libc-client.so.1.0.0
+	dolib.so c-client/libc-client.so.1.0.0 || die
 	# these are created by ldconfig!
 	#cd ${D}/usr/$(get_libdir)
 	#ln -s libc-client.so.1.0.0 libc-client.so.1
@@ -81,7 +81,7 @@ src_install() {
 	doins c-client/*.h
 	doins c-client/linkage.c
 	#exclude these dupes (can't do it before now due to symlink hell)
-	rm ${D}/usr/include/imap/os_*.h
+	rm "${D}"/usr/include/imap/os_*.h
 
 	# Docs
 	dodoc README docs/*.txt docs/CONFIG docs/RELNOTES
