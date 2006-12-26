@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.13.ebuild,v 1.1 2006/06/03 19:37:48 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.13.ebuild,v 1.2 2006/12/26 04:55:58 vapier Exp $
 
 inherit eutils
 
@@ -85,24 +85,24 @@ src_install() {
 		-e "s,^\(TK_BUILD_STUB_LIB_PATH='\)${S}/unix,\1/usr/${mylibdir}," \
 		-e "s,^\(TK_CC_SEARCH_FLAGS='.*\)',\1:/usr/${mylibdir}'," \
 		-e "s,^\(TK_LD_SEARCH_FLAGS='.*\)',\1:/usr/${mylibdir}'," \
-		${D}/usr/${mylibdir}/tkConfig.sh || die
+		"${D}"/usr/${mylibdir}/tkConfig.sh || die
 
 	# install private headers
-	dodir /usr/${mylibdir}/tk${v1}/include/unix
-	install -c -m0644 ${S}/unix/*.h ${D}/usr/${mylibdir}/tk${v1}/include/unix
-	dodir /usr/${mylibdir}/tk${v1}/include/generic
-	install -c -m0644 ${S}/generic/*.h ${D}/usr/${mylibdir}/tk${v1}/include/generic
-	rm -f ${D}/usr/${mylibdir}/tk${v1}/include/generic/tk.h
-	rm -f ${D}/usr/${mylibdir}/tk${v1}/include/generic/tkDecls.h
-	rm -f ${D}/usr/${mylibdir}/tk${v1}/include/generic/tkPlatDecls.h
+	insinto /usr/${mylibdir}/tk${v1}/include/unix
+	doins "${S}"/unix/*.h || die
+	insinto /usr/${mylibdir}/tk${v1}/include/generic
+	doins "${S}"/generic/*.h || die
+	rm -f "${D}"/usr/${mylibdir}/tk${v1}/include/generic/tk.h
+	rm -f "${D}"/usr/${mylibdir}/tk${v1}/include/generic/tkDecls.h
+	rm -f "${D}"/usr/${mylibdir}/tk${v1}/include/generic/tkPlatDecls.h
 
 	# install symlink for libraries
-	#dosym /usr/${mylibdir}/libtk${v1}.a /usr/${mylibdir}/libtk.a
-	dosym /usr/${mylibdir}/libtk${v1}.so /usr/${mylibdir}/libtk.so
-	dosym /usr/${mylibdir}/libtkstub${v1}.a /usr/${mylibdir}/libtkstub.a
+	#dosym libtk${v1}.a /usr/${mylibdir}/libtk.a
+	dosym libtk${v1}.so /usr/${mylibdir}/libtk.so
+	dosym libtkstub${v1}.a /usr/${mylibdir}/libtkstub.a
 
-	ln -sf wish${v1} ${D}/usr/bin/wish
+	ln -sf wish${v1} "${D}"/usr/bin/wish
 
-	cd ${S}
+	cd "${S}"
 	dodoc ChangeLog README changes license.terms
 }

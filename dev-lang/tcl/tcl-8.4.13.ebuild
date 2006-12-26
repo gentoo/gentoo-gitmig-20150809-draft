@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.13.ebuild,v 1.4 2006/10/18 09:18:49 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.13.ebuild,v 1.5 2006/12/26 04:54:47 vapier Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -66,7 +66,7 @@ src_install() {
 	local v1
 	v1=${PV%.*}
 
-	cd ${S}/unix
+	cd "${S}"/unix
 	S= make DESTDIR="${D}" install || die
 
 	# fix the tclConfig.sh to eliminate refs to the build directory
@@ -80,24 +80,24 @@ src_install() {
 		-e "s,^TCL_LIB_FILE='libtcl${v1}..TCL_DBGX..so',TCL_LIB_FILE=\"libtcl${v1}\$\{TCL_DBGX\}.so\"," \
 		-e "s,^TCL_CC_SEARCH_FLAGS='\(.*\)',TCL_CC_SEARCH_FLAGS='\1:/usr/${mylibdir}'," \
 		-e "s,^TCL_LD_SEARCH_FLAGS='\(.*\)',TCL_LD_SEARCH_FLAGS='\1:/usr/${mylibdir}'," \
-		${D}/usr/${mylibdir}/tclConfig.sh || die
+		"${D}"/usr/${mylibdir}/tclConfig.sh || die
 
 	# install private headers
-	dodir /usr/${mylibdir}/tcl${v1}/include/unix
-	install -c -m0644 ${S}/unix/*.h ${D}/usr/${mylibdir}/tcl${v1}/include/unix
-	dodir /usr/${mylibdir}/tcl${v1}/include/generic
-	install -c -m0644 ${S}/generic/*.h ${D}/usr/${mylibdir}/tcl${v1}/include/generic
-	rm -f ${D}/usr/${mylibdir}/tcl${v1}/include/generic/tcl.h
-	rm -f ${D}/usr/${mylibdir}/tcl${v1}/include/generic/tclDecls.h
-	rm -f ${D}/usr/${mylibdir}/tcl${v1}/include/generic/tclPlatDecls.h
+	insinto /usr/${mylibdir}/tcl${v1}/include/unix
+	doins "${S}"/unix/*.h || die
+	insinto /usr/${mylibdir}/tcl${v1}/include/generic
+	doins "${S}"/generic/*.h || die
+	rm -f "${D}"/usr/${mylibdir}/tcl${v1}/include/generic/tcl.h
+	rm -f "${D}"/usr/${mylibdir}/tcl${v1}/include/generic/tclDecls.h
+	rm -f "${D}"/usr/${mylibdir}/tcl${v1}/include/generic/tclPlatDecls.h
 
 	# install symlink for libraries
-	dosym /usr/${mylibdir}/libtcl${v1}.so /usr/${mylibdir}/libtcl.so
-	dosym /usr/${mylibdir}/libtclstub${v1}.a /usr/${mylibdir}/libtclstub.a
+	dosym libtcl${v1}.so /usr/${mylibdir}/libtcl.so
+	dosym libtclstub${v1}.a /usr/${mylibdir}/libtclstub.a
 
-	ln -sf tclsh${v1} ${D}/usr/bin/tclsh
+	ln -sf tclsh${v1} "${D}"/usr/bin/tclsh
 
-	cd ${S}
+	cd "${S}"
 	dodoc README changes license.terms
 }
 
