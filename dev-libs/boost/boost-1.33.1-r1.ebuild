@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.33.1-r1.ebuild,v 1.7 2006/12/23 22:32:48 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.33.1-r1.ebuild,v 1.8 2006/12/26 19:16:07 gustavoz Exp $
 
 inherit eutils distutils multilib python versionator
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.boost.org/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="freedist Boost-1.0"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ppc ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ppc ppc64 sparc ~x86 ~x86-fbsd"
 IUSE="bcp bjam debug doc icu pyste threads threadsonly"
 
 # Overriding var from python.eclass
