@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/commons-jelly
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/ChangeLog,v 1.4 2006/11/30 15:30:43 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/ChangeLog,v 1.5 2006/12/26 18:12:06 betelgeuse Exp $
+
+  26 Dec 2006; Petteri Räty <betelgeuse@gentoo.org>
+  commons-jelly-1.0-r1.ebuild:
+  Always needs junit and commons-logging to compile. Relaxed commons-jexl
+  dependency for upcoming version bump and cleaned the ebuild.
 
   30 Nov 2006; Vlastimil Babka <caster@gentoo.org>
   -commons-jelly-1.0.ebuild, commons-jelly-1.0-r1.ebuild:

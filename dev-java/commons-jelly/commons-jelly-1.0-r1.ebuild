@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/commons-jelly-1.0-r1.ebuild,v 1.2 2006/11/30 15:30:43 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/commons-jelly-1.0-r1.ebuild,v 1.3 2006/12/26 18:12:06 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -21,20 +21,18 @@ RDEPEND=">=virtual/jre-1.4
 	dev-java/commons-discovery
 	dev-java/forehead
 	dev-java/jakarta-jstl
-	=dev-java/commons-jexl-1.0*
+	dev-java/commons-jexl
 	=dev-java/commons-beanutils-1.6*
 	dev-java/commons-collections
 	=dev-java/dom4j-1*
 	=dev-java/jaxen-1.1*
-	>=dev-java/xerces-2.7"
+	>=dev-java/xerces-2.7
+	dev-java/junit
+	dev-java/commons-logging"
 
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core
-	test? (
-		dev-java/junit
-		dev-java/ant-tasks
-		dev-java/commons-logging
-	)
+	test? ( dev-java/ant-tasks )
 	${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
@@ -51,18 +49,15 @@ src_unpack() {
 	java-pkg_jar-from commons-discovery,forehead,jakarta-jstl,commons-jexl-1.0
 	java-pkg_jar-from commons-beanutils-1.6,commons-collections
 	java-pkg_jar-from dom4j-1,jaxen-1.1,xerces-2
-
-	if use test; then
-		java-pkg_jar-from commons-logging
-	fi
+	java-pkg_jar-from commons-logging,junit
 }
 
 src_compile() {
-	local antflags="-Dlibdir=lib jar"
-	use doc && antflags="${antflags} javadoc"
-	use test && antflags="${antflags} test"
+	eant -Dlibdir=lib jar $(use_doc)
+}
 
-	eant ${antflags} || die "Ant failed"
+src_test() {
+	eant test -Dlibdir=lib
 }
 
 src_install() {
@@ -70,6 +65,6 @@ src_install() {
 
 	dodoc NOTICE.txt README.txt RELEASE-NOTES.txt
 
-	use doc && java-pkg_dohtml -r dist/docs/api
+	use doc && java-pkg_dojavadoc dist/docs/api
 	use source && java-pkg_dosrc src/java/*
 }
