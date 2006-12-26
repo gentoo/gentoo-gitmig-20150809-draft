@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-1.1.3.ebuild,v 1.3 2006/12/26 21:19:11 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-1.1.3.ebuild,v 1.4 2006/12/26 21:25:40 ticho Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -21,7 +21,7 @@ DEPEND="virtual/libiconv
 	!berkdb? (
 		sqlite?  ( >=dev-db/sqlite-3.2.6 )
 		!sqlite? ( >=sys-libs/db-3.2 ) )
-	sci-libs/gsl"
+	gsl? ( sci-libs/gsl )"
 #	app-arch/pax" # only needed for bf_tar
 
 src_unpack() {
