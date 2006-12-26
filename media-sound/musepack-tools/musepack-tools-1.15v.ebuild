@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15v.ebuild,v 1.9 2006/06/09 02:36:36 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15v.ebuild,v 1.10 2006/12/26 18:02:55 flameeyes Exp $
 
 IUSE="static 16bit esd"
 
@@ -17,7 +17,8 @@ LICENSE="LGPL-2.1"
 KEYWORDS="amd64 x86 ~x86-fbsd"
 
 RDEPEND="esd? ( media-sound/esound )
-	 media-libs/id3lib"
+	media-libs/id3lib
+	!media-sound/mppenc"
 
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )
@@ -28,15 +29,15 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/${P}-Makefile.patch
-	epatch ${FILESDIR}/${P}-gcc4.patch
+	epatch "${FILESDIR}/${P}-Makefile.patch"
+	epatch "${FILESDIR}/${P}-gcc4.patch"
 
 	sed -i 's/#define USE_IRIX_AUDIO/#undef USE_IRIX_AUDIO/' mpp.h
 
 	if ! use esd ; then
 		sed -i -e 's/#define USE_ESD_AUDIO/#undef USE_ESD_AUDIO/' mpp.h
 	else
-		sed -i -e 's/^LDADD    = -lm$/LDADD    = $(shell esd-config --libs)/' \
+		sed -i -e 's/^LDADD	   = -lm$/LDADD	   = $(shell esd-config --libs)/' \
 			Makefile
 	fi
 
@@ -58,7 +59,7 @@ src_compile() {
 	filter-flags "-mfpmath=sse" "-mfpmath=sse,387"
 	use static && export BLD_STATIC=1
 
-	append-flags -I${S}
+	append-flags "-I${S}"
 
 	ARCH= emake CC="$(tc-getCC)" mppenc mppdec replaygain || die
 }
