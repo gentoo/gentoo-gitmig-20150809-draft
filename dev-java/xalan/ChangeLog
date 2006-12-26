@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/xalan
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.57 2006/12/07 22:50:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.58 2006/12/26 20:15:05 betelgeuse Exp $
+
+*xalan-2.7.0-r3 (26 Dec 2006)
+
+  26 Dec 2007; Petteri Räty <betelgeuse@gentoo.org> +xalan-2.7.0-r3.ebuild:
+  Does not bundle .class files from dependencies inside installed jars any 
+  more. Fixes bug #113894.
 
   07 Dec 2006; Diego Pettenò <flameeyes@gentoo.org> xalan-2.7.0-r2.ebuild:
   Add ~x86-fbsd keyword.
