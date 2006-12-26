@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=TOra
+GenericName=Toolkit For Oracle
+Comment=Toolkit For Oracle (and more)
+Exec=tora
+TryExec=tora
+Icon=tora.png
+StartupNotify=true
+Terminal=false
+Type=Application
+MimeType=text/x-sql
+Categories=Application;Development;
