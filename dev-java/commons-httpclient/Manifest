@@ -15,7 +15,6 @@ RMD160 9700866ba2d106cfc9207b5670c05d723817e652 files/jikes.diff 955
 SHA256 a2a8df8a5330511743d00c3cf929ee89012ad6b32b97d64862260828ad25333f files/jikes.diff 955
 DIST commons-httpclient-2.0.1-src.tar.gz 1399272
 DIST commons-httpclient-2.0.2-src.tar.gz 1447937 RMD160 82c5637e06fc96f2db4ee14ad6fc158ea5f297ed SHA1 c6813d3ed0d2fa61389bf84fb5393af482b5f150 SHA256 279ee55c339e512e6a9ecefe52170c8f65e0d532c3a71cfc7ad5c5cdf964a102
-DIST commons-httpclient-3.0-src.tar.gz 1903528 RMD160 3ade2b18683bc9899b240101898ebd34d9e1dbf7 SHA1 9843ffa12031ba6163901e22dbdfb7cb42381b37 SHA256 84bae36abcc01d3f706d17fefefd4b81ceebfaccd2ff08511b4805ba3b5d88d3
 DIST commons-httpclient-3.0.1-src.tar.gz 1698379 RMD160 5b02f6731718a590dbace90e6e494a9568a7abdb SHA1 6deb04b60ec3093f0c8ee56b7bbc6980435b319c SHA256 6a26b4dfb9bfacf9849793d6edf997079b2230e5523f7aa9274a7d1d2fb1f2a8
 EBUILD commons-httpclient-2.0.1.ebuild 1662 RMD160 fa2511d34b32f7b155b4619f5c15a0fd99539aac SHA1 a21f37984074126425f6047ff7b8953ef4c5ddd6 SHA256 b121d3f418add57ab5468f60e1a77d9ced3faa2936c6cf5481983ece059d3ca4
 MD5 b9b6f340f45863261f13a9229072037b commons-httpclient-2.0.1.ebuild 1662
@@ -29,22 +28,14 @@ EBUILD commons-httpclient-2.0.2.ebuild 1674 RMD160 c387b7cc8f5fd051704293307b956
 MD5 5c38e5dafb36b0c78419c2f7b20ab2d2 commons-httpclient-2.0.2.ebuild 1674
 RMD160 c387b7cc8f5fd051704293307b95607bb5f84a7f commons-httpclient-2.0.2.ebuild 1674
 SHA256 66150387519790511f930e7ba2402541c3b00d35a3188738b878e62a478b8fb5 commons-httpclient-2.0.2.ebuild 1674
-EBUILD commons-httpclient-3.0-r1.ebuild 1429 RMD160 409ad139e7e416a12397c169966c53f75708bab7 SHA1 8fdd9a6a40732b241acf392a6e5aac691cc98f20 SHA256 d90515c4983b6ea7668ff96fd71f9053b7d00d6498ac50e682760aff25b34503
-MD5 b52f05c525bac8344b3a06173b6932a7 commons-httpclient-3.0-r1.ebuild 1429
-RMD160 409ad139e7e416a12397c169966c53f75708bab7 commons-httpclient-3.0-r1.ebuild 1429
-SHA256 d90515c4983b6ea7668ff96fd71f9053b7d00d6498ac50e682760aff25b34503 commons-httpclient-3.0-r1.ebuild 1429
 EBUILD commons-httpclient-3.0.1.ebuild 1555 RMD160 69d84bad4f6e49e8b2ab627b1c211a7c4b6bb69c SHA1 ea5f2837df6fc9cb41b02339d035dcccfc191cf7 SHA256 7a9580085b50e704b499ac6e8cb207dcfced36be7d523053c9589789bbda016c
 MD5 b829a1e944d77ee247f9dbdfc2c38e82 commons-httpclient-3.0.1.ebuild 1555
 RMD160 69d84bad4f6e49e8b2ab627b1c211a7c4b6bb69c commons-httpclient-3.0.1.ebuild 1555
 SHA256 7a9580085b50e704b499ac6e8cb207dcfced36be7d523053c9589789bbda016c commons-httpclient-3.0.1.ebuild 1555
-EBUILD commons-httpclient-3.0.ebuild 1410 RMD160 acf3e6b4e273c7c7dd1cc61d0baa2d29766c3f50 SHA1 3d2cd08c21fb6744fabba6c7fc4894e653630f96 SHA256 db157c6d03ab21379673f52686acbe7ee1eaf709107570b0d382cc2fd1de0172
-MD5 da124c5c8b147db6c2054a25ccd95fcc commons-httpclient-3.0.ebuild 1410
-RMD160 acf3e6b4e273c7c7dd1cc61d0baa2d29766c3f50 commons-httpclient-3.0.ebuild 1410
-SHA256 db157c6d03ab21379673f52686acbe7ee1eaf709107570b0d382cc2fd1de0172 commons-httpclient-3.0.ebuild 1410
-MISC ChangeLog 5325 RMD160 a95d0ab8179a47f313319a1e38a1b67787570369 SHA1 d18d060bb973ac5eafe6bddfb48e87137d56ac93 SHA256 9a9d5b3932b58e0522ec1a0e9244b844de0692af786790bfe3eb445ce4631ede
-MD5 ae1090ec73db163aede21aae4f8901a2 ChangeLog 5325
-RMD160 a95d0ab8179a47f313319a1e38a1b67787570369 ChangeLog 5325
-SHA256 9a9d5b3932b58e0522ec1a0e9244b844de0692af786790bfe3eb445ce4631ede ChangeLog 5325
+MISC ChangeLog 5472 RMD160 58d266e9c375cb9c4eada58888c2d709c65a75e1 SHA1 076f3047ab57106b5531b1361e4b4dffef784a1c SHA256 5cb4a68a54a560a360ae8692e0eb7b6a16206cf6e42fa17396e57d9effc0d472
+MD5 b1b92a3b080e4cff2ccfcc95972f70f3 ChangeLog 5472
+RMD160 58d266e9c375cb9c4eada58888c2d709c65a75e1 ChangeLog 5472
+SHA256 5cb4a68a54a560a360ae8692e0eb7b6a16206cf6e42fa17396e57d9effc0d472 ChangeLog 5472
 MISC metadata.xml 157 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 SHA1 c37a6b9922aef61b5b3387655bccb6e3b16e0e26 SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
@@ -58,19 +49,13 @@ SHA256 ce998d858d0bfffcdddb1319983b0f69f6954f032f7a5a09ce8fc5eaacb25b9e files/di
 MD5 25d25d6d826624b872bcf76690c31ebd files/digest-commons-httpclient-2.0.2-r1 289
 RMD160 0b37e48d9e1a21b03325d4656bce29f35d1bb41b files/digest-commons-httpclient-2.0.2-r1 289
 SHA256 ce998d858d0bfffcdddb1319983b0f69f6954f032f7a5a09ce8fc5eaacb25b9e files/digest-commons-httpclient-2.0.2-r1 289
-MD5 9759f9d1eabef5dc248ce4ca7d35f23d files/digest-commons-httpclient-3.0 283
-RMD160 9645342156bdfee0ea4971bdee9fd6f436ffe5e5 files/digest-commons-httpclient-3.0 283
-SHA256 30e8876f69d7f7595a2ea9ef79d26e57935515c84d3e11a0ec87d231e73b732b files/digest-commons-httpclient-3.0 283
-MD5 9759f9d1eabef5dc248ce4ca7d35f23d files/digest-commons-httpclient-3.0-r1 283
-RMD160 9645342156bdfee0ea4971bdee9fd6f436ffe5e5 files/digest-commons-httpclient-3.0-r1 283
-SHA256 30e8876f69d7f7595a2ea9ef79d26e57935515c84d3e11a0ec87d231e73b732b files/digest-commons-httpclient-3.0-r1 283
 MD5 0cbffba28b281e05d0126b80fd3c9d10 files/digest-commons-httpclient-3.0.1 289
 RMD160 8b95b84606fc07a9051356fa76117135cfa08fce files/digest-commons-httpclient-3.0.1 289
 SHA256 746bba8a177792a98471ab35b5849e68de637f254999828eeca4f6add03a1b06 files/digest-commons-httpclient-3.0.1 289
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.6 (GNU/Linux)
 
-iD8DBQFFkWyTcxLzpIGCsLQRAlbKAKCNz7TBA8bgaMVoQs6PWJfhWh87dQCdE8/i
-GfrBaRZvAfK615kgckO402w=
-=UZez
+iD8DBQFFkW0AcxLzpIGCsLQRAlahAJ9CT15Pu6SraOGGNz9BdvesChTAAQCffzwW
+BGZPuxDRDQyug60+FY04AFc=
+=+T4U
 -----END PGP SIGNATURE-----
