@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/bsdiff-4.3-r1.ebuild,v 1.2 2006/11/24 15:23:21 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/bsdiff-4.3-r1.ebuild,v 1.3 2006/12/26 23:47:23 drizzt Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs flag-o-matic
 
-IUSE="elibc_glibc"
+IUSE=""
 
 DESCRIPTION="bsdiff: Binary Differencer using a suffix alg"
 HOMEPAGE="http://www.daemonology.net/bsdiff/"
@@ -18,7 +18,7 @@ DEPEND="app-arch/bzip2"
 RDEPEND="${DEPEND}"
 
 src_compile() {
-	use elibc_glibc && CFLAGS="${CFLAGS} -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64"
+	append-lfs-flags
 	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o bsdiff bsdiff.c -lbz2 || die "failed compiling bsdiff"
 	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o bspatch bspatch.c -lbz2 || die "failed compiling bspatch"
 }
