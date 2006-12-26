@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.1-r1.ebuild,v 1.2 2006/12/21 17:39:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.1-r1.ebuild,v 1.3 2006/12/26 14:45:09 gustavoz Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/lcdproc/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~sparc ~x86"
 
 # general use keywords in first line, drivers in line 2
 IUSE="doc debug ldap nfs samba seamless-hbars usb
