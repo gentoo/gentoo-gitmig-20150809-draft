@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.42 2006/12/19 22:10:31 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.43 2006/12/26 22:25:40 hanno Exp $
 
 # Joshua Jackson <tsunam@gentoo.org>
 # as 2.16 of gnome is masked..heliodor can't be used here
@@ -109,6 +109,7 @@ dev-db/mysql-gui-tools
 # Hanno Boeck <hanno@gentoo.org>
 # Needs gnome 2.16
 x11-wm/compiz
+x11-apps/compiz-settings
 
 # Andrej Kacian <ticho@gentoo.org>
 # Depends on >=2.6.11 headers
