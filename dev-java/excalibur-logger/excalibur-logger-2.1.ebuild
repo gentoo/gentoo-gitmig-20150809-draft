@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/excalibur-logger/excalibur-logger-2.1.ebuild,v 1.2 2006/12/22 18:12:09 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/excalibur-logger/excalibur-logger-2.1.ebuild,v 1.3 2006/12/26 19:11:09 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -14,9 +14,16 @@ KEYWORDS="~x86"
 
 IUSE="doc source"
 
-# Needs 2.1 which does not have the jms and javamail use flags
+# Needs 2.1 of avalon-logkit
+# which does not have the jms and javamail use flags
 # that are needed for this package to build
-CDEP="=dev-java/avalon-logkit-2.1*"
+CDEP="
+	=dev-java/avalon-logkit-2.1*
+	=dev-java/avalon-framework-4.2*
+	dev-java/log4j
+	=dev-java/servletapi-2.4*
+	dev-java/sun-javamail
+	dev-java/sun-jms"
 
 RDEPEND=">=virtual/jre-1.4
 	${CDEP}"
