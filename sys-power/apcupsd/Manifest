@@ -85,10 +85,10 @@ AUX 3.12.4/etc.patch 3500 RMD160 650857be571e1304b42d277e50447346e392e9eb SHA1 b
 MD5 26480cbe6d33e888c1c6e062c273b1d4 files/3.12.4/etc.patch 3500
 RMD160 650857be571e1304b42d277e50447346e392e9eb files/3.12.4/etc.patch 3500
 SHA256 ee4fc73d658e44183b68e0281dfcb24d30eb265b635cf0aa87e5fe9e15330f45 files/3.12.4/etc.patch 3500
-AUX 3.12.4/exit-status-build.patch 356 RMD160 6f50bd1b8dc3a1cfc3739beea21a2ff2caafb6b3 SHA1 64606aae1a36761fef50672ad4a781ba16c49529 SHA256 a1d03e2ef099e8bb89be6edf0f5370460cc12aa732b609528a4851b50d93357e
-MD5 455eb7bf5aec1780794aca89643f4069 files/3.12.4/exit-status-build.patch 356
-RMD160 6f50bd1b8dc3a1cfc3739beea21a2ff2caafb6b3 files/3.12.4/exit-status-build.patch 356
-SHA256 a1d03e2ef099e8bb89be6edf0f5370460cc12aa732b609528a4851b50d93357e files/3.12.4/exit-status-build.patch 356
+AUX 3.12.4/exit-status-build.patch 803 RMD160 c55fa78dbb454955135409eed3e0d737cd4cbc86 SHA1 d024e830f85e40df1b5b0df50dd3aa25a19d73fc SHA256 435e8a88593d447423fac086e5a040d8a1fe8b89fd3b9af5b6afe228ea6ec28d
+MD5 220e01a1b658d2eecc4d8dd5bb0b1b2a files/3.12.4/exit-status-build.patch 803
+RMD160 c55fa78dbb454955135409eed3e0d737cd4cbc86 files/3.12.4/exit-status-build.patch 803
+SHA256 435e8a88593d447423fac086e5a040d8a1fe8b89fd3b9af5b6afe228ea6ec28d files/3.12.4/exit-status-build.patch 803
 AUX 3.12.4/no-parallel.patch 339 RMD160 c6e50aa5b22438e02e17df4fda41c7cae371217f SHA1 4d20db0882272b9c472b1ea994d115310bcab6d3 SHA256 3bcd10a6f7c623496a75d8cc321becbc24162372936dab4e696b0322c46e4c62
 MD5 1f8ffc6c5b825f0b2d4a7be5743cd44a files/3.12.4/no-parallel.patch 339
 RMD160 c6e50aa5b22438e02e17df4fda41c7cae371217f files/3.12.4/no-parallel.patch 339
@@ -176,9 +176,9 @@ MD5 c3ff7448e5d220ac620e4b47c6f07152 files/digest-apcupsd-3.12.4 247
 RMD160 7d8135db6d69f367b6f756836b61d75921c3bb00 files/digest-apcupsd-3.12.4 247
 SHA256 d5ada22441893d49204b66ed425a7b2b9081e985824ebb9a55b67b3001e98a42 files/digest-apcupsd-3.12.4 247
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
+Version: GnuPG v1.4.6 (GNU/Linux)
 
-iD8DBQFFiGvuK9sYciBdMQMRAkcqAJ9GmURtD9MWdsOL9rmqfN0rF1JclwCeJCC2
-7OR/PxN1ZOdvVZiAGUXdW8E=
-=hKcb
+iD8DBQFFkZms8bi6rjpTunYRAvybAKC75w/jwSvDfCF93CraGyx42pFkxACgnmbg
+6vu86KYtpaejnIRdnqLEwhI=
+=fnN1
 -----END PGP SIGNATURE-----
