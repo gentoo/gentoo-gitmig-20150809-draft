@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6492 2006/12/25 19:22:08 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6493 2006/12/26 17:44:04 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ## 
+
+# Diego Pettenò <flameeyes@gentoo.org> (26 Dec 2006)
+# Pending removal as superseded by media-libs/libmpcdec.
+media-libs/libmusepack
+=media-plugins/gst-plugins-musepack-0.8.8
 
 # Andrej Kacian <ticho@gentoo.org> (25 Dec 2006)
 # Masked for debugging
