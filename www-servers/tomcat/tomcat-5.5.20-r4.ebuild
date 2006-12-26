@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r4.ebuild,v 1.3 2006/12/22 00:58:23 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r4.ebuild,v 1.4 2006/12/26 18:47:20 betelgeuse Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -35,7 +35,7 @@ RDEPEND="=dev-java/eclipse-ecj-3.1*
 	java5? ( >=virtual/jre-1.5 )
 	!java5? (
 		=virtual/jre-1.4*
-		>=dev-java/commons-httpclient-2.0
+		=dev-java/commons-httpclient-2.0*
 		dev-java/sun-jaf
 		>=dev-java/junit-3.8.1
 		=dev-java/mx4j-3*
