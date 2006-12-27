@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.90.4.00-r1.ebuild,v 1.2 2006/07/22 22:08:52 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.90.4.00-r1.ebuild,v 1.3 2006/12/27 13:23:46 corsair Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://sourceforge/project-x/${MY_PN}_Source_eng_${PV}.zip
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="X doc source"
 
 RDEPEND=">=virtual/jre-1.4
