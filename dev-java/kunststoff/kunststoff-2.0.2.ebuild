@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kunststoff/kunststoff-2.0.2.ebuild,v 1.4 2005/07/12 19:40:12 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kunststoff/kunststoff-2.0.2.ebuild,v 1.5 2006/12/27 23:34:41 dertobi123 Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.incors.org/archive/${P//./_}.zip"
 HOMEPAGE="http://www.incors.org/archive"
 LICENSE="LGPL-2.1"
 SLOT="2.0"
-KEYWORDS="x86 amd64 ~ppc"
+KEYWORDS="amd64 ppc x86"
 IUSE="doc jikes"
 DEPEND=">=virtual/jdk-1.4
 	jikes? ( >=dev-java/jikes-1.21 )
