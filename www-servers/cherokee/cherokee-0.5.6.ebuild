@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.5.6.ebuild,v 1.2 2006/12/27 04:48:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.5.6.ebuild,v 1.3 2006/12/27 05:02:31 flameeyes Exp $
 
 inherit eutils pam versionator libtool
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.cherokee-project.com/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="ipv6 ssl gnutls static pam coverpage"
+IUSE="ipv6 ssl gnutls static pam coverpage threads"
 
 RDEPEND=">=sys-libs/zlib-1.1.4-r1
 	gnutls? ( net-libs/gnutls )
@@ -62,6 +62,8 @@ src_compile() {
 		${myconf} \
 		$(use_enable pam) \
 		$(use_enable ipv6) \
+		$(use_enable threads pthread) \
+		--disable-dependency-tracking \
 		--enable-os-string="Gentoo ${os}" \
 		--with-wwwroot=/var/www/localhost/htdocs \
 		|| die "configure failed"
@@ -78,7 +80,7 @@ src_install () {
 
 	keepdir /etc/cherokee/mods-enabled /etc/cherokee/sites-enabled /var/www/localhost/htdocs
 
-	use coverpage || rm -f "${D}"/var/www/localhost/htdocs/index.html
+	use coverpage || rm -rf "${D}"/var/www/localhost/htdocs/{index.html,images}
 }
 
 pkg_postinst() {
