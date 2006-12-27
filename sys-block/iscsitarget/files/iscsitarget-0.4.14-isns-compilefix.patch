@@ -1,0 +1,12 @@
+diff -Nuar --exclude '*~' /dev/shm/portage/sys-block/iscsitarget-0.4.14/work/iscsitarget-0.4.14.orig/usr/isns.c /dev/shm/portage/sys-block/iscsitarget-0.4.14/work/iscsitarget-0.4.14/usr/isns.c
+--- /dev/shm/portage/sys-block/iscsitarget-0.4.14/work/iscsitarget-0.4.14.orig/usr/isns.c	2006-09-25 02:08:51.000000000 -0700
++++ /dev/shm/portage/sys-block/iscsitarget-0.4.14/work/iscsitarget-0.4.14/usr/isns.c	2006-12-26 18:26:00.260045115 -0800
+@@ -223,7 +223,7 @@
+ 	x = (x & 0x0000ffff) << 16 | (x & 0xffff0000) >> 16;	\
+ }
+ #else
+-#define set_scn_flag(x)
++#define set_scn_flag(x)	x
+ #endif
+ 
+ static int isns_scn_register(void)
