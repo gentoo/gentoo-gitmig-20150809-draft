@@ -20,14 +20,14 @@ EBUILD boa-constructor-0.3.1_alpha.ebuild 1193 RMD160 78e3c00adea1aabfecb2f9d3aa
 MD5 2c4a37a1d4760ec3cb8af71011d72b9c boa-constructor-0.3.1_alpha.ebuild 1193
 RMD160 78e3c00adea1aabfecb2f9d3aae910f3ee8cec54 boa-constructor-0.3.1_alpha.ebuild 1193
 SHA256 ec3a2be5d85f6b4517299583d8086c1a3eaa510df9da5926776fc190abf1efb9 boa-constructor-0.3.1_alpha.ebuild 1193
-EBUILD boa-constructor-0.4.0_alpha.ebuild 1271 RMD160 d1f79b421254cd5e5eff0cbf6b3d9d32df40a1a3 SHA1 2beeda5175285aabd4b8df6f43aee837fa0f1ea2 SHA256 1465776f4dfff237949e2d8fb9503da59d5866ecea16627a57ebbf9610607889
-MD5 c3b4f337aeae8c89ccca55102da4d56e boa-constructor-0.4.0_alpha.ebuild 1271
-RMD160 d1f79b421254cd5e5eff0cbf6b3d9d32df40a1a3 boa-constructor-0.4.0_alpha.ebuild 1271
-SHA256 1465776f4dfff237949e2d8fb9503da59d5866ecea16627a57ebbf9610607889 boa-constructor-0.4.0_alpha.ebuild 1271
-MISC ChangeLog 2999 RMD160 e7362fa1f085997f5e8ff38c9b0fdb2c7d7f2c8f SHA1 ac9afbbd212d36172656c4dc622b4e9eedc96f68 SHA256 4b196151372974ba36ab4a6e2582b5494a4ffa6e0991da710b60680adede2694
-MD5 91ac02d6d269024d9cf73ce50f9f0125 ChangeLog 2999
-RMD160 e7362fa1f085997f5e8ff38c9b0fdb2c7d7f2c8f ChangeLog 2999
-SHA256 4b196151372974ba36ab4a6e2582b5494a4ffa6e0991da710b60680adede2694 ChangeLog 2999
+EBUILD boa-constructor-0.4.0_alpha.ebuild 1270 RMD160 c9fe0b1ba8725746ab475276660087581ac5fccd SHA1 05091dc3f60167954a19515787c16158b4700027 SHA256 638c0eca4b8e9280a379eeb9385bd147a4c60c95bb24afdff8fe56cfc7586c3b
+MD5 b2fab8e8bed16f5d2d7d7f91c2ccec70 boa-constructor-0.4.0_alpha.ebuild 1270
+RMD160 c9fe0b1ba8725746ab475276660087581ac5fccd boa-constructor-0.4.0_alpha.ebuild 1270
+SHA256 638c0eca4b8e9280a379eeb9385bd147a4c60c95bb24afdff8fe56cfc7586c3b boa-constructor-0.4.0_alpha.ebuild 1270
+MISC ChangeLog 3126 RMD160 ed43c1b61b5015fa5ee3eaf70c5de4f6bc680521 SHA1 ecdea02b52540b153beabdf155c349bc1cdb6cb6 SHA256 683ec101b7aa9474b171fca252604193962739fa8e9fe7b8259216155ffc6b20
+MD5 a690924d677a4ef79d71b7c1b11716fb ChangeLog 3126
+RMD160 ed43c1b61b5015fa5ee3eaf70c5de4f6bc680521 ChangeLog 3126
+SHA256 683ec101b7aa9474b171fca252604193962739fa8e9fe7b8259216155ffc6b20 ChangeLog 3126
 MISC metadata.xml 270 RMD160 4c99e3e5fd912332fbb9f258342a041da76100b3 SHA1 bc88c79712329449317309220db2b69e81d168d8 SHA256 e0e3f95520e8f3ac114892eb4c6374a795840fa2c13713fe963a4456451057a7
 MD5 7e8237fba7a4dfcc01d7501289d125ed metadata.xml 270
 RMD160 4c99e3e5fd912332fbb9f258342a041da76100b3 metadata.xml 270
@@ -42,9 +42,9 @@ MD5 48e7a9387fc8362dacd93c8f48d52a3d files/digest-boa-constructor-0.4.0_alpha 27
 RMD160 362cf2b1892aaca2de0bc9f5a9fb5d0c03763db5 files/digest-boa-constructor-0.4.0_alpha 271
 SHA256 64ff7bf3b78630e12720822a2a2bd1d36d3fd16c18c0adaee35b17c8d64aa766 files/digest-boa-constructor-0.4.0_alpha 271
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
+Version: GnuPG v1.4.6-ecc01.6 (GNU/Linux)
 
-iD8DBQFFIr50keYb6olFHJcRAhbEAJ4kfUA4ZtJu+UYc5e2pdIf1+NoAnwCeMjg7
-Yv3hLMMycb1lPgv23FXPDjw=
-=F4/h
+iD8DBQFFkrLNKRy60XGEcJIRAobwAKCABId0mGhvbFDRA9Zk0jcBT/QoHACeJfsV
+Bk38MWLVnY5j0Fx7vcijo5w=
+=JPeR
 -----END PGP SIGNATURE-----
