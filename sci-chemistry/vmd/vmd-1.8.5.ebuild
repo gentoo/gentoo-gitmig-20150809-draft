@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.5.ebuild,v 1.3 2006/12/22 14:00:25 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.5.ebuild,v 1.4 2006/12/27 03:04:20 markusle Exp $
 
 inherit eutils toolchain-funcs python
 
@@ -11,7 +11,7 @@ SRC_URI="${P}.src.tar.gz"
 
 SLOT="0"
 KEYWORDS="~ppc ~x86"
-IUSE="hardened netcdf"
+IUSE="hardened"
 
 RESTRICT="fetch"
 
@@ -23,7 +23,7 @@ DEPEND="app-shells/tcsh
 	=dev-lang/tk-8.4*
 	>=dev-lang/python-2.3
 	sci-biology/stride
-	netcdf? ( sci-libs/netcdf )
+	sci-libs/netcdf
 	hardened? ( sys-apps/paxctl )"
 
 
@@ -79,11 +79,9 @@ src_unpack() {
 		-e "s:gentoo-fltk-libs:/usr/$(get_libdir)/fltk-1.1:" \
 		-i configure || die "failed setting up fltk"
 
-	if use netcdf; then
-		sed -e "s:gentoo-netcdf-include:/usr/include:" \
-			-e "s:gentoo-netcdf-libs:/usr/$(get_libdir):" \
-			-i configure || die "failed to set up netcdf"
-	fi
+	sed -e "s:gentoo-netcdf-include:/usr/include:" \
+		-e "s:gentoo-netcdf-libs:/usr/$(get_libdir):" \
+		-i configure || die "failed to set up netcdf"
 
 	# get installed python version
 	python_version
@@ -99,11 +97,7 @@ src_unpack() {
 		-e "s:LINUXAMD64:LINUX:g" \
 		-i ${S}/bin/vmd || die "failed setting up vmd wrapper script"
 
-	local myconfig="LINUX OPENGL FLTK TK TCL PTHREADS PYTHON IMD"
-
-	if use netcdf; then
-		myconfig="${myconfig} NETCDF"
-	fi
+	local myconfig="LINUX OPENGL FLTK TK TCL PTHREADS PYTHON IMD NETCDF"
 
 	rm -f configure.options && echo $myconfig >> configure.options
 
