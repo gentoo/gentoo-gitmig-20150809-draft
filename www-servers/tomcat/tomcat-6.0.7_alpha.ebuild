@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.7_alpha.ebuild,v 1.1 2006/12/27 17:16:09 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.7_alpha.ebuild,v 1.2 2006/12/27 19:35:29 wltjr Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -16,7 +16,7 @@ LICENSE="Apache-2.0"
 
 IUSE="doc examples jni source test"
 
-RDEPEND=">=virtual/jre-1.5
+RDEPEND="|| ( >=virtual/jre-1.5 >=virtual/jre-1.6 )
 	=dev-java/eclipse-ecj-3.2*
 	>=dev-java/commons-daemon-1.0.1
 	>=dev-java/commons-dbcp-1.2.1
@@ -25,7 +25,7 @@ RDEPEND=">=virtual/jre-1.5
 	jni? ( dev-libs/apr
 		dev-libs/openssl )"
 
-DEPEND=">=virtual/jdk-1.5
+DEPEND="|| ( >=virtual/jdk-1.5 >=virtual/jdk-1.6 )
 	${RDEPEND}
 	test? (
 		dev-java/junit
