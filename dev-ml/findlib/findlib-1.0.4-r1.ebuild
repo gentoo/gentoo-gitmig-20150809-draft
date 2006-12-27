@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/findlib-1.0.4-r1.ebuild,v 1.13 2006/11/03 10:43:42 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/findlib-1.0.4-r1.ebuild,v 1.14 2006/12/27 21:41:40 peper Exp $
+
+inherit multilib
 
 IUSE="tk"
 
@@ -15,7 +17,7 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc-macos ppc64 sparc x86"
 
 DEPEND=">=dev-lang/ocaml-3.07"
 
-ocamlfind_destdir="/usr/lib/ocaml/site-packages"
+ocamlfind_destdir="/usr/$(get_libdir)/ocaml/site-packages"
 stublibs=${ocamlfind_destdir}/stublibs
 
 pkg_setup()
