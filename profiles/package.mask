@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6495 2006/12/27 09:08:01 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6496 2006/12/27 22:48:00 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ## 
+
+# Diego Pettenò <flameeyes@gentoo.org> (27 Dec 2006)
+# Preview snapshot
+=media-libs/xine-lib-1.1.4_pre*
 
 # Daniel Drake <dsd@gentoo.org> (26 Dec 2006)
 # Many unpatched security issues, including bug #144820
