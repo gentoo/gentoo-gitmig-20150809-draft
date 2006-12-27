@@ -1,4 +1,0 @@
-include /usr/share/aolserver/include/Makefile.global.orig
-
-LDFLAGS	+= -L/usr/lib/aolserver/lib
-INCDIR	= /usr/include/aolserver
