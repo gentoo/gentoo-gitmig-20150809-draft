@@ -1,7 +1,0 @@
---- cherrypy/test/test.py.org	2005-05-04 15:59:20.423974456 -0700
-+++ cherrypy/test/test.py	2005-05-04 15:59:41.422782152 -0700
-@@ -187,4 +187,3 @@
- #    - test hidden classes
- #    ...
- 
--raw_input('hit enter')
