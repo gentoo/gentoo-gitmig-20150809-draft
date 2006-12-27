@@ -1,6 +1,20 @@
 # ChangeLog for www-servers/cherokee
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.30 2006/12/27 01:46:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.31 2006/12/27 02:37:08 flameeyes Exp $
+
+*cherokee-0.5.6 (27 Dec 2006)
+
+  27 Dec 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/cherokee-0.4.5-Makefile.am.patch,
+  -files/cherokee-0.4.5-cherokee.conf, -files/cherokee-0.4.5-init.d,
+  -files/cherokee-0.4.17-cherokee.conf, -files/cherokee-0.4.17-init.d,
+  -files/cherokee-0.4.21-no-handler_admin.diff,
+  -files/cherokee-0.4.25-fix-static.diff, +files/cherokee-initd-0.5.6,
+  -cherokee-0.5.2.ebuild, -cherokee-0.5.4.ebuild, -cherokee-0.5.5.ebuild,
+  +cherokee-0.5.6.ebuild:
+  Big new-maintainer cleanup. Bump to latest 0.5.6, remove old versions,
+  remove dead files in $FILESDIR, add new init.d file that leave to cherokee
+  to get into background.
 
   27 Dec 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Metadata update, I'll take over maintainership (leaving www-servers as herd).

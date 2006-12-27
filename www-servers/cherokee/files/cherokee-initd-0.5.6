@@ -1,0 +1,24 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/files/cherokee-initd-0.5.6,v 1.1 2006/12/27 02:37:08 flameeyes Exp $
+
+PIDFILE=/var/run/cherokee.pid
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting Cherokee Web Server"
+	start-stop-daemon --start --pidfile ${PIDFILE} \
+		--exec /usr/sbin/cherokee -- -b
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Cherokee Web Server"
+	start-stop-daemon --stop --pidfile ${PIDFILE} \
+		--exec /usr/sbin/cherokee
+	eend $?
+}
