@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r4.ebuild,v 1.3 2006/12/22 16:20:02 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r4.ebuild,v 1.4 2006/12/27 14:27:36 gustavoz Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/xcdroast/${P/_/}.tar.gz
 	mirror://gentoo/${P}_new_configure.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~sparc ~x86"
+KEYWORDS="~amd64 ppc sparc ~x86"
 IUSE="nls"
 
 DEPEND=">=x11-libs/gtk+-2.0.3
