@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-1.14.ebuild,v 1.2 2006/10/31 19:55:55 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-1.14.ebuild,v 1.3 2006/12/27 20:05:00 drizzt Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.lysator.liu.se/~nisse/archive/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~s390 ~sparc ~x86 ~x86-fbsd"
 IUSE="gmp ssl"
 
 DEPEND="gmp? ( dev-libs/gmp )
