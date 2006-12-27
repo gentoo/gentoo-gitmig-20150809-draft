@@ -1,0 +1,20 @@
+Index: cherokee-0.5.6/configure.in
+===================================================================
+--- cherokee-0.5.6.orig/configure.in
++++ cherokee-0.5.6/configure.in
+@@ -634,6 +634,7 @@ ETR_SOCKET_NSL
+ SENDFILE_CHECK
+ 
+ # Is sendfile broken?
++if test "$host" = "$build"; then
+ AC_MSG_CHECKING(if sendfile works)
+ AC_TRY_RUN([#include <errno.h>
+             int main() {
+@@ -644,6 +645,7 @@ AC_TRY_RUN([#include <errno.h>
+             AC_MSG_RESULT(yes), 
+             [ AC_MSG_RESULT(no) 
+               AC_DEFINE([HAVE_SENDFILE_BROKEN], [1], [broken sendfile]) ])
++fi
+ 
+ # readdir_r()
+ LIBWWW_READDIR_R_TYPE

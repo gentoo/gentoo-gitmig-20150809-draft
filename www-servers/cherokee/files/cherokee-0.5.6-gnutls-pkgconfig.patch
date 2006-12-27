@@ -1,0 +1,17 @@
+Index: cherokee-0.5.6/configure.in
+===================================================================
+--- cherokee-0.5.6.orig/configure.in
++++ cherokee-0.5.6/configure.in
+@@ -861,11 +861,9 @@ then
+ 		dnl
+ 		dnl GNUTLS
+ 		dnl
+-		AM_PATH_LIBGNUTLS(1.0.4, [have_gnutls=yes], [have_gnutls=no])
++		PKG_CHECK_MODULES([TLS], [gnutls >= 1.0.4], [have_gnutls=yes], [have_gnutls=no])
+ 		if test "$have_gnutls" = "yes"
+ 		then
+-		        TLS_LIBS="$LIBGNUTLS_LIBS"
+-		        TLS_CFLAGS="$LIBGNUTLS_CFLAGS"
+ 			   AC_SUBST(TLS_LIBS)
+ 			   AC_SUBST(TLS_CFLAGS)
+ 

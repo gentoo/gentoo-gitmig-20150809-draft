@@ -1,8 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.5.6.ebuild,v 1.3 2006/12/27 05:02:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.5.6.ebuild,v 1.4 2006/12/27 06:06:49 flameeyes Exp $
 
-inherit eutils pam versionator libtool
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit eutils pam versionator libtool autotools
 
 DESCRIPTION="An extremely fast and tiny web server."
 SRC_URI="http://www.cherokee-project.com/download/$(get_version_component_range 1-2)/${PV}/${P}.tar.gz"
@@ -11,17 +14,27 @@ HOMEPAGE="http://www.cherokee-project.com/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="ipv6 ssl gnutls static pam coverpage threads"
+IUSE="ipv6 ssl gnutls static pam coverpage threads kernel_linux"
 
 RDEPEND=">=sys-libs/zlib-1.1.4-r1
-	gnutls? ( net-libs/gnutls )
-	ssl? ( dev-libs/openssl )
+	ssl? (
+		gnutls? ( net-libs/gnutls )
+		!gnutls? ( dev-libs/openssl )
+	)
 	pam? ( virtual/pam )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
 
-	elibtoolize
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-epoll-crosscompile.patch"
+	epatch "${FILESDIR}/${P}-sendfile-crosscompile.patch"
+	epatch "${FILESDIR}/${P}-gnutls-pkgconfig.patch"
+	epatch "${FILESDIR}/${P}-replace-with-sed.patch"
+
+	AT_M4DIR="m4" eautoreconf
 
 	# use cherokee user/group
 	sed -i -e 's|^#\(User \).*$|\1cherokee|' \
@@ -63,6 +76,7 @@ src_compile() {
 		$(use_enable pam) \
 		$(use_enable ipv6) \
 		$(use_enable threads pthread) \
+		$(use_enable kernel_linux epoll) \
 		--disable-dependency-tracking \
 		--enable-os-string="Gentoo ${os}" \
 		--with-wwwroot=/var/www/localhost/htdocs \
@@ -72,7 +86,7 @@ src_compile() {
 }
 
 src_install () {
-	emake DESTDIR="${D}" docdir="/usr/share/doc/${PF}/html" install || die "make install failed"
+	emake -j1 DESTDIR="${D}" docdir="/usr/share/doc/${PF}/html" install || die "make install failed"
 	dodoc AUTHORS ChangeLog TODO
 
 	newpamd pam.d_cherokee ${PN} || die "newpamd failed"
