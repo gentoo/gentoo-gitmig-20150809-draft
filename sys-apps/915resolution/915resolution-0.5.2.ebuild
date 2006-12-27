@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/915resolution/915resolution-0.5.2.ebuild,v 1.2 2006/07/22 23:31:55 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/915resolution/915resolution-0.5.2.ebuild,v 1.3 2006/12/27 17:45:38 peper Exp $
 
 DESCRIPTION="Utility to patch VBIOS of Intel 855 / 865 / 915 chipsets"
 HOMEPAGE="http://www.geocities.com/stomljen/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.geocities.com/stomljen/${P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
