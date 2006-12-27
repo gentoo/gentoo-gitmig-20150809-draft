@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.5.6.ebuild,v 1.1 2006/12/27 02:37:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.5.6.ebuild,v 1.2 2006/12/27 04:48:46 flameeyes Exp $
 
-inherit eutils pam versionator
+inherit eutils pam versionator libtool
 
 DESCRIPTION="An extremely fast and tiny web server."
 SRC_URI="http://www.cherokee-project.com/download/$(get_version_component_range 1-2)/${PV}/${P}.tar.gz"
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.cherokee-project.com/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="ipv6 ssl gnutls static pam"
+IUSE="ipv6 ssl gnutls static pam coverpage"
 
 RDEPEND=">=sys-libs/zlib-1.1.4-r1
 	gnutls? ( net-libs/gnutls )
@@ -20,6 +20,8 @@ RDEPEND=">=sys-libs/zlib-1.1.4-r1
 
 src_unpack() {
 	unpack ${A}
+
+	elibtoolize
 
 	# use cherokee user/group
 	sed -i -e 's|^#\(User \).*$|\1cherokee|' \
@@ -74,15 +76,9 @@ src_install () {
 	newpamd pam.d_cherokee ${PN} || die "newpamd failed"
 	newinitd "${FILESDIR}/${PN}-initd-0.5.6" ${PN} || die "newinitd failed"
 
-	keepdir /etc/cherokee/mods-enabled /etc/cherokee/sites-enabled
+	keepdir /etc/cherokee/mods-enabled /etc/cherokee/sites-enabled /var/www/localhost/htdocs
 
-	# be nice and don't overwrite a user's pre-existing index.html
-	# (unless they're the same).
-	if [[ -f "${ROOT}"/var/www/localhost/htdocs/index.html ]] ; then
-		diff "${ROOT}"/var/www/localhost/htdocs/index.html \
-		"${D}"/var/www/localhost/htdocs/index.html &>/dev/null || \
-			mv "${D}"/var/www/localhost/htdocs/{,cherokee-}index.html
-	fi
+	use coverpage || rm -f "${D}"/var/www/localhost/htdocs/index.html
 }
 
 pkg_postinst() {
