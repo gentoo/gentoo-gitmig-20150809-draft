@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20060326.ebuild,v 1.2 2006/12/08 22:09:03 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20060326.ebuild,v 1.3 2006/12/27 01:02:04 mabi Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ DEPEND="
 		virtual/x11
 	)
 	app-misc/run-mailcap
-	>=dev-lang/lua-5.0.2"
+	=dev-lang/lua-5.0*"
 S=${WORKDIR}/${MY_PN}
 
 src_unpack() {
