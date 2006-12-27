@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/microba/microba-0.4.3.ebuild,v 1.1 2006/10/28 23:40:06 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/microba/microba-0.4.3.ebuild,v 1.2 2006/12/27 23:55:43 betelgeuse Exp $
 
 # does not need java-ant-2, source and target is already set to 1.4
 inherit java-pkg-2
 
 DESCRIPTION="Swing components for date operations and palettes"
-HOMEPAGE="http://${PN}.sourceforge.net/"
+HOMEPAGE="http://microba.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}-full.zip"
 LICENSE="BSD"
 KEYWORDS="~x86"
