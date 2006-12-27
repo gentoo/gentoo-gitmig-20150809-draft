@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/boa-constructor-0.4.0_alpha.ebuild,v 1.4 2006/12/27 17:52:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/boa-constructor-0.4.0_alpha.ebuild,v 1.5 2006/12/27 19:14:53 dirtyepic Exp $
 
 inherit eutils python
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/boa-constructor/${MY_P}.src.zip"
 S=${WORKDIR}/${MY_P}
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="=dev-python/wxpython-2.6*
