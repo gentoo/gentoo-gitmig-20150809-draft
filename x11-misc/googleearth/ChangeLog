@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/googleearth
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.18 2006/11/02 23:51:18 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.19 2006/12/27 23:27:50 dragonheart Exp $
+
+  27 Dec 2006; Daniel Black <dragonheart@gentoo.org>
+  files/digest-googleearth-4_beta, Manifest:
+  digest fix bug #158606 and SnowRaptor notification on #gentoo-dev-help
 
   02 Nov 2006; Stefan Schweizer <genstef@gentoo.org>
   files/digest-googleearth-4_beta, Manifest:
