@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.4_pre20061227.ebuild,v 1.1 2006/12/27 22:51:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.4_pre20061227.ebuild,v 1.2 2006/12/27 22:53:24 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -41,7 +41,7 @@ RDEPEND="
 	aalib? ( media-libs/aalib )
 	directfb? ( >=dev-libs/DirectFB-0.9.9 )
 	gnome? ( >=gnome-base/gnome-vfs-2.0 )
-	flac? ( ~media-libs/flac-1.1.2 )
+	flac? ( >=media-libs/flac-1.1.2 )
 	sdl? ( >=media-libs/libsdl-1.1.5 )
 	dxr3? ( >=media-libs/libfame-0.9.0 )
 	vorbis? ( media-libs/libogg media-libs/libvorbis )
