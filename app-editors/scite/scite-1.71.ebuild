@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.71.ebuild,v 1.6 2006/10/31 20:44:41 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.71.ebuild,v 1.7 2006/12/27 10:58:57 nelchael Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 MY_PV=${PV//./}
 DESCRIPTION="A very powerful editor for programmers"
@@ -39,7 +39,9 @@ src_unpack() {
 		-e "s#^\(CXXFLAGS=.*\)-Os#\1#" \
 		-e "s#^CC =\(.*\)#CC = $(tc-getCXX)#" \
 		-e 's#${D}##' \
+		-e 's#-g root#-g 0#' \
 		|| die "error patching makefile"
+	epatch ${FILESDIR}/${P}-install.patch
 }
 
 src_compile() {
