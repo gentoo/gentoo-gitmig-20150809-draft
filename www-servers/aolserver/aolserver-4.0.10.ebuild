@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/aolserver/aolserver-4.0.10.ebuild,v 1.6 2006/08/17 04:20:24 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/aolserver/aolserver-4.0.10.ebuild,v 1.7 2006/12/27 04:19:48 dirtyepic Exp $
 
 inherit eutils
 
@@ -77,8 +77,10 @@ src_unpack() {
 	find ${S} -type d -name CVS -prune | xargs rm -rf
 
 	if use nptl; then
-		epatch ${FILESDIR}/${PV}/aolserver-${PV}-nptl.patch
+		epatch "${FILESDIR}"/${PV}/aolserver-${PV}-nptl.patch
 	fi
+
+	epatch "${FILESDIR}"/${PV}/aolserver-${PV}-gcc41.patch
 }
 
 src_compile() {
