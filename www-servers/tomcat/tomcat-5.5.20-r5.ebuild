@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r5.ebuild,v 1.5 2006/12/26 18:47:20 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r5.ebuild,v 1.6 2006/12/27 17:16:09 wltjr Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -9,8 +9,8 @@ DESCRIPTION="Apache Servlet-2.4/JSP-2.0 Container"
 MY_P="apache-${P}-src"
 SLOT="5.5"
 SRC_URI="mirror://apache/${PN}/${PN}-5/v${PV}/src/${MY_P}.tar.gz"
-HOMEPAGE="http://jakarta.apache.org/tomcat"
-KEYWORDS="~amd64 -ppc -ppc64 ~x86 ~x86-fbsd"
+HOMEPAGE="http://tomcat.apache.org/"
+KEYWORDS="~amd64 -ppc -ppc64 ~x86"
 LICENSE="Apache-2.0"
 
 IUSE="admin java5 doc examples source test"
@@ -45,8 +45,8 @@ RDEPEND="=dev-java/eclipse-ecj-3.1*
 	   )"
 DEPEND="java5? ( >=virtual/jdk-1.5 )
 	!java5? ( =virtual/jdk-1.4* )
-	>=dev-java/java-config-2.0.31
 	${RDEPEND}
+	>=dev-java/java-config-2.0.31
 	dev-java/ant"
 
 S=${WORKDIR}/${MY_P}
