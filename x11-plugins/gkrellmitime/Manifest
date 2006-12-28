@@ -1,19 +1,40 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0e43d4df44699621c645fb9f3523a039 gkrellmitime-1.0.1.ebuild 665
-MD5 e4dca58ea65cf0fd3459bc8492e9ba2a gkrellmitime-1.0.ebuild 629
-MD5 0967bd8ee47104520f387caaaf203e9a gkrellmitime-0.5.1.ebuild 718
+AUX gkrellmitime-1.0.1-Makefile.patch 1160 RMD160 3273acbccb40463667aa633aeefc7a6d575d3fa1 SHA1 cb2f72b15e759f63e26754cb8ab165d62d214b90 SHA256 9f377d3f91bc9039461d1dd7dea37f7ff0fb51105ce0b1848d722e518b37bea6
+MD5 f96de1d19c5ccbd8c1ca3657bd732f66 files/gkrellmitime-1.0.1-Makefile.patch 1160
+RMD160 3273acbccb40463667aa633aeefc7a6d575d3fa1 files/gkrellmitime-1.0.1-Makefile.patch 1160
+SHA256 9f377d3f91bc9039461d1dd7dea37f7ff0fb51105ce0b1848d722e518b37bea6 files/gkrellmitime-1.0.1-Makefile.patch 1160
+DIST gkrellmitime-0.4.tar.gz 17146
+DIST gkrellmitime-0.5.1.tar.gz 15663
+DIST gkrellmitime-1.0.1.tar.gz 12306 RMD160 ea8a9b05b8f09e5c0ddc9c4487d23454b955b6be SHA1 b700e41b95f9cbc312284832e3668c4d716824f1 SHA256 2f7d542bb98fc55a20eabfe4f64d606b963d031fbb63d4b18a17194cb17deea5
+DIST gkrellmitime-1.0.tar.gz 17740
+EBUILD gkrellmitime-0.4.ebuild 638 RMD160 1311361ec40dc2f6647fbdbd7b3f7579d19be4a5 SHA1 e1bc0d496683fff6520130ccdfe8e411fcc2d6a2 SHA256 a4d98db4ce888c3a4c769991b90898080992638187a0a583c31fda9517430965
 MD5 e19f8a2b6a12d67e8e2235ff1c87b0b1 gkrellmitime-0.4.ebuild 638
-MD5 9333cc36f55308ca12d337cfaf6ff077 ChangeLog 2445
+RMD160 1311361ec40dc2f6647fbdbd7b3f7579d19be4a5 gkrellmitime-0.4.ebuild 638
+SHA256 a4d98db4ce888c3a4c769991b90898080992638187a0a583c31fda9517430965 gkrellmitime-0.4.ebuild 638
+EBUILD gkrellmitime-0.5.1.ebuild 718 RMD160 16ae6e83839fabc0c04f7770361bb23dfd2f9cd9 SHA1 ff0c296cd83a048598d882fac46f704f97a60ce3 SHA256 2bd51eae83a044a3cb3f4f2aa8d04d068f35a9a8f67332f76311f39b1e0377f9
+MD5 0967bd8ee47104520f387caaaf203e9a gkrellmitime-0.5.1.ebuild 718
+RMD160 16ae6e83839fabc0c04f7770361bb23dfd2f9cd9 gkrellmitime-0.5.1.ebuild 718
+SHA256 2bd51eae83a044a3cb3f4f2aa8d04d068f35a9a8f67332f76311f39b1e0377f9 gkrellmitime-0.5.1.ebuild 718
+EBUILD gkrellmitime-1.0.1.ebuild 731 RMD160 d92b95049e7108f282d520e2c7eb2d7ac133f1a4 SHA1 1e8c330e1eb1958dc6f81436eefa77a955556e7f SHA256 6d9fc5df09124da20fb607aad9a506f684343ab81b5b452e235c8dbc88287e0d
+MD5 544359984781a4e90d710841d5c8a870 gkrellmitime-1.0.1.ebuild 731
+RMD160 d92b95049e7108f282d520e2c7eb2d7ac133f1a4 gkrellmitime-1.0.1.ebuild 731
+SHA256 6d9fc5df09124da20fb607aad9a506f684343ab81b5b452e235c8dbc88287e0d gkrellmitime-1.0.1.ebuild 731
+EBUILD gkrellmitime-1.0.ebuild 629 RMD160 12d313f21c9ae633de2321419990e7e40e7777bc SHA1 5485c32417b3ad70e004a85ae7eaf5b8b2689ae0 SHA256 67a3ef8b9f33f4f88d94e8a9c990d6f484dc9a58b3a29f10c85c581fdc2e6c58
+MD5 e4dca58ea65cf0fd3459bc8492e9ba2a gkrellmitime-1.0.ebuild 629
+RMD160 12d313f21c9ae633de2321419990e7e40e7777bc gkrellmitime-1.0.ebuild 629
+SHA256 67a3ef8b9f33f4f88d94e8a9c990d6f484dc9a58b3a29f10c85c581fdc2e6c58 gkrellmitime-1.0.ebuild 629
+MISC ChangeLog 2640 RMD160 df5bae2b9446e34971c3576a6307c56367e46615 SHA1 9f1c15e7b6c4112682904f7b0fee64f6b2711833 SHA256 e1d39bd26b5e1e0d0a467b55b71e4d651442db14f02419f3fc819131c26c9320
+MD5 c5deff1f0c13d0142c183299ff304fe1 ChangeLog 2640
+RMD160 df5bae2b9446e34971c3576a6307c56367e46615 ChangeLog 2640
+SHA256 e1d39bd26b5e1e0d0a467b55b71e4d651442db14f02419f3fc819131c26c9320 ChangeLog 2640
 MD5 503a4f552ef762dc99302f2cd842717c files/digest-gkrellmitime-0.4 67
-MD5 4d00717aa575f50036b0129992917506 files/digest-gkrellmitime-1.0 67
+RMD160 34495678c846aea73f3eaa8c886ebf618a7c15d0 files/digest-gkrellmitime-0.4 67
+SHA256 9316b8cc22a8032182be84943ef4b1f981d57f3ff7f8b291a89b220a1a08c137 files/digest-gkrellmitime-0.4 67
 MD5 efa4b3b7158eaf277dad14da3b096826 files/digest-gkrellmitime-0.5.1 69
-MD5 52f46f069e47ebb97fe755fcb2061acf files/digest-gkrellmitime-1.0.1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCerhGI1lqEGTUzyQRAlagAJ0RtzvMuK6N7T1agpLxIdQ4iWYK3wCcCZrR
-hsnXmDpkYfRzr66UONJNi54=
-=9/hL
------END PGP SIGNATURE-----
+RMD160 dfc332466b857963d7786e4156cf9e5b3ce22f57 files/digest-gkrellmitime-0.5.1 69
+SHA256 4d10f71ff1995134a95b0672a5d940878e0349d54443378612bbe2a8d3044fd4 files/digest-gkrellmitime-0.5.1 69
+MD5 4d00717aa575f50036b0129992917506 files/digest-gkrellmitime-1.0 67
+RMD160 fd48e5bc3b21243850650921a850de32eaf10220 files/digest-gkrellmitime-1.0 67
+SHA256 7b3224f0da4f63dce2c16da57511ab2991ce3aa5c77ad31c1b36f6498bc6a3db files/digest-gkrellmitime-1.0 67
+MD5 183caf818a8984880450a0b14b93d7c6 files/digest-gkrellmitime-1.0.1 253
+RMD160 dd52c11e7a800eb344958780617d22e5cdbfec38 files/digest-gkrellmitime-1.0.1 253
+SHA256 09c9df0aa8bf908ccb0f6925c5125289748c8038eaea5683a3e69663af19e1f3 files/digest-gkrellmitime-1.0.1 253
