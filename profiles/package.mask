@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6504 2006/12/28 20:02:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6505 2006/12/28 20:24:47 vapier Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ## 
+
+# Mike Frysinger <vapier@gentoo.org> (28 Dec 2006)
+# Build failure on big-endian #154294 and breaks non-default journals #154974
+~sys-fs/reiserfsprogs-3.6.20
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (28 Dec 2006)
 # These need to be unmasked together
