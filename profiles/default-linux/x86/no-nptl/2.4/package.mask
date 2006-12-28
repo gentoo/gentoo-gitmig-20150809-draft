@@ -1,6 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.43 2006/12/26 22:25:40 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.44 2006/12/28 12:16:15 nyhm Exp $
+
+# Tristan Heaven <nyhm@gentoo.org>
+# Requires GNOME 2.16
+x11-misc/revelation
 
 # Joshua Jackson <tsunam@gentoo.org>
 # as 2.16 of gnome is masked..heliodor can't be used here
@@ -34,7 +38,7 @@ dev-db/mysql-gui-tools
 >=app-admin/sabayon-2.12.4
 >=gnome-base/gail-1.9.2
 >=gnome-base/gnome-vfs-2.16.0
->=gnome-base/gnome-vfs-monikers-2.15.3                        
+>=gnome-base/gnome-vfs-monikers-2.15.3
 >=gnome-base/libbonobo-2.16.0
 >=gnome-base/libbonoboui-2.16.0
 >=gnome-base/libgnome-2.16.0
@@ -54,8 +58,8 @@ dev-db/mysql-gui-tools
 >=gnome-extra/fast-user-switch-applet-2.16.0
 >=app-arch/file-roller-2.16.0
 >=gnome-extra/gcalctool-5.8.24
->=gnome-extra/gconf-editor-2.16.0                             
->=gnome-base/gdm-2.16.0                                       
+>=gnome-extra/gconf-editor-2.16.0
+>=gnome-base/gdm-2.16.0
 >=app-editors/gedit-2.16.0
 >=gnome-base/gnome-applets-2.16.0.1
 >=x11-themes/gnome-backgrounds-2.15.92
@@ -74,8 +78,8 @@ dev-db/mysql-gui-tools
 >=dev-python/gnome-python-desktop-2.16.0
 >=gnome-extra/gnome-screensaver-2.16.0
 >=gnome-base/gnome-session-2.16.0
->=gnome-extra/gnome-system-monitor-2.15.92                    
->=x11-terms/gnome-terminal-2.16.0                             
+>=gnome-extra/gnome-system-monitor-2.15.92
+>=x11-terms/gnome-terminal-2.16.0
 >=x11-themes/gnome-themes-2.16.0
 >=gnome-extra/gnome-utils-2.16.0
 >=gnome-base/gnome-volume-manager-2.15.0
@@ -95,8 +99,8 @@ dev-db/mysql-gui-tools
 >=x11-libs/vte-0.14.0
 >=gnome-extra/yelp-2.16.0
 >=gnome-extra/zenity-2.16.0
->=dev-python/gnome-python-2.16.0                              
->=dev-python/pygobject-2.12.1                                 
+>=dev-python/gnome-python-2.16.0
+>=dev-python/pygobject-2.12.1
 >=dev-python/pygtk-2.10.1
 >=x11-libs/libxklavier-3.0
 >=www-client/epiphany-extensions-2.16.0
