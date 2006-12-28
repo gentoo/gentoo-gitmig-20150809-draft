@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=BitTorrent
-Exec=/usr/bin/bittorrent
-Icon=/usr/share/pixmaps/bittorrent.ico
-Terminal=false
-Type=Application
-Categories=Application;Network;
