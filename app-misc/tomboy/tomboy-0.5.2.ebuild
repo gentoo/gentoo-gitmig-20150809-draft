@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.5.2.ebuild,v 1.2 2006/12/20 18:16:54 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.5.2.ebuild,v 1.3 2006/12/28 18:00:26 compnerd Exp $
 
 inherit gnome2 mono eutils
 
@@ -28,6 +28,7 @@ RDEPEND=">=dev-lang/mono-1.1
 		 galago? ( =dev-dotnet/galago-sharp-0.5* )
 		 >=app-text/aspell-0.60.2"
 DEPEND="${RDEPEND}
+		  dev-libs/libxml2
 		  sys-devel/gettext
 		  dev-util/pkgconfig
 		>=dev-util/intltool-0.25"
@@ -35,8 +36,15 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog INSTALL NEWS README"
 
 pkg_setup() {
+	if ! built_with_use 'dev-libs/libxml2' 'python' ; then
+		eerror "Please build libxml2 with the python USE-flag"
+		einfo "echo \"dev-libs/libxml2 python\" >> /etc/portage/package.use"
+		die "dev-libs/libxml2 without python bindings detected"
+	fi
+
 	if use eds && ! built_with_use 'dev-libs/gmime' mono ; then
 		eerror "Please build gmime with the mono USE-flag"
+		einfo "echo \"dev-libs/gmime mono\" >> /etc/portage/package.use"
 		die "gmime without mono support detected"
 	fi
 
