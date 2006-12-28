@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.5.0.ebuild,v 1.22 2006/10/13 14:20:08 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.5.0.ebuild,v 1.23 2006/12/28 14:28:41 gothgirl Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib perl-module perl-app
 
@@ -89,6 +89,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	use cjk && epatch ${FILESDIR}/gaim-0.76-xinput.patch
+	epatch ${FILESDIR}/gaim-1.5.0-privacy.patch
 }
 
 src_compile() {
