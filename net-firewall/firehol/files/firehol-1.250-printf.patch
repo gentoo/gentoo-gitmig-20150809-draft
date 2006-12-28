@@ -1,0 +1,47 @@
+--- firehol.sh	2006-12-27 14:34:58.000000000 +0100
++++ firehol.new	2006-12-27 14:53:16.000000000 +0100
+@@ -2412,7 +2412,7 @@
+ 		printf "runcmd '${check}' '${FIREHOL_LINEID}' " >>${FIREHOL_OUTPUT}
+ 	fi
+ 	
+-	printf "%q " "$@" >>${FIREHOL_OUTPUT}
++	printf "%b " "$@" >>${FIREHOL_OUTPUT}
+ 	printf "\n" >>${FIREHOL_OUTPUT}
+ 	
+ 	if [ ${FIREHOL_EXPLAIN} -eq 1 ]
+@@ -4885,7 +4885,7 @@
+ 	echo >&2 "WARNING"
+ 	echo >&2 "WHAT   : ${work_function}"
+ 	echo >&2 "WHY    :" "$@"
+-	printf >&2 "COMMAND: "; printf >&2 "%q " "${work_realcmd[@]}"; echo >&2
++	printf >&2 "COMMAND: "; printf >&2 "%b " "${work_realcmd[@]}"; echo >&2
+ 	echo >&2 "SOURCE : line ${FIREHOL_LINEID} of ${FIREHOL_CONFIG}"
+ 	echo >&2
+ 	
+@@ -4906,7 +4906,7 @@
+ 	echo >&2 "ERROR #: ${work_error}"
+ 	echo >&2 "WHAT   : ${work_function}"
+ 	echo >&2 "WHY    :" "$@"
+-	printf >&2 "COMMAND: "; printf >&2 "%q " "${work_realcmd[@]}"; echo >&2
++	printf >&2 "COMMAND: "; printf >&2 "%b " "${work_realcmd[@]}"; echo >&2
+ 	echo >&2 "SOURCE : line ${FIREHOL_LINEID} of ${FIREHOL_CONFIG}"
+ 	echo >&2
+ 	
+@@ -4960,7 +4960,7 @@
+ 	echo >&2 "WHAT    : A runtime command failed to execute (returned error ${ret})."
+ 	echo >&2 "SOURCE  : line ${line} of ${FIREHOL_CONFIG}"
+ 	printf >&2 "COMMAND : "
+-	printf >&2 "%q " "$@"
++	printf >&2 "%b " "$@"
+ 	printf >&2 "\n"
+ 	echo >&2 "OUTPUT  : "
+ 	echo >&2
+@@ -5157,7 +5157,7 @@
+ 			*)	;;
+ 		esac
+ 		
+-		printf "%q " "${work_realcmd[@]}"
++		printf "%b " "${work_realcmd[@]}"
+ 		printf "\n\n"
+ 	) >>${FIREHOL_OUTPUT}
+ }
