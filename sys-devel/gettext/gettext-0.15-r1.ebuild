@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.15-r1.ebuild,v 1.2 2006/10/18 11:40:01 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.15-r1.ebuild,v 1.3 2006/12/28 20:45:22 vapier Exp $
 
 inherit flag-o-matic eutils multilib toolchain-funcs mono libtool elisp-common
 
@@ -33,14 +33,6 @@ src_unpack() {
 		-e '2iexit 77' \
 		autoconf-lib-link/tests/rpath-3*[ef] || die "sed tests"
 
-	# use Gentoo std docdir
-	sed -i \
-		-e "/^docdir=/s:=.*:=/usr/share/doc/${PF}:" \
-		gettext-runtime/configure \
-		gettext-tools/configure \
-		gettext-tools/examples/installpaths.in \
-		|| die "sed docdir"
-
 	# sanity check for Bug 105304
 	if [[ -z ${USERLAND} ]] ; then
 		eerror "You just hit Bug 105304, please post your 'emerge info' here:"
@@ -59,6 +51,7 @@ src_compile() {
 	fi
 	use nocxx && export CXX=$(tc-getCC)
 	econf \
+		--docdir="/usr/share/doc/${PF}" \
 		$(use_with emacs) \
 		--disable-java \
 		${myconf} \
@@ -101,11 +94,11 @@ src_install() {
 		gen_usr_ldscript ${libname}
 	fi
 
-	if ! use doc ; then
-		rm -rf "${D}"/usr/share/doc/${PF}/html
+	if use doc ; then
+		dohtml "${D}"/usr/share/doc/${PF}/*.html
+	else
 		rm -rf "${D}"/usr/share/doc/${PF}/{csharpdoc,examples,javadoc2,javadoc1}
 	fi
-	dohtml "${D}"/usr/share/doc/${PF}/*.html
 	rm -f "${D}"/usr/share/doc/${PF}/*.html
 
 	# Remove emacs site-lisp stuff if 'emacs' is not in USE
