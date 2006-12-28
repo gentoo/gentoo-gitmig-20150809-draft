@@ -8,7 +8,7 @@ PORT=8082
 DFILE=/usr/share/bittorrent/tracker.dfile
 
 # path to favicon.ico which many popular web browsers can use
-FAVICON=/usr/share/bittorrent/favicon.ico
+FAVICON=/usr/share/pixmaps/bittorrent.ico
 
 # Connection logs are sent to stdout by default, so they should be sent to a
 # file when using this script.
