@@ -1,8 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/reiserfsprogs-3.6.19.ebuild,v 1.8 2005/04/09 13:18:30 corsair Exp $
-
-inherit flag-o-matic eutils gnuconfig
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/reiserfsprogs-3.6.19.ebuild,v 1.9 2006/12/28 20:22:17 vapier Exp $
 
 DESCRIPTION="Reiserfs Utilities"
 HOMEPAGE="http://www.namesys.com/"
@@ -13,19 +11,12 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
 IUSE=""
 
-src_unpack() {
-	unpack ${A}
-	gnuconfig_update ${S}
-}
-
 src_compile() {
 	econf --prefix=/ || die "Failed to configure"
 	emake || die "Failed to compile"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "Failed to install"
-	dosym reiserfsck /sbin/fsck.reiserfs
-	dosym mkreiserfs /sbin/mkfs.reiserfs
+	emake DESTDIR="${D}" install || die "Failed to install"
 	dodoc ChangeLog INSTALL README
 }
