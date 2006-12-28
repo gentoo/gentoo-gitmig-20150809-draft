@@ -21,3 +21,5 @@ move dev-java/datavision-bin dev-java/datavision
 move dev-java/jgoodies-looks-bin dev-java/jgoodies-looks
 slotmove dev-libs/g-wrap 1.3 0
 move dev-ruby/rubygfe games-util/rubygfe
+move dev-java/kunststoff-bin dev-java/kunststoff
+slotmove =dev-java/kunststoff-2.0.1* 0 2.0
