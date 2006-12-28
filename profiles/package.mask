@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6500 2006/12/28 19:26:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6501 2006/12/28 19:27:44 vapier Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ## 
+
+# Mike Frysinger <vapier@gentoo.org> (28 Dec 2006)
+# Does not work with bittorrent-4.x+ #152442
+net-p2p/gnome-btdownload
 
 # Joshua Nichols <nichoj@gentoo.org> (27 Dec 2006)
 # Python bindings for XFCE 4.4
