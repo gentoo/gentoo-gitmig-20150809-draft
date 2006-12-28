@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 1.0.3-cryptfs.confd 3029 RMD160 c84d92a58923ce88a60ab1e8fcc88910b0689df6 SHA1 b006d7f31773842e7247b2df0fe1735aac87ec59 SHA256 b5ea27a1034dda22b287422097e30e99a0673bd6a3148e38b1c2310bdcc28280
 MD5 63d91d8391aedaf1830d56922f9b5bf8 files/1.0.3-cryptfs.confd 3029
 RMD160 c84d92a58923ce88a60ab1e8fcc88910b0689df6 files/1.0.3-cryptfs.confd 3029
@@ -53,10 +56,10 @@ EBUILD cryptsetup-luks-1.0.3-r3.ebuild 2501 RMD160 26b3819c326be2f8de409218a752b
 MD5 d71bdc0955c4b77ee4061100ae1cdb87 cryptsetup-luks-1.0.3-r3.ebuild 2501
 RMD160 26b3819c326be2f8de409218a752bbf2e9ee0dfe cryptsetup-luks-1.0.3-r3.ebuild 2501
 SHA256 7853beb6728fb4ded96c3ff4439ecb3a5b81f8c77f59acbe2eb10951da655233 cryptsetup-luks-1.0.3-r3.ebuild 2501
-EBUILD cryptsetup-luks-1.0.4.ebuild 2363 RMD160 a07cfaed9f087f657fb03eb2c28a2691c3cecc24 SHA1 4cf8290c9039a76568840437bca8ea83df2df92e SHA256 069d04e2d5d1ce3ea922e42a6550f0d401f320ecf7fac58fdf54558d8a5cdbd7
-MD5 852b7431537412cb706bde7ec3ea7d59 cryptsetup-luks-1.0.4.ebuild 2363
-RMD160 a07cfaed9f087f657fb03eb2c28a2691c3cecc24 cryptsetup-luks-1.0.4.ebuild 2363
-SHA256 069d04e2d5d1ce3ea922e42a6550f0d401f320ecf7fac58fdf54558d8a5cdbd7 cryptsetup-luks-1.0.4.ebuild 2363
+EBUILD cryptsetup-luks-1.0.4.ebuild 2382 RMD160 4ebabbf51bfba4fa6c7562514542890adf6c2620 SHA1 09ecd03307119cd35355c1507432d99a86657339 SHA256 81b3896107a6035a22315c1de2aa243a96cd5b8e968bff0068f1d1e76b94f2ec
+MD5 cecf921fde1eb6bfcf3e4d3d845396b7 cryptsetup-luks-1.0.4.ebuild 2382
+RMD160 4ebabbf51bfba4fa6c7562514542890adf6c2620 cryptsetup-luks-1.0.4.ebuild 2382
+SHA256 81b3896107a6035a22315c1de2aa243a96cd5b8e968bff0068f1d1e76b94f2ec cryptsetup-luks-1.0.4.ebuild 2382
 MISC ChangeLog 6376 RMD160 8b24fe7e4031ae870debf1b75c66eff49cace979 SHA1 73033204160cbcd78db0d2415fd6e809d448d1c4 SHA256 8215171c35c1a0fb52bdd65d83a362a936516441a3f43f9561c8fcc5f6e1f168
 MD5 895db712f5dd26efd2ab422508bf257c ChangeLog 6376
 RMD160 8b24fe7e4031ae870debf1b75c66eff49cace979 ChangeLog 6376
@@ -80,3 +83,10 @@ SHA256 b3e05fc5b08998b29b5c80fdab6eb5f3b9c7558ddd447c785cb4baf998bde190 files/di
 MD5 99aa86b96620381c73335d1bc21ddf77 files/digest-cryptsetup-luks-1.0.4 268
 RMD160 ba93465625d521cc777c1fbc352c3aec11786eff files/digest-cryptsetup-luks-1.0.4 268
 SHA256 9c5d89e73392ea18152a5a4d7b1804ed6a57bb5309abfe23e4605210737f6ec9 files/digest-cryptsetup-luks-1.0.4 268
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.6 (GNU/Linux)
+
+iD8DBQFFk9Zc8bi6rjpTunYRAuAcAKCgHBtEyJQsL9HmXyqwT09gDD846ACePiKU
+AjSlkR0W71dKv+KshJR+Tg8=
+=IoQi
+-----END PGP SIGNATURE-----

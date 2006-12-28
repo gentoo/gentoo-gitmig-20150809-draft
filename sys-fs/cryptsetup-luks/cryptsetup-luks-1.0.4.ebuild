@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/cryptsetup-luks-1.0.4.ebuild,v 1.2 2006/12/05 11:00:24 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/cryptsetup-luks-1.0.4.ebuild,v 1.3 2006/12/28 14:35:16 vapier Exp $
 
 inherit linux-info eutils flag-o-matic multilib
 
@@ -66,9 +66,9 @@ src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
 	rmdir "${D}"/usr/$(get_libdir)/cryptsetup
 	insinto /lib/rcscripts/addons
-	newins "${FILESDIR}"/1.0.3-dm-crypt-start.sh dm-crypt-start.sh
-	newins "${FILESDIR}"/1.0.3-dm-crypt-stop.sh dm-crypt-stop.sh
-	newconfd "${FILESDIR}"/1.0.3-cryptfs.confd cryptfs
+	newins "${FILESDIR}"/1.0.3-dm-crypt-start.sh dm-crypt-start.sh || die
+	newins "${FILESDIR}"/1.0.3-dm-crypt-stop.sh dm-crypt-stop.sh || die
+	newconfd "${FILESDIR}"/1.0.3-cryptfs.confd cryptfs || die
 }
 
 pkg_postinst() {
