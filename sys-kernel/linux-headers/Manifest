@@ -105,10 +105,10 @@ EBUILD linux-headers-2.6.17-r1.ebuild 1287 RMD160 a3477a47a00d7bd25dc33edd8325f8
 MD5 e1a5c7f8789630ed069b65497ff6bb40 linux-headers-2.6.17-r1.ebuild 1287
 RMD160 a3477a47a00d7bd25dc33edd8325f8b169a629ed linux-headers-2.6.17-r1.ebuild 1287
 SHA256 2c1c65136e915e0a5ef4523496eb032373e9fffe216cfe1ac77e9d2198848905 linux-headers-2.6.17-r1.ebuild 1287
-EBUILD linux-headers-2.6.17-r2.ebuild 1287 RMD160 7d16bf4e774eb8b17334b26a11f9c2b7e9b14ed7 SHA1 2dc298485430ad0471b325d49a9a80b75cc0e446 SHA256 86e7dbbb016bf996c7fbd45ac65f36e5c7628f69db3dfd7c50af83f2b22577c4
-MD5 e2c3444ac67c2d9aac95a70fa5cd9e1b linux-headers-2.6.17-r2.ebuild 1287
-RMD160 7d16bf4e774eb8b17334b26a11f9c2b7e9b14ed7 linux-headers-2.6.17-r2.ebuild 1287
-SHA256 86e7dbbb016bf996c7fbd45ac65f36e5c7628f69db3dfd7c50af83f2b22577c4 linux-headers-2.6.17-r2.ebuild 1287
+EBUILD linux-headers-2.6.17-r2.ebuild 1284 RMD160 9050f4766520f3b9a48f5f0165d290b0cd64b39d SHA1 6fb16fc43b8486d23a3db95fb3b87c8758060caf SHA256 2a3fa40e24fbbb912b13d0bae607e3abb6eb2913a3e963bd3dedb01c7420f7b1
+MD5 7da687f663849eec759f0d4d2972969c linux-headers-2.6.17-r2.ebuild 1284
+RMD160 9050f4766520f3b9a48f5f0165d290b0cd64b39d linux-headers-2.6.17-r2.ebuild 1284
+SHA256 2a3fa40e24fbbb912b13d0bae607e3abb6eb2913a3e963bd3dedb01c7420f7b1 linux-headers-2.6.17-r2.ebuild 1284
 EBUILD linux-headers-2.6.17.ebuild 1267 RMD160 cc84c73e47e257b07437b6829a531317d81220e0 SHA1 bf3600cf0c2e3453a2ab8fe57240c68e08e4a530 SHA256 12168216f4bb9c7a2e41e72bda0356a3564fb2544c8caf7effcef9ee520a167a
 MD5 374b17f55df8853b685f3de5f19a422c linux-headers-2.6.17.ebuild 1267
 RMD160 cc84c73e47e257b07437b6829a531317d81220e0 linux-headers-2.6.17.ebuild 1267
@@ -182,9 +182,9 @@ MD5 74e4ec85fb16587c38c2fdbe54231e5e files/digest-linux-headers-2.6.8.1-r4 804
 RMD160 9c508c51fbd2128c59d43e481f4807a70d5fc408 files/digest-linux-headers-2.6.8.1-r4 804
 SHA256 825299e026cccf262682b6311a9bb9897b10eff11aecae00a5ce6ea88bb8849a files/digest-linux-headers-2.6.8.1-r4 804
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
+Version: GnuPG v1.4.6 (GNU/Linux)
 
-iD8DBQFFg9w1K9sYciBdMQMRAoTWAJ9T0pPi8fyn6At0o1sBNvephgqHswCfSn7J
-epQ7ODEW2W2LTHn5Hl9eRI4=
-=iPfP
+iD8DBQFFlCYz8bi6rjpTunYRAuGiAJ9mSRk49NTFn5llY9CopHJSotjw8ACeJvVv
+nFDqPRec81eD/KkOG9S/v3U=
+=KvRE
 -----END PGP SIGNATURE-----
