@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.7.1.ebuild,v 1.11 2006/01/23 09:40:57 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.7.1.ebuild,v 1.12 2006/12/28 19:01:41 the_paya Exp $
 
 inherit eutils gnuconfig
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/hpinkjet/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="cups foomaticdb ppds"
 
 DEPEND="virtual/ghostscript
@@ -33,7 +33,8 @@ src_compile () {
 		$(use_enable ppds foomatic-install) || die "econf failed"
 
 	sed -i -e 's|/usr/share/cups|${prefix}/share/cups|g' \
-		-e 's|/usr/lib/cups|${prefix}/lib/cups|g' Makefile \
+		-e 's|/usr/lib/cups|${prefix}/lib/cups|g' \
+		-e 's|cp -ax|cp -pPR|g' Makefile \
 		|| die "sed failed"
 
 	make || die "make failed"
