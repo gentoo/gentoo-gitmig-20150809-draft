@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6497 2006/12/28 02:28:59 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6498 2006/12/28 03:07:25 nichoj Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -184,6 +184,7 @@ xfce-extra/xfce4-cpu-freq
 >=xfce-extra/xfce4-datetime-0.4.0
 >=xfce-extra/xfce4-diskperf-2.0
 >=xfce-extra/xfce4-genmon-3.0
+xfce-extra/xfce4-mailwatch
 >=xfce-extra/xfce4-mount-0.4.7
 >=xfce-extra/xfce4-notes-1.4
 >=xfce-extra/xfce4-quicklauncher-1.9.2
