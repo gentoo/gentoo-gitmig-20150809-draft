@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6502 2006/12/28 19:57:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6503 2006/12/28 20:01:26 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ## 
+
+# Chris Gianelloni <wolf31o2@gentoo.org> (28 Dec 2006)
+# These need to be unmasked together
+games-action/descent2-data
+games-action/descent2-demodata
+>=games-action/d2x-0.2.5-r3
 
 # Mike Frysinger <vapier@gentoo.org> (28 Dec 2006)
 # Does not work with bittorrent-4.x+ #152442
