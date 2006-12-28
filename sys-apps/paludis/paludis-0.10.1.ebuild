@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.10.1.ebuild,v 1.1 2006/11/29 15:25:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.10.1.ebuild,v 1.2 2006/12/28 18:12:51 spb Exp $
 
 inherit bash-completion
 
@@ -57,7 +57,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
+	make DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS README ChangeLog NEWS
 
 	BASH_COMPLETION_NAME="adjutrix" dobashcompletion bash-completion/adjutrix
