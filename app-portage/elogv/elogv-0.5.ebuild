@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/elogv-0.5.ebuild,v 1.3 2006/12/11 11:44:25 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/elogv-0.5.ebuild,v 1.4 2006/12/28 14:50:32 betelgeuse Exp $
 
 inherit eutils
 
@@ -42,7 +42,7 @@ pkg_postinst() {
 	elog "in /etc/make.conf.example"
 	elog
 	elog "To operate properly this software needs the directory"
-	elog "$PORT_LOGDIR/elog created, belonging to group portage."
+	elog "${PORT_LOGDIR:-/var/log/portage}/elog created, belonging to group portage."
 	elog "To start the software as a user, add yourself to the portage"
 	elog "group."
 	elog
