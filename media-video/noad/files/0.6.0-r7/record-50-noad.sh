@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/files/0.6.0-r7/record-50-noad.sh,v 1.1 2006/12/28 20:02:01 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/files/0.6.0-r7/record-50-noad.sh,v 1.2 2006/12/28 21:00:47 zzam Exp $
 #
 # Joerg Bornkessel <hd_brummy@gentoo.org>
 # Mathias Schwarzott <zzam@gentoo.org>
@@ -56,8 +56,10 @@ fi
 [[ "${NOAD_OVERLAP}" == "yes" ]] && CMD="${CMD} -o"
 [[ "${NOAD_MESSAGES}" == "yes" ]] && CMD="${CMD} -O"
 
-if [[ ${NOAD_NICE} == yes ]]; then
-	CMD="nice ${CMD}"
+: ${NOAD_NICE_LEVEL:=18}
+if [[ ${NOAD_NICE_LEVEL} != no ]]; then
+	NOAD_NICE_LEVEL=$((NOAD_NICE_LEVEL+0))
+	CMD="nice -n ${NOAD_NICE_LEVEL} ${CMD}"
 fi
 
 CMD="${CMD} ${NOAD_PARAMETER}"
