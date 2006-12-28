@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2-r4.ebuild,v 1.7 2006/10/15 03:49:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2-r4.ebuild,v 1.8 2006/12/28 02:33:24 dirtyepic Exp $
 
 inherit flag-o-matic eutils gnuconfig multilib toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/wxwindows/${P}.tar.bz2"
 LICENSE="wxWinLL-3"
 SLOT="2.4"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
-IUSE="debug wxgtk1 gtk2 odbc opengl unicode"
+IUSE="debug wxgtk1 gtk odbc opengl unicode"
 
 RDEPEND="sys-libs/zlib
 	media-libs/libpng
@@ -19,10 +19,10 @@ RDEPEND="sys-libs/zlib
 	media-libs/tiff
 	!unicode? ( odbc? ( dev-db/unixODBC ) )
 	opengl? ( virtual/opengl )
-	gtk2? ( >=x11-libs/gtk+-2.0 >=dev-libs/glib-2.0 )
+	gtk? ( >=x11-libs/gtk+-2.0 >=dev-libs/glib-2.0 )
 	wxgtk1? ( =x11-libs/gtk+-1.2* =dev-libs/glib-1.2* )"
 DEPEND="${RDEPEND}
-	gtk2? ( dev-util/pkgconfig )"
+	gtk? ( dev-util/pkgconfig )"
 
 # Note 1: Gettext is not runtime dependency even if nls? because wxWidgets
 #         has its own implementation of it
@@ -57,18 +57,18 @@ src_unpack() {
 pkg_setup() {
 	einfo "New in >=wxGTK-2.4.2-r2:"
 	einfo "------------------------"
-	einfo "You can now have gtk, gtk2 and unicode versions installed"
+	einfo "You can now have gtk1, gtk2 and unicode versions installed"
 	einfo "simultaneously. Use wxgtk1 if you would like a gtk1 lib."
-	einfo "Put gtk2 and unicode in your USE flags to get those"
+	einfo "Put gtk and unicode in your USE flags to get those"
 	einfo "additional versions."
 	einfo "NOTE:"
 	einfo "You can also get debug versions of any of those, but not debug"
 	einfo "and normal installed at the same time."
 	if  use unicode; then
-		! use gtk2 && die "You must put gtk2 in your USE if you need unicode support"
+		! use gtk && die "You must put gtk in your USE if you need unicode support"
 	fi
-	if ! use wxgtk1 && ! use gtk2; then
-		die "You must have at least gtk2 or wxgtk1 in your USE"
+	if ! use wxgtk1 && ! use gtk; then
+		die "You must have at least gtk or wxgtk1 in your USE"
 	fi
 }
 
@@ -96,7 +96,7 @@ src_compile() {
 	fi
 	cd ${S}
 
-	if use gtk2 ; then
+	if use gtk ; then
 		myconf="${myconf} --enable-gtk2"
 		einfo "Building gtk2 version"
 		mkdir build_gtk2
