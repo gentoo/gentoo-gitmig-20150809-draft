@@ -1,32 +1,26 @@
-DIST gnome-btdownload-0.0.11.tar.bz2 83482
-DIST gnome-btdownload-0.0.22.tar.gz 154900
-DIST gnome-btdownload-0.0.23.tar.bz2 134388 RMD160 4dba4b50836624902a94a166677d7ec7c2d561b3 SHA1 8db15e078c9b5165faf65ccc7d20ac8e3da4adaf SHA256 006d26f126b999693011dd7cf2ac2ae6ddbacc310d409bebf110984d77a800a1
-EBUILD gnome-btdownload-0.0.11.ebuild 760 RMD160 16bcb72e93fae95bc6fe74f9a75e6d35a07d9a66 SHA1 51fa40df120efd0a63fdc5c43b1637a2ad9bc078 SHA256 b246560e798c8c9fdc54e8ba79fb26c9a09fcff0a5f2637ec47263421bcda180
-MD5 01d7cd6005c1483f4ed68668912d3b1f gnome-btdownload-0.0.11.ebuild 760
-RMD160 16bcb72e93fae95bc6fe74f9a75e6d35a07d9a66 gnome-btdownload-0.0.11.ebuild 760
-SHA256 b246560e798c8c9fdc54e8ba79fb26c9a09fcff0a5f2637ec47263421bcda180 gnome-btdownload-0.0.11.ebuild 760
-EBUILD gnome-btdownload-0.0.22.ebuild 756 RMD160 5e1f9d4eec4b562fe2019b8d4a818c065c33fcaf SHA1 a1f022da113196de636445ced81a49e3b0a7b31b SHA256 3865d2df464907dcbe24442a1f5872abd1184ae90ca73570ed6ef53ce4176bec
-MD5 f55a99e03ae4293df73b975bedf46bca gnome-btdownload-0.0.22.ebuild 756
-RMD160 5e1f9d4eec4b562fe2019b8d4a818c065c33fcaf gnome-btdownload-0.0.22.ebuild 756
-SHA256 3865d2df464907dcbe24442a1f5872abd1184ae90ca73570ed6ef53ce4176bec gnome-btdownload-0.0.22.ebuild 756
-EBUILD gnome-btdownload-0.0.23.ebuild 762 RMD160 d898e9b29ea196bf1463519af24bbdd97fa6d154 SHA1 685668116ff165ae0fffe15031d85628bfc770c4 SHA256 187ec6523505507956ee4da679f8b7c79c2343bf688954b2b05fbeb9fae90d70
-MD5 973d96d7086a902c79d103e2eb73460b gnome-btdownload-0.0.23.ebuild 762
-RMD160 d898e9b29ea196bf1463519af24bbdd97fa6d154 gnome-btdownload-0.0.23.ebuild 762
-SHA256 187ec6523505507956ee4da679f8b7c79c2343bf688954b2b05fbeb9fae90d70 gnome-btdownload-0.0.23.ebuild 762
-MISC ChangeLog 1643 RMD160 f384e85ad464fda06e90c1e4139e6d63ef5eb293 SHA1 bd00f88e14e0970a5fe956b3cfa5b620e4c564bf SHA256 0a00744ed136bbfecd0c78558e24e884adb0623599dd6cdab2f2989056940606
-MD5 1fea00615ff9be3c6b5952a2940590b7 ChangeLog 1643
-RMD160 f384e85ad464fda06e90c1e4139e6d63ef5eb293 ChangeLog 1643
-SHA256 0a00744ed136bbfecd0c78558e24e884adb0623599dd6cdab2f2989056940606 ChangeLog 1643
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST gnome-btdownload-0.0.27.tar.bz2 143920 RMD160 f11476316502fe4f02923825ba281b2dd545adeb SHA1 f822898e2b865cae637af2be591382dd43bfb818 SHA256 f2f0f01cd7aa94c63dd56327c9e07882a75c8a66dd2888de0493ce027387691d
+EBUILD gnome-btdownload-0.0.27.ebuild 738 RMD160 7ff2277251e5fad4078210b578fcf2c52d76421a SHA1 c0a357bf51ccc1d54d2a2b4b5cf55e1af5fb7569 SHA256 4fa2c72d7f5df4f80aa19d8eeae2236e856eaefa41ab998396c885cd064c87fe
+MD5 669fbb39ea6817aecf6b0af21ef35067 gnome-btdownload-0.0.27.ebuild 738
+RMD160 7ff2277251e5fad4078210b578fcf2c52d76421a gnome-btdownload-0.0.27.ebuild 738
+SHA256 4fa2c72d7f5df4f80aa19d8eeae2236e856eaefa41ab998396c885cd064c87fe gnome-btdownload-0.0.27.ebuild 738
+MISC ChangeLog 1783 RMD160 f79fdaaea7d23f3392ca8358d4552cc3538a00d8 SHA1 e6e1939e50adc5eb4a5d8cf36219a190d19b31f0 SHA256 fb718451fb4f005eea2559a342a7b26713732202c71aa47e6cb1bbb18dc9dd34
+MD5 3f1db4c62b01baf4bae0158df7dd6c42 ChangeLog 1783
+RMD160 f79fdaaea7d23f3392ca8358d4552cc3538a00d8 ChangeLog 1783
+SHA256 fb718451fb4f005eea2559a342a7b26713732202c71aa47e6cb1bbb18dc9dd34 ChangeLog 1783
 MISC metadata.xml 160 RMD160 828887200387b28c37fc97111fc6bc3a0a2fcccd SHA1 813ef5bc57f6a8d95e7cab7a745a2a824858f49c SHA256 fe06593409e7f28665c032001005e94cb650299711a0af7f1a558bdb56c4004f
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 RMD160 828887200387b28c37fc97111fc6bc3a0a2fcccd metadata.xml 160
 SHA256 fe06593409e7f28665c032001005e94cb650299711a0af7f1a558bdb56c4004f metadata.xml 160
-MD5 7dbbf8233a94b880b3548c48c958cb5a files/digest-gnome-btdownload-0.0.11 75
-RMD160 f83874b80a7240a9b4c5238cfb0d45c00f45457d files/digest-gnome-btdownload-0.0.11 75
-SHA256 1b8f9813fb60e84931ba5150bc6763f546d081fbf137da7ba183a10817845a0b files/digest-gnome-btdownload-0.0.11 75
-MD5 140a82d3e4bc799c9b4cd5c6ecb137d3 files/digest-gnome-btdownload-0.0.22 75
-RMD160 e3ed4be410f6dab1e56f787bd257da2429234604 files/digest-gnome-btdownload-0.0.22 75
-SHA256 5ebca5fc03fce9837db3e65a66ab05ead10212a17a13de41800c2f6cc368f09f files/digest-gnome-btdownload-0.0.22 75
-MD5 ae9e36f2879ddc02a76b2380aec38c71 files/digest-gnome-btdownload-0.0.23 274
-RMD160 f62cd498233cad7258c0d8eabb2d8d1517e4834a files/digest-gnome-btdownload-0.0.23 274
-SHA256 cc188c5f73c3ebe5a2f3e66e781bfd3973129d4dde6f0d6600c2e2d6a351b31c files/digest-gnome-btdownload-0.0.23 274
+MD5 0e5150578273f331f0d6ee8f6fdebf9b files/digest-gnome-btdownload-0.0.27 274
+RMD160 503bf988e86b4eeb8c0d61962a8b76b94a9156d9 files/digest-gnome-btdownload-0.0.27 274
+SHA256 ae4367c878c20a5c1ed6435a5ad4f267f16c1a3a07a2ca167b276a571646bc1f files/digest-gnome-btdownload-0.0.27 274
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.6 (GNU/Linux)
+
+iD8DBQFFlBqh8bi6rjpTunYRAp7NAKClJEesdxsngqFiVo/d0LFzRYHcqQCeIKSL
+yZ9Uw2fHel/X9W2VsN4Wstw=
+=or7b
+-----END PGP SIGNATURE-----
