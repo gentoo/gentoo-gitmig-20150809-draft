@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/discover
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover/ChangeLog,v 1.14 2006/11/28 17:28:21 opfer Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover/ChangeLog,v 1.15 2006/12/28 19:41:25 vapier Exp $
+
+  28 Dec 2006; Mike Frysinger <vapier@gentoo.org> discover-2.0.7.ebuild:
+  Need dev-libs/check when USE=test #153612.
 
   28 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
   discover-2.0.7.ebuild:
