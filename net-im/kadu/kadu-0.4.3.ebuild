@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.3.ebuild,v 1.5 2006/11/13 15:08:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.3.ebuild,v 1.6 2006/12/28 05:50:32 dirtyepic Exp $
 
 inherit flag-o-matic eutils
 
@@ -143,9 +143,10 @@ src_unpack() {
 	enable_module extramodules osdhints_notify
 
 	# put some patches
-	epatch ${FILESDIR}/kadu-toolbar_toggle-gentoo.diff
+	epatch "${FILESDIR}"/kadu-toolbar_toggle-gentoo.diff
+	epatch "${FILESDIR}"/${P}-tcltk-gcc4.patch
 #	use tcltk && epatch ${FILESDIR}/${P}-tcltk.patch
-	use xosd && epatch ${FILESDIR}/xosd-gentoo.patch
+	use xosd && epatch "${FILESDIR}"/xosd-gentoo.patch
 }
 
 src_compile() {
