@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mah-jong/mah-jong-1.7.ebuild,v 1.1 2006/04/23 06:30:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/mah-jong/mah-jong-1.7.ebuild,v 1.2 2006/12/28 00:59:28 nyhm Exp $
 
-inherit games
+inherit eutils toolchain-funcs games
 
 MY_P="mj-${PV}-src"
 DESCRIPTION="A networked Mah Jong program, together with a computer player"
@@ -30,17 +30,23 @@ src_unpack() {
 	sed -i \
 		-e "/^DESTDIR =/ s:=.*:= ${D}:" \
 		-e "/^BINDIR =/ s:=.*:= ${GAMES_BINDIR}:" \
-		-e "/^MANDIR =/ s:man/man1:/usr/share/man/man6:" \
-		-e "/^MANSUFFIX =/ s:1:6:" \
+		-e '/^MANDIR =/ s:man/man1:/usr/share/man/man6:' \
+		-e '/^MANSUFFIX =/ s:1:6:' \
+		-e "/^CC =/ s:gcc:$(tc-getCC):" \
 		-e "/^CFLAGS =/ s:=:= ${CFLAGS}:" \
+		-e "/^LDLIBS =/ s:$:${LDFLAGS}:" \
+		-e '/^INSTPGMFLAGS =/ s:-s::' \
+		-e '/^CDEBUGFLAGS =/d' \
 		-e "/^TILESETPATH=/ s:NULL:\"${GAMES_DATADIR}/${PN}/\":" Makefile \
 		|| die "sed failed"
 }
 
 src_install() {
-	make install install.man || die "make install failed"
+	emake install install.man || die "emake install failed"
 	insinto "${GAMES_DATADIR}/${PN}"
 	doins -r fallbacktiles/ tiles-numbered/ tiles-small/ || die "doins failed"
+	newicon tiles-v1/tongE.xpm ${PN}.xpm
+	make_desktop_entry xmj Mah-Jong ${PN}.xpm
 	dodoc CHANGES ChangeLog *.txt
 	prepgamesdirs
 }
