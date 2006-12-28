@@ -1,6 +1,10 @@
 # ChangeLog for net-im/silc-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-server/ChangeLog,v 1.14 2006/11/27 22:37:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-server/ChangeLog,v 1.15 2006/12/28 17:31:21 gustavoz Exp $
+
+  28 Dec 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  silc-server-1.0.2.ebuild:
+  Stable on sparc
 
   27 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   silc-server-1.0.2.ebuild:
