@@ -1,6 +1,9 @@
 # ChangeLog for net-im/kadu
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.51 2006/12/28 05:50:32 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.52 2006/12/28 22:15:15 dirtyepic Exp $
+
+  28 Dec 2006; Ryan Hill <dirtyepic@gentoo.org> kadu-0.4.3.ebuild:
+  Fix building USE=-tcltk from last commit.
 
   28 Dec 2006; Ryan Hill <dirtyepic@gentoo.org>
   +files/kadu-0.4.3-tcltk-gcc4.patch, kadu-0.4.3.ebuild:
