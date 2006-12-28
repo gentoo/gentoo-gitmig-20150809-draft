@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6499 2006/12/28 16:05:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6500 2006/12/28 19:26:28 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -677,10 +677,6 @@ dev-lisp/cl-icu
 dev-lisp/cl-fiveam
 dev-lisp/cl-ucw
 dev-lisp/cl-rfc2109
-
-# Michael Sterrett <mr_bones_@gentoo.org> (20 Aug 2006)
-# Don't even think of filing bugs about these versions.
->=games-strategy/wesnoth-1.1
 
 # Matthew Kennedy <mkennedy@gentoo.org> (20 Aug 2006)
 # Unmaintained upstream, problems with recent Emacs.
