@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/check-0.9.5.ebuild,v 1.2 2006/12/14 16:24:47 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/check-0.9.5.ebuild,v 1.3 2006/12/28 19:52:08 vapier Exp $
 
-inherit autotools eutils libtool
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+inherit eutils autotools
 
 DESCRIPTION="A unit test framework for C"
 HOMEPAGE="http://sourceforge.net/projects/check/"
@@ -17,16 +19,12 @@ DEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	elibtoolize || die
-}
-
-src_compile() {
-	eautoreconf || die
-	econf || die
-	emake || die
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-autotools.patch
+	eautoreconf
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
-	mv ${D}/usr/share/doc/${PN} ${D}/usr/share/doc/${P}
+	emake DESTDIR="${D}" install || die
+	mv "${D}"/usr/share/doc/{${PN},${PF}} || die
 }
