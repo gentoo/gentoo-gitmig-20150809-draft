@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/swish-e/swish-e-2.4.3-r2.ebuild,v 1.3 2006/06/15 03:50:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/swish-e/swish-e-2.4.3-r2.ebuild,v 1.4 2006/12/28 19:21:23 the_paya Exp $
 
 inherit perl-module eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.swish-e.org/distribution/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="doc perl pdf mp3"
 
 DEPEND=">=sys-libs/zlib-1.1.3
