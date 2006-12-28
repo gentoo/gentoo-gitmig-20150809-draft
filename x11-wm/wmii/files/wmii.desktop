@@ -4,6 +4,5 @@ Name=wmii
 Comment=window manager improved 2
 Exec=wmii
 TryExec=wmii
-# no icon yet, only the top three are currently used
 Icon=
 Type=Application
