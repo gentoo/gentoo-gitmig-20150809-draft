@@ -1,0 +1,20 @@
+--- adnsmodule.c.old	2006-10-16 12:27:50.000000000 +0200
++++ adnsmodule.c	2006-10-16 12:28:05.000000000 +0200
+@@ -88,7 +88,7 @@
+ };
+ 
+ static _constant_class adns_rr[] = {
+-	{ "typemask", adns__rrt_typemask },
++	{ "typemask", adns_rrt_typemask },
+ 	{ "deref", adns__qtf_deref },
+ 	{ "mail822", adns__qtf_mail822 },
+ 	{ "none", adns_r_none },
+@@ -184,7 +184,7 @@
+ {
+ 	PyObject *o, *rrs;
+ 	int i;
+-	adns_rrtype t = answer->type & adns__rrt_typemask;
++	adns_rrtype t = answer->type & adns_rrt_typemask;
+ 	adns_rrtype td = answer->type & adns__qtf_deref;
+ 
+ 	rrs = PyTuple_New(answer->nrrs);
