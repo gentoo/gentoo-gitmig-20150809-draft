@@ -1,0 +1,43 @@
+diff -ru nsis-2.22-src~/Contrib/Math/SConscript nsis-2.22-src/Contrib/Math/SConscript
+--- nsis-2.22-src~/Contrib/Math/SConscript	2006-12-29 23:45:50.000000000 +0100
++++ nsis-2.22-src/Contrib/Math/SConscript	2006-12-29 23:55:03.000000000 +0100
+@@ -23,9 +23,6 @@
+ 
+ Import('BuildPlugin env')
+ 
+-if float(env['MSVS_VERSION'].replace('Exp','')) >= 8.0:
+-	files += ['Source/mathcrtmt.lib']
+-else:
+-	files += ['Source/mathcrt.lib']
++files += ['Source/mathcrtmt.lib']
+ 
+ BuildPlugin(target, files, libs, examples, docs, nodeflib = False, flags = ['$CPP_FLAG'])
+diff -ru nsis-2.22-src~/SCons/Config/gnu nsis-2.22-src/SCons/Config/gnu
+--- nsis-2.22-src~/SCons/Config/gnu	2006-12-29 23:45:50.000000000 +0100
++++ nsis-2.22-src/SCons/Config/gnu	2006-12-29 23:46:22.000000000 +0100
+@@ -68,6 +68,7 @@
+ if not defenv['DEBUG']:
+ 	stub_env.Append(LINKFLAGS = '-s')               # strip
+ stub_env.Append(LINKFLAGS = '-mwindows')          # build windows executables
++stub_env.Append(LINKFLAGS = '-L/usr/mingw32/usr/lib')
+ stub_env.Append(LINKFLAGS = '$NODEFLIBS_FLAG')    # no standard libraries
+ stub_env.Append(LINKFLAGS = '$ALIGN_FLAG')        # 512 bytes align
+ stub_env.Append(LINKFLAGS = '-Wl,-e,_WinMain@16') # entry point
+@@ -83,8 +84,6 @@
+ 
+ conf = FlagsConfigure(makensis_env)
+ conf.CheckLinkFlag('$MAP_FLAG')                   # generate map file
+-if not defenv['DEBUG']:
+-	TestStrip(conf)                                 # strip
+ conf.Finish()
+ 
+ ### plugin environment
+@@ -112,8 +111,6 @@
+ 
+ conf = FlagsConfigure(cp_util_env)
+ conf.CheckLinkFlag('$MAP_FLAG')                   # generate map file
+-if not defenv['DEBUG']:
+-	TestStrip(conf)                                 # strip
+ conf.Finish()
+ 
+ ### util environment

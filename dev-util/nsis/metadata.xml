@@ -7,8 +7,8 @@
   <name>Alin Nastac</name>
 </maintainer>
 <maintainer>
-	<email>cedk@gentoo.org</email>
-	<name>Cédric Krier</name>
+  <email>cedk@gentoo.org</email>
+  <name>Cédric Krier</name>
 </maintainer>
 <longdescription>
 NSIS (Nullsoft Scriptable Install System) is a professional open source
