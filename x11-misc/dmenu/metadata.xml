@@ -6,4 +6,8 @@
     <email>omp@gentoo.org</email>
     <name>David Shakaryan</name>
   </maintainer>
+  <maintainer>
+    <email>cedk@gentoo.org</email>
+    <name>Cédric Krier</name>
+  </maintainer>
 </pkgmetadata>
