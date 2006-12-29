@@ -9,13 +9,13 @@ The XMOJO project is a free open source implementation of JMX specification.
 This implementation is derived from AdventNet's JMX implementation, which has
 been available in the industry since 1999. Apart from complete implementation of
 JMX specification, XMOJO also contains contributions of adaptors, such as HTML
-and RMI and rich tools, such as MBean Browser. 
+and RMI and rich tools, such as MBean Browser.
 
-Highlights of XMOJO 
+Highlights of XMOJO
 
 * Complete implementation of JMX specification, version 1.0
 * Multi-management protocol support with RMI and HTTP adaptors
-* Tested successfully the JMX instrumentation with different application data 
+* Tested successfully the JMX instrumentation with different application data
   sources
 * Servlets, JSPs, EJBs, Java APIs, databases, log files
 * Tested with different application and integration platforms
