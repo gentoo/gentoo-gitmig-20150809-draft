@@ -3,8 +3,8 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>pythonhead@gentoo.org</email>
-		<name>Rob Cakebread</name>
+		<email>ikelos@gentoo.org</email>
+		<name>Mike Auty</name>
 	</maintainer>
 	<longdescription>gazpacho is a glade clone which aims to be fully compatible with .glade files. It uses a unique layout for its GUI using one window instead of several.</longdescription>
 </pkgmetadata>
