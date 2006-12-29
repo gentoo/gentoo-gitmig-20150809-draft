@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libedit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.19 2006/12/28 16:18:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.20 2006/12/29 15:16:42 flameeyes Exp $
+
+  29 Dec 2006; Diego Pettenò <flameeyes@gentoo.org>
+  libedit-20061103.ebuild:
+  Add ~sparc-fbsd keyword.
 
   28 Dec 2006; Diego Pettenò <flameeyes@gentoo.org>
   files/libedit-20061103-debian-to-gentoo.patch,
