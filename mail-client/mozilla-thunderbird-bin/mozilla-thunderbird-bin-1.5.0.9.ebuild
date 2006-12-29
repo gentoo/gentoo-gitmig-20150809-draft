@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-1.5.0.9.ebuild,v 1.4 2006/12/25 03:18:54 pingu Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-1.5.0.9.ebuild,v 1.5 2006/12/29 05:28:36 gothgirl Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -121,6 +121,9 @@ src_install() {
 	# revdep-rebuild entry
 	insinto /etc/revdep-rebuild
 	doins ${FILESDIR}/10thunderbird-bin
+
+	# install env.d entry for libs
+	doenvd ${FILESDIR}/71thunderbird-bin
 }
 
 pkg_preinst() {
