@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.2_p4.ebuild,v 1.1 2006/11/26 17:58:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.2_p4.ebuild,v 1.2 2006/12/29 22:23:52 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-${PV:0:3}/${MY_P}.tar
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="logrotate parse-clocks caps selinux ssl ipv6 debug openntpd"
+IUSE="parse-clocks caps selinux ssl ipv6 debug openntpd"
 
 RDEPEND=">=sys-libs/ncurses-5.2
 	>=sys-libs/readline-4.1
@@ -104,11 +104,6 @@ src_install() {
 
 	keepdir /var/lib/ntp
 	fowners ntp:ntp /var/lib/ntp
-
-	if use logrotate ; then
-		insinto /etc/logrotate.d
-		newins "${FILESDIR}"/ntp.logrotate ntp
-	fi
 
 	if use openntpd ; then
 		cd "${D}"
