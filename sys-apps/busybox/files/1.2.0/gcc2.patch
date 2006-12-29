@@ -1,0 +1,19 @@
+--- networking/zcip.c
++++ networking/zcip.c
+@@ -299,13 +301,13 @@ int zcip_main(int argc, char *argv[])
+ 		struct timeval tv1;
+ 		struct arp_packet p;
+ 
++		int source_ip_conflict = 0;
++		int target_ip_conflict = 0;
++
+ 		fds[0].fd = fd;
+ 		fds[0].events = POLLIN;
+ 		fds[0].revents = 0;
+ 
+-		int source_ip_conflict = 0;
+-		int target_ip_conflict = 0;
+-
+ 		// poll, being ready to adjust current timeout
+ 		if (!timeout) {
+ 			timeout = ms_rdelay(PROBE_WAIT);
