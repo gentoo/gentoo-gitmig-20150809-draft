@@ -1,11 +1,12 @@
---- firehol.new	2006-12-27 14:13:39.000000000 +0100
-+++ firehol.sh 2006-12-27 14:15:57.000000000 +0100
+diff -Nur firehol-1.226/firehol.sh firehol-1.226.new/firehol.sh
+--- firehol-1.226/firehol.sh	2006-12-29 23:48:19.000000000 +0100
++++ firehol-1.226.new/firehol.sh	2006-12-29 23:49:40.000000000 +0100
 @@ -10,7 +10,7 @@
  #
  # config: /etc/firehol/firehol.conf
  #
--# $Id: firehol-1.226-to-250.patch,v 1.1 2006/12/28 20:59:13 centic Exp $
-+# $Id: firehol-1.226-to-250.patch,v 1.1 2006/12/28 20:59:13 centic Exp $
+-# $Id: firehol-1.226-to-250.patch,v 1.2 2006/12/29 20:50:54 centic Exp $
++# $Id: firehol-1.226-to-250.patch,v 1.2 2006/12/29 20:50:54 centic Exp $
  #
  
  # Make sure only root can run us.
@@ -105,8 +106,8 @@
  # Find our minor version
  firehol_minor_version() {
  ${CAT_CMD} <<"EOF" | ${CUT_CMD} -d ' ' -f 3 | ${CUT_CMD} -d '.' -f 2
--$Id: firehol-1.226-to-250.patch,v 1.1 2006/12/28 20:59:13 centic Exp $
-+$Id: firehol-1.226-to-250.patch,v 1.1 2006/12/28 20:59:13 centic Exp $
+-$Id: firehol-1.226-to-250.patch,v 1.2 2006/12/29 20:50:54 centic Exp $
++$Id: firehol-1.226-to-250.patch,v 1.2 2006/12/29 20:50:54 centic Exp $
  EOF
  }
  
@@ -670,8 +671,8 @@
  		else
  		
  		${CAT_CMD} <<EOF
--$Id: firehol-1.226-to-250.patch,v 1.1 2006/12/28 20:59:13 centic Exp $
-+$Id: firehol-1.226-to-250.patch,v 1.1 2006/12/28 20:59:13 centic Exp $
+-$Id: firehol-1.226-to-250.patch,v 1.2 2006/12/29 20:50:54 centic Exp $
++$Id: firehol-1.226-to-250.patch,v 1.2 2006/12/29 20:50:54 centic Exp $
  (C) Copyright 2003, Costa Tsaousis <costa@tsaousis.gr>
  FireHOL is distributed under GPL.
  
@@ -679,8 +680,8 @@
  	
  	${CAT_CMD} <<EOF
  
--$Id: firehol-1.226-to-250.patch,v 1.1 2006/12/28 20:59:13 centic Exp $
-+$Id: firehol-1.226-to-250.patch,v 1.1 2006/12/28 20:59:13 centic Exp $
+-$Id: firehol-1.226-to-250.patch,v 1.2 2006/12/29 20:50:54 centic Exp $
++$Id: firehol-1.226-to-250.patch,v 1.2 2006/12/29 20:50:54 centic Exp $
  (C) Copyright 2003, Costa Tsaousis <costa@tsaousis.gr>
  FireHOL is distributed under GPL.
  Home Page: http://firehol.sourceforge.net
@@ -716,8 +717,8 @@
  	
  	"${CAT_CMD}" >&2 <<EOF
  
--$Id: firehol-1.226-to-250.patch,v 1.1 2006/12/28 20:59:13 centic Exp $
-+$Id: firehol-1.226-to-250.patch,v 1.1 2006/12/28 20:59:13 centic Exp $
+-$Id: firehol-1.226-to-250.patch,v 1.2 2006/12/29 20:50:54 centic Exp $
++$Id: firehol-1.226-to-250.patch,v 1.2 2006/12/29 20:50:54 centic Exp $
  (C) Copyright 2003, Costa Tsaousis <costa@tsaousis.gr>
  FireHOL is distributed under GPL.
  Home Page: http://firehol.sourceforge.net
@@ -725,8 +726,8 @@
  	echo "# "
  
  	${CAT_CMD} <<EOF
--# $Id: firehol-1.226-to-250.patch,v 1.1 2006/12/28 20:59:13 centic Exp $
-+# $Id: firehol-1.226-to-250.patch,v 1.1 2006/12/28 20:59:13 centic Exp $
+-# $Id: firehol-1.226-to-250.patch,v 1.2 2006/12/29 20:50:54 centic Exp $
++# $Id: firehol-1.226-to-250.patch,v 1.2 2006/12/29 20:50:54 centic Exp $
  # (C) Copyright 2003, Costa Tsaousis <costa@tsaousis.gr>
  # FireHOL is distributed under GPL.
  # Home Page: http://firehol.sourceforge.net
