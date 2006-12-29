@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-6.2_rc2.ebuild,v 1.1 2006/12/29 15:21:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-6.2_rc2.ebuild,v 1.2 2006/12/29 20:03:36 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic pam
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://gentoo/${UBIN}.tar.bz2
 		mirror://gentoo/${INCLUDE}.tar.bz2
 		build? ( mirror://gentoo/${SYS}.tar.bz2 )"
 
-RDEPEND="=sys-freebsd/freebsd-lib-${RV}*
+RDEPEND=">=sys-freebsd/freebsd-lib-6.2_rc2
 	ssl? ( dev-libs/openssl )
 	kerberos? ( virtual/krb5 )
 	sys-libs/zlib
