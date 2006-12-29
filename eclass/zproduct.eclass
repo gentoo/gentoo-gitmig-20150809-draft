@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.24 2006/05/28 13:18:39 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.25 2006/12/29 00:54:57 radek Exp $
 # Author: Jason Shoemaker <kutsuya@gentoo.org>
 
 # This eclass is designed to streamline the construction of
@@ -9,15 +9,12 @@
 EXPORT_FUNCTIONS src_install pkg_prerm pkg_postinst pkg_config
 
 DESCRIPTION="This is a zope product"
-#HOMEPAGE=""
-#SRC_URI=""
 
 RDEPEND="net-zope/zope
 	app-admin/zprod-manager"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="x86 ~ppc"
 S=${WORKDIR}
 
 ZI_DIR="${ROOT}/var/lib/zope/"
@@ -99,15 +96,15 @@ zproduct_pkg_postinst() {
 	chown -R root:root ${ZP_DIR}/${PF}
 	# make shure there is nothing writable in the new dir, and all is readable
 	chmod -R go-w,a+rX ${ZP_DIR}/${PF}
-	einfo ">>> Installing ${PF} into the \"$(zope-config --zidef-get)\" zinstance ..."
-	${ROOT}/usr/sbin/zprod-manager add ${ZP_DIR}/${PF}
+
+	einfo "Attention: ${PF} was not installed in any instance! Use 'zprod-manager add'"
+	#disabled by radek@20061228 - contact me in case of any question!
+    #${ROOT}/usr/sbin/zprod-manager add ${ZP_DIR}/${PF}
 }
 
-# This function is deprecated! Still used, until a new system developed.
-
 zproduct_pkg_prerm() {
-	# remove this zproduct from all zinstances.
-	# process zinstance.lst and proceed with zprod-update del
+	# checks how many times product is installed and informs about it
+    # it does not remove it (change in behaviour done by radek@20061228)
 	debug-print-function ${FUNCNAME} ${*}
 	ZINST_LST=$(ls /var/lib/zope/)
 	if [ "${ZINST_LST}" ] ; then
@@ -129,27 +126,16 @@ zproduct_pkg_prerm() {
 				done
 			fi
 		done
-		# Info and wait ...
 		if [ $ARE_INSTALLED -gt 0 ]
 		then
-			#TODO: should use ebeep and epause, but i got some inheritance errors on eutils
-			#so as for now i use local version. in futuure we should inherit ueilts
-			ewarn "Detected at least $ARE_INSTALLED copies of product being removed."
-			ewarn "Sleeping 10seconds, please use CTRL+C to abort!"
-			echo -ne "\a"
-			sleep 10
+			ewarn "Detected at least $ARE_INSTALLED copies of product being unmerged."
+            ewarn "Please manually remove it from instances using 'zprod-manager del'"
+            ewarn "Product is removed from ${ZP_DIR} but not from instances!"
 		fi
-
-		ewarn "Uninstalling from all zinstances ..."
-		for N in ${ZINST_LST} ; do
-			${ROOT}/usr/sbin/zprod-manager del ${ZP_DIR}/${PF} ${ZI_DIR}${N}
-		done
 	fi
 }
 
-# Add this zproduct to the top zinstance.
-
 zproduct_pkg_config() {
-	einfo "To add zproducts to other zinstances execute:"
+	einfo "To add zproducts to zope instances use:"
 	einfo "\tzprod-manager add"
 }
