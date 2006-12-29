@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/poi-2.5.1-r1.ebuild,v 1.1 2006/12/29 23:56:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/poi-2.5.1-r1.ebuild,v 1.2 2006/12/29 23:58:36 betelgeuse Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -18,7 +18,8 @@ RDEPEND=">=virtual/jre-1.4
 	>=dev-java/commons-logging-1.0
 	>=dev-java/log4j-1.2.8
 	=dev-java/commons-beanutils-1.6*
-	=dev-java/commons-lang-2.0*"
+	=dev-java/commons-lang-2.0*
+	dev-java/junit"
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}
 	>=dev-java/ant-core-1.4"
