@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/tp_smapi-0.30.ebuild,v 1.1 2006/12/05 10:44:35 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/tp_smapi-0.30.ebuild,v 1.2 2006/12/29 19:16:49 genstef Exp $
 
 inherit linux-mod
 
@@ -31,7 +31,7 @@ pkg_setup() {
 	fi
 
 	MODULE_NAMES="thinkpad_ec(extra:) tp_smapi(extra:)"
-	BUILD_PARAMS="KSRC=${KV_DIR}"
+	BUILD_PARAMS="KSRC=${KV_DIR} KBUILD=${KV_DIR}"
 	BUILD_TARGETS="default"
 
 	if use hdaps; then
