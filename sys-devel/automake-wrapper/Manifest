@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX am-wrapper-1.sh 3394 RMD160 e19271412760a770cb89c9f432d68e10568dda50 SHA1 cf7304bd11f1c715ba54c225f14d2829985b1e93 SHA256 4c918ca693e06a91380677cad1d2bbf0c6a972cee83ab00408e17c3473ca331a
 MD5 d0c6c645c4dc1ad71a2e017dae4185be files/am-wrapper-1.sh 3394
 RMD160 e19271412760a770cb89c9f432d68e10568dda50 files/am-wrapper-1.sh 3394
@@ -14,14 +17,14 @@ EBUILD automake-wrapper-1-r1.ebuild 774 RMD160 e87bc49669ff7f3d5a3554f45e3ad1921
 MD5 b31042b0af883c9bf0a9ba4f100b6a23 automake-wrapper-1-r1.ebuild 774
 RMD160 e87bc49669ff7f3d5a3554f45e3ad1921a8778e2 automake-wrapper-1-r1.ebuild 774
 SHA256 5ce6aff80a660d47752de9e74e43ba40853a94b21f19ac57769a8e14ad546242 automake-wrapper-1-r1.ebuild 774
-EBUILD automake-wrapper-2-r1.ebuild 786 RMD160 a93b04d0299cacb7fb6da7d2038c96ff66e7c59e SHA1 b8597e6c446a024576226cddb2862c6ec71a81b0 SHA256 648dea53b2faed9c1373c4941db1bad3a184b96a7f858457f61c70e7a54f7a91
-MD5 11becf1e3f3bd3d58286d7fd3d2708fa automake-wrapper-2-r1.ebuild 786
-RMD160 a93b04d0299cacb7fb6da7d2038c96ff66e7c59e automake-wrapper-2-r1.ebuild 786
-SHA256 648dea53b2faed9c1373c4941db1bad3a184b96a7f858457f61c70e7a54f7a91 automake-wrapper-2-r1.ebuild 786
-EBUILD automake-wrapper-3-r1.ebuild 798 RMD160 a5b6c917340d5457184c01d31c7191f0923c8015 SHA1 f6c9b02b0ec978189780656c18100d0d2e6e4e4b SHA256 38c48e4c3194cbddc53637ac6c4af39c7ad8bf47779afbb293be2f4ac6bed8ce
-MD5 a9b59aa37e0371f61356d5df9266b7ac automake-wrapper-3-r1.ebuild 798
-RMD160 a5b6c917340d5457184c01d31c7191f0923c8015 automake-wrapper-3-r1.ebuild 798
-SHA256 38c48e4c3194cbddc53637ac6c4af39c7ad8bf47779afbb293be2f4ac6bed8ce automake-wrapper-3-r1.ebuild 798
+EBUILD automake-wrapper-2-r1.ebuild 786 RMD160 e4c93263f93d8ce467fc21c27d382016ac48f631 SHA1 cbedc92699323bd5cb2436348fd5bfc7f673b797 SHA256 86998738ff2f1fa31795725ee433b7e1bc35468280f0d279c351b980dff7f049
+MD5 ce4ce1df9f0bb0ed0120e97a450aea4d automake-wrapper-2-r1.ebuild 786
+RMD160 e4c93263f93d8ce467fc21c27d382016ac48f631 automake-wrapper-2-r1.ebuild 786
+SHA256 86998738ff2f1fa31795725ee433b7e1bc35468280f0d279c351b980dff7f049 automake-wrapper-2-r1.ebuild 786
+EBUILD automake-wrapper-3-r1.ebuild 793 RMD160 7e7a8575bb6525bf9339cc64de0e58dbf865e8ee SHA1 5257021bc98cd4970613f2857b3635cc25ae933b SHA256 eac384de711418d9f5115fbf5dfc07294bfd6b8b62ad0ef4d6f4c9d430402feb
+MD5 235f06530dc47c03e0abc5ab60908b22 automake-wrapper-3-r1.ebuild 793
+RMD160 7e7a8575bb6525bf9339cc64de0e58dbf865e8ee automake-wrapper-3-r1.ebuild 793
+SHA256 eac384de711418d9f5115fbf5dfc07294bfd6b8b62ad0ef4d6f4c9d430402feb automake-wrapper-3-r1.ebuild 793
 MISC ChangeLog 2765 RMD160 502ff1ff158af517edcdd23e2038d10b040acf3b SHA1 f427f334037ac3dc860ea769d83538e996b8f7fe SHA256 884690f52cb269e2404d1c9bb459b4181a4fb5025b9ed1208f1be10b9db68b72
 MD5 110f2b7badd80fbdbd510181eb46c725 ChangeLog 2765
 RMD160 502ff1ff158af517edcdd23e2038d10b040acf3b ChangeLog 2765
@@ -30,12 +33,19 @@ MISC metadata.xml 164 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 SHA1 9c213
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-automake-wrapper-1-r1 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-automake-wrapper-1-r1 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-automake-wrapper-1-r1 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-automake-wrapper-2-r1 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-automake-wrapper-2-r1 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-automake-wrapper-2-r1 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-automake-wrapper-3-r1 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-automake-wrapper-3-r1 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-automake-wrapper-3-r1 1
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-automake-wrapper-1-r1 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-automake-wrapper-1-r1 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-automake-wrapper-1-r1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-automake-wrapper-2-r1 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-automake-wrapper-2-r1 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-automake-wrapper-2-r1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-automake-wrapper-3-r1 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-automake-wrapper-3-r1 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-automake-wrapper-3-r1 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.6 (GNU/Linux)
+
+iD8DBQFFlZDX8bi6rjpTunYRAsFeAKDXdfejMGu582L3hFQ73/gm3vUSWwCfUhK+
+gnGTbT5hB3HI5ClYCU+VvE8=
+=zqNQ
+-----END PGP SIGNATURE-----
