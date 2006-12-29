@@ -1,2 +1,1 @@
 LDPATH=/emul/linux/x86/usr/qt/2/lib:/emul/linux/x86/usr/qt/3/lib
-QTDIR=/emul/linux/x86/usr/qt/2:/emul/linux/x86/usr/qt/3
