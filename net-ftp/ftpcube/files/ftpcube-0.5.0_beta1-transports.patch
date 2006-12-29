@@ -1,0 +1,11 @@
+--- setup.py.orig	2006-12-29 13:39:51.000000000 +0100
++++ setup.py	2006-12-29 13:40:05.000000000 +0100
+@@ -40,7 +40,7 @@
+ _data_files.extend (_locales)
+ 
+ # Generate package list
+-_packages = [ 'libftpcube', 'libftpcube/archtypes', 'libftpcube/icons' ]
++_packages = [ 'libftpcube', 'libftpcube/archtypes', 'libftpcube/icons', 'libftpcube/transports' ]
+ 
+ if sys.platform == "win32":
+ 	_ftpcube_script = "ftpcube.pyw"
