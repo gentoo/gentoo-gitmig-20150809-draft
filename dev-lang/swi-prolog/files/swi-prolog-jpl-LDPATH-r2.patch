@@ -1,0 +1,42 @@
+diff -ur pl-5.6.25.orig/packages/jpl/Makefile.in pl-5.6.25/packages/jpl/Makefile.in
+--- pl-5.6.25.orig/packages/jpl/Makefile.in	2006-11-28 22:16:43.000000000 +1300
++++ pl-5.6.25/packages/jpl/Makefile.in	2006-12-29 22:03:31.000000000 +1300
+@@ -36,6 +36,7 @@
+ JAVA=@JAVA@
+ JUNIT=@JUNIT@
+ JAVALIBS=@JAVALIBS@
++JAVALDPATH=@JAVALDPATH@
+ 
+ DOCTOTEX=$(PCEHOME)/bin/doc2tex
+ PLTOTEX=$(PCEHOME)/bin/pl2tex
+@@ -75,9 +76,9 @@
+ check:		check_pl check_java
+ 
+ check_pl::		
+-		$(PL) -q -f test_jpl.pl -g run_tests,halt -t 'halt(1)'
++		LD_LIBRARY_PATH=$(JAVALDPATH) $(PL) -q -f test_jpl.pl -g run_tests,halt -t 'halt(1)'
+ check_java::
+-		CLASSPATH=$(JUNIT):jpl.jar:jpltest.jar $(JAVA) junit.textui.TestRunner jpl.test.TestJUnit
++		SWI_HOME_DIR=../.. LD_LIBRARY_PATH=.:../../lib/$(PLARCH)  CLASSPATH=$(JUNIT):jpl.jar:jpltest.jar $(JAVA) junit.textui.TestRunner jpl.test.TestJUnit
+ 
+ ################################################################
+ # Installation
+diff -ur pl-5.6.25.orig/packages/jpl/configure pl-5.6.25/packages/jpl/configure
+--- pl-5.6.25.orig/packages/jpl/configure	2006-12-22 02:41:37.000000000 +1300
++++ pl-5.6.25/packages/jpl/configure	2006-12-29 22:06:00.000000000 +1300
+@@ -4071,6 +4071,7 @@
+ 
+ for d in $JNI_CLIENT_DIRS; do
+   LDSOFLAGS="$LDSOFLAGS -L$d"
++  JAVALDPATH="$JAVALDPATH:$d"
+ done
+ 
+ if test "$java_abs_paths" = yes; then
+@@ -5346,6 +5347,7 @@
+ s,@LDSOFLAGS@,$LDSOFLAGS,;t t
+ s,@JAVA_HOME@,$JAVA_HOME,;t t
+ s,@JAVALIBS@,$JAVALIBS,;t t
++s,@JAVALDPATH@,$JAVALDPATH,;t t
+ s,@JUNIT@,$JUNIT,;t t
+ s,@PLLD@,$PLLD,;t t
+ s,@MAKE@,$MAKE,;t t
