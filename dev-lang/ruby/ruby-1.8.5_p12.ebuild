@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.5_p12.ebuild,v 1.1 2006/12/25 14:23:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.5_p12.ebuild,v 1.2 2006/12/29 16:25:46 pclouds Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -99,6 +99,10 @@ src_install() {
 	export LD_LIBRARY_PATH RUBYLIB
 
 	make DESTDIR="${D}" install || die "make install failed"
+
+	MINIRUBY=$(echo -e 'include Makefile\ngetminiruby:\n\t@echo $(MINIRUBY)'|make -f - getminiruby)
+	keepdir $(${MINIRUBY} -rrbconfig -e "print Config::CONFIG['sitelibdir']")
+	keepdir $(${MINIRUBY} -rrbconfig -e "print Config::CONFIG['sitearchdir']")
 
 	if use doc; then
 		make DESTDIR="${D}" install-doc || die "make install-doc failed"
