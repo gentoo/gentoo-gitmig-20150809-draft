@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r8.ebuild,v 1.22 2006/12/11 02:50:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r8.ebuild,v 1.23 2006/12/29 22:13:04 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -83,5 +83,5 @@ src_install() {
 	# bug #4411
 	gen_usr_ldscript libwrap.so || die "gen_usr_ldscript failed"
 
-	dodoc BLURB CHANGES DISCLAIMER README* ${FILESDIR}/hosts.allow.example
+	dodoc BLURB CHANGES DISCLAIMER README* "${FILESDIR}"/hosts.allow.example
 }
