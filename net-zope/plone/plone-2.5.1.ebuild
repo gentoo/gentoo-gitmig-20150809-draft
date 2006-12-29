@@ -1,13 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/plone-2.5.1.ebuild,v 1.1 2006/09/30 21:21:02 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/plone-2.5.1.ebuild,v 1.2 2006/12/29 01:58:28 radek Exp $
 
 inherit zproduct
 
 MY_P="Plone-2.5.1"
 DESCRIPTION="A Zope Content Management System, based on Zope CMF."
 HOMEPAGE="http://plone.org"
-SRC_URI="mirror://sourceforge/plone/${MY_P}-final.tar.gz"
+HOTFIXES_URI="http://plone.org/products/plone-hotfix/releases/20061031/PloneHotFix20061031.tar.gz"
+SRC_URI="mirror://sourceforge/plone/${MY_P}-final.tar.gz
+	    $HOTFIXES_URI"
 
 LICENSE="GPL-2"
 SLOT="2.5"
@@ -62,7 +64,13 @@ ZPROD_LIST="
 	SecureMailHost
 	statusmessages
 	validation
+	PloneHotFix20061031
 	"
+
+src_compile() {
+	# hotfixes to be applied
+	cp -a "${WORKDIR}/PloneHotFix20061031/" "${WORKDIR}/${MY_P}/"
+}
 
 pkg_postinst() {
 	ewarn
