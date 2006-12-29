@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.100 2006/12/21 18:29:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.101 2006/12/29 21:13:18 flameeyes Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -16,7 +16,6 @@ directfb
 djbfft
 dvb
 dmi
-fdftk
 g15
 glitz
 graphlcd

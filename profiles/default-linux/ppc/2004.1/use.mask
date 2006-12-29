@@ -7,7 +7,6 @@ afs
 avi
 birdstep
 cmucl
-fdftk
 hdf
 lm_sensors
 real

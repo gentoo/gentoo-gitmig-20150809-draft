@@ -129,10 +129,6 @@ wifi
 oci8
 informix
 
-# 14 Jul 2004 Gustavo Zacarias <gustavoz@gentoo.org>
-# Adobe's FDFTK toolkit doesn't exist for linux/hppa
-fdftk
-
 # 26 Feb 2003 Guy Martin <gmsoft@gentoo.org>
 # No lirc support on hppa
 lirc

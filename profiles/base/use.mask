@@ -112,3 +112,7 @@ alsa_cards_at91-soc-eti-b1-wm8731
 alsa_cards_harmony
 # Mask specific MIPS drivers
 alsa_cards_au1x00
+
+# Diego Pettenò <flameeyes@gentoo.org> (29 Dec 2006)
+# Adobe FDF toolkit is x86 only.
+fdftk

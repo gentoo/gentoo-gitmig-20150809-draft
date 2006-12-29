@@ -16,7 +16,6 @@ ruby
 firebird
 mzscheme
 chasen
-fdftk
 mono
 beagle
 rar

@@ -20,7 +20,6 @@ java-internal
 java-external
 
 # dont make sense on this arch
-fdftk
 3dfx
 
 # havent tested yet

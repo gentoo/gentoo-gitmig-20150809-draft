@@ -1,6 +1,9 @@
 # ChangeLog for ia64 profile
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.9 2006/12/11 15:09:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.10 2006/12/29 21:13:17 flameeyes Exp $
+
+  29 Dec 2006; Diego Pettenò <flameeyes@gentoo.org> use.mask:
+  Mask fdftk useflag on base profile and unmask for x86 only.
 
   11 Dec 2006; <kloeri@gentoo.org> use.mask:
   Use mask sms.

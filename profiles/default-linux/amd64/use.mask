@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.43 2006/12/21 16:17:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.44 2006/12/29 21:13:17 flameeyes Exp $
 
 # SECTION: Unmask
 
@@ -83,10 +83,6 @@ mzscheme
 # 2004/10/06 - Jeremy Huddleston <eradicator@gentoo.org>
 # sys-cluster/pvm won't build
 pvm
-
-# 2004/06/22 - Taken from 2004.0 profile
-# x86 binary only, used by php
-fdftk
 
 # 2004/06/22 - Taken from 2004.0 profile
 # masked

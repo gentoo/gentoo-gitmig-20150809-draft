@@ -4,7 +4,6 @@
 acpi
 afs
 avi
-fdftk
 lm_sensors
 rar
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/x86/use.mask,v 1.7 2006/08/11 00:17:12 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/x86/use.mask,v 1.8 2006/12/29 21:13:18 flameeyes Exp $
 
 -3dnow
 -3dnowext
@@ -15,3 +15,6 @@
 -sse2
 -svga
 -win32codecs
+
+# Adobe FDF toolkit is x86 only.
+-fdftk

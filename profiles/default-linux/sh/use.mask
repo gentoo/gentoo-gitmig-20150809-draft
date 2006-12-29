@@ -11,7 +11,6 @@ java-internal
 java-external
 
 # dont make sense on this arch
-fdftk
 3dfx
 
 # broken upstream, see libavcodec/sh4/idct_sh4.c:#error

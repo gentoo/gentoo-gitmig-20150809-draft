@@ -7,7 +7,6 @@ afs
 avi
 birdstep
 cmucl
-fdftk
 hdf
 ip28
 lm_sensors

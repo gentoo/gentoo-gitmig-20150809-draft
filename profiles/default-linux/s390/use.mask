@@ -43,7 +43,6 @@ pfpro
 solid
 sybase
 sybase-ct
-fdftk
 
 
 # masked until xorg builds
