@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/beryl-dbus/beryl-dbus-0.1.4.ebuild,v 1.2 2006/12/29 18:50:21 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/beryl-dbus/beryl-dbus-0.1.4.ebuild,v 1.3 2006/12/29 23:50:43 tsunam Exp $
 
-inherit flag-o-matic gnome2
+inherit flag-o-matic
 
 DESCRIPTION="Beryl Window Decorator Dbus Plugin"
 HOMEPAGE="http://beryl-project.org"
@@ -17,11 +17,6 @@ DEPEND="=x11-plugins/beryl-plugins-${PV}
 	sys-apps/dbus"
 
 MAKEOPTS="${MAKEOPTS} -j1"
-
-src_unpack() {
-	gnome2_src_unpack
-	intltoolize --force || die "intltool failed"
-}
 
 src_compile() {
 	filter-ldflags -znow -z,now -Wl,-znow -Wl,-z,now
