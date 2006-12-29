@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.0.8.ebuild,v 1.2 2006/10/03 11:15:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.0.8.ebuild,v 1.3 2006/12/29 17:26:03 cardoe Exp $
 
 inherit eutils distutils
 
@@ -15,6 +15,13 @@ IUSE=""
 S=${WORKDIR}/${PF}
 
 DEPEND="dev-util/subversion"
+
+pkg_setup() {
+	if built_with_use dev-util/subversion nowebdav; then
+		eerror "You must rebuild your subversion without the nowebdav USE flag"
+		die "You must rebuild your subversion without the nowebdav USE flag"
+	fi
+}
 
 src_install() {
 
