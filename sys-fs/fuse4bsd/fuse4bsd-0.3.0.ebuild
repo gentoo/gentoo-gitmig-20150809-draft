@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse4bsd/fuse4bsd-0.3.0.ebuild,v 1.3 2006/11/05 13:49:20 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse4bsd/fuse4bsd-0.3.0.ebuild,v 1.4 2006/12/29 20:59:39 drizzt Exp $
 
-inherit portability toolchain-funcs eutils
+inherit portability toolchain-funcs eutils flag-o-matic
 
 DESCRIPTION="Fuse for FreeBSD"
 HOMEPAGE="http://fuse4bsd.creo.hu/"
@@ -33,7 +33,7 @@ src_compile() {
 	tc-export CC
 	$(get_bmake) \
 		KMODDIR=/boot/modules BINDIR=/usr/sbin MANDIR=/usr/share/man/man \
-		MOUNT="${WORKDIR}/sbin/mount" \
+		MOUNT="${WORKDIR}/sbin/mount" LDFLAGS="$(raw-ldflags)" \
 		|| die "$(get_bmake) failed"
 }
 
