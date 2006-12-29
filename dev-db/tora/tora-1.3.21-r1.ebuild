@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.21-r1.ebuild,v 1.1 2006/12/26 18:45:09 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.21-r1.ebuild,v 1.2 2006/12/29 02:36:01 dertobi123 Exp $
 
 inherit debug eutils kde-functions
 
@@ -57,15 +57,13 @@ src_compile() {
 	addwrite "${QTDIR}/etc/settings"
 
 	local myconf
-	#myconf="--prefix=/usr"
-	#myconf="$myconf --with-mono"
-
-	use kde \
-		&& myconf="$myconf --with-kde" \
-		|| myconf="$myconf --without-kde"
-	use oracle || myconf="$myconf --without-oracle"
-	myconf="${myconf} $(use_with oci8-instant-client instant-client)"
+	myconf="${myconf} $(use_with kde)"
+	myconf="${myconf} $(use_with oracle)"
 	myconf="${myconf} $(use_with xinerama)"
+
+	if use oci8-instant-client; then
+		myconf="$myconf --with-instant-client"
+	fi
 
 	myconf="$myconf --with-qt-dir=/usr/qt/3"
 
