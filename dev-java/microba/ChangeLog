@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/microba
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/microba/ChangeLog,v 1.2 2006/12/27 23:55:43 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/microba/ChangeLog,v 1.3 2006/12/29 23:48:26 opfer Exp $
+
+  29 Dec 2006; <fauli@gentoo.org> microba-0.4.3.ebuild:
+  stable on x86, bug #154336
 
   27 Dec 2006; Petteri Räty <betelgeuse@gentoo.org> microba-0.4.3.ebuild:
   HOMEPAGE can't use bash variables.
