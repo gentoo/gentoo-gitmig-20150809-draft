@@ -116,3 +116,8 @@ alsa_cards_au1x00
 # Diego Pettenò <flameeyes@gentoo.org> (29 Dec 2006)
 # Adobe FDF toolkit is x86 only.
 fdftk
+
+# Diego Pettenò <flameeyes@gentoo.org> (30 Dec 2006)
+# These are specific of Mac OS X
+aqua
+coreaudio

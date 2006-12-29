@@ -23,3 +23,8 @@ sasl
 # useful, same for framebuffered version
 gpm
 fbcon
+
+# Diego Pettenò <flameeyes@gentoo.org> (30 Dec 2006)
+# These are specific of Mac OS X
+-aqua
+-coreaudio
