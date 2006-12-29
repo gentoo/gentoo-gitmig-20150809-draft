@@ -1,5 +1,0 @@
-/var/log/ntp.log {
-	daily
-	rotate 7
-	nocompress
-}
