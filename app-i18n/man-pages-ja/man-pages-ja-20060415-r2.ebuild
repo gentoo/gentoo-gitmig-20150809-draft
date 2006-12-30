@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/man-pages-ja-20060415-r2.ebuild,v 1.12 2006/10/10 01:03:41 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/man-pages-ja-20060415-r2.ebuild,v 1.13 2006/12/30 13:49:34 usata Exp $
 
 IUSE=""
 
@@ -15,8 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 SLOT="0"
 
-DEPEND="!>=sys-apps/groff-1.19
-	=sys-apps/groff-1.18*
+DEPEND="sys-apps/groff
 	virtual/man"
 
 pkg_setup() {
