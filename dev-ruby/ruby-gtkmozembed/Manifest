@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX ruby-gtkmozembed-0.15.0-firefox.patch 310 RMD160 c8dd4581e57c58b6cc1c8f41b26d5650afb04ef3 SHA1 aff3df1d4be95d77d6cc8cc86534a66d85fe4761 SHA256 1a03e4768d278bed6b6baa2fa67ac1153ce9c3b550a3eac69ad252154dc18fe5
 MD5 0a68322067ac31678975f1661fb5cda1 files/ruby-gtkmozembed-0.15.0-firefox.patch 310
 RMD160 c8dd4581e57c58b6cc1c8f41b26d5650afb04ef3 files/ruby-gtkmozembed-0.15.0-firefox.patch 310
@@ -7,14 +10,19 @@ MD5 db9b6833f16cc0688c4926af9af8e505 files/ruby-gtkmozembed-0.15.0-seamonkey.pat
 RMD160 eebf3af2933a46fbcdb097a2e23cadbdab11a32f files/ruby-gtkmozembed-0.15.0-seamonkey.patch 312
 SHA256 b82c2064c43266ea312dbb75c56354ee4f1ac42092923c6f196ec48957511853 files/ruby-gtkmozembed-0.15.0-seamonkey.patch 312
 DIST ruby-gnome2-all-0.15.0.tar.gz 1273856 RMD160 8bcd1929d77720359c718cdee31628bb7b1587b3 SHA1 c7919b445b5a8de5fe61e07179384c9152f91bdc SHA256 313e6f9c7b328fd3c28c54be9dca7eec13eb70daaf717590988e4d22ace951b3
+DIST ruby-gnome2-all-0.16.0.tar.gz 1208856 RMD160 c83c7cdcf633ad5cc213180f641a6c8f18002a9c SHA1 488f6c1f139060e005f336c9c854c4dc5b3e6b7c SHA256 0910f08c5224bc39aad66c46b506e5c97e260475ede6b427d5365a9ef2d69ad4
 EBUILD ruby-gtkmozembed-0.15.0.ebuild 746 RMD160 5e0eb14d5d5fe6a2c15bcd4df1f5144fff1b2bc9 SHA1 f4e3df21bb8c7359ae5b5c39b08fe2245fdc64b5 SHA256 71e71502343b07d1a21faed6d96cc41555051d8e6c1dcd69437c79a547e70a62
 MD5 a1c4dff3fc4eb3aa5edf91b9d19137f8 ruby-gtkmozembed-0.15.0.ebuild 746
 RMD160 5e0eb14d5d5fe6a2c15bcd4df1f5144fff1b2bc9 ruby-gtkmozembed-0.15.0.ebuild 746
 SHA256 71e71502343b07d1a21faed6d96cc41555051d8e6c1dcd69437c79a547e70a62 ruby-gtkmozembed-0.15.0.ebuild 746
-MISC ChangeLog 1080 RMD160 a7176ecd4684ba6cbc823dfbf9e41d8592fa8373 SHA1 3d35fe3f8f8e6b10a28acdca248ff57d13bb86d2 SHA256 ab978b7bb1a61372a42b6583e05c9aed2978c2bdef9ff1dc91703f9cfef4eb38
-MD5 46a63443e03d5c63e7fa0270d30e5944 ChangeLog 1080
-RMD160 a7176ecd4684ba6cbc823dfbf9e41d8592fa8373 ChangeLog 1080
-SHA256 ab978b7bb1a61372a42b6583e05c9aed2978c2bdef9ff1dc91703f9cfef4eb38 ChangeLog 1080
+EBUILD ruby-gtkmozembed-0.16.0.ebuild 641 RMD160 4d60f9623af07c94da5509b36ded71759c789fdd SHA1 a8e038b312ab6131bc1cde3055280be7aa25e49e SHA256 c569f3271a6dbd8d0f531c085630af6388b5f2cdb8305cbf3f76134f6a77d157
+MD5 ff7bda449a2761e54e10804b21210310 ruby-gtkmozembed-0.16.0.ebuild 641
+RMD160 4d60f9623af07c94da5509b36ded71759c789fdd ruby-gtkmozembed-0.16.0.ebuild 641
+SHA256 c569f3271a6dbd8d0f531c085630af6388b5f2cdb8305cbf3f76134f6a77d157 ruby-gtkmozembed-0.16.0.ebuild 641
+MISC ChangeLog 1223 RMD160 d24acb5eac79326d2af7b2727b5e6ed5fd70cc64 SHA1 0917ffc74dbb2b1117c30f264ebfc5a0b3c5f94b SHA256 6db8e96840f9172bc3cd6c36030d0e73458ba58dd85658fac9ce312c6dc32b16
+MD5 93132243ffc94361040919e4ec13d3df ChangeLog 1223
+RMD160 d24acb5eac79326d2af7b2727b5e6ed5fd70cc64 ChangeLog 1223
+SHA256 6db8e96840f9172bc3cd6c36030d0e73458ba58dd85658fac9ce312c6dc32b16 ChangeLog 1223
 MISC metadata.xml 158 RMD160 097f8145a9994f98be4971b43b23b9e5e8bccb66 SHA1 7ac646714b1ab83fda98f3ccdd8b48a31c148b27 SHA256 70b396ab3c7a63a81cb895b7728bd9eccdc9770afdb9919f2c54694b685f7032
 MD5 b522b82d2c47bc548a6607f0f577ab5e metadata.xml 158
 RMD160 097f8145a9994f98be4971b43b23b9e5e8bccb66 metadata.xml 158
@@ -22,3 +30,13 @@ SHA256 70b396ab3c7a63a81cb895b7728bd9eccdc9770afdb9919f2c54694b685f7032 metadata
 MD5 2fe48925debabea72472917020eb2a4a files/digest-ruby-gtkmozembed-0.15.0 271
 RMD160 86fe510a084ffe3969a05bfecf7f55f580a113e0 files/digest-ruby-gtkmozembed-0.15.0 271
 SHA256 ffa81f9aa501658a94b9fc38ca62c8e421a8726d90a7f6ebdd5b6ae604817e21 files/digest-ruby-gtkmozembed-0.15.0 271
+MD5 502b7d91321b650b261e5363f1211d20 files/digest-ruby-gtkmozembed-0.16.0 271
+RMD160 f113e366affba68c0310698ecd3ee7f6a3f9ec19 files/digest-ruby-gtkmozembed-0.16.0 271
+SHA256 088599799e062e45fb5eee803a9bb1d349ca7c6ba9fd60638edd1557bcab4e1a files/digest-ruby-gtkmozembed-0.16.0 271
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.6 (GNU/Linux)
+
+iD8DBQFFlp8FwUpWvClEHQoRAqYTAKCGJ6O+d06y6JryydP1y7p+hJwCDgCcD8kW
+33CaGq8Sy4cZBcoisl9KNlY=
+=Q/HX
+-----END PGP SIGNATURE-----
