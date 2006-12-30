@@ -1,15 +1,6 @@
 diff -Nur firehol-1.226/firehol.sh firehol-1.226.new/firehol.sh
 --- firehol-1.226/firehol.sh	2006-12-29 23:48:19.000000000 +0100
 +++ firehol-1.226.new/firehol.sh	2006-12-29 23:49:40.000000000 +0100
-@@ -10,7 +10,7 @@
- #
- # config: /etc/firehol/firehol.conf
- #
--# $Id: firehol-1.226-to-250.patch,v 1.2 2006/12/29 20:50:54 centic Exp $
-+# $Id: firehol-1.226-to-250.patch,v 1.2 2006/12/29 20:50:54 centic Exp $
- #
- 
- # Make sure only root can run us.
 @@ -74,13 +74,16 @@
  	return 0
  }
@@ -102,15 +93,6 @@ diff -Nur firehol-1.226/firehol.sh firehol-1.226.new/firehol.sh
  which_cmd RENICE_CMD renice
  which_cmd RM_CMD rm
  which_cmd SED_CMD sed
-@@ -134,7 +171,7 @@
- # Find our minor version
- firehol_minor_version() {
- ${CAT_CMD} <<"EOF" | ${CUT_CMD} -d ' ' -f 3 | ${CUT_CMD} -d '.' -f 2
--$Id: firehol-1.226-to-250.patch,v 1.2 2006/12/29 20:50:54 centic Exp $
-+$Id: firehol-1.226-to-250.patch,v 1.2 2006/12/29 20:50:54 centic Exp $
- EOF
- }
- 
 @@ -170,6 +207,9 @@
  FIREHOL_SAVED="${FIREHOL_DIR}/firehol-save.sh"
  FIREHOL_TMP="${FIREHOL_DIR}/firehol-tmp.sh"
@@ -667,24 +649,6 @@ diff -Nur firehol-1.226/firehol.sh firehol-1.226.new/firehol.sh
  		then
  			exit 0
  		fi
-@@ -5154,7 +5415,7 @@
- 		else
- 		
- 		${CAT_CMD} <<EOF
--$Id: firehol-1.226-to-250.patch,v 1.2 2006/12/29 20:50:54 centic Exp $
-+$Id: firehol-1.226-to-250.patch,v 1.2 2006/12/29 20:50:54 centic Exp $
- (C) Copyright 2003, Costa Tsaousis <costa@tsaousis.gr>
- FireHOL is distributed under GPL.
- 
-@@ -5340,7 +5601,7 @@
- 	
- 	${CAT_CMD} <<EOF
- 
--$Id: firehol-1.226-to-250.patch,v 1.2 2006/12/29 20:50:54 centic Exp $
-+$Id: firehol-1.226-to-250.patch,v 1.2 2006/12/29 20:50:54 centic Exp $
- (C) Copyright 2003, Costa Tsaousis <costa@tsaousis.gr>
- FireHOL is distributed under GPL.
- Home Page: http://firehol.sourceforge.net
 @@ -5459,6 +5720,13 @@
  
  if [ ${FIREHOL_WIZARD} -eq 1 ]
@@ -713,24 +677,6 @@ diff -Nur firehol-1.226/firehol.sh firehol-1.226.new/firehol.sh
  	}
  	
  	ips2net() {
-@@ -5634,7 +5907,7 @@
- 	
- 	"${CAT_CMD}" >&2 <<EOF
- 
--$Id: firehol-1.226-to-250.patch,v 1.2 2006/12/29 20:50:54 centic Exp $
-+$Id: firehol-1.226-to-250.patch,v 1.2 2006/12/29 20:50:54 centic Exp $
- (C) Copyright 2003, Costa Tsaousis <costa@tsaousis.gr>
- FireHOL is distributed under GPL.
- Home Page: http://firehol.sourceforge.net
-@@ -5717,7 +5990,7 @@
- 	echo "# "
- 
- 	${CAT_CMD} <<EOF
--# $Id: firehol-1.226-to-250.patch,v 1.2 2006/12/29 20:50:54 centic Exp $
-+# $Id: firehol-1.226-to-250.patch,v 1.2 2006/12/29 20:50:54 centic Exp $
- # (C) Copyright 2003, Costa Tsaousis <costa@tsaousis.gr>
- # FireHOL is distributed under GPL.
- # Home Page: http://firehol.sourceforge.net
 @@ -6354,11 +6627,11 @@
  # Remove the saved firewall, so that the trap will not restore it.
  ${RM_CMD} -f "${FIREHOL_SAVED}"
