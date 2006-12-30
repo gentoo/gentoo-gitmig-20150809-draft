@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3gain
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/ChangeLog,v 1.20 2006/11/20 21:11:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/ChangeLog,v 1.21 2006/12/30 16:11:28 chainsaw Exp $
+
+  30 Dec 2006; Tony Vroon <chainsaw@gentoo.org> mp3gain-1.4.6-r1.ebuild:
+  Add ~ppc64 keyword. Tested on 64UL with GCC 4.
 
   20 Nov 2006; <blubb@gentoo.org> mp3gain-1.4.6-r1.ebuild:
   stable on amd64
