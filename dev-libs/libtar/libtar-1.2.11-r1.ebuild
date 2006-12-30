@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/libtar-1.2.11-r1.ebuild,v 1.1 2005/03/01 00:00:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/libtar-1.2.11-r1.ebuild,v 1.2 2006/12/30 20:10:40 vapier Exp $
 
 inherit eutils
 
@@ -19,9 +19,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-memleak.patch
+	sed -i '/INSTALL_PROGRAM/s: -s$::' */Makefile.in
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die
+	emake install DESTDIR="${D}" || die
 	dodoc ChangeLog README TODO
 }
