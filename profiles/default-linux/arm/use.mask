@@ -61,6 +61,7 @@ video_cards_newport
 video_cards_nsc
 video_cards_rendition
 video_cards_siliconmotion
+video_cards_sis
 video_cards_tga
 video_cards_tseng
 video_cards_vesa

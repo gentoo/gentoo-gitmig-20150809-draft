@@ -54,6 +54,7 @@ X
 opengl
 xpm
 vim-with-x
+video_cards_sis
 
 # I need to have some of the bad tcltk uses fixed, until then...
 # tcl was marked stable on this platform so only adding tk to mask
