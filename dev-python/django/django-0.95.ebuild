@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-0.95.ebuild,v 1.2 2006/08/13 15:40:12 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-0.95.ebuild,v 1.3 2006/12/30 01:49:34 dev-zero Exp $
 
 inherit distutils
 
@@ -13,20 +13,28 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 IUSE="sqlite postgres mysql"
 
-DEPEND=">=dev-lang/python-2.3
-		>=dev-python/setuptools-0.6_rc1"
+RDEPEND="dev-python/imaging
+	sqlite? ( || (
+		( >=dev-python/pysqlite-2.0.3 <dev-lang/python-2.5 )
+		>=dev-lang/python-2.5 ) )
+	postgres? ( <dev-python/psycopg-1.99 )
+	mysql? ( dev-python/mysql-python )"
+DEPEND="${RDEPEND}
+	>=dev-python/setuptools-0.6_rc3"
 
-RDEPEND=">=dev-lang/python-2.3
-		sqlite? ( >=dev-python/pysqlite-2.0.3 )
-		postgres? ( <dev-python/psycopg-1.99 )
-		mysql? ( dev-python/mysql-python )
-		dev-python/imaging"
+S=${WORKDIR}/${MY_P}
 
-S="${WORKDIR}/${MY_P}"
-DOCS="docs/* AUTHORS INSTALL LICENSE"
+DOCS="docs/* AUTHORS INSTALL"
 
-src_install()
-{
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i \
+		-e '/ez_setup/d' \
+		setup.py || die "sed failed"
+}
+
+src_install() {
 	distutils_python_version
 
 	site_pkgs="/usr/$(get_libdir)/python${PYVER}/site-packages/"
@@ -35,5 +43,6 @@ src_install()
 
 	distutils_src_install --single-version-externally-managed
 
-	cp -r examples "${D}/usr/share/doc/${PF}"
+	insinto /usr/share/doc/${PF}
+	doins -r examples
 }
