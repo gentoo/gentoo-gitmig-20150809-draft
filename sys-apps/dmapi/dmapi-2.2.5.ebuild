@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-2.2.5.ebuild,v 1.6 2006/12/30 15:32:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-2.2.5.ebuild,v 1.7 2006/12/30 21:28:32 ticho Exp $
 
 inherit eutils toolchain-funcs autotools
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://oss.sgi.com/projects/xfs/download/cmd_tars/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha ~amd64 hppa ia64 ~mips ~ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 RDEPEND="sys-fs/xfsprogs"
