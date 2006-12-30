@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.8-r1.ebuild,v 1.2 2006/12/30 07:12:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.8-r1.ebuild,v 1.3 2006/12/30 07:15:59 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -378,6 +378,16 @@ remap_dns_vars() {
 }
 
 pkg_preinst() {
+	# Reincarnate dirs from kdir/unkdir (hack for bug 9849)
+	# This needs to be in pkg_preinst() rather than pkg_postinst() as
+	# portage may create some dirs/files that'll screw us up (like /usr/lib/debug)
+	einfo "Creating directories and .keep files."
+	einfo "Some of these might fail if they're read-only mounted"
+	einfo "filesystems, for example /dev or /proc.  That's okay!"
+	source "${D}"/usr/share/baselayout/mkdirs.sh
+	source "${D}"/usr/share/baselayout/mklinks.sh
+	echo
+
 	if [[ -f ${ROOT}/etc/modules.autoload && \
 			! -d ${ROOT}/etc/modules.autoload.d ]]; then
 		mkdir -p ${ROOT}/etc/modules.autoload.d
@@ -395,14 +405,6 @@ pkg_preinst() {
 
 pkg_postinst() {
 	local x y
-
-	# Reincarnate dirs from kdir/unkdir (hack for bug 9849)
-	einfo "Creating directories and .keep files."
-	einfo "Some of these might fail if they're read-only mounted"
-	einfo "filesystems, for example /dev or /proc.  That's okay!"
-	source "${ROOT}"/usr/share/baselayout/mkdirs.sh
-	source "${ROOT}"/usr/share/baselayout/mklinks.sh
-	echo
 
 	# Create /boot/boot symlink in pkg_postinst because sometimes
 	# /boot is a FAT filesystem.  When that is the case, then the
