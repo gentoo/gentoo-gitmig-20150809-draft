@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.13.0_alpha10-r2.ebuild,v 1.2 2006/12/30 07:12:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.13.0_alpha10-r2.ebuild,v 1.3 2006/12/30 12:11:29 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -100,6 +100,34 @@ pkg_preinst() {
 	# Move our makefiles to a temporay location
 	mv "${D}"/usr/share/baselayout/{Makefile,default.mk,runlevels}* "${T}"
 
+	# We need to install directories and maybe some dev nodes when building
+	# stages, but they cannot be in CONTENTS.
+	# Also, we cannot reference $S as binpkg will break so we do this.
+	if use build || use bootstrap ; then
+		local libdirs="$(get_all_libdirs)" dir=
+		# Create our multilib dirs - the Makefile has no knowledge of this
+		: ${libdirs:=lib}	# it isn't that we don't trust multilib.eclass...
+		for dir in ${libdirs}; do
+			mkdir -p "${ROOT}${dir}"
+			touch "${ROOT}${dir}"/.keep
+			mkdir -p "${ROOT}usr/${dir}"
+			touch "${ROOT}usr/${dir}"/.keep
+			mkdir -p "${ROOT}usr/local/${dir}"
+			touch "${ROOT}usr/local/${dir}"/.keep
+		done
+
+		# Ugly compatibility with stupid ebuilds and old profiles symlinks
+		if [[ ${SYMLINK_LIB} == "yes" ]] ; then
+			rm -r "${ROOT}"/{lib,usr/lib,usr/local/lib} &> /dev/null
+			local lib=$(get_abi_LIBDIR ${DEFAULT_ABI})
+			ln -s "${lib}" "${ROOT}lib"
+			ln -s "${lib}" "${ROOT}usr/lib"
+			ln -s "${lib}" "${ROOT}usr/local/lib"
+		fi
+
+		make -C "${T}" $(make_opts) layout || die "failed to layout filesystem"
+	fi
+
 	# Change some vars introduced in baselayout-1.11.0 before we go stable
 	# The new names make more sense and allow nis_domain
 	# for use in baselayout-1.12.0
@@ -115,7 +143,7 @@ src_install() {
 	# List all the multilib libdirs in /etc/env/04multilib (only if they're
 	# actually different from the normal
 	if has_multilib_profile || [[ $(get_libdir) != "lib" || -n ${CONF_MULTILIBDIR} ]]; then
-		local libdirs="$(get_all_libdirs)" libdirs_env=
+		local libdirs="$(get_all_libdirs)" libdirs_env= dir=
 		: ${libdirs:=lib}	# it isn't that we don't trust multilib.eclass...
 		for dir in ${libdirs}; do
 			libdirs_env=${libdirs_env:+$libdirs_env:}/${dir}:/usr/${dir}:/usr/local/${dir}
@@ -123,11 +151,11 @@ src_install() {
 
 		# Special-case uglyness... For people updating from lib32 -> lib amd64
 		# profiles, keep lib32 in the search path while it's around
-		if has_multilib_profile && [ -d /lib32 -o -d /usr/lib32 ] && ! hasq lib32 ${libdirs}; then
+		if has_multilib_profile && [[ -d ${ROOT}lib32 || -d ${ROOT}lib32 ]] && ! hasq lib32 ${libdirs}; then
 			libdirs_env="${libdirs_env}:/lib32:/usr/lib32:/usr/local/lib32"
 		fi
-		echo "LDPATH=\"${libdirs_env}\"" > 04multilib
-		doenvd 04multilib
+		echo "LDPATH=\"${libdirs_env}\"" > "${T}"/04multilib
+		doenvd "${T}"/04multilib
 	fi
 
 	# rc-scripts version for testing of features that *should* be present
@@ -143,28 +171,22 @@ src_install() {
 }
 
 pkg_postinst() {
-	# We need to install directories and maybe some dev nodes when building
-	# stages, but they cannot be in CONTENTS.
-	# Also, we cannot reference $S as binpkg will break so we do this.
-	if use build || use bootstrap ; then
-		make -C "${T}" $(make_opts) layout || die "failed to layout filesystem"
-	fi
-
-	# Make our runlevels if they don't exist
-	if [[ ! -e ${ROOT}etc/runlevels ]] ; then
-		einfo "Making default runlevels"
-		make -C "${T}" $(make_opts) runlevels_install >/dev/null
-	fi
-
+	# Punt this when MAKEDEV does this
 	if use kernel_linux ; then
 		if use build || use bootstrap ; then
 			# Create base directories
 			if [[ ! -e ${ROOT}/dev/.udev && ! -e ${ROOT}/dev/.devfsd ]] ; then
 				einfo "Creating dev nodes"
 				PATH="${ROOT}"/sbin:${PATH} make -C "${T}" $(make_opts) \
-					dev || die "failed to create /dev nodes"
+				dev || die "failed to create /dev nodes"
 			fi
 		fi
+	fi
+
+	# Make our runlevels if they don't exist
+	if [[ ! -e ${ROOT}etc/runlevels ]] ; then
+		einfo "Making default runlevels"
+		make -C "${T}" $(make_opts) runlevels_install >/dev/null
 	fi
 
 	# We installed some files to /usr/share/baselayout instead of /etc to stop
