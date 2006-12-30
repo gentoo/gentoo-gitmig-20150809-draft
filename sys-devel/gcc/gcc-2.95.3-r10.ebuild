@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r10.ebuild,v 1.1 2006/12/30 09:15:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r10.ebuild,v 1.2 2006/12/30 11:33:07 vapier Exp $
 
 PATCH_VER="1.3"
 SPLIT_SPECS="no"
@@ -8,7 +8,7 @@ ETYPE="gcc-compiler"
 
 inherit toolchain eutils flag-o-matic
 
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~alpha ~ppc ~sparc ~x86"
 
 RDEPEND=">=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
