@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.66 2006/12/30 01:32:43 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.67 2006/12/30 01:47:37 keri Exp $
+
+*mercury-0.13.1-r1 (30 Dec 2006)
+
+  30 Dec 2006; keri <keri@gentoo.org>
+  +files/mercury-0.13.1-profdeep-builtin_throw.patch,
+  +mercury-0.13.1-r1.ebuild:
+  Ensure the proc_layout structure for builtin_throw in exception.m is
+  externally visible.
 
 *mercury-0.12.2-r4 (30 Dec 2006)
 
