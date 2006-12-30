@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.1 2006/09/11 08:46:09 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.2 2006/12/30 17:17:05 ferdy Exp $
 
 ## --------------------------------------------------------------------------- #
 # subversion.eclass author: Akinori Hattori <hattya@gentoo.org>
@@ -47,7 +47,7 @@ EGIT_UPDATE_CMD="git fetch -f -u"
 
 ## -- EGIT_DIFFSTAT_CMD: Command to get diffstat output
 #
-EGIT_DIFFSTAT_CMD="git diff --stat"
+EGIT_DIFFSTAT_CMD="PAGER=cat git diff --stat"
 
 
 ## -- EGIT_OPTIONS:
