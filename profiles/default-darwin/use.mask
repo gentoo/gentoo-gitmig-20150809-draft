@@ -15,7 +15,8 @@ fmod
 ggi
 gpm
 hardened
-on-the-fly-crypt  # requires device-mapper
+# VV requires device-mapper 
+on-the-fly-crypt
 oss
 solid
 sybase
