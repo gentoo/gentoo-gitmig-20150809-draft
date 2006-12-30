@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vflib/vflib-3.6.14.ebuild,v 1.2 2006/12/30 12:22:08 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vflib/vflib-3.6.14.ebuild,v 1.3 2006/12/30 12:24:01 usata Exp $
 
 inherit libtool eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www-masu.ist.osaka-u.ac.jp/~kakugawa/download/TypeHack/${MY_P}.t
 
 LICENSE="LGPL-2 GPL-2"
 SLOT="3"
-KEYWORDS="~x86 ~sparc ~alpha ~ppc"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="|| (
