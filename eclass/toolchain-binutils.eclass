@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.66 2006/09/20 01:11:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.67 2006/12/30 11:23:41 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets
 # us easily merge multiple versions for multiple targets (if we wish) and
@@ -187,6 +187,7 @@ toolchain-binutils_src_compile() {
 		--libdir=${LIBPATH} \
 		--libexecdir=${LIBPATH} \
 		--includedir=${INCPATH} \
+		--enable-secureplt \
 		--enable-64-bit-bfd \
 		--enable-shared \
 		--disable-werror \
