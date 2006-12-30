@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.3.1.ebuild,v 1.2 2006/12/30 10:34:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.3.1.ebuild,v 1.3 2006/12/30 18:24:40 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -63,7 +63,7 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="debug static savedconfig netboot make-symlinks"
+IUSE="debug static savedconfig make-symlinks"
 RESTRICT="test"
 
 DEPEND=""
@@ -124,13 +124,6 @@ src_unpack() {
 			done
 		done
 		ewarn "Could not locate user configfile, so we will save a default one"
-	fi
-	if use netboot ; then
-		cp "${FILESDIR}"/config-netboot .config
-		sed -i \
-			-e '/DEFAULT_SCRIPT/s:/share/udhcpc/default.script:/lib/udhcpc.script:' \
-			networking/udhcp/libbb_udhcp.h \
-			|| die "fixing netboot/udhcpc"
 	fi
 
 	# setup the config file
