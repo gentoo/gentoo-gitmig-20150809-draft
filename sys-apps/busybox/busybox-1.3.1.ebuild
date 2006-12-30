@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.3.1.ebuild,v 1.1 2006/12/29 23:29:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.3.1.ebuild,v 1.2 2006/12/30 10:34:17 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -83,8 +83,6 @@ busybox_config_option() {
 	case $1 in
 		y) sed -i -e "s:.*CONFIG_$2.*set:CONFIG_$2=y:g" .config;;
 		n) sed -i -e "s:CONFIG_$2=y:# CONFIG_$2 is not set:g" .config;;
-		Y) echo "CONFIG_$2=y" >> .config;;
-		N) echo "CONFIG_$2=n" >> .config;;
 		*) use $1 \
 		       && busybox_config_option y $2 \
 		       || busybox_config_option n $2
@@ -150,9 +148,9 @@ src_unpack() {
 	busybox_config_option static STATIC
 	busybox_config_option debug DEBUG
 	use debug \
-		&& busybox_config_option Y NO_DEBUG_LIB \
-		&& busybox_config_option N DMALLOC \
-		&& busybox_config_option N EFENCE
+		&& busybox_config_option y NO_DEBUG_LIB \
+		&& busybox_config_option n DMALLOC \
+		&& busybox_config_option n EFENCE
 
 	busybox_config_option selinux SELINUX
 
