@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cracklib-words/cracklib-words-1.1.ebuild,v 1.2 2005/05/24 01:07:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cracklib-words/cracklib-words-1.1.ebuild,v 1.3 2006/12/30 02:27:53 vapier Exp $
 
 DESCRIPTION="large set of crack/cracklib dictionaries"
 HOMEPAGE="http://sourceforge.net/projects/cracklib"
@@ -18,4 +18,12 @@ S=${WORKDIR}
 src_install() {
 	insinto /usr/share/dict
 	doins cracklib-words || die
+}
+
+pkg_postinst() {
+	if [[ ${ROOT} == "/" ]] ; then
+		ebegin "Regenerating cracklib dictionary"
+		create-cracklib-dict /usr/share/dict/* > /dev/null
+		eend $?
+	fi
 }
