@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.40y-r2.ebuild,v 1.14 2006/11/06 16:23:10 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.40y-r2.ebuild,v 1.15 2006/12/30 12:45:02 usata Exp $
 
 inherit eutils
 
@@ -30,7 +30,9 @@ DEPEND=">=media-libs/t1lib-1.3
 	virtual/tetex
 	cjk? ( >=media-libs/freetype-2 )
 	libwww? ( >=net-libs/libwww-5.3.2-r1 )
-	!app-text/texlive"
+	!app-text/texlive
+	!>app-text/tetex-3
+	!>app-text/ptex-3.1.8"
 
 src_unpack () {
 
