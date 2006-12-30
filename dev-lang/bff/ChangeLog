@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/bff
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/bff/ChangeLog,v 1.5 2006/09/09 09:05:26 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/bff/ChangeLog,v 1.6 2006/12/30 06:28:47 vapier Exp $
+
+  30 Dec 2006; Mike Frysinger <vapier@gentoo.org> bff-1.0.3.1.ebuild:
+  Respect user LDFLAGS, add src_test, and add more KEYWORDS.
 
   09 Sep 2006; <blubb@gentoo.org> bff-1.0.3.1.ebuild:
   bug 146887
