@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.15.ebuild,v 1.18 2006/12/29 22:10:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.15.ebuild,v 1.19 2006/12/30 00:58:40 vapier Exp $
 
 inherit flag-o-matic eutils multilib toolchain-funcs mono libtool elisp-common
 
@@ -22,8 +22,7 @@ src_unpack() {
 	epunt_cxx
 
 	epatch "${FILESDIR}"/${PN}-0.14.1-lib-path-tests.patch #81628
-	# Fix race, bug #85054
-	epatch "${FILESDIR}"/${PN}-0.14.2-fix-race.patch
+	epatch "${FILESDIR}"/${PN}-0.14.2-fix-race.patch #85054
 
 	# bundled libtool seems to be broken so skip certain rpath tests
 	# http://lists.gnu.org/archive/html/bug-libtool/2005-03/msg00070.html

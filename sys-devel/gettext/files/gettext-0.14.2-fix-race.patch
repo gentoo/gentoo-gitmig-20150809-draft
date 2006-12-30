@@ -1,5 +1,7 @@
---- gettext-0.14.2/gettext-tools/misc/Makefile.in.az	2005-03-14 00:40:56.000000000 +0200
-+++ gettext-0.14.2/gettext-tools/misc/Makefile.in	2005-03-14 00:41:26.000000000 +0200
+http://bugs.gentoo.org/85054
+
+--- gettext-0.14.2/gettext-tools/misc/Makefile.in
++++ gettext-0.14.2/gettext-tools/misc/Makefile.in
 @@ -441,7 +441,7 @@
  	  shift; \
  	  EMACS="$(EMACS)" $(SHELL) $(elisp_comp) "$$@" || exit 1; \
