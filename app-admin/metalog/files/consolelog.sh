@@ -14,3 +14,5 @@ fi
 for d in ${CONSOLE} ; do
 	eval echo ${FORMAT} > ${d}
 done
+
+exit 0
