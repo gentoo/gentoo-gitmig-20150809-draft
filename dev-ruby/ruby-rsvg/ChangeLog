@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-rsvg
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-rsvg/ChangeLog,v 1.3 2006/08/30 11:30:55 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-rsvg/ChangeLog,v 1.4 2006/12/30 13:56:49 metalgod Exp $
+
+*ruby-rsvg-0.16.0 (30 Dec 2006)
+
+  30 Dec 2006; Luis Medinas <metalgod@gentoo.org> +ruby-rsvg-0.16.0.ebuild:
+  Version Bump. Added ~amd64 keyword.
 
 *ruby-rsvg-0.15.0 (30 Aug 2006)
 
