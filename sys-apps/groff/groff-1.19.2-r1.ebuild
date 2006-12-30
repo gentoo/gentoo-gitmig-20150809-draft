@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.19.2-r1.ebuild,v 1.16 2006/12/30 00:03:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.19.2-r1.ebuild,v 1.17 2006/12/30 13:44:18 usata Exp $
 
-inherit eutils flag-o-matic toolchain-funcs multilib
+inherit eutils flag-o-matic toolchain-funcs multilib autotools
 
 MB_PATCH="groff_1.18.1-7" #"${P/-/_}-7"
 DESCRIPTION="Text formatter used for man pages"
@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="cjk X"
 
-DEPEND=">=sys-apps/texinfo-4.7-r1
-	!app-i18n/man-pages-ja"
+DEPEND=">=sys-apps/texinfo-4.7-r1"
 
 src_unpack() {
 	unpack ${A}
@@ -46,6 +45,9 @@ src_unpack() {
 			doc/Makefile.in \
 			doc/Makefile.sub || die "cross-compile sed failed"
 	fi
+
+	# The Big Japanese patch screw up autotools. See bug #134377.
+	use cjk && eautoreconf || die "eautoreconf failed"
 }
 
 src_compile() {
@@ -56,12 +58,10 @@ src_compile() {
 	# (fixes bug 36008, 06 Jan 2004 agriffis)
 	replace-flags -Os -O
 
-	# CJK doesnt work yet with groff-1.19
-	#	$(use_enable cjk multibyte)
-
 	econf \
 		--with-appresdir=/etc/X11/app-defaults \
 		$(use_with X x) \
+		$(use_enable cjk japanese) \
 		|| die
 	emake || die
 }
