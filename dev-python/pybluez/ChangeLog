@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pybluez
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pybluez/ChangeLog,v 1.10 2006/10/26 18:54:52 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pybluez/ChangeLog,v 1.11 2006/12/30 01:21:42 dev-zero Exp $
+
+*pybluez-0.9.2 (30 Dec 2006)
+
+  30 Dec 2006; Tiziano Müller <dev-zero@gentoo.org> -pybluez-0.4.ebuild,
+  pybluez-0.5.ebuild, pybluez-0.7.1.ebuild, +pybluez-0.9.2.ebuild:
+  Fixed wrong dependencies (bug #152050). Version bump. Dropped old versions.
 
   26 Oct 2006; Piotr Jaroszyński <peper@gentoo.org> pybluez-0.7.1.ebuild:
   Add ~amd64 keyword. Bug #152880.
