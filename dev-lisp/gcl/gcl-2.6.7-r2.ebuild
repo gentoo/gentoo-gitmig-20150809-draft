@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r2.ebuild,v 1.2 2006/12/13 05:38:46 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r2.ebuild,v 1.3 2006/12/30 13:12:04 vapier Exp $
 
-inherit elisp-common flag-o-matic autotools
+inherit elisp-common flag-o-matic
 
 DEB_PV=32
 
@@ -11,10 +11,12 @@ HOMEPAGE="http://www.gnu.org/software/gcl/gcl.html"
 SRC_URI="http://ftp.debian.org/debian/pool/main/g/gcl/gcl_${PV}.orig.tar.gz
 	http://ftp.debian.org/debian/pool/main/g/gcl/gcl_${PV}-${DEB_PV}.diff.gz
 	ftp://ftp.gnu.org/pub/gnu/gcl/${PN}.info.tgz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
 IUSE="emacs readline debug X tk doc ansi"
+RESTRICT="sandbox"
 
 RDEPEND="emacs? ( virtual/emacs )
 	readline? ( sys-libs/readline )
@@ -22,20 +24,20 @@ RDEPEND="emacs? ( virtual/emacs )
 	tk? ( dev-lang/tk )
 	X? ( || ( ( x11-libs/libXt x11-libs/libXext x11-libs/libXmu x11-libs/libXaw ) virtual/x11 ) )
 	virtual/tetex"				# pdflatex (see Bug # 157903)
-
-DEPEND="$RDEPEND
+DEPEND="${RDEPEND}
 	doc? ( virtual/tetex )
 	>=app-text/texi2html-1.64
 	>=sys-devel/autoconf-2.52"
 
 src_unpack() {
 	unpack ${A}
-	epatch gcl_${PV}-${DEB_PV}.diff
+	cd "${S}"
+	epatch ../gcl_${PV}-${DEB_PV}.diff
+	epatch "${FILESDIR}"/flex-configure-LANG.patch
 	sed -ie "s/gcl-doc/${PF}/g" ${S}/info/makefile
 }
 
 src_compile() {
-	export SANDBOX_ON=0
 	local myconfig=""
 	# Hardened gcc may automatically use PIE building, which does not
 	# work for this package so far
@@ -48,10 +50,10 @@ src_compile() {
 		--disable-dynsysbfd
 		--disable-statsysbfd
 		--enable-dynsysgmp
-		`use_enable readline readline`
-		`use_with X x`
-		`use_enable debug debug`
-		`use_enable ansi ansi`
+		$(use_enable readline readline)
+		$(use_with X x)
+		$(use_enable debug debug)
+		$(use_enable ansi ansi)
 		--enable-xdr=no
 		--enable-infodir=/usr/share/info
 		--enable-emacsdir=/usr/share/emacs/site-lisp/gcl"
@@ -63,8 +65,7 @@ ${myconfig}"
 }
 
 src_install() {
-	export SANDBOX_ON=0
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	rm -rf ${D}/usr/lib/${P}/info
 	mv ${D}/default.el elisp/
