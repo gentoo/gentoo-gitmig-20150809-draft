@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6511 2006/12/30 17:28:04 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6512 2006/12/30 20:16:18 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ## 
+
+# Diego Pettenò <flameeyes@gentoo.org> (20 Dec 2006)
+# Newer versions install properly into libdir and includedir.
+# Unfortunately mplayer and mimd don't support building this
+# way, so mask till they are fixed.
+>=media-plugins/live-2006.12.08
 
 # William L. Thomson Jr. <wltjr@gentoo.org> (30 Nov 2006)
 # Old versions of Tomcat no longer supported
