@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.0_rc01.ebuild,v 1.1 2006/12/29 17:37:16 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.0_rc01.ebuild,v 1.2 2006/12/30 20:46:42 caster Exp $
 
 inherit versionator java-pkg-2 java-ant-2
 
@@ -40,7 +40,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-#	epatch ${FILESDIR}/${PN}-1.0.06-compiler-exit-code.patch
+	epatch ${FILESDIR}/${P}-compiler-exit-code.patch
 
 	mkdir -p ${S}/target/lib
 
@@ -76,7 +76,7 @@ src_unpack() {
 }
 
 src_compile() {
-	eant -Dnoget=true jar
+	eant jar
 
 	# need to compile .groovy files to .class files
 	cd src/main
