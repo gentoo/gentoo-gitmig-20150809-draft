@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-3.9.3.ebuild,v 1.1 2006/12/26 22:36:13 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-3.9.3.ebuild,v 1.2 2006/12/30 00:19:42 dev-zero Exp $
 
 inherit python eutils
 
@@ -17,8 +17,8 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="idl"
 
 DEPEND=">=dev-python/PyQt-3.13
-	>=dev-python/pyxml-0.8.4"
-
+	>=dev-python/pyxml-0.8.4
+	>=dev-python/qscintilla-1.0"
 RDEPEND=">=dev-python/PyQt-3.13
 	>=dev-python/pyxml-0.8.4
 	idl? ( !sparc? ( >=net-misc/omniORB-4.0.3 ) )"
@@ -28,11 +28,11 @@ LANGS="de fr ru"
 python_version
 
 src_install() {
-	${python} install.py \
+	python install.py \
 		-b "${ROOT}usr/bin" \
 		-i "${D}" \
 		-d "${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages" \
-		-c
+		-c || die "python install.py failed"
 
 	dodoc HISTORY THANKS eric/README*
 	make_desktop_entry "eric3 --nosplash" \
