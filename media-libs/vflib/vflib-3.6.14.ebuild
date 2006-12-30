@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vflib/vflib-3.6.14.ebuild,v 1.1 2006/11/04 18:06:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vflib/vflib-3.6.14.ebuild,v 1.2 2006/12/30 12:22:08 usata Exp $
 
 inherit libtool eutils
 
@@ -53,13 +53,13 @@ src_compile () {
 	econf \
 		--with-kpathsea \
 		--with-kpathsea-include=/usr/include \
-		--with-kpathsea-libdir=/usr/lib \
+		--with-kpathsea-libdir=/usr/$(get_libdir) \
 		--with-freetype \
 		--with-freetype-includedir=/usr/include/freetype \
-		--with-freetype-libdir=/usr/lib \
+		--with-freetype-libdir=/usr/$(get_libdir) \
 		--with-t1lib \
 		--with-t1lib-includedir=/usr/include \
-		--with-t1lib-libdir=/usr/lib || die
+		--with-t1lib-libdir=/usr/$(get_libdir) || die
 
 	emake -j1 \
 		CDEBUGFLAGS="${CFLAGS}" \
