@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-wnn/scim-wnn-1.0.0.ebuild,v 1.1 2006/06/29 00:37:34 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-wnn/scim-wnn-1.0.0.ebuild,v 1.2 2006/12/30 13:01:20 usata Exp $
 
 DESCRIPTION="Japanese input method Wnn IMEngine for SCIM"
 HOMEPAGE="http://nop.net-p.org/modules/pukiwiki/index.php?%5B%5Bscim-wnn%5D%5D"
@@ -8,7 +8,7 @@ SRC_URI="http://nop.net-p.org/files/scim-wnn/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="freewnn"
 
 RDEPEND="|| ( >=app-i18n/scim-1.0 >=app-i18n/scim-cvs-1.0 )
@@ -19,6 +19,9 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
+	sed -i -e 's:$LDFLAGS conftest.$ac_ext $LIBS:conftest.$ac_ext $LIBS $LDFLAGS:g' \
+		configure || die "ldflags sed failed"
 	cd ${S}/src
 	sed -i -e "s:/usr/lib/wnn7:/usr/lib/wnn:g" \
 		scim_wnn_def.h wnnconversion.cpp || die "sed failed"
