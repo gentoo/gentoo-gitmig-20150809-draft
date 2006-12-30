@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/automake-wrapper-3-r1.ebuild,v 1.2 2006/12/29 22:03:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/automake-wrapper-3-r1.ebuild,v 1.3 2006/12/30 15:05:05 kloeri Exp $
 
 inherit multilib
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm ~hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 arm ~hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE=""
 
 S=${WORKDIR}
