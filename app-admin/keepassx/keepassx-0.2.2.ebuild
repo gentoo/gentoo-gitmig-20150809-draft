@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-0.2.2.ebuild,v 1.5 2006/12/23 17:59:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-0.2.2.ebuild,v 1.6 2006/12/30 17:07:04 opfer Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ DEPEND=">=x11-libs/qt-4.1"
 RDEPEND="${DEPEND}"
 
 src_compile() {
-	if has_version >=x11-libs/qt-4.2.2 && built_with_use qt qt3support; then
+	if has_version >=x11-libs/qt-4.2.2 && ! built_with_use qt qt3support; then
 		eerror
 		eerror "You need to rebuild x11-libs/qt with USE=qt3support enabled"
 		eerror
