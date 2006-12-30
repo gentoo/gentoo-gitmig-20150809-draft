@@ -1,18 +1,19 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.19.2-r1.ebuild,v 1.15 2006/12/29 23:58:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.19.2-r1.ebuild,v 1.16 2006/12/30 00:03:36 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
 MB_PATCH="groff_1.18.1-7" #"${P/-/_}-7"
 DESCRIPTION="Text formatter used for man pages"
 HOMEPAGE="http://www.gnu.org/software/groff/groff.html"
-SRC_URI="mirror://gnu/groff/${P}.tar.gz"
+SRC_URI="mirror://gnu/groff/${P}.tar.gz
+	cjk? ( mirror://gentoo/groff-1.19.2-japanese.patch.bz2 )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
-IUSE="X"
+IUSE="cjk X"
 
 DEPEND=">=sys-apps/texinfo-4.7-r1
 	!app-i18n/man-pages-ja"
@@ -20,6 +21,8 @@ DEPEND=">=sys-apps/texinfo-4.7-r1
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	use cjk && epatch "${WORKDIR}"/groff-1.19.2-japanese.patch #134377
 
 	# Fix the info pages to have .info extensions,
 	# else they do not get gzipped.
