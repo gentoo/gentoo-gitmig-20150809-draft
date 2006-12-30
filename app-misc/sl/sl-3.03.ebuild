@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/sl-3.03.ebuild,v 1.15 2005/07/07 11:51:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/sl-3.03.ebuild,v 1.16 2006/12/30 12:32:11 usata Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs flag-o-matic
 
 SL_PATCH="sl5-1.patch"
 
@@ -15,28 +15,32 @@ SRC_URI="http://www.tkl.iis.u-tokyo.ac.jp/~toyoda/sl/${PN}.tar
 LICENSE="freedist"
 SLOT="0"
 KEYWORDS="x86 alpha sparc ppc64 ppc ppc-macos ~amd64 hppa"
-IUSE="cjk"
+IUSE="linguas_ja debug"
 
-DEPEND="virtual/libc
-	sys-libs/ncurses
-	!ppc-macos? ( cjk? ( app-i18n/nkf ) )"
-RDEPEND="virtual/libc
-	sys-libs/ncurses"
+DEPEND="sys-libs/ncurses"
 
 S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${PN}.tar
-	cd ${S}
-	epatch ${DISTDIR}/${SL_PATCH}
-	epatch ${FILESDIR}/${P}-gentoo.diff
+	cd "${S}"
+	epatch "${DISTDIR}/${SL_PATCH}"
+	epatch "${FILESDIR}/${P}-gentoo.diff"
 	unpack ${PN}.en.1.gz
 }
 
+doecho() {
+	echo "$@"
+	"$@"
+}
+
 src_compile() {
-	emake CFLAGS="${CFLAGS}" LDFLAGS="-lncurses" || die
-	if use cjk; then
-		nkf -e sl.1 > sl.ja.1
+	use debug && append-flags -DDEBUG
+
+	doecho "$(tc-getCC)" ${CFLAGS} ${LDFLAGS} sl.c -lncurses -o sl
+
+	if use linguas_ja; then
+		iconv -f ISO-2022-JP -t EUC-JP sl.1 > sl.ja.1
 	fi
 }
 
@@ -44,7 +48,7 @@ src_install() {
 	dobin sl || die
 	newman sl.en.1 sl.1
 	dodoc README* sl.txt
-	if use cjk ; then
+	if use linguas_ja ; then
 		insinto /usr/share/man/ja/man1
 		newins sl.ja.1 sl.1
 	fi
