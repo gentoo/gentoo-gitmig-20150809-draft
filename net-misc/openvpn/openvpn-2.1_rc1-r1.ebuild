@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1_rc1-r1.ebuild,v 1.1 2006/11/08 13:49:10 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1_rc1-r1.ebuild,v 1.2 2006/12/30 06:36:22 vapier Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://openvpn.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc-macos ~ppc64 ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc-macos ~ppc64 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="examples iproute2 minimal pam passwordsave selinux ssl static threads"
 
 DEPEND=">=dev-libs/lzo-1.07
