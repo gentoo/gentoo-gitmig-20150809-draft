@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.7.ebuild,v 1.2 2006/12/22 11:37:01 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.7.ebuild,v 1.3 2006/12/30 06:42:51 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -54,6 +54,8 @@ src_unpack() {
 	unpack ${P}.tar.bz2
 	use l7filter && unpack ${L7_P}.tar.gz
 	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-more-exact-check-grep.patch #159162
 
 	EPATCH_OPTS="-p0" \
 	epatch "${FILESDIR}"/1.3.1-files/install_ipv6_apps.patch
