@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6.ebuild,v 1.3 2006/12/21 15:50:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6.ebuild,v 1.4 2006/12/30 19:55:27 flameeyes Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -13,7 +13,7 @@ MY_PV="${PV/_/-}"
 MY_PV="${MY_PV/-beta/-test}"
 MY_P="${PN}-${MY_PV}"
 
-PATCHLEVEL="31"
+PATCHLEVEL="32"
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
 
@@ -168,6 +168,12 @@ src_compile () {
 		fi
 	fi
 
+	if use live && ! has_version '>=media-plugins/live-2006.12.08'; then
+		myconf="--enable-live555 --with-live555-tree=/usr/$(get_libdir)/live"
+	else
+		myconf="$(use_enable live live555)"
+	fi
+
 	econf \
 		$(use_enable altivec) \
 		$(use_enable stream sout) \
@@ -203,7 +209,6 @@ src_compile () {
 		$(use_enable ncurses) \
 		$(use_enable xosd) \
 		$(use_enable lirc) \
-		$(use_enable live live555) $(use_with live live555-tree /usr/lib/live) \
 		$(use_enable mp3 mad) \
 		$(use_enable a52) \
 		$(use_enable dts) \
