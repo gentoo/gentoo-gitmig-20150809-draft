@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/wnn7sdk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wnn7sdk/ChangeLog,v 1.3 2006/11/05 16:36:07 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wnn7sdk/ChangeLog,v 1.4 2006/12/30 12:59:46 usata Exp $
+
+  30 Dec 2006; Mamoru KOMACHI <usata@gentoo.org> wnn7sdk-20011017.ebuild:
+  Added to ~amd64.
 
   05 Nov 2006; Mamoru KOMACHI <usata@gentoo.org> +files/wnn7sdk-gcc4.patch,
   wnn7sdk-20011017.ebuild:
