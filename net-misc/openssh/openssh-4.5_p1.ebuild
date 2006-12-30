@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.5_p1.ebuild,v 1.5 2006/12/07 08:44:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.5_p1.ebuild,v 1.6 2006/12/30 02:03:35 vapier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -14,7 +14,7 @@ PARCH=${P/_/}
 X509_PATCH="${PARCH}+x509-5.5.2.diff.gz"
 SECURID_PATCH="${PARCH/4.5/4.4}+SecurID_v1.3.2.patch"
 LDAP_PATCH="${PARCH/-4.5p1/-lpk-4.4p1}-0.3.7.patch"
-HPN_PATCH="${PARCH/4.5/4.4}-hpn12v13.diff.gz"
+HPN_PATCH="${PARCH}-hpn12v14.diff.gz"
 
 DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.com/"
@@ -26,7 +26,7 @@ SRC_URI="mirror://openbsd/OpenSSH/portable/${PARCH}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 arm ~hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="static pam tcpd kerberos skey selinux chroot X509 ldap smartcard hpn libedit X"
 
 RDEPEND="pam? ( virtual/pam )
