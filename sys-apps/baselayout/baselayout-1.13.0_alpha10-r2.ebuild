@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.13.0_alpha10-r2.ebuild,v 1.3 2006/12/30 12:11:29 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.13.0_alpha10-r2.ebuild,v 1.4 2006/12/30 15:59:00 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -36,6 +36,9 @@ RDEPEND="virtual/init
 		pam? ( virtual/pam )
 		!<net-misc/dhcpcd-2.0.0"
 DEPEND="virtual/os-headers"
+PDEPEND="virtual/init
+	!build? ( !bootstrap? ( kernel_linux? ( >=sys-apps/module-init-tools-3.2.2-r2 ) ) )"
+
 PROVIDE="virtual/baselayout"
 
 src_unpack() {
