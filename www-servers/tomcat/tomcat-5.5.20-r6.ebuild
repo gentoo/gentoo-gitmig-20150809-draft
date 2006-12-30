@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r5.ebuild,v 1.9 2006/12/30 16:25:31 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r6.ebuild,v 1.1 2006/12/30 16:25:31 wltjr Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -10,7 +10,7 @@ MY_P="apache-${P}-src"
 SLOT="5.5"
 SRC_URI="mirror://apache/${PN}/${PN}-5/v${PV}/src/${MY_P}.tar.gz"
 HOMEPAGE="http://tomcat.apache.org/"
-KEYWORDS="amd64 x86 -ppc -ppc64"
+KEYWORDS="~amd64 -ppc -ppc64 ~x86 ~x86-fbsd"
 LICENSE="Apache-2.0"
 
 IUSE="admin java5 doc examples source test"
@@ -32,27 +32,22 @@ RDEPEND="=dev-java/eclipse-ecj-3.1*
 	~dev-java/servletapi-2.4
 	admin? ( =dev-java/struts-1.2* )
 	dev-java/sun-javamail
-	java5? ( >=virtual/jre-1.5 )
+	java5? ( || ( >=virtual/jre-1.5 =virtual/jre-1.6 ) )
 	!java5? (
 		=virtual/jre-1.4*
 		=dev-java/commons-httpclient-2.0*
 		dev-java/sun-jaf
 		>=dev-java/junit-3.8.1
-		=dev-java/mx4j-3*
+		=dev-java/mx4j-core-3*
 		>=dev-java/saxpath-1.0
 		>=dev-java/xerces-2.7.1
 	   	=dev-java/xml-commons-external-1.3*
 	   )"
-DEPEND="java5? ( >=virtual/jdk-1.5 )
+DEPEND="java5? ( || ( >=virtual/jdk-1.5 >=virtual/jdk-1.6 ) )
 	!java5? ( =virtual/jdk-1.4* )
 	${RDEPEND}
+	>=dev-java/java-config-2.0.31
 	dev-java/ant"
-
-if ! use java5; then
-	JAVA_PKG_NV_DEPEND="=virtual/jdk-1.4*"
-else
-	JAVA_PKG_NV_DEPEND="=virtual/jdk-1.5"
-fi
 
 S=${WORKDIR}/${MY_P}
 
@@ -98,8 +93,8 @@ src_unpack() {
 	java-pkg_jar-from commons-logging commons-logging-api.jar
 	java-pkg_jar-from commons-daemon
 	if ! use java5; then
-		java-pkg_jar-from mx4j-3.0 mx4j.jar jmx.jar
-		java-pkg_jar-from mx4j-3.0 mx4j-rjmx.jar jmx-remote.jar
+		java-pkg_jar-from mx4j-core-3.0 mx4j.jar jmx.jar
+		java-pkg_jar-from mx4j-core-3.0 mx4j-rjmx.jar jmx-remote.jar
 	fi
 
 	if ! use java5; then
@@ -156,8 +151,8 @@ src_compile(){
 	if ! use java5; then
 		antflags="${antflags} -Dcommons-httpclient.jar=$(java-config -p commons-httpclient)"
 		antflags="${antflags} -Dactivation.jar=$(java-config -p sun-jaf)"
-		antflags="${antflags} -Djmx.jar=$(java-pkg_getjar mx4j-3.0 mx4j.jar)"
-		antflags="${antflags} -Djmx-remote.jar=$(java-pkg_getjar mx4j-3.0 mx4j-rjmx.jar)"
+		antflags="${antflags} -Djmx.jar=$(java-pkg_getjar mx4j-core-3.0 mx4j.jar)"
+		antflags="${antflags} -Djmx-remote.jar=$(java-pkg_getjar mx4j-core-3.0 mx4j-rjmx.jar)"
 		antflags="${antflags} -Dsaxpath.jar=$(java-pkg_getjar saxpath saxpath.jar)"
 		antflags="${antflags} -DxercesImpl.jar=$(java-pkg_getjar xerces-2 xercesImpl.jar)"
 		antflags="${antflags} -Dxml-apis.jar=$(java-pkg_getjar xml-commons-external-1.3 xml-apis.jar)"
