@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.11-r3.ebuild,v 1.1 2006/12/23 00:59:00 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.11-r3.ebuild,v 1.2 2006/12/30 15:52:35 chainsaw Exp $
 
 WANT_AUTOMAKE="1.5"
 
@@ -13,7 +13,7 @@ SRC_URI="http://mikmod.raphnet.net/files/${P}.tar.gz
 
 LICENSE="|| ( LGPL-2.1 LGPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="oss esd alsa"
 
 DEPEND=">=media-libs/audiofile-0.2.3
