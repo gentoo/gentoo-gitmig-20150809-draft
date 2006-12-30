@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/ruby-libglade2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade2/ChangeLog,v 1.25 2006/08/30 11:29:13 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade2/ChangeLog,v 1.26 2006/12/30 04:41:14 metalgod Exp $
+
+*ruby-libglade2-0.16.0 (30 Dec 2006)
+
+  30 Dec 2006; Luis Medinas <metalgod@gentoo.org>
+  -ruby-libglade2-0.10.1.ebuild, -ruby-libglade2-0.11.0.ebuild,
+  -ruby-libglade2-0.12.0.ebuild, +ruby-libglade2-0.16.0.ebuild:
+  Version Bump. Remove older versions.
 
 *ruby-libglade2-0.15.0 (30 Aug 2006)
 
