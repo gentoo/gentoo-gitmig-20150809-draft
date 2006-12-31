@@ -1,12 +1,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r10.ebuild,v 1.2 2006/12/30 11:33:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r10.ebuild,v 1.3 2006/12/31 08:52:14 vapier Exp $
 
 PATCH_VER="1.3"
 SPLIT_SPECS="no"
 ETYPE="gcc-compiler"
 
 inherit toolchain eutils flag-o-matic
+
+DESCRIPTION="The GNU Compiler Collection"
 
 KEYWORDS="~alpha ~ppc ~sparc ~x86"
 
