@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ccache
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.51 2006/12/31 04:30:21 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.52 2006/12/31 17:29:20 drizzt Exp $
+
+  31 Dec 2006; Timothy Redaelli <drizzt@gentoo.org> ccache-2.4-r6.ebuild:
+  ppc stable wrt bug #159527
 
   31 Dec 2006; Andrej Kacian <ticho@gentoo.org> ccache-2.4-r6.ebuild:
   Stable on x86, bug #159527.
