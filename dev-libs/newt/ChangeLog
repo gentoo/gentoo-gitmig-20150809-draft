@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/newt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.30 2006/10/31 17:20:27 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.31 2006/12/31 17:05:34 xmerlin Exp $
+
+  31 Dec 2006; Christian Zoffoli <xmerlin@gentoo.org>
+  newt-0.50.35-r2.ebuild, newt-0.50.35-r3.ebuild, newt-0.50.35-r4.ebuild,
+  newt-0.51.6.ebuild, newt-0.51.6-r1.ebuild, newt-0.51.6-r2.ebuild,
+  newt-0.52.2.ebuild:
+  Fixed licence, bug #156195.
 
   31 Oct 2006; Piotr Jaroszyński <peper@gentoo.org> newt-0.52.2.ebuild:
   multilib and symlink fix.

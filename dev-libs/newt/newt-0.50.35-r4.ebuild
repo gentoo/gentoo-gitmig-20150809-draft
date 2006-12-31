@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.50.35-r4.ebuild,v 1.6 2006/07/27 23:26:31 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.50.35-r4.ebuild,v 1.7 2006/12/31 17:05:34 xmerlin Exp $
 
 inherit python toolchain-funcs
 
@@ -8,7 +8,7 @@ DESCRIPTION="Redhat's Newt windowing toolkit development files"
 SRC_URI="http://koto.mynetix.de/gentoo/${P}.tar.gz"
 HOMEPAGE="http://www.redhat.com"
 SLOT="0"
-LICENSE="GPL-2"
+LICENSE="LGPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~hppa ~amd64 ~alpha ppc64"
 IUSE=""
 DEPEND="=sys-libs/slang-1*
