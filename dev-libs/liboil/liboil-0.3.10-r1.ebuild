@@ -1,9 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/liboil-0.3.10-r1.ebuild,v 1.2 2006/12/21 14:04:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/liboil-0.3.10-r1.ebuild,v 1.3 2006/12/31 22:55:24 dirtyepic Exp $
 
-inherit flag-o-matic
-inherit autotools
+inherit flag-o-matic autotools
 
 DESCRIPTION="library of simple functions that are optimized for various CPUs"
 HOMEPAGE="http://www.schleef.org/liboil/"
