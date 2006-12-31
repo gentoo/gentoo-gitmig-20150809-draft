@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.62.ebuild,v 1.28 2006/09/04 08:46:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.62.ebuild,v 1.29 2006/12/31 14:58:10 vapier Exp $
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Password database"
 HOMEPAGE="http://packages.gentoo.org/ebuilds/?pwdb-${PVR}"
@@ -32,20 +32,9 @@ src_unpack () {
 		|| die "sed of default.defs failed"
 }
 
-src_compile() {
-	filter-flags -fstack-protector
-
-	# author has specified application to be compiled with `-g` 
-	# no problem, but with ccc `-g` disables optimisation to make
-	# debugging easier, `-g3` enables debugging and optimisation
-	[ "${ARCH}" = "alpha" -a "${CC}" = "ccc" ] && append-flags -g3
-
-	emake || die
-}
-
 src_install() {
 	dodir /$(get_libdir) /usr/$(get_libdir) /usr/include/pwdb
-	make \
+	emake \
 		INCLUDED="${D}"/usr/include/pwdb \
 		LIBDIR="${D}"/$(get_libdir) \
 		LDCONFIG="echo" \
