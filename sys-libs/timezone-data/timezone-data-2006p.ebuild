@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2006p.ebuild,v 1.1 2006/11/29 01:16:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2006p.ebuild,v 1.2 2006/12/31 14:50:54 vapier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -51,9 +51,23 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [[ ! -e ${ROOT}/etc/localtime ]] ; then
-		ewarn "Please remember to set your timezone using the zic command."
-		rm -f "${ROOT}"/etc/localtime
-		ln -s ../usr/share/zoneinfo/Factory "${ROOT}"/etc/localtime
+	# make sure the /etc/localtime file does not get stale #127899
+	local tz=$(source "${ROOT}"/etc/conf.d/clock ; echo ${TIMEZONE})
+	if [[ -z ${tz} ]] ; then
+		if [[ ! -e ${ROOT}/etc/localtime ]] ; then
+			cp -f "${ROOT}"/usr/share/zoneinfo/Factory "${ROOT}"/etc/localtime
+		fi
+		ewarn "You do not have TIMEZONE set in /etc/conf.d/clock."
+		ewarn "Skipping auto-update of /etc/localtime."
+		return 0
 	fi
+
+	if [[ ! -e ${ROOT}/usr/share/zoneinfo/${tz} ]] ; then
+		eerror "You have an invalid TIMEZONE setting in /etc/conf.d/clock."
+		eerror "Your /etc/localtime has been reset to Factory; enjoy!"
+		tz="Factory"
+	fi
+	einfo "Updating /etc/localtime with /usr/share/zoneinfo/${tz}"
+	rm -f "${ROOT}"/etc/localtime
+	cp -f "${ROOT}"/usr/share/zoneinfo/"${tz}" "${ROOT}"/etc/localtime
 }
