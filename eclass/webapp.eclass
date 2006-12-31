@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.46 2006/12/25 08:07:06 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.47 2006/12/31 19:16:31 rl03 Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
 #
 #				Part of the implementation of GLEP #11
 #
-# Author(s)		Stuart Herbert <stuart@gentoo.org>
+# Author(s)		Stuart Herbert
 #				Renat Lumpau <rl03@gentoo.org>
 #				Gunnar Wrobel <wrobel@gentoo.org>
 #
@@ -24,7 +24,7 @@
 
 SLOT="${PVR}"
 IUSE="vhosts"
-DEPEND="app-admin/webapp-config"
+DEPEND=">=app-admin/webapp-config-1.50.15"
 RDEPEND="${DEPEND}"
 
 EXPORT_FUNCTIONS pkg_postinst pkg_setup src_install pkg_prerm
@@ -37,6 +37,7 @@ INSTALL_CHECK_FILE="installed_by_webapp_eclass"
 
 ETC_CONFIG="${ROOT}/etc/vhosts/webapp-config"
 WEBAPP_CONFIG="${ROOT}/usr/sbin/webapp-config"
+WEBAPP_CLEANER="${ROOT}/usr/sbin/webapp-cleaner"
 
 # ------------------------------------------------------------------------
 # INTERNAL FUNCTION - USED BY THIS ECLASS ONLY
@@ -488,24 +489,11 @@ function webapp_pkg_postinst ()
 		elog "Running ${my_cmd}"
 		${my_cmd}
 
-		# remove the old version
-		#
-		# why do we do this?  well ...
-		#
-		# normally, emerge -u installs a new version and then removes the
-		# old version.  however, if the new version goes into a different
-		# slot to the old version, then the old version gets left behind
-		#
-		# if USE=-vhosts, then we want to remove the old version, because
-		# the user is relying on portage to do the magical thing for it
-
-		if [ "${IS_UPGRADE}" = "1" ] ; then
-			elog "Removing old version ${REMOVE_PKG}"
-			ewarn "This action may result in a deadlock.  Please refer to"
-			ewarn "http://bugs.gentoo.org/show_bug.cgi?id=124440 for more information."
-
-			emerge -C "${REMOVE_PKG}"
-		fi
+		# run webapp-cleaner instead of emerge
+		echo
+		local cleaner="${WEBAPP_CLEANER} -p -C ${PN}"
+		einfo "Running ${cleaner}"
+		${cleaner}
 	else
 		# vhosts flag is on
 		#
