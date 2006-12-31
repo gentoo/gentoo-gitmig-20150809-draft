@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6515 2006/12/31 03:23:19 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6516 2006/12/31 03:47:26 gothgirl Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -23,7 +23,7 @@
 
 # Alec Warner <antarus@gentoo.org> (30 Dec 2006)
 # Pending removal, use net-www/gnash or net-www/netscape-flash
-# It will die in 60 days (Moz team if you want it shorter make
+# It will die in 30 days (Moz team if you want it shorter make
 # it so)
 net-www/gplflash
 
