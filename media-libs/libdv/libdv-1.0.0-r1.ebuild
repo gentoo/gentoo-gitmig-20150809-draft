@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-1.0.0-r1.ebuild,v 1.6 2006/12/31 18:51:45 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-1.0.0-r1.ebuild,v 1.7 2006/12/31 20:56:49 corsair Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm ~hppa ia64 ~mips ppc ~ppc64 sparc x86"
+KEYWORDS="alpha ~amd64 arm ~hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE="debug gtk sdl xv"
 
 RDEPEND="dev-libs/popt
