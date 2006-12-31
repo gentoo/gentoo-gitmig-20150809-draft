@@ -41,6 +41,9 @@ oci8-instant-client
 # net-libs/osptoolkit is only available on x86 (used by asterisk, bug 115798)
 osp
 
+# yellownet is only avaible as a binary blob (bug 149970)
+yellownet
+
 # not needed on non-sparc systems
 video_cards_sunbw2
 video_cards_suncg14
