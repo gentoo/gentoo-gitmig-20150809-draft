@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.8.2-r1.ebuild,v 1.4 2006/12/31 02:46:25 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.8.2-r1.ebuild,v 1.5 2006/12/31 12:59:23 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -40,18 +40,18 @@ set_target_list() {
 
 pkg_setup() {
 	if [ "$(gcc-major-version)" == "4" ]; then
-	eerror "qemu requires gcc-3 in order to build and work correctly"
-	eerror "please compile it with gcc-3"
-	die "gcc 4 cannot build qemu"
+		eerror "qemu requires gcc-3 in order to build and work correctly"
+		eerror "please compile it with gcc-3"
+		die "gcc 4 cannot build qemu"
 	fi
 }
 
 #RUNTIME_PATH="/emul/gnemul/"
 src_unpack() {
 	unpack ${A}
-
-	cd ${S}
-	epatch "${FILESDIR}/qemu-${PV}-sparc-fp.patch"
+	cd "${S}"
+	epatch "${FILESDIR}"/qemu-${PV}-linux-headers.patch
+	epatch "${FILESDIR}"/qemu-${PV}-sparc-fp.patch
 	# Alter target makefiles to accept CFLAGS set via flag-o.
 	sed -i 's/^\(C\|OP_C\|HELPER_C\)FLAGS=/\1FLAGS+=/' \
 		Makefile Makefile.target tests/Makefile
