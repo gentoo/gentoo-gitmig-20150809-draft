@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.3.1.ebuild,v 1.3 2006/12/30 18:24:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.3.1.ebuild,v 1.4 2006/12/31 10:58:55 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -73,12 +73,6 @@ S=${WORKDIR}/${MY_P}
 # <pebenito> then eventually turning on selinux would mean
 # adding a dep: selinux? ( sys-libs/libselinux )
 
-busybox_set_env() {
-	type -p ${CHOST}-ar > /dev/null && export CROSS=${CHOST}-
-	# Don't let KBUILD_OUTPUT mess us up #88088
-	unset KBUILD_OUTPUT
-}
-
 busybox_config_option() {
 	case $1 in
 		y) sed -i -e "s:.*CONFIG_$2.*set:CONFIG_$2=y:g" .config;;
@@ -93,14 +87,25 @@ busybox_config_option() {
 }
 
 src_unpack() {
-	busybox_set_env
+	unset KBUILD_OUTPUT #88088
+
 	unpack ${A}
 	cd "${S}"
 
 	# patches go here!
 	epatch "${FILESDIR}"/1.3.0/bb.patch
 	epatch "${FILESDIR}"/1.3.0/ld.patch
-	sed -i 's: -Werror : :' Makefile.flags
+
+	# work around broken ass powerpc compilers
+	use ppc64 && append-flags -mminimal-toc
+	# flag cleanup
+	sed -i \
+		-e 's: -Werror : :' \
+		-e 's:-Os -falign-functions=1 -falign-jumps=1 -falign-loops=1::' \
+		-e 's:-fomit-frame-pointer::' \
+		Makefile.flags
+	sed -i "/^CFLAGS.*:=/s:$: ${CFLAGS}:" Makefile
+	echo "CROSS_COMPILE := ${CHOST}-" >> Makefile.flags
 
 	# check for a busybox config before making one of our own.
 	# if one exist lets return and use it.
@@ -160,37 +165,19 @@ src_unpack() {
 }
 
 src_compile() {
-	busybox_set_env
+	unset KBUILD_OUTPUT #88088
 
-	# work around broken ass powerpc compilers
-	use ppc64 && append-flags -mminimal-toc
-
-	emake CROSS="${CROSS}" EXTRA_CFLAGS="${CFLAGS}" busybox || die "build failed"
+	emake busybox || die "build failed"
 	if ! use static ; then
 		mv busybox_unstripped{,.bak}
-		local failed=0
-		LDFLAGS="${LDFLAGS} -static" \
-		emake \
-			CROSS="${CROSS}" \
-			EXTRA_CFLAGS="${CFLAGS}" \
-			busybox || failed=1
-		if [[ ${failed} == 1 ]] ; then
-			if has_version '<sys-libs/glibc-2.3.5' ; then
-				eerror "Your glibc has broken static support, ignorning static build failure."
-				eerror "See http://bugs.gentoo.org/94879"
-				cp busybox_unstripped bb
-			else
-				die "static build failed"
-			fi
-		else
-			mv busybox_unstripped bb
-		fi
+		LDFLAGS="${LDFLAGS} -static" emake busybox || die "static build failed"
+		mv busybox_unstripped bb
 		mv busybox_unstripped{.bak,}
 	fi
 }
 
 src_install() {
-	busybox_set_env
+	unset KBUILD_OUTPUT #88088
 
 	into /
 	newbin busybox_unstripped busybox || die
@@ -200,7 +187,7 @@ src_install() {
 	dosym bb /bin/busybox.static
 
 	# bundle up the symlink files for use later
-	make CROSS="${CROSS}" install || die
+	emake install || die
 	rm _install/bin/busybox
 	tar cf busybox-links.tar -C _install . || die
 	insinto /usr/share/${PN}
