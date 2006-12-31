@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1.ebuild,v 1.20 2006/12/23 19:07:53 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1.ebuild,v 1.21 2006/12/31 02:15:20 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -276,10 +276,10 @@ src_compile() {
 	myconf="${myconf} $(use_enable ipv6 inet6)"
 	myconf="${myconf} $(use_enable joystick)"
 	myconf="${myconf} $(use_enable lirc)"
-	myconf="${myconf} $(use_enable live)"
 	myconf="${myconf} $(use_enable rtc)"
 	myconf="${myconf} $(use_enable samba smb)"
 	myconf="${myconf} $(use_enable truetype freetype)"
+	use live || myconf="${myconf} --disable-live"
 	use v4l	 || myconf="${myconf} --disable-tv-v4l1"
 	use v4l2 || myconf="${myconf} --disable-tv-v4l2"
 	use jack || myconf="${myconf} --disable-jack"
@@ -403,8 +403,6 @@ src_compile() {
 	then
 		myconf="${myconf} --enable-linux-devfs"
 	fi
-
-	use live && myconf="${myconf} --with-livelibdir=/usr/$(get_libdir)/live"
 
 	# support for blinkenlights
 	use bl && myconf="${myconf} --enable-bl"
