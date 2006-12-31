@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/emacspeak-24.ebuild,v 1.2 2006/12/03 17:36:43 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/emacspeak-24.ebuild,v 1.3 2006/12/31 19:20:34 mabi Exp $
 
 DESCRIPTION="the emacspeak audio desktop"
 HOMEPAGE="http://emacspeak.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="ppc x86"
 IUSE=""
 
 RDEPEND="virtual/emacs
