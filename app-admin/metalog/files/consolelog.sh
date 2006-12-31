@@ -2,6 +2,8 @@
 # consolelog.sh
 # For metalog -- log to a console
 
+set -f
+
 source /etc/conf.d/metalog
 if [ -z "${CONSOLE}" ] ; then
 	CONSOLE="/dev/console"
