@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.4-r1.ebuild,v 1.5 2006/12/22 13:18:02 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.4-r1.ebuild,v 1.6 2006/12/31 19:15:23 mabi Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/tclx/${PN}${PV}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc sparc x86"
+KEYWORDS="~amd64 ppc sparc x86"
 
 DEPEND=">=dev-lang/tcl-8.4.6
 	tk? ( >=dev-lang/tk-8.4.6 )"
