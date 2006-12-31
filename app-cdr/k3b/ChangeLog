@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.175 2006/12/23 15:56:23 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.176 2006/12/31 18:34:59 beandog Exp $
+
+  31 Dec 2006; Steve Dibb <beandog@gentoo.org> -k3b-0.12.15.ebuild,
+  -k3b-0.12.16.ebuild, -k3b-1.0_rc1.ebuild:
+  Remove old versions
 
   23 Dec 2006; Andrej Kacian <ticho@gentoo.org> k3b-0.12.17.ebuild:
   Stable on x86, bug #157451.
