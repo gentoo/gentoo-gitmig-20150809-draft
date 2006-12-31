@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.36 2006/12/20 22:45:18 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.37 2006/12/31 01:39:38 caster Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -1186,26 +1186,11 @@ java-pkg_get-source() {
 # Determines what target version should be used, for passing to -target.
 # If you don't care about lower versions, you can set _WANT_TARGET to the
 # version of your JDK.
-# Remember doing this will mostly like cause things to break.
-# Doesn't allow it to be lower then the one in depend.
-# Doesn't allow it to be higher then the active vm.
 #
 # @return string - Either the lowest possible target, or JAVA_PKG_WANT_TARGET
 # ------------------------------------------------------------------------------
 java-pkg_get-target() {
-	local min=$(depend-java-query --get-lowest "${DEPEND} ${RDEPEND}")
-	if [[ -n "${JAVA_PKG_WANT_TARGET}" ]]; then
-		local max="$(java-config --select-vm "${GENTOO_VM}" -g PROVIDES_VERSION)"
-		if version_is_at_least "${min}" "${JAVA_PKG_WANT_TARGET}" && version_is_at_least "${JAVA_PKG_WANT_TARGET}" "${max}"; then
-			echo ${JAVA_PKG_WANT_TARGET}
-		else
-			echo ${min}
-		fi
-	else
-		echo ${min}
-	fi
-
-	#echo ${JAVA_PKG_WANT_TARGET:-$(depend-java-query --get-lowest "${DEPEND}")}
+	echo ${JAVA_PKG_WANT_TARGET:-$(depend-java-query --get-lowest "${DEPEND} ${RDEPEND}")}
 }
 
 java-pkg_get-javac() {
