@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-1.9.ebuild,v 1.1 2006/07/01 19:08:54 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-1.9.ebuild,v 1.2 2006/12/31 23:06:47 dirtyepic Exp $
 
 inherit wxwidgets
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="unicode"
 DEPEND=">=app-doc/chmlib-0.31
-	>=x11-libs/wxGTK-2.6.0"
+	=x11-libs/wxGTK-2.6*"
 
 src_compile() {
 	local myconf
