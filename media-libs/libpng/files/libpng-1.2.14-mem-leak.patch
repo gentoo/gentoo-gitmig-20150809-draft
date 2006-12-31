@@ -1,0 +1,20 @@
+plug a memleak
+
+http://bugs.gentoo.org/159216
+
+--- 1.2.14/pngwutil.c
++++ 1.2.15rc5/pngwutil.c
+@@ -757,8 +757,11 @@
+       profile_len = 0;
+ 
+    if (profile_len > 3)
+-      embedded_profile_len = ((*(profile  ))<<24) | ((*(profile+1))<<16) |
+-          ((*(profile+2))<< 8) | ((*(profile+3))    );
++      embedded_profile_len =
++          ((*( (png_bytep)profile  ))<<24) |
++          ((*( (png_bytep)profile+1))<<16) |
++          ((*( (png_bytep)profile+2))<< 8) |
++          ((*( (png_bytep)profile+3))    );
+ 
+    if (profile_len < embedded_profile_len)
+      {
