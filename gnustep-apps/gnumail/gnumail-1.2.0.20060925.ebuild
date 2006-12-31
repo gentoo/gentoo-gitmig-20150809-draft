@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0.20060925.ebuild,v 1.1 2006/12/05 21:38:00 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0.20060925.ebuild,v 1.2 2006/12/31 09:52:23 grobian Exp $
 
 inherit gnustep
 
@@ -20,11 +20,13 @@ SLOT="0"
 IUSE="crypt doc emoticon xface"
 DEPEND="${GS_DEPEND}
 	=gnustep-libs/pantomime-${PV}
+	>=gnustep-base/gnustep-gui-0.11.0
 	gnustep-apps/addresses
 	virtual/libiconv"
 RDEPEND="${GS_RDEPEND}
 	crypt? ( app-crypt/gnupg )
 	=gnustep-libs/pantomime-${PV}
+	>=gnustep-base/gnustep-gui-0.11.0
 	gnustep-apps/addresses"
 
 egnustep_install_domain "System"
