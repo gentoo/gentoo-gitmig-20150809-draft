@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.6.7-r1.ebuild,v 1.12 2006/11/02 00:58:35 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.6.7-r1.ebuild,v 1.13 2006/12/31 07:40:48 mr_bones_ Exp $
 
 WANT_AUTOCONF=latest
 inherit autotools eutils
@@ -35,6 +35,10 @@ src_unpack() {
 	epatch \
 		"${FILESDIR}"/${P}-png-types.patch \
 		"${FILESDIR}"/${P}-sdl-checks.patch
+	sed -i \
+		-e 's/<il/<IL/' \
+		include/IL/il_wrap.h \
+		|| die "sed failed"
 	eautoconf
 }
 
