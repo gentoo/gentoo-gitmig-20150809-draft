@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.6.0.ebuild,v 1.2 2006/11/23 11:20:56 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.6.0.ebuild,v 1.3 2006/12/31 17:49:21 beandog Exp $
 
 inherit distutils
 
@@ -29,6 +29,14 @@ DEPEND=">=dev-python/pygame-1.5.6
 	encode? ( >=media-sound/cdparanoia-3.9.8 >=media-sound/lame-3.93.1 )
 	matrox? ( >=media-video/matroxset-0.3 )
 	lirc? ( app-misc/lirc >=dev-python/pylirc-0.0.3 )"
+
+pkg_setup() {
+	if ! built_with_use media-libs/sdl-image png; then
+		eerror "media-libs/sdl-image must be emerged with the 'png' use flag"
+		eerror "Please fix and re-emerge freevo."
+		die "fix use flags"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
