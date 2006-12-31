@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6513 2006/12/30 20:51:55 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6514 2006/12/31 00:54:12 wltjr Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,13 +21,18 @@
 ##   End example
 ## 
 
+# William L. Thomson Jr. <wltjr@gentoo.org> (30 Dec 2006)
+# Old versions of Netbeans no longer supported
+# Neither are some of it's deps like Tomcat 5.0.28
+=dev-util/netbeans-4.0-r2
+
 # Diego Pettenò <flameeyes@gentoo.org> (20 Dec 2006)
 # Newer versions install properly into libdir and includedir.
 # Unfortunately mplayer and mimd don't support building this
 # way, so mask till they are fixed.
 >=media-plugins/live-2006.12.08
 
-# William L. Thomson Jr. <wltjr@gentoo.org> (30 Nov 2006)
+# William L. Thomson Jr. <wltjr@gentoo.org> (30 Dec 2006)
 # Old versions of Tomcat no longer supported
 # 5.0.27 is soon to be removed, ppc/ppc64 users please
 # let me know if your using this version
