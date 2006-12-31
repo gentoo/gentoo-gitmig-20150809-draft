@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.58 2006/10/30 23:31:37 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.59 2006/12/31 11:25:41 vapier Exp $
+
+  31 Dec 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/DirectFB-0.9.25.1-headers.patch, DirectFB-0.9.25.1.ebuild:
+  Fix building with sanitized headers #152614.
 
   30 Oct 2006; Matti Bickel <mabi@gentoo.org> DirectFB-0.9.25.1.ebuild:
   Stable on ppc (bug #149813)
