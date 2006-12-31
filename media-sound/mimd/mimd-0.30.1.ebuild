@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mimd/mimd-0.30.1.ebuild,v 1.2 2005/03/19 01:11:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mimd/mimd-0.30.1.ebuild,v 1.3 2006/12/31 12:17:10 flameeyes Exp $
+
+inherit eutils
 
 DESCRIPTION="Multicast streaming server for MPEG1/2 and MP3 files."
 
@@ -10,33 +12,40 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
-DEPEND="sys-apps/sed
-		>=media-plugins/live-2004.03.05
-		dev-libs/xerces-c
-		dev-lang/perl"
+
+RDEPEND=">=media-plugins/live-2006.12.08
+		dev-libs/xerces-c"
+DEPEND="${RDEPEND}
+	dev-lang/perl"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}+live-2006.12.08.patch"
+	cp Makefile.in Makefile
+}
 
 src_compile() {
-	sed -e 's!@PREFIX@!/!' -e 's!@LIVEDIR@!/usr/lib/live!' -e 's!@XERCESDIR@!/usr!' < ${S}/Makefile.in > ${S}/Makefile
 	emake || die
 }
 
 src_install() {
-	exeinto /usr/bin
-	doexe ${S}/mimd
-	dodoc ${S}/doc/mimd.pod
+	dobin mimd
+	dodoc doc/mimd.pod
 
 	if [ -x /usr/bin/pod2html ]; then
-		pod2html < ${S}/doc/mimd.pod > ${S}/doc/mimd.html
-		dohtml ${S}/doc/mimd.html
+		pod2html < doc/mimd.pod > doc/mimd.html
+		dohtml doc/mimd.html
 	fi
 
 	if [ -x /usr/bin/pod2man ]; then
-		pod2man < ${S}/doc/mimd.pod > ${S}/doc/mimd.1
-		doman ${S}/doc/mimd.1
+		pod2man < doc/mimd.pod > doc/mimd.1
+		doman doc/mimd.1
 	fi
 
 	insinto /usr/share/mimd
-	doins ${S}/etc/mimd.dtd ${S}/etc/sample.xml
+	doins etc/mimd.dtd etc/sample.xml
 }
 
 pkg_postinst() {
