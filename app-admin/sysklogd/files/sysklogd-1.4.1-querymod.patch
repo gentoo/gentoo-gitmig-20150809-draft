@@ -1,3 +1,6 @@
+http://linuxfromscratch.org/pipermail/patches/2003-October/000432.html
+http://lists.infodrom.org/infodrom-sysklogd/2003/0024.html
+
 diff -Naur sysklogd-1.4.1-orig/ksym_mod.c sysklogd-1.4.1/ksym_mod.c
 --- sysklogd-1.4.1-orig/ksym_mod.c	2005-10-17 23:56:17.527192000 -0400
 +++ sysklogd-1.4.1/ksym_mod.c	2005-10-18 00:07:36.817712908 -0400
