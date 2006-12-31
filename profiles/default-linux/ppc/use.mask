@@ -70,6 +70,13 @@ graphlcd
 # keyworded
 p2p
 
+# cardoe@gentoo.org
+# masking ivtv since I got the original support for it
+# but it was never stabled and it appears to have been
+# broken in later releases by an endian issue. I no longer
+# have the hardware to test
+ivtv
+
 # Modular X: unmask for architectures on which they are available
 -input_devices_synaptics
 -input_devices_wacom
