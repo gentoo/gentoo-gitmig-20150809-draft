@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/rcairo-1.2.0.ebuild,v 1.3 2006/12/31 14:45:45 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/rcairo-1.2.0.ebuild,v 1.4 2006/12/31 17:52:07 drizzt Exp $
 
 inherit ruby
 
@@ -13,7 +13,7 @@ SRC_URI="http://cairographics.org/releases/${P}.tar.gz"
 SLOT="0"
 USE_RUBY="ruby18"
 LICENSE="Ruby"
-KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 
 DEPEND=">=x11-libs/cairo-1.2.0"
 PATCHES="${FILESDIR}/${P}-no-svg.patch"
