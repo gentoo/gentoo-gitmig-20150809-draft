@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-9999.ebuild,v 1.1 2006/12/28 20:56:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-9999.ebuild,v 1.2 2006/12/31 12:56:45 flameeyes Exp $
 
 inherit kde subversion
 
@@ -33,7 +33,7 @@ RDEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase ) )
 	ifp? ( media-libs/libifp )
 	real? ( media-video/realplayer )
 	njb? ( >=media-libs/libnjb-2.2.4 )
-	mtp? ( media-libs/libmtp )
+	mtp? ( >=media-libs/libmtp-0.1.0 )
 	musicbrainz? ( media-libs/tunepimp )
 	=dev-lang/ruby-1.8*"
 
