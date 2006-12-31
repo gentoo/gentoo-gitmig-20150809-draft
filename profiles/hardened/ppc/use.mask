@@ -69,6 +69,11 @@ graphlcd
 # Masked p2p for bug #155302 <josejx@gentoo.org>
 p2p
 
+# cardoe@gentoo.org
+# masking on ppc since the associated driver is not stable
+# newer versions have possible endian issues
+ivtv
+
 # Diego Pettenò <flameeyes@gentoo.org> (6 Dec 2006)
 # Unmask the Apple drivers
 -alsa_cards_aoa
