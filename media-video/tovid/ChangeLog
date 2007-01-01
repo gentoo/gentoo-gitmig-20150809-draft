@@ -1,6 +1,10 @@
 # ChangeLog for media-video/tovid
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/ChangeLog,v 1.4 2006/11/07 14:47:31 beandog Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/ChangeLog,v 1.5 2007/01/01 17:10:50 beandog Exp $
+
+  01 Jan 2007; Steve Dibb <beandog@gentoo.org> tovid-0.28.ebuild,
+  tovid-0.28-r1.ebuild, tovid-0.29.ebuild:
+  Add pycairo dep, bug 159599
 
 *tovid-0.29 (07 Nov 2006)
 

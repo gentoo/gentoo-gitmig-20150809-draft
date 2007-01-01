@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/tovid-0.29.ebuild,v 1.1 2006/11/07 14:47:31 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/tovid-0.29.ebuild,v 1.2 2007/01/01 17:10:50 beandog Exp $
 
 inherit eutils
 
@@ -21,6 +21,7 @@ RDEPEND="media-video/mplayer
 	media-video/vcdimager
 	media-video/lsdvd
 	virtual/cdrtools
+	dev-python/pycairo
 	>=dev-python/wxpython-2.6
 	app-cdr/dvd+rw-tools
 	app-cdr/cdrdao
