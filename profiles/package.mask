@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6520 2006/12/31 22:17:36 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6521 2007/01/01 16:59:09 beu Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -292,13 +292,6 @@ media-video/vls
 # Timothy Redaelli <drizzt@gentoo.org> (28 Nov 2006)
 # Masked for testing.
 =media-libs/spandsp-0.0.3*
-
-# Stuart Herbert <stuart@gentoo.org> (27 Nov 2006)
-# Deprecated: no longer supported
-# Pending removal Dec 27
-=net-misc/nxserver-personal-1.5*
-=net-misc/nxserver-business-1.5*
-=net-misc/nxserver-enterprise-1.5*
 
 # Steve Dibb <beandog@gentoo.org> (26 Nov 2006)
 # Deprecated: upstream dead, unsupported, doesn't compile anymore.
