@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.16-r1.ebuild,v 1.13 2006/07/28 19:28:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.16-r1.ebuild,v 1.14 2007/01/01 20:54:26 betelgeuse Exp $
 
 inherit eutils toolchain-funcs
 
@@ -50,13 +50,13 @@ src_compile() {
 	emake all || die
 
 	if use doc; then
-	emake doc || die
+		emake doc || die
 	fi
 
 	if use tcl; then
-	cp -P ${FILESDIR}/maketcllib.sh ${S}
-	chmod +x ./maketcllib.sh
-	./maketcllib.sh
+		cp -P ${FILESDIR}/maketcllib.sh ${S}
+		chmod +x ./maketcllib.sh
+		./maketcllib.sh
 	fi
 }
 
@@ -70,13 +70,13 @@ src_install () {
 	doman sqlite.1
 
 	if use doc; then
-	docinto html
-	dohtml doc/*.html doc/*.txt doc/*.png
+		docinto html
+		dohtml doc/*.html doc/*.txt doc/*.png
 	fi
 
 	if use tcl; then
-	mkdir ${D}/usr/lib/tclsqlite${PV}
-	cp ${S}/tclsqlite.so ${D}/usr/lib/tclsqlite${PV}/
-	cp ${S}/pkgIndex.tcl ${D}/usr/lib/tclsqlite${PV}/
+		mkdir ${D}/usr/lib/tclsqlite${PV}
+		cp ${S}/tclsqlite.so ${D}/usr/lib/tclsqlite${PV}/
+		cp ${S}/pkgIndex.tcl ${D}/usr/lib/tclsqlite${PV}/
 	fi
 }

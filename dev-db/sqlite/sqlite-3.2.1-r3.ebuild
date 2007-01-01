@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.2.1-r3.ebuild,v 1.11 2006/01/14 18:19:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.2.1-r3.ebuild,v 1.12 2007/01/01 20:54:26 betelgeuse Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="3"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc-macos ppc64 sh sparc x86"
 IUSE="nothreadsafe doc"
 
-DEPEND="virtual/libc
+DEPEND="
 	doc? ( dev-lang/tcl )"
 
 src_unpack() {
