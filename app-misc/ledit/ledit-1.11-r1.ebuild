@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ledit/ledit-1.11-r1.ebuild,v 1.2 2006/09/21 21:57:55 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ledit/ledit-1.11-r1.ebuild,v 1.3 2007/01/01 21:29:55 ticho Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ RDEPEND=""
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 src_compile()
 {
