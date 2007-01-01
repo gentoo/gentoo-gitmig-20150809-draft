@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-da
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-da/ChangeLog,v 1.60 2006/08/13 15:38:21 arj Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-da/ChangeLog,v 1.61 2007/01/01 11:56:58 betelgeuse Exp $
+
+  01 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
+  Removed arj as he is retired
 
 *ispell-da-1.6.0 (13 Aug 2006)
 
