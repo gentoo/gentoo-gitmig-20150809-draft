@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/librsvg
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.126 2006/12/21 05:31:31 compnerd Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.127 2007/01/01 20:17:09 cardoe Exp $
+
+  01 Jan 2007; Doug Goldstein <cardoe@gentoo.org> librsvg-2.14.4.ebuild,
+  librsvg-2.16.0.ebuild, librsvg-2.16.1.ebuild:
+  png USE flag did nothing for cairo. It always hardcoded on, removed png USE
+  flag. So I'm removing the check from here.
 
   21 Dec 2006; Saleem Abdulrasool <compnerd@gentoo.org>
   -librsvg-1.0.3.ebuild:

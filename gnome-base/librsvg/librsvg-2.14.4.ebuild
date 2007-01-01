@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.14.4.ebuild,v 1.10 2006/10/20 16:37:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.14.4.ebuild,v 1.11 2007/01/01 20:17:09 cardoe Exp $
 
 inherit eutils multilib gnome2 autotools
 
@@ -41,12 +41,6 @@ set_gtk_confdir() {
 }
 
 pkg_setup() {
-
-	if ! built_with_use x11-libs/cairo png; then
-		einfo "Please re-emerge x11-libs/cairo with the png USE flag set"
-		die "cairo needs the png flag set"
-	fi
-
 	G2CONF="--with-croco \
 		--enable-pixbuf-loader \
 		--enable-gtk-theme \

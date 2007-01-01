@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.16.1.ebuild,v 1.1 2006/12/17 17:23:58 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.16.1.ebuild,v 1.2 2007/01/01 20:17:09 cardoe Exp $
 
 inherit multilib gnome2 eutils
 
@@ -40,11 +40,6 @@ pkg_setup() {
 			--disable-gnome-print \
 			$(use_enable gnome gnome-vfs) \
 			$(use_with zlib svgz)"
-
-	if ! built_with_use x11-libs/cairo png; then
-		einfo "Please re-emerge x11-libs/cairo with the png USE flag set"
-		die "cairo needs the png flag set"
-	fi
 }
 
 src_unpack() {
