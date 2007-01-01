@@ -1,0 +1,9 @@
+# ChangeLog for games-strategy/outerspace
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/outerspace/ChangeLog,v 1.1 2007/01/01 12:28:26 tupone Exp $
+
+*outerspace-0.5.59 (01 Jan 2007)
+
+  01 Jan 2007; <tupone@gentoo.org> +files/outerspace, +metadata.xml,
+  +outerspace-0.5.59.ebuild:
+  Initial import. Bug #89059 submitted by Chris Gorgolewski.

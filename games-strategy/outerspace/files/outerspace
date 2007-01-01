@@ -1,0 +1,11 @@
+#! /bin/sh
+
+if [ ! -e $HOME/.outerspace ]
+then
+	echo "First run - copying files to $HOME/.outerspace"
+	mkdir $HOME/.outerspace
+	ln -s @GENTOO_LIBDIR@/{osc.py,lib,libsrvr} $HOME/.outerspace/
+	ln -s @GENTOO_DATADIR@/res $HOME/.outerspace/
+fi
+cd $HOME/.outerspace
+exec python osc.py "$@"
