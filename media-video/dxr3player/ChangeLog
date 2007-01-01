@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dxr3player
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3player/ChangeLog,v 1.11 2006/05/14 16:56:19 arj Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3player/ChangeLog,v 1.12 2007/01/01 12:13:04 betelgeuse Exp $
+
+  01 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
+  Removed arj as he is retired
 
   14 May 2006; Anders Rune Jensn <arj@gentoo.org> dxr3player-0.10.ebuild,
   -dxr3player-0.9.ebuild:
