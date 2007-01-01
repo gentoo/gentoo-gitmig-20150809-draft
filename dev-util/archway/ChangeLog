@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/archway
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/archway/ChangeLog,v 1.6 2005/10/30 21:38:09 arj Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/archway/ChangeLog,v 1.7 2007/01/01 12:09:58 betelgeuse Exp $
+
+  01 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
+  Removed arj as he is retired
 
 *archway-0.2.1 (30 Oct 2005)
 
