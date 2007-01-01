@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxserver-business
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-business/ChangeLog,v 1.14 2006/04/30 18:02:02 stuart Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-business/ChangeLog,v 1.15 2007/01/01 16:56:31 beu Exp $
+
+  01 Jan 2007; Elfyn McBratney <beu@gentoo.org>
+  -nxserver-business-1.5.0.ebuild:
+  Punt.
 
 *nxserver-business-1.5.0 (30 Apr 2006)
 

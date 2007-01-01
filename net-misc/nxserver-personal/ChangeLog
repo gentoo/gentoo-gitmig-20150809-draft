@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxserver-personal
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-personal/ChangeLog,v 1.18 2006/04/30 18:11:17 stuart Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-personal/ChangeLog,v 1.19 2007/01/01 16:55:06 beu Exp $
+
+  01 Jan 2007; Elfyn McBratney <beu@gentoo.org>
+  -nxserver-personal-1.5.0.ebuild:
+  Punt.
 
 *nxserver-personal-1.5.0 (30 Apr 2006)
 
