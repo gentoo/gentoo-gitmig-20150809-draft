@@ -5,7 +5,6 @@ SHA256 a5e3d8480cc1cf15037125e3706dd0926fd2530323b2ae375e1802ebcb051683 files/1.
 DIST nxserver-1.3.0-25.i386.rpm 5378185
 DIST nxserver-1.3.2-25.i386.rpm 4812092
 DIST nxserver-1.4.0-107.i386.rpm 5498634
-DIST nxserver-business-1.5.0-91.i386.rpm 9442653
 EBUILD nxserver-business-1.3.0-r2.ebuild 519 RMD160 718008ba86aa41574c9cca2f53e1e64b6bd54f6e SHA1 ab01cd4f7f80465dea33671739a902ab1a69587c SHA256 e46ac635a037efa951a820c28db5d064c099af08ad1c797d053bdb7a7a41dbb8
 MD5 407cf382ecdfa25f1763be430a24003b nxserver-business-1.3.0-r2.ebuild 519
 RMD160 718008ba86aa41574c9cca2f53e1e64b6bd54f6e nxserver-business-1.3.0-r2.ebuild 519
@@ -22,14 +21,10 @@ EBUILD nxserver-business-1.4.0.ebuild 522 RMD160 6863049d9982deed1ef793292fcb0a0
 MD5 0e38454f91c57f58e45410fa9a03f601 nxserver-business-1.4.0.ebuild 522
 RMD160 6863049d9982deed1ef793292fcb0a07c3ca4975 nxserver-business-1.4.0.ebuild 522
 SHA256 4d43fd3b44a914b374bef6c7a08548b2ea9d07cfd4f41affcda3d161ab9677b4 nxserver-business-1.4.0.ebuild 522
-EBUILD nxserver-business-1.5.0.ebuild 659 RMD160 365c1b448dad3bb48c51a65813715047e3217fd0 SHA1 caf517efd1f79a5014bede5f6fae8477fee7505c SHA256 dc06f3330f384031eb1451816fc610e9a6b5b8a353ec79f78249830dfeb16841
-MD5 21c2d7617014588d07afca75f9ece621 nxserver-business-1.5.0.ebuild 659
-RMD160 365c1b448dad3bb48c51a65813715047e3217fd0 nxserver-business-1.5.0.ebuild 659
-SHA256 dc06f3330f384031eb1451816fc610e9a6b5b8a353ec79f78249830dfeb16841 nxserver-business-1.5.0.ebuild 659
-MISC ChangeLog 2966 RMD160 27aef1518fbf35d0f6742ca958800279abbfbbcb SHA1 7e2748492e47c7af0f0b1341025f8b049e241fd0 SHA256 468f0f06ebd9ca623d5b5716852bed0b04a80886e4eaf191ac8bb2f98f9496d8
-MD5 114c6bf973bcaaec81158c2c766f22ff ChangeLog 2966
-RMD160 27aef1518fbf35d0f6742ca958800279abbfbbcb ChangeLog 2966
-SHA256 468f0f06ebd9ca623d5b5716852bed0b04a80886e4eaf191ac8bb2f98f9496d8 ChangeLog 2966
+MISC ChangeLog 3055 RMD160 f1d4748e2ab6bc1fcbffde18bb89e71cbcd39c56 SHA1 194cdd51884aaf7ab95d6a84729fbddfbf52784d SHA256 38624d6bc53591f6d527210df585a183e2c21192c4b0fb12769f991e42ce4e51
+MD5 6b9ff3b01df31c15d53e9f3294c83616 ChangeLog 3055
+RMD160 f1d4748e2ab6bc1fcbffde18bb89e71cbcd39c56 ChangeLog 3055
+SHA256 38624d6bc53591f6d527210df585a183e2c21192c4b0fb12769f991e42ce4e51 ChangeLog 3055
 MISC metadata.xml 410 RMD160 6deb2bd741f83af3e9153cf47cbb87f3f0385b68 SHA1 fa7f171aa1bfcb0b21c81f75315c150293ba4aa8 SHA256 52c577df459acd879beb4e602ce2561eebb770ac21ca83dbefe094d1326a5214
 MD5 e6ff0bffa2d0047e0811094f9dc46274 metadata.xml 410
 RMD160 6deb2bd741f83af3e9153cf47cbb87f3f0385b68 metadata.xml 410
@@ -46,6 +41,3 @@ SHA256 1213aa0f45804a2b41c63cdd3b7f2ed3e8de71f7f6dcb312fe1808c9cd3a6531 files/di
 MD5 2ec5f8b28c693c48e333aabbba2069f2 files/digest-nxserver-business-1.4.0 73
 RMD160 45e33ab7276f5a6e4d9c3e794a36845b1cde8483 files/digest-nxserver-business-1.4.0 73
 SHA256 ce5d654ef0b84d3a357d05329e42b70555b9af1ce168ce8722f4d676fda21775 files/digest-nxserver-business-1.4.0 73
-MD5 87c79b20af33f1fbde16b26d9ea93bb1 files/digest-nxserver-business-1.5.0 81
-RMD160 7e00237cc5010d99c9464c84abd1fc381832baaa files/digest-nxserver-business-1.5.0 81
-SHA256 e67fc1045b38ec299599d6529ab76ec1cd03f7bb48dd2d4bf48274c88f55ac55 files/digest-nxserver-business-1.5.0 81
