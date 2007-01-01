@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.67 2006/12/30 11:23:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.68 2007/01/01 14:14:47 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets
 # us easily merge multiple versions for multiple targets (if we wish) and
@@ -177,6 +177,8 @@ toolchain-binutils_src_compile() {
 	use multitarget && myconf="${myconf} --enable-targets=all"
 	[[ -n ${CBUILD} ]] && myconf="${myconf} --build=${CBUILD}"
 	is_cross && myconf="${myconf} --with-sysroot=/usr/${CTARGET}"
+#	glibc-2.3.6 lacks support for this ...
+#		--enable-secureplt 
 	myconf="--prefix=/usr \
 		--host=${CHOST} \
 		--target=${CTARGET} \
@@ -187,7 +189,6 @@ toolchain-binutils_src_compile() {
 		--libdir=${LIBPATH} \
 		--libexecdir=${LIBPATH} \
 		--includedir=${INCPATH} \
-		--enable-secureplt \
 		--enable-64-bit-bfd \
 		--enable-shared \
 		--disable-werror \
