@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4-r3.ebuild,v 1.12 2006/11/07 15:29:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4-r3.ebuild,v 1.13 2007/01/01 16:31:20 grobian Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -16,7 +16,7 @@ SRC_URI="mirror://ruby/${PV%.*}/${P/_pre/-preview}.tar.gz
 
 LICENSE="Ruby"
 SLOT="1.8"
-KEYWORDS="~alpha amd64 arm hppa ia64 mips ppc ~ppc-macos ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="socks5 tcltk cjk doc threads examples ipv6"
 RESTRICT="confcache"
 

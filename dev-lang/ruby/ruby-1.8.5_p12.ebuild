@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.5_p12.ebuild,v 1.2 2006/12/29 16:25:46 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.5_p12.ebuild,v 1.3 2007/01/01 16:31:20 grobian Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -18,7 +18,7 @@ SRC_URI="ftp://ftp.ruby-lang.org/pub/ruby/${MY_P}.tar.gz
 
 LICENSE="Ruby"
 SLOT="1.8"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="debug socks5 tk cjk doc threads examples ipv6"
 RESTRICT="confcache"
 
@@ -113,38 +113,29 @@ src_install() {
 		cp -pPR sample ${D}/${ROOT}usr/share/doc/${PF}
 	fi
 
-	if use ppc-macos ; then
-		dosym /usr/lib/libruby${SLOT/./}.${PV%_*}.dylib /usr/lib/libruby.${PV%.*}.dylib
-		dosym /usr/lib/libruby${SLOT/./}.${PV%_*}.dylib /usr/lib/libruby.${PV%_*}.dylib
-	else
-		dosym libruby${SLOT/./}.so.${PV%_*} /usr/$(get_libdir)/libruby.so.${PV%.*}
-		dosym libruby${SLOT/./}.so.${PV%_*} /usr/$(get_libdir)/libruby.so.${PV%_*}
-	fi
+	dosym libruby${SLOT/./}$(get_libname ${PV%_*}) /usr/$(get_libdir)/libruby$(get_libname ${PV%.*})
+	dosym libruby${SLOT/./}$(get_libname ${PV%_*}) /usr/$(get_libdir)/libruby$(get_libname ${PV%_*})
 
 	dodoc ChangeLog MANIFEST README* ToDo
 }
 
 pkg_postinst() {
-	if ! use ppc-macos ; then
-		ewarn
-		ewarn "Warning: Vim won't work if you've just updated ruby from"
-		ewarn "1.6.x to 1.8.x due to the library version change."
-		ewarn "In that case, you will need to remerge vim."
-		ewarn
+	ewarn
+	ewarn "Warning: Vim won't work if you've just updated ruby from"
+	ewarn "1.6.x to 1.8.x due to the library version change."
+	ewarn "In that case, you will need to remerge vim."
+	ewarn
 
-		if [ ! -n "$(readlink ${ROOT}usr/bin/ruby)" ] ; then
-			${ROOT}usr/sbin/ruby-config ruby${SLOT/./}
-		fi
-		einfo
-		einfo "You can change the default ruby interpreter by ${ROOT}usr/sbin/ruby-config"
-		einfo
+	if [ ! -n "$(readlink ${ROOT}usr/bin/ruby)" ] ; then
+		${ROOT}usr/sbin/ruby-config ruby${SLOT/./}
 	fi
+	einfo
+	einfo "You can change the default ruby interpreter by ${ROOT}usr/sbin/ruby-config"
+	einfo
 }
 
 pkg_postrm() {
-	if ! use ppc-macos ; then
-		if [ ! -n "$(readlink ${ROOT}usr/bin/ruby)" ] ; then
-			${ROOT}usr/sbin/ruby-config ruby${SLOT/./}
-		fi
+	if [ ! -n "$(readlink ${ROOT}usr/bin/ruby)" ] ; then
+		${ROOT}usr/sbin/ruby-config ruby${SLOT/./}
 	fi
 }
