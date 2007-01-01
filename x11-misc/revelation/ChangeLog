@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/revelation
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.1 2006/12/29 11:42:55 nyhm Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.2 2007/01/01 11:33:24 dertobi123 Exp $
+
+  01 Jan 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  revelation-0.4.7.ebuild:
+  Added ~ppc
 
 *revelation-0.4.7 (29 Dec 2006)
 
