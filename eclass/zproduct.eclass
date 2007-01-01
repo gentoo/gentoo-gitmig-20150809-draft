@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.25 2006/12/29 00:54:57 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.26 2007/01/01 22:27:01 swegener Exp $
 # Author: Jason Shoemaker <kutsuya@gentoo.org>
 
 # This eclass is designed to streamline the construction of
@@ -99,12 +99,12 @@ zproduct_pkg_postinst() {
 
 	einfo "Attention: ${PF} was not installed in any instance! Use 'zprod-manager add'"
 	#disabled by radek@20061228 - contact me in case of any question!
-    #${ROOT}/usr/sbin/zprod-manager add ${ZP_DIR}/${PF}
+	#${ROOT}/usr/sbin/zprod-manager add ${ZP_DIR}/${PF}
 }
 
 zproduct_pkg_prerm() {
 	# checks how many times product is installed and informs about it
-    # it does not remove it (change in behaviour done by radek@20061228)
+	# it does not remove it (change in behaviour done by radek@20061228)
 	debug-print-function ${FUNCNAME} ${*}
 	ZINST_LST=$(ls /var/lib/zope/)
 	if [ "${ZINST_LST}" ] ; then
@@ -129,8 +129,8 @@ zproduct_pkg_prerm() {
 		if [ $ARE_INSTALLED -gt 0 ]
 		then
 			ewarn "Detected at least $ARE_INSTALLED copies of product being unmerged."
-            ewarn "Please manually remove it from instances using 'zprod-manager del'"
-            ewarn "Product is removed from ${ZP_DIR} but not from instances!"
+			ewarn "Please manually remove it from instances using 'zprod-manager del'"
+			ewarn "Product is removed from ${ZP_DIR} but not from instances!"
 		fi
 	fi
 }

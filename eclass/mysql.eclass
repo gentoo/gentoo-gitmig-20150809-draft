@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.52 2006/12/29 20:49:14 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.53 2007/01/01 22:27:01 swegener Exp $
 
 # Author: Francesco Riosa <vivo@gentoo.org>
 # Maintainer: Luca Longinotti <chtekk@gentoo.org>
@@ -152,7 +152,7 @@ bitkeeper_fetch() {
 	einfo "   working copy: ${wc_path}"
 	cd "${wc_path}"
 	rsync -rlpgo --exclude="BK/" . "${S}" || die "BK: can't export to ${S}."
-	
+
 	echo
 	popd
 
@@ -432,7 +432,7 @@ pbxt_src_install() {
 mysql_pkg_setup() {
 	enewgroup mysql 60 || die "problem adding 'mysql' group"
 	enewuser mysql 60 -1 /dev/null mysql || die "problem adding 'mysql' user"
-	
+
 	# Check for USE flag problems in pkg_setup
 	if useq "static" && useq "ssl" ; then
 		eerror "MySQL does not support being built statically with SSL support enabled!"
@@ -502,7 +502,7 @@ mysql_src_unpack() {
 
 	if mysql_version_is_at_least "5.1.12" ; then
 		rebuilddirlist="."
-		# TODO IMPO! Check this with a cmake expert 
+		# TODO IMPO! Check this with a cmake expert
 		useq "innodb" \
 		&& cmake \
 			-DCMAKE_C_COMPILER=$(which $(tc-getCC)) \

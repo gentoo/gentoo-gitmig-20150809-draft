@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql_fx.eclass,v 1.14 2006/12/29 20:34:02 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql_fx.eclass,v 1.15 2007/01/01 22:27:01 swegener Exp $
 
 # Author: Francesco Riosa <vivo@gentoo.org>
 # Maintainer: Francesco Riosa <vivo@gentoo.org>
@@ -81,17 +81,17 @@ mysql_version_is_at_least() {
 # THERE IS A COPY OF THIS ONE IN ESELECT-MYSQL, keep the two synced
 # crappy sorting file list per version
 mysql_make_file_list() {
-    local base="${1}-"
-    local n=( )
-    echo $( for i in $( ls -d ${1}-[[:digit:]]_[[:digit:]]{,[[:digit:]]}_[[:digit:]]{,[[:digit:]]} 2>/dev/null )
-    do
-        n=${i#${base}}
-        n=( ${n//_/ } )
-        # prepend the file name with its numeric version number to make
-        # it sortable
-        echo "$(( 100000 + ${n[0]} * 10000 + ${n[1]} * 100 + ${n[2]} ))$i"
+	local base="${1}-"
+	local n=( )
+	echo $( for i in $( ls -d ${1}-[[:digit:]]_[[:digit:]]{,[[:digit:]]}_[[:digit:]]{,[[:digit:]]} 2>/dev/null )
+	do
+		n=${i#${base}}
+		n=( ${n//_/ } )
+		# prepend the file name with its numeric version number to make
+		# it sortable
+		echo "$(( 100000 + ${n[0]} * 10000 + ${n[1]} * 100 + ${n[2]} ))$i"
 	# sort and cut the numeric version we added in the previous line
-    done | sort | cut -c 7- )
+	done | sort | cut -c 7- )
 }
 
 # THERE IS A COPY OF THIS ONE IN ESELECT-MYSQL, keep the two synced
