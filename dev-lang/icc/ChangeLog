@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/icc
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.36 2006/11/16 06:17:19 dberkholz Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.37 2007/01/01 15:32:24 drizzt Exp $
+
+  01 Jan 2007; Timothy Redaelli <drizzt@gentoo.org> icc-9.1.045.ebuild:
+  Added virtual/libstdc++ to RDEPENDS, acknowledged by Kugelfang.
 
 *icc-9.1.045 (16 Nov 2006)
 

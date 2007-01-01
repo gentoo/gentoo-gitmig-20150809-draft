@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-9.1.045.ebuild,v 1.1 2006/11/16 06:17:19 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-9.1.045.ebuild,v 1.2 2007/01/01 15:32:24 drizzt Exp $
 
 inherit rpm versionator
 
@@ -11,7 +11,8 @@ DESCRIPTION="Intel C++ Compiler - Intel's optimized compiler for Linux"
 SRC_URI="l_cc_c_${PV}.tar.gz"
 HOMEPAGE="http://www.intel.com/software/products/compilers/clin/"
 LICENSE="icc-9.0"
-RDEPEND=">=sys-libs/glibc-2.2.5"
+RDEPEND=">=sys-libs/glibc-2.2.5
+	virtual/libstdc++"
 SLOT="${MAJOR}.${MINOR}"
 MMV="${MAJOR}.${MINOR}"
 KEYWORDS="~amd64 ~x86 ~ia64"
