@@ -1,0 +1,88 @@
+--- configure
++++ configure
+@@ -13321,7 +13321,6 @@
+ 	echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6
+ else
+-	CXXFLAGS="$CXXFLAGS -g"
+ 	echo "$as_me:$LINENO: result: no" >&5
+ echo "${ECHO_T}no" >&6
+ fi
+--- etc/Makefile.in
++++ etc/Makefile.in
+@@ -216,15 +216,15 @@
+ 
+ # if !MINGW32
+ # Comply with xdg icon theme specification
+-icondir = $(prefix)/share/icons/hicolor/48x48/apps
++icondir = /usr/share/icons/hicolor/48x48/apps
+ icon_DATA = enigma.png
+ 
+ # Backwards-compatible global search location for images
+-pixmapdir = $(prefix)/share/pixmaps
++pixmapdir = /usr/share/pixmaps
+ pixmap_DATA = enigma.png
+ 
+ # Install .desktop file in xdg standard location
+-desktopdir = $(prefix)/share/applications
++desktopdir = /usr/share/applications
+ desktop_DATA = enigma.desktop
+ # endif !MINGW32
+ EXTRA_DIST = \
+--- lib-src/enet/include/Makefile.in
++++ lib-src/enet/include/Makefile.in
+@@ -126,7 +126,6 @@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-SUBDIRS = enet
+ all: all-recursive
+ 
+ .SUFFIXES:
+--- lib-src/enet/Makefile.in
++++ lib-src/enet/Makefile.in
+@@ -551,7 +551,7 @@
+ 	for dir in "$(DESTDIR)$(libdir)"; do \
+ 	  test -z "$$dir" || $(mkdir_p) "$$dir"; \
+ 	done
+-install: install-recursive
++install:
+ install-exec: install-exec-recursive
+ install-data: install-data-recursive
+ uninstall: uninstall-recursive
+--- Makefile.in
++++ Makefile.in
+@@ -239,10 +239,9 @@
+ #   tools -> lib-src/lua
+ #   src   -> tools, lib-src
+ #
+-SUBDIRS = m4 lib-src tools intl src data doc po etc
++SUBDIRS = m4 lib-src tools intl src data po etc
+ EXTRA_DIST = enigma CHANGES ACKNOWLEDGEMENTS
+ docdir = @datadir@/doc/enigma
+-doc_DATA = README CHANGES COPYING ACKNOWLEDGEMENTS
+ ACLOCAL_AMFLAGS = -I m4
+ all: all-recursive
+ 
+--- po/Makefile.in.in
++++ po/Makefile.in.in
+@@ -24,7 +24,7 @@
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+ datadir = @datadir@
+-localedir = $(datadir)/locale
++localedir = /usr/share/locale
+ gettextsrcdir = $(datadir)/gettext/po
+ 
+ INSTALL = @INSTALL@
+--- src/Makefile.in
++++ src/Makefile.in
+@@ -144,7 +144,7 @@
+ CXXDEPMODE = @CXXDEPMODE@
+ CXXFLAGS = @CXXFLAGS@\
+ 	-DSYSTEM_DATA_DIR=\"$(datadir)/enigma\" \
+-	-DLOCALEDIR=\"$(localedir)\" \
++	-DLOCALEDIR=\"/usr/share/locale\" \
+ 	-I$(top_srcdir)/lib-src/zipios++  \
+ 	-I$(top_builddir)/lib-src/zipios++ \
+ 	-I$(top_srcdir)/lib-src/lua \
