@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.0_rc2.ebuild,v 1.2 2006/10/17 13:35:20 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.0_rc2.ebuild,v 1.3 2007/01/01 13:29:31 centic Exp $
 
 inherit kde
 
@@ -8,7 +8,7 @@ MY_P=${P/_/-}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="Plugins for the KDE Image Plugin Interface (libkipi)."
-HOMEPAGE="http://extragear.kde.org/apps/kipi/"
+HOMEPAGE="http://www.kipi-plugins.org/"
 SRC_URI="mirror://sourceforge/kipi/${MY_P}.tar.bz2"
 
 SLOT="0"
