@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexif/libkexif-0.2.5.ebuild,v 1.1 2006/12/08 22:30:33 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexif/libkexif-0.2.5.ebuild,v 1.2 2007/01/01 13:24:25 centic Exp $
 
 inherit kde
 
 DESCRIPTION="A KDE library for loss-less EXIF operations."
-HOMEPAGE="http://extragear.kde.org/apps/kipi/"
+HOMEPAGE="http://www.kipi-plugins.org/"
 SRC_URI="mirror://sourceforge/kipi/${P}.tar.bz2"
 
 SLOT="0"

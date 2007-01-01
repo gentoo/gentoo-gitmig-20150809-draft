@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libkexif
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexif/ChangeLog,v 1.20 2007/01/01 10:40:04 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexif/ChangeLog,v 1.21 2007/01/01 13:24:25 centic Exp $
+
+  01 Jan 2007; Dominik Stadler <centic@gentoo.org> libkexif-0.1.ebuild,
+  libkexif-0.2.1.ebuild, libkexif-0.2.1-r1.ebuild, libkexif-0.2.2.ebuild,
+  libkexif-0.2.3.ebuild, libkexif-0.2.4.ebuild, libkexif-0.2.5.ebuild:
+  Set new homepage http://www.kipi-plugins.org/
 
   01 Jan 2007; Dominik Stadler <centic@gentoo.org> libkexif-0.1.ebuild,
   libkexif-0.2.1-r1.ebuild, libkexif-0.2.3.ebuild, libkexif-0.2.4.ebuild:
