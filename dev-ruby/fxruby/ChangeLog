@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/fxruby
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.31 2006/10/29 09:09:16 pclouds Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.32 2007/01/01 18:40:58 mabi Exp $
+
+*fxruby-1.6.4 (01 Jan 2007)
+*fxruby-1.4.7 (01 Jan 2007)
+
+  01 Jan 2007; Matti Bickel <mabi@gentoo.org> +fxruby-1.4.7.ebuild,
+  +fxruby-1.6.4.ebuild:
+  revision bumps (bug #88924)
 
   29 Oct 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
   -fxruby-1.0.25.ebuild, -fxruby-1.0.29-r1.ebuild:
