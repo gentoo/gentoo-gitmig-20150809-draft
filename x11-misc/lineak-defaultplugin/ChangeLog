@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/lineak-defaultplugin
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-defaultplugin/ChangeLog,v 1.14 2006/10/11 12:58:57 nelchael Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-defaultplugin/ChangeLog,v 1.15 2007/01/01 21:43:38 mabi Exp $
+
+  01 Jan 2007; Matti Bickel <mabi@gentoo.org>
+  lineak-defaultplugin-0.8.4.ebuild:
+  ppc stable (bug #146175)
 
   11 Oct 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   -lineak-defaultplugin-0.8.2.ebuild, -lineak-defaultplugin-0.8.3.ebuild:

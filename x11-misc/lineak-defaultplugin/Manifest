@@ -1,34 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-DIST lineak_defaultplugin-0.8.4.tar.gz 816045
+DIST lineak_defaultplugin-0.8.4.tar.gz 816045 RMD160 9129b03ad2e11f26fcdc6e5a0fd1e09c1072ded4 SHA1 67815d71f34fee90dda34b64200daf2b9bccf2c4 SHA256 f2c7c1278f6c550aaacd5da945d3c74b52fcbe64c6a9a1320a50402b25840ce4
 DIST lineak_defaultplugin-0.9.0-pre1.tar.gz 816063 RMD160 d410a3bcadafe28855d4746acdc93a03eed5d0cd SHA256 055d071536a780d345e2127f871d48dabf8e2582eed0de67a8630feb06afa83a
-EBUILD lineak-defaultplugin-0.8.4.ebuild 759 RMD160 fbeeb15741e6b749fa26e26ec51c7372e336353f SHA1 d8ac907159735e1d892da619f32891535fefedcc SHA256 35e37a7e17e56056d182f314c2a56cf66c8edd2db90a503f1cd0da55c051e704
-MD5 f3d06bd781902e96308dfd228e6e64ba lineak-defaultplugin-0.8.4.ebuild 759
-RMD160 fbeeb15741e6b749fa26e26ec51c7372e336353f lineak-defaultplugin-0.8.4.ebuild 759
-SHA256 35e37a7e17e56056d182f314c2a56cf66c8edd2db90a503f1cd0da55c051e704 lineak-defaultplugin-0.8.4.ebuild 759
+EBUILD lineak-defaultplugin-0.8.4.ebuild 757 RMD160 414b73664fc99bcec2c0889038ce4c13f721122a SHA1 e42e7b6a9e6b02d9d687fc3ead7ef72edb4e09e6 SHA256 7c8fcd058b0602a8b334d7d00ce758d54410a7d5eabdc931583c4a53f03fd40e
+MD5 393b234b11b7bda5b8d120e9b4df6542 lineak-defaultplugin-0.8.4.ebuild 757
+RMD160 414b73664fc99bcec2c0889038ce4c13f721122a lineak-defaultplugin-0.8.4.ebuild 757
+SHA256 7c8fcd058b0602a8b334d7d00ce758d54410a7d5eabdc931583c4a53f03fd40e lineak-defaultplugin-0.8.4.ebuild 757
 EBUILD lineak-defaultplugin-0.9.0_pre1.ebuild 804 RMD160 9d98476c9642800b71caf3b42eff49b82f255a0e SHA1 c303c4a48d4d8b5ec52c6964f50939b41f77bb67 SHA256 49cc16f6d51eccb428ef1e1813e633bf7f06b5db8f6e2c8fac25a85b0b3f6d1d
 MD5 7ca17a49b761ea69ca7ce1a8bd279d3c lineak-defaultplugin-0.9.0_pre1.ebuild 804
 RMD160 9d98476c9642800b71caf3b42eff49b82f255a0e lineak-defaultplugin-0.9.0_pre1.ebuild 804
 SHA256 49cc16f6d51eccb428ef1e1813e633bf7f06b5db8f6e2c8fac25a85b0b3f6d1d lineak-defaultplugin-0.9.0_pre1.ebuild 804
-MISC ChangeLog 2317 RMD160 a7460f0a5f16cf66dd119e986f8145d961eabe0b SHA1 144700209b31b885d4acf85bb2b51d2d439cd1d2 SHA256 bca2905aa3d0e4ce86625ff02819667a2e8b2bdf5b2617235b81e83ce60c7cdc
-MD5 e8e316ef2ebd25b3c6cc340185ff9e2d ChangeLog 2317
-RMD160 a7460f0a5f16cf66dd119e986f8145d961eabe0b ChangeLog 2317
-SHA256 bca2905aa3d0e4ce86625ff02819667a2e8b2bdf5b2617235b81e83ce60c7cdc ChangeLog 2317
+MISC ChangeLog 2424 RMD160 0d1a9994bdb952f1946a8379c370a9e7220cf9d1 SHA1 fa513e6faf08db7af2d6796f4c9496ede1ec09c3 SHA256 eb87de2c6dad4b30edcd46d0ad7c1a3ef6f2800eacea9ed05fb8e5f66f2a953b
+MD5 296bedd3a133dfea020e66e847bbb95f ChangeLog 2424
+RMD160 0d1a9994bdb952f1946a8379c370a9e7220cf9d1 ChangeLog 2424
+SHA256 eb87de2c6dad4b30edcd46d0ad7c1a3ef6f2800eacea9ed05fb8e5f66f2a953b ChangeLog 2424
 MISC metadata.xml 270 RMD160 62420b04d07196d1617a3f300d7ec26e13bd17c5 SHA1 301f7381dcf918a0ebf54528c56a7be2d0eb0ea9 SHA256 9f9f76a90432be25276e5c1a831efc9a202b2b97ea442a6bdd70777252cdff16
 MD5 9a7c58529f54db6737913da568c57e4a metadata.xml 270
 RMD160 62420b04d07196d1617a3f300d7ec26e13bd17c5 metadata.xml 270
 SHA256 9f9f76a90432be25276e5c1a831efc9a202b2b97ea442a6bdd70777252cdff16 metadata.xml 270
-MD5 3f2052e7536d406e9993552978201ce1 files/digest-lineak-defaultplugin-0.8.4 78
-RMD160 935c56df0c43c40ec44b2b44fd616e5473e2b451 files/digest-lineak-defaultplugin-0.8.4 78
-SHA256 8617434cffc5448482ec55291d6ac02b5ce9db7a80914c21fcd1760c5a05ac9f files/digest-lineak-defaultplugin-0.8.4 78
+MD5 2d924c4024d83f47101cd6f8aea5bb8d files/digest-lineak-defaultplugin-0.8.4 280
+RMD160 71acea01e3cc46e205c8af2f66f94aa6dd3d40e0 files/digest-lineak-defaultplugin-0.8.4 280
+SHA256 02913391dab566a47fb48acda47635afbf5e87ea71085b6ee033ada871ed3a2e files/digest-lineak-defaultplugin-0.8.4 280
 MD5 401c8dbd01ed3a2da0b893874e767f32 files/digest-lineak-defaultplugin-0.9.0_pre1 295
 RMD160 24ad9eb4d27b6b6e6071162c56b88bcc5a7e110f files/digest-lineak-defaultplugin-0.9.0_pre1 295
 SHA256 907dc3fa0e8e8a07b06c3960cc9f77260b0aee7db350753fd4630a757b7814dc files/digest-lineak-defaultplugin-0.9.0_pre1 295
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
+Version: GnuPG v1.4.6 (GNU/Linux)
 
-iD8DBQFFLOqzgo/w9rxVVVERAnAvAJ0fmQibmnetL+v+e4VxCkb0KEIvjgCaA000
-4iQ9SDE+a9tNf0LYNlN6pHk=
-=Smhi
+iD8DBQFFmYCPfNMcoUhJ7GwRAv8rAJwN2yhkaYwp9B6n1udhN0ydMz8RsACfTSOX
+U5Bg+El5hna+B+PJnuuFKwI=
+=jnHO
 -----END PGP SIGNATURE-----
