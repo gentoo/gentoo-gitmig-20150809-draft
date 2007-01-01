@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/libkipi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkipi/ChangeLog,v 1.19 2006/10/01 16:04:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkipi/ChangeLog,v 1.20 2007/01/01 10:25:12 centic Exp $
+
+*libkipi-0.1.5 (30 Dec 2006)
+
+  30 Dec 2006; Dominik Stadler <centic@gentoo.org> libkipi-0.1.ebuild,
+  libkipi-0.1.1.ebuild, libkipi-0.1.2.ebuild, libkipi-0.1.3.ebuild,
+  libkipi-0.1.4.ebuild, +libkipi-0.1.5.ebuild:
+  Update homepage to http://www.kipi-plugins.org/, add new version 0.1.5
+
+  30 Dec 2006; Dominik Stadler <centic@gentoo.org> libkipi-0.1.3.ebuild,
+  libkipi-0.1.4.ebuild:
+  Mark 0.1.3 and 0.1.4 stable on x86
 
   01 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> libkipi-0.1.4.ebuild:
   Make sure that pkgconfig is only a build-time dependency.
