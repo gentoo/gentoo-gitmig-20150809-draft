@@ -1,6 +1,5 @@
-diff -ur lineakd-0.8.4.orig/utils/Makefile.am lineakd-0.8.4/utils/Makefile.am
---- lineakd-0.8.4.orig/utils/Makefile.am	2005-12-25 00:38:38.000000000 +0100
-+++ lineakd-0.8.4/utils/Makefile.am	2005-12-25 00:39:33.000000000 +0100
+--- lineakd-0.8.4.orig/utils/Makefile.am	2005-08-01 06:42:32.000000000 +0200
++++ lineakd-0.8.4/utils/Makefile.am	2007-01-01 21:53:45.000000000 +0100
 @@ -52,22 +52,22 @@
  #install-data-local: send_to_keyboard.8.bz2 evtest.1.bz2 xsendkeycode.8.bz2 xsendkeys.8.bz2
  if EVTEST
@@ -12,9 +11,9 @@ diff -ur lineakd-0.8.4.orig/utils/Makefile.am lineakd-0.8.4/utils/Makefile.am
  else
  install-data-local: send_to_keyboard.8.bz2 xsendkeycode.8.bz2 xsendkeys.8.bz2
  endif
++	$(mkinstalldirs) $(DESTDIR)$(mandir)/man8/
  if SEND_TO_KEYBOARD
 -	$(mkinstalldirs) $(mandir)/man8/
-+	$(mkinstalldirs) $(DESTDIR)$(mandir)/man8/
  	chmod 755 $(DESTDIR)$(prefix)/sbin/send_to_keyboard
  	if test "$(HELPER_SUID)" != "no" ; then \
  	   chown root $(DESTDIR)$(prefix)/sbin/send_to_keyboard ; \
