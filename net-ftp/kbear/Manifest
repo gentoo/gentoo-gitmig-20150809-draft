@@ -1,6 +1,0 @@
-MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
-MD5 9806646d6cbaa1dc8e6b4ef3c7c243b9 ChangeLog 3073
-MD5 353631f97c6b9a4c5fbfe6630afc42ef kbear-2.1.1-r1.ebuild 1279
-MD5 1ba81f001901f16e706f51509efa1795 files/kbear-2.1.1-configure.patch 3567
-MD5 443afedd3087f5872adc90384c861095 files/digest-kbear-2.1.1-r1 71
-MD5 67ad0828ae3ed0456eb1df602e387fd3 files/kbear-2.1.1-gcc-3.4.patch 11736
