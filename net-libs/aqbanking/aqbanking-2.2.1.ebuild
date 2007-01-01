@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-2.2.1.ebuild,v 1.6 2006/11/06 20:59:27 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-2.2.1.ebuild,v 1.7 2007/01/01 13:21:13 mabi Exp $
 
 inherit kde-functions
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.aquamaniac.de/aqbanking/"
 SRC_URI="mirror://sourceforge/aqbanking/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ia64 ~ppc sparc x86"
+KEYWORDS="~alpha amd64 ia64 ppc sparc x86"
 IUSE="chipcard debug dtaus geldkarte hbci kde ofx python qt3 yellownet"
 DEPEND=">=sys-libs/gwenhywfar-2.4.0
 	>=app-misc/ktoblzcheck-1.11
