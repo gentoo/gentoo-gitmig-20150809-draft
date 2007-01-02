@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.2.5.ebuild,v 1.13 2007/01/02 14:36:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.2.5.ebuild,v 1.14 2007/01/02 17:12:58 flameeyes Exp $
 
 inherit libtool
 
@@ -19,6 +19,8 @@ IUSE=""
 
 RDEPEND=">=dev-libs/glib-2
 	|| ( virtual/aspell-dict app-text/ispell app-text/hspell app-text/hunspell )"
+
+# libtool is needed for the install-sh to work
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
@@ -26,6 +28,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	elibtoolize
+
+	# Update the install-sh as the version shipped by upstream
+	# will fail on FreeBSD systems
+	cp /usr/share/libtool/install-sh "${S}"
 }
 
 src_install() {
