@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/egroupware
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.59 2006/11/23 17:06:02 vivo Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.60 2007/01/02 21:59:26 rl03 Exp $
+
+*egroupware-1.2.106 (02 Jan 2007)
+
+  02 Jan 2007; Renat Lumpau <rl03@gentoo.org> +egroupware-1.2.106.ebuild:
+  Version bump
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org>
   egroupware-1.0.0.009_p3.ebuild, egroupware-1.2.104.ebuild,
