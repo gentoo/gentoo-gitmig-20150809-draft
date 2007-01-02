@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/nss-mdns
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/ChangeLog,v 1.13 2007/01/02 13:59:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/ChangeLog,v 1.14 2007/01/02 19:27:04 compnerd Exp $
+
+  02 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  -nss-mdns-0.7.ebuild:
+  prune old version
 
   02 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> nss-mdns-0.8-r1.ebuild:
   Add missing WANT_AUTOMAKE/WANT_AUTOCONF variables.
