@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/systemtap
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.2 2006/11/18 00:02:08 genstef Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.3 2007/01/02 15:19:47 beu Exp $
+
+  02 Jan 2007; Elfyn McBratney <beu@gentoo.org> systemtap-20061111.ebuild:
+  This snapshot requires >=elfutils-0.122; adjust DEPEND appropriately.
 
 *systemtap-20061111 (18 Nov 2006)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-20061111.ebuild,v 1.1 2006/11/18 00:02:08 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-20061111.ebuild,v 1.2 2007/01/02 15:19:47 beu Exp $
 
 inherit linux-info
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND=">=dev-libs/elfutils-0.116"
+DEPEND=">=dev-libs/elfutils-0.122"
 RDEPEND="${DEPEND}"
 
 CONFIG_CHECK="KPROBES RELAY"
