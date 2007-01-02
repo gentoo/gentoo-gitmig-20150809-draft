@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20060608-r1.ebuild,v 1.2 2006/12/20 18:04:08 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20060608-r1.ebuild,v 1.3 2007/01/02 22:06:04 dberkholz Exp $
 
 inherit eutils x11 linux-mod
 
@@ -163,11 +163,6 @@ set_vidcards() {
 	use kernel_linux && set_kvobj
 	use kernel_FreeBSD && KV_OBJ="ko"
 
-	POSSIBLE_VIDCARDS="mga tdfx r128 radeon i810 i830 i915 mach64 nv savage
-		sis via"
-	if use sparc; then
-		POSSIBLE_VIDCARDS="${POSSIBLE_VIDCARDS} ffb"
-	fi
 	VIDCARDS=""
 
 	if [[ -n "${VIDEO_CARDS}" ]]; then
@@ -193,10 +188,6 @@ set_vidcards() {
 			VIDCARDS="${VIDCARDS} ffb.${KV_OBJ}"
 		use video_cards_tdfx && \
 			VIDCARDS="${VIDCARDS} tdfx.${KV_OBJ}"
-	else
-		for card in ${POSSIBLE_VIDCARDS}; do
-			VIDCARDS="${VIDCARDS} ${card}.${KV_OBJ}"
-		done
 	fi
 }
 
