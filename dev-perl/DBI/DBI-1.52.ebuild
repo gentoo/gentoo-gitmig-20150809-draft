@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/DBI-1.52.ebuild,v 1.8 2006/11/01 00:13:39 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/DBI-1.52.ebuild,v 1.9 2007/01/02 22:12:27 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -15,7 +15,7 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND=">=dev-perl/PlRPC-0.2
-	>=perl-core/Sys-Syslog-0.17
+	>=virtual/perl-Sys-Syslog-0.17
 	dev-lang/perl"
 
 mydoc="ToDo"

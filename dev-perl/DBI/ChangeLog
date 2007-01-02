@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DBI
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.77 2006/11/06 15:19:18 mcummings Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.78 2007/01/02 22:12:27 mcummings Exp $
+
+  02 Jan 2007; Michael Cummings <mcummings@gentoo.org> DBI-1.51-r1.ebuild,
+  DBI-1.52.ebuild, DBI-1.53.ebuild:
+  Bug 157684, virtual dep
 
 *DBI-1.53 (06 Nov 2006)
 
