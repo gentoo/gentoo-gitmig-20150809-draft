@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/trang/trang-20030619-r3.ebuild,v 1.2 2006/11/30 15:12:19 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/trang/trang-20030619-r3.ebuild,v 1.3 2007/01/02 04:58:19 ticho Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://thaiopensource.com/relaxng/trang.html"
 SRC_URI="http://www.thaiopensource.com/download/${P}.zip"
 LICENSE="BSD Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 x86"
 IUSE="doc source"
 
 COMMON_DEP="
