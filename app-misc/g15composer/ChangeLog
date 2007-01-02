@@ -1,6 +1,17 @@
 # ChangeLog for app-misc/g15composer
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15composer/ChangeLog,v 1.9 2006/12/06 19:52:39 jokey Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15composer/ChangeLog,v 1.10 2007/01/02 03:42:21 rbu Exp $
+
+*g15composer-3.1 (02 Jan 2007)
+
+  02 Jan 2007; Robert Buchholz <rbu@gentoo.org>
+  -files/g15composer-2.1.confd, -files/g15composer-2.1.initd,
+  +files/g15composer-3.0.2.confd, +files/g15composer-3.0.2.initd,
+  +files/g15composer-3.1.confd, +files/g15composer-3.1.initd, metadata.xml,
+  -g15composer-2.1-r1.ebuild, -g15composer-3.0.1.ebuild,
+  g15composer-3.0.2.ebuild, +g15composer-3.1.ebuild:
+  Bumping to 3.1, init supports running the composer as user. Removing some
+  old versions.
 
 *g15composer-3.0.2 (06 Dec 2006)
 
