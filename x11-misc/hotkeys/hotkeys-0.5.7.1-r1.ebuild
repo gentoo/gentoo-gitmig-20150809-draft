@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.7.1-r1.ebuild,v 1.12 2006/01/25 08:01:02 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.7.1-r1.ebuild,v 1.13 2007/01/02 19:56:55 masterdriverz Exp $
 
 inherit eutils
 
@@ -12,7 +12,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~sparc amd64 ppc"
 
-DEPEND="|| ( x11-libs/libXmu virtual/x11 )
+DEPEND="|| ( ( x11-libs/libXmu 
+		x11-libs/libxkbfile )
+	virtual/x11 )
 	>=dev-libs/libxml2-2.2.8
 	=sys-libs/db-3.2*
 	xosd? ( >=x11-libs/xosd-1.0.0 )
