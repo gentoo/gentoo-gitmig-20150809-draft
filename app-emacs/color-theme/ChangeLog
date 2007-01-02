@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/color-theme
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/ChangeLog,v 1.21 2006/08/08 04:58:27 mkennedy Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/ChangeLog,v 1.22 2007/01/02 21:54:19 flameeyes Exp $
+
+  02 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  color-theme-6.6.0.ebuild:
+  Add ~sparc-fbsd keyword.
 
 *color-theme-6.6.0 (08 Aug 2006)
 
