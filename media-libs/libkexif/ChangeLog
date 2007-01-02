@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libkexif
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexif/ChangeLog,v 1.21 2007/01/01 13:24:25 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexif/ChangeLog,v 1.22 2007/01/02 14:13:39 gustavoz Exp $
+
+  02 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> libkexif-0.2.4.ebuild:
+  Stable on sparc
 
   01 Jan 2007; Dominik Stadler <centic@gentoo.org> libkexif-0.1.ebuild,
   libkexif-0.2.1.ebuild, libkexif-0.2.1-r1.ebuild, libkexif-0.2.2.ebuild,

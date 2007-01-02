@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexif/libkexif-0.2.4.ebuild,v 1.3 2007/01/01 13:24:25 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexif/libkexif-0.2.4.ebuild,v 1.4 2007/01/02 14:13:39 gustavoz Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/kipi/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc sparc x86"
 IUSE=""
 
 RDEPEND=">=media-libs/libexif-0.6.9"
