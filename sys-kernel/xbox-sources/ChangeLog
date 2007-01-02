@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/xbox-sources
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/ChangeLog,v 1.45 2006/10/14 11:38:06 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/ChangeLog,v 1.46 2007/01/02 02:16:50 dsd Exp $
+
+  02 Jan 2007; Daniel Drake <dsd@gentoo.org> -xbox-sources-2.4.32-r1.ebuild:
+  remove 2.4 version, this has been masked for a long time
 
   14 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove gimli from metadata.xml due to retiring.
