@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/camfr
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/ChangeLog,v 1.3 2006/07/30 16:29:07 swegener Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/ChangeLog,v 1.4 2007/01/02 15:14:45 pbienst Exp $
+
+  02 Jan 2007; <pbienst@gentoo.org> camfr-1.2.ebuild:
+  Remove unused use flag.
 
   02 Jul 2006; Luis Medinas <metalgod@gentoo.org> metadata.xml:
   Update metadata to sci-physics.

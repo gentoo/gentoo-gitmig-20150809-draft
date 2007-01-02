@@ -1,11 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-1.2.ebuild,v 1.1 2006/07/02 22:59:39 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-1.2.ebuild,v 1.2 2007/01/02 15:14:45 pbienst Exp $
 
 inherit eutils distutils fortran
 
 S=${WORKDIR}/camfr_${PV}
-IUSE="ifc"
 DESCRIPTION="Full vectorial Maxwell solver based on eigenmode expansion"
 SRC_URI="mirror://sourceforge/camfr/${P}.tgz"
 HOMEPAGE="http://camfr.sourceforge.net/"
