@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugs-bug-genie/bugs-bug-genie-1.7.2.ebuild,v 1.2 2006/11/23 16:27:36 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugs-bug-genie/bugs-bug-genie-1.7.2.ebuild,v 1.3 2007/01/02 22:17:23 rl03 Exp $
 
 inherit webapp
 S=${WORKDIR}/bugs_${PV}
 
-IUSE="mysql"
+IUSE=""
 
 DESCRIPTION="BUGS - The Bug Genie"
 HOMEPAGE="http://bugs-bug-genie.sourceforge.net/"
@@ -15,8 +15,7 @@ KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND="app-arch/unzip"
 RDEPEND=">=net-www/apache-1.3
-		virtual/php
-		mysql? ( >=virtual/mysql-4.0 )"
+		virtual/php"
 
 LICENSE="MPL-1.1"
 
