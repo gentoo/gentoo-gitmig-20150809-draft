@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6523 2007/01/02 06:47:38 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6524 2007/01/02 18:24:52 masterdriverz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -297,22 +297,11 @@ media-video/vls
 # Masked for testing.
 =media-libs/spandsp-0.0.3*
 
-# Steve Dibb <beandog@gentoo.org> (26 Nov 2006)
-# Deprecated: upstream dead, unsupported, doesn't compile anymore.
-# Pending removal Dec 26
-# See #146571
-net-p2p/gtkhx
-
 # Hans de Graaff <graaff@gentoo.org> (26 Nov 2006)
 # No longer maintained, dropped by upstream, author
 # recommends using app-xemacs/riece instead, will remove 
 # in a month.
 app-xemacs/liece
-
-# Charlie Shepherd <masterdriverz@gentoo.org> (25 Nov 2006)
-# Won't compile - bug 152525, nothing depends on it, 
-# no upstream release since 2003, will remove on Christmas Day! :)
-net-ftp/kbear
 
 # Kevin F. Quinn <kevquinn@gentoo.org> (21 Nov 2006)
 # Mask for initial testing; bug #125366
