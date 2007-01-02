@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.2.5.ebuild,v 1.12 2007/01/02 01:17:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.2.5.ebuild,v 1.13 2007/01/02 14:36:15 flameeyes Exp $
 
 inherit libtool
 
@@ -29,6 +29,6 @@ src_unpack() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake -j1 DESTDIR="${D}" install || die
 	dodoc AUTHORS BUGS ChangeLog HACKING MAINTAINERS NEWS README TODO
 }

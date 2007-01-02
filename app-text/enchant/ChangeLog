@@ -1,6 +1,9 @@
 # ChangeLog for app-text/enchant
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.64 2007/01/02 01:17:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.65 2007/01/02 14:36:15 flameeyes Exp $
+
+  02 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> enchant-1.2.5.ebuild:
+  Fails to install with -j4, so force -j1 during install.
 
   02 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> enchant-1.2.5.ebuild:
   Run elibtoolize, as the package installs a shared library.
