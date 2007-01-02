@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mambo
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/ChangeLog,v 1.28 2006/11/23 17:15:39 vivo Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/ChangeLog,v 1.29 2007/01/02 22:36:43 rl03 Exp $
+
+  02 Jan 2007; Renat Lumpau <rl03@gentoo.org> -mambo-4.5.4-r2.ebuild,
+  mambo-4.6.1.ebuild:
+  Drop mysql dep wrt bug #159781
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> mambo-4.5.4-r2.ebuild,
   mambo-4.6.1.ebuild:
