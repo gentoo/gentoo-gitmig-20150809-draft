@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/phpmyadmin
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.228 2006/11/25 15:24:48 kloeri Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.229 2007/01/02 22:12:56 rl03 Exp $
+
+  02 Jan 2007; Renat Lumpau <rl03@gentoo.org> -phpmyadmin-2.9.0.3.ebuild,
+  -phpmyadmin-2.9.1.ebuild, phpmyadmin-2.9.1.1.ebuild:
+  Housekeeping. Drop mysql dep per bug #159781.
 
   25 Nov 2006; Bryan Østergaard <kloeri@gentoo.org>
   phpmyadmin-2.9.1.1.ebuild:
