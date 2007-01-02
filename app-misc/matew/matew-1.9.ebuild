@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/matew/matew-1.9.ebuild,v 1.5 2006/06/18 00:16:39 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/matew/matew-1.9.ebuild,v 1.6 2007/01/02 23:10:13 rl03 Exp $
 
 DESCRIPTION="Make Album The Easy Way"
 HOMEPAGE="http://matew.sourceforge.net/"
@@ -29,6 +29,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Matew files installed successfully!"
-	einfo "Run matew-wizard and read instructions."
+	elog "Matew files installed successfully!"
+	elog "Run matew-wizard and read instructions."
 }
