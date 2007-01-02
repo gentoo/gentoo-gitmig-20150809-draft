@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/dpkg
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.42 2006/08/18 21:34:22 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.43 2007/01/02 14:20:33 masterdriverz Exp $
+
+*dpkg-1.13.24 (02 Jan 2007)
+
+  02 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  -files/dpkg-1.10.26.patch, -files/dpkg-1.10.27.gcc4.patch,
+  -dpkg-1.10.28.ebuild, +dpkg-1.13.24.ebuild:
+  Bump to 1.13.24, remove old cruft; bug 144355
 
   18 Aug 2006; Bryan Østergaard <kloeri@gentoo.org> dpkg-1.13.11.ebuild:
   Stable on alpha.
