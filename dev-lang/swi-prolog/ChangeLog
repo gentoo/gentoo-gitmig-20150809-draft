@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.56 2007/01/01 05:01:30 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.57 2007/01/02 05:54:00 keri Exp $
+
+  02 Jan 2007; keri <keri@gentoo.org>
+  +files/swi-prolog-semweb-bitmatrix.patch, swi-prolog-5.6.25.ebuild:
+  Fix bitmatrix handling in semweb package.
 
   01 Jan 2007; keri <keri@gentoo.org>
   +files/swi-prolog-ssl-SIO_FLUSHOUTPUT.patch, swi-prolog-5.6.25.ebuild:

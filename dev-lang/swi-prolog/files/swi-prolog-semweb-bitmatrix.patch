@@ -1,0 +1,20 @@
+--- pl-5.6.25.orig/packages/semweb/rdf_db.c	2006-11-27 22:08:01.000000000 +1300
++++ pl-5.6.25/packages/semweb/rdf_db.c	2007-01-02 18:30:50.000000000 +1300
+@@ -1025,7 +1025,7 @@
+   int word = ij/WSIZE;
+   int bit  = ij%WSIZE;
+ 
+-  m->bits[word] |= 1<<(bit-1);
++  m->bits[word] |= 1<<bit;
+ }
+ 
+ 
+@@ -1035,7 +1035,7 @@
+   int word = ij/WSIZE;
+   int bit  = ij%WSIZE;
+ 
+-  return ((m->bits[word] & (1<<(bit-1))) != 0);
++  return ((m->bits[word] & (1<<bit)) != 0);
+ }
+ 
+ 
