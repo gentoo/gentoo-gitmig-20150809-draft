@@ -1,8 +1,0 @@
-# /etc/conf.d/g15composer: Configuration for the g15composer
-
-# The CONTROL_FIFO is the name of the FIFO that g15composer listens to.
-# It does not create a screen on the display, but allows programs to
-# create their own non-virtual screens.
-# Please make sure the file specified does not exist.
-
-CONTROL_FIFO="/var/run/g15composer"
