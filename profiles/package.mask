@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6524 2007/01/02 18:24:52 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6525 2007/01/02 19:05:52 masterdriverz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ## 
+
+
+# Charlie Shepherd <masterdriverz@gentoo.org> (02 Jan 2006)
+# Mask pending removal 2nd Feb; bug 159738. Already in latest stable samba
+net-misc/smbget
 
 # Ryan Hill <dirtyepic@gentoo.org> (02 Jan 2006)
 # Mask for testing with Seamonkey / FF 2.0
