@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.18.6.ebuild,v 1.9 2006/11/23 16:29:29 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.18.6.ebuild,v 1.10 2007/01/02 22:20:03 rl03 Exp $
 
 inherit webapp
 
@@ -11,12 +11,11 @@ HOMEPAGE="http://www.bugzilla.org"
 LICENSE="MPL-1.1 NPL-1.1"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 
-IUSE="apache2 mysql"
+IUSE="apache2"
 
 # http://www.bugzilla.org/docs218/html/stepbystep.html to verify dependancies
 # updated list of deps: http://www.bugzilla.org/releases/2.18/release-notes.html
 RDEPEND="
-	mysql? ( virtual/mysql )
 	>=dev-lang/perl-5.6.0
 	<=dev-perl/DBD-mysql-3.0002
 	>=dev-perl/AppConfig-1.52
