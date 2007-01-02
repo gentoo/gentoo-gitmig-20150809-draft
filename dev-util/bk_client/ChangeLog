@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/bk_client
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bk_client/ChangeLog,v 1.1 2007/01/02 11:15:53 vivo Exp $
+
+*bk_client-1.1 (02 Jan 2007)
+
+  02 Jan 2007; Francesco Riosa <vivo@gentoo.org> +metadata.xml,
+  +bk_client-1.1.ebuild:
+  Initial commit
+
