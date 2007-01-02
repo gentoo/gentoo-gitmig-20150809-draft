@@ -1,0 +1,10 @@
+# Copyright 2007 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/sparc/virtuals,v 1.1 2007/01/02 21:48:26 flameeyes Exp $
+
+# This file defines the virtuals that Gentoo/FreeBSD for SPARC64 needs
+# to modify respect the parent profile
+
+# KEEP THIS FILE SORTED ALPHABETICALLY OR RISK WRATH
+
+virtual/emacs			app-editors/emacs-cvs
