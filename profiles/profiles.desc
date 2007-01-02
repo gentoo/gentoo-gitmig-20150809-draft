@@ -105,7 +105,6 @@ x86		default-linux/x86/2006.1/desktop		stable
 
 # Gentoo/FreeBSD Profiles
 sparc-fbsd	default-bsd/fbsd/6.2/sparc			dev
-x86-fbsd	default-bsd/fbsd/6.1/x86			dev
 x86-fbsd	default-bsd/fbsd/6.2/x86			dev
 
 
