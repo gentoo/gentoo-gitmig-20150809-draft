@@ -1,6 +1,11 @@
 # ChangeLog for app-text/po4a
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.14 2006/10/21 02:00:22 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.15 2007/01/02 22:07:47 mcummings Exp $
+
+*po4a-0.29 (02 Jan 2007)
+
+  02 Jan 2007; Michael Cummings <mcummings@gentoo.org> +po4a-0.29.ebuild:
+  Version bump, bug 158201, thanks to Nils Kneuper
 
   21 Oct 2006; Michael Cummings <mcummings@gentoo.org> po4a-0.25.ebuild:
   sparc stable
