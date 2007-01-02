@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.2.1.ebuild,v 1.4 2006/08/29 17:39:41 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.2.1.ebuild,v 1.5 2007/01/02 01:18:09 flameeyes Exp $
 
-inherit gnome2 eutils mono
+inherit gnome2 eutils mono libtool
 
 IUSE="doc ipv6 mono"
 DESCRIPTION="Utilities for creating and parsing messages using MIME"
@@ -42,13 +42,15 @@ src_unpack() {
 		-e 's:^prefix=:exec_prefix=:' \
 		-e 's:prefix)/lib:libdir):' \
 		mono/gmime-sharp.pc.in mono/Makefile.{am,in} || die "sed failed (2)"
+
+	elibtoolize
 }
 
 src_compile() {
 	econf \
-	    `use_enable ipv6` \
+		`use_enable ipv6` \
 		`use_enable mono` \
-	    `use_enable doc gtk-doc` || die "configure failed"
+		`use_enable doc gtk-doc` || die "configure failed"
 	MONO_PATH=${S} emake -j1 || die
 }
 
