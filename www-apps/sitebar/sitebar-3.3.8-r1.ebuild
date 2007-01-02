@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/sitebar-3.3.8-r1.ebuild,v 1.3 2006/11/23 17:29:00 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/sitebar-3.3.8-r1.ebuild,v 1.4 2007/01/02 22:53:41 rl03 Exp $
 
 inherit webapp eutils
 
@@ -11,15 +11,14 @@ DESCRIPTION="The Bookmark Server for Personal and Team Use"
 HOMEPAGE="http://sitebar.sourceforge.net/"
 KEYWORDS="~amd64 ppc ~x86"
 
-IUSE="mysql"
+IUSE=""
 MY_PN=${PN/sitebar/SiteBar}
 S=${WORKDIR}/${MY_PN}-${PV}
 
 SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-${PV}.tar.bz2"
 
 DEPEND="net-www/apache
-		virtual/php
-		mysql? ( virtual/mysql )"
+		virtual/php"
 LICENSE="GPL-2"
 
 src_unpack() {

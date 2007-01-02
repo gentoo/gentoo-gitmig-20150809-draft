@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mantisbt
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.37 2006/11/23 17:16:29 vivo Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.38 2007/01/02 22:37:55 rl03 Exp $
+
+  02 Jan 2007; Renat Lumpau <rl03@gentoo.org> mantisbt-1.0.6.ebuild:
+  Drop mysql dep wrt bug 159781
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> mantisbt-1.0.6.ebuild:
   dev-db/mysql => virtual/mysql

@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/online-bookmarks
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/online-bookmarks/ChangeLog,v 1.10 2006/11/23 17:20:29 vivo Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/online-bookmarks/ChangeLog,v 1.11 2007/01/02 22:42:45 rl03 Exp $
+
+  02 Jan 2007; Renat Lumpau <rl03@gentoo.org> online-bookmarks-0.6.9.ebuild:
+  Drop mysql dep wrt bug 159781
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org>
   online-bookmarks-0.6.9.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.1.6.ebuild,v 1.12 2006/11/23 17:19:01 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.1.6.ebuild,v 1.13 2007/01/02 22:39:53 rl03 Exp $
 
 inherit webapp
 MY_P=${P/-/}
@@ -15,7 +15,6 @@ SRC_URI="http://download.metadot.com/${MY_P}.tar.gz"
 KEYWORDS="~x86 ppc"
 
 RDEPEND="
-	virtual/mysql
 	>=net-www/apache-1.3.6
 	>=dev-lang/perl-5.005
 	>=www-apache/mod_perl-1.21

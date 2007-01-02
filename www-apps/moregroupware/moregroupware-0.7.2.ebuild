@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moregroupware/moregroupware-0.7.2.ebuild,v 1.6 2006/11/23 17:19:53 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moregroupware/moregroupware-0.7.2.ebuild,v 1.7 2007/01/02 22:41:13 rl03 Exp $
 
 inherit webapp
 
@@ -15,12 +15,7 @@ KEYWORDS="~x86 ppc"
 IUSE=""
 
 RDEPEND="virtual/php
-	virtual/mysql
 	net-www/apache"
-
-src_compile() {
-	:;
-}
 
 src_install() {
 	webapp_src_preinst
