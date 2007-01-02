@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/roundup
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.9 2006/11/25 03:05:37 beandog Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.10 2007/01/02 03:00:42 rl03 Exp $
+
+*roundup-1.3.2 (02 Jan 2007)
+
+  02 Jan 2007; Renat Lumpau <rl03@gentoo.org> +roundup-1.3.2.ebuild:
+  Version bump, bug #130816.
 
   25 Nov 2006; Steve Dibb <beandog@gentoo.org> metadata.xml:
   Add to web-apps herd, fix copyright header
