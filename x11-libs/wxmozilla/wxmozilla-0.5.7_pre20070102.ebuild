@@ -1,21 +1,29 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxmozilla/wxmozilla-0.5.7_pre20070102.ebuild,v 1.1 2007/01/02 09:01:35 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxmozilla/wxmozilla-0.5.7_pre20070102.ebuild,v 1.2 2007/01/02 21:47:53 dirtyepic Exp $
 
 inherit eutils wxwidgets
 
-IUSE="doc firefox python"
+# Currently force building against firefox.  Seamonkey is supported but
+# crashes.  Upstream will fix and release as 0.5.7. bug #130969
+#IUSE="doc firefox python"
+IUSE="doc python"
 
 DESCRIPTION="Mozilla widget for wxWindows"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 HOMEPAGE="http://wxmozilla.sourceforge.net/"
 
+#DEPEND="
+#	=x11-libs/wxGTK-2.6*
+#	firefox? ( >=www-client/mozilla-firefox-2.0 )
+#	!firefox?	( >=www-client/seamonkey-1.0.0 )
+#	python?	( dev-lang/python
+#			>=dev-python/wxpython-2.6.3 )"
 DEPEND="
-	=x11-libs/wxGTK-2.6*
-	firefox? ( >=www-client/mozilla-firefox-2.0 )
-	!firefox?	( >=www-client/seamonkey-1.0.0 )
-	python?	( dev-lang/python
-			>=dev-python/wxpython-2.6.3 )"
+   =x11-libs/wxGTK-2.6*
+   >=www-client/mozilla-firefox-2.0
+   python? ( dev-lang/python
+           >=dev-python/wxpython-2.6.3 )"
 
 SLOT="0"
 LICENSE="wxWinLL-3"
@@ -32,33 +40,21 @@ src_compile() {
 
 	# Current Problems:
 	#   -can't find wx-config without the funky configure option
-	#	-can't find wxpython
-	#		configure runs:
-	#			wxpyvername=`$PYTHON -c "from wx.build.config import getExtraPath; print getExtraPath(addOpts=1)"
-	#		python replies:
-	#			sh: wx-config: command not found
-	#			sh: wx-config: command not found
-	#			sh: wx-config: command not found
-	#			sh: wx-config: command not found
-	#			sh: wx-config: command not found
+	#   -configure will give a warning about wxpython, but it can be ignored.
 
 	# Currently Working:
 	#
-	#	USE="-python" builds against seamonkey-1.0.7
-	#   USE="python" builds against seamonkey-1.0.7 but i'm not sure everything's
-	#   	installed correctly.
-
-	# Currently Testing:
-	#	FF 2.0
+	# Firefox 2.0 support.  Builds against seamonkey-1.0.7 but crashes
 
 	WX_GTK_VER="2.6"
 	need-wxwidgets unicode
 
-	if use firefox; then
-		myconf="--enable-firefox --disable-seamonkey"
-	else
-		myconf="--disable-firefox --enable-seamonkey"
-	fi
+	#if use firefox; then
+	#	myconf="--enable-firefox --disable-seamonkey"
+	#else
+	#	myconf="--disable-firefox --enable-seamonkey"
+	#fi
+	myconf="--enable-firefox --disable-seamonkey"
 
 	econf \
 		$(use_enable python) \
@@ -74,7 +70,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
 
 	if use doc; then
-		dodoc README
+		dodoc README Changelog NEWS
 		newdoc demo/main.cpp example.cpp
 		use python && dodoc wxPython/demo/*.py
 	fi
