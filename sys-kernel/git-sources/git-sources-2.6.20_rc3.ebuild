@@ -1,11 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/git-sources-2.6.20_rc3.ebuild,v 1.1 2007/01/01 17:57:59 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/git-sources-2.6.20_rc3.ebuild,v 1.2 2007/01/02 01:45:16 dsd Exp $
 
 UNIPATCH_STRICTORDER="yes"
 K_NOUSENAME="yes"
 K_NOSETEXTRAVERSION="yes"
 K_NOUSEPR="yes"
+K_SECURITY_UNSUPPORTED="yes"
 ETYPE="sources"
 CKV="${PVR/-r/-git}"
 # only use this if it's not an _rc/_pre release

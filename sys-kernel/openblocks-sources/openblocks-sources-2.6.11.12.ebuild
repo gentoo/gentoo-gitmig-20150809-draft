@@ -1,8 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openblocks-sources/openblocks-sources-2.6.11.12.ebuild,v 1.1 2005/09/22 14:43:52 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openblocks-sources/openblocks-sources-2.6.11.12.ebuild,v 1.2 2007/01/02 01:47:35 dsd Exp $
 
 ETYPE="sources"
+K_SECURITY_UNSUPPORTED="1"
 inherit kernel-2
 detect_version
 

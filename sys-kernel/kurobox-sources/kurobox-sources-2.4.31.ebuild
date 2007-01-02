@@ -1,9 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kurobox-sources/kurobox-sources-2.4.31.ebuild,v 1.1 2006/01/22 02:25:11 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kurobox-sources/kurobox-sources-2.4.31.ebuild,v 1.2 2007/01/02 01:46:06 dsd Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
+K_SECURITY_UNSUPPORTED="1"
 inherit kernel-2 eutils
 
 #TIMESTAMP="20050527"

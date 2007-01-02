@@ -1,10 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/xbox-sources-2.6.16.26.ebuild,v 1.1 2006/07/19 20:45:19 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/xbox-sources-2.6.16.26.ebuild,v 1.2 2007/01/02 01:49:25 dsd Exp $
 
 K_NOUSENAME="yes"
 K_NOSETEXTRAVERSION="yes"
 ETYPE='sources'
+K_SECURITY_UNSUPPORTED="1"
 inherit kernel-2
 detect_arch
 detect_version

@@ -1,8 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sh-sources/sh-sources-2.6.16.20.ebuild,v 1.1 2006/07/03 01:26:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sh-sources/sh-sources-2.6.16.20.ebuild,v 1.2 2007/01/02 01:48:39 dsd Exp $
 
 ETYPE="sources"
+K_SECURITY_UNSUPPORTED="1"
 K_NOUSENAME="yes"
 K_NOSETEXTRAVERSION="yes"
 inherit kernel-2

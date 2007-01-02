@@ -1,9 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.20_rc1-r1.ebuild,v 1.1 2006/12/16 22:20:59 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.20_rc1-r1.ebuild,v 1.2 2007/01/02 01:46:52 dsd Exp $
 
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
+K_SECURITY_UNSUPPORTED="1"
 
 ETYPE="sources"
 inherit kernel-2
