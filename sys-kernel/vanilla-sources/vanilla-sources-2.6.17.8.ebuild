@@ -1,9 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.6.17.8.ebuild,v 1.1 2006/08/12 14:43:21 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.6.17.8.ebuild,v 1.2 2007/01/02 02:02:31 dsd Exp $
 
 K_NOUSENAME="yes"
 K_NOSETEXTRAVERSION="yes"
+K_SECURITY_UNSUPPORTED="1"
 ETYPE="sources"
 inherit kernel-2
 detect_version
