@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.50.15.ebuild,v 1.10 2006/10/19 15:11:27 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.50.15.ebuild,v 1.11 2007/01/02 23:08:46 rl03 Exp $
 
 inherit eutils distutils
 
@@ -38,21 +38,21 @@ src_test() {
 	cd ${S}
 	distutils_python_version
 	if [[ $PYVER_MAJOR > 1 ]] && [[ $PYVER_MINOR > 3 ]] ; then
-		einfo "Running webapp-config doctests..."
+		elog "Running webapp-config doctests..."
 		if ! PYTHONPATH="." ${python} WebappConfig/tests/dtest.py; then
 			eerror "DocTests failed - please submit a bug report"
 			die "DocTesting failed!"
 		fi
 	else
-		einfo "Python version below 2.4! Disabling tests."
+		elog "Python version below 2.4! Disabling tests."
 	fi
 }
 
 pkg_postinst() {
 	echo
-	einfo "Now that you have upgraded webapp-config, you **must** update your"
-	einfo "config files in /etc/vhosts/webapp-config before you emerge any"
-	einfo "packages that use webapp-config."
+	elog "Now that you have upgraded webapp-config, you **must** update your"
+	elog "config files in /etc/vhosts/webapp-config before you emerge any"
+	elog "packages that use webapp-config."
 	echo
 	epause 5
 }
