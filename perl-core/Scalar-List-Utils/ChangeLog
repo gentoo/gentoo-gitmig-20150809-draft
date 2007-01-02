@@ -1,6 +1,12 @@
 # ChangeLog for perl-core/Scalar-List-Utils
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Scalar-List-Utils/ChangeLog,v 1.13 2006/11/28 22:22:46 dev-zero Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Scalar-List-Utils/ChangeLog,v 1.14 2007/01/02 15:27:58 mcummings Exp $
+
+*Scalar-List-Utils-1.19 (02 Jan 2007)
+
+  02 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  +Scalar-List-Utils-1.19.ebuild:
+  Version bump
 
   28 Nov 2006; Tiziano Müller <dev-zero@gentoo.org>
   Scalar-List-Utils-1.18.ebuild:
