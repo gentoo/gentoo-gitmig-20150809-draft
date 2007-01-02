@@ -1,6 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/nss-mdns-0.8-r1.ebuild,v 1.1 2006/12/30 07:21:20 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/nss-mdns-0.8-r1.ebuild,v 1.2 2007/01/02 13:59:45 flameeyes Exp $
+
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="1.9"
 
 inherit autotools eutils
 
@@ -42,7 +45,7 @@ pkg_postinst() {
 	ewarn
 	ewarn "You must modify your name service switch look up file to enable"
 	ewarn "multicast DNS lookups.  If you wish to resolve only IPv6 addresses"
-	ewarn "use mdns6.  For IPv4 addresses only, use mdns4.  To resolve both"
+	ewarn "use mdns6.  For IPv4 addresses only, use mdns4.	To resolve both"
 	ewarn "use mdns.  Keep in mind that mdns will be slower if there are no"
 	ewarn "IPv6 addresses published via mDNS on the network.  There are also"
 	ewarn "minimal (mdns?_minimal) libraries which only lookup .local hosts"
