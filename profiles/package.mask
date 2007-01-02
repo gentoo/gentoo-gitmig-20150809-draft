@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6521 2007/01/01 16:59:09 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6522 2007/01/02 02:18:17 dsd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -718,11 +718,6 @@ app-admin/eselect-compiler
 # Security mask
 # Bug #132821
 mail-filter/libspf
-
-# Tim Yamin <plasmaroo@gentoo.org> (07 Aug 2006)
-# Security mask
-# Bug #138617
-<sys-kernel/xbox-sources-2.6
 
 # Tim Yamin <plasmaroo@gentoo.org> (07 Aug 2006)
 # Security mask
