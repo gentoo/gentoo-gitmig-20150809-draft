@@ -1,6 +1,15 @@
 # ChangeLog for app-office/taskjuggler
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskjuggler/ChangeLog,v 1.4 2006/04/17 12:19:09 dertobi123 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskjuggler/ChangeLog,v 1.5 2007/01/02 20:59:40 tantive Exp $
+
+*taskjuggler-2.3.0 (02 Jan 2007)
+*taskjuggler-2.2.0-r1 (02 Jan 2007)
+
+  02 Jan 2007; Michael Imhof <tantive@gentoo.org> -taskjuggler-2.1.1.ebuild,
+  -taskjuggler-2.1.1-r1.ebuild, -taskjuggler-2.2.0.ebuild,
+  +taskjuggler-2.2.0-r1.ebuild, +taskjuggler-2.3.0.ebuild:
+  Fixed USE logic. Bumped version. Cleaned out old ebuilds. Closes #144701,
+  #146701.
 
   17 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   taskjuggler-2.2.0.ebuild:
