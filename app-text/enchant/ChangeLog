@@ -1,6 +1,9 @@
 # ChangeLog for app-text/enchant
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.63 2006/09/08 19:15:25 tcort Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.64 2007/01/02 01:17:25 flameeyes Exp $
+
+  02 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> enchant-1.2.5.ebuild:
+  Run elibtoolize, as the package installs a shared library.
 
   08 Sep 2006; Thomas Cort <tcort@gentoo.org> enchant-1.2.5.ebuild:
   Stable on alpha wrt Bug #133939.
