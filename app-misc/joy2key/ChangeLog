@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/joy2key
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/joy2key/ChangeLog,v 1.14 2006/10/22 21:18:37 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/joy2key/ChangeLog,v 1.15 2007/01/02 16:31:40 masterdriverz Exp $
+
+  02 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  joy2key-1.6.1.ebuild:
+  Fix dependenices; bug 138316
 
   22 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> joy2key-1.6.ebuild,
   joy2key-1.6.1.ebuild:
