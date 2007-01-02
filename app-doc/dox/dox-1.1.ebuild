@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/dox-1.1.ebuild,v 1.17 2005/07/25 19:01:17 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/dox-1.1.ebuild,v 1.18 2007/01/02 15:55:10 masterdriverz Exp $
 
 inherit qt3
 
@@ -13,22 +13,20 @@ LICENSE="GPL-2"
 IUSE=""
 KEYWORDS="x86 ppc"
 
-RDEPEND="=x11-libs/qt-3*"
-DEPEND="www-misc/htdig"
+DEPEND="www-misc/htdig
+	$(qt_min_version 3)"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	cp configure configure.new
-	cat configure | sed -e 's:/opt/www/htdig/bin/htdig:/usr/bin/htdig:g' \
+	sed -e 's:/opt/www/htdig/bin/htdig:/usr/bin/htdig:g' \
 	-e 's:/opt/www/htdig/bin/htmerge:/usr/bin/htmerge:g' \
-	-e 's:/opt/www/cgi-bin/htsearch:/home/httpd/cgi-bin/htsearch:g' > configure.new
-	mv configure.new configure
+	-e 's:/opt/www/cgi-bin/htsearch:/home/httpd/cgi-bin/htsearch:g' -i configure
 }
 
 src_compile() {
-	./configure -prefix /usr || die
-	make all || die
+	econf || die
+	emake all || die
 	mv stl/stl.toc stl/STL.toc
 	mv stl/stl.index stl/STL.index
 	mv data/perl.toc data/Perl.toc

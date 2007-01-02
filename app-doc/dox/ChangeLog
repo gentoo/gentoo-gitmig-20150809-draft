@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/dox
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/ChangeLog,v 1.10 2005/07/25 19:01:17 caleb Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/ChangeLog,v 1.11 2007/01/02 15:55:10 masterdriverz Exp $
+
+  02 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org> dox-1.1.ebuild:
+  Fix dependencies; bug 151226
 
   25 Jul 2005; Caleb Tennis <caleb@gentoo.org> dox-1.1.ebuild:
   Change qt dep per bug #100235
