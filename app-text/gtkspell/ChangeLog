@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gtkspell
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.50 2006/11/22 11:05:33 foser Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.51 2007/01/02 01:16:33 flameeyes Exp $
+
+  02 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  gtkspell-2.0.11-r1.ebuild:
+  Properly handle autotools rebuilding, fix quoting.
 
   22 Nov 2006; Marinus Schraal <foser@gentoo.org> gtkspell-2.0.11-r1.ebuild,
   gtkspell-2.0.11-nonls.patch :

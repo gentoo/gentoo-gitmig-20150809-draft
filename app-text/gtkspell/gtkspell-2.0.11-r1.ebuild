@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.11-r1.ebuild,v 1.4 2006/11/22 11:05:33 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.11-r1.ebuild,v 1.5 2007/01/02 01:16:33 flameeyes Exp $
 
-inherit libtool eutils
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit libtool eutils autotools
 
 DESCRIPTION="Spell checking widget for GTK2"
 HOMEPAGE="http://gtkspell.sourceforge.net/"
@@ -17,7 +20,6 @@ RDEPEND=">=x11-libs/gtk+-2
 	>=app-text/enchant-1.1.6"
 
 DEPEND="${RDEPEND}
-	sys-devel/autoconf
 	dev-util/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1
 		=app-text/docbook-xml-dtd-4.2* )"
@@ -26,16 +28,15 @@ src_unpack() {
 
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 
 	# use enchant as backend
-	epatch ${FILESDIR}/${PN}-2.0.11-enchant.patch
+	epatch "${FILESDIR}/${PN}-2.0.11-enchant.patch"
 	# build on systems without nls (#134467)
-	epatch ${FILESDIR}/${PN}-2.0.11-nonls.patch
+	epatch "${FILESDIR}/${PN}-2.0.11-nonls.patch"
 
-	autoconf || die
-	libtoolize --copy --force
-
+	eautoreconf
+	elibtoolize
 }
 
 src_compile() {
@@ -47,7 +48,7 @@ src_compile() {
 
 src_install() {
 
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	dodoc AUTHORS ChangeLog NEWS README
 
