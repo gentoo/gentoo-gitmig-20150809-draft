@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_mono
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.28 2006/11/30 18:26:07 opfer Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.29 2007/01/02 22:41:48 jurek Exp $
+
+  02 Jan 2007; Jurek Bartuszek <jurek@gentoo.org> mod_mono-1.1.13.5.ebuild,
+  mod_mono-1.1.17-r1.ebuild, mod_mono-1.2.1.ebuild:
+  Removed unused apache2 USE flag (addressing bug #150083)
 
   30 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
   mod_mono-1.1.13.5.ebuild:
