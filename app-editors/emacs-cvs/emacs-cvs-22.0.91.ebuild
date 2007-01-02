@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.91.ebuild,v 1.2 2006/12/29 23:14:03 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.91.ebuild,v 1.3 2007/01/02 20:55:00 flameeyes Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -37,7 +37,7 @@ PROVIDE="virtual/emacs virtual/editor"
 
 SLOT="22.0.92"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc-macos ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc-macos ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 
 DFILE=emacs-${SLOT}.desktop
 
@@ -46,6 +46,10 @@ src_unpack() {
 	cd ${S};
 	epatch ${FILESDIR}/emacs-subdirs-el-gentoo.diff
 	use ppc-macos && epatch ${FILESDIR}/emacs-cvs-21.3.50-nofink.diff
+	sed -i -e "s:/usr/lib/crtbegin.o:$(`tc-getCC` -print-file-name=crtbegin.o):g" \
+		-e "s:/usr/lib/crtend.o:$(`tc-getCC` -print-file-name=crtend.o):g" \
+		"${S}"/src/s/freebsd.h || die "unable to sed freebsd.h settings"
+	epatch "${FILESDIR}/${PN}-freebsd-sparc.patch"
 }
 
 src_compile() {
