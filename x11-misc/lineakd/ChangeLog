@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/lineakd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/ChangeLog,v 1.35 2007/01/01 21:09:52 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/ChangeLog,v 1.36 2007/01/02 14:02:19 gustavoz Exp $
+
+  02 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  -files/lkey-cast.patch, -lineakd-0.8.2.ebuild, lineakd-0.8.4.ebuild,
+  lineakd-0.9.0_pre1.ebuild:
+  Keyworded ~sparc wrt #145970 and cleanup
 
   01 Jan 2007; Matti Bickel <mabi@gentoo.org>
   files/lineakd-0.8.4-mandestdir.patch:
