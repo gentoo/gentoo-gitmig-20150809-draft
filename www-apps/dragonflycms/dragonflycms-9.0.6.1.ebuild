@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/dragonflycms-9.0.6.1.ebuild,v 1.6 2006/11/25 02:59:51 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/dragonflycms-9.0.6.1.ebuild,v 1.7 2007/01/02 22:22:11 rl03 Exp $
 
-inherit webapp
+inherit webapp depend.php
 
 MY_P=Dragonfly${PV}
 DESCRIPTION="CPG Dragonfly CMS is a feature-rich open source content management
@@ -15,9 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~x86"
 IUSE=""
 
-RDEPEND="virtual/mysql <virtual/mysql-5.1
-	 virtual/httpd-php"
-DEPEND=""
+need_php
 
 src_install() {
 

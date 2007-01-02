@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/dragonflycms
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/ChangeLog,v 1.14 2006/11/25 03:02:51 beandog Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/ChangeLog,v 1.15 2007/01/02 22:22:11 rl03 Exp $
+
+  02 Jan 2007; Renat Lumpau <rl03@gentoo.org> dragonflycms-9.0.6.1.ebuild:
+  Remove mysql dep wrt bug #159781.
 
   25 Nov 2006; Steve Dibb <beandog@gentoo.org> -dragonflycms-9.0.3.0.ebuild,
   -dragonflycms-9.0.4.0.ebuild, -dragonflycms-9.0.5.0.ebuild:
