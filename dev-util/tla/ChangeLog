@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/tla
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/ChangeLog,v 1.38 2007/01/01 12:11:48 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/ChangeLog,v 1.39 2007/01/02 13:39:48 gustavoz Exp $
+
+  02 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> tla-1.3.5.ebuild:
+  Stable on sparc wrt #143099
 
   01 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
   Removed arj as he is retired
