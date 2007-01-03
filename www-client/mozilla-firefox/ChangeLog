@@ -1,6 +1,6 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.233 2007/01/03 05:14:51 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.234 2007/01/03 11:04:46 tove Exp $
 
   02 Jan 2007; Tom Gall <tgall@gentoo.org> mozilla-firefox-2.0.0.1.ebuild:
   Update patch tarball to 0.8 - thanks to Anarchy
@@ -56,7 +56,7 @@
 
 *mozilla-firefox-2.0-r2 (01 Dec 2006)
 
-  01 Dec 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  01 Dec 2006; Bryan Østergaard <kloeri@gentoo.org>
   +mozilla-firefox-2.0-r2.ebuild:
   New patchset, fixing bug 156023 and ppc64.
 
@@ -78,7 +78,7 @@
   mozilla-firefox-1.5.0.8.ebuild:
   Stable on IA64; bug #154434.
 
-  11 Nov 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  11 Nov 2006; Bryan Østergaard <kloeri@gentoo.org>
   mozilla-firefox-1.5.0.7.ebuild, mozilla-firefox-1.5.0.8.ebuild,
   mozilla-firefox-2.0.ebuild:
   Restrict parallel builds until upstream can solve the problem properly.
@@ -98,25 +98,25 @@
   mozilla-firefox-1.5.0.8.ebuild:
   ppc stable, bug #154434
 
-  09 Nov 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  09 Nov 2006; Bryan Østergaard <kloeri@gentoo.org>
   mozilla-firefox-1.5.0.8.ebuild:
   Fix LINGUAS support, bug 154547.
 
-  09 Nov 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  09 Nov 2006; Bryan Østergaard <kloeri@gentoo.org>
   mozilla-firefox-2.0.ebuild:
   Add warning on moznopango.
 
 *mozilla-firefox-1.5.0.8 (08 Nov 2006)
 
-  08 Nov 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  08 Nov 2006; Bryan Østergaard <kloeri@gentoo.org>
   +mozilla-firefox-1.5.0.8.ebuild:
   Version bump, bug 154434.
 
-  01 Nov 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  01 Nov 2006; Bryan Østergaard <kloeri@gentoo.org>
   -mozilla-firefox-1.5.0.5.ebuild, mozilla-firefox-1.5.0.7.ebuild:
   Stable on ia64 and clean out 1.5.0.5.
 
-  31 Oct 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  31 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   mozilla-firefox-2.0.ebuild:
   Update warning about removing old installs.
 
@@ -175,11 +175,11 @@
   configure changes reverted and gcc-4.1 hardened support thanks to Bill
   Skellenger in bug 150298
 
-  15 Oct 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  15 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   mozilla-firefox-2.0_rc2.ebuild:
   Small clean up due to branding USE flag.
 
-  15 Oct 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  15 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   mozilla-firefox-2.0_rc2.ebuild:
   Add branding USE flag.
 
@@ -247,7 +247,7 @@
   mozilla-firefox-1.0.7-r4.ebuild:
   Drop alpha keyword wrt security Bug #135254.
 
-  03 Sep 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  03 Sep 2006; Bryan Østergaard <kloeri@gentoo.org>
   mozilla-firefox-1.5.0.5.ebuild:
   Stable on ia64.
 
@@ -258,7 +258,7 @@
   version bump thanks to Simon Vargblom <ruzkie@gmail.com> and Drew Winstel
   <winstel@gmail.com> in bug 145427
 
-  14 Aug 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  14 Aug 2006; Bryan Østergaard <kloeri@gentoo.org>
   mozilla-firefox-1.5.0.4.ebuild, mozilla-firefox-1.5.0.5.ebuild,
   mozilla-firefox-1.5.0.6.ebuild:
   Change anarchy@g.o to mozilla@g.o.
@@ -293,13 +293,13 @@
   mozilla-firefox-1.5.0.5.ebuild:
   ppc stable, bug #141842
 
-  29 Jul 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  29 Jul 2006; Bryan Østergaard <kloeri@gentoo.org>
   mozilla-firefox-1.5.0.5.ebuild:
   Fix 1.5.0.5 langpacks.
 
 *mozilla-firefox-1.5.0.5 (29 Jul 2006)
 
-  29 Jul 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  29 Jul 2006; Bryan Østergaard <kloeri@gentoo.org>
   +mozilla-firefox-1.5.0.5.ebuild:
   Version bump, bug 141842.
 
@@ -337,7 +337,7 @@
   mozilla-firefox-1.5.0.4.ebuild:
   Add linguas to IUSE, bug 136953
 
-  07 Jul 2006; Diego PettenÃ² <flameeyes@gentoo.org>
+  07 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   mozilla-firefox-1.5.0.4.ebuild:
   Add ~x86-fbsd keyword.
 
@@ -379,11 +379,11 @@
   +files/firefox-bus-error.patch, mozilla-firefox-1.5.0.3.ebuild:
   Fix sparc issues wrt #115729 and keyworded ~sparc
 
-  12 May 2006; Harald van DÄ³k <truedfx@gentoo.org>
+  12 May 2006; Harald van Dĳk <truedfx@gentoo.org>
   mozilla-firefox-1.5.0.3.ebuild:
   Treat LINGUAS=en_US as LINGUAS=en, reported by steev on IRC
 
-  06 May 2006; Harald van DÄ³k <truedfx@gentoo.org>
+  06 May 2006; Harald van Dĳk <truedfx@gentoo.org>
   mozilla-firefox-1.5.0.3.ebuild:
   Make sure default language gets set based on LINGUAS
 
@@ -928,11 +928,11 @@
   -mozilla-firefox-1.0.6.ebuild, +mozilla-firefox-1.0.6-r1.ebuild:
   Stop using the nsplugins eclass in favor of the nsplugins patch which adds
   additional plugin search paths. The plugin symlink madness stops here.
-  
+
   Move firefox to /usr/lib/mozilla-firefox just as thunderbird has moved to
   /usr/lib/mozilla-thunderbird (instead of MozillaFirefox and
   MozillaThunderbird respectively)
-  
+
   Use new mozilla-launcher registration code instead of the drop-in tarball.
   This should allow us to eventually package up extensions as ebuilds ;-)
 
@@ -956,7 +956,7 @@
   mozilla-firefox-1.0.5.ebuild:
   stable on x86 #95199
 
-  14 Jul 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  14 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
   mozilla-firefox-1.0.5.ebuild:
   Stable on alpha + ia64, bug 95199.
 
@@ -1029,7 +1029,7 @@
   13 May 2005; Guy Martin <gmsoft@gentoo.org> mozilla-firefox-1.0.4.ebuild:
   Stable on hppa.
 
-  13 May 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  13 May 2005; Bryan Østergaard <kloeri@gentoo.org>
   mozilla-firefox-1.0.4.ebuild:
   Stable on alpha, bug 92393.
 
@@ -1071,11 +1071,11 @@
   installed base.  Instead just plan to use 1.0.3-r1 as the basis for the next
   ~arches-marked ebuild.  Remove some dead wood from files dir.  
 
-  18 Apr 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  18 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
   mozilla-firefox-1.0.3.ebuild:
   Stable on ia64, bug 89303.
 
-  18 Apr 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  18 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
   mozilla-firefox-1.0.3.ebuild:
   Stable on alpha, bug 89303.
 
@@ -1203,7 +1203,7 @@
   +mozilla-firefox-1.0.1.ebuild:
   Bump to 1.0.1, which features stability and security enhancements (and whiter,
   brighter web pages!)
-  
+
   Also, fix compilation of SVG support with cairo 0.3.0.
 
   19 Feb 2005; Heinrich Wendel <lanius@gentoo.org>
@@ -1230,7 +1230,7 @@
   mozilla-firefox-1.0-r3.ebuild:
   Added hppa support.
 
-  21 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  21 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
   mozilla-firefox-1.0.ebuild:
   Stable on alpha, bug 68976.
 
@@ -1591,7 +1591,7 @@
   12 Feb 2004; Brad Laue <brad@gentoo.org> mozilla-firefox-0.8.ebuild:
   Move mozilla-firefox to stable on x86. This is the first step is moving its
   predecessor, mozilla-firebird, out of the tree entirely. 
-  
+
   Please test on as many arches as soon as possible!
 
 *mozilla-firefox-0.8 (10 Feb 2004)
