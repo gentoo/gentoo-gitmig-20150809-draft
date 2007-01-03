@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.32 2007/01/03 07:03:08 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.33 2007/01/03 07:55:04 pioto Exp $
+
+  03 Jan 2007; Mike Kelly <pioto@gentoo.org> paludis-0.14.0.ebuild:
+  Fix autoconf dep versioning.
 
 *paludis-0.14.0 (03 Jan 2007)
 

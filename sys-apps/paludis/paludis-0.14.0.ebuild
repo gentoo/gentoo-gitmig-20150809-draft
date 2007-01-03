@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.14.0.ebuild,v 1.1 2007/01/03 07:03:08 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.14.0.ebuild,v 1.2 2007/01/03 07:55:04 pioto Exp $
 
 inherit bash-completion eutils flag-o-matic
 
@@ -28,7 +28,7 @@ COMMON_DEPEND="
 DEPEND="${COMMON_DEPEND}
 	dev-cpp/libebt
 	>=dev-cpp/libwrapiter-1.0.0
-	=sys-devel/autoconf-2.5*
+	>=sys-devel/autoconf-2.59
 	=sys-devel/automake-1.9*
 	doc? ( app-doc/doxygen media-gfx/imagemagick )"
 
