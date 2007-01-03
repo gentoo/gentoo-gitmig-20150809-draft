@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6528 2007/01/03 00:43:31 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6529 2007/01/03 00:44:09 omp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1031,10 +1031,6 @@ www-apache/mod_csv
 # Robin H. Johnson <robbat2@gentoo.org> (11 Feb 2006)
 # zlib interaction is badly broken. See bug #124733.
 =dev-util/cvs-1.12.13*
-
-# John N. Laliberte <allanonjl@gentoo.org> (24 Feb 2006)
-# old gtk+-1 edit
-dev-util/glimmer
 
 # Zaheer Abbas Merali <zaheerm@gentoo.org> (24 Feb 2006)
 # masked due to runtime instability
