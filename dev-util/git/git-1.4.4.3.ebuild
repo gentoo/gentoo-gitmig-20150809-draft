@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.4.4.3.ebuild,v 1.2 2006/12/31 06:55:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.4.4.3.ebuild,v 1.3 2007/01/03 09:37:58 ferdy Exp $
 
 inherit python toolchain-funcs eutils elisp-common perl-module bash-completion
 
@@ -145,6 +145,7 @@ pkg_postinst() {
 	showpkgdeps git-svn "dev-util/subversion(USE=perl)" "dev-perl/libwww-perl"
 	showpkgdeps git-quiltimport "dev-util/quilt"
 	showpkgdeps git-cvsserver "dev-perl/DBI" "dev-perl/DBD-SQLite"
+	showpkgdeps git-instaweb "|| ( www-servers/lighttpd net-www/apache(SLOT=2) )"
 	einfo
 }
 
