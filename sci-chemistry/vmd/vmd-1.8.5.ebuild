@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.5.ebuild,v 1.4 2006/12/27 03:04:20 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.5.ebuild,v 1.5 2007/01/03 14:46:57 je_fro Exp $
 
 inherit eutils toolchain-funcs python
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.ks.uiuc.edu/Research/vmd/"
 SRC_URI="${P}.src.tar.gz"
 
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="hardened"
 
 RESTRICT="fetch"
