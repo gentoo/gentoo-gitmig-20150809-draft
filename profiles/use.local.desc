@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2466 2007/01/03 00:56:05 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2467 2007/01/03 05:45:24 joem Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -888,8 +888,9 @@ media-sound/rezound:16bittmp - Use 16bit temporary files (default 32bit float), 
 media-sound/rezound:soundtouch - compile with support for soundtouch
 media-sound/rhythmbox:avahi - support for avahi mdns daemon
 media-sound/rhythmbox:daap - support for daap
-media-sound/rhythmbox:musicbrainz - support for muzicbrains
+media-sound/rhythmbox:musicbrainz - support for muzicbrainz audio lookup (musicbrainz.org)
 media-sound/rhythmbox:tagwriting - support for tag wriring in certian audio files
+media-sound/rhythmbox:keyring - gnome-keyring support for dapp share passwords
 media-sound/slimserver:alac - Enable support for alac
 media-sound/snd:gsl - Use the GNU scientific library for calculations
 media-sound/transkode:amarok - Build Amarok script
