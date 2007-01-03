@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.92 2007/01/02 13:48:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.93 2007/01/03 00:43:15 beandog Exp $
+
+  03 Jan 2007; Steve Dibb <beandog@gentoo.org> autoconf-2.61.ebuild:
+  amd64 stable, bug 159416
 
   02 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> autoconf-2.61.ebuild:
   Stable on sparc wrt #159416
