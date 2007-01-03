@@ -1,97 +1,107 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.53 2007/01/01 22:27:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.54 2007/01/03 13:42:05 vivo Exp $
+# kate: encoding utf-8; eol unix;
+# kate: indent-width 4; mixedindent off; remove-trailing-space on; space-indent off;
+# kate: word-wrap-column 80; word-wrap off;
 
-# Author: Francesco Riosa <vivo@gentoo.org>
+# Author: Francesco Riosa (Retired) <vivo@gentoo.org>
 # Maintainer: Luca Longinotti <chtekk@gentoo.org>
 
-# Both MYSQL_VERSION_ID and MYSQL_PATCHSET_REV must be set in the ebuild too
 # Note that MYSQL_VERSION_ID must be empty !!!
 
-# MYSQL_VERSION_ID will be:
-# major * 10e6 + minor * 10e4 + micro * 10e2 + gentoo revision number, all [0..99]
-# This is an important part, because many of the choices the MySQL ebuild will do
-# depend on this variable.
-# In particular, the code below transforms a $PVR like "5.0.18-r3" in "5001803"
+ECLASS="mysql"
+INHERITED="$INHERITED $ECLASS"
 
-if [[ -z "${MYSQL_VERSION_ID}" ]] ; then
-	tpv=( ${PV//[-._]/ } ) ; tpv[3]="${PVR:${#PV}}" ; tpv[3]="${tpv[3]##*-r}"
-	for vatom in 0 1 2 3 ; do
-		# pad to length 2
-		tpv[${vatom}]="00${tpv[${vatom}]}"
-		MYSQL_VERSION_ID="${MYSQL_VERSION_ID}${tpv[${vatom}]:0-2}"
-	done
-	# strip leading "0" (otherwise it's considered an octal number by BASH)
-	MYSQL_VERSION_ID=${MYSQL_VERSION_ID##"0"}
-fi
+# avoid running userspace code 8 times per ebuild :(
+if [[ "${_MYPVR}" != "${PVR}" ]] || [[ -z "${MYSQL_VERSION_ID}" ]]
+then
+	_MYPVR=${PVR}
 
-inherit eutils flag-o-matic gnuconfig autotools mysql_fx
+	# MYSQL_VERSION_ID will be:
+	# major * 10e6 + minor * 10e4 + micro * 10e2 + gentoo revision number, all [0..99]
+	# This is an important part, because many of the choices the MySQL ebuild will do
+	# depend on this variable.
+	# In particular, the code below transforms a $PVR like "5.0.18-r3" in "5001803"
+	if [[ -z "${MYSQL_VERSION_ID}" ]] ; then
+		tpv=( ${PV//[-._]/ } ) ; tpv[3]="${PVR:${#PV}}" ; tpv[3]="${tpv[3]##*-r}"
+		for vatom in 0 1 2 3 ; do
+			# pad to length 2
+			tpv[${vatom}]="00${tpv[${vatom}]}"
+			MYSQL_VERSION_ID="${MYSQL_VERSION_ID}${tpv[${vatom}]:0-2}"
+		done
+		# strip leading "0" (otherwise it's considered an octal number by BASH)
+		MYSQL_VERSION_ID=${MYSQL_VERSION_ID##"0"}
+	fi
 
-# Be warned, *DEPEND are version-dependant
-DEPEND="ssl? ( >=dev-libs/openssl-0.9.6d )
-		userland_GNU? ( sys-process/procps )
-		>=sys-apps/sed-4
-		>=sys-apps/texinfo-4.7-r1
-		>=sys-libs/readline-4.1
-		>=sys-libs/zlib-1.2.3"
+	inherit eutils flag-o-matic gnuconfig autotools mysql_fx
 
-# LEAVE THE SURROUNDING SPACES THERE
-MYSQL_MUTUALLY_EXCLUSIVE=" !dev-db/mysql !dev-db/mysql-community "
-DEPEND="${DEPEND} ${MYSQL_MUTUALLY_EXCLUSIVE/ !${CATEGORY}\/${PN} /}"
+	# Be warned, *DEPEND are version-dependant
+	DEPEND="ssl? ( >=dev-libs/openssl-0.9.6d )
+			userland_GNU? ( sys-process/procps )
+			>=sys-apps/sed-4
+			>=sys-apps/texinfo-4.7-r1
+			>=sys-libs/readline-4.1
+			>=sys-libs/zlib-1.2.3"
 
-mysql_version_is_at_least "5.01.00.00" \
-|| DEPEND="${DEPEND} berkdb? ( sys-apps/ed )"
+	# LEAVE THE SURROUNDING SPACES THERE
+	MYSQL_MUTUALLY_EXCLUSIVE=" !dev-db/mysql !dev-db/mysql-community "
+	DEPEND="${DEPEND} ${MYSQL_MUTUALLY_EXCLUSIVE/ !${CATEGORY}\/${PN} /}"
 
-RDEPEND="${DEPEND} selinux? ( sec-policy/selinux-mysql )"
+	mysql_version_is_at_least "5.01.00.00" \
+	|| DEPEND="${DEPEND} berkdb? ( sys-apps/ed )"
 
-# dev-perl/DBD-mysql is needed by some scripts installed by MySQL
-PDEPEND="perl? ( >=dev-perl/DBD-mysql-2.9004 )"
+	RDEPEND="${DEPEND} selinux? ( sec-policy/selinux-mysql )"
 
-# Shorten the path because the socket path length must be shorter than 107 chars
-# and we will run a mysql server during test phase
-S="${WORKDIR}/mysql" # BitKeeper ebuilds
+	# dev-perl/DBD-mysql is needed by some scripts installed by MySQL
+	PDEPEND="perl? ( >=dev-perl/DBD-mysql-2.9004 )"
 
-# Define $MY_FIXED_PV for MySQL patchsets
-MY_FIXED_PV="${PV/_alpha/}"
-#MY_FIXED_PV="${MY_FIXED_PV/_beta/}"
-#MY_FIXED_PV="${MY_FIXED_PV/_rc/}"
+	# Shorten the path because the socket path length must be shorter than 107 chars
+	# and we will run a mysql server during test phase
+	S="${WORKDIR}/mysql" # BitKeeper ebuilds
 
-MY_P="${P/_/-}"
-MY_P="${MY_P/-alpha/-bk-}" # BitKeeper ebuilds
-MY_P="${MY_P/-community/}"
+	# Define $MY_FIXED_PV for MySQL patchsets
+	MY_FIXED_PV="${PV/_alpha/}"
+	#MY_FIXED_PV="${MY_FIXED_PV/_beta/}"
+	#MY_FIXED_PV="${MY_FIXED_PV/_rc/}"
 
-# Define correct SRC_URIs
-SRC_URI="${BASE_URI}/${MY_P}${MYSQL_RERELEASE}.tar.gz"
-if [[ -n "${MYSQL_PATCHSET_REV}" ]] ; then
-	MYSQL_PATCHSET_FILENAME="${PN}-patchset-${MY_FIXED_PV}-r${MYSQL_PATCHSET_REV}.tar.bz2"
-	# We add the Gentoo mirror here, as we only use primaryuri for the MySQL tarball
-	SRC_URI="${SRC_URI} http://g3nt8.org/patches/${MYSQL_PATCHSET_FILENAME}"
-fi
+	MY_P="${P/_/-}"
+	MY_P="${MY_P/-alpha/-bk-}" # BitKeeper ebuilds
+	MY_P="${MY_P/-community/}"
 
-DESCRIPTION="A fast, multi-threaded, multi-user SQL database server."
-HOMEPAGE="http://www.mysql.com/"
-SLOT="0"
-LICENSE="GPL-2"
-IUSE="big-tables debug embedded minimal perl selinux srvdir ssl static"
-RESTRICT="confcache"
+	# Define correct SRC_URIs
+	SRC_URI="${BASE_URI}/${MY_P}${MYSQL_RERELEASE}.tar.gz"
+	if [[ -n "${MYSQL_PATCHSET_REV}" ]] ; then
+		MYSQL_PATCHSET_FILENAME="${PN}-patchset-${MY_FIXED_PV}-r${MYSQL_PATCHSET_REV}.tar.bz2"
+		# We add the Gentoo mirror here, as we only use primaryuri for the MySQL tarball
+		SRC_URI="${SRC_URI} http://g3nt8.org/patches/${MYSQL_PATCHSET_FILENAME}"
+	fi
 
-mysql_version_is_at_least "4.01.00.00" \
-&& IUSE="${IUSE} latin1"
+	DESCRIPTION="A fast, multi-threaded, multi-user SQL database server."
+	HOMEPAGE="http://www.mysql.com/"
+	SLOT="0"
+	LICENSE="GPL-2"
+	IUSE="big-tables debug embedded minimal perl selinux srvdir ssl static"
+	RESTRICT="confcache"
 
-mysql_version_is_at_least "4.01.03.00" \
-&& IUSE="${IUSE} cluster extraengine"
+	mysql_version_is_at_least "4.01.00.00" \
+	&& IUSE="${IUSE} latin1"
 
-mysql_version_is_at_least "5.00.00.00" \
-|| IUSE="${IUSE} raid"
+	mysql_version_is_at_least "4.01.03.00" \
+	&& IUSE="${IUSE} cluster extraengine"
 
-mysql_version_is_at_least "5.00.18.00" \
-&& IUSE="${IUSE} max-idx-128"
+	mysql_version_is_at_least "5.00.00.00" \
+	|| IUSE="${IUSE} raid"
 
-mysql_version_is_at_least "5.01.00.00" \
-&& IUSE="${IUSE} innodb"
+	mysql_version_is_at_least "5.00.18.00" \
+	&& IUSE="${IUSE} max-idx-128"
 
-mysql_version_is_at_least "5.01.00.00" \
-|| IUSE="${IUSE} berkdb"
+	mysql_version_is_at_least "5.01.00.00" \
+	&& IUSE="${IUSE} innodb"
+
+	mysql_version_is_at_least "5.01.00.00" \
+	|| IUSE="${IUSE} berkdb"
+fi # if [[ "${_MYPVR}" != "${PVR}" ]]
 
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_preinst \
 				pkg_postinst pkg_config pkg_postrm
