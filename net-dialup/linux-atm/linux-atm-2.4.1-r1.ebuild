@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/linux-atm-2.4.1-r1.ebuild,v 1.14 2006/06/06 06:22:32 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/linux-atm-2.4.1-r1.ebuild,v 1.15 2007/01/03 16:58:14 vapier Exp $
 
 inherit eutils libtool
 
@@ -12,7 +12,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
-
 RESTRICT="test"
 
 src_unpack() {
@@ -30,20 +29,14 @@ src_unpack() {
 	# Fedora patch: include stdlib.h for strtol prototype in sigd/cfg_y.y
 	epatch "${FILESDIR}"/${PV}-stdlib.patch
 
+	sed -i '/#define _LINUX_NETDEVICE_H/d' src/arpd/*.c || die
+	sed -i 's:cp hosts.atm /etc:cp hosts.atm ${DESTDIR}/etc:' src/config/Makefile.in || die "sed operation on Makefile failed"
+
 	elibtoolize
 }
 
-src_compile() {
-	econf || die "configure failed"
-	sed -i 's:cp hosts.atm /etc:cp hosts.atm ${DESTDIR}/etc:' src/config/Makefile || die "sed operation on Makefile failed"
-	emake || die "make failed"
-}
-
 src_install() {
-	make \
-		DESTDIR="${D}" \
-		man_prefix=/usr/share/man \
-		install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	dodoc README NEWS THANKS AUTHORS BUGS ChangeLog
 	dodoc doc/README* doc/atm*
