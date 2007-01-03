@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.6.0.ebuild,v 1.6 2006/12/21 12:33:41 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.6.0.ebuild,v 1.7 2007/01/03 03:44:23 compnerd Exp $
 
 # FIXME : catalog stuff
 inherit eutils gnome2
@@ -13,8 +13,8 @@ SLOT="2.0"
 KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~sh sparc x86 ~x86-fbsd"
 IUSE="doc"
 
-RDEPEND=">=dev-libs/glib-2.5
-	>=x11-libs/gtk+-2.5
+RDEPEND=">=dev-libs/glib-2.10
+	>=x11-libs/gtk+-2.8.10
 	>=dev-libs/atk-1.9
 	>=dev-libs/libxml2-2.4.10
 	>=dev-lang/python-2.0-r7"
