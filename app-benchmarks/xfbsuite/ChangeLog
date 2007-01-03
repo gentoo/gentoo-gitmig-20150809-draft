@@ -1,6 +1,10 @@
 # ChangeLog for app-benchmarks/xfbsuite
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/xfbsuite/ChangeLog,v 1.8 2005/01/01 12:06:54 eradicator Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/xfbsuite/ChangeLog,v 1.9 2007/01/03 09:52:41 masterdriverz Exp $
+
+  03 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  xfbsuite-0.9.7.6.ebuild:
+  PDEPEND on plugins rather than use the bundled ones; bug 152225
 
   18 Dec 2004; Simon Stelling <blubb@gentoo.org> xfbsuite-0.9.7.6.ebuild:
   was testing for a long time, marking stable on amd64
