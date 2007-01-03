@@ -7,14 +7,18 @@ EBUILD emul-linux-x86-medialibs-1.1-r1.ebuild 744 RMD160 1c28c9932506bd7bfff0017
 MD5 f3270bcf981922aae60c081220a05c16 emul-linux-x86-medialibs-1.1-r1.ebuild 744
 RMD160 1c28c9932506bd7bfff0017af69457fcd1588ce5 emul-linux-x86-medialibs-1.1-r1.ebuild 744
 SHA256 17dfed2b98f28753c49f2f731ebc98accabb41b536cddb065bb5e55c5750140a emul-linux-x86-medialibs-1.1-r1.ebuild 744
+EBUILD emul-linux-x86-medialibs-1.2-r1.ebuild 813 RMD160 e45ad6330370401678f6060d3c470ce8f503ba4d SHA1 315493ac96f06458ba4def2ddff2776e6aa69570 SHA256 548efd02581ca111650cb281f32e6cc27ae2014d5381758353e4f839ef3f5d2a
+MD5 bc919c61b476f5327b3ba2a5f8e4d949 emul-linux-x86-medialibs-1.2-r1.ebuild 813
+RMD160 e45ad6330370401678f6060d3c470ce8f503ba4d emul-linux-x86-medialibs-1.2-r1.ebuild 813
+SHA256 548efd02581ca111650cb281f32e6cc27ae2014d5381758353e4f839ef3f5d2a emul-linux-x86-medialibs-1.2-r1.ebuild 813
 EBUILD emul-linux-x86-medialibs-1.2.ebuild 631 RMD160 b1bf88d6c21474d35b795b2764cd9c1bcf58d1b4 SHA1 cfa241c70ec5a40a0407765abf8c53c85009a61a SHA256 5b9f692c7f81fd337e64ce4cf231459873067e9cea4da5273f2bb128e8bffea9
 MD5 61a6dd3426aa7becb3bac6fd3b492f4a emul-linux-x86-medialibs-1.2.ebuild 631
 RMD160 b1bf88d6c21474d35b795b2764cd9c1bcf58d1b4 emul-linux-x86-medialibs-1.2.ebuild 631
 SHA256 5b9f692c7f81fd337e64ce4cf231459873067e9cea4da5273f2bb128e8bffea9 emul-linux-x86-medialibs-1.2.ebuild 631
-MISC ChangeLog 2084 RMD160 9fcb6712bdd15eaccb6eae0fafe0fb0241f9f815 SHA1 c4c44c197ad5974377a499cb71ec3643a0487097 SHA256 cff1cb92b3838779c1e114f80d7e2e0fc7729078b7187f7b817c0e53bd5e76ed
-MD5 296b8024eece2b83aeebe2cfb9d6f31d ChangeLog 2084
-RMD160 9fcb6712bdd15eaccb6eae0fafe0fb0241f9f815 ChangeLog 2084
-SHA256 cff1cb92b3838779c1e114f80d7e2e0fc7729078b7187f7b817c0e53bd5e76ed ChangeLog 2084
+MISC ChangeLog 2261 RMD160 0049fc8dfac3d05cb20c6a20a63ad95eab23b2b2 SHA1 7726dfaf6b9615a0d13ce708a1447bc74424c0f3 SHA256 05824beb64a3e25323c864cc0b18082e2e628c50ddf16e52f4a284450f537113
+MD5 62eaa48dd3a0366f80bcca9e4593526a ChangeLog 2261
+RMD160 0049fc8dfac3d05cb20c6a20a63ad95eab23b2b2 ChangeLog 2261
+SHA256 05824beb64a3e25323c864cc0b18082e2e628c50ddf16e52f4a284450f537113 ChangeLog 2261
 MISC metadata.xml 218 RMD160 cbc93b26738b5e98e127744c5a949cf2f0920778 SHA1 e6c4a3379b1d26bd7a87fe3a64f4b8185bf208d4 SHA256 0522168dc16d1a5fe22d19e63237544b3bdbb06dcefb1df3d4fe8c54975a6d3b
 MD5 d138fbd38b04f78fe9b3766051723a5b metadata.xml 218
 RMD160 cbc93b26738b5e98e127744c5a949cf2f0920778 metadata.xml 218
@@ -25,10 +29,13 @@ SHA256 8f3984988c5cf3e6d08e65b8a5971ceddc23a6a4460c45f13cf3be5b0cce7f2a files/di
 MD5 e493d4fbb44ccce8d7b345a6d768e1ce files/digest-emul-linux-x86-medialibs-1.2 292
 RMD160 67f94ab6f73048fb4d81216d8c5ed66968d36591 files/digest-emul-linux-x86-medialibs-1.2 292
 SHA256 862bce8bb609516dd40fdde4ff72906beeb42273fef1a4deaf3ed3ac7b45b447 files/digest-emul-linux-x86-medialibs-1.2 292
+MD5 e493d4fbb44ccce8d7b345a6d768e1ce files/digest-emul-linux-x86-medialibs-1.2-r1 292
+RMD160 67f94ab6f73048fb4d81216d8c5ed66968d36591 files/digest-emul-linux-x86-medialibs-1.2-r1 292
+SHA256 862bce8bb609516dd40fdde4ff72906beeb42273fef1a4deaf3ed3ac7b45b447 files/digest-emul-linux-x86-medialibs-1.2-r1 292
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v2.0.1 (GNU/Linux)
 
-iD8DBQFFI+OTomPajV0RnrERAhtxAJ4jpI78S1FKmZGy3Hdm1g5d2RjXHwCfVQ0S
-7u28ZCQUXJwBbUGc0qbXBs0=
-=4a8+
+iD8DBQFFm1z98bi6rjpTunYRAhCAAJsGSWKIUOMjwOcNT0CHMMSwl9746wCfZRu+
+MsRMIsvv8GnUugkEdKCM2Tw=
+=IubY
 -----END PGP SIGNATURE-----

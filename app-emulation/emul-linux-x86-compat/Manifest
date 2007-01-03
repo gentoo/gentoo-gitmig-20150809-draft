@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 75emul-linux-x86-compat 51 RMD160 1c52b6d125a8ee61fb909a085a8c935096e2bcb4 SHA1 0254cfddb3a2653ccb61db5250d83bc0bbed6cbb SHA256 6d5b1311705d20d551fd993fcacef7237e818dcb39a757e00a0943c0a4b4dc24
 MD5 3ac141b3a5850345c246b5c4ce924ccc files/75emul-linux-x86-compat 51
 RMD160 1c52b6d125a8ee61fb909a085a8c935096e2bcb4 files/75emul-linux-x86-compat 51
@@ -7,10 +10,14 @@ EBUILD emul-linux-x86-compat-1.0-r1.ebuild 953 RMD160 e23b2cb91e7c6c5714fb6e8c2f
 MD5 d93016c20b3bdc67b12d3c6b0073a757 emul-linux-x86-compat-1.0-r1.ebuild 953
 RMD160 e23b2cb91e7c6c5714fb6e8c2f758f60637a5d1a emul-linux-x86-compat-1.0-r1.ebuild 953
 SHA256 a3120dbf95c034e6c940881706ef328ad22e0ac4d17d377595223bd8997d1713 emul-linux-x86-compat-1.0-r1.ebuild 953
-MISC ChangeLog 1878 RMD160 acf5a9a59a72e00b8510f1b1aa496cdbe6059cd6 SHA1 34485fd892c76ad1af144c0f31aca67c9a39a189 SHA256 65375bc6feabd84ea5dda1a91872477dfae344263a618476686bae3fcabce18e
-MD5 feb8e453adae9622fc3d164a70fa650f ChangeLog 1878
-RMD160 acf5a9a59a72e00b8510f1b1aa496cdbe6059cd6 ChangeLog 1878
-SHA256 65375bc6feabd84ea5dda1a91872477dfae344263a618476686bae3fcabce18e ChangeLog 1878
+EBUILD emul-linux-x86-compat-1.0-r2.ebuild 916 RMD160 fe8e31d18dbc32797bed1b53440959fca23a2e3d SHA1 4a90d937e70d1515daaeab0bb71b9cf5b75a1834 SHA256 2f6e4f8fa5650fec5b23605d09998ce78ec5ea12559feaf1f05b92ebaec5b75d
+MD5 b844d8e50c57ef773f287e65e7f30dfe emul-linux-x86-compat-1.0-r2.ebuild 916
+RMD160 fe8e31d18dbc32797bed1b53440959fca23a2e3d emul-linux-x86-compat-1.0-r2.ebuild 916
+SHA256 2f6e4f8fa5650fec5b23605d09998ce78ec5ea12559feaf1f05b92ebaec5b75d emul-linux-x86-compat-1.0-r2.ebuild 916
+MISC ChangeLog 2047 RMD160 9d25dd4f7273f6b9e78f54d56a13771af8abb0f6 SHA1 46f0331e325bb2b70b6e88ac1cb562f6fe5ac09c SHA256 4b4ed92a8689a4d52c9dd850069b7cfe3fda0dc07543097fdbc033c36c7d00e1
+MD5 17daccabcddc940774a2763be1425230 ChangeLog 2047
+RMD160 9d25dd4f7273f6b9e78f54d56a13771af8abb0f6 ChangeLog 2047
+SHA256 4b4ed92a8689a4d52c9dd850069b7cfe3fda0dc07543097fdbc033c36c7d00e1 ChangeLog 2047
 MISC metadata.xml 290 RMD160 29c2eafcf00e4b115ba5ae455218ee6eebda67ae SHA1 281918720fd1d692578d6419193b1027a1014b6a SHA256 8f04703141bc8cd55a0e56bf7593f657a891ed4796e71e3d6e8770c7ea098c30
 MD5 5e8c61d551dad88488a66992865ba737 metadata.xml 290
 RMD160 29c2eafcf00e4b115ba5ae455218ee6eebda67ae metadata.xml 290
@@ -18,3 +25,13 @@ SHA256 8f04703141bc8cd55a0e56bf7593f657a891ed4796e71e3d6e8770c7ea098c30 metadata
 MD5 c9fb4a2c6f68ff747501a9169d19b328 files/digest-emul-linux-x86-compat-1.0-r1 283
 RMD160 bf7160a735daad1bc793a9d40b762e7e6b12b611 files/digest-emul-linux-x86-compat-1.0-r1 283
 SHA256 33b3c14488102a4d7d16130edac27a554d87c39bb9cf110f5eefb599f07f94fb files/digest-emul-linux-x86-compat-1.0-r1 283
+MD5 c9fb4a2c6f68ff747501a9169d19b328 files/digest-emul-linux-x86-compat-1.0-r2 283
+RMD160 bf7160a735daad1bc793a9d40b762e7e6b12b611 files/digest-emul-linux-x86-compat-1.0-r2 283
+SHA256 33b3c14488102a4d7d16130edac27a554d87c39bb9cf110f5eefb599f07f94fb files/digest-emul-linux-x86-compat-1.0-r2 283
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFm1zq8bi6rjpTunYRAl6MAJ9+zkUtCHwGlTfDkJd9k3jz01qp9gCePlXB
+6JbWqwyiZTBbnx64DSWoVS4=
+=G+m3
+-----END PGP SIGNATURE-----
