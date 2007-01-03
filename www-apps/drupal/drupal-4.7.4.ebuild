@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-4.7.4.ebuild,v 1.1 2006/11/28 14:47:40 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-4.7.4.ebuild,v 1.2 2007/01/03 11:28:14 uberlord Exp $
 
 inherit webapp eutils
 
@@ -14,9 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND="virtual/php"
-RDEPEND="|| ( dev-db/postgresql virtual/mysql )
-	virtual/httpd-php"
+RDEPEND="virtual/httpd-php"
 
 src_install() {
 	webapp_src_preinst
