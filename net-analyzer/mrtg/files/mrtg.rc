@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/files/mrtg.rc,v 1.4 2006/05/11 11:03:09 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/files/mrtg.rc,v 1.5 2007/01/03 22:55:38 cedk Exp $
 
 depend() {
     need net
@@ -22,7 +22,8 @@ checkconfig() {
 
 start() {
 	# mrtg will not run if LANG=*utf8
-	[[ "${LANG}" =~ '((^[A-Za-z0-9\_\@\-]+\.)|(^))([uU][tT][fF]-?8)$' ]] \
+	# use grep instead of bash regexp for bug #159786
+	[[ "$(echo $LANG|grep -v -e '((^[A-Za-z0-9\_\@\-]+\.)|(^))([uU][tT][fF]-?8)$')" ]] \
 	&& LANG='C'
 
 	checkconfig || return $?
