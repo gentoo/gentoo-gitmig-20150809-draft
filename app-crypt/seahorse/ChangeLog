@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/seahorse
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.63 2006/11/04 20:10:47 compnerd Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.64 2007/01/03 13:42:24 robbat2 Exp $
+
+*seahorse-0.8.2-r1 (03 Jan 2007)
+
+  03 Jan 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +files/seahorse-0.8.2-gpg2.0.patch, +seahorse-0.8.2-r1.ebuild:
+  Patch for gnupg2 support. Patch needs to go to upstream.
 
 *seahorse-0.8.2 (04 Nov 2006)
 

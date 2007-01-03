@@ -1,0 +1,109 @@
+Subject: GnuPG 2.0 support for Seahorse
+From: Robin H. Johnson <robbat2@gentoo.org>
+Signed-off-by: Robin H. Johnson <robbat2@gentoo.org>
+
+The following patch fixes the previous hardcoding of 1.4 and 1.2 versions of
+GnuPG to also allow the 2.0 series.
+
+diff -Nuar --exclude '*~' seahorse-0.8.2.orig/configure seahorse-0.8.2/configure
+--- seahorse-0.8.2.orig/configure	2006-07-10 10:41:43.000000000 -0700
++++ seahorse-0.8.2/configure	2007-01-02 17:14:27.474945791 -0800
+@@ -19569,8 +19569,7 @@
+ fi;
+ 
+ if test	"$DO_CHECK" = "yes"; then
+-  major_versions="1"
+-  minor_versions="2 4"
++  accept_versions="1.2 1.4 2.0"
+   # Extract the first word of "gpg", so it can be a program name with args.
+ set dummy gpg; ac_word=$2
+ echo "$as_me:$LINENO: checking for $ac_word" >&5
+@@ -19623,21 +19622,11 @@
+ 	micro=`echo $gnupg_version | \
+ 		sed 's/^gpg (GnuPG) \([0-9]*\)\.\([0-9]*\)\.\([0-9]*\).*/\3/'`
+ 
+-    for ver in $major_versions; do
+-      if test "$ver" = "$major"; then
+-
+-        # Check the minor version
+-        for ver2 in $minor_versions; do
+-          if test "$ver2" = "$minor"; then
+-
++	for ver in $accept_versions; do
++		if test "$ver" = "$major.$minor"; then
+             ok="yes"
+             break
+-
+-          fi
+-        done
+-        break
+-
+-      fi
++		fi
+     done
+ 
+   fi
+diff -Nuar --exclude '*~' seahorse-0.8.2.orig/configure.in seahorse-0.8.2/configure.in
+--- seahorse-0.8.2.orig/configure.in	2006-07-10 10:40:35.000000000 -0700
++++ seahorse-0.8.2/configure.in	2007-01-02 17:15:25.609655647 -0800
+@@ -59,8 +59,7 @@
+ 	DO_CHECK=$enableval, DO_CHECK=yes)
+ 	
+ if test	"$DO_CHECK" = "yes"; then
+-  major_versions="1"
+-  minor_versions="2 4"
++  accept_versions="1.2 1.4 2.0"
+   AC_PATH_PROG(GNUPG, gpg, no)
+   ok="no"
+   if test "$GNUPG" != "no"; then
+@@ -72,22 +71,12 @@
+ 		sed 's/^gpg (GnuPG) \([[0-9]]*\)\.\([[0-9]]*\)\.\([[0-9]]*\).*/\2/'`
+ 	micro=`echo $gnupg_version | \
+ 		sed 's/^gpg (GnuPG) \([[0-9]]*\)\.\([[0-9]]*\)\.\([[0-9]]*\).*/\3/'`
+-    
+-    for ver in $major_versions; do
+-      if test "$ver" = "$major"; then
+-            
+-        # Check the minor version 
+-        for ver2 in $minor_versions; do
+-          if test "$ver2" = "$minor"; then
+-                    
++  
++	for ver in $accept_versions; do
++		if test "$ver" = "$major.$minor"; then
+             ok="yes"
+             break
+-                    
+-          fi
+-        done
+-        break
+-            
+-      fi
++		fi
+     done
+     
+   fi
+diff -Nuar --exclude '*~' seahorse-0.8.2.orig/libseahorse/seahorse-gpg-options.c seahorse-0.8.2/libseahorse/seahorse-gpg-options.c
+--- seahorse-0.8.2.orig/libseahorse/seahorse-gpg-options.c	2005-10-05 15:00:24.000000000 -0700
++++ seahorse-0.8.2/libseahorse/seahorse-gpg-options.c	2007-01-03 04:40:35.770386761 -0800
+@@ -32,7 +32,6 @@
+ #include "seahorse-gpg-options.h"
+ 
+ #define  GPG_CONF_HEADER    "# FILE CREATED BY SEAHORSE\n\n"
+-#define  GPG_VERSION_PREFIX   "1."
+ 
+ static gchar gpg_homedir[MAXPATHLEN];
+ static gboolean gpg_options_inited = FALSE;
+@@ -271,9 +270,11 @@
+         /* 
+          * Make sure it's the right version for us to be messing 
+          * around with the configuration file.
++		 * Both 1.* and 2.* are suitable.
+          */
+         g_return_val_if_fail (engine && engine->version && engine->file_name &&
+-                              g_str_has_prefix (engine->version, GPG_VERSION_PREFIX),
++                              (g_str_has_prefix (engine->version, "1.") ||
++                               g_str_has_prefix (engine->version, "2.")),
+                               (seahorse_util_gpgme_to_error
+                                (GPG_E (GPG_ERR_INV_ENGINE), err), FALSE));
+ 
