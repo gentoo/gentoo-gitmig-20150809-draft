@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.142 2007/01/03 06:01:21 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.143 2007/01/03 06:28:14 ticho Exp $
+
+  03 Jan 2007; Andrej Kacian <ticho@gentoo.org> netpbm-10.36.0.ebuild:
+  Stable on x86, bug #159801.
 
   03 Jan 2007; Luca Barbato <lu_zero@gentoo.org> netpbm-10.36.0.ebuild:
   Marked ppc64
