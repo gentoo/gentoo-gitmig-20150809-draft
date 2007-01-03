@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6530 2007/01/03 00:45:51 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6531 2007/01/03 00:47:00 omp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -602,10 +602,6 @@ net-misc/linux-igd
 <virtual/opengl-7
 <virtual/x11-7
 <virtual/xft-7
-
-# Olivier Fisette <ribosome@gentoo.org> (12 Sept 2006)
-# Do not compile with GCC4.
-sci-biology/cbcanalyzer
 
 # Daniel Gryniewicz <dang@gentoo.org> (11 Sep 2006)
 # orbit 2.14.3 is broken.  bug #146929
