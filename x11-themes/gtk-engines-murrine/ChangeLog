@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/gtk-engines-murrine
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-murrine/ChangeLog,v 1.5 2007/01/03 18:33:53 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-murrine/ChangeLog,v 1.6 2007/01/03 18:58:09 nichoj Exp $
+
+*gtk-engines-murrine-0.40.1-r1 (03 Jan 2007)
+
+  03 Jan 2007; Joshua Nichols <nichoj@gentoo.org>
+  +gtk-engines-murrine-0.40.1-r1.ebuild:
+  Added theme for XFCE.
 
   03 Jan 2007; nixnut <nixnut@gentoo.org> gtk-engines-murrine-0.31.ebuild:
   Stable on ppc wrt bug 159803
