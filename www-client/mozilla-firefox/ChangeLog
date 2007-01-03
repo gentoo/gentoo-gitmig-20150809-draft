@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.234 2007/01/03 11:04:46 tove Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.235 2007/01/03 20:56:26 kloeri Exp $
+
+  03 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
+  mozilla-firefox-2.0.0.1.ebuild:
+  Bumped patchlevel.
 
   02 Jan 2007; Tom Gall <tgall@gentoo.org> mozilla-firefox-2.0.0.1.ebuild:
   Update patch tarball to 0.8 - thanks to Anarchy
