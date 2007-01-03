@@ -1,16 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/mysql-community-5.1.14_beta.ebuild,v 1.2 2007/01/03 15:23:32 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/mysql-community-5.1.15_alpha-r90.ebuild,v 1.1 2007/01/03 15:23:32 vivo Exp $
 
 # Leave this empty
 MYSQL_VERSION_ID=""
-SERVER_URI="mirror://mysql/Downloads/MySQL-${PV%.*}/mysql-${PV//_/-}.tar.gz"
+MYSQL_RERELEASE=""
+SERVER_URI=""
 PBXT_VERSION="0.9.73-beta"
 
 inherit mysql
 
 #REMEMBER!!!: update also eclass/mysql*.eclass prior to commit
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="testing"
 
 src_test() {
 

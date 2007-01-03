@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/mysql-community-5.1.14_beta.ebuild,v 1.2 2007/01/03 15:23:32 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/mysql-community-5.1.15_alpha20061231-r60.ebuild,v 1.1 2007/01/03 15:23:32 vivo Exp $
 
 # Leave this empty
 MYSQL_VERSION_ID=""
-SERVER_URI="mirror://mysql/Downloads/MySQL-${PV%.*}/mysql-${PV//_/-}.tar.gz"
+SERVER_URI="mirror://gentoo/MySQL-${PV%.*}/mysql-${PV//_alpha/-bk-}.tar.bz2"
 PBXT_VERSION="0.9.73-beta"
 
 inherit mysql
@@ -42,7 +42,7 @@ src_test() {
 
 		useq "extraengine" && mysql_disable_test "federated" "fail with extraengine"
 
-		mysql_disable_test "view" "FIXME: fail because now we are in year 2007"
+		mysql_disable_test "view" "Already fixed: fail because now we are in year 2007"
 
 		# from Makefile.am:
 		retstatus=1
