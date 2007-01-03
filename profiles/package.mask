@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6539 2007/01/03 09:28:39 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6540 2007/01/03 15:13:03 vivo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1113,6 +1113,7 @@ sys-apps/gli
 >=dev-db/mysql-5.1
 >=dev-db/mysql-community-5.1
 >=virtual/mysql-5.1
+dev-db/mysql-slotted
 
 # Wolfram Schlich <wschlich@gentoo.org> (26 Nov 2005)
 # has security issues and will be removed from portage
