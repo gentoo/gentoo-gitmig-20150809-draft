@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/gruff
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/ChangeLog,v 1.6 2006/10/20 21:52:10 agriffis Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/ChangeLog,v 1.7 2007/01/03 08:56:34 opfer Exp $
+
+  03 Jan 2007; Christian Faulhammer <opfer@gentoo.org> gruff-0.1.2.ebuild:
+  stable x86, bug #155112
 
   20 Oct 2006; Aron Griffis <agriffis@gentoo.org> gruff-0.1.1.ebuild:
   Mark 0.1.1 stable on ia64
