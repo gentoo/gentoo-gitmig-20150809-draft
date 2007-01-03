@@ -18,15 +18,15 @@ USE="${STAGE1_USE} alsa apache2 apm arts berkdb bitmap-fonts cups eds emboss enc
 
 FEATURES="autoconfig sandbox sfperms -multilib-pkg"
 
-MULTILIB_ABIS="ppc"
+#MULTILIB_ABIS="ppc"
 DEFAULT_ABI="ppc"
 KERNEL_ABI="ppc64"
 
-CFLAGS_ppc="-m32"
-LDFLAGS_ppc="-m elf32ppc"
-CHOST_ppc="powerpc-unknown-linux-gnu"
-CDEFINE_ppc="!__powerpc64__"
-LIBDIR_ppc="lib"
+#CFLAGS_ppc="-m32"
+#LDFLAGS_ppc="-m elf32ppc"
+#CHOST_ppc="powerpc-unknown-linux-gnu"
+#CDEFINE_ppc="!__powerpc64__"
+#LIBDIR_ppc="lib"
 
-LDFLAGS_ppc64="-m elf64ppc"
-CHOST_ppc64="powerpc64-unknown-linux-gnu"
+#LDFLAGS_ppc64="-m elf64ppc"
+#CHOST_ppc64="powerpc64-unknown-linux-gnu"

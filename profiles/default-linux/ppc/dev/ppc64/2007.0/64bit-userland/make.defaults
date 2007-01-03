@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/dev/ppc64/2007.0/64bit-userland/make.defaults,v 1.4 2006/12/22 21:44:00 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/dev/ppc64/2007.0/64bit-userland/make.defaults,v 1.5 2007/01/03 05:25:07 tgall Exp $
 
 ARCH="ppc64"
 ACCEPT_KEYWORDS="ppc64"
@@ -24,25 +24,25 @@ VIDEO_CARDS="mga ati dummy fbdev nv s3 vega vga"
 
 FEATURES="autoconfig sandbox sfperms -multilib-pkg"
 
-MULTILIB_ABIS="ppc64"
+#MULTILIB_ABIS="ppc64"
 DEFAULT_ABI="ppc64"
 
 CFLAGS_ppc64="-m64"
 LDFLAGS_ppc64="-m elf64ppc"
 CHOST_ppc64="powerpc64-unknown-linux-gnu"
 CDEFINE_ppc64="__powerpc64__"
-LIBDIR_ppc64="lib"
+LIBDIR_ppc64="lib64"
 
-CFLAGS_ppc="-m32"
-LDFLAGS_ppc="-m elf32ppc"
-CHOST_ppc="powerpc-unknown-linux-gnu"
-CDEFINE_ppc="!__powerpc64__"
-LIBDIR_ppc="lib32"
+#CFLAGS_ppc="-m32"
+#LDFLAGS_ppc="-m elf32ppc"
+#CHOST_ppc="powerpc-unknown-linux-gnu"
+#CDEFINE_ppc="!__powerpc64__"
+#LIBDIR_ppc="lib32"
 
 # In case someone wants to help out by setting FEATURES="multilib-strict"
-MULTILIB_STRICT_DIRS="/lib /usr/lib /usr/kde/*/lib /usr/qt/*/lib /usr/X11R6/lib"
-MULTILIB_STRICT_DENY="64-bit.*shared object"
-MULTILIB_STRICT_EXEMPT="(perl5|gcc|gcc-lib|eclipse-3)"
+#MULTILIB_STRICT_DIRS="/lib /usr/lib /usr/kde/*/lib /usr/qt/*/lib /usr/X11R6/lib"
+#MULTILIB_STRICT_DENY="64-bit.*shared object"
+#MULTILIB_STRICT_EXEMPT="(perl5|gcc|gcc-lib|eclipse-3)"
 
 # Hack to tell baselayout to use symlinks for /lib, /usr/lib, and /usr/local/lib
 # SYMLINK_LIB="yes"
