@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6534 2007/01/03 00:51:59 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6535 2007/01/03 00:52:32 omp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -305,12 +305,6 @@ media-video/vls
 # Timothy Redaelli <drizzt@gentoo.org> (28 Nov 2006)
 # Masked for testing.
 =media-libs/spandsp-0.0.3*
-
-# Hans de Graaff <graaff@gentoo.org> (26 Nov 2006)
-# No longer maintained, dropped by upstream, author
-# recommends using app-xemacs/riece instead, will remove 
-# in a month.
-app-xemacs/liece
 
 # Kevin F. Quinn <kevquinn@gentoo.org> (21 Nov 2006)
 # Mask for initial testing; bug #125366
