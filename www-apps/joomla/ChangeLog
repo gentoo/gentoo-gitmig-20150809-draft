@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/joomla
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/ChangeLog,v 1.15 2006/11/23 17:13:15 vivo Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/ChangeLog,v 1.16 2007/01/03 00:18:02 rl03 Exp $
+
+*joomla-1.0.12 (03 Jan 2007)
+
+  03 Jan 2007; Renat Lumpau <rl03@gentoo.org> -joomla-1.0.11.ebuild,
+  +joomla-1.0.12.ebuild:
+  Version bump, bug #159193.
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> joomla-1.0.11.ebuild:
   dev-db/mysql => virtual/mysql
