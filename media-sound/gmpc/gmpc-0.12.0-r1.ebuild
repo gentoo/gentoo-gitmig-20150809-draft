@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-0.12.0-r1.ebuild,v 1.11 2006/10/28 01:36:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-0.12.0-r1.ebuild,v 1.12 2007/01/03 02:50:49 ticho Exp $
 
 IUSE="gnome"
 
 DESCRIPTION="A Gnome client for the Music Player Daemon."
-HOMEPAGE="http://cms.qballcow.nl/index.php?page=Gnome_Music_Player_Client"
+HOMEPAGE="http://sarine.nl/gmpc"
 SRC_URI="http://download.qballcow.nl/programs/${PN}/${P}.tar.gz"
 
 KEYWORDS="amd64 ppc sparc x86"
