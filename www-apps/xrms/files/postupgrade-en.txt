@@ -1,0 +1,11 @@
+Post-upgrade instructions:
+
+  0. Back up your vars.php and include-locations.inc
+
+  1. Log in as an admin user.
+
+  2. Run Administration -> Database Structure Update and
+  Administration -> Data Cleanup
+
+Be sure to check /usr/share/doc/${PN}-${PVR}/INSTALL for upstream
+instructions.

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+die() {
+	echo "#####"
+	echo $1
+	echo "#####"
+	exit 1
+}
+
+if [[ $1 == "install" ]]; then
+	sed -e "s|/full/path/to/xrms/|${VHOST_ROOT}/${PN}-${PVR}/|" -i "${MY_INSTALLDIR}/include-locations.inc"
+	sed -e "s|/full/path/to/xrms|${MY_INSTALLDIR}|
+			s|xrms/|${VHOST_APPDIR}|" -i "${VHOST_ROOT}/${PN}-${PVR}/include/vars.php" || die "sed failed"
+
+elif [[ $1 == "clean" ]]; then
+	echo $1
+fi

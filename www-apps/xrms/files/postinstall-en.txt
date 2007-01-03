@@ -1,0 +1,17 @@
+You are almost done!
+
+  0. Create a new database, for example:
+	mysqladmin create xrms
+
+  1. Edit ${VHOST_ROOT}/${PN}-${PVR}/include/vars.php ;
+  set database settings and any other local variables.
+
+  2. Login on
+  http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/install/install.php
+  and follow the directions.
+
+  3. Run Administration -> Database Structure Update and
+  Administration -> Data Cleanup
+
+Be sure to check /usr/share/doc/${PN}-${PVR}/INSTALL for upstream
+instructions.
