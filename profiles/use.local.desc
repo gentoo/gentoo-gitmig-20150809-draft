@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2470 2007/01/03 13:04:00 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2471 2007/01/03 15:13:58 vivo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -260,6 +260,7 @@ dev-db/mysql:extraengine - Add support for alternative storage engines.
 dev-db/mysql:latin1 - Use LATIN1 encoding instead of UTF8.
 dev-db/mysql:max-idx-128 - Raise the max index per table limit from 64 to 128
 dev-db/mysql:minimal - Install client programs only, no server
+dev-db/mysql:pbxt - Add experimental support for pbxt storage engine
 dev-db/mysql:raid - deprecated option, removed in the 5.0 series
 dev-db/mysql:srvdir - Add support for GLEP 20
 dev-db/mysql-community:big-tables - Make tables contain up to 1.844E+19 rows
@@ -269,8 +270,19 @@ dev-db/mysql-community:extraengine - Add support for alternative storage engines
 dev-db/mysql-community:latin1 - Use LATIN1 encoding instead of UTF8.
 dev-db/mysql-community:max-idx-128 - Raise the max index per table limit from 64 to 128
 dev-db/mysql-community:minimal - Install client programs only, no server
+dev-db/mysql-community:pbxt - Add experimental support for pbxt storage engine
 dev-db/mysql-community:raid - deprecated option, removed in the 5.0 series
 dev-db/mysql-community:srvdir - Add support for GLEP 20
+dev-db/mysql-slotted:big-tables - Make tables contain up to 1.844E+19 rows
+dev-db/mysql-slotted:cluster - Add support for NDB clustering.
+dev-db/mysql-slotted:embedded - Build embedded server (libmysqld)
+dev-db/mysql-slotted:extraengine - Add support for alternative storage engines.
+dev-db/mysql-slotted:latin1 - Use LATIN1 encoding instead of UTF8.
+dev-db/mysql-slotted:max-idx-128 - Raise the max index per table limit from 64 to 128
+dev-db/mysql-slotted:minimal - Install client programs only, no server
+dev-db/mysql-slotted:pbxt - Add experimental support for pbxt storage engine
+dev-db/mysql-slotted:raid - deprecated option, removed in the 5.0 series
+dev-db/mysql-slotted:srvdir - Add support for GLEP 20
 dev-db/pgcluster:pg-intdatetime - Enables --enable-integer-datetimes configure option, which changes PG to use 64-bit integers for timestamp storage.
 dev-db/postgis:geos - Add the GEOS library for exact topological tests.
 dev-db/postgis:proj - Add the Proj library for reprojection features.
