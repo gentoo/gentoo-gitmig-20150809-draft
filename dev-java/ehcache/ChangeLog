@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ehcache
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ChangeLog,v 1.4 2007/01/03 03:17:03 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ChangeLog,v 1.5 2007/01/03 03:19:21 nichoj Exp $
+
+  03 Jan 2007; Joshua Nichols <nichoj@gentoo.org> -ehcache-1.1.ebuild:
+  Pruned unmigrated revision.
 
 *ehcache-1.2.4 (03 Jan 2007)
 
