@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/htdig-3.2.0_beta6-r1.ebuild,v 1.2 2006/05/05 17:16:53 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/htdig-3.2.0_beta6-r1.ebuild,v 1.3 2007/01/03 15:51:57 rl03 Exp $
 
-inherit eutils flag-o-matic
+inherit eutils autotools
 
 MY_PV=${PV/_beta/b}
 S=${WORKDIR}/${PN}-${MY_PV}
@@ -23,6 +23,8 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gcc4.patch
+	epatch ${FILESDIR}/${P}-as-needed.patch
+	eautoreconf
 }
 
 src_compile() {
@@ -40,7 +42,7 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die "make install failed"
+	emake DESTDIR=${D} install || die "make install failed"
 
 	dodoc ChangeLog COPYING README
 	dohtml -r htdoc

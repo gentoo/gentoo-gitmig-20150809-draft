@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/htdig
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/ChangeLog,v 1.17 2006/05/05 17:16:53 squinky86 Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/ChangeLog,v 1.18 2007/01/03 15:51:57 rl03 Exp $
+
+  03 Jan 2007; Renat Lumpau <rl03@gentoo.org>
+  +files/htdig-3.2.0_beta6-as-needed.patch, htdig-3.2.0_beta6-r1.ebuild:
+  fix for --as-needed, bug #155727.
 
   05 May 2006; Jon Hood <squinky86@gentoo.org> htdig-3.2.0_beta6-r1.ebuild:
   Stable on amd64, bug #107062.
