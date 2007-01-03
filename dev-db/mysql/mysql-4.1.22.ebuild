@@ -1,13 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.22.ebuild,v 1.1 2006/12/10 13:33:48 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.22.ebuild,v 1.2 2007/01/03 15:18:12 vivo Exp $
 
 # Leave this empty
 MYSQL_VERSION_ID=""
-MYSQL_RERELEASE=""
-# Set the patchset revision to use, must be either empty or a decimal number
-MYSQL_PATCHSET_REV="1"
-BASE_URI="mirror://mysql/Downloads/MySQL-${PV%.*}"
+SERVER_URI="mirror://mysql/Downloads/MySQL-${PV%.*}/mysql-${PV//_/-}.tar.gz"
 
 inherit mysql
 
@@ -21,17 +18,26 @@ src_test() {
 	if ! useq "minimal" ; then
 		einfo ">>> Test phase [test]: ${CATEGORY}/${PF}"
 		local retstatus
+		local testopts="--force"
+
+		# sandbox make ndbd zombie
+		hasq "sandbox" ${FEATURES} && testopts="${testopts} --skip-ndb"
+
 		addpredict /this-dir-does-not-exist/t9.MYI
 
 		cd mysql-test
-		sed -i -e "s|PORT=3306|PORT=3307|g" mysql-test-run
-		./mysql-test-run
-		retstatus=$?
+		sed -i -e "s|3306|3307|g" mysql-test-run.pl
+
+		# from Makefile.am:
+		retstatus=1
+		./mysql-test-run.pl ${testopts} \
+		&& ./mysql-test-run.pl ${testopts} --ps-protocol \
+		&& retstatus=0
 
 		# Just to be sure ;)
 		pkill -9 -f "${S}/ndb" 2>/dev/null
 		pkill -9 -f "${S}/sql" 2>/dev/null
-		[[ $retstatus -eq 0 ]] || die "make test failed"
+		[[ $retstatus -eq 0 ]] || die "test failed"
 	else
 		einfo "Skipping server tests due to minimal build."
 	fi
