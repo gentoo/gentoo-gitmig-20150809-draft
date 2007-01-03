@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6527 2007/01/03 00:06:05 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6528 2007/01/03 00:43:31 omp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1306,10 +1306,6 @@ net-mail/mailer-config
 # Rob Cakebread <pythonhead@gentoo.org> (22 Apr 2005)
 # Versions in portage no longer supported. Abeni 1.0 will be in portage soon after wxGTK-2.6.0
 app-portage/abeni
-
-# Jan Brinkmann <luckyduck@gentoo.org> (21 Apr 2005)
-# missing dependencies, see #89893
-=app-misc/freemind-0.8.0_rc2
 
 # Konstantin Arkhipov <voxus@gentoo.org> (15 Apr 2005)
 # Masked until arrival of userland tools. At least.
