@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/lirc
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.121 2006/12/14 10:31:58 zzam Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.122 2007/01/03 18:17:15 zzam Exp $
+
+*lirc-0.8.1_pre5 (03 Jan 2007)
+
+  03 Jan 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/lirc-0.8.1-atiusb-xbox.diff, +files/lirc-0.8.1-imon-pad2keys.patch,
+  +lirc-0.8.1_pre5.ebuild:
+  Added a pre-release as it contains a lot of fixes, thanks to mcummings for
+  noticing. Use newer xbox-patch that can unconditionally be applied.
 
   14 Dec 2006; Matthias Schwarzott <zzam@gentoo.org> lirc-0.7.2.ebuild,
   lirc-0.8.0-r1.ebuild, lirc-0.8.0-r5.ebuild, lirc-0.8.0-r8.ebuild:
