@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.38 2006/12/31 19:30:54 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.39 2007/01/03 09:18:20 caster Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -176,7 +176,7 @@ java-pkg_dojar() {
 
 	local jar
 	# for each jar
-	for jar in "$@"; do
+	for jar in ${@}; do
 		local jar_basename=$(basename "${jar}")
 
 		java-pkg_check-versioned-jar ${jar_basename}
@@ -256,7 +256,7 @@ java-pkg_regjar() {
 	java-pkg_init_paths_
 
 	local jar jar_dir jar_file
-	for jar in "$@"; do
+	for jar in ${@}; do
 		# TODO use java-pkg_check-versioned-jar
 		if [[ -e "${jar}" || -e "${D}${jar}" ]]; then
 			[[ -d "${jar}" || -d "${D}${jar}" ]] \
