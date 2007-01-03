@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6529 2007/01/03 00:44:09 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6530 2007/01/03 00:45:51 omp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -769,9 +769,8 @@ mail-filter/sid-milter
 games-rpg/planeshift
 
 # Marc Hildebrand <zypher@gentoo.org> (17 Jul 2006)
-# media-video/piave, media-video/kdenlive-0.2.4
-# Masking broken versions, pending removal
-media-video/piave
+# media-video/kdenlive-0.2.4
+# Masking broken version, pending removal
 =media-video/kdenlive-0.2.4
 
 # Marc Hildebrand <zypher@gentoo.org> (17 Jul 2006)
