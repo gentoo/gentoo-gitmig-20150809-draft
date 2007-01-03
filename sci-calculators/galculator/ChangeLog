@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/galculator
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/galculator/ChangeLog,v 1.11 2006/11/17 07:49:21 opfer Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/galculator/ChangeLog,v 1.12 2007/01/03 03:39:16 beandog Exp $
+
+  03 Jan 2007; Steve Dibb <beandog@gentoo.org> galculator-1.2.5.2.ebuild:
+  amd64 stable, bug 132907
 
   17 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
   galculator-1.2.5.2.ebuild:
