@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6532 2007/01/03 00:49:41 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6533 2007/01/03 00:50:54 omp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -560,7 +560,6 @@ dev-util/boost-build
 # swfdec is stale, according to upstream as well, and these need to follow
 # mozilla out of the door.
 media-libs/swfdec
-media-plugins/gst-plugins-swfdec
 
 # Markus Ullmann <jokey@gentoo.org> (24.09.2006)
 # masking kvirc cvs ebuild
