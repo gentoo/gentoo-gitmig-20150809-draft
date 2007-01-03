@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/stella
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.21 2006/08/16 16:40:49 mr_bones_ Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.22 2007/01/03 10:51:06 mr_bones_ Exp $
+
+*stella-2.3 (03 Jan 2007)
+
+  03 Jan 2007; Michael Sterrett <mr_bones_@gentoo.org> +stella-2.3.ebuild:
+  version bump
 
   16 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org> stella-2.2.ebuild:
   avoid pre-stripping files - patch from Tristan Heaven via bug #137834
