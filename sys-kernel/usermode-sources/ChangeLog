@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/usermode-sources
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.84 2006/09/30 21:10:10 dang Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.85 2007/01/03 03:59:08 dang Exp $
+
+*usermode-sources-2.6.18-r1 (03 Jan 2007)
+
+  03 Jan 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/uml-2.6.18-genpatches-8-prep.patch,
+  +usermode-sources-2.6.18-r1.ebuild:
+  Update to bb2 and genpatches 8; fixes bug #154313, bug #155769, and bug #158792
 
 *usermode-sources-2.6.18 (30 Sep 2006)
 
