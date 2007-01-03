@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rename/rename-1.3.ebuild,v 1.17 2006/11/30 03:33:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rename/rename-1.3.ebuild,v 1.18 2007/01/03 08:31:42 vapier Exp $
 
 inherit toolchain-funcs eutils
 
@@ -21,6 +21,7 @@ src_unpack() {
 		-e '/strip /s:.*::' \
 		Makefile.in
 	epatch "${FILESDIR}"/${P}-rename.patch
+	epatch "${FILESDIR}"/${P}-build.patch
 	tc-export CC
 }
 
