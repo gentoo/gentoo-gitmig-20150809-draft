@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.6.ebuild,v 1.10 2006/10/27 01:28:34 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.6.ebuild,v 1.11 2007/01/03 19:20:34 rl03 Exp $
 
 inherit eutils webapp versionator depend.apache
 
@@ -12,6 +12,8 @@ SRC_URI="http://awstats.sourceforge.net/files/${P}.tar.gz"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE=""
+
+RESTRICT="mirror"
 
 SLOT="0"
 WEBAPP_MANUAL_SLOT="yes"
@@ -86,14 +88,12 @@ src_install() {
 	mkdir -p "${D}${MY_CGIBINDIR}"
 	for dir in lang lib plugins; do
 		cp -R "${S}/wwwroot/cgi-bin/${dir}" "${D}${MY_CGIBINDIR}"
-		chmod 0755 "${D}${MY_CGIBINDIR}/${dir}"
 	done
 
 	# install the app's www files
 	mkdir -p "${D}${MY_HTDOCSDIR}"
 	for dir in icon css js; do
 		cp -R "${S}/wwwroot/${dir}" "${D}${MY_HTDOCSDIR}"
-		chmod 0755 "${D}${MY_HTDOCSDIR}/${dir}"
 	done
 
 	# copy configuration file
@@ -111,6 +111,14 @@ src_install() {
 	newbin urlaliasbuilder.pl awstats_urlaliasbuilder.pl
 
 	webapp_src_install
+
+	# fix perms
+	for dir in lang lib plugins; do
+		chmod 0755 "${D}${MY_CGIBINDIR}/${dir}"
+	done
+	for dir in icon css js; do
+		chmod 0755 "${D}${MY_HTDOCSDIR}/${dir}"
+	done
 }
 
 pkg_postinst() {

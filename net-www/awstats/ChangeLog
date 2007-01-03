@@ -1,6 +1,9 @@
 # ChangeLog for net-www/awstats
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.41 2006/10/27 01:28:34 rl03 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.42 2007/01/03 19:20:34 rl03 Exp $
+
+  03 Jan 2007; Renat Lumpau <rl03@gentoo.org> awstats-6.6.ebuild:
+  Minor cleanups to 6.6
 
   27 Oct 2006; Renat Lumpau <rl03@gentoo.org> awstats-6.5-r2.ebuild,
   awstats-6.6.ebuild:
