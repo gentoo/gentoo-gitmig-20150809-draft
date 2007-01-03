@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/kile
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.87 2006/11/23 17:34:35 dertobi123 Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.88 2007/01/03 03:25:38 beandog Exp $
+
+  03 Jan 2007; Steve Dibb <beandog@gentoo.org> kile-1.9.3.ebuild:
+  amd64 stable, bug 158482
 
   23 Nov 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   kile-1.9.2-r1.ebuild:
