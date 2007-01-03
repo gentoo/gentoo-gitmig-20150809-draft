@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.3.10.ebuild,v 1.2 2006/12/31 21:39:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.3.10.ebuild,v 1.3 2007/01/03 21:07:48 uberlord Exp $
 
-inherit eutils flag-o-matic debug
+inherit eutils flag-o-matic libtool debug
 
 DESCRIPTION="A vector graphics library with cross-device output support"
 HOMEPAGE="http://cairographics.org/"
@@ -39,6 +39,14 @@ DEPEND="${RDEPEND}
 					>=dev-util/gtk-doc-1.3
 					 ~app-text/docbook-xml-dtd-4.2
 				)"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# We need to run elibtoolize to ensure correct so versioning on FreeBSD
+	elibtoolize
+}
 
 src_compile() {
 	#gets rid of fbmmx.c inlining warnings
