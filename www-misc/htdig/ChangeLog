@@ -1,6 +1,12 @@
 # ChangeLog for www-misc/htdig
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/ChangeLog,v 1.19 2007/01/03 18:28:40 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/ChangeLog,v 1.20 2007/01/03 19:08:47 rl03 Exp $
+
+*htdig-3.2.0_beta6-r2 (03 Jan 2007)
+
+  03 Jan 2007; Renat Lumpau <rl03@gentoo.org> -htdig-3.2.0_beta6-r1.ebuild,
+  +htdig-3.2.0_beta6-r2.ebuild:
+  Add ssl support, bug #156003.
 
   03 Jan 2007; Renat Lumpau <rl03@gentoo.org> -htdig-3.2.0_beta6.ebuild:
   Housekeeping
