@@ -1,0 +1,251 @@
+--- netpbm-10.26.37/buildtools/typegen.c
++++ netpbm-10.26.37/buildtools/typegen.c
+@@ -28,6 +28,7 @@
+ -----------------------------------------------------------------------------*/
+ #include <stdio.h>
+ #include <unistd.h>
++#include <stdlib.h>
+ 
+ 
+ 
+--- netpbm-10.26.37/converter/pbm/escp2topbm.c
++++ netpbm-10.26.37/converter/pbm/escp2topbm.c
+@@ -16,6 +16,8 @@
+ ** implied warranty.
+ */
+ 
++#include <string.h>
++
+ #include "pbm.h"
+ 
+ /* RLE decoder */
+--- netpbm-10.26.37/converter/pbm/pbmtoescp2.c
++++ netpbm-10.26.37/converter/pbm/pbmtoescp2.c
+@@ -14,6 +14,8 @@
+ 
+ /* I used the Epson ESC/P Reference Manual (1997) in writing this. */
+ 
++#include <string.h>
++
+ #include "pbm.h"
+ #include "shhopt.h"
+ 
+--- netpbm-10.26.37/converter/other/pamtohdiff.c
++++ netpbm-10.26.37/converter/other/pamtohdiff.c
+@@ -14,6 +14,7 @@
+ 
+ ******************************************************************************/
+ #include <stdio.h>
++#include <string.h>
+ 
+ #include "pam.h"
+ #include "shhopt.h"
+--- netpbm-10.26.37/converter/other/fiasco/binerror.c
++++ netpbm-10.26.37/converter/other/fiasco/binerror.c
+@@ -25,6 +25,7 @@
+ #include "config.h"
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ 
+ #if STDC_HEADERS
+ #	include <stdarg.h>
+--- netpbm-10.26.37/converter/other/fiasco/codec/coeff.c
++++ netpbm-10.26.37/converter/other/fiasco/codec/coeff.c
+@@ -14,6 +14,8 @@
+  *  $State: Exp $
+  */
+ 
++#include <string.h>
++
+ #include "config.h"
+ 
+ #include "types.h"
+--- netpbm-10.26.37/converter/other/fiasco/codec/dfiasco.c
++++ netpbm-10.26.37/converter/other/fiasco/codec/dfiasco.c
+@@ -14,6 +14,8 @@
+  *  $State: Exp $
+  */
+ 
++#include <string.h>
++
+ #include "config.h"
+ 
+ #include "types.h"
+--- netpbm-10.26.37/converter/other/pnmtoxwd.c
++++ netpbm-10.26.37/converter/other/pnmtoxwd.c
+@@ -10,6 +10,8 @@
+ ** implied warranty.
+ */
+ 
++#include <string.h>
++
+ #include "pnm.h"
+ #include "shhopt.h"
+ #include "mallocvar.h"
+--- netpbm-10.26.37/converter/other/pnmtopalm/palmtopnm.c
++++ netpbm-10.26.37/converter/other/pnmtopalm/palmtopnm.c
+@@ -10,6 +10,7 @@
+ ******************************************************************************/
+ 
+ #include <assert.h>
++#include <string.h>
+ 
+ #include "pnm.h"
+ #include "shhopt.h"
+--- netpbm-10.26.37/converter/other/pnmtopalm/pnmtopalm.c
++++ netpbm-10.26.37/converter/other/pnmtopalm/pnmtopalm.c
+@@ -14,6 +14,7 @@
+ #include <stdio.h>
+ #include <assert.h>
+ #include <limits.h>
++#include <string.h>
+ 
+ #include "pnm.h"
+ #include "palm.h"
+--- netpbm-10.26.37/converter/other/hdifftopam.c
++++ netpbm-10.26.37/converter/other/hdifftopam.c
+@@ -7,6 +7,7 @@
+   By Bryan Henderson, San Jose, CA 2002.04.15.
+ ******************************************************************************/
+ #include <stdio.h>
++#include <string.h>
+ 
+ #include "pam.h"
+ #include "shhopt.h"
+--- netpbm-10.26.37/converter/ppm/ppmtoterm.c
++++ netpbm-10.26.37/converter/ppm/ppmtoterm.c
+@@ -19,6 +19,7 @@
+ **
+ */
+ 
++#include <string.h>
+ #include "ppm.h"
+ #include "shhopt.h"
+ 
+--- netpbm-10.26.37/other/pamstack.c
++++ netpbm-10.26.37/other/pamstack.c
+@@ -12,6 +12,8 @@
+   Contributed to the public domain by its author 2002.05.05.
+ -----------------------------------------------------------------------------*/
+ 
++#include <string.h>
++
+ #include "pam.h"
+ #include "shhopt.h"
+ 
+--- netpbm-10.26.37/other/pamarith.c
++++ netpbm-10.26.37/other/pamarith.c
+@@ -13,6 +13,8 @@
+ ** implied warranty.
+ */
+ 
++#include <string.h>
++
+ #include "pam.h"
+ #include "shhopt.h"
+ 
+--- netpbm-10.26.37/other/pamchannel.c
++++ netpbm-10.26.37/other/pamchannel.c
+@@ -11,6 +11,8 @@
+   Contributed to the public domain by its author 2000.08.05.
+ -----------------------------------------------------------------------------*/
+ 
++#include <string.h>
++
+ #include "pam.h"
+ #include "shhopt.h"
+ #include "mallocvar.h"
+--- netpbm-10.26.37/editor/pamditherbw.c
++++ netpbm-10.26.37/editor/pamditherbw.c
+@@ -11,6 +11,7 @@
+ =============================================================================*/
+ 
+ #include <assert.h>
++#include <string.h>
+ #include "pam.h"
+ #include "dithers.h"
+ #include "mallocvar.h"
+--- netpbm-10.26.37/editor/pnmsmooth.c
++++ netpbm-10.26.37/editor/pnmsmooth.c
+@@ -23,6 +23,7 @@
+ #define _BSD_SOURCE 1
+     /* This makes sure that mkstemp() is in unistd.h */
+ 
++#include <string.h>
+ #include <unistd.h>
+ #include <sys/wait.h>
+ #include "pnm.h"
+--- netpbm-10.26.37/generator/ppmwheel.c
++++ netpbm-10.26.37/generator/ppmwheel.c
+@@ -13,6 +13,8 @@
+ ** implied warranty.
+ */
+ 
++#include <string.h>
++
+ #include "ppm.h"
+ #include <math.h>
+ 
+--- netpbm-10.26.37/converter/other/fiasco/input/basis.c
++++ netpbm-10.26.37/converter/other/fiasco/input/basis.c
+@@ -14,6 +14,8 @@
+  *  $State: Exp $
+  */
+ 
++#include <string.h>
++
+ #include "config.h"
+ 
+ #include "types.h"
+--- netpbm-10.26.37/converter/other/pnmtotiffcmyk.c
++++ netpbm-10.26.37/converter/other/pnmtotiffcmyk.c
+@@ -58,6 +58,7 @@
+ /* On AIX, _XOPEN_SOURCE keeps inttypes.h from conflicting with tiffio.h */
+ #define _XOPEN_SOURCE
+ 
++#include <string.h>
+ #include "pnm.h"
+ #include <math.h>
+ /* float.h used to be included only if __osf__ was defined.  On some
+--- netpbm-10.26.37/analyzer/pnmpsnr.c
++++ netpbm-10.26.37/analyzer/pnmpsnr.c
+@@ -10,6 +10,7 @@
+ 
+ #include <stdio.h>
+ #include <math.h>
++#include <string.h>
+ 
+ #include "pam.h"
+ 
+--- netpbm-10.26.37/editor/pnmpad.c
++++ netpbm-10.26.37/editor/pnmpad.c
+@@ -11,6 +11,7 @@
+  */
+ 
+ #include <stdio.h>
++#include <string.h>
+ #include "pnm.h"
+ #include "shhopt.h"
+ #include "mallocvar.h"
+--- netpbm-10.26.37/generator/pbmpage.c
++++ netpbm-10.26.37/generator/pbmpage.c
+@@ -15,6 +15,7 @@
+ #include <math.h>
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <string.h>
+ #include "pbm.h"
+ 
+ /* Support both US and A4. */
+--- netpbm-10.26.37/converter/other/fiasco/input/mc.c
++++ netpbm-10.26.37/converter/other/fiasco/input/mc.c
+@@ -15,6 +15,8 @@
+  *  $State: Exp $
+  */
+ 
++#include <stdlib.h>
++
+ #include "config.h"
+ 
+ #include "types.h"
