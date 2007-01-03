@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/phprojekt-4.2.3.ebuild,v 1.4 2006/11/23 17:24:26 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/phprojekt-4.2.3.ebuild,v 1.5 2007/01/03 19:03:17 rl03 Exp $
 
 inherit webapp eutils
 
@@ -12,11 +12,9 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 
 LICENSE="GPL-2"
 KEYWORDS="ppc x86"
-IUSE="postgres mysql"
+IUSE=""
 
 RDEPEND="net-www/apache
-		postgres? ( dev-db/postgresql )
-		mysql? ( virtual/mysql )
 		virtual/php"
 DEPEND="app-arch/unzip"
 
