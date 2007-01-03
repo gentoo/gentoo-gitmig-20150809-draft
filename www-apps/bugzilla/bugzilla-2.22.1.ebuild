@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.22.1.ebuild,v 1.4 2007/01/02 22:20:03 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.22.1.ebuild,v 1.5 2007/01/03 02:53:16 rl03 Exp $
 
 inherit webapp
 
@@ -56,9 +56,6 @@ src_install () {
 	webapp_src_preinst
 
 	cp -r ${S}/* ${D}/${MY_HTDOCSDIR} || die
-	for file in `find -type d -printf "%p/* "`; do
-		webapp_serverowned "${MY_HTDOCSDIR}/${file}"
-	done
 
 	cp ${FILESDIR}/2.22/apache.htaccess ${D}/${MY_HTDOCSDIR}/.htaccess
 
@@ -69,4 +66,7 @@ src_install () {
 	webapp_hook_script ${FILESDIR}/2.22/reconfig
 	webapp_postinst_txt en ${FILESDIR}/2.22/postinstall-en.txt
 	webapp_src_install
+
+	# bug #124282
+	chmod -R +x ${D}/${MY_HTDOCSDIR}/*.cgi
 }
