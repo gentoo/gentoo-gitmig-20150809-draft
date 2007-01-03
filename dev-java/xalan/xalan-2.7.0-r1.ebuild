@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.7.0-r1.ebuild,v 1.6 2006/11/30 15:59:11 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.7.0-r1.ebuild,v 1.7 2007/01/03 14:28:08 caster Exp $
 
 inherit java-pkg eutils versionator
 
@@ -17,7 +17,7 @@ IUSE="doc jikes source"
 RDEPEND=">=virtual/jre-1.4
 	dev-java/javacup
 	dev-java/bcel
-	>=dev-java/jakarta-regexp-1.3-r2
+	=dev-java/jakarta-regexp-1.3*
 	=dev-java/bsf-2.3*
 	>=dev-java/xerces-2.7
 	=dev-java/xml-commons-external-1.3*"

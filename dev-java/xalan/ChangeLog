@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/xalan
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.60 2007/01/02 02:43:20 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.61 2007/01/03 14:28:08 caster Exp $
+
+  03 Jan 2007; Vlastimil Babka <caster@gentoo.org> xalan-2.6.0-r2.ebuild,
+  xalan-2.6.0-r3.ebuild, xalan-2.7.0-r1.ebuild, xalan-2.7.0-r2.ebuild,
+  xalan-2.7.0-r3.ebuild:
+  Correct jakarta-regexp dependency to hit the right slot.
 
   02 Jan 2007; Andrej Kacian <ticho@gentoo.org> xalan-2.7.0-r2.ebuild:
   Stable on x86, bug #159156.
