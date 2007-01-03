@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/taglist
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/taglist/ChangeLog,v 1.45 2006/09/18 14:36:41 agriffis Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/taglist/ChangeLog,v 1.46 2007/01/03 15:45:04 beu Exp $
+
+*taglist-4.2 (03 Jan 2007)
+
+  03 Jan 2007; Elfyn McBratney <beu@gentoo.org> +taglist-4.2.ebuild:
+  Version bump.
 
   18 Sep 2006; Aron Griffis <agriffis@gentoo.org> taglist-4.1.ebuild:
   Set SRC_URI to dev.gentoo.org/~agriffis temporarily since
