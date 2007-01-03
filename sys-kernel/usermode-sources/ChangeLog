@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/usermode-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.85 2007/01/03 03:59:08 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.86 2007/01/03 04:32:05 dang Exp $
+
+  03 Jan 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/usermode-sources-2.6.18-r1-CVE-2006-4572.patch,
+  usermode-sources-2.6.18-r1.ebuild:
+  Oops, fix for bug #154327 too
 
 *usermode-sources-2.6.18-r1 (03 Jan 2007)
 

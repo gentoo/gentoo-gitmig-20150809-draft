@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.6.18-r1.ebuild,v 1.1 2007/01/03 03:59:08 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.6.18-r1.ebuild,v 1.2 2007/01/03 04:32:05 dang Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base"
@@ -10,7 +10,8 @@ detect_version
 
 UML_VER="uml-2.6.18.1-bb2"
 UNIPATCH_LIST="${FILESDIR}/uml-2.6.18-genpatches-8-prep.patch
-	${DISTDIR}/${UML_VER}.patch.bz2"
+	${DISTDIR}/${UML_VER}.patch.bz2
+	${FILESDIR}/${PF}-CVE-2006-4572.patch"
 UNIPATCH_STRICTORDER="yes"
 
 DESCRIPTION="Full sources for the User Mode Linux kernel"
