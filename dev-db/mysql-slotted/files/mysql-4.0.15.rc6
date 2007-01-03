@@ -1,0 +1,43 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-slotted/files/mysql-4.0.15.rc6,v 1.1 2007/01/03 15:25:28 vivo Exp $
+
+depend() {
+	use dns net
+}
+
+checkconfig() {
+	if [ ! -f /etc/mysql/my.cnf ]; then
+		eerror "No /etc/mysql/my.cnf file exists!"
+	fi
+
+    #dir=`my_print_defaults mysqld | grep -- '^--datadir' | tail -n1 | sed -e 's|^--datadir=||'`
+	dir=`my_print_defaults mysqld | sed -ne '/datadir/s|^--datadir=||p' | tail -n1`
+
+	if [ -z "$dir" ]; then
+		eerror "Your mysql doesn't have any datadir setting, default or specific"
+		eerror "Please check your my.cnf"
+		return 1
+	fi
+
+	if [ ! -d "$dir/mysql" ]; then
+		eerror "You don't appear to have the mysql database installed yet."
+		eerror "Please run /usr/bin/mysql_install_db to have this done..."
+		return 1
+	fi
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting mysqld"
+	start-stop-daemon --start --quiet --exec /usr/bin/mysqld_safe \
+		--background -- >/dev/null 2>&1
+	eend $?
+}
+
+stop () {
+	ebegin "Stopping mysqld"
+	start-stop-daemon --stop --retry 5 --quiet --pidfile=/var/run/mysqld/mysqld.pid
+	eend $?
+}

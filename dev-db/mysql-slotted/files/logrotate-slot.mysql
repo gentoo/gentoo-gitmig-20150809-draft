@@ -1,0 +1,14 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-slotted/files/logrotate-slot.mysql,v 1.1 2007/01/03 15:25:28 vivo Exp $
+/var/log/mysql___MY_SUFFIX___/mysql.err /var/log/mysql___MY_SUFFIX___/mysql.log /var/log/mysql___MY_SUFFIX___/mysqld.err {
+monthly
+create 660 mysql mysql
+notifempty
+size 5M
+sharedscripts
+missingok
+postrotate
+/bin/kill -HUP `cat /var/run/mysqld___MY_SUFFIX___/mysqld.pid`
+endscript
+}
