@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-news
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.15 2006/10/20 20:39:01 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.16 2007/01/03 02:37:39 beandog Exp $
+
+  03 Jan 2007; Steve Dibb <beandog@gentoo.org> twisted-news-0.2.0.ebuild:
+  amd64 stable, bug 128688
 
   20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   twisted-news-0.2.0.ebuild:

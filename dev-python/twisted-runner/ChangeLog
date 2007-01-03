@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-runner
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-runner/ChangeLog,v 1.14 2006/08/01 15:18:08 blubb Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-runner/ChangeLog,v 1.15 2007/01/03 02:39:05 beandog Exp $
+
+  03 Jan 2007; Steve Dibb <beandog@gentoo.org> twisted-runner-0.2.0.ebuild:
+  amd64 stable, bug 128688
 
   01 Aug 2006; Simon Stelling <blubb@gentoo.org>
   twisted-runner-0.2.0.ebuild:
