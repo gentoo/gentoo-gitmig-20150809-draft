@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.156 2006/10/31 08:24:29 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.157 2007/01/03 01:48:54 truedfx Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -452,7 +452,7 @@ vim_src_compile() {
 
 	# Note: If USE=gpm, then ncurses will still be required. See bug #93970
 	# for the reasons behind the USE flag change.
-	myconf="${myconf} --with-tlib=ncurses"
+	myconf="${myconf} --with-tlib=curses"
 
 	if version_is_at_least "6.4_beta" ; then
 		myconf="${myconf} --disable-selinux"
