@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.1.ebuild,v 1.3 2006/02/02 16:34:12 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.1.ebuild,v 1.4 2007/01/04 15:54:41 zzam Exp $
 
-inherit eutils java-pkg libtool flag-o-matic
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit eutils java-pkg flag-o-matic autotools
 
 DESCRIPTION="Themeable and easy to use TV Guide - written in Java"
 HOMEPAGE="http://www.tvbrowser.org/"
@@ -67,8 +70,7 @@ src_unpack() {
 	cd ${S}/deployment/x11
 	rm configure
 
-	libtoolize --copy --force
-	autoreconf
+	eautoreconf
 }
 
 src_compile() {

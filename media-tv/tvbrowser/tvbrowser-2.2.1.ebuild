@@ -1,6 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.2.1.ebuild,v 1.2 2006/10/20 10:40:59 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.2.1.ebuild,v 1.3 2007/01/04 15:54:41 zzam Exp $
+
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 
 inherit eutils java-pkg-2 java-ant-2 autotools flag-o-matic
 
@@ -40,7 +43,7 @@ DEPEND=">=virtual/jdk-1.4
 
 LICENSE="GPL-2"
 
-IUSE="doc jikes themes source"
+IUSE="doc themes source"
 
 src_unpack() {
 	unpack ${P}-src.zip
@@ -85,7 +88,6 @@ src_unpack() {
 src_compile() {
 	local antflags="runtime-linux"
 	use doc && antflags="${antflags} public-doc"
-	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	cd ${S}
 	mkdir public
 	eant ${antflags}
