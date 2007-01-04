@@ -1,6 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/talkfilters/talkfilters-2.3.4-r1.ebuild,v 1.7 2005/11/29 03:22:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/talkfilters/talkfilters-2.3.4-r1.ebuild,v 1.8 2007/01/04 13:30:35 flameeyes Exp $
+
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit autotools
 
 DESCRIPTION="convert ordinary English text into text that mimics a stereotyped or otherwise humorous dialect"
 HOMEPAGE="http://www.dystance.net/software/talkfilters/"
@@ -11,24 +16,15 @@ SLOT="0"
 KEYWORDS="amd64 ~hppa ~mips ppc ~ppc-macos x86"
 IUSE=""
 
-DEPEND=">=sys-apps/sed-4"
-RDEPEND="virtual/libc"
-
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# respect DESTDIR
 	sed -i 's:\($(mandir)\):$(DESTDIR)/\1:' Makefile.am \
 		|| die "sed Makefile.am failed"
 	sed -i '/^AC_PROG_RANLIB$/d' configure.in || die "sed configure.in failed"
-}
 
-src_compile() {
-	einfo "Running autoreconf"
-	WANT_AUTOMAKE=1.7 autoreconf -f -i || die "autoreconf failed"
-
-	econf || die "econf failed"
-	emake || die "emake failed"
+	eautoreconf
 }
 
 src_install () {
