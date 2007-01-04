@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/mp3info-0.8.4-r2.ebuild,v 1.4 2006/03/15 01:46:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/mp3info-0.8.4-r2.ebuild,v 1.5 2007/01/04 16:25:48 flameeyes Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,8 +12,6 @@ HOMEPAGE="http://ibiblio.org/mp3info/"
 
 RDEPEND="gtk? ( =x11-libs/gtk+-1.2* )
 	sys-libs/ncurses"
-DEPEND="${RDEPEND}
-	sys-apps/groff"
 
 SLOT="0"
 LICENSE="GPL-2"

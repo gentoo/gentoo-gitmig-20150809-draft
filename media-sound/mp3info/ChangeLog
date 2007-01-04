@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mp3info
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/ChangeLog,v 1.16 2006/03/15 01:46:10 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/ChangeLog,v 1.17 2007/01/04 16:25:48 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  mp3info-0.8.4-r2.ebuild:
+  Remove bogus groff dependency.
 
   15 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/mp3info-0.8.4-ldflags.patch, mp3info-0.8.4-r2.ebuild:
