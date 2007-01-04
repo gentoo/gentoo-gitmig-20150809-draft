@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-360-r1.ebuild,v 1.2 2007/01/04 00:35:28 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-360-r1.ebuild,v 1.3 2007/01/04 00:40:44 chutzpah Exp $
 
 inherit eutils multilib flag-o-matic libtool
 
@@ -45,11 +45,6 @@ src_unpack() {
 }
 
 src_compile() {
-	# needed because drschme uses it's own linker that passes LDFLAGS directly
-	# to the linker, rather than passing it through gcc
-	LDFLAGS="${LDFLAGS//-Wl/}"
-	LDFLAGS="${LDFLAGS//,/ }"
-
 	# -O3 seems to cause some miscompiles, this should fix #141925 and #133888
 	replace-flags -O? -O2
 
@@ -73,6 +68,8 @@ src_compile() {
 }
 
 src_install() {
+	export MZSCHEME_DYNEXT_LINKER_FLAGS=$(raw-ldflags)
+
 	make DESTDIR="${D}" install || die "make install failed"
 
 	if use 3m; then

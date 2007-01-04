@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/drscheme
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.40 2007/01/04 00:35:28 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.41 2007/01/04 00:40:44 chutzpah Exp $
+
+  04 Jan 2007; Patrick McLean <chutzpah@gentoo.org> drscheme-360-r1.ebuild:
+  Use MZSCHEME_DYNEXT_LINKER_FLAGS instead of modifying LDFLAGS, fixes bug
+  #156911. Thanks to "TGL" <degrenier@easyconnect.fr> for the fix.
 
   04 Jan 2007; Patrick McLean <chutzpah@gentoo.org> drscheme-352-r2.ebuild,
   -drscheme-360.ebuild, drscheme-360-r1.ebuild:
