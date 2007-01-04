@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.4.1.ebuild,v 1.1 2006/10/24 19:02:33 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.4.1.ebuild,v 1.2 2007/01/04 21:45:47 welp Exp $
 
 inherit kde-functions eutils debug flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.berlios.de/sim-im/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="kde spell ssl"
 
 # kdebase-data provides the icon "licq.png"
