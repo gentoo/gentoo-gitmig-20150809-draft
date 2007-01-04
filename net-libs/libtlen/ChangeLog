@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libtlen
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtlen/ChangeLog,v 1.9 2006/04/16 07:09:54 spock Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtlen/ChangeLog,v 1.10 2007/01/04 15:58:09 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  libtlen-20060309.ebuild:
+  Fix broken autotools handling.
 
   16 Apr 2006; Michał Januszewski <spock@gentoo.org>
   libtlen-20060309.ebuild:

@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtlen/libtlen-20060309.ebuild,v 1.2 2006/04/16 07:09:54 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtlen/libtlen-20060309.ebuild,v 1.3 2007/01/04 15:58:09 flameeyes Exp $
 
-inherit eutils
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit eutils autotools
 
 DESCRIPTION="Support library for Tlen IMS"
 HOMEPAGE="http://tleenx.sourceforge.net/"
@@ -21,10 +24,9 @@ src_unpack() {
 
 	if use amd64; then
 		epatch ${FILESDIR}/20040912-fPIC.patch
-		aclocal
-		autoconf
-		libtoolize --force --copy
 	fi
+
+	AT_M4DIR="m4" eautoreconf
 }
 
 src_compile() {
