@@ -1,8 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/openslp-1.0.11.ebuild,v 1.18 2005/03/18 11:54:06 liquidx Exp $
-
-inherit gnuconfig
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/openslp-1.0.11.ebuild,v 1.19 2007/01/04 19:42:06 flameeyes Exp $
 
 DESCRIPTION="An open-source implementation of Service Location Protocol"
 HOMEPAGE="http://www.openslp.org/"
@@ -14,12 +12,6 @@ KEYWORDS="x86 ppc sparc mips alpha arm hppa -amd64 ia64 s390 ppc64"
 IUSE=""
 
 DEPEND="virtual/libc"
-
-src_unpack() {
-	unpack ${A}
-	# needed at least by alpha and amd64
-	gnuconfig_update
-}
 
 src_compile() {
 	econf || die

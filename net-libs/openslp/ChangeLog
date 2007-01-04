@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/openslp
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.38 2006/10/17 21:33:34 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.39 2007/01/04 19:42:06 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> openslp-1.0.11.ebuild:
+  Remove gnuconfig usage.
 
   17 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> openslp-1.2.1.ebuild:
   Require automake 1.8 as eautomake is used; accept latest autoconf if needed.
