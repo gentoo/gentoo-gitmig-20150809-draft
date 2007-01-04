@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/PEAR-File_XSPF
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File_XSPF/ChangeLog,v 1.1 2007/01/04 03:23:13 beandog Exp $
+
+*PEAR-File_XSPF-0.2.1 (04 Jan 2007)
+
+  04 Jan 2007; Steve Dibb <beandog@gentoo.org> +metadata.xml,
+  +PEAR-File_XSPF-0.2.1.ebuild:
+  Initial commit
+
