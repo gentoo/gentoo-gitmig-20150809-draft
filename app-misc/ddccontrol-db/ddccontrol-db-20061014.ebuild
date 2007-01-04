@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol-db/ddccontrol-db-20061014.ebuild,v 1.1 2006/11/13 10:58:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol-db/ddccontrol-db-20061014.ebuild,v 1.2 2007/01/04 08:27:45 robbat2 Exp $
 
 DESCRIPTION="DDCControl monitor database"
 HOMEPAGE="http://ddccontrol.sourceforge.net/"
@@ -11,8 +11,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE="nls"
 
-DEPEND="nls? ( sys-devel/gettext )"
-RDEPEND="${DEPEND}"
+RDEPEND="nls? ( sys-devel/gettext )"
+DEPEND="${RDEPEND}
+		dev-util/intltool
+		dev-perl/XML-Parser"
 
 src_compile() {
 	econf `enable_with nls` || die "econf failed"

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ddccontrol-0.4.2.ebuild,v 1.1 2006/10/01 20:13:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ddccontrol-0.4.2.ebuild,v 1.2 2007/01/04 08:27:14 robbat2 Exp $
 
 inherit eutils autotools
 
@@ -20,6 +20,8 @@ RDEPEND="dev-libs/libxml2
 	nls? ( sys-devel/gettext )
 	>=app-misc/ddccontrol-db-20060730"
 DEPEND="${RDEPEND}
+	dev-perl/XML-Parser
+	dev-util/intltool
 	doc? ( >=app-text/docbook-xsl-stylesheets-1.65.1
 		   >=dev-libs/libxslt-1.1.6
 	       app-text/htmltidy )
