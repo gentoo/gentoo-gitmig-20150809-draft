@@ -1,6 +1,7 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc64/virtuals,v 1.4 2006/12/11 04:04:26 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc64/virtuals,v 1.5 2007/01/04 03:56:33 tgall Exp $
 
 virtual/bootloader     sys-boot/yaboot-static
 virtual/mysql		dev-db/mysql
+virtual/init		sys-apps/sysvinit
