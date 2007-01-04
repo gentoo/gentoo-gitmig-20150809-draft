@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/ccd2iso
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/ccd2iso/ChangeLog,v 1.9 2006/01/13 09:11:54 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/ccd2iso/ChangeLog,v 1.10 2007/01/04 21:09:34 grobian Exp $
+
+  04 Jan 2007; Fabian Groffen <grobian@gentoo.org> ccd2iso-0.2-r1.ebuild:
+  Dropped ppc-macos keyword, see you in prefix
 
 *ccd2iso-0.2-r1 (13 Jan 2006)
 

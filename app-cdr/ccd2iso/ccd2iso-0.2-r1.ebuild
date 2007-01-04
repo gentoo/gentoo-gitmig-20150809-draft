@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/ccd2iso/ccd2iso-0.2-r1.ebuild,v 1.2 2006/09/24 09:00:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/ccd2iso/ccd2iso-0.2-r1.ebuild,v 1.3 2007/01/04 21:09:34 grobian Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/ccd2iso/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc-macos x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND=""
