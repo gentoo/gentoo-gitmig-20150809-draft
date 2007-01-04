@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX kftpgrabber-0.6.0-gcc4.patch 2222 RMD160 4d7846303da504a79ef2b7f4bd0ec0a229debcfb SHA1 e0723297ce912c262e2ecf13c316bda1f20b0d50 SHA256 a090e9c1ebb2f0069fb4a6d6f6f48200140c19d4040eea89e078b303a9854fd4
 MD5 288e8f880999088f99c5d33c19b875f3 files/kftpgrabber-0.6.0-gcc4.patch 2222
 RMD160 4d7846303da504a79ef2b7f4bd0ec0a229debcfb files/kftpgrabber-0.6.0-gcc4.patch 2222
@@ -10,46 +13,20 @@ AUX kftpgrabber-0.6.0-uic.patch 1049 RMD160 72d0ef24890aee9f15ae978c624933f5204a
 MD5 225f4b81821c40c533b31665a32de321 files/kftpgrabber-0.6.0-uic.patch 1049
 RMD160 72d0ef24890aee9f15ae978c624933f5204ac162 files/kftpgrabber-0.6.0-uic.patch 1049
 SHA256 58c0dabdf5d4cc6aec88f8bfd3bbfa30bb5732dfb9a89592a735806389287199 files/kftpgrabber-0.6.0-uic.patch 1049
-AUX kftpgrabber-0.8.0_alpha2-multiline-data-command-fix.diff 687 RMD160 0eb71e92cdeb392d1c24ccb79a4a68388d02a1ff SHA1 f738e46bd9155caf738a868d6d6541df56c7ca4a SHA256 741810382052636c83dd649766c391f2929f5ac1f5d72540aa071947cb8b33ec
-MD5 fa485f8c67c6212b88d39f625cce9f7e files/kftpgrabber-0.8.0_alpha2-multiline-data-command-fix.diff 687
-RMD160 0eb71e92cdeb392d1c24ccb79a4a68388d02a1ff files/kftpgrabber-0.8.0_alpha2-multiline-data-command-fix.diff 687
-SHA256 741810382052636c83dd649766c391f2929f5ac1f5d72540aa071947cb8b33ec files/kftpgrabber-0.8.0_alpha2-multiline-data-command-fix.diff 687
-AUX kftpgrabber-0.8.0_beta1-multiline-data-command-fix.diff 683 RMD160 25a8214ee1ed5acdf4b4c9c57a9eb108aea6e10e SHA1 e434603fab7a605fc10b12b0d22a7ef27c2f5fff SHA256 d01192be92f52c58bc71ab92ffa54396f246541439f9000b140587bf3bfef5ec
-MD5 a077e89ac6357437eac7bccac7281b16 files/kftpgrabber-0.8.0_beta1-multiline-data-command-fix.diff 683
-RMD160 25a8214ee1ed5acdf4b4c9c57a9eb108aea6e10e files/kftpgrabber-0.8.0_beta1-multiline-data-command-fix.diff 683
-SHA256 d01192be92f52c58bc71ab92ffa54396f246541439f9000b140587bf3bfef5ec files/kftpgrabber-0.8.0_beta1-multiline-data-command-fix.diff 683
 DIST kftpgrabber-0.6.0.tar.bz2 1127926 RMD160 d036f000dcfe7d189384c850ff8be3d91eb82669 SHA1 c6d4819c6dcc3271ef27f24aa3e086e64fb77010 SHA256 6f717053dbf138cccd73041814e5c0865cfd40bfb03402107fa5b3fcf3e43da1
-DIST kftpgrabber-0.8.0-alpha2.tar.bz2 1385464 RMD160 f1a9b57cf48304b936876841169eb915d8e9fae6 SHA1 98c19d58e86ab02afcbcf221dd3e4c1f7719348c SHA256 288c6d7cab77b1b6503ef912de87d0d26721c0228277264a7377800d0dc59829
-DIST kftpgrabber-0.8.0-beta1.tar.bz2 1395988 RMD160 26170b7bf7a059342dd0e1edac62f980d8a1e31f SHA1 c281bdc6714599db311c8ae47870fa3eea8c0216 SHA256 a4dace01d6d868a69d162beaeca9ed0117b1c48758aa3694f6a886be4791e0d4
-DIST kftpgrabber-0.8.0-beta2.tar.bz2 1364059 RMD160 02b109f4c81d9cf344dcd59b8db690cd7c22df34 SHA1 f739b3e958d1215c33baaafe3dc6ce0f8213fcb6 SHA256 519cba830c96d1ecd0f97df8334cf892b12abb102d049eb34d1994bb118f0310
+DIST kftpgrabber-0.8.0.tar.bz2 1348836 RMD160 d76614b7536b067d975079c2bd5393be246f4fa4 SHA1 a813163a5beedfece8a1022e3794ff8cd0843d20 SHA256 98ffcceeb2a6bf8701850e3caab978809aa07aad57713b4a89cf2d818c442e2e
 EBUILD kftpgrabber-0.6.0.ebuild 699 RMD160 276bd0968745f3e07241fce991928d43ada5cde9 SHA1 ce91f8580874da9a75849f075e5b4e4c9abdd8f5 SHA256 474a3e900ab5b3c25e7e84aa49b1f96caf5353182082940c45271f55e32096ea
 MD5 42ed874d8f8a85fe73bee9266a6d85be kftpgrabber-0.6.0.ebuild 699
 RMD160 276bd0968745f3e07241fce991928d43ada5cde9 kftpgrabber-0.6.0.ebuild 699
 SHA256 474a3e900ab5b3c25e7e84aa49b1f96caf5353182082940c45271f55e32096ea kftpgrabber-0.6.0.ebuild 699
-EBUILD kftpgrabber-0.8.0_alpha2-r1.ebuild 1059 RMD160 3ec179dfb3aacf35409899f643329a5d5649dfe3 SHA1 cde0b213e10adc3f8bed0ff069839267781def3e SHA256 f2384f7f8500b208eb98b7790827aa00d5a2c6cd9f2d32d065bd41e78eb57249
-MD5 e5befda0b004482049a84ec8427dc4f9 kftpgrabber-0.8.0_alpha2-r1.ebuild 1059
-RMD160 3ec179dfb3aacf35409899f643329a5d5649dfe3 kftpgrabber-0.8.0_alpha2-r1.ebuild 1059
-SHA256 f2384f7f8500b208eb98b7790827aa00d5a2c6cd9f2d32d065bd41e78eb57249 kftpgrabber-0.8.0_alpha2-r1.ebuild 1059
-EBUILD kftpgrabber-0.8.0_alpha2.ebuild 997 RMD160 8e9c9cf29e9ac6fa2d4701c6eaf4300a3374b63e SHA1 3d6923fbdb0a9619dc0f6151c39250dd0291282b SHA256 f9657ce1856e23d98629fe867d3214c0ebc6610225311a3edd714a1a0b2be449
-MD5 776a8510aac5aac0ee1f923b790479e1 kftpgrabber-0.8.0_alpha2.ebuild 997
-RMD160 8e9c9cf29e9ac6fa2d4701c6eaf4300a3374b63e kftpgrabber-0.8.0_alpha2.ebuild 997
-SHA256 f9657ce1856e23d98629fe867d3214c0ebc6610225311a3edd714a1a0b2be449 kftpgrabber-0.8.0_alpha2.ebuild 997
-EBUILD kftpgrabber-0.8.0_beta1-r1.ebuild 1058 RMD160 f9ca32448c73fbab5c60eab5732e6463ad3b87d6 SHA1 440dbab5476e84431db511a1cedfe452806ee421 SHA256 7e72b333b653f26940b68e246efd0d3c65458086f75eed170d7e9fea53f2bc01
-MD5 dae4684cb99cc2927572930e791c188f kftpgrabber-0.8.0_beta1-r1.ebuild 1058
-RMD160 f9ca32448c73fbab5c60eab5732e6463ad3b87d6 kftpgrabber-0.8.0_beta1-r1.ebuild 1058
-SHA256 7e72b333b653f26940b68e246efd0d3c65458086f75eed170d7e9fea53f2bc01 kftpgrabber-0.8.0_beta1-r1.ebuild 1058
-EBUILD kftpgrabber-0.8.0_beta1.ebuild 996 RMD160 25190003eedc72fa18445eabe425275c274f2e6a SHA1 e4bcffcc913f234b03d521482f4a2b69eeb7ec48 SHA256 c7b1576fac37f15971ce30f152e626588ee1a3039ec7276a47c1681742ebb6d0
-MD5 ed6eb371a15188b5332abac1095c4e8b kftpgrabber-0.8.0_beta1.ebuild 996
-RMD160 25190003eedc72fa18445eabe425275c274f2e6a kftpgrabber-0.8.0_beta1.ebuild 996
-SHA256 c7b1576fac37f15971ce30f152e626588ee1a3039ec7276a47c1681742ebb6d0 kftpgrabber-0.8.0_beta1.ebuild 996
-EBUILD kftpgrabber-0.8.0_beta2.ebuild 995 RMD160 c7b0c2740dc6d847069cada64b31f82d06628058 SHA1 c0aaa327c535d1d1c60074556a2b5ad4b8cc6355 SHA256 026de5ddbfdcb0a018824608059c0aea6d97c7014acec60e4ce668f191dba8b1
-MD5 06e7a0b8357ed3a27ccfb112add5d5e9 kftpgrabber-0.8.0_beta2.ebuild 995
-RMD160 c7b0c2740dc6d847069cada64b31f82d06628058 kftpgrabber-0.8.0_beta2.ebuild 995
-SHA256 026de5ddbfdcb0a018824608059c0aea6d97c7014acec60e4ce668f191dba8b1 kftpgrabber-0.8.0_beta2.ebuild 995
-MISC ChangeLog 3052 RMD160 2cf4445c2fb4a1994f1f7f870205b581abd7e5a1 SHA1 c03f67e52b6f3fcb4b25e80aeeef315845947c0b SHA256 8b49e5ec4d8e2f65e3420fb26e2ed730076dd9e2e119aae700349f11bb07b640
-MD5 499c87cae4ac0dbbb3345cf1d15c0bad ChangeLog 3052
-RMD160 2cf4445c2fb4a1994f1f7f870205b581abd7e5a1 ChangeLog 3052
-SHA256 8b49e5ec4d8e2f65e3420fb26e2ed730076dd9e2e119aae700349f11bb07b640 ChangeLog 3052
+EBUILD kftpgrabber-0.8.0.ebuild 944 RMD160 11a606f387c2acf62dd26218bab2752785687a28 SHA1 47e7201f4ef1bbb1052753715fdd1e7d9651e16e SHA256 f02f2988b48a4eb0eccf443a9d48d6237829dbc719cd500392bb2ae9ee136aba
+MD5 0b82691741dce4583f37390e7883ce29 kftpgrabber-0.8.0.ebuild 944
+RMD160 11a606f387c2acf62dd26218bab2752785687a28 kftpgrabber-0.8.0.ebuild 944
+SHA256 f02f2988b48a4eb0eccf443a9d48d6237829dbc719cd500392bb2ae9ee136aba kftpgrabber-0.8.0.ebuild 944
+MISC ChangeLog 3437 RMD160 758ba574fd45ebb8f6a180048c80d57a07d89a56 SHA1 28e1e06299c3428a6dc109fcb7a8a9d19f2cd30c SHA256 5f056e072af4038c38aa80405a37a7eeb6064a4247649868bbb0ccbec2ce0cab
+MD5 d8e725211d1289eddf616c21101f9528 ChangeLog 3437
+RMD160 758ba574fd45ebb8f6a180048c80d57a07d89a56 ChangeLog 3437
+SHA256 5f056e072af4038c38aa80405a37a7eeb6064a4247649868bbb0ccbec2ce0cab ChangeLog 3437
 MISC metadata.xml 157 RMD160 9258d9691830e58ee00ca89f0a6df9ce077f2439 SHA1 b2ca0d856f38a09bf6d2e58ee77b344552585862 SHA256 e0e268ca18fef286617fcfe97773d5df5b8fbdb5fbcb9a29adc5e8b0baea4292
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
 RMD160 9258d9691830e58ee00ca89f0a6df9ce077f2439 metadata.xml 157
@@ -57,18 +34,13 @@ SHA256 e0e268ca18fef286617fcfe97773d5df5b8fbdb5fbcb9a29adc5e8b0baea4292 metadata
 MD5 8562b360765db17dccec14b2de8801df files/digest-kftpgrabber-0.6.0 259
 RMD160 6537f7dd162cc82f6a3d4f49a51ec664ef492c22 files/digest-kftpgrabber-0.6.0 259
 SHA256 598d5145d8176f39545b013b47342e5a8793be635804ed39e6002cb2d39a5cb6 files/digest-kftpgrabber-0.6.0 259
-MD5 904bae6700344e3087c42a771f353c8f files/digest-kftpgrabber-0.8.0_alpha2 280
-RMD160 018199e3884ec4119f9a7a7a5e8139e628db7fc0 files/digest-kftpgrabber-0.8.0_alpha2 280
-SHA256 a4a5bcc5a66dea58b1e1d6a2926001d69803e69845ad606e13f7c750032efdd9 files/digest-kftpgrabber-0.8.0_alpha2 280
-MD5 904bae6700344e3087c42a771f353c8f files/digest-kftpgrabber-0.8.0_alpha2-r1 280
-RMD160 018199e3884ec4119f9a7a7a5e8139e628db7fc0 files/digest-kftpgrabber-0.8.0_alpha2-r1 280
-SHA256 a4a5bcc5a66dea58b1e1d6a2926001d69803e69845ad606e13f7c750032efdd9 files/digest-kftpgrabber-0.8.0_alpha2-r1 280
-MD5 0251c71e202137f5a582ea920b39f542 files/digest-kftpgrabber-0.8.0_beta1 277
-RMD160 7f2d817185e3e29f3524ce8535644bc345f6c4e6 files/digest-kftpgrabber-0.8.0_beta1 277
-SHA256 0f396dbdc42830e1c315404295f9b0e16d85ff598e32985eca0b56070019b68b files/digest-kftpgrabber-0.8.0_beta1 277
-MD5 0251c71e202137f5a582ea920b39f542 files/digest-kftpgrabber-0.8.0_beta1-r1 277
-RMD160 7f2d817185e3e29f3524ce8535644bc345f6c4e6 files/digest-kftpgrabber-0.8.0_beta1-r1 277
-SHA256 0f396dbdc42830e1c315404295f9b0e16d85ff598e32985eca0b56070019b68b files/digest-kftpgrabber-0.8.0_beta1-r1 277
-MD5 c9fe81d7349770e82648a620b3a0c771 files/digest-kftpgrabber-0.8.0_beta2 277
-RMD160 f5377e25b3ef80162f2095ba90e6d39cce3a9db6 files/digest-kftpgrabber-0.8.0_beta2 277
-SHA256 af4c896befad77295f0307e5495626b54c1fd9f3e1648c321aae840c4ab32025 files/digest-kftpgrabber-0.8.0_beta2 277
+MD5 0044648de2073b86508fd5dab3abe3a4 files/digest-kftpgrabber-0.8.0 259
+RMD160 0bc883b7ab2091b3c75a58864f52d1e17e64aa7b files/digest-kftpgrabber-0.8.0 259
+SHA256 35b76e190a627afa6f70bdfb952c634b5d63df767dc387d51b5d2718c04aa182 files/digest-kftpgrabber-0.8.0 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.6 (GNU/Linux)
+
+iD8DBQFFnRl3exDpKttj3ykRAnY8AJ9J5tvJ5+l51JSMkRTOxRznJkuBxACeOWij
+txmt6DC8zPQQeldvzPcyiME=
+=0f0y
+-----END PGP SIGNATURE-----
