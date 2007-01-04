@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/chroot_safe
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chroot_safe/ChangeLog,v 1.7 2005/09/07 03:45:58 metalgod Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chroot_safe/ChangeLog,v 1.8 2007/01/04 22:46:37 beandog Exp $
+
+  04 Jan 2007; Steve Dibb <beandog@gentoo.org> chroot_safe-1.3.ebuild,
+  chroot_safe-1.4.ebuild:
+  ebuild cleanup bug 157658
 
   07 Sep 2005; Luis Medinas <metalgod@gentoo.org> chroot_safe-1.4.ebuild:
   Added ~amd64 keyword.
