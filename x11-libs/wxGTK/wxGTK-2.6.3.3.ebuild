@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.3.3.ebuild,v 1.3 2006/11/23 16:48:09 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.3.3.ebuild,v 1.4 2007/01/04 23:06:31 dirtyepic Exp $
 
-inherit debug eutils multilib toolchain-funcs gnuconfig versionator flag-o-matic
+inherit versionator flag-o-matic
 
 HTML_PV="$(get_version_component_range 1-3)"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/wxpython/wxPython-src-${PV}.tar.bz2
 
 SLOT="2.6"
 KEYWORDS="~alpha ~amd64 arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="doc gnome joystick odbc opengl sdl unicode X"
+IUSE="debug doc gnome joystick odbc opengl sdl unicode X"
 LICENSE="wxWinLL-3"
 HOMEPAGE="http://www.wxwidgets.org"
 
@@ -130,7 +130,6 @@ src_unpack() {
 }
 
 src_compile() {
-	gnuconfig_update
 	append-flags -fno-strict-aliasing
 	myconf="${myconf}
 		$(use_with sdl)
