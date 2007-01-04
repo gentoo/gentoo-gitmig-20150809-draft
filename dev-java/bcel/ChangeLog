@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/bcel
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.41 2007/01/03 20:44:18 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.42 2007/01/04 01:58:24 caster Exp $
+
+  04 Jan 2007; Vlastimil Babka <caster@gentoo.org>
+  -files/bcel-5.1-gentoo.diff, -files/bcel-5.1-gentoo-buildxml-r2.diff,
+  -bcel-5.1-r1.ebuild, -bcel-5.1-r2.ebuild:
+  Gen-1 punt.
 
   03 Jan 2007; Steve Dibb <beandog@gentoo.org> bcel-5.1-r3.ebuild:
   amd64 stable, bug 156474
