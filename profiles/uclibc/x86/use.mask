@@ -6,6 +6,3 @@
 -sse2
 -win32codecs
 -kqemu
-
-# Adobe FDF toolkit is x86 only.
--fdftk
