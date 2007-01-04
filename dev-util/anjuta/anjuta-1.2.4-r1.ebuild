@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.2.4-r1.ebuild,v 1.7 2006/06/04 20:04:27 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.2.4-r1.ebuild,v 1.8 2007/01/04 14:52:58 flameeyes Exp $
 
-inherit eutils gnome2 multilib
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
+
+inherit eutils gnome2 multilib autotools
 
 DESCRIPTION="A versatile IDE for GNOME"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -31,9 +34,8 @@ RDEPEND=">=dev-libs/glib-2.0.6
 	app-text/scrollkeeper"
 
 DEPEND="${RDEPEND}
+	sys-devel/gettext
 	dev-util/pkgconfig"
-
-MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	unpack ${A}
@@ -44,9 +46,8 @@ src_unpack() {
 	sed -i -e "s:packageplugindir=lib:packageplugindir=$(get_libdir):" \
 		configure.in
 
-	autoreconf -f -i
-
-	libtoolize --copy --force || die
+	cp "/usr/share/gettext/config.rpath" "${S}"
+	eautoreconf
 
 	gnome2_omf_fix
 }

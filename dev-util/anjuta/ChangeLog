@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/anjuta
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.58 2006/06/04 20:04:27 nixnut Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.59 2007/01/04 14:52:58 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> anjuta-1.2.4-r1.ebuild:
+  Fix broken autotools handling.
 
   04 Jun 2006; <nixnut@gentoo.org> anjuta-1.2.4-r1.ebuild:
   Stable on ppc; bug #122740
