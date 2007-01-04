@@ -1,6 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hermes/hermes-1.3.3-r1.ebuild,v 1.2 2006/08/20 21:50:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hermes/hermes-1.3.3-r1.ebuild,v 1.3 2007/01/04 13:33:28 flameeyes Exp $
+
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 
 inherit eutils autotools
 
@@ -26,8 +29,8 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --disable-x86asm || die
-	emake || die
+	econf --disable-x86asm || die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
