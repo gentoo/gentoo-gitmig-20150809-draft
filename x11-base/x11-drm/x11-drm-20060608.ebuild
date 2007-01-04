@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20060608.ebuild,v 1.10 2006/11/25 18:06:47 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20060608.ebuild,v 1.11 2007/01/04 07:31:04 battousai Exp $
 
 inherit eutils x11 linux-mod
 
@@ -23,7 +23,7 @@ IUSE="${IUSE_VIDEO_CARDS}"
 RESTRICT="nostrip"
 
 S="${WORKDIR}/drm"
-PATCHVER="0.2"
+PATCHVER="0.3"
 PATCHDIR="${WORKDIR}/patch"
 EXCLUDED="${WORKDIR}/excluded"
 
