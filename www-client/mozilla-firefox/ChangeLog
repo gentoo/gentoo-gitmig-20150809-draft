@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.235 2007/01/03 20:56:26 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.236 2007/01/04 01:46:03 vapier Exp $
+
+  04 Jan 2007; Mike Frysinger <vapier@gentoo.org>
+  files/gentoo-default-prefs.js:
+  Update default prefs to be nicer.
 
   03 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
   mozilla-firefox-2.0.0.1.ebuild:
