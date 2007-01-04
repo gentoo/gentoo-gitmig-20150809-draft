@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/mysqlnavigator-1.4.2.ebuild,v 1.16 2006/11/23 20:00:20 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/mysqlnavigator-1.4.2.ebuild,v 1.17 2007/01/04 14:35:01 flameeyes Exp $
 
-inherit eutils qt3
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit eutils qt3 autotools
 
 IUSE=""
 DESCRIPTION="Advanced Qt based front end to mysql"
@@ -34,11 +37,10 @@ src_unpack() {
 	export CXXFLAGS="${CXXFLAGS} -DUSE_OLD_FUNCTIONS=1"
 	sed "s|^CXXFLAGS=\".*\"$|CXXFLAGS=\"${CXXFLAGS}\"|g" <configure.in.orig >configure.in
 	#force changes in
-	autoreconf
+	eautoreconf
 }
 
 src_compile() {
-	libtoolize --copy --force
 	myconf="--with-mysql-includes=/usr/include/mysql"
 	econf ${myconf} || die "econf failed"
 	emake -DUSE_OLD_FUNCTIONS=1
