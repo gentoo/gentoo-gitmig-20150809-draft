@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql_fx.eclass,v 1.16 2007/01/03 15:27:13 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql_fx.eclass,v 1.17 2007/01/04 20:38:16 vivo Exp $
 # kate: encoding utf-8; eol unix;
 # kate: indent-width 4; mixedindent off; remove-trailing-space on; space-indent off;
 # kate: word-wrap-column 80; word-wrap off;
@@ -175,8 +175,9 @@ mysql_choose_better_version() {
 # 2005-12-30 <vivo at gentoo.org>
 # THERE IS A COPY OF THIS ONE IN ESELECT-MYSQL, keep the two synced
 mysql_lib_symlinks() {
-	local d dirlist maxdots soname sonameln other better
-	pushd "${ROOT}/usr/$(get_libdir)" &> /dev/null
+	local d dirlist maxdots soname sonameln reldir
+	reldir=${1}
+	pushd "${ROOT}${reldir}/usr/$(get_libdir)" &> /dev/null
 		# dirlist must contain the less significative directory left
 		dirlist="mysql $( mysql_make_file_list mysql )"
 
@@ -201,7 +202,10 @@ mysql_lib_symlinks() {
 			done
 		done
 	popd &> /dev/null
+}
 
+mysql_clients_link_to_best_version() {
+	local other better
 	# "include"s and "mysql_config", needed to compile other sw
 	for other in "/usr/$(get_libdir)/mysql" "/usr/include/mysql" "/usr/bin/mysql_config" ; do
 		pushd "${ROOT}${other%/*}" &> /dev/null

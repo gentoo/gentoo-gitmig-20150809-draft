@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.57 2007/01/04 11:17:05 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.58 2007/01/04 20:38:16 vivo Exp $
 # kate: encoding utf-8; eol unix;
 # kate: indent-width 4; mixedindent off; remove-trailing-space on; space-indent off;
 # kate: word-wrap-column 80; word-wrap off;
@@ -15,11 +15,11 @@ INHERITED="$INHERITED $ECLASS"
 inherit eutils flag-o-matic gnuconfig autotools mysql_fx
 
 # avoid running userspace code 8 times per ebuild :(
-if [[ "${_MYPVR}" != "${PVR}" ]] && [[ -z "${MYSQL_VERSION_ID}" ]]
+if [[ "${_MYPVR}" != "${PVR}" ]] && [[ -n "${PVR}" ]]
 then
 	_MYPVR=${PVR}
 
-	[[ -z ${MY_EXTRAS_VER} ]] && MY_EXTRAS_VER="20070103"
+	[[ "${MY_EXTRAS_VER}" == "latest" ]] && MY_EXTRAS_VER="20070104"
 
 	if [[ ${PR#r} -lt 60 ]] ; then
 		IS_BITKEEPER=0
@@ -50,7 +50,8 @@ then
 			>=sys-apps/sed-4
 			>=sys-apps/texinfo-4.7-r1
 			>=sys-libs/readline-4.1
-			>=sys-libs/zlib-1.2.3"
+			>=sys-libs/zlib-1.2.3
+			"
 
 	# having different flavours at the same time is not a good idea
 	for i in "" "-community" "-slotted" ; do
@@ -127,7 +128,10 @@ then
 	mysql_version_is_at_least "5.1.12" \
 	&& IUSE="${IUSE} pbxt"
 
-	RDEPEND="${DEPEND} selinux? ( sec-policy/selinux-mysql )"
+	RDEPEND="${DEPEND}
+	sys-apps/mysql
+	selinux? ( sec-policy/selinux-mysql )
+	"
 
 fi # if [[ "${_MYPVR}" != "${PVR}" ]]
 
@@ -350,7 +354,7 @@ configure_40_41_50() {
 		mysql_version_is_at_least "5.0.4" || myconf="${myconf} --with-vio"
 		if mysql_version_is_at_least "5.0.6" ; then
 			# myconf="${myconf} --with-yassl"
-			myconf="${myconf} --with-openssl"
+			myconf="${myconf} --with-ssl"
 		else
 			myconf="${myconf} --with-openssl"
 		fi
@@ -436,6 +440,10 @@ configure_51() {
 		myconf="${myconf} --with-ndb-binlog"
 	fi
 
+	if mysql_version_is_at_least "5.2" ; then
+		plugins="${plugins},falcon"
+	fi
+
 	myconf="${myconf} --with-plugins=${plugins}"
 }
 
@@ -509,7 +517,7 @@ mysql_src_unpack() {
 	if [[ ${IS_BITKEEPER} -eq 90 ]] ; then
 		if mysql_check_version_range "5.1 to 5.1.99" ; then
 			bitkeeper_fetch "mysql-5.1-ndb"
-		elif mysql_check_version_range "5.2 to 5.2.99" ; then
+		elif mysql_check_version_range "5.2.0 to 5.2.99" ; then
 			bitkeeper_fetch "mysql-5.2-falcon"
 		else
 			bitkeeper_fetch
@@ -760,6 +768,8 @@ mysql_src_install() {
 			echo "${MY_SHAREDSTATEDIR#"/"}" >> "${filelist}"
 		popd &>/dev/null
 	fi
+
+	mysql_lib_symlinks "${D}"
 }
 
 mysql_pkg_preinst() {
@@ -930,5 +940,6 @@ mysql_pkg_config() {
 mysql_pkg_postrm() {
 	if [[ ${PN} == "mysql-slotted" ]] ; then
 		mysql_lib_symlinks
+		mysql_clients_link_to_best_version
 	fi
 }
