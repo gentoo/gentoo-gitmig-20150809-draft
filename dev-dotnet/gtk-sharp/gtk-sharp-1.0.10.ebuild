@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-1.0.10.ebuild,v 1.7 2006/03/20 00:14:55 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-1.0.10.ebuild,v 1.8 2007/01/04 14:41:41 flameeyes Exp $
 
-inherit eutils mono
+WANT_AUTOMAKE="1.9"
+WANT_AUTOCONF="latest"
+
+inherit eutils mono autotools
 
 DESCRIPTION="Gtk# is a C# language binding for the GTK2 toolkit and GNOME libraries"
 SRC_URI="http://www.go-mono.com/sources/${PN}/${P}.tar.gz
@@ -38,11 +41,7 @@ src_unpack() {
 	sed -i -e 's:^libdir.*:libdir=@libdir@:' \
 		${S}/gtk-sharp.pc.in || die
 
-	aclocal || die
-	# See bug #73563, comment #9
-	libtoolize --copy --force || die
-	autoconf || die
-	automake || die
+	eautoreconf
 
 	# disable building of samples (#16015)
 	sed -i -e "s:sample::" Makefile.in
