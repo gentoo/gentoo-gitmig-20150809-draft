@@ -1,0 +1,12 @@
+diff -Naur kwlaninfo-0.9.4-orig/src/kwlaninfo.desktop kwlaninfo-0.9.4/src/kwlaninfo.desktop
+--- kwlaninfo-0.9.4-orig/src/kwlaninfo.desktop	2005-01-13 09:59:34.000000000 +0100
++++ kwlaninfo-0.9.4/src/kwlaninfo.desktop	2007-01-04 14:10:10.000000000 +0100
+@@ -1,6 +1,8 @@
+ [Desktop Entry]
++Type=Plugin
+ Encoding=UTF-8
+ Name=kwlaninfo
+ Comment=%Name% displays some Information (like signal level) about wlan interfaces
+ Comment[de]=%Name% zeigt Informationen (wie z.B. Signalstärke)  über WLan-Interfaces
++Comment[pl]=%Name% wy¶wietla informacje (jak si³a sygna³u) o sieciach bezprzewodowych
+ X-KDE-Library=libkwlaninfo

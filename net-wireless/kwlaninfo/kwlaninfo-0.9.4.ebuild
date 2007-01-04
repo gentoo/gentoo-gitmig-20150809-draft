@@ -1,24 +1,28 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kwlaninfo/kwlaninfo-0.9.4.ebuild,v 1.3 2006/03/27 11:36:09 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kwlaninfo/kwlaninfo-0.9.4.ebuild,v 1.4 2007/01/04 14:55:37 troll Exp $
 
-inherit kde
+inherit kde eutils
 
-RDEPEND="net-wireless/wireless-tools"
+IUSE=""
 
 DESCRIPTION="KDE Applet to display information about wlan connections"
 HOMEPAGE="http://www.ph-home.de/opensource/kde3/kwlaninfo/"
-SRC_URI="http://www.ph-home.de/opensource/kde3/kwlaninfo/${P}.tgz"
+SRC_URI="http://www.ph-home.de/opensource/kde3/${PN}/${P}.tgz
+	mirror://gentoo/kde-admindir-3.5.5.tar.bz2"
 RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
+RDEPEND="net-wireless/wireless-tools"
+
 need-kde 3.0
 
-src_compile()
-{
-	myconf="${myconf} $(use_with arts)"
-	kde_src_compile
+src_unpack() {
+	kde_src_unpack
+
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-desktop.patch
 }
