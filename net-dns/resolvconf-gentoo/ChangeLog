@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/resolvconf-gentoo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/resolvconf-gentoo/ChangeLog,v 1.21 2007/01/02 13:08:11 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/resolvconf-gentoo/ChangeLog,v 1.22 2007/01/04 20:03:55 kloeri Exp $
+
+  04 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
+  resolvconf-gentoo-1.2.ebuild:
+  Stable on IA64.
 
   02 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   resolvconf-gentoo-1.2.ebuild:
