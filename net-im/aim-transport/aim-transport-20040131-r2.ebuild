@@ -1,8 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/aim-transport/aim-transport-20040131-r2.ebuild,v 1.9 2005/09/17 20:19:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/aim-transport/aim-transport-20040131-r2.ebuild,v 1.10 2007/01/04 15:46:45 flameeyes Exp $
 
-inherit eutils
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit eutils autotools
 
 MY_PN="${PN}-stable"
 S="${WORKDIR}/${MY_PN}-${PV}"
@@ -25,17 +28,12 @@ DEPEND="=net-im/jabberd-1.4*"
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/aimtrans.patch
+
+	cd "${S}"
+	eautoreconf
 }
 
 src_compile() {
-	einfo
-	einfo "Please ignore any errors/warnings"
-	einfo
-	export WANT_AUTOCONF=2.5
-	aclocal
-	automake
-	libtoolize --force
-	autoconf
 	./configure --with-jabberd=/usr/include/jabberd || die "./configure failed"
 	emake || die
 }
