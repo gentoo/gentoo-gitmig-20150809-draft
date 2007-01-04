@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/wm-icons-0.4.0_pre1-r1.ebuild,v 1.11 2006/07/08 08:44:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/wm-icons-0.4.0_pre1-r1.ebuild,v 1.12 2007/01/04 19:45:32 flameeyes Exp $
 
-inherit gnuconfig
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit autotools
 
 DESCRIPTION="A Large Assortment of Beutiful Themed Icons, Created with FVWM in mind"
 
@@ -27,19 +30,14 @@ src_unpack() {
 	sed -i '132s/bin\/Makefile//' ${S}/configure.in
 	# non-portable comment bombs automake.
 	sed -i 's/\t#/#/' ${S}/Makefile.am
-	gnuconfig_update
+
+	cd "${S}"
+	eautoreconf
 }
 
 src_compile() {
-	ebegin "Generating configure script, Please wait..."
-	(	aclocal
-		autoheader
-		automake --add-missing
-		autoreconf ) 2>/dev/null
-	eend $?
-
 	econf --enable-all-sets --enable-icondir=/usr/share/icons/wm-icons || die "econf failed"
-	emake
+	emake || die "emake failed"
 }
 
 src_install() {

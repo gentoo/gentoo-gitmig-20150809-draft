@@ -1,8 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/wm-icons-0.4.0_pre1.ebuild,v 1.9 2006/05/19 18:06:55 corsair Exp $
-
-inherit gnuconfig
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/wm-icons-0.4.0_pre1.ebuild,v 1.10 2007/01/04 19:45:32 flameeyes Exp $
 
 DESCRIPTION="A Large Assortment of Beutiful Themed Icons, Created with FVWM in mind"
 
@@ -27,7 +25,6 @@ src_unpack() {
 	unpack ${A}
 
 	sed -i 's#$(bindir)/wm-icons-config#true#g' ${S}/Makefile.am
-	gnuconfig_update
 }
 
 src_compile() {

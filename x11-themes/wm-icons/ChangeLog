@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/wm-icons
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/ChangeLog,v 1.16 2006/07/08 08:44:11 corsair Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/ChangeLog,v 1.17 2007/01/04 19:45:32 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> wm-icons-0.3.0.ebuild,
+  wm-icons-0.4.0_pre1.ebuild, wm-icons-0.4.0_pre1-r1.ebuild:
+  Remove gnuconfig update and fix autotools handling.
 
   08 Jul 2006; Markus Rothe <corsair@gentoo.org>
   wm-icons-0.4.0_pre1-r1.ebuild:
