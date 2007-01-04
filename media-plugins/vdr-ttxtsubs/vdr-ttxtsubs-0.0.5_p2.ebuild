@@ -1,6 +1,6 @@
-# Copyright 2004-2006 Gentoo Foundation
+# Copyright 2004-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ttxtsubs/vdr-ttxtsubs-0.0.5_p2.ebuild,v 1.1 2006/11/16 12:50:35 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ttxtsubs/vdr-ttxtsubs-0.0.5_p2.ebuild,v 1.2 2007/01/04 11:08:40 zzam Exp $
 
 inherit vdr-plugin eutils versionator
 
@@ -13,7 +13,7 @@ DESCRIPTION="Video Disk Recorder Teletext-Subtitles PlugIn"
 HOMEPAGE="ftp://ftp.nada.kth.se/pub/home/ragge/vdr"
 SRC_URI="ftp://ftp.nada.kth.se/pub/home/ragge/vdr/${MY_P}.tgz
 		 http://www.saunalahti.fi/~rahrenbe/vdr/patches/${PATCHNAME}.diff.gz"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 LICENSE="GPL-2"
 
