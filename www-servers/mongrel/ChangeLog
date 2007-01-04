@@ -1,0 +1,10 @@
+# ChangeLog for www-servers/mongrel
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/ChangeLog,v 1.1 2007/01/04 13:54:42 pclouds Exp $
+
+*mongrel-1.0 (04 Jan 2007)
+
+  04 Jan 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org> +metadata.xml,
+  +mongrel-1.0.ebuild:
+  New ebuild, #126925
+
