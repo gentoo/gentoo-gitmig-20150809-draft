@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsdl
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.118 2006/10/27 19:36:52 tupone Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.119 2007/01/04 07:09:17 vapier Exp $
+
+  04 Jan 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/libsdl-1.2.11-linux-headers.patch, libsdl-1.2.11-r1.ebuild:
+  Fix building with sanitized linux headers #159923.
 
 *libsdl-1.2.11-r1 (27 Oct 2006)
 

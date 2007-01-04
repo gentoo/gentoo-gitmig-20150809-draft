@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.11-r1.ebuild,v 1.1 2006/10/27 19:36:52 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.11-r1.ebuild,v 1.2 2007/01/04 07:09:17 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils libtool
 
@@ -76,8 +76,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-sdl-config.patch
 	epatch "${FILESDIR}"/${P}-xinerama-head-0.patch #145917
 	epatch "${FILESDIR}"/${P}-no-inline-BlitRGBtoRGBPixelAlphaMMX3DNOW.patch #148186
-	# Fix segfault when auto converting stream #151991
-	epatch "${FILESDIR}"/${P}-audioConv.patch
+	epatch "${FILESDIR}"/${P}-linux-headers.patch #159923
+	epatch "${FILESDIR}"/${P}-audioConv.patch #151991
 
 	# add yasm-compatible defines to nasm code (hopefully we
 	# can get this killed soonish)

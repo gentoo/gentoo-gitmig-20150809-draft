@@ -1,0 +1,28 @@
+http://bugs.gentoo.org/159923
+
+--- src/video/fbcon/SDL_fbvideo.c
++++ src/video/fbcon/SDL_fbvideo.c
+@@ -32,6 +32,10 @@
+ #include <asm/page.h>		/* For definition of PAGE_SIZE */
+ #include <linux/vt.h>
+ 
++#ifndef PAGE_SIZE
++# define PAGE_SIZE sysconf(_SC_PAGE_SIZE)
++#endif
++
+ #include "SDL_video.h"
+ #include "SDL_mouse.h"
+ #include "../SDL_sysvideo.h"
+--- src/video/ps2gs/SDL_gsyuv.c
++++ src/video/ps2gs/SDL_gsyuv.c
+@@ -29,6 +29,10 @@
+ #include <sys/mman.h>
+ #include <asm/page.h>		/* For definition of PAGE_SIZE */
+ 
++#ifndef PAGE_SIZE
++# define PAGE_SIZE sysconf(_SC_PAGE_SIZE)
++#endif
++
+ #include "SDL_video.h"
+ #include "SDL_gsyuv_c.h"
+ #include "../SDL_yuvfuncs.h"
