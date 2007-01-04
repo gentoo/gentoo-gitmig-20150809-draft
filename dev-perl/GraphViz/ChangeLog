@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GraphViz
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GraphViz/ChangeLog,v 1.1 2006/09/24 09:44:37 ian Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GraphViz/ChangeLog,v 1.2 2007/01/04 23:44:18 mcummings Exp $
+
+  04 Jan 2007; Michael Cummings <mcummings@gentoo.org> GraphViz-2.02.ebuild:
+  Bug 160127, keywording ~amd64
 
 *GraphViz-2.02 (24 Sep 2006)
 
