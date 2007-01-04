@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Scrubber
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Scrubber/ChangeLog,v 1.15 2006/11/24 21:50:44 corsair Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Scrubber/ChangeLog,v 1.16 2007/01/04 15:17:37 kloeri Exp $
+
+  04 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
+  HTML-Scrubber-0.08.ebuild:
+  Add ~alpha keyword.
 
   24 Nov 2006; Markus Rothe <corsair@gentoo.org> HTML-Scrubber-0.08.ebuild:
   Added ~ppc64; bug #155342
