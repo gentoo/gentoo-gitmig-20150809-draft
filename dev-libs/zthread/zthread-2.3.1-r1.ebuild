@@ -1,8 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/zthread-2.3.1-r1.ebuild,v 1.1 2005/12/24 00:48:27 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/zthread-2.3.1-r1.ebuild,v 1.2 2007/01/04 14:45:14 flameeyes Exp $
 
-inherit eutils flag-o-matic
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit eutils flag-o-matic autotools
 
 MY_P="ZThread-${PV}"
 S="${WORKDIR}/${MY_P}"
@@ -24,17 +27,11 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-fix-underquoted-m4-defs.diff
 	epatch ${FILESDIR}/${P}-fix-ac-arg-enable-debug.diff
 	epatch ${FILESDIR}/${P}-respect-DESTDIR.diff
+
+	AT_M4DIR="share" eautoreconf
 }
 
 src_compile() {
-	einfo "Regenerating autoconf/automake files"
-	libtoolize --copy --force || die "libtoolize failed"
-	aclocal -I share || die "aclocal failed"
-	autoheader || die "autoheader failed"
-	automake --add-missing --copy || die "automake failed"
-	autoconf || die "autoconf failed"
-
-
 	local myconf
 	use debug \
 		&& myconf="--enable-debug=yes" \
