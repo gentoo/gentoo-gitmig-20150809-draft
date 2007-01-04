@@ -1,10 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/partysip/partysip-2.2.3.ebuild,v 1.4 2005/10/02 18:23:00 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/partysip/partysip-2.2.3.ebuild,v 1.5 2007/01/04 16:37:51 flameeyes Exp $
 
 IUSE="berkdb debug syslog"
 
-inherit eutils
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
+
+inherit eutils autotools
 
 DESCRIPTION="Modular and extensible SIP proxy"
 HOMEPAGE="http://savannah.nongnu.org/projects/partysip/"
@@ -34,13 +37,11 @@ src_unpack() {
 	# breaks authentication otherwise
 	epatch ${FILESDIR}/${P}-fix_auth.diff
 
-	# put partysip  binary into /usr/sbin
+	# put partysip	binary into /usr/sbin
 	sed -i -e "s:^bin_PROGRAMS:sbin_PROGRAMS:" \
 		src/Makefile.am tools/Makefile.am
 
-	# recreate configure
-	autoreconf
-	libtoolize --copy --force
+	AT_M4DIR="scripts" eautoreconf
 }
 
 src_compile() {

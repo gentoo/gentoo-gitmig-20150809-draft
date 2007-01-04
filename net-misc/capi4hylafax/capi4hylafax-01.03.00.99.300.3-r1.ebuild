@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/capi4hylafax-01.03.00.99.300.3-r1.ebuild,v 1.4 2006/10/10 15:11:41 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/capi4hylafax-01.03.00.99.300.3-r1.ebuild,v 1.5 2007/01/04 16:33:29 flameeyes Exp $
 
-inherit eutils versionator
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit eutils versionator autotools
 
 FAX_SPOOL_DIR="/var/spool/fax"
 
@@ -42,8 +45,7 @@ src_unpack() {
 	# apply bugfix patch (see bug #145982)
 	epatch "${FILESDIR}/${P}-recvdev.diff"
 
-	# run libtoolize	
-	libtoolize --copy --force
+	eautoreconf
 
 	# fix location of fax spool
 	for i in config.faxCAPI Readme_src src/defaults.h.in debian/*.1; do
@@ -139,5 +141,5 @@ pkg_postinst() {
 	einfo
 	einfo "Then append the following line to your hylafax"
 	einfo "config file (${FAX_SPOOL_DIR}/etc/config):"
-	einfo "SendFaxCmd:             /usr/bin/c2faxsend"
+	einfo "SendFaxCmd:			   /usr/bin/c2faxsend"
 }
