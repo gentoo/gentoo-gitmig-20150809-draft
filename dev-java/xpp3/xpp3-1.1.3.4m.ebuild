@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/xpp3-1.1.3.4m.ebuild,v 1.6 2005/10/23 11:13:03 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/xpp3-1.1.3.4m.ebuild,v 1.7 2007/01/04 05:56:17 tgall Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.extreme.indiana.edu/dist/java-repository/xpp3/distributions/
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc"
+KEYWORDS="x86 amd64 ppc ppc64"
 IUSE="doc jikes junit source"
 
 DEPEND=">=virtual/jdk-1.4

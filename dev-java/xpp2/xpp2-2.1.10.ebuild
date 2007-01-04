@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp2/xpp2-2.1.10.ebuild,v 1.11 2006/11/30 16:01:20 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp2/xpp2-2.1.10.ebuild,v 1.12 2007/01/04 05:54:17 tgall Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.extreme.indiana.edu/xgws/xsoap/xpp/download/${MY_PN}2/${MY_P
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="doc jikes source"
 S="${WORKDIR}/${MY_P}"
 
