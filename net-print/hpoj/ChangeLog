@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hpoj
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/ChangeLog,v 1.24 2006/06/24 04:48:21 cardoe Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/ChangeLog,v 1.25 2007/01/04 16:55:43 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> hpoj-0.91-r3.ebuild:
+  Fix broken autotools handling.
 
   24 Jun 2006; Doug Goldstein <cardoe@gentoo.org> hpoj-0.91-r3.ebuild:
   USE flag change qt->qt3/qt4 bug #137785

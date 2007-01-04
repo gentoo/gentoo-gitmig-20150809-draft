@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.91-r3.ebuild,v 1.13 2006/06/24 04:48:21 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.91-r3.ebuild,v 1.14 2007/01/04 16:55:43 flameeyes Exp $
 
-inherit eutils qt3
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit eutils qt3 autotools
 
 DESCRIPTION="HP OfficeJet Linux driver"
 HOMEPAGE="http://hpoj.sourceforge.net/"
@@ -12,13 +15,20 @@ SLOT="0"
 KEYWORDS="x86 ~amd64 ~ppc"
 IUSE="ssl scanner qt3 X snmp cups usb"
 
-DEPEND="qt3?      ( $(qt_min_version 3.1) )
-	ssl?     ( >=dev-libs/openssl-0.9.6h )
+DEPEND="qt3?	  ( $(qt_min_version 3.1) )
+	ssl?	 ( >=dev-libs/openssl-0.9.6h )
 	scanner? ( >=media-gfx/sane-backends-1.0.9 )
 	scanner? ( || ( X? ( >=media-gfx/xsane-0.89 ) >=media-gfx/sane-frontends-1.0.9 ) )
-	snmp?    ( net-analyzer/net-snmp )
-	cups?    ( >=net-print/cups-1.1.18-r2 )
-	usb?     ( >=dev-libs/libusb-0.1.10a sys-apps/hotplug )"
+	snmp?	 ( net-analyzer/net-snmp )
+	cups?	 ( >=net-print/cups-1.1.18-r2 )
+	usb?	 ( >=dev-libs/libusb-0.1.10a sys-apps/hotplug )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	eautoreconf
+}
 
 src_compile() {
 	epatch ${FILESDIR}/udev.patch
@@ -40,8 +50,6 @@ src_compile() {
 	use scanner \
 	&& myconf="${myconf} --with-sane-packend=/usr" \
 	|| myconf="${myconf} --without-sane"
-
-	libtoolize --copy --force
 
 	econf ${myconf} || die "econf failed"
 	emake || die "compilation failed"
