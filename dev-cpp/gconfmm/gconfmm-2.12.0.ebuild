@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/gconfmm-2.12.0.ebuild,v 1.13 2006/08/13 18:03:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/gconfmm-2.12.0.ebuild,v 1.14 2007/01/04 14:30:22 flameeyes Exp $
 
-inherit gnome2 eutils
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
+
+inherit gnome2 eutils autotools
 
 DESCRIPTION="C++ bindings for GConf"
 HOMEPAGE="http://gtkmm.sourceforge.net/"
@@ -21,13 +24,11 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 
 DOCS="AUTHORS COPYING* ChangeLog NEWS README INSTALL"
 
-src_compile() {
-	if useq amd64; then
-		aclocal -I scripts
-		libtoolize --force --copy
-		automake -c -f
-		autoconf
-	fi
+src_unpack() {
+	gnome2_src_unpack
+	eautoreconf
+}
 
+src_compile() {
 	gnome2_src_compile
 }

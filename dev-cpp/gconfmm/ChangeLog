@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gconfmm
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.44 2006/09/11 16:15:12 allanonjl Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.45 2007/01/04 14:30:22 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> gconfmm-2.12.0.ebuild:
+  Fix broken autotools handling.
 
 *gconfmm-2.16.0 (11 Sep 2006)
 

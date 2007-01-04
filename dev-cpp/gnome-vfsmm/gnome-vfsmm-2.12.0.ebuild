@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/gnome-vfsmm-2.12.0.ebuild,v 1.13 2006/08/13 18:14:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/gnome-vfsmm-2.12.0.ebuild,v 1.14 2007/01/04 14:31:59 flameeyes Exp $
 
-inherit gnome2
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
+
+inherit gnome2 autotools
 
 DESCRIPTION="C++ bindings for gnome-vfs"
 HOMEPAGE="http://gtkmm.sourceforge.net/"
@@ -19,13 +22,7 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 
 DOCS="AUTHORS ChangeLog NEWS README INSTALL"
 
-src_compile() {
-	if useq amd64; then
-		aclocal -I scripts
-		automake -c -f
-		autoconf
-		libtoolize	--copy --force
-	fi
-
-	gnome2_src_compile
+src_unpack() {
+	gnome2_src_unpack
+	AT_M4DIR="scripts" eautoreconf
 }
