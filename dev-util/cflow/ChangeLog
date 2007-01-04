@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cflow
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cflow/ChangeLog,v 1.1 2006/03/22 06:52:36 chriswhite Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cflow/ChangeLog,v 1.2 2007/01/04 04:26:50 beandog Exp $
+
+  04 Jan 2007; Steve Dibb <beandog@gentoo.org> cflow-1.0.ebuild:
+  add ~amd64, bug 159841
 
 *cflow-1.0 (22 Mar 2006)
 
