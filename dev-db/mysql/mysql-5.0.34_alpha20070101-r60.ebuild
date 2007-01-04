@@ -1,9 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.34_alpha20070101-r60.ebuild,v 1.1 2007/01/03 15:18:12 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.34_alpha20070101-r60.ebuild,v 1.2 2007/01/04 20:48:42 vivo Exp $
 
-# Leave this empty
-MYSQL_VERSION_ID=""
+MY_EXTRAS_VER="latest"
 SERVER_URI="mirror://gentoo/MySQL-${PV%.*}/mysql-${PV//_alpha/-bk-}.tar.bz2"
 
 inherit mysql
