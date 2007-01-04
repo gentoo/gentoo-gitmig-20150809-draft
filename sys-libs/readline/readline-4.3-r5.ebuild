@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r5.ebuild,v 1.25 2006/01/03 06:34:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r5.ebuild,v 1.26 2007/01/04 19:57:29 flameeyes Exp $
 
-inherit eutils gnuconfig
+inherit eutils
 
 # Official patches
 PLEVEL="x001 x002 x003 x004 x005"
@@ -33,8 +33,6 @@ src_unpack() {
 
 	# force ncurses linking #71420
 	sed -i -e 's:^SHLIB_LIBS=:SHLIB_LIBS=-lncurses:' support/shobj-conf || die "sed"
-
-	gnuconfig_update
 }
 
 src_compile() {
