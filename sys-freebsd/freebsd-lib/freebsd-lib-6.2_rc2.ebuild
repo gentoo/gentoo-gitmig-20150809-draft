@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2_rc2.ebuild,v 1.2 2007/01/02 23:16:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2_rc2.ebuild,v 1.3 2007/01/04 13:42:01 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -111,7 +111,13 @@ src_unpack() {
 	sed -i -e 's:-o/dev/stdout:-t:' "${S}/libc/net/Makefile.inc"
 	sed -i -e 's:histedit.h::' "${WORKDIR}/include/Makefile"
 
-	use build && return 0
+	# Apply this patch for Gentoo/FreeBSD/SPARC64 to build correctly
+	# from catalyst, then don't do anything else
+	if use build; then
+		cd "${WORKDIR}"
+		epatch "${FILESDIR}/freebsd-sources-6.2-sparc64.patch"
+		return 0
+	fi
 
 	if [[ ${CTARGET} == ${CHOST} ]]; then
 		ln -s "/usr/src/sys-${RV}" "${WORKDIR}/sys"

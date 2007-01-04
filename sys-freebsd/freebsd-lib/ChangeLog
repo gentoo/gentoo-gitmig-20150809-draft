@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.46 2007/01/02 23:16:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.47 2007/01/04 13:42:01 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-sources-6.2-sparc64.patch, freebsd-lib-6.2_rc2.ebuild:
+  Apply the sparc64 patch when using the build useflag, or building stages
+  with catalyst will fail.
 
   02 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   freebsd-lib-6.2_rc2.ebuild:
