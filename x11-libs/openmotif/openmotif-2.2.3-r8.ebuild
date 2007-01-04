@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r8.ebuild,v 1.16 2006/10/01 17:08:10 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r8.ebuild,v 1.17 2007/01/04 19:12:18 grobian Exp $
 
 inherit eutils libtool flag-o-matic multilib
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.motifzone.net/om${PV}/src/${MY_P}.tar.gz
 
 LICENSE="MOTIF"
 SLOT="2.2"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc-macos ppc64 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86"
 IUSE=""
 
 RDEPEND="virtual/libc
@@ -24,7 +24,7 @@ RDEPEND="virtual/libc
 	>=x11-libs/motif-config-0.9"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
-	!ppc-macos? ( =sys-devel/automake-1.4* )
+	=sys-devel/automake-1.4*
 	sys-devel/autoconf
 	x11-misc/xbitmaps"
 
@@ -51,22 +51,14 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-utf8.patch
 	epatch ${FILESDIR}/${P}-no_demos.patch
 	epatch ${FILESDIR}/${P}-CVE-2005-3964.patch
-	use ppc-macos && epatch ${FILESDIR}/${P}-automake.patch
 	epatch ${FILESDIR}/CAN-2005-0605.patch
 
 	# autotool stuff
 	export WANT_AUTOCONF=2.5
 
-	# Patched Makefile.am to work with version 1.6 on ppc-macos.
-	# Untested elsewhere
-	use ppc-macos || export WANT_AUTOMAKE=1.4
-
 	libtoolize --force --copy
 	aclocal || die
 	AUTOMAKE_OPTS="--foreign"
-	# For some reason ppc-macos complains about missing depcomp and compile
-	# files
-	use ppc-macos && AUTOMAKE_OPTS="-a -c -f ${AUTOMAKE_OPTS}"
 	automake ${AUTOMAKE_OPTS} || die
 	autoconf || die
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r14.ebuild,v 1.4 2006/10/01 17:08:10 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r14.ebuild,v 1.5 2007/01/04 19:12:18 grobian Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.metrolink.com/pub/openmotif/2.1.30-4/${MY_P}.tar.gz
 		mirror://gentoo//${P}-CAN-2004-0914-newer.patch.bz2"
 
 LICENSE="MOTIF"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc-macos ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 sparc x86"
 IUSE=""
 
 PROVIDE="virtual/motif"
@@ -69,7 +69,6 @@ src_unpack() {
 	# compile on gcc 2.9x
 	epatch ${FILESDIR}/${PN}-2.1.30-imake-ansi.patch
 	epatch ${FILESDIR}/${PN}-2.1.30-uil-bad_grammar_fix.diff
-	use ppc-macos && epatch ${FILESDIR}/${PN}-2.1.30-darwin-netbsd.diff
 
 	if use amd64 && has_multilib_profile && [[ ${ABI} == "amd64" ]] ; then
 		sed -i 's:__i386__:__x86_64__:g' ${S}/config/cf/*.cf ${S}/config/imake/* ${S}/config/makedepend/*
@@ -112,12 +111,8 @@ src_install() {
 		f="${D}/usr/X11R6/bin/${nib}"; rm "$f" || die "rm $f"
 	done
 	for nim in ${NOINSTMAN1}; do
-		if useq ppc-macos ; then
-			f="${D}/usr/X11R6/man/man1/${nim}.1"
-		else
-			f="${D}/usr/X11R6/man/man1/${nim}.1x"
-		fi
-		 rm "$f" || die "rm $f"
+		f="${D}/usr/X11R6/man/man1/${nim}.1x"
+		rm "$f" || die "rm $f"
 	done
 	rm -rf "${D}/usr/X11R6/lib/X11" || die "rm config"
 	rm -rf "${D}/usr/X11R6/include/X11" || die "rm config"
