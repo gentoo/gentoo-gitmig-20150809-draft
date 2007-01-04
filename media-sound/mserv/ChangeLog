@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mserv
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/ChangeLog,v 1.17 2006/05/30 04:23:49 weeve Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/ChangeLog,v 1.18 2007/01/04 02:45:56 dirtyepic Exp $
+
+  04 Jan 2007; Ryan Hill <dirtyepic@gentoo.org> mserv-0.35-r1.ebuild:
+  Fix ebuild permission and path problems for bug #134758.
 
   30 May 2006; Jason Wever <weeve@gentoo.org> mserv-0.35-r1.ebuild:
   Stable on SPARC wrt bug #134758.

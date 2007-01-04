@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/mserv-0.35-r1.ebuild,v 1.5 2006/05/30 04:23:49 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/mserv-0.35-r1.ebuild,v 1.6 2007/01/04 02:45:56 dirtyepic Exp $
 
 inherit webapp eutils toolchain-funcs
 
@@ -59,10 +59,15 @@ src_install() {
 	cp webclient/*.cgi ${D}/${MY_CGIBINDIR}/${PN}
 	cp webclient/*.gif webclient/index.html ${D}/${MY_HTDOCSDIR}
 
+	webapp_src_install
+
 	# Configuration files
 	insopts -o mserv -g mserv -m0644
 	insinto /etc/mserv
 	fowners mserv:mserv /etc/mserv
+	newins ${FILESDIR}/${P}-config config
+	newins ${FILESDIR}/${P}-webacl webacl
+	newins ${FILESDIR}/${P}-acl acl
 	insinto ${MY_HOSTROOTDIR}/${PN}
 	fowners mserv:mserv ${MY_HOSTROOTDIR}/${PN}
 	newins ${FILESDIR}/${P}-config config
@@ -86,7 +91,6 @@ src_install() {
 	dodir /var/spool/mserv
 	touch ${D}var/spool/mserv/player.out
 	fowners mserv:mserv /var/spool/mserv /var/spool/mserv/player.out
-	webapp_src_install
 }
 
 pkg_postinst() {
