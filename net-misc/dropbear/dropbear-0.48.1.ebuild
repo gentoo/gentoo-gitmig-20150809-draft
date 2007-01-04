@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.48.1.ebuild,v 1.1 2006/06/07 13:07:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.48.1.ebuild,v 1.2 2007/01/04 06:06:09 vapier Exp $
 
 inherit eutils
 
@@ -38,6 +38,9 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/dropbear-0.45-urandom.patch
 	epatch "${FILESDIR}"/dropbear-0.46-dbscp.patch
+	sed -i \
+		-e '/SFTPSERVER_PATH/s:".*":"/usr/lib/misc/sftp-server":' \
+		options.h
 }
 
 src_compile() {

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dropbear
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.41 2006/08/05 20:50:25 chriswhite Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.42 2007/01/04 06:06:09 vapier Exp $
+
+  04 Jan 2007; Mike Frysinger <vapier@gentoo.org> dropbear-0.48.1.ebuild:
+  Set default sftp path to point to the openssh binary #159894 by Lars Weiler.
 
   05 Aug 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
   metadata.xml translation by Yoshino-san in bug #135034
