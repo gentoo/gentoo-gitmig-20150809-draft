@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql-slotted
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-slotted/ChangeLog,v 1.1 2007/01/03 15:25:28 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-slotted/ChangeLog,v 1.2 2007/01/04 10:48:29 vivo Exp $
+
+*mysql-slotted-5.2.0_alpha-r90 (04 Jan 2007)
+
+  04 Jan 2007; Francesco Riosa <vivo@gentoo.org>
+  +mysql-slotted-5.2.0_alpha-r90.ebuild:
+  5.1 bitkeeper sources defaults to mysql-5.1-ndb repository
+  added mysql-5.2-falcon
 
 *mysql-slotted-5.1.15_alpha20061231-r60 (03 Jan 2007)
 *mysql-slotted-5.1.15_alpha-r90 (03 Jan 2007)
