@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/tkXwin-1.0-r1.ebuild,v 1.3 2007/01/03 03:31:45 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/tkXwin-1.0-r1.ebuild,v 1.4 2007/01/04 14:04:25 beandog Exp $
 
 inherit eutils
 
@@ -10,10 +10,13 @@ SRC_URI="http://beepcore-tcl.sourceforge.net/${P}.tgz"
 IUSE=""
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
 DEPEND=">=dev-lang/tcl-8.3.3
-	>=dev-lang/tk-8.3.3"
+	>=dev-lang/tk-8.3.3
+	|| ( ( x11-proto/scrnsaverproto
+		x11-proto/xextproto ) <virtual/x11-7 )"
+
 
 src_unpack() {
 	unpack ${A}
@@ -24,7 +27,7 @@ src_unpack() {
 
 src_compile() {
 	econf --with-tcl=/usr/$(get_libdir) --with-tk=/usr/$(get_libdir) || die
-	make || die
+	emake || die
 }
 
 src_install() {
