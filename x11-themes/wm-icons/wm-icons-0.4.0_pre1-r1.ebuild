@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/wm-icons-0.4.0_pre1-r1.ebuild,v 1.12 2007/01/04 19:45:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/wm-icons-0.4.0_pre1-r1.ebuild,v 1.13 2007/01/04 19:48:09 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -18,7 +18,6 @@ KEYWORDS="alpha amd64 ia64 ppc ppc64 x86"
 
 IUSE=""
 RDEPEND="sys-apps/gawk dev-lang/perl"
-DEPEND="${RDEPEND} sys-devel/autoconf sys-devel/automake sys-apps/sed"
 
 S=${WORKDIR}/wm-icons
 
