@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX relaxng-datatype-1.0-build_xml.patch 1972 RMD160 2f50ba1b95d216b10841d5734c96a06e56dd508d SHA1 ec9a8091ae491f7277bea57f8841b4c9a719103d SHA256 f555900bda75436f1cf35bc86a06e5f0a4def6ccafc8b7389463918ba87059d0
 MD5 ebbff7778f132e9e205c25d4daa5e84f files/relaxng-datatype-1.0-build_xml.patch 1972
 RMD160 2f50ba1b95d216b10841d5734c96a06e56dd508d files/relaxng-datatype-1.0-build_xml.patch 1972
@@ -10,14 +7,14 @@ EBUILD relaxng-datatype-1.0-r1.ebuild 1080 RMD160 800ac0b38edec48219b9ddb590e597
 MD5 56cc3539d74cff0f3664b302d0126952 relaxng-datatype-1.0-r1.ebuild 1080
 RMD160 800ac0b38edec48219b9ddb590e5973decbce6cf relaxng-datatype-1.0-r1.ebuild 1080
 SHA256 e8eedbcb68e813ee77a5169d6668be62b6d09dcb55c3fe2dc8ac3749f05b5cd5 relaxng-datatype-1.0-r1.ebuild 1080
-EBUILD relaxng-datatype-1.0.ebuild 1133 RMD160 aa97bb72bd2a76c10ba4d90bc481bab265c8f8a6 SHA1 c47bca75d4b16ddf9d0a1493b498f42c347c999a SHA256 6590212fafdc9590ffeb31497b9a793f45d038197083c528ba04697d8e194c23
-MD5 d627399cf20dfd90bfa481737c01efcc relaxng-datatype-1.0.ebuild 1133
-RMD160 aa97bb72bd2a76c10ba4d90bc481bab265c8f8a6 relaxng-datatype-1.0.ebuild 1133
-SHA256 6590212fafdc9590ffeb31497b9a793f45d038197083c528ba04697d8e194c23 relaxng-datatype-1.0.ebuild 1133
-MISC ChangeLog 1383 RMD160 af827d15557c1efb9e4c94e4d0a1413b4117661c SHA1 26fe8da0b637c63139c8565d0a9d8f78a579b210 SHA256 b903bcf9bec0acc665acd6dc6ef0ed74caac53bb6c68cecfde0636090b46296b
-MD5 ac41f4ff1a6227424c0b9132c5277f24 ChangeLog 1383
-RMD160 af827d15557c1efb9e4c94e4d0a1413b4117661c ChangeLog 1383
-SHA256 b903bcf9bec0acc665acd6dc6ef0ed74caac53bb6c68cecfde0636090b46296b ChangeLog 1383
+EBUILD relaxng-datatype-1.0.ebuild 1138 RMD160 425c6a2acad560324453687d35800b3f4003ce8f SHA1 a963d4892e3b4f9316d956ce7fdcda1e719ca5e4 SHA256 b31f56e74fcbfa2fb7cbcb1baad63358855ad178d2d941843a279a66fed22fef
+MD5 d2cd984f08b4f95282b268b92bd28897 relaxng-datatype-1.0.ebuild 1138
+RMD160 425c6a2acad560324453687d35800b3f4003ce8f relaxng-datatype-1.0.ebuild 1138
+SHA256 b31f56e74fcbfa2fb7cbcb1baad63358855ad178d2d941843a279a66fed22fef relaxng-datatype-1.0.ebuild 1138
+MISC ChangeLog 1473 RMD160 ef76030bb7ba8d4a95f78a2fdf88954234e543b7 SHA1 f57dda1dca36a3a4e4faa1d9a7b2ac49bf373bc4 SHA256 30c588b5c47aea5864dca1d15a41dcb551f62fc2596a8c7f01941d25a61e4ce6
+MD5 f20a04eea1fcc2be82322906eae05602 ChangeLog 1473
+RMD160 ef76030bb7ba8d4a95f78a2fdf88954234e543b7 ChangeLog 1473
+SHA256 30c588b5c47aea5864dca1d15a41dcb551f62fc2596a8c7f01941d25a61e4ce6 ChangeLog 1473
 MISC metadata.xml 158 RMD160 493079b5fb71d66863beea1b023901c90ba81be5 SHA1 77cd509a8b3c377b9a24480b48a5d5481b7874f1 SHA256 ea882ceccfd160b16cf7e79de423bdcc12b3fa000f124491a6df36f5783894fb
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 RMD160 493079b5fb71d66863beea1b023901c90ba81be5 metadata.xml 158
@@ -28,10 +25,3 @@ SHA256 2804e29193b2222321fb839e263e3b05d84eae7ff9f6d0dbd17f823123addcfb files/di
 MD5 a107567e14c7de601f2ae1c86c3e17c7 files/digest-relaxng-datatype-1.0-r1 247
 RMD160 a93de577895bad4fdb8722dbb82963a0df1844d0 files/digest-relaxng-datatype-1.0-r1 247
 SHA256 2804e29193b2222321fb839e263e3b05d84eae7ff9f6d0dbd17f823123addcfb files/digest-relaxng-datatype-1.0-r1 247
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.6 (GNU/Linux)
-
-iD8DBQFFeoCcAiZjviIA2XgRAnUJAKDKWux/bm7YMG4R4+2xRdqhwNenVQCaA1L9
-OUiPfQVT7Epa/WYueO/6xlg=
-=lz8M
------END PGP SIGNATURE-----

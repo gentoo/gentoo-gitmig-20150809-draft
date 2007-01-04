@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/relaxng-datatype/relaxng-datatype-1.0.ebuild,v 1.7 2006/03/11 19:58:37 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/relaxng-datatype/relaxng-datatype-1.0.ebuild,v 1.8 2007/01/04 04:02:34 tgall Exp $
 
 inherit java-pkg eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/relaxng/${MY_P}.zip"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="doc jikes source"
 
 DEPEND=">=virtual/jdk-1.4
