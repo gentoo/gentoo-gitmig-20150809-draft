@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.184 2007/01/04 20:11:06 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.185 2007/01/04 20:54:23 welp Exp $
+
+  04 Jan 2007; Peter Weller (welp) <welp@gentoo.org> db-1.85-r3.ebuild:
+  Stable on amd64 wrt bug #159445
 
   04 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> db-1.85-r3.ebuild:
   Stable on IA64.
