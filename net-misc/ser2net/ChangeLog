@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ser2net
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/ChangeLog,v 1.15 2006/05/30 04:09:13 rajiv Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/ChangeLog,v 1.16 2007/01/04 13:20:23 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ser2net-2.3.ebuild:
+  Fix very broken autotools handling, closes bug #152518.
 
   30 May 2006; Rajiv Aaron Manglani <rajiv@gentoo.org>
   -ser2net-2.2-r1.ebuild, ser2net-2.3.ebuild:

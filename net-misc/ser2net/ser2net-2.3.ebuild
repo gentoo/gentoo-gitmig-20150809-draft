@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/ser2net-2.3.ebuild,v 1.5 2006/05/30 04:09:13 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/ser2net-2.3.ebuild,v 1.6 2007/01/04 13:20:23 flameeyes Exp $
 
-inherit eutils
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit eutils autotools
 
 DESCRIPTION="Serial To Network Proxy"
 SRC_URI="mirror://sourceforge/ser2net/${P}.tar.gz"
@@ -16,17 +19,15 @@ DEPEND="tcpd? ( sys-apps/tcp-wrappers )"
 
 IUSE="tcpd"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	eautoreconf
+}
+
 src_compile() {
-	ebegin "Recreating configure"
-	autoconf || die "Error: autoconf failed"
-	eend $?
-
-	ebegin "Recreating Makefile"
-	automake || die "Error: automake failed"
-	eend $?
-
 	econf $(use_with tcpd tcp-wrappers) || die "Error: econf failed"
-	libtoolize --copy --force
 	emake || die "Error: emake failed"
 }
 
