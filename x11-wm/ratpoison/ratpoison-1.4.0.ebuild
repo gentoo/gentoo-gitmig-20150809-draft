@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.0.ebuild,v 1.4 2006/12/11 22:45:30 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.0.ebuild,v 1.5 2007/01/04 19:09:29 flameeyes Exp $
 
-inherit elisp-common eutils
+WANT_AUTOMAKE=latest
+WANT_AUTOCONF=latest
+
+inherit elisp-common eutils autotools
 
 MY_P=${P/_beta/-beta}
 S=${WORKDIR}/${MY_P}
@@ -26,13 +29,12 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}/contrib
 	epatch ${FILESDIR}/ratpoison.el-gentoo.patch
+
+	cd "${S}"
+	eautoreconf
 }
 
 src_compile() {
-	if [ "${ARCH}" = "amd64" ]
-	then
-		libtoolize -c -f
-	fi
 	econf || die "econf failed"
 	emake CFLAGS="${CFLAGS} -I/usr/X11R6/include" || die
 	if use emacs; then

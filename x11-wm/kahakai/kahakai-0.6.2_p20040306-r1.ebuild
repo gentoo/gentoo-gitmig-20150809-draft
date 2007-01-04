@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/kahakai-0.6.2_p20040306-r1.ebuild,v 1.2 2006/11/02 02:49:09 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/kahakai-0.6.2_p20040306-r1.ebuild,v 1.3 2007/01/04 19:04:35 flameeyes Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -31,8 +31,6 @@ RDEPEND="( x11-libs/libX11
 	dev-util/pkgconfig
 	media-fonts/artwiz-fonts
 	dev-libs/boost"
-DEPEND="${RDEPEND}
-	sys-devel/libtool"
 
 S="${WORKDIR}/${PN}"
 
@@ -53,11 +51,11 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-kastyle_fix.patch
 	# fixes old m4 file problems
 	epatch ${FILESDIR}/${PN}-m4_fixes.patch
+
+	AT_M4DIR="${S}/config/m4" eautoreconf
 }
 
 src_compile() {
-	libtoolize --copy --force || die
-	./autogen.sh || die
 	econf \
 		$(use_enable ruby) \
 		$(use_enable xinerama) \

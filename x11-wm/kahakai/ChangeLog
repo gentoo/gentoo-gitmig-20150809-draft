@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/kahakai
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/ChangeLog,v 1.27 2006/11/02 02:49:09 nixphoeni Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/ChangeLog,v 1.28 2007/01/04 19:04:35 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  kahakai-0.6.2_p20040306-r1.ebuild:
+  Fix broken autotools handling.
 
   02 Nov 2006; Joe Sapp <nixphoeni@gentoo.org>
   kahakai-0.6.2_p20040306-r1.ebuild:
