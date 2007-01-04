@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-industrial
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-industrial/ChangeLog,v 1.6 2005/09/07 13:39:05 gustavoz Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-industrial/ChangeLog,v 1.7 2007/01/04 19:01:21 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  gtk-engines-industrial-0.2.36.ebuild:
+  Fix broken autotools handling.
 
   07 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   gtk-engines-industrial-0.2.36.ebuild:

@@ -1,8 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-industrial/gtk-engines-industrial-0.2.36.ebuild,v 1.6 2005/09/07 13:39:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-industrial/gtk-engines-industrial-0.2.36.ebuild,v 1.7 2007/01/04 19:01:21 flameeyes Exp $
 
-inherit eutils
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit eutils autotools
 
 MY_PN="gtk-industrial-engine"
 DESCRIPTION="GTK+ 1 Industrial theme engine"
@@ -28,11 +31,7 @@ src_unpack() {
 	# Hack so it can find the required files
 	cp gtk-common/* gtk1-engine
 
-	libtoolize --copy --force
-	aclocal || die "aclocal failed"
-	autoheader || die "autoheader failed"
-	automake --add-missing --gnu || die "automake failed"
-	autoconf || die "autoconf failed"
+	eautoreconf
 }
 
 src_compile() {
