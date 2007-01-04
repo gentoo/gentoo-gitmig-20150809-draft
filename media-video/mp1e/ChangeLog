@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mp1e
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mp1e/ChangeLog,v 1.2 2006/10/25 09:05:11 zzam Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mp1e/ChangeLog,v 1.3 2007/01/04 16:25:03 zzam Exp $
+
+  04 Jan 2007; Matthias Schwarzott <zzam@gentoo.org>
+  mp1e-0.5.2.20040909.ebuild:
+  Correctly use eautoreconf, WANT_AUTO*, thanks to Flameeyes. Guess
+  gcc-version to use.
 
   25 Oct 2006; Matthias Schwarzott <zzam@gentoo.org>
   mp1e-0.5.2.20040909.ebuild:

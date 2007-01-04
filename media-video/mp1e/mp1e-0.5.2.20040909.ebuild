@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mp1e/mp1e-0.5.2.20040909.ebuild,v 1.2 2006/10/25 09:05:11 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mp1e/mp1e-0.5.2.20040909.ebuild,v 1.3 2007/01/04 16:25:03 zzam Exp $
 
-inherit eutils toolchain-funcs
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit eutils toolchain-funcs autotools
 
 MY_P=rte-09sep04
 
@@ -24,7 +27,18 @@ S=${WORKDIR}/${MY_P}/mp1e
 pkg_setup() {
 	if [ "$(gcc-major-version)" == "4" ]; then
 		eerror "this mp1e-version requires gcc-3 in order to build correctly"
-		eerror "please compile it with gcc-3"
+
+		# Search gcc-3
+		local MY_GCC=$(ls -1 /usr/bin/gcc-3.*|sort -r|head -1)
+		MY_GCC=${MY_GCC##*/}
+
+		if [[ -n ${MY_GCC} ]]; then
+			eerror "please compile it using:"
+			eerror "\tCC=${MY_GCC} emerge mp1e"
+		else
+			eerror "please install a gcc-3.* and try using it for ${PN}:"
+			eerror "\temerge =gcc-3*"
+		fi
 		die "gcc 4 cannot build this mp1e-version"
 	fi
 }
@@ -35,13 +49,8 @@ src_unpack() {
 	cd ${S}
 	einfo "Applying vdr-analogtv patch:"
 	epatch ${DISTDIR}/${MY_P}-mp1e-gentoo.patch
-}
 
-src_compile() {
-	libtoolize --copy --force
-
-	econf || die "econf failed"
-	emake || die "emake failed"
+	AT_M4DIR="macros" eautoreconf
 }
 
 src_install() {
