@@ -1,10 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx2/sphinx2-0.6.ebuild,v 1.3 2006/08/30 12:20:31 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx2/sphinx2-0.6.ebuild,v 1.4 2007/01/04 19:18:18 flameeyes Exp $
 
 IUSE="static"
-
-inherit gnuconfig
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -18,14 +16,6 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 
 DEPEND="virtual/libc"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	if use amd64 ; then
-		gnuconfig_update
-	fi
-}
 
 src_compile() {
 	econf $(use_enable static) || die

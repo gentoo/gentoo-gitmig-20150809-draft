@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx2/sphinx2-0.4.ebuild,v 1.11 2005/01/01 10:53:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx2/sphinx2-0.4.ebuild,v 1.12 2007/01/04 19:18:18 flameeyes Exp $
 
 IUSE="static"
 
-inherit eutils gnuconfig
+inherit eutils
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -23,9 +23,6 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/sphinx2-gcc3.4.patch
-	if use amd64 ; then
-		gnuconfig_update
-	fi
 }
 
 src_compile() {
