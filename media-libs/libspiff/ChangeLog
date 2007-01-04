@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/libspiff
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libspiff/ChangeLog,v 1.1 2007/01/04 03:08:07 beandog Exp $
+
+*libspiff-0.5.2 (04 Jan 2007)
+
+  04 Jan 2007; Steve Dibb <beandog@gentoo.org> +metadata.xml,
+  +libspiff-0.5.2.ebuild:
+  Initial commit, thanks to jokey for ebuild, bug 150448
+
