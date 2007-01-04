@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ximian-artwork-0.2.32.1.ebuild,v 1.5 2006/11/13 14:48:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ximian-artwork-0.2.32.1.ebuild,v 1.6 2007/01/04 12:56:16 flameeyes Exp $
 
-inherit rpm eutils versionator
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
+
+inherit rpm eutils versionator autotools
 
 # bash magic to extract last 2 versions as XIMIAN_V,
 # third last version as RPM_V and the rest as MY_PV
@@ -17,10 +20,8 @@ SLOT="0"
 KEYWORDS="~amd64 ppc sparc ~x86"
 IUSE=""
 
-DEPEND="sys-devel/autoconf
-	sys-devel/automake
-	app-arch/rpm2targz"
-
+DEPEND="app-arch/rpm2targz
+	dev-util/intltool"
 
 RDEPEND=">=x11-themes/gnome-themes-extras-0.5"
 
@@ -28,40 +29,29 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 
 src_unpack() {
 	rpm_src_unpack
-	cd ${S}
-	epatch ${FILESDIR}/${P}-disable_industrial_engine.patch
-}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-disable_industrial_engine.patch"
 
-src_compile() {
-	aclocal && autoconf && automake || die
-	libtoolize --copy --force
-	econf || die
-	emake || die
+	eautoreconf
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	# Removing trademarks
-	patch ${D}/usr/share/gdm/themes/industrial/industrial.xml < ${FILESDIR}/${PN}-0.2.26-gdm.patch || die "patch failed"
-	rm -f ${D}/usr/share/gdm/themes/industrial/xd2logo.png
-	rm -rf ${D}/usr/share/pixmaps/ximian
-	rm -f ${D}/usr/share/pixmaps/ximian-desktop-stripe.png
+	patch "${D}"/usr/share/gdm/themes/industrial/industrial.xml < ${FILESDIR}/${PN}-0.2.26-gdm.patch || die "patch failed"
+	rm -f "${D}"/usr/share/gdm/themes/industrial/xd2logo.png
+	rm -rf "${D}"/usr/share/pixmaps/ximian
+	rm -f "${D}"/usr/share/pixmaps/ximian-desktop-stripe.png
 
 	# Set up X11 implementation
-	#X11_IMPLEM_P="$(best_version virtual/x11)"
-	#X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
-	#X11_IMPLEM="${X11_IMPLEM##*\/}"
 	X11_IMPLEM="xorg-x11"
-	einfo "X11 implementation is ${X11_IMPLEM}."
-
-	# Moving cursors
 	dodir /usr/share/cursors/${X11_IMPLEM}/Industrial
-	mv ${D}/usr/share/icons/Industrial/cursors ${D}/usr/share/cursors/${X11_IMPLEM}/Industrial
+	mv "${D}"/usr/share/icons/Industrial/cursors "${D}"/usr/share/cursors/${X11_IMPLEM}/Industrial
 
 	# remove xmms skin if unneeded
-	rm -rf ${D}/usr/share/xmms
+	rm -rf "${D}"/usr/share/xmms
 
-	cd ${S}
-	dodoc COPYING ChangeLog
+	cd "${S}"
+	dodoc ChangeLog
 }

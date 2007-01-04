@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/ximian-artwork
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ChangeLog,v 1.27 2006/11/13 14:48:59 flameeyes Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ChangeLog,v 1.28 2007/01/04 12:56:16 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  ximian-artwork-0.2.32.1.ebuild:
+  Fix autotools rebuilding handling and add missing dependency over intltool.
+  Patch mostly based on the one by Jakub Moc in bug #150272.
 
   13 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   ximian-artwork-0.2.29.0.6.3.ebuild, ximian-artwork-0.2.32.1.ebuild:
