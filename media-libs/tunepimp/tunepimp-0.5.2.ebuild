@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.5.2.ebuild,v 1.8 2006/12/26 14:47:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.5.2.ebuild,v 1.9 2007/01/04 15:20:56 flameeyes Exp $
 
-inherit eutils distutils perl-app
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit eutils distutils autotools
 
 MY_P="lib${P}"
 S="${WORKDIR}/${MY_P}"
@@ -31,22 +34,13 @@ RDEPEND="sys-libs/zlib
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_compile() {
-	# broken script, install fails
-	sed -i -e "s: tta::" configure.in
-	libtoolize --copy --force
-	autoheader
-	automake --foreign --add-missing --copy --include-deps
-	aclocal
-	autoconf
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
 
-	econf || die "configure failed"
-	emake || die "emake failed"
-	# disabled as broken with Perl 5.8.8
-	#if use perl; then
-	#	cd ${S}/perl/tunepimp-perl
-	#	perl-app_src_compile || die "perl module failed to compile"
-	#fi
+	sed -i -e "s: tta::" configure.in
+
+	eautoreconf
 }
 
 src_install() {
@@ -59,10 +53,4 @@ src_install() {
 		insinto /usr/share/doc/${PF}/examples/
 		doins examples/*
 	fi
-# 	if use perl; then
-# 		cd ${S}/perl/tunepimp-perl
-# 		perl-module_src_install || die "perl module failed to install"
-# 		insinto /usr/share/doc/${PF}/examples/
-# 		doins examples/*
-# 	fi
 }

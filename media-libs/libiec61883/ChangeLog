@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libiec61883
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/ChangeLog,v 1.16 2006/11/09 09:29:22 zzam Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/ChangeLog,v 1.17 2007/01/04 15:22:18 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  libiec61883-1.1.0.ebuild:
+  Fix broken autotools handling.
 
   09 Nov 2006; Matthias Schwarzott <zzam@gentoo.org>
   libiec61883-1.0.0-r1.ebuild, libiec61883-1.1.0.ebuild:
