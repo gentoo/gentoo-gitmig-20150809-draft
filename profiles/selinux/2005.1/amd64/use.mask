@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/amd64/use.mask,v 1.7 2006/12/29 21:13:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/amd64/use.mask,v 1.8 2007/01/04 21:49:29 flameeyes Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # multilib is forced on when we have ${MULTILIB_ABIS} defined
@@ -16,7 +16,6 @@ drac
 
 # 2004/06/22 - Taken from 2004.0 profile
 # Firebird doesnt build on amd64
-firebird
 
 # 2004/06/22 - Taken from 2004.0 profile
 # x86 binary only, used by php
@@ -31,23 +30,3 @@ firebird
 libcaca
 
 # NOT NECESSARY - SECTION
-
-# see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
-# Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
-# all of these are binary-only, and not presently available on this
-# architecture.
-adabas
-birdstep
-dbmaker
-empress
-empress-bcs
-esoob
-filepro
-frontbase
-hyperwave
-informix
-ingres
-pfpro
-solid
-sybase
-sybase-ct

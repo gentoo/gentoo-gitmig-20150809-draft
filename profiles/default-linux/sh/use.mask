@@ -27,7 +27,6 @@ afs
 lesstif
 mono
 lm_sensors
-firebird
 qdbm
 fftw
 netjack
@@ -38,10 +37,6 @@ firefox
 nvtv
 xine
 ocaml
-
-# Luca Longinotti <chtekk@gentoo.org>
-# mask Oracle
-oci8
 
 # 2006/03/07 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: mask for architectures lacking direct rendering      

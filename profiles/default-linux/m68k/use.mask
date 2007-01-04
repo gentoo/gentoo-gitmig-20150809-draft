@@ -10,24 +10,6 @@ java
 # all of these are binary-only, and not presently available on this
 # architecture.
 php
-adabas
-birdstep
-db2
-dbmaker
-empress
-empress-bcs
-esoob
-filepro
-frontbase
-hyperwave
-informix
-ingres
-oracle7
-oci8
-pfpro
-solid
-sybase
-sybase-ct
 djbfft
 qdbm
 mzscheme

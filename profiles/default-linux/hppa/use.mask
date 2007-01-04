@@ -128,11 +128,6 @@ nptlonly
 # Wifi stuff not test yet because of lack of hardware
 wifi
 
-# 14 Jul 2004 Gustavo Zacarias <gustavoz@gentoo.org>
-# There's no oracle or informix port for linux/hppa
-oci8
-informix
-
 # 26 Feb 2003 Guy Martin <gmsoft@gentoo.org>
 # No lirc support on hppa
 lirc
@@ -186,31 +181,12 @@ pcmcia
 pda
 trusted
 wavelan
-firebird
 
 # see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
 # Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
 # all of these are binary-only, and not presently available on this
 # architecture.
-adabas
-birdstep
-db2
-dbmaker
-empress
-empress-bcs
-esoob
-filepro
-frontbase
-hyperwave
 ibm
-informix
-ingres
-oracle7
-oci8
-pfpro
-solid
-sybase
-sybase-ct
 djbfft
 qdbm
 mzscheme

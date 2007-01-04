@@ -2,10 +2,8 @@
 
 3dfx
 acpi
-adabas
 afs
 avi
-birdstep
 cmucl
 hdf
 lm_sensors
@@ -13,7 +11,6 @@ real
 tcc
 fmod
 #keep and eye on firebird and interbase as pair
-firebird
 interbase
 
 i8x0

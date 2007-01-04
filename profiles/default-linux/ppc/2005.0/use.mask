@@ -2,20 +2,15 @@
 
 3dfx
 acpi
-adabas
 afs
 avi
-birdstep
 cmucl
 hdf
 lm_sensors
 real
 tcc
 fmod
-oci8
-oci8-direct-client
 #keep and eye on firebird and interbase as pair
-firebird
 interbase
 
 i8x0

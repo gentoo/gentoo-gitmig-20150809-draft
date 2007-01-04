@@ -18,9 +18,6 @@ hardened
 # VV requires device-mapper 
 on-the-fly-crypt
 oss
-solid
-sybase
-sybase-ct
 rtc
 voodoo3
 pvm
@@ -34,7 +31,6 @@ arts
 cjk
 doc
 esd
-firebird
 gnome
 jack-tmpfs
 kde
@@ -52,22 +48,6 @@ xmms
 # Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
 # all of these are binary-only, and not presently available on this
 # architecture.
-adabas
-birdstep
-db2
-dbmaker
-empress
-empress-bcs
-esoob
-filepro
-frontbase
-hyperwave
-informix
-ingres
-oci8
-oracle7
-pfpro
-solid
 
 # masks for x11-libs/qt
 odbc

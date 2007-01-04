@@ -27,22 +27,6 @@ afs
 # Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
 # all of these are binary-only, and not presently available on this
 # architecture.
-adabas
-birdstep
-dbmaker
-empress
-empress-bcs
-esoob
-filepro
-frontbase
-hyperwave
-informix
-ingres
-oci8
-pfpro
-solid
-sybase
-sybase-ct
 qdbm
 
 hardened
@@ -96,9 +80,6 @@ xemacs
 video_cards_nsc
 video_cards_newport
 video_cards_sis
-
-# dev-db/firebird-1.5.x entirely lacks ia64 support
-firebird
 
 # 01 july 2006 - Gustavo Zacarias <gustavoz@gentoo.org>
 # Seamonkey isn't keyworded for ia64, see bug #137198

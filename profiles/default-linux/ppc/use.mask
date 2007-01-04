@@ -8,7 +8,6 @@ lm_sensors
 rar
 
 #keep and eye on firebird and interbase as pair
-firebird
 interbase
 
 # Unmask our instruction sets
@@ -18,32 +17,6 @@ interbase
 
 # codec support
 -x264
-
-# see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
-# Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
-# all of these are binary-only, and not presently available on this
-# architecture.
-adabas
-birdstep
-db2
-dbmaker
-empress
-empress-bcs
-esoob
-filepro
-frontbase
-hyperwave
-informix
-ingres
-oracle7
-pfpro
-solid
-sybase
-sybase-ct
-
-# Luca Longinotti <chtekk@gentoo.org>
-# mask Oracle
-oci8
 
 # cg is only provided by nvidia's binary only cg toolkit
 cg

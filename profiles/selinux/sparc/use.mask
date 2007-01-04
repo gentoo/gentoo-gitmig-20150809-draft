@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/sparc/use.mask,v 1.6 2006/12/29 21:13:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/sparc/use.mask,v 1.7 2007/01/04 21:49:29 flameeyes Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -21,14 +21,12 @@ glitz
 hal
 i8x0
 ibm
-informix
 lirc
 lm_sensors
 mod
 modplug
 mpm-peruser
 nvtv
-oci8
 pbs
 pcmcia
 pmount
@@ -75,23 +73,8 @@ doomsday
 # Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
 # all of these are binary-only, and not presently available on this
 # architecture.
-adabas
-birdstep
-db2
-dbmaker
-empress
-empress-bcs
-esoob
-filepro
-frontbase
 hyperwave-api
-ingres
 libedit
-oracle7
-pfpro
-solid
-sybase
-sybase-ct
 
 # Unmask ultra1
 -ultra1

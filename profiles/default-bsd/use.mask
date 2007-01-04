@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.28 2006/12/29 23:28:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.29 2007/01/04 21:49:28 flameeyes Exp $
 
 # Linux-dependant flags
 selinux
@@ -41,27 +41,12 @@ hardened
 termcap-compat
 
 # useflags for php commercial software
-adabas
-birdstep
-db2
-dbmaker
-empress
-empress-bcs
-esoob
-frontbase
 hyperwave-api
-informix
 interbase
 mnogosearch
 msql
-oci8
-oracle7
 ovrimos
-pfpro
 sapdb
-solid
-sybase
-sybase-ct
 
 # Java requires that new-style virtuals are prepared for kaffe
 java

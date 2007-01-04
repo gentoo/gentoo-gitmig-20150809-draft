@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/alpha/use.mask,v 1.5 2006/12/29 21:13:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/alpha/use.mask,v 1.6 2007/01/04 21:49:29 flameeyes Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -28,7 +28,6 @@ java-internal
 java-external
 
 # firebird appears to be x86-only (the db, not the browser)
-firebird
 
 # tcc is x86-only
 tcc
@@ -36,29 +35,6 @@ tcc
 # I don't think that openafs really works on other architectures,
 # despite some internal Gentoo efforts (mine) to port it
 afs
-
-# see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
-# Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
-# all of these are binary-only, and not presently available on this
-# architecture.
-adabas
-birdstep
-db2
-dbmaker
-empress
-empress-bcs
-esoob
-filepro
-frontbase
-hyperwave
-informix
-ingres
-oracle7
-oci8
-pfpro
-solid
-sybase
-sybase-ct
 
 hardened
 hal
