@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtkglarea
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/ChangeLog,v 1.32 2006/09/30 21:28:37 dang Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/ChangeLog,v 1.33 2007/01/04 18:52:40 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  gtkglarea-1.99.0.ebuild:
+  Fix broken autotools handling.
 
   30 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> gtkglarea-1.99.0.ebuild:
   Add correct automake dep; bug #148297

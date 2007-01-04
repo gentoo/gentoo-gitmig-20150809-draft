@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.99.0.ebuild,v 1.32 2006/09/30 21:28:37 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.99.0.ebuild,v 1.33 2007/01/04 18:52:40 flameeyes Exp $
 
-inherit gnome2 multilib
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit gnome2 multilib autotools
 
 DESCRIPTION="GL extensions for gtk+"
 HOMEPAGE="http://www.gnome.org/"
@@ -17,19 +20,15 @@ RDEPEND="virtual/libc
 	virtual/glu
 	virtual/opengl"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	=sys-devel/automake-1.6*"
+	dev-util/pkgconfig"
 
 DOCS="AUTHORS ChangeLog INSTALL NEWS README* docs/*.txt"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	if [ $(get_libdir) != "lib" ] ; then
-		libtoolize --copy --force || die "libtoolize failed"
-		aclocal || die "aclocal failed"
-		autoconf || die "autoconf failed"
-	fi
+
+	eautoreconf
 }
 
 src_install() {
