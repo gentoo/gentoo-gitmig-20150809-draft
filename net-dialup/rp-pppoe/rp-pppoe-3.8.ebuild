@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.8.ebuild,v 1.10 2006/09/23 15:19:26 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.8.ebuild,v 1.11 2007/01/04 15:04:51 mrness Exp $
 
 inherit eutils flag-o-matic
 
@@ -50,6 +50,7 @@ src_unpack() {
 
 src_compile() {
 	addpredict /dev/ppp
+	append-flags -D_GNU_SOURCE
 
 	cd "${S}/src"
 	econf --enable-plugin=../../ppp-2.4.3 || die "econf failed"
