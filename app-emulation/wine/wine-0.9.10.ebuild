@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.10.ebuild,v 1.10 2006/10/13 20:27:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.10.ebuild,v 1.11 2007/01/04 22:18:12 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -35,7 +35,7 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	lcms? ( media-libs/lcms )
 	xml? ( dev-libs/libxml2 dev-libs/libxslt )
 	truetype? ( media-libs/freetype )
-	>=media-gfx/fontforge-20060406
+	>=media-gfx/fontforge-20060703
 	scanner? ( media-gfx/sane-backends )
 	amd64? (
 		>=app-emulation/emul-linux-x86-xlibs-2.1
