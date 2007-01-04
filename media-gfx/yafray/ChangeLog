@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/yafray
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/ChangeLog,v 1.33 2006/09/08 19:57:12 tcort Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/ChangeLog,v 1.34 2007/01/04 15:08:36 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> yafray-0.0.9.ebuild:
+  Remove WANT_AUTOMAKE export, that would be in the wrong place.
+  (WANT_AUTOMAKE with scons, by the way?).
 
   08 Sep 2006; Thomas Cort <tcort@gentoo.org> yafray-0.0.9.ebuild:
   Added ~alpha keyword wrt Bug #96565. Added a '\' at the end of line 41 to
