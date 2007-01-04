@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-2.4-r6.ebuild,v 1.8 2007/01/04 00:33:05 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-2.4-r6.ebuild,v 1.9 2007/01/04 19:48:15 kloeri Exp $
 
 WANT_AUTOCONF="latest"
 inherit eutils autotools
@@ -11,7 +11,7 @@ SRC_URI="http://samba.org/ftp/ccache/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ~ppc-macos ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~arm hppa ia64 ~m68k ~mips ppc ~ppc-macos ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 # Note: this version is designed to be auto-detected and used if
