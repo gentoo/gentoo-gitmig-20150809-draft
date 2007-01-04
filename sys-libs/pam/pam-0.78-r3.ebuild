@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r3.ebuild,v 1.3 2006/04/21 12:01:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r3.ebuild,v 1.4 2007/01/04 19:56:31 flameeyes Exp $
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
@@ -188,7 +188,7 @@ src_compile() {
 			--libdir="${S}/lib" || die "Bad BDB ./configure"
 
 		# XXX: hack out O_DIRECT support in db4 for now.
-		#      (Done above now with --disable-o_direct now)
+		#	   (Done above now with --disable-o_direct now)
 
 		make CC="$(tc-getCC)" || die "BDB build failed"
 		make install || die
@@ -257,8 +257,8 @@ src_compile() {
 		# Also edit the configuration file else the wrong include files
 		# get used
 		sed -i -e "s:^#define HAVE_NDBM_H.*$:/* #undef HAVE_NDBM_H */:" \
-		       -e "s:^#define HAVE_DB_H.*$:/* #undef HAVE_DB_H */:" \
-		       _pam_aconf.h
+			   -e "s:^#define HAVE_DB_H.*$:/* #undef HAVE_DB_H */:" \
+			   _pam_aconf.h
 
 	else
 		# Do not link pam_userdb.so to db-1.85 ...
@@ -299,11 +299,11 @@ src_install() {
 				die "${mod_name} module did not build."
 			fi
 			if [[ -n $(ldd "${sec_dir}/${mod_name}"*.so 2>&1 | \
-			           grep "/usr/lib/" | \
-			           grep "/usr/$(get_libdir)/" | \
-			           grep -v "/usr/lib/gcc" | \
-			           grep -v "/usr/$(get_libdir)/gcc" | \
-			           grep -v "libsandbox") ]] ; then
+					   grep "/usr/lib/" | \
+					   grep "/usr/$(get_libdir)/" | \
+					   grep -v "/usr/lib/gcc" | \
+					   grep -v "/usr/$(get_libdir)/gcc" | \
+					   grep -v "libsandbox") ]] ; then
 				echo
 				eerror "ERROR: ${mod_name} have dependencies in /usr."
 				echo
@@ -369,7 +369,7 @@ pkg_postinst() {
 			ewarn "is being updated automatically. Your old "
 			ewarn "system-auth will be backed up as:"
 			ewarn
-			ewarn "  ${ROOT}etc/pam.d/system-auth.bak"
+			ewarn "	 ${ROOT}etc/pam.d/system-auth.bak"
 			echo
 
 			cp -pPR ${ROOT}/etc/pam.d/system-auth \
