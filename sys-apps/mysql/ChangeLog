@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/mysql
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mysql/ChangeLog,v 1.2 2007/01/04 20:11:34 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mysql/ChangeLog,v 1.3 2007/01/04 20:45:28 vivo Exp $
+
+  04 Jan 2007; Francesco Riosa <vivo@gentoo.org> mysql-1.1.ebuild:
+  keyworded ~sparc-fbsd
 
 *mysql-1.1 (04 Jan 2007)
 
