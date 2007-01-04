@@ -1,5 +1,7 @@
---- src/audio/SDL_audio.c.old	2006-10-19 08:16:18.000000000 +0200
-+++ src/audio/SDL_audio.c	2006-10-19 08:18:08.000000000 +0200
+Fix segfault when auto converting stream #151991
+
+--- src/audio/SDL_audio.c
++++ src/audio/SDL_audio.c
 @@ -591,7 +591,7 @@
  			return(-1);
  		}
