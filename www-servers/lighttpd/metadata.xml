@@ -3,8 +3,8 @@
 <pkgmetadata>
 	<herd>www-servers</herd>
 	<maintainer>
-		<email>ka0ttic@gentoo.org</email>
-		<name>Aaron Walker</name>
+		<email>beu@gentoo.org</email>
+		<name>Elfyn McBratney</name>
 	</maintainer>
 	<longdescription lang="en">
   lighttpd a secure, fast, compliant and very flexible web-server
