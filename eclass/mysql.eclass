@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.56 2007/01/04 10:32:38 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.57 2007/01/04 11:17:05 vivo Exp $
 # kate: encoding utf-8; eol unix;
 # kate: indent-width 4; mixedindent off; remove-trailing-space on; space-indent off;
 # kate: word-wrap-column 80; word-wrap off;
@@ -15,7 +15,7 @@ INHERITED="$INHERITED $ECLASS"
 inherit eutils flag-o-matic gnuconfig autotools mysql_fx
 
 # avoid running userspace code 8 times per ebuild :(
-if [[ "${_MYPVR}" != "${PVR}" ]] && [[ -n "${PVR}" ]]
+if [[ "${_MYPVR}" != "${PVR}" ]] && [[ -z "${MYSQL_VERSION_ID}" ]]
 then
 	_MYPVR=${PVR}
 
