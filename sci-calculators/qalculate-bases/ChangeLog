@@ -1,6 +1,13 @@
 # ChangeLog for sci-calculators/qalculate-bases
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-bases/ChangeLog,v 1.7 2006/09/15 16:14:55 tsunam Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-bases/ChangeLog,v 1.8 2007/01/04 14:59:52 markusle Exp $
+
+*qalculate-bases-0.9.4-r1 (04 Jan 2007)
+
+  04 Jan 2007; Markus Dittrich <markusle@gentoo.org>
+  +qalculate-bases-0.9.4-r1.ebuild:
+  Added revision which can be compiled against newer versions of
+  libqalculate.
 
   15 Sep 2006; Joshua Jackson <tsunam@gentoo.org>
   qalculate-bases-0.9.4.ebuild:
