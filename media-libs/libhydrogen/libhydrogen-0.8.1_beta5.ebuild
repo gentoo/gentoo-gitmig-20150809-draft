@@ -1,8 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libhydrogen/libhydrogen-0.8.1_beta5.ebuild,v 1.11 2005/05/01 17:03:20 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libhydrogen/libhydrogen-0.8.1_beta5.ebuild,v 1.12 2007/01/04 15:12:59 flameeyes Exp $
 
-inherit libtool
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
+
+inherit autotools
 
 MY_P=${P/_/}
 DESCRIPTION="Linux Drum Machine - Library"
@@ -19,21 +22,13 @@ RDEPEND="virtual/x11 \
 	alsa? ( media-libs/alsa-lib ) \
 	media-sound/jack-audio-connection-kit"
 
-DEPEND="$RDEPEND >=sys-devel/autoconf-2.58"
-
 S=${WORKDIR}/${MY_P}
 
-src_compile() {
-	einfo "Reconfiguring..."
-	export WANT_AUTOCONF=2.5
-	aclocal
-	autoconf
-	automake
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
 
-	libtoolize --copy --force
-
-	econf || die "econf failed"
-	emake || die
+	eautoreconf
 }
 
 src_install() {
