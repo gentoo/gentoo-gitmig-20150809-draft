@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-analogtv
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-analogtv/ChangeLog,v 1.10 2006/11/14 21:46:28 zzam Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-analogtv/ChangeLog,v 1.11 2007/01/04 11:01:34 zzam Exp $
+
+  04 Jan 2007; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-analogtv-1.0.00-r1.ebuild:
+  Marked stable on x86.
 
 *vdr-analogtv-1.0.00-r1 (14 Nov 2006)
 

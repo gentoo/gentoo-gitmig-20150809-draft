@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-analogtv/vdr-analogtv-1.0.00-r1.ebuild,v 1.1 2006/11/14 21:46:28 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-analogtv/vdr-analogtv-1.0.00-r1.ebuild,v 1.2 2007/01/04 11:01:34 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ko0l.de/download/vdr/analogtv/download/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND=">=media-video/vdr-1.2.6
