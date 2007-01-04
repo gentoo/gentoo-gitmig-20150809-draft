@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/nrg2iso
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nrg2iso/ChangeLog,v 1.15 2005/09/03 21:04:49 hansmi Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nrg2iso/ChangeLog,v 1.16 2007/01/04 22:37:40 drizzt Exp $
+
+  04 Jan 2007; Timothy Redaelli <drizzt@gentoo.org> nrg2iso-0.4-r1.ebuild:
+  Add ~x86-fbsd keyword
 
   03 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> nrg2iso-0.4-r1.ebuild:
   Stable on ppc.
