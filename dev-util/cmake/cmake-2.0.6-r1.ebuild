@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.0.6-r1.ebuild,v 1.7 2006/12/13 21:18:38 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.0.6-r1.ebuild,v 1.8 2007/01/04 22:32:38 flameeyes Exp $
 
-inherit debug flag-o-matic toolchain-funcs eutils
+inherit flag-o-matic toolchain-funcs eutils
 
 SHORT_PV=2.0
 
