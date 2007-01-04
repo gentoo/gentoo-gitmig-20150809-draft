@@ -1,9 +1,16 @@
 # ChangeLog for net-ftp/kftpgrabber
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kftpgrabber/ChangeLog,v 1.16 2007/01/03 03:18:22 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kftpgrabber/ChangeLog,v 1.17 2007/01/04 15:14:44 troll Exp $
 
-  03 Jan 2007; Steve Dibb <beandog@gentoo.org> kftpgrabber-0.6.0.ebuild:
-  amd64 stable, bug 157441
+*kftpgrabber-0.8.0 (04 Jan 2007)
+
+  04 Jan 2007; Przemysław Maciąg <troll@gentoo.org>
+  -files/kftpgrabber-0.8.0_alpha2-multiline-data-command-fix.diff,
+  -files/kftpgrabber-0.8.0_beta1-multiline-data-command-fix.diff,
+  -kftpgrabber-0.8.0_alpha2.ebuild, -kftpgrabber-0.8.0_alpha2-r1.ebuild,
+  -kftpgrabber-0.8.0_beta1.ebuild, -kftpgrabber-0.8.0_beta1-r1.ebuild,
+  -kftpgrabber-0.8.0_beta2.ebuild, +kftpgrabber-0.8.0.ebuild:
+  Version bump (0.8.0). All beta and alpha ebuilds removed.
 
 *kftpgrabber-0.8.0_beta2 (14 Nov 2006)
 
