@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/dangerdeep/dangerdeep-0.2.0.ebuild,v 1.1 2007/01/04 04:37:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/dangerdeep/dangerdeep-0.2.0.ebuild,v 1.2 2007/01/04 23:35:17 mr_bones_ Exp $
 
-inherit eutils debug toolchain-funcs games
+inherit eutils toolchain-funcs games
 
 DESCRIPTION="a World War II German submarine simulation"
 HOMEPAGE="http://www.dangerdeep.net/"
