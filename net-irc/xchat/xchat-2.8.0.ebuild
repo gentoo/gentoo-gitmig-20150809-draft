@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.0.ebuild,v 1.1 2007/01/04 20:22:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.0.ebuild,v 1.2 2007/01/04 20:25:07 swegener Exp $
 
 inherit eutils versionator gnome2
 
@@ -16,7 +16,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="perl dbus tcl python ssl mmx ipv6 nls spell xchattext xchatnogtk xchatdccserver"
 
 RDEPEND=">=dev-libs/glib-2.6.0
-	!xchatnogtk? ( >=x11-libs/gtk+-2.6.0 )
+	!xchatnogtk? ( >=x11-libs/gtk+-2.10.0 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	perl? ( >=dev-lang/perl-5.6.1 )
 	python? ( >=dev-lang/python-2.2 )
