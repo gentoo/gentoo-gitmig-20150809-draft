@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/courier
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.84 2006/11/23 20:24:09 vivo Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.85 2007/01/04 15:01:56 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> courier-0.53.2.ebuild:
+  Fix broken autotools handling and remove gnuconfig inheritance.
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> courier-0.48.1.ebuild,
   courier-0.48.1-r1.ebuild, courier-0.48.2.20050224.ebuild,
