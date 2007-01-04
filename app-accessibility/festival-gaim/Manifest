@@ -1,16 +1,33 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 da814f2fc8dad0f570a866eaad511282 ChangeLog 3294
+DIST festival-gaim-1.1.tgz 28542
+EBUILD festival-gaim-1.1-r1.ebuild 869 RMD160 2dee26e7beebdfdb3d59745a1c373b44e0a668b9 SHA1 458479e7725b68db60a656670d80a454679548b4 SHA256 764ec35a2cc4aa8e524cf1361c318f488d8746f8f382677b505faafc3320df5a
+MD5 9f807521e261ce5fa6c6efeaeebe6f33 festival-gaim-1.1-r1.ebuild 869
+RMD160 2dee26e7beebdfdb3d59745a1c373b44e0a668b9 festival-gaim-1.1-r1.ebuild 869
+SHA256 764ec35a2cc4aa8e524cf1361c318f488d8746f8f382677b505faafc3320df5a festival-gaim-1.1-r1.ebuild 869
+EBUILD festival-gaim-1.1.ebuild 771 RMD160 21ed708bc8fcc6786b8f7be2287b16f80039fc53 SHA1 73e7ccf60dfdeada263022bb82bbc475f100b3df SHA256 8f2e1ddcc93b227d38a44980c66987c16d5b3e4256883dae9e08ed697ef89b8c
+MD5 1471dad1c6850ebc75fd25f4b309c296 festival-gaim-1.1.ebuild 771
+RMD160 21ed708bc8fcc6786b8f7be2287b16f80039fc53 festival-gaim-1.1.ebuild 771
+SHA256 8f2e1ddcc93b227d38a44980c66987c16d5b3e4256883dae9e08ed697ef89b8c festival-gaim-1.1.ebuild 771
+MISC ChangeLog 3437 RMD160 9f09c44bb9bfab8548ceb7b2d687ae1dd212b78b SHA1 71aa3a7b54fa13db5dafdd78319e03f9219b4ca5 SHA256 678b6608b523d0673e806ca42c05fab86c3e319dc9a7822cf49a9c4e75b4da4c
+MD5 b0c52661ae3660918b2ef1e0ae5948e4 ChangeLog 3437
+RMD160 9f09c44bb9bfab8548ceb7b2d687ae1dd212b78b ChangeLog 3437
+SHA256 678b6608b523d0673e806ca42c05fab86c3e319dc9a7822cf49a9c4e75b4da4c ChangeLog 3437
+MISC metadata.xml 205 RMD160 a1a4ac34c404737ffc3e8368e4eef5f6de1848e3 SHA1 42e448696694877c52325ec70b0a59981397617e SHA256 f77de881d828d961eb85275d7e0e2f998141539debf9c053453b0052b71bce99
 MD5 1846f613d6d41e3b8ad07c732edeafe1 metadata.xml 205
-MD5 5e75530a189fdd85fc2469b8ec8723f3 festival-gaim-1.1.ebuild 1054
-MD5 3b50bbaba4f54669ea7c69ad866079ff festival-gaim-1.1-r1.ebuild 1152
+RMD160 a1a4ac34c404737ffc3e8368e4eef5f6de1848e3 metadata.xml 205
+SHA256 f77de881d828d961eb85275d7e0e2f998141539debf9c053453b0052b71bce99 metadata.xml 205
 MD5 7aed20e85b6947be6eb5912946b33068 files/digest-festival-gaim-1.1 65
+RMD160 0943b7f8ddabeff42bad511d4269a5ca56edc0b9 files/digest-festival-gaim-1.1 65
+SHA256 c4105308cf71fc9ceb61938d56ec57b2ac2cc8497862a028adbd3fd73feb2fd1 files/digest-festival-gaim-1.1 65
 MD5 7aed20e85b6947be6eb5912946b33068 files/digest-festival-gaim-1.1-r1 65
+RMD160 0943b7f8ddabeff42bad511d4269a5ca56edc0b9 files/digest-festival-gaim-1.1-r1 65
+SHA256 c4105308cf71fc9ceb61938d56ec57b2ac2cc8497862a028adbd3fd73feb2fd1 files/digest-festival-gaim-1.1-r1 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v2.0.1 (GNU/Linux)
 
-iD8DBQFC6+IcArHZZzCEUG0RAoQFAJwIvpFA3Vl03RupkNWvn2GmkHzIDgCfRvwF
-R7UqRXqF+RcA0fmaUlSV4bk=
-=zkEa
+iD8DBQFFnQaQAiZjviIA2XgRAs+IAKCVxvNUCJWILbPFEzePyQav9GBniQCgw7Lx
+WvKXZs4KW2TEid7cAyBhHK4=
+=yGJM
 -----END PGP SIGNATURE-----
