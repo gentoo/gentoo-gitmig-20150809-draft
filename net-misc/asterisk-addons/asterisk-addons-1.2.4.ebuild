@@ -1,11 +1,13 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/asterisk-addons-1.2.4.ebuild,v 1.3 2006/11/23 20:36:56 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/asterisk-addons-1.2.4.ebuild,v 1.4 2007/01/04 16:40:45 drizzt Exp $
+
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit eutils flag-o-matic autotools
 
 IUSE="elibc_uclibc mysql sqlite h323"
-
-inherit eutils flag-o-matic
-
 SQLITE_PV="3.2.1"
 
 MY_P="${P/_/-}"
@@ -81,7 +83,7 @@ src_unpack() {
 	# rebuild ooh323c configure
 	if use h323; then
 		cd ${S}/asterisk-ooh323c
-		libtoolize --copy --force || die "libtoolize failed"
+		eautoreconf
 	fi
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk-addons
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/ChangeLog,v 1.7 2006/11/23 20:36:56 vivo Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/ChangeLog,v 1.8 2007/01/04 16:40:45 drizzt Exp $
+
+  04 Jan 2007; Timothy Redaelli <drizzt@gentoo.org>
+  asterisk-addons-1.2.4.ebuild:
+  Fix broken autotools handling (Flameeyes).
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org>
   asterisk-addons-1.2.0.ebuild, asterisk-addons-1.2.1.ebuild,
