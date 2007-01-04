@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/wordpress
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.66 2006/11/23 21:50:54 vivo Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.67 2007/01/04 20:16:57 beandog Exp $
+
+*wordpress-2.0.5-r1 (04 Jan 2007)
+
+  04 Jan 2007; Steve Dibb <beandog@gentoo.org>
+  +files/wordpress-2.0.5-templates-sec.diff, -wordpress-2.0.5.ebuild,
+  +wordpress-2.0.5-r1.ebuild:
+  Security fix, bug 159229
 
   23 Nov 2006; vivo ChangeLog:
   dev-db/mysql => virtual/mysql corrections
