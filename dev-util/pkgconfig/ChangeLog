@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pkgconfig
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.52 2006/11/06 22:38:14 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.53 2007/01/04 02:05:50 dang Exp $
+
+  04 Jan 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/pkg-config-0.21-fix-tests.patch, pkgconfig-0.21-r1.ebuild:
+  Fix tests to match new CFLAGS behavior; bug #146551
 
 *pkgconfig-0.21-r1 (06 Nov 2006)
 

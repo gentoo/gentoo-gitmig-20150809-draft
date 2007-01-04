@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.21-r1.ebuild,v 1.1 2006/11/06 22:38:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.21-r1.ebuild,v 1.2 2007/01/04 02:05:50 dang Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 MY_P="pkg-config"-${PV}
 DESCRIPTION="Package config system that manages compile/link flags"
@@ -22,6 +22,9 @@ S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack "${A}"
+	cd "${S}"
+
+	epatch ${FILESDIR}/${MY_P}-fix-tests.patch
 
 	use ppc64 && use hardened && replace-flags -O[2-3] -O1
 }
