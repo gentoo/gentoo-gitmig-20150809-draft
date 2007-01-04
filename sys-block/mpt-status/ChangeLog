@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/mpt-status
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/mpt-status/ChangeLog,v 1.2 2006/11/10 09:48:28 robbat2 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/mpt-status/ChangeLog,v 1.3 2007/01/04 08:28:54 opfer Exp $
+
+  04 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
+  mpt-status-1.2.0.ebuild:
+  stable x86, bug #158591
 
 *mpt-status-1.2.0 (10 Nov 2006)
 
