@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/opencdk
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.49 2006/10/19 15:14:57 kloeri Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.50 2007/01/04 19:58:02 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> opencdk-0.5.5.ebuild:
+  Remove gnuconfig usage.
 
   19 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> opencdk-0.5.7.ebuild:
   Stable on Alpha.
