@@ -1,6 +1,11 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.163 2007/01/03 00:31:53 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.164 2007/01/04 00:33:13 compnerd Exp $
+
+  04 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  abiword-2.4.5-r1.ebuild, abiword-2.4.6.ebuild:
+  Fix to install icon into correct directory (bug #117371), based on
+  suggestion from Chris Mayo <mayo@clara.co.uk>
 
 *abiword-2.4.6 (03 Jan 2007)
 

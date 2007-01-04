@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.4.5-r1.ebuild,v 1.1 2006/12/12 22:27:26 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.4.5-r1.ebuild,v 1.2 2007/01/04 00:33:13 compnerd Exp $
 
 inherit eutils fdo-mime alternatives
 
@@ -67,7 +67,7 @@ src_compile() {
 src_install() {
 	dodir /usr/{bin,lib}
 
-	make DESTDIR="${D}" install || die "Installation failed"
+	make DESTDIR="${D}" icondir="${ROOT}usr/share/pixmaps" install || die "Installation failed"
 
 	dosed "s:Exec=abiword:Exec=abiword-2.4:" /usr/share/applications/abiword.desktop
 
