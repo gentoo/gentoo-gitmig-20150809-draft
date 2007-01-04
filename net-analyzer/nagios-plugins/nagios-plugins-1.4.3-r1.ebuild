@@ -1,9 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.3-r1.ebuild,v 1.5 2006/11/29 21:25:16 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.3-r1.ebuild,v 1.6 2007/01/04 15:39:32 flameeyes Exp $
 
-WANT_AUTOCONF=2.58
-WANT_AUTOMAKE=1.8
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 
 inherit eutils autotools
 
@@ -58,12 +58,7 @@ src_unpack() {
 	EPATCH_OPTS="-d ${S}" epatch \
 	${FILESDIR}/nagios-plugins-1.4.3-check_disk-fix.patch
 
-	if ! use radius; then
-		eaclocal -I m4 || die "eaclocal failed"
-		eautoconf || die "eautoconf failed"
-		automake || die "automake failed"
-		libtoolize --copy --force || die "libtoolize failed"
-	fi
+	AT_M4DIR="m4" eautoreconf
 }
 
 src_compile() {

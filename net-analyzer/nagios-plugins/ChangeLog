@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-plugins
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.55 2006/11/29 21:25:16 cedk Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.56 2007/01/04 15:39:32 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  nagios-plugins-1.4.3-r1.ebuild:
+  Fix broken autotools handling.
 
   29 Nov 2006; Cedric Krier <cedk@gentoo.org> nagios-plugins-1.4.2.ebuild,
   nagios-plugins-1.4.2-r1.ebuild, nagios-plugins-1.4.3-r1.ebuild:
