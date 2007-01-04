@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.5-r1.ebuild,v 1.2 2007/01/04 17:53:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.6.ebuild,v 1.1 2007/01/04 17:53:37 wolf31o2 Exp $
 
 inherit bash-completion eutils
 
@@ -9,6 +9,7 @@ VERSION_DMRAID='1.0.0.rc13'
 VERSION_E2FSPROGS='1.38'
 VERSION_LVM2='2.02.05'
 VERSION_PKG='3.4'
+VERSION_SUSPEND='0.5'
 VERSION_UNIONFS='1.4'
 
 DESCRIPTION="Gentoo autokernel script"
@@ -19,21 +20,25 @@ SRC_URI="http://dev.gentoo.org/~wolf31o2/sources/genkernel/${P}.tar.bz2
 	ftp://sources.redhat.com/pub/lvm2/old/LVM2.${VERSION_LVM2}.tgz
 	ftp://sources.redhat.com/pub/dm/old/device-mapper.${VERSION_DMAP}.tgz
 	ftp://ftp.fsl.cs.sunysb.edu/pub/unionfs/unionfs-${VERSION_UNIONFS}.tar.gz
-	mirror://sourceforge/e2fsprogs/e2fsprogs-${VERSION_E2FSPROGS}.tar.gz"
+	mirror://sourceforge/e2fsprogs/e2fsprogs-${VERSION_E2FSPROGS}.tar.gz
+	mirror://sourceforge/suspend/suspend-${VERSION_SUSPEND}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
-IUSE="ibm"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+#KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
+IUSE="ibm selinux"
 
-DEPEND="sys-fs/e2fsprogs"
+DEPEND="sys-fs/e2fsprogs
+	selinux? ( sys-libs/libselinux )"
 RDEPEND="${DEPEND} app-arch/cpio"
 
 src_unpack() {
 	unpack ${P}.tar.bz2
 	cd "${S}"
 	unpack ${PN}-pkg-${VERSION_PKG}.tar.bz2
+	cp ${FILESDIR}/suspend-0.5-Makefile.patch pkg
+	use selinux && sed -i 's/###//g' gen_compile.sh
 }
 
 src_install() {
@@ -45,6 +50,7 @@ src_install() {
 		-e "s:VERSION_E2FSPROGS:$VERSION_E2FSPROGS:" \
 		-e "s:VERSION_LVM2:$VERSION_LVM2:" \
 		-e "s:VERSION_UNIONFS:$VERSION_UNIONFS:" \
+		-e "s:VERSION_SUSPEND:$VERSION_SUSPEND:" \
 		${D}/etc/genkernel.conf || die "Could not adjust versions"
 
 	dodir /usr/share/genkernel
@@ -66,6 +72,7 @@ src_install() {
 	"${DISTDIR}"/device-mapper.${VERSION_DMAP}.tgz \
 	"${DISTDIR}"/unionfs-${VERSION_UNIONFS}.tar.gz \
 	"${DISTDIR}"/e2fsprogs-${VERSION_E2FSPROGS}.tar.gz \
+	"${DISTDIR}"/suspend-${VERSION_SUSPEND}.tar.gz \
 	${D}/usr/share/genkernel/pkg
 
 	dobashcompletion ${FILESDIR}/genkernel.bash

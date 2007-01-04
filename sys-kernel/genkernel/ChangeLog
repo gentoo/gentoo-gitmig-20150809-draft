@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/genkernel
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.158 2006/11/22 17:33:51 agriffis Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.159 2007/01/04 17:53:37 wolf31o2 Exp $
+
+*genkernel-3.4.6 (04 Jan 2007)
+
+  04 Jan 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/suspend-0.5-Makefile.patch, -genkernel-3.4.1.ebuild,
+  -genkernel-3.4.4.ebuild, -genkernel-3.4.5.ebuild,
+  genkernel-3.4.5-r1.ebuild, +genkernel-3.4.6.ebuild:
+  Removed older versions. Marked 3.4.5-r1 stable. Added 3.4.6 which fixes the
+  following bugs: #146466, #146714, #149020, #156410, #156445, #156611,
+  #156640, #157538, #157777, #158017, #158135, #158776. I am planning on using
+  3.4.6 or higher for 2007.0, so it is on the fast track to stable.
 
 *genkernel-3.4.5-r1 (22 Nov 2006)
 
