@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.0.1-r2.ebuild,v 1.13 2006/07/17 02:49:10 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.0.1-r2.ebuild,v 1.14 2007/01/04 18:17:10 flameeyes Exp $
 
-inherit flag-o-matic eutils toolchain-funcs
+WANT_AUTOMAKE="1.9"
+WANT_AUTOCONF="latest"
+
+inherit flag-o-matic eutils toolchain-funcs autotools
 
 DESCRIPTION="C subroutine library for computing the Discrete Fourier Transform (DFT)"
 HOMEPAGE="http://www.fftw.org/"
@@ -28,8 +31,8 @@ src_unpack() {
 		-i ${infofile} || die "failed to fix info files"
 	done
 
-	autoreconf
-	libtoolize --copy --force
+	eautoreconf
+
 	cd "${WORKDIR}"
 	use ppc-macos && epatch ${FILESDIR}/${PN}-ppc-macos.patch
 	mv ${P} ${P}-single

@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r2.ebuild,v 1.1 2006/11/03 14:59:37 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r2.ebuild,v 1.2 2007/01/04 18:17:10 flameeyes Exp $
 
-inherit flag-o-matic multilib libtool
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit flag-o-matic multilib libtool autotools
 
 IUSE="mpi"
 
@@ -42,12 +45,13 @@ src_unpack() {
 	#since some sed'ing is done during the build (?if --enable-type-prefix is set?)
 
 	unpack "${P}.tar.gz"
-	cd "${WORKDIR}"
-	mv ${P} ${P}-single
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-as-needed.patch"
+	eautoreconf
 
-	unpack "${P}.tar.gz"
 	cd "${WORKDIR}"
-	mv ${P} ${P}-double
+	cp -R ${P} ${P}-double
+	mv ${P} ${P}-single
 }
 
 
@@ -65,8 +69,6 @@ src_compile() {
 	#it might be needed if it is decided that lam is an optional dependence
 
 	cd "${S}-single"
-	epatch "${FILESDIR}/${P}-as-needed.patch"
-	libtoolize --copy --force
 	econf \
 		--enable-shared \
 		--enable-threads \
@@ -78,8 +80,6 @@ src_compile() {
 
 	#the only difference here is no --enable-float
 	cd "${S}-double"
-	epatch "${FILESDIR}/${P}-as-needed.patch"
-	libtoolize --copy --force
 	econf \
 		--enable-shared \
 		--enable-threads \
@@ -103,7 +103,7 @@ src_install () {
 	for infofile in doc/fftw*info*; do
 		echo "INFO-DIR-SECTION Libraries" >>${infofile}
 		echo "START-INFO-DIR-ENTRY" >>${infofile}
-		echo "* fftw: (fftw).                  C subroutine library for computing the Discrete Fourier Transform (DFT)" >>${infofile}
+		echo "* fftw: (fftw).				   C subroutine library for computing the Discrete Fourier Transform (DFT)" >>${infofile}
 		echo "END-INFO-DIR-ENTRY" >>${infofile}
 	done
 	make DESTDIR=${D} install || die
