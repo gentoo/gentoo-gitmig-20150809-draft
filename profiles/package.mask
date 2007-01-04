@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6541 2007/01/03 23:47:26 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6542 2007/01/04 14:13:56 beandog Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -29,10 +29,6 @@ net-misc/tulip-devel
 # masking media-radio/ax25-tools for treecleaners, bug(s) 97275
 # Pending removal Feb 2nd
 media-radio/ax25-tools
-
-# Charlie Shepherd <masterdriverz@gentoo.org> (02 Jan 2006)
-# Mask pending removal 2nd Feb; bug 159738. Already in latest stable samba
-net-misc/smbget
 
 # Ryan Hill <dirtyepic@gentoo.org> (02 Jan 2006)
 # Mask for testing with Seamonkey / FF 2.0
