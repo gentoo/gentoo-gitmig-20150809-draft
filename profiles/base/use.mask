@@ -3,6 +3,7 @@ selinux
 uclibc
 
 # amd64/x86 arch specific USE flags
+kqemu
 3dnow
 3dnowext
 icc

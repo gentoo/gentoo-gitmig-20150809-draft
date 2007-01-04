@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/use.mask,v 1.27 2007/01/04 21:55:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/use.mask,v 1.28 2007/01/04 23:50:58 lu_zero Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -9,9 +9,6 @@
 
 # amd64 only:
 emul-linux-x86
-
-# x86 only
-kqemu
 
 # Only used by mips and old amd64 profiles
 multilib

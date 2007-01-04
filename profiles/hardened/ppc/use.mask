@@ -13,7 +13,6 @@ hdf
 i8x0
 interbase
 ip28
-kqemu
 lm_sensors
 mbrola
 nvtv
