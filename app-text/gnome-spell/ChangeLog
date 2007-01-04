@@ -1,6 +1,16 @@
 # ChangeLog for app-text/gnome-spell
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.79 2007/01/04 14:27:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.80 2007/01/04 20:21:22 compnerd Exp $
+
+  04 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  -files/gnome-spell-1.0.5-enchant.patch,
+  -files/gnome-spell-1.0.5-gtk24.patch,
+  -files/gnome-spell-1.0.6-combo.patch,
+  -files/gnome-spell-1.0.6-enchant.patch,
+  -files/gnome-spell-1.0.7-debug.patch,
+  -files/gnome-spell-1.0.7-enchant.patch, -gnome-spell-1.0.5-r2.ebuild,
+  -gnome-spell-1.0.6.ebuild, -gnome-spell-1.0.7.ebuild:
+  prune unneeded files
 
   04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   gnome-spell-1.0.7-r1.ebuild:
