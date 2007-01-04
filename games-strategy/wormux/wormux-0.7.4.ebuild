@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/wormux-0.7.4.ebuild,v 1.2 2006/11/02 04:44:19 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/wormux-0.7.4.ebuild,v 1.3 2007/01/04 23:46:48 nyhm Exp $
 
-inherit eutils debug games
+inherit eutils games
 
 DESCRIPTION="A free Worms clone"
 HOMEPAGE="http://www.wormux.org/"
