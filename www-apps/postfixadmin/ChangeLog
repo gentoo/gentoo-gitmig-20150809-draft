@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/postfixadmin
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/ChangeLog,v 1.4 2006/11/23 21:55:10 blubb Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/ChangeLog,v 1.5 2007/01/04 10:25:55 wrobel Exp $
+
+  04 Jan 2007; <wrobel@gentoo.org> postfixadmin-2.1.0.ebuild:
+  Fixed source URL and removed mysql dependency (bugs #157940 and #159781)
 
   23 Nov 2006; <blubb@gentoo.org> postfixadmin-2.1.0.ebuild:
   added ~amd64
