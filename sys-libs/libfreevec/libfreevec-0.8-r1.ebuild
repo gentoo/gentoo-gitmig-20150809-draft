@@ -1,8 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libfreevec/libfreevec-0.8-r1.ebuild,v 1.1 2005/10/05 22:59:45 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libfreevec/libfreevec-0.8-r1.ebuild,v 1.2 2007/01/04 18:32:03 flameeyes Exp $
 
-inherit flag-o-matic
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
+
+inherit flag-o-matic autotools
 
 DESCRIPTION="Altivec enabled libc memory function"
 HOMEPAGE="http://freevec.org"
@@ -21,8 +24,8 @@ DEPEND=">=sys-devel/gcc-3.4
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	libtoolize --copy --force
-	autoreconf
+	eautoreconf
+
 	# Remove those 2 functions for now
 	sed -i -e "s:HAVE_ALTIVEC_H:NOT_BUILD:" ${S}/src/{strcpy.c,memmove.c}
 	# fix uint/int mismatch
