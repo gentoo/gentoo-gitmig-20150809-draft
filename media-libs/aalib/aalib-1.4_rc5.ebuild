@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc5.ebuild,v 1.13 2006/10/20 21:37:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc5.ebuild,v 1.14 2007/01/04 23:21:46 drizzt Exp $
 
-inherit eutils libtool toolchain-funcs
+WANT_AUTOCONF=latest
+WANT_AUTOMAKE=latest
+
+inherit eutils libtool toolchain-funcs autotools
 
 MY_P="${P/_/}"
 S="${WORKDIR}/${PN}-1.4.0"
@@ -31,7 +34,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-1.4_rc4-m4.patch
 
 	sed -i -e 's:#include <malloc.h>:#include <stdlib.h>:g' ${S}/src/*.c
-	elibtoolize
+	eautoreconf
 }
 
 src_compile() {
