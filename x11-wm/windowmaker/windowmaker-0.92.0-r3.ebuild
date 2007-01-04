@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r3.ebuild,v 1.13 2006/12/27 03:55:09 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r3.ebuild,v 1.14 2007/01/04 19:12:31 flameeyes Exp $
 
 inherit eutils gnustep-funcs flag-o-matic multilib
 
@@ -82,10 +82,6 @@ src_compile() {
 		--with-pixmapdir=/usr/share/pixmaps \
 		${myconf} || die
 
-#	# call here needed as some users report breakage with one of the above
-#	#  patches (though patched after autoreconf)
-#	libtoolize --copy --force
-
 #	# don't know if zh_TW is still non-functional, but leaving it out still
 #	#  for now
 #	cd ${S}/po
@@ -149,7 +145,7 @@ src_install() {
 	emake install DESTDIR=${D} || die "windowmaker: install has failed."
 
 	dodoc AUTHORS BUGFORM BUGS ChangeLog COPYING* INSTALL* FAQ* \
-	      MIRRORS README* NEWS TODO
+		  MIRRORS README* NEWS TODO
 
 	# WindowMaker Extra
 	cd ../WindowMaker-extra-0.1
