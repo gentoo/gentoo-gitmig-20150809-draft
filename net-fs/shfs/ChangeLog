@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/shfs
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.37 2006/11/25 19:00:00 kloeri Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.38 2007/01/04 05:14:18 compnerd Exp $
+
+  04 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org> shfs-0.35-r3.ebuild:
+  Require a kernel <2.6.19 for the last stable version
 
   25 Nov 2006; Bryan Østergaard <kloeri@gentoo.org> shfs-0.35-r3.ebuild:
   Stable on Alpha, bug 133613.

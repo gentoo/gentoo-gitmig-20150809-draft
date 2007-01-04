@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/shfs-0.35-r3.ebuild,v 1.7 2006/11/25 19:00:00 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/shfs-0.35-r3.ebuild,v 1.8 2007/01/04 05:14:18 compnerd Exp $
 
 inherit linux-mod eutils
 
@@ -16,7 +16,7 @@ IUSE="X amd doc"
 RDEPEND="virtual/modutils
 		net-misc/openssh
 		amd? ( net-fs/am-utils )"
-DEPEND="virtual/linux-sources
+DEPEND="<virtual/linux-sources-2.6.19
 		sys-apps/sed
 		${RDEPEND}"
 PDEPEND="X? ( net-misc/x11-ssh-askpass )"
