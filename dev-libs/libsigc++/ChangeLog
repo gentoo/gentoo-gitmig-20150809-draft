@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libsigc++
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.98 2006/11/10 15:17:29 nixnut Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.99 2007/01/04 13:02:32 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> libsigc++-1.2.5.ebuild:
+  Fix autotools handling (pretty broken before). Patch mostly by Jakub Moc in
+  bug #150777.
 
   10 Nov 2006; nixnut <nixnut@gentoo.org> libsigc++-1.0.4-r3.ebuild:
   Stable on ppc wrt bug 138112
