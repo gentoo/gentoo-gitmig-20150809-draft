@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/meanwhile-0.3-r3.ebuild,v 1.3 2005/05/01 18:11:13 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/meanwhile-0.3-r3.ebuild,v 1.4 2007/01/04 22:48:55 flameeyes Exp $
 
-inherit flag-o-matic eutils debug
+inherit flag-o-matic eutils
 
 DESCRIPTION="Meanwhile (Sametime protocol) library"
 HOMEPAGE="http://meanwhile.sourceforge.net/"
