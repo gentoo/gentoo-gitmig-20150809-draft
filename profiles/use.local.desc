@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2472 2007/01/03 17:15:36 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2473 2007/01/04 19:34:01 alonbl Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -416,6 +416,7 @@ dev-libs/cyrus-sasl:srp - Enables SRP in cyrus-sasl
 dev-libs/cyrus-sasl:urandom - Use /dev/urandom instead of /dev/random
 dev-libs/fcgi:html - Adds HTML documentation.
 dev-libs/klibc:n32 - Force klibc to 32bit if on mips64 if not n32 userland.
+dev-libs/libgcrypt:idea - Use the patented IDEA algorithm
 dev-libs/libjit:interpreter - Enable the libjit interpreter
 dev-libs/libjit:long-double - Enable the use of long double for jit_nfloat
 dev-libs/libjit:new-reg-alloc - Enable new register allocator
