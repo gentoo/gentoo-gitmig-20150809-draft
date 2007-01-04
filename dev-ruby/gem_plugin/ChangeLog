@@ -1,0 +1,11 @@
+# ChangeLog for dev-ruby/gem_plugin
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gem_plugin/ChangeLog,v 1.1 2007/01/04 13:35:15 pclouds Exp $
+
+*gem_plugin-0.2.2 (04 Jan 2007)
+
+  04 Jan 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org> +metadata.xml,
+  +gem_plugin-0.2.2.ebuild:
+  Initial ebuild by Armando Di Cianno <armando@goodship.net> and Christopher
+  Covington <covracer@gmail.com>, #142805
+
