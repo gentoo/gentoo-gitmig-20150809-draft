@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/otcl
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/ChangeLog,v 1.24 2006/08/06 16:39:44 weeve Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/ChangeLog,v 1.25 2007/01/04 14:47:26 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> otcl-1.11.ebuild:
+  Fix broken autotools handling.
 
   06 Aug 2006; Jason Wever <weeve@gentoo.org> otcl-1.11.ebuild:
   Stable on SPARC wrt bug #123209.

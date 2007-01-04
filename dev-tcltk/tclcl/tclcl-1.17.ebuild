@@ -1,6 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclcl/tclcl-1.17.ebuild,v 1.1 2006/05/15 17:13:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclcl/tclcl-1.17.ebuild,v 1.2 2007/01/04 14:49:02 flameeyes Exp $
+
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
 
 inherit eutils autotools
 
@@ -22,10 +25,8 @@ src_unpack() {
 	unpack ${A}
 	EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${PN}-1.16-http.patch
 	EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${PN}-1.17-configure-cleanup.patch
-	cd ${S}
-	eautoconf
-	elibtoolize
-	libtoolize -f
+	cd "${S}"
+	eautoreconf
 }
 
 src_compile() {

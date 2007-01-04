@@ -1,6 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/otcl-1.11.ebuild,v 1.4 2006/08/06 16:39:44 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/otcl-1.11.ebuild,v 1.5 2007/01/04 14:47:26 flameeyes Exp $
+
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
 
 inherit eutils autotools virtualx
 
@@ -25,10 +28,8 @@ src_unpack() {
 	EPATCH_OPTS="-p1 -d${S}" epatch ${FILESDIR}/otcl-1.11-badfreefix.patch
 	EPATCH_OPTS="-p1 -d${S}" epatch ${FILESDIR}/otcl-1.11-configure-cleanup.patch
 
-	cd ${S}
-	eautoconf
-	elibtoolize
-	libtoolize -f
+	cd "${S}"
+	eautoreconf
 }
 
 src_compile() {
@@ -41,7 +42,7 @@ src_compile() {
 	echo myconf $myconf
 	econf ${myconf} || die "econf failed"
 	emake all || die "emake all failed"
-	emake libotcl.so || die  "emake libotcl.so failed"
+	emake libotcl.so || die	 "emake libotcl.so failed"
 }
 
 src_install() {
