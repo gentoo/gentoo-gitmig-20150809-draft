@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.44.ebuild,v 1.7 2006/09/07 14:31:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.44.ebuild,v 1.8 2007/01/04 15:05:18 flameeyes Exp $
 
-inherit gnome2 eutils
+WANT_AUTOMAKE="1.9"
+WANT_AUTOCONF="latest"
+
+inherit gnome2 eutils autotools
 
 DESCRIPTION="A SVG based generic vector-drawing program"
 HOMEPAGE="http://www.inkscape.org/"
@@ -36,7 +39,7 @@ RDEPEND=">=x11-libs/gtk+-2.4.1
 	lcms? ( >=media-libs/lcms-1.14 )
 	boost? ( dev-libs/boost )
 	plugin? ( >=media-gfx/pstoedit-3.33
-	          >=media-gfx/skencil-0.6.16
+			  >=media-gfx/skencil-0.6.16
 		  media-libs/libwmf
 		  app-office/dia )
 	spell? ( app-text/gtkspell )"
@@ -62,8 +65,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/inkscape-gcc42.diff
 
-	autoconf || die
-	libtoolize --copy --force || die
+	eautoreconf
 }
 
 DOCS="AUTHORS COPYING ChangeLog HACKING NEWS README"
