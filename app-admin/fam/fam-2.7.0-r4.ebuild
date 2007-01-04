@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r4.ebuild,v 1.14 2006/03/05 03:51:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r4.ebuild,v 1.15 2007/01/04 13:48:37 flameeyes Exp $
 
-inherit libtool eutils gnuconfig
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit libtool eutils autotools
 
 DESCRIPTION="FAM, the File Alteration Monitor"
 HOMEPAGE="http://oss.sgi.com/projects/fam/"
@@ -21,29 +24,21 @@ PROVIDE="virtual/fam"
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 
 	# large file patch #76679
-	epatch ${FILESDIR}/${P}-largefiles.patch
+	epatch "${FILESDIR}/${P}-largefiles.patch"
 
 	# dnotify patch #43027
-	epatch ${DISTDIR}/${P}-dnotify.patch
+	epatch "${DISTDIR}/${P}-dnotify.patch"
 
 	# Use limits correctly -#89478
 	epatch "${FILESDIR}/${P}-limits.patch"
 
 	# Fix gcc 4.1 problems
-	epatch ${FILESDIR}/${P}-gcc41.patch
+	epatch "${FILESDIR}/${P}-gcc41.patch"
 
-	# Fix permission problems with user* in FEATURES (#35307)
-	chmod u+w ${S}/configure
-
-	gnuconfig_update
-	libtoolize --copy --force
-
-	# Please do not remove this again - fixes $S and $D in libtool linker
-	# scripts (.la files)
-	elibtoolize
+	eautoreconf
 }
 
 src_install() {
@@ -53,7 +48,7 @@ src_install() {
 	dosed "s:local_only = false:local_only = true:g" /etc/fam.conf
 
 	exeinto /etc/init.d
-	doexe ${FILESDIR}/famd
+	doexe "${FILESDIR}/famd"
 
 	dodoc AUTHORS ChangeLog INSTALL NEWS TODO README
 
@@ -61,7 +56,7 @@ src_install() {
 
 pkg_postinst() {
 
-	einfo "To enable fam on  boot you will have to add it to the"
+	einfo "To enable fam on	 boot you will have to add it to the"
 	einfo "default profile, issue the following command as root to do so."
 	echo
 	einfo "rc-update add famd default"
