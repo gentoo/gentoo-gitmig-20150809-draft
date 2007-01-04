@@ -1,6 +1,9 @@
 # ChangeLog for app-office/texmaker
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.23 2006/10/09 00:17:22 jokey Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.24 2007/01/04 15:22:24 troll Exp $
+
+  04 Jan 2007; Przemysław Maciąg <troll@gentoo.org> texmaker-1.40.ebuild:
+  Fixed PREFIX use in cpp files (see #159400).
 
 *texmaker-1.40 (09 Oct 2006)
 
