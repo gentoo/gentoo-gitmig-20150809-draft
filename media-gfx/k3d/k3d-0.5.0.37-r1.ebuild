@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.5.0.37-r1.ebuild,v 1.3 2006/07/05 07:52:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.5.0.37-r1.ebuild,v 1.4 2007/01/04 23:07:18 beandog Exp $
 
 inherit eutils
 
 DESCRIPTION="A free 3D modeling, animation, and rendering system"
-HOMEPAGE="http://k3d.sourceforge.net/"
+HOMEPAGE="http://www.k-3d.org/"
 SRC_URI="mirror://sourceforge/k3d/${P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -21,6 +21,7 @@ DEPEND="virtual/opengl
 	!xml? ( dev-libs/expat )
 	truetype? ( >=media-libs/freetype-2 )
 	gnome? ( gnome-base/libgnome )
+	graphviz? ( media-gfx/graphviz )
 	imagemagick? ( media-gfx/imagemagick )
 	jpeg? ( media-libs/jpeg )
 	dev-cpp/glibmm
