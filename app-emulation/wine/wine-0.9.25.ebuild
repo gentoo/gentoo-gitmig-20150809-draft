@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.25.ebuild,v 1.2 2007/01/04 22:18:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.25.ebuild,v 1.3 2007/01/04 22:23:16 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/wine-${PV}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE="alsa arts cups dbus debug esd gif glut hal jack jpeg lcms ldap nas ncurses opengl oss scanner xml X"
+IUSE="alsa arts cups dbus esd gif glut hal jack jpeg lcms ldap nas ncurses opengl oss scanner xml X"
 RESTRICT="test" #72375
 
 RDEPEND=">=media-libs/freetype-2.0.0
@@ -105,8 +105,6 @@ src_compile() {
 		$(use_with ncurses curses) \
 		$(use_with opengl) \
 		$(use_with X x) \
-		$(use_enable debug trace) \
-		$(use_enable debug) \
 		|| die "configure failed"
 
 	emake -j1 depend || die "depend"
