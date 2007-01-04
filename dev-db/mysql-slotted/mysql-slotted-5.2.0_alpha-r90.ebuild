@@ -1,10 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-slotted/mysql-slotted-5.2.0_alpha-r90.ebuild,v 1.1 2007/01/04 10:48:29 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-slotted/mysql-slotted-5.2.0_alpha-r90.ebuild,v 1.2 2007/01/04 20:53:15 vivo Exp $
 
-# Leave this empty
-MYSQL_VERSION_ID=""
-MYSQL_RERELEASE=""
+MY_EXTRAS_VER="latest"
 SERVER_URI=""
 PBXT_VERSION="0.9.73-beta"
 
