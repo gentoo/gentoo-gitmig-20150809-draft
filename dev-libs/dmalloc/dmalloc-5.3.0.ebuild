@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-5.3.0.ebuild,v 1.9 2005/01/21 16:48:29 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-5.3.0.ebuild,v 1.10 2007/01/04 22:39:11 flameeyes Exp $
 
-inherit debug eutils
+inherit eutils
 
 DESCRIPTION="A Debug Malloc Library"
 HOMEPAGE="http://dmalloc.com/"
