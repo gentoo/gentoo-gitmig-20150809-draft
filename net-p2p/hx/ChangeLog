@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/hx
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/hx/ChangeLog,v 1.5 2006/10/29 13:04:40 kang Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/hx/ChangeLog,v 1.6 2007/01/04 16:53:45 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> hx-0.4.11.ebuild:
+  Fix broken autotools handling.
 
   29 Oct 2006; Guillaume Destuynder <kang@gentoo.org> hx-0.4.11.ebuild:
   Marked stable for x86

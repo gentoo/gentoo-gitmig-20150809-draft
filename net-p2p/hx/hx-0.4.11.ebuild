@@ -1,6 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/hx/hx-0.4.11.ebuild,v 1.2 2006/10/29 13:04:40 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/hx/hx-0.4.11.ebuild,v 1.3 2007/01/04 16:53:45 flameeyes Exp $
+
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit autotools
 
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc ~sparc"
@@ -18,9 +23,16 @@ DEPEND="virtual/libc
 
 SLOT="0"
 
+S="${WORKDIR}/${MY_P}"
+
+src_unpack() {
+	unpack ${A}
+
+	cd "${S}"
+	eautoreconf
+}
+
 src_compile() {
-	cd work/${MY_P}
-	libtoolize --copy --force
 	econf \
 	`use_enable ssl idea` \
 	`use_enable ssl cipher` \
@@ -32,7 +44,6 @@ src_compile() {
 }
 
 src_install() {
-	cd ${PF}/work/${MY_P}
 	dodoc AUTHORS INSTALL PROBLEMS README* ChangeLog TODO NEWS run/hx/ghxvars run/hx/ghxvars.jp \
 	run/hx/hxrc run/hx/hxvars
 

@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.0d-r1.ebuild,v 1.4 2006/11/23 17:30:57 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.0d-r1.ebuild,v 1.5 2007/01/04 16:48:57 flameeyes Exp $
 
-inherit eutils libtool
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit eutils autotools
 
 S="${WORKDIR}/GNUnet-${PV}"
 DESCRIPTION="GNUnet is an anonymous, distributed, reputation based network."
@@ -49,18 +52,18 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-nulludp.patch
 
-	# make mysql default sqstore if we do not compile sql support 
+	# make mysql default sqstore if we do not compile sql support
 	# (bug #107330)
 	! use sqlite && \
 		sed -i 's:default "sqstore_sqlite":default "sqstore_mysql":' \
 		contrib/config-daemon.in
 
-	# we do not want to built gtk support with USE=-gtk	
+	# we do not want to built gtk support with USE=-gtk
 	if ! use gtk ; then
 		sed -i "s:AC_DEFINE_UNQUOTED..HAVE_GTK.*:true:" configure.ac
-		autoconf || die "autoconf failed"
-		libtoolize --copy --force
 	fi
+
+	AT_M4DIR="${S}/m4" eautoreconf
 }
 
 src_compile() {
@@ -107,10 +110,10 @@ pkg_postinst() {
 	use ipv6 && ewarn "ipv6 support is -very- experimental and prone to bugs"
 	einfo
 	einfo "To configure"
-	einfo "  1) Add user(s) to the gnunet group"
-	einfo "  2) Run 'gnunet-setup' to generate your client config file"
-	einfo "  3) Run gnunet-setup -d to generate a server config file"
-	einfo "  4) Optionally copy the .gnunet/gnunetd.conf into /etc and"
+	einfo "	 1) Add user(s) to the gnunet group"
+	einfo "	 2) Run 'gnunet-setup' to generate your client config file"
+	einfo "	 3) Run gnunet-setup -d to generate a server config file"
+	einfo "	 4) Optionally copy the .gnunet/gnunetd.conf into /etc and"
 	einfo "\tuse as a global server config file:"
 	einfo "$ gnunet-setup -d"
 	einfo "# cp ~/.gnunet/gnunetd.conf /etc/"
