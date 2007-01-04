@@ -1,0 +1,12 @@
+diff -Naur qalculate-gtk-0.9.5-old/src/main.cc qalculate-gtk-0.9.5/src/main.cc
+--- qalculate-gtk-0.9.5-old/src/main.cc	2006-11-05 04:27:49.000000000 -0500
++++ qalculate-gtk-0.9.5/src/main.cc	2007-01-04 15:09:03.000000000 -0500
+@@ -96,7 +96,7 @@
+ 
+ #else
+ 
+-	gtk_window_set_default_icon_from_file(PACKAGE_DATA_DIR "/pixmaps/qalculate.png", NULL);
++	/*gtk_window_set_default_icon_from_file(PACKAGE_DATA_DIR "/pixmaps/qalculate.png", NULL); */
+ 
+ 	gtk_init(&argc, &argv);
+ 
