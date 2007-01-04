@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cancd/cancd-0.1.0-r1.ebuild,v 1.2 2006/03/18 01:27:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cancd/cancd-0.1.0-r1.ebuild,v 1.3 2007/01/04 21:31:45 beandog Exp $
 
 inherit eutils
 
@@ -12,8 +12,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-DEPEND="virtual/libc"
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}

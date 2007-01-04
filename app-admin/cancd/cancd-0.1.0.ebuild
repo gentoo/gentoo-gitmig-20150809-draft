@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cancd/cancd-0.1.0.ebuild,v 1.1 2005/11/14 21:15:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cancd/cancd-0.1.0.ebuild,v 1.2 2007/01/04 21:31:45 beandog Exp $
 
 DESCRIPTION="This is the CA NetConsole Daemon, a daemon to receive output from
 the Linux netconsole driver."
@@ -10,8 +10,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-DEPEND="virtual/libc"
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/cancd
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cancd/ChangeLog,v 1.4 2006/03/18 01:27:05 robbat2 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cancd/ChangeLog,v 1.5 2007/01/04 21:31:45 beandog Exp $
+
+  04 Jan 2007; Steve Dibb <beandog@gentoo.org> cancd-0.1.0.ebuild,
+  cancd-0.1.0-r1.ebuild:
+  ebuild cleanup, bug 157656
 
   18 Mar 2006; Robin H. Johnson <robbat2@gentoo.org>
   +files/cancd-0.1.0-c-cleanup.patch, cancd-0.1.0-r1.ebuild:
