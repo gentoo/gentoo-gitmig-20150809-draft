@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX nspluginwrapper-0.9.90.4-gentoo.patch 3602 RMD160 f180da0a78c122d1f98f354eccd148b0c8a06513 SHA1 2b127bd69143fd9bb550c888f015e05846c0a290 SHA256 99015dffab1a2f8910523f127e612400e7392968f301ddc0a0a7b37b3b072305
 MD5 96c25901a5d9a25432b97742b2ed911d files/nspluginwrapper-0.9.90.4-gentoo.patch 3602
 RMD160 f180da0a78c122d1f98f354eccd148b0c8a06513 files/nspluginwrapper-0.9.90.4-gentoo.patch 3602
@@ -26,3 +29,10 @@ SHA256 77f8ec491c306d7889de155a6fd2f660036b41245d39debbf8726b0aaa33f0c8 files/di
 MD5 df5a6baa7cbca76d3cdad106ed812141 files/digest-nspluginwrapper-0.9.91.2 277
 RMD160 aee32990904f8781a7ccc3d99975e45725151813 files/digest-nspluginwrapper-0.9.91.2 277
 SHA256 48a9210d884a758d9f3e6eb06bccedd947473372763fbc8b9d348269a8b88dde files/digest-nspluginwrapper-0.9.91.2 277
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFnEkWWt/XSf2CZdkRAsLsAKCZa19ZmHPPaXQ9JUBB24O7GLHsEgCdFMt9
+yEm/6xzsnAB3LS+DfnbVbbw=
+=vsdw
+-----END PGP SIGNATURE-----
