@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.2-r1.ebuild,v 1.2 2006/12/29 23:31:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.2-r1.ebuild,v 1.3 2007/01/04 16:51:39 opfer Exp $
 
-inherit elisp eutils flag-o-matic multilib versionator
+inherit elisp-common eutils flag-o-matic multilib versionator
 
 # NOTE: When bumping you need to adjust the *_VER strings in
 #  src_install() to honour newer versions in the package (they
