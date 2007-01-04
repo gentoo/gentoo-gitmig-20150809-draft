@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/shfs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.39 2007/01/04 05:19:43 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.40 2007/01/04 05:28:14 compnerd Exp $
+
+*shfs-0.35-r4 (04 Jan 2007)
+
+  04 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  +files/0.35/shfs-0.35-inode-and-fs.patch, +shfs-0.35-r4.ebuild:
+  Revbump to unstable, add a new patch to allow compiling with kernels <2.6.19
+  (bug #157111).
 
   04 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   -shfs-0.35-r1.ebuild, -shfs-0.35-r2.ebuild:
