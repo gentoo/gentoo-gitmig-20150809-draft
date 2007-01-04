@@ -1,8 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qenv/qenv-0.1.ebuild,v 1.1 2005/12/12 20:00:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qenv/qenv-0.1.ebuild,v 1.2 2007/01/04 13:59:48 flameeyes Exp $
 
-inherit libtool eutils
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit autotools eutils
 
 DESCRIPTION="Pool of machines handler for QEMU"
 HOMEPAGE="http://virutass.net/software/qemu/"
@@ -17,20 +20,14 @@ RDEPEND=">=app-emulation/qemu-0.7.2
 		net-misc/bridge-utils
 		app-admin/sudo
 		net-dns/dnsmasq"
-DEPEND="${DEPEND}
-		sys-devel/autoconf
-		sys-devel/automake"
 
 src_unpack() {
 	unpack ${A}
 	EPATCH_OPTS="-p1 -d ${S}" \
-	epatch  ${FILESDIR}/${PN}-0.1-qemu-0.7.2.patch \
-	|| die "failed to update for qemu-0.7.2"
-	cd ${S}
-	for i in 'autoconf' 'automake' 'libtoolize --copy --force' ; do
-		einfo "Doing $i"
-		${i} || die "Failed: $i"
-	done;
+	epatch	${FILESDIR}/${PN}-0.1-qemu-0.7.2.patch
+
+	cd "${S}"
+	eautoreconf
 }
 
 src_install() {
