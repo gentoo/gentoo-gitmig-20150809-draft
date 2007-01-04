@@ -1,6 +1,14 @@
 # ChangeLog for games-arcade/smclone
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smclone/ChangeLog,v 1.13 2006/11/27 23:42:09 nyhm Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smclone/ChangeLog,v 1.14 2007/01/04 17:34:06 nyhm Exp $
+
+*smclone-0.99.4 (04 Jan 2007)
+
+  04 Jan 2007; Tristan Heaven <nyhm@gentoo.org>
+  -files/smclone-0.99.3-build.patch, -files/smclone-0.99.3-paths.patch,
+  +files/smclone-0.99.4-leveldir.patch, -smclone-0.99.3.ebuild,
+  +smclone-0.99.4.ebuild:
+  Version bump
 
   27 Nov 2006; Tristan Heaven <nyhm@gentoo.org> smclone-0.99.3.ebuild:
   Install all of the xsd files used by xerces-c

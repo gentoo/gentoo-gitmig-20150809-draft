@@ -1,0 +1,11 @@
+--- src/user/preferences.cpp
++++ src/user/preferences.cpp
+@@ -435,7 +435,7 @@
+ 		if( val.length() > 2 )
+ 		{
+ 			// todo : check if the directory exists
+-			level_dir = val;
++			level_dir = LEVEL_DIR;
+ 		}
+ 	}
+ }
