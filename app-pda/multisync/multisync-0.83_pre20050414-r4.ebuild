@@ -1,8 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.83_pre20050414-r4.ebuild,v 1.7 2006/12/02 17:54:02 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.83_pre20050414-r4.ebuild,v 1.8 2007/01/04 14:18:40 flameeyes Exp $
 
-WANT_AUTOMAKE="1.7"
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 
 inherit versionator kde-functions eutils multilib autotools
 
@@ -16,16 +17,16 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="evo irmc nokia6600 ldap bluetooth pda kdepim arts kdeenablefinal gnokii"
-# evo       - evolution plugin
-# irmc      - bluetooth/irmc/irda plugin ( local )
-# pda       - opie plugin                ( local )
-# nokia6600 - support for Nokia 6600     ( local )
-# ldap      - ldap plugin - experimental
-# kdepim    - sync with the kdepim app
-# arts      - potentially required for kdepim.
-# gnokii    - gnokii plugin
+# evo		- evolution plugin
+# irmc		- bluetooth/irmc/irda plugin ( local )
+# pda		- opie plugin				 ( local )
+# nokia6600 - support for Nokia 6600	 ( local )
+# ldap		- ldap plugin - experimental
+# kdepim	- sync with the kdepim app
+# arts		- potentially required for kdepim.
+# gnokii	- gnokii plugin
 
-DEPEND=">=gnome-base/libbonobo-2.2
+RDEPEND=">=gnome-base/libbonobo-2.2
 		>=gnome-base/libgnomeui-2.2
 		>=gnome-base/libgnome-2.2
 		>=dev-libs/glib-2
@@ -36,8 +37,8 @@ DEPEND=">=gnome-base/libbonobo-2.2
 		evo?  ( mail-client/evolution )
 		irmc? ( >=net-wireless/irda-utils-0.9.15
 				>=dev-libs/openobex-1
-				bluetooth? ( 	>=net-wireless/bluez-libs-2.7
-				         		>=net-wireless/bluez-utils-2.7 ) )
+				bluetooth? (	>=net-wireless/bluez-libs-2.7
+								>=net-wireless/bluez-utils-2.7 ) )
 		pda? ( >=net-misc/curl-7.10.5
 				app-pda/pilot-link )
 		kdepim? ( || ( kde-base/kaddressbook kde-base/kdepim )
@@ -46,6 +47,9 @@ DEPEND=">=gnome-base/libbonobo-2.2
 				>=dev-libs/cyrus-sasl-2.1.4 )
 		gnokii? ( app-mobilephone/gnokii dev-libs/libvformat )
 		nokia6600? ( >=dev-libs/libwbxml-0.9.0 )"
+
+DEPEND="${RDEPEND}
+	sys-devel/gettext"
 
 S="${WORKDIR}/${PN}"
 
@@ -63,12 +67,12 @@ make_plugin_list() {
 		# find major
 		evoversion=$(get_major_version ${evoversion})
 
-		[[ ${evoversion} -eq 2 ]] 	&& PLUGINS="${PLUGINS} evolution2_sync"
-		[[ ${evoversion} -eq 1 ]] 	&& PLUGINS="${PLUGINS} evolution_sync"
+		[[ ${evoversion} -eq 2 ]]	&& PLUGINS="${PLUGINS} evolution2_sync"
+		[[ ${evoversion} -eq 1 ]]	&& PLUGINS="${PLUGINS} evolution_sync"
 	fi
-	use irmc 	&& PLUGINS="${PLUGINS} irmc_sync"
-	use pda 	&& PLUGINS="${PLUGINS} opie_sync palm_sync"
-	use ldap 	&& PLUGINS="${PLUGINS} ldap_plugin"
+	use irmc	&& PLUGINS="${PLUGINS} irmc_sync"
+	use pda		&& PLUGINS="${PLUGINS} opie_sync palm_sync"
+	use ldap	&& PLUGINS="${PLUGINS} ldap_plugin"
 	use kdepim	&& PLUGINS="${PLUGINS} kdepim_plugin"
 	use gnokii	&& PLUGINS="${PLUGINS} gnokii_sync"
 }
@@ -78,14 +82,13 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${PN}-gcc4.patch"
 	epatch "${FILESDIR}/${P}-evo2.patch"
+
+	cd "${S}"
+	cp /usr/share/gettext/config.rpath "${S}"
+	AT_M4DIR="plugins/opie_sync/macros" eautoreconf
 }
 
 run_compile() {
-	aclocal || die "failed aclocal"
-	libtoolize --copy --force || die "libtoolize failed!"
-	autoheader || die "Failed during autoheader!"
-	automake --add-missing --gnu || die "Failed during automake!"
-	autoconf || die "Failed during autoconf!"
 	econf CPPFLAGS="${myInc} ${CPPFLAGS}" ${myConf} || die "Failed during econf!"
 	make || die "Failed during make!"
 }
@@ -95,7 +98,7 @@ src_compile() {
 
 	einfo "Building Multisync with these plugins:"
 	for plugin_dir in ${PLUGINS}; do
-		einfo "      ${plugin_dir}"
+		einfo "		 ${plugin_dir}"
 	done
 
 	cd "${S}"
