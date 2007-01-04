@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-submenu/vdr-submenu-0.0.2.ebuild,v 1.2 2006/06/15 13:56:11 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-submenu/vdr-submenu-0.0.2.ebuild,v 1.3 2007/01/04 11:32:41 zzam Exp $
 
 inherit vdr-plugin
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.freewebs.com/sadhome"
 SRC_URI="http://www.freewebs.com/sadhome/Plugin/Submenu/${P}.tar.gz"
 LICENSE="GPL-2"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 DEPEND=">=media-video/vdr-1.3.20"
 
