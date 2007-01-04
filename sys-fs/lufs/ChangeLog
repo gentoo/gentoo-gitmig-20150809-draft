@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lufs
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/ChangeLog,v 1.25 2006/06/29 07:57:42 genstef Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/ChangeLog,v 1.26 2007/01/04 18:25:13 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> lufs-0.9.7-r3.ebuild:
+  Fix broken autotools handling.
 
   29 Jun 2006; Stefan Schweizer <genstef@gentoo.org> lufs-0.9.7-r3.ebuild:
   remove version from auto[conf,make} depend, thanks to Mike Auty

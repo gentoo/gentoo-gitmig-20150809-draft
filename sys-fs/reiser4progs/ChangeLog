@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/reiser4progs
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/ChangeLog,v 1.26 2005/09/03 21:07:06 corsair Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/ChangeLog,v 1.27 2007/01/04 18:27:03 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  reiser4progs-1.0.5.ebuild:
+  Fix broken autotools handling.
 
   03 Sep 2005; Markus Rothe <corsair@gentoo.org>
   reiser4progs-1.0.4_p1.ebuild:

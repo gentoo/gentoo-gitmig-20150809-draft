@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.5.ebuild,v 1.5 2006/08/20 21:23:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.5.ebuild,v 1.6 2007/01/04 18:27:03 flameeyes Exp $
 
-inherit toolchain-funcs
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
+
+inherit toolchain-funcs autotools
 
 MY_P=${PN}-${PV/_p/-}
 DESCRIPTION="reiser4progs: mkfs, fsck, etc..."
@@ -22,8 +25,9 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	# bundled libtool sucks, so rebuild autotools #74817
-	aclocal && libtoolize -c -f && autoconf && automake || die "autotools failed"
+
+	eautoreconf
+
 	cat <<-EOF > run-ldconfig
 		#!/bin/sh
 		true

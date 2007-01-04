@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r3.ebuild,v 1.8 2006/06/29 07:56:43 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r3.ebuild,v 1.9 2007/01/04 18:25:13 flameeyes Exp $
 
-inherit eutils
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
+
+inherit eutils autotools
 
 DESCRIPTION="User-mode filesystem implementation"
 HOMEPAGE="http://lufs.sourceforge.net/lufs/"
@@ -27,16 +30,11 @@ src_unpack() {
 
 	filesystems="ftpfs localfs sshfs"
 	useq amd64 && filesystems="ftpfs localfs"
+
+	eautoreconf
 }
 
 src_compile() {
-	local WANT_AUTOMAKE="1.7" WANT_AUTOCONF="2.5"
-	aclocal
-	automake
-	autoconf
-
-	libtoolize --copy --force
-
 	einfo "Compiling for ${filesystems}"
 	unset ARCH
 	econf $(use_enable debug) || die
