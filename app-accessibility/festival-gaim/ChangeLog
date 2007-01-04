@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/festival-gaim
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-gaim/ChangeLog,v 1.25 2005/07/30 20:24:19 eradicator Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-gaim/ChangeLog,v 1.26 2007/01/04 13:52:09 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  festival-gaim-1.1.ebuild, festival-gaim-1.1-r1.ebuild:
+  Fix broken autotools handling.
 
   30 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
   -festival-gaim-0.81.ebuild, -festival-gaim-1.00.ebuild,
