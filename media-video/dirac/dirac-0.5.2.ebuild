@@ -1,8 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dirac/dirac-0.5.2.ebuild,v 1.1 2005/06/10 01:45:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dirac/dirac-0.5.2.ebuild,v 1.2 2007/01/04 15:32:24 flameeyes Exp $
 
-inherit eutils
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit eutils autotools
 
 DESCRIPTION="Open Source video codec"
 HOMEPAGE="http://dirac.sourceforge.net/"
@@ -19,12 +22,11 @@ RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-doc.patch
+	epatch "${FILESDIR}/${P}-doc.patch"
 
-	autoreconf || die "autoreconf failed"
-	libtoolize --copy --force || die "libtoolize failed"
+	eautoreconf
 }
 
 src_compile() {
