@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.2.1.ebuild,v 1.3 2007/01/04 15:54:41 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.2.1.ebuild,v 1.4 2007/01/04 16:04:36 zzam Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -77,10 +77,7 @@ src_unpack() {
 	rm configure
 
 	# converting to unix line-endings
-	local f
-	for f in missing depcomp; do
-		sed -i ${f} -e 's#\r$##'
-	done
+	edos2unix missing depcomp
 
 	eautoreconf
 }
