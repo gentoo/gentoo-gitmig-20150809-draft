@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.14.2.ebuild,v 1.11 2006/10/20 23:39:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.14.2.ebuild,v 1.12 2007/01/04 20:49:29 compnerd Exp $
 
-inherit eutils gnome2
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit autotools eutils gnome2
 
 DESCRIPTION="Gnome session manager"
 HOMEPAGE="http://www.gnome.org/"
@@ -55,10 +58,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.14.0-no_libnotify.patch
 
 	cp aclocal.m4 old_macros.m4
-	aclocal -I . || die "aclocal failed"
-	autoconf || die "autoconf failed"
-	automake || die "automake failed"
-	libtoolize --copy --force
+	AT_M4DIR="." eautoreconf
 }
 
 src_install() {
