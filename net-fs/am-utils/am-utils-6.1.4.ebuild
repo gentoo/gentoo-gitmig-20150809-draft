@@ -1,6 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/am-utils/am-utils-6.1.4.ebuild,v 1.3 2006/10/21 03:52:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/am-utils/am-utils-6.1.4.ebuild,v 1.4 2007/01/04 15:43:05 flameeyes Exp $
+
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 
 inherit eutils autotools
 

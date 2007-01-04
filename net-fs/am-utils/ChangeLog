@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/am-utils
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/am-utils/ChangeLog,v 1.23 2006/10/21 03:52:04 agriffis Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/am-utils/ChangeLog,v 1.24 2007/01/04 15:43:05 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> am-utils-6.1.4.ebuild:
+  Add missing WANT_AUTO*
 
   21 Oct 2006; Aron Griffis <agriffis@gentoo.org> am-utils-6.1.4.ebuild:
   Mark 6.1.4 stable on alpha/ia64
