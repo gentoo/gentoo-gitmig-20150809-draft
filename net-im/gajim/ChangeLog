@@ -1,6 +1,12 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.24 2007/01/03 17:17:40 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.25 2007/01/04 22:36:58 welp Exp $
+
+*gajim-0.11-r1 (04 Jan 2007)
+
+  04 Jan 2007; Peter Weller (welp) <welp@gentoo.org> -gajim-0.11.ebuild,
+  +gajim-0.11-r1.ebuild:
+  Revision bump - various ebuild changes. Bug #158541
 
 *gajim-0.11 (03 Jan 2007)
 
