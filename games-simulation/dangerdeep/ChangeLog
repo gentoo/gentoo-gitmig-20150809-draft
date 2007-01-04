@@ -1,0 +1,11 @@
+# ChangeLog for games-simulation/dangerdeep
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/dangerdeep/ChangeLog,v 1.1 2007/01/04 04:37:35 mr_bones_ Exp $
+
+*dangerdeep-0.2.0 (04 Jan 2007)
+
+  04 Jan 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/dangerdeep-0.2.0-build.patch, +metadata.xml,
+  +dangerdeep-0.2.0.ebuild:
+  initial commit - ebuild submitted by Bernard Cafarelli via bug #130023
+
