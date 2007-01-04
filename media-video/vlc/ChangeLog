@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.202 2007/01/03 16:10:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.203 2007/01/04 12:34:51 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.6-r1.ebuild:
+  Make sure the correct wx-config is used, hopefully closes bug #159674.
 
 *vlc-0.8.6-r1 (03 Jan 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6-r1.ebuild,v 1.1 2007/01/03 16:10:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6-r1.ebuild,v 1.2 2007/01/04 12:34:51 flameeyes Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -144,9 +144,6 @@ src_compile () {
 	local XPIDL=""
 	local MOZILLA_CONFIG=""
 
-	use wxwindows && \
-		myconf="${myconf} --with-wx-config=$(basename ${WX_CONFIG}) --with-wx-config-path=$(dirname ${WX_CONFIG})"
-
 	use vlm && \
 		myconf="${myconf} --enable-vlm --enable-sout" || \
 		myconf="${myconf} --disable-vlm"
@@ -246,6 +243,7 @@ src_compile () {
 		--enable-libtool \
 		$(use_enable nsplugin mozilla) \
 		XPIDL="${XPIDL}" MOZILLA_CONFIG="${MOZILLA_CONFIG}" \
+		WX_CONFIG="${WX_CONFIG}" \
 		${myconf} || die "configuration failed"
 
 	if [[ $(gcc-major-version) == 2 ]]; then
