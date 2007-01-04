@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gems.eclass,v 1.11 2006/12/30 16:40:11 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gems.eclass,v 1.12 2007/01/04 05:43:52 pclouds Exp $
 #
 # Author: Rob Cakebread <pythonhead@gentoo.org>
 # Current Maintainer: Ruby Herd <ruby@gentoo.org>
@@ -51,12 +51,21 @@ gems_src_install() {
 		spec_path=${D}/${GEMSDIR}/specifications/${MY_P}.gemspec
 	fi
 
-	# RI documentation installation: bug #145222
 	if use doc; then
-		myconf="--rdoc --ri"
+		myconf="--rdoc"
 	else
-		myconf="--no-rdoc --no-ri"
+		myconf="--no-rdoc"
 	fi
+
+	# RI documentation installation: bug #145222
+	if gem --version|grep -q ^0.9; then
+		if use doc; then
+			myconf="--ri ${myconf}"
+		else
+			myconf="--no-ri ${myconf}"
+		fi
+	fi
+
 
 	dodir ${GEMSDIR}
 	gem install ${GEM_SRC} -v ${PV} ${myconf} -l -i ${D}/${GEMSDIR} || die "gem install failed"
