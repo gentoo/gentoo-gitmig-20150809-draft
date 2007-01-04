@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gems.eclass,v 1.12 2007/01/04 05:43:52 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gems.eclass,v 1.13 2007/01/04 19:00:47 pclouds Exp $
 #
 # Author: Rob Cakebread <pythonhead@gentoo.org>
 # Current Maintainer: Ruby Herd <ruby@gentoo.org>
@@ -68,7 +68,7 @@ gems_src_install() {
 
 
 	dodir ${GEMSDIR}
-	gem install ${GEM_SRC} -v ${PV} ${myconf} -l -i ${D}/${GEMSDIR} || die "gem install failed"
+	gem install ${GEM_SRC} -v ${PV} ${myconf} -l -i ${D}/${GEMSDIR} || die "gem install failed: gem-$(gem --version) install ${GEM_SRC} -v ${PV} ${myconf} -l -i ${D}/${GEMSDIR}"
 
 	# This is a workaround for <=rubygems-0.9.0.8 because it's exitstatus equals 0
 	# even if the dependencies are not found. So we are testing if rubygems at
