@@ -1,6 +1,10 @@
 # ChangeLog for app-text/vilistextum
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.21 2005/10/29 15:20:29 grobian Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.22 2007/01/04 13:13:38 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  vilistextum-2.6.7.ebuild:
+  Fix autotools handling, patch by Jakub Moc in bug #152215.
 
   29 Oct 2005; Fabian Groffen <grobian@gentoo.org> vilistextum-2.6.7.ebuild:
   Marked ~ppc-macos (bug #109438)

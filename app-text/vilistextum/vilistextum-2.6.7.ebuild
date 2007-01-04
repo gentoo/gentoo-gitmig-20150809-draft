@@ -1,8 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/vilistextum-2.6.7.ebuild,v 1.8 2005/10/29 15:20:29 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/vilistextum-2.6.7.ebuild,v 1.9 2007/01/04 13:13:38 flameeyes Exp $
 
-inherit eutils
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit eutils autotools
 
 DESCRIPTION="Vilistextum is a html to ascii converter specifically programmed to get the best out of incorrect html."
 HOMEPAGE="http://bhaak.dyndns.org/vilistextum/"
@@ -14,21 +17,20 @@ SLOT="0"
 IUSE="unicode"
 KEYWORDS="amd64 ppc ~ppc-macos sparc x86"
 
-DEPEND="virtual/libc"
+DEPEND=""
 # KDE support will be available once a version of kaptain in stable
-#    kde? ( kde-misc/kaptain )"
+#	 kde? ( kde-misc/kaptain )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.diff
-	epatch ${FILESDIR}/${P}-use-glibc-iconv.diff
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gentoo.diff"
+	epatch "${FILESDIR}/${P}-use-glibc-iconv.diff"
+
+	eautoreconf
 }
 
 src_compile() {
-	einfo "Running autoreconf"
-	autoreconf -f -i || die "autoreconf failed"
-
 	econf \
 		$(use_enable unicode multibyte) \
 		|| die "econf failed"
