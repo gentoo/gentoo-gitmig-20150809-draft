@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-360-r1.ebuild,v 1.1 2006/11/21 23:12:24 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-360-r1.ebuild,v 1.2 2007/01/04 00:35:28 chutzpah Exp $
 
 inherit eutils multilib flag-o-matic libtool
 
@@ -16,7 +16,7 @@ IUSE="3m backtrace cairo jpeg opengl perl png sgc"
 RDEPEND="x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libXaw
-	>x11-libs/libXft-2.1.9
+	>=x11-libs/libXft-2.1.12
 	!dev-scheme/mzscheme
 	media-libs/freetype
 	media-libs/fontconfig

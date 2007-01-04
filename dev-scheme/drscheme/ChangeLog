@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/drscheme
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.39 2006/11/21 23:12:24 chutzpah Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.40 2007/01/04 00:35:28 chutzpah Exp $
+
+  04 Jan 2007; Patrick McLean <chutzpah@gentoo.org> drscheme-352-r2.ebuild,
+  -drscheme-360.ebuild, drscheme-360-r1.ebuild:
+  Modify DEPEND on x11-libs/libXft to depend on 2.1.12 or higher, fixes bug
+  #152564.
 
 *drscheme-360-r1 (21 Nov 2006)
 
