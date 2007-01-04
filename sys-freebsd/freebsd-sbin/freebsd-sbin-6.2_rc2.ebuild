@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-6.2_rc2.ebuild,v 1.1 2006/12/29 15:20:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-6.2_rc2.ebuild,v 1.2 2007/01/04 19:06:19 flameeyes Exp $
 
 inherit flag-o-matic bsdmk freebsd
 
@@ -19,6 +19,7 @@ SRC_URI="mirror://gentoo/${SBIN}.tar.bz2
 RDEPEND="=sys-freebsd/freebsd-lib-${RV}*
 	=sys-freebsd/freebsd-libexec-${RV}*
 	ssl? ( dev-libs/openssl )
+	dev-libs/libedit
 	sys-libs/readline
 	sys-process/vixie-cron"
 DEPEND="${RDEPEND}
