@@ -1,8 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/kth-krb-1.2.2-r2.ebuild,v 1.13 2006/12/08 16:01:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/kth-krb-1.2.2-r2.ebuild,v 1.14 2007/01/04 13:57:39 flameeyes Exp $
 
-WANT_AUTOMAKE=1.6
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="1.6"
+
 inherit eutils autotools
 
 DESCRIPTION="Kerberos 4 implementation from KTH"
@@ -32,8 +34,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-gcc.patch
 	epatch "${FILESDIR}"/${P}-revoke.patch
 
-	libtoolize --copy --force || die
-	autoreconf || die
+	AT_M4DIR="cf" eautoreconf
 }
 
 src_compile() {
@@ -55,7 +56,7 @@ src_install() {
 		cd ${S}/lib/des
 
 		make DESTDIR=${D}/usr/athena \
-	 		install || die
+			install || die
 
 		cd ${S}
 	fi
