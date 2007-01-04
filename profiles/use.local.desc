@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2473 2007/01/04 19:34:01 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2474 2007/01/04 21:26:59 cedk Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1149,6 +1149,8 @@ net-firewall/nufw:ident - Add support ident for users authentication
 net-firewall/nufw:nfconntrack - Use netfilter_conntrack
 net-firewall/nufw:nfqueue - Use NFQUEUE instead of QUEUE
 net-firewall/nufw:pam_nuauth - Add support for pam nufw from PAM
+net-firewall/nufw:plaintext - Add support authentification with plaintext file
+net-firewall/nufw:syslog - Add support user activity logging in syslog
 net-fs/netatalk:xfs - Enable support for XFS Quota
 net-fs/nfs-utils:nonfsv4 - Disable support for NFSv4
 net-fs/samba:async - Enables asynchronous input/output
