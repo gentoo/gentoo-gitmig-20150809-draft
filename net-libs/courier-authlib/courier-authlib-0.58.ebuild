@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.58.ebuild,v 1.10 2006/11/23 20:00:22 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.58.ebuild,v 1.11 2007/01/04 15:51:50 flameeyes Exp $
 
-inherit eutils gnuconfig flag-o-matic
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit eutils flag-o-matic autotools
 
 DESCRIPTION="courier authentication library"
 [ -z "${PV/?.??/}" ] && SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
@@ -44,22 +47,13 @@ src_unpack() {
 	use elibc_uclibc && sed -i -e 's:linux-gnu\*:linux-gnu\*\ \|\ linux-uclibc:' config.sub
 	if ! use gdbm ; then
 		epatch ${FILESDIR}/configure-db4.patch
-		export WANT_AUTOCONF="2.5"
-		gnuconfig_update
-		libtoolize --copy --force
-		ebegin "Recreating configure"
-			autoconf ||  die "recreate configure failed"
-		eend $?
-		cd ${S}/bdbobj
-		libtoolize --copy --force
-		ebegin "Recreating bdbobj/configure"
-			autoconf ||  die "recreate bdbobj/configure failed"
-		eend $?
 	fi
 	sed -i -e'/for dir in/a@@INDENT@@/etc/courier-imap \\' ${S}/authmigrate.in
 	sed -i -e'/for dir in/a@@INDENT@@/etc/courier/authlib \\' ${S}/authmigrate.in
 	sed -i -e"s|@@INDENT@@|		|g" ${S}/authmigrate.in
 	sed -i -e"s|\$sbindir/makeuserdb||g" ${S}/authmigrate.in
+
+	eautoreconf
 }
 
 src_compile() {

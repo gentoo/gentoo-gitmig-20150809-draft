@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/courier-authlib
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.58 2006/11/23 20:00:22 vivo Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.59 2007/01/04 15:51:50 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  courier-authlib-0.58.ebuild:
+  Fix broken autotools handling.
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org>
   courier-authlib-0.53.ebuild, courier-authlib-0.54.20050224.ebuild,
