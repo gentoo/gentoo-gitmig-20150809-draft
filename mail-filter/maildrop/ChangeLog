@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/maildrop
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.70 2007/01/04 19:17:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.71 2007/01/04 19:37:28 ferdy Exp $
+
+  04 Jan 2007; Fernando J. Pereda <ferdy@gentoo.org>
+  -files/maildrop-1.8.0-db4.patch, -maildrop-2.0.1.ebuild,
+  -maildrop-2.0.1-r1.ebuild:
+  Remove ebuilds incorrectly handling autotools as per bug #160010
 
   04 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
   maildrop-2.0.2-r1.ebuild:
