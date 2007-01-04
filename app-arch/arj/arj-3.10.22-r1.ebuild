@@ -1,8 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.22-r1.ebuild,v 1.5 2005/12/10 00:20:20 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.22-r1.ebuild,v 1.6 2007/01/04 19:26:16 flameeyes Exp $
 
-inherit gnuconfig eutils toolchain-funcs
+WANT_AUTOCONF="latest"
+
+inherit eutils toolchain-funcs autotools
 
 DESCRIPTION="Utility for opening arj archives"
 HOMEPAGE="http://arj.sourceforge.net/"
@@ -21,6 +23,9 @@ src_unpack() {
 	epatch "${FILESDIR}/001_arches_align.patch"
 	epatch "${FILESDIR}/002_no_remove_static_const.patch"
 	epatch "${FILESDIR}/003_64_bit_clean.patch"
+
+	cd "${S}/gnu"
+	eautoreconf
 }
 
 src_compile() {
@@ -53,19 +58,16 @@ src_compile() {
 		fi
 	fi
 
-	gnuconfig_update
-
-	cd ${S}/gnu
-	autoconf
+	cd "${S}/gnu"
 	econf || die
 
-	cd ${S}
+	cd "${S}"
 	make prepare || die "make prepare failed"
 	make package || die "make package failed"
 }
 
 src_install() {
-	cd ${S}/linux-gnu/en/rs/u
+	cd "${S}/linux-gnu/en/rs/u"
 	dobin bin/* || die
-	dodoc doc/arj/* ${S}/ChangeLog
+	dodoc doc/arj/* "${S}/ChangeLog"
 }
