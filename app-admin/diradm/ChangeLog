@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/diradm
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/ChangeLog,v 1.19 2006/02/11 20:57:25 mcummings Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/ChangeLog,v 1.20 2007/01/04 21:13:11 beandog Exp $
+
+  04 Jan 2007; Steve Dibb <beandog@gentoo.org> diradm-1.1.ebuild,
+  diradm-1.1-r1.ebuild, diradm-1.2.ebuild, diradm-2.1.ebuild,
+  diradm-2.2.ebuild, diradm-2.3.ebuild, diradm-2.4.ebuild,
+  diradm-2.5.ebuild:
+  ebuild cleanup, bug 157661
 
   11 Feb 2006; Michael Cummings <mcummings@gentoo.org> diradm-2.1.ebuild,
   diradm-2.2.ebuild, diradm-2.3.ebuild, diradm-2.4.ebuild,

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/diradm-1.1.ebuild,v 1.8 2005/01/01 10:58:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/diradm-1.1.ebuild,v 1.9 2007/01/04 21:13:11 beandog Exp $
 
 DESCRIPTION="diradm is for managing posix users/groups in an LDAP directory"
 HOMEPAGE="http://www.hits.at/diradm/"
@@ -11,10 +11,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="net-nds/openldap
-	sys-apps/coreutils
-	sys-apps/grep
-	sys-apps/sed"
+DEPEND="net-nds/openldap"
 
 src_install() {
 	dosbin diradm || die

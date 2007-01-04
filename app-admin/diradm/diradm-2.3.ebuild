@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/diradm-2.3.ebuild,v 1.3 2006/02/11 20:57:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/diradm-2.3.ebuild,v 1.4 2007/01/04 21:13:11 beandog Exp $
 
 DESCRIPTION="diradm is for managing posix users/groups in an LDAP directory"
 BASE_URI="http://research.iat.sfu.ca/custom-software/"
-HOMEPAGE="${BASE_URI}/${PN}"
+HOMEPAGE="http://www.hits.at/diradm/"
 SRC_URI="${BASE_URI}/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -12,12 +12,6 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE="samba"
 DEPEND="net-nds/openldap
-	sys-apps/gawk
-	sys-apps/coreutils
-	sys-apps/grep
-	dev-lang/perl
-	app-shells/bash
-	sys-apps/sed
 	virtual/perl-MIME-Base64
 	samba? (
 		dev-perl/Crypt-SmbHash
