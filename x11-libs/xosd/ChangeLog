@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xosd
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.57 2006/11/13 14:35:35 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.58 2007/01/04 18:59:57 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> xosd-2.2.14-r1.ebuild:
+  Fix broken autotools handling.
 
   13 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/2.2.8-xmms-trackpos.patch, xosd-2.2.8-r1.ebuild,

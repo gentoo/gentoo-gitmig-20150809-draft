@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14-r1.ebuild,v 1.3 2006/11/13 14:35:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14-r1.ebuild,v 1.4 2007/01/04 18:59:57 flameeyes Exp $
 
-inherit eutils
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit eutils autotools
 
 DESCRIPTION="Library for overlaying text/glyphs in X-Windows X-On-Screen-Display plus binary for sending text from command line"
 HOMEPAGE="http://www.ignavus.net/"
@@ -26,9 +29,7 @@ DEPEND="|| ( (
 	xinerama? ( x11-proto/xineramaproto )
 	x11-proto/xproto )
 	virtual/x11 )
-	${RDEPEND}
-	>=sys-devel/autoconf-2.57
-	>=sys-devel/automake-1.8"
+	${RDEPEND}"
 
 RESTRICT="confcache"
 
@@ -38,12 +39,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-m4.patch
 	epatch "${DISTDIR}"/${PN}_${PV}-1.diff.gz
 
-	export WANT_AUTOMAKE=1.8
-	export WANT_AUTOCONF=2.5
-	libtoolize --force --copy || die
-	aclocal -I ${WORKDIR}/m4 || die
-	automake -a -f -c || die
-	autoconf || die
+	AT_M4DIR="${WORKDIR}/m4" eautoreconf
 }
 
 src_compile() {
