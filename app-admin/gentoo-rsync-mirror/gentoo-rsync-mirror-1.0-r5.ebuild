@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/gentoo-rsync-mirror-1.0-r5.ebuild,v 1.2 2006/08/27 10:14:46 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/gentoo-rsync-mirror-1.0-r5.ebuild,v 1.3 2007/01/04 22:42:54 beandog Exp $
 
 DESCRIPTION="Ebuild for setting up a Gentoo rsync mirror"
 HOMEPAGE="http://www.gentoo.org/doc/en/rsync.xml"
@@ -10,12 +10,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~alpha ~ppc ~sparc ~x86 ~hppa ~ppc64"
 IUSE=""
-
-DEPEND="virtual/libc"
-RDEPEND="net-misc/rsync
-	dev-lang/perl"
-
-S=${WORKDIR}/gentoo-rsync-mirror-${PV}
 
 src_install() {
 	dodir /opt/gentoo-rsync
