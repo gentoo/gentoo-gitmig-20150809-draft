@@ -1,0 +1,22 @@
+--- Makefile
++++ Makefile
+@@ -1,15 +1,16 @@
+-CFLAGS	+= -O2 -s
++CC = gcc
++CFLAGS	+= -DGSWEB
+ #CFLAGS	+= -ggdb
+ PREFIX	= /usr/local
+ BINDIR	= $(PREFIX)/bin
+ SRC	= src/gslist.c src/enctype1_decoder.c src/enctype2_decoder.c src/enctype_shared.c src/mydownlib.c
+-LIBS    = -lpthread -lmysqlclient
++LIBS    = -lpthread
+ O	= $(SRC:.c=.o)
+ 
+ all:	gslist
+ 
+ gslist:	$(O)
+-	$(CC) $(SRC) $(CFLAGS) -o gslist $(LIBS) -DGSWEB -DSQL
++	$(CC) $(O) -o gslist $(LIBS) $(LDFLAGS)
+ 
+ clean:
+ 	rm -f gslist src/gslist.o src/enctype1_decoder.o src/enctype2_decoder.o src/enctype_shared.o src/mydownlib.o

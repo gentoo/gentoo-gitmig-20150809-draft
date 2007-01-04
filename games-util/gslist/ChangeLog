@@ -1,0 +1,10 @@
+# ChangeLog for games-util/gslist
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/gslist/ChangeLog,v 1.1 2007/01/04 19:29:07 nyhm Exp $
+
+*gslist-0.8.2 (04 Jan 2007)
+
+  04 Jan 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/gslist-0.8.2-build.patch, +metadata.xml, +gslist-0.8.2.ebuild:
+  Initial commit, bug #111319
+
