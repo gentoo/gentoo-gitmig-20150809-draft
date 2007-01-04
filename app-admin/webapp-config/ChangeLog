@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/webapp-config
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.49 2007/01/02 23:08:46 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.50 2007/01/04 11:05:10 wrobel Exp $
+
+*webapp-config-1.50.16 (04 Jan 2007)
+
+  04 Jan 2007; <wrobel@gentoo.org> -webapp-config-1.50.10.ebuild,
+  -webapp-config-1.50.13.ebuild, -webapp-config-1.50.14.ebuild,
+  +webapp-config-1.50.16.ebuild:
+  Added webapp-config-1.50.16 to the tree. Fixes bugs #104652, #149939,
+  #133530, #146059, #139965.
 
   02 Jan 2007; Renat Lumpau <rl03@gentoo.org> webapp-config-1.50.15.ebuild:
   einfo->elog, bug #139814
