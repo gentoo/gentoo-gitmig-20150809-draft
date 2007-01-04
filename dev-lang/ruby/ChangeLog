@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.251 2007/01/01 16:31:20 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.252 2007/01/04 22:17:46 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ruby-1.8.4-r3.ebuild:
+  Get rid of debug.eclass usage.
 
   01 Jan 2007; Fabian Groffen <grobian@gentoo.org> ruby-1.8.4-r3.ebuild,
   ruby-1.8.5_p2.ebuild, ruby-1.8.5_p12.ebuild:

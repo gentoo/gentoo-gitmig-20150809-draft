@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4-r3.ebuild,v 1.13 2007/01/01 16:31:20 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4-r3.ebuild,v 1.14 2007/01/04 22:17:46 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
 ONIGURUMA="onigd2_5_4"
 
-inherit flag-o-matic alternatives eutils multilib autotools debug
+inherit flag-o-matic alternatives eutils multilib autotools
 
 DESCRIPTION="An object-oriented scripting language"
 HOMEPAGE="http://www.ruby-lang.org/"
@@ -17,7 +17,7 @@ SRC_URI="mirror://ruby/${PV%.*}/${P/_pre/-preview}.tar.gz
 LICENSE="Ruby"
 SLOT="1.8"
 KEYWORDS="~alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
-IUSE="socks5 tcltk cjk doc threads examples ipv6"
+IUSE="socks5 tcltk cjk doc threads examples ipv6 debug"
 RESTRICT="confcache"
 
 RDEPEND="virtual/libc
@@ -87,7 +87,7 @@ src_compile() {
 		$(use_enable doc install-doc) \
 		$(use_enable threads pthread) \
 		$(use_enable ipv6 ipv6) \
-		$(use_enable debug debug) \
+		$(use_enable debug) \
 		--with-sitedir=/usr/$(get_libdir)/ruby/site_ruby \
 		|| die "econf failed"
 
