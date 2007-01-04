@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/wxruby
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wxruby/ChangeLog,v 1.14 2006/04/14 12:06:53 fmccor Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wxruby/ChangeLog,v 1.15 2007/01/04 20:27:13 compnerd Exp $
+
+  04 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  wxruby-0.6-r1.ebuild:
+  gtk2 -> gtk change for bug #106560
 
   14 Apr 2006; Ferris McCormick <fmccor@gentoo.org> wxruby-0.6-r1.ebuild:
   Add ~amd64 keyword.  Builds, installs, and runs tests and examples as
