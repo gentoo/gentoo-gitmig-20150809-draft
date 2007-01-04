@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/cgi_multipart_eof_fix
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cgi_multipart_eof_fix/ChangeLog,v 1.1 2007/01/04 13:49:30 pclouds Exp $
+
+*cgi_multipart_eof_fix-1.0.0 (04 Jan 2007)
+
+  04 Jan 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org> +metadata.xml,
+  +cgi_multipart_eof_fix-1.0.0.ebuild:
+  New ebuild, #126925
+
