@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/libmustux-0.20.2-r1.ebuild,v 1.9 2006/11/03 21:06:43 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/libmustux-0.20.2-r1.ebuild,v 1.10 2007/01/04 15:24:41 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -17,8 +17,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ~ppc x86"
 
-RDEPEND="|| ( ( x11-libs/libXt )
-	virtual/x11 )
+RDEPEND="x11-libs/libXt
 	=x11-libs/qt-3*
 	media-libs/alsa-lib"
 
@@ -26,7 +25,7 @@ set-qtdir 3
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-qualifications.patch"
 
@@ -42,6 +41,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS COPYRIGHT ChangeLog NEWS README TODO
 }

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmustux
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/ChangeLog,v 1.31 2006/11/03 21:06:43 dang Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/ChangeLog,v 1.32 2007/01/04 15:24:41 flameeyes Exp $
+
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -libmustux-0.20.2.ebuild, libmustux-0.20.2-r1.ebuild:
+  Cleanup.
 
   03 Nov 2006; Daniel Gryniewicz <dang@gentoo.org>
   libmustux-0.20.2-r1.ebuild:
