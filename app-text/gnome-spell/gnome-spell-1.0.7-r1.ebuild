@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.7-r1.ebuild,v 1.11 2006/11/12 04:17:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.7-r1.ebuild,v 1.12 2007/01/04 14:27:55 flameeyes Exp $
 
-inherit libtool eutils gnome2
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
+
+inherit eutils gnome2 autotools
 
 DESCRIPTION="Gnome spellchecking component"
 HOMEPAGE="http://www.gnome.org/"
@@ -23,8 +26,7 @@ RDEPEND=">=gnome-base/libgnome-1.112.1
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig
-	sys-devel/gettext
-	>=sys-devel/autoconf-2.59"
+	sys-devel/gettext"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
@@ -51,13 +53,5 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-remove_gnome_h.patch
 
 
-	einfo "Runnig aclocal"
-	aclocal || die "aclocal failed"
-	einfo "Running autoconf"
-	WANT_AUTOCONF=2.5 autoconf || die "autoconf failed"
-	einfo "Running automake"
-	WANT_AUTOMAKE=1.9 automake || die "automake failed"
-	einfo "Running libtoolize"
-	libtoolize --copy --force
-
+	eautoreconf
 }

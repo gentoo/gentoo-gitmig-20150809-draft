@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.17.ebuild,v 1.16 2006/12/08 23:03:12 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.17.ebuild,v 1.17 2007/01/04 14:24:46 flameeyes Exp $
 
-inherit nsplugins flag-o-matic fdo-mime eutils multilib toolchain-funcs
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit nsplugins flag-o-matic fdo-mime eutils multilib toolchain-funcs autotools
 
 MY_P="${PN}libre-${PV}"
 
@@ -40,13 +43,11 @@ src_unpack() {
 	# Replace autochecking acdesktop.m4 with a gentoo-specific one
 	cp "${FILESDIR}/gentoo-acdesktop.m4" "${S}/gui/desktop/acdesktop.m4"
 
-	aclocal -I config -I gui/desktop || die "aclocal failed"
-	autoconf || die "autoconf failed"
-	libtoolize --copy --force
+	AT_M4DIR="config gui/desktop" eautoreconf
 }
 
 src_compile() {
-	# assembler problems and hence non-building with pentium4 
+	# assembler problems and hence non-building with pentium4
 	# <obz@gentoo.org>
 	replace-flags -march=pentium4 -march=pentium3
 
