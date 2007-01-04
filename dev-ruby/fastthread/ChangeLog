@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/fastthread
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastthread/ChangeLog,v 1.1 2007/01/04 13:42:43 pclouds Exp $
+
+*fastthread-0.5.3.1 (04 Jan 2007)
+
+  04 Jan 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org> +metadata.xml,
+  +fastthread-0.5.3.1.ebuild:
+  New ebuild, for #126925
+
