@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
- <herd>net-misc</herd>
+ <herd>no-herd</herd>
  <maintainer>
 	 <email>compnerd@gentoo.org</email>
 	 <name>Saleem Abdulrasool</name>
@@ -11,10 +11,10 @@
   Zeroconf standardizes networking protocols for delivering hassle-free ad-hoc
   networking, service discovery, and IP configuration.
  </longdescription>
- <!-- ChrisWhite: hassle-free to 使用は容易  -->
+ <!-- ChrisWhite: hassle-free to ä½¿ç¨ã¯å®¹æ  -->
  <longdescription lang="ja">
-  Howl はクロスプラットフォームに対応した Zeroconf networking standard の実装です。
-  Zeroconf は、使用は容易 ad-hoc ネットワーク配送、サービス探索、IP 配置を実現する
-  ネットワーク・プロトコルを標準化します。
+  Howl ã¯ã¯ã­ã¹ãã©ãããã©ã¼ã ã«å¯¾å¿ãã Zeroconf networking standard ã®å®è£ã§ãã
+  Zeroconf ã¯ãä½¿ç¨ã¯å®¹æ ad-hoc ãããã¯ã¼ã¯ééããµã¼ãã¹æ¢ç´¢ãIP éç½®ãå®ç¾ãã
+  ãããã¯ã¼ã¯ã»ãã­ãã³ã«ãæ¨æºåãã¾ãã
  </longdescription>
 </pkgmetadata>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>ipv6</herd>
+<herd>no-herd</herd>
 <maintainer>
   <email>gmsoft@gentoo.org</email>
   <name>Guy Martin</name>
