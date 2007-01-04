@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.16.ebuild,v 1.9 2006/11/23 16:12:33 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.16.ebuild,v 1.10 2007/01/04 13:18:35 flameeyes Exp $
 
-inherit eutils gnuconfig fixheadtails
+WANT_AUTOCONF=latest
+WANT_AUTOMAKE=latest
+
+inherit eutils fixheadtails autotools
 
 # TODO: all ldap, sybase support
 #MY_PV=${PV/_/-}
@@ -72,10 +75,7 @@ src_unpack() {
 		vdelivermail.c vpopbull.c vqmaillocal.c \
 		|| die "failed to remove vpopmail advertisement"
 
-	gnuconfig_update
-	aclocal || die "aclocal failed"
-	WANT_AUTOMAKE="1.6" automake --add-missing || die "automake failed."
-	autoconf || die "reconfigure failed."
+	eautoreconf
 	ht_fix_file ${S}/cdb/Makefile || die "failed to fix file"
 }
 
@@ -214,7 +214,7 @@ pkg_postinst() {
 		einfo "> create database vpopmail;"
 		einfo "> use mysql;"
 		einfo "> grant select, insert, update, delete, create, drop on vpopmail.* to"
-		einfo "  vpopmail@localhost identified by 'your password';"
+		einfo "	 vpopmail@localhost identified by 'your password';"
 		einfo "> flush privileges;"
 		echo
 		einfo "If you have problems with vpopmail not accepting mail properly,"
