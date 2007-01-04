@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.60 2006/12/18 13:41:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.61 2007/01/04 14:56:46 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -200,6 +200,8 @@ autotools_set_versions() {
 		einfo "Requested autoconf ${WANT_AUTOCONF}"
 		einfo "Using $(autoconf --version 2>/dev/null | head -n 1)"
 		einfo "Using $(autoheader --version 2>/dev/null | head -n 1)"
+	else
+		ewarn "QA Notice: \${WANT_AUTOCONF} variable unset. Please report on http://bugs.gentoo.org/"
 	fi
 
 	if [[ -n ${WANT_AUTOMAKE} ]]; then
@@ -215,6 +217,8 @@ autotools_set_versions() {
 		einfo "Requested automake ${latest_automake}${WANT_AUTOMAKE}"
 		einfo "Using $(automake --version 2>/dev/null | head -n 1)"
 		einfo "Using $(aclocal --version 2>/dev/null | head -n 1)"
+	else
+		ewarn "QA Notice: \${WANT_AUTOMAKE} variable unset. Please report on http://bugs.gentoo.org/"
 	fi
 
 	autotools_version_sets="yes"
