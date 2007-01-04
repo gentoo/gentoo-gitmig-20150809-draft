@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.8.ebuild,v 1.11 2007/01/04 15:04:51 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.8.ebuild,v 1.12 2007/01/04 22:23:56 mrness Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic autotools
 
 DESCRIPTION="A user-mode PPPoE client and server suite for Linux"
 HOMEPAGE="http://www.roaringpenguin.com/pppoe/"
@@ -39,18 +39,18 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-username-charset.patch" #82410
 	epatch "${FILESDIR}/${P}-plugin-options.patch"
-	epatch "${FILESDIR}/${P}-no-strip.patch"
+	epatch "${FILESDIR}/${P}-configure.patch"
 
+	cd "${S}"
 	#Avoid "setXid, dynamically linked and using lazy bindings" QA notice
-	sed -i -e 's:\(@CC@\) \(-o pppoe-wrapper wrapper.o\):\1 '$(bindnow-flags)' \2:' "${S}/gui/Makefile.in"
+	sed -i -e 's:\(@CC@\) \(-o pppoe-wrapper wrapper.o\):\1 '$(bindnow-flags)' \2:' gui/Makefile.in
 
-	# sanbdox violation workaround
-	sed -i -e 's/modprobe/echo modprobe/' "${S}/src/configure" || die "sed failed"
+	cd src
+	eautoconf
 }
 
 src_compile() {
 	addpredict /dev/ppp
-	append-flags -D_GNU_SOURCE
 
 	cd "${S}/src"
 	econf --enable-plugin=../../ppp-2.4.3 || die "econf failed"
