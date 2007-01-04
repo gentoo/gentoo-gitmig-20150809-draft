@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.55 2007/01/03 15:27:13 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.56 2007/01/04 10:32:38 vivo Exp $
 # kate: encoding utf-8; eol unix;
 # kate: indent-width 4; mixedindent off; remove-trailing-space on; space-indent off;
 # kate: word-wrap-column 80; word-wrap off;
@@ -15,7 +15,7 @@ INHERITED="$INHERITED $ECLASS"
 inherit eutils flag-o-matic gnuconfig autotools mysql_fx
 
 # avoid running userspace code 8 times per ebuild :(
-if [[ "${_MYPVR}" != "${PVR}" ]] || [[ -z "${MYSQL_VERSION_ID}" ]]
+if [[ "${_MYPVR}" != "${PVR}" ]] && [[ -n "${PVR}" ]]
 then
 	_MYPVR=${PVR}
 
@@ -140,10 +140,16 @@ EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_preinst \
 
 bitkeeper_fetch() {
 
-	local tpv=( ${PV//[-._]/ } )
-	local reposuf="${tpv[0]}.${tpv[1]}"
-	useq "cluster" && reposuf="${reposuf}-ndb"
-	local repo_uri="bk://mysql.bkbits.net/mysql-${reposuf}"
+	local reposuf
+	if [[ -z "${1}" ]] ; then
+		local tpv
+		tpv=( ${PV//[-._]/ } )
+		reposuf="mysql-${tpv[0]}.${tpv[1]}"
+	else
+		reposuf="${1}"
+	fi
+	einfo "using \"${reposuf}\" repository."
+	local repo_uri="bk://mysql.bkbits.net/${reposuf}"
 	## -- ebk_store_dir:  bitkeeper sources store directory
 	local ebk_store_dir="${PORTAGE_ACTUAL_DISTDIR-${DISTDIR}}/bk-src"
 	## -- ebk_fetch_cmd:  bitkeeper fetch command
@@ -163,7 +169,7 @@ bitkeeper_fetch() {
 
 	pushd "${ebk_store_dir}" || die "${EBK}: can't chdir to ${ebk_store_dir}"
 
-	local wc_path=mysql-${reposuf}
+	local wc_path=${reposuf}
 
 	if [[ ! -d "${wc_path}" ]]; then
 		local options="-r+"
@@ -184,7 +190,6 @@ bitkeeper_fetch() {
 
 		${ebk_update_cmd} "${repo_uri}" "${wc_path}" \
 		|| die "BK: can't update from ${repo_uri} to ${wc_path}."
-
 	fi
 
 	einfo "   working copy: ${wc_path}"
@@ -502,7 +507,13 @@ mysql_src_unpack() {
 
 	unpack ${A}
 	if [[ ${IS_BITKEEPER} -eq 90 ]] ; then
-		bitkeeper_fetch
+		if mysql_check_version_range "5.1 to 5.1.99" ; then
+			bitkeeper_fetch "mysql-5.1-ndb"
+		elif mysql_check_version_range "5.2 to 5.2.99" ; then
+			bitkeeper_fetch "mysql-5.2-falcon"
+		else
+			bitkeeper_fetch
+		fi
 		cd "${S}"
 		einfo "running upstream autorun on bk sources"
 		BUILD/autorun.sh
