@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.234 2007/01/05 03:54:18 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.235 2007/01/05 04:23:02 leio Exp $
+
+  05 Jan 2007; <leio@gentoo.org>
+  -files/glib-2.12.5-gkeyfile-gnomevfs-mime.patch, -glib-2.8.4.ebuild,
+  -glib-2.8.5.ebuild, -glib-2.12.5-r1.ebuild:
+  Remove some redundant versions
 
 *glib-2.12.7 (05 Jan 2007)
 
