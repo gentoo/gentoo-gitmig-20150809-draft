@@ -1,6 +1,28 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.76 2007/01/04 14:58:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.77 2007/01/05 16:54:23 dang Exp $
+
+  05 Jan 2007; Daniel Gryniewicz <dang@gentoo.org> ChangeLog:
+  Bump to 1.2.2
+  	Version 1.2.2 (Stable)
+  
+  	* Fixes folder expansion problem on startup: subfolders
+  	  were not expanded at all. (reported by Indigo 23)
+  	* Fixes the broken cache disabled archive mode. Feeds without
+  	  caching should be usable again. (reported by Indigo 23)
+  	* Fixes link styles in 2 pane summary mode when used with
+  	  GtkHTML2.
+  	* Fixes an effect where items selected from a search folder
+  	  are rendered in summary instead of detailed mode.
+  	* Memleak patch from Philip Withnall.
+  	Version 1.2.1 (Stable)
+  
+  	* Fixes a bug that prevented column resizing in the item list.
+  	* Fixes SF #1617434: prevents launching links in internal
+  	  browser when using GtkHTML2.
+  	* Fixes SF #1620875: loosing feeds after DnD
+  	* Fixes recursive favicon features which didn't update favicons
+  	  of feeds within folders.
 
   04 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> liferea-1.0.24.ebuild:
   Stable on sparc wrt #159802
