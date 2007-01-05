@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/gslist/gslist-0.8.2.ebuild,v 1.1 2007/01/04 19:29:07 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/gslist/gslist-0.8.2.ebuild,v 1.2 2007/01/05 23:34:47 nyhm Exp $
 
-inherit toolchain-funcs games
+inherit eutils toolchain-funcs games
 
 DESCRIPTION="A GameSpy server browser"
 HOMEPAGE="http://aluigi.altervista.org/papers.htm#gslist"
