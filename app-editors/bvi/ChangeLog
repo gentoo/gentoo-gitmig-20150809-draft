@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/bvi
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bvi/ChangeLog,v 1.15 2006/10/25 04:26:00 tsunam Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bvi/ChangeLog,v 1.16 2007/01/05 23:45:37 kugelfang Exp $
+
+  05 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -bvi-1.3.1.ebuild:
+  QA: Removed unused versions.
 
   25 Oct 2006; Joshua Jackson <tsunam@gentoo.org> bvi-1.3.2.ebuild:
   Stable x86; bug #152229
