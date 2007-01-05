@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX logrotate.mysql 440 RMD160 fbf0bc4b0b6c3ac611c6a3b916db36647016013d SHA1 11f83890c53fe80702e4a9aa3c4ed4cf5ba6dfcc SHA256 dafc74057585e50abdc682f1cf756d1cf4342df51f140880181dbb11f07afba1
 MD5 e61a6d6aaa65503bddf57f77a65dd5ba files/logrotate.mysql 440
 RMD160 fbf0bc4b0b6c3ac611c6a3b916db36647016013d files/logrotate.mysql 440
@@ -100,3 +103,10 @@ SHA256 5a152952ae7701949ac62be0d703b14888ab2a248a1ef1fb77bf765b4f75c05c files/di
 MD5 98acb9810f87773a30a14a1f25346b14 files/digest-mysql-5.0.34_alpha20070101-r61 548
 RMD160 6cf44dc446065e6e890dcbd59291cb4c6f99ba0d files/digest-mysql-5.0.34_alpha20070101-r61 548
 SHA256 06652eba0cd954daf34a7cbeaee9fdd5ed23bd416c5324bafc385363448277e3 files/digest-mysql-5.0.34_alpha20070101-r61 548
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.6 (GNU/Linux)
+
+iD8DBQFFnr0wI1lqEGTUzyQRApZRAKDBvh5s4qarrzhbwBV2SLjLVXVexwCgojwF
+eFy00k2rd7Os/GEgPpoodis=
+=8SeQ
+-----END PGP SIGNATURE-----
