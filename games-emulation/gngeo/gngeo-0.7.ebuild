@@ -1,7 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/gngeo-0.7.ebuild,v 1.2 2006/10/26 20:13:08 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/gngeo-0.7.ebuild,v 1.3 2007/01/05 20:17:57 nyhm Exp $
 
+WANT_AUTOCONF=latest
+WANT_AUTOMAKE=latest
 inherit eutils autotools games
 
 DESCRIPTION="A NeoGeo emulator"
@@ -14,24 +16,23 @@ KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 RDEPEND="virtual/opengl
-	sys-libs/zlib
 	media-libs/sdl-image
-	>=media-libs/libsdl-1.2"
-# gcc-3.3 gets it wrong - bug #128587
+	media-libs/libsdl"
 DEPEND="${RDEPEND}
-	>=sys-devel/gcc-3.4
 	x86? ( >=dev-lang/nasm-0.98 )"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-execstacks.patch" \
+	epatch \
+		"${FILESDIR}"/${P}-build.patch \
+		"${FILESDIR}"/${P}-execstacks.patch \
 		"${FILESDIR}"/${P}-concurrentMake.patch
-	autoreconf
+	eautoreconf
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS FAQ NEWS README* TODO sample_gngeorc
 	prepgamesdirs
 }
@@ -39,6 +40,6 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	echo
-	einfo "A licensed NeoGeo BIOS copy is required to run the emulator."
+	elog "A licensed NeoGeo BIOS copy is required to run the emulator."
 	echo
 }
