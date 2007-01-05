@@ -1,8 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-rhythmbox/gaim-rhythmbox-2.0_beta5.ebuild,v 1.1 2006/12/23 15:46:34 gothgirl Exp $
-
-inherit debug
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-rhythmbox/gaim-rhythmbox-2.0_beta5.ebuild,v 1.2 2007/01/05 04:43:01 dirtyepic Exp $
 
 MY_PV="2.0beta3"
 MY_P="${PN}-${MY_PV}"
