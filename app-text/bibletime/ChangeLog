@@ -1,6 +1,10 @@
 # ChangeLog for app-text/bibletime
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.36 2006/10/21 17:10:38 squinky86 Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.37 2007/01/05 14:11:09 beandog Exp $
+
+  05 Jan 2007; Steve Dibb <beandog@gentoo.org> bibletime-1.5.3.ebuild,
+  bibletime-1.6.ebuild:
+  ebuild langs cleanup, qa bug 136953
 
 *bibletime-1.6 (21 Oct 2006)
 

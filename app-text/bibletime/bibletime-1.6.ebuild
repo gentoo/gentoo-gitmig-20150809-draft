@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.6.ebuild,v 1.1 2006/10/21 17:10:38 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.6.ebuild,v 1.2 2007/01/05 14:11:09 beandog Exp $
 
 inherit kde eutils versionator
 
@@ -17,10 +17,11 @@ DEPEND=">=app-text/sword-1.5.9
 	>=dev-cpp/clucene-0.9.15"
 
 LANGS_PKG=${PN}-i18n-${PV}
-LANGS="af bg cs da de en_GB es fi fr hu it ko nl nn_NO no pl pt_BR ro ru sk ua"
+LANGS="af bg cs da de en_GB es fi fr hu it ko nl nn_NO no pl pt_BR ro ru sk uk"
 LANGS_DOC="bg cs de fi fr it ko nl pt_BR ru"
 
 for X in ${LANGS}; do
+	IUSE="${IUSE} linguas_${X}"
 	SRC_URI="${SRC_URI} linguas_${X}? ( mirror://sourceforge/bibletime/${LANGS_PKG}.tar.bz2 )"
 done
 
@@ -45,10 +46,12 @@ src_unpack() {
 
 	local MAKE_LANGS MAKE_LANGS_DOC
 	for X in ${LANGS}; do
-		use linguas_${X} && MAKE_LANGS="${MAKE_LANGS} ${X/pt_BR/pt_br}.po"
+		use linguas_${X} && MAKE_LANGS="${MAKE_LANGS} ${X/pt_BR/pt_br}.po
+		${X/uk/ua}.po"
 	done
 	for X in ${LANGS_DOC}; do
-		use linguas_${X} && MAKE_LANGS_DOC="${MAKE_LANGS_DOC} ${X/pt_BR/pt-br}"
+		use linguas_${X} && MAKE_LANGS_DOC="${MAKE_LANGS_DOC} ${X/pt_BR/pt-br}
+		${X/uk/ua}"
 	done
 
 	if [ -d "${WORKDIR}/${LANGS_PKG}" ]; then
