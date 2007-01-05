@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-java3d-bin/blackdown-java3d-bin-1.3.1-r1.ebuild,v 1.4 2006/10/16 23:10:58 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-java3d-bin/blackdown-java3d-bin-1.3.1-r1.ebuild,v 1.5 2007/01/05 20:20:19 caster Exp $
 
 inherit java-pkg
 
@@ -65,7 +65,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "This ebuild now installs into /opt/${PN} and /usr/share/${PN}"
-	einfo 'To use you need to pass the following to java'
-	einfo "-Djava.library.path=\$(java-config -i ${PN}) -cp \$(java-config -p ${PN})"
+	elog "This ebuild now installs into /opt/${PN} and /usr/share/${PN}"
+	elog "To use you need to pass the following to java:"
+	elog "-Djava.library.path=\$(java-config -i ${PN}) -cp \$(java-config -p ${PN})"
 }

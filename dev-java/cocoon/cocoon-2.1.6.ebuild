@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cocoon/cocoon-2.1.6.ebuild,v 1.5 2006/10/05 15:16:11 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cocoon/cocoon-2.1.6.ebuild,v 1.6 2007/01/05 20:24:32 caster Exp $
 
 inherit java-pkg
 
@@ -57,10 +57,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "This ebuild does no longer install the Cocoon webapp into"
-	einfo "any servlet container anymore. Copy /usr/share/${PN}/webapps/${PN}.war"
-	einfo "to your servlet container's webapps directory and restart the"
-	einfo "server."
-	einfo
+	elog "This ebuild does no longer install the Cocoon webapp into"
+	elog "any servlet container anymore. Copy /usr/share/${PN}/webapps/${PN}.war"
+	elog "to your servlet container's webapps directory and restart the"
+	elog "server."
+	echo
 	ewarn "Note: To run in Tomcat its version has to be >= 4.0.4"
 }

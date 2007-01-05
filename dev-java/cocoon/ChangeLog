@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/cocoon
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cocoon/ChangeLog,v 1.10 2006/10/05 15:16:11 gustavoz Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cocoon/ChangeLog,v 1.11 2007/01/05 20:24:32 caster Exp $
+
+  05 Jan 2007; Vlastimil Babka <caster@gentoo.org> cocoon-2.1.6.ebuild:
+  Convert einfo to elog.
 
   05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> cocoon-2.1.6.ebuild:
   Dropping sparc keywords, see #96229

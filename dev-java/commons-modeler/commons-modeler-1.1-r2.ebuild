@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/commons-modeler-1.1-r2.ebuild,v 1.1 2006/12/01 16:09:26 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/commons-modeler-1.1-r2.ebuild,v 1.2 2007/01/05 20:25:49 caster Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -50,6 +50,6 @@ src_install() {
 	use source && java-pkg_dosrc src/java/*
 }
 pkg_postinst() {
-	einfo "Changed to mx4j from sun-jmx due to fetch restrictions"
-	einfo "If you don't like it tell us at java@gentoo.org"
+	elog "Changed to mx4j from sun-jmx due to fetch restrictions"
+	elog "If you don't like it tell us at java@gentoo.org"
 }
