@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX neoengine-0.8.2-gcc41.patch 568 RMD160 42483c4e7a23dd973e7962f00d6abd9dcdd9e15e SHA1 ced2d56b4e47926d4ab41512140ed451a6427f7e SHA256 b672fc46dbde145de1d08161f07ef17520537644103a36752ace6ff1ff4a9d28
 MD5 3c58785fa4510943f47cc4bb098ff08b files/neoengine-0.8.2-gcc41.patch 568
 RMD160 42483c4e7a23dd973e7962f00d6abd9dcdd9e15e files/neoengine-0.8.2-gcc41.patch 568
@@ -18,3 +21,10 @@ SHA256 4e25e53f7298a6ee26457ebba7783cd325f6c5917a7bed4c522dac998249dc68 metadata
 MD5 e02c6c668c021039aea5184321987ed0 files/digest-neoengine-0.8.2 253
 RMD160 5383c644d447eef12c7005da9c51d5465207a777 files/digest-neoengine-0.8.2 253
 SHA256 744749db2a13bfa30fc29a2ed6fd875a0a0c4d4a2d7640718eae1858c08f9598 files/digest-neoengine-0.8.2 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFnkbZdz7hIScOURERAiKrAKCm0d9TwDX3Ss8ZQNzj0RUgaDzqzQCfQm00
+wPaW1VvO7Zh3IbYocdguLO0=
+=55as
+-----END PGP SIGNATURE-----

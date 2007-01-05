@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX neotools-0.8.2-errno.patch 225 RMD160 6321941b6de0d4414bc5460a90eb0858e5f77b05 SHA1 5f1bd20c4cef7d99d388a325adea6f5796caeeea SHA256 68896b2484f08498d276154fa9401b771ad3dfd3c70c6ae3e0c82b5f26a8e6fd
 MD5 b591f75cc80a500311095dfede418f5d files/neotools-0.8.2-errno.patch 225
 RMD160 6321941b6de0d4414bc5460a90eb0858e5f77b05 files/neotools-0.8.2-errno.patch 225
@@ -18,3 +21,10 @@ SHA256 5f768476ed2846445f57c1760d4b9fea61ee4fdc39e0a7efec625176fa611218 metadata
 MD5 22513ce60c81fc4aca05117d840ddf49 files/digest-neotools-0.8.2 247
 RMD160 2afa3b755008c23940e407b2c4a1477a1c6b85e3 files/digest-neotools-0.8.2 247
 SHA256 393e7b354986c2b2728b27ec17ecdc6276f2200d7756c4a51abca6184da91f2d files/digest-neotools-0.8.2 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFnkabdz7hIScOURERAgHDAJ0eQeVn6t815KPN9Wj92VzyVq+vKQCg2a4W
+7AiwEWs10eCOk7f6iSkVMas=
+=I5t0
+-----END PGP SIGNATURE-----
