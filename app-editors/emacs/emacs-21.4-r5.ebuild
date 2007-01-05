@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r5.ebuild,v 1.5 2006/11/26 11:26:01 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r5.ebuild,v 1.6 2007/01/05 14:22:36 opfer Exp $
 
 inherit flag-o-matic eutils alternatives toolchain-funcs
 
@@ -133,6 +133,11 @@ src_install() {
 	done
 	mv ${T}/emacs-${SLOT} ${D}/usr/share/info
 	mv ${T}/dir ${D}/usr/share/info/emacs-${SLOT}
+
+	if has_version 'app-text/aspell' ; then
+		# defaults to aspell if installed
+		elisp-site-file-install ${FILESDIR}/40aspell-gentoo.el
+	fi
 
 	newenvd ${FILESDIR}/60emacs-${SLOT}.envd 60emacs-${SLOT}
 
