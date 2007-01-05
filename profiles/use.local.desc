@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2475 2007/01/05 03:27:11 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2476 2007/01/05 07:47:33 welp Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1207,8 +1207,9 @@ net-im/gaim:meanwhile - Enable meanwhile support for Sametime protocol.
 net-im/gaim:silc - Enable SILC protocol support
 net-im/gaim:xscreensaver - Enable X idle time support instead of gaim idle time.
 net-im/gaim:qq - Enable QQ protocol support.
-net-im/gajim:srv - SRV capabilities
+net-im/gajim:avahi - Enable Zeroconf support
 net-im/gajim:idle - Enable idle module
+net-im/gajim:srv - SRV capabilities
 net-im/gajim:trayicon - Enable the trayicon module
 net-im/gajim:xhtml - Enable XHTML support
 net-im/gnugadu:tlen - Enable Tlen.pl protocol support
