@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/selflinux
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/selflinux/ChangeLog,v 1.14 2005/09/18 06:20:39 chriswhite Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/selflinux/ChangeLog,v 1.15 2007/01/05 23:42:09 kugelfang Exp $
+
+  05 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -selflinux-0.8.1.ebuild,
+  -selflinux-0.10.0.ebuild:
+  -m QA: Removed unused versions.
 
 *selflinux-0.12.1 (18 Sep 2005)
 

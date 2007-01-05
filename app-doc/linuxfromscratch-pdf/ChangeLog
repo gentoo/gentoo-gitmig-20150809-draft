@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/linuxfromscratch-pdf
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-pdf/ChangeLog,v 1.2 2006/08/17 04:39:23 wormo Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-pdf/ChangeLog,v 1.3 2007/01/05 23:38:21 kugelfang Exp $
+
+  05 Jan 2007; Danny van Dyk <kugelfang@gentoo.org>
+  -linuxfromscratch-pdf-6.0.ebuild:
+  -m QA: Removed unused versions.
 
 *linuxfromscratch-pdf-6.2 (16 Aug 2006)
 
