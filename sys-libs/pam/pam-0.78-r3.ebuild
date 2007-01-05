@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r3.ebuild,v 1.4 2007/01/04 19:56:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r3.ebuild,v 1.5 2007/01/05 20:55:11 flameeyes Exp $
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
@@ -355,7 +355,7 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "If you have sshd running, please restart it to avoid possible login issues."
+	elog "If you have sshd running, please restart it to avoid possible login issues."
 	echo
 	ebeep
 	sleep 3
@@ -384,8 +384,8 @@ pkg_postinst() {
 
 	if use pam_console; then
 		echo
-		einfo "If you want to enable the pam_console module, please follow"
-		einfo "the instructions in /usr/share/doc/${PF}/README.pam_console."
+		elog "If you want to enable the pam_console module, please follow"
+		elog "the instructions in /usr/share/doc/${PF}/README.pam_console."
 		echo
 	fi
 }

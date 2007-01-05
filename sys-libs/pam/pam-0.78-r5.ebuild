@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r5.ebuild,v 1.3 2006/09/06 00:28:49 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r5.ebuild,v 1.4 2007/01/05 20:55:11 flameeyes Exp $
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
@@ -190,7 +190,7 @@ src_compile() {
 			--libdir="${S}/lib" || die "Bad BDB ./configure"
 
 		# XXX: hack out O_DIRECT support in db4 for now.
-		#      (Done above now with --disable-o_direct now)
+		#	   (Done above now with --disable-o_direct now)
 
 		make CC="$(tc-getCC)" || die "BDB build failed"
 		make install || die
@@ -259,8 +259,8 @@ src_compile() {
 		# Also edit the configuration file else the wrong include files
 		# get used
 		sed -i -e "s:^#define HAVE_NDBM_H.*$:/* #undef HAVE_NDBM_H */:" \
-		       -e "s:^#define HAVE_DB_H.*$:/* #undef HAVE_DB_H */:" \
-		       _pam_aconf.h
+			   -e "s:^#define HAVE_DB_H.*$:/* #undef HAVE_DB_H */:" \
+			   _pam_aconf.h
 
 	else
 		# Do not link pam_userdb.so to db-1.85 ...
@@ -301,11 +301,11 @@ src_install() {
 				die "${mod_name} module did not build."
 			fi
 			if [[ -n $(ldd "${sec_dir}/${mod_name}"*.so 2>&1 | \
-			           grep "/usr/lib/" | \
-			           grep "/usr/$(get_libdir)/" | \
-			           grep -v "/usr/lib/gcc" | \
-			           grep -v "/usr/$(get_libdir)/gcc" | \
-			           grep -v "libsandbox") ]] ; then
+					   grep "/usr/lib/" | \
+					   grep "/usr/$(get_libdir)/" | \
+					   grep -v "/usr/lib/gcc" | \
+					   grep -v "/usr/$(get_libdir)/gcc" | \
+					   grep -v "libsandbox") ]] ; then
 				echo
 				eerror "ERROR: ${mod_name} have dependencies in /usr."
 				echo
@@ -357,7 +357,7 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "If you have sshd running, please restart it to avoid possible login issues."
+	elog "If you have sshd running, please restart it to avoid possible login issues."
 	echo
 	ebeep
 	sleep 3
@@ -371,7 +371,7 @@ pkg_postinst() {
 			ewarn "is being updated automatically. Your old "
 			ewarn "system-auth will be backed up as:"
 			ewarn
-			ewarn "  ${ROOT}etc/pam.d/system-auth.bak"
+			ewarn "	 ${ROOT}etc/pam.d/system-auth.bak"
 			echo
 
 			cp -pPR ${ROOT}/etc/pam.d/system-auth \
@@ -386,8 +386,8 @@ pkg_postinst() {
 
 	if use pam_console; then
 		echo
-		einfo "If you want to enable the pam_console module, please follow"
-		einfo "the instructions in /usr/share/doc/${PF}/README.pam_console."
+		elog "If you want to enable the pam_console module, please follow"
+		elog "the instructions in /usr/share/doc/${PF}/README.pam_console."
 		echo
 	fi
 }
