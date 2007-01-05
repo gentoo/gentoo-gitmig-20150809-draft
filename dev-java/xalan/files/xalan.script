@@ -1,4 +1,0 @@
-#!/bin/bash
-main_class=org.apache.xalan.xslt.Process
-classpath=$(java-config -p xalan)
-exec java -cp ${classpath} ${main_class} "${@}"
