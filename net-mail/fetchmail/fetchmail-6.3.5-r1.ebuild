@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.5-r1.ebuild,v 1.2 2007/01/05 08:59:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.5-r1.ebuild,v 1.3 2007/01/05 16:52:04 ticho Exp $
 
 inherit eutils
 
@@ -16,14 +16,11 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 ~x86-fbsd"
 IUSE="ssl nls ipv6 kerberos krb4 hesiod"
 
-RDEPEND="hesiod? ( net-dns/hesiod )
+DEPEND="hesiod? ( net-dns/hesiod )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	kerberos? ( app-crypt/mit-krb5 )
 	nls? ( sys-devel/gettext )
 	elibc_FreeBSD? ( sys-libs/com_err )"
-
-DEPEND="${RDEPEND}
-	sys-devel/autoconf"
 
 src_unpack() {
 	unpack ${A} || die "unpack failed"
@@ -34,8 +31,6 @@ src_unpack() {
 
 	# fix log weirdness
 	epatch ${FILESDIR}/${PN}-6.3.5-preserve-logging-fd.patch
-
-	autoconf
 }
 
 src_compile() {
@@ -55,7 +50,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	emake DESTDIR="${D}" install || die
 
 	dohtml *.html
 

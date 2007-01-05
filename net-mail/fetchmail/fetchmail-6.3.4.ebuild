@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.4.ebuild,v 1.13 2007/01/05 08:59:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.4.ebuild,v 1.14 2007/01/05 16:52:04 ticho Exp $
 
 inherit eutils
 
@@ -15,14 +15,11 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="ssl nls ipv6 kerberos krb4 hesiod"
 
-RDEPEND="hesiod? ( net-dns/hesiod )
+DDEPEND="hesiod? ( net-dns/hesiod )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	kerberos? ( app-crypt/mit-krb5 )
 	nls? ( sys-devel/gettext )
 	elibc_FreeBSD? ( sys-libs/com_err )"
-
-DEPEND="${RDEPEND}
-	sys-devel/autoconf"
 
 src_unpack() {
 	unpack ${A} || die "unpack failed"
@@ -30,8 +27,6 @@ src_unpack() {
 
 	# this patch fixes bug #34788 (ticho@gentoo.org 2004-09-03)
 	epatch ${FILESDIR}/${PN}-6.2.5-broken-headers.patch || die
-
-	autoconf
 }
 
 src_compile() {
@@ -51,13 +46,14 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	emake DESTDIR="${D}" install || die "Install failed"
 
 	dohtml *.html
 
 	dodoc FAQ FEATURES ABOUT-NLS NEWS NOTES README \
 		README.NTLM README.SSL TODO COPYING
 
+	# Put installed manpages to correct place
 	doman ${D}/usr/share/man/*.1
 	rm -f ${D}/usr/share/man/*.1
 
