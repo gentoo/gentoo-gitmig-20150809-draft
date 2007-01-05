@@ -1,0 +1,10 @@
+# ChangeLog for dev-lang/lua-wrapper
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua-wrapper/ChangeLog,v 1.1 2007/01/05 18:13:15 mabi Exp $
+
+*lua-wrapper-1 (05 Jan 2007)
+
+  05 Jan 2007; Matti Bickel <mabi@gentoo.org> +files/lua-wrapper-1.sh,
+  +lua-wrapper-1.ebuild:
+  Initial commit
+
