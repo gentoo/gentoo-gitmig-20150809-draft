@@ -1,6 +1,9 @@
 # ChangeLog for media-video/cpdvd
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cpdvd/ChangeLog,v 1.10 2006/07/05 03:05:19 tsunam Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/cpdvd/ChangeLog,v 1.11 2007/01/05 20:33:43 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> cpdvd-1.10.ebuild:
+  Remove src_compile.
 
   05 Jul 2006; Joshua Jackson <tsunam@gentoo.org> cpdvd-1.10.ebuild:
   Stable x86; bug #138866
