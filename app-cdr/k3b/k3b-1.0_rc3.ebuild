@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0_rc3.ebuild,v 1.1 2007/01/04 12:44:39 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0_rc3.ebuild,v 1.2 2007/01/05 16:04:51 flameeyes Exp $
 
 inherit kde eutils
 
@@ -138,7 +138,7 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "Make sure you have proper read/write permissions on the cdrom device(s)."
-	einfo "Usually, it is sufficient to be in the cdrom group."
+	elog "Make sure you have proper read/write permissions on the cdrom device(s)."
+	elog "Usually, it is sufficient to be in the cdrom group."
 	echo
 }

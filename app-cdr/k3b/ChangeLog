@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.177 2007/01/04 12:44:39 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.178 2007/01/05 16:04:51 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> k3b-0.12.14.ebuild,
+  k3b-0.12.17.ebuild, k3b-1.0_beta1.ebuild, k3b-1.0_rc2.ebuild,
+  k3b-1.0_rc3.ebuild:
+  Convert to use elog.
 
 *k3b-1.0_rc3 (04 Jan 2007)
 
