@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vmware.eclass,v 1.18 2006/12/01 09:38:11 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vmware.eclass,v 1.19 2007/01/05 17:52:20 ikelos Exp $
 
 # This eclass is for all vmware-* ebuilds in the tree and should contain all
 # of the common components across the multiple packages.
 
 # Only one package per "product" is allowed to be installed at any given time.
 
-inherit eutils
+inherit pax-utils eutils
 
 EXPORT_FUNCTIONS pkg_preinst pkg_postinst pkg_setup src_install src_unpack pkg_postrm
 
@@ -140,6 +140,11 @@ vmware_src_unpack() {
 				./update vmxdebug ../lib/bin-debug/vmware-vmx || die
 			fi
 		fi
+
+		# Remove PAX MPROTECT flag from all applicable files in /bin, /sbin for
+		# the vmware package only (since modules, tools and console should not
+		# need to generate code on the fly in memory).
+		[[ "${product}" == "vmware" ]] && pax-mark -m $(list-paxables ${S}/{bin,sbin}/{vmware-serverd,vmware-vmx})
 
 		# Run through any patches that might need to be applied
 		cd "${S}"
