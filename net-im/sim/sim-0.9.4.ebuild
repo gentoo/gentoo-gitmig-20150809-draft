@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.4.ebuild,v 1.5 2006/09/25 11:25:18 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.4.ebuild,v 1.6 2007/01/05 04:37:25 flameeyes Exp $
 
-inherit kde-functions eutils debug flag-o-matic
+inherit kde-functions eutils flag-o-matic
 
 DESCRIPTION="Simple Instant Messenger (with KDE support). ICQ/AIM/Jabber/MSN/Yahoo."
 HOMEPAGE="http://sim-im.org/"
@@ -11,13 +11,13 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="kde spell ssl"
+IUSE="debug kde spell ssl"
 
 # kdebase-data provides the icon "licq.png"
 RDEPEND="kde? ( kde-base/kdelibs
-			    || ( kde-base/kdebase-data kde-base/kdebase ) )
+				|| ( kde-base/kdebase-data kde-base/kdebase ) )
 		 !kde? ( $(qt_min_version 3)
-		         spell? ( app-text/aspell ) )
+				 spell? ( app-text/aspell ) )
 		 ssl? ( dev-libs/openssl )
 		 dev-libs/libxml2
 		 dev-libs/libxslt
