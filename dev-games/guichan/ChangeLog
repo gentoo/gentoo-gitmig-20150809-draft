@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/guichan
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/guichan/ChangeLog,v 1.7 2006/08/20 05:11:05 mr_bones_ Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/guichan/ChangeLog,v 1.8 2007/01/05 01:08:19 nyhm Exp $
+
+  05 Jan 2007; Tristan Heaven <nyhm@gentoo.org> guichan-0.5.0.ebuild:
+  Add glut USE flag
 
 *guichan-0.5.0 (20 Aug 2006)
 
