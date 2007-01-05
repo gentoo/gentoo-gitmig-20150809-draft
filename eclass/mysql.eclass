@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.60 2007/01/05 11:09:34 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.61 2007/01/05 22:41:49 vivo Exp $
 # kate: encoding utf-8; eol unix;
 # kate: indent-width 4; mixedindent off; remove-trailing-space on; space-indent off;
 # kate: word-wrap-column 80; word-wrap off;
@@ -347,8 +347,7 @@ configure_40_41_50() {
 		# --with-vio is not needed anymore, it's on by default and
 		# has been removed from configure
 		mysql_version_is_at_least "5.0.4" || myconf="${myconf} --with-vio"
-		if mysql_version_is_at_least "5.0.6" ; then
-			# myconf="${myconf} --with-yassl"
+		if mysql_version_is_at_least "5.2.0" ; then
 			myconf="${myconf} --with-ssl"
 		else
 			myconf="${myconf} --with-openssl"
