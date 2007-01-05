@@ -1,6 +1,20 @@
 # ChangeLog for dev-db/mysql-community
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/ChangeLog,v 1.9 2007/01/05 00:20:07 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/ChangeLog,v 1.10 2007/01/05 11:58:49 vivo Exp $
+
+*mysql-community-5.1.15_alpha20061231-r61 (05 Jan 2007)
+*mysql-community-5.1.14_beta-r1 (05 Jan 2007)
+*mysql-community-5.0.27-r1 (05 Jan 2007)
+
+  05 Jan 2007; Francesco Riosa <vivo@gentoo.org> -files/mysql.conf.d,
+  -files/mysql.rc6, -files/mysqlmanager.conf.d, -files/mysqlmanager.rc6,
+  -mysql-community-5.0.27.ebuild, +mysql-community-5.0.27-r1.ebuild,
+  -mysql-community-5.1.14_beta.ebuild,
+  +mysql-community-5.1.14_beta-r1.ebuild,
+  -mysql-community-5.1.15_alpha20061231-r60.ebuild,
+  +mysql-community-5.1.15_alpha20061231-r61.ebuild:
+  force revision bump, needed to fix/discover bugs introuduced during last
+  working days.
 
   05 Jan 2007; Francesco Riosa <vivo@gentoo.org>
   mysql-community-5.0.27.ebuild, mysql-community-5.1.14_beta.ebuild,

@@ -1,6 +1,24 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.383 2007/01/05 00:17:35 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.384 2007/01/05 12:03:30 vivo Exp $
+
+*mysql-5.0.34_alpha20070101-r61 (05 Jan 2007)
+*mysql-5.0.30-r1 (05 Jan 2007)
+*mysql-5.0.26-r2 (05 Jan 2007)
+*mysql-4.1.23_alpha20070101-r61 (05 Jan 2007)
+*mysql-4.1.22-r1 (05 Jan 2007)
+*mysql-4.0.27-r1 (05 Jan 2007)
+
+  05 Jan 2007; Francesco Riosa <vivo@gentoo.org> -files/mysql.conf.d,
+  -files/mysql.rc6, -files/mysqlmanager.conf.d, -files/mysqlmanager.rc6,
+  -mysql-4.0.27.ebuild, +mysql-4.0.27-r1.ebuild, -mysql-4.1.22.ebuild,
+  +mysql-4.1.22-r1.ebuild, -mysql-4.1.23_alpha20070101-r60.ebuild,
+  +mysql-4.1.23_alpha20070101-r61.ebuild, -mysql-5.0.26-r1.ebuild,
+  +mysql-5.0.26-r2.ebuild, -mysql-5.0.30.ebuild, +mysql-5.0.30-r1.ebuild,
+  -mysql-5.0.34_alpha20070101-r60.ebuild,
+  +mysql-5.0.34_alpha20070101-r61.ebuild:
+  force revision bump, needed to fix/discover bugs introuduced during last 
+  working days.
 
   05 Jan 2007; Francesco Riosa <vivo@gentoo.org> mysql-4.0.25-r2.ebuild,
   mysql-4.0.27.ebuild, mysql-4.1.21.ebuild, mysql-4.1.22.ebuild,
