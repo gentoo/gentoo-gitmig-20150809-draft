@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/jmode
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jmode/ChangeLog,v 1.4 2005/01/01 14:31:52 eradicator Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jmode/ChangeLog,v 1.5 2007/01/05 16:20:41 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> jmode-0.6.7.ebuild:
+  Convert to use elog.
 
 *jmode-0.6.7 (02 Sep 2003)
 

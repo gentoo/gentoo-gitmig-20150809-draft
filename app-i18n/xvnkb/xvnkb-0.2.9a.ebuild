@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xvnkb/xvnkb-0.2.9a.ebuild,v 1.2 2006/10/14 10:43:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xvnkb/xvnkb-0.2.9a.ebuild,v 1.3 2007/01/05 16:37:57 flameeyes Exp $
 
 inherit eutils
 
@@ -49,12 +49,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Remember to"
-	einfo "$ export LANG=en_US.UTF-8"
-	einfo "(or any other UTF-8 locale) and"
-	einfo "$ export LD_PRELOAD=${DESTTREE}/lib/xvnkb.so"
-	einfo "before starting X Window"
-	einfo "More documents are in /usr/share/doc/${PF}"
+	elog "Remember to"
+	elog "$ export LANG=en_US.UTF-8"
+	elog "(or any other UTF-8 locale) and"
+	elog "$ export LD_PRELOAD=${DESTTREE}/lib/xvnkb.so"
+	elog "before starting X Window"
+	elog "More documents are in /usr/share/doc/${PF}"
 	ewarn "Programs with suid/sgid will have LD_PRELOAD cleared"
 	ewarn "You have to unset suid/sgid to use with xvnkb"
 }

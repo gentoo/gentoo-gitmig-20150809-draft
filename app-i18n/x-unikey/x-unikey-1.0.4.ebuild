@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/x-unikey/x-unikey-1.0.4.ebuild,v 1.1 2006/05/06 12:37:24 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/x-unikey/x-unikey-1.0.4.ebuild,v 1.2 2007/01/05 16:36:16 flameeyes Exp $
 
 inherit eutils
 
@@ -46,15 +46,15 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo ""
-	einfo "Go to /etc/env.d/01x-unikey and uncomment appropriate lines"
-	einfo "to enable x-unikey"
-	einfo ""
+	elog ""
+	elog "Go to /etc/env.d/01x-unikey and uncomment appropriate lines"
+	elog "to enable x-unikey"
+	elog ""
 	if use gtk; then
 		gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/gtk.immodules
-		einfo "If you want to use x-unikey as the default gtk+ input method,"
-		einfo "change GTK_IM_MODULE in /etc/env.d/01x-unikey to \"unikey\""
-		einfo ""
+		elog "If you want to use x-unikey as the default gtk+ input method,"
+		elog "change GTK_IM_MODULE in /etc/env.d/01x-unikey to \"unikey\""
+		elog ""
 	fi
 }
 

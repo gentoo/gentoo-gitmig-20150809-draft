@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-cvs
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-cvs/ChangeLog,v 1.14 2006/06/07 20:50:58 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-cvs/ChangeLog,v 1.15 2007/01/05 16:27:09 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> scim-cvs-1.3.3.ebuild:
+  Convert to use elog.
 
   07 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> scim-cvs-1.3.3.ebuild:
   Change gnome useflag in IUSE to gtk.

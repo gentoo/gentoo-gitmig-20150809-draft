@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fbiterm/fbiterm-0.5.ebuild,v 1.9 2006/10/29 15:50:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fbiterm/fbiterm-0.5.ebuild,v 1.10 2007/01/05 16:16:19 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -42,22 +42,22 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "1. If you haven't created your locale, run localedef."
-	einfo "# localedef -v -c -i en_GB -f UTF-8 en_GB.UTF-8"
-	einfo "(If you want to use other locales such as Japanese, replace"
-	einfo "en_GB with ja_JP and en_GB.UTF-8 with ja_JP.UTF-8, respectively)"
-	einfo
-	einfo "2. Set enviroment variable."
-	einfo "% export LC_CTYPE=en_GB.UTF-8 (sh, bash, zsh, ...)"
-	einfo "> setenv LC_CTYPE en_GB.UTF-8 (csh, tcsh, ...)"
-	einfo "(Again, if you want to use Japanese locale, create ja_JP.UTF-8"
-	einfo " locale by localedef and set LC_CTYPE to ja_JP.UTF-8)"
-	einfo
-	einfo "3. Run unicode_start."
-	einfo "% unicode_start"
-	einfo
-	einfo "4. Run fbiterm."
-	einfo "% fbiterm"
-	einfo
+	elog
+	elog "1. If you haven't created your locale, run localedef."
+	elog "# localedef -v -c -i en_GB -f UTF-8 en_GB.UTF-8"
+	elog "(If you want to use other locales such as Japanese, replace"
+	elog "en_GB with ja_JP and en_GB.UTF-8 with ja_JP.UTF-8, respectively)"
+	elog
+	elog "2. Set enviroment variable."
+	elog "% export LC_CTYPE=en_GB.UTF-8 (sh, bash, zsh, ...)"
+	elog "> setenv LC_CTYPE en_GB.UTF-8 (csh, tcsh, ...)"
+	elog "(Again, if you want to use Japanese locale, create ja_JP.UTF-8"
+	elog " locale by localedef and set LC_CTYPE to ja_JP.UTF-8)"
+	elog
+	elog "3. Run unicode_start."
+	elog "% unicode_start"
+	elog
+	elog "4. Run fbiterm."
+	elog "% fbiterm"
+	elog
 }

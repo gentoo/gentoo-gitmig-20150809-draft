@@ -1,6 +1,6 @@
 # Copyright 2000-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.4.5.ebuild,v 1.10 2007/01/04 00:26:25 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.4.5.ebuild,v 1.11 2007/01/05 16:33:30 flameeyes Exp $
 
 inherit kde-functions multilib toolchain-funcs
 
@@ -43,26 +43,26 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "If you want to use Chinese interface, edit your startup script"
-	einfo "such as .xinitrc to incorporate"
-	einfo
-	einfo '	export XMODIFIERS=@im=SCIM'
-	einfo ' export QT_IM_MODULE=scim'
-	einfo ' export GTK_IM_MODULE=scim'
-	einfo '	export LANG="zh_CN.GBK"'
-	einfo '	startkde'
-	einfo
-	einfo "or if you prefer English interface,"
-	einfo
-	einfo '	export XMODIFIERS=@im=SCIM'
-	einfo ' export QT_IM_MODULE=scim'
-	einfo ' export GTK_IM_MODULE=scim'
-	einfo '	export LC_CTYPE="zh_CN.GBK"'
-	einfo '	startkde'
-	einfo
-	einfo "and start skim and SCIM by"
-	einfo
-	einfo "	% skim -d"
-	einfo
+	elog
+	elog "If you want to use Chinese interface, edit your startup script"
+	elog "such as .xinitrc to incorporate"
+	elog
+	elog '	export XMODIFIERS=@im=SCIM'
+	elog ' export QT_IM_MODULE=scim'
+	elog ' export GTK_IM_MODULE=scim'
+	elog '	export LANG="zh_CN.GBK"'
+	elog '	startkde'
+	elog
+	elog "or if you prefer English interface,"
+	elog
+	elog '	export XMODIFIERS=@im=SCIM'
+	elog ' export QT_IM_MODULE=scim'
+	elog ' export GTK_IM_MODULE=scim'
+	elog '	export LC_CTYPE="zh_CN.GBK"'
+	elog '	startkde'
+	elog
+	elog "and start skim and SCIM by"
+	elog
+	elog "	% skim -d"
+	elog
 }

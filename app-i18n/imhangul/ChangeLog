@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/imhangul
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/ChangeLog,v 1.25 2006/10/14 09:16:30 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/ChangeLog,v 1.26 2007/01/05 16:20:03 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  imhangul-0.9.11-r1.ebuild, imhangul-0.9.12.ebuild, imhangul-0.9.13.ebuild:
+  Convert to use elog.
 
   14 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   imhangul-0.9.11-r1.ebuild, imhangul-0.9.12.ebuild, imhangul-0.9.13.ebuild:

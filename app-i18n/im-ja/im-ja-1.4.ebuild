@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.4.ebuild,v 1.6 2006/05/21 11:13:06 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.4.ebuild,v 1.7 2007/01/05 16:19:15 flameeyes Exp $
 
 inherit gnome2 eutils
 
@@ -66,14 +66,14 @@ pkg_postinst() {
 		gtk-query-immodules-2.0 > ${ROOT}/$(get_gtk_confdir)/gtk.immodules
 	fi
 	gnome2_pkg_postinst
-	einfo
-	einfo "This version of im-ja comes with experimental XIM support."
-	einfo "If you'd like to try it out, run im-ja-xim-server and set"
-	einfo "environment variable XMODIFIERS to @im=im-ja-xim-server"
-	einfo "e.g.)"
-	einfo "\t$ export XMODIFIERS=@im=im-ja-xim-server (sh)"
-	einfo "\t> setenv XMODIFIERS @im=im-ja-xim-server (csh)"
-	einfo
+	elog
+	elog "This version of im-ja comes with experimental XIM support."
+	elog "If you'd like to try it out, run im-ja-xim-server and set"
+	elog "environment variable XMODIFIERS to @im=im-ja-xim-server"
+	elog "e.g.)"
+	elog "\t$ export XMODIFIERS=@im=im-ja-xim-server (sh)"
+	elog "\t> setenv XMODIFIERS @im=im-ja-xim-server (csh)"
+	elog
 }
 
 pkg_postrm() {

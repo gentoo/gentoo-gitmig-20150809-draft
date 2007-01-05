@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimf-canna/iiimf-canna-0.3.0.ebuild,v 1.4 2005/09/25 00:08:17 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimf-canna/iiimf-canna-0.3.0.ebuild,v 1.5 2007/01/05 16:17:55 flameeyes Exp $
 
 DESCRIPTION="Canna Language Engine input method module for IIIMF"
 HOMEPAGE="http://www.momonga-linux.org/~famao/iiimf-skk/"
@@ -36,10 +36,10 @@ src_install() {
 
 pkg_postinst() {
 
-	einfo
-	einfo "To use this module, follow these steps:"
-	einfo "(1) run /etc/init.d/iiim start (as root)"
-	einfo "(2) run iiimf-canna (as normal user)"
-	einfo "(3) export XMODIFIERS='@im=htt' (setenv XMODIFIERS '@im=htt' in csh)"
-	einfo
+	elog
+	elog "To use this module, follow these steps:"
+	elog "(1) run /etc/init.d/iiim start (as root)"
+	elog "(2) run iiimf-canna (as normal user)"
+	elog "(3) export XMODIFIERS='@im=htt' (setenv XMODIFIERS '@im=htt' in csh)"
+	elog
 }

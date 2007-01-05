@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/scim-bridge-0.4.7.ebuild,v 1.4 2006/11/29 05:13:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/scim-bridge-0.4.7.ebuild,v 1.5 2007/01/05 16:26:15 flameeyes Exp $
 
 inherit eutils qt3
 
@@ -53,11 +53,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "If you would like to use ${PN} as default instead of scim, set"
-	einfo " $ export GTK_IM_MODULE=scim-bridge"
-	einfo " $ export QT_IM_MODULE=scim-bridge"
-	einfo
+	elog
+	elog "If you would like to use ${PN} as default instead of scim, set"
+	elog " $ export GTK_IM_MODULE=scim-bridge"
+	elog " $ export QT_IM_MODULE=scim-bridge"
+	elog
 	[ -x /usr/bin/gtk-query-immodules-2.0 ] && gtk-query-immodules-2.0 > "${ROOT}$(get_gtk_confdir)/gtk.immodules"
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/atokx2
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/ChangeLog,v 1.3 2005/06/19 05:08:28 usata Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/ChangeLog,v 1.4 2007/01/05 16:11:19 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> atokx2-17.0.ebuild,
+  atokx2-17.0-r1.ebuild, atokx2-17.0-r2.ebuild:
+  Convert to use elog.
 
 *atokx2-17.0-r2 (19 Jun 2005)
 

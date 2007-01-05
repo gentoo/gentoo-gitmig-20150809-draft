@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/iiimf-skk
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimf-skk/ChangeLog,v 1.5 2005/09/25 00:04:30 matsuu Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimf-skk/ChangeLog,v 1.6 2007/01/05 16:18:31 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  iiimf-skk-0.1.22.95-r1.ebuild:
+  Convert to use elog.
 
 *iiimf-skk-0.1.22.95-r1 (25 Sep 2005)
 

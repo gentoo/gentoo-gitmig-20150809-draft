@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-m17n/scim-m17n-0.2.1.ebuild,v 1.1 2006/10/19 00:00:11 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-m17n/scim-m17n-0.2.1.ebuild,v 1.2 2007/01/05 16:29:00 flameeyes Exp $
 
 DESCRIPTION="scim-m17n is an input module for Smart Common Input Method (SCIM) which uses m17n as backend"
 HOMEPAGE="http://www.scim-im.org/projects/imengines"
@@ -21,12 +21,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "To use SCIM with both GTK2 and XIM, you should use the following"
-	einfo "in your user startup scripts such as .gnomerc or .xinitrc:"
-	einfo
-	einfo "LANG='your_language' scim -d"
-	einfo "export XMODIFIERS=@im=SCIM"
-	einfo "export GTK_IM_MODULE=\"scim\""
-	einfo
+	elog
+	elog "To use SCIM with both GTK2 and XIM, you should use the following"
+	elog "in your user startup scripts such as .gnomerc or .xinitrc:"
+	elog
+	elog "LANG='your_language' scim -d"
+	elog "export XMODIFIERS=@im=SCIM"
+	elog "export GTK_IM_MODULE=\"scim\""
+	elog
 }

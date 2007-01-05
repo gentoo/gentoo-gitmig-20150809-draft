@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/skkfep
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkfep/ChangeLog,v 1.6 2005/09/09 16:45:51 agriffis Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkfep/ChangeLog,v 1.7 2007/01/05 16:34:52 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> skkfep-0.87.ebuild:
+  Convert to use elog.
 
   09 Sep 2005; Aron Griffis <agriffis@gentoo.org> skkfep-0.86c.ebuild:
   Mark 0.86c stable on alpha

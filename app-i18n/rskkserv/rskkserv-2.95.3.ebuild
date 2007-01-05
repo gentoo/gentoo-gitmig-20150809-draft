@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.95.3.ebuild,v 1.4 2006/10/14 10:26:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.95.3.ebuild,v 1.5 2007/01/05 16:23:50 flameeyes Exp $
 
 inherit ruby eutils
 
@@ -56,12 +56,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "If you want to add auxiliary dictionaries (e.g. SKK-JISYO.JIS2,"
-	einfo "SKK-JISYO.jinmei, SKK-JISYO.2ch and so on) you need to emerge"
-	einfo "app-i18n/skk-jisyo-extra and uncomment dictionary entries in"
-	einfo "/etc/rskkserv.conf manually."
-	#einfo "See /usr/share/doc/${PF}/rskkserv.conf.sample.gz"
-	#einfo "for an example of multiple dictionaries."
-	einfo
+	elog
+	elog "If you want to add auxiliary dictionaries (e.g. SKK-JISYO.JIS2,"
+	elog "SKK-JISYO.jinmei, SKK-JISYO.2ch and so on) you need to emerge"
+	elog "app-i18n/skk-jisyo-extra and uncomment dictionary entries in"
+	elog "/etc/rskkserv.conf manually."
+	#elog "See /usr/share/doc/${PF}/rskkserv.conf.sample.gz"
+	#elog "for an example of multiple dictionaries."
+	elog
 }

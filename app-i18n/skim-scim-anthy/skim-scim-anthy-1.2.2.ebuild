@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim-scim-anthy/skim-scim-anthy-1.2.2.ebuild,v 1.1 2006/11/16 17:16:09 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim-scim-anthy/skim-scim-anthy-1.2.2.ebuild,v 1.2 2007/01/05 16:34:07 flameeyes Exp $
 
 inherit kde
 
@@ -22,13 +22,13 @@ RDEPEND="${DEPEND}
 PATCHES="${FILESDIR}/${PN}-1.2.1-qt335.patch"
 
 pkg_postinst() {
-	einfo
-	einfo "To use skim, you should use the following in your user startup scripts"
-	einfo "such as .gnomerc or .xinitrc:"
-	einfo
-	einfo "LANG='your_language' skim -d"
-	einfo "export XMODIFIERS=@im=SCIM"
-	einfo "export GTK_IM_MODULE=scim"
-	einfo "export QT_IM_MODULE=scim"
-	einfo
+	elog
+	elog "To use skim, you should use the following in your user startup scripts"
+	elog "such as .gnomerc or .xinitrc:"
+	elog
+	elog "LANG='your_language' skim -d"
+	elog "export XMODIFIERS=@im=SCIM"
+	elog "export GTK_IM_MODULE=scim"
+	elog "export QT_IM_MODULE=scim"
+	elog
 }

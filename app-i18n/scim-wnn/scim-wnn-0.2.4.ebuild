@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-wnn/scim-wnn-0.2.4.ebuild,v 1.3 2005/07/07 03:08:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-wnn/scim-wnn-0.2.4.ebuild,v 1.4 2007/01/05 16:32:48 flameeyes Exp $
 
 DESCRIPTION="Japanese input method Wnn IMEngine for SCIM"
 HOMEPAGE="http://nop.net-p.org/modules/pukiwiki/index.php?%5B%5Bscim-wnn%5D%5D"
@@ -31,13 +31,13 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "To use SCIM with both GTK2 and XIM, you should use the following"
-	einfo "in your user startup scripts such as .gnomerc or .xinitrc:"
-	einfo
-	einfo "LANG='your_language' scim -d"
-	einfo "export XMODIFIERS=@im=SCIM"
-	einfo
+	elog
+	elog "To use SCIM with both GTK2 and XIM, you should use the following"
+	elog "in your user startup scripts such as .gnomerc or .xinitrc:"
+	elog
+	elog "LANG='your_language' scim -d"
+	elog "export XMODIFIERS=@im=SCIM"
+	elog
 	if ! use freewnn ; then
 	ewarn
 	ewarn "You disabled freewnn USE flag."

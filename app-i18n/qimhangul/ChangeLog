@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/qimhangul
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/qimhangul/ChangeLog,v 1.5 2005/12/04 03:40:31 usata Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/qimhangul/ChangeLog,v 1.6 2007/01/05 16:22:36 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> qimhangul-0.0.2.ebuild,
+  qimhangul-0.0.3.ebuild:
+  Convert to use elog.
 
 *qimhangul-0.0.3 (04 Dec 2005)
 

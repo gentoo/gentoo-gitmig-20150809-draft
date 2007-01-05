@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-3.4.ebuild,v 1.1 2006/10/07 05:04:50 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-3.4.ebuild,v 1.2 2007/01/05 16:17:08 flameeyes Exp $
 
 DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
 HOMEPAGE="http://www.fcitx.org/"
@@ -31,14 +31,14 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "You should export the following variables to use fcitx"
-	einfo " export XMODIFIERS=\"@im=fcitx\""
-	einfo " export XIM=fcitx"
-	einfo " export XIM_PROGRAM=fcitx"
-	einfo ""
-	einfo "If you want to use WuBi or ErBi"
-	einfo " cp /usr/share/fcitx/data/wbx.mb ~/.fcitx"
-	einfo " cp /usr/share/fcitx/data/erbi.mb ~/.fcitx"
-	einfo " cp /usr/share/fcitx/data/tables.conf ~/.fcitx"
-	einfo ""
+	elog "You should export the following variables to use fcitx"
+	elog " export XMODIFIERS=\"@im=fcitx\""
+	elog " export XIM=fcitx"
+	elog " export XIM_PROGRAM=fcitx"
+	elog ""
+	elog "If you want to use WuBi or ErBi"
+	elog " cp /usr/share/fcitx/data/wbx.mb ~/.fcitx"
+	elog " cp /usr/share/fcitx/data/erbi.mb ~/.fcitx"
+	elog " cp /usr/share/fcitx/data/tables.conf ~/.fcitx"
+	elog ""
 }

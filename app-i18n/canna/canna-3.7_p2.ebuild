@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_p2.ebuild,v 1.15 2006/08/20 14:14:09 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_p2.ebuild,v 1.16 2007/01/05 16:14:10 flameeyes Exp $
 
 inherit cannadic eutils multilib
 
@@ -95,7 +95,7 @@ src_install() {
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/canna.initd canna || die
 	insinto /etc/conf.d ; newins ${FILESDIR}/canna.confd canna || die
-	insinto /etc/       ; newins ${FILESDIR}/canna.hosts hosts.canna || die
+	insinto /etc/		; newins ${FILESDIR}/canna.hosts hosts.canna || die
 	keepdir /var/log/canna/ || die
 
 	# for backward compatibility
@@ -112,10 +112,10 @@ src_install() {
 
 pkg_postinst() {
 	update-cannadic-dir
-	einfo
-	einfo "Canna dictionary format has been changed."
-	einfo "You should rebuild app-dict/canna-* after emerge."
-	einfo
+	elog
+	elog "Canna dictionary format has been changed."
+	elog "You should rebuild app-dict/canna-* after emerge."
+	elog
 }
 
 pkg_prerm() {

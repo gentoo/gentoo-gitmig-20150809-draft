@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jmode/jmode-0.6.7.ebuild,v 1.6 2005/01/01 14:31:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jmode/jmode-0.6.7.ebuild,v 1.7 2007/01/05 16:20:41 flameeyes Exp $
 
 DESCRIPTION="a Japanese IME supporting Anthy"
 HOMEPAGE="http://anthy.sourceforge.jp/"
@@ -28,8 +28,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "jmode is deprecated and not supported by upstream anymore."
-	einfo " Please consider switching to app-i18n/uim."
-	einfo
+	elog
+	elog "jmode is deprecated and not supported by upstream anymore."
+	elog " Please consider switching to app-i18n/uim."
+	elog
 }

@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/iiimf-canna
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimf-canna/ChangeLog,v 1.4 2005/09/25 00:08:17 matsuu Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimf-canna/ChangeLog,v 1.5 2007/01/05 16:17:55 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  iiimf-canna-0.3.0.ebuild:
+  Convert to use elog.
 
   25 Sep 2005; MATSUU Takuto <matsuu@gentoo.org> iiimf-canna-0.3.0.ebuild:
   depricated gtk2 USE flag. Bug #106560.

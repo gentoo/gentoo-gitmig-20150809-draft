@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4-r3.ebuild,v 1.1 2005/10/02 05:12:24 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4-r3.ebuild,v 1.2 2007/01/05 16:37:22 flameeyes Exp $
 
 inherit kde-functions eutils
 
@@ -60,10 +60,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "XSIM needs write access to /usr/lib/xsim/dat/chardb, so if you"
-	einfo "not running it as root, you need to do the following:"
-	echo
-	einfo "  cp -r /usr/lib/xsim/dat \${HOME}/.xsim"
-	einfo "  sed -i \"s#DICT_LOCAL.*#DICT_LOCAL \${HOME}/.xsim#\" > \${HOME}/.xsim/xsimrc"
+	elog "XSIM needs write access to /usr/lib/xsim/dat/chardb, so if you"
+	elog "not running it as root, you need to do the following:"
+	elog
+	elog "	cp -r /usr/lib/xsim/dat \${HOME}/.xsim"
+	elog "	sed -i \"s#DICT_LOCAL.*#DICT_LOCAL \${HOME}/.xsim#\" > \${HOME}/.xsim/xsimrc"
 	echo
 }

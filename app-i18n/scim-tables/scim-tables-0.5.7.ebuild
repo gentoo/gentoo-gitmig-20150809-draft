@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.5.7.ebuild,v 1.1 2006/11/04 16:44:07 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.5.7.ebuild,v 1.2 2007/01/05 16:32:08 flameeyes Exp $
 
 inherit kde-functions autotools eutils
 
@@ -29,10 +29,10 @@ DEPEND="${RDEPEND}
 RESTRICT="confcache"
 
 pkg_setup() {
-	einfo "Not all languages are going to be compiled."
-	einfo "Please set LINGUAS to your preferred language(s)."
-	einfo "Supported LINGUAS values are:"
-	einfo "${LANGS}"
+	elog "Not all languages are going to be compiled."
+	elog "Please set LINGUAS to your preferred language(s)."
+	elog "Supported LINGUAS values are:"
+	elog "${LANGS}"
 }
 
 src_unpack() {
@@ -47,7 +47,7 @@ src_unpack() {
 src_compile() {
 	strip-linguas ${LANGS}
 	local use_languages="additional ${LINGUAS}"
-	einfo "Languages being compiled are: ${use_languages}"
+	elog "Languages being compiled are: ${use_languages}"
 
 	for m in Makefile.in Makefile.am ; do
 		sed -e "/^SUBDIRS/s/.*/SUBDIRS = ${use_languages}/g" \

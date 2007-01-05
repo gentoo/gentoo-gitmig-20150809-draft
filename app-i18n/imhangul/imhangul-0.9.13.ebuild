@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/imhangul-0.9.13.ebuild,v 1.2 2006/10/14 09:16:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/imhangul-0.9.13.ebuild,v 1.3 2007/01/05 16:20:03 flameeyes Exp $
 
 IUSE=""
 
@@ -39,12 +39,12 @@ src_install() {
 pkg_postinst() {
 	gtk-query-immodules-2.0 > ${ROOT}$(get_gtk_confdir)/gtk.immodules
 
-	einfo ""
-	einfo "If you want to use one of the module as a default input method, "
-	einfo ""
-	einfo "export GTK_IM_MODULE=hangul2		// 2 input type"
-	einfo "export GTK_IM_MODULE=hangul3f	// 3 input type"
-	einfo ""
+	elog ""
+	elog "If you want to use one of the module as a default input method, "
+	elog ""
+	elog "export GTK_IM_MODULE=hangul2		// 2 input type"
+	elog "export GTK_IM_MODULE=hangul3f	// 3 input type"
+	elog ""
 }
 
 

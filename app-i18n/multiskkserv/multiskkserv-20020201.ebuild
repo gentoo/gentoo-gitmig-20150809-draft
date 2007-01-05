@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/multiskkserv-20020201.ebuild,v 1.10 2005/01/01 14:36:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/multiskkserv-20020201.ebuild,v 1.11 2007/01/05 16:21:36 flameeyes Exp $
 
 inherit eutils fixheadtails
 
@@ -23,8 +23,8 @@ DEPEND="virtual/libc
 PROVIDE="virtual/skkserv"
 
 pkg_setup() {
-	einfo "If you want to add some extra SKK dictionaries,"
-	einfo "please emerge app-i18n/skk-jisyo-extra first."
+	elog "If you want to add some extra SKK dictionaries,"
+	elog "please emerge app-i18n/skk-jisyo-extra first."
 }
 
 src_unpack() {
@@ -70,7 +70,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "By default, multiskkserv will look up only SKK-JISYO.L."
-	einfo "If you want to use more dictionaries,"
-	einfo "edit /etc/conf.d/multiskkserv manually."
+	elog "By default, multiskkserv will look up only SKK-JISYO.L."
+	elog "If you want to use more dictionaries,"
+	elog "edit /etc/conf.d/multiskkserv manually."
 }

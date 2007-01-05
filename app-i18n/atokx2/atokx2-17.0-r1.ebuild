@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/atokx2-17.0-r1.ebuild,v 1.2 2005/06/19 05:08:28 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/atokx2-17.0-r1.ebuild,v 1.3 2007/01/05 16:11:19 flameeyes Exp $
 
 inherit eutils
 
@@ -88,13 +88,13 @@ get_gtk_confdir() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "To use ATOK for Linux, you need to add atokx2 and iiim to"
-	einfo "the default runlevel:"
-	einfo "# /sbin/rc-update add atokx2 default"
-	einfo "# /sbin/rc-update add iiim default"
-	einfo "Also, call /opt/atokx2/bin/atokx2_client.sh from appropriate file."
-	einfo
+	elog
+	elog "To use ATOK for Linux, you need to add atokx2 and iiim to"
+	elog "the default runlevel:"
+	elog "# /sbin/rc-update add atokx2 default"
+	elog "# /sbin/rc-update add iiim default"
+	elog "Also, call /opt/atokx2/bin/atokx2_client.sh from appropriate file."
+	elog
 	gtk-query-immodules-2.0 > ${ROOT}/$(get_gtk_confdir)/gtk.immodules
 }
 

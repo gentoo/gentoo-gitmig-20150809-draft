@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-canna
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-canna/ChangeLog,v 1.10 2006/11/23 22:05:41 dertobi123 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-canna/ChangeLog,v 1.11 2007/01/05 16:26:40 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  scim-canna-1.0.0.ebuild:
+  Convert to use elog.
 
   23 Nov 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   scim-canna-1.0.0.ebuild:

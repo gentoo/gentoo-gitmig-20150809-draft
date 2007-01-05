@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/nabi-0.15.ebuild,v 1.3 2006/10/14 09:23:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/nabi-0.15.ebuild,v 1.4 2007/01/05 16:22:08 flameeyes Exp $
 
 DESCRIPTION="Simple Hanguk X Input Method"
 HOMEPAGE="http://nabi.kldp.net/"
@@ -22,8 +22,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "You MUST add environment variable..."
-	einfo
-	einfo "export XMODIFIERS=\"@im=nabi\""
-	einfo
+	elog "You MUST add environment variable..."
+	elog
+	elog "export XMODIFIERS=\"@im=nabi\""
+	elog
 }

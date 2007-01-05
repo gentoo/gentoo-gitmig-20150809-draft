@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimf-skk/iiimf-skk-0.1.22.95-r1.ebuild,v 1.1 2005/09/25 00:04:30 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimf-skk/iiimf-skk-0.1.22.95-r1.ebuild,v 1.2 2007/01/05 16:18:31 flameeyes Exp $
 
 inherit eutils
 
@@ -55,10 +55,10 @@ src_install () {
 
 pkg_postinst() {
 
-	einfo
-	einfo "To use this module, follow these steps:"
-	einfo "(1) run /etc/init.d/iiim start (as root)"
-	einfo "(2) run iiimf-skk (as normal user)"
-	einfo "(3) export XMODIFIERS='@im=htt' (setenv XMODIFIERS '@im=htt' in csh)"
-	einfo
+	elog
+	elog "To use this module, follow these steps:"
+	elog "(1) run /etc/init.d/iiim start (as root)"
+	elog "(2) run iiimf-skk (as normal user)"
+	elog "(3) export XMODIFIERS='@im=htt' (setenv XMODIFIERS '@im=htt' in csh)"
+	elog
 }

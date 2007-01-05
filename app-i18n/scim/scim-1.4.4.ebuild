@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.4.ebuild,v 1.11 2006/10/14 10:18:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.4.ebuild,v 1.12 2007/01/05 16:24:43 flameeyes Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -78,29 +78,29 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "To use SCIM with both GTK2 and XIM, you should use the following"
-	einfo "in your user startup scripts such as .gnomerc or .xinitrc:"
-	einfo
-	einfo "LANG='your_language' scim -d"
-	einfo "export XMODIFIERS=@im=SCIM"
-	einfo "export GTK_IM_MODULE=\"scim\""
-	einfo "export QT_IM_MODULE=\"scim\""
-	einfo
-	einfo "where 'your_language' can be zh_CN, zh_TW, ja_JP.eucJP or any other"
-	einfo "UTF-8 locale such as en_US.UTF-8 or ja_JP.UTF-8"
-	einfo
-	einfo "If you prefer KDE/Qt interface, try emerge app-i18n/skim."
-	einfo
-	einfo "To use Chinese input methods:"
-	einfo "	# emerge app-i18n/scim-tables app-i18n/scim-pinyin"
-	einfo "To use Korean input methods:"
-	einfo "	# emerge app-i18n/scim-hangul"
-	einfo "To use Japanese input methods:"
-	einfo "	# emerge app-i18n/scim-uim"
-	einfo "To use various input methods (more than 30 languages):"
-	einfo "	# emerge app-i18n/scim-m17n"
-	einfo
+	elog
+	elog "To use SCIM with both GTK2 and XIM, you should use the following"
+	elog "in your user startup scripts such as .gnomerc or .xinitrc:"
+	elog
+	elog "LANG='your_language' scim -d"
+	elog "export XMODIFIERS=@im=SCIM"
+	elog "export GTK_IM_MODULE=\"scim\""
+	elog "export QT_IM_MODULE=\"scim\""
+	elog
+	elog "where 'your_language' can be zh_CN, zh_TW, ja_JP.eucJP or any other"
+	elog "UTF-8 locale such as en_US.UTF-8 or ja_JP.UTF-8"
+	elog
+	elog "If you prefer KDE/Qt interface, try emerge app-i18n/skim."
+	elog
+	elog "To use Chinese input methods:"
+	elog "	# emerge app-i18n/scim-tables app-i18n/scim-pinyin"
+	elog "To use Korean input methods:"
+	elog "	# emerge app-i18n/scim-hangul"
+	elog "To use Japanese input methods:"
+	elog "	# emerge app-i18n/scim-uim"
+	elog "To use various input methods (more than 30 languages):"
+	elog "	# emerge app-i18n/scim-m17n"
+	elog
 	ewarn
 	ewarn "If you upgraded from scim-1.2.x or scim-1.0.x, you should remerge all SCIM modules."
 	ewarn

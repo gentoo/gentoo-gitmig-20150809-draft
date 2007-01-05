@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/qimhangul/qimhangul-0.0.2.ebuild,v 1.2 2005/12/04 03:40:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/qimhangul/qimhangul-0.0.2.ebuild,v 1.3 2007/01/05 16:22:36 flameeyes Exp $
 
 inherit qt3 eutils
 
@@ -39,13 +39,13 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "After you emerged ${PN}, use right click to switch immodules for Qt."
-	einfo "If you would like to use qimhangul as default instead of XIM,"
-	einfo " set QT_IM_MODULE to hangul2."
-	einfo "e.g.)"
-	einfo "	% export QT_IM_MODULE=hangul2"
-	einfo
+	elog
+	elog "After you emerged ${PN}, use right click to switch immodules for Qt."
+	elog "If you would like to use qimhangul as default instead of XIM,"
+	elog " set QT_IM_MODULE to hangul2."
+	elog "e.g.)"
+	elog "	% export QT_IM_MODULE=hangul2"
+	elog
 	ewarn
 	ewarn "qtconfig is no longer used for selecting input methods."
 	ewarn

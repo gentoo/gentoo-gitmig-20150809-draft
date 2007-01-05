@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-hangul/scim-hangul-0.2.2.ebuild,v 1.4 2006/11/23 21:47:50 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-hangul/scim-hangul-0.2.2.ebuild,v 1.5 2007/01/05 16:27:53 flameeyes Exp $
 
 inherit eutils
 
@@ -27,11 +27,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "To use SCIM with both GTK2 and XIM, you should use the following"
-	einfo "in your user startup scripts such as .gnomerc or .xinitrc:"
-	einfo
-	einfo "LANG='your_language' scim -d"
-	einfo "export XMODIFIERS=@im=SCIM"
-	einfo
+	elog
+	elog "To use SCIM with both GTK2 and XIM, you should use the following"
+	elog "in your user startup scripts such as .gnomerc or .xinitrc:"
+	elog
+	elog "LANG='your_language' scim -d"
+	elog "export XMODIFIERS=@im=SCIM"
+	elog
 }

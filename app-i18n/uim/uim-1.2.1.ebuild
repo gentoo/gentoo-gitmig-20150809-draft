@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.2.1.ebuild,v 1.14 2006/12/16 12:16:13 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.2.1.ebuild,v 1.15 2007/01/05 16:35:39 flameeyes Exp $
 
 inherit eutils kde-functions flag-o-matic multilib elisp-common
 
@@ -97,9 +97,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "To use uim-skk you should emerge app-i18n/skk-jisyo."
-	einfo
+	elog
+	elog "To use uim-skk you should emerge app-i18n/skk-jisyo."
+	elog
 
 	ewarn
 	ewarn "New input method switcher has been introduced. You need to set"
