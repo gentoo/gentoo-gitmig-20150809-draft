@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.2.7.ebuild,v 1.1 2006/03/09 17:48:36 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.2.7.ebuild,v 1.2 2007/01/05 08:37:52 flameeyes Exp $
 
-inherit toolchain-funcs eutils gnuconfig
+inherit toolchain-funcs eutils
 
 DESCRIPTION="A remote security scanner for Linux (nessus-core)"
 HOMEPAGE="http://www.nessus.org/"
@@ -20,11 +20,6 @@ DEPEND="=net-analyzer/nessus-libraries-${PV}
 	!net-analyzer/nessus-client"
 
 S="${WORKDIR}/${PN}"
-
-src_unpack() {
-	unpack ${A}
-	gnuconfig_update
-}
 
 src_compile() {
 

@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-1.4_p12-r2.ebuild,v 1.12 2006/03/01 02:01:44 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-1.4_p12-r2.ebuild,v 1.13 2007/01/05 08:42:24 flameeyes Exp $
 
-inherit eutils gnuconfig flag-o-matic
+inherit eutils flag-o-matic
 
 MY_P="${PN}-1.4a12"
 S="${WORKDIR}/${MY_P}"
@@ -31,7 +31,6 @@ src_unpack() {
 src_compile() {
 	# fixes bug #21122
 	# -taviso
-	gnuconfig_update
 
 	# use non-lazy bindings for this suid app
 	append-ldflags -Wl,-z,now

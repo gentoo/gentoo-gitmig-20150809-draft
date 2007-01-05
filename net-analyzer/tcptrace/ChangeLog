@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tcptrace
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrace/ChangeLog,v 1.15 2006/02/17 16:17:22 jokey Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrace/ChangeLog,v 1.16 2007/01/05 08:40:32 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> tcptrace-6.6.1.ebuild,
+  tcptrace-6.6.1-r1.ebuild, tcptrace-6.6.7.ebuild:
+  Remove gnuconfig_update usage, leave it to econf.
 
   17 Feb 2006; Markus Ullmann <jokey@gentoo.org> tcptrace-6.6.1.ebuild,
   tcptrace-6.6.1-r1.ebuild, tcptrace-6.6.7.ebuild:

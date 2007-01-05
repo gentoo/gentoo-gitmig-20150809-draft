@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.1.ebuild,v 1.9 2006/02/15 23:41:37 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.1.ebuild,v 1.10 2007/01/05 08:39:00 flameeyes Exp $
 
-inherit gnuconfig eutils
+inherit eutils
 
 DESCRIPTION="tool that shows network usage like top"
 HOMEPAGE="http://www.ntop.org/ntop.html"
@@ -37,7 +37,6 @@ src_unpack() {
 	unpack ${A}
 	mv ${WORKDIR}/ntop ${WORKDIR}/ntop-3.1
 	cd ${S}
-	gnuconfig_update
 	epatch ${FILESDIR}/globals-core.c.diff
 }
 

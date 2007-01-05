@@ -1,8 +1,7 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.0.ebuild,v 1.19 2006/02/15 23:41:37 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.0.ebuild,v 1.20 2007/01/05 08:39:00 flameeyes Exp $
 
-inherit gnuconfig
 
 DESCRIPTION="tool that shows network usage like top"
 HOMEPAGE="http://www.ntop.org/ntop.html"
@@ -20,12 +19,6 @@ DEPEND=">=sys-libs/gdbm-1.8.0
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r4 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	readline? ( >=sys-libs/readline-4.1 )"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	gnuconfig_update
-}
 
 src_compile() {
 	local myconf

@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/trafshow-5.2.1.ebuild,v 1.8 2006/08/15 09:10:57 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/trafshow-5.2.1.ebuild,v 1.9 2007/01/05 08:44:21 flameeyes Exp $
 
-inherit eutils gnuconfig
+inherit eutils
 
 DESCRIPTION="Full screen visualization of the network traffic"
 HOMEPAGE="http://soft.risp.ru/trafshow/index_en.shtml"
@@ -20,7 +20,6 @@ src_unpack() {
 	unpack ${A}; cd "${S}"
 	epatch "${FILESDIR}/${P}-gentoo.patch"
 	epatch "${FILESDIR}/${P}-gcc4.diff"
-	use ppc64 && gnuconfig_update
 }
 
 src_compile() {

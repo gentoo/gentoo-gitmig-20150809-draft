@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/trafshow
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/ChangeLog,v 1.26 2006/08/15 09:10:57 blubb Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/ChangeLog,v 1.27 2007/01/05 08:44:21 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> trafshow-5.2.1.ebuild,
+  trafshow-5.2.3.ebuild:
+  Remove gnuconfig_update usage, leave it to econf.
 
   15 Aug 2006; Simon Stelling <blubb@gentoo.org> trafshow-5.2.1.ebuild:
   stable on amd64
