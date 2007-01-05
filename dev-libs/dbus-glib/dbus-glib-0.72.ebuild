@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/dbus-glib-0.72.ebuild,v 1.4 2006/12/02 19:29:19 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/dbus-glib-0.72.ebuild,v 1.5 2007/01/05 04:28:12 flameeyes Exp $
 
-inherit eutils multilib debug autotools
+inherit eutils multilib autotools
 
 DESCRIPTION="D-Bus bindings for glib"
 HOMEPAGE="http://dbus.freedesktop.org/"
@@ -11,7 +11,7 @@ SRC_URI="http://dbus.freedesktop.org/releases/${PN}/${P}.tar.gz"
 SLOT="0"
 LICENSE="|| ( GPL-2 AFL-2.1 )"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="doc selinux"
+IUSE="doc selinux debug"
 
 RDEPEND=">=sys-apps/dbus-0.94
 	>=dev-libs/glib-2.6
