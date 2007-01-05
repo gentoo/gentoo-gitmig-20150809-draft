@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xosview
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.30 2006/10/21 22:12:25 omp Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.31 2007/01/05 09:20:30 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  xosview-1.8.2-r1.ebuild, xosview-1.8.3.ebuild:
+  Remove gnuconfig_update usage, leave it to econf.
 
   21 Oct 2006; David Shakaryan <omp@gentoo.org> xosview-1.8.2-r1.ebuild,
   xosview-1.8.3.ebuild:

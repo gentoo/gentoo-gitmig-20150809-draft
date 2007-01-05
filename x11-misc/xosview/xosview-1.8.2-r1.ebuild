@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.8.2-r1.ebuild,v 1.8 2006/10/21 22:12:25 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.8.2-r1.ebuild,v 1.9 2007/01/05 09:20:30 flameeyes Exp $
 
-inherit eutils gnuconfig
+inherit eutils
 
 DESCRIPTION="X11 operating system viewer"
 HOMEPAGE="http://xosview.sourceforge.net"
@@ -24,7 +24,6 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/xosview-emptyxpaths.patch"
 	epatch "${FILESDIR}/xosview-resdir.patch"
-	gnuconfig_update # for ppc64, but no reason to restrict it
 }
 
 src_install() {
