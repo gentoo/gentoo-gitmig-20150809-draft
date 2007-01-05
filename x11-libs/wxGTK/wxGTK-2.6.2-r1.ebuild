@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.2-r1.ebuild,v 1.12 2006/11/12 03:56:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.2-r1.ebuild,v 1.13 2007/01/05 22:50:01 dirtyepic Exp $
 
 inherit wxlib gnuconfig
 
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/wxWidgets-${PV}
 
 pkg_setup() {
-	einfo "To install only wxbase (non-gui libs) use USE=-X"
+	elog "To install only wxbase (non-gui libs) use USE=-X"
 }
 
 src_unpack() {
@@ -61,7 +61,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "dev-libs/wxbase has been removed from portage and can be"
-	einfo "installed with wxGTK by specifying the USE flags"
-	einfo "-X"
+	elog "dev-libs/wxbase has been removed from portage and can be"
+	elog "installed with wxGTK by specifying the USE flags"
+	elog "-X"
 }

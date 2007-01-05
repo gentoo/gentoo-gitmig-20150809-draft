@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.3.3.ebuild,v 1.5 2007/01/05 00:50:21 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.3.3.ebuild,v 1.6 2007/01/05 22:50:01 dirtyepic Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -111,9 +111,9 @@ install_build() {
 
 pkg_setup() {
 	if use X; then
-		einfo "To install only wxbase (non-gui libs) use USE=-X"
+		elog "To install only wxbase (non-gui libs) use USE=-X"
 	else
-		einfo "To install GUI libraries, in addition to wxbase, use USE=X"
+		elog "To install GUI libraries, in addition to wxbase, use USE=X"
 	fi
 }
 
@@ -169,7 +169,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "dev-libs/wxbase has been removed from portage."
-	einfo "wxBase is installed with wxGTK, as one of many libraries."
-	einfo "If only wxBase is wanted, -X USE flag may be specified."
+	elog "dev-libs/wxbase has been removed from portage."
+	elog "wxBase is installed with wxGTK, as one of many libraries."
+	elog "If only wxBase is wanted, -X USE flag may be specified."
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2-r4.ebuild,v 1.8 2006/12/28 02:33:24 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2-r4.ebuild,v 1.9 2007/01/05 22:50:01 dirtyepic Exp $
 
 inherit flag-o-matic eutils gnuconfig multilib toolchain-funcs
 
@@ -55,15 +55,15 @@ src_unpack() {
 }
 
 pkg_setup() {
-	einfo "New in >=wxGTK-2.4.2-r2:"
-	einfo "------------------------"
-	einfo "You can now have gtk1, gtk2 and unicode versions installed"
-	einfo "simultaneously. Use wxgtk1 if you would like a gtk1 lib."
-	einfo "Put gtk and unicode in your USE flags to get those"
-	einfo "additional versions."
-	einfo "NOTE:"
-	einfo "You can also get debug versions of any of those, but not debug"
-	einfo "and normal installed at the same time."
+	elog "New in >=wxGTK-2.4.2-r2:"
+	elog "------------------------"
+	elog "You can now have gtk1, gtk2 and unicode versions installed"
+	elog "simultaneously. Use wxgtk1 if you would like a gtk1 lib."
+	elog "Put gtk and unicode in your USE flags to get those"
+	elog "additional versions."
+	elog "NOTE:"
+	elog "You can also get debug versions of any of those, but not debug"
+	elog "and normal installed at the same time."
 	if  use unicode; then
 		! use gtk && die "You must put gtk in your USE if you need unicode support"
 	fi
@@ -83,7 +83,7 @@ src_compile() {
 
 	if use wxgtk1 ; then
 		mkdir build_gtk
-		einfo "Building gtk version"
+		elog "Building gtk version"
 		cd build_gtk
 		../configure ${myconf} `use_with odbc`\
 			--host=${CHOST} \
@@ -98,7 +98,7 @@ src_compile() {
 
 	if use gtk ; then
 		myconf="${myconf} --enable-gtk2"
-		einfo "Building gtk2 version"
+		elog "Building gtk2 version"
 		mkdir build_gtk2
 		cd build_gtk2
 		../configure ${myconf} `use_with odbc` \
@@ -114,7 +114,7 @@ src_compile() {
 
 		if use unicode ; then
 			myconf="${myconf} --enable-unicode"
-			einfo "Building unicode version"
+			elog "Building unicode version"
 			mkdir build_unicode
 			cd build_unicode
 			../configure ${myconf} \
