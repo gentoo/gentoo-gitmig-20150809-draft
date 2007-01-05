@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-notif2
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-notif2/ChangeLog,v 1.14 2005/10/02 19:45:12 agriffis Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-notif2/ChangeLog,v 1.15 2007/01/05 09:28:05 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  gtk-engines-notif2-1.0.ebuild, gtk-engines-notif2-1.0-r1.ebuild:
+  Remove gnuconfig_update usage, leave it to econf.
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org>
   gtk-engines-notif2-1.0-r1.ebuild:

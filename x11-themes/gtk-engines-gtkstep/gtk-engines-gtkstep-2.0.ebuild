@@ -1,8 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-gtkstep/gtk-engines-gtkstep-2.0.ebuild,v 1.3 2005/10/02 19:42:31 agriffis Exp $
-
-inherit gnuconfig
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-gtkstep/gtk-engines-gtkstep-2.0.ebuild,v 1.4 2007/01/05 09:26:36 flameeyes Exp $
 
 MY_PN="gtkstep"
 DESCRIPTION="GTK+1 GTKStep Theme Engine"
@@ -17,11 +15,6 @@ IUSE=""
 DEPEND="=x11-libs/gtk+-1.2*"
 
 S=${WORKDIR}/${MY_PN}-${PV}
-
-src_unpack() {
-	unpack ${A}
-	gnuconfig_update
-}
 
 src_install() {
 	make DESTDIR="${D}" install || die "Installation failed"

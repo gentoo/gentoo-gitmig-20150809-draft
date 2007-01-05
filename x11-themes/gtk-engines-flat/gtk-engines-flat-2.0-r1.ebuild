@@ -1,8 +1,7 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-flat/gtk-engines-flat-2.0-r1.ebuild,v 1.10 2005/08/02 09:31:06 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-flat/gtk-engines-flat-2.0-r1.ebuild,v 1.11 2007/01/05 09:25:22 flameeyes Exp $
 
-inherit gnuconfig
 
 MY_PN="gtk-flat-theme"
 MY_P=${MY_PN}-${PV}
@@ -21,13 +20,6 @@ DEPEND="${REPEND}
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
-
-src_unpack() {
-	unpack ${A}
-	if [[ ${ARCH} == "amd64" ]]; then
-		gnuconfig_update ${WORKDIR}
-	fi
-}
 
 src_install() {
 	make DESTDIR="${D}" install || die "Installation failed"
