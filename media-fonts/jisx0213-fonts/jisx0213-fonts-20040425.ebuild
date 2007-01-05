@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/jisx0213-fonts/jisx0213-fonts-20040425.ebuild,v 1.3 2006/03/23 20:56:55 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/jisx0213-fonts/jisx0213-fonts-20040425.ebuild,v 1.4 2007/01/05 17:06:11 flameeyes Exp $
 
 IUSE=""
 
@@ -53,17 +53,17 @@ src_install() {
 }
 
 pkg_postinst(){
-	einfo "You need you add following line into 'Section \"Files\"' in"
-	einfo "XF86Config and reboot X Window System, to use these fonts."
-	einfo ""
-	einfo "\t FontPath \"${FONTDIR}\""
-	einfo ""
+	elog "You need you add following line into 'Section \"Files\"' in"
+	elog "XF86Config and reboot X Window System, to use these fonts."
+	elog ""
+	elog "\t FontPath \"${FONTDIR}\""
+	elog ""
 }
 
 pkg_postrm(){
-	einfo "You need you remove following line in 'Section \"Files\"' in"
-	einfo "XF86Config, to unmerge this package completely."
-	einfo ""
-	einfo "\t FontPath \"${FONTDIR}\""
-	einfo ""
+	elog "You need you remove following line in 'Section \"Files\"' in"
+	elog "XF86Config, to unmerge this package completely."
+	elog ""
+	elog "\t FontPath \"${FONTDIR}\""
+	elog ""
 }

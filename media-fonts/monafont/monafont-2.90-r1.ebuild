@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/monafont-2.90-r1.ebuild,v 1.11 2006/09/03 06:42:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/monafont-2.90-r1.ebuild,v 1.12 2007/01/05 17:08:16 flameeyes Exp $
 
 inherit font
 
@@ -53,19 +53,19 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "You need to add following line into 'Section \"Files\"' in"
-	einfo "XF86Config and reboot X Window System, to use these fonts."
-	einfo
-	einfo "\tFontPath \"${FONTDIR}\""
-	einfo
+	elog
+	elog "You need to add following line into 'Section \"Files\"' in"
+	elog "XF86Config and reboot X Window System, to use these fonts."
+	elog
+	elog "\tFontPath \"${FONTDIR}\""
+	elog
 }
 
 pkg_postrm() {
-	einfo
-	einfo "You need to remove following line in 'Section \"Files\"' in"
-	einfo "XF86Config, to unmerge this package completely."
-	einfo
-	einfo "\tFontPath \"${FONTDIR}\""
-	einfo
+	elog
+	elog "You need to remove following line in 'Section \"Files\"' in"
+	elog "XF86Config, to unmerge this package completely."
+	elog
+	elog "\tFontPath \"${FONTDIR}\""
+	elog
 }

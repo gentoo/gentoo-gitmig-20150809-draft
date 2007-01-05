@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/kochi-substitute/kochi-substitute-20030809.ebuild,v 1.10 2006/03/23 21:00:40 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/kochi-substitute/kochi-substitute-20030809.ebuild,v 1.11 2007/01/05 17:07:44 flameeyes Exp $
 
 IUSE="X"
 
@@ -65,11 +65,11 @@ pkg_postinst() {
 	use X > /dev/null && rebuild_fontfiles
 
 	echo ""
-	einfo "This is a Kochi \"alternative\" font, but not kochi font itself."
-	einfo "Unfortunately, there is a possibility of copyright infringement,"
-	einfo "so the author of kochi font suspended distributing kochi font."
-	einfo "Please see http://khdd.net/kanou/fonts/stolenbitmap.en.html and"
-	einfo "${HOMEPAGE} for details."
+	elog "This is a Kochi \"alternative\" font, but not kochi font itself."
+	elog "Unfortunately, there is a possibility of copyright infringement,"
+	elog "so the author of kochi font suspended distributing kochi font."
+	elog "Please see http://khdd.net/kanou/fonts/stolenbitmap.en.html and"
+	elog "${HOMEPAGE} for details."
 }
 
 pkg_postrm() {

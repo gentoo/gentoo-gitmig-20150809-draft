@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/kochi-substitute
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/kochi-substitute/ChangeLog,v 1.25 2006/11/26 22:57:20 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/kochi-substitute/ChangeLog,v 1.26 2007/01/05 17:07:44 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  kochi-substitute-20030809.ebuild:
+  Convert to use elog.
 
   26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   kochi-substitute-20030809-r3.ebuild:

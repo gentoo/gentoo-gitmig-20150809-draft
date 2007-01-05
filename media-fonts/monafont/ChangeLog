@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/monafont
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/ChangeLog,v 1.31 2006/11/26 22:13:41 flameeyes Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/ChangeLog,v 1.32 2007/01/05 17:08:16 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  monafont-2.90-r1.ebuild:
+  Convert to use elog.
 
   26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   monafont-2.90-r2.ebuild:

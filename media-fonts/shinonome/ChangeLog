@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/shinonome
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/shinonome/ChangeLog,v 1.18 2006/11/26 23:04:38 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/shinonome/ChangeLog,v 1.19 2007/01/05 17:11:25 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  shinonome-0.9.10.ebuild:
+  Convert to use elog.
 
   26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   shinonome-0.9.11.ebuild:
