@@ -1,10 +1,13 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.3.ebuild,v 1.15 2006/10/12 15:23:33 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.3.ebuild,v 1.16 2007/01/05 04:54:10 antarus Exp $
 
-inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg kde-functions toolchain-funcs
+WANT_AUTOCONF="2.5"
+WANT_AUTOMAKE="1.9"
 
-IUSE="binfilter cairo eds firefox gnome gtk java kde ldap odk pam xml"
+inherit check-reqs eutils fdo-mime flag-o-matic java-pkg kde-functions toolchain-funcs autotools
+
+IUSE="binfilter cairo eds firefox gnome gtk java kde ldap odk pam xml debug"
 
 MY_PV="${PV}.0"
 PATCHLEVEL="OOC680"
