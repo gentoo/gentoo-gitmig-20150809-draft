@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/gpsim
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.26 2007/01/05 06:45:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.27 2007/01/05 07:28:22 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> gpsim-0.21.2.ebuild,
+  gpsim-0.21.11.ebuild:
+  Remove gnuconfig_update usage, leave it to econf.
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   files/gpsim-0.21.11-eXdbm.patch, gpsim-0.21.11-r1.ebuild:

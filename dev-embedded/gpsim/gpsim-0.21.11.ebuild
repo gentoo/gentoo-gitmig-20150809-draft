@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.21.11.ebuild,v 1.6 2006/09/12 18:39:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.21.11.ebuild,v 1.7 2007/01/05 07:28:22 flameeyes Exp $
 
-inherit gnuconfig eutils libtool autotools
+inherit eutils libtool autotools
 
 DESCRIPTION="A simulator for the Microchip PIC microcontrollers"
 HOMEPAGE="http://www.dattalo.com/gnupic/gpsim.html"
@@ -44,7 +44,6 @@ src_unpack() {
 }
 
 src_compile() {
-	gnuconfig_update
 	econf `use_enable gtk gui` || die
 	emake || die
 }
