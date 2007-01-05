@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jaxen
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.38 2007/01/05 21:43:26 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.39 2007/01/05 23:16:51 caster Exp $
+
+  05 Jan 2007; Vlastimil Babka <caster@gentoo.org>
+  -files/jaxen-1.1_beta2-gentoo.diff, -jaxen-1.1_beta2-r1.ebuild:
+  Gen-1 punt in 1.1 slot.
 
   05 Jan 2007; Steve Dibb <beandog@gentoo.org> jaxen-1.1_beta11.ebuild:
   amd64 stable, bug 156504
