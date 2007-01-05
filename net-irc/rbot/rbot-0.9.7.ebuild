@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.7.ebuild,v 1.9 2005/10/06 13:03:18 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.7.ebuild,v 1.10 2007/01/05 20:45:17 flameeyes Exp $
 
 DESCRIPTION="rbot is a ruby IRC bot"
 HOMEPAGE="http://www.linuxbrit.co.uk/rbot/"
@@ -39,7 +39,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Now edit your /etc/rbot/conf.rbot"
-	einfo
+	elog
+	elog "Now edit your /etc/rbot/conf.rbot"
+	elog
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.10.ebuild,v 1.2 2006/09/23 01:43:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.10.ebuild,v 1.3 2007/01/05 20:45:17 flameeyes Exp $
 
 inherit ruby
 
@@ -29,7 +29,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Default configuration file location has changed from /etc/rbot to ~/.rbot"
-	einfo
+	elog
+	elog "Default configuration file location has changed from /etc/rbot to ~/.rbot"
+	elog
 }
