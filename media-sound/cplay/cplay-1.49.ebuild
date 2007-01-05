@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/cplay-1.49.ebuild,v 1.11 2006/11/27 18:09:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/cplay-1.49.ebuild,v 1.12 2007/01/05 05:51:08 jer Exp $
 
 IUSE="mp3 vorbis"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://mask.tf.hut.fi/~flu/hacks/cplay/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~hppa ~ppc ppc64 sparc x86"
+KEYWORDS="amd64 hppa ~ppc ppc64 sparc x86"
 
 DEPEND=""
 RDEPEND="virtual/python
