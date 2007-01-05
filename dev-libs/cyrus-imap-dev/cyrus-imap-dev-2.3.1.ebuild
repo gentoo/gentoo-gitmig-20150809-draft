@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.3.1.ebuild,v 1.1 2006/01/10 20:41:11 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.3.1.ebuild,v 1.2 2007/01/05 07:32:23 flameeyes Exp $
 
-inherit eutils gnuconfig
+inherit eutils
 
 DESCRIPTION="Developer support for the Cyrus IMAP Server."
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/imapd/"
@@ -43,7 +43,6 @@ src_unpack() {
 
 	# Recreate configure.
 	export WANT_AUTOCONF="2.5"
-	gnuconfig_update
 	ebegin "Recreating configure"
 	rm -rf configure config.h.in autom4te.cache || die
 	sh SMakefile &>/dev/null || die "SMakefile failed"
