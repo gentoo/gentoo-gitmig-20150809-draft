@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-demo/quake3-demo-1.11.ebuild,v 1.20 2006/10/05 12:08:44 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-demo/quake3-demo-1.11.ebuild,v 1.21 2007/01/05 00:00:35 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -59,14 +59,14 @@ src_install() {
 	doexe ${FILESDIR}/{q3demo,q3demo-ded}
 	dodir ${GAMES_BINDIR}
 	dosym ${dir}/q3demo ${GAMES_BINDIR}/q3demo
-	dosym ${dir}/q3ded-demo ${GAMES_BINDIR}/q3demo-ded
+	dosym ${dir}/q3demo-ded ${GAMES_BINDIR}/q3demo-ded
 	dosed "s:GENTOO_DIR:${dir}:" ${dir}/q3demo
 	dosed "s:GENTOO_DIR:${dir}:" ${dir}/q3demo-ded
 
 	insinto ${dir}
 	doins README icon.*
 
-	make_desktop_entry q3demo "Quake III Demo"
+	make_desktop_entry q3demo "Quake III (Demo)"
 
 	prepgamesdirs
 }
