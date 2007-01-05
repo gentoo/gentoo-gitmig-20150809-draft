@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.24 2006/11/19 19:31:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.25 2007/01/05 01:22:38 mcummings Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -236,6 +236,31 @@ src_configure() {
 		myconf "-Dlibpth=/usr/local/$(get_libdir) /$(get_libdir) /usr/$(get_libdir)"
 	fi
 
+	if has noman ${FEATURES} ; then
+		myconf "-Dinstallman1dir='' \
+		-Dinstallman3dir='' \
+		-Dinstallsiteman1dir='' \
+		-Dinstallsiteman3dir='' \
+		-Dinstallvendorman1dir='' \
+		-Dinstallvendorman3dir='' \
+		-Dman1dir='' \
+		-Dman1direxp='' \
+		-Dman1ext='0' \
+		-Dman3dir='' \
+		-Dman3direxp='' \
+		-Dman3ext='0' \
+		-Dsiteman1dir='' \
+		-Dsiteman1direxp='' \
+		-Dsiteman3dir='' \
+		-Dsiteman3direxp='' \
+		-Dsysman='' \
+		-Dvendorman1dir='' \
+		-Dvendorman1direxp='' \
+		-Dvendorman3dir='' \
+		-Dvendorman3direxp='' 
+		"
+	fi
+
 	sh Configure -des \
 		-Darchname="${myarch}" \
 		-Dcccdlflags='-fPIC' \
@@ -249,12 +274,6 @@ src_configure() {
 		-Duselargefiles \
 		-Dd_semctl_semun \
 		-Dscriptdir=/usr/bin \
-		-Dman1dir=/usr/share/man/man1 \
-		-Dman3dir=/usr/share/man/man3 \
-		-Dinstallman1dir=/usr/share/man/man1 \
-		-Dinstallman3dir=/usr/share/man/man3 \
-		-Dman1ext='1' \
-		-Dman3ext='3pm' \
 		-Dinc_version_list="$inclist" \
 		-Dcf_by='Gentoo' \
 		-Ud_csh \
