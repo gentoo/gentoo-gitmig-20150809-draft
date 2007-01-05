@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.60 2007/01/05 13:57:33 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.61 2007/01/05 14:11:38 opfer Exp $
+
+  05 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
+  -files/xft-bgalpha.patch, -files/xft-invertcursor.patch,
+  -files/xft-xfaces-fixcrash.patch:
+  remove unecessary patches
 
 *emacs-cvs-22.0.92 (05 Jan 2007)
 
