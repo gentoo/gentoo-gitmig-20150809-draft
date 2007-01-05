@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.131 2007/01/04 23:06:31 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.132 2007/01/05 00:52:52 dirtyepic Exp $
+
+  05 Jan 2007; Ryan Hill <dirtyepic@gentoo.org> ChangeLog:
+  On second thought unspecified but required eclasses are probably a bad thing.
 
   04 Jan 2007; Ryan Hill <dirtyepic@gentoo.org> wxGTK-2.6.3.3.ebuild:
   Remove debug.eclass usage (bug #160116), and clean up redundant inherits.
