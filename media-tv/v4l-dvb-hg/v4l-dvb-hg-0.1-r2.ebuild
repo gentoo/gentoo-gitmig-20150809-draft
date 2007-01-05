@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/v4l-dvb-hg-0.1-r2.ebuild,v 1.6 2006/11/20 09:19:12 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/v4l-dvb-hg-0.1-r2.ebuild,v 1.7 2007/01/05 17:14:35 hd_brummy Exp $
 
 
 : ${EHG_REPO_URI:=${V4l_DVB_HG_REPO_URI:-http://linuxtv.org/hg/v4l-dvb}}
@@ -74,7 +74,7 @@ src_unpack() {
 	fi
 	echo
 
-	einfo "Removing autoload-entry from stradis-driver."
+	elog "Removing autoload-entry from stradis-driver."
 	sed -i ${S}/../linux/drivers/media/video/stradis.c -e '/MODULE_DEVICE_TABLE/d'
 
 	cd ${S}
@@ -82,7 +82,7 @@ src_unpack() {
 		-e '/-install::/s:rminstall::' \
 		-i Makefile
 
-	einfo "Removing depmod-calls"
+	elog "Removing depmod-calls"
 	sed -e '/depmod/d' -i Makefile* scripts/make_makefile.pl scripts/make_kconfig.pl \
 	|| die "Failed removing depmod call from Makefile"
 
@@ -101,15 +101,15 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Firmware-files can be found in media-tv/linuxtv-dvb-firmware"
-	einfo
+	echo
+	elog "Firmware-files can be found in media-tv/linuxtv-dvb-firmware"
+	echo
 
 	linux-mod_pkg_postinst
-	einfo
-	einfo
-	einfo "if you want to use the IR-port or networking"
-	einfo "with the dvb-card you need to"
-	einfo "install linuxtv-dvb-apps"
-	einfo
+	echo
+	echo
+	elog "if you want to use the IR-port or networking"
+	elog "with the dvb-card you need to"
+	elog "install linuxtv-dvb-apps"
+	echo
 }

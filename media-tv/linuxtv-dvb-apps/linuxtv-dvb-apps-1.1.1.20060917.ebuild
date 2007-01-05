@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.1.20060917.ebuild,v 1.4 2006/12/27 16:04:24 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.1.20060917.ebuild,v 1.5 2007/01/05 17:10:04 hd_brummy Exp $
 
 
 inherit eutils versionator
@@ -89,9 +89,9 @@ src_install()
 
 pkg_postinst()
 {
-	einfo "Please read the documentation in /usr/share/doc/${PF}."
-	einfo "The channel lists and other files are installed in"
-	einfo "/usr/share/dvb"
-	einfo
-	einfo "The scanning utility is now installed as dvbscan."
+	elog "Please read the documentation in /usr/share/doc/${PF}."
+	elog "The channel lists and other files are installed in"
+	elog "/usr/share/dvb"
+	elog
+	elog "The scanning utility is now installed as dvbscan."
 }

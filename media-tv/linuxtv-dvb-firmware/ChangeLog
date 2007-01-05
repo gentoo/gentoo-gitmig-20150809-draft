@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/linuxtv-dvb-firmware
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/ChangeLog,v 1.10 2006/11/13 14:39:08 zzam Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/ChangeLog,v 1.11 2007/01/05 17:12:13 hd_brummy Exp $
+
+  05 Jan 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  linuxtv-dvb-firmware-2006.11.08.ebuild,
+  linuxtv-dvb-firmware-2006.11.13.ebuild:
+  einfo converted to elog
 
 *linuxtv-dvb-firmware-2006.11.13 (13 Nov 2006)
 

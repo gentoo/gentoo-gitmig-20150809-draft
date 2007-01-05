@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.0.ebuild,v 1.4 2005/10/29 19:44:29 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.0.ebuild,v 1.5 2007/01/05 17:10:04 hd_brummy Exp $
 
 DESCRIPTION="small utils for DVB to scan, zap, view signal strength, ..."
 HOMEPAGE="http://www.linuxtv.org/wiki/index.php/LinuxTV_dvb-apps"
@@ -17,12 +17,12 @@ src_compile() {
 	cd ${S}/util
 	make
 	if use usb; then
-		einfo "Building ttusb_dec_reset"
+		elog "Building ttusb_dec_reset"
 		# build the ttusb_dec_reset program
 		cd ${S}/util/ttusb_dec_reset
 		make
 	else
-		einfo "Not building ttusb_dec_reset"
+		elog "Not building ttusb_dec_reset"
 	fi
 }
 
@@ -72,8 +72,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Please read the documentation in /usr/share/doc/${PF}."
-	einfo "The channel lists and other examples also are in this directory."
-	einfo
-	einfo "scanning utility is now installed as dvbscan"
+	elog "Please read the documentation in /usr/share/doc/${PF}."
+	elog "The channel lists and other examples also are in this directory."
+	elog
+	elog "scanning utility is now installed as dvbscan"
 }

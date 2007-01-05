@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/linuxtv-dvb-1.1.1_p20060108.ebuild,v 1.5 2006/10/31 13:08:30 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/linuxtv-dvb-1.1.1_p20060108.ebuild,v 1.6 2007/01/05 17:07:37 hd_brummy Exp $
 
 inherit eutils linux-mod
 
@@ -23,17 +23,17 @@ S=${WORKDIR}/dvb-kernel/build-2.4
 pkg_setup() {
 	linux-mod_pkg_setup
 	if [[ ${KV_MAJOR}.${KV_MINOR} != 2.4 ]]; then
-		einfo "This ebuild only provides drivers for Kernel 2.4"
-		einfo "Kernel 2.6 has included drivers for DVB devices."
-		einfo "please use these"
+		elog "This ebuild only provides drivers for Kernel 2.4"
+		elog "Kernel 2.6 has included drivers for DVB devices."
+		elog "please use these"
 		die "Kernel 2.6 not supported"
 	fi
 
-	einfo "Please make sure that the following option is enabled"
-	einfo "in your current kernel 'Multimedia devices'"
-	einfo "and /usr/src/linux points to your current kernel"
-	einfo "or make will die."
-	einfo
+	elog "Please make sure that the following option is enabled"
+	elog "in your current kernel 'Multimedia devices'"
+	elog "and /usr/src/linux points to your current kernel"
+	elog "or make will die."
+	elog
 	MODULE_NAMES="dvb(dvb:${S})"
 	BUILD_PARAMS="KDIR=${KERNEL_DIR}"
 	BUILD_TARGETS="build"
@@ -72,14 +72,14 @@ src_install() {
 
 pkg_postinst() {
 	linux-mod_pkg_postinst
-	einfo "If you don't use devfs, execute MAKEDEV-DVB.sh to create"
-	einfo "the device nodes. The file is in /usr/share/doc/${PF}/"
-	einfo
-	einfo "A file called dvb-module-load has been created to simplify loading all modules."
-	einfo "Call it using 'dvb-module-load {load|debug|unload}'."
-	einfo
-	einfo "For information about firmware please see /usr/share/doc/${PF}/README."
-	einfo
-	einfo "Firmware-files can be found in media-tv/linuxtv-dvb-firmware"
-	einfo
+	elog "If you don't use devfs, execute MAKEDEV-DVB.sh to create"
+	elog "the device nodes. The file is in /usr/share/doc/${PF}/"
+	elog
+	elog "A file called dvb-module-load has been created to simplify loading all modules."
+	elog "Call it using 'dvb-module-load {load|debug|unload}'."
+	elog
+	elog "For information about firmware please see /usr/share/doc/${PF}/README."
+	elog
+	elog "Firmware-files can be found in media-tv/linuxtv-dvb-firmware"
+	elog
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-2006.11.13.ebuild,v 1.1 2006/11/13 14:39:08 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-2006.11.13.ebuild,v 1.2 2007/01/05 17:12:13 hd_brummy Exp $
 
 DESCRIPTION="Firmware files needed for operation of some dvb-devices"
 HOMEPAGE="http://www.linuxtv.org"
@@ -199,15 +199,15 @@ pkg_setup() {
 	#echo SRC_URI=${SRC_URI}
 	#echo DEPEND=${DEPEND}
 	if [[ -z ${DVB_CARDS} ]]; then
-		einfo "DVB_CARDS is not set, installing all available firmware files."
+		elog "DVB_CARDS is not set, installing all available firmware files."
 	fi
-	einfo "List of possible card-names to use for DVB_CARDS:"
+	elog "List of possible card-names to use for DVB_CARDS:"
 	echo ${FW_USE_FLAGS[*]}| tr ' ' '\n' | sort | uniq | fmt \
 	| while read line; do
-		einfo "   ${line}"
+		elog "   ${line}"
 	done
-	einfo "If you need another firmware file and want it included create a bug"
-	einfo "at bugs.gentoo.org."
+	elog "If you need another firmware file and want it included create a bug"
+	elog "at bugs.gentoo.org."
 }
 
 src_unpack() {
@@ -237,7 +237,7 @@ src_unpack() {
 		GET_PARAM=${FW_GET_PARAMETER[CARD]}
 		if [[ ${GET_PARAM} != "-" ]]; then
 			[[ -f ${FW_FILES[CARD]} ]] && ewarn "Already existing: ${FW_FILES[CARD]}"
-			einfo "Extracting ${FW_FILES[CARD]}"
+			elog "Extracting ${FW_FILES[CARD]}"
 			./get_dvb_firmware ${GET_PARAM}
 		fi
 	done
