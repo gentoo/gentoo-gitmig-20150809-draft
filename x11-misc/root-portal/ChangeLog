@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/root-portal
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/ChangeLog,v 1.23 2006/11/15 19:57:07 nelchael Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/ChangeLog,v 1.24 2007/01/05 04:49:53 dirtyepic Exp $
+
+  05 Jan 2007; Ryan Hill <dirtyepic@gentoo.org> root-portal-0.5.2.ebuild:
+  Remove debug.eclass usage for bug #160119.
 
   15 Nov 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   root-portal-0.5.2.ebuild:
