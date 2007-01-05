@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.27.ebuild,v 1.15 2007/01/04 20:48:42 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.27.ebuild,v 1.16 2007/01/05 00:17:35 vivo Exp $
 
-MY_EXTRAS_VER="20070103"
+MY_EXTRAS_VER="20070105"
 SERVER_URI="mirror://mysql/Downloads/MySQL-${PV%.*}/mysql-${PV//_/-}.tar.gz"
 
 inherit mysql

@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.382 2007/01/04 20:48:42 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.383 2007/01/05 00:17:35 vivo Exp $
+
+  05 Jan 2007; Francesco Riosa <vivo@gentoo.org> mysql-4.0.25-r2.ebuild,
+  mysql-4.0.27.ebuild, mysql-4.1.21.ebuild, mysql-4.1.22.ebuild,
+  mysql-5.0.26-r1.ebuild, mysql-5.0.30.ebuild:
+  bug #156301 => mysql_config has now stripped cflags (version 4.0.x and 4.1.21
+  still unpatched)
+  bug #160059 => WANT_AUTOCONF and WANT_AUTOMAKE are set to "latest"
 
   04 Jan 2007; Francesco Riosa <vivo@gentoo.org> mysql-4.0.25-r2.ebuild,
   mysql-4.0.27.ebuild, mysql-4.1.21.ebuild, mysql-4.1.22.ebuild,
