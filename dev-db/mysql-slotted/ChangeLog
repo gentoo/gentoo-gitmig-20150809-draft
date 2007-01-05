@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mysql-slotted
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-slotted/ChangeLog,v 1.3 2007/01/04 20:53:15 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-slotted/ChangeLog,v 1.4 2007/01/05 00:23:16 vivo Exp $
+
+*mysql-slotted-5.2.0_alpha20070104-r60 (05 Jan 2007)
+
+  05 Jan 2007; Francesco Riosa <vivo@gentoo.org>
+  +mysql-slotted-5.2.0_alpha20070104-r60.ebuild:
+  bug #156301 => mysql_config has now stripped cflags (version 4.0.x and 4.1.21
+  still unpatched)
+  bug #160059 => WANT_AUTOCONF and WANT_AUTOMAKE are set to "latest"
 
   04 Jan 2007; Francesco Riosa <vivo@gentoo.org>
   mysql-slotted-4.1.23_alpha20070101-r60.ebuild,

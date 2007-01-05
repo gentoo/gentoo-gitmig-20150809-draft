@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mysql-community
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/ChangeLog,v 1.8 2007/01/03 15:23:32 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/ChangeLog,v 1.9 2007/01/05 00:20:07 vivo Exp $
+
+  05 Jan 2007; Francesco Riosa <vivo@gentoo.org>
+  mysql-community-5.0.27.ebuild, mysql-community-5.1.14_beta.ebuild,
+  mysql-community-5.1.15_alpha-r90.ebuild,
+  mysql-community-5.1.15_alpha20061231-r60.ebuild:
+  bug #156301 => mysql_config has now stripped cflags (version 4.0.x and 4.1.21
+  still unpatched)
+  bug #160059 => WANT_AUTOCONF and WANT_AUTOMAKE are set to "latest"
 
 *mysql-community-5.1.15_alpha20061231-r60 (03 Jan 2007)
 *mysql-community-5.1.15_alpha-r90 (03 Jan 2007)

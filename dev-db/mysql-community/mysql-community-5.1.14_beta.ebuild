@@ -1,9 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/mysql-community-5.1.14_beta.ebuild,v 1.2 2007/01/03 15:23:32 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/mysql-community-5.1.14_beta.ebuild,v 1.3 2007/01/05 00:20:07 vivo Exp $
 
-# Leave this empty
-MYSQL_VERSION_ID=""
+MY_EXTRAS_VER="20070105"
 SERVER_URI="mirror://mysql/Downloads/MySQL-${PV%.*}/mysql-${PV//_/-}.tar.gz"
 PBXT_VERSION="0.9.73-beta"
 
