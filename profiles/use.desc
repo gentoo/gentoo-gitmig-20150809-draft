@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.333 2007/01/05 01:12:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.334 2007/01/05 16:39:33 welp Exp $
 
 # Keep them sorted
 
@@ -26,6 +26,7 @@ apache2 - Chooses Apache2 support when a package supports both Apache1 and Apach
 apm - Adds APM (Advanced Power Management) support
 arts - Adds support for aRts: the KDE sound daemon
 audiofile - Adds support for libaudiofile where applicable
+avahi - Add avahi/Zeroconf support
 bash-completion - Enable bash-completion support
 bcmath - Adds support for libbcmath
 berkdb - Adds support for sys-libs/db (Berkeley DB for MySQL)
