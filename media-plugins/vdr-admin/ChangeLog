@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-admin
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-admin/ChangeLog,v 1.5 2006/08/15 10:35:56 zzam Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-admin/ChangeLog,v 1.6 2007/01/05 16:17:04 hd_brummy Exp $
+
+  05 Jan 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-admin-0.4.0.ebuild:
+  einfo converted to elog
 
   15 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
   Assigned to Gentoo VDR Project.
