@@ -1,11 +1,14 @@
 # ChangeLog for app-portage/ufed
 # Copyright 2003-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.54 2007/01/04 20:15:15 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.55 2007/01/05 05:15:07 tgall Exp $
 
-  04 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> ufed-0.40-r6.ebuild:
+  04 Jan 2007; Tom Gall <tgall@gentoo.org> ufed-0.40-r6.ebuild:
+  stable on ppc64
+
+  04 Jan 2007; Bryan Ãstergaard <kloeri@gentoo.org> ufed-0.40-r6.ebuild:
   Stable on IA64.
 
-  30 Dec 2006; Bryan Østergaard <kloeri@gentoo.org> ufed-0.40-r6.ebuild:
+  30 Dec 2006; Bryan Ãstergaard <kloeri@gentoo.org> ufed-0.40-r6.ebuild:
   Stable on Alpha, bug 159124.
 
   29 Dec 2006; Tobias Scherbaum <dertobi123@gentoo.org> ufed-0.40-r6.ebuild:
@@ -22,7 +25,7 @@
 
 *ufed-0.40-r6 (09 Dec 2006)
 
-  09 Dec 2006; Harald van Dĳk <truedfx@gentoo.org>
+  09 Dec 2006; Harald van DÄ³k <truedfx@gentoo.org>
   files/ufed-0.40-packageusemask.patch, -ufed-0.40-r5.ebuild,
   +ufed-0.40-r6.ebuild:
   Make sure flags don't get hidden just because they are masked for one
@@ -30,37 +33,37 @@
 
 *ufed-0.40-r5 (26 Nov 2006)
 
-  26 Nov 2006; Harald van Dĳk <truedfx@gentoo.org>
+  26 Nov 2006; Harald van DÄ³k <truedfx@gentoo.org>
   +files/ufed-0.40-packageusemask.patch, -ufed-0.40-r4.ebuild,
   +ufed-0.40-r5.ebuild:
   Handle package.use.mask (#154628) and read /etc/portage/profile (#156191)
 
 *ufed-0.40-r4 (10 Nov 2006)
 
-  10 Nov 2006; Harald van Dĳk <truedfx@gentoo.org>
+  10 Nov 2006; Harald van DÄ³k <truedfx@gentoo.org>
   +files/ufed-0.40-masked.patch, -ufed-0.40-r3.ebuild, +ufed-0.40-r4.ebuild:
   Try harder at ignoring masked flags (#154628)
 
-  13 Oct 2006; Harald van Dĳk <truedfx@gentoo.org>
+  13 Oct 2006; Harald van DÄ³k <truedfx@gentoo.org>
   +files/ufed-0.40-comments.patch, ufed-0.40-r3.ebuild:
   Treat any unquoted # as starting a comment (#151086)
 
 *ufed-0.40-r3 (02 Jun 2006)
 
-  02 Jun 2006; Harald van Dĳk <truedfx@gentoo.org>
+  02 Jun 2006; Harald van DÄ³k <truedfx@gentoo.org>
   files/ufed-0.40-source.patch, -ufed-0.40-r2.ebuild, +ufed-0.40-r3.ebuild:
   Fix 'source' support
 
 *ufed-0.40-r2 (23 May 2006)
 
-  23 May 2006; Harald van Dĳk <truedfx@gentoo.org>
+  23 May 2006; Harald van DÄ³k <truedfx@gentoo.org>
   +files/ufed-0.40-source.patch, +ufed-0.40-r2.ebuild:
   Add support for 'source' in make.conf (#131275)
 
-  04 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> ufed-0.40-r1.ebuild:
+  04 Apr 2006; Diego PettenÃ² <flameeyes@gentoo.org> ufed-0.40-r1.ebuild:
   Add ~x86-fbsd keyword.
 
-  30 Mar 2006; Harald van Dĳk <truedfx@gentoo.org> -ufed-0.36.ebuild,
+  30 Mar 2006; Harald van DÄ³k <truedfx@gentoo.org> -ufed-0.36.ebuild,
   -ufed-0.39.ebuild:
   Removing older versions
 
@@ -90,37 +93,37 @@
 
 *ufed-0.40-r1 (24 Jan 2006)
 
-  24 Jan 2006; Harald van Dĳk <truedfx@gentoo.org>
+  24 Jan 2006; Harald van DÄ³k <truedfx@gentoo.org>
   +files/ufed-0.40-useorder.patch, -ufed-0.40.ebuild, +ufed-0.40-r1.ebuild:
   Add support for USE_ORDER
 
 *ufed-0.40 (26 Nov 2005)
 
-  26 Nov 2005; Harald van Dĳk <truedfx@gentoo.org>
+  26 Nov 2005; Harald van DÄ³k <truedfx@gentoo.org>
   -files/ufed-usedefaults.patch, -ufed-0.40_rc-r1.ebuild, +ufed-0.40.ebuild:
   Release as 0.40 final
 
 *ufed-0.40_rc-r1 (09 Nov 2005)
 
-  09 Nov 2005; Harald van Dĳk <truedfx@gentoo.org>
+  09 Nov 2005; Harald van DÄ³k <truedfx@gentoo.org>
   +files/ufed-usedefaults.patch, -ufed-0.40_rc.ebuild,
   +ufed-0.40_rc-r1.ebuild:
   Fix handling of use.defaults (bug #111902)
 
 *ufed-0.40_rc (04 Nov 2005)
 
-  04 Nov 2005; Harald van Dĳk <truedfx@gentoo.org> +ufed-0.40_rc.ebuild:
+  04 Nov 2005; Harald van DÄ³k <truedfx@gentoo.org> +ufed-0.40_rc.ebuild:
   ufed 0.40RC, first non-hardmasked 0.40 prerelease
 
 *ufed-0.39 (01 May 2005)
 
-  01 May 2005; Harald van Dĳk <truedfx@gentoo.org> -ufed-0.38.ebuild,
+  01 May 2005; Harald van DÄ³k <truedfx@gentoo.org> -ufed-0.38.ebuild,
   +ufed-0.39.ebuild:
   version bump
 
 *ufed-0.38 (30 Apr 2005)
 
-  30 Apr 2005; Harald van Dĳk <truedfx@gentoo.org>
+  30 Apr 2005; Harald van DÄ³k <truedfx@gentoo.org>
   -files/ufed-0.37-nooverlay.patch, -files/ufed-0.37-profilesymlink.patch,
   -ufed-0.37-r2.ebuild, +ufed-0.38.ebuild:
   version bump for speed boost. Was going to wait until I got some other
@@ -128,7 +131,7 @@
 
 *ufed-0.37-r2 (21 Apr 2005)
 
-  21 Apr 2005; Harald van Dĳk <truedfx@gentoo.org>
+  21 Apr 2005; Harald van DÄ³k <truedfx@gentoo.org>
   +files/ufed-0.37-profilesymlink.patch, -ufed-0.37-r1.ebuild,
   +ufed-0.37-r2.ebuild:
   don't complain that /etc/make.profile isn't a symlink for no reason when it
@@ -136,7 +139,7 @@
 
 *ufed-0.37-r1 (20 Apr 2005)
 
-  20 Apr 2005; Harald van Dĳk <truedfx@gentoo.org>
+  20 Apr 2005; Harald van DÄ³k <truedfx@gentoo.org>
   +files/ufed-0.37-nooverlay.patch, -files/cascaded-profile-support.patch,
   -files/disabled-defaults.patch, -files/no-partial-match.patch,
   -files/quote-escape.patch, -files/too-many-flags.patch,
@@ -145,15 +148,15 @@
   remove 0.35 now that 0.36 is stable
   avoid a warning when PORTDIR_OVERLAY is unset in 0.37 (bug #89871)
 
-  20 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> ufed-0.36.ebuild:
+  20 Apr 2005; Bryan Ãstergaard <kloeri@gentoo.org> ufed-0.36.ebuild:
   Stable on alpha, bug 88396.
 
 *ufed-0.37 (17 Apr 2005)
 
-  17 Apr 2005; Harald van Dĳk <truedfx@gentoo.org> +ufed-0.37.ebuild:
+  17 Apr 2005; Harald van DÄ³k <truedfx@gentoo.org> +ufed-0.37.ebuild:
   Version bump, fixes bug #56534 (undoing changes after the Help screen)
 
-  11 Apr 2005; Harald van Dĳk <truedfx@gentoo.org> ufed-0.36.ebuild:
+  11 Apr 2005; Harald van DÄ³k <truedfx@gentoo.org> ufed-0.36.ebuild:
   stable on x86
 
   11 Apr 2005; Joshua Kinard <kumba@gentoo.org> ufed-0.36.ebuild:
@@ -174,12 +177,12 @@
   08 Apr 2005; Lars Weiler <pylon@gentoo.org> ufed-0.36.ebuild:
   Stable on ppc; bug #88396.
 
-  07 Apr 2005; Harald van Dĳk <truedfx@gentoo.org> ufed-0.36.ebuild:
+  07 Apr 2005; Harald van DÄ³k <truedfx@gentoo.org> ufed-0.36.ebuild:
   depend on newer dialog version to fix bug #88233
 
 *ufed-0.36 (06 Apr 2005)
 
-  06 Apr 2005; Harald van Dĳk <truedfx@gentoo.org> +ufed-0.36.ebuild:
+  06 Apr 2005; Harald van DÄ³k <truedfx@gentoo.org> +ufed-0.36.ebuild:
   Version bump
 
 *ufed-0.34 (15 Dec 2004)
@@ -189,7 +192,7 @@
   Another revision carrying a bunch of patches from bugzilla, this will
   probably be the last release of ufed as it is. Removing old ebuilds.
 
-  11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> ufed-0.35-r2.ebuild:
+  11 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org> ufed-0.35-r2.ebuild:
   Stable on alpha.
 
   08 Dec 2004; Daniel Black <dragonheart@gentoo.org> ufed-0.35-r2.ebuild:
