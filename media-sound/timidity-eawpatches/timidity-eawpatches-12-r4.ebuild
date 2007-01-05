@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/timidity-eawpatches-12-r4.ebuild,v 1.10 2006/11/22 23:34:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/timidity-eawpatches-12-r4.ebuild,v 1.11 2007/01/05 20:12:50 flameeyes Exp $
 
 IUSE=""
 
@@ -47,6 +47,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "You must run 'timidity-update -g -s eawpatches' to set this"
-	einfo "patchset as the default system patchset."
+	elog "You must run 'timidity-update -g -s eawpatches' to set this"
+	elog "patchset as the default system patchset."
 }

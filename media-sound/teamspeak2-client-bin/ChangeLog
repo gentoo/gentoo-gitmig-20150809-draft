@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/teamspeak2-client-bin
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/ChangeLog,v 1.20 2006/01/24 01:18:00 metalgod Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/ChangeLog,v 1.21 2007/01/05 20:08:21 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  teamspeak2-client-bin-2.0.32.60-r3.ebuild:
+  Convert to use elog.
 
   24 Jan 2006; Luis Medinas <metalgod@gentoo.org>
   teamspeak2-client-bin-2.0.32.60-r3.ebuild:

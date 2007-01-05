@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/teamspeak2-client-bin-2.0.32.60-r3.ebuild,v 1.11 2006/01/24 01:18:00 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/teamspeak2-client-bin-2.0.32.60-r3.ebuild,v 1.12 2007/01/05 20:08:21 flameeyes Exp $
 
 MY_PV=rc2_2032
 DESCRIPTION="The TeamSpeak voice communication tool"
@@ -73,22 +73,22 @@ src_install() {
 pkg_postinst() {
 
 	echo
-	einfo
-	einfo "Please Note: The new Teamspeak2 Release Candidate 2 Client"
-	einfo "will not be able to connect to any of the *old* rc1 servers."
-	einfo "if you get 'Bad response' from your server check if your"
-	einfo "server is running rc2, which is a version >= 2.0.19.16."
-	einfo "Also note this release supports the new speex codec, "
-	einfo "so if you got unsupported codec messages, you need this :D"
+	elog
+	elog "Please Note: The new Teamspeak2 Release Candidate 2 Client"
+	elog "will not be able to connect to any of the *old* rc1 servers."
+	elog "if you get 'Bad response' from your server check if your"
+	elog "server is running rc2, which is a version >= 2.0.19.16."
+	elog "Also note this release supports the new speex codec, "
+	elog "so if you got unsupported codec messages, you need this :D"
 	echo
-	einfo "Note: If you just upgraded from a version less than 2.0.32.60-r1,"
-	einfo "your users' config files will incorrectly point to non-existant"
-	einfo "soundfiles because they've been moved from their old location."
-	einfo "You may want to perform the following commands:"
-	einfo "# mkdir /usr/share/teamspeak2-client"
-	einfo "# ln -s ${dir}/sounds /usr/share/teamspeak2-client/sounds"
-	einfo "This way, each user won't have to modify their config files to"
-	einfo "reflect this move."
+	elog "Note: If you just upgraded from a version less than 2.0.32.60-r1,"
+	elog "your users' config files will incorrectly point to non-existant"
+	elog "soundfiles because they've been moved from their old location."
+	elog "You may want to perform the following commands:"
+	elog "# mkdir /usr/share/teamspeak2-client"
+	elog "# ln -s ${dir}/sounds /usr/share/teamspeak2-client/sounds"
+	elog "This way, each user won't have to modify their config files to"
+	elog "reflect this move."
 	echo
 }
 

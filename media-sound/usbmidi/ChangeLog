@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/usbmidi
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/usbmidi/ChangeLog,v 1.5 2005/11/03 22:30:49 eldad Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/usbmidi/ChangeLog,v 1.6 2007/01/05 20:18:30 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> usbmidi-1.0.ebuild:
+  Convert to use elog.
 
   03 Nov 2005; Eldad Zack <eldad@gentoo.org> usbmidi-1.0.ebuild:
   Bug #111242 : updated HOMEPAGE and SRC_URI. Thanks to Arvid

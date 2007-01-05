@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tap-reverbed/tap-reverbed-0.ebuild,v 1.4 2006/02/16 09:01:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tap-reverbed/tap-reverbed-0.ebuild,v 1.5 2007/01/05 20:07:29 flameeyes Exp $
 
 IUSE=""
 
@@ -22,7 +22,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_install() {
-	einfo ${D}
 	einstall
 
 	dodoc README AUTHORS
@@ -32,8 +31,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "TAP Reverb Editor expects the configuration file '.reverbed'"
-	einfo "to be in the user's home directory.  The default '.reverbed'"
-	einfo "file can be found in the /usr/share/tap-reverbed directory"
-	einfo "and should be manually copied to the user's directory."
+	elog "TAP Reverb Editor expects the configuration file '.reverbed'"
+	elog "to be in the user's home directory.	The default '.reverbed'"
+	elog "file can be found in the /usr/share/tap-reverbed directory"
+	elog "and should be manually copied to the user's directory."
 }

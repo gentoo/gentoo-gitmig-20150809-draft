@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-shompatches/timidity-shompatches-19960409-r3.ebuild,v 1.5 2006/11/22 23:39:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-shompatches/timidity-shompatches-19960409-r3.ebuild,v 1.6 2007/01/05 20:13:40 flameeyes Exp $
 
 IUSE=""
 
@@ -40,6 +40,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "You must run 'timidity-update -g -s shompatches' to set this"
-	einfo "patchset as the default system patchset."
+	elog "You must run 'timidity-update -g -s shompatches' to set this"
+	elog "patchset as the default system patchset."
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.81.ebuild,v 1.16 2006/02/11 17:09:33 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.81.ebuild,v 1.17 2007/01/05 20:09:02 flameeyes Exp $
 
 inherit gnome2
 
@@ -78,10 +78,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Since Version 3.73 terminatorX supports running"
-	einfo "suid root. If you install the terminatorX binary"
-	einfo "suid root it will then create the engine thread"
-	einfo "with realtime priority."
+	elog "Since Version 3.73 terminatorX supports running"
+	elog "suid root. If you install the terminatorX binary"
+	elog "suid root it will then create the engine thread"
+	elog "with realtime priority."
 	ewarn "Please read http://www.terminatorx.cx/faq.html#11"
 	ewarn "for details and potential security risks."
 }

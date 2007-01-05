@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/tap-reverbed
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tap-reverbed/ChangeLog,v 1.4 2006/02/16 09:01:06 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tap-reverbed/ChangeLog,v 1.5 2007/01/05 20:07:29 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> tap-reverbed-0.ebuild:
+  Convert to use elog.
 
   16 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> tap-reverbed-0.ebuild:
   Fix dependencies, shorten description, drop redundant src_compile().
