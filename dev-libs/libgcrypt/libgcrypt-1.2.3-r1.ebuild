@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.2.3-r1.ebuild,v 1.2 2007/01/04 22:21:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.2.3-r1.ebuild,v 1.3 2007/01/05 08:57:10 alonbl Exp $
 
 inherit eutils autotools
 
@@ -8,7 +8,7 @@ DESCRIPTION="general purpose crypto library based on the code used in GnuPG"
 HOMEPAGE="http://www.gnupg.org/"
 SRC_URI="mirror://gnupg/libgcrypt/${P}.tar.gz
 	mirror://gentoo/${PN}-1.2.1-patches.tar.gz
-	!bindist? ( idea? ( mirror://gentoo/${P}-idea.diff.bz2 ) )"
+	!bindist? ( idea? ( http://www.kfwebs.com/${P}-idea.diff.bz2 ) )"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
