@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylint
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.31 2006/11/30 00:04:59 marienz Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.32 2007/01/05 19:16:13 lucass Exp $
+
+  05 Jan 2007; Lukasz Strzygowski <lucass@gentoo.org> pylint-0.12.2.ebuild:
+  Fixed logilab-common dep, bug #157848.
 
 *pylint-0.12.2 (30 Nov 2006)
 
