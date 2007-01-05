@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.3.1.ebuild,v 1.5 2007/01/02 23:50:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.3.1.ebuild,v 1.6 2007/01/05 08:23:55 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -57,7 +57,8 @@ if [[ -n ${SNAPSHOT} ]] ; then
 	SRC_URI="http://www.busybox.net/downloads/snapshots/${PN}-${SNAPSHOT}.tar.bz2"
 else
 	MY_P=${PN}-${PV/_/-}
-	SRC_URI="http://www.busybox.net/downloads/${MY_P}.tar.bz2"
+	SRC_URI="http://www.busybox.net/downloads/${MY_P}.tar.bz2
+		http://busybox.net/downloads/fixes-1.3.1/busybox-1.3.1.shadow.patch"
 fi
 
 LICENSE="GPL-2"
@@ -105,6 +106,7 @@ src_unpack() {
 	# patches go here!
 	epatch "${FILESDIR}"/1.3.0/bb.patch
 	epatch "${FILESDIR}"/1.3.0/ld.patch
+	epatch "${DISTDIR}"/${P}.shadow.patch
 
 	# work around broken ass powerpc compilers
 	use ppc64 && append-flags -mminimal-toc
