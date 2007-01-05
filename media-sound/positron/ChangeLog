@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/positron
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/positron/ChangeLog,v 1.15 2005/05/28 14:15:50 luckyduck Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/positron/ChangeLog,v 1.16 2007/01/05 17:44:21 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> positron-1.1.ebuild:
+  Remove src_compile.
 
   28 May 2005; Jan Brinkmann <luckyduck@gentoo.org> -positron-1.0.ebuild,
   positron-1.1.ebuild:
