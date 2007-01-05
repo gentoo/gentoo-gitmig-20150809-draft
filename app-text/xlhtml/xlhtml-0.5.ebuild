@@ -1,8 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xlhtml/xlhtml-0.5.ebuild,v 1.12 2005/10/29 15:50:26 grobian Exp $
-
-inherit gnuconfig
+# $Header: /var/cvsroot/gentoo-x86/app-text/xlhtml/xlhtml-0.5.ebuild,v 1.13 2007/01/05 07:27:24 flameeyes Exp $
 
 DESCRIPTION="Convert MS Excel and Powerpoint files to HTML"
 HOMEPAGE="http://chicago.sourceforge.net/xlhtml/"
@@ -16,17 +14,11 @@ DEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}; gnuconfig_update config.sub config.guess
 
 	# This is needed specifically for depcomp, which is necessary for
 	# building xlhtml, but isn't included.
 	cd ${S}; aclocal; autoconf
 	cd ${S}; automake --add-missing
-}
-
-src_compile() {
-	econf || die "econf failed for ${P}"
-	emake || die "emake failed for ${P}"
 }
 
 src_install() {

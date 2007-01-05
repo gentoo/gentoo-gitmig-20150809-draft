@@ -1,8 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.9.11-r1.ebuild,v 1.10 2005/02/19 10:06:27 corsair Exp $
-
-inherit gnuconfig
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.9.11-r1.ebuild,v 1.11 2007/01/05 07:23:52 flameeyes Exp $
 
 DESCRIPTION="Dictionary Client/Server for the DICT protocol"
 HOMEPAGE="http://www.dict.org/"
@@ -16,10 +14,6 @@ IUSE=""
 DEPEND="virtual/libc"
 
 src_compile() {
-
-	# Update config.sub and config.guess so dictd understands the sparc architecture
-	gnuconfig_update
-
 	econf \
 		--with-cflags="${CFLAGS}" \
 		--sysconfdir=/etc/dict || die

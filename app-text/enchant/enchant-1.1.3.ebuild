@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.1.3.ebuild,v 1.15 2005/01/01 16:12:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.1.3.ebuild,v 1.16 2007/01/05 07:26:12 flameeyes Exp $
 
-inherit gnome2 gnuconfig
+inherit gnome2
 
 DESCRIPTION="Spellchecker wrapping library"
 HOMEPAGE="http://www.abisource.com/enchant/"
@@ -22,13 +22,5 @@ RDEPEND=">=dev-libs/glib-2
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	#for proper configuration on mips-linux and possibly other systems
-	gnuconfig_update
-}
 
 DOCS="AUTHORS BUGS ChangeLog HACKING MAINTAINERS NEWS README TODO"

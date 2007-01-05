@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-1.0.1.ebuild,v 1.19 2006/02/06 19:36:19 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-1.0.1.ebuild,v 1.20 2007/01/05 07:26:41 flameeyes Exp $
 
-inherit libtool gnuconfig flag-o-matic
+inherit libtool flag-o-matic
 
 MY_PN="Sablot"
 MY_P="${MY_PN}-${PV}"
@@ -26,9 +26,6 @@ DOCS="INSTALL README README_JS RELEASE src/TODO"
 
 src_compile() {
 	local myconf=
-
-	# Detect mips systems properly
-	gnuconfig_update
 
 	# Please do not remove, else we get references to PORTAGE_TMPDIR
 	# in /usr/lib/libsablot.la ...

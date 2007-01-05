@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/new/new-1.3.2.ebuild,v 1.6 2005/04/24 11:41:19 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/new/new-1.3.2.ebuild,v 1.7 2007/01/05 07:25:13 flameeyes Exp $
 
-inherit eutils gnuconfig
+inherit eutils
 
 DESCRIPTION="template system useful when used with a simple text editor (like vi)"
 HOMEPAGE="http://www.flyn.org/"
@@ -16,8 +16,6 @@ IUSE=""
 src_unpack() {
 	unpack ${A} ; cd ${S}/src
 	epatch ${FILESDIR}/${PN}-gcc-3.patch
-
-	cd ${S} ; gnuconfig_update
 }
 
 src_install() {

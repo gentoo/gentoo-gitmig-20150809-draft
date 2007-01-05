@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r2.ebuild,v 1.7 2006/02/17 01:41:30 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r2.ebuild,v 1.8 2007/01/05 07:22:10 flameeyes Exp $
 
-inherit gnuconfig eutils
+inherit eutils
 
 S=${WORKDIR}/${PN}-${PV:0:4}
 DESCRIPTION="Any to PostScript filter"
@@ -45,7 +45,6 @@ src_unpack() {
 	# fix sandbox violation, bug #79012
 	sed -i -e 's:$acroread -helpall:acroread4 -helpall:' configure configure.in
 
-	gnuconfig_update || die "gnuconfig_update failed"
 	libtoolize --copy --force || die "libtoolize failed"
 }
 

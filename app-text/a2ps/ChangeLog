@@ -1,6 +1,9 @@
 # ChangeLog for app-text/a2ps
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.58 2007/01/04 14:22:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.59 2007/01/05 07:22:10 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> a2ps-4.13c-r2.ebuild:
+  Remove gnuconfig_update usage, leave it to econf.
 
   04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> a2ps-4.13c-r5.ebuild:
   Don't use gnuconfig_update anymore.

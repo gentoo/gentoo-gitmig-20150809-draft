@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dgs
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/ChangeLog,v 1.25 2006/03/23 18:51:40 spyderous Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/ChangeLog,v 1.26 2007/01/05 07:22:56 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> dgs-0.5.10-r1.ebuild:
+  Remove gnuconfig_update usage, leave it to econf.
 
   23 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>; dgs-0.5.10-r1.ebuild:
   (#127342) Doesn't build in parallel, found by Erik Zeek.
