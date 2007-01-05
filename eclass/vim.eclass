@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.157 2007/01/03 01:48:54 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.158 2007/01/05 04:41:17 beu Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -29,7 +29,9 @@ MY_PN="${PN%-cvs}"
 # constant at cache creation time. It's therefore legal and doesn't break
 # anything. I even checked with carpaski first :) (08 Sep 2004 ciaranm)
 if [[ "${MY_PN}" != "vim-core" ]] && ! version_is_at_least "6.3.086" ; then
-	inherit debug
+	IUSE="debug"
+else
+	IUSE=""
 fi
 
 if [[ "${PN##*-}" == "cvs" ]] ; then
@@ -43,9 +45,9 @@ fi
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install src_test pkg_postinst pkg_postrm
 
 if version_is_at_least "6.4_beta" ; then
-	IUSE="nls acl"
+	IUSE="${IUSE} nls acl"
 else
-	IUSE="selinux nls acl"
+	IUSE="${IUSE} selinux nls acl"
 fi
 
 DEPEND="${DEPEND} nls? ( virtual/libintl )"
