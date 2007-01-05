@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vlorb/vlorb-1.2.ebuild,v 1.5 2005/08/07 12:52:15 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vlorb/vlorb-1.2.ebuild,v 1.6 2007/01/05 20:21:52 flameeyes Exp $
 
 DESCRIPTION="a high quality Audio CD to audio file encoder"
 HOMEPAGE="http://jk.yazzy.org/projects/vlorb/"
@@ -15,9 +15,7 @@ DEPEND=">=media-sound/cdparanoia-3.9.8
 	>=dev-perl/CDDB-1.12
 	ogg? ( >=media-sound/vorbis-tools-1.0.1 )"
 
-src_compile() {
-	einfo "Nothing to compile"
-}
+src_compile() { :; }
 
 src_install() {
 	dodoc ChangeLog README
