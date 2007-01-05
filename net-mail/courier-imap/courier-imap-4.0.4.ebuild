@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.4.ebuild,v 1.13 2006/11/04 11:31:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.4.ebuild,v 1.14 2007/01/05 08:51:40 flameeyes Exp $
 
-inherit eutils gnuconfig
+inherit eutils
 IUSE="fam berkdb gdbm debug ipv6 nls selinux"
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
@@ -76,7 +76,6 @@ src_unpack() {
 	fi
 
 	export WANT_AUTOCONF="2.5"
-	gnuconfig_update
 	libtoolize --copy --force
 	ebegin "Recreating configure"
 	autoconf || die "autoconf on . failed"

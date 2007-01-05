@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.5-r1.ebuild,v 1.1 2006/10/10 09:43:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.5-r1.ebuild,v 1.2 2007/01/05 08:59:13 flameeyes Exp $
 
-inherit eutils gnuconfig
+inherit eutils
 
 FCONF_P="fetchmailconf-1.43.2"
 
@@ -36,7 +36,6 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-6.3.5-preserve-logging-fd.patch
 
 	autoconf
-	gnuconfig_update
 }
 
 src_compile() {

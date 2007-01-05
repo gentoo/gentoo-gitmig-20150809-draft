@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.6-r1.ebuild,v 1.13 2006/11/23 16:12:33 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.6-r1.ebuild,v 1.14 2007/01/05 09:00:33 flameeyes Exp $
 
-inherit eutils gnuconfig fixheadtails
+inherit eutils fixheadtails
 
 # TODO: all ldap, sybase support
 #MY_PV=${PV/_/-}
@@ -71,7 +71,6 @@ src_unpack() {
 		vdelivermail.c vpopbull.c vqmaillocal.c \
 		|| die "failed to remove vpopmail advertisement"
 
-	gnuconfig_update
 	autoconf || die "reconfigure failed."
 	ht_fix_file ${S}/cdb/Makefile || die "failed to fix file"
 }

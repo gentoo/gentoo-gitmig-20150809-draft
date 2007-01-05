@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/courier-imap
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.138 2006/11/23 16:02:51 vivo Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.139 2007/01/05 08:51:40 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  courier-imap-3.0.7.ebuild, courier-imap-3.0.8.ebuild,
+  courier-imap-4.0.1.ebuild, courier-imap-4.0.1-r1.ebuild,
+  courier-imap-4.0.1-r2.ebuild, courier-imap-4.0.4.ebuild,
+  courier-imap-4.0.6.ebuild:
+  Remove gnuconfig_update usage, leave it to econf.
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> courier-imap-3.0.7.ebuild,
   courier-imap-3.0.8.ebuild:

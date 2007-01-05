@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.76 2007/01/04 13:18:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.77 2007/01/05 09:00:33 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  vpopmail-5.4.6-r1.ebuild, vpopmail-5.4.13.ebuild:
+  Remove gnuconfig_update usage, leave it to econf.
 
   04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> vpopmail-5.4.16.ebuild:
   Fix autotools handling, closes bug #152497. Also don't use gnuconfig_update.

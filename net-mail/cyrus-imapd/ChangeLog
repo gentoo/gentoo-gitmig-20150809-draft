@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/cyrus-imapd
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.90 2006/08/29 01:11:30 jer Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.91 2007/01/05 08:56:43 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  cyrus-imapd-2.2.12.ebuild, cyrus-imapd-2.2.12-r4.ebuild,
+  cyrus-imapd-2.2.12-r5.ebuild, cyrus-imapd-2.3.1.ebuild,
+  cyrus-imapd-2.3.6.ebuild, cyrus-imapd-2.3.7.ebuild:
+  Remove gnuconfig_update usage, leave it to econf.
 
   29 Aug 2006; Jeroen Roovers <jer@gentoo.org> cyrus-imapd-2.2.12-r4.ebuild:
   Stable for HPPA (bug #144375).

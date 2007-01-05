@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.7.ebuild,v 1.19 2006/11/23 16:02:51 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.7.ebuild,v 1.20 2007/01/05 08:51:40 flameeyes Exp $
 
-inherit eutils gnuconfig
+inherit eutils
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 HOMEPAGE="http://www.courier-mta.org/"
@@ -71,7 +71,6 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-db4-configure.in.patch || die "patch failed"
 
 	export WANT_AUTOCONF="2.5"
-	gnuconfig_update
 	ebegin "Recreating configure"
 	autoconf || \
 		die "recreate configure failed"

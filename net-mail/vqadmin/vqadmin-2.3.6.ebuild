@@ -1,8 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vqadmin/vqadmin-2.3.6.ebuild,v 1.7 2006/02/20 22:13:32 hansmi Exp $
-
-inherit gnuconfig
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vqadmin/vqadmin-2.3.6.ebuild,v 1.8 2007/01/05 09:02:08 flameeyes Exp $
 
 DESCRIPTION="A web based control pannel to manage Virtual Qmail Domains. Works with qmailadmin"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -16,12 +14,6 @@ DEPEND=">=net-mail/vpopmail-5.3
 RDEPEND="${DEPEND}
 	net-mail/qmailadmin
 	net-www/apache"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	gnuconfig_update
-}
 
 src_compile() {
 	local dir_vhost="/var/www/localhost/"
@@ -103,8 +95,8 @@ src_install () {
 #	einfo "Now, You can create a user. Example: "
 #	einfo "	  htpasswd -c /etc/apache/conf/vqadmin.passwd username"
 #	einfo "then: "
-#	einfo "   cd /etc/apache/conf/ && chown root.apache vqadmin.passwd"
-#	einfo "   chmod 640 vqadmin.passwd"
+#	einfo "	  cd /etc/apache/conf/ && chown root.apache vqadmin.passwd"
+#	einfo "	  chmod 640 vqadmin.passwd"
 #	einfo ""
 #	einfo "IMPORTANT ! Use the -c (-create) switch ONLY the first time"
 #	einfo "IMPORTANT ! You will have to restart apache to get vqadmin working"

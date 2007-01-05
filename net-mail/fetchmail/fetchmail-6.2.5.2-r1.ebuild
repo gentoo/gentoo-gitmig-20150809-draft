@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.5.2-r1.ebuild,v 1.12 2006/08/19 23:33:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.5.2-r1.ebuild,v 1.13 2007/01/05 08:59:13 flameeyes Exp $
 
-inherit eutils gnuconfig
+inherit eutils
 
 FCONF_P="fetchmailconf-1.43.2"
 
@@ -44,7 +44,6 @@ src_unpack() {
 	fi
 
 	autoconf
-	gnuconfig_update
 }
 
 src_compile() {

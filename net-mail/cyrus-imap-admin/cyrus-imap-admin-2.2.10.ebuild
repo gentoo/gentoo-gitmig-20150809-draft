@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.2.10.ebuild,v 1.8 2006/06/14 08:32:22 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.2.10.ebuild,v 1.9 2007/01/05 08:55:01 flameeyes Exp $
 
-inherit perl-app eutils gnuconfig
+inherit perl-app eutils
 
 DESCRIPTION="Utilities and Perl modules to administer a Cyrus IMAP server."
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/imapd/"
@@ -37,7 +37,6 @@ src_unpack() {
 
 	# Recreate configure.
 	export WANT_AUTOCONF="2.5"
-	gnuconfig_update || die "gnuconfig_update failed."
 	ebegin "Recreating configure"
 	rm -rf configure config.h.in autom4te.cache
 	sh SMakefile &>/dev/null || die "SMakefile failed"
@@ -50,7 +49,6 @@ src_unpack() {
 }
 
 src_compile() {
-	# gnuconfig_update
 
 	local myconf
 	myconf="${myconf} `use_with ssl openssl`"

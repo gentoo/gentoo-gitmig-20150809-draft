@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.12-r4.ebuild,v 1.8 2006/08/29 01:11:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.12-r4.ebuild,v 1.9 2007/01/05 08:56:43 flameeyes Exp $
 
-inherit eutils ssl-cert gnuconfig fixheadtails
+inherit eutils ssl-cert fixheadtails
 
 DESCRIPTION="The Cyrus IMAP Server."
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/imapd/"
@@ -183,7 +183,6 @@ src_unpack() {
 
 	# Recreate configure.
 	export WANT_AUTOCONF="2.5"
-	gnuconfig_update
 	rm -rf configure config.h.in autom4te.cache || die
 	ebegin "Recreating configure"
 	sh SMakefile &>/dev/null || die "SMakefile failed"

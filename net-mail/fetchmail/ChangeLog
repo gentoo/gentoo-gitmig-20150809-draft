@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/fetchmail
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.111 2006/12/03 11:15:19 eroyf Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.112 2007/01/05 08:59:13 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  fetchmail-6.2.5.2-r1.ebuild, fetchmail-6.3.2.ebuild,
+  fetchmail-6.3.2-r1.ebuild, fetchmail-6.3.3.ebuild, fetchmail-6.3.4.ebuild,
+  fetchmail-6.3.5.ebuild, fetchmail-6.3.5-r1.ebuild:
+  Remove gnuconfig_update usage, leave it to econf.
 
   03 Dec 2006; Alexander H. Færøy <eroyf@gentoo.org>
   fetchmail-6.3.4.ebuild:
