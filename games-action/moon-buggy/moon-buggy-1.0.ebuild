@@ -1,7 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/moon-buggy-1.0.ebuild,v 1.5 2006/05/25 23:59:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/moon-buggy-1.0.ebuild,v 1.6 2007/01/05 18:49:19 nyhm Exp $
 
+WANT_AUTOCONF=latest
+WANT_AUTOMAKE=latest
 inherit autotools eutils games
 
 DESCRIPTION="A simple console game, where you drive a car across the moon's surface"
@@ -14,8 +16,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="esd"
 
-DEPEND=">=sys-libs/ncurses-5
-	esd? ( media-sound/esound )"
+DEPEND="esd? ( media-sound/esound )"
 
 src_unpack() {
 	unpack ${A}
@@ -23,7 +24,7 @@ src_unpack() {
 	sed -i \
 		-e '/$(DESTDIR)$(bindir)\/moon-buggy -c/d' \
 		Makefile.am \
-		|| die "sed Makefile.in failed"
+		|| die "sed Makefile.am failed"
 	use esd && epatch sound.patch
 	rm -f missing
 	eautoreconf
@@ -35,7 +36,7 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc ANNOUNCE AUTHORS ChangeLog NEWS README* TODO
 	touch "${D}${GAMES_STATEDIR}"/${PN}/mbscore
 	fperms 664 "${GAMES_STATEDIR}"/${PN}/mbscore
