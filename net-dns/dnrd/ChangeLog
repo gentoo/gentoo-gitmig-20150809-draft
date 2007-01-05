@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/dnrd
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnrd/ChangeLog,v 1.10 2006/10/22 01:34:19 tcort Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnrd/ChangeLog,v 1.11 2007/01/05 08:47:12 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> dnrd-2.20.ebuild,
+  dnrd-2.20.1.ebuild:
+  Remove gnuconfig_update usage, leave it to econf.
 
   22 Oct 2006; Thomas Cort <tcort@gentoo.org> dnrd-2.20.1.ebuild:
   Added ~amd64 keyword wrt Bug #127361.
