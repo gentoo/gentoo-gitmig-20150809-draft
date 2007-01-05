@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/datavision-0.8.2.ebuild,v 1.11 2006/09/28 02:28:12 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/datavision-0.8.2.ebuild,v 1.12 2007/01/05 20:43:24 caster Exp $
 
 inherit java-pkg
 
@@ -75,26 +75,26 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "CONFIGURATION NOTES"
-	einfo
-	einfo "Make sure your CLASSPATH variable is updated via java-config(1)"
-	einfo "to use your desired JDBC driver."
-	einfo
-	einfo "You must then create a database. Run '/usr/bin/${PN}'"
-	einfo "and fill the connection dialog box with your database details."
+	elog "CONFIGURATION NOTES"
+	elog
+	elog "Make sure your CLASSPATH variable is updated via java-config(1)"
+	elog "to use your desired JDBC driver."
+	elog
+	elog "You must then create a database. Run '/usr/bin/${PN}'"
+	elog "and fill the connection dialog box with your database details."
 
 	if use mysql; then
-		einfo
-		einfo "MySQL example:"
-		einfo "Driver class name: com.mysql.jdbc.Driver"
-		einfo "Connection: jdbc:mysql://localhost/database"
+		elog
+		elog "MySQL example:"
+		elog "Driver class name: com.mysql.jdbc.Driver"
+		elog "Connection: jdbc:mysql://localhost/database"
 	fi
 
 	if use postgres; then
-		einfo
-		einfo "PostgreSQL example:"
-		einfo "Driver class name:org.postgresql.Driver"
-		einfo "Connection: jdbc:postgresql://localhost/database"
+		elog
+		elog "PostgreSQL example:"
+		elog "Driver class name:org.postgresql.Driver"
+		elog "Connection: jdbc:postgresql://localhost/database"
 	fi
-	einfo
+	elog
 }

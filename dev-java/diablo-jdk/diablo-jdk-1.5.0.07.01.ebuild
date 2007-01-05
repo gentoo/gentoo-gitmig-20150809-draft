@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/diablo-jdk/diablo-jdk-1.5.0.07.01.ebuild,v 1.3 2006/12/03 16:51:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/diablo-jdk/diablo-jdk-1.5.0.07.01.ebuild,v 1.4 2007/01/05 20:44:31 caster Exp $
 
 inherit java-vm-2 eutils versionator
 
@@ -128,8 +128,8 @@ pkg_postinst() {
 	ewarn "Be careful which Java libraries you attempt to use."
 
 	echo
-	einfo " Be careful: ${P}'s Java compiler uses"
-	einfo " '-source 1.5' as default. Some keywords such as 'enum'"
-	einfo " are not valid identifiers any more in that mode,"
-	einfo " which can cause incompatibility with certain sources."
+	elog "Be careful: ${P}'s Java compiler uses"
+	elog "'-source 1.5' as default. Some keywords such as 'enum'"
+	elog "are not valid identifiers any more in that mode,"
+	elog "which can cause incompatibility with certain sources."
 }
