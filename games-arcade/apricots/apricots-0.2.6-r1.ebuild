@@ -1,10 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/apricots/apricots-0.2.6-r1.ebuild,v 1.2 2006/09/11 07:02:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/apricots/apricots-0.2.6-r1.ebuild,v 1.3 2007/01/05 19:01:13 nyhm Exp $
 
+WANT_AUTOCONF=latest
+WANT_AUTOMAKE=latest
 inherit autotools eutils games
 
-DESCRIPTION="Fly a plane around bomb/shoot the enemy.  Port of Planegame from Amiga."
+DESCRIPTION="Fly a plane around bomb/shoot the enemy. Port of Planegame from Amiga."
 HOMEPAGE="http://www.fishies.org.uk/apricots.html"
 SRC_URI="http://www.fishies.org.uk/${P}.tar.gz"
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ppc ~sparc x86"
 IUSE=""
 
-DEPEND=">=media-libs/libsdl-1.2
+DEPEND="media-libs/libsdl
 	media-libs/openal
 	media-libs/freealut"
 
@@ -25,7 +27,6 @@ src_unpack() {
 		-e 's:-DAP_PATH=\\\\\\"$prefix.*":-DAP_PATH=\\\\\\"${GAMES_DATADIR}/${PN}/\\\\\\"":' \
 		configure.in \
 		|| die "sed failed"
-
 	sed -i \
 		-e "s:filename(AP_PATH):filename(\"${GAMES_SYSCONFDIR}/${PN}/\"):" \
 		${PN}/init.cpp \
@@ -46,16 +47,15 @@ src_install() {
 	dohtml apricots.html
 	cd ${PN}
 	dogamesbin apricots || die "dogamesbin failed"
-	insinto "${GAMES_DATADIR}/${PN}"
+	insinto "${GAMES_DATADIR}"/${PN}
 	doins *.wav *.psf *.shapes || die "doins failed"
-	insinto "${GAMES_SYSCONFDIR}/${PN}"
-	doins apricots.cfg || die "failed to install game config file"
+	insinto "${GAMES_SYSCONFDIR}"/${PN}
+	doins apricots.cfg || die "doins apricots.cfg failed"
 	prepgamesdirs
 }
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "You can change the game options by editing:"
-	einfo "${GAMES_SYSCONFDIR}/${PN}/apricots.cfg"
-	echo
+	elog "You can change the game options by editing:"
+	elog "${GAMES_SYSCONFDIR}/${PN}/apricots.cfg"
 }
