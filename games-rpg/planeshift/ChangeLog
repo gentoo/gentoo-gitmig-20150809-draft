@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/planeshift
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/ChangeLog,v 1.10 2006/05/29 19:55:07 wolf31o2 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/ChangeLog,v 1.11 2007/01/05 05:00:58 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  planeshift-0.3.011.ebuild:
+  Remove debug.eclass usage.
 
   29 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   planeshift-0.3.011.ebuild:

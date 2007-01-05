@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/planeshift-0.3.011.ebuild,v 1.3 2006/05/29 19:55:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/planeshift-0.3.011.ebuild,v 1.4 2007/01/05 05:00:58 flameeyes Exp $
 
-inherit eutils games debug
+inherit eutils games
 
 DESCRIPTION="Virtual fantasy world MMORPG"
 HOMEPAGE="http://www.planeshift.it/"
