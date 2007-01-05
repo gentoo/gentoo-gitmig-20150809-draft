@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-2.2.2.ebuild,v 1.2 2006/11/05 17:28:02 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-2.2.2.ebuild,v 1.3 2007/01/05 19:12:36 compnerd Exp $
 
-inherit gnome2 eutils
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit autotools eutils gnome2
 
 DESCRIPTION="Genealogical Research and Analysis Management Programming System"
 HOMEPAGE="http://gramps.sourceforge.net/"
@@ -30,7 +33,6 @@ DEPEND="${RDEPEND}
 MAKEOPTS="${MAKEOPTS} -j1"
 
 DOCS="NEWS README TODO"
-USE_DESTDIR="1"
 
 pkg_setup() {
 	if has_version '<dev-python/pygtk-2.8' ; then
@@ -49,6 +51,14 @@ pkg_setup() {
 	fi
 
 	G2CONF="${G2CONF} --disable-mime-install"
+}
+
+src_unpack() {
+	gnome2_src_unpack
+	cd ${S}
+
+	epatch ${FILESDIR}/${PN}-2.2.2-desktop-entry-icon.patch
+	eautomake
 }
 
 src_install() {
