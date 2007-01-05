@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/hwsetup
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.44 2006/08/26 05:30:06 mr_bones_ Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.45 2007/01/05 19:44:46 wolf31o2 Exp $
+
+*hwsetup-1.2 (05 Jan 2007)
+
+  05 Jan 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/hwsetup-1.2-dyn_blacklist.patch,
+  +files/hwsetup-1.2-fastprobe.patch, +files/hwsetup-1.2-gentoo.patch,
+  hwsetup-1.1.ebuild, +hwsetup-1.2.ebuild:
+  Version bump to 1.2, which should fix bug #159733 (at least, it works here
+  w/ sys-apps/pciutils-2.2.3-r2).
 
   26 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org> hwsetup-1.1.ebuild:
   fix RDEPEND; touchups
