@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/automake
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.99 2007/01/03 16:55:50 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.100 2007/01/05 16:10:32 jer Exp $
+
+  05 Jan 2007; Jeroen Roovers <jer@gentoo.org> automake-1.10.ebuild:
+  Stable for HPPA (bug #159417).
 
   03 Jan 2007; Steve Dibb <beandog@gentoo.org> automake-1.10.ebuild:
   amd64 stable, bug 159417
