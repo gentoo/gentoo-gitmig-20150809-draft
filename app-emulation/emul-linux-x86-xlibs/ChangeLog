@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-xlibs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.52 2007/01/05 07:14:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.53 2007/01/05 10:25:51 vapier Exp $
+
+*emul-linux-x86-xlibs-7.0-r8 (05 Jan 2007)
+
+  05 Jan 2007; Mike Frysinger <vapier@gentoo.org>
+  +emul-linux-x86-xlibs-7.0-r8.ebuild:
+  Dont install patch #143390 by Bernard Cafarelli.
 
 *emul-linux-x86-xlibs-7.0-r7 (05 Jan 2007)
 
