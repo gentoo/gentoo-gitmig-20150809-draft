@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jvyaml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jvyaml/ChangeLog,v 1.2 2007/01/05 02:45:05 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jvyaml/ChangeLog,v 1.3 2007/01/05 20:41:06 caster Exp $
+
+  05 Jan 2007; Vlastimil Babka <caster@gentoo.org>
+  files/jvyaml-0.2-tests.patch, jvyaml-0.2.ebuild:
+  Fix handling of tests and junit observed with JAVA_PKG_STRICT enabled.
 
 *jvyaml-0.2 (05 Jan 2007)
 

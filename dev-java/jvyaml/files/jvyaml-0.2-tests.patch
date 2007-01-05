@@ -1,17 +1,20 @@
-Only in jvyaml-0.2-patched/: .build.xml.swp
-Only in jvyaml-0.2-patched/: build
-diff -ru jvyaml-0.2/build.xml jvyaml-0.2-patched/build.xml
---- jvyaml-0.2/build.xml	2006-09-24 08:46:31.000000000 -0400
-+++ jvyaml-0.2-patched/build.xml	2007-01-04 21:03:44.000000000 -0500
-@@ -46,8 +46,8 @@
-     </javac>
+--- build.xml	2007-01-05 21:30:59.000000000 +0100
++++ build.xml	2007-01-05 21:31:46.000000000 +0100
+@@ -47,7 +47,7 @@
    </target>
  
--  <target name="test" depends="compile-tests" description="Runs all tests">
+   <target name="test" depends="compile-tests" description="Runs all tests">
 -    <junit haltonfailure="false">
-+  <target name="test" depends="compile-tests" unless="test.skip" description="Runs all tests">
 +    <junit haltonfailure="true">
        <classpath>
        	<pathelement location="${build.dir}/classes/jvyaml"/>
        	<pathelement location="${build.dir}/test"/>
-Only in jvyaml-0.2/lib: jvyaml.jar
+@@ -61,7 +61,7 @@
+     </junit>
+   </target>
+ 
+-  <target name="jar" depends="test" description="Create the jvyaml.jar file">
++  <target name="jar" depends="compile" description="Create the jvyaml.jar file">
+     <jar destfile="${lib.dir}/jvyaml.jar">
+       <fileset dir="${jvyaml.classes.dir}">
+         <include name="**/*.class"/>
