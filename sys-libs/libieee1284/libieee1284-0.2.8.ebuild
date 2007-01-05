@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/libieee1284-0.2.8.ebuild,v 1.4 2006/12/09 21:21:38 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/libieee1284-0.2.8.ebuild,v 1.5 2007/01/05 09:18:27 flameeyes Exp $
 
 WANT_AUTOMAKE=1.7
 WANT_AUTOCONF=2.58
 
-inherit autotools eutils gnuconfig
+inherit autotools eutils
 
 DESCRIPTION="Library to query devices using IEEE1284"
 HOMEPAGE="http://cyberelk.net/tim/libieee1284/index.html"
@@ -29,7 +29,6 @@ src_unpack() {
 	cd "${S}"
 	epatch "${DISTDIR}/${P}-dbjh-v4.diff.bz2"
 	eautoreconf
-	gnuconfig_update
 }
 
 src_install () {
