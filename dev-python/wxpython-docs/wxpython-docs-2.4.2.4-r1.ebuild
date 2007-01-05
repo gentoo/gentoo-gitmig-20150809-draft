@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-docs/wxpython-docs-2.4.2.4-r1.ebuild,v 1.3 2005/11/13 02:32:45 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-docs/wxpython-docs-2.4.2.4-r1.ebuild,v 1.4 2007/01/05 22:20:56 dirtyepic Exp $
 
 inherit eutils
 
@@ -35,5 +35,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "The demo files are now included with dev-python/wxpython-docs"
+	elog "The demo files are now included with dev-python/wxpython-docs"
 }
