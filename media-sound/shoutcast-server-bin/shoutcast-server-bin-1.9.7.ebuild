@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-server-bin/shoutcast-server-bin-1.9.7.ebuild,v 1.2 2006/06/29 19:27:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-server-bin/shoutcast-server-bin-1.9.7.ebuild,v 1.3 2007/01/05 17:55:08 flameeyes Exp $
 
 IUSE=""
 
@@ -19,18 +19,18 @@ DEPEND=""
 S="${WORKDIR}/"
 
 pkg_nofetch() {
-	einfo "Please download ${A} from:"
-	einfo "${HOMEPAGE}"
-	einfo "and move it to ${DISTDIR}"
+	elog "Please download ${A} from:"
+	elog "${HOMEPAGE}"
+	elog "and move it to ${DISTDIR}"
 }
 
 src_compile() {
-	einfo "Nothing to compile."
+	elog "Nothing to compile."
 }
 
 src_install() {
 	# install executable
-	einfo "Installing Executable"
+	elog "Installing Executable"
 	dodir /opt/shoutcast
 	exeinto /opt/shoutcast
 	doexe sc_serv
@@ -67,19 +67,19 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "To start shoutcast, use the init.d script by running"
-	einfo "/etc/init.d/shoutcast."
-	einfo
-	einfo "On demand content should be stored in /opt/shoutcast/content"
-	einfo "See http://forums.winamp.com/showthread.php?threadid=75736 for"
-	einfo "more information on setting up on demand content"
-	einfo
-	einfo "FAQ's can be found at:"
-	einfo "http://forums.winamp.com/showthread.php?threadid=75736 "
-	einfo "and can help you with server setup."
-	einfo
-	einfo "An Gentoo Linux shoutcast guide can be found at "
-	einfo "http://www.gentoo.org/doc/en/shoutcast-config.xml"
-	einfo
+	elog
+	elog "To start shoutcast, use the init.d script by running"
+	elog "/etc/init.d/shoutcast."
+	elog
+	elog "On demand content should be stored in /opt/shoutcast/content"
+	elog "See http://forums.winamp.com/showthread.php?threadid=75736 for"
+	elog "more information on setting up on demand content"
+	elog
+	elog "FAQ's can be found at:"
+	elog "http://forums.winamp.com/showthread.php?threadid=75736 "
+	elog "and can help you with server setup."
+	elog
+	elog "An Gentoo Linux shoutcast guide can be found at "
+	elog "http://www.gentoo.org/doc/en/shoutcast-config.xml"
+	elog
 }
