@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/audacious
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.96 2006/12/05 14:57:26 jer Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.97 2007/01/05 10:30:18 chainsaw Exp $
+
+*audacious-1.3.0_alpha1 (05 Jan 2007)
+
+  05 Jan 2007; Tony Vroon <chainsaw@gentoo.org>
+  +audacious-1.3.0_alpha1.ebuild:
+  Developer release of the new 1.3 series. File bugs upstream at
+  http://bugs-meta.atheme.org/ and not in the Gentoo bug tracker. Major
+  changes in playlist handling and file scanning. Closes bug #156639, with
+  thanks to Chris Kehler <cbkehler@sympatico.ca>.
 
   05 Dec 2006; Jeroen Roovers <jer@gentoo.org> audacious-1.2.2.ebuild:
   Stable for HPPA.
