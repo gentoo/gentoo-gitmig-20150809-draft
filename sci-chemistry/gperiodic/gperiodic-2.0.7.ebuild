@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/gperiodic-2.0.7.ebuild,v 1.3 2005/08/19 11:53:38 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/gperiodic-2.0.7.ebuild,v 1.4 2007/01/05 17:10:53 kugelfang Exp $
 
 inherit toolchain-funcs
 
@@ -20,13 +20,12 @@ DEPEND=">=sys-libs/ncurses-5.2
 
 src_compile() {
 	# The author has removed "unnecessary automake/autoconf setup"
-#	econf `use_enable nls` || die
-	# This flag stopped it compiling for me
-	sed -i -e "s/-DGTK_DISABLE_DEPRECATED/${CFLAGS}/" Makefile
-	sed -i -e "/make clean/d" Makefile
-	sed -i -e "s/CC=gcc/CC=$(tc-getCC)/" Makefile
+
+	sed -i -e "s|-DGTK_DISABLE_DEPRECATED|${CFLAGS}|" Makefile
+	sed -i -e "|make clean|d" Makefile
+	sed -i -e "s|CC=gcc|CC=$(tc-getCC)|" Makefile
 	if ! use nls; then
-		sed -i -e "/make -C po/d" Makefile
+		sed -i -e "|make -C po|d" Makefile
 	fi
 	emake || die "emake failed!"
 }
