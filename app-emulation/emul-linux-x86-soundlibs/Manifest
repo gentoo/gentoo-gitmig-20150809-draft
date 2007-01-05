@@ -12,18 +12,18 @@ EBUILD emul-linux-x86-soundlibs-2.4.ebuild 683 RMD160 4225ffb13f66db37a67b92d96f
 MD5 82988d38db25fd4ca52c8c9c55c7c49c emul-linux-x86-soundlibs-2.4.ebuild 683
 RMD160 4225ffb13f66db37a67b92d96f29c66a850ce3ec emul-linux-x86-soundlibs-2.4.ebuild 683
 SHA256 b98272b1e4f84e0c63f1ece95fb81076f2ed3e5e32791e7275db840f0a8179e3 emul-linux-x86-soundlibs-2.4.ebuild 683
-EBUILD emul-linux-x86-soundlibs-2.5-r1.ebuild 835 RMD160 19d29cfba05e2f63122ed17723ad34054ddc8c1a SHA1 608195cda3d7d926be8c4d257c792868c0cadb31 SHA256 b3ecf9544acad920b608444de070b9434dedca661f133f0e66e867d2579bddd0
-MD5 a4be033dea10f0afe27354b8d30476db emul-linux-x86-soundlibs-2.5-r1.ebuild 835
-RMD160 19d29cfba05e2f63122ed17723ad34054ddc8c1a emul-linux-x86-soundlibs-2.5-r1.ebuild 835
-SHA256 b3ecf9544acad920b608444de070b9434dedca661f133f0e66e867d2579bddd0 emul-linux-x86-soundlibs-2.5-r1.ebuild 835
+EBUILD emul-linux-x86-soundlibs-2.5-r2.ebuild 907 RMD160 ff44444140550b40aee46e9eedde461d4268d49a SHA1 17d0aa17bb3d9c59fe5402d39c0203cdea42de0a SHA256 699e8999d495ff0469ebf2e25c81219a5b27d1c51d1f804c9297fe2a7aa2a552
+MD5 eb9caf177801b6f8d55671bba13a30df emul-linux-x86-soundlibs-2.5-r2.ebuild 907
+RMD160 ff44444140550b40aee46e9eedde461d4268d49a emul-linux-x86-soundlibs-2.5-r2.ebuild 907
+SHA256 699e8999d495ff0469ebf2e25c81219a5b27d1c51d1f804c9297fe2a7aa2a552 emul-linux-x86-soundlibs-2.5-r2.ebuild 907
 EBUILD emul-linux-x86-soundlibs-2.5.ebuild 670 RMD160 382d280a4e899bca4cb5cd05cd6231a8c2eeaa4d SHA1 623c4e4b5be87371c15da8205c76af4afa3b237c SHA256 a7afcde3ce4179bd1339648057f1d88cc4503840b50019064680c0a184af206b
 MD5 dccbc58e88342f2e9df9670890b7374b emul-linux-x86-soundlibs-2.5.ebuild 670
 RMD160 382d280a4e899bca4cb5cd05cd6231a8c2eeaa4d emul-linux-x86-soundlibs-2.5.ebuild 670
 SHA256 a7afcde3ce4179bd1339648057f1d88cc4503840b50019064680c0a184af206b emul-linux-x86-soundlibs-2.5.ebuild 670
-MISC ChangeLog 3383 RMD160 e3e5caa59cd6457132428b48f89d7e4826a02091 SHA1 79a25be58746d9c5f76c1ab7c457f0eaf5af28af SHA256 e9751672c031727cfdd16ffde436469f22729862f3d98d8ccb21efed4cc1d787
-MD5 4f7fe5bb119e6effb52d581afcd2d483 ChangeLog 3383
-RMD160 e3e5caa59cd6457132428b48f89d7e4826a02091 ChangeLog 3383
-SHA256 e9751672c031727cfdd16ffde436469f22729862f3d98d8ccb21efed4cc1d787 ChangeLog 3383
+MISC ChangeLog 3572 RMD160 511fa0daf5c9f4c0490b31f5a8799d51b0114660 SHA1 2a4517640b4e7c5310bbedd8b5e97183110c9c82 SHA256 4c399b1766e17d09717a9b7de7c8e06851cfece51d604a82a7b70e86cb1f3880
+MD5 f6ce7d59b412d39317841d3849b472b7 ChangeLog 3572
+RMD160 511fa0daf5c9f4c0490b31f5a8799d51b0114660 ChangeLog 3572
+SHA256 4c399b1766e17d09717a9b7de7c8e06851cfece51d604a82a7b70e86cb1f3880 ChangeLog 3572
 MISC metadata.xml 290 RMD160 29c2eafcf00e4b115ba5ae455218ee6eebda67ae SHA1 281918720fd1d692578d6419193b1027a1014b6a SHA256 8f04703141bc8cd55a0e56bf7593f657a891ed4796e71e3d6e8770c7ea098c30
 MD5 5e8c61d551dad88488a66992865ba737 metadata.xml 290
 RMD160 29c2eafcf00e4b115ba5ae455218ee6eebda67ae metadata.xml 290
@@ -37,13 +37,13 @@ SHA256 5ece472aca591c2a4642c218b3fac5eac2ad72bd679422159331831dd64c2eea files/di
 MD5 233008c42609161d1f7971d80bcc6c6a files/digest-emul-linux-x86-soundlibs-2.5 289
 RMD160 79818925b699a1406f99a2d691e70619286fa766 files/digest-emul-linux-x86-soundlibs-2.5 289
 SHA256 e5ae6597068cf99d307f4a8c4f246db8320bfcd39ca272505facfa1cab14b4c6 files/digest-emul-linux-x86-soundlibs-2.5 289
-MD5 233008c42609161d1f7971d80bcc6c6a files/digest-emul-linux-x86-soundlibs-2.5-r1 289
-RMD160 79818925b699a1406f99a2d691e70619286fa766 files/digest-emul-linux-x86-soundlibs-2.5-r1 289
-SHA256 e5ae6597068cf99d307f4a8c4f246db8320bfcd39ca272505facfa1cab14b4c6 files/digest-emul-linux-x86-soundlibs-2.5-r1 289
+MD5 233008c42609161d1f7971d80bcc6c6a files/digest-emul-linux-x86-soundlibs-2.5-r2 289
+RMD160 79818925b699a1406f99a2d691e70619286fa766 files/digest-emul-linux-x86-soundlibs-2.5-r2 289
+SHA256 e5ae6597068cf99d307f4a8c4f246db8320bfcd39ca272505facfa1cab14b4c6 files/digest-emul-linux-x86-soundlibs-2.5-r2 289
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.1 (GNU/Linux)
 
-iD8DBQFFm10M8bi6rjpTunYRAioeAJwMgv+zXIIkQU7hvrxyN3OoUdWX/wCgzXgt
-GR0HLuBMCuzIhV1/2fQZ4HY=
-=NOKk
+iD8DBQFFnfrN8bi6rjpTunYRAt3lAKC+Sd9OeH6/0FA+NxUx05A6J8BvjQCfaBHa
+2RwPobu1PQ6iimiZrNuyrE8=
+=PM6k
 -----END PGP SIGNATURE-----
