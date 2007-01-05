@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/up-imapproxy
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/ChangeLog,v 1.16 2007/01/02 03:10:24 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/ChangeLog,v 1.17 2007/01/05 11:22:21 opfer Exp $
+
+  05 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
+  up-imapproxy-1.2.5_rc2.ebuild:
+  stable x86, security bug #159419
 
 *up-imapproxy-1.2.5_rc2 (02 Jan 2007)
 
