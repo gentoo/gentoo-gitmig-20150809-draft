@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-1.2.ebuild,v 1.9 2006/10/29 18:08:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-1.2.ebuild,v 1.10 2007/01/05 20:26:10 flameeyes Exp $
 
 ARTS_REQUIRED="yes"
 inherit kde
@@ -45,15 +45,15 @@ src_compile() {
 }
 
 pkg_postinst() {
-	echo
-	einfo "yammi provides various plugins based on"
-	einfo "external programs, you can emerge any of the"
-	einfo "following packages to make the correspondent plugin"
-	einfo "available:"
-	einfo
-	einfo "app-cdr/cdlabelgen:	create CD labels"
-	einfo "app-cdr/k3b:			burn CDs with K3b"
-	einfo "media-libs/tunepimp or media-sound/trm:"
-	einfo "						lookup tracks on www.musicbrainz.org"
+	elog
+	elog "yammi provides various plugins based on"
+	elog "external programs, you can emerge any of the"
+	elog "following packages to make the correspondent plugin"
+	elog "available:"
+	elog
+	elog "app-cdr/cdlabelgen:	create CD labels"
+	elog "app-cdr/k3b:			burn CDs with K3b"
+	elog "media-libs/tunepimp or media-sound/trm:"
+	elog "						lookup tracks on www.musicbrainz.org"
 	echo
 }
