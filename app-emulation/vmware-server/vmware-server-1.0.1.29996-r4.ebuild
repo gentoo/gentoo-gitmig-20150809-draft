@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/vmware-server-1.0.1.29996-r4.ebuild,v 1.3 2006/12/14 18:36:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/vmware-server-1.0.1.29996-r4.ebuild,v 1.4 2007/01/05 18:02:03 ikelos Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -94,10 +94,10 @@ pkg_config() {
 
 pkg_postinst() {
 	vmware_pkg_postinst
-	einfo "Remember by default xinetd only allows connections from localhost"
-	einfo "To allow external users access to vmware-server you must edit"
-	einfo "    /etc/xinetd.d/vmware-authd"
-	einfo "and specify a new 'only_from' line"
+	elog "Remember by default xinetd only allows connections from localhost"
+	elog "To allow external users access to vmware-server you must edit"
+	elog "    /etc/xinetd.d/vmware-authd"
+	elog "and specify a new 'only_from' line"
 	echo
 	ewarn "VMWare Server also has issues when running on a JFS filesystem.  For more"
 	ewarn "information see http://bugs.gentoo.org/show_bug.cgi?id=122500#c94"

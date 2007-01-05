@@ -25,10 +25,10 @@ AUX general/006_all_xinetd-sendsig-if-possible.patch 1227 RMD160 f27ea918c99e6a3
 MD5 7990840c4bacdd7ce2baf98194c43f77 files/general/006_all_xinetd-sendsig-if-possible.patch 1227
 RMD160 f27ea918c99e6a3db0fba8d53b5329833aa4cc58 files/general/006_all_xinetd-sendsig-if-possible.patch 1227
 SHA256 1fcbbdf11f99f80881ee43ae47ed099d5f10aa3985bfe16606fdf2d307836ff0 files/general/006_all_xinetd-sendsig-if-possible.patch 1227
-AUX general/007_all_use-modprobe-over-insmod.patch 448 RMD160 136dfcfe2df7a7ebf2844749f473a6c6d0bb3084 SHA1 0ad152b3cb738521296322b56e9f247926690e67 SHA256 9497f8ad6acb2460e27bd5430670e79129ec2ffbf6f5b8dae62084e5e56059ee
-MD5 f5a4bba93e2ef942332dbe7105f2b204 files/general/007_all_use-modprobe-over-insmod.patch 448
-RMD160 136dfcfe2df7a7ebf2844749f473a6c6d0bb3084 files/general/007_all_use-modprobe-over-insmod.patch 448
-SHA256 9497f8ad6acb2460e27bd5430670e79129ec2ffbf6f5b8dae62084e5e56059ee files/general/007_all_use-modprobe-over-insmod.patch 448
+AUX general/007_all_use-modprobe-over-insmod.patch 445 RMD160 186ab443a733276a702dea16a23c04f7deed9d13 SHA1 c7113cd3f7f91527397f6fb07797d4e9c5c6f011 SHA256 bcf4930fae4812c8fbb2eb58b200f1da9441d97cd0c74b8ee6250cf097a28630
+MD5 2aa4bdc8d3a96644ce7e1a9b7ce1c792 files/general/007_all_use-modprobe-over-insmod.patch 445
+RMD160 186ab443a733276a702dea16a23c04f7deed9d13 files/general/007_all_use-modprobe-over-insmod.patch 445
+SHA256 bcf4930fae4812c8fbb2eb58b200f1da9441d97cd0c74b8ee6250cf097a28630 files/general/007_all_use-modprobe-over-insmod.patch 445
 AUX general/008_all_dhcpd-conf-location.patch 382 RMD160 6b0c1a3571fb0d7bc537930d9a77fb4d960aa104 SHA1 344da932ea8652d85028d4f17a3a66afd90c01b7 SHA256 577454af27bc9107220055f9d8b93b40e31650c205d31d5a351c5a1ecc16d658
 MD5 4c61820a38a35404d3a37fbddc1f6ba5 files/general/008_all_dhcpd-conf-location.patch 382
 RMD160 6b0c1a3571fb0d7bc537930d9a77fb4d960aa104 files/general/008_all_dhcpd-conf-location.patch 382
@@ -54,14 +54,14 @@ DIST vmware-any-any-update105.tar.gz 296970 RMD160 5da1b91c81ff1023c8f4dbc3ae02f
 DIST vmware-libcrypto.so.0.9.7l.tar.bz2 412159 RMD160 89282ae9fc6e8921a47704bc9cd23cf70a6870e8 SHA1 f86c4cb076fe1764975e9243dc0fae763f2b589a SHA256 fae52acf61415959cca763a715a2b61ec49f161a416d418d6a1faffce531db12
 DIST vmware-libssl.so.0.9.7l.tar.bz2 78244 RMD160 195dd4808e60f81621e6ed12b843ded49c0fa747 SHA1 5fe729a1e49e77afd83b408845833174e1296e39 SHA256 3e1e13196066dc5b77d3ef6b5df55a29156eba1f39661e40cd617b538220d089
 DIST vmware-server-perl-fixed-rpath-libs.tar.bz2 73834 RMD160 7f64627b5b945e8d7dabe39c165a4b66b71fb4d3 SHA1 9d696750ca3ec92b31ca8112fd80dcd832494044 SHA256 c42299dd033187c67b45b739da66583fbd94cdcba745200b89a25ac96cd9364b
-EBUILD vmware-server-1.0.1.29996-r4.ebuild 3277 RMD160 79aba5e25819aef6a71a902dd5efbd23745de3bf SHA1 251b30d74b49c43de6d5e13187a8fe930e58da20 SHA256 ea27eba7fa117cda7d76acc62ccec9f15d4c216157c2db57a879465278d4548c
-MD5 2720c0e243daa388e3c8c80a0cbfc237 vmware-server-1.0.1.29996-r4.ebuild 3277
-RMD160 79aba5e25819aef6a71a902dd5efbd23745de3bf vmware-server-1.0.1.29996-r4.ebuild 3277
-SHA256 ea27eba7fa117cda7d76acc62ccec9f15d4c216157c2db57a879465278d4548c vmware-server-1.0.1.29996-r4.ebuild 3277
-MISC ChangeLog 3281 RMD160 07aeec162d969ab0a5bcb64c69baf98a1b3b39d0 SHA1 f851c4a30901f82f74882ac886190b9ad117599f SHA256 6707aff2df96bf36301b46e6f37250242b19b4d8ec814870730ca7a29404032b
-MD5 667479a67121b525a04c5ac87436fe9c ChangeLog 3281
-RMD160 07aeec162d969ab0a5bcb64c69baf98a1b3b39d0 ChangeLog 3281
-SHA256 6707aff2df96bf36301b46e6f37250242b19b4d8ec814870730ca7a29404032b ChangeLog 3281
+EBUILD vmware-server-1.0.1.29996-r4.ebuild 3271 RMD160 3902c18dc6c554a71939053c039ac34e6f954817 SHA1 3475cb58fca22e4330a30863024bacecb70702b6 SHA256 011705da0404ea79b56bfa473ebbe88548a5b06ef408ab727a2e848c74156e67
+MD5 bfa6ce9240f87c45b7ec7df81c02d887 vmware-server-1.0.1.29996-r4.ebuild 3271
+RMD160 3902c18dc6c554a71939053c039ac34e6f954817 vmware-server-1.0.1.29996-r4.ebuild 3271
+SHA256 011705da0404ea79b56bfa473ebbe88548a5b06ef408ab727a2e848c74156e67 vmware-server-1.0.1.29996-r4.ebuild 3271
+MISC ChangeLog 3497 RMD160 f33ee805140efc527d236a6ee251ec2f6cdcade6 SHA1 dbb502718e4aadc7898441963aac54d2a9455714 SHA256 8341c33ef9747f8c945bc0ba6e029cbe76aa217042894e0ad34f101739948ba0
+MD5 b985684ab8277e6274371fcec7062e49 ChangeLog 3497
+RMD160 f33ee805140efc527d236a6ee251ec2f6cdcade6 ChangeLog 3497
+SHA256 8341c33ef9747f8c945bc0ba6e029cbe76aa217042894e0ad34f101739948ba0 ChangeLog 3497
 MISC metadata.xml 159 RMD160 fc7f68a382390e5916b0fb43f37a893fad4f9798 SHA1 f46b02a39bcd0165558de67ff4256cfc812418a3 SHA256 8581ae1c90a48f50fa0542c7fb28cb8984baaf12f50fa18f33e467081effb215
 MD5 7cc95faad4185e8ed375248bc73a17fc metadata.xml 159
 RMD160 fc7f68a382390e5916b0fb43f37a893fad4f9798 metadata.xml 159
@@ -70,9 +70,9 @@ MD5 d5762e488620359cd76f1c746c1e1ad0 files/digest-vmware-server-1.0.1.29996-r4 1
 RMD160 b863e2fcd2f423d98b0ab1d8a5d1b39495245556 files/digest-vmware-server-1.0.1.29996-r4 1421
 SHA256 670b8f34f92a76965fb681a0031f5822e95fd4fdebac95a5cb9ae152b43297a1 files/digest-vmware-server-1.0.1.29996-r4 1421
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.6 (GNU/Linux)
+Version: GnuPG v2.0.1 (GNU/Linux)
 
-iD8DBQFFgZnXkT4lNIS36YERAhclAJ41kRKrA5ZbD7qtk3nzHlwDeX/s/QCgn457
-v7Oir02i60RvMC5m0dyWWF0=
-=xeiU
+iD8DBQFFnpLDu7rWomwgFXoRAg4eAJsGVPYe3XAF2sqqBd94zBJPnxnJAACeN3MC
+Vkdkoj7CvEklEKXdD2uFxXs=
+=8NHV
 -----END PGP SIGNATURE-----
