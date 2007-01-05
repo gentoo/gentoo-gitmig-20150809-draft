@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.61 2007/01/05 22:41:49 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.62 2007/01/05 22:51:21 vivo Exp $
 # kate: encoding utf-8; eol unix;
 # kate: indent-width 4; mixedindent off; remove-trailing-space on; space-indent off;
 # kate: word-wrap-column 80; word-wrap off;
@@ -347,13 +347,12 @@ configure_40_41_50() {
 		# --with-vio is not needed anymore, it's on by default and
 		# has been removed from configure
 		mysql_version_is_at_least "5.0.4" || myconf="${myconf} --with-vio"
-		if mysql_version_is_at_least "5.2.0" ; then
-			myconf="${myconf} --with-ssl"
-		else
-			myconf="${myconf} --with-openssl"
-		fi
+	fi
+
+	if mysql_version_is_at_least "5.1.11" ; then
+		myconf="${myconf} $(use_with ssl)"
 	else
-		myconf="${myconf} --without-openssl"
+		myconf="${myconf} $(use_with ssl openssl)"
 	fi
 
 	# The following fix is due to a bug with bdb on SPARC's. See:
