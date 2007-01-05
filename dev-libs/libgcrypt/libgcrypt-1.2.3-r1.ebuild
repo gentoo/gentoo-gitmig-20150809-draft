@@ -1,6 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.2.3-r1.ebuild,v 1.3 2007/01/05 08:57:10 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.2.3-r1.ebuild,v 1.4 2007/01/05 09:34:30 alonbl Exp $
+
+WANT_AUTOMAKE='latest'
+WANT_AUTOCONF='latest'
 
 inherit eutils autotools
 
