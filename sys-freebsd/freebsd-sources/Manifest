@@ -1,10 +1,6 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-AUX SA-06-16-smbfs.patch 874 RMD160 73c3680d7ed5c452c4160105baf1407e69b71eee SHA1 f6157a02e0cfdcdc2f3fceed56a15f451ba219ac SHA256 73dab3542ffb63818151b9d6fe21d6d0b0734da992c76d80525b711d02efaee6
-MD5 05e64e6f86c3e33185f6a1a0d2ccddf4 files/SA-06-16-smbfs.patch 874
-RMD160 73c3680d7ed5c452c4160105baf1407e69b71eee files/SA-06-16-smbfs.patch 874
-SHA256 73dab3542ffb63818151b9d6fe21d6d0b0734da992c76d80525b711d02efaee6 files/SA-06-16-smbfs.patch 874
 AUX freebsd-sources-6.0-asm.patch 4172 RMD160 7872cbedbbe9fbead0d69f26674489b335317606 SHA1 350d5453ec523a6835ff7ad36bcff7f3bc7dce3f SHA256 2431b2dae991eef15c00c3e19ac01e23e374a1e8e6992053e64486032631b52e
 MD5 d7ba170be5603b2bc377cbd544c82a23 files/freebsd-sources-6.0-asm.patch 4172
 RMD160 7872cbedbbe9fbead0d69f26674489b335317606 files/freebsd-sources-6.0-asm.patch 4172
@@ -17,18 +13,6 @@ AUX freebsd-sources-6.0-werror.patch 898 RMD160 41a6f582a70018f29c96c08a5853bcbf
 MD5 1c230261604f76eb3766df9769864942 files/freebsd-sources-6.0-werror.patch 898
 RMD160 41a6f582a70018f29c96c08a5853bcbf167157d0 files/freebsd-sources-6.0-werror.patch 898
 SHA256 7fbd139296e98697c94dcc6a4cd4d926b057779cb2415cb62bbb881b8acf26e5 files/freebsd-sources-6.0-werror.patch 898
-AUX freebsd-sources-6.1-devfs-deadlock.patch 4616 RMD160 85ce3ae845c435d5b50a4e820a9e3f9f364f7dde SHA1 99c7a0c61f9dbd31890865b6e86e01a71de67462 SHA256 196652d16339a1fe6c934c889c40eec78ed668c0fc2f253fed819587a7755825
-MD5 0e514494ce056f722aca5e98ff951916 files/freebsd-sources-6.1-devfs-deadlock.patch 4616
-RMD160 85ce3ae845c435d5b50a4e820a9e3f9f364f7dde files/freebsd-sources-6.1-devfs-deadlock.patch 4616
-SHA256 196652d16339a1fe6c934c889c40eec78ed668c0fc2f253fed819587a7755825 files/freebsd-sources-6.1-devfs-deadlock.patch 4616
-AUX freebsd-sources-6.1-gcc41.patch 16013 RMD160 c259aec856d5d4b68682138c7b1112e60b6814fa SHA1 5a0e61de9dde00279d36425cc451a2e0af1b38ae SHA256 d5b702657dae7e30774c4222094166334e5e466ccc5307a92992ed8df29e6b05
-MD5 8effd8101607ae4f84a9621e57f1ae2f files/freebsd-sources-6.1-gcc41.patch 16013
-RMD160 c259aec856d5d4b68682138c7b1112e60b6814fa files/freebsd-sources-6.1-gcc41.patch 16013
-SHA256 d5b702657dae7e30774c4222094166334e5e466ccc5307a92992ed8df29e6b05 files/freebsd-sources-6.1-gcc41.patch 16013
-AUX freebsd-sources-6.1-intrcnt.patch 800 RMD160 b6f36e51dc8267537af828c808b4502db452378e SHA1 a07cd296f1a545c5734750627206bc638b88b275 SHA256 24cd3cbd09852fe08d272eff1d8d335d4975489857669e74aae8c63a7019bd08
-MD5 b9280c2eeae04a5afa38fbf6505f6120 files/freebsd-sources-6.1-intrcnt.patch 800
-RMD160 b6f36e51dc8267537af828c808b4502db452378e files/freebsd-sources-6.1-intrcnt.patch 800
-SHA256 24cd3cbd09852fe08d272eff1d8d335d4975489857669e74aae8c63a7019bd08 files/freebsd-sources-6.1-intrcnt.patch 800
 AUX freebsd-sources-6.1-ntfs.patch 1043 RMD160 0389ef971934db5b239d81ec016d94a21398c226 SHA1 03d8c702bbd6bd79f7b3cbe64f720487b87fa442 SHA256 2eb0e22bea267d7ac41c3dec81682d3cc1f1744316ea39342e2aaae1f2dca469
 MD5 ea9ee941c9105bed2e9d226450087ee1 files/freebsd-sources-6.1-ntfs.patch 1043
 RMD160 0389ef971934db5b239d81ec016d94a21398c226 files/freebsd-sources-6.1-ntfs.patch 1043
@@ -45,41 +29,26 @@ AUX freebsd-sources-gentoo.patch 1191 RMD160 1c8ce1849d767a995f075fe43b7313b341b
 MD5 91662a80d0cd0cd3dca34f3c1ca54830 files/freebsd-sources-gentoo.patch 1191
 RMD160 1c8ce1849d767a995f075fe43b7313b341bd0805 files/freebsd-sources-gentoo.patch 1191
 SHA256 e5e7186858259e7d6d21e925dde640a68b27255cf69ab089ee82675568e7d9a7 files/freebsd-sources-gentoo.patch 1191
-DIST freebsd-sys-6.1.tar.bz2 17361671 RMD160 eb19f6a345c665542df694a4f9170d227beaf3b6 SHA1 f9da69cabdaaad268c79670c06ba4fff3e3ef6a8 SHA256 d2ecd79b83ba06c12e358adfccc7e057e15fb7c5be76d92c537b99cbe1d84f0f
 DIST freebsd-sys-6.2_rc2.tar.bz2 18339807 RMD160 ab2e6110b767319a0135130f9ad16d074de61483 SHA1 f7881f43e815930fe3ef6c3517d4e2475f80479e SHA256 392d80c8dae6b7cddc4810f59869a87ec4d0d699c534d8a034b2b273640a7666
-EBUILD freebsd-sources-6.1-r3.ebuild 2419 RMD160 0b883b91a5c9e6c4cd5139fb16982e4b00696a5b SHA1 9bbf8a010ea090eebcf64e204defc628289f65bc SHA256 bb0fa9e58602f70288ceb22f27f603bfb997686f48ddbc03e821abfa07f36e57
-MD5 242afb82662fb880568a677072a59eb9 freebsd-sources-6.1-r3.ebuild 2419
-RMD160 0b883b91a5c9e6c4cd5139fb16982e4b00696a5b freebsd-sources-6.1-r3.ebuild 2419
-SHA256 bb0fa9e58602f70288ceb22f27f603bfb997686f48ddbc03e821abfa07f36e57 freebsd-sources-6.1-r3.ebuild 2419
-EBUILD freebsd-sources-6.1-r4.ebuild 2572 RMD160 d7ee3293d2bc651367b669154690ef59ae31e55e SHA1 15129e9f0a8ce018da10fb8e0b2a95a73c9143fc SHA256 926542fbef0bb45f7f5e24b8bcb8844f91e78ca4ad4af9b29fd3f0d013a60448
-MD5 8cf11566c5e1e2d0dc534d606ef1b74f freebsd-sources-6.1-r4.ebuild 2572
-RMD160 d7ee3293d2bc651367b669154690ef59ae31e55e freebsd-sources-6.1-r4.ebuild 2572
-SHA256 926542fbef0bb45f7f5e24b8bcb8844f91e78ca4ad4af9b29fd3f0d013a60448 freebsd-sources-6.1-r4.ebuild 2572
 EBUILD freebsd-sources-6.2_rc2.ebuild 2704 RMD160 167582989f1d0dc6a2f0c20182b15d5c82894976 SHA1 9e0d7872671def56029e91484f47d8ce564efd20 SHA256 4f2f97bde2aa424321572a1327a76f891e2aef8de552ee568178f9bbe562a9d1
 MD5 d82ed8fe4afba9c1c1cf79b5ae752e35 freebsd-sources-6.2_rc2.ebuild 2704
 RMD160 167582989f1d0dc6a2f0c20182b15d5c82894976 freebsd-sources-6.2_rc2.ebuild 2704
 SHA256 4f2f97bde2aa424321572a1327a76f891e2aef8de552ee568178f9bbe562a9d1 freebsd-sources-6.2_rc2.ebuild 2704
-MISC ChangeLog 9599 RMD160 cf4e72856825e54519fb34f55aec432dcfcb7015 SHA1 24f25997f0b8bda9a34bc2132fefbc6863c682be SHA256 95ee1419723087444819964a8be133f9185799c8a1fee1950f441d22ce01f250
-MD5 a88adca42493037dd5ee60788f7cd2cb ChangeLog 9599
-RMD160 cf4e72856825e54519fb34f55aec432dcfcb7015 ChangeLog 9599
-SHA256 95ee1419723087444819964a8be133f9185799c8a1fee1950f441d22ce01f250 ChangeLog 9599
+MISC ChangeLog 9906 RMD160 390e3004bf14377e59588e9ec017ca6be92b0f3a SHA1 58dbc15441e24d61d51ef39a82a8e84d2a2b6e2d SHA256 83bed4ade3449bb4bba2c42f331b3f7200d241982efb8f655479ef60ebd499cc
+MD5 1f0fc43f3d53be2dd4d7619d09a5c47e ChangeLog 9906
+RMD160 390e3004bf14377e59588e9ec017ca6be92b0f3a ChangeLog 9906
+SHA256 83bed4ade3449bb4bba2c42f331b3f7200d241982efb8f655479ef60ebd499cc ChangeLog 9906
 MISC metadata.xml 156 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 SHA1 d9d9d4f2b5afc58339ea3e562fca490156935f1f SHA256 30ab515d6ac492d3d6c36ac3c675511742c2149e56a6b3228c8d22ab8edb3ff7
 MD5 2bd48a5ae413433cbb36110b219ce97c metadata.xml 156
 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 metadata.xml 156
 SHA256 30ab515d6ac492d3d6c36ac3c675511742c2149e56a6b3228c8d22ab8edb3ff7 metadata.xml 156
-MD5 bfcb2966c1ec6e468c2575c36179479c files/digest-freebsd-sources-6.1-r3 256
-RMD160 e3e91956a4a0e172a5a548c6b069c24f9864b6d9 files/digest-freebsd-sources-6.1-r3 256
-SHA256 a390411c7d0ce30970aac523a261176bf7fcb5235d6f782156ec5d52ddc382a1 files/digest-freebsd-sources-6.1-r3 256
-MD5 bfcb2966c1ec6e468c2575c36179479c files/digest-freebsd-sources-6.1-r4 256
-RMD160 e3e91956a4a0e172a5a548c6b069c24f9864b6d9 files/digest-freebsd-sources-6.1-r4 256
-SHA256 a390411c7d0ce30970aac523a261176bf7fcb5235d6f782156ec5d52ddc382a1 files/digest-freebsd-sources-6.1-r4 256
 MD5 01d8ed45fdfb6302d9c0eed993e27af6 files/digest-freebsd-sources-6.2_rc2 268
 RMD160 d5dd02eba1b950dbedb23d6427c0d85a4e049a48 files/digest-freebsd-sources-6.2_rc2 268
 SHA256 8226d3e88265ffaf04923b5ca63c0d6d2976af1bb7ba329608a66a9ab48993a8 files/digest-freebsd-sources-6.2_rc2 268
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.6 (GNU/Linux)
+Version: GnuPG v2.0.1 (GNU/Linux)
 
-iD8DBQFFlTJ2AiZjviIA2XgRAsYaAKDoX7kclclL89kE8UabVZxFVLHuSgCgy1qS
-8qkilGI/CtajPUVFxSZaiDM=
-=+kU5
+iD8DBQFFnsPAAiZjviIA2XgRAj8gAKDvQYh3636KN2pyKyogE+nMFWyjrACfYeHB
+AD9c3YUgnYKvZ6MhOoL2VvA=
+=h6zd
 -----END PGP SIGNATURE-----
