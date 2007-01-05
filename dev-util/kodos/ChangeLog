@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kodos
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kodos/ChangeLog,v 1.13 2005/06/30 13:12:41 gustavoz Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kodos/ChangeLog,v 1.14 2007/01/05 22:24:34 pythonhead Exp $
+
+*kodos-2.4.9 (05 Jan 2007)
+
+  05 Jan 2007; Rob Cakebread <pythonhead@gentoo.org> +kodos-2.4.9.ebuild:
+  Version bump. Bug #158505. Thanks Ali Polatel
 
   30 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org> kodos-2.4.5-r1.ebuild:
   Stable on sparc
