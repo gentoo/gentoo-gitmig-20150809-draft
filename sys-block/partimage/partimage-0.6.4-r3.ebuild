@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r3.ebuild,v 1.19 2006/10/14 17:07:41 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r3.ebuild,v 1.20 2007/01/05 07:12:19 flameeyes Exp $
 
 WANT_AUTOMAKE="1.8"
 
-inherit gnuconfig eutils flag-o-matic autotools
+inherit eutils flag-o-matic autotools
 
 DESCRIPTION="Console-based application to efficiently save raw partition data to an image file. Optional encryption/compression support."
 HOMEPAGE="http://www.partimage.org/"
