@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.57-r2.ebuild,v 1.2 2006/11/23 20:00:22 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.57-r2.ebuild,v 1.3 2007/01/05 08:50:10 flameeyes Exp $
 
-inherit eutils gnuconfig flag-o-matic
+inherit eutils flag-o-matic
 
 DESCRIPTION="courier authentication library"
 [ -z "${PV/?.??/}" ] && SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
@@ -41,7 +41,6 @@ src_unpack() {
 	if ! use gdbm ; then
 		epatch ${FILESDIR}/configure-db4.patch
 		export WANT_AUTOCONF="2.5"
-		gnuconfig_update
 		libtoolize --copy --force
 		ebegin "Recreating configure"
 			autoconf ||  die "recreate configure failed"

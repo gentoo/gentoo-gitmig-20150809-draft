@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.59 2007/01/04 15:51:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.60 2007/01/05 08:50:10 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  courier-authlib-0.53.ebuild, courier-authlib-0.54.20050224.ebuild,
+  courier-authlib-0.55.ebuild, courier-authlib-0.55.20050320.ebuild,
+  courier-authlib-0.56.ebuild, courier-authlib-0.57.ebuild,
+  courier-authlib-0.57-r1.ebuild, courier-authlib-0.57-r2.ebuild,
+  courier-authlib-0.57.20051116.ebuild:
+  Remove gnuconfig_update usage, leave it to econf.
 
   04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   courier-authlib-0.58.ebuild:
