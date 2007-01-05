@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.262 2007/01/03 06:44:00 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.263 2007/01/05 19:41:46 robbat2 Exp $
+
+  05 Jan 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +files/gnupg-2.0.1-bsd-make.patch, gnupg-2.0.1-r2.ebuild:
+  Fix for bug #159962 for the BSD/OSX folks.
 
 *gnupg-2.0.1-r2 (03 Jan 2007)
 

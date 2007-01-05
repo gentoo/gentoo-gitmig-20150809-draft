@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.1-r2.ebuild,v 1.1 2007/01/03 06:44:00 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.1-r2.ebuild,v 1.2 2007/01/05 19:41:46 robbat2 Exp $
 
 WANT_AUTOMAKE='latest'
 
@@ -43,6 +43,7 @@ RDEPEND="${COMMON_DEPEND}
 
 src_unpack() {
 	unpack ${A}
+	epatch ${FILESDIR}/${PN}-2.0.1-bsd-make.patch
 	cd "${S}"
 
 	AT_M4DIR="m4 gl/m4" eautoreconf

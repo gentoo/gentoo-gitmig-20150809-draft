@@ -1,0 +1,149 @@
+Signed-off-by: Robin H. Johnson <robbat2@gentoo.org>
+Date: Fri Jan  5 11:30:30 PST 2007
+
+This patch adds LIBICONV wherever LIBINTL is used. This is needed for compiles
+on Gentoo/OSX and Gentoo/BSD.
+
+There are two cases (t-convert, gpgsplit) where neither LIBINTL nor LIBICONV
+were brought in before, and I added them as well. It might be overkill.
+
+diff -Nuar --exclude '*~' gnupg-2.0.1.orig/agent/Makefile.am gnupg-2.0.1/agent/Makefile.am
+--- gnupg-2.0.1.orig/agent/Makefile.am	2006-10-20 07:07:09.000000000 -0700
++++ gnupg-2.0.1/agent/Makefile.am	2007-01-05 11:28:29.000000000 -0800
+@@ -53,7 +53,7 @@
+ gpg_agent_CFLAGS = $(AM_CFLAGS) $(LIBASSUAN_PTH_CFLAGS) $(PTH_CFLAGS)
+ gpg_agent_LDADD = $(commonpth_libs) \
+                 $(LIBGCRYPT_LIBS) $(LIBASSUAN_PTH_LIBS) $(PTH_LIBS) \
+-	        $(GPG_ERROR_LIBS) $(LIBINTL) $(NETLIBS)
++	        $(GPG_ERROR_LIBS) $(LIBICONV) $(LIBINTL) $(NETLIBS)
+ 
+ gpg_protect_tool_SOURCES = \
+ 	protect-tool.c \
+@@ -62,14 +62,14 @@
+ 
+ # Needs $(NETLIBS) for libsimple-pwquery.la.
+ gpg_protect_tool_LDADD =  $(pwquery_libs) $(common_libs) \
+-         $(LIBGCRYPT_LIBS) $(GPG_ERROR_LIBS) $(LIBINTL) $(NETLIBS)
++         $(LIBGCRYPT_LIBS) $(GPG_ERROR_LIBS) $(LIBICONV) $(LIBINTL) $(NETLIBS)
+ 
+ gpg_preset_passphrase_SOURCES = \
+ 	preset-passphrase.c
+ 
+ # Needs $(NETLIBS) for libsimple-pwquery.la.
+ gpg_preset_passphrase_LDADD =  $(pwquery_libs) $(common_libs) \
+-	 $(LIBGCRYPT_LIBS) $(GPG_ERROR_LIBS) $(LIBINTL) $(NETLIBS)
++	 $(LIBGCRYPT_LIBS) $(GPG_ERROR_LIBS) $(LIBICONV) $(LIBINTL) $(NETLIBS)
+ 
+ 
+ # Make sure that all libs are build before we use them.  This is
+@@ -83,7 +83,7 @@
+ TESTS = t-protect
+ 
+ t_common_ldadd = $(common_libs) \
+-                 $(LIBGCRYPT_LIBS) $(GPG_ERROR_LIBS) $(LIBINTL)
++                 $(LIBGCRYPT_LIBS) $(GPG_ERROR_LIBS) $(LIBICONV) $(LIBINTL)
+ 
+ t_protect_SOURCES = t-protect.c protect.c 
+ t_protect_LDADD = $(t_common_ldadd)
+diff -Nuar --exclude '*~' gnupg-2.0.1.orig/common/Makefile.am gnupg-2.0.1/common/Makefile.am
+--- gnupg-2.0.1.orig/common/Makefile.am	2006-11-05 06:32:09.000000000 -0800
++++ gnupg-2.0.1/common/Makefile.am	2007-01-05 11:29:09.000000000 -0800
+@@ -79,7 +79,7 @@
+ module_tests = t-convert
+ 
+ t_common_ldadd = ../jnlib/libjnlib.a ../common/libcommon.a ../gl/libgnu.a \
+-                 $(LIBGCRYPT_LIBS) $(GPG_ERROR_LIBS)
++                 $(LIBGCRYPT_LIBS) $(GPG_ERROR_LIBS) $(LIBICONV) $(LIBINTL)
+ 
+ t_convert_DEPENDENCIES = convert.c libcommon.a
+ t_convert_LDADD = $(t_common_ldadd)
+diff -Nuar --exclude '*~' gnupg-2.0.1.orig/g10/Makefile.am gnupg-2.0.1/g10/Makefile.am
+--- gnupg-2.0.1.orig/g10/Makefile.am	2006-11-21 06:49:41.000000000 -0800
++++ gnupg-2.0.1/g10/Makefile.am	2007-01-05 11:27:06.000000000 -0800
+@@ -117,7 +117,7 @@
+ 
+ LDADD =  $(needed_libs) ../common/libgpgrl.a \
+          $(ZLIBS) $(DNSLIBS) $(LIBREADLINE) \
+-         $(LIBINTL) $(CAPLIBS) $(NETLIBS)
++         $(LIBICONV) $(LIBINTL) $(CAPLIBS) $(NETLIBS)
+ gpg2_LDADD = $(LIBGCRYPT_LIBS) $(LDADD) $(LIBASSUAN_LIBS) $(GPG_ERROR_LIBS)
+ gpgv2_LDADD = $(LIBGCRYPT_LIBS) $(LDADD) $(LIBASSUAN_LIBS) $(GPG_ERROR_LIBS)
+ 
+diff -Nuar --exclude '*~' gnupg-2.0.1.orig/kbx/Makefile.am gnupg-2.0.1/kbx/Makefile.am
+--- gnupg-2.0.1.orig/kbx/Makefile.am	2006-09-20 02:35:52.000000000 -0700
++++ gnupg-2.0.1/kbx/Makefile.am	2007-01-05 11:24:46.000000000 -0800
+@@ -48,6 +48,6 @@
+ kbxutil_SOURCES = kbxutil.c $(common_sources)
+ kbxutil_LDADD   = ../jnlib/libjnlib.a ../gl/libgnu.a \
+ 	          $(KSBA_LIBS) $(LIBGCRYPT_LIBS) \
+-                  -lgpg-error $(LIBINTL) ../common/libcommon.a
++                  -lgpg-error $(LIBICONV) $(LIBINTL) ../common/libcommon.a
+ 
+ $(PROGRAMS) : ../jnlib/libjnlib.a ../gl/libgnu.a ../common/libcommon.a
+diff -Nuar --exclude '*~' gnupg-2.0.1.orig/scd/Makefile.am gnupg-2.0.1/scd/Makefile.am
+--- gnupg-2.0.1.orig/scd/Makefile.am	2006-11-21 01:38:26.000000000 -0800
++++ gnupg-2.0.1/scd/Makefile.am	2007-01-05 11:27:24.000000000 -0800
+@@ -46,7 +46,7 @@
+ 
+ scdaemon_LDADD = ../jnlib/libjnlib.a ../common/libcommonpth.a ../gl/libgnu.a \
+ 	$(LIBGCRYPT_LIBS) $(KSBA_LIBS) $(LIBASSUAN_PTH_LIBS) $(PTH_LIBS) \
+-	$(LIBUSB_LIBS) $(GPG_ERROR_LIBS) $(LIBINTL) $(DL_LIBS) $(NETLIBS)
++	$(LIBUSB_LIBS) $(GPG_ERROR_LIBS) $(LIBICONV) $(LIBINTL) $(DL_LIBS) $(NETLIBS)
+ 
+ # Removed for now: We need to decide whether it makes sense to
+ # continue it at all, given that gpg has now all required
+diff -Nuar --exclude '*~' gnupg-2.0.1.orig/sm/Makefile.am gnupg-2.0.1/sm/Makefile.am
+--- gnupg-2.0.1.orig/sm/Makefile.am	2006-11-05 06:32:08.000000000 -0800
++++ gnupg-2.0.1/sm/Makefile.am	2007-01-05 11:26:33.000000000 -0800
+@@ -58,7 +58,7 @@
+ 
+ gpgsm_LDADD = $(common_libs) \
+               $(LIBGCRYPT_LIBS) $(KSBA_LIBS) $(LIBASSUAN_LIBS) \
+-              $(GPG_ERROR_LIBS) $(LIBINTL) $(ZLIBS)
++              $(GPG_ERROR_LIBS) $(LIBICONV) $(LIBINTL) $(ZLIBS)
+ 
+ # Make sure that all libs are build before we use them.  This is
+ # important for things like make -j2.
+diff -Nuar --exclude '*~' gnupg-2.0.1.orig/tools/Makefile.am gnupg-2.0.1/tools/Makefile.am
+--- gnupg-2.0.1.orig/tools/Makefile.am	2006-11-23 06:48:46.000000000 -0800
++++ gnupg-2.0.1/tools/Makefile.am	2007-01-05 11:28:45.000000000 -0800
+@@ -54,34 +54,34 @@
+ common_libs = ../jnlib/libjnlib.a ../common/libcommon.a ../gl/libgnu.a
+ pwquery_libs = ../common/libsimple-pwquery.a
+ 
+-gpgsplit_LDADD = $(common_libs) $(LIBGCRYPT_LIBS) $(GPG_ERROR_LIBS) $(ZLIBS)
++gpgsplit_LDADD = $(common_libs) $(LIBGCRYPT_LIBS) $(GPG_ERROR_LIBS) $(ZLIBS) $(LIBICONV) $(LIBINTL)
+ 
+ gpgconf_SOURCES = gpgconf.c gpgconf.h gpgconf-comp.c no-libgcrypt.c
+ 
+ # jnlib/common sucks in gpg-error, will they, nil they (some compilers
+ # do not eliminate the supposed-to-be-unused-inline-functions).
+-gpgconf_LDADD = $(common_libs) $(LIBINTL) $(GPG_ERROR_LIBS)
++gpgconf_LDADD = $(common_libs) $(LIBICONV) $(LIBINTL) $(GPG_ERROR_LIBS)
+ 
+ gpgparsemail_SOURCES = gpgparsemail.c rfc822parse.c rfc822parse.h
+ gpgparsemail_LDADD = 
+ 
+ symcryptrun_SOURCES = symcryptrun.c
+ symcryptrun_LDADD = $(LIBUTIL_LIBS) $(common_libs) $(pwquery_libs) \
+-                    $(LIBGCRYPT_LIBS) $(GPG_ERROR_LIBS) $(LIBINTL)
++                    $(LIBGCRYPT_LIBS) $(GPG_ERROR_LIBS) $(LIBICONV) $(LIBINTL)
+ 
+ watchgnupg_SOURCES = watchgnupg.c 
+ watchgnupg_LDADD = $(NETLIBS)
+ 
+ gpg_connect_agent_SOURCES = gpg-connect-agent.c no-libgcrypt.c
+ gpg_connect_agent_LDADD = $(common_libs) $(LIBASSUAN_LIBS) \
+-	                  $(GPG_ERROR_LIBS) $(LIBINTL) $(NETLIBS)
++	                  $(GPG_ERROR_LIBS) $(LIBICONV) $(LIBINTL) $(NETLIBS)
+ 
+ gpgkey2ssh_SOURCES = gpgkey2ssh.c
+ gpgkey2ssh_CFLAGS = $(LIBGCRYPT_CFLAGS) $(GPG_ERROR_CFLAGS)
+ # common sucks in jnlib, via use of BUG() in an inline function, which
+ # some compilers do not eliminate.
+ gpgkey2ssh_LDADD = $(common_libs) \
+-                   $(LIBGCRYPT_LIBS) $(GPG_ERROR_LIBS) $(LIBINTL)
++                   $(LIBGCRYPT_LIBS) $(GPG_ERROR_LIBS) $(LIBICONV) $(LIBINTL)
+ 
+ 
+ # Make sure that all libs are build before we use them.  This is
