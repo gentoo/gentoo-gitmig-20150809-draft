@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/opendict-0.6.1.ebuild,v 1.3 2006/09/12 22:05:13 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/opendict-0.6.1.ebuild,v 1.4 2007/01/05 22:04:24 dirtyepic Exp $
 
 inherit eutils python gnome2
 
@@ -73,9 +73,9 @@ src_install() {
 pkg_postinst() {
 	gnome2_icon_cache_update
 
-	einfo "If you want system-wide plugins, unzip them into"
-	einfo "${ROOT}usr/share/${PN}/dictionaries/plugins"
-	einfo "Some are available from http://opendict.sourceforge.net/?cid=3"
+	elog "If you want system-wide plugins, unzip them into"
+	elog "${ROOT}usr/share/${PN}/dictionaries/plugins"
+	elog "Some are available from http://opendict.sourceforge.net/?cid=3"
 }
 
 pkg_postrm() {
