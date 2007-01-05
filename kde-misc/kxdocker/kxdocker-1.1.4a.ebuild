@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker/kxdocker-1.1.4a.ebuild,v 1.4 2006/04/27 01:03:01 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker/kxdocker-1.1.4a.ebuild,v 1.5 2007/01/05 17:04:06 flameeyes Exp $
 
 inherit kde
 
@@ -28,12 +28,12 @@ src_unpack() {
 }
 
 pkg_postinst() {
-	einfo "Kxdocker installation is complete,"
-	einfo "have a look in kde-misc/kxdocker-* for optional plugins."
-	einfo ""
-	einfo "If you are experience problems running Kxdocker"
-	einfo "try to delete the old configuration file:"
-	einfo " ~/.kde/share/apps/kxdocker/kxdocker_conf.xml"
-	einfo "and launch Kxdocker again."
-	einfo ""
+	elog "Kxdocker installation is complete,"
+	elog "have a look in kde-misc/kxdocker-* for optional plugins."
+	elog ""
+	elog "If you are experience problems running Kxdocker"
+	elog "try to delete the old configuration file:"
+	elog " ~/.kde/share/apps/kxdocker/kxdocker_conf.xml"
+	elog "and launch Kxdocker again."
+	elog ""
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.7.ebuild,v 1.2 2006/09/01 15:00:15 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.7.ebuild,v 1.3 2007/01/05 17:01:45 flameeyes Exp $
 
 inherit kde
 
@@ -23,10 +23,10 @@ src_unpack() {
 }
 
 pkg_postinst() {
-	einfo "To see the kde-file-selector in a gtk-application, just do:"
+	elog "To see the kde-file-selector in a gtk-application, just do:"
 	echo "cd /usr/local/bin"
 	echo "ln -s /usr/bin/kgtk-wrapper.sh application(eg. firefox)"
-	einfo "Make sure that /usr/local/bin is before /usr/bin in your \$PATH"
-	einfo
+	elog "Make sure that /usr/local/bin is before /usr/bin in your \$PATH"
+	elog
 	ewarn "Kded needs to be running to get this working!"
 }

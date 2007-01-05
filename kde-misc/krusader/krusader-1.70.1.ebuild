@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.70.1.ebuild,v 1.10 2006/10/16 15:22:51 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.70.1.ebuild,v 1.11 2007/01/05 17:03:03 flameeyes Exp $
 
 inherit kde
 
@@ -27,21 +27,21 @@ need-kde 3.4
 
 pkg_postinst() {
 	echo
-	einfo "Krusader can use various external applications, including:"
-	einfo "- KMail	 (kde-base/kdepim)"
-	einfo "- Kompare (kde-base/kdesdk)"
-	einfo "- KDiff3	 (kde-misc/kdiff3)"
-	einfo "- XXdiff	 (dev-util/xxdiff)"
-	einfo "- KRename (kde-misc/krename)"
-	einfo "- Eject	 (virtual/eject)"
-	einfo ""
-	einfo "It supports also quite a few archive formats, including:"
-	einfo "- app-arch/arj"
-	einfo "- app-arch/unarj"
-	einfo "- app-arch/rar"
-	einfo "- app-arch/zip"
-	einfo "- app-arch/unzip"
-	einfo "- app-arch/unace"
+	elog "Krusader can use various external applications, including:"
+	elog "- KMail	 (kde-base/kdepim)"
+	elog "- Kompare (kde-base/kdesdk)"
+	elog "- KDiff3	 (kde-misc/kdiff3)"
+	elog "- XXdiff	 (dev-util/xxdiff)"
+	elog "- KRename (kde-misc/krename)"
+	elog "- Eject	 (virtual/eject)"
+	elog ""
+	elog "It supports also quite a few archive formats, including:"
+	elog "- app-arch/arj"
+	elog "- app-arch/unarj"
+	elog "- app-arch/rar"
+	elog "- app-arch/zip"
+	elog "- app-arch/unzip"
+	elog "- app-arch/unace"
 	echo
 	ewarn "IMPORTANT: Please remove your ~/.kde/share/apps/krusader/krusaderui.rc file"
 	ewarn "after installation!!! (Else you won't see new menu entries. But please note:"

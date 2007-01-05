@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-sword/kio-sword-0.2.ebuild,v 1.3 2006/06/19 19:16:08 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-sword/kio-sword-0.2.ebuild,v 1.4 2007/01/05 17:02:23 flameeyes Exp $
 
 inherit kde eutils
 
@@ -27,7 +27,7 @@ src_unpack() {
 }
 
 pkg_postinst() {
-	einfo "It is recommended that you have modules installed for sword."
-	einfo "Gentoo provides the \"sword-modules\" package for convenience:"
-	einfo "\temerge sword-modules"
+	elog "It is recommended that you have modules installed for sword."
+	elog "Gentoo provides the \"sword-modules\" package for convenience:"
+	elog "\temerge sword-modules"
 }

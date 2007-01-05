@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/krusader
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.53 2006/10/16 15:22:51 deathwing00 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.54 2007/01/05 17:03:03 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> krusader-1.70.1.ebuild:
+  Convert to use elog.
 
   16 Oct 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
   krusader-1.70.1.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kxdocker
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker/ChangeLog,v 1.8 2006/04/27 01:03:01 deathwing00 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker/ChangeLog,v 1.9 2007/01/05 17:04:06 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> kxdocker-0.39.ebuild,
+  kxdocker-1.1.4a.ebuild:
+  Convert to use elog.
 
   27 Apr 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
   kxdocker-1.1.4a.ebuild:

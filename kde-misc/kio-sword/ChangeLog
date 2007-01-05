@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kio-sword
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-sword/ChangeLog,v 1.3 2006/06/19 19:16:08 ticho Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-sword/ChangeLog,v 1.4 2007/01/05 17:02:23 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> kio-sword-0.2.ebuild:
+  Convert to use elog.
 
   19 Jun 2006; Andrej Kacian <ticho@gentoo.org> kio-sword-0.2.ebuild:
   Stable on x86. Bug #137139.

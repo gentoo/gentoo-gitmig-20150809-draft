@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker/kxdocker-0.39.ebuild,v 1.2 2005/11/20 12:03:04 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker/kxdocker-0.39.ebuild,v 1.3 2007/01/05 17:04:06 flameeyes Exp $
 
 inherit kde
 
@@ -23,6 +23,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "If you are upgrading for version older than 0.27 please use new default configuration."
-	einfo "since 0.28 has AutoSave enabled by default, please remember it will overwrite your HOME/.kde/share/apps/kxdocker/kxdocker_conf.xml"
+	elog "If you are upgrading for version older than 0.27 please use new default configuration."
+	elog "since 0.28 has AutoSave enabled by default, please remember it will overwrite your HOME/.kde/share/apps/kxdocker/kxdocker_conf.xml"
 }

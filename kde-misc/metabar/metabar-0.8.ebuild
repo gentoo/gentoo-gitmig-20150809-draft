@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/metabar/metabar-0.8.ebuild,v 1.5 2006/09/29 13:46:17 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/metabar/metabar-0.8.ebuild,v 1.6 2007/01/05 17:04:36 flameeyes Exp $
 
 inherit kde
 
@@ -33,7 +33,7 @@ src_unpack() {
 pkg_postinst()
 {
 	echo
-	einfo "To use Metabar, run Konqueror, right-click the sidebar,"
-	einfo "and choose 'Add New -> Metabar'."
+	elog "To use Metabar, run Konqueror, right-click the sidebar,"
+	elog "and choose 'Add New -> Metabar'."
 	echo
 }
