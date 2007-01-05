@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/pysoulseek-1.2.7b.ebuild,v 1.7 2006/10/30 02:57:03 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/pysoulseek-1.2.7b.ebuild,v 1.8 2007/01/05 22:46:42 dirtyepic Exp $
 
 inherit eutils distutils
 
@@ -39,6 +39,6 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "The hydriant patch no longer is, checkout net-p2p/nicotine from the same people"
+	elog "The hydriant patch no longer is, checkout net-p2p/nicotine from the same people"
 	echo
 }
