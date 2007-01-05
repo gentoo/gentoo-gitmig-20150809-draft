@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.5.1.3.ebuild,v 1.2 2006/06/05 22:57:36 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.5.1.3.ebuild,v 1.3 2007/01/05 09:09:44 flameeyes Exp $
 
-inherit eutils gnuconfig kde
+inherit eutils kde
 
 PV_BUGFIX="${PV/?.?.?/}"
 MY_PV="${PV/${PV_BUGFIX}/}"
@@ -72,7 +72,6 @@ src_compile() {
 		$(use_enable tiff) \
 		$(use_enable kexi KexiDB) \
 		$(use_enable opengl)"
-	gnuconfig_update
 	kde_src_compile
 }
 
