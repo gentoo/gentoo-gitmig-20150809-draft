@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.59 2007/01/05 00:07:23 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.60 2007/01/05 11:09:34 vivo Exp $
 # kate: encoding utf-8; eol unix;
 # kate: indent-width 4; mixedindent off; remove-trailing-space on; space-indent off;
 # kate: word-wrap-column 80; word-wrap off;
@@ -20,122 +20,115 @@ inherit eutils flag-o-matic gnuconfig autotools mysql_fx
 # and we will run a mysql server during test phase
 S="${WORKDIR}/mysql"
 
-# avoid running userspace code 8 times per ebuild :(
-if [[ "${_MYPVR}" != "${PVR}" ]] && [[ -n "${PVR}" ]]
-then
-	_MYPVR=${PVR}
+[[ "${MY_EXTRAS_VER}" == "latest" ]] && MY_EXTRAS_VER="20070105"
 
-	[[ "${MY_EXTRAS_VER}" == "latest" ]] && MY_EXTRAS_VER="20070105"
+if [[ ${PR#r} -lt 60 ]] ; then
+	IS_BITKEEPER=0
+elif [[ ${PR#r} -lt 90 ]] ; then
+	IS_BITKEEPER=60
+else
+	IS_BITKEEPER=90
+fi
 
-	if [[ ${PR#r} -lt 60 ]] ; then
-		IS_BITKEEPER=0
-	elif [[ ${PR#r} -lt 90 ]] ; then
-		IS_BITKEEPER=60
-	else
-		IS_BITKEEPER=90
-	fi
+# MYSQL_VERSION_ID will be:
+# major * 10e6 + minor * 10e4 + micro * 10e2 + gentoo revision number, all [0..99]
+# This is an important part, because many of the choices the MySQL ebuild will do
+# depend on this variable.
+# In particular, the code below transforms a $PVR like "5.0.18-r3" in "5001803"
+MYSQL_VERSION_ID=""
+tpv=( ${PV//[-._]/ } ) ; tpv[3]="${PVR:${#PV}}" ; tpv[3]="${tpv[3]##*-r}"
+for vatom in 0 1 2 3 ; do
+	# pad to length 2
+	tpv[${vatom}]="00${tpv[${vatom}]}"
+	MYSQL_VERSION_ID="${MYSQL_VERSION_ID}${tpv[${vatom}]:0-2}"
+done
+# strip leading "0" (otherwise it's considered an octal number by BASH)
+MYSQL_VERSION_ID=${MYSQL_VERSION_ID##"0"}
 
-	# MYSQL_VERSION_ID will be:
-	# major * 10e6 + minor * 10e4 + micro * 10e2 + gentoo revision number, all [0..99]
-	# This is an important part, because many of the choices the MySQL ebuild will do
-	# depend on this variable.
-	# In particular, the code below transforms a $PVR like "5.0.18-r3" in "5001803"
-	MYSQL_VERSION_ID=""
-	tpv=( ${PV//[-._]/ } ) ; tpv[3]="${PVR:${#PV}}" ; tpv[3]="${tpv[3]##*-r}"
-	for vatom in 0 1 2 3 ; do
-		# pad to length 2
-		tpv[${vatom}]="00${tpv[${vatom}]}"
-		MYSQL_VERSION_ID="${MYSQL_VERSION_ID}${tpv[${vatom}]:0-2}"
+# Be warned, *DEPEND are version-dependant
+DEPEND="ssl? ( >=dev-libs/openssl-0.9.6d )
+		userland_GNU? ( sys-process/procps )
+		>=sys-apps/sed-4
+		>=sys-apps/texinfo-4.7-r1
+		>=sys-libs/readline-4.1
+		>=sys-libs/zlib-1.2.3
+		"
+
+# having different flavours at the same time is not a good idea
+for i in "" "-community" "-slotted" ; do
+	[[ "${i}" == ${PN#mysql} ]] ||
+	DEPEND="${DEPEND} !dev-db/mysql${i}"
+done
+
+mysql_version_is_at_least "5.1" \
+|| DEPEND="${DEPEND} berkdb? ( sys-apps/ed )"
+
+# dev-perl/DBD-mysql is needed by some scripts installed by MySQL
+PDEPEND="perl? ( >=dev-perl/DBD-mysql-2.9004 )"
+
+if mysql_version_is_at_least "5.1.12" ; then
+	DEPEND="${DEPEND} innodb? ( >=dev-util/cmake-2.4.3 )"
+fi
+
+# BitKeeper dependency, compile-time only
+[[ ${IS_BITKEEPER} -eq 90 ]] && DEPEND="${DEPEND} dev-util/bk_client"
+
+if [[ ${PN} == "mysql-slotted" ]] ; then
+	DEPEND="${DEPEND} app-admin/eselect-mysql"
+fi
+
+if [[ ${PN} == "mysql-slotted" ]] ; then
+	SLOT=""
+	tpv=( ${PV//[-._]/ } )
+	for vatom in 0 1 2 ; do
+		SLOT="${SLOT}${tpv[${vatom}]}_"
 	done
-	# strip leading "0" (otherwise it's considered an octal number by BASH)
-	MYSQL_VERSION_ID=${MYSQL_VERSION_ID##"0"}
+	#finally SLOT=5_0_24
+	SLOT=${SLOT:0:${#SLOT}-1}
+else
+	SLOT="0"
+fi
 
-	# Be warned, *DEPEND are version-dependant
-	DEPEND="ssl? ( >=dev-libs/openssl-0.9.6d )
-			userland_GNU? ( sys-process/procps )
-			>=sys-apps/sed-4
-			>=sys-apps/texinfo-4.7-r1
-			>=sys-libs/readline-4.1
-			>=sys-libs/zlib-1.2.3
-			"
+# Define correct SRC_URIs
+SRC_URI="
+${SERVER_URI}
+http://g3nt8.org/patches/mysql-extras-${MY_EXTRAS_VER}.tar.bz2
+"
+mysql_version_is_at_least "5.1.12" \
+&& [[ -n "${PBXT_VERSION}" ]] \
+&& SRC_URI="${SRC_URI} pbxt? ( mirror://sourceforge/pbxt/pbxt-${PBXT_VERSION}.tar.gz )"
 
-	# having different flavours at the same time is not a good idea
-	for i in "" "-community" "-slotted" ; do
-		[[ "${i}" == ${PN#mysql} ]] ||
-		DEPEND="${DEPEND} !dev-db/mysql${i}"
-	done
+DESCRIPTION="A fast, multi-threaded, multi-user SQL database server."
+HOMEPAGE="http://www.mysql.com/"
+LICENSE="GPL-2"
+IUSE="big-tables debug embedded minimal perl selinux ssl static"
+RESTRICT="confcache"
 
-	mysql_version_is_at_least "5.1" \
-	|| DEPEND="${DEPEND} berkdb? ( sys-apps/ed )"
+mysql_version_is_at_least "4.1" \
+&& IUSE="${IUSE} latin1"
 
-	# dev-perl/DBD-mysql is needed by some scripts installed by MySQL
-	PDEPEND="perl? ( >=dev-perl/DBD-mysql-2.9004 )"
+mysql_version_is_at_least "4.1.3" \
+&& IUSE="${IUSE} cluster extraengine"
 
-	if mysql_version_is_at_least "5.1.12" ; then
-		DEPEND="${DEPEND} innodb? ( >=dev-util/cmake-2.4.3 )"
-	fi
+mysql_version_is_at_least "5.0" \
+|| IUSE="${IUSE} raid"
 
-	# BitKeeper dependency, compile-time only
-	[[ ${IS_BITKEEPER} -eq 90 ]] && DEPEND="${DEPEND} dev-util/bk_client"
+mysql_version_is_at_least "5.0.18" \
+&& IUSE="${IUSE} max-idx-128"
 
-	if [[ ${PN} == "mysql-slotted" ]] ; then
-		DEPEND="${DEPEND} app-admin/eselect-mysql"
-	fi
+mysql_version_is_at_least "5.1" \
+&& IUSE="${IUSE} innodb"
 
-	if [[ ${PN} == "mysql-slotted" ]] ; then
-		SLOT=""
-		tpv=( ${PV//[-._]/ } )
-		for vatom in 0 1 2 ; do
-			SLOT="${SLOT}${tpv[${vatom}]}_"
-		done
-		#finally SLOT=5_0_24
-		SLOT=${SLOT:0:${#SLOT}-1}
-	else
-		SLOT="0"
-	fi
+mysql_version_is_at_least "5.1" \
+|| IUSE="${IUSE} berkdb"
 
-	# Define correct SRC_URIs
-	SRC_URI="
-	${SERVER_URI}
-	http://g3nt8.org/patches/mysql-extras-${MY_EXTRAS_VER}.tar.bz2
-	"
-	mysql_version_is_at_least "5.1.12" \
-	&& [[ -n "${PBXT_VERSION}" ]] \
-	&& SRC_URI="${SRC_URI} pbxt? ( mirror://sourceforge/pbxt/pbxt-${PBXT_VERSION}.tar.gz )"
+mysql_version_is_at_least "5.1.12" \
+&& IUSE="${IUSE} pbxt"
 
-	DESCRIPTION="A fast, multi-threaded, multi-user SQL database server."
-	HOMEPAGE="http://www.mysql.com/"
-	LICENSE="GPL-2"
-	IUSE="big-tables debug embedded minimal perl selinux ssl static"
-	RESTRICT="confcache"
-
-	mysql_version_is_at_least "4.1" \
-	&& IUSE="${IUSE} latin1"
-
-	mysql_version_is_at_least "4.1.3" \
-	&& IUSE="${IUSE} cluster extraengine"
-
-	mysql_version_is_at_least "5.0" \
-	|| IUSE="${IUSE} raid"
-
-	mysql_version_is_at_least "5.0.18" \
-	&& IUSE="${IUSE} max-idx-128"
-
-	mysql_version_is_at_least "5.1" \
-	&& IUSE="${IUSE} innodb"
-
-	mysql_version_is_at_least "5.1" \
-	|| IUSE="${IUSE} berkdb"
-
-	mysql_version_is_at_least "5.1.12" \
-	&& IUSE="${IUSE} pbxt"
-
-	RDEPEND="${DEPEND}
-	sys-apps/mysql
-	selinux? ( sec-policy/selinux-mysql )
-	"
-
-fi # if [[ "${_MYPVR}" != "${PVR}" ]]
+RDEPEND="${DEPEND}
+sys-apps/mysql
+selinux? ( sec-policy/selinux-mysql )
+"
 
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_preinst \
 				pkg_postinst pkg_config pkg_postrm
