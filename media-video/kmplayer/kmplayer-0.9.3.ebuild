@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.9.3.ebuild,v 1.9 2006/12/11 19:14:34 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.9.3.ebuild,v 1.10 2007/01/05 20:36:39 flameeyes Exp $
 
 inherit kde eutils
 
@@ -39,10 +39,10 @@ src_unpack() {
 
 	if use mplayer && use amd64 && ! has_version media-video/mplayer; then
 		#epatch "${FILESDIR}/${P}-use32bitbin.diff"
-		einfo 'NOTICE: From this version the patch so that mplayer-bin is used'
-		einfo 'NOTICE: instead of mplayer is applied no longer. Now you can'
-		einfo 'NOTICE: configure kmplayer to use mplayer-bin from within the'
-		einfo 'NOTICE: application.'
+		elog 'NOTICE: From this version the patch so that mplayer-bin is used'
+		elog 'NOTICE: instead of mplayer is applied no longer. Now you can'
+		elog 'NOTICE: configure kmplayer to use mplayer-bin from within the'
+		elog 'NOTICE: application.'
 	fi
 }
 

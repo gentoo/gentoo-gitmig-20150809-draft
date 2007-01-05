@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/sonic-snap-1.5.ebuild,v 1.3 2006/09/25 22:35:31 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/sonic-snap-1.5.ebuild,v 1.4 2007/01/05 20:41:01 flameeyes Exp $
 
 inherit eutils linux-info
 
@@ -52,13 +52,13 @@ src_install() {
 pkg_postinst() {
 
 	ewarn
-	einfo "This application has found the sn9c10x driver (sn9c102.ko)"
-	einfo "enabled in the USB section of your kernel config.  Also,"
-	einfo "this driver is V4L v2 only, so V4L v1 apps will not work."
-	einfo "Finally, only a few image sensors are supported, eg, PAS106B"
-	einfo "so (check dmesg or /var/log/messages for USB device info when"
-	einfo "you plug the cam in)."
-	einfo
-	einfo "Now try sonic-snap-gui /dev/videoX (where X is 0, 1 , etc)."
+	elog "This application has found the sn9c10x driver (sn9c102.ko)"
+	elog "enabled in the USB section of your kernel config.  Also,"
+	elog "this driver is V4L v2 only, so V4L v1 apps will not work."
+	elog "Finally, only a few image sensors are supported, eg, PAS106B"
+	elog "so (check dmesg or /var/log/messages for USB device info when"
+	elog "you plug the cam in)."
+	elog
+	elog "Now try sonic-snap-gui /dev/videoX (where X is 0, 1 , etc)."
 	ewarn
 }

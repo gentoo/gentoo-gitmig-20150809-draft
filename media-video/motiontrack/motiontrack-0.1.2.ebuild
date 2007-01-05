@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motiontrack/motiontrack-0.1.2.ebuild,v 1.3 2006/03/07 16:40:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motiontrack/motiontrack-0.1.2.ebuild,v 1.4 2007/01/05 20:38:49 flameeyes Exp $
 
 
 DESCRIPTION="A set of tools that detect motion between two images"
@@ -34,9 +34,9 @@ src_compile() {
 
 	if use gd; then
 		if use imagemagick; then
-			einfo "motiontrack can only use one of libgd or imagemagick, not both."
-			einfo "default is libgd when debug is unset, imagemagick otherwise."
-			einfo "please unset one of these use flags if you have other intentions."
+			elog "motiontrack can only use one of libgd or imagemagick, not both."
+			elog "default is libgd when debug is unset, imagemagick otherwise."
+			elog "please unset one of these use flags if you have other intentions."
 		fi
 	fi
 	if use debug; then

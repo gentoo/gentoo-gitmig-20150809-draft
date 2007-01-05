@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.9.3a.ebuild,v 1.1 2006/12/25 09:18:05 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.9.3a.ebuild,v 1.2 2007/01/05 20:36:39 flameeyes Exp $
 
 inherit kde eutils
 
@@ -38,8 +38,8 @@ src_unpack() {
 	kde_src_unpack
 
 	if use mplayer && use amd64 && ! has_version media-video/mplayer; then
-		einfo 'NOTICE: You have mplayer-bin installed; you will need to configure'
-		einfo 'NOTICE: kmplayer to use it from within the application.'
+		elog 'NOTICE: You have mplayer-bin installed; you will need to configure'
+		elog 'NOTICE: kmplayer to use it from within the application.'
 	fi
 }
 

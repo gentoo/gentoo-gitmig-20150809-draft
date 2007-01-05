@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motion/motion-3.2.7.ebuild,v 1.3 2006/11/23 15:54:29 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/motion-3.2.7.ebuild,v 1.4 2007/01/05 20:37:39 flameeyes Exp $
 
 inherit eutils
 
@@ -47,8 +47,8 @@ src_install() {
 pkg_postinst() {
 	ewarn "You need to setup /etc/motion.conf before running"
 	ewarn "motion for the first time."
-	einfo "Examples are available at /usr/share/doc/${P}/examples"
-	einfo
-	einfo "You can install motion detection as a service, use:"
-	einfo "rc-update add motion default"
+	elog "Examples are available at /usr/share/doc/${P}/examples"
+	elog
+	elog "You can install motion detection as a service, use:"
+	elog "rc-update add motion default"
 }

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dxr2-driver
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dxr2-driver/ChangeLog,v 1.8 2006/11/20 06:31:43 beandog Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dxr2-driver/ChangeLog,v 1.9 2007/01/05 20:34:57 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  dxr2-driver-1.0.4.ebuild:
+  Convert to use elog.
 
   20 Nov 2006; Steve Dibb <beandog@gentoo.org> metadata.xml:
   Add to media-video herd

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/motion
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.10 2006/11/23 15:54:29 vivo Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.11 2007/01/05 20:37:39 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> motion-3.2.4.ebuild,
+  motion-3.2.7.ebuild:
+  Convert to use elog.
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> motion-3.2.4.ebuild,
   motion-3.2.7.ebuild:

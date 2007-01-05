@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/mpeg-tools-1.5b-r2.ebuild,v 1.5 2006/02/11 16:12:55 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/mpeg-tools-1.5b-r2.ebuild,v 1.6 2007/01/05 20:39:33 flameeyes Exp $
 
 inherit eutils
 
@@ -54,7 +54,7 @@ src_install () {
 
 pkg_postinst() {
 	if [[ -z $(best_version media-libs/netpbm) ]] ; then
-		einfo "If you are looking for eyuvtoppm or ppmtoeyuv, please"
-		einfo "emerge the netpbm package.  It has updated versions."
+		elog "If you are looking for eyuvtoppm or ppmtoeyuv, please"
+		elog "emerge the netpbm package.  It has updated versions."
 	fi
 }
