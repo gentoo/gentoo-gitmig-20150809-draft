@@ -12,7 +12,7 @@ steps:
 * FEATURES=-collision-protect emerge -1 baselayout (it will install
   standard baselayout 1.13) && emerge -C freebsd-baselayout
 * etc-update *IMPORTANT*
-* emerge -1 binutils gcc 
+* emerge -1 binutils gcc python
 * emerge -e world
 
 It is not an easy task but it should work. If you need help or you
