@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.21-r1.ebuild,v 1.9 2006/10/24 08:55:23 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.21-r1.ebuild,v 1.10 2007/01/05 07:13:00 flameeyes Exp $
 
-inherit gnuconfig eutils pam flag-o-matic
+inherit eutils pam flag-o-matic
 
 IUSE="nas esd motif opengl truetype gtk pam xlockrc unicode"
 
