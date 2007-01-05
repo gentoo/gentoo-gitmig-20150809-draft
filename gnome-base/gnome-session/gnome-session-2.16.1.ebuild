@@ -1,9 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.16.1.ebuild,v 1.9 2007/01/05 16:49:09 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.16.1.ebuild,v 1.10 2007/01/05 17:11:20 dang Exp $
 
 WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+WANT_AUTOMAKE="1.9"
 
 inherit autotools eutils gnome2
 
@@ -36,7 +36,7 @@ DEPEND="${RDEPEND}
 		>=sys-devel/gettext-0.10.40
 		>=dev-util/pkgconfig-0.17
 		>=dev-util/intltool-0.35
-		>=sys-devel/automake-1.9
+		gnome-base/gnome-common
 		!gnome-base/gnome-core"
 
 # gnome-base/gnome-core overwrite /usr/bin/gnome-session
@@ -59,8 +59,6 @@ src_unpack() {
 	# Implement switch to enable/disable esound support. See bug #6920.
 	epatch ${FILESDIR}/${PN}-2.10.0-esd_switch.patch
 
-	# Drop compile time warnings due to lack of m4 definition
-	sed -i -e 's:GNOME_COMPILE_WARNINGS(yes)::' configure.in
 	eautoreconf
 }
 
