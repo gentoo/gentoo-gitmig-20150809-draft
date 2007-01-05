@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/tomcat-native
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/ChangeLog,v 1.1 2007/01/05 01:27:31 wltjr Exp $
+
+*tomcat-native-1.1.8 (05 Jan 2007)
+
+  05 Jan 2007; William L. Thomson Jr. <wltjr@gentoo.org> +metadata.xml,
+  +tomcat-native-1.1.8.ebuild:
+  Initial ebuild for libtcnative-1.so, Tomcat's native APR library
+
