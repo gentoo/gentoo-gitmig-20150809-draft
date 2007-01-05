@@ -1,8 +1,7 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-bnet/gaim-bnet-0.1.1.ebuild,v 1.1 2005/03/04 20:59:36 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-bnet/gaim-bnet-0.1.1.ebuild,v 1.2 2007/01/05 04:31:25 flameeyes Exp $
 
-inherit debug
 
 DESCRIPTION="gaim-bnet is an Battle.net chat protocol plug-in for Gaim"
 HOMEPAGE="http://gaim-bnet.sourceforge.net"

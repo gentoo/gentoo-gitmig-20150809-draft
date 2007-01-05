@@ -1,8 +1,7 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-snpp/gaim-snpp-0.8.0.ebuild,v 1.5 2005/08/07 12:51:02 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-snpp/gaim-snpp-0.8.0.ebuild,v 1.6 2007/01/05 04:32:24 flameeyes Exp $
 
-inherit debug
 
 DESCRIPTION="gaim-snpp is an SNPP protocol plug-in for Gaim"
 HOMEPAGE="http://gaim-snpp.sourceforge.net"
