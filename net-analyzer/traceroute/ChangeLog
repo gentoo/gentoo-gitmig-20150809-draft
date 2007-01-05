@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/traceroute
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.41 2007/01/05 08:42:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.42 2007/01/05 21:00:15 cedk Exp $
+
+  05 Jan 2007; Cedric Krier <cedk@gentoo.org> -traceroute-1.4_p12-r2.ebuild,
+  -traceroute-1.4_p12-r3.ebuild, -traceroute-1.4_p12-r4.ebuild:
+  Remove old version for bug #160166
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   traceroute-1.4_p12-r2.ebuild:
