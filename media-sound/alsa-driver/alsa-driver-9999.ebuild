@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-9999.ebuild,v 1.2 2006/12/21 15:57:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-9999.ebuild,v 1.3 2007/01/05 17:17:58 flameeyes Exp $
 
 inherit linux-mod flag-o-matic eutils multilib autotools mercurial
 
@@ -139,20 +139,20 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "The alsasound initscript and modules.d/alsa have now moved to alsa-utils"
-	einfo
-	einfo "Also, remember that all mixer channels will be MUTED by default."
-	einfo "Use the 'alsamixer' program to unmute them."
-	einfo
-	einfo "Version 1.0.3 and above should work with version 2.6 kernels."
-	einfo "If you experience problems, please report bugs to http://bugs.gentoo.org."
-	einfo
+	elog
+	elog "The alsasound initscript and modules.d/alsa have now moved to alsa-utils"
+	elog
+	elog "Also, remember that all mixer channels will be MUTED by default."
+	elog "Use the 'alsamixer' program to unmute them."
+	elog
+	elog "Version 1.0.3 and above should work with version 2.6 kernels."
+	elog "If you experience problems, please report bugs to http://bugs.gentoo.org."
+	elog
 
 	linux-mod_pkg_postinst
 
-	einfo "Check out the ALSA installation guide availible at the following URL:"
-	einfo "http://www.gentoo.org/doc/en/alsa-guide.xml"
+	elog "Check out the ALSA installation guide availible at the following URL:"
+	elog "http://www.gentoo.org/doc/en/alsa-guide.xml"
 
 	if kernel_is 2 6 && [ -e ${ROOT}/lib/modules/${KV_FULL}/kernel/sound ]; then
 		# Cleanup if they had older alsa installed
