@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.5.ebuild,v 1.13 2004/10/04 21:52:43 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.5.ebuild,v 1.14 2007/01/05 09:06:04 flameeyes Exp $
 
-inherit gnuconfig eutils
+inherit eutils
 
 DB_V=${PV}-20031125
 DESCRIPTION="The HP Inkjet server for Ghostscript. Provides best output for HP Inkjet Printers and some LaserJets"
@@ -23,7 +23,6 @@ DEPEND="virtual/ghostscript
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	gnuconfig_update
 	epatch ${FILESDIR}/${P}-gcc34.patch
 	epatch ${FILESDIR}/hpijs-1.4.1-rss.1.patch
 }
