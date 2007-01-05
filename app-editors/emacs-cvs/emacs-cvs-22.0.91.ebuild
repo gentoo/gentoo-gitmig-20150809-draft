@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.91.ebuild,v 1.4 2007/01/05 13:57:33 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.91.ebuild,v 1.5 2007/01/05 14:16:50 opfer Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -30,8 +30,7 @@ DEPEND=">=sys-libs/ncurses-5.3
 		png? ( >=media-libs/libpng-1.2.5 )
 		gtk? ( =x11-libs/gtk+-2* )
 		!gtk? ( Xaw3d? ( x11-libs/Xaw3d ) ) )
-	sys-libs/zlib
-	>=sys-apps/portage-2.0.51_rc1"
+	sys-libs/zlib"
 
 PROVIDE="virtual/emacs virtual/editor"
 
