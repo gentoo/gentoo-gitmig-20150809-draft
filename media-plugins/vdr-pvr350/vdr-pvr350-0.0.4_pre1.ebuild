@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvr350/vdr-pvr350-0.0.4_pre1.ebuild,v 1.5 2007/01/04 13:18:07 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvr350/vdr-pvr350-0.0.4_pre1.ebuild,v 1.6 2007/01/05 16:42:55 hd_brummy Exp $
 inherit vdr-plugin eutils
 
 IUSE="yaepg"
@@ -23,7 +23,7 @@ pkg_setup() {
 	vdr-plugin_pkg_setup
 
 	if use yaepg; then
-		einfo "Checking for patched vdr"
+		elog "Checking for patched vdr"
 		grep -q fontYaepg /usr/include/vdr/font.h
 		eend $? "You need to emerge vdr with use-flag yaepg set!" || die "Unpatched vdr detected!"
 

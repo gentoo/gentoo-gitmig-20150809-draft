@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphlcd/vdr-graphlcd-0.1.2_pre6-r1.ebuild,v 1.5 2006/03/03 16:56:08 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphlcd/vdr-graphlcd-0.1.2_pre6-r1.ebuild,v 1.6 2007/01/05 16:31:15 hd_brummy Exp $
 
 inherit eutils vdr-plugin
 
@@ -44,7 +44,7 @@ src_install() {
 
 	if use truetype; then
 		for font in /usr/share/fonts/corefonts/*.ttf; do
-			einfo ${font}
+			elog ${font}
 			dosym ${font} /usr/share/vdr/graphlcd/fonts
 		done
 	fi
@@ -69,8 +69,8 @@ pkg_preinst() {
 	if [[ -e /etc/vdr/plugins/graphlcd/fonts ]] && [[ ! -L /etc/vdr/plugins/graphlcd/fonts ]] \
 	|| [[ -e /etc/vdr/plugins/graphlcd/logos ]] && [[ ! -L /etc/vdr/plugins/graphlcd/logos ]] ;then
 
-		einfo "Remove wrong DIR in /etc/vdr/plugins/graphlcd from prior install"
-		einfo "Press CTRL+C to abbort"
+		elog "Remove wrong DIR in /etc/vdr/plugins/graphlcd from prior install"
+		elog "Press CTRL+C to abbort"
 		epause
 		rmdir -R /etc/vdrplugins/graphlcd/{fonts,logos}
 	fi
@@ -80,10 +80,10 @@ pkg_postinst() {
 
 	vdr-plugin_pkg_postinst
 
-	einfo "Add additional options in /etc/conf.d/vdr.graphlcd"
-	einfo
-	einfo "Please copy or link one of the supplied fonts.conf.*"
-	einfo "files in /etc/vdr/plugins/graphlcd/ to"
-	einfo "/etc/vdr/plugins/graphlcd/fonts.conf"
+	elog "Add additional options in /etc/conf.d/vdr.graphlcd"
+	elog
+	elog "Please copy or link one of the supplied fonts.conf.*"
+	elog "files in /etc/vdr/plugins/graphlcd/ to"
+	elog "/etc/vdr/plugins/graphlcd/fonts.conf"
 }
 

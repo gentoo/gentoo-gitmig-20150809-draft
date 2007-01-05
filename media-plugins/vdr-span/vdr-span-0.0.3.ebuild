@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-span/vdr-span-0.0.3.ebuild,v 1.1 2006/09/09 21:33:08 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-span/vdr-span-0.0.3.ebuild,v 1.2 2007/01/05 16:53:47 hd_brummy Exp $
 
 inherit vdr-plugin
 
-DESCRIPTION="Video Disk Recorder Spectrum Analyzer (SpAn) PlugIn"
+DESCRIPTION="VDR plugin: Spectrum Analyzer (SpAn)"
 HOMEPAGE="http://lcr.vdr-developer.org/"
 SRC_URI="http://lcr.vdr-developer.org/downloads/${P}.tar.bz2"
 
@@ -21,6 +21,6 @@ pkg_postinst() {
 	vdr-plugin_pkg_postinst
 
 	echo
-	einfo "This plugin is meant as middleware, you need appropiate"
-	einfo "data-provider- as well as visualization-plugins."
+	elog "This plugin is meant as middleware, you need appropiate"
+	elog "data-provider- as well as visualization-plugins."
 }

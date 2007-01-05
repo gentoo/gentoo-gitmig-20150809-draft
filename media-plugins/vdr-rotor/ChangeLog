@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-rotor
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-rotor/ChangeLog,v 1.4 2006/08/15 13:57:06 zzam Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-rotor/ChangeLog,v 1.5 2007/01/05 16:45:39 hd_brummy Exp $
+
+  05 Jan 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-rotor-0.1.4.ebuild:
+  einfo converted to elog
 
   15 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> vdr-rotor-0.1.4.ebuild:
   No longer use internal vdr-plugin.eclass-variable.

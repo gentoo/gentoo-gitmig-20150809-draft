@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-autosort
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-autosort/ChangeLog,v 1.2 2006/08/02 19:17:00 zzam Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-autosort/ChangeLog,v 1.3 2007/01/05 16:23:55 hd_brummy Exp $
+
+  05 Jan 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-autosort-0.0.10.ebuild:
+  einfo converted to elog
 
   02 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
   Assigned package to VDR-Project.

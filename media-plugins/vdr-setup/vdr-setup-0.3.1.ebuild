@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/vdr-setup-0.3.1.ebuild,v 1.6 2006/10/30 15:03:30 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/vdr-setup-0.3.1.ebuild,v 1.7 2007/01/05 16:47:35 hd_brummy Exp $
 
 inherit vdr-plugin
 
@@ -29,7 +29,7 @@ pkg_setup() {
 		echo
 		eerror "Patched VDR needed"
 		echo
-		einfo "reemerge VDR with USE=\"setup-plugin\" " && die "unpack failed, patched VDR needed"
+		elog "reemerge VDR with USE=\"setup-plugin\" " && die "unpack failed, patched VDR needed"
 	fi
 }
 
@@ -66,13 +66,13 @@ pkg_postinst() {
 	vdr-plugin_pkg_postinst
 
 	echo
-	einfo "Edit /etc/vdr/plugins/setup/*"
+	elog "Edit /etc/vdr/plugins/setup/*"
 	echo
 	eerror "vdr-setup is very sensible on Error's in your setup.conf"
-	einfo "Best way to fix this: Stop (at first) VDR , move setup.conf to setup.conf.bak"
-	einfo "and let create VDR a new setup.conf on next Start automatically"
+	elog "Best way to fix this: Stop (at first) VDR , move setup.conf to setup.conf.bak"
+	elog "and let create VDR a new setup.conf on next Start automatically"
 	echo
 	ewarn "Setup-Plugin will change the path of your channels.conf"
-	einfo "You will find a backup copy on /etc/vdr/channels/channels.conf.bak"
+	elog "You will find a backup copy on /etc/vdr/channels/channels.conf.bak"
 	echo
 }

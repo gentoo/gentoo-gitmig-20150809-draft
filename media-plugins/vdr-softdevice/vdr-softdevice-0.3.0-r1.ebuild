@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.3.0-r1.ebuild,v 1.3 2006/11/14 09:19:17 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.3.0-r1.ebuild,v 1.4 2007/01/05 16:51:49 hd_brummy Exp $
 
 inherit vdr-plugin
 
@@ -60,14 +60,14 @@ pkg_setup() {
 		if use xv; then
 			COMPILE_SHM=1
 		else
-			einfo "SHM does only support xv at the moment"
+			elog "SHM does only support xv at the moment"
 		fi
 	else
-		einfo "SHM not supported on vdr-1.2"
+		elog "SHM not supported on vdr-1.2"
 	fi
 	case ${COMPILE_SHM} in
-		0)	einfo "SHM support will not be compiled." ;;
-		1)	einfo "SHM support will be compiled." ;;
+		0)	elog "SHM support will not be compiled." ;;
+		1)	elog "SHM support will be compiled." ;;
 	esac
 
 	# Check for ffmpeg relying on libtheora without pkg-config-file
@@ -108,7 +108,7 @@ src_compile() {
 	[[ ${COMPILE_SHM} == 1 ]] || MYOPTS="${MYOPTS} --disable-shm"
 
 	cd ${S}
-	einfo configure ${MYOPTS}
+	elog configure ${MYOPTS}
 	./configure ${MYOPTS} || die "configure failed"
 
 	vdr-plugin_src_compile

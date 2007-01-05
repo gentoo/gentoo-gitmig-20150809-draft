@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-pin
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pin/ChangeLog,v 1.6 2006/11/02 09:13:08 zzam Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pin/ChangeLog,v 1.7 2007/01/05 16:41:16 hd_brummy Exp $
+
+  05 Jan 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-pin-0.0.20.ebuild:
+  einfo converted to elog
 
   02 Nov 2006; Matthias Schwarzott <zzam@gentoo.org>
   -files/rc-addon-0.0.12.sh, -files/reccmds.pin.conf,

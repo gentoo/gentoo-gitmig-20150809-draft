@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vdrcd/vdr-vdrcd-0.0.10.1-r1.ebuild,v 1.3 2006/11/16 10:22:26 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vdrcd/vdr-vdrcd-0.0.10.1-r1.ebuild,v 1.4 2007/01/05 16:59:00 hd_brummy Exp $
 
 inherit vdr-plugin
 
-DESCRIPTION="Video Disk Recorder Media Detection Plugin"
+DESCRIPTION="VDR plugin: Media Detection Plugin"
 HOMEPAGE="http://www.magoa.net/linux"
 SRC_URI="http://www.magoa.net/linux/files/${P}.tgz"
 
@@ -35,6 +35,6 @@ pkg_postinst() {
 
 	if ! has_version ">media-plugins/vdr-mp3ng-0.9.12"; then
 		echo
-		einfo "For full mp3 support 'emerge media-plugins/vdr-mp3ng -pv'"
+		elog "For full mp3 support 'emerge media-plugins/vdr-mp3ng -pv'"
 	fi
 }

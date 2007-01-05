@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/vdr-weatherng-0.0.5.ebuild,v 1.2 2006/04/06 19:51:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/vdr-weatherng-0.0.5.ebuild,v 1.3 2007/01/05 17:05:12 hd_brummy Exp $
 
 inherit vdr-plugin
 
-DESCRIPTION="Video Disk Recorder plugin to show weather for specified place"
+DESCRIPTION="VDR plugin: show weather for specified place"
 HOMEPAGE="http://beejay.vdr-developer.org/"
 SRC_URI="http://beejay.vdr-developer.org/devel/${P}.tgz
 		mirror://vdrfiles/${PN}/${P}.tgz"
@@ -41,19 +41,20 @@ pkg_postinst() {
 	vdr-plugin_pkg_postinst
 
 	echo
-	einfo "Note: On first run, this Plugin is in Offline Mode"
-	einfo "You can change this in OSD Menu of the plugin."
-	einfo
-	einfo
-	einfo "To display the weather for your location"
-	einfo "you have to find out its ID on weather.com"
-	einfo
-	einfo "Go to http://www.weather.com and search for your city (i.e. Herne)"
-	einfo "in the list of results click on the right one and then look at its URL"
-	einfo
-	einfo "It contains a code for your city"
-	einfo "For Herne this is GMXX0056"
-	einfo
-	einfo "Now you have to enter this code in plugin-setup in OSD"
+	elog "Note: On first run, this Plugin is in Offline Mode"
+	elog "You can change this in OSD Menu of the plugin."
+	elog
+	elog
+	elog "To display the weather for your location"
+	elog "you have to find out its ID on weather.com"
+	elog
+	elog "Go to http://www.weather.com and search for your city (i.e. Herne)"
+	elog "in the list of results click on the right one and then look at its URL"
+	elog
+	elog "It contains a code for your city"
+	elog "For Herne this is GMXX0056"
+	elog
+	elog
+	 "Now you have to enter this code in plugin-setup in OSD"
 	echo
 }

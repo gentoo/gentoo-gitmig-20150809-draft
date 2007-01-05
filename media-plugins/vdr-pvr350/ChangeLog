@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-pvr350
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvr350/ChangeLog,v 1.6 2007/01/04 13:18:07 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvr350/ChangeLog,v 1.7 2007/01/05 16:42:55 hd_brummy Exp $
+
+  05 Jan 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-pvr350-0.0.4_pre1.ebuild:
+  einfo converted to elog
 
   04 Jan 2007; Matthias Schwarzott <zzam@gentoo.org>
   vdr-pvr350-0.0.4_pre1.ebuild:

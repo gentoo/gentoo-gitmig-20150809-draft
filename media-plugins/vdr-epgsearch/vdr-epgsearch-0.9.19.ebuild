@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/vdr-epgsearch-0.9.19.ebuild,v 1.1 2006/11/03 23:04:20 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/vdr-epgsearch-0.9.19.ebuild,v 1.2 2007/01/05 16:28:31 hd_brummy Exp $
 
 inherit vdr-plugin
 
@@ -35,7 +35,7 @@ src_install() {
 pkg_postinst() {
 	vdr-plugin_pkg_postinst
 	if has_version "<media-plugins/vdr-epgsearch-0.9.18"; then
-		einfo "Moving config-files to new location /etc/vdr/plugins/epgsearch"
+		elog "Moving config-files to new location /etc/vdr/plugins/epgsearch"
 		cd ${ROOT}/etc/vdr/plugins
 		local f
 		local moved=""
@@ -44,7 +44,7 @@ pkg_postinst() {
 			mv "${f}" "${ROOT}/etc/vdr/plugins/epgsearch"
 			moved="${moved} ${f}"
 		done
-		einfo "These files were moved:${moved}"
+		elog "These files were moved:${moved}"
 	fi
 }
 

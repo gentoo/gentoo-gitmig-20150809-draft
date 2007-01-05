@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vompserver/vdr-vompserver-0.2.5.ebuild,v 1.2 2006/11/27 13:02:32 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vompserver/vdr-vompserver-0.2.5.ebuild,v 1.3 2007/01/05 17:02:26 hd_brummy Exp $
 
 IUSE=""
 
@@ -31,10 +31,10 @@ src_install() {
 pkg_postinst() {
 	vdr-plugin_pkg_postinst
 
-	einfo
-	einfo "Have a look to the VOMP sample files in /etc/vdr/plugins."
-	einfo
-	einfo "You have to download the dongle file (i.e. firmware) and adapt"
-	einfo "the vomp configuration files accordingly."
-	einfo
+	echo
+	elog "Have a look to the VOMP sample files in /etc/vdr/plugins."
+	echo
+	elog "You have to download the dongle file (i.e. firmware) and adapt"
+	elog "the vomp configuration files accordingly."
+	echo
 }

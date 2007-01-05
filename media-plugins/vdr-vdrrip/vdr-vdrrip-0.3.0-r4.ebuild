@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vdrrip/vdr-vdrrip-0.3.0-r4.ebuild,v 1.1 2006/10/13 20:11:50 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vdrrip/vdr-vdrrip-0.3.0-r4.ebuild,v 1.2 2007/01/05 17:00:40 hd_brummy Exp $
 
 inherit vdr-plugin eutils
 
@@ -28,7 +28,7 @@ src_unpack() {
 	if
 	has_version ">=media-video/vdr-1.3.7" ;
 	then
-		einfo "applying VDR > 1.3.6 patch"
+		elog "applying VDR > 1.3.6 patch"
 		epatch ${FILESDIR}/vdrrip-0.3.0-1.3.7.diff
 		epatch ${FILESDIR}/mplayercmd.diff
 		epatch ${FILESDIR}/maketempdir.diff
@@ -41,7 +41,7 @@ src_unpack() {
 		epatch ${FILESDIR}/log-patch.diff
 	fi
 
-	einfo "Patching queuehandler.sh.conf for gentoo-needs..."
+	elog "Patching queuehandler.sh.conf for gentoo-needs..."
 	cd ${S}
 	sed -e "s,/usr/local/bin/,/usr/bin/," \
 		-e 's,/usr/bin/mencoder_ac3,/usr/bin/mencoder,' \
@@ -70,17 +70,17 @@ src_install() {
 pkg_postinst() {
 	vdr-plugin_pkg_postinst
 
-	einfo "You should have a look at this files:"
-	einfo
-	einfo "* /etc/vdr/plugins/vdrrip/vdrrip-qh.conf"
-	einfo
-	einfo "Use vdrrip-qh to start the vdrrip queue handler."
-	einfo "You can also run 'rc-update add /etc/init.d/vdrrip-qh default' to"
-	einfo "let vdrrip-qh start automaticly when the system starts."
+	elog "You should have a look at this files:"
+	elog
+	elog "* /etc/vdr/plugins/vdrrip/vdrrip-qh.conf"
+	elog
+	elog "Use vdrrip-qh to start the vdrrip queue handler."
+	elog "You can also run 'rc-update add /etc/init.d/vdrrip-qh default' to"
+	elog "let vdrrip-qh start automaticly when the system starts."
 
-	einfo
-	einfo "If you used vdrrip before, mind that it runs by default as user vdr now."
-	einfo "To correct the permissions you should execute this:"
-	einfo "# chown vdr:vdr -R /var/log/vdrrip-qh /tmp/vdrrip /tmp/queuehandler.vdr"
-	einfo
+	elog
+	elog "If you used vdrrip before, mind that it runs by default as user vdr now."
+	elog "To correct the permissions you should execute this:"
+	elog "# chown vdr:vdr -R /var/log/vdrrip-qh /tmp/vdrrip /tmp/queuehandler.vdr"
+	elog
 }

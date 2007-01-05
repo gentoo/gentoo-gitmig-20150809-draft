@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-epgsearch
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/ChangeLog,v 1.17 2006/11/03 23:04:20 zzam Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/ChangeLog,v 1.18 2007/01/05 16:28:31 hd_brummy Exp $
+
+  05 Jan 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-epgsearch-0.9.19.ebuild:
+  einfo converted to elog
 
 *vdr-epgsearch-0.9.19 (03 Nov 2006)
 

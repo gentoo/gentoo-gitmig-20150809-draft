@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/vdr-image-0.2.7.ebuild,v 1.1 2007/01/02 14:41:32 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/vdr-image-0.2.7.ebuild,v 1.2 2007/01/05 16:34:10 hd_brummy Exp $
 
 inherit vdr-plugin eutils
 
@@ -55,10 +55,10 @@ pkg_postinst() {
 	vdr-plugin_pkg_postinst
 
 	echo
-	einfo "Also check /etc/vdr/plugins/image/imagesources.conf"
+	elog "Also check /etc/vdr/plugins/image/imagesources.conf"
 	echo
-	einfo "Multilanguage will automaticly supported, just take a look in"
-	einfo "/etc/vdr/imagecmds/* how it works"
-	einfo "By the moment only EN + DE"
+	elog "Multilanguage will automaticly supported, just take a look in"
+	elog "/etc/vdr/imagecmds/* how it works"
+	elog "By the moment only EN + DE"
 	echo
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.0.9-r2.ebuild,v 1.11 2006/09/07 18:37:05 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.0.9-r2.ebuild,v 1.12 2007/01/05 16:25:42 hd_brummy Exp $
 
 inherit vdr-plugin eutils
 
@@ -73,8 +73,8 @@ src_install() {
 pkg_preinst() {
 
 	if [[ -L ${ROOT}/etc/vdr/plugins/burn ]]; then
-		einfo "remove unneeded link /etc/vdr/plugins/burn"
-		einfo "from prior install"
+		elog "remove unneeded link /etc/vdr/plugins/burn"
+		elog "from prior install"
 		unlink ${ROOT}/etc/vdr/plugins/burn
 	fi
 }
@@ -83,9 +83,9 @@ pkg_postinst() {
 	vdr-plugin_pkg_postinst
 
 	echo
-	einfo "This ebuild comes only with the standard template"
-	einfo "'emerge vdr-burn-templates' for more templates"
-	einfo "To change the templates, use the vdr-image plugin"
+	elog "This ebuild comes only with the standard template"
+	elog "'emerge vdr-burn-templates' for more templates"
+	elog "To change the templates, use the vdr-image plugin"
 	echo
 }
 

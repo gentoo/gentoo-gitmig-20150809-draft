@@ -1,13 +1,13 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/vdr-weatherng-0.0.8_pre2.ebuild,v 1.5 2006/05/14 19:55:05 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/vdr-weatherng-0.0.8_pre2.ebuild,v 1.6 2007/01/05 17:05:12 hd_brummy Exp $
 
 inherit vdr-plugin
 
 MY_PV="${PV/_/-}"
 MY_P="${PN}-${MY_PV}"
 
-DESCRIPTION="Video Disk Recorder plugin to show weather for specified place"
+DESCRIPTION="VDR plugin: show weather for specified place"
 HOMEPAGE="http://beejay.vdr-developer.org/"
 SRC_URI="mirror://vdrfiles/${PN}/${MY_P}.tgz"
 
@@ -44,15 +44,15 @@ pkg_postinst() {
 	vdr-plugin_pkg_postinst
 
 	echo
-	einfo "To display the weather for your location"
-	einfo "you have to find out its ID on weather.com"
-	einfo
-	einfo "Go to http://www.weather.com and search for your city (i.e. Herne)"
-	einfo "in the list of results click on the right one and then look at its URL"
-	einfo
-	einfo "It contains a code for your city"
-	einfo "For Herne this is GMXX0056"
-	einfo
-	einfo "Now you have to enter this code in /etc/conf.d/vdr.weatherng WEATHERNG_STATIONID(x)"
+	elog "To display the weather for your location"
+	elog "you have to find out its ID on weather.com"
+	elog
+	elog "Go to http://www.weather.com and search for your city (i.e. Herne)"
+	elog "in the list of results click on the right one and then look at its URL"
+	elog
+	elog "It contains a code for your city"
+	elog "For Herne this is GMXX0056"
+	elog
+	elog "Now you have to enter this code in /etc/conf.d/vdr.weatherng WEATHERNG_STATIONID(x)"
 	echo
 }

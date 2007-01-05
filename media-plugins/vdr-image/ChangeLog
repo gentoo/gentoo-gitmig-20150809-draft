@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-image
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/ChangeLog,v 1.16 2007/01/02 14:41:32 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/ChangeLog,v 1.17 2007/01/05 16:34:10 hd_brummy Exp $
+
+  05 Jan 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-image-0.2.4.ebuild, vdr-image-0.2.6-r1.ebuild, vdr-image-0.2.7.ebuild:
+  einfo converted to elog
 
 *vdr-image-0.2.7 (02 Jan 2007)
 

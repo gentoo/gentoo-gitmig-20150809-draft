@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-setup
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/ChangeLog,v 1.11 2006/10/30 15:03:30 zzam Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/ChangeLog,v 1.12 2007/01/05 16:47:35 hd_brummy Exp $
+
+  05 Jan 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-setup-0.3.1.ebuild:
+  einfo converted to elog
 
   30 Oct 2006; Matthias Schwarzott <zzam@gentoo.org> vdr-setup-0.3.1.ebuild:
   Marked stable on x86.

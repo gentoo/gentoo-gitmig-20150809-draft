@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/vdr-mplayer-0.9.15.ebuild,v 1.5 2006/12/21 21:40:34 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/vdr-mplayer-0.9.15.ebuild,v 1.6 2007/01/05 16:38:29 hd_brummy Exp $
 
 inherit vdr-plugin eutils
 
@@ -42,13 +42,13 @@ pkg_postinst() {
 	vdr-plugin_pkg_postinst
 
 	echo
-	einfo "Edit all config's /etc/vdr/plugins/mplayer"
+	elog "Edit all config's /etc/vdr/plugins/mplayer"
 	echo
 
 	if ! has_version "media-plugins/vdr-mp3ng" ; then
-		einfo "Splitted ebuild!, no support for Audio files"
-		einfo "To play mp3, ogg and wav files,"
-		einfo "emerge media-plugins/vdr-mp3ng -pv"
+		elog "Splitted ebuild!, no support for Audio files"
+		elog "To play mp3, ogg and wav files,"
+		elog "emerge media-plugins/vdr-mp3ng -pv"
 		echo
 	fi
 }

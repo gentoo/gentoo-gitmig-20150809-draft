@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-span
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-span/ChangeLog,v 1.1 2006/09/09 21:33:08 hd_brummy Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-span/ChangeLog,v 1.2 2007/01/05 16:53:47 hd_brummy Exp $
+
+  05 Jan 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-span-0.0.3.ebuild:
+  einfo converted to elog
 
 *vdr-span-0.0.3 (09 Sep 2006)
 

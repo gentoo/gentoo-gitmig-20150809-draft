@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-lcr/vdr-lcr-0.0.8.ebuild,v 1.2 2006/11/17 12:36:41 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-lcr/vdr-lcr-0.0.8.ebuild,v 1.3 2007/01/05 16:35:45 hd_brummy Exp $
 
 inherit vdr-plugin
 
@@ -28,7 +28,7 @@ pkg_postinst() {
 	vdr-plugin_pkg_postinst
 
 	echo
-	einfo "By default, this plugin only supports the German telephone network"
-	einfo "Find more info in /usr/bin/vdr-lcr-retrieve-data.pl how to add your"
-	einfo "own Provider-Parser, or contact the maintainer"
+	elog "By default, this plugin only supports the German telephone network"
+	elog "Find more info in /usr/bin/vdr-lcr-retrieve-data.pl how to add your"
+	elog "own Provider-Parser, or contact the maintainer"
 }

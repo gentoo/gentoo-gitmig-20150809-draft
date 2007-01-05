@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pin/vdr-pin-0.0.20.ebuild,v 1.1 2006/06/12 11:14:25 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pin/vdr-pin-0.0.20.ebuild,v 1.2 2007/01/05 16:41:16 hd_brummy Exp $
 
 inherit vdr-plugin
 
@@ -19,12 +19,12 @@ pkg_setup() {
 	vdr-plugin_pkg_setup
 
 	if grep -q fskProtection /usr/include/vdr/timers.h; then
-		einfo "Patched vdr found"
+		elog "Patched vdr found"
 	else
 		echo
 		eerror "Patched VDR needed"
 		echo
-		einfo "reemerge VDR with USE=\"child-protection\" or USE=\"bigpatch\"" && \
+		elog "reemerge VDR with USE=\"child-protection\" or USE=\"bigpatch\"" && \
 		die "unpack failed, patched VDR needed"
 	fi
 }
