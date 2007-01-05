@@ -1,0 +1,13 @@
+Only in jruby-0.9.2-patched/: .build.xml.swp
+diff -ru jruby-0.9.2/build.xml jruby-0.9.2-patched/build.xml
+--- jruby-0.9.2/build.xml	2006-12-10 13:08:05.000000000 -0500
++++ jruby-0.9.2-patched/build.xml	2007-01-04 21:53:00.000000000 -0500
+@@ -314,7 +314,7 @@
+   <target name="test" depends="copy-test-files,instrument,run-junit,coverage-report"/>
+   <target name="run-junit" description="runs junit tests">
+     <taskdef name="junit" classname="org.apache.tools.ant.taskdefs.optional.junit.JUnitTask" classpath="${lib.dir}/junit.jar"/>
+-    <junit fork="yes" haltonfailure="false" dir="${basedir}" maxmemory="256M">
++    <junit fork="yes" haltonfailure="true" dir="${basedir}" maxmemory="256M">
+       <classpath>
+       	<pathelement location="${jruby.instrumented.classes.dir}" />
+         <path refid="build.classpath"/>

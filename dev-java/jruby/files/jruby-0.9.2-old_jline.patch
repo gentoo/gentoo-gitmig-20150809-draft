@@ -1,0 +1,17 @@
+diff -ru jruby-0.9.2/src/org/jruby/ext/Readline.java jruby-0.9.2-patched/src/org/jruby/ext/Readline.java
+--- jruby-0.9.2/src/org/jruby/ext/Readline.java	2006-12-10 13:07:09.000000000 -0500
++++ jruby-0.9.2-patched/src/org/jruby/ext/Readline.java	2007-01-04 20:11:04.000000000 -0500
+@@ -85,8 +85,13 @@
+     protected static void initReadline() throws IOException {
+         readline = new ConsoleReader();
+         readline.setUseHistory(false);
++
++		// disabled until jline-0.9.91 is released. see
++		// http://jira.codehaus.org/browse/JRUBY-383
++		/*
+         readline.setUsePagination(true);
+         ((CandidateListCompletionHandler) readline.getCompletionHandler()).setAlwaysIncludeNewline(false);
++		*/
+         if (currentCompletor == null) {
+             currentCompletor = new RubyFileNameCompletor();
+             readline.addCompletor(currentCompletor);
