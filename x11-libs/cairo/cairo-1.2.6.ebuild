@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.2.6.ebuild,v 1.5 2007/01/05 04:48:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.2.6.ebuild,v 1.6 2007/01/05 05:06:28 compnerd Exp $
 
 inherit eutils flag-o-matic
 
@@ -42,8 +42,9 @@ src_compile() {
 	append-flags -finline-limit=1200
 
 	econf $(use_enable X xlib) $(use_enable doc gtk-doc) $(use_enable directfb) \
-		  $(use_enable debug) $(use_enable svg) --enable-pdf \
-		  $(use_enable glitz) --enable-png --enable-freetype --enable-ps \
+		  $(use_enable svg) $(use_enable glitz) $(use_enable debug gcov) \
+		  $(use_enable debug test-surfaces) --enable-pdf --enable-png \
+		  --enable-freetype --enable-ps \
 		  || die "configure failed"
 
 	emake || die "compile failed"
