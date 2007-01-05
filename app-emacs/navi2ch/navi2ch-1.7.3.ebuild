@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/navi2ch-1.7.3.ebuild,v 1.8 2007/01/05 07:20:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/navi2ch-1.7.3.ebuild,v 1.9 2007/01/05 16:08:25 flameeyes Exp $
 
 inherit elisp
 
@@ -32,14 +32,14 @@ src_install() {
 
 pkg_postinst() {
 	elisp-site-regen
-	einfo
-	einfo "Please add to your .emacs"
-	einfo "If you use mona-font,"
-	einfo "\t(setq navi2ch-mona-enable t)"
-	einfo "If you use izonmoji-mode,"
-	einfo "\t(require 'izonmoji-mode)"
-	einfo "\t(add-hook 'navi2ch-bm-mode-hook	  'izonmoji-mode-on)"
-	einfo "\t(add-hook 'navi2ch-article-mode-hook 'izonmoji-mode-on)"
-	einfo "\t(add-hook 'navi2ch-popup-article-mode-hook 'izonmoji-mode-on)"
-	einfo
+	elog
+	elog "Please add to your .emacs"
+	elog "If you use mona-font,"
+	elog "\t(setq navi2ch-mona-enable t)"
+	elog "If you use izonmoji-mode,"
+	elog "\t(require 'izonmoji-mode)"
+	elog "\t(add-hook 'navi2ch-bm-mode-hook	  'izonmoji-mode-on)"
+	elog "\t(add-hook 'navi2ch-article-mode-hook 'izonmoji-mode-on)"
+	elog "\t(add-hook 'navi2ch-popup-article-mode-hook 'izonmoji-mode-on)"
+	elog
 }
