@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.62 2007/01/05 22:51:21 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.63 2007/01/05 22:57:24 vivo Exp $
 # kate: encoding utf-8; eol unix;
 # kate: indent-width 4; mixedindent off; remove-trailing-space on; space-indent off;
 # kate: word-wrap-column 80; word-wrap off;
@@ -174,7 +174,7 @@ bitkeeper_fetch() {
 		local options="-r+"
 		# first check out
 		einfo "bitkeeper check out start -->"
-		einfo "     repository: ${repo_uri}"
+		elog "     repository: ${repo_uri}"
 		${ebk_fetch_cmd} ${options} "${repo_uri}" ${wc_path} \
 		|| die "${EBK}: can't fetch from ${repo_uri}."
 	else
@@ -185,7 +185,7 @@ bitkeeper_fetch() {
 
 		# update working copy
 		einfo "bitkeeper update start -->"
-		einfo "     repository: ${repo_uri}"
+		elog "     repository: ${repo_uri}"
 
 		${ebk_update_cmd} "${repo_uri}" "${wc_path}" \
 		|| die "BK: can't update from ${repo_uri} to ${wc_path}."
@@ -800,20 +800,20 @@ mysql_pkg_postinst() {
 		done
 	fi
 
-	einfo "you may want to read slotting upgrade documents in the overlay"
+	#einfo "you may want to read slotting upgrade documents in the overlay"
 	if useq "pbxt" && mysql_version_is_at_least "5.1" ; then
 		# TODO tell it better ;-)
-		einfo "mysql> INSTALL PLUGIN pbxt SONAME 'libpbxt.so';"
-		einfo "CREATE TABLE t1 (c1 int, c2 text) ENGINE=pbxt;"
-		einfo "if, after that you cannot start the mysql server"
-		einfo "remove the ${MY_DATADIR}/mysql/plugin.* files, then"
-		einfo "use the mysql upgrade script to restore the table"
-		einfo " or "
-		einfo "CREATE TABLE IF NOT EXISTS plugin ("
-		einfo "  name char(64) binary DEFAULT '' NOT NULL,"
-		einfo "  dl char(128) DEFAULT '' NOT NULL,"
-		einfo "  PRIMARY KEY (name)"
-		einfo ") CHARACTER SET utf8 COLLATE utf8_bin;"
+		elog "mysql> INSTALL PLUGIN pbxt SONAME 'libpbxt.so';"
+		elog "CREATE TABLE t1 (c1 int, c2 text) ENGINE=pbxt;"
+		elog "if, after that you cannot start the mysql server"
+		elog "remove the ${MY_DATADIR}/mysql/plugin.* files, then"
+		elog "use the mysql upgrade script to restore the table"
+		elog " or "
+		elog "CREATE TABLE IF NOT EXISTS plugin ("
+		elog "  name char(64) binary DEFAULT '' NOT NULL,"
+		elog "  dl char(128) DEFAULT '' NOT NULL,"
+		elog "  PRIMARY KEY (name)"
+		elog ") CHARACTER SET utf8 COLLATE utf8_bin;"
 	fi
 	mysql_check_version_range "4.0 to 5.0.99.99" \
 	&& useq "berkdb" \
