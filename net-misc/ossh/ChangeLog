@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ossh
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ossh/ChangeLog,v 1.4 2005/04/22 20:56:51 mrness Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ossh/ChangeLog,v 1.5 2007/01/05 09:03:53 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ossh-1.5.12.ebuild:
+  Remove gnuconfig_update usage, leave it to econf.
 
   22 Apr 2005; Alin Nastac <mrness@gentoo.org> ossh-1.5.12.ebuild:
   net-misc/dante -> net-proxy/dante

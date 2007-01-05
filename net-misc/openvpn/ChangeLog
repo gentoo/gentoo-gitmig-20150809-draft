@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openvpn
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.102 2006/11/08 13:49:10 uberlord Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.103 2007/01/05 09:03:15 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> openvpn-2.0.6.ebuild,
+  openvpn-2.0.7.ebuild, openvpn-2.0.7-r1.ebuild, openvpn-2.1_rc1.ebuild,
+  openvpn-2.1_rc1-r1.ebuild:
+  Remove gnuconfig_update usage, leave it to econf.
 
 *openvpn-2.1_rc1-r1 (08 Nov 2006)
 *openvpn-2.0.7-r1 (08 Nov 2006)

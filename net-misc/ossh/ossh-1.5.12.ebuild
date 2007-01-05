@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ossh/ossh-1.5.12.ebuild,v 1.4 2005/04/22 20:56:51 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ossh/ossh-1.5.12.ebuild,v 1.5 2007/01/05 09:03:53 flameeyes Exp $
 
-inherit gnuconfig flag-o-matic
+inherit flag-o-matic
 
 DESCRIPTION="another SSH implementation"
 HOMEPAGE="ftp://ftp.pdc.kth.se/pub/krypto/ossh/"
@@ -23,7 +23,6 @@ PROVIDE="virtual/ssh"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	gnuconfig_update
 	sed -i '/^LIBS/s:$: -lcrypto:' Makefile.in
 	sed -i 's:des\.h:openssl/des.h:' cipher.h
 }

@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/selfdhcp/selfdhcp-0.2a.ebuild,v 1.3 2006/02/20 22:18:08 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/selfdhcp/selfdhcp-0.2a.ebuild,v 1.4 2007/01/05 09:04:35 flameeyes Exp $
 
-inherit gnuconfig flag-o-matic eutils
+inherit flag-o-matic eutils
 
 DESCRIPTION="a small stealth network autoconfigure software."
 SRC_URI="mirror://sourceforge/selfdhcp/${P}.tar.bz2"
@@ -18,7 +18,6 @@ DEPEND="dev-libs/popt
 		net-libs/libpcap"
 
 src_compile() {
-	gnuconfig_update
 	econf --sysconfdir=/etc --sbindir=/sbin || die
 	emake || die
 }

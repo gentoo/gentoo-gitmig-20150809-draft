@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/selfdhcp
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/selfdhcp/ChangeLog,v 1.5 2006/02/20 22:18:08 jokey Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/selfdhcp/ChangeLog,v 1.6 2007/01/05 09:04:35 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> selfdhcp-0.2a.ebuild:
+  Remove gnuconfig_update usage, leave it to econf.
 
   20 Feb 2006; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
   selfdhcp-0.2a.ebuild:
