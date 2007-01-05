@@ -3,7 +3,6 @@
 <pkgmetadata>
 	<herd>wxwindows</herd>
 	<maintainer>
-		<email>pythonhead@gentoo.org</email>
-		<name>Rob Cakebread</name>
+		<email>wxwindows@gentoo.org</email>
 	</maintainer>
 </pkgmetadata>
