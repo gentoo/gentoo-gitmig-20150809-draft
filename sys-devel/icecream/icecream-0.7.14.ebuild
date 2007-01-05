@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/icecream-0.7.14.ebuild,v 1.2 2006/11/22 19:24:16 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/icecream-0.7.14.ebuild,v 1.3 2007/01/05 22:06:55 dberkholz Exp $
 
 inherit autotools eutils flag-o-matic
 
 MY_P="icecc-${PV}"
 DESCRIPTION="icecc is a program for distributed compiling of C(++) code across several machines based on ideas and code by distcc."
-HOMEPAGE="http://www.opensuse.org/icecream"
+HOMEPAGE="http://en.opensuse.org/Icecream"
 SRC_URI="ftp://ftp.suse.com/pub/projects/icecream/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
