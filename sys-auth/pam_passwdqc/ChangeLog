@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_passwdqc
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_passwdqc/ChangeLog,v 1.4 2006/05/11 04:53:55 chriswhite Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_passwdqc/ChangeLog,v 1.5 2007/01/05 20:49:18 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  pam_passwdqc-0.7.5.ebuild, pam_passwdqc-1.0.2.ebuild:
+  Convert to use elog.
 
   11 May 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
   Japanese metadata.xml translation for bug #132587. Thanks to Yoshino-san for

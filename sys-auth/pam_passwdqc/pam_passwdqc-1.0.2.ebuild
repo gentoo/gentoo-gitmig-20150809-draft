@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_passwdqc/pam_passwdqc-1.0.2.ebuild,v 1.1 2005/07/02 14:30:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_passwdqc/pam_passwdqc-1.0.2.ebuild,v 1.2 2007/01/05 20:49:18 flameeyes Exp $
 
 inherit pam
 
@@ -25,9 +25,9 @@ src_install() {
 	dodoc README
 
 	echo
-	einfo "To activate pam_passwdqc use pam_passwdqc.so instead"
-	einfo "of pam_cracklib.so in /etc/pam.d/system-auth."
-	einfo "Also, if you want to change the parameters, read up"
-	einfo "on the man page."
+	elog "To activate pam_passwdqc use pam_passwdqc.so instead"
+	elog "of pam_cracklib.so in /etc/pam.d/system-auth."
+	elog "Also, if you want to change the parameters, read up"
+	elog "on the man page."
 	echo
 }
