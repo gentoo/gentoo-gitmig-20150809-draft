@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/cyrus-imspd
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/ChangeLog,v 1.9 2005/05/26 12:20:17 ferdy Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/ChangeLog,v 1.10 2007/01/05 07:11:30 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  cyrus-imspd-1.7b.ebuild, cyrus-imspd-1.7b-r1.ebuild,
+  cyrus-imspd-1.8.ebuild:
+  Remove gnuconfig_update usage, leave it to portage.
 
 *cyrus-imspd-1.8 (26 May 2005)
 *cyrus-imspd-1.7b-r1 (26 May 2005)

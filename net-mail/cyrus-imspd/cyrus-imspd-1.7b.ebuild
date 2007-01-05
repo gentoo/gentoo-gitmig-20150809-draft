@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.7b.ebuild,v 1.9 2005/05/26 12:20:17 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.7b.ebuild,v 1.10 2007/01/05 07:11:30 flameeyes Exp $
 
-inherit eutils gnuconfig ssl-cert
+inherit eutils ssl-cert
 
 DESCRIPTION="Internet Message Support Protocol (IMSP) server."
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/"
@@ -24,8 +24,7 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	>=sys-devel/autoconf-2.58
 	sys-devel/automake
-	sys-devel/libtool
-	sys-devel/gnuconfig"
+	sys-devel/libtool"
 
 S="${WORKDIR}/${PN}-v${PV}"
 
@@ -43,7 +42,6 @@ src_unpack() {
 
 	export WANT_AUTOCONF=2.5
 	touch config.{guess,sub}
-	gnuconfig_update
 
 	# Recreate configure.
 	ebegin "Recreating configure"
