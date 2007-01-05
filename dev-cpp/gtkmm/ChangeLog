@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/gtkmm
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.103 2006/11/25 14:43:10 kloeri Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.104 2007/01/05 13:14:26 remi Exp $
+
+*gtkmm-2.10.6 (05 Jan 2007)
+
+  05 Jan 2007; Remi Cardona <remi@gentoo.org> +gtkmm-2.10.6.ebuild:
+  bumping gtkmm to 2.10.6
 
   25 Nov 2006; Bryan Østergaard <kloeri@gentoo.org> gtkmm-2.10.2-r1.ebuild:
   Add ~alpha keyword.
