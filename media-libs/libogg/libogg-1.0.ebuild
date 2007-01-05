@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.0.ebuild,v 1.20 2006/03/06 16:13:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.0.ebuild,v 1.21 2007/01/05 17:14:17 flameeyes Exp $
 
 DESCRIPTION="the Ogg media file format library"
 HOMEPAGE="http://www.xiph.org/ogg/vorbis/index.html"
@@ -30,12 +30,12 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Note the 1.0 version of libogg has been installed"
-	einfo "Applications that used pre-1.0 ogg libraries will"
-	einfo "need to be recompiled for the new version."
-	einfo "Now that the vorbis folks have finalized the API"
-	einfo "this should be the last time for a while that"
-	einfo "recompilation is needed for these things."
-	einfo
+	elog
+	elog "Note the 1.0 version of libogg has been installed"
+	elog "Applications that used pre-1.0 ogg libraries will"
+	elog "need to be recompiled for the new version."
+	elog "Now that the vorbis folks have finalized the API"
+	elog "this should be the last time for a while that"
+	elog "recompilation is needed for these things."
+	elog
 }

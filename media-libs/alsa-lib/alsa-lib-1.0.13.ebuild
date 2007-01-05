@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.13.ebuild,v 1.11 2007/01/03 02:48:24 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.13.ebuild,v 1.12 2007/01/05 17:12:48 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.9"
@@ -66,8 +66,8 @@ pkg_postinst() {
 	ewarn "using ALSA output crash."
 	ewarn "Note that dmix output is enabled by default on the 'default' device"
 	ewarn "since ALSA 1.0.9."
-	einfo ""
-	einfo "Please try media-sound/alsa-driver before filing bugs about unstable"
-	einfo "or missing output with in-kernel drivers. Misaligned versions of"
-	einfo "alsa-lib and drivers used can cause problems."
+	elog ""
+	elog "Please try media-sound/alsa-driver before filing bugs about unstable"
+	elog "or missing output with in-kernel drivers. Misaligned versions of"
+	elog "alsa-lib and drivers used can cause problems."
 }

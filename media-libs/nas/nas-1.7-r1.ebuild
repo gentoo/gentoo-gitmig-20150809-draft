@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.7-r1.ebuild,v 1.14 2006/09/04 04:26:26 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.7-r1.ebuild,v 1.15 2007/01/05 17:16:34 flameeyes Exp $
 
 inherit eutils toolchain-funcs
 
@@ -65,8 +65,8 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "To enable NAS on boot you will have to add it to the"
-	einfo "default profile, issue the following command as root to do so."
-	einfo ""
-	einfo "rc-update add nas default"
+	elog "To enable NAS on boot you will have to add it to the"
+	elog "default profile, issue the following command as root to do so."
+	elog ""
+	elog "rc-update add nas default"
 }
