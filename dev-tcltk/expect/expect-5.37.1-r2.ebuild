@@ -1,8 +1,7 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.37.1-r2.ebuild,v 1.10 2005/01/31 18:15:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.37.1-r2.ebuild,v 1.11 2007/01/05 07:46:35 flameeyes Exp $
 
-inherit gnuconfig
 
 #remove the trailing ".0" from the tarball version
 NON_MICRO_V=${P%.[0-9]}
@@ -58,10 +57,6 @@ HERE
 }
 
 src_compile() {
-	if [ "${ARCH}" == "amd64" ]; then
-		gnuconfig_update
-	fi
-
 	local myconf
 	local tclv
 	local tkv
@@ -70,7 +65,7 @@ src_compile() {
 	# version number.
 	tclv=$(grep TCL_VER /usr/include/tcl.h | sed 's/^.*"\(.*\)".*/\1/')
 	#tkv isn't really needed, included for symmetry and the future
-	tkv=$( grep  TK_VER /usr/include/tk.h  | sed 's/^.*"\(.*\)".*/\1/')
+	tkv=$( grep	 TK_VER /usr/include/tk.h  | sed 's/^.*"\(.*\)".*/\1/')
 
 	#configure needs to find the files tclConfig.sh and tclInt.h
 	myconf="--with-tcl=/usr/lib --with-tclinclude=/usr/lib/tcl$tclv/include/generic"

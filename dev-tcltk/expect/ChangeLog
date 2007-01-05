@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/expect
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.41 2006/10/18 09:47:57 uberlord Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.42 2007/01/05 07:46:35 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  expect-5.37.1-r2.ebuild, expect-5.40.0.ebuild, expect-5.40.0-r1.ebuild,
+  expect-5.42.1.ebuild, expect-5.42.1-r1.ebuild, expect-5.43.0.ebuild:
+  Remove gnuconfig_update usage, leave it to econf.
 
   18 Oct 2006; Roy Marples <uberlord@gentoo.org> expect-5.43.0.ebuild:
   Added ~sparc-fbsd keyword.

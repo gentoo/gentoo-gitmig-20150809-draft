@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.43.0.ebuild,v 1.4 2006/10/18 09:47:57 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.43.0.ebuild,v 1.5 2007/01/05 07:46:35 flameeyes Exp $
 
-inherit eutils gnuconfig
+inherit eutils
 
 DESCRIPTION="tool for automating interactive applications"
 HOMEPAGE="http://expect.nist.gov/"
@@ -38,7 +38,6 @@ src_unpack() {
 		-e '/^install:/s/install-libraries //' \
 		-e 's/^SCRIPTS_MANPAGES = /_&/' \
 		Makefile.in
-	gnuconfig_update
 	WANT_AUTOCONF=2.1 autoconf
 }
 
@@ -51,7 +50,7 @@ src_compile() {
 	# version number.
 	tclv=$(grep TCL_VER /usr/include/tcl.h | sed 's/^.*"\(.*\)".*/\1/')
 	#tkv isn't really needed, included for symmetry and the future
-	#tkv=$(grep  TK_VER /usr/include/tk.h  | sed 's/^.*"\(.*\)".*/\1/')
+	#tkv=$(grep	 TK_VER /usr/include/tk.h  | sed 's/^.*"\(.*\)".*/\1/')
 
 	#configure needs to find the files tclConfig.sh and tclInt.h
 	myconf="--with-tcl=/usr/$(get_libdir) --with-tclinclude=/usr/$(get_libdir)/tcl${tclv}/include/generic"
@@ -71,7 +70,7 @@ src_compile() {
 }
 
 src_test() {
-	# we need dejagnu to do tests ... but dejagnu needs 
+	# we need dejagnu to do tests ... but dejagnu needs
 	# expect ... so don't do tests unless we have dejagnu
 	type -p runtest || return 0
 	make check || die "make check failed"
@@ -90,11 +89,11 @@ src_install() {
 	if use doc ; then
 		docinto examples
 		local scripts=$(make -qp | \
-		                sed -e 's/^SCRIPTS = //' -et -ed | head -n1)
+						sed -e 's/^SCRIPTS = //' -et -ed | head -n1)
 		exeinto /usr/share/doc/${PF}/examples
 		doexe ${scripts}
 		local scripts_manpages=$(make -qp | \
-		       sed -e 's/^_SCRIPTS_MANPAGES = //' -et -ed | head -n1)
+			   sed -e 's/^_SCRIPTS_MANPAGES = //' -et -ed | head -n1)
 		for m in ${scripts_manpages}; do
 			dodoc example/${m}.man
 		done
