@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xfc/xfc-4.3.0.ebuild,v 1.1 2005/03/02 21:49:42 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xfc/xfc-4.3.0.ebuild,v 1.2 2007/01/05 04:53:46 flameeyes Exp $
 
 DESCRIPTION="C++ bindings for gtk+ related to Xfce"
 HOMEPAGE="http://xfc.xfce.org"
@@ -20,7 +20,6 @@ RDEPEND=">=dev-libs/glib-2.4.0
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-inherit debug
 
 src_compile() {
 	local myconf
