@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/mt-st
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/ChangeLog,v 1.17 2005/10/16 06:20:42 kumba Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/ChangeLog,v 1.18 2007/01/05 23:28:52 kugelfang Exp $
+
+  05 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -mt-st-0.6.ebuild,
+  -mt-st-0.7.ebuild:
+  -m QA: Removed unused versions.
 
   16 Oct 2005; Joshua Kinard <kumba@gentoo.org> mt-st-0.7-r1.ebuild:
   Mark stable on mips (skipping ~, needed for livecd)
