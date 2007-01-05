@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/gaim-otr
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-otr/ChangeLog,v 1.14 2006/10/21 13:29:43 gothgirl Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-otr/ChangeLog,v 1.15 2007/01/05 04:40:40 dirtyepic Exp $
+
+  05 Jan 2007; Ryan Hill <dirtyepic@gentoo.org> gaim-otr-1.0.3.ebuild,
+  gaim-otr-2.0.0.ebuild, gaim-otr-2.0.1.ebuild, gaim-otr-2.0.2.ebuild,
+  gaim-otr-3.0.0.ebuild, gaim-otr-3.0.0-r1.ebuild, gaim-otr-3.0.0-r2.ebuild:
+  Remove debug.eclass usage for bug #160122.
 
 *gaim-otr-3.0.0-r2 (21 Oct 2006)
 

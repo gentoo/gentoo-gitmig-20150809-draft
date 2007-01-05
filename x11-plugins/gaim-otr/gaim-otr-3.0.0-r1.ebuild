@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-otr/gaim-otr-3.0.0-r1.ebuild,v 1.1 2006/06/14 13:04:16 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-otr/gaim-otr-3.0.0-r1.ebuild,v 1.2 2007/01/05 04:40:40 dirtyepic Exp $
 
-inherit flag-o-matic eutils debug
+inherit flag-o-matic eutils
 
 DESCRIPTION="(OTR) Messaging allows you to have private conversations over instant messaging"
 HOMEPAGE="http://www.cypherpunks.ca/otr/"
