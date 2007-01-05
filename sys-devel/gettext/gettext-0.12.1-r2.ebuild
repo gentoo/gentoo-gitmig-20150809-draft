@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1-r2.ebuild,v 1.19 2006/09/28 06:00:05 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1-r2.ebuild,v 1.20 2007/01/05 09:15:35 flameeyes Exp $
 
-inherit eutils gnuconfig toolchain-funcs libtool
+inherit eutils toolchain-funcs libtool
 
 DESCRIPTION="GNU locale utilities"
 HOMEPAGE="http://www.gnu.org/software/gettext/gettext.html"
@@ -21,7 +21,6 @@ src_unpack() {
 	epunt_cxx
 	epatch ${FILESDIR}/${P}-tempfile.patch #66355
 	use ppc-macos || elibtoolize --reverse-deps
-	gnuconfig_update
 }
 
 src_compile() {

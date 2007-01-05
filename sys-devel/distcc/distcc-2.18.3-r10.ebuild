@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r10.ebuild,v 1.5 2006/11/17 16:46:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r10.ebuild,v 1.6 2007/01/05 09:14:13 flameeyes Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
 
-inherit eutils flag-o-matic gnuconfig toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs
 
 PATCHLEVEL="2.18"
 
@@ -48,7 +48,6 @@ src_unpack() {
 	# See bug #75420 for more multilib stuff
 	epatch ${FILESDIR}/distcc-gentoo-multilib-r1.patch
 	einfo "Please report to bug #75420 success or failure of this patch."
-	gnuconfig_update
 }
 
 src_compile() {

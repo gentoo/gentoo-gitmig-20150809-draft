@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.16-r3.ebuild,v 1.5 2006/08/14 16:53:22 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.16-r3.ebuild,v 1.6 2007/01/05 09:14:13 flameeyes Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
 
-inherit eutils flag-o-matic gnuconfig toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs
 
 PATCHLEVEL="2.17"
 
@@ -40,17 +40,11 @@ RDEPEND="
 	) )
 	selinux? ( sec-policy/selinux-distcc )"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	gnuconfig_update
-}
-
 src_compile() {
 	local myconf="--with-included-popt "
 	#Here we use the built in parse-options package. saves a dependancy
 
-	#not taking any chances here, guessing which takes precedence in the 
+	#not taking any chances here, guessing which takes precedence in the
 	#configure script, so we'll just make the distinction here:
 	#gnome takes precedence over gtk if both are specified (gnome pulls
 	#in gtk anyways...)
@@ -138,7 +132,7 @@ pkg_postinst() {
 		#  but for now, but user must finsh things off
 		ewarn "*** Installation is not complete ***"
 		ewarn "You must run the following as root:"
-		ewarn "  /usr/bin/distcc-config --install"
+		ewarn "	 /usr/bin/distcc-config --install"
 		ewarn "after booting or chrooting into ${ROOT}"
 	fi
 	einfo "Setting permissions on ${ROOT}var/run/distccd"
@@ -154,8 +148,8 @@ pkg_postinst() {
 	ewarn "please report them to our Bugzilla at bugs.gentoo.org"
 	echo ""
 	einfo "To use the distccmon programs with Gentoo you should use this command:"
-	einfo "      DISTCC_DIR=/var/tmp/portage/.distcc distccmon-text N"
-	use gnome || use gtk && einfo "Or:   DISTCC_DIR=/var/tmp/portage/.distcc distccmon-gnome"
+	einfo "		 DISTCC_DIR=/var/tmp/portage/.distcc distccmon-text N"
+	use gnome || use gtk && einfo "Or:	 DISTCC_DIR=/var/tmp/portage/.distcc distccmon-gnome"
 
 	ewarn "***SECURITY NOTICE***"
 	ewarn "If you are upgrading distcc please make sure to run etc-update to"
