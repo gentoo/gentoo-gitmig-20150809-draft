@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.4_pre20061231.ebuild,v 1.1 2006/12/31 13:09:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.4_pre20061231.ebuild,v 1.2 2007/01/05 19:58:22 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -62,7 +62,7 @@ RDEPEND="
 	pulseaudio? ( media-sound/pulseaudio )
 	truetype? ( =media-libs/freetype-2* media-libs/fontconfig )
 	virtual/libiconv
-	wavpack? ( media-sound/wavpack )
+	wavpack? ( >=media-sound/wavpack-4.31 )
 	!=media-libs/xine-lib-0.9.13*"
 
 DEPEND="${RDEPEND}
