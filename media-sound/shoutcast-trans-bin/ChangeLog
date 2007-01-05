@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/shoutcast-trans-bin
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-trans-bin/ChangeLog,v 1.10 2006/03/03 14:01:44 blubb Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-trans-bin/ChangeLog,v 1.11 2007/01/05 17:58:07 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  shoutcast-trans-bin-0.4.0-r1.ebuild:
+  Convert to use elog. Remove src_compile. Don't use DEPEND as it's a binary
+  package.
 
   03 Mar 2006; Simon Stelling <blubb@gentoo.org>
   shoutcast-trans-bin-0.4.0-r1.ebuild:

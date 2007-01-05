@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-trans-bin/shoutcast-trans-bin-0.4.0-r1.ebuild,v 1.4 2006/03/03 14:01:44 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-trans-bin/shoutcast-trans-bin-0.4.0-r1.ebuild,v 1.5 2007/01/05 17:58:07 flameeyes Exp $
 
 IUSE=""
 
@@ -14,12 +14,8 @@ SRC_URI="http://www.shoutcast.com/downloads/sc_trans_posix_${SVER}.tgz"
 LICENSE="shoutcast"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
-DEPEND="media-sound/shoutcast-server-bin"
+RDEPEND="media-sound/shoutcast-server-bin"
 S="${WORKDIR}/sc_trans_${SVER}"
-
-src_compile() {
-	einfo "Nothing to compile."
-}
 
 src_install() {
 	# install executable
@@ -51,12 +47,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Shoutcast-trans can be started via the init.d script provided."
-	einfo "start it with /etc/init.d/shoutcast_trans"
-	einfo
-	einfo "The configuration file is /etc/shoutcast/sc_trans.conf."
-	einfo "Please have a look at the playlist file setting."
-	einfo "A sample playlist file can be found under /usr/share/doc/$P."
-	einfo "It also contains instructions how to build a playlist."
-	einfo "A directory /opt/shoutcast/playlists has been created for storing playlists."
+	elog "Shoutcast-trans can be started via the init.d script provided."
+	elog "start it with /etc/init.d/shoutcast_trans"
+	elog
+	elog "The configuration file is /etc/shoutcast/sc_trans.conf."
+	elog "Please have a look at the playlist file setting."
+	elog "A sample playlist file can be found under /usr/share/doc/$P."
+	elog "It also contains instructions how to build a playlist."
+	elog "A directory /opt/shoutcast/playlists has been created for storing playlists."
 }
