@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.1.ebuild,v 1.13 2006/11/07 22:33:03 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.1.ebuild,v 1.14 2007/01/05 09:08:46 flameeyes Exp $
 
-inherit eutils libtool gnuconfig distutils toolchain-funcs
+inherit eutils libtool distutils toolchain-funcs
 
 IUSE="jpeg png geos gif jpeg2k netcdf hdf hdf5 python postgres \
 	odbc sqlite ogdi fits gml doc debug"
@@ -47,7 +47,6 @@ src_unpack() {
 	    epatch ${FILESDIR}/${PN}-gcc4.patch || die "gcc4 patch failed"
 	fi
 	elibtoolize --patch-only
-	gnuconfig_update
 	if useq netcdf && useq hdf; then
 	    einfo	"Checking is HDF4 compiled with szip..."
 	    if built_with_use sci-libs/hdf szip ; then
