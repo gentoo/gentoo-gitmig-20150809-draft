@@ -1,14 +1,14 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.20-r2.ebuild,v 1.11 2006/07/16 21:52:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.20-r2.ebuild,v 1.12 2007/01/05 09:10:55 flameeyes Exp $
 
-inherit eutils flag-o-matic gnuconfig toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs
 
 SELINUX_PATCH="findutils-4.1.20-selinux.diff"
 
 # Note this doesn't point to gnu.org because alpha.gnu.org has quit
 # supplying the development versions.  If it comes back in the future
-# then we might want to redirect the link.  See bug 18729
+# then we might want to redirect the link.	See bug 18729
 DESCRIPTION="GNU utilities to find files"
 HOMEPAGE="http://www.gnu.org/software/findutils/findutils.html"
 SRC_URI="ftp://alpha.gnu.org/gnu/${PN}/${P}.tar.gz
@@ -29,11 +29,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# Detect new systems properly
-	gnuconfig_update
-
 	# Don't build or install locate because it conflicts with slocate,
-	# which is a secure version of locate.  See bug 18729
+	# which is a secure version of locate.	See bug 18729
 	sed -i '/^SUBDIRS/s/locate//' Makefile.in
 
 	#get a bigger environment as ebuild.sh is growing large
