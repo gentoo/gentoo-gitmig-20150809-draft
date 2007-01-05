@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kdevelop
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.130 2006/11/03 19:12:24 caleb Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.131 2007/01/05 16:52:40 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> kdevelop-3.3.2.ebuild,
+  kdevelop-3.3.3.ebuild, kdevelop-3.3.4.ebuild, kdevelop-3.3.5.ebuild,
+  kdevelop-3.3.91.ebuild, kdevelop-3.3.92.ebuild:
+  Convert to use elog.
 
 *kdevelop-3.3.92 (03 Nov 2006)
 

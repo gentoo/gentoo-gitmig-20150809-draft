@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-0.11.0.ebuild,v 1.2 2006/11/12 00:26:36 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-0.11.0.ebuild,v 1.3 2007/01/05 16:53:17 flameeyes Exp $
 
 inherit eutils kde-functions toolchain-funcs
 
@@ -47,7 +47,7 @@ src_install() {
 pkg_postinst() {
 	if ! has_version 'kde-base/kompare'; then
 		echo
-		einfo "For nice graphical diffs, install kde-base/kompare."
+		elog "For nice graphical diffs, install kde-base/kompare."
 		echo
 	fi
 }
