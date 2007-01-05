@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/suspend2-userui/suspend2-userui-0.6.4-r1.ebuild,v 1.1 2006/06/13 18:00:18 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/suspend2-userui/suspend2-userui-0.6.4-r1.ebuild,v 1.2 2007/01/05 18:20:20 alonbl Exp $
 
 inherit toolchain-funcs eutils
 
@@ -24,8 +24,9 @@ DEPEND="virtual/libc
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/${P}-remove-debug.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-remove-debug.patch"
+	epatch "${FILESDIR}/${P}-glibc.patch"
 }
 
 src_compile() {

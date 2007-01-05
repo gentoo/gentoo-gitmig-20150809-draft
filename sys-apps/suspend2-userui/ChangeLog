@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/suspend2-userui
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/suspend2-userui/ChangeLog,v 1.16 2006/12/16 21:29:50 alonbl Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/suspend2-userui/ChangeLog,v 1.17 2007/01/05 18:20:20 alonbl Exp $
+
+  05 Jan 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/suspend2-userui-0.6.4-glibc.patch, suspend2-userui-0.6.4-r1.ebuild:
+  glibc-2.5 issue, bug#160278, thanks to Paul Moore
 
   16 Dec 2006; Alon Bar-Lev <alonbl@gentoo.org> metadata.xml:
   Modify maintainer

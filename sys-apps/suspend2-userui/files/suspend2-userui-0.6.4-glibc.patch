@@ -1,0 +1,15 @@
+--- suspend2-userui-0.6.4/userui.h.orig	2007-01-05 10:43:40.000000000 -0500
++++ suspend2-userui-0.6.4/userui.h	2007-01-05 10:44:11.000000000 -0500
+@@ -124,8 +124,11 @@ static __inline__ int generic_fls(int x)
+ /*
+  * Work around random glibc bugs where getpid() caches an invalid pid.
+  */
++#ifdef _syscall0
+ #define __NR_xgetpid __NR_getpid
+ static inline _syscall0(pid_t, xgetpid);
+-
++#else
++static inline pid_t xgetpid(void) { return syscall(__NR_getpid); }
++#endif
+ 
+ #endif /* _USERUI_H_ */
