@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r4.ebuild,v 1.7 2006/12/31 01:06:02 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r4.ebuild,v 1.8 2007/01/05 20:28:21 mrness Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -113,7 +113,7 @@ src_compile() {
 	export AR="$(tc-getAR)"
 	append-ldflags $(bindnow-flags)
 	econf || die "configuration failed"
-	emake COPTS="${CFLAGS}" || die "compile failed"
+	emake COPTS="${CFLAGS} -D_GNU_SOURCE" || die "compile failed"
 
 	#build pppgetpass
 	cd contrib/pppgetpass
