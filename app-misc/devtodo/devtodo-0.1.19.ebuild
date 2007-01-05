@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.19.ebuild,v 1.9 2005/08/15 14:14:06 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.19.ebuild,v 1.10 2007/01/05 07:21:06 flameeyes Exp $
 
-inherit eutils gnuconfig bash-completion flag-o-matic
+inherit eutils bash-completion flag-o-matic
 
 DESCRIPTION="A nice command line todo list for developers"
 HOMEPAGE="http://swapoff.org/DevTodo"
@@ -22,7 +22,6 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-0.1.18-gcc4.diff
 	epatch ${FILESDIR}/${P}-gentoo.diff
-	gnuconfig_update
 }
 
 src_compile() {
