@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freealut/freealut-1.0.1.ebuild,v 1.10 2006/12/06 20:37:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freealut/freealut-1.0.1.ebuild,v 1.11 2007/01/05 07:08:26 flameeyes Exp $
 
-inherit eutils gnuconfig
+inherit eutils
 
 DESCRIPTION="The OpenAL Utility Toolkit"
 SRC_URI="http://www.openal.org/openal_webstf/downloads/${P}.tar.gz"
