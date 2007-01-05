@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ssldump
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ssldump/ChangeLog,v 1.14 2006/09/24 07:40:00 pva Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ssldump/ChangeLog,v 1.15 2007/01/05 09:55:15 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ssldump-0.9.ebuild:
+  Remove gnuconfig_update usage, leave it to econf.
 
   24 Sep 2006; Peter Volkov <pva@gentoo.org>
   +files/ssldump-0.9-openssl-0.9.8.compile-fix.patch, ssldump-0.9.ebuild:
