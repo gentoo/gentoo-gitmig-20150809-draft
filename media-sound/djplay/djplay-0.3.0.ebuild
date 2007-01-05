@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/djplay/djplay-0.3.0.ebuild,v 1.4 2006/10/17 20:34:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/djplay/djplay-0.3.0.ebuild,v 1.5 2007/01/05 20:55:13 aballier Exp $
 
 IUSE=""
 
@@ -25,7 +25,9 @@ DEPEND="media-libs/alsa-lib
 	dev-libs/libxml2
 	media-plugins/tap-plugins
 	media-plugins/swh-plugins
-	media-sound/jack-audio-connection-kit"
+	media-sound/jack-audio-connection-kit
+	media-libs/libogg
+	media-libs/libvorbis"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/djplay
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/djplay/ChangeLog,v 1.4 2006/10/17 20:34:40 aballier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/djplay/ChangeLog,v 1.5 2007/01/05 20:55:13 aballier Exp $
+
+  05 Jan 2007; Alexis Ballier <aballier@gentoo.org> djplay-0.3.0.ebuild:
+  Adding libogg and libvorbis missing deps, bug #159722, thanks to Steven De
+  Bock <steven_debock@yahoo.com>
 
   17 Oct 2006; Alexis Ballier <aballier@gentoo.org> djplay-0.3.0.ebuild:
   Adding glib-1.2 dependency, bug #147768
