@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/logwatch
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.38 2006/11/10 00:21:17 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.39 2007/01/05 07:53:29 vapier Exp $
+
+*logwatch-7.3.2 (05 Jan 2007)
+
+  05 Jan 2007; Mike Frysinger <vapier@gentoo.org> +logwatch-7.3.2.ebuild:
+  Version bump #159898 by Daniel Webert.
 
   10 Nov 2006; Mike Frysinger <vapier@gentoo.org> logwatch-7.3-r1.ebuild:
   Try not to install two logwatch cron files #145361 by Brian Wood.
