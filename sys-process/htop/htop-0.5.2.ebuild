@@ -1,9 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-0.5.2.ebuild,v 1.7 2005/08/08 07:52:25 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-0.5.2.ebuild,v 1.8 2007/01/05 04:44:58 flameeyes Exp $
 
-inherit debug flag-o-matic
+inherit flag-o-matic
 
+IUSE="debug"
 DESCRIPTION="interactive process viewer"
 HOMEPAGE="http://htop.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
