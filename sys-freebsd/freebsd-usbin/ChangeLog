@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-usbin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.37 2007/01/03 16:02:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.38 2007/01/05 21:32:40 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/SA-06-15-ypserv.patch, -files/freebsd-usbin-nowrap.patch,
+  -freebsd-usbin-6.1-r1.ebuild:
+  Remove 6.1 ebuild.
 
   03 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   +files/freebsd-usbin-6.2_rc2-libedit-netbsd.patch,

@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.42 2007/01/05 20:52:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.43 2007/01/05 21:32:08 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/SA-06-02-ee.patch, -files/freebsd-ubin-6.1-rpcgen-gcc41.patch,
+  -freebsd-ubin-6.1.ebuild, -freebsd-ubin-6.1-r1.ebuild:
+  Remove 6.1 ebuild.
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   freebsd-ubin-6.2_rc2.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-sbin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.30 2007/01/04 19:06:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.31 2007/01/05 21:30:01 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -freebsd-sbin-6.1.ebuild:
+  Remove 6.1 ebuild.
 
   04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   freebsd-sbin-6.2_rc2.ebuild:

@@ -1,6 +1,15 @@
 # ChangeLog for sys-freebsd/freebsd-mk-defs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/ChangeLog,v 1.28 2007/01/05 20:51:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/ChangeLog,v 1.29 2007/01/05 21:27:51 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/freebsd-mk-defs-6.0-gentoo.patch,
+  -files/freebsd-mk-defs-6.0-nowerror.patch,
+  -files/freebsd-mk-defs-6.0-strip.patch,
+  -files/freebsd-mk-defs-6.1-gentoo.patch,
+  -files/freebsd-mk-defs-6.2-gentoo.patch,
+  -files/freebsd-mk-defs-flex.patch, -freebsd-mk-defs-6.1-r1.ebuild:
+  Remove 6.1 ebuild.
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   freebsd-mk-defs-6.2_rc2.ebuild:
