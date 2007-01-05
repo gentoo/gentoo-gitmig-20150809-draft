@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.6.13-r1.ebuild,v 1.7 2006/10/17 20:32:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.6.13-r1.ebuild,v 1.8 2007/01/05 20:01:58 robbat2 Exp $
 
 inherit eutils libtool
 
@@ -23,6 +23,7 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/libexif-0.6.13-doxygen.patch
+	epatch ${FILESDIR}/libexif-0.6.13-parallel-build.patch
 	epatch "${FILESDIR}/${P}-pkgconfig.patch"
 
 	# The libexif hackers made a goof on the soname versioning.

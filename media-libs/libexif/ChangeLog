@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libexif
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.60 2006/10/17 20:32:37 kloeri Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.61 2007/01/05 20:01:58 robbat2 Exp $
+
+  05 Jan 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +files/libexif-0.6.13-parallel-build.patch, libexif-0.6.13-r1.ebuild:
+  Compile fix for parallel make.
 
   17 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   libexif-0.6.13-r1.ebuild:
