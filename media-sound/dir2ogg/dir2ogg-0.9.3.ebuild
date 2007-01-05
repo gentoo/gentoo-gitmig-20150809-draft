@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/dir2ogg-0.9.3.ebuild,v 1.1 2006/11/25 12:11:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/dir2ogg-0.9.3.ebuild,v 1.2 2007/01/05 17:28:17 flameeyes Exp $
 
 
 DESCRIPTION="Converts Mp3, M4a, Wma, and Wav files to Ogg Vorbis format."
@@ -19,10 +19,6 @@ RDEPEND="virtual/python
 	media-sound/mpg123
 	aac? ( media-libs/faad2 )
 	wma? ( media-video/mplayer )"
-
-src_compile() {
-	einfo "Nothing to compile"
-}
 
 src_install() {
 	dobin dir2ogg
