@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r8.ebuild,v 1.20 2006/11/23 20:09:56 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r8.ebuild,v 1.21 2007/01/05 20:57:33 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -351,12 +351,12 @@ EOF
 
 pkg_postinst() {
 	echo
-	einfo "After a rebuild of Qt, it can happen that Qt plugins (such as Qt/KDE styles,"
-	einfo "or widgets for the Qt designer) are no longer recognized.  If this situation"
-	einfo "occurs you should recompile the packages providing these plugins,"
-	einfo "and you should also make sure that Qt and its plugins were compiled with the"
-	einfo "same version of gcc.  Packages that may need to be rebuilt are, for instance,"
-	einfo "kde-base/kdelibs, kde-base/kdeartwork and kde-base/kdeartwork-styles."
-	einfo "See http://doc.trolltech.com/3.3/plugins-howto.html for more infos."
+	elog "After a rebuild of Qt, it can happen that Qt plugins (such as Qt/KDE styles,"
+	elog "or widgets for the Qt designer) are no longer recognized.  If this situation"
+	elog "occurs you should recompile the packages providing these plugins,"
+	elog "and you should also make sure that Qt and its plugins were compiled with the"
+	elog "same version of gcc.  Packages that may need to be rebuilt are, for instance,"
+	elog "kde-base/kdelibs, kde-base/kdeartwork and kde-base/kdeartwork-styles."
+	elog "See http://doc.trolltech.com/3.3/plugins-howto.html for more infos."
 	echo
 }
