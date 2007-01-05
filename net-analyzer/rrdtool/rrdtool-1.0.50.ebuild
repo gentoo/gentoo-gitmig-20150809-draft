@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.50.ebuild,v 1.2 2006/11/27 23:33:26 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.50.ebuild,v 1.3 2007/01/05 07:09:32 flameeyes Exp $
 
-inherit perl-module flag-o-matic gnuconfig eutils
+inherit perl-module flag-o-matic eutils
 
 DESCRIPTION="A system to store and display time-series data"
 HOMEPAGE="http://people.ee.ethz.ch/~oetiker/webtools/rrdtool/"
