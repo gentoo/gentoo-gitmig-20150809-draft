@@ -1,10 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/gtodo-0.14.ebuild,v 1.9 2005/01/01 15:54:44 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/gtodo-0.14.ebuild,v 1.10 2007/01/05 04:48:12 dirtyepic Exp $
 
-inherit debug flag-o-matic gnome2
-
-strip-flags
+inherit flag-o-matic gnome2
 
 IUSE="gnome"
 
@@ -26,6 +24,7 @@ DEPEND=">=x11-libs/gtk+-2.0
 DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README"
 
 src_compile(){
+	strip-flags
 	econf || die "econf failed"
 	emake || die "emake failed"
 
