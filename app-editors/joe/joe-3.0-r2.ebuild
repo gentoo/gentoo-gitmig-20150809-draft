@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-3.0-r2.ebuild,v 1.3 2005/03/22 19:10:57 tomk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-3.0-r2.ebuild,v 1.4 2007/01/05 07:16:56 flameeyes Exp $
 
-inherit flag-o-matic gnuconfig eutils
+inherit flag-o-matic eutils
 
 DESCRIPTION="A free ASCII-Text Screen Editor for UNIX"
 HOMEPAGE="http://sourceforge.net/projects/joe-editor/"
@@ -27,7 +27,6 @@ src_unpack() {
 	do
 		sed -e 's:@sysconfdir@/:@sysconfdir@/joe/:' -i ${i}
 	done
-	gnuconfig_update
 }
 
 src_compile() {
