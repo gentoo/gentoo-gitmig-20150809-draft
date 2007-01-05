@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/navi2ch-1.7.5.ebuild,v 1.4 2005/07/09 19:35:51 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/navi2ch-1.7.5.ebuild,v 1.5 2007/01/05 07:20:26 flameeyes Exp $
 
-inherit elisp gnuconfig
+inherit elisp
 
 IUSE=""
 
@@ -15,12 +15,6 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 
 SITEFILE=50navi2ch-gentoo.el
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	gnuconfig_update
-}
 
 src_compile() {
 	econf || die
@@ -42,7 +36,7 @@ pkg_postinst() {
 	einfo "\t(setq navi2ch-mona-enable t)"
 	einfo "If you use izonmoji-mode,"
 	einfo "\t(require 'izonmoji-mode)"
-	einfo "\t(add-hook 'navi2ch-bm-mode-hook      'izonmoji-mode-on)"
+	einfo "\t(add-hook 'navi2ch-bm-mode-hook	  'izonmoji-mode-on)"
 	einfo "\t(add-hook 'navi2ch-article-mode-hook 'izonmoji-mode-on)"
 	einfo "\t(add-hook 'navi2ch-popup-article-mode-hook 'izonmoji-mode-on)"
 	einfo
