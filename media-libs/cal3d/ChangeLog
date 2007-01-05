@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/cal3d
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/ChangeLog,v 1.20 2006/10/07 20:36:42 kloeri Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/ChangeLog,v 1.21 2007/01/05 04:29:30 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  cal3d-0.11.0_pre20050823.ebuild, cal3d-0.11.0.ebuild:
+  Remove debug.eclass usage.
 
 *cal3d-0.11.0-r1 (07 Oct 2006)
 

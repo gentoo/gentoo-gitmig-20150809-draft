@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/cal3d-0.11.0_pre20050823.ebuild,v 1.5 2006/05/25 19:48:28 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/cal3d-0.11.0_pre20050823.ebuild,v 1.6 2007/01/05 04:29:30 flameeyes Exp $
 
-inherit debug eutils
+inherit eutils
 
 DESCRIPTION="Cal3D is a skeletal based character animation library"
 HOMEPAGE="http://cal3d.sourceforge.net/"
