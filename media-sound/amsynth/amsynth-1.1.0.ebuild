@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.1.0.ebuild,v 1.1 2006/07/08 22:25:47 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.1.0.ebuild,v 1.2 2007/01/05 17:21:41 flameeyes Exp $
 
 IUSE="oss alsa jack"
 
@@ -41,12 +41,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "amSynth has been installed normally."
-	einfo "If you would like to use the virtual"
-	einfo "keyboard option, then do"
-	einfo "emerge vkeybd"
-	einfo "and make sure you emerged amSynth"
-	einfo "with alsa support (USE=alsa)"
-	einfo
+	elog
+	elog "amSynth has been installed normally."
+	elog "If you would like to use the virtual"
+	elog "keyboard option, then do"
+	elog "emerge vkeybd"
+	elog "and make sure you emerged amSynth"
+	elog "with alsa support (USE=alsa)"
+	elog
 }

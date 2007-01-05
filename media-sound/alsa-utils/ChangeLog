@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.182 2007/01/04 17:42:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.183 2007/01/05 17:20:33 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  alsa-utils-1.0.11.ebuild, alsa-utils-1.0.12.ebuild,
+  alsa-utils-1.0.13.ebuild, alsa-utils-1.0.14_rc1.ebuild:
+  Dummify src_compile.
 
   04 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   alsa-utils-1.0.14_rc1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/alsa-headers-1.0.13.ebuild,v 1.11 2007/01/03 02:44:42 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/alsa-headers-1.0.13.ebuild,v 1.12 2007/01/05 17:19:31 flameeyes Exp $
 
 inherit eutils
 
@@ -35,9 +35,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-1.0.6a-user.patch"
 }
 
-src_compile() {
-	einfo "No compilation neccessary"
-}
+src_compile() { :; }
 
 src_install() {
 	cd "${S}/alsa-kernel/include"

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.12.ebuild,v 1.9 2006/10/18 05:22:07 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.12.ebuild,v 1.10 2007/01/05 17:20:33 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -57,20 +57,20 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "The alsasound initscript is now provided by alsa-utils"
-	einfo "instead of alsa-driver for compatibility with kernel-sources"
-	einfo "which provide ALSA internally."
+	elog "The alsasound initscript is now provided by alsa-utils"
+	elog "instead of alsa-driver for compatibility with kernel-sources"
+	elog "which provide ALSA internally."
 	echo
-	einfo "To take advantage of this, and automate the process of"
-	einfo "loading and unloading the ALSA sound drivers as well as"
-	einfo "storing and restoring sound-card mixer levels you should"
-	einfo "add alsasound to the boot runlevel. You can do this as"
-	einfo "root like so:"
-	einfo "	# rc-update add alsasound boot"
+	elog "To take advantage of this, and automate the process of"
+	elog "loading and unloading the ALSA sound drivers as well as"
+	elog "storing and restoring sound-card mixer levels you should"
+	elog "add alsasound to the boot runlevel. You can do this as"
+	elog "root like so:"
+	elog "	# rc-update add alsasound boot"
 	echo
-	einfo "You will also need to edit the file /etc/modules.d/alsa"
-	einfo "and run modules-update. You can do this like so:"
-	einfo "	# nano -w /etc/modules.d/alsa && modules-update"
+	elog "You will also need to edit the file /etc/modules.d/alsa"
+	elog "and run modules-update. You can do this like so:"
+	elog "	# nano -w /etc/modules.d/alsa && modules-update"
 	echo
 
 	if use sparc; then

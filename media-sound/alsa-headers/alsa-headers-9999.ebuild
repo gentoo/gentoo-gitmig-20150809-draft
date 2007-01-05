@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/alsa-headers-9999.ebuild,v 1.4 2006/12/03 18:55:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/alsa-headers-9999.ebuild,v 1.5 2007/01/05 17:19:31 flameeyes Exp $
 
 inherit eutils mercurial
 
@@ -34,9 +34,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-1.0.6a-user.patch"
 }
 
-src_compile() {
-	einfo "No compilation neccessary"
-}
+src_compile() { :; }
 
 src_install() {
 	cd "${S}/alsa-kernel/include"
