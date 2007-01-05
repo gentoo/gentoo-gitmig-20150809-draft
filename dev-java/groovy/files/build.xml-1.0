@@ -8,7 +8,7 @@
   <property file="${user.home}/build.properties"></property>
   <!--Build properties-->
   <property name="defaulttargetdir" value="${basedir}/target"></property>
-  <property name="libdir" value="${user.home}/.maven/repository"></property>
+  <property name="libdir" value="${defaulttargetdir}/lib"></property>
   <property name="classesdir" value="${basedir}/target/classes"></property>
   <property name="testclassesdir" value="${basedir}/target/test-classes"></property>
   <property name="testreportdir" value="${basedir}/target/test-reports"></property>
