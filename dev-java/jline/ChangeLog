@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/jline
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/ChangeLog,v 1.1 2007/01/05 02:33:12 nichoj Exp $
+
+*jline-0.9.9 (05 Jan 2007)
+
+  05 Jan 2007; Joshua Nichols <nichoj@gentoo.org> +files/build-0.9.9.xml,
+  +metadata.xml, +jline-0.9.9.ebuild:
+  Initial commit. Added as a dependency of dev-java/jruby.
+
