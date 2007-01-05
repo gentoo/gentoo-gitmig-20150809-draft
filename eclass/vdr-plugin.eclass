@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.39 2007/01/05 13:16:57 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.40 2007/01/05 17:24:19 hd_brummy Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -86,7 +86,7 @@ update_vdrplugindb() {
 		touch ${VDRPLUGINDB_DIR}/vdrplugindb
 	fi
 	if [[ -z $(grep ${CATEGORY}/${PN}-${PVR} ${VDRPLUGINDB_DIR}/vdrplugindb) ]]; then
-		einfo "Adding plugin to vdrplugindb."
+		elog "Adding plugin to vdrplugindb."
 		echo "a:1:${CATEGORY}/${PN}-${PVR}" >> ${VDRPLUGINDB_DIR}/vdrplugindb
 	fi
 }
@@ -95,7 +95,7 @@ remove_vdrplugindb() {
 	local VDRPLUGINDB_DIR=${ROOT}/var/lib/vdrplugin-rebuild/
 
 	if [[ -n $(grep ${CATEGORY}/${PN}-${PVR} ${VDRPLUGINDB_DIR}/vdrplugindb) ]]; then
-		einfo "Removing ${CATEGORY}/${PN}-${PVR} from vdrplugindb."
+		elog "Removing ${CATEGORY}/${PN}-${PVR} from vdrplugindb."
 		sed -ie "/.*${CATEGORY}\/${P}.*/d" ${VDRPLUGINDB_DIR}/vdrplugindb
 	fi
 }
@@ -121,7 +121,7 @@ create_plugindb_file() {
 #   long as not every system has switched over to
 #   vdrplugin-rebuild-0.2
 delete_orphan_plugindb_file() {
-	#einfo Testing for orphaned plugindb file
+	#elog Testing for orphaned plugindb file
 	local NEW_VDRPLUGINDB_DIR=/usr/share/vdr/vdrplugin-rebuild/
 	local DB_FILE=${ROOT}/${NEW_VDRPLUGINDB_DIR}/${CATEGORY}-${PF}
 
@@ -130,12 +130,12 @@ delete_orphan_plugindb_file() {
 
 	# will portage handle the file itself
 	if grep -q CREATOR=ECLASS ${DB_FILE}; then
-		#einfo file owned by eclass - don't touch it
+		#elog file owned by eclass - don't touch it
 		return
 	fi
 
-	einfo "Removing orphaned plugindb-file."
-	einfo "#rm ${DB_FILE}"
+	elog "Removing orphaned plugindb-file."
+	elog "#rm ${DB_FILE}"
 	rm ${DB_FILE}
 }
 
@@ -160,8 +160,8 @@ vdr-plugin_pkg_setup() {
 	APIVERSION=$(awk -F'"' '/define APIVERSION/ {print $2}' ${VDR_INCLUDE_DIR}/config.h)
 	[[ -z ${APIVERSION} ]] && APIVERSION="${VDRVERSION}"
 
-	einfo "Building ${PF} against vdr-${VDRVERSION}"
-	einfo "APIVERSION: ${APIVERSION}"
+	elog "Building ${PF} against vdr-${VDRVERSION}"
+	elog "APIVERSION: ${APIVERSION}"
 }
 
 vdr-plugin_src_unpack() {
@@ -188,11 +188,11 @@ vdr-plugin_src_unpack() {
 				ewarn "There seems to be no plugin-directory with the name ${S##*/}"
 				ewarn "Perhaps you find one among these:"
 				cd "${WORKDIR}"
-				einfo "$(/bin/ls -1 ${WORKDIR})"
+				elog "$(/bin/ls -1 ${WORKDIR})"
 				die "Could not change to plugin-source-directory!"
 			fi
 
-			einfo "Patching Makefile"
+			elog "Patching Makefile"
 			[[ -e Makefile ]] || die "Makefile of plugin can not be found!"
 			cp Makefile Makefile.orig
 
@@ -239,7 +239,7 @@ vdr-plugin_src_unpack() {
 			cd ${S}
 			if test -d "${VDR_LOCAL_PATCHES_DIR}/${PN}"; then
 				echo
-				einfo "Applying local patches"
+				elog "Applying local patches"
 				for LOCALPATCH in ${VDR_LOCAL_PATCHES_DIR}/${PN}/${PV}/*.{diff,patch}; do
 					test -f "${LOCALPATCH}" && epatch "${LOCALPATCH}"
 				done
@@ -265,7 +265,7 @@ vdr-plugin_copy_source_tree() {
 }
 
 vdr-plugin_install_source_tree() {
-	einfo "Installing sources"
+	elog "Installing sources"
 	destdir=${VDRSOURCE_DIR}/vdr-${VDRVERSION}/PLUGINS/src/${VDRPLUGIN}
 	insinto ${destdir}-${PV}
 	doins -r ${T}/source-tree/*
@@ -370,16 +370,16 @@ vdr-plugin_pkg_postinst() {
 	if has_version "<=media-tv/vdrplugin-rebuild-0.1"; then
 		update_vdrplugindb
 	fi
-	einfo
-	einfo "The vdr plugin ${VDRPLUGIN} has now been installed."
-	einfo "To activate execute the following command:"
-	einfo
-	einfo "  emerge --config ${PN}"
-	einfo
+	elog
+	elog "The vdr plugin ${VDRPLUGIN} has now been installed."
+	elog "To activate execute the following command:"
+	elog
+	elog "  emerge --config ${PN}"
+	elog
 	if [[ -n "${VDR_CONFD_FILE}" ]]; then
-		einfo "And have a look at the config-file"
-		einfo "/etc/conf.d/vdr.${VDRPLUGIN}"
-		einfo
+		elog "And have a look at the config-file"
+		elog "/etc/conf.d/vdr.${VDRPLUGIN}"
+		elog
 	fi
 }
 
@@ -396,7 +396,7 @@ vdr-plugin_pkg_config_final() {
 }
 
 vdr-plugin_pkg_config_old() {
-	einfo "Using interface of gentoo-vdr-scripts-0.3.6 and older"
+	elog "Using interface of gentoo-vdr-scripts-0.3.6 and older"
 	if [[ -z "${INSTALLPLUGIN}" ]]; then
 		INSTALLPLUGIN="${VDRPLUGIN}"
 	fi
@@ -405,7 +405,7 @@ vdr-plugin_pkg_config_old() {
 	conf_orig=${conf}.before_emerge_config
 	cp ${conf} ${conf_orig}
 
-	einfo "Reading ${conf}"
+	elog "Reading ${conf}"
 	if ! grep -q "^PLUGINS=" ${conf}; then
 		local LINE=$(sed ${conf} -n -e '/^#.*PLUGINS=/=' | tail -n 1)
 		if [[ -n "${LINE}" ]]; then
@@ -428,14 +428,14 @@ vdr-plugin_pkg_config_old() {
 	done
 
 	if [[ "${active}" == "1" ]]; then
-		einfo "${INSTALLPLUGIN} already activated"
+		elog "${INSTALLPLUGIN} already activated"
 		echo
 		read -p "Do you want to deactivate ${INSTALLPLUGIN} (yes/no) " answer
 		if [[ "${answer}" != "yes" ]]; then
-			einfo "aborted"
+			elog "aborted"
 			return
 		fi
-		einfo "Removing ${INSTALLPLUGIN} from active plugins."
+		elog "Removing ${INSTALLPLUGIN} from active plugins."
 		local LINE=$(sed ${conf} -n -e '/^PLUGINS=.*\<'${INSTALLPLUGIN}'\>/=' | tail -n 1)
 		sed -i ${conf} -e ${LINE}'s/\<'${INSTALLPLUGIN}'\>//' \
 			-e ${LINE}'s/ \( \)*/ /g' \
@@ -447,7 +447,7 @@ vdr-plugin_pkg_config_old() {
 	fi
 
 
-	einfo "Adding ${INSTALLPLUGIN} to active plugins."
+	elog "Adding ${INSTALLPLUGIN} to active plugins."
 	local LINE=$(sed ${conf} -n -e '/^PLUGINS=/=' | tail -n 1)
 	sed -i ${conf} -e ${LINE}'s/^PLUGINS=" *\(.*\)"/PLUGINS="\1 '${INSTALLPLUGIN}'"/' \
 		-e ${LINE}'s/ \( \)*/ /g' \
@@ -458,7 +458,7 @@ vdr-plugin_pkg_config_old() {
 }
 
 vdr-plugin_pkg_config_new() {
-	einfo "Using interface introduced with gentoo-vdr-scripts-0.3.7"
+	elog "Using interface introduced with gentoo-vdr-scripts-0.3.7"
 	if [[ -z "${INSTALLPLUGIN}" ]]; then
 		INSTALLPLUGIN="${VDRPLUGIN}"
 	fi
@@ -476,19 +476,19 @@ vdr-plugin_pkg_config_new() {
 	exec 3<&-
 
 	if [[ $active == 0 ]]; then
-		einfo "Adding ${INSTALLPLUGIN} to active plugins."
+		elog "Adding ${INSTALLPLUGIN} to active plugins."
 
 		# The pure edit process.
 		echo "${INSTALLPLUGIN}" >> "${conf}"
 	else
-		einfo "${INSTALLPLUGIN} already activated"
+		elog "${INSTALLPLUGIN} already activated"
 		echo
 		read -p "Do you want to deactivate ${INSTALLPLUGIN} (yes/no) " answer
 		if [[ "${answer}" != "yes" ]]; then
-			einfo "aborted"
+			elog "aborted"
 			return
 		fi
-		einfo "Removing ${INSTALLPLUGIN} from active plugins."
+		elog "Removing ${INSTALLPLUGIN} from active plugins."
 
 		# The pure edit process
 		sed -i "${conf}" -e "/^[[:space:]]*${INSTALLPLUGIN}[[:space:]]*\$/d"
@@ -505,7 +505,7 @@ vdr-plugin_pkg_config() {
 
 fix_vdr_libsi_include()
 {
-	einfo "Fixing include of libsi-headers"
+	elog "Fixing include of libsi-headers"
 	local f
 	for f; do
 		sed -i "${f}" \
