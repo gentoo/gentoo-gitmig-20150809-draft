@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/camsource-0.5.1.ebuild,v 1.15 2005/07/09 18:59:29 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/camsource-0.5.1.ebuild,v 1.16 2007/01/05 20:29:09 flameeyes Exp $
 
 DESCRIPTION="Camsource grabs images from a video4linux device and makes them available
 			to various plugins for processing or handling. Camsource can also be used
@@ -29,10 +29,10 @@ src_install() {
 
 pkg_postinst() {
 
-	einfo
-	einfo "Please edit the configuration file:"
-	einfo "/etc/camsource.conf.example"
-	einfo "to your liking."
-	einfo
+	elog
+	elog "Please edit the configuration file:"
+	elog "/etc/camsource.conf.example"
+	elog "to your liking."
+	elog
 
 }

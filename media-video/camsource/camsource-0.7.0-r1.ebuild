@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/camsource-0.7.0-r1.ebuild,v 1.12 2005/09/03 23:25:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/camsource-0.7.0-r1.ebuild,v 1.13 2007/01/05 20:29:09 flameeyes Exp $
 
 inherit eutils
 
@@ -35,10 +35,10 @@ src_install() {
 
 pkg_postinst() {
 
-	einfo
-	einfo "Please edit the configuration file:"
-	einfo "/etc/camsource.conf.example"
-	einfo "to your liking."
-	einfo
+	elog
+	elog "Please edit the configuration file:"
+	elog "/etc/camsource.conf.example"
+	elog "to your liking."
+	elog
 
 }

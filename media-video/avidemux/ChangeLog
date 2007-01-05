@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avidemux
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.102 2006/09/16 08:44:36 mr_bones_ Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.103 2007/01/05 20:27:58 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  avidemux-2.0.42-r1.ebuild, avidemux-2.1_pre1.ebuild:
+  Convert to use elog.
 
   16 Sep 2006; Michael Sterrett <mr_bones_@gentoo.org>
   -avidemux-2.0.24.ebuild:

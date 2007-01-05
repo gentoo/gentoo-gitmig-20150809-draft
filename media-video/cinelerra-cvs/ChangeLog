@@ -1,6 +1,11 @@
 # ChangeLog for media-video/cinelerra-cvs
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/ChangeLog,v 1.23 2006/10/26 16:56:09 aballier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/ChangeLog,v 1.24 2007/01/05 20:29:55 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  cinelerra-cvs-20060219.ebuild, cinelerra-cvs-20060619.ebuild,
+  cinelerra-cvs-20061020.ebuild:
+  Convert to use elog.
 
   26 Oct 2006; Alexis Ballier <aballier@gentoo.org>
   cinelerra-cvs-20061020.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.1_pre1.ebuild,v 1.4 2006/02/15 15:38:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.1_pre1.ebuild,v 1.5 2007/01/05 20:27:58 flameeyes Exp $
 
 inherit eutils flag-o-matic fixheadtails
 
@@ -115,8 +115,8 @@ src_install() {
 pkg_postinst() {
 	if use ppc && use oss; then
 		echo
-		einfo "OSS sound output may not work on ppc"
-		einfo "If your hear only static noise, try"
-		einfo "changing the sound device to ALSA or arts"
+		elog "OSS sound output may not work on ppc"
+		elog "If your hear only static noise, try"
+		elog "changing the sound device to ALSA or arts"
 	fi
 }

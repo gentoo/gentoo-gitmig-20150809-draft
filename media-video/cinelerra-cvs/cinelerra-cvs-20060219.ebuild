@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20060219.ebuild,v 1.2 2006/04/29 03:55:21 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20060219.ebuild,v 1.3 2007/01/05 20:29:55 flameeyes Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
@@ -86,8 +86,8 @@ src_install() {
 
 pkg_postinst () {
 
-einfo "Please note that this is unofficial and somewhat experimental code."
-einfo "See cvs.cinelerra.org for a list of changes to the official cinelerra"
-einfo "release."
-einfo "The blue dot theme has not (yet) been merged into the new release."
+elog "Please note that this is unofficial and somewhat experimental code."
+elog "See cvs.cinelerra.org for a list of changes to the official cinelerra"
+elog "release."
+elog "The blue dot theme has not (yet) been merged into the new release."
 }

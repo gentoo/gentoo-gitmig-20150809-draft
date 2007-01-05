@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20060619.ebuild,v 1.3 2006/10/08 17:38:32 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20060619.ebuild,v 1.4 2007/01/05 20:29:55 flameeyes Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
@@ -86,7 +86,7 @@ src_install() {
 
 pkg_postinst () {
 
-einfo "Please note that this is unofficial and somewhat experimental code."
-einfo "See cvs.cinelerra.org for a list of changes to the official cinelerra"
-einfo "release."
+elog "Please note that this is unofficial and somewhat experimental code."
+elog "See cvs.cinelerra.org for a list of changes to the official cinelerra"
+elog "release."
 }
