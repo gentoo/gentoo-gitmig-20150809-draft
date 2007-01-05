@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-1.3.1.ebuild,v 1.28 2006/10/28 17:15:57 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-1.3.1.ebuild,v 1.29 2007/01/05 08:35:17 flameeyes Exp $
 
-inherit gnuconfig eutils
+inherit eutils
 
 IUSE="X"
 
@@ -19,7 +19,6 @@ KEYWORDS="x86 ppc sparc alpha hppa amd64 ~mips"
 
 src_unpack() {
 	unpack ${A}
-	gnuconfig_update
 
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-asneeded.patch"

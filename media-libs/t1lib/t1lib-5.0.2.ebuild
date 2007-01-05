@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.2.ebuild,v 1.27 2006/10/28 17:21:43 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.2.ebuild,v 1.28 2007/01/05 08:35:17 flameeyes Exp $
 
-inherit eutils gnuconfig flag-o-matic libtool toolchain-funcs
+inherit eutils flag-o-matic libtool toolchain-funcs
 
 DESCRIPTION="A Type 1 Font Rasterizer Library for UNIX/X11"
 HOMEPAGE="ftp://metalab.unc.edu/pub/Linux/libs/graphics/"
@@ -25,9 +25,6 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	if use amd64 || use alpha || use ppc64 || use ppc-macos; then
-		gnuconfig_update || die "gnuconfig_update failed"
-	fi
 	use ppc-macos && darwintoolize
 	cd ${S}
 	epatch "${FILESDIR}/${P}-gentoo.diff"
