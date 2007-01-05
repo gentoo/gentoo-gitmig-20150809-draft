@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/jabber4r
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jabber4r/ChangeLog,v 1.4 2006/07/13 05:21:05 agriffis Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jabber4r/ChangeLog,v 1.5 2007/01/05 16:46:26 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> jabber4r-0.8.0.ebuild:
+  Convert to use elog.
 
   13 Jul 2006; Aron Griffis <agriffis@gentoo.org> jabber4r-0.8.0.ebuild:
   Mark 0.8.0 stable on ia64

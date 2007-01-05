@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubytorrent
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubytorrent/ChangeLog,v 1.6 2006/10/20 21:29:58 agriffis Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubytorrent/ChangeLog,v 1.7 2007/01/05 16:51:31 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> rubytorrent-0.3.ebuild:
+  Convert to use elog.
 
   20 Oct 2006; Aron Griffis <agriffis@gentoo.org> rubytorrent-0.3.ebuild:
   Mark 0.3 stable on ia64

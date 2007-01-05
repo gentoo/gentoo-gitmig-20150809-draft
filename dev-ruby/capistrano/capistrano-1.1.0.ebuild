@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/capistrano-1.1.0.ebuild,v 1.4 2006/11/11 17:24:21 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/capistrano-1.1.0.ebuild,v 1.5 2007/01/05 16:42:57 flameeyes Exp $
 
 inherit ruby gems
 
@@ -22,9 +22,9 @@ DEPEND=">=dev-lang/ruby-1.8.2
 
 pkg_postinst()
 {
-	einfo
-	einfo "Capistrano has replaced switchtower due to naming issues.  If you were previously using"
-	einfo "switchtower in your Rails apps, you need to manuall remove lib/tasks/switchtower.rake"
-	einfo "from them and then run 'cap -A .' in your project director, making sure to keep deploy.rb"
-	einfo
+	elog
+	elog "Capistrano has replaced switchtower due to naming issues.  If you were previously using"
+	elog "switchtower in your Rails apps, you need to manuall remove lib/tasks/switchtower.rake"
+	elog "from them and then run 'cap -A .' in your project director, making sure to keep deploy.rb"
+	elog
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/mysql-ruby-2.7.ebuild,v 1.11 2006/11/23 19:38:25 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/mysql-ruby-2.7.ebuild,v 1.12 2007/01/05 16:48:20 flameeyes Exp $
 
 inherit ruby
 
@@ -29,12 +29,12 @@ src_install() {
 }
 
 src_test() {
-	einfo
-	einfo "To test the programme you need to start mysql first."
-	einfo "Then extract the tarball and run"
-	einfo
-	einfo "	% ruby test.rb hostname user password"
-	einfo
-	einfo "See /usr/share/doc/${PF}/html/README.html for detail."
-	einfo
+	elog
+	elog "To test the programme you need to start mysql first."
+	elog "Then extract the tarball and run"
+	elog
+	elog "	% ruby test.rb hostname user password"
+	elog
+	elog "See /usr/share/doc/${PF}/html/README.html for detail."
+	elog
 }

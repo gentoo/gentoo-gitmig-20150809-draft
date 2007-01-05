@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod_ruby/mod_ruby-1.2.4.ebuild,v 1.8 2005/12/14 17:00:00 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod_ruby/mod_ruby-1.2.4.ebuild,v 1.9 2007/01/05 16:47:32 flameeyes Exp $
 
 DESCRIPTION="Embeds the Ruby interpreter into Apache"
 HOMEPAGE="http://modruby.net/"
@@ -62,14 +62,14 @@ src_install() {
 
 pkg_postinst() {
 	if apache2-detect ; then
-		einfo "To enable mod_ruby, edit /etc/conf.d/apache2 and add \"-D RUBY\""
-		einfo "You may also wish to edit /etc/apache2/conf/modules.d/20_mod_ruby.conf"
+		elog "To enable mod_ruby, edit /etc/conf.d/apache2 and add \"-D RUBY\""
+		elog "You may also wish to edit /etc/apache2/conf/modules.d/20_mod_ruby.conf"
 	else	# apache1
-		einfo "To enable mod_ruby:"
-		einfo "1. Run \"emerge --config =${PF}\""
-		einfo "2. Edit /etc/conf.d/apache and add \"-D RUBY\""
+		elog "To enable mod_ruby:"
+		elog "1. Run \"emerge --config =${PF}\""
+		elog "2. Edit /etc/conf.d/apache and add \"-D RUBY\""
 	fi
-	einfo "You must restart apache for changes to take effect"
+	elog "You must restart apache for changes to take effect"
 }
 
 pkg_config() {
