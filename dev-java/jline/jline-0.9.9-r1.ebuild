@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/jline-0.9.9-r1.ebuild,v 1.1 2007/01/05 04:05:19 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/jline-0.9.9-r1.ebuild,v 1.2 2007/01/05 04:22:49 nichoj Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="source"
 
 DEPEND=">=virtual/jdk-1.4
