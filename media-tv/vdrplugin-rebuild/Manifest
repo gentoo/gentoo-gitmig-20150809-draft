@@ -13,28 +13,29 @@ EBUILD vdrplugin-rebuild-0.1.ebuild 486 RMD160 73cd2cc3592fea336cf821607de7265d1
 MD5 be062631020daf63530d8b1be6738143 vdrplugin-rebuild-0.1.ebuild 486
 RMD160 73cd2cc3592fea336cf821607de7265d1c11c2c8 vdrplugin-rebuild-0.1.ebuild 486
 SHA256 9f085d8ac33b76902a499a27240029c2de3eab1dc20e90c13a7d739256805af8 vdrplugin-rebuild-0.1.ebuild 486
-EBUILD vdrplugin-rebuild-0.2.ebuild 856 RMD160 9307dc3b7a524544cc3dbb2d7622921538b165e3 SHA1 454c25453debc756acb579987a1839f4af95c1e1 SHA256 fa6e18a4e569aa4dd3a550045a3394550843132b8da48bf346b0095342c02922
-MD5 25ea1ea92e45d8db3a9ad8b571bc91a4 vdrplugin-rebuild-0.2.ebuild 856
-RMD160 9307dc3b7a524544cc3dbb2d7622921538b165e3 vdrplugin-rebuild-0.2.ebuild 856
-SHA256 fa6e18a4e569aa4dd3a550045a3394550843132b8da48bf346b0095342c02922 vdrplugin-rebuild-0.2.ebuild 856
-MISC ChangeLog 1667 RMD160 ed7d9869e81b02acf1343bed44e7a84cfee0042e SHA1 d58e5b7c2814600dd2c5dec6b5ae90e98b3b0175 SHA256 21d47e8681112b3917468a45839d1f939eb1f041609752dda7ba64870d493b1f
-MD5 36d97b86dba2d49260a6ad9242e87507 ChangeLog 1667
-RMD160 ed7d9869e81b02acf1343bed44e7a84cfee0042e ChangeLog 1667
-SHA256 21d47e8681112b3917468a45839d1f939eb1f041609752dda7ba64870d493b1f ChangeLog 1667
+EBUILD vdrplugin-rebuild-0.2.ebuild 860 RMD160 f1aac71a61fc3dea3312b49deb61adcbdea584ce SHA1 12d7e084f2bc23dcad84b319fb30e190de4c25d2 SHA256 65cd5514afbcbd3457a6a11ceb12f82bf964b9cb52c192c4d8bf183cd5e3cd10
+MD5 f4ff0a3a17eacecf7afe17ceea43bffa vdrplugin-rebuild-0.2.ebuild 860
+RMD160 f1aac71a61fc3dea3312b49deb61adcbdea584ce vdrplugin-rebuild-0.2.ebuild 860
+SHA256 65cd5514afbcbd3457a6a11ceb12f82bf964b9cb52c192c4d8bf183cd5e3cd10 vdrplugin-rebuild-0.2.ebuild 860
+MISC ChangeLog 1786 RMD160 71d36ab2d47978354c8f0e36123d79caa435504b SHA1 eb3305c227d916957452308cb629ed6c6287f424 SHA256 a93bdf75421edfec29cbf170d19e855351f825aa92509fd46942e337ae26caf6
+MD5 bbfe1f6100a781376ced64910df4e069 ChangeLog 1786
+RMD160 71d36ab2d47978354c8f0e36123d79caa435504b ChangeLog 1786
+SHA256 a93bdf75421edfec29cbf170d19e855351f825aa92509fd46942e337ae26caf6 ChangeLog 1786
 MISC metadata.xml 257 RMD160 8bee49b98c59996aaaa019fb2c764c08d8004507 SHA1 d2419394e7d5c7463d7dea33e9190ebd57484531 SHA256 0dd45fbbaf1c6173535e371e3ff8a3faa41f3f89123ac9dffe338998599ebe26
 MD5 116de98355049ce943c3b6fedc00b4a3 metadata.xml 257
 RMD160 8bee49b98c59996aaaa019fb2c764c08d8004507 metadata.xml 257
 SHA256 0dd45fbbaf1c6173535e371e3ff8a3faa41f3f89123ac9dffe338998599ebe26 metadata.xml 257
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-vdrplugin-rebuild-0.1 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-vdrplugin-rebuild-0.1 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-vdrplugin-rebuild-0.1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-vdrplugin-rebuild-0.2 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-vdrplugin-rebuild-0.2 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-vdrplugin-rebuild-0.2 0
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-vdrplugin-rebuild-0.1 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-vdrplugin-rebuild-0.1 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-vdrplugin-rebuild-0.1 1
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-vdrplugin-rebuild-0.2 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-vdrplugin-rebuild-0.2 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-vdrplugin-rebuild-0.2 1
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.6 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
+Comment: GnuPG-Pack Basics: http://home.arcor.de/rose-indorf
 
-iD8DBQFFeqkzt2vP6XvVdOcRAsdFAKCTSKR2J/9c+AXy2AU2a0E3nVKiigCgrCGn
-UQ2lxYVqEU1mvzBSyXWh6y4=
-=/vUU
+iD8DBQFFnogrdn07HTTCgIoRAofFAJ438E+S+yqUQ3nk6O2UwH8fXZppwQCgtXlu
+ZuyV6Lk5q+nyhbpmFrPSRHM=
+=wpZv
 -----END PGP SIGNATURE-----
