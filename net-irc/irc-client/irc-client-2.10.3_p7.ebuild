@@ -1,8 +1,7 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-client/irc-client-2.10.3_p7.ebuild,v 1.1 2004/07/12 22:36:38 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-client/irc-client-2.10.3_p7.ebuild,v 1.2 2007/01/05 08:48:27 flameeyes Exp $
 
-inherit gnuconfig
 
 MY_P=irc${PV/_/}
 DESCRIPTION="A simplistic RFC compliant IRC client"
@@ -19,13 +18,6 @@ DEPEND="virtual/libc
 	sys-libs/zlib"
 
 S=${WORKDIR}/${MY_P}
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	gnuconfig_update
-}
 
 src_compile () {
 	econf \
