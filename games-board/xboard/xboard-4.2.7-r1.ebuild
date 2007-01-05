@@ -1,7 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.2.7-r1.ebuild,v 1.2 2006/12/21 05:12:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.2.7-r1.ebuild,v 1.3 2007/01/05 19:18:00 nyhm Exp $
 
+WANT_AUTOCONF=latest
+WANT_AUTOMAKE=latest
 inherit autotools eutils games
 
 DESCRIPTION="GUI for gnuchess and for internet chess servers"
@@ -47,7 +49,7 @@ src_install() {
 	dodoc FAQ READ_ME ToDo ChangeLog*
 	use zippy && dodoc zippy.README
 	dohtml FAQ.html
-	doicon ${DISTDIR}/xboard.png
+	doicon "${DISTDIR}"/xboard.png
 	make_desktop_entry ${PN} "Xboard (Chess)"
 	prepgamesdirs
 }
