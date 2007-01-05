@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/wmsound-data
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wmsound-data/ChangeLog,v 1.5 2004/09/15 17:46:40 eradicator Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wmsound-data/ChangeLog,v 1.6 2007/01/05 20:25:19 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  wmsound-data-1.0.0.ebuild:
+  Remove src_compile.
 
   15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   wmsound-data-1.0.0.ebuild:
