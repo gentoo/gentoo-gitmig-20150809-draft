@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/nspluginwrapper-0.9.91.2.ebuild,v 1.1 2007/01/04 00:17:53 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/nspluginwrapper-0.9.91.2.ebuild,v 1.2 2007/01/05 23:26:52 chutzpah Exp $
 
 inherit nsplugins flag-o-matic multilib
 
@@ -43,12 +43,12 @@ src_install() {
 pkg_postinst() {
 	einfo "Auto installing 32bit plugins..."
 	nspluginwrapper -a -i
-	einfo "Any 32bit plugins you currently have installed have now been"
-	einfo "configured to work in a 64bit browser. Any plugins you install in"
-	einfo "the future will first need to be setup with:"
-	einfo "  \"nspluginwrapper -i <path-to-32bit-plugin>\""
-	einfo "before they will function in a 64bit browser"
-	einfo
+	elog "Any 32bit plugins you currently have installed have now been"
+	elog "configured to work in a 64bit browser. Any plugins you install in"
+	elog "the future will first need to be setup with:"
+	elog "  \"nspluginwrapper -i <path-to-32bit-plugin>\""
+	elog "before they will function in a 64bit browser"
+	elog
 }
 
 # this is terribly ugly, but without a way to query portage as to whether

@@ -1,6 +1,10 @@
 # ChangeLog for net-www/nspluginwrapper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/ChangeLog,v 1.8 2007/01/04 00:17:53 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/ChangeLog,v 1.9 2007/01/05 23:26:52 chutzpah Exp $
+
+  05 Jan 2007; Patrick McLean <chutzpah@gentoo.org>
+  nspluginwrapper-0.9.91.2.ebuild:
+  Change einfo to elog for message about how to use/install plugins.
 
 *nspluginwrapper-0.9.91.2 (04 Jan 2007)
 
