@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-107.1.ebuild,v 1.3 2006/03/01 00:18:20 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-107.1.ebuild,v 1.4 2007/01/05 20:46:11 flameeyes Exp $
 
 inherit eutils multilib base
 
@@ -92,9 +92,9 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "To enable multicast dns lookups for applications"
-	einfo "that are not multicast dns aware, edit the 'hosts:'"
-	einfo "line in /etc/nsswitch.conf to include 'mdns', e.g.:"
-	einfo "hosts: files mdns dns"
+	elog "To enable multicast dns lookups for applications"
+	elog "that are not multicast dns aware, edit the 'hosts:'"
+	elog "line in /etc/nsswitch.conf to include 'mdns', e.g.:"
+	elog "hosts: files mdns dns"
 	echo
 }

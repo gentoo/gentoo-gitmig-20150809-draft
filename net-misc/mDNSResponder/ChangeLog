@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mDNSResponder
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.25 2006/09/19 17:47:27 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.26 2007/01/05 20:46:11 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  mDNSResponder-107.1.ebuild, mDNSResponder-107.5.ebuild:
+  Convert to use elog.
 
   19 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
   mDNSResponder-107.5.ebuild:
