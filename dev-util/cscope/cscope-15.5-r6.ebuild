@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.5-r6.ebuild,v 1.11 2006/07/09 05:30:10 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.5-r6.ebuild,v 1.12 2007/01/05 07:51:05 flameeyes Exp $
 
-inherit gnuconfig elisp-common eutils
+inherit elisp-common eutils
 
 DESCRIPTION="Interactively examine a C program"
 HOMEPAGE="http://cscope.sourceforge.net/"
@@ -41,8 +41,6 @@ src_unpack() {
 }
 
 src_compile() {
-	gnuconfig_update
-
 	# This fix is no longer needed as of cscope-15.5 which now should
 	# work with bison directly.	 (04 Feb 2004 agriffis)
 	#sed -i -e "s:={:{:" src/egrep.y
