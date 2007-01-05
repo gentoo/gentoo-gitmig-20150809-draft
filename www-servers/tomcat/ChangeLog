@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.98 2007/01/01 23:07:14 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.99 2007/01/05 03:45:33 wltjr Exp $
+
+*tomcat-6.0.7_alpha-r3 (05 Jan 2007)
+
+  05 Jan 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -tomcat-6.0.7_alpha-r2.ebuild, +tomcat-6.0.7_alpha-r3.ebuild:
+  Change functionality of jni use flag from compiling/installing to dep on a
+  package that does both, tomcat-native :)
 
 *tomcat-6.0.7_alpha-r2 (01 Jan 2007)
 
