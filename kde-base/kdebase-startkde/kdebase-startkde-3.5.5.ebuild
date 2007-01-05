@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-3.5.5.ebuild,v 1.10 2006/12/11 14:42:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-3.5.5.ebuild,v 1.11 2007/01/05 16:56:46 flameeyes Exp $
 
 KMNAME=kdebase
 KMNOMODULE=true
@@ -36,7 +36,7 @@ $(deprange $PV $MAXKDEVER kde-base/ksplashml)"
 
 
 src_compile() {
-	einfo "Nothing to compile"
+	elog "Nothing to compile"
 }
 
 src_install() {
@@ -76,8 +76,8 @@ EOF
 
 pkg_postinst () {
 	echo
-	einfo "To enable gpg-agent and/or ssh-agent in KDE sessions,"
-	einfo "edit ${KDEDIR}/env/agent-startup.sh and"
-	einfo "${KDEDIR}/shutdown/agent-shutdown.sh"
+	elog "To enable gpg-agent and/or ssh-agent in KDE sessions,"
+	elog "edit ${KDEDIR}/env/agent-startup.sh and"
+	elog "${KDEDIR}/shutdown/agent-shutdown.sh"
 	echo
 }

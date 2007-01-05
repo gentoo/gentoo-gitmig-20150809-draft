@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/unsermake/unsermake-0.3.0.4254.0.ebuild,v 1.4 2006/09/23 20:14:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/unsermake/unsermake-0.3.0.4254.0.ebuild,v 1.5 2007/01/05 17:00:44 flameeyes Exp $
 
 IUSE=""
 DESCRIPTION="Unsermake - Advanced KDE build system"
@@ -26,10 +26,10 @@ src_install()
 
 pkg_postinst()
 {
-	einfo
-	einfo "To enable kde builds with unsermake, set the unsermake environent"
-	einfo "variable:  export UNSERMAKE=\"/usr/kde/unsermake/unsermake\""
-	einfo
-	einfo "Unsermake builds are highly experimental; use at your own risk"
-	einfo
+	elog
+	elog "To enable kde builds with unsermake, set the unsermake environent"
+	elog "variable:  export UNSERMAKE=\"/usr/kde/unsermake/unsermake\""
+	elog
+	elog "Unsermake builds are highly experimental; use at your own risk"
+	elog
 }

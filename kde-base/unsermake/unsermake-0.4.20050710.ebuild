@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/unsermake/unsermake-0.4.20050710.ebuild,v 1.3 2006/09/23 20:14:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/unsermake/unsermake-0.4.20050710.ebuild,v 1.4 2007/01/05 17:00:44 flameeyes Exp $
 
 inherit python
 
@@ -36,5 +36,5 @@ src_install()
 
 pkg_postinst()
 {
-	einfo "Unsermake builds are highly experimental; use at your own risk"
+	elog "Unsermake builds are highly experimental; use at your own risk"
 }

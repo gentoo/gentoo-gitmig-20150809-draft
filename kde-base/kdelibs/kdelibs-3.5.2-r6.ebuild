@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.2-r6.ebuild,v 1.19 2006/12/01 19:08:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.2-r6.ebuild,v 1.20 2007/01/05 16:57:50 flameeyes Exp $
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
 
@@ -166,12 +166,12 @@ EOF
 pkg_postinst() {
 	if use zeroconf; then
 		echo
-		einfo "To make zeroconf support available in KDE"
-		einfo "make sure that the 'mdnsd' daemon is running."
-		einfo "Make sure also that multicast dns lookups are"
-		einfo "enabled by editing the 'hosts:' line in"
-		einfo "/etc/nsswitch.conf to include 'mdns', e.g.:"
-		einfo "hosts: files mdns dns"
+		elog "To make zeroconf support available in KDE"
+		elog "make sure that the 'mdnsd' daemon is running."
+		elog "Make sure also that multicast dns lookups are"
+		elog "enabled by editing the 'hosts:' line in"
+		elog "/etc/nsswitch.conf to include 'mdns', e.g.:"
+		elog "hosts: files mdns dns"
 		echo
 	fi
 }

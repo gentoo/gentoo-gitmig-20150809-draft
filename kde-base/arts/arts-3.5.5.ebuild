@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.5.ebuild,v 1.9 2006/12/11 14:36:06 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.5.ebuild,v 1.10 2007/01/05 16:54:15 flameeyes Exp $
 
 inherit kde flag-o-matic eutils versionator
 set-kdedir 3.5
@@ -80,10 +80,10 @@ src_install() {
 
 pkg_postinst() {
 	if ! use artswrappersuid ; then
-		einfo "Run chmod u+s ${PREFIX}/bin/artswrapper to let artsd use realtime priority"
-		einfo "and so avoid possible skips in sound. However, on untrusted systems this"
-		einfo "creates the possibility of a DoS attack that'll use 100% cpu at realtime"
-		einfo "priority, and so is off by default. See bug #7883."
-		einfo "Or, you can set the local artswrappersuid USE flag to make the ebuild do this."
+		elog "Run chmod u+s ${PREFIX}/bin/artswrapper to let artsd use realtime priority"
+		elog "and so avoid possible skips in sound. However, on untrusted systems this"
+		elog "creates the possibility of a DoS attack that'll use 100% cpu at realtime"
+		elog "priority, and so is off by default. See bug #7883."
+		elog "Or, you can set the local artswrappersuid USE flag to make the ebuild do this."
 	fi
 }

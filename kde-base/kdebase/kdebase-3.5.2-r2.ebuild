@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.2-r2.ebuild,v 1.11 2006/12/01 19:04:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.2-r2.ebuild,v 1.12 2007/01/05 16:56:10 flameeyes Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -185,8 +185,8 @@ pkg_postinst() {
 	mkdir -p ${ROOT}${KDEDIR}/share/templates/.source/emptydir
 
 	echo
-	einfo "To enable gpg-agent and/or ssh-agent in KDE sessions,"
-	einfo "edit ${KDEDIR}/env/agent-startup.sh and"
-	einfo "${KDEDIR}/shutdown/agent-shutdown.sh"
+	elog "To enable gpg-agent and/or ssh-agent in KDE sessions,"
+	elog "edit ${KDEDIR}/env/agent-startup.sh and"
+	elog "${KDEDIR}/shutdown/agent-shutdown.sh"
 	echo
 }
