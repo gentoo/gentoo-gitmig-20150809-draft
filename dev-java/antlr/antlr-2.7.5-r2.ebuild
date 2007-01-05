@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.5-r2.ebuild,v 1.9 2006/09/13 22:30:15 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.5-r2.ebuild,v 1.10 2007/01/05 07:29:56 flameeyes Exp $
 
-inherit java-utils gnuconfig java-pkg mono distutils multilib
+inherit java-utils java-pkg mono distutils multilib
 
 DESCRIPTION="A parser generator for C++, C#, Java, and Python"
 HOMEPAGE="http://www.antlr.org/"
@@ -21,8 +21,6 @@ DEPEND="${RDEPEND}
 		source? ( app-arch/zip )"
 
 src_compile() {
-	gnuconfig_update
-
 	local myconf=
 
 	if use nocxx ; then

@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.7.ebuild,v 1.1 2006/12/14 01:25:23 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.7.ebuild,v 1.2 2007/01/05 07:29:56 flameeyes Exp $
 
-inherit gnuconfig java-pkg-2 mono distutils multilib
+inherit java-pkg-2 mono distutils multilib
 
 DESCRIPTION="A parser generator for C++, C#, Java, and Python"
 HOMEPAGE="http://www.antlr.org/"
@@ -22,7 +22,6 @@ DEPEND="${RDEPEND}
 	source? ( app-arch/zip )"
 
 src_compile() {
-	gnuconfig_update
 	# don't ask why, but this is needed for stuff to get built properly
 	# across the various JDKs
 	JAVACFLAGS="+ ${JAVACFLAGS}"
