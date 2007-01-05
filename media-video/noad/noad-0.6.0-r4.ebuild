@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.6.0-r4.ebuild,v 1.3 2006/11/09 10:51:52 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.6.0-r4.ebuild,v 1.4 2007/01/05 17:18:22 hd_brummy Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -71,15 +71,15 @@ src_install() {
 
 pkg_postinst() {
 
-	einfo
-	einfo "Congratulations, you have just installed noad!,"
-	einfo "To integrate noad in VDR you should do this:"
-	einfo
-	einfo "start and set Parameter in /etc/conf.d/vdraddon.noad"
-	einfo
-	einfo "More infos can be found on vdr.gentoo.de"
-	einfo
-	einfo "Note: You can use here all pararmeters for noad,"
-	einfo "please look in the documentation of noad."
-	einfo
+	elog
+	elog "Congratulations, you have just installed noad!,"
+	elog "To integrate noad in VDR you should do this:"
+	elog
+	elog "start and set Parameter in /etc/conf.d/vdraddon.noad"
+	elog
+	elog "More infos can be found on vdr.gentoo.de"
+	elog
+	elog "Note: You can use here all pararmeters for noad,"
+	elog "please look in the documentation of noad."
+	elog
 }

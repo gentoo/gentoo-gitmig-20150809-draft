@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.4_p3.ebuild,v 1.1 2007/01/05 14:10:56 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.4_p3.ebuild,v 1.2 2007/01/05 17:21:12 hd_brummy Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -104,11 +104,11 @@ src_unpack() {
 			fi
 		done
 
-		einfo
+		elog
 		if [[ ${LOCALPATCHES_SUBDIR} == ${PV} ]]; then
-			einfo "Applying local patches"
+			elog "Applying local patches"
 		else
-			einfo "Applying local patches (Using subdirectory: ${LOCALPATCHES_SUBDIR})"
+			elog "Applying local patches (Using subdirectory: ${LOCALPATCHES_SUBDIR})"
 		fi
 
 		for LOCALPATCH in ${VDR_LOCAL_PATCHES_DIR}/${LOCALPATCHES_SUBDIR}/*.{diff,patch}; do
@@ -161,7 +161,7 @@ src_install() {
 	doins ${CAP_FILE}
 
 	if [[ -n "${VDRSOURCE_DIR}" ]]; then
-		einfo "Installing sources"
+		elog "Installing sources"
 		insinto ${VDRSOURCE_DIR}/${P}
 		doins -r ${T}/source-tree/*
 		keepdir ${VDRSOURCE_DIR}/${P}/PLUGINS/lib
@@ -178,7 +178,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "It is a good idea to run vdrplugin-rebuild now"
+	elog "It is a good idea to run vdrplugin-rebuild now"
 	if has_version "<media-video/vdr-1.3.36-r3"; then
 		ewarn "Upgrade Info:"
 		ewarn

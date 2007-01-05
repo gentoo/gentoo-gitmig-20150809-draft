@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.6.0-r2.ebuild,v 1.5 2006/05/19 22:26:16 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.6.0-r2.ebuild,v 1.6 2007/01/05 17:18:22 hd_brummy Exp $
 
 inherit eutils
 
@@ -65,21 +65,21 @@ src_install() {
 pkg_postinst() {
 
 	echo
-	einfo "Congratulations, you have just installed noad!,"
-	einfo "To integrate noad in VDR you should do this:"
+	elog "Congratulations, you have just installed noad!,"
+	elog "To integrate noad in VDR you should do this:"
 	echo
 	if has_version ">=media-tv/gentoo-vdr-scripts-0.1_alpha8"
 	then
-		einfo "start and set Parameter in /etc/conf.d/vdraddon.noad"
+		elog "start and set Parameter in /etc/conf.d/vdraddon.noad"
 	else
-		einfo "Add in /etc/conf.d/vdr:"
+		elog "Add in /etc/conf.d/vdr:"
 		echo
-		einfo "RECORD=\"noad nice --statisticfile=/video/noad.stat\" "
+		elog "RECORD=\"noad nice --statisticfile=/video/noad.stat\" "
 	fi
 	echo
-	einfo "More infos can be found on vdr.gentoo.de"
+	elog "More infos can be found on vdr.gentoo.de"
 	echo
-	einfo "Note: You can use here all pararmeters for noad,"
-	einfo "please look in the documentation of noad."
+	elog "Note: You can use here all pararmeters for noad,"
+	elog "please look in the documentation of noad."
 	echo
 }
