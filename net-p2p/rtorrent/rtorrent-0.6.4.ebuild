@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.6.4.ebuild,v 1.6 2006/12/21 14:43:41 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.6.4.ebuild,v 1.7 2007/01/05 20:47:10 flameeyes Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -41,9 +41,9 @@ src_compile() {
 }
 
 pkg_postinst() {
-	einfo "rtorrent now supports a configuration file."
-	einfo "A sample configuration file for rtorrent is can be found"
-	einfo "in ${ROOT}usr/share/doc/${PF}/rtorrent.rc.gz."
+	elog "rtorrent now supports a configuration file."
+	elog "A sample configuration file for rtorrent is can be found"
+	elog "in ${ROOT}usr/share/doc/${PF}/rtorrent.rc.gz."
 }
 
 src_install() {
