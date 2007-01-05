@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.58 2007/01/04 20:38:16 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.59 2007/01/05 00:07:23 vivo Exp $
 # kate: encoding utf-8; eol unix;
 # kate: indent-width 4; mixedindent off; remove-trailing-space on; space-indent off;
 # kate: word-wrap-column 80; word-wrap off;
@@ -12,14 +12,20 @@
 
 ECLASS="mysql"
 INHERITED="$INHERITED $ECLASS"
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 inherit eutils flag-o-matic gnuconfig autotools mysql_fx
+
+# Shorten the path because the socket path length must be shorter than 107 chars
+# and we will run a mysql server during test phase
+S="${WORKDIR}/mysql"
 
 # avoid running userspace code 8 times per ebuild :(
 if [[ "${_MYPVR}" != "${PVR}" ]] && [[ -n "${PVR}" ]]
 then
 	_MYPVR=${PVR}
 
-	[[ "${MY_EXTRAS_VER}" == "latest" ]] && MY_EXTRAS_VER="20070104"
+	[[ "${MY_EXTRAS_VER}" == "latest" ]] && MY_EXTRAS_VER="20070105"
 
 	if [[ ${PR#r} -lt 60 ]] ; then
 		IS_BITKEEPER=0
@@ -68,10 +74,6 @@ then
 	if mysql_version_is_at_least "5.1.12" ; then
 		DEPEND="${DEPEND} innodb? ( >=dev-util/cmake-2.4.3 )"
 	fi
-
-	# Shorten the path because the socket path length must be shorter than 107 chars
-	# and we will run a mysql server during test phase
-	S="${WORKDIR}/mysql"
 
 	# BitKeeper dependency, compile-time only
 	[[ ${IS_BITKEEPER} -eq 90 ]] && DEPEND="${DEPEND} dev-util/bk_client"
