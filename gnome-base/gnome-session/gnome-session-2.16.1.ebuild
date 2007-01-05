@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.16.1.ebuild,v 1.8 2007/01/04 20:49:29 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.16.1.ebuild,v 1.9 2007/01/05 16:49:09 compnerd Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -59,8 +59,9 @@ src_unpack() {
 	# Implement switch to enable/disable esound support. See bug #6920.
 	epatch ${FILESDIR}/${PN}-2.10.0-esd_switch.patch
 
-	cp aclocal.m4 old_macros.m4
-	AT_M4DIR="." eautoreconf
+	# Drop compile time warnings due to lack of m4 definition
+	sed -i -e 's:GNOME_COMPILE_WARNINGS(yes)::' configure.in
+	eautoreconf
 }
 
 src_install() {
