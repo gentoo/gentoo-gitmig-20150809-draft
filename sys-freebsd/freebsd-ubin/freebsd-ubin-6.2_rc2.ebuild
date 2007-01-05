@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-6.2_rc2.ebuild,v 1.3 2007/01/03 15:19:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-6.2_rc2.ebuild,v 1.4 2007/01/05 20:52:58 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic pam
 
@@ -112,6 +112,6 @@ pkg_postinst() {
 	if [[ -e ${ROOT}etc/login.conf ]] ; then
 		einfo "Updating ${ROOT}etc/login.conf.db"
 		${ROOT}usr/bin/cap_mkdb	-f ${ROOT}etc/login.conf ${ROOT}etc/login.conf
-		einfo "Remember to run cap_mkdb /etc/login.conf after making changes to it"
+		elog "Remember to run cap_mkdb /etc/login.conf after making changes to it"
 	fi
 }
