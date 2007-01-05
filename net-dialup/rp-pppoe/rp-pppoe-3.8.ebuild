@@ -1,6 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.8.ebuild,v 1.12 2007/01/04 22:23:56 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.8.ebuild,v 1.13 2007/01/05 10:18:43 mrness Exp $
+
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 
 inherit eutils flag-o-matic autotools
 
@@ -16,19 +19,6 @@ IUSE="X"
 
 DEPEND="net-dialup/ppp
 	X? ( dev-lang/tk )"
-
-pkg_setup() {
-	einfo "Gentoo is moving toward common configuration file for all network interfaces."
-	einfo "Please use baselayout adsl module for configuring your network using rp-pppoe"
-	einfo "or, better yet, use generic PPP support available in baselayout-1.12."
-
-	if [[ -x "${ROOT}/etc/init.d/rp-pppoe" ]]; then
-		echo
-		eerror "The old /etc/init.d/rp-pppoe script is incompatible with ${CATEGORY}/${P} and"
-		eerror "it should be removed before you could upgrade this package."
-		die "Unsupported old init script detected"
-	fi
-}
 
 src_unpack() {
 	unpack ${A} || die "failed to unpack"
@@ -85,7 +75,5 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "Use pppoe-setup to configure your dialup connection"
-	echo
-	ewarn "Please note that adsl-* scripts have been renamed to pppoe-*."
+	einfo "Use pppoe-setup to configure your dialup connection."
 }
