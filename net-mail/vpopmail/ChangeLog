@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.77 2007/01/05 09:00:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.78 2007/01/05 17:17:48 ticho Exp $
+
+  05 Jan 2007; Andrej Kacian <ticho@gentoo.org>
+  -files/vpopmail-5.2.1-showall.patch,
+  -files/vpopmail-5.4.6-access.violation.patch,
+  -files/vpopmail-cdb-Makefile.patch, -files/vpopmail-fPIC.patch,
+  -vpopmail-5.4.6-r1.ebuild, -vpopmail-5.4.13.ebuild:
+  Removed old ebuilds, and unneeded patches. Closes bug #160171.
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   vpopmail-5.4.6-r1.ebuild, vpopmail-5.4.13.ebuild:
