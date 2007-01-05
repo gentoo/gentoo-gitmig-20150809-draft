@@ -1,6 +1,33 @@
-MD5 a979c89fca90f44ff3bcb255a6d07e31 gtk-engines-notif2-1.0.ebuild 752
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST notif210-1.2.tar.gz 98677
+EBUILD gtk-engines-notif2-1.0-r1.ebuild 794 RMD160 ace52e4ae0eb7c9067be07c6cfbe4b8ad9f3c6dd SHA1 f45d89d3bbb76dfc3f7bcf9b6aac3517e82a643e SHA256 ceef75a86bf367d70f0959c0566602707e7cf14c7563c4603f04366e7efa039d
+MD5 fe938ceba09345c48e68007dcc3c54f5 gtk-engines-notif2-1.0-r1.ebuild 794
+RMD160 ace52e4ae0eb7c9067be07c6cfbe4b8ad9f3c6dd gtk-engines-notif2-1.0-r1.ebuild 794
+SHA256 ceef75a86bf367d70f0959c0566602707e7cf14c7563c4603f04366e7efa039d gtk-engines-notif2-1.0-r1.ebuild 794
+EBUILD gtk-engines-notif2-1.0.ebuild 644 RMD160 335c801a03e8255f9ec82f70ec1d95d41043c4b3 SHA1 f69bff01796bee349cb93f92ce07f47f35432318 SHA256 cb1d9708799e825292540ff20377d5a74212a85d2be17a63ba677e7639a6748d
+MD5 8e178c2a5b863b4c4cac9e450646086d gtk-engines-notif2-1.0.ebuild 644
+RMD160 335c801a03e8255f9ec82f70ec1d95d41043c4b3 gtk-engines-notif2-1.0.ebuild 644
+SHA256 cb1d9708799e825292540ff20377d5a74212a85d2be17a63ba677e7639a6748d gtk-engines-notif2-1.0.ebuild 644
+MISC ChangeLog 2108 RMD160 dbfbc736a0c42d1832c72c0dffa48119c18ee815 SHA1 840c3b413b62de3684d2411090f920612bd502f5 SHA256 e3c63689d6b4eefd7d8ec9ba63e1afe41772fab91e0901a6b3dfa6615ecb9c50
+MD5 2769a6dcf562c2059944dd517a57d293 ChangeLog 2108
+RMD160 dbfbc736a0c42d1832c72c0dffa48119c18ee815 ChangeLog 2108
+SHA256 e3c63689d6b4eefd7d8ec9ba63e1afe41772fab91e0901a6b3dfa6615ecb9c50 ChangeLog 2108
+MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 5e927246825b09be4d0561bfdf76741d ChangeLog 1934
-MD5 d69fc08e23309d778da369109c85624c gtk-engines-notif2-1.0-r1.ebuild 901
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
 MD5 75f60267e32e89d77e6fea38ca784364 files/digest-gtk-engines-notif2-1.0 63
+RMD160 62e6b8700392c40ec8dfa68a2a0078dcef34ca57 files/digest-gtk-engines-notif2-1.0 63
+SHA256 734883a402042cd0b8ecf84b6ef0630601def78df9303d8a351b3410df029ece files/digest-gtk-engines-notif2-1.0 63
 MD5 75f60267e32e89d77e6fea38ca784364 files/digest-gtk-engines-notif2-1.0-r1 63
+RMD160 62e6b8700392c40ec8dfa68a2a0078dcef34ca57 files/digest-gtk-engines-notif2-1.0-r1 63
+SHA256 734883a402042cd0b8ecf84b6ef0630601def78df9303d8a351b3410df029ece files/digest-gtk-engines-notif2-1.0-r1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFnhorAiZjviIA2XgRApMPAKCMu13xlMSXHTerFmZNbJU15bMaIwCg0O+V
+yJJ9BQCC7nAg0xDaYnviW6c=
+=l+rW
+-----END PGP SIGNATURE-----
