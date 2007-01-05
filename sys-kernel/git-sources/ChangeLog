@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.57 2007/01/05 18:53:24 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.58 2007/01/05 18:55:30 masterdriverz Exp $
+
+  05 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  git-sources-2.6.20_rc2-r2.ebuild:
+  Fix copyright header
 
 *git-sources-2.6.20_rc3-r4 (05 Jan 2007)
 
