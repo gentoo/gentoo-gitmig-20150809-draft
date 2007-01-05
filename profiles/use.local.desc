@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2474 2007/01/04 21:26:59 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2475 2007/01/05 03:27:11 wltjr Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -365,6 +365,7 @@ dev-java/quartz:struts - Enable struts support
 dev-java/rxtx:lfd - Installs and uses LockFileServer daemon (lfd)
 dev-java/sun-jaxp-bin:dom4j - Enable dom4j
 dev-java/sun-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength Policy files
+dev-java/tomcat-servlet-api:java5 - Use Java 1.5 source/target for compilation
 dev-java/xstream:java5 - Enable Java 5 specific features
 dev-lang/erlang:hipe - HIgh Performance Erlang extension
 dev-lang/gdl:hdf - Adds support for the Hierarchical Data Format
@@ -1812,7 +1813,7 @@ www-servers/resin:admin - Enable Resin admin webapp
 www-servers/shttpd:cgi - Enable CGI script support
 www-servers/shttpd:dmalloc - Enable debugging with the dmalloc library
 www-servers/tomcat:admin - Enable Tomcat admin webapp
-www-servers/tomcat:java5 - Use Java 1.5 for compilation
+www-servers/tomcat:java5 - Use Java 1.5 source/target for compilation
 www-servers/tomcat:jni - Build and enable JNI wrappers for APR (libtcnative)
 x11-base/kdrive:fbdev - Enables framebuffer kdrive server
 x11-base/kdrive:font-server - Enables font server support
