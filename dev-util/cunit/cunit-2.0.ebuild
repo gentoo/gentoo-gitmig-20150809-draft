@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cunit/cunit-2.0.ebuild,v 1.2 2005/11/16 15:51:55 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cunit/cunit-2.0.ebuild,v 1.3 2007/01/05 07:00:47 flameeyes Exp $
 
-inherit eutils gnuconfig
+inherit eutils
 
 DESCRIPTION="CUnit - C Unit Test Framework"
 SRC_URI="mirror://sourceforge/cunit/${P}-1.tar.gz"

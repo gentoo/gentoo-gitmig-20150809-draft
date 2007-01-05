@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cunit
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cunit/ChangeLog,v 1.11 2005/11/16 15:51:55 metalgod Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cunit/ChangeLog,v 1.12 2007/01/05 07:00:47 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> cunit-2.0.ebuild:
+  Remove gnuconfig inherit.
 
   16 Nov 2005; Luis Medinas <metalgod@gentoo.org> cunit-2.0.ebuild:
   Added ~amd64 keyword. Closes bug #112662.
