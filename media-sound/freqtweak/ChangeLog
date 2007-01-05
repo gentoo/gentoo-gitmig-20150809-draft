@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/freqtweak
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freqtweak/ChangeLog,v 1.16 2005/04/25 16:50:52 luckyduck Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freqtweak/ChangeLog,v 1.17 2007/01/05 17:31:41 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> freqtweak-0.6.0.ebuild:
+  Use eerror rather than einfo.
 
 *freqtweak-0.6.0-r1 (25 Apr 2005)
 

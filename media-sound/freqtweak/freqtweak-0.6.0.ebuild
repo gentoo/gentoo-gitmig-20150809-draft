@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freqtweak/freqtweak-0.6.0.ebuild,v 1.7 2005/01/16 21:33:01 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freqtweak/freqtweak-0.6.0.ebuild,v 1.8 2007/01/05 17:31:41 flameeyes Exp $
 
 IUSE=""
 
@@ -27,10 +27,10 @@ src_unpack() {
 
 pkg_setup() {
 	if wx-config --cppflags | grep gtk2u >& /dev/null; then
-		einfo "${PN} will not build if wxGTK was compiled"
-		einfo "with unicode support.  If you are using a version of"
-		einfo "wxGTK <= 2.4.2, you must set USE=-gtk2.  In newer versions,"
-		einfo "you must set USE=-unicode."
+		eerror "${PN} will not build if wxGTK was compiled"
+		eerror "with unicode support.  If you are using a version of"
+		eerror "wxGTK <= 2.4.2, you must set USE=-gtk2.	 In newer versions,"
+		eerror "you must set USE=-unicode."
 		die "wxGTK must be re-emerged without unicode suport"
 	fi
 }
