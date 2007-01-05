@@ -1,8 +1,7 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.12.ebuild,v 1.8 2006/09/10 22:54:53 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.12.ebuild,v 1.9 2007/01/05 08:00:36 flameeyes Exp $
 
-inherit gnuconfig
 
 DESCRIPTION="open source graph drawing software"
 HOMEPAGE="http://www.research.att.com/sw/tools/graphviz/"
@@ -29,8 +28,6 @@ src_unpack() {
 	# when putting it in.
 	sed -i -e "s:+0 -1:-k 1,2:" "${S}/dotneato/common/Makefile.in"
 
-	# Run gnuconfig_update on all arches, needed at least for mips
-	gnuconfig_update
 }
 
 src_compile() {

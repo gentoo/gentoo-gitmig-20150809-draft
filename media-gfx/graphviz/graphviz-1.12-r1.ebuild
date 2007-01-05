@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.12-r1.ebuild,v 1.9 2006/09/10 22:54:53 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.12-r1.ebuild,v 1.10 2007/01/05 08:00:36 flameeyes Exp $
 
-inherit gnuconfig eutils
+inherit eutils
 
 DESCRIPTION="open source graph drawing software"
 HOMEPAGE="http://www.research.att.com/sw/tools/graphviz/"
@@ -27,8 +27,6 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# Run gnuconfig_update on all arches, needed at least for mips
-	gnuconfig_update
 
 	# this next chunk will be obsolete when 1.13 comes out
 	# it's a buildfix so that graphviz will build when TckTk is NOT being used

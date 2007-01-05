@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.16-r1.ebuild,v 1.4 2006/01/05 03:10:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.16-r1.ebuild,v 1.5 2007/01/05 08:00:36 flameeyes Exp $
 
-inherit gnuconfig eutils flag-o-matic
+inherit eutils flag-o-matic
 
 DESCRIPTION="open source graph drawing software"
 HOMEPAGE="http://www.research.att.com/sw/tools/graphviz/"
@@ -37,8 +37,6 @@ src_unpack() {
 		epatch ${FILESDIR}/${P}-common_h.patch
 	fi
 
-	# Run gnuconfig_update on all arches, needed at least for mips
-	gnuconfig_update
 
 	if ! use ppc-macos; then
 		#EPATCH_OPTS="-p1 -d${S}" epatch ${FILESDIR}/${P}-fontconfig-externalgd.diff || die "Failed to patch"
