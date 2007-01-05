@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.4.2.4-r3.ebuild,v 1.2 2005/11/29 17:41:21 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.4.2.4-r3.ebuild,v 1.3 2007/01/05 22:12:48 dirtyepic Exp $
 
 inherit eutils wxwidgets python multilib
 
@@ -99,7 +99,7 @@ src_install() {
 
 	echo ${wx_name} > ${D}/${site_pkgs}/wx.pth || \
 		die "Couldn't create wx.pth"
-	einfo "Setting ${wx_name} as system default wxPython"
+	elog "Setting ${wx_name} as system default wxPython"
 	echo ${wx_name} > ${D}/${site_pkgs}/wx.pth || \
 		die "Couldn't create wx.pth"
 
@@ -113,12 +113,10 @@ src_install() {
 
 pkg_postinst() {
 
-	einfo "Gentoo now uses the Multi-version method for SLOT'ing"
-	einfo "Developers see this site for instructions on using 2.4 or 2.6"
-	einfo "with your apps:"
-	einfo "http://wiki.wxpython.org/index.cgi/MultiVersionInstalls"
-	einfo "2.4 is still the default wxpython for now, but 2.6 apps should"
-	einfo "see the above website for selecting the 2.6 lib"
+	elog "Gentoo now uses the Multi-version method for SLOT'ing"
+	elog "Developers see this site for instructions on using 2.4 or 2.6"
+	elog "with your apps:"
+	elog "http://wiki.wxpython.org/index.cgi/MultiVersionInstalls"
 }
 
 pkg_postrm() {

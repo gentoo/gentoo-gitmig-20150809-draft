@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.3.3.ebuild,v 1.1 2006/12/29 12:51:32 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.3.3.ebuild,v 1.2 2007/01/05 22:12:48 dirtyepic Exp $
 
 inherit python wxwidgets eutils multilib
 
@@ -79,7 +79,7 @@ src_install() {
 
 	if [ -e "${site_pkgs}/wx.pth" ] && [ "`grep -o 2.4 ${site_pkgs}/wx.pth`" = "2.4" ]; then
 		rm "${D}"/${site_pkgs}/wx.pth
-		einfo "Keeping 2.4 as system default wxPython"
+		elog "Keeping 2.4 as system default wxPython"
 	else
 		if use unicode; then
 			wx_name=wx-${PV:0:3}-gtk2-unicode
@@ -87,7 +87,7 @@ src_install() {
 			wx_name=wx-${PV:0:3}-gtk2-ansi
 		fi
 
-		einfo "Setting ${wx_name} as system default wxPython"
+		elog "Setting ${wx_name} as system default wxPython"
 		echo ${wx_name} > ${D}/${site_pkgs}/wx.pth || \
 			die "Couldn't create wx.pth"
 
@@ -103,11 +103,9 @@ src_install() {
 
 pkg_postinst() {
 
-	einfo "Gentoo now uses the Multi-version method for SLOT'ing"
-	einfo "Developers see this site for instructions on using 2.4 or 2.6"
-	einfo "with your apps:"
-	einfo "http://wiki.wxpython.org/index.cgi/MultiVersionInstalls"
-	einfo "2.4 is still the default wxpython for now, but 2.6 apps should"
-	einfo "see the above website for selecting the 2.6 lib"
+	elog "Gentoo now uses the Multi-version method for SLOT'ing"
+	elog "Developers see this site for instructions on using 2.4 or 2.6"
+	elog "with your apps:"
+	elog "http://wiki.wxpython.org/index.cgi/MultiVersionInstalls"
 }
 
