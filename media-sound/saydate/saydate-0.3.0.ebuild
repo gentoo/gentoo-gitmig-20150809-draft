@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/saydate/saydate-0.3.0.ebuild,v 1.14 2005/09/04 11:04:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/saydate/saydate-0.3.0.ebuild,v 1.15 2007/01/05 17:53:58 flameeyes Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A Linux shell program that talks the date and system uptime."
@@ -14,9 +14,9 @@ KEYWORDS="amd64 ~ppc ppc64 sparc x86"
 DEPEND="=sys-apps/sed-4*"
 IUSE=""
 
-src_compile() {
-	einfo 'Nothing to compile'
-}
+# Don't leave this empty or it tries to install directly
+# on livefs
+src_compile() { :; }
 
 src_install () {
 	insinto /usr/share/man/man1
