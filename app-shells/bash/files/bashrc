@@ -32,8 +32,10 @@ case ${TERM} in
 		PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}\033\\"'
 		;;
 esac
+
+use_color=false
 #BSD#@# BSD doesn't typically come with dircolors so we need
-#BSD#@# to be lame and hardcode some terminals in here.
+#BSD#@# to hardcode some terminals in here.
 #BSD#@case ${TERM} in
 #BSD#@	xterm*|rxvt*|Eterm|aterm|kterm|gnome|screen|cons25) use_color=true;;
 #BSD#@esac
@@ -43,7 +45,6 @@ esac
 # instead of using /etc/DIR_COLORS.  Try to use the external file
 # first to take advantage of user additions.  Use internal bash
 # globbing instead of external grep binary.
-use_color=false
 safe_term=${TERM//[^[:alnum:]]/?}   # sanitize TERM
 match_lhs=""
 [[ -f ~/.dir_colors   ]] && match_lhs="${match_lhs}$(<~/.dir_colors)"

@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.130 2007/01/04 23:44:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.131 2007/01/05 11:36:07 uberlord Exp $
+
+  05 Jan 2007; Roy Marples <uberlord@gentoo.org> files/bashrc:
+  Fix support for BSD systems.
 
   04 Jan 2007; Mike Frysinger <vapier@gentoo.org> files/bashrc:
   Add more support for BSD systems.
