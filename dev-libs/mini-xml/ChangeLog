@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/mini-xml
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mini-xml/ChangeLog,v 1.6 2005/05/18 14:43:54 jnc Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mini-xml/ChangeLog,v 1.7 2007/01/05 06:48:38 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> mini-xml-2.0.0.ebuild,
+  mini-xml-2.2.0.ebuild, mini-xml-2.2.1.ebuild:
+  Remove inherit for gnuconfig as it's not used anyway.
 
 *mini-xml-2.2.1 (18 May 2005)
 
