@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.38 2006/11/01 14:32:22 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.39 2007/01/05 13:16:57 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -60,7 +60,7 @@
 
 inherit base multilib eutils flag-o-matic
 
-IUSE="debug"
+IUSE=""
 
 # Name of the plugin stripped from all vdrplugin-, vdr- and -cvs pre- and postfixes
 VDRPLUGIN="${PN/#vdrplugin-/}"
@@ -142,7 +142,6 @@ delete_orphan_plugindb_file() {
 vdr-plugin_pkg_setup() {
 	# -fPIC is needed for shared objects on some platforms (amd64 and others)
 	append-flags -fPIC
-	use debug && append-flags -g
 
 	# Where should the plugins live in the filesystem
 	VDR_PLUGIN_DIR="/usr/$(get_libdir)/vdr/plugins"
