@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.0.3.ebuild,v 1.7 2006/09/10 17:30:35 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.0.3.ebuild,v 1.8 2007/01/05 17:48:42 weeve Exp $
 
 inherit eutils toolchain-funcs
 
@@ -33,9 +33,9 @@ no_flags_die() {
 }
 
 pkg_setup() {
-	einfo "Note: Support for all IM protocols are controlled by use flags."
-	einfo "      Make sure you've enabled the flags you want."
-	einfo ""
+	elog "Note: Support for all IM protocols are controlled by use flags."
+	elog "      Make sure you've enabled the flags you want."
+	elog ""
 
 	# Warn but not die if jabber is enabled but SSL is not
 	if ( use jabber && ( use !ssl && use !gnutls && use !nss ) ); then
@@ -141,8 +141,8 @@ src_install() {
 pkg_postinst() {
 	chown nobody:nobody ${ROOT}/var/lib/bitlbee
 	chmod 700 ${ROOT}/var/lib/bitlbee
-	einfo "The utils included in bitlbee (other than bitlbeed) are now"
-	einfo "located in /usr/share/bitlbee"
-	einfo
-	einfo "NOTE: The IRSSI script is no longer provided by BitlBee."
+	elog "The utils included in bitlbee (other than bitlbeed) are now"
+	elog "located in /usr/share/bitlbee"
+	elog
+	elog "NOTE: The IRSSI script is no longer provided by BitlBee."
 }

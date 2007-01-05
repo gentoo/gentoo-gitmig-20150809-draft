@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.0.1.ebuild,v 1.10 2006/09/02 22:20:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.0.1.ebuild,v 1.11 2007/01/05 17:48:42 weeve Exp $
 
 inherit eutils toolchain-funcs
 
@@ -32,17 +32,17 @@ no_flags_die() {
 }
 
 pkg_setup() {
-	einfo "Note: as of bitlbee-0.82-r1, all protocols are useflags."
-	einfo "      Make sure you've enabled the flags you want."
-	einfo ""
-	einfo "To use jabber over SSL or MSN Messenger, you will need to enable"
-	einfo "either the gnutls or openssl useflags."
+	elog "Note: as of bitlbee-0.82-r1, all protocols are useflags."
+	elog "      Make sure you've enabled the flags you want."
+	elog ""
+	elog "To use jabber over SSL or MSN Messenger, you will need to enable"
+	elog "either the gnutls or openssl useflags."
 
 	if use msnextras; then
-		einfo ""
-		einfo "NOTE: This is a patch for extra MSN functionality that is NOT"
-		einfo "      supported by upstream.  Please do not report any problems"
-		einfo "      to them about this as they will be ignored."
+		elog ""
+		elog "NOTE: This is a patch for extra MSN functionality that is NOT"
+		elog "      supported by upstream.  Please do not report any problems"
+		elog "      to them about this as they will be ignored."
 	fi
 
 	use jabber || use msn || use oscar || use yahoo || no_flags_die
@@ -126,8 +126,8 @@ src_install() {
 pkg_postinst() {
 	chown nobody:nobody ${ROOT}/var/lib/bitlbee
 	chmod 700 ${ROOT}/var/lib/bitlbee
-	einfo "The utils included in bitlbee (other than bitlbeed) are now"
-	einfo "located in /usr/share/bitlbee"
-	einfo
-	einfo "NOTE: The IRSSI script is no longer provided by BitlBee."
+	elog "The utils included in bitlbee (other than bitlbeed) are now"
+	elog "located in /usr/share/bitlbee"
+	elog
+	elog "NOTE: The IRSSI script is no longer provided by BitlBee."
 }
