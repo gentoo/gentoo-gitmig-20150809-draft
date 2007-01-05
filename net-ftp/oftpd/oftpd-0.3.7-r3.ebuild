@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/oftpd-0.3.7-r3.ebuild,v 1.2 2007/01/04 19:14:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/oftpd-0.3.7-r3.ebuild,v 1.3 2007/01/05 05:18:14 tgall Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.time-travellers.org/oftpd/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sh sparc ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ppc64 ~sh sparc ~x86"
 IUSE=""
 
 DEPEND="net-ftp/ftpbase"
