@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/gjiten-2.6.ebuild,v 1.1 2006/11/13 15:36:21 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/gjiten-2.6.ebuild,v 1.2 2007/01/05 16:06:08 flameeyes Exp $
 
 inherit eutils gnome2
 
@@ -25,21 +25,21 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS BUGS ChangeLog NEWS README TODO"
 
 pkg_postinst() {
-	einfo
-	einfo "Dictionary files are necessary in order for"
-	einfo "Gjiten to function."
-	einfo
-	einfo "Download dictionary files from:"
-	einfo "http://ftp.cc.monash.edu.au/pub/nihongo/00INDEX.html#dic_fil"
-	einfo "You need kanjidic and edict at a minimum.  Dictionary files"
-	einfo "must be converted to UTF-8 format - check the Gjiten help"
-	einfo "and README files for details."
-	einfo
-	einfo "A shell script is available from "
-	einfo "the Gjiten homepage(${HOMEPAGE}) to"
-	einfo "download and convert the dictionary files, but you need"
-	einfo "to put the files in /usr/share/gjiten after running the script."
-	einfo
+	elog
+	elog "Dictionary files are necessary in order for"
+	elog "Gjiten to function."
+	elog
+	elog "Download dictionary files from:"
+	elog "http://ftp.cc.monash.edu.au/pub/nihongo/00INDEX.html#dic_fil"
+	elog "You need kanjidic and edict at a minimum.  Dictionary files"
+	elog "must be converted to UTF-8 format - check the Gjiten help"
+	elog "and README files for details."
+	elog
+	elog "A shell script is available from "
+	elog "the Gjiten homepage(${HOMEPAGE}) to"
+	elog "download and convert the dictionary files, but you need"
+	elog "to put the files in /usr/share/gjiten after running the script."
+	elog
 
 	gnome2_pkg_postinst
 }

@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/kannadic
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kannadic/ChangeLog,v 1.17 2006/10/21 13:57:43 carlo Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kannadic/ChangeLog,v 1.18 2007/01/05 16:06:50 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> kannadic-1.7.0.ebuild,
+  kannadic-2.0.3.ebuild:
+  Convert to use elog.
 
   21 Oct 2006; Carsten Lohrke <carlo@gentoo.org> kannadic-1.7.0.ebuild,
   kannadic-2.0.3.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kannadic/kannadic-2.0.3.ebuild,v 1.8 2006/10/21 13:57:43 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kannadic/kannadic-2.0.3.ebuild,v 1.9 2007/01/05 16:06:50 flameeyes Exp $
 
 inherit kde
 
@@ -19,14 +19,14 @@ RDEPEND="${DEPEND}"
 need-kde 3
 
 pkg_postinst() {
-	einfo
-	einfo "Currently KannaDic doesn't create a dictionary for you,"
-	einfo "so you need to create one manually."
-	einfo "e.g) If you are going to add user dictionary named \"personal\", run"
-	einfo
-	einfo "\t% mkdic user"
-	einfo
-	einfo "and add [1m:user \"personal\"[0m to (use-dictionary ...) in your ~/.canna"
-	einfo "You may need to restart canna server in order to use your dictionary."
-	einfo
+	elog
+	elog "Currently KannaDic doesn't create a dictionary for you,"
+	elog "so you need to create one manually."
+	elog "e.g) If you are going to add user dictionary named \"personal\", run"
+	elog
+	elog "\t% mkdic user"
+	elog
+	elog "and add [1m:user \"personal\"[0m to (use-dictionary ...) in your ~/.canna"
+	elog "You may need to restart canna server in order to use your dictionary."
+	elog
 }

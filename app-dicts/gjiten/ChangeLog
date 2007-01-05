@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/gjiten
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/ChangeLog,v 1.14 2006/11/13 15:36:21 matsuu Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/ChangeLog,v 1.15 2007/01/05 16:06:08 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> gjiten-2.3.ebuild,
+  gjiten-2.4.ebuild, gjiten-2.6.ebuild:
+  Convert to use elog.
 
 *gjiten-2.6 (13 Nov 2006)
 
