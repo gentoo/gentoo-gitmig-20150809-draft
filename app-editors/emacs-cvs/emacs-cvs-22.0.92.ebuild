@@ -1,17 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.91.ebuild,v 1.4 2007/01/05 13:57:33 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.92.ebuild,v 1.1 2007/01/05 13:57:33 opfer Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
 ECVS_MODULE="emacs"
-ECVS_BRANCH="EMACS_PRETEST_22_0_91"
+ECVS_BRANCH="EMACS_PRETEST_22_0_92"
 
 inherit elisp-common cvs alternatives flag-o-matic eutils
 
 IUSE="X Xaw3d aqua gif gtk jpeg png spell tiff source gzip-el toolkit-scroll-bars"
 
-S=${WORKDIR}/emacs
+S="${WORKDIR}/emacs"
 
 DESCRIPTION="Emacs is the extensible, customizable, self-documenting real-time display editor."
 SRC_URI=""
@@ -35,7 +35,7 @@ DEPEND=">=sys-libs/ncurses-5.3
 
 PROVIDE="virtual/emacs virtual/editor"
 
-SLOT="22.0.91"
+SLOT="22.0.92"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~ppc-macos ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 

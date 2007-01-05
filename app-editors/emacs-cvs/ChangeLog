@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.59 2007/01/05 13:47:06 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.60 2007/01/05 13:57:33 opfer Exp $
+
+*emacs-cvs-22.0.92 (05 Jan 2007)
+
+  05 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
+  emacs-cvs-22.0.91.ebuild, +emacs-cvs-22.0.92.ebuild:
+  reflect branching from upstream CVS server correctly. Thanks to John R.
+  Graham <john_r_graham@mindspring.com>, who pointed out the correct solution
+  in bug #158730
 
   05 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
   -emacs-cvs-22.0.50-r1.ebuild, -emacs-cvs-22.0.50-r2.ebuild,
