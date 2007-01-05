@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.6-r2.ebuild,v 1.6 2006/10/28 00:50:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.6-r2.ebuild,v 1.7 2007/01/05 17:24:30 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -61,8 +61,8 @@ pkg_postinst() {
 		chown bossogg:bossogg /var/bossogg
 	fi
 
-	einfo "After running the /etc/init.d/bossogg service for the first"
-	einfo "time, /var/bossogg/.bossogg/bossogg.conf will be created."
-	einfo "Please edit this file and restart the service to setup."
-	einfo "the server."
+	elog "After running the /etc/init.d/bossogg service for the first"
+	elog "time, /var/bossogg/.bossogg/bossogg.conf will be created."
+	elog "Please edit this file and restart the service to setup."
+	elog "the server."
 }

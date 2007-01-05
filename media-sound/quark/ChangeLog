@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/quark
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quark/ChangeLog,v 1.10 2005/09/15 18:03:27 agriffis Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quark/ChangeLog,v 1.11 2007/01/05 17:48:09 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> quark-3.21.ebuild:
+  Convert to use elog.
 
   15 Sep 2005; Aron Griffis <agriffis@gentoo.org> quark-3.21.ebuild:
   Mark 3.21 stable on alpha

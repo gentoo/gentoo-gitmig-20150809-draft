@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/peercast-0.1217.ebuild,v 1.3 2006/03/12 17:53:02 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/peercast-0.1217.ebuild,v 1.4 2007/01/05 17:42:52 flameeyes Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -54,9 +54,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Start Peercast with '/etc/init.d/peercast start' and point your"
-	einfo "webbrowser to 'http://localhost:7144' to start using Peercast."
-	einfo
-	einfo "You can also run 'rc-update add peercast default' to make Peercast"
-	einfo "start at boot."
+	elog "Start Peercast with '/etc/init.d/peercast start' and point your"
+	elog "webbrowser to 'http://localhost:7144' to start using Peercast."
+	elog
+	elog "You can also run 'rc-update add peercast default' to make Peercast"
+	elog "start at boot."
 }

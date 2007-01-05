@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cdstatus
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdstatus/ChangeLog,v 1.13 2006/05/23 19:52:46 corsair Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdstatus/ChangeLog,v 1.14 2007/01/05 17:26:14 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> cdstatus-0.94a.ebuild,
+  cdstatus-0.95.04.ebuild:
+  Convert to use elog.
 
   23 May 2006; Markus Rothe <corsair@gentoo.org> cdstatus-0.94a.ebuild:
   Stable on ppc64

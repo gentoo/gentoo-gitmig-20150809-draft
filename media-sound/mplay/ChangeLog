@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mplay
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mplay/ChangeLog,v 1.9 2006/02/13 14:49:58 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mplay/ChangeLog,v 1.10 2007/01/05 17:37:58 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> mplay-0.68.ebuild,
+  mplay-0.80.ebuild:
+  Convert to use elog.
 
   13 Feb 2006; Michael Cummings <mcummings@gentoo.org> mplay-0.68.ebuild,
   mplay-0.80.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jmax/jmax-4.1.0.ebuild,v 1.7 2006/10/29 22:29:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jmax/jmax-4.1.0.ebuild,v 1.8 2007/01/05 17:33:53 flameeyes Exp $
 
 WANT_AUTOMAKE="1.4"
 WANT_AUTOCONF="2.5"
@@ -59,7 +59,7 @@ src_install () {
 
 pkg_postinst() {
 	echo
-	einfo "To get started, have a look at the tutorials"
-	einfo "in /usr/share/jmax/tutorials/basics"
+	elog "To get started, have a look at the tutorials"
+	elog "in /usr/share/jmax/tutorials/basics"
 	echo
 }

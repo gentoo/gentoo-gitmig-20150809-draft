@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quark/quark-3.21.ebuild,v 1.9 2005/09/15 18:03:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quark/quark-3.21.ebuild,v 1.10 2007/01/05 17:48:09 flameeyes Exp $
 
 IUSE=""
 
@@ -23,9 +23,9 @@ DEPEND=">=media-libs/xine-lib-1_beta10
 DOCS="AUTHORS README"
 
 pkg_postinst () {
-	einfo Quark is an anti-gui music player.
-	einfo
-	einfo Running the binary strange-quark will launch it in a
-	einfo freedesktop.org dock ie: Gnome Notification Area
-	einfo
+	elog Quark is an anti-gui music player.
+	elog
+	elog Running the binary strange-quark will launch it in a
+	elog freedesktop.org dock ie: Gnome Notification Area
+	elog
 }

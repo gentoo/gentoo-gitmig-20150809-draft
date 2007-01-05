@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmidiroute/qmidiroute-0.2.1.ebuild,v 1.1 2006/07/08 22:00:39 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmidiroute/qmidiroute-0.2.1.ebuild,v 1.2 2007/01/05 17:47:03 flameeyes Exp $
 
 IUSE=""
 
@@ -38,8 +38,8 @@ src_install() {
 }
 
 pkg_postinstall() {
-	einfo ""
-	einfo "You will find an example of MIDI filter configuration for use"
-	einfo "with aeolus in /usr/share/${PN}"
-	einfo ""
+	elog ""
+	elog "You will find an example of MIDI filter configuration for use"
+	elog "with aeolus in /usr/share/${PN}"
+	elog ""
 }

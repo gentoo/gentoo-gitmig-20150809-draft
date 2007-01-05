@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/prokyon3/prokyon3-0.9.4-r1.ebuild,v 1.4 2006/10/25 14:21:58 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/prokyon3/prokyon3-0.9.4-r1.ebuild,v 1.5 2007/01/05 17:45:55 flameeyes Exp $
 
 inherit qt3 eutils
 
@@ -65,19 +65,19 @@ src_install () {
 
 pkg_postinst() {
 	echo
-	einfo "Prokyon3 supports the following external programs"
-	einfo "to play audio tracks:"
-	einfo " - media-sound/amarok"
-	einfo " - media-sound/beep-media-player"
-	einfo " - media-video/kaffeine"
-	einfo " - media-video/mplayer"
-	einfo " - kde-base/noatun or kde-base/kdemultimedia"
-	einfo " - media-video/totem"
-	einfo " - media-sound/xmms"
-	einfo
-	einfo "Prokyon3 also supports the following external"
-	einfo "applications, if installed:"
-	einfo " - app-cdr/k3b:          CD burning"
-	einfo " - media-sound/mixxx:    DJ mixing"
+	elog "Prokyon3 supports the following external programs"
+	elog "to play audio tracks:"
+	elog " - media-sound/amarok"
+	elog " - media-sound/beep-media-player"
+	elog " - media-video/kaffeine"
+	elog " - media-video/mplayer"
+	elog " - kde-base/noatun or kde-base/kdemultimedia"
+	elog " - media-video/totem"
+	elog " - media-sound/xmms"
+	elog
+	elog "Prokyon3 also supports the following external"
+	elog "applications, if installed:"
+	elog " - app-cdr/k3b:          CD burning"
+	elog " - media-sound/mixxx:    DJ mixing"
 	echo
 }

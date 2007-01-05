@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/awesfx
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/ChangeLog,v 1.18 2006/03/07 13:25:13 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/ChangeLog,v 1.19 2007/01/05 17:23:30 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> awesfx-0.5.0c.ebuild,
+  awesfx-0.5.0d.ebuild:
+  Convert to use elog.
 
   07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> awesfx-0.5.0c.ebuild,
   awesfx-0.5.0d.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.9.7-r1.ebuild,v 1.3 2005/11/18 09:10:37 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.9.7-r1.ebuild,v 1.4 2007/01/05 17:33:11 flameeyes Exp $
 
 inherit eutils
 
@@ -71,7 +71,7 @@ EOF
 pkg_postinst() {
 	chown -R gnump3d:nogroup /var/log/gnump3d
 	chown -R gnump3d:nogroup /var/cache/gnump3d
-	while read line; do einfo "${line}"; done <<EOF
+	while read line; do elog "${line}"; done <<EOF
 
 Please edit your /etc/gnump3d/gnump3d.conf before running
 /etc/init.d/gnump3d start

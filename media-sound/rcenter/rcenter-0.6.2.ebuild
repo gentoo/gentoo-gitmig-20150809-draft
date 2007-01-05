@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rcenter/rcenter-0.6.2.ebuild,v 1.12 2006/03/07 15:44:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rcenter/rcenter-0.6.2.ebuild,v 1.13 2007/01/05 17:48:54 flameeyes Exp $
 
 inherit eutils toolchain-funcs
 
@@ -35,11 +35,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Rcenter Installed  - However You need to setup the scripts"
-	einfo "for making remote control commands actually work"
-	einfo
-	einfo "The Skel scripts can be copied from /usr/share/rcenter/config to <user>/.rcenter"
-	einfo "Where <user> is a person who will use rcenter"
-	einfo "Remeber to use emu-config -i to turn on the remote"
+	elog "Rcenter Installed  - However You need to setup the scripts"
+	elog "for making remote control commands actually work"
+	elog
+	elog "The Skel scripts can be copied from /usr/share/rcenter/config to <user>/.rcenter"
+	elog "Where <user> is a person who will use rcenter"
+	elog "Remeber to use emu-config -i to turn on the remote"
 }
 

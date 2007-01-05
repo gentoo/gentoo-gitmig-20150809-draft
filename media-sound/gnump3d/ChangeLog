@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gnump3d
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.48 2006/05/28 18:01:33 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.49 2007/01/05 17:33:11 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  gnump3d-2.9.7-r1.ebuild, gnump3d-2.9.8.ebuild:
+  Convert to use elog.
 
   28 May 2006; Diego Pettenò <flameeyes@gentoo.org> -gnump3d-2.9.7.ebuild:
   Remove vulnerable version.

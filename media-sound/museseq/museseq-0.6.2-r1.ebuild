@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.2-r1.ebuild,v 1.12 2006/01/28 18:49:56 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.2-r1.ebuild,v 1.13 2007/01/05 17:42:00 flameeyes Exp $
 
 IUSE="jack fluidsynth ladcca doc alsa"
 
@@ -91,13 +91,13 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Muse has been installed normally. If,"
-	einfo "you would like to use muse with real time"
-	einfo "time capabilities for the sequencer then do"
-	einfo "chmod 4755 /usr/bin/lmuse"
-	einfo
-	einfo "Muse can use /dev/rtc if it is compiled in"
-	einfo "to your kernel, or available as a module."
-	einfo
+	elog
+	elog "Muse has been installed normally. If,"
+	elog "you would like to use muse with real time"
+	elog "time capabilities for the sequencer then do"
+	elog "chmod 4755 /usr/bin/lmuse"
+	elog
+	elog "Muse can use /dev/rtc if it is compiled in"
+	elog "to your kernel, or available as a module."
+	elog
 }

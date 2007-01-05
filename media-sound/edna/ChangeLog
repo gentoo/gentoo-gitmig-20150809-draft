@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/edna
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.25 2005/12/26 14:27:48 lu_zero Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.26 2007/01/05 17:29:19 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> edna-0.5-r4.ebuild,
+  edna-0.5-r5.ebuild:
+  Convert to use elog.
 
   26 Dec 2005; Luca Barbato <lu_zero@gentoo.org> edna-0.5-r4.ebuild,
   edna-0.5-r5.ebuild:

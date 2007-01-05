@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/brutefir/brutefir-1.0f.ebuild,v 1.2 2006/02/16 09:20:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/brutefir/brutefir-1.0f.ebuild,v 1.3 2007/01/05 17:25:14 flameeyes Exp $
 
 inherit eutils
 
@@ -40,10 +40,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Brutefir is a complicated piece of software. Please"
-	einfo "read the documentation first! You can find"
-	einfo "documentation here: http://www.ludd.luth.se/~torger/brutefir.html"
-	einfo "Example config files are in /usr/share/brutefir"
-	einfo
+	elog
+	elog "Brutefir is a complicated piece of software. Please"
+	elog "read the documentation first! You can find"
+	elog "documentation here: http://www.ludd.luth.se/~torger/brutefir.html"
+	elog "Example config files are in /usr/share/brutefir"
+	elog
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/muse-0.9.1.ebuild,v 1.3 2005/05/28 13:51:02 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/muse-0.9.1.ebuild,v 1.4 2007/01/05 17:41:06 flameeyes Exp $
 
 inherit eutils
 
@@ -51,8 +51,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "You may want to have a look at /usr/share/doc/${PF}/README.gz"
-	einfo "for more info."
-	einfo
+	elog
+	elog "You may want to have a look at /usr/share/doc/${PF}/README.gz"
+	elog "for more info."
+	elog
 }

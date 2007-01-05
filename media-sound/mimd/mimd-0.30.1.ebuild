@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mimd/mimd-0.30.1.ebuild,v 1.3 2006/12/31 12:17:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mimd/mimd-0.30.1.ebuild,v 1.4 2007/01/05 17:34:26 flameeyes Exp $
 
 inherit eutils
 
@@ -49,10 +49,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Please read the documentation (mimd.html or man mimd) for "
-	einfo "instructions on configuring mimd. The DTD for the configuration "
-	einfo "files is in /usr/share/mimd/mimd.dtd, along with a sample "
-	einfo "configuration file (/usr/share/mimd/sample.xml)."
+	elog "Please read the documentation (mimd.html or man mimd) for "
+	elog "instructions on configuring mimd. The DTD for the configuration "
+	elog "files is in /usr/share/mimd/mimd.dtd, along with a sample "
+	elog "configuration file (/usr/share/mimd/sample.xml)."
 	ewarn "NOTE: You must have ip multicasting enabled in the kernel for this"
 	ewarn "daemon to work properly."
 }

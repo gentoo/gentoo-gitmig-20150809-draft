@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mplay/mplay-0.68.ebuild,v 1.7 2006/02/13 14:49:58 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mplay/mplay-0.68.ebuild,v 1.8 2007/01/05 17:37:58 flameeyes Exp $
 
 IUSE=""
 
@@ -72,6 +72,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Please note, gnome terminal does not like this program"
-	einfo "too much.  xterm,kterm, and konsole can use it ok."
+	elog "Please note, gnome terminal does not like this program"
+	elog "too much.  xterm,kterm, and konsole can use it ok."
 }

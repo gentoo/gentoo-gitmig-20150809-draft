@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.1.4-r1.ebuild,v 1.1 2005/04/18 19:13:29 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.1.4-r1.ebuild,v 1.2 2007/01/05 17:35:18 flameeyes Exp $
 
 IUSE="vorbis mad oss"
 
@@ -35,6 +35,6 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "The binary was renamed due to conflicts with moc"
-	einfo "from the QT project. Its new name is mocp."
+	elog "The binary was renamed due to conflicts with moc"
+	elog "from the QT project. Its new name is mocp."
 }

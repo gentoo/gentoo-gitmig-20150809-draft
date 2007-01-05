@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/jmax
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jmax/ChangeLog,v 1.13 2006/10/29 22:29:58 flameeyes Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jmax/ChangeLog,v 1.14 2007/01/05 17:33:53 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> jmax-4.1.0.ebuild:
+  Convert to use elog.
 
   29 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> jmax-4.1.0.ebuild:
   Fix autotools rebuilding, thanks to Patrick Lauer in bug #153347.

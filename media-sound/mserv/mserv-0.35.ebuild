@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/mserv-0.35.ebuild,v 1.13 2006/03/07 15:13:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/mserv-0.35.ebuild,v 1.14 2007/01/05 17:39:09 flameeyes Exp $
 
 inherit webapp-apache eutils toolchain-funcs
 
@@ -89,14 +89,14 @@ src_install() {
 pkg_postinst() {
 	webapp-detect
 
-	einfo
-	einfo "The wrapper program 'mservplay' is disabled for"
-	einfo "security reasons.  If you wish to use mservplay"
-	einfo "to pass a 'nice' value to mpg123, you must make"
-	einfo "/usr/bin/mservplay suid root."
-	einfo
-	einfo "The web client has been installed in"
-	einfo "${HTTPD_ROOT}/mserv."
+	elog
+	elog "The wrapper program 'mservplay' is disabled for"
+	elog "security reasons.  If you wish to use mservplay"
+	elog "to pass a 'nice' value to mpg123, you must make"
+	elog "/usr/bin/mservplay suid root."
+	elog
+	elog "The web client has been installed in"
+	elog "${HTTPD_ROOT}/mserv."
 	ewarn
 	ewarn "Please edit /etc/mserv/config and set path_tracks"
 	ewarn "to the location of your music files."

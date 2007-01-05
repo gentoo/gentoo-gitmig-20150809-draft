@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fmdrv/fmdrv-1.0.7.ebuild,v 1.7 2006/03/07 14:43:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fmdrv/fmdrv-1.0.7.ebuild,v 1.8 2007/01/05 17:30:23 flameeyes Exp $
 
 inherit toolchain-funcs
 
@@ -29,6 +29,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "If you want to use AdLib (FM OPL2), you need to setuid /usr/bin/fmdv."
-	einfo "chmod 4711 /usr/bin/fmdrv"
+	elog "If you want to use AdLib (FM OPL2), you need to setuid /usr/bin/fmdv."
+	elog "chmod 4711 /usr/bin/fmdrv"
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-5.1.ebuild,v 1.7 2006/07/27 14:47:45 deltacow Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-5.1.ebuild,v 1.8 2007/01/05 17:40:08 flameeyes Exp $
 
 inherit eutils toolchain-funcs
 
@@ -74,15 +74,15 @@ src_install() {
 
 pkg_postinst() {
 	if use svga ; then
-		einfo "Please note that using mupdisp in SVGA mode on the console"
-		einfo "requires that it can write to the console device. To allow"
-		einfo "this, make mupdisp setuid to root, like this:"
-		einfo
-		einfo "\tchown root /usr/bin/mupdisp"
-		einfo "\tchmod u+s /usr/bin/mupdisp"
+		elog "Please note that using mupdisp in SVGA mode on the console"
+		elog "requires that it can write to the console device. To allow"
+		elog "this, make mupdisp setuid to root, like this:"
+		elog
+		elog "\tchown root /usr/bin/mupdisp"
+		elog "\tchmod u+s /usr/bin/mupdisp"
 	fi
 	if use X || use svga ; then
 		echo
-		einfo "If you want to use mupdisp, make sure you also install ghostscript."
+		elog "If you want to use mupdisp, make sure you also install ghostscript."
 	fi
 }

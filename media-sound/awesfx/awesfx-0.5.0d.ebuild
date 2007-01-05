@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/awesfx-0.5.0d.ebuild,v 1.4 2006/03/07 13:25:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/awesfx-0.5.0d.ebuild,v 1.5 2007/01/05 17:23:30 flameeyes Exp $
 
 IUSE="alsa"
 
@@ -40,6 +40,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Please copy your SoundFont files from the original CD-ROM"
-	einfo "shipped with your soundcard to ${BANK_LOC}"
+	elog "Please copy your SoundFont files from the original CD-ROM"
+	elog "shipped with your soundcard to ${BANK_LOC}"
 }

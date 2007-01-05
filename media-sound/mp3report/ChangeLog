@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3report
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3report/ChangeLog,v 1.2 2005/10/01 22:25:50 ticho Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3report/ChangeLog,v 1.3 2007/01/05 17:36:01 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> mp3report-1.0.2.ebuild:
+  Convert to use elog.
 
   01 Oct 2005; Andrej Kacian <ticho@gentoo.org> mp3report-1.0.2.ebuild:
   Keyworded ~x86.

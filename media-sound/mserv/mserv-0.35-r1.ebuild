@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/mserv-0.35-r1.ebuild,v 1.6 2007/01/04 02:45:56 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/mserv-0.35-r1.ebuild,v 1.7 2007/01/05 17:39:09 flameeyes Exp $
 
 inherit webapp eutils toolchain-funcs
 
@@ -94,11 +94,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "The wrapper program 'mservplay' is disabled for"
-	einfo "security reasons.  If you wish to use mservplay"
-	einfo "to pass a 'nice' value to mpg123, you must make"
-	einfo "/usr/bin/mservplay suid root."
+	elog
+	elog "The wrapper program 'mservplay' is disabled for"
+	elog "security reasons.  If you wish to use mservplay"
+	elog "to pass a 'nice' value to mpg123, you must make"
+	elog "/usr/bin/mservplay suid root."
 	ewarn
 	ewarn "Please edit /etc/mserv/config and set path_tracks"
 	ewarn "to the location of your music files."

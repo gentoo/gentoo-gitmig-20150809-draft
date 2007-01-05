@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3report/mp3report-1.0.2.ebuild,v 1.2 2005/10/01 22:25:50 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3report/mp3report-1.0.2.ebuild,v 1.3 2007/01/05 17:36:01 flameeyes Exp $
 
 DESCRIPTION="Perl script to create an HTML report of MP3 files in a directory."
 HOMEPAGE="http://mp3report.sourceforge.net/"
@@ -24,5 +24,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "You can find templates in /usr/share/mp3report"
+	elog "You can find templates in /usr/share/mp3report"
 }

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qmidiroute
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmidiroute/ChangeLog,v 1.1 2006/07/08 22:00:39 fvdpol Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmidiroute/ChangeLog,v 1.2 2007/01/05 17:47:03 flameeyes Exp $
+
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  qmidiroute-0.2.1.ebuild:
+  Convert to use elog.
 
   08 Jul 2006; Frank van de Pol <fvdpol@gentoo.org> ChangeLog:
   Initial ebuild. Based on version in the proaudio portage overlay.

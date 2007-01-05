@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/edna-0.5-r5.ebuild,v 1.4 2005/12/26 14:27:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/edna-0.5-r5.ebuild,v 1.5 2007/01/05 17:29:19 flameeyes Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ src_unpack() {
 }
 
 src_install() {
-	einfo "Installing in daemon mode"
+	elog "Installing in daemon mode"
 	newinitd ${FILESDIR}/edna.gentoo edna
 
 	dodir /usr/bin /usr/$(get_libdir)/edna /usr/$(get_libdir)/edna/templates
@@ -50,13 +50,13 @@ src_install() {
 
 pkg_postinst() {
 	ewarn
-	einfo "Edit edna.conf to taste before starting (multiple source"
-	einfo "directories are allowed).  Test edna from a shell prompt"
-	einfo "until you have it configured properly, then add edna to"
-	einfo "the default runlevel when you're ready.  Add the USE flag"
-	einfo "vorbis if you want edna to serve ogg files."
-	einfo
-	einfo "See edna.conf and the html docs for more info, and set"
-	einfo "PYTHONPATH=/usr/lib/edna to run from a shell prompt."
+	elog "Edit edna.conf to taste before starting (multiple source"
+	elog "directories are allowed).  Test edna from a shell prompt"
+	elog "until you have it configured properly, then add edna to"
+	elog "the default runlevel when you're ready.  Add the USE flag"
+	elog "vorbis if you want edna to serve ogg files."
+	elog
+	elog "See edna.conf and the html docs for more info, and set"
+	elog "PYTHONPATH=/usr/lib/edna to run from a shell prompt."
 	ewarn
 }
