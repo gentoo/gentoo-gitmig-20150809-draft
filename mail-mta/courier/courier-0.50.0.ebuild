@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.50.0.ebuild,v 1.2 2006/11/23 20:24:09 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.50.0.ebuild,v 1.3 2007/01/05 07:58:11 flameeyes Exp $
 
-inherit eutils gnuconfig flag-o-matic
+inherit eutils flag-o-matic
 
 DESCRIPTION="An MTA designed specifically for maildirs"
 [ -z "${PV/?.??/}" ] && SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
@@ -76,7 +76,6 @@ src_compile() {
 	use fam || (
 		epatch ${FILESDIR}/fam-disable-check.patch
 		export WANT_AUTOCONF="2.5"
-		gnuconfig_update
 		cd ${S}/maildir
 		libtoolize --copy --force
 		ebegin "Recreating maildir without fam"
