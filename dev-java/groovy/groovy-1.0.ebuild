@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.0.ebuild,v 1.1 2007/01/05 05:08:21 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.0.ebuild,v 1.2 2007/01/05 14:12:06 caster Exp $
 
 inherit versionator java-pkg-2 java-ant-2
 
@@ -62,6 +62,8 @@ src_unpack() {
 
 	# We use ant NOT maven. This build.xml is generated using 'maven ant', and
 	# then the following tweaks:
+	#  - change libdir from /root/.ant/maven to target/lib
+	#    NOTE this could be also simplified using -Dlibdir=target/lib
 	#  - change build.classpath to use <fileset dir="${libdir}" includes="**/*.jar"/>
 	#     instead of using each individual jar
 	#  - remove get-deps from the depends of all targets. you should be able to
