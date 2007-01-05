@@ -1,8 +1,7 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fnlib/fnlib-0.5-r1.ebuild,v 1.24 2004/07/01 07:55:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fnlib/fnlib-0.5-r1.ebuild,v 1.25 2007/01/05 08:04:48 flameeyes Exp $
 
-inherit gnuconfig
 
 DESCRIPTION="Font Library"
 HOMEPAGE="http://www.enlightenment.org/"
@@ -17,7 +16,6 @@ DEPEND="virtual/libc
 	media-libs/imlib"
 
 src_compile() {
-	gnuconfig_update
 	econf --sysconfdir=/etc/fnlib || die
 	make || die
 }

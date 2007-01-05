@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.10-r2.ebuild,v 1.10 2006/09/04 03:39:01 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.10-r2.ebuild,v 1.11 2007/01/05 08:06:37 flameeyes Exp $
 
-inherit eutils flag-o-matic gnuconfig libtool
+inherit eutils flag-o-matic libtool
 
 DESCRIPTION="A high-quality and portable font engine"
 HOMEPAGE="http://www.freetype.org/"
@@ -41,7 +41,6 @@ src_unpack() {
 	cd ${S}/src/base
 	epatch ${FILESDIR}/${P}-fix_synth.patch
 
-	gnuconfig_update ${S}
 	elibtoolize
 	epunt_cxx
 
