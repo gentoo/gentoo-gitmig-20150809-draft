@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.12.4-r1.ebuild,v 1.9 2006/12/09 21:28:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.12.4-r1.ebuild,v 1.10 2007/01/05 04:29:15 leio Exp $
 
-inherit gnome.org libtool eutils flag-o-matic debug
+inherit gnome.org libtool eutils flag-o-matic
 
 DESCRIPTION="The GLib library of C routines"
 HOMEPAGE="http://www.gtk.org/"
