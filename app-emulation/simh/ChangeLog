@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/simh
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/simh/ChangeLog,v 1.5 2006/01/27 02:23:57 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/simh/ChangeLog,v 1.6 2007/01/05 23:54:47 kugelfang Exp $
+
+  05 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -simh-3.5.0.ebuild:
+  QA: Removed unused versions.
 
 *simh-3.5.2 (27 Jan 2006)
 
