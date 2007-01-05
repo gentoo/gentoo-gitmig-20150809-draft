@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.173 2007/01/05 03:50:46 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.174 2007/01/05 18:41:48 compnerd Exp $
+
+  05 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org> dbus-0.62-r2.ebuild:
+  fix up debug codepaths for qt bindings (bug #160112), disable qt4 on mips
 
   05 Jan 2007; Doug Goldstein <cardoe@gentoo.org> dbus-0.61-r1.ebuild,
   dbus-0.62-r2.ebuild, dbus-1.0.2.ebuild:

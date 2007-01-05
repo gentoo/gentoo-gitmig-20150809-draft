@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.62-r2.ebuild,v 1.10 2007/01/05 03:50:46 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.62-r2.ebuild,v 1.11 2007/01/05 18:41:48 compnerd Exp $
 
 WANT_AUTOCONF=2.5
 inherit eutils mono python multilib qt3 autotools flag-o-matic
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/glib-2.6
 	mono? ( >=dev-lang/mono-0.95 )
 	python? ( >=dev-lang/python-2.4 >=dev-python/pyrex-0.9.3-r2 )
 	qt3? ( $(qt_min_version 3.3) )
-	qt4? ( =x11-libs/qt-4.1* )
+	!mips? ( qt4? ( =x11-libs/qt-4.1* ) )
 	selinux? ( sys-libs/libselinux )
 	>=dev-libs/expat-1.95.8"
 
@@ -58,12 +58,20 @@ src_compile() {
 
 	if use qt3; then
 		myconf="${myconf} --enable-qt3=${QTDIR} --with-qt3-moc=${QTDIR}/bin/moc "
+
+		if use debug ; then
+			myconf="${myconf} --enable-qt-debug"
+		fi
 	else
 		myconf="${myconf} --disable-qt3 --without-qt3-moc"
 	fi
 
 	if use qt4; then
 		myconf="${myconf} --enable-qt --with-qt-moc=/usr/bin/moc"
+
+		if use debug ; then
+			myconf="${myconf} --enable-qt-debug"
+		fi
 	else
 		myconf="${myconf} --disable-qt --without-qt-moc"
 	fi
