@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/xstow
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/ChangeLog,v 1.7 2006/08/01 04:35:31 tsunam Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/ChangeLog,v 1.8 2007/01/05 23:09:51 kugelfang Exp $
+
+  05 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -xstow-0.4.6.ebuild:
+  QA: Removed unused versions.
 
   01 Aug 2006; Joshua Jackson <tsunam@gentoo.org> xstow-0.5.1.ebuild:
   Stable x86; bug #142343
