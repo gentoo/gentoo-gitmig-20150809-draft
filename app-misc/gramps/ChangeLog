@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gramps
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.37 2006/11/05 04:59:56 metalgod Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.38 2007/01/05 19:06:20 compnerd Exp $
+
+  05 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  -gramps-1.0.8.ebuild, -gramps-1.0.10.ebuild, -gramps-1.0.11.ebuild,
+  -gramps-2.0.11.ebuild:
+  pruning old versions
 
 *gramps-2.2.2 (05 Nov 2006)
 
