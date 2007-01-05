@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-encryption/gaim-encryption-2.38.ebuild,v 1.12 2006/12/22 18:39:05 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-encryption/gaim-encryption-2.38.ebuild,v 1.13 2007/01/05 04:34:00 flameeyes Exp $
 
-inherit flag-o-matic debug multilib
+inherit flag-o-matic multilib
 
 DESCRIPTION="GAIM Encryption PlugIn"
 HOMEPAGE="http://gaim-encryption.sourceforge.net/"
