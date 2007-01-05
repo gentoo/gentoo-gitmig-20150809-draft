@@ -1,7 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.2.ebuild,v 1.9 2006/10/25 20:18:34 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.2.ebuild,v 1.10 2007/01/05 21:01:54 nyhm Exp $
 
+WANT_AUTOCONF=latest
+WANT_AUTOMAKE=latest
 inherit eutils autotools games
 
 DESCRIPTION="an Ultima 7 game engine that runs on modern operating systems"
@@ -15,8 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ppc ~sparc x86"
 IUSE="timidity zlib"
 
-RDEPEND=">=media-libs/libsdl-1.2
-	>=media-libs/sdl-mixer-1.2.4
+RDEPEND="media-libs/libsdl
+	media-libs/sdl-mixer
 	media-libs/smpeg
 	media-libs/libogg
 	media-libs/libvorbis
@@ -35,13 +37,14 @@ src_unpack() {
 	cd music/
 	unpack U7MusicOGG_{1,2}of2.zip
 	cd "${S}"
-	epatch "${FILESDIR}/${P}"-gcc41.patch \
+	epatch \
+		"${FILESDIR}"/${P}-gcc41.patch \
 		"${FILESDIR}"/${P}-64bits.patch \
-		"${FILESDIR}/${P}"-x11link.patch
+		"${FILESDIR}"/${P}-x11link.patch
 	sed -i \
 		-e "s/u7siinstrics.data/u7siintrinsics.data/" \
-		usecode/ucxt/data/Makefile.in \
-		|| die "sed usecode/ucxt/data/Makefile.in failed"
+		usecode/ucxt/data/Makefile.am \
+		|| die "sed usecode/ucxt/data/Makefile.am failed"
 	# This fix is needed for gimp-plugin support if we want to turn that on.
 	#sed -i \
 		#-e 's/$(DESTDIR)$(GIMP_PLUGINS) /$(GIMP_PLUGINS) $(DESTDIR)/' \
@@ -64,10 +67,11 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" \
+	emake \
+		DESTDIR="${D}" \
 		desktopdir=/usr/share/applications/ \
 		icondir=/usr/share/icons \
-		install || die "make install failed"
+		install || die "emake install failed"
 	# no need for this directory for just playing the game
 	rm -rf "${D}${GAMES_DATADIR}/${PN}/estudio"
 	dodoc AUTHORS ChangeLog NEWS FAQ README README.1ST
@@ -79,15 +83,7 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	echo
-	if use timidity ; then
-		einfo "To hear music in exult, you have to install a timidity-patch."
-		einfo "Try this:"
-		einfo "		$ emerge timidity-eawpatches"
-		einfo "kernel drivers. Install alsa instead."
-		echo
-	fi
-	einfo "You *must* have the original Ultima7 The Black Gate and/or"
-	einfo "The Serpent Isle installed. "
-	einfo "See /usr/share/doc/${PF}/README.gz for information!"
+	elog "You *must* have the original Ultima7 The Black Gate and/or"
+	elog "The Serpent Isle installed."
+	elog "See /usr/share/doc/${PF}/README.gz for information!"
 }

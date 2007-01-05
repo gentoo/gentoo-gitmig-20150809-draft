@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/exult
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/ChangeLog,v 1.17 2006/10/25 20:18:34 tupone Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/ChangeLog,v 1.18 2007/01/05 21:01:54 nyhm Exp $
+
+  05 Jan 2007; Tristan Heaven <nyhm@gentoo.org> exult-1.2.ebuild:
+  Set WANT_AUTOCONF and WANT_AUTOMAKE
 
   25 Oct 2006; <tupone@gentoo.org> +files/exult-1.2-64bits.patch,
   exult-1.2.ebuild:
