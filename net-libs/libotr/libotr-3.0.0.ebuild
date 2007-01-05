@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libotr/libotr-3.0.0.ebuild,v 1.1 2005/11/14 06:00:04 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libotr/libotr-3.0.0.ebuild,v 1.2 2007/01/05 04:38:23 flameeyes Exp $
 
-inherit flag-o-matic eutils debug
+inherit flag-o-matic eutils
 
 DESCRIPTION="(OTR) Messaging allows you to have private conversations over instant messaging"
 HOMEPAGE="http://www.cypherpunks.ca/otr/"
