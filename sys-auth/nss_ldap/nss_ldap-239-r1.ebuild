@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/nss_ldap-239-r1.ebuild,v 1.11 2006/04/29 23:02:24 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/nss_ldap-239-r1.ebuild,v 1.12 2007/01/05 09:12:30 flameeyes Exp $
 
-inherit fixheadtails eutils gnuconfig multilib
+inherit fixheadtails eutils multilib
 
 IUSE="debug"
 
@@ -24,8 +24,6 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-239-tls-security-bug.patch
 	# fix head/tail stuff
 	ht_fix_file ${S}/Makefile.am ${S}/Makefile.in ${S}/depcomp
-	# update config.{guess,sub}
-	gnuconfig_update
 }
 
 src_compile() {

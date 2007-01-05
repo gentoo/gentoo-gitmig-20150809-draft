@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/nss_ldap-250-r1.ebuild,v 1.1 2006/06/14 09:27:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/nss_ldap-250-r1.ebuild,v 1.2 2007/01/05 09:12:30 flameeyes Exp $
 
-inherit fixheadtails eutils gnuconfig multilib
+inherit fixheadtails eutils multilib
 
 IUSE="debug sasl"
 
@@ -33,8 +33,6 @@ src_unpack() {
 	    -e '/^install-exec-local: nss_ldap.so/s,nss_ldap.so,,g' \
 	    ${S}/$i
 	done
-	# update config.{guess,sub}
-	gnuconfig_update
 }
 
 src_compile() {

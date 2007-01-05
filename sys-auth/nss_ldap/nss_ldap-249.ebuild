@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/nss_ldap-249.ebuild,v 1.6 2006/06/11 10:20:23 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/nss_ldap-249.ebuild,v 1.7 2007/01/05 09:12:30 flameeyes Exp $
 
-inherit fixheadtails eutils gnuconfig multilib
+inherit fixheadtails eutils multilib
 
 IUSE="debug"
 
@@ -25,8 +25,6 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-249-sasl-compile.patch
 	# fix head/tail stuff
 	ht_fix_file ${S}/Makefile.am ${S}/Makefile.in ${S}/depcomp
-	# update config.{guess,sub}
-	gnuconfig_update
 }
 
 src_compile() {
