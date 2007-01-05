@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.21.ebuild,v 1.4 2006/07/04 19:59:46 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.21.ebuild,v 1.5 2007/01/05 04:26:17 flameeyes Exp $
 
-inherit debug eutils kde-functions
+inherit eutils kde-functions
 
 IUSE="kde oracle debug"
 DESCRIPTION="TOra - Toolkit For Oracle"
