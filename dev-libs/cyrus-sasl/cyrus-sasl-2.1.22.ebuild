@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22.ebuild,v 1.19 2006/11/23 20:14:22 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22.ebuild,v 1.20 2007/01/05 07:38:58 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.9"
 
-inherit eutils gnuconfig flag-o-matic java-pkg multilib autotools
+inherit eutils flag-o-matic java-pkg multilib autotools
 
 ntlm_patch=${P}-ntlm_impl-spnego.patch.gz
 SASLAUTHD_CONF_VER=2.1.21
@@ -146,9 +146,6 @@ src_compile() {
 
 	# Use /dev/urandom instead of /dev/random. Bug #46038
 	use urandom && myconf="${myconf} --with-devrandom=/dev/urandom"
-
-	# Detect mips systems properly.
-	gnuconfig_update
 
 	econf \
 		--with-saslauthd=/var/lib/sasl2 \

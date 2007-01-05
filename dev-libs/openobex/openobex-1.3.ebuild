@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.3.ebuild,v 1.7 2006/10/14 09:07:23 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.3.ebuild,v 1.8 2007/01/05 07:41:26 flameeyes Exp $
 
-inherit autotools eutils gnuconfig
+inherit autotools eutils
 
 DESCRIPTION="An implementation of the OBEX protocol used for transferring data to mobile devices"
 HOMEPAGE="http://sourceforge.net/projects/openobex"
@@ -23,7 +23,6 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-as-needed.patch"
 	eautoreconf
-	gnuconfig_update
 }
 
 src_compile() {

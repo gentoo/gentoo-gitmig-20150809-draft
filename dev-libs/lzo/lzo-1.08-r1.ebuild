@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/lzo-1.08-r1.ebuild,v 1.22 2006/09/04 10:30:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/lzo-1.08-r1.ebuild,v 1.23 2007/01/05 07:40:23 flameeyes Exp $
 
-inherit eutils gnuconfig libtool
+inherit eutils libtool
 
 DESCRIPTION="An extremely fast compression and decompression library"
 HOMEPAGE="http://www.oberhumer.com/opensource/lzo/"
@@ -28,9 +28,6 @@ src_unpack() {
 }
 
 src_compile() {
-	#Needed on mips and probablly others
-	gnuconfig_update
-
 	econf --enable-shared || die
 	emake || die
 }
