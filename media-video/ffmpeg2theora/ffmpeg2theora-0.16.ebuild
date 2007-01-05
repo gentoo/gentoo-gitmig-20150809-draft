@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ffmpeg2theora-0.16.ebuild,v 1.2 2006/05/03 02:52:12 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ffmpeg2theora-0.16.ebuild,v 1.3 2007/01/05 20:36:00 flameeyes Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	if ! built_with_use media-libs/libtheora encode; then
-		einfo "ffmpeg2theora needs libtheora compiled with encode in USE."
+		eerror "ffmpeg2theora needs libtheora compiled with encode in USE."
 		die "libtheora built without encoding support."
 	fi
 }
