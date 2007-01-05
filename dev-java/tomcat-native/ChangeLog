@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/tomcat-native
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/ChangeLog,v 1.1 2007/01/05 01:27:31 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/ChangeLog,v 1.2 2007/01/05 23:43:00 caster Exp $
+
+  05 Jan 2007; Vlastimil Babka <caster@gentoo.org>
+  tomcat-native-1.1.8.ebuild:
+  Convert einfo to elog.
 
 *tomcat-native-1.1.8 (05 Jan 2007)
 

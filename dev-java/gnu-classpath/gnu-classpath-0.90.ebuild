@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.90.ebuild,v 1.12 2006/10/06 18:13:03 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.90.ebuild,v 1.13 2007/01/05 23:29:06 caster Exp $
 
 inherit eutils
 
@@ -83,8 +83,8 @@ src_install() {
 
 pkg_postinst() {
 	if use gtk && use cairo; then
-		einfo "GNU Classpath was compiled with preliminary cairo support."
-		einfo "To use that functionality set the system property"
-		einfo "gnu.java.awt.peer.gtk.Graphics to Graphics2D at runtime."
+		elog "GNU Classpath was compiled with preliminary cairo support."
+		elog "To use that functionality set the system property"
+		elog "gnu.java.awt.peer.gtk.Graphics to Graphics2D at runtime."
 	fi
 }

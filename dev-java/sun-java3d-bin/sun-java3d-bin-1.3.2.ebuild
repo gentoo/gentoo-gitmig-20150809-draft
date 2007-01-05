@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-java3d-bin/sun-java3d-bin-1.3.2.ebuild,v 1.3 2005/07/18 17:44:55 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-java3d-bin/sun-java3d-bin-1.3.2.ebuild,v 1.4 2007/01/05 23:38:43 caster Exp $
 
 inherit java-pkg
 
@@ -39,7 +39,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "This ebuild installs into /opt/${PN} and /usr/share/${PN}"
-	einfo 'To use you need to pass the following to java'
-	einfo '-Djava.library.path=$(java-config -i sun-java3d-bin) -cp $(java-config -p sun-java3d-bin)'
+	elog "This ebuild installs into /opt/${PN} and /usr/share/${PN}"
+	elog 'To use you need to pass the following to java'
+	elog '-Djava.library.path=$(java-config -i sun-java3d-bin) -cp $(java-config -p sun-java3d-bin)'
 }

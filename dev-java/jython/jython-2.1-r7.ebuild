@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r7.ebuild,v 1.3 2006/10/05 18:00:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r7.ebuild,v 1.4 2007/01/05 23:34:00 caster Exp $
 
 inherit java-pkg-2
 
@@ -73,13 +73,13 @@ src_install() {
 
 pkg_postinst() {
 	if use readline; then
-		einfo "To use readline you need to add the following to your registery"
-		einfo
-		einfo "python.console=org.python.util.ReadlineConsole"
-		einfo "python.console.readlinelib=GnuReadline"
-		einfo
-		einfo "The global registry can be found in /usr/share/${PN}/registry"
-		einfo "User registry in \$HOME/.jython"
-		einfo "See http://www.jython.org/docs/registry.html for more information"
+		elog "To use readline you need to add the following to your registery"
+		elog
+		elog "python.console=org.python.util.ReadlineConsole"
+		elog "python.console.readlinelib=GnuReadline"
+		elog
+		elog "The global registry can be found in /usr/share/${PN}/registry"
+		elog "User registry in \$HOME/.jython"
+		elog "See http://www.jython.org/docs/registry.html for more information"
 	fi
 }

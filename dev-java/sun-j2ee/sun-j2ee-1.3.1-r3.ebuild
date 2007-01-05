@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2ee/sun-j2ee-1.3.1-r3.ebuild,v 1.4 2006/11/14 01:16:01 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2ee/sun-j2ee-1.3.1-r3.ebuild,v 1.5 2007/01/05 23:37:06 caster Exp $
 
 inherit java-pkg eutils
 
@@ -51,6 +51,6 @@ END
 }
 
 pkg_postinst() {
-	einfo "Remember to set JAVA_HOME before running /opt/${P}/bin/j2ee"
-	einfo "A set of sample configuration files (that work) can be found in /opt/${P}/conf and /opt/${P}/config"
+	elog "Remember to set JAVA_HOME before running /opt/${P}/bin/j2ee"
+	elog "A set of sample configuration files (that work) can be found in /opt/${P}/conf and /opt/${P}/config"
 }

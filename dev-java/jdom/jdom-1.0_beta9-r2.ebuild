@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0_beta9-r2.ebuild,v 1.4 2006/11/30 15:50:24 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0_beta9-r2.ebuild,v 1.5 2007/01/05 23:31:51 caster Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -57,12 +57,12 @@ src_install() {
 
 pkg_postinst() {
 	if ! has_version '=dev-java/jaxen-1.1*'; then
-		einfo ""
-		einfo "If you want jaxen support for jdom then"
-		einfo "please emerge =dev-java/jaxen-1.1* first and"
-		einfo "re-emerge jdom.  Sorry for the"
-		einfo "inconvenience, this is to break out of the"
-		einfo "circular dependencies."
-		einfo ""
+		elog ""
+		elog "If you want jaxen support for jdom then"
+		elog "please emerge =dev-java/jaxen-1.1* first and"
+		elog "re-emerge jdom.  Sorry for the"
+		elog "inconvenience, this is to break out of the"
+		elog "circular dependencies."
+		elog ""
 	fi
 }

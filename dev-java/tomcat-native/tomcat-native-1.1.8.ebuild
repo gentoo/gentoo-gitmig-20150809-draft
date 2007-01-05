@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/tomcat-native-1.1.8.ebuild,v 1.2 2007/01/05 03:02:08 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/tomcat-native-1.1.8.ebuild,v 1.3 2007/01/05 23:43:00 caster Exp $
 
 inherit eutils java-pkg-2
 
@@ -33,10 +33,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo " APR should be available with Tomcat, for more information"
-	einfo " please see http://tomcat.apache.org/tomcat-6.0-doc/apr.html"
-	einfo
-	einfo " Please report any bugs to http://bugs.gentoo.org/"
-	einfo
+	elog
+	elog " APR should be available with Tomcat, for more information"
+	elog " please see http://tomcat.apache.org/tomcat-6.0-doc/apr.html"
+	elog
+	elog " Please report any bugs to http://bugs.gentoo.org/"
+	elog
 }

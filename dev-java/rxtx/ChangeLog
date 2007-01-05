@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/rxtx
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rxtx/ChangeLog,v 1.4 2006/10/31 18:57:20 betelgeuse Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rxtx/ChangeLog,v 1.5 2007/01/05 23:35:56 caster Exp $
+
+  05 Jan 2007; Vlastimil Babka <caster@gentoo.org> rxtx-2.1.7.2.ebuild:
+  Convert einfo to elog.
 
 *rxtx-2.1.7.2-r1 (31 Oct 2006)
 

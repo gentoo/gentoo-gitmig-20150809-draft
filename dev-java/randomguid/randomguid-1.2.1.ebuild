@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/randomguid/randomguid-1.2.1.ebuild,v 1.7 2006/10/05 18:12:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/randomguid/randomguid-1.2.1.ebuild,v 1.8 2007/01/05 23:34:55 caster Exp $
 
 inherit java-pkg
 
@@ -48,7 +48,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "RandomGUID.class has been moved from the <default>"
-	einfo "package into com.javaexchange, so the fully qualified"
-	einfo "class name is now: com.javaexchange.RandomGUID"
+	elog "RandomGUID.class has been moved from the <default>"
+	elog "package into com.javaexchange, so the fully qualified"
+	elog "class name is now: com.javaexchange.RandomGUID"
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/xmlrpc-1.2_beta1-r1.ebuild,v 1.4 2005/10/07 18:45:29 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/xmlrpc-1.2_beta1-r1.ebuild,v 1.5 2007/01/05 23:44:09 caster Exp $
 
 inherit java-pkg
 
@@ -36,7 +36,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "This port does not build Servlet and/or SSL extensions. This port"
-	einfo "does not provide examples examples either. Refer to README.txt for"
-	einfo "more details on this."
+	elog "This port does not build Servlet and/or SSL extensions. This port"
+	elog "does not provide examples examples either. Refer to README.txt for"
+	elog "more details on this."
 }

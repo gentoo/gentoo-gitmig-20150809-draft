@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlc/xmlc-2.2.5-r1.ebuild,v 1.1 2005/12/30 17:56:15 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlc/xmlc-2.2.5-r1.ebuild,v 1.2 2007/01/05 23:43:41 caster Exp $
 
 inherit java-pkg
 
@@ -77,9 +77,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "This release does not install dependencies of xmlc as separate jars or"
-	einfo "inside the xmlc-all-runtime.jar. You should make sure to include the"
-	einfo "dependencies by yourself when trying to run something using xmlc."
-	einfo "jtidy.jar is still installed because xmlc needs a modified version of"
-	einfo "it."
+	elog "This release does not install dependencies of xmlc as separate jars or"
+	elog "inside the xmlc-all-runtime.jar. You should make sure to include the"
+	elog "dependencies by yourself when trying to run something using xmlc."
+	elog "jtidy.jar is still installed because xmlc needs a modified version of"
+	elog "it."
 }

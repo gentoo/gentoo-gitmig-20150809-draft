@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/sun-jai-bin-1.1.2.01-r1.ebuild,v 1.5 2006/12/22 23:44:27 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/sun-jai-bin-1.1.2.01-r1.ebuild,v 1.6 2007/01/05 23:38:10 caster Exp $
 
 inherit java-pkg
 
@@ -34,9 +34,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "This ebuild now installs into /opt/${PN} and /usr/share/${PN}"
-	einfo 'To use you need to pass the following to java'
-	use x86 && einfo '-Djava.library.path=$(java-config -i sun-jai-bin)'
-	einfo '-classpath $(java-config -p sun-jai-bin)'
+	elog "This ebuild now installs into /opt/${PN} and /usr/share/${PN}"
+	elog 'To use you need to pass the following to java'
+	use x86 && elog '-Djava.library.path=$(java-config -i sun-jai-bin)'
+	elog '-classpath $(java-config -p sun-jai-bin)'
 }
 

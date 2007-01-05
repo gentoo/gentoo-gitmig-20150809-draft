@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.92.ebuild,v 1.1 2006/11/19 19:40:51 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.92.ebuild,v 1.2 2007/01/05 23:29:06 caster Exp $
 
 inherit eutils multilib
 
@@ -87,8 +87,8 @@ src_install() {
 
 pkg_postinst() {
 	if use gtk && use cairo; then
-		einfo "GNU Classpath was compiled with preliminary cairo support."
-		einfo "To use that functionality set the system property"
-		einfo "gnu.java.awt.peer.gtk.Graphics to Graphics2D at runtime."
+		elog "GNU Classpath was compiled with preliminary cairo support."
+		elog "To use that functionality set the system property"
+		elog "gnu.java.awt.peer.gtk.Graphics to Graphics2D at runtime."
 	fi
 }

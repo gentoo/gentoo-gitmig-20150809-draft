@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-java3d-bin
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-java3d-bin/ChangeLog,v 1.5 2005/09/10 14:46:03 axxo Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-java3d-bin/ChangeLog,v 1.6 2007/01/05 23:38:43 caster Exp $
+
+  05 Jan 2007; Vlastimil Babka <caster@gentoo.org>
+  sun-java3d-bin-1.3.2.ebuild, sun-java3d-bin-1.4.0_pre5.ebuild:
+  Convert einfo to elog.
 
 *sun-java3d-bin-1.4.0_pre5 (10 Sep 2005)
 

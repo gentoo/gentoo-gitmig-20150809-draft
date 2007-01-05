@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/proguard/proguard-3.6.ebuild,v 1.3 2006/08/20 12:22:57 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/proguard/proguard-3.6.ebuild,v 1.4 2007/01/05 23:33:59 caster Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -44,7 +44,7 @@ src_install() {
 
 pkg_postinst() {
 
-	einfo "Please see http://proguard.sourceforge.net/GPL_exception.html"
-	einfo "for linking exception information about ${PN}"
+	elog "Please see http://proguard.sourceforge.net/GPL_exception.html"
+	elog "for linking exception information about ${PN}"
 
 }

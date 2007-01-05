@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rxtx/rxtx-2.1.7.2.ebuild,v 1.1 2006/10/30 00:33:13 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rxtx/rxtx-2.1.7.2.ebuild,v 1.2 2007/01/05 23:35:56 caster Exp $
 
 inherit autotools java-pkg-2
 
@@ -81,16 +81,16 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
+	elog
 	if use lfd; then
-		einfo "Don't forget to enable the LockFileServer"
-		einfo "daemon (lfd) in /etc/xinetd.d/lfd"
+		elog "Don't forget to enable the LockFileServer"
+		elog "daemon (lfd) in /etc/xinetd.d/lfd"
 	else
-		einfo "RXTX uses UUCP style device-locks. You should"
-		einfo "add every user who needs to access serial ports"
-		einfo "to the 'uucp' group:"
-		einfo
-		einfo "    usermod -aG uucp <user>"
+		elog "RXTX uses UUCP style device-locks. You should"
+		elog "add every user who needs to access serial ports"
+		elog "to the 'uucp' group:"
+		elog
+		elog "    usermod -aG uucp <user>"
 	fi
-	einfo
+	elog
 }

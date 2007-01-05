@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmojo-bin/xmojo-bin-5.0.0.ebuild,v 1.8 2005/07/16 12:32:36 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmojo-bin/xmojo-bin-5.0.0.ebuild,v 1.9 2007/01/05 23:45:00 caster Exp $
 
 inherit java-pkg
 
@@ -24,7 +24,7 @@ src_compile() {
 	# supposed to plug into a servlet container, too, so we need to test
 	# it with jetty and tomcat. For now, I only use it to bootstrap
 	# groovy.
-	einfo "This is a binary package"
+	elog "This is a binary package"
 }
 
 src_install() {

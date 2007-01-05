@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xmlrpc
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/ChangeLog,v 1.10 2006/07/23 22:38:39 nelchael Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/ChangeLog,v 1.11 2007/01/05 23:44:09 caster Exp $
+
+  05 Jan 2007; Vlastimil Babka <caster@gentoo.org>
+  xmlrpc-1.2_beta1-r1.ebuild, xmlrpc-1.2_beta1-r2.ebuild:
+  Convert einfo to elog.
 
 *xmlrpc-1.2_beta1-r2 (23 Jul 2006)
 
