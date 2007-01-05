@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p10505.ebuild,v 1.10 2006/11/23 16:43:19 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p10505.ebuild,v 1.11 2007/01/05 03:44:44 flameeyes Exp $
 
-inherit flag-o-matic multilib eutils debug qt3
+inherit flag-o-matic multilib eutils qt3
 
 PATCHREV="${PV#*_p}"
 MY_PV="${PV%_*}"
