@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-access2/http-access2-2.0.6.ebuild,v 1.1 2006/07/07 02:56:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-access2/http-access2-2.0.6.ebuild,v 1.2 2007/01/06 16:02:34 flameeyes Exp $
 
 inherit ruby
 
@@ -24,9 +24,7 @@ src_unpack() {
 	sed -i -e "s%^SITELIBDIR = %SITELIBDIR = \"${D}\" + %" install.rb
 }
 
-src_compile() {
-	einfo "nothing to compile"
-}
+src_compile() { :; }
 
 src_install() {
 	my_sitedir=$(ruby -rrbconfig -e 'print Config::CONFIG["sitedir"]')
