@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.2.2.ebuild,v 1.9 2006/12/01 18:41:41 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.2.2.ebuild,v 1.10 2007/01/06 15:57:34 dev-zero Exp $
 
 inherit eutils autotools
 
@@ -11,7 +11,7 @@ SRC_URI="http://cairographics.org/releases/${P}.tar.gz"
 LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
 KEYWORDS="~alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
-IUSE="numeric"
+IUSE="examples numeric"
 
 RDEPEND=">=dev-lang/python-2.3
 	>=x11-libs/cairo-1.2.0
@@ -38,9 +38,11 @@ src_compile() {
 src_install() {
 	einstall || die "install failed"
 
-	insinto /usr/share/doc/${PF}/examples
-	doins -r examples/*
-	rm "${D}"/usr/share/doc/${PF}/examples/Makefile*
+	if use examples ; then
+		insinto /usr/share/doc/${PF}/examples
+		doins -r examples/*
+		rm "${D}"/usr/share/doc/${PF}/examples/Makefile*
+	fi
 
 	dodoc AUTHORS NOTES README NEWS ChangeLog
 }
