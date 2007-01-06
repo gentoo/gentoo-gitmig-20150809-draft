@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/tomcat-servlet-api-5.5.20.ebuild,v 1.1 2007/01/05 03:27:58 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/tomcat-servlet-api-5.5.20.ebuild,v 1.2 2007/01/06 21:21:47 wltjr Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -16,8 +16,10 @@ IUSE="doc java5 source"
 
 DEPEND="|| ( >=virtual/jdk-1.4 >=virtual/jdk-1.5 >=virtual/jdk-1.6 )
 	>=dev-java/ant-core-1.5
-	source? ( app-arch/zip )"
-RDEPEND="|| ( >=virtual/jre-1.4 >=virtual/jre-1.5 >=virtual/jre-1.6 )"
+	source? ( app-arch/zip )
+	>=dev-java/java-config-2.0.31"
+RDEPEND="|| ( >=virtual/jre-1.4 >=virtual/jre-1.5 >=virtual/jre-1.6 )
+	>=dev-java/java-config-2.0.31"
 
 S="${WORKDIR}/${MY_P}/servletapi"
 
