@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-0.9-r2.ebuild,v 1.1 2006/12/12 11:14:36 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-0.9-r2.ebuild,v 1.2 2007/01/06 15:47:48 drizzt Exp $
 
 inherit eutils qt3
 
@@ -52,6 +52,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "if you get crashes on startup re-emerge commoncpp2 ccrtp and	twinkle"
-	einfo "see http://www.xs4all.nl/~mfnboer/twinkle/faq.html#crash_startup"
+	elog "if you get crashes on startup re-emerge commoncpp2 ccrtp and	twinkle"
+	elog "see http://www.xs4all.nl/~mfnboer/twinkle/faq.html#crash_startup"
 }
