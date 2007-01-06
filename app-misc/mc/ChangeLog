@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.111 2006/11/15 11:00:22 jokey Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.112 2007/01/06 00:28:18 kugelfang Exp $
+
+  06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -mc-4.6.1-r2.ebuild:
+  QA: Removed unused versions.
 
 *mc-4.6.1-r3 (15 Nov 2006)
 

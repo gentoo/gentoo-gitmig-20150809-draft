@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/releaseforge
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/releaseforge/ChangeLog,v 1.4 2006/04/02 01:44:01 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/releaseforge/ChangeLog,v 1.5 2007/01/06 00:29:49 kugelfang Exp $
+
+  06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org>
+  -releaseforge-0.9.9.ebuild:
+  QA: Removed unused versions.
 
 *releaseforge-0.9.9c (02 Apr 2006)
 
