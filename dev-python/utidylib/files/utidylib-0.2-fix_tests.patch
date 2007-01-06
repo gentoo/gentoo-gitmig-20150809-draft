@@ -1,0 +1,31 @@
+--- tidy/test_tidy.py.orig	2007-01-06 21:43:08.000000000 +0100
++++ tidy/test_tidy.py	2007-01-06 21:43:27.000000000 +0100
+@@ -20,8 +20,8 @@
+     def defaultDocs(self):
+         doc1 = tidy.parseString(self.input1)
+         doc2 = tidy.parseString(self.input2)
+-        doc3 = tidy.parse("foo.htm")
+-        doc4 = tidy.parse("bar.htm") # doesn't exist
++        doc3 = tidy.parse("../foo.htm")
++        doc4 = tidy.parse("../bar.htm") # doesn't exist
+         return (doc1, doc2, doc3, doc4)
+     def test_badOptions(self):
+         badopts = [{'foo': 1}, {'indent': '---'}, {'indent_spaces': None}]
+@@ -34,7 +34,7 @@
+                 self.fail("Invalid option %s should have raised an error" %
+                           repr(dct))
+     def test_encodings(self):
+-        foo = file('foo.htm').read().decode('utf8').encode('ascii', 
++        foo = file('../foo.htm').read().decode('utf8').encode('ascii', 
+                                                            'xmlcharrefreplace')
+         doc1u = tidy.parseString(foo, input_encoding='ascii',
+                                  output_encoding='latin1')
+@@ -59,7 +59,7 @@
+ ##        self.failIf(len(doc2.errors)>1) # FIXME - tidylib doesn't
+ ##                                        # support this?
+         self.failUnless(str(doc2).find('\n')<0)
+-        doc3 = tidy.parse('foo.htm', char_encoding='utf8', 
++        doc3 = tidy.parse('../foo.htm', char_encoding='utf8', 
+                           alt_text='foo')
+         self.failUnless(str(doc3).find('alt="foo"')>=0)
+         self.failUnless(str(doc3).find('\xc3\xa9')>=0)
