@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.2-r1.ebuild,v 1.13 2007/01/05 22:50:01 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.2-r1.ebuild,v 1.14 2007/01/06 02:11:30 dirtyepic Exp $
 
-inherit wxlib gnuconfig
+inherit wxlib
 
 DESCRIPTION="GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit and
 wxbase non-gui library"
@@ -38,7 +38,6 @@ src_unpack() {
 }
 
 src_compile() {
-	gnuconfig_update
 	myconf="${myconf}
 		--with-png
 		--with-jpeg

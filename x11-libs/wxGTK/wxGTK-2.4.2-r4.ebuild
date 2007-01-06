@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2-r4.ebuild,v 1.9 2007/01/05 22:50:01 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2-r4.ebuild,v 1.10 2007/01/06 02:11:30 dirtyepic Exp $
 
-inherit flag-o-matic eutils gnuconfig multilib toolchain-funcs
+inherit flag-o-matic eutils multilib toolchain-funcs
 
 DESCRIPTION="GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit"
 HOMEPAGE="http://www.wxwidgets.org/"
@@ -50,8 +50,6 @@ src_unpack() {
 	if has_version '>=media-libs/freetype-2.2.1'; then
 		epatch ${FILESDIR}/${PN}-2.4.2-noftinternals.patch
 	fi
-
-	gnuconfig_update
 }
 
 pkg_setup() {
@@ -80,20 +78,18 @@ src_compile() {
 	myconf="${myconf} --with-gtk"
 	myconf="${myconf} `use_enable debug`"
 	myconf="${myconf} --libdir=/usr/$(get_libdir)"
+	myconf="${myconf} `use_with odbc`"
 
 	if use wxgtk1 ; then
 		mkdir build_gtk
 		elog "Building gtk version"
 		cd build_gtk
-		../configure ${myconf} `use_with odbc`\
-			--host=${CHOST} \
-			--prefix=/usr \
-			--infodir=/usr/share/info \
-			--mandir=/usr/share/man || die "./configure failed"
-		emake CXX="$(tc-getCXX)" CC="$(tc-getCC)" || die "make gtk failed"
+		ECONF_SOURCE=".." econf ${myconf} || die "econf gtk1 failed"
+		emake CXX="$(tc-getCXX)" CC="$(tc-getCC)" || die "emake gtk1 failed"
 		cd contrib/src
-		emake CXX="$(tc-getCXX)" CC="$(tc-getCC)" || die "make gtk contrib failed"
+		emake CXX="$(tc-getCXX)" CC="$(tc-getCC)" || die "emake gtk1 contrib failed"
 	fi
+
 	cd ${S}
 
 	if use gtk ; then
@@ -101,14 +97,10 @@ src_compile() {
 		elog "Building gtk2 version"
 		mkdir build_gtk2
 		cd build_gtk2
-		../configure ${myconf} `use_with odbc` \
-			--host=${CHOST} \
-			--prefix=/usr \
-			--infodir=/usr/share/info \
-			--mandir=/usr/share/man || die "./configure failed"
-		emake CXX="$(tc-getCXX)" CC="$(tc-getCC)" || die "make gtk2 failed"
+		ECONF_SOURCE=".." econf ${myconf} || die "econf gtk2 failed"
+		emake CXX="$(tc-getCXX)" CC="$(tc-getCC)" || die "emake gtk2 failed"
 		cd contrib/src
-		emake CXX="$(tc-getCXX)" CC="$(tc-getCC)" || die "make gtk2 contrib failed"
+		emake CXX="$(tc-getCXX)" CC="$(tc-getCC)" || die "emake gtk2 contrib failed"
 
 		cd ${S}
 
@@ -117,16 +109,10 @@ src_compile() {
 			elog "Building unicode version"
 			mkdir build_unicode
 			cd build_unicode
-			../configure ${myconf} \
-				--host=${CHOST} \
-				--prefix=/usr \
-				--infodir=/usr/share/info \
-				--mandir=/usr/share/man || die "./configure failed"
-
-			emake CXX="$(tc-getCXX)" CC="$(tc-getCC)" || die "make unicode failed"
-
+			ECONF_SOURCE=".." econf ${myconf} || die "econf unicode failed"
+			emake CXX="$(tc-getCXX)" CC="$(tc-getCC)" || die "emake unicode failed"
 			cd contrib/src
-			emake CXX="$(tc-getCXX)" CC="$(tc-getCC)" || die "make unicode contrib failed"
+			emake CXX="$(tc-getCXX)" CC="$(tc-getCC)" || die "emake unicode contrib failed"
 		fi
 	fi
 }
