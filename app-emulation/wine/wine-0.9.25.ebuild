@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.25.ebuild,v 1.3 2007/01/04 22:23:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.25.ebuild,v 1.4 2007/01/06 13:22:52 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/wine-${PV}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE="alsa arts cups dbus esd gif glut hal jack jpeg lcms ldap nas ncurses opengl oss scanner xml X"
+IUSE="alsa arts cups dbus esd glut hal jack jpeg lcms ldap nas ncurses opengl oss scanner xml X"
 RESTRICT="test" #72375
 
 RDEPEND=">=media-libs/freetype-2.0.0
@@ -33,7 +33,6 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	nas? ( media-libs/nas )
 	cups? ( net-print/cups )
 	opengl? ( virtual/opengl )
-	gif? ( media-libs/giflib )
 	jpeg? ( media-libs/jpeg )
 	ldap? ( net-nds/openldap )
 	glut? ( virtual/glut )
@@ -87,7 +86,6 @@ src_compile() {
 	config_cache nas audio/audiolib.h audio/soundlib.h
 	config_cache xml libxml/parser.h libxslt/pattern.h libxslt/transform.h
 	config_cache ldap ldap.h lber.h
-	config_cache gif gif_lib.h
 	config_cache glut glut:glutMainLoop
 	config_cache dbus dbus/dbus.h
 	config_cache hal hal/libhal.h
