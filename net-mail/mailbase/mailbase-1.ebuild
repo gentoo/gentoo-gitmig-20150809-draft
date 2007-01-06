@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/mailbase-1.ebuild,v 1.15 2006/10/17 11:00:11 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/mailbase-1.ebuild,v 1.16 2007/01/06 13:44:07 drizzt Exp $
 
 DESCRIPTION="MTA layout package"
 SRC_URI=""
@@ -14,6 +14,14 @@ IUSE="pam"
 RDEPEND="pam? ( virtual/pam )"
 
 S=${WORKDIR}
+
+get_permissions_oct() {
+	if [[ ${USERLAND} = GNU ]]; then
+		stat -c%a "${ROOT}$1"
+	elif [[ ${USERLAND} = BSD ]] || [[ ${USERLAND} = Darwin ]]; then
+		stat -f%p "${ROOT}$1" | cut -c 3-
+	fi
+}
 
 src_install() {
 	dodir /etc/mail
@@ -46,7 +54,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ "$(stat -c%a ${ROOT}/var/spool/mail/)" != "775" ] ; then
+	if [[ "$(get_permissions_oct /var/spool/mail)" != "775" ]] ; then
 		echo
 		ewarn
 		ewarn "Your ${ROOT}/var/spool/mail/ directory permissions differ from"
