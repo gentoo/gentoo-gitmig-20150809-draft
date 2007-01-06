@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmp4v2
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.25 2006/07/28 14:09:53 grobian Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.26 2007/01/06 16:05:22 redhatter Exp $
+
+  06 Jan 2007; Stuart Longland <redhatter@gentoo.org>
+  libmp4v2-1.5.0.1.ebuild:
+  Tested and working, marking ~mips (dep of media-libs/libmp4v2)
 
   28 Jul 2006; Fabian Groffen <grobian@gentoo.org> libmp4v2-1.5.0.1.ebuild:
   Marked ~ppc-macos (bug #141975)
