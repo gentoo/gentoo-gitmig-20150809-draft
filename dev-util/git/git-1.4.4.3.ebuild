@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.4.4.3.ebuild,v 1.7 2007/01/04 19:40:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.4.4.3.ebuild,v 1.8 2007/01/06 01:29:07 ferdy Exp $
 
 inherit python toolchain-funcs eutils elisp-common perl-module bash-completion
 
@@ -62,7 +62,7 @@ exportmakeopts() {
 showpkgdeps() {
 	local pkg=$1
 	shift
-	einfo "  $(printf "%-17s:" ${pkg}) ${@}"
+	elog "  $(printf "%-17s:" ${pkg}) ${@}"
 }
 
 src_unpack() {
@@ -137,8 +137,8 @@ src_test() {
 
 pkg_postinst() {
 	use emacs && elisp-site-regen
-	einfo "These additional scripts need some dependencies:"
-	einfo
+	elog "These additional scripts need some dependencies:"
+	echo
 	showpkgdeps git-archimport "dev-util/tla"
 	showpkgdeps git-cvsimport ">=dev-util/cvsps-2.1"
 	showpkgdeps git-svnimport "dev-util/subversion(USE=perl)"
@@ -146,7 +146,7 @@ pkg_postinst() {
 	showpkgdeps git-quiltimport "dev-util/quilt"
 	showpkgdeps git-cvsserver "dev-perl/DBI" "dev-perl/DBD-SQLite"
 	showpkgdeps git-instaweb "|| ( www-servers/lighttpd net-www/apache(SLOT=2) )"
-	einfo
+	echo
 }
 
 pkg_postrm() {

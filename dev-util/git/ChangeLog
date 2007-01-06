@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.155 2007/01/04 19:40:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.156 2007/01/06 01:29:07 ferdy Exp $
+
+  06 Jan 2007; Fernando J. Pereda <ferdy@gentoo.org> git-1.4.1.1.ebuild,
+  git-1.4.2.4.ebuild, git-1.4.3.5.ebuild, git-1.4.4.2.ebuild,
+  git-1.4.4.3.ebuild:
+  einfo -> elog
 
   04 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> git-1.4.4.3.ebuild:
   Stable on IA64.

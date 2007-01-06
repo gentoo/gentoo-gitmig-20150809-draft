@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.4.2.4.ebuild,v 1.8 2006/10/28 11:04:01 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.4.2.4.ebuild,v 1.9 2007/01/06 01:29:07 ferdy Exp $
 
 inherit python toolchain-funcs eutils elisp-common
 
@@ -123,25 +123,25 @@ src_test() {
 
 pkg_postinst() {
 	use emacs && elisp-site-regen
-	einfo
-	einfo "If you want to import arch repositories into git, consider using the"
-	einfo "git-archimport command. You should install dev-util/tla before."
-	einfo
-	einfo "If you want to import cvs repositories into git, consider using the"
-	einfo "git-cvsimport command. You should install >=dev-util/cvsps-2.1 before."
-	einfo
-	einfo "If you want to import svn repositories into git, consider using the"
-	einfo "git-svnimport command. You should install dev-util/subversion before."
-	einfo
-	einfo "If you want to manage subversion repositories using git, consider"
-	einfo "using git-svn. You should install dev-util/subversion and dev-perl/libwww-perl."
-	einfo
-	einfo "If you want to import a quilt series into git, consider using the"
-	einfo "git-quiltimport command. You should install dev-util/quilt before."
-	einfo
-	einfo "If you want to use the included CVS server you will need to install"
-	einfo "dev-perl/DBI and dev-perl/DBD-SQLite."
-	einfo
+	echo
+	elog "If you want to import arch repositories into git, consider using the"
+	elog "git-archimport command. You should install dev-util/tla before."
+	echo
+	elog "If you want to import cvs repositories into git, consider using the"
+	elog "git-cvsimport command. You should install >=dev-util/cvsps-2.1 before."
+	echo
+	elog "If you want to import svn repositories into git, consider using the"
+	elog "git-svnimport command. You should install dev-util/subversion before."
+	echo
+	elog "If you want to manage subversion repositories using git, consider"
+	elog "using git-svn. You should install dev-util/subversion and dev-perl/libwww-perl."
+	echo
+	elog "If you want to import a quilt series into git, consider using the"
+	elog "git-quiltimport command. You should install dev-util/quilt before."
+	echo
+	elog "If you want to use the included CVS server you will need to install"
+	elog "dev-perl/DBI and dev-perl/DBD-SQLite."
+	echo
 }
 
 pkg_postrm() {
