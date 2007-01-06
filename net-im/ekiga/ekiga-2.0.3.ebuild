@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ekiga-2.0.3.ebuild,v 1.9 2007/01/06 14:50:17 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ekiga-2.0.3.ebuild,v 1.10 2007/01/06 15:31:05 drizzt Exp $
 
 inherit gnome2 eutils flag-o-matic
 
@@ -42,12 +42,12 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	if ! built_with_use dev-libs/pwlib ldap; then
-		einfo "You need to build dev-libs/pwlib with USE=ldap enabled."
+		eerror "You need to build dev-libs/pwlib with USE=ldap enabled."
 		die "Pwlib w/o ldap-support detected."
 	fi
 
 	if use avahi && ! built_with_use net-dns/avahi dbus; then
-		einfo "You need to build net-dns/avahi with USE=dbus enabled."
+		eerror "You need to build net-dns/avahi with USE=dbus enabled."
 		die "Avahi without dbus-support detected."
 	fi
 }
@@ -55,11 +55,11 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 	# Fix configure to install schemafile into the proper directory
-	epatch ${FILESDIR}/${PN}-1.99.0-configure.patch
-	epatch ${FILESDIR}/${PN}-eggtrayicon-update.diff
-	epatch ${FILESDIR}/${PN}-eggtrayicon-transparency.diff
+	epatch "${FILESDIR}"/${PN}-1.99.0-configure.patch
+	epatch "${FILESDIR}"/${PN}-eggtrayicon-update.diff
+	epatch "${FILESDIR}"/${PN}-eggtrayicon-transparency.diff
 }
 
 src_compile() {
@@ -78,7 +78,7 @@ src_install() {
 	if use gnome; then
 		gnome2_src_install
 	else
-		make DESTDIR=${D} install || die "make install failed"
+		make DESTDIR="${D}" install || die "make install failed"
 
 		dodoc AUTHORS ChangeLog NEWS
 	fi
