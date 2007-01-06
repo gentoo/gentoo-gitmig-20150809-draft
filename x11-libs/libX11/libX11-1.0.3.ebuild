@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-1.0.3.ebuild,v 1.12 2006/10/08 17:57:01 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-1.0.3.ebuild,v 1.13 2007/01/06 00:56:17 kloeri Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -9,7 +9,7 @@ inherit x-modular
 
 DESCRIPTION="X.Org X11 library"
 
-KEYWORDS="~alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="ipv6"
 RESTRICT="mirror"
 
