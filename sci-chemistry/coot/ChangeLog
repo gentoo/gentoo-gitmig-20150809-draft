@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/coot
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.7 2006/09/26 08:01:53 dberkholz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.8 2007/01/06 22:27:48 kugelfang Exp $
+
+  06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -coot-0.1.2_pre1.ebuild:
+  QA: Removed unused versions.
 
   26 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; coot-0.1.2.ebuild:
   Stable on x86/ppc.
