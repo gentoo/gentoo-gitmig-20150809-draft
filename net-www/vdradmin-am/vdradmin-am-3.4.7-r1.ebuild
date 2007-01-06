@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/vdradmin-am-3.4.7-r1.ebuild,v 1.2 2006/12/18 17:11:26 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/vdradmin-am-3.4.7-r1.ebuild,v 1.3 2007/01/06 14:53:38 zzam Exp $
 
 inherit eutils
 
@@ -87,8 +87,8 @@ pkg_preinst() {
 	if [[ -f ${ROOT}${ETC_DIR}/vdradmind.conf ]]; then
 		cp ${ROOT}${ETC_DIR}/vdradmind.conf ${D}${ETC_DIR}/vdradmind.conf
 	else
-		einfo "Creating a new config-file."
-		echo
+		elog "Creating a new config-file."
+		elog
 
 		cat <<-EOF > ${D}${ETC_DIR}/vdradmind.conf
 			VDRCONFDIR = /etc/vdr
@@ -103,13 +103,13 @@ pkg_preinst() {
 		  | ${D}/usr/bin/vdradmind.pl --cfgdir ${D}${ETC_DIR} --config \
 		  |sed -e 's/: /: \n/g'
 
-		einfo
-		einfo "Created default user/password: gentoo-vdr/gentoo-vdr"
-		einfo
-		einfo "you can run \"emerge --config vdradmin-am\" if"
-		einfo "the default-values for vdr does not match your"
-		einfo "installation or change it in Setup-Menu of Web-Interface."
-		echo
+		elog
+		elog "Created default user/password: gentoo-vdr/gentoo-vdr"
+		elog
+		elog "you can run \"emerge --config vdradmin-am\" if"
+		elog "the default-values for vdr does not match your"
+		elog "installation or change it in Setup-Menu of Web-Interface."
+		elog
 	fi
 	chown ${VDRADMIN_USER}:${VDRADMIN_GROUP} ${D}${ETC_DIR}/vdradmind.conf
 }
@@ -118,7 +118,7 @@ pkg_postinst() {
 	if [[ -d ${ROOT}${ETC_DIR} ]]; then
 		local owner=$(stat ${ROOT}${ETC_DIR} -c "%U")
 		if [[ ${owner} != vdradmin ]]; then
-			einfo "Changing ownership of ${ETC_DIR}."
+			elog "Changing ownership of ${ETC_DIR}."
 			chown -R ${VDRADMIN_USER}:${VDRADMIN_GROUP} ${ROOT}${ETC_DIR}
 		fi
 	fi
