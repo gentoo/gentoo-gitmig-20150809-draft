@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/osptoolkit
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/osptoolkit/ChangeLog,v 1.5 2006/10/06 22:53:41 wolf31o2 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/osptoolkit/ChangeLog,v 1.6 2007/01/06 16:09:05 drizzt Exp $
+
+  06 Jan 2007; Timothy Redaelli <drizzt@gentoo.org> osptoolkit-3.3.4.ebuild:
+  s/einfo/elog/
+  Misc ebuild cleanups
 
   06 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   osptoolkit-3.3.4.ebuild:
