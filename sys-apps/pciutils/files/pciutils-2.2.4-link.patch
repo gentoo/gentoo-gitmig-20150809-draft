@@ -1,0 +1,28 @@
+--- pciutils-2.2.4/Makefile
++++ pciutils-2.2.4/Makefile
+@@ -34,9 +34,11 @@
+ lib/config.h lib/config.mk:
+ 	cd lib && ./configure "$(IDSDIR)" "$(VERSION)" "$(HOST)" "$(RELEASE)" "$(ZLIB)"
+ 
+-pcimodules: pcimodules.o common.o $(PCILIB)
+-lspci: lspci.o common.o $(PCILIB)
+-setpci: setpci.o common.o $(PCILIB)
++pcimodules: pcimodules.o common.o
++lspci: lspci.o common.o
++setpci: setpci.o common.o
++
++lspci setpci pcimodules: LDLIBS := $(PCILIB) $(LDLIBS)
+ 
+ pcimodules.o: pcimodules.c pciutils.h $(PCIINC)
+ lspci.o: lspci.c pciutils.h $(PCIINC)
+--- pciutils-2.2.4/lib/configure
++++ pciutils-2.2.4/lib/configure
+@@ -119,7 +119,7 @@
+ if [ "$zlib" = yes ] ; then
+ 	echo >>$c '#define PCI_COMPRESSED_IDS'
+ 	echo >>$c '#define PCI_IDS "pci.ids.gz"'
+-	echo >>$m 'LDFLAGS+=-lz'
++	echo >>$m 'LDLIBS+=-lz'
+ else
+ 	echo >>$c '#define PCI_IDS "pci.ids"'
+ fi

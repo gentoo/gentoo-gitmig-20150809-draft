@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.88 2007/01/06 09:02:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.89 2007/01/06 11:41:27 vapier Exp $
+
+  06 Jan 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/pciutils-2.2.4-link.patch, pciutils-2.2.4.ebuild:
+  Fix linking order between libpci and zlib #160421 by Alessandro Guido.
 
 *pciutils-2.2.4 (06 Jan 2007)
 
