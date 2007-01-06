@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r5.ebuild,v 1.7 2006/12/03 06:30:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r5.ebuild,v 1.8 2007/01/06 20:39:12 flameeyes Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="2.1"
@@ -42,10 +42,14 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-parallel-fpic-fbsd.patch"
 
 	# Use directly the same exact patch as flex as it works
+	# this waits for autoepatch to be removed
 	epatch "${FILESDIR}/flex-configure-LANG.patch"
 
 	# Let portage handle the stripping of binaries
 	sed -i -e "/strip cdparanoia/d" Makefile.in
+
+	# Fix --as-needed linking, bug #160547
+	epatch "${FILESDIR}/${P}-asneeded.patch"
 
 	# Fix Makefiles for parallel building. Bug #136128.
 	sed -i \
@@ -54,6 +58,7 @@ src_unpack() {
 		-e "/\$(MAKE) lessmessy$/d" \
 		interface/Makefile.in paranoia/Makefile.in
 
+	# You don't want to know.
 	mv configure.guess config.guess
 	mv configure.sub config.sub
 	sed -i -e '/configure.\(guess\|sub\)/d' "${S}"/configure.in
