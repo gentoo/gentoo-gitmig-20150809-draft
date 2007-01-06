@@ -1,7 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.6-r1.ebuild,v 1.6 2006/10/30 10:11:06 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.6-r1.ebuild,v 1.7 2007/01/06 01:46:56 nyhm Exp $
 
+WANT_AUTOCONF=latest
+WANT_AUTOMAKE=latest
 inherit eutils autotools
 
 DESCRIPTION="Open Dynamics Engine SDK"
