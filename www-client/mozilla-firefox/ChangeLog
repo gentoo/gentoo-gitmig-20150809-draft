@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.238 2007/01/06 04:39:35 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.239 2007/01/06 09:38:57 dertobi123 Exp $
+
+  06 Jan 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  mozilla-firefox-2.0.0.1.ebuild:
+  Stable on ppc wrt bug #160324.
 
   06 Jan 2007; Tom Gall <tgall@gentoo.org>
   mozilla-firefox-2.0.0.1.ebuild:
