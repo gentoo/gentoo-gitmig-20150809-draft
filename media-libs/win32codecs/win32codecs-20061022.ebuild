@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-20061022.ebuild,v 1.1 2007/01/06 15:35:00 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-20061022.ebuild,v 1.2 2007/01/06 20:23:59 beandog Exp $
 
 inherit multilib
 
@@ -16,12 +16,11 @@ RDEPEND="real? ( =virtual/libstdc++-3.3* )"
 
 S=${WORKDIR}/all-${PV}
 
-RESTRICT="nostrip"
+RESTRICT="strip"
 
-QA_TEXTRELS=""
-for f in vid*.xa ; do
-	QA_TEXTRELS="${QA_TEXTRELS} usr/lib32/win32/${f}"
-done
+QA_TEXTRELS="usr/$(get_libdir)/real/drvc.so
+	usr/$(get_libdir)/real/drv[34].so.6.0
+	usr/$(get_libdir)/win32/vid_*.xa"
 
 pkg_setup() {
 	# This is a binary x86 package => ABI=x86
