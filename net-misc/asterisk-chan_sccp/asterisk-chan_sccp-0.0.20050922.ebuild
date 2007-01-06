@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_sccp/asterisk-chan_sccp-0.0.20050922.ebuild,v 1.1 2005/09/22 21:19:39 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_sccp/asterisk-chan_sccp-0.0.20050922.ebuild,v 1.2 2007/01/06 16:46:23 drizzt Exp $
 
 inherit eutils
 
@@ -50,5 +50,5 @@ src_install() {
 
 pkg_postinst() {
 	ewarn "You have to disable asterisk's chan_skinny to use this module!"
-	einfo "Add \"noload => chan_skinny.so\" to ${ROOT}etc/asterisk/modules.conf"
+	elog "Add \"noload => chan_skinny.so\" to ${ROOT}etc/asterisk/modules.conf"
 }

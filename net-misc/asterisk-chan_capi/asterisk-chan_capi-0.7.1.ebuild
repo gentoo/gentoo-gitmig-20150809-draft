@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi/asterisk-chan_capi-0.7.1.ebuild,v 1.1 2006/10/09 00:51:11 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi/asterisk-chan_capi-0.7.1.ebuild,v 1.2 2007/01/06 16:50:51 drizzt Exp $
 
 inherit eutils toolchain-funcs
 
@@ -49,15 +49,15 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Please don't forget to enable chan_capi in"
-	einfo "your /etc/asterisk/modules.conf:"
-	einfo
-	einfo "load => chan_capi.so"
-	einfo
-	einfo "and in the [global] section:"
-	einfo "chan_capi.so=yes"
-	einfo
-	einfo "(see /usr/share/doc/${PF} for more information)"
-	einfo
+	echo
+	elog "Please don't forget to enable chan_capi in"
+	elog "your /etc/asterisk/modules.conf:"
+	echo
+	elog "load => chan_capi.so"
+	echo
+	elog "and in the [global] section:"
+	elog "chan_capi.so=yes"
+	echo
+	elog "(see /usr/share/doc/${PF} for more information)"
+	echo
 }

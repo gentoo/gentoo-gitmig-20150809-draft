@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/elianna-pack/elianna-pack-1.0.ebuild,v 1.3 2006/11/01 13:23:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/elianna-pack/elianna-pack-1.0.ebuild,v 1.4 2007/01/06 16:38:09 drizzt Exp $
 
 DESCRIPTION="Argentinean spanish sounds for asterisk"
 HOMEPAGE="http://www.ip-flow.com.ar/elianna_pack.html"
@@ -30,6 +30,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Remember to enable this language pack via language=ar"
-	einfo "entries in the corresponding /etc/asterisk/*.conf files"
+	elog "Remember to enable this language pack via language=ar"
+	elog "entries in the corresponding /etc/asterisk/*.conf files"
 }

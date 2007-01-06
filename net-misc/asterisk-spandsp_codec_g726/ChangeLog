@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk-spandsp_codec_g726
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-spandsp_codec_g726/ChangeLog,v 1.1 2006/10/07 23:07:48 sbriesen Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-spandsp_codec_g726/ChangeLog,v 1.2 2007/01/06 16:40:13 drizzt Exp $
+
+  06 Jan 2007; Timothy Redaelli <drizzt@gentoo.org>
+  asterisk-spandsp_codec_g726-0.0.2_pre26.ebuild:
+  s/einfo/elog/
 
 *asterisk-spandsp_codec_g726-0.0.2_pre26 (07 Oct 2006)
 

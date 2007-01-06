@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi/asterisk-chan_capi-0.4.0_pre1.ebuild,v 1.4 2005/08/16 16:30:33 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi/asterisk-chan_capi-0.4.0_pre1.ebuild,v 1.5 2007/01/06 16:50:51 drizzt Exp $
 
 IUSE=""
 
@@ -21,14 +21,14 @@ DEPEND=">=net-misc/asterisk-1.0.5-r1
 	!>=net-misc/asterisk-1.1.0
 	net-dialup/capi4k-utils"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}"/${MY_P}
 
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/chan_capi-0.3.5-gentoo.diff
-	epatch ${FILESDIR}/chan_capi-${PV}-fixstable.diff
+	cd "${S}"
+	epatch "${FILESDIR}"/chan_capi-0.3.5-gentoo.diff
+	epatch "${FILESDIR}"/chan_capi-${PV}-fixstable.diff
 
 	# compile for asterisk-stable
 	sed -i -e "s:^\(CFLAGS+=-DCVS_HEAD\):#\1:" \
@@ -36,8 +36,8 @@ src_unpack() {
 
 #	if use fax; then
 #		einfo "Enabling fax support"
-#		epatch ${WORKDIR}/chan_capi.diff
-#		cp ${WORKDIR}/app_capiFax.c ${S}
+#		epatch "${WORKDIR}"/chan_capi.diff
+#		cp "${WORKDIR}"/app_capiFax.c "${S}"
 #	fi
 }
 
@@ -46,18 +46,18 @@ src_compile() {
 }
 
 src_install() {
-	make INSTALL_PREFIX=${D} install config || die "make install failed"
+	make INSTALL_PREFIX="${D}" install config || die "make install failed"
 
 	dodoc INSTALL LICENSE README capi.conf
 }
 
 pkg_postinst() {
-	einfo "Please don't forget to enable chan_capi in your /etc/asterisk/modules.conf:"
-	einfo ""
-	einfo "load => chan_capi.so"
-	einfo ""
-	einfo "and in the global section:"
-	einfo "chan_capi.so=yes"
-	einfo ""
-	einfo "(see /usr/share/doc/${PF} for more information)"
+	elog "Please don't forget to enable chan_capi in your /etc/asterisk/modules.conf:"
+	echo
+	elog "load => chan_capi.so"
+	echo
+	elog "and in the global section:"
+	elog "chan_capi.so=yes"
+	echo
+	elog "(see /usr/share/doc/${PF} for more information)"
 }
