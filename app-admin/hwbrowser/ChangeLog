@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/hwbrowser
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hwbrowser/ChangeLog,v 1.2 2006/09/05 21:52:24 dberkholz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hwbrowser/ChangeLog,v 1.3 2007/01/06 23:00:28 dberkholz Exp $
+
+  06 Jan 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  hwbrowser-0.27.ebuild:
+  Add dep on rhpl (Timothy Redaelli).
 
   05 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   hwbrowser-0.27.ebuild:
