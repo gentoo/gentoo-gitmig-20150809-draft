@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jusb
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jusb/ChangeLog,v 1.2 2006/01/31 04:34:18 nichoj Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jusb/ChangeLog,v 1.3 2007/01/06 11:18:21 nelchael Exp $
+
+*jusb-0.4.4-r1 (06 Jan 2007)
+
+  06 Jan 2007; Krzysiek Pawlik <nelchael@gentoo.org> +jusb-0.4.4-r1.ebuild:
+  Migrated to generation 2, fixed SONAME and compiling to correct bytecode.
 
   31 Jan 2006; Joshua Nichols <nichoj@gentoo.org> jusb-0.4.4.ebuild:
   Fixed multilib-strict violation.
