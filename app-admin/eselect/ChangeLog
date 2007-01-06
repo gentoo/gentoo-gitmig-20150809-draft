@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.43 2007/01/06 18:20:29 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.44 2007/01/06 18:27:09 pioto Exp $
+
+  06 Jan 2007; Mike Kelly <pioto@gentoo.org> eselect-1.0.7.ebuild:
+  Mark stable on amd64 (okayed by Kugelfang).
 
   06 Jan 2007; Mike Kelly <pioto@gentoo.org> -eselect-1.0.6.ebuild:
   Remove old and kinda buggy 1.0.6 version.
