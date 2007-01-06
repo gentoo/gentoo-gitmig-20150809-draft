@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.48 2007/01/04 21:49:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.49 2007/01/06 19:33:46 beandog Exp $
+
+  06 Jan 2007; Steve Dibb <beandog@gentoo.org> package.use.mask:
+  Add -real to mplayer, adding native 64 bit realplayer support with amd64codecs
 
   04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> use.mask:
   Revert masking of PHP binary useflags.
