@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/locateopen
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/locateopen/ChangeLog,v 1.24 2006/11/20 21:00:23 blubb Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/locateopen/ChangeLog,v 1.25 2007/01/06 18:47:50 kloeri Exp $
+
+  06 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> locateopen-1.3.ebuild:
+  Stable on Alpha + IA64.
 
   20 Nov 2006; <blubb@gentoo.org> locateopen-1.3.ebuild:
   stable on amd64
