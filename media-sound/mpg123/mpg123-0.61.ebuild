@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.61.ebuild,v 1.2 2006/10/22 19:09:49 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.61.ebuild,v 1.3 2007/01/06 14:08:04 masterdriverz Exp $
+
+inherit eutils
 
 DESCRIPTION="Real Time mp3 player"
 HOMEPAGE="http://www.mpg123.de/"
@@ -10,39 +12,53 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
-IUSE="mmx 3dnow esd nas oss alsa sdl"
+IUSE="mmx 3dnow alsa oss sdl esd nas jack portaudio"
 
-RDEPEND="esd? ( media-sound/esound )
-	nas? ( media-libs/nas )
-	alsa? ( media-libs/alsa-lib )
-	sdl? ( media-libs/libsdl )"
+RDEPEND="alsa? ( media-libs/alsa-lib )
+	sdl? ( !alsa? ( !oss? ( media-libs/libsdl ) ) )
+	esd? ( !alsa? ( !oss? ( !sdl? ( media-sound/esound ) ) ) )
+	nas? ( !alsa? ( !oss? ( !sdl? ( !esd? ( media-libs/nas ) ) ) ) )
+	jack? ( !alsa? ( !oss? ( !sdl? ( !esd? ( !nas? ( media-sound/jack-audio-connection-kit ) ) ) ) ) )
+	portaudio? ( !alsa? ( !oss? ( !sdl? ( !esd? ( !nas? ( !jack? ( media-libs/portaudio ) ) ) ) ) ) )"
 
 DEPEND="${RDEPEND}"
 
 PROVIDE="virtual/mpg123"
 
 src_compile() {
+	local audiodev
 	if use alsa; then
-	  audiodev="alsa"
-	 elif use oss; then
-	  audiodev="oss"
-	 elif use sdl; then
-	  audiodev="sdl"
-	 elif use esd; then
-	  audiodev="esd"
-	 elif use ppc-macos; then
-	  audiodev="macosx";
-	 elif use nas; then
-	  audiodev="nas"
-	 else die "no audio device selected"
+		audiodev="alsa"
+	elif use oss; then
+		audiodev="oss"
+	elif use sdl; then
+		audiodev="sdl"
+	elif use esd; then
+		audiodev="esd"
+	elif use nas; then
+		audiodev="nas"
+	elif use jack; then
+		audiodev="jack"
+	elif use portaudio; then
+		audiodev="portaudio"
+	elif use ppc-macos; then
+		audiodev="macosx";
+	else audiodev="dummy"
 	fi
 
 	if use 3dnow; then
-	 myconf="--with-cpu=3dnow"
+		myconf="--with-cpu=3dnow"
 	elif use mmx; then
-	 myconf="--with-cpu=mmx"
+		myconf="--with-cpu=mmx"
 	fi
 
+	einfo "Compiling with ${audiodev} audio output."
+	einfo "If that is not what you want, then select exactly ONE"
+	einfo "of the following USE flags:"
+	einfo "alsa oss sdl esd nas jack portaudio"
+	einfo "and recompile ${PN}."
+	epause 5
+	
 	econf \
 	      --with-optimization=0 \
 	      --with-audio=$audiodev \
