@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/dangerdeep/dangerdeep-0.2.0.ebuild,v 1.2 2007/01/04 23:35:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/dangerdeep/dangerdeep-0.2.0.ebuild,v 1.3 2007/01/06 16:51:48 mcummings Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/dangerdeep-${PV}.tar.gz
 
 LICENSE="GPL-2 CCPL-Attribution-NonCommercial-NoDerivs-2.0"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="sse"
 
 RDEPEND="virtual/opengl
