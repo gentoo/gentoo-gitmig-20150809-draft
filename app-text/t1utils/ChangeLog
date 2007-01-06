@@ -1,6 +1,10 @@
 # ChangeLog for app-text/t1utils
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/t1utils/ChangeLog,v 1.23 2005/08/01 18:35:12 j4rg0n Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/t1utils/ChangeLog,v 1.24 2007/01/06 01:04:25 kugelfang Exp $
+
+  06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -t1utils-1.23.ebuild,
+  -t1utils-1.25.ebuild, -t1utils-1.28.ebuild:
+  QA: Removed unused versions.
 
   01 Aug 2005; Lina Pezzella <j4rg0n@gentoo.org> t1utils-1.32.ebuild:
   Stable ppc-macos

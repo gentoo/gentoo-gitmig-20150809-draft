@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tkman
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/ChangeLog,v 1.15 2005/01/01 16:38:51 eradicator Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/ChangeLog,v 1.16 2007/01/06 01:07:23 kugelfang Exp $
+
+  06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -tkman-2.1.ebuild:
+  QA: Removed unused versions.
 
   12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> :
   Don't assign default to S; header fix

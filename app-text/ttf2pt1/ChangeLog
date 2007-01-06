@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ttf2pt1
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ChangeLog,v 1.15 2006/08/15 19:46:49 wormo Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ChangeLog,v 1.16 2007/01/06 01:06:52 kugelfang Exp $
+
+  06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -ttf2pt1-3.3.3.ebuild:
+  QA: Removed unused versions.
 
   15 Aug 2006; Stephanie Lockwood-Childs <wormo@gentoo.org> +metadata.xml,
   +files/ttf2pt1-3.4.0-Makefile-multiline-sed.diff,
