@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libole2
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libole2/ChangeLog,v 1.18 2006/11/23 21:50:16 blubb Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libole2/ChangeLog,v 1.19 2007/01/06 03:53:43 kugelfang Exp $
+
+  06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org>
+  -libole2-0.2.3-r1.ebuild, -libole2-0.2.4.ebuild:
+  QA: Removed unused versions.
 
   23 Nov 2006; <blubb@gentoo.org> libole2-0.2.4-r1.ebuild:
   added ~amd64
