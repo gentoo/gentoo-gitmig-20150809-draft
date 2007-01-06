@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.4.8.ebuild,v 1.6 2006/12/03 17:22:25 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.4.8.ebuild,v 1.7 2007/01/06 16:05:00 pylon Exp $
 
 inherit eutils games
 
@@ -36,7 +36,9 @@ src_unpack() {
 	fi
 	cd ${S}
 	# Don't pre-strip binaries (bug #137822)
-	sed -i '/+= -s$/s/-s//' Makefile || die "sed failed"
+	sed -i -e '/+= -s$/s/-s//' Makefile || die "sed failed"
+	# Don't install into prefixed DATA_DIR
+	sed -i -e 's#DATA_DIR_PREFIXED:=$(PREFIX)/$(DATA_DIR)#DATA_DIR_PREFIXED:=$(DATA_DIR)#' Makefile || die "sed failed"
 }
 
 src_compile() {
@@ -60,9 +62,11 @@ src_compile() {
 		INSTALL=1 \
 		RELEASE=${PV} \
 		USE_HOMEDIR=1 \
+		DEST_DIR=${D} \
 		PERSONAL_DIR=.openttd \
-		PREFIX=/usr \
-		DATA_DIR=share/games/${PN} \
+		PREFIX=${GAMES_PREFIX} \
+		DATA_DIR=${GAMES_DATADIR}/${PN} \
+		CUSTOM_LANG_DIR=${GAMES_DATADIR}/${PN}/lang \
 		${myopts} \
 		|| die "emake failed"
 }
@@ -100,6 +104,7 @@ src_install() {
 	fi
 
 	dodoc readme.txt known-bugs.txt changelog.txt docs/Manual.txt docs/console.txt docs/multiplayer.txt
+	dohtml -a html,gif,png docs/*
 	newdoc scripts/readme.txt readme_scripts.txt
 	doman docs/openttd.6
 	prepgamesdirs
