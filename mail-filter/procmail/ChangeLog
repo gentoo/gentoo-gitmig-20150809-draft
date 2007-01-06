@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/procmail
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/ChangeLog,v 1.26 2006/05/12 07:04:36 ferdy Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/ChangeLog,v 1.27 2007/01/06 00:47:02 ferdy Exp $
+
+  06 Jan 2007; Fernando J. Pereda <ferdy@gentoo.org>
+  -procmail-3.22-r6.ebuild:
+  QA: Clean unused versions.
 
 *procmail-3.22-r8 (12 May 2006)
 
