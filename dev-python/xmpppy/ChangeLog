@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/xmpppy
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xmpppy/ChangeLog,v 1.6 2006/10/06 22:14:34 sbriesen Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xmpppy/ChangeLog,v 1.7 2007/01/06 20:17:19 sbriesen Exp $
+
+*xmpppy-0.4.0 (06 Jan 2007)
+
+  06 Jan 2007; Stefan Briesenick <sbriesen@gentoo.org> +xmpppy-0.4.0.ebuild:
+  version bump.
 
   06 Oct 2006; Stefan Briesenick <sbriesen@gentoo.org>
   -xmpppy-0.2_rc3.ebuild, -xmpppy-0.3.ebuild:
