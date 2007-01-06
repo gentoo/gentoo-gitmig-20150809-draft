@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/weechat
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.38 2006/10/01 14:49:07 swegener Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.39 2007/01/06 10:00:04 swegener Exp $
+
+*weechat-0.2.2 (06 Jan 2007)
+
+  06 Jan 2007; Sven Wegener <swegener@gentoo.org> +weechat-0.2.2.ebuild:
+  Version bump.
 
 *weechat-0.2.1 (01 Oct 2006)
 
