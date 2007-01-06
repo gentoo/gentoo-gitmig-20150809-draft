@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-14.3.1.ebuild,v 1.2 2006/12/18 20:02:25 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-14.3.1.ebuild,v 1.3 2007/01/06 21:08:48 welp Exp $
 
 inherit eutils
 
@@ -21,10 +21,13 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_compile() {
+	local myconf
+	myconf="${myconf} --disable-debian"
+
 	econf \
-	$(use_enable ipv6 ) \
-	$(use_enable !gnome legacy ) \
-	|| die "Configure failed!"
+	$(use_enable ipv6) \
+	$(use_enable !gnome legacy) \
+	${myconf} || die "Configure failed!"
 
 	emake || die "Make failed!"
 }
@@ -33,6 +36,5 @@ src_install() {
 	emake DESTDIR="${D}" install || die "Make Install failed!"
 
 	doicon ${FILESDIR}/tea_icon_v2.png
-#	domenu ${FILESDIR}/tea.desktop
 	make_desktop_entry tea Tea tea_icon_v2.png Office
 }

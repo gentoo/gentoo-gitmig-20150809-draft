@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-15.0.0.ebuild,v 1.2 2007/01/06 21:08:48 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-15.0.1.ebuild,v 1.1 2007/01/06 21:08:48 welp Exp $
 
 inherit eutils
 
@@ -27,10 +27,10 @@ src_compile() {
 	myconf="${myconf} --disable-debian"
 
 	econf \
-	$(use_enable ipv6 ) \
-	$(use_enable !gnome legacy ) \
-	$(use_enable hacking) \
+	$(use_enable ipv6) \
+	$(use_enable !gnome legacy) \
 	$(use_enable sounds) \
+	$(use_enable hacking) \
 	${myconf} || die "econf failed!"
 
 	emake || die "emake failed!"
