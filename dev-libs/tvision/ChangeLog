@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/tvision
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvision/ChangeLog,v 1.15 2006/11/05 14:57:17 truedfx Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvision/ChangeLog,v 1.16 2007/01/06 04:13:29 kugelfang Exp $
+
+  06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -tvision-2.0.1.ebuild,
+  -tvision-2.0.3.ebuild:
+  QA: Removed unused versions.
 
   05 Nov 2006; Harald van Dĳk <truedfx@gentoo.org>
   files/tvision-2.1.0_pre1-gcc41.patch:
