@@ -1,0 +1,46 @@
+diff -Nur gpac.old/applications/mp4box/Makefile gpac/applications/mp4box/Makefile
+--- gpac.old/applications/mp4box/Makefile	2006-12-27 22:59:08.000000000 +0100
++++ gpac/applications/mp4box/Makefile	2006-12-27 22:59:40.000000000 +0100
+@@ -45,7 +45,7 @@
+ all: $(PROG)
+ 
+ $(PROG): $(OBJS)
+-	$(CC) $(LDFLAGS) -o ../../bin/gcc/$@ $(OBJS) $(LINKFLAGS)
++	$(CC) $(LDFLAGS) -pthread -o ../../bin/gcc/$@ $(OBJS) $(LINKFLAGS)
+ 
+ 
+ %.o: %.c
+diff -Nur gpac.old/applications/mp4client/Makefile gpac/applications/mp4client/Makefile
+--- gpac.old/applications/mp4client/Makefile	2006-12-27 22:59:08.000000000 +0100
++++ gpac/applications/mp4client/Makefile	2006-12-27 23:03:40.000000000 +0100
+@@ -40,7 +40,7 @@
+ all: $(PROG)
+ 
+ MP4Client$(EXE): $(OBJS)
+-	$(CC) $(LDFLAGS) -o ../../bin/gcc/$@ $(OBJS) -L../../bin/gcc -lgpac -lz
++	$(CC) $(LDFLAGS) -pthread -o ../../bin/gcc/$@ $(OBJS) -L../../bin/gcc -lgpac -lz
+ 
+ %.o: %.c
+ 	$(CC) $(CFLAGS) $(INSTALL_FLAGS) -c -o $@ $< 
+@@ -48,8 +48,8 @@
+ clean: 
+ 	rm -f $(OBJS) ../../bin/gcc/$(PROG)
+ 
+-install: clean
+-	make -override BUILD_INSTALL=yes all
++install:
++	$(MAKE) -override BUILD_INSTALL=yes all
+ 	install -c -m 755 ../../bin/gcc/MP4Client "$(DESTDIR)$(prefix)/bin"
+ 
+ uninstall:
+diff -Nur gpac.old/applications/osmo4_wx/Makefile gpac/applications/osmo4_wx/Makefile
+--- gpac.old/applications/osmo4_wx/Makefile	2006-12-27 22:59:08.000000000 +0100
++++ gpac/applications/osmo4_wx/Makefile	2006-12-27 22:59:40.000000000 +0100
+@@ -64,7 +64,7 @@
+ 	echo -n 'APPLOsm4' > $(DESTDIR)$(mac_apps)/Osmo4.app/Contents/PkgInfo
+ else
+ 	rm -f wxOsmo4.o
+-	make -override BUILD_INSTALL=yes all
++	$(MAKE) -override BUILD_INSTALL=yes all
+ 	install -c -m 755 ../../bin/gcc/Osmo4 "$(DESTDIR)$(prefix)/bin"
+ endif

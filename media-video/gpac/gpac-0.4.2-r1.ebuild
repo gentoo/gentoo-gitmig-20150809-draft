@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.2-r1.ebuild,v 1.3 2006/12/21 14:26:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.2-r1.ebuild,v 1.4 2007/01/06 00:50:12 aballier Exp $
 
 inherit eutils wxwidgets flag-o-matic multilib toolchain-funcs
 
@@ -100,6 +100,7 @@ src_unpack() {
 	sed -i 's:/lib/gpac:/'$(get_libdir)'/gpac:' configure
 
 	epatch "${WORKDIR}/${P}-pic.patch"
+	epatch "${FILESDIR}/${P}-bsd.patch"
 }
 
 src_compile() {
