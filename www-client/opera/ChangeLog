@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.75 2007/01/06 11:46:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.76 2007/01/06 15:39:58 opfer Exp $
+
+  06 Jan 2007; Christian Faulhammer <opfer@gentoo.org> opera-9.10.ebuild:
+  stable x86, security bug #160369
 
   06 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> opera-9.10.ebuild:
   Stable on sparc wrt security #160369
