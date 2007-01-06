@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.94.0-r5.ebuild,v 1.5 2006/12/26 10:51:15 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.94.0-r5.ebuild,v 1.6 2007/01/06 17:44:34 kloeri Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 WANT_AUTOCONF=2.1
@@ -11,14 +11,14 @@ TBVER="1.5.0.5"
 TBPVER="0.1"
 
 DESCRIPTION="Gnupg encryption plugin for thunderbird."
-HOMEPAGE="http://www.enigmail.mozdev.org"
+HOMEPAGE="http://enigmail.mozdev.org"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${TBVER}/source/thunderbird-${TBVER}-source.tar.bz2
 	mirror://gentoo/mozilla-thunderbird-${TBVER}-patches-${TBPVER}.tar.bz2
 	http://www.mozilla-enigmail.org/downloads/src/enigmail-${EMVER}.tar.gz"
 
 KEYWORDS="~alpha ~amd64 ~ia64 mips ~ppc sparc ~x86"
 SLOT="0"
-LICENSE="MPL-1.1 NPL-1.1"
+LICENSE="MPL-1.1 GPL-2"
 IUSE=""
 
 DEPEND=">=mail-client/mozilla-thunderbird-${TBVER}"
