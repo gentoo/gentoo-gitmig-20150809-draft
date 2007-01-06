@@ -1,6 +1,10 @@
 # ChangeLog for app-text/docbook2X
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.15 2006/07/30 20:54:51 killerfox Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.16 2007/01/06 00:50:48 kugelfang Exp $
+
+  06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -docbook2X-0.6.1.ebuild,
+  -docbook2X-0.6.1-r1.ebuild:
+  QA: Removed unused versions.
 
   30 Jul 2006; Rene Nussbaumer <killerfox@gentoo.org>
   docbook2X-0.6.1-r2.ebuild:

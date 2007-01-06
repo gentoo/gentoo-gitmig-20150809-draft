@@ -1,6 +1,9 @@
 # ChangeLog for app-text/lout
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lout/ChangeLog,v 1.17 2005/10/02 20:00:05 grobian Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/lout/ChangeLog,v 1.18 2007/01/06 00:51:32 kugelfang Exp $
+
+  06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -lout-3.29.ebuild:
+  QA: Removed unused versions.
 
 *lout-3.31 (02 Oct 2005)
 

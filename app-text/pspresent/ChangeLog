@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pspresent
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/ChangeLog,v 1.17 2006/05/13 01:00:43 tcort Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/ChangeLog,v 1.18 2007/01/06 00:56:20 kugelfang Exp $
+
+  06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -pspresent-1.1.ebuild:
+  QA: Removed unused versions.
 
   12 May 2006; Thomas Cort <tcort@gentoo.org> pspresent-1.1.ebuild,
   pspresent-1.2.ebuild:
