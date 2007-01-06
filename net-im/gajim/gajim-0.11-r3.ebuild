@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.11-r3.ebuild,v 1.1 2007/01/06 03:16:23 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.11-r3.ebuild,v 1.2 2007/01/06 03:30:07 antarus Exp $
 
 inherit multilib python eutils
 
@@ -68,8 +68,7 @@ src_compile() {
 		$(use_enable spell gtkspell) \
 		$(use_enable dbus remote) \
 		$(use_with X x) \
-		${myconf} \
-		die || "econf failed"
+		${myconf} || die "econf failed"
 }
 
 src_install() {
