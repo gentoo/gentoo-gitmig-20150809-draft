@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/atlas-c++
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/ChangeLog,v 1.13 2005/05/06 11:36:02 swegener Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/ChangeLog,v 1.14 2007/01/06 19:32:30 kugelfang Exp $
+
+  06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -atlas-c++-0.4.4.ebuild,
+  -atlas-c++-0.4.6.ebuild:
+  QA: Removed unused versions.
 
   06 May 2005; Sven Wegener <swegener@gentoo.org> atlas-c++-0.4.6.ebuild,
   atlas-c++-0.5.92.ebuild:
