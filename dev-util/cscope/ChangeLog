@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cscope
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.83 2007/01/06 21:16:08 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.84 2007/01/06 23:00:15 seemant Exp $
+
+  06 Jan 2007; Seemant Kulleen <seemant@gentoo.org>
+  files/cscope-158831-warning_webscope.patch:
+  rediff to fix the patch -- and fixed grammar in the patch to clarify the
+  message
 
   06 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
   -files/cscope-15.5-can-2004-0996.patch, -files/cscope-15.5-memset.patch,
