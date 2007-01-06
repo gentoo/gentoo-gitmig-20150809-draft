@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.40 2007/01/05 17:24:19 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.41 2007/01/06 14:47:04 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -86,7 +86,7 @@ update_vdrplugindb() {
 		touch ${VDRPLUGINDB_DIR}/vdrplugindb
 	fi
 	if [[ -z $(grep ${CATEGORY}/${PN}-${PVR} ${VDRPLUGINDB_DIR}/vdrplugindb) ]]; then
-		elog "Adding plugin to vdrplugindb."
+		einfo "Adding plugin to vdrplugindb."
 		echo "a:1:${CATEGORY}/${PN}-${PVR}" >> ${VDRPLUGINDB_DIR}/vdrplugindb
 	fi
 }
@@ -95,7 +95,7 @@ remove_vdrplugindb() {
 	local VDRPLUGINDB_DIR=${ROOT}/var/lib/vdrplugin-rebuild/
 
 	if [[ -n $(grep ${CATEGORY}/${PN}-${PVR} ${VDRPLUGINDB_DIR}/vdrplugindb) ]]; then
-		elog "Removing ${CATEGORY}/${PN}-${PVR} from vdrplugindb."
+		einfo "Removing ${CATEGORY}/${PN}-${PVR} from vdrplugindb."
 		sed -ie "/.*${CATEGORY}\/${P}.*/d" ${VDRPLUGINDB_DIR}/vdrplugindb
 	fi
 }
@@ -135,7 +135,7 @@ delete_orphan_plugindb_file() {
 	fi
 
 	elog "Removing orphaned plugindb-file."
-	elog "#rm ${DB_FILE}"
+	elog "\t#rm ${DB_FILE}"
 	rm ${DB_FILE}
 }
 
@@ -160,8 +160,8 @@ vdr-plugin_pkg_setup() {
 	APIVERSION=$(awk -F'"' '/define APIVERSION/ {print $2}' ${VDR_INCLUDE_DIR}/config.h)
 	[[ -z ${APIVERSION} ]] && APIVERSION="${VDRVERSION}"
 
-	elog "Building ${PF} against vdr-${VDRVERSION}"
-	elog "APIVERSION: ${APIVERSION}"
+	einfo "Building ${PF} against vdr-${VDRVERSION}"
+	einfo "APIVERSION: ${APIVERSION}"
 }
 
 vdr-plugin_src_unpack() {
@@ -188,11 +188,11 @@ vdr-plugin_src_unpack() {
 				ewarn "There seems to be no plugin-directory with the name ${S##*/}"
 				ewarn "Perhaps you find one among these:"
 				cd "${WORKDIR}"
-				elog "$(/bin/ls -1 ${WORKDIR})"
+				ewarn "$(/bin/ls -1 ${WORKDIR})"
 				die "Could not change to plugin-source-directory!"
 			fi
 
-			elog "Patching Makefile"
+			einfo "Patching Makefile"
 			[[ -e Makefile ]] || die "Makefile of plugin can not be found!"
 			cp Makefile Makefile.orig
 
@@ -239,7 +239,7 @@ vdr-plugin_src_unpack() {
 			cd ${S}
 			if test -d "${VDR_LOCAL_PATCHES_DIR}/${PN}"; then
 				echo
-				elog "Applying local patches"
+				einfo "Applying local patches"
 				for LOCALPATCH in ${VDR_LOCAL_PATCHES_DIR}/${PN}/${PV}/*.{diff,patch}; do
 					test -f "${LOCALPATCH}" && epatch "${LOCALPATCH}"
 				done
@@ -265,7 +265,7 @@ vdr-plugin_copy_source_tree() {
 }
 
 vdr-plugin_install_source_tree() {
-	elog "Installing sources"
+	einfo "Installing sources"
 	destdir=${VDRSOURCE_DIR}/vdr-${VDRVERSION}/PLUGINS/src/${VDRPLUGIN}
 	insinto ${destdir}-${PV}
 	doins -r ${T}/source-tree/*
@@ -505,7 +505,7 @@ vdr-plugin_pkg_config() {
 
 fix_vdr_libsi_include()
 {
-	elog "Fixing include of libsi-headers"
+	einfo "Fixing include of libsi-headers"
 	local f
 	for f; do
 		sed -i "${f}" \
