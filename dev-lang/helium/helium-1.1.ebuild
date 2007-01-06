@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.1.ebuild,v 1.17 2006/09/19 23:41:57 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.1.ebuild,v 1.18 2007/01/06 18:21:43 kosmikus Exp $
 
 inherit java-pkg
 
@@ -66,6 +66,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "hi is now called texthint"
-	einfo "hint is a new GUI-based interpreter"
+	elog "hi is now called texthint"
+	elog "hint is a new GUI-based interpreter"
 }

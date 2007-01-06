@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/helium
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/ChangeLog,v 1.16 2006/09/19 23:41:57 dcoutts Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/ChangeLog,v 1.17 2007/01/06 18:21:43 kosmikus Exp $
+
+  06 Jan 2007; Andres Loeh <kosmikus@gentoo.org> helium-1.1.ebuild:
+  Fixed elog / einfo usage.
 
   19 Sep 2006; Duncan Coutts <dcoutts@gentoo.org> helium-1.1.ebuild,
   helium-1.2-r1.ebuild:

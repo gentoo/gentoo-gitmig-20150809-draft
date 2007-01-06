@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ghc
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.114 2006/10/03 23:42:18 dcoutts Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.115 2007/01/06 18:18:56 kosmikus Exp $
+
+  06 Jan 2007; Andres Loeh <kosmikus@gentoo.org> ghc-6.2.2.ebuild,
+  ghc-6.4.1-r2.ebuild, ghc-6.4.1-r3.ebuild, ghc-6.4.2.ebuild:
+  Fixed elog / einfo usage.
 
   03 Oct 2006; Duncan Coutts <dcoutts@gentoo.org>
   +files/ghc-6.4.2-sparcmangler.patch, ghc-6.4.2.ebuild:

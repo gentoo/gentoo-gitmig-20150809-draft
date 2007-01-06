@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.19 2005/10/07 19:33:57 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.20 2007/01/06 18:18:56 kosmikus Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -190,9 +190,9 @@ src_install () {
 
 pkg_postinst () {
 	ghc-reregister
-	einfo "If you have dev-lang/ghc-bin installed, you might"
-	einfo "want to unmerge it. It is no longer needed."
-	einfo
+	elog "If you have dev-lang/ghc-bin installed, you might"
+	elog "want to unmerge it. It is no longer needed."
+	elog
 	ewarn "If you upgrade from another ghc version, please run"
 	ewarn "/usr/sbin/ghc-updater to re-merge all ghc-based"
 	ewarn "Haskell libraries."

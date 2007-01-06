@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.1-r2.ebuild,v 1.14 2006/05/21 17:25:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.1-r2.ebuild,v 1.15 2007/01/06 18:18:56 kosmikus Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -138,9 +138,9 @@ src_compile() {
 	if use alpha || use hppa || use ppc64; then
 		echo "SplitObjs=NO" >> mk/build.mk
 	elif ! check_reqs_conditional; then
-		einfo "Turning off ghc's 'Split Objs' feature because this machine"
-		einfo "does not have enough RAM for it. This will have the effect"
-		einfo "of making binaries produced by ghc considerably larger."
+		elog "Turning off ghc's 'Split Objs' feature because this machine"
+		elog "does not have enough RAM for it. This will have the effect"
+		elog "of making binaries produced by ghc considerably larger."
 		echo "SplitObjs=NO" >> mk/build.mk
 	fi
 
@@ -198,9 +198,9 @@ pkg_postinst () {
 	$(ghc-getghcpkg) unregister Cabal > /dev/null
 	eend $?
 	ghc-reregister
-	einfo "If you have dev-lang/ghc-bin installed, you might"
-	einfo "want to unmerge it. It is no longer needed."
-	einfo
+	elog "If you have dev-lang/ghc-bin installed, you might"
+	elog "want to unmerge it. It is no longer needed."
+	elog
 	ewarn "IMPORTANT:"
 	ewarn "If you have upgraded from another version of ghc or"
 	ewarn "if you have switched from ghc-bin to ghc, please run:"
