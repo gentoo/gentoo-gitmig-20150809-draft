@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/files/p0f.initd2,v 1.1 2005/06/19 01:54:40 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/files/p0f.initd2,v 1.2 2007/01/06 19:14:42 cedk Exp $
 
 start() {
 	ebegin "Starting p0f"
@@ -18,15 +18,19 @@ start() {
 	for OneIP in `/sbin/ifconfig 2>/dev/null | grep 'inet addr' | sed -e 's/.*addr://' -e 's/ .*//'` ; do
 		BpfFilter="$BpfFilter and not src host $OneIP"
 	done
-	
+
+
 	# Create a lock file.
 	mkdir -p /var/lock/subsys
 	touch /var/lock/subsys/p0f
 	
 	# Start up p0f and filter out all packets originating from any of this machines IP's.
+	if [ -z "${P0FLOGFILE}" ]; then
+		P0FLOGFILE="/var/log/p0f"
+	fi
 	einfo "Logfile: ${P0FLOGFILE}"
 	start-stop-daemon --start --quiet --exec /usr/sbin/p0f -- -i "${P0FDEVICE}" \
-	"${P0FOPTIONS}" "${P0FLOGFILE}" "${BpfFilter}" >> "/var/log/p0f" 2>&1 &
+		"${P0FOPTIONS}" -o "${P0FLOGFILE}" -d "${BpfFilter}" 2>/dev/null
 	eend ${?}
 }
 

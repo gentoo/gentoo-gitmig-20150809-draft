@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-2.0.8.ebuild,v 1.1 2006/12/10 03:51:35 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-2.0.8.ebuild,v 1.2 2007/01/06 19:14:42 cedk Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="p0f performs passive OS detection based on SYN packets."
 HOMEPAGE="http://lcamtuf.coredump.cx/p0f.shtml"
@@ -27,8 +27,8 @@ src_unpack() {
 src_compile() {
 	local static
 	use static && static="static"
-	emake ${static} || die "emake ${static} failed"
-	emake ${static} p0fq || die "emake ${static} p0fq failed"
+	emake CC="$(tc-getCC)" ${static} || die "emake ${static} failed"
+	emake CC="$(tc-getCC)" ${static} p0fq || die "emake ${static} p0fq failed"
 }
 
 src_install () {
