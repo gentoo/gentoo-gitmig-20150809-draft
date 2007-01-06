@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scheme48/scheme48-1.3-r1.ebuild,v 1.2 2006/08/31 03:45:58 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scheme48/scheme48-1.3-r1.ebuild,v 1.3 2007/01/06 12:35:33 masterdriverz Exp $
 
-inherit elisp-common multilib
+inherit elisp-common multilib eutils
 
 DESCRIPTION="Scheme48 is an implementation of the Scheme Programming Language."
 HOMEPAGE="http://www.s48.org/"
@@ -13,20 +13,22 @@ SLOT="0"
 KEYWORDS="~x86 -amd64"
 IUSE="doc emacs"
 
-DEPEND="virtual/libc"
+DEPEND=""
 RDEPEND=""
 SITEFILE=50scheme48-gentoo.el
 
 src_unpack() {
 	unpack ${A}
-	sed -i "s:\`pwd\`:/usr/$(get_libdir)/scheme48:" ${S}/Makefile.in
-	sed -i "s:lib=\$(LIB):lib=/usr/$(get_libdir)/scheme48:" ${S}/Makefile.in
+	cd "${S}"
+	sed -i "s:\`pwd\`:/usr/$(get_libdir)/scheme48:" Makefile.in
+	sed -i "s:lib=\$(LIB):lib=/usr/$(get_libdir)/scheme48:" Makefile.in
 	# Set the correct values for the paths show by the man pages
-	sed -i "s:=\$(bindir)=:=/usr/bin/=:" ${S}/Makefile.in
-	sed -i "s:=\$(LIB)=:=/usr/$(get_libdir)/scheme48=:" ${S}/Makefile.in
+	sed -i "s:=\$(bindir)=:=/usr/bin/=:" Makefile.in
+	sed -i "s:=\$(LIB)=:=/usr/$(get_libdir)/scheme48=:" Makefile.in
 	# From Bug #127105
-	sed -i 's:`(cd $(srcdir) && echo $$PWD)`/scheme:'"/usr/$(get_libdir)/scheme48/:" ${S}/Makefile.in
-	sed -i "s:'\$(LIB)':'/usr/$(get_libdir)/\$(RUNNABLE)':" ${S}/Makefile.in
+	sed -i 's:`(cd $(srcdir) && echo $$PWD)`/scheme:'"/usr/$(get_libdir)/scheme48/:" Makefile.in
+	sed -i "s:'\$(LIB)':'/usr/$(get_libdir)/\$(RUNNABLE)':" Makefile.in
+	epatch "${FILESDIR}/${P}-as-needed.patch"
 }
 
 src_compile() {
