@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/amd64codecs
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/amd64codecs/ChangeLog,v 1.1 2007/01/06 19:37:47 beandog Exp $
+
+*amd64codecs-20061203 (06 Jan 2007)
+
+  06 Jan 2007; Steve Dibb <beandog@gentoo.org> +metadata.xml,
+  +amd64codecs-20061203.ebuild:
+  Initial commit
+
