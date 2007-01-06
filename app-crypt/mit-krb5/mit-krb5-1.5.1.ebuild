@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.5.1.ebuild,v 1.3 2006/11/07 02:45:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.5.1.ebuild,v 1.4 2007/01/06 18:26:36 drizzt Exp $
 
 inherit eutils flag-o-matic versionator autotools
 
@@ -14,7 +14,7 @@ SRC_URI="http://web.mit.edu/kerberos/dist/krb5/${P_DIR}/${MY_P}-signed.tar"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="krb4 static tcl ipv6 doc"
+IUSE="krb4 tcl ipv6 doc"
 
 RDEPEND="!virtual/krb5
 	sys-libs/com_err
@@ -31,8 +31,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-lazyldflags.patch
 #	epatch "${FILESDIR}"/${PN}-notermcap.patch
 	ebegin "Reconfiguring configure scripts (be patient)"
-	cd ${S}/appl/telnet
-	eautoconf --force -I ${S}
+	cd "${S}"/appl/telnet
+	eautoconf --force -I "${S}"
 	eend $?
 }
 
@@ -41,7 +41,7 @@ src_compile() {
 		$(use_with krb4) \
 		$(use_with tcl) \
 		$(use_enable ipv6) \
-		$(use_enable static) \
+		--enable-static \
 		--enable-shared \
 		--with-system-et --with-system-ss \
 		--enable-dns-for-realm || die
@@ -51,7 +51,7 @@ src_compile() {
 	if use doc ; then
 		cd ../doc
 		for dir in api implement ; do
-			( cd ${dir} ; make ) || die
+			make -C ${dir} || die
 		done
 	fi
 }
@@ -62,7 +62,7 @@ src_test() {
 
 src_install() {
 	make \
-		DESTDIR=${D} \
+		DESTDIR="${D}" \
 		EXAMPLEDIR=/usr/share/doc/${PF}/examples \
 		install || die
 
@@ -75,13 +75,13 @@ src_install() {
 	use doc && dodoc doc/{api,implement}/*.ps
 
 	for i in {telnetd,ftpd} ; do
-		mv ${D}/usr/share/man/man8/${i}.8 ${D}/usr/share/man/man8/k${i}.8
-		mv ${D}/usr/sbin/${i} ${D}/usr/sbin/k${i}
+		mv "${D}"/usr/share/man/man8/${i}.8 "${D}"/usr/share/man/man8/k${i}.8
+		mv "${D}"/usr/sbin/${i} "${D}"/usr/sbin/k${i}
 	done
 
 	for i in {rcp,rlogin,rsh,telnet,ftp} ; do
-		mv ${D}/usr/share/man/man1/${i}.1 ${D}/usr/share/man/man1/k${i}.1
-		mv ${D}/usr/bin/${i} ${D}/usr/bin/k${i}
+		mv "${D}"/usr/share/man/man1/${i}.1 "${D}"/usr/share/man/man1/k${i}.1
+		mv "${D}"/usr/bin/${i} "${D}"/usr/bin/k${i}
 	done
 
 	newinitd "${FILESDIR}"/mit-krb5kadmind.initd mit-krb5kadmind
@@ -94,7 +94,7 @@ src_install() {
 
 pkg_postinst() {
 
-	einfo "See /usr/share/doc/${PF}/html/krb5-admin/index.html for documentation."
+	elog "See /usr/share/doc/${PF}/html/krb5-admin/index.html for documentation."
 	echo ""
 	echo ""
 	ewarn "PLEASE READ THIS"
