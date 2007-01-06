@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/openmpi
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.7 2006/12/06 23:57:56 dberkholz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.8 2007/01/06 01:34:12 dberkholz Exp $
+
+  06 Jan 2007; Donnie Berkholz <dberkholz@gentoo.org>; openmpi-1.1.2.ebuild:
+  Fix miscalled use_enable(). This would result in Fortran not being enabled
+  as expected (Aaron Tygart).
 
   06 Dec 2006; Donnie Berkholz <dberkholz@gentoo.org>; openmpi-1.1.1.ebuild,
   openmpi-1.1.2.ebuild:
