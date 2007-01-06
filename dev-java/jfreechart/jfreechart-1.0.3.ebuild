@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/jfreechart-1.0.3.ebuild,v 1.3 2007/01/06 17:16:58 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/jfreechart-1.0.3.ebuild,v 1.4 2007/01/06 22:34:46 fordfrog Exp $
 
 inherit java-pkg-2 java-ant-2 versionator
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.jfree.org"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="1.0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc source test"
 COMMON_DEPEND="
 	>=dev-java/itext-1.4.6
