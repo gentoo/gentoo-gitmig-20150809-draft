@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0-r1.ebuild,v 1.17 2006/03/06 20:18:50 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0-r1.ebuild,v 1.18 2007/01/06 00:13:25 zzam Exp $
 
 inherit eutils linux-mod flag-o-matic
 
@@ -145,15 +145,15 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "The lirc Linux Infrared Remote Control Package has been"
-	einfo "merged, please read the documentation, and if necessary"
-	einfo "add what is needed to /etc/modules.autoload or"
-	einfo "/etc/modules.d.  If you need special compile options"
-	einfo "then read the comments at the begin of this"
-	einfo "ebuild (source) and set the LIRC_OPTS environment"
-	einfo "variable to your needs."
-	einfo
+	elog
+	elog "The lirc Linux Infrared Remote Control Package has been"
+	elog "merged, please read the documentation, and if necessary"
+	elog "add what is needed to /etc/modules.autoload or"
+	elog "/etc/modules.d.  If you need special compile options"
+	elog "then read the comments at the begin of this"
+	elog "ebuild (source) and set the LIRC_OPTS environment"
+	elog "variable to your needs."
+	elog
 
 	update_depmod
 }

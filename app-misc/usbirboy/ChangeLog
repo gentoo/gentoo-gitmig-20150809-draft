@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/usbirboy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/usbirboy/ChangeLog,v 1.14 2007/01/04 19:26:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/usbirboy/ChangeLog,v 1.15 2007/01/06 00:10:04 zzam Exp $
+
+  06 Jan 2007; Matthias Schwarzott <zzam@gentoo.org>
+  usbirboy-0.2.1-r1.ebuild:
+  Converted to elog.
 
   04 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
   usbirboy-0.2.1-r1.ebuild:

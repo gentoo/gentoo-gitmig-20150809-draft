@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.1_pre5.ebuild,v 1.2 2007/01/04 19:28:32 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.1_pre5.ebuild,v 1.3 2007/01/06 00:13:25 zzam Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -112,7 +112,7 @@ add_device() {
 		desc="${2}"
 	fi
 
-	einfo "Compiling support for ${desc}"
+	elog "Compiling support for ${desc}"
 	MY_OPTS="${MY_OPTS} --with-driver=${dev}"
 }
 
@@ -166,9 +166,9 @@ pkg_setup() {
 				add_device atiusb "device xboxusb"
 			else
 				# no driver requested
-				einfo
-				einfo "Compiling only the lirc-applications, but no drivers."
-				einfo "Enable drivers with LIRC_DEVICES if you need them."
+				elog
+				elog "Compiling only the lirc-applications, but no drivers."
+				elog "Enable drivers with LIRC_DEVICES if you need them."
 				MY_OPTS="--with-driver=userspace"
 			fi
 		fi
@@ -225,7 +225,7 @@ pkg_setup() {
 
 	einfo
 	einfo "lirc-configure-opts: ${MY_OPTS}"
-	einfo "Setting default lirc-device to ${LIRC_DRIVER_DEVICE}"
+	elog  "Setting default lirc-device to ${LIRC_DRIVER_DEVICE}"
 
 	filter-flags -Wl,-O1
 }
@@ -293,8 +293,8 @@ pkg_preinst() {
 pkg_postinst() {
 	linux-mod_pkg_postinst
 	echo
-	einfo "The lirc Linux Infrared Remote Control Package has been"
-	einfo "merged, please read the documentation at http://www.lirc.org"
+	elog "The lirc Linux Infrared Remote Control Package has been"
+	elog "merged, please read the documentation at http://www.lirc.org"
 	echo
 }
 
