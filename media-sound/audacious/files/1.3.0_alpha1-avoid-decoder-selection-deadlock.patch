@@ -1,0 +1,46 @@
+Index: audacious/playlist.c
+===================================================================
+--- audacious/playlist.c	(revision 3572)
++++ audacious/playlist.c	(working copy)
+@@ -2456,6 +2456,13 @@
+             playlist_get_info_scan_active = FALSE;
+             g_mutex_unlock(mutex_scan);
+         }
++        else /* not on_demand and not on_load...
++                NOTE: this shouldn't happen anymore, sanity check in bmp_config_load now */
++        {
++            g_mutex_lock(mutex_scan);
++            playlist_get_info_scan_active = FALSE;
++            g_mutex_unlock(mutex_scan);
++        }
+ 
+         if (update_playlistwin) {
+             playlistwin_update_list(playlist);
+Index: audacious/ui_main.c
+===================================================================
+--- audacious/ui_main.c	(revision 3572)
++++ audacious/ui_main.c	(working copy)
+@@ -3867,7 +3867,7 @@
+ void
+ action_play_file( void )
+ {
+-  util_run_filebrowser(NO_PLAY_BUTTON);
++  util_run_filebrowser(PLAY_BUTTON);
+ }
+ 
+ void
+Index: audacious/main.c
+===================================================================
+--- audacious/main.c	(revision 3572)
++++ audacious/main.c	(working copy)
+@@ -604,6 +604,10 @@
+ 
+     if (!cfg.session_uri_base)
+         cfg.session_uri_base = g_strdup("");
++
++    /* at least one of these should be true */
++    if ((!cfg.get_info_on_demand) && (!cfg.get_info_on_load))
++        cfg.get_info_on_demand = TRUE;
+ }
+ 
+ 
