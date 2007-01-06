@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.263 2007/01/05 19:41:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.264 2007/01/06 09:58:05 alonbl Exp $
+
+  06 Jan 2007; Alon Bar-Lev <alonbl@gentoo.org> gnupg-2.0.1-r2.ebuild:
+  Added WANT_AUTOCONF, bug#160346, thanks to Wilbur Pan
 
   05 Jan 2007; Robin H. Johnson <robbat2@gentoo.org>
   +files/gnupg-2.0.1-bsd-make.patch, gnupg-2.0.1-r2.ebuild:
