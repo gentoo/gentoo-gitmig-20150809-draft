@@ -1,6 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-9999.ebuild,v 1.3 2007/01/05 17:17:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-9999.ebuild,v 1.4 2007/01/06 20:12:15 flameeyes Exp $
+
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 
 inherit linux-mod flag-o-matic eutils multilib autotools mercurial
 
