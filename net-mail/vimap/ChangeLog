@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/vimap
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/ChangeLog,v 1.18 2006/03/06 20:41:40 blubb Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/ChangeLog,v 1.19 2007/01/06 01:20:58 ferdy Exp $
+
+  06 Jan 2007; Fernando J. Pereda <ferdy@gentoo.org> -vimap-2002c.ebuild,
+  -vimap-2002c-r1.ebuild, -vimap-2002c-r2.ebuild:
+  QA: Clean unused versions.
 
   06 Mar 2006; Simon Stelling <blubb@gentoo.org> vimap-2002c.ebuild,
   vimap-2002c-r1.ebuild, vimap-2002c-r2.ebuild, vimap-2002c-r3.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/tnef
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tnef/ChangeLog,v 1.29 2006/10/07 02:33:13 ticho Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tnef/ChangeLog,v 1.30 2007/01/06 01:18:14 ferdy Exp $
+
+  06 Jan 2007; Fernando J. Pereda <ferdy@gentoo.org> -tnef-1.4.1.ebuild:
+  QA: Clean unused versions.
 
   07 Oct 2006; Andrej Kacian <ticho@gentoo.org> tnef-1.4.3.ebuild:
   Do not depend on virtual/libc, as this dep is assumed. Bug #147601.

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/gensig
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gensig/ChangeLog,v 1.6 2004/09/21 13:13:52 ticho Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gensig/ChangeLog,v 1.7 2007/01/06 00:57:02 ferdy Exp $
+
+  06 Jan 2007; Fernando J. Pereda <ferdy@gentoo.org> -gensig-2.2.ebuild:
+  QA: Clean unused versions.
 
   21 Sep 2004; Andrej Kacian <ticho@gentoo.org> gensig-2.3.ebuild:
   Stable on x86.

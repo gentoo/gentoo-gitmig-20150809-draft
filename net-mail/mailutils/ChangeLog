@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailutils
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.27 2006/11/23 16:07:44 vivo Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.28 2007/01/06 01:07:25 ferdy Exp $
+
+  06 Jan 2007; Fernando J. Pereda <ferdy@gentoo.org>
+  -mailutils-0.6-r2.ebuild:
+  QA: Clean unused versions.
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> mailutils-0.6-r2.ebuild,
   mailutils-0.6-r3.ebuild:

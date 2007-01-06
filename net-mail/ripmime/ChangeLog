@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/ripmime
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ripmime/ChangeLog,v 1.28 2006/09/24 10:08:56 blubb Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ripmime/ChangeLog,v 1.29 2007/01/06 01:13:08 ferdy Exp $
+
+  06 Jan 2007; Fernando J. Pereda <ferdy@gentoo.org>
+  -ripmime-1.4.0.5.ebuild:
+  QA: Clean unused versions.
 
   24 Sep 2006; <blubb@gentoo.org> ripmime-1.4.0.6.ebuild:
   stable on amd64

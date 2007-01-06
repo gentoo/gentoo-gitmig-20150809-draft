@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/serialmail
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/ChangeLog,v 1.16 2005/05/04 09:03:55 ferdy Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/ChangeLog,v 1.17 2007/01/06 01:14:12 ferdy Exp $
+
+  06 Jan 2007; Fernando J. Pereda <ferdy@gentoo.org>
+  -serialmail-0.75-r1.ebuild:
+  QA: Clean unused versions.
 
   04 May 2005; Fernando J. Pereda <ferdy@gentoo.org>
   serialmail-0.75-r2.ebuild:

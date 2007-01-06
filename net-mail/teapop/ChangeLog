@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/teapop
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/ChangeLog,v 1.21 2006/11/23 16:10:40 vivo Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/ChangeLog,v 1.22 2007/01/06 01:17:06 ferdy Exp $
+
+  06 Jan 2007; Fernando J. Pereda <ferdy@gentoo.org> -teapop-0.3.3.ebuild,
+  -teapop-0.3.5.ebuild, -teapop-0.3.7.ebuild, -teapop-0.3.7-r1.ebuild:
+  QA: Clean unused versions.
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> teapop-0.3.5.ebuild,
   teapop-0.3.7.ebuild, teapop-0.3.7-r1.ebuild, teapop-0.3.8.ebuild,
