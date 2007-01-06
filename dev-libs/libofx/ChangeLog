@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libofx
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.28 2006/02/04 18:47:01 agriffis Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.29 2007/01/06 03:43:34 kugelfang Exp $
+
+  06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -libofx-0.6.4.ebuild,
+  -libofx-0.6.4-r1.ebuild, -libofx-0.6.5.ebuild, -libofx-0.6.6.ebuild:
+  QA: Removed unused versions.
 
   04 Feb 2006; Aron Griffis <agriffis@gentoo.org> libofx-0.8.0-r1.ebuild:
   Mark 0.8.0-r1 stable on alpha
