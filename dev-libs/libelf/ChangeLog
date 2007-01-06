@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libelf
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/ChangeLog,v 1.14 2005/09/03 09:19:23 dragonheart Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/ChangeLog,v 1.15 2007/01/06 03:03:25 kugelfang Exp $
+
+  06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -libelf-0.8.5.ebuild:
+  QA: Removed unused versions.
 
 *libelf-0.8.6 (03 Sep 2005)
 
