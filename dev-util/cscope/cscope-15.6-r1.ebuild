@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.6-r1.ebuild,v 1.1 2007/01/06 18:30:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.6-r1.ebuild,v 1.2 2007/01/06 21:03:49 opfer Exp $
 
 inherit elisp-common eutils
 
@@ -26,6 +26,7 @@ src_unpack() {
 	unpack ${A}
 
 	# warn users of insecure web frontend, see bug #158831
+	cd ${S}
 	epatch "${FILESDIR}/${PN}-158831-warning_webscope.patch"
 }
 
