@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/psh
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/psh/ChangeLog,v 1.17 2005/07/05 23:11:08 swegener Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/psh/ChangeLog,v 1.18 2007/01/06 00:42:57 kugelfang Exp $
+
+  06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -psh-0.009-r1.ebuild,
+  -psh-0.009-r2.ebuild:
+  QA: Removed unused versions.
 
   05 Jul 2005; Sven Wegener <swegener@gentoo.org> psh-1.8-r1.ebuild:
   QA: Added readline to IUSE.
