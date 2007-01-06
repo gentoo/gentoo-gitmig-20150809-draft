@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2478 2007/01/06 09:09:30 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2479 2007/01/06 20:37:57 fordfrog Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -353,6 +353,7 @@ dev-java/jcs:admin - Enable JCS Admin servlets
 dev-java/jdbc-jaybird:jni - Build/Install JDBC Type 2 native components
 dev-java/jdbc-mysql:c3p0 - Enable c3p0 support
 dev-java/jdbc-mysql:log4j - Enable log4 support
+dev-java/jdbc-postgresql:java5 - Enable Java 5 specific features
 dev-java/log4j:javamail - Build the SMTPAppender
 dev-java/log4j:jms - Build the JMSAppender
 dev-java/log4j:jmx - Build org.apace.log4j.jmx
