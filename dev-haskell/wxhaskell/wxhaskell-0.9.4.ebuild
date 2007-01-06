@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.9.4.ebuild,v 1.6 2006/05/19 05:13:17 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.9.4.ebuild,v 1.7 2007/01/06 18:11:19 kosmikus Exp $
 
 inherit flag-o-matic wxwidgets ghc-package multilib
 
@@ -22,14 +22,14 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	if ! built_with_use x11-libs/wxGTK X; then
-		einfo "wxhaskell needs wxGTK that has been built with X11 support."
-		einfo "Please re-emerge wxGTK with USE=\"X -odbc -unicode\""
+		eerror "wxhaskell needs wxGTK that has been built with X11 support."
+		eerror "Please re-emerge wxGTK with USE=\"X -odbc -unicode\""
 		die "wxhaskell requires wxGTK to be built with USE=\"X -odbc -unicode\""
 	fi
 	if built_with_use x11-libs/wxGTK odbc; then
-		einfo "Sadly wxhaskell does not work with wxGTK that has been built"
-		einfo "with USE=\"odbc\"."
-		einfo "Please re-emerge wxGTK with USE=\"-odbc\""
+		eerror "Sadly wxhaskell does not work with wxGTK that has been built"
+		eerror "with USE=\"odbc\"."
+		eerror "Please re-emerge wxGTK with USE=\"-odbc\""
 		die "wxhaskell requires wxGTK to be built with USE=\"-odbc\""
 	fi
 }

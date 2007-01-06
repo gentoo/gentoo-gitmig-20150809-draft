@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/wxhaskell
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/ChangeLog,v 1.21 2006/05/19 05:13:17 squinky86 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/ChangeLog,v 1.22 2007/01/06 18:11:19 kosmikus Exp $
+
+  06 Jan 2007; Andres Loeh <kosmikus@gentoo.org> wxhaskell-0.8-r1.ebuild,
+  wxhaskell-0.9.ebuild, wxhaskell-0.9.4.ebuild:
+  Fixed elog / einfo usage.
 
   19 May 2006; Jon Hood <squinky86@gentoo.org> wxhaskell-0.9.4.ebuild:
   Use the correct libdirs when installing for 64-bit. This way, it compiles
