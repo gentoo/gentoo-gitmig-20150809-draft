@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.6-r1.ebuild,v 1.13 2006/12/18 11:01:04 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.6-r1.ebuild,v 1.14 2007/01/06 14:55:34 zzam Exp $
 
 inherit libtool eutils
 
@@ -41,7 +41,7 @@ pkg_setup() {
 	if [ -z "${CAMERAS}" ] ; then
 		ewarn "All camera drivers will be built since you did not specify"
 		ewarn "via the CAMERAS variable what camera you use."
-		einfo "libgphoto2 supports: all ${IUSE_CAMERAS}"
+		ewarn "libgphoto2 supports: all ${IUSE_CAMERAS}"
 	fi
 	echo
 	if use jpeg && ! use exif ; then
@@ -136,6 +136,6 @@ pkg_postinst() {
 		fi
 	fi
 
-	einfo "Don't forget to add yourself to the plugdev group "
-	einfo "if you want to be able to access your camera."
+	elog "Don't forget to add yourself to the plugdev group "
+	elog "if you want to be able to access your camera."
 }
