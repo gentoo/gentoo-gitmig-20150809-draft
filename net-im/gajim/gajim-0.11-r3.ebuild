@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.11-r3.ebuild,v 1.2 2007/01/06 03:30:07 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.11-r3.ebuild,v 1.3 2007/01/06 08:28:34 antarus Exp $
 
 inherit multilib python eutils
 
@@ -21,8 +21,8 @@ DEPEND="dev-python/pysqlite
 
 RDEPEND="gnome? ( dev-python/gnome-python-extras dev-python/gnome-python-desktop )
 	dbus? ( ||
-		( <sys-apps/dbus-0.90 )
 		( >=sys-apps/dbus-0.90 dev-python/dbus-python dev-libs/dbus-glib )
+		( <sys-apps/dbus-0.90 )
 	)
 	libnotify? ( x11-libs/libnotify )
 	xhtml? ( dev-python/docutils )
