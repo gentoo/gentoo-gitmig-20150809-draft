@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.0.ebuild,v 1.2 2007/01/04 20:25:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.0.ebuild,v 1.3 2007/01/06 10:28:21 swegener Exp $
 
 inherit eutils versionator gnome2
 
@@ -84,5 +84,13 @@ src_install() {
 }
 
 pkg_postinst() {
+	elog
 	elog "XChat binary has been renamed from xchat-2 to xchat."
+	elog
+
+	if has_version net-irc/xchat-systray
+	then
+		elog "XChat now includes it's own systray icon, you may want to remove net-irc/xchat-systray."
+		elog
+	fi
 }
