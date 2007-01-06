@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/gtk2hs
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/ChangeLog,v 1.27 2006/04/07 21:29:31 araujo Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/ChangeLog,v 1.28 2007/01/06 19:06:55 dcoutts Exp $
+
+  06 Jan 2007; Duncan Coutts <dcoutts@gentoo.org> gtk2hs-0.9.9.ebuild,
+  gtk2hs-0.9.10.ebuild, gtk2hs-0.9.10-r1.ebuild:
+  Removed mozilla USE flag, fixing bug #159635. The firefox USE flag remains.
+  Also block on ghc-6.6, we need a new upstream release for ghc-6.6 compat.
 
 *gtk2hs-0.9.10-r1 (07 Apr 2006)
 
@@ -14,19 +19,19 @@
   23 Feb 2006; Luis F. Araujo <araujo@gentoo.org> gtk2hs-0.9.10.ebuild:
   Fixed firefox useflag
 
-  20 Feb 2006; <duncan@gentoo.org> -gtk2hs-0.9.7.ebuild:
+  20 Feb 2006; <dcoutts@gentoo.org> -gtk2hs-0.9.7.ebuild:
   Remove old 0.9.7 version.
 
-  20 Feb 2006; <duncan@gentoo.org> +files/gtk2hs-0.9.10-ghc622.patch,
+  20 Feb 2006; <dcoutts@gentoo.org> +files/gtk2hs-0.9.10-ghc622.patch,
   gtk2hs-0.9.10.ebuild:
   Fix building with ghc-6.2.2. Fixes bug #115657.
 
-  14 Feb 2006; <duncan@gentoo.org> +files/gtk2hs-0.9.10-cflags.patch,
+  14 Feb 2006; <dcoutts@gentoo.org> +files/gtk2hs-0.9.10-cflags.patch,
   gtk2hs-0.9.10.ebuild:
   Added a patch to fix the use of CFLAGS which was causing problems on sparc.
   Marked ~sparc.
 
-  10 Feb 2006; <duncan@gentoo.org> -gtk2hs-0.9.6-r1.ebuild,
+  10 Feb 2006; <dcoutts@gentoo.org> -gtk2hs-0.9.6-r1.ebuild,
   -gtk2hs-0.9.8.ebuild:
   Remove old versions.
 
@@ -34,26 +39,26 @@
   -files/gtk2hs-0.9.7-ghc64.patch.gz, gtk2hs-0.9.7.ebuild:
   move compressed patches to the mirros
 
-  14 Dec 2005; <duncan@gentoo.org> gtk2hs-0.9.10.ebuild:
+  14 Dec 2005; <dcoutts@gentoo.org> gtk2hs-0.9.10.ebuild:
   Make the DEPEND include the RDEPEND.
 
-  12 Nov 2005; <duncan@gentoo.org> gtk2hs-0.9.10.ebuild:
+  12 Nov 2005; <dcoutts@gentoo.org> gtk2hs-0.9.10.ebuild:
   Fix failure when USE="glade -gnome" (bug #112227)
 
-  06 Nov 2005; <duncan@gentoo.org> gtk2hs-0.9.10.ebuild:
+  06 Nov 2005; <dcoutts@gentoo.org> gtk2hs-0.9.10.ebuild:
   Fix generation of cairo GHCi lib.
 
 *gtk2hs-0.9.10 (02 Nov 2005)
 
-  02 Nov 2005; <duncan@gentoo.org> +gtk2hs-0.9.10.ebuild:
+  02 Nov 2005; <dcoutts@gentoo.org> +gtk2hs-0.9.10.ebuild:
   Added new version.
 
 *gtk2hs-0.9.9 (31 Aug 2005)
 
-  31 Aug 2005; <duncan@gentoo.org> +gtk2hs-0.9.9.ebuild:
+  31 Aug 2005; <dcoutts@gentoo.org> +gtk2hs-0.9.9.ebuild:
   Added new version.
 
-  31 Aug 2005; <duncan@gentoo.org> gtk2hs-0.9.7.ebuild, gtk2hs-0.9.8.ebuild:
+  31 Aug 2005; <dcoutts@gentoo.org> gtk2hs-0.9.7.ebuild, gtk2hs-0.9.8.ebuild:
   Make gtk2hs-0.9.7 and gtk2hs-0.9.8 use only haddock-0.6 since they will not
   work with haddock-0.7.
 
@@ -62,11 +67,11 @@
 
 *gtk2hs-0.9.8 (24 Jun 2005)
 
-  24 Jun 2005; <duncan@gentoo.org> gtk2hs-0.9.7.ebuild,
+  24 Jun 2005; <dcoutts@gentoo.org> gtk2hs-0.9.7.ebuild,
   +gtk2hs-0.9.8.ebuild:
   New version.
 
-  20 May 2005; <duncan@gentoo.org> gtk2hs-0.9.7.ebuild:
+  20 May 2005; <dcoutts@gentoo.org> gtk2hs-0.9.7.ebuild:
   Added ~sparc to KEYWORDS.
 
   08 May 2005; Duncan Coutts <dcoutts@gentoo.org>

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.9.ebuild,v 1.1 2005/08/31 10:15:22 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.9.ebuild,v 1.2 2007/01/06 19:06:55 dcoutts Exp $
 
 inherit base ghc-package multilib
 
@@ -14,14 +14,14 @@ KEYWORDS="-amd64 ~x86 ~ppc"
 #enable amd64 when ghc-6.4.1 is out
 #enable sparc when CFLAGS/-mcpu ebuild bug is fixed
 
-IUSE="doc gnome mozilla"
+IUSE="doc gnome"
 
 DEPEND=">=virtual/ghc-5.04
+		!>=virtual/ghc-6.6
 		>=x11-libs/gtk+-2
 		gnome? ( >=gnome-base/libglade-2
 				 >=x11-libs/gtksourceview-0.6
 				 >=gnome-base/gconf-2 )
-		mozilla? ( >=www-client/mozilla-1.4 )
 		doc? ( >=dev-haskell/haddock-0.7 )"
 
 src_compile() {
@@ -30,7 +30,6 @@ src_compile() {
 		`use_enable gnome libglade` \
 		`use_enable gnome gconf` \
 		`use_enable gnome sourceview` \
-		`use_enable mozilla mozilla` \
 		`use_enable doc docs` \
 		|| die "Configure failed"
 
@@ -69,9 +68,7 @@ src_install() {
 		$(useq gnome && echo \
 			"${D}/usr/$(get_libdir)/gtk2hs/glade.${pkgext}" \
 			"${D}/usr/$(get_libdir)/gtk2hs/gconf.${pkgext}" \
-			"${D}/usr/$(get_libdir)/gtk2hs/sourceview.${pkgext}") \
-		$(useq mozilla && echo \
-			"${D}/usr/$(get_libdir)/gtk2hs/mozembed.${pkgext}")
+			"${D}/usr/$(get_libdir)/gtk2hs/sourceview.${pkgext}")
 	ghc-install-pkg
 
 	# build ghci .o files from .a files
@@ -82,9 +79,6 @@ src_install() {
 		ghc-makeghcilib ${D}/usr/$(get_libdir)/gtk2hs/libHSglade.a
 		ghc-makeghcilib ${D}/usr/$(get_libdir)/gtk2hs/libHSgconf.a
 		ghc-makeghcilib ${D}/usr/$(get_libdir)/gtk2hs/libHSsourceview.a
-	fi
-	if use mozilla; then
-		ghc-makeghcilib ${D}/usr/$(get_libdir)/gtk2hs/libHSmozembed.a
 	fi
 }
 
