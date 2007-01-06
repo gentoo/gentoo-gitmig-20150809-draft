@@ -1,6 +1,12 @@
 # ChangeLog for net-print/libinklevel
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libinklevel/ChangeLog,v 1.17 2006/10/04 17:32:27 blubb Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/libinklevel/ChangeLog,v 1.18 2007/01/06 19:04:38 cryos Exp $
+
+*libinklevel-0.6.6_rc5 (06 Jan 2007)
+
+  06 Jan 2007; Marcus D. Hanwell <cryos@gentoo.org>
+  +files/libinklevel-0.6.6_rc5-libdir.patch, +libinklevel-0.6.6_rc5.ebuild:
+  Version bump and fixed the multilib issues.
 
   04 Oct 2006; Simon Stelling <blubb@gentoo.org>
   +files/libinklevel-0.6.5_rc1-libdir.patch, libinklevel-0.6.5_rc1.ebuild:

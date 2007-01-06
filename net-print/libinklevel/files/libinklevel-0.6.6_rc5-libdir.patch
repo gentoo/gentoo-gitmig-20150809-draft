@@ -1,0 +1,30 @@
+# Marcus D. Hanwell <cryos@gentoo.org> 6 January 2007.
+# Help libinklevel to be more multilib friendly.
+--- Makefile.orig	2007-01-06 13:40:39.000000000 +0000
++++ Makefile	2007-01-06 13:42:44.000000000 +0000
+@@ -1,4 +1,5 @@
+ DESTDIR = /usr/local/
++LIBDIR = lib
+ CFLAGS = -Wall -O2 -fPIC -DPIC -I.
+ 
+ all: libinklevel.so.3.0.6.6
+@@ -6,14 +7,14 @@
+ install: all
+ 	mkdir -p $(DESTDIR)/include
+ 	install -m 644 -o root -g root inklevel.h $(DESTDIR)/include/inklevel.h
+-	mkdir -p $(DESTDIR)/lib
++	mkdir -p $(DESTDIR)/${LIBDIR}
+ 	install -m 755 -o root -g root libinklevel.so.3.0.6.6 \
+-	$(DESTDIR)/lib/libinklevel.so.3.0.6.6
+-	cd $(DESTDIR)/lib && rm -fr libinklevel.so && \
++	$(DESTDIR)/${LIBDIR}/libinklevel.so.3.0.6.6
++	cd $(DESTDIR)/${LIBDIR} && rm -fr libinklevel.so && \
+ 	ln -s libinklevel.so.3.0.6.6 libinklevel.so
+-	cd $(DESTDIR)/lib && rm -fr libinklevel.so.3 && \
++	cd $(DESTDIR)/${LIBDIR} && rm -fr libinklevel.so.3 && \
+ 	ln -s libinklevel.so.3.0.6.6 libinklevel.so.3
+-	ldconfig $(DESTDIR)/lib
++	ldconfig $(DESTDIR)/${LIBDIR}
+ 
+ clean:
+ 	rm -fr *.o *.so.3.0.6.6 *~
