@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/logwatch
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.40 2007/01/06 11:50:57 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.41 2007/01/06 17:58:13 kloeri Exp $
+
+  06 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> logwatch-7.3-r1.ebuild:
+  Stable on Alpha.
 
   06 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   logwatch-7.3-r1.ebuild:
