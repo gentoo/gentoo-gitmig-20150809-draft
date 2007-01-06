@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/x264-svn-encoder/x264-svn-encoder-20061014.ebuild,v 1.6 2007/01/04 18:40:54 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/x264-svn-encoder/x264-svn-encoder-20061014.ebuild,v 1.7 2007/01/06 15:03:14 mcummings Exp $
 
 inherit multilib eutils toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${X264_SVN_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ppc ppc64 sparc x86"
 
 RDEPEND="mp4? ( >=media-video/gpac-0.4.1_pre20060122 )
 	gtk? ( >=x11-libs/gtk+-2.6.10 >=dev-libs/glib-2.10.3 )
