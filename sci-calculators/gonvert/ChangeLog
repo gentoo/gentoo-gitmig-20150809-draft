@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/gonvert
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/gonvert/ChangeLog,v 1.5 2006/04/30 23:07:46 chainsaw Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/gonvert/ChangeLog,v 1.6 2007/01/06 22:09:44 kugelfang Exp $
+
+  06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -gonvert-0.2.12.ebuild:
+  QA: Removed unused versions.
 
 *gonvert-0.2.15-r1 (30 Apr 2006)
 

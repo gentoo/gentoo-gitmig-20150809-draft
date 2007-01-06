@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/orpie
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/orpie/ChangeLog,v 1.5 2006/11/02 00:10:38 ribosome Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/orpie/ChangeLog,v 1.6 2007/01/06 22:11:00 kugelfang Exp $
+
+  06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -orpie-1.4.1.ebuild,
+  -orpie-1.4.3.ebuild:
+  QA: Removed unused versions.
 
 *orpie-1.4.3-r1 (02 Nov 2006)
 
