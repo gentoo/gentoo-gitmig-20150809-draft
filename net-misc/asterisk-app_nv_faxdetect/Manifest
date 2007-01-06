@@ -1,7 +1,38 @@
-MD5 ef3b55ac32b0bbfecc22fcb19a0830e8 ChangeLog 1405
-MD5 3cebeb3bffdbc402ee3af73347d89020 asterisk-app_nv_faxdetect-1.0.6.ebuild 1339
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX app_nv_faxdetect-1.0.6-ast10.diff 1000 RMD160 6b74bec7f7f0330ede1a4830a6bc3004cb9108f2 SHA1 80e8824b77d989fe8e56615830bc4535c73e20a0 SHA256 aab8937933b23bd17345bd334542a22f42fb3df0f970c7428a9987e11494edd1
 MD5 bff6abdbd28ddbb349dacdd62f346851 files/app_nv_faxdetect-1.0.6-ast10.diff 1000
+RMD160 6b74bec7f7f0330ede1a4830a6bc3004cb9108f2 files/app_nv_faxdetect-1.0.6-ast10.diff 1000
+SHA256 aab8937933b23bd17345bd334542a22f42fb3df0f970c7428a9987e11494edd1 files/app_nv_faxdetect-1.0.6-ast10.diff 1000
+AUX app_nv_faxdetect-1.0.6-ast12.diff 1351 RMD160 9c8a63ef531cac0dbd291c7b30534c23a5a7af2c SHA1 23a1daccdabd258a7efc0e70b5eb8dd7d1c50c35 SHA256 22737cc304d73c6742f33063fdd094128c3ccc07ba40f99c19c4087a839b6b9d
 MD5 3401c549bbe3e1a0c696daeea16710e7 files/app_nv_faxdetect-1.0.6-ast12.diff 1351
+RMD160 9c8a63ef531cac0dbd291c7b30534c23a5a7af2c files/app_nv_faxdetect-1.0.6-ast12.diff 1351
+SHA256 22737cc304d73c6742f33063fdd094128c3ccc07ba40f99c19c4087a839b6b9d files/app_nv_faxdetect-1.0.6-ast12.diff 1351
+AUX app_nv_faxdetect-1.0.6-astcfg.diff 988 RMD160 e391da82be85a2733fdb55d4ae374af8d2c7421e SHA1 9e48d917e06aa7cc23ecbea16e6cf24a7cf56b54 SHA256 040f0b0885ddc702a55dee8d43267b6442239e52d77d0eb77e6fc311c5b13789
 MD5 2c6790a54c98bb042028e5ed2a6a4ad0 files/app_nv_faxdetect-1.0.6-astcfg.diff 988
-MD5 46236880a0a0dab5f08b8708bfbf08a5 files/digest-asterisk-app_nv_faxdetect-1.0.6 73
+RMD160 e391da82be85a2733fdb55d4ae374af8d2c7421e files/app_nv_faxdetect-1.0.6-astcfg.diff 988
+SHA256 040f0b0885ddc702a55dee8d43267b6442239e52d77d0eb77e6fc311c5b13789 files/app_nv_faxdetect-1.0.6-astcfg.diff 988
+DIST app_nv_faxdetect-1.0.6.tar.bz2 4959
+EBUILD asterisk-app_nv_faxdetect-1.0.6.ebuild 1341 RMD160 30be536d1fa0f4190d6b1ecb3ba0a30860772c9c SHA1 3fabb1f0eefa74858b2103e617c52b58840e57a2 SHA256 cf4baf784a4b0bc3bbff12aa9143f693ee7531e0dcd08d4c4396697db7d56fc7
+MD5 3605688312c6f56ad66c30b35ca793e0 asterisk-app_nv_faxdetect-1.0.6.ebuild 1341
+RMD160 30be536d1fa0f4190d6b1ecb3ba0a30860772c9c asterisk-app_nv_faxdetect-1.0.6.ebuild 1341
+SHA256 cf4baf784a4b0bc3bbff12aa9143f693ee7531e0dcd08d4c4396697db7d56fc7 asterisk-app_nv_faxdetect-1.0.6.ebuild 1341
+MISC ChangeLog 1518 RMD160 ab09af45ef6cafa0429c620439550074f96204cb SHA1 8ba9a23674ffa381dffce15169ae093766e73657 SHA256 04da517d6bbfc1683377549b14af3af45eb43163d020bcd1c98abc208d364c9f
+MD5 26bf5526fb72295f7a009e69897e6f5f ChangeLog 1518
+RMD160 ab09af45ef6cafa0429c620439550074f96204cb ChangeLog 1518
+SHA256 04da517d6bbfc1683377549b14af3af45eb43163d020bcd1c98abc208d364c9f ChangeLog 1518
+MISC metadata.xml 407 RMD160 6b63e0df88a8312e28c84871cf5799b99cbcd418 SHA1 41da15dc43236ee0252eb3667e7114a3c5c90c5c SHA256 843e2a18dcd59e560947ab9ac89c561394427f3e8091a2a95a5f9c7167c06b23
 MD5 56f78a41386fa9e15d7ec06b20cf00c3 metadata.xml 407
+RMD160 6b63e0df88a8312e28c84871cf5799b99cbcd418 metadata.xml 407
+SHA256 843e2a18dcd59e560947ab9ac89c561394427f3e8091a2a95a5f9c7167c06b23 metadata.xml 407
+MD5 46236880a0a0dab5f08b8708bfbf08a5 files/digest-asterisk-app_nv_faxdetect-1.0.6 73
+RMD160 94f7b6a164d9f5604ed3333d6ae50e7904c96be2 files/digest-asterisk-app_nv_faxdetect-1.0.6 73
+SHA256 c850537ed01cb6e92133cb6afe56ec19cf5c017dbbf8d90bb367d42e194a51f1 files/digest-asterisk-app_nv_faxdetect-1.0.6 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFn86mGDyatLGpTbYRAoJ6AKCPXqWnj2eSA8oFHa0CNBZHkJ3P5QCgjexz
+tDzjuaqNiMQvHbAMSnrK7Fs=
+=PCjy
+-----END PGP SIGNATURE-----
