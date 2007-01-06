@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.12.1.ebuild,v 1.8 2006/11/28 13:41:48 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.12.1.ebuild,v 1.9 2007/01/06 16:27:46 drizzt Exp $
 
 inherit eutils multilib
 
@@ -333,12 +333,12 @@ src_install() {
 		keepdir /var/spool/asterisk/voicemail/default/1234/INBOX
 	fi
 
-	# move sample configuration files to doc directory 
+	# move sample configuration files to doc directory
 	if is_ast10update; then
-		einfo "Updating from old (pre-1.2) asterisk version, new configuration files have been installed"
-		einfo "into ${ROOT}etc/asterisk, use etc-update or dispatch-conf to update them"
+		elog "Updating from old (pre-1.2) asterisk version, new configuration files have been installed"
+		elog "into ${ROOT}etc/asterisk, use etc-update or dispatch-conf to update them"
 	elif has_version "net-misc/asterisk"; then
-		einfo "Configuration samples have been moved to: $ROOT/usr/share/doc/${PF}/conf"
+		elog "Configuration samples have been moved to: $ROOT/usr/share/doc/${PF}/conf"
 		insinto /usr/share/doc/${PF}/conf
 		doins ${D}etc/asterisk/*.conf*
 		rm -f ${D}etc/asterisk/*.conf* 2>/dev/null
@@ -436,16 +436,16 @@ pkg_postinst() {
 	#
 	einfo "Asterisk has been installed"
 	einfo ""
-	einfo "If you want to know more about asterisk, visit these sites:"
-	einfo "http://www.asteriskdocs.org/"
-	einfo "http://www.voip-info.org/wiki-Asterisk"
+	elog "If you want to know more about asterisk, visit these sites:"
+	elog "http://www.asteriskdocs.org/"
+	elog "http://www.voip-info.org/wiki-Asterisk"
 	echo
-	einfo "http://asterisk.xvoip.com/"
-	einfo "http://junghanns.net/asterisk/"
-	einfo "http://www.automated.it/guidetoasterisk.htm"
+	elog "http://asterisk.xvoip.com/"
+	elog "http://junghanns.net/asterisk/"
+	elog "http://www.automated.it/guidetoasterisk.htm"
 	echo
-	einfo "Gentoo VoIP IRC Channel:"
-	einfo "#gentoo-voip @ irc.freenode.net"
+	elog "Gentoo VoIP IRC Channel:"
+	elog "#gentoo-voip @ irc.freenode.net"
 	echo
 	echo
 

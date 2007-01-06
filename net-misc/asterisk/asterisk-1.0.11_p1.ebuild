@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.11_p1.ebuild,v 1.4 2006/11/23 20:36:14 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.11_p1.ebuild,v 1.5 2007/01/06 16:27:46 drizzt Exp $
 
 inherit eutils perl-app
 
@@ -451,13 +451,13 @@ pkg_postinst() {
 	#
 	if [[ -z "$(grep "/var/run/asterisk" ${ROOT}etc/asterisk/asterisk.conf)" ]]
 	then
-		einfo "Fixing astrundir in ${ROOT}etc/asterisk/asterisk.conf"
+		elog "Fixing astrundir in ${ROOT}etc/asterisk/asterisk.conf"
 		mv -f ${ROOT}etc/asterisk/asterisk.conf \
 			${ROOT}etc/asterisk/asterisk.conf.bak
 		sed -e "s:^\(astrundir[\t ]=>\).*:\1 /var/run/asterisk:" \
 			${ROOT}etc/asterisk/asterisk.conf.bak >\
 			${ROOT}etc/asterisk/asterisk.conf
-		einfo "Backup has been saved as ${ROOT}etc/asterisk/asterisk.conf.bak"
+		elog "Backup has been saved as ${ROOT}etc/asterisk/asterisk.conf.bak"
 	fi
 
 	#
@@ -465,18 +465,18 @@ pkg_postinst() {
 	#
 	einfo "Asterisk has been installed"
 	einfo ""
-	einfo "to add new Mailboxes use: /usr/sbin/addmailbox"
-	einfo ""
-	einfo "If you want to know more about asterisk, visit these sites:"
-	einfo "http://www.asteriskdocs.org/"
-	einfo "http://www.voip-info.org/wiki-Asterisk"
+	elog "to add new Mailboxes use: /usr/sbin/addmailbox"
 	echo
-	einfo "http://asterisk.xvoip.com/"
-	einfo "http://junghanns.net/asterisk/"
-	einfo "http://www.automated.it/guidetoasterisk.htm"
+	elog "If you want to know more about asterisk, visit these sites:"
+	elog "http://www.asteriskdocs.org/"
+	elog "http://www.voip-info.org/wiki-Asterisk"
 	echo
-	einfo "Gentoo VoIP IRC Channel:"
-	einfo "#gentoo-voip @ irc.freenode.net"
+	elog "http://asterisk.xvoip.com/"
+	elog "http://junghanns.net/asterisk/"
+	elog "http://www.automated.it/guidetoasterisk.htm"
+	echo
+	elog "Gentoo VoIP IRC Channel:"
+	elog "#gentoo-voip @ irc.freenode.net"
 
 	#
 	# Warning about security changes...
