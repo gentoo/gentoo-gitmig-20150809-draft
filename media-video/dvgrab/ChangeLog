@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dvgrab
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/ChangeLog,v 1.19 2007/01/06 00:02:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/ChangeLog,v 1.20 2007/01/06 00:14:35 aballier Exp $
+
+  06 Jan 2007; Alexis Ballier <aballier@gentoo.org> -dvgrab-1.7.ebuild:
+  Removing unused version
 
 *dvgrab-2.1 (06 Jan 2007)
 
