@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenal/pyopenal-0.1.6.ebuild,v 1.6 2006/12/06 20:12:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenal/pyopenal-0.1.6.ebuild,v 1.7 2007/01/06 12:19:57 dev-zero Exp $
 
 inherit distutils eutils
 
@@ -23,6 +23,7 @@ RDEPEND=">=dev-lang/python-2.2.2
 
 S=${WORKDIR}/${MY_P}
 
+DOCS="AUTHORS CHANGES"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
