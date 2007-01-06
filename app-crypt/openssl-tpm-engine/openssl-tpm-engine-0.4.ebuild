@@ -1,11 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/openssl-tpm-engine/openssl-tpm-engine-0.3.ebuild,v 1.2 2007/01/06 18:21:44 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/openssl-tpm-engine/openssl-tpm-engine-0.4.ebuild,v 1.1 2007/01/06 18:21:44 alonbl Exp $
 
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
-
-inherit autotools eutils
+inherit eutils
 
 MY_P="${P/-tpm-/_tpm_}"
 
@@ -17,22 +14,10 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 RDEPEND=">=dev-libs/openssl-0.9.8
-	>=app-crypt/trousers-0.2.6"
+	>=app-crypt/trousers-0.2.8"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
-
-src_unpack() {
-	unpack "${A}"
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-openssl.patch"
-	eautoreconf || die 'eautoreconf failed'
-}
-
-src_compile() {
-	econf OPENSSL_LIB_DIR=/usr/lib OPENSSL_INCLUDE_DIR=/usr/include/openssl || die 'configure failed'
-	emake || die 'make failed'
-}
 
 src_install() {
 	make DESTDIR="${D}" install || die 'install failed'
