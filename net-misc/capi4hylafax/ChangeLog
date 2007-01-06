@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/capi4hylafax
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/ChangeLog,v 1.25 2007/01/06 21:14:07 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/ChangeLog,v 1.26 2007/01/06 21:16:48 sbriesen Exp $
+
+  06 Jan 2007; Stefan Briesenick <sbriesen@gentoo.org>
+  -capi4hylafax-01.03.00.3.ebuild, -capi4hylafax-01.03.00.99.300.3.ebuild:
+  removed old versions.
 
 *capi4hylafax-01.03.00.99.300.4 (06 Jan 2007)
 
