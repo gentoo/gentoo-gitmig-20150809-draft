@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/wm-icons
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/ChangeLog,v 1.18 2007/01/04 19:48:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/ChangeLog,v 1.19 2007/01/06 08:24:29 omp Exp $
+
+  06 Jan 2007; David Shakaryan <omp@gentoo.org> -wm-icons-0.4.0_pre1.ebuild:
+  Remove old, broken version. (bug #160070)
 
   04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   wm-icons-0.4.0_pre1-r1.ebuild:
