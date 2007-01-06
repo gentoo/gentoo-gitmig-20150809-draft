@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/cdspeed
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdspeed/ChangeLog,v 1.19 2005/09/09 17:31:35 agriffis Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdspeed/ChangeLog,v 1.20 2007/01/06 00:10:41 kugelfang Exp $
+
+  06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -cdspeed-0.3.ebuild:
+  QA: Removed unused versions.
 
   09 Sep 2005; Aron Griffis <agriffis@gentoo.org> cdspeed-0.4.ebuild:
   Mark 0.4 stable on alpha
