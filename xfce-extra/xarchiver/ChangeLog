@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xarchiver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xarchiver/ChangeLog,v 1.14 2007/01/04 14:22:15 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xarchiver/ChangeLog,v 1.15 2007/01/06 18:55:40 nichoj Exp $
+
+  06 Jan 2007; Joshua Nichols <nichoj@gentoo.org> xarchiver-0.4.6.ebuild:
+  Added IUSE=debug, which was dropped when 'inherit debug' was removed from
+  xfce44.eclass.
 
   04 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> xarchiver-0.4.6.ebuild:
   Add ~alpha keyword.
