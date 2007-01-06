@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.4.ebuild,v 1.1 2007/01/06 01:50:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.4.ebuild,v 1.2 2007/01/06 11:05:45 vapier Exp $
 
 inherit eutils multilib toolchain-funcs flag-o-matic
 
@@ -39,9 +39,7 @@ src_compile() {
 		AR=$(tc-getAR)
 		RANLIB=$(tc-getRANLIB)
 	"
-	if ! use build ; then
-		emake ${makeopts} -f Makefile-libbz2_so all || die "Make failed libbz2"
-	fi
+	emake ${makeopts} -f Makefile-libbz2_so all || die "Make failed libbz2"
 	use static && append-flags -static
 	emake LDFLAGS="${LDFLAGS}" ${makeopts} all || die "Make failed"
 
