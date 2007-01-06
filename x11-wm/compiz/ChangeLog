@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/compiz
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.10 2006/11/29 23:20:52 hanno Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.11 2007/01/06 21:56:19 hanno Exp $
+
+*compiz-0.3.6 (06 Jan 2007)
+
+  06 Jan 2007; Hanno Boeck <hanno@gentoo.org> +files/0.3.6/compiz-start,
+  +compiz-0.3.6.ebuild:
+  Version bump, now with kde-decorator.
 
   29 Nov 2006; Hanno Boeck <hanno@gentoo.org> +files/compiz-start,
   compiz-0.3.4.ebuild:
