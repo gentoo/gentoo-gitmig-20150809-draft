@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-0.5.0_rc2-r3.ebuild,v 1.1 2006/12/28 02:12:43 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-0.5.0_rc2-r3.ebuild,v 1.2 2007/01/06 19:10:50 nichoj Exp $
 
 inherit xfce44 versionator
 
@@ -18,7 +18,7 @@ DESCRIPTION="Xfce 4 file manager"
 HOMEPAGE="http://thunar.xfce.org"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="doc dbus exif hal pcre startup-notification thumbnail trash-panel-plugin"
+IUSE="doc dbus debug exif hal pcre startup-notification thumbnail trash-panel-plugin"
 
 # The order of RDEPEND is based on the list in README, by:
 # 	required packages
@@ -62,7 +62,6 @@ DEPEND="${RDEPEND}
 # when those are fixed, we make IUSE="jpeg freetype"
 XFCE_CONFIG="
 	$(use_enable dbus) \
-	$(use_enable debug) \
 	$(use_enable doc gtk-doc) \
 	$(use_enable doc xsltproc) \
 	$(use_enable exif) \
