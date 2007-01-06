@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfsh/elfsh-0.51_beta3.ebuild,v 1.4 2006/01/27 00:01:10 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfsh/elfsh-0.51_beta3.ebuild,v 1.5 2007/01/06 23:00:43 malc Exp $
 
 inherit eutils
 
@@ -26,6 +26,8 @@ src_unpack() {
 		-e "s:-g3 -O2:${CFLAGS}:" \
 		`find -name Makefile` \
 		|| die
+	sed -i -e "s:LIBPATH = \$(PREFIX)/lib:LIBPATH = \$(PREFIX)/$(get_libdir):" Makefile
+
 }
 
 src_compile() {
