@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hsql
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql/ChangeLog,v 1.8 2006/03/16 14:14:52 dcoutts Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql/ChangeLog,v 1.9 2007/01/06 17:53:26 kosmikus Exp $
+
+  06 Jan 2007; Andres Loeh <kosmikus@gentoo.org> hsql-1.7.ebuild:
+  Fixed elog / einfo usage.
 
   16 Mar 2006; Duncan Coutts <dcoutts@gentoo.org> hsql-1.7.ebuild:
   QA fix; Add eutils to inherit.
