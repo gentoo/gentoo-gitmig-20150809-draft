@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.34 2007/01/05 20:05:08 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.35 2007/01/06 00:32:18 ferdy Exp $
+
+  06 Jan 2007; Fernando J. Pereda <ferdy@gentoo.org>
+  +files/paludis-0.14.1-vdb-path.patch, paludis-0.14.1.ebuild:
+  Add a last-minute patch to 'Be less sensitive to vdb_path detection failure'
 
 *paludis-0.14.1 (05 Jan 2007)
 

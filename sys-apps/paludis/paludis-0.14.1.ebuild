@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.14.1.ebuild,v 1.1 2007/01/05 20:05:09 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.14.1.ebuild,v 1.2 2007/01/06 00:32:18 ferdy Exp $
 
 inherit bash-completion eutils flag-o-matic
 
@@ -45,6 +45,12 @@ pkg_setup() {
 		epause 10
 	fi
 	filter-ldflags -Wl,--as-needed --as-needed
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-vdb-path.patch
 }
 
 src_compile() {
