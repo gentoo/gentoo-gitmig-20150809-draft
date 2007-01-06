@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/dvgrab-2.1.ebuild,v 1.1 2007/01/06 00:02:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/dvgrab-2.1.ebuild,v 1.2 2007/01/06 00:18:55 aballier Exp $
 
 WANT_AUTOCONF=2.5
 WANT_AUTOMAKE=1.9
@@ -8,7 +8,7 @@ WANT_AUTOMAKE=1.9
 inherit eutils autotools
 
 DESCRIPTION="Digital Video (DV) grabber for GNU/Linux"
-HOMEPAGE="http://kino.schirmacher.de/"
+HOMEPAGE="http://www.kinodv.org/"
 SRC_URI="mirror://sourceforge/kino/${P}.tar.gz"
 
 LICENSE="GPL-2"
