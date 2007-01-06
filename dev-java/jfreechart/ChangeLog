@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/jfreechart
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/ChangeLog,v 1.11 2006/09/11 12:59:25 nelchael Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/ChangeLog,v 1.12 2007/01/06 14:10:55 fordfrog Exp $
+
+*jfreechart-1.0.3 (06 Jan 2007)
+
+  06 Jan 2007; Miroslav Šulc <miroslav.sulc@startnet.cz>
+  +files/jfreechart-1.0.3-build.xml.patch, +jfreechart-1.0.3.ebuild:
+  Version bump, updated license, dropped ~ppc as it is not present in itext,
+  dropped gnu-jaxp dep as it is needed only for JDK 1.3, added support for
+  tests which currently fail (reported upstream), ebuild currently installs
+  jfreechart-experimental.jar too
 
 *jfreechart-1.0.2 (11 Sep 2006)
 *jfreechart-0.9.21-r1 (11 Sep 2006)

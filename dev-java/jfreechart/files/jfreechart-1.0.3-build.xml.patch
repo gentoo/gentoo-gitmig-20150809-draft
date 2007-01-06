@@ -1,0 +1,48 @@
+--- build.xml.original	2007-01-06 12:40:56.000000000 +0100
++++ build.xml	2007-01-06 13:28:40.000000000 +0100
+@@ -311,4 +311,45 @@
+         <delete dir="${basedir}/distribution" />    
+     </target>
+ 
++    <target name="compile-tests" depends="compile,compile-experimental"
++            description="Compile the test code">
++        <mkdir dir="${basedir}/build-tests"/>
++        <javac destdir="${basedir}/build-tests" srcdir="${basedir}/tests" source="1.3"
++               target="1.3" debug="true" deprecation="true"
++               optimize="false">
++            <classpath>
++                <path refid="build.classpath"/>
++                <pathelement location="${junit.jar}"/>
++                <pathelement location="${basedir}/${jfreechart.name}-${jfreechart.version}.jar"/>
++                <pathelement location="${basedir}/${jfreechart.name}-${jfreechart.version}-experimental.jar"/>
++                <pathelement location="${basedir}/build-tests"/>
++            </classpath>
++        </javac>
++        <copy todir="${basedir}/build-tests">
++            <fileset dir="${basedir}/tests" excludes="**/*.java"/>
++        </copy>
++    </target>
++
++    <target name="test" depends="compile-tests"
++            description="Run the test cases">
++        <mkdir dir="${basedir}/build-tests-reports"/>
++        <junit printSummary="yes" haltonerror="true" haltonfailure="true"
++               fork="true" dir=".">
++            <sysproperty key="basedir" value="."/>
++            <formatter type="plain" usefile="false"/>
++            <classpath>
++                <path refid="build.classpath"/>
++                <pathelement location="${junit.jar}"/>
++                <pathelement location="${basedir}/${jfreechart.name}-${jfreechart.version}.jar"/>
++                <pathelement location="${basedir}/${jfreechart.name}-${jfreechart.version}-experimental.jar"/>
++                <pathelement location="${basedir}/build-tests"/>
++            </classpath>
++            <batchtest todir="${basedir}/build-tests-reports">
++                <fileset dir="${basedir}/tests">
++                    <include name="**/*Tests.java"/>
++                </fileset>
++            </batchtest>
++        </junit>
++    </target>
++
+ </project>
