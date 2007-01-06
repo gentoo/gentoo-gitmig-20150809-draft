@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygtk
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.138 2006/12/21 12:35:12 corsair Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.139 2007/01/06 12:32:19 dev-zero Exp $
+
+  06 Jan 2007; Tiziano Müller <dev-zero@gentoo.org> pygtk-2.6.1.ebuild,
+  pygtk-2.6.2.ebuild:
+  Dropped gnome USE-flag for 2.6.x (bug #104671)
 
   21 Dec 2006; Markus Rothe <corsair@gentoo.org> pygtk-2.10.3.ebuild:
   Stable on ppc64; bug #156662
