@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.114 2007/01/05 16:56:32 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.115 2007/01/06 19:32:56 ticho Exp $
+
+*fetchmail-6.3.6 (06 Jan 2007)
+
+  06 Jan 2007; Andrej Kacian <ticho@gentoo.org> +fetchmail-6.3.6.ebuild:
+  Version bump.
 
   05 Jan 2007; Andrej Kacian <ticho@gentoo.org>
   -files/fetchmail-6.2.5-mit-krb5-1.4.patch:
