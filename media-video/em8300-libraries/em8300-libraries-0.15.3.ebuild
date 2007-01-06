@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/em8300-libraries-0.15.3.ebuild,v 1.2 2006/05/14 16:52:34 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/em8300-libraries-0.15.3.ebuild,v 1.3 2007/01/06 14:56:41 zzam Exp $
 
 inherit flag-o-matic
 
@@ -66,14 +66,14 @@ src_install () {
 
 pkg_postinst() {
 
-	einfo
-	einfo "The em8300 libraries and modules have now beein installed,"
-	einfo "you will probably want to add /usr/bin/em8300setup to your"
-	einfo "/etc/conf.d/local.start so that your em8300 card is "
-	einfo "properly initialized on boot."
-	einfo
-	einfo "If you still need a microcode other than the one included"
-	einfo "with the package, you can simply use em8300setup <microcode.ux>"
-	einfo
+	elog
+	elog "The em8300 libraries and modules have now beein installed,"
+	elog "you will probably want to add /usr/bin/em8300setup to your"
+	elog "/etc/conf.d/local.start so that your em8300 card is "
+	elog "properly initialized on boot."
+	elog
+	elog "If you still need a microcode other than the one included"
+	elog "with the package, you can simply use em8300setup <microcode.ux>"
+	elog
 
 }

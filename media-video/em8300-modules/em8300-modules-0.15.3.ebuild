@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.15.3.ebuild,v 1.4 2006/06/13 10:34:05 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.15.3.ebuild,v 1.5 2007/01/06 14:57:42 zzam Exp $
 
 inherit eutils linux-info
 
@@ -72,20 +72,20 @@ pkg_postinst () {
 		/sbin/modules-update
 	fi
 
-	einfo
-	einfo "The em8300 kernel modules have been installed into the modules"
-	einfo "directory of your currently running kernel.  They haven't been"
-	einfo "loaded.  Please read the documentation, and if you would like"
-	einfo "to have the modules load at startup, add em8300, bt865, adv717x"
-	einfo "to your /etc/modules.autoload they may need module options to "
-	einfo "work correctly on your system.  You will also need to add"
-	einfo "the contents of /usr/share/doc/${P}/devfs_symlinks.gz"
-	einfo "to your devfsd.conf so that the em8300 devices will be linked"
-	einfo "correctly."
-	einfo
-	einfo "You will also need to have the i2c kernel modules compiled for"
-	einfo "this to be happy, no need to patch any kernel though just turn"
-	einfo "all the i2c stuff in kernel config to M and you'll be fine."
-	einfo
+	elog
+	elog "The em8300 kernel modules have been installed into the modules"
+	elog "directory of your currently running kernel.  They haven't been"
+	elog "loaded.  Please read the documentation, and if you would like"
+	elog "to have the modules load at startup, add em8300, bt865, adv717x"
+	elog "to your /etc/modules.autoload they may need module options to "
+	elog "work correctly on your system.  You will also need to add"
+	elog "the contents of /usr/share/doc/${P}/devfs_symlinks.gz"
+	elog "to your devfsd.conf so that the em8300 devices will be linked"
+	elog "correctly."
+	elog
+	elog "You will also need to have the i2c kernel modules compiled for"
+	elog "this to be happy, no need to patch any kernel though just turn"
+	elog "all the i2c stuff in kernel config to M and you'll be fine."
+	elog
 
 }
