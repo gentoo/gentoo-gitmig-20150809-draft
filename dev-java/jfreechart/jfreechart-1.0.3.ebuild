@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/jfreechart-1.0.3.ebuild,v 1.2 2007/01/06 15:06:51 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/jfreechart-1.0.3.ebuild,v 1.3 2007/01/06 17:16:58 fordfrog Exp $
 
 inherit java-pkg-2 java-ant-2 versionator
 
@@ -17,8 +17,9 @@ COMMON_DEPEND="
 	=dev-java/servletapi-2.3*"
 DEPEND=">=virtual/jdk-1.4
 	${COMMON_DEPEND}
-	dev-java/ant-core
-	test? ( =dev-java/junit-3.8* )"
+	!test? ( dev-java/ant-core )
+	test? ( dev-java/ant
+		=dev-java/junit-3.8* )"
 RDEPEND=">=virtual/jdk-1.4
 	${COMMON_DEPEND}"
 
@@ -58,6 +59,6 @@ get_jars() {
 		-Djcommon.jar=$(java-pkg_getjars jcommon-1.0) \
 		-Dservlet.jar=$(java-pkg_getjars servletapi-2.3)"
 	use test && antflags="${antflags} \
-		-Djunit.jar=$(java-pkg_getjars junit)"
+		-Djunit.jar=$(java-pkg_getjars --build-only junit)"
 	echo "${antflags}"
 }
