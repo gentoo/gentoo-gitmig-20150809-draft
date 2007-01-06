@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/openmcu/openmcu-2.2.0.ebuild,v 1.1 2006/09/14 01:03:20 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/openmcu/openmcu-2.2.0.ebuild,v 1.2 2007/01/06 16:36:58 drizzt Exp $
 
 inherit eutils
 
@@ -71,6 +71,6 @@ pkg_postinst() {
 	chmod -R u=rwX,g=rX,o=	 ${ROOT}var/{log,run}/openmcu
 
 	echo
-	einfo "This patched version of openmcu stores it's configuration"
-	einfo "in \"/etc/openmcu/openmcu.ini\""
+	elog "This patched version of openmcu stores it's configuration"
+	elog "in \"/etc/openmcu/openmcu.ini\""
 }

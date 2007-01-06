@@ -1,6 +1,9 @@
 # ChangeLog for net-voip/openmcu
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/openmcu/ChangeLog,v 1.1 2006/09/14 01:03:20 genstef Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/openmcu/ChangeLog,v 1.2 2007/01/06 16:36:58 drizzt Exp $
+
+  06 Jan 2007; Timothy Redaelli <drizzt@gentoo.org> openmcu-2.2.0.ebuild:
+  s/einfo/elog/
 
 *openmcu-2.2.0 (14 Sep 2006)
 
