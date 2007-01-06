@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-0.23.1-r1.ebuild,v 1.1 2006/09/25 02:05:35 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-0.23.1-r1.ebuild,v 1.2 2007/01/06 18:47:59 aballier Exp $
 
 inherit eutils python
 
@@ -37,12 +37,13 @@ RDEPEND="${DEPEND}
 		>=media-plugins/gst-plugins-gconf-0.10.3
 		>=media-plugins/gst-plugins-gnomevfs-0.10.2
 		dev-python/feedparser )
-	dbus? ( >=sys-apps/dbus-0.62 )"
+	dbus? ( || ( >=dev-python/dbus-python-0.71
+	( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.34 ) ) )"
 
 PDEPEND="trayicon? ( media-plugins/quodlibet-trayicon )"
 
 pkg_setup() {
-	if use dbus && ! built_with_use sys-apps/dbus python ; then
+	if use dbus && has_version '<sys-apps/dbus-0.90' && ! built_with_use sys-apps/dbus python ; then
 		eerror "dbus is missing python support. Please add 'python'"
 		eerror "to your USE flags, and re-emerge sys-apps/dbus"
 		die "dbus needs python support"

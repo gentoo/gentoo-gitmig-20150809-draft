@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/quodlibet
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.44 2006/10/07 18:49:47 tcort Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.45 2007/01/06 18:47:59 aballier Exp $
+
+  06 Jan 2007; Alexis Ballier <aballier@gentoo.org>
+  quodlibet-0.23.1-r1.ebuild:
+  Dbus 1 lovin
 
   07 Oct 2006; Thomas Cort <tcort@gentoo.org>
   -files/quodlibet-0.17.1-multilibfix.patch,
