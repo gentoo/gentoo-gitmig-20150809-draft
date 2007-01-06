@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.31 2007/01/06 00:50:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.32 2007/01/06 01:03:38 aballier Exp $
+
+  06 Jan 2007; Alexis Ballier <aballier@gentoo.org> gpac-0.4.2-r1.ebuild:
+  Removing no more present docs from dodoc args
 
   06 Jan 2007; Alexis Ballier <aballier@gentoo.org>
   +files/gpac-0.4.2-bsd.patch, gpac-0.4.2-r1.ebuild:
