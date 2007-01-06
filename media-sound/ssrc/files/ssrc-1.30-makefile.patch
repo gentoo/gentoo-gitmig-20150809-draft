@@ -1,0 +1,17 @@
+--- Makefile.old	2007-01-06 22:10:22.000000000 +0100
++++ Makefile	2007-01-06 22:11:17.000000000 +0100
+@@ -5,10 +5,10 @@
+ all : ssrc ssrc_hp
+ 
+ ssrc : ssrc.c fftsg_ld.c dbesi0.c
+-	$(CC) $(CFLAGS) ssrc.c fftsg_ld.c dbesi0.c -o ssrc
++	$(CC) $(CFLAGS) $(LDFLAGS) ssrc.c fftsg_ld.c dbesi0.c -o ssrc -lm
+ 
+ ssrc_hp : ssrc.c fftsg_ld.c dbesi0.c
+-	$(CC) $(CFLAGS) -DHIGHPREC ssrc.c fftsg_ld.c dbesi0.c -o ssrc_hp
++	$(CC) $(CFLAGS) $(LDFLAGS) -DHIGHPREC ssrc.c fftsg_ld.c dbesi0.c -o ssrc_hp -lm
+ 
+ clean :
+-	rm -f ssrc ssrc_hp *.o *~
+\ No newline at end of file
++	rm -f ssrc ssrc_hp *.o *~
