@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libuta
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libuta/ChangeLog,v 1.9 2006/03/07 11:21:15 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libuta/ChangeLog,v 1.10 2007/01/06 19:56:27 kugelfang Exp $
+
+  06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -libuta-0.4.1-r1.ebuild,
+  -libuta-0.4.3.ebuild:
+  QA: Removed unused versions.
 
   07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
   libuta-0.4.1-r1.ebuild:

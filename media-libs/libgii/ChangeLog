@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgii
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/ChangeLog,v 1.27 2006/08/07 13:29:26 kevquinn Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/ChangeLog,v 1.28 2007/01/06 19:53:10 kugelfang Exp $
+
+  06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -libgii-0.8.1.ebuild:
+  QA: Removed unused versions.
 
   07 Aug 2006; Kevin F. Quinn <kevquinn@gentoo.org>
   +files/libgii-0.9.0-configure-cpuid-pic.patch, libgii-0.9.0.ebuild:
