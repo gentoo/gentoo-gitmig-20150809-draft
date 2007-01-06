@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/cscope
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.80 2007/01/05 07:51:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.81 2007/01/06 18:30:51 opfer Exp $
+
+*cscope-15.6-r1 (06 Jan 2007)
+
+  06 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
+  +files/cscope-158831-warning_webscope.patch, +cscope-15.6-r1.ebuild:
+  added patch with warning when using web frontend because it may be a
+  security risk, see bug #158831
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> cscope-15.5-r6.ebuild,
   cscope-15.5.20060927.ebuild, cscope-15.5.20060927-r1.ebuild:
