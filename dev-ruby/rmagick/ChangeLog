@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.30 2007/01/03 08:52:21 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.31 2007/01/06 17:07:17 graaff Exp $
+
+*rmagick-1.14.1-r1 (06 Jan 2007)
+
+  06 Jan 2007; Hans de Graaff <graaff@gentoo.org> -rmagick-1.7.3.ebuild,
+  +rmagick-1.14.1-r1.ebuild:
+  Add doc USE flag and allow the examples that are part of the documentation to
+  fail. Fixes #159833 and #160042. Remove old version.
 
   03 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
   rmagick-1.14.1.ebuild:
