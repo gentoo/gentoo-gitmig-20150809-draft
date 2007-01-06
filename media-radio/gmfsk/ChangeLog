@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/gmfsk
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/gmfsk/ChangeLog,v 1.6 2006/11/18 04:43:11 joshuabaergen Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/gmfsk/ChangeLog,v 1.7 2007/01/06 20:09:43 kugelfang Exp $
+
+  06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -gmfsk-0.6.ebuild:
+  QA: Removed unused versions.
 
   18 Nov 2006; Joshua Baergen <joshuabaergen@gentoo.org> gmfsk-0.6.ebuild,
   gmfsk-0.6-r1.ebuild:
