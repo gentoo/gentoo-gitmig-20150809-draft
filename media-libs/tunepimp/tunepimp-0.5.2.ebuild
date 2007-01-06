@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.5.2.ebuild,v 1.9 2007/01/04 15:20:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.5.2.ebuild,v 1.10 2007/01/06 10:06:50 masterdriverz Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -41,6 +41,12 @@ src_unpack() {
 	sed -i -e "s: tta::" configure.in
 
 	eautoreconf
+}
+
+src_compile() {
+	# We need to override distutils_src_compile, bug 160145
+	econf || die 'econf failed'
+	emake || die 'emake failed'
 }
 
 src_install() {

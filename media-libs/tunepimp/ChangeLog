@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/tunepimp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/ChangeLog,v 1.48 2007/01/04 15:20:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/ChangeLog,v 1.49 2007/01/06 10:06:50 masterdriverz Exp $
+
+  06 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  tunepimp-0.5.2.ebuild:
+  Override distutils_src_compile; bug 160145
 
   04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> tunepimp-0.5.2.ebuild:
   Fix broken autotools handling.
