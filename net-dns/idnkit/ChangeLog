@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/idnkit
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/ChangeLog,v 1.8 2006/01/18 14:18:07 metalgod Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/ChangeLog,v 1.9 2007/01/06 16:22:19 kloeri Exp $
+
+  06 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> idnkit-1.0.ebuild:
+  Add ~alpha keyword.
 
   18 Jan 2006; Luis Medinas <metalgod@gentoo.org> idnkit-1.0.ebuild:
   Added ~amd64 keyword.
