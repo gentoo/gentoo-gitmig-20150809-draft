@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cutils
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/ChangeLog,v 1.17 2006/09/30 01:29:53 robbat2 Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/ChangeLog,v 1.18 2007/01/06 04:17:15 kugelfang Exp $
+
+  06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -cutils-1.6-r1.ebuild:
+  QA: Removed unused versions.
 
   30 Sep 2006; Robin H. Johnson <robbat2@gentoo.org> cutils-1.6-r2.ebuild:
   Add ~amd64 so I can use it.
