@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-1.1.4.ebuild,v 1.1 2007/01/01 22:26:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-1.1.4.ebuild,v 1.2 2007/01/06 21:10:48 tove Exp $
 
 DESCRIPTION="Bayesian spam filter designed with fast algorithms, and tuned for speed."
 HOMEPAGE="http://bogofilter.sourceforge.net/"
@@ -25,12 +25,13 @@ src_compile() {
 
 	# determine backend: berkdb *is* default
 	if use berkdb && use sqlite ; then
-		einfo "Both berkdb and sqlite are in USE."
-		einfo "Choosing berkdb as default database backend."
+		elog "Both useflags berkdb and sqlite are in USE:"
+		elog "Using berkdb as database backend."
 	elif use sqlite ; then
 		myconf="${myconf} --with-database=sqlite"
 	elif ! use berkdb ; then
-		einfo "Using berkdb as database backend."
+		elog "Neither berkdb nor sqlite are in USE:"
+		elog "Using berkdb as database backend."
 	fi
 
 	econf ${myconf} || die "configure failed"
@@ -63,6 +64,6 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "If you need ${ROOT}usr/bin/bf_tar please install app-arch/pax."
+	elog "If you need ${ROOT}usr/bin/bf_tar please install app-arch/pax."
 	echo
 }
