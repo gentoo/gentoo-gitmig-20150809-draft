@@ -1,6 +1,6 @@
 # ChangeLog for net-print/kink
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/kink/ChangeLog,v 1.5 2007/01/06 19:10:30 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/kink/ChangeLog,v 1.6 2007/01/06 19:50:57 cryos Exp $
 
 *kink-0.2.1-r1 (06 Jan 2007)
 
@@ -8,7 +8,7 @@
   +files/kink-0.2.1-libinklevel-0.6.6.patch, kink-0.2.1.ebuild,
   +kink-0.2.1-r1.ebuild:
   Fixed the dependencies in the original ebuild, produced a patch for 0.2.1 to
-  work with the new libinklevel-0.6.6 API.
+  work with the new libinklevel-0.6.6 API. Fixes bug 147967.
 
   05 Feb 2005; Marcus D. Hanwell <cryos@gentoo.org> kink-0.2.1.ebuild:
   Marked stable on x86 and amd64.
