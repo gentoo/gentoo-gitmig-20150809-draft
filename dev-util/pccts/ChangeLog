@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pccts
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/ChangeLog,v 1.22 2005/07/29 23:44:11 dragonheart Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/ChangeLog,v 1.23 2007/01/06 04:28:30 kugelfang Exp $
+
+  06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org>
+  -pccts-1.33.32-r1.ebuild:
+  QA: Removed unused versions.
 
   29 Jul 2005; Daniel Black <dragonheart@gentoo.org>
   pccts-1.33.32-r1.ebuild, pccts-1.33.33.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/global
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.19 2006/08/19 17:31:53 wormo Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.20 2007/01/06 04:23:49 kugelfang Exp $
+
+  06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -global-4.8.2.ebuild,
+  -global-4.8.7.ebuild:
+  QA: Removed unused versions.
 
 *global-5.2 (19 Aug 2006)
 
