@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.13.24.ebuild,v 1.1 2007/01/02 14:20:33 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.13.24.ebuild,v 1.2 2007/01/06 10:19:26 vapier Exp $
 
 inherit eutils multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://debian/pool/main/d/dpkg/${P/-/_}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~s390 ~sh ~sparc ~x86"
-IUSE="zlib bzip2"
+IUSE="bzip2 selinux zlib"
 
 RDEPEND=">=dev-lang/perl-5.6.0
 	>=sys-libs/ncurses-5.2-r7
@@ -22,14 +22,15 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	econf \
-		$(use_with zlib) \
 		$(use_with bzip2 bz2lib) \
+		$(use_with selinux) \
+		$(use_with zlib) \
 		|| die
 	emake || die
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 	rm "${D}"/usr/sbin/{install-info,start-stop-daemon}
 	rm "${D}"/usr/share/man/man?/{install-info,start-stop-daemon}.?
 	dodoc ChangeLog INSTALL THANKS TODO

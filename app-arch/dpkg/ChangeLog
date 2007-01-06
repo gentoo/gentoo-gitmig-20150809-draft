@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.43 2007/01/02 14:20:33 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.44 2007/01/06 10:19:26 vapier Exp $
+
+  06 Jan 2007; Mike Frysinger <vapier@gentoo.org> dpkg-1.13.24.ebuild:
+  Add support for USE=selinux.
 
 *dpkg-1.13.24 (02 Jan 2007)
 
