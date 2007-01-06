@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.2.1.ebuild,v 1.4 2007/01/04 16:04:36 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.2.1.ebuild,v 1.5 2007/01/06 10:04:10 zzam Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -129,7 +129,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "If you want Systray you have to use a jre >= 1.5 !"
-	einfo
+	elog
+	elog "If you want Systray you have to use a jre >= 1.5 !"
+	elog
 }
