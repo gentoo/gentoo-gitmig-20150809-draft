@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/jfreechart-1.0.3.ebuild,v 1.1 2007/01/06 14:10:55 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/jfreechart-1.0.3.ebuild,v 1.2 2007/01/06 15:06:51 fordfrog Exp $
 
 inherit java-pkg-2 java-ant-2 versionator
 
@@ -30,19 +30,18 @@ src_unpack() {
 
 	cd "${S}"
 	rm -f lib/* *.jar
-	cd "${S}/lib"
-	java-pkg_jar-from itext iText.jar itext-1.4.6.jar
-	java-pkg_jar-from jcommon-1.0 jcommon.jar jcommon-1.0.6.jar
-	java-pkg_jar-from servletapi-2.3
-	use test && java-pkg_jar-from junit
 }
 
 src_compile() {
-	eant -f ant/build.xml compile compile-experimental $(use_doc)
+	# Note that compile-experimental depends on compile so it is sufficient to run
+	# just compile-experimental
+	eant -f ant/build.xml compile-experimental $(use_doc) $(get_jars)
 }
 
 src_test() {
-	ANT_TASKS="ant-junit" eant -f ant/build.xml test
+	einfo "Please note that tests currently fail. See bug:"
+	einfo "http://sourceforge.net/tracker/index.php?func=detail&aid=1629382&group_id=15494&atid=115494"
+	ANT_TASKS="ant-junit" eant -f ant/build.xml test $(get_jars)
 }
 
 src_install() {
@@ -53,3 +52,12 @@ src_install() {
 	use source && java-pkg_dosrc source/org
 }
 
+get_jars() {
+	local antflags="
+		-Ditext.jar=$(java-pkg_getjars itext) \
+		-Djcommon.jar=$(java-pkg_getjars jcommon-1.0) \
+		-Dservlet.jar=$(java-pkg_getjars servletapi-2.3)"
+	use test && antflags="${antflags} \
+		-Djunit.jar=$(java-pkg_getjars junit)"
+	echo "${antflags}"
+}
