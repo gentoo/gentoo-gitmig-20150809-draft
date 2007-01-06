@@ -1,6 +1,9 @@
 # ChangeLog for app-office/sc
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/sc/ChangeLog,v 1.13 2005/07/12 07:48:13 spyderous Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/sc/ChangeLog,v 1.14 2007/01/06 00:37:24 kugelfang Exp $
+
+  06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -sc-7.12.ebuild:
+  QA: Removed unused versions.
 
 *sc-7.16 (12 Jul 2005)
 
