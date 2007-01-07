@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/xcb-util
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util/ChangeLog,v 1.7 2007/01/04 21:18:04 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util/ChangeLog,v 1.8 2007/01/07 19:35:36 drizzt Exp $
+
+  07 Jan 2007; Timothy Redaelli <drizzt@gentoo.org>
+  xcb-util-0.1_p20061216.ebuild:
+  Add ~x86-fbsd keyword
 
   04 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
   xcb-util-0.1_p20061216.ebuild:
