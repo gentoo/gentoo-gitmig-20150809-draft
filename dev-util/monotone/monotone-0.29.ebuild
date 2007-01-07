@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.29.ebuild,v 1.4 2007/01/03 20:52:35 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.29.ebuild,v 1.5 2007/01/07 19:39:57 dragonheart Exp $
 
 inherit elisp-common flag-o-matic bash-completion eutils
 
@@ -82,7 +82,7 @@ src_install() {
 	newins "${FILESDIR}"/read-permissions read-permissions
 	newins "${FILESDIR}"/write-permissions write-permissions
 
-	keepdir /var/lib/monotone/keys/ /var/log/montone /var/run/montone
+	keepdir /var/lib/monotone/keys/ /var/log/monotone /var/run/montone
 	fowners monotone:monotone /var/lib/monotone /var/lib/monotone/keys/ \
 		/var/log/monotone /var/run/montone
 }
