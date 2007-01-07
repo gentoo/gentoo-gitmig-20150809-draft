@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX unzip-5.50-dotdot.patch 3236 RMD160 11c7242a572d593c9fe2e87a26fa9e8caed9ea9b SHA1 6cd63bc6d92a63b8b2de5a5be66bceab46a5dc51 SHA256 0a9631d6c14c72704595bababea83406519c7a864736c82ffe0efc446ade1731
 MD5 3b01796cbe10d9492bd8c0825bc83544 files/unzip-5.50-dotdot.patch 3236
 RMD160 11c7242a572d593c9fe2e87a26fa9e8caed9ea9b files/unzip-5.50-dotdot.patch 3236
@@ -37,3 +40,10 @@ SHA256 be2db45669d3fb56f780e7c9f22ae73a9caaf8701bee3226d7d55d02b77d36b0 files/di
 MD5 ee9202fe33b60c050a5f65de4d69bec4 files/digest-unzip-5.52-r1 229
 RMD160 b5ea435df907108c5158bebb340ed73e605d43fc files/digest-unzip-5.52-r1 229
 SHA256 be2db45669d3fb56f780e7c9f22ae73a9caaf8701bee3226d7d55d02b77d36b0 files/digest-unzip-5.52-r1 229
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFoOGgwnQyISwouHwRAgFbAKC/8izj0S3RzxOcaRsz5vbDK4C2gQCeMVsf
+NfA7AmTmOa8ZDoEVN+2as3s=
+=8DTp
+-----END PGP SIGNATURE-----
