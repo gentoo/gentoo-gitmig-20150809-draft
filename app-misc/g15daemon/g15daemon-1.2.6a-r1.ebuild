@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.2.5.ebuild,v 1.2 2007/01/07 03:09:00 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.2.6a-r1.ebuild,v 1.1 2007/01/07 03:09:00 rbu Exp $
 
 inherit eutils linux-info perl-module python multilib
 
@@ -79,8 +79,8 @@ src_install() {
 		doins contrib/testbindings.pl
 	fi
 
-	newconfd "${FILESDIR}/${P}.confd" ${PN}
-	newinitd "${FILESDIR}/${P}.initd" ${PN}
+	newconfd "${FILESDIR}/${P}.confd" g15daemon
+	newinitd "${FILESDIR}/${P}.initd" g15daemon
 
 	if use perl; then
 		ebegin "Installing Perl Bindings (G15Daemon.pm)"
