@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-2.8.ebuild,v 1.1 2007/01/07 14:21:14 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-2.8.ebuild,v 1.2 2007/01/07 14:51:25 cedk Exp $
 
 inherit toolchain-funcs
 
@@ -65,7 +65,9 @@ src_install() {
 }
 
 pkg_preinst() {
-	mv "${D}"/usr/share/${PN}/${PF}.config.h "${T}"/
+	if use savedconfig; then
+		mv "${D}"/usr/share/${PN}/${PF}.config.h "${T}"/ || die
+	fi
 }
 
 pkg_postinst() {
