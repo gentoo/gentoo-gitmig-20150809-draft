@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.2.15-r2.ebuild,v 1.9 2007/01/07 19:58:18 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.2.15-r2.ebuild,v 1.10 2007/01/07 22:08:30 cedk Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -102,14 +102,6 @@ src_install() {
 
 		# remove duplicate installation into /usr/lib/perl
 		rm -Rf "${D}"/usr/lib/perl
-	fi
-
-	if use tcl ; then
-		mv "${S}"/bindings/tcl/tclrrd.so "${S}"/bindings/tcl/tclrrd${PV}.so
-		insinto /usr/$(get_libdir)/tcl${TCL_VER}/tclrrd${PV}
-		doins "${S}"/bindings/tcl/tclrrd${PV}.so
-		echo "package ifneeded Rrd ${PV} [list load [file join \$$dir .. tclrrd${PV}.so]]" \
-			>> "${D}"/usr/$(get_libdir)/tcl${TCL_VER}/tclrrd${PV}/pkgIndex.tcl
 	fi
 
 	dodoc CONTRIBUTORS README TODO
