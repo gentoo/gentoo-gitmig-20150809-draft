@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.15.ebuild,v 1.7 2006/11/18 22:09:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.15.ebuild,v 1.8 2007/01/07 09:47:17 genstef Exp $
 
 inherit libtool eutils
 
@@ -17,7 +17,7 @@ DEPEND="tiff? ( media-libs/tiff )
 	jpeg? ( media-libs/jpeg )
 	zlib? ( sys-libs/zlib )
 	python? ( >=dev-lang/python-1.5.2
-		!sh? ( >=dev-lang/swig-1.3.29-r1 ) )"
+		!sh? ( >=dev-lang/swig-1.3.31 ) )"
 		# ugly workaround because arches have not keyworded it
 RDEPEND="${DEPEND}"
 

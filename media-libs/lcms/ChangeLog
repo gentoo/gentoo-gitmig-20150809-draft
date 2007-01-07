@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lcms
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.66 2006/11/18 22:09:56 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.67 2007/01/07 09:47:17 genstef Exp $
+
+  07 Jan 2007; <genstef@gentoo.org> lcms-1.15.ebuild:
+  Finally fix bug 148728 thanks to kloeri for bumping swig
 
   18 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> lcms-1.15.ebuild:
   Don't do inverse arch dependencies for x86-fbsd, you'll just mask the issue
