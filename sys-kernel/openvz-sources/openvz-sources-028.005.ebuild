@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-028.005.ebuild,v 1.5 2006/12/28 08:56:58 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-028.005.ebuild,v 1.6 2007/01/07 15:20:15 phreak Exp $
 
 ETYPE="sources"
 CKV="2.6.18"
