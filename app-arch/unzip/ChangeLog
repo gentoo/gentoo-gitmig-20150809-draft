@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unzip
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.46 2006/10/24 09:55:15 uberlord Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.47 2007/01/07 11:55:59 truedfx Exp $
+
+  07 Jan 2007; Harald van Dĳk <truedfx@gentoo.org> unzip-5.52-r1.ebuild:
+  Handle NetBSD CHOST and properly check for x86 for other BSDs
 
   24 Oct 2006; Roy Marples <uberlord@gentoo.org> unzip-5.52-r1.ebuild:
   Don't assume that freebsd == i386 :)

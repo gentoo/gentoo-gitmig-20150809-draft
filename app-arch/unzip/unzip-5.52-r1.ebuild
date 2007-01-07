@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.52-r1.ebuild,v 1.17 2006/10/24 09:55:15 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.52-r1.ebuild,v 1.18 2007/01/07 11:55:59 truedfx Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -37,9 +37,10 @@ src_compile() {
 	case ${CHOST} in
 		i?86*-linux*) TARGET=linux_asm ;;
 		*-linux*)     TARGET=linux_noasm ;;
-		*-dragonfly*) use x86 && TARGET=freebsd || TARGET=bsd ;;
-		*-freebsd*)   use x86 && TARGET=freebsd || TARGET=bsd ;;
-		*-openbsd*)   TARGET=bsd ;;
+		i?86*-freebsd* | i?86*-dragonfly* | i?86*-openbsd* | i?86*-netbsd*)
+		              TARGET=freebsd ;; # mislabelled bsd with x86 asm
+		*-freebsd* | *-dragonfly* | *-openbsd* | *-netbsd*)
+		              TARGET=bsd ;;
 		*-darwin*)    TARGET=macosx ;;
 		*)            die "Unknown target, you suck" ;;
 	esac
