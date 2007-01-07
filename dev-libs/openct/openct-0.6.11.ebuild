@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.11.ebuild,v 1.4 2006/12/18 19:52:55 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.11.ebuild,v 1.5 2007/01/07 11:43:19 vapier Exp $
 
 inherit eutils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.opensc-project.org/files/openct/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="~alpha ~amd64 arm ~hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh sparc x86"
 IUSE="usb"
 
 RDEPEND="usb? (	>=dev-libs/libusb-0.1.7 >=sys-apps/hotplug-20030805-r1 )"
@@ -25,7 +25,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 
 	if use usb ; then
 		insinto /etc/hotplug/usb
@@ -54,8 +54,9 @@ src_install() {
 }
 
 pkg_preinst() {
+	# TODO: use the preserve_old_lib* funcs from eutils.eclass
 	if [[ -e ${ROOT}/usr/$(get_libdir)/libopenct.so.0 ]] ; then
-		cp "${ROOT}"/usr/$(get_libdir)/libopenct.so.0 "${IMAGE}"/usr/lib/
+		cp -a "${ROOT}"/usr/$(get_libdir)/libopenct.so.0 "${D}"/usr/lib/
 	fi
 }
 
