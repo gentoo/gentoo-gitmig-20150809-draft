@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Data-Hierarchy
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Hierarchy/ChangeLog,v 1.27 2006/11/06 15:17:15 mcummings Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Hierarchy/ChangeLog,v 1.28 2007/01/07 20:08:05 mcummings Exp $
+
+  07 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  Data-Hierarchy-0.34.ebuild:
+  Marking amd64 stable
 
 *Data-Hierarchy-0.34 (06 Nov 2006)
 
