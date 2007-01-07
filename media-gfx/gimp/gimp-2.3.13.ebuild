@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.3.13.ebuild,v 1.1 2006/12/04 13:55:07 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.3.13.ebuild,v 1.2 2007/01/07 17:52:08 hanno Exp $
 
 inherit fdo-mime flag-o-matic
 
@@ -28,17 +28,17 @@ RDEPEND=">=dev-libs/glib-2.8.2
 		alsa? ( >=media-libs/alsa-lib-1.0.0 )
 		doc? ( app-doc/gimp-help )
 		gnome? ( >=gnome-base/gnome-vfs-2.10.0
-				>=gnome-base/libgnomeui-2.10.0
-				>=gnome-base/gnome-keyring-0.4.5 )
+			>=gnome-base/libgnomeui-2.10.0
+			>=gnome-base/gnome-keyring-0.4.5 )
 		gtkhtml? ( =gnome-extra/gtkhtml-2* )
 		jpeg? ( >=media-libs/jpeg-6b-r2
-				>=media-libs/libexif-0.6.0 )
+			>=media-libs/libexif-0.6.0 )
 		lcms? ( media-libs/lcms )
 		mng? ( media-libs/libmng )
 		pdf? ( >=app-text/poppler-bindings-0.3.1 )
 		png? ( >=media-libs/libpng-1.2.2 )
 		python?	( >=dev-lang/python-2.2.1
-				>=dev-python/pygtk-2 )
+			>=dev-python/pygtk-2.8 )
 		tiff? ( >=media-libs/tiff-3.5.7 )
 		svg? ( >=gnome-base/librsvg-2.2.8 )
 		wmf? ( >=media-libs/libwmf-0.2.8 )"
