@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/pudge
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pudge/ChangeLog,v 1.1 2007/01/07 21:33:35 dev-zero Exp $
+
+*pudge-0.1.2 (07 Jan 2007)
+
+  07 Jan 2007; Tiziano Müller <dev-zero@gentoo.org> +pudge-0.1.2.ebuild:
+  New ebuild for bug #155364
+
