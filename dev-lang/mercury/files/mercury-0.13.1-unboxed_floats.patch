@@ -1,0 +1,39 @@
+--- mercury-compiler-0.13.1.orig/configure	2007-01-07 16:27:24.000000000 +1300
++++ mercury-compiler-0.13.1/configure	2007-01-07 16:26:47.000000000 +1300
+@@ -7410,21 +7410,21 @@
+ 
+ echo "$as_me:$LINENO: result: $mercury_cv_unboxed_floats" >&5
+ echo "${ECHO_T}$mercury_cv_unboxed_floats" >&6
+-if test "$mercury_cv_unboxed_floats" = yes; then
+-	if test "$BOOTSTRAP_MC" = ""; then
+-		{ echo "$as_me:$LINENO: WARNING: Mercury compiler not yet installed -
+-****	cannot use unboxed floats, bootstrapping using boxed floats
+-****	after installation is complete you may want to reinstall
+-****	from scratch so you can use unboxed floats, which are more
+-****	efficient." >&5
+-echo "$as_me: WARNING: Mercury compiler not yet installed -
+-****	cannot use unboxed floats, bootstrapping using boxed floats
+-****	after installation is complete you may want to reinstall
+-****	from scratch so you can use unboxed floats, which are more
+-****	efficient." >&2;}
+-		mercury_cv_unboxed_floats=no
+-	fi
+-fi
++#if test "$mercury_cv_unboxed_floats" = yes; then
++#	if test "$BOOTSTRAP_MC" = ""; then
++#		{ echo "$as_me:$LINENO: WARNING: Mercury compiler not yet installed -
++#****	cannot use unboxed floats, bootstrapping using boxed floats
++#****	after installation is complete you may want to reinstall
++#****	from scratch so you can use unboxed floats, which are more
++#****	efficient." >&5
++#echo "$as_me: WARNING: Mercury compiler not yet installed -
++#****	cannot use unboxed floats, bootstrapping using boxed floats
++#****	after installation is complete you may want to reinstall
++#****	from scratch so you can use unboxed floats, which are more
++#****	efficient." >&2;}
++#		mercury_cv_unboxed_floats=no
++#	fi
++#fi
+ if test "$mercury_cv_unboxed_floats" = yes; then
+ 	HAVE_BOXED_FLOATS="--unboxed-float"
+ else
