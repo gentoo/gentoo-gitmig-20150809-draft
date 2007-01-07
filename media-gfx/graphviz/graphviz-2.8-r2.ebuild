@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.8-r2.ebuild,v 1.7 2006/11/12 04:23:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.8-r2.ebuild,v 1.8 2007/01/07 13:31:52 kloeri Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -54,6 +54,10 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-notcl.patch
 	sed -i 's:LC_COLLATE=C:LC_ALL=C:g' lib/common/Makefile.* #134834
+
+	# Make sure SWIG interface is rebuilt
+	touch tclpkg/gv/gv.i
+
 	eautoreconf
 }
 
