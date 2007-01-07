@@ -1,13 +1,13 @@
 # ChangeLog for dev-java/mockobjects
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/ChangeLog,v 1.14 2007/01/07 16:34:52 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/ChangeLog,v 1.15 2007/01/07 16:36:07 caster Exp $
 
 *mockobjects-0.09-r2 (07 Jan 2007)
 
   07 Jan 2007; Vlastimil Babka <caster@gentoo.org>
   files/mockobjects-0.09-gentoo.patch, +files/mockobjects-0.09-junit.patch,
   +mockobjects-0.09-r2.ebuild:
-  Revbump to migrate to gen-2 eclasses and to fix bug #119080 with a patch for
+  Revbump to migrate to gen-2 eclasses and to fix bug #134298 with a patch for
   compatibility with junit-3.8.2. Updated build.xml patch also disables
   autodetection of j2ee.jar because it can break and we don't install
   mockobjects-j2ee.jar anyway.
