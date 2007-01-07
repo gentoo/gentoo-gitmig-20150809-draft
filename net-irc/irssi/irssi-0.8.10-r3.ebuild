@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.10-r3.ebuild,v 1.11 2006/10/13 12:03:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.10-r3.ebuild,v 1.12 2007/01/07 16:38:57 swegener Exp $
 
 inherit perl-app eutils flag-o-matic
 
@@ -32,9 +32,6 @@ src_unpack() {
 }
 
 src_compile() {
-	# Irssi uses extern inlines and that needs at least -O
-	is-flag "-O*" || append-flags -O
-
 	econf \
 		--with-proxy \
 		--with-ncurses \
