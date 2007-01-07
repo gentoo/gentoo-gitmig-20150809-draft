@@ -1,0 +1,10 @@
+# ChangeLog for x11-wm/dwm
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/ChangeLog,v 1.1 2007/01/07 14:21:14 cedk Exp $
+
+*dwm-2.8 (07 Jan 2007)
+
+  07 Jan 2007; Cedric Krier <cedk@gentoo.org> +metadata.xml,
+  +dwm-2.8.ebuild:
+  New ebuild for bug #141530
+
