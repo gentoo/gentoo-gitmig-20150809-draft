@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX 915resolution-0.5.2-830.patch 2284 RMD160 9a7dfb7107c41b14544e3911de3bfeeefeb95c27 SHA1 36e71d3944ed0fd02c5c3b309a23df6c0fd53b12 SHA256 6441481adfee24b10c4c53f7a5b7792d47fa1992d30162db5ebcbb1b63a583af
 MD5 54baa1f7bedd081849e500b34203b08c files/915resolution-0.5.2-830.patch 2284
 RMD160 9a7dfb7107c41b14544e3911de3bfeeefeb95c27 files/915resolution-0.5.2-830.patch 2284
@@ -36,10 +33,3 @@ SHA256 a9b1e1c8d39680132cb47bfb19be139315dccd0a537fb97cc3a03eae79bc1499 files/di
 MD5 4796a2ce0e9d7cc0f16a63fb5038e352 files/digest-915resolution-0.5.2-r1 256
 RMD160 0dc3039740106b490b01db11cc33adea5bdc37fb files/digest-915resolution-0.5.2-r1 256
 SHA256 a9b1e1c8d39680132cb47bfb19be139315dccd0a537fb97cc3a03eae79bc1499 files/digest-915resolution-0.5.2-r1 256
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.1 (GNU/Linux)
-
-iD8DBQFFoFgVWt/XSf2CZdkRAl/RAJwNhMZWj77STHcKNICbP/88ijggDgCghZLd
-iX+KYOpsicGI3qBh2w9/L0A=
-=EH9R
------END PGP SIGNATURE-----
