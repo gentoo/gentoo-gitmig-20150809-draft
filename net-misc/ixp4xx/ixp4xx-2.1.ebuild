@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ixp4xx/ixp4xx-2.1.ebuild,v 1.3 2005/12/15 02:06:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ixp4xx/ixp4xx-2.1.ebuild,v 1.4 2007/01/07 10:52:09 vapier Exp $
 
 inherit eutils toolchain-funcs linux-mod
 
@@ -29,7 +29,7 @@ src_unpack() {
 src_compile() {
 	cd ixp400_xscale_sw
 	local ix_target
-	[[ $(tc-endian) == "little" ]] \
+	[[ $(printf "#include <endian.h>\n#if __BYTE_ORDER == __LITTLE_ENDIAN\nlittle\n#else\nbig\n#endif\n" | $(tc-getCPP) - | tail -n 1) == "little" ]] \
 		&& ix_target=linuxle \
 		|| ix_target=linuxbe
 	make \
