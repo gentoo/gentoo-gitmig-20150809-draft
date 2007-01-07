@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2483 2007/01/07 01:36:12 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2484 2007/01/07 14:20:48 cedk Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1881,6 +1881,7 @@ x11-themes/redhat-artwork:gdm - Install Bluecurve GDM theme
 x11-themes/redhat-artwork:icons - Install Bluecurve icons
 x11-themes/redhat-artwork:kdm - Install Bluecurve KDM theme
 x11-themes/redhat-artwork:nautilus - Install Bluecurve Nautilus icons
+x11-wm/dwm:savedconfig - Add support to user defined configs
 x11-wm/enlightenment:xrandr - Enable support for the X xrandr extension
 x11-wm/fluxbox:disableslit - Disable the silt. Works around bug 122380.
 x11-wm/fluxbox:disabletoolbar - Disable the toolbar.
