@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsamixergui
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/ChangeLog,v 1.24 2004/12/19 05:30:28 eradicator Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/ChangeLog,v 1.25 2007/01/07 13:55:06 aballier Exp $
+
+  07 Jan 2007; Alexis Ballier <aballier@gentoo.org>
+  alsamixergui-0.9.0.1.2-r4.ebuild:
+  Add desktop entry, thanks to Pacho Ramos
+  <pacho@condmat1.ciencias.uniovi.es>, bug #159839
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   alsamixergui-0.9.0.1.2-r4.ebuild:
