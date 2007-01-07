@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6562 2007/01/07 22:10:31 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6563 2007/01/07 22:35:35 phreak Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,14 @@
 ##
 ##   End example
 ## 
+
+# Christian Heim <phreak@gentoo.org> (07 Jan 2007)
+# UPSTREAM net-www/mod_bwshare won't allow any further downloads,
+# there are currently better alternatives in the tree:
+# for apache1 - use net-www/mod_bandwidth
+# for apache2 - use net-www/mod_bw or www-apache/mod_cband
+# net-www/mod_bwshare is pending removal sometime in February
+net-www/mod_bwshare
 
 # Christian Heim <phreak@gentoo.org> (07 Jan 2007)
 # net-www/mod_fastcgi won't build with newer apache versions.
