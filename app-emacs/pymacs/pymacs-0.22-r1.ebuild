@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.22-r1.ebuild,v 1.3 2006/09/16 13:35:38 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.22-r1.ebuild,v 1.4 2007/01/07 01:44:16 kloeri Exp $
 
 inherit distutils elisp eutils
 
@@ -13,7 +13,7 @@ DEPEND="virtual/emacs
 LICENSE="as-is"
 IUSE="doc"
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc-macos ~x86"
+KEYWORDS="~amd64 ppc ppc-macos x86"
 
 S=${WORKDIR}/Pymacs-${PV}
 
