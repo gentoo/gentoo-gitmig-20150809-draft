@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/iso-codes-0.58.ebuild,v 1.7 2006/12/21 12:30:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/iso-codes-0.58.ebuild,v 1.8 2007/01/07 11:43:28 vapier Exp $
 
 WANT_AUTOMAKE="latest"
 inherit eutils autotools
@@ -11,7 +11,7 @@ SRC_URI="ftp://pkg-isocodes.alioth.debian.org/pub/pkg-isocodes/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ppc ppc64 ~sh sparc x86"
+KEYWORDS="~alpha amd64 arm ~hppa ia64 ppc ppc64 sh sparc x86"
 IUSE=""
 
 DEPEND="sys-devel/gettext
@@ -33,7 +33,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "Installation failed"
+	emake DESTDIR="${D}" install || die "Installation failed"
 
 	dodoc ChangeLog README TODO
 }
