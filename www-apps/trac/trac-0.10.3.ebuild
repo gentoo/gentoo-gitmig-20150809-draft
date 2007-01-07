@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.10.3.ebuild,v 1.1 2006/12/14 09:08:55 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.10.3.ebuild,v 1.2 2007/01/07 19:11:52 dju Exp $
 
 inherit distutils webapp
 
@@ -53,7 +53,7 @@ DEPEND="${DEPEND}
 #   fi
 #
 # Note: when <USE flag> is not specified, <functionality> is used for the USE flag name.
-built_with_use_error_msg() {
+built_with_use_error() {
 	local package=$1
 	local func=$2
 	local use_flag=$3
