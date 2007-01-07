@@ -1,0 +1,27 @@
+app-text/crm114 mew mimencode test
+
+# ptex isn't tested yet
+app-text/xdvik cjk
+
+# Threaded Postgres is a total no go - initdb hands and psql
+# segfaults when result set requires a pager
+dev-db/libpq threads
+dev-db/postgresql threads
+
+# Threaded Ruby (1.8) on FreeBSD segfaults
+dev-lang/ruby threads
+
+# Somehow, check's tests are broken..
+dev-libs/confuse test
+
+# Java currently uses generation 1
+dev-libs/cyrus-sasl java
+
+# Python support isn't tested (Twisted for instance)
+net-dns/avahi python
+
+# Original spell plugin uses ispell that requires
+# miscfiles.. that in turn does not work
+net-irc/rbot spell
+
+x11-misc/xscreensaver new-login
