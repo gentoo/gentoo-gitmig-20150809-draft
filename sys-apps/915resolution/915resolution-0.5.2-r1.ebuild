@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/915resolution/915resolution-0.5.2.ebuild,v 1.4 2007/01/07 02:12:30 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/915resolution/915resolution-0.5.2-r1.ebuild,v 1.1 2007/01/07 02:12:30 chutzpah Exp $
+
+inherit eutils
 
 DESCRIPTION="Utility to patch VBIOS of Intel 855 / 865 / 915 chipsets"
 HOMEPAGE="http://www.geocities.com/stomljen/"
@@ -13,6 +15,13 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-830.patch
+}
 
 src_compile() {
 	emake clean
