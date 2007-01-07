@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.14.ebuild,v 1.8 2007/01/06 23:46:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.14.ebuild,v 1.9 2007/01/07 16:34:19 seemant Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -21,7 +21,7 @@ DEPEND="sys-libs/zlib"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	use doc && cp "${DISTDIR}"/${PN}-manual-${PV}.txt ${PN}-manual.txt
+	use doc && cp "${WORKDIR}"/${PN}-manual-${PV}.txt ${PN}-manual.txt
 
 	epatch "${FILESDIR}"/1.2.7-gentoo.diff
 
