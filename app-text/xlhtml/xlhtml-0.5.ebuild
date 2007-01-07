@@ -1,6 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xlhtml/xlhtml-0.5.ebuild,v 1.13 2007/01/05 07:27:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xlhtml/xlhtml-0.5.ebuild,v 1.14 2007/01/07 00:43:13 masterdriverz Exp $
+
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit autotools
 
 DESCRIPTION="Convert MS Excel and Powerpoint files to HTML"
 HOMEPAGE="http://chicago.sourceforge.net/xlhtml/"
@@ -14,11 +19,10 @@ DEPEND=""
 
 src_unpack() {
 	unpack ${A}
-
+	cd "${S}"
 	# This is needed specifically for depcomp, which is necessary for
 	# building xlhtml, but isn't included.
-	cd ${S}; aclocal; autoconf
-	cd ${S}; automake --add-missing
+	eautoreconf
 }
 
 src_install() {
@@ -31,5 +35,5 @@ src_install() {
 	docinto xlhtml
 	dodoc xlhtml/{ChangeLog,README,THANKS,TODO}
 	rm -rf xlhtml/contrib/CVS
-	cp -pPR xlhtml/contrib ${D}/usr/share/doc/${PF}/xlhtml
+	cp -pPR xlhtml/contrib "${D}/usr/share/doc/${PF}/xlhtml"
 }
