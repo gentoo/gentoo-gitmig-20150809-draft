@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/AnyEvent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AnyEvent/ChangeLog,v 1.15 2007/01/07 18:20:24 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AnyEvent/ChangeLog,v 1.16 2007/01/07 18:22:13 mcummings Exp $
+
+  07 Jan 2007; Michael Cummings <mcummings@gentoo.org> AnyEvent-1.02.ebuild,
+  -AnyEvent-2.0.ebuild:
+  Cleaning up
 
   07 Jan 2007; Michael Cummings <mcummings@gentoo.org> AnyEvent-2.1.ebuild:
   Marking sparc stable
