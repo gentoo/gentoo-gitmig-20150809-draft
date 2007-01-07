@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.91 2007/01/05 01:28:26 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.92 2007/01/07 10:36:39 robbat2 Exp $
+
+*lighttpd-1.4.13 (07 Jan 2007)
+
+  07 Jan 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +files/1.4.13/01_lighttpd-1.4.13-99cpu-fix.diff,
+  +files/1.4.13/02_lighttpd-1.4.13-fcgi-auth-type.diff,
+  +lighttpd-1.4.13.ebuild:
+  New 1.4.13 version, pmasked for testing.
 
   05 Jan 2007; Elfyn McBratney <beu@gentoo.org> lighttpd-1.4.11.ebuild:
   Set WANT_AUTO{CONF,MAKE} variables; fixes bug #160133.
