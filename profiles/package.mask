@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6558 2007/01/07 10:34:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6559 2007/01/07 15:30:57 pva Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -223,10 +223,6 @@ sys-fs/submount
 # Jeroen Roovers <jer@gentoo.org> (12 Dec 2006)
 # Only put your backups at risk if you know very well what you are doing.
 =app-backup/amanda-2.5*
-
-# Peter Volkov <pva@gentoo.org> (11 Dec 2006)
-# needs some testing
-=net-analyzer/arpwatch-2.1.15-r3
 
 # Timothy Redaelli <drizzt@gentoo.org> (09 Dec 2006)
 # pending removal (#156989)
