@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/adesklets-0.6.1.ebuild,v 1.8 2006/11/20 14:09:18 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/adesklets-0.6.1.ebuild,v 1.9 2007/01/07 08:19:19 s4t4n Exp $
 
 inherit eutils perl-module
 
@@ -71,7 +71,7 @@ src_install()
 	dodoc ChangeLog NEWS TODO AUTHORS
 	use debug &&
 	{
-		echo 'ADESKLETS_LOG="/tmp/adesklets_log"' > 70adesklets
+		echo 'ADESKLETS_LOG="~/adesklets_log"' > 70adesklets
 		doenvd 70adesklets
 	}
 

@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/adesklets
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/ChangeLog,v 1.30 2006/11/20 14:09:18 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/ChangeLog,v 1.31 2007/01/07 08:19:19 s4t4n Exp $
+
+  07 Jan 2007; Michele Noberasco <s4t4n@gentoo.org> adesklets-0.6.1-r1.ebuild,
+  adesklets-0.6.1.ebuild:
+  Made adesklets create log files in user home directories instead of /tmp.
+  See bug #160132.
 
 *adesklets-0.6.1-r1 (20 Nov 2006)
 
