@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-0.9.11.1.ebuild,v 1.1 2007/01/07 00:45:27 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-0.9.11.1.ebuild,v 1.2 2007/01/07 00:50:55 cedk Exp $
 
 inherit flag-o-matic eutils
 
@@ -41,7 +41,6 @@ src_compile() {
 		|| die "econf failed"
 
 	emake || die "emake failed"
-	# -j1 may not be necessary in the future
 }
 
 src_install() {
