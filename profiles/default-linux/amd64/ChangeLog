@@ -1,6 +1,22 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.49 2007/01/06 19:33:46 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.50 2007/01/07 03:58:34 blubb Exp $
+
+  07 Jan 2007; <blubb@gentoo.org> -2005.0/README, -2005.0/deprecated,
+  -2005.0/make.defaults, -2005.0/no-multilib/make.defaults,
+  -2005.0/no-multilib/package.mask, -2005.0/no-multilib/package.use.mask,
+  -2005.0/no-multilib/parent, -2005.0/no-multilib/use.mask,
+  -2005.0/package.mask, -2005.0/packages, -2005.0/parent,
+  -2005.0/profile.bashrc, -2005.0/use.mask,
+  -2005.0/scripts/2004.3-2005.0upgrade.sh, -2005.1/deprecated,
+  -2005.1/make.defaults, -2005.1/no-multilib/make.defaults,
+  -2005.1/no-multilib/package.mask, -2005.1/no-multilib/package.use.mask,
+  -2005.1/no-multilib/parent, -2005.1/no-multilib/use.mask,
+  -2005.1/package.mask, -2005.1/packages, -2005.1/parent,
+  -2005.1/profile.bashrc, -2005.1/use.mask, -2005.1/vserver/package.mask,
+  -2005.1/vserver/packages, -2005.1/vserver/parent,
+  -2005.1/vserver/virtuals:
+  remove 2005.x profiles
 
   06 Jan 2007; Steve Dibb <beandog@gentoo.org> package.use.mask:
   Add -real to mplayer, adding native 64 bit realplayer support with amd64codecs
