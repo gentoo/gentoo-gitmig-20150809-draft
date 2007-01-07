@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/cacti
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.78 2006/11/23 19:46:07 vivo Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.79 2007/01/07 15:39:48 pva Exp $
+
+*cacti-0.8.6i-r1 (07 Jan 2007)
+
+  07 Jan 2007; Peter Volkov <pva@gentoo.org> +cacti-0.8.6i-r1.ebuild:
+  Include patches released by upstream. Should close vulnerabilities reported
+  in bug #159278.
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org>
   cacti-0.8.6h_p20060108-r2.ebuild, cacti-0.8.6i.ebuild:
