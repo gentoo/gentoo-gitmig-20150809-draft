@@ -1,17 +1,17 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/poppler-bindings-0.5.4.ebuild,v 1.6 2006/12/21 13:04:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/poppler-bindings-0.5.4.ebuild,v 1.7 2007/01/07 12:05:03 vapier Exp $
 
 inherit autotools eutils multilib
 
 MY_P=${P/-bindings/}
-DESCRIPTION="Poppler bindings are rendering bindings for GUI toolkits for poppler"
-HOMEPAGE="http://poppler.freedesktop.org"
+DESCRIPTION="rendering bindings for GUI toolkits for poppler"
+HOMEPAGE="http://poppler.freedesktop.org/"
 SRC_URI="http://poppler.freedesktop.org/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm ~hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="gtk qt3 cairo qt4"
 
 RDEPEND="~app-text/poppler-${PV}
@@ -22,19 +22,18 @@ RDEPEND="~app-text/poppler-${PV}
 	)
 	qt3? ( =x11-libs/qt-3* )
 	qt4? ( =x11-libs/qt-4* )"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=sys-devel/automake-1.9.6"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_unpack(){
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/poppler-0.5.2-bindings.patch
-	epatch ${FILESDIR}/glib-2.0.fix
+	epatch "${FILESDIR}"/poppler-0.5.2-bindings.patch
+	epatch "${FILESDIR}"/glib-2.0.fix
 
 	AT_M4DIR="m4" eautoreconf
 	sed -i s:/usr/lib/qt:/usr/lib/qt4: configure
@@ -63,7 +62,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 }
 
 pkg_postinst() {
