@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/jxtray-0.5-r2.ebuild,v 1.1 2007/01/06 22:22:21 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/jxtray-0.5-r2.ebuild,v 1.2 2007/01/07 11:05:26 fordfrog Exp $
 
 inherit java-pkg-2
 
@@ -13,7 +13,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc firebird mssql mysql postgres"
 
 RDEPEND="|| ( =virtual/jre-1.4* =virtual/jre-1.5* )
-	>=dev-java/jdom-1.0_beta9
+	=dev-java/jdom-1.0_beta9*
 	>=dev-java/kunststoff-2.0.2
 	dev-java/poi
 	dev-java/sax
