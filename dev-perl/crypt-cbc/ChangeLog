@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/crypt-cbc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-cbc/ChangeLog,v 1.52 2007/01/07 20:36:37 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-cbc/ChangeLog,v 1.53 2007/01/07 20:38:15 mcummings Exp $
+
+  07 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  crypt-cbc-2.22.ebuild:
+  Marking sparc stable
 
   07 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   -crypt-cbc-2.18.ebuild, crypt-cbc-2.22.ebuild:
