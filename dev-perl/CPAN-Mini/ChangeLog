@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/CPAN-Mini
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini/ChangeLog,v 1.10 2006/11/22 13:56:07 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini/ChangeLog,v 1.11 2007/01/07 19:25:04 mcummings Exp $
+
+  07 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  CPAN-Mini-0.40.ebuild, -CPAN-Mini-0.500.ebuild, -CPAN-Mini-0.550.ebuild,
+  CPAN-Mini-0.551.ebuild:
+  Marking sparc stable
 
 *CPAN-Mini-0.551 (22 Nov 2006)
 
