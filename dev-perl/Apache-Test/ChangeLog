@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Apache-Test
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.48 2007/01/07 18:31:43 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.49 2007/01/07 18:36:10 mcummings Exp $
+
+  07 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  Apache-Test-1.29.ebuild:
+  Marking sparc stable
 
   07 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   -Apache-Test-1.15.ebuild, -Apache-Test-1.22.ebuild,
