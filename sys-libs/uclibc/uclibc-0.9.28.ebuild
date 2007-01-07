@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.ebuild,v 1.25 2006/09/29 23:50:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.ebuild,v 1.26 2007/01/07 10:58:27 vapier Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -62,6 +62,12 @@ alt_build_kprefix() {
 }
 just_headers() {
 	use crosscompile_opts_headers-only && [[ ${CHOST} != ${CTARGET} ]]
+}
+
+uclibc_endian() {
+	printf "#include <endian.h>\n#if __BYTE_ORDER == __LITTLE_ENDIAN\nlittle\n#else\nbig\n#endif\n" \
+		| $(tc-getCPP) - \
+		| tail -n 1
 }
 
 pkg_setup() {
@@ -143,7 +149,7 @@ src_unpack() {
 	einfo "CHOST:          ${CHOST}"
 	einfo "CTARGET:        ${CTARGET}"
 	einfo "CPU:            ${UCLIBC_CPU:-default}"
-	einfo "ENDIAN:         $(tc-endian)"
+	einfo "ENDIAN:         $(uclibc_endian)"
 	echo
 
 	########## PATCHES ##########
@@ -196,7 +202,7 @@ src_unpack() {
 	fi
 
 	sed -i -e '/ARCH_.*_ENDIAN/d' .config
-	echo "ARCH_$(tc-endian | tr [a-z] [A-Z])_ENDIAN=y" >> .config
+	echo "ARCH_$(uclibc_endian | tr [a-z] [A-Z])_ENDIAN=y" >> .config
 
 	if [[ ${CTARGET//_/-} == *-softfloat-* ]] ; then
 		sed -i -e '/^HAS_FPU=y$/d' .config
