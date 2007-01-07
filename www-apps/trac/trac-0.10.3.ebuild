@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.10.3.ebuild,v 1.2 2007/01/07 19:11:52 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.10.3.ebuild,v 1.3 2007/01/07 19:51:05 dju Exp $
 
 inherit distutils webapp
 
@@ -63,8 +63,8 @@ built_with_use_error() {
 	eerror "Your ${package} package has been built without"
 	eerror "${func} support, please enable the '${use_flag}' USE flag and"
 	eerror "re-emerge ${package}."
-	einfo "You can enable this USE flag either globally in /etc/make.conf,"
-	einfo "or just for specific packages in /etc/portage/package.use."
+	elog "You can enable this USE flag either globally in /etc/make.conf,"
+	elog "or just for specific packages in /etc/portage/package.use."
 	die "${package} missing ${func} support"
 }
 
