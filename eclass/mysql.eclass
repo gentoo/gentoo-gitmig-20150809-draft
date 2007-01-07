@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.63 2007/01/05 22:57:24 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.64 2007/01/07 15:15:27 vivo Exp $
 # kate: encoding utf-8; eol unix;
 # kate: indent-width 4; mixedindent off; remove-trailing-space on; space-indent off;
 # kate: word-wrap-column 80; word-wrap off;
@@ -126,7 +126,7 @@ mysql_version_is_at_least "5.1.12" \
 && IUSE="${IUSE} pbxt"
 
 RDEPEND="${DEPEND}
-sys-apps/mysql
+!minimal? ( sys-apps/mysql )
 selinux? ( sec-policy/selinux-mysql )
 "
 
