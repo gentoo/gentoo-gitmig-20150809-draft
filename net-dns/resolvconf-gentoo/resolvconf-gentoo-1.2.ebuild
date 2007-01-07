@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/resolvconf-gentoo/resolvconf-gentoo-1.2.ebuild,v 1.8 2007/01/07 11:47:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/resolvconf-gentoo/resolvconf-gentoo-1.2.ebuild,v 1.9 2007/01/07 13:08:46 uberlord Exp $
 
 inherit eutils
 
@@ -15,15 +15,6 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="app-shells/bash"
-
-pkg_setup() {
-	if ! grep -q "^uniqify()" "${ROOT}"/etc/init.d/functions.sh ; then
-		eerror "/etc/init.d/functions.sh does not supply the uniqify function"
-		eerror "Please upgrade to a baselayout that support it"
-		eerror "(baselayout-1.12.0_pre17 and later versions do)"
-		die "function uniqify does not exist"
-	fi
-}
 
 src_install() {
 	make ROOT="${D}" install || die "Failed to install"
