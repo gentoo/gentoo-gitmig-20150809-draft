@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15composer/g15composer-3.1.ebuild,v 1.1 2007/01/02 03:42:21 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15composer/g15composer-3.1.ebuild,v 1.2 2007/01/07 03:21:17 rbu Exp $
 
 inherit eutils
 
@@ -57,11 +57,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Set the user to run g15composer in /etc/conf.d/g15composer before starting the service."
+	elog "Set the user to run g15composer in /etc/conf.d/g15composer before starting the service."
 
 	if use amarok; then
 		echo
-		einfo "g15-display.pl was installed into your Amarok script directory."
-		einfo "To start it, have a look at Tools -> Script Manager in the Amarok menu."
+		elog "g15-display.pl was installed into your Amarok script directory."
+		elog "To start it, have a look at Tools -> Script Manager in the Amarok menu."
 	fi
 }

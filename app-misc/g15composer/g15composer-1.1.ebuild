@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15composer/g15composer-1.1.ebuild,v 1.5 2006/10/31 22:18:51 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15composer/g15composer-1.1.ebuild,v 1.6 2007/01/07 03:21:17 rbu Exp $
 
 inherit eutils
 
@@ -22,7 +22,6 @@ DEPEND="${RDEPEND}
 
 RDEPEND="${RDEPEND}
 	sys-apps/coreutils"
-
 
 src_compile() {
 	econf \

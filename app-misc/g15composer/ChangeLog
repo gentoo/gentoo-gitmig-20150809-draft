@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/g15composer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15composer/ChangeLog,v 1.10 2007/01/02 03:42:21 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15composer/ChangeLog,v 1.11 2007/01/07 03:21:17 rbu Exp $
+
+  07 Jan 2007; Robert Buchholz <rbu@gentoo.org> g15composer-1.1.ebuild,
+  g15composer-3.0.2.ebuild, g15composer-3.1.ebuild:
+  einfo->elog
 
 *g15composer-3.1 (02 Jan 2007)
 
