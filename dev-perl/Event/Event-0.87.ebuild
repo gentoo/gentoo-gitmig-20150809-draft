@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/Event-0.87.ebuild,v 1.14 2006/08/05 03:19:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/Event-0.87.ebuild,v 1.15 2007/01/07 21:43:50 mcummings Exp $
 
 inherit perl-module
 
@@ -16,7 +16,6 @@ KEYWORDS="x86 amd64 ppc sparc alpha"
 IUSE=""
 DEPEND="virtual/perl-Test
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 mydoc="ANNOUNCE INSTALL TODO Tutorial.pdf"
 

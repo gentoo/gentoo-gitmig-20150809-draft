@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/Event-1.05.ebuild,v 1.5 2006/08/05 03:19:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/Event-1.05.ebuild,v 1.6 2007/01/07 21:43:50 mcummings Exp $
 
 inherit perl-module
 
@@ -18,4 +18,3 @@ mydoc="ANNOUNCE INSTALL TODO Tutorial.pdf"
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"
