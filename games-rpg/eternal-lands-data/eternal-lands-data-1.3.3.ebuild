@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/eternal-lands-data-1.3.3.ebuild,v 1.1 2007/01/06 12:36:19 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/eternal-lands-data-1.3.3.ebuild,v 1.2 2007/01/07 19:38:53 uberlord Exp $
 
 inherit games
 
@@ -34,7 +34,9 @@ src_unpack() {
 	cd "${S}"
 
 	# Move our music files to the correct directory
-	use music && mv ../*.ogg ../*.pll music || die
+	if use music ; then
+		mv ../*.ogg ../*.pll music || die
+	fi
 }
 
 src_install() {

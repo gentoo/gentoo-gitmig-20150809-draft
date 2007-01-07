@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/eternal-lands-data
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/ChangeLog,v 1.9 2007/01/06 12:36:19 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/ChangeLog,v 1.10 2007/01/07 19:38:53 uberlord Exp $
+
+  07 Jan 2007; Roy Marples <uberlord@gentoo.org>
+  eternal-lands-data-1.3.3.ebuild:
+  USE -music now works, #160509 thanks to Richard Freeman.
 
 *eternal-lands-data-1.3.3 (06 Jan 2007)
 
