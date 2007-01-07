@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.10.0.ebuild,v 1.6 2006/12/19 17:54:25 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.10.0.ebuild,v 1.7 2007/01/07 01:51:37 rbu Exp $
 
 inherit eutils
 
@@ -25,8 +25,8 @@ DEPEND="png? ( media-libs/libpng
 # python is broken
 
 pkg_preinst() {
-	einfo "If you wish to compile only specific drivers or plugins, please use"
-	einfo "the LCD4LINUX_PLUGINS and LCD4LINUX_DRIVERS environment variables."
+	elog "If you wish to compile only specific drivers or plugins, please use"
+	elog "the LCD4LINUX_PLUGINS and LCD4LINUX_DRIVERS environment variables."
 }
 
 src_unpack() {
@@ -48,26 +48,26 @@ src_compile() {
 	# plugins
 	if [ -n "$LCD4LINUX_PLUGINS" ]; then
 		myp="$LCD4LINUX_PLUGINS"
-		einfo "Active plugins (overridden): ${myp}"
+		elog "Active plugins (overridden): ${myp}"
 	else
 		myp="all"
 		use mysql || myp="${myp},!mysql"
 		#use python || myp="${myp},!python"
 		myp="${myp},!python"
-		einfo "Active plugins: ${myp}"
+		elog "Active plugins: ${myp}"
 	fi
 
 	# drivers
 	if [ -n "$LCD4LINUX_DRIVERS" ]; then
 		myd="$LCD4LINUX_DRIVERS"
-		einfo "Active drivers (overridden): ${myd}"
+		elog "Active drivers (overridden): ${myd}"
 	else
 		myd="all"
 		use serdisp || myd="${myd},!serdisplib"
 		use usb     || myd="${myd},!USBLCD"
 		use png     || myd="${myd},!PNG"
 		use X       || myd="${myd},!X11"
-		einfo "Active drivers: ${myd}"
+		elog "Active drivers: ${myd}"
 	fi
 
 	# avoid package brokenness
@@ -99,8 +99,8 @@ src_install() {
 	dodir /etc/lcd4linux
 
 	if use X || use kde; then
-	  insinto /usr/share/pixmaps
-	  doins lcd4linux.xpm
+		insinto /usr/share/pixmaps
+		doins lcd4linux.xpm
 	fi
 	use X && touch ${D}/etc/lcd4linux/lcd4X11.conf
 
