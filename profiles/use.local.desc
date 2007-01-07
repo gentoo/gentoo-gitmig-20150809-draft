@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2482 2007/01/07 01:28:28 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2483 2007/01/07 01:36:12 cedk Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -20,6 +20,7 @@ app-admin/diradm:automount - Support for automount data in LDAP
 app-admin/diradm:irixpasswd - Support for storing seperate IRIX passwords
 app-admin/gnome-system-tools:nfs - Adds support for NFS shares
 app-admin/lcap:lids - If you have the Linux Intrusion Detection System
+app-admin/prelude-manager:tcpwrapper - Add support for tcp_wrappers
 app-admin/sdsc-syslog:beep - Use beep libraries (net-libs/roadrunner)
 app-admin/testdisk:ntfs - Include the ability to read NTFS filesystems
 app-admin/testdisk:reiserfs - include reiserfs reading ability
@@ -426,6 +427,7 @@ dev-libs/libjit:interpreter - Enable the libjit interpreter
 dev-libs/libjit:long-double - Enable the use of long double for jit_nfloat
 dev-libs/libjit:new-reg-alloc - Enable new register allocator
 dev-libs/libmix:no-net2 - disable libpcap and libnet support
+dev-libs/libprelude:swig - Enable rebuild of swig bindings
 dev-libs/libpreludedb:swig - Enable rebuild of swig bindings
 dev-libs/libproccpuinfo:sender - Build a utility for sending the author your /proc/cpuinfo file.
 dev-libs/libsqlora8:orathreads - specifies use of Oracle threads
