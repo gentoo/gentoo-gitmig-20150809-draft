@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/pdb2pqr
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/ChangeLog,v 1.6 2006/10/17 04:36:09 je_fro Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/ChangeLog,v 1.7 2007/01/07 02:24:41 kugelfang Exp $
+
+  07 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -pdb2pqr-1.0.2.ebuild:
+  QA: Removed unused versions.
 
   17 Oct 2006; Jeff Gardner <je_fro@gentoo.org> pdb2pqr-1.1.2.ebuild:
   Keyworded ~amd64
