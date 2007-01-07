@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.26 2007/01/05 10:29:43 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.27 2007/01/07 22:22:47 chainsaw Exp $
+
+  07 Jan 2007; Tony Vroon <chainsaw@gentoo.org>
+  -audacious-plugins-1.3.0_alpha1.ebuild:
+  Developer releases are not appreciated by the community. Use an overlay if
+  you want them. Closes bug #160761.
 
 *audacious-plugins-1.3.0_alpha1 (05 Jan 2007)
 
