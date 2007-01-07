@@ -14,7 +14,7 @@ diff -Naur vdr-ffnetdev-0.1.0.orig/ffnetdev.c vdr-ffnetdev-0.1.0/ffnetdev.c
 +cString cPluginFFNetDev::Active(void) {
 +	if(cOSDWorker::Active() || cTSWorker::Active())
 +		{
-+			return tr("Null Ahnung");
++			return NULL;
 +		}
 +	return NULL;
  }

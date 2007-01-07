@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-ffnetdev
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/ChangeLog,v 1.5 2006/11/17 13:15:46 zzam Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/ChangeLog,v 1.6 2007/01/07 23:40:01 hd_brummy Exp $
+
+  07 Jan 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  files/vdr-ffnetdev-0.1.0-bigpatch-headers.diff, vdr-ffnetdev-0.1.0.ebuild:
+  fixed error in diff, reported by S.Grebe on vdr-portal.de; removed useless
+  blocking
 
   17 Nov 2006; Matthias Schwarzott <zzam@gentoo.org>
   -vdr-ffnetdev-0.0.5.ebuild, vdr-ffnetdev-0.1.0.ebuild:
