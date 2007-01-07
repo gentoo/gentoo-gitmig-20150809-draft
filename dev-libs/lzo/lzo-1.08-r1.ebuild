@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/lzo-1.08-r1.ebuild,v 1.23 2007/01/05 07:40:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/lzo-1.08-r1.ebuild,v 1.24 2007/01/07 19:50:53 dragonheart Exp $
 
-inherit eutils libtool
+inherit eutils libtool autotools
 
 DESCRIPTION="An extremely fast compression and decompression library"
 HOMEPAGE="http://www.oberhumer.com/opensource/lzo/"
@@ -22,7 +22,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-gcc3.patch
 	sed -i -e s,-O2,,g ${S}/aclocal.m4
-	autoconf
+	eautoconf
 
 	elibtoolize
 }
