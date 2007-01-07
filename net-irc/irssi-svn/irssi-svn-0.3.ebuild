@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/irssi-svn-0.3.ebuild,v 1.19 2006/10/13 12:05:12 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/irssi-svn-0.3.ebuild,v 1.20 2007/01/07 16:43:36 swegener Exp $
 
 inherit subversion perl-module flag-o-matic
 
@@ -36,9 +36,6 @@ src_unpack() {
 }
 
 src_compile() {
-	# Irssi uses extern inlines and that needs at least -O
-	is-flag "-O*" || append-flags -O
-
 	econf \
 		--with-proxy \
 		--with-ncurses \
