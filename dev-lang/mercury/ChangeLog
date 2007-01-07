@@ -1,6 +1,16 @@
 # ChangeLog for dev-lang/mercury
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.67 2006/12/30 01:47:37 keri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.68 2007/01/07 02:48:35 keri Exp $
+
+  07 Jan 2007; keri <keri@gentoo.org>
+  +files/mercury-0.12.2-tests-dir_test.patch,
+  +files/mercury-0.12.2-tests-foreign_decl_line_number.patch,
+  +files/mercury-0.12.2-tests-ho_and_type_spec_bug.patch,
+  +files/mercury-0.12.2-tests-mdbrc.patch,
+  +files/mercury-0.12.2-tests-string_format.patch,
+  +files/mercury-0.12.2-tests-tabling_inf_recursion.patch,
+  mercury-0.12.2-r4.ebuild:
+  Fix 64bit string_format_o test.
 
 *mercury-0.13.1-r1 (30 Dec 2006)
 
