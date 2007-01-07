@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/Apache-DBI-0.94.ebuild,v 1.15 2006/08/04 22:16:35 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/Apache-DBI-0.94.ebuild,v 1.16 2007/01/07 18:26:24 mcummings Exp $
 
 inherit perl-module
 
@@ -16,6 +16,5 @@ IUSE=""
 DEPEND="virtual/perl-Test-Simple
 	>=dev-perl/DBI-1.30
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 export OPTIMIZE="$CFLAGS"
