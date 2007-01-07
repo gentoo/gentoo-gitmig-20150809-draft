@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/soappy
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.16 2007/01/06 23:16:01 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.17 2007/01/07 15:26:14 kloeri Exp $
+
+  07 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
+  +files/soappy-0.12.0-python-2.5-compat.patch, soappy-0.12.0.ebuild:
+  Fix python 2.5 compatibility, bug 160653.
 
 *soappy-0.12.0 (06 Jan 2007)
 
