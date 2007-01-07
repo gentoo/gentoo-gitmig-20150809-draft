@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-webadmin/trac-webadmin-0.1.1.ebuild,v 1.2 2006/10/15 14:24:17 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-webadmin/trac-webadmin-0.1.1.ebuild,v 1.3 2007/01/07 19:44:38 dju Exp $
 
 inherit distutils
 
@@ -38,11 +38,11 @@ src_test() {
 }
 
 pkg_postinst() {
-	einfo "To enable the WebAdmin plugin in your Trac environments, you have to add:"
-	einfo "	[components]"
-	einfo "	webadmin.* = enabled"
-	einfo "to your trac.ini files."
-	einfo
-	einfo "To be able to see the Admin tab, your users must have the TRAC_ADMIN permission"
-	einfo "and/or the TICKET_ADMIN permission."
+	elog "To enable the WebAdmin plugin in your Trac environments, you have to add:"
+	elog "	[components]"
+	elog "	webadmin.* = enabled"
+	elog "to your trac.ini files."
+	elog
+	elog "To be able to see the Admin tab, your users must have the TRAC_ADMIN permission"
+	elog "and/or the TICKET_ADMIN permission."
 }
