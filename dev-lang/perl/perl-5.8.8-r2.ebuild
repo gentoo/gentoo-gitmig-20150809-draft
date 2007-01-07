@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.25 2007/01/05 01:22:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.26 2007/01/07 05:03:06 mcummings Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -258,6 +258,14 @@ src_configure() {
 		-Dvendorman1direxp='' \
 		-Dvendorman3dir='' \
 		-Dvendorman3direxp='' 
+		"
+	else
+		myconf "-Dman1dir=/usr/share/man/man1 \
+		-Dman3dir=/usr/share/man/man3 \
+		-Dinstallman1dir=/usr/share/man/man1 \
+		-Dinstallman3dir=/usr/share/man/man3 \
+		-Dman1ext='1' \
+		-Dman3ext='3pm'
 		"
 	fi
 
