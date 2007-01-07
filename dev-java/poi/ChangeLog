@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/poi
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.18 2007/01/01 22:44:09 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.19 2007/01/07 18:52:52 dertobi123 Exp $
+
+  07 Jan 2007; Tobias Scherbaum <dertobi123@gentoo.org> poi-2.5.1.ebuild:
+  ppc stable, bug #159426
 
   01 Jan 2007; Andrej Kacian <ticho@gentoo.org> poi-2.5.1.ebuild:
   Stable on x86, bug #159426.
