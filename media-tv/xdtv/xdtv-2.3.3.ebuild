@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.3.3.ebuild,v 1.6 2006/10/29 23:06:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.3.3.ebuild,v 1.7 2007/01/07 15:12:13 aballier Exp $
 
 WANT_AUTOMAKE="1.7"
 WANT_AUTOCONF="2.5"
@@ -204,11 +204,11 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "Please note that this ebuild created a suid-binary:"
-	einfo "/usr/bin/xdtv_v4l-conf"
+	elog "Please note that this ebuild created a suid-binary:"
+	elog "/usr/bin/xdtv_v4l-conf"
 	echo
-	einfo "The OSD font has moved. You probably should add"
-	einfo "this path to your X configuration:"
-	einfo "/usr/share/fonts/${PN}"
+	elog "The OSD font has moved. You probably should add"
+	elog "this path to your X configuration:"
+	elog "/usr/share/fonts/${PN}"
 	echo
 }
