@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.5.ebuild,v 1.5 2007/01/03 14:46:57 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.5.ebuild,v 1.6 2007/01/07 17:37:06 markusle Exp $
 
 inherit eutils toolchain-funcs python
 
@@ -48,13 +48,13 @@ src_unpack() {
 
 	cd "${WORKDIR}"/plugins
 
-	sed -e "s/CC = gcc/CC = $(tc-getCC)/" \
-	    -e "s/CXX = g++/CXX = $(tc-getCXX)/" \
-		-e "s/COPTO = -o /COPTO = -fPIC -o /" \
-		-e "s/LOPTO = -o /LOPTO = -fPIC -o /" \
-		-e "s/CCFLAGS = -O2 -Wall/CCFLAGS = ${CFLAGS}/" \
-		-e "s/CXXFLAGS = -O2 -Wall/CXXFLAGS = ${CXXFLAGS}/" \
-		-e "s/SHLD = gcc/SHLD = $(tc-getCC)/" \
+	sed -e "s:CC = gcc:CC = $(tc-getCC):" \
+	    -e "s:CXX = g++:CXX = $(tc-getCXX):" \
+		-e "s:COPTO = -o :COPTO = -fPIC -o :" \
+		-e "s:LOPTO = -o :LOPTO = -fPIC -o :" \
+		-e "s:CCFLAGS = -O2 -Wall:CCFLAGS = ${CFLAGS}:" \
+		-e "s:CXXFLAGS = -O2 -Wall:CXXFLAGS = ${CXXFLAGS}:" \
+		-e "s:SHLD = gcc:SHLD = $(tc-getCC):" \
 	    -i Make-arch || die "Failed to set up plugins Makefile"
 
 	# prepare vmd itself

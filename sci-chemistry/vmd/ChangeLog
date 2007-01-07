@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/vmd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.12 2007/01/03 14:46:57 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.13 2007/01/07 17:37:06 markusle Exp $
+
+  07 Jan 2007; Markus Dittrich <markusle@gentoo.org> vmd-1.8.5.ebuild:
+  Replaced backslashes with colons in some sed statements 
+  (see bug #145467).
 
   03 Jan 2007; Jeff Gardner <je_fro@gentoo.org> vmd-1.8.5.ebuild:
   added ~amd64
