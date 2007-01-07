@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.1-r1.ebuild,v 1.1 2006/12/30 01:47:37 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.1-r1.ebuild,v 1.2 2007/01/07 03:09:12 keri Exp $
 
 inherit eutils
 
@@ -25,7 +25,6 @@ TESTDIR="${WORKDIR}"/${PN}-tests-${PV}
 src_unpack() {
 	unpack ${A}
 
-	cd "${S}"
 	epatch "${FILESDIR}"/${P}-portage.patch
 	epatch "${FILESDIR}"/${P}-CFLAGS.patch
 	epatch "${FILESDIR}"/${P}-MAKEOPTS.patch
@@ -35,10 +34,12 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-parallel-install_grades.patch
 	epatch "${FILESDIR}"/${P}-deep_profiler.patch
 	epatch "${FILESDIR}"/${P}-docs.patch
-
-	cd "${TESTDIR}"
-	epatch "${FILESDIR}"/${P}-tests.patch
-	sed -i -e "s:MDB_DOC:${S}/doc/mdb_doc:" mdbrc
+	epatch "${FILESDIR}"/${P}-tests-dir_test.patch
+	epatch "${FILESDIR}"/${P}-tests-ho_and_type_spec_bug.patch
+	epatch "${FILESDIR}"/${P}-tests-mdbrc.patch
+	epatch "${FILESDIR}"/${P}-tests-string_format.patch
+	epatch "${FILESDIR}"/${P}-tests-tabling_inf_recursion.patch
+	sed -i -e "s:MDB_DOC:${S}/doc/mdb_doc:" "${TESTDIR}"/mdbrc
 }
 
 src_compile() {

@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.68 2007/01/07 02:48:35 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.69 2007/01/07 03:09:12 keri Exp $
+
+  07 Jan 2007; keri <keri@gentoo.org>
+  +files/mercury-0.13.1-tests-dir_test.patch,
+  +files/mercury-0.13.1-tests-ho_and_type_spec_bug.patch,
+  +files/mercury-0.13.1-tests-mdbrc.patch,
+  +files/mercury-0.13.1-tests-string_format.patch,
+  +files/mercury-0.13.1-tests-tabling_inf_recursion.patch,
+  mercury-0.13.1-r1.ebuild:
+  Mercury testcase shakeup.
 
   07 Jan 2007; keri <keri@gentoo.org>
   +files/mercury-0.12.2-tests-dir_test.patch,
