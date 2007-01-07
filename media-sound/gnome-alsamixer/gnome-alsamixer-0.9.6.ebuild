@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/gnome-alsamixer-0.9.6.ebuild,v 1.12 2006/05/08 04:20:49 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/gnome-alsamixer-0.9.6.ebuild,v 1.13 2007/01/07 14:28:39 aballier Exp $
 
 inherit eutils fdo-mime
 
@@ -28,9 +28,8 @@ src_unpack() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	# manuall install menu entry
-	insinto /usr/share/applications
-	doins ${FILESDIR}/${PN}.desktop
+	make_desktop_entry gnome-alsamixer "Gnome Alsa Mixer"\
+		/usr/share/pixmaps/${PN}/${PN}-icon.png
 
 	dodoc AUTHORS ChangeLog
 }
