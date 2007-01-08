@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/ipw3945d
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945d/ChangeLog,v 1.11 2006/12/22 10:11:26 phreak Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945d/ChangeLog,v 1.12 2007/01/08 20:57:15 phreak Exp $
+
+  08 Jan 2007; Christian Heim <phreak@gentoo.org>
+  -ipw3945d-1.7.22-r3.ebuild, ipw3945d-1.7.22-r4.ebuild:
+  Removing the old revision, using chmod / chown directly (sue me, fowners /
+  fperms won't work on files outside of ${D}).
 
   22 Dec 2006; Christian Heim <phreak@gentoo.org> files/ipw3945d-init.d:
   Fixing a bug within the init-script, using 'exit 1' isn't allowed (thanks to

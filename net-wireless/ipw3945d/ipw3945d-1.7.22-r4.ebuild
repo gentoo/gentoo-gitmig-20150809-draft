@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945d/ipw3945d-1.7.22-r4.ebuild,v 1.3 2006/12/18 00:33:31 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945d/ipw3945d-1.7.22-r4.ebuild,v 1.4 2007/01/08 20:57:15 phreak Exp $
 
 inherit eutils
 
@@ -30,11 +30,11 @@ src_install() {
 	use amd64 && dosbin x86_64/ipw3945d
 
 	# Give the ipw3945d access to the binary
-	fowners ipw3945d:root /sbin/ipw3945d
-	fperms 04450 /sbin/ipw3945d
+	chown ipw3945d:root /sbin/ipw3945d
+	chmod 04450 /sbin/ipw3945d
 
 	keepdir /var/run/ipw3945d
-	fowners ipw3945d:root /var/run/ipw3945d
+	chown ipw3945d:root /var/run/ipw3945d
 
 	newconfd "${FILESDIR}/${PN}-conf.d" ${PN}
 	newinitd "${FILESDIR}/${PN}-init.d" ${PN}
@@ -48,7 +48,9 @@ src_install() {
 pkg_postinst() {
 	# Update the modules.d cache
 	if [ -f "${ROOT}/etc/modules.d/${PN}" ] ; then
-		${ROOT}/sbin/modules-update --force
+		ebegin "Executing /sbin/modules-update"
+		"${ROOT}"sbin/modules-update --force
+		eend $?
 	fi
 
 	echo
@@ -59,13 +61,13 @@ pkg_postinst() {
 	# this, these hacks can go away.
 
 	# Fix the permissions of /sbin/ipw3945d
-	ebegin "Fixing permissions of ${ROOT}/sbin/ipw3945d"
-	fperms 04450 ${ROOT}/sbin/ipw3945d
+	ebegin "Fixing permissions of ${ROOT}sbin/ipw3945d"
+	chmod 04450 "${ROOT}"sbin/ipw3945d
 	eend $?
 
 	# Fixing ownership of /var/run/ipw3945d
-	ebegin "Fixing ownership of ${ROOT}/var/run/ipw3945d"
-	fowners ipw3945d:root ${ROOT}/var/run/ipw3945d
+	ebegin "Fixing ownership of ${ROOT}var/run/ipw3945d"
+	chown ipw3945d:root "${ROOT}"var/run/ipw3945d
 	eend $?
 
 	echo
