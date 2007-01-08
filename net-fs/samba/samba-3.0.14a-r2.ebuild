@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.14a-r2.ebuild,v 1.22 2006/11/23 15:59:30 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.14a-r2.ebuild,v 1.23 2007/01/08 15:33:14 flameeyes Exp $
 
-inherit eutils versionator
+inherit eutils versionator pam
 
 IUSE_LINGUAS="ja pl"
 IUSE="acl cups doc examples kerberos ldap mysql pam postgres python quotas

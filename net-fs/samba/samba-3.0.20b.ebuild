@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.20b.ebuild,v 1.8 2006/11/23 15:59:30 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.20b.ebuild,v 1.9 2007/01/08 15:33:14 flameeyes Exp $
 
-inherit eutils versionator
+inherit eutils versionator pam
 
 IUSE_LINGUAS="ja pl"
 IUSE="acl async automount cups doc examples kerberos ldap ldapsam libclamav mysql
