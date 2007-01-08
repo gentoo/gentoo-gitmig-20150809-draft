@@ -1,18 +1,19 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-4_beta.ebuild,v 1.12 2006/10/05 21:47:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-4_beta.ebuild,v 1.13 2007/01/08 07:50:25 genstef Exp $
 
 inherit eutils fdo-mime
 
 DESCRIPTION="A 3D interface to the planet"
 HOMEPAGE="http://earth.google.com/"
-SRC_URI="http://dl.google.com/earth/GE4/GoogleEarthLinux.bin"
+SRC_URI="http://dl.google.com/earth/GE4/GoogleEarthLinux.bin
+	 video_cards_fglrx? ( http://dev.gentooexperimental.org/~anarchy/libGL.so.1 )"
 
 LICENSE="googleearth MIT X11 SGI-B-1.1 openssl as-is ZLIB"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 RESTRICT="mirror strip"
-IUSE=""
+IUSE="video_cards_fglrx"
 
 RDEPEND="x86? (
 	media-libs/fontconfig
@@ -27,19 +28,20 @@ RDEPEND="x86? (
 		x11-libs/libXrender )
 		<virtual/x11-7.0 ) )
 	amd64? (
-	app-emulation/emul-linux-x86-xlibs
-	app-emulation/emul-linux-x86-baselibs
-	|| (
-		>=app-emulation/emul-linux-x86-xlibs-7.0
-		x11-drivers/nvidia-drivers
-		x11-drivers/nvidia-legacy-drivers
-		<x11-drivers/ati-drivers-8.28.8 ) )
+		app-emulation/emul-linux-x86-xlibs
+		app-emulation/emul-linux-x86-baselibs
+		|| (
+			>=app-emulation/emul-linux-x86-xlibs-7.0
+			x11-drivers/nvidia-drivers
+			x11-drivers/nvidia-legacy-drivers
+			video_cards_fglrx? ( x11-drivers/ati-drivers )
+			<x11-drivers/ati-drivers-8.28.8 ) )
 	media-fonts/ttf-bitstream-vera"
 
 S=${WORKDIR}
 
 src_unpack() {
-	unpack_makeself
+	unpack_makeself GoogleEarthLinux.bin
 	# make the postinst scripts behave
 	sed -i -e 's:$SETUP_INSTALLPATH/::' \
 		-e "s:^xdg-mime:linux/xdg/xdg-mime:" \
@@ -77,6 +79,10 @@ src_install() {
 	# make sure we install with correct permissions
 	fowners -R root:root /opt/${PN}
 	fperms -R a-x,a+X /opt/googleearth/{xml,res{,ources}}
+
+	if use video_cards_fglrx; then
+		mv ${DISTDIR}/libGL.so.1 ${D}/opt/${PN}
+	fi
 }
 
 pkg_postinst() {
