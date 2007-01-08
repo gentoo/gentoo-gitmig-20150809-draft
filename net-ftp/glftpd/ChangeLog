@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/glftpd
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/ChangeLog,v 1.13 2006/01/06 02:41:18 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/ChangeLog,v 1.14 2007/01/08 01:52:47 kugelfang Exp $
+
+  08 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -glftpd-1.32-r2.ebuild:
+  QA: Removed unused versions.
 
 *glftpd-2.01 (06 Jan 2006)
 

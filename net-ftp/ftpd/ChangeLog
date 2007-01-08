@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ftpd
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpd/ChangeLog,v 1.33 2006/10/17 18:23:19 gustavoz Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpd/ChangeLog,v 1.34 2007/01/08 01:50:31 kugelfang Exp $
+
+  08 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -ftpd-0.17-r3.ebuild:
+  QA: Removed unused versions.
 
   17 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> ftpd-0.17-r4.ebuild:
   sparc stable for real
