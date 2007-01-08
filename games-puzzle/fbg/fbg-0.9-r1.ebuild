@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fbg/fbg-0.9-r1.ebuild,v 1.9 2007/01/08 14:42:49 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fbg/fbg-0.9-r1.ebuild,v 1.10 2007/01/08 14:53:15 nyhm Exp $
 
 inherit eutils games
 
@@ -40,5 +40,6 @@ src_install() {
 	newicon startfbg/icon.xpm ${PN}.xpm
 	make_desktop_entry ${PN} "Falling Block Game" ${PN}.xpm
 	dodoc AUTHORS ChangeLog README TODO
+	rm -rf "${D}/${GAMES_PREFIX}"/doc
 	prepgamesdirs
 }
