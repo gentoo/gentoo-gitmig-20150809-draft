@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/nspluginwrapper-0.9.91.2.ebuild,v 1.2 2007/01/05 23:26:52 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/nspluginwrapper-0.9.91.2.ebuild,v 1.3 2007/01/08 02:28:17 chutzpah Exp $
 
 inherit nsplugins flag-o-matic multilib
 
@@ -19,9 +19,6 @@ RDEPEND=">=x11-libs/gtk+-2
 	sys-apps/setarch"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-
-# I don't know how to get rid of these textrels
-QA_TEXTRELS_amd64="usr/$(get_libdir)/nspluginwrapper/i386/npviewer.bin"
 
 src_compile() {
 	econf --with-biarch \
