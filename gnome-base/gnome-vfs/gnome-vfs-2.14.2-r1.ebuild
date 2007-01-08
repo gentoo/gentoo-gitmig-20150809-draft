@@ -1,7 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.14.2-r1.ebuild,v 1.13 2006/10/21 22:45:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.14.2-r1.ebuild,v 1.14 2007/01/08 00:23:34 leio Exp $
 
+WANT_AUTOCONF=latest
+WANT_AUTOMAKE=1.9
 inherit eutils gnome2 autotools
 
 DESCRIPTION="Gnome Virtual Filesystem"
