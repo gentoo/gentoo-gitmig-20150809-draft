@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/POE
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/ChangeLog,v 1.64 2007/01/05 20:42:57 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/ChangeLog,v 1.65 2007/01/08 16:28:25 mcummings Exp $
+
+  08 Jan 2007; Michael Cummings <mcummings@gentoo.org> -POE-0.35.02.ebuild,
+  -POE-0.37.ebuild, POE-0.95.00.ebuild:
+  Marking amd64 stable
 
 *POE-0.99.17 (05 Jan 2007)
 
