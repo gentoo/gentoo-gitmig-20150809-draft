@@ -11,7 +11,7 @@ do
 	fi
 done
 
-DSPAM_HOMEDIR="$(grep ^dspam /etc/passwd|awk -F : '{print $6}')"
+DSPAM_HOMEDIR="$(getent passwd dspam | awk -F : '{print $6}')"
 [[ ! -d "${DSPAM_HOMEDIR}" ]] && exit 2
 DSPAM_DATA_FILES=( "${DSPAM_HOMEDIR}"/*.data )
 if [ ! -f "${DSPAM_DATA_FILES[0]}" ]
@@ -21,6 +21,16 @@ then
 	then
 		DSPAM_HOMEDIR="/etc/mail/dspam"
 	fi
+fi
+
+[[ ! -f "${DSPAM_HOMEDIR}/dspam.conf" ]] && exit 2
+DSPAM_SPOOLDIR="$(grep ^Home "${DSPAM_HOMEDIR}/dspam.conf" | cut -d' ' -f2)"
+if [[ -d "${DSPAM_SPOOLDIR}" ]]
+then
+	cd /
+	su -s /bin/sh -c "/usr/bin/dspam_logrotate -a 30 -d ${DSPAM_SPOOLDIR}" dspam
+else
+	echo 'Spool directory not configured. Please set "Home" in your dspam.conf.'
 fi
 
 if [[ -f "${DSPAM_HOMEDIR}/mysql.data" ]]
