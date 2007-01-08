@@ -1,9 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/libgnome-2.14.1.ebuild,v 1.13 2006/11/01 06:32:20 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/libgnome-2.14.1.ebuild,v 1.14 2007/01/08 00:38:44 leio Exp $
 
+WANT_AUTOCONF=latest
 WANT_AUTOMAKE=1.7
-
 inherit autotools gnome2
 
 DESCRIPTION="Essential Gnome Libraries"
