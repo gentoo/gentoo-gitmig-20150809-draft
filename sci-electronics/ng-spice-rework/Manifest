@@ -31,10 +31,6 @@ EBUILD ng-spice-rework-17-r1.ebuild 1546 RMD160 d78b87544c696bc5e505e5816441d2b8
 MD5 7c1e88f9dc31344648a298b26377a168 ng-spice-rework-17-r1.ebuild 1546
 RMD160 d78b87544c696bc5e505e5816441d2b8814f76c5 ng-spice-rework-17-r1.ebuild 1546
 SHA256 55cf9012521c635c6c9fafc401b8ea83db4dc5e16bf1dc645a93d3aa5b0f0aa6 ng-spice-rework-17-r1.ebuild 1546
-EBUILD ng-spice-rework-17.ebuild 1180 RMD160 24ee8f59eb07cbe39d241153d6aa17e7faa7a3e9 SHA1 6c1d02ec9015ff9f92dd4b182b0faf1671097335 SHA256 a2dd3e77264503f997111b83458c4aa75478c5f8e5bd17097541aebcabfe4e61
-MD5 bb642ce158bd8e69cad2ab4cfcbed947 ng-spice-rework-17.ebuild 1180
-RMD160 24ee8f59eb07cbe39d241153d6aa17e7faa7a3e9 ng-spice-rework-17.ebuild 1180
-SHA256 a2dd3e77264503f997111b83458c4aa75478c5f8e5bd17097541aebcabfe4e61 ng-spice-rework-17.ebuild 1180
 EBUILD ng-spice-rework-9999.ebuild 1797 RMD160 6d8e479e163ca4864ada1e09933d3f150717962d SHA1 d61535b1ce28d41069d3be4b867d20be739ca876 SHA256 1fd0c4826b377edcd269eee5db27799a757a1d6a279ef6a188867edcd9de4f66
 MD5 eea781f9424de8b8399224885d017906 ng-spice-rework-9999.ebuild 1797
 RMD160 6d8e479e163ca4864ada1e09933d3f150717962d ng-spice-rework-9999.ebuild 1797
@@ -50,9 +46,6 @@ SHA256 0cb29147232be6569c365b9e694962c7b606a81ce4c4ce7b404a937378a1d0b8 metadata
 MD5 cdcbac36f6d0470a9935636cb8ca3306 files/digest-ng-spice-rework-15 66
 RMD160 12ffd93ddf79c455e429fb2647389fc5058333ee files/digest-ng-spice-rework-15 66
 SHA256 220f6ec2da27475e5821ea592b14cdbbbc9823fb8cae44d2810b9361df2cd237 files/digest-ng-spice-rework-15 66
-MD5 97a43f9bb7be5b0caae27989f8027eec files/digest-ng-spice-rework-17 71
-RMD160 19ff518efe2fb996040fdf69683862d30b557e08 files/digest-ng-spice-rework-17 71
-SHA256 3bce2bfbb376463a080dd6a785b7a777494c3b4aa5bfcad9fda81e522cf4a10e files/digest-ng-spice-rework-17 71
 MD5 97a43f9bb7be5b0caae27989f8027eec files/digest-ng-spice-rework-17-r1 71
 RMD160 19ff518efe2fb996040fdf69683862d30b557e08 files/digest-ng-spice-rework-17-r1 71
 SHA256 3bce2bfbb376463a080dd6a785b7a777494c3b4aa5bfcad9fda81e522cf4a10e files/digest-ng-spice-rework-17-r1 71
@@ -60,9 +53,9 @@ MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-ng-spice-rework-9999 1
 RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-ng-spice-rework-9999 1
 SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-ng-spice-rework-9999 1
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFE/cFjKRy60XGEcJIRAlfMAJ0dkivEJgNDy6tr+zF6l5bA5NNP8QCfbfic
-7LFNTp6/8e8rwh5Xd6O/Nz8=
-=dyCX
+iD8DBQFFoZJ45mJXAu5GbtIRAsGOAJ9A8/cgnza57TyUbSYEXwaYAy2z5QCeKgoA
+pyZKR6+ukqxwkaxHshxifHA=
+=m8uH
 -----END PGP SIGNATURE-----
