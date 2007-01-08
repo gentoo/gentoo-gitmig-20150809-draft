@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.9.ebuild,v 1.7 2007/01/08 01:24:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.9.ebuild,v 1.8 2007/01/08 14:10:27 kloeri Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -95,7 +95,7 @@ src_unpack() {
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 
-	if use alpha; then
+	if use alpha || use ia64; then
 		EPATCH_EXCLUDE="002_firefox-1.5-visibility-check.patch 009_firefox-1.5-no-textrels.patch"
 	fi
 
@@ -136,7 +136,7 @@ src_compile() {
 	mozconfig_annotate '' --with-system-nss
 	mozconfig_annotate '' --enable-official-branding
 
-	if use alpha; then
+	if use alpha || use ia64; then
 		echo "ac_cv_visibility_pragma=no" >>  "${S}/.mozconfig"
 	fi
 

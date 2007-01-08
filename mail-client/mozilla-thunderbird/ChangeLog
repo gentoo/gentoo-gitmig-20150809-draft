@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.160 2007/01/08 01:24:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.161 2007/01/08 14:10:27 kloeri Exp $
+
+  08 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
+  mozilla-thunderbird-1.5.0.9.ebuild:
+  Fix visibility issue on ia64 and mark stable.
 
   08 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
   mozilla-thunderbird-1.5.0.9.ebuild:
