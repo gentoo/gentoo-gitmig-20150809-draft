@@ -1,11 +1,16 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.27 2007/01/07 22:22:47 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.28 2007/01/08 00:32:39 chainsaw Exp $
+
+*audacious-plugins-1.3.0_alpha2 (08 Jan 2007)
+
+  08 Jan 2007; Tony Vroon <chainsaw@gentoo.org>
+  +audacious-plugins-1.3.0_alpha2.ebuild:
+  Adding masked alpha2 build. No support offered, report bugs upstream only.
 
   07 Jan 2007; Tony Vroon <chainsaw@gentoo.org>
   -audacious-plugins-1.3.0_alpha1.ebuild:
-  Developer releases are not appreciated by the community. Use an overlay if
-  you want them. Closes bug #160761.
+  Developer releases are not appreciated by the community. Closes bug #160761.
 
 *audacious-plugins-1.3.0_alpha1 (05 Jan 2007)
 
