@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/gpsd
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.22 2006/11/05 02:47:38 nerdboy Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.23 2007/01/08 00:47:02 kugelfang Exp $
+
+  08 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -gpsd-2.33.ebuild:
+  QA: Removed unused versions.
 
   05 Nov 2006; Steve Arnold <nerdboy@gentoo.org> files/gpsd.conf:
   corrected path in config file (only affects non-usb usage)
