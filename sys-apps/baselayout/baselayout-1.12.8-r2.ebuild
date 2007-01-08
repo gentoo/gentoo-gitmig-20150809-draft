@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.8-r2.ebuild,v 1.2 2007/01/08 23:06:53 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.8-r2.ebuild,v 1.3 2007/01/08 23:43:47 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="bootstrap build static unicode"
 
 # This version of baselayout needs gawk in /bin, but as we do not have
@@ -73,6 +73,33 @@ src_compile() {
 		LD="$(tc-getCC) ${LDFLAGS}" \
 		CFLAGS="${CFLAGS}" \
 		LIBDIR="${libdir}" || die
+}
+
+# ${PATH} should include where to get MAKEDEV when calling this
+# function
+create_dev_nodes() {
+	case $(tc-arch) in
+		# amd64 must use generic-i386 because amd64/x86_64 does not have
+		# a generic option at this time, and the default 'generic' ends
+		# up erroring out, because MAKEDEV internally doesn't know what
+		# to use
+		arm*)    suffix=-arm ;;
+		alpha)   suffix=-alpha ;;
+		amd64)   suffix=-i386 ;;
+		hppa)    suffix=-hppa ;;
+		ia64)    suffix=-ia64 ;;
+		m68k)    suffix=-m68k ;;
+		mips*)   suffix=-mips ;;
+		ppc*)    suffix=-powerpc ;;
+		s390*)   suffix=-s390 ;;
+		sh*)     suffix=-sh ;;
+		sparc*)  suffix=-sparc ;;
+		x86)     suffix=-i386 ;;
+	esac
+
+	einfo "Using generic${suffix} to make $(tc-arch) device nodes..."
+	MAKEDEV generic${suffix}
+	MAKEDEV sg scd rtc hde hdf hdg hdh input audio video
 }
 
 # This is a temporary workaround until bug 9849 is completely solved
@@ -418,6 +445,18 @@ pkg_postinst() {
 	# this symlink except for misconfigured grubs.  See bug 50108
 	# (05 May 2004 agriffis)
 	ln -sn . "${ROOT}"/boot/boot 2>/dev/null
+
+	# For the bootstrap scenario with an empty /dev, let's fill the
+	# sucker with generic crude ... some day we should think about
+	# slimming this way down as we've moved on to udev/devfs
+	if use build || use bootstrap ; then
+		if [[ ! -e ${ROOT}/dev/.devfsd && ! -e ${ROOT}/dev/.udev ]] ; then
+			echo
+			einfo "Making device node tarball (this could take a couple minutes)"
+			cd "${ROOT}"/dev || die
+			PATH=${ROOT}/sbin:${PATH} create_dev_nodes
+		fi
+	fi
 
 	# Set up default runlevel symlinks
 	# This used to be done in src_install but required knowledge of ${ROOT},
