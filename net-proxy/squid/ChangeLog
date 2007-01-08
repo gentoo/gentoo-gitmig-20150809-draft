@@ -1,14 +1,11 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.111 2007/01/08 16:16:41 mrness Exp $
-
-  08 Jan 2007; Alin Nastac <mrness@gentoo.org> +squid-2.6.6-r2.ebuild:
-  Detect if kernel supports CONFIG_EPOLL or not (#160637).
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.112 2007/01/08 16:18:29 mrness Exp $
 
 *squid-2.6.6-r2 (08 Jan 2007)
 
-  08 Jan 2007; Alin Nastac <mrness@gentoo.org> +squid-2.6.6-r2.ebuild:
-  Enable epoll support only when Linux kernel has CONFIG_EPOLL enabled (#160637).
+  08 Jan 2007; Alin Năstac <mrness@gentoo.org> +squid-2.6.6-r2.ebuild:
+  Detect if kernel supports CONFIG_EPOLL or not (#160637).
 
   31 Dec 2006; Bryan Østergaard <kloeri@gentoo.org> squid-2.6.5.ebuild:
   Stable on Alpha, bug 157570.
