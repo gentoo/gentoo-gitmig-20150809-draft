@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlQt/PerlQt-3.009_beta2.ebuild,v 1.8 2006/08/05 19:58:46 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlQt/PerlQt-3.009_beta2.ebuild,v 1.9 2007/01/08 17:08:38 mcummings Exp $
 
 inherit perl-module kde
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://perlqt.sourceforge.net/"
 SRC_URI="mirror://sourceforge/perlqt/${P/_beta2/-b2}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ia64 ppc sparc x86"
+KEYWORDS="amd64 ia64 ppc sparc x86"
 IUSE="arts"
 S=${WORKDIR}/${P/_beta2/}
 
@@ -26,7 +26,6 @@ S=${WORKDIR}/${P/_beta2/}
 DEPEND="=x11-libs/qt-3*
 	kde-base/kdelibs
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
