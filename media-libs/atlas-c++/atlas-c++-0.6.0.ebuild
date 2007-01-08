@@ -1,14 +1,14 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.6.0.ebuild,v 1.1 2007/01/08 18:38:31 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.6.0.ebuild,v 1.2 2007/01/08 18:53:28 tupone Exp $
 
 inherit eutils
 
 MY_PN="Atlas-C++"
 MY_P=${MY_PN}-${PV}
 S=${WORKDIR}/${MY_P}
-DESCRIPTION="Atlas protocol standard implementation in C++.  Atlas protocol is used in role playing games at worldforge."
-HOMEPAGE="http://www.worldforge.net"
+DESCRIPTION="Atlas protocol, used in role playing games at worldforge."
+HOMEPAGE="http://www.worldforge.net/dev/eng/libraries/atlas_cpp"
 SRC_URI="mirror://sourceforge/worldforge/${MY_P}.tar.bz2"
 
 SLOT="0"
@@ -32,7 +32,8 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-	dohtml -r doc/html/*
+	make DESTDIR=${D} install || die "install failed"
+	use doc && dohtml -r doc/html/*
+	use doc && doman doc/man/*
 	dodoc AUTHORS ChangeLog HACKING NEWS README ROADMAP THANKS TODO
 }

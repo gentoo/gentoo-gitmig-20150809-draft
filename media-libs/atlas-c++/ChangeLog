@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/atlas-c++
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/ChangeLog,v 1.15 2007/01/08 18:38:31 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/ChangeLog,v 1.16 2007/01/08 18:53:28 tupone Exp $
+
+  08 Jan 2007; <tupone@gentoo.org> atlas-c++-0.6.0.ebuild:
+  Nicer ebuild, with hints from Bug #58213 by Boris Smus
 
 *atlas-c++-0.6.0 (08 Jan 2007)
 
