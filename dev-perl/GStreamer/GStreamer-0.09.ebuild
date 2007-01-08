@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GStreamer/GStreamer-0.09.ebuild,v 1.1 2006/11/19 19:10:46 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GStreamer/GStreamer-0.09.ebuild,v 1.2 2007/01/07 23:44:36 mcummings Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/T/TS/TSCH/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND="=media-libs/gstreamer-0.10*

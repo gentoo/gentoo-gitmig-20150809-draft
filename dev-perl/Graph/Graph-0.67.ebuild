@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/Graph-0.67.ebuild,v 1.9 2006/08/05 04:13:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/Graph-0.67.ebuild,v 1.10 2007/01/07 23:45:15 mcummings Exp $
 
 inherit perl-module
 
@@ -15,5 +15,3 @@ SRC_TEST="do"
 
 DEPEND="dev-perl/Heap
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
-
