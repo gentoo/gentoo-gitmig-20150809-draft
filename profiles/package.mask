@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6567 2007/01/08 00:25:20 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6568 2007/01/08 13:52:28 zzam Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -329,21 +329,6 @@ x11-misc/gaia
 # Tristan Heaven <nyhm@gentoo.org> (29 Nov 2006)
 # Not ready
 =media-libs/allegro-4.2.1
-
-# Matthias Schwarzott <zzam@gentoo.org> (29 Nov 2006)
-# Pending removal Dec 29 2006
-# libvideogfx not compiling since years (Bug #69389)
-# sampeg3 being only package depending on it, no releases
-#   since years, homepage dead (Bug #120563)
-media-libs/libvideogfx
-media-video/sampeg3
-
-# Matthias Schwarzott <zzam@gentoo.org> (29 Nov 2006)
-# Pending removal Dec 29 2006
-# No longer supported from upstream.
-# Are all replaced by the app vlc.
-media-video/vlms
-media-video/vls
 
 # Tony Vroon <chainsaw@gentoo.org> (28 Nov 2006)
 # Broken release, Flameeyes will release an -r1
