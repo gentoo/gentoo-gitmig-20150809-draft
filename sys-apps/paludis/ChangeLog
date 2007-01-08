@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.36 2007/01/08 00:00:46 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.37 2007/01/08 00:52:09 spb Exp $
+
+  08 Jan 2007; Stephen Bennett <spb@gentoo.org>
+  +files/paludis-0.14.2-ruby-so.patch, paludis-0.14.2.ebuild:
+  Fix test failure with ruby enabled
 
 *paludis-0.14.2 (08 Jan 2007)
 
