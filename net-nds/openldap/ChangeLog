@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.242 2007/01/08 03:32:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.243 2007/01/08 05:11:35 weeve Exp $
+
+  08 Jan 2007; Jason Wever <weeve@gentoo.org> openldap-2.1.30-r10.ebuild,
+  openldap-2.2.28-r7.ebuild, openldap-2.3.30-r2.ebuild:
+  Stable on SPARC wrt security bug #159508.
 
   08 Jan 2007; Jeroen Roovers <jer@gentoo.org> openldap-2.1.30-r10.ebuild:
   Stable for HPPA (bug #159508).
