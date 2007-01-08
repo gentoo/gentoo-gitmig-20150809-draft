@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.33 2007/01/06 15:57:34 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.34 2007/01/08 08:22:07 dev-zero Exp $
+
+  08 Jan 2007; Tiziano Müller <dev-zero@gentoo.org> pycairo-1.2.2.ebuild:
+  Added WANT_AUTO*, bug #160246
 
 *pycairo-1.2.6 (06 Jan 2007)
 

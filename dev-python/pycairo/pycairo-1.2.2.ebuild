@@ -1,6 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.2.2.ebuild,v 1.10 2007/01/06 15:57:34 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.2.2.ebuild,v 1.11 2007/01/08 08:22:07 dev-zero Exp $
+
+WANT_AUTOCONF=latest
+WANT_AUTOMAKE=latest
 
 inherit eutils autotools
 
