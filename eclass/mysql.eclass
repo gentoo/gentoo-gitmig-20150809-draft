@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.65 2007/01/08 09:12:45 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.66 2007/01/08 20:38:58 vivo Exp $
 # kate: encoding utf-8; eol unix;
 # kate: indent-width 4; mixedindent off; remove-trailing-space on; space-indent off;
 # kate: word-wrap-column 80; word-wrap off;
@@ -801,7 +801,7 @@ mysql_pkg_postinst() {
 	fi
 
 	#einfo "you may want to read slotting upgrade documents in the overlay"
-	if useq "pbxt" && mysql_version_is_at_least "5.1" ; then
+	if mysql_version_is_at_least "5.1" && useq "pbxt" ; then
 		# TODO tell it better ;-)
 		elog "mysql> INSTALL PLUGIN pbxt SONAME 'libpbxt.so';"
 		elog "CREATE TABLE t1 (c1 int, c2 text) ENGINE=pbxt;"
