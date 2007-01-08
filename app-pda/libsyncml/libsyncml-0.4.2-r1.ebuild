@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/libsyncml-0.4.2-r1.ebuild,v 1.1 2006/11/25 10:44:26 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/libsyncml-0.4.2-r1.ebuild,v 1.2 2007/01/08 16:31:52 peper Exp $
 
 inherit eutils
 
@@ -27,6 +27,30 @@ DEPEND="${RDEPEND}
 
 # Some of the tests are broken
 RESTRICT="test"
+
+pkg_setup() {
+	if ! use obex && ! use http; then
+		eerror "${CATEGORY}/${P} without support for obex nor http is unusable."
+		einfo "Please enable \"obex\" or/and \"http\" USE flags."
+		die "Please enable \"obex\" or/and \"http\" USE flags."
+	fi
+
+	if use bluetooth; then
+		if use obex && ! built_with_use dev-libs/openobex bluetooth; then
+			eerror "You are trying to build ${CATEGORY}/${P} with the \"bluetooth\""
+			eerror "and \"obex\" USE flags, but dev-libs/openobex was built without"
+			eerror "the \"bluetooth\" USE flag."
+			einfo "Please rebuild dev-libs/openobex with \"bluetooth\" USE flag."
+			die "Please rebuild dev-libs/openobex with \"bluetooth\" USE flag."
+		elif ! use obex; then
+			eerror "You are trying to build ${CATEGORY}/${P} with the \"bluetooth\""
+			eerror "USE flag, but you didn't enable the \"obex\" flag, which is"
+			eerror "needed for bluetooth support."
+			einfo "Please enable \"obex\" USE flag."
+			die "Please enable \"obex\" USE flag."
+		fi
+	fi
+}
 
 src_unpack() {
 	unpack ${A}

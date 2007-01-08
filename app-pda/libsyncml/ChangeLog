@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/libsyncml
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/ChangeLog,v 1.2 2006/11/25 10:44:26 peper Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/ChangeLog,v 1.3 2007/01/08 16:31:52 peper Exp $
+
+  08 Jan 2007; Piotr Jaroszyński <peper@gentoo.org>
+  libsyncml-0.4.2-r1.ebuild:
+  Add pkg_setup() to check whether the USE flags are sane.
 
 *libsyncml-0.4.2-r1 (25 Nov 2006)
 
