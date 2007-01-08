@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.11.ebuild,v 1.15 2006/10/24 15:25:33 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.11.ebuild,v 1.16 2007/01/08 14:02:59 flameeyes Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -14,12 +14,11 @@ SRC_URI="mirror://alsaproject/plugins/${P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 arm hppa ia64 ppc ppc64 sh sparc x86"
-IUSE="jack ffmpeg libsamplerate"
+IUSE="jack libsamplerate"
 
 # It could support polypaudio if it was in portage
 RDEPEND=">=media-libs/alsa-lib-1.0.11
 	jack? ( >=media-sound/jack-audio-connection-kit-0.98 )
-	ffmpeg? ( media-video/ffmpeg )
 	libsamplerate? ( media-libs/libsamplerate )
 	!media-plugins/alsa-jack"
 
@@ -40,7 +39,7 @@ src_compile() {
 	econf \
 		$(use_enable jack) \
 		$(use_enable libsamplerate samplerate) \
-		$(use_enable ffmpeg avcodec) \
+		--disable-avcodec \
 		--disable-polypaudio \
 		--disable-dependency-tracking \
 		|| die "econf failed"

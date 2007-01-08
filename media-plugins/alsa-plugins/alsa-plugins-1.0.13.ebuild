@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.13.ebuild,v 1.13 2006/12/21 14:31:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.13.ebuild,v 1.14 2007/01/08 14:02:59 flameeyes Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -16,11 +16,10 @@ SRC_URI="mirror://alsaproject/plugins/${MY_P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha ~amd64 arm ~hppa ia64 ppc ppc64 sh sparc x86"
-IUSE="jack ffmpeg libsamplerate pulseaudio debug"
+IUSE="jack libsamplerate pulseaudio debug"
 
 RDEPEND=">=media-libs/alsa-lib-1.0.12_rc1
 	jack? ( >=media-sound/jack-audio-connection-kit-0.98 )
-	ffmpeg? ( media-video/ffmpeg )
 	libsamplerate? ( media-libs/libsamplerate )
 	pulseaudio? ( media-sound/pulseaudio )
 	!media-plugins/alsa-jack"
@@ -52,8 +51,8 @@ src_compile() {
 	econf \
 		$(use_enable jack) \
 		$(use_enable libsamplerate samplerate) \
-		$(use_enable ffmpeg avcodec) \
 		$(use_enable pulseaudio) \
+		--disable-avcodec \
 		--disable-dependency-tracking \
 		|| die "econf failed"
 	emake || die "emake failed"
