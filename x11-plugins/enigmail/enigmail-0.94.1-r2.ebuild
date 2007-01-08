@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.94.1-r2.ebuild,v 1.3 2007/01/06 17:44:34 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.94.1-r2.ebuild,v 1.4 2007/01/08 01:22:22 kloeri Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 WANT_AUTOCONF=2.1
@@ -21,7 +21,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${TBVER}/so
 	mirror://gentoo/mozilla-thunderbird-${MY_TBVER}-patches-${TBPVER}.tar.bz2
 	http://www.mozilla-enigmail.org/downloads/src/enigmail-${EMVER}.tar.gz"
 
-KEYWORDS="~alpha ~amd64 ia64 mips ppc ~ppc64 sparc x86"
+KEYWORDS="alpha ~amd64 ia64 mips ppc ~ppc64 sparc x86"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2"
 IUSE=""
