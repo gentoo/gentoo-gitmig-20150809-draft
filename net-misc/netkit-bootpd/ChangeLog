@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netkit-bootpd
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootpd/ChangeLog,v 1.11 2006/06/04 12:26:44 dragonheart Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootpd/ChangeLog,v 1.12 2007/01/08 02:15:45 kugelfang Exp $
+
+  08 Jan 2007; Danny van Dyk <kugelfang@gentoo.org>
+  -netkit-bootpd-0.17-r2.ebuild:
+  QA: Removed unused versions.
 
 *netkit-bootpd-2.4 (04 Jun 2006)
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdist
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdist/ChangeLog,v 1.9 2005/09/16 23:31:03 ciaranm Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdist/ChangeLog,v 1.10 2007/01/08 02:22:26 kugelfang Exp $
+
+  08 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -rdist-6.1.5.ebuild:
+  QA: Removed unused versions.
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups

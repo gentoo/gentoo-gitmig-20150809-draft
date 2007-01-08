@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/raccess
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/raccess/ChangeLog,v 1.12 2006/04/27 22:10:07 antarus Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/raccess/ChangeLog,v 1.13 2007/01/08 02:19:57 kugelfang Exp $
+
+  08 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -raccess-0.6.ebuild:
+  QA: Removed unused versions.
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-raccess-0.6,
   files/digest-raccess-0.7, Manifest:

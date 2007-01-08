@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netkit-timed
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/ChangeLog,v 1.16 2006/07/27 05:47:37 wormo Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/ChangeLog,v 1.17 2007/01/08 02:18:40 kugelfang Exp $
+
+  08 Jan 2007; Danny van Dyk <kugelfang@gentoo.org>
+  -netkit-timed-0.17-r6.ebuild:
+  QA: Removed unused versions.
 
 *netkit-timed-0.17-r8 (28 Jul 2006)
 
