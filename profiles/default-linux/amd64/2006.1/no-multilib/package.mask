@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.1/no-multilib/package.mask,v 1.16 2006/11/15 19:59:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.1/no-multilib/package.mask,v 1.17 2007/01/08 13:31:41 armin76 Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -178,6 +178,7 @@ sys-libs/lib-compat-loki
 www-client/opera
 www-client/mozilla-bin
 www-client/mozilla-firefox-bin
+www-client/seamonkey-bin
 x11-misc/googleearth
 x11-misc/qcomicbook
 
