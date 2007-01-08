@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/sms
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sms/ChangeLog,v 1.4 2006/09/24 11:16:40 mrness Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sms/ChangeLog,v 1.5 2007/01/08 18:40:10 mrness Exp $
+
+*sms-2.1.0 (08 Jan 2007)
+
+  08 Jan 2007; Alin Năstac <mrness@gentoo.org> +sms-2.1.0.ebuild:
+  Version bump (#159866). Add ~amd64 keyword.
 
   24 Sep 2006; Alin Nastac <mrness@gentoo.org> +files/sms-2.0.3-gcc41.patch,
   sms-2.0.3.ebuild:
