@@ -1,10 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/hfsplusutils-1.0.4-r1.ebuild,v 1.12 2007/01/04 18:23:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/hfsplusutils-1.0.4-r1.ebuild,v 1.13 2007/01/08 22:21:44 josejx Exp $
 
-WANT_AUTOMAKE="latest"
-WANT_AUTOCONF="latest"
-
+WANT_AUTOMAKE=1.6
 inherit autotools eutils libtool
 
 MY_P="hfsplus_${PV}"
@@ -25,11 +23,24 @@ S=${WORKDIR}/hfsplus-${PV}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/hfsplusutils-1.0.4-glob.patch
-	epatch ${FILESDIR}/hfsplusutils-1.0.4-errno.patch
-	epatch ${FILESDIR}/hfsplusutils-1.0.4-gcc4.patch
+	epatch ${FILESDIR}/${P}-glob.patch
+	epatch ${FILESDIR}/${P}-errno.patch
+	epatch ${FILESDIR}/${P}-gcc4.patch
+	epatch ${FILESDIR}/${P}-string.patch
+	#let's avoid the Makefile.cvs since isn't working for us
+	export WANT_AUTOCONF=2.5
+	export WANT_AUTOMAKE=1.6
+	aclocal
+	autoconf
+	autoheader
+	automake -a
+	libtoolize --force --copy
+	elibtoolize
+}
 
-	eautoreconf
+src_compile() {
+	econf || die
+	emake || die
 }
 
 src_install() {
