@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/hsfmodem
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.31 2006/11/11 15:45:24 mrness Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.32 2007/01/08 17:15:56 mrness Exp $
+
+*hsfmodem-7.47.00.07 (08 Jan 2007)
+
+  08 Jan 2007; Alin Năstac <mrness@gentoo.org>
+  +files/hsfmodem-7.47.00.07-udev-group.patch, +hsfmodem-7.47.00.07.ebuild:
+  Version bump (#160783).
 
 *hsfmodem-7.47.00.05 (11 Nov 2006)
 
