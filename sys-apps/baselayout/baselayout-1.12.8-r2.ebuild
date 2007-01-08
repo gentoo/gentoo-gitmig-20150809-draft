@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.8-r2.ebuild,v 1.3 2007/01/08 23:43:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.8-r2.ebuild,v 1.4 2007/01/08 23:49:37 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -449,7 +449,7 @@ pkg_postinst() {
 	# For the bootstrap scenario with an empty /dev, let's fill the
 	# sucker with generic crude ... some day we should think about
 	# slimming this way down as we've moved on to udev/devfs
-	if use build || use bootstrap ; then
+	if use build ; then
 		if [[ ! -e ${ROOT}/dev/.devfsd && ! -e ${ROOT}/dev/.udev ]] ; then
 			echo
 			einfo "Making device node tarball (this could take a couple minutes)"
