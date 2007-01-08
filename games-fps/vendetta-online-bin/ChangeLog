@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/vendetta-online-bin
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/vendetta-online-bin/ChangeLog,v 1.5 2006/09/19 19:49:32 wolf31o2 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/vendetta-online-bin/ChangeLog,v 1.6 2007/01/08 17:48:07 nyhm Exp $
+
+*vendetta-online-bin-1-r1 (08 Jan 2007)
+
+  08 Jan 2007; Tristan Heaven <nyhm@gentoo.org>
+  -vendetta-online-bin-1.ebuild, +vendetta-online-bin-1-r1.ebuild:
+  New revision for the amd64 installer and digest fix, bug #160817
 
   19 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   vendetta-online-bin-1.ebuild:
