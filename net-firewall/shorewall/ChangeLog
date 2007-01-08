@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.120 2007/01/03 20:52:34 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.121 2007/01/08 07:47:30 wormo Exp $
+
+  06 Jan 2007; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  shorewall-3.2.4.ebuild:
+  mark ~ppc (bug #151952)
 
   03 Jan 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   shorewall-3.0.8.ebuild:
