@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ipw3945-1.1.3-r1.ebuild,v 1.2 2007/01/08 20:33:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ipw3945-1.1.3-r2.ebuild,v 1.1 2007/01/08 20:33:28 robbat2 Exp $
 
 inherit linux-mod eutils
 
@@ -12,7 +12,12 @@ DAEMON_VERSION="1.7.22"
 
 DESCRIPTION="Driver for the Intel PRO/Wireless 3945ABG miniPCI express adapter"
 HOMEPAGE="http://ipw3945.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P/_pre/-pre}.tgz"
+SRC_URI_PATCHBASE="http://${PN}.sourceforge.net/patches/${PN}"
+SRC_URI="mirror://sourceforge/${PN}/${P/_pre/-pre}.tgz
+	${SRC_URI_PATCHBASE}-1.1.3-2.6.20-register.patch
+	${SRC_URI_PATCHBASE}-1.1.4.essid.patch
+	${SRC_URI_PATCHBASE}-1.1.3-2.6.20-2.patch
+	${SRC_URI_PATCHBASE}-1.1.3-2.6.20-1.patch"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -42,11 +47,17 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A}
+	unpack ${P/_pre/-pre}.tgz
+
+	EPATCH_OPTS="-d ${S} -p1" epatch ${FILESDIR}/${P}-Makefile.patch
+	EPATCH_OPTS="-d ${S} -p1" epatch ${DISTDIR}/${PN}-1.1.4.essid.patch
+	if kernel_is ge 2 6 20; then
+		EPATCH_OPTS="-d ${S} -p1" epatch ${DISTDIR}/${PN}-1.1.3-2.6.20-register.patch
+		EPATCH_OPTS="-d ${S} -p1" epatch ${DISTDIR}/${PN}-1.1.3-2.6.20-1.patch
+		EPATCH_OPTS="-d ${S} -p1" epatch ${DISTDIR}/${PN}-1.1.3-2.6.20-2.patch
+	fi
+
 	cd "${S}"
-
-	epatch "${FILESDIR}/${P}-Makefile.patch"
-
 	if use debug ; then
 		sed -i -e "s:^\(CONFIG_IPW3945_DEBUG\)=.*:\1=y:" "${S}"/Makefile || die
 	fi
