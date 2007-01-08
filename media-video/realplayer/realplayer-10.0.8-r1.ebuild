@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-10.0.8.ebuild,v 1.6 2007/01/08 02:16:50 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-10.0.8-r1.ebuild,v 1.1 2007/01/08 02:16:50 beandog Exp $
 
 inherit nsplugins eutils rpm
 
@@ -10,23 +10,18 @@ HOMEPAGE="https://player.helixcommunity.org/2005/downloads/"
 SRC_URI="https://helixcommunity.org/download.php/2152/${MY_PN}-${PV}.805-20060718.i586.rpm"
 LICENSE="HBRL"
 SLOT="0"
-KEYWORDS="-* amd64 x86"
-IUSE="nsplugin"
-
-# take this out until I get the realplayer source
-# build sorted out. - ChrisWhite
-# RDEPEND="!media-video/realplayer
+KEYWORDS="-* ~amd64 ~x86"
+IUSE="X nsplugin"
 RDEPEND="!amd64? (
-			>=dev-libs/glib-2
-			>=x11-libs/pango-1.2
-			>=x11-libs/gtk+-2.2
+			X? ( >=dev-libs/glib-2
+				>=x11-libs/pango-1.2
+				>=x11-libs/gtk+-2.2 )
 			=virtual/libstdc++-3.3*
 		)
 		amd64? (
-			app-emulation/emul-linux-x86-gtklibs
+			X? ( app-emulation/emul-linux-x86-gtklibs )
 			app-emulation/emul-linux-x86-compat
 		)"
-DEPEND="${RDEPEND}"
 RESTRICT="nostrip nomirror"
 
 QA_TEXTRELS="opt/RealPlayer/codecs/raac.so
@@ -57,30 +52,38 @@ src_unpack() {
 
 src_install() {
 	dodir /opt/${MY_PN}
-	mv * ${D}/opt/${MY_PN}
+	mv codecs ${D}/opt/${MY_PN}
 
-	dodir /usr/bin
-	dosym /opt/${MY_PN}/realplay /usr/bin/realplay
+	dodoc README
 
-	cd ${D}/opt/${MY_PN}/share
-	domenu realplay.desktop
+	if use X; then
+		for x in common lib mozilla plugins postinst realplay realplay.bin share; do
+			mv $x ${D}/opt/${MY_PN}
+		done;
 
-	for res in 16 192 32 48; do
-		insinto /usr/share/icons/hicolor/${res}x${res}/apps
-		newins icons/realplay_${res}x${res}.png \
-				realplay.png
-	done
+		dodir /usr/bin
+		dosym /opt/${MY_PN}/realplay /usr/bin/realplay
 
-	# mozilla plugin
-	if use nsplugin ; then
-		cd ${D}/opt/${MY_PN}/mozilla
-		exeinto /opt/netscape/plugins
-		doexe nphelix.so
-		inst_plugin /opt/netscape/plugins/nphelix.so
+		cd ${D}/opt/${MY_PN}/share
+		domenu realplay.desktop
 
-		insinto /opt/netscape/plugins
-		doins nphelix.xpt
-		inst_plugin /opt/netscape/plugins/nphelix.xpt
+		for res in 16 192 32 48; do
+			insinto /usr/share/icons/hicolor/${res}x${res}/apps
+			newins icons/realplay_${res}x${res}.png \
+					realplay.png
+		done
+
+		# mozilla plugin
+		if use nsplugin ; then
+			cd ${D}/opt/${MY_PN}/mozilla
+			exeinto /opt/netscape/plugins
+			doexe nphelix.so
+			inst_plugin /opt/netscape/plugins/nphelix.so
+
+			insinto /opt/netscape/plugins
+			doins nphelix.xpt
+			inst_plugin /opt/netscape/plugins/nphelix.xpt
+		fi
 	fi
 
 	# Language resources
