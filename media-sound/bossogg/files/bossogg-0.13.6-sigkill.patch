@@ -1,0 +1,11 @@
+--- bossogg-0.13.6/bossogg.old	2007-01-08 19:27:24.000000000 +0100
++++ bossogg-0.13.6/bossogg	2007-01-08 19:27:55.000000000 +0100
+@@ -214,8 +214,6 @@
+ 	interfaces = []
+ 
+ 	#Setup signal handlers
+-	signal.signal(signal.SIGKILL, stopBoss)
+-	signal.signal(signal.SIGSTOP, stopBoss)
+ 	signal.signal(signal.SIGQUIT, stopBoss)
+ 	signal.signal(signal.SIGTERM, stopBoss)
+ 	signal.signal(signal.SIGINT, stopBoss)

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.6-r3.ebuild,v 1.6 2007/01/05 17:24:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.6-r3.ebuild,v 1.7 2007/01/08 18:53:14 aballier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -19,14 +19,14 @@ LICENSE="GPL-2"
 
 DEPEND=">=media-libs/libao-0.8.3
 	media-libs/libshout
-	flac? ( ~media-libs/flac-1.1.2 )
+	flac? ( >=media-libs/flac-1.1.2 )
 	vorbis? ( media-libs/libvorbis )
 	mad? ( media-libs/libmad
 		media-libs/id3lib )
 	=dev-db/sqlite-2*"
 
 RDEPEND="${DEPEND}
-	 dev-python/pysqlite"
+	 <dev-python/pysqlite-2"
 
 src_unpack() {
 	unpack ${A}
@@ -34,6 +34,9 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-Makefile.patch"
 	epatch "${FILESDIR}/${P}-gcc4.patch"
+	epatch "${FILESDIR}/${P}+flac-1.1.3.patch"
+	epatch "${FILESDIR}/${P}-metadata.patch"
+	epatch "${FILESDIR}/${P}-sigkill.patch"
 
 	eautoreconf
 }

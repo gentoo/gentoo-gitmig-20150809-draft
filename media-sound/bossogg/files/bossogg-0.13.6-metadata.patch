@@ -1,0 +1,11 @@
+--- bossogg-0.13.6/boss3/metadata/Makefile.am.old	2006-12-09 14:23:39.000000000 +0100
++++ bossogg-0.13.6/boss3/metadata/Makefile.am	2006-12-09 14:23:48.000000000 +0100
+@@ -10,7 +10,7 @@
+ 
+ python_LTLIBRARIES=_id3.la
+ 
+-_id3_la_LDFLAGS=-module @METADATA_LIBS@
++_id3_la_LDFLAGS=-module
+ _id3_la_CFLAGS=-I../bossao
+ _id3_la_CXXFLAGS=-I../bossao
+ _id3_la_SOURCES=id3.h id3.c id3_wrap.c ${USE_OGG} ${USE_ID3} 
