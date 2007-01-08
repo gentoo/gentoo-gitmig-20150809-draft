@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh/ssh-3.2.9.1-r1.ebuild,v 1.3 2006/03/11 00:09:19 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh/ssh-3.2.9.1-r1.ebuild,v 1.4 2007/01/08 15:35:49 flameeyes Exp $
 
-inherit eutils
+inherit eutils pam
 
 DESCRIPTION="SSH.COM free for Non-Commercial Use ssh version"
 HOMEPAGE="http://www.ssh.com/"
