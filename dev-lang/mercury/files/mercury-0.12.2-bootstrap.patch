@@ -58,3 +58,30 @@
  
  
  #-----------------------------------------------------------------------------#
+@@ -9980,10 +9980,10 @@
+ 
+ fi
+ #-----------------------------------------------------------------------------#
+-if test "$BOOTSTRAP_MC" = ""; then
+-	BOOTSTRAP_MC=mmc
+-fi
+-BOOTSTRAP_MC="$BOOTSTRAP_MC $HAVE_BOXED_FLOATS --conf-low-tag-bits $LOW_TAG_BITS --bits-per-word $BITS_PER_WORD --bytes-per-word $BYTES_PER_WORD"
++#if test "$BOOTSTRAP_MC" = ""; then
++#	BOOTSTRAP_MC=mmc
++#fi
++#BOOTSTRAP_MC="$BOOTSTRAP_MC $HAVE_BOXED_FLOATS --conf-low-tag-bits $LOW_TAG_BITS --bits-per-word $BITS_PER_WORD --bytes-per-word $BYTES_PER_WORD"
+ 
+ #-----------------------------------------------------------------------------#
+ 
+@@ -12010,6 +12010,11 @@
+     rm -f confscratch $to_delete
+ fi
+ #-----------------------------------------------------------------------------#
++if test "$BOOTSTRAP_MC" = ""; then
++	BOOTSTRAP_MC=mmc
++fi
++BOOTSTRAP_MC="$BOOTSTRAP_MC $HAVE_BOXED_FLOATS --conf-low-tag-bits $LOW_TAG_BITS --bits-per-word $BITS_PER_WORD --bytes-per-word $BYTES_PER_WORD"
++#-----------------------------------------------------------------------------#
+ 
+ echo "$as_me:$LINENO: checking for C shell executable" >&5
+ echo $ECHO_N "checking for C shell executable... $ECHO_C" >&6

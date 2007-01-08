@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.70 2007/01/07 03:34:51 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.71 2007/01/08 06:27:34 keri Exp $
+
+  08 Jan 2007; keri <keri@gentoo.org> files/mercury-0.12.2-bootstrap.patch,
+  -files/mercury-0.12.2-unboxed_floats.patch,
+  files/mercury-0.13.1-bootstrap.patch,
+  -files/mercury-0.13.1-unboxed_floats.patch, mercury-0.12.2-r4.ebuild,
+  mercury-0.13.1-r1.ebuild:
+  Do not rebuild C files in a stage1 bootstrap without a Mercury compiler handy.
 
   07 Jan 2007; keri <keri@gentoo.org>
   +files/mercury-0.12.2-unboxed_floats.patch,
