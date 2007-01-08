@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.61 2007/01/04 14:56:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.62 2007/01/08 23:04:49 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -17,6 +17,7 @@ _autoconf_atom="sys-devel/autoconf"
 if [[ -n ${WANT_AUTOMAKE} ]]; then
 	case ${WANT_AUTOMAKE} in
 		# workaround while we have different versions of automake in arch and ~arch
+		none) _automake_atom="" ;; # some packages don't require automake at all
 		latest) _automake_atom="|| ( =sys-devel/automake-1.10* =sys-devel/automake-1.9* )" ;;
 		*) _automake_atom="=sys-devel/automake-${WANT_AUTOMAKE}*" ;;
 	esac
@@ -213,10 +214,14 @@ autotools_set_versions() {
 				ROOT=/ has_version =sys-devel/automake-${amver}* && break
 			done
 		fi
-		export WANT_AUTOMAKE
-		einfo "Requested automake ${latest_automake}${WANT_AUTOMAKE}"
-		einfo "Using $(automake --version 2>/dev/null | head -n 1)"
-		einfo "Using $(aclocal --version 2>/dev/null | head -n 1)"
+
+		# Don't do stuff if no autoamke is requested/required
+		if [[ ${WANT_AUTOMAKE} != "none" ]]; then
+			export WANT_AUTOMAKE
+			einfo "Requested automake ${latest_automake}${WANT_AUTOMAKE}"
+			einfo "Using $(automake --version 2>/dev/null | head -n 1)"
+			einfo "Using $(aclocal --version 2>/dev/null | head -n 1)"
+		fi
 	else
 		ewarn "QA Notice: \${WANT_AUTOMAKE} variable unset. Please report on http://bugs.gentoo.org/"
 	fi
