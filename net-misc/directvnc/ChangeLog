@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/directvnc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/ChangeLog,v 1.18 2006/06/06 07:03:01 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/ChangeLog,v 1.19 2007/01/08 16:00:37 s4t4n Exp $
+
+  08 Jan 2007; Michele Noberasco <s4t4n@gentoo.org> directvnc-0.7.5.ebuild:
+  Added missing x11-proto/xproto dependancy. Fixed DEPEND and RDEPEND.
+  Closes bug #152511.
 
   06 Jun 2006; Michele Noberasco <s4t4n@gentoo.org> directvnc-0.7.5.ebuild:
   removed INSTALL from dodoc.
