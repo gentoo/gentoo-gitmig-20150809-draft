@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/vym
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/ChangeLog,v 1.10 2006/07/11 07:18:29 stuart Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/ChangeLog,v 1.11 2007/01/08 01:48:32 kugelfang Exp $
+
+  08 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -vym-1.5.0.ebuild,
+  -vym-1.7.0.ebuild:
+  QA: Removed unused versions.
 
 *vym-1.8.0 (11 Jul 2006)
 
