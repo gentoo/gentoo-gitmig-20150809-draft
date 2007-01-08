@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.13.0_alpha10-r2.ebuild,v 1.4 2006/12/30 15:59:00 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.13.0_alpha10-r2.ebuild,v 1.5 2007/01/08 23:06:53 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -62,13 +62,9 @@ src_unpack() {
 }
 
 make_opts() {
-	# Standard options
-	local opts="DESTDIR=\"${ROOT}\" ARCH=\"$(tc-arch)\" CC=\"$(tc-getCC)\""
 	local libdir="lib"
-
 	[[ ${SYMLINK_LIB} == "yes" ]] && libdir=$(get_abi_LIBDIR "${DEFAULT_ABI}")
-
-	opts="${opts} LIB=${libdir}"
+	local opts="${opts} LIB=${libdir}"
 
 	if use kernel_linux ; then
 		opts="${opts} OS=Linux"
@@ -83,7 +79,7 @@ make_opts() {
 
 src_compile() {
 	use static && append-ldflags -static
-	emake $(make_opts) || die
+	emake $(make_opts) ARCH=$(tc-arch) CC=$(tc-getCC) || die
 }
 
 # Support function for remapping old wireless dns vars
@@ -128,7 +124,7 @@ pkg_preinst() {
 			ln -s "${lib}" "${ROOT}usr/local/lib"
 		fi
 
-		make -C "${T}" $(make_opts) layout || die "failed to layout filesystem"
+		make -C "${T}" $(make_opts) DESTDIR="${ROOT}" layout || die "failed to layout filesystem"
 	fi
 
 	# Change some vars introduced in baselayout-1.11.0 before we go stable
@@ -181,7 +177,7 @@ pkg_postinst() {
 			if [[ ! -e ${ROOT}/dev/.udev && ! -e ${ROOT}/dev/.devfsd ]] ; then
 				einfo "Creating dev nodes"
 				PATH="${ROOT}"/sbin:${PATH} make -C "${T}" $(make_opts) \
-				dev || die "failed to create /dev nodes"
+				DESTDIR="${ROOT}" dev || die "failed to create /dev nodes"
 			fi
 		fi
 	fi
@@ -189,7 +185,7 @@ pkg_postinst() {
 	# Make our runlevels if they don't exist
 	if [[ ! -e ${ROOT}etc/runlevels ]] ; then
 		einfo "Making default runlevels"
-		make -C "${T}" $(make_opts) runlevels_install >/dev/null
+		make -C "${T}" $(make_opts) DESTDIR="${ROOT}" runlevels_install >/dev/null
 	fi
 
 	# We installed some files to /usr/share/baselayout instead of /etc to stop
@@ -210,6 +206,7 @@ pkg_postinst() {
 		svcdir="${svcdir:-/var/lib/init.d}"
 		einfo "Moving state from ${ROOT}${svcdir} to ${ROOT}lib/rcscripts/init.d"
 		cp -RPp "${ROOT}${svcdir}"/* "${ROOT}"lib/rcscripts/init.d
+		rm -rf "${ROOT}${svcdir}"
 		)
 		# Install our new init script and mark it started
 		if use kernel_linux ; then
@@ -311,6 +308,5 @@ pkg_postrm() {
 		umount "${ROOT}lib/rcscripts/init.d" 2>/dev/null
 		rm -rf "${ROOT}lib/rcscripts/init.d"
 		)
-		ewarn "You will need to re-emerge ${PN} to restore ${ROOT}etc/init.d/net.lo"
 	fi
 }

@@ -1,9 +1,13 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.385 2007/01/06 05:17:06 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.386 2007/01/08 23:06:53 uberlord Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+  08 Jan 2007; Roy Marples <uberlord@gentoo.org>
+  baselayout-1.12.8-r2.ebuild, baselayout-1.13.0_alpha10-r2.ebuild:
+  Upgrade/downgrade is now sane between 1.12.8-r2 and 1.13.0_alpha10-r2
 
   06 Jan 2007; Tom Gall <tgall@gentoo.org> baselayout-1.12.8-r1:
   stable on ppc64, moving forward aggressively

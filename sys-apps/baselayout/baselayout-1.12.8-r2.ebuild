@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.8-r2.ebuild,v 1.1 2007/01/05 18:23:55 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.8-r2.ebuild,v 1.2 2007/01/08 23:06:53 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -379,6 +379,10 @@ remap_dns_vars() {
 }
 
 pkg_preinst() {
+	# When downgrading from 1.13 we need to erase net.lo as it's a symlink
+	# and it's about to become a file - this is fatal in /etc
+	[[ -L "${ROOT}"etc/init.d/net.lo ]] && rm -f "${ROOT}"etc/init.d/net.lo
+
 	# Reincarnate dirs from kdir/unkdir (hack for bug 9849)
 	# This needs to be in pkg_preinst() rather than pkg_postinst() as
 	# portage may create some dirs/files that'll screw us up (like /usr/lib/debug)
