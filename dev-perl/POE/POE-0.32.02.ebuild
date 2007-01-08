@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.32.02.ebuild,v 1.12 2006/11/18 01:15:47 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.32.02.ebuild,v 1.13 2007/01/08 16:29:40 mcummings Exp $
 
 IUSE="ipv6 libwww ncurses tk"
 
@@ -36,7 +36,6 @@ DEPEND="dev-perl/ExtUtils-AutoInstall
 		>=dev-perl/URI-1.30 )
 	ncurses? ( >=dev-perl/Curses-1.08 )
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 mymake="/usr"
 
