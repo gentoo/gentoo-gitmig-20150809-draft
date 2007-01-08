@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.7.ebuild,v 1.11 2006/11/15 11:46:20 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.7.ebuild,v 1.12 2007/01/08 21:29:08 nelchael Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -40,6 +40,8 @@ src_unpack() {
 	use amd64 && {
 		epatch "${FILESDIR}/${P}-amd64.patch" || die "patch failed"
 	}
+	epatch "${FILESDIR}/${P}-as-needed.patch"
+	epatch "${FILESDIR}/${P}-dieonerrors.patch"
 }
 
 src_compile() {
