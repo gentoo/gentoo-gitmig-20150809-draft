@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.600 2007/01/08 04:47:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.601 2007/01/08 20:42:21 corsair Exp $
+
+  08 Jan 2007; Markus Rothe <corsair@gentoo.org> gcc-4.1.1-r3.ebuild:
+  Stable on ppc64; bug #160663
 
   08 Jan 2007; Mike Frysinger <vapier@gentoo.org> gcc-4.1.1-r1.ebuild,
   gcc-4.1.1-r3.ebuild:
