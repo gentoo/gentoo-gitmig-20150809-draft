@@ -200,10 +200,10 @@ EBUILD mozilla-thunderbird-1.5.0.8.ebuild 7694 RMD160 8e355769814bb72ed68b056979
 MD5 b8f7fb6fa6ba86c9fb6b55e3a9213c72 mozilla-thunderbird-1.5.0.8.ebuild 7694
 RMD160 8e355769814bb72ed68b056979117cc725c5a28a mozilla-thunderbird-1.5.0.8.ebuild 7694
 SHA256 33304064b56015a7e6e2ada8a6504c21ad53c5976080d298c6bdcf6951fffcb4 mozilla-thunderbird-1.5.0.8.ebuild 7694
-EBUILD mozilla-thunderbird-1.5.0.9.ebuild 8046 RMD160 783a3a6ddb54550ed39732f55c61285149a5e1d2 SHA1 bdf79b4ee71d88f4b539d720fe6da8bdea2516c6 SHA256 744f1b6b9294390853237088f10fbe7aec6fad8bc5f605450224c7f5faf84609
-MD5 6ede081fc743d4b66f5361fed6b77e31 mozilla-thunderbird-1.5.0.9.ebuild 8046
-RMD160 783a3a6ddb54550ed39732f55c61285149a5e1d2 mozilla-thunderbird-1.5.0.9.ebuild 8046
-SHA256 744f1b6b9294390853237088f10fbe7aec6fad8bc5f605450224c7f5faf84609 mozilla-thunderbird-1.5.0.9.ebuild 8046
+EBUILD mozilla-thunderbird-1.5.0.9.ebuild 8045 RMD160 76565cb6cbbadc19c7c372dbdd151532e9d05a15 SHA1 dd4eaaec1d0ff768702abff9b1388883c1e25f85 SHA256 48fad437d649a5b7becb0b1e10c75b2dfee3a8655f91bcc73a05d147f21cd8a4
+MD5 4f09dfb3f30a46386cea23aaf7c9fd44 mozilla-thunderbird-1.5.0.9.ebuild 8045
+RMD160 76565cb6cbbadc19c7c372dbdd151532e9d05a15 mozilla-thunderbird-1.5.0.9.ebuild 8045
+SHA256 48fad437d649a5b7becb0b1e10c75b2dfee3a8655f91bcc73a05d147f21cd8a4 mozilla-thunderbird-1.5.0.9.ebuild 8045
 EBUILD mozilla-thunderbird-2.0_beta1.ebuild 7890 RMD160 971cb80bf82c0ed35b4dd98ca17d54c6f4bdbaef SHA1 a4bfac20ecd2245454becee4df1496b89ad09e6b SHA256 4502b9496c0be5fd5434e4137529667c7411af30096d4fb4a385ba470158ff5d
 MD5 72916a14e61c1e0a9cad2079b680a9dc mozilla-thunderbird-2.0_beta1.ebuild 7890
 RMD160 971cb80bf82c0ed35b4dd98ca17d54c6f4bdbaef mozilla-thunderbird-2.0_beta1.ebuild 7890
@@ -240,7 +240,7 @@ SHA256 f2839082d663c6630a133b0b2bd8c87f1df565bc3994cab9eb724bccde8f51b7 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.1 (GNU/Linux)
 
-iD8DBQFFolCeugEuf3OQ0akRAsqIAJ91ZGgWM+ypKXgveEyHGkoCSSj1HgCgjYLE
-sht5j6pei27kPbKwxVjH21s=
-=t69U
+iD8DBQFFolFmugEuf3OQ0akRAkkoAKCkavXzi6KaXIIKAAdO6YZOJsxV+ACeJUv4
+YsB23TgzDlRzQk/KPaR/fXM=
+=6bdg
 -----END PGP SIGNATURE-----
