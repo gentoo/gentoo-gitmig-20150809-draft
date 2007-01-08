@@ -58,7 +58,7 @@ DIST mysql-4.1.23-bk-20070101.tar.bz2 12171000 RMD160 3e7abcb4665b55bfe74305484b
 DIST mysql-5.0.34-bk-20070101.tar.bz2 14431547 RMD160 aab9ce10073c7a70585d041e475b575185e77fb6 SHA1 cd4e17a387c75585c71cb7ceb565a173cf43b2a9 SHA256 c81687985203537acee8ccfbb4be4cd1dd764c1ac67ebdbb46b3ef00931b243b
 DIST mysql-5.1.15-bk-20061231.tar.bz2 11999404 RMD160 9a9929d6c2df4e128b3b5259b21fec5e04fe3181 SHA1 a6cdb54f1f113545103660fa20adfc128afee97c SHA256 1e4acc53175af275b48dbab33320d4841c9502c74f283e4f62215f5c2e602f15
 DIST mysql-5.2.0-bk-20070104.tar.bz2 12455452 RMD160 54de7353993f7806334c66e72bf06e325056aecb SHA1 6d485cb45ea001e2cac6d899d0c6bc682180d437 SHA256 72893646de06122042f7fc07c7c81836f1dbc5931846b87d0f28eb98366f6bfc
-DIST mysql-extras-20070105.tar.bz2 50005 RMD160 abf1f8ebab8ecdfdb5ebe9ca55076f39ab492acb SHA1 7f4dbc3d6c20fe953bf6e936a58343a229398ca0 SHA256 17697bf70acffd0eeefd976b5ef06dd36080273bf7e805b51a31d72f5f2c5172
+DIST mysql-extras-20070108.tar.bz2 49996 RMD160 eb7459e2390c4d877f4c4d5cf9bb3d14c39c4212 SHA1 58f8db940a1e524ae1527e9efe9f2c2e1be4ef86 SHA256 55d46ac681036cda8f95d5f169d494cd3c6a25fbc7ec327a949518adf64a8ba8
 DIST pbxt-0.9.73-beta.tar.gz 2706652 RMD160 a4d974a8519b62868e948966910a84dbded05abe SHA1 f6ed2ba49ec82646581edcb06e054c46a5ba1ded SHA256 a2176d137138d33028c57499b74a79c5f12dcd958c3e7f1aad67bb4b7b24674d
 EBUILD mysql-slotted-4.1.23_alpha20070101-r60.ebuild 1025 RMD160 211e6eb02498fcd4ec095293487af82487a344db SHA1 ba2b6596ab0e73c611835bbbecf376510807802f SHA256 bc0fbe590057244d9c60038e7f3a86bf22349bc855ef93c7c6a74cb2e64e8bc2
 MD5 0659f4c45f8fec1565dbb579ee0bb9d2 mysql-slotted-4.1.23_alpha20070101-r60.ebuild 1025
@@ -92,21 +92,21 @@ MISC metadata.xml 159 RMD160 a50a94af7706288c46f81d6c3da9b5f888050eee SHA1 5eb25
 MD5 f1c86d989c7ea2451931e7e2c3530f8c metadata.xml 159
 RMD160 a50a94af7706288c46f81d6c3da9b5f888050eee metadata.xml 159
 SHA256 5cfd5aa0e8104c0326b5f4c9205a6449a94e0f6f6abfd2626f1e7a8fe77b98b7 metadata.xml 159
-MD5 2131975c8b05704e3c0cffec893c4602 files/digest-mysql-slotted-4.1.23_alpha20070101-r60 548
-RMD160 0e89601b33db8a0f9d477d2bd1a6a0b06f811b61 files/digest-mysql-slotted-4.1.23_alpha20070101-r60 548
-SHA256 b38017bdff7d53137af64a03c6b7ddf2351203df21f3d0a01b28309b14246f07 files/digest-mysql-slotted-4.1.23_alpha20070101-r60 548
-MD5 98acb9810f87773a30a14a1f25346b14 files/digest-mysql-slotted-5.0.34_alpha20070101-r60 548
-RMD160 6cf44dc446065e6e890dcbd59291cb4c6f99ba0d files/digest-mysql-slotted-5.0.34_alpha20070101-r60 548
-SHA256 06652eba0cd954daf34a7cbeaee9fdd5ed23bd416c5324bafc385363448277e3 files/digest-mysql-slotted-5.0.34_alpha20070101-r60 548
-MD5 751d62dcf0ca2b84a6955b688c65ed5d files/digest-mysql-slotted-5.1.15_alpha-r90 518
-RMD160 f9c5ae70209420f3088c279f8713c975499080b3 files/digest-mysql-slotted-5.1.15_alpha-r90 518
-SHA256 b4241d2de5d023b660dfd2aba49e80393c5fef73a55c52c6e24d55f203805ff0 files/digest-mysql-slotted-5.1.15_alpha-r90 518
-MD5 d4c2c60cfdc3d387a1357872a3a7e864 files/digest-mysql-slotted-5.1.15_alpha20061231-r60 801
-RMD160 ce8a90a173cc72f69646282dd86350e4a0016dd9 files/digest-mysql-slotted-5.1.15_alpha20061231-r60 801
-SHA256 f58d7c85e2d6ed76103bc927827d3860ed6e2031986d4d4ddf506fd9fec9aa6b files/digest-mysql-slotted-5.1.15_alpha20061231-r60 801
-MD5 751d62dcf0ca2b84a6955b688c65ed5d files/digest-mysql-slotted-5.2.0_alpha-r90 518
-RMD160 f9c5ae70209420f3088c279f8713c975499080b3 files/digest-mysql-slotted-5.2.0_alpha-r90 518
-SHA256 b4241d2de5d023b660dfd2aba49e80393c5fef73a55c52c6e24d55f203805ff0 files/digest-mysql-slotted-5.2.0_alpha-r90 518
-MD5 3f93884a2c547fbf56f615165ffedafb files/digest-mysql-slotted-5.2.0_alpha20070104-r60 798
-RMD160 121eed1d6a2e666e48038a42e28927ed286072b9 files/digest-mysql-slotted-5.2.0_alpha20070104-r60 798
-SHA256 c53b6c1421773ed764159f45f229a68045e3d15cd2ed93377f25fa917fc89889 files/digest-mysql-slotted-5.2.0_alpha20070104-r60 798
+MD5 174cf811b7e3c62b9fd1a4bf632ac0d0 files/digest-mysql-slotted-4.1.23_alpha20070101-r60 548
+RMD160 30f3be48fb6e22da25a3c2efdf86891e7e9c302d files/digest-mysql-slotted-4.1.23_alpha20070101-r60 548
+SHA256 8f61c52886fae8b0cd3febeb7a9062dba211778b9dcdba909aa63f6b7274387a files/digest-mysql-slotted-4.1.23_alpha20070101-r60 548
+MD5 8de7d28c1b65cc3c9f2692c4e7da06ac files/digest-mysql-slotted-5.0.34_alpha20070101-r60 548
+RMD160 6c6f33c62e0a36f44360b8c2bda47da3c676eb5a files/digest-mysql-slotted-5.0.34_alpha20070101-r60 548
+SHA256 c6b95e652446d4b2e15e2730bf91264d4d26e03fb165e1465b94853c5bfb827c files/digest-mysql-slotted-5.0.34_alpha20070101-r60 548
+MD5 a4a7db16ddaeafd2ab1e9bff6c757c8b files/digest-mysql-slotted-5.1.15_alpha-r90 518
+RMD160 ec3d0c7997d748edb26513e90b012ccb1bf28d39 files/digest-mysql-slotted-5.1.15_alpha-r90 518
+SHA256 fa222f6f4f10c8d951aa1ef4d08bc1f42dca207ee665933fced3cdd3bde14752 files/digest-mysql-slotted-5.1.15_alpha-r90 518
+MD5 fec9428df1936f1453c9496250f0e9b5 files/digest-mysql-slotted-5.1.15_alpha20061231-r60 801
+RMD160 aad4b86cfeba294075f3e69a3b754de623cc1686 files/digest-mysql-slotted-5.1.15_alpha20061231-r60 801
+SHA256 268fcb8047f975b1cae38b3adacb9abf6909b05450dd1de67ed38d40796ab5a1 files/digest-mysql-slotted-5.1.15_alpha20061231-r60 801
+MD5 a4a7db16ddaeafd2ab1e9bff6c757c8b files/digest-mysql-slotted-5.2.0_alpha-r90 518
+RMD160 ec3d0c7997d748edb26513e90b012ccb1bf28d39 files/digest-mysql-slotted-5.2.0_alpha-r90 518
+SHA256 fa222f6f4f10c8d951aa1ef4d08bc1f42dca207ee665933fced3cdd3bde14752 files/digest-mysql-slotted-5.2.0_alpha-r90 518
+MD5 3107dac05fa3a46d3d21bf7a4ac5c79e files/digest-mysql-slotted-5.2.0_alpha20070104-r60 798
+RMD160 df2b2c5a66879627c0d8d8778e48a0685fd1cdcb files/digest-mysql-slotted-5.2.0_alpha20070104-r60 798
+SHA256 79123c055a270aa623434f49462491c99236aeab6efd39afed4d0d14605894d3 files/digest-mysql-slotted-5.2.0_alpha20070104-r60 798
