@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.72_pre1.ebuild,v 1.2 2006/11/12 16:55:17 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.72_pre1.ebuild,v 1.3 2007/01/08 22:03:08 josejx Exp $
 
 inherit flag-o-matic eutils linux-mod toolchain-funcs
 
@@ -43,16 +43,6 @@ pkg_setup() {
 	echo
 
 	linux-mod_pkg_setup
-}
-
-src_unpack() {
-	unpack ${A}
-
-	cd ${S}
-	# PCI Debugging Patch
-	if use debug; then
-		epatch ${FILESDIR}/${PN}-pciproxy-dump.patch
-	fi
 }
 
 src_compile() {

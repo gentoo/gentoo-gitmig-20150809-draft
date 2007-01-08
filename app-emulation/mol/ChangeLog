@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/mol
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.67 2006/11/12 16:55:17 drizzt Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.68 2007/01/08 22:03:08 josejx Exp $
+
+  08 Jan 2007; Joseph Jezak <josejx@gentoo.org>
+  -files/mol-pciproxy-dump.patch, -mol-0.9.71.ebuild, mol-0.9.71.1.ebuild,
+  mol-0.9.72_pre1.ebuild:
+  Removed pci-proxy dump patch for bug #159544. Marked 0.9.71.1 stable.
 
   12 Nov 2006; Timothy Redaelli <drizzt@gentoo.org> mol-0.9.72_pre1.ebuild:
   Added tc-export CC to make it compile with distcc.

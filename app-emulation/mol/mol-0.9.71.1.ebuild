@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.71.1.ebuild,v 1.1 2006/10/28 19:54:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.71.1.ebuild,v 1.2 2007/01/08 22:03:08 josejx Exp $
 
 inherit flag-o-matic eutils linux-mod
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/mac-on-linux/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~ppc"
+KEYWORDS="-* ppc"
 IUSE="vnc alsa oss fbcon X oldworld sheep debug dga usb pci"
 
 MAKEOPTS="${MAKEOPTS} -j1"
@@ -43,16 +43,6 @@ pkg_setup() {
 	echo
 
 	linux-mod_pkg_setup
-}
-
-src_unpack() {
-	unpack ${A}
-
-	cd ${S}
-	# PCI Debugging Patch
-	if use debug; then
-		epatch ${FILESDIR}/${PN}-pciproxy-dump.patch
-	fi
 }
 
 src_compile() {
