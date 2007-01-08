@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.62 2007/01/08 23:04:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.63 2007/01/08 23:25:30 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -11,6 +11,9 @@
 # NB:  If you add anything, please comment it!
 
 inherit eutils libtool
+
+[[ -z ${WANT_AUTOCONF} ]] && WANT_AUTOCONF="latest"
+[[ -z ${WANT_AUTOMAKE} ]] && WANT_AUTOMAKE="latest"
 
 _automake_atom="sys-devel/automake"
 _autoconf_atom="sys-devel/autoconf"
