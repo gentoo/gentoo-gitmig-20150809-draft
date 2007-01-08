@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/resin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.32 2007/01/02 22:33:47 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.33 2007/01/08 22:44:55 nelchael Exp $
+
+  08 Jan 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  files/3.0.22/resin.init:
+  Fix init.d script for bug #149460 (empty GENTOO_VM).
 
   02 Jan 2007; Krzysiek Pawlik <nelchael@gentoo.org> files/3.1.0/resin.conf,
   files/3.1.0/resin.init:
