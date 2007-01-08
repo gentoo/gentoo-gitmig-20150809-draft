@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/qucs
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qucs/ChangeLog,v 1.10 2006/09/17 15:04:43 cryos Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qucs/ChangeLog,v 1.11 2007/01/08 00:44:34 kugelfang Exp $
+
+  08 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -qucs-0.0.9.ebuild:
+  QA: Removed unused versions.
 
 *qucs-0.0.10 (17 Sep 2006)
 
