@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0_rc17.ebuild,v 1.1 2007/01/07 19:48:38 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0_rc17.ebuild,v 1.2 2007/01/08 14:52:05 uberlord Exp $
 
-inherit autotools eutils
+inherit autotools eutils ssl-cert
 
 MY_P="${P/_/.}"
 S="${WORKDIR}/${MY_P}"
@@ -113,6 +113,22 @@ src_install () {
 		sed -i -e 's/^#listen = \*/listen = \[::\]/g' "${conf}" || die
 	fi
 
+	# Update ssl cert locations
+	if use ssl ; then
+		sed -i -e 's,^#ssl_cert_file =.*,#ssl_cert_file = /etc/ssl/dovecot/server.pem,' \
+			-e 's,^#ssl_key_file =.*,#ssl_key_file = /etc/ssl/dovecot/server.key,' \
+			"${conf}" || die
+
+		# Let's not make a new certificate if we already have one
+		if ! [[ -e "${ROOT}"/etc/ssl/dovecot/server.pem && \
+			-e "${ROOT}"/etc/ssl/dovecot/server.key ]]; then
+			SSL_ORGANIZATION="${SSL_ORGANIZATION:-Dovecot IMAP Server}"
+			insinto "${ROOT}"/etc/ssl/dovecot
+			docert server
+			fowners dovecot:mail /etc/ssl/dovecot/server.{key,pem}
+		fi
+	fi
+
 	# Install SQL configuration
 	if use mysql || use postgres ; then
 		cp doc/dovecot-sql.conf "${D}"/etc/dovecot
@@ -127,21 +143,6 @@ src_install () {
 		fperms 600 /etc/dovecot/dovecot-ldap.conf
 		sed -i -e '/db ldap/,/args/ s|=|= /etc/dovecot-ldap.conf|' "${conf}"
 		dodoc doc/dovecot-ldap.conf
-	fi
-
-	# Create SSL certificates
-	if use ssl ; then
-		dodir /etc/ssl/certs
-		dodir /etc/ssl/private
-		# Let's not make a new certificate if we already have one
-		if ! [[ -e /etc/ssl/certs/dovecot.pem && \
-			-e /etc/ssl/private/dovecot.pem ]]; then
-			einfo "Generating X.509 certificate for SSL"
-			pushd doc >/dev/null && \
-				SSLDIR="${D}"/etc/ssl sh mkcert.sh && \
-				popd >/dev/null
-		fi
-		dodoc doc/*.cnf doc/mkcert.sh
 	fi
 
 	# Install sieve plugin
@@ -163,6 +164,12 @@ get_config_var() {
 }
 
 pkg_postinst() {
+	# Touch ssl certs so that they are modified outisde of src_install
+	# We do this so portage does't unmerge them - silly portage
+	if use ssl ; then
+		touch "${ROOT}"/etc/ssl/dovecot/server.{key,pem}
+	fi
+
 	einfo "The dovecot configuration has vastly changed since 0.99."
 	einfo "You are encouraged to start afresh with a new configuration file."
 	einfo "see http://wiki.dovecot.org/ for configuration examples."
