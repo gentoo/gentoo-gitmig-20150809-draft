@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-extras
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.43 2006/10/26 20:37:54 dang Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.44 2007/01/08 04:47:38 leio Exp $
+
+  08 Jan 2007; Mart Raudsepp <leio@gentoo.org>
+  gnome-python-extras-2.14.0-r1.ebuild:
+  QA: Set WANT_AUTOCONF and WANT_AUTOMAKE when using autotools.eclass, bug 160529
 
   26 Oct 2006; Daniel Gryniewicz <dang@gentoo.org>
   -gnome-python-extras-2.14.0.ebuild:
