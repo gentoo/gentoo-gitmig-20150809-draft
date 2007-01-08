@@ -1,12 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/files/dbus.init-1.0,v 1.1 2006/11/19 17:32:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/files/dbus.init-1.0,v 1.2 2007/01/08 13:10:21 uberlord Exp $
 
 opts="reload"
 
 depend() {
-   after nscd dns
+	need localmount
+	after bootmisc nscd dns
 }
 
 start() {
