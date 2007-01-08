@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/blas-goto
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/ChangeLog,v 1.2 2006/11/22 15:11:30 dberkholz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/ChangeLog,v 1.3 2007/01/08 02:29:53 kugelfang Exp $
+
+  08 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -blas-goto-1.08.ebuild:
+  QA: Removed unused versions.
 
 *blas-goto-1.09 (22 Nov 2006)
 

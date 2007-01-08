@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cln
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.14 2006/09/30 23:55:56 wormo Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.15 2007/01/08 02:36:58 kugelfang Exp $
+
+  08 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -cln-1.1.6.ebuild:
+  QA: Removed unused versions.
 
   30 Sep 2006; Stephanie Lockwood-Childs <wormo@gentoo.org> cln-1.1.10.ebuild:
   stable on ppc (needed for Bug #141446)

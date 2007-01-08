@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cfitsio
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.10 2006/06/02 05:42:39 nerdboy Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.11 2007/01/08 02:36:35 kugelfang Exp $
+
+  08 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -cfitsio-2.490.ebuild,
+  -cfitsio-2.500.ebuild:
+  QA: Removed unused versions.
 
   02 Jun 2006; Steve Arnold <nerdboy@gentoo.org>
   files/cfitsio-3.006-configure.patch, cfitsio-2.510-r1.ebuild,
