@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r1.ebuild,v 1.5 2006/12/09 09:29:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r1.ebuild,v 1.6 2007/01/08 18:53:02 betelgeuse Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -176,6 +176,9 @@ src_compile() {
 
 	# The location of the main build.xml file
 	cd ${S}/nbbuild
+
+	# Fails to compile
+	java-pkg_filter-compiler ecj-3.1 ecj-3.2
 
 	# Specify the build-nozip target otherwise it will build
 	# a zip file of the netbeans folder, which will copy directly.
