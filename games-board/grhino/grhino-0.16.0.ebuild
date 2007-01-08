@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/grhino/grhino-0.16.0.ebuild,v 1.2 2007/01/08 07:16:16 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/grhino/grhino-0.16.0.ebuild,v 1.3 2007/01/08 17:55:34 tupone Exp $
 
 inherit eutils games
 
@@ -15,18 +15,15 @@ IUSE="gnome gtp"
 
 DEPEND="gnome? ( =gnome-base/libgnomeui-2* )"
 
-pkg_setup() {
-	if ! ( use gnome || use gtp ); then
-		die "Aborting build. You you have to specify gnome or gtp use flags"
-	fi
-	games_pkg_setup
-}
-
 src_compile() {
-	egamesconf \
-		$(use_enable gnome) \
-		$(use_enable gtp) \
-		|| die "egamesconf failed"
+	if use gnome || use gtp; then
+		egamesconf \
+			$(use_enable gnome) \
+			$(use_enable gtp) \
+			|| die "egamesconf failed"
+	else
+		egamesconf --enable-gtp || die "egamesconf failed"
+	fi
 	emake || die "emake failed"
 }
 
