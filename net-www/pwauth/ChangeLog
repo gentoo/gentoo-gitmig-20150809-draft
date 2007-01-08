@@ -1,6 +1,10 @@
 # ChangeLog for net-www/pwauth
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/pwauth/ChangeLog,v 1.8 2006/06/06 08:48:55 hollow Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/pwauth/ChangeLog,v 1.9 2007/01/08 15:33:56 flameeyes Exp $
+
+  08 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> pwauth-2.3.1-r2.ebuild,
+  pwauth-2.3.1-r3.ebuild:
+  Add inherit pam.
 
 *pwauth-2.3.1-r3 (06 Jun 2006)
 

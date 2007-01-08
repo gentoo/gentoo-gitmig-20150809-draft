@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/pwauth/pwauth-2.3.1-r3.ebuild,v 1.1 2006/06/06 08:48:55 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/pwauth/pwauth-2.3.1-r3.ebuild,v 1.2 2007/01/08 15:33:56 flameeyes Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs pam
 
 DESCRIPTION="A Unix Web Authenticator"
 HOMEPAGE="http://www.unixpapa.com/pwauth/"
