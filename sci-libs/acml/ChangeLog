@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/acml
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.16 2006/11/01 00:47:34 dberkholz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.17 2007/01/08 01:37:01 kugelfang Exp $
+
+  08 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -acml-2.5.0.ebuild,
+  -acml-2.7.0.ebuild, -acml-3.1.0.ebuild:
+  Removed obsolete versions.
 
   01 Nov 2006; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
   Update for my nick change spyderous -> dberkholz.
