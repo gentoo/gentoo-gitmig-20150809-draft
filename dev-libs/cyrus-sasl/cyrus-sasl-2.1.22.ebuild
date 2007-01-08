@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22.ebuild,v 1.21 2007/01/08 15:29:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22.ebuild,v 1.22 2007/01/08 20:56:09 tove Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.9"
@@ -72,17 +72,8 @@ src_unpack() {
 	sed -e '/define DEFAULT_REMOTE_SERVICE/s:imap:imap2:' \
 		-i saslauthd/auth_rimap.c || die "sed failed"
 
-	# Fixed upstream. Add openldap 2.3 compile patch - bug #113914
-	# epatch "${FILESDIR}/${PN}-2.1.21-configure.patch"
-
-	# Fixed upstream. Add configdir support.
-	# epatch "${FILESDIR}/${PN}-2.1.20-configdir.patch"
-
 	# Fix include path for newer PostgreSQL versions.
 	epatch "${FILESDIR}/${PN}-2.1.17-pgsql-include.patch"
-
-	# Fixed upstream. Fix for gcc-4.0
-	# epatch "${FILESDIR}/${PN}-2.1.20-gcc4.patch"
 
 	# UNSUPPORTED ntlm patch. Bug #81342
 	use ntlm_unsupported_patch && epatch "${DISTDIR}/${ntlm_patch}"
