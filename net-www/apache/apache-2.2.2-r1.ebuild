@@ -1,8 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.2-r1.ebuild,v 1.1 2006/07/28 12:35:24 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.2-r1.ebuild,v 1.2 2007/01/08 23:28:41 phreak Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib autotools
+
+WANT_AUTOCONF="2.5"
 
 # latest gentoo apache files
 GENTOO_PATCHNAME="gentoo-apache-${PVR}"

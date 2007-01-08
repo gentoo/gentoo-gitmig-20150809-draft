@@ -1,6 +1,10 @@
 # ChangeLog for net-www/apache
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.503 2006/11/27 02:45:56 vericgar Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.504 2007/01/08 23:28:41 phreak Exp $
+
+  08 Jan 2007; Christian Heim <phreak@gentoo.org> apache-2.2.2-r1.ebuild,
+  apache-2.2.3.ebuild, apache-2.2.3-r1.ebuild:
+  Fixing IUSE (#161029) and WANT_AUTOCONF (#161027) for apache-2.2.
 
 *apache-2.2.3-r1 (27 Nov 2006)
 

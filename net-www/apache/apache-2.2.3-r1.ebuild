@@ -1,8 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.3-r1.ebuild,v 1.2 2006/11/28 03:35:16 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.3-r1.ebuild,v 1.3 2007/01/08 23:28:41 phreak Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib autotools
+
+WANT_AUTOCONF="2.5"
 
 # latest gentoo apache files
 GENTOO_PATCHNAME="gentoo-apache-${PVR}"
@@ -20,8 +22,7 @@ LICENSE="Apache-2.0 Apache-1.1"
 
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="debug doc ldap mpm-event mpm-peruser mpm-prefork mpm-worker no-suexec
-selinux srvdir ssl static-modules no-suexec"
+IUSE="debug doc ldap mpm-event mpm-peruser mpm-prefork mpm-worker no-suexec selinux srvdir ssl static-modules no-suexec threads"
 
 RDEPEND="dev-lang/perl
 	>=dev-libs/apr-1.2.7
