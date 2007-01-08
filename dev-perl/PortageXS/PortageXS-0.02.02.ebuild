@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/PortageXS-0.02.02.ebuild,v 1.1 2006/11/17 22:59:34 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/PortageXS-0.02.02.ebuild,v 1.2 2007/01/08 17:20:37 mcummings Exp $
 
 inherit perl-module
 DESCRIPTION="Portage abstraction layer for perl"
@@ -9,7 +9,7 @@ SRC_URI="http://download.iansview.com/gentoo/tools/PortageXS/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~hppa ~ppc ~x86"
+KEYWORDS="amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE=""
 SRC_TEST="do"
 
