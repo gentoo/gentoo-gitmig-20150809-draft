@@ -1,0 +1,25 @@
+Common subdirectories: pwc-v4l2-20061023-042702/.tmp_versions and pwc-fixed/.tmp_versions
+diff -u pwc-v4l2-20061023-042702/pwc-uncompress.h pwc-fixed/pwc-uncompress.h
+--- pwc-v4l2-20061023-042702/pwc-uncompress.h	2006-01-07 12:57:47.000000000 +0100
++++ pwc-fixed/pwc-uncompress.h	2007-01-02 17:34:31.000000000 +0100
+@@ -30,7 +30,7 @@
+ #ifndef PWC_UNCOMPRESS_H
+ #define PWC_UNCOMPRESS_H
+ 
+-#include <linux/config.h>
++#include <linux/autoconf.h>
+ 
+ #include "pwc-ioctl.h"
+ 
+diff -u pwc-v4l2-20061023-042702/pwc.h pwc-fixed/pwc.h
+--- pwc-v4l2-20061023-042702/pwc.h	2006-09-25 21:56:26.000000000 +0200
++++ pwc-fixed/pwc.h	2007-01-02 17:34:53.000000000 +0100
+@@ -25,7 +25,7 @@
+ #ifndef PWC_H
+ #define PWC_H
+ 
+-#include <linux/config.h>
++#include <linux/autoconf.h>
+ #include <linux/module.h>
+ #include <linux/usb.h>
+ #include <linux/spinlock.h>
