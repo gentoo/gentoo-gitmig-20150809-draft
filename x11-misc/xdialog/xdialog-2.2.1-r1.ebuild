@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdialog/xdialog-2.2.1-r1.ebuild,v 1.2 2007/01/03 03:05:00 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdialog/xdialog-2.2.1-r1.ebuild,v 1.3 2007/01/08 21:22:22 nelchael Exp $
 
 DESCRIPTION="drop-in replacement for cdialog using GTK"
 HOMEPAGE="http://xdialog.dyns.net/"
@@ -13,6 +13,7 @@ IUSE="nls"
 
 DEPEND=">=x11-libs/gtk+-2.2
 	nls? ( >=sys-devel/gettext-0.10.38 )"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${P/x/X}"
 
