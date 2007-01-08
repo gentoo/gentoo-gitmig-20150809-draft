@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ipw3945-1.1.3-r2.ebuild,v 1.1 2007/01/08 20:33:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ipw3945-1.1.3-r2.ebuild,v 1.2 2007/01/08 20:35:35 robbat2 Exp $
 
 inherit linux-mod eutils
 
@@ -41,6 +41,10 @@ pkg_setup() {
 
 	if kernel_is 2 4; then
 		die "${P} does not support building against kernel 2.4.x"
+	fi
+	if kernel_is lt 2 6 19; then
+		die "${P} needs a kernel >=2.6.19! Please set your \
+			KERNEL_DIR or /usr/src/linux suitably"
 	fi
 
 	BUILD_PARAMS="KSRC=${KV_DIR} KSRC_OUTPUT=${KV_OUT_DIR}"
