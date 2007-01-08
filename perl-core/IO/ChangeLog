@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/IO
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/IO/ChangeLog,v 1.2 2006/11/07 06:30:45 opfer Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/IO/ChangeLog,v 1.3 2007/01/08 16:46:48 mcummings Exp $
+
+  08 Jan 2007; Michael Cummings <mcummings@gentoo.org> IO-1.23.01.ebuild:
+  Marking amd64 stable
 
   07 Nov 2006; Christian Faulhammer <opfer@gentoo.org> IO-1.23.01.ebuild:
   keyworded ~x86, bug #154253
