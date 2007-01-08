@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-biggles/python-biggles-1.6.4.ebuild,v 1.3 2006/04/01 18:54:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-biggles/python-biggles-1.6.4.ebuild,v 1.4 2007/01/08 17:20:20 peper Exp $
 
 inherit distutils
 
@@ -16,7 +16,7 @@ DEPEND="~media-libs/plotutils-2.4.1
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~ia64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~x86"
 LICENSE="GPL-2"
 
 src_install() {
