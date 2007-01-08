@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/libgeda-20060906.ebuild,v 1.1 2006/09/30 11:51:11 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/libgeda-20060906.ebuild,v 1.2 2007/01/08 00:42:27 kugelfang Exp $
 
 HOMEPAGE="http://www.geda.seul.org"
 DESCRIPTION="libgeda - this library provides functions needed for the gEDA core suite"
@@ -33,7 +33,7 @@ src_compile() {
 	econf \
 		${myconf} \
 		--disable-gdgeda \
-		disable-dependency-tracking \
+		--disable-dependency-tracking \
 		|| die "Configuration failed"
 
 	emake || die "Compilation failed"
