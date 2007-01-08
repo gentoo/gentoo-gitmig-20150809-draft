@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/dnetc
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.37 2006/07/15 13:35:08 kloeri Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.38 2007/01/08 05:22:11 voxus Exp $
+
+*dnetc-2.9011.498 (08 Jan 2007)
+
+  08 Jan 2007; Konstantin V. Arkhipov <voxus@gentoo.org>
+  -dnetc-2.9011.497.ebuild, -dnetc-2.9011.497-r1.ebuild,
+  +dnetc-2.9011.498.ebuild:
+  Version bump, closing bugs #146601 and #150039.
 
   15 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove aliz from metadata.xml as he's retired.
