@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.9.ebuild,v 1.6 2006/12/29 19:15:01 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.9.ebuild,v 1.7 2007/01/08 01:24:09 kloeri Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.mozilla.org/projects/thunderbird/"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/source/thunderbird-${PV}-source.tar.bz2
 	mirror://gentoo/${PATCH}.tar.bz2"
 
-KEYWORDS="~alpha amd64 ~ia64 ~mips ppc sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~ia64 ~mips ppc sparc x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 IUSE="ldap crypt"
@@ -94,6 +94,11 @@ src_unpack() {
 	# Apply our patches
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
+
+	if use alpha; then
+		EPATCH_EXCLUDE="002_firefox-1.5-visibility-check.patch 009_firefox-1.5-no-textrels.patch"
+	fi
+
 	epatch ${WORKDIR}/patch
 
 	# Fix a compilation issue using the 32-bit userland with 64-bit kernel on
@@ -130,6 +135,10 @@ src_compile() {
 	mozconfig_annotate '' --with-system-nspr
 	mozconfig_annotate '' --with-system-nss
 	mozconfig_annotate '' --enable-official-branding
+
+	if use alpha; then
+		echo "ac_cv_visibility_pragma=no" >>  "${S}/.mozconfig"
+	fi
 
 	# Finalize and report settings
 	mozconfig_final
