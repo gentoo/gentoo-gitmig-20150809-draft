@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/monotone
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.33 2007/01/07 19:41:43 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.34 2007/01/08 16:43:28 opfer Exp $
+
+  08 Jan 2007; Christian Faulhammer <opfer@gentoo.org> monotone-0.29.ebuild:
+  stable x86, bug #159152
 
   07 Jan 2007; Daniel Black <dragonheart@gentoo.org> monotone-0.29.ebuild,
   monotone-0.32.ebuild:
