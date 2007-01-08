@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.599 2007/01/08 03:05:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.600 2007/01/08 04:47:09 vapier Exp $
+
+  08 Jan 2007; Mike Frysinger <vapier@gentoo.org> gcc-4.1.1-r1.ebuild,
+  gcc-4.1.1-r3.ebuild:
+  Force binutils-2.17+ to make sure the assembler supports secureplt #160709.
 
   08 Jan 2007; Jeroen Roovers <jer@gentoo.org> gcc-4.1.1-r3.ebuild:
   Stable for HPPA (bug #160663).
