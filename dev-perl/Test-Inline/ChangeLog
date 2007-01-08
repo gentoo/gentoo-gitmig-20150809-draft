@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Inline
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/ChangeLog,v 1.41 2007/01/08 16:52:11 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/ChangeLog,v 1.42 2007/01/08 16:53:10 mcummings Exp $
+
+  08 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  Test-Inline-2.105.ebuild:
+  marking sparc stable
 
   08 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   Test-Inline-2.105.ebuild:

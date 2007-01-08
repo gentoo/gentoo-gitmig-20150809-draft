@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Tree-Simple
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tree-Simple/ChangeLog,v 1.21 2007/01/08 16:56:08 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tree-Simple/ChangeLog,v 1.22 2007/01/08 16:56:40 mcummings Exp $
+
+  08 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  Tree-Simple-1.17.ebuild:
+  marking sparc stable
 
   08 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   Tree-Simple-1.17.ebuild:
