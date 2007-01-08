@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-docklet/audacious-docklet-0.1.1-r1.ebuild,v 1.6 2006/12/22 07:35:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-docklet/audacious-docklet-0.1.1-r1.ebuild,v 1.7 2007/01/08 19:11:56 gustavoz Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://nedudu.hu/downloads/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc x86"
+KEYWORDS="alpha amd64 ppc ~sparc x86"
 IUSE="nls"
 
 RDEPEND=">=media-sound/audacious-0.2"
