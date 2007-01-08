@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.45 2007/01/07 20:00:54 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.46 2007/01/08 13:08:49 gustavoz Exp $
+
+  08 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> eselect-1.0.7.ebuild:
+  Stable on sparc wrt #160535
 
   07 Jan 2007; Mike Kelly <pioto@gentoo.org> eselect-1.0.7.ebuild:
   Mark ~amd64 again, since we need to stable a few other things first. See Bug
