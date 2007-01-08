@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.33 2007/01/06 13:32:36 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.34 2007/01/08 18:59:29 aballier Exp $
+
+  08 Jan 2007; Alexis Ballier <aballier@gentoo.org> -gpac-0.2.1.ebuild:
+  Remove very old version
 
   06 Jan 2007; Timothy Redaelli <drizzt@gentoo.org> gpac-0.4.2-r1.ebuild:
   Add ~x86-fbsd keyword wrt bug 159240
