@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/aiccu
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.10 2007/01/08 18:15:42 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.11 2007/01/08 21:47:09 gmsoft Exp $
+
+*aiccu-2007.01.07 (08 Jan 2007)
+
+  08 Jan 2007; Guy Martin <gmsoft@gentoo.org> +aiccu-2007.01.07.ebuild:
+  Yet another version bump :)
 
 *aiccu-2006.07.25 (08 Jan 2007)
 
