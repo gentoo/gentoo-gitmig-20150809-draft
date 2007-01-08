@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-mmap
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-mmap/ChangeLog,v 1.8 2005/10/06 13:14:33 caleb Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-mmap/ChangeLog,v 1.9 2007/01/08 21:44:26 twp Exp $
+
+*ruby-mmap-0.2.6 (08 Jan 2007)
+
+  08 Jan 2007; <twp@gentoo.org> +ruby-mmap-0.2.6.ebuild:
+  Version bump.
 
   06 Oct 2005; Caleb Tennis <caleb@gentoo.org> ruby-mmap-0.2.2.ebuild,
   ruby-mmap-0.2.4.ebuild:
