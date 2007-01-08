@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.11-r3.ebuild,v 1.6 2007/01/06 15:48:36 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.11-r3.ebuild,v 1.7 2007/01/08 18:42:49 welp Exp $
 
 inherit multilib python eutils
 
@@ -19,10 +19,17 @@ DEPEND="dev-python/pysqlite
 	dev-util/intltool
 	dev-util/pkgconfig"
 
-RDEPEND="gnome? ( dev-python/gnome-python-extras dev-python/gnome-python-desktop )
-	dbus? ( ||
-		( ( >=sys-apps/dbus-0.90 dev-python/dbus-python dev-libs/dbus-glib )
-		( <sys-apps/dbus-0.90 ) )
+RDEPEND="gnome? ( dev-python/gnome-python-extras
+		dev-python/gnome-python-desktop
+	)
+	dbus? (
+		|| (
+			( >=sys-apps/dbus-0.90
+				dev-python/dbus-python
+				dev-libs/dbus-glib
+			)
+			( <sys-apps/dbus-0.90 )
+		)
 	)
 	libnotify? ( x11-libs/libnotify )
 	xhtml? ( dev-python/docutils )
@@ -59,6 +66,7 @@ pkg_setup() {
 
 src_compile() {
 	local myconf
+
 	if ! use gnome; then
 		myconf="${myconf} $(use_enable trayicon)"
 		myconf="${myconf} $(use_enable idle)"
@@ -68,18 +76,25 @@ src_compile() {
 		$(use_enable spell gtkspell) \
 		$(use_enable dbus remote) \
 		$(use_with X x) \
+		--docdir="/usr/share/doc/${PF}" \
+		--prefix="/usr" \
+		--libdir="/usr/$(get_libdir)" \
 		${myconf} || die "econf failed"
+
+	emake || die "emake failed"
 }
 
 src_install() {
-	emake PREFIX=/usr DESTDIR="${D}" LIBDIR="/usr/$(get_libdir)" install || \
-		die "emake install failed"
-	dodoc README NEWS AUTHORS ChangeLog THANKS
+	emake DESTDIR="${D}" install || die "emake install failed"
+
+	rm "${D}/usr/share/doc/${PF}/README.html"
+	dohtml README.html
 }
 
 pkg_postinst() {
 	python_mod_optimize /usr/share/gajim/
 }
+
 pkg_postrm() {
 	python_mod_cleanup /usr/share/gajim/
 }
