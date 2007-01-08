@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22-r1.ebuild,v 1.12 2006/12/10 15:44:32 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22-r1.ebuild,v 1.13 2007/01/08 15:29:46 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.7"
 
-inherit eutils flag-o-matic java-pkg multilib autotools
+inherit eutils flag-o-matic java-pkg multilib autotools pam
 
 ntlm_patch=${P}-ntlm_impl-spnego.patch.gz
 SASLAUTHD_CONF_VER=2.1.21
