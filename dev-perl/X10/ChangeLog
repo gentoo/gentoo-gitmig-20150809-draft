@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/X10
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/X10/ChangeLog,v 1.6 2006/09/17 00:10:44 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X10/ChangeLog,v 1.7 2007/01/08 17:23:39 mcummings Exp $
+
+  08 Jan 2007; Michael Cummings <mcummings@gentoo.org> X10-0.03.ebuild:
+  marking amd64 stable
 
   17 Sep 2006; Michael Cummings <mcummings@gentoo.org> X10-0.03.ebuild:
   Keywording ~amd64
