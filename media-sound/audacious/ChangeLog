@@ -1,13 +1,19 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.99 2007/01/07 22:22:14 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.100 2007/01/08 00:32:40 chainsaw Exp $
+
+*audacious-1.3.0_alpha2 (08 Jan 2007)
+
+  08 Jan 2007; Tony Vroon <chainsaw@gentoo.org>
+  +audacious-1.3.0_alpha2.ebuild:
+  Adding masked alpha2 build. No support offered, report bugs upstream only.
 
   07 Jan 2007; Tony Vroon <chainsaw@gentoo.org>
   -files/1.3.0_alpha1-avoid-decoder-selection-deadlock.patch,
   -audacious-1.1.0.ebuild, -audacious-1.1.1.ebuild,
   -audacious-1.1.1-r1.ebuild, -audacious-1.3.0_alpha1-r1.ebuild:
-  Developer releases are not appreciated by the community. Use an overlay if
-  you want them. Closes bug #160761. Also clean up old ebuilds.
+  Developer releases are not appreciated by the community. Closes bug #160761.
+  Also, clean up old ebuilds.
 
 *audacious-1.3.0_alpha1-r1 (06 Jan 2007)
 
