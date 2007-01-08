@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.64 2007/01/07 15:15:27 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.65 2007/01/08 09:12:45 vivo Exp $
 # kate: encoding utf-8; eol unix;
 # kate: indent-width 4; mixedindent off; remove-trailing-space on; space-indent off;
 # kate: word-wrap-column 80; word-wrap off;
@@ -20,7 +20,7 @@ inherit eutils flag-o-matic gnuconfig autotools mysql_fx
 # and we will run a mysql server during test phase
 S="${WORKDIR}/mysql"
 
-[[ "${MY_EXTRAS_VER}" == "latest" ]] && MY_EXTRAS_VER="20070105"
+[[ "${MY_EXTRAS_VER}" == "latest" ]] && MY_EXTRAS_VER="20070108"
 
 if [[ ${PR#r} -lt 60 ]] ; then
 	IS_BITKEEPER=0
