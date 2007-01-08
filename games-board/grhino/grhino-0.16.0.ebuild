@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/grhino/grhino-0.16.0.ebuild,v 1.1 2007/01/08 07:08:44 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/grhino/grhino-0.16.0.ebuild,v 1.2 2007/01/08 07:16:16 tupone Exp $
 
 inherit eutils games
 
@@ -31,13 +31,9 @@ src_compile() {
 }
 
 src_install() {
-	use gnome && dogamesbin ${PN} \
-		|| die "installing the binary failed"
-	use gtp && dogamesbin gtp-rhino \
-		|| die "installing the binary failed"
-	make install DESTDIR=${D}
+	make install DESTDIR=${D} || die "make install failed"
 
-	dodoc ChangeLog NEWS README TODO
+	dodoc ChangeLog NEWS README TODO || die "installing docs failed"
 
 	doicon ${PN}.png
 	make_desktop_entry ${PN} "GRhino" ${PN}.png
