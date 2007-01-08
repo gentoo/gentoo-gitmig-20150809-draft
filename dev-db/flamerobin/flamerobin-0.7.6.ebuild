@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/flamerobin-0.7.6.ebuild,v 1.1 2006/11/22 18:49:49 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/flamerobin-0.7.6.ebuild,v 1.2 2007/01/08 18:13:08 opfer Exp $
 
 inherit eutils wxwidgets
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.gz"
 
 LICENSE="BSD as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="doc"
 
 RDEPEND=">=x11-libs/wxGTK-2.6.0
