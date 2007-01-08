@@ -1,9 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.12.3.ebuild,v 1.6 2006/12/21 12:28:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.12.3.ebuild,v 1.7 2007/01/08 05:30:54 leio Exp $
 
+WANT_AUTOCONF=latest
 WANT_AUTOMAKE=1.8
-
 inherit gnome2 python eutils autotools
 
 DESCRIPTION="GNOME 2 bindings for Python"
