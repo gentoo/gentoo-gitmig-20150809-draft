@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.5.1-r5.ebuild,v 1.5 2006/11/23 18:49:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.5.1-r5.ebuild,v 1.6 2007/01/08 10:59:40 caster Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -36,6 +36,7 @@ src_unpack() {
 }
 
 src_compile() {
+	java-pkg_filter-compiler jikes
 	ANT_OPTS=-Xmx256m eant jars all-jar
 }
 

@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/batik
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.42 2006/11/29 00:00:42 nichoj Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.43 2007/01/08 10:59:40 caster Exp $
+
+*batik-1.6-r3 (08 Jan 2007)
+
+  08 Jan 2007; Vlastimil Babka <caster@gentoo.org>
+  +files/batik-1.6-dont-copy-deps.patch, batik-1.5.1-r5.ebuild,
+  +batik-1.6-r3.ebuild:
+  Fix javadoc install location wrt bug #160835 by Alistair Bush
+  <alistair.bush@gmail.com>. Don't install xdocs, we will need stylebook to
+  transform them to html first. Prevents copying jython.jar into own lib dir.
 
   29 Nov 2006; Joshua Nichols <nichoj@gentoo.org> batik-1.5-r1.ebuild:
   Added ~ia64.
