@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/manedit-0.7.1.ebuild,v 1.2 2007/01/07 19:06:31 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/manedit-0.7.1.ebuild,v 1.3 2007/01/08 18:32:47 gustavoz Exp $
 
 DESCRIPTION="Man page editor using XML tags"
 HOMEPAGE="http://wolfpack.twu.net/ManEdit/"
@@ -8,7 +8,7 @@ SRC_URI="ftp://wolfpack.twu.net/users/wolfpack/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~sparc ~x86"
+KEYWORDS="~amd64 ppc sparc ~x86"
 IUSE=""
 
 RDEPEND="=x11-libs/gtk+-1*
