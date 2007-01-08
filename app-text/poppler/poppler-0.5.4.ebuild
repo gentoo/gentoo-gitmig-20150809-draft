@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.4.ebuild,v 1.9 2007/01/07 12:00:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.4.ebuild,v 1.10 2007/01/08 07:09:05 vapier Exp $
 
-inherit flag-o-matic eutils libtool
+inherit libtool
 
 DESCRIPTION="PDF rendering library based on the xpdf-3.0 code base"
 HOMEPAGE="http://poppler.freedesktop.org/"
@@ -28,10 +28,8 @@ src_unpack() {
 }
 
 src_compile() {
-	# -Os is broken, see bug 124179
-	replace-flags -Os -O2
-
-	econf --disable-poppler-qt4 \
+	econf \
+		--disable-poppler-qt4 \
 		--disable-poppler-glib \
 		--disable-poppler-qt \
 		--disable-gtk-test \
