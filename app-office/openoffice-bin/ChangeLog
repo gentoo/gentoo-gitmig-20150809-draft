@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.151 2007/01/07 05:12:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.152 2007/01/08 12:38:33 suka Exp $
+
+  08 Jan 2007; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-bin-2.1.0.ebuild:
+  Upstream changed location of the langpacks without any notice or reasoning.
+  Fixing, closes bug #160853
 
   07 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   openoffice-bin-2.1.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.1.0.ebuild,v 1.4 2007/01/07 05:12:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.1.0.ebuild,v 1.5 2007/01/08 12:38:33 suka Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://openoffice/stable/${PV}/OOo_${PV}_LinuxIntel_install_en-US.tar
 LANGS1="af as_IN be_BY bg bs ca cs cy da de el en en_GB"
 
 for X in ${LANGS1} ; do
-	[ ${X} != "en" ] && SRC_URI="${SRC_URI} linguas_${X}? ( http://oootranslation.services.openoffice.org/pub/OpenOffice.org/${MY_PV}/OOo_${MY_PV1}_LinuxIntel_langpack_${X/_/-}.tar.gz )"
+	[ ${X} != "en" ] && SRC_URI="${SRC_URI} linguas_${X}? ( http://rsync.services.openoffice.org/pub/OpenOffice.org/extended/${MY_PV}/OOo_${MY_PV1}_LinuxIntel_langpack_${X/_/-}.tar.gz )"
 	IUSE="${IUSE} linguas_${X}"
 done
 
