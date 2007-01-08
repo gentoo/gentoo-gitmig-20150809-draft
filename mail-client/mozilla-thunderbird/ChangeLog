@@ -1,17 +1,32 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.162 2007/01/08 16:23:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.163 2007/01/08 16:31:25 armin76 Exp $
 
-  08 Jan 2007; Raúl Porcel <armin76@gentoo.org> -mozilla-thunderbird-1.0.7.ebuild,
+  08 Jan 2007; Raúl Porcel (armin76) <armin76@gentoo.org>
+  -files/mozilla-thunderbird-1.0.6-gcc4.patch,
+  -files/mozilla-thunderbird-1.0.7-draft-template.patch,
+  -files/mozilla-thunderbird-1.0.7-gcc-4.0.2.patch,
+  -files/mozilla-thunderbird-1.0.8-gcc-4.patch,
+  -files/firefox-1.1-uriloader.patch, -files/firefox-1.1-uriloader-1.patch,
+  -files/firefox-1.1-visibility.patch,
+  -files/firefox-1.5-visibility-check.patch,
+  -files/firefox-1.5-visibility-fix.patch, -files/pango-cairo-1.patch,
+  -files/thunderbird-rpath-1.patch, -files/firefox-bus-error.patch,
+  -files/mozilla-alpha-xpcom-subs-fix.patch,
+  -files/thunderbird-cairo-canvas.patch,
+  -files/thunderbird-nopangoxft.patch:
+  remove patches unneeded
+
+  08 Jan 2007; RaÃºl Porcel <armin76@gentoo.org> -mozilla-thunderbird-1.0.7.ebuild,
   -mozilla-thunderbird-1.5.0.4.ebuild, -mozilla-thunderbird-1.5.0.5.ebuild,
   -mozilla-thunderbird-1.5.0.7.ebuild:
   remove old
 
-  08 Jan 2007; Bryan Ãstergaard <kloeri@gentoo.org>
+  08 Jan 2007; Bryan ÃÂstergaard <kloeri@gentoo.org>
   mozilla-thunderbird-1.5.0.9.ebuild:
   Fix visibility issue on ia64 and mark stable.
 
-  08 Jan 2007; Bryan Ãstergaard <kloeri@gentoo.org>
+  08 Jan 2007; Bryan ÃÂstergaard <kloeri@gentoo.org>
   mozilla-thunderbird-1.5.0.9.ebuild:
   Add Alpha patch and stable on Alpha, bug 158571.
 
@@ -48,26 +63,26 @@
   19 Dec 2006; Stefan Schweizer <genstef@gentoo.org> mozilla-thunderbird-1.5.0.9.ebuild: 
   version bump thanks anarchy
 
-  10 Dec 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  10 Dec 2006; Bryan ÃÂstergaard <kloeri@gentoo.org>
   -mozilla-thunderbird-2.0_alpha1.ebuild,
   -mozilla-thunderbird-2.0_alpha1-r1.ebuild:
   Punt 2.0_alpha versions.
 
 *mozilla-thunderbird-2.0_beta1 (10 Dec 2006)
 
-  10 Dec 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  10 Dec 2006; Bryan ÃÂstergaard <kloeri@gentoo.org>
   +mozilla-thunderbird-2.0_beta1.ebuild:
   Add thunderbird-2.0 beta.
 
-  09 Dec 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  09 Dec 2006; Bryan ÃÂstergaard <kloeri@gentoo.org>
   mozilla-thunderbird-1.5.0.8.ebuild:
   Stable on ia64.
 
-  12 Nov 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  12 Nov 2006; Bryan ÃÂstergaard <kloeri@gentoo.org>
   mozilla-thunderbird-1.5.0.8.ebuild:
   Add ~alpha keyword.
 
-  11 Nov 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  11 Nov 2006; Bryan ÃÂstergaard <kloeri@gentoo.org>
   mozilla-thunderbird-1.5.0.7.ebuild, mozilla-thunderbird-1.5.0.8.ebuild,
   mozilla-thunderbird-2.0_alpha1.ebuild,
   mozilla-thunderbird-2.0_alpha1-r1.ebuild:
@@ -91,24 +106,24 @@
 
 *mozilla-thunderbird-2.0_alpha1-r1 (09 Nov 2006)
 
-  09 Nov 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  09 Nov 2006; Bryan ÃÂstergaard <kloeri@gentoo.org>
   +mozilla-thunderbird-2.0_alpha1-r1.ebuild:
   Add replytolist plugin support. Thanks goes to Jory A.
 
 *mozilla-thunderbird-1.5.0.8 (09 Nov 2006)
 
-  09 Nov 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  09 Nov 2006; Bryan ÃÂstergaard <kloeri@gentoo.org>
   +mozilla-thunderbird-1.5.0.8.ebuild,
   mozilla-thunderbird-2.0_alpha1.ebuild:
   Version bump, bug 154448.
 
 *mozilla-thunderbird-2.0_alpha1 (23 Oct 2006)
 
-  23 Oct 2006; Piotr JaroszyÅski <peper@gentoo.org>
+  23 Oct 2006; Piotr JaroszyÃÂski <peper@gentoo.org>
   +mozilla-thunderbird-2.0_alpha1.ebuild:
   New version from anarchy.
 
-  10 Oct 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  10 Oct 2006; Bryan ÃÂstergaard <kloeri@gentoo.org>
   mozilla-thunderbird-1.5.0.7.ebuild:
   Stable on ia64.
 
@@ -143,11 +158,11 @@
   +mozilla-thunderbird-1.5.0.7.ebuild:
   New Thunderbird release
 
-  05 Sep 2006; Diego PettenÃ² <flameeyes@gentoo.org>
+  05 Sep 2006; Diego PettenÃÂ² <flameeyes@gentoo.org>
   mozilla-thunderbird-1.5.0.5.ebuild:
   Add ~x86-fbsd keyword.
 
-  03 Sep 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  03 Sep 2006; Bryan ÃÂstergaard <kloeri@gentoo.org>
   mozilla-thunderbird-1.5.0.5.ebuild:
   Stable on ia64.
 
@@ -173,7 +188,7 @@
 
 *mozilla-thunderbird-1.5.0.5 (28 Jul 2006)
 
-  28 Jul 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  28 Jul 2006; Bryan ÃÂstergaard <kloeri@gentoo.org>
   +mozilla-thunderbird-1.5.0.5.ebuild:
   Version bump, bug 141842.
 
@@ -186,7 +201,7 @@
   generate new patchballs. Oh, and add unstable mips to keywords for a few
   days.
 
-  20 Jul 2006; Diego PettenÃ² <flameeyes@gentoo.org>
+  20 Jul 2006; Diego PettenÃÂ² <flameeyes@gentoo.org>
   mozilla-thunderbird-1.5.0.4.ebuild:
   Fix installation on non-GNU systems (bug #138157) and add ~x86-fbsd keyword.
 
@@ -478,7 +493,7 @@
   mozilla-thunderbird-1.0.5.ebuild:
   Marked stable wrt Security BUG #98855.
 
-  16 Jul 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  16 Jul 2005; Bryan ÃÂstergaard <kloeri@gentoo.org>
   mozilla-thunderbird-1.0.5.ebuild:
   Stable on alpha + ia64, bug 98855.
 
@@ -601,7 +616,7 @@
   mozilla-thunderbird-1.0.ebuild:
   Tested and marked ppc stable for bug #68976.
 
-  21 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  21 Dec 2004; Bryan ÃÂstergaard <kloeri@gentoo.org>
   mozilla-thunderbird-1.0.ebuild:
   Stable on alpha, bug 68976.
 
