@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/maestro/maestro-2004.ebuild,v 1.2 2005/09/20 03:10:34 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/maestro/maestro-2004.ebuild,v 1.3 2007/01/09 15:41:53 caster Exp $
 
 DESCRIPTION="Maestro is a public release software package that NASA scientists use to operate the Spirit and Opportunity Rovers."
 SRC_URI="http://freecache.org/http://mars9.telascience.org:81/softwaredownload/Maestro-Linux.tar.gz"
@@ -34,10 +34,10 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Dataset updates can be found online at:"
-	einfo "     http://mars.telascience.org/update"
-	einfo
-	einfo "To run maestro, simply type: maestro"
-	einfo
+	elog
+	elog "Dataset updates can be found online at:"
+	elog "     http://mars.telascience.org/update"
+	elog
+	elog "To run maestro, simply type: maestro"
+	elog
 }
