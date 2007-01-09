@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/ecb
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.26 2006/08/13 08:38:10 grobian Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.27 2007/01/09 12:28:35 opfer Exp $
+
+  09 Jan 2007; Christian Faulhammer <opfer@gentoo.org> -ecb-2.21.ebuild,
+  -ecb-2.24.ebuild, -ecb-2.27.ebuild, -ecb-2.31.ebuild, -ecb-2.32.ebuild:
+  clean up
 
   13 Aug 2006; Fabian Groffen <grobian@gentoo.org> ecb-2.32-r1.ebuild:
   Marked ~ppc-macos (bug #103166)
