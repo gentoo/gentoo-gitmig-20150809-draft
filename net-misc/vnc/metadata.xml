@@ -3,11 +3,9 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>vapier@gentoo.org</email>
-  <description>proxy maintainer for peeps</description>
+  <email>armin76@gentoo.org</email>
 </maintainer>
 <maintainer>
-  <email>armin76@gmail.com</email>
-  <name>Raúl Porcel</name>
+  <email>vapier@gentoo.org</email>
 </maintainer>
 </pkgmetadata>
