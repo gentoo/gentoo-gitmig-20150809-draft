@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.8-r12.ebuild,v 1.2 2005/11/29 04:23:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.8-r12.ebuild,v 1.3 2007/01/09 12:12:59 pva Exp $
 
 inherit eutils flag-o-matic
 
@@ -19,7 +19,7 @@ RDEPEND="virtual/mta"
 
 pkg_setup() {
 	enewgroup at 25
-	enewuser at 25 -1 /var/spool/cron/atjobs at
+	enewuser at 25 -1 /var/spool/at/atjobs at
 }
 
 src_unpack() {
