@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.266 2007/01/04 22:14:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.267 2007/01/09 15:47:47 vapier Exp $
 #
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
@@ -1538,7 +1538,7 @@ set_arch_to_portage() {
 # by using the portage SLOT mechanism, but that is not always a relevant
 # solution, so instead you can add the following to your ebuilds:
 #
-# src_install() {
+# pkg_preinst() {
 # ...
 # preserve_old_lib /usr/$(get_libdir)/libogg.so.0
 # ...
@@ -1551,33 +1551,42 @@ set_arch_to_portage() {
 # }
 
 preserve_old_lib() {
-	LIB=$1
-
-	if [ -n "${LIB}" -a -f "${ROOT}${LIB}" ]; then
-		SONAME=`basename ${LIB}`
-		DIRNAME=`dirname ${LIB}`
-
-		dodir ${DIRNAME}
-		cp ${ROOT}${LIB} ${D}${DIRNAME}
-		touch ${D}${LIB}
+	if [[ ${EBUILD_PHASE} != "pkg_preinst" ]] ; then
+		eerror "preserve_old_lib() must be called from pkg_preinst() only"
+#		die "Invalid preserve_old_lib() usage"
 	fi
+	[[ -z $1 ]] && die "Usage: preserve_old_lib <library to preserve> [more libraries to preserve]"
+
+	local lib dir
+	for lib in "$@" ; do
+		[[ -e ${ROOT}/${lib} ]] || continue
+		dir=${lib%/*}
+		dodir ${dir} || die "dodir ${dir} failed"
+		cp "${ROOT}"/${lib} "${D}"/${lib} || die "cp ${lib} failed"
+		touch "${D}"/${lib}
+	done
 }
 
 preserve_old_lib_notify() {
-	LIB=$1
-
-	if [ -n "${LIB}" -a -f "${ROOT}${LIB}" ]; then
-		SONAME=`basename ${LIB}`
-
-		ewarn "An old version of an installed library was detected on your system."
-		ewarn "In order to avoid breaking packages that link against it, this older version"
-		ewarn "is not being removed.  In order to make full use of this newer version,"
-		ewarn "you will need to execute the following command:"
-		ewarn "	 revdep-rebuild --library ${SONAME}"
-		ewarn
-		ewarn "After doing that, you can safely remove ${LIB}"
-		ewarn "Note: 'emerge gentoolkit' to get revdep-rebuild"
+	if [[ ${EBUILD_PHASE} != "pkg_postinst" ]] ; then
+		eerror "preserve_old_lib_notify() must be called from pkg_postinst() only"
+#		die "Invalid preserve_old_lib_notify() usage"
 	fi
+
+	local lib notice=0
+	for lib in "$@" ; do
+		[[ -e ${ROOT}/${lib} ]] || continue
+		if [[ ${notice} -eq 0 ]] ; then
+			notice=1
+			ewarn "Old versions of installed libraries were detected on your system."
+			ewarn "In order to avoid breaking packages that depend on these old libs,"
+			ewarn "the libraries are not being removed.  You need to run revdep-rebuild"
+			ewarn "in order to remove these old dependencies.  If you do not have this"
+			ewarn "helper program, simply emerge the 'gentoolkit' package."
+			ewarn
+		fi
+		ewarn "  # revdep-rebuild --library ${lib##*/}"
+	done
 }
 
 # Hack for people to figure out if a package was built with
