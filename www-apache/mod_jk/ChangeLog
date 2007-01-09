@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_jk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.15 2007/01/09 15:43:50 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.16 2007/01/09 17:54:38 wltjr Exp $
+
+  09 Jan 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -mod_jk-1.2.15-r1.ebuild, mod_jk-1.2.19.ebuild, mod_jk-1.2.20.ebuild:
+  Moved forward ~ppc keyword, removed older version.
 
   09 Jan 2007; Vlastimil Babka <caster@gentoo.org> mod_jk-1.2.15-r1.ebuild,
   mod_jk-1.2.19.ebuild, mod_jk-1.2.20.ebuild:

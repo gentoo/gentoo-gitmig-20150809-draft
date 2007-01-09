@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.20.ebuild,v 1.2 2007/01/09 15:43:50 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.20.ebuild,v 1.3 2007/01/09 17:54:38 wltjr Exp $
 
 inherit apache-module autotools
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://apache/tomcat/tomcat-connectors/jk/source/jk-${PV}/${MY_P}.tar
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="apache2"
 
 S="${WORKDIR}/${MY_P}/native"
