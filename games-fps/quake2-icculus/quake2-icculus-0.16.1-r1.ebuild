@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.3 2006/12/05 17:22:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.4 2007/01/09 23:34:10 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -157,8 +157,11 @@ src_install() {
 	# regular q2 files
 	dodir "${q2dir}"
 	cp -rf my-rel-NO/* "${D}/${q2dir}"/
-	dogamesbin "${D}/${q2dir}"/{quake2,q2ded}
-	rm "${D}/${q2dir}"/{quake2,q2ded}
+	dogamesbin "${D}/${q2dir}"/quake2
+	rm "${D}/${q2dir}"/quake2
+	use dedicated \
+		&& dogamesbin "${D}/${q2dir}"/q2ded \
+		&& rm "${D}/${q2dir}"/q2ded
 	use sdl \
 		&& dogamesbin "${D}/${q2dir}"/sdlquake2 \
 		&& rm "${D}/${q2dir}"/sdlquake2
@@ -189,9 +192,9 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 
-	einfo "Go read /usr/share/doc/${PF}/README-postinstall.gz right now!"
-	einfo "It's important - This install is just the engine, you still need"
-	einfo "the data paks. Go read."
+	elog "Go read /usr/share/doc/${PF}/README-postinstall.gz"
+	elog "right now! It's important - This install is just the engine, you still need"
+	elog "the data paks. Go read."
 
 	if use demo && ! built_with_use "games-fps/quake2-demodata" symlink ; then
 		ewarn "To play the Quake 2 demo,"
