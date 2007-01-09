@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/sonata-0.9.ebuild,v 1.2 2006/12/04 00:26:45 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/sonata-0.9.ebuild,v 1.3 2007/01/09 21:10:56 swegener Exp $
 
 inherit distutils
 
@@ -18,7 +18,7 @@ RDEPEND=">=virtual/python-2.4
 	gnome? ( dev-python/gnome-python-extras )"
 
 pkg_setup() {
-	if ! built_with_use '=gtk+-2*' jpeg; then
+	if ! built_with_use '=x11-libs/gtk+-2*' jpeg; then
 		echo
 		ewarn "If you want album cover art displayed in Sonata,"
 		ewarn "you must build gtk+-2.x with \"jpeg\" USE flag."
