@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tamago/tamago-4.0.6-r1.ebuild,v 1.10 2005/08/28 02:26:13 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tamago/tamago-4.0.6-r1.ebuild,v 1.11 2007/01/09 12:51:29 opfer Exp $
 
 inherit elisp eutils
 
@@ -66,10 +66,10 @@ pkg_postinst() {
 		sed -i -e '/CANNASERVER_OPTS/s/"\(.*\)"/"\1 -inet"/' \
 			${ROOT}/etc/conf.d/canna
 
-		einfo
-		einfo "Enabled inet domain socket for tamago."
-		einfo "You must restart cannaserver in order to use."
-		einfo "Beware of increasing security risks."
-		einfo
+		ewarn
+		ewarn "Enabled inet domain socket for tamago."
+		ewarn "You must restart cannaserver in order to use."
+		ewarn "Beware of increasing security risks."
+		ewarn
 	fi
 }
