@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-4.0-r2.ebuild,v 1.4 2006/11/30 16:03:05 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-4.0-r2.ebuild,v 1.5 2007/01/09 15:40:25 caster Exp $
 
 inherit eutils java-pkg
 
@@ -329,14 +329,14 @@ src_install() {
 }
 
 pkg_postinst () {
-	einfo "Your tomcat directory might not have the right permissions."
-	einfo "Please make sure that normal users can read the directory: "
-	einfo "${ROOT}usr/share/tomcat-${TOMCATSLOT}                      "
-	einfo "                                                           "
-	einfo "The integrated Tomcat is not installed, but you can easily "
-	einfo "use the system Tomcat. See Netbeans documentation if you   "
-	einfo "don't know how to do that. The relevant settings are in the"
-	einfo "runtime window.                                            "
+	elog "Your tomcat directory might not have the right permissions."
+	elog "Please make sure that normal users can read the directory: "
+	elog "${ROOT}usr/share/tomcat-${TOMCATSLOT}                      "
+	elog "                                                           "
+	elog "The integrated Tomcat is not installed, but you can easily "
+	elog "use the system Tomcat. See Netbeans documentation if you   "
+	elog "don't know how to do that. The relevant settings are in the"
+	elog "runtime window.                                            "
 }
 
 pkg_postrm() {
@@ -345,11 +345,11 @@ pkg_postrm() {
 #	find ${DESTINATION} -type l | xargs rm -fr
 
 	if ! test -e /usr/bin/netbeans-${SLOT}; then
-		einfo "Because of the way Portage works at the moment"
-		einfo "symlinks to the system jars are left to:"
-		einfo "${DESTINATION}"
-		einfo "If you are uninstalling Netbeans you can safely"
-		einfo "remove everything in this directory"
+		elog "Because of the way Portage works at the moment"
+		elog "symlinks to the system jars are left to:"
+		elog "${DESTINATION}"
+		elog "If you are uninstalling Netbeans you can safely"
+		elog "remove everything in this directory"
 	fi
 }
 

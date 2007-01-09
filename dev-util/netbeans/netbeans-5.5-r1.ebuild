@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r1.ebuild,v 1.6 2007/01/08 18:53:02 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r1.ebuild,v 1.7 2007/01/09 15:40:25 caster Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -280,11 +280,11 @@ pkg_postrm() {
 #	find ${DESTINATION} -type l | xargs rm -fr
 
 	if ! test -e /usr/bin/netbeans-${SLOT}; then
-		einfo "Because of the way Portage works at the moment"
-		einfo "symlinks to the system jars are left to:"
-		einfo "${DESTINATION}"
-		einfo "If you are uninstalling Netbeans you can safely"
-		einfo "remove everything in this directory"
+		elog "Because of the way Portage works at the moment"
+		elog "symlinks to the system jars are left to:"
+		elog "${DESTINATION}"
+		elog "If you are uninstalling Netbeans you can safely"
+		elog "remove everything in this directory"
 	fi
 }
 

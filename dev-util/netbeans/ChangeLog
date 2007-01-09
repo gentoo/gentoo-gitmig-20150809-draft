@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.46 2007/01/08 18:53:02 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.47 2007/01/09 15:40:25 caster Exp $
+
+  09 Jan 2007; Vlastimil Babka <caster@gentoo.org> netbeans-4.0-r2.ebuild,
+  netbeans-5.5.ebuild, netbeans-5.5-r1.ebuild:
+  Convert einfo to elog where appropriate.
 
   08 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> netbeans-5.5-r1.ebuild:
   ecj-3.1 and ecj-3.2 fail to compile Netbeans
