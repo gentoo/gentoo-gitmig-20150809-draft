@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/suspend2-userui
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/suspend2-userui/ChangeLog,v 1.17 2007/01/05 18:20:20 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/suspend2-userui/ChangeLog,v 1.18 2007/01/09 00:22:39 ticho Exp $
+
+  09 Jan 2007; Andrej Kacian <ticho@gentoo.org>
+  suspend2-userui-0.6.4-r1.ebuild:
+  Stable on x86, bug #160298.
 
   05 Jan 2007; Alon Bar-Lev <alonbl@gentoo.org>
   +files/suspend2-userui-0.6.4-glibc.patch, suspend2-userui-0.6.4-r1.ebuild:
