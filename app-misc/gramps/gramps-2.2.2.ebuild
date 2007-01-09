@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-2.2.2.ebuild,v 1.3 2007/01/05 19:12:36 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-2.2.2.ebuild,v 1.4 2007/01/09 20:41:16 dev-zero Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -35,14 +35,6 @@ MAKEOPTS="${MAKEOPTS} -j1"
 DOCS="NEWS README TODO"
 
 pkg_setup() {
-	if has_version '<dev-python/pygtk-2.8' ; then
-		if ! built_with_use dev-python/pygtk gnome ; then
-			eerror "You need to install pygtk with libglade support. Try:"
-			eerror "USE='gnome' emerge pygtk"
-			die "libglade support missing from pygtk"
-		fi
-	fi
-
 	if ! built_with_use 'dev-lang/python' berkdb ; then
 		eerror "You need to install python with Berkely Database support."
 		eerror "Add 'dev-lang/python berkdb' to /etc/portage/package.use "
