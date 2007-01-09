@@ -1,6 +1,6 @@
 # ChangeLog for mail-client/mozilla-thunderbird-bin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.59 2007/01/08 16:01:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.60 2007/01/09 11:18:11 tove Exp $
 
   08 Jan 2007; Raúl Porcel <armin76@gentoo.org>
   -mozilla-thunderbird-bin-1.5.0.7.ebuild,
@@ -77,7 +77,7 @@
 
 *mozilla-thunderbird-bin-1.5.0.5 (29 Jul 2006)
 
-  29 Jul 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  29 Jul 2006; Bryan Østergaard <kloeri@gentoo.org>
   +mozilla-thunderbird-bin-1.5.0.5.ebuild:
   Version bump, bug 141842.
 
@@ -136,7 +136,7 @@
   Bump to 1.0.7. Includes security fixes such as
   http://secunia.com/advisories/16901/.
 
-  11 Aug 2005; Diego PettenÃ² <flameeyes@gentoo.org>
+  11 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
   mozilla-thunderbird-bin-1.0.6-r3.ebuild:
   Call has_multilib_profile from pkg_setup instead of global scope.
 
