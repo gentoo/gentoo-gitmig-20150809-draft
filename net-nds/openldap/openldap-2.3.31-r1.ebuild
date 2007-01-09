@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.31-r1.ebuild,v 1.1 2007/01/06 15:09:42 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.31-r1.ebuild,v 1.2 2007/01/09 15:12:24 betelgeuse Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -468,18 +468,18 @@ pkg_postinst() {
 
 	# Reference inclusion bug #77330
 	echo
-	einfo
-	einfo "Getting started using OpenLDAP? There is some documentation available:"
-	einfo "Gentoo Guide to OpenLDAP Authentication"
-	einfo "(http://www.gentoo.org/doc/en/ldap-howto.xml)"
-	einfo
+	elog
+	elog "Getting started using OpenLDAP? There is some documentation available:"
+	elog "Gentoo Guide to OpenLDAP Authentication"
+	elog "(http://www.gentoo.org/doc/en/ldap-howto.xml)"
+	elog
 
 	# note to bug #110412
 	echo
-	einfo
-	einfo "An example file for tuning BDB backends with openldap is:"
-	einfo "/usr/share/doc/${P}/DB_CONFIG.fast.example.gz"
-	einfo
+	elog
+	elog "An example file for tuning BDB backends with openldap is:"
+	elog "/usr/share/doc/${PF}/DB_CONFIG.fast.example.gz"
+	elog
 
 	LIBSUFFIXES=".so.2.0.130 -2.2.so.7"
 	for LIBSUFFIX in ${LIBSUFFIXES} ; do
