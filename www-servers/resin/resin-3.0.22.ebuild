@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.22.ebuild,v 1.2 2007/01/09 08:23:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.22.ebuild,v 1.3 2007/01/09 12:15:26 nelchael Exp $
 
 inherit java-pkg-2 java-ant-2 eutils flag-o-matic
 
@@ -132,22 +132,22 @@ src_install() {
 
 pkg_postinst() {
 
-	einfo
-	einfo " User and group 'resin' have been added."
-	einfo
-	einfo " By default, Resin runs on port 8080.  You can change this"
-	einfo " value by editing /etc/conf/resin.conf."
-	einfo
-	einfo " To test Resin while it's running, point your web browser to:"
-	einfo " http://localhost:8080/"
-	einfo
-	einfo " Resin cannot run on port 80 as non-root (as of this time)."
-	einfo " The best way to get Resin to respond on port 80 is via port"
-	einfo " forwarding -- by installing a firewall on the machine running"
-	einfo " Resin or the network gateway.  Simply redirect port 80 to"
-	einfo " port 8080."
-	einfo
-	einfo " webapps directory was moved to /var/lib/resin/webapps "
-	einfo
+	elog
+	elog " User and group 'resin' have been added."
+	elog
+	elog " By default, Resin runs on port 8080.  You can change this"
+	elog " value by editing /etc/conf/resin.conf."
+	elog
+	elog " To test Resin while it's running, point your web browser to:"
+	elog " http://localhost:8080/"
+	elog
+	elog " Resin cannot run on port 80 as non-root (as of this time)."
+	elog " The best way to get Resin to respond on port 80 is via port"
+	elog " forwarding -- by installing a firewall on the machine running"
+	elog " Resin or the network gateway.  Simply redirect port 80 to"
+	elog " port 8080."
+	elog
+	elog " webapps directory was moved to /var/lib/resin/webapps "
+	elog
 
 }

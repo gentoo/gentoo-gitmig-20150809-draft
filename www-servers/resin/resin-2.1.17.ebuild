@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-2.1.17.ebuild,v 1.4 2006/10/05 14:49:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-2.1.17.ebuild,v 1.5 2007/01/09 12:15:26 nelchael Exp $
 
 inherit java-pkg eutils
 
@@ -74,43 +74,38 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo " NOTICE!"
-	einfo " User and group 'resin' have been added."
-	einfo
-	einfo " FILE LOCATIONS:"
-	einfo " 1.  Resin home directory: ${RESIN_HOME}"
-	einfo "     Contains application data, configuration files."
-	einfo " 2.  Runtime settings: /etc/conf.d/resin"
-	einfo "     Contains CLASSPATH and JAVA_HOME settings."
-	einfo " 3.  Logs:  /var/log/resin/"
-	einfo " 4.  Executables, libraries:  /usr/share/resin/"
-	einfo
-	einfo " STARTING AND STOPPING RESIN:"
-	einfo "   /etc/init.d/resin start"
-	einfo "   /etc/init.d/resin stop"
-	einfo "   /etc/init.d/resin restart"
-	einfo
-	einfo " NETWORK CONFIGURATION:"
-	einfo " By default, Resin runs on port 8080.  You can change this"
-	einfo " value by editing ${RESIN_HOME}/conf/resin.conf."
-	einfo
-	einfo " To test Resin while it's running, point your web browser to:"
-	einfo " http://localhost:8080/"
-	einfo
-	einfo " Resin cannot run on port 80 as non-root (as of this time)."
-	einfo " The best way to get Resin to respond on port 80 is via port"
-	einfo " forwarding -- by installing a firewall on the machine running"
-	einfo " Resin or the network gateway.  Simply redirect port 80 to"
-	einfo " port 8080."
-	einfo
-	einfo " BUGS:"
-	einfo " Please file any bugs at http://bugs.gentoo.org/ or else it"
-	einfo " may not get seen.  Thank you."
-	einfo
+	elog
+	elog " NOTICE!"
+	elog " User and group 'resin' have been added."
+	elog
+	elog " FILE LOCATIONS:"
+	elog " 1.  Resin home directory: ${RESIN_HOME}"
+	elog "     Contains application data, configuration files."
+	elog " 2.  Runtime settings: /etc/conf.d/resin"
+	elog "     Contains CLASSPATH and JAVA_HOME settings."
+	elog " 3.  Logs:  /var/log/resin/"
+	elog " 4.  Executables, libraries:  /usr/share/resin/"
+	elog
+	elog " STARTING AND STOPPING RESIN:"
+	elog "   /etc/init.d/resin start"
+	elog "   /etc/init.d/resin stop"
+	elog "   /etc/init.d/resin restart"
+	elog
+	elog " NETWORK CONFIGURATION:"
+	elog " By default, Resin runs on port 8080.  You can change this"
+	elog " value by editing ${RESIN_HOME}/conf/resin.conf."
+	elog
+	elog " To test Resin while it's running, point your web browser to:"
+	elog " http://localhost:8080/"
+	elog
+	elog " Resin cannot run on port 80 as non-root (as of this time)."
+	elog " The best way to get Resin to respond on port 80 is via port"
+	elog " forwarding -- by installing a firewall on the machine running"
+	elog " Resin or the network gateway.  Simply redirect port 80 to"
+	elog " port 8080."
+	elog
+	elog " BUGS:"
+	elog " Please file any bugs at http://bugs.gentoo.org/ or else it"
+	elog " may not get seen.  Thank you."
+	elog
 }
-
-pkg_postrm() {
-	einfo "You may want to remove the resin user and group"
-}
-

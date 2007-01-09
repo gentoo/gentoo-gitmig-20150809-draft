@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.0.ebuild,v 1.1 2006/12/26 01:49:46 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.0.ebuild,v 1.2 2007/01/09 12:15:26 nelchael Exp $
 
 inherit java-pkg-2 java-ant-2 eutils flag-o-matic
 
@@ -125,7 +125,6 @@ src_install() {
 	chown -R resin:resin ${D}/var/lib/resin
 	chown -R resin:resin ${D}/var/run/resin
 
-	chmod 755 ${D}${RESIN_HOME}/bin/*
 	chmod 644 ${D}/etc/conf.d/resin
 	chmod 755 ${D}/etc/init.d/resin
 	chmod 750 ${D}/var/lib/resin
@@ -136,16 +135,16 @@ src_install() {
 
 pkg_postinst() {
 
-	einfo
-	einfo " User and group 'resin' have been added."
-	einfo
-	einfo " By default, Resin runs on port 8080.  You can change this"
-	einfo " value by editing /etc/conf/resin.conf."
-	einfo
-	einfo " webapps directory was moved to /var/lib/resin/webapps"
-	einfo
-	einfo " Most options has been moved from /etc/conf.d/resin to"
-	einfo " /etc/resin/resin.conf."
-	einfo
+	elog
+	elog " User and group 'resin' have been added."
+	elog
+	elog " By default, Resin runs on port 8080.  You can change this"
+	elog " value by editing /etc/conf/resin.conf."
+	elog
+	elog " webapps directory was moved to /var/lib/resin/webapps"
+	elog
+	elog " Most options has been moved from /etc/conf.d/resin to"
+	elog " /etc/resin/resin.conf."
+	elog
 
 }
