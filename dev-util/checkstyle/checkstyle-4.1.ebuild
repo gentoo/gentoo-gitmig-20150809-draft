@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/checkstyle-4.1.ebuild,v 1.2 2006/10/05 14:36:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/checkstyle-4.1.ebuild,v 1.3 2007/01/09 15:34:36 caster Exp $
 
 inherit java-pkg
 
@@ -78,6 +78,6 @@ END
 }
 
 pkg_postinst() {
-	einfo "Checkstyle is located at /usr/bin/checkstyle"
-	einfo "Check files are located in /usr/share/checkstyle/checks/"
+	elog "Checkstyle is located at /usr/bin/checkstyle"
+	elog "Check files are located in /usr/share/checkstyle/checks/"
 }
