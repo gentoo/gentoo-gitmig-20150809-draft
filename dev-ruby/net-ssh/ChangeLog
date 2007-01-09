@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/net-ssh
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh/ChangeLog,v 1.18 2006/11/11 17:21:26 peper Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh/ChangeLog,v 1.19 2007/01/09 07:47:39 graaff Exp $
+
+*net-ssh-1.0.10 (09 Jan 2007)
+
+  09 Jan 2007; Hans de Graaff <graaff@gentoo.org> -net-ssh-1.0.5.ebuild,
+  +net-ssh-1.0.10.ebuild:
+  Version bump for new capistrano version; remove old version.
 
   11 Nov 2006; Piotr Jaroszyński <peper@gentoo.org> net-ssh-1.0.9.ebuild:
   Add ~amd64.
