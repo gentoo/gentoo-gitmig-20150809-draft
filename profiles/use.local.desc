@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2486 2007/01/08 21:38:16 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2487 2007/01/09 17:28:40 wolf31o2 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -545,6 +545,10 @@ dev-util/subversion:nowebdav - Disables WebDAV support via neon library
 dev-util/svk:pager - Enable perl pager selection support
 dev-util/svk:patch - Enable patch creation, import support
 dev-util/svk:svn-mirror - Enable SVN-Mirror support
+games-action/d1x-rebirth:awe32 - Enable AWE32 support
+games-action/d1x-rebirth:demo - Use the demo data instead of the full game
+games-action/d1x-rebirth:mixer - Enable mixer support
+games-action/d1x-rebirth:mpu401 - Enable MPU401 music support
 games-action/xshipwars:yiff - Add support for the YIFF sound server
 games-arcade/bomns:editor - enables building the level editor
 games-arcade/stepmania:force-oss - force using OSS
