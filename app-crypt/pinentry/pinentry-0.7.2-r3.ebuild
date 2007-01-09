@@ -1,6 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2-r3.ebuild,v 1.15 2007/01/07 12:14:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2-r3.ebuild,v 1.16 2007/01/09 20:38:32 swegener Exp $
+
+WANT_AUTOCONF="2.5"
+WANT_AUTOMAKE="1.9"
 
 inherit flag-o-matic qt3 multilib eutils autotools
 
