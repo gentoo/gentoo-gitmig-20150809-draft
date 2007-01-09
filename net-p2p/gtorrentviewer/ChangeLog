@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gtorrentviewer
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtorrentviewer/ChangeLog,v 1.2 2004/11/05 22:15:47 lv Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtorrentviewer/ChangeLog,v 1.3 2007/01/09 21:11:02 armin76 Exp $
+
+  09 Jan 2007; Raúl Porcel <armin76@gentoo.org> gtorrentviewer-0.2a.ebuild:
+  Add pkgconfig dep, bug 153272
 
   05 Nov 2004; Travis Tilley <lv@gentoo.org> gtorrentviewer-0.2a.ebuild:
   yay amd64
