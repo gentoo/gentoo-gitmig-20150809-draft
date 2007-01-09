@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2487 2007/01/09 17:28:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2488 2007/01/09 21:27:41 swegener Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -57,8 +57,8 @@ app-cdr/cdrkit:hfs - Provide building of HFS (Apple) CD-images
 app-cdr/cdrtools:on-the-fly-crypt - On the fly AES encryption for CD-Rs.
 app-cdr/disc-cover:cdrom - Enable audio CD support. This is not needed to make www-apps/disc-cover work.
 app-cdr/k3b:css - Enables ripping of encrypted dvds
-app-cdr/k3b:musicbrainz - Enable support for MusicBrainz audio lookups (musicbrainz.org)
 app-cdr/k3b:emovix - Enable burning support for eMoviX images
+app-cdr/k3b:musicbrainz - Enable support for MusicBrainz audio lookups (musicbrainz.org)
 app-cdr/pxlinux:gnuplot - enable gnuplot support
 app-cdr/serpentine:muine - Enable Muine support
 app-crypt/ccid:chipcard2 - Enable libchipcard support
@@ -66,8 +66,8 @@ app-crypt/ccid:twinserial - Enable twinserial reader
 app-crypt/gnupg:ecc - Use elliptic curve cryptosystem patch
 app-crypt/gnupg:gpg2-experimental - Install experimental development version of gnupg
 app-crypt/gnupg:idea - Use the patented IDEA algorithm
-app-crypt/gnupg:pcsc-lite - build with pcsc-lite
 app-crypt/gnupg:openct - build using dev-libs/openct compatibility
+app-crypt/gnupg:pcsc-lite - build with pcsc-lite
 app-crypt/gringotts:suid - Install the binary suid, acknowledging the usual risks
 app-crypt/johntheripper:ntlm - enables john to crack Windows NT/2000 MD4 (case-sensitive) password hashes
 app-crypt/ophcrack:ophsmall - Makes use of smaller cracking tables
@@ -117,9 +117,9 @@ app-emulation/mol:vnc - Includes vnc support
 app-emulation/pearpc:jit - Use the JITC-X86 CPU
 app-emulation/point2play:emerald - For people who are in the Transgaming Emerald Club
 app-emulation/qemu-softmmu:kqemu - Enables the kernel module acceleration on the x86 cpu
+app-emulation/uade:audacious - Enables support for media-sound/audacious
 app-emulation/uae:scsi - Enable the uaescsi.device
 app-emulation/uae:sdl-sound - Use libsdl for audio output
-app-emulation/uade:audacious - Enables support for media-sound/audacious
 app-emulation/xen-tools:custom-cflags - Use CFLAGS from /etc/make.conf rather than the default Xen CFLAGS (not supported)
 app-emulation/xen-tools:pygrub - Install the pygrub boot loader
 app-emulation/xen-tools:screen - Enable support for running domain U consoles in a screen session
@@ -161,9 +161,9 @@ app-misc/beagle:galago - Enable desktop presence via galago
 app-misc/beagle:ole - Enable ole support
 app-misc/beagle:thunderbird - Enable Mozilla Thunderbird indexing
 app-misc/booh:transcode - Use transcode to extract video thumbnails
+app-misc/digitemp:ds2490 - Build support for the ds2490 sensor
 app-misc/digitemp:ds9097 - Build support for the ds9097 sensor
 app-misc/digitemp:ds9097u - Build support for the ds9097u sensor
-app-misc/digitemp:ds2490 - Build support for the ds2490 sensor
 app-misc/g15composer:amarok - Enable display of titles played in Amarok
 app-misc/graphlcd-base:g15 - Add support for g15daemon driver ( e.g Logitech G15 Keybord )
 app-misc/lcd4linux:serdisp - Add support for several displays via serdisplib
@@ -213,10 +213,10 @@ app-office/openoffice:branding - Enable Gentoo branded splash screen
 app-office/openoffice:odk - Build the Office Development Kit
 app-office/openoffice:sound - Enable sound support through portaudio and libsndfile
 app-office/openoffice:webdav - Enable webdav support
-app-office/rabbit:gs - Ghostscript support
-app-office/rabbit:gnome-print - Gnome-Print support
-app-office/rabbit:tgif - tgif support
 app-office/rabbit:enscript - enscript support
+app-office/rabbit:gnome-print - Gnome-Print support
+app-office/rabbit:gs - Ghostscript support
+app-office/rabbit:tgif - tgif support
 app-office/tpp:figlet - Installs app-misc/figlet to support the --huge command
 app-pda/libsyncml:http - Enable http transports.
 app-pda/libsyncml:obex - Enable obex transports.
@@ -237,12 +237,12 @@ app-text/crm114:mimencode - Adds support for using the mimencode mime
 app-text/crm114:normalizemime - Add support for using the normalizemime
 app-text/estraier:kakasi - Enable kakasi support for Estraier
 app-text/estraier:mecab - Enable mecab support for Estraier
-app-text/ghostscript-esp:djvu - Enable gsdjvu support
-app-text/ghostscript-gpl:djvu - Enable gsdjvu support
 app-text/evince:djvu - Enable djvu viewer support for Evince
 app-text/evince:dvi - Enable the built-in DVI viewer for Evince
 app-text/evince:nautilus - Enable the nautilus plugin
 app-text/evince:t1lib - Enable the Type-1 fonts for the built-in DVI viewer for Evince
+app-text/ghostscript-esp:djvu - Enable gsdjvu support
+app-text/ghostscript-gpl:djvu - Enable gsdjvu support
 app-text/hyperestraier:mecab - Enable mecab support for Estraier
 app-text/namazu:kakasi - Enable kakasi support for namazu
 app-text/noweb:icon - Enable icon language support for noweb
@@ -846,12 +846,12 @@ media-plugins/audacious-plugins:sid - Build with SID (Commodore 64 Audio) suppor
 media-plugins/audacious-plugins:timidity - Build with Timidity++ (MIDI sequencer) support
 media-plugins/audacious-plugins:wavpack - Build with WavPack support
 media-plugins/audacious-plugins:wma - Build with WMA (Windows Media Audio) support
-media-plugins/vdr-dvdconvert:projectx  - Enables support for projectx 
 media-plugins/gst-plugins-farsight:gsm - Support for the gsm lossy speech compression library
 media-plugins/gst-plugins-farsight:jingle - Enables voice calls for jabber
 media-plugins/gst-plugins-farsight:jrtplib - Support for the Real-time Transport Protocol (RTP) library
 media-plugins/mythdvd:transcode - Enable DVD ripping and transcoding
 media-plugins/mythphone:festival - Enable festival support
+media-plugins/vdr-dvdconvert:projectx  - Enables support for projectx 
 media-plugins/vdr-pvr350:yaepg - Enables full support for the ouput format of vdr-yaepg
 media-plugins/vdr-softdevice:mmxext - enables mmx2 support
 media-plugins/vdr-weatherng:dxr3 - enables lower osd color deep for dxr3 cards
@@ -860,8 +860,8 @@ media-radio/xastir:festival - Enable festival support
 media-radio/xastir:shape - Enable shapelib support
 media-sound/amarok:ifp - Enable support for iRiver devices access through libifp
 media-sound/amarok:mtp - Enable support for libMTP (Plays4Sure) devices access through libmtp
-media-sound/amarok:njb - Enable support for NJB (Creative) devices access through libnjb
 media-sound/amarok:musicbrainz - Enable support for MusicBrainz audio lookups (musicbrainz.org)
+media-sound/amarok:njb - Enable support for NJB (Creative) devices access through libnjb
 media-sound/amarok:noamazon - Disable support for downloading covers from amazon.com
 media-sound/amarok:real - Build with real/helix player support
 media-sound/amarok:visualization - Support visualization plugins through media-libs/libvisual
@@ -873,8 +873,8 @@ media-sound/audacious:wma - Build with WMA (Windows Media Audio) support
 media-sound/banshee:boo - Use external Boo instead of the bundled one
 media-sound/banshee:daap - Build with Daap support
 media-sound/banshee:njb - Build with njb audio player support
-media-sound/bmpx:ofa - Build with ofa/PUID checking support for MusicBrainz metadata
 media-sound/bmpx:modplug - Build with modplug support
+media-sound/bmpx:ofa - Build with ofa/PUID checking support for MusicBrainz metadata
 media-sound/bmpx:p2p - Enable support for downloading songs from the SoulSeek p2p network with museekd/mooseekd
 media-sound/bmpx:sid - Build with SID (Commodore 64 Audio) support
 media-sound/cmus:modplug - Build with modplug support
@@ -908,9 +908,9 @@ media-sound/radiomixer:songdb - Enable usage of SongDB backend
 media-sound/rezound:16bittmp - Use 16bit temporary files (default 32bit float), usefull for slower computers
 media-sound/rezound:soundtouch - compile with support for soundtouch
 media-sound/rhythmbox:daap - support for daap
+media-sound/rhythmbox:keyring - gnome-keyring support for dapp share passwords
 media-sound/rhythmbox:musicbrainz - support for muzicbrainz audio lookup (musicbrainz.org)
 media-sound/rhythmbox:tagwriting - support for tag wriring in certian audio files
-media-sound/rhythmbox:keyring - gnome-keyring support for dapp share passwords
 media-sound/slimserver:alac - Enable support for alac
 media-sound/snd:gsl - Use the GNU scientific library for calculations
 media-sound/transkode:amarok - Build Amarok script
@@ -1076,8 +1076,8 @@ net-analyzer/net-snmp:diskio - Enable the use of diskio mibs
 net-analyzer/net-snmp:elf - Enable the use of elf utils to check uptime on some sytems
 net-analyzer/net-snmp:mfd-rewrites - Use MFD rewrites of mib modules where available
 net-analyzer/net-snmp:rpm - Enable the rpm snmp probing
-net-analyzer/net-snmp:smux - Enable the smux MIBS module
 net-analyzer/net-snmp:sendmail - Enable sendmail statistics monitoring
+net-analyzer/net-snmp:smux - Enable the smux MIBS module
 net-analyzer/netcat:GAPING_SECURITY_HOLE - add support for running programs after connect
 net-analyzer/pchar:pcap - Use the pcap library
 net-analyzer/pmacct:64bit - Use 64bit counters instead of 32bit ones
@@ -1174,8 +1174,8 @@ net-ftp/ftpcube:sftp - Enable sftp connection support
 net-ftp/proftpd:authfile - Enable support for auth-file module
 net-ftp/proftpd:ifsession - Enable support for the ifsession module
 net-ftp/proftpd:noauthunix - Disable support for auth-unix module
-net-ftp/proftpd:rewrite - Enable support for rewrite module
 net-ftp/proftpd:opensslcrypt - Enable support for openssly crypto
+net-ftp/proftpd:rewrite - Enable support for rewrite module
 net-ftp/proftpd:sendfile - Enable support for sendfile()
 net-ftp/proftpd:shaper - Enable support for the mod_shaper
 net-ftp/proftpd:sitemisc - Enable support for sitemisc module
@@ -1208,9 +1208,9 @@ net-im/gaim:custom-cflags - Disables stripping of "unsafe C[XX]FLAGS"
 net-im/gaim:gadu - Enable Gadu Gadu protocol support.
 net-im/gaim:groupwise - Enable Novell Groupwise protocol support.
 net-im/gaim:meanwhile - Enable meanwhile support for Sametime protocol.
+net-im/gaim:qq - Enable QQ protocol support.
 net-im/gaim:silc - Enable SILC protocol support
 net-im/gaim:xscreensaver - Enable X idle time support instead of gaim idle time.
-net-im/gaim:qq - Enable QQ protocol support.
 net-im/gajim:idle - Enable idle module
 net-im/gajim:srv - SRV capabilities
 net-im/gajim:trayicon - Enable the trayicon module
@@ -1299,8 +1299,8 @@ net-mail/cyrus-imapd:autosieve - Enable not supported (by upstream) patch from U
 net-mail/cyrus-imapd:drac - Enable dynamic relay support in the cyrus imap server
 net-mail/cyrus-imapd:idled - Enable idled vs poll IMAP IDLE method
 net-mail/cyrus-imapd:unsupported_8bit - Enable 8bit not supported patch
-net-mail/dovecot:sieve - Build the sieve plugin
 net-mail/dovecot:pop3d - Build pop3d support
+net-mail/dovecot:sieve - Build the sieve plugin
 net-mail/dovecot:vpopmail - Add vpopmail support
 net-mail/fetchmail:hesiod - Enable support for hesiod
 net-mail/gnubiff:password - Enable save passwords to connect mail servers in user space
@@ -1423,10 +1423,10 @@ net-p2p/amule:amuled - enable amule daemon
 net-p2p/amule:remote - enable remote controlling of the client
 net-p2p/amule:stats - enable statistic reporting
 net-p2p/mldonkey:batch - enable internaly ocaml build
-net-p2p/mldonkey:magic - enable use of libmagic
-net-p2p/mldonkey:gnutella - enable gnutella and gnutella2 support
 net-p2p/mldonkey:fasttrack - enable fasttrack suport
+net-p2p/mldonkey:gnutella - enable gnutella and gnutella2 support
 net-p2p/mldonkey:guionly - enable client build only
+net-p2p/mldonkey:magic - enable use of libmagic
 net-print/omni:epson - include the epson drivers
 net-print/pkpgcounter:psyco - psyco python accelerator
 net-proxy/dansguardian:kaspersky - Adds support for Kaspersky AntiVirus software
@@ -1489,13 +1489,13 @@ net-www/mplayerplug-in:wmp - Windows Media Playback Support
 net-www/pwauth:domain-aware - Ignore leading domain names in username (Windows compat)
 net-www/pwauth:faillog - Log failed login attempts
 net-www/pwauth:ignore-case - Ignore string case in username (mostly Windows compat)
+rox-extra/archive:ace - Enable .ace support via unace package
 rox-extra/archive:compress - Enable tar.Z and *.Z via ncompress package
+rox-extra/archive:cpio - Enable .cpio extraction via cpio package
 rox-extra/archive:rar - Enable .rar support via rar package
+rox-extra/archive:rpm - Enable .rpm extraction via rpm2cpio from the rpm package
 rox-extra/archive:uuencode - Enable .uue compression/decompression via sharutils package
 rox-extra/archive:zip - Enable .zip support via zip and unzip packages
-rox-extra/archive:ace - Enable .ace support via unace package
-rox-extra/archive:rpm - Enable .rpm extraction via rpm2cpio from the rpm package
-rox-extra/archive:cpio - Enable .cpio extraction via cpio package
 rox-extra/magickthumbnail:xcf - Enable previews of .xcf files using the gimp
 sci-astronomy/orsa:cln - Use the Class Library for Numbers for calculations
 sci-astronomy/orsa:gsl - Use the GNU scientific library for calculations
@@ -1522,8 +1522,8 @@ sci-geosciences/grass:glw - Enables libGLw support (requires mesa)
 sci-geosciences/grass:gmath - Enables gmath wrapper for BLAS/Lapack
 sci-geosciences/grass:largefile - Enables LFS support for huge files
 sci-geosciences/grass:proj - Enables proj library support (geographic projections)
-sci-geosciences/mapserver:geos - Enables geos library support
 sci-geosciences/mapserver:gdal - Enables gdal library support
+sci-geosciences/mapserver:geos - Enables geos library support
 sci-geosciences/mapserver:postgis - Enables postgis support 
 sci-geosciences/mapserver:proj - Enables proj library support (geographic projections)
 sci-libs/gdal:fits - Enables support for NASA's cfitsio library
@@ -1838,8 +1838,8 @@ x11-base/xorg-x11:type1-fonts - Build Type1 fonts
 x11-drivers/nvidia-drivers:dlloader - Installs dynamically linked synaptics Xorg driver
 x11-drivers/nvidia-legacy-drivers:dlloader - Installs dynamically linked synaptics Xorg driver
 x11-drivers/synaptics:dlloader - Installs dynamically linked synaptics Xorg driver
-x11-libs/cairo:xcb - Support the X C-language Binding, a replacement for Xlib
 x11-libs/cairo:glitz - Build with glitz support
+x11-libs/cairo:xcb - Support the X C-language Binding, a replacement for Xlib
 x11-libs/fltk:noxft - Disables fltk; use for non-english characters
 x11-libs/gtkmathview:t1lib - Enable t1lib support
 x11-libs/libmatchbox:pango - Enable pango support
@@ -1904,8 +1904,8 @@ x11-wm/sawfish:pango - Enable pango support
 x11-wm/stumpwm-cvs:clisp - Use CLISP for the runtime
 x11-wm/stumpwm-cvs:sbcl - Use SBCL for the runtime
 x11-wm/windowmaker:modelock - Enable XKB language status lock support. README says: "If you don't know what it is you probably don't need it."
-xfce-base/thunar:thumbnail - enable thumbnail support in the file browser.
 xfce-base/thunar:freetype - Enable support for font thumbnailing.
+xfce-base/thunar:thumbnail - enable thumbnail support in the file browser.
 xfce-base/thunar:trash-panel-plugin - Build and install the trash panel plugin
 xfce-base/xfdesktop:exo - Build with libexo support (required for thunar-vfs integration).
 xfce-base/xfdesktop:panel-plugin - Enable the xfdesktop menu plugin for xfce4-panel.
