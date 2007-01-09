@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/phxd/phxd-0.1.0_pre23092005.ebuild,v 1.2 2006/11/23 17:31:41 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/phxd/phxd-0.1.0_pre23092005.ebuild,v 1.3 2007/01/09 16:23:54 kang Exp $
 
 inherit eutils
 
@@ -11,11 +11,9 @@ SRC_URI="mirror://gentoo/phxd-0.1.0_pre23092005.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
-IUSE="mysql"
 
 DEPEND="dev-python/twisted
-	dev-python/twisted-web
-	mysql? ( virtual/mysql )"
+	dev-python/twisted-web"
 
 RDEPEND=""
 

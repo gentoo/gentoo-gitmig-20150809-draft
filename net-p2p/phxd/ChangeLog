@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/phxd
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/phxd/ChangeLog,v 1.4 2006/11/23 17:31:41 vivo Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/phxd/ChangeLog,v 1.5 2007/01/09 16:23:54 kang Exp $
+
+  09 Jan 2007; Guillaume Destuynder <kang@gentoo.org>
+  phxd-0.1.0_pre23092005.ebuild:
+  Fix #159829 - removed mysql deps. Removed 0.0.1 ebuild.
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org>
   phxd-0.0.1_pre26062005.ebuild, phxd-0.1.0_pre23092005.ebuild:
