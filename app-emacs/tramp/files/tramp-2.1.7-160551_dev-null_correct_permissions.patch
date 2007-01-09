@@ -1,0 +1,11 @@
+--- tramp/configure.ac	2007-01-08 12:59:46.000000000 -0500
++++ tramp/configure.ac	2007-01-08 13:33:08.000000000 -0500
+@@ -97,7 +97,7 @@
+    AC_MSG_WARN([texi2dvi not found])
+ else
+    AC_MSG_CHECKING([for reasonable texi2dvi version])
+-   ${TEXI2DVI} -b -q -c -o /dev/null texi/test.texi 2>/dev/null >/dev/null
++   ${TEXI2DVI} -b -q -c texi/test.texi 2>/dev/null >/dev/null
+    if test $? -eq 0; then
+       AC_MSG_RESULT([ok])
+    else

@@ -1,6 +1,15 @@
 # ChangeLog for app-emacs/tramp
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.23 2006/12/09 22:52:26 mkennedy Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.24 2007/01/09 10:04:21 opfer Exp $
+
+*tramp-2.1.7-r1 (09 Jan 2007)
+
+  09 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
+  +files/tramp-2.1.7-160551_dev-null_correct_permissions.patch,
+  +tramp-2.1.7-r1.ebuild:
+  apply patch to prevent permissions of /dev/null to be changed, see bug
+  #160551, reported and provided by Hans Halvorson <hhalvors@princeton.edu>;
+  add some quotes around variables
 
 *tramp-2.1.7 (09 Dec 2006)
 
