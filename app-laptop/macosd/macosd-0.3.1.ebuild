@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/macosd/macosd-0.3.1.ebuild,v 1.1 2006/07/28 06:28:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/macosd/macosd-0.3.1.ebuild,v 1.2 2007/01/09 06:36:27 corsair Exp $
 
 inherit eutils
 
@@ -43,11 +43,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Make sure that pbbuttons is running (add it to your default runlevel)"
-	einfo "and then add the following to your ~/.xinitrc to have macosd"
-	einfo "start whenever you launch X:"
-	einfo "macosd -t CleanOSX &"
-	einfo "To see a listing of available themes, run: macosd -l"
-	einfo "If you do not have a composite manager check out the --no-argb switch"
+	elog "Make sure that pbbuttons is running (add it to your default runlevel)"
+	elog "and then add the following to your ~/.xinitrc to have macosd"
+	elog "start whenever you launch X:"
+	elog "macosd -t CleanOSX &"
+	elog "To see a listing of available themes, run: macosd -l"
+	elog "If you do not have a composite manager check out the --no-argb switch"
 }
 
