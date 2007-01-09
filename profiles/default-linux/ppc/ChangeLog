@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ppc profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.4 2007/01/04 21:49:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.5 2007/01/09 07:47:30 corsair Exp $
+
+  09 Jan 2007; Markus Rothe <corsair@gentoo.org> ppc64/virtuals:
+  Nuked virtual/init, as it's killing new-style virtual deps; bug #159097
 
   04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> 1.0/use.mask,
   1.0_rc/use.mask, 1.2/use.mask, 1.4/use.mask, 2004.0/use.mask,
