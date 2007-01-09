@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-360-r1.ebuild,v 1.3 2007/01/04 00:40:44 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-360-r1.ebuild,v 1.4 2007/01/09 21:13:36 swegener Exp $
 
 inherit eutils multilib flag-o-matic libtool
 
@@ -63,7 +63,7 @@ src_compile() {
 	emake || die "emake failed"
 
 	if use 3m; then
-		MAKEOPTS="${MAKEOPTS} -j1" emake 3m || die "emake 3m failed"
+		emake -j1 3m || die "emake 3m failed"
 	fi
 }
 
