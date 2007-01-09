@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-20061202.ebuild,v 1.5 2006/12/11 21:54:45 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-20061202.ebuild,v 1.6 2007/01/09 21:09:02 swegener Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -37,7 +37,7 @@ DEPEND="jabber? ( >=dev-libs/expat-1.95.6 )
 	virtual/libintl"
 
 pkg_setup() {
-	if use unicode && ! built_with_use ncurses unicode; then
+	if use unicode && ! built_with_use sys-libs/ncurses unicode; then
 		eerror "Ekg2 requires ncurses built with unicode support for unicode"
 		die
 	fi
