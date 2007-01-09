@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.66 2007/01/08 20:38:58 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.67 2007/01/09 15:48:34 cardoe Exp $
 # kate: encoding utf-8; eol unix;
 # kate: indent-width 4; mixedindent off; remove-trailing-space on; space-indent off;
 # kate: word-wrap-column 80; word-wrap off;
@@ -275,14 +275,14 @@ configure_minimal() {
 	myconf="${myconf} --with-extra-charsets=none"
 	myconf="${myconf} --enable-local-infile"
 
-	if useq "static" ; then
+	if use static ; then
 		myconf="${myconf} --with-client-ldflags=-all-static"
 		myconf="${myconf} --disable-shared"
 	else
 		myconf="${myconf} --enable-shared --enable-static"
 	fi
 
-	if mysql_version_is_at_least "4.01.00.00" && ! useq "latin1" ; then
+	if mysql_version_is_at_least "4.01.00.00" && ! use latin1 ; then
 		myconf="${myconf} --with-charset=utf8"
 		myconf="${myconf} --with-collation=utf8_general_ci"
 	else
@@ -300,7 +300,7 @@ configure_common() {
 	myconf="${myconf} --with-unix-socket-path=/var/run/mysqld/mysqld.sock"
 	myconf="${myconf} --without-libwrap"
 
-	if useq "static" ; then
+	if use static ; then
 		myconf="${myconf} --with-mysqld-ldflags=-all-static"
 		myconf="${myconf} --with-client-ldflags=-all-static"
 		myconf="${myconf} --disable-shared"
@@ -308,16 +308,16 @@ configure_common() {
 		myconf="${myconf} --enable-shared --enable-static"
 	fi
 
-	if useq "debug" ; then
+	if use debug ; then
 		myconf="${myconf} --with-debug=full"
 	else
 		myconf="${myconf} --without-debug"
 		mysql_version_is_at_least "4.1.3" \
-		&& useq "cluster" \
+		&& use cluster \
 		&& myconf="${myconf} --without-ndb-debug"
 	fi
 
-	if mysql_version_is_at_least "4.1" && ! useq "latin1" ; then
+	if mysql_version_is_at_least "4.1" && ! use latin1 ; then
 			myconf="${myconf} --with-charset=utf8"
 			myconf="${myconf} --with-collation=utf8_general_ci"
 		else
@@ -325,7 +325,7 @@ configure_common() {
 			myconf="${myconf} --with-collation=latin1_swedish_ci"
 	fi
 
-	if useq "embedded" ; then
+	if use embedded ; then
 		myconf="${myconf} --with-embedded-privilege-control"
 		myconf="${myconf} --with-embedded-server"
 	else
@@ -343,7 +343,7 @@ configure_40_41_50() {
 	myconf="${myconf} --without-readline"
 	mysql_version_is_at_least "5.0" || myconf="${myconf} $(use_with raid)"
 
-	if useq "ssl" ; then
+	if use ssl ; then
 		# --with-vio is not needed anymore, it's on by default and
 		# has been removed from configure
 		mysql_version_is_at_least "5.0.4" || myconf="${myconf} --with-vio"
@@ -358,11 +358,11 @@ configure_40_41_50() {
 	# The following fix is due to a bug with bdb on SPARC's. See:
 	# http://www.geocrawler.com/mail/msg.php3?msg_id=4754814&list=8
 	# It comes down to non-64-bit safety problems.
-	if useq "sparc" || useq "alpha" || useq "hppa" || useq "mips" || useq "amd64" ; then
+	if use sparc || use alpha || use hppa || use mips || use amd64 ; then
 		elog "Berkeley DB support was disabled due to incompatible arch"
 		myconf="${myconf} --without-berkeley-db"
 	else
-		if useq "berkdb" ; then
+		if use berkdb ; then
 			myconf="${myconf} --with-berkeley-db=./bdb"
 		else
 			myconf="${myconf} --without-berkeley-db"
@@ -374,7 +374,7 @@ configure_40_41_50() {
 		myconf="${myconf} $(use_with cluster ndbcluster)"
 	fi
 
-	if mysql_version_is_at_least "4.1.3" && useq "extraengine" ; then
+	if mysql_version_is_at_least "4.1.3" && use extraengine ; then
 		# http://dev.mysql.com/doc/mysql/en/archive-storage-engine.html
 		myconf="${myconf} --with-archive-storage-engine"
 
@@ -395,7 +395,7 @@ configure_40_41_50() {
 	fi
 
 	mysql_version_is_at_least "5.0.18" \
-	&& useq "max-idx-128" \
+	&& use max-idx-128 \
 	&& myconf="${myconf} --with-max-indexes=128"
 }
 
@@ -410,12 +410,12 @@ configure_51() {
 	myconf="${myconf} --with-row-based-replication"
 	myconf="${myconf} --with-zlib=/usr/$(get_libdir)"
 	myconf="${myconf} --without-pstack"
-	useq "max-idx-128" && myconf="${myconf} --with-max-indexes=128"
+	use max-idx-128 && myconf="${myconf} --with-max-indexes=128"
 
 	# 5.1 introduces a new way to manage storage engines (plugins)
 	# like configuration=none
 	local plugins="csv,myisam,myisammrg,heap"
-	if useq "extraengine" ; then
+	if use extraengine ; then
 		# like configuration=max-no-ndb, archive and example removed in 5.1.11
 		plugins="${plugins},archive,blackhole,example,federated,partition"
 
@@ -423,12 +423,12 @@ configure_51() {
 		elog "http://dev.mysql.com/doc/refman/5.1/en/federated-limitations.html"
 	fi
 
-	if useq "innodb" ; then
+	if use innodb ; then
 		plugins="${plugins},innobase"
 	fi
 
 	# like configuration=max-no-ndb
-	if useq "cluster" ; then
+	if use cluster ; then
 		plugins="${plugins},ndbcluster"
 		myconf="${myconf} --with-ndb-binlog"
 	fi
@@ -452,7 +452,7 @@ pbxt_src_compile() {
 	myconf="${myconf} --with-mysql=${S}"
 	mkdir -p ${T}/lib
 	myconf="${myconf} --libdir=${D}/${MY_LIBDIR}"
-	useq "debug" && myconf="${myconf} --with-debug=full"
+	use debug && myconf="${myconf} --with-debug=full"
 	# TODO is safe/needed to use econf here ?
 	./configure ${myconf} || die "problem configuring pbxt storage engine"
 	# TODO is safe/needed to use emake here ?
@@ -477,28 +477,28 @@ mysql_pkg_setup() {
 	enewuser mysql 60 -1 /dev/null mysql || die "problem adding 'mysql' user"
 
 	# Check for USE flag problems in pkg_setup
-	if useq "static" && useq "ssl" ; then
+	if use static && use ssl ; then
 		eerror "MySQL does not support being built statically with SSL support enabled!"
 		die "MySQL does not support being built statically with SSL support enabled!"
 	fi
 
 	if ! mysql_version_is_at_least "5.0" \
-	&& useq "raid" \
-	&& useq "static" ; then
+	&& use raid \
+	&& use static ; then
 		eerror "USE flags 'raid' and 'static' conflict, you cannot build MySQL statically"
 		eerror "with RAID support enabled."
 		die "USE flags 'raid' and 'static' conflict!"
 	fi
 
 	if mysql_version_is_at_least "4.1.3" \
-	&& ( useq "cluster" || useq "extraengine" ) \
-	&& useq "minimal" ; then
+	&& ( use cluster || use extraengine ) \
+	&& use minimal ; then
 		eerror "USE flags 'cluster' and 'extraengine' conflict with 'minimal' USE flag!"
 		die "USE flags 'cluster' and 'extraengine' conflict with 'minimal' USE flag!"
 	fi
 
 	mysql_check_version_range "4.0 to 5.0.99.99" \
-	&& useq "berkdb" \
+	&& use berkdb \
 	&& elog "Berkeley DB support is deprecated and will be removed in future versions!"
 }
 
@@ -553,7 +553,7 @@ mysql_src_unpack() {
 	if mysql_version_is_at_least "5.1.12" ; then
 		rebuilddirlist="."
 		# TODO IMPO! Check this with a cmake expert 
-		useq "innodb" \
+		use innodb \
 		&& cmake \
 			-DCMAKE_C_COMPILER=$(which $(tc-getCC)) \
 			-DCMAKE_CXX_COMPILER=$(which $(tc-getCC)) \
@@ -570,7 +570,7 @@ mysql_src_unpack() {
 	done
 
 	if mysql_check_version_range "4.1 to 5.0.99.99" \
-	&& useq "berkdb" ; then
+	&& use berkdb ; then
 		[[ -w "bdb/dist/ltmain.sh" ]] && cp -f "ltmain.sh" "bdb/dist/ltmain.sh"
 		pushd "bdb/dist" \
 		&& sh s_all \
@@ -587,7 +587,7 @@ mysql_src_compile() {
 	# $myconf is modified by the configure_* functions
 	local myconf=""
 
-	if useq "minimal" ; then
+	if use minimal ; then
 		configure_minimal
 	else
 		configure_common
@@ -632,7 +632,7 @@ mysql_src_compile() {
 
 	emake || die "emake failed"
 
-	mysql_version_is_at_least "5.1.1" && useq "pbxt" && pbxt_src_compile
+	mysql_version_is_at_least "5.1.12" && use pbxt && pbxt_src_compile
 }
 
 mysql_src_install() {
@@ -641,7 +641,7 @@ mysql_src_install() {
 
 	emake install DESTDIR="${D}" benchdir_root="${MY_SHAREDSTATEDIR}" || die
 
-	mysql_version_is_at_least "5.1.12" && useq "pbxt" && pbxt_src_install
+	mysql_version_is_at_least "5.1.12" && use pbxt && pbxt_src_install
 
 	insinto "${MY_INCLUDEDIR}"
 	doins "${MY_INCLUDEDIR}"/my_{config,dir}.h
@@ -669,7 +669,7 @@ mysql_src_install() {
 	fi
 
 	# clean up stuff for a minimal build
-	if useq "minimal" ; then
+	if use minimal ; then
 		rm -Rf "${D}${MY_SHAREDSTATEDIR}"/{mysql-test,sql-bench}
 		rm -f "${D}"/usr/bin/{mysql{_install_db,manager*,_secure_installation,_fix_privilege_tables,hotcopy,_convert_table_format,d_multi,_fix_extensions,_zap,_explain_log,_tableinfo,d_safe,_install,_waitpid,binlog,test},myisam*,isam*,pack_isam}
 		rm -f "${D}/usr/sbin/mysqld"
@@ -698,13 +698,13 @@ mysql_src_install() {
 		-e "s!@DATADIR@!${DATADIR}!g" \
 		"${FILESDIR}/my.cnf-${mysql_mycnf_version}" \
 		> "${TMPDIR}/my.cnf.ok"
-	if mysql_version_is_at_least "4.1" && useq "latin1" ; then
+	if mysql_version_is_at_least "4.1" && use latin1 ; then
 		sed -e "s|utf8|latin1|g" -i "${TMPDIR}/my.cnf.ok"
 	fi
 	newins "${TMPDIR}/my.cnf.ok" my.cnf
 
 	# Minimal builds don't have the MySQL server
-	if ! useq "minimal" ; then
+	if ! use minimal ; then
 		# Empty directories ...
 		diropts "-m0750"
 		if [[ "${PREVIOUS_DATADIR}" != "yes" ]] ; then
@@ -725,7 +725,7 @@ mysql_src_install() {
 	dodoc README COPYING ChangeLog EXCEPTIONS-CLIENT INSTALL-SOURCE
 
 	# Minimal builds don't have the MySQL server
-	if ! useq "minimal" ; then
+	if ! use minimal ; then
 		docinto "support-files"
 		for script in \
 			support-files/my-*.cnf \
@@ -784,7 +784,7 @@ mysql_pkg_postinst() {
 	chmod 0660 "${ROOT}${MY_LOGDIR}"/mysql*
 
 	# Minimal builds don't have the MySQL server
-	if ! useq "minimal" ; then
+	if ! use minimal ; then
 		docinto "support-files"
 		for script in \
 			support-files/my-*.cnf \
@@ -801,7 +801,7 @@ mysql_pkg_postinst() {
 	fi
 
 	#einfo "you may want to read slotting upgrade documents in the overlay"
-	if mysql_version_is_at_least "5.1" && useq "pbxt" ; then
+	if mysql_version_is_at_least "5.1.12" && use pbxt ; then
 		# TODO tell it better ;-)
 		elog "mysql> INSTALL PLUGIN pbxt SONAME 'libpbxt.so';"
 		elog "CREATE TABLE t1 (c1 int, c2 text) ENGINE=pbxt;"
@@ -816,7 +816,7 @@ mysql_pkg_postinst() {
 		elog ") CHARACTER SET utf8 COLLATE utf8_bin;"
 	fi
 	mysql_check_version_range "4.0 to 5.0.99.99" \
-	&& useq "berkdb" \
+	&& use berkdb \
 	&& elog "Berkeley DB support is deprecated and will be removed in future versions!"
 }
 
