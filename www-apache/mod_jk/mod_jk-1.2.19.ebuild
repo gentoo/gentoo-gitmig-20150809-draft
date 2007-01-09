@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.19.ebuild,v 1.3 2006/11/05 23:34:06 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.19.ebuild,v 1.4 2007/01/09 15:43:50 caster Exp $
 
 inherit apache-module autotools java-pkg-opt-2
 
@@ -69,7 +69,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Tomcat is not a dependency of mod_jk any longer, if you intend"
-	einfo "to use it with Tomcat, you have to merge www-servers/tomcat on"
-	einfo "your own."
+	elog "Tomcat is not a dependency of mod_jk any longer, if you intend"
+	elog "to use it with Tomcat, you have to merge www-servers/tomcat on"
+	elog "your own."
 }
