@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gems.eclass,v 1.13 2007/01/04 19:00:47 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gems.eclass,v 1.14 2007/01/09 23:29:17 flameeyes Exp $
 #
 # Author: Rob Cakebread <pythonhead@gentoo.org>
 # Current Maintainer: Ruby Herd <ruby@gentoo.org>
@@ -10,9 +10,9 @@
 # the Gentoo Linux system.
 #
 # - Features:
-# gems_location()     - Set ${GEMSDIR} with gem install dir and ${GEM_SRC} with path to gem to install
+# gems_location()	  - Set ${GEMSDIR} with gem install dir and ${GEM_SRC} with path to gem to install
 # gems_src_install()  - installs a gem into ${D}
-# gems_src_unpack()   - Does nothing.
+# gems_src_unpack()	  - Does nothing.
 # gems_src_compile()  - Does nothing.
 #
 # NOTE:
@@ -74,7 +74,7 @@ gems_src_install() {
 	# even if the dependencies are not found. So we are testing if rubygems at
 	# least installed the gemspec (which should always occur otherwise).
 	# See bug #104733
-	test -f ${spec_path} || die "gem install failed"
+	test -f ${spec_path} || die "gem install failed (spec file ${spec_path} missing)"
 
 	if [ -d ${D}/${GEMSDIR}/bin ] ; then
 		exeinto /usr/bin
