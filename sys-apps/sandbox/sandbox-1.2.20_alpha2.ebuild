@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.20_alpha2.ebuild,v 1.3 2006/11/22 14:25:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.20_alpha2.ebuild,v 1.4 2007/01/09 19:52:02 vapier Exp $
 
 #
 # don't monkey with this ebuild unless contacting portage devs.
@@ -113,21 +113,21 @@ src_install() {
 	for ABI in $(get_install_abis); do
 		cd "${WORKDIR}/build-${ABI}-${CHOST}"
 		einfo "Installing sandbox for ABI=${ABI}..."
-		make DESTDIR="${D}" install || die "make install failed for ${ABI}"
+		emake DESTDIR="${D}" install || die "make install failed for ${ABI}"
 	done
 	ABI=${OABI}
 
-	doenvd "${FILESDIR}/09sandbox"
+	doenvd "${FILESDIR}"/09sandbox
 
 	keepdir /var/log/sandbox
 	fowners root:portage /var/log/sandbox
 	fperms 0770 /var/log/sandbox
 
-	cd ${S}
+	cd "${S}"
 	dodoc AUTHORS ChangeLog NEWS README
 }
 
 pkg_preinst() {
-	chown root:portage ${IMAGE}/var/log/sandbox
-	chmod 0770 ${IMAGE}/var/log/sandbox
+	chown root:portage "${D}"/var/log/sandbox
+	chmod 0770 "${D}"/var/log/sandbox
 }
