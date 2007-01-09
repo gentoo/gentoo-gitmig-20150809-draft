@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-1.10.ebuild,v 1.3 2006/12/10 09:34:17 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-1.10.ebuild,v 1.4 2007/01/09 08:01:31 bangert Exp $
 
 inherit flag-o-matic
 
@@ -43,7 +43,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "No demo-/sample-configfile is included in the distribution -- read the man-page"
-	einfo "for more info."
-	einfo "A sample (localhost:8888 -> localhost:80) for gentoo is given in \"/etc/pound.cfg\"."
+	elog "No demo-/sample-configfile is included in the distribution -- read the man-page"
+	elog "for more info."
+	elog "A sample (localhost:8888 -> localhost:80) for gentoo is given in \"/etc/pound.cfg\"."
 }
