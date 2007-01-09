@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/files/lighttpd.initd-1.4.13-r1,v 1.1 2007/01/09 18:20:10 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/files/lighttpd.initd-1.4.13-r1,v 1.2 2007/01/09 20:56:24 robbat2 Exp $
 
 opts="depend checkconfig start stop reload graceful"
 
@@ -50,7 +50,7 @@ reload() {
 	fi
 	checkconfig || return 1
 	ebegin "Re-opening lighttpd log files"
-	kill -HUP `cat ${LIGHTTPD_PID}` &>/dev/null
+	kill -HUP $(<${LIGHTTPD_PID}) &>/dev/null
 	eend $?
 }
 
@@ -64,7 +64,7 @@ graceful() {
 		## s-s-d causes a 5 second delay here
 		#start-stop-daemon --stop --quiet --pidfile ${LIGHTTPD_PID} \
 		#	--signal SIGINT
-		kill -INT `cat ${LIGHTTPD_PID}`
+		kill -INT $(<${LIGHTTPD_PID})
 		rm -f ${LIGHTTPD_PID}
 		start
 	fi
