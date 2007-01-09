@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/jetty/jetty-4.2.19.ebuild,v 1.6 2006/10/05 14:53:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/jetty/jetty-4.2.19.ebuild,v 1.7 2007/01/09 15:45:36 caster Exp $
 
 inherit eutils
 
@@ -68,33 +68,33 @@ pkg_postinst() {
 	einfo " NOTICE!"
 	einfo " User and group 'jetty' have been added."
 	einfo
-	einfo " FILE LOCATIONS:"
-	einfo " 1.  Jetty home directory: ${JETTY_HOME}"
-	einfo "     Contains application data, configuration files."
-	einfo " 2.  Runtime settings: /etc/conf.d/jetty"
-	einfo "     Contains CLASSPATH,JAVA_HOME,JAVA_OPTIONS,JETTY_PORT"
-	einfo "              JETTY_USER,JETTY_CONF setting"
-	einfo " 3.  You can configure your 'webapp'-lications in /etc/jetty.conf"
-	einfo "     (the default configured webapps are the JETTY's demo/admin)"
-	einfo " 4.  For more information about JETTY refer to jetty.mortbay.org"
-	einfo " 5.  Logs are located at:"
-	einfo "                              /var/log/jetty/"
-	einfo
-	einfo " STARTING AND STOPPING JETTY:"
-	einfo "   /etc/init.d/jetty start"
-	einfo "   /etc/init.d/jetty stop"
-	einfo "   /etc/init.d/jetty restart"
-	einfo
-	einfo
-	einfo " NETWORK CONFIGURATION:"
-	einfo " By default, Jetty runs on port 8080.  You can change this"
-	einfo " value by setting JETTY_PORT in /etc/conf.d/jetty ."
-	einfo
-	einfo " To test Jetty while it's running, point your web browser to:"
-	einfo " http://localhost:8080/"
-	einfo
-	einfo " BUGS:"
-	einfo " Please file any bugs at http://bugs.gentoo.org/ or else it"
-	einfo " may not get seen. Thank you!"
-	einfo
+	elog " FILE LOCATIONS:"
+	elog " 1.  Jetty home directory: ${JETTY_HOME}"
+	elog "     Contains application data, configuration files."
+	elog " 2.  Runtime settings: /etc/conf.d/jetty"
+	elog "     Contains CLASSPATH,JAVA_HOME,JAVA_OPTIONS,JETTY_PORT"
+	elog "              JETTY_USER,JETTY_CONF setting"
+	elog " 3.  You can configure your 'webapp'-lications in /etc/jetty.conf"
+	elog "     (the default configured webapps are the JETTY's demo/admin)"
+	elog " 4.  For more information about JETTY refer to jetty.mortbay.org"
+	elog " 5.  Logs are located at:"
+	elog "                              /var/log/jetty/"
+	elog
+	elog " STARTING AND STOPPING JETTY:"
+	elog "   /etc/init.d/jetty start"
+	elog "   /etc/init.d/jetty stop"
+	elog "   /etc/init.d/jetty restart"
+	elog
+	elog
+	elog " NETWORK CONFIGURATION:"
+	elog " By default, Jetty runs on port 8080.  You can change this"
+	elog " value by setting JETTY_PORT in /etc/conf.d/jetty ."
+	elog
+	elog " To test Jetty while it's running, point your web browser to:"
+	elog " http://localhost:8080/"
+	elog
+	elog " BUGS:"
+	elog " Please file any bugs at http://bugs.gentoo.org/ or else it"
+	elog " may not get seen. Thank you!"
+	elog
 }

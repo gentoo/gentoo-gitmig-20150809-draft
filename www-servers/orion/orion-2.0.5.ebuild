@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/orion-2.0.5.ebuild,v 1.8 2006/10/05 14:50:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/orion-2.0.5.ebuild,v 1.9 2007/01/09 15:45:39 caster Exp $
 
 inherit eutils java-pkg
 
@@ -92,37 +92,37 @@ pkg_postinst() {
 	einfo " if you have not done so already."
 	einfo
 	einfo
-	einfo " FILE LOCATIONS:"
-	einfo " 1.  Orion home directory: /opt/orion"
-	einfo "     Contains application data, configuration files."
-	einfo " 2.  Runtime settings: /etc/conf.d/orion"
-	einfo "     Contains CLASSPATH and JDK settings."
-	einfo " 3.  Logs:  /var/log/orion/"
-	einfo " 4.  Executables, libraries:  /usr/share/${PN}/"
-	einfo
-	einfo
-	einfo " STARTING AND STOPPING ORION:"
-	einfo "   /etc/init.d/orion start"
-	einfo "   /etc/init.d/orion stop"
-	einfo "   /etc/init.d/orion restart"
-	einfo
-	einfo
-	einfo " NETWORK CONFIGURATION:"
-	einfo " By default, Orion runs on port 8080.  You can change this"
-	einfo " value by editing /opt/orion/config/default-web-site.xml."
-	einfo
-	einfo " To test Orion while it's running, point your web browser to:"
-	einfo " http://localhost:8080/"
-	einfo
-	einfo
-	einfo " APPLICATION DEPLOYMENT:"
-	einfo " To set an administrative password, execute the following"
-	einfo " commands as user 'orion':"
-	einfo " \$ java -jar /usr/share/${PN}/lib/orion.jar -install"
-	einfo
-	einfo
-	einfo " BUGS:"
-	einfo " Please file any bugs at http://bugs.gentoo.org/ or else it"
-	einfo " may not get seen.  Thank you."
-	einfo
+	elog " FILE LOCATIONS:"
+	elog " 1.  Orion home directory: /opt/orion"
+	elog "     Contains application data, configuration files."
+	elog " 2.  Runtime settings: /etc/conf.d/orion"
+	elog "     Contains CLASSPATH and JDK settings."
+	elog " 3.  Logs:  /var/log/orion/"
+	elog " 4.  Executables, libraries:  /usr/share/${PN}/"
+	elog
+	elog
+	elog " STARTING AND STOPPING ORION:"
+	elog "   /etc/init.d/orion start"
+	elog "   /etc/init.d/orion stop"
+	elog "   /etc/init.d/orion restart"
+	elog
+	elog
+	elog " NETWORK CONFIGURATION:"
+	elog " By default, Orion runs on port 8080.  You can change this"
+	elog " value by editing /opt/orion/config/default-web-site.xml."
+	elog
+	elog " To test Orion while it's running, point your web browser to:"
+	elog " http://localhost:8080/"
+	elog
+	elog
+	elog " APPLICATION DEPLOYMENT:"
+	elog " To set an administrative password, execute the following"
+	elog " commands as user 'orion':"
+	elog " \$ java -jar /usr/share/${PN}/lib/orion.jar -install"
+	elog
+	elog
+	elog " BUGS:"
+	elog " Please file any bugs at http://bugs.gentoo.org/ or else it"
+	elog " may not get seen.  Thank you."
+	elog
 }
