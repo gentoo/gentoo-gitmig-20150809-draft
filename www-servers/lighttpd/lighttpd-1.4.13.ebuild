@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.13.ebuild,v 1.1 2007/01/07 10:36:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.13.ebuild,v 1.2 2007/01/09 18:00:38 robbat2 Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -20,7 +20,7 @@ RDEPEND=">=sys-libs/zlib-1.1
 	fam?      ( virtual/fam )
 	gdbm?     ( sys-libs/gdbm )
 	ldap?     ( >=net-nds/openldap-2.1.26 )
-	lua?      ( dev-lang/lua )
+	lua?      ( >=dev-lang/lua-5.1 )
 	memcache? ( dev-libs/libmemcache )
 	mysql?    ( >=virtual/mysql-4.0 )
 	pcre?     ( >=dev-libs/libpcre-3.1 )
@@ -71,7 +71,7 @@ remove_non_essential() {
 	use pcre    || rm -f ${libdir}/mod_{ssi,re{direct,write}}.*
 	use webdav  || rm -f ${libdir}/mod_webdav.*
 	use mysql   || rm -f ${libdir}/mod_mysql_vhost.*
-	use lua     || rm -f ${libdir}/mod_cml.*
+	use lua     || rm -f ${libdir}/mod_{cml,magnet}.*
 	use rrdtool || rm -f ${libdir}/mod_rrdtool.*
 
 	if ! use fastcgi ; then
