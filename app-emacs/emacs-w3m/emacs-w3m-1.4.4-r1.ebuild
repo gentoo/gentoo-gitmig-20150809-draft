@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.4.4-r1.ebuild,v 1.6 2006/11/17 10:18:09 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.4.4-r1.ebuild,v 1.7 2007/01/09 12:33:42 opfer Exp $
 
 inherit elisp eutils
 
@@ -54,7 +54,7 @@ pkg_postinst() {
 	elisp-site-regen
 	einfo "Please see /usr/share/doc/${P}/README.gz."
 	einfo
-	einfo "If you want to use shimbun library, please emerge app-emacs/apel and app-emacs/flim."
+	elog "If you want to use shimbun library, please emerge app-emacs/apel and app-emacs/flim."
 	einfo
 }
 
