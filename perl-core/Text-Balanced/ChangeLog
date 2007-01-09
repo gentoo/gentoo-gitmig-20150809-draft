@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Text-Balanced
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Text-Balanced/ChangeLog,v 1.11 2007/01/02 15:33:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Text-Balanced/ChangeLog,v 1.12 2007/01/09 00:35:04 mcummings Exp $
+
+  09 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  Text-Balanced-2.0.0.ebuild:
+  Bug 160967, missing dep - thanks Haroon :)
 
 *Text-Balanced-2.0.0 (02 Jan 2007)
 
