@@ -11,10 +11,4 @@ NTPCLIENT_CMD="ntpdate"
 # change the default 'pool.ntp.org' to something closer
 # to your machine.  See http://www.pool.ntp.org/ or
 # try running `netselect -s 3 pool.ntp.org`.
-NTPCLIENT_OPTS="-Q -b -u pool.ntp.org"
-
-# How long to wait (in seconds) before giving up.
-# Useful for when you boot and DNS/internet isn't
-# really available but you have your net interface
-# come up with say a static IP.
-NTPCLIENT_TIMEOUT=30
+NTPCLIENT_OPTS="-s -b -u pool.ntp.org"

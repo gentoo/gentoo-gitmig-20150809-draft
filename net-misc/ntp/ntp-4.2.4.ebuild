@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.4.ebuild,v 1.1 2006/12/31 14:45:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.4.ebuild,v 1.2 2007/01/09 17:51:14 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -99,7 +99,6 @@ src_install() {
 	newinitd "${FILESDIR}"/ntp-client.rc ntp-client
 	newconfd "${FILESDIR}"/ntp-client.confd ntp-client
 	use caps || dosed "s|-u ntp:ntp||" /etc/conf.d/ntpd
-	dosed "s:-Q::" /etc/conf.d/ntp-client # no longer needed
 	dosed "s:/usr/bin:/usr/sbin:" /etc/init.d/ntpd
 
 	keepdir /var/lib/ntp

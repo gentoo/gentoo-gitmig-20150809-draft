@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntp-client.rc,v 1.8 2005/05/14 19:12:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntp-client.rc,v 1.9 2007/01/09 17:51:14 vapier Exp $
 
 depend() {
 	before cron portmap
@@ -10,12 +10,12 @@ depend() {
 }
 
 checkconfig() {
-	if [ ! -x "`which ${NTPCLIENT_CMD} 2>/dev/null`" ] ; then
+	if ! type -p ${NTPCLIENT_CMD} > /dev/null ; then
 		eerror "Please edit /etc/conf.d/ntp-client"
 		eerror "Unable to locate the client command ${NTPCLIENT_CMD}!"
 		return 1
 	fi
-	if [ -z "${NTPCLIENT_OPTS}" ] ; then
+	if [[ -z ${NTPCLIENT_OPTS} ]] ; then
 		eerror "Please edit /etc/conf.d/ntp-client"
 		eerror "I need to know what server/options to use!"
 		return 1
@@ -28,8 +28,5 @@ start() {
 
 	ebegin "Setting clock via the NTP client '${NTPCLIENT_CMD}'"
 	${NTPCLIENT_CMD} ${NTPCLIENT_OPTS} >/dev/null &
-	local pid=$!
-	(sleep ${NTPCLIENT_TIMEOUT:-30}; kill -9 ${pid} >&/dev/null) &
-	wait ${pid}
 	eend $? "Failed to set clock"
 }
