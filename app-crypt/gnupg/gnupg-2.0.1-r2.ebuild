@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.1-r2.ebuild,v 1.3 2007/01/06 09:58:05 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.1-r2.ebuild,v 1.4 2007/01/09 17:39:38 robbat2 Exp $
 
 WANT_AUTOCONF='latest'
 WANT_AUTOMAKE='latest'
@@ -26,9 +26,8 @@ COMMON_DEPEND="
 	bzip2? ( app-arch/bzip2 )
 	pcsc-lite? ( >=sys-apps/pcsc-lite-1.3.0 )
 	openct? ( >=dev-libs/openct-0.5.0 )
-	ldap? ( net-nds/openldap )"
-# Needs sh and arm to be keyworded on pinentry
-#	X? ( app-crypt/pinentry )
+	ldap? ( net-nds/openldap )
+	app-crypt/pinentry"
 
 DEPEND="${COMMON_DEPEND}
 	nls? ( sys-devel/gettext )
