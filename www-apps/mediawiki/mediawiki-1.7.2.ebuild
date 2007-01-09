@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.8.2.ebuild,v 1.7 2007/01/09 10:27:00 tchiwam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.7.2.ebuild,v 1.1 2007/01/09 10:27:00 tchiwam Exp $
 
 inherit webapp depend.php
 
@@ -9,8 +9,9 @@ HOMEPAGE="http://www.mediawiki.org"
 SRC_URI="mirror://sourceforge/wikipedia/${P/.0_/}.tar.gz"
 RESTRICT="nomirror"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="imagemagick math mysql postgres restrict"
+#KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ppc sparc x86"
+IUSE="imagemagick math"
 
 S="${WORKDIR}/${P/.0_/}"
 
@@ -18,8 +19,7 @@ DEPEND="math? ( >=dev-lang/ocaml-3.0.6 )"
 
 RDEPEND="
 		>=dev-lang/php-5.1.4-r6
-		mysql? ( >=virtual/mysql-4.0 )
-		postgres? ( >=dev-db/postgresql-8.1.5 )
+		>=virtual/mysql-4.0
 		math? (
 			virtual/tetex
 			virtual/ghostscript
@@ -34,23 +34,15 @@ need_php
 
 pkg_setup() {
 	webapp_pkg_setup
-	require_php_with_use pcre session
-	if use mysql ; then
-		require_php_with_use mysql
-	fi
-	if use postgres ; then
-		require_php_with_use postgres
-	fi
+	require_php_with_use pcre session mysql
 	require_gd
 }
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/jobindexlength-mysql.patch
-	if use restrict ; then
-		epatch ${FILESDIR}/access_restrict.patch
-	fi
+	epatch ${FILESDIR}/jobindexlength-mysql4.patch
+	epatch ${FILESDIR}/jobindexlength-mysql5.patch
 }
 
 src_compile() {
@@ -75,18 +67,14 @@ src_install() {
 		"extensions"
 		"images"
 		"includes"
-		"includes/api"
 		"includes/cbt"
 		"includes/normal"
 		"includes/templates"
 		"includes/zhtable"
 		"languages"
-		"languages/classes"
-		"languages/messages"
 		"locale"
 		"maintenance"
 		"maintenance/archives"
-		"maintenance/postgres"
 		"maintenance/dtrace"
 		"maintenance/mysql5"
 		"maintenance/storage"

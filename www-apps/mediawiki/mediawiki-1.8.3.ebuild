@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.8.2.ebuild,v 1.7 2007/01/09 10:27:00 tchiwam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.8.3.ebuild,v 1.1 2007/01/09 10:27:00 tchiwam Exp $
 
 inherit webapp depend.php
 
@@ -18,8 +18,6 @@ DEPEND="math? ( >=dev-lang/ocaml-3.0.6 )"
 
 RDEPEND="
 		>=dev-lang/php-5.1.4-r6
-		mysql? ( >=virtual/mysql-4.0 )
-		postgres? ( >=dev-db/postgresql-8.1.5 )
 		math? (
 			virtual/tetex
 			virtual/ghostscript
