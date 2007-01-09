@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/imaging
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.28 2006/09/21 12:57:52 cardoe Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.29 2007/01/09 13:24:53 dev-zero Exp $
+
+*imaging-1.1.6 (09 Jan 2007)
+
+  09 Jan 2007; Tiziano Müller <dev-zero@gentoo.org>
+  -imaging-1.1.4-r1.ebuild, +imaging-1.1.6.ebuild:
+  Version bump (bug #160875). Dropped old version.
 
   21 Sep 2006; Doug Goldstein <cardoe@gentoo.org> imaging-1.1.4-r1.ebuild,
   imaging-1.1.5.ebuild:
