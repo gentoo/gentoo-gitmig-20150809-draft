@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrestop/xrestop-0.4.ebuild,v 1.3 2006/10/21 22:52:51 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrestop/xrestop-0.4.ebuild,v 1.4 2007/01/09 01:42:16 ticho Exp $
 
 DESCRIPTION="'Top' like statistics of X11 client's server side resource usage"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/xrestop"
@@ -8,7 +8,7 @@ SRC_URI="http://projects.o-hand.com/sources/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc x86"
 IUSE=""
 
 RDEPEND="x11-libs/libXres
