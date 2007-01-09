@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/bfm-1.2.ebuild,v 1.5 2005/07/16 19:45:18 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/bfm-1.2.ebuild,v 1.6 2007/01/09 15:31:49 caster Exp $
 
 inherit java-pkg
 
@@ -72,8 +72,8 @@ pkg_postinst() {
 	einfo ""
 	einfo "Bfm - The Brutal File Manager has been successfully installed!"
 	einfo ""
-	einfo "A system wide config file has been installed to /etc/bfm/bfm.conf"
-	einfo "Copy the file to ~/.bfm/bfm.conf to set local settings"
+	elog "A system wide config file has been installed to /etc/bfm/bfm.conf"
+	elog "Copy the file to ~/.bfm/bfm.conf to set local settings"
 	einfo ""
 	ewarn ""
 	ewarn "Be sure to run bfm in safe mode if you don't want to delete files"
