@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/ctorrent
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ChangeLog,v 1.16 2006/10/09 20:02:09 drizzt Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ChangeLog,v 1.17 2007/01/09 17:33:34 armin76 Exp $
+
+  09 Jan 2007; Raúl Porcel (armin76) <armin76@gentoo.org>
+  ctorrent-1.3.4-r3.ebuild:
+  Fix autotools variables, bug 161117
 
   09 Oct 2006; Timothy Redaelli <drizzt@gentoo.org>
   ctorrent-1.3.4-r3.ebuild:

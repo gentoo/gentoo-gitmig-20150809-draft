@@ -1,7 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ctorrent-1.3.4-r3.ebuild,v 1.5 2006/10/09 20:02:09 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ctorrent-1.3.4-r3.ebuild,v 1.6 2007/01/09 17:33:34 armin76 Exp $
 
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 inherit eutils autotools
 
 DESCRIPTION="CTorrent is a BitTorrent console client written in C and C++."
