@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.7.3.1-r2.ebuild,v 1.3 2006/10/05 14:56:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.7.3.1-r2.ebuild,v 1.4 2007/01/09 15:34:06 caster Exp $
 
 inherit java-pkg eutils versionator
 
@@ -102,21 +102,21 @@ pkg_postinst() {
 	ewarn "'server.properties' and 'sqltool.rc' files."
 	ewarn "(read the 'Init script Setup Procedure' section of the 'Chapter 3."
 	ewarn "UNIX Quick Start' in the hsqldb docs for more information)"
-	einfo ""
-	einfo "Example:"
-	einfo ""
-	einfo "/etc/hsqldb/server.properties"
-	einfo "============================="
-	einfo "server.database.1=file:/var/lib/hsqldb/newdb/newdb"
-	einfo "server.dbname.1=newdb"
-	einfo "server.urlid.1=newdb"
-	einfo ""
-	einfo "/etc/hsqldb/sqltool.rc"
-	einfo "======================"
-	einfo "urlid newdb"
-	einfo "url jdbc:hsqldb:hsql://localhost/newdb"
-	einfo "username sa"
-	einfo "password "
+	elog ""
+	elog "Example:"
+	elog ""
+	elog "/etc/hsqldb/server.properties"
+	elog "============================="
+	elog "server.database.1=file:/var/lib/hsqldb/newdb/newdb"
+	elog "server.dbname.1=newdb"
+	elog "server.urlid.1=newdb"
+	elog ""
+	elog "/etc/hsqldb/sqltool.rc"
+	elog "======================"
+	elog "urlid newdb"
+	elog "url jdbc:hsqldb:hsql://localhost/newdb"
+	elog "username sa"
+	elog "password "
 	ewarn ""
 	ewarn "Also note that each hsqldb server can serve only up to 10"
 	ewarn "different databases simultaneously (with consecutive {0-9}"
