@@ -1,0 +1,11 @@
+# ChangeLog for games-action/descent2-data
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-data/ChangeLog,v 1.1 2007/01/09 21:28:10 wolf31o2 Exp $
+
+*descent2-data-1.0 (09 Jan 2007)
+
+  09 Jan 2007; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +descent2-data-1.0.ebuild:
+  Initial import. Ebuild by Paul Bredbury <brebs@sent.com> based loosely on
+  the games-action/d2x ebuild. Closing bug #137307.
+
