@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/pmd-3.8-r1.ebuild,v 1.2 2006/12/09 09:31:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/pmd-3.8-r1.ebuild,v 1.3 2007/01/09 15:40:19 caster Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -71,8 +71,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo ""
-	einfo "Example rulesets can be found under"
-	einfo "/usr/share/pmd/rulesets/"
-	einfo ""
+	elog ""
+	elog "Example rulesets can be found under"
+	elog "/usr/share/pmd/rulesets/"
+	elog ""
 }
