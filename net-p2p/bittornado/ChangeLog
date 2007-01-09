@@ -1,6 +1,6 @@
 # ChangeLog for net-p2p/bittornado
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/ChangeLog,v 1.54 2007/01/08 19:35:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/ChangeLog,v 1.55 2007/01/09 11:20:20 tove Exp $
 
 *bittornado-0.3.18 (08 Jan 2007)
 
@@ -14,7 +14,7 @@
   +bittornado-0.3.17.ebuild:
   Version bump. Remove old version. Bug #151105.
 
-  20 Oct 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   bittornado-0.3.15.ebuild:
   Stable on Alpha.
 
@@ -154,7 +154,7 @@
   04 Jul 2004; Martin Holzer <mholzer@gentoo.org> +bittornado-0.3.4.ebuild:
   Version bumped.
 
-  03 Jul 2004; Bryan Ãstergaard <kloeri@gentoo.org> bittornado-0.3.1.ebuild,
+  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> bittornado-0.3.1.ebuild,
   bittornado-0.3.2.ebuild, bittornado-0.3.3.ebuild:
   Change wxPython to wxpython.
 
