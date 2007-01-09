@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r8.ebuild,v 1.15 2006/11/07 05:12:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r8.ebuild,v 1.16 2007/01/09 09:28:03 mr_bones_ Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -30,15 +30,16 @@ DEPEND=">=media-libs/libsdl-1.2.0
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-m4.patch
-	epatch "${FILESDIR}"/${P}-gnu-stack.patch
-	epatch "${FILESDIR}"/${P}-config.patch
-	epatch "${FILESDIR}"/${P}-PIC.patch
-	epatch "${FILESDIR}"/${P}-gcc41.patch
-	epatch "${FILESDIR}"/${P}-flags.patch
-	epatch "${FILESDIR}"/${P}-automake.patch
-	epatch "${FILESDIR}"/${P}-mmx.patch
-	epatch "${FILESDIR}"/${P}-malloc.patch
+	epatch "${FILESDIR}"/${P}-m4.patch \
+		"${FILESDIR}"/${P}-gnu-stack.patch \
+		"${FILESDIR}"/${P}-config.patch \
+		"${FILESDIR}"/${P}-PIC.patch \
+		"${FILESDIR}"/${P}-gcc41.patch \
+		"${FILESDIR}"/${P}-flags.patch \
+		"${FILESDIR}"/${P}-automake.patch \
+		"${FILESDIR}"/${P}-mmx.patch \
+		"${FILESDIR}"/${P}-malloc.patch \
+		"${FILESDIR}"/${P}-missing-init.patch
 
 	cd "${WORKDIR}"
 	epatch "${DISTDIR}"/${P}-gtkm4.patch.bz2

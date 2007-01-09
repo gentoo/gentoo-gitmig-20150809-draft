@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/smpeg
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.46 2006/10/15 17:54:54 tester Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.47 2007/01/09 09:28:03 mr_bones_ Exp $
+
+  09 Jan 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/smpeg-0.4.4-missing-init.patch, smpeg-0.4.4-r8.ebuild:
+  Add patch for corner case of bad file open.  From Vincent via bug #160795
 
   15 Oct 2006; Olivier Crête <tester@gentoo.org> smpeg-0.4.4-r8.ebuild:
   Stable on amd64 per bug #150341
