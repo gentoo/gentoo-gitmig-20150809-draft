@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2-r2.ebuild,v 1.7 2006/11/24 21:41:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2-r2.ebuild,v 1.8 2007/01/09 15:27:13 caster Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -69,15 +69,15 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "The system directory for jEdit plugins is"
-	einfo "/usr/share/jedit/jars"
+	elog "The system directory for jEdit plugins is"
+	elog "/usr/share/jedit/jars"
 }
 
 pkg_postrm() {
-	einfo "jEdit plugins installed into /usr/share/jedit/jars"
-	einfo "(after installation of jEdit itself) haven't been"
-	einfo "removed. To get rid of jEdit completely, you may"
-	einfo "want to run"
-	einfo ""
-	einfo "\trm -r /usr/share/jedit"
+	elog "jEdit plugins installed into /usr/share/jedit/jars"
+	elog "(after installation of jEdit itself) haven't been"
+	elog "removed. To get rid of jEdit completely, you may"
+	elog "want to run"
+	elog ""
+	elog "\trm -r /usr/share/jedit"
 }
