@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/kedpm
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/ChangeLog,v 1.14 2006/06/30 13:50:58 dragonheart Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/ChangeLog,v 1.15 2007/01/09 20:50:55 dev-zero Exp $
+
+  09 Jan 2007; Tiziano Müller <dev-zero@gentoo.org> -kedpm-0.4.0.ebuild,
+  kedpm-0.4.0-r1.ebuild:
+  Dropped old version. Several cleanups and check for dev-python/pygtk gnome
+  USE-flag removed.
 
 *kedpm-0.4.0-r1 (30 Jun 2006)
 

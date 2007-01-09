@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/kedpm-0.4.0-r1.ebuild,v 1.1 2006/06/30 13:50:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/kedpm-0.4.0-r1.ebuild,v 1.2 2007/01/09 20:50:55 dev-zero Exp $
 
 inherit distutils eutils
 
@@ -13,22 +13,9 @@ SLOT="0"
 KEYWORDS="x86 ppc amd64"
 IUSE="gtk"
 
-DEPEND="virtual/python
-	>=sys-apps/sed-4"
+DEPEND=">=sys-apps/sed-4"
 RDEPEND="dev-python/pycrypto
 	gtk? ( >=dev-python/pygtk-2 )"
-
-pkg_setup() {
-	if use gtk
-	then
-		if has_version '<dev-python/pygtk-2.8.0-r2' ; then
-			if ! built_with_use dev-python/pygtk gnome
-			then
-				die "You need to compile dev-python/pygtk with gnome USE flag!"
-			fi
-		fi
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
@@ -44,17 +31,12 @@ src_unpack() {
 }
 
 src_install() {
+	DOCS="AUTHORS CHANGES NEWS"
 	distutils_src_install
-	dodoc AUTHORS CHANGES ChangeLog NEWS PKG-INFO README
-	cp -r test run_tests "${D}/usr/share/${PN}"
 	# menu item
 	domenu "${FILESDIR}/${PN}.desktop"
-
 }
 
-pkg_postinst() {
-	einfo
-	einfo "You can test your kedpm installation running"
-	einfo "cd /usr/share/${PN}/ && ./run_tests"
-	einfo
+src_test() {
+	./run_tests || die "tests failed"
 }
