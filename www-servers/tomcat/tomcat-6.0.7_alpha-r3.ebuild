@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.7_alpha-r3.ebuild,v 1.1 2007/01/05 03:45:33 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.7_alpha-r3.ebuild,v 1.2 2007/01/09 16:49:14 wltjr Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -146,11 +146,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo " This ebuild implements a FHS compliant layout for tomcat"
-	einfo " Please read http://www.gentoo.org/proj/en/java/tomcat-guide.xml"
-	einfo " for more information."
-	einfo
-	einfo " Please report any bugs to http://bugs.gentoo.org/"
-	einfo
+	elog
+	elog " This ebuild implements a FHS compliant layout for tomcat"
+	elog " Please read http://www.gentoo.org/proj/en/java/tomcat-guide.xml"
+	elog " for more information."
+	elog
+	elog " Please report any bugs to http://bugs.gentoo.org/"
+	elog
 }

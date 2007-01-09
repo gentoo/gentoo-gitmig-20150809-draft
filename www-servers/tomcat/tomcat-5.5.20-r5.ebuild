@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r5.ebuild,v 1.9 2006/12/30 16:25:31 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r5.ebuild,v 1.10 2007/01/09 16:49:14 wltjr Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -278,18 +278,18 @@ pkg_postinst() {
 	chown root:root /etc/init.d/${TOMCAT_NAME}
 	chown root:root /etc/conf.d/${TOMCAT_NAME}
 
-	einfo
+	ewarn
 	ewarn " This ebuild implements a new filesystem layout for tomcat"
 	ewarn " please read http://www.gentoo.org/proj/en/java/tomcat-guide.xml"
 	ewarn " for more information!."
-	einfo
-	einfo " Please file any bugs at http://bugs.gentoo.org/ or else it"
-	einfo " may not get seen.  Thank you."
-	einfo
+	elog
+	elog " Please file any bugs at http://bugs.gentoo.org/ or else it"
+	elog " may not get seen.  Thank you."
+	elog
 
-#	einfo "Run emerge --config =${PF}"
-#	einfo "to configure Tomcat if you need to for example"
-#	einfo "change the home directory of the Tomcat user."
+#	elog "Run emerge --config =${PF}"
+#	elog "to configure Tomcat if you need to for example"
+#	elog "change the home directory of the Tomcat user."
 }
 
 #helpers
@@ -302,36 +302,36 @@ pkg_config() {
 	# Better suggestions are welcome
 	local currentdir="$(getent passwd tomcat | gawk -F':' '{ print $6 }')"
 
-	einfo "The default home directory for Tomcat is /dev/null."
-	einfo "You need to change it if your applications needs it to"
-	einfo "be an actual directory. Current home directory:"
-	einfo "${currentdir}"
-	einfo ""
-	einfo "Do you want to change it [yes/no]?"
+	elog "The default home directory for Tomcat is /dev/null."
+	elog "You need to change it if your applications needs it to"
+	elog "be an actual directory. Current home directory:"
+	elog "${currentdir}"
+	elog ""
+	elog "Do you want to change it [yes/no]?"
 
 	local answer
 	read answer
 
 	if [[ "${answer}" == "yes" ]]; then
-		einfo ""
-		einfo "Suggestions:"
-		einfo "${WEBAPPS_DIR}"
-		einfo ""
-		einfo "If you want to suggest a directory, file a bug to"
-		einfo "http://bugs.gentoo.org"
-		einfo ""
-		einfo "Enter home directory:"
+		elog ""
+		elog "Suggestions:"
+		elog "${WEBAPPS_DIR}"
+		elog ""
+		elog "If you want to suggest a directory, file a bug to"
+		elog "http://bugs.gentoo.org"
+		elog ""
+		elog "Enter home directory:"
 
 		local homedir
 		read homedir
 
-		einfo ""
-		einfo "Setting home directory to: ${homedir}"
+		elog ""
+		elog "Setting home directory to: ${homedir}"
 
 		/usr/sbin/usermod -d"${homedir}" tomcat
 
-		einfo "You can run emerge --config =${PF}"
-		einfo "again to change to homedir"
-		einfo "at any time."
+		elog "You can run emerge --config =${PF}"
+		elog "again to change to homedir"
+		elog "at any time."
 	fi
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.27-r6.ebuild,v 1.9 2006/12/08 10:08:00 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.27-r6.ebuild,v 1.10 2007/01/09 16:49:14 wltjr Exp $
 
 inherit eutils
 
@@ -91,39 +91,39 @@ pkg_postinst() {
 
 	chmod 750 /etc/${TOMCAT_NAME}
 
-	einfo
-	einfo " NOTICE!"
-	einfo " FILE LOCATIONS:"
-	einfo " 1.  Tomcat home directory: ${TOMCAT_HOME}"
-	einfo "     Contains application data, configuration files."
-	einfo " 2.  Runtime settings: /etc/conf.d/${TOMCAT_NAME}"
-	einfo "     Contains CLASSPATH and JAVA_HOME settings."
-	einfo " 3.  Configuration:  /etc/${TOMCAT_NAME}"
-	einfo " 4.  Logs:  /var/log/${TOMCAT_NAME}/"
-	einfo
-	einfo
-	einfo " STARTING AND STOPPING TOMCAT:"
-	einfo "   /etc/init.d/${TOMCAT_NAME} start"
-	einfo "   /etc/init.d/${TOMCAT_NAME} stop"
-	einfo "   /etc/init.d/${TOMCAT_NAME} restart"
-	einfo
-	einfo
+	elog
+	elog " NOTICE!"
+	elog " FILE LOCATIONS:"
+	elog " 1.  Tomcat home directory: ${TOMCAT_HOME}"
+	elog "     Contains application data, configuration files."
+	elog " 2.  Runtime settings: /etc/conf.d/${TOMCAT_NAME}"
+	elog "     Contains CLASSPATH and JAVA_HOME settings."
+	elog " 3.  Configuration:  /etc/${TOMCAT_NAME}"
+	elog " 4.  Logs:  /var/log/${TOMCAT_NAME}/"
+	elog
+	elog
+	elog " STARTING AND STOPPING TOMCAT:"
+	elog "   /etc/init.d/${TOMCAT_NAME} start"
+	elog "   /etc/init.d/${TOMCAT_NAME} stop"
+	elog "   /etc/init.d/${TOMCAT_NAME} restart"
+	elog
+	elog
 	ewarn " If you are upgrading from older ebuild do NOT use"
 	ewarn " /etc/init.d/tomcat and /etc/conf.d/tomcat you probably"
 	ewarn " want to remove these."
 	ewarn " A version number has been appended so that tomcat 3, 4 and 5"
 	ewarn " can be installed side by side"
-	einfo
-	einfo " NETWORK CONFIGURATION:"
-	einfo " By default, Tomcat runs on port 8080.  You can change this"
-	einfo " value by editing /etc/${TOMCAT_NAME}/server.xml."
-	einfo
-	einfo " To test Tomcat while it's running, point your web browser to:"
-	einfo " http://localhost:8080/"
-	einfo
-	einfo
-	einfo " BUGS:"
-	einfo " Please file any bugs at http://bugs.gentoo.org/ or else it"
-	einfo " may not get seen.  Thank you."
-	einfo
+	elog
+	elog " NETWORK CONFIGURATION:"
+	elog " By default, Tomcat runs on port 8080.  You can change this"
+	elog " value by editing /etc/${TOMCAT_NAME}/server.xml."
+	elog
+	elog " To test Tomcat while it's running, point your web browser to:"
+	elog " http://localhost:8080/"
+	elog
+	elog
+	elog " BUGS:"
+	elog " Please file any bugs at http://bugs.gentoo.org/ or else it"
+	elog " may not get seen.  Thank you."
+	elog
 }
