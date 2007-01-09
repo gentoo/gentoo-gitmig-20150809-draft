@@ -1,9 +1,19 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.387 2007/01/08 23:43:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.388 2007/01/09 10:32:54 uberlord Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+*baselayout-1.12.8-r3 (09 Jan 2007)
+
+  09 Jan 2007; Roy Marples <uberlord@gentoo.org>
+  +files/baselayout-1.12.8-conditionalrestart.patch,
+  +baselayout-1.12.8-r3.ebuild:
+  Add conditionalrestart action, which is the same as restart but the service
+  is only restarted if it is already started. This means that anything that
+  whats this only has to use one command instead of two, making them more
+  efficient.
 
   08 Jan 2007; Mike Frysinger <vapier@gentoo.org>
   baselayout-1.12.8-r2.ebuild:
