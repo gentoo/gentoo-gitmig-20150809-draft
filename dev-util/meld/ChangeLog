@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/meld
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.45 2007/01/09 05:40:19 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.46 2007/01/09 09:32:49 leio Exp $
+
+  09 Jan 2007; Mart Raudsepp <leio@gentoo.org> meld-1.1.4.ebuild:
+  Move the gnome-python-desktop dependency behind gnome USE flag, as it pulls
+  in lots of core gnome applications and libraries
 
   09 Jan 2007; Mart Raudsepp <leio@gentoo.org> meld-1.1.4.ebuild:
   Update dependency gnome-python-extras to gnome-python-desktop as only

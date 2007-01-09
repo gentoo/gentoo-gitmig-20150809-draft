@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.1.4.ebuild,v 1.4 2007/01/09 05:40:19 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.1.4.ebuild,v 1.5 2007/01/09 09:32:49 leio Exp $
 
 inherit python gnome2 eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://meld.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
-IUSE="doc"
+IUSE="doc gnome"
 
 DEPEND=">=dev-lang/python-2.3
 	>=gnome-base/libglade-2
@@ -18,7 +18,7 @@ DEPEND=">=dev-lang/python-2.3
 	>=dev-python/gnome-python-2.6.0
 	>=dev-python/pygtk-2.6.0
 	>=dev-python/pyorbit-1.99.0
-	dev-python/gnome-python-desktop"
+	gnome? ( dev-python/gnome-python-desktop )"
 
 DOCS="AUTHORS COPYING INSTALL README.CVS changelog help/"
 
