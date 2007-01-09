@@ -3,10 +3,13 @@
 <pkgmetadata>
 <herd>media-tv</herd>
 <maintainer>
-<email>zzam@gentoo.org</email>
-<name>Matthias Schwarzott</name>
+  <email>renegart@gmx.de</email>
+  <name>Mirko Günther</name>
+  <description>Proxied maintainer</description>
 </maintainer>
-<longdescription lang="en">
-</longdescription>
+<maintainer>
+  <email>zzam@gentoo.org</email>
+  <name>Matthias Schwarzott</name>
+</maintainer>
 </pkgmetadata>
 
