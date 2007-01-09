@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.9.2-r2.ebuild,v 1.1 2006/07/17 08:46:01 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.9.2-r2.ebuild,v 1.2 2007/01/09 21:32:35 phreak Exp $
 
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib
 
@@ -136,5 +136,8 @@ pkg_postinst() {
 	einfo "the documentation before running lm_sensors on IBM ThinkPads."
 	einfo
 	einfo "Please see the lm_sensors documentation and website for more information."
-	einfo
+	einfo "(http://www.lm-sensors.org/wiki/Documentation)"
+	einfo ""
 }
+
+# Reminder: bug 157085 is blocking the sensors-detect in pkg_config (bug 159137).
