@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/bsh-2.0_beta4-r1.ebuild,v 1.6 2006/12/07 22:36:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/bsh-2.0_beta4-r1.ebuild,v 1.7 2007/01/09 14:01:25 betelgeuse Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -35,17 +35,15 @@ src_unpack() {
 	cp ${FILESDIR}/bsh.Console ${FILESDIR}/bsh.Interpreter ${S}
 
 	use readline && epatch ${FILESDIR}/bsh2-readline.patch
-}
 
-src_compile() {
 	cd "${S}/lib/"
+	rm -v *.jar
 	java-pkg_jar-from servletapi-2.4
 	java-pkg_jar-from bsf-2.3
 	use readline && java-pkg_jar-from libreadline-java
-	cd "${S}"
-
-	eant $(use_doc) jarall
 }
+
+EANT_BUILD_TARGET="jarall"
 
 src_install() {
 	java-pkg_newjar ${S}/dist/${P/_beta/b}.jar
@@ -55,7 +53,7 @@ src_install() {
 	java-pkg_dolauncher bsh-console --main bsh.Console
 	java-pkg_dolauncher bsh-interpreter --main bsh.Interpreter
 
-	use doc && java-pkg_dohtml -r ${S}/javadoc/*
+	use doc && java-pkg_dojavadoc ${S}/javadoc
 
 	newicon ${DISTDIR}/beanshell-icon.png beanshell.png
 
