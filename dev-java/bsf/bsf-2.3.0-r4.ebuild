@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/bsf-2.3.0-r4.ebuild,v 1.1 2007/01/08 00:37:14 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/bsf-2.3.0-r4.ebuild,v 1.2 2007/01/09 00:20:27 caster Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -16,7 +16,6 @@ IUSE="doc jython rhino source"
 COMMON_DEP="
 	jython? ( >=dev-java/jython-2.1-r5 )
 	rhino? ( =dev-java/rhino-1.5* )
-	dev-java/xalan
 	=dev-java/servletapi-2.3*"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
@@ -34,8 +33,8 @@ src_unpack() {
 }
 
 src_compile() {
-	local cp="$(java-pkg_getjars xalan)"
-	local antflags="-Dxalan.present=true"
+	local cp
+	local antflags
 	if use rhino; then
 		antflags="${antflags} -Drhino.present=true"
 		cp="${cp}:$(java-pkg_getjars rhino-1.5)"
