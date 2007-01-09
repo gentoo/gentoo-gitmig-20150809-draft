@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.26 2007/01/07 05:03:06 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.27 2007/01/09 12:55:06 mcummings Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -124,7 +124,7 @@ src_unpack() {
 	# c++ patch - should address swig related items
 	cd ${S}; epatch ${FILESDIR}/${P}-cplusplus.patch
 
-	has_version '>=sys-devel/gcc-4.2' && epatch ${FILESDIR}/${P}-gcc42-command-line.patch
+	has_version '>sys-devel/gcc-4.1.9999' && epatch ${FILESDIR}/${P}-gcc42-command-line.patch
 
 }
 
