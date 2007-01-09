@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.20 2006/12/05 18:00:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.21 2007/01/09 22:17:18 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -61,6 +61,7 @@ src_install() {
 	doins ${CDROM_ROOT}/{README,kver.pub,sof.xpm} || die "doins"
 
 	cd ${S}
+	export _POSIX2_VERSION=199209
 	loki_patch --verify patch.dat
 	loki_patch patch.dat ${Ddir} >& /dev/null || die "patching"
 
