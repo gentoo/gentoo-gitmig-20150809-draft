@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/qscintilla
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.68 2007/01/06 21:31:37 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.69 2007/01/09 19:52:35 dev-zero Exp $
+
+  09 Jan 2007; Tiziano Müller <dev-zero@gentoo.org>
+  files/qscintilla-1.7.1.patch:
+  Fixed patch, bug #160931 (thanks to Brian Merrill).
 
   06 Jan 2007; Tiziano Müller <dev-zero@gentoo.org>
   qscintilla-1.7.1.ebuild:

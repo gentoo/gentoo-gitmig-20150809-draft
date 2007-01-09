@@ -12,6 +12,6 @@
  SOURCES += qscintillaplugin.cpp
  
 -LIBS += -lqscintilla
-+LIBS += -L../qt -lqscintilla
++LIBS += -L../qt/lib -lqscintilla
 +
 +INCLUDEPATH += ../qt
