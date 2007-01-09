@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/package.mask,v 1.37 2006/12/12 16:50:13 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/package.mask,v 1.38 2007/01/09 00:24:46 mcummings Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -51,6 +51,7 @@ app-emulation/winex-transgaming
 app-text/acroread
 <dev-java/blackdown-jdk-1.4.2
 <dev-java/blackdown-jre-1.4.2
+dev-perl/Archve-Rar
 dev-util/dialogblocks
 dev-util/helpblocks
 games-action/descent3
