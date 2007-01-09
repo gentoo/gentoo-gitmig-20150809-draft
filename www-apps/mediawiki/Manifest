@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX access_restrict.patch 1240 RMD160 29e27a84951daf447da1ecba3e929e94d02e0fb1 SHA1 1ec89557c26b682b2550ff95201a233eca471bec SHA256 22ca5d7e4cd6f3b03f2eb01a5e2ba0a1931998ff56ba3f1ebaa0a60cec436829
 MD5 b7ea14f1e781b80c0915604ac97140ac files/access_restrict.patch 1240
 RMD160 29e27a84951daf447da1ecba3e929e94d02e0fb1 files/access_restrict.patch 1240
@@ -78,3 +81,10 @@ SHA256 4112a96ead6a4a7c8863887f48191ff8e4cc9c0725eb0378d9947fd05fba083d files/di
 MD5 8da40986d7d15f63d406870084136fd4 files/digest-mediawiki-1.8.3 250
 RMD160 e6b933608c56327eba5b6c8b911f76da026f14ab files/digest-mediawiki-1.8.3 250
 SHA256 51c3173513ff30b763048803a9f399ec25780b5c5a910399e6819463476a892f files/digest-mediawiki-1.8.3 250
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFo/t0I1lqEGTUzyQRAtR8AKCHPRfRrYhClCZod1pxpfnZgYUgOwCfVOIL
+xwHx5gjBdbKLYowm/v3+Bzs=
+=l7gV
+-----END PGP SIGNATURE-----
