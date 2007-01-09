@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX museseq-0.6.2-drumport.patch 771 RMD160 a701a83a322ebd03d4f682b3846cca0aa2cbcd6b SHA1 c05907b3b2074f7f1753f8417150cb2a5a624657 SHA256 2dc2a1b64c5dfe4bb3e27a9d36ffc45792e7b9998659af01ec2d7e3fab707b33
 MD5 49c3c1f0136766a89c7cd1ba91006bc6 files/museseq-0.6.2-drumport.patch 771
 RMD160 a701a83a322ebd03d4f682b3846cca0aa2cbcd6b files/museseq-0.6.2-drumport.patch 771
@@ -70,3 +73,10 @@ SHA256 b8e74bf2ee937b0aa2414cf3c774aca493d5045b607621d0c4eb56025f36167e files/di
 MD5 4ab30d5d08d4523de6bc36be842d8840 files/digest-museseq-0.9_pre2 241
 RMD160 6ffb48a89699d7811940ee4d4dbfc7400fe95d03 files/digest-museseq-0.9_pre2 241
 SHA256 eab9166d20929a7d57f08cfed701648c47b52066ff5617f83b3430299ffef677 files/digest-museseq-0.9_pre2 241
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD4DBQFFo832Wt/XSf2CZdkRAm6fAJYm+0EYZ0OwPtQXx33jX2uX68JtAJ99RxcI
+YNVscFWFs35nWBtDVgfVuw==
+=59tv
+-----END PGP SIGNATURE-----
