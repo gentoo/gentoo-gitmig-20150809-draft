@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/gnome-system-tools
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.72 2006/10/19 15:06:40 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.73 2007/01/09 04:29:29 leio Exp $
+
+  09 Jan 2007; Mart Raudsepp <leio@gentoo.org>
+  gnome-system-tools-2.14.0.ebuild:
+  Depend on gnome-doc-utils as we are eautoreconfing, reported by plasmaroo.
+  QA: Set WANT_AUTO{CONF,MAKE}
 
   19 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   gnome-system-tools-2.14.0.ebuild:

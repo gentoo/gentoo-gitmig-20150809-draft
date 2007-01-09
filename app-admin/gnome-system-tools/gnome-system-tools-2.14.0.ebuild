@@ -1,7 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.14.0.ebuild,v 1.14 2006/10/19 15:06:40 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.14.0.ebuild,v 1.15 2007/01/09 04:29:29 leio Exp $
 
+WANT_AUTOCONF=latest
+WANT_AUTOMAKE=1.9
 inherit gnome2 eutils autotools
 
 DESCRIPTION="Tools aimed to make easy the administration of UNIX systems"
@@ -26,6 +28,7 @@ RDEPEND="net-misc/openssh
 
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
+	>=app-text/gnome-doc-utils-0.3.2
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.34.2"
 
