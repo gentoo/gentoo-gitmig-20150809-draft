@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-2.10.6.3-r3.ebuild,v 1.1 2007/01/05 10:25:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-2.10.6.3-r3.ebuild,v 1.2 2007/01/09 00:53:46 vapier Exp $
 
 inherit eutils
 
@@ -16,7 +16,6 @@ KEYWORDS="-* ~amd64"
 IUSE="qt3"
 RESTRICT="nostrip"
 
-DEPEND="app-admin/chrpath"
 RDEPEND=">=app-emulation/emul-linux-x86-xlibs-7.0-r7
 	>=app-emulation/emul-linux-x86-baselibs-2.5.5-r2
 	x11-libs/pango
