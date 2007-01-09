@@ -1,16 +1,31 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 2.8.1/12_mod_auth_mysql.conf 3566 RMD160 23d0039dabd61e5b526793791521b232c551cd6e SHA1 daa9f3eb5f84741e8a727ba1e7989a99affd4660 SHA256 545a3bea899690afbd4b739b07150f7fb8414c777c8527687b5d95ab0deed582
 MD5 d6baa28feeb088701ed677185d61b93d files/2.8.1/12_mod_auth_mysql.conf 3566
 RMD160 23d0039dabd61e5b526793791521b232c551cd6e files/2.8.1/12_mod_auth_mysql.conf 3566
 SHA256 545a3bea899690afbd4b739b07150f7fb8414c777c8527687b5d95ab0deed582 files/2.8.1/12_mod_auth_mysql.conf 3566
+AUX mod_auth_mysql-3.0.0-apache-2.2.patch 5919 RMD160 e478e80251f790b2cf26e66ed3c58a73cd7cd9e0 SHA1 809938d6e15d0eb2daef31876fba41632e641e0e SHA256 ff8ec4537ea365cc365adaf5118165e5f655fdc6d5359f2200ccce2c96d836ff
+MD5 946b8d5a75359850b36293194db5d634 files/mod_auth_mysql-3.0.0-apache-2.2.patch 5919
+RMD160 e478e80251f790b2cf26e66ed3c58a73cd7cd9e0 files/mod_auth_mysql-3.0.0-apache-2.2.patch 5919
+SHA256 ff8ec4537ea365cc365adaf5118165e5f655fdc6d5359f2200ccce2c96d836ff files/mod_auth_mysql-3.0.0-apache-2.2.patch 5919
+AUX mod_auth_mysql-3.0.0-htpasswd2-auth-style.patch 1686 RMD160 08b2912658033b725f21ef4dc1a784fbf21d4daa SHA1 42778fbee4fd313837f21eddbcf8c1ffd90fafd4 SHA256 c4a056b01b6bdd8aab1e37d9e7bf6e621cab1b9de49bccaae197a343f6ee4370
+MD5 3d91692af8b78ef37bc5343194d1ab2c files/mod_auth_mysql-3.0.0-htpasswd2-auth-style.patch 1686
+RMD160 08b2912658033b725f21ef4dc1a784fbf21d4daa files/mod_auth_mysql-3.0.0-htpasswd2-auth-style.patch 1686
+SHA256 c4a056b01b6bdd8aab1e37d9e7bf6e621cab1b9de49bccaae197a343f6ee4370 files/mod_auth_mysql-3.0.0-htpasswd2-auth-style.patch 1686
 DIST mod_auth_mysql-3.0.0.tar.gz 19257 RMD160 ef68d6ec7c99c4059a38ba74f41c22e2f88f3863 SHA1 885dd0bfc64210d32e6705fdb10b2c0ca831a27c SHA256 56da2e386583548f2fd9976101633f028d5d4649b46f428ff1d0dd1639efbad4
 EBUILD mod_auth_mysql-3.0.0-r1.ebuild 1208 RMD160 8a111ed8be9acb8f8ff090a45f2c7f7f48863511 SHA1 4a0d6fc5ed8b075ca3de24d9f5e2c0fb27c197dc SHA256 c4ef339e147d20d7a9f677c5e03f74c33d7ed12efc6a315a09c1ba8ff5b7506d
 MD5 71ed2ad791392fc46a2c6b49a1dc5b69 mod_auth_mysql-3.0.0-r1.ebuild 1208
 RMD160 8a111ed8be9acb8f8ff090a45f2c7f7f48863511 mod_auth_mysql-3.0.0-r1.ebuild 1208
 SHA256 c4ef339e147d20d7a9f677c5e03f74c33d7ed12efc6a315a09c1ba8ff5b7506d mod_auth_mysql-3.0.0-r1.ebuild 1208
-MISC ChangeLog 3721 RMD160 126a844b88837b220a33192832445b67a83a58ad SHA1 92f2505daacf6a2a49dc3c90d111d5aa006298a6 SHA256 69fd7fc1aad9d264c2fabd7a959debfae99c65b9f0ac7fe90185bd800b68ea62
-MD5 fdc2911743f3ec7342ead08906a8baad ChangeLog 3721
-RMD160 126a844b88837b220a33192832445b67a83a58ad ChangeLog 3721
-SHA256 69fd7fc1aad9d264c2fabd7a959debfae99c65b9f0ac7fe90185bd800b68ea62 ChangeLog 3721
+EBUILD mod_auth_mysql-3.0.0-r2.ebuild 1398 RMD160 4153f287df945bce42e5a72f89ab0458c556ccc6 SHA1 d87d63151db7aecb8f0deb3779b2855d1d3a7727 SHA256 890e45fcaf93514e2472fdeee99de5d5956ebaf85b2f6956d91f76328a843738
+MD5 f8e4536aa653a0d0d474879eafb72706 mod_auth_mysql-3.0.0-r2.ebuild 1398
+RMD160 4153f287df945bce42e5a72f89ab0458c556ccc6 mod_auth_mysql-3.0.0-r2.ebuild 1398
+SHA256 890e45fcaf93514e2472fdeee99de5d5956ebaf85b2f6956d91f76328a843738 mod_auth_mysql-3.0.0-r2.ebuild 1398
+MISC ChangeLog 4040 RMD160 e41d916611937cdc0b1ada6c46736d22657f841b SHA1 2f6061befeb2924f1607afd4632ad3d97a24b777 SHA256 5bbea63c8e4506c0578466644de912dd9ada6506e3c7bfadbb6a0627e39608c4
+MD5 29f1d550058dae0cc120ca9bd46b2da1 ChangeLog 4040
+RMD160 e41d916611937cdc0b1ada6c46736d22657f841b ChangeLog 4040
+SHA256 5bbea63c8e4506c0578466644de912dd9ada6506e3c7bfadbb6a0627e39608c4 ChangeLog 4040
 MISC metadata.xml 180 RMD160 b762599c4a9e042758cf4e58cf968d0dfaf37c8b SHA1 d3170a92499dc385c738add0d516d840e74b6415 SHA256 325b6e1d31edfdcaf7d563f03276382d77e6edf58d8f7d653086b7e726792c51
 MD5 b821e26d622d74f6ce77d24ef5fed492 metadata.xml 180
 RMD160 b762599c4a9e042758cf4e58cf968d0dfaf37c8b metadata.xml 180
@@ -18,3 +33,13 @@ SHA256 325b6e1d31edfdcaf7d563f03276382d77e6edf58d8f7d653086b7e726792c51 metadata
 MD5 cf735f899a63217e7f240b412e718a2c files/digest-mod_auth_mysql-3.0.0-r1 259
 RMD160 20e33e33c83e428507b0a94b824aac39c2c989d1 files/digest-mod_auth_mysql-3.0.0-r1 259
 SHA256 7fb0f2919dde6fe5282ca3665ce7672d0cce01a2f0c414ad0d1c8c9e9d119df1 files/digest-mod_auth_mysql-3.0.0-r1 259
+MD5 cf735f899a63217e7f240b412e718a2c files/digest-mod_auth_mysql-3.0.0-r2 259
+RMD160 20e33e33c83e428507b0a94b824aac39c2c989d1 files/digest-mod_auth_mysql-3.0.0-r2 259
+SHA256 7fb0f2919dde6fe5282ca3665ce7672d0cce01a2f0c414ad0d1c8c9e9d119df1 files/digest-mod_auth_mysql-3.0.0-r2 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFpAjbyuNVb5qfaOYRAip1AJ4ozz19bsn5M7XhHe1UyGAiMyWZbgCgh9kr
+QLviVOvmIeskyEhSLWkJrDo=
+=7VGG
+-----END PGP SIGNATURE-----
