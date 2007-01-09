@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/boxquote
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/boxquote/ChangeLog,v 1.8 2005/04/24 10:59:22 hansmi Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/boxquote/ChangeLog,v 1.9 2007/01/09 12:19:00 opfer Exp $
+
+  09 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
+  -boxquote-1.14.ebuild:
+  clean up
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> boxquote-1.18.ebuild:
   Stable on ppc.
