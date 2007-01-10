@@ -24,3 +24,4 @@ move dev-ruby/rubygfe games-util/rubygfe
 move dev-java/kunststoff-bin dev-java/kunststoff
 slotmove =dev-java/kunststoff-2.0.1* 0 2.0
 move dev-libs/slib dev-scheme/slib
+move dev-lang/gauche dev-scheme/gauche
