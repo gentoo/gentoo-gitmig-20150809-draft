@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/gnurobots/gnurobots-1.0d.ebuild,v 1.8 2006/12/05 18:15:32 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/gnurobots/gnurobots-1.0d.ebuild,v 1.9 2007/01/10 19:44:00 peper Exp $
 
 inherit games
 
@@ -17,7 +17,7 @@ IUSE="X"
 S=${WORKDIR}/${MY_P}
 
 DEPEND="X? ( x11-libs/libXpm )
-	dev-util/guile"
+	dev-scheme/guile"
 
 src_compile() {
 	egamesconf || die
