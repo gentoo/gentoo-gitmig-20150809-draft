@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/balsa-3.5.ebuild,v 1.1 2006/08/15 18:53:27 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/balsa-3.5.ebuild,v 1.2 2007/01/10 17:45:49 hkbst Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ DEPEND="virtual/libc
 	sci-electronics/gplcver"
 
 RDEPEND="${DEPEND}
-	dev-util/guile
+	dev-scheme/guile
 	media-gfx/graphviz
 	sci-electronics/gtkwave
 	sci-electronics/espresso-ab"
