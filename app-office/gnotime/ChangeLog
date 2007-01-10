@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnotime
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.17 2007/01/10 17:50:15 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.18 2007/01/10 17:50:37 hkbst Exp $
+
+  10 Jan 2007; <marijn@gentoo.org> gnotime-2.2.1.ebuild:
+  Dependency update: dev-util/guile -> dev-scheme/guile.
 
   10 Jan 2007; <marijn@gentoo.org> gnotime-2.1.7.ebuild:
   Dependency update: dev-util/guile -> dev-scheme/guile.
