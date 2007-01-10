@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/mpb
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/ChangeLog,v 1.5 2006/11/07 14:12:52 markusle Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/ChangeLog,v 1.6 2007/01/10 17:32:24 hkbst Exp $
+
+  10 Jan 2007; <marijn@gentoo.org> mpb-1.4.2.ebuild:
+  Dependency update: dev-util/guile -> dev-scheme/guile.
 
   07 Nov 2006; Markus Dittrich <markusle@gentoo.org>
   +files/mpb-1.4.2-gcc4.patch, mpb-1.4.2.ebuild:

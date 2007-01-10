@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/mpb-1.4.2.ebuild,v 1.3 2006/11/07 14:12:52 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/mpb-1.4.2.ebuild,v 1.4 2007/01/10 17:32:24 hkbst Exp $
 
 inherit fortran
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86"
 SLOT="0"
 
 DEPEND="virtual/lapack
-	dev-util/guile
+	dev-scheme/guile
 	sci-libs/libctl
 	sci-libs/hdf5
 	~sci-libs/fftw-2.1.5
