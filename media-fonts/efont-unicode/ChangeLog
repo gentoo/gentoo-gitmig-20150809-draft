@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/efont-unicode
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/efont-unicode/ChangeLog,v 1.22 2006/11/26 22:47:31 flameeyes Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/efont-unicode/ChangeLog,v 1.23 2007/01/10 01:16:39 kloeri Exp $
+
+  10 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
+  efont-unicode-0.4.2-r1.ebuild:
+  Stable on Alpha.
 
   26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   efont-unicode-0.4.2-r1.ebuild:
