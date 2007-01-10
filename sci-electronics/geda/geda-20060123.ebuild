@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-20060123.ebuild,v 1.5 2006/10/25 13:52:19 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-20060123.ebuild,v 1.6 2007/01/10 17:46:11 hkbst Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ SLOT="0"
 DEPEND=">=dev-libs/glib-1.2.10
 	>=x11-libs/gtk+-2.2
 
-	>=dev-util/guile-1.6.3
+	>=dev-scheme/guile-1.6.3
 	>=sys-libs/zlib-1.1.0
 	>=media-libs/libpng-1.2.0
 	>=dev-util/pkgconfig-0.15.0

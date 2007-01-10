@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-20061020.ebuild,v 1.1 2006/11/25 19:14:27 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-20061020.ebuild,v 1.2 2007/01/10 17:46:34 hkbst Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 SLOT="0"
 
 DEPEND=">=x11-libs/gtk+-2.4
-	>=dev-util/guile-1.6.3
+	>=dev-scheme/guile-1.6.3
 	>=sci-libs/libgeda-${PV}"
 
 src_compile() {
