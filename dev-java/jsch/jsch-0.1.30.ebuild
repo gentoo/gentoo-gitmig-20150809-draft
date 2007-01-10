@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.30.ebuild,v 1.2 2006/12/07 22:49:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.30.ebuild,v 1.3 2007/01/10 16:37:33 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -28,7 +28,7 @@ src_compile() {
 
 src_install() {
 	java-pkg_newjar dist/lib/jsch*.jar jsch.jar
-	use doc && java-pkg_dohtml -r javadoc/*
+	use doc && java-pkg_dojavadoc javadoc
 	use source && java-pkg_dosrc src/*
 	if use examples; then
 		dodir /usr/share/doc/${PF}/examples/
