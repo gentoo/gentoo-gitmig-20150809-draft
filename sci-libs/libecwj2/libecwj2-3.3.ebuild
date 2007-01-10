@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libecwj2/libecwj2-3.3.ebuild,v 1.1 2006/12/19 15:27:16 djay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libecwj2/libecwj2-3.3.ebuild,v 1.2 2007/01/10 14:10:09 djay Exp $
 
 DESCRIPTION="This library offers read (decompress) and write (compress) for both the ECW and the ISO JPEG 2000 image file formats"
 SRC_URI="${P}-2006-09-06.zip"
 HOMEPAGE="http://www.ermapper.com/ecw/"
-PKG_URL="http//www.ermapper.com/downloads/download_view.aspx?PRODUCT_VERSION_ID=305"
+PKG_URL="http://www.ermapper.com/downloads/download_view.aspx?PRODUCT_VERSION_ID=305"
 
 LICENSE="ECWPL"
 RESTRICT="fetch"
