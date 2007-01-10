@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/drgeo/drgeo-1.1.0.ebuild,v 1.2 2006/01/18 23:13:51 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/drgeo/drgeo-1.1.0.ebuild,v 1.3 2007/01/10 17:33:09 hkbst Exp $
 
 DOCN="${PN}-doc"
 DOCV="1.5"
@@ -19,7 +19,7 @@ IUSE="nls no-helpbrowser"
 DEPEND=">=x11-libs/gtk+-2
 	>=gnome-base/libglade-2
 	>=dev-libs/libxml2-2
-	>=dev-util/guile-1.4
+	>=dev-scheme/guile-1.4
 	!no-helpbrowser? ( www-client/dillo )"
 
 src_compile() {
