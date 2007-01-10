@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.1-r2.ebuild,v 1.3 2006/12/07 22:49:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.1-r2.ebuild,v 1.4 2007/01/10 16:51:17 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -54,6 +54,6 @@ src_install() {
 
 	dodoc RELEASE-NOTES.txt
 	dohtml PROPOSAL.html STATUS.html
-	use doc && java-pkg_dohtml -r target/docs/
+	use doc && java-pkg_dojavadoc target/docs/
 	use source && java-pkg_dosrc src/java/org
 }
