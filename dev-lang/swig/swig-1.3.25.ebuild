@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.25.ebuild,v 1.13 2006/11/04 10:30:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.25.ebuild,v 1.14 2007/01/10 17:51:44 hkbst Exp $
 
 inherit flag-o-matic mono eutils #48511
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ~ppc-macos ppc64 s390 sparc x86"
 IUSE="doc guile java perl php python ruby tcl tk"
 
 DEPEND="virtual/libc
-	guile? ( >=dev-util/guile-1.4 )
+	guile? ( >=dev-scheme/guile-1.4 )
 	java? ( virtual/jdk )
 	perl? ( >=dev-lang/perl-5.6.1 )
 	php? ( virtual/php )
