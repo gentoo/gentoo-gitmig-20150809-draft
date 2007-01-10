@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/autogen-5.7.1.ebuild,v 1.13 2006/10/27 14:14:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/autogen-5.7.1.ebuild,v 1.14 2007/01/10 17:39:07 hkbst Exp $
 
 DESCRIPTION="Program and text file generation"
 HOMEPAGE="http://www.gnu.org/software/autogen/"
@@ -12,7 +12,7 @@ KEYWORDS="~alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 # autogen doesn't build with lower versions of guile on ia64
-DEPEND=">=dev-util/guile-1.6.6
+DEPEND=">=dev-scheme/guile-1.6.6
 	dev-libs/libxml2"
 
 src_unpack() {
