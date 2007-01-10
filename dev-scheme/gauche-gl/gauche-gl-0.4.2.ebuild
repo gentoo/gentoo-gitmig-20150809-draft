@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gl/gauche-gl-0.4.2.ebuild,v 1.1 2006/12/01 13:53:07 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gl/gauche-gl-0.4.2.ebuild,v 1.2 2007/01/10 17:13:12 hkbst Exp $
 
 inherit eutils flag-o-matic
 
@@ -19,7 +19,7 @@ S=${WORKDIR}/${MY_P}
 
 DEPEND="virtual/opengl
 	virtual/glut
-	>=dev-lang/gauche-0.8.6
+	>=dev-scheme/gauche-0.8.6
 	cg? ( media-gfx/nvidia-cg-toolkit )"
 
 src_compile() {

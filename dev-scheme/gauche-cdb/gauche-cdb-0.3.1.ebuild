@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-cdb/gauche-cdb-0.3.1.ebuild,v 1.6 2006/04/22 15:30:27 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-cdb/gauche-cdb-0.3.1.ebuild,v 1.7 2007/01/10 17:13:34 hkbst Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ KEYWORDS="ia64 x86"
 SLOT="0"
 S="${WORKDIR}/${MY_P}"
 
-DEPEND=">=dev-lang/gauche-0.7.4
+DEPEND=">=dev-scheme/gauche-0.7.4
 	dev-db/tinycdb"
 
 src_unpack() {
@@ -27,7 +27,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-tinycdb.diff
 
-	if has_version '>=dev-lang/gauche-0.8'; then
+	if has_version '>=dev-scheme/gauche-0.8'; then
 		epatch ${FILESDIR}/${P}-gpd.diff
 	fi
 
@@ -41,7 +41,7 @@ src_install() {
 	make DESTDIR=${D} install || die
 	dodoc README
 
-	if has_version '>=dev-lang/gauche-0.8'; then
+	if has_version '>=dev-scheme/gauche-0.8'; then
 		insinto $(gauche-config --sitelibdir)/.packages
 		doins ${MY_P%-*}.gpd
 	fi
