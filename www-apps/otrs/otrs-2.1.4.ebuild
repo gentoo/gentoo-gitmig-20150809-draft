@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-2.1.4.ebuild,v 1.2 2007/01/02 22:44:54 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-2.1.4.ebuild,v 1.3 2007/01/10 21:38:45 phreak Exp $
 
 inherit webapp eutils
 
@@ -36,10 +36,10 @@ RDEPEND="
 	mysql? ( dev-perl/DBD-mysql )
 	postgres? ( dev-perl/DBD-Pg )
 	apache2? ( >=net-www/apache-2
-		fastcgi? ( dev-perl/FCGI net-www/mod_fastcgi )
+		fastcgi? ( dev-perl/FCGI )
 		!fastcgi? ( =www-apache/libapreq2-2* ) )
 	!apache2? ( =net-www/apache-1*
-		fastcgi? ( dev-perl/FCGI net-www/mod_fastcgi )
+		fastcgi? ( dev-perl/FCGI )
 		!fastcgi? ( =www-apache/libapreq-1* ) )
 	gd? ( dev-perl/GD dev-perl/GDTextUtil dev-perl/GDGraph )
 "
