@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/escm/escm-1.1.ebuild,v 1.4 2007/01/10 17:11:23 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/escm/escm-1.1.ebuild,v 1.5 2007/01/10 19:36:36 peper Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ S="${WORKDIR}/${PN}"
 
 DEPEND="|| (
 		dev-scheme/gauche
-		dev-util/guile
+		dev-scheme/guile
 	)"
 
 src_unpack() {

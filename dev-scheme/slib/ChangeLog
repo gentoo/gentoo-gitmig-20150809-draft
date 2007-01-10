@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/slib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/ChangeLog,v 1.1 2007/01/10 17:05:25 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/ChangeLog,v 1.2 2007/01/10 19:42:27 peper Exp $
+
+  10 Jan 2007; Piotr Jaroszyński <peper@gentoo.org> slib-2.4.2.ebuild,
+  slib-2.4.3.ebuild, slib-2.4.6.ebuild, slib-3.1.1.ebuild:
+  Dependency update: dev-util/guile -> dev-scheme/guile.
 
   10 Jan 2007; <marijn@gentoo.org> +metadata.xml, +slib-2.4.2.ebuild,
   +slib-2.4.3.ebuild, +slib-2.4.6.ebuild, +slib-3.1.1.ebuild:

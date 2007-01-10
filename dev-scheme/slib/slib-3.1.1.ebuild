@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.1.1.ebuild,v 1.1 2007/01/10 17:05:25 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.1.1.ebuild,v 1.2 2007/01/10 19:42:27 peper Exp $
 
 MY_P=${PN}3a1
 S=${WORKDIR}/${PN}
@@ -13,10 +13,9 @@ LICENSE="public-domain BSD"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc -x86"
 IUSE=""
 
-RDEPEND=">=dev-util/guile-1.4"
+RDEPEND=">=dev-scheme/guile-1.4"
 DEPEND="${RDEPEND}
-	>=app-arch/unzip-5.21
-	>=dev-util/guile-1.4"
+	>=app-arch/unzip-5.21"
 
 RESTRICT="test"
 

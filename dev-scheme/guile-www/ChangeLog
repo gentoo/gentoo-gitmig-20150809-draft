@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/guile-www
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-www/ChangeLog,v 1.3 2006/10/01 17:35:57 dberkholz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-www/ChangeLog,v 1.4 2007/01/10 19:40:59 peper Exp $
+
+  10 Jan 2007; Piotr Jaroszyński <peper@gentoo.org> guile-www-2.15.ebuild:
+  Dependency update: dev-util/guile -> dev-scheme/guile.
 
   01 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Transfer to sci-chemistry herd from sci.
