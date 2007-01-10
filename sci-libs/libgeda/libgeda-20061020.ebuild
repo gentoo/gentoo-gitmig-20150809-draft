@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/libgeda-20061020.ebuild,v 1.2 2007/01/08 00:42:27 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/libgeda-20061020.ebuild,v 1.3 2007/01/10 17:38:45 hkbst Exp $
 
 HOMEPAGE="http://www.geda.seul.org"
 DESCRIPTION="libgeda - this library provides functions needed for the gEDA core suite"
@@ -12,7 +12,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 SLOT="0"
 
 DEPEND=">=x11-libs/gtk+-2.4
-	>=dev-util/guile-1.6.3
+	>=dev-scheme/guile-1.6.3
 	>=dev-libs/libstroke-0.5.1"
 
 src_unpack() {
