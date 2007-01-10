@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openquicktime
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openquicktime/ChangeLog,v 1.18 2006/05/12 22:58:22 tcort Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openquicktime/ChangeLog,v 1.19 2007/01/10 21:24:29 flameeyes Exp $
+
+  10 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Add missing email address for herd with name != alias.
 
   12 May 2006; Thomas Cort <tcort@gentoo.org> openquicktime-1.0-r1.ebuild:
   Removed COPYING from dodoc.

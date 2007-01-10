@@ -3,6 +3,9 @@
 <pkgmetadata>
 <herd>video</herd>
 <maintainer>
+  <email>media-video@gentoo.org</email>
+</maintainer>
+<maintainer>
 	<email>aballier@gentoo.org</email>
 	<name>Alexis Ballier</name>
 </maintainer>

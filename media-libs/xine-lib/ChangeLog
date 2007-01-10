@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.441 2007/01/09 07:44:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.442 2007/01/10 21:25:54 flameeyes Exp $
+
+  10 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Add missing email address for herd with name != alias.
 
   09 Jan 2007; Markus Rothe <corsair@gentoo.org> xine-lib-1.1.3.ebuild:
   Stable on ppc64; bug #159054

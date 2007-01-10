@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mlt
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.10 2006/09/19 23:31:19 lu_zero Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.11 2007/01/10 21:23:11 flameeyes Exp $
+
+  10 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Add missing email address for herd with name != alias.
 
   19 Sep 2006; Luca Barbato <lu_zero@gentoo.org> mlt-0.2.2.ebuild:
   Jack module requires ladspa-sdk, see bug #147498
