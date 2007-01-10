@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.11-r3.ebuild,v 1.7 2007/01/08 18:42:49 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.11-r3.ebuild,v 1.8 2007/01/10 00:06:01 welp Exp $
 
 inherit multilib python eutils
 
@@ -13,7 +13,10 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="avahi dbus gnome idle libnotify nls spell srv trayicon X xhtml"
 
-DEPEND="dev-python/pysqlite
+DEPEND="|| (
+		( <dev-lang/python-2.5 dev-python/pysqlite )
+		>=dev-lang/python-2.5
+	)
 	dev-python/pygtk
 	sys-devel/gettext
 	dev-util/intltool
