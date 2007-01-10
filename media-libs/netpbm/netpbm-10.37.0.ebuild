@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.37.0.ebuild,v 1.1 2007/01/03 03:46:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.37.0.ebuild,v 1.2 2007/01/10 14:09:34 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils multilib
 
@@ -103,6 +103,7 @@ src_install() {
 	[[ $(get_libdir) != "lib" ]] && mv "${D}"/usr/lib "${D}"/usr/$(get_libdir)
 
 	# Remove cruft that we don't need, and move around stuff we want
+	rm "${D}"/usr/include/shhopt.h
 	rm -f "${D}"/usr/bin/{doc.url,manweb}
 	rm -rf "${D}"/usr/man/web
 	rm -rf "${D}"/usr/link
