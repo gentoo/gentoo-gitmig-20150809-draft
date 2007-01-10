@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xbindkeys
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.44 2007/01/10 17:34:37 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.45 2007/01/10 18:40:34 peper Exp $
+
+  10 Jan 2007; Piotr Jaroszyński <peper@gentoo.org> Manifest:
+  Fix Manifest.
 
   10 Jan 2007; <marijn@gentoo.org> xbindkeys-1.7.3.ebuild:
   Dependency update: dev-util/guile -> dev-scheme/guile.
