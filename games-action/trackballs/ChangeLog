@@ -1,6 +1,10 @@
 # ChangeLog for games-action/trackballs
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/ChangeLog,v 1.18 2006/10/06 12:01:36 blubb Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/ChangeLog,v 1.19 2007/01/10 19:43:17 peper Exp $
+
+  10 Jan 2007; Piotr Jaroszyński <peper@gentoo.org>
+  trackballs-1.1.2.ebuild:
+  Dependency update: dev-util/guile -> dev-scheme/guile.
 
   06 Oct 2006; Simon Stelling <blubb@gentoo.org> trackballs-1.1.2.ebuild:
   stable on amd64
