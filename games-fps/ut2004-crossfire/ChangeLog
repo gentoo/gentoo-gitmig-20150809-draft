@@ -1,0 +1,11 @@
+# ChangeLog for games-fps/ut2004-crossfire
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-crossfire/ChangeLog,v 1.1 2007/01/10 21:24:23 wolf31o2 Exp $
+
+*ut2004-crossfire-1.5 (10 Jan 2007)
+
+  10 Jan 2007; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +ut2004-crossfire-1.5.ebuild:
+  Initial import. Ebuild by Paul Bredbury <brebs@sent.com> and edited by me.
+  Closing bug #131630.
+
