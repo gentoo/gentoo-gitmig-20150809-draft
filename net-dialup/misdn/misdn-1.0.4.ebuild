@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/misdn-1.0.4.ebuild,v 1.2 2006/12/02 14:06:17 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/misdn-1.0.4.ebuild,v 1.3 2007/01/10 18:46:08 mrness Exp $
 
 inherit eutils linux-mod
 
@@ -12,7 +12,10 @@ SRC_URI="http://www.misdn.org/downloads/releases/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
-RDEPEND=">=net-dialup/capi4k-utils-20050718"
+
+RDEPEND=">=net-dialup/capi4k-utils-20050718
+	sys-devel/bc"
+
 S="${WORKDIR}/${MY_P}/drivers/isdn/hardware/mISDN"
 
 # list of echo canceller use flags,
