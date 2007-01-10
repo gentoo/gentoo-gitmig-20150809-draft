@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/pecl-mcve
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mcve/ChangeLog,v 1.14 2006/02/24 11:27:34 jer Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mcve/ChangeLog,v 1.15 2007/01/10 17:36:50 cardoe Exp $
+
+*pecl-mcve-5.2.1 (10 Jan 2007)
+
+  10 Jan 2007; Doug Goldstein <cardoe@gentoo.org> +pecl-mcve-5.2.1.ebuild:
+  upstream fixes for ssl path and krb5 path issues in the configure script
 
   24 Feb 2006; Jeroen Roovers <jer@gentoo.org> pecl-mcve-5.2.0.ebuild:
   Stable on hppa.
