@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/gentoolkit-dev
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.35 2006/10/18 12:19:47 uberlord Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.36 2007/01/10 21:14:55 fuzzyray Exp $
+
+*gentoolkit-dev-0.2.6.2 (10 Jan 2007)
+
+  10 Jan 2007; Paul Varner <fuzzyray@gentoo.org>
+  +gentoolkit-dev-0.2.6.2.ebuild:
+  Version bump to remove epkgmove (Bug 161360) and deprecate gensync
+  (Bug 62381).
 
   18 Oct 2006; Roy Marples <uberlord@gentoo.org>
   gentoolkit-dev-0.2.6.1.ebuild:
