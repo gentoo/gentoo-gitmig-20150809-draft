@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dazuko/dazuko-2.3.2-r3.ebuild,v 1.1 2006/12/25 18:12:06 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dazuko/dazuko-2.3.2-r3.ebuild,v 1.2 2007/01/10 17:52:46 alonbl Exp $
 inherit linux-mod toolchain-funcs flag-o-matic
 
 DESCRIPTION="Linux kernel module and interface providing file access control"
@@ -77,6 +77,14 @@ src_install() {
 	dodoc README
 	dodoc README.linux26
 	dodoc README.trusted
+}
+
+src_test() {
+	if [ "${EUID}" != 0 ]; then
+		ewarn "Cannot test while not root"
+	else
+		emake test || die "Test failed"
+	fi
 }
 
 pkg_postinst() {
