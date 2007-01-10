@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/guile-gtk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/ChangeLog,v 1.19 2007/01/10 17:33:31 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/ChangeLog,v 1.20 2007/01/10 17:33:53 hkbst Exp $
+
+  10 Jan 2007; <marijn@gentoo.org> guile-gtk-1.2.0.41.ebuild:
+  Dependency update: dev-util/guile -> dev-scheme/guile.
 
   10 Jan 2007; <marijn@gentoo.org> guile-gtk-1.2.0.31.ebuild:
   Dependency update: dev-util/guile -> dev-scheme/guile.
