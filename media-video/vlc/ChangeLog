@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.206 2007/01/06 20:50:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.207 2007/01/10 20:06:39 malc Exp $
+
+  10 Jan 2007; <malc@gentoo.org> vlc-0.8.6-r1.ebuild:
+  Stable on amd64 wrt sec. bug #159845
 
   06 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> -vlc-0.8.5-r3.ebuild,
   -vlc-0.8.5-r5.ebuild, -vlc-0.8.6.ebuild:
