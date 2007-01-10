@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-mega/ut2004-bonuspack-mega-1-r2.ebuild,v 1.1 2006/11/07 19:28:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-mega/ut2004-bonuspack-mega-1-r2.ebuild,v 1.2 2007/01/10 19:46:44 wolf31o2 Exp $
 
 MOD_DESC="Megapack bonus pack"
 MOD_NAME="Megapack"
@@ -17,8 +17,6 @@ SRC_URI="mirror://3dgamers/unrealtourn2k4/Missions/${MY_P}
 	http://sonic-lux.net/data/mirror/ut2004/${MY_P}"
 
 LICENSE="ut2003"
-
-KEYWORDS="~amd64 ~x86"
 
 RDEPEND="games-fps/ut2004-data"
 
