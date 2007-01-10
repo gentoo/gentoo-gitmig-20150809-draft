@@ -1,0 +1,11 @@
+# ChangeLog for games-fps/ut2004-action
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-action/ChangeLog,v 1.1 2007/01/10 17:30:49 wolf31o2 Exp $
+
+*ut2004-action-1 (10 Jan 2007)
+
+  10 Jan 2007; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +ut2004-action-1.ebuild:
+  Initial import. Original ebuild by Paul Bredbury <brebs@sent.com> and ported
+  to the games-mods eclass by me.
+
