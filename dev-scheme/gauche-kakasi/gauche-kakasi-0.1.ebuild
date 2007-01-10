@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-kakasi/gauche-kakasi-0.1.ebuild,v 1.3 2006/04/22 15:22:12 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-kakasi/gauche-kakasi-0.1.ebuild,v 1.4 2007/01/10 17:12:28 hkbst Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ KEYWORDS="x86"
 SLOT="0"
 S="${WORKDIR}/${MY_P}"
 
-DEPEND=">=dev-lang/gauche-0.8
+DEPEND=">=dev-scheme/gauche-0.8
 	>=app-i18n/kakasi-2.3.4"
 
 src_compile() {
