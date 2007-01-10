@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/scmail/scmail-1.3.ebuild,v 1.3 2006/07/14 14:17:42 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/scmail/scmail-1.3.ebuild,v 1.4 2007/01/10 17:11:00 hkbst Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ LICENSE="BSD"
 KEYWORDS="x86 ~ppc"
 SLOT="0"
 
-DEPEND=">=dev-lang/gauche-0.7.4.1"
+DEPEND=">=dev-scheme/gauche-0.7.4.1"
 
 src_install() {
 
