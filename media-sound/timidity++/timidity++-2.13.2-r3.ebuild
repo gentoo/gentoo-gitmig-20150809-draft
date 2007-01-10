@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r3.ebuild,v 1.6 2006/12/06 03:37:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r3.ebuild,v 1.7 2007/01/10 19:46:45 flameeyes Exp $
 
 inherit eutils
 
@@ -45,6 +45,7 @@ src_unpack() {
 	epatch "${DISTDIR}/${P}-exiterror.patch"
 	epatch "${FILESDIR}/${P}-gtk26.patch"
 	epatch "${FILESDIR}/${P}-gcc4.patch"
+	epatch "${FILESDIR}/${P}-flac.patch"
 
 	# fix header location of speex
 	sed -i -e "s:#include <speex:#include <speex/speex:g" configure* timidity/speex_a.c
@@ -67,7 +68,8 @@ src_compile() {
 
 	if use nas; then
 		audios="${audios},nas"
-		myconf="${myconf} --with-nas-library=/usr/$(get_libdir)/libaudio.so"
+		myconf="${myconf} --with-nas-library=/usr/$(get_libdir)/libaudio.so --with-x"
+		use X || ewarn "Basic X11 support will be enabled because required by nas."
 	fi
 
 	if use alsa; then
