@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/jxplorer
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/ChangeLog,v 1.7 2007/01/09 20:38:34 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/ChangeLog,v 1.8 2007/01/10 10:01:05 betelgeuse Exp $
+
+  10 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> jxplorer-3.1-r1.ebuild:
+  Filtering jikes because it fails to compile this.
 
 *jxplorer-3.1-r1 (09 Jan 2007)
 

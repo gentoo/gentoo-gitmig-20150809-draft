@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/jxplorer-3.1-r1.ebuild,v 1.1 2007/01/09 20:38:34 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/jxplorer-3.1-r1.ebuild,v 1.2 2007/01/10 10:01:05 betelgeuse Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -44,6 +44,7 @@ src_unpack() {
 
 #TODO: filter jikes when the general src_compile can do it
 EANT_DOC_TARGET="docs"
+EANT_FILTER_COMPILER="jikes"
 
 src_install() {
 	java-pkg_dojar dist/${PN}.jar dist/help.jar
