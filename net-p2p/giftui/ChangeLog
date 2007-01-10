@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/giftui
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/ChangeLog,v 1.19 2005/05/31 19:18:58 sekretarz Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/ChangeLog,v 1.20 2007/01/10 14:00:49 armin76 Exp $
+
+  10 Jan 2007; Raúl Porcel <armin76@gentoo.org> giftui-0.3.1.ebuild,
+  giftui-0.4.1.ebuild:
+  fix pkgconfig dep, bug 152463
 
   31 May 2005; Karol Wojtaszek <sekretarz@gentoo.org>
   files/0.4.1-gentoo.patch:
