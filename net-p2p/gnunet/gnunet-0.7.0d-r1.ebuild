@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.0d-r1.ebuild,v 1.5 2007/01/04 16:48:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.0d-r1.ebuild,v 1.6 2007/01/10 17:41:23 hkbst Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -28,7 +28,7 @@ DEPEND=">=dev-libs/libgcrypt-1.2.0
 	ncurses? ( sys-libs/ncurses )
 	mysql? ( >=virtual/mysql-4.0 )
 	sqlite? ( >=dev-db/sqlite-3.0.8 )
-	guile? ( >=dev-util/guile-1.6.0 )
+	guile? ( >=dev-scheme/guile-1.6.0 )
 	nls? ( sys-devel/gettext )"
 
 
