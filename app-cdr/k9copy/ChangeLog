@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/k9copy
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.16 2006/10/11 13:22:48 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.17 2007/01/10 21:11:21 flameeyes Exp $
+
+  10 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Add email addresses for herds (so that media-video is properly found, and
+  not considered main maintiner).
 
 *k9copy-1.1.0_beta2 (11 Oct 2006)
 
