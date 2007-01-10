@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailutils
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.28 2007/01/06 01:07:25 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.29 2007/01/10 17:43:13 hkbst Exp $
+
+  10 Jan 2007; <marijn@gentoo.org> mailutils-0.6-r3.ebuild:
+  Dependency update: dev-util/guile -> dev-scheme/guile.
 
   06 Jan 2007; Fernando J. Pereda <ferdy@gentoo.org>
   -mailutils-0.6-r2.ebuild:
