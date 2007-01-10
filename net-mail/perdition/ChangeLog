@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/perdition
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/perdition/ChangeLog,v 1.5 2007/01/10 17:42:51 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/perdition/ChangeLog,v 1.6 2007/01/10 18:48:49 peper Exp $
+
+  10 Jan 2007; Piotr Jaroszyński <peper@gentoo.org> Manifest:
+  Fix Manifest.
 
   10 Jan 2007; <marijn@gentoo.org> perdition-1.17.ebuild:
   Dependency update: dev-util/guile -> dev-scheme/guile.
