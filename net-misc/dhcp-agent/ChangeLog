@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp-agent
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp-agent/ChangeLog,v 1.10 2006/02/20 20:43:49 jokey Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp-agent/ChangeLog,v 1.11 2007/01/10 17:43:57 hkbst Exp $
+
+  10 Jan 2007; <marijn@gentoo.org> dhcp-agent-0.41.ebuild:
+  Dependency update: dev-util/guile -> dev-scheme/guile.
 
   20 Feb 2006; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
   dhcp-agent-0.37.ebuild, dhcp-agent-0.41.ebuild:
