@@ -1,4 +1,26 @@
-MD5 f810f32e7a5decd898a27803398f515e ChangeLog 1425
-MD5 0b74a792ba8a8759ff195ab011cf3b7d files/digest-kaffeine-mozilla-plugin-0.2 73
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST kaffeine-mozilla-0.2.tar.bz2 223559
+EBUILD kaffeine-mozilla-plugin-0.2.ebuild 804 RMD160 bcb9d7ce50c7b9995e856de124290dce001aae19 SHA1 0637fc769f1d9948f79844df2aee428db0abe880 SHA256 2ada63293a94ae8af7d1af2715c8cd93226abd13474f62be80d6b8af0221dd31
 MD5 3158b1a6d979eb2bb88808260f8b6c1e kaffeine-mozilla-plugin-0.2.ebuild 804
-MD5 f252d0d8aaea067fe6be5e09527ab18e metadata.xml 175
+RMD160 bcb9d7ce50c7b9995e856de124290dce001aae19 kaffeine-mozilla-plugin-0.2.ebuild 804
+SHA256 2ada63293a94ae8af7d1af2715c8cd93226abd13474f62be80d6b8af0221dd31 kaffeine-mozilla-plugin-0.2.ebuild 804
+MISC ChangeLog 1551 RMD160 25a8539cb695a5abc848c35427a1fa84bad46cde SHA1 91f49946101a4313abb1ad4738b4e669f9f949cd SHA256 71cf9371f1de8fa16c8454517fda356332a49b015df99b315bec0939130bed0d
+MD5 acd5af2a2d9ca94df4ff5667f16a8ff6 ChangeLog 1551
+RMD160 25a8539cb695a5abc848c35427a1fa84bad46cde ChangeLog 1551
+SHA256 71cf9371f1de8fa16c8454517fda356332a49b015df99b315bec0939130bed0d ChangeLog 1551
+MISC metadata.xml 301 RMD160 5424abb33cb1576f2742e6bbd75fa370c40214d1 SHA1 ce66e4b54d1cd620faddeacacceac59b5ede47ed SHA256 76010afeff62952f70b9b598778d4d198eabd1ec9e233902acd2c4019911745a
+MD5 80b81e0016b1f3cb6c95459a0e35fc87 metadata.xml 301
+RMD160 5424abb33cb1576f2742e6bbd75fa370c40214d1 metadata.xml 301
+SHA256 76010afeff62952f70b9b598778d4d198eabd1ec9e233902acd2c4019911745a metadata.xml 301
+MD5 0b74a792ba8a8759ff195ab011cf3b7d files/digest-kaffeine-mozilla-plugin-0.2 73
+RMD160 4f3adc75ea1694c3ec9ec2ad7e6b41592e6e5a90 files/digest-kaffeine-mozilla-plugin-0.2 73
+SHA256 5cd0f2b20afcebf240b5c98c1e78092e141f3452cc3b1f806569fead9c5b38b9 files/digest-kaffeine-mozilla-plugin-0.2 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFpV4lAiZjviIA2XgRAsaLAKDf2FtoJ4XQgglPPWul9tZSat5owgCgsDQq
+ATVzeqOtN/CLl/4rp2+SF40=
+=N15T
+-----END PGP SIGNATURE-----
