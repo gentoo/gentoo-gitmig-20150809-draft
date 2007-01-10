@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/gst-plugins
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.149 2006/08/02 05:33:55 kumba Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.150 2007/01/10 05:16:44 leio Exp $
+
+  10 Jan 2007; Mart Raudsepp <leio@gentoo.org>
+  -files/gst-plugins-0.8.8-gstplaybin_subfont.patch,
+  -files/gst-plugins-0.8.9-qtdemux-fixrawpcm.patch,
+  -files/gst-plugins-0.8.9-riffmedia-isompeg4.patch,
+  -files/gst-plugins-0.8.9-ximagefix.patch, -gst-plugins-0.8.2.ebuild,
+  -gst-plugins-0.8.8.ebuild, -gst-plugins-0.8.8-r2.ebuild,
+  -gst-plugins-0.8.9-r2.ebuild, -gst-plugins-0.8.10.ebuild:
+  Prune old versions
 
   03 Aug 2006; Joshua Kinard <kumba@gentoo.org> gst-plugins-0.8.2.ebuild,
   gst-plugins-0.8.8.ebuild, gst-plugins-0.8.8-r2.ebuild,
