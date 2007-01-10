@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/dom4j
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.38 2007/01/04 05:58:52 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.39 2007/01/10 00:47:26 beandog Exp $
+
+  10 Jan 2007; Steve Dibb <beandog@gentoo.org> dom4j-1.6.1-r2.ebuild:
+  amd64 stable, bug 159099
 
   03 Jan 2007; Tom Gall <tgall@gentoo.org> dom4j-1.6.1-r2.ebuild:
   stable on ppc64, bug #159099
