@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.4.6.ebuild,v 1.1 2006/10/19 03:13:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.4.6.ebuild,v 1.2 2007/01/10 00:21:19 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -16,6 +16,7 @@ IUSE="opengl"
 DEPEND=">=media-libs/libsdl-1.1.3
 	media-libs/sdl-mixer
 	media-libs/sdl-net
+	!games-fps/lsdldoom
 	opengl? ( virtual/opengl virtual/glu )"
 
 src_unpack() {
