@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/anubis
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/ChangeLog,v 1.9 2006/11/23 15:50:28 vivo Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/ChangeLog,v 1.10 2007/01/10 17:41:45 hkbst Exp $
+
+  10 Jan 2007; <marijn@gentoo.org> anubis-3.9.95.ebuild:
+  Dependency update: dev-util/guile -> dev-scheme/guile.
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> anubis-3.9.95.ebuild:
   dev-db/mysql => virtual/mysql
