@@ -3,4 +3,10 @@
 <pkgmetadata>
 <herd>video</herd>
 <herd>kde</herd>
+<maintainer>
+  <email>media-video@gentoo.org</email>
+</maintainer>
+<maintainer>
+  <email>kde@gentoo.org</email>
+</maintainer>
 </pkgmetadata>
