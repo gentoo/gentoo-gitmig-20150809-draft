@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r3.ebuild,v 1.7 2007/01/10 19:46:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r3.ebuild,v 1.8 2007/01/10 19:50:54 flameeyes Exp $
 
 inherit eutils
 
@@ -77,6 +77,12 @@ src_compile() {
 		myconf="${myconf} --with-default-output=alsa --enable-alsaseq"
 	fi
 
+	# We disable motif by default and then only enable it if it's requested.
+	if use motif; then
+		myconf="--enable-motif --with-x"
+		use X || ewarn "Basic X11 support will be enabled because required by motif."
+	fi
+
 	econf \
 		--localstatedir=/var/state/timidity++ \
 		--with-elf \
@@ -95,8 +101,8 @@ src_compile() {
 		$(use_enable X xskin) \
 		$(use_enable X xaw) \
 		$(use_enable gtk) \
-		$(use_enable motif) \
 		$(use_enable tcltk) \
+		--disable-motif \
 		${myconf} || die
 
 	emake || die
