@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libctl
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libctl/ChangeLog,v 1.4 2006/10/07 17:20:20 pbienst Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libctl/ChangeLog,v 1.5 2007/01/10 17:36:55 hkbst Exp $
+
+  10 Jan 2007; <marijn@gentoo.org> libctl-3.0.1.ebuild:
+  Dependency update: dev-util/guile -> dev-scheme/guile.
 
   07 Oct 2006; <pbienst@gentoo.org> libctl-3.0.1.ebuild:
   Add ~amd64.
