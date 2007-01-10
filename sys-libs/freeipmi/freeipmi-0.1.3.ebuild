@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-0.1.3.ebuild,v 1.7 2006/10/01 20:28:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-0.1.3.ebuild,v 1.8 2007/01/10 17:42:07 hkbst Exp $
 
 inherit flag-o-matic
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 RDEPEND="virtual/libc
-		dev-util/guile"
+		dev-scheme/guile"
 DEPEND="${RDEPEND}
 		virtual/os-headers
 		sys-apps/sed
