@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.294 2007/01/09 04:10:01 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.295 2007/01/10 02:19:17 leio Exp $
+
+  10 Jan 2007; Mart Raudsepp <leio@gentoo.org> -gtk+-1.2.10-r11.ebuild:
+  Remove old gtk1 revision
 
   09 Jan 2007; Mart Raudsepp <leio@gentoo.org>
   -files/gtk+-gdk-pixbuf-testfix.patch, -gtk+-2.8.8.ebuild,
