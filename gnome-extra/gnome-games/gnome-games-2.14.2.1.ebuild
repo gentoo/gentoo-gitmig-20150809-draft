@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.14.2.1.ebuild,v 1.15 2006/11/12 04:30:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.14.2.1.ebuild,v 1.16 2007/01/10 19:44:50 peper Exp $
 
 inherit eutils gnome2 autotools
 
@@ -21,7 +21,7 @@ RDEPEND=">=gnome-base/gconf-2
 	>=dev-libs/glib-2.6.3
 	>=gnome-base/gnome-vfs-2
 	>=x11-libs/cairo-1
-	guile? ( >=dev-util/guile-1.6.5 )
+	guile? ( >=dev-scheme/guile-1.6.5 )
 	artworkextra? ( gnome-extra/gnome-games-extra-data )"
 
 DEPEND="${RDEPEND}

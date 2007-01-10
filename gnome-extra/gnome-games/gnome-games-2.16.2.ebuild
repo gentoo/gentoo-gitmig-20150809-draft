@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.16.2.ebuild,v 1.6 2006/12/21 12:59:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.16.2.ebuild,v 1.7 2007/01/10 19:44:50 peper Exp $
 
 # make sure games is inherited first so that the gnome2
 # functions will be called if they are not overridden
@@ -23,7 +23,7 @@ RDEPEND=">=gnome-base/gconf-2
 	>=dev-libs/glib-2.6.3
 	>=gnome-base/gnome-vfs-2
 	>=x11-libs/cairo-1
-	guile? ( >=dev-util/guile-1.6.5 )
+	guile? ( >=dev-scheme/guile-1.6.5 )
 	artworkextra? ( gnome-extra/gnome-games-extra-data )
 	>=gnome-base/gnome-common-2.12.0"
 #	avahi? ( net-dns/avahi )
