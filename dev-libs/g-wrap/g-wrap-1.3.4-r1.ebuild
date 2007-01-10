@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.3.4-r1.ebuild,v 1.8 2007/01/10 17:06:48 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.3.4-r1.ebuild,v 1.9 2007/01/10 19:34:21 peper Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,7 +14,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 
-DEPEND=">=dev-util/guile-1.4
+DEPEND=">=dev-scheme/guile-1.4
 	>=dev-scheme/slib-2.4.2
 	=dev-libs/glib-1*"
 
