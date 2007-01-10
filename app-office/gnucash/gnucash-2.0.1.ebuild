@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.1.ebuild,v 1.15 2006/12/20 03:43:02 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.1.ebuild,v 1.16 2007/01/10 17:06:03 hkbst Exp $
 
 inherit eutils gnome2
 
@@ -19,7 +19,7 @@ IUSE="postgres ofx hbci chipcard doc debug quotes nls tetex"
 
 RDEPEND=">=dev-libs/glib-2.4.0
 	>=dev-util/guile-1.6.4-r2
-	>=dev-libs/slib-2.3.8
+	>=dev-scheme/slib-2.3.8
 	>=sys-libs/zlib-1.1.4
 	>=dev-libs/popt-1.5
 	>=x11-libs/gtk+-2.4
