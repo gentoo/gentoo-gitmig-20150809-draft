@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libgeda
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.24 2007/01/10 17:38:01 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.25 2007/01/10 17:38:23 hkbst Exp $
+
+  10 Jan 2007; <marijn@gentoo.org> libgeda-20060906.ebuild:
+  Dependency update: dev-util/guile -> dev-scheme/guile.
 
   10 Jan 2007; <marijn@gentoo.org> libgeda-20060824.ebuild:
   Dependency update: dev-util/guile -> dev-scheme/guile.
