@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libctl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libctl/ChangeLog,v 1.6 2007/01/10 17:37:17 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libctl/ChangeLog,v 1.7 2007/01/10 18:41:49 peper Exp $
+
+  10 Jan 2007; Piotr Jaroszyński <peper@gentoo.org> Manifest:
+  Fix Manifest.
 
   10 Jan 2007; <marijn@gentoo.org> libctl-2.2.ebuild:
   Dependency update: dev-util/guile -> dev-scheme/guile.
