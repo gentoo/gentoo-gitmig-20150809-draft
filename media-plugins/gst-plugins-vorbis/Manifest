@@ -1,22 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-DIST gst-plugins-0.8.10.tar.bz2 2397528 RMD160 fb59c37aef76b9cc065530fc4a7e7fe43168e619 SHA1 99e5746d4f013fc00cd29a59f9aab773db08ab1c SHA256 c5c8359f6ff8bc594cdadbb38863a8180c52de1edce74ad2fd698b9d4c6fef7c
 DIST gst-plugins-0.8.11.tar.bz2 2439654 RMD160 833aec123a52cd0f36ec883c349cc8d69090d749 SHA1 4a9be6b62dd0e8a73616e8e93f7a3ace8aec8c59 SHA256 0e48eef1d3bfa2263c1047f9f84622a4e16e33d963252cb8153ff1b340c4ba90
 DIST gst-plugins-0.8.12.tar.bz2 2506926 RMD160 cc0bbf3d790cb5791ce982fe6493bf2d8496a507 SHA1 3b65fe96aa849c463f5f968830ad76143c4b9952 SHA256 8728da4f71bc87e10fb064d28154220d66a3d8332482fd2c8a7ed47c5f0a03ba
-DIST gst-plugins-0.8.8.tar.bz2 2214274 RMD160 e141c576b668109d41f32541a96da5c79016e55c SHA1 5ba9908c3a09c1b7554ed0194a85ba63c2cc1ced SHA256 5ac9540297fe94f07bb24e2a26290ecf04385adee4419af631ac694295ee9717
-DIST gst-plugins-0.8.9.tar.bz2 2356958 RMD160 294b1873c8d54ac225bf94a2e5ba872f089fd605 SHA1 f73dd3b96e1e5c7e90fdb1bf2c72de8c8d035bb1 SHA256 713e971762fe8b8ee3f2b097693a6b7bc6b85ef2167223b7e21cbeaa8c66035c
-DIST gst-plugins-base-0.10.10.tar.bz2 1333651 RMD160 11b7f441d6499a3e462fc4a0ebc9dd026925e0ee SHA1 516daec5a6f5d1e8c6fd74e2170fc7a12305a0c1 SHA256 2246a5921ad060e86acd81cabec17a5022d1997849f950ac2c8f6f14f9291d3e
 DIST gst-plugins-base-0.10.11.tar.bz2 1409996 RMD160 94deb9061cd732139fddbf8608b125bbaa3d87f2 SHA1 93d18094a3459e02c0f640d69d4014bf02223d25 SHA256 2193e3f940f0fd2ca10a137efbb79bc1edc8a12543b618b9a97f680f9d15bfb4
 DIST gst-plugins-base-0.10.4.tar.bz2 1097817 RMD160 da837968b10a130dbeaa1953a3ad9f27586ba683 SHA1 1874bfc701f75ff859615c6b6e5b65c50df6f53a SHA256 6c556051191364eacf05dcf01a9f3101240a6b6155e331e4cbcbfca55a91ca42
-DIST gst-plugins-base-0.10.6.tar.bz2 1195072 RMD160 69659a40113b38b7eb1569c1da49ee5c37a5fd24 SHA1 58c1177e530d2ff91ddfa3a9322ab5ba3e0ddbb4 SHA256 0ef1b8cbe6d7e898d0636342479de46a780f720033c1b4f7217c903aac6d80ad
-DIST gst-plugins-base-0.10.7.tar.bz2 1166071 RMD160 67957a8d62fcf2b3170c57ea8bc4b58ce227306b SHA1 832b54fc9f3bc7f4c0a5337363081a25171d2662 SHA256 7be5984162333dae48d8f7e58e6c7f4b43726c78e2ca13aca6618b1342af8d37
 DIST gst-plugins-base-0.10.8.tar.bz2 1234234 RMD160 41f5647fb0be2d0038ca925a0479e5c8ac57ab4a SHA1 b428fe9caa17edd78a87d50931691a6d47c20e72 SHA256 4e7c14f82b23f268ac053ad21a23cc637052eca72b8ea23d02c2e7a90521d74a
-DIST gst-plugins-base-0.10.9.tar.bz2 1261167 RMD160 041f4088034ae8def66fade252ef3d21c4d10b7a SHA1 b13ae60ce7f58b902c91f3c56851a69e29d5d350 SHA256 81906ea7471212bc376d509a843f113913618c2c93e352a0b5d890f69e1d35f7
-EBUILD gst-plugins-vorbis-0.10.10.ebuild 506 RMD160 2bfbbc0605e0724ad0bc4e88df4e77a374cce9e6 SHA1 5337a2db0ac392e362862bb4f98d75e4a8a3ecdc SHA256 a4ec0a9afeac4ec81188acd6ad0e5a251501bf95886d55c0e62d2a861cee0de7
-MD5 9870cc01553d380c8a10e66d56ac2301 gst-plugins-vorbis-0.10.10.ebuild 506
-RMD160 2bfbbc0605e0724ad0bc4e88df4e77a374cce9e6 gst-plugins-vorbis-0.10.10.ebuild 506
-SHA256 a4ec0a9afeac4ec81188acd6ad0e5a251501bf95886d55c0e62d2a861cee0de7 gst-plugins-vorbis-0.10.10.ebuild 506
 EBUILD gst-plugins-vorbis-0.10.11.ebuild 508 RMD160 a63a521d5324ba4c6edf75857c3ac6f7304fb031 SHA1 1122355477c5d4d94d6b06bce9cd1046e394f57e SHA256 74b35f3c12f8423afdfc0adca312859d6436ba6746393151d3885edd3341a7c3
 MD5 911b91a7a27521698f6da0679c77d164 gst-plugins-vorbis-0.10.11.ebuild 508
 RMD160 a63a521d5324ba4c6edf75857c3ac6f7304fb031 gst-plugins-vorbis-0.10.11.ebuild 508
@@ -25,26 +14,10 @@ EBUILD gst-plugins-vorbis-0.10.4.ebuild 496 RMD160 0b679513e184911a612f327a0d829
 MD5 9b3b1f27e79b3f29ee2ae9b1c749abde gst-plugins-vorbis-0.10.4.ebuild 496
 RMD160 0b679513e184911a612f327a0d8295dcf1b5734e gst-plugins-vorbis-0.10.4.ebuild 496
 SHA256 7623a6c9f4a6d2b5fc1221419ce550e4082edc3d79f6a0011c5ed027199532d0 gst-plugins-vorbis-0.10.4.ebuild 496
-EBUILD gst-plugins-vorbis-0.10.6.ebuild 499 RMD160 ede9972ba795fd434df8d1b335c542b02e44304e SHA1 da27c5a89573cc6380c02a7c6869a1c8db23c8c4 SHA256 b7f5157d767e9c674a7fd91d4f649b28aaad47057c8be24f075b85d1e51fba9a
-MD5 7f894b5a3a8d54993ec53f1e394ad572 gst-plugins-vorbis-0.10.6.ebuild 499
-RMD160 ede9972ba795fd434df8d1b335c542b02e44304e gst-plugins-vorbis-0.10.6.ebuild 499
-SHA256 b7f5157d767e9c674a7fd91d4f649b28aaad47057c8be24f075b85d1e51fba9a gst-plugins-vorbis-0.10.6.ebuild 499
-EBUILD gst-plugins-vorbis-0.10.7.ebuild 499 RMD160 e1582f659f6e236bcdd2ffd4d6f3ae3513c6b6df SHA1 6f8d6fcae161c6b0acd7bd31aeb269cab8ad2cf4 SHA256 3d87fe0afb778aa160f0a222d31c5952df6460750dfe72d40efd814f6487fb67
-MD5 81f17f909b5838b96d33993ed1dc3548 gst-plugins-vorbis-0.10.7.ebuild 499
-RMD160 e1582f659f6e236bcdd2ffd4d6f3ae3513c6b6df gst-plugins-vorbis-0.10.7.ebuild 499
-SHA256 3d87fe0afb778aa160f0a222d31c5952df6460750dfe72d40efd814f6487fb67 gst-plugins-vorbis-0.10.7.ebuild 499
 EBUILD gst-plugins-vorbis-0.10.8.ebuild 500 RMD160 e929fcd17622fd7a83667d72142f2bab3def81e0 SHA1 d3131b704348bed196691592e404fe483f420043 SHA256 5e289908313472c3f6a08272609710d51e4c63b2774fc828b8918a2f320645e5
 MD5 d59ab61e02b904177a68a006b2b413c6 gst-plugins-vorbis-0.10.8.ebuild 500
 RMD160 e929fcd17622fd7a83667d72142f2bab3def81e0 gst-plugins-vorbis-0.10.8.ebuild 500
 SHA256 5e289908313472c3f6a08272609710d51e4c63b2774fc828b8918a2f320645e5 gst-plugins-vorbis-0.10.8.ebuild 500
-EBUILD gst-plugins-vorbis-0.10.9.ebuild 504 RMD160 0add64f66af77ae8af0f67c358bbff15a92b0808 SHA1 e76773607b1c5b966ed127452e0e9233b92b17fd SHA256 a6e6d3dc52e20ec26ac36bf8a9ec83dc9d0bba1ea41506b776dffd777bda9d49
-MD5 5d5cba565866d39d3b857ec07527d613 gst-plugins-vorbis-0.10.9.ebuild 504
-RMD160 0add64f66af77ae8af0f67c358bbff15a92b0808 gst-plugins-vorbis-0.10.9.ebuild 504
-SHA256 a6e6d3dc52e20ec26ac36bf8a9ec83dc9d0bba1ea41506b776dffd777bda9d49 gst-plugins-vorbis-0.10.9.ebuild 504
-EBUILD gst-plugins-vorbis-0.8.10.ebuild 428 RMD160 61c86b41c7ead7a2db1eaf919e5b842529eb7a07 SHA1 9c54b2a03703f97f8eb390a66dcc9ac028d6d751 SHA256 49fcd774f6cfe97d8778bfc7429814661da27806a5605be9c836ff0ae3f968c4
-MD5 3a77babf66de61c20566f1e698d9ad1e gst-plugins-vorbis-0.8.10.ebuild 428
-RMD160 61c86b41c7ead7a2db1eaf919e5b842529eb7a07 gst-plugins-vorbis-0.8.10.ebuild 428
-SHA256 49fcd774f6cfe97d8778bfc7429814661da27806a5605be9c836ff0ae3f968c4 gst-plugins-vorbis-0.8.10.ebuild 428
 EBUILD gst-plugins-vorbis-0.8.11.ebuild 428 RMD160 4b0ec887bc400fb8b34912553f95fc12f159ad90 SHA1 85d7b9d9c92dccdb594965c155e329b58a08a38e SHA256 941db3f85b9ea92c18e6e4afda0c62cbe2f2ebd2654b908248f7c203343f8798
 MD5 80801319a4899de3579447f0ab170008 gst-plugins-vorbis-0.8.11.ebuild 428
 RMD160 4b0ec887bc400fb8b34912553f95fc12f159ad90 gst-plugins-vorbis-0.8.11.ebuild 428
@@ -53,62 +26,33 @@ EBUILD gst-plugins-vorbis-0.8.12.ebuild 437 RMD160 68dc0df6882812b485825ab148210
 MD5 f2bd5ce6802c244be863aca5bba638c6 gst-plugins-vorbis-0.8.12.ebuild 437
 RMD160 68dc0df6882812b485825ab148210968ac4c91d4 gst-plugins-vorbis-0.8.12.ebuild 437
 SHA256 cb60779f1e6aa919696e332fce90cae279f7d92f10fcf0865fea6161210e1663 gst-plugins-vorbis-0.8.12.ebuild 437
-EBUILD gst-plugins-vorbis-0.8.8.ebuild 427 RMD160 5c3cf181ca9b842f9f1730d216b658ec2458072d SHA1 0cf9e5a9af3fdb375f3b34dc781da83fdfdd2bba SHA256 e7c7c5db4e0eddb2a6421db37739c24579dfd4baa94a9c04bcb8e618bb23db60
-MD5 e9a1a42b97272d0ccde562b231354b69 gst-plugins-vorbis-0.8.8.ebuild 427
-RMD160 5c3cf181ca9b842f9f1730d216b658ec2458072d gst-plugins-vorbis-0.8.8.ebuild 427
-SHA256 e7c7c5db4e0eddb2a6421db37739c24579dfd4baa94a9c04bcb8e618bb23db60 gst-plugins-vorbis-0.8.8.ebuild 427
-EBUILD gst-plugins-vorbis-0.8.9.ebuild 436 RMD160 0c4cfeb271d1d0128f3e3085f9d0ed0526b62fc9 SHA1 60585a14556c8a0583a73df86ab848b1a484f93d SHA256 f57a06f0aba5ff456c2aa2c782df4aefeb1cec667d24ba0067b7a2405fad30a9
-MD5 03f1a68bc2796c26f632f81dce3abaa0 gst-plugins-vorbis-0.8.9.ebuild 436
-RMD160 0c4cfeb271d1d0128f3e3085f9d0ed0526b62fc9 gst-plugins-vorbis-0.8.9.ebuild 436
-SHA256 f57a06f0aba5ff456c2aa2c782df4aefeb1cec667d24ba0067b7a2405fad30a9 gst-plugins-vorbis-0.8.9.ebuild 436
-MISC ChangeLog 13079 RMD160 6b8fdbbda4b87ef87fef550976c8ba26dc423617 SHA1 c9546119b28534323be4277084ee85b48c90a6b2 SHA256 af51e03426707ec166ed7fbc2088400b0c244628ad906cdb5bdedc2c2c656651
-MD5 f17b81cfdd6c7952ea21fa9f5b0b529c ChangeLog 13079
-RMD160 6b8fdbbda4b87ef87fef550976c8ba26dc423617 ChangeLog 13079
-SHA256 af51e03426707ec166ed7fbc2088400b0c244628ad906cdb5bdedc2c2c656651 ChangeLog 13079
+MISC ChangeLog 13396 RMD160 40a121e5b20c5080110bb01371a539a8666c2ace SHA1 ce1e81f3716e88f6dd61f8cfc8df00d6953d78c2 SHA256 398f3c597875204d8b8e0ea704e26a87e37eb1586f971c66f28858c6129bf06f
+MD5 8bc6b8326102c3d0dc0527fc4b264310 ChangeLog 13396
+RMD160 40a121e5b20c5080110bb01371a539a8666c2ace ChangeLog 13396
+SHA256 398f3c597875204d8b8e0ea704e26a87e37eb1586f971c66f28858c6129bf06f ChangeLog 13396
 MISC metadata.xml 181 RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d SHA1 faf40c45bd66b0072b95556cf7ab097d3be19511 SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d metadata.xml 181
 SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5 metadata.xml 181
-MD5 1ed05134f1cc0bac99259d21ba78efe1 files/digest-gst-plugins-vorbis-0.10.10 280
-RMD160 33547be5346dc37dfa0ffa7c3e61dcf5be754516 files/digest-gst-plugins-vorbis-0.10.10 280
-SHA256 a138219ddbf7c54e2a8f45fb3e5b693440948c8bb27158e361963ee538117046 files/digest-gst-plugins-vorbis-0.10.10 280
 MD5 889cfa4d442701ade1a1b2b2876c1ff0 files/digest-gst-plugins-vorbis-0.10.11 280
 RMD160 041aee221b2cd237d4c947d9658d2daabc538024 files/digest-gst-plugins-vorbis-0.10.11 280
 SHA256 48e1ce06b28edcfea1294dbc106ad0ca6dda6f33e9509b430d95b101c8bf63fb files/digest-gst-plugins-vorbis-0.10.11 280
 MD5 3477ec0d04649ccfcc545e28e0911bd3 files/digest-gst-plugins-vorbis-0.10.4 277
 RMD160 bee1889727ca635912779fbcac2958f0ceba48b0 files/digest-gst-plugins-vorbis-0.10.4 277
 SHA256 f47f4fd7829d14012ef690db4a45f568549f7a5015a00bd9ba03a41f3584e654 files/digest-gst-plugins-vorbis-0.10.4 277
-MD5 450e13cee4577b1b569d1ceefe9eabd4 files/digest-gst-plugins-vorbis-0.10.6 277
-RMD160 5e1310345ad577c68dbd84b9b0795c6f5b8f42f7 files/digest-gst-plugins-vorbis-0.10.6 277
-SHA256 dcc21aa385043adb673e23444665055b7558a862a57013376f5608bd20e857bc files/digest-gst-plugins-vorbis-0.10.6 277
-MD5 d940ec4125bf9095e8113f5771fb74f8 files/digest-gst-plugins-vorbis-0.10.7 277
-RMD160 20ce5bbbe8eeef887ec78430ac0235d0786364a3 files/digest-gst-plugins-vorbis-0.10.7 277
-SHA256 f0c4ce198bed889fcd66c14e7bce6d8713a797d1f415462c61790d51cecb6678 files/digest-gst-plugins-vorbis-0.10.7 277
 MD5 ac7ae1c61970db2fb01d3071ec606e87 files/digest-gst-plugins-vorbis-0.10.8 277
 RMD160 b4c7872d0e2c53f8cf0f0297f62c1347cd3b5b18 files/digest-gst-plugins-vorbis-0.10.8 277
 SHA256 818f2b5016a64f1415b9645eb70fb2e24adce4f920e2e81a9b2e4ee02e3f286f files/digest-gst-plugins-vorbis-0.10.8 277
-MD5 7ce537e51ee617c9ee048f4ac69cca7e files/digest-gst-plugins-vorbis-0.10.9 277
-RMD160 9d96682e02c0781fec575fef3e6f9bdd1e53684f files/digest-gst-plugins-vorbis-0.10.9 277
-SHA256 e134e257d23eae065d30d0457b3084a5ab5c51438cce341e43bf5d49222e661f files/digest-gst-plugins-vorbis-0.10.9 277
-MD5 eaba7cd988c45174c3c20aebd8c4a8bd files/digest-gst-plugins-vorbis-0.8.10 262
-RMD160 ee0674f71e5e46e925c101e8e5d76fb49260df19 files/digest-gst-plugins-vorbis-0.8.10 262
-SHA256 a93903467a58b51b55338d1dba64d4cea56cb0ab65884a9fd58798f44d4e9680 files/digest-gst-plugins-vorbis-0.8.10 262
 MD5 ff49930a5f9eee079e5742770cb1dd5f files/digest-gst-plugins-vorbis-0.8.11 262
 RMD160 6251f14b7d62b5fe20ad7404a30ecde333cee9c0 files/digest-gst-plugins-vorbis-0.8.11 262
 SHA256 e7d86d74a24b6133cfb03dded7830cdf6a1cc67109d1c87047ff45f816763f5c files/digest-gst-plugins-vorbis-0.8.11 262
 MD5 0af04efffa5bac9074fe049aa3512fe1 files/digest-gst-plugins-vorbis-0.8.12 262
 RMD160 2131a3433f3081297079de64ac7f2335c1f82036 files/digest-gst-plugins-vorbis-0.8.12 262
 SHA256 bac5ba90fbb314a2f7ea2a53506021944ec1b8707b20d47545a23a6fd5f4cefd files/digest-gst-plugins-vorbis-0.8.12 262
-MD5 d42b5b8a0a5175c24b9f8c7d4e0377ca files/digest-gst-plugins-vorbis-0.8.8 259
-RMD160 1cd0dce90b9f48f20a5148c14fdc5db42aa79496 files/digest-gst-plugins-vorbis-0.8.8 259
-SHA256 c01a4735d25772dd72951e305eb31200b883b20ad3993cf453e8d9e73c6207de files/digest-gst-plugins-vorbis-0.8.8 259
-MD5 b040ebb3cb8e5116893f8166bd8c8bcb files/digest-gst-plugins-vorbis-0.8.9 259
-RMD160 0498e9b7c85e28f0a0f740355b037b27ecdd4969 files/digest-gst-plugins-vorbis-0.8.9 259
-SHA256 e542b7466fb2485c94556f3570067f75055906e3a02650a77037290a1c774141 files/digest-gst-plugins-vorbis-0.8.9 259
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.6-ecc01.6 (GNU/Linux)
+Version: GnuPG v1.4.6 (GNU/Linux)
 
-iD8DBQFFipodKRy60XGEcJIRAsF/AJ9BVXk/EyCXQtnsdjVkQviFyFvDegCfUMzE
-2/LCha3BJA2HIwbZb2OXi48=
-=y2U5
+iD8DBQFFpF/7keYb6olFHJcRAnhpAJ0SWZy8n87z3wrY+Alvi32rTmZCAgCfcSgj
+i5LroPMP6NWFrov0JirVHiA=
+=iMpu
 -----END PGP SIGNATURE-----

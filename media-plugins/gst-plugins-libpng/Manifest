@@ -5,35 +5,13 @@ AUX gst-plugins-libpng-0.8.8-colorspace.patch 592 RMD160 ad9e33b3c17d3f482016347
 MD5 f82346e916492119a7dc784aefc418a6 files/gst-plugins-libpng-0.8.8-colorspace.patch 592
 RMD160 ad9e33b3c17d3f482016347915dd0ace4a7a547c files/gst-plugins-libpng-0.8.8-colorspace.patch 592
 SHA256 c59e0dedd60e8f752c7c1611db10e8806d24adcfd77fc0f2f460a0f92eb9e580 files/gst-plugins-libpng-0.8.8-colorspace.patch 592
-DIST gst-plugins-0.8.10.tar.bz2 2397528 RMD160 fb59c37aef76b9cc065530fc4a7e7fe43168e619 SHA1 99e5746d4f013fc00cd29a59f9aab773db08ab1c SHA256 c5c8359f6ff8bc594cdadbb38863a8180c52de1edce74ad2fd698b9d4c6fef7c
 DIST gst-plugins-0.8.11.tar.bz2 2439654 RMD160 833aec123a52cd0f36ec883c349cc8d69090d749 SHA1 4a9be6b62dd0e8a73616e8e93f7a3ace8aec8c59 SHA256 0e48eef1d3bfa2263c1047f9f84622a4e16e33d963252cb8153ff1b340c4ba90
 DIST gst-plugins-0.8.12.tar.bz2 2506926 RMD160 cc0bbf3d790cb5791ce982fe6493bf2d8496a507 SHA256 8728da4f71bc87e10fb064d28154220d66a3d8332482fd2c8a7ed47c5f0a03ba
-DIST gst-plugins-0.8.8.tar.bz2 2214274 RMD160 e141c576b668109d41f32541a96da5c79016e55c SHA1 5ba9908c3a09c1b7554ed0194a85ba63c2cc1ced SHA256 5ac9540297fe94f07bb24e2a26290ecf04385adee4419af631ac694295ee9717
-DIST gst-plugins-0.8.9.tar.bz2 2356958 RMD160 294b1873c8d54ac225bf94a2e5ba872f089fd605 SHA1 f73dd3b96e1e5c7e90fdb1bf2c72de8c8d035bb1 SHA256 713e971762fe8b8ee3f2b097693a6b7bc6b85ef2167223b7e21cbeaa8c66035c
-DIST gst-plugins-good-0.10.0.tar.bz2 898690 RMD160 ee3edce848ccd0cd4f96d9234149b93487fd6790 SHA1 a3fb9b573657cdc15c4df5e854e596f7c47b625a SHA256 d0e609388c2335acf25aa41840218728d1eb142b1eb151dc43d186d8e18e1607
-DIST gst-plugins-good-0.10.1.tar.bz2 928881
-DIST gst-plugins-good-0.10.2.tar.bz2 963026 RMD160 63103286d064dc47a464c365604579c9a9ecfdab SHA256 dd92993d08930cca071893b5d3f5cb40a4498f3ddaf12da98c0bbe8c27605e81
-DIST gst-plugins-good-0.10.3.tar.bz2 1165391 RMD160 9010c136cfe11659f17dac05f587f51c23a37d95 SHA256 8c09374656aca4b8ffbe109a24dcdb98c5d519c4b05bf9eeeb3a34f16b26eaf5
-EBUILD gst-plugins-libpng-0.10.0.ebuild 382 RMD160 991388b9a26bc4e85a71e017f31e15c10f2abc7d SHA1 5eb639f2cacb2aeb3cd566cdee92ee30ea6c2141 SHA256 6eba70fab45f9317dd5866a223e8580803a80a3893a9911386e99e06b9f6f9b4
-MD5 488204087f060d0074a3b012dc19c260 gst-plugins-libpng-0.10.0.ebuild 382
-RMD160 991388b9a26bc4e85a71e017f31e15c10f2abc7d gst-plugins-libpng-0.10.0.ebuild 382
-SHA256 6eba70fab45f9317dd5866a223e8580803a80a3893a9911386e99e06b9f6f9b4 gst-plugins-libpng-0.10.0.ebuild 382
-EBUILD gst-plugins-libpng-0.10.1.ebuild 382 RMD160 0a821b1944c982fd680aa6a95ed454367586fa64 SHA1 a65dcb257ce41febff89c144158da3fe0cdbad69 SHA256 035a61a08e83ef6732e9ab3112c549ec39941dcadce29d329c72e00ba7066d41
-MD5 d325cd86b7c79936d54e9d7be1eec076 gst-plugins-libpng-0.10.1.ebuild 382
-RMD160 0a821b1944c982fd680aa6a95ed454367586fa64 gst-plugins-libpng-0.10.1.ebuild 382
-SHA256 035a61a08e83ef6732e9ab3112c549ec39941dcadce29d329c72e00ba7066d41 gst-plugins-libpng-0.10.1.ebuild 382
-EBUILD gst-plugins-libpng-0.10.2.ebuild 399 RMD160 ab528f2e384e62d7d5052add80c6da3bb9158512 SHA1 118e52be2153c5c7f594280fb239f00860c20625 SHA256 679447942f31ffa4581eca4153812f1b4434e879cf27e1bb6a15f80732d0644e
-MD5 48a15cce8292b29277de806ecb14e2f9 gst-plugins-libpng-0.10.2.ebuild 399
-RMD160 ab528f2e384e62d7d5052add80c6da3bb9158512 gst-plugins-libpng-0.10.2.ebuild 399
-SHA256 679447942f31ffa4581eca4153812f1b4434e879cf27e1bb6a15f80732d0644e gst-plugins-libpng-0.10.2.ebuild 399
+DIST gst-plugins-good-0.10.3.tar.bz2 1165391 RMD160 9010c136cfe11659f17dac05f587f51c23a37d95 SHA1 4989c57fd6c080d75f40e508ae9036ed69ff71fe SHA256 8c09374656aca4b8ffbe109a24dcdb98c5d519c4b05bf9eeeb3a34f16b26eaf5
 EBUILD gst-plugins-libpng-0.10.3.ebuild 502 RMD160 12346eb8e3917782f649185665f78d7da49f53b2 SHA1 e4b31ca7f10d0ea92e383a55cdef10082ba42a71 SHA256 8d0b86cac7ea49587af47e5a503013d79ce9c5cee80e9c97cf24d5fed3b787b4
 MD5 1a2a72f11b18b4f69a8cecd305f84a66 gst-plugins-libpng-0.10.3.ebuild 502
 RMD160 12346eb8e3917782f649185665f78d7da49f53b2 gst-plugins-libpng-0.10.3.ebuild 502
 SHA256 8d0b86cac7ea49587af47e5a503013d79ce9c5cee80e9c97cf24d5fed3b787b4 gst-plugins-libpng-0.10.3.ebuild 502
-EBUILD gst-plugins-libpng-0.8.10.ebuild 401 RMD160 8423a575963651b18dd8d4857973c32145cf8773 SHA1 db640094091cc636aa1a65a9acaf11f4c3f9234a SHA256 d5fd12210a38468c14c05ce8030ec858ea877923290c5baf1f7f360332255214
-MD5 4917885cf0a97dd87c0c8e58f28f17f0 gst-plugins-libpng-0.8.10.ebuild 401
-RMD160 8423a575963651b18dd8d4857973c32145cf8773 gst-plugins-libpng-0.8.10.ebuild 401
-SHA256 d5fd12210a38468c14c05ce8030ec858ea877923290c5baf1f7f360332255214 gst-plugins-libpng-0.8.10.ebuild 401
 EBUILD gst-plugins-libpng-0.8.11.ebuild 401 RMD160 8822dc3df89f44941e7b5cec01e69118735fa4c6 SHA1 c3e42b56fa0a65112e5f3011169131cc6bd8487b SHA256 935f4e797ed9c7f638b01aee37f25e90ccc5619c671180bfbf4bf9800ed725a7
 MD5 71a9542bd5ae3f7f9d43dd1c592c8157 gst-plugins-libpng-0.8.11.ebuild 401
 RMD160 8822dc3df89f44941e7b5cec01e69118735fa4c6 gst-plugins-libpng-0.8.11.ebuild 401
@@ -42,60 +20,27 @@ EBUILD gst-plugins-libpng-0.8.12.ebuild 419 RMD160 9ec1e037e6657ab47060f15cc2f3f
 MD5 69ebd490d56c382995c8c7f182199f66 gst-plugins-libpng-0.8.12.ebuild 419
 RMD160 9ec1e037e6657ab47060f15cc2f3f478c8ea3d70 gst-plugins-libpng-0.8.12.ebuild 419
 SHA256 0ccc81c7c3c3eddd84515504ffa2741aaec888b9f03302c0274f484d67d4928e gst-plugins-libpng-0.8.12.ebuild 419
-EBUILD gst-plugins-libpng-0.8.8-r1.ebuild 527 RMD160 c5f44f3cd7c8fba275d82290b8b9910e749f28ae SHA1 787ff5f6adad97b566c287d3e8f17ff52cc89d6e SHA256 68359455fc1ea4d7882dce9bd5aa16d19450a562842ca53f48e4788f436dacd6
-MD5 18a174607e06689d561c995e1daac07b gst-plugins-libpng-0.8.8-r1.ebuild 527
-RMD160 c5f44f3cd7c8fba275d82290b8b9910e749f28ae gst-plugins-libpng-0.8.8-r1.ebuild 527
-SHA256 68359455fc1ea4d7882dce9bd5aa16d19450a562842ca53f48e4788f436dacd6 gst-plugins-libpng-0.8.8-r1.ebuild 527
-EBUILD gst-plugins-libpng-0.8.8.ebuild 407 RMD160 26dbd56cac4c98969072b7c6bfe6ffcd743dd65a SHA1 73ddaec8bd603ec4318b3599e3f2d07d335c0677 SHA256 bcfc6efc44cf85cd0af411a12a6d3ddf8cf771d6cf90764afe600c0d2a6f8deb
-MD5 b1e2bb7de69eb9f1b33cdaffacec3675 gst-plugins-libpng-0.8.8.ebuild 407
-RMD160 26dbd56cac4c98969072b7c6bfe6ffcd743dd65a gst-plugins-libpng-0.8.8.ebuild 407
-SHA256 bcfc6efc44cf85cd0af411a12a6d3ddf8cf771d6cf90764afe600c0d2a6f8deb gst-plugins-libpng-0.8.8.ebuild 407
-EBUILD gst-plugins-libpng-0.8.9.ebuild 407 RMD160 172905f79cbbb5e3c268572fe2e99ec626d46763 SHA1 77c06fc7ebacef8aa7215798b6ab564fefcc6f64 SHA256 410f3402b27a664afb9009e834c8b4d4a37e1459dca578506f5bf42c9d01d55b
-MD5 801f2196c3b41486ebdce1323310ce0a gst-plugins-libpng-0.8.9.ebuild 407
-RMD160 172905f79cbbb5e3c268572fe2e99ec626d46763 gst-plugins-libpng-0.8.9.ebuild 407
-SHA256 410f3402b27a664afb9009e834c8b4d4a37e1459dca578506f5bf42c9d01d55b gst-plugins-libpng-0.8.9.ebuild 407
-MISC ChangeLog 8718 RMD160 3733cca109f2d338b094ddc92d358fe1b73b3986 SHA1 6b23aaa027a37daba9238530cb6b731236f8ae74 SHA256 a6f3ed27c497e53962ef635b67963e8bda87e68d6903668251b504e3554fd14e
-MD5 a15c5687f26fd3afe3d4b00e00fd3dc5 ChangeLog 8718
-RMD160 3733cca109f2d338b094ddc92d358fe1b73b3986 ChangeLog 8718
-SHA256 a6f3ed27c497e53962ef635b67963e8bda87e68d6903668251b504e3554fd14e ChangeLog 8718
+MISC ChangeLog 9036 RMD160 35527b8b7b713783ca9ab1346e69adb7379c0140 SHA1 0a344c8fcf03e8148820525005c24dbc68a6570c SHA256 38838ee64add0e5d30acfcca5fb8295a06397c9e7a656facbef38249f112d75a
+MD5 082c8eea50cd7217ec20e3d6c74c7b30 ChangeLog 9036
+RMD160 35527b8b7b713783ca9ab1346e69adb7379c0140 ChangeLog 9036
+SHA256 38838ee64add0e5d30acfcca5fb8295a06397c9e7a656facbef38249f112d75a ChangeLog 9036
 MISC metadata.xml 181 RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d SHA1 faf40c45bd66b0072b95556cf7ab097d3be19511 SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d metadata.xml 181
 SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5 metadata.xml 181
-MD5 673f17e611b38b84ed070beaa0dd4919 files/digest-gst-plugins-libpng-0.10.0 274
-RMD160 9e4c88e0f36d2ef2feda4188281a6f4b289d15e8 files/digest-gst-plugins-libpng-0.10.0 274
-SHA256 10b0371f9d5541429ec817bd8d4c6855c135b428f2bda0a09148785bbbf1afef files/digest-gst-plugins-libpng-0.10.0 274
-MD5 79245dc2c0c8a4bd23983a836b8a9e43 files/digest-gst-plugins-libpng-0.10.1 76
-RMD160 97d21777d5f71055e3c8195f020410e701de998a files/digest-gst-plugins-libpng-0.10.1 76
-SHA256 ea5ad800ee837feabe74ff1d5fac6d75b364dbd5e8713b3fbe0ce741318ed99a files/digest-gst-plugins-libpng-0.10.1 76
-MD5 fe9a62d6f739f7cfd223099d201d8834 files/digest-gst-plugins-libpng-0.10.2 274
-RMD160 22c35dad51ee8ae394e206b6a6a92eb0342f54ee files/digest-gst-plugins-libpng-0.10.2 274
-SHA256 9b259ce24ad9f7b760050d3916bb8f2e376b3118bbc5b6b55c61eda4a7c54fac files/digest-gst-plugins-libpng-0.10.2 274
 MD5 057902ada65c96bc6629874aac6c56ae files/digest-gst-plugins-libpng-0.10.3 277
 RMD160 f3e88dabe4f78e8068e2a126106b8ddafddadf55 files/digest-gst-plugins-libpng-0.10.3 277
 SHA256 0be7c43b8feb4594d9ff28266d21cb341070ed587a67fcb346ae21e7b869d8ea files/digest-gst-plugins-libpng-0.10.3 277
-MD5 eaba7cd988c45174c3c20aebd8c4a8bd files/digest-gst-plugins-libpng-0.8.10 262
-RMD160 ee0674f71e5e46e925c101e8e5d76fb49260df19 files/digest-gst-plugins-libpng-0.8.10 262
-SHA256 a93903467a58b51b55338d1dba64d4cea56cb0ab65884a9fd58798f44d4e9680 files/digest-gst-plugins-libpng-0.8.10 262
 MD5 ff49930a5f9eee079e5742770cb1dd5f files/digest-gst-plugins-libpng-0.8.11 262
 RMD160 6251f14b7d62b5fe20ad7404a30ecde333cee9c0 files/digest-gst-plugins-libpng-0.8.11 262
 SHA256 e7d86d74a24b6133cfb03dded7830cdf6a1cc67109d1c87047ff45f816763f5c files/digest-gst-plugins-libpng-0.8.11 262
 MD5 0af04efffa5bac9074fe049aa3512fe1 files/digest-gst-plugins-libpng-0.8.12 262
 RMD160 2131a3433f3081297079de64ac7f2335c1f82036 files/digest-gst-plugins-libpng-0.8.12 262
 SHA256 bac5ba90fbb314a2f7ea2a53506021944ec1b8707b20d47545a23a6fd5f4cefd files/digest-gst-plugins-libpng-0.8.12 262
-MD5 d42b5b8a0a5175c24b9f8c7d4e0377ca files/digest-gst-plugins-libpng-0.8.8 259
-RMD160 1cd0dce90b9f48f20a5148c14fdc5db42aa79496 files/digest-gst-plugins-libpng-0.8.8 259
-SHA256 c01a4735d25772dd72951e305eb31200b883b20ad3993cf453e8d9e73c6207de files/digest-gst-plugins-libpng-0.8.8 259
-MD5 d42b5b8a0a5175c24b9f8c7d4e0377ca files/digest-gst-plugins-libpng-0.8.8-r1 259
-RMD160 1cd0dce90b9f48f20a5148c14fdc5db42aa79496 files/digest-gst-plugins-libpng-0.8.8-r1 259
-SHA256 c01a4735d25772dd72951e305eb31200b883b20ad3993cf453e8d9e73c6207de files/digest-gst-plugins-libpng-0.8.8-r1 259
-MD5 b040ebb3cb8e5116893f8166bd8c8bcb files/digest-gst-plugins-libpng-0.8.9 259
-RMD160 0498e9b7c85e28f0a0f740355b037b27ecdd4969 files/digest-gst-plugins-libpng-0.8.9 259
-SHA256 e542b7466fb2485c94556f3570067f75055906e3a02650a77037290a1c774141 files/digest-gst-plugins-libpng-0.8.9 259
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.6 (GNU/Linux)
 
-iD8DBQFFN+mxKRy60XGEcJIRAnb1AJ4s73lsPwcd8obUChSuyx7iE4SWqQCcDHIC
-RIes88/jk14zwTOrT3lMmGY=
-=Bwjh
+iD8DBQFFpFzrkeYb6olFHJcRAl9RAKC9D5FnvJAKxqsZNE3Repa98sFlUgCfULcS
+TjTfPr4cZNpGCjg3WfIBZs0=
+=viSs
 -----END PGP SIGNATURE-----
