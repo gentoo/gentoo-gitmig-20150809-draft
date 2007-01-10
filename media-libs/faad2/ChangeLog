@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/faad2
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.83 2007/01/06 16:09:30 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.84 2007/01/10 20:10:28 flameeyes Exp $
+
+  10 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/faad2-2.0-amd64.patch, -files/faad2-2.0-configure-mpeg4ip.patch,
+  -files/faad2-2.0-gcc34.patch, -files/faad2-2.0-makefile-space.patch,
+  -files/faad-2.0-xmms.patch, -files/faad2-gcc4-warnings-and-errors.patch,
+  -files/mp4atom-sliver.patch, -faad2-2.0-r7.ebuild, -faad2-2.0-r12.ebuild:
+  Cleanup old version (and all patches, as they are now handled in a tarball
+  patchset).
 
   06 Jan 2007; Stuart Longland <redhatter@gentoo.org> faad2-2.0-r13.ebuild:
   Tested and added ~mips keyword as per Flameeyes' request.
