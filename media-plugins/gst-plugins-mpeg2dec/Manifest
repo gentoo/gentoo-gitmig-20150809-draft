@@ -1,18 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-DIST gst-plugins-0.8.10.tar.bz2 2397528 RMD160 fb59c37aef76b9cc065530fc4a7e7fe43168e619 SHA1 99e5746d4f013fc00cd29a59f9aab773db08ab1c SHA256 c5c8359f6ff8bc594cdadbb38863a8180c52de1edce74ad2fd698b9d4c6fef7c
 DIST gst-plugins-0.8.11.tar.bz2 2439654 RMD160 833aec123a52cd0f36ec883c349cc8d69090d749 SHA1 4a9be6b62dd0e8a73616e8e93f7a3ace8aec8c59 SHA256 0e48eef1d3bfa2263c1047f9f84622a4e16e33d963252cb8153ff1b340c4ba90
 DIST gst-plugins-0.8.12.tar.bz2 2506926 RMD160 cc0bbf3d790cb5791ce982fe6493bf2d8496a507 SHA1 3b65fe96aa849c463f5f968830ad76143c4b9952 SHA256 8728da4f71bc87e10fb064d28154220d66a3d8332482fd2c8a7ed47c5f0a03ba
-DIST gst-plugins-0.8.8.tar.bz2 2214274 RMD160 e141c576b668109d41f32541a96da5c79016e55c SHA1 5ba9908c3a09c1b7554ed0194a85ba63c2cc1ced SHA256 5ac9540297fe94f07bb24e2a26290ecf04385adee4419af631ac694295ee9717
-DIST gst-plugins-0.8.9.tar.bz2 2356958 RMD160 294b1873c8d54ac225bf94a2e5ba872f089fd605 SHA1 f73dd3b96e1e5c7e90fdb1bf2c72de8c8d035bb1 SHA256 713e971762fe8b8ee3f2b097693a6b7bc6b85ef2167223b7e21cbeaa8c66035c
-DIST gst-plugins-ugly-0.10.0.tar.bz2 523026 RMD160 2c9c1c292b1b8539b50e6af3fd0dfdb07d650505 SHA256 88904d3d4d59738091dc2e7c2f4d4b05bec5590a67b5db14c6b2d0e795b9ae8b
 DIST gst-plugins-ugly-0.10.3.tar.bz2 605833 RMD160 0ea0d039cf87ecf662655521b9dbca8c2a388412 SHA1 98c69c4feeee975fdbe829cf6534d6c12b960182 SHA256 0cd916b3f0c8867cea77243d20d8d56ed45b7ef5ec5c5dd1603860ece8e88a10
 DIST gst-plugins-ugly-0.10.4.tar.bz2 720893 RMD160 0651853d7d36bda9d267ca3cecfb6cead95a3e6e SHA1 e31b671dcfab7842a1b546decc7c7a3fcc76790c SHA256 4871c52b2421b582330a0f9dc6a42da3b706140c346aa0cd690eb40758afe152
-EBUILD gst-plugins-mpeg2dec-0.10.0.ebuild 404 RMD160 f79fd99254be2f3865f5e20b9513b66717d8979b SHA1 da6e84d0de536814fae74530a08c58b367de8831 SHA256 ffe775d76b5f39ac34a0e5a6b2c40e500cfd7b1a1d0d34ba176b30b5e1687251
-MD5 659749a1fd1069e31e858dd31c95c0a4 gst-plugins-mpeg2dec-0.10.0.ebuild 404
-RMD160 f79fd99254be2f3865f5e20b9513b66717d8979b gst-plugins-mpeg2dec-0.10.0.ebuild 404
-SHA256 ffe775d76b5f39ac34a0e5a6b2c40e500cfd7b1a1d0d34ba176b30b5e1687251 gst-plugins-mpeg2dec-0.10.0.ebuild 404
 EBUILD gst-plugins-mpeg2dec-0.10.3.ebuild 527 RMD160 b351d2630d4b4940f7a9b3a2ebe4fdb080848a84 SHA1 520ee5766246efe301413e99906a4e461cb6a88d SHA256 6f37caa498083f07d953d5eb947401261828a4213eec69ea1385b5e85922b8e9
 MD5 963acc5a1736e16500a21968c68600ef gst-plugins-mpeg2dec-0.10.3.ebuild 527
 RMD160 b351d2630d4b4940f7a9b3a2ebe4fdb080848a84 gst-plugins-mpeg2dec-0.10.3.ebuild 527
@@ -21,10 +13,6 @@ EBUILD gst-plugins-mpeg2dec-0.10.4.ebuild 534 RMD160 24331a196d6ef9443d8907d81bc
 MD5 4b67932ff1528063e7ab335de914db61 gst-plugins-mpeg2dec-0.10.4.ebuild 534
 RMD160 24331a196d6ef9443d8907d81bca7d24157fb9b1 gst-plugins-mpeg2dec-0.10.4.ebuild 534
 SHA256 aa05820eafbf92d7e09360b6ead2ff40397b7608d424944c656e55502c776174 gst-plugins-mpeg2dec-0.10.4.ebuild 534
-EBUILD gst-plugins-mpeg2dec-0.8.10.ebuild 430 RMD160 1817c451d33c9e14e95a7caeaeb765b548bb834a SHA1 4890b70df30ad5a0cdbac947585957b010a9c331 SHA256 de55e1c8ecd52e417dbc8a4e747d6638bec7b2b106950ee7b8a0a36f91a9e785
-MD5 bb2ec8ae6159bb51fd39b25b3856cd5f gst-plugins-mpeg2dec-0.8.10.ebuild 430
-RMD160 1817c451d33c9e14e95a7caeaeb765b548bb834a gst-plugins-mpeg2dec-0.8.10.ebuild 430
-SHA256 de55e1c8ecd52e417dbc8a4e747d6638bec7b2b106950ee7b8a0a36f91a9e785 gst-plugins-mpeg2dec-0.8.10.ebuild 430
 EBUILD gst-plugins-mpeg2dec-0.8.11.ebuild 438 RMD160 b1f7fe521bb1eb9cad7b3902e8825bc3db3ab71f SHA1 cb00944b1d801b2b43ddc951cdbf760d69d65085 SHA256 e4812969ca929148cdaa7d4fc6acb231e69f177bfd21c25a4b3735ca7145e9e8
 MD5 957aa16676ade336ee25d8ee59dcb48a gst-plugins-mpeg2dec-0.8.11.ebuild 438
 RMD160 b1f7fe521bb1eb9cad7b3902e8825bc3db3ab71f gst-plugins-mpeg2dec-0.8.11.ebuild 438
@@ -33,50 +21,30 @@ EBUILD gst-plugins-mpeg2dec-0.8.12.ebuild 447 RMD160 7bd29f81166101f3fb6e991a107
 MD5 5e852241d155e41c66167009a903ca33 gst-plugins-mpeg2dec-0.8.12.ebuild 447
 RMD160 7bd29f81166101f3fb6e991a107d0c81617d0365 gst-plugins-mpeg2dec-0.8.12.ebuild 447
 SHA256 037d8eadd0e91b48d0a5fb1a8cfd4946fb999bdfbddc58b9f19100cc7b8e0310 gst-plugins-mpeg2dec-0.8.12.ebuild 447
-EBUILD gst-plugins-mpeg2dec-0.8.8.ebuild 429 RMD160 34b1cd18c4f141f357fd5f34e4da88fdb5e0842c SHA1 4b90867a242458cd42fa81138cec75223bb37a2c SHA256 6bc4fc28c65fd23745da73982e9ab44d7d879790c7cc23359373ac95cbac6f52
-MD5 365dfc026ffb1f75fcf32a58d944754d gst-plugins-mpeg2dec-0.8.8.ebuild 429
-RMD160 34b1cd18c4f141f357fd5f34e4da88fdb5e0842c gst-plugins-mpeg2dec-0.8.8.ebuild 429
-SHA256 6bc4fc28c65fd23745da73982e9ab44d7d879790c7cc23359373ac95cbac6f52 gst-plugins-mpeg2dec-0.8.8.ebuild 429
-EBUILD gst-plugins-mpeg2dec-0.8.9.ebuild 436 RMD160 4adda7a2a5ce6cf99fe4c13f5cc8604ef2eaeb89 SHA1 86533b1eef8a19013a10447228f200728595fa65 SHA256 4babade7dd983033a8d5131ac8078817a8ef5aa54cf75ea404a638dc611010f7
-MD5 0a6e8f9953b3b10696afa18d24ce20b2 gst-plugins-mpeg2dec-0.8.9.ebuild 436
-RMD160 4adda7a2a5ce6cf99fe4c13f5cc8604ef2eaeb89 gst-plugins-mpeg2dec-0.8.9.ebuild 436
-SHA256 4babade7dd983033a8d5131ac8078817a8ef5aa54cf75ea404a638dc611010f7 gst-plugins-mpeg2dec-0.8.9.ebuild 436
-MISC ChangeLog 7550 RMD160 79977e1efc4d19455ca9403a92b2b6d4d93294f6 SHA1 e9008975cb42d37d7308e843f8be50e206fe7838 SHA256 556148bcf4fc54e44bbf981e15edf066306edfefad4b65c230935a8554550b44
-MD5 fb2fa469ae45f738b081f6cec3dceade ChangeLog 7550
-RMD160 79977e1efc4d19455ca9403a92b2b6d4d93294f6 ChangeLog 7550
-SHA256 556148bcf4fc54e44bbf981e15edf066306edfefad4b65c230935a8554550b44 ChangeLog 7550
+MISC ChangeLog 7768 RMD160 3f0c8f07e8c063ab6a2068130aa43cd0fc106f7f SHA1 72a795ca35873dd61017c66a63d98153ec20d7a0 SHA256 13ff065679e6042ee7ab57a9c0d56c89ccbeb2625d55ef602e2c5cb2c781172b
+MD5 21d990059cc6d233b78f2a3a024b68d6 ChangeLog 7768
+RMD160 3f0c8f07e8c063ab6a2068130aa43cd0fc106f7f ChangeLog 7768
+SHA256 13ff065679e6042ee7ab57a9c0d56c89ccbeb2625d55ef602e2c5cb2c781172b ChangeLog 7768
 MISC metadata.xml 181 RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d SHA1 faf40c45bd66b0072b95556cf7ab097d3be19511 SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d metadata.xml 181
 SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5 metadata.xml 181
-MD5 d99e132d173c65a1df5288995bedad0d files/digest-gst-plugins-mpeg2dec-0.10.0 274
-RMD160 2f03e5637c348be0a1592c68fa670e3e8a37a032 files/digest-gst-plugins-mpeg2dec-0.10.0 274
-SHA256 6b825f34644eb2e2cd7044d4b4521756d7b9d8ce89fb12c821118daf645b6910 files/digest-gst-plugins-mpeg2dec-0.10.0 274
 MD5 aafca0fb1c0ae9a28120aabbd603e074 files/digest-gst-plugins-mpeg2dec-0.10.3 274
 RMD160 f3de4473328be1cfadb3c15a781fca5cf2c16d4a files/digest-gst-plugins-mpeg2dec-0.10.3 274
 SHA256 cfe9c819ee2ccf7ad84b195685cb2976e912906830bd24d488b21b4ef690f472 files/digest-gst-plugins-mpeg2dec-0.10.3 274
 MD5 d935d4ce6cfdd13f1bbf5250ffd100b4 files/digest-gst-plugins-mpeg2dec-0.10.4 274
 RMD160 dec1a476aa0df1f41f29c4641bfa7299cc9fb777 files/digest-gst-plugins-mpeg2dec-0.10.4 274
 SHA256 7f432695e33fb8a908b0a2494e7b00fca2c66085160d120f8617cf8c31210151 files/digest-gst-plugins-mpeg2dec-0.10.4 274
-MD5 eaba7cd988c45174c3c20aebd8c4a8bd files/digest-gst-plugins-mpeg2dec-0.8.10 262
-RMD160 ee0674f71e5e46e925c101e8e5d76fb49260df19 files/digest-gst-plugins-mpeg2dec-0.8.10 262
-SHA256 a93903467a58b51b55338d1dba64d4cea56cb0ab65884a9fd58798f44d4e9680 files/digest-gst-plugins-mpeg2dec-0.8.10 262
 MD5 ff49930a5f9eee079e5742770cb1dd5f files/digest-gst-plugins-mpeg2dec-0.8.11 262
 RMD160 6251f14b7d62b5fe20ad7404a30ecde333cee9c0 files/digest-gst-plugins-mpeg2dec-0.8.11 262
 SHA256 e7d86d74a24b6133cfb03dded7830cdf6a1cc67109d1c87047ff45f816763f5c files/digest-gst-plugins-mpeg2dec-0.8.11 262
 MD5 0af04efffa5bac9074fe049aa3512fe1 files/digest-gst-plugins-mpeg2dec-0.8.12 262
 RMD160 2131a3433f3081297079de64ac7f2335c1f82036 files/digest-gst-plugins-mpeg2dec-0.8.12 262
 SHA256 bac5ba90fbb314a2f7ea2a53506021944ec1b8707b20d47545a23a6fd5f4cefd files/digest-gst-plugins-mpeg2dec-0.8.12 262
-MD5 d42b5b8a0a5175c24b9f8c7d4e0377ca files/digest-gst-plugins-mpeg2dec-0.8.8 259
-RMD160 1cd0dce90b9f48f20a5148c14fdc5db42aa79496 files/digest-gst-plugins-mpeg2dec-0.8.8 259
-SHA256 c01a4735d25772dd72951e305eb31200b883b20ad3993cf453e8d9e73c6207de files/digest-gst-plugins-mpeg2dec-0.8.8 259
-MD5 b040ebb3cb8e5116893f8166bd8c8bcb files/digest-gst-plugins-mpeg2dec-0.8.9 259
-RMD160 0498e9b7c85e28f0a0f740355b037b27ecdd4969 files/digest-gst-plugins-mpeg2dec-0.8.9 259
-SHA256 e542b7466fb2485c94556f3570067f75055906e3a02650a77037290a1c774141 files/digest-gst-plugins-mpeg2dec-0.8.9 259
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
+Version: GnuPG v1.4.6 (GNU/Linux)
 
-iD8DBQFFN9yRr2QksT29OyARAh1TAJ9w+tu2s9dBlvaGVNYc3aTDh3ICUQCdFs1I
-4axWNpAqzSY29f4WpNryvcw=
-=A7f+
+iD8DBQFFpGYXkeYb6olFHJcRAgVvAJ9tWT8bv+oZNYGOBdFsQLmJ9NUg+QCfWZtg
+G7sZiw+g3rGS9hQD1STdfOk=
+=6fA2
 -----END PGP SIGNATURE-----
