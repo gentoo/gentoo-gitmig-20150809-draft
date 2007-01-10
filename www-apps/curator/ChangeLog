@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/curator
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/curator/ChangeLog,v 1.5 2007/01/06 22:43:14 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/curator/ChangeLog,v 1.6 2007/01/10 11:48:31 phreak Exp $
+
+  10 Jan 2007; Christian Heim <phreak@gentoo.org> curator-2.1.ebuild:
+  Fixing src_install (thanks to Jason Wever in #gentoo-dev).
 
 *curator-2.1 (06 Jan 2007)
 
