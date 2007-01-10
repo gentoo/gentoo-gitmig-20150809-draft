@@ -1,6 +1,17 @@
 # ChangeLog for net-p2p/dclib
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/ChangeLog,v 1.71 2006/10/01 16:35:11 jer Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/ChangeLog,v 1.72 2007/01/10 17:37:51 armin76 Exp $
+
+*dclib-0.3.8 (10 Jan 2007)
+
+  10 Jan 2007; Raúl Porcel <armin76@gentoo.org>
+  -files/dclib-0.2.20-gcc2.patch, -files/dclib-0.2.21-gcc2.patch,
+  -files/dclib-0.3.0-gcc2.patch, -files/dclib-0.3.3-gcc2.patch,
+  -files/dclib-0.3.3-xml.patch, -files/dclib-0.3.5-gcc2.patch,
+  -dclib-0.2.20.ebuild, -dclib-0.2.21.ebuild, -dclib-0.3.0.ebuild,
+  -dclib-0.3.3.ebuild, -dclib-0.3.3-r1.ebuild, -dclib-0.3.5.ebuild,
+  dclib-0.3.7.ebuild, +dclib-0.3.8.ebuild:
+  Drop old, version bump, bug 156051
 
   01 Oct 2006; Jeroen Roovers <jer@gentoo.org> dclib-0.3.7.ebuild:
   Stable for HPPA (bug #140724).
