@@ -1,9 +1,16 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.390 2007/01/10 09:43:21 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.391 2007/01/10 12:00:29 uberlord Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+*baselayout-1.13.0_alpha11 (10 Jan 2007)
+
+  10 Jan 2007; Roy Marples <uberlord@gentoo.org>
+  +baselayout-1.13.0_alpha11.ebuild:
+  New release - nfs users may need to re-emerge nfs-utils to get a fixed init
+  script.
 
 *baselayout-1.12.8-r4 (10 Jan 2007)
 
