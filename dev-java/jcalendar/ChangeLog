@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jcalendar
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcalendar/ChangeLog,v 1.5 2006/09/13 06:19:04 wormo Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcalendar/ChangeLog,v 1.6 2007/01/10 18:13:37 betelgeuse Exp $
+
+  10 Jan 2007; Petteri Räty <betelgeuse@gentoo.org>
+  jcalendar-1.2.2-r1.ebuild:
+  ant_src_unpack is deprecated
 
   12 Sep 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   jcalendar-1.2.2.ebuild:

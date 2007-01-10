@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcalendar/jcalendar-1.2.2-r1.ebuild,v 1.1 2006/08/04 04:56:48 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcalendar/jcalendar-1.2.2-r1.ebuild,v 1.2 2007/01/10 18:13:37 betelgeuse Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -20,7 +20,7 @@ DEPEND=">=virtual/jdk-1.4
 
 S=${WORKDIR}
 
-ant_src_unpack() {
+src_unpack() {
 	unpack ${A}
 	cd ${S}/lib
 
