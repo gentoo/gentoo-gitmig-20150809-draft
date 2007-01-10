@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_kerb/mod_auth_kerb-5.0_rc6-r1.ebuild,v 1.1 2007/01/10 21:48:46 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_kerb/mod_auth_kerb-5.0_rc6-r1.ebuild,v 1.2 2007/01/10 21:59:54 phreak Exp $
 
 MY_PV="${PV/_rc/-rc}"
 
@@ -38,10 +38,12 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${PN}-5.0-CVE-2006-5989.patch"
-	epatch "${FILESDIR}/${PN}-5.0-axps1.patch"
 	epatch "${FILESDIR}/${PN}-5.0-gcc4.patch"
-	epatch "${FILESDIR}/${PN}-5.0-exports.patch"
-	epatch "${FILESDIR}/${PN}-5.0-cache.patch"
+	if use apache2 ; then
+		epatch "${FILESDIR}/${PN}-5.0-axps1.patch"
+		epatch "${FILESDIR}/${PN}-5.0-cache.patch"
+		epatch "${FILESDIR}/${PN}-5.0-exports.patch"
+	fi
 
 	eautoreconf
 }
