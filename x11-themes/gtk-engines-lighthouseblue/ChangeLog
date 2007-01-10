@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-lighthouseblue
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-lighthouseblue/ChangeLog,v 1.16 2006/02/02 17:18:06 blubb Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-lighthouseblue/ChangeLog,v 1.17 2007/01/10 10:36:07 leio Exp $
+
+  10 Jan 2007; Mart Raudsepp <leio@gentoo.org>
+  -gtk-engines-lighthouseblue-0.6.2-r1.ebuild:
+  Prune old version
 
   02 Feb 2006; Simon Stelling <blubb@gentoo.org>
   gtk-engines-lighthouseblue-0.6.3.ebuild:
