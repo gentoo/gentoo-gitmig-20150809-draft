@@ -1,27 +1,22 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/valknut-0.3.7.ebuild,v 1.12 2007/01/10 18:29:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/valknut-0.3.8.ebuild,v 1.1 2007/01/10 18:29:46 armin76 Exp $
 
 inherit qt3 eutils
 
 DESCRIPTION="Qt based client for DirectConnect"
-HOMEPAGE="http://dcgui.berlios.de/"
-SRC_URI="http://download.berlios.de/dcgui/valknut-${PV}.tar.bz2"
+HOMEPAGE="http://sourceforge.net/projects/dcwxgui/"
+SRC_URI="mirror://sourceforge/wxdcgui/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="ssl"
 
 DEPEND="$(qt_min_version 3)
 	>=dev-libs/libxml2-2.4.22
 	~net-p2p/dclib-${PV}
 	ssl? ( dev-libs/openssl )"
-
-src_unpack () {
-	unpack ${A}
-	epatch "${FILESDIR}"/${P}-gcc41.patch
-}
 
 src_compile() {
 	econf \
@@ -33,6 +28,6 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR=${D} install || die "emake install failed"
 	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO
 }
