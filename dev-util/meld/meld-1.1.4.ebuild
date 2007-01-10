@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.1.4.ebuild,v 1.6 2007/01/10 01:28:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.1.4.ebuild,v 1.7 2007/01/10 09:38:51 dev-zero Exp $
 
 inherit python gnome2 eutils
 
@@ -20,19 +20,7 @@ DEPEND=">=dev-lang/python-2.3
 	>=dev-python/pyorbit-1.99.0
 	gnome? ( dev-python/gnome-python-desktop )"
 
-DOCS="AUTHORS COPYING INSTALL README.CVS changelog help/"
-
-pkg_setup() {
-	if has_version "=dev-python/pygtk-2.6*"; then
-		if ! built_with_use "dev-python/pygtk" gnome ; then
-			einfo
-			einfo "Meld requires pygtk to be built with the gnome use flag set."
-			einfo "Please re-emerge pygtk with the gnome use flag set."
-			einfo
-			die "You need to re-emerge pygtk with gnome use flag."
-		fi
-	fi
-}
+DOCS="AUTHORS README.CVS changelog help/"
 
 src_unpack() {
 	gnome2_src_unpack
