@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autogen
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.16 2007/01/10 17:39:30 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.17 2007/01/10 18:43:45 peper Exp $
+
+  10 Jan 2007; Piotr Jaroszyński <peper@gentoo.org> Manifest:
+  Fix Manifest.
 
   10 Jan 2007; <marijn@gentoo.org> autogen-5.8.3.ebuild:
   Dependency update: dev-util/guile -> dev-scheme/guile.
