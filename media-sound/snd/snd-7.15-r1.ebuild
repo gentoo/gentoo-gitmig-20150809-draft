@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-7.15-r1.ebuild,v 1.3 2006/12/14 09:53:04 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-7.15-r1.ebuild,v 1.4 2007/01/10 19:49:54 peper Exp $
 
 inherit multilib
 
@@ -23,7 +23,7 @@ RDEPEND="media-libs/audiofile
 	gsl? ( >=sci-libs/gsl-0.8 )
 	gtk? ( >=x11-libs/gtk+-2
 		opengl? ( x11-libs/gtkglext ) )
-	guile? ( >=dev-util/guile-1.3.4 )
+	guile? ( >=dev-scheme/guile-1.3.4 )
 	jack? ( media-sound/jack-audio-connection-kit )
 	ladspa? ( media-libs/ladspa-sdk )
 	nls? ( sys-devel/gettext )

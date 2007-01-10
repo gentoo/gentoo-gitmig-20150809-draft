@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-7.15.ebuild,v 1.8 2006/11/20 21:16:25 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-7.15.ebuild,v 1.9 2007/01/10 19:49:54 peper Exp $
 
 IUSE="alsa esd fam fftw gsl gtk guile jack ladspa motif nls opengl ruby"
 
@@ -23,7 +23,7 @@ RDEPEND="media-libs/audiofile
 	fftw? ( sci-libs/fftw )
 	gsl? ( >=sci-libs/gsl-0.8 )
 	gtk? ( >=x11-libs/gtk+-2 )
-	guile? ( >=dev-util/guile-1.3.4 )
+	guile? ( >=dev-scheme/guile-1.3.4 )
 	jack? ( media-sound/jack-audio-connection-kit )
 	ladspa? ( media-libs/ladspa-sdk )
 	nls? ( sys-devel/gettext )

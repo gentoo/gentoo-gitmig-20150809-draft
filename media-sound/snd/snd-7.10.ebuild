@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-7.10.ebuild,v 1.3 2005/09/04 10:59:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-7.10.ebuild,v 1.4 2007/01/10 19:49:54 peper Exp $
 
 IUSE="esd motif guile X gtk ruby alsa"
 
@@ -20,7 +20,7 @@ DEPEND="X? ( virtual/x11 )
 	esd? ( media-sound/esound )
 	alsa? ( media-libs/alsa-lib )
 	gtk? ( x11-libs/gtk+ )
-	guile? ( dev-util/guile )
+	guile? ( dev-scheme/guile )
 	motif? ( x11-libs/openmotif )
 	ruby? ( virtual/ruby )"
 

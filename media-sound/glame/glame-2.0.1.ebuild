@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-2.0.1.ebuild,v 1.8 2006/11/20 20:44:30 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-2.0.1.ebuild,v 1.9 2007/01/10 19:48:01 peper Exp $
 
 WANT_AUTOCONF=2.5
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86"
 IUSE="nls gnome vorbis debug alsa"
 
-RDEPEND=">=dev-util/guile-1.4-r3
+RDEPEND=">=dev-scheme/guile-1.4-r3
 	>=dev-libs/libxml-1.8.0
 	>=dev-libs/libxml2-2.0.0
 	>=media-sound/esound-0.2

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.0.3.ebuild,v 1.11 2006/03/29 17:31:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.0.3.ebuild,v 1.12 2007/01/10 19:49:00 peper Exp $
 
 inherit eutils versionator
 
@@ -15,7 +15,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="alpha x86 ~ppc"
 
-RDEPEND=">=dev-util/guile-1.6.4
+RDEPEND=">=dev-scheme/guile-1.6.4
 	virtual/ghostscript
 	virtual/tetex
 	>=dev-lang/python-2.2.3-r1"
