@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/cream
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.35 2006/11/06 07:55:26 pioto Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.36 2007/01/10 15:26:12 pioto Exp $
+
+  10 Jan 2007; Mike Kelly <pioto@gentoo.org> -cream-0.31.ebuild:
+  Remove old version.
 
   19 Oct 2006; Aron Griffis <agriffis@gentoo.org> cream-0.34.ebuild:
   Mark 0.34 stable on alpha
