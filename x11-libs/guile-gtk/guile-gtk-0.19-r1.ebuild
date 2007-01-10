@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/guile-gtk-0.19-r1.ebuild,v 1.7 2005/03/20 04:15:00 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/guile-gtk-0.19-r1.ebuild,v 1.8 2007/01/10 17:34:15 hkbst Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND="=dev-util/guile-1.4*
+DEPEND="=dev-scheme/guile-1.4*
 	=x11-libs/gtk+-1.2*"
 
 src_compile() {
