@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/lxml
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.13 2006/10/15 17:51:03 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.14 2007/01/10 10:22:11 dev-zero Exp $
+
+*lxml-1.1.2 (10 Jan 2007)
+
+  10 Jan 2007; Tiziano Müller <dev-zero@gentoo.org>
+  +files/lxml-1.1.2-distutils.patch, -lxml-1.0.ebuild, -lxml-1.0.3.ebuild,
+  +lxml-1.1.2.ebuild:
+  Version bump, bug #148776. Dropped old versions.
 
   15 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> lxml-1.0.2.ebuild:
   Stable on ia64.
