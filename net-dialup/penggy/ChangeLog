@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/penggy
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/penggy/ChangeLog,v 1.9 2006/11/26 18:11:36 beandog Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/penggy/ChangeLog,v 1.10 2007/01/10 19:51:24 peper Exp $
+
+  10 Jan 2007; Piotr Jaroszyński <peper@gentoo.org> penggy-0.2.1.ebuild:
+  Dependency update: dev-util/guile -> dev-scheme/guile.
 
   26 Nov 2006; Steve Dibb <beandog@gentoo.org> penggy-0.2.1.ebuild:
   Update homepage

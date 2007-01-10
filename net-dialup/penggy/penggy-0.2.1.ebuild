@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/penggy/penggy-0.2.1.ebuild,v 1.11 2006/11/26 18:11:36 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/penggy/penggy-0.2.1.ebuild,v 1.12 2007/01/10 19:51:24 peper Exp $
 
 inherit eutils autotools
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND=">=dev-util/guile-1.4.0"
+DEPEND=">=dev-scheme/guile-1.4.0"
 
 src_unpack() {
 	unpack ${A}

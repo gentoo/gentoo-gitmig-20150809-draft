@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.4.ebuild,v 1.1 2006/11/27 18:17:45 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.4.ebuild,v 1.2 2007/01/10 19:50:41 peper Exp $
 
 inherit libtool eutils
 
@@ -17,7 +17,7 @@ IUSE="guile mysql postgres odbc dbm nls snmp pam static debug readline"
 
 DEPEND="!net-dialup/freeradius
 	!net-dialup/cistronradius
-	guile? ( >=dev-util/guile-1.4 )
+	guile? ( >=dev-scheme/guile-1.4 )
 	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql )
 	odbc? ( || ( dev-db/unixODBC dev-db/libiodbc ) )
