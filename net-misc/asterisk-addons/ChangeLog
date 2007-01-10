@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/asterisk-addons
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/ChangeLog,v 1.8 2007/01/04 16:40:45 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/ChangeLog,v 1.9 2007/01/10 22:46:12 gustavoz Exp $
+
+  10 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  -files/asterisk-addons-1.2.0-gentoo-ooh323c.diff,
+  -asterisk-addons-1.2.0.ebuild, -asterisk-addons-1.2.1.ebuild:
+  Cleaned up old wrt #160038
 
   04 Jan 2007; Timothy Redaelli <drizzt@gentoo.org>
   asterisk-addons-1.2.4.ebuild:
