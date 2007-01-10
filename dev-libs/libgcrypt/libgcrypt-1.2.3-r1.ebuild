@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.2.3-r1.ebuild,v 1.4 2007/01/05 09:34:30 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.2.3-r1.ebuild,v 1.5 2007/01/10 20:18:09 alonbl Exp $
 
 WANT_AUTOMAKE='latest'
 WANT_AUTOCONF='latest'
@@ -29,7 +29,8 @@ src_unpack() {
 
 	# fix for miss detection of 32 bit ppc
 	cd "${S}"
-	epatch "${WORKDIR}"/${PN}-1.2.1-ppc64-fix.patch
+	epatch "${WORKDIR}/${PN}-1.2.1-ppc64-fix.patch"
+	epatch "${FILESDIR}/${P}-strict-aliasing.patch"
 
 	if use idea; then
 		if use bindist; then
