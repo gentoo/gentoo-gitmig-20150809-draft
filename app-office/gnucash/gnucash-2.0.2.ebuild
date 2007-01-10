@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.2.ebuild,v 1.6 2007/01/10 17:06:26 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.2.ebuild,v 1.7 2007/01/10 17:48:47 hkbst Exp $
 
 inherit eutils gnome2
 
@@ -18,7 +18,7 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="ofx hbci chipcard doc debug quotes nls"
 
 RDEPEND=">=dev-libs/glib-2.4.0
-	>=dev-util/guile-1.6.4-r2
+	>=dev-scheme/guile-1.6.4-r2
 	>=dev-scheme/slib-2.3.8
 	>=sys-libs/zlib-1.1.4
 	>=dev-libs/popt-1.5
