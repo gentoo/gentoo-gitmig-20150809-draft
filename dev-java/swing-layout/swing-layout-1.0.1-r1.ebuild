@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swing-layout/swing-layout-1.0.1-r1.ebuild,v 1.2 2006/12/09 09:25:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swing-layout/swing-layout-1.0.1-r1.ebuild,v 1.3 2007/01/10 16:56:58 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -19,10 +19,6 @@ DEPEND=">=virtual/jdk-1.4
 RDEPEND=">=virtual/jre-1.4"
 
 S=${WORKDIR}
-
-src_compile(){
-	eant jar $(use_doc javadoc)
-}
 
 src_install(){
 	java-pkg_dojar dist/swing-layout.jar
