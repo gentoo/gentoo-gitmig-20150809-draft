@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/giftoxic
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftoxic/ChangeLog,v 1.12 2005/05/09 02:57:31 tester Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftoxic/ChangeLog,v 1.13 2007/01/10 13:03:25 armin76 Exp $
+
+  10 Jan 2007; Raúl Porcel <armin76@gentoo.org> giftoxic-0.0.9.ebuild,
+  giftoxic-0.0.10.ebuild:
+  fix pkgconfig dep, bug 152463
 
   09 May 2005; Olivier Crête <tester@gentoo.org> giftoxic-0.0.10.ebuild:
   Stable on amd64

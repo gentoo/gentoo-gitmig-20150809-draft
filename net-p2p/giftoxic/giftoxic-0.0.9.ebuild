@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftoxic/giftoxic-0.0.9.ebuild,v 1.9 2005/01/02 12:23:20 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftoxic/giftoxic-0.0.9.ebuild,v 1.10 2007/01/10 13:03:25 armin76 Exp $
 
 IUSE=""
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="x86"
 
 DEPEND=">=x11-libs/gtk+-2.0.3
-	net-p2p/gift"
+	net-p2p/gift
+	dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
 

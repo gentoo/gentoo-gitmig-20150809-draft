@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/giftcurs-0.6.2.ebuild,v 1.11 2006/09/11 20:56:20 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/giftcurs-0.6.2.ebuild,v 1.12 2007/01/10 13:00:02 armin76 Exp $
 
 MY_P="giFTcurs-${PV}"
 S="${WORKDIR}/${MY_P}"
@@ -14,7 +14,8 @@ KEYWORDS="alpha amd64 ~ppc sparc x86 ~x86-fbsd"
 
 DEPEND="virtual/libc
 	>=sys-libs/ncurses-5.2
-	>=dev-libs/glib-2.0"
+	>=dev-libs/glib-2.0
+	dev-util/pkgconfig"
 
 src_compile() {
 	local myconf=""
