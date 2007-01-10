@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.11.1.ebuild,v 1.12 2006/12/27 10:00:10 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.11.1.ebuild,v 1.13 2007/01/10 17:36:10 hkbst Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.4"
@@ -28,7 +28,7 @@ DEPEND=">=dev-libs/expat-1.95.4
 	zlib? ( >=sys-libs/zlib-1.1.4 )
 	lua? ( >=dev-lang/lua-5 )
 	gpm? ( >=sys-libs/ncurses-5.2 >=sys-libs/gpm-1.20.0-r5 )
-	guile? ( >=dev-util/guile-1.6.4-r1 )
+	guile? ( >=dev-scheme/guile-1.6.4-r1 )
 	idn? ( net-dns/libidn )
 	perl? ( sys-devel/libperl )
 	ruby? ( dev-lang/ruby )
