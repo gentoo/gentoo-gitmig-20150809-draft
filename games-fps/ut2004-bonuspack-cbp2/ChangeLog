@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2004-bonuspack-cbp2
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-cbp2/ChangeLog,v 1.5 2006/11/08 19:12:38 nyhm Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-cbp2/ChangeLog,v 1.6 2007/01/10 19:34:51 wolf31o2 Exp $
+
+  10 Jan 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  -ut2004-bonuspack-cbp2-1.ebuild, ut2004-bonuspack-cbp2-1-r1.ebuild:
+  Stable on amd64/x86 and removing older versions.
 
   08 Nov 2006; Tristan Heaven <nyhm@gentoo.org>
   ut2004-bonuspack-cbp2-1-r1.ebuild:
