@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/valknut
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/ChangeLog,v 1.29 2006/10/01 16:38:21 jer Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/ChangeLog,v 1.30 2007/01/10 18:05:25 armin76 Exp $
+
+  10 Jan 2007; Raúl Porcel <armin76@gentoo.org> -valknut-0.2.20.ebuild,
+  -valknut-0.2.21.ebuild, -valknut-0.3.0.ebuild, -valknut-0.3.3.ebuild,
+  -valknut-0.3.5.ebuild:
+  drop old
 
   01 Oct 2006; Jeroen Roovers <jer@gentoo.org> valknut-0.3.7.ebuild:
   Stable for HPPA (bug #140724).
