@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/d1x-rebirth-0.50.ebuild,v 1.1 2007/01/09 17:25:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/d1x-rebirth-0.50.ebuild,v 1.2 2007/01/10 17:40:02 wolf31o2 Exp $
 
 inherit autotools eutils games
 
@@ -25,7 +25,7 @@ LICENSE="D1X
 	as-is"
 SLOT="0"
 # Should work on amd64 also
-KEYWORDS="~x86"
+KEYWORDS="~amd64 x86"
 IUSE="awe32 debug demo mpu401 opengl mixer"
 
 QA_EXECSTACK="${GAMES_BINDIR:1}/${PN}"
