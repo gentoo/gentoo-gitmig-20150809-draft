@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.40 2007/01/07 22:36:23 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.41 2007/01/10 01:28:35 mcummings Exp $
+
+  10 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  seamonkey-1.0.7.ebuild:
+  Stable on amd64 wrt bug 158576
 
   07 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> seamonkey-1.0.7.ebuild:
   Stable on Alpha, bug 158576.
