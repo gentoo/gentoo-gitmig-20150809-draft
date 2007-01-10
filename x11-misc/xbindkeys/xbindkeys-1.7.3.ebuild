@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/xbindkeys-1.7.3.ebuild,v 1.7 2006/09/19 01:53:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/xbindkeys-1.7.3.ebuild,v 1.8 2007/01/10 17:34:37 hkbst Exp $
 
 IUSE="guile tk"
 
@@ -12,7 +12,7 @@ KEYWORDS="amd64 ppc ~ppc-macos ppc64 sparc x86"
 SLOT="0"
 
 RDEPEND="|| ( x11-libs/libX11 virtual/x11 )
-	guile? ( dev-util/guile )
+	guile? ( dev-scheme/guile )
 	tk? ( dev-lang/tk )"
 
 DEPEND="${RDEPEND}
