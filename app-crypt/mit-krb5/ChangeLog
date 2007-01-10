@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.138 2007/01/06 18:26:36 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.139 2007/01/10 15:38:15 seemant Exp $
+
+*mit-krb5-1.5.2 (10 Jan 2007)
+
+  10 Jan 2007; Seemant Kulleen <seemant@gentoo.org> -mit-krb5-1.5.1.ebuild,
+  +mit-krb5-1.5.2.ebuild:
+  Version bump to 1.5.2 -- new candidate for stability, owing to bug #158810
+  and bug #161260. Upstream seems to have abandoned 1.4 series, so we're stuck
+  with the 1.5 series for now (and 1.6 soon). The only problem is lack of
+  --enable-static.
 
   06 Jan 2007; Timothy Redaelli <drizzt@gentoo.org> -mit-krb5-1.4.3.ebuild,
   -mit-krb5-1.4.3-r1.ebuild, -mit-krb5-1.4.3-r2.ebuild,
