@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-mikmod
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mikmod/ChangeLog,v 1.13 2006/02/23 13:30:06 zaheerm Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mikmod/ChangeLog,v 1.14 2007/01/10 04:12:05 leio Exp $
+
+  10 Jan 2007; Mart Raudsepp <leio@gentoo.org>
+  -gst-plugins-mikmod-0.8.8.ebuild, -gst-plugins-mikmod-0.8.9.ebuild,
+  -gst-plugins-mikmod-0.8.10.ebuild:
+  Prune old versions
 
 *gst-plugins-mikmod-0.8.12 (23 Feb 2006)
 
