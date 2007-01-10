@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bobotpp/bobotpp-2.1.7.ebuild,v 1.1 2005/06/01 18:40:09 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bobotpp/bobotpp-2.1.7.ebuild,v 1.2 2007/01/10 17:40:39 hkbst Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE="guile"
 
-DEPEND="guile? ( dev-util/guile )"
+DEPEND="guile? ( dev-scheme/guile )"
 
 src_unpack() {
 	unpack ${A}

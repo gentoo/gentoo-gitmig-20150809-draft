@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bobotpp/bobotpp-2.1.8.ebuild,v 1.1 2005/09/02 12:59:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bobotpp/bobotpp-2.1.8.ebuild,v 1.2 2007/01/10 17:41:01 hkbst Exp $
 
 DESCRIPTION="A flexible IRC bot scriptable in scheme"
 HOMEPAGE="http://unknownlamer.org/code/bobot.html"
@@ -10,7 +10,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE="guile"
 
-DEPEND="guile? ( dev-util/guile )"
+DEPEND="guile? ( dev-scheme/guile )"
 
 src_compile() {
 	econf $(use_enable guile scripting) || die "econf failed"
