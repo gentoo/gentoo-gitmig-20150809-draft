@@ -8,14 +8,14 @@ EBUILD tomcat-servlet-api-5.5.20.ebuild 1502 RMD160 1af5b1714049042ae228aa028b7a
 MD5 4a8a1d4307874b08f80da0ee818a9e36 tomcat-servlet-api-5.5.20.ebuild 1502
 RMD160 1af5b1714049042ae228aa028b7a02edd0b1f8fb tomcat-servlet-api-5.5.20.ebuild 1502
 SHA256 474aa0e46e3bb87dff5da307c22fb5bbbd58e9806b91a5fb34af9a35b754f252 tomcat-servlet-api-5.5.20.ebuild 1502
-EBUILD tomcat-servlet-api-6.0.7_alpha.ebuild 1248 RMD160 d7b34bc4233ff57cf7fc52ed8681256b81a7ae55 SHA1 359d0b0b9777c5d09ab951f6d62c3aff193cd9e1 SHA256 d213649665e5c840961a0e1258e6fe0b5b8c6029e6482decd6b9d6474918db87
-MD5 85a54115ffabb8f58e72518c55ed44da tomcat-servlet-api-6.0.7_alpha.ebuild 1248
-RMD160 d7b34bc4233ff57cf7fc52ed8681256b81a7ae55 tomcat-servlet-api-6.0.7_alpha.ebuild 1248
-SHA256 d213649665e5c840961a0e1258e6fe0b5b8c6029e6482decd6b9d6474918db87 tomcat-servlet-api-6.0.7_alpha.ebuild 1248
-MISC ChangeLog 687 RMD160 3f9f0b38eec2a7e187802111956e8781d2e8b1b4 SHA1 60a777443bc58a77aa20b7d06191e7e6e1ab537f SHA256 f39262ed5503b825734bd7c3d79d836ef8d93a4e1704a0c2713e5646c57664c4
-MD5 792825f466bbc5cacbb2bdd339ce92f5 ChangeLog 687
-RMD160 3f9f0b38eec2a7e187802111956e8781d2e8b1b4 ChangeLog 687
-SHA256 f39262ed5503b825734bd7c3d79d836ef8d93a4e1704a0c2713e5646c57664c4 ChangeLog 687
+EBUILD tomcat-servlet-api-6.0.7_beta.ebuild 1246 RMD160 602281f4ba3462d314fdc3b1f20bedd1601e85ae SHA1 dcd965dd361aa512b9faf9590c6da1a493de34d9 SHA256 d64b18321b4c1f2b2f4d753754d87ff7244724e270bb9232c53ed4fa3829dce5
+MD5 b358f803035339be3ea1d20ebe9ffbc3 tomcat-servlet-api-6.0.7_beta.ebuild 1246
+RMD160 602281f4ba3462d314fdc3b1f20bedd1601e85ae tomcat-servlet-api-6.0.7_beta.ebuild 1246
+SHA256 d64b18321b4c1f2b2f4d753754d87ff7244724e270bb9232c53ed4fa3829dce5 tomcat-servlet-api-6.0.7_beta.ebuild 1246
+MISC ChangeLog 908 RMD160 29c0056f2a67b1235e7a45dc5ccbdb8bd2882c24 SHA1 ccd1af74451f30235231ae32bb409e2872cf2345 SHA256 b2a147f3e083f704d722fbd1ee2c27cea313d7f077732070e6e3523d7dcd7940
+MD5 cf40e60acc2ee9ef8acd5d0d2a0ce70a ChangeLog 908
+RMD160 29c0056f2a67b1235e7a45dc5ccbdb8bd2882c24 ChangeLog 908
+SHA256 b2a147f3e083f704d722fbd1ee2c27cea313d7f077732070e6e3523d7dcd7940 ChangeLog 908
 MISC metadata.xml 370 RMD160 80f77811a1330480797cff01b1e90e883ecb4d51 SHA1 0d60a8ede5babbd15577612fe7b9e504e5a73689 SHA256 d82a36005520445f65916bb8e8e5a4e41c3af6cc5be87cb2263337074e39b704
 MD5 eab22d527a1a92afde250a0ff957b829 metadata.xml 370
 RMD160 80f77811a1330480797cff01b1e90e883ecb4d51 metadata.xml 370
@@ -23,6 +23,6 @@ SHA256 d82a36005520445f65916bb8e8e5a4e41c3af6cc5be87cb2263337074e39b704 metadata
 MD5 8adc14a8534e1c6f8d5f96b371e1895f files/digest-tomcat-servlet-api-5.5.20 277
 RMD160 b9c5deac84bf5acd7a65ad80bdfaca9f7e343f3f files/digest-tomcat-servlet-api-5.5.20 277
 SHA256 fda2efc7c4fe103d3fec9599fe3797d8784381008f71d9006c7224db91862b30 files/digest-tomcat-servlet-api-5.5.20 277
-MD5 ae090639fc2a4b844084020e9fd68796 files/digest-tomcat-servlet-api-6.0.7_alpha 274
-RMD160 887290424c340b8a024770ae6ee2adeb0252b5ea files/digest-tomcat-servlet-api-6.0.7_alpha 274
-SHA256 8c88ae20979c83fd4529d2493cf5bfc63d86ff37cb46af296db58166d2e0ad3d files/digest-tomcat-servlet-api-6.0.7_alpha 274
+MD5 ae090639fc2a4b844084020e9fd68796 files/digest-tomcat-servlet-api-6.0.7_beta 274
+RMD160 887290424c340b8a024770ae6ee2adeb0252b5ea files/digest-tomcat-servlet-api-6.0.7_beta 274
+SHA256 8c88ae20979c83fd4529d2493cf5bfc63d86ff37cb46af296db58166d2e0ad3d files/digest-tomcat-servlet-api-6.0.7_beta 274
