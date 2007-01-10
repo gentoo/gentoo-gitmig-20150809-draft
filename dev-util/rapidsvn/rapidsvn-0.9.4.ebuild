@@ -1,15 +1,15 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.3.ebuild,v 1.9 2007/01/10 08:44:15 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.4.ebuild,v 1.1 2007/01/10 08:44:15 nerdboy Exp $
 
 inherit eutils libtool autotools
 
 DESCRIPTION="Cross-platform GUI front-end for the Subversion revision system."
 HOMEPAGE="http://rapidsvn.tigris.org/"
-SRC_URI="http://www.rapidsvn.org/download/${P}.tar.gz"
+SRC_URI="http://www.rapidsvn.org/download/release/${PV}/${P}.tar.gz"
 LICENSE="GPL-2 LGPL-2.1 FDL-1.2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc static"
 
 DEPEND=">=dev-util/subversion-1.3.2-r1
@@ -78,7 +78,7 @@ src_install() {
 	einstall || die "einstall failed"
 	doman doc/manpage/rapidsvn.1 || die "doman failed"
 	doicon src/res/bitmaps/svn.xpm
-	make_desktop_entry rapidsvn RapidSVN svn.xpm RevisionControl
+	make_desktop_entry rapidsvn RapidSVN svn.xpm Programming
 	dodoc HACKING.txt TRANSLATIONS
 	if use doc ; then
 	    dodoc AUTHORS CHANGES NEWS README
