@@ -1,0 +1,38 @@
+Index: mod_auth_kerb-5.0-rc6/src/mod_auth_kerb.c
+===================================================================
+--- mod_auth_kerb-5.0-rc6.orig/src/mod_auth_kerb.c
++++ mod_auth_kerb-5.0-rc6/src/mod_auth_kerb.c
+@@ -56,7 +56,7 @@
+ #include <http_request.h>
+ 
+ #ifdef STANDARD20_MODULE_STUFF
+-#include <ap_compat.h>
++#include <ap_mmn.h>
+ #include <apr_strings.h>
+ #include <apr_base64.h>
+ #endif
+@@ -105,6 +105,24 @@ module auth_kerb_module;
+ #define MK_TABLE_GET apr_table_get
+ #define MK_USER r->user
+ #define MK_AUTH_TYPE r->ap_auth_type
++
++#if AP_MODULE_MAGIC_AT_LEAST(20051115, 0)
++/* APR 1.x compatibility */
++#define ap_pstrdup apr_pstrdup
++#define ap_psprintf apr_psprintf
++#define ap_pcalloc apr_pcalloc
++#define ap_table_setn apr_table_setn
++#define ap_register_cleanup apr_pool_cleanup_register
++#define APR_XtOffsetOf APR_OFFSETOF
++#define ap_pstrcat apr_pstrcat
++#define ap_null_cleanup apr_pool_cleanup_null
++#define ap_base64decode apr_base64_decode
++#define ap_base64decode_len apr_base64_decode_len
++#define ap_base64encode apr_base64_encode
++#define ap_base64encode_len apr_base64_encode_len
++#define ap_table_add apr_table_add
++#endif
++
+ #else
+ #define MK_POOL pool
+ #define MK_TABLE_GET ap_table_get

@@ -1,0 +1,128 @@
+Index: mod_auth_kerb-5.0-rc6/src/mod_auth_kerb.c
+===================================================================
+--- mod_auth_kerb-5.0-rc6.orig/src/mod_auth_kerb.c
++++ mod_auth_kerb-5.0-rc6/src/mod_auth_kerb.c
+@@ -61,6 +61,8 @@
+ #include <apr_base64.h>
+ #endif
+ 
++#include <unistd.h>
++
+ #ifdef KRB5
+ #include <krb5.h>
+ #ifdef HEIMDAL
+@@ -137,7 +139,7 @@ set_kerb_auth_headers(request_rec *r, co
+                       int use_krb4, int use_krb5pwd, char *negotiate_ret_value);
+ 
+ static const char*
+-krb5_save_realms(cmd_parms *cmd, kerb_auth_config *sec, char *arg);
++krb5_save_realms(cmd_parms *cmd, void *config, const char *arg);
+ 
+ #ifdef STANDARD20_MODULE_STUFF
+ #define command(name, func, var, type, usage)           \
+@@ -247,8 +249,9 @@ static void *kerb_dir_create_config(MK_P
+ }
+ 
+ static const char*
+-krb5_save_realms(cmd_parms *cmd, kerb_auth_config *sec, char *arg)
++krb5_save_realms(cmd_parms *cmd, void *config, const char *arg)
+ {
++   kerb_auth_config *sec = config;
+    sec->krb_auth_realms= ap_pstrdup(cmd->pool, arg);
+    return NULL;
+ }
+@@ -1086,6 +1089,8 @@ cmp_gss_type(gss_buffer_t token, gss_OID
+    return memcmp(p, oid->elements, oid->length);
+ }
+ 
++#define NAMEKEY "mod_auth_kerb:client_name"
++
+ static int
+ authenticate_user_gss(request_rec *r, kerb_auth_config *conf,
+ 		      const char *auth_line, char **negotiate_ret_value)
+@@ -1224,7 +1229,16 @@ authenticate_user_gss(request_rec *r, ke
+   }
+ 
+   MK_AUTH_TYPE = "Negotiate";
+-  MK_USER = ap_pstrdup(r->pool, output_token.value);
++  MK_USER = ap_pstrdup(r->connection->pool, output_token.value);
++
++#ifndef APXS1
++  {
++      apr_status_t rv;
++      rv = apr_pool_userdata_set(r->user, NAMEKEY, NULL, r->connection->pool);
++      ap_log_rerror(APLOG_MARK, APLOG_DEBUG, rv, r, 
++                    "set cached name %s for connection", r->user);
++  }
++#endif
+ 
+   if (conf->krb_save_credentials && delegated_cred != GSS_C_NO_CREDENTIAL)
+      store_gss_creds(r, conf, (char *)output_token.value, delegated_cred);
+@@ -1256,17 +1270,6 @@ end:
+ }
+ #endif /* KRB5 */
+ 
+-static int
+-already_succeeded(request_rec *r)
+-{
+-   if (ap_is_initial_req(r) || MK_AUTH_TYPE == NULL)
+-      return 0;
+-   if (strcmp(MK_AUTH_TYPE, "Negotiate") ||
+-       (strcmp(MK_AUTH_TYPE, "Basic") && strchr(MK_USER, '@')))
+-      return 1;
+-   return 0;
+-}
+-
+ static void
+ set_kerb_auth_headers(request_rec *r, const kerb_auth_config *conf,
+       		      int use_krb4, int use_krb5pwd, char *negotiate_ret_value)
+@@ -1313,7 +1316,6 @@ int kerb_authenticate_user(request_rec *
+    const char *type = NULL;
+    int use_krb5 = 0, use_krb4 = 0;
+    int ret;
+-   static int last_return = HTTP_UNAUTHORIZED;
+    char *negotiate_ret_value = NULL;
+ 
+    /* get the type specified in .htaccess */
+@@ -1332,6 +1334,23 @@ int kerb_authenticate_user(request_rec *
+    else
+       return DECLINED;
+ 
++#ifndef APXS1
++   if (use_krb5 && conf->krb_method_gssapi) {
++       void *data = NULL;
++       const char *name;
++      
++       if (apr_pool_userdata_get(&data, NAMEKEY, r->connection->pool) == APR_SUCCESS
++           && data != NULL) {
++           name = data;
++           ap_log_rerror(APLOG_MARK, APLOG_DEBUG, 0, r,
++                         "using cached name %s", name);
++           r->user = ap_pstrdup(r->pool, name);
++           r->ap_auth_type = "Negotiate";
++           return OK;
++       } 
++   }
++#endif      
++
+    /* get what the user sent us in the HTTP header */
+    auth_line = MK_TABLE_GET(r->headers_in, (r->proxyreq == PROXYREQ_PROXY)
+ 	                                    ? "Proxy-Authorization"
+@@ -1354,9 +1373,6 @@ int kerb_authenticate_user(request_rec *
+        (strcasecmp(auth_type, "Basic") == 0))
+        return DECLINED;
+ 
+-   if (already_succeeded(r))
+-      return last_return;
+-
+    ret = HTTP_UNAUTHORIZED;
+ 
+ #ifdef KRB5
+@@ -1380,7 +1396,6 @@ int kerb_authenticate_user(request_rec *
+ 
+    /* XXX log_debug: if ret==OK, log(user XY authenticated) */
+ 
+-   last_return = ret;
+    return ret;
+ }
+ 
