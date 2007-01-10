@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jline
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/ChangeLog,v 1.3 2007/01/05 04:22:49 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/ChangeLog,v 1.4 2007/01/10 18:27:58 betelgeuse Exp $
+
+  10 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> jline-0.9.9-r1.ebuild:
+  Fixed to compile with JAVA_PKG_STRICT.
 
   05 Jan 2007; Joshua Nichols <nichoj@gentoo.org> jline-0.9.9-r1.ebuild:
   Added ~ppc.
