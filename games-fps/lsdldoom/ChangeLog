@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/lsdldoom
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/lsdldoom/ChangeLog,v 1.9 2006/05/06 00:25:53 tupone Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/lsdldoom/ChangeLog,v 1.10 2007/01/10 00:15:53 wolf31o2 Exp $
+
+  10 Jan 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  lsdldoom-1.4.4.4.ebuild:
+  Added a blocker on games-fps/prboom for bug #159087.
 
   06 May 2006; <Tupone@gentoo.org> +files/lsdldoom-1.4.4.4-gcc41.patch,
   lsdldoom-1.4.4.4.ebuild:

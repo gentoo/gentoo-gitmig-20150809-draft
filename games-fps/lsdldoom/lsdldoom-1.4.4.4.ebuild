@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/lsdldoom/lsdldoom-1.4.4.4.ebuild,v 1.12 2006/05/06 00:25:53 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/lsdldoom/lsdldoom-1.4.4.4.ebuild,v 1.13 2007/01/10 00:15:53 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -15,6 +15,7 @@ IUSE=""
 
 DEPEND="media-libs/libsdl
 	media-libs/sdl-net
+	!games-fps/prboom
 	games-fps/doom-data"
 
 src_unpack() {
