@@ -1,6 +1,9 @@
 # ChangeLog for app-office/taxbird
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taxbird/ChangeLog,v 1.3 2006/05/29 08:01:09 wrobel Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/taxbird/ChangeLog,v 1.4 2007/01/10 17:47:18 hkbst Exp $
+
+  10 Jan 2007; <marijn@gentoo.org> taxbird-0.6.ebuild:
+  Dependency update: dev-util/guile -> dev-scheme/guile.
 
 *taxbird-0.7 (29 May 2006)
 
