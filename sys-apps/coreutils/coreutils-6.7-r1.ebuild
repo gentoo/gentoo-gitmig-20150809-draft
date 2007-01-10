@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-6.7-r1.ebuild,v 1.1 2007/01/02 04:53:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-6.7-r1.ebuild,v 1.2 2007/01/10 16:42:47 vapier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -148,4 +148,8 @@ src_install() {
 		# For now, drop the man pages, collides with the ones of the system.
 		rm -rf "${D}"/usr/share/man
 	fi
+}
+
+pkg_postinst() {
+	ewarn "Make sure you run 'hash -r' in your active shells."
 }
