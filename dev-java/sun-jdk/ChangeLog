@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.179 2007/01/11 14:43:44 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.180 2007/01/11 23:36:19 betelgeuse Exp $
 
   11 Jan 2007; Petteri Räty <betelgeuse@gentoo.org>
   -sun-jdk-1.5.0.09-r1.ebuild, -sun-jdk-1.6.0.ebuild:
@@ -8,7 +8,7 @@
 
   11 Jan 2007; Petteri Räty <betelgeuse@gentoo.org>
   sun-jdk-1.6.0-r1.ebuild:
-  Added dependency on virtual/libstdc++-3.3
+  Added dependency on virtual/libstdc++-3.3. Fixes bug #161536.
 
   10 Jan 2007; Vlastimil Babka <caster@gentoo.org>
   -sun-jdk-1.4.2.12-r2.ebuild, sun-jdk-1.4.2.13.ebuild,
