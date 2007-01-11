@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/newsyslog/newsyslog-1.1.ebuild,v 1.16 2005/01/01 11:15:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/newsyslog/newsyslog-1.1.ebuild,v 1.17 2007/01/11 20:46:50 vapier Exp $
 
 inherit eutils
 
@@ -38,10 +38,9 @@ src_compile() {
 }
 
 src_install() {
-	make \
+	emake \
 		DESTDIR="${D}" \
-		catmandir=${D}/usr/share/man \
+		catmandir="${T}"/dont-install \
 		install || die "install failed"
 	dodoc newsyslog.conf AUTHORS ChangeLog INSTALL NEWS README.* ToDo
-	prepalldocs
 }
