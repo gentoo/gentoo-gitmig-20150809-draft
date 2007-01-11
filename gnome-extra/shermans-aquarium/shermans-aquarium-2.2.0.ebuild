@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/shermans-aquarium/shermans-aquarium-2.2.0.ebuild,v 1.14 2006/08/21 03:22:39 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/shermans-aquarium/shermans-aquarium-2.2.0.ebuild,v 1.15 2007/01/11 22:39:03 dang Exp $
 
 inherit eutils
 
@@ -27,8 +27,9 @@ S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}; epatch ${FILESDIR}/${P}-gcc-v.patch
-	autoconf
+	cd ${S};
+	epatch "${FILESDIR}"/${P}-gcc-v.patch
+	epatch "${FILESDIR}"/${P}-utf8.patch
 }
 
 src_compile( ) {

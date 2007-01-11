@@ -1,16 +1,23 @@
-AUX shermans-aquarium-2.2.0-gcc-v.patch 508 RMD160 7b4765f8b2999160b9fce81627f2469b7259defe SHA1 7761ff20c620e54764dbfa9244bd241c4705716c SHA256 3835349644bf79bb16b581d9a33a729b171fa6a6e00610503014d71b0bb3524f
-MD5 db0ad320466766d2de4b54ef908f5639 files/shermans-aquarium-2.2.0-gcc-v.patch 508
-RMD160 7b4765f8b2999160b9fce81627f2469b7259defe files/shermans-aquarium-2.2.0-gcc-v.patch 508
-SHA256 3835349644bf79bb16b581d9a33a729b171fa6a6e00610503014d71b0bb3524f files/shermans-aquarium-2.2.0-gcc-v.patch 508
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX shermans-aquarium-2.2.0-gcc-v.patch 1195 RMD160 c1d9a9fcf65bbe5ccc9ecd047f6763f05c341b3c SHA1 e396a4e50dc7a7d45167603e5ee5fa3d779ff07e SHA256 f6aa34a2fc6ef6787382c82ee7b864510875c6efb11d9fbec75e714febe0ff35
+MD5 1a241e5aaefd0dc9b2b9e04a1a91879d files/shermans-aquarium-2.2.0-gcc-v.patch 1195
+RMD160 c1d9a9fcf65bbe5ccc9ecd047f6763f05c341b3c files/shermans-aquarium-2.2.0-gcc-v.patch 1195
+SHA256 f6aa34a2fc6ef6787382c82ee7b864510875c6efb11d9fbec75e714febe0ff35 files/shermans-aquarium-2.2.0-gcc-v.patch 1195
+AUX shermans-aquarium-2.2.0-utf8.patch 2398 RMD160 b1488491d6d11f5b3c8c1f9c50b77db4ba57c29b SHA1 e8ebf90d6f074d4c1ff8dde6430c12d45774524b SHA256 bef240bc1b2d069205976e674b07aeb4f1af56bafae0f0531087a828664d1219
+MD5 6f87f3ec6605128c99b85ddd44ccbe0c files/shermans-aquarium-2.2.0-utf8.patch 2398
+RMD160 b1488491d6d11f5b3c8c1f9c50b77db4ba57c29b files/shermans-aquarium-2.2.0-utf8.patch 2398
+SHA256 bef240bc1b2d069205976e674b07aeb4f1af56bafae0f0531087a828664d1219 files/shermans-aquarium-2.2.0-utf8.patch 2398
 DIST shermans_aquarium-2.2.0.tar.gz 209105 RMD160 87471964ae961433cf242cd174963f03fda00955 SHA1 0d2ae8b544bceabf8bfc8205aa1661846d63df79 SHA256 14f228631b35d447bc78e7c851aab644951bb6bf2f872d556a53cf474d1dc4c2
-EBUILD shermans-aquarium-2.2.0.ebuild 1342 RMD160 ad91b43f52759c47ff9bd33ca503c951b36595cb SHA1 8810f6638a9ed1398b3024ac25b56272422a8efe SHA256 23260fd1fa058c8ded91293e5ebc61a4f0f7a2f95ff8bb92de27a3cc3d91befe
-MD5 4a39deb3cc27553c579880612ba42bff shermans-aquarium-2.2.0.ebuild 1342
-RMD160 ad91b43f52759c47ff9bd33ca503c951b36595cb shermans-aquarium-2.2.0.ebuild 1342
-SHA256 23260fd1fa058c8ded91293e5ebc61a4f0f7a2f95ff8bb92de27a3cc3d91befe shermans-aquarium-2.2.0.ebuild 1342
-MISC ChangeLog 1713 RMD160 bef78bb37d9e4b1497fff328d52a0157ce57f27d SHA1 19bafbb5e40af402a7c9839eecf5979ac6e67f6f SHA256 5434035aee2add4a4b332183d23f15ff0ca282f88f6c34a34e845d76e998e440
-MD5 70d041bd304be8ff560a0fec254a1c50 ChangeLog 1713
-RMD160 bef78bb37d9e4b1497fff328d52a0157ce57f27d ChangeLog 1713
-SHA256 5434035aee2add4a4b332183d23f15ff0ca282f88f6c34a34e845d76e998e440 ChangeLog 1713
+EBUILD shermans-aquarium-2.2.0.ebuild 1372 RMD160 cac52199bbf7c54ab3c365bd8cf0379c0c6e8cb3 SHA1 2936b9d203bb3d319815224ebbd3ac427fc02d26 SHA256 b5c9418761919be1878fa1e83f0c9d899403d0289ef9dbaf4a1aa18396183050
+MD5 e44cd91528e0a51d92f2308162c943f3 shermans-aquarium-2.2.0.ebuild 1372
+RMD160 cac52199bbf7c54ab3c365bd8cf0379c0c6e8cb3 shermans-aquarium-2.2.0.ebuild 1372
+SHA256 b5c9418761919be1878fa1e83f0c9d899403d0289ef9dbaf4a1aa18396183050 shermans-aquarium-2.2.0.ebuild 1372
+MISC ChangeLog 2014 RMD160 f7e3992619928e29667cc42e2c9eca35f1b4aed6 SHA1 68a41eb3f02784695002c21fa688f5897abb216a SHA256 9dd3d64cb6b607d02b7a289a4993447022ec0b962b05e597e828581fdf24bcbd
+MD5 c2fe3a010c2f6c68f216a154076a6552 ChangeLog 2014
+RMD160 f7e3992619928e29667cc42e2c9eca35f1b4aed6 ChangeLog 2014
+SHA256 9dd3d64cb6b607d02b7a289a4993447022ec0b962b05e597e828581fdf24bcbd ChangeLog 2014
 MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
@@ -18,3 +25,10 @@ SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata
 MD5 c2a0a3e72dacfda8e71c6df8bedfbafd files/digest-shermans-aquarium-2.2.0 271
 RMD160 e71ed006e2ab97f48329b3b2a14e37364f6d5831 files/digest-shermans-aquarium-2.2.0 271
 SHA256 98249f78cf7dfcc11baebdf1427ddd114d5f80f5cef96b7cc071fd551f9d1f1a files/digest-shermans-aquarium-2.2.0 271
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFpryHomPajV0RnrERAhDwAJ4jH+t89IFarQds3mrSF6bP4jJorgCfUntj
+WWTXE1iwMunCjGmZuEMcr/o=
+=W95d
+-----END PGP SIGNATURE-----
