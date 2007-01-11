@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/artwiz-fonts
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/ChangeLog,v 1.18 2006/11/26 23:22:22 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/ChangeLog,v 1.19 2007/01/11 19:03:17 gmsoft Exp $
+
+  11 Jan 2007; Guy Martin <gmsoft@gentoo.org> artwiz-fonts-2.4-r3.ebuild:
+  Stable on hppa.
 
   26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   artwiz-fonts-2.4-r3.ebuild:
