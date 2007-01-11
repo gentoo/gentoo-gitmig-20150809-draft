@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.0.5-r2.ebuild,v 1.1 2007/01/11 04:49:52 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.0.5-r2.ebuild,v 1.2 2007/01/11 19:13:59 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -61,11 +61,11 @@ src_unpack() {
 			src/org/hibernate/cache/TreeCache.java \
 			src/org/hibernate/cache/TreeCacheProvider.java
 #	fi
-	
+
 	cd lib
 	rm *.jar
 
-	local JAR_PACKAGES="ant-core antlr asm-2 c3p0 commons-collections 
+	local JAR_PACKAGES="ant-core antlr asm-2 c3p0 commons-collections
 		commons-logging dom4j-1 ehcache jaxen-1.1 jdbc2-stdext jta
 		log4j oscache proxool swarmcache-1.0 sun-jacc-api xerces-2"
 	for PACKAGE in ${JAR_PACKAGES}; do
