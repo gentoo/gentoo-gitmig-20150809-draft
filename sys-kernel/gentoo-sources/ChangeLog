@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.356 2007/01/05 14:29:09 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.357 2007/01/11 18:54:47 dsd Exp $
+
+*gentoo-sources-2.6.19-r4 (11 Jan 2007)
+
+  11 Jan 2007; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.19-r4.ebuild:
+  Update to Linux 2.6.19.2. Fix boot time crash when using IDE command line
+  parameters. Fix CIFS page corruption.
 
 *gentoo-sources-2.6.19-r3 (05 Jan 2007)
 
