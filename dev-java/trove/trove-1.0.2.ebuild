@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/trove/trove-1.0.2.ebuild,v 1.7 2005/10/07 21:13:47 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/trove/trove-1.0.2.ebuild,v 1.8 2007/01/11 12:49:16 flameeyes Exp $
 
 inherit java-pkg
 
@@ -26,7 +26,7 @@ src_compile() {
 	mkdir build
 
 	cd src
-	javac -nowarn -d ${S}/build $(find -name "*.java") \
+	javac -nowarn -d ${S}/build $(find . -name "*.java") \
 		|| die "Failed to compile ${i}"
 
 	if use doc ; then
