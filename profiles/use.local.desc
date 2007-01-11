@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2489 2007/01/09 21:51:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2490 2007/01/11 02:18:22 compnerd Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -189,6 +189,7 @@ app-misc/tablix:pvm - Add support for parallel virtual machine (http://www.epm.o
 app-misc/tomboy:galago - Add support for the galago desktop presence framework
 app-misc/towitoko:moneyplex - Makes libtowitoko work for the moneyplex home banking software
 app-misc/tracker:gsf - Enable libgsf based data extractor
+app-misc/tracker:thumbnailing - Enable support for thumbnails
 app-misc/workrave:distribution - Enable networking. See http://www.workrave.org/features/
 app-mobilephone/gammu:irda - Enable infrared support
 app-mobilephone/gnokii:ical - Enable libical support
