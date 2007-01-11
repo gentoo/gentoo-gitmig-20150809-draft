@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/lbdb-0.34.ebuild,v 1.1 2006/12/10 17:24:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/lbdb-0.34.ebuild,v 1.2 2007/01/11 18:00:22 gustavoz Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ DESCRIPTION="Little Brother database"
 SRC_URI="http://www.spinnaker.de/debian/${MY_P}.tar.gz"
 HOMEPAGE="http://www.spinnaker.de/lbdb/"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc sparc ~x86"
 LICENSE="GPL-2"
 DEPEND="mail-client/mutt
 	evo? ( mail-client/evolution )
