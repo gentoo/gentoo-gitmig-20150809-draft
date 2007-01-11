@@ -1,6 +1,10 @@
 # ChangeLog for media-video/xine-ui
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.133 2006/10/01 18:01:20 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.134 2007/01/11 16:17:41 corsair Exp $
+
+  11 Jan 2007; Markus Rothe <corsair@gentoo.org>
+  xine-ui-0.99.5_pre20060716.ebuild:
+  Stable on ppc64; bug #161558
 
   01 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   xine-ui-0.99.4-r5.ebuild, xine-ui-0.99.4-r6.ebuild,
