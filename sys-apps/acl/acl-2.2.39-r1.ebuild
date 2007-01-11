@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.39-r1.ebuild,v 1.2 2006/09/24 03:48:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.39-r1.ebuild,v 1.3 2007/01/11 21:55:05 vapier Exp $
 
 WANT_AUTOCONF="latest"
 inherit eutils autotools toolchain-funcs
@@ -33,6 +33,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-2.2.32-only-symlink-when-needed.patch
 	sed -i \
 		-e "/^PKG_DOC_DIR/s:@pkg_name@:${PF}:" \
+		-e '/HAVE_ZIPPED_MANPAGES/s:=.*:=false:' \
 		include/builddefs.in \
 		|| die "failed to update builddefs"
 	eautoconf
@@ -51,7 +52,7 @@ src_compile() {
 }
 
 src_install() {
-	make DIST_ROOT="${D}" install install-dev install-lib || die
+	emake DIST_ROOT="${D}" install install-dev install-lib || die
 	prepalldocs
 
 	# move shared libs to /
