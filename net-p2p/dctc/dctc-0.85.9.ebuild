@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/dctc-0.85.9.ebuild,v 1.15 2007/01/04 13:35:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/dctc-0.85.9.ebuild,v 1.16 2007/01/11 19:50:38 armin76 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -31,10 +31,17 @@ src_unpack() {
 	epatch "${FILESDIR}"/dctc-0.85.9-gcc41.patch
 
 	eautoreconf
+
+
+	# fix for #26708 (db4 support)
+	local dbfunc="`grep '^#define.*db_env_create' /usr/include/db.h | awk '{print $NF}'`"
+	if [ "${dbfunc}" != "db_env_create" ] ; then
+		sed -i "s:db_env_create:${dbfunc}:g" configure
+	fi
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc Documentation/* Documentation/DCextensions/*
+	emake DESTDIR="${D}" install || die "emake install failed"
+	dodoc Documentation/Documentation/* Documentation/Documentation/DCextensions/*
 	dodoc AUTHORS COPYING ChangeLog INSTALL KNOWN_BUGS NEWS README TODO
 }
