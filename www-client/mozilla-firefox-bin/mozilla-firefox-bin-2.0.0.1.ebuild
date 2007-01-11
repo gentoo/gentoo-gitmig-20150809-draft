@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.1.ebuild,v 1.4 2007/01/07 20:50:33 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.1.ebuild,v 1.5 2007/01/11 15:17:51 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -14,7 +14,7 @@ RESTRICT="nostrip"
 
 KEYWORDS="-* amd64 x86"
 SLOT="0"
-LICENSE="MPL-1.1 NPL-1.1"
+LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 IUSE=""
 
 for X in ${LANGS} ; do
