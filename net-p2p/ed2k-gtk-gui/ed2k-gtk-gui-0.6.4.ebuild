@@ -1,10 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k-gtk-gui/ed2k-gtk-gui-0.6.4.ebuild,v 1.2 2005/06/20 00:47:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k-gtk-gui/ed2k-gtk-gui-0.6.4.ebuild,v 1.3 2007/01/11 15:04:30 armin76 Exp $
 
-inherit libtool
-
-DESCRIPTION="GTK+ Client for overnet"
+DESCRIPTION="GTK+ Client for overnet or edonkey"
 HOMEPAGE="http://ed2k-gtk-gui.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 RESTRICT="nomirror"
@@ -14,16 +12,17 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND=">=x11-libs/gtk+-2.0
-	>=net-libs/gnet-1.1"
+	>=net-libs/gnet-1.1
+	dev-util/pkgconfig"
 
 src_compile() {
-	econf || die "configure failed"
+	econf || die "econf failed"
 	sed -i -e "s:-DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED::g" ed2k_gui/Makefile
-	emake || die "make failed"
+	emake || die "emake failed"
 }
 
 src_install() {
-	einstall || die "install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 }
 
 pkg_postinst() {
@@ -32,6 +31,6 @@ pkg_postinst() {
 	einfo "unable to set up the client."
 	echo
 	ewarn "ed2k-gtk-gui requires access to an overnet/edonkey core. If you"
-	ewarn "do not have access to a core, you can install net-p2p/overnet."
+	ewarn "do not have access to a core, you can install net-p2p/(overnet,edonkey)."
 	echo
 }
