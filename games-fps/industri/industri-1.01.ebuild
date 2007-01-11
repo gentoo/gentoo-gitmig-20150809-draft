@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.12 2006/12/05 17:08:32 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.13 2007/01/11 21:43:06 wolf31o2 Exp $
 
 inherit toolchain-funcs games
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/industri/industri_BIN-${PV}-src.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-IUSE=""
+IUSE="cdinstall"
 
 RDEPEND="virtual/opengl
 	media-libs/mesa
@@ -21,6 +21,7 @@ RDEPEND="virtual/opengl
 	x11-libs/libX11
 	x11-libs/libXxf86vm
 	media-libs/libpng
+	cdinstall? ( games-fps/quake1-data )
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
 	x11-proto/xf86dgaproto
@@ -73,6 +74,8 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "Please setup your quake pak files before playing in"
-	einfo "${GAMES_DATADIR}/quake1"
+	if ! use cdinstall
+	then
+		elog "You need to copy pak0.pak to ${GAMES_DATADIR}/quake1 to play."
+	fi
 }
