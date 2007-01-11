@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rat
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rat/ChangeLog,v 1.7 2007/01/09 02:14:03 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rat/ChangeLog,v 1.8 2007/01/11 03:24:37 mr_bones_ Exp $
+
+  11 Jan 2007; Michael Sterrett <mr_bones_@gentoo.org> -rat-4.2.23.ebuild:
+  clean older ebuild with broken tcl/tk deps
 
   09 Jan 2007; Andrej Kacian <ticho@gentoo.org> rat-4.2.25.ebuild:
   Stable on x86, bug #160425.
