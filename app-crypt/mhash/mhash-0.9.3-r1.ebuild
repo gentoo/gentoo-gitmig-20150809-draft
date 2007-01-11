@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/mhash-0.9.3-r1.ebuild,v 1.5 2006/10/19 08:36:19 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/mhash-0.9.3-r1.ebuild,v 1.6 2007/01/11 20:50:18 vapier Exp $
 
 inherit eutils
 
@@ -31,10 +31,9 @@ src_compile() {
 
 src_install() {
 	dodir /usr/{bin,include,lib}
-	make install DESTDIR="${D}" || die "install failure"
+	emake install DESTDIR="${D}" || die "install failure"
 
 	dodoc AUTHORS INSTALL NEWS README TODO THANKS ChangeLog
 	dodoc doc/*.txt doc/skid*
-	prepalldocs
 	cd doc && make mhash.html && dohtml mhash.html || die "dohtml failed"
 }

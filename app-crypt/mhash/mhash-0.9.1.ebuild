@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/mhash-0.9.1.ebuild,v 1.12 2005/02/20 02:10:25 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/mhash-0.9.1.ebuild,v 1.13 2007/01/11 20:50:18 vapier Exp $
 
 inherit libtool
 
@@ -34,6 +34,5 @@ src_install() {
 
 	dodoc AUTHORS INSTALL NEWS README TODO THANKS ChangeLog
 	dodoc doc/*.txt doc/skid*
-	prepalldocs
 	cd doc && dohtml mhash.html || die "dohtml failed"
 }
