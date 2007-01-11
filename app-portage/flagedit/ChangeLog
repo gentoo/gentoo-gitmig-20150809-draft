@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/flagedit
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/flagedit/ChangeLog,v 1.12 2006/11/28 22:59:05 dev-zero Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/flagedit/ChangeLog,v 1.13 2007/01/11 14:37:31 corsair Exp $
+
+  11 Jan 2007; Markus Rothe <corsair@gentoo.org> flagedit-0.0.7.ebuild:
+  Added ~ppc64; bug #161464
 
   28 Nov 2006; Tiziano Müller <dev-zero@gentoo.org> flagedit-0.0.7.ebuild:
   ~x86-fbsd keyword added.
