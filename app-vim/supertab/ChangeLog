@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/supertab
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/supertab/ChangeLog,v 1.17 2006/11/06 07:58:12 pioto Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/supertab/ChangeLog,v 1.18 2007/01/11 06:49:34 pioto Exp $
+
+*supertab-0.41 (11 Jan 2007)
+
+  11 Jan 2007; Mike Kelly <pioto@gentoo.org> +supertab-0.41.ebuild:
+  Version bump; new HOMEPAGE. See bug #156616.
 
   19 Sep 2006; Mike Kelly <pioto@gentoo.org> supertab-0.31.ebuild,
   supertab-0.32.ebuild:
