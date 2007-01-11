@@ -1,6 +1,18 @@
 # ChangeLog for net-wireless/ndiswrapper
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.69 2007/01/09 02:15:40 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.70 2007/01/11 17:11:35 peper Exp $
+
+  11 Jan 2007; Piotr Jaroszyński <peper@gentoo.org>
+  -files/ndiswrapper-1.2-kernel-2.6.14.patch,
+  -files/ndiswrapper-1.2-kernel-2.6.16.patch,
+  -files/ndiswrapper-1.2-suspend2.patch,
+  -files/ndiswrapper-1.16-gcc-4.1.patch, -ndiswrapper-1.2-r1.ebuild,
+  -ndiswrapper-1.25.ebuild, -ndiswrapper-1.26.ebuild,
+  -ndiswrapper-1.28.ebuild, -ndiswrapper-1.29.ebuild,
+  -ndiswrapper-1.30.ebuild, -ndiswrapper-1.31.ebuild,
+  -ndiswrapper-1.32.ebuild, ndiswrapper-1.33.ebuild,
+  ndiswrapper-1.34.ebuild:
+  Clean-up: Keeping only 1.33 and 1.34 w/o any patches.
 
   09 Jan 2007; Andrej Kacian <ticho@gentoo.org> ndiswrapper-1.33.ebuild:
   Stable on x86, bug #160485.

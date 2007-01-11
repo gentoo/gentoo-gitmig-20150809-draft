@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.34.ebuild,v 1.1 2007/01/09 00:00:52 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.34.ebuild,v 1.2 2007/01/11 17:11:35 peper Exp $
 
-inherit eutils linux-mod
+inherit linux-mod
 
 DESCRIPTION="Wrapper for using Windows drivers for some wireless cards"
 HOMEPAGE="http://ndiswrapper.sourceforge.net/"
@@ -10,8 +10,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
-
 IUSE="debug usb"
+
 DEPEND="sys-apps/pciutils"
 RDEPEND="${DEPEND}
 	net-wireless/wireless-tools"
@@ -36,7 +36,6 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${PN}-1.2-suspend2.patch"
 
 	convert_to_m "${S}/driver/Makefile"
 }
