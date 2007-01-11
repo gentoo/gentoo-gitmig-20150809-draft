@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX acl-2.2.29-nfs-glue.patch 709 RMD160 a7d2199a69cd045ebd094024e2e33ec752c0760a SHA1 cdb28eccefd61252b279eeb4b1fd21810e3c0b7f SHA256 ad9f47e7588f5791ad7327570758a233d79ca7ec2e09c91b03c2c838c51cff56
 MD5 d7db174966517abad8a6ec0ea6a7225e files/acl-2.2.29-nfs-glue.patch 709
 RMD160 a7d2199a69cd045ebd094024e2e33ec752c0760a files/acl-2.2.29-nfs-glue.patch 709
@@ -35,3 +38,10 @@ SHA256 98e224b93279b22366b3cbd48ea87c81fa784a2ece6ca9ef3186db5d8bcba134 files/di
 MD5 399c16e5e370775b23146111bedc332b files/digest-acl-2.2.39-r1 509
 RMD160 698d48a25fbf4af786b39ad58c713de55ff4007e files/digest-acl-2.2.39-r1 509
 SHA256 c7927ab1d3a389e4c0d8e51eb080fa03af34e6c483eeb234b35b51b07efb9d93 files/digest-acl-2.2.39-r1 509
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFprvE8bi6rjpTunYRAgjRAJ9pQAStYxtFiPdsdfZanQipU1DBYwCeJJfe
+tIFrEMnOF4BGCafzgD3rIsU=
+=E/iG
+-----END PGP SIGNATURE-----
