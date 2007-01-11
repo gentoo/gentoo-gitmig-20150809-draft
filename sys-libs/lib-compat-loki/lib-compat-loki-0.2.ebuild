@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat-loki/lib-compat-loki-0.2.ebuild,v 1.3 2006/03/20 21:45:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat-loki/lib-compat-loki-0.2.ebuild,v 1.4 2007/01/11 14:54:05 wolf31o2 Exp $
 
 DESCRIPTION="Compatibility libc6 libraries for Loki games"
 HOMEPAGE="http://www.gentoo.org/"
@@ -16,7 +16,7 @@ RDEPEND="x86? ( sys-libs/lib-compat )
 	amd64? ( app-emulation/emul-linux-x86-compat )"
 
 # I'm not quite sure if this is necessary:
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 src_unpack() {
 	unpack ${A}
@@ -39,6 +39,5 @@ src_install() {
 		rm -f x86/loki_ld-linux.so.2
 		into /usr
 		dolib.so x86/*.so*
-		preplib /usr
 	fi
 }
