@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/twisted-web
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.25 2006/10/20 20:39:20 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.26 2007/01/11 22:13:21 marienz Exp $
+
+*twisted-web-0.7.0 (11 Jan 2007)
+
+  11 Jan 2007; Marien Zwart <marienz@gentoo.org> twisted-web-0.6.0.ebuild,
+  -twisted-web-0.6.0-r1.ebuild, +twisted-web-0.7.0.ebuild:
+  Version bump, make twisted dependency stricter, drop revision patched to
+  work with python 2.5 (use the new bump instead).
 
   20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   twisted-web-0.6.0.ebuild:
