@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/proxool/proxool-0.8.3-r1.ebuild,v 1.1 2007/01/11 14:26:22 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/proxool/proxool-0.8.3-r1.ebuild,v 1.2 2007/01/11 21:15:31 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -11,26 +11,26 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-source.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc java5 source"
+IUSE="doc source"
 
+# We could add java5 use flag but the sources use enum
+# Making this ebuild quite complex. The mx4j-core dep
+# can be obsoloted by the java virtuals any way.
 COMMON_DEP="
 	dev-java/log4j
 	=dev-java/servletapi-2.4*
 	=dev-java/avalon-framework-4.2*
 	=dev-java/avalon-logkit-2*
-	!java5? ( =dev-java/mx4j-core-3* )"
+	=dev-java/mx4j-core-3*"
 
 RDEPEND="
-	java5? ( >=virtual/jre-1.5 )
-	!java5? ( >=virtual/jre-1.4 )
+	>=virtual/jre-1.4
 	${COMMON_DEP}
 	"
 
 DEPEND="
+	>=virtual/jdk-1.4
 	${COMMON_DEP}
-	java5? ( >=virtual/jdk-1.5 )
-	!java5? ( >=virtual/jdk-1.4 )
-	>=dev-java/java-config-2.0.31
 	dev-java/ant-core
 	dev-util/checkstyle
 	source? ( app-arch/zip )"
@@ -45,7 +45,7 @@ src_unpack() {
 	java-pkg_jar-from servletapi-2.4
 	java-pkg_jar-from avalon-framework-4.2
 	java-pkg_jar-from avalon-logkit-2.0
-	use java5 || java-pkg_jar-from mx4j-core-3.0
+	java-pkg_jar-from mx4j-core-3.0
 }
 
 src_test() {
