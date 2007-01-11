@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/nss-mdns
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/ChangeLog,v 1.15 2007/01/02 19:30:34 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/ChangeLog,v 1.16 2007/01/11 05:48:34 compnerd Exp $
+
+*nss-mdns-0.9-r1 (11 Jan 2007)
+
+  11 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  +nss-mdns-0.9-r1.ebuild:
+  Force avahi, disable legacy code (bug #159798) thanks to Gioele Barabucci
+  for noticing
 
 *nss-mdns-0.9 (02 Jan 2007)
 
