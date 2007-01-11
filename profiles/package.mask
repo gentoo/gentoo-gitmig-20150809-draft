@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6586 2007/01/10 21:56:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6587 2007/01/11 02:22:25 compnerd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -376,10 +376,6 @@ x11-misc/gaia
 # Kevin F. Quinn <kevquinn@gentoo.org> (21 Nov 2006)
 # Mask for initial testing; bug #125366
 =app-text/acroread-7.0.8-r1
-
-# Saleem Abdulrasool <compnerd@gentoo.org> (21 Nov 2006)
-# Mask for testing
-app-misc/tracker
 
 # Robin H. Johnson <robbat2@gentoo.org> (21 Nov 2006)
 # Block. It breaks badly on bigendian boxes.
