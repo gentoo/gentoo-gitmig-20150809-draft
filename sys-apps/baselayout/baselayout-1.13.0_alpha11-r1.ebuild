@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.13.0_alpha11-r1.ebuild,v 1.1 2007/01/10 23:46:56 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.13.0_alpha11-r1.ebuild,v 1.2 2007/01/11 15:11:04 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -200,7 +200,7 @@ pkg_postinst() {
 	fi
 
 	if [[ ${ROOT} == / ]] && ! use build && ! use bootstrap; then
-		/sbin/depscan.sh --update >/dev/null
+		/sbin/depscan.sh --force >/dev/null
 	fi
 
 	# This is also written in src_install (so it's in CONTENTS), but
