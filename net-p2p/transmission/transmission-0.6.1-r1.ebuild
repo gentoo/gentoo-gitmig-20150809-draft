@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-0.6.1-r1.ebuild,v 1.1 2007/01/10 21:54:33 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-0.6.1-r1.ebuild,v 1.2 2007/01/11 19:30:44 compnerd Exp $
 
 inherit eutils
 
@@ -16,6 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="gtk"
 
 RDEPEND="sys-devel/gettext
+		 dev-libs/openssl
 		 gtk? ( >=x11-libs/gtk+-2.6 )"
 DEPEND="${RDEPEND}
 		sys-devel/gettext

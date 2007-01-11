@@ -1,17 +1,22 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.8 2007/01/10 22:03:54 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.9 2007/01/11 19:30:44 compnerd Exp $
 
-  10 Jan 2007; <compnerd@gentoo.org> -transmission-0.5-r1.ebuild,
+  11 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  transmission-0.6.1-r1.ebuild:
+  Adding in missed dependency
+
+  10 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  -transmission-0.5-r1.ebuild,
   -transmission-0.6.ebuild:
   prune old versions
 
-  10 Jan 2007; <compnerd@gentoo.org> metadata.xml:
+  10 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org> metadata.xml:
   Add myself as maintainer
 
 *transmission-0.6.1-r1 (10 Jan 2007)
 
-  10 Jan 2007; <compnerd@gentoo.org>
+  10 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   +files/transmission-0.6.1-as-needed.patch,
   +files/transmission-0.6.1-gtk+-check.patch, +transmission-0.6.1-r1.ebuild:
   Add fixes for as-needed, install, and remove ssl's useflag
