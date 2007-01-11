@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/hibernate
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/ChangeLog,v 1.22 2006/05/04 17:28:49 nichoj Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/ChangeLog,v 1.23 2007/01/11 00:24:31 caster Exp $
+
+*hibernate-3.1.3 (11 Jan 2007)
+
+  11 Jan 2007; Vlastimil Babka <caster@gentoo.org> +hibernate-3.1.3.ebuild:
+  Version bump, based on ebuild from java overlay developed there by nichoj.
+  Drops jboss USE flag - modular jboss4 is still only in the overlay, so use
+  the overlay if you need it. Closes bug #115369 by Mike Slinn
+  <mslinn@mslinn.com>
 
   04 May 2006; Joshua Nichols <jnichols@gentoo.org>
   hibernate-3.0_rc1.ebuild:
