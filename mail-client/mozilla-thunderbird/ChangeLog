@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.164 2007/01/09 00:23:14 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.165 2007/01/11 15:44:14 armin76 Exp $
+
+  11 Jan 2007; Raúl Porcel <armin76@gentoo.org>
+  mozilla-thunderbird-1.5.0.8.ebuild, mozilla-thunderbird-1.5.0.9.ebuild,
+  mozilla-thunderbird-2.0_beta1.ebuild:
+  license change, bug 150118
 
   08 Jan 2007; Raúl Porcel (armin76) <armin76@gentoo.org>
   -files/mozilla-thunderbird-1.0.6-gcc4.patch,
