@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2491 2007/01/11 14:26:04 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2492 2007/01/11 17:38:46 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -174,7 +174,6 @@ app-misc/lcdproc:nfs - Adds support for NFS file system
 app-misc/lcdproc:seamless-hbars - Try to avoid gaps in horizontal bars
 app-misc/lcdproc:ula200 - Enable support for ULA200 USB devices
 app-misc/lirc:hardware-carrier - The transmitter device generates its clock signal in hardware
-app-misc/lirc:streamzap - add the streamzap driver to lirc
 app-misc/lirc:transmitter - add transmitter support to some lirc-drivers (e.g. serial)
 app-misc/mc:7zip - add support for 7zip archives
 app-misc/note:general - add support for ascii flatfile backend
@@ -265,9 +264,7 @@ dev-db/mysql:extraengine - Add support for alternative storage engines.
 dev-db/mysql:latin1 - Use LATIN1 encoding instead of UTF8.
 dev-db/mysql:max-idx-128 - Raise the max index per table limit from 64 to 128
 dev-db/mysql:minimal - Install client programs only, no server
-dev-db/mysql:pbxt - Add experimental support for pbxt storage engine
 dev-db/mysql:raid - deprecated option, removed in the 5.0 series
-dev-db/mysql:srvdir - Add support for GLEP 20
 dev-db/mysql-community:big-tables - Make tables contain up to 1.844E+19 rows
 dev-db/mysql-community:cluster - Add support for NDB clustering.
 dev-db/mysql-community:embedded - Build embedded server (libmysqld)
@@ -276,8 +273,6 @@ dev-db/mysql-community:latin1 - Use LATIN1 encoding instead of UTF8.
 dev-db/mysql-community:max-idx-128 - Raise the max index per table limit from 64 to 128
 dev-db/mysql-community:minimal - Install client programs only, no server
 dev-db/mysql-community:pbxt - Add experimental support for pbxt storage engine
-dev-db/mysql-community:raid - deprecated option, removed in the 5.0 series
-dev-db/mysql-community:srvdir - Add support for GLEP 20
 dev-db/mysql-slotted:big-tables - Make tables contain up to 1.844E+19 rows
 dev-db/mysql-slotted:cluster - Add support for NDB clustering.
 dev-db/mysql-slotted:embedded - Build embedded server (libmysqld)
@@ -287,7 +282,6 @@ dev-db/mysql-slotted:max-idx-128 - Raise the max index per table limit from 64 t
 dev-db/mysql-slotted:minimal - Install client programs only, no server
 dev-db/mysql-slotted:pbxt - Add experimental support for pbxt storage engine
 dev-db/mysql-slotted:raid - deprecated option, removed in the 5.0 series
-dev-db/mysql-slotted:srvdir - Add support for GLEP 20
 dev-db/pgcluster:pg-intdatetime - Enables --enable-integer-datetimes configure option, which changes PG to use 64-bit integers for timestamp storage.
 dev-db/postgis:geos - Add the GEOS library for exact topological tests.
 dev-db/postgis:proj - Add the Proj library for reprojection features.
@@ -709,10 +703,8 @@ mail-client/mail-notification:gmail - Enable Gmail mailbox checking
 mail-client/mail-notification:pop - Enable support for pop
 mail-client/mail-notification:sylpheed - Enable support for MH mailboxes used by sylpheed
 mail-client/mozilla-thunderbird:branding - Enable official branding
-mail-client/mozilla-thunderbird:mozcalendar - Enable build in calendar (also firefox, thunderbird)
 mail-client/mozilla-thunderbird:mozdom - Enable mozilla DOM
 mail-client/mozilla-thunderbird:moznopango - Disable pango during runtime
-mail-client/mozilla-thunderbird:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
 mail-client/mozilla-thunderbird:replytolist - Enable reply-to-list plugin
 mail-client/mutt:buffysize - Enables buffysize workaround, see bug 72422
 mail-client/mutt:gpgme - Enable support for gpgme
@@ -1363,10 +1355,7 @@ net-misc/ntp:parse-clocks - Add support for PARSE clocks
 net-misc/nx:vnc - Add support for vnc to remote servers
 net-misc/nx-x11-bin:vnc - Add support for connecting to VNC servers
 net-misc/nx-x11:vnc - Add support for connecting to VNC servers
-net-misc/nxserver-business:prebuilt - Use the libraries shipped by nomachine, instead of building them locally
-net-misc/nxserver-enterprise:prebuilt - Use the libraries shipped by nomachine, instead of building them locally
 net-misc/nxserver-freenx:nxclient - Add support for the commercial nxclient
-net-misc/nxserver-personal:prebuilt - Use the libraries shipped by nomachine, instead of building them locally
 net-misc/openssh:X509 - Adds support for X.509 certificate authentication
 net-misc/openssh:chroot - Enable chrooting support
 net-misc/openssh:hpn - Enable high performance ssh
@@ -1525,7 +1514,6 @@ sci-geosciences/grass:gdal - Enables gdal support (Grass 6 only)
 sci-geosciences/grass:glw - Enables libGLw support (requires mesa)
 sci-geosciences/grass:gmath - Enables gmath wrapper for BLAS/Lapack
 sci-geosciences/grass:largefile - Enables LFS support for huge files
-sci-geosciences/grass:proj - Enables proj library support (geographic projections)
 sci-geosciences/mapserver:gdal - Enables gdal library support
 sci-geosciences/mapserver:geos - Enables geos library support
 sci-geosciences/mapserver:postgis - Enables postgis support 
@@ -1583,7 +1571,6 @@ sys-apps/memtest86:serial - Compile with serial console support
 sys-apps/module-init-tools:no-old-linux - Don't support modules for Linux 2.4 and older
 sys-apps/paludis:contrarius - Build the contrarius client, for building cross toolchains.
 sys-apps/paludis:cran - Enable CRAN repository support.
-sys-apps/paludis:gems - Enable RubyGems repository support.
 sys-apps/paludis:glsa - Enable parsing of GLSA files
 sys-apps/paludis:pink - Use a less boring colourscheme than the default
 sys-apps/paludis:qa - Enable QA tools.
@@ -1662,7 +1649,6 @@ sys-devel/gcc:objc++ - Build support for the Objective C++ language
 sys-devel/gcc:objc-gc - Build support for the Objective C code language Garbage Collector
 sys-devel/kgcc64:multislot - Allow for SLOTs to include minor version (3.3.4 instead of just 3.3)
 sys-devel/libperl:ithreads - Enable Perl threads, has some compatibility problems
-sys-freebsd/freebsd-bin:rcp - Enable rcp support (TODO improve description)
 sys-freebsd/freebsd-lib:atm - Enable Asynchronous Transfer Mode protocol support
 sys-freebsd/freebsd-lib:gpib - Enable gpib support (TODO improve description)
 sys-freebsd/freebsd-rescue:atm - Enable Asynchronous Transfer Mode protocol support
