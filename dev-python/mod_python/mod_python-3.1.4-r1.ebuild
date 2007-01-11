@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-3.1.4-r1.ebuild,v 1.10 2006/07/12 15:46:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-3.1.4-r1.ebuild,v 1.11 2007/01/11 19:25:40 phreak Exp $
 
 inherit python eutils apache-module autotools
 
@@ -47,9 +47,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR=${D} install || die
 
-	dohtml doc-html/*
-	insinto /usr/share/doc/${PF}/html/icons
-	doins doc-html/icons/*
+	dohtml -r doc-html/*
 
 	apache-module_src_install
 	insinto ${APACHE2_MODULES_CONFDIR}
