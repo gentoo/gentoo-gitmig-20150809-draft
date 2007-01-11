@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/bigloo
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.7 2007/01/11 18:37:21 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.8 2007/01/11 22:30:37 opfer Exp $
+
+  11 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
+  bigloo-2.7a_p2.ebuild:
+  stable x86, bug #152062
 
   11 Jan 2007; Marijn Schouten hkBst@gentoo.org bigloo-2.7a_p2.ebuild:
   added ~amd64 keyword
