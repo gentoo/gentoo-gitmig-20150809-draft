@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX baselayout-1.11.14-man.patch 768 RMD160 b1743f52d71b6ff2bd0d8cb8106112d8fad9d5b7 SHA1 f61b8f985a27dc9f2dd834001602b008030e79ce SHA256 7c12d6ee90b14b3152c2256df5983d3e6d102ca53b5da3ca6505b8925a86a80a
 MD5 dff93a6f0914f6969d21482d2f36e75e files/baselayout-1.11.14-man.patch 768
 RMD160 b1743f52d71b6ff2bd0d8cb8106112d8fad9d5b7 files/baselayout-1.11.14-man.patch 768
@@ -156,3 +159,10 @@ SHA256 2aff7adae59490722f3880d409166e61514c4dd90043c810f172776627f80505 files/di
 MD5 4a006d4e3be6f90b2c3c79f1776b1aea files/digest-baselayout-1.13.0_alpha11-r1 280
 RMD160 98dea4cb5f5b9ead0e0f9b3499a62bf5d60d9bdd files/digest-baselayout-1.13.0_alpha11-r1 280
 SHA256 43fd9d1cfeacfd464916cb9011db751d238122f899172a0cc69a56bc8ccabca8 files/digest-baselayout-1.13.0_alpha11-r1 280
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFpoPkI1lqEGTUzyQRAqM4AJ99sDWIPnZEd5f0hyErolDKEVVgcQCg2F7r
+kBw+RT3Y3d+NQwnKj7fJV0Q=
+=fx53
+-----END PGP SIGNATURE-----
