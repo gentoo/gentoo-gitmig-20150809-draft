@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/sudo
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/sudo/ChangeLog,v 1.8 2006/04/07 22:09:42 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/sudo/ChangeLog,v 1.9 2007/01/11 04:47:47 pioto Exp $
+
+*sudo-2.0 (11 Jan 2007)
+
+  11 Jan 2007; Mike Kelly <pioto@gentoo.org> +sudo-2.0.ebuild:
+  Version bump.
 
   07 Apr 2006; Bryan Østergaard <kloeri@gentoo.org metadata.xml:
   Remove ciaranm from metadata.xml.
