@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.2 2007/01/11 02:18:51 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.3 2007/01/11 02:21:28 compnerd Exp $
+
+  11 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  -files/tracker-0.5.2-configure.in.patch, -tracker-0.5.2.ebuild:
+  prune old version
 
 *tracker-0.5.3 (11 Jan 2007)
 
