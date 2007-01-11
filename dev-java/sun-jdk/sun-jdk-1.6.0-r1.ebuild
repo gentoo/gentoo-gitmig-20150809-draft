@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0-r1.ebuild,v 1.3 2006/12/17 13:53:03 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0-r1.ebuild,v 1.4 2007/01/11 14:41:49 betelgeuse Exp $
 
 inherit java-vm-2 eutils pax-utils
 
@@ -36,6 +36,7 @@ DEPEND="
 
 RDEPEND="
 	${DEPEND}
+	=virtual/libstdc++-3.3
 	sys-libs/glibc
 	alsa? ( media-libs/alsa-lib )
 	X? ( || ( ( x11-libs/libX11
