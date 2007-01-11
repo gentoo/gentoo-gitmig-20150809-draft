@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.3.ebuild,v 1.4 2007/01/08 23:28:41 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.3.ebuild,v 1.5 2007/01/11 10:22:24 phreak Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib autotools
 
@@ -188,7 +188,7 @@ src_compile() {
 		myconf="${myconf} --enable-maintainer-mode"
 	fi
 
-	./configure --with-mpm=${mpm} ${myconf} || die "bad ./configure please submit bug report to bugs.gentoo.org. Include your config.layout and config.log"
+	./configure --with-mpm=${mpm} ${myconf} ${EXTRA_ECONF} || die "bad ./configure please submit bug report to bugs.gentoo.org. Include your config.layout and config.log"
 
 	sed -i -e 's:apache2\.conf:httpd.conf:' include/ap_config_auto.h
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.34-r14.ebuild,v 1.5 2006/11/12 04:33:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.34-r14.ebuild,v 1.6 2007/01/11 10:22:25 phreak Exp $
 
 inherit eutils fixheadtails multilib
 
@@ -138,7 +138,7 @@ src_compile() {
 		--server-gid=apache \
 		--with-perl=/usr/bin/perl \
 		--enable-rule=SHARED_CHAIN \
-		${MY_BUILTINS} ${myconf} || die "bad ./configure please submit bug report to bugs.gentoo.org. Include your config.layout and config.log"
+		${MY_BUILTINS} ${myconf} ${EXTRA_ECONF} || die "bad ./configure please submit bug report to bugs.gentoo.org. Include your config.layout and config.log"
 
 	emake || die "problem compiling apache"
 

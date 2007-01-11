@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.58-r2.ebuild,v 1.6 2006/09/20 05:11:34 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.58-r2.ebuild,v 1.7 2007/01/11 10:22:24 phreak Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib
 
@@ -169,7 +169,7 @@ src_compile() {
 		myconf="${myconf} --enable-maintainer-mode"
 	fi
 
-	./configure --with-mpm=${mpm} ${myconf} || die "bad ./configure please submit bug report to bugs.gentoo.org. Include your config.layout and config.log"
+	./configure --with-mpm=${mpm} ${myconf} ${EXTRA_ECONF} || die "bad ./configure please submit bug report to bugs.gentoo.org. Include your config.layout and config.log"
 
 	# we don't want to try and recompile the ssl_expr_parse.c file, because
 	# the lex source is broken
