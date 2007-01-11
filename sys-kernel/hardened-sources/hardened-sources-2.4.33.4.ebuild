@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.33.4.ebuild,v 1.1 2006/12/17 21:22:40 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.33.4.ebuild,v 1.2 2007/01/11 22:37:32 opfer Exp $
 
 ETYPE="sources"
 inherit kernel-2
@@ -13,7 +13,7 @@ MY_PATCH_TBZ="${P}-patches.tar.bz2"
 
 SRC_URI="${SRC_URI} ${KERNEL_URI} mirror://gentoo/${MY_PATCH_TBZ}"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 LICENSE="${LICENCE:-GPL-2}"
 
