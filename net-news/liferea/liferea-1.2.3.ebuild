@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.2.3.ebuild,v 1.1 2007/01/11 16:20:20 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.2.3.ebuild,v 1.2 2007/01/11 20:23:28 dang Exp $
 
 WANT_AUTOMAKE=1.7
 WANT_AUTOCONF=latest
@@ -19,7 +19,7 @@ RDEPEND=">=x11-libs/gtk+-2.8
 	x11-libs/pango
 	>=gnome-base/gconf-2
 	>=dev-libs/libxml2-2.5.10
-	dev-libs/libxslt
+	>=dev-libs/libxslt-1.1.19
 	>=dev-libs/glib-2
 	xulrunner? ( net-libs/xulrunner )
 	!xulrunner? ( firefox? ( www-client/mozilla-firefox ) )
