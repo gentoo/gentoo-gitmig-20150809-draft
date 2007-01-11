@@ -59,3 +59,21 @@ Index: sbin/rc-daemon.sh
  		done
  	fi
  
+Index: sbin/rc-services.sh
+===================================================================
+--- sbin/rc-services.sh	(revision 2483)
++++ sbin/rc-services.sh	(working copy)
+@@ -707,11 +707,11 @@
+ # If index is emtpy, then we don't care what the first daemon launched
+ # was, otherwise the daemon must also be at that index
+ service_started_daemon() {
+-	local service="$1" daemon="$2" index="${3:-[0-9]*}"
++	local service="$1" daemon="'$2'" index="${3:-[0-9]*}"
+ 	local daemonfile="${svcdir}/daemons/${service}"
+ 
+ 	[[ ! -e ${daemonfile} ]] && return 1
+-	grep -q '^RC_DAEMONS\['"${index}"'\]="'${daemon}'"$' "${daemonfile}"
++	grep -q '^RC_DAEMONS\['"${index}"'\]='"${daemon}"'$' "${daemonfile}"
+ }
+ 
+ # bool net_service(service)
