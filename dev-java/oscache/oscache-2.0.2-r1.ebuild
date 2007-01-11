@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oscache/oscache-2.0.2-r1.ebuild,v 1.1 2006/08/10 04:18:52 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oscache/oscache-2.0.2-r1.ebuild,v 1.2 2007/01/11 12:59:01 betelgeuse Exp $
 
 inherit java-pkg-2
 
@@ -27,7 +27,7 @@ S=${WORKDIR}
 
 src_unpack() {
 	unpack ${A}
-	rm *.jar
+	rm -v *.jar
 }
 
 src_compile() {
@@ -37,16 +37,16 @@ src_compile() {
 
 	echo "Building core..."
 	cd ${S}/src/core/java
-	ejavac ${classpath} -nowarn -d ${build_dir} $(find -name "*.java") || die
+	ejavac ${classpath} -nowarn -d ${build_dir} $(find . -name "*.java") || die
 
 	echo "Building cluster support plugin..."
 	cd ${S}/src/plugins/clustersupport/java
-	find -name "*.java" -exec sed -i -e "s/org.javagroups/org.jgroups/g" {} \;
-	ejavac ${classpath} -nowarn -d ${build_dir} $(find -name "*.java") || die
+	find . -name "*.java" -exec sed -i -e "s/org.javagroups/org.jgroups/g" {} \;
+	ejavac ${classpath} -nowarn -d ${build_dir} $(find . -name "*.java") || die
 
 	echo "Building disk persistence plugin..."
 	cd ${S}/src/plugins/diskpersistence/java
-	ejavac ${classpath} -nowarn -d ${build_dir} `find -name "*.java"` || die "compile failed"
+	ejavac ${classpath} -nowarn -d ${build_dir} `find . -name "*.java"` || die "compile failed"
 
 	if use doc ; then
 		echo "Building documentation..."
@@ -59,11 +59,11 @@ src_compile() {
 	fi
 
 	cd ${S}
-	jar cf ${PN}.jar -C build .
+	jar cf ${PN}.jar -C build . || die "jar failed"
 }
 
 src_install() {
 	java-pkg_dojar *.jar
 	dodoc readme.txt
-	use doc && java-pkg_dohtml -r javadoc
+	use doc && java-pkg_dojavadoc javadoc
 }
