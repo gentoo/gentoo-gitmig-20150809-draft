@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jms/sun-jms-1.1-r1.ebuild,v 1.2 2006/10/05 15:48:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jms/sun-jms-1.1-r1.ebuild,v 1.3 2007/01/11 12:16:54 betelgeuse Exp $
 
 inherit java-pkg
 
 At="jms-${PV/./_}-fr-apidocs.zip"
-DESCRIPTION="The Java Message Service (JMS) API is a messaging standard that allows application components to create, send, receive, and read messages."
+DESCRIPTION="The Java Message Service (JMS) API."
 HOMEPAGE="http://java.sun.com/products/jms/"
 SRC_URI="${At}"
 LICENSE="sun-bcla-jms"

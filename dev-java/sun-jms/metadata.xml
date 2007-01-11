@@ -2,4 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>java</herd>
+	<longdescription>
+		The Java Message Service (JMS) API is a messaging standard that
+		allows application components to create, send, receive, and read
+		messages.
+	</longdescription>
 </pkgmetadata>

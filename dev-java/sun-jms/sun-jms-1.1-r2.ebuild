@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jms/sun-jms-1.1-r2.ebuild,v 1.5 2006/12/30 12:06:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jms/sun-jms-1.1-r2.ebuild,v 1.6 2007/01/11 12:16:54 betelgeuse Exp $
 
 inherit java-pkg-2
 
 At="jms-${PV/./_}-fr-apidocs.zip"
-DESCRIPTION="The Java Message Service (JMS) API is a messaging standard that allows application components to create, send, receive, and read messages."
+DESCRIPTION="The Java Message Service (JMS) API."
 HOMEPAGE="http://java.sun.com/products/jms/"
 SRC_URI="${At}"
 LICENSE="sun-bcla-jms"
@@ -31,10 +31,15 @@ pkg_nofetch() {
 	einfo
 }
 
+src_unpack() {
+	unpack "${A}"
+	rm -v "${S}"/lib/*.jar
+}
+
 src_compile() {
 	mkdir build
 	cd src/share
-	ejavac -nowarn -d ${S}/build $(find -name "*.java") || die "failed too build"
+	ejavac -nowarn -d ${S}/build $(find . -name "*.java") || die "failed too build"
 	if use doc ; then
 		mkdir ${S}/api
 		javadoc -d ${S}/api -quiet javax.jms
