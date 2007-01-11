@@ -13,9 +13,7 @@ dev-lang/ruby threads
 
 # Somehow, check's tests are broken..
 dev-libs/confuse test
-
-# Java currently uses generation 1
-dev-libs/cyrus-sasl java
+dev-util/checkstyle test
 
 # Python support isn't tested (Twisted for instance)
 net-dns/avahi python
