@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/hibernate
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/ChangeLog,v 1.24 2007/01/11 04:49:52 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/ChangeLog,v 1.25 2007/01/11 13:17:04 nichoj Exp $
+
+  11 Jan 2007; Joshua Nichols <nichoj@gentoo.org> metadata.xml:
+  Added self as maintainer.
 
 *hibernate-3.0.5-r2 (11 Jan 2007)
 
