@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/twisted-names
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-names/ChangeLog,v 1.16 2006/10/20 20:38:15 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-names/ChangeLog,v 1.17 2007/01/11 22:19:10 marienz Exp $
+
+*twisted-names-0.4.0 (11 Jan 2007)
+
+  11 Jan 2007; Marien Zwart <marienz@gentoo.org> twisted-names-0.3.0.ebuild,
+  +twisted-names-0.4.0.ebuild:
+  Version bump, make twisted dependency stricter.
 
   20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   twisted-names-0.3.0.ebuild:
