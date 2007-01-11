@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/resin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.35 2007/01/09 12:15:26 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.36 2007/01/11 23:34:51 opfer Exp $
+
+  11 Jan 2007; Christian Faulhammer <opfer@gentoo.org> resin-3.0.22.ebuild:
+  stable x86, bug #161021
 
   09 Jan 2007; Krzysiek Pawlik <nelchael@gentoo.org> resin-2.1.17.ebuild,
   resin-3.0.22.ebuild, resin-3.1.0.ebuild:
