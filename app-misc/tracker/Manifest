@@ -2,15 +2,60 @@ AUX tracker-0.5.2-configure.in.patch 21024 RMD160 fc7cd77b19bbdcf5809748b1e3ea66
 MD5 4e78fe05641fe16dc45817039a5fc40d files/tracker-0.5.2-configure.in.patch 21024
 RMD160 fc7cd77b19bbdcf5809748b1e3ea66f6ae060507 files/tracker-0.5.2-configure.in.patch 21024
 SHA256 e8f4eec9584c4c55fd0f4734335c38a1d3ef290074ec21a9c665a8cdb8e61d5b files/tracker-0.5.2-configure.in.patch 21024
+AUX tracker-0.5.3-convert-pdf-thumbnailer.patch 366 RMD160 23b7ac2c22883c271d0751af39aa08b8a1eba8de SHA1 418014a51a919bb03cbdeb2a7bba082e9ff853f9 SHA256 54f512506afbdf73b017c2a53e1d13b84ace07ea0001453fbf87ca4c70c16058
+MD5 7e360c7d27a8846ce73ac4e72075475f files/tracker-0.5.3-convert-pdf-thumbnailer.patch 366
+RMD160 23b7ac2c22883c271d0751af39aa08b8a1eba8de files/tracker-0.5.3-convert-pdf-thumbnailer.patch 366
+SHA256 54f512506afbdf73b017c2a53e1d13b84ace07ea0001453fbf87ca4c70c16058 files/tracker-0.5.3-convert-pdf-thumbnailer.patch 366
+AUX tracker-0.5.3-delete-services-missing.patch 1958 RMD160 84136e1610593d535ed419c4c82e506f625c5f71 SHA1 bb0197e917cc9db0e1fdcac2299d233054f732a7 SHA256 a510ccfa5eb4afc8b4b3c3472ee209b0eafd2c1144fd992cc32fa144e14b4a94
+MD5 044eea018e25cdfc6c342a5bb3513653 files/tracker-0.5.3-delete-services-missing.patch 1958
+RMD160 84136e1610593d535ed419c4c82e506f625c5f71 files/tracker-0.5.3-delete-services-missing.patch 1958
+SHA256 a510ccfa5eb4afc8b4b3c3472ee209b0eafd2c1144fd992cc32fa144e14b4a94 files/tracker-0.5.3-delete-services-missing.patch 1958
+AUX tracker-0.5.3-disable-debug.patch 618 RMD160 d77189bee8e371f92b9139df80bf70eb0d8c7211 SHA1 03f2f6437d471524f62ee0006131dab4b73e225a SHA256 684d3f29e844f3a21f21afde88a9301308aaef1bec982d39cf6a9cf445e94a38
+MD5 9e1bc47daa9ff7a589e8def709484535 files/tracker-0.5.3-disable-debug.patch 618
+RMD160 d77189bee8e371f92b9139df80bf70eb0d8c7211 files/tracker-0.5.3-disable-debug.patch 618
+SHA256 684d3f29e844f3a21f21afde88a9301308aaef1bec982d39cf6a9cf445e94a38 files/tracker-0.5.3-disable-debug.patch 618
+AUX tracker-0.5.3-disable-tests.patch 913 RMD160 441af6aa5f49818e2717395c97a20c408d55ae5b SHA1 2bbed2bf131b46e9f57daa83f2da3c332785e33c SHA256 c847c97289934386dc1acb04eb2d97f7216468ff2893bdfad7ef5b2f04afe41c
+MD5 5426ac719e6263ef1f340bd2a9b170fb files/tracker-0.5.3-disable-tests.patch 913
+RMD160 441af6aa5f49818e2717395c97a20c408d55ae5b files/tracker-0.5.3-disable-tests.patch 913
+SHA256 c847c97289934386dc1acb04eb2d97f7216468ff2893bdfad7ef5b2f04afe41c files/tracker-0.5.3-disable-tests.patch 913
+AUX tracker-0.5.3-imagemagick-5.2.1-needed.patch 1080 RMD160 c2b98f0f4985ae648b20b46059b8d40b553dbd26 SHA1 648f6dee59146c38a0ee669ee3198a7baa3475c2 SHA256 1b595314831946272d2a6185dff2c180348c50d20d95c485cfef83b916b1792a
+MD5 51a9df60dab727ca8d4ff78c922f4fad files/tracker-0.5.3-imagemagick-5.2.1-needed.patch 1080
+RMD160 c2b98f0f4985ae648b20b46059b8d40b553dbd26 files/tracker-0.5.3-imagemagick-5.2.1-needed.patch 1080
+SHA256 1b595314831946272d2a6185dff2c180348c50d20d95c485cfef83b916b1792a files/tracker-0.5.3-imagemagick-5.2.1-needed.patch 1080
+AUX tracker-0.5.3-remove-mysql.patch 3149 RMD160 045aecf3c73d502d660129a67c81a696551a00fd SHA1 ca1017491ee6091af90adf36552cf4d9bddb2427 SHA256 1f377b75f04c1db420fc443ec5c2eb9e7bcbb5be32e3a771f68e10a08d99c3f6
+MD5 cf9567ca9f16bd09ec0de37af9c9ba6c files/tracker-0.5.3-remove-mysql.patch 3149
+RMD160 045aecf3c73d502d660129a67c81a696551a00fd files/tracker-0.5.3-remove-mysql.patch 3149
+SHA256 1f377b75f04c1db420fc443ec5c2eb9e7bcbb5be32e3a771f68e10a08d99c3f6 files/tracker-0.5.3-remove-mysql.patch 3149
+AUX tracker-0.5.3-requires-libpng.patch 3511 RMD160 4ea0d7e2c9fad70aa6ab148e0655bfde708bcc1a SHA1 57f4fded0205d55d3ae4231353d8a13d8de4fe54 SHA256 bf89d6ad972d1cea4990ebe3b6ed7677bc8177a8f7b084632561ee84d65691a0
+MD5 d28a50e6370f67cfc02285b28f739466 files/tracker-0.5.3-requires-libpng.patch 3511
+RMD160 4ea0d7e2c9fad70aa6ab148e0655bfde708bcc1a files/tracker-0.5.3-requires-libpng.patch 3511
+SHA256 bf89d6ad972d1cea4990ebe3b6ed7677bc8177a8f7b084632561ee84d65691a0 files/tracker-0.5.3-requires-libpng.patch 3511
+AUX tracker-0.5.3-sqlite-cleanups.patch 4727 RMD160 795b1a2e9d24e4c8aa9f22b7998fb5b09a5a68f2 SHA1 b101b0f1528754e5616c1fb49e02f475ed098eea SHA256 ebbf2ba429a6fd48f3f30af66ac6a360f9572cd41bf4fd35cac163c480b8c606
+MD5 a5bdc63e40a97cd893951dd5c20a725b files/tracker-0.5.3-sqlite-cleanups.patch 4727
+RMD160 795b1a2e9d24e4c8aa9f22b7998fb5b09a5a68f2 files/tracker-0.5.3-sqlite-cleanups.patch 4727
+SHA256 ebbf2ba429a6fd48f3f30af66ac6a360f9572cd41bf4fd35cac163c480b8c606 files/tracker-0.5.3-sqlite-cleanups.patch 4727
+AUX tracker-0.5.3-thumbnailer-create-dir.patch 1496 RMD160 22730297c1658ace773a55965ad771c35ebc59cf SHA1 a87c228da93ae785f7367f364ef46fd4aa502ea6 SHA256 6d692e828c0eb57aec0a7466404cea8bf5d5f961e64361c0cfdad9b34a15228d
+MD5 d9f40f73db70e4453e704af7de643d48 files/tracker-0.5.3-thumbnailer-create-dir.patch 1496
+RMD160 22730297c1658ace773a55965ad771c35ebc59cf files/tracker-0.5.3-thumbnailer-create-dir.patch 1496
+SHA256 6d692e828c0eb57aec0a7466404cea8bf5d5f961e64361c0cfdad9b34a15228d files/tracker-0.5.3-thumbnailer-create-dir.patch 1496
+AUX tracker-0.5.3-trackerd-test-compile-fix.patch 684 RMD160 397038d2bc1f1732fb88cad078b1571d464978c4 SHA1 25532d8d21bbe6e938a691e32006d729ce181b19 SHA256 5ae121e16f4dbc381ec67979418389460e7a2ea01207a70bb2b6ff4432098d6e
+MD5 b05deaac9085307700e8125cb7fc54b1 files/tracker-0.5.3-trackerd-test-compile-fix.patch 684
+RMD160 397038d2bc1f1732fb88cad078b1571d464978c4 files/tracker-0.5.3-trackerd-test-compile-fix.patch 684
+SHA256 5ae121e16f4dbc381ec67979418389460e7a2ea01207a70bb2b6ff4432098d6e files/tracker-0.5.3-trackerd-test-compile-fix.patch 684
 DIST tracker-0.5.2.tar.gz 1316495 RMD160 6a9cf0e0498923d7c0061dd802de585aceede25e SHA1 4137e962aec10a447bc8bad1c52d229f54731cad SHA256 817a672221c069439b4ad024c2cb138d257ff554c3726e290425254127a9a52c
+DIST tracker-0.5.3.tar.gz 1345485 RMD160 b9700bc590c1d20c0c58e2016693b688b10221df SHA1 ca233544ffce2335960e54e4a8957f1894af5ac6 SHA256 37f64b160b4ce4c4668494cf8198d6ad5a559c8b11120bb657a8eb132493f88f
 EBUILD tracker-0.5.2.ebuild 2177 RMD160 e6f47509bb886dad3823a88593a36fceba1e0a0d SHA1 625dbfe06d84635decbea93ae7b7915089a41725 SHA256 252808e4388afebd5c50eabf7c161723ceedae445ca700203e52aa1ac65a0852
 MD5 275ac7e074bc56209fdaae5570d281f4 tracker-0.5.2.ebuild 2177
 RMD160 e6f47509bb886dad3823a88593a36fceba1e0a0d tracker-0.5.2.ebuild 2177
 SHA256 252808e4388afebd5c50eabf7c161723ceedae445ca700203e52aa1ac65a0852 tracker-0.5.2.ebuild 2177
-MISC ChangeLog 420 RMD160 f4389b85398633d9c2ca6805533452c3e5545053 SHA1 b0f1d12d08339837fea99dd356217b6523dd9403 SHA256 b3c2d8de9663e79b68ea7280d074fa636857c1ca0b3c0f8de90b830bb14706cd
-MD5 345d522d825e27e462b5d8f8d06e9be0 ChangeLog 420
-RMD160 f4389b85398633d9c2ca6805533452c3e5545053 ChangeLog 420
-SHA256 b3c2d8de9663e79b68ea7280d074fa636857c1ca0b3c0f8de90b830bb14706cd ChangeLog 420
+EBUILD tracker-0.5.3.ebuild 4578 RMD160 daa04aa07879555f160df38742dd200985b0bc3c SHA1 c7e6191e5c7830fea6246fc50e23b7be9acf98fa SHA256 4685275c2501178d0cf5f6b60948b3122b0ce9a9d69486094754642236e1ef7e
+MD5 b0d07e5c12231125aa0e08112e069187 tracker-0.5.3.ebuild 4578
+RMD160 daa04aa07879555f160df38742dd200985b0bc3c tracker-0.5.3.ebuild 4578
+SHA256 4685275c2501178d0cf5f6b60948b3122b0ce9a9d69486094754642236e1ef7e tracker-0.5.3.ebuild 4578
+MISC ChangeLog 1101 RMD160 960d44ec86491b213df20c7b156de2b2cfe95b63 SHA1 bae42893eb4ee3e2d72d29e51504e6edb9102869 SHA256 2058d2925b8cef4093c49f4817e48c1496c3813f806bc432d75f0ee127c5adb7
+MD5 ed469853676e9e730e5cd643c752e2d3 ChangeLog 1101
+RMD160 960d44ec86491b213df20c7b156de2b2cfe95b63 ChangeLog 1101
+SHA256 2058d2925b8cef4093c49f4817e48c1496c3813f806bc432d75f0ee127c5adb7 ChangeLog 1101
 MISC metadata.xml 311 RMD160 868d0eab62db916aa47b7f440a3f4efecc6163b1 SHA1 0e56da7be32af7c553c07179c574cd7837298702 SHA256 774cc71e08a317563fb2700d5aac76af10e3e31ae7c1c58325730bfa0fbb110a
 MD5 def57195a8a8fbc9ff84bded4f4c6772 metadata.xml 311
 RMD160 868d0eab62db916aa47b7f440a3f4efecc6163b1 metadata.xml 311
@@ -18,3 +63,6 @@ SHA256 774cc71e08a317563fb2700d5aac76af10e3e31ae7c1c58325730bfa0fbb110a metadata
 MD5 f48127df41daaa3f636ede28fca9970f files/digest-tracker-0.5.2 244
 RMD160 67468104829e367421781d581afe0e61b8989a43 files/digest-tracker-0.5.2 244
 SHA256 f623d68e418edd453058b9d4b32f71f2f890a3bbd8043a80cec83e0a94b31521 files/digest-tracker-0.5.2 244
+MD5 55067c3bcd77b86d4ebe3cce7ef6b960 files/digest-tracker-0.5.3 244
+RMD160 7e5e9e8f7d734f1f8fce726aaa27353b24b755f7 files/digest-tracker-0.5.3 244
+SHA256 75bc0fd02856fa38242fec6bef69818f213e7bb4feda02c607226cb34b6000b0 files/digest-tracker-0.5.3 244
