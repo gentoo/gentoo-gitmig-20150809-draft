@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.1-r1.ebuild,v 1.5 2007/01/09 08:59:54 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.1-r1.ebuild,v 1.6 2007/01/11 08:54:43 keri Exp $
 
 inherit eutils
 
@@ -39,6 +39,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-tests-mdbrc.patch
 	epatch "${FILESDIR}"/${P}-tests-string_format.patch
 	epatch "${FILESDIR}"/${P}-tests-tabling_inf_recursion.patch
+	epatch "${FILESDIR}"/${P}-tests-workspace.patch
 	sed -i -e "s:MDB_DOC:${S}/doc/mdb_doc:" "${TESTDIR}"/mdbrc
 }
 
@@ -99,12 +100,21 @@ src_test() {
 	fi
 
 	cd "${TESTDIR}"
+	sed -i -e "s:@WORKSPACE@:${TWS}:" WS_FLAGS.ws
+
 	PATH="${TWS}"/scripts:"${TWS}"/util:"${PATH}" \
 	WORKSPACE="${TWS}" \
 	MERCURY_COMPILER="${TWS}"/compiler/mercury_compile \
 	MMAKE_DIR="${TWS}"/scripts \
 	MERCURY_DEBUGGER_INIT="${TESTDIR}"/mdbrc \
 	GRADE=${TEST_GRADE} \
+	MERCURY_ALL_LOCAL_C_INCL_DIRS=" -I${TWS}/boehm_gc \
+					-I${TWS}/boehm_gc/include \
+					-I${TWS}/runtime \
+					-I${TWS}/library \
+					-I${TWS}/mdbcomp \
+					-I${TWS}/browser \
+					-I${TWS}/trace" \
 		mmake || die "mmake test failed"
 }
 
