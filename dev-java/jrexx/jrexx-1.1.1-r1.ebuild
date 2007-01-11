@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrexx/jrexx-1.1.1-r1.ebuild,v 1.1 2006/08/05 17:04:05 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrexx/jrexx-1.1.1-r1.ebuild,v 1.2 2007/01/11 12:39:00 betelgeuse Exp $
 
 inherit java-pkg-2
 
@@ -21,7 +21,7 @@ src_compile() {
 	mkdir build
 
 	cd src
-	javac $(java-pkg_javac-args) -nowarn -d ${S}/build $(find -name "*.java") \
+	javac $(java-pkg_javac-args) -nowarn -d ${S}/build $(find . -name "*.java") \
 		|| die "Failed to compile ${i}"
 
 	if use doc ; then
@@ -36,6 +36,6 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar ${PN}.jar
-	use doc && java-pkg_dohtml -r javadoc
+	use doc && java-pkg_dojavadoc javadoc
 	use source && java-pkg_dosrc src/*
 }
