@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.3_alpha2.ebuild,v 1.1 2006/08/14 19:21:58 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.3_alpha2.ebuild,v 1.2 2007/01/11 15:54:23 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib
 
@@ -12,7 +12,7 @@ RESTRICT="nostrip"
 
 KEYWORDS="-* ~x86 ~amd64"
 SLOT="0"
-LICENSE="MPL-1.1 NPL-1.1"
+LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 IUSE=""
 
 DEPEND="virtual/libc"
