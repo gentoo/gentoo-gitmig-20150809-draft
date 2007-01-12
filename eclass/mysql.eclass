@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.67 2007/01/09 15:48:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.68 2007/01/12 17:00:39 chtekk Exp $
 # kate: encoding utf-8; eol unix;
 # kate: indent-width 4; mixedindent off; remove-trailing-space on; space-indent off;
 # kate: word-wrap-column 80; word-wrap off;
@@ -126,9 +126,8 @@ mysql_version_is_at_least "5.1.12" \
 && IUSE="${IUSE} pbxt"
 
 RDEPEND="${DEPEND}
-!minimal? ( sys-apps/mysql )
-selinux? ( sec-policy/selinux-mysql )
-"
+		!minimal? ( dev-db/mysql-init-scripts )
+		selinux? ( sec-policy/selinux-mysql )"
 
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_preinst \
 				pkg_postinst pkg_config pkg_postrm
