@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.266 2007/01/11 14:14:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.267 2007/01/12 11:43:04 opfer Exp $
+
+  12 Jan 2007; Christian Faulhammer <opfer@gentoo.org> gnupg-1.9.21.ebuild:
+  stable x86, bug #161262
 
   11 Jan 2007; Markus Rothe <corsair@gentoo.org> gnupg-1.9.21.ebuild:
   Stable on ppc64; bug #161262
