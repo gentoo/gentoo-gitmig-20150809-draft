@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/echo2
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/echo2/ChangeLog,v 1.3 2006/09/10 16:52:18 nelchael Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/echo2/ChangeLog,v 1.4 2007/01/12 21:12:23 betelgeuse Exp $
+
+  12 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> echo2-2.0.0.ebuild:
+  Remove fetch restriction by manually uploading to distfile as versioned to
+  the Gentoo mirrors and corrected LICENSE.
 
   10 Sep 2006; Krzysiek Pawlik <nelchael@gentoo.org> echo2-2.0.0.ebuild:
   Added ~ppc.
