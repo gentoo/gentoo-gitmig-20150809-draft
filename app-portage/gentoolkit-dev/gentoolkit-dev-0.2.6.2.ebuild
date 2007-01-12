@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/gentoolkit-dev-0.2.6.2.ebuild,v 1.5 2007/01/11 23:53:40 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/gentoolkit-dev-0.2.6.2.ebuild,v 1.6 2007/01/12 00:05:13 fuzzyray Exp $
+
+inherit eutils
 
 DESCRIPTION="Collection of developer scripts for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/tools/index.xml"
@@ -16,6 +18,14 @@ DEPEND=">=sys-apps/portage-2.0.50
 	>=dev-util/dialog-0.7
 	>=dev-lang/perl-5.6
 	>=sys-apps/grep-2.4"
+
+src_unpack() {
+	# This is to patch a cosmetic error in gentoolkit-dev-0.2.6.2, Remove from
+	# next version bump
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${PF}-Makefile.patch"
+}
 
 src_install() {
 	make DESTDIR=${D} install-gentoolkit-dev
