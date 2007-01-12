@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6 2007/01/11 17:38:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7 2007/01/12 14:28:26 wolf31o2 Exp $
+
+  12 Jan 2007; Chris Gianelloni <wolf31o2@gentoo.org> package.mask:
+  Added app-admin/livecd-ng to mask for removal.
 
   11 Jan 2007; Michael Sterrett <mr_bones_@gentoo.org> use.local.desc:
   clean out a bunch of unused local use flags
