@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/docutils
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.54 2007/01/10 13:52:53 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.55 2007/01/12 21:13:40 nixnut Exp $
+
+  12 Jan 2007; nixnut <nixnut@gentoo.org> docutils-0.4.ebuild:
+  Stable on ppc wrt bug 159855
 
   10 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> docutils-0.4.ebuild:
   Stable on sparc
