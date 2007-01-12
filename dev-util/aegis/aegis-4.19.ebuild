@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/aegis-4.19.ebuild,v 1.4 2007/01/12 13:02:39 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/aegis-4.19.ebuild,v 1.5 2007/01/12 18:24:55 gustavoz Exp $
 
 IUSE="tk"
 
@@ -16,7 +16,7 @@ DEPEND="sys-libs/zlib
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~ppc ~ppc-macos ~sparc ~x86"
+KEYWORDS="~alpha ~ppc ~ppc-macos sparc ~x86"
 
 src_compile() {
 	# By default aegis configure puts shareable read/write files (locks etc)
