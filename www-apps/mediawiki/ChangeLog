@@ -1,5 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.73 2007/01/12 00:05:43 tchiwam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.74 2007/01/12 00:13:16 tchiwam Exp $
+
+  08 Jan 2007; Philippe Trottier <tchiwam@gentoo.org> -mediawiki-1.7.1,
+  -mediawiki-1.6.8, -mediawiki-1.8.2:
+  Cleaning versions with security vulnerability
 
 *mediawiki-1.8.3 (12 Jan 2007)
   12 Jan 2007; Philippe Trottier <tchiwam@gentoo.org> +mediawiki-1.9.0:
