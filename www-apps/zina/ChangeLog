@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/zina
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/zina/ChangeLog,v 1.3 2006/03/24 07:39:26 wrobel Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/zina/ChangeLog,v 1.4 2007/01/12 14:01:30 wrobel Exp $
+
+*zina-1.0_rc2 (12 Jan 2007)
+
+  12 Jan 2007; <wrobel@gentoo.org> files/postinstall-en.txt,
+  +zina-1.0_rc2.ebuild:
+  Added zina 1.0rc2 to the tree.
 
 *zina-0.12.12 (24 Mar 2006)
 
