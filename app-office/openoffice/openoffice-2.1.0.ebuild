@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.1.0.ebuild,v 1.1 2007/01/12 07:02:12 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.1.0.ebuild,v 1.2 2007/01/12 12:06:57 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -225,6 +225,7 @@ src_unpack() {
 		echo "`use_with firefox`" >> ${CONFFILE}
 	else
 		echo "--disable-mozilla" >> ${CONFFILE}
+		echo "--without-system-mozilla" >> ${CONFFILE}
 	fi
 
 	echo "`use_enable cups`" >> ${CONFFILE}
