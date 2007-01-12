@@ -1,0 +1,9 @@
+diff -Nru python-xlib-0.12-orig/Xlib/protocol/display.py python-xlib-0.12/Xlib/protocol/display.py
+--- python-xlib-0.12-orig/Xlib/protocol/display.py	2002-02-25 12:09:23.000000000 +0100
++++ python-xlib-0.12/Xlib/protocol/display.py	2007-01-12 22:46:31.000000000 +0100
+@@ -1,4 +1,5 @@
+ # $Id: python-xlib-0.12-coding.patch,v 1.1 2007/01/12 21:56:35 lucass Exp $
++# -*- coding: latin-1 -*-
+ #
+ # Xlib.protocol.display -- core display communication
+ #

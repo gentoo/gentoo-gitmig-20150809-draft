@@ -1,40 +1,59 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a9660b671c1e0b01cfdc6339a1e520b8 ChangeLog 1423
-RMD160 d4b31392b597b99952145129b70dfa7e0bf260ad ChangeLog 1423
-SHA256 27a03852f7e82d60078aa54a0d43d34966656bb936c0413b89429f46d02ab980 ChangeLog 1423
-MD5 716ec6da435f0eac82444eefdd7ae0d8 files/digest-python-xlib-0.12 68
-RMD160 d8cab6d3f6c1397e8f6aac6903a9f488738c6a63 files/digest-python-xlib-0.12 68
-SHA256 dab65c40ebff2d7dacca6a5a4c6a7e52872f481f33dc379b2dd0f732832ab33d files/digest-python-xlib-0.12 68
-MD5 716ec6da435f0eac82444eefdd7ae0d8 files/digest-python-xlib-0.12-r1 68
-RMD160 d8cab6d3f6c1397e8f6aac6903a9f488738c6a63 files/digest-python-xlib-0.12-r1 68
-SHA256 dab65c40ebff2d7dacca6a5a4c6a7e52872f481f33dc379b2dd0f732832ab33d files/digest-python-xlib-0.12-r1 68
-MD5 3caf5772c0da65a5e0112128de90c844 files/digest-python-xlib-0.12-r2 250
-RMD160 7071588beaca8183a0e9b6bcee6bb78f63cb2f30 files/digest-python-xlib-0.12-r2 250
-SHA256 2594c24c56746264efa88086eba7b5140aa2d2a61e8001eacfe52a44fd8ca88d files/digest-python-xlib-0.12-r2 250
+AUX python-xlib-0.12-buflen.patch 539 RMD160 2ad7f24ec238b677d0a10bcfc9f39093bf08cad2 SHA1 091d8ccd074dbf7c93695980bfad9493ca9300ff SHA256 9d600b6517ca02d5d6135d3ffa7d11ee7090e6652a5fa9d0bf194b5557505974
 MD5 7e0cb9b60cfe3003ea8f584739d1bf26 files/python-xlib-0.12-buflen.patch 539
 RMD160 2ad7f24ec238b677d0a10bcfc9f39093bf08cad2 files/python-xlib-0.12-buflen.patch 539
 SHA256 9d600b6517ca02d5d6135d3ffa7d11ee7090e6652a5fa9d0bf194b5557505974 files/python-xlib-0.12-buflen.patch 539
+AUX python-xlib-0.12-coding.patch 449 RMD160 a532596281783b72854ab31c345bad7ab3f5789e SHA1 67f8d810e9a244af30d4c5099513acaf1ab58aeb SHA256 3211e5863b5c8dab8276acf43c5ae4acae6923255052fab1a30b3ea455b133b4
+MD5 9bca52f15dbb5c7042beef199f44e3cd files/python-xlib-0.12-coding.patch 449
+RMD160 a532596281783b72854ab31c345bad7ab3f5789e files/python-xlib-0.12-coding.patch 449
+SHA256 3211e5863b5c8dab8276acf43c5ae4acae6923255052fab1a30b3ea455b133b4 files/python-xlib-0.12-coding.patch 449
+AUX python-xlib-0.12-info.patch 3003 RMD160 a80aea36eef420e1bf4b2a95f5dea1dc137440ba SHA1 c6e5407f9e064393f4e881256a3b2befe0d81873 SHA256 dc3ac0850392cbf3452ba6483d3c75b414349c2a3136ba2113a6096f53b883c5
 MD5 b19a4b8209587ec222338c3ef3bd3ea7 files/python-xlib-0.12-info.patch 3003
 RMD160 a80aea36eef420e1bf4b2a95f5dea1dc137440ba files/python-xlib-0.12-info.patch 3003
 SHA256 dc3ac0850392cbf3452ba6483d3c75b414349c2a3136ba2113a6096f53b883c5 files/python-xlib-0.12-info.patch 3003
-MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f metadata.xml 159
-SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata.xml 159
+DIST python-xlib-0.12.tar.gz 299665 RMD160 1f16fcb6ebea0b91bfed5deb6085565814f33b26 SHA1 d3fb68e8e71d745d907b12812808f3a8bdd85c90 SHA256 1ec9e3ad5155b4205a70c58d3aac4e4185caa63f99872c7f4422bc7fa895e169
+EBUILD python-xlib-0.12-r1.ebuild 686 RMD160 d8b4488024ad2fc640d21614bde2b2add0edb95f SHA1 98c7a8e6957404987a459d00df3a04440b06daaf SHA256 176c063f0782f094916e091182c5e5db3669083f9757841e06250ac8179b92fe
 MD5 981a64da40f9916246719f87b638e76c python-xlib-0.12-r1.ebuild 686
 RMD160 d8b4488024ad2fc640d21614bde2b2add0edb95f python-xlib-0.12-r1.ebuild 686
 SHA256 176c063f0782f094916e091182c5e5db3669083f9757841e06250ac8179b92fe python-xlib-0.12-r1.ebuild 686
+EBUILD python-xlib-0.12-r2.ebuild 770 RMD160 1b2cafdadd4c5f4d4182cdc92eca3848714bbc8b SHA1 cc6d88b3cb5833ef3a4cb4bb812292ad2b506e43 SHA256 ffeebbec663878fa5f9e47a3f28a48833b3d7eedadd2ee6e545d91aaeb836f17
 MD5 e2194306e2ecb6643ea599fd94401b91 python-xlib-0.12-r2.ebuild 770
 RMD160 1b2cafdadd4c5f4d4182cdc92eca3848714bbc8b python-xlib-0.12-r2.ebuild 770
 SHA256 ffeebbec663878fa5f9e47a3f28a48833b3d7eedadd2ee6e545d91aaeb836f17 python-xlib-0.12-r2.ebuild 770
+EBUILD python-xlib-0.12-r3.ebuild 814 RMD160 93ef8005ea029e134d4c09226c4ebe80b5847f6d SHA1 8a94ee1d87b495bedbd3af7915c261421ed2fb36 SHA256 738fa80ba8dc65df88d4d1ae59c8b2f2e4c677864c28bc6ccf3dce342e9b6049
+MD5 747edfabc14fa2f79085de7f5989bbdb python-xlib-0.12-r3.ebuild 814
+RMD160 93ef8005ea029e134d4c09226c4ebe80b5847f6d python-xlib-0.12-r3.ebuild 814
+SHA256 738fa80ba8dc65df88d4d1ae59c8b2f2e4c677864c28bc6ccf3dce342e9b6049 python-xlib-0.12-r3.ebuild 814
+EBUILD python-xlib-0.12.ebuild 639 RMD160 4c45bd332e2e5918690e58ffac0a562b8d3f55ba SHA1 16e6e11fa6c86d96a1e6183c500b7cf188730455 SHA256 46baa37fabbabacb88e4cd4ee4c8c9c6e1adcf5c04cca7994989742ad55aef5f
 MD5 eb05ef08acfb13dbc26100f9f022ea0a python-xlib-0.12.ebuild 639
 RMD160 4c45bd332e2e5918690e58ffac0a562b8d3f55ba python-xlib-0.12.ebuild 639
 SHA256 46baa37fabbabacb88e4cd4ee4c8c9c6e1adcf5c04cca7994989742ad55aef5f python-xlib-0.12.ebuild 639
+MISC ChangeLog 1643 RMD160 6d566dfdad14876bb00546fe28620396d15443de SHA1 732a5bd2f7d6c9cc4826c6181772d30402a078b9 SHA256 4890e0e23ddc062fd41f2c775829967900c245b3ce33c7e66955f876e9dd2474
+MD5 bf1d94df208916564c93951f57cf8836 ChangeLog 1643
+RMD160 6d566dfdad14876bb00546fe28620396d15443de ChangeLog 1643
+SHA256 4890e0e23ddc062fd41f2c775829967900c245b3ce33c7e66955f876e9dd2474 ChangeLog 1643
+MISC metadata.xml 159 RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f SHA1 c8e604d56dae898258b5254d78cfeac0b981e288 SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+RMD160 900a8c55d7a7d2f6312594769aaf941bf9e99c7f metadata.xml 159
+SHA256 9f01104d3484792496faff4805eed0ecea2352a897151f3397d49a13800037b4 metadata.xml 159
+MD5 3caf5772c0da65a5e0112128de90c844 files/digest-python-xlib-0.12 250
+RMD160 7071588beaca8183a0e9b6bcee6bb78f63cb2f30 files/digest-python-xlib-0.12 250
+SHA256 2594c24c56746264efa88086eba7b5140aa2d2a61e8001eacfe52a44fd8ca88d files/digest-python-xlib-0.12 250
+MD5 3caf5772c0da65a5e0112128de90c844 files/digest-python-xlib-0.12-r1 250
+RMD160 7071588beaca8183a0e9b6bcee6bb78f63cb2f30 files/digest-python-xlib-0.12-r1 250
+SHA256 2594c24c56746264efa88086eba7b5140aa2d2a61e8001eacfe52a44fd8ca88d files/digest-python-xlib-0.12-r1 250
+MD5 3caf5772c0da65a5e0112128de90c844 files/digest-python-xlib-0.12-r2 250
+RMD160 7071588beaca8183a0e9b6bcee6bb78f63cb2f30 files/digest-python-xlib-0.12-r2 250
+SHA256 2594c24c56746264efa88086eba7b5140aa2d2a61e8001eacfe52a44fd8ca88d files/digest-python-xlib-0.12-r2 250
+MD5 3caf5772c0da65a5e0112128de90c844 files/digest-python-xlib-0.12-r3 250
+RMD160 7071588beaca8183a0e9b6bcee6bb78f63cb2f30 files/digest-python-xlib-0.12-r3 250
+SHA256 2594c24c56746264efa88086eba7b5140aa2d2a61e8001eacfe52a44fd8ca88d files/digest-python-xlib-0.12-r3 250
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.6 (GNU/Linux)
 
-iD8DBQFD6lux2jLqHNfbg2URAtSxAKDBoWL6Pv/wcCIS3rNC1TaEpQ590ACg01Ql
-pBj5QwCUdIM1nUBzbn2DuAc=
-=ONcI
+iD8DBQFFqAQg2jLqHNfbg2URAmFgAKCibiW4R8xsMRqCCUzLC1pjRT02IQCguci+
+Q2aVwLpTIbQBn0Ts0rboz+s=
+=bwE/
 -----END PGP SIGNATURE-----
