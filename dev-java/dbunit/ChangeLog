@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/dbunit
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/ChangeLog,v 1.9 2005/05/04 20:35:20 luckyduck Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/ChangeLog,v 1.10 2007/01/12 11:12:36 betelgeuse Exp $
+
+*dbunit-2.2 (12 Jan 2007)
+
+  12 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> +dbunit-2.2.ebuild:
+  Version bump using generation 2. Added the source use flag.
 
   04 May 2005; Jan Brinkmann <luckyduck@gentoo.org> dbunit-2.1.ebuild:
   stable on amd64, ppc and x86. introduced support for the source useflag
