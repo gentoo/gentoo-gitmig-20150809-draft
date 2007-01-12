@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.1.0.ebuild,v 1.2 2007/01/12 12:06:57 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.1.0.ebuild,v 1.3 2007/01/12 17:11:48 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
 
 inherit check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions multilib toolchain-funcs
 
-IUSE="binfilter branding cairo cups dbus debug eds firefox gnome gstreamer gtk kde ldap sound odk pam seamonkey webdav"
+IUSE="binfilter branding cairo cups dbus debug eds firefox gnome gstreamer gtk kde ldap sound odk pam webdav"
 
 MY_PV="2.1"
 PATCHLEVEL="OOE680"
@@ -71,9 +71,6 @@ COMMON_DEPEND="!app-office/openoffice-bin
 	firefox? ( >=www-client/mozilla-firefox-1.5-r9
 		>=dev-libs/nspr-4.6.2
 		>=dev-libs/nss-3.11-r1 )
-	!firefox? ( seamonkey? ( www-client/seamonkey
-		>=dev-libs/nspr-4.6.2
-		>=dev-libs/nss-3.11-r1 ) )
 	sound? ( >=media-libs/portaudio-18.1-r5
 			>=media-libs/libsndfile-1.0.9 )
 	webdav? ( >=net-misc/neon-0.24.7 )
@@ -219,14 +216,9 @@ src_unpack() {
 
 	echo "`use_enable binfilter`" >> ${CONFFILE}
 
-	if use firefox || use seamonkey ; then
-		echo "--enable-mozilla" >> ${CONFFILE}
-		echo "--with-system-mozilla" >> ${CONFFILE}
-		echo "`use_with firefox`" >> ${CONFFILE}
-	else
-		echo "--disable-mozilla" >> ${CONFFILE}
-		echo "--without-system-mozilla" >> ${CONFFILE}
-	fi
+	echo "`use_enable firefox mozilla`" >> ${CONFFILE}
+	echo "`use_with firefox system-mozilla`" >> ${CONFFILE}
+	echo "`use_with firefox`" >> ${CONFFILE}
 
 	echo "`use_enable cups`" >> ${CONFFILE}
 	echo "`use_enable ldap`" >> ${CONFFILE}
