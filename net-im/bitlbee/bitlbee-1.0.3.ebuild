@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.0.3.ebuild,v 1.8 2007/01/05 17:48:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.0.3.ebuild,v 1.9 2007/01/12 17:29:11 eroyf Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://get.bitlbee.org/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~ia64 ppc sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE="debug jabber msn oscar yahoo gnutls ssl nss xinetd ipv6"
 
 DEPEND=">=dev-libs/glib-2.0
