@@ -1,3 +1,4 @@
 move dev-libs/slib dev-scheme/slib
 move dev-lang/gauche dev-scheme/gauche
 move dev-util/guile dev-scheme/guile
+move sys-apps/mysql dev-db/mysql-init-scripts
