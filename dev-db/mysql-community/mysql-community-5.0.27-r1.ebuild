@@ -1,19 +1,18 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/mysql-community-5.0.27-r1.ebuild,v 1.1 2007/01/05 11:58:49 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/mysql-community-5.0.27-r1.ebuild,v 1.2 2007/01/12 18:10:16 chtekk Exp $
 
 MY_EXTRAS_VER="20070105"
 SERVER_URI="mirror://mysql/Downloads/MySQL-${PV%.*}/mysql-${PV//_/-}.tar.gz"
 
 inherit mysql
 
-#REMEMBER!!!: update also eclass/mysql*.eclass prior to commit
+# REMEMBER: also update eclass/mysql*.eclass before committing!
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 
 src_test() {
-
 	make check || die "make check failed"
-	if ! useq "minimal" ; then
+	if ! use "minimal" ; then
 		cd "${S}"
 		einfo ">>> Test phase [test]: ${CATEGORY}/${PF}"
 		local retstatus
@@ -43,7 +42,7 @@ src_test() {
 			mysql_disable_test "${t}" "fail in sandbox"
 		done
 
-		useq "extraengine" && mysql_disable_test "federated" "fail with extraengine"
+		use "extraengine" && mysql_disable_test "federated" "fail with extraengine"
 
 		make test-force-pl
 		retstatus=$?

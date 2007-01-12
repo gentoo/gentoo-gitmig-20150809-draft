@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/mysql-community-5.1.15_alpha-r90.ebuild,v 1.2 2007/01/05 00:20:07 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/mysql-community-5.1.15_alpha-r90.ebuild,v 1.3 2007/01/12 18:10:16 chtekk Exp $
 
 MY_EXTRAS_VER="latest"
 SERVER_URI=""
@@ -8,13 +8,12 @@ PBXT_VERSION="0.9.73-beta"
 
 inherit mysql
 
-#REMEMBER!!!: update also eclass/mysql*.eclass prior to commit
-KEYWORDS="testing"
+# REMEMBER: also update eclass/mysql*.eclass before committing!
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 
 src_test() {
-
 	make check || die "make check failed"
-	if ! useq "minimal" ; then
+	if ! use "minimal" ; then
 		cd "${S}/mysql-test"
 		einfo ">>> Test phase [test]: ${CATEGORY}/${PF}"
 		local retstatus
@@ -39,7 +38,7 @@ src_test() {
 			mysql_disable_test  "trigger"              "fail as root"
 		fi
 
-		useq "extraengine" && mysql_disable_test "federated" "fail with extraengine"
+		use "extraengine" && mysql_disable_test "federated" "fail with extraengine"
 
 		mysql_disable_test "view" "FIXME: fail because now we are in year 2007"
 
