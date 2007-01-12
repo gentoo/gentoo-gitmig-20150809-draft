@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/dbunit-2.2.ebuild,v 1.1 2007/01/12 11:12:36 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/dbunit-2.2.ebuild,v 1.2 2007/01/12 11:14:57 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="DBUnit is a JUnit extension targeted for database-driven projects that, puts your database into a known state between test runs."
+DESCRIPTION="DBUnit is a JUnit extension targeted for database-driven projects."
 HOMEPAGE="http://www.dbunit.org"
 SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.gz"
 

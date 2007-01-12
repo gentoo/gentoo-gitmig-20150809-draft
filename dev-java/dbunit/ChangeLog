@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/dbunit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/ChangeLog,v 1.10 2007/01/12 11:12:36 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/ChangeLog,v 1.11 2007/01/12 11:14:57 betelgeuse Exp $
+
+  12 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
+  dbunit-2.1.ebuild, dbunit-2.2.ebuild:
+  Made the description shorter by moving it to metadata.xml as longdescription.
 
 *dbunit-2.2 (12 Jan 2007)
 
