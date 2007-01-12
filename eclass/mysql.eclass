@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.69 2007/01/12 20:51:28 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.70 2007/01/12 23:33:19 chtekk Exp $
 
 # Author: Francesco Riosa (Retired) <vivo@gentoo.org>
 # Maintainer: Luca Longinotti <chtekk@gentoo.org>
@@ -865,5 +865,5 @@ mysql_pkg_config() {
 }
 
 mysql_pkg_postrm() {
-	# mysql_lib_symlinks "${D}"
+	: # mysql_lib_symlinks "${D}"
 }
