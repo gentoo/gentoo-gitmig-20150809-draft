@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Text-Balanced
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Text-Balanced/ChangeLog,v 1.6 2007/01/02 15:33:28 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Text-Balanced/ChangeLog,v 1.7 2007/01/12 02:26:36 mcummings Exp $
+
+  12 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  perl-Text-Balanced-2.0.0.ebuild:
+  Fixing keywords for now - thanks mr. b
 
 *perl-Text-Balanced-2.0.0 (02 Jan 2007)
 
