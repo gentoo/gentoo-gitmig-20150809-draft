@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/tvision
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvision/ChangeLog,v 1.16 2007/01/06 04:13:29 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvision/ChangeLog,v 1.17 2007/01/12 15:37:32 truedfx Exp $
+
+*tvision-2.1.0_pre2 (12 Jan 2007)
+
+  12 Jan 2007; Harald van Dĳk <truedfx@gentoo.org>
+  -files/tvision-2.0.3-gcc4.patch, +files/tvision-2.1.0_pre2-gcc41.patch,
+  +files/tvision-2.1.0_pre2-outb.patch,
+  +files/tvision-2.1.0_pre2-underflow.patch, +tvision-2.1.0_pre2.ebuild:
+  Version bump plus a buffer underflow fix (#160591)
 
   06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -tvision-2.0.1.ebuild,
   -tvision-2.0.3.ebuild:
