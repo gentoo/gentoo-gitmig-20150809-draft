@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cscope
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.84 2007/01/06 23:00:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.85 2007/01/12 20:24:24 eroyf Exp $
+
+  12 Jan 2007; Alexander H. Færøy <eroyf@gentoo.org> cscope-15.6.ebuild:
+  Stable on Alpha.
 
   06 Jan 2007; Seemant Kulleen <seemant@gentoo.org>
   files/cscope-158831-warning_webscope.patch:
