@@ -1,6 +1,9 @@
 # ChangeLog for dev-php4/jpgraph
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/jpgraph/ChangeLog,v 1.10 2007/01/10 08:50:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/jpgraph/ChangeLog,v 1.11 2007/01/12 20:43:14 nixnut Exp $
+
+  12 Jan 2007; nixnut <nixnut@gentoo.org> jpgraph-1.20.5.ebuild:
+  Stable on ppc wrt bug 143378
 
   10 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
   jpgraph-1.20.5.ebuild:
