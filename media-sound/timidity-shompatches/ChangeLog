@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/timidity-shompatches
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-shompatches/ChangeLog,v 1.18 2007/01/11 14:26:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-shompatches/ChangeLog,v 1.19 2007/01/12 11:18:46 opfer Exp $
+
+  12 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
+  timidity-shompatches-19960409-r4.ebuild:
+  stable x86, bug #161386
 
   11 Jan 2007; Markus Rothe <corsair@gentoo.org>
   timidity-shompatches-19960409-r4.ebuild:

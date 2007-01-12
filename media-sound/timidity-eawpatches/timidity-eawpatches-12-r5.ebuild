@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/timidity-eawpatches-12-r5.ebuild,v 1.8 2007/01/11 14:23:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/timidity-eawpatches-12-r5.ebuild,v 1.9 2007/01/12 11:15:12 opfer Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://5hdumat.samizdat.net/music/eawpats${PV}_full.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ppc64 sparc x86 ~x86-fbsd"
 
 # These can be used for libmodplug too, so don't depend on timidity++
 DEPEND="app-admin/eselect-timidity"
