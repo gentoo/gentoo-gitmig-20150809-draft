@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/aegis-4.19.ebuild,v 1.3 2005/12/16 13:09:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/aegis-4.19.ebuild,v 1.4 2007/01/12 13:02:39 opfer Exp $
 
-IUSE="tcltk"
+IUSE="tk"
 
 DESCRIPTION="A transaction based revision control system"
 SRC_URI="mirror://sourceforge/aegis/${P}.tar.gz"
@@ -12,7 +12,7 @@ DEPEND="sys-libs/zlib
 	sys-devel/gettext
 	sys-apps/groff
 	sys-devel/bison
-	tcltk? ( >=dev-lang/tk-8.3 )"
+	tk? ( >=dev-lang/tk-8.3 )"
 
 SLOT="0"
 LICENSE="GPL-2"
