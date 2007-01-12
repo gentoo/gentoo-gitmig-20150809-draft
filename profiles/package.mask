@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6594 2007/01/12 18:15:27 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6595 2007/01/12 19:20:27 hkbst Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1028,10 +1028,6 @@ net-libs/enet
 # - fix crappy state of runnable only in source tree.
 # - provide log output to /var/log somewhere intelligently
 app-benchmarks/ltp
-
-# Matthew Kennedy <mkennedy@gentoo.org> (06 Mar 2006)
-# Masked due to maintainability issues.  See bug 116631.
-dev-scheme/bigloo-lib
 
 # Michael Sterrett <mr_bones_@gentoo.org> (06 Mar 2006)
 # masked due to security issues: bug #125289
