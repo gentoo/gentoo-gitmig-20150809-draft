@@ -5,7 +5,7 @@
  QiLinux: LinuxCommon, GlobalDesktopFiles, FilePickers
  #Gentoo
 -GentooBase : LinuxCommon, GentooOnly, NotDebian, Lockdown, CalcSolver, SystemJavaBits, CairoFonts, CXXHelpLinker, ICU36, BerkeleyDB43, STLport5
-+GentooBase : LinuxCommon, GentooOnly, NotDebian, Lockdown, CalcSolver, SystemJavaBits, CairoFonts, ICU36, BerkeleyDB43
++GentooBase : LinuxCommon, GentooOnly, NotDebian, Lockdown, CalcSolver, SystemJavaBits, CairoFonts, ICU36, BerkeleyDB43, STLport5
  GentooUnstable: GentooBase, GentooExperimental, 64bit
  Gentoo : GentooBase
  Gentoo64: GentooBase, 64bit

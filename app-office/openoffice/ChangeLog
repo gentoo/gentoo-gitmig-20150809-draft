@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.288 2007/01/12 12:06:57 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.289 2007/01/12 14:41:03 suka Exp $
+
+  12 Jan 2007; Andreas Proschofsky <suka@gentoo.org>
+  files/2.1.0/disable_cxxhelplinker.diff:
+  Accidentally removed STLport5-patches from the build without java, re-adding
 
   12 Jan 2007; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.1.0.ebuild:
