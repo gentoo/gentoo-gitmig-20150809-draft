@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.3.3.ebuild,v 1.6 2007/01/05 22:50:01 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.3.3.ebuild,v 1.7 2007/01/12 14:37:40 leio Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -122,6 +122,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-wxrc_build_fix.patch"
+	epatch "${FILESDIR}/${P}-wxrc_link_fix.patch"
 	epatch "${FILESDIR}/${P}-dialog_focus.patch"
 	epatch "${FILESDIR}/${P}-slider_linesize.patch"
 
