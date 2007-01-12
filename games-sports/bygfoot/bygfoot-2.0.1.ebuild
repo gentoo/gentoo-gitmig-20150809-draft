@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/bygfoot/bygfoot-2.0.1.ebuild,v 1.1 2006/10/12 20:32:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/bygfoot/bygfoot-2.0.1.ebuild,v 1.2 2007/01/12 01:19:43 nyhm Exp $
 
 inherit eutils games
 
@@ -13,27 +13,32 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2.0"
+RDEPEND=">=x11-libs/gtk+-2
+	virtual/libintl"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	sys-devel/gettext"
 
 src_unpack() {
 	unpack ${A}
-
+	cd "${S}"
 	sed -i \
 		-e '/PACKAGE_LOCALE_DIR/s:\$(prefix)/\$(DATADIRNAME):/usr/share:' \
-		"${S}"/src/Makefile.in \
-		|| die "sed failed"
-	sed -i \
-		-e '/localedir/s:\$(libdir):/usr/share:' \
-		-e '/gnulocaledir/s:\$(datadir):/usr/share:' \
-		"${S}"/po/Makefile.in.in \
+		src/Makefile.in \
 		|| die "sed failed"
 }
 
+src_compile() {
+	egamesconf \
+		--disable-dependency-tracking \
+		--disable-gstreamer \
+		--with-localedir=/usr/share/locale \
+		|| die
+	emake || die "emake failed"
+}
+
 src_install() {
-	localedir=/usr/share/locale \
-		make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog README TODO UPDATE
 	newicon support_files/pixmaps/bygfoot_icon.png ${PN}.png
 	make_desktop_entry ${PN} "Bygfoot"
@@ -43,12 +48,13 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	echo
-	einfo "If you'd like to keep your settings and savegames from previous"
-	einfo "1.9.x versions, you should rename the .bygfoot-1.9 directory"
-	einfo "to .bygfoot in your home directory."
+	elog "If you'd like to keep your settings and savegames from previous"
+	elog "1.9.x versions, you should rename the .bygfoot-1.9 directory"
+	elog "to .bygfoot in your home directory."
 	echo
-	einfo "If you upgrade from 1.8.x, you should first delete the .bygfoot"
-	einfo "directory in your home dir to keep things clean."
-	einfo "Also note that savegames from 1.8.x are not compatible with"
-	einfo "current versions of ${PN}"
+	elog "If you upgrade from 1.8.x, you should first delete the .bygfoot"
+	elog "directory in your home dir to keep things clean."
+	elog "Also note that savegames from 1.8.x are not compatible with"
+	elog "current versions of ${PN}"
+	echo
 }
