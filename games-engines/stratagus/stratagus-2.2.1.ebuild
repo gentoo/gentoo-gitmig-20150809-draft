@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.2.1.ebuild,v 1.1 2007/01/12 03:12:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.2.1.ebuild,v 1.2 2007/01/12 21:53:05 nyhm Exp $
 
-inherit eutils games
+inherit games
 
 DESCRIPTION="A realtime strategy game engine"
 HOMEPAGE="http://www.stratagus.org/"
@@ -11,28 +11,35 @@ SRC_URI="mirror://sourceforge/stratagus/${P}-src.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="debug doc mikmod mng opengl theora vorbis"
+IUSE="bzip2 debug doc mikmod mng opengl theora vorbis"
 
-RDEPEND="app-arch/bzip2
+RDEPEND="x11-libs/libX11
 	>=dev-lang/lua-5
 	media-libs/libpng
 	media-libs/libsdl
-	sys-libs/zlib
 	mikmod? ( media-libs/libmikmod )
 	mng? ( media-libs/libmng )
+	opengl? ( virtual/opengl )
 	theora? ( media-libs/libtheora )
-	vorbis? ( media-libs/libogg media-libs/libvorbis )"
-
+	vorbis? ( media-libs/libvorbis )"
 DEPEND="${RDEPEND}
-	x11-libs/libXt
 	doc? ( app-doc/doxygen )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i \
+		-e '/SDLCONFIG --libs/s:"$: -lX11":' \
+		-e 's/-O.*\(-fsigned-char\).*/\1"/' \
+		configure \
+		|| die "sed failed"
+}
 
 src_compile() {
 	econf \
 		$(use_enable debug) \
+		$(use_with bzip2) \
 		$(use_with mikmod) \
-		$(use_with flac) \
-		$(use_with mp3 mad) \
 		$(use_with mng) \
 		$(use_with opengl) \
 		$(use_with theora) \
