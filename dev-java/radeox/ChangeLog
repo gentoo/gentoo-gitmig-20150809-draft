@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/radeox
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/radeox/ChangeLog,v 1.10 2005/12/28 03:13:52 nichoj Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/radeox/ChangeLog,v 1.11 2007/01/12 12:06:02 betelgeuse Exp $
+
+  12 Jan 2007; Petteri Räty <betelgeuse@gentoo.org>
+  radeox-1.0_beta2.ebuild:
+  Relaxed dev-java/commons-logging to match 1.1* too.
 
   28 Dec 2005; Joshua Nichols <nichoj@gentoo.org> radeox-1.0_beta2.ebuild:
   Fixed picocontainer dependency.
