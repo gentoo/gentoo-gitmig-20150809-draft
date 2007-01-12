@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/flightgear
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.25 2006/10/17 18:06:42 wolf31o2 Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.26 2007/01/12 23:57:50 nyhm Exp $
+
+  12 Jan 2007; Tristan Heaven <nyhm@gentoo.org> flightgear-0.9.10.ebuild:
+  Allow sdl to be used instead of glut
 
   17 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   -flightgear-0.9.4.ebuild, -flightgear-0.9.5.ebuild,

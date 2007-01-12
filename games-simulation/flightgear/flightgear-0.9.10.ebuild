@@ -1,12 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.10.ebuild,v 1.2 2006/10/17 18:06:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.10.ebuild,v 1.3 2007/01/12 23:57:50 nyhm Exp $
 
-inherit flag-o-matic games
+inherit games
 
 MY_PN=FlightGear
 MY_P=${MY_PN}-${PV}
-S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Open Source Flight Simulator"
 HOMEPAGE="http://www.flightgear.org/"
 SRC_URI="mirror://flightgear/Source/${MY_P}.tar.gz
@@ -15,37 +14,28 @@ SRC_URI="mirror://flightgear/Source/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE=""
+IUSE="sdl"
 
-RDEPEND="virtual/glut
+DEPEND="virtual/glut
 	~dev-games/simgear-0.3.10
 	>=media-libs/plib-1.8.4
-	media-libs/freealut"
-DEPEND="${RDEPEND}"
+	media-libs/freealut
+	sdl? ( media-libs/libsdl )"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	mv ../data ./data
-}
+S=${WORKDIR}/${MY_P}
 
 src_compile() {
-	use hppa && replace-flags -march=2.0 -march=1.0
 	egamesconf \
-		--with-multiplayer \
-		--with-network-olk \
-		--with-threads \
-		--with-x || die
+		--disable-dependency-tracking \
+		$(use_enable sdl) \
+		|| die
 	emake -j1 || die "emake failed"
 }
 
 src_install() {
-	egamesinstall || die
-
-	dodir "${GAMES_DATADIR}/${MY_PN}"
-	cp -pPR data/* "${D}/${GAMES_DATADIR}/${MY_PN}" || die "cp failed"
-
-	dodoc README* ChangeLog AUTHORS NEWS Thanks
-
+	emake DESTDIR="${D}" install || die "emake install failed"
+	insinto "${GAMES_DATADIR}"/${MY_PN}
+	doins -r ../data/* || die "doins failed"
+	dodoc AUTHORS ChangeLog NEWS README Thanks
 	prepgamesdirs
 }
