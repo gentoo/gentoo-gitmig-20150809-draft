@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/toshiba-utils
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/toshiba-utils/ChangeLog,v 1.8 2006/06/13 10:04:33 uberlord Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/toshiba-utils/ChangeLog,v 1.9 2007/01/12 12:36:12 opfer Exp $
+
+*toshiba-utils-2.0.1-r2 (12 Jan 2007)
+
+  12 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
+  +files/toshiba-utils-2.0.1-arg-fix.diff, +toshiba-utils-2.0.1-r2.ebuild:
+  fix the following bugs (for GCC 4.1 and other issues): 121477, 152134,
+  146978. Thanks to Sandro <sanchan@gentoo.org>
 
   13 Jun 2006; Roy Marples <uberlord@gentoo.org>
   toshiba-utils-2.0.1-r1.ebuild:
