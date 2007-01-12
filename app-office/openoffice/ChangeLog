@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.291 2007/01/12 18:56:24 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.292 2007/01/12 19:57:32 suka Exp $
+
+  12 Jan 2007; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.1.0.ebuild:
+  Raise STLport dependency again, we really need 5.1.0, also remove sparc until
+  they keyword STLport-5.1.0
 
   12 Jan 2007; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.1.0.ebuild:
