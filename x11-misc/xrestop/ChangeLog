@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xrestop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrestop/ChangeLog,v 1.25 2007/01/10 14:18:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrestop/ChangeLog,v 1.26 2007/01/12 17:03:24 nixnut Exp $
+
+  12 Jan 2007; nixnut <nixnut@gentoo.org> xrestop-0.4.ebuild:
+  Stable on ppc wrt bug 157780
 
   10 Jan 2007; Jeroen Roovers <jer@gentoo.org> xrestop-0.4.ebuild:
   Stable for HPPA (bug #157780).
