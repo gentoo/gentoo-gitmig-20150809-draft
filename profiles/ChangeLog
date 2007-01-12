@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10 2007/01/12 19:20:27 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.11 2007/01/12 22:53:15 armin76 Exp $
+
+  12 Jan 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
+  Mask net-p2p/teknap for removal, bug 153268
 
   12 Jan 2007; Luca Longinotti <chtekk@gentoo.org> package.mask:
   Remove mysql-slotted mask, as mysql-slotted is gone from the tree.
