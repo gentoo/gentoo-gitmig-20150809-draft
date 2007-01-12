@@ -55,9 +55,9 @@ x11-libs/libast -mmx
 x11-misc/rss-glx -sse -3dnow
 x11-misc/eterm -sse2
 x11-wm/afterstep -mmx
+media-libs/win32codecs -real
 media-video/ffmpeg -mmx
 media-video/mplayer -3dnow -3dnowext -mmx -mmxext -sse -sse2 -real
-media-video/mplayer-bin -real
 media-tv/xdtv -mmx
 media-plugins/vdr-softdevice -mmx -mmxext
 dev-libs/openssl -sse2
