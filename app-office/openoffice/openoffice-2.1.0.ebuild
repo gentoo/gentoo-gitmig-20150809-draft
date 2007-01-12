@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.1.0.ebuild,v 1.5 2007/01/12 19:57:32 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.1.0.ebuild,v 1.6 2007/01/12 22:54:26 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -194,7 +194,9 @@ src_unpack() {
 	#Some fixes for our patchset
 	cd ${S}
 	epatch ${FILESDIR}/${PV}/gentoo-${PV}.diff
+	epatch ${FILESDIR}/${PV}/wrapper-readd.diff
 	use !java && epatch ${FILESDIR}/${PV}/disable_cxxhelplinker.diff
+	cp -f ${FILESDIR}/${PV}/ooo-wrapper.in ${S}/bin || die
 
 	#Use flag checks
 	if use java ; then
@@ -286,6 +288,7 @@ src_compile() {
 		`use_enable kde` \
 		`use_enable cairo` \
 		`use_with cairo system-cairo` \
+		`use_enable gnome quickstart` \
 		`use_enable pam` \
 		`use_enable !debug strip` \
 		`use_enable odk` \

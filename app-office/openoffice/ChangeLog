@@ -1,6 +1,13 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.292 2007/01/12 19:57:32 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.293 2007/01/12 22:54:26 suka Exp $
+
+  12 Jan 2007; Andreas Proschofsky <suka@gentoo.org>
+  +files/2.1.0/ooo-wrapper.in, +files/2.1.0/wrapper-readd.diff,
+  openoffice-2.1.0.ebuild:
+  Re-add old-style wrapper support, which has been removed in the most recent
+  ooo-build release. We need this for builds without gtk, which don't have
+  ooqstart and were broken as a result of that. See bug #161811
 
   12 Jan 2007; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.1.0.ebuild:
