@@ -1,6 +1,18 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.286 2007/01/09 20:05:05 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.287 2007/01/12 07:02:12 suka Exp $
+
+*openoffice-2.1.0 (12 Jan 2007)
+
+  12 Jan 2007; Andreas Proschofsky <suka@gentoo.org>
+  +files/2.1.0/gentoo-2.1.0.diff, +files/2.1.0/disable_cxxhelplinker.diff,
+  +openoffice-2.1.0.ebuild:
+  Finaly add 2.1.0 to the tree. This release adds quite some changes, for
+  instance we use system-db at last. Also STLport and lot's of Java stuff is
+  used from the system instead of building it ourselves. Added to that en_US
+  and de users no longer have to download the l10n tarball, which spares
+  another 72 MByte. Also we support seamonkey now if you want to use that
+  instead of firefox.
 
   09 Jan 2007; Andreas Proschofsky <suka@gentoo.org>
   -files/2.0.3/gentoo-2.0.3.diff, -openoffice-2.0.3.ebuild:
