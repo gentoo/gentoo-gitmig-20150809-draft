@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/beecrypt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.50 2007/01/04 19:45:55 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.51 2007/01/12 20:46:38 alonbl Exp $
+
+  12 Jan 2007; Alon Bar-Lev <alonbl@gentoo.org> beecrypt-4.1.2-r1.ebuild:
+  Remove WANT_AUTO*
 
   04 Jan 2007; Sandro Bonazzola <sanchan@gentoo.org> -beecrypt-4.1.2.ebuild:
   Removed broken ebuild, obsoleted by 4.1.2-r1. Fix bug #160004, Thanks to
