@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ifpgui/ifpgui-0.10.8.ebuild,v 1.2 2006/11/28 21:53:49 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ifpgui/ifpgui-0.10.8.ebuild,v 1.3 2007/01/12 23:48:44 nelchael Exp $
 
 inherit eutils qt3
 
@@ -101,8 +101,7 @@ src_install() {
 pkg_postinst() {
 	echo
 	ewarn "If you want to use ifpgui without root-privileges, you can run"
-	ewarn "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
-	ewarn "emerge --config =${PF}"
+	ewarn "emerge --config =${CATEGORY}/${PF}"
 	ewarn "or manually use the script"
 	ewarn "/usr/share/${PN}/nonroot.sh"
 	ewarn "to add approprate rules to your hotplug scripts"
