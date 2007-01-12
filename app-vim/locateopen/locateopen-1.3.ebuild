@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/locateopen/locateopen-1.3.ebuild,v 1.6 2007/01/06 18:47:50 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/locateopen/locateopen-1.3.ebuild,v 1.7 2007/01/12 18:34:33 pioto Exp $
 
 inherit vim-plugin
 
 DESCRIPTION="vim plugin: open a file without supplying a path"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=858"
 LICENSE="vim"
-KEYWORDS="alpha amd64 ia64 ~mips ppc sparc x86"
+KEYWORDS="alpha amd64 ia64 mips ppc sparc x86"
 IUSE=""
 
 RDEPEND="${RDEPEND} || ( sys-apps/slocate sys-apps/rlocate )"
