@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/units
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.8 2006/11/23 20:40:14 jer Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.9 2007/01/12 15:04:15 fmccor Exp $
+
+  12 Jan 2007; Ferris McCormick <fmccor@gentoo.org> units-1.85.ebuild:
+  Stable on sparc --- Bug #125343 --- builds and works fine.
 
 *units-1.86 (23 Nov 2006)
 
