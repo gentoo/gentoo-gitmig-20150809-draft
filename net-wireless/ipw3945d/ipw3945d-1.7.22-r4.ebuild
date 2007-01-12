@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945d/ipw3945d-1.7.22-r4.ebuild,v 1.5 2007/01/11 18:37:24 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945d/ipw3945d-1.7.22-r4.ebuild,v 1.6 2007/01/12 16:37:00 phreak Exp $
 
 inherit eutils
 
@@ -30,11 +30,11 @@ src_install() {
 	use amd64 && dosbin x86_64/ipw3945d
 
 	# Give the ipw3945d access to the binary
-	chown ipw3945d:root "${D}/sbin/ipw3945d"
-	chmod 04450 "${D}/sbin/ipw3945d"
+	fowners ipw3945d:root /sbin/ipw3945d
+	fperms 04450 /sbin/ipw3945d
 
 	keepdir /var/run/ipw3945d
-	chown ipw3945d:root "${D}/var/run/ipw3945d"
+	fowners ipw3945d:root /var/run/ipw3945d
 
 	newconfd "${FILESDIR}/${PN}-conf.d" ${PN}
 	newinitd "${FILESDIR}/${PN}-init.d" ${PN}
@@ -57,13 +57,13 @@ pkg_postinst() {
 
 	# These nasty live-filesystem fixes are needed, because if the files are
 	# already there, the permissions applied in src_install() won't get
-	# transferred to the live filesystem. Once portage is fixed with regard to
+	# merged to the live filesystem. Once portage is fixed with regard to
 	# this, these hacks can go away.
 
 	# Fix the permissions of /sbin/ipw3945d
 	ebegin "Fixing permissions of ${ROOT}sbin/ipw3945d"
-	chmod 04450 "${ROOT}sbin/ipw3945d"
 	chown ipw3945d:root "${ROOT}sbin/ipw3945d"
+	chmod 04450 "${ROOT}sbin/ipw3945d"
 	eend $?
 
 	# Fixing ownership of /var/run/ipw3945d
