@@ -5,7 +5,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-2.eclass,v 1.11 2007/01/12 13:48:12 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-2.eclass,v 1.12 2007/01/12 16:12:15 betelgeuse Exp $
 
 inherit java-utils-2
 
@@ -56,8 +56,7 @@ java-pkg-2_pkg_setup() {
 # EANT_DOC_TARGET - the target to build extra docs under the doc use flag
 #                   (default: the one provided by use_doc in
 #                   java-utils-2.eclass)
-# EANT_GENTOO_CLASSPATH - class java-pkg_getjars for the value and adds to the
-#						  gentoo.classpath property
+# EANT_GENTOO_CLASSPATH - @see eant documention in java-utils-2.eclass
 # EANT_EXTRA_ARGUMENTS - extra arguments to pass to eant
 # ------------------------------------------------------------------------------
 java-pkg-2_src_compile() {
@@ -66,15 +65,6 @@ java-pkg-2_src_compile() {
 			java-pkg_filter-compiler ${EANT_FILTER_COMPILER}
 
 		local antflags="${EANT_BUILD_TARGET:=jar}"
-
-		local gcp="${EANT_GENTOO_CLASSPATH}"
-
-		if [[ "${gcp}" ]]; then
-			local cp="$(java-pkg_getjars ${gcp})"
-			# It seems ant does not like single quotes around ${cp}
-			antflags="${antflags} -Dgentoo.classpath=\"${cp}\""
-		fi
-
 		hasq doc ${IUSE} && antflags="${antflags} $(use_doc ${EANT_DOC_TARGET})"
 		eant ${antflags} -f "${EANT_BUILD_XML}" ${EANT_EXTRA_ARGUMENTS}
 	else

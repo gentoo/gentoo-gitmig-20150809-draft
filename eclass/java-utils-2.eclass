@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.40 2007/01/10 09:52:51 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.41 2007/01/12 16:12:15 betelgeuse Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -1336,6 +1336,10 @@ java-pkg_ensure-test() {
 #
 # Ant wrapper function. Will use the appropriate compiler, based on user-defined
 # compiler.
+# variables:
+# EANT_GENTOO_CLASSPATH - calls java-pkg_getjars for the value and adds to the
+#                         gentoo.classpath property. Be sure to call
+#                         java-ant_rewrite-classpath in src_unpack.
 #
 # ------------------------------------------------------------------------------
 eant() {
@@ -1377,6 +1381,14 @@ eant() {
 
 	if [[ -n ${JAVA_PKG_DEBUG} ]]; then
 		antflags="${antflags} -debug"
+	fi
+
+	local gcp="${EANT_GENTOO_CLASSPATH}"
+
+	if [[ "${gcp}" ]]; then
+		local cp="$(java-pkg_getjars ${gcp})"
+		# It seems ant does not like single quotes around ${cp}
+		antflags="${antflags} -Dgentoo.classpath=\"${cp}\""
 	fi
 
 	[[ -n ${JAVA_PKG_DEBUG} ]] && echo ant ${antflags} "${@}"
