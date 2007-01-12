@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.0.7.ebuild,v 1.7 2007/01/11 15:36:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.0.7.ebuild,v 1.8 2007/01/12 02:24:55 pingu Exp $
 
 unset ALLOWED_FLAGS  # Stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozcoreconf mozconfig-2 mozilla-launcher makeedit multilib autotools
@@ -158,7 +158,7 @@ src_compile() {
 	# requirements while compiling
 	edit_makefiles
 
-	emake || die
+	emake -j1 || die
 
 	####################################
 	#
