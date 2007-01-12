@@ -3,6 +3,11 @@
 <pkgmetadata>
 <herd>amd64</herd>
 <maintainer>
-  <email>dang@gentoo.org</email>
+<email>beandog@gentoo.org</email>
+<name>Steve Dibb</name>
 </maintainer>
+<longdescription lang="en">
+A 32-bit compiled version of mplayer that can run on 64-bit machines.
+</longdescription>
 </pkgmetadata>
+
