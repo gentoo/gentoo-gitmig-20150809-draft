@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/linuxwacom-0.7.4_p3.ebuild,v 1.6 2006/09/06 03:03:24 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/linuxwacom-0.7.4_p3.ebuild,v 1.7 2007/01/13 17:25:27 joshuabaergen Exp $
 
-IUSE="gtk tcltk usb"
+IUSE="gtk tcl tk usb"
 
 inherit eutils autotools
 
@@ -18,7 +18,8 @@ RDEPEND="|| ( ( x11-proto/inputproto
 		x11-base/xorg-server )
 	      virtual/x11 )
 	gtk? ( >=x11-libs/gtk+-2 )
-	tcltk? ( dev-lang/tcl dev-lang/tk )
+	tcl? ( dev-lang/tcl )
+	tk? ( dev-lang/tk )
 	sys-libs/ncurses"
 
 DEPEND="${RDEPEND}
@@ -46,8 +47,8 @@ src_compile() {
 	fi
 
 	econf ${myconf} \
-		`use_with tcltk tcl` \
-		`use_with tcltk tk` \
+		`use_with tcl` \
+		`use_with tk` \
 		--enable-wacomdrv --enable-wacdump \
 		--enable-xsetwacom --enable-dlloader || die
 
