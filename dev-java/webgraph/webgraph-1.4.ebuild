@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/webgraph/webgraph-1.4.ebuild,v 1.4 2005/07/15 14:21:58 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/webgraph/webgraph-1.4.ebuild,v 1.5 2007/01/13 12:36:56 betelgeuse Exp $
 
 inherit eutils java-pkg
 
-DESCRIPTION="WebGraph is a framework to study the web graph. It provides simple ways to manage very large graphs, exploiting modern compression techniques."
+DESCRIPTION="WebGraph is a framework to study the web graph."
 SRC_URI="http://webgraph.dsi.unimi.it/${P}-src.tar.gz"
 HOMEPAGE="http://webgraph.dsi.unimi.it"
 LICENSE="LGPL-2.1"
