@@ -1,6 +1,18 @@
 # ChangeLog for sci-mathematics/maxima
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.22 2006/10/31 11:24:06 je_fro Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.23 2007/01/13 10:41:58 cryos Exp $
+
+*maxima-5.11.0 (13 Jan 2007)
+
+  13 Jan 2007; Marcus D. Hanwell <cryos@gentoo.org>
+  +files/maxima-5.11.0-default-psviewer.patch, files/50maxima-gentoo.el,
+  +files/maxima-5.11.0-default-browser.patch,
+  +files/maxima-5.11.0-diff_form.patch,
+  +files/maxima-5.11.0-sbcl-disable-debugger.patch, metadata.xml,
+  +maxima-5.11.0.ebuild:
+  Version bump, move from the gentooscience.org overlay. Many thanks to Andrey
+  Grozin <A.G.Grozin@inp.nsk.su> and Sebastien Fabbro <seb@ist.utl.pt> for
+  their work on this in the overlay.
 
 *maxima-5.10.0 (31 Oct 2006)
 

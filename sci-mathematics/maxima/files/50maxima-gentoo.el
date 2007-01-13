@@ -1,5 +1,5 @@
 ;; maxima mode
-(setq load-path (cons "/usr/shar/maxima/PV/emacs" load-path))
+(setq load-path (cons "/usr/share/maxima/PV/emacs" load-path))
 (autoload 'maxima-mode "maxima" "Maxima mode" t)
 (autoload 'maxima "maxima" "Maxima interactive" t)
 (setq auto-mode-alist (cons '("\\.max" . maxima-mode) auto-mode-alist))
