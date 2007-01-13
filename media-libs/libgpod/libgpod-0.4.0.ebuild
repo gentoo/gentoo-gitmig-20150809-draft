@@ -1,6 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.4.0.ebuild,v 1.10 2006/12/01 20:30:53 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.4.0.ebuild,v 1.11 2007/01/13 18:13:47 tester Exp $
+
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 
 inherit eutils autotools
 
@@ -14,16 +17,13 @@ KEYWORDS="amd64 ~ia64 ppc ppc64 sparc x86"
 IUSE="gtk python"
 
 RDEPEND=">=dev-libs/glib-2.4
-		gtk? ( >=x11-libs/gtk+-2 )
-		python? ( >=dev-lang/python-2.3
-			>=dev-lang/swig-1.3.24
-			>=dev-python/eyeD3-0.6.6 )"
+	gtk? ( >=x11-libs/gtk+-2 )
+	python? ( >=dev-lang/python-2.3
+		>=dev-lang/swig-1.3.24
+		>=dev-python/eyeD3-0.6.6 )"
 DEPEND="${RDEPEND}
-		sys-devel/autoconf
-		sys-devel/automake
-		dev-util/pkgconfig
-		sys-devel/libtool
-		>=dev-util/intltool-0.2.9"
+	gtk? ( dev-util/gtk-doc )
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
@@ -31,11 +31,7 @@ src_unpack() {
 	cd  ${S}
 	epatch ${FILESDIR}/libgpod-0.4.0-test-nogdk.patch
 
-	# Dont run aclocal, it breaks
-	eautomake
-	eautoconf
-	eautoheader
-	elibtoolize
+	AT_M4DIR="m4" eautoreconf
 }
 
 src_compile() {
