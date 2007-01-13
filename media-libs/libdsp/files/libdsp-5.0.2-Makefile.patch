@@ -1,0 +1,81 @@
+diff -Naur libdsp-src-5.0.2-orig/DynThreads/Makefile libdsp-src-5.0.2/DynThreads/Makefile
+--- libdsp-src-5.0.2-orig/DynThreads/Makefile	2007-01-13 12:51:51.000000000 -0600
++++ libdsp-src-5.0.2/DynThreads/Makefile	2007-01-13 12:53:18.000000000 -0600
+@@ -18,10 +18,10 @@
+ #
+ 
+ CXX = g++
+-CXXFLAGS = -march=pentium2 -mtune=pentium4 -O2 -Wall -Werror #-ggdb
++#CXXFLAGS = -march=pentium2 -mtune=pentium4 -O2 -Wall -Werror #-ggdb
+ DEFS = -D_REENTRANT -D_THREAD_SAFE
+ DEFS += -DUSE_NPTL
+-INCS = $(PKGINC) #-I/usr/local/include
++INCS = $(PKGINC) -I. -I../Inlines -I/usr/include
+ LIBS = -lpthread
+ 
+ PREFIX = /usr/local
+diff -Naur libdsp-src-5.0.2-orig/libDSP/Makefile libdsp-src-5.0.2/libDSP/Makefile
+--- libdsp-src-5.0.2-orig/libDSP/Makefile	2007-01-13 12:51:51.000000000 -0600
++++ libdsp-src-5.0.2/libDSP/Makefile	2007-01-13 12:55:11.000000000 -0600
+@@ -25,7 +25,7 @@
+ #OPTCFLAGS = -march=athlon -O3 -ffast-math -funroll-loops -malign-loops=5 -malign-jumps=5 -malign-functions=5 -mpreferred-stack-boundary=5 -mfancy-math-387 -Wall -Werror #-g
+ # gcc >= 3.1.x
+ #  -tbird, -4, -xp, -mp
+-CFLAGS = -march=pentium2 -mcpu=pentium4 -mmmx
++#CFLAGS = -march=pentium2 -mcpu=pentium4 -mmmx
+ #CFLAGS = -march=athlon-tbird -mcpu=athlon-xp -m3dnow
+ #CFLAGS = -march=pentium3 -mcpu=pentium3 -msse -mfpmath=sse
+ #CFLAGS = -march=pentium4 -mcpu=pentium4 -msse2 -mfpmath=sse -m128bit-long-double
+@@ -35,8 +35,8 @@
+ #CFLAGS = -march=pentium3 -mtune=pentium3 -msse -mfpmath=sse
+ #CFLAGS = -march=pentium4 -mtune=pentium4 -msse2 -mfpmath=sse -m128bit-long-double
+ #CFLAGS = -march=pentium4 -O2 -mfpmath=387
+-CFLAGS += -O3 -ffast-math -funroll-loops -fprefetch-loop-arrays
+-CFLAGS += -Wall -Werror -g
++#CFLAGS += -O3 -ffast-math -funroll-loops -fprefetch-loop-arrays
++#CFLAGS += -Wall -Werror -g
+ #CFLAGS += -ftracer
+ # gcc >= 4.x
+ #CFLAGS += -fmodulo-sched
+@@ -46,7 +46,7 @@
+ #
+ #
+ # gcc >= 3.1.x
+-OPTCFLAGS = -march=pentium2 -mcpu=pentium4 -mmmx
++#OPTCFLAGS = -march=pentium2 -mcpu=pentium4 -mmmx
+ #OPTCFLAGS = -march=athlon-tbird -mcpu=athlon-xp -m3dnow 
+ #OPTCFLAGS = -march=pentium3 -mcpu=pentium3 -msse
+ #OPTCFLAGS = -march=pentium4 -mcpu=pentium4 -msse2 -m128bit-long-double
+@@ -55,12 +55,12 @@
+ #OPTCFLAGS = -march=athlon-tbird -mtune=athlon-xp -m3dnow 
+ #OPTCFLAGS = -march=pentium3 -mtune=pentium3 -msse
+ #OPTCFLAGS = -march=pentium4 -mtune=pentium4 -msse2 -m128bit-long-double
+-OPTCFLAGS += -O1 -ffast-math -fprefetch-loop-arrays #-funroll-loops
+-OPTCFLAGS += -Wall -Werror -g
++#OPTCFLAGS += -O1 -ffast-math -fprefetch-loop-arrays #-funroll-loops
++#OPTCFLAGS += -Wall -Werror -g
+ #OPTCFLAGS += -ftracer
+ #
+ #OPTCFLAGS += -ggdb -pg
+-CXXFLAGS = $(CFLAGS)
++#CXXFLAGS = $(CFLAGS)
+ 
+ # thread safety
+ DEFS = -D_REENTRANT -D_THREAD_SAFE
+@@ -69,13 +69,13 @@
+ # define if you are using GNU C++-compiler and GNU C-library
+ DEFS += -D_GNU_SOURCE
+ # use memmove() for copying data instead of built-in routine, for gcc inlining
+-#DEFS += -DUSE_MEMMOVE
++DEFS += -DUSE_MEMMOVE
+ # define for x86 platform specific optimizations
+-DEFS += -DDSP_X86
++#DEFS += -DDSP_X86
+ # define for Intel Integrated Performance Primitives support
+ #DEFS += -DDSP_IPP
+ 
+-INCS = -I. #-I/usr/local/include
++INCS = -I. -I../Inlines -I/usr/include
+ #INCS += `pkg-config --cflags fftw3f fftw3`
+ #INCS += -I/opt/intel/ipp/include
+ 
