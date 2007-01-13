@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mod_auth_ldap
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_ldap/ChangeLog,v 1.21 2006/11/09 22:53:24 kloeri Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_ldap/ChangeLog,v 1.22 2007/01/13 20:19:21 chtekk Exp $
+
+  13 Jan 2007; Luca Longinotti <chtekk@gentoo.org>
+  -files/mod_auth_ldap-2.4.2-register.patch, -files/mod_auth_ldap.conf,
+  -mod_auth_ldap-2.4.2-r1.ebuild:
+  Cleanup.
 
   09 Nov 2006; Bryan Østergaard <kloeri@gentoo.org>
   mod_auth_ldap-3.3.ebuild:
