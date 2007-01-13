@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.1.0.ebuild,v 1.8 2007/01/13 13:48:52 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.1.0.ebuild,v 1.9 2007/01/13 21:20:56 dev-zero Exp $
 
 inherit eutils versionator eutils toolchain-funcs multilib flag-o-matic
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://stlport.sourceforge.net/"
 SRC_URI="mirror://sourceforge/stlport/${P}.tar.bz2"
 LICENSE="as-is"
 SLOT="0"
-IUSE="boost"
+IUSE="boost static"
 
 DEPEND="boost? ( dev-libs/boost )"
 RDEPEND="${RDEPEND}"
@@ -22,6 +22,7 @@ src_unpack() {
 
 	# It should be save to apply this on non-ppc systems as well
 	epatch "${FILESDIR}/${P}-ppc.patch"
+	epatch "${FILESDIR}/${P}-wrong_russian_currency_name.patch"
 
 	sed -i \
 		-e 's/\(OPT += \)-O2/\1/' \
@@ -69,16 +70,26 @@ src_compile() {
 	CFLAGS := ${CFLAGS}
 	EOF
 
+	local targets
+	targets="all-shared"
+	use static && targets="${targets} all-static"
+
 	# The build-system is broken in respect to parallel builds, bug #161881
 	emake \
 		-j1 \
 		-C build/lib \
 		-f gcc.mak \
-		depend all || die "Compile failed"
+		depend ${targets} || die "Compile failed"
 }
 
 src_install() {
-	dolib.so build/lib/obj/*/*/libstlport*.so* || die "dolib.so failed"
+	emake -C build/lib -f gcc.mak install
+	dolib.so lib/*
+
+	if use static ; then
+		emake -C build/lib -f gcc.mak install-static
+		dolib.a lib/*.a
+	fi
 
 	insinto /usr/include
 	doins -r stlport
