@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/ipsec-tools
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.47 2006/11/21 20:47:31 mabi Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.48 2007/01/13 15:06:01 beandog Exp $
+
+  13 Jan 2007; Steve Dibb <beandog@gentoo.org> -ipsec-tools-0.3.3.ebuild:
+  Remove vuln version, bug 140517
 
   21 Nov 2006; Matti Bickel <mabi@gentoo.org> ipsec-tools-0.6.5.ebuild:
   Stable on ppc (bug #146478)
