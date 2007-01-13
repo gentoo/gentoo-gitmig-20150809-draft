@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/webgraph/webgraph-1.4.ebuild,v 1.5 2007/01/13 12:36:56 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/webgraph/webgraph-1.4.ebuild,v 1.6 2007/01/13 13:05:46 betelgeuse Exp $
 
 inherit eutils java-pkg
 
@@ -15,7 +15,7 @@ IUSE="doc jikes source"
 RDEPEND=">=virtual/jre-1.4
 	=dev-java/java-getopt-1.0*
 	=dev-java/fastutil-4.3*
-	=dev-java/colt-1.1*
+	=dev-java/colt-1*
 	>=dev-java/jal-20031117
 	=dev-java/mg4j-0.9*"
 DEPEND=">=virtual/jdk-1.4

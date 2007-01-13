@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/webgraph
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/webgraph/ChangeLog,v 1.10 2007/01/13 12:36:56 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/webgraph/ChangeLog,v 1.11 2007/01/13 13:05:46 betelgeuse Exp $
+
+  13 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> webgraph-1.4.ebuild:
+  Relaxed dev-java/colt dependency to not match only a subset of colt slot 0.
 
   13 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> webgraph-1.4.ebuild,
   webgraph-1.4.1.ebuild:
