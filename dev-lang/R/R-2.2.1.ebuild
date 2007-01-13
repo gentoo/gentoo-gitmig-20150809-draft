@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.2.1.ebuild,v 1.13 2006/08/07 12:51:34 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.2.1.ebuild,v 1.14 2007/01/13 15:45:51 markusle Exp $
 
 inherit fortran toolchain-funcs flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://cran/src/base/R-2/${P}.tar.gz"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 ia64 ppc ppc64 sparc x86"
-IUSE="blas jpeg nls png readline tcltk X lapack"
+IUSE="blas jpeg nls png readline tk X lapack"
 
 RDEPEND=">=dev-lang/perl-5.6.1-r3
 	readline? ( >=sys-libs/readline-4.1-r3 )
@@ -19,7 +19,8 @@ RDEPEND=">=dev-lang/perl-5.6.1-r3
 	png? ( >=media-libs/libpng-1.2.1 )
 	blas? ( virtual/blas )
 	lapack? ( virtual/lapack )
-	tcltk? ( dev-lang/tk )
+	tk? ( dev-lang/tk
+		dev-lang/tcl )
 	X? ( || ( ( x11-libs/libX11 )
 		virtual/x11 ) )"
 DEPEND="${RDEPEND}
@@ -51,7 +52,7 @@ pkg_setup() {
 src_compile() {
 	local myconf="--enable-R-profiling --enable-R-shlib --enable-linux-lfs"
 
-	if use tcltk; then
+	if use tk; then
 		#configure needs to find the files tclConfig.sh and tkConfig.sh
 		myconf="${myconf} --with-tcltk --with-tcl-config=/usr/lib/tclConfig.sh
 			--with-tk-config=/usr/lib/tkConfig.sh"
