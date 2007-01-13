@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-0.12.2-r2.ebuild,v 1.14 2007/01/09 09:06:47 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-0.12.2-r2.ebuild,v 1.15 2007/01/13 11:04:23 keri Exp $
 
 inherit eutils
 
@@ -61,8 +61,7 @@ src_unpack() {
 
 src_compile() {
 	mmake \
-		MMAKEFLAGS="${MAKEOPTS}" \
-		depend || die "mmake depend failed"
+		-j1 depend || die "mmake depend failed"
 	mmake \
 		MMAKEFLAGS="${MAKEOPTS}" \
 		EXTRA_MLFLAGS=--no-strip \
@@ -72,9 +71,8 @@ src_compile() {
 		cd "${S}"/graphics/mercury_opengl
 		cp ../mercury_tcltk/mtcltk.m ./
 		mmake \
-			MMAKEFLAGS="${MAKEOPTS}" \
 			-f Mmakefile.mtogl \
-			depend || die "mmake depend mtogl failed"
+			-j1 depend || die "mmake depend mtogl failed"
 		mmake \
 			MMAKEFLAGS="${MAKEOPTS}" \
 			-f Mmakefile.mtogl \
