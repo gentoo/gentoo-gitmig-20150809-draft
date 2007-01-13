@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/eq-audacious
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-audacious/ChangeLog,v 1.1 2006/11/25 23:46:02 beandog Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-audacious/ChangeLog,v 1.2 2007/01/13 08:33:33 beandog Exp $
+
+*eq-audacious-0.9 (13 Jan 2007)
+
+  13 Jan 2007; Steve Dibb <beandog@gentoo.org> +eq-audacious-0.9.ebuild:
+  Version bump
 
 *eq-audacious-0.8 (25 Nov 2006)
 
