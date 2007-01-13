@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.3.3.ebuild,v 1.2 2006/11/29 17:46:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.3.3.ebuild,v 1.3 2007/01/13 08:46:13 beandog Exp $
 
-inherit eutils
+#inherit eutils
 
 DESCRIPTION="a better cd encoder"
 HOMEPAGE="http://www.hispalinux.es/~data/abcde.php"
