@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/joda-time-1.3.ebuild,v 1.2 2007/01/12 14:18:01 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/joda-time-1.3.ebuild,v 1.3 2007/01/13 12:19:30 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -12,15 +12,11 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc source test"
+IUSE="doc source"
 
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core
-	source? ( app-arch/zip )
-	test? (
-		dev-java/junit
-		dev-java/ant
-	)"
+	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.4"
 
 # test cases won't compile with 1.5+, overriding stuff not implementing abstract
@@ -40,10 +36,6 @@ src_compile() {
 	java-pkg_filter-compiler jikes
 	# little trick so it doesn't try to download junit
 	eant -Djunit.ant=1 -Djunit.present=1 jar $(use_doc)
-}
-
-src_test() {
-	eant -Djunit.jar="$(java-pkg_getjars junit)" test
 }
 
 src_install() {
