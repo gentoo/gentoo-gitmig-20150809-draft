@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/katalog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/katalog/ChangeLog,v 1.7 2007/01/13 22:16:41 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/katalog/ChangeLog,v 1.8 2007/01/13 22:19:53 deathwing00 Exp $
+
+  13 Jan 2007; Ioannis Aslanidis <deathwing00@gentoo.org>
+  -katalog-0.4_pre1.ebuild:
+  Removed preview version.
 
 *katalog-0.4 (13 Jan 2007)
 
