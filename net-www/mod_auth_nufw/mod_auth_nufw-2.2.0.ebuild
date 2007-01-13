@@ -1,25 +1,26 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_nufw/mod_auth_nufw-2.2.0.ebuild,v 1.1 2006/12/31 16:15:43 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_nufw/mod_auth_nufw-2.2.0.ebuild,v 1.2 2007/01/13 20:38:16 chtekk Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
+
 inherit eutils apache-module autotools
 
-DESCRIPTION="mod_auth_nufw A NuFW authentication module for apache"
+KEYWORDS="~x86"
+
+DESCRIPTION="A NuFW authentication module for Apache."
 HOMEPAGE="http://www.inl.fr/mod-auth-nufw.html"
 SRC_URI="http://software.inl.fr/releases/${PN}/${P}.tar.gz"
-
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
-IUSE="apache2 mysql postgres ldap"
+IUSE="ldap mysql postgres"
 
 DEPEND="dev-libs/apr
-	mysql? ( virtual/mysql )
-	postgres? ( dev-db/postgresql )
-	ldap? ( net-nds/openldap )"
-RDEPEND=""
+		ldap? ( net-nds/openldap )
+		mysql? ( virtual/mysql )
+		postgres? ( dev-db/postgresql )"
+RDEPEND="${DEPEND}"
 
 APACHE2_MOD_FILE="mod_auth_nufw.so"
 
@@ -38,11 +39,11 @@ pkg_setup() {
 	use mysql && cnt="$((${cnt} + 1))"
 	use postgres && cnt="$((${cnt} + 1))"
 	if [[ "${cnt}" -ne 1 ]] ; then
-		eerror "You have set ${P} to use multiple sql engine."
+		eerror "You have set ${P} to use multiple SQL engines."
 		eerror "I don't know which to use!"
-		eerror "You can use /etc/portage/package.use to	set per-package USE flags"
-		eerror "Set it so only one sql engine type mysql, postgres"
-		die "Please set only one sql engine type"
+		eerror "You can use /etc/portage/package.use to	set per-package USE flags."
+		eerror "Set it so only one SQL engine type, mysql or postgres, is enabled."
+		die "Please set only one SQL engine type!"
 	fi
 }
 
@@ -57,7 +58,7 @@ src_compile() {
 	cd "${S}"
 
 	local apx
-	if [ ${APACHE_VERSION} -eq '1' ]; then
+	if [[ ${APACHE_VERSION} -eq '1' ]] ; then
 		apx=${APXS1}
 	else
 		apx=${APXS2}
@@ -68,8 +69,8 @@ src_compile() {
 	eautoreconf
 	econf \
 		$(use_with apache2 apache20) \
-		$(use_with mysql) \
 		$(use_with ldap ldap-uids) \
+		$(use_with mysql) \
 		--with-apxs=${apx} \
 		CPPFLAGS="${APR_INCLUDE} ${CPPFLAGS}" \
 		|| die "econf failed"
