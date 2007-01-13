@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.0.30.ebuild,v 1.9 2006/12/08 01:33:38 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.0.30.ebuild,v 1.10 2007/01/13 12:35:42 caster Exp $
 
 inherit base distutils eutils
 
@@ -37,7 +37,7 @@ src_install() {
 	# Install profile.d for setting JAVA_HOME
 	dodir /etc/profile.d
 	exeinto /etc/profile.d
-	newexe ${FILESDIR}/${PN}-${SLOT}.profiled ${PN}-${SLOT}.sh || die "newexe failed"
+	newexe ${FILESDIR}/${PN}-${SLOT}.profiled.sh ${PN}-${SLOT}.sh || die "newexe failed"
 }
 
 
