@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/libmrss
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmrss/ChangeLog,v 1.1 2007/01/13 14:30:29 rbu Exp $
+
+*libmrss-0.16 (13 Jan 2007)
+
+  13 Jan 2007; Robert Buchholz <rbu@gentoo.org> +metadata.xml,
+  +libmrss-0.16.ebuild:
+  Added to the tree. Thanks to Adrian Fruehwirth in bug #128259
+
