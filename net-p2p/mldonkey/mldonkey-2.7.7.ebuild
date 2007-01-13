@@ -1,13 +1,13 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.7.7.ebuild,v 1.7 2006/10/15 13:37:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.7.7.ebuild,v 1.8 2007/01/13 11:59:30 armin76 Exp $
 
 inherit flag-o-matic
 
 IUSE="gtk guionly batch gd doc"
 
 DESCRIPTION="mldonkey is a new client to access the eDonkey network. It is written in Objective-Caml, and comes with its own GTK GUI, an HTTP interface and a telnet interface."
-HOMEPAGE="http://www.nongnu.org/mldonkey/"
+HOMEPAGE="http://mldonkey.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
