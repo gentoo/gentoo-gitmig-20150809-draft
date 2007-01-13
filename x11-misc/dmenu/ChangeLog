@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/dmenu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.3 2007/01/07 14:53:07 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.4 2007/01/13 14:10:36 cedk Exp $
+
+*dmenu-1.9 (13 Jan 2007)
+
+  13 Jan 2007; Cedric Krier <cedk@gentoo.org> +dmenu-1.9.ebuild:
+  Version bump
 
   07 Jan 2007; Cedric Krier <cedk@gentoo.org> dmenu-1.8-r1.ebuild:
   Improve pkg_preinst
