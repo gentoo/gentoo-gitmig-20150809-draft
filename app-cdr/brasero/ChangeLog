@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/brasero
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.9 2006/11/27 22:25:03 metalgod Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.10 2007/01/13 17:17:49 nixnut Exp $
+
+  13 Jan 2007; nixnut <nixnut@gentoo.org> brasero-0.5.1.ebuild:
+  Added ~ppc wrt bug 156453
 
   27 Nov 2006; Luis Medinas <metalgod@gentoo.org> brasero-0.5.1.ebuild:
   Added libburn support and remove libnotify since it won't be used by this
