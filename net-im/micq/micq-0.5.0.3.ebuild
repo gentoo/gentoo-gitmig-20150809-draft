@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/micq/micq-0.5.0.3.ebuild,v 1.6 2005/11/23 17:38:56 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/micq/micq-0.5.0.3.ebuild,v 1.7 2007/01/13 18:24:56 tester Exp $
 
-IUSE="tcltk ssl"
+IUSE="tcl ssl"
 
 SRC_URI="http://www.micq.org/source/${P}.tgz"
 DESCRIPTION="ICQ text-mode client with many features"
@@ -14,11 +14,11 @@ KEYWORDS="alpha amd64 ~ppc sparc x86"
 DEPEND="virtual/libc
 	ssl? ( >=net-libs/gnutls-0.8.10
 		dev-libs/openssl )
-	tcltk? ( dev-lang/tcl )"
+	tcl? ( dev-lang/tcl )"
 
 src_compile() {
 
-	econf $(use_enable tcltk tcl) \
+	econf $(use_enable tcl) \
 		$(use_enable ssl) \
 		|| die "econf failed"
 	emake || die
