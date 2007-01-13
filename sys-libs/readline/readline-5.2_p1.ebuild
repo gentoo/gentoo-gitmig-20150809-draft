@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.2_p1.ebuild,v 1.1 2006/12/16 03:07:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.2_p1.ebuild,v 1.2 2007/01/13 19:29:06 vapier Exp $
 
-inherit eutils multilib toolchain-funcs
+inherit eutils multilib toolchain-funcs flag-o-matic
 
 # Official patches
 # See ftp://ftp.cwru.edu/pub/bash/readline-5.1-patches/
@@ -54,6 +54,8 @@ src_unpack() {
 }
 
 src_compile() {
+	append-flags -D_GNU_SOURCE
+
 	# the --libdir= is needed because if lib64 is a directory, it will default
 	# to using that... even if CONF_LIBDIR isnt set or we're using a version
 	# of portage without CONF_LIBDIR support.
