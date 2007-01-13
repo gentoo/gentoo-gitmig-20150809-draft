@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_mysql/mod_auth_mysql-3.0.0-r1.ebuild,v 1.3 2006/12/07 16:36:01 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_mysql/mod_auth_mysql-3.0.0-r1.ebuild,v 1.4 2007/01/13 20:25:36 chtekk Exp $
 
 inherit apache-module
 
@@ -16,14 +16,12 @@ DEPEND="virtual/mysql
 		sys-libs/zlib"
 RDEPEND="${DEPEND}"
 
-BASE_CONFIG_PVR="2.8.1"
-
 APXS1_ARGS="-DENABLE=0 -c -I/usr/include/mysql -lmysqlclient -lm -lz ${PN}.c"
-APACHE1_MOD_CONF="${BASE_CONFIG_PVR}/12_mod_auth_mysql"
+APACHE1_MOD_CONF="12_mod_auth_mysql"
 APACHE1_MOD_DEFINE="AUTH_MYSQL"
 
 APXS2_ARGS="-c -I/usr/include/mysql -lmysqlclient -lm -lz ${PN}.c"
-APACHE2_MOD_CONF="${BASE_CONFIG_PVR}/12_mod_auth_mysql"
+APACHE2_MOD_CONF="12_mod_auth_mysql"
 APACHE2_MOD_DEFINE="AUTH_MYSQL"
 
 DOCFILES="README"
