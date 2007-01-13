@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmblob/wmblob-1.0.1.ebuild,v 1.9 2006/10/18 08:10:56 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmblob/wmblob-1.0.1.ebuild,v 1.10 2007/01/13 09:19:51 beandog Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ DEPEND=">=x11-libs/pango-1.4.0
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="~amd64 ppc ~sparc x86"
 
 src_unpack() {
 	unpack ${A}
