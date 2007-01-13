@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/sessreg/sessreg-1.0.2.ebuild,v 1.2 2006/12/03 15:52:05 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/sessreg/sessreg-1.0.2.ebuild,v 1.3 2007/01/13 00:05:27 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -14,4 +14,5 @@ RESTRICT="mirror"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
+	x11-libs/libX11
 	x11-proto/xproto"
