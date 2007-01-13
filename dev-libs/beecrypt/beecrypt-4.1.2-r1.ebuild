@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-4.1.2-r1.ebuild,v 1.18 2007/01/12 20:46:38 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-4.1.2-r1.ebuild,v 1.19 2007/01/13 23:15:09 vapier Exp $
 
 inherit flag-o-matic eutils multilib autotools java-pkg-opt-2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/beecrypt/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="java nocxx python threads"
 
 COMMONDEPEND="python? ( >=dev-lang/python-2.2 )
@@ -65,7 +65,7 @@ src_test() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	# Not needed
 	rm -f "${D}"/usr/$(get_libdir)/python*/site-packages/_bc.*a
 	dodoc BUGS README BENCHMARKS NEWS || die "dodoc failed"
