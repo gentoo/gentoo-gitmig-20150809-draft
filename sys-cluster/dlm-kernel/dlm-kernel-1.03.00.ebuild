@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-kernel/dlm-kernel-1.03.00.ebuild,v 1.5 2006/10/19 10:46:10 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-kernel/dlm-kernel-1.03.00.ebuild,v 1.6 2007/01/13 01:55:27 marineam Exp $
 
 inherit eutils linux-mod linux-info
 
@@ -40,7 +40,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "install problem"
+	emake DESTDIR=${D} module_dir=${D}/lib/modules/${KV_FULL} install || die "install problem"
 	rm -f ${D}/usr/include/cluster/*
 }
 
