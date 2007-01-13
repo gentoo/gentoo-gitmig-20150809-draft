@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.1.0.ebuild,v 1.6 2007/01/08 22:31:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.1.0.ebuild,v 1.7 2007/01/13 12:45:13 dev-zero Exp $
 
 inherit eutils versionator eutils toolchain-funcs multilib flag-o-matic
 
@@ -91,7 +91,7 @@ src_test() {
 		-e "1aLDFLAGS := -L${S}/build/lib/obj/gcc/so -L${S}/build/lib/obj/gcc/so_g -L${S}/build/lib/obj/gcc/so_stlg" \
 		test/unit/gcc.mak || die "sed failed"
 
-	emake -C test/unit -f gcc.mak || die "emake tests failed"
+	emake -j1 -C test/unit -f gcc.mak || die "emake tests failed"
 
 	export LD_LIBRARY_PATH="./lib/obj/gcc/so_stlg"
 	./test/unit/obj/gcc/so_stlg/stl_unit_test || die "unit tests failed"
