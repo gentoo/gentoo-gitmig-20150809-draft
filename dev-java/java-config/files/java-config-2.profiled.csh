@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/java-config-2.profiled.csh,v 1.1 2007/01/12 17:57:48 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/java-config-2.profiled.csh,v 1.2 2007/01/13 16:36:54 betelgeuse Exp $
 
 set gentoo_user_vm="${HOME}/.gentoo/java-config-2/current-user-vm"
 set gentoo_system_vm="/etc/java-config-2/current-system-vm"
@@ -9,7 +9,7 @@ set gentoo_system_vm="/etc/java-config-2/current-system-vm"
 ## Otherwise set to the current system vm
 if (($uid != "0") && (-l $gentoo_user_vm)) then
     setenv JAVA_HOME $gentoo_user_vm
-else if (-L $gentoo_system_vm) then
+else if (-l $gentoo_system_vm) then
     setenv JAVA_HOME $gentoo_system_vm
 endif
 
