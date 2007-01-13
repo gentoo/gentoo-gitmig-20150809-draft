@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.12.2-r4.ebuild,v 1.4 2007/01/08 06:27:34 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.12.2-r4.ebuild,v 1.5 2007/01/13 03:27:40 keri Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-CFLAGS.patch
 	epatch "${FILESDIR}"/${P}-MAKEOPTS.patch
 	epatch "${FILESDIR}"/${P}-bootstrap.patch
-	epatch "${FILESDIR}"/${P}-LIBDIR.patch
+	epatch "${FILESDIR}"/${P}-multilib.patch
 	epatch "${FILESDIR}"/${P}-libgrades.patch
 	epatch "${FILESDIR}"/${P}-parallel-install_grades.patch
 	epatch "${FILESDIR}"/${P}-deep_profiler.patch
@@ -45,7 +45,8 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	myconf="--disable-gcc-back-end \
+	myconf="--libdir=/usr/$(get_libdir) \
+		--disable-gcc-back-end \
 		--enable-aditi-back-end \
 		--enable-deep-profiler \
 		--disable-dotnet-grades \
@@ -111,7 +112,7 @@ src_test() {
 
 src_install() {
 	make \
-		INSTALL_PREFIX="${D}"/usr \
+		INSTALL_PREFIX="${D}" \
 		INSTALL_MAN_DIR="${D}"/usr/share/man \
 		INSTALL_INFO_DIR="${D}"/usr/share/info \
 		INSTALL_HTML_DIR="${D}"/usr/share/doc/${PF}/html \
