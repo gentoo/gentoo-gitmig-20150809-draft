@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kooldock/kooldock-0.3-r1.ebuild,v 1.5 2006/10/04 16:55:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kooldock/kooldock-0.3-r1.ebuild,v 1.6 2007/01/13 22:34:10 deathwing00 Exp $
 
 inherit kde eutils
 
 DESCRIPTION=" KoolDock is a dock for KDE with cool visual enhancements and effects"
-HOMEPAGE="http://ktown.kde.cl/kooldock/index.php"
-SRC_URI="http://ktown.kde.cl/kooldock/dist/${P}.tar.gz"
+HOMEPAGE="http://www.kde-apps.org/content/show.php?content=50910"
+SRC_URI="http://mirror.kde.cl/kooldock/dist/${P}.tar.gz"
 
 S=${WORKDIR}/${PN}
 
