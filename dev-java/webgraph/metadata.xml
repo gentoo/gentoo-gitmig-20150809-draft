@@ -5,7 +5,7 @@
 <herd>java</herd>
 
 <longdescription>
-WebGraph is a framework to study the web graph. It provides simple ways to 
+WebGraph is a framework to study the web graph. It provides simple ways to
 manage very large graphs, exploiting modern compression techniques.
 </longdescription>
 </pkgmetadata>
