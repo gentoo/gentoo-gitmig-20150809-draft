@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r5.ebuild,v 1.26 2007/01/04 19:57:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r5.ebuild,v 1.27 2007/01/13 19:36:31 vapier Exp $
 
 inherit eutils
 
@@ -74,19 +74,12 @@ src_install() {
 	docinto ps
 	dodoc doc/*.ps
 	dohtml -r doc
+}
 
-	# Backwards compatibility #29865
-	if [ -e ${ROOT}/lib/libreadline.so.4.1 ] ; then
-		[ "$(get_libdir)" != "lib" ] && dodir /lib
-		cp -pPR ${ROOT}/lib/libreadline.so.4.1 ${D}/lib/
-		touch ${D}/lib/libreadline.so.4.1
-	fi
+pkg_preinst() {
+	preserve_old_lib /$(get_libdir)/lib{history,readline}.so.4 #29865
 }
 
 pkg_postinst() {
-	if [ -e ${ROOT}/lib/libreadline.so.4.1 ] ; then
-		ewarn "Your old readline libraries have been copied over."
-		ewarn "You should run 'revdep-rebuild --library libreadline.so.4.1' asap."
-		ewarn "Once you have, you can safely delete /lib/libreadline.so.4.1"
-	fi
+	preserve_old_lib_notify /$(get_libdir)/lib{history,readline}.so.4
 }
