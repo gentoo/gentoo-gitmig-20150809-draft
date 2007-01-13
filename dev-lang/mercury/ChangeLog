@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.76 2007/01/13 03:39:52 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.77 2007/01/13 09:02:46 keri Exp $
+
+  13 Jan 2007; keri <keri@gentoo.org> files/mercury-0.13.1-multilib.patch,
+  mercury-0.12.2-r3.ebuild, mercury-0.12.2-r4.ebuild, mercury-0.13.1.ebuild,
+  mercury-0.13.1-r1.ebuild:
+  Do not parallelize generation of .dev and .dv files.
 
   13 Jan 2007; keri <keri@gentoo.org> -files/mercury-0.13.0-CFLAGS.patch,
   -files/mercury-0.13.0-LIBDIR.patch, -files/mercury-0.13.0-MAKEOPTS.patch,
