@@ -79,3 +79,14 @@
  #elif defined(WIN32)
  #if TK_MAJOR_VERSION<8
     Sorry Windows version requires Tcl/Tk ver 8.0 or higher.
+--- mercury-extras-0.13.1.orig/graphics/mercury_opengl/mtogl.m	2003-08-13 17:49:46.000000000 +1200
++++ mercury-extras-0.13.1/graphics/mercury_opengl/mtogl.m	2007-01-14 11:26:48.000000000 +1300
+@@ -32,7 +32,7 @@
+ :- pred mtogl__reshape(pred(togl, io__state, io__state), io__state, io__state).
+ :- mode mtogl__reshape(pred(in, di, uo)is det, di, uo) is det.
+ 
+-:- pred mtogl__destroy(pred(togl, io__state, io__state), io__state, io__state).
++:- impure pred mtogl__destroy(pred(togl, io__state, io__state), io__state, io__state).
+ :- mode mtogl__destroy(pred(in, di, uo)is det, di, uo) is det.
+ 
+ %:- pred mtogl__create_command(string, pred(togl, list(string),

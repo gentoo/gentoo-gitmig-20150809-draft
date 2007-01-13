@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mercury-extras
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.62 2007/01/13 20:51:06 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.63 2007/01/13 22:35:53 keri Exp $
+
+  13 Jan 2007; keri <keri@gentoo.org>
+  files/mercury-extras-0.13.1-mercury_opengl.patch:
+  Mercury opengl fix: declare predicate mtogl.destroy/3 with impure purity.
 
   13 Jan 2007; keri <keri@gentoo.org>
   files/mercury-extras-0.12.2-posix.patch,
