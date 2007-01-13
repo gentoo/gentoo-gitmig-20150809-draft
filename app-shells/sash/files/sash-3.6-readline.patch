@@ -171,7 +171,7 @@ diff -ruN sash-3.6/sash.c sash-3.6.readline/sash.c
 +     to complete.  Otherwise it is the name of a file in the current
 +     directory. */
 +  if (start == 0) // is it the begin of string ?
-+    matches = completion_matches (text, command_generator);
++    matches = rl_completion_matches (text, command_generator);
 +  return (matches);
 +}
 +
