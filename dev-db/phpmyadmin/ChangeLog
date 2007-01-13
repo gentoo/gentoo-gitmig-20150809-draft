@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.229 2007/01/02 22:12:56 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.230 2007/01/13 15:08:11 chtekk Exp $
+
+  13 Jan 2007; Luca Longinotti <chtekk@gentoo.org> metadata.xml:
+  Add MySQL herd to metadata.
 
   02 Jan 2007; Renat Lumpau <rl03@gentoo.org> -phpmyadmin-2.9.0.3.ebuild,
   -phpmyadmin-2.9.1.ebuild, phpmyadmin-2.9.1.1.ebuild:
