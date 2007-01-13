@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2007a.ebuild,v 1.1 2007/01/09 00:28:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2007a.ebuild,v 1.2 2007/01/13 19:01:03 vapier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -50,7 +50,7 @@ src_install() {
 	dohtml *.htm *.jpg
 }
 
-pkg_postinst() {
+pkg_config() {
 	# make sure the /etc/localtime file does not get stale #127899
 	local tz=$(source "${ROOT}"/etc/conf.d/clock ; echo ${TIMEZONE})
 	if [[ -z ${tz} ]] ; then
@@ -68,6 +68,10 @@ pkg_postinst() {
 		tz="Factory"
 	fi
 	einfo "Updating /etc/localtime with /usr/share/zoneinfo/${tz}"
-	rm -f "${ROOT}"/etc/localtime
+	[[ -L ${ROOT}/etc/localtime ]] && rm -f "${ROOT}"/etc/localtime
 	cp -f "${ROOT}"/usr/share/zoneinfo/"${tz}" "${ROOT}"/etc/localtime
+}
+
+pkg_postinst() {
+	pkg_config
 }
