@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4.ebuild,v 1.27 2007/01/09 17:49:09 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4.ebuild,v 1.28 2007/01/13 10:54:31 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -106,7 +106,7 @@ DEPEND="${COMMON_DEPEND}
 	pam? ( sys-libs/pam )
 	!dev-util/dmake
 	>=dev-lang/python-2.3.4
-	java? ( || ( =virtual/jdk-1.4* !amd64? ( =virtual/jdk-1.5* ) )
+	java? ( || ( !amd64? ( =virtual/jdk-1.5* ) =virtual/jdk-1.4* )
 		dev-java/ant-core )
 	dev-libs/libxslt
 	ldap? ( net-nds/openldap )
