@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/frozen-bubble
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/ChangeLog,v 1.25 2006/11/28 03:35:24 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/ChangeLog,v 1.26 2007/01/13 21:33:30 vapier Exp $
+
+  07 Jan 2007; Mike Frysinger <vapier@gentoo.org>
+  frozen-bubble-2.1.0.ebuild:
+  Stabilize for little endian arches and de-keyword for big endian arches.
 
 *frozen-bubble-2.1.0 (28 Nov 2006)
 
