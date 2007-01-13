@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+: Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.5.ebuild,v 1.13 2007/01/10 17:35:23 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.5.ebuild,v 1.14 2007/01/13 15:04:38 spock Exp $
 
 inherit eutils
 

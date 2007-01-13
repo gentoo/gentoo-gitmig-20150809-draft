@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.5-r1.ebuild,v 1.11 2007/01/10 17:34:59 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.5-r1.ebuild,v 1.12 2007/01/13 15:04:38 spock Exp $
 
 inherit eutils
 
@@ -60,6 +60,7 @@ src_compile() {
 	econf --sysconfdir=/etc/elinks \
 		--enable-leds \
 		--enable-256-colors \
+		--enable-88-colors \
 		--enable-html-highlight \
 		`use_with gpm` \
 		`use_with zlib` \

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.11.1.ebuild,v 1.13 2007/01/10 17:36:10 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.11.1.ebuild,v 1.14 2007/01/13 15:04:38 spock Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.4"
@@ -73,6 +73,7 @@ src_compile() {
 	econf \
 		--sysconfdir=/etc/elinks \
 		--enable-leds \
+		--enable-88-colors \
 		--enable-256-colors \
 		--enable-html-highlight \
 		$(use_with gpm) \
