@@ -14,10 +14,10 @@ EBUILD eselect-opengl-1.0.4.ebuild 2699 RMD160 081ca32bf17d6cb489efb1060a4456c6b
 MD5 036caac3fd48b8a92df6c2a3a344bb42 eselect-opengl-1.0.4.ebuild 2699
 RMD160 081ca32bf17d6cb489efb1060a4456c6b357183e eselect-opengl-1.0.4.ebuild 2699
 SHA256 b9377cd18fa4d63dad921c7b89dcfe4b8dfc22c82ec365f0395f44ea53537da2 eselect-opengl-1.0.4.ebuild 2699
-EBUILD eselect-opengl-1.0.5.ebuild 2634 RMD160 cb50aae51cd797ea7f654250b6773fe75d99ab11 SHA1 25572ce4da48f7acc403345dbaa41dc4ebf6ed6a SHA256 14fbd05309583788aba5004ce531b6d4bf80785b4492c5baf7861731b24289c0
-MD5 461862ffd9bbb3c5207ca9e3ac7a0536 eselect-opengl-1.0.5.ebuild 2634
-RMD160 cb50aae51cd797ea7f654250b6773fe75d99ab11 eselect-opengl-1.0.5.ebuild 2634
-SHA256 14fbd05309583788aba5004ce531b6d4bf80785b4492c5baf7861731b24289c0 eselect-opengl-1.0.5.ebuild 2634
+EBUILD eselect-opengl-1.0.5.ebuild 2630 RMD160 5b8c89281cded9ee2f7ef64c4933d0b34b2429b2 SHA1 7ef7278882fc8472e6c125625681722a6dab98ad SHA256 b5cdd49581cc47aaeeda7cd0a2e70e52f29ba27eea09d51c0930593d7400d366
+MD5 d0e0f0a54d2284af4d5e94c04c943313 eselect-opengl-1.0.5.ebuild 2630
+RMD160 5b8c89281cded9ee2f7ef64c4933d0b34b2429b2 eselect-opengl-1.0.5.ebuild 2630
+SHA256 b5cdd49581cc47aaeeda7cd0a2e70e52f29ba27eea09d51c0930593d7400d366 eselect-opengl-1.0.5.ebuild 2630
 MISC ChangeLog 3529 RMD160 b9ed38a4bd46c4bbe66e436efe62aac4f868cef0 SHA1 337f90af11d7e978bd162600be5e6491daacb639 SHA256 1d4acc55b6ad8f47e3f20dfedf79aaf8fcd2c1d31d16be102658ddccf0d7afc2
 MD5 d0967e63a05acc0223bbf6dd78ff3cda ChangeLog 3529
 RMD160 b9ed38a4bd46c4bbe66e436efe62aac4f868cef0 ChangeLog 3529
@@ -36,9 +36,9 @@ MD5 e82d2dd7818f77075eaf39f0ce983f2c files/digest-eselect-opengl-1.0.5 687
 RMD160 7b9ca0fdd1541ae9c279d126dd62db6509007cb8 files/digest-eselect-opengl-1.0.5 687
 SHA256 5f2e6400107f8708b782f2233e1d1299870dad53950de56f90c98d3970b3c1d5 files/digest-eselect-opengl-1.0.5 687
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.6 (GNU/Linux)
+Version: GnuPG v2.0.1 (GNU/Linux)
 
-iD8DBQFFo3ItNQqtfCuFneMRAn+qAKCQnYhMddxorL/Xx8OrZlyeeXEhhgCeIux0
-7ki0OPtWpQ1zeQo64knrTQ4=
-=Lv8+
+iD8DBQFFqWb78bi6rjpTunYRAqDCAKC6YvdpOSPFDwl8po9V1AV8/K6YKwCbB2Ei
+thv+pEvButc8xbddvn2gBfU=
+=lpUd
 -----END PGP SIGNATURE-----
