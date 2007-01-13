@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/STLport
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.39 2007/01/13 12:45:13 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.40 2007/01/13 13:48:52 dev-zero Exp $
+
+  13 Jan 2007; Tiziano Müller <dev-zero@gentoo.org> STLport-5.1.0.ebuild:
+  Disabled parallel builds for building the library as well.
 
   13 Jan 2007; Tiziano Müller <dev-zero@gentoo.org> STLport-5.1.0.ebuild:
   Disabled parallel builds for building the tests, bug #161881.

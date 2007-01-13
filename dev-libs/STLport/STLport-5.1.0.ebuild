@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.1.0.ebuild,v 1.7 2007/01/13 12:45:13 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.1.0.ebuild,v 1.8 2007/01/13 13:48:52 dev-zero Exp $
 
 inherit eutils versionator eutils toolchain-funcs multilib flag-o-matic
 
@@ -69,7 +69,9 @@ src_compile() {
 	CFLAGS := ${CFLAGS}
 	EOF
 
+	# The build-system is broken in respect to parallel builds, bug #161881
 	emake \
+		-j1 \
 		-C build/lib \
 		-f gcc.mak \
 		depend all || die "Compile failed"
