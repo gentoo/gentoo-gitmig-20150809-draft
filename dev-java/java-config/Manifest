@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX java-config-1.2.11-shebang.patch 229 RMD160 e201dafad76307123139861371ade56f03887342 SHA1 e91f77077bb0b5793bda7ffc58442019dc66db09 SHA256 4068a51515b7510260de57a5872d6e04b1a33d2f9728d77ed00fe7f41cced83a
 MD5 882665d94cc943f315ec729d990afadf files/java-config-1.2.11-shebang.patch 229
 RMD160 e201dafad76307123139861371ade56f03887342 files/java-config-1.2.11-shebang.patch 229
@@ -17,10 +14,10 @@ AUX java-config-1.3.6-jh.patch 1258 RMD160 25a826996f7ee790b1cc74f30eae48c1c6433
 MD5 5c7a18568d0b9b96b11571d2d6fe897b files/java-config-1.3.6-jh.patch 1258
 RMD160 25a826996f7ee790b1cc74f30eae48c1c6433635 files/java-config-1.3.6-jh.patch 1258
 SHA256 7976d6f6a32e5a291049aacab1540a710415f3f8a629c2a0d3a8ffd7237c8bd9 files/java-config-1.3.6-jh.patch 1258
-AUX java-config-2.profiled.csh 761 RMD160 43951118f9c26ba2b1dfa2f52b04852e458b6c20 SHA1 e31754583b34dfc396b743ce7c577398204abf4c SHA256 8718fc82328320bf6ab1e820ed506141d4b7b73453ff221efcf66ca041d9fe8e
-MD5 4dcdea36007c5de106111a6cc932b496 files/java-config-2.profiled.csh 761
-RMD160 43951118f9c26ba2b1dfa2f52b04852e458b6c20 files/java-config-2.profiled.csh 761
-SHA256 8718fc82328320bf6ab1e820ed506141d4b7b73453ff221efcf66ca041d9fe8e files/java-config-2.profiled.csh 761
+AUX java-config-2.profiled.csh 803 RMD160 04e096cec16a051199db64bb80315c882d12db16 SHA1 73131af89a53835f3a48af77c191c69a4892794d SHA256 bd2b1a513a7132c184ec8427ffee5cb5e3536a97f4984a169f4721c669f15a22
+MD5 06f0bf363f52918df3167e766c931607 files/java-config-2.profiled.csh 803
+RMD160 04e096cec16a051199db64bb80315c882d12db16 files/java-config-2.profiled.csh 803
+SHA256 bd2b1a513a7132c184ec8427ffee5cb5e3536a97f4984a169f4721c669f15a22 files/java-config-2.profiled.csh 803
 AUX java-config-2.profiled.sh 769 RMD160 c99c573ff61a4a0ba10cfdee97e51ac6f090d091 SHA1 5f394074154697ac97a04cc7d080a92ba65444b7 SHA256 53f17d1a2ed09ff5aacbdc182ca83d7811fded39126cd4526dfde41fce520db3
 MD5 ce571e951b8d2d1f9f3be5c179f4e9b8 files/java-config-2.profiled.sh 769
 RMD160 c99c573ff61a4a0ba10cfdee97e51ac6f090d091 files/java-config-2.profiled.sh 769
@@ -76,10 +73,3 @@ SHA256 fb9fdda52fe83303015b76545968d59324e286959171bb5dc01dd094e11cd8e0 files/di
 MD5 c38ff0fcf6539f0bf10d2750b97c1dae files/digest-java-config-2.0.31-r2 256
 RMD160 dcdc28e10c1f81f64e372c24f7fd50330fcf4b15 files/digest-java-config-2.0.31-r2 256
 SHA256 fb9fdda52fe83303015b76545968d59324e286959171bb5dc01dd094e11cd8e0 files/digest-java-config-2.0.31-r2 256
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.6 (GNU/Linux)
-
-iD8DBQFFqQqvcxLzpIGCsLQRAkC6AJwM0dbAMt3EbiVNYJpteDTgtePMAACfUQDG
-w0+lvvIQL7nLDuDvbo57iwM=
-=Z3Nu
------END PGP SIGNATURE-----
