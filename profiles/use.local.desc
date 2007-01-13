@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2495 2007/01/12 05:37:50 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2496 2007/01/13 05:28:17 nerdboy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -165,6 +165,7 @@ app-misc/digitemp:ds2490 - Build support for the ds2490 sensor
 app-misc/digitemp:ds9097 - Build support for the ds9097 sensor
 app-misc/digitemp:ds9097u - Build support for the ds9097u sensor
 app-misc/g15composer:amarok - Enable display of titles played in Amarok
+app-misc/gpsdrive:garmin - Adds specific support for Garmin GPS receivers
 app-misc/graphlcd-base:g15 - Add support for g15daemon driver ( e.g Logitech G15 Keybord )
 app-misc/lcd4linux:serdisp - Add support for several displays via serdisplib
 app-misc/lcdproc:g15 - Enable support for Logitech G15 Keyboard LCDs
