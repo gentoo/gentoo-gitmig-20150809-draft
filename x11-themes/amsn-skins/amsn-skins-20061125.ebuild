@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/amsn-skins/amsn-skins-20061125.ebuild,v 1.2 2006/11/25 22:26:12 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/amsn-skins/amsn-skins-20061125.ebuild,v 1.3 2007/01/14 04:30:01 tester Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Collection of AMSN themes"
@@ -12,7 +12,6 @@ SRC_URI="${THEME_URI}/aMac.zip
 	${THEME_URI}/cubic.zip
 	${THEME_URI}/Fluox.zip
 	${THEME_URI}/MSN.zip
-	
 	${THEME_URI}/aDarwinV.4-0.95.zip
 	${THEME_URI}/Candy-1.0.zip
 	${THEME_URI}/amsn-for-mac-0.95.zip
@@ -42,7 +41,7 @@ SRC_URI="${THEME_URI}/aMac.zip
 RESTRICT="nomirror"
 SLOT="0"
 LICENSE="freedist"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
