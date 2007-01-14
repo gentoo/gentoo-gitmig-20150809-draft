@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/faad2
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.88 2007/01/13 11:52:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.89 2007/01/14 23:45:12 tester Exp $
+
+  14 Jan 2007; Olivier Crête <tester@gentoo.org> faad2-2.0-r13.ebuild:
+  Stable on amd64 per bug #161390
 
   13 Jan 2007; nixnut <nixnut@gentoo.org> faad2-2.0-r13.ebuild:
   Stable on ppc wrt bug 161390
