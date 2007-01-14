@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mod_ftpd
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ftpd/ChangeLog,v 1.9 2006/06/04 19:43:20 vericgar Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ftpd/ChangeLog,v 1.10 2007/01/14 16:43:50 chtekk Exp $
+
+  14 Jan 2007; Luca Longinotti <chtekk@gentoo.org>
+  -files/0.12.3-mod_ftpd-ipv6.patch, -files/mod_ftpd.conf,
+  mod_ftpd-0.13.0.ebuild:
+  Cleanup, fix deps.
 
   04 Jun 2006; Michael Stewart <vericgar@gentoo.org>
   -mod_ftpd-0.12.3.ebuild:
