@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/bitdefender-console/bitdefender-console-7.0.1-r1.ebuild,v 1.5 2006/10/06 12:50:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/bitdefender-console/bitdefender-console-7.0.1-r1.ebuild,v 1.6 2007/01/14 04:30:20 blubb Exp $
 
 MY_P=BitDefender-Console-Antivirus-${PV}-3.linux-gcc3x.i586.run
 S=${WORKDIR}/i386
@@ -20,7 +20,7 @@ PROVIDE="virtual/antivirus"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* -amd64 x86"
 IUSE=""
 
 src_unpack () {
