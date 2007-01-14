@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-1.9.ebuild,v 1.4 2007/01/09 02:11:10 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-1.9.ebuild,v 1.5 2007/01/14 09:34:59 josejx Exp $
 
 inherit wxwidgets
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/xchm/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 
 IUSE="unicode"
 DEPEND=">=app-doc/chmlib-0.31
