@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/AppConfig-1.64.ebuild,v 1.1 2007/01/05 19:00:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/AppConfig-1.64.ebuild,v 1.2 2007/01/14 22:16:24 mcummings Exp $
 
 inherit perl-module eutils
 
 DESCRIPTION="Perl5 module for reading configuration files and parsing command line arguments."
 SRC_URI="mirror://cpan/authors/id/A/AD/ADAMK/${P}.tar.gz"
-HOMEPAGE="http://search.cpan.org/~adamk/${P}/"
+HOMEPAGE="http://search.cpan.org/~adamk/"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
