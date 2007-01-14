@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.0.5.ebuild,v 1.2 2006/11/23 14:06:44 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.0.5.ebuild,v 1.3 2007/01/14 08:33:45 uberlord Exp $
 
 inherit eutils toolchain-funcs
 
@@ -30,7 +30,10 @@ src_unpack() {
 	cd "${S}"
 
 	# Patch the source, config and the manpage to use /etc/vsftpd/
-	epatch "${FILESDIR}/vsftpd-2.0.3-gentoo.patch"
+	epatch "${FILESDIR}/${PN}-2.0.3-gentoo.patch"
+
+	# Fix building without the libcap
+	epatch "${FILESDIR}/${P}-caps.patch"
 
 	# Configure vsftpd build defaults
 	use tcpd && echo "#define VSF_BUILD_TCPWRAPPERS" >> builddefs.h
