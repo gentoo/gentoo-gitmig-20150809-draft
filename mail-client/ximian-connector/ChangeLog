@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/ximian-connector
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ChangeLog,v 1.20 2005/06/27 09:31:31 dholm Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ChangeLog,v 1.21 2007/01/14 18:22:01 leio Exp $
+
+  14 Jan 2007; Mart Raudsepp <leio@gentoo.org>
+  -files/ximian-connector-2.0.1-exchange2003.patch,
+  -ximian-connector-1.4.7.2.ebuild, -ximian-connector-2.0.2.ebuild,
+  -ximian-connector-2.0.2-r1.ebuild:
+  Prune old versions
 
   27 Jun 2005; David Holm <dholm@gentoo.org> ximian-connector-2.2.3.ebuild:
   Added to ~ppc.
