@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1201-firmware/zd1201-firmware-0.14.ebuild,v 1.3 2006/09/17 18:30:37 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1201-firmware/zd1201-firmware-0.14.ebuild,v 1.4 2007/01/14 18:58:13 corsair Exp $
 
 MY_P=zd1201-${PV}-fw
 S=${WORKDIR}/${MY_P}
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/linux-lc100020/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~ppc64 x86"
 
 IUSE=""
 DEPEND=">=sys-apps/hotplug-20040923"
