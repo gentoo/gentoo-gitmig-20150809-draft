@@ -1,0 +1,46 @@
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/jack-rack-1.4.5.ebuild,v 1.1 2007/01/14 02:20:58 matsuu Exp $
+
+IUSE="alsa gnome lash nls xml"
+
+DESCRIPTION="JACK Rack is an effects rack for the JACK low latency audio API."
+HOMEPAGE="http://jack-rack.sourceforge.net/"
+SRC_URI="mirror://sourceforge/jack-rack/${P}.tar.gz"
+LICENSE="GPL-2"
+SLOT="0"
+
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+
+DEPEND=">=x11-libs/gtk+-2
+	>=media-libs/ladspa-sdk-1.12
+	media-sound/jack-audio-connection-kit
+	alsa? ( media-libs/alsa-lib )
+	lash? ( >=media-sound/lash-0.5 )
+	gnome? ( >=gnome-base/libgnomeui-2 )
+	nls? ( sys-devel/gettext )
+	xml? ( dev-libs/libxml2
+		media-libs/liblrdf )"
+
+MAKEOPTS="-j1"
+
+src_compile() {
+	local myconf
+	myconf="--disable-ladcca --enable-desktop-inst"
+
+	econf \
+		$(use_enable alsa aseq) \
+		$(use_enable gnome) \
+		$(use_enable lash) \
+		$(use_enable nls) \
+		$(use_enable xml) \
+		$(use_enable xml lrdf ) \
+		${myconf} || die "econf failed"
+	emake || die "emake failed"
+}
+
+src_install() {
+	emake DESTDIR="${D}" install || die "emake install failed"
+
+	dodoc AUTHORS BUGS ChangeLog NEWS README THANKS TODO WISHLIST
+}
