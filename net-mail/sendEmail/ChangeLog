@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/sendEmail
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendEmail/ChangeLog,v 1.10 2006/11/16 19:34:26 mrness Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendEmail/ChangeLog,v 1.11 2007/01/14 22:30:53 mrness Exp $
+
+*sendEmail-1.55 (14 Jan 2007)
+
+  14 Jan 2007; Alin Năstac <mrness@gentoo.org> +sendEmail-1.55.ebuild:
+  Version bump.
 
   16 Nov 2006; Alin Nastac <mrness@gentoo.org> sendEmail-1.54.ebuild:
   Fix IUSE (#155362).
