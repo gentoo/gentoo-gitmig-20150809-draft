@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mod_scgi
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_scgi/ChangeLog,v 1.16 2006/06/05 17:33:25 hollow Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_scgi/ChangeLog,v 1.17 2007/01/14 19:59:34 chtekk Exp $
+
+  14 Jan 2007; Luca Longinotti <chtekk@gentoo.org>
+  -files/1.2/20_mod_scgi.conf, files/20_mod_scgi.conf, -mod_scgi-1.2.ebuild,
+  mod_scgi-1.10.ebuild:
+  Cleanup.
 
 *mod_scgi-1.10 (05 Jun 2006)
 
