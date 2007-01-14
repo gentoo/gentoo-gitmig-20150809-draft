@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mod_auth_kerb
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_kerb/ChangeLog,v 1.18 2007/01/13 18:59:26 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_kerb/ChangeLog,v 1.19 2007/01/14 17:44:34 phreak Exp $
+
+  14 Jan 2007; Christian Heim <phreak@gentoo.org>
+  mod_auth_kerb-5.0_rc7-r1.ebuild:
+  Also removing the exports patch from 5.0rc7-r1, breaks the compilation
+  (thanks to Ticho for reporting).
 
   13 Jan 2007; Christian Heim <phreak@gentoo.org>
   mod_auth_kerb-5.0_rc7-r1.ebuild:
