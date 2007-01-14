@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_bw
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_bw/ChangeLog,v 1.7 2007/01/07 17:25:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_bw/ChangeLog,v 1.8 2007/01/14 02:10:08 chtekk Exp $
+
+  14 Jan 2007; Luca Longinotti <chtekk@gentoo.org> -mod_bw-0.5_rc1.ebuild,
+  -mod_bw-0.5.ebuild, -mod_bw-0.6.ebuild, mod_bw-0.7.ebuild:
+  Cleanup.
 
 *mod_bw-0.7 (07 Jan 2007)
 
