@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrkit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/ChangeLog,v 1.19 2007/01/04 00:30:39 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/ChangeLog,v 1.20 2007/01/14 01:45:56 tester Exp $
+
+  14 Jan 2007; Olivier Crête <tester@gentoo.org> cdrkit-1.0.ebuild:
+  Stable on amd64 wrt bug #158780
 
 *cdrkit-1.1.1 (04 Jan 2007)
 
