@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.3-r1.ebuild,v 1.1 2007/01/13 14:28:52 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.3-r1.ebuild,v 1.2 2007/01/14 23:14:21 mabi Exp $
 
 inherit eutils portability
 
@@ -67,7 +67,7 @@ src_unpack() {
 	cat >etc/lua-5.0.pc <<EOF
 prefix=/usr
 exec_prefix=\${prefix}
-includedir=\${prefix}/include
+includedir=\${prefix}/include/lua-5.0
 libdir=\${exec_prefix}/$(get_libdir)
 interpreter=\${exec_prefix}/bin/lua-5.0
 compiler=\${exec_prefix}/bin/luac-5.0

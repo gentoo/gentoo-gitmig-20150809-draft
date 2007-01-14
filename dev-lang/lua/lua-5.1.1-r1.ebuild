@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.1.1-r1.ebuild,v 1.1 2007/01/13 14:28:52 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.1.1-r1.ebuild,v 1.2 2007/01/14 23:14:21 mabi Exp $
 
 inherit eutils portability
 
@@ -26,6 +26,11 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-Makefile.patch
 	epatch "${FILESDIR}"/${P}-module_paths.patch
+	sed -i etc/lua.pc \
+		-e 's:\(prefix= /usr\)/local:\1:' \
+		-e 's:\(INSTALL_INC= ${prefix}/include\):\1/lua-5.1:' \
+		-e 's:\(includedir=${prefix}/include\):\1/lua-5.1:' \
+		-e 's:\(\-llua\):\1-5.1:'
 
 	sed -i -e 's:\(/README\)\("\):\1.gz\2:g' doc/readme.html
 
