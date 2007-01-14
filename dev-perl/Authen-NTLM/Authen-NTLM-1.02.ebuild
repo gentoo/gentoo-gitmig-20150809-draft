@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-NTLM/Authen-NTLM-1.02.ebuild,v 1.16 2006/12/10 13:10:48 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-NTLM/Authen-NTLM-1.02.ebuild,v 1.17 2007/01/14 22:26:16 mcummings Exp $
 
 inherit perl-module
 
@@ -16,6 +16,5 @@ IUSE=""
 
 DEPEND=">=virtual/perl-MIME-Base64-3.00
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 export OPTIMIZE="$CFLAGS"

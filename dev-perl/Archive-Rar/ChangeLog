@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Archive-Rar
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Rar/ChangeLog,v 1.17 2007/01/05 19:00:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Rar/ChangeLog,v 1.18 2007/01/14 22:19:51 mcummings Exp $
+
+  14 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  Archive-Rar-1.9.ebuild:
+  Ebuild maintenance
 
 *Archive-Rar-1.9.2 (05 Jan 2007)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Bit-Vector
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bit-Vector/ChangeLog,v 1.23 2006/09/07 01:57:24 mcummings Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bit-Vector/ChangeLog,v 1.24 2007/01/14 22:28:35 mcummings Exp $
+
+  14 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  Bit-Vector-6.4.ebuild:
+  Ebuild maintenance
 
   07 Sep 2006; Michael Cummings <mcummings@gentoo.org>
   -Bit-Vector-6.3.ebuild, -Bit-Vector-6.3-r1.ebuild:

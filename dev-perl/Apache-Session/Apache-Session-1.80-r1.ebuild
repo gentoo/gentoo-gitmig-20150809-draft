@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Session/Apache-Session-1.80-r1.ebuild,v 1.7 2006/10/15 13:00:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Session/Apache-Session-1.80-r1.ebuild,v 1.8 2007/01/14 22:11:00 mcummings Exp $
 
 inherit perl-module
 IUSE=""
@@ -18,5 +18,3 @@ DEPEND="dev-perl/Test-Deep
 	virtual/perl-Digest-MD5
 	virtual/perl-Storable
 	dev-lang/perl"
-
-RDEPEND="${DEPEND}"
