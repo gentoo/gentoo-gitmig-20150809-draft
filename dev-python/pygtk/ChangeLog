@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.140 2007/01/09 07:04:47 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.141 2007/01/14 02:25:28 kloeri Exp $
+
+  14 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> pygtk-2.10.3.ebuild:
+  Stable on Alpha.
 
   09 Jan 2007; Mart Raudsepp <leio@gentoo.org>
   -files/pygtk-2.10.1-tree-model.patch, -pygtk-2.8.2.ebuild,
