@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.295 2007/01/14 11:14:03 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.296 2007/01/14 12:52:55 suka Exp $
+
+  14 Jan 2007; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.1.0.ebuild:
+  Paths to system jars shouldn't be hardcoded, see
+  https://bugs.gentoo.org/show_bug.cgi?id=113954#c7
 
   14 Jan 2007; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.1.0.ebuild:

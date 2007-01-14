@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.1.0.ebuild,v 1.8 2007/01/14 11:14:03 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.1.0.ebuild,v 1.9 2007/01/14 12:52:55 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -207,11 +207,11 @@ src_unpack() {
 		echo "--with-system-xalan" >> ${CONFFILE}
 		echo "--with-system-xerces" >> ${CONFFILE}
 		echo "--with-system-xml-apis" >> ${CONFFILE}
-		echo "--with-beanshell-jar=/usr/share/bsh/lib/bsh.jar" >> ${CONFFILE}
-		echo "--with-serializer-jar=/usr/share/xalan/lib/serializer.jar" >> ${CONFFILE}
-		echo "--with-xalan-jar=/usr/share/xalan/lib/xalan.jar" >> ${CONFFILE}
-		echo "--with-xerces-jar=/usr/share/xerces-2/lib/xercesImpl.jar" >> ${CONFFILE}
-		echo "--with-xml-apis-jar=/usr/share/xml-commons-external-1.3/lib/xml-apis.jar" >> ${CONFFILE}
+		echo "--with-beanshell-jar=$(java-pkg_getjar bsh bsh.jar)" >> ${CONFFILE}
+		echo "--with-serializer-jar=$(java-pkg_getjar xalan serializer.jar)" >> ${CONFFILE}
+		echo "--with-xalan-jar=$(java-pkg_getjar xalan xalan.jar)" >> ${CONFFILE}
+		echo "--with-xerces-jar=$(java-pkg_getjar xerces-2 xercesImpl.jar)" >> ${CONFFILE}
+		echo "--with-xml-apis-jar=$(java-pkg_getjar xml-commons-external-1.3 xml-apis.jar)" >> ${CONFFILE}
 	fi
 
 	use branding && echo "--with-intro-bitmaps=\\\"${S}/src/openintro_gentoo.bmp\\\"" >> ${CONFFILE}
