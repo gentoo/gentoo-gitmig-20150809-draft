@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/XML-Twig
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.46 2006/12/10 13:48:03 mcummings Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.47 2007/01/14 01:35:32 mcummings Exp $
+
+*XML-Twig-3.28 (14 Jan 2007)
+
+  14 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  +XML-Twig-3.28.ebuild:
+  Version bump
 
   10 Dec 2006; Michael Cummings <mcummings@gentoo.org> XML-Twig-3.22.ebuild,
   XML-Twig-3.26.ebuild:

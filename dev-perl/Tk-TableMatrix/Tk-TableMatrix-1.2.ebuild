@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-TableMatrix/Tk-TableMatrix-1.2.ebuild,v 1.13 2006/08/06 00:44:51 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-TableMatrix/Tk-TableMatrix-1.2.ebuild,v 1.14 2007/01/14 01:30:51 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -17,7 +17,6 @@ IUSE=""
 
 DEPEND="dev-perl/perl-tk
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
