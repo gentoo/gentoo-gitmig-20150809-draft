@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mod_pcgi2
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_pcgi2/ChangeLog,v 1.15 2006/06/04 20:14:46 vericgar Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_pcgi2/ChangeLog,v 1.16 2007/01/14 18:24:00 chtekk Exp $
+
+  14 Jan 2007; Luca Longinotti <chtekk@gentoo.org>
+  -files/mod_pcgi2-2.0.1-macrofix.patch, -files/2.0.2/20_mod_pcgi.conf,
+  files/20_mod_pcgi.conf, mod_pcgi2-2.0.2.ebuild:
+  Cleanup.
 
   04 Jun 2006; Michael Stewart <vericgar@gentoo.org> ChangeLog:
   Remove old-style ebuilds
