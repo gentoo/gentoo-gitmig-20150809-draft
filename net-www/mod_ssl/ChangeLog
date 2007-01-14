@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mod_ssl
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.110 2006/07/29 20:04:34 kloeri Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.111 2007/01/14 20:38:43 chtekk Exp $
+
+  14 Jan 2007; Luca Longinotti <chtekk@gentoo.org> -files/mod_ssl.conf,
+  -files/ssl.default-vhost.conf, mod_ssl-2.8.25-r10.ebuild,
+  mod_ssl-2.8.28.ebuild:
+  Cleanup.
 
 *mod_ssl-2.8.28 (29 Jul 2006)
 
