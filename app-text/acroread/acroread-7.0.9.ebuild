@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.9.ebuild,v 1.3 2007/01/14 20:03:07 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.9.ebuild,v 1.4 2007/01/14 21:19:26 kevquinn Exp $
 
 inherit eutils nsplugins
 
@@ -101,7 +101,10 @@ src_unpack() {
 	for pkg in ${A}; do
 		cd ${WORKDIR}
 		unpack ${pkg}
-		if [[ "${pkg}" =~ "^AdobeReader_" ]]; then
+		# Note; bash-3.2_p9 doesn't like quotes on the rhs of =~
+		# Seems inconsistent to me; this works for now, awaiting
+		# upstream response.
+		if [[ ${pkg} =~ ^AdobeReader_ ]]; then
 			cd ${S}
 			tar xf ILINXR.TAR ||
 				die "Failed to unpack ILINXR.TAR; is distfile corrupt?"
