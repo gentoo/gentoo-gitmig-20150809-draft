@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/opd/opd-0.2-r1.ebuild,v 1.1 2005/05/16 18:11:50 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/opd/opd-0.2-r1.ebuild,v 1.2 2007/01/14 12:15:50 ticho Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://oss.bdit.de/download/opd-${MY_PV}.tgz"
 LICENSE="as-is"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND="virtual/libc
