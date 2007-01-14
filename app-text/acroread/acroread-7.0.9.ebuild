@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.9.ebuild,v 1.2 2007/01/14 15:04:40 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.9.ebuild,v 1.3 2007/01/14 20:03:07 tester Exp $
 
 inherit eutils nsplugins
 
@@ -37,7 +37,7 @@ RDEPEND="~virtual/libstdc++-3.3
 			ldap? ( net-nds/openldap ) )
 	amd64? ( >=app-emulation/emul-linux-x86-baselibs-2.4.2
 			>=app-emulation/emul-linux-x86-gtklibs-2.0 )"
-QA_TEXTRELS_x86="opt/Acrobat7/Reader/intellinux/lib/libCoolType.so.5.01
+QA_TEXTRELS="opt/Acrobat7/Reader/intellinux/lib/libCoolType.so.5.01
 	opt/Acrobat7/Reader/intellinux/lib/libcrypto.so.0.9.6
 	opt/Acrobat7/Reader/intellinux/lib/libJP2K.so
 	opt/Acrobat7/Reader/intellinux/lib/libAXSLE.so
