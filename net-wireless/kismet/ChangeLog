@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/kismet
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.89 2006/10/15 11:14:39 phreak Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.90 2007/01/14 19:40:09 phreak Exp $
+
+  14 Jan 2007; Christian Heim <phreak@gentoo.org> kismet-2006.04.1.ebuild:
+  Fixing the --with-linuxheaders line, to actually get the include dir right.
 
   15 Oct 2006; Christian Heim <phreak@gentoo.org> kismet-2006.04.1.ebuild:
   Fixing a typo (made by me when ripping of the gpsdrive stuff), thanks to

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2006.04.1.ebuild,v 1.7 2006/10/15 11:14:39 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2006.04.1.ebuild,v 1.8 2007/01/14 19:40:09 phreak Exp $
 
 inherit toolchain-funcs linux-info
 
@@ -41,8 +41,7 @@ src_compile() {
 	# need to set CC and CXX for FEATURES=confcache, bug #129479
 	CC=$(tc-getCC) CXX=$(tc-getCXX) \
 		econf \
-		${config} \
-		--with-linuxheaders="${KV_DIR}"/include || die "econf failed"
+		${config} --with-linuxheaders="${KV_DIR}" || die "econf failed"
 
 	einfo "You may safely ignore the warning about the missing .depend file"
 	emake dep || die "emake dep failed"
