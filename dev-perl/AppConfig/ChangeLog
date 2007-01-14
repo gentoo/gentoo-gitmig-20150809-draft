@@ -1,10 +1,10 @@
 # ChangeLog for dev-perl/AppConfig
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/ChangeLog,v 1.41 2007/01/14 22:16:24 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/ChangeLog,v 1.42 2007/01/14 22:18:38 mcummings Exp $
 
   14 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   AppConfig-1.56-r2.ebuild, AppConfig-1.63.ebuild, AppConfig-1.64.ebuild:
-  Marking amd64 stable
+  Ebuild maintenance
 
 *AppConfig-1.64 (05 Jan 2007)
 
