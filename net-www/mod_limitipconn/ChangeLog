@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_limitipconn
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_limitipconn/ChangeLog,v 1.14 2006/10/28 11:56:00 tomk Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_limitipconn/ChangeLog,v 1.15 2007/01/14 17:17:44 chtekk Exp $
+
+  14 Jan 2007; Luca Longinotti <chtekk@gentoo.org>
+  mod_limitipconn-0.04.ebuild, mod_limitipconn-0.22-r1.ebuild:
+  Cleanup.
 
   28 Oct 2006; Tom Knight <tomk@gentoo.org>
   +files/mod_limitipconn-0.04-local_ip.patch,
