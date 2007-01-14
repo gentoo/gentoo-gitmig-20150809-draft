@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.5-r3.ebuild,v 1.2 2007/01/03 14:24:07 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.5-r3.ebuild,v 1.3 2007/01/14 17:44:40 betelgeuse Exp $
 
 inherit java-pkg-2 eutils
 
@@ -44,6 +44,12 @@ DEPEND=">=virtual/jdk-1.4
 	${CDEPEND}"
 
 S="${WORKDIR}/apache-ant-${MY_PV}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	rm -v lib/*.jar
+}
 
 src_compile() {
 	addwrite "/proc/self/maps"
