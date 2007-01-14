@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.6.ebuild,v 1.8 2007/01/08 20:52:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.6.ebuild,v 1.9 2007/01/14 00:03:28 vapier Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://download2.berlios.de/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2 public-domain"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="ssl nls ipv6 kerberos krb4 hesiod"
 
 DEPEND="hesiod? ( net-dns/hesiod )
@@ -22,15 +22,16 @@ DEPEND="hesiod? ( net-dns/hesiod )
 	elibc_FreeBSD? ( sys-libs/com_err )"
 
 src_unpack() {
-	unpack ${A} || die "unpack failed"
-	cd ${S} || die "cd \${S} failed"
+	unpack ${A}
+	cd "${S}"
 
 	# this patch fixes bug #34788 (ticho@gentoo.org 2004-09-03)
-	epatch ${FILESDIR}/${PN}-6.2.5-broken-headers.patch || die
+	epatch "${FILESDIR}"/${PN}-6.2.5-broken-headers.patch || die
 }
 
 src_compile() {
-	econf  --disable-dependency-tracking \
+	econf \
+		--disable-dependency-tracking \
 		--enable-RPA \
 		--enable-NTLM \
 		--enable-SDPS \
@@ -50,8 +51,7 @@ src_install() {
 
 	dohtml *.html
 
-	dodoc FAQ FEATURES ABOUT-NLS NEWS NOTES README \
-		README.NTLM README.SSL TODO COPYING
+	dodoc FAQ FEATURES ABOUT-NLS NEWS NOTES README README.NTLM README.SSL TODO
 
 	newinitd ${FILESDIR}/fetchmail fetchmail
 	newconfd ${FILESDIR}/conf.d-fetchmail fetchmail
