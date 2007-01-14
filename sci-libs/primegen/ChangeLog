@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/primegen
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/primegen/ChangeLog,v 1.3 2005/05/15 19:14:42 kugelfang Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/primegen/ChangeLog,v 1.4 2007/01/14 07:33:01 josejx Exp $
+
+  14 Jan 2007; Joseph Jezak <josejx@gentoo.org> primegen-0.97.ebuild:
+  Added ~ppc for bug #161015.  Added -fsigned-char to produce correct results.
 
   15 May 2005; Danny van Dyk <kugelfang@gentoo.org> primegen-0.97.ebuild:
   Inherits toolchain-funcs now instead of deprecated gcc eclass.
