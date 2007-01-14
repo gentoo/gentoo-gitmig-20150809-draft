@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.1.0.ebuild,v 1.7 2007/01/13 10:54:31 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.1.0.ebuild,v 1.8 2007/01/14 11:14:03 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -89,6 +89,7 @@ COMMON_DEPEND="!app-office/openoffice-bin
 	dev-libs/expat
 	>=dev-libs/icu-3.4
 	>=sys-libs/db-4.3
+	>=dev-libs/STLport-5.1.0
 	linguas_ja? ( >=media-fonts/kochi-substitute-20030809-r3 )
 	linguas_zh_CN? ( >=media-fonts/arphicfonts-0.1-r2 )
 	linguas_zh_TW? ( >=media-fonts/arphicfonts-0.1-r2 )"
@@ -108,7 +109,6 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
 	>=dev-libs/boost-1.33.1
-	>=dev-libs/STLport-5.1.0
 	>=net-misc/curl-7.9.8
 	sys-libs/zlib
 	sys-apps/coreutils
