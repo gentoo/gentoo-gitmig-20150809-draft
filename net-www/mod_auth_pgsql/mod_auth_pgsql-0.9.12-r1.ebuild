@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pgsql/mod_auth_pgsql-0.9.12-r1.ebuild,v 1.5 2007/01/14 01:30:54 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pgsql/mod_auth_pgsql-0.9.12-r1.ebuild,v 1.6 2007/01/14 17:45:07 chtekk Exp $
 
 inherit apache-module multilib
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND="dev-db/libpq"
 RDEPEND="${DEPEND}"
 
-APACHE1_MOD_CONF="80_mod_auth_pgsql_ap1"
+APACHE1_MOD_CONF="80_mod_auth_pgsql"
 APACHE1_MOD_DEFINE="AUTH_PGSQL"
 
 DOCFILES="INSTALL README mod_auth_pgsql.html"
