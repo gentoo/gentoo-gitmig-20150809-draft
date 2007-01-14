@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Default
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Default/ChangeLog,v 1.34 2007/01/14 22:50:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Default/ChangeLog,v 1.35 2007/01/14 22:55:48 mcummings Exp $
+
+  14 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  Class-Default-1.50.ebuild:
+  Keywording ~mips, tested on swarm
 
   14 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   Class-Default-1.0.ebuild, -Class-Default-1.1.ebuild,
