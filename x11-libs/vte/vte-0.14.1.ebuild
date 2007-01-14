@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.14.1.ebuild,v 1.7 2007/01/07 00:31:55 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.14.1.ebuild,v 1.8 2007/01/14 22:30:01 leio Exp $
 
 inherit eutils gnome2 autotools
 
@@ -45,7 +45,8 @@ pkg_setup() {
 src_unpack() {
 	gnome2_src_unpack
 
-	epatch ${FILESDIR}/${PN}-0.13.2-no-lazy-bindings.patch
+	epatch "${FILESDIR}/${PN}-0.13.2-no-lazy-bindings.patch"
+	epatch "${FILESDIR}/${P}-fbsd.patch"
 
 	cd ${S}/gnome-pty-helper
 	eautomake
