@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.10.1.ebuild,v 1.2 2007/01/09 21:32:35 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.10.1.ebuild,v 1.3 2007/01/14 20:17:37 phreak Exp $
 
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib
 
@@ -71,7 +71,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-sensors-detect-gentoo.patch
+	epatch "${FILESDIR}/${P}-sensors-detect-gentoo.patch"
 
 	if use sensord; then
 		sed -i -e 's:^# \(PROG_EXTRA\):\1:' "${S}"/Makefile
@@ -105,7 +105,7 @@ src_install() {
 	dodoc BACKGROUND BUGS CHANGES CONTRIBUTORS INSTALL QUICKSTART \
 		README* TODO
 
-	dodoc doc/cvs doc/donations doc/fancontrol.txt doc/fan-divisors doc/FAQ \
+	dodoc doc/donations doc/fancontrol.txt doc/fan-divisors doc/FAQ \
 		doc/progs doc/temperature-sensors doc/vid
 
 	dohtml doc/lm_sensors-FAQ.html doc/useful_addresses.html
@@ -124,10 +124,13 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-	einfo "Next you need to run:"
-	einfo "  /usr/sbin/sensors-detect"
-	einfo "to detect the I2C hardware of your system and create the file:"
-	einfo "  /etc/conf.d/lm_sensors"
+	einfo "Please run \`emerge --config =${P}' in order to setup"
+	einfo "/etc/conf.d/lm_sensors."
+	einfo
+	einfo "/etc/conf.d/lm_sensors is vital to the init-script."
+	einfo "Please make sure you also add lm_sensors to the desired"
+	einfo "runlevel. Otherwise your I2C modules won't get loaded"
+	einfo "on the next startup."
 	einfo
 	einfo "You will also need to run the above command if you're upgrading from"
 	einfo "<=${PN}-2.9.0, as the needed entries in /etc/conf.d/lm_sensors has"
@@ -142,4 +145,8 @@ pkg_postinst() {
 	einfo
 }
 
-# Reminder: bug 157085 is blocking the sensors-detect in pkg_config (bug 159137).
+pkg_config() {
+	ebegin "Executing /usr/sbin/sensors-detect"
+	${ROOT}usr/sbin/sensors-detect
+	eend $?
+}
