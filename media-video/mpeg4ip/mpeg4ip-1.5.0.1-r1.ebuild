@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.5.0.1-r1.ebuild,v 1.2 2006/11/18 21:11:19 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.5.0.1-r1.ebuild,v 1.3 2007/01/14 06:46:13 tester Exp $
+
+WANT_AUTOMAKE="1.9"
 
 inherit eutils multilib autotools
 
@@ -42,9 +44,6 @@ RDEPEND=" media-libs/libsdl
 	!<media-libs/faad2-2.0-r9 "
 
 DEPEND="${RDEPEND}
-	sys-devel/libtool
-	sys-devel/autoconf
-	sys-devel/automake
 	player? ( mmx? ( >=dev-lang/nasm-0.98.19 ) )"
 
 pkg_setup() {
