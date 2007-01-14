@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Dependency/Algorithm-Dependency-1.101.ebuild,v 1.14 2006/08/04 22:11:53 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Dependency/Algorithm-Dependency-1.101.ebuild,v 1.15 2007/01/14 21:59:38 mcummings Exp $
 
 inherit perl-module
 
@@ -19,4 +19,3 @@ DEPEND="dev-perl/Test-ClassAPI
 		dev-perl/Params-Util
 		>=virtual/perl-File-Spec-0.82
 		dev-lang/perl"
-RDEPEND="${DEPEND}"
