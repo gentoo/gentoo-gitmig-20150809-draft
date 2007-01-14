@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libelysium/libelysium-0.99.9.ebuild,v 1.3 2005/05/10 09:37:52 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libelysium/libelysium-0.99.9.ebuild,v 1.4 2007/01/14 21:32:04 leio Exp $
 
 DESCRIPTION="Utility library for applications in the Elysium GNU/Linux distribution."
 HOMEPAGE="http://elysium-project.sourceforge.net"
@@ -11,7 +11,8 @@ KEYWORDS="~x86 ~ppc"
 SLOT="0"
 IUSE=""
 
-DEPEND=">=dev-libs/glib-2"
+DEPEND=">=dev-libs/glib-2
+	>=dev-util/pkgconfig-0.9"
 
 src_install() {
 	einstall || die "install failed"
