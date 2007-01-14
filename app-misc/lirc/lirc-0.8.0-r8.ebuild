@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r8.ebuild,v 1.8 2007/01/09 08:04:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r8.ebuild,v 1.9 2007/01/14 09:58:41 josejx Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.lirc.org"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="debug doc X hardware-carrier transmitter"
-KEYWORDS="alpha amd64 ia64 ~ppc ppc64 x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 x86"
 SRC_URI="mirror://sourceforge/lirc/${P/_pre/pre}.tar.bz2"
 
 S=${WORKDIR}/${P/_pre/pre}
