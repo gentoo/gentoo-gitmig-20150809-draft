@@ -1,6 +1,12 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.296 2007/01/14 12:52:55 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.297 2007/01/14 16:31:41 suka Exp $
+
+  14 Jan 2007; Andreas Proschofsky <suka@gentoo.org>
+  files/2.1.0/gentoo-2.1.0.diff, +files/2.1.0/config_with-seamonkey.diff,
+  openoffice-2.1.0.ebuild:
+  Readd seamonkey-support, thanks to Hanno Meyer-Thurow <h.mth@web.de> for
+  fixing this
 
   14 Jan 2007; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.1.0.ebuild:
