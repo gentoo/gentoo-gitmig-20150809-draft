@@ -1,6 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.8.2.ebuild,v 1.6 2006/12/07 21:11:36 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.8.2.ebuild,v 1.7 2007/01/14 04:22:41 compnerd Exp $
+
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
 
 inherit eutils mono autotools
 
@@ -39,7 +42,11 @@ src_unpack() {
 
 	# Use correct libdir in pkgconfig files
 	sed -i -e 's:^libdir.*:libdir=@libdir@:' \
-		${S}/*/{,GConf}/*.pc.in || die
+		${S}/*/{,GConf}/*.pc.in || die "sed failed"
+
+	# Fix install data hook (bug #161093)
+	sed -i -e 's/^install-hool/install-data-hook/' \
+		${S}/sample/gconf/Makefile.am || die "sed failed"
 
 	eautoreconf
 
