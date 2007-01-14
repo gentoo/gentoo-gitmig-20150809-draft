@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/helpblocks
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/helpblocks/ChangeLog,v 1.2 2006/11/13 09:41:42 mrness Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/helpblocks/ChangeLog,v 1.3 2007/01/14 22:17:44 mrness Exp $
+
+  14 Jan 2007; Alin Năstac <mrness@gentoo.org> -helpblocks-1.18.ebuild:
+  Remove old version.
 
 *helpblocks-1.19 (13 Nov 2006)
 
