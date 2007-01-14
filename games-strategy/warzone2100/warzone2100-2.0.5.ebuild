@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-2.0.5.ebuild,v 1.2 2007/01/04 23:40:43 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-2.0.5.ebuild,v 1.3 2007/01/14 08:36:24 josejx Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -13,7 +13,7 @@ SRC_URI="http://download.gna.org/warzone/releases/${MY_PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 # upstream requested debug support
 IUSE="debug mp3"
 
