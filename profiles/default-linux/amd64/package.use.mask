@@ -66,3 +66,7 @@ media-libs/libsoundtouch -sse
 # Jan 14th 2007; blubb@gentoo.org
 # bug 136853: We'd need aspell in emul-libs to make this flag useful
 www-client/opera spell
+
+# Jan 14th 2007; blubb@gentoo.org
+# bug 107648: yate tries to link to static gsm which is a no-go
+net-misc/yate gsm

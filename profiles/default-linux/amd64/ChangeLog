@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.55 2007/01/14 04:15:31 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.56 2007/01/14 04:56:01 blubb Exp $
+
+  14 Jan 2007; <blubb@gentoo.org> package.use.mask:
+  mask gsm USE flag for net-misc/yate; bug 107648
 
   14 Jan 2007; <blubb@gentoo.org> package.use.mask:
   mask spell useflag for opera; bug 136853
