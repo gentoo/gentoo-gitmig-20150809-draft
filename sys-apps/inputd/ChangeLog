@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/inputd
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/inputd/ChangeLog,v 1.15 2006/12/30 16:15:05 chainsaw Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/inputd/ChangeLog,v 1.16 2007/01/14 17:34:57 killerfox Exp $
+
+*inputd-0.0.8 (14 Jan 2007)
+
+  14 Jan 2007; René Nussbaumer <killerfox@gentoo.org> +inputd-0.0.8.ebuild:
+  Vesion bump from upstream
 
   30 Dec 2006; Tony Vroon <chainsaw@gentoo.org> inputd-0.0.7.ebuild:
   Add ~ppc64 keyword. Tested on 64UL with GCC 4.
