@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/barbarian-bin/barbarian-bin-1.01.ebuild,v 1.5 2006/09/19 18:48:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/barbarian-bin/barbarian-bin-1.01.ebuild,v 1.6 2007/01/14 08:39:20 mr_bones_ Exp $
 
 inherit games
 
 MY_PN=${PN/-bin/}
 DESCRIPTION="Save Princess Mariana through one-on-one battles with demonic barbarians."
-HOMEPAGE="http://www.tdbsoft.tk/"
+HOMEPAGE="http://www.tdbsoft.com/"
 SRC_URI="http://www.pcpages.com/tomberrr/downloads/${MY_PN}${PV/./}_linux.zip"
 
 LICENSE="CCPL-Attribution-NonCommercial-NoDerivs-2.0"
@@ -39,6 +39,7 @@ src_install() {
 	touch "${D}${GAMES_STATEDIR}/heroes.hoh"
 	fperms 660 "${GAMES_STATEDIR}/heroes.hoh"
 	dosym "${GAMES_STATEDIR}/heroes.hoh" "${game_dest}/heroes.hoh"
-
+	newicon gfx/sprites/player_attack_2_1.bmp barbarian.bmp
+	make_desktop_entry barbarian "Barbarian" /usr/share/pixmaps/barbarian.bmp
 	prepgamesdirs
 }
