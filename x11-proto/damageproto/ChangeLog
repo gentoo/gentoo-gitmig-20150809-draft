@@ -1,6 +1,12 @@
 # ChangeLog for x11-proto/damageproto
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/damageproto/ChangeLog,v 1.23 2006/07/19 14:13:11 gmsoft Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/damageproto/ChangeLog,v 1.24 2007/01/14 16:56:57 joshuabaergen Exp $
+
+*damageproto-1.1.0 (14 Jan 2007)
+
+  14 Jan 2007; Joshua Baergen <joshuabaergen@gentoo.org>
+  +damageproto-1.1.0.ebuild:
+  Version bump.  Adds support for damage reporting from direct rendering.
 
   19 Jul 2006; Guy Martin <gmsoft@gentoo.org> damageproto-1.0.3.ebuild:
   Stable on hppa.
