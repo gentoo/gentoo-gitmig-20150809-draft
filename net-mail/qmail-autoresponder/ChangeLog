@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/qmail-autoresponder
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/ChangeLog,v 1.21 2006/11/23 16:09:41 vivo Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/ChangeLog,v 1.22 2007/01/14 22:37:01 mrness Exp $
+
+  14 Jan 2007; Alin Năstac <mrness@gentoo.org>
+  qmail-autoresponder-0.96.2.ebuild:
+  Stable on amd64.
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org>
   qmail-autoresponder-0.96.1-r1.ebuild, qmail-autoresponder-0.96.2.ebuild:
