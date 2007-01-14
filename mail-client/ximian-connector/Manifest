@@ -1,36 +1,30 @@
-MD5 cb9c91aa5d71881166451629c21bf79b ChangeLog 7274
-RMD160 5e8850e4d8e31717bb8b1122dc63ad768222911f ChangeLog 7274
-SHA256 5a0e82e73edea2ce3c765b9713f57b4fc5c85a49ab515d73439a2c576312475d ChangeLog 7274
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX 2.0.2-exchange_auth.patch 555 RMD160 65c1ac22eac84a2236c75f1c4605ebe9fb5d0ef9 SHA1 65ccdf3ee92142cf39e0fe96165214c7778caf99 SHA256 58070f83aa09f9fec4d979ead56d338565a9398e7147c80725ea010dfaa5cf82
 MD5 9fb7d691f96995adaac16cfedf42b202 files/2.0.2-exchange_auth.patch 555
 RMD160 65c1ac22eac84a2236c75f1c4605ebe9fb5d0ef9 files/2.0.2-exchange_auth.patch 555
 SHA256 58070f83aa09f9fec4d979ead56d338565a9398e7147c80725ea010dfaa5cf82 files/2.0.2-exchange_auth.patch 555
-MD5 7d1775fcd3f66e7fb5a1631fc9db5fcc files/digest-ximian-connector-1.4.7.2 76
-RMD160 6349296dff06ba9bb1acc96122735ca62a096bbd files/digest-ximian-connector-1.4.7.2 76
-SHA256 2af070c1f6cf729b9480d387fb199b5721a1bab1a9728ed7163e7cd038733342 files/digest-ximian-connector-1.4.7.2 76
-MD5 26036add2c9eea8522d465fa529fc43f files/digest-ximian-connector-2.0.2 76
-RMD160 a20cd4e98117bf30c15e8e75464ceee64032a2be files/digest-ximian-connector-2.0.2 76
-SHA256 0c224083fdef86c835b4fbab91308df127873b6176c588dc27c304302ab2a510 files/digest-ximian-connector-2.0.2 76
-MD5 26036add2c9eea8522d465fa529fc43f files/digest-ximian-connector-2.0.2-r1 76
-RMD160 a20cd4e98117bf30c15e8e75464ceee64032a2be files/digest-ximian-connector-2.0.2-r1 76
-SHA256 0c224083fdef86c835b4fbab91308df127873b6176c588dc27c304302ab2a510 files/digest-ximian-connector-2.0.2-r1 76
-MD5 4298c8a838b368f2a652a5b63ba75173 files/digest-ximian-connector-2.2.3 76
-RMD160 25a350c4c88f585811bfdbeec04adee686c572e4 files/digest-ximian-connector-2.2.3 76
-SHA256 35613679d58303c54f6aa7a434986b62cd243285559dae31dc71d0202a60e63b files/digest-ximian-connector-2.2.3 76
-MD5 c54395967f9527952a219a01253770c9 files/ximian-connector-2.0.1-exchange2003.patch 625
-RMD160 d5ad8f51562bfd36df14e68e8093fcd679727fc5 files/ximian-connector-2.0.1-exchange2003.patch 625
-SHA256 80ddb25f0d8acb376927366bd627983d93a5897d0fb0e6e7f542620ca2501f7d files/ximian-connector-2.0.1-exchange2003.patch 625
-MD5 f4713bbf77ae895c7ff6c022a7a2f542 metadata.xml 222
-RMD160 96c8a2e104ee15c6bce7aaf7c73398f3287e6357 metadata.xml 222
-SHA256 c7f626d802a17a56823c72e1d7ffab65565e530144d38af0caec6198f12c5f5f metadata.xml 222
-MD5 6baac6d01c900654c84f3e8db645604b ximian-connector-1.4.7.2.ebuild 975
-RMD160 26cb0c7fe7bda6fd3bd18221f006f0327fd45094 ximian-connector-1.4.7.2.ebuild 975
-SHA256 802359f5d7cca027bf1a9ac9a45cbe2ec65b45018013d8bef243b602a0f46e89 ximian-connector-1.4.7.2.ebuild 975
-MD5 18cbd0b13ff3f5c9eb267d62046f8e13 ximian-connector-2.0.2-r1.ebuild 1021
-RMD160 cb4348e15f13c85c30cd84d81bae0ee9fd71a264 ximian-connector-2.0.2-r1.ebuild 1021
-SHA256 396380a63ed0acbcfcbb7af43b1fe8ce5f2dc359e79a63e5fd5bd7b02f77aef8 ximian-connector-2.0.2-r1.ebuild 1021
-MD5 ec4c988dd763dd59243fc46e4476ea79 ximian-connector-2.0.2.ebuild 924
-RMD160 9395d368f9e0678993805f08e24d0155a81e149f ximian-connector-2.0.2.ebuild 924
-SHA256 abfd8f89a758a9ddd88a1c6ceadc86e95f4ecc757a8d2b53b7913163fe4dfdb7 ximian-connector-2.0.2.ebuild 924
+DIST ximian-connector-2.2.3.tar.bz2 1188149 RMD160 d6e60fdf465bf5def5258de4c499c2b05b27949c SHA1 40c861c03a08285e25eb18dc8d1bda0601a92fe2 SHA256 bb5e6f4b74b330da9e98833aa946c4e400e22ae8ed327bb6ab57caffdba5a2d2
+EBUILD ximian-connector-2.2.3.ebuild 948 RMD160 4f5bc5db4161906a2bac7674ddb925183590a7ee SHA1 4fa828b1f2e757d974ea0b25bb5e7a17e0e359bf SHA256 f9e9c5cd4bbd2e46abcceccbfc1f140a5a2453cc8b0594f10cf3df13c4ce9c44
 MD5 bc71317782de56fe0a19ebcf875ab99f ximian-connector-2.2.3.ebuild 948
 RMD160 4f5bc5db4161906a2bac7674ddb925183590a7ee ximian-connector-2.2.3.ebuild 948
 SHA256 f9e9c5cd4bbd2e46abcceccbfc1f140a5a2453cc8b0594f10cf3df13c4ce9c44 ximian-connector-2.2.3.ebuild 948
+MISC ChangeLog 7499 RMD160 36610a845bbe70993021809b69e641e3be44b76d SHA1 047aa53300f7107bfc14201f5d772bf7836f9704 SHA256 9a79cb7b6cafbc6a86a1b3ddc05ecdf8281308563a574b2ba276c4d40ad7e0b9
+MD5 3e38b040a48449249393bc1e1a33b1ce ChangeLog 7499
+RMD160 36610a845bbe70993021809b69e641e3be44b76d ChangeLog 7499
+SHA256 9a79cb7b6cafbc6a86a1b3ddc05ecdf8281308563a574b2ba276c4d40ad7e0b9 ChangeLog 7499
+MISC metadata.xml 222 RMD160 96c8a2e104ee15c6bce7aaf7c73398f3287e6357 SHA1 e78ebe8223fab03acef8562079599d6d962e494e SHA256 c7f626d802a17a56823c72e1d7ffab65565e530144d38af0caec6198f12c5f5f
+MD5 f4713bbf77ae895c7ff6c022a7a2f542 metadata.xml 222
+RMD160 96c8a2e104ee15c6bce7aaf7c73398f3287e6357 metadata.xml 222
+SHA256 c7f626d802a17a56823c72e1d7ffab65565e530144d38af0caec6198f12c5f5f metadata.xml 222
+MD5 1f1e5295178f89bb5a84766e8abb1fee files/digest-ximian-connector-2.2.3 274
+RMD160 b299db11bfffa8b5f37ea633cde4ba604baffaf7 files/digest-ximian-connector-2.2.3 274
+SHA256 7cb10844c190cecb2ba02e925daa9524b8bf10ee750b5c965fea0d55819bd5cc files/digest-ximian-connector-2.2.3 274
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.6 (GNU/Linux)
+
+iD8DBQFFqnTFkeYb6olFHJcRAjcaAJsEazT1MgHKxO4EBrHV8+OAGo2t8wCePR3r
+5l5JJnIWRz4GimVQtKu6WGI=
+=3jyf
+-----END PGP SIGNATURE-----
