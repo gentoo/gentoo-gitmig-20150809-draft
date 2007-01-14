@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/assp-1.2.5-r5.ebuild,v 1.2 2007/01/14 18:16:20 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/assp-1.2.6.ebuild,v 1.1 2007/01/14 18:16:20 wltjr Exp $
 
 inherit eutils
 
@@ -38,7 +38,6 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch ${FILESDIR}/assp-${PV}.patch
 
 	local FILES="
 		assp.pl
@@ -54,6 +53,9 @@ src_unpack() {
 		edos2unix ${file}
 	done
 
+	# patch is against unix-format, so patch after dos2unix
+	epatch ${FILESDIR}/assp-${PV}.patch
+
 	# remove windows stuff
 	rm "${S}/addservice.pl"
 	rm -f "${S}/Win32-quickstart-guide.txt"
@@ -62,7 +64,11 @@ src_unpack() {
 src_install() {
 	# Configuration directory
 	dodir /etc/assp
-	fowners assp:assp /etc/assp
+
+	insinto /etc/assp
+	doins nodelay.txt
+
+	fowners assp:assp /etc/assp -R
 	fperms 770 /etc/assp
 
 	# Setup directories for mail to be stored for filter
@@ -79,8 +85,9 @@ src_install() {
 	doexe *.pl *.sh
 	insinto /usr/share/assp
 	doins -r images/
-	insinto /var/lib/assp
-	doins *.txt *.sav
+
+	insinto /usr/share/assp
+	doins *.txt
 
 	# Lock down the files/data
 	fowners assp:assp -R /usr/share/assp
@@ -113,8 +120,6 @@ pkg_postinst() {
 	elog "ASSP, make sure and use the user assp."
 	elog
 	elog "Don't change any path related options."
-	elog
-	elog "All utilities are prefixed with assp."
 	elog
 	elog "See the on-line docs for a complete tutorial."
 	elog

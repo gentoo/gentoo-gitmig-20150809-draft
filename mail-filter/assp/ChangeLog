@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/assp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/ChangeLog,v 1.7 2007/01/10 17:08:48 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/ChangeLog,v 1.8 2007/01/14 18:16:20 wltjr Exp $
+
+*assp-1.2.6 (14 Jan 2007)
+
+  14 Jan 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  +files/assp-1.2.6.patch, assp-1.2.5-r5.ebuild, +assp-1.2.6.ebuild:
+  Reverted back to fowner/fperms due to access violations during re-emering.
+  Bumped package to latest versions via contributions from ovaron2, thank you.
 
 *assp-1.2.5-r5 (10 Jan 2007)
 
