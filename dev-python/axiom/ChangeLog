@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/axiom
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.10 2007/01/13 23:52:19 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.11 2007/01/14 21:52:59 dev-zero Exp $
+
+  14 Jan 2007; Tiziano Müller <dev-zero@gentoo.org> axiom-0.5.0.ebuild:
+  Corrected dependencies and fixed src_test.
 
 *axiom-0.5.0 (13 Jan 2007)
 
