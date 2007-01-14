@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.130 2007/01/11 22:37:32 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.131 2007/01/14 05:35:01 phreak Exp $
+
+*hardened-sources-2.6.19-r4 (14 Jan 2007)
+
+  14 Jan 2007; Christian Heim <phreak@gentoo.org>
+  +hardened-sources-2.6.19-r4.ebuild:
+  Revision bump, pulling in linux-2.6.19.2 and grsecurity 2.1.10 - thus
+  dropping the randomized PID feature.
 
   11 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
   hardened-sources-2.4.33.4.ebuild:
