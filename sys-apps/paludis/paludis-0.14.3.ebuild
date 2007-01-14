@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.14.3.ebuild,v 1.1 2007/01/14 09:56:43 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.14.3.ebuild,v 1.2 2007/01/14 23:12:29 kugelfang Exp $
 
 inherit bash-completion eutils flag-o-matic
 
@@ -46,6 +46,12 @@ pkg_setup() {
 		epause 10
 	fi
 	filter-ldflags -Wl,--as-needed --as-needed
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch ${FILESDIR}/${P}-ruby-so.patch
 }
 
 src_compile() {
