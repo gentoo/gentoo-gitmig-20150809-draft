@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.49 2007/01/14 09:47:53 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.50 2007/01/14 19:39:50 pioto Exp $
+
+  14 Jan 2007; Mike Kelly <pioto@gentoo.org> eselect-1.0.7.ebuild:
+  Force non-parallel install for now until all the Makefile issues can be fixed.
 
   14 Jan 2007; Joseph Jezak <josejx@gentoo.org> eselect-1.0.7.ebuild:
   Marked ppc stable for bug #160535.
