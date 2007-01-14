@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.81 2007/01/14 00:17:27 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.82 2007/01/14 14:03:53 yoswink Exp $
+
+  14 Jan 2007; Jose Luis Rivero <yoswink@gentoo.org> cacti-0.8.6i-r1.ebuild:
+  Stable on alpha wrt security bug #159278
 
   14 Jan 2007; Andrej Kacian <ticho@gentoo.org> cacti-0.8.6i-r1.ebuild:
   Stable on x86, security bug #159278.
