@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/winpdb
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/winpdb/ChangeLog,v 1.4 2006/04/01 19:19:43 agriffis Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/winpdb/ChangeLog,v 1.5 2007/01/14 16:36:55 dev-zero Exp $
+
+*winpdb-1.0.8 (14 Jan 2007)
+
+  14 Jan 2007; Tiziano Müller <dev-zero@gentoo.org>
+  -winpdb-1.0.6-r1.ebuild, +winpdb-1.0.8.ebuild:
+  Version bump. Dropped old version.
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> winpdb-1.0.6-r1.ebuild:
   Mark 1.0.6-r1 ~ia64
