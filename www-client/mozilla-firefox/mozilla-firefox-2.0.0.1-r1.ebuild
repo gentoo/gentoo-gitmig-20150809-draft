@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.1-r1.ebuild,v 1.2 2007/01/14 01:14:40 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.1-r1.ebuild,v 1.3 2007/01/14 10:14:21 pingu Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -104,7 +104,7 @@ src_unpack() {
 	cd "${S}"
 
 	# Apply our patches
-	EPATCH_FORCE="yes" epatch "${WORKDIR}"/patch
+	EPATCH_SUFFIX="patch" EPATCH_FORCE="yes" epatch "${WORKDIR}"/patch
 
 	if use filepicker; then
 		epatch ${FILESDIR}/mozilla-filepicker.patch
