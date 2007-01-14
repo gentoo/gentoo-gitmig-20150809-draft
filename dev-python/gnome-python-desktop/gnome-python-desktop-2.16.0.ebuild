@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/gnome-python-desktop-2.16.0.ebuild,v 1.10 2007/01/13 23:32:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/gnome-python-desktop-2.16.0.ebuild,v 1.11 2007/01/14 14:23:30 kloeri Exp $
 
 inherit distutils gnome2 python virtualx
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://pygtk.org/"
 
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~hppa ia64 ppc ppc64 sh sparc x86"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ppc64 sh sparc x86"
 
 RDEPEND="virtual/python
 	>=dev-python/pygtk-2.4.0
