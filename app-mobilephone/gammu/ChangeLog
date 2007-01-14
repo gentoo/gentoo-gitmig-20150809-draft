@@ -1,14 +1,14 @@
 # ChangeLog for app-mobilephone/gammu
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.31 2007/01/14 14:50:05 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.32 2007/01/14 15:00:12 mrness Exp $
 
   14 Jan 2007; Alin Năstac <mrness@gentoo.org>
   -files/gammu-1.05.00-backup-limits.patch,
   -files/gammu-1.06.00-backup-limits.patch,
   -files/gammu-1.07.00-as-needed.patch,
   -files/gammu-1.07.00-backup-limits.patch, -gammu-1.05.00.ebuild,
-  -gammu-1.06.00.ebuild, -gammu-1.07.00.ebuild:
-  Remove obsolete versions (#159030).
+  -gammu-1.06.00.ebuild, -gammu-1.07.00.ebuild, gammu-1.09.00.ebuild:
+  Remove obsolete versions (#159030). Stable on amd64.
 
   14 Jan 2007; Aron Griffis <agriffis@gentoo.org> gammu-1.08.00.ebuild:
   Mark 1.08.00 stable on ia64
