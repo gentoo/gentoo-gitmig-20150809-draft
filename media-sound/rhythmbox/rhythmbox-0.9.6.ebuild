@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.9.6.ebuild,v 1.2 2006/11/19 20:17:00 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.9.6.ebuild,v 1.3 2007/01/14 23:03:42 leio Exp $
 
 inherit gnome2 eutils
 
@@ -42,7 +42,8 @@ RDEPEND=">=x11-libs/gtk+-2.5.4
 	aac? ( >=media-plugins/gst-plugins-faad-0.10 )
 	libnotify? ( >=x11-libs/libnotify-0.3.2 )
 	python? ( >=dev-lang/python-2.4.2
-				>=dev-python/pygtk-2.6 )"
+				>=dev-python/pygtk-2.6
+				>=dev-python/gnome-python-2.12 )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig

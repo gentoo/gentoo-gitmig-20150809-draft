@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.82 2007/01/03 05:45:26 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.83 2007/01/14 23:03:42 leio Exp $
+
+  14 Jan 2007; Mart Raudsepp <leio@gentoo.org> rhythmbox-0.9.6.ebuild,
+  rhythmbox-0.9.7.ebuild:
+  Add gnome-python dependency if USE=python because gnomevfs module is used by
+  plugins, bug 161087
 
 *rhythmbox-0.9.7 (03 Jan 2007)
 
