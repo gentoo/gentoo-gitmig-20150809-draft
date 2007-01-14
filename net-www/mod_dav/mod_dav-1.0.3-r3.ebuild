@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_dav/mod_dav-1.0.3-r3.ebuild,v 1.5 2007/01/14 16:31:52 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_dav/mod_dav-1.0.3-r3.ebuild,v 1.6 2007/01/14 18:46:23 chtekk Exp $
 
 inherit eutils autotools apache-module
 
@@ -42,6 +42,6 @@ src_compile() {
 }
 
 pkg_postinst() {
-	install -m0750 -o apache -g apache -d "${ROOT}"/var/lock/mod_dav
+	install -d -m0750 -o apache -g apache "${ROOT}"/var/lock/${PN}
 	apache1_pkg_postinst
 }

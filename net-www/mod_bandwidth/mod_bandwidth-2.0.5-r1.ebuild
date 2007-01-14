@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_bandwidth/mod_bandwidth-2.0.5-r1.ebuild,v 1.6 2007/01/14 01:59:02 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_bandwidth/mod_bandwidth-2.0.5-r1.ebuild,v 1.7 2007/01/14 18:45:14 chtekk Exp $
 
 inherit apache-module
 
@@ -26,6 +26,6 @@ src_unpack() {
 }
 
 pkg_postinst() {
-	install -m0755 -o apache -g apache -d "${ROOT}"/var/cache/${PN}/{link,master}
+	install -d -m0755 -o apache -g apache "${ROOT}"/var/cache/${PN}/{link,master}
 	apache1_pkg_postinst
 }

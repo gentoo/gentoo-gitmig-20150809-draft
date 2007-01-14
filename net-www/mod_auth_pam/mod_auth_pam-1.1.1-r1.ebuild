@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/mod_auth_pam-1.1.1-r1.ebuild,v 1.12 2007/01/14 00:35:00 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/mod_auth_pam-1.1.1-r1.ebuild,v 1.13 2007/01/14 18:41:53 chtekk Exp $
 
 inherit eutils apache-module portability
 
@@ -50,7 +50,7 @@ src_compile() {
 	use apache2 && ${APXS2} -c mod_auth_sys_group.c
 }
 
-src_install () {
+src_install() {
 	apache-module_src_install
 	insinto /etc/pam.d
 	use apache2 && newins "${FILESDIR}/apache2.pam" apache2
