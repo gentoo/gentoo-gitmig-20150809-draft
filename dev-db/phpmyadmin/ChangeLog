@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.230 2007/01/13 15:08:11 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.231 2007/01/14 15:55:54 rl03 Exp $
+
+*phpmyadmin-2.9.2_rc1 (14 Jan 2007)
+
+  14 Jan 2007; Renat Lumpau <rl03@gentoo.org>
+  +files/config.default.php-2.9.2.patch, +phpmyadmin-2.9.2_rc1.ebuild:
+  Version bump, bug #161460.
 
   13 Jan 2007; Luca Longinotti <chtekk@gentoo.org> metadata.xml:
   Add MySQL herd to metadata.
