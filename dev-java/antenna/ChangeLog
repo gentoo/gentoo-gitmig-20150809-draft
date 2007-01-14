@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/antenna
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antenna/ChangeLog,v 1.3 2006/09/13 22:11:26 nichoj Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antenna/ChangeLog,v 1.4 2007/01/14 12:49:45 betelgeuse Exp $
+
+  14 Jan 2007; Petteri Räty <betelgeuse@gentoo.org>
+  antenna-0.9.13-r1.ebuild:
+  Fixed to work with JAVA_PKG_STRICT, ant-core is a RDEPEND too, sun-jdk-1.6
+  can't build javadocs for this ebuild, javadocs were not installed.
 
   13 Sep 2006; Joshua Nichols <nichoj@gentoo.org> metadata.xml,
   antenna-0.9.13-r1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antenna/antenna-0.9.13-r1.ebuild,v 1.3 2006/09/13 22:11:26 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antenna/antenna-0.9.13-r1.ebuild,v 1.4 2007/01/14 12:49:45 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -15,11 +15,17 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="doc"
 
-DEPEND=">=virtual/jdk-1.4
-	app-arch/unzip
-	dev-java/ant-core"
-RDEPEND=">=virtual/jre-1.4
+COMMON_DEP="
+	dev-java/ant-core
 	~dev-java/servletapi-2.3"
+
+DEPEND="
+	!doc? ( >=virtual/jdk-1.4 )
+	doc? ( || ( =virtual/jdk-1.4* =virtual/jdk-1.5* ) )
+	app-arch/unzip
+	${COMMON_DEP}"
+RDEPEND=">=virtual/jre-1.4
+	${COMMON_DEP}"
 
 src_unpack() {
 	mkdir ${S} && cd ${S}
@@ -34,12 +40,8 @@ src_unpack() {
 	cat > build.properties <<-END
 	project.name=${PN}
 	project.version=${PV}
-	classpath.servlet=$(java-pkg_getjars servletapi-2.3)
+	classpath.servlet=$(java-pkg_getjars servletapi-2.3,ant-core)
 	END
-}
-
-src_compile() {
-	eant jar $(use_doc)
 }
 
 src_install() {
@@ -50,6 +52,6 @@ src_install() {
 
 	if use doc; then
 		java-pkg_dohtml doc/*
-		java-pkg_dohtml -r dist/doc/api
+		java-pkg_dojavadoc build/doc/api
 	fi
 }
