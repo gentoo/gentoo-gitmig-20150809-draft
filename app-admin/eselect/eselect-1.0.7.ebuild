@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.0.7.ebuild,v 1.7 2007/01/13 23:10:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.0.7.ebuild,v 1.8 2007/01/14 09:47:53 josejx Exp $
 
 DESCRIPTION="Modular -config replacement utility"
 HOMEPAGE="http://www.gentoo.org/proj/en/eselect/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm ~hppa ia64 m68k ~mips ~ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 arm ~hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="doc bash-completion"
 
 DEPEND="sys-apps/sed
