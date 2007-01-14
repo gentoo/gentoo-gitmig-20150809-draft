@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.103 2007/01/08 19:54:04 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.104 2007/01/14 03:00:50 tester Exp $
+
+  14 Jan 2007; Olivier Crête <tester@gentoo.org> mono-1.2.2.1.ebuild:
+  Stable on amd64 per bug #159886
 
   08 Jan 2007; Tobias Scherbaum <dertobi123@gentoo.org> mono-1.2.2.1.ebuild:
   Stable on ppc wrt bug #159886.
