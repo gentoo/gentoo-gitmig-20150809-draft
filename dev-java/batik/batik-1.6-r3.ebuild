@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.6-r3.ebuild,v 1.1 2007/01/08 10:59:40 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.6-r3.ebuild,v 1.2 2007/01/14 13:40:18 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -11,15 +11,13 @@ SRC_URI="mirror://apache/xml/batik/${PN}-src-${PV}.zip"
 LICENSE="Apache-2.0"
 SLOT="1.6"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="doc"
+IUSE="doc python tcl"
 
-# According to
-# http://xmlgraphics.apache.org/batik/install.html#optionalComponents
-# jython is optional so should look into making a use flag
 CDEPEND="=dev-java/rhino-1.5*
 	>=dev-java/xerces-2.7.1
 	=dev-java/xml-commons-external-1.3*
-	dev-java/jython"
+	python? ( dev-java/jython )
+	tcl? ( dev-java/jacl )"
 DEPEND="=virtual/jdk-1.4*
 	dev-java/ant-core
 	app-arch/unzip
@@ -36,13 +34,18 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-jikes.patch
 	epatch ${FILESDIR}/${P}-dont-copy-deps.patch
 
+	java-ant_ignore-system-classes
+
 	cd lib
 	rm -f *.jar build/*.jar
 
 	java-pkg_jar-from xml-commons-external-1.3
 	java-pkg_jar-from xerces-2
+	# Can't make rhino optional because
+	# apps/svgbrowser needs it
 	java-pkg_jar-from rhino-1.5
-	java-pkg_jar-from jython
+	use python && java-pkg_jar-from jython
+	use tcl && java-pkg_jar-from jacl
 }
 
 src_compile() {
