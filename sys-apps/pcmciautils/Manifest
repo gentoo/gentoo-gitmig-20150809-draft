@@ -9,8 +9,8 @@ AUX pcmciautils-012-pccardctl-uclibc.patch 251 RMD160 242595e56dd8a924baabbbc12c
 MD5 7bc55616a05befe15cf8e86ed05fc57e files/pcmciautils-012-pccardctl-uclibc.patch 251
 RMD160 242595e56dd8a924baabbbc12cb7f70a93d9bf83 files/pcmciautils-012-pccardctl-uclibc.patch 251
 SHA256 6ec3f1d14980c8b63f49269594582a93d60cf174ae46c563ddd81ec7d1ee8476 files/pcmciautils-012-pccardctl-uclibc.patch 251
-DIST pcmciautils-012.tar.bz2 41683
-DIST pcmciautils-013.tar.bz2 42944
+DIST pcmciautils-012.tar.bz2 41683 RMD160 4078157573d99281a409782ff77b2769ca8fb4af SHA1 e7d26aed8401905edcdd8408aa6ac9c356361e5e SHA256 f85584c69468bb4a8b21f5971f5037760bb29b81dfb94b0635091949121e5e8e
+DIST pcmciautils-013.tar.bz2 42944 RMD160 e5f01a509d7c5e5094032ad9c0fccebaeb0ec673 SHA1 6e0a903232788c8e0405416c7e5c7b34e9d118d4 SHA256 7c1adf1a5ebeba124cef4102cbbf9ca65b8493ad6b8fcfb48091e27e983ffc41
 DIST pcmciautils-014.tar.bz2 42996 RMD160 61a264bdc08070735cee72fb7c5b91c7a35f6805 SHA1 24122b196ab9199e259ba35ffe243d9b2820446a SHA256 6bef7c05ba9fad231fe7a188043c61c116c24bab5fa79d9d72c1d8e11ff38925
 EBUILD pcmciautils-012.ebuild 2269 RMD160 61b3f20b846961622d5b4f961dea045f1d9b414a SHA1 dcca86379587a17f511e34a044e95b531dbd8a4e SHA256 128003dc386a2c9eb7b364a2d28329709318c5e3278e5202d6cbe50faf18003a
 MD5 5335d2301c91c6b5e920bedc87c6974f pcmciautils-012.ebuild 2269
@@ -20,10 +20,10 @@ EBUILD pcmciautils-013.ebuild 2205 RMD160 cbec9fdd4efa82223650bf2f8c6736ac17cb87
 MD5 159f4b908348fe4aefc607ca10460283 pcmciautils-013.ebuild 2205
 RMD160 cbec9fdd4efa82223650bf2f8c6736ac17cb8793 pcmciautils-013.ebuild 2205
 SHA256 3a979deb836fa7285734f319ce9c50fbf4814265060b2f8f08b387a0aceee771 pcmciautils-013.ebuild 2205
-EBUILD pcmciautils-014-r1.ebuild 2260 RMD160 b253ffd4ceced402c616cee50cd9a308a40aa3f7 SHA1 804585c2fc655f43aab3d1c5f159155b83d36e87 SHA256 50d4f0bdf712390c052f85c2d9d4e1328c4eaa7e3c489440de1edbcc76de749e
-MD5 c98bcd0bd1ef70835983a3d8ae6647e6 pcmciautils-014-r1.ebuild 2260
-RMD160 b253ffd4ceced402c616cee50cd9a308a40aa3f7 pcmciautils-014-r1.ebuild 2260
-SHA256 50d4f0bdf712390c052f85c2d9d4e1328c4eaa7e3c489440de1edbcc76de749e pcmciautils-014-r1.ebuild 2260
+EBUILD pcmciautils-014-r1.ebuild 2253 RMD160 de3f23cb9ca74cca1c2b3c5baea4aa55082306dc SHA1 8d15b3d08231cc0399468e299347276156585a1e SHA256 e75a15f47f7259b03432e6856cfd47ab1e789fbca5da75d46ed2961c4a17c3cd
+MD5 cda347c5ebb5f9a6998ea1b64deb960c pcmciautils-014-r1.ebuild 2253
+RMD160 de3f23cb9ca74cca1c2b3c5baea4aa55082306dc pcmciautils-014-r1.ebuild 2253
+SHA256 e75a15f47f7259b03432e6856cfd47ab1e789fbca5da75d46ed2961c4a17c3cd pcmciautils-014-r1.ebuild 2253
 EBUILD pcmciautils-014.ebuild 2207 RMD160 7eaa7e622ac84f58596683c052eba3c5b6f07aa5 SHA1 4913c9ccd33883c8f0253bb35f6a3d6c4d3a3541 SHA256 901f1ee2386b43cb473e7a6af8b227f3a3b8e7455fa19f5565f9f1d04765d70a
 MD5 8a916a2334bdb4db73d735f7ff612762 pcmciautils-014.ebuild 2207
 RMD160 7eaa7e622ac84f58596683c052eba3c5b6f07aa5 pcmciautils-014.ebuild 2207
@@ -36,12 +36,12 @@ MISC metadata.xml 159 RMD160 54af1e9a61e5ed1b49b2bbbf3ef2278999c66b13 SHA1 bce3d
 MD5 19fd766bac8e110b4620363a1ace26dd metadata.xml 159
 RMD160 54af1e9a61e5ed1b49b2bbbf3ef2278999c66b13 metadata.xml 159
 SHA256 ed3a0d440cfa5672284f4172ebde0ea6506c1a38e9a3ed9f14f3d2c093aac42f metadata.xml 159
-MD5 e61be18a09805cd66618da8fb7ce7f52 files/digest-pcmciautils-012 67
-RMD160 a28e4f67d5344d8079b6a4ee60dc9d2b29b9f8e0 files/digest-pcmciautils-012 67
-SHA256 d2b06ab5d474956e75ecc7370a58ec2007d1f9ea265af30ca850847ac2894d97 files/digest-pcmciautils-012 67
-MD5 af764e4b3e678630cab86bc55a73a640 files/digest-pcmciautils-013 67
-RMD160 d1e0d46a94e458671500a17e10d07921bbe971f2 files/digest-pcmciautils-013 67
-SHA256 505aaa5819066ab14e83e96fed8ab8ef2d8c66072219ee5949c186f9c7272c95 files/digest-pcmciautils-013 67
+MD5 fc13ba1e8542a73a48c8385bd6e035a8 files/digest-pcmciautils-012 247
+RMD160 f8e52f8b3377692bd31c69a5ea762dff36800f26 files/digest-pcmciautils-012 247
+SHA256 669fda2de78530a1587652c559936ee44370bf49b6e175062ce714a9b4fb5908 files/digest-pcmciautils-012 247
+MD5 3a3c597e64ddbd1f010ade17d29885bc files/digest-pcmciautils-013 247
+RMD160 f49518f68e1c7d838ca13e1dbf68749b509ab051 files/digest-pcmciautils-013 247
+SHA256 21a6fe553bd8aa738f0c6164523de4989a1e4584497836edccec1a68f18ca931 files/digest-pcmciautils-013 247
 MD5 337be08a8d1d0d4bd9315d1b593d83ab files/digest-pcmciautils-014 247
 RMD160 fbec9737a2fe0db4e79dd01cbbd801603c242680 files/digest-pcmciautils-014 247
 SHA256 401c3a3d242bf5deef2dcdab099314da5c1ef154af14565cd9175e0e87582cb7 files/digest-pcmciautils-014 247
@@ -49,9 +49,9 @@ MD5 337be08a8d1d0d4bd9315d1b593d83ab files/digest-pcmciautils-014-r1 247
 RMD160 fbec9737a2fe0db4e79dd01cbbd801603c242680 files/digest-pcmciautils-014-r1 247
 SHA256 401c3a3d242bf5deef2dcdab099314da5c1ef154af14565cd9175e0e87582cb7 files/digest-pcmciautils-014-r1 247
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.6 (GNU/Linux)
+Version: GnuPG v2.0.1 (GNU/Linux)
 
-iD8DBQFFowD6QlM6RnzZP+IRAh7OAKCzXgVrBGXLpduIuxqo3wQX5UHNMwCfVkBa
-tLAPVJoK+N0DDknW/0UQbSI=
-=Xhoh
+iD8DBQFFqXOb8bi6rjpTunYRAmowAKCgkUkY3za3y7jBl4WgBjX5P7Y+5gCgw+ER
+eIlgKPJgVZFdYNMxaKf3XlA=
+=YVT2
 -----END PGP SIGNATURE-----

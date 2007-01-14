@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.3.2.ebuild,v 1.3 2006/12/18 19:40:57 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.3.2.ebuild,v 1.4 2007/01/14 00:02:56 vapier Exp $
 
 inherit multilib
 
@@ -12,7 +12,7 @@ SRC_URI="http://alioth.debian.org/download.php/${STUPID_NUM}/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh sparc ~x86"
+KEYWORDS="~amd64 arm ~hppa ia64 m68k ~ppc ~ppc64 s390 sh sparc ~x86"
 IUSE="static debug"
 
 RDEPEND="!static? ( dev-libs/libusb )"
@@ -32,7 +32,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 
 	dodoc AUTHORS ChangeLog DRIVERS HELP INSTALL NEWS README SECURITY
 	dodoc doc/*.pdf doc/README.DAEMON
