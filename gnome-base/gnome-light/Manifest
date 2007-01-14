@@ -9,38 +9,38 @@ EBUILD gnome-light-2.14.0.ebuild 2143 RMD160 0a861327805fabf282c443f7977fc690eac
 MD5 f3bcb29a9c2c27f39f6b79ef77b2c6bb gnome-light-2.14.0.ebuild 2143
 RMD160 0a861327805fabf282c443f7977fc690eacaf9ac gnome-light-2.14.0.ebuild 2143
 SHA256 9bd6ce9c4e392f06e96beb27dbf15c1fc074a5d323b80466afd73fbca390681d gnome-light-2.14.0.ebuild 2143
-EBUILD gnome-light-2.16.0.ebuild 2106 RMD160 e96fc7eed1925c1991998a66dc90ecab2e657883 SHA1 38b724696298b681fc600d2404417d5b8d989798 SHA256 c489f7f5f7a2ed68e42ae85d020c4e805650e5ee91ac8befde548f98a9d67f39
-MD5 a3a5afc6d4ad1da6eed64521b0148d38 gnome-light-2.16.0.ebuild 2106
-RMD160 e96fc7eed1925c1991998a66dc90ecab2e657883 gnome-light-2.16.0.ebuild 2106
-SHA256 c489f7f5f7a2ed68e42ae85d020c4e805650e5ee91ac8befde548f98a9d67f39 gnome-light-2.16.0.ebuild 2106
 EBUILD gnome-light-2.16.1.ebuild 2101 RMD160 81f00f46d22ee9b1d9af5bcdb263c3804aed14e8 SHA1 90a7a8dc36ba2e5cda117d2d7b21d9c4bd4c1099 SHA256 c81b49c3663a692bc27cc637ed7d8843a4270343dc1eb576358a9f0ea2ebf436
 MD5 65fd9a154b4573b796d581b443516502 gnome-light-2.16.1.ebuild 2101
 RMD160 81f00f46d22ee9b1d9af5bcdb263c3804aed14e8 gnome-light-2.16.1.ebuild 2101
 SHA256 c81b49c3663a692bc27cc637ed7d8843a4270343dc1eb576358a9f0ea2ebf436 gnome-light-2.16.1.ebuild 2101
-MISC ChangeLog 4863 RMD160 13a165fcfd19077cdcb36c7fca67e00653e4cb07 SHA1 7d5513f55f23f2ed8819dfa382286cf1d355fd0f SHA256 aafd9a1c57028cf040e226ddf16cdfcdf098d8ef607c5b88905346a4008d4b26
-MD5 4ef76c3b6851a4ad6139f0ecada45789 ChangeLog 4863
-RMD160 13a165fcfd19077cdcb36c7fca67e00653e4cb07 ChangeLog 4863
-SHA256 aafd9a1c57028cf040e226ddf16cdfcdf098d8ef607c5b88905346a4008d4b26 ChangeLog 4863
+EBUILD gnome-light-2.16.2.ebuild 2099 RMD160 a6da08e51d54e849f0898ac00aa55bedd0f7126b SHA1 351daa859ebaf4f8c71b36e87f6bc3be97a9c146 SHA256 e46de94acd25cd36d8c97c647110cfa7fc456d0f970f07213a577a0e07c29b44
+MD5 f823dac6cef0371dbe91f5f4db37ae21 gnome-light-2.16.2.ebuild 2099
+RMD160 a6da08e51d54e849f0898ac00aa55bedd0f7126b gnome-light-2.16.2.ebuild 2099
+SHA256 e46de94acd25cd36d8c97c647110cfa7fc456d0f970f07213a577a0e07c29b44 gnome-light-2.16.2.ebuild 2099
+MISC ChangeLog 5089 RMD160 5eeebd86565e300c1b81e63b101d7330fdb42927 SHA1 52524b3947c1494879ec9cd4b2dee98bd940e0df SHA256 f9e30258484068643fa98becbe4375cb2b80b73cacafc5d525124309b7a3038b
+MD5 8faf560c433f704402f6d25ffbee0929 ChangeLog 5089
+RMD160 5eeebd86565e300c1b81e63b101d7330fdb42927 ChangeLog 5089
+SHA256 f9e30258484068643fa98becbe4375cb2b80b73cacafc5d525124309b7a3038b ChangeLog 5089
 MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-gnome-light-2.12.0 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-gnome-light-2.12.0 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-gnome-light-2.12.0 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-gnome-light-2.14.0 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-gnome-light-2.14.0 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-gnome-light-2.14.0 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-gnome-light-2.16.0 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-gnome-light-2.16.0 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-gnome-light-2.16.0 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-gnome-light-2.16.1 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-gnome-light-2.16.1 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-gnome-light-2.16.1 1
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-light-2.12.0 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-gnome-light-2.12.0 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-gnome-light-2.12.0 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-light-2.14.0 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-gnome-light-2.14.0 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-gnome-light-2.14.0 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-light-2.16.1 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-gnome-light-2.16.1 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-gnome-light-2.16.1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-light-2.16.2 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-gnome-light-2.16.2 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-gnome-light-2.16.2 0
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.6-ecc01.6 (GNU/Linux)
+Version: GnuPG v1.4.6 (GNU/Linux)
 
-iD8DBQFFhvJ9KRy60XGEcJIRAjjYAKCxUCQi9m4K5tAvVBKDQd16q/aF9QCgi0LR
-n5gmNgSKUL59nZCo4N78rVQ=
-=gocE
+iD8DBQFFqfCGkeYb6olFHJcRAsvoAJ9HdrgzbRQXk+U66z2CS1KQhIrznQCgwUB8
+G3gW5OpmKjpau2hc53rgwuY=
+=j/dO
 -----END PGP SIGNATURE-----
