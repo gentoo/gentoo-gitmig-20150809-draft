@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/pe-format
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/ChangeLog,v 1.5 2007/01/08 19:51:50 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/ChangeLog,v 1.6 2007/01/14 02:56:54 tester Exp $
+
+  14 Jan 2007; Olivier Crête <tester@gentoo.org> pe-format-0.ebuild:
+  Stable on amd64
 
   08 Jan 2007; Tobias Scherbaum <dertobi123@gentoo.org> pe-format-0.ebuild:
   Stable on ppc wrt bug #159886.
