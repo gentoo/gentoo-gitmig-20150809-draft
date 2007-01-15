@@ -1,8 +1,7 @@
-Index: fbsd-6.1/libexec/rtld-elf/rtld.c
-===================================================================
---- fbsd-6.1.orig/libexec/rtld-elf/rtld.c
-+++ fbsd-6.1/libexec/rtld-elf/rtld.c
-@@ -894,6 +894,103 @@ find_library(const char *xname, const Ob
+diff -Nur libexec.old/rtld-elf/rtld.c libexec/rtld-elf/rtld.c
+--- libexec.old/rtld-elf/rtld.c	2007-01-15 21:30:30.000000000 +0100
++++ libexec/rtld-elf/rtld.c	2007-01-15 21:32:39.000000000 +0100
+@@ -894,6 +894,103 @@
      return NULL;
  }
  
@@ -106,7 +105,7 @@ Index: fbsd-6.1/libexec/rtld-elf/rtld.c
  /*
   * Given a symbol number in a referencing object, find the corresponding
   * definition of the symbol.  Returns a pointer to the symbol, or NULL if
-@@ -1165,17 +1262,29 @@ load_needed_objects(Obj_Entry *first)
+@@ -1165,17 +1262,33 @@
  
  	for (needed = obj->needed;  needed != NULL;  needed = needed->next) {
  	    const char *name = obj->strtab + needed->name;
@@ -116,13 +115,18 @@ Index: fbsd-6.1/libexec/rtld-elf/rtld.c
  
  	    needed->obj = NULL;
 -	    if (path == NULL && !ld_tracing)
-+	    if (paths == NULL)
- 		return -1;
+-		return -1;
 -
 -	    if (path) {
 -		needed->obj = load_object(path);
 -		if (needed->obj == NULL && !ld_tracing)
 -		    return -1;		/* XXX - cleanup */
++	    if (paths == NULL) {
++		if (ld_tracing)
++		    continue;
++		else
++		    return -1;
++	    }
 +		
 +	    while(*curpath) {
 +		if (needed->obj == NULL) {

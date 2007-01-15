@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/freebsd-pf-6.2_rc2.ebuild,v 1.1 2006/12/29 15:19:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/freebsd-pf-6.2.ebuild,v 1.1 2007/01/15 21:37:43 drizzt Exp $
 
 inherit bsdmk freebsd
 
@@ -26,6 +26,10 @@ S="${WORKDIR}"
 SUBDIRS="usr.sbin/authpf sbin/pfctl sbin/pflogd"
 
 PATCHES="${FILESDIR}/${PN}-6.0-pcap.patch"
+
+pkg_setup() {
+	enewgroup authpf 63
+}
 
 src_unpack() {
 	freebsd_src_unpack

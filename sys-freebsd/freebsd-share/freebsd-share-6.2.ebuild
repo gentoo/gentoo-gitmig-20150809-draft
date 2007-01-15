@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/freebsd-share-6.2_rc2.ebuild,v 1.2 2007/01/11 21:59:55 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/freebsd-share-6.2.ebuild,v 1.1 2007/01/15 21:39:29 drizzt Exp $
 
 inherit bsdmk freebsd
 

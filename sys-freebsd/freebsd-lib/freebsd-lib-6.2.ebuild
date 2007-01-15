@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2_rc2.ebuild,v 1.3 2007/01/04 13:42:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2.ebuild,v 1.1 2007/01/15 21:35:34 drizzt Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
