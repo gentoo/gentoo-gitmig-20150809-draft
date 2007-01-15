@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/mod_auth_pam-1.1.1-r1.ebuild,v 1.14 2007/01/15 21:51:53 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/mod_auth_pam-1.1.1-r2.ebuild,v 1.1 2007/01/15 21:51:53 chtekk Exp $
 
 inherit eutils apache-module
 
-KEYWORDS="~amd64 ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 DESCRIPTION="PAM authentication module for Apache."
 HOMEPAGE="http://pam.sourceforge.net/mod_auth_pam/"
@@ -41,7 +41,7 @@ src_unpack() {
 	cd "${S}"
 
 	use apache2 || epatch "${FILESDIR}/${P}-compile-fix.patch"
-	use apache2 && sed -i -e 's/servicename = "httpd"/servicename = "apache2"/' "${PN}.c"
+	use apache2 && epatch "${FILESDIR}/${P}-service_name.patch"
 	use apache2 || sed -i -e 's/servicename = "httpd"/servicename = "apache"/' "${PN}.c"
 }
 
