@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_macro
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_macro/ChangeLog,v 1.8 2006/11/29 21:03:22 swegener Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_macro/ChangeLog,v 1.9 2007/01/15 17:14:35 chtekk Exp $
+
+  15 Jan 2007; Luca Longinotti <chtekk@gentoo.org> metadata.xml,
+  mod_macro-1.1.2.ebuild, mod_macro-1.1.6.ebuild:
+  Cleanup.
 
   29 Nov 2006; Sven Wegener <swegener@gentoo.org> mod_macro-1.1.2.ebuild,
   mod_macro-1.1.6.ebuild:
