@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kelogviewer/kelogviewer-0.4.0.7.ebuild,v 1.3 2006/12/11 12:00:07 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kelogviewer/kelogviewer-0.4.0.7.ebuild,v 1.4 2007/01/15 09:42:18 opfer Exp $
 
 DESCRIPTION="KDE based utility to parse the contents of elogs created by Portage"
 HOMEPAGE="http://sourceforge.net/projects/elogviewer"
@@ -31,7 +31,7 @@ pkg_postinst() {
 	elog "in /etc/make.conf.example"
 	elog
 	elog "To operate properly this software needs the directory"
-	elog "$PORT_LOGDIR/elog created, belonging to group portage."
+	elog "${PORT_LOGDIR:-/var/log/portage}/elog created, belonging to group portage."
 	elog "To start the software as a user, add yourself to the portage"
 	elog "group."
 	elog
