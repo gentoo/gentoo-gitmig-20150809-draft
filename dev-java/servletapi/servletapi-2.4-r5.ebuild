@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.4-r5.ebuild,v 1.5 2007/01/12 17:39:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.4-r5.ebuild,v 1.6 2007/01/15 15:58:20 wltjr Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -20,12 +20,6 @@ DEPEND=">=virtual/jdk-1.4
 RDEPEND=">=virtual/jdk-1.4"
 
 S="${WORKDIR}/apache-tomcat-${TC_VERSION}-src/servletapi"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	#epatch ${FILESDIR}/gentoo-${P}-patch
-}
 
 src_compile() {
 	local antflags="jar $(use_doc javadoc examples)"

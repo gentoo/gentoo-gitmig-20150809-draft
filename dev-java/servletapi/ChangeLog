@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/servletapi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.55 2007/01/15 12:23:39 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.56 2007/01/15 15:58:20 wltjr Exp $
+
+  15 Jan 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -files/gentoo-servletapi-2.4-patch, -servletapi-2.2-r2.ebuild,
+  -servletapi-2.4-r2.ebuild, servletapi-2.4-r5.ebuild:
+  Removed older javaa gen 1 ebuilds, and removed unused 2.4 patch for ppc.
 
   15 Jan 2007; Steve Dibb <beandog@gentoo.org> servletapi-2.2-r3.ebuild,
   servletapi-2.3-r3.ebuild:
