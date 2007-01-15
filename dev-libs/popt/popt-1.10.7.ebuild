@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.10.7.ebuild,v 1.7 2007/01/13 23:34:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.10.7.ebuild,v 1.8 2007/01/15 16:26:55 vapier Exp $
 
 inherit eutils
 
@@ -21,6 +21,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-1.10.4-regression.patch
 	epatch "${FILESDIR}"/${PN}-1.10.4-lib64.patch
+	epatch "${FILESDIR}"/${PN}-1.10.7-scrub-lame-gettext.patch
 }
 
 src_compile() {
