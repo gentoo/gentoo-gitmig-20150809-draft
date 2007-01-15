@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.rc6-r1,v 1.1 2006/11/29 17:43:29 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.rc6-r1,v 1.2 2007/01/15 15:39:25 uberlord Exp $
 
 opts="depend checkconfig start stop reload"
 
@@ -12,7 +12,7 @@ depend() {
 			need net ;;
 	esac
 
-	need clock hostname
+	need clock hostname localmount
 	provide logger
 }
 
