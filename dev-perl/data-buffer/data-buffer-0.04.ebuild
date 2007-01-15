@@ -1,13 +1,13 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/data-buffer/data-buffer-0.04.ebuild,v 1.17 2006/08/06 02:16:46 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/data-buffer/data-buffer-0.04.ebuild,v 1.18 2007/01/15 16:38:51 mcummings Exp $
 
 inherit perl-module
 
 MY_P=Data-Buffer-${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Read/write buffer class"
-HOMEPAGE="http://search.cpan.org/CPAN/authors/id/B/BT/BTROTT/${MY_P}.readme"
+HOMEPAGE="http://search.cpan.org/~btrott/"
 SRC_URI="mirror://cpan/authors/id/B/BT/BTROTT/${MY_P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
@@ -17,4 +17,3 @@ IUSE=""
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"
