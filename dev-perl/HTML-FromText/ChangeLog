@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-FromText
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FromText/ChangeLog,v 1.16 2006/08/05 04:21:04 mcummings Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FromText/ChangeLog,v 1.17 2007/01/15 23:01:17 mcummings Exp $
+
+  15 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  -HTML-FromText-1.005.ebuild, HTML-FromText-2.05.ebuild:
+  Ebuild maintenance; marking ~mips, tested on swarm
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   HTML-FromText-1.005.ebuild, HTML-FromText-2.05.ebuild:
