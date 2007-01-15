@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>apache</herd>
-<herd>dotnet</herd>
-    <maintainer>
-        <email>ramereth@gentoo.org</email>
-        <name>Lance Albertson</name>
-    </maintainer>
-    <maintainer>
+	<herd>apache</herd>
+	<herd>dotnet</herd>
+	<maintainer>
+		<email>ramereth@gentoo.org</email>
+		<name>Lance Albertson</name>
+	</maintainer>
+	<maintainer>
 		<email>jurek@gentoo.org</email>
 		<name>Jurek Bartuszek</name>
 	</maintainer>
