@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/noscript/noscript-1.1.4.5.061221.ebuild,v 1.9 2007/01/08 18:50:55 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/noscript/noscript-1.1.4.5.061221.ebuild,v 1.10 2007/01/15 15:33:49 vapier Exp $
 
 inherit mozextension multilib
 
@@ -8,9 +8,9 @@ DESCRIPTION="Firefox plugin to disable javascript"
 HOMEPAGE="https://addons.mozilla.org/firefox/722/ http://noscript.net/"
 SRC_URI="http://releases.mozilla.org/pub/mozilla.org/extensions/noscript/${P}-fx+fl+mz+zm.xpi"
 
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86"
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND=">=www-client/mozilla-firefox-1.5.0.7"
