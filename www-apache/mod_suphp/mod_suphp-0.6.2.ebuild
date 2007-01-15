@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/mod_suphp-0.6.2.ebuild,v 1.1 2006/11/29 05:22:18 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/mod_suphp-0.6.2.ebuild,v 1.2 2007/01/15 19:20:07 chtekk Exp $
 
 inherit apache-module eutils
 
@@ -8,14 +8,14 @@ MY_P="${P/mod_/}"
 
 SETIDMODES="mode-force mode-owner mode-paranoid"
 
-DESCRIPTION="A PHP wrapper for Apache."
+KEYWORDS="~amd64 ~ppc ~x86"
+
+DESCRIPTION="A PHP wrapper for Apache2."
 HOMEPAGE="http://www.suphp.org/"
 SRC_URI="http://www.suphp.org/download/${MY_P}.tar.gz"
-
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="checkpath ${SETIDMODES}"
 SLOT="0"
+IUSE="checkpath ${SETIDMODES}"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -27,22 +27,22 @@ APXS2_S="${S}/src/apache2"
 APACHE2_MOD_CONF="70_${PN}"
 APACHE2_MOD_DEFINE="SUPHP"
 
-need_apache 2.x
+need_apache2
 
 pkg_setup() {
 	modecnt=0
-	for mode in ${SETIDMODES}; do
-		if use ${mode}; then
-			if [[ ${modecnt} -eq 0 ]]; then
+	for mode in ${SETIDMODES} ; do
+		if use ${mode} ; then
+			if [[ ${modecnt} -eq 0 ]] ; then
 				SUPHP_SETIDMODE=${mode/mode-}
 				let modecnt++
-			elif [[ ${modecnt} -ge 1 ]]; then
+			elif [[ ${modecnt} -ge 1 ]] ; then
 				die "You can only select ONE mode in your USE flags!"
 			fi
 		fi
 	done
 
-	if [[ ${modecnt} -eq 0 ]]; then
+	if [[ ${modecnt} -eq 0 ]] ; then
 		ewarn
 		ewarn "No mode selected, defaulting to paranoid!"
 		ewarn
@@ -71,7 +71,7 @@ pkg_setup() {
 }
 
 src_compile() {
-	local myargs=
+	local myargs=""
 	use checkpath || myargs="${myargs} --disable-checkpath"
 
 	myargs="${myargs} \
@@ -101,8 +101,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	# make suphp setuid
-	chmod 4755 /usr/sbin/suphp
+	# Make the suphp binary setuid
+	chmod 4755 "${ROOT}"/usr/sbin/suphp
 
 	apache-module_pkg_postinst
 }
