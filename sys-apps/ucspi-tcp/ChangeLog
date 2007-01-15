@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/ucspi-tcp
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.53 2006/10/16 15:51:51 corsair Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.54 2007/01/15 21:24:20 hansmi Exp $
+
+*ucspi-tcp-0.88-r16 (15 Jan 2007)
+
+  15 Jan 2007; Michael Hanselmann <hansmi@gentoo.org>
+  +ucspi-tcp-0.88-r16.ebuild:
+  Drop IPv6 and SSL patches, add support for UCSPI_TCP_PATCH_DIR variable
+  instead. General cleanup.
 
   16 Oct 2006; Markus Rothe <corsair@gentoo.org> ucspi-tcp-0.88-r15.ebuild:
   Stable on ppc64
