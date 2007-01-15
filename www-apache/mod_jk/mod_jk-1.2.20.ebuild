@@ -1,27 +1,30 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.20.ebuild,v 1.3 2007/01/09 17:54:38 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.20.ebuild,v 1.4 2007/01/15 16:45:26 chtekk Exp $
 
 inherit apache-module autotools
 
 MY_P="tomcat-connectors-${PV}-src"
 
-DESCRIPTION="JK module for connecting Tomcat and Apache using the ajp13 protocol"
-HOMEPAGE="http://tomcat.apache.org/connectors-doc"
-SRC_URI="mirror://apache/tomcat/tomcat-connectors/jk/source/jk-${PV}/${MY_P}.tar.gz"
+KEYWORDS="~amd64 ~ppc ~x86"
 
+DESCRIPTION="JK module for connecting Tomcat and Apache using the ajp13 protocol."
+HOMEPAGE="http://tomcat.apache.org/connectors-doc/"
+SRC_URI="mirror://apache/tomcat/tomcat-connectors/jk/source/jk-${PV}/${MY_P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="apache2"
+IUSE=""
+
+DEPEND=""
+RDEPEND=""
 
 S="${WORKDIR}/${MY_P}/native"
 
-APACHE1_MOD_FILE="${S}/apache-1.3/mod_jk.so"
+APACHE1_MOD_FILE="${S}/apache-1.3/${PN}.so"
 APACHE1_MOD_CONF="88_${PN}"
 APACHE1_MOD_DEFINE="JK"
 
-APACHE2_MOD_FILE="${S}/apache-2.0/mod_jk.so"
+APACHE2_MOD_FILE="${S}/apache-2.0/${PN}.so"
 APACHE2_MOD_CONF="88_${PN}"
 APACHE2_MOD_DEFINE="JK"
 
@@ -31,7 +34,7 @@ need_apache
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	eautoreconf
 }
@@ -45,13 +48,13 @@ src_compile() {
 		--with-apxs=${apxs} \
 		--with-apr-config=/usr/bin/apr-config \
 		|| die "econf failed"
-	emake LIBTOOL="/bin/sh $(pwd)/libtool --silent" || die "make failed"
+	emake LIBTOOL="/bin/sh $(pwd)/libtool --silent" || die "emake failed"
 }
 
 src_install() {
 	# install the workers.properties file
-	insinto ${APACHE_CONFDIR}
-	doins ${FILESDIR}/jk-workers.properties
+	insinto "${APACHE_CONFDIR}"
+	doins "${FILESDIR}/jk-workers.properties"
 
 	# call the nifty default src_install :-)
 	apache-module_src_install
