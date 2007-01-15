@@ -1,9 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.1.1.ebuild,v 1.2 2007/01/10 19:42:27 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.1.1.ebuild,v 1.3 2007/01/15 11:20:58 beandog Exp $
 
-MY_P=${PN}3a1
-S=${WORKDIR}/${PN}
+MY_P="${PN}3a1"
+S="${WORKDIR}/${PN}"
 DESCRIPTION="library providing functions for Scheme implementations"
 SRC_URI="http://swissnet.ai.mit.edu/ftpdir/scm/OLD/${MY_P}.zip"
 HOMEPAGE="http://swissnet.ai.mit.edu/~jaffer/SLIB.html"
