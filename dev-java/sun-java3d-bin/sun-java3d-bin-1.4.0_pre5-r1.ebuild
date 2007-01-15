@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-java3d-bin/sun-java3d-bin-1.4.0_pre5-r1.ebuild,v 1.1 2007/01/12 12:02:50 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-java3d-bin/sun-java3d-bin-1.4.0_pre5-r1.ebuild,v 1.2 2007/01/15 11:13:44 caster Exp $
 
 inherit java-pkg-2
 
@@ -22,7 +22,7 @@ SLOT="0"
 LICENSE="sun-jrl sun-jdl"
 IUSE=""
 DEPEND="app-arch/unzip"
-RDEPEND=">=virtual/jre-1.3"
+RDEPEND=">=virtual/jre-1.4"
 
 S=${WORKDIR}/${A/.zip/}
 
