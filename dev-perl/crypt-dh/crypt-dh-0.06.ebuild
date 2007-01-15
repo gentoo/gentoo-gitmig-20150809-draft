@@ -1,13 +1,13 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dh/crypt-dh-0.06.ebuild,v 1.9 2006/08/06 02:12:28 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dh/crypt-dh-0.06.ebuild,v 1.10 2007/01/15 15:32:33 mcummings Exp $
 
 inherit perl-module
 
 MY_P=Crypt-DH-${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Diffie-Hellman key exchange system"
-HOMEPAGE="http://search.cpan.org/CPAN/authors/id/B/BT/BTROTT/${MY_P}.readme"
+HOMEPAGE="http://search.cpan.org/~btrott/"
 SRC_URI="mirror://cpan/authors/id/B/BT/BTROTT/${MY_P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
@@ -19,5 +19,3 @@ DEPEND="dev-perl/math-pari
 	>=virtual/perl-Math-BigInt-1.60
 	dev-perl/crypt-random
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
-

@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Checksums/CPAN-Checksums-1.050.ebuild,v 1.5 2007/01/07 19:21:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Checksums/CPAN-Checksums-1.050.ebuild,v 1.6 2007/01/15 15:26:32 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Write a CHECKSUMS file for a directory as on CPAN"
-HOMEPAGE="http://search.cpan.org/~andk/${P}/"
+HOMEPAGE="http://search.cpan.org/~andk/"
 SRC_URI="mirror://cpan/authors/id/A/AN/ANDK/${P}.tar.gz"
 
 LICENSE="Artistic"
@@ -22,4 +22,3 @@ DEPEND="dev-perl/Data-Compare
 		virtual/perl-File-Temp
 		virtual/perl-Digest-MD5
 	dev-lang/perl"
-RDEPEND="${DEPEND}"

@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenPGP/Crypt-OpenPGP-1.03.ebuild,v 1.14 2006/08/17 21:14:08 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenPGP/Crypt-OpenPGP-1.03.ebuild,v 1.15 2007/01/15 15:34:19 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Pure-Perl OpenPGP-compatible PGP implementation"
-HOMEPAGE="http://search.cpan.org/~btrott/${P}/"
+HOMEPAGE="http://search.cpan.org/~btrott/"
 SRC_URI="mirror://cpan/authors/id/B/BT/BTROTT/${P}.tar.gz"
 
 LICENSE="Artistic"
@@ -43,4 +43,3 @@ DEPEND=">=dev-perl/data-buffer-0.04
 		>=dev-perl/Crypt-Twofish-2.00
 		dev-perl/ExtUtils-AutoInstall
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
