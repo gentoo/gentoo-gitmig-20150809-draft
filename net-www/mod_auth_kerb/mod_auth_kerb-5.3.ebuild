@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_kerb/mod_auth_kerb-5.3.ebuild,v 1.1 2007/01/07 16:29:45 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_kerb/mod_auth_kerb-5.3.ebuild,v 1.2 2007/01/15 06:29:15 tove Exp $
 
 MY_PV="${PV/_rc/rc}"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://modauthkerb.sourceforge.net/"
 SRC_URI="mirror://sourceforge/modauthkerb/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="as-is"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="apache2"
 SLOT="0"
 
