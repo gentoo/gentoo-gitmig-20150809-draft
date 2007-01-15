@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/gwget
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/ChangeLog,v 1.10 2006/08/05 23:07:52 chriswhite Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/ChangeLog,v 1.11 2007/01/15 01:31:39 dang Exp $
+
+  15 Jan 2007; Daniel Gryniewicz <dang@gentoo.org>
+  -files/gwget-0.94-epiphany-path-fix.patch, -gwget-0.94.ebuild:
+  Remove old version; fixes bug #160040
 
   05 Aug 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
   metadata.xml translation by Yoshino-san in bug #135466
