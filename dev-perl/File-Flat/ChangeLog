@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-Flat
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Flat/ChangeLog,v 1.37 2006/10/23 18:55:00 gustavoz Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Flat/ChangeLog,v 1.38 2007/01/15 19:03:56 mcummings Exp $
+
+  15 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  File-Flat-0.96.ebuild:
+  Marking ~mips, tested on swarm
 
   23 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> File-Flat-0.96.ebuild:
   Stable on hppa
