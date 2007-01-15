@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/libburn-0.2.2.ebuild,v 1.1 2006/10/08 02:06:23 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/libburn-0.2.2.ebuild,v 1.2 2007/01/15 02:28:34 metalgod Exp $
 
 DESCRIPTION="Libburn is an open-source library for reading, mastering and writing optical discs."
-HOMEPAGE="http://libburn.pykix.org/"
-SRC_URI="http://libburn-download.pykix.org/releases/${P}.tar.gz"
+HOMEPAGE="http://libburnia.pykix.org/"
+SRC_URI="http://libburnia-download.pykix.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
