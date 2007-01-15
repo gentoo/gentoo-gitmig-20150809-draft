@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Festival-Client-Async
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Festival-Client-Async/ChangeLog,v 1.12 2006/11/24 17:47:56 mcummings Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Festival-Client-Async/ChangeLog,v 1.13 2007/01/15 18:49:59 mcummings Exp $
+
+  15 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  Festival-Client-Async-0.0303.ebuild:
+  Ebuild maintenance
 
   24 Nov 2006; Michael Cummings <mcummings@gentoo.org>
   Festival-Client-Async-0.0303.ebuild:
