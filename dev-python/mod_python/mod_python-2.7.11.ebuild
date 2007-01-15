@@ -1,19 +1,22 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-2.7.11.ebuild,v 1.5 2007/01/11 19:25:40 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-2.7.11.ebuild,v 1.6 2007/01/15 19:59:55 chtekk Exp $
 
-inherit python apache-module
+inherit python apache-module multilib
 
-DESCRIPTION="Python module for Apache 1.x, not for Apache 2.x"
-SRC_URI="mirror://apache/httpd/modpython/${P}.tgz"
+KEYWORDS="~amd64 x86"
+
+DESCRIPTION="An Apache1 module providing an embedded Python interpreter."
 HOMEPAGE="http://www.modpython.org/"
-
+SRC_URI="mirror://apache/httpd/modpython/${P}.tgz"
 LICENSE="as-is"
-KEYWORDS="x86 ~amd64"
 SLOT="0"
 IUSE=""
 
-#APACHE1_MOD_CONF="16_${PN}-r1"
+DEPEND="dev-lang/python"
+RDEPEND="${DEPEND}"
+
+APACHE1_MOD_CONF="16_${PN}"
 APACHE1_MOD_DEFINE="PYTHON"
 
 DOCFILES="COPYRIGHT CREDITS NEWS README"
@@ -25,34 +28,30 @@ src_compile() {
 	# because the last task (make depend) is somehow borked
 	echo 'echo "configure done"' >> configure
 
-	sed -ie 's:OPT=:OPT=$(OPTFLAGS):' ${S}/src/Makefile.in
-	sed -ie 's/\(\\"thread\\" in sys.builtin_module_names\)/int(\1)/' ${S}/configure
+	sed -ie 's:OPT=:OPT=$(OPTFLAGS):' "${S}/src/Makefile.in"
+	sed -ie 's/\(\\"thread\\" in sys.builtin_module_names\)/int(\1)/' "${S}/configure"
 
 	export OPTFLAGS="`/usr/sbin/apxs -q CFLAGS` -fPIC"
-	econf --with-apxs=${APXS1}
+	econf --with-apxs=${APXS1} || die "econf failed"
 
-	sed -ie 's:LIBEXECDIR=:LIBEXECDIR=${D}:' Makefile
-	sed -ie 's:PY_STD_LIB=:PY_STD_LIB=${D}:' Makefile
-	sed -ie 's:CFLAGS=$(OPT) $(INCLUDES):CFLAGS=$(OPT) $(INCLUDES) -DEAPI -O0:' ${S}/src/Makefile
+	sed -ie 's:LIBEXECDIR=:LIBEXECDIR=${D}:' "Makefile"
+	sed -ie 's:PY_STD_LIB=:PY_STD_LIB=${D}:' "Makefile"
+	sed -ie 's:CFLAGS=$(OPT) $(INCLUDES):CFLAGS=$(OPT) $(INCLUDES) -DEAPI -O0:' "${S}/src/Makefile"
 	emake || die "emake failed"
 }
 
 src_install() {
 	python_version
-	PY_LIBPATH="/usr/lib/python${PYVER}"
-
-	dodir ${APACHE1_MODULESDIR}
-	dodir ${PY_LIBPATH}
+	PY_LIBPATH="/usr/$(get_libdir)/python${PYVER}"
+	dodir "${PY_LIBPATH}"
 
 	# compileall.py is needed or make install will fail
-	cp ${PY_LIBPATH}/compileall.py ${D}${PY_LIBPATH}
-	emake install || die
-	rm ${D}${PY_LIBPATH}/compileall.py
+	cp -f "${PY_LIBPATH}/compileall.py" "${D}${PY_LIBPATH}/compileall.py"
+	emake DESTDIR="${D}" install || die "emake install failed"
+	rm -f "${D}${PY_LIBPATH}/compileall.py"
 
-	insinto /usr/share/doc/${PF}/html
+	insinto "/usr/share/doc/${PF}/html"
 	doins -r doc-html/*
 
 	apache-module_src_install
-	insinto ${APACHE1_MODULES_CONFDIR}
-	newins ${FILESDIR}/16_${PN}-r1.conf 16_${PN}.conf
 }
