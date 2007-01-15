@@ -1,13 +1,13 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/class-loader/class-loader-2.03.ebuild,v 1.8 2006/08/06 02:07:57 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/class-loader/class-loader-2.03.ebuild,v 1.9 2007/01/15 14:49:42 mcummings Exp $
 
 inherit perl-module
 
 MY_P=Class-Loader-${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Load modules and create objects on demand"
-HOMEPAGE="http://search.cpan.org/CPAN/authors/id/V/VI/VIPUL/${MY_P}.readme"
+HOMEPAGE="http://search.cpan.org/~vipul/"
 SRC_URI="mirror://cpan/authors/id/V/VI/VIPUL/${MY_P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
@@ -17,4 +17,3 @@ IUSE=""
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"
