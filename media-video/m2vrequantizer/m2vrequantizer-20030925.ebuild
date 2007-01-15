@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/m2vrequantizer/m2vrequantizer-20030925.ebuild,v 1.1 2007/01/15 16:10:11 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/m2vrequantizer/m2vrequantizer-20030925.ebuild,v 1.2 2007/01/15 16:50:31 hd_brummy Exp $
 
 MY_P="${PN/m2vr/M2VR}-${PV}"
 
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
 
-DEPEND=""
+DEPEND="!media-video/requant"
 
 S=${WORKDIR}/${MY_P}/src
 
