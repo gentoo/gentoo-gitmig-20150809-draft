@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Bzip2/Compress-Bzip2-2.09.ebuild,v 1.9 2006/08/05 00:55:55 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Bzip2/Compress-Bzip2-2.09.ebuild,v 1.10 2007/01/15 15:04:32 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="A Bzip2 perl module"
-HOMEPAGE="http://cpan.pair.com/modules/by-module/Compress/${P}.readme"
+HOMEPAGE="http://search.cpan.org/~arjay/"
 SRC_URI="mirror://cpan/modules/by-module/Compress/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
@@ -15,7 +15,6 @@ IUSE=""
 
 DEPEND="app-arch/bzip2
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 SRC_TEST="do"
 

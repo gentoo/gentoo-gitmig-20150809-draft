@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Compress-Bzip2
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Bzip2/ChangeLog,v 1.9 2006/08/05 00:55:55 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Bzip2/ChangeLog,v 1.10 2007/01/15 15:04:32 mcummings Exp $
+
+  15 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  Compress-Bzip2-2.09.ebuild:
+  Ebuild maintenance
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Compress-Bzip2-2.09.ebuild:
