@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/groupoffice/groupoffice-2.16.8.ebuild,v 1.1 2007/01/14 16:10:23 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/groupoffice/groupoffice-2.16.8.ebuild,v 1.2 2007/01/15 17:48:52 rl03 Exp $
 
 inherit eutils webapp depend.php versionator
 
@@ -40,7 +40,7 @@ src_install() {
 	dodir ${MY_HOSTROOTDIR}/${P}/userdata ${MY_HTDOCSDIR}/local
 
 	webapp_serverowned ${MY_HTDOCSDIR}
-	webapp_serverowned ${MY_HOSTROOTDIR}/${P}/userdata
+	webapp_serverowned -R ${MY_HOSTROOTDIR}/${P}/userdata
 	webapp_serverowned ${MY_HTDOCSDIR}/local
 	webapp_configfile ${MY_HTDOCSDIR}/config.php
 

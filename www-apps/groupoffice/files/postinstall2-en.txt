@@ -6,3 +6,4 @@ Local data are stored in ${MY_INSTALLDIR}/local
 
 When you are done with the installation,
 rm -Rf ${MY_INSTALLDIR}/install/
+or use an .htaccess file to secure the installation directory.
