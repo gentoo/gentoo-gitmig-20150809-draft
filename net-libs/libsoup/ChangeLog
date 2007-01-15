@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.106 2007/01/14 19:34:13 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.107 2007/01/15 00:10:59 metalgod Exp $
+
+  15 Jan 2007; Luis Medinas <metalgod@gentoo.org> libsoup-2.2.99.ebuild:
+  Stable on amd64. See security bug #161887.
 
   14 Jan 2007; Mart Raudsepp <leio@gentoo.org>
   -files/libsoup-1.99.26-msn.patch, -files/libsoup-1.99.26-with_ssl.patch,
