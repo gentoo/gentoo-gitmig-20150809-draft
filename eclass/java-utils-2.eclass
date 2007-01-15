@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.42 2007/01/15 00:01:21 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.43 2007/01/15 21:03:24 betelgeuse Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -183,6 +183,13 @@ java-pkg_dojar() {
 
 		# check if it exists
 		if [[ -e "${jar}" ]] ; then
+			# Don't overwrite if jar has already been installed with the same
+			# name
+			local dest="${D}${JAVA_PKG_JARDEST}/${jar_basename}"
+			if [[ -e "${dest}" ]]; then
+				ewarn "Overwriting ${dest}"
+			fi
+
 			# install it into JARDEST if it's a non-symlink
 			if [[ ! -L "${jar}" ]] ; then
 				INSDESTTREE="${JAVA_PKG_JARDEST}" \
@@ -732,6 +739,11 @@ java-pkg_jar-from() {
 		shift
 	fi
 
+	if [[ "${1}" = "--with-dependencies" ]]; then
+		local deep="--with-dependencies"
+		shift
+	fi
+
 	local target_pkg="${1}" target_jar="${2}" destjar="${3}"
 
 	[[ -z ${target_pkg} ]] && die "Must specify a package"
@@ -741,7 +753,7 @@ java-pkg_jar-from() {
 
 	local error_msg="There was a problem getting the classpath for ${target_pkg}."
 	local classpath
-	classpath="$(java-config --classpath=${target_pkg})"
+	classpath="$(java-config ${deep} --classpath=${target_pkg})"
 	[[ $? != 0 ]] && die ${error_msg}
 
 	local jar
@@ -812,10 +824,15 @@ java-pkg_getjars() {
 		shift
 	fi
 
+	if [[ "${1}" = "--with-dependencies" ]]; then
+		local deep="--with-dependencies"
+		shift
+	fi
+
 	[[ ${#} -ne 1 ]] && die "${FUNCNAME} takes only one argument besides --build-only"
 
 	local classpath pkgs="${1}"
-	jars="$(java-config --classpath=${pkgs})"
+	jars="$(java-config ${deep} --classpath=${pkgs})"
 	[[ -z "${jars}" ]] && die "java-config --classpath=${pkgs} failed"
 	debug-print "${pkgs}:${jars}"
 
