@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/bewan-adsl-0.9.3-r2.ebuild,v 1.4 2006/12/20 19:33:17 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/bewan-adsl-0.9.3-r2.ebuild,v 1.5 2007/01/15 21:35:18 mrness Exp $
 
 inherit eutils linux-mod
 
@@ -75,8 +75,8 @@ src_compile() {
 src_install() {
 	linux-mod_src_install
 
+	# Install tools
 	cd "${S}"
-	#Install tools
 	dodir /usr/bin
 	cd "${S}/tools" && einstall DESTDIR="${D}" prefix=/usr || \
 		die "Cannot install tools"
@@ -84,7 +84,7 @@ src_install() {
 		die "Cannot install unicorntest"
 	doman "${S}/Documentation/unicorntest.8"
 
-	#Install documantation	
+	# Install documentation	
 	cd "${S}"
 	dodoc README
 	docinto RFCs
@@ -94,11 +94,14 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "To load the driver do 'modprobe unicorn_atm' and 'modprobe unicorn_pci' "
-	einfo "and then do what you want with it (configure your pppd)"
-	einfo "OR"
-	einfo "it's time to look at the README file, the scripts directory gives you"
-	einfo "two comprehensive ways to load the driver, configure pppd and launch it."
-
+	einfo "The following modules are available:"
+	einfo "   $(echo $MODULE_NAMES | sed s/\([^\)]*\)//g)"
+	echo
+	ewarn "You might need to use hotplug's blacklisting mechanism in order to prevent the"
+	ewarn "loading of an incorrect module at boot time, e.g. in case unicorn_pci_eth is"
+	ewarn "automatically loaded but you happen to need unicorn_pci_atm instead. List the"
+	ewarn "unwanted module in /etc/hotplug/blacklist. You might also need to blacklist it"
+	ewarn "in modprobe, see modprobe.conf(5)."
+	echo
 	linux-mod_pkg_postinst
 }
