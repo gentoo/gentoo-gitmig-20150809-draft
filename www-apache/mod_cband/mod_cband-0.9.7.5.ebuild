@@ -1,17 +1,20 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_cband/mod_cband-0.9.7.5.ebuild,v 1.2 2006/11/29 21:10:57 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_cband/mod_cband-0.9.7.5.ebuild,v 1.3 2007/01/15 16:00:27 chtekk Exp $
 
 inherit apache-module
 
-DESCRIPTION="Apache 2 bandwidth quota and throttling module"
-HOMEPAGE="http://cband.linux.pl/"
-LICENSE="GPL-2"
-SRC_URI="http://cband.linux.pl/download/mod-cband-${PV}.tgz"
-
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+
+DESCRIPTION="Apache2 bandwidth quota and throttling module."
+HOMEPAGE="http://cband.linux.pl/"
+SRC_URI="http://cband.linux.pl/download/mod-cband-${PV}.tgz"
+LICENSE="GPL-2"
 SLOT="0"
+IUSE=""
+
+DEPEND=""
+RDEPEND=""
 
 S="${WORKDIR}/mod-cband-${PV}"
 
@@ -19,8 +22,10 @@ DOCFILES="conf/vhosts3.conf.example \
 		conf/vhosts2.conf.example \
 		conf/vhosts.conf.example \
 		Changes AUTHORS doc/*"
+
+APACHE2_MOD_CONF="10_${PN}"
 APACHE2_MOD_DEFINE="CBAND"
-APACHE2_MOD_CONF="10_mod_cband"
-APXS2_ARGS="-DDST_CLASS=3 -c mod_cband.c"
+
+APXS2_ARGS="-DDST_CLASS=3 -c ${PN}.c"
 
 need_apache2

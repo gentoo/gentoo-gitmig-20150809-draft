@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_chroot
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_chroot/ChangeLog,v 1.8 2006/06/05 17:12:21 hollow Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_chroot/ChangeLog,v 1.9 2007/01/15 16:04:23 chtekk Exp $
+
+  15 Jan 2007; Luca Longinotti <chtekk@gentoo.org> mod_chroot-0.4.ebuild,
+  mod_chroot-0.5.ebuild:
+  Cleanup.
 
 *mod_chroot-0.5 (05 Jun 2006)
 

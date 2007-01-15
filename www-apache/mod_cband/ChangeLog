@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_cband
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_cband/ChangeLog,v 1.7 2006/11/29 21:10:57 swegener Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_cband/ChangeLog,v 1.8 2007/01/15 16:00:27 chtekk Exp $
+
+  15 Jan 2007; Luca Longinotti <chtekk@gentoo.org> metadata.xml,
+  mod_cband-0.9.7.2.ebuild, mod_cband-0.9.7.5.ebuild:
+  Cleanup.
 
   29 Nov 2006; Sven Wegener <swegener@gentoo.org> mod_cband-0.9.7.5.ebuild:
   Add ~amd64 keyword.
