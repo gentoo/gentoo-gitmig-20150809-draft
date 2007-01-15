@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.41 2007/01/12 16:12:15 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.42 2007/01/15 00:01:21 caster Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -552,10 +552,10 @@ java-pkg_dosrc() {
 #  --main the.main.class.too.start
 #  --jar /the/jar/too/launch.jar or just <name>.jar
 #  --java_args 'Extra arguments to pass to java'
-#  --pkg_args 'Extra arguments too pass to the package'
-#  --pwd
-#  -into
-#  -pre
+#  --pkg_args 'Extra arguments to pass to the package'
+#  --pwd Directory the launcher changes to before executing java
+#  -into Directory to install the launcher to, instead of /usr/bin
+#  -pre Prepend contents of this file to the launcher
 # ------------------------------------------------------------------------------
 java-pkg_dolauncher() {
 	debug-print-function ${FUNCNAME} $*
@@ -606,7 +606,13 @@ java-pkg_dolauncher() {
 
 	# Write the actual script
 	echo "#!/bin/bash" > "${target}"
-	[[ -n "${pre}" ]] && [[ -f "${pre}" ]] && cat "${pre}" >> "${target}"
+	if [[ -n "${pre}" ]]; then
+		if [[ -f "${pre}" ]]; then
+			cat "${pre}" >> "${target}"
+		else
+			die "-pre specified file '${pre}' does not exist"
+		fi
+	fi
 	echo "gjl_package=${JAVA_PKG_NAME}" >> "${target}"
 	cat "${var_tmp}" >> "${target}"
 	rm -f "${var_tmp}"
