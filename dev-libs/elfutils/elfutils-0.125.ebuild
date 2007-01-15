@@ -1,19 +1,18 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.118.ebuild,v 1.18 2007/01/15 16:34:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.125.ebuild,v 1.1 2007/01/15 16:34:08 vapier Exp $
 
-inherit eutils
+inherit eutils autotools
 
 PVER="1.0"
 DESCRIPTION="Libraries/utilities to handle ELF objects (drop in replacement for libelf)"
 HOMEPAGE="http://people.redhat.com/drepper/"
 SRC_URI="ftp://sources.redhat.com/pub/systemtap/${PN}/${P}.tar.gz
-	http://dev.gentoo.org/~azarah/${PN}/${P}-patches-${PVER}.tar.bz2
 	mirror://gentoo/${P}-patches-${PVER}.tar.bz2"
 
 LICENSE="OpenSoftware"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE=""
 
 # This pkg does not actually seem to compile currently in a uClibc
@@ -22,23 +21,19 @@ IUSE=""
 DEPEND="elibc_glibc? ( >=sys-libs/glibc-2.3.2 )
 	sys-devel/gettext
 	sys-devel/autoconf
+	>=sys-devel/binutils-2.15.90.0.1
+	>=sys-devel/gcc-3.3.3
 	!dev-libs/libelf"
 RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
-
 	cd "${S}"
-	EPATCH_SUFFIX="patch" \
-	epatch "${WORKDIR}"/patch/
-	epatch "${FILESDIR}"/${P}-glibc-hacks.patch #130121
-	epatch "${FILESDIR}"/${P}-libelf-link.patch
-	epatch "${FILESDIR}"/${P}-PaX-support.patch
-	epatch "${FILESDIR}"/${P}-no-nested-functions.patch #116968
+	epatch "${WORKDIR}"/patch/*.patch
+	# this will make more files +x than need be, but who cares really
+	chmod a+rx config/*
 
-	# Needed by ${P}-portability.patch
-	autoreconf || die
-
+	AT_M4DIR="${S}/m4" eautoreconf
 	find . -name Makefile.in -print0 | xargs -0 sed -i -e 's:-W\(error\|extra\)::g'
 }
 
@@ -56,6 +51,6 @@ src_test() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS NOTES README THANKS TODO
 }
