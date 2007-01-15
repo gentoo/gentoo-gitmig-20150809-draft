@@ -6,4 +6,12 @@
   <email>gregkh@gentoo.org</email>
   <name>Greg Kroah-Hartman</name>
 </maintainer>
+<maintainer>
+  <email>cardoe@gentoo.org</email>
+  <name>Doug Goldstein</name>
+</maintainer>
+<maintainer>
+  <email>zzam@gentoo.org</email>
+  <name>Matthias Schwarzott</name>
+</maintainer>
 </pkgmetadata>
