@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.211 2007/01/14 19:59:05 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.212 2007/01/15 18:00:24 kloeri Exp $
+
+  15 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
+  xorg-server-1.1.1-r4.ebuild:
+  Stable on Alpha, bug 157421.
 
   14 Jan 2007; René Nussbaumer <killerfox@gentoo.org>
   xorg-server-1.1.1-r4.ebuild:
