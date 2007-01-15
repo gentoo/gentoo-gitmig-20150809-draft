@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksirc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirc/ChangeLog,v 1.65 2007/01/15 18:19:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirc/ChangeLog,v 1.66 2007/01/15 19:03:17 dertobi123 Exp $
+
+  15 Jan 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  ksirc-3.5.5-r1.ebuild:
+  Stable on ppc wrt bug #159658.
 
   15 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> ksirc-3.5.5-r1.ebuild:
   Stable on sparc wrt security #159658
