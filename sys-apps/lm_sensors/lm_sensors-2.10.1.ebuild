@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.10.1.ebuild,v 1.3 2007/01/14 20:17:37 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.10.1.ebuild,v 1.4 2007/01/15 11:28:24 phreak Exp $
 
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib
 
@@ -124,7 +124,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-	einfo "Please run \`emerge --config =${P}' in order to setup"
+	einfo "Please run \`/usr/sbin/sensors-detect' in order to setup"
 	einfo "/etc/conf.d/lm_sensors."
 	einfo
 	einfo "/etc/conf.d/lm_sensors is vital to the init-script."
@@ -143,10 +143,4 @@ pkg_postinst() {
 	einfo "Please refer to the lm_sensors documentation for more information."
 	einfo "(http://www.lm-sensors.org/wiki/Documentation)"
 	einfo
-}
-
-pkg_config() {
-	ebegin "Executing /usr/sbin/sensors-detect"
-	${ROOT}usr/sbin/sensors-detect
-	eend $?
 }
