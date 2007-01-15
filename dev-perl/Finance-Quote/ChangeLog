@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Finance-Quote
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-Quote/ChangeLog,v 1.37 2006/10/14 16:06:26 tcort Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-Quote/ChangeLog,v 1.38 2007/01/15 19:47:00 mcummings Exp $
+
+  15 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  -Finance-Quote-1.08-r1.ebuild, -Finance-Quote-1.10.ebuild,
+  Finance-Quote-1.11.ebuild:
+  Ebuild maintenance
 
   14 Oct 2006; Thomas Cort <tcort@gentoo.org> Finance-Quote-1.11.ebuild:
   Stable on alpha.

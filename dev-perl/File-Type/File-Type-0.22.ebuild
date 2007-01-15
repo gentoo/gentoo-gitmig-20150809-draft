@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Type/File-Type-0.22.ebuild,v 1.13 2006/08/07 22:57:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Type/File-Type-0.22.ebuild,v 1.14 2007/01/15 19:44:13 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="determine file type using magic "
 SRC_URI="mirror://cpan/authors/id/P/PM/PMISON/${P}.tar.gz"
-HOMEPAGE="http://www.cpan.org/modules/by-module/File/${P}.readme"
+HOMEPAGE="http://search.cpan.org/~pmison/"
 
 SLOT="0"
 LICENSE="Artistic"
@@ -16,6 +16,3 @@ SRC_TEST="do"
 
 DEPEND=">=dev-perl/module-build-0.28
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
-
-

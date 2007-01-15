@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/FileHandle-Unget/FileHandle-Unget-0.16.21.ebuild,v 1.6 2006/08/05 04:00:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/FileHandle-Unget/FileHandle-Unget-0.16.21.ebuild,v 1.7 2007/01/15 19:45:55 mcummings Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="A FileHandle which supports ungetting of multiple bytes"
 SRC_URI="mirror://cpan/authors/id/D/DC/DCOPPIT/${MY_P}.tar.gz"
-HOMEPAGE="http://www.cpan.org/modules/by-module/Mail/DCOPPIT/${MY_P}.readme"
+HOMEPAGE="http://search.cpan.org/~dcoppit/"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -20,4 +20,3 @@ IUSE=""
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"

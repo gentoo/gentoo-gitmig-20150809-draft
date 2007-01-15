@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Filesys-DiskSpace/Filesys-DiskSpace-0.05.ebuild,v 1.6 2006/08/07 22:58:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Filesys-DiskSpace/Filesys-DiskSpace-0.05.ebuild,v 1.7 2007/01/15 19:46:15 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Perl df"
-HOMEPAGE="http://search.cpan.org/search?query=${PN}"
+HOMEPAGE="http://search.cpan.org/~ftassin/"
 SRC_URI="mirror://cpan/authors/id/F/FT/FTASSIN/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
@@ -17,4 +17,3 @@ IUSE=""
 #SRC_TEST="do"
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"

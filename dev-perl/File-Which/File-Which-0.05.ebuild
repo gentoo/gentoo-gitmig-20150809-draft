@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Which/File-Which-0.05.ebuild,v 1.6 2006/08/05 03:55:46 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Which/File-Which-0.05.ebuild,v 1.7 2007/01/15 19:44:34 mcummings Exp $
 
 inherit perl-module
 
@@ -19,4 +19,3 @@ mydoc="TODO"
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"

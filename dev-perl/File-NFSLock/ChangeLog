@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-NFSLock
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-NFSLock/ChangeLog,v 1.5 2006/10/20 21:45:24 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-NFSLock/ChangeLog,v 1.6 2007/01/15 19:40:37 mcummings Exp $
+
+  15 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  File-NFSLock-1.20.ebuild:
+  Ebuild maintenance
 
   20 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   File-NFSLock-1.20.ebuild:

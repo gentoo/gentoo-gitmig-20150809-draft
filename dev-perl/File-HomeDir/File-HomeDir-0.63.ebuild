@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-HomeDir/File-HomeDir-0.63.ebuild,v 1.1 2007/01/14 00:17:58 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-HomeDir/File-HomeDir-0.63.ebuild,v 1.2 2007/01/15 19:37:15 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Get home directory for self or other user"
-HOMEPAGE="http://search.cpan.org/~adamk/${P}/"
+HOMEPAGE="http://search.cpan.org/~adamk/"
 SRC_URI="mirror://cpan/authors/id/A/AD/ADAMK/${P}.tar.gz"
 
 LICENSE="Artistic"
