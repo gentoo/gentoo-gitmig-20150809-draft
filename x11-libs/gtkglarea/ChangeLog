@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtkglarea
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/ChangeLog,v 1.33 2007/01/04 18:52:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/ChangeLog,v 1.34 2007/01/15 01:55:24 dang Exp $
+
+  15 Jan 2007; Daniel Gryniewicz <dang@gentoo.org>
+  gtkglarea-1.2.3-r1.ebuild:
+  Move to use autotools.eclass.  Bug #160055
 
   04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   gtkglarea-1.99.0.ebuild:
