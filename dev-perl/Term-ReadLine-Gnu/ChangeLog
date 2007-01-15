@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Term-ReadLine-Gnu
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadLine-Gnu/ChangeLog,v 1.1 2007/01/15 20:04:59 mcummings Exp $
+
+*Term-ReadLine-Gnu-1.16 (15 Jan 2007)
+
+  15 Jan 2007; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Term-ReadLine-Gnu-1.16.ebuild:
+  Initial import, bug 161231
+
