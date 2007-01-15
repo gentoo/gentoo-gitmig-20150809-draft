@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/btparse
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/btparse/ChangeLog,v 1.7 2004/07/02 04:34:36 eradicator Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/btparse/ChangeLog,v 1.8 2007/01/15 11:18:10 armin76 Exp $
+
+*btparse-0.35 (15 Jan 2007)
+
+  15 Jan 2007; Raúl Porcel <armin76@gentoo.org> +btparse-0.35.ebuild:
+  Version bump, bug 158847 by Gour <gour at mail dot inet dot hr>
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> btparse-0.33.ebuild:
   virtual/glibc -> virtual/libc
