@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.2.2.1.ebuild,v 1.3 2006/12/29 22:36:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.2.2.1.ebuild,v 1.4 2007/01/15 20:34:50 solar Exp $
 
 inherit eutils flag-o-matic
 
