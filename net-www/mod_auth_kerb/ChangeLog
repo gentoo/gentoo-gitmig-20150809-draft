@@ -1,6 +1,17 @@
 # ChangeLog for net-www/mod_auth_kerb
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_kerb/ChangeLog,v 1.20 2007/01/15 06:29:15 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_kerb/ChangeLog,v 1.21 2007/01/15 20:17:07 chtekk Exp $
+
+  15 Jan 2007; Luca Longinotti <chtekk@gentoo.org>
+  -files/mod_auth_kerb-5.0-CVE-2006-5989.patch,
+  -files/mod_auth_kerb-5.0-axps1.patch,
+  -files/mod_auth_kerb-5.0-cache.patch,
+  -files/mod_auth_kerb-5.0-exports.patch,
+  -files/mod_auth_kerb-5.0-gcc4.patch, metadata.xml,
+  -mod_auth_kerb-5.0_rc6.ebuild, -mod_auth_kerb-5.0_rc6-r1.ebuild,
+  -mod_auth_kerb-5.0_rc7.ebuild, -mod_auth_kerb-5.0_rc7-r1.ebuild,
+  mod_auth_kerb-5.3.ebuild:
+  Cleanup.
 
   15 Jan 2007; Torsten Veller <tove@gentoo.org> mod_auth_kerb-5.3.ebuild:
   Marked stable on x86 for Ticho (#155782)
