@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-Format
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Format/ChangeLog,v 1.13 2007/01/15 22:41:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Format/ChangeLog,v 1.14 2007/01/15 22:57:49 mcummings Exp $
+
+  15 Jan 2007; Michael Cummings <mcummings@gentoo.org> Manifest:
+  Ebuild maintenance
 
   15 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   HTML-Format-2.04.ebuild:

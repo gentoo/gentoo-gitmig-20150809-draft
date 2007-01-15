@@ -1,13 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Server-Simple/HTTP-Server-Simple-0.26.ebuild,v 1.3 2007/01/08 15:40:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Server-Simple/HTTP-Server-Simple-0.26.ebuild,v 1.4 2007/01/15 23:11:12 mcummings Exp $
 
 inherit perl-module
 
-DESCRIPTION="HTTP::Server::Simple is a very simple standalone HTTP daemon with
-no non-core module dependencies."
+DESCRIPTION="Lightweight HTTP Server"
 SRC_URI="mirror://cpan/authors/id/J/JE/JESSE/${P}.tar.gz"
-HOMEPAGE="http://search.cpan.org/~jesse/${PN}/"
+HOMEPAGE="http://search.cpan.org/~jesse/"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
@@ -17,4 +16,3 @@ SRC_TEST="do"
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"

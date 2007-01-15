@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-INET6/IO-Socket-INET6-2.51.ebuild,v 1.16 2006/08/05 04:43:16 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-INET6/IO-Socket-INET6-2.51.ebuild,v 1.17 2007/01/15 23:13:52 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Work with IO sockets in ipv6"
-HOMEPAGE="http://search.cpan.org/~mondejar/${P}"
+HOMEPAGE="http://search.cpan.org/~mondejar/"
 SRC_URI="mirror://cpan/authors/id/M/MO/MONDEJAR/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
@@ -15,7 +15,6 @@ IUSE=""
 
 DEPEND="dev-perl/Socket6
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 SRC_TEST="do"
 

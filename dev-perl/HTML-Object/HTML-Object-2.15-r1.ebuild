@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Object/HTML-Object-2.15-r1.ebuild,v 1.12 2006/08/05 04:24:57 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Object/HTML-Object-2.15-r1.ebuild,v 1.13 2007/01/15 23:02:03 mcummings Exp $
 
 inherit perl-module
 
@@ -19,4 +19,3 @@ mydoc="LICENSE TODO"
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"
