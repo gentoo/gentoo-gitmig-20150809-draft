@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-PodViewer/Gtk2-Ex-PodViewer-0.14.ebuild,v 1.11 2006/08/05 04:14:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-PodViewer/Gtk2-Ex-PodViewer-0.14.ebuild,v 1.12 2007/01/15 22:34:31 mcummings Exp $
 
 inherit perl-module eutils
 
 DESCRIPTION="a Gtk2 widget for displaying Plain old Documentation (POD)."
-HOMEPAGE="http://search.cpan.org/~gbrown/${P}/"
+HOMEPAGE="http://search.cpan.org/~gbrown/"
 SRC_URI="mirror://cpan/authors/id/G/GB/GBROWN/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
@@ -23,7 +23,6 @@ DEPEND=">=x11-libs/gtk+-2
 	dev-perl/Gtk2-Ex-Simple-List
 	dev-perl/Locale-gettext
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}

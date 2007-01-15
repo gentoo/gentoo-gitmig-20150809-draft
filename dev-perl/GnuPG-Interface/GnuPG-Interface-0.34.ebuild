@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GnuPG-Interface/GnuPG-Interface-0.34.ebuild,v 1.13 2006/08/05 04:12:35 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GnuPG-Interface/GnuPG-Interface-0.34.ebuild,v 1.14 2007/01/15 22:32:18 mcummings Exp $
 
 inherit perl-module
 
@@ -14,7 +14,5 @@ IUSE=""
 DEPEND=">=app-crypt/gnupg-1.2.1-r1
 	>=dev-perl/Class-MethodMaker-1.11
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 #SRC_TEST="do"
-

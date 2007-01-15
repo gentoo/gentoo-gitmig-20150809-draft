@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GraphViz/GraphViz-2.02.ebuild,v 1.3 2007/01/07 23:45:46 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GraphViz/GraphViz-2.02.ebuild,v 1.4 2007/01/15 22:32:51 mcummings Exp $
 
 inherit perl-module eutils
 
 DESCRIPTION="GraphViz - Interface to the GraphViz graphing tool"
-HOMEPAGE="http://search.cpan.org/dist/${PN}/"
+HOMEPAGE="http://search.cpan.org/~lbrocard/"
 SRC_URI="http://search.cpan.org/CPAN/authors/id/L/LB/LBROCARD/${P}.tar.gz"
 
 LICENSE="Artistic GPL-2"

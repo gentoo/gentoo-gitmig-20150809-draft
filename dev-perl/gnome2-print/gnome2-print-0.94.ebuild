@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-print/gnome2-print-0.94.ebuild,v 1.12 2006/08/18 02:12:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-print/gnome2-print-0.94.ebuild,v 1.13 2007/01/15 22:31:55 mcummings Exp $
 
 inherit perl-module
 
@@ -8,7 +8,7 @@ MY_P=Gnome2-Print-${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Perl interface to the 2.x series of the Gnome print libraries."
 SRC_URI="mirror://cpan/authors/id/R/RM/RMCFARLA/Gtk2-Perl/${MY_P}.tar.gz"
-HOMEPAGE="http://search.cpan.org/~rmcfarla/${P}"
+HOMEPAGE="http://search.cpan.org/~rmcfarla/"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -22,5 +22,3 @@ DEPEND=">=x11-libs/gtk+-2
 	>=gnome-base/libgnomeprint-2
 	>=dev-perl/gtk2-perl-${PV}
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
-

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gimp-perl/gimp-perl-2.2_pre1.ebuild,v 1.5 2006/08/18 02:11:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gimp-perl/gimp-perl-2.2_pre1.ebuild,v 1.6 2007/01/15 22:28:01 mcummings Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ S="${WORKDIR}/${PN}"
 DESCRIPTION="Perl extension for writing Gimp Extensions/Plug-ins/Load & Save-Handlers"
 HOMEPAGE="http://search.cpan.org/~sjburges/Gimp/"
 SRC_URI="ftp://ftp.gimp.org/pub/gimp/plug-ins/v2.2/perl/${MY_P}.tar.gz
-		http://search.cpan.org/CPAN/authors/id/S/SJ/SJBURGES/${MY_P}.tar.gz"
+		mirror://cpan/authors/id/S/SJ/SJBURGES/${MY_P}.tar.gz"
 
 LICENSE="Artistic GPL-2"
 SLOT="0"

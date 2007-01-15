@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Gtk2-Ex-PrintDialog
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-PrintDialog/ChangeLog,v 1.10 2006/08/06 18:13:53 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-PrintDialog/ChangeLog,v 1.11 2007/01/15 22:35:30 mcummings Exp $
+
+  15 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  Gtk2-Ex-PrintDialog-0.02.ebuild:
+  Ebuild maintenance
 
   06 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Gtk2-Ex-PrintDialog-0.02.ebuild:
