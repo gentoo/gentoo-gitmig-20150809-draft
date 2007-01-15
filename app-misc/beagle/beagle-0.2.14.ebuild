@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.14.ebuild,v 1.2 2006/12/20 18:28:24 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.14.ebuild,v 1.3 2007/01/15 02:58:26 metalgod Exp $
 
 inherit gnome.org eutils autotools mono
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.beagle-project.org/"
 LICENSE="MIT Apache-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="chm debug doc evo galago gtk ole pdf python thunderbird"
+IUSE="chm doc evo galago gtk ole pdf python thunderbird"
 
 RDEPEND="
 	>=dev-lang/mono-1.1.16.1
@@ -25,7 +25,7 @@ RDEPEND="
 	>=media-libs/libexif-0.6.0
 	>=dev-libs/libxml2-2.6.19
 
-	||		( 	>=dev-db/sqlite-3.3.1
+	||		(	>=dev-db/sqlite-3.3.1
 				=dev-db/sqlite-2* )
 
 	||	(	(	x11-libs/libX11
@@ -85,11 +85,6 @@ src_unpack() {
 	# Multilib fix
 	sed -i -e 's:prefix mono`/lib:libdir mono`:' \
 		${S}/configure.in || die "sed failed"
-
-	# Don't log so much
-	! use debug && sed -i -e \
-		's/defaultLevel = LogLevel.Debug/defaultLevel = LogLevel.Info/' \
-		Util/Logger.cs
 
 	epatch ${FILESDIR}/${PN}-0.2.7-crawltweek.patch
 
