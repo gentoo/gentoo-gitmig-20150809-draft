@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.0.7.ebuild,v 1.8 2007/01/12 02:24:55 pingu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.0.7.ebuild,v 1.9 2007/01/15 16:24:32 armin76 Exp $
 
 unset ALLOWED_FLAGS  # Stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozcoreconf mozconfig-2 mozilla-launcher makeedit multilib autotools
 
-PATCH="${PN}-1.0.6-patches-0.1"
+PATCH="${P}-patches-0.1"
 EMVER="0.94.1"
 
 DESCRIPTION="Mozilla Application Suite - web browser, email, HTML editor, IRC"
