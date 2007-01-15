@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.232 2007/01/15 07:45:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.233 2007/01/15 15:33:54 ticho Exp $
+
+  15 Jan 2007; Andrej Kacian <ticho@gentoo.org> phpmyadmin-2.9.2_rc1.ebuild:
+  Stable on x86, security bug #161460.
 
   15 Jan 2007; Markus Rothe <corsair@gentoo.org>
   phpmyadmin-2.9.2_rc1.ebuild:
