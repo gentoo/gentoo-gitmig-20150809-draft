@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.1.1.ebuild,v 1.3 2007/01/15 11:20:58 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.1.1.ebuild,v 1.4 2007/01/15 18:30:31 gustavoz Exp $
 
 MY_P="${PN}3a1"
 S="${WORKDIR}/${PN}"
@@ -10,7 +10,7 @@ HOMEPAGE="http://swissnet.ai.mit.edu/~jaffer/SLIB.html"
 
 SLOT="0"
 LICENSE="public-domain BSD"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc -x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc sparc -x86"
 IUSE=""
 
 RDEPEND=">=dev-scheme/guile-1.4"
