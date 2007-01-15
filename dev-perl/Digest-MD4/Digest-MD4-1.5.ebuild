@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD4/Digest-MD4-1.5.ebuild,v 1.9 2006/08/05 03:00:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD4/Digest-MD4-1.5.ebuild,v 1.10 2007/01/15 17:29:10 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="MD4 message digest algorithm"
-HOMEPAGE="http://search.cpan.org/authors/id/M/MI/MIKEM/DigestMD4/${P}.readme"
+HOMEPAGE="http://search.cpan.org/~mikem/"
 SRC_URI="mirror://cpan/authors/id/M/MI/MIKEM/DigestMD4/${P}.tar.gz"
 
 LICENSE="Artistic"
@@ -18,4 +18,3 @@ mydoc="README Changes"
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"

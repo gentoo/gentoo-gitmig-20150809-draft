@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Leapyear/Date-Leapyear-1.71.ebuild,v 1.19 2006/10/03 10:18:34 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Leapyear/Date-Leapyear-1.71.ebuild,v 1.20 2007/01/15 17:19:55 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Simple Perl module that tracks Gregorian leap years"
 SRC_URI="mirror://cpan/authors/id/R/RB/RBOW/${P}.tar.gz"
-HOMEPAGE="http://www.cpan.org/modules/by-module/Date/${P}.readme"
+HOMEPAGE="http://search.cpan.org/~rbow/"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
@@ -17,4 +17,3 @@ SRC_TEST="do"
 DEPEND="virtual/perl-Test-Simple
 	virtual/perl-Test-Harness
 	dev-lang/perl"
-RDEPEND="${DEPEND}"

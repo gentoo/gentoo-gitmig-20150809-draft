@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Date-Pcalc
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Pcalc/ChangeLog,v 1.9 2006/08/07 17:21:51 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Pcalc/ChangeLog,v 1.10 2007/01/15 17:20:18 mcummings Exp $
+
+  15 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  Date-Pcalc-1.2.ebuild:
+  Ebuild maintenance
 
   07 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Date-Pcalc-1.2.ebuild:

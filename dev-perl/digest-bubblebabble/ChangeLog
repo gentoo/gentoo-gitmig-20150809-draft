@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/digest-bubblebabble
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-bubblebabble/ChangeLog,v 1.14 2006/08/06 02:18:03 mcummings Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-bubblebabble/ChangeLog,v 1.15 2007/01/15 17:27:50 mcummings Exp $
+
+  15 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  digest-bubblebabble-0.01.ebuild:
+  Ebuild maintenance
 
   06 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   digest-bubblebabble-0.01.ebuild:

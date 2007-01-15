@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ICal/Date-ICal-1.72.ebuild,v 1.23 2006/08/05 02:43:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ICal/Date-ICal-1.72.ebuild,v 1.24 2007/01/15 17:19:07 mcummings Exp $
 
 inherit perl-module
 
@@ -8,7 +8,7 @@ MY_P=Date-ICal-${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="ICal format date base module for Perl"
 SRC_URI="mirror://cpan/authors/id/R/RB/RBOW/${P}.tar.gz"
-HOMEPAGE="http://www.cpan.org/modules/by-module/Date/${MY_P}.readme"
+HOMEPAGE="http://search.cpan.org/~rbow/"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
@@ -24,5 +24,3 @@ DEPEND="dev-perl/Date-Leapyear
 	virtual/perl-Time-HiRes
 	virtual/perl-Storable
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
-

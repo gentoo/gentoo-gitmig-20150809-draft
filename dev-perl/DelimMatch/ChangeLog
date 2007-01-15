@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DelimMatch
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DelimMatch/ChangeLog,v 1.23 2006/11/28 22:26:00 dev-zero Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DelimMatch/ChangeLog,v 1.24 2007/01/15 17:22:47 mcummings Exp $
+
+  15 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  DelimMatch-1.06.ebuild:
+  Ebuild maintenance
 
   28 Nov 2006; Tiziano Müller <dev-zero@gentoo.org> DelimMatch-1.06.ebuild:
   ~x86-fbsd keyword added.

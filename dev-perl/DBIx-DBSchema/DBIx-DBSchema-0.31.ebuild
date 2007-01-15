@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-DBSchema/DBIx-DBSchema-0.31.ebuild,v 1.9 2006/10/23 19:48:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-DBSchema/DBIx-DBSchema-0.31.ebuild,v 1.10 2007/01/15 17:22:34 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Database-independent schema objects"
-HOMEPAGE="http://search.cpan.org/~ivan/${P}/"
+HOMEPAGE="http://search.cpan.org/~ivan/"
 SRC_URI="mirror://cpan/authors/id/I/IV/IVAN/${P}.tar.gz"
 
 LICENSE="Artistic"
@@ -18,4 +18,3 @@ SRC_TEST="do"
 DEPEND="dev-perl/DBI
 	dev-perl/FreezeThaw
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
