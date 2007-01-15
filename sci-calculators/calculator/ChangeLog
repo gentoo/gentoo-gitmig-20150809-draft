@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/calculator
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calculator/ChangeLog,v 1.6 2007/01/15 16:44:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calculator/ChangeLog,v 1.7 2007/01/15 17:14:02 gustavoz Exp $
+
+  15 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  calculator-1.6.19.ebuild:
+  Stable on sparc
 
   15 Jan 2007; Jeroen Roovers <jer@gentoo.org> calculator-1.6.19.ebuild:
   Stable for HPPA.
