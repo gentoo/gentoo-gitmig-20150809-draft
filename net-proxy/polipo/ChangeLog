@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/polipo
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/ChangeLog,v 1.10 2006/11/17 21:11:39 mrness Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/ChangeLog,v 1.11 2007/01/15 12:11:03 mrness Exp $
+
+*polipo-0.9.11 (15 Jan 2007)
+
+  15 Jan 2007; Alin Nastac <mrness@gentoo.org>
+  -files/polipo-0.9.9-gentoo.patch, +files/polipo-0.9.11-gentoo.patch,
+  -polipo-0.9.9-r2.ebuild, +polipo-0.9.11.ebuild:
+  Fix "Range without partial content" error (#162160). Version bump.
 
   17 Nov 2006; Alin Nastac <mrness@gentoo.org> polipo-0.9.10.ebuild:
   Stable on x86.
