@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.137 2007/01/15 21:07:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.138 2007/01/15 21:23:33 armin76 Exp $
+
+  15 Jan 2007; Raúl Porcel <armin76@gentoo.org> wxGTK-2.6.3.3.ebuild:
+  x86 stable, wrt bug 136924
 
   15 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> wxGTK-2.6.3.3.ebuild:
   Stable on sparc wrt #136924
