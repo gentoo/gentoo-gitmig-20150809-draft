@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.25-r1.ebuild,v 1.6 2006/08/28 18:57:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.25-r1.ebuild,v 1.7 2007/01/15 00:18:50 tester Exp $
 
 inherit eutils
 
@@ -31,6 +31,8 @@ DEPEND="sys-devel/bison
 
 src_unpack() {
 	unpack ${A}
+
+	epatch ${FILESDIR}/bluez-utils-2.25-dinovo-mdl.patch
 
 	sed -i \
 		-e "s:^HIDD_ENABLE=.*:HIDD_ENABLE=false:" \
