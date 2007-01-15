@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.140 2007/01/11 22:19:11 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.141 2007/01/15 16:34:22 jer Exp $
+
+  15 Jan 2007; Jeroen Roovers <jer@gentoo.org> eix-0.7.9.ebuild:
+  Stable for HPPA.
 
 *eix-0.8.5 (11 Jan 2007)
 
