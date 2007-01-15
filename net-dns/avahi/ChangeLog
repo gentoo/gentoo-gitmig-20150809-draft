@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.87 2007/01/14 02:26:29 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.88 2007/01/15 01:59:48 metalgod Exp $
+
+  15 Jan 2007; Luis Medinas <metalgod@gentoo.org> avahi-0.6.16-r1.ebuild:
+  Stable on amd64. Security bug #159306.
 
   14 Jan 2007; Andrej Kacian <ticho@gentoo.org> avahi-0.6.16-r1.ebuild:
   Stable on x86, security bug #159306.
