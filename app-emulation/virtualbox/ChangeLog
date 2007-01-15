@@ -1,0 +1,10 @@
+# ChangeLog for app-emulation/virtualbox
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.1 2007/01/15 16:13:50 jokey Exp $
+
+*virtualbox-9999 (15 Jan 2007)
+
+  15 Jan 2007; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
+  +virtualbox-9999.ebuild:
+  Inital ebuild for virtual box, live one as there is no snapshot file currently
+
