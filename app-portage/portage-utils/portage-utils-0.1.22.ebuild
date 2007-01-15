@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.1.22.ebuild,v 1.2 2006/12/26 17:20:45 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.1.22.ebuild,v 1.3 2007/01/15 18:59:46 solar Exp $
 
 inherit toolchain-funcs
 
@@ -36,7 +36,7 @@ pkg_postinst() {
 
 cat <<__EOF__ > ${ROOT}/etc/portage/bin/post_sync
 #!/bin/sh
-# Copyright 2006-2006 Gentoo Foundation
+# Copyright 2006-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 if [ -d /etc/portage/postsync.d/ ]; then

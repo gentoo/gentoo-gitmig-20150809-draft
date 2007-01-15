@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 2006-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.1.20.ebuild,v 1.4 2006/08/19 16:41:56 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.1.20.ebuild,v 1.5 2007/01/15 18:59:46 solar Exp $
 
 inherit toolchain-funcs
 
@@ -35,7 +35,7 @@ pkg_postinst() {
 
 cat <<__EOF__ > ${ROOT}/etc/portage/bin/post_sync
 #!/bin/sh
-# Copyright 2006-2006 Gentoo Foundation
+# Copyright 2006-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 if [ -d /etc/portage/postsync.d/ ]; then
@@ -51,7 +51,7 @@ __EOF__
 	chmod 755 ${ROOT}/etc/portage/bin/post_sync
 	if [ ! -e ${ROOT}/etc/portage/postsync.d/q-reinitialize ]; then
 		mkdir -p ${ROOT}/etc/portage/postsync.d/
-		echo '[ -x /usr/bin/q ] && /usr/bin/q -r' > ${ROOT}/etc/portage/postsync.d/q-reinitialize
+		echo '[ -x /usr/bin/q ] && /usr/bin/q -qr' > ${ROOT}/etc/portage/postsync.d/q-reinitialize
 		chmod 755 ${ROOT}/etc/portage/postsync.d/q-reinitialize
 		einfo "${ROOT}/etc/portage/postsync.d/q-reinitialize has been installed for convenience and will be automatically run at the end of every --sync"
 		einfo "Normally this should only take a few seconds to run but file systems such as ext3 can take a lot longer."
