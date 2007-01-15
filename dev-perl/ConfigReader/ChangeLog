@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/ConfigReader
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ConfigReader/ChangeLog,v 1.9 2006/10/20 21:59:02 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ConfigReader/ChangeLog,v 1.10 2007/01/15 15:13:24 mcummings Exp $
+
+  15 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  ConfigReader-0.5.ebuild:
+  Ebuild maintenance
 
   20 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   ConfigReader-0.5.ebuild:
