@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.4.0.ebuild,v 1.11 2007/01/13 18:13:47 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.4.0.ebuild,v 1.12 2007/01/15 00:12:50 tester Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -22,7 +22,7 @@ RDEPEND=">=dev-libs/glib-2.4
 		>=dev-lang/swig-1.3.24
 		>=dev-python/eyeD3-0.6.6 )"
 DEPEND="${RDEPEND}
-	gtk? ( dev-util/gtk-doc )
+	dev-util/gtk-doc
 	dev-util/pkgconfig"
 
 src_unpack() {
