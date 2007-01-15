@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-dvdconvert
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvdconvert/ChangeLog,v 1.1 2007/01/07 01:29:35 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvdconvert/ChangeLog,v 1.2 2007/01/15 18:46:03 hd_brummy Exp $
+
+  15 Jan 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-dvdconvert-1.0.2.ebuild:
+  changed depend media-video/requant to media-video/m2vrequantizer
 
 *vdr-dvdconvert-1.0.2 (07 Jan 2007)
 

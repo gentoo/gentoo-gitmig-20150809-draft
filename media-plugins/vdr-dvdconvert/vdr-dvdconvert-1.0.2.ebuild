@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvdconvert/vdr-dvdconvert-1.0.2.ebuild,v 1.1 2007/01/07 01:29:35 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvdconvert/vdr-dvdconvert-1.0.2.ebuild,v 1.2 2007/01/15 18:46:03 hd_brummy Exp $
 
 inherit vdr-plugin eutils
 
@@ -17,7 +17,7 @@ IUSE="projectx"
 RDEPEND="media-video/vdr
 	>=media-video/dvdauthor-0.6.10
 	>=media-video/vobcopy-1.0.0
-	media-video/requant
+	>=media-video/m2vrequantizer-20060306
 	media-video/transcode
 	media-video/tcmplex-panteltje
 	media-libs/a52dec
