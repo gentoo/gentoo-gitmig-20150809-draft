@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Data-DumpXML
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-DumpXML/ChangeLog,v 1.13 2006/08/05 02:38:22 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-DumpXML/ChangeLog,v 1.14 2007/01/15 16:46:08 mcummings Exp $
+
+  15 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  Data-DumpXML-1.06.ebuild:
+  Ebuild maintenance
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Data-DumpXML-1.06.ebuild:
