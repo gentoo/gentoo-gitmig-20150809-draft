@@ -1,6 +1,11 @@
 # ChangeLog for rox-extra/fetch
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/fetch/ChangeLog,v 1.15 2006/11/20 18:22:04 opfer Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/fetch/ChangeLog,v 1.16 2007/01/15 19:52:36 lack Exp $
+
+*fetch-0.3.2 (15 Jan 2007)
+
+  15 Jan 2007; Jim Ramsay <lack@gentoo.org> +fetch-0.3.2.ebuild:
+  Version bump - 0.3.2 is released
 
   20 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
   fetch-0.3.1-r1.ebuild:
