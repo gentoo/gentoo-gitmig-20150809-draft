@@ -1,0 +1,10 @@
+# ChangeLog for dev-db/pgmecab
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgmecab/ChangeLog,v 1.1 2007/01/15 08:43:09 nakano Exp $
+
+*pgmecab-1.1 (15 Jan 2007)
+
+  15 Jan 2007; Masatomo Nakano <nakano@gentoo.org> +metadata.xml,
+  +pgmecab-1.1.ebuild:
+  Initial import.
+
