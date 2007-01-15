@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/servletapi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.54 2007/01/12 17:39:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.55 2007/01/15 12:23:39 beandog Exp $
+
+  15 Jan 2007; Steve Dibb <beandog@gentoo.org> servletapi-2.2-r3.ebuild,
+  servletapi-2.3-r3.ebuild:
+  amd64 stable, bugs 157760, 157761
 
   12 Jan 2007; Markus Rothe <corsair@gentoo.org> servletapi-2.4-r5.ebuild:
   Stable on ppc64; bug #157762
