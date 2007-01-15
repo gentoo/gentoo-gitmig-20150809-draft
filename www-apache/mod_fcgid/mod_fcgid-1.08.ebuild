@@ -1,21 +1,26 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/mod_fcgid-1.08.ebuild,v 1.3 2006/07/16 17:23:50 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/mod_fcgid-1.08.ebuild,v 1.4 2007/01/15 16:22:38 chtekk Exp $
 
 inherit apache-module
 
-MY_P=${PN}.${PV}
-
-DESCRIPTION="mod_fcgid is an binary-compatible alternative to mod_fastcgi with better process management"
 KEYWORDS="~amd64 ppc x86"
-IUSE=""
-HOMEPAGE="http://fastcgi.coremail.cn/"
-SRC_URI="http://fastcgi.coremail.cn/${MY_P}.tar.gz"
-SLOT="0"
-LICENSE="GPL-2"
 
-APACHE2_MOD_DEFINE="FCGID"
+DESCRIPTION="mod_fcgid is a binary-compatible alternative to mod_fastcgi with better process management."
+HOMEPAGE="http://fastcgi.coremail.cn/"
+SRC_URI="http://fastcgi.coremail.cn/${PN}.${PV}.tar.gz"
+LICENSE="GPL-2"
+SLOT="0"
+IUSE=""
+
+DEPEND=""
+RDEPEND=""
+
+S="${WORKDIR}/${PN}.${PV}"
+
 APACHE2_MOD_CONF="20_${PN}"
+APACHE2_MOD_DEFINE="FCGID"
+
 APXS2_ARGS="-I ${S} -c ${PN}.c fcgid_bridge.c \
 			fcgid_conf.c fcgid_pm_main.c \
 			fcgid_spawn_ctl.c mod_fcgid.rc fcgid_bucket.c \
@@ -25,11 +30,5 @@ APXS2_ARGS="-I ${S} -c ${PN}.c fcgid_bridge.c \
 			arch/unix/fcgid_proc_unix.c"
 
 DOCFILES="AUTHOR ChangeLog INSTALL.txt"
-
-src_unpack() {
-	unpack ${MY_P}.tar.gz
-	cd ${WORKDIR}
-	mv ${MY_P} ${P}
-}
 
 need_apache2
