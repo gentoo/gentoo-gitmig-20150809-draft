@@ -1,6 +1,19 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.265 2007/01/12 22:01:22 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.266 2007/01/15 19:42:35 chainsaw Exp $
+
+*vanilla-sources-2.6.20_rc5 (15 Jan 2007)
+*vanilla-sources-2.6.20_rc4 (15 Jan 2007)
+*vanilla-sources-2.6.20_rc3 (15 Jan 2007)
+*vanilla-sources-2.6.20_rc2 (15 Jan 2007)
+*vanilla-sources-2.6.20_rc1 (15 Jan 2007)
+
+  15 Jan 2007; Tony Vroon <chainsaw@gentoo.org>
+  +vanilla-sources-2.6.20_rc1.ebuild, +vanilla-sources-2.6.20_rc2.ebuild,
+  +vanilla-sources-2.6.20_rc3.ebuild, +vanilla-sources-2.6.20_rc4.ebuild,
+  +vanilla-sources-2.6.20_rc5.ebuild:
+  Add 2.6.20 release candidates, as requested by Michael Hanselmann
+  <hansmi@gentoo.org>.
 
 *vanilla-sources-2.6.19.2 (12 Jan 2007)
 *vanilla-sources-2.6.18.6 (12 Jan 2007)
