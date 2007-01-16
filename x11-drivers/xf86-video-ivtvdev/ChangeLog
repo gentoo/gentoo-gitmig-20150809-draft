@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-ivtvdev
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ivtvdev/ChangeLog,v 1.2 2006/10/16 23:17:21 je_fro Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ivtvdev/ChangeLog,v 1.3 2007/01/16 07:53:17 je_fro Exp $
+
+  16 Jan 2007; Jeff Gardner <je_fro@gentoo.org>
+  xf86-video-ivtvdev-0.10.6.ebuild:
+  Added a new patch to (hopefully) fix for xorg-7.1, thanks to work by Wilhelm
+  Eger and Ian Campbell.
 
   16 Oct 2006; Jeff Gardner <je_fro@gentoo.org>
   xf86-video-ivtvdev-0.10.6.ebuild:
