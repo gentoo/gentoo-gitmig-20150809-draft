@@ -15,7 +15,7 @@ start() {
 	    mount -o bind ${loc} ${CHROOT_LOCATION}${loc} >/dev/null
 	done
 	eval "$(portageq envvar -v PORTDIR DISTDIR)"
-	[[ -d ${PORTDIR}/distfiles ]] || mkdir ${PORTDIR}/distfiles
+	[[ -d ${CHROOT_LOCATION}/usr/portage/distfiles ]] || mkdir -p ${CHROOT_LOCATION}/usr/portage/distfiles
 	mount -o bind ${PORTDIR} ${CHROOT_LOCATION}/usr/portage >/dev/null
 	mount -o bind ${DISTDIR} ${CHROOT_LOCATION}/usr/portage/distfiles >/dev/null
 	eend $? "An error occured while attempting to mount 32bit chroot directories"
@@ -25,7 +25,6 @@ start() {
 		[[ -f /etc/${conffile} ]] && cp -pf /etc/${conffile} ${CHROOT_LOCATION}/etc >/dev/null &
 	done
 	cp -Ppf /etc/localtime ${CHROOT_LOCATION}/etc >/dev/null &
-	which xhost &>/dev/null && xhost local:localhost &>/dev/null
 	eend $? "An error occured while attempting to copy 32 bits chroot files."
 }
 
