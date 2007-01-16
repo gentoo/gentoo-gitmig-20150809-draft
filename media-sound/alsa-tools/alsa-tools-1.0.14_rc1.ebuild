@@ -1,6 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.14_rc1.ebuild,v 1.5 2007/01/14 09:16:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.14_rc1.ebuild,v 1.6 2007/01/16 21:32:50 flameeyes Exp $
+
+WANT_AUTOMAKE="1.9"
+WANT_AUTOCONF="2.5"
 
 inherit eutils flag-o-matic autotools
 
@@ -63,6 +66,7 @@ src_unpack() {
 
 	for dir in echomixer envy24control rmedigicontrol; do
 		pushd ${dir} &> /dev/null
+		sed -i -e '/AM_PATH_GTK/d' configure.in
 		eautomake
 		popd &> /dev/null
 	done
@@ -84,7 +88,7 @@ src_compile() {
 	for f in ${ALSA_TOOLS}
 	do
 		cd "${S}/${f}"
-		econf || die "econf failed"
+		econf --with-gtk2 || die "econf failed"
 		make || die "make failed"
 	done
 }
