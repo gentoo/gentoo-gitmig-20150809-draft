@@ -1,6 +1,22 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.60 2007/01/05 08:50:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.61 2007/01/16 23:04:09 masterdriverz Exp $
+
+*courier-authlib-0.58-r1 (16 Jan 2007)
+
+  16 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  +files/0.58-configure-db4.patch, +files/0.58-remove-obsolete-macro.patch,
+  -files/configure-db4.patch, -files/CVE-2005-3532.patch,
+  +files/courier-authlib, -files/courier-authlib-initd,
+  +files/initd/courier-authlib, -courier-authlib-0.53.ebuild,
+  -courier-authlib-0.54.20050224.ebuild, -courier-authlib-0.55.ebuild,
+  -courier-authlib-0.55.20050320.ebuild, -courier-authlib-0.56.ebuild,
+  -courier-authlib-0.57.ebuild, -courier-authlib-0.57-r1.ebuild,
+  -courier-authlib-0.57-r2.ebuild, -courier-authlib-0.57.20051116.ebuild,
+  courier-authlib-0.58.ebuild, +courier-authlib-0.58-r1.ebuild:
+  Clean out old versions. Sanitize remaining ebuild. Bump to -r1 for bug 117290.
+  Fix configure for bug 117290 for >db-4.3, thanks to Hanno Meyer-Thurow. Fix
+  configure for bug 160286, thanks to Sheldon Hearn.
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   courier-authlib-0.53.ebuild, courier-authlib-0.54.20050224.ebuild,

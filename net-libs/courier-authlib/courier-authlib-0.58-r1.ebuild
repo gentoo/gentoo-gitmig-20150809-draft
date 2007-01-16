@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.58.ebuild,v 1.12 2007/01/16 23:04:09 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.58-r1.ebuild,v 1.1 2007/01/16 23:04:09 masterdriverz Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.courier-mta.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="postgres ldap mysql berkdb gdbm pam crypt debug"
 
 RESTRICT="nouserpriv"
@@ -157,8 +157,7 @@ src_install() {
 		dodir /etc/openldap/schema
 		cp authldap.schema "${D}/etc/openldap/schema/"
 	fi
-	# Note: different init.d file to -r1
-	doinitd "${FILESDIR}/courier-authlib" || die "init.d failed"
+	doinitd "${FILESDIR}/initd/courier-authlib" || die "init.d failed"
 }
 
 pkg_postinst() {
