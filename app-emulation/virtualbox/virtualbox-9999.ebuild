@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-9999.ebuild,v 1.1 2007/01/15 16:13:50 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-9999.ebuild,v 1.2 2007/01/16 21:30:00 jokey Exp $
 
 inherit eutils linux-mod qt3 subversion
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86"
 IUSE=""
 
 RDEPEND="dev-libs/libIDL
-	dev-libs/libxslt
+	>=dev-libs/libxslt-1.1.19
 	dev-libs/xalan-c
 	dev-libs/xerces-c
 	media-libs/libsdl
