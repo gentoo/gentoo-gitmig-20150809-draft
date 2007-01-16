@@ -1,6 +1,9 @@
 # ChangeLog for net-print/libgnomecups
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.52 2007/01/14 14:35:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.53 2007/01/16 15:32:47 uberlord Exp $
+
+  16 Jan 2007; Roy Marples <uberlord@gentoo.org> libgnomecups-0.2.2.ebuild:
+  Added ~x86-fbsd keyword.
 
   14 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
   libgnomecups-0.2.2.ebuild:
