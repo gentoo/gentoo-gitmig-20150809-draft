@@ -1,8 +1,0 @@
-# ChangeLog for x11-terms/enterminus
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/enterminus/ChangeLog,v 1.1 2005/09/07 03:52:46 vapier Exp $
-
-*enterminus-* (06 Sep 2005)
-
-  06 Sep 2005; Mike Frysinger <vapier@gentoo.org> :
-  Initial import.  Ebuild submitted by Bertrand Jacquin #88116.
