@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r1.ebuild,v 1.7 2007/01/09 15:40:25 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r1.ebuild,v 1.8 2007/01/16 12:22:02 caster Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -64,7 +64,7 @@ RDEPEND=">=virtual/jre-1.5
 		dev-java/jakarta-oro
 		>=dev-java/javahelp-bin-2.0.02-r1
 		dev-java/jgoodies-forms
-		>=dev-java/jmi-interface-1.0-r1
+		>=dev-java/jmi-interface-1.0-r3
 		>=dev-java/jsch-0.1.24
 		=dev-java/junit-3.8*
 		dev-java/flute
