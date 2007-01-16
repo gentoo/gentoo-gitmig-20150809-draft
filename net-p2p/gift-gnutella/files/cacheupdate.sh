@@ -1,9 +1,9 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/files/cacheupdate.sh,v 1.8 2006/09/02 14:20:39 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/files/cacheupdate.sh,v 1.9 2007/01/16 13:42:00 armin76 Exp $
 
-CACHE=http://loot.alumnigroup.org/
+CACHE=http://www.gnucleus.com/gwebcache/
 
 if [ -d ~/.giFT/Gnutella/ ]; then
 	cd ~/.giFT/Gnutella
