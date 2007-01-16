@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/acl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.65 2007/01/12 17:05:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.66 2007/01/16 22:03:19 tester Exp $
+
+  16 Jan 2007; Olivier Crête <tester@gentoo.org> acl-2.2.39-r1.ebuild:
+  Stable on amd64 per bug #161640
 
   12 Jan 2007; Markus Rothe <corsair@gentoo.org> acl-2.2.39-r1.ebuild:
   Stable on ppc64; bug #161640
