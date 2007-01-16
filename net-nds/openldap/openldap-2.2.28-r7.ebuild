@@ -1,15 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.28-r7.ebuild,v 1.11 2007/01/16 23:22:02 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.28-r7.ebuild,v 1.12 2007/01/16 23:59:56 jokey Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
 AT_M4DIR="./build"
 inherit autotools eutils flag-o-matic multilib ssl-cert toolchain-funcs
 
+PATCHSETVER=openldap-compatversions-patchset-1.0
 DESCRIPTION="LDAP suite of application and development tools"
 HOMEPAGE="http://www.OpenLDAP.org/"
-SRC_URI="mirror://openldap/openldap-release/${P}.tgz"
+SRC_URI="mirror://openldap/openldap-release/${P}.tgz
+	mirror://gentoo/${PATCHSETVER}.tar.bz2"
 
 LICENSE="OPENLDAP"
 SLOT="0"
@@ -38,6 +40,8 @@ DEPEND="sys-libs/ncurses
 	)
 	selinux? ( sec-policy/selinux-openldap )"
 RDEPEND="${DEPEND}"
+
+PATCHDIR=${WORKDIR}/${PATCHSETVER}
 
 # for tracking versions
 OPENLDAP_VERSIONTAG="/var/lib/openldap-data/.version-tag"
@@ -101,14 +105,14 @@ src_unpack() {
 	# Fix up DB-4.0 linking problem
 	# remember to autoconf! this expands configure by 500 lines (4 lines to m4
 	# stuff).
-	EPATCH_OPTS="-p1 -d ${S}" epatch "${FILESDIR}"/${PN}-2.2.14-db40.patch
+	EPATCH_OPTS="-p1 -d ${S}" epatch "${PATCHDIR}"/${PN}-2.2.14-db40.patch
 
 	# supersedes old fix for bug #31202
 	EPATCH_OPTS="-p1 -d ${S}" epatch "${FILESDIR}"/${PN}-2.2.14-perlthreadsfix.patch
 
 	# Security bug #96767
 	# http://bugzilla.padl.com/show_bug.cgi?id=210
-	EPATCH_OPTS="-p1 -d ${S}" epatch "${FILESDIR}"/${PN}-2.2.26-tls-fix-connection-test.patch
+	EPATCH_OPTS="-p1 -d ${S}" epatch "${PATCHDIR}"/${PN}-2.2.26-tls-fix-connection-test.patch
 
 	# ensure correct SLAPI path by default
 	sed -i -e 's,\(#define LDAPI_SOCK\).*,\1 "/var/run/openldap/slapd.sock",' \
@@ -123,31 +127,31 @@ src_unpack() {
 	ln -s shtool install.sh
 
 	# make files ready for new autoconf
-	EPATCH_OPTS="-p0 -d ${S}" epatch "${FILESDIR}"/${PN}-2.1.30-autoconf25.patch
+	EPATCH_OPTS="-p0 -d ${S}" epatch "${PATCHDIR}"/${PN}-2.1.30-autoconf25.patch
 
 	# fix AC calls bug #114544
-	EPATCH_OPTS="-p0 -d ${S}/build" epatch "${FILESDIR}"/${PN}-2.1.30-m4_underquoted.patch
+	EPATCH_OPTS="-p0 -d ${S}/build" epatch "${PATCHDIR}"/${PN}-2.1.30-m4_underquoted.patch
 
 	# make tests rpath ready
-	EPATCH_OPTS="-p0 -d ${S}/tests" epatch "${FILESDIR}"/${PN}-2.2.28-tests.patch
+	EPATCH_OPTS="-p0 -d ${S}/tests" epatch "${PATCHDIR}"/${PN}-2.2.28-tests.patch
 
 	# make autoconf-archive compatible
-	EPATCH_OPTS="-p0 -d ${S}" epatch "${FILESDIR}"/${PN}-2.2.28-autoconf-archived-fix.patch
+	EPATCH_OPTS="-p0 -d ${S}" epatch "${PATCHDIR}"/${PN}-2.2.28-autoconf-archived-fix.patch
 
 	# make autoconf-archive compatible
-	EPATCH_OPTS="-p1 -d ${S}" epatch "${FILESDIR}"/${PN}-2.1.30-glibc24.patch
+	EPATCH_OPTS="-p1 -d ${S}" epatch "${PATCHDIR}"/${PN}-2.1.30-glibc24.patch
 
 	# add cleartext passwords backport bug #112554
-	EPATCH_OPTS="-p0 -d ${S}" epatch "${FILESDIR}"/${PN}-2.2.28-cleartext-passwords.patch
+	EPATCH_OPTS="-p0 -d ${S}" epatch "${PATCHDIR}"/${PN}-2.2.28-cleartext-passwords.patch
 
 	# CVE-2006-5779, bug #154349
-	EPATCH_OPTS="-p0 -d ${S}" epatch "${FILESDIR}"/${PN}-2.3.27-CVE-2006-5779.patch
+	EPATCH_OPTS="-p0 -d ${S}" epatch "${PATCHDIR}"/${PN}-2.3.27-CVE-2006-5779.patch
 
 	# reconf for RPATH solve
 	cd "${S}"
 	libtoolize --copy --force --automake
 	eaclocal || die "aclocal failed"
-	EPATCH_OPTS="-p0 -d ${S}" epatch "${FILESDIR}"/${PN}-2.1.30-rpath.patch
+	EPATCH_OPTS="-p0 -d ${S}" epatch "${PATCHDIR}"/${PN}-2.1.30-rpath.patch
 	eautoconf || die "autoconf failed"
 }
 

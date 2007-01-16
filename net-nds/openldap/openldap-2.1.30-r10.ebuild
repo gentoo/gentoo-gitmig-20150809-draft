@@ -1,15 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.30-r10.ebuild,v 1.11 2007/01/16 23:22:02 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.30-r10.ebuild,v 1.12 2007/01/16 23:59:56 jokey Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
 AT_M4DIR="./build"
 inherit autotools eutils ssl-cert
 
+PATCHSETVER=openldap-compatversions-patchset-1.0
 DESCRIPTION="LDAP suite of application and development tools"
 HOMEPAGE="http://www.OpenLDAP.org/"
-SRC_URI="mirror://openldap/openldap-release/${P}.tgz"
+SRC_URI="mirror://openldap/openldap-release/${P}.tgz
+	mirror://gentoo/${PATCHSETVER}.tar.bz2"
 
 LICENSE="OPENLDAP"
 SLOT="0"
@@ -39,6 +41,8 @@ DEPEND=">=sys-libs/ncurses-5.1
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-openldap )"
 
+PATCHDIR=${WORKDIR}/${PATCHSETVER}
+
 pkg_setup() {
 	if has_version "<=dev-lang/perl-5.8.8_rc1" && built_with_use dev-lang/perl minimal ; then
 		die "You must have a complete (USE='-minimal') Perl install to use the perl backend!"
@@ -61,12 +65,12 @@ src_unpack() {
 	# Fix up DB-4.0 linking problem
 	# remember to autoconf! this expands configure by 500 lines (4 lines to m4
 	# stuff).
-	epatch "${FILESDIR}"/${PN}-2.1.30-db40.patch
-	epatch "${FILESDIR}"/${PN}-2.1.30-tls-activedirectory-hang-fix.patch
+	epatch "${PATCHDIR}"/${PN}-2.1.30-db40.patch
+	epatch "${PATCHDIR}"/${PN}-2.1.30-tls-activedirectory-hang-fix.patch
 
 	# Security bug #96767
 	# http://bugzilla.padl.com/show_bug.cgi?id=210
-	EPATCH_OPTS="-p1 -d ${S}" epatch "${FILESDIR}"/${PN}-2.2.26-tls-fix-connection-test.patch
+	EPATCH_OPTS="-p1 -d ${S}" epatch "${PATCHDIR}"/${PN}-2.2.26-tls-fix-connection-test.patch
 
 	# supersedes old fix for bug #31202
 	cd "${S}"
@@ -80,27 +84,27 @@ src_unpack() {
 
 	# ximian connector 1.4.7 ntlm patch
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-2.1.30-ximian_connector.patch
+	epatch "${PATCHDIR}"/${PN}-2.1.30-ximian_connector.patch
 
 	#make files ready for new autoconf
-	EPATCH_OPTS="-p0 -d ${S}" epatch "${FILESDIR}"/${PN}-2.1.30-autoconf25.patch
+	EPATCH_OPTS="-p0 -d ${S}" epatch "${PATCHDIR}"/${PN}-2.1.30-autoconf25.patch
 
 	# fix AC calls bug #114544
-	EPATCH_OPTS="-p0 -d ${S}/build" epatch "${FILESDIR}"/${PN}-2.1.30-m4_underquoted.patch
+	EPATCH_OPTS="-p0 -d ${S}/build" epatch "${PATCHDIR}"/${PN}-2.1.30-m4_underquoted.patch
 
 	# make tests rpath ready
-	EPATCH_OPTS="-p0 -d ${S}/tests" epatch "${FILESDIR}"/${PN}-2.1.30-tests.patch
+	EPATCH_OPTS="-p0 -d ${S}/tests" epatch "${PATCHDIR}"/${PN}-2.1.30-tests.patch
 
 	# make autoconf-archive compatible
-	EPATCH_OPTS="-p0 -d ${S}" epatch "${FILESDIR}"/${PN}-2.1.30-autoconf-archived-fix.patch
+	EPATCH_OPTS="-p0 -d ${S}" epatch "${PATCHDIR}"/${PN}-2.1.30-autoconf-archived-fix.patch
 
 	# CVE-2006-5779, bug #154349
-	EPATCH_OPTS="-p0 -d ${S}" epatch "${FILESDIR}"/${PN}-2.3.27-CVE-2006-5779.patch
+	EPATCH_OPTS="-p0 -d ${S}" epatch "${PATCHDIR}"/${PN}-2.3.27-CVE-2006-5779.patch
 
 	# reconf current for RPATH solve
 	libtoolize --copy --force
 	eaclocal || die "aclocal failed"
-	EPATCH_OPTS="-p0 -d ${S}" epatch "${FILESDIR}"/${PN}-2.1.30-rpath.patch
+	EPATCH_OPTS="-p0 -d ${S}" epatch "${PATCHDIR}"/${PN}-2.1.30-rpath.patch
 	eautoconf || die "autoconf failed"
 }
 

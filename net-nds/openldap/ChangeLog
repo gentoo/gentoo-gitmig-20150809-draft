@@ -1,6 +1,27 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.254 2007/01/16 23:22:02 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.255 2007/01/16 23:59:56 jokey Exp $
+
+  16 Jan 2007; Markus Ullmann <jokey@gentoo.org>
+  -files/openldap-2.1.27-db40.patch,
+  -files/openldap-2.1.27-perlthreadsfix.patch,
+  -files/openldap-2.1.30-autoconf-archived-fix.patch,
+  -files/openldap-2.1.30-autoconf25.patch,
+  -files/openldap-2.1.30-db40.patch, -files/openldap-2.1.30-glibc24.patch,
+  -files/openldap-2.1.30-m4_underquoted.patch,
+  -files/openldap-2.1.30-rpath.patch, -files/openldap-2.1.30-tests.patch,
+  -files/openldap-2.1.30-tls-activedirectory-hang-fix.patch,
+  -files/openldap-2.1.30-ximian_connector.patch,
+  -files/openldap-2.2.14-db40.patch,
+  -files/openldap-2.2.26-tls-fix-connection-test.patch,
+  -files/openldap-2.2.28-autoconf-archived-fix.patch,
+  -files/openldap-2.2.28-cleartext-passwords.patch,
+  -files/openldap-2.2.28-r1-configure.in-rpath.patch,
+  -files/openldap-2.2.28-tests.patch,
+  -files/openldap-2.2.28-ximian_connector.patch,
+  -files/openldap-2.3.27-CVE-2006-5779.patch, openldap-2.1.30-r10.ebuild,
+  openldap-2.2.28-r7.ebuild:
+  As older versions have a constant patchset, move that out to mirrors
 
 *openldap-2.3.32 (16 Jan 2007)
 
