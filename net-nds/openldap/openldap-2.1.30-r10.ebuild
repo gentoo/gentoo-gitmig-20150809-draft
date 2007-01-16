@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.30-r10.ebuild,v 1.10 2007/01/13 12:20:14 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.30-r10.ebuild,v 1.11 2007/01/16 23:22:02 jokey Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
@@ -194,9 +194,9 @@ src_install() {
 	done
 
 	# install our own init scripts
-	newinitd "${FILESDIR}"/2.0/slapd slapd
-	newinitd "${FILESDIR}"/2.0/slurpd slurpd
-	newconfd "${FILESDIR}"/2.0/slapd.conf slapd
+	newinitd "${FILESDIR}"/slapd-initd slapd
+	newinitd "${FILESDIR}"/slurpd-initd slurpd
+	newconfd "${FILESDIR}"/slapd-confd slapd
 }
 
 pkg_postinst() {

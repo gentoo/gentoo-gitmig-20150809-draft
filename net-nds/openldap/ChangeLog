@@ -1,6 +1,18 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.253 2007/01/16 21:40:29 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.254 2007/01/16 23:22:02 jokey Exp $
+
+*openldap-2.3.32 (16 Jan 2007)
+
+  16 Jan 2007; Markus Ullmann <jokey@gentoo.org> -files/2.0/slapd,
+  -files/2.0/slapd.conf, -files/2.0/slurpd, +files/slapd-confd,
+  +files/slapd-initd, +files/slurpd-initd, -openldap-2.1.30-r8.ebuild,
+  -openldap-2.1.30-r9.ebuild, openldap-2.1.30-r10.ebuild,
+  -openldap-2.2.28-r5.ebuild, -openldap-2.2.28-r6.ebuild,
+  openldap-2.2.28-r7.ebuild, -openldap-2.3.24-r1.ebuild,
+  -openldap-2.3.30-r1.ebuild, openldap-2.3.30-r2.ebuild,
+  -openldap-2.3.31-r1.ebuild, +openldap-2.3.32.ebuild:
+  Version bump and ebuild cleanup
 
   16 Jan 2007; Markus Ullmann <jokey@gentoo.org> openldap-2.2.28-r7.ebuild,
   openldap-2.3.30-r2.ebuild, openldap-2.3.31-r1.ebuild:

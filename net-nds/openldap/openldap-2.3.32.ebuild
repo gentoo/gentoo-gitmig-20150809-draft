@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.30-r2.ebuild,v 1.12 2007/01/16 23:22:02 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.32.ebuild,v 1.1 2007/01/16 23:22:02 jokey Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -13,7 +13,7 @@ SRC_URI="mirror://openldap/openldap-release/${P}.tgz"
 
 LICENSE="OPENLDAP"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="berkdb crypt debug gdbm ipv6 kerberos minimal odbc overlays perl readline
 samba sasl slp smbkrb5passwd ssl tcpd selinux"
 
@@ -470,18 +470,18 @@ pkg_postinst() {
 
 	# Reference inclusion bug #77330
 	echo
-	einfo
-	einfo "Getting started using OpenLDAP? There is some documentation available:"
-	einfo "Gentoo Guide to OpenLDAP Authentication"
-	einfo "(http://www.gentoo.org/doc/en/ldap-howto.xml)"
-	einfo
+	elog
+	elog "Getting started using OpenLDAP? There is some documentation available:"
+	elog "Gentoo Guide to OpenLDAP Authentication"
+	elog "(http://www.gentoo.org/doc/en/ldap-howto.xml)"
+	elog
 
 	# note to bug #110412
 	echo
-	einfo
-	einfo "An example file for tuning BDB backends with openldap is:"
-	einfo "/usr/share/doc/${P}/DB_CONFIG.fast.example.gz"
-	einfo
+	elog
+	elog "An example file for tuning BDB backends with openldap is:"
+	elog "/usr/share/doc/${PF}/DB_CONFIG.fast.example.gz"
+	elog
 
 	LIBSUFFIXES=".so.2.0.130 -2.2.so.7"
 	for LIBSUFFIX in ${LIBSUFFIXES} ; do
