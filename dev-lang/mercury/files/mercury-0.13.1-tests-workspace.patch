@@ -1,11 +1,13 @@
 --- mercury-tests-0.13.1.orig/Mmake.common	2006-01-25 20:03:44.000000000 +1300
-+++ mercury-tests-0.13.1/Mmake.common	2007-01-11 21:36:31.000000000 +1300
-@@ -73,8 +73,8 @@
++++ mercury-tests-0.13.1/Mmake.common	2007-01-16 22:04:32.000000000 +1300
+@@ -72,9 +72,9 @@
+ 
  -include $(TESTS_DIR)/Mmake.params
  
- MCFLAGS += --flags $(TESTS_DIR)/TESTS_FLAGS
+-MCFLAGS += --flags $(TESTS_DIR)/TESTS_FLAGS
 -ifdef WORKSPACE_FLAGS
 -MCFLAGS += --flags $(TESTS_DIR)/WS_FLAGS
++#MCFLAGS += --flags $(TESTS_DIR)/TESTS_FLAGS
 +ifdef WORKSPACE
 +MCFLAGS += --flags $(TESTS_DIR)/WS_FLAGS.ws
  endif
