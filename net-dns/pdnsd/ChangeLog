@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/pdnsd
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.66 2006/11/20 16:01:43 gustavoz Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.67 2007/01/16 20:47:38 mrness Exp $
+
+  16 Jan 2007; Alin Năstac <mrness@gentoo.org> pdnsd-1.2.5.ebuild:
+  Stable on amd64.
 
   20 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org> pdnsd-1.2.5.ebuild:
   Stable on sparc
