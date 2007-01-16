@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-opengl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.23 2007/01/14 09:48:27 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.24 2007/01/16 06:02:55 jer Exp $
+
+  16 Jan 2007; Jeroen Roovers <jer@gentoo.org> eselect-opengl-1.0.5.ebuild:
+  Stable for HPPA (bug #160535).
 
   14 Jan 2007; Joseph Jezak <josejx@gentoo.org> eselect-opengl-1.0.5.ebuild:
   Marked ppc stable for bug #160535.
