@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.224 2007/01/16 13:08:19 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.225 2007/01/16 16:49:32 zzam Exp $
+
+*udev-103-r3 (16 Jan 2007)
+
+  16 Jan 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev.rules-103-r3, +files/40-scsi-hotplug.rules,
+  +files/95-net.rules, +udev-103-r3.ebuild:
+  Restrict cdrom_id rule to ACTION==add. Move network-init-script rules to a
+  place after network-device persistance rules. Add rules to autoload
+  scsi-device-class drivers (sr_mod, sd_mod).
 
 *udev-103-r2 (16 Jan 2007)
 

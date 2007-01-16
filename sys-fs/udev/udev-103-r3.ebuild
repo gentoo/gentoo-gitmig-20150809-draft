@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-103.ebuild,v 1.7 2007/01/16 16:49:32 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-103-r3.ebuild,v 1.1 2007/01/16 16:49:32 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm hppa ia64 m68k ~mips ~ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="selinux"
 
 # still rely on hotplug (need to fix that), but now we implement coldplug
@@ -132,6 +132,7 @@ src_install() {
 	#doexe extras/raid-devfs.sh
 	doexe extras/floppy/create_floppy_devices	|| die "Required binary not installed properly"
 	doexe extras/firmware/firmware.sh			|| die "Required binary not installed properly"
+	doexe ${FILESDIR}/net.sh					|| die "Required binary not installed properly"
 	doexe ${FILESDIR}/seq_node.sh				|| die "Required binary not installed properly"
 
 	# Our udev config file
@@ -141,8 +142,10 @@ src_install() {
 	# Our rules files
 	insinto /etc/udev/rules.d/
 	newins etc/udev/gentoo/udev.rules 50-udev.rules
-	newins ${FILESDIR}/udev.rules-098 50-udev.rules
+	newins ${FILESDIR}/udev.rules-103-r3 50-udev.rules
 	newins ${FILESDIR}/05-udev-early.rules-079 05-udev-early.rules
+	doins ${FILESDIR}/95-net.rules
+	doins ${FILESDIR}/40-scsi-hotplug.rules
 	# Use upstream's persistent rules for devices
 	doins etc/udev/rules.d/60-*.rules
 	doins extras/rule_generator/75-*.rules || die "rules not installed properly"
