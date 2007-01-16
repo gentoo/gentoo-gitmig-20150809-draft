@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6614 2007/01/16 08:32:27 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6615 2007/01/16 12:46:49 opfer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -399,10 +399,6 @@ xfce-extra/xfce4-xfapplet
 # masked pending removal as there is no bmpx that deps on
 # this anymore and it is deprecated
 x11-themes/bmpx-themes
-
-# Christian Faulhammer <opfer@gentoo.org> (04 Dec 2006)
-# masked for testing, as it is beta
-x11-misc/gaia
 
 # Timothy Redaelli <drizzt@gentoo.org> (01 Dec 2006)
 # Beta versions
@@ -1405,10 +1401,6 @@ games-fps/unreal-tournament-infiltration
 games-fps/unreal-tournament-strikeforce
 games-fps/unreal-tournament-bonuspacks
 games-fps/aaut
-
-# <weeve@gentoo.org> (02 Mar 2004)
-# mask slib-3.1.1 until gnucash can get a fix for it
-=dev-libs/slib-3.1.1
 
 # <robbat2@gentoo.org> (10 Jan 2004)
 # blocked for testing
