@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/amsn-skins
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/amsn-skins/ChangeLog,v 1.14 2007/01/15 17:15:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/amsn-skins/ChangeLog,v 1.15 2007/01/16 10:32:05 opfer Exp $
+
+  16 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
+  amsn-skins-20061125.ebuild:
+  stable x86, bug #158758
 
   15 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   amsn-skins-20061125.ebuild:
