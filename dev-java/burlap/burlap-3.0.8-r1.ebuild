@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/burlap/burlap-3.0.8-r1.ebuild,v 1.5 2006/12/05 01:51:51 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/burlap/burlap-3.0.8-r1.ebuild,v 1.6 2007/01/16 17:31:45 betelgeuse Exp $
 
 inherit java-pkg-2
 
-DESCRIPTION="The Burlap web service protocol makes web services usable without requiring a large framework, and without learning yet another alphabet soup of protocols."
+DESCRIPTION="The Burlap web service protocol."
 HOMEPAGE="http://www.caucho.com/burlap/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
