@@ -5,12 +5,9 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-2.eclass,v 1.13 2007/01/16 21:11:29 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-2.eclass,v 1.14 2007/01/16 21:14:38 betelgeuse Exp $
 
 inherit java-utils-2
-
-ECLASS="java-pkg-2"
-INHERITED="${INHERITED} ${ECLASS}"
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
