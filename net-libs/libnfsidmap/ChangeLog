@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnfsidmap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfsidmap/ChangeLog,v 1.7 2007/01/12 17:03:51 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfsidmap/ChangeLog,v 1.8 2007/01/16 22:00:19 tester Exp $
+
+  16 Jan 2007; Olivier Crête <tester@gentoo.org> libnfsidmap-0.17.ebuild:
+  Stable on amd64 per bug #161640
 
   12 Jan 2007; Markus Rothe <corsair@gentoo.org> libnfsidmap-0.17.ebuild:
   Stable on ppc64; bug #161640
