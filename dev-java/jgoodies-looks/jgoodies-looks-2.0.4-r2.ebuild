@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/jgoodies-looks-2.0.4-r1.ebuild,v 1.6 2007/01/16 16:20:36 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/jgoodies-looks-2.0.4-r2.ebuild,v 1.1 2007/01/16 16:20:36 caster Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.jgoodies.com/download/libraries/looks-${MY_V}.zip"
 
 LICENSE="BSD"
 SLOT="2.0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc source"
 
 DEPEND=">=virtual/jdk-1.4
@@ -29,6 +29,12 @@ src_unpack() {
 	# remove the bootclasspath brokedness, make building demo optional
 	epatch "${FILESDIR}/${P}-build.xml.patch"
 
+	# unzip the look&feel settings from bundled jar before we delete it
+	unzip -j looks-${PV}.jar META-INF/services/javax.swing.LookAndFeel \
+		|| die "unzip of javax.swing.LookAndFeel failed"
+	# and rename it to what build.xml expects
+	mv javax.swing.LookAndFeel all.txt
+
 	rm -v *.jar demo/*.jar lib/*.jar
 	rm -rf docs/api
 }
@@ -41,6 +47,8 @@ src_compile() {
 	# I checked the ustream binary distribution and they also don't actually
 	# put anything there.
 	# 31.7.2006 betelgeuse@gentoo.org
+	# update: it's where it looks for all.txt file
+	# 16.1.2007 caster@gentoo.org
 	eant -Ddescriptors.dir="${S}" jar-all $(use_doc)
 }
 
