@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-usbin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.39 2007/01/15 21:41:15 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.40 2007/01/16 23:15:08 drizzt Exp $
+
+  16 Jan 2007; Timothy Redaelli <drizzt@gentoo.org>
+  +files/freebsd-usbin-6.2_rc2-libedit-netbsd.patch:
+  Oops, I still need this patch
 
 *freebsd-usbin-6.2 (15 Jan 2007)
 

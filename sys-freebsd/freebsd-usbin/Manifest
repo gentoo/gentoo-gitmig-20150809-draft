@@ -13,6 +13,10 @@ AUX freebsd-usbin-6.1-nowrap.patch 1256 RMD160 2356f3fc63a6d27b399e7ec7f2d8637fa
 MD5 13ff92c94bd109435bff0855224d1116 files/freebsd-usbin-6.1-nowrap.patch 1256
 RMD160 2356f3fc63a6d27b399e7ec7f2d8637fa519712d files/freebsd-usbin-6.1-nowrap.patch 1256
 SHA256 e1413acbf003be3fa3a73f8fa0bdf79caa99885192622c79b034345d600b92f8 files/freebsd-usbin-6.1-nowrap.patch 1256
+AUX freebsd-usbin-6.2_rc2-libedit-netbsd.patch 552 RMD160 71f2acb0c53f1e027b19d9b35f94e502ecbc3d7e SHA1 b8d28fbebe44a0904e8550f38f3ebd2cb7ed0d7b SHA256 1d09fe1ed65aebbb1e48f10231a5da9342ef850a7a13afdaee971e7e70d0d57a
+MD5 ba55fb141d3ffc2ab8a51719d4053ce6 files/freebsd-usbin-6.2_rc2-libedit-netbsd.patch 552
+RMD160 71f2acb0c53f1e027b19d9b35f94e502ecbc3d7e files/freebsd-usbin-6.2_rc2-libedit-netbsd.patch 552
+SHA256 1d09fe1ed65aebbb1e48f10231a5da9342ef850a7a13afdaee971e7e70d0d57a files/freebsd-usbin-6.2_rc2-libedit-netbsd.patch 552
 AUX freebsd-usbin-adduser.patch 428 RMD160 fecedb0bad9f29e9f0d889b2fce0edeb9a954d0b SHA1 3407974fcd42701d1587684f14547b5e02b6b342 SHA256 2e91737ffefd3b7ce3b55da4ce98eb0425961bba2d4a7c4e7c7ffabc1d38f2af
 MD5 5444cbe3e2bc667285b7a68c02785017 files/freebsd-usbin-adduser.patch 428
 RMD160 fecedb0bad9f29e9f0d889b2fce0edeb9a954d0b files/freebsd-usbin-adduser.patch 428
@@ -86,10 +90,10 @@ EBUILD freebsd-usbin-6.2.ebuild 5392 RMD160 5ff17c2634e8c2cc5b7b5b037458070175ba
 MD5 8a7bd8730e6436f2bbf6e29f2e706237 freebsd-usbin-6.2.ebuild 5392
 RMD160 5ff17c2634e8c2cc5b7b5b037458070175ba299f freebsd-usbin-6.2.ebuild 5392
 SHA256 1d8a1b2ab32a9c26211fdb1f8cbcc3d0a9217e3b79c82629bcab2175465da210 freebsd-usbin-6.2.ebuild 5392
-MISC ChangeLog 13469 RMD160 a70fd636b73eeea3dd5559a50b1f061462f50b49 SHA1 c5ce1688c40aa5b77f548130b732a8266569b2b9 SHA256 9b8f4ef15f4f8f52cd3fca7673acff48ae1dc9d20ba6749f0e24e51c670f02ce
-MD5 a984876f7d627b65695a07a3aad83a9b ChangeLog 13469
-RMD160 a70fd636b73eeea3dd5559a50b1f061462f50b49 ChangeLog 13469
-SHA256 9b8f4ef15f4f8f52cd3fca7673acff48ae1dc9d20ba6749f0e24e51c670f02ce ChangeLog 13469
+MISC ChangeLog 13607 RMD160 1f1d7fe51cc1ba5e46c71e2926e231acef6f5f5f SHA1 69e8f4475580f0521af1c6b8932e0cbd2fe5dc32 SHA256 0c1eefb0b9cdb3da057edab13b3efb2c1de1d18f698ef2411a270bc629634f40
+MD5 3d87967ec5af83e9bace2367b76ea802 ChangeLog 13607
+RMD160 1f1d7fe51cc1ba5e46c71e2926e231acef6f5f5f ChangeLog 13607
+SHA256 0c1eefb0b9cdb3da057edab13b3efb2c1de1d18f698ef2411a270bc629634f40 ChangeLog 13607
 MISC metadata.xml 156 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 SHA1 d9d9d4f2b5afc58339ea3e562fca490156935f1f SHA256 30ab515d6ac492d3d6c36ac3c675511742c2149e56a6b3228c8d22ab8edb3ff7
 MD5 2bd48a5ae413433cbb36110b219ce97c metadata.xml 156
 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 metadata.xml 156
@@ -100,7 +104,7 @@ SHA256 75f92c7c16164e2b95abaa8bcf34c259d2b3663bf7dbccf0bc59c64f6032a39e files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.1 (GNU/Linux)
 
-iD8DBQFFq/UEGDyatLGpTbYRAkZCAJ0Q1h+IRLXQ+eK3zm6pBWzC0DqDWgCfSlDc
-IWgIvZbuCilrwmQQgSkNx+0=
-=gCgg
+iD8DBQFFrVyEGDyatLGpTbYRAhcxAJ9UOrceoy3hh4wgDBjdi9CvB9oOAwCfXa83
+znd4vh+B5vM97Y3TFGCQF5I=
+=j9aY
 -----END PGP SIGNATURE-----

@@ -1,0 +1,13 @@
+Index: fbsd-6.2rc2/usr.sbin/cdcontrol/cdcontrol.c
+===================================================================
+--- fbsd-6.2rc2.orig/usr.sbin/cdcontrol/cdcontrol.c
++++ fbsd-6.2rc2/usr.sbin/cdcontrol/cdcontrol.c
+@@ -1130,7 +1130,7 @@ input (int *cmd)
+ 				el = el_init("cdcontrol", stdin, stdout,
+ 				    stderr);
+ 				hist = history_init();
+-				history(hist, &he, H_EVENT, 100);
++				history(hist, &he, H_SETSIZE, 100);
+ 				el_set(el, EL_HIST, history, hist);
+ 				el_set(el, EL_EDITOR, "emacs");
+ 				el_set(el, EL_PROMPT, cdcontrol_prompt);
