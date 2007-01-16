@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.21 2007/01/15 21:40:10 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.22 2007/01/16 22:01:13 sanchan Exp $
+
+  16 Jan 2007; Sandro Bonazzola <sanchan@gentoo.org> package.mask:
+  masking app-arch/rpm-4.4.7-r2 for testing
 
   15 Jan 2007; Joerg Bornkessel <hd_brummy@gentoo.org> updates/1Q-2007:
   move media-video/requant media-video/m2vrequantizer
