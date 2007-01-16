@@ -1,8 +1,0 @@
-# ChangeLog for media-video/eclair
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/eclair/ChangeLog,v 1.2 2005/04/28 18:50:28 swegener Exp $
-
-*eclair-* (24 Apr 2005)
-
-  24 Apr 2005; Mike Frysinger <vapier@gentoo.org> :
-  Initial import.  Ebuild submitted by Robert R. Richter #90182.

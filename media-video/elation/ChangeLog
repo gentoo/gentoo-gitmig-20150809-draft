@@ -1,8 +1,0 @@
-# ChangeLog for media-video/elation
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/elation/ChangeLog,v 1.3 2006/01/29 14:12:30 vapier Exp $
-
-*elation-* (11 Aug 2004)
-
-  11 Aug 2004; Mike Frysinger <vapier@gentoo.org> :
-  Initial import.  Ebuild submitted by me.
