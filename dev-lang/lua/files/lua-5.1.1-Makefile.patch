@@ -85,8 +85,8 @@
 +	cd src; $(LIBTOOL) --mode=install $(INSTALL_DATA) $(TO_LIB) $(INSTALL_LIB)
 +	cd src; $(LIBTOOL) --mode=install $(INSTALL_EXEC) $(TO_BIN) $(INSTALL_BIN)
 +	cd src; $(INSTALL_DATA) $(TO_INC) $(INSTALL_INC)
---- lua-5.1.1.orig/src/Makefile	2006-03-22 01:41:49.000000000 +0100
-+++ /var/tmp/portage/lua-5.1.1-r1/work/lua-5.1.1/src/Makefile	2007-01-12 23:40:15.000000000 +0100
+--- src/Makefile.orig	2006-03-22 01:41:49.000000000 +0100
++++ src/Makefile	2007-01-12 23:40:15.000000000 +0100
 @@ -29,10 +29,10 @@
  LIB_O=	lauxlib.o lbaselib.o ldblib.o liolib.o lmathlib.o loslib.o ltablib.o \
  	lstrlib.o loadlib.o linit.o
