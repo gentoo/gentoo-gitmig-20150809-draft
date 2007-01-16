@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/system-tools-backends
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/ChangeLog,v 1.35 2007/01/04 07:33:53 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/ChangeLog,v 1.36 2007/01/16 15:28:53 uberlord Exp $
+
+  16 Jan 2007; Roy Marples <uberlord@gentoo.org>
+  system-tools-backends-1.4.2.ebuild, system-tools-backends-1.4.2-r1.ebuild:
+  Added ~x86-fbsd keyword.
 
 *system-tools-backends-1.4.2-r1 (04 Jan 2007)
 
