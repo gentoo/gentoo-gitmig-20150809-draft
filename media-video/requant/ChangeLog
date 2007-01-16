@@ -1,6 +1,9 @@
 # ChangeLog for media-video/requant
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/requant/ChangeLog,v 1.4 2006/08/01 19:44:59 zzam Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/requant/ChangeLog,v 1.5 2007/01/16 14:58:42 hd_brummy Exp $
+
+  16 Jan 2007; Joerg Bornkessel <hd_brummy@gentoo.org> ChangeLog:
+  ebuild removed; please use media-video/m2vrequantizer
 
   01 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
   Assigned to VDR-Project.
