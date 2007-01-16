@@ -1,6 +1,9 @@
 # ChangeLog for app-text/remem
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/remem/ChangeLog,v 1.9 2005/01/01 16:33:30 eradicator Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/remem/ChangeLog,v 1.10 2007/01/16 17:07:34 armin76 Exp $
+
+  16 Jan 2007; Raúl Porcel <armin76@gentoo.org> remem-2.11.ebuild:
+  Fix bug 151427
 
   12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> remem-2.11.ebuild:
   Don't assign default to S; header fix
