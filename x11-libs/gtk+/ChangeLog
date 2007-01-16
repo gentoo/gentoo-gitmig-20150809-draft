@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.296 2007/01/14 17:22:40 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.297 2007/01/16 20:51:15 leio Exp $
+
+*gtk+-2.10.7-r1 (16 Jan 2007)
+
+  16 Jan 2007; Mart Raudsepp <leio@gentoo.org>
+  +files/gtk+-2.10.7-mozilla-dnd-fix.patch, -gtk+-2.10.7.ebuild,
+  +gtk+-2.10.7-r1.ebuild:
+  Fix drag and drop problem in mozilla products, bug 162362
 
 *gtk+-2.10.7 (14 Jan 2007)
 
