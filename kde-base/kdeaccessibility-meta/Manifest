@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 EBUILD kdeaccessibility-meta-3.5.2.ebuild 848 RMD160 8e6b0ff02d064d5425a1596fa0d4b7f1274e3c85 SHA1 1b8118c4fb576b787613c4e3c57662b883e6e1b6 SHA256 a088e91f0c83ee9db2f271b265aa9de139333ddce34dfe163129f06d7ea1f052
 MD5 4bdfe7231113eeafe2e303277e3d0555 kdeaccessibility-meta-3.5.2.ebuild 848
 RMD160 8e6b0ff02d064d5425a1596fa0d4b7f1274e3c85 kdeaccessibility-meta-3.5.2.ebuild 848
@@ -6,17 +9,31 @@ EBUILD kdeaccessibility-meta-3.5.5.ebuild 848 RMD160 268681fdbe03ec7843f62e4b825
 MD5 551fd4c931cf40b0851f06e75a2399b5 kdeaccessibility-meta-3.5.5.ebuild 848
 RMD160 268681fdbe03ec7843f62e4b8253e661dbd95bce kdeaccessibility-meta-3.5.5.ebuild 848
 SHA256 46269f87b0e2c9992873d0f8398955f8ac6131d5faac397b5c4280d00a9b89f8 kdeaccessibility-meta-3.5.5.ebuild 848
-MISC ChangeLog 9029 RMD160 c6422ffc199faa8414b27a7a0c1cc14b54baf362 SHA1 f7b76d82a11950ca7f7483d34f218122d3a5ea66 SHA256 05436c06a84c5d22c8f326b62c5b80433c07fe72b40967975ebc2ee85f6b3373
-MD5 11559246e250f728e0d4fad8cbd0059a ChangeLog 9029
-RMD160 c6422ffc199faa8414b27a7a0c1cc14b54baf362 ChangeLog 9029
-SHA256 05436c06a84c5d22c8f326b62c5b80433c07fe72b40967975ebc2ee85f6b3373 ChangeLog 9029
+EBUILD kdeaccessibility-meta-3.5.6.ebuild 858 RMD160 6856b4484eec827fa5e89e92ac0747d34af1a0b2 SHA1 bd92c4f7a0c5e01e6563517341ba0cdae8d2d906 SHA256 062fd72b733837797d990c68463c61876453f7db6d57cb904b9efbfe68fd5639
+MD5 4ca4d97593747e6e9d11999418eaef2e kdeaccessibility-meta-3.5.6.ebuild 858
+RMD160 6856b4484eec827fa5e89e92ac0747d34af1a0b2 kdeaccessibility-meta-3.5.6.ebuild 858
+SHA256 062fd72b733837797d990c68463c61876453f7db6d57cb904b9efbfe68fd5639 kdeaccessibility-meta-3.5.6.ebuild 858
+MISC ChangeLog 9199 RMD160 808d2d6a454966a039e6b9d3f83068e9855ce805 SHA1 0e178efb421c195ec6bf4b1a9c9e95005a390e72 SHA256 cf2ebe07f798fdf2c8cbf49f8fdc4c25b106554c0aaf090cfbdd53de39a104e4
+MD5 1476a2292fde24fd29325ce85df047ed ChangeLog 9199
+RMD160 808d2d6a454966a039e6b9d3f83068e9855ce805 ChangeLog 9199
+SHA256 cf2ebe07f798fdf2c8cbf49f8fdc4c25b106554c0aaf090cfbdd53de39a104e4 ChangeLog 9199
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeaccessibility-meta-3.5.2 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeaccessibility-meta-3.5.2 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeaccessibility-meta-3.5.2 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-kdeaccessibility-meta-3.5.5 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-kdeaccessibility-meta-3.5.5 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-kdeaccessibility-meta-3.5.5 1
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.5.2 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeaccessibility-meta-3.5.2 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeaccessibility-meta-3.5.2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.5.5 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeaccessibility-meta-3.5.5 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeaccessibility-meta-3.5.5 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeaccessibility-meta-3.5.6 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-kdeaccessibility-meta-3.5.6 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-kdeaccessibility-meta-3.5.6 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFrSv6AiZjviIA2XgRAnFYAJ9MzLtJiWnkjUz1tyv/SxMr2jq9/ACg4Q4R
+7VXbDrucAwn70WfB93R/jzo=
+=k+sh
+-----END PGP SIGNATURE-----
