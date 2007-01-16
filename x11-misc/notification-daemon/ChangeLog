@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/notification-daemon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.32 2007/01/15 00:27:09 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.33 2007/01/16 15:23:51 uberlord Exp $
+
+  16 Jan 2007; Roy Marples <uberlord@gentoo.org>
+  notification-daemon-0.3.6-r1.ebuild:
+  Added ~x86-fbsd keyword.
 
   15 Jan 2007; Luis Medinas <metalgod@gentoo.org>
   notification-daemon-0.3.6-r1.ebuild:
