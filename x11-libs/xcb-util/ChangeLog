@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/xcb-util
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util/ChangeLog,v 1.9 2007/01/08 21:49:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util/ChangeLog,v 1.10 2007/01/16 02:49:23 jer Exp $
+
+  16 Jan 2007; Jeroen Roovers <jer@gentoo.org>
+  xcb-util-0.1_p20061216.ebuild:
+  Marked ~hppa (bug #158377).
 
   08 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
   xcb-util-0.1_p20061216.ebuild:
