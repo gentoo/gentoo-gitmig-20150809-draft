@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.187 2006/12/25 13:49:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.188 2007/01/16 13:54:03 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -36,7 +36,7 @@ DEPEND="sys-devel/make
 	dev-lang/perl
 	x11-libs/libXt
 	x11-proto/xf86vidmodeproto
-	x11-proto/xineramaproto"
+	xinerama? ( x11-proto/xineramaproto )"
 
 RDEPEND="xinerama? ( x11-libs/libXinerama )"
 
