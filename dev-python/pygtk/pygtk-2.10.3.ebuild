@@ -1,13 +1,15 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.10.3.ebuild,v 1.9 2007/01/14 02:25:28 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.10.3.ebuild,v 1.10 2007/01/16 22:33:05 dang Exp $
 
 inherit gnome.org python flag-o-matic
 
 DESCRIPTION="GTK+2 bindings for Python"
 HOMEPAGE="http://www.pygtk.org/"
+
+DOC_FILE="pygtk2reference-2.9.0.tar.bz2"
 SRC_URI="${SRC_URI}
-	doc? ( http://www.pygtk.org/dist/pygtk2reference.tbz2 )"
+	doc? ( mirror://gnome/sources/pygtk2reference/2.9/${DOC_FILE} )"
 
 LICENSE="LGPL-2.1"
 SLOT="2"
@@ -35,7 +37,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	if use doc; then
-		unpack pygtk2reference.tbz2
+		unpack ${DOC_FILE}
 	fi
 
 	# disable pyc compiling
@@ -57,9 +59,7 @@ src_install() {
 	cp -r examples ${D}/usr/share/doc/${PF}/
 
 	if use doc; then
-		cd "${S}"/../
-		dodir /usr/share/gtk-doc/html
-		cp -pPR pygtk2reference	${D}/usr/share/gtk-doc/html/
+		cp -r ${WORKDIR}/pygtk2reference/{cursors,icons,images} ${D}/usr/share/gtk-doc/html/pygtk/
 	fi
 }
 
