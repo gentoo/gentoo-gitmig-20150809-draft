@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/cdk-perl/cdk-perl-20031210.ebuild,v 1.11 2006/11/12 05:40:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/cdk-perl/cdk-perl-20031210.ebuild,v 1.12 2007/01/16 22:30:19 yoswink Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://invisible-island.net/cdk/${P}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ia64 ppc s390 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc s390 sparc x86"
 IUSE=""
 
 DEPEND=">=dev-libs/cdk-4.9.10.20031210
