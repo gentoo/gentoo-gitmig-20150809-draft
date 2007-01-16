@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ivtvdev/xf86-video-ivtvdev-0.10.6.ebuild,v 1.3 2007/01/16 07:53:17 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ivtvdev/xf86-video-ivtvdev-0.10.6.ebuild,v 1.4 2007/01/16 08:00:42 je_fro Exp $
 
 inherit eutils x-modular
 
@@ -12,7 +12,7 @@ S=${WORKDIR}/${MY_P}/ivtvdrv/xc/programs/Xserver/hw/xfree86/drivers/ivtv/
 SRC_URI="http://dl.ivtvdriver.org/xdriver/${PV}/${MY_PN}.tgz
 		mirror://gentoo/${PF}.patch.tar.bz2"
 HOMEPAGE="http://ivtvdriver.org/"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 LICENSE="X11"
 IUSE=""
 
