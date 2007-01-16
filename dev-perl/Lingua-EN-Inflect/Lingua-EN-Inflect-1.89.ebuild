@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-EN-Inflect/Lingua-EN-Inflect-1.89.ebuild,v 1.8 2006/08/05 13:23:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-EN-Inflect/Lingua-EN-Inflect-1.89.ebuild,v 1.9 2007/01/16 01:12:47 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Perl module for Lingua::EN::Inflect"
 SRC_URI="mirror://cpan/authors/id/D/DC/DCONWAY/${P}.tar.gz"
-HOMEPAGE="http://search.cpan.org/author/DCONWAY/Lingua-EN-Inflect-1.89/"
+HOMEPAGE="http://search.cpan.org/~dconway/"
 SRC_TEST="do"
 
 SLOT="0"
@@ -16,4 +16,3 @@ IUSE=""
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"

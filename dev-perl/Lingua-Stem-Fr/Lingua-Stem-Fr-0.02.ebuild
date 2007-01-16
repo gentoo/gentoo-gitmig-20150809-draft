@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem-Fr/Lingua-Stem-Fr-0.02.ebuild,v 1.9 2006/08/17 21:29:53 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem-Fr/Lingua-Stem-Fr-0.02.ebuild,v 1.10 2007/01/16 01:16:52 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Perl French Stemming"
-HOMEPAGE="http://search.cpan.org/~sdp/${P}/"
+HOMEPAGE="http://search.cpan.org/~sdp/"
 SRC_URI="mirror://cpan/authors/id/S/SD/SDP/${P}.tar.gz"
 
 LICENSE="Artistic"
@@ -17,4 +17,3 @@ SRC_TEST="do"
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"

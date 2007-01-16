@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Lingua-PT-Stemmer
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-PT-Stemmer/ChangeLog,v 1.9 2006/08/17 21:26:01 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-PT-Stemmer/ChangeLog,v 1.10 2007/01/16 01:15:48 mcummings Exp $
+
+  16 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  Lingua-PT-Stemmer-0.01.ebuild:
+  Ebuild maintenance
 
   17 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Lingua-PT-Stemmer-0.01.ebuild:
