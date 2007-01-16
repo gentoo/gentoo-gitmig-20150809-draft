@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libextractor
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/ChangeLog,v 1.35 2007/01/12 22:39:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/ChangeLog,v 1.36 2007/01/16 12:17:52 armin76 Exp $
+
+  16 Jan 2007; Raúl Porcel <armin76@gentoo.org> libextractor-0.5.15.ebuild:
+  fix -j1, thanks to Ricardo Lanziano <ricardo.lanziano at gmail dot com> at
+  bug 162146
 
 *libextractor-0.5.15 (12 Jan 2007)
 
