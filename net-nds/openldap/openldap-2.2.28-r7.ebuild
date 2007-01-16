@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.28-r7.ebuild,v 1.9 2007/01/13 12:20:14 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.28-r7.ebuild,v 1.10 2007/01/16 21:40:29 jokey Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
@@ -292,7 +292,9 @@ src_install() {
 			die "failed to install kerberos passwd module"
 		fi
 	fi
+}
 
+pkg_preinst() {
 	# keep old libs if needed
 	for each in lber.so.2.0.130 libldap.so.2.0.130 libldap_r.so.2.0.130 ; do
 		preserve_old_lib "${ROOT}usr/$(get_libdir)/${each}"

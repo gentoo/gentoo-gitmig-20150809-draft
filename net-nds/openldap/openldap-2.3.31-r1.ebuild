@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.31-r1.ebuild,v 1.2 2007/01/09 15:12:24 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.31-r1.ebuild,v 1.3 2007/01/16 21:40:29 jokey Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -441,7 +441,9 @@ src_install() {
 		fi
 
 	fi
+}
 
+pkg_preinst() {
 	# keep old libs if any
 	LIBSUFFIXES=".so.2.0.130 -2.2.so.7"
 	for LIBSUFFIX in ${LIBSUFFIXES} ; do
