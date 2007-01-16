@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hessian/hessian-3.0.8-r4.ebuild,v 1.1 2007/01/16 17:13:38 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hessian/hessian-3.0.8-r4.ebuild,v 1.2 2007/01/16 17:17:52 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="The Hessian binary web service protocol makes web services usable without requiring a large framework, and without learning yet another alphabet soup of protocols."
+DESCRIPTION="A binary web service protocol."
 HOMEPAGE="http://www.caucho.com/hessian/"
 SRC_URI="http://www.caucho.com/hessian/download/${P}-src.jar"
 
