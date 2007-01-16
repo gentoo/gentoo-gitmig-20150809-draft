@@ -1,0 +1,10 @@
+# ChangeLog for net-p2p/microdc2
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/microdc2/ChangeLog,v 1.1 2007/01/16 13:34:58 armin76 Exp $
+
+*microdc2-0.15.6 (16 Jan 2007)
+
+  16 Jan 2007; Raúl Porcel <armin76@gentoo.org> +metadata.xml,
+  +microdc2-0.15.6.ebuild:
+  New ebuild, bug 162291
+
