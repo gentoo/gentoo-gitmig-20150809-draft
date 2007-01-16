@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-emoticons/kdeartwork-emoticons-3.5.4.ebuild,v 1.11 2006/12/11 13:42:10 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-emoticons/kdeartwork-emoticons-3.5.4.ebuild,v 1.12 2007/01/16 19:53:08 flameeyes Exp $
 
 ARTS_REQUIRED="never"
 
@@ -8,7 +8,7 @@ RESTRICT="binchecks strip"
 
 KMMODULE=emoticons
 KMNAME=kdeartwork
-MAXKDEVER=3.5.5
+MAXKDEVER=3.5.6
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 

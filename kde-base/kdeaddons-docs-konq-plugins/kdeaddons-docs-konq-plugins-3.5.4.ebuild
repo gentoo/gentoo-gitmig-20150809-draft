@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-docs-konq-plugins/kdeaddons-docs-konq-plugins-3.5.4.ebuild,v 1.10 2006/12/11 11:32:57 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-docs-konq-plugins/kdeaddons-docs-konq-plugins-3.5.4.ebuild,v 1.11 2007/01/16 19:49:25 flameeyes Exp $
 KMNAME=kdeaddons
 KMNOMODULE=true
 KMEXTRA="doc/konq-plugins"
-MAXKDEVER=3.5.5
+MAXKDEVER=3.5.6
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.330 2007/01/05 16:56:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.331 2007/01/16 19:58:48 flameeyes Exp $
+
+*kdebase-3.5.6 (16 Jan 2007)
+
+  16 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> +kdebase-3.5.6.ebuild:
+  Bump to 3.5.6 (prerelease).
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   kdebase-3.5.2-r2.ebuild, kdebase-3.5.5-r1.ebuild, kdebase-3.5.5-r2.ebuild,

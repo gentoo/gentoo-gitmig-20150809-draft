@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/kapptemplate-3.5.5.ebuild,v 1.9 2006/12/06 17:46:05 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/kapptemplate-3.5.5.ebuild,v 1.10 2007/01/16 19:30:37 flameeyes Exp $
 
 ARTS_REQUIRED="no"
 RESTRICT="binchecks strip"
 
 KMNAME=kdesdk
-MAXKDEVER=3.5.5
+MAXKDEVER=3.5.6
 KM_DEPRANGE="3.5.0 $MAXKDEVER"
 inherit kde-meta eutils
 

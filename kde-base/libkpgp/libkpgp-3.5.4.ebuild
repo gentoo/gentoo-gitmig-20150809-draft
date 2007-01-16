@@ -1,9 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpgp/libkpgp-3.5.4.ebuild,v 1.10 2006/12/11 19:16:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpgp/libkpgp-3.5.4.ebuild,v 1.11 2007/01/16 21:52:39 flameeyes Exp $
 
 KMNAME=kdepim
-MAXKDEVER=3.5.5
+MAXKDEVER=3.5.6
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
