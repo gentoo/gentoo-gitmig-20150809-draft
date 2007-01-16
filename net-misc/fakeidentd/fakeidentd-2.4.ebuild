@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/fakeidentd-2.4.ebuild,v 1.4 2007/01/15 17:22:57 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/fakeidentd-2.4.ebuild,v 1.5 2007/01/16 06:04:39 wormo Exp $
 
 inherit toolchain-funcs eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND=""

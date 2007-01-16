@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/fakeidentd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/ChangeLog,v 1.26 2007/01/15 17:22:57 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/ChangeLog,v 1.27 2007/01/16 06:04:39 wormo Exp $
+
+  14 Jan 2007; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  fakeidentd-2.4.ebuild:
+  stable on ppc (Bug #161901)
 
   15 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> fakeidentd-2.4.ebuild:
   Stable on sparc wrt #161901
