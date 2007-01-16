@@ -1,6 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.14_rc2.ebuild,v 1.1 2007/01/16 22:55:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.14_rc2.ebuild,v 1.2 2007/01/16 23:49:11 flameeyes Exp $
+
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
 
 inherit eutils autotools
 
@@ -13,7 +16,7 @@ SRC_URI="mirror://alsaproject/utils/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0.9"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
-IUSE="nls"
+IUSE="nls midi"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	dev-util/dialog
@@ -21,7 +24,18 @@ DEPEND=">=sys-libs/ncurses-5.1
 RDEPEND="${DEPEND}
 	sys-apps/pciutils"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
+
+#pkg_setup() {
+# leave commented out for now as built_with_use cannot be used for this check
+#	if use midi && ! built_with_use media-libs/alsa-lib midi; then
+#		ewarn "To be able to build alsa-utils with midi support you need"
+#		ewarn "to have built media-libs/alsa-lib with midi useflag, if"
+#		ewarn "it has one. Otherwise, the package might fail to build."
+#		# This is not fatal because the version of alsa-lib with midi disabled
+#		# is not yet unmasked.
+#	fi
+#}
 
 src_unpack() {
 	unpack ${A}
@@ -29,11 +43,15 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${PN}-1.0.11_rc2-nls.patch"
 	epatch "${FILESDIR}/${PN}-1.0.11_rc5-alsaconf-redirect.patch"
+	epatch "${FILESDIR}/${P}-seq.patch"
+
+	AT_M4DIR="m4" eautoreconf
 }
 
 src_compile() {
 	econf \
 		$(use_enable nls) \
+		$(use_enable midi sequencer) \
 		|| die "configure failed"
 
 	emake || die "make failed"
