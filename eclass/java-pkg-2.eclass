@@ -5,9 +5,12 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-2.eclass,v 1.12 2007/01/12 16:12:15 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-2.eclass,v 1.13 2007/01/16 21:11:29 betelgeuse Exp $
 
 inherit java-utils-2
+
+ECLASS="java-pkg-2"
+INHERITED="${INHERITED} ${ECLASS}"
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -18,6 +21,15 @@ inherit java-utils-2
 # -----------------------------------------------------------------------------
 
 # ------------------------------------------------------------------------------
+# @IUSE
+#
+# ebuilds using this eclass can set JAVA_PKG_IUSE and then this eclass
+# will automatically add deps for them.
+#
+# ------------------------------------------------------------------------------
+IUSE="${JAVA_PKG_IUSE}"
+
+# ------------------------------------------------------------------------------
 # @depend
 #
 # Java packages need java-config, and a fairly new release of Portage.
@@ -25,6 +37,8 @@ inherit java-utils-2
 # JAVA_PKG_E_DEPEND is defined in java-utils.eclass.
 # ------------------------------------------------------------------------------
 DEPEND="${JAVA_PKG_E_DEPEND}"
+
+hasq source ${JAVA_PKG_IUSE} && DEPEND="${DEPEND} source? ( app-arch/zip )"
 
 # ------------------------------------------------------------------------------
 # @rdepend
