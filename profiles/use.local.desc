@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2499 2007/01/14 21:32:22 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2500 2007/01/16 16:20:15 tupone Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -601,6 +601,7 @@ games-rpg/nwn:hou - Install the Hordes of the Underdark expansion pack
 games-rpg/nwn:sou - Installs the Shadows of Undrentide expension pack
 games-simulation/openttd:scenarios - Install additional contributed scenarios
 games-simulation/openttd:timidity - Add sound support (timidity)
+games-strategy/dark-oberon:fmod - Add sound support (fmod)
 games-strategy/freeciv:auth - Add authentication capability
 games-strategy/freecraft-fcmp:music - Installs optional music data
 games-strategy/freelords:editor - Installs optional map editor
