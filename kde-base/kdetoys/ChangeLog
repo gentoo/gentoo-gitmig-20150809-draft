@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdetoys
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.169 2007/01/16 20:24:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.170 2007/01/16 22:30:58 flameeyes Exp $
+
+  16 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> kdetoys-3.5.6.ebuild:
+  Fix keywording.
 
 *kdetoys-3.5.6 (16 Jan 2007)
 

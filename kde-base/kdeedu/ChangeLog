@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.202 2007/01/16 20:02:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.203 2007/01/16 22:22:25 flameeyes Exp $
+
+  16 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> kdeedu-3.5.6.ebuild:
+  Fix keywording.
 
 *kdeedu-3.5.6 (16 Jan 2007)
 
