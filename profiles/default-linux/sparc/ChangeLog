@@ -1,6 +1,15 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.15 2007/01/04 21:49:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.16 2007/01/16 17:59:43 gustavoz Exp $
+
+  16 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  -sparc64/dev/gcc.4.1.1/deprecated, -sparc64/dev/gcc.4.1.1/make.defaults,
+  -sparc64/dev/gcc.4.1.1/package.mask, -sparc64/dev/gcc.4.1.1/packages,
+  -sparc64/dev/gcc.4.1.1/parent, -sparc64/dev/gcc.4.1.1/use.mask,
+  -sparc64/dev/gcc.4.1.1/virtuals, -sparc64/dev/make.defaults,
+  sparc64/dev/gcc-4.1.1/packages, -sparc64/dev/packages,
+  sparc64/dev/gcc-4.1.1/use.mask:
+  Cleanup gcc4 profile, nuke the old one
 
   04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> use.mask:
   Revert masking of PHP binary useflags.

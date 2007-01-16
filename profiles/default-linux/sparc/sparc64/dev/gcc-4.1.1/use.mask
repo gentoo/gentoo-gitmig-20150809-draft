@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/dev/gcc-4.1.1/use.mask,v 1.1 2006/11/03 23:42:08 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/dev/gcc-4.1.1/use.mask,v 1.2 2007/01/16 17:59:43 gustavoz Exp $
 
 # Java and java-related stuffs
 freetts
@@ -8,11 +8,3 @@ java
 java-internal
 java-external
 netbeans
-
-# New stuff enabled
--hal
--ipod
--alsa
--ladcca
--udev
--pmount
