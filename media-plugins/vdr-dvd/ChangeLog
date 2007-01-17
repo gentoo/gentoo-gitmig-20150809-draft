@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-dvd
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvd/ChangeLog,v 1.7 2006/11/17 13:01:44 hd_brummy Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvd/ChangeLog,v 1.8 2007/01/17 18:49:06 hd_brummy Exp $
+
+*vdr-dvd-0.3.7_pre20070117 (17 Jan 2007)
+
+  17 Jan 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-dvd-0.3.7_pre20060719.ebuild, +vdr-dvd-0.3.7_pre20070117.ebuild:
+  new CVS snapshot, VDR-0.1.5 ready; set download url to vdrmirror; removed
+  unneeded block to vdr-dvd-cvs
 
   17 Nov 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
   -files/dvd-a52drc.diff, -vdr-dvd-0.3.7_pre20051121.ebuild,
