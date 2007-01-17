@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX module-init-tools-3.1_generate-modprobe-assume-kernel.patch 3674 RMD160 5012db2e672a0944f112c836b7677a54e4d38615 SHA1 f0a8b49215896581ff4cd08e88de4627bdff9491 SHA256 5cbe34244609cc4915c78612388f9fda64dcf9c5b7d6038e620fc42db4a76efd
 MD5 eda95f82096ae4618845f06fdb7f6686 files/module-init-tools-3.1_generate-modprobe-assume-kernel.patch 3674
 RMD160 5012db2e672a0944f112c836b7677a54e4d38615 files/module-init-tools-3.1_generate-modprobe-assume-kernel.patch 3674
@@ -44,10 +47,10 @@ EBUILD module-init-tools-3.2.2-r1.ebuild 4976 RMD160 8e5d8f740ea7e527ecc61b84aa4
 MD5 f5339686e5d2953429797a691fa19057 module-init-tools-3.2.2-r1.ebuild 4976
 RMD160 8e5d8f740ea7e527ecc61b84aa45c16deff5265e module-init-tools-3.2.2-r1.ebuild 4976
 SHA256 031c4734d87ddaa7b7109840b8c2b29321c11818d060701640e197e54b21cd83 module-init-tools-3.2.2-r1.ebuild 4976
-EBUILD module-init-tools-3.2.2-r2.ebuild 5129 RMD160 d2c370609cee1312f53d0d81eed15f9202cfdcc7 SHA1 06dd824876f74a96801c874f42879ad6a2b6e925 SHA256 7d887c57c1882f70ba96e6f1bf11a712ce15369fae4f9ea55927e5a0877154fd
-MD5 7468e4f60cfd0d7a633c7a2b31ae71ba module-init-tools-3.2.2-r2.ebuild 5129
-RMD160 d2c370609cee1312f53d0d81eed15f9202cfdcc7 module-init-tools-3.2.2-r2.ebuild 5129
-SHA256 7d887c57c1882f70ba96e6f1bf11a712ce15369fae4f9ea55927e5a0877154fd module-init-tools-3.2.2-r2.ebuild 5129
+EBUILD module-init-tools-3.2.2-r2.ebuild 5126 RMD160 1f86023add5300001e7ebd976f4701cf2810e830 SHA1 1638372eb7c18211ef7157d37fd81680462a216e SHA256 1d08c2ece414d7d275b5555b8e0e40dc5a627f33f49ab0a7dde59899289bf6c9
+MD5 fa3294eed8b5937222f48ce68d0fd415 module-init-tools-3.2.2-r2.ebuild 5126
+RMD160 1f86023add5300001e7ebd976f4701cf2810e830 module-init-tools-3.2.2-r2.ebuild 5126
+SHA256 1d08c2ece414d7d275b5555b8e0e40dc5a627f33f49ab0a7dde59899289bf6c9 module-init-tools-3.2.2-r2.ebuild 5126
 MISC ChangeLog 21337 RMD160 c0ba94c6ff21c1f5fb7bebc52e42e9e399438fc6 SHA1 d7e39d60438b4eca453a7c5412396eef79a1d4b1 SHA256 ff2a921618952318d05e5e1228a3f5d244febf0815d853953f924d5daf3c2d75
 MD5 8cfc57c76b44fad48438e3323f45d140 ChangeLog 21337
 RMD160 c0ba94c6ff21c1f5fb7bebc52e42e9e399438fc6 ChangeLog 21337
@@ -62,3 +65,10 @@ SHA256 a0137b244c6cab76e8a2cb31e651484992231b823af1d8d4fc2e1a5db10fe5f6 files/di
 MD5 de56fee3dadb3285694b097dfa7848a0 files/digest-module-init-tools-3.2.2-r2 524
 RMD160 dfc478dc854fdd48bb3526ef421d560becb4a37e files/digest-module-init-tools-3.2.2-r2 524
 SHA256 a0137b244c6cab76e8a2cb31e651484992231b823af1d8d4fc2e1a5db10fe5f6 files/digest-module-init-tools-3.2.2-r2 524
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFrrbb8bi6rjpTunYRAgfBAKDRSVeR+Nl/JByGQL+VKMNy6xpWZACg3/xs
+30Brwgv5snGHBUZGq2APGXk=
+=/xIH
+-----END PGP SIGNATURE-----
