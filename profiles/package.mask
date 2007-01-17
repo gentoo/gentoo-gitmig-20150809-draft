@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6630 2007/01/17 19:35:25 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6631 2007/01/17 20:56:21 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1557,12 +1557,6 @@ gnustep-apps/vindaloo
 # Konstantin Arkhipov <voxus@gentoo.org> (14 Jul 2005)
 # Masked for security reasons.
 <=sys-kernel/openmosix-sources-2.4.30
-
-# Chris White (chriswhite@gentoo.org) (08 Jul 2005)
-# Masking initial import of ipodder as it has some issues
-# with the episode cleanup window.  However, those that don't use
-# it should be ok.
-media-sound/ipodder
 
 # Caleb Tennis <caleb@gentoo.org> (01 Jul 2005)
 # Seems to not be compatible with kde 3.4 though
