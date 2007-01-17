@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-data/descent2-data-1.0.ebuild,v 1.1 2007/01/09 21:28:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-data/descent2-data-1.0.ebuild,v 1.2 2007/01/17 16:37:44 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -25,7 +25,6 @@ IUSE=""
 # d2x-rebirth is favoured because it is stable.
 RDEPEND="|| (
 	games-action/d2x-rebirth
-	games-action/d2x-xl
 	>=games-action/d2x-0.2.5-r3 )"
 DEPEND="!<games-action/d2x-0.2.5-r3
 	app-arch/unarj"
