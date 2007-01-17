@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/paros
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/paros/ChangeLog,v 1.14 2006/11/17 21:05:12 mrness Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/paros/ChangeLog,v 1.15 2007/01/17 20:10:49 mrness Exp $
+
+  17 Jan 2007; Alin Năstac <mrness@gentoo.org> paros-3.2.13.ebuild:
+  Add ~amd64.
 
   17 Nov 2006; Alin Nastac <mrness@gentoo.org> -paros-3.2.10.ebuild,
   paros-3.2.13.ebuild:
