@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/silo
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.33 2007/01/16 17:50:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.34 2007/01/17 14:26:10 gustavoz Exp $
+
+  17 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  -silo-1.4.11-r1.ebuild:
+  Fix stray digest and remove for real
 
   16 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   -files/silo-1.4.11-timer.patch, -files/silo-1.4.12-iso.patch,
