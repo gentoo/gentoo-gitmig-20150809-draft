@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/irssi
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.105 2007/01/11 17:19:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.106 2007/01/17 17:33:22 grobian Exp $
+
+  17 Jan 2007; Fabian Groffen <grobian@gentoo.org> irssi-0.8.10-r3.ebuild,
+  irssi-0.8.10-r4.ebuild:
+  Dropped ppc-macos keyword, see you in prefix
 
   11 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   irssi-0.8.10-r4.ebuild:
