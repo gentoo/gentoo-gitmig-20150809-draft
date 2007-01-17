@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-3.5.6.ebuild,v 1.1 2007/01/16 21:42:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-3.5.6.ebuild,v 1.2 2007/01/17 00:19:39 flameeyes Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -23,8 +23,7 @@ DEPEND="${RDEPEND}
 SRC_URI="${SRC_URI}
 	mirror://gentoo/${PN}-3.5.5-seli-xinerama.patch.bz2"
 
-PATCHES="${FILESDIR}/${PN}-3.5.5-input-shape.patch
-	${DISTDIR}/${PN}-3.5.5-seli-xinerama.patch.bz2"
+PATCHES="${DISTDIR}/${PN}-3.5.5-seli-xinerama.patch.bz2"
 
 src_compile() {
 	myconf="$myconf $(use_with xcomposite composite)"
