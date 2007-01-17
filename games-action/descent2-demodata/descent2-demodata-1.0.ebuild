@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-demodata/descent2-demodata-1.0.ebuild,v 1.1 2007/01/09 21:38:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-demodata/descent2-demodata-1.0.ebuild,v 1.2 2007/01/17 16:47:29 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -24,7 +24,6 @@ IUSE=""
 # d2x-0.2.5-r3 does not include the demo data
 RDEPEND="|| (
 	games-action/d2x-rebirth
-	games-action/d2x-xl
 	>=games-action/d2x-0.2.5-r3 )"
 DEPEND="!<games-action/d2x-0.2.5-r3
 	app-arch/unarj"
