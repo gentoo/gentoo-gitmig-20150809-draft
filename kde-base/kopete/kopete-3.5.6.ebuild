@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.6.ebuild,v 1.1 2007/01/16 21:04:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.6.ebuild,v 1.2 2007/01/17 01:23:02 flameeyes Exp $
 
 KMNAME=kdenetwork
 MAXKDEVER=$PV
@@ -80,7 +80,7 @@ src_unpack() {
 	# use ekiga instead of gnomemeeting by default
 	epatch "${FILESDIR}/gnomemeeting-ekiga.patch"
 
-	epatch "${FILESDIR}/${P}-icqfix.patch"
+	epatch "${FILESDIR}/${PN}-3.5.5-icqfix.patch"
 
 	epatch "${FILESDIR}/kdenetwork-3.5.5-linux-headers-2.6.18.patch"
 
