@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.58-r1.ebuild,v 1.1 2007/01/16 23:04:09 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.58-r1.ebuild,v 1.2 2007/01/17 11:15:22 masterdriverz Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -49,7 +49,7 @@ src_unpack() {
 	if ! use gdbm ; then
 		epatch "${FILESDIR}/${PV}-configure-db4.patch"
 	else
-		epatch "${FILESDIR}/${PV}-remove-obselete-macro.patch"
+		epatch "${FILESDIR}/${PV}-remove-obsolete-macro.patch"
 	fi
 	sed -i -e'/for dir in/a@@INDENT@@/etc/courier-imap \\' ${S}/authmigrate.in
 	sed -i -e'/for dir in/a@@INDENT@@/etc/courier/authlib \\' ${S}/authmigrate.in
