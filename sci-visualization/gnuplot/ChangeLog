@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/gnuplot
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.7 2006/11/13 02:55:13 dberkholz Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.8 2007/01/17 04:17:14 markusle Exp $
+
+  17 Jan 2007; Markus Dittrich <markusle@gentoo.org> gnuplot-4.0-r1.ebuild,
+  gnuplot-4.2_rc1.ebuild:
+  Changed paths passed to addwrite into a properly colon separated
+  list.
 
   13 Nov 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   gnuplot-4.2_rc1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.0-r1.ebuild,v 1.3 2006/10/10 21:48:15 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.0-r1.ebuild,v 1.4 2007/01/17 04:17:14 markusle Exp $
 
 inherit eutils elisp-common
 
@@ -62,7 +62,7 @@ src_compile() {
 	# This is a hack to avoid sandbox violations when using the Linux console.
 	# Creating the DVI and PDF tutorials require /dev/svga to build the
 	# example plots.
-	addwrite /dev/svga /dev/mouse /dev/tts/0
+	addwrite /dev/svga:/dev/mouse:/dev/tts/0
 
 	econf ${myconf} || die
 	emake || die
