@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX redland-bindings-1.0.0.2-DESTDIR.patch 421 RMD160 d131fcf9f5689a8622fa13596205318da16b227a SHA1 e063bf52bb3523f4cf1630fd8366687caa0384db SHA256 970346f0da066da80eb5e9e4ed260edae56f03078c941a405493dec9af8ca7f7
 MD5 0d01eb61aef3335fea495f4a8e23cb79 files/redland-bindings-1.0.0.2-DESTDIR.patch 421
 RMD160 d131fcf9f5689a8622fa13596205318da16b227a files/redland-bindings-1.0.0.2-DESTDIR.patch 421
@@ -34,3 +37,10 @@ SHA256 61ed15f9cb660d84aa126c29d215fe587546b102bb6c68479201e4d090a62ad2 files/di
 MD5 a82a697202405ee0b7776e724e2374ad files/digest-redland-bindings-1.0.5.1 274
 RMD160 87cac7b7cf8423a08feb863aa4381dd568b2b8d5 files/digest-redland-bindings-1.0.5.1 274
 SHA256 017809f4fd7b9f1c0786aa24114e72eab5372284711f5ae6e2e33b58676df77e files/digest-redland-bindings-1.0.5.1 274
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFrXmn8bi6rjpTunYRAgt8AKDJe8wu0kjw9E1K1KSVAACuU2jGVACgwWi4
+NRmnyjOgoM7OJ6zb0JIDB/g=
+=9VMN
+-----END PGP SIGNATURE-----

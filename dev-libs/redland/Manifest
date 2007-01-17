@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX redland-1.0.3-configure.patch 267 RMD160 01154240bce4e0903aec55e9365dc7d099eaf1d1 SHA1 0cb81d7917b8e06daeef2116b302f37a82a24e1f SHA256 22a31320f6cacfaad2a942a2454e223b7bd3d6509063b3681d3a7941389b16ba
 MD5 4c7cef6bddbff704dd486790b7421f38 files/redland-1.0.3-configure.patch 267
 RMD160 01154240bce4e0903aec55e9365dc7d099eaf1d1 files/redland-1.0.3-configure.patch 267
@@ -30,3 +33,10 @@ SHA256 e4285db800f31f8b86b523c198c1d1d79bcc03cd050b374b2c8211486e4743d6 files/di
 MD5 5f91017a01bd08b21b7d76aff5942dc1 files/digest-redland-1.0.5 244
 RMD160 69445d97f762b2617bb61a03906c8fbd3d647034 files/digest-redland-1.0.5 244
 SHA256 8073c2276088eebd18263b5f6c21e38f67ce8c7e0c28916dad953fd9b1d9440d files/digest-redland-1.0.5 244
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFrXmO8bi6rjpTunYRApYXAJ9zVQPLX1B+FhqbyCogER8Rmfo1YQCeO5Gt
+0vZPbhD5I4zebWfDd5kjjs0=
+=SdIu
+-----END PGP SIGNATURE-----
