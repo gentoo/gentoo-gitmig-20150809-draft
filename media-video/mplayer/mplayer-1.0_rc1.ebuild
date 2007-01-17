@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1.ebuild,v 1.24 2007/01/09 03:15:14 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1.ebuild,v 1.25 2007/01/17 17:27:22 opfer Exp $
 
 inherit eutils flag-o-matic
 
@@ -420,7 +420,7 @@ src_compile() {
 		if use x86 ; then
 			replace-flags -O* -O2
 			filter-flags -fPIC -fPIE
-			use debug || append-flags -fomit-frame-pointer
+			use debug || filter-flags -fomit-frame-pointer
 		fi
 	append-flags -D__STDC_LIMIT_MACROS
 	else
