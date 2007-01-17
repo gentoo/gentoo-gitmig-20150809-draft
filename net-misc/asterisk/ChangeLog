@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.141 2007/01/17 17:55:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.142 2007/01/17 18:00:30 gustavoz Exp $
+
+  17 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  asterisk-1.2.14.ebuild:
+  Switch bri patch to gentoo mirrors instead of gentooexperimental
 
 *asterisk-1.2.14 (17 Jan 2007)
 

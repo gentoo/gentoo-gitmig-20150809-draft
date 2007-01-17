@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.14.ebuild,v 1.1 2007/01/17 17:55:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.14.ebuild,v 1.2 2007/01/17 18:00:30 gustavoz Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -23,7 +23,7 @@ DESCRIPTION="Asterisk: A Modular Open Source PBX System"
 HOMEPAGE="http://www.asterisk.org/"
 SRC_URI="http://ftp.digium.com/pub/asterisk/releases/${MY_P}.tar.gz
 	 http://www.netdomination.org/pub/asterisk/${PN}-${AST_PATCHES}.tar.bz2
-	 bri? ( http://gentooexperimental.org/~genstef/dist/${MY_P}-bristuff-${BRI_VERSION}.diff.bz2
+	 bri? ( mirror://gentoo/${MY_P}-bristuff-${BRI_VERSION}.diff.bz2
 		http://www.junghanns.net/downloads/bristuff-${BRI_VERSION}.tar.gz )
 	 genericjb? ( http://www.netdomination.org/pub/asterisk/${PN}-${JB_PATCHES}.patch.bz2 )"
 #	 bri? (	http://www.junghanns.net/downloads/bristuff-${BRI_VERSION}.tar.gz )
