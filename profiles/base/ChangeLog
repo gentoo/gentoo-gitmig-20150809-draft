@@ -1,0 +1,7 @@
+# ChangeLog for Gentoo base-profile
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.1 2007/01/17 00:52:45 rbu Exp $
+
+  17 Jan 2007; Robert Buchholz <rbu@gentoo.org> make.defaults:
+  Added LCD_DEVICES to USE_EXPAND and provided some defaults
+

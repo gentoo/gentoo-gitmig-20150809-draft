@@ -1,0 +1,60 @@
+# Copyright 2007 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/lcd_devices.desc,v 1.1 2007/01/17 00:52:45 rbu Exp $
+
+# This file contains descriptions of LCD_DEVICES USE_EXPAND flags.
+
+# Keep it sorted.
+bayrad - Add support for BayRAD LCD modules by EMAC
+beckmannegle - Add support for Beckmann+Egle "Mini Terminals" and "Compact Terminals"
+bwct - Add support for BWCT USB LCD displays
+cfontz - Add support for CrystalFontz displays
+cfontz633 - Add support for CrystalFontz 633 chipset displays
+cfontzpacket - Add support for CrystalFontz chipsets CFA-631, CFA-633 and CFA-635 
+ncurses - Add support for emulated LCD display on terminal using ncurses
+cwlinux - Add support for serial / USB displays CW12232 and CW1602 by CwLinux
+eyeboxone - Add support for the displays on Rightvision's EyeboxOne server
+g15 - Add support for Logitech G15 Keyboard LCDs
+glcdlib - Meta-driver to support drivers via app-misc/graphlcd-base
+glk - Add support for MatrixOrbital GLK chipset
+hd44780 - Add support for Hitachi HD44780 and compatible displays
+icpa106 - Add support for ICP A106 alarm/LCD boards for 19" racks
+imon - Add support for Soundgraph/Ahanix/Silverstone/Uneed/Accent iMON IR/VFD modules
+iowarrior - Add support for IO-Warrior displays
+irman - Add support for IrMan IR remote controlling
+joystick - Add support for joystick input driver
+lb216 - Add support for RTN's LB216 display
+lcdlinux - Add support for HD44780 displays via the LCD-Linux kernel driver
+lcdm001 - Add support for the Kernelconcepts LCDM001 display
+lcdterm - Add support for LCDTerm serial-to-HD44780 adapter boards
+lcterm - Add support for Neumark's LCTerm serial LCD
+lirc - Add support for LIRC infrared devices
+m50530 - Add support for M50530 and compatible displays
+md8800 - Add support for the VFD of the Medion MD8800 PC
+milfordbpk - Add support for Milford Instruments BPK serial interface board for HD44780
+ms6931 - Add support for MSI-6931 displays in MSI rack servers
+mtcs16209x - Add support for MTC_S16209x displays
+mtxorb - Add support for Matrix Orbital LCD* LKD* VFD* and VKD* displays
+noritake - Add support for the Noritake GU128x32-311 graphical display.
+noritakevfd - Add support for the Noritake VFD Device CU20045SCPB-T28A
+null - Add support for a NULL driver (for testing)
+png - Add support for PNG output
+ppm - Add support for PNG output
+pyramid - Add support for the Pyramid LCD device
+routerboard - Add support for the Router Board LCD port
+sed1330 - Add support for Seiko Epson SED1330/1335 graphical displays (S1D13300/S1D13305)
+sed1520 - Add support for the Seiko Epson SED1520 Controller
+serdisplib - Meta-driver to support drivers via dev-libs/serdisplib
+serialvfd - Add support for most NEC, Futaba and Noritake VFDs
+simplelcd - Add support for a simple serial terminal display
+sli - Add support for a Wirz SLI display
+stv5730 - Add support for STV5730A on-screen display chips
+svga - Add support for output via svgalib
+t6963 - Add support for Toshiba T6963 based LCD displays
+text - Add support for TextMode displaying
+trefon - Add support for Trefon USB LCD displays
+tyan - Add support for LCDs of the Barebone GS series
+ula200 - Add support for ULA200 USB devices that allow USB connection of HD44780s
+usblcd - Add support for USBLCD displays
+X - Add support for X11 displaying
+xosd - Add support for xosdlib
