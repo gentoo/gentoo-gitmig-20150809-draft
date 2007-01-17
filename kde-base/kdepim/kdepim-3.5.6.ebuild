@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.5.6.ebuild,v 1.4 2007/01/17 15:12:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.5.6.ebuild,v 1.5 2007/01/17 17:42:59 flameeyes Exp $
 
 inherit kde-dist
 
@@ -35,7 +35,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf="--with-sasl $(use_with gnokii)"
-	use crypt && myconf="${myconf} --with-gpg=${ROOT}/usr/bin/gpg"
+	use crypt && myconf="${myconf} --with-gpg=/usr/bin/gpg"
 
 	kde_src_compile
 }

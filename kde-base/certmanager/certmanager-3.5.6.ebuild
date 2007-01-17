@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/certmanager/certmanager-3.5.6.ebuild,v 1.1 2007/01/16 19:21:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/certmanager/certmanager-3.5.6.ebuild,v 1.2 2007/01/17 17:43:40 flameeyes Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -27,6 +27,6 @@ KMEXTRA="doc/kleopatra
 	doc/kwatchgnupg"
 
 src_compile() {
-	myconf="--with-gpg=${ROOT}/usr/bin/gpg"
+	myconf="--with-gpg=/usr/bin/gpg"
 	kde_src_compile
 }
