@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
+	<herd>forensics</herd>
+	<maintainer>
+		<email>hyakuhei@gentoo.org</email>
+		<name>Robert Clark</name>
+	</maintainer>
 </pkgmetadata>
