@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libixp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/ChangeLog,v 1.2 2007/01/10 01:18:27 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/ChangeLog,v 1.3 2007/01/17 00:17:42 omp Exp $
+
+  17 Jan 2007; David Shakaryan <omp@gentoo.org> -libixp-0.2.ebuild,
+  libixp-0.2-r1.ebuild:
+  Fix sed expression. (bug #160326)
 
   10 Jan 2007; David Shakaryan <omp@gentoo.org>
   +files/libixp-0.2-shared-object.patch, +libixp-0.2-r1.ebuild:
