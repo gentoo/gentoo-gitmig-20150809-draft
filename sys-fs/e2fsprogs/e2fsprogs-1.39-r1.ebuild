@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.39-r1.ebuild,v 1.1 2006/12/30 00:40:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.39-r1.ebuild,v 1.2 2007/01/17 03:50:59 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -41,6 +41,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-1.38-locale.patch #131462
 	# Fix a cosmetic error in mk_cmds's help output.
 	epatch "${FILESDIR}"/e2fsprogs-1.32-mk_cmds-cosmetic.patch
+	epatch "${FILESDIR}"/e2fsprogs-1.39-util-strptime.patch
 	chmod u+w po/*.po # Userpriv fix #27348
 	# Clean up makefile to suck less
 	epatch "${FILESDIR}"/e2fsprogs-1.39-makefile.patch
@@ -49,6 +50,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-1.39-libintl.patch
 	# Add ext4 support #156697
 	epatch $(sed -e 's:^:patches/:g' patches/series)
+	epatch "${FILESDIR}"/e2fsprogs-1.39-ext4-prototypes.patch
 
 	# kernel headers use the same defines as e2fsprogs and can cause issues #48829
 	sed -i \
