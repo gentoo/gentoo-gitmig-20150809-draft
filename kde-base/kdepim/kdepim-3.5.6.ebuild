@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.5.6.ebuild,v 1.3 2007/01/17 14:20:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.5.6.ebuild,v 1.4 2007/01/17 15:12:29 flameeyes Exp $
 
 inherit kde-dist
 
@@ -26,8 +26,6 @@ RDEPEND="${DEPEND}
 
 DEPEND="${DEPEND}
 	x11-proto/scrnsaverproto"
-
-PATCHES="${FILESDIR}/kmail-${PV}-dimap-mail-loss.patch"
 
 src_unpack() {
 	kde_src_unpack

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.5.6.ebuild,v 1.1 2007/01/16 20:48:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.5.6.ebuild,v 1.2 2007/01/17 15:14:55 flameeyes Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -57,5 +57,3 @@ KMCOMPILEONLY="libemailfunctions"
 # the kmail plugins are installed with kmail
 KMEXTRA="plugins/kmail/
 	kontact/plugins/kmail/" # We add here the kontact's plugin instead of compiling it with kontact because it needs a lot of this programs deps.
-
-PATCHES="${FILESDIR}/${P}-dimap-mail-loss.patch"
