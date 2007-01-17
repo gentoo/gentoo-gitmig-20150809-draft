@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-9.0.31.0.ebuild,v 1.1 2007/01/17 14:27:39 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-9.0.31.0.ebuild,v 1.2 2007/01/17 20:14:24 antarus Exp $
 
 inherit nsplugins
 
@@ -10,10 +10,10 @@ HOMEPAGE="http://www.adobe.com/"
 IUSE=""
 SLOT="0"
 
-KEYWORDS="~amd64 -ppc -sparc ~x86"
+KEYWORDS="-* ~amd64 ~x86"
 LICENSE="AdobeFlash-9.0.31.0"
 S=${WORKDIR}/install_flash_player_9_linux
-RESTRICT="nostrip nomirror"
+RESTRICT="strip mirror"
 
 DEPEND="!net-www/gplflash
 	amd64? ( app-emulation/emul-linux-x86-baselibs

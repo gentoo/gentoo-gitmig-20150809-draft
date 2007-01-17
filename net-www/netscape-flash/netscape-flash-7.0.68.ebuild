@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-7.0.68.ebuild,v 1.3 2006/09/30 19:55:17 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-7.0.68.ebuild,v 1.4 2007/01/17 20:14:24 antarus Exp $
 
 inherit nsplugins
 
@@ -11,14 +11,14 @@ HOMEPAGE="http://www.macromedia.com/"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="amd64 -ppc -sparc x86"
+KEYWORDS="-* amd64 x86"
 LICENSE="Macromedia"
 
 DEPEND="!net-www/gplflash
 	amd64? ( app-emulation/emul-linux-x86-baselibs
 			 app-emulation/emul-linux-x86-xlibs )"
 
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 QA_TEXTRELS="opt/netscape/plugins/libflashplayer.so"
 
