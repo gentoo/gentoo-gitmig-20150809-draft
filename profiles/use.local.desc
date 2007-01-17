@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2503 2007/01/17 01:37:16 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2504 2007/01/17 17:04:11 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -358,7 +358,6 @@ dev-java/jdbc-postgresql:java5 - Enable Java 5 specific features
 dev-java/log4j:javamail - Build the SMTPAppender
 dev-java/log4j:jms - Build the JMSAppender
 dev-java/log4j:jmx - Build org.apace.log4j.jmx
-dev-java/proxool:java5 - Build bytecode for >=virtual/jdk-1.5
 dev-java/quartz:dbcp - Enable dbcp support
 dev-java/quartz:jboss - Enable JBoss support
 dev-java/quartz:jmx - Enable jmx support
