@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/ehcache
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ChangeLog,v 1.5 2007/01/03 03:19:21 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ChangeLog,v 1.6 2007/01/17 00:41:15 caster Exp $
+
+*ehcache-1.2.4-r1 (17 Jan 2007)
+
+  17 Jan 2007; Vlastimil Babka <caster@gentoo.org> +ehcache-1.2.4-r1.ebuild:
+  Raise jdk/jre dep to 1.5, retaining 1.4 bytecode, because classes from 1.5+
+  API are needed in one source file. Fixed bug #160845, thanks to Alistair
+  Bush <alistair.bush@gmail.com>.
 
   03 Jan 2007; Joshua Nichols <nichoj@gentoo.org> -ehcache-1.1.ebuild:
   Pruned unmigrated revision.
