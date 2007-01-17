@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.19.ebuild,v 1.3 2007/01/05 10:29:24 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.19.ebuild,v 1.4 2007/01/17 10:51:22 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -82,6 +82,11 @@ src_compile() {
 
 	# reccommended by upstream
 	append-flags -fno-strict-aliasing
+
+	# signed chars are required
+	if use ppc; then
+		append-flags -fsigned-char
+	fi
 
 	econf ${myconf} `use_enable truetype xft` \
 					`use_with stroke stroke-library` \
