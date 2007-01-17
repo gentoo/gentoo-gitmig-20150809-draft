@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.5.6.ebuild,v 1.1 2007/01/16 20:29:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.5.6.ebuild,v 1.2 2007/01/17 17:16:11 carlo Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -29,7 +29,7 @@ RDEPEND="${DEPEND}
 	kde-base/kdepasswd"
 PDEPEND="$(deprange $PV $MAXKDEVER kde-base/kdesktop)"
 
-PATCHES="${FILESDIR}/${P}-grub-patch.diff"
+PATCHES="${FILESDIR}/kdm-3.5.5-grub-patch.diff"
 
 src_unpack() {
 	kde-meta_src_unpack
