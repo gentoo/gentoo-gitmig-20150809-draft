@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gephex
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/ChangeLog,v 1.15 2006/10/16 19:50:24 hd_brummy Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/ChangeLog,v 1.16 2007/01/17 22:19:34 mr_bones_ Exp $
+
+  17 Jan 2007; Michael Sterrett <mr_bones_@gentoo.org> gephex-0.4.3.ebuild:
+  X dep is handled by qt
 
   16 Oct 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
   +files/gephex-0.4.3-gcc4.patch, gephex-0.4.3.ebuild:

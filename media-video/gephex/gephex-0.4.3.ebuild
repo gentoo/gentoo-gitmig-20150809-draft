@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/gephex-0.4.3.ebuild,v 1.9 2006/10/16 19:50:24 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/gephex-0.4.3.ebuild,v 1.10 2007/01/17 22:19:34 mr_bones_ Exp $
 
 inherit eutils
 
@@ -14,8 +14,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~ppc x86"
 
-DEPEND="virtual/x11
-	=x11-libs/qt-3*
+DEPEND="=x11-libs/qt-3*
 	sdl? ( >=media-libs/libsdl-1.2.6-r3 )
 	sdl? ( >=media-libs/sdl-image-1.2.3 )
 	png? ( >=media-libs/libpng-1.2.5-r4 )
@@ -29,7 +28,7 @@ RDEPEND=${DEPEND}
 src_unpack() {
 	unpack ${A} || die
 	cd ${S}
-	
+
 	epatch ${FILESDIR}/${P}-gcc4.patch
 }
 
