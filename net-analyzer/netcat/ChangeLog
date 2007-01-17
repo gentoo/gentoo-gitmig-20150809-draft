@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netcat
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.35 2006/04/27 21:36:36 antarus Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.36 2007/01/17 00:39:41 vapier Exp $
+
+  17 Jan 2007; Mike Frysinger <vapier@gentoo.org> netcat-110-r8.ebuild:
+  Punt USE=GAPING_SECURITY_HOLE support and just enable -e all the time.
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
   Fixing SHA256 digest, pass four
