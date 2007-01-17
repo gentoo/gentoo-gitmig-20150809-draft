@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-3.5.6.ebuild,v 1.1 2007/01/16 21:04:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-3.5.6.ebuild,v 1.2 2007/01/17 14:19:45 flameeyes Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -52,8 +52,6 @@ KMEXTRA="
 	kgantt
 	kdgantt
 	kontact/plugins/korganizer/" # We add here the kontact's plugin instead of compiling it with kontact because it needs a lot of korganizer deps.
-
-PATCHES="${FILESDIR}/${P}-desktop.patch"
 
 #src_compile() {
 #	export DO_NOT_COMPILE="kalarmd" && kde-meta_src_compile myconf configure

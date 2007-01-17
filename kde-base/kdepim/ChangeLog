@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.239 2007/01/16 22:29:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.240 2007/01/17 14:20:59 flameeyes Exp $
+
+  17 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> kdepim-3.5.6.ebuild:
+  Remove unneeded patch.
 
   16 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> kdepim-3.5.6.ebuild:
   Fix keywording.
