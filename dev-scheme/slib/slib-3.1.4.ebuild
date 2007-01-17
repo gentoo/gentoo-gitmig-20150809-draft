@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.1.4.ebuild,v 1.4 2007/01/16 15:45:47 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.1.4.ebuild,v 1.5 2007/01/17 11:19:19 hkbst Exp $
 
 inherit versionator eutils
 
@@ -22,9 +22,9 @@ IUSE=""
 
 #unzip for unpacking
 #depend on guile for now, until slib actually works with another scheme implementation in portage
+RDEPEND="~dev-scheme/guile-1.6.8"
 DEPEND="app-arch/unzip
 	${RDEPEND}"
-RDEPEND="=dev-scheme/guile-1.6.8"
 
 # slib tests rely on scm being installed. It isn't even in portage :(
 RESTRICT="test"
