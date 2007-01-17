@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/barbarian-bin/barbarian-bin-1.01.ebuild,v 1.6 2007/01/14 08:39:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/barbarian-bin/barbarian-bin-1.01.ebuild,v 1.7 2007/01/17 21:27:48 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 MY_PN=${PN/-bin/}
 DESCRIPTION="Save Princess Mariana through one-on-one battles with demonic barbarians."
@@ -16,10 +16,10 @@ RESTRICT="strip"
 IUSE=""
 
 DEPEND="app-arch/unzip"
-RDEPEND="!amd64? ( >=media-libs/libsdl-1.2 )
-		amd64? ( app-emulation/emul-linux-x86-sdl )"
+RDEPEND="x86? ( media-libs/libsdl )
+	amd64? ( app-emulation/emul-linux-x86-sdl )"
 
-S="${WORKDIR}"
+S=${WORKDIR}
 
 src_install() {
 	local game_dest="${GAMES_PREFIX_OPT}/${MY_PN}"
