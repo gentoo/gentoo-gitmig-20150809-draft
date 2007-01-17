@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/pdb2pqr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/ChangeLog,v 1.7 2007/01/07 02:24:41 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/ChangeLog,v 1.8 2007/01/17 10:25:18 opfer Exp $
+
+  17 Jan 2007; Christian Faulhammer <opfer@gentoo.org> pdb2pqr-1.1.2.ebuild:
+  stable x86, bug #162012
 
   07 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -pdb2pqr-1.0.2.ebuild:
   QA: Removed unused versions.
