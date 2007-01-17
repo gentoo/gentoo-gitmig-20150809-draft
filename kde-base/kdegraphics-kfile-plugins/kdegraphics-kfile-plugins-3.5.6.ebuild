@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-kfile-plugins/kdegraphics-kfile-plugins-3.5.6.ebuild,v 1.1 2007/01/16 20:06:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-kfile-plugins/kdegraphics-kfile-plugins-3.5.6.ebuild,v 1.2 2007/01/17 03:09:21 flameeyes Exp $
 
 KMNAME=kdegraphics
 KMMODULE=kfile-plugins
@@ -20,9 +20,7 @@ DEPEND="media-libs/tiff
 # ps installed with kghostview, pdf installed with kpdf
 KMEXTRACTONLY="kfile-plugins/ps kfile-plugins/pdf"
 
-PATCHES="${FILESDIR}/post-3.5.5-kdegraphics.diff"
-
 src_compile() {
-	myconf="$myconf $(use_with openexr)"
+	local myconf="$myconf $(use_with openexr)"
 	kde-meta_src_compile
 }
