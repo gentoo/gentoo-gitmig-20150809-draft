@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.78 2007/01/09 12:22:55 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.79 2007/01/17 05:13:01 jer Exp $
+
+  17 Jan 2007; Jeroen Roovers <jer@gentoo.org> -opera-9.02.ebuild:
+  Remove vulnerable version.
 
   09 Jan 2007; Michael Cummings <mcummings@gentoo.org> opera-9.10.ebuild:
   Stable amd64 wrt bug 160369
