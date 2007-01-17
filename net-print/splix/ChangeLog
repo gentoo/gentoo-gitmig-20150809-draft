@@ -1,6 +1,10 @@
 # ChangeLog for net-print/splix
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/splix/ChangeLog,v 1.3 2007/01/04 00:26:21 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/splix/ChangeLog,v 1.4 2007/01/17 10:17:02 opfer Exp $
+
+  17 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
+  splix-1.0.1_beta2.ebuild:
+  stable x86, bug #161977
 
   04 Jan 2007; Wolfram Schlich <wschlich@gentoo.org>
   splix-1.0.1_beta2.ebuild:
