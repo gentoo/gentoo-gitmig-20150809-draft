@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim-wizards
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/ChangeLog,v 1.62 2007/01/16 20:19:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/ChangeLog,v 1.63 2007/01/17 18:40:17 flameeyes Exp $
+
+  17 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Tarball was refreshed, regenerate digest.
 
 *kdepim-wizards-3.5.6 (16 Jan 2007)
 

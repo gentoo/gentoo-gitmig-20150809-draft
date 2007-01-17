@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/karm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/ChangeLog,v 1.65 2007/01/16 19:31:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/ChangeLog,v 1.66 2007/01/17 18:39:08 flameeyes Exp $
+
+  17 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Tarball was refreshed, regenerate digest.
 
 *karm-3.5.6 (16 Jan 2007)
 
