@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmpop3lb
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop3lb/ChangeLog,v 1.10 2006/05/03 00:47:44 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop3lb/ChangeLog,v 1.11 2007/01/17 11:19:06 s4t4n Exp $
+
+*wmpop3lb-2.4.2-r2 (17 Jan 2007)
+
+  17 Jan 2007; Michele Noberasco <s4t4n@gentoo.org> wmpop3lb-2.4.2-r2.ebuild :
+  Revision bump, with patch to fix bug #161530.
 
   03 May 2006; Jason Wever <weeve@gentoo.org> wmpop3lb-2.4.2-r1.ebuild:
   Added ~sparc keyword.
@@ -15,7 +20,7 @@
 *wmpop3lb-2.4.2-r1 (01 Dec 2005)
 
   01 Dec 2005; Michele Noberasco <s4t4n@gentoo.org> wmpop3lb-2.4.2-r1.ebuild :
-  Version bump, with patch to fix bug #110683.
+  Revision bump, with patch to fix bug #110683.
 	
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> wmpop3lb-2.4.2.ebuild:
   add sed-4 dep
