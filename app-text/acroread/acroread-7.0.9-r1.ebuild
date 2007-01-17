@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.9-r1.ebuild,v 1.1 2007/01/16 14:43:56 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.9-r1.ebuild,v 1.2 2007/01/17 21:14:10 kevquinn Exp $
 
 inherit eutils nsplugins
 
@@ -31,8 +31,7 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 RESTRICT="strip mirror"
 
-RDEPEND="~virtual/libstdc++-3.3
-	x86? ( >=x11-libs/gtk+-2.0
+RDEPEND="x86? ( >=x11-libs/gtk+-2.0
 			cups? ( net-print/cups )
 			ldap? ( net-nds/openldap ) )
 	amd64? ( >=app-emulation/emul-linux-x86-baselibs-2.4.2
