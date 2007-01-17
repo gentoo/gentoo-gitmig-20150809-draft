@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/mercurial
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.42 2007/01/10 23:04:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.43 2007/01/17 13:52:06 beandog Exp $
+
+  17 Jan 2007; Steve Dibb <beandog@gentoo.org> mercurial-0.9.3.ebuild:
+  amd64 stable, bug 159856
 
   10 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   mercurial-0.9.3.ebuild:
