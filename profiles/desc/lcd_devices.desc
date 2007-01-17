@@ -1,6 +1,6 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/lcd_devices.desc,v 1.1 2007/01/17 00:52:45 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/lcd_devices.desc,v 1.2 2007/01/17 01:05:38 rbu Exp $
 
 # This file contains descriptions of LCD_DEVICES USE_EXPAND flags.
 
@@ -8,15 +8,14 @@
 bayrad - Add support for BayRAD LCD modules by EMAC
 beckmannegle - Add support for Beckmann+Egle "Mini Terminals" and "Compact Terminals"
 bwct - Add support for BWCT USB LCD displays
-cfontz - Add support for CrystalFontz displays
 cfontz633 - Add support for CrystalFontz 633 chipset displays
+cfontz - Add support for CrystalFontz displays
 cfontzpacket - Add support for CrystalFontz chipsets CFA-631, CFA-633 and CFA-635 
-ncurses - Add support for emulated LCD display on terminal using ncurses
 cwlinux - Add support for serial / USB displays CW12232 and CW1602 by CwLinux
 eyeboxone - Add support for the displays on Rightvision's EyeboxOne server
 g15 - Add support for Logitech G15 Keyboard LCDs
-glcdlib - Meta-driver to support drivers via app-misc/graphlcd-base
 glk - Add support for MatrixOrbital GLK chipset
+graphlcd - Meta-driver to support drivers via app-misc/graphlcd-base
 hd44780 - Add support for Hitachi HD44780 and compatible displays
 icpa106 - Add support for ICP A106 alarm/LCD boards for 19" racks
 imon - Add support for Soundgraph/Ahanix/Silverstone/Uneed/Accent iMON IR/VFD modules
@@ -35,6 +34,7 @@ milfordbpk - Add support for Milford Instruments BPK serial interface board for 
 ms6931 - Add support for MSI-6931 displays in MSI rack servers
 mtcs16209x - Add support for MTC_S16209x displays
 mtxorb - Add support for Matrix Orbital LCD* LKD* VFD* and VKD* displays
+ncurses - Add support for emulated LCD display on terminal using ncurses
 noritake - Add support for the Noritake GU128x32-311 graphical display.
 noritakevfd - Add support for the Noritake VFD Device CU20045SCPB-T28A
 null - Add support for a NULL driver (for testing)
