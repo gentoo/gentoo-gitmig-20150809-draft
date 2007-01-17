@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/kdepim-meta-3.5.6.ebuild,v 1.1 2007/01/16 20:19:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/kdepim-meta-3.5.6.ebuild,v 1.2 2007/01/17 17:19:40 carlo Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -37,11 +37,11 @@ RDEPEND="
 	$(deprange $PV $MAXKDEVER kde-base/ksync)
 	$(deprange $PV $MAXKDEVER kde-base/ktnef)
 	$(deprange $PV $MAXKDEVER kde-base/libkcal)
-	$(deprange 3.5.5 $MAXKDEVER kde-base/libkdenetwork)
+	$(deprange 3.5.4 $MAXKDEVER kde-base/libkdenetwork)
 	$(deprange $PV $MAXKDEVER kde-base/libkdepim)
 	$(deprange $PV $MAXKDEVER kde-base/libkholidays)
 	$(deprange 3.5.3 $MAXKDEVER kde-base/libkmime)
-	$(deprange 3.5.5 $MAXKDEVER kde-base/libkpgp)
+	$(deprange 3.5.4 $MAXKDEVER kde-base/libkpgp)
 	$(deprange $PV $MAXKDEVER kde-base/libkpimexchange)
 	$(deprange $PV $MAXKDEVER kde-base/libkpimidentities)
 	$(deprange 3.5.0 $MAXKDEVER kde-base/libksieve)
