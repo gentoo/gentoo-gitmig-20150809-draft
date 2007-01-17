@@ -1,6 +1,14 @@
 # ChangeLog for x11-apps/xinit
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.73 2006/11/22 20:08:45 dberkholz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.74 2007/01/17 14:56:29 uberlord Exp $
+
+*xinit-1.0.3-r1 (17 Jan 2007)
+
+  17 Jan 2007; Roy Marples <uberlord@gentoo.org> +files/xdm.initd,
+  +xinit-1.0.3-r1.ebuild:
+  Add BSD support to the init script. GDM works very well, KDM doesn't work at
+  all. KDM users will need to add KDM to /etc/ttys on FreeBSD still.
+  baselayout-1.13 users will also need this init script.
 
   22 Nov 2006; Donnie Berkholz <dberkholz@gentoo.org>; files/xdm.start:
   Added the comment, forgot the actual change.
