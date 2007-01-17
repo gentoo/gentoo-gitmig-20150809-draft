@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-3.5.6.ebuild,v 1.1 2007/01/16 19:59:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-3.5.6.ebuild,v 1.2 2007/01/17 14:42:40 flameeyes Exp $
 
 KMNAME=kdebase
 KMMODULE=kioslave
@@ -22,8 +22,6 @@ DEPEND="ldap? ( net-nds/openldap )
 	openexr? ( >=media-libs/openexr-1.2.2-r2 )"
 RDEPEND="${DEPEND}
 	$(deprange 3.5.5 $MAXKDEVER kde-base/kdialog)"	# for the kdeeject script used by the devices/mounthelper ioslave
-
-PATCHES="${FILESDIR}/${P}-fstab.patch"
 
 pkg_setup() {
 	kde_pkg_setup
