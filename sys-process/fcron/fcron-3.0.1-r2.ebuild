@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.1-r2.ebuild,v 1.4 2006/10/07 09:15:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.1-r2.ebuild,v 1.5 2007/01/17 23:22:40 wschlich Exp $
 
 inherit cron pam eutils
 
@@ -12,31 +12,14 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~hppa ~mips ppc sparc ~x86 ~x86-fbsd"
 IUSE="debug doc pam selinux"
 
-DEPEND="virtual/editor
+DEPEND="app-editors/nano
 	doc? ( >=app-text/docbook-dsssl-stylesheets-1.77 )
 	selinux? ( sys-libs/libselinux )
 	pam? ( virtual/pam )"
 
 pkg_setup() {
-	# sudo unsets EDITOR
-	if [[ -z "${EDITOR}" ]] ; then
-		eerror "EDITOR seems to be unset. If you use sudo, it may be the cause."
-		eerror "Try using 'sudo env EDITOR=\${EDITOR} emerge' instead."
-		die "Please set the EDITOR env variable to the path of a valid executable."
-	fi
-
-	# bug #65263
-	# fcron's ./configure complains if EDITOR is not set to an absolute path,
-	# so try to set it to the abs path if it isn't
-	if [[ "${EDITOR}" != */* ]] ; then
-		einfo "Attempting to deduce absolute path of ${EDITOR}"
-		EDITOR=$(which ${EDITOR} 2>/dev/null)
-		[[ -x "${EDITOR}" ]] || \
-			die "Please set the EDITOR env variable to the path of a valid executable."
-	fi
-
-	ROOTUSER=$(egetent passwd 0 | cut -d':' -f1)
-	ROOTGROUP=$(egetent group 0 | cut -d':' -f1)
+	ROOTUSER=$(egetent passwd 0 | cut -d ':' -f 1)
+	ROOTGROUP=$(egetent group 0 | cut -d ':' -f 1)
 }
 
 src_unpack() {
@@ -74,7 +57,7 @@ src_compile() {
 		--with-fifodir=/var/run \
 		--with-sendmail=/usr/sbin/sendmail \
 		--with-fcrondyn=yes \
-		--with-editor=${EDITOR} \
+		--with-editor=/bin/nano \
 		--with-shell=/bin/sh \
 		${myconf} \
 		|| die "Configure problem"
