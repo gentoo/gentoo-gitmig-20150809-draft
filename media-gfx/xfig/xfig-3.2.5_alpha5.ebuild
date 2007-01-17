@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.5_alpha5.ebuild,v 1.3 2006/12/02 00:30:11 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.5_alpha5.ebuild,v 1.4 2007/01/17 18:50:59 antarus Exp $
 
 inherit eutils
 
@@ -46,7 +46,7 @@ src_compile() {
 
 src_install() {
 
-	emake \
+	emake -j1 \
 		DESTDIR="${D}" \
 		BINDIR=/usr/bin \
 		XFIGLIBDIR=/usr/lib/xfig \
