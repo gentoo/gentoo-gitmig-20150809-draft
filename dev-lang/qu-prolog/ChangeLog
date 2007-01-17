@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/qu-prolog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.22 2007/01/16 16:22:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.23 2007/01/17 18:59:59 nixnut Exp $
+
+  17 Jan 2007; nixnut <nixnut@gentoo.org> qu-prolog-7.4.ebuild:
+  Stable on ppc wrt bug 161981
 
   16 Jan 2007; Raúl Porcel <armin76@gentoo.org> qu-prolog-7.4.ebuild:
   stable x86 wrt bug 161981
