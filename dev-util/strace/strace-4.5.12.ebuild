@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.12.ebuild,v 1.17 2006/06/11 10:05:31 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.12.ebuild,v 1.18 2007/01/17 06:45:18 vapier Exp $
 
 inherit flag-o-matic
 
@@ -19,7 +19,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	[[ ${CHOST} == *-freebsd* ]] && epatch "${FILESDIR}"/${P}-fbsd.patch
+	[[ ${CHOST} == *-freebsd* ]] && epatch "${FILESDIR}"/${PN}-4.5.11-fbsd.patch
+
 	# Fix support for newer glibc snapshots #102080
 	epatch "${FILESDIR}"/${P}-quota.patch
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.14.ebuild,v 1.13 2006/12/02 20:35:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.14.ebuild,v 1.14 2007/01/17 06:45:18 vapier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -21,7 +21,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	[[ ${CHOST} == *-freebsd* ]] && epatch "${FILESDIR}"/${PN}-4.5.12-fbsd.patch
+	[[ ${CHOST} == *-freebsd* ]] && epatch "${FILESDIR}"/${PN}-4.5.11-fbsd.patch
 
 	epatch "${FILESDIR}"/${P}-PT_GETSIGINFO.patch #149945
 
