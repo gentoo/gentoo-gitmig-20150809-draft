@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.6.ebuild,v 1.2 2007/01/16 22:25:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.6.ebuild,v 1.3 2007/01/17 12:36:02 flameeyes Exp $
 
 inherit kde-dist eutils
 
@@ -37,10 +37,9 @@ DEPEND="${DEPEND}
 	dev-util/pkgconfig"
 
 SRC_URI="${SRC_URI}
-	mirror://gentoo/kpdf-3.5.3-poppler-bis.patch.bz2"
+	mirror://gentoo/kpdf-3.5.6-poppler.patch.bz2"
 
-PATCHES="${DISTDIR}/kpdf-3.5.3-poppler-bis.patch.bz2
-	${FILESDIR}/post-3.5.5-kdegraphics.diff"
+PATCHES="${DISTDIR}/kpdf-3.5.6-poppler.patch.bz2"
 
 pkg_setup() {
 	kde_pkg_setup
@@ -67,6 +66,6 @@ src_compile() {
 	use povray || export DO_NOT_COMPILE="${DO_NOT_COMPILE} kpovmodeler"
 	use pdf || export DO_NOT_COMPILE="${DO_NOT_COMPILE} kpdf"
 
-	rm -f ${S}/configure # ask rebuilding
+	rm -f "${S}/configure" # ask rebuilding
 	kde_src_compile
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/kpdf-3.5.6.ebuild,v 1.1 2007/01/16 21:07:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/kpdf-3.5.6.ebuild,v 1.2 2007/01/17 12:33:53 flameeyes Exp $
 
 KMNAME=kdegraphics
 MAXKDEVER=$PV
@@ -20,9 +20,9 @@ RDEPEND="${DEPEND}
 	$(deprange-dual $PV $MAXKDEVER kde-base/kdeprint)"
 
 SRC_URI="${SRC_URI}
-	mirror://gentoo/${PN}-3.5.3-poppler-bis.patch.bz2"
+	mirror://gentoo/${P}-poppler.patch.bz2"
 
-PATCHES="${DISTDIR}/${PN}-3.5.3-poppler-bis.patch.bz2"
+PATCHES="${DISTDIR}/${P}-poppler.patch.bz2"
 
 pkg_setup() {
 	kde_pkg_setup
