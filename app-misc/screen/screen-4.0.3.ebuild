@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3.ebuild,v 1.11 2007/01/17 16:45:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3.ebuild,v 1.12 2007/01/17 16:49:41 swegener Exp $
 
 inherit eutils flag-o-matic toolchain-funcs pam autotools
 
@@ -74,9 +74,6 @@ src_unpack() {
 }
 
 src_compile() {
-	local TTY="$(tty)"
-	[[ -c ${TTY} ]] && addpredict "${TTY}"
-
 	append-flags "-DMAXWIN=${MAX_SCREEN_WINDOWS:-100}"
 	append-ldflags $(bindnow-flags)
 
