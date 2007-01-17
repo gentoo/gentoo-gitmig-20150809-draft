@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/revelation-0.4.11.ebuild,v 1.1 2007/01/16 19:08:26 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/revelation-0.4.11.ebuild,v 1.2 2007/01/17 19:45:35 dang Exp $
 
 inherit python gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://oss.codepoet.no/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=dev-python/gnome-python-desktop-2.16
