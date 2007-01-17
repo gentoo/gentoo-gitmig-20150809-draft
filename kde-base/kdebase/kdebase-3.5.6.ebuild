@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.6.ebuild,v 1.1 2007/01/16 19:58:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.6.ebuild,v 1.2 2007/01/17 12:52:06 flameeyes Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -77,10 +77,7 @@ DEPEND="${DEPEND}
 	dev-util/pkgconfig"
 
 PATCHES="${FILESDIR}/kdebase-startkde-3.5.3-xinitrcd.patch
-	${FILESDIR}/kdebase-kioslaves-3.5.5-fstab.patch
-	${FILESDIR}/kwin-3.5.5-input-shape.patch
-	${FILESDIR}/nsplugins-3.5.5-npapi-64bit.patch
-	${FILESDIR}/kate-3.5.5-visibility.patch"
+	${FILESDIR}/nsplugins-3.5.5-npapi-64bit.patch"
 
 pkg_setup() {
 	kde_pkg_setup
