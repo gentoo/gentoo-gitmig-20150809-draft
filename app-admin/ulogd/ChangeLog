@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/ulogd
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.38 2006/11/23 15:12:29 vivo Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.39 2007/01/17 19:40:37 antarus Exp $
+
+*ulogd-1.24 (17 Jan 2007)
+
+  17 Jan 2007; Alec Warner <antarus@gentoo.org> +ulogd-1.24.ebuild:
+  version bump for ulogd, with fix for syntax wrt to mysql, bug 91416
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> ulogd-1.02.ebuild,
   ulogd-1.02-r1.ebuild, ulogd-1.23.ebuild:
