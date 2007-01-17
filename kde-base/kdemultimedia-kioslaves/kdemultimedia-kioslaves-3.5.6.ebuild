@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/kdemultimedia-kioslaves-3.5.6.ebuild,v 1.1 2007/01/16 20:13:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/kdemultimedia-kioslaves-3.5.6.ebuild,v 1.2 2007/01/17 11:14:09 flameeyes Exp $
 
 KMNAME=kdemultimedia
 KMMODULE=kioslave
@@ -15,7 +15,7 @@ DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkcddb)
 	media-sound/cdparanoia
 	media-libs/taglib
 	encode? ( vorbis? ( media-libs/libvorbis )
-	          flac? ( >=media-libs/flac-1.1.2 ) )"
+			  flac? ( >=media-libs/flac-1.1.2 ) )"
 RDEPEND="${DEPEND}
 	encode? ( mp3? ( media-sound/lame ) )"
 
@@ -26,7 +26,7 @@ KMCOMPILEONLY="
 	kscd/libwm
 	libkcddb"
 
-PATCHES="${FILESDIR}/kdemultimedia-${PV}+flac-1.1.3.patch"
+PATCHES="${FILESDIR}/kdemultimedia-3.5.5+flac-1.1.3.patch"
 
 src_compile() {
 	myconf="--with-cdparanoia --enable-cdparanoia"
