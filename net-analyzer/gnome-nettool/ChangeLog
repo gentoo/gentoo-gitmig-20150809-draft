@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/gnome-nettool
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.45 2007/01/14 01:55:27 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.46 2007/01/18 22:49:41 jer Exp $
+
+  18 Jan 2007; Jeroen Roovers <jer@gentoo.org> gnome-nettool-2.16.0.ebuild:
+  Stable for HPPA (bug #147751).
 
   14 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
   gnome-nettool-2.16.0.ebuild:
