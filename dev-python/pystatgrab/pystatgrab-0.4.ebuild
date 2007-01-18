@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pystatgrab/pystatgrab-0.4.ebuild,v 1.2 2006/04/01 18:53:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pystatgrab/pystatgrab-0.4.ebuild,v 1.3 2007/01/18 22:47:18 lucass Exp $
 
 inherit distutils
 
@@ -14,6 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 
 DEPEND="virtual/python
-	>=sys-libs/libstatgrab-0.12"
+	>=sys-libs/libstatgrab-0.12
+	dev-util/pkgconfig"
 
 DOCS="AUTHORS NEWS"
