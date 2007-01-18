@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.8.2.ebuild,v 1.7 2007/01/14 04:22:41 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.8.2.ebuild,v 1.8 2007/01/18 07:51:41 latexer Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -45,7 +45,7 @@ src_unpack() {
 		${S}/*/{,GConf}/*.pc.in || die "sed failed"
 
 	# Fix install data hook (bug #161093)
-	sed -i -e 's/^install-hool/install-data-hook/' \
+	sed -i -e 's/^install-hook/install-data-hook/' \
 		${S}/sample/gconf/Makefile.am || die "sed failed"
 
 	eautoreconf
