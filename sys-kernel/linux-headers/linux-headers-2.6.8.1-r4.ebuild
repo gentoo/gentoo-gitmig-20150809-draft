@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.8.1-r4.ebuild,v 1.9 2006/10/26 06:55:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.8.1-r4.ebuild,v 1.10 2007/01/18 12:56:46 gustavoz Exp $
 
 ETYPE="headers"
 H_SUPPORTEDARCH="alpha amd64 arm hppa ia64 ppc ppc64 s390 sparc sh x86"
@@ -16,7 +16,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ~s390 ~sparc sh x86"
 IUSE="gcc64"
 
 DEPEND="ppc? ( gcc64? ( sys-devel/gcc-powerpc64 ) )
-	sparc? ( gcc64? ( sys-devel/gcc-sparc64 ) )"
+	sparc? ( gcc64? ( sys-devel/kgcc64 ) )"
 
 UNIPATCH_LIST="${DISTDIR}/linux-2.6.8.1-sh-headers.patch.bz2
 	${DISTDIR}/gentoo-headers-${PV}-${PATCHES_V}.tar.bz2"
