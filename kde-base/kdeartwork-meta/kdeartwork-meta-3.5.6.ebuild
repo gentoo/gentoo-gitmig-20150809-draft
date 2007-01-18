@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-meta/kdeartwork-meta-3.5.6.ebuild,v 1.2 2007/01/17 20:26:54 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-meta/kdeartwork-meta-3.5.6.ebuild,v 1.3 2007/01/18 00:27:21 carlo Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -19,7 +19,7 @@ $(deprange $PV $MAXKDEVER kde-base/kdeartwork-icewm-themes)
 $(deprange $PV $MAXKDEVER kde-base/kdeartwork-kscreensaver)
 $(deprange $PV $MAXKDEVER kde-base/kdeartwork-kwin-styles)
 $(deprange $PV $MAXKDEVER kde-base/kdeartwork-kworldclock)
-$(deprange 3.5.0 $MAXKDEVER kde-base/kdeartwork-sounds)
+$(deprange $PV $MAXKDEVER kde-base/kdeartwork-sounds)
 $(deprange $PV $MAXKDEVER kde-base/kdeartwork-styles)
 $(deprange $PV $MAXKDEVER kde-base/kdeartwork-wallpapers)
 "

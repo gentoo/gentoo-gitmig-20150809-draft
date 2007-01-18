@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-3.5.6.ebuild,v 1.1 2007/01/16 20:01:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-3.5.6.ebuild,v 1.2 2007/01/18 00:26:29 carlo Exp $
 
 KMNAME=kdebase
 KMNOMODULE=true
@@ -27,11 +27,11 @@ RDEPEND="|| ( (		x11-apps/xmessage
 			x11-apps/xprop
 		) <virtual/x11-7 )
 $(deprange $PV $MAXKDEVER kde-base/kdesktop)
-$(deprange 3.5.0 $MAXKDEVER kde-base/kcminit)
+$(deprange $PV $MAXKDEVER kde-base/kcminit)
 $(deprange $PV $MAXKDEVER kde-base/ksmserver)
 $(deprange $PV $MAXKDEVER kde-base/kwin)
 $(deprange $PV $MAXKDEVER kde-base/kpersonalizer)
-$(deprange 3.5.0 $MAXKDEVER kde-base/kreadconfig)
+$(deprange $PV $MAXKDEVER kde-base/kreadconfig)
 $(deprange $PV $MAXKDEVER kde-base/ksplashml)"
 
 

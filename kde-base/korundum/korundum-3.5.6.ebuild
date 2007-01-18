@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/korundum-3.5.6.ebuild,v 1.1 2007/01/16 21:05:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/korundum-3.5.6.ebuild,v 1.2 2007/01/18 00:18:41 carlo Exp $
 
 KMNAME=kdebindings
 KMCOPYLIB="libsmokeqt smoke/qt libsmokekde smoke/kde"
@@ -18,7 +18,7 @@ IUSE=""
 OLDDEPEND=">=virtual/ruby-1.8 ~kde-base/qtruby-$PV ~kde-base/smoke-3.3.1"
 DEPEND=" >=virtual/ruby-1.8
 $(deprange $PV $MAXKDEVER kde-base/qtruby)
-$(deprange 3.5.2 $MAXKDEVER kde-base/smoke)"
+$(deprange $PV $MAXKDEVER kde-base/smoke)"
 RDEPEND="${DEPEND}"
 
 PATCHES="$FILESDIR/no-gtk-glib-check.diff"

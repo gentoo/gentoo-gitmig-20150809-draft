@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knode/knode-3.5.6.ebuild,v 1.1 2007/01/16 20:55:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knode/knode-3.5.6.ebuild,v 1.2 2007/01/18 00:10:29 carlo Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -13,7 +13,7 @@ IUSE=""
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdepim)
 $(deprange 3.5.4 $MAXKDEVER kde-base/libkdenetwork)
 $(deprange $PV $MAXKDEVER kde-base/kontact)
-$(deprange 3.5.3 $MAXKDEVER kde-base/libkmime)
+$(deprange $PV $MAXKDEVER kde-base/libkmime)
 $(deprange 3.5.4 $MAXKDEVER kde-base/libkpgp)"
 
 RDEPEND="${DEPEND}"

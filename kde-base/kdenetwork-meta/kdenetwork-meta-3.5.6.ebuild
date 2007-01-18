@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/kdenetwork-meta-3.5.6.ebuild,v 1.1 2007/01/16 20:16:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/kdenetwork-meta-3.5.6.ebuild,v 1.2 2007/01/18 00:28:46 carlo Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -25,7 +25,7 @@ RDEPEND="$(deprange $PV $MAXKDEVER kde-base/dcoprss)
 	$(deprange $PV $MAXKDEVER kde-base/ksirc)
 	$(deprange $PV $MAXKDEVER kde-base/ktalkd)
 	wifi? ( $(deprange $PV $MAXKDEVER kde-base/kwifimanager) )
-	$(deprange 3.5.0 $MAXKDEVER kde-base/librss)
+	$(deprange $PV $MAXKDEVER kde-base/librss)
 	$(deprange $PV $MAXKDEVER kde-base/kdnssd)
 	$(deprange $PV $MAXKDEVER kde-base/kdenetwork-kfile-plugins)
 	$(deprange $PV $MAXKDEVER kde-base/lisa)"

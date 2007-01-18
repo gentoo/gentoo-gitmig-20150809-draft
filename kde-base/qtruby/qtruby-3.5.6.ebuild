@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/qtruby-3.5.6.ebuild,v 1.1 2007/01/16 22:01:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/qtruby-3.5.6.ebuild,v 1.2 2007/01/18 00:29:45 carlo Exp $
 
 KMNAME=kdebindings
 KMCOPYLIB="libsmokeqt smoke/qt"
@@ -15,7 +15,7 @@ HOMEPAGE="http://developer.kde.org/language-bindings/ruby/"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 DEPEND=" >=virtual/ruby-1.8
-$(deprange 3.5.2 $MAXKDEVER kde-base/smoke)"
+$(deprange $PV $MAXKDEVER kde-base/smoke)"
 
 PATCHES="$FILESDIR/no-gtk-glib-check.diff"
 
