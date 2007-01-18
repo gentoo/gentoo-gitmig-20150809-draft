@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/celementtree
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/ChangeLog,v 1.13 2007/01/18 15:10:33 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/ChangeLog,v 1.14 2007/01/18 23:39:03 lucass Exp $
+
+  18 Jan 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  celementtree-1.0.5.ebuild:
+  Added src_test, thanks to Eddy Mulyono (bug #155736).
 
   18 Jan 2007; Ferris McCormick <fmccor@gentoo.org>
   celementtree-1.0.5.ebuild:
