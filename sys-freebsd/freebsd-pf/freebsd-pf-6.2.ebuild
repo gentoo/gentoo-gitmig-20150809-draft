@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/freebsd-pf-6.2.ebuild,v 1.1 2007/01/15 21:37:43 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/freebsd-pf-6.2.ebuild,v 1.2 2007/01/18 21:12:11 drizzt Exp $
 
 inherit bsdmk freebsd
 
@@ -29,12 +29,7 @@ PATCHES="${FILESDIR}/${PN}-6.0-pcap.patch"
 
 pkg_setup() {
 	enewgroup authpf 63
-}
-
-src_unpack() {
-	freebsd_src_unpack
-
-	ln -s "/usr/src/sys-${RV}" "${WORKDIR}/sys"
+	mymakeopts="${mymakeopts} NO_MANCOMPRESS= NO_INFOCOMPRESS= "
 }
 
 src_compile() {
@@ -52,7 +47,7 @@ src_install() {
 		mkinstall || die "Install ${dir} failed"
 	done
 
-	cd ${WORKDIR}/etc
+	cd "${WORKDIR}"/etc
 	insinto /etc
 	doins pf.os
 	newdoc pf.conf pf.conf.example

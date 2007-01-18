@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-share
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.26 2007/01/15 21:39:29 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.27 2007/01/18 21:14:00 drizzt Exp $
+
+  18 Jan 2007; Timothy Redaelli <drizzt@gentoo.org>
+  freebsd-share-6.2.ebuild:
+  Fix .gz.bz2 problem in manpages, thanks to geekounet` for reporting and
+  Flameeyes for fixing
 
 *freebsd-share-6.2 (15 Jan 2007)
 

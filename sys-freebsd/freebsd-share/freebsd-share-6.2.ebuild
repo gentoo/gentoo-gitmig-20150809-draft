@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/freebsd-share-6.2.ebuild,v 1.1 2007/01/15 21:39:29 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/freebsd-share-6.2.ebuild,v 1.2 2007/01/18 21:14:00 drizzt Exp $
 
 inherit bsdmk freebsd
 
@@ -23,7 +23,7 @@ SRC_URI="mirror://gentoo/${SHARE}.tar.bz2
 DEPEND="=sys-freebsd/freebsd-mk-defs-${RV}*"
 RDEPEND=""
 
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 S="${WORKDIR}/share"
 
@@ -31,7 +31,7 @@ pkg_setup() {
 	use isdn || mymakeopts="${mymakeopts} NO_I4B= "
 	use doc || mymakeopts="${mymakeopts} NO_SHAREDOCS= "
 
-	mymakeopts="${mymakeopts} NO_SENDMAIL= "
+	mymakeopts="${mymakeopts} NO_SENDMAIL= NO_MANCOMPRESS= NO_INFOCOMPRESS= "
 }
 
 REMOVE_SUBDIRS="mk termcap zoneinfo tabset"
