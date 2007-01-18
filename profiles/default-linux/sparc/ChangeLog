@@ -1,6 +1,11 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.16 2007/01/16 17:59:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.17 2007/01/18 12:54:02 gustavoz Exp $
+
+  18 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  sparc64/2006.0/2.4/packages, sparc64/2006.0/packages,
+  sparc64/2006.1/2.4/packages, sparc64/2006.1/packages:
+  Switch to kgcc64 and drop the silo nonsense
 
   16 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   -sparc64/dev/gcc.4.1.1/deprecated, -sparc64/dev/gcc.4.1.1/make.defaults,
