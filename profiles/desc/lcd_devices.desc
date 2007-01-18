@@ -1,6 +1,6 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/lcd_devices.desc,v 1.2 2007/01/17 01:05:38 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/lcd_devices.desc,v 1.3 2007/01/18 16:33:29 rbu Exp $
 
 # This file contains descriptions of LCD_DEVICES USE_EXPAND flags.
 
@@ -20,14 +20,11 @@ hd44780 - Add support for Hitachi HD44780 and compatible displays
 icpa106 - Add support for ICP A106 alarm/LCD boards for 19" racks
 imon - Add support for Soundgraph/Ahanix/Silverstone/Uneed/Accent iMON IR/VFD modules
 iowarrior - Add support for IO-Warrior displays
-irman - Add support for IrMan IR remote controlling
-joystick - Add support for joystick input driver
 lb216 - Add support for RTN's LB216 display
 lcdlinux - Add support for HD44780 displays via the LCD-Linux kernel driver
 lcdm001 - Add support for the Kernelconcepts LCDM001 display
 lcdterm - Add support for LCDTerm serial-to-HD44780 adapter boards
 lcterm - Add support for Neumark's LCTerm serial LCD
-lirc - Add support for LIRC infrared devices
 m50530 - Add support for M50530 and compatible displays
 md8800 - Add support for the VFD of the Medion MD8800 PC
 milfordbpk - Add support for Milford Instruments BPK serial interface board for HD44780
@@ -49,7 +46,7 @@ serialvfd - Add support for most NEC, Futaba and Noritake VFDs
 simplelcd - Add support for a simple serial terminal display
 sli - Add support for a Wirz SLI display
 stv5730 - Add support for STV5730A on-screen display chips
-svga - Add support for output via svgalib
+svga - Add support for output via media-libs/svgalib
 t6963 - Add support for Toshiba T6963 based LCD displays
 text - Add support for TextMode displaying
 trefon - Add support for Trefon USB LCD displays

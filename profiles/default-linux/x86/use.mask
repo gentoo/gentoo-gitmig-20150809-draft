@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/use.mask,v 1.25 2007/01/04 21:49:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/use.mask,v 1.26 2007/01/18 16:33:29 rbu Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # x86 profile.  This works, for example, if another architecture's
@@ -80,3 +80,8 @@ ibm
 -oracle7
 -firebird
 -db2
+
+# Robert Buchholz <rbu@gentoo.org> (18 Jan 2007)
+# Unmask as it works on x86
+-lcd_devices_svga
+
