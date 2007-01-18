@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.6.ebuild,v 1.2 2007/01/17 12:52:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.6.ebuild,v 1.3 2007/01/18 16:02:20 flameeyes Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -10,12 +10,11 @@ SRC_URI="${SRC_URI}
 DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror..."
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="arts cups java ldap ieee1394 hal lm_sensors logitech-mouse openexr opengl
+IUSE="cups java ldap ieee1394 hal lm_sensors logitech-mouse openexr opengl
 pam samba ssl zeroconf xcomposite xscreensaver xinerama kdehiddenvisibility"
 # hal: enables hal backend for 'media:' ioslave
 
-DEPEND="arts? ( ~kde-base/arts-${PV} )
-	>=media-libs/freetype-2
+DEPEND=">=media-libs/freetype-2
 	media-libs/fontconfig
 	pam? ( kde-base/kdebase-pam )
 	>=dev-libs/cyrus-sasl-2
@@ -103,8 +102,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf="--with-dpms
-				  $(use_with arts) $(use_with ldap)
+	local myconf="--with-dpms $(use_with ldap)
 				  $(use_with opengl gl) $(use_with ssl)
 				  $(use_with samba) $(use_with openexr)
 				  $(use_with lm_sensors sensors) $(use_with logitech-mouse libusb)
