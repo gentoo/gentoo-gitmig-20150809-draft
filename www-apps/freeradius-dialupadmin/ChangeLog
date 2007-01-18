@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/freeradius-dialupadmin
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/freeradius-dialupadmin/ChangeLog,v 1.6 2006/09/09 20:49:56 mrness Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/freeradius-dialupadmin/ChangeLog,v 1.7 2007/01/18 05:38:05 mrness Exp $
+
+  18 Jan 2007; Alin Năstac <mrness@gentoo.org>
+  -files/freeradius-dialupadmin-1.70.2-sqldebug.patch,
+  -freeradius-dialupadmin-1.70.2.ebuild:
+  Remove old version.
 
 *freeradius-dialupadmin-1.70.3 (09 Sep 2006)
 
