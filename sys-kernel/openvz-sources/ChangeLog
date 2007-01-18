@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.56 2007/01/10 14:01:19 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.57 2007/01/18 14:54:27 phreak Exp $
+
+  18 Jan 2007; Christian Heim <phreak@gentoo.org>
+  openvz-sources-028.005.ebuild, openvz-sources-028.007.ebuild,
+  openvz-sources-028.010.ebuild:
+  Adding ~ia64 to the KEYWORDS.
 
 *openvz-sources-028.010 (10 Jan 2007)
 
