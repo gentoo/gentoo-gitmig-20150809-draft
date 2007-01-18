@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.25 2007/01/18 14:01:02 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.26 2007/01/18 14:50:46 je_fro Exp $
+
+  18 Jan 2007; Jeff Gardner <je_fro@gentoo.org> use.local.desc:
+  Add mopac7 USE flag to sci-chemistry/ghemical.
 
   18 Jan 2007; Jeff Gardner <je_fro@gentoo.org>
   default-linux/amd64/use.mask, use.local.desc:
