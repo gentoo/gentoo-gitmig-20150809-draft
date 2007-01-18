@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/pgadmin3
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.28 2007/01/18 17:57:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.29 2007/01/18 20:09:08 armin76 Exp $
+
+  18 Jan 2007; Raúl Porcel <armin76@gentoo.org> pgadmin3-1.4.3.ebuild:
+  stable x86 wrt bug 155828
 
   18 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> pgadmin3-1.4.3.ebuild:
   Stable on sparc wrt #155828
