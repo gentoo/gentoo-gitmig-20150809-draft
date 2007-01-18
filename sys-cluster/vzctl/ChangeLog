@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.40 2007/01/18 09:40:03 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.41 2007/01/18 14:52:10 phreak Exp $
+
+  18 Jan 2007; Christian Heim <phreak@gentoo.org> vzctl-3.0.14.ebuild:
+  Cleaning up the ebuild a bit (thanks to Kir Kolyshkin <kir@openvz.org> for
+  being a pain in the ass :)).
 
 *vzctl-3.0.14 (18 Jan 2007)
 
