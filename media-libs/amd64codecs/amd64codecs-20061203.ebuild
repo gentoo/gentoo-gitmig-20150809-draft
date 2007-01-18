@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/amd64codecs/amd64codecs-20061203.ebuild,v 1.2 2007/01/08 02:22:25 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/amd64codecs/amd64codecs-20061203.ebuild,v 1.3 2007/01/18 21:06:18 phreak Exp $
+
+inherit multilib
 
 DESCRIPTION="64-bit binary codecs for video and audio playback support"
 SRC_URI="mirror://mplayer/releases/codecs/essential-amd64-${PV}.tar.bz2"
@@ -17,14 +19,14 @@ src_install() {
 	# see #83221
 	insopts -m0644
 
-	dodir /usr/lib64/codecs
-	insinto /usr/lib64/codecs
+	dodir /usr/$(get_libdir)/codecs
+	insinto /usr/$(get_libdir)/codecs
 	doins *.so
 
 	dodoc README
 
 	dodir /etc/revdep-rebuild
 	cat - > "${D}/etc/revdep-rebuild/50amd64codecs" <<EOF
-SEARCH_DIRS_MASK="/usr/lib64/codecs"
+SEARCH_DIRS_MASK="/usr/$(get_libdir)/codecs"
 EOF
 }
