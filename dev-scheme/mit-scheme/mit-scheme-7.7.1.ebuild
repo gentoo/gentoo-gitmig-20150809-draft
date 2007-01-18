@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/mit-scheme/mit-scheme-7.7.1.ebuild,v 1.1 2006/05/11 21:47:25 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/mit-scheme/mit-scheme-7.7.1.ebuild,v 1.2 2007/01/18 12:00:18 hkbst Exp $
 
 MY_P="scheme-${PV}"
 MY_SUF="-ix86-gnu-linux"
@@ -41,7 +41,7 @@ src_install() {
 
 	dodoc lib/mit-scheme/doc/COPYING
 	dohtml lib/mit-scheme/doc/*html
-	doinfo lib/mit-scheme/edwin/info/*
+	doinfo lib/mit-scheme/edwin/info/mit-scheme-*
 	rm -rf lib/mit-scheme/doc
 	rm -rf lib/mit-scheme/edwin/info
 	cp -R lib/* ${D}opt/mit-scheme/lib
