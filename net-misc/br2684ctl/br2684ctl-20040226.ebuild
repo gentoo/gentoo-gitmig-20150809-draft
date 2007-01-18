@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/br2684ctl/br2684ctl-20040226.ebuild,v 1.7 2006/11/18 07:34:12 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/br2684ctl/br2684ctl-20040226.ebuild,v 1.8 2007/01/18 05:32:35 mrness Exp $
 
 inherit eutils toolchain-funcs linux-info
 
@@ -15,7 +15,7 @@ SRC_URI="${DEBIANPKG_BASE}/${DEBIANPKG_TARBALL}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND=">=net-dialup/linux-atm-2.4.1"
