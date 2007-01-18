@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/gimp-help-0.10.ebuild,v 1.21 2007/01/18 17:35:15 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/gimp-help-0.11.ebuild,v 1.1 2007/01/18 17:35:15 masterdriverz Exp $
 
 MY_P=${P/gimp-help/gimp-help-2}
 S=${WORKDIR}/${MY_P}
@@ -11,12 +11,12 @@ SRC_URI="mirror://gimp/help/${MY_P}.tar.gz"
 
 LICENSE="FDL-1.2"
 SLOT="2"
-KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="imagemagick linguas_cs linguas_de linguas_en linguas_fr linguas_hr linguas_it linguas_nl linguas_sv linguas_zh_CN"
 DEPEND="=app-text/docbook-xml-dtd-4.3*
 		dev-libs/libxml2
-		=dev-libs/libxslt-1.1.17
+		dev-libs/libxslt
 		imagemagick? ( media-gfx/imagemagick )"
 RDEPEND="!<media-gfx/gimp-2.2.12"
 
