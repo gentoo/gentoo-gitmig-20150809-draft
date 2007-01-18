@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.6.ebuild,v 1.2 2007/01/18 00:22:44 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.6.ebuild,v 1.3 2007/01/18 16:13:53 flameeyes Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -17,7 +17,7 @@ IUSE="ssl arts ieee1394 logitech-mouse opengl kdehiddenvisibility"
 DEPEND=">=media-libs/freetype-2
 	media-libs/fontconfig
 	ssl? ( dev-libs/openssl )
-	arts? ( $(deprange $PV $MAXKDEVER kde-base/arts) )
+	arts? ( $(deprange 3.5.5 $MAXKDEVER kde-base/arts) )
 	opengl? ( virtual/opengl )
 	ieee1394? ( sys-libs/libraw1394 )
 	logitech-mouse? ( >=dev-libs/libusb-0.1.10a )"

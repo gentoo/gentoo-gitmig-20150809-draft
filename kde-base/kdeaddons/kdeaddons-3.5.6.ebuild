@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.5.6.ebuild,v 1.2 2007/01/16 22:20:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.5.6.ebuild,v 1.3 2007/01/18 16:17:23 flameeyes Exp $
 
 inherit db-use kde-dist
 
@@ -12,7 +12,7 @@ IUSE="arts berkdb sdl"
 DEPEND="~kde-base/kdepim-${PV}
 	~kde-base/kdemultimedia-${PV}
 	~kde-base/kdegames-${PV}
-	arts? ( ~kde-base/arts-${PV} )
+	arts? ( >=kde-base/arts-3.5.5 )
 	sdl? ( >=media-libs/libsdl-1.2 )
 	berkdb? ( =sys-libs/db-4* )
 	!kde-misc/metabar"
