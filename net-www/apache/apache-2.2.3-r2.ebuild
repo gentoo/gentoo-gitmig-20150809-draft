@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.3-r2.ebuild,v 1.1 2007/01/15 23:54:13 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.3-r2.ebuild,v 1.2 2007/01/18 20:13:11 chtekk Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib autotools
 
@@ -29,9 +29,9 @@ DEPEND="app-misc/mime-types
 		dev-libs/expat
 		dev-libs/libpcre
 		sys-libs/zlib
+		ldap? ( =net-nds/openldap-2* )
 		selinux? ( sec-policy/selinux-apache )
-		ssl? ( dev-libs/openssl )
-		!mips? ( ldap? ( =net-nds/openldap-2* ) )"
+		ssl? ( dev-libs/openssl )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/httpd-${PV}"
@@ -80,7 +80,7 @@ src_unpack() {
 
 	# Use correct multilib libdir in gentoo patches
 	sed -i -e "s:/usr/lib:/usr/$(get_libdir):g" \
-		${GENTOO_PATCHDIR}/{conf/httpd.conf,init/*,patches/config.layout,scripts/Makefile.suexec,scripts/suexec2-config} \
+		"${GENTOO_PATCHDIR}"/{conf/httpd.conf,init/*,patches/config.layout,scripts/Makefile.suexec,scripts/suexec2-config} \
 		|| die "libdir sed failed"
 
 	#### Patch Organization
@@ -91,24 +91,24 @@ src_unpack() {
 	# 80-99 Security patches (80_all_${PV}_cve-####-####.patch)
 
 	EPATCH_SUFFIX="patch"
-	epatch ${GENTOO_PATCHDIR}/patches/[0-1]*
-	if $(ls ${GENTOO_PATCHDIR}/patches/[2-3]?_*_${mpm}_* &>/dev/null) ; then
-		epatch ${GENTOO_PATCHDIR}/patches/[2-3]?_*_${mpm}_*
+	epatch "${GENTOO_PATCHDIR}"/patches/[0-1]*
+	if $(ls "${GENTOO_PATCHDIR}"/patches/[2-3]?_*_${mpm}_* &>/dev/null) ; then
+		epatch "${GENTOO_PATCHDIR}"/p6atches/[2-3]?_*_${mpm}_*
 	fi
 	for uf in ${IUSE} ; do
-		if use ${uf} && $(ls ${GENTOO_PATCHDIR}/patches/[4-5]?_*_${uf}_* &>/dev/null) ; then
-			epatch ${GENTOO_PATCHDIR}/patches/[4-5]?_*_${uf}_*
+		if use ${uf} && $(ls "${GENTOO_PATCHDIR}"/patches/[4-5]?_*_${uf}_* &>/dev/null) ; then
+			epatch "${GENTOO_PATCHDIR}"/patches/[4-5]?_*_${uf}_*
 		fi
 	done
-	if $(ls ${GENTOO_PATCHDIR}/patches/[6-9]?_*_${PV}_* &>/dev/null) ; then
-		epatch ${GENTOO_PATCHDIR}/patches/[6-9]?_*_${PV}_*
+	if $(ls "${GENTOO_PATCHDIR}"/patches/[6-9]?_*_${PV}_* &>/dev/null) ; then
+		epatch "${GENTOO_PATCHDIR}"/patches/[6-9]?_*_${PV}_*
 	fi
 
 	# avoid utf-8 charset problems
 	export LC_CTYPE=C
 
 	# setup the filesystem layout config
-	cat ${GENTOO_PATCHDIR}/patches/config.layout >> config.layout
+	cat "${GENTOO_PATCHDIR}"/patches/config.layout >> config.layout
 	sed -i -e "s:version:${PF}:g" config.layout
 
 	# patched-in MPMs need the build environment rebuilt
@@ -154,25 +154,26 @@ src_compile() {
 	fi
 
 	# common confopts
-	myconf="${myconf} \
-			--cache-file="${S}/config.cache" \
+	myconf="--cache-file='${S}/config.cache' \
+			--with-mpm=${mpm} \
 			--with-perl=/usr/bin/perl \
 			--with-expat=/usr \
 			--with-z=/usr \
+			--with-apr=/usr \
+			--with-apr-util=/usr \
+			--with-pcre=/usr \
 			--with-port=80 \
 			--enable-layout=Gentoo \
 			--with-program-name=apache2 \
-			--host=${CHOST} ${MY_BUILTINS} \
-			--with-apr=/usr \
-			--with-apr-util=/usr \
-			--with-pcre=/usr"
+			${myconf} \
+			${MY_BUILTINS}"
 
 	# debugging support
 	if use debug ; then
 		myconf="${myconf} --enable-maintainer-mode"
 	fi
 
-	./configure --with-mpm=${mpm} ${myconf} ${EXTRA_ECONF} || die "bad ./configure: please submit a bug report to bugs.gentoo.org, including your config.layout and config.log"
+	econf ${myconf} || die "econf failed: please submit a bug report to bugs.gentoo.org, including your config.layout and config.log"
 
 	sed -i -e 's:apache2\.conf:httpd.conf:' include/ap_config_auto.h
 
@@ -230,13 +231,13 @@ src_install () {
 		done
 	fi
 	sed -i -e "s:%%LOAD_MODULE%%:${load_module}:" \
-		${GENTOO_PATCHDIR}/conf/httpd.conf || die "sed failed"
+		"${GENTOO_PATCHDIR}"/conf/httpd.conf || die "sed failed"
 
 	# install our configuration	
-	doins -r ${GENTOO_PATCHDIR}/conf/*
+	doins -r "${GENTOO_PATCHDIR}"/conf/*
 
 	insinto /etc/logrotate.d
-	newins ${GENTOO_PATCHDIR}/scripts/apache2-logrotate apache2
+	newins "${GENTOO_PATCHDIR}"/scripts/apache2-logrotate apache2
 
 	# generate a sane default APACHE2_OPTS
 	APACHE2_OPTS="-D DEFAULT_VHOST -D INFO -D LANGUAGE"
@@ -245,12 +246,12 @@ src_install () {
 	use no-suexec || APACHE2_OPTS="${APACHE2_OPTS} -D SUEXEC"
 
 	sed -i -e "s:APACHE2_OPTS=\".*\":APACHE2_OPTS=\"${APACHE2_OPTS}\":" \
-		${GENTOO_PATCHDIR}/init/apache2.confd || die "sed failed"
+		"${GENTOO_PATCHDIR}"/init/apache2.confd || die "sed failed"
 
 	mv -f "${D}"/etc/apache2/apache2-builtin-mods "${D}"/etc/apache2/apache2-builtin-mods-2.2
 
-	newconfd ${GENTOO_PATCHDIR}/init/apache2.confd apache2
-	newinitd ${GENTOO_PATCHDIR}/init/apache2.initd apache2
+	newconfd "${GENTOO_PATCHDIR}"/init/apache2.confd apache2
+	newinitd "${GENTOO_PATCHDIR}"/init/apache2.initd apache2
 
 	# link apache2ctl to the init script
 	dosym /etc/init.d/apache2 /usr/sbin/apache2ctl
@@ -259,9 +260,9 @@ src_install () {
 	einfo "Installing helper scripts"
 	exeinto /usr/sbin
 	for i in apache2logserverstatus apache2splitlogfile suexec2-config ; do
-		doexe ${GENTOO_PATCHDIR}/scripts/${i}
+		doexe "${GENTOO_PATCHDIR}"/scripts/${i}
 	done
-	use ssl && doexe ${GENTOO_PATCHDIR}/scripts/gentestcrt.sh
+	use ssl && doexe "${GENTOO_PATCHDIR}"/scripts/gentestcrt.sh
 
 	for i in logresolve.pl split-logfile log_server_status ; do
 		doexe support/${i}
@@ -269,7 +270,7 @@ src_install () {
 
 	# needed for suexec2-config
 	insinto /usr/$(get_libdir)/apache2/build
-	doins ${GENTOO_PATCHDIR}/scripts/Makefile.suexec
+	doins "${GENTOO_PATCHDIR}"/scripts/Makefile.suexec
 	doins support/suexec.c
 
 	#### SLOTTING
@@ -463,6 +464,6 @@ parse_modules_config() {
 
 select_modules_config() {
 	parse_modules_config "${ROOT}"/etc/apache2/apache2-builtin-mods-2.2 || \
-	parse_modules_config ${GENTOO_PATCHDIR}/conf/apache2-builtin-mods || \
+	parse_modules_config "${GENTOO_PATCHDIR}"/conf/apache2-builtin-mods || \
 	return 1
 }
