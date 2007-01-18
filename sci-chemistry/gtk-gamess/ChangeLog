@@ -1,0 +1,10 @@
+# ChangeLog for sci-chemistry/gtk-gamess
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gtk-gamess/ChangeLog,v 1.1 2007/01/18 13:19:54 je_fro Exp $
+
+*gtk-gamess-2.00 (18 Jan 2007)
+
+  18 Jan 2007; Jeff Gardner <je_fro@gentoo.org> +metadata.xml,
+  +gtk-gamess-2.00.ebuild:
+  Initial import of gtk-gamess-2.0
+
