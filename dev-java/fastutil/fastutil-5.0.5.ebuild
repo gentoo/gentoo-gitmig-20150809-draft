@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/fastutil-5.0.5.ebuild,v 1.1 2007/01/13 13:20:09 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/fastutil-5.0.5.ebuild,v 1.2 2007/01/18 13:29:42 caster Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -19,6 +19,8 @@ RDEPEND=">=virtual/jre-1.5"
 
 src_compile() {
 	emake sources || die "failed to make sources"
+	# bug 162650
+	export ANT_OPTS="-Xmx512m"
 	java-pkg-2_src_compile
 }
 
