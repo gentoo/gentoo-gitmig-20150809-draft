@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.20 2007/01/18 14:29:44 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.21 2007/01/18 15:27:45 chutzpah Exp $
+
+  18 Jan 2007; Patrick McLean <chutzpah@gentoo.org>
+  ntfs3g-0.20070118.ebuild:
+  Add "suid" USE flag to install the ntfs-3g binary SUID root, to allow users
+  to mount ntfs-3g filesystems.
 
 *ntfs3g-0.20070118 (18 Jan 2007)
 
