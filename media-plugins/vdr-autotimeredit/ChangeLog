@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-autotimeredit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-autotimeredit/ChangeLog,v 1.1 2007/01/08 16:09:41 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-autotimeredit/ChangeLog,v 1.2 2007/01/18 13:24:56 zzam Exp $
+
+  18 Jan 2007; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
+  Fixed metadata to contain correct maintainer-information.
 
 *vdr-autotimeredit-0.1.8 (08 Jan 2007)
 
