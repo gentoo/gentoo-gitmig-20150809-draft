@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.2.3.2.ebuild,v 1.13 2006/12/02 09:37:22 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.2.3.2.ebuild,v 1.14 2007/01/18 14:56:14 beandog Exp $
 
 inherit versionator
 
@@ -9,11 +9,13 @@ HOMEPAGE="http://www.xfce.org/"
 LICENSE="GPL-2 BSD LGPL-2"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86 ~x86-fbsd"
 SLOT="0"
-IUSE=""
+IUSE="svg"
 
 MY_PV=$(get_version_component_range 1-3)
 
-RDEPEND="~xfce-base/libxfce4util-${PV}
+DEPEND="svg? ( gnome-base/librsvg )"
+RDEPEND="${DEPEND}
+	~xfce-base/libxfce4util-${PV}
 	~xfce-base/libxfcegui4-${MY_PV}
 	~xfce-base/libxfce4mcs-${MY_PV}
 	~xfce-base/xfce-mcs-manager-${MY_PV}

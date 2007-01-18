@@ -1,15 +1,17 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.3.99.2-r1.ebuild,v 1.2 2006/12/12 03:50:47 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.3.99.2-r1.ebuild,v 1.3 2007/01/18 14:56:14 beandog Exp $
 
 DESCRIPTION="Xfce 4 base ebuild"
 HOMEPAGE="http://www.xfce.org/"
 LICENSE="GPL-2 BSD LGPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
-IUSE=""
+IUSE="svg"
 
-RDEPEND="~x11-themes/gtk-engines-xfce-2.3.99.2
+DEPEND="svg? ( gnome-base/librsvg )"
+RDEPEND="${DEPEND}
+	~x11-themes/gtk-engines-xfce-2.3.99.2
 	~xfce-base/xfce-mcs-plugins-${PV}
 	~xfce-base/xfce4-panel-${PV}
 	~xfce-base/xfwm4-${PV}
