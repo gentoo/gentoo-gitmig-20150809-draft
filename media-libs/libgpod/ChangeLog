@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libgpod
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.27 2007/01/15 00:12:50 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.28 2007/01/18 20:18:50 tester Exp $
+
+*libgpod-0.4.2 (18 Jan 2007)
+
+  18 Jan 2007; Olivier Crête <tester@gentoo.org> +libgpod-0.4.2.ebuild:
+  New version
 
   15 Jan 2007; Olivier Crête <tester@gentoo.org> libgpod-0.4.0.ebuild:
   The gtk-doc dep isn't optional
