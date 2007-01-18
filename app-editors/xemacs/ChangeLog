@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.76 2007/01/18 02:42:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.77 2007/01/18 07:16:52 jer Exp $
+
+  18 Jan 2007; Jeroen Roovers <jer@gentoo.org> xemacs-21.4.20-r1.ebuild:
+  Stable for HPPA (bug #162039).
 
   18 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
   xemacs-21.4.20-r1.ebuild:
