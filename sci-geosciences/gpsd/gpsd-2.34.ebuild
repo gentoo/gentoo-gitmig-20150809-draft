@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.34.ebuild,v 1.1 2007/01/14 22:15:46 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.34.ebuild,v 1.2 2007/01/18 06:39:28 nerdboy Exp $
 
 inherit eutils autotools distutils
 
@@ -99,26 +99,39 @@ src_install() {
 	    newconfd ${FILESDIR}/gpsd.conf gpsd
 	    newinitd ${FILESDIR}/gpsd.init gpsd
 	fi
+
 	if use X ; then
 	    insinto /etc/X11/app-defaults
 	    newins xgps.ad Xgps
 	    newins xgpsspeed.ad Xgpsspeed
 	fi
+
 	dobin logextract
 	diropts "-m0644"
+
 	if use python ; then
 	    exeinto /usr/$(get_libdir)/python${PYVER}/site-packages
 	    doexe gps.py gpsfake.py gpspacket.so
 	fi
+
 	dodoc AUTHORS COPYING INSTALL README TODO
+
+	# add missing include file (see bug #162361)
+	insinto /usr/include
+	doins gpsd_config.h
 }
 
 pkg_postinst() {
 	einfo ""
-	einfo "This version of gpsd no longer requires updates many devices and"
-	einfo "should no longer require any specific arguments.  The gpsd daemon"
-	einfo "should now start first.  You should probably have >=udev-096-r1"
-	einfo "for hotplug and general usb device detection to work correctly."
+	einfo "This version of gpsd adds additional GPS device support, almost"
+	einfo "all of which is enabled by default, except those controlled by"
+	einfo "the USE flags for TNT and iTrax/iTalk support.  The minimal flag"
+	einfo "enables the embedded device (ie, small footprint) support, but"
+	einfo "you'll need to modify the ebuild if you need to change either"
+	einfo "the number of clients or the number of devices.  Although pps"
+	einfo "is enabled, it still needs the correct kernel patches.  You"
+	einfo "should probably have >=udev-096-r1 for hotplugging and general"
+	einfo "usb device detection to work correctly (ie, without hotplug)."
 	einfo ""
 	einfo "Different GPS devices require the corresponding kernel options"
 	einfo "to be enabled, such as USB_SERIAL_GARMIN, or a USB serial driver"
