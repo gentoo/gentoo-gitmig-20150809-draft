@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/dnd/dnd-1.1-r1.ebuild,v 1.11 2006/08/05 21:42:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/dnd/dnd-1.1-r1.ebuild,v 1.12 2007/01/18 06:58:49 jer Exp $
 
 inherit toolchain-funcs eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://leb.net/offix/${PN}.${PV}.tgz"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 
 DEPEND="|| (
 	( >=x11-libs/libX11-1.0.0
