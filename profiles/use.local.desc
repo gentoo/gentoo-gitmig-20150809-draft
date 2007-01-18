@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2507 2007/01/18 14:50:46 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2508 2007/01/18 15:25:53 chutzpah Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1683,6 +1683,7 @@ sys-fs/lvm2:nolvm1 - Allow users to build lvm2 without lvm1 support
 sys-fs/lvm2:nolvmstatic - Allow users to build lvm2 dynamically
 sys-fs/lvm2:nomirrors - Allow users to build lvm2 without mirror support
 sys-fs/lvm2:nosnapshots - Allow users to build lvm2 without snapshot support
+sys-fs/ntfs3g:suid - Install the binary SUID root, allowing users to mount ntfs-3g filesystems with potential security risks
 sys-fs/ntfsprogs:fuse - Build a FUSE module
 sys-fs/quota:rpc - Enable quota interaction via RPC
 sys-fs/unionfs:nfs - Adds support for NFS file system
