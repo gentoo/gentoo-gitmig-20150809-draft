@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.19 2007/01/16 03:14:24 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.20 2007/01/18 14:29:44 chutzpah Exp $
+
+*ntfs3g-0.20070118 (18 Jan 2007)
+
+  18 Jan 2007; Patrick McLean <chutzpah@gentoo.org>
+  -ntfs3g-0.20061212.ebuild, +ntfs3g-0.20070118.ebuild:
+  Version bump, remove FUSE kernel module check as it now works with both the
+  in-kernel FUSE module and the FUSE package one. Clean out older version.
 
 *ntfs3g-0.20070116 (16 Jan 2007)
 
