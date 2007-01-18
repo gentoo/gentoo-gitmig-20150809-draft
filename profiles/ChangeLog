@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.28 2007/01/18 16:33:29 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.29 2007/01/18 17:56:08 hkbst Exp $
+
+  18 Jan 2007; Marijn Schouten <hkBst@gentoo.org> use.local.desc:
+  added g-wrap:glib
 
   18 Jan 2007; Robert Buchholz <rbu@gentoo.org> desc/lcd_devices.desc:
   Removed some lcd_devices that should not have been in there
