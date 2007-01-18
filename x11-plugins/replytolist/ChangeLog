@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/replytolist
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/replytolist/ChangeLog,v 1.1 2006/11/09 01:09:43 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/replytolist/ChangeLog,v 1.2 2007/01/18 15:38:18 dberkholz Exp $
+
+  18 Jan 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  replytolist-0.2.0.ebuild:
+  Keyword ~ppc.
 
 *replytolist-0.2.0 (09 Nov 2006)
 
