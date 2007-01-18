@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r3.ebuild,v 1.1 2007/01/18 05:34:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r3.ebuild,v 1.2 2007/01/18 14:24:54 cardoe Exp $
 
 inherit eutils linux-info
 
@@ -126,7 +126,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-0.5.7.1-sr-driver.patch
 
 	# hibernate sequence fix
-	epatch "${FILESDIR}"/${PN}-0.5.7.1-hibernate-fix-r1.patch
+	epatch "${FILESDIR}"/${PN}-0.5.7.1-hibernate-fix.patch
 }
 
 src_compile() {
@@ -142,7 +142,7 @@ src_compile() {
 		--with-doc-dir=/usr/share/doc/${PF} \
 		--with-os-type=gentoo \
 		--with-pid-file=/var/run/hald.pid \
-		--with-data=${hwdata}
+		--with-hwdata=${hwdata}
 		--enable-hotplug-map \
 		$(use_enable debug verbose-mode) \
 		$(use_enable pcmcia pcmcia-support) \
