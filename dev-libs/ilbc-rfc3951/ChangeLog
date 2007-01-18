@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/ilbc-rfc3951
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ilbc-rfc3951/ChangeLog,v 1.4 2006/07/10 15:34:11 dragonheart Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ilbc-rfc3951/ChangeLog,v 1.5 2007/01/18 08:04:50 opfer Exp $
+
+  18 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
+  ilbc-rfc3951-0-r1.ebuild:
+  stable x86, bug #147795
 
 *ilbc-rfc3951-0-r1 (11 Jul 2006)
 
