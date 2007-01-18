@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.1.3-r2.ebuild,v 1.2 2007/01/18 20:28:24 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.1.4.ebuild,v 1.1 2007/01/18 20:28:24 mrness Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -8,12 +8,12 @@ DESCRIPTION="highly configurable free RADIUS server"
 SRC_URI="ftp://ftp.freeradius.org/pub/radius/${P}.tar.gz"
 HOMEPAGE="http://www.freeradius.org/"
 
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="debug edirectory frascend frnothreads frxp kerberos ldap mysql pam postgres snmp ssl udpfromto"
+IUSE="debug edirectory firebird frascend frnothreads frxp kerberos ldap mysql pam postgres snmp ssl udpfromto"
 
-DEPEND="!net-dialup/cistronradius
+RDEPEND="!net-dialup/cistronradius
 	!net-dialup/gnuradius
 	>=sys-libs/db-3.2
 	sys-libs/gdbm
@@ -21,11 +21,14 @@ DEPEND="!net-dialup/cistronradius
 	snmp? ( net-analyzer/net-snmp )
 	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql )
+	firebird? ( dev-db/firebird )
 	pam? ( sys-libs/pam )
 	ssl? ( dev-libs/openssl )
 	ldap? ( net-nds/openldap )
 	kerberos? ( virtual/krb5 )
 	frxp? ( dev-lang/python )"
+DEPEND="${RDEPEND}
+	sys-devel/autoconf"
 
 pkg_setup() {
 	if use edirectory && ! use ldap ; then
@@ -81,11 +84,13 @@ src_compile() {
 		einfo "removing rlm_pam (no use pam)"
 		rm -rf src/modules/rlm_pam
 	fi
+	if ! use firebird; then
+		einfo "removing rlm_sql_firebird (no use firebird)"
+		rm -rf src/modules/rlm_sql/drivers/rlm_sql_firebird
+	fi
 
-	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
-		--mandir=/usr/share/man --libdir=/usr/$(get_libdir) \
-		--with-large-files --disable-ltdl-install --with-pic \
-		${myconf} || die "configure failed"
+	econf --with-large-files --disable-ltdl-install --with-pic \
+		 --localstatedir=/var ${myconf} || die "econf failed"
 
 	make || die "make failed"
 }
