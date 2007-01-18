@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gtk-sharp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.72 2007/01/18 07:51:41 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.73 2007/01/18 12:10:33 opfer Exp $
+
+  18 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
+  gtk-sharp-2.8.2.ebuild:
+  stable x86, bug #153308
 
   18 Jan 2007; Peter Johanson <latexer@gentoo.org> gtk-sharp-2.8.2.ebuild:
   Fix typo in the fix for bug #161093.
