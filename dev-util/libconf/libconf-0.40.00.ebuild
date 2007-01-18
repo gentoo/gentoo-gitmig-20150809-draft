@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/libconf-0.40.00.ebuild,v 1.7 2006/06/07 21:10:21 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/libconf-0.40.00.ebuild,v 1.8 2007/01/18 19:27:18 dams Exp $
 
 IUSE="xml"
 
@@ -8,7 +8,7 @@ MY_P=perl-${PN/l/L}-${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Centralized abstraction layer for system configuration files"
 HOMEPAGE="http://libconf.net/"
-SRC_URI="http://libconf.net/download/${MY_P}.tar.bz2"
+SRC_URI="http://damien.krotkine.com/libconf/dist/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"

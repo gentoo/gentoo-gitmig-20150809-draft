@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/libconf
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/ChangeLog,v 1.43 2006/11/28 22:57:13 dev-zero Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/ChangeLog,v 1.44 2007/01/18 19:27:18 dams Exp $
+
+  18 Jan 2007; Damien Krotkine <dams@gentoo.org> libconf-0.40.00.ebuild:
+  corrected SRC_URI, corrected copyright date
 
   28 Nov 2006; Tiziano Müller <dev-zero@gentoo.org>
   +files/0.42.10-fbsd.patch, libconf-0.42.10-r1.ebuild:
