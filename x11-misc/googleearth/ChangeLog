@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/googleearth
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.21 2007/01/12 19:29:38 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.22 2007/01/18 13:14:09 armin76 Exp $
+
+  18 Jan 2007; Raúl Porcel <armin76@gentoo.org> googleearth-4.ebuild:
+  Revert the ati/nvidia changes, as SRC_URI doesn't work. Request by jakub,
+  blame him
 
 *googleearth-4 (12 Jan 2007)
 
