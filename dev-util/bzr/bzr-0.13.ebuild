@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-0.13.ebuild,v 1.1 2006/12/05 02:44:19 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-0.13.ebuild,v 1.2 2007/01/18 15:56:46 fmccor Exp $
 
 inherit distutils bash-completion elisp-common eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://bazaar-vcs.org/releases/src/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="curl emacs test"
 
 python_rdep="dev-python/celementtree
