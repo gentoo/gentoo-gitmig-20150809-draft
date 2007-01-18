@@ -1,33 +1,38 @@
-MD5 bb5bc90c512816650e3a48e48bfb2a54 ChangeLog 6167
-RMD160 493a7a68d641a8af563ca2f2ad10e71944dfa3d3 ChangeLog 6167
-SHA256 41c565d491ee81e0eb9fa50c21914612cab2202c6706a658591fa100ecda6b24 ChangeLog 6167
-MD5 a0940eb3f5939500bee4e738121dcb58 files/digest-kmyfirewall-0.9.6.2-r1 72
-RMD160 bcd85dda78c17491e36ba4feb8657b28f5484a06 files/digest-kmyfirewall-0.9.6.2-r1 72
-SHA256 9eb412f3cb1a298a24d818b2bf7313dcb19bfa6f48ad6223fcc234af6b0e45bc files/digest-kmyfirewall-0.9.6.2-r1 72
-MD5 64e05fa9eea935f51b863f14f1df89e9 files/digest-kmyfirewall-1.0-r2 69
-RMD160 faaf04634abb750c08192d82b1921dee48f7b006 files/digest-kmyfirewall-1.0-r2 69
-SHA256 8706111cc3abaf6baf38b6cd168b74528fa59ddce09c5fc9c40ff5353eb05fb5 files/digest-kmyfirewall-1.0-r2 69
-MD5 6fe96b5ed848fc4eb9093a8f614c98c0 files/digest-kmyfirewall-1.0.1 259
-RMD160 cd30dd63d09572f72ff971bb81caa8cf3da07719 files/digest-kmyfirewall-1.0.1 259
-SHA256 f3c77c1d06a5fa189008a17a616e4ddb137beae63f92664501c12e54ca1a371b files/digest-kmyfirewall-1.0.1 259
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX kmyfirewall-0.9.6.2-configure-arts.patch 3478 RMD160 87783eafa41bbfb2f21ef365a03ecb6a0bcc3261 SHA1 1daa48e41c80fe8c4ef0bfe05f4b087761985e27 SHA256 867e4aadff69658567e62e303e2a60f8a0e0b5e8a842d0ae233ffb5404812030
 MD5 80cc54abedc0473d0a3d399fdd43467a files/kmyfirewall-0.9.6.2-configure-arts.patch 3478
 RMD160 87783eafa41bbfb2f21ef365a03ecb6a0bcc3261 files/kmyfirewall-0.9.6.2-configure-arts.patch 3478
 SHA256 867e4aadff69658567e62e303e2a60f8a0e0b5e8a842d0ae233ffb5404812030 files/kmyfirewall-0.9.6.2-configure-arts.patch 3478
-MD5 e8a356fd4f71fc395c22bd89fb8a9347 files/kmyfirewall-1.0-logprefix.diff 495
-RMD160 e8dc4033d6d21a24be0f6eff1bd8cfc7a9ff1a7b files/kmyfirewall-1.0-logprefix.diff 495
-SHA256 8cffa492147b4d8ceca4d66376217ee471adc2f024b0bd7c19ae367192e76ae6 files/kmyfirewall-1.0-logprefix.diff 495
-MD5 0f7cb84fcc791f920007ddf271e2a36d files/kmyfirewall-1.0_gentoo_multiport.diff 1820
-RMD160 542c027d821536b982e38f076108a37aeb44e8ab files/kmyfirewall-1.0_gentoo_multiport.diff 1820
-SHA256 b7c2600fb2c9ea5183505d34c368df25d09d7b677e8039bdc31f281e2e6e7b84 files/kmyfirewall-1.0_gentoo_multiport.diff 1820
+DIST kmyfirewall-0.9.6.2.tar.bz2 772508 RMD160 cd751f471c236a9d5128524ccaa09e1d5e909cd3 SHA1 2fcc96676c3725c0de5613cb1c58f7a1ad6ac1ba SHA256 556ba809e7793c64b07c9c6acb0d885d047387747d7d95eb20d4cfb360fb3789
+DIST kmyfirewall-1.0.1.tar.bz2 1962683 RMD160 6ec0f7e076b3002f1769d9a1fb9d40c367ece6c0 SHA1 12fee6bae7919858589431d01f0085eac5f82a49 SHA256 2309b6ad4de0d3c384769a7b6aa4b2e46cf1a9af518d63ca1c2c82b50a421693
+EBUILD kmyfirewall-0.9.6.2-r1.ebuild 696 RMD160 1af5a9046ee5404a3e0f7bea4cde2acb7372cbc0 SHA1 ef46f70215193f832befb73e16a4bf387d406d64 SHA256 df3219f688285b6868210032377b1f1abb66bc7f17918c052da37f0258be09ba
 MD5 5a0451e37dbdd06bdde83c33ce1c2877 kmyfirewall-0.9.6.2-r1.ebuild 696
 RMD160 1af5a9046ee5404a3e0f7bea4cde2acb7372cbc0 kmyfirewall-0.9.6.2-r1.ebuild 696
 SHA256 df3219f688285b6868210032377b1f1abb66bc7f17918c052da37f0258be09ba kmyfirewall-0.9.6.2-r1.ebuild 696
-MD5 37effcc0e0d706d45e1c096907134795 kmyfirewall-1.0-r2.ebuild 905
-RMD160 1125aa6e523c42957fb80da985f829fe1bc42a40 kmyfirewall-1.0-r2.ebuild 905
-SHA256 61a7e041c55e5b070443d19bc95da77ca84ff35a54efbab183f91ee43f4e9f35 kmyfirewall-1.0-r2.ebuild 905
-MD5 e1a63e121d9d150bdc139831a63fa212 kmyfirewall-1.0.1.ebuild 1118
-RMD160 0470e6d1b481b0ef449024ef61afb4b440eb1e8a kmyfirewall-1.0.1.ebuild 1118
-SHA256 f5ad86d584558ab82474e1a4f79ae37bbd81bc99cd2a35ffaadadd437dd8c9ce kmyfirewall-1.0.1.ebuild 1118
+EBUILD kmyfirewall-1.0.1.ebuild 1075 RMD160 69c6816b2d6c5430f658e643ea9e77d2142699af SHA1 5b0a46cadce292ecba43e932c818027dc248fc46 SHA256 7f5a0ba1329df12b99f1ee00028182589c37ba990da02a41f99c0d33c7f4b557
+MD5 b1f6c8d7160ee4de10f657adfcc4d83f kmyfirewall-1.0.1.ebuild 1075
+RMD160 69c6816b2d6c5430f658e643ea9e77d2142699af kmyfirewall-1.0.1.ebuild 1075
+SHA256 7f5a0ba1329df12b99f1ee00028182589c37ba990da02a41f99c0d33c7f4b557 kmyfirewall-1.0.1.ebuild 1075
+MISC ChangeLog 6372 RMD160 cc2a3eb835fad30bf8b54f2b8b76fccad3e2bb42 SHA1 beba209f08678df50a8525d94478de5d8b79f055 SHA256 8af65f5beb16d2d55805766f88e738b7d421fe136774d54f1fd017e1dee96e1a
+MD5 4a3cbb7f6f46fcfe41b800bea6d8b9d4 ChangeLog 6372
+RMD160 cc2a3eb835fad30bf8b54f2b8b76fccad3e2bb42 ChangeLog 6372
+SHA256 8af65f5beb16d2d55805766f88e738b7d421fe136774d54f1fd017e1dee96e1a ChangeLog 6372
+MISC metadata.xml 542 RMD160 d6013e48e9de7296b7630aabf5154b27e85fb25b SHA1 c0b28f2fb15b4e023c0f54036c02350bc60514fd SHA256 53c507665adac18d523119b54f834d3f2eef09cbdab5e15d1a784ae25c837fea
 MD5 51d7efd5419c5c86fff22e7335f45585 metadata.xml 542
 RMD160 d6013e48e9de7296b7630aabf5154b27e85fb25b metadata.xml 542
 SHA256 53c507665adac18d523119b54f834d3f2eef09cbdab5e15d1a784ae25c837fea metadata.xml 542
+MD5 b5df0500c946669d57ecfdf6d485ff22 files/digest-kmyfirewall-0.9.6.2-r1 262
+RMD160 824aad4f5e5e5987fa0ccbcc073417f67485cc46 files/digest-kmyfirewall-0.9.6.2-r1 262
+SHA256 845839841a4867d4b877c2728677f99f700a3cae7dd4edb4240d728c97797d9d files/digest-kmyfirewall-0.9.6.2-r1 262
+MD5 6fe96b5ed848fc4eb9093a8f614c98c0 files/digest-kmyfirewall-1.0.1 259
+RMD160 cd30dd63d09572f72ff971bb81caa8cf3da07719 files/digest-kmyfirewall-1.0.1 259
+SHA256 f3c77c1d06a5fa189008a17a616e4ddb137beae63f92664501c12e54ca1a371b files/digest-kmyfirewall-1.0.1 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFr/ERz974XjDVpbkRAnVdAKCEsefK3TcK98zetuZmaXXi42gggACfTW3K
+9+nr5o4BrQr84yhFycmvwrk=
+=vqab
+-----END PGP SIGNATURE-----
