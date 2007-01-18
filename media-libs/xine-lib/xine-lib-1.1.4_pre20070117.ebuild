@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.3.ebuild,v 1.11 2007/01/18 01:01:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.4_pre20070117.ebuild,v 1.1 2007/01/18 01:01:44 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -15,21 +15,17 @@ else
 	SRC_URI="mirror://sourceforge/xine/${MY_P}.tar.gz"
 fi
 
-PATCHLEVEL="61"
-
 DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
-SRC_URI="${SRC_URI}
-	mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 IUSE="aalib libcaca arts esd win32codecs nls dvd X directfb vorbis alsa
 gnome sdl speex theora ipv6 altivec opengl aac fbcon xv xvmc
 samba dxr3 vidix mng flac oss v4l xinerama vcd a52 mad imagemagick dts
-debug modplug gtk pulseaudio mmap truetype"
+debug modplug gtk pulseaudio mmap truetype wavpack"
 
 RDEPEND="
 	X? ( x11-libs/libXext
@@ -45,7 +41,7 @@ RDEPEND="
 	aalib? ( media-libs/aalib )
 	directfb? ( >=dev-libs/DirectFB-0.9.9 )
 	gnome? ( >=gnome-base/gnome-vfs-2.0 )
-	flac? ( ~media-libs/flac-1.1.2 )
+	flac? ( >=media-libs/flac-1.1.2 )
 	sdl? ( >=media-libs/libsdl-1.1.5 )
 	dxr3? ( >=media-libs/libfame-0.9.0 )
 	vorbis? ( media-libs/libogg media-libs/libvorbis )
@@ -66,6 +62,7 @@ RDEPEND="
 	pulseaudio? ( media-sound/pulseaudio )
 	truetype? ( =media-libs/freetype-2* media-libs/fontconfig )
 	virtual/libiconv
+	wavpack? ( >=media-sound/wavpack-4.31 )
 	!=media-libs/xine-lib-0.9.13*"
 
 DEPEND="${RDEPEND}
@@ -78,16 +75,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/libtool
 	nls? ( sys-devel/gettext )"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	# EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
-	epatch "${WORKDIR}/patches/120"*
-
-	# AT_M4DIR="m4" eautoreconf
-}
 
 src_compile() {
 	#prevent quicktime crashing
@@ -130,10 +117,11 @@ src_compile() {
 		$(use_enable gtk gdkpixbuf) \
 		\
 		$(use_enable aac faad) \
-		$(use_enable flac) \
+		$(use_with flac libflac) \
 		$(use_with vorbis) \
 		$(use_with speex) \
 		$(use_with theora) \
+		$(use_with wavpack) \
 		$(use_enable a52) --with-external-a52dec \
 		$(use_enable mad) --with-external-libmad \
 		$(use_enable dts) --with-external-libdts \
@@ -176,7 +164,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Install failed"
+	emake -j1 DESTDIR="${D}" install || die "Install failed"
 
 	dodoc AUTHORS ChangeLog README TODO doc/README* doc/faq/faq.txt
 	dohtml doc/faq/faq.html doc/hackersguide/*.html doc/hackersguide/*.png
