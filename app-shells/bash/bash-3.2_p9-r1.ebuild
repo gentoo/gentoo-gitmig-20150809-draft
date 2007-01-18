@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.2_p9-r1.ebuild,v 1.1 2006/12/31 12:20:55 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.2_p9-r1.ebuild,v 1.2 2007/01/18 18:35:43 dirtyepic Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -126,7 +126,7 @@ src_install() {
 
 	doman doc/*.1
 	dodoc README NEWS AUTHORS CHANGES COMPAT Y2K doc/FAQ doc/INTRO
-	dosym bash.info.gz /usr/share/info/bashref.info.gz
+	dosym bash.info.bz2 /usr/share/info/bashref.info.bz2
 }
 
 pkg_preinst() {
