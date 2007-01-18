@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/ccid
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.11 2006/12/28 20:50:48 alonbl Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.12 2007/01/18 19:10:51 alonbl Exp $
+
+  18 Jan 2007; Alon Bar-Lev <alonbl@gentoo.org> ccid-1.1.0-r1.ebuild:
+  Added static pcsc-lite dependency, closes bug#162602, thanks to Timo Gurr
 
 *ccid-1.1.0-r1 (28 Dec 2006)
 

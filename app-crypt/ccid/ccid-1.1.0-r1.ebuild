@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.1.0-r1.ebuild,v 1.2 2006/12/29 05:12:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.1.0-r1.ebuild,v 1.3 2007/01/18 19:10:51 alonbl Exp $
 
 inherit eutils autotools
 
@@ -12,11 +12,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="chipcard2 twinserial"
-RDEPEND="
-	!chipcard2? (
-		>=sys-apps/pcsc-lite-1.3.2
-		>=dev-libs/libusb-0.1.4
-	)
+RDEPEND=">=sys-apps/pcsc-lite-1.3.2
+	!chipcard2? ( >=dev-libs/libusb-0.1.4 )
 	chipcard2? ( sys-libs/libchipcard )"
 
 src_unpack() {
