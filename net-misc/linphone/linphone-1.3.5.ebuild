@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/linphone-1.3.5.ebuild,v 1.10 2006/11/26 20:48:22 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/linphone-1.3.5.ebuild,v 1.11 2007/01/18 08:07:03 opfer Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -15,7 +15,7 @@ SRC_URI="http://simon.morlat.free.fr/download/${MY_DPV}/source/${P}.tar.gz
 	ilbc? (	http://simon.morlat.free.fr/download/${MY_DPV}/source/plugins/${PN}-plugin-ilbc-1.2.0.tar.gz )"
 SLOT=1
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 IUSE="alsa gnome ilbc ipv6 xv"
 # truespeech does not build
