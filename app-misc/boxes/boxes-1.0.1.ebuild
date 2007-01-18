@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/boxes-1.0.1.ebuild,v 1.24 2005/04/21 19:03:36 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/boxes-1.0.1.ebuild,v 1.25 2007/01/18 00:04:20 dirtyepic Exp $
 
 inherit eutils
 
@@ -13,18 +13,17 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha amd64 ppc64"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.diff
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-Makefile.patch
+	epatch "${FILESDIR}"/${P}-flex.patch
 }
 
-
 src_compile() {
-	make clean || die
-	make CFLAGS="$CFLAGS -I. -Iregexp" || die
+	emake || die
 }
 
 src_install() {
