@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.29 2007/01/18 17:56:08 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.30 2007/01/18 23:34:14 opfer Exp $
+
+  18 Jan 2007; Christian Faulhammer <opfer@gentoo.org> use.local.desc:
+  removed local USE flag vnc for net-misc/ltsp
 
   18 Jan 2007; Marijn Schouten <hkBst@gentoo.org> use.local.desc:
   added g-wrap:glib
