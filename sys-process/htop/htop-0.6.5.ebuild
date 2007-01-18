@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-0.6.5.ebuild,v 1.4 2007/01/18 15:19:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-0.6.5.ebuild,v 1.5 2007/01/18 18:22:14 jer Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://htop.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 hppa ~ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 DEPEND="sys-libs/ncurses"
 
 src_compile() {
