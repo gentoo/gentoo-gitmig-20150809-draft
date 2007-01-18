@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.113 2007/01/05 04:41:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.114 2007/01/18 05:34:42 cardoe Exp $
+
+*hal-0.5.7.1-r3 (18 Jan 2007)
+
+  18 Jan 2007; Doug Goldstein <cardoe@gentoo.org>
+  +files/hal-0.5.7.1-hibernate-fix-r1.patch, -hal-0.5.7.1-r1.ebuild,
+  hal-0.5.7.1-r2.ebuild, +hal-0.5.7.1-r3.ebuild:
+  Fixed bug #133743 and bug #161057
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> hal-0.5.5.1-r3.ebuild,
   hal-0.5.7-r3.ebuild, hal-0.5.7.1-r1.ebuild, hal-0.5.7.1-r2.ebuild:
