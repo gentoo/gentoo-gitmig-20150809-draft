@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.16.3.ebuild,v 1.10 2007/01/16 13:48:35 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.16.3.ebuild,v 1.11 2007/01/18 23:51:54 jer Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="xinerama"
 
 # not parallel-safe; see bug #14405

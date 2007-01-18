@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.182 2007/01/16 13:48:35 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.183 2007/01/18 23:51:54 jer Exp $
+
+  18 Jan 2007; Jeroen Roovers <jer@gentoo.org> metacity-2.16.3.ebuild:
+  Stable for HPPA (bug #147751).
 
   16 Jan 2007; Roy Marples <uberlord@gentoo.org> metacity-2.16.3.ebuild:
   Added ~x86-fbsd keyword.
