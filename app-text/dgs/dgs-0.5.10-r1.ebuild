@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/dgs-0.5.10-r1.ebuild,v 1.36 2007/01/19 14:34:48 armin76 Exp $
-
-inherit eutils autotools
+# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/dgs-0.5.10-r1.ebuild,v 1.37 2007/01/19 14:50:50 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 WANT_AUTOMAKE="latest"
+
+inherit eutils autotools
 
 DESCRIPTION="A Ghostscript based Display Postscript (DPS) server"
 HOMEPAGE="http://www.gyve.org/dgs/"
@@ -18,7 +18,6 @@ RDEPEND="=dev-libs/glib-1.2*
 	!<x11-base/xorg-x11-7"
 DEPEND="${RDEPEND}
 	sys-apps/texinfo
-	sys-devel/autoconf
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 
 src_unpack() {
