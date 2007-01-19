@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.2-r6.ebuild,v 1.20 2007/01/05 16:57:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.2-r6.ebuild,v 1.21 2007/01/19 10:05:02 flameeyes Exp $
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
 
@@ -66,6 +66,15 @@ pkg_setup() {
 		ewarn "sites, but breaks others instead. It is strongly discouraged to use it."
 		ewarn "For more information, see bug #128922."
 		echo ""
+	fi
+
+	if use alsa && ! built_with_use --missing true media-libs/alsa-lib midi; then
+		eerror "The alsa USE flag in this package enables ALSA support"
+		eerror "for libkmid, KDE midi library."
+		eerror "For this reason, you have to merge media-libs/alsa-lib"
+		eerror "with the midi USE flag enabled, or disable alsa USE flag"
+		eerror "for this package."
+		die "Missing midi USE flag on media-libs/alsa-lib"
 	fi
 }
 
