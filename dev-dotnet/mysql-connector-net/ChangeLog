@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/mysql-connector-net
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mysql-connector-net/ChangeLog,v 1.4 2006/03/19 22:11:31 halcy0n Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mysql-connector-net/ChangeLog,v 1.5 2007/01/19 15:00:00 masterdriverz Exp $
+
+  19 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  mysql-connector-net-1.0.4.ebuild:
+  QA: remove invalid RESTRICT="mirror"
 
   19 Mar 2006; Mark Loeser <halcy0n@gentoo.org>
   mysql-connector-net-1.0.4.ebuild:
