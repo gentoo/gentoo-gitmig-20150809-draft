@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.72 2007/01/04 21:49:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.73 2007/01/19 20:09:01 eroyf Exp $
+
+# Alexander Færøy <eroyf@gentoo.org>
+# Clamav -- untested, masking for now.
+clamav
 
 # Untested on mips, masking for now.
 cdb
