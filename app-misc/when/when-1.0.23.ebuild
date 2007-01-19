@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/when/when-1.0.23.ebuild,v 1.5 2005/07/20 14:39:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/when/when-1.0.23.ebuild,v 1.6 2007/01/19 04:48:21 dirtyepic Exp $
 
 DESCRIPTION="Extremely simple personal calendar program aimed at the Unix geek who wants something minimalistic"
 HOMEPAGE="http://www.lightandmatter.com/when/when.html"
@@ -12,6 +12,8 @@ KEYWORDS="x86 ppc ~amd64 sparc"
 IUSE=""
 
 RDEPEND=">=dev-lang/perl-5.005"
+
+RESTRICT="test"
 
 src_compile() {
 	emake ${PN}.html || die "emake failed"
