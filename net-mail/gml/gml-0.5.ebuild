@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gml/gml-0.5.ebuild,v 1.3 2005/07/12 04:27:17 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gml/gml-0.5.ebuild,v 1.4 2007/01/19 23:00:48 ticho Exp $
 
 inherit eutils
 
@@ -11,12 +11,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~sparc x86"
 IUSE=""
-DEPEND="dev-python/pmw
-	app-text/dos2unix"
-S=${WORKDIR}/
+DEPEND="dev-python/pmw"
+S="${WORKDIR}/"
 
 src_install() {
-	dos2unix -o gmlw.py
+	edos2unix gmlw.py
 	dobin gmlw.py || die
 	dodoc README COPYING || die
 }
