@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/jxtray-0.5.ebuild,v 1.10 2006/11/30 15:16:08 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/jxtray-0.5.ebuild,v 1.11 2007/01/19 21:45:15 corsair Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://jxtray.sourceforge.net"
 SRC_URI="mirror://sourceforge/jxtray/${PN}-src-${PV}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ~ppc"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="doc jikes firebird mssql mysql postgres"
 
 RDEPEND=">=virtual/jre-1.3
