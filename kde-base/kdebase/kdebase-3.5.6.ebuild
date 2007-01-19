@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.6.ebuild,v 1.4 2007/01/19 12:31:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.6.ebuild,v 1.5 2007/01/19 17:23:01 flameeyes Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -75,6 +75,8 @@ DEPEND="${DEPEND}
 		) <virtual/x11-7 )
 	dev-util/pkgconfig"
 
+need-kde 3.5.6
+
 PATCHES="${FILESDIR}/kdebase-startkde-3.5.3-xinitrcd.patch
 	${FILESDIR}/nsplugins-3.5.5-npapi-64bit.patch"
 
@@ -137,14 +139,6 @@ src_install() {
 
 	exeinto ${KDEDIR}/shutdown
 	doexe "${FILESDIR}/agent-shutdown.sh"
-
-	# freedesktop environment variables
-	cat <<EOF > "${T}/xdg.sh"
-export XDG_DATA_DIRS="${KDEDIR}/share:/usr/share"
-export XDG_CONFIG_DIRS="${KDEDIR}/etc/xdg"
-EOF
-	insinto ${KDEDIR}/env
-	doins "${T}/xdg.sh"
 
 	# x11 session script
 	cat <<EOF > "${T}/kde-${SLOT}"
