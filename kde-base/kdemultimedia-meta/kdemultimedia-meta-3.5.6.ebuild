@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/kdemultimedia-meta-3.5.6.ebuild,v 1.1 2007/01/16 20:14:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/kdemultimedia-meta-3.5.6.ebuild,v 1.2 2007/01/19 16:44:55 flameeyes Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -13,7 +13,7 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="arts xine"
 
 RDEPEND="arts? ( $(deprange $PV $MAXKDEVER kde-base/artsplugin-akode)
-		$(deprange 3.5.5 $MAXKDEVER kde-base/artsplugin-audiofile)
+		$(deprange 3.5.4 $MAXKDEVER kde-base/artsplugin-audiofile)
 		xine? ( $(deprange $PV $MAXKDEVER kde-base/artsplugin-xine) )
 		$(deprange $PV $MAXKDEVER kde-base/juk)
 		$(deprange $PV $MAXKDEVER kde-base/kaboodle)
