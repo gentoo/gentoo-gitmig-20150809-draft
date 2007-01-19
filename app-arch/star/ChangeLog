@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/star
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.34 2007/01/05 13:42:15 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.35 2007/01/19 05:17:17 dirtyepic Exp $
+
+  19 Jan 2007; Ryan Hill <dirtyepic@gentoo.org> star-1.5_alpha62.ebuild,
+  star-1.5_alpha74.ebuild:
+  Fix licenses for bug #145842.
 
   05 Jan 2007; Steve Dibb <beandog@gentoo.org> -star-1.4.3.ebuild:
   Remove vuln version, bug 152079
