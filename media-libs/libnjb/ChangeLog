@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libnjb
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.33 2006/10/14 09:37:39 corsair Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.34 2007/01/19 15:33:11 masterdriverz Exp $
+
+  19 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  libnjb-1.2.ebuild:
+  QA: remove invalid RESTRICT="mirror"
 
   14 Oct 2006; Markus Rothe <corsair@gentoo.org> libnjb-2.2.5.ebuild:
   Stable on ppc64; bug #150988
