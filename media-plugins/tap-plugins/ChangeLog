@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/tap-plugins
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/tap-plugins/ChangeLog,v 1.15 2005/09/03 23:47:00 flameeyes Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/tap-plugins/ChangeLog,v 1.16 2007/01/19 15:51:51 masterdriverz Exp $
+
+  19 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  tap-plugins-0.4.0.ebuild, tap-plugins-0.5.0.ebuild,
+  tap-plugins-0.6.0.ebuild:
+  Remove RESTRICT="mirror"
 
   03 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> metadata.xml,
   tap-plugins-0.1.ebuild, tap-plugins-0.4.0.ebuild,
