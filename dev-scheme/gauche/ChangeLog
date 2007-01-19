@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/gauche
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche/ChangeLog,v 1.1 2007/01/10 17:10:30 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche/ChangeLog,v 1.2 2007/01/19 11:10:43 hattya Exp $
+
+*gauche-0.8.9 (19 Jan 2007)
+
+  19 Jan 2007; Akinori Hattori <hattya@gentoo.org> +gauche-0.8.9.ebuild:
+  new upstream release.
 
   10 Jan 2007; <marijn@gentoo.org> +files/gauche-0.8.8-report-error.diff,
   +files/gauche-dbm.ac.diff, +files/gauche-gauche.m4-cc.diff,
