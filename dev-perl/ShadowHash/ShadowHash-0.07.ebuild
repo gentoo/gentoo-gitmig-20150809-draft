@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ShadowHash/ShadowHash-0.07.ebuild,v 1.8 2006/11/24 18:20:32 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ShadowHash/ShadowHash-0.07.ebuild,v 1.9 2007/01/19 15:44:55 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Merge multiple data sources into a hash"
 SRC_URI="mirror://cpan/authors/id/R/RR/RRA/${P}.tar.gz"
-HOMEPAGE="http://www.cpan.org/modules/by-authors/id/R/RR/RRA/${P}.readme"
+HOMEPAGE="http://search.cpan.org/~rra/"
 IUSE=""
 
 SLOT="0"
@@ -17,4 +17,3 @@ SRC_TEST="do"
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"

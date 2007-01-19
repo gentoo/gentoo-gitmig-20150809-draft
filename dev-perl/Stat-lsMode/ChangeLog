@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Stat-lsMode
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Stat-lsMode/ChangeLog,v 1.14 2006/08/18 01:26:46 mcummings Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Stat-lsMode/ChangeLog,v 1.15 2007/01/19 15:50:58 mcummings Exp $
+
+  19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  Stat-lsMode-0.50.ebuild:
+  Version bump, thanks seemant
 
   18 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Stat-lsMode-0.50.ebuild:

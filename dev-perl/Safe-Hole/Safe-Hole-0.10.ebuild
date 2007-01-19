@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Safe-Hole/Safe-Hole-0.10.ebuild,v 1.8 2006/11/24 18:18:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Safe-Hole/Safe-Hole-0.10.ebuild,v 1.9 2007/01/19 15:41:42 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Exec subs in the original package from Safe"
 SRC_URI="mirror://cpan/authors/id/S/SE/SEYN/${P}.tar.gz"
-HOMEPAGE="http://www.cpan.org/modules/by-authors/id/S/SE/SEYN/${P}.readme"
+HOMEPAGE="http://search.cpan.org/~seyn/"
 IUSE=""
 
 SLOT="0"
@@ -17,4 +17,3 @@ SRC_TEST="do"
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"
