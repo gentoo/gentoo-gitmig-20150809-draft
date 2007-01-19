@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/NaturalDocs-1.22-r1.ebuild,v 1.10 2006/03/19 19:01:02 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/NaturalDocs-1.22-r1.ebuild,v 1.11 2007/01/19 13:55:23 masterdriverz Exp $
 
 DESCRIPTION="Extensible, multi-language source code documentation generator"
 HOMEPAGE="http://www.naturaldocs.org/"
@@ -11,7 +11,6 @@ SLOT="0"
 KEYWORDS="x86 ppc amd64"
 
 IUSE=""
-RESTRICT="nomirror"
 
 RDEPEND="dev-lang/perl"
 DEPEND="${RDEPEND}
