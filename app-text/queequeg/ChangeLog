@@ -1,6 +1,10 @@
 # ChangeLog for app-text/queequeg
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/queequeg/ChangeLog,v 1.5 2006/07/14 13:18:39 hattya Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/queequeg/ChangeLog,v 1.6 2007/01/19 14:50:21 masterdriverz Exp $
+
+  19 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  queequeg-0.91.ebuild:
+  QA: remove invalid RESTRICT="mirror"; fix grammer
 
   14 Jul 2006; Akinori Hattori <hattya@gentoo.org> queequeg-0.91.ebuild:
   fixes bug #133023.
