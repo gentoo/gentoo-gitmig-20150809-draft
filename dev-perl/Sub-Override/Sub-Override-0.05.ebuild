@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Override/Sub-Override-0.05.ebuild,v 1.9 2006/08/05 23:06:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Override/Sub-Override-0.05.ebuild,v 1.10 2007/01/19 15:53:27 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Perl extension for easily overriding subroutines"
-HOMEPAGE="http://www.cpan.org/modules/by-module/HTML/${P}.readme"
+HOMEPAGE="http://search.cpan.org/~ovid/"
 SRC_URI="mirror://cpan/authors/id/O/OV/OVID/${P}.tar.gz"
 IUSE=""
 LICENSE="Artistic"
@@ -17,6 +17,3 @@ SRC_TEST="do"
 DEPEND="virtual/perl-Test-Simple
 	dev-perl/Test-Exception
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
-
-

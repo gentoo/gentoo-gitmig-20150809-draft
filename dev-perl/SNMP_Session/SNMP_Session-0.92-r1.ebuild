@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SNMP_Session/SNMP_Session-0.92-r1.ebuild,v 1.10 2006/08/05 20:14:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SNMP_Session/SNMP_Session-0.92-r1.ebuild,v 1.11 2007/01/19 15:45:20 mcummings Exp $
 
 inherit perl-module
 
@@ -23,4 +23,3 @@ src_install() {
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"

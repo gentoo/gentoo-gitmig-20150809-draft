@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/regexp-common/regexp-common-2.120.ebuild,v 1.9 2006/08/06 03:07:14 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/regexp-common/regexp-common-2.120.ebuild,v 1.10 2007/01/19 15:40:58 mcummings Exp $
 
 inherit perl-module
 
@@ -20,4 +20,3 @@ IUSE=""
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"

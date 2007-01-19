@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/perl-ldap-0.33.ebuild,v 1.11 2006/08/06 03:00:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/perl-ldap-0.33.ebuild,v 1.12 2007/01/19 15:21:58 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="A collection of perl modules which provide an object-oriented interface to LDAP servers."
-HOMEPAGE="http://search.cpan.org/~gbarr/${P}/"
+HOMEPAGE="http://search.cpan.org/~gbarr/"
 SRC_URI="mirror://cpan/authors/id/G/GB/GBARR/${P}.tar.gz"
 
 LICENSE="Artistic"
@@ -19,7 +19,6 @@ DEPEND="dev-perl/Convert-ASN1
 	xml? ( dev-perl/XML-Parser )
 	ssl? ( >=dev-perl/IO-Socket-SSL-0.81 )
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	if [ "${MMSIXELEVEN}" ]; then

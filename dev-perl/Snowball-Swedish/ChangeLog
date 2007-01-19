@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Snowball-Swedish
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Snowball-Swedish/ChangeLog,v 1.9 2006/08/17 21:29:01 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Snowball-Swedish/ChangeLog,v 1.10 2007/01/19 15:45:59 mcummings Exp $
+
+  19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  Snowball-Swedish-1.01.ebuild:
+  Ebuild maintenance
 
   17 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Snowball-Swedish-1.01.ebuild:

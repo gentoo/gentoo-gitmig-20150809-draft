@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Sort-Tree
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sort-Tree/ChangeLog,v 1.7 2006/08/05 20:34:19 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sort-Tree/ChangeLog,v 1.8 2007/01/19 15:48:16 mcummings Exp $
+
+  19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  Sort-Tree-1.09.ebuild:
+  Ebuild maintenance
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Sort-Tree-1.09.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/set-scalar/set-scalar-1.19.ebuild,v 1.12 2006/08/06 03:09:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/set-scalar/set-scalar-1.19.ebuild,v 1.13 2007/01/19 15:44:42 mcummings Exp $
 
 inherit perl-module
 MY_P=Set-Scalar-${PV}
@@ -9,7 +9,7 @@ IUSE=""
 
 DESCRIPTION="Scalar set operations"
 SRC_URI="mirror://cpan/authors/id/J/JH/JHI/${MY_P}.tar.gz"
-HOMEPAGE="http://search.cpan.org/author/JHI/Set-Scalar-1.17/"
+HOMEPAGE="http://search.cpan.org/~jhi/"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
@@ -19,4 +19,3 @@ SRC_TEST="do"
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"

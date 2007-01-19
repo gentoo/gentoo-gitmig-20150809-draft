@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plucene/Plucene-1.25.ebuild,v 1.3 2006/11/24 18:12:43 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plucene/Plucene-1.25.ebuild,v 1.4 2007/01/19 15:27:30 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Plucene - the Perl lucene port"
-HOMEPAGE="http://search.cpan.org/~tmtm/${P}/"
+HOMEPAGE="http://search.cpan.org/~tmtm/"
 SRC_URI="mirror://cpan/authors/id/T/TM/TMTM/${P}.tar.gz"
 
 LICENSE="Artistic"
@@ -30,4 +30,3 @@ DEPEND=">=dev-lang/perl-5.8.4
 		dev-perl/Lingua-Stem
 		dev-perl/Bit-Vector-Minimal
 		dev-perl/IO-stringy"
-RDEPEND="${DEPEND}"

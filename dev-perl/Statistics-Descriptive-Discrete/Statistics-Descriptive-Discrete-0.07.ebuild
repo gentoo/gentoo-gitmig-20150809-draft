@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Statistics-Descriptive-Discrete/Statistics-Descriptive-Discrete-0.07.ebuild,v 1.9 2006/08/05 20:41:08 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Statistics-Descriptive-Discrete/Statistics-Descriptive-Discrete-0.07.ebuild,v 1.10 2007/01/19 15:51:29 mcummings Exp $
 
 inherit perl-module
 
@@ -23,4 +23,3 @@ src_compile() {
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"

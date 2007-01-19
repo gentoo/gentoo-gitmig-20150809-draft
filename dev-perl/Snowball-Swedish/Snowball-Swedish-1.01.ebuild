@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Snowball-Swedish/Snowball-Swedish-1.01.ebuild,v 1.9 2006/08/17 21:29:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Snowball-Swedish/Snowball-Swedish-1.01.ebuild,v 1.10 2007/01/19 15:45:59 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Porters stemming algorithm for Swedish"
-HOMEPAGE="http://search.cpan.org/~asksh/${P}/"
+HOMEPAGE="http://search.cpan.org/~asksh/"
 SRC_URI="mirror://cpan/authors/id/A/AS/ASKSH/${P}.tar.gz"
 
 LICENSE="Artistic"
@@ -17,4 +17,3 @@ SRC_TEST="do"
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"

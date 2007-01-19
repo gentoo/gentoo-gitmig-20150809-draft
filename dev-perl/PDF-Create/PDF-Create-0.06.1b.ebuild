@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDF-Create/PDF-Create-0.06.1b.ebuild,v 1.8 2006/08/05 19:43:41 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDF-Create/PDF-Create-0.06.1b.ebuild,v 1.9 2007/01/19 15:18:17 mcummings Exp $
 
 inherit perl-module
 
@@ -9,7 +9,7 @@ MY_PV=${PV/1b/1}
 S=${WORKDIR}/perl-pdf-${MY_PV}
 DESCRIPTION="PDF::Create allows you to create PDF documents"
 SRC_URI="mirror://sourceforge/perl-pdf/${MY_P}.tar.gz"
-HOMEPAGE="http://search.cpan.org/~ftassin/${P}/"
+HOMEPAGE="http://search.cpan.org/~ftassin/"
 
 SLOT="0"
 LICENSE="Artistic"
@@ -18,4 +18,3 @@ IUSE=""
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"

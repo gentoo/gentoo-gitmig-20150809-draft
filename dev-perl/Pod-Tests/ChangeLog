@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Pod-Tests
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Tests/ChangeLog,v 1.13 2006/08/05 20:03:52 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Tests/ChangeLog,v 1.14 2007/01/19 15:30:04 mcummings Exp $
+
+  19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  Pod-Tests-0.18.ebuild:
+  Ebuild maintenance
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Pod-Tests-0.18.ebuild:

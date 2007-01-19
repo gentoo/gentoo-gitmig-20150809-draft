@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-ProcessTable/Proc-ProcessTable-0.39.ebuild,v 1.13 2006/08/05 20:07:07 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-ProcessTable/Proc-ProcessTable-0.39.ebuild,v 1.14 2007/01/19 15:39:22 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Unix process table information"
-HOMEPAGE="http://search.cpan.org/~durist/${P}/"
+HOMEPAGE="http://search.cpan.org/~durist/"
 SRC_URI="mirror://cpan/authors/id/D/DU/DURIST/${P}.tar.gz"
 
 SLOT="0"
@@ -17,4 +17,3 @@ SRC_TEST="do"
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"

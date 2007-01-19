@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Proc-ProcessTable
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-ProcessTable/ChangeLog,v 1.30 2006/10/25 15:00:11 gustavoz Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-ProcessTable/ChangeLog,v 1.31 2007/01/19 15:39:22 mcummings Exp $
+
+  19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  -Proc-ProcessTable-0.38.ebuild, Proc-ProcessTable-0.39.ebuild,
+  Proc-ProcessTable-0.40.ebuild, Proc-ProcessTable-0.41.ebuild:
+  Ebuild maintenance
 
   25 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   Proc-ProcessTable-0.41.ebuild:
