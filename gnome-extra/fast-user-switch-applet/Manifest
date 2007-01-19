@@ -1,20 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST fast-user-switch-applet-2.14.2.tar.bz2 497832 RMD160 d469ef520998dead060d64b38bb710c350b957f4 SHA1 e4792fc611ba02059b0e6c3ee8f5c1f1ef729763 SHA256 1e5b7e2ebeb54b828f00dc3e6e6387ea10d3b47df6c73f7c722b26cf3fcf147f
 DIST fast-user-switch-applet-2.16.0.tar.bz2 682627 RMD160 dfdb7ad825f8e8999ef84052305718973714893e SHA1 7e8d9bb63fb66b698054a7c40071b4dfcfa2b58a SHA256 64a7d04867ff03f436cd06177a9d86e19f606f84cc42f108cb50298a05af3118
 EBUILD fast-user-switch-applet-2.14.2.ebuild 1303 RMD160 7831bc1bf5939497a87b5f714a848da19ad02bda SHA1 5c019c52f265cb95881ec39a9d0af716a40f6ad7 SHA256 cd3d9cee42bb99e8d72ee4b8c8ccb6cdd6434ca8e580a1ca0654e33b4a8bb72c
 MD5 2d782a969021304261596e9b8e78b1e7 fast-user-switch-applet-2.14.2.ebuild 1303
 RMD160 7831bc1bf5939497a87b5f714a848da19ad02bda fast-user-switch-applet-2.14.2.ebuild 1303
 SHA256 cd3d9cee42bb99e8d72ee4b8c8ccb6cdd6434ca8e580a1ca0654e33b4a8bb72c fast-user-switch-applet-2.14.2.ebuild 1303
-EBUILD fast-user-switch-applet-2.16.0.ebuild 1287 RMD160 6f51b8c25ee1f4707b1200ee82f79f8dbfdf2b3e SHA1 4f031c075af3a26d3658f9294c585f9b143fc66b SHA256 0bd7cbcf82cce1cc75cd8812f5e839fc2ca07c7f819014aedcb38ffc6f85c571
-MD5 19b0a9ee467d1adca6b1b9111fa2f440 fast-user-switch-applet-2.16.0.ebuild 1287
-RMD160 6f51b8c25ee1f4707b1200ee82f79f8dbfdf2b3e fast-user-switch-applet-2.16.0.ebuild 1287
-SHA256 0bd7cbcf82cce1cc75cd8812f5e839fc2ca07c7f819014aedcb38ffc6f85c571 fast-user-switch-applet-2.16.0.ebuild 1287
-MISC ChangeLog 3813 RMD160 6ae5f9ec1d3eed5e576de6a61abd9c629578d43f SHA1 e01568d3e6892ff62f06f2ca07ae7835c068249f SHA256 aed53e7f36cf46b05b351b7e8b967afb0e8895755c36897fd189e80d51fe16fe
-MD5 a3d700367a78ec8472035c5f1c9e66ce ChangeLog 3813
-RMD160 6ae5f9ec1d3eed5e576de6a61abd9c629578d43f ChangeLog 3813
-SHA256 aed53e7f36cf46b05b351b7e8b967afb0e8895755c36897fd189e80d51fe16fe ChangeLog 3813
+EBUILD fast-user-switch-applet-2.16.0.ebuild 1289 RMD160 c010247a970665c82dcdd7bef22e5680f5c503e4 SHA1 b1cd921b86bbbc72eecc82f619baaf4f476f237f SHA256 444dea4740c467009bdcecab14ae067e98e6bd7680bac540c7371cd7e83890e4
+MD5 bdd03dc3e3fb1c5bd969edb2c178849b fast-user-switch-applet-2.16.0.ebuild 1289
+RMD160 c010247a970665c82dcdd7bef22e5680f5c503e4 fast-user-switch-applet-2.16.0.ebuild 1289
+SHA256 444dea4740c467009bdcecab14ae067e98e6bd7680bac540c7371cd7e83890e4 fast-user-switch-applet-2.16.0.ebuild 1289
+MISC ChangeLog 3932 RMD160 4a6b16797c6effe8ec6c968967427f9a4b8cca6a SHA1 45d17b3da917e4a7cfb411e489e7bc03889fe86d SHA256 79d8fbbdfd899c8b9cf9a76e23f8fc652da38319811c06b1dfd1accbcce980db
+MD5 99cc1fd3e8e9f0ef3abbb86e8765b8ad ChangeLog 3932
+RMD160 4a6b16797c6effe8ec6c968967427f9a4b8cca6a ChangeLog 3932
+SHA256 79d8fbbdfd899c8b9cf9a76e23f8fc652da38319811c06b1dfd1accbcce980db ChangeLog 3932
 MISC metadata.xml 159 RMD160 4aba844314249b872aefa0ef14d652f127e6334f SHA1 210583dd46159c21ce4f3289960d5014ce57e01a SHA256 d6e10a30ac9423eb5a9ba4e7b2a76322683f40b2fb428d2f310dcdbd1cfde235
 MD5 8b0560553235cfd96801898935f8ff94 metadata.xml 159
 RMD160 4aba844314249b872aefa0ef14d652f127e6334f metadata.xml 159
@@ -25,10 +22,3 @@ SHA256 ed0827b8062ff01308226e2f35bc6ee534bbae4bbd8a5bbc5957fd02ca86f6b5 files/di
 MD5 391951e95a92b7139b50c438ac7ddb8b files/digest-fast-user-switch-applet-2.16.0 295
 RMD160 75d60203f7bcb38a4be12bbd1389c9bcf3527281 files/digest-fast-user-switch-applet-2.16.0 295
 SHA256 02ccc305eb0c1201924cc340ec7c5ea2c6ffdd4c69c2c02a0cc0c5d645265ad4 files/digest-fast-user-switch-applet-2.16.0 295
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.1 (GNU/Linux)
-
-iD8DBQFFqYQjugEuf3OQ0akRAmoKAKCVZJfpix3GFAv508jj+UECqCIzUACdH3Kt
-cDjjTD+PoBVQ600qbPoOJrY=
-=YmEh
------END PGP SIGNATURE-----
