@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/jove-4.16.0.69.5.ebuild,v 1.1 2006/06/02 14:59:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/jove-4.16.0.69.5.ebuild,v 1.2 2007/01/19 14:06:31 masterdriverz Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,6 @@ DESCRIPTION="Jonathan's Own Version of Emacs -- a light emacs-like editor withou
 HOMEPAGE="ftp://ftp.cs.toronto.edu/cs/ftp/pub/hugh/jove-dev/"
 SRC_URI="mirror://debian/pool/main/j/${PN}/${MY_P}.orig.tar.gz
 	mirror://debian/pool/main/j/${PN}/${MY_DIFFP}.gz"
-RESTRICT="nomirror"
 
 LICENSE="BSD"
 SLOT="0"

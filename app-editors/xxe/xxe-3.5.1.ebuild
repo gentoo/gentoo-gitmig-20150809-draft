@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/xxe-3.5.1.ebuild,v 1.1 2007/01/01 21:49:58 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/xxe-3.5.1.ebuild,v 1.2 2007/01/19 14:10:27 masterdriverz Exp $
 
 MY_PV="${PV//./_}"
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="doc"
 
-RESTRICT="nostrip nomirror"
+RESTRICT="nostrip"
 
 DEPEND=""
 RDEPEND=">=virtual/jre-1.4.1"
