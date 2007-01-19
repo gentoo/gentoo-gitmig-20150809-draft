@@ -1,13 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtc/libtc-1.0.3.ebuild,v 1.8 2005/04/22 09:35:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtc/libtc-1.0.3.ebuild,v 1.9 2007/01/19 15:02:11 masterdriverz Exp $
 
 IUSE="static"
 
 DESCRIPTION="libtc is a library of useful functions and function often missing on some systems -- supplements libc functions."
 HOMEPAGE="http://libtc.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"
