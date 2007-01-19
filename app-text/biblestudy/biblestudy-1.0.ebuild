@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/biblestudy/biblestudy-1.0.ebuild,v 1.7 2006/09/07 04:09:03 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/biblestudy/biblestudy-1.0.ebuild,v 1.8 2007/01/19 14:36:39 masterdriverz Exp $
 
 IUSE="unicode"
 DESCRIPTION="Bible study software based on the sword library"
 HOMEPAGE="http://source.emptycrate.com/"
 SRC_URI="mirror://sourceforge/christiangame/${P}.tar.bz2"
-RESTRICT="nomirror"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
