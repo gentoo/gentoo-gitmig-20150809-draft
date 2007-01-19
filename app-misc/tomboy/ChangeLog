@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/tomboy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.36 2007/01/19 08:08:39 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.37 2007/01/19 08:16:42 compnerd Exp $
+
+  19 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  -files/tomboy-0.5.2-unicode-characters.patch, -tomboy-0.5.1.ebuild,
+  -tomboy-0.5.2.ebuild:
+  prune older versions
 
 *tomboy-0.5.3 (19 Jan 2007)
 
