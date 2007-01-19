@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/MailTools-1.74.ebuild,v 1.9 2006/10/20 19:54:30 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/MailTools-1.74.ebuild,v 1.10 2007/01/19 14:05:53 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Manipulation of electronic mail addresses"
 SRC_URI="mirror://cpan/authors/id/M/MA/MARKOV/${P}.tar.gz"
-HOMEPAGE="http://search.cpan.org/~markov/${P}/"
+HOMEPAGE="http://search.cpan.org/~markov/"
 
 SLOT="0"
 LICENSE="Artistic"
@@ -16,5 +16,3 @@ SRC_TEST="do"
 
 DEPEND=">=virtual/perl-libnet-1.0703
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
-
