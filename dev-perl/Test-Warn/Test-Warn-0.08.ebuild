@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Warn/Test-Warn-0.08.ebuild,v 1.9 2006/08/18 01:52:47 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Warn/Test-Warn-0.08.ebuild,v 1.10 2007/01/19 16:53:01 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Perl extension to test methods for warnings"
-HOMEPAGE="http://search.cpan.org/search?query=${PN}"
+HOMEPAGE="http://search.cpan.org/~bigj/"
 SRC_URI="mirror://cpan/authors/id/B/BI/BIGJ/${P}.tar.gz"
 
 LICENSE="Artistic"
@@ -20,5 +20,3 @@ DEPEND="dev-perl/Test-Exception
 	dev-perl/Array-Compare
 	dev-perl/Tree-DAG_Node
 	dev-lang/perl"
-
-RDEPEND="${DEPEND}"

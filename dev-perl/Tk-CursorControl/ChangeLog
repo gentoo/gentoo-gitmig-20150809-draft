@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Tk-CursorControl
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-CursorControl/ChangeLog,v 1.9 2006/08/18 01:57:41 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-CursorControl/ChangeLog,v 1.10 2007/01/19 17:04:14 mcummings Exp $
+
+  19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  Tk-CursorControl-0.4.ebuild:
+  Ebuild maintenance
 
   18 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Tk-CursorControl-0.4.ebuild:

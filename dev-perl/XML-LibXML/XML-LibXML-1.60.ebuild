@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/XML-LibXML-1.60.ebuild,v 1.8 2006/11/24 16:14:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/XML-LibXML-1.60.ebuild,v 1.9 2007/01/19 17:30:26 mcummings Exp $
 
 inherit perl-module eutils
 
 DESCRIPTION="A Perl module to parse XSL Transformational sheets using gnome's libXSLT"
 SRC_URI="mirror://cpan/authors/id/P/PA/PAJAS/${P}.tar.gz"
-HOMEPAGE="http://cpan.org/modules/by-module/XML/${P}.readme"
+HOMEPAGE="http://search.cpan.org/~pajas/"
 IUSE=""
 SLOT="0"
 LICENSE="Artistic"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/X500-DN
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/X500-DN/ChangeLog,v 1.11 2006/08/06 01:15:00 mcummings Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X500-DN/ChangeLog,v 1.12 2007/01/19 17:17:35 mcummings Exp $
+
+  19 Jan 2007; Michael Cummings <mcummings@gentoo.org> X500-DN-0.28.ebuild:
+  Ebuild maintenance
 
   06 Aug 2006; Michael Cummings <mcummings@gentoo.org> X500-DN-0.28.ebuild:
   Adding perl dep; fixed DEPEND

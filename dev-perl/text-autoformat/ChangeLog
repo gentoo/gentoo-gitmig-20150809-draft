@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/text-autoformat
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-autoformat/ChangeLog,v 1.22 2006/10/20 20:28:23 kloeri Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-autoformat/ChangeLog,v 1.23 2007/01/19 16:55:34 mcummings Exp $
+
+  19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  text-autoformat-1.12.ebuild, text-autoformat-1.13.ebuild:
+  Ebuild maintenance
 
   20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   text-autoformat-1.13.ebuild:

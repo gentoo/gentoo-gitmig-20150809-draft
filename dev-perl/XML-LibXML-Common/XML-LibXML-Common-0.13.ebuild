@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML-Common/XML-LibXML-Common-0.13.ebuild,v 1.20 2006/11/27 00:19:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML-Common/XML-LibXML-Common-0.13.ebuild,v 1.21 2007/01/19 17:31:08 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Routines and Constants common for XML::LibXML and XML::GDOME"
-HOMEPAGE="http://www.cpan.org/modules/by-module/XML/${P}.readme"
+HOMEPAGE="http://search.cpan.org/~phish/"
 SRC_URI="mirror://cpan/authors/id/P/PH/PHISH/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
@@ -15,4 +15,3 @@ IUSE=""
 
 DEPEND=">=dev-libs/libxml2-2.4.1
 	dev-lang/perl"
-RDEPEND="${DEPEND}"

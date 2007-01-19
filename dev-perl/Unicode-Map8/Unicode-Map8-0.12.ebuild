@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map8/Unicode-Map8-0.12.ebuild,v 1.17 2006/11/12 03:49:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map8/Unicode-Map8-0.12.ebuild,v 1.18 2007/01/19 17:09:33 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Convert between most 8bit encodings"
-HOMEPAGE="http://search.cpan.org/~gaas/${P}/"
+HOMEPAGE="http://search.cpan.org/~gaas/"
 SRC_URI="mirror://cpan/authors/id/G/GA/GAAS/${P}.tar.gz"
 
 LICENSE="Artistic"
@@ -15,6 +15,5 @@ IUSE=""
 
 DEPEND=">=dev-perl/Unicode-String-2.06
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 mydoc="TODO"

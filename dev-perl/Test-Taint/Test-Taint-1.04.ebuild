@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Taint/Test-Taint-1.04.ebuild,v 1.9 2006/08/18 01:51:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Taint/Test-Taint-1.04.ebuild,v 1.10 2007/01/19 16:52:18 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Tools to test taintedness"
-HOMEPAGE="http://search.cpan.org/search?query=${PN}"
+HOMEPAGE="http://search.cpan.org/~petdance/"
 SRC_URI="mirror://cpan/authors/id/P/PE/PETDANCE/${P}.tar.gz"
 
 LICENSE="Artistic"
@@ -17,4 +17,3 @@ SRC_TEST="do"
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"

@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/VCP-autrijus/VCP-autrijus-0.9_p20050110-r1.ebuild,v 1.8 2006/08/18 02:05:31 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/VCP-autrijus/VCP-autrijus-0.9_p20050110-r1.ebuild,v 1.9 2007/01/19 17:12:28 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Copy versions of files between repositories and/or RevML"
 SRC_URI="mirror://cpan/authors/id/A/AU/AUTRIJUS/VCP-autrijus-snapshot-0.9-20050110.tar.gz"
-HOMEPAGE="http://search.cpan.org/~autrijus/VCP-autrijus-snapshot-0.9-20050110/"
+HOMEPAGE="http://search.cpan.org/~autrijus/"
 IUSE=""
 SLOT="0"
 LICENSE="BSD"
@@ -19,7 +19,6 @@ DEPEND="dev-perl/Text-Diff
 		dev-perl/IPC-Run3
 		dev-perl/PodToHTML
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/VCP-autrijus-snapshot-0.9-20050110"
 

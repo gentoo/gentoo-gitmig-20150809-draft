@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/YAML-Parser-Syck
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Parser-Syck/ChangeLog,v 1.7 2006/11/29 12:21:29 yuval Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Parser-Syck/ChangeLog,v 1.8 2007/01/19 17:53:28 mcummings Exp $
+
+  19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  YAML-Parser-Syck-0.01.ebuild:
+  Ebuild maintenance
 
   29 Nov 2006; Yuval Yaari <yuval@gentoo.org> YAML-Parser-Syck-0.01.ebuild:
   Removed wrong dep on ruby, bug #152048

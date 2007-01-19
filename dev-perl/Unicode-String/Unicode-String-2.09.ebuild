@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-String/Unicode-String-2.09.ebuild,v 1.12 2006/11/12 03:47:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-String/Unicode-String-2.09.ebuild,v 1.13 2007/01/19 17:10:23 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="String manipulation for Unicode strings"
-HOMEPAGE="http://search.cpan.org/~gaas/${P}/"
+HOMEPAGE="http://search.cpan.org/~gaas/"
 SRC_URI="mirror://cpan/authors/id/G/GA/GAAS/${P}.tar.gz"
 
 LICENSE="Artistic"
@@ -15,4 +15,3 @@ IUSE=""
 
 DEPEND=">=virtual/perl-MIME-Base64-2.11
 	dev-lang/perl"
-RDEPEND="${DEPEND}"

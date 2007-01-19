@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/XML-DOM
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DOM/ChangeLog,v 1.39 2006/08/06 01:17:22 mcummings Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DOM/ChangeLog,v 1.40 2007/01/19 17:23:30 mcummings Exp $
+
+  19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  -XML-DOM-1.39-r1.ebuild, -XML-DOM-1.39-r2.ebuild, -XML-DOM-1.39-r3.ebuild,
+  -XML-DOM-1.39-r4.ebuild, -XML-DOM-1.42.ebuild, -XML-DOM-1.43.ebuild,
+  XML-DOM-1.44.ebuild:
+  Ebuild maintenance
 
   06 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   XML-DOM-1.39-r1.ebuild, XML-DOM-1.39-r2.ebuild, XML-DOM-1.39-r3.ebuild,

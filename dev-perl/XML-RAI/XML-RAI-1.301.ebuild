@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RAI/XML-RAI-1.301.ebuild,v 1.8 2006/08/18 02:09:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RAI/XML-RAI-1.301.ebuild,v 1.9 2007/01/19 17:40:49 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="RSS Abstraction Interface."
-HOMEPAGE="http://search.cpan.org/~tima/${P}/"
+HOMEPAGE="http://search.cpan.org/~tima/"
 SRC_URI="mirror://cpan/authors/id/T/TI/TIMA/${P}.tar.gz"
 
 LICENSE="Artistic"
@@ -20,5 +20,3 @@ DEPEND=">=dev-perl/TimeDate-1.16
 		>=dev-perl/XML-RSS-Parser-4
 		dev-perl/Class-XPath
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
-

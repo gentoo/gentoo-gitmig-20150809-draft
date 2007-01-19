@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-AutoWriter
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-AutoWriter/ChangeLog,v 1.13 2006/08/18 02:05:18 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-AutoWriter/ChangeLog,v 1.14 2007/01/19 17:19:46 mcummings Exp $
+
+  19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  XML-AutoWriter-0.38.ebuild, XML-AutoWriter-0.39.ebuild:
+  Ebuild maintenance
 
   18 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   XML-AutoWriter-0.39.ebuild:
