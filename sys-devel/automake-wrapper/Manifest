@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX am-wrapper-1.sh 3394 RMD160 e19271412760a770cb89c9f432d68e10568dda50 SHA1 cf7304bd11f1c715ba54c225f14d2829985b1e93 SHA256 4c918ca693e06a91380677cad1d2bbf0c6a972cee83ab00408e17c3473ca331a
 MD5 d0c6c645c4dc1ad71a2e017dae4185be files/am-wrapper-1.sh 3394
 RMD160 e19271412760a770cb89c9f432d68e10568dda50 files/am-wrapper-1.sh 3394
@@ -18,10 +21,10 @@ EBUILD automake-wrapper-2-r1.ebuild 786 RMD160 e4c93263f93d8ce467fc21c27d382016a
 MD5 ce4ce1df9f0bb0ed0120e97a450aea4d automake-wrapper-2-r1.ebuild 786
 RMD160 e4c93263f93d8ce467fc21c27d382016ac48f631 automake-wrapper-2-r1.ebuild 786
 SHA256 86998738ff2f1fa31795725ee433b7e1bc35468280f0d279c351b980dff7f049 automake-wrapper-2-r1.ebuild 786
-EBUILD automake-wrapper-3-r1.ebuild 790 RMD160 80e136b3f8a470ba371c5ea6660a61ecb7390ca0 SHA1 83ad77cf8010707acbb41826a7721b1d8002f3fd SHA256 2b708591bbb278be1b89270ef814e2a69d1d8242ad65a05cfe73eb15e8cc6f91
-MD5 3b6a0791de46c57ea262c256ad603e88 automake-wrapper-3-r1.ebuild 790
-RMD160 80e136b3f8a470ba371c5ea6660a61ecb7390ca0 automake-wrapper-3-r1.ebuild 790
-SHA256 2b708591bbb278be1b89270ef814e2a69d1d8242ad65a05cfe73eb15e8cc6f91 automake-wrapper-3-r1.ebuild 790
+EBUILD automake-wrapper-3-r1.ebuild 786 RMD160 1d2e30563262ded5b30f703b868e425b1ae02c05 SHA1 d6af8b8f1348247efa569bae5134195758b2f556 SHA256 5f97f5291690397f90b3149d683eb04240bd6ca3da2833f63993e4a76ece366d
+MD5 888301d4d3b4457c995b7baf16cfdb0f automake-wrapper-3-r1.ebuild 786
+RMD160 1d2e30563262ded5b30f703b868e425b1ae02c05 automake-wrapper-3-r1.ebuild 786
+SHA256 5f97f5291690397f90b3149d683eb04240bd6ca3da2833f63993e4a76ece366d automake-wrapper-3-r1.ebuild 786
 MISC ChangeLog 3553 RMD160 d03d43b35a4d8a774611880ad97afbee1717082a SHA1 8cf5d42e9bbf8ad55771b05f2460cbe7b19e90e9 SHA256 b2d6bc0f0f772a60a88681f0ed6e36351f6c2956bd2f68521fb71bc518578ed0
 MD5 868384c14f7cc34be9f6c5e94e702d2e ChangeLog 3553
 RMD160 d03d43b35a4d8a774611880ad97afbee1717082a ChangeLog 3553
@@ -30,12 +33,19 @@ MISC metadata.xml 164 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 SHA1 9c213
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-automake-wrapper-1-r1 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-automake-wrapper-1-r1 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-automake-wrapper-1-r1 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-automake-wrapper-2-r1 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-automake-wrapper-2-r1 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-automake-wrapper-2-r1 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-automake-wrapper-3-r1 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-automake-wrapper-3-r1 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-automake-wrapper-3-r1 1
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-automake-wrapper-1-r1 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-automake-wrapper-1-r1 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-automake-wrapper-1-r1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-automake-wrapper-2-r1 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-automake-wrapper-2-r1 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-automake-wrapper-2-r1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-automake-wrapper-3-r1 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-automake-wrapper-3-r1 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-automake-wrapper-3-r1 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFsVVK8bi6rjpTunYRAiZ/AKC/PBl+K+4Mg0s/kUOniZpK9YfyIACg4drb
+Rn4y06CFOnhOUvr+HKL/ZXU=
+=pooP
+-----END PGP SIGNATURE-----

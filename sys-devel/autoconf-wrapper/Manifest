@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX ac-wrapper-3.2.sh 3242 RMD160 9fb11d8fcac9b33e9d9eda56e663e26bc8ef4b48 SHA1 af1a44f0f82739ec449dab75871528caceb9e63d SHA256 4fecc535d7dd0f0424e637a2e3a8f0837832a32ec517ac0912b28a428f00941e
 MD5 0a542dd224e861aba771526c9b75edca files/ac-wrapper-3.2.sh 3242
 RMD160 9fb11d8fcac9b33e9d9eda56e663e26bc8ef4b48 files/ac-wrapper-3.2.sh 3242
@@ -14,10 +17,10 @@ EBUILD autoconf-wrapper-3.2.ebuild 811 RMD160 ba39e87c02681c04d247298efbfb056451
 MD5 cc6b3037a9ca81c88ec00a38190e768a autoconf-wrapper-3.2.ebuild 811
 RMD160 ba39e87c02681c04d247298efbfb0564515e73d9 autoconf-wrapper-3.2.ebuild 811
 SHA256 bf6968012027f744ee0d940747baf3763bbbc94a2a59d9155c1d4d14a5dbbb11 autoconf-wrapper-3.2.ebuild 811
-EBUILD autoconf-wrapper-4-r3.ebuild 794 RMD160 aaf535c3e96ed53cecf0e2f9301fcf08b6a8d98a SHA1 0000790f5544b502d98e61384299da84db5764ca SHA256 1fd266e9c7784f7162d33738044fe70c1096c2059fad7e4e2f44d5a7c539755f
-MD5 1c46d652badb828d766998e8d8725ac2 autoconf-wrapper-4-r3.ebuild 794
-RMD160 aaf535c3e96ed53cecf0e2f9301fcf08b6a8d98a autoconf-wrapper-4-r3.ebuild 794
-SHA256 1fd266e9c7784f7162d33738044fe70c1096c2059fad7e4e2f44d5a7c539755f autoconf-wrapper-4-r3.ebuild 794
+EBUILD autoconf-wrapper-4-r3.ebuild 797 RMD160 3deec188da4487603bcdeaf91b0052a94e61ca40 SHA1 37939489ce7cd0834edf1de7b0e9e03e3bcc4e21 SHA256 3386447274e985ade38565a03eb9e610846be733d047be722fb4297a8b449027
+MD5 7e6c5edf5c34f42856a0450a54cbb61f autoconf-wrapper-4-r3.ebuild 797
+RMD160 3deec188da4487603bcdeaf91b0052a94e61ca40 autoconf-wrapper-4-r3.ebuild 797
+SHA256 3386447274e985ade38565a03eb9e610846be733d047be722fb4297a8b449027 autoconf-wrapper-4-r3.ebuild 797
 MISC ChangeLog 6950 RMD160 bfc41930de2e6352abde4ac5705c3ecc1aca20b4 SHA1 28eeba1dd82193b1aadc54b61eb20f1cc9be3496 SHA256 6b6453c01d30d6105ca74a477f9e33221ed6b0d40ddb9f9b9202da5c6241a6dc
 MD5 9a663d4de638162769fac1f7025d1cd7 ChangeLog 6950
 RMD160 bfc41930de2e6352abde4ac5705c3ecc1aca20b4 ChangeLog 6950
@@ -35,3 +38,10 @@ SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/di
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-autoconf-wrapper-4-r3 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-autoconf-wrapper-4-r3 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-autoconf-wrapper-4-r3 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFsVVk8bi6rjpTunYRAt1IAJ41rBTAQrcdDpUrLL1TOsu5/nGduwCg2ZYE
+lSBDts73+JaPPcElVciybIg=
+=bpeU
+-----END PGP SIGNATURE-----
