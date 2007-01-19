@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gl/gauche-gl-0.4.2.ebuild,v 1.2 2007/01/10 17:13:12 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gl/gauche-gl-0.4.2.ebuild,v 1.3 2007/01/19 11:18:08 hattya Exp $
 
 inherit eutils flag-o-matic
 
@@ -21,6 +21,15 @@ DEPEND="virtual/opengl
 	virtual/glut
 	>=dev-scheme/gauche-0.8.6
 	cg? ( media-gfx/nvidia-cg-toolkit )"
+
+src_unpack() {
+
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${PN}-prototypes.diff
+
+}
 
 src_compile() {
 

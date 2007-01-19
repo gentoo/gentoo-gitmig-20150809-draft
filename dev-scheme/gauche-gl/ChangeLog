@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/gauche-gl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gl/ChangeLog,v 1.10 2007/01/19 11:16:17 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gl/ChangeLog,v 1.11 2007/01/19 11:18:08 hattya Exp $
+
+  19 Jan 2007; Akinori Hattori <hattya@gentoo.org> gauche-gl-0.4.2.ebuild:
+  apply the gauche-gl-prototypes.diff patch.
 
 *gauche-gl-0.4.3 (19 Jan 2007)
 
