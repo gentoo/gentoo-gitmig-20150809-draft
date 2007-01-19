@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.4-r3.ebuild,v 1.5 2006/12/26 14:49:34 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.4-r3.ebuild,v 1.6 2007/01/19 00:41:20 flameeyes Exp $
 
 LANGS="af ar az bg br ca cs cy da de el en_GB es et fi fr ga gl he hi hu is it
 ja ka km ko lt ms nb nl nn pa pl pt pt_BR ro ru rw sk sl sq sr sr@Latn sv ta tg
@@ -50,7 +50,8 @@ DEPEND="${RDEPEND}"
 
 need-kde 3.3
 
-PATCHES="${WORKDIR}/${P}-gentoo/*.patch"
+PATCHES="${WORKDIR}/${P}-gentoo/*.patch
+	${FILESDIR}/${P}+libgpod-0.4.0.patch"
 
 src_compile() {
 	# Extra, unsupported engines are forcefully disabled.
