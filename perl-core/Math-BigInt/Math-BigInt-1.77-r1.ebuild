@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt/Math-BigInt-1.77-r1.ebuild,v 1.10 2006/11/05 02:15:50 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt/Math-BigInt-1.77-r1.ebuild,v 1.11 2007/01/19 18:02:20 mcummings Exp $
 
 inherit perl-module eutils
 
 DESCRIPTION="Arbitrary size floating point math package"
-HOMEPAGE="http://www.cpan.org/modules/by-authors/id/T/TE/TELS/math/${P}.readme"
+HOMEPAGE="http://serach.cpan.org/~tels/"
 SRC_URI="mirror://cpan/authors/id/T/TE/TELS/math/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
@@ -15,7 +15,6 @@ IUSE=""
 
 DEPEND="dev-lang/perl
 		>=virtual/perl-Scalar-List-Utils-1.14"
-RDEPEND="${DEPEND}"
 
 SRC_TEST="do"
 

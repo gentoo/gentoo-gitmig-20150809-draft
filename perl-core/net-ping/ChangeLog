@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/net-ping
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/net-ping/ChangeLog,v 1.8 2006/08/04 13:39:38 mcummings Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/net-ping/ChangeLog,v 1.9 2007/01/19 18:02:35 mcummings Exp $
+
+  19 Jan 2007; Michael Cummings <mcummings@gentoo.org> net-ping-2.31.ebuild:
+  Ebuild maintenance
 
   04 Aug 2006; Michael Cummings <mcummings@gentoo.org> net-ping-2.31.ebuild:
   Adding perl dep

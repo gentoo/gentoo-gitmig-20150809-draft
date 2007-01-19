@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Local/Time-Local-1.12.ebuild,v 1.10 2006/09/16 22:13:44 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Local/Time-Local-1.12.ebuild,v 1.11 2007/01/19 18:08:33 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Implements timelocal() and timegm()"
-HOMEPAGE="http://www.cpan.org/modules/by-authors/id/D/DR/DROLSKY/${P}.readme"
+HOMEPAGE="http://search.cpan.org/~drolsky/"
 SRC_URI="mirror://cpan/authors/id/D/DR/DROLSKY/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
@@ -16,4 +16,3 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"
