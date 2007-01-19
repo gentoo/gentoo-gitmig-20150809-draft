@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.6.ebuild,v 1.3 2007/01/18 16:02:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.6.ebuild,v 1.4 2007/01/19 12:31:10 flameeyes Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -110,13 +110,11 @@ src_compile() {
 				  $(use_enable zeroconf dnssd)
 				  $(use_with xcomposite composite)
 				  $(use_with xscreensaver)
-				  $(use_with xinerama)
+				  $(use_with xinerama) $(use_with pam)
 				  --with-usbids=/usr/share/misc/usb.ids"
 
-	if use pam; then
-		myconf="${myconf} --with-pam=yes"
-	else
-		myconf="${myconf} --with-pam=no --with-shadow"
+	if ! use pam && use elibc_glibc; then
+		myconf="${myconf} --with-shadow"
 	fi
 
 	# the java test is problematic (see kde bug 100729) and
