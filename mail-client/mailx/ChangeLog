@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mailx
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.43 2006/03/14 22:41:29 langthang Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.44 2007/01/19 07:12:52 jer Exp $
+
+  19 Jan 2007; Jeroen Roovers <jer@gentoo.org>
+  mailx-8.1.2.20050715-r1.ebuild:
+  Stable for HPPA.
 
 *mailx-8.1.2.20050715-r1 (14 Mar 2006)
 
