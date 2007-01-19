@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28-r2.ebuild,v 1.1 2007/01/15 23:57:52 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28-r2.ebuild,v 1.2 2007/01/19 05:32:44 vapier Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -76,12 +76,12 @@ pkg_setup() {
 	[[ -n ${UCLIBC_AND_GLIBC} ]] && return 0
 	[[ ${ROOT} != "/" ]] && return 0
 
-	if ! built_with_use ${CATEGORY}/uclibc nls && use nls && ! use pregen ; then
+	if ! built_with_use --missing false ${CATEGORY}/uclibc nls && use nls && ! use pregen ; then
 		eerror "You previously built uclibc with USE=-nls."
 		eerror "You cannot generate locale data with this"
 		eerror "system.  Please rerun emerge with USE=pregen."
 		die "host cannot support locales"
-	elif built_with_use ${CATEGORY}/uclibc nls && ! use nls ; then
+	elif built_with_use --missing false ${CATEGORY}/uclibc nls && ! use nls ; then
 		eerror "You previously built uclibc with USE=nls."
 		eerror "Rebuilding uClibc with USE=-nls will prob"
 		eerror "destroy your system."
