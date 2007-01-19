@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/groupoffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/groupoffice/ChangeLog,v 1.19 2007/01/15 17:48:52 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/groupoffice/ChangeLog,v 1.20 2007/01/19 07:10:40 jer Exp $
+
+  19 Jan 2007; Jeroen Roovers <jer@gentoo.org> groupoffice-2.16.8.ebuild:
+  Marked ~hppa (bug #159784).
 
   15 Jan 2007; Renat Lumpau <rl03@gentoo.org> files/postinstall2-en.txt,
   groupoffice-2.16.8.ebuild:
