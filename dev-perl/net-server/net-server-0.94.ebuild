@@ -1,13 +1,13 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/net-server-0.94.ebuild,v 1.9 2006/09/02 23:33:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/net-server-0.94.ebuild,v 1.10 2007/01/19 14:57:26 mcummings Exp $
 
 inherit perl-module
 
 MY_P=Net-Server-${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Extensible, general Perl server engine"
-HOMEPAGE="http://search.cpan.org/~rhandom/${MY_P}/"
+HOMEPAGE="http://search.cpan.org/~rhandom/"
 SRC_URI="mirror://cpan/authors/id/R/RH/RHANDOM/${MY_P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
@@ -21,6 +21,3 @@ mydoc="README"
 
 DEPEND="dev-perl/IO-Multiplex
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
-
-

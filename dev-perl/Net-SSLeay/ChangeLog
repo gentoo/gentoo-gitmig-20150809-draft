@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-SSLeay
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/ChangeLog,v 1.37 2006/08/05 19:32:15 mcummings Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/ChangeLog,v 1.38 2007/01/19 14:59:22 mcummings Exp $
+
+  19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  -Net-SSLeay-1.23.ebuild, Net-SSLeay-1.25.ebuild:
+  Version bump, thanks seemant
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Net-SSLeay-1.23.ebuild, Net-SSLeay-1.25.ebuild:

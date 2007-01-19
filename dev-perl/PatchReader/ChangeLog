@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PatchReader
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PatchReader/ChangeLog,v 1.22 2006/08/05 19:53:56 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PatchReader/ChangeLog,v 1.23 2007/01/19 15:14:49 mcummings Exp $
+
+  19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  -PatchReader-0.9.4.ebuild, PatchReader-0.9.5.ebuild:
+  Version bump, thanks seemant
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   PatchReader-0.9.4.ebuild, PatchReader-0.9.5.ebuild:
