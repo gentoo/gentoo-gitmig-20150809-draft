@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/gtkcdlabel-1.0_pre8.ebuild,v 1.6 2006/08/07 19:38:01 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/gtkcdlabel-1.0_pre8.ebuild,v 1.7 2007/01/19 13:43:33 masterdriverz Exp $
 
 inherit flag-o-matic
 
@@ -8,7 +8,7 @@ MY_P=${PN}_${PV/_}
 DESCRIPTION="A GTK+ frontend to cdlabelgen for easy and fast cd cover creation"
 HOMEPAGE="http://gtkcdlabel.sourceforge.net/"
 SRC_URI="mirror://sourceforge/gtkcdlabel/${MY_P}.tar.gz"
-RESTRICT="nomirror"
+
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
