@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/XML-LibXML-XPathContext
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML-XPathContext/ChangeLog,v 1.19 2006/10/19 11:35:49 yuval Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML-XPathContext/ChangeLog,v 1.20 2007/01/19 17:34:16 mcummings Exp $
+
+  19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  -XML-LibXML-XPathContext-0.05.ebuild,
+  -XML-LibXML-XPathContext-0.06.ebuild, XML-LibXML-XPathContext-0.07.ebuild:
+  Version bump, thanks seemant
 
   19 Oct 2006; Yuval Yaari <yuval@gentoo.org>
   XML-LibXML-XPathContext-0.07.ebuild:

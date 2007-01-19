@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS-Feed/XML-RSS-Feed-2.04.ebuild,v 1.10 2006/10/20 13:16:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS-Feed/XML-RSS-Feed-2.04.ebuild,v 1.11 2007/01/19 17:43:58 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Persistant XML RSS Encapsulation"
-HOMEPAGE="http://search.cpan.org/~jbisbee/${P}/"
+HOMEPAGE="http://search.cpan.org/~jbisbee/"
 SRC_URI="mirror://cpan/authors/id/J/JB/JBISBEE/${P}.tar.gz"
 
 LICENSE="Artistic"

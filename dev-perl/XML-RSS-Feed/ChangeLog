@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/XML-RSS-Feed
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS-Feed/ChangeLog,v 1.15 2006/11/07 13:25:32 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS-Feed/ChangeLog,v 1.16 2007/01/19 17:43:58 mcummings Exp $
+
+  19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  XML-RSS-Feed-2.1.ebuild, XML-RSS-Feed-2.2.ebuild,
+  XML-RSS-Feed-2.04.ebuild:
+  Version bump, thanks seemant
 
 *XML-RSS-Feed-2.2.12 (07 Nov 2006)
 

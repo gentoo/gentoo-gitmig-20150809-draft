@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/XML-Parser-2.34.ebuild,v 1.21 2006/12/21 02:28:05 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/XML-Parser-2.34.ebuild,v 1.22 2007/01/19 17:39:16 mcummings Exp $
 
 inherit perl-module multilib
 
 DESCRIPTION="A Perl extension interface to James Clark's XML parser, expat"
-HOMEPAGE="http://search.cpan.org/~msergeant/${P}/"
+HOMEPAGE="http://search.cpan.org/~msergeant/"
 SRC_URI="mirror://cpan/authors/id/M/MS/MSERGEANT/${P}.tar.gz"
 
 LICENSE="Artistic"
@@ -15,7 +15,6 @@ IUSE=""
 
 DEPEND=">=dev-libs/expat-1.95.1-r1
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
