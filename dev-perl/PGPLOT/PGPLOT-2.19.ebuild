@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PGPLOT/PGPLOT-2.19.ebuild,v 1.5 2006/08/05 19:46:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PGPLOT/PGPLOT-2.19.ebuild,v 1.6 2007/01/19 15:25:08 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="allow subroutines in the PGPLOT graphics library to be called from Perl."
-HOMEPAGE="http://search.cpan.org/search?query=${PN}"
+HOMEPAGE="http://search.cpan.org/~kgb/"
 SRC_URI="mirror://cpan/authors/id/K/KG/KGB/${P}.tar.gz"
 
 LICENSE="Artistic"
@@ -21,6 +21,3 @@ DEPEND="sci-libs/pgplot
 			virtual/x11 )
 		>=dev-perl/ExtUtils-F77-1.13
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
-
-

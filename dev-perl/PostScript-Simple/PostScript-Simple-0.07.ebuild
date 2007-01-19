@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PostScript-Simple/PostScript-Simple-0.07.ebuild,v 1.8 2006/09/16 21:24:42 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PostScript-Simple/PostScript-Simple-0.07.ebuild,v 1.9 2007/01/19 15:35:16 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Allows you to have a simple method of writing PostScript files from Perl"
-HOMEPAGE="http://search.cpan.org/~sburke/${P}/"
+HOMEPAGE="http://search.cpan.org/~mcnewton/"
 SRC_URI="mirror://cpan/authors/id/M/MC/MCNEWTON/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-1 GPL-2 )"
@@ -15,4 +15,3 @@ IUSE=""
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"
