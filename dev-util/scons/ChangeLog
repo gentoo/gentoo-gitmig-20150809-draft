@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/scons
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.39 2006/12/07 09:17:37 twp Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.40 2007/01/19 15:14:13 masterdriverz Exp $
+
+  19 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  scons-0.96.1.ebuild, scons-0.96.91.ebuild, scons-0.96.92-r3.ebuild,
+  scons-0.96.93.ebuild:
+  QA: remove invalid RESTRICT="mirror"
 
 *scons-0.96.93 (07 Dec 2006)
 
