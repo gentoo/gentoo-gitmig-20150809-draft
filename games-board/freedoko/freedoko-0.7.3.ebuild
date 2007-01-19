@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/freedoko-0.7.3.ebuild,v 1.2 2006/10/22 22:10:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/freedoko-0.7.3.ebuild,v 1.3 2007/01/19 22:29:21 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -25,19 +25,18 @@ RDEPEND="net? ( net-libs/gnet )
 
 DEPEND="${RDEPEND}
 	app-arch/unzip
-	doc? ( virtual/tetex )
-	app-text/dos2unix"
+	doc? ( virtual/tetex )"
 
 S=${WORKDIR}/FreeDoko_${PV}
 
 src_unpack() {
 	unpack FreeDoko_${PV}.src.zip
-	cd ${S}
-	dos2unix ${S}/src/Makefile.rules
-	epatch ${FILESDIR}/portage-cxx.patch
-	epatch ${FILESDIR}/Fix_Cardset_Make.patch
-	use !doc && epatch ${FILESDIR}/nodoc.patch
-	use !net && epatch ${FILESDIR}/nonet.patch
+	cd "${S}"
+	edos2unix "${S}"/src/Makefile.rules
+	epatch "${FILESDIR}"/portage-cxx.patch
+	epatch "${FILESDIR}"/Fix_Cardset_Make.patch
+	use !doc && epatch "${FILESDIR}"/nodoc.patch
+	use !net && epatch "${FILESDIR}"/nonet.patch
 	sed -i -e 's/linux binary/Gentoo '${ARCH}' binary/g' Makefile
 
 
@@ -80,10 +79,10 @@ src_install() {
 }
 
 pkg_postinst () {
+	games_pkg_postinst
 	if use altenburgcards; then
 		einfo "License Info:"
 		einfo "Verwendung der ASS Altenburger Spielkarten mit Genehmigung"
 		einfo "der Spielkartenfabrik Altenburg GmbH"
 	fi
 }
-
