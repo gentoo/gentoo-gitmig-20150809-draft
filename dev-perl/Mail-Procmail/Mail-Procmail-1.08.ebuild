@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Procmail/Mail-Procmail-1.08.ebuild,v 1.11 2006/08/05 13:54:45 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Procmail/Mail-Procmail-1.08.ebuild,v 1.12 2007/01/19 14:04:21 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Mail sorting/delivery module for Perl."
 SRC_URI="mirror://cpan/authors/id/J/JV/JV/${P}.tar.gz"
-HOMEPAGE="http://www.cpan.org/modules/by-module/Mail/${P}.readme"
+HOMEPAGE="http://search.cpan.org/~jv/"
 
 SRC_TEST="do"
 SLOT="0"
@@ -18,5 +18,3 @@ DEPEND="virtual/perl-Getopt-Long
 	>=dev-perl/MailTools-1.15
 	>=dev-perl/LockFile-Simple-0.2.5
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
-

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/mime-construct
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mime-construct/ChangeLog,v 1.9 2006/08/18 02:13:58 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mime-construct/ChangeLog,v 1.10 2007/01/19 14:07:33 mcummings Exp $
+
+  19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  mime-construct-1.9-r1.ebuild:
+  Version bump, thanks seemant
 
   18 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   -mime-construct-1.9.ebuild, mime-construct-1.9-r1.ebuild:
