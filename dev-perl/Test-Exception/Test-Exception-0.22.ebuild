@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/Test-Exception-0.22.ebuild,v 1.5 2006/11/05 17:19:34 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/Test-Exception-0.22.ebuild,v 1.6 2007/01/19 16:46:43 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="test functions for exception based code"
-HOMEPAGE="http://search.cpan.org/~adie/${P}/"
+HOMEPAGE="http://search.cpan.org/~adie/"
 SRC_URI="mirror://cpan/authors/id/A/AD/ADIE/${P}.tar.gz"
 
 LICENSE="GPL-2"

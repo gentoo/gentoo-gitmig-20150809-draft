@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Pod
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod/ChangeLog,v 1.42 2006/10/23 18:13:08 gustavoz Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod/ChangeLog,v 1.43 2007/01/19 16:48:17 mcummings Exp $
+
+  19 Jan 2007; Michael Cummings <mcummings@gentoo.org> Test-Pod-1.22.ebuild,
+  -Test-Pod-1.24.ebuild, Test-Pod-1.26.ebuild:
+  Version bump, thanks seemant
 
   23 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> Test-Pod-1.26.ebuild:
   Stable on hppa

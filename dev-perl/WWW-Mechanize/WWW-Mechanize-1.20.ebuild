@@ -1,16 +1,15 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/WWW-Mechanize-1.20.ebuild,v 1.2 2006/10/16 01:48:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/WWW-Mechanize-1.20.ebuild,v 1.3 2007/01/19 17:16:22 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Handy web browsing in a Perl object"
 SRC_URI="mirror://cpan/authors/id/P/PE/PETDANCE/${P}.tar.gz"
-HOMEPAGE="http://search.cpan.org/~petdance/${P}/"
+HOMEPAGE="http://search.cpan.org/~petdance/"
 IUSE="test"
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-#KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 KEYWORDS="amd64 ~ppc sparc ~x86"
 
 # Bug in the tests - improper use of HTTP::Server
@@ -19,9 +18,8 @@ KEYWORDS="amd64 ~ppc sparc ~x86"
 # configure to run the local tests, but not the ones which access the Internet
 myconf="--local --mech-dump --nolive"
 
-DEPEND="${RDEPEND}"
 
-RDEPEND="dev-lang/perl
+DEPEND="dev-lang/perl
 	dev-perl/IO-Socket-SSL
 	>=dev-perl/libwww-perl-5.76
 	>=dev-perl/URI-1.25

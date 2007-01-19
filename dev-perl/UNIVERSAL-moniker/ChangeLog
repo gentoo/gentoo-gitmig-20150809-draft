@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/UNIVERSAL-moniker
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/UNIVERSAL-moniker/ChangeLog,v 1.15 2006/08/07 00:16:52 mcummings Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/UNIVERSAL-moniker/ChangeLog,v 1.16 2007/01/19 17:08:58 mcummings Exp $
+
+  19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  UNIVERSAL-moniker-0.08.ebuild:
+  Version bump, thanks seemant
 
   07 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   UNIVERSAL-moniker-0.08.ebuild:
