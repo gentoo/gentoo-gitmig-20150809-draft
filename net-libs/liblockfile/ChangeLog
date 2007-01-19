@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/liblockfile
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.44 2007/01/09 08:20:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.45 2007/01/19 05:36:00 jer Exp $
+
+  19 Jan 2007; Jeroen Roovers <jer@gentoo.org> liblockfile-1.06-r2.ebuild:
+  Stable for HPPA (bug #160759).
 
   09 Jan 2007; Markus Rothe <corsair@gentoo.org> liblockfile-1.06-r2.ebuild:
   Stable on ppc64; bug #160759
