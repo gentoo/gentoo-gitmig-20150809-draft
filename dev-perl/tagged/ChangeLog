@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/tagged
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/tagged/ChangeLog,v 1.13 2006/11/24 18:24:47 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/tagged/ChangeLog,v 1.14 2007/01/19 16:01:46 mcummings Exp $
+
+  19 Jan 2007; Michael Cummings <mcummings@gentoo.org> tagged-0.40.ebuild:
+  Ebuild maintenance
 
   24 Nov 2006; Michael Cummings <mcummings@gentoo.org> tagged-0.40.ebuild:
   amd64 stable

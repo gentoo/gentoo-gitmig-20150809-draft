@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-ClassAPI/Test-ClassAPI-1.02.ebuild,v 1.14 2006/08/05 23:17:45 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-ClassAPI/Test-ClassAPI-1.02.ebuild,v 1.15 2007/01/19 16:06:22 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Provides basic first-pass API testing for large class trees"
 SRC_URI="mirror://cpan/authors/id/A/AD/ADAMK/${P}.tar.gz"
-HOMEPAGE="http://search.cpan.org/~adamk/${P}/"
+HOMEPAGE="http://search.cpan.org/~adamk/"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
@@ -18,5 +18,3 @@ DEPEND=">=virtual/perl-File-Spec-0.83
 		>=dev-perl/Class-Inspector-1.06
 		dev-perl/Config-Tiny
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
-
