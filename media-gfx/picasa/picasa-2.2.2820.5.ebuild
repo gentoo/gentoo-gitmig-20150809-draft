@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/picasa-2.2.2820.5.ebuild,v 1.6 2006/09/13 00:16:40 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/picasa-2.2.2820.5.ebuild,v 1.7 2007/01/19 15:31:46 masterdriverz Exp $
 
 inherit eutils versionator
 
@@ -8,7 +8,7 @@ MY_P="picasa-$(replace_version_separator 3 '-')"
 DESCRIPTION="Google's photo organizer"
 HOMEPAGE="http://picasa.google.com"
 SRC_URI="http://dl.google.com/linux/standalone/${MY_P}.i386.bin"
-LICENSE="google-picasa LGPL-2 GPL-2 MPL-1.1 BSD"
+LICENSE="google-picasa"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 RESTRICT="mirror strip"

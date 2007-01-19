@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/picasa
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/ChangeLog,v 1.6 2006/09/13 00:16:40 genstef Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/ChangeLog,v 1.7 2007/01/19 15:31:46 masterdriverz Exp $
+
+  19 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  picasa-2.2.2820.5.ebuild:
+  Fix licenses (GPL/BSD is not compatible w/ Googles)
 
   13 Sep 2006; Stefan Schweizer <genstef@gentoo.org>
   +files/picasa-unicode.patch, picasa-2.2.2820.5.ebuild:
