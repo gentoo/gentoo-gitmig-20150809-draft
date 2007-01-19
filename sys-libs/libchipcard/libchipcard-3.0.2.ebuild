@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-3.0.2.ebuild,v 1.1 2007/01/17 04:42:18 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-3.0.2.ebuild,v 1.2 2007/01/19 09:23:33 hanno Exp $
 
 MY_P="${PN}3-${PV}"
 DESCRIPTION="Libchipcard is a library for easy access to chip cards via chip card readers (terminals)."
@@ -25,7 +25,6 @@ src_compile() {
 	`use_enable ssl` \
 	`use_enable debug` \
 	`use_enable usb libusb` \
-	--datadir=/usr/lib/chipcard3-server \
 	--localstatedir=/var \
 	--enable-pcsc || die
 
@@ -37,7 +36,7 @@ src_install() {
 
 	keepdir /var/log/chipcard3 \
 		/var/lib/chipcard3/newcerts \
-		/usr/lib/chipcard3-server/lowlevel
+		/usr/lib/chipcard3/server/lowlevel
 
 	doinitd ${FILESDIR}/chipcardd3
 
