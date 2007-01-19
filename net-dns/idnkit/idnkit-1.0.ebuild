@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/idnkit-1.0.ebuild,v 1.12 2007/01/11 17:50:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/idnkit-1.0.ebuild,v 1.13 2007/01/19 05:27:00 jer Exp $
 
 S="${WORKDIR}/${P}-src"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.nic.ad.jp/ja/idn/idnkit/download/sources/${P}-src.tar.gz"
 
 SLOT="0"
 LICENSE="JNIC"
-KEYWORDS="~alpha ~amd64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 DEPEND="sys-libs/glibc"
