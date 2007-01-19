@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksirc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirc/ChangeLog,v 1.68 2007/01/16 21:19:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirc/ChangeLog,v 1.69 2007/01/19 16:32:38 flameeyes Exp $
+
+  19 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ksirc-3.5.6.ebuild:
+  Remove unneeded patch. Thanks to Jason Wever for reporting.
 
 *ksirc-3.5.6 (16 Jan 2007)
 
