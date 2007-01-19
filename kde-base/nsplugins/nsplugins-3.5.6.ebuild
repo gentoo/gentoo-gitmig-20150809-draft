@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/nsplugins-3.5.6.ebuild,v 1.1 2007/01/16 22:00:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/nsplugins-3.5.6.ebuild,v 1.2 2007/01/19 00:43:40 flameeyes Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -14,7 +14,7 @@ DESCRIPTION="Netscape plugins support for Konqueror."
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="kdehiddenvisibility"
 
-PATCHES="${FILESDIR}/${P}-npapi-64bit.patch"
+PATCHES="${FILESDIR}/${PN}-3.5.5-npapi-64bit.patch"
 
 src_unpack() {
 	kde-meta_src_unpack
