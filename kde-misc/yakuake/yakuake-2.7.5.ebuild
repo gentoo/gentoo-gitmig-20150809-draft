@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/yakuake-2.7.5.ebuild,v 1.8 2006/10/29 01:18:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/yakuake-2.7.5.ebuild,v 1.9 2007/01/19 18:16:13 flameeyes Exp $
 
 inherit kde
 
@@ -20,3 +20,15 @@ DEPEND="|| ( kde-base/konsole
 RDEPEND="${DEPEND}"
 
 need-kde 3.3
+
+src_install() {
+	kde_src_install
+	rm -rf "${D}/usr/share/applnk"
+
+	insinto /usr/share/applications
+	doins "${S}/yakuake/src/yakuake.desktop"
+
+	# From upstream, fix menu categorization
+	echo "Categories=Qt;KDE;System;TerminalEmulator;" \
+		>> "${D}/usr/share/applications/yakuake.desktop"
+}
