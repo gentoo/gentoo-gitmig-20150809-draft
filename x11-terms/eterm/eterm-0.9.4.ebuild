@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.4.ebuild,v 1.3 2006/10/23 18:38:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.4.ebuild,v 1.4 2007/01/19 04:36:55 vapier Exp $
 
 inherit eutils
 
@@ -32,17 +32,14 @@ src_unpack() {
 }
 
 src_compile() {
-	local mysse2
-	use amd64 \
-		&& mysse2="$(use_enable sse2)" \
-		|| mysse2="--disable-sse2"
+	export TIC="true"
 	econf \
 		$(use_enable escreen) \
 		$(use_enable etwin) \
 		--with-imlib \
 		--enable-trans \
 		$(use_enable mmx) \
-		${mysse2} \
+		$(use_enable sse2) \
 		$(use_enable unicode multi-charset) \
 		--with-delete=execute \
 		--with-backspace=auto \
@@ -51,10 +48,7 @@ src_compile() {
 }
 
 src_install() {
-	make \
-		TIC="tic -o ${D}/usr/share/terminfo" \
-		DESTDIR="${D}" \
-		install || die "install failed"
+	emake DESTDIR="${D}" install || die "install failed"
 	dodoc ChangeLog README ReleaseNotes
 	use escreen && dodoc doc/README.Escreen
 	dodoc bg/README.backgrounds

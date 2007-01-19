@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-9999.ebuild,v 1.7 2006/05/11 03:23:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-9999.ebuild,v 1.8 2007/01/19 04:36:55 vapier Exp $
 
 #ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
 ECVS_SERVER="anoncvs.enlightenment.org:/var/cvs/e"
@@ -19,7 +19,7 @@ SRC_URI=""
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="-*"
-IUSE="escreen etwin mmx unicode"
+IUSE="escreen etwin minimal mmx sse2 unicode"
 
 DEPEND="|| ( ( x11-libs/libX11 x11-libs/libXmu x11-libs/libXt x11-libs/libICE x11-libs/libSM x11-proto/xextproto x11-proto/xproto ) virtual/x11 )
 	>=x11-libs/libast-0.6.1
@@ -36,16 +36,14 @@ src_unpack() {
 }
 
 src_compile() {
-	local mymmx
-	use x86 \
-		&& mymmx="$(use_enable mmx)" \
-		|| mymmx="--disable-mmx"
+	export TIC="true"
 	econf \
 		$(use_enable escreen) \
 		$(use_enable etwin) \
 		--with-imlib \
 		--enable-trans \
-		${mymmx} \
+		$(use_enable mmx) \
+		$(use_enable sse2) \
 		$(use_enable unicode multi-charset) \
 		--with-delete=execute \
 		--with-backspace=auto \
@@ -54,10 +52,7 @@ src_compile() {
 }
 
 src_install() {
-	make \
-		TIC="tic -o ${D}/usr/share/terminfo" \
-		DESTDIR="${D}" \
-		install || die "install failed"
+	emake DESTDIR="${D}" install || die "install failed"
 	dodoc ChangeLog README ReleaseNotes
 	use escreen && dodoc doc/README.Escreen
 	dodoc bg/README.backgrounds
