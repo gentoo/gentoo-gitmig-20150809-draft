@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.6.ebuild,v 1.3 2007/01/19 10:05:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.6.ebuild,v 1.4 2007/01/19 17:20:26 flameeyes Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -178,6 +178,9 @@ LDPATH=${libdirs:1}
 CONFIG_PROTECT="${PREFIX}/share/config ${PREFIX}/env ${PREFIX}/shutdown /usr/share/config"
 KDEDIRS="${PREFIX}:/usr:/usr/local"
 #KDE_IS_PRELINKED=1
+XDG_DATA_DIRS="/usr/share:${PREFIX}/share:/usr/local/share"
+XDG_CONFIG_DIRS="${PREFIX}/etc/xdg"
+COLON_SEPARATED="XDG_DATA_DIRS XDG_CONFIG_DIRS"
 EOF
 }
 
