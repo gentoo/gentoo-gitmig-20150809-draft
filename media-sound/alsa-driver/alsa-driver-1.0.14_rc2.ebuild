@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.14_rc2.ebuild,v 1.1 2007/01/16 22:56:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.14_rc2.ebuild,v 1.2 2007/01/19 16:41:54 flameeyes Exp $
 
 inherit linux-mod flag-o-matic eutils multilib
 
@@ -100,6 +100,8 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-tumbler-ppc.patch"
 
 	convert_to_m "${S}/Makefile"
 	sed -i -e 's:\(.*depmod\):#\1:' "${S}/Makefile"
