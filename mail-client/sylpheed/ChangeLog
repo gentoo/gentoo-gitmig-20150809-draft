@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/sylpheed
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.211 2007/01/19 12:55:48 joslwah Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.212 2007/01/19 17:37:24 gustavoz Exp $
+
+  19 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> sylpheed-2.3.0.ebuild:
+  Stable on sparc wrt #162770
 
   19 Jan 2007; Joshua <joslwah@gentoo.org> sylpheed-2.3.0.ebuild:
   ppc64 stable.  Bug 162770.
