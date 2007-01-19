@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.188 2007/01/16 13:54:03 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.189 2007/01/19 20:57:00 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -445,6 +445,23 @@ slot_rebuild() {
 	echo
 }
 
+kde_pkg_preinst() {
+	if [[ $(find "${D}/${PREFIX}/share/applnk" -name '*.desktop' 2>/dev/null | wc -l) != "0" ]]; then
+		ewarn "KDE Team warning: this package (${PF}) is installing"
+		ewarn "	 .desktop files in the obsolete applnk path:"
+		ewarn "	 ${PREFIX}/share/applnk. It won't be shown on non-KDE"
+		ewarn "	 menus and applications."
+	fi
+
+	if [[ $(egrep -q -r --include '*.desktop' --files-without-match \
+		'^Categories' "${D}/${PREFIX}/share/applications" 2>/dev/null \
+		| wc -l) != "0" ]] ; then
+		ewarn "KDE Team warning: this package (${PF}) is installing"
+		ewarn "	 .desktop files without the Categories attribute; it will"
+		ewarn "	 be shown in the Lost & Found menu."
+	fi
+}
+
 kde_pkg_postinst() {
 	buildsycoca
 }
@@ -453,4 +470,4 @@ kde_pkg_postrm() {
 	buildsycoca
 }
 
-EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_postinst pkg_postrm
+EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_postinst pkg_postrm pkg_preinst
