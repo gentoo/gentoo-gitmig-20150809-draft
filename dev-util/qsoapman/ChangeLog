@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/qsoapman
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qsoapman/ChangeLog,v 1.7 2005/07/25 15:43:52 caleb Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qsoapman/ChangeLog,v 1.8 2007/01/19 15:16:50 masterdriverz Exp $
+
+  19 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  qsoapman-0.3.ebuild:
+  QA: remove invalid RESTRICT="mirror"; fix grammer
 
   25 Jul 2005; Caleb Tennis <caleb@gentoo.org> qsoapman-0.3.ebuild:
   Fix qt dep per bug #100235
