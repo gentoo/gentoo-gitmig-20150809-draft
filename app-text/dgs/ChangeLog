@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dgs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/ChangeLog,v 1.26 2007/01/05 07:22:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/ChangeLog,v 1.27 2007/01/19 14:34:48 armin76 Exp $
+
+  19 Jan 2007; Raúl Porcel <armin76@gentoo.org> dgs-0.5.10-r1.ebuild:
+  Fix autotools handling, bug 160155
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> dgs-0.5.10-r1.ebuild:
   Remove gnuconfig_update usage, leave it to econf.

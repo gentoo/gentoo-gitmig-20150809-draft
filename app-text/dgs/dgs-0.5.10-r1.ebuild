@@ -1,8 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/dgs-0.5.10-r1.ebuild,v 1.35 2007/01/05 07:22:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/dgs-0.5.10-r1.ebuild,v 1.36 2007/01/19 14:34:48 armin76 Exp $
 
-inherit eutils
+inherit eutils autotools
+
+WANT_AUTOCONF="2.1"
+WANT_AUTOMAKE="latest"
 
 DESCRIPTION="A Ghostscript based Display Postscript (DPS) server"
 HOMEPAGE="http://www.gyve.org/dgs/"
@@ -28,7 +31,7 @@ src_unpack() {
 }
 
 src_compile() {
-	WANT_AUTOCONF=2.1 autoconf
+	eautoconf
 	econf --with-x $(use_enable tcpd) || die "econf failed"
 	emake -j1 || die "emake failed"
 }
