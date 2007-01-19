@@ -1,6 +1,10 @@
 # ChangeLog for app-office/imposter
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/imposter/ChangeLog,v 1.9 2006/01/19 16:52:41 suka Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/imposter/ChangeLog,v 1.10 2007/01/19 14:20:36 masterdriverz Exp $
+
+  19 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  imposter-0.2.ebuild:
+  QA: remove invalid RESTRICT="mirror"
 
   19 Jan 2006; Andreas Proschofsky <suka@gentoo.org> imposter-0.2.ebuild,
   imposter-0.3.ebuild:
