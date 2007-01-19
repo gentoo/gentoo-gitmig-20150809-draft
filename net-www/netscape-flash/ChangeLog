@@ -1,6 +1,10 @@
 # ChangeLog for net-www/netscape-flash
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/ChangeLog,v 1.47 2007/01/17 20:14:24 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/ChangeLog,v 1.48 2007/01/19 14:58:47 tester Exp $
+
+  19 Jan 2007; Olivier Crête <tester@gentoo.org>
+  -netscape-flash-9.0.21.78.ebuild, netscape-flash-9.0.31.0.ebuild:
+  Add debug version and standalone player, thanks to Jakub, closes bug #162600
 
   17 Jan 2007; Alec Warner <antarus@gentoo.org>
   netscape-flash-7.0.68.ebuild, netscape-flash-9.0.21.78.ebuild,

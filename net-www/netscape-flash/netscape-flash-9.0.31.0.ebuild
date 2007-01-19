@@ -1,19 +1,25 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-9.0.31.0.ebuild,v 1.2 2007/01/17 20:14:24 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-9.0.31.0.ebuild,v 1.3 2007/01/19 14:58:47 tester Exp $
 
 inherit nsplugins
 
+MY_P="install_flash_player_9_linux"
+MY_PD="flash_player_9_linux_dev"
+
 DESCRIPTION="Adobe Flash Player"
-SRC_URI="http://fpdownload.macromedia.com/get/flashplayer/current/install_flash_player_9_linux.tar.gz"
+SRC_URI="!debug? ( http://fpdownload.macromedia.com/get/flashplayer/current/${MY_P}.tar.gz )
+	http://fpdownload.macromedia.com/pub/flashplayer/updaters/9/${MY_PD}.tar.gz"
 HOMEPAGE="http://www.adobe.com/"
-IUSE=""
+IUSE="debug"
 SLOT="0"
 
 KEYWORDS="-* ~amd64 ~x86"
 LICENSE="AdobeFlash-9.0.31.0"
 S=${WORKDIR}/install_flash_player_9_linux
 RESTRICT="strip mirror"
+
+S=${WORKDIR}
 
 DEPEND="!net-www/gplflash
 	amd64? ( app-emulation/emul-linux-x86-baselibs
@@ -35,8 +41,25 @@ pkg_setup() {
 	has_multilib_profile && ABI="x86"
 }
 
-src_install() {
+src_unpack() {
+	unpack ${A}
 
+	cd ${S}	
+	if use debug; then
+		unpack ./${MY_PD}/plugin/debugger/${MY_P}.tar.gz
+		unpack ./${MY_PD}/standalone/debugger/flashplayer.tar.gz
+	else
+		unpack ./${MY_PD}/standalone/release/flashplayer.tar.gz
+	fi
+}
+
+src_install() {
+	dobin flashplayer
+
+	dodoc ${MY_PD}/README
+	use debug || dodoc ${MY_P}/Readme.txt
+	
+	cd ${MY_P}
 	exeinto /opt/netscape/plugins
 	doexe libflashplayer.so
 	insinto /opt/netscape/plugins
@@ -44,6 +67,4 @@ src_install() {
 
 	inst_plugin /opt/netscape/plugins/libflashplayer.so
 	inst_plugin /opt/netscape/plugins/flashplayer.xpt
-
-	dodoc Readme.txt
 }
