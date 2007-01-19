@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/argouml-0.18.1-r1.ebuild,v 1.1 2005/09/10 14:20:38 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/argouml-0.18.1-r1.ebuild,v 1.2 2007/01/19 15:08:39 masterdriverz Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,7 @@ SRC_URI="http://argouml.tigris.org/files/documents/4/0/${P}/ArgoUML-${PV}.tar.gz
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
-RESTRICT="nomirror"
+
 IUSE="doc"
 RDEPEND=">=virtual/jre-1.3"
 S=${WORKDIR}

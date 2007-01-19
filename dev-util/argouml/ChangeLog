@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/argouml
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/ChangeLog,v 1.16 2005/11/05 20:39:02 grobian Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/ChangeLog,v 1.17 2007/01/19 15:08:39 masterdriverz Exp $
+
+  19 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  argouml-0.18.1-r1.ebuild, argouml-0.19.6.ebuild:
+  QA: remove invalid RESTRICT="mirror"
 
   05 Nov 2005; Fabian Groffen <grobian@gentoo.org> argouml-0.19.6.ebuild:
   Marked ~ppc-macos (bug #111583)
