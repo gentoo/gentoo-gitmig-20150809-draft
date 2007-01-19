@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-XWhois/Net-XWhois-0.90.ebuild,v 1.7 2006/08/17 22:14:40 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-XWhois/Net-XWhois-0.90.ebuild,v 1.8 2007/01/19 15:01:59 mcummings Exp $
 
 inherit perl-module
 
@@ -19,4 +19,3 @@ mydoc="examples/*"
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"

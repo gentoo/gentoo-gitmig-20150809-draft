@@ -1,18 +1,17 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-RawIP/Net-RawIP-0.1.ebuild,v 1.8 2006/08/05 19:30:03 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-RawIP/Net-RawIP-0.1.ebuild,v 1.9 2007/01/19 14:56:23 mcummings Exp $
 
 inherit perl-module
 
 IUSE=""
 DESCRIPTION="Perl Net::RawIP - Raw IP packets manipulation Module"
 SRC_URI="mirror://cpan/authors/id/S/SK/SKOLYCHEV/${P}.tar.gz"
-HOMEPAGE="http://www.cpan.org/"
+HOMEPAGE="http://search.cpan.org/~skolychev/"
 
 DEPEND="net-libs/libpcap
 	>=sys-apps/sed-4
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="Artistic"
@@ -39,5 +38,3 @@ src_unpack() {
 
 	sed -i -e "s/D_IFLIST_'\./D_IFLIST_ '\./" ${S}/Makefile.PL || die "problem fixing makefile"
 }
-
-

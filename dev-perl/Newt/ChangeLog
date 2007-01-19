@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Newt
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Newt/ChangeLog,v 1.4 2006/08/05 19:36:50 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Newt/ChangeLog,v 1.5 2007/01/19 15:02:45 mcummings Exp $
+
+  19 Jan 2007; Michael Cummings <mcummings@gentoo.org> Newt-1.08.ebuild:
+  Ebuild maintenance
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org> Newt-1.08.ebuild:
   Adding perl dep; fixed DEPEND

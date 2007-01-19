@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Number-Compare
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Number-Compare/ChangeLog,v 1.14 2006/08/05 19:37:34 mcummings Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Number-Compare/ChangeLog,v 1.15 2007/01/19 15:04:03 mcummings Exp $
+
+  19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  Number-Compare-0.01.ebuild:
+  Ebuild maintenance
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Number-Compare-0.01.ebuild:

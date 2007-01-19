@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Amazon/Net-Amazon-0.35.ebuild,v 1.6 2006/10/11 01:45:31 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Amazon/Net-Amazon-0.35.ebuild,v 1.7 2007/01/19 14:44:29 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Net::Amazon - Framework for accessing amazon.com via SOAP and XML/HTTP"
 SRC_URI="mirror://cpan/authors/id/M/MS/MSCHILLI/${P}.tar.gz"
-HOMEPAGE="http://www.cpan.org/modules/by-authors/id/M/MS/MSCHILLI/Net-Amazon-0.35.readme"
+HOMEPAGE="http://search.cpan.org/~mschilli/"
 
 IUSE=""
 SLOT="0"
@@ -18,8 +18,5 @@ DEPEND="dev-perl/libwww-perl
 	>=virtual/perl-Time-HiRes-1.0
 	>=dev-perl/Log-Log4perl-0.3
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 SRC_TEST="do"
-
-

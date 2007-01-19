@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Ogg-Vorbis-Header-PurePerl/Ogg-Vorbis-Header-PurePerl-0.07.ebuild,v 1.9 2006/08/17 22:16:20 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Ogg-Vorbis-Header-PurePerl/Ogg-Vorbis-Header-PurePerl-0.07.ebuild,v 1.10 2007/01/19 15:06:04 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="An object-oriented interface to Ogg Vorbis information and comment fields, implemented entirely in Perl. Intended to be a drop in replacement for Ogg::Vobis::Header."
-HOMEPAGE="http://search.cpan.org/~amolloy/${P}/"
+HOMEPAGE="http://search.cpan.org/~amolloy/"
 SRC_URI="mirror://cpan/authors/id/A/AM/AMOLLOY/${P}.tar.gz"
 
 LICENSE="Artistic"
@@ -17,4 +17,3 @@ SRC_TEST="do"
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"
