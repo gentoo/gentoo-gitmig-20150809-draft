@@ -1,5 +1,5 @@
---- configure.ac.orig	2006-03-08 15:42:30.000000000 +0200
-+++ configure.ac	2006-03-08 15:42:47.000000000 +0200
+--- configure.ac.old	2007-01-19 16:07:41.000000000 +0100
++++ configure.ac	2007-01-19 16:07:59.000000000 +0100
 @@ -95,7 +95,7 @@
  AM_CONDITIONAL(HAVE_SRFI_35, test "$HAVE_SRFI_35" = yes)
  
@@ -8,3 +8,4 @@
 +PKG_CHECK_MODULES(GLIB, glib-2.0, [have_glib=yes], [have_glib=no])
  AM_CONDITIONAL(HAVE_GLIB, test "$have_glib" = yes)
  
+ dnl Check for compiler flags and warnings. This should be last, since
