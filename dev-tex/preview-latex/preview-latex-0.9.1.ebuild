@@ -1,13 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/preview-latex/preview-latex-0.9.1.ebuild,v 1.2 2005/08/24 04:05:09 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/preview-latex/preview-latex-0.9.1.ebuild,v 1.3 2007/01/19 15:03:31 masterdriverz Exp $
 
 inherit latex-package elisp-common
 
 DESCRIPTION="Renders embed latex environments such as math or figures in realtime"
 HOMEPAGE="http://preview-latex.sourceforge.net/"
 SRC_URI="mirror://sourceforge/preview-latex/${P}.tar.gz"
-RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
