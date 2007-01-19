@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.11-r1.ebuild,v 1.2 2007/01/04 07:09:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.11-r1.ebuild,v 1.3 2007/01/19 17:06:51 mr_bones_ Exp $
 
 inherit flag-o-matic toolchain-funcs eutils libtool
 
@@ -16,7 +16,6 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-
 # in USE and something breaks, you pick up the pieces.  Be prepared for
 # bug reports to be marked INVALID.
 IUSE="oss alsa esd arts nas X dga xv xinerama fbcon directfb ggi svga aalib opengl libcaca noaudio novideo nojoystick noflagstrip"
-RESTRICT="mirror" #147253
 
 RDEPEND="!noaudio? ( >=media-libs/audiofile-0.1.9 )
 	alsa? ( media-libs/alsa-lib )
