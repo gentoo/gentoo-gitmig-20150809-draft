@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/styleclock
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/styleclock/ChangeLog,v 1.3 2006/05/06 23:12:31 weeve Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/styleclock/ChangeLog,v 1.4 2007/01/19 15:18:03 masterdriverz Exp $
+
+  19 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  styleclock-0.5.1.ebuild:
+  Remove invalid RESTRICT="mirror"
 
   06 May 2006; Jason Wever <weeve@gentoo.org> styleclock-0.5.1.ebuild:
   Added ~sparc keyword.
