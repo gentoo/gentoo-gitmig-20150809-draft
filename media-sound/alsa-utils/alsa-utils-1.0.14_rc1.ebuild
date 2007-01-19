@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.14_rc1.ebuild,v 1.7 2007/01/14 09:15:51 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.14_rc1.ebuild,v 1.8 2007/01/19 10:12:30 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -22,6 +22,15 @@ RDEPEND="${DEPEND}
 	sys-apps/pciutils"
 
 S=${WORKDIR}/${MY_P}
+
+pkg_setup() {
+	if ! built_with_use --missing true media-libs/alsa-lib midi; then
+		eerror ""
+		eerror "To be able to build alsa-utils-${PF} you need"
+		eerror "to have built media-libs/alsa-lib with midi USE flag."
+		die "Missing midi USE flag on media-libs/alsa-lib"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}

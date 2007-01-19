@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.14_rc2.ebuild,v 1.2 2007/01/16 23:49:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.14_rc2.ebuild,v 1.3 2007/01/19 10:12:30 flameeyes Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -26,16 +26,14 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-#pkg_setup() {
-# leave commented out for now as built_with_use cannot be used for this check
-#	if use midi && ! built_with_use media-libs/alsa-lib midi; then
-#		ewarn "To be able to build alsa-utils with midi support you need"
-#		ewarn "to have built media-libs/alsa-lib with midi useflag, if"
-#		ewarn "it has one. Otherwise, the package might fail to build."
-#		# This is not fatal because the version of alsa-lib with midi disabled
-#		# is not yet unmasked.
-#	fi
-#}
+pkg_setup() {
+	if use midi && ! built_with_use --missing true media-libs/alsa-lib midi; then
+		eerror ""
+		eerror "To be able to build alsa-utils with midi support you need"
+		eerror "to have built media-libs/alsa-lib with midi USE flag."
+		die "Missing midi USE flag on media-libs/alsa-lib"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}

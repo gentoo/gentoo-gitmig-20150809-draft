@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.11.ebuild,v 1.12 2007/01/05 17:20:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.11.ebuild,v 1.13 2007/01/19 10:12:30 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -22,6 +22,15 @@ RDEPEND="${DEPEND}
 	sys-apps/pciutils"
 
 S=${WORKDIR}/${MY_P}
+
+pkg_setup() {
+	if ! built_with_use --missing true media-libs/alsa-lib midi; then
+		eerror ""
+		eerror "To be able to build alsa-utils-${PF} you need"
+		eerror "to have built media-libs/alsa-lib with midi USE flag."
+		die "Missing midi USE flag on media-libs/alsa-lib"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
@@ -76,7 +85,7 @@ pkg_postinst() {
 	if use sparc; then
 		ewarn "Old versions of alsa-drivers had a broken snd-ioctl32 module"
 		ewarn "which causes sparc64 machines to lockup on such tasks as"
-		ewarn "changing the volume.  Because of this, it is VERY important"
+		ewarn "changing the volume.	 Because of this, it is VERY important"
 		ewarn "that you do not use the snd-ioctl32 modules contained in"
 		ewarn "development-sources or <=gentoo-dev-sources-2.6.7-r14.  Doing so"
 		ewarn "may result in an unbootable system if you start alsasound at boot."
