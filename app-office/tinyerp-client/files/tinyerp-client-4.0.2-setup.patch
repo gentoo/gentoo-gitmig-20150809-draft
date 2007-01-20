@@ -1,0 +1,12 @@
+diff -ru tinyerp-client-4.0.2~/setup.py tinyerp-client-4.0.2/setup.py
+--- tinyerp-client-4.0.2~/setup.py	2007-01-20 20:26:10.000000000 +0100
++++ tinyerp-client-4.0.2/setup.py	2007-01-20 20:27:37.000000000 +0100
+@@ -83,7 +83,7 @@
+ Programming Language :: Python
+ """
+ 
+-check_modules()
++#check_modules()
+ 
+ # create startup script
+ start_script = \
