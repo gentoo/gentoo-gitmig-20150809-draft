@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.140 2007/01/19 22:13:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.141 2007/01/20 16:14:09 nixnut Exp $
+
+  20 Jan 2007; nixnut <nixnut@gentoo.org> java-config-2.0.31.ebuild:
+  Stable on ppc wrt bug 162368
 
   19 Jan 2007; Markus Rothe <corsair@gentoo.org> java-config-2.0.31.ebuild:
   Stable on ppc64; bug #162368
