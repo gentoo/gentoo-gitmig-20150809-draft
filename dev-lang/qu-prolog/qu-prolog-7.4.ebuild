@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-7.4.ebuild,v 1.6 2007/01/17 18:59:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-7.4.ebuild,v 1.7 2007/01/20 19:21:32 keri Exp $
 
-inherit autotools eutils versionator
+inherit eutils
 
 MY_P=qp${PV}
 
