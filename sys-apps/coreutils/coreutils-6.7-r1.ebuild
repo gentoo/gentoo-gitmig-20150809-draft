@@ -1,12 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-6.7-r1.ebuild,v 1.3 2007/01/19 03:14:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-6.7-r1.ebuild,v 1.4 2007/01/20 10:59:17 vapier Exp $
 
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
 inherit eutils flag-o-matic toolchain-funcs autotools
 
-PATCH_VER="1.0"
+PATCH_VER="1.1"
 DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)"
 HOMEPAGE="http://www.gnu.org/software/coreutils/"
 SRC_URI="ftp://alpha.gnu.org/gnu/coreutils/${P}.tar.bz2
@@ -94,6 +92,7 @@ src_compile() {
 		--enable-largefile \
 		$(use_enable nls) \
 		$(use_enable acl) \
+		$(use_enable xattr) \
 		$(use_enable selinux) \
 		${myconf} \
 		|| die "econf"
