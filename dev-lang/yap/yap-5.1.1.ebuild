@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-5.1.1.ebuild,v 1.5 2007/01/20 20:56:56 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-5.1.1.ebuild,v 1.6 2007/01/20 22:32:54 keri Exp $
 
 inherit autotools eutils
 
@@ -32,6 +32,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-configure.patch
 	epatch "${FILESDIR}"/${P}-multilib.patch
+	epatch "${FILESDIR}"/${P}-SONAME.patch
 	epatch "${FILESDIR}"/${P}-analyst.patch
 	epatch "${FILESDIR}"/${P}-myddas.patch
 	epatch "${FILESDIR}"/${P}-tabling.patch
