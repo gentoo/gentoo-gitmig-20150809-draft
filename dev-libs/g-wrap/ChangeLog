@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/g-wrap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.32 2007/01/19 15:42:22 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.33 2007/01/20 10:02:22 hkbst Exp $
+
+  20 Jan 2007; Marijn Schouten <hkBst@gentoo.org>
+  files/g-wrap-1.9.6_glib_automagic.patch:
+  fix 1.9.6 patch
 
   19 Jan 2007; Marijn Schouten <hkBst@gentoo.org> -g-wrap-1.9.7.ebuild:
   remove because of automagic dep on glib-1.2
