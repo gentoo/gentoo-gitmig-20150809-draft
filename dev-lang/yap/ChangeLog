@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/yap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.9 2007/01/20 22:32:54 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.10 2007/01/20 23:29:51 keri Exp $
+
+  20 Jan 2007; keri <keri@gentoo.org> yap-5.1.1.ebuild:
+  Add ~amd64 to KEYWORDS
 
   20 Jan 2007; keri <keri@gentoo.org> +files/yap-5.1.1-SONAME.patch,
   yap-5.1.1.ebuild:
