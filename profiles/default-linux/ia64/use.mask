@@ -128,3 +128,6 @@ alsa_cards_sb16_csp
 alsa_cards_sgalaxy
 alsa_cards_sscape
 alsa_cards_wavefront
+
+# libemf not ported
+emf
