@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit-dev
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.47 2007/01/19 19:41:05 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.48 2007/01/20 16:29:14 fuzzyray Exp $
+
+  20 Jan 2007; Paul Varner <fuzzyray@gentoo.org>
+  -gentoolkit-dev-0.2.5.ebuild, -gentoolkit-dev-0.2.6.1.ebuild:
+  Removed older ebuilds which install epkgmove
 
   19 Jan 2007; Alexander H. Færøy <eroyf@gentoo.org>
   gentoolkit-dev-0.2.6.2.ebuild:
