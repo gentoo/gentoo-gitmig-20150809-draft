@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.333 2007/01/19 04:09:25 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.334 2007/01/20 16:03:56 eroyf Exp $
+
+  20 Jan 2007; Alexander H. Færøy <eroyf@gentoo.org>
+  portage-2.1.1-r2.ebuild:
+  Stable on MIPS; bug #154510
 
 *portage-2.1.2-r1 (19 Jan 2007)
 
