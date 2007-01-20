@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-5.1.1.ebuild,v 1.4 2006/12/03 04:00:43 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-5.1.1.ebuild,v 1.5 2007/01/20 20:56:56 keri Exp $
 
 inherit autotools eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="Artistic LGPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
-IUSE="debug doc gmp java mpi mysql odbc readline static tk threads"
+IUSE="debug doc examples gmp java mpi mysql odbc readline static tk threads"
 
 DEPEND="gmp? ( dev-libs/gmp )
 	java? ( virtual/jdk )
@@ -41,6 +41,7 @@ src_unpack() {
 src_compile() {
 	eautoconf
 	econf \
+		--libdir=/usr/$(get_libdir) \
 		--enable-low-level-tracer \
 		--enable-rational-trees \
 		--enable-coroutining \
@@ -76,13 +77,15 @@ src_install() {
 		doexe misc/tkyap
 	fi
 
+	dodoc changes*.html README
+
 	if use doc ; then
 		dodoc docs/yap.html
+	fi
+
+	if use examples ; then
 		docinto examples
 		dodoc CLPBN/clpbn/examples/cg.yap
 		dodoc CLPBN/clpbn/examples/School/*
 	fi
-
-	doinfo docs/*.info*
-	dodoc changes4.3.html INSTALL README
 }
