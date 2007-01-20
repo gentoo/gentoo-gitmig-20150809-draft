@@ -1,6 +1,6 @@
-diff -Naur assporg/ASSP/assp.pl x/ASSP/assp.pl
---- assporg/ASSP/assp.pl	2007-01-13 13:17:58.000000000 +0100
-+++ x/ASSP/assp.pl	2007-01-13 15:01:24.000000000 +0100
+diff -Naur assporg/ASSP/assp.pl asspmod/ASSP/assp.pl
+--- assporg/ASSP/assp.pl	2007-01-18 23:12:20.000000000 +0100
++++ asspmod/ASSP/assp.pl	2007-01-18 23:15:13.000000000 +0100
 @@ -52,13 +52,10 @@
  if($ARGV[0]) {
   $base=$ARGV[0];
@@ -272,6 +272,15 @@ diff -Naur assporg/ASSP/assp.pl x/ASSP/assp.pl
    };
    local $/;
    my @s = stat($fil);
+@@ -8789,7 +8786,7 @@
+ sub fileUpdated {
+  my $fil=shift;
+ 
+- $fil="$base/$fil" if $fil!~/^(([a-z]:)?[\/\\]|\Q$base\E)/;
++ $fil="/etc/assp/$fil" if $fil!~/^(([a-z]:)?[\/\\]|\Q\/etc\/assp\/\E)/;
+  #$fil="$base/$fil" if $fil!~/^\Q$base\E/i;
+  return 1 unless $FileUpdate{$fil};
+  my @s=stat($fil);
 @@ -8891,7 +8888,7 @@
  sub ConfigChangeLogfile {my ($name, $old, $new)=@_;
   close LOG if $logfile;
@@ -299,9 +308,9 @@ diff -Naur assporg/ASSP/assp.pl x/ASSP/assp.pl
    print LOG "Logfile reopened on HUP\n";
  }
  
-diff -Naur assporg/ASSP/move2num.pl x/ASSP/move2num.pl
---- assporg/ASSP/move2num.pl	2007-01-13 13:17:58.000000000 +0100
-+++ x/ASSP/move2num.pl	2007-01-13 13:07:36.000000000 +0100
+diff -Naur assporg/ASSP/move2num.pl asspmod/ASSP/move2num.pl
+--- assporg/ASSP/move2num.pl	2007-01-18 23:12:20.000000000 +0100
++++ asspmod/ASSP/move2num.pl	2007-01-18 23:14:09.000000000 +0100
 @@ -3,7 +3,7 @@
  # renames files to numbers
  # (c) John Hanna, John Calvi 2003 under the terms of the GPL
@@ -311,9 +320,9 @@ diff -Naur assporg/ASSP/move2num.pl x/ASSP/move2num.pl
  $spamlog=$Config{spamlog} && "$Config{base}/$Config{spamlog}" || 'spam';
  $notspamlog=$Config{notspamlog} && "$Config{base}/$Config{notspamlog}" || 'notspam';
  $MaxFiles=$Config{MaxFiles} || 14003;
-diff -Naur assporg/ASSP/rebuildspamdb.pl x/ASSP/rebuildspamdb.pl
---- assporg/ASSP/rebuildspamdb.pl	2007-01-13 13:17:58.000000000 +0100
-+++ x/ASSP/rebuildspamdb.pl	2007-01-13 13:07:36.000000000 +0100
+diff -Naur assporg/ASSP/rebuildspamdb.pl asspmod/ASSP/rebuildspamdb.pl
+--- assporg/ASSP/rebuildspamdb.pl	2007-01-18 23:12:20.000000000 +0100
++++ asspmod/ASSP/rebuildspamdb.pl	2007-01-18 23:14:09.000000000 +0100
 @@ -4,7 +4,7 @@
  # (c) John Hanna 2003 under the terms of the GPL
   # Updated July 2004 for simple proxy support.
@@ -332,9 +341,9 @@ diff -Naur assporg/ASSP/rebuildspamdb.pl x/ASSP/rebuildspamdb.pl
  $whiteRE=$Config{whiteRE};
  $KeepWhitelistedSpam=$Config{KeepWhitelistedSpam};
  $proxyserver=$Config{proxyserver};
-diff -Naur assporg/ASSP/stats.sh x/ASSP/stats.sh
---- assporg/ASSP/stats.sh	2007-01-13 16:49:03.000000000 +0100
-+++ x/ASSP/stats.sh	2007-01-13 16:49:31.000000000 +0100
+diff -Naur assporg/ASSP/stats.sh asspmod/ASSP/stats.sh
+--- assporg/ASSP/stats.sh	2007-01-18 23:12:23.000000000 +0100
++++ asspmod/ASSP/stats.sh	2007-01-18 23:14:09.000000000 +0100
 @@ -52,7 +52,7 @@
  #  your system's 'newsyslog' functionality. You can send a SIGHUP to
  #  ASSP when you roll the log so it starts afresh..KRL
