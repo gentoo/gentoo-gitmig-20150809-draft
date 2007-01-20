@@ -1,0 +1,39 @@
+# 
+# old_revision [0f5f960e749e55bc7b457b944ec168184353c300]
+# 
+# patch "modules/alg_amd64/asm_macr.h"
+#  from [c8fe2875602bdeeb27250cf791110e664b82cf0e]
+#    to [35d79aea75780161d6d8c707a78f17f03955e6f6]
+# 
+# patch "modules/alg_ia32/asm_macr.h"
+#  from [540af413c630f50e7f0859b972be4d6618c788eb]
+#    to [6454d46724e0b61ef2e110644f61b8fe165a2323]
+# 
+============================================================
+--- modules/alg_amd64/asm_macr.h	c8fe2875602bdeeb27250cf791110e664b82cf0e
++++ modules/alg_amd64/asm_macr.h	35d79aea75780161d6d8c707a78f17f03955e6f6
+@@ -6,6 +6,10 @@
+ #ifndef BOTAN_EXT_ASM_MACROS_H__
+ #define BOTAN_EXT_ASM_MACROS_H__
+ 
++#ifdef __ELF__
++.section .note.GNU-stack,"",%progbits
++#endif
++
+ /*************************************************
+ * General/Global Macros                          *
+ *************************************************/
+============================================================
+--- modules/alg_ia32/asm_macr.h	540af413c630f50e7f0859b972be4d6618c788eb
++++ modules/alg_ia32/asm_macr.h	6454d46724e0b61ef2e110644f61b8fe165a2323
+@@ -6,6 +6,10 @@
+ #ifndef BOTAN_EXT_ASM_MACROS_H__
+ #define BOTAN_EXT_ASM_MACROS_H__
+ 
++#ifdef __ELF__
++.section .note.GNU-stack,"",%progbits
++#endif
++
+ /*************************************************
+ * General/Global Macros                          *
+ *************************************************/

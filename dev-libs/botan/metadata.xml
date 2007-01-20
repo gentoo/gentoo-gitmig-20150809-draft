@@ -3,11 +3,6 @@
 <pkgmetadata>
 <herd>crypto</herd>
 <maintainer>
-  <email>dragonheart@gentoo.org</email>
-    <name>Daniel Black</name>
-    <description>Gentoo Commiter</description>
-</maintainer>
-<maintainer>
   <email>lloyd@randombit.net</email>
     <name>Jack Lloyd </name>
     <description>Ebuild contributor and botan author</description>
