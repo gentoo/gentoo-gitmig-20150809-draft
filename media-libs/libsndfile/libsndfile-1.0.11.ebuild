@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.11.ebuild,v 1.13 2006/04/30 18:46:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.11.ebuild,v 1.14 2007/01/20 23:17:39 flameeyes Exp $
 
-inherit eutils
+inherit eutils libtool
 
 DESCRIPTION="A C library for reading and writing files containing sampled sound"
 HOMEPAGE="http://www.mega-nerd.com/libsndfile/"
