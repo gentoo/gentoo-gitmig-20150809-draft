@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-betwixt/commons-betwixt-0.7-r1.ebuild,v 1.3 2006/11/30 15:29:05 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-betwixt/commons-betwixt-0.7-r1.ebuild,v 1.4 2007/01/20 22:03:35 betelgeuse Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -24,6 +24,7 @@ DEPEND=">=virtual/jdk-1.3
 	!test? ( dev-java/ant-core )
 	test? (
 		dev-java/ant
+		dev-java/junit
 		>=dev-java/xerces-2.7
 	)
 	source? ( app-arch/zip )"
@@ -35,17 +36,17 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-notests.patch
 
-	cd ${S}
+	cd "${S}"
+	java-ant_ignore-system-classes
 	mkdir -p ${S}/target/lib && cd ${S}/target/lib
 	java-pkg_jar-from commons-beanutils-1.7
 	java-pkg_jar-from commons-digester
 	java-pkg_jar-from commons-logging
-	use test && java-pkg_jar-from xerces-2
+	use test && java-pkg_jar-from --build-only xerces-2
+	use test && java-pkg_jar-from --build-only junit
 }
 
-src_compile() {
-	eant init jar $(use_doc) -Dnoget=true -Dnotest=true
-}
+EANT_BUILD_TARGET="init jar"
 
 src_install() {
 	java-pkg_newjar target/${PN}*.jar ${PN}.jar
@@ -59,11 +60,5 @@ src_install() {
 }
 
 src_test() {
-	if ! use test; then
-		ewarn "You must USE=test in order to get the dependencies needed"
-		ewarn "to run tests"
-		ewarn "Skipping the tests"
-	else
-		eant test -Dnoget=true
-	fi
+	eant test -DJunit.present=true
 }
