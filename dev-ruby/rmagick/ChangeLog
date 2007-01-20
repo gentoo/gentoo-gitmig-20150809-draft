@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.33 2007/01/19 13:20:48 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.34 2007/01/20 14:59:56 nixnut Exp $
+
+  20 Jan 2007; nixnut <nixnut@gentoo.org> rmagick-1.14.1-r1.ebuild:
+  Stable on ppc wrt bug 162682
 
   19 Jan 2007; Ferris McCormick <fmccor@gentoo.org>
   rmagick-1.14.1-r1.ebuild:
