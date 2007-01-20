@@ -1,16 +1,16 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scheme48/scheme48-1.3-r1.ebuild,v 1.3 2007/01/06 12:35:33 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scheme48/scheme48-1.3-r1.ebuild,v 1.4 2007/01/20 06:35:36 araujo Exp $
 
-inherit elisp-common multilib eutils
+inherit elisp-common multilib eutils flag-o-matic
 
 DESCRIPTION="Scheme48 is an implementation of the Scheme Programming Language."
 HOMEPAGE="http://www.s48.org/"
-SRC_URI="http://www.s48.org/1.3/${P}.tgz"
+SRC_URI="http://www.s48.org/${PV}/${P}.tgz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 -amd64"
+KEYWORDS="~x86 ~amd64"
 IUSE="doc emacs"
 
 DEPEND=""
@@ -32,6 +32,7 @@ src_unpack() {
 }
 
 src_compile() {
+	use amd64 && append-flags "-m32"
 	econf || die "econf failed"
 	emake || die "emake failed"
 	if use emacs; then

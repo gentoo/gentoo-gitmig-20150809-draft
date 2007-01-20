@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/scheme48
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scheme48/ChangeLog,v 1.5 2007/01/20 06:28:20 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scheme48/ChangeLog,v 1.6 2007/01/20 06:35:36 araujo Exp $
+
+  20 Jan 2007; Luis F. Araujo <araujo@gentoo.org> scheme48-1.3-r1.ebuild:
+  Adding support for amd64
 
 *scheme48-1.5 (20 Jan 2007)
 
