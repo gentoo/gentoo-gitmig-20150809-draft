@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Email-Find
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Find/ChangeLog,v 1.17 2007/01/15 22:59:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Find/ChangeLog,v 1.18 2007/01/20 21:15:47 mcummings Exp $
+
+*Email-Find-0.10 (20 Jan 2007)
+
+  20 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  +Email-Find-0.10.ebuild:
+  Version bump
 
   15 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   Email-Find-0.09.ebuild:
