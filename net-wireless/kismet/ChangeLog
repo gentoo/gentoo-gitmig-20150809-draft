@@ -1,6 +1,15 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.90 2007/01/14 19:40:09 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.91 2007/01/20 13:04:26 phreak Exp $
+
+*kismet-2007.01.1b (20 Jan 2007)
+
+  20 Jan 2007; Christian Heim <phreak@gentoo.org>
+  +files/kismet-2007.01.1b-Makefile.in.patch,
+  +files/kismet-2007.01.1b-conf.d, +files/kismet-2007.01.1b-init.d,
+  +kismet-2007.01.1b.ebuild:
+  Version bump (thanks to ChazeFroy <chazefroy at gmail.com> in #162394 for
+  reporting it).
 
   14 Jan 2007; Christian Heim <phreak@gentoo.org> kismet-2006.04.1.ebuild:
   Fixing the --with-linuxheaders line, to actually get the include dir right.
