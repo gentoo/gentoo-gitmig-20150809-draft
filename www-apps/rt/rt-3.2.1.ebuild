@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.2.1.ebuild,v 1.11 2007/01/10 21:36:03 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.2.1.ebuild,v 1.12 2007/01/20 14:42:43 mcummings Exp $
 
 inherit webapp eutils
 
@@ -62,11 +62,11 @@ RDEPEND="
 	mysql? ( >=dev-perl/DBD-mysql-2.0416 )
 	postgres? ( dev-perl/DBD-Pg )
 	fastcgi? ( dev-perl/FCGI )
-	!fastcgi? ( =www-apache/libapreq-1* )
+	!fastcgi? ( =www-misc/libapreq-1* )
 	=net-www/apache-1*
 "
 #	apache2? ( >=net-www/apache-2 dev-perl/FCGI net-www/mod_fastcgi )
-#	!apache2? ( =net-www/apache-1* =www-apache/libapreq-1* )
+#	!apache2? ( =net-www/apache-1* =www-misc/libapreq-1* )
 
 LICENSE="GPL-2"
 

@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-0.6.ebuild,v 1.13 2006/07/09 20:44:18 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-0.6.ebuild,v 1.14 2007/01/20 14:43:56 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Apache gallery for mod_perl"
 SRC_URI="http://cpan.org/modules/by-module/Apache/${P}.tar.gz"
-HOMEPAGE="http://search.cpan.org/author/LEGART/${P}"
+HOMEPAGE="http://search.cpan.org/~legart/"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
@@ -15,7 +15,7 @@ IUSE=""
 
 
 DEPEND="${DEPEND}
-	>=www-apache/libapreq-1.0
+	>=www-misc/libapreq-1.0
 	>=media-libs/imlib2-1.0.6-r1
 	>=www-apache/mod_perl-1.27-r1
 	>=dev-perl/ImageInfo-1.04-r2

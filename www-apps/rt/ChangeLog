@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.48 2007/01/10 21:36:03 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.49 2007/01/20 14:42:43 mcummings Exp $
+
+  20 Jan 2007; Michael Cummings <mcummings@gentoo.org> rt-3.2.1.ebuild:
+  Changed libapreq dep to new location, bug 162120
 
   10 Jan 2007; Christian Heim <phreak@gentoo.org> rt-3.2.1.ebuild,
   rt-3.4.5.ebuild, rt-3.6.3.ebuild:
