@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-3.5.1.ebuild,v 1.2 2007/01/17 00:23:40 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-3.5.1.ebuild,v 1.3 2007/01/20 12:18:19 corsair Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://suckless.org/download/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE=""
 
 DEPEND="sys-libs/libixp

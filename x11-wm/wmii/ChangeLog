@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/wmii
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/ChangeLog,v 1.14 2007/01/17 00:23:40 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/ChangeLog,v 1.15 2007/01/20 12:18:19 corsair Exp $
+
+  20 Jan 2007; Markus Rothe <corsair@gentoo.org> wmii-3.5.1.ebuild:
+  Added ~ppc64
 
   17 Jan 2007; David Shakaryan <omp@gentoo.org> wmii-3.5.1.ebuild:
   Fix sed expression. (bug #160328)
