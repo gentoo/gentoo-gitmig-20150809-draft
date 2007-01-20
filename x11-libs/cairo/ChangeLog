@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.98 2007/01/08 01:29:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.99 2007/01/20 20:23:54 cardoe Exp $
+
+*cairo-1.3.12 (20 Jan 2007)
+
+  20 Jan 2007; Doug Goldstein <cardoe@gentoo.org> +cairo-1.3.12.ebuild:
+  new snapshot rev bump
 
   07 Jan 2007; Doug Goldstein <cardoe@gentoo.org> cairo-1.2.6.ebuild,
   cairo-1.3.10.ebuild:
