@@ -1,6 +1,15 @@
 # ChangeLog for sys-cluster/util-vserver
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/ChangeLog,v 1.68 2006/12/21 22:37:48 phreak Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/ChangeLog,v 1.69 2007/01/20 12:35:49 phreak Exp $
+
+  20 Jan 2007; Christian Heim <phreak@gentoo.org>
+  util-vserver-0.30.212.ebuild:
+  Dropping the explicit DEPEND/RDEPEND on sys-process/procps, as that is already
+  contained in base/packages (thus the system target on all arches). Moving away
+  from the extra ugly myconf-stuff, putting it all in econf's hand. Unifying
+  `make install' and `make install-distribution'. Adjusting the pkg_postinst to
+  use elog instead of einfo. Adding a hint, if upgrading to >0.30.211, as the
+  init-scripts changed.
 
   21 Dec 2006; Christian Heim <phreak@gentoo.org>
   util-vserver-0.30.210-r13.ebuild, util-vserver-0.30.211.ebuild,
