@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-1.55.ebuild,v 1.6 2005/08/03 22:12:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-1.70.ebuild,v 1.1 2007/01/20 14:55:18 spock Exp $
 
 inherit mount-boot eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.memtest.org/download/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 IUSE="serial"
 RESTRICT="test"
 
@@ -20,8 +20,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# send the DOS newlines where they belong - /dev/null ;>
-	sed -e 's/\x0d//g' -i Makefile || die
 	epatch "${FILESDIR}"/${PN}-1.50-hardened.patch
 	if use serial ; then
 		sed -e 's/#define SERIAL_CONSOLE_DEFAULT 0/#define SERIAL_CONSOLE_DEFAULT 1/' -i config.h
@@ -43,32 +41,24 @@ pkg_postinst() {
 	einfo "memtest.bin has been installed in /boot/memtest86plus/"
 	einfo "You may wish to update your bootloader configs"
 	einfo "by adding these lines:"
-	einfo " - For grub:"
-	einfo "    > title=Memtest86Plus"
 
 	# a little magic to make users' life as easy as possible ;)
 	local fstab=${ROOT}/etc/fstab
-	bootpart=0
-	root="(hd0,0)"
-	res=$(awk '$2 == "/boot" {print $1}' "${fstab}")
-	if [ -n "${res}" ] ; then
-		bootpart=1
-	else
-		res=`grep -v '^#' "${fstab}" | grep -e '/dev/hd[a-z0-9]\+[[:space:]]\+\/[[:space:]]\+' | \
-			awk '{print $1}'`
+	local root="(hd0,0)"
+	local res=$(awk '$2 == "/boot" {print $1}' "${fstab}")
+	if [[ -z ${res} ]] ; then
+		res=$(awk '$2 == "/" {print $1}' "${fstab}")
 	fi
-
-	if [ -n "${res}" ] ; then
-		root=`echo "${res}" | grep -o '[a-z][0-9]' | tr -t a-z 0123456789 | \
-			  sed -e 's/\([0-9]\)\([0-9]\)/\1 \2/' | awk '{print "(hd" $1 "," $2-1 ")" }'`
+	if [[ -n ${res} ]] ; then
+		# transform /dev/hd* magic into grub naming ...
+		#        /dev/hda1   ->         a1          ->      01
+		root=$(echo "${res}" | grep -o '[a-z][0-9]' | tr -t a-z 0123456789)
+		root="(hd${root:0:1},$((${root:1:1}-1)))"
 	fi
-
+	einfo " - For grub:"
+	einfo "    > title=Memtest86Plus"
 	einfo "    > root ${root}"
-	if [ "${bootpart}" -eq 1 ] ; then
-		einfo "    > kernel /memtest86plus/memtest.bin"
-	else
-		einfo "    > kernel /boot/memtest86plus/memtest.bin"
-	fi
+	einfo "    > kernel /boot/memtest86plus/memtest.bin"
 
 	einfo " - For lilo:"
 	einfo "    > image  = /boot/memtest86plus/memtest.bin"
