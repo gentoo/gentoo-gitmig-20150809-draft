@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc3-postgresql
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-postgresql/ChangeLog,v 1.14 2006/10/27 00:02:00 caster Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-postgresql/ChangeLog,v 1.15 2007/01/20 20:32:17 corsair Exp $
+
+  20 Jan 2007; Markus Rothe <corsair@gentoo.org>
+  jdbc3-postgresql-8.1_p404-r1.ebuild:
+  Added ~ppc64
 
   27 Oct 2006; Vlastimil Babka <caster@gentoo.org>
   jdbc3-postgresql-8.1_p404-r1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jcifs
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcifs/ChangeLog,v 1.3 2005/05/14 21:55:34 luckyduck Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcifs/ChangeLog,v 1.4 2007/01/20 20:29:30 corsair Exp $
+
+  20 Jan 2007; Markus Rothe <corsair@gentoo.org> jcifs-1.1.5.ebuild:
+  Added ~ppc64
 
   14 May 2005; Jan Brinkmann <luckyduck@gentoo.org> jcifs-1.1.5.ebuild:
   added ~ppc to KEYWORDS
