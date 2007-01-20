@@ -103,6 +103,7 @@ net-wireless
 net-www
 net-zope
 perl-core
+perl-gcpan
 rox-base
 rox-extra
 sci-astronomy
