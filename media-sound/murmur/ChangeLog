@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/murmur
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.1 2007/01/20 17:17:03 drizzt Exp $
+
+*murmur-0.9.4 (20 Jan 2007)
+
+  20 Jan 2007; Timothy Redaelli <drizzt@gentoo.org> +files/murmur.confd,
+  +files/murmur.rc, +metadata.xml, +murmur-0.9.4.ebuild:
+  New ebuild, mumble server (murmur) wrt bug #155517.
+

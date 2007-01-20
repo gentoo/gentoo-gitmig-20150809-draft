@@ -1,0 +1,12 @@
+# where to look for config files
+MURMUR_CONFDIR=/etc/murmur
+
+# were to log
+MURMUR_LOGFILE=/var/log/murmur.log
+
+# run as this user
+MURMUR_USER=murmur
+
+# HOME directory of MURMUR_USER
+# needs to be set for start-stop-daemon!
+MURMUR_HOMEDIR=/var/lib/murmur

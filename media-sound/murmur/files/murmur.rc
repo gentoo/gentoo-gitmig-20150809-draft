@@ -1,0 +1,27 @@
+#!/sbin/runscript
+
+depend() {
+	need net
+	need localmount
+	after bootmisc
+}
+
+start() {
+	ebegin "Starting Murmur voice chat server"
+	start-stop-daemon --start --make-pidfile --pidfile /var/run/murmur.pid \
+		--chuid $MURMUR_USER --env HOME=$MURMUR_HOMEDIR \
+		--exec /usr/bin/murmur -- -ini $MURMUR_CONFDIR/murmur.ini &> $MURMUR_LOGFILE &
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Murmur voice chat server"
+	start-stop-daemon --stop --exec /usr/bin/murmur \
+		--pidfile /var/run/murmur.pid
+	eend $?
+	#rm /var/run/murmur.pid
+}
+
+#restart() {
+#  #(Commands necessary to restart the service)
+#}
