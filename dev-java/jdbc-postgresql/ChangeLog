@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc-postgresql
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.5 2007/01/10 17:12:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.6 2007/01/20 09:36:31 corsair Exp $
+
+  20 Jan 2007; Markus Rothe <corsair@gentoo.org>
+  jdbc-postgresql-8.2_p504.ebuild:
+  Added ~ppc64 (dep from dev-db/jxtray)
 
   10 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   jdbc-postgresql-8.2_p504.ebuild:

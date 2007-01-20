@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jtds
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jtds/ChangeLog,v 1.7 2006/01/04 00:19:01 betelgeuse Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jtds/ChangeLog,v 1.8 2007/01/20 09:38:19 corsair Exp $
+
+  20 Jan 2007; Markus Rothe <corsair@gentoo.org> jtds-0.9.1.ebuild:
+  Added ~ppc64 (dep from dev-db/jxtray)
 
   04 Jan 2006; Petteri Räty <betelgeuse@gentoo.org> -jtds-1.0.2.ebuild:
   Removed old version.
