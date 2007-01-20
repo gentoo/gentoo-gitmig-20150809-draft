@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.3.6.ebuild,v 1.1 2007/01/06 21:56:19 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.3.6.ebuild,v 1.2 2007/01/20 04:32:07 hanno Exp $
 
 inherit eutils gnome2
 
@@ -21,12 +21,16 @@ DEPEND=">=media-libs/mesa-6.5.1-r1
 	x11-libs/libXinerama
 	media-libs/libpng
 	>=x11-libs/gtk+-2.0
+	x11-libs/startup-notification
 	gnome? ( >=x11-libs/libwnck-2.16.1
 		>=gnome-base/control-center-2.16.1 )
 	svg? ( gnome-base/librsvg )
-	dbus? ( sys-apps/dbus
-		>dev-libs/glib-2 )
-	kde? ( kde-base/kdelibs )"
+	dbus? ( >=sys-apps/dbus-1.0
+		>dev-libs/glib-2
+		kde? ( dev-libs/dbus-qt3-old ) )
+	kde? (
+	|| ( kde-base/kwin kde-base/kdebase )
+	)"
 
 src_compile() {
 	econf --with-default-plugins \
@@ -43,7 +47,6 @@ src_compile() {
 }
 
 src_install() {
-	dobin ${FILESDIR}/compiz-{aiglx,xgl,nvidia}
 	dobin ${FILESDIR}/${PV}/compiz-start
 
 	gnome2_src_install
