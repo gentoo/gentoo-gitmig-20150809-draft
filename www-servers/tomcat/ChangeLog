@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.104 2007/01/10 21:06:33 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.105 2007/01/20 16:54:57 wltjr Exp $
+
+*tomcat-6.0.8_alpha (20 Jan 2007)
+*tomcat-6.0.7_beta-r3 (20 Jan 2007)
+
+  20 Jan 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -tomcat-6.0.7_beta-r2.ebuild, +tomcat-6.0.7_beta-r3.ebuild,
+  +tomcat-6.0.8_alpha.ebuild:
+  Bumped 6 to latest alpha, and dropped jni use flag. Due to it pulling in dep
+  when USE flag is set, but dep still being installed when USE flag is unset.
 
 *tomcat-6.0.7_beta-r2 (10 Jan 2007)
 *tomcat-5.5.20-r8 (10 Jan 2007)
