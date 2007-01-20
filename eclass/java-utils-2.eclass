@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.44 2007/01/20 11:14:31 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.45 2007/01/20 20:50:33 betelgeuse Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -1403,9 +1403,8 @@ eant() {
 		antflags="${antflags} -Dbuild.sysclasspath=ignore"
 	fi
 
-	if [[ -n ${JAVA_PKG_DEBUG} ]]; then
-		antflags="${antflags} -debug"
-	fi
+	[[ -n ${JAVA_PKG_DEBUG} ]] && antflags="${antflags} -debug"
+	[[ -n ${PORTAGE_QUIET} ]] && antflags="${antflags} -q"
 
 	local gcp="${EANT_GENTOO_CLASSPATH}"
 
