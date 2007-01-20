@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dietlibc
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.64 2006/10/16 02:55:11 weeve Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.65 2007/01/20 23:45:46 phreak Exp $
+
+  20 Jan 2007; Christian Heim <phreak@gentoo.org> dietlibc-0.30-r2.ebuild:
+  Moving dietlibc-0.30-r2 stable on amd64 and x86.
 
   16 Oct 2006; Jason Wever <weeve@gentoo.org> dietlibc-0.30.ebuild:
   Stable on SPARC.
