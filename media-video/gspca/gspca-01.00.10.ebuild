@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gspca/gspca-01.00.10.ebuild,v 1.1 2006/12/25 08:23:16 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gspca/gspca-01.00.10.ebuild,v 1.2 2007/01/20 06:55:03 kingtaco Exp $
 
 inherit linux-mod
 
-S="${WORKDIR}/gspcav1-${PV}"
+S="${WORKDIR}/${P}/gspcav2"
 DESCRIPTION="gspca driver for webcams."
 HOMEPAGE="http://mxhaard.free.fr/spca5xx.html"
 #http://mxhaard.free.fr/spca50x/Investigation/Gspca/gspcav1-01.00.10.tar.gz
@@ -21,8 +21,10 @@ MODULE_NAMES="gspca(usb/video:)"
 BUILD_TARGETS="default"
 CONFIG_CHECK="VIDEO_DEV"
 
+
 pkg_setup() {
-	S="${WORKDIR}/${P}/gspcav2"
+	eeinfo "The package maintainer made a mistake.  You should consider using media-video/gspca"
+	eeinfo "instead.  This driver is still alpha.  --KingTaco"
 	linux-mod_pkg_setup
 	BUILD_PARAMS="KERNELDIR=${KV_DIR}"
 }

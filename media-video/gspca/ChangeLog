@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gspca
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gspca/ChangeLog,v 1.2 2007/01/01 22:05:22 swegener Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/gspca/ChangeLog,v 1.3 2007/01/20 06:55:03 kingtaco Exp $
+
+  20 Jan 2007; Mike Doty <kingtaco@gentoo.org> gspca-01.00.10.ebuild:
+  Add notice to use media-video/gspca instead.  Fixed QA redef of ${S}
 
 *gspca-01.00.10 (25 Dec 2006)
 
