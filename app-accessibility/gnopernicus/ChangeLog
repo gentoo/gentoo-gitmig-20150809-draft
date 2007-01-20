@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gnopernicus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/ChangeLog,v 1.98 2007/01/14 14:48:38 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/ChangeLog,v 1.99 2007/01/20 12:24:29 jer Exp $
+
+  20 Jan 2007; Jeroen Roovers <jer@gentoo.org> gnopernicus-1.0.7.ebuild:
+  Stable for HPPA (bug #156662).
 
   14 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
   gnopernicus-1.0.7.ebuild:
