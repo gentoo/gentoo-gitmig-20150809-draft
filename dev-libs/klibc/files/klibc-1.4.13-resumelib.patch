@@ -1,0 +1,13 @@
+Index: klibc-1.4.13/usr/kinit/resume/resumelib.c
+===================================================================
+--- klibc-1.4.13.orig/usr/kinit/resume/resumelib.c
++++ klibc-1.4.13/usr/kinit/resume/resumelib.c
+@@ -12,7 +12,7 @@
+ #include <limits.h>
+ #include <sys/stat.h>
+ #include <sys/sysmacros.h>
+-#include <linux/config.h>	/* For CONFIG_PM_STD_PARTITION */
++#include <linux/autoconf.h>	/* For CONFIG_PM_STD_PARTITION */
+ 
+ #include "kinit.h"
+ #include "do_mounts.h"

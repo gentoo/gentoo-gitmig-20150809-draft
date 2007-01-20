@@ -1,9 +1,0 @@
-diff -Naurp klibc-1.1.16.orig/klibc/arch/mips/MCONFIG klibc-1.1.16/klibc/arch/mips/MCONFIG
---- klibc-1.1.16.orig/klibc/arch/mips/MCONFIG	2006-01-06 01:11:43 -0500
-+++ klibc-1.1.16/klibc/arch/mips/MCONFIG	2006-01-26 04:24:46 -0500
-@@ -12,4 +12,4 @@ OPTFLAGS     = -Os
- BITSIZE      = 32
- 
- # Extra linkflags when building the shared version of the library
--SHAREDFLAGS	= -T arch/$(ARCH)/klibc.ld
-+SHAREDFLAGS	= -T klibc/arch/$(ARCH)/klibc.ld

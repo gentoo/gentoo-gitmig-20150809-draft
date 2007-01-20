@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.4.13.ebuild,v 1.1 2006/07/27 07:25:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.4.13.ebuild,v 1.2 2007/01/20 10:58:43 phreak Exp $
 
 inherit eutils linux-info multilib
 
@@ -64,6 +64,8 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+
+	epatch "${FILESDIR}"/${P}-resumelib.patch
 
 	if [[ ! -d /usr/${CTARGET} ]] ; then
 		echo
