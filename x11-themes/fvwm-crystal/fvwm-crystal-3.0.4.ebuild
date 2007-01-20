@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-3.0.4.ebuild,v 1.3 2007/01/19 21:39:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-3.0.4.ebuild,v 1.4 2007/01/20 13:57:16 nixnut Exp $
 
 DESCRIPTION="Configurable and full featured theme for FVWM, with lots of transparency."
 HOMEPAGE="http://fvwm-crystal.org/"
 SRC_URI="http://download.gna.org/${PN}/${PV}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ppc64 sparc ~x86"
+KEYWORDS="~amd64 ppc ppc64 sparc ~x86"
 IUSE=""
 RDEPEND=">=x11-wm/fvwm-2.5.13
 	media-gfx/imagemagick
