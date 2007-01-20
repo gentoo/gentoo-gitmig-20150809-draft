@@ -1,6 +1,10 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.19 2007/01/18 18:17:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.20 2007/01/20 09:12:06 compnerd Exp $
+
+  20 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  sparc64/2006.1/2.4/package.mask:
+  Mask >=glade-3.1.4 as it needs GNOME 2.16+
 
   18 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   -sparc32/dev/make.defaults, -sparc32/dev/use.mask:
