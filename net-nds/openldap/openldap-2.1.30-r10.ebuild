@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.30-r10.ebuild,v 1.12 2007/01/16 23:59:56 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.30-r10.ebuild,v 1.13 2007/01/20 10:44:39 jokey Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
@@ -74,7 +74,7 @@ src_unpack() {
 
 	# supersedes old fix for bug #31202
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-2.1.27-perlthreadsfix.patch
+	epatch "${PATCHDIR}"/${PN}-2.1.27-perlthreadsfix.patch
 
 	# fix up stuff for newer autoconf that simulates autoconf-2.13, but doesn't
 	# do it perfectly.

@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.256 2007/01/19 20:06:12 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.257 2007/01/20 10:44:39 jokey Exp $
+
+  20 Jan 2007; Markus Ullmann <jokey@gentoo.org> openldap-2.1.30-r10.ebuild:
+  Fix a patch call
 
 *openldap-2.3.33 (19 Jan 2007)
 
