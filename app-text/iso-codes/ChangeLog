@@ -1,6 +1,9 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.31 2007/01/16 15:13:28 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.32 2007/01/20 12:03:40 jer Exp $
+
+  20 Jan 2007; Jeroen Roovers <jer@gentoo.org> iso-codes-0.58.ebuild:
+  Stable for HPPA (bug #156662).
 
   16 Jan 2007; Roy Marples <uberlord@gentoo.org> iso-codes-0.58.ebuild:
   Added ~x86-fbsd keyword.
