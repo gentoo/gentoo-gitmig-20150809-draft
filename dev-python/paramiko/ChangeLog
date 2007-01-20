@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/paramiko
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.19 2007/01/18 15:00:37 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.20 2007/01/20 22:45:03 jer Exp $
+
+  20 Jan 2007; Jeroen Roovers <jer@gentoo.org> paramiko-1.6.3.ebuild:
+  Marked ~hppa.
 
   18 Jan 2007; Ferris McCormick <fmccor@gentoo.org> paramiko-1.6.3.ebuild:
   Add ~sparc keyword.  Builds, runs all tests, and installs without any problems.
