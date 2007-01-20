@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Audio-DSP
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-DSP/ChangeLog,v 1.1 2007/01/20 16:50:45 mcummings Exp $
+
+*Audio-DSP-0.02 (20 Jan 2007)
+
+  20 Jan 2007; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Audio-DSP-0.02.ebuild:
+  Bug 38163
+

@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Modem-Vgetty
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Modem-Vgetty/ChangeLog,v 1.1 2007/01/20 16:55:28 mcummings Exp $
+
+*Modem-Vgetty-0.03 (20 Jan 2007)
+
+  20 Jan 2007; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Modem-Vgetty-0.03.ebuild:
+  Bug 38163
+
