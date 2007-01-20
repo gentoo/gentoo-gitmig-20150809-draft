@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.322 2007/01/13 14:22:22 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.323 2007/01/20 10:37:05 masterdriverz Exp $
+
+  20 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  mm-sources-2.6.20_rc1-r1.ebuild, mm-sources-2.6.20_rc2-r1.ebuild,
+  mm-sources-2.6.20_rc3-r1.ebuild, mm-sources-2.6.20_rc4-r1.ebuild:
+  Remove unneeded RESTRICT="mirror"
 
 *mm-sources-2.6.20_rc4-r1 (13 Jan 2007)
 
