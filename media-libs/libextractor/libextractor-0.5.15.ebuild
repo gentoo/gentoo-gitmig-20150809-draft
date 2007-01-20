@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-0.5.15.ebuild,v 1.3 2007/01/16 12:17:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-0.5.15.ebuild,v 1.4 2007/01/20 21:29:07 armin76 Exp $
 
 inherit libtool
 
@@ -26,7 +26,7 @@ src_compile() {
 	elibtoolize
 	econf --enable-glib --enable-exiv2 \
 		$(use_enable static) $(use_enable nls) || die "econf failed"
-	emake MAKEOPTS"-j1" || die "emake failed"
+	emake MAKEOPTS="-j1" || die "emake failed"
 }
 
 src_install () {
