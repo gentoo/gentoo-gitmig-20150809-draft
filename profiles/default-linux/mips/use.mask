@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.74 2007/01/20 12:39:28 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.75 2007/01/20 16:40:49 eroyf Exp $
+
+# Alexander Færøy <eroyf@gentoo.org>
+# xcb -- unstested, masking for now.
+xcb
 
 # Alexander Færøy <eroyf@gentoo.org>
 # ldap -- untested, masking for now.
