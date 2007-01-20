@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gspca/gspca-01.00.10.ebuild,v 1.2 2007/01/20 06:55:03 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gspca/gspca-01.00.10.ebuild,v 1.3 2007/01/20 17:12:52 kingtaco Exp $
 
 inherit linux-mod
 
@@ -23,7 +23,7 @@ CONFIG_CHECK="VIDEO_DEV"
 
 
 pkg_setup() {
-	eeinfo "The package maintainer made a mistake.  You should consider using media-video/gspca"
+	eeinfo "The package maintainer made a mistake.  You should consider using media-video/gspcav1"
 	eeinfo "instead.  This driver is still alpha.  --KingTaco"
 	linux-mod_pkg_setup
 	BUILD_PARAMS="KERNELDIR=${KV_DIR}"
