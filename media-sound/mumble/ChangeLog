@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mumble
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/ChangeLog,v 1.1 2006/11/25 11:39:57 drizzt Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/ChangeLog,v 1.2 2007/01/20 17:14:43 drizzt Exp $
+
+  20 Jan 2007; Timothy Redaelli <drizzt@gentoo.org>
+  +files/mumble-0.9.4-missing_typedefs.patch, mumble-0.9.4.ebuild:
+  Add Gorch patch for missing typedefs on gcc 3, wrt bug #162912.
 
 *mumble-0.9.4 (25 Nov 2006)
 

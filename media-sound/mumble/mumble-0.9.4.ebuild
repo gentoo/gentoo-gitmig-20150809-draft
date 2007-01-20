@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-0.9.4.ebuild,v 1.1 2006/11/25 11:39:57 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-0.9.4.ebuild,v 1.2 2007/01/20 17:14:43 drizzt Exp $
 
 inherit eutils toolchain-funcs
 
@@ -35,6 +35,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-path.patch
+	epatch "${FILESDIR}"/${P}-missing_typedefs.patch
 }
 
 src_compile() {

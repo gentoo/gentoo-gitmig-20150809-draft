@@ -1,0 +1,14 @@
+diff -Naur mumble-0.9.4.orig/AudioStats.cpp mumble-0.9.4/AudioStats.cpp
+--- mumble-0.9.4.orig/AudioStats.cpp	2006-10-30 12:20:38.000000000 +0100
++++ mumble-0.9.4/AudioStats.cpp	2006-11-17 14:12:55.000000000 +0100
+@@ -38,7 +38,10 @@
+ typedef float spx_word16_t;
+ typedef float spx_word32_t;
+ typedef float spx_float_t;
++typedef long int spx_int32_t;
++typedef short int spx_int16_t;
+ typedef spx_word32_t spx_mem_t;
++
+ /** Speex echo cancellation state. */
+ struct CloneSpeexEchoState {
+    int frame_size;           /**< Number of samples processed each time */
