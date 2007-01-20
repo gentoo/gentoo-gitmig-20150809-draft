@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.20 2007/01/04 21:49:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.21 2007/01/20 09:07:26 compnerd Exp $
+
+  20 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  no-nptl/2.4/package.mask:
+  Mask >=glade-3.1.4 as it depends on GNOME 2.16+ things
 
   04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> use.mask:
   Revert masking of PHP binary useflags.
