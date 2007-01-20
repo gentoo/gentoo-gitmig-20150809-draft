@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libixp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/ChangeLog,v 1.3 2007/01/17 00:17:42 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/ChangeLog,v 1.4 2007/01/20 12:13:32 corsair Exp $
+
+  20 Jan 2007; Markus Rothe <corsair@gentoo.org> libixp-0.2-r1.ebuild:
+  Added ~ppc64
 
   17 Jan 2007; David Shakaryan <omp@gentoo.org> -libixp-0.2.ebuild,
   libixp-0.2-r1.ebuild:
