@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5.ebuild,v 1.20 2007/01/16 18:04:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5.ebuild,v 1.21 2007/01/20 11:06:23 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -16,7 +16,7 @@
 #  CHOST = CTARGET  - install into /
 #  CHOST != CTARGET - install into /usr/CTARGET/
 
-KEYWORDS="-* ~amd64 ~arm ~ia64 ~ppc ppc64 sh ~sparc ~x86"
+KEYWORDS="-* ~amd64 arm ~ia64 ~ppc ppc64 sh ~sparc ~x86"
 
 BRANCH_UPDATE=""
 
