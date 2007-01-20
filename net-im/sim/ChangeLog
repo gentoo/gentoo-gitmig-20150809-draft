@@ -1,12 +1,13 @@
 # ChangeLog for net-im/sim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.67 2007/01/20 20:49:34 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.68 2007/01/20 21:13:53 pva Exp $
 
 *sim-0.9.4.2 (20 Jan 2007)
 
   20 Jan 2007; <pva@gentoo.org> -sim-0.9.4.ebuild, +sim-0.9.4.2.ebuild:
   Version bump. Fixed major bug resulted in inability to receive messages from
-  other programs. See bug #162898 for details.
+  other programs. See bug #162898 for details. Thank Ikar <gorgo AT quick.cz>
+  and Vadim Kalinnikov <bulvinkl AT gmail.com> for report.
 
   09 Jan 2007; Andrej Kacian <ticho@gentoo.org> sim-0.9.4.1.ebuild:
   Stable on x86, bug #160034.
