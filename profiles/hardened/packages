@@ -1,14 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/packages,v 1.7 2005/02/09 17:12:53 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/packages,v 1.8 2007/01/20 14:24:22 phreak Exp $
 
 # This file extends the base packages file for the hardened profile.
 
-# Unmasked this for the next release cycle. -solar (Oct 02 2004)
-#<sys-libs/glibc-2.3.4
-
 *sys-apps/util-linux
-
-# gcc-3.4.3 seems to be unable to rebuild itself. (Jan 25 2005)
-# spb has confirmed that 3.4.3 is now able to bootstrap itself.
-#<sys-devel/gcc-3.4.3
