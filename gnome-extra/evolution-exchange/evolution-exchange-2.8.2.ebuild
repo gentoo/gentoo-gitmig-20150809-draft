@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-2.8.2.ebuild,v 1.1 2006/11/28 05:49:43 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-2.8.2.ebuild,v 1.2 2007/01/20 18:04:38 leio Exp $
 
 inherit gnome2 eutils autotools
 
@@ -28,6 +28,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1 )"
 
+DOCS="AUTHORS ChangeLog NEWS README"
 MAKEOPTS="${MAKEOPTS} -j1"
 
 pkg_setup() {
