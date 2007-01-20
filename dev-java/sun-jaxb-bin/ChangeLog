@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jaxb-bin
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jaxb-bin/ChangeLog,v 1.4 2006/12/14 11:40:38 nelchael Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jaxb-bin/ChangeLog,v 1.5 2007/01/20 17:42:37 nelchael Exp $
+
+  20 Jan 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  sun-jaxb-bin-2.0-r2.ebuild:
+  Add sun-jaf to DEPEND.
 
 *sun-jaxb-bin-2.0-r2 (14 Dec 2006)
 
