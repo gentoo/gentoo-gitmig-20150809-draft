@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.3-r2.ebuild,v 1.2 2007/01/18 20:13:11 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.3-r2.ebuild,v 1.3 2007/01/20 16:03:26 phreak Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib autotools
 
@@ -93,7 +93,7 @@ src_unpack() {
 	EPATCH_SUFFIX="patch"
 	epatch "${GENTOO_PATCHDIR}"/patches/[0-1]*
 	if $(ls "${GENTOO_PATCHDIR}"/patches/[2-3]?_*_${mpm}_* &>/dev/null) ; then
-		epatch "${GENTOO_PATCHDIR}"/p6atches/[2-3]?_*_${mpm}_*
+		epatch "${GENTOO_PATCHDIR}"/patches/[2-3]?_*_${mpm}_*
 	fi
 	for uf in ${IUSE} ; do
 		if use ${uf} && $(ls "${GENTOO_PATCHDIR}"/patches/[4-5]?_*_${uf}_* &>/dev/null) ; then
