@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.35.ebuild,v 1.4 2006/12/24 00:28:51 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.35.ebuild,v 1.5 2007/01/20 14:41:19 mcummings Exp $
 
 inherit perl-module
 
@@ -18,7 +18,7 @@ DEPEND="!modperl? ( virtual/perl-CGI )
 	modperl? (
 		!apache2? (
 			=net-www/apache-1*
-			>=www-apache/libapreq-1.0-r2
+			>=www-misc/libapreq-1.0-r2
 			<www-apache/mod_perl-2 )
 		apache2? (
 			>=net-www/apache-2
