@@ -1,0 +1,117 @@
+diff -Nur ion3-20061020.orig/man/ion3.cs.in ion3-20061020/man/ion3.cs.in
+--- ion3-20061020.orig/man/ion3.cs.in	2006-10-20 17:43:37.000000000 +0200
++++ ion3-20061020/man/ion3.cs.in	2006-10-23 20:42:12.000000000 +0200
+@@ -81,6 +81,10 @@
+ 
+ .SS Globální pøiøazení
+ 
++BINDINGS:WFrame
++
++.SS Pøiøazení pro pøesun/zmìnu velikosti
++
+ BINDINGS:WScreen
+ 
+ .SS Pøiøazení pro práci s nejvy¹¹ími rámy a obrazovkami a jejich potomky
+diff -Nur ion3-20061020.orig/man/ion3.fi.in ion3-20061020/man/ion3.fi.in
+--- ion3-20061020.orig/man/ion3.fi.in	2006-10-20 17:43:36.000000000 +0200
++++ ion3-20061020/man/ion3.fi.in	2006-10-23 20:42:12.000000000 +0200
+@@ -84,6 +84,10 @@
+ 
+ .SS Yleisesti saatavilla olevat sidonnat
+ 
++BINDINGS:WFrame
++
++.SS Siirto ja koonmuutostilan sidonnat
++
+ BINDINGS:WScreen
+ 
+ .SS Näytöillä tai ylimmän tason kehyksissä toimivat sidonnat
+diff -Nur ion3-20061020.orig/man/ion3.in ion3-20061020/man/ion3.in
+--- ion3-20061020.orig/man/ion3.in	2006-10-20 17:43:36.000000000 +0200
++++ ion3-20061020/man/ion3.in	2006-10-23 20:42:12.000000000 +0200
+@@ -82,6 +82,10 @@
+ 
+ .SS Globally available bindings
+ 
++BINDINGS:WFrame
++
++.SS Move/resize mode bindings
++
+ BINDINGS:WScreen
+ 
+ .SS Bindings operating on top-level frames and screens and their children
+diff -Nur ion3-20061020.orig/man/pwm3.cs.in ion3-20061020/man/pwm3.cs.in
+--- ion3-20061020.orig/man/pwm3.cs.in	2006-10-20 17:43:36.000000000 +0200
++++ ion3-20061020/man/pwm3.cs.in	2006-10-23 20:42:12.000000000 +0200
+@@ -56,6 +56,10 @@
+ 
+ .SS Globální pøiøazení
+ 
++BINDINGS:WFrame
++
++.SS Pøiøazení pro pøesun/zmìnu velikosti
++
+ BINDINGS:WScreen
+ 
+ .".SS Pøiøazení pro práci s rámy, obrazovkami a jejich potomky
+@@ -64,10 +68,6 @@
+ 
+ .SS Pøiøazení pro práci s rámy a jejich potomky
+ 
+-BINDINGS:WFrame
+-
+-.SS Pøiøazení pro pøesun/zmìnu velikosti
+-
+ BINDINGS:WMoveresMode
+ 
+ .SS Pøiøazení pro plovoucí pracovní plochy [mod_floatws]
+diff -Nur ion3-20061020.orig/man/pwm3.fi.in ion3-20061020/man/pwm3.fi.in
+--- ion3-20061020.orig/man/pwm3.fi.in	2006-10-20 17:43:36.000000000 +0200
++++ ion3-20061020/man/pwm3.fi.in	2006-10-23 20:42:12.000000000 +0200
+@@ -57,6 +57,10 @@
+ 
+ .SS Yleisesti saatavilla olevat sidonnat
+ 
++BINDINGS:WFrame
++
++.SS Siirto ja koonmuutostilan sidonnat
++
+ BINDINGS:WScreen
+ 
+ .\".SS Kehyksiä ja näyttöjä, sekä niiden lapsia käsittelevät sidonnat
+@@ -65,10 +69,6 @@
+ 
+ .SS Kehyksiä, sekä niiden lapsia käsittelevät sidonnat
+ 
+-BINDINGS:WFrame
+-
+-.SS Siirto ja koonmuutostilan sidonnat
+-
+ BINDINGS:WMoveresMode
+ 
+ .SS Kelluvien työpöytien ja kehyksien sidonnat [mod_floatws]
+diff -Nur ion3-20061020.orig/man/pwm3.in ion3-20061020/man/pwm3.in
+--- ion3-20061020.orig/man/pwm3.in	2006-10-20 17:43:36.000000000 +0200
++++ ion3-20061020/man/pwm3.in	2006-10-23 20:42:12.000000000 +0200
+@@ -57,6 +57,10 @@
+ 
+ .SS Globally available bindings
+ 
++BINDINGS:WFrame
++
++.SS Move/resize mode bindings
++
+ BINDINGS:WScreen
+ 
+ .".SS Bindings operating on both frames and screens and their children
+@@ -65,10 +69,6 @@
+ 
+ .SS Bindings operating on frames and their children
+ 
+-BINDINGS:WFrame
+-
+-.SS Move/resize mode bindings
+-
+ BINDINGS:WMoveresMode
+ 
+ .SS Bindings for floating workspaces and frames [mod_floatws]
