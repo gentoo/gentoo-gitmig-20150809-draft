@@ -10,7 +10,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-ant-2.eclass,v 1.12 2007/01/12 14:03:16 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-ant-2.eclass,v 1.13 2007/01/20 22:27:34 betelgeuse Exp $
 
 inherit java-utils-2
 
@@ -20,6 +20,7 @@ inherit java-utils-2
 
 # We need some tools from javatoolkit. We also need portage 2.1 for phase hooks
 DEPEND=">=dev-java/javatoolkit-0.1.5 ${JAVA_PKG_PORTAGE_DEP}"
+[[ "${JAVA_ANT_DISABLE_ANT_CORE_DEP:-true}" ]] || DEPEND="${DEPEND} dev-java/ant-core"
 
 # ------------------------------------------------------------------------------
 # @global JAVA_PKG_BSFIX
@@ -71,6 +72,8 @@ JAVA_PKG_BSFIX_SOURCE_TAGS=${JAVA_PKG_BSFIX_SOURCE_TAGS:-"javadoc javac xjavac j
 # @public java-ant_src_unpack
 #
 # Unpacks the source, and attempts to fix build files.
+# variable JAVA_ANT_IGNORE_SYSTEM_CLASSES:
+#	ignore ant classpath in available tasks
 # ------------------------------------------------------------------------------
 post_src_unpack() {
 	if java-pkg_func-exists ant_src_unpack; then
@@ -78,6 +81,8 @@ post_src_unpack() {
 		ant_src_unpack
 	fi
 	java-ant_bsfix
+	[[ "${JAVA_ANT_IGNORE_SYSTEM_CLASSES}" ]] \
+		&& java-ant_ignore-system-classes "${S}/build.xml"
 }
 
 # ------------------------------------------------------------------------------
