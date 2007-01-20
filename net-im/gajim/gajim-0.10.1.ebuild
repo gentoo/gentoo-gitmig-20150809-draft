@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.10.1.ebuild,v 1.13 2007/01/06 16:05:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.10.1.ebuild,v 1.14 2007/01/20 10:22:17 welp Exp $
 
 inherit virtualx multilib eutils
 
@@ -16,7 +16,15 @@ IUSE="dbus gnome libnotify nls spell srv"
 RDEPEND="!<=dev-python/gnome-python-2
 	>=dev-python/pygtk-2.8.2
 	>=dev-python/pysqlite-2.0.5
-	dbus? ( >=sys-apps/dbus-0.60 )
+	dbus? (
+		|| (
+			( >=sys-apps/dbus-0.90
+				dev-python/dbus-python
+				dev-libs/dbus-glib
+			)
+			( <sys-apps/dbus-0.90 )
+		)
+	)
 	gnome? ( >=dev-python/gnome-python-extras-2.10 )
 	libnotify? ( x11-misc/notification-daemon )
 	srv? ( net-dns/bind-tools )"
@@ -27,11 +35,12 @@ DEPEND="dev-util/intltool
 	input_devices_keyboard? ( x11-libs/libXScrnSaver )"
 
 pkg_setup() {
-	if use dbus && ! built_with_use sys-apps/dbus python; then
-		eerror "Please rebuild dbus with USE=\"python\"."
-		die "Python D-bus support missing."
+	if use dbus; then
+		if has_version "<sys-apps/dbus-0.90" && ! built_with_use sys-apps/dbus python; then
+			eerror "Please rebuild dbus with USE=\"python\"."
+			die "Python D-bus support missing."
+		fi
 	fi
-
 	if use libnotify && ! use dbus; then
 		eerror "With libnotify useflag, you must also enable dbus useflag."
 		die "Please enable dbus useflag."
