@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kode/ChangeLog,v 1.52 2007/01/17 18:42:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kode/ChangeLog,v 1.53 2007/01/20 00:30:31 carlo Exp $
+
+  20 Jan 2007; Carsten Lohrke <carlo@gentoo.org> kode-3.5.6.ebuild:
+  Correct MAXKDEVER.
 
   17 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Tarball was refreshed, regenerate digest.
