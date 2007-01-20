@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/treewm/treewm-0.4.5.ebuild,v 1.10 2006/12/12 23:46:29 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/treewm/treewm-0.4.5.ebuild,v 1.11 2007/01/20 18:41:04 omp Exp $
 
 DESCRIPTION="WindowManager that arranges the windows in a tree (not in a list)"
 SRC_URI="mirror://sourceforge/treewm/${P}.tar.bz2"
@@ -10,13 +10,15 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc ppc"
 IUSE=""
 
-DEPEND="x11-proto/xf86vidmodeproto
-	x11-libs/libXau
+RDEPEND="x11-libs/libXau
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXxf86vm
 	x11-libs/libXdmcp
 	x11-libs/libXpm"
+DEPEND="${RDEPEND}
+	x11-misc/imake
+	x11-proto/xf86vidmodeproto"
 
 src_unpack() {
 	unpack ${A}
