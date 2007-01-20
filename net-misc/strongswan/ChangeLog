@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.48 2007/01/18 19:25:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.49 2007/01/20 00:20:38 pylon Exp $
+
+*strongswan-2.8.1 (20 Jan 2007)
+
+  20 Jan 2007; Lars Weiler <pylon@gentoo.org>
+  +files/linux-headers-2.6.18.patch, files/ipsec-path.patch.bz2,
+  strongswan-2.8.0.ebuild, +strongswan-2.8.1.ebuild:
+  Version bump (currently masked due to compile problems on a stable system)
+  and a patch for newer linux-headers; bug #162811.
 
   18 Jan 2007; Raúl Porcel <armin76@gentoo.org> strongswan-2.8.0.ebuild:
   x86 stable wrt bug 162649

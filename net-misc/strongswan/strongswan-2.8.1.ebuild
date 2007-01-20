@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-2.8.0.ebuild,v 1.7 2007/01/20 00:20:38 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-2.8.1.ebuild,v 1.1 2007/01/20 00:20:38 pylon Exp $
 
 inherit eutils linux-info
 
@@ -10,8 +10,8 @@ SRC_URI="http://download.strongswan.org/${P}.tar.bz2"
 
 LICENSE="GPL-2 RSA-MD2 RSA-MD5 RSA-PKCS11 DES"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~sparc x86"
-IUSE="curl ldap smartcard"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+IUSE="curl ldap nat smartcard"
 
 COMMON_DEPEND="!net-misc/openswan
 	dev-libs/gmp"
@@ -69,6 +69,13 @@ src_unpack() {
 	if use ldap ; then
 		ebegin "LDAP support requested. Enabling LDAPv3 support"
 		sed -i -e 's:\(USE_LDAP?=\)false:\1true:g' Makefile.inc || die
+		eend $?
+	fi
+
+	if use nat ; then
+		ebegin "Enabling NAT-Traversal on Transport mode (insecure)"
+		sed -i -e 's:\(USE_NAT_TRAVERSAL_TRANSPORT_MODE?=\)false:\1true:g' \
+			Makefile.inc || die
 		eend $?
 	fi
 

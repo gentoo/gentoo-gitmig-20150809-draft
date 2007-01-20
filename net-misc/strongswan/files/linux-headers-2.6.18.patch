@@ -1,0 +1,11 @@
+diff -Naur strongswan-2.8.1-vanilla/programs/starter/starterwhack.c strongswan-2.8.1-incfix/programs/starter/starterwhack.c
+--- strongswan-2.8.1-vanilla/programs/starter/starterwhack.c    2006-10-19 18:02:46.000000000 +0300
++++ strongswan-2.8.1-incfix/programs/starter/starterwhack.c     2007-01-18 09:57:07.000000000 +0200
+@@ -17,7 +17,7 @@
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <sys/un.h>
+-#include <linux/stddef.h>
++#include <stddef.h>
+ #include <unistd.h>
+ #include <errno.h>
