@@ -41,6 +41,26 @@ AUX lm_sensors-2.10.1-sensors-detect-gentoo.patch 4717 RMD160 366baff74ee7625ead
 MD5 ba0f3cd8c71107037450042390c4bd52 files/lm_sensors-2.10.1-sensors-detect-gentoo.patch 4717
 RMD160 366baff74ee7625eade5d66f794a764038f3f3ef files/lm_sensors-2.10.1-sensors-detect-gentoo.patch 4717
 SHA256 22daf5740914cebe20f9d88e31d7b8ab9ca2bf6735c30bc1c12ba3aed9956f04 files/lm_sensors-2.10.1-sensors-detect-gentoo.patch 4717
+AUX lm_sensors-2.10.2-fancontrol-init.d 744 RMD160 8a2526142ba5b4c0939823d67f3b19d9e3ab8267 SHA1 f826854be3165f3fb03fd8413655a801d7a0435e SHA256 cdce6afb0665c0b17b897f43e73bcfa529dd913d6973b4f96cc2812a8a2bcfd4
+MD5 c55e9f6ce0f3d921d688cae7c359465c files/lm_sensors-2.10.2-fancontrol-init.d 744
+RMD160 8a2526142ba5b4c0939823d67f3b19d9e3ab8267 files/lm_sensors-2.10.2-fancontrol-init.d 744
+SHA256 cdce6afb0665c0b17b897f43e73bcfa529dd913d6973b4f96cc2812a8a2bcfd4 files/lm_sensors-2.10.2-fancontrol-init.d 744
+AUX lm_sensors-2.10.2-lm_sensors-init.d 2454 RMD160 40b0e85a2e4ff554f1e25c3c9645da192bb7b6b7 SHA1 6e4ac28af88433b0098118d2c9748126a0f92769 SHA256 f29dd39661ad62a075a73457f3c19ae3c1e8c0f05793be2138775aaf994aee0b
+MD5 614ad127456de056f9d0e4fd74661b32 files/lm_sensors-2.10.2-lm_sensors-init.d 2454
+RMD160 40b0e85a2e4ff554f1e25c3c9645da192bb7b6b7 files/lm_sensors-2.10.2-lm_sensors-init.d 2454
+SHA256 f29dd39661ad62a075a73457f3c19ae3c1e8c0f05793be2138775aaf994aee0b files/lm_sensors-2.10.2-lm_sensors-init.d 2454
+AUX lm_sensors-2.10.2-sensord-conf.d 104 RMD160 c4a06a8492d6c0fd966dea64d92f798a9b716a92 SHA1 43090c58c918969caa359d3b6e89237585759f46 SHA256 02230edf5efbb0a4de3840cd76f9ebf431c57a246fa7388e9dbeb0fe26fe7b8d
+MD5 82e075236a61334abb3adf46280380d3 files/lm_sensors-2.10.2-sensord-conf.d 104
+RMD160 c4a06a8492d6c0fd966dea64d92f798a9b716a92 files/lm_sensors-2.10.2-sensord-conf.d 104
+SHA256 02230edf5efbb0a4de3840cd76f9ebf431c57a246fa7388e9dbeb0fe26fe7b8d files/lm_sensors-2.10.2-sensord-conf.d 104
+AUX lm_sensors-2.10.2-sensord-init.d 726 RMD160 7bd6c0b1c6c63eff7297ae6e1657607df03fb3b4 SHA1 768d2e52569a47f41046b280b99b3d270b992f67 SHA256 6d6b0725b8d37b0c3a6b0d2dc8dcf82e2df0528b572b8a8032c12046c6811f20
+MD5 54bd4ba70cb658fc906ea4b0ee7f380d files/lm_sensors-2.10.2-sensord-init.d 726
+RMD160 7bd6c0b1c6c63eff7297ae6e1657607df03fb3b4 files/lm_sensors-2.10.2-sensord-init.d 726
+SHA256 6d6b0725b8d37b0c3a6b0d2dc8dcf82e2df0528b572b8a8032c12046c6811f20 files/lm_sensors-2.10.2-sensord-init.d 726
+AUX lm_sensors-2.10.2-sensors-detect-gentoo.patch 4717 RMD160 366baff74ee7625eade5d66f794a764038f3f3ef SHA1 fec58ea73ea789a030ed60c918daaff374e19039 SHA256 22daf5740914cebe20f9d88e31d7b8ab9ca2bf6735c30bc1c12ba3aed9956f04
+MD5 ba0f3cd8c71107037450042390c4bd52 files/lm_sensors-2.10.2-sensors-detect-gentoo.patch 4717
+RMD160 366baff74ee7625eade5d66f794a764038f3f3ef files/lm_sensors-2.10.2-sensors-detect-gentoo.patch 4717
+SHA256 22daf5740914cebe20f9d88e31d7b8ab9ca2bf6735c30bc1c12ba3aed9956f04 files/lm_sensors-2.10.2-sensors-detect-gentoo.patch 4717
 AUX lm_sensors-2.9.2-lm_sensors-init.d 2453 RMD160 f3727abe9bc2604e27a0bc678ae0e63ec3c1ae24 SHA1 fb81472c63631e45101bf9eba8cbab06a2feddea SHA256 482188d6167c9da4bb86bc8fc014b64e5d7e90986cd79ece292fe307f4083bfe
 MD5 92e3fc99a32fb0b0a66786cd1b624167 files/lm_sensors-2.9.2-lm_sensors-init.d 2453
 RMD160 f3727abe9bc2604e27a0bc678ae0e63ec3c1ae24 files/lm_sensors-2.9.2-lm_sensors-init.d 2453
@@ -59,6 +79,7 @@ RMD160 67912fd5dbb75ef7c7e2ceba4b42cb817e6c1f15 files/lm_sensors-2.9.2-sensors-d
 SHA256 524178ae9648be66ae161598394aec26c51f3b2b17e30df1b347efc58c317c61 files/lm_sensors-2.9.2-sensors-detect-gentoo.patch 5446
 DIST lm_sensors-2.10.0.tar.gz 879631 RMD160 8bb5dd4fbb9b7fba2f60f8a8d00d7b54231ddf37 SHA1 bb45194eebfdc92cf233b7cfe24196cbad6ee721 SHA256 e2fe2c79dc1f219ae85606ad1e556edcd2e55adbabf8bb45dc3c11c00503050d
 DIST lm_sensors-2.10.1.tar.gz 909117 RMD160 46e13ed34cd658a894c2acbae31b436b293cfcda SHA1 c7477d83a8e0e7280a8b7c73d4fc7fbf0c0521a4 SHA256 a332cacfa9d0eed6e9158c394db714e536f38c27451d7df08b9634952118fa1b
+DIST lm_sensors-2.10.2.tar.gz 919909 RMD160 f1e62db56ca8854ef04499622bfa26b0d0256da9 SHA1 573d4cd78bf42fa546260a15c57d22fed64fb899 SHA256 d3340b6da91ded91c1446c7daf17b9b2582cfa6c60b78f0f60ea5c66f6520ae1
 DIST lm_sensors-2.9.2.tar.gz 860624 RMD160 1facd2f05ab31d819b12da73067952d74496fbcb SHA1 849f21d94e81dca5ff67191ef2f33b937b1aebbd SHA256 e40573335a895c88bdc040126fd6bb73199bef0169b2b88c6a1ef916c03803c7
 EBUILD lm_sensors-2.10.0-r2.ebuild 4329 RMD160 8f8bf74cc8d362386921a613680d3c479f427d2f SHA1 28c493370908c33af14060eb3d2c1d7cf504c1bb SHA256 857c3bb350df5ee4ef547fcb43290753d7484e8c9586b0e931f6a718467e2b7c
 MD5 f91d0bfd77400ca910254b9a64392f6f lm_sensors-2.10.0-r2.ebuild 4329
@@ -72,6 +93,10 @@ EBUILD lm_sensors-2.10.1.ebuild 4384 RMD160 e10d796f74117351bba257c266cea427594c
 MD5 0a8b1f0f9423742c01d1bb375e386d5e lm_sensors-2.10.1.ebuild 4384
 RMD160 e10d796f74117351bba257c266cea427594c3e6a lm_sensors-2.10.1.ebuild 4384
 SHA256 51739db6fcf8408201eafa2324d5e3dd351b04e360bbe0de75e9ec3e9cabe233 lm_sensors-2.10.1.ebuild 4384
+EBUILD lm_sensors-2.10.2.ebuild 4384 RMD160 5aa6ae12ab1e3258f467e56b607fd3ee348d8344 SHA1 121a4f5c15c69adc89e984bf44f07c25d67b3ac1 SHA256 652c16436215e2e55da6bc55d3b962c116356aed72617d2ce97b012ab08a4896
+MD5 300c4c9ddd467c18c9a673165e60c886 lm_sensors-2.10.2.ebuild 4384
+RMD160 5aa6ae12ab1e3258f467e56b607fd3ee348d8344 lm_sensors-2.10.2.ebuild 4384
+SHA256 652c16436215e2e55da6bc55d3b962c116356aed72617d2ce97b012ab08a4896 lm_sensors-2.10.2.ebuild 4384
 EBUILD lm_sensors-2.9.2-r2.ebuild 4257 RMD160 412b5fbaeb638ef2ac510787e47837301cd1c5f8 SHA1 c56bdb06f403cc81911e99da4e643b2de38bcf6a SHA256 bc828df6fe6f45c6d39e8f8421c0d52a90bdd277d594a87409a5cbbb1fdb21f0
 MD5 0e12003525de066ea6e9f95f9108db85 lm_sensors-2.9.2-r2.ebuild 4257
 RMD160 412b5fbaeb638ef2ac510787e47837301cd1c5f8 lm_sensors-2.9.2-r2.ebuild 4257
@@ -80,10 +105,10 @@ EBUILD lm_sensors-2.9.2.ebuild 4242 RMD160 69f3ae6bc3480a043438d6359e3ea3cfa4373
 MD5 1705d3dffd8187ecb325ff65a480b648 lm_sensors-2.9.2.ebuild 4242
 RMD160 69f3ae6bc3480a043438d6359e3ea3cfa43737bc lm_sensors-2.9.2.ebuild 4242
 SHA256 db0784b5694636b972e16e1b6c30111452f83d79394e38cabcd4c9ecbfa263ff lm_sensors-2.9.2.ebuild 4242
-MISC ChangeLog 3624 RMD160 e3577445eee9dc9763c7cb81db3488cfe85a78a4 SHA1 8aac0468acec90b8c392f2c630bcae420a2ccc28 SHA256 090bca8993de82a8730be64ed7cb24504d4be8448840156fe6715924d426d056
-MD5 05bd343524b74b2c50a7cd74a9aac58a ChangeLog 3624
-RMD160 e3577445eee9dc9763c7cb81db3488cfe85a78a4 ChangeLog 3624
-SHA256 090bca8993de82a8730be64ed7cb24504d4be8448840156fe6715924d426d056 ChangeLog 3624
+MISC ChangeLog 4066 RMD160 9a5e3b2a50c1dc7993528e661c30a5fecc7ba1d3 SHA1 70335ec299991a89dc55ec9292973aadd6df0e70 SHA256 05c221aca0c13193bd4ae3748b45b2e2f18354c3ec2152a2f12d71eb1d2ee44d
+MD5 61a7bf2c9eb4582a42510082a94b9d28 ChangeLog 4066
+RMD160 9a5e3b2a50c1dc7993528e661c30a5fecc7ba1d3 ChangeLog 4066
+SHA256 05c221aca0c13193bd4ae3748b45b2e2f18354c3ec2152a2f12d71eb1d2ee44d ChangeLog 4066
 MISC metadata.xml 254 RMD160 2e69b345a5604844f1c5a8256ea172c7a3cc485f SHA1 653c702fdb89577e9d15e9cbca3891e4acdba061 SHA256 9bffc4ff1cf574848699e33b09ff0f6137d6b64b69d82c7b95cafb32ee75becb
 MD5 f3e68295a919220f58e91a1d3468c851 metadata.xml 254
 RMD160 2e69b345a5604844f1c5a8256ea172c7a3cc485f metadata.xml 254
@@ -97,6 +122,9 @@ SHA256 64630ede6a432e80c2386c37675ba5463212430f53041e071957f2b20ba01a9b files/di
 MD5 c8e7113325cdf087821aab419adcce6f files/digest-lm_sensors-2.10.1 253
 RMD160 211da829e5f5457adbccbbad02531941f7516730 files/digest-lm_sensors-2.10.1 253
 SHA256 49149521ca8b84f37f8004776b9d2d0136e17d3bfeb9d6509f3d18e9a05c1e6d files/digest-lm_sensors-2.10.1 253
+MD5 b93c2901f8e8a7d2baa7da702b656877 files/digest-lm_sensors-2.10.2 253
+RMD160 5b9c8df7246bff0d8806bed8a3f099a21d129357 files/digest-lm_sensors-2.10.2 253
+SHA256 a1ffe7fa659298e4dbf511fe13934fe663c04e48ab833004c1215c3b5767cd11 files/digest-lm_sensors-2.10.2 253
 MD5 d569a1b2682fe1fe3ca977f6017f712c files/digest-lm_sensors-2.9.2 250
 RMD160 0370575f9c4aa29ef313ec05929caad61c7b7caa files/digest-lm_sensors-2.9.2 250
 SHA256 e5acc8f4b135fb18ef10fb67cf04b3aabcf000cd4358fa3cb3bd51ea743ee3a6 files/digest-lm_sensors-2.9.2 250
@@ -106,7 +134,7 @@ SHA256 e5acc8f4b135fb18ef10fb67cf04b3aabcf000cd4358fa3cb3bd51ea743ee3a6 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.1 (GNU/Linux)
 
-iD8DBQFFq2VbyuNVb5qfaOYRAujNAJ9J+NmoRxqMxFU+FBfA3JfCt+auXQCdHIEx
-bPMsHd5/pNr+GcshdQL+Fjs=
-=pnIU
+iD8DBQFFsl1byuNVb5qfaOYRAuT8AKC3khEEP4bkuDPCZck4Pud122hlyQCgibox
+BZrcVW/8siJnP4dUsAsYYLw=
+=pFPr
 -----END PGP SIGNATURE-----

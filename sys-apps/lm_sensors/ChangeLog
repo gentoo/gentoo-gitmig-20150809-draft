@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.61 2007/01/15 11:28:24 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.62 2007/01/20 18:20:03 phreak Exp $
+
+*lm_sensors-2.10.2 (20 Jan 2007)
+
+  20 Jan 2007; Christian Heim <phreak@gentoo.org>
+  +files/lm_sensors-2.10.2-fancontrol-init.d,
+  +files/lm_sensors-2.10.2-lm_sensors-init.d,
+  +files/lm_sensors-2.10.2-sensord-conf.d,
+  +files/lm_sensors-2.10.2-sensord-init.d,
+  +files/lm_sensors-2.10.2-sensors-detect-gentoo.patch,
+  +lm_sensors-2.10.2.ebuild:
+  Version bump (thanks to Dan Andresan <gentoo at iwegaia.co.uk> in #161851
+  for reporting).
 
   15 Jan 2007; Christian Heim <phreak@gentoo.org> lm_sensors-2.10.1.ebuild:
   Removing the pkg_config, simply freezes when run via portage (thanks Jakub).
