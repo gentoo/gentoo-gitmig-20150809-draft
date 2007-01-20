@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/ctorrent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ChangeLog,v 1.18 2007/01/16 19:08:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ChangeLog,v 1.19 2007/01/20 14:17:55 armin76 Exp $
+
+  20 Jan 2007; Raúl Porcel <armin76@gentoo.org> +files/as-needed.patch,
+  -ctorrent-1.3.4-r2.ebuild, ctorrent-2.2.ebuild:
+  Drop old && fix bug 162640 as-needed, thanks to TGL <degrenier at
+  easyconnect dot fr> for the patch and zzam for testing
 
 *ctorrent-2.2 (16 Jan 2007)
 

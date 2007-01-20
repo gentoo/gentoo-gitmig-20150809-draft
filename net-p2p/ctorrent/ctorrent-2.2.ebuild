@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ctorrent-2.2.ebuild,v 1.1 2007/01/16 19:08:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ctorrent-2.2.ebuild,v 1.2 2007/01/20 14:17:55 armin76 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -20,6 +20,12 @@ S="${WORKDIR}/${PN}-dnh${PV}"
 
 DEPEND=">=sys-apps/sed-4
 	dev-libs/openssl"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/as-needed.patch
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
