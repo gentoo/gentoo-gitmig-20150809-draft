@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/zziplib
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.33 2006/07/18 21:35:35 hansmi Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.34 2007/01/20 12:20:25 vapier Exp $
+
+  20 Jan 2007; Mike Frysinger <vapier@gentoo.org> zziplib-0.13.45.ebuild:
+  Also install manpages.
 
   18 Jul 2006; Michael Hanselmann <hansmi@gentoo.org>
   zziplib-0.13.45.ebuild:

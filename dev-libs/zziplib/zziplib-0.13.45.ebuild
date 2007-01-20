@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.45.ebuild,v 1.12 2006/07/18 21:35:35 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.45.ebuild,v 1.13 2007/01/20 12:20:25 vapier Exp $
 
 inherit libtool fixheadtails eutils
 
@@ -23,7 +23,7 @@ src_unpack() {
 	cd "${S}"
 	ht_fix_file configure docs/Makefile.in uses/depcomp
 
-	epatch "${FILESDIR}/${P}-sys-types.patch"
+	epatch "${FILESDIR}"/${P}-sys-types.patch
 	elibtoolize
 }
 
@@ -38,7 +38,7 @@ src_test() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install install-man3 || die "make install failed"
 	dodoc ChangeLog README TODO
 	dohtml docs/*
 }
