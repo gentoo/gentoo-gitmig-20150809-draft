@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/GStreamer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GStreamer/ChangeLog,v 1.2 2007/01/07 23:44:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GStreamer/ChangeLog,v 1.3 2007/01/20 12:58:38 mcummings Exp $
+
+  20 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  GStreamer-0.09.ebuild:
+  White space cleaning
 
   07 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   GStreamer-0.09.ebuild:
