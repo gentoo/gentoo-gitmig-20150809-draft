@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/glade
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.56 2006/12/21 12:47:09 compnerd Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.57 2007/01/20 09:17:54 compnerd Exp $
+
+*glade-3.1.4 (20 Jan 2007)
+
+  20 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org> +glade-3.1.4.ebuild:
+  Version bump to fix a few issues
 
   21 Dec 2006; Saleem Abdulrasool <compnerd@gentoo.org>
   -files/glade-0.6.4-autogen.sh.patch, -glade-0.6.4.ebuild:
