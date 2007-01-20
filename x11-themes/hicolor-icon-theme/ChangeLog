@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/hicolor-icon-theme
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/ChangeLog,v 1.39 2007/01/14 19:05:40 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/ChangeLog,v 1.40 2007/01/20 12:06:32 jer Exp $
+
+  20 Jan 2007; Jeroen Roovers <jer@gentoo.org>
+  hicolor-icon-theme-0.9-r1.ebuild:
+  Stable for HPPA (bug #156662).
 
   14 Jan 2007; Olivier Crête <tester@gentoo.org>
   hicolor-icon-theme-0.9-r1.ebuild:
