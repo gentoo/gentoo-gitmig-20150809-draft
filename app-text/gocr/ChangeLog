@@ -1,6 +1,13 @@
 # ChangeLog for app-text/gocr
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.35 2006/06/06 15:59:04 blubb Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.36 2007/01/20 09:30:37 mrness Exp $
+
+*gocr-0.43 (20 Jan 2007)
+
+  20 Jan 2007; Alin Nastac <mrness@gentoo.org>
+  +files/gocr-0.43-makefile.patch, -gocr-0.39.ebuild, -gocr-0.40.ebuild,
+  +gocr-0.43.ebuild:
+  Version bump (#145624). Remove obsolete versions.
 
   06 Jun 2006; Simon Stelling <blubb@gentoo.org> gocr-0.40-r2.ebuild:
   stable on amd64
