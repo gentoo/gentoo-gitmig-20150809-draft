@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.139 2007/01/16 06:15:31 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.140 2007/01/20 22:08:11 jer Exp $
+
+  20 Jan 2007; Jeroen Roovers <jer@gentoo.org> wxGTK-2.6.3.3.ebuild:
+  Stable for HPPA (bug #136924).
 
   16 Jan 2007; Joseph Jezak <josejx@gentoo.org> wxGTK-2.6.3.3.ebuild:
   Marked ppc stable for bug #136924.
