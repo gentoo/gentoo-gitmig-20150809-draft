@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6638 2007/01/20 22:09:35 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6639 2007/01/20 23:49:08 keri Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1301,12 +1301,6 @@ net-misc/asterisk-app_authenticate_ldap
 # Carsten Lohrke <carlo@gentoo.org> (10 Apr 2006)
 # Couple of issues with this version, waiting for the next release.
 ~kde-misc/kdiff3-0.9.89
-
-# Keri Harris <keri@gentoo.org> (08 Apr 2006)
-# Development release, requires careful testing.
-# Some grades fail spectacularly with gcc4.
->=dev-lang/mercury-0.13.0_beta
->=dev-lang/mercury-extras-0.13.0_beta
 
 # Michael Sterrett <mr_bones_@gentoo.org> (02 Apr 2006)
 # masked pending unresolved security issues #122845
