@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6637 2007/01/20 06:57:18 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6638 2007/01/20 22:09:35 masterdriverz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ##
+
+# Charlie Shepherd <masterdriverz@gentoo.org> (20 Jan 2007)
+# Pending removal 19 Feb 2007 
+# Upstream dead since three years ago, doesn't compile with gcc4. The
+# alternatives currently in tree are net-analyzer/labrea,
+# net-analyzer/prelude-nids and net-analyzer/snort. Bug 152538.
+net-firewall/firestorm
 
 # Lars Weiler <pylon@gentoo.org> (20 Jan 2007)
 # Won't compile on a stable system
