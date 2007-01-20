@@ -1,0 +1,32 @@
+--- Makefile.PL.orig	2005-07-30 20:57:42.000000000 +1000
++++ Makefile.PL	2005-07-30 21:31:49.000000000 +1000
+@@ -619,7 +619,8 @@
+ $base = $ENV{'ProgramFiles'} if ($win32) ;
+ 
+ 
+-$apache = GetYesNo ("Build with support for Apache mod_perl?", 'y') if (!$apache) ;
++#$apache = GetYesNo ("Build with support for Apache mod_perl?", 'y') if (!$apache) ;
++$apache = 1;
+ 
+ if ($apache && $apache_src ne '')
+     {
+@@ -634,7 +635,8 @@
+ 
+     if (-e "$apache_src/httpd.h" || -e "$apache_src/main/httpd.h" || -e "$apache_src/include/httpd.h")
+ 	    {
+-	    $b = GetYesNo ("Use $apache_src as Apache source", 'y') if (!$b) ;
++	    #$b = GetYesNo ("Use $apache_src as Apache source", 'y') if (!$b) ;
++	    $b = 1;
+ 	    }
+     }
+ 
+@@ -652,7 +654,8 @@
+ 	
+ 	if (-e "$src_dir/httpd.h" || -e "$src_dir/main/httpd.h" || -e "$src_dir/include/httpd.h")
+ 		{
+-		$b = GetYesNo ("Use $src_dir as Apache source", 'y') ;
++		#$b = GetYesNo ("Use $src_dir as Apache source", 'y') ;
++		$b = 1;
+ 		if ($b)
+ 			{
+ 			$apache_src = $src_dir ;
