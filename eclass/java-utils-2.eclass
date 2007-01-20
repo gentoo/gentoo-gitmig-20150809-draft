@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.43 2007/01/15 21:03:24 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.44 2007/01/20 11:14:31 betelgeuse Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -301,7 +301,8 @@ java-pkg_newjar() {
 	local new_jar_dest="${T}/${new_jar}"
 
 	[[ -z ${original_jar} ]] && die "Must specify a jar to install"
-	[[ ! -f ${original_jar} ]] && die "${original_jar} does not exist!"
+	[[ ! -f ${original_jar} ]] \
+		&& die "${original_jar} does not exist or is not a file!"
 
 	rm -f "${new_jar_dest}" || die "Failed to remove ${new_jar_dest}"
 	cp "${original_jar}" "${new_jar_dest}" \
@@ -1415,6 +1416,7 @@ eant() {
 	fi
 
 	[[ -n ${JAVA_PKG_DEBUG} ]] && echo ant ${antflags} "${@}"
+	debug-print "Calling ant: ${antflags} ${@}"
 	ant ${antflags} "${@}" || die "eant failed"
 
 }
