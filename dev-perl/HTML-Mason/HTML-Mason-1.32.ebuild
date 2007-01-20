@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.32.ebuild,v 1.11 2007/01/20 14:41:19 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.32.ebuild,v 1.12 2007/01/20 15:21:02 mcummings Exp $
 
 inherit perl-module
 
@@ -22,7 +22,7 @@ DEPEND="!modperl? ( virtual/perl-CGI )
 			<www-apache/mod_perl-2 )
 		apache2? (
 			>=net-www/apache-2
-			www-apache/libapreq2
+			www-misc/libapreq2
 			>=www-apache/mod_perl-2 )
 	)
 	>=dev-perl/Params-Validate-0.7
