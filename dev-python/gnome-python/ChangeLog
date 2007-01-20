@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gnome-python
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.83 2007/01/14 14:34:41 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.84 2007/01/20 12:35:26 jer Exp $
+
+  20 Jan 2007; Jeroen Roovers <jer@gentoo.org> gnome-python-2.16.2.ebuild:
+  Stable for HPPA (bug #156662).
 
   14 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
   gnome-python-2.16.2.ebuild:
