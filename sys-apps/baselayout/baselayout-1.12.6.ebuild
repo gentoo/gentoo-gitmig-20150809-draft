@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.6.ebuild,v 1.1 2006/11/02 10:29:25 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.6.ebuild,v 1.2 2007/01/20 15:16:15 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -303,7 +303,7 @@ src_install() {
 	cp -r "${S}"/rc-lists "${D}"/usr/share/baselayout
 
 	# rc-scripts version for testing of features that *should* be present
-	echo "Gentoo Base System version ${PV}" > ${D}/etc/gentoo-release
+	echo "Gentoo Base System release ${PV}" > ${D}/etc/gentoo-release
 
 	#
 	# Setup files related to /dev
@@ -553,7 +553,7 @@ pkg_postinst() {
 	# write it here so that the new version is immediately in the file
 	# (without waiting for the user to do etc-update)
 	rm -f ${ROOT}/etc/._cfg????_gentoo-release
-	echo "Gentoo Base System version ${PV}" > ${ROOT}/etc/gentoo-release
+	echo "Gentoo Base System release ${PV}" > ${ROOT}/etc/gentoo-release
 
 	echo
 	einfo "Please be sure to update all pending '._cfg*' files in /etc,"
