@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/nanoxml/nanoxml-2.2.3-r1.ebuild,v 1.2 2007/01/16 01:06:55 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/nanoxml/nanoxml-2.2.3-r1.ebuild,v 1.3 2007/01/20 19:00:16 nixnut Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -11,7 +11,7 @@ MY_P=NanoXML-${PV}
 SRC_URI="http://nanoxml.cyberelf.be/downloads/${MY_P}.tar.gz"
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="doc"
 DEPEND=">=virtual/jdk-1.3
 		${RDEPEND}"
