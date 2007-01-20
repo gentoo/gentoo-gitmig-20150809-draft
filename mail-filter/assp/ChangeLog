@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/assp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/ChangeLog,v 1.9 2007/01/20 18:03:21 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/ChangeLog,v 1.10 2007/01/20 20:56:45 wltjr Exp $
+
+*assp-1.2.6-r2 (20 Jan 2007)
+
+  20 Jan 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  files/assp-1.2.6.patch, -assp-1.2.6-r1.ebuild, +assp-1.2.6-r2.ebuild:
+  Updated patch, problem with search in the logfiles being broken. Thanks as
+  always to ovaron2 :)
 
 *assp-1.2.6-r1 (20 Jan 2007)
 
