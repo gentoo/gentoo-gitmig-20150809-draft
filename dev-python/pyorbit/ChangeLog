@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyorbit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/ChangeLog,v 1.43 2007/01/14 14:34:06 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/ChangeLog,v 1.44 2007/01/20 12:09:43 jer Exp $
+
+  20 Jan 2007; Jeroen Roovers <jer@gentoo.org> pyorbit-2.14.1.ebuild:
+  Stable for HPPA (bug #156662).
 
   14 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> pyorbit-2.14.1.ebuild:
   Stable on Alpha.
