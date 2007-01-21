@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/mips/use.mask,v 1.5 2007/01/04 21:49:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/mips/use.mask,v 1.6 2007/01/21 15:43:04 eroyf Exp $
+
+# Alexander Færøy <eroyf@gentoo.org
+# Untested on mips. Masking!
+ldap
 
 # Untested on mips, masking for now.
 cdb
