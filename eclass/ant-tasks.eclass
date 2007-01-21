@@ -3,12 +3,9 @@
 # Copyright 2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Vlastimil Babka <caster@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/ant-tasks.eclass,v 1.1 2007/01/21 01:11:47 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ant-tasks.eclass,v 1.2 2007/01/21 21:33:36 betelgeuse Exp $
 
 inherit java-pkg-2 versionator
-
-ECLASS="ant-tasks"
-INHERITED="$INHERITED $ECLASS"
 
 EXPORT_FUNCTIONS src_unpack src_compile src_install
 
@@ -19,7 +16,7 @@ EXPORT_FUNCTIONS src_unpack src_compile src_install
 #
 # This eclass provides functionality and default ebuild variables for building
 # dev-java/ant-* packages easily.
-# 
+#
 # -----------------------------------------------------------------------------
 
 # -----------------------------------------------------------------------------
