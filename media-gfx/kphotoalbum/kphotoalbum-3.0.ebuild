@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-3.0.ebuild,v 1.1 2007/01/13 19:41:57 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-3.0.ebuild,v 1.2 2007/01/21 11:38:43 deathwing00 Exp $
 
 inherit kde
 
@@ -46,5 +46,16 @@ pkg_setup()
 	if [ $setupok == 0 ] ; then
 		die
 	fi
+}
+
+src_compile()
+{
+	if ! use exif; then
+		einfo "NOTICE: You have the exif USE flag disabled. ${CATEGORY}/${PN}"
+		einfo "will be compiled without EXIF support unless you installed"
+		einfo "media-gfx/exiv2 manually."
+		local myconf="--disable-exiv2"
+	fi
+	kde_src_compile
 }
 
