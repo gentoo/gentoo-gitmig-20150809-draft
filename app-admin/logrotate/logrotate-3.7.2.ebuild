@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.2.ebuild,v 1.8 2006/12/29 17:23:57 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.2.ebuild,v 1.9 2007/01/21 17:10:40 dang Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Rotates, compresses, and mails system logs"
 HOMEPAGE="http://www.gentoo.org"
@@ -35,7 +35,8 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	useq selinux && myconf='WITH_SELINUX=yes'
+	myconf="CC=$(tc-getCC)"
+	useq selinux && myconf="${myconf} WITH_SELINUX=yes"
 	emake ${myconf} || die "emake failed"
 }
 
