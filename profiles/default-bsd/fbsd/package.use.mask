@@ -28,3 +28,6 @@ x11-misc/xscreensaver new-login
 # Vixie-Cron uses pam useflag for pam_limits.so that is provided
 # by Linux-PAM we don't use for now.
 sys-process/vixie-cron pam
+
+# Gnome isn't up and running yet
+net-im/gajim gnome
