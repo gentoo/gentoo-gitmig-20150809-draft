@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.0e.ebuild,v 1.1 2007/01/12 21:10:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.0e.ebuild,v 1.2 2007/01/21 14:27:02 armin76 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -15,7 +15,7 @@ SRC_URI="mirror://gnu//${PN}/GNUnet-${PV}.tar.bz2"
 RESTRICT="test"
 
 IUSE="ipv6 mysql sqlite guile ncurses nls gtk"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 LICENSE="GPL-2"
 SLOT="0"
 

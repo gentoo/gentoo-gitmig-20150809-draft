@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/gnunet
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.52 2007/01/12 21:10:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.53 2007/01/21 14:27:02 armin76 Exp $
+
+  21 Jan 2007; Raúl Porcel <armin76@gentoo.org>
+  -files/gnunet-ipv6-gentoo.patch, -files/gnunet-0.7.0d-nulludp.patch,
+  -gnunet-0.6.2b.ebuild, -gnunet-0.7.0d-r1.ebuild, gnunet-0.7.0e.ebuild:
+  Stable x86 to fix bug 147739, remove old, remove old patches
 
 *gnunet-0.7.0e (12 Jan 2007)
 
