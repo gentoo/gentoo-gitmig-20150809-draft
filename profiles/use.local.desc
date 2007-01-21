@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2512 2007/01/21 09:30:06 aross Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2513 2007/01/21 15:26:48 pva Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -73,6 +73,7 @@ app-crypt/johntheripper:ntlm - enables john to crack Windows NT/2000 MD4 (case-s
 app-crypt/ophcrack:ophsmall - Makes use of smaller cracking tables
 app-crypt/seahorse:gedit - Enable the gedit plugin
 app-dicts/aspell-be:classic - Support classic spelling by default
+app-doc/gimp-help:webinstall - optimize images for web installation (fewer colors, depends on imagemagick)
 app-editors/cssed:plugin - Install plugin development files
 app-editors/emacs-cvs:aqua - Build Carbon Emacs
 app-editors/emacs-cvs:gzip-el - Compress bundled Emacs Lisp source
