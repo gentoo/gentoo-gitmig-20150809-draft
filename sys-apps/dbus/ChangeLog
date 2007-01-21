@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.176 2007/01/21 08:58:34 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.177 2007/01/21 09:11:50 corsair Exp $
+
+  21 Jan 2007; Markus Rothe <corsair@gentoo.org> dbus-1.0.2.ebuild:
+  Stable on ppc64; bug #154522
 
   21 Jan 2007; nixnut <nixnut@gentoo.org> dbus-1.0.2.ebuild:
   Stable on ppc wrt bug 154522
