@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r6.ebuild,v 1.5 2007/01/05 23:34:00 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r6.ebuild,v 1.6 2007/01/21 10:36:57 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -72,7 +72,7 @@ src_install() {
 
 pkg_postinst() {
 	if use readline; then
-		elog "To use readline you need to add the following to your registery"
+		elog "To use readline you need to add the following to your registry"
 		elog
 		elog "python.console=org.python.util.ReadlineConsole"
 		elog "python.console.readlinelib=GnuReadline"
