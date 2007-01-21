@@ -1,31 +1,14 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/files/irqbalance.init,v 1.2 2007/01/09 04:13:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/files/irqbalance.init,v 1.3 2007/01/21 19:07:25 vapier Exp $
 
 depend() {
 	need localmount
 	after bootmisc
 }
 
-checkconfig() {
-	# irqbalance only makes sense to run on smp machines
-	# where each cpu has its own cache ... so if you're
-	# just running a dual core machine, you've got shared
-	# cache, so we'll abort here.
-	local physical_ids=$(grep -s '^physical id[[:space:]]*:' /proc/cpuinfo | sort -u | wc -l)
-	[[ ${physical_ids} -gt 1 ]] && return 0
-	[[ ${physical_ids} -eq 1 ]] && return 1
-	local processors=$(grep -s '^processor[[:space:]]*:' /proc/cpuinfo | sort -u | wc -l)
-	[[ ${processors} -gt 1 ]] && return 0
-}
-
 start() {
-	if ! checkconfig ; then
-		eerror "irqbalance: your machine lacks different physical processors; not enabling"
-		return 1
-	fi
-
 	ebegin "Starting irqbalance"
 	start-stop-daemon --start --exec /sbin/irqbalance \
 	        --pidfile /var/run/irqbalance.pid
