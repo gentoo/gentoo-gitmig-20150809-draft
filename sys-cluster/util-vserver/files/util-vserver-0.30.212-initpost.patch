@@ -1,8 +1,9 @@
-Index: /trunk/distrib/gentoo/initpost
+Index: util-vserver-0.30.212/distrib/gentoo/initpost
 ===================================================================
---- /trunk/distrib/gentoo/initpost (revision 2366)
-+++ /trunk/distrib/gentoo/initpost (revision 2465)
-@@ -18,5 +18,6 @@
+--- util-vserver-0.30.212.orig/distrib/gentoo/initpost
++++ util-vserver-0.30.212/distrib/gentoo/initpost
+@@ -17,7 +17,8 @@
+ 
  ## Called as: initpost <cfgdir> <path of util-vserver-vars>
  
 -vdir="$1"/vdir
@@ -10,18 +11,20 @@ Index: /trunk/distrib/gentoo/initpost
 +vdir="$cfgdir"/vdir
  . "$2"
  
-@@ -30,5 +31,5 @@
+ # portage stuff
+@@ -29,7 +30,7 @@ popd &>/dev/null
+ 
  # gentoo initstyle magic
  initstyle=sysv
 -test -e "$1"/apps/init/style && initstyle=$(<"$1"/apps/init/style)
 +test -e "$cfgdir"/apps/init/style && initstyle=$(<"$cfgdir"/apps/init/style)
  
  if test "$initstyle" == "gentoo"; then
-@@ -52,4 +53,29 @@
- 	echo "!!!"
+ 	pushd "$vdir" &>/dev/null
+@@ -53,6 +54,31 @@ if test "$initstyle" == "gentoo"; then
  fi
-+
-+
+ 
+ 
 +# unneeded runlevel scripts
 +pushd "$vdir" &>/dev/null
 +echo ">>> Fixing default runlevel scripts ... "
@@ -45,9 +48,13 @@ Index: /trunk/distrib/gentoo/initpost
 +fi
 +
 +popd &>/dev/null
- 
- 
-@@ -89,12 +115,4 @@
++
++
+ # check for baselayout >= 1.13
+ pushd "$vdir" &>/dev/null
+ basever=$($_CHROOT_SH cat /etc/gentoo-release | $_AWK '{print $5}')
+@@ -88,14 +114,6 @@ fi
+ popd &>/dev/null
  
  
 -# unneeded runlevel scripts
@@ -60,3 +67,4 @@ Index: /trunk/distrib/gentoo/initpost
 -
  # fix fstab for checkfs/localmount
  pushd "$vdir" &>/dev/null
+ echo ">>> Fixing fstab ... "
