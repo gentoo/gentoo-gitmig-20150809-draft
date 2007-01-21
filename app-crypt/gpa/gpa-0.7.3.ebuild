@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.7.3.ebuild,v 1.3 2006/10/13 12:34:06 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.7.3.ebuild,v 1.4 2007/01/21 20:11:17 alonbl Exp $
+
+inherit eutils
 
 DESCRIPTION="Standard GUI for GnuPG"
 HOMEPAGE="http://www.gnupg.org/(en)/related_software/gpa/"
@@ -16,6 +18,12 @@ DEPEND=">=x11-libs/gtk+-2.2
 	>=app-crypt/gpgme-1.1.1
 	>=dev-util/pkgconfig-0.7
 	nls? ( sys-devel/gettext )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch "${FILESDIR}/${P}-qa.patch"
+}
 
 src_compile() {
 	myconf=
