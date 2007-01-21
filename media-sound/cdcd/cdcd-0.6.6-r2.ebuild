@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdcd/cdcd-0.6.6-r1.ebuild,v 1.3 2006/06/16 21:13:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdcd/cdcd-0.6.6-r2.ebuild,v 1.1 2007/01/21 19:57:24 flameeyes Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ DEPEND=">=sys-libs/ncurses-5.0
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 src_unpack() {
 	unpack ${A}

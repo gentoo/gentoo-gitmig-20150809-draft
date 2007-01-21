@@ -6,7 +6,7 @@ diff -ur cdcd-0.6.6/configure.ac cdcd-0.6.6-fbsd/configure.ac
      have_libcdaudio=1
      ;;
 +   
-+  *freebsd5.*)
++  *freebsd[567]*)
 +    default_device=/dev/cd0
 +    have_cdaudio=1
 +    ;;
