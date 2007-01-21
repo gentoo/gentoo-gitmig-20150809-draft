@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.9.ebuild,v 1.1 2006/10/21 17:09:55 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.9.ebuild,v 1.2 2007/01/21 15:40:49 masterdriverz Exp $
 
 DESCRIPTION="Library for Bible reading software."
 HOMEPAGE="http://www.crosswire.org/sword/"
@@ -9,7 +9,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="curl debug icu lucene"
+IUSE="curl debug doc icu lucene"
 
 RDEPEND="sys-libs/zlib
 	curl? ( net-misc/curl )
@@ -20,9 +20,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_compile() {
-	local myconf="--without-lucene --with-zlib --with-conf
-	              $(use_enable debug) $(use_with curl)"
-
 	econf --with-zlib \
 		--with-conf \
 		$(use_enable curl) \
@@ -35,8 +32,15 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS CODINGSTYLE ChangeLog INSTALL README
-
-	cp -R samples examples ${D}/usr/share/doc/${PF}/
+	if use doc ;then
+		rm -rf examples/.cvsignore
+		rm -rf examples/cmdline/.cvsignore
+		rm -rf examples/cmdline/.deps
+		cp -R samples examples ${D}/usr/share/doc/${PF}/
+	fi
+	# global configuration file
+	insinto /etc
+	doins "${FILESDIR}/sword.conf"
 }
 
 pkg_postinst() {
