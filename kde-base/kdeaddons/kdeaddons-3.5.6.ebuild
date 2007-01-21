@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.5.6.ebuild,v 1.3 2007/01/18 16:17:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.5.6.ebuild,v 1.4 2007/01/21 17:27:17 deathwing00 Exp $
 
 inherit db-use kde-dist
 
@@ -18,6 +18,13 @@ DEPEND="~kde-base/kdepim-${PV}
 	!kde-misc/metabar"
 RDEPEND="${DEPEND}"
 
+src_unpack() {
+	einfo "NOTICE: If the compilation dies complaining with"
+	einfo "\"SDL - version >= 1.2.0... no\", please run"
+	einfo "\"emerge --oneshot media-libs/libsdl\" and retry."
+	kde_src_unpack
+}
+
 src_compile() {
 	local myconf="$(use_with sdl) --without-xmms"
 
@@ -31,3 +38,4 @@ src_compile() {
 
 	kde_src_compile
 }
+
