@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jxpath/commons-jxpath-1.2.ebuild,v 1.2 2007/01/21 03:38:04 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jxpath/commons-jxpath-1.2-r2.ebuild,v 1.1 2007/01/21 12:47:53 fordfrog Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -42,9 +42,9 @@ src_unpack() {
 	java-pkg_jar-from servletapi-2.3
 	java-pkg_jar-from jdom-1.0
 	if use test ; then
-		java-pkg_jar-from commons-collections
-		java-pkg_jar-from commons-logging
-		java-pkg_jar-from junit
+		java-pkg_jar-from --build-only commons-collections
+		java-pkg_jar-from --build-only commons-logging
+		java-pkg_jar-from --build-only junit
 	fi
 }
 
