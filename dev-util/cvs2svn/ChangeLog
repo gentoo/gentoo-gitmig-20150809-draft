@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cvs2svn
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2svn/ChangeLog,v 1.8 2006/11/17 21:09:31 dev-zero Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2svn/ChangeLog,v 1.9 2007/01/21 13:05:04 ticho Exp $
+
+  21 Jan 2007; Andrej Kacian <ticho@gentoo.org> cvs2svn-1.5.0.ebuild:
+  Stable on x86, bug #159298.
 
   17 Nov 2006; Tiziano Müller <dev-zero@gentoo.org> cvs2svn-1.5.0.ebuild:
   Manpage added. Example- and contrib-scripts added.
