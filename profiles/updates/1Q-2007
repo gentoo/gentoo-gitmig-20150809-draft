@@ -8,3 +8,4 @@ move media-video/requant media-video/m2vrequantizer
 move www-apache/libapreq www-misc/libapreq
 move www-apache/libapreq2 www-misc/libapreq2
 move www-apache/Embperl www-apps/Embperl
+move net-ftp/ftpd net-ftp/netkit-ftpd
