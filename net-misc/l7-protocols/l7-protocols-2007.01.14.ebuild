@@ -1,8 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2006.12.12.ebuild,v 1.2 2007/01/21 04:55:21 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2007.01.14.ebuild,v 1.1 2007/01/21 04:55:21 dragonheart Exp $
 
-inherit toolchain-funcs
+inherit fixheadtails toolchain-funcs
+
 
 IUSE=""
 
@@ -18,14 +19,22 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 S=${WORKDIR}/${MY_P}
 
+src_unpack() {
+	unpack ${A}
+	sed -i -e "s/gcc.*\-o/$(tc-getCC) ${CFLAGS} -o/g" \
+		-e "s/g++.*\-o/$(tc-getCXX) ${CXXFLAGS} -o/g" "${S}"/testing/Makefile
+	htfix_file "${S}"/testing/*.sh
+}
+
 src_compile() {
-	sed -i -e "s/gcc.*-O2/$(tc-getCC) ${CFLAGS}/g" testing/Makefile
-	sed -i -e 's/-1/-n 1/g' testing/*.sh
 	emake -C testing
 }
 
 # NOTE Testing mechanism is currently broken:
 #  stack smashing attack in function main()
+
+# Is also extraordinarly inefficent getting random data.
+#
 #src_test() {
 #	cd testing
 #	find ${S} -name \*.pat -print -exec ./test_match.sh {} \; \
