@@ -5,7 +5,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-2.eclass,v 1.15 2007/01/21 19:30:26 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-2.eclass,v 1.16 2007/01/21 22:27:18 betelgeuse Exp $
 
 inherit java-utils-2
 
@@ -68,7 +68,7 @@ java-pkg-2_pkg_setup() {
 #                   (default: the one provided by use_doc in
 #                   java-utils-2.eclass)
 # EANT_GENTOO_CLASSPATH - @see eant documention in java-utils-2.eclass
-# EANT_EXTRA_ARGUMENTS - extra arguments to pass to eant
+# EANT_EXTRA_ARGS - extra arguments to pass to eant
 # param: Parameters are passed to ant verbatim
 # ------------------------------------------------------------------------------
 java-pkg-2_src_compile() {
@@ -78,7 +78,7 @@ java-pkg-2_src_compile() {
 
 		local antflags="${EANT_BUILD_TARGET:=jar}"
 		hasq doc ${IUSE} && antflags="${antflags} $(use_doc ${EANT_DOC_TARGET})"
-		eant ${antflags} -f "${EANT_BUILD_XML}" ${EANT_EXTRA_ARGUMENTS} "${@}"
+		eant ${antflags} -f "${EANT_BUILD_XML}" ${EANT_EXTRA_ARGS} "${@}"
 	else
 		echo "${FUNCNAME}: No build.xml found so nothing to do."
 	fi
