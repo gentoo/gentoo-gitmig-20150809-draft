@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-build/module-build-0.28-r1.ebuild,v 1.9 2006/09/04 00:21:58 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-build/module-build-0.28-r1.ebuild,v 1.10 2007/01/21 15:49:48 mcummings Exp $
 
 inherit perl-module
 
@@ -8,7 +8,7 @@ MY_PV=${PV/26.11/2611}
 MY_P="Module-Build-${MY_PV}"
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Build and install Perl modules"
-HOMEPAGE="http://search.cpan.org/~kwilliams/${MY_P}/"
+HOMEPAGE="http://search.cpan.org/~kwilliams/"
 SRC_URI="mirror://cpan/authors/id/K/KW/KWILLIAMS/${MY_P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
