@@ -1,7 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-0.8.11.ebuild,v 1.4 2005/11/13 22:49:03 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-0.8.11.ebuild,v 1.5 2007/01/21 08:15:04 pclouds Exp $
 
+RUBY_BUG_145222=yes
 inherit ruby
 
 DESCRIPTION="Centralized Ruby extension management system"
@@ -14,7 +15,7 @@ SRC_URI="http://rubyforge.org/frs/download.php/5207/${P}.tgz"
 
 KEYWORDS="~amd64 ppc ~ppc-macos sparc x86"
 SLOT="0"
-IUSE=""
+IUSE="examples"
 
 USE_RUBY="ruby18"
 DEPEND="virtual/ruby"

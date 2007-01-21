@@ -1,10 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/eruby-1.0.5-r1.ebuild,v 1.4 2006/12/22 19:07:00 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/eruby-1.0.5-r1.ebuild,v 1.5 2007/01/21 08:03:17 pclouds Exp $
 
+RUBY_BUG_145222=yes
 inherit ruby
 
-IUSE="vim-syntax"
+IUSE="vim-syntax examples"
 
 DESCRIPTION="eRuby interprets a Ruby code embedded text file"
 HOMEPAGE="http://www.modruby.net/"

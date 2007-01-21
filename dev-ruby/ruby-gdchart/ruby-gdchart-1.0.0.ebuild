@@ -1,7 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdchart/ruby-gdchart-1.0.0.ebuild,v 1.2 2006/03/31 14:47:39 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdchart/ruby-gdchart-1.0.0.ebuild,v 1.3 2007/01/21 08:13:55 pclouds Exp $
 
+RUBY_BUG_145222=yes
 inherit ruby
 
 MY_P="${P/_/-}"
@@ -14,7 +15,7 @@ RESTRICT="nomirror"
 LICENSE="Ruby"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~ppc64"
-IUSE=""
+IUSE="examples"
 USE_RUBY="ruby18 ruby19"
 
 DEPEND="virtual/ruby

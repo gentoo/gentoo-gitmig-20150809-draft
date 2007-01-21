@@ -1,10 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/snmplib-0.5.1.ebuild,v 1.2 2005/08/02 12:43:52 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/snmplib-0.5.1.ebuild,v 1.3 2007/01/21 08:22:04 pclouds Exp $
 
+RUBY_BUG_145222=yes
 inherit ruby
 
-IUSE=""
+IUSE="examples"
 USE_RUBY="any"
 
 MY_P="${P/snmplib/snmp}"

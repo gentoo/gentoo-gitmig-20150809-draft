@@ -1,10 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pcap/ruby-pcap-0.6.ebuild,v 1.1 2006/12/17 02:04:06 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pcap/ruby-pcap-0.6.ebuild,v 1.2 2007/01/21 08:17:15 pclouds Exp $
 
+RUBY_BUG_145222=yes
 inherit ruby
 
-IUSE=""
+IUSE="examples"
 
 DESCRIPTION="Extension library to use libpcap from Ruby"
 HOMEPAGE="http://www.goto.info.waseda.ac.jp/%7efukusima/ruby/pcap-e.html"

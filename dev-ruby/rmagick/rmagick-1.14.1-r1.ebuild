@@ -1,7 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-1.14.1-r1.ebuild,v 1.3 2007/01/20 14:59:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-1.14.1-r1.ebuild,v 1.4 2007/01/21 08:09:12 pclouds Exp $
 
+RUBY_BUG_145222=yes
 inherit ruby
 
 # The gem for this package doesn't seem to play well with portage.  It
@@ -16,7 +17,7 @@ SRC_URI="http://rubyforge.org/frs/download.php/14052/RMagick-${PV}.tar.bz2"
 LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ia64 ppc sparc ~x86"
-IUSE="doc"
+IUSE="examples doc"
 DEPEND="virtual/ruby
 	>=media-gfx/imagemagick-6.0"
 
