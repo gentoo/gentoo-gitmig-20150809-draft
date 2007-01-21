@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6642 2007/01/21 19:03:03 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6643 2007/01/21 19:20:39 nichoj Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -727,6 +727,7 @@ media-tv/nuppelvideo
 
 # Joshua Nichols <nichoj@gentoo.org> (05 Dec 2006)
 # XFCE 4.4 plugins
+xfce-extra/verve
 >=xfce-extra/xfce4-battery-0.4.90.3
 >=xfce-extra/xfce4-clipman-0.5.99.1
 xfce-extra/xfce4-cpu-freq
