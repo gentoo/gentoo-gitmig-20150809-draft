@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r3.ebuild,v 1.12 2007/01/14 07:08:02 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r3.ebuild,v 1.13 2007/01/21 19:43:17 flameeyes Exp $
 
 inherit eutils
 
@@ -79,7 +79,7 @@ src_compile() {
 
 	# We disable motif by default and then only enable it if it's requested.
 	if use motif; then
-		myconf="--enable-motif --with-x"
+		myconf="${myconf} --enable-motif --with-x"
 		use X || ewarn "Basic X11 support will be enabled because required by motif."
 	fi
 
