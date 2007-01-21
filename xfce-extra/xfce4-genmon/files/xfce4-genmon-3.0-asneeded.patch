@@ -1,0 +1,12 @@
+diff -ur xfce4-genmon-plugin-3.0.orig/panel-plugin/Makefile.am xfce4-genmon-plugin-3.0/panel-plugin/Makefile.am
+--- xfce4-genmon-plugin-3.0.orig/panel-plugin/Makefile.am	2006-10-13 19:08:29.000000000 +0300
++++ xfce4-genmon-plugin-3.0/panel-plugin/Makefile.am	2007-01-06 20:51:04.000000000 +0200
+@@ -5,7 +5,7 @@
+ 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"			\
+ 	@LIBXFCE4PANEL_CFLAGS@
+ 
+-xfce4_genmon_plugin_LDFLAGS =					\
++xfce4_genmon_plugin_LDADD =					\
+ 	@LIBXFCE4PANEL_LIBS@
+ 
+ xfce4_genmon_plugin_SOURCES =	\
