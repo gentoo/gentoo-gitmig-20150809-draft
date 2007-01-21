@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/vdradmin-am-3.5.2-r1.ebuild,v 1.1 2007/01/19 23:36:11 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/vdradmin-am-3.5.2-r2.ebuild,v 1.1 2007/01/21 13:22:17 zzam Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="WWW Admin for the Video Disk Recorder"
 HOMEPAGE="http://andreas.vdr-developer.org/"
 SRC_URI="http://andreas.vdr-developer.org/download/${P}.tar.bz2"
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="unicode"
@@ -44,10 +44,6 @@ src_unpack() {
 	sed -i vdradmind.pl \
 		-e "/COMPILE_DIR/s-/tmp-${TMP_DIR}-" \
 		-e "s-/var/run/vdradmind.pid-/var/tmp/vdradmin/vdradmind.pid-"
-
-	# Already on system by dependencies
-	cd ${S}/lib
-	rm -r URI MIME File Template.pm
 }
 
 
@@ -72,8 +68,8 @@ src_install() {
 	insinto ${LIB_DIR}/template
 	doins -r ${S}/template/*
 
-	insinto ${LIB_DIR}/lib
-	doins -r ${S}/lib/*
+	insinto ${LIB_DIR}/lib/Template/Plugin
+	doins -r ${S}/lib/Template/Plugin/JavaScript.pm
 
 	insinto /usr/share/locale/
 	doins -r ${S}/locale/*
