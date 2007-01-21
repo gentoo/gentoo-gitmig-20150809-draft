@@ -1,2 +1,5 @@
 # Java currently uses generation 1
 dev-libs/cyrus-sasl java
+
+# Python bindings for avahi work...
+net-dns/avahi -python
