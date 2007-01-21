@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.30-r2.ebuild,v 1.2 2007/01/20 23:45:46 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.30-r2.ebuild,v 1.3 2007/01/21 13:33:04 hollow Exp $
 
 inherit eutils flag-o-matic
 
@@ -39,7 +39,8 @@ src_unpack() {
 }
 
 src_compile() {
-	emake CFLAGS="${CFLAGS}" || die "make failed"
+	# parallel make is b0rked
+	emake -j1 CFLAGS="${CFLAGS}" || die "make failed"
 }
 
 src_install() {
