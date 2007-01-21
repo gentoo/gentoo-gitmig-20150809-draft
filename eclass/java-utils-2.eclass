@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.46 2007/01/21 01:20:21 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.47 2007/01/21 20:31:55 betelgeuse Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -1509,7 +1509,7 @@ eant() {
 #			"Using eant, but not depending on dev-java/ant or dev-java/ant-core"
 #	fi
 
-	local antflags="-Dnoget=true"
+	local antflags="-Dnoget=true -Dmaven.mode.offline=true"
 	java-pkg_init-compiler_
 	local compiler="${GENTOO_COMPILER}"
 
