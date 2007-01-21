@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.47 2007/01/21 20:31:55 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.48 2007/01/21 21:12:52 betelgeuse Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -772,7 +772,7 @@ java-pkg_jar-from() {
 
 	local build_only=""
 
-	if [[ "${1}" = "--build-only" ]]; then
+	if [[ "${1}" = "--build-only" || "${EBUILD_PHASE}" == "test" ]]; then
 		build_only="true"
 		shift
 	fi
@@ -857,7 +857,7 @@ java-pkg_jarfrom() {
 java-pkg_getjars() {
 	debug-print-function ${FUNCNAME} $*
 
-	if [[ "${1}" = "--build-only" ]]; then
+	if [[ "${1}" = "--build-only" || "${EBUILD_PHASE}" == "test" ]]; then
 		local build_only="true"
 		shift
 	fi
@@ -917,7 +917,7 @@ java-pkg_getjar() {
 
 	local build_only=""
 
-	if [[ "${1}" = "--build-only" ]]; then
+	if [[ "${1}" = "--build-only" || "${EBUILD_PHASE}" == "test" ]]; then
 		build_only="true"
 		shift
 	fi
