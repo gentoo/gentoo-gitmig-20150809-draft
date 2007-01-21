@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.45 2007/01/20 20:50:33 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.46 2007/01/21 01:20:21 caster Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -38,7 +38,30 @@ IUSE="elibc_FreeBSD"
 # Make sure we use java-config-2
 export WANT_JAVA_CONFIG="2"
 
-# TODO document
+# -----------------------------------------------------------------------------
+# @variable-external WANT_ANT_TASKS
+# @variable-default ""
+#
+# An $IFS separated list of ant tasks.
+# Ebuild can specify this variable before inheriting java-ant-2 eclass to
+# determine ANT_TASKS it needs. They will be automatically translated to
+# DEPEND variable and ANT_TASKS variable. JAVA_PKG_FORCE_ANT_TASKS can override
+# ANT_TASKS set by WANT_ANT_TASKS, but not the DEPEND due to caching.
+# Ebuilds that need to depend conditionally on certain tasks and specify them
+# differently for different eant calls can't use this simplified approach.
+# You also cannot specify version or anything else than ant-*.
+#
+# @example WANT_ANT_TASKS="ant-junit ant-trax"
+#
+# @seealso JAVA_PKG_FORCE_ANT_TASKS
+# -----------------------------------------------------------------------------
+#WANT_ANT_TASKS
+
+# @variable-internal JAVA_PKG_PORTAGE_DEP
+#
+# The version of portage we need to function properly. At this moment it's
+# portage with phase hooks support.
+# -----------------------------------------------------------------------------
 JAVA_PKG_PORTAGE_DEP=">=sys-apps/portage-2.1_pre1"
 
 # -----------------------------------------------------------------------------
@@ -130,6 +153,20 @@ JAVA_PKG_COMPILERS_CONF=${JAVA_PKG_COMPILERS_CONF:="/etc/java-config-2/build/com
 # @note This should only be used internally or for testing.
 # @example Use jikes and javac, in that order
 #	JAVA_PKG_FORCE_COMPILER="jikes javac"
+# -----------------------------------------------------------------------------
+
+# -----------------------------------------------------------------------------
+# @variable-external JAVA_PKG_FORCE_ANT_TASKS
+#
+# An $IFS separated list of ant tasks. Can be set in environment before calling
+# emerge/ebuild to override variables set in ebuild, mainly for testing before
+# putting the resulting (WANT_)ANT_TASKS into ebuild. Affects only ANT_TASKS in
+# eant() call, not the dependencies specified in WANT_ANT_TASKS.
+#
+# @example JAVA_PKG_FORCE_ANT_TASKS="ant-junit ant-trax" \
+# 	ebuild foo.ebuild compile
+#
+# @seealso WANT_ANT_TASKS
 # -----------------------------------------------------------------------------
 
 # TODO document me
@@ -1344,6 +1381,103 @@ java-pkg_ensure-test() {
 }
 
 # ------------------------------------------------------------------------------
+# @ebuild-function java-pkg_register-ant-task
+#
+# Register this package as ant task, so that ant will load it when no specific
+# ANT_TASKS are specified. Note that even without this registering, all packages
+# specified in ANT_TASKS will be loaded. Mostly used by the actual ant tasks
+# packages, but can be also used by other ebuilds that used to symlink their
+# .jar into /usr/share/ant-core/lib to get autoloaded, for backwards
+# compatibility.
+#
+# @param --version x.y Register only for ant version x.y (otherwise for any ant
+#		version). Used by the ant-* packages to prevent loading of mismatched
+#		ant-core ant tasks after core was updated, before the tasks are updated,
+#		without a need for blockers.
+# @param $1 Name to register as. Defaults to JAVA_PKG_NAME ($PN[-$SLOT])
+# ------------------------------------------------------------------------------
+java-pkg_register-ant-task() {
+	local TASKS_DIR="tasks"
+
+	# check for --version x.y parameters
+	while [[ -n "${1}" && -n "${2}" ]]; do
+		local var="${1#--}"
+		local val="${2}"
+		if [[ "${var}" == "version" ]]; then
+			TASKS_DIR="tasks-${val}"
+		else
+			die "Unknown parameter passed to java-pkg_register-ant-tasks: ${1} ${2}"
+		fi
+		shift 2
+	done
+
+	local TASK_NAME="${1:-${JAVA_PKG_NAME}}"
+
+	dodir /usr/share/ant/${TASKS_DIR}
+	touch "${D}/usr/share/ant/${TASKS_DIR}/${TASK_NAME}"
+}
+
+# ------------------------------------------------------------------------------
+# @internal-function java-pkg_ant-tasks-from-deps
+#
+# Function to determine ANT_TASKS from DEPEND variable for backwards
+# compatibility with ebuilds that don't set ANT_TASKS before calling eant() or
+# WANT_ANT_TASKS before inheriting java-pkg-2. If the DEPEND string contains
+# "dev-java/ant" or "dev-java/ant-tasks", then it returns "all", otherwise
+# "none". It's not smart enough to cope with USE flag depends but that shouldn't
+# be a problem, the worst it can do is activace all tasks when not needed.
+# Note that this is called only with JAVA_PKG_STRICT=1, to find ebuilds with
+# insufficient dependencies, otherwise all available tasks are used for
+# backwards compatilbility.
+#
+# @return "all" or "none"
+# ------------------------------------------------------------------------------
+java-pkg_ant-tasks-from-deps() {
+	local found_ant found_ant_tasks
+
+	for dep in ${DEPEND}
+	do
+		local ant="$(awk '/(dev-java\/ant)/ { if (match($1, "(dev-java/ant)((-[0-9])+|$)", m)) print m[1]  }' <<< ${dep})"
+		[[ "${ant}" == "dev-java/ant" ]] && found_ant=true
+		[[ "${dep}" == *"ant-tasks"* ]] && found_ant_tasks=true
+	done
+
+	if [[ -n "${found_ant}" || -n "${found_ant_tasks}" ]]; then
+		java-pkg_announce-qa-violation "The ebuild DEPENDS on deprecated ant or ant-tasks"
+		echo "all"
+	else
+		# ebuild doesn't set ANT_TASKS and doesn't depend on ant-tasks or ant
+		# so we deactivate all tasks that may be installed
+		echo "none"
+	fi
+}
+
+# ------------------------------------------------------------------------------
+# @internal-function java-pkg_ant-tasks-depend
+#
+# Translates the WANT_ANT_TASKS variable into valid dependencies.
+# ------------------------------------------------------------------------------
+java-pkg_ant-tasks-depend() {
+	debug-print-function ${FUNCNAME} ${WANT_ANT_TASKS}
+
+	if [[ -n "${WANT_ANT_TASKS}" ]]; then
+		local DEP=""
+		for i in ${WANT_ANT_TASKS}
+		do
+			if [[ ${i} != ant-* ]]; then
+				echo "Invalid atom in WANT_ANT_TASKS: ${i}"
+				return 1
+			fi
+			DEP="${DEP}dev-java/${i} "
+		done
+		echo ${DEP}
+		return 0
+	else
+		return 0
+	fi
+}
+
+# ------------------------------------------------------------------------------
 # @section-end helper
 # ------------------------------------------------------------------------------
 
@@ -1359,12 +1493,12 @@ java-pkg_ensure-test() {
 # @ebuild-function eant
 #
 # Ant wrapper function. Will use the appropriate compiler, based on user-defined
-# compiler.
+# compiler. Will also set proper ANT_TASKS from the variable ANT_TASKS,
 # variables:
 # EANT_GENTOO_CLASSPATH - calls java-pkg_getjars for the value and adds to the
 #                         gentoo.classpath property. Be sure to call
 #                         java-ant_rewrite-classpath in src_unpack.
-#
+# *ANT_TASKS - used to determine ANT_TASKS before calling Ant.
 # ------------------------------------------------------------------------------
 eant() {
 	debug-print-function ${FUNCNAME} $*
@@ -1403,7 +1537,36 @@ eant() {
 		antflags="${antflags} -Dbuild.sysclasspath=ignore"
 	fi
 
-	[[ -n ${JAVA_PKG_DEBUG} ]] && antflags="${antflags} -debug"
+	if has_version ">=dev-java/ant-core-1.7.0"; then
+		# default ANT_TASKS to WANT_ANT_TASKS, if ANT_TASKS is not set explicitly
+		ANT_TASKS="${ANT_TASKS:-${WANT_ANT_TASKS}}"
+
+		# override ANT_TASKS with JAVA_PKG_FORCE_ANT_TASKS if it's set
+		ANT_TASKS="${JAVA_PKG_FORCE_ANT_TASKS:-${ANT_TASKS}}"
+
+		if is-java-strict; then
+			# if ant-tasks were not set by ebuild or forced, try to determine them from depends
+			if [[ -z "${ANT_TASKS}" ]]; then
+				ANT_TASKS="$(java-pkg_ant-tasks-from-deps)"
+			fi
+		else
+			# if ant-tasks is not set by ebuild or forced, activate all of them
+			ANT_TASKS="${ANT_TASKS:-all}"
+		fi
+
+		# at this point, ANT_TASKS should be "all", "none" or explicit list
+		if [[ "${ANT_TASKS}" == "all" ]]; then
+			einfo "Using all available ANT_TASKS"
+		elif [[ "${ANT_TASKS}" == "none" ]]; then
+			einfo "Disabling all optional ANT_TASKS"
+		else
+			einfo "Using following ANT_TASKS: ${ANT_TASKS}"
+		fi
+		
+		export ANT_TASKS
+	fi
+
+	[[ -n ${JAVA_PKG_DEBUG} ]] && antflags="${antflags} --execdebug -debug"
 	[[ -n ${PORTAGE_QUIET} ]] && antflags="${antflags} -q"
 
 	local gcp="${EANT_GENTOO_CLASSPATH}"
@@ -1538,6 +1701,10 @@ java-pkg_init() {
 	# This also helps prevent unexpected dependencies on random things
 	# from the CLASSPATH.
 	unset CLASSPATH
+	
+	# Unset external ANT_ stuff
+	unset ANT_TASKS
+	unset ANT_OPTS
 }
 
 # ------------------------------------------------------------------------------

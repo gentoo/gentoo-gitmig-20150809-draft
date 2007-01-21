@@ -10,7 +10,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-ant-2.eclass,v 1.13 2007/01/20 22:27:34 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-ant-2.eclass,v 1.14 2007/01/21 01:20:21 caster Exp $
 
 inherit java-utils-2
 
@@ -18,9 +18,26 @@ inherit java-utils-2
 # ant to build. In particular, it will attempt to fix build.xml files, so that
 # they use the appropriate 'target' and 'source' attributes.
 
+# -----------------------------------------------------------------------------
+# @variable-preinherit WANT_ANT_TASKS
+# @variable-default ""
+#
+# Please see the description in java-utils-2.eclass.
+#WANT_ANT_TASKS
+
 # We need some tools from javatoolkit. We also need portage 2.1 for phase hooks
 DEPEND=">=dev-java/javatoolkit-0.1.5 ${JAVA_PKG_PORTAGE_DEP}"
+# add ant-core into DEPEND, unless disabled
 [[ "${JAVA_ANT_DISABLE_ANT_CORE_DEP:-true}" ]] || DEPEND="${DEPEND} dev-java/ant-core"
+# add ant tasks specified in WANT_ANT_TASKS to DEPEND
+local ANT_TASKS_DEPEND;
+ANT_TASKS_DEPEND="$(java-pkg_ant-tasks-depend)"
+# check that java-pkg_ant-tasks-depend didn't fail
+if [[ $? != 0 ]]; then
+	eerror "${ANT_TASKS_DEPEND}"
+	die "java-pkg_ant-tasks-depend() failed"
+fi
+DEPEND="${DEPEND} ${ANT_TASKS_DEPEND}"
 
 # ------------------------------------------------------------------------------
 # @global JAVA_PKG_BSFIX
