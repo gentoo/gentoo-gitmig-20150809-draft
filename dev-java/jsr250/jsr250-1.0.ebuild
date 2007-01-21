@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr250/jsr250-1.0.ebuild,v 1.1 2006/09/11 11:46:40 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr250/jsr250-1.0.ebuild,v 1.2 2007/01/21 07:17:40 wltjr Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -10,7 +10,7 @@ SRC_URI="com_annotations-1_0-fr-api-doc.zip"
 
 LICENSE="sun-jsr250"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc"
 RESTRICT="fetch nostrip"
 
