@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/gimp-help-0.11.ebuild,v 1.1 2007/01/18 17:35:15 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/gimp-help-0.11.ebuild,v 1.2 2007/01/21 15:43:04 pva Exp $
 
 MY_P=${P/gimp-help/gimp-help-2}
 S=${WORKDIR}/${MY_P}
@@ -13,11 +13,11 @@ LICENSE="FDL-1.2"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="imagemagick linguas_cs linguas_de linguas_en linguas_fr linguas_hr linguas_it linguas_nl linguas_sv linguas_zh_CN"
+IUSE="webinstall linguas_cs linguas_de linguas_en linguas_fr linguas_hr linguas_it linguas_nl linguas_sv linguas_zh_CN"
 DEPEND="=app-text/docbook-xml-dtd-4.3*
 		dev-libs/libxml2
 		dev-libs/libxslt
-		imagemagick? ( media-gfx/imagemagick )"
+		webinstall? ( media-gfx/imagemagick )"
 RDEPEND="!<media-gfx/gimp-2.2.12"
 
 src_compile() {
@@ -36,7 +36,7 @@ src_compile() {
 	ALL_LINGUAS=${ALL_LINGUAS} \
 		econf \
 		--without-gimp \
-		$(use_enable imagemagick convert) \
+		$(use_enable webinstall convert) \
 		|| die "econf failed"
 
 	# not parallel make safe (#137192)
