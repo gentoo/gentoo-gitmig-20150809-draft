@@ -1,6 +1,19 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.48 2007/01/16 12:22:02 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.49 2007/01/21 20:05:10 fordfrog Exp $
+
+*netbeans-5.5-r2 (21 Jan 2007)
+
+  21 Jan 2007; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/5.5-r2/jdbcstorage-build.xml-comments.patch,
+  +files/5.5-r2/mdrant-build.xml-comments.patch,
+  +files/5.5-r2/startscript.sh, +netbeans-5.5-r2.ebuild:
+  Removed legacy stuff and cleaned code, javadoc is now generated from the
+  sources instead of being downloaded, license changed to CDDL, dropped
+  dependency on tomcat, checked and corrected all dependencies, more bundled
+  jars replaced with system jars, config files moved to etc so they are
+  protected now against rewrite on upgrades, removed legacy stuff from
+  launcher script.
 
   16 Jan 2007; Vlastimil Babka <caster@gentoo.org> netbeans-5.5.ebuild,
   netbeans-5.5-r1.ebuild:
