@@ -1,11 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.212-r1.ebuild,v 1.1 2007/01/21 11:34:53 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.212-r1.ebuild,v 1.2 2007/01/21 14:09:20 hollow Exp $
 
-WANT_AUTOMAKE="1.9"
-WANT_AUTOCONF="latest"
-
-inherit autotools eutils bash-completion
+inherit eutils bash-completion
 
 DESCRIPTION="Linux-VServer admin utilities"
 HOMEPAGE="http://www.nongnu.org/util-vserver/"
@@ -17,16 +14,13 @@ KEYWORDS="~alpha amd64 ~ppc ~sparc x86"
 
 IUSE=""
 
-DEPEND=">=dev-libs/dietlibc-0.30-r2
-	dev-libs/beecrypt
+RDEPEND="dev-libs/beecrypt
 	net-firewall/iptables
 	net-misc/vconfig
 	sys-apps/iproute2"
 
-RDEPEND="sys-apps/iproute2
-	net-misc/vconfig
-	net-firewall/iptables
-	dev-libs/beecrypt"
+DEPEND="${RDEPEND}
+	>=dev-libs/dietlibc-0.30-r2"
 
 pkg_setup() {
 	if [[ -z "${VDIRBASE}" ]]; then
