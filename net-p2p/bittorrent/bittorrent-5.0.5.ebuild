@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-5.0.5.ebuild,v 1.1 2007/01/19 18:49:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-5.0.5.ebuild,v 1.2 2007/01/21 13:05:48 armin76 Exp $
 
 inherit distutils fdo-mime eutils
 
@@ -33,7 +33,7 @@ DEPEND="${RDEPEND}
 	dev-python/dnspython"
 PROVIDE="virtual/bittorrent"
 
-DOCS="README.txt TRACKERLESS.txt public.key credits.txt"
+DOCS="README.txt TRACKERLESS.txt public.key"
 PYTHON_MODNAME="BitTorrent"
 
 pkg_setup() {
@@ -57,7 +57,6 @@ src_unpack() {
 src_install() {
 	distutils_src_install
 	use gtk || rm -f "${D}"/usr/bin/bittorrent
-	dohtml redirdonate.html
 
 	if use gtk ; then
 		doicon images/logo/bittorrent.ico
@@ -75,6 +74,11 @@ pkg_postinst() {
 	einfo "Remember that BitTorrent has changed file naming scheme"
 	einfo "To run BitTorrent just execute /usr/bin/bittorrent"
 	einfo "To run the init.d, please use /etc/init.d/bittorrent-tracker"
+	elog
+	elog "If you are upgrading from bittorrent-4.4.0 you must remove "
+	elog "the ~/.bittorrent dir to make this version work. Remember to "
+	elog "do a backup first!"
+	elog
 	distutils_pkg_postinst
 	fdo-mime_desktop_database_update
 }
