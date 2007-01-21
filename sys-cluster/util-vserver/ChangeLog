@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/util-vserver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/ChangeLog,v 1.69 2007/01/20 12:35:49 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/ChangeLog,v 1.70 2007/01/21 00:10:13 phreak Exp $
+
+  20 Jan 2007; Christian Heim <phreak@gentoo.org>
+  +files/util-vserver-0.30.212-initpost.patch, util-vserver-0.30.212.ebuild:
+  Adding a patch to fix runlevel scripts for older baselayouts.
+  util-vserver-0.30.212 going stable on amd64 and x86.
 
   20 Jan 2007; Christian Heim <phreak@gentoo.org>
   util-vserver-0.30.212.ebuild:
