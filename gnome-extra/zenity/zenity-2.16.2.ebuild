@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-2.16.2.ebuild,v 1.9 2007/01/19 00:02:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-2.16.2.ebuild,v 1.10 2007/01/21 20:11:36 kloeri Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="libnotify"
 
 RDEPEND=">=x11-libs/gtk+-2.10
