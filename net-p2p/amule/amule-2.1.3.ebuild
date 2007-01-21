@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.1.3.ebuild,v 1.4 2007/01/21 12:37:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.1.3.ebuild,v 1.5 2007/01/21 13:02:15 armin76 Exp $
 
 inherit eutils flag-o-matic wxwidgets
 
@@ -19,8 +19,7 @@ IUSE="amuled debug gtk nls remote stats unicode"
 DEPEND=">=x11-libs/wxGTK-2.6.0
 		>=sys-libs/zlib-1.2.1
 		stats? ( >=media-libs/gd-2.0.26 )
-		remote? ( >=media-libs/libpng-1.2.0 )
-		!net-p2p/xmule"
+		remote? ( >=media-libs/libpng-1.2.0 )"
 
 pkg_setup() {
 		export WX_GTK_VER="2.6"
