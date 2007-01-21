@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/dejavu-2.12.ebuild,v 1.3 2006/11/30 15:28:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/dejavu-2.14.ebuild,v 1.1 2007/01/21 18:34:17 flameeyes Exp $
 
 inherit font
 
