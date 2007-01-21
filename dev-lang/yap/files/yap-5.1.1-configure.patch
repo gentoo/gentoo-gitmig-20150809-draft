@@ -1,5 +1,5 @@
 --- Yap-5.1.1.orig/configure.in	2006-03-21 07:51:42.000000000 +1200
-+++ Yap-5.1.1/configure.in	2006-04-23 11:03:02.000000000 +1200
++++ Yap-5.1.1/configure.in	2007-01-21 18:59:06.000000000 +1300
 @@ -50,7 +50,7 @@
  	[ --enable-threads           support system threads ],
  	threads="$enableval", threads=no)
@@ -58,7 +58,16 @@
  dnl		threads=yes
  	elif test "$withval" = no; then
  		yap_cv_jpl=no
-@@ -390,7 +401,7 @@
+@@ -338,6 +349,8 @@
+ AC_PATH_PROG(INSTALL_INFO,install-info,true,$PATH:/sbin:/usr/sbin:/usr/etc:/usr/local/sbin)
+ AC_PATH_PROG(SHELL,sh)
+ 
++AC_HEADER_STDC
++
+ dnl Check for libraries.
+ dnl mingw does not get along well with libm
+ dnl cygnus and mingw32 also need wsock32 to use sockets.
+@@ -390,7 +403,7 @@
    AC_CHECK_LIB(gmp,main)
  fi
  
@@ -67,7 +76,7 @@
  then
  	dnl check for mysql
  	AC_MSG_CHECKING(for main in -lmysqlclient)
-@@ -409,7 +420,24 @@
+@@ -409,7 +422,24 @@
  		YAP_EXTRAS="$YAP_EXTRAS -DMYDDAS_MYSQL"
  		LIBS="$LIBS -L/usr/lib/mysql -lmysqlclient -lz -lcrypt -lnsl -lm -lc -lnss_files -lnss_dns -lresolv "
  	fi
@@ -93,7 +102,7 @@
  	dnl check for odbc
  	AC_MSG_CHECKING(for main in -lodbc)
  	AC_CACHE_VAL(yap_odbc,[
-@@ -428,40 +456,21 @@
+@@ -428,40 +458,21 @@
  		YAP_EXTRAS="$YAP_EXTRAS -DMYDDAS_ODBC"
  		LIBS="$LIBS -lodbc "
  	fi
@@ -138,7 +147,15 @@
  
  if test "$myddasstats" = "yes"
    then
-@@ -850,7 +859,7 @@
+@@ -831,7 +842,6 @@
+ fi
+ 
+ dnl Checks for header files.
+-AC_HEADER_STDC
+ AC_HEADER_SYS_WAIT
+ AC_CHECK_HEADERS(arpa/inet.h ctype.h direct.h dirent.h dlfcn.h)
+ AC_CHECK_HEADERS(errno.h fcntl.h)
+@@ -850,7 +860,7 @@
  then
    AC_CHECK_HEADERS(gmp.h)
  fi
