@@ -1,0 +1,203 @@
+diff -ur src.orig/alice/tuprolog/BuiltIn.java src/alice/tuprolog/BuiltIn.java
+--- src.orig/alice/tuprolog/BuiltIn.java	2006-10-30 12:45:16.000000000 +1300
++++ src/alice/tuprolog/BuiltIn.java	2007-01-22 11:07:57.000000000 +1300
+@@ -88,7 +88,6 @@
+ 	
+ 	/**
+ 	 * usata per la retract in basicLibrary
+-	 * @return
+ 	 */
+ 	public boolean $restore_db_0() {
+ 		theoryManager.transRestore(engineManager.restoreLastTheoryStatus());
+diff -ur src.orig/alice/tuprolog/ChoicePointStore.java src/alice/tuprolog/ChoicePointStore.java
+--- src.orig/alice/tuprolog/ChoicePointStore.java	2006-10-30 12:45:16.000000000 +1300
++++ src/alice/tuprolog/ChoicePointStore.java	2007-01-22 11:07:58.000000000 +1300
+@@ -35,7 +35,6 @@
+ 	
+ 	/**
+ 	 * Return the actual choice-point store
+-	 * @return
+ 	 */
+ 	public ChoicePointContext getPointer() {
+ 		return pointer;
+@@ -44,7 +43,6 @@
+ 	/**
+ 	 * Check if a choice point exists in the store.
+ 	 * As a side effect, removes choice points which have been already used and are now empty. 
+-	 * @return
+ 	 */
+ 	protected boolean existChoicePoint() {
+ 		if (pointer == null) return false;
+diff -ur src.orig/alice/tuprolog/ClauseStore.java src/alice/tuprolog/ClauseStore.java
+--- src.orig/alice/tuprolog/ClauseStore.java	2006-10-30 12:45:16.000000000 +1300
++++ src/alice/tuprolog/ClauseStore.java	2007-01-22 11:07:58.000000000 +1300
+@@ -58,8 +58,6 @@
+ 	
+ 	/**
+ 	 * Verify if there is a term in compatibleGoals compatible with goal. 
+-	 * @param goal
+-	 * @param compGoals
+ 	 * @return true if compatible or false otherwise.
+ 	 */
+ 	protected boolean existCompatibleClause() {
+diff -ur src.orig/alice/tuprolog/EngineManager.java src/alice/tuprolog/EngineManager.java
+--- src.orig/alice/tuprolog/EngineManager.java	2006-10-30 12:45:16.000000000 +1300
++++ src/alice/tuprolog/EngineManager.java	2007-01-22 11:07:58.000000000 +1300
+@@ -81,7 +81,7 @@
+ 	/**
+ 	 *  Solves a query
+ 	 *
+-	 * @param g the term representing the goal to be demonstrated
++	 * @param query the term representing the goal to be demonstrated
+ 	 * @return the result of the demonstration
+ 	 * @see SolveInfo
+ 	 **/
+diff -ur src.orig/alice/tuprolog/PrimitiveManager.java src/alice/tuprolog/PrimitiveManager.java
+--- src.orig/alice/tuprolog/PrimitiveManager.java	2006-10-30 12:45:16.000000000 +1300
++++ src/alice/tuprolog/PrimitiveManager.java	2007-01-22 11:07:58.000000000 +1300
+@@ -89,7 +89,7 @@
+ 	 * This involves identifying structs representing builtin
+ 	 * predicates and functors, and setting up related structures and links
+ 	 *
+-	 * @parm term the term to be identified
++	 * @param term the term to be identified
+ 	 */
+ 	public void identifyDirective(Term term) {
+ 		identify(term,PrimitiveInfo.DIRECTIVE);
+diff -ur src.orig/alice/tuprolog/lib/BasicLibrary.java src/alice/tuprolog/lib/BasicLibrary.java
+--- src.orig/alice/tuprolog/lib/BasicLibrary.java	2006-10-30 12:45:16.000000000 +1300
++++ src/alice/tuprolog/lib/BasicLibrary.java	2007-01-22 11:11:44.000000000 +1300
+@@ -96,7 +96,7 @@
+ 	/**
+ 	 * Loads a library constructed from a theory.
+ 	 * 
+-	 * @param theory theory text
++	 * @param th theory text
+ 	 * @param libName name of the library
+ 	 * @return true if the library has been succesfully loaded.
+ 	 */
+@@ -173,16 +173,16 @@
+ 		return true;
+ 	}
+ 	
+-	public boolean warning_0() {
+-		getEngine().setWarning(true);
+-		return true;
+-	}
+-	
+-	public boolean nowarning_0() {
+-		getEngine().setWarning(false);
+-		return true;
+-	}
+-	
++	public boolean warning_0() {
++		getEngine().setWarning(true);
++		return true;
++	}
++	
++	public boolean nowarning_0() {
++		getEngine().setWarning(false);
++		return true;
++	}
++	
+ 	//
+ 	// term type inspection
+ 	//
+diff -ur src.orig/alice/tuprolog/lib/JavaLibrary.java src/alice/tuprolog/lib/JavaLibrary.java
+--- src.orig/alice/tuprolog/lib/JavaLibrary.java	2006-10-30 12:45:16.000000000 +1300
++++ src/alice/tuprolog/lib/JavaLibrary.java	2007-01-22 11:07:58.000000000 +1300
+@@ -1227,7 +1227,6 @@
+ 	
+ 	/**
+ 	 * Generates a fresh numeric identifier
+-	 * @return
+ 	 */
+ 	protected Struct generateFreshId() {
+ 		return new Struct("$obj_" + id++);        
+diff -ur src.orig/alice/util/jedit/InputHandler.java src/alice/util/jedit/InputHandler.java
+--- src.orig/alice/util/jedit/InputHandler.java	2006-10-30 12:45:16.000000000 +1300
++++ src/alice/util/jedit/InputHandler.java	2007-01-22 11:13:33.000000000 +1300
+@@ -24,7 +24,7 @@
+  *
+  * @author Slava Pestov
+  * @version $Id: tuprolog-2.0-javadocs.patch,v 1.1 2007/01/21 22:31:51 keri Exp $
+- * @see org.gjt.sp.jedit.textarea.DefaultInputHandler
++ * @see alice.util.jedit.DefaultInputHandler
+  */
+ public abstract class InputHandler extends KeyAdapter
+ {
+@@ -187,7 +187,7 @@
+ 	/**
+ 	 * Grabs the next key typed event and invokes the specified
+ 	 * action with the key as a the action command.
+-	 * @param action The action
++	 * @param listener The action
+ 	 */
+ 	public void grabNextKeyStroke(ActionListener listener)
+ 	{
+diff -ur src.orig/alice/util/jedit/JEditTextArea.java src/alice/util/jedit/JEditTextArea.java
+--- src.orig/alice/util/jedit/JEditTextArea.java	2006-10-30 12:45:16.000000000 +1300
++++ src/alice/util/jedit/JEditTextArea.java	2007-01-22 11:14:18.000000000 +1300
+@@ -1389,7 +1389,7 @@
+ 
+ 	/**
+ 	 * Sets if the selection should be rectangular.
+-	 * @param overwrite True if the selection should be rectangular,
++	 * @param rectSelect True if the selection should be rectangular,
+ 	 * false otherwise.
+ 	 */
+ 	public final void setSelectionRectangular(boolean rectSelect)
+diff -ur src.orig/alice/util/jedit/KeywordMap.java src/alice/util/jedit/KeywordMap.java
+--- src.orig/alice/util/jedit/KeywordMap.java	2006-10-30 12:45:16.000000000 +1300
++++ src/alice/util/jedit/KeywordMap.java	2007-01-22 11:14:52.000000000 +1300
+@@ -75,7 +75,7 @@
+ 	/**
+ 	 * Adds a key-value mapping.
+ 	 * @param keyword The key
+-	 * @Param id The value
++	 * @param id The value
+ 	 */
+ 	public void add(String keyword, byte id)
+ 	{
+diff -ur src.orig/alice/util/jedit/TextAreaPainter.java src/alice/util/jedit/TextAreaPainter.java
+--- src.orig/alice/util/jedit/TextAreaPainter.java	2006-10-30 12:45:16.000000000 +1300
++++ src/alice/util/jedit/TextAreaPainter.java	2007-01-22 11:17:22.000000000 +1300
+@@ -75,7 +75,7 @@
+ 	/**
+ 	 * Returns the syntax styles used to paint colorized text. Entry <i>n</i>
+ 	 * will be used to paint tokens with id = <i>n</i>.
+-	 * @see org.gjt.sp.jedit.syntax.Token
++	 * @see alice.util.jedit.Token
+ 	 */
+ 	public final SyntaxStyle[] getStyles()
+ 	{
+@@ -86,7 +86,7 @@
+ 	 * Sets the syntax styles used to paint colorized text. Entry <i>n</i>
+ 	 * will be used to paint tokens with id = <i>n</i>.
+ 	 * @param styles The syntax styles
+-	 * @see org.gjt.sp.jedit.syntax.Token
++	 * @see alice.util.jedit.Token
+ 	 */
+ 	public final void setStyles(SyntaxStyle[] styles)
+ 	{
+@@ -356,7 +356,7 @@
+ 
+ 	/**
+ 	 * Repaints the text.
+-	 * @param g The graphics context
++	 * @param gfx The graphics context
+ 	 */
+ 	public void paint(Graphics gfx)
+ 	{
+diff -ur src.orig/alice/util/jedit/TokenMarker.java src/alice/util/jedit/TokenMarker.java
+--- src.orig/alice/util/jedit/TokenMarker.java	2006-10-30 12:45:16.000000000 +1300
++++ src/alice/util/jedit/TokenMarker.java	2007-01-22 11:17:55.000000000 +1300
+@@ -24,7 +24,7 @@
+  * @author Slava Pestov
+  * @version $Id: tuprolog-2.0-javadocs.patch,v 1.1 2007/01/21 22:31:51 keri Exp $
+  *
+- * @see org.gjt.sp.jedit.syntax.Token
++ * @see alice.util.jedit.Token
+  */
+ public abstract class TokenMarker
+ {
