@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2511 2007/01/20 15:31:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2512 2007/01/21 09:30:06 aross Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -536,6 +536,7 @@ dev-util/kdevelop:pascal - Support for the Pascal programming language.
 dev-util/kdevelop:perforce - Support for the Perforce version control system.
 dev-util/kdevelop:sql - Support for the Structured Query Language (SQL).
 dev-util/kdevelop:subversion - Support for the Subversion version control system.
+dev-util/mercurial:zsh-completion - Install zsh command completion for hg
 dev-util/monodevelop:boo - Enable support for the boo programming language
 dev-util/pbuilder:uml - Enable pbuilder user mode linux support
 dev-util/pida:gvim - Enable gvim as embedded editor
