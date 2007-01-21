@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ant-tasks
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.46 2007/01/14 17:44:40 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.47 2007/01/21 23:29:03 caster Exp $
+
+*ant-tasks-1.7.0 (21 Jan 2007)
+
+  21 Jan 2007; Vlastimil Babka <caster@gentoo.org> +ant-tasks-1.7.0.ebuild:
+  Version bump, bug #159820. Now just a meta-packagedepending on split ant tasks.
 
   14 Jan 2007; Petteri Räty <betelgeuse@gentoo.org>
   ant-tasks-1.6.5-r3.ebuild:
