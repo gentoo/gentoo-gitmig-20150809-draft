@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcalendar/jcalendar-1.3.2.ebuild,v 1.1 2007/01/21 00:17:03 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcalendar/jcalendar-1.3.2.ebuild,v 1.2 2007/01/21 18:05:41 flameeyes Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.toedter.com/download/${P}.zip"
 HOMEPAGE="http://www.toedter.com/en/jcalendar/"
 LICENSE="LGPL-2.1"
 SLOT="1.2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="doc source"
 COMMON_DEPEND="=dev-java/jgoodies-looks-1.2*"
 RDEPEND=">=virtual/jdk-1.4

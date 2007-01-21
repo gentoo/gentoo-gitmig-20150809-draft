@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr181/jsr181-0.7.ebuild,v 1.2 2007/01/21 07:51:05 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr181/jsr181-0.7.ebuild,v 1.3 2007/01/21 18:07:55 flameeyes Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -10,7 +10,7 @@ SRC_URI="web_svcs_md-0_7-erd-spec.zip"
 
 LICENSE="bea.jsr181"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="doc source"
 RESTRICT="fetch nostrip"
 
