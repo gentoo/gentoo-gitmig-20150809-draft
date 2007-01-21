@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.14.ebuild,v 1.2 2007/01/18 14:52:10 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.14.ebuild,v 1.3 2007/01/21 13:57:44 hollow Exp $
 
 inherit bash-completion eutils
 
@@ -11,14 +11,13 @@ SRC_URI="http://download.openvz.org/utils/${PN}/${PV}/src/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc64 ~sparc ~x86"
-IUSE="bash-completion logrotate udev"
+IUSE="bash-completion logrotate"
 
 RDEPEND="logrotate? ( app-admin/logrotate )
 	net-firewall/iptables
 	sys-apps/ed
 	sys-apps/iproute2
 	sys-fs/vzquota
-	udev? ( sys-fs/udev )
 	virtual/cron"
 
 DEPEND="${RDEPEND}"
@@ -31,9 +30,9 @@ src_unpack() {
 src_compile() {
 	econf --localstatedir=/var \
 		--enable-cron \
+		--enable-udev \
 		$(use_enable bash-completion bashcomp) \
-		$(use_enable logrotate) \
-		$(use_enable udev) || die "econf failed!"
+		$(use_enable logrotate) || die "econf failed!"
 
 	emake || die "emake failed!"
 }
