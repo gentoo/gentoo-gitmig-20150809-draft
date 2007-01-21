@@ -3,7 +3,7 @@
 # Copyright 2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Vlastimil Babka <caster@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/ant-tasks.eclass,v 1.2 2007/01/21 21:33:36 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ant-tasks.eclass,v 1.3 2007/01/21 21:37:02 caster Exp $
 
 inherit java-pkg-2 versionator
 
@@ -87,7 +87,7 @@ MY_P="apache-ant-${MY_PV}"
 DESCRIPTION="Apache Ant's optional tasks depending on ${ANT_TASK_DEPNAME}"
 HOMEPAGE="http://ant.apache.org/"
 SRC_URI="${SRC_URI_PREFIX}/${MY_P}-src.tar.bz2
-	http://dev.gentoo.org/~caster/distfiles/ant-${PV}-gentoo.tar.bz2"
+	mirror://gentoo/ant-${PV}-gentoo.tar.bz2"
 LICENSE="Apache-2.0"
 SLOT="0"
 IUSE=""
