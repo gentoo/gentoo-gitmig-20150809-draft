@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.37.0.ebuild,v 1.2 2007/01/10 14:09:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.37.0.ebuild,v 1.3 2007/01/21 19:25:22 flameeyes Exp $
 
 inherit flag-o-matic toolchain-funcs eutils multilib
 
@@ -28,7 +28,7 @@ DEPEND="jpeg? ( >=media-libs/jpeg-6b )
 netpbm_libtype() {
 	case ${CHOST} in
 		*-darwin*) echo dylib;;
-		*)         echo unixshared;;
+		*)		   echo unixshared;;
 	esac
 }
 netpbm_libsuffix() {
@@ -38,7 +38,7 @@ netpbm_libsuffix() {
 netpbm_ldshlib() {
 	case ${CHOST} in
 		*-darwin*) echo '$(LDFLAGS) -dynamiclib -install_name $(SONAME)';;
-		*)         echo '$(LDFLAGS) -shared -Wl,-soname,$(SONAME)';;
+		*)		   echo '$(LDFLAGS) -shared -Wl,-soname,$(SONAME)';;
 	esac
 }
 netpbm_config() {
@@ -94,7 +94,7 @@ src_compile() {
 	replace-flags -mcpu=ultrasparc "-mcpu=v8 -mtune=ultrasparc"
 	replace-flags -mcpu=v9 "-mcpu=v8 -mtune=v9"
 
-	emake || die
+	emake -j1 || die
 }
 
 src_install() {
