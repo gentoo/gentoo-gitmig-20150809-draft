@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-betwixt/commons-betwixt-0.6-r2.ebuild,v 1.2 2006/07/22 21:37:10 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-betwixt/commons-betwixt-0.6-r2.ebuild,v 1.3 2007/01/21 10:19:49 opfer Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://apache/jakarta/commons/betwixt/source/${P}-src.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="doc source"
 
 COMMON_DEP="
