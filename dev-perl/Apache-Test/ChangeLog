@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Apache-Test
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.52 2007/01/19 22:09:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.53 2007/01/22 01:53:43 kloeri Exp $
+
+  22 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
+  Apache-Test-1.29.ebuild:
+  Stable on Alpha + IA64.
 
   19 Jan 2007; Markus Rothe <corsair@gentoo.org> Apache-Test-1.28.ebuild:
   Stable on ppc64; bug #162244
