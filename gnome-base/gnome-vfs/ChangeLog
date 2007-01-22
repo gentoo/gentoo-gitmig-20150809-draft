@@ -1,6 +1,14 @@
 # ChangeLog for gnome-base/gnome-vfs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.241 2007/01/18 22:57:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.242 2007/01/22 20:53:43 pva Exp $
+
+*gnome-vfs-2.16.3-r1 (22 Jan 2007)
+
+  22 Jan 2007; <pva@gentoo.org>
+  +files/gnome-vfs-2.16.3-empty-desktop-entry-Path.diff,
+  +gnome-vfs-2.16.3-r1.ebuild:
+  Fixed gnome_vfs_url_show_with_env does not work if empty 'Path=' entry
+  exists in *.desktop. Bug #161089.
 
   18 Jan 2007; Jeroen Roovers <jer@gentoo.org> gnome-vfs-2.16.3.ebuild:
   Stable for HPPA (bug #147751).
