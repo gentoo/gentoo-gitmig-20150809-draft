@@ -1,0 +1,11 @@
+# ChangeLog for app-text/gnochm
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnochm/ChangeLog,v 1.1 2007/01/22 03:42:24 dirtyepic Exp $
+
+*gnochm-0.9.9 (22 Jan 2007)
+
+  22 Jan 2007; Ryan Hill <dirtyepic@gentoo.org> +metadata.xml,
+  +gnochm-0.9.9.ebuild:
+  New package. Ebuild provided by many many patient people on bug #39626.
+  Maintainer is myself.
+
