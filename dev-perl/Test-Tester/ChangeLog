@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Tester
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Tester/ChangeLog,v 1.10 2007/01/19 16:52:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Tester/ChangeLog,v 1.11 2007/01/22 01:44:46 kloeri Exp $
+
+  22 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
+  Test-Tester-0.103.ebuild:
+  Stable on IA64.
 
   19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   Test-Tester-0.103.ebuild:
