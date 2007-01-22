@@ -1,6 +1,10 @@
 # ChangeLog for media-video/m2vrequantizer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/m2vrequantizer/ChangeLog,v 1.3 2007/01/16 14:51:57 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/m2vrequantizer/ChangeLog,v 1.4 2007/01/22 17:07:54 hd_brummy Exp $
+
+  22 Jan 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  m2vrequantizer-20060306.ebuild:
+  fixed amd64 compile problems; thanks to Mirko Guenther
 
 *m2vrequantizer-0.0.1 (16 Jan 2007)
 

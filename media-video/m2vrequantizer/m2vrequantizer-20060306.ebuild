@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/m2vrequantizer/m2vrequantizer-20060306.ebuild,v 1.2 2007/01/15 16:50:31 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/m2vrequantizer/m2vrequantizer-20060306.ebuild,v 1.3 2007/01/22 17:07:54 hd_brummy Exp $
 
 MY_P="${PN/m2vr/M2VR}-${PV}"
 
@@ -17,9 +17,15 @@ DEPEND="!media-video/requant"
 
 S=${WORKDIR}/M2VRequantiser
 
-src_compile() {
+src_unpack() {
 
-	einfo ${S}
+	unpack ${A}
+	cd ${S}
+
+	sed -i "s:#elif defined(__i386__):#elif defined(__i386__) || defined(__amd64__):" main.c
+}
+
+src_compile() {
 
 	gcc -c ${CFLAGS} main.c -o requant.o
 	gcc ${CFLAGS} requant.o -o requant -lm
