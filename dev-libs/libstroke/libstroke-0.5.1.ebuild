@@ -1,7 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/libstroke-0.5.1.ebuild,v 1.17 2006/12/01 23:38:22 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/libstroke-0.5.1.ebuild,v 1.18 2007/01/22 23:11:49 antarus Exp $
 
+WANT_AUTOCONF=1.9
+WANT_AUTOMAKE=1.4
 inherit eutils autotools
 
 DESCRIPTION="A Stroke and Gesture recognition Library"
