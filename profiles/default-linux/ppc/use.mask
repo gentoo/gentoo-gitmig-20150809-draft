@@ -37,6 +37,7 @@ zrtp
 
 #2006/10/11 - corsair - bug #150925
 graphlcd
+lcd_devices_graphlcd
 
 # 13/10/2006 chutzpah@gentoo.org
 # masking p2p USE flag until media-libs/moodriver can get

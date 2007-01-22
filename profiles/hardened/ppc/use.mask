@@ -45,6 +45,7 @@ xvmc
 -input_devices_wacom
 
 graphlcd
+lcd_devices_graphlcd
 
 # Masked p2p for bug #155302 <josejx@gentoo.org>
 p2p

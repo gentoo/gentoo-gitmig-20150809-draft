@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.34 2007/01/22 12:25:08 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.35 2007/01/22 18:01:17 corsair Exp $
+
+  22 Jan 2007; Markus Rothe <corsair@gentoo.org> hardened/ppc/use.mask,
+  hardened/ppc64/use.mask, selinux/ppc/use.mask:
+  added lcd_devices_graphlcd to use.mask; bug #150925
 
   22 Jan 2007; Mart Raudsepp <leio@gentoo.org> use.local.desc:
   Fix spelling mistakes in rhythmbox:tagwriting description, bug 163235
