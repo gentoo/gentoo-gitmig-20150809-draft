@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sword-modules
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/ChangeLog,v 1.20 2006/07/08 02:29:47 squinky86 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/ChangeLog,v 1.21 2007/01/22 17:28:33 masterdriverz Exp $
+
+  22 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  files/digest-sword-modules-20041209, Manifest:
+  Fix broken digests; bug 153913
 
   08 Jul 2006; Jon Hood <squinky86@gentoo.org>
   -sword-modules-20040503.ebuild:
