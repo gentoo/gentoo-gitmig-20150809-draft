@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/moc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.29 2007/01/05 17:35:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.30 2007/01/22 15:23:33 corsair Exp $
+
+  22 Jan 2007; Markus Rothe <corsair@gentoo.org> moc-2.4.1.ebuild:
+  Added ~ppc64
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> moc-2.1.4-r1.ebuild,
   moc-2.2.0-r1.ebuild, moc-2.3.0.ebuild, moc-2.3.2.ebuild, moc-2.3.3.ebuild,
