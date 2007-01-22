@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/when/when-1.0.23.ebuild,v 1.6 2007/01/19 04:48:21 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/when/when-1.0.23.ebuild,v 1.7 2007/01/22 00:13:08 dirtyepic Exp $
 
 DESCRIPTION="Extremely simple personal calendar program aimed at the Unix geek who wants something minimalistic"
 HOMEPAGE="http://www.lightandmatter.com/when/when.html"
@@ -13,10 +13,22 @@ IUSE=""
 
 RDEPEND=">=dev-lang/perl-5.005"
 
-RESTRICT="test"
+src_unpack() {
+	unpack ${A}; cd ${S}
+
+	# Fix path for tests
+	sed -i 's,^	when,	./when,' Makefile
+}
 
 src_compile() {
 	emake ${PN}.html || die "emake failed"
+}
+
+src_test() {
+	# The when command requires these files, or attempts to run setup function.
+	mkdir ${HOME}/.when
+	touch ${HOME}/.when/{calendar,preferences}
+	emake test || die "emake test failed"
 }
 
 src_install() {
