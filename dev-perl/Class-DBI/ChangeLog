@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-DBI
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/ChangeLog,v 1.40 2007/01/07 21:29:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/ChangeLog,v 1.41 2007/01/22 04:25:24 kloeri Exp $
+
+  22 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
+  Class-DBI-3.0.16.ebuild:
+  Stable on IA64.
 
   07 Jan 2007; Michael Cummings <mcummings@gentoo.org> ChangeLog:
   Marking amd64 stable
