@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.99.903-r1.ebuild,v 1.2 2006/12/05 20:05:25 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.99.903-r1.ebuild,v 1.3 2007/01/22 05:58:05 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -274,7 +274,8 @@ pkg_setup() {
 	use minimal || ensure_a_server_is_building
 
 	# Allow build against Mesa 6.5.2
-	PATCHES="${FILESDIR}/${PV}-mesa-6.5.2.patch"
+	PATCHES="${FILESDIR}/${PV}-mesa-6.5.2.patch
+		${FILESDIR}/${PV}-sparc-includes.patch"
 
 	# Adds missing functionality to GLX to
 	# allow compiz/beryl to work.
