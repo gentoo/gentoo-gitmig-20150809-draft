@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2518 2007/01/22 22:26:52 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2519 2007/01/22 23:04:09 je_fro Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1517,6 +1517,7 @@ sci-chemistry/ghemical:gamess - Add GAMESS interface for QM/MM.
 sci-chemistry/ghemical:mopac7 - Apply compilation fix for mopac7 support.
 sci-chemistry/ghemical:openbabel - Use the OpenBabel package for file conversions
 sci-chemistry/ghemical:toolbar - Build the shortcuts toolbar
+sci-chemistry/gromacs:double-precision - more precise calculations at the expense of speed
 sci-chemistry/shelx:dosformat - Use CR/LF to end lines; useful in mixed Linux/Windows environments
 sci-geosciences/gmt:gmtfull - Full resolution bathymetry database
 sci-geosciences/gmt:gmthigh - Adds high resolution bathymetry database
