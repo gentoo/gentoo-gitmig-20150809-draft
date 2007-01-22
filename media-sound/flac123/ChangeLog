@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/flac123
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/flac123/ChangeLog,v 1.15 2007/01/22 13:25:03 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/flac123/ChangeLog,v 1.16 2007/01/22 17:15:53 corsair Exp $
+
+  22 Jan 2007; Markus Rothe <corsair@gentoo.org> flac123-0.0.9.ebuild:
+  Stable on ppc64; bug #163128
 
   22 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> flac123-0.0.9.ebuild:
   Stable on sparc wrt #163128
