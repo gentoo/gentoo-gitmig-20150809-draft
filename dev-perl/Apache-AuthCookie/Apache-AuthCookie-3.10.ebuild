@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-AuthCookie/Apache-AuthCookie-3.10.ebuild,v 1.2 2006/11/24 15:33:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-AuthCookie/Apache-AuthCookie-3.10.ebuild,v 1.3 2007/01/22 01:34:20 kloeri Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/M/MS/MSCHOUT/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~x86"
+KEYWORDS="amd64 ia64 ~x86"
 IUSE=""
 
 DEPEND=">=www-apache/mod_perl-2
