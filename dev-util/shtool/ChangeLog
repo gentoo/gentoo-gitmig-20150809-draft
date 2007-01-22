@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/shtool
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/shtool/ChangeLog,v 1.24 2006/02/04 17:26:15 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shtool/ChangeLog,v 1.25 2007/01/22 08:16:33 flameeyes Exp $
+
+  22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> shtool-2.0.2.ebuild,
+  shtool-2.0.3.ebuild, shtool-2.0.4.ebuild:
+  Use mirror://gnu/ rather than ftp.gnu.org.
 
 *shtool-2.0.4 (04 Feb 2006)
 
