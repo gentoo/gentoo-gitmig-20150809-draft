@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/dctc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/ChangeLog,v 1.33 2007/01/11 19:50:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/ChangeLog,v 1.34 2007/01/22 20:04:29 armin76 Exp $
+
+  22 Jan 2007; Raúl Porcel <armin76@gentoo.org> dctc-0.85.9.ebuild:
+  Fix again db-4.2 issue, bug 135320
 
   11 Jan 2007; Raúl Porcel <armin76@gentoo.org> dctc-0.85.9.ebuild:
   Fix bug 135320, thanks to Ryan Hill <dirtyepic at gentoo dot org> for the fix
