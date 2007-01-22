@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/dvhtool
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/dvhtool/ChangeLog,v 1.8 2005/09/26 21:40:29 kumba Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/dvhtool/ChangeLog,v 1.9 2007/01/22 20:23:21 eroyf Exp $
+
+  22 Jan 2007; Alexander H. Færøy <eroyf@gentoo.org>
+  dvhtool-1.0.1-r1.ebuild:
+  Now using mirror://debian/; bug #163310
 
   27 Sep 2005; Joshua Kinard <kumba@gentoo.org> dvhtool-1.0.1-r1.ebuild:
   Typo fix in the patch name...
