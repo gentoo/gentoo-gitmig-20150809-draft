@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PAR-Dist
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR-Dist/ChangeLog,v 1.18 2007/01/08 16:27:14 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR-Dist/ChangeLog,v 1.19 2007/01/22 14:08:45 kloeri Exp $
+
+  22 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> PAR-Dist-0.21.ebuild:
+  Stable on IA64.
 
   08 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   -PAR-Dist-0.18.ebuild, PAR-Dist-0.21.ebuild:

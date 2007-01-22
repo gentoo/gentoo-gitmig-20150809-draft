@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Plucene
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plucene/ChangeLog,v 1.21 2007/01/19 15:27:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plucene/ChangeLog,v 1.22 2007/01/22 14:11:11 kloeri Exp $
+
+  22 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> Plucene-1.25.ebuild:
+  Stable on IA64.
 
   19 Jan 2007; Michael Cummings <mcummings@gentoo.org> -Plucene-1.19.ebuild,
   Plucene-1.24.ebuild, Plucene-1.25.ebuild:
