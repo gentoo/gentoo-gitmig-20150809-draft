@@ -1,18 +1,20 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r6.ebuild,v 1.13 2007/01/22 20:32:24 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r8.ebuild,v 1.1 2007/01/22 20:32:24 solar Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
-PATCHLEVEL=28
+PATCHLEVEL=35
 DESCRIPTION="Standard Linux telnet client and server"
 HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
+# http://packages.debian.org/stablesource/netkit-telnet
+# http://packages.debian.org/testing/source/netkit-telnet
 SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/netkit-telnet-${PV}.tar.gz
 	mirror://debian/pool/main/n/netkit-telnet/netkit-telnet_0.17-${PATCHLEVEL}.diff.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="build"
 
 DEPEND=">=sys-libs/ncurses-5.2
@@ -46,6 +48,8 @@ src_compile() {
 	sed -i \
 		-e "s:-pipe -O2:${CFLAGS}:" \
 		-e "s:-Wpointer-arith::" \
+		-e "s:^CC=.*:CC=$(tc-getCC):" \
+		-e "s:^CXX=.*:CXX=$(tc-getCXX):" \
 		MCONFIG
 
 	make || die
