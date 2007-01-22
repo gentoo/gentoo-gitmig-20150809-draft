@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.5.ebuild,v 1.3 2007/01/22 16:09:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.5.ebuild,v 1.4 2007/01/22 17:43:49 gustavoz Exp $
 
 inherit eutils
 # used for epause
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/conky/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ppc64 sparc x86"
 IUSE="truetype X ipv6 audacious bmpx hddtemp mpd vim-syntax"
 
 DEPEND_COMMON="
