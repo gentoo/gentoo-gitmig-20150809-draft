@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Tree-Simple
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tree-Simple/ChangeLog,v 1.23 2007/01/08 17:04:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tree-Simple/ChangeLog,v 1.24 2007/01/22 15:06:05 kloeri Exp $
+
+  22 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
+  Tree-Simple-1.17.ebuild:
+  Stable on IA64.
 
   08 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   -Tree-Simple-1.15.ebuild:
