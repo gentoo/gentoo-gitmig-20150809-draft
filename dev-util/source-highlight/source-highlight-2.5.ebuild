@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-2.5.ebuild,v 1.1 2006/12/18 00:15:13 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-2.5.ebuild,v 1.2 2007/01/22 14:25:27 dev-zero Exp $
 
 inherit autotools eutils bash-completion
 
 DESCRIPTION="Generate highlighted source code as an (x)html document"
 HOMEPAGE="http://www.gnu.org/software/src-highlite/source-highlight.html"
-SRC_URI="ftp://ftp.gnu.org/gnu/src-highlite/${P}.tar.gz"
+SRC_URI="mirror://gnu/src-highlite/${P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~mips ~ppc ~x86"
@@ -36,7 +36,7 @@ src_compile() {
 src_install () {
 	emake DESTDIR="${D}" install || die "make install failed"
 
-	dobashcompletion "${FILESDIR}/${P}.bash-completion" ${PN}
+	dobashcompletion "${FILESDIR}/${P}.bash-completion"
 
 	# That's not how we want it
 	rm -fr "${D}/usr/share/doc"
@@ -44,6 +44,6 @@ src_install () {
 
 	if use doc ; then
 		cd "${S}/doc"
-		dohtml *.html *.css *.java
+		dohtml *.{html,css,java}
 	fi
 }
