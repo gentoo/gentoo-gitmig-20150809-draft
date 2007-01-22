@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.72_pre2.ebuild,v 1.1 2007/01/16 00:17:42 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.72_pre2.ebuild,v 1.2 2007/01/22 22:42:13 josejx Exp $
 
 inherit flag-o-matic eutils linux-mod
 
@@ -64,12 +64,11 @@ src_compile() {
 
 	sed -i "s:CONFIG_XDGA=y:# CONFIG_XDGA is not set:" .config-ppc
 	sed -i "s:CONFIG_TAP=y:# CONFIG_TAP is not set:" .config-ppc
-	sed -i "s:CONFIG_TUN=y:# CONFIG_TUN is not set:" .config-ppc
 	use alsa     || sed -i "s:CONFIG_ALSA=y:# CONFIG_ALSA is not set:" .config-ppc
 	use debug    && sed -i "s:# CONFIG_DEBUGGER is not set:CONFIG_DEBUGGER=y:" .config-ppc
 	use oss      || sed -i "s:CONFIG_OSS=y:# CONFIG_OSS is not set:" .config-ppc
 	use oldworld || sed -i "s:CONFIG_OLDWORLD=y:# CONFIG_OLDWORLD is not set:" .config-ppc
-	use sheep    || sed -i "s:CONFIG_SHEEP=y:# CONFIG_SHEEP is not set:" .config-ppc
+	use sheep    && sed -i "s:# CONFIG_SHEEP is not set:CONFIG_SHEEP=y:" .config-ppc
 	use X        || sed -i "s:CONFIG_X11=y:# CONFIG_X11 is not set:" .config-ppc
 	use fbcon    || sed -i "s:CONFIG_FBDEV=y:# CONFIG_FBDEV is not set:" .config-ppc
 	use vnc      || sed -i "s:CONFIG_VNC=y:# CONFIG_VNC is not set:" .config-ppc

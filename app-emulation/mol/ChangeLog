@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/mol
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.69 2007/01/16 00:17:42 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.70 2007/01/22 22:42:13 josejx Exp $
+
+  22 Jan 2007; Joseph Jezak <josejx@gentoo.org> mol-0.9.72_pre2.ebuild:
+  Fixed sheep config sed.
 
 *mol-0.9.72_pre2 (16 Jan 2007)
 
