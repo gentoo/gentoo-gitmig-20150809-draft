@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/intlfonts/intlfonts-1.2.1.ebuild,v 1.11 2006/11/26 23:47:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/intlfonts/intlfonts-1.2.1.ebuild,v 1.12 2007/01/22 08:35:15 flameeyes Exp $
 
 inherit font
 
@@ -8,7 +8,7 @@ IUSE="X bdf"
 
 DESCRIPTION="International X11 fixed fonts"
 HOMEPAGE="http://www.gnu.org/directory/intlfonts.html"
-SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${P}.tar.gz"
+SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 
