@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/suspend2-userui
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/suspend2-userui/ChangeLog,v 1.19 2007/01/09 10:10:29 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/suspend2-userui/ChangeLog,v 1.20 2007/01/22 10:46:02 alonbl Exp $
+
+*suspend2-userui-0.6.4-r2 (22 Jan 2007)
+
+  22 Jan 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/suspend2-userui-0.6.4-syscall.patch,
+  +suspend2-userui-0.6.4-r2.ebuild:
+  Fix for glib-2.5 (again)
 
   09 Jan 2007; Alon Bar-Lev <alonbl@gentoo.org>
   -files/suspend2-userui-0.6.3-skewed-image.patch,
