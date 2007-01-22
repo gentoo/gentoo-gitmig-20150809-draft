@@ -1,5 +1,5 @@
---- Makefile.am.orig	2006-12-02 14:23:01.000000000 +0300
-+++ Makefile.am	2007-01-21 17:43:13.000000000 +0300
+--- Makefile.am.orig	2007-01-22 17:04:25.000000000 +0300
++++ Makefile.am	2007-01-22 17:04:47.000000000 +0300
 @@ -3,17 +3,19 @@
  STAMP_DIR = stamps
  
@@ -48,7 +48,7 @@
    # only create a link in the PDF directory, because image files are
    # included in the PDF anyways
  	@echo '*** Creating link in PDF directory to images ***'
-@@ -133,8 +147,19 @@
+@@ -133,8 +147,21 @@
  	@echo '*** Copying images ***'
  
    # copy the image files to html directory
@@ -59,7 +59,9 @@
 +	  if test $$lang = "en"; then \
 +	    for dir in $(IMAGE_DIRS); do \
 +	      for file in `echo $(top_srcdir)/images/$$dir/*.png` `echo $(top_srcdir)/images/$$dir/*.jpg`; do \
-+		test -f $$file && cp $$file html/$$file; \
++	        if test -f $$file ; then \
++	          cp $$file html/$$file; \
++	        fi; \
 +	      done; \
 +	    done; \
 +	  else \
