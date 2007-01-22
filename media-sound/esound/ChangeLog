@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/esound
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.90 2006/11/13 21:58:52 josejx Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.91 2007/01/22 09:18:38 flameeyes Exp $
+
+  22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> -esound-0.2.34.ebuild:
+  Remove old version.
 
   13 Nov 2006; Joseph Jezak <josejx@gentoo.org> esound-0.2.36-r2.ebuild:
   Marked ppc stable.
