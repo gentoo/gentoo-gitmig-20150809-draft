@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/orage
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/orage/ChangeLog,v 1.9 2007/01/06 19:06:33 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/orage/ChangeLog,v 1.10 2007/01/22 02:07:27 nichoj Exp $
+
+*orage-4.4.0 (22 Jan 2007)
+
+  22 Jan 2007; Joshua Nichols <nichoj@gentoo.org> +orage-4.4.0.ebuild:
+  Version bump.
 
   06 Jan 2007; Joshua Nichols <nichoj@gentoo.org> orage-4.3.99.2.ebuild:
   Added IUSE=debug, which was dropped when 'inherit debug' was removed from
