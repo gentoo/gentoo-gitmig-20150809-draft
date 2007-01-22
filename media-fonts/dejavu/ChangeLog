@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/dejavu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/ChangeLog,v 1.52 2007/01/22 12:40:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/ChangeLog,v 1.53 2007/01/22 15:26:02 corsair Exp $
+
+  22 Jan 2007; Markus Rothe <corsair@gentoo.org> dejavu-2.13.ebuild:
+  Stable on ppc64; bug #163108
 
   22 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> dejavu-2.13.ebuild:
   Stable on sparc wrt #163108
