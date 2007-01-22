@@ -1,13 +1,15 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-0.95.ebuild,v 1.4 2007/01/21 13:35:03 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-0.95.1.ebuild,v 1.1 2007/01/22 09:06:48 seemant Exp $
 
-inherit distutils
+inherit distutils versionator
+
+RPV=$(get_version_component_range 1-2)
 
 MY_P="${PN/d/D}-${PV}"
 DESCRIPTION="high-level python web framework"
 HOMEPAGE="http://www.djangoproject.com/"
-SRC_URI="http://media.djangoproject.com/releases/${PV}/${MY_P}.tar.gz"
+SRC_URI="http://media.djangoproject.com/releases/${RPV}/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
