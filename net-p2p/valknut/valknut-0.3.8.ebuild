@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/valknut-0.3.8.ebuild,v 1.1 2007/01/10 18:29:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/valknut-0.3.8.ebuild,v 1.2 2007/01/22 20:51:24 armin76 Exp $
 
 inherit qt3 eutils
 
 DESCRIPTION="Qt based client for DirectConnect"
-HOMEPAGE="http://sourceforge.net/projects/dcwxgui/"
+HOMEPAGE="http://sourceforge.net/projects/wxdcgui/"
 SRC_URI="mirror://sourceforge/wxdcgui/${P}.tar.bz2"
 
 LICENSE="GPL-2"
