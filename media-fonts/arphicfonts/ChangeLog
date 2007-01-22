@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/arphicfonts
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.30 2006/11/26 22:25:40 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.31 2007/01/22 08:27:10 flameeyes Exp $
+
+  22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  arphicfonts-0.1-r2.ebuild, arphicfonts-0.1.20060513.ebuild,
+  arphicfonts-0.1.20060928.ebuild:
+  Use mirror://gnu/ rather than ftp.gnu.org.
 
   26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   arphicfonts-0.1.20060928.ebuild:
