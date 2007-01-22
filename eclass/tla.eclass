@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tla.eclass,v 1.8 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tla.eclass,v 1.9 2007/01/22 17:48:18 antarus Exp $
 #
 # Original Author:    Jeffrey Yasskin <jyasskin@mail.utexas.edu>
 #
@@ -179,8 +179,10 @@ tla_src_unpack() {
 	# Use ${WORKDIR}/${P} rather than ${S} so user can point ${S} to something inside.
 	mkdir -p "${WORKDIR}/${P}"
 
+	local OLD_SHOPTS=$(shopt -p)
 	shopt -s dotglob	# get any dotfiles too.
 	cp -Rf "$ETLA_TOP_DIR/$ETLA_CACHE_DIR"/* "${WORKDIR}/${P}"
+	eval "$OLD_SHOPTS" 
 
 	# implement some of base_src_unpack's functionality;
 	# note however that base.eclass may not have been inherited!
@@ -197,7 +199,6 @@ tla_src_unpack() {
 	#fi
 
 	einfo "Version ${ETLA_VERSION} is now in ${WORKDIR}/${P}"
-
 }
 
 EXPORT_FUNCTIONS src_unpack
