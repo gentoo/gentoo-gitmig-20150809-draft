@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX pkgcore-checks-0.1-missing-glsa-dir.patch 629 RMD160 256ad056bc2c6e1411cbecbb92d1abda81931337 SHA1 e12cee80615bfb8d8b642cbb5aec9f1a270034d7 SHA256 12054196059b5821f56cf1c74859526a716c1946a7521f6978f682c60529f38c
 MD5 1e80c91f0b531ed10371197f0cfde3af files/pkgcore-checks-0.1-missing-glsa-dir.patch 629
 RMD160 256ad056bc2c6e1411cbecbb92d1abda81931337 files/pkgcore-checks-0.1-missing-glsa-dir.patch 629
@@ -7,25 +10,33 @@ MD5 c603d83a039d2b22b910f5a0f28db272 files/pkgcore-checks-0.1-optimization.patch
 RMD160 ac9cca61d2769d1be1ce83137411ef2f4587661a files/pkgcore-checks-0.1-optimization.patch 840
 SHA256 0992772fc4ea4b7fe788a9a6e5ebe2c3f0263581586aca9a31c574a9b12db8cc files/pkgcore-checks-0.1-optimization.patch 840
 DIST pkgcore-checks-0.1.tar.bz2 22299 RMD160 58fc49672bbbae610bda742506943eb7340da8a0 SHA1 429a681bf0dcd789813a17fee388b368bf678a97 SHA256 a408a881fd42020eb2fd73991599e0825d7f58f27686906c3ce90767e28f3b94
-EBUILD pkgcore-checks-0.1-r1.ebuild 697 RMD160 7c9885c6ac4d8baf929430284b3b175989b7cf24 SHA1 c1fa7648841e8cc43cbde5cfcbebcc0b1c0696fc SHA256 50b846f8e708e51b6fe79aed24bd650a4ab9196ef4b4b17f0ca2628dac59fd79
-MD5 ff5740f7fe94b7a2b1cb50cabd8f9e71 pkgcore-checks-0.1-r1.ebuild 697
-RMD160 7c9885c6ac4d8baf929430284b3b175989b7cf24 pkgcore-checks-0.1-r1.ebuild 697
-SHA256 50b846f8e708e51b6fe79aed24bd650a4ab9196ef4b4b17f0ca2628dac59fd79 pkgcore-checks-0.1-r1.ebuild 697
-EBUILD pkgcore-checks-0.1-r2.ebuild 750 RMD160 c3c572c2bc1fd2036aadfc814bfa74a0bbbf17ad SHA1 3cf94112627c02cd46a26254570ef8624318ec04 SHA256 b9861190d43ced630a4edc9b95546f1ad2644b6f062cdb8d0fd60d0f9a795f53
-MD5 3631aedc9027c926dbae057c4a277cf3 pkgcore-checks-0.1-r2.ebuild 750
-RMD160 c3c572c2bc1fd2036aadfc814bfa74a0bbbf17ad pkgcore-checks-0.1-r2.ebuild 750
-SHA256 b9861190d43ced630a4edc9b95546f1ad2644b6f062cdb8d0fd60d0f9a795f53 pkgcore-checks-0.1-r2.ebuild 750
-MISC ChangeLog 1268 RMD160 9494b131531fd146b4c988ea069c28a34e4d5f7c SHA1 96d71cf4577df62dbb2594ac1d2ef0252a6f3476 SHA256 0f67f923cb78b9cb634d3b5f108d187876009f32976e3df462c3dc2d257b1ba5
-MD5 352f1fff936bed9ec31704e615ee6abe ChangeLog 1268
-RMD160 9494b131531fd146b4c988ea069c28a34e4d5f7c ChangeLog 1268
-SHA256 0f67f923cb78b9cb634d3b5f108d187876009f32976e3df462c3dc2d257b1ba5 ChangeLog 1268
+DIST pkgcore-checks-0.2.tar.bz2 39264 RMD160 2ff1aaa1f5b52778cc41460c2ceee2e9d1c9d9d6 SHA1 94fcdbd1a2716307b1147f64aaefc7abd4f51d7a SHA256 263e7b6418c6c88c249e62f59784184e7fa5d647d2c2ff0bd0118c8e763f5bf4
+EBUILD pkgcore-checks-0.1-r2.ebuild 704 RMD160 cf2bf1c9ac0ecafe00341a20528fb1d058e4aa1e SHA1 f38369a84cae85f58ee15ddcf20214b50e9a3255 SHA256 82e9a646c82d81a078754de6f2f44dcae78e6861b51841869f5568fdadd42881
+MD5 61ab0ce4ad6e4aee513231184d9b0687 pkgcore-checks-0.1-r2.ebuild 704
+RMD160 cf2bf1c9ac0ecafe00341a20528fb1d058e4aa1e pkgcore-checks-0.1-r2.ebuild 704
+SHA256 82e9a646c82d81a078754de6f2f44dcae78e6861b51841869f5568fdadd42881 pkgcore-checks-0.1-r2.ebuild 704
+EBUILD pkgcore-checks-0.2.ebuild 728 RMD160 f1b3d9780e0e219c8a193a2b7ab2291c55998f03 SHA1 5faf717ebcbe72ec66344cdf0bdc9285b3083f91 SHA256 9cd437cf0aec0cdfe7b678a5cd307263763e41e89142c7af40b96429882a0dcf
+MD5 190ee53b062ad60fb5402aa94debf2b9 pkgcore-checks-0.2.ebuild 728
+RMD160 f1b3d9780e0e219c8a193a2b7ab2291c55998f03 pkgcore-checks-0.2.ebuild 728
+SHA256 9cd437cf0aec0cdfe7b678a5cd307263763e41e89142c7af40b96429882a0dcf pkgcore-checks-0.2.ebuild 728
+MISC ChangeLog 1459 RMD160 a37411d8e59f3947d8e8d94b3aa440f32f69a600 SHA1 3a9c06b5f770b9e32a40074669b9dd334d471c87 SHA256 bda28deee00bb0aca79ad7432bbb560a79b7fe9aa4e7abf249760eea86bb7d0e
+MD5 592068f0997e375143064f083457534f ChangeLog 1459
+RMD160 a37411d8e59f3947d8e8d94b3aa440f32f69a600 ChangeLog 1459
+SHA256 bda28deee00bb0aca79ad7432bbb560a79b7fe9aa4e7abf249760eea86bb7d0e ChangeLog 1459
 MISC metadata.xml 222 RMD160 01bd2c9180f544353de73063bede0dd6b8ca6152 SHA1 95963907e0f22bc3795213303a68a2155b1ba78a SHA256 6e5dda05386711c829057f65bfd0e3ae693232628949c1612163ce9915963a63
 MD5 5dff6cc33967055cfde969cbcb7b6d5d metadata.xml 222
 RMD160 01bd2c9180f544353de73063bede0dd6b8ca6152 metadata.xml 222
 SHA256 6e5dda05386711c829057f65bfd0e3ae693232628949c1612163ce9915963a63 metadata.xml 222
-MD5 db27f370cd3ff83303546b9e1c1378f2 files/digest-pkgcore-checks-0.1-r1 256
-RMD160 2e49263a5becaabbc27fad53b1bc815a4d2f49fc files/digest-pkgcore-checks-0.1-r1 256
-SHA256 86b1db0ec916f6a5a35025e2fe9427af1b2dc9c968b6fbb228f8827d73bdbf3b files/digest-pkgcore-checks-0.1-r1 256
 MD5 db27f370cd3ff83303546b9e1c1378f2 files/digest-pkgcore-checks-0.1-r2 256
 RMD160 2e49263a5becaabbc27fad53b1bc815a4d2f49fc files/digest-pkgcore-checks-0.1-r2 256
 SHA256 86b1db0ec916f6a5a35025e2fe9427af1b2dc9c968b6fbb228f8827d73bdbf3b files/digest-pkgcore-checks-0.1-r2 256
+MD5 f4a3bdec3ada66dc60e836b7ea03c74a files/digest-pkgcore-checks-0.2 256
+RMD160 04ef8aca7b93d7fcd6cd4e11ebebc0f5500e1575 files/digest-pkgcore-checks-0.2 256
+SHA256 d774a03e69680552380ffc73cc5798e7dfa0d604641d64d5546884b5915746b0 files/digest-pkgcore-checks-0.2 256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFtNPjz974XjDVpbkRAgZIAKCCGvw+FwjQrdFoDGYT8ewqoaaTFACfSB2P
+SxyhhkB+0QBdTJSUonbhlDU=
+=OWr2
+-----END PGP SIGNATURE-----
