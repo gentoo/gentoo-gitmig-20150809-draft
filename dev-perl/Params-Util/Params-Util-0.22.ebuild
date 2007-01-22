@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Util/Params-Util-0.22.ebuild,v 1.4 2007/01/08 16:32:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Util/Params-Util-0.22.ebuild,v 1.5 2007/01/22 14:10:03 kloeri Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/A/AD/ADAMK/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc sparc ~x86"
+KEYWORDS="alpha amd64 ~hppa ia64 ~mips ~ppc sparc ~x86"
 IUSE=""
 SRC_TEST="do"
 
