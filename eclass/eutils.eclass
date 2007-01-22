@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.270 2007/01/20 06:24:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.271 2007/01/22 06:03:14 vapier Exp $
 #
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
@@ -895,19 +895,21 @@ make_desktop_entry() {
 		local desktop_name="${PN}-${SLOT}"
 	fi
 	local desktop=${T}/${exec%% *}-${desktop_name}.desktop
-#	local desktop=${T}/${exec%% *:-${desktop_name}}.desktop
+	#local desktop=${T}/${exec%% *:-${desktop_name}}.desktop
 
-echo "[Desktop Entry]
-Encoding=UTF-8
-Version=0.9.2
-Name=${name}
-Type=Application
-Comment=${DESCRIPTION}
-Exec=${exec}
-TryExec=${exec%% *}
-Path=${path}
-Icon=${icon}
-Categories=Application;${type};" > "${desktop}"
+	cat <<-EOF > "${desktop}"
+	[Desktop Entry]
+	Encoding=UTF-8
+	Version=0.9.2
+	Name=${name}
+	Type=Application
+	Comment=${DESCRIPTION}
+	Exec=${exec}
+	TryExec=${exec%% *}
+	Path=${path}
+	Icon=${icon}
+	Categories=Application;${type};
+	EOF
 
 	(
 		# wrap the env here so that the 'insinto' call
@@ -931,52 +933,80 @@ make_session_desktop() {
 	local command=$2
 	local desktop=${T}/${wm}.desktop
 
-echo "[Desktop Entry]
-Encoding=UTF-8
-Name=${title}
-Comment=This session logs you into ${title}
-Exec=${command}
-TryExec=${command}
-Type=Application" > "${desktop}"
+	cat <<-EOF > "${desktop}"
+	[Desktop Entry]
+	Encoding=UTF-8
+	Name=${title}
+	Comment=This session logs you into ${title}
+	Exec=${command}
+	TryExec=${command}
+	Type=Application
+	EOF
 
+	(
+	# wrap the env here so that the 'insinto' call
+	# doesn't corrupt the env of the caller
 	insinto /usr/share/xsessions
 	doins "${desktop}"
+	)
 }
 
 domenu() {
-	local i j
+	(
+	# wrap the env here so that the 'insinto' call
+	# doesn't corrupt the env of the caller
+	local i j ret=0
 	insinto /usr/share/applications
 	for i in "$@" ; do
 		if [[ -f ${i} ]] ; then
 			doins "${i}"
+			((ret+=$?))
 		elif [[ -d ${i} ]] ; then
 			for j in "${i}"/*.desktop ; do
 				doins "${j}"
+				((ret+=$?))
 			done
 		fi
 	done
+	exit ${ret}
+	)
 }
 newmenu() {
+	(
+	# wrap the env here so that the 'insinto' call
+	# doesn't corrupt the env of the caller
 	insinto /usr/share/applications
-	newins "$1" "$2"
+	newins "$@"
+	)
 }
 
 doicon() {
-	local i j
+	(
+	# wrap the env here so that the 'insinto' call
+	# doesn't corrupt the env of the caller
+	local i j ret
 	insinto /usr/share/pixmaps
 	for i in "$@" ; do
 		if [[ -f ${i} ]] ; then
 			doins "${i}"
+			((ret+=$?))
 		elif [[ -d ${i} ]] ; then
 			for j in "${i}"/*.png ; do
 				doins "${j}"
+				((ret+=$?))
 			done
 		fi
 	done
+	exit ${ret}
+	)
 }
 newicon() {
+	(
+	# wrap the env here so that the 'insinto' call
+	# doesn't corrupt the env of the caller
 	insinto /usr/share/pixmaps
-	newins "$1" "$2"
+	newins "$@"
+	)
 }
 
 ##############################################################
@@ -1023,7 +1053,7 @@ find_unpackable_file() {
 #	lseek(3, -4, SEEK_END)					= 2981250
 #	thus we would pass in the value of '4' as the second parameter.
 unpack_pdv() {
-	local src=$(find_unpackable_file $1)
+	local src=$(find_unpackable_file "$1")
 	local sizeoff_t=$2
 
 	[[ -z ${src} ]] && die "Could not locate source for '$1'"
@@ -1031,31 +1061,31 @@ unpack_pdv() {
 
 	local shrtsrc=$(basename "${src}")
 	echo ">>> Unpacking ${shrtsrc} to ${PWD}"
-	local metaskip=`tail -c ${sizeoff_t} ${src} | hexdump -e \"%i\"`
-	local tailskip=`tail -c $((${sizeoff_t}*2)) ${src} | head -c ${sizeoff_t} |	 hexdump -e \"%i\"`
+	local metaskip=$(tail -c ${sizeoff_t} "${src}" | hexdump -e \"%i\")
+	local tailskip=$(tail -c $((${sizeoff_t}*2)) "${src}" | head -c ${sizeoff_t} | hexdump -e \"%i\")
 
 	# grab metadata for debug reasons
-	local metafile="$(emktemp)"
-	tail -c +$((${metaskip}+1)) ${src} > ${metafile}
+	local metafile=$(emktemp)
+	tail -c +$((${metaskip}+1)) "${src}" > "${metafile}"
 
 	# rip out the final file name from the metadata
-	local datafile="`tail -c +$((${metaskip}+1)) ${src} | strings | head -n 1`"
-	datafile="`basename ${datafile}`"
+	local datafile=$(tail -c +$((${metaskip}+1)) "${src}" | strings | head -n 1)
+	datafile=$(basename "${datafile}")
 
 	# now lets uncompress/untar the file if need be
-	local tmpfile="$(emktemp)"
+	local tmpfile=$(emktemp)
 	tail -c +$((${tailskip}+1)) ${src} 2>/dev/null | head -c 512 > ${tmpfile}
 
-	local iscompressed="`file -b ${tmpfile}`"
-	if [ "${iscompressed:0:8}" == "compress" ] ; then
+	local iscompressed=$(file -b "${tmpfile}")
+	if [[ ${iscompressed:0:8} == "compress" ]] ; then
 		iscompressed=1
 		mv ${tmpfile}{,.Z}
 		gunzip ${tmpfile}
 	else
 		iscompressed=0
 	fi
-	local istar="`file -b ${tmpfile}`"
-	if [ "${istar:0:9}" == "POSIX tar" ] ; then
+	local istar=$(file -b "${tmpfile}")
+	if [[ ${istar:0:9} == "POSIX tar" ]] ; then
 		istar=1
 	else
 		istar=0
@@ -1157,9 +1187,9 @@ unpack_makeself() {
 	esac
 
 	# lets grab the first few bytes of the file to figure out what kind of archive it is
-	local tmpfile="$(emktemp)"
+	local tmpfile=$(emktemp)
 	eval ${exe} 2>/dev/null | head -c 512 > "${tmpfile}"
-	local filetype="$(file -b "${tmpfile}")"
+	local filetype=$(file -b "${tmpfile}")
 	case ${filetype} in
 		*tar\ archive*)
 			eval ${exe} | tar --no-same-owner -xf -
@@ -1214,16 +1244,16 @@ check_license() {
 	done
 	set +o noglob; set -$shopts #reset old shell opts
 
-	local licmsg="$(emktemp)"
-	cat << EOF > ${licmsg}
-**********************************************************
-The following license outlines the terms of use of this
-package.  You MUST accept this license for installation to
-continue.  When you are done viewing, hit 'q'.	If you
-CTRL+C out of this, the install will not run!
-**********************************************************
-
-EOF
+	local licmsg=$(emktemp)
+	cat <<-EOF > ${licmsg}
+	**********************************************************
+	The following license outlines the terms of use of this
+	package.  You MUST accept this license for installation to
+	continue.  When you are done viewing, hit 'q'.	If you
+	CTRL+C out of this, the install will not run!
+	**********************************************************
+	
+	EOF
 	cat ${lic} >> ${licmsg}
 	${PAGER:-less} ${licmsg} || die "Could not execute pager (${PAGER}) to accept ${lic}"
 	einfon "Do you accept the terms of this license (${l})? [yes/no] "
