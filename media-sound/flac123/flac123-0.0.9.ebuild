@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/flac123/flac123-0.0.9.ebuild,v 1.5 2007/01/22 09:57:21 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/flac123/flac123-0.0.9.ebuild,v 1.6 2007/01/22 13:25:03 gustavoz Exp $
 
 WANT_AUTOCONF=2.5
 WANT_AUTOMAKE=1.6
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/flac-tools/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 sparc x86"
 IUSE=""
 
 DEPEND="media-libs/flac
