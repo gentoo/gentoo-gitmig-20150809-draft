@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.106 2007/01/11 20:09:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.107 2007/01/22 12:31:01 kloeri Exp $
+
+  22 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> gtkmm-2.2.12.ebuild:
+  Stable on IA64.
 
   11 Jan 2007; Michael Sterrett <mr_bones_@gentoo.org> +gtkmm-2.2.11.ebuild:
   resurrect gtkmm-2.2.11.ebuild since it's still in use by
