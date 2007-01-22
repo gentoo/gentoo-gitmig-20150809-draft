@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Base
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Base/ChangeLog,v 1.27 2007/01/08 16:45:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Base/ChangeLog,v 1.28 2007/01/22 14:33:41 kloeri Exp $
+
+  22 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> Test-Base-0.53.ebuild:
+  Stable on Alpha + IA64.
 
   08 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   Test-Base-0.53.ebuild:

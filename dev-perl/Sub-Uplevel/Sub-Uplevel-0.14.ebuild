@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Uplevel/Sub-Uplevel-0.14.ebuild,v 1.3 2007/01/08 16:41:40 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Uplevel/Sub-Uplevel-0.14.ebuild,v 1.4 2007/01/22 14:32:15 kloeri Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/D/DA/DAGOLDEN/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~mips ~ppc ~ppc64 sparc ~x86"
+KEYWORDS="alpha amd64 ia64 ~mips ~ppc ~ppc64 sparc ~x86"
 IUSE=""
 
 SRC_TEST="do"
