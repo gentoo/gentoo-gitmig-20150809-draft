@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/swl/swl-0.5.0_pre20070122.ebuild,v 1.1 2007/01/22 07:31:48 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/swl/swl-0.5.0_pre20070122.ebuild,v 1.2 2007/01/22 16:01:59 trapni Exp $
 
 inherit flag-o-matic multilib
 
 DESCRIPTION="SWL is a C++ cross platform library."
 HOMEPAGE="http://mylair.de/~trapni/swl/"
-SRC_URI="http://mylair.de/~trapni/swl/${P}.tar.bz2"
+SRC_URI="http://mylair.de/~trapni/dist/swl/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0.5"
 KEYWORDS="~amd64 ~ppc ~x86"
