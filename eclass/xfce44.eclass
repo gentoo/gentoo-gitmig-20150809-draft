@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfce44.eclass,v 1.11 2007/01/22 01:02:07 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfce44.eclass,v 1.12 2007/01/22 01:04:50 nichoj Exp $
 
 # Xfce44 Eclass
 #
@@ -25,6 +25,11 @@ THUNAR_VERSION="0.8"
 xfce44_beta() {
 	XFCE_MASTER_VERSION=${XFCE_BETA_VERSION}
 	THUNAR_MASTER_VERSION=${THUNAR_BETA_VERSION}
+}
+
+xfce44() {
+	XFCE_MASTER_VERSION=${XFCE_VERSION}
+	THUNAR_MASTER_VERSION=${THUNAR_VERSION}
 }
 
 ## plugins and base packages default to tar.bz2 unless gzipped is called
