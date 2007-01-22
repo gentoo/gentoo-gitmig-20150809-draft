@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailody/mailody-0.4.0_rc1.ebuild,v 1.1 2007/01/22 18:30:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailody/mailody-0.4.0_rc1.ebuild,v 1.2 2007/01/22 19:53:19 flameeyes Exp $
 
 inherit kde
 
@@ -21,3 +21,5 @@ RDEPEND="=dev-db/sqlite-3*
 S="${WORKDIR}/${MY_P}"
 
 need-kde 3.5
+
+PATCHES="${FILESDIR}/${P}-fix-parsing.patch"

@@ -1,0 +1,52 @@
+Index: src/messagedata.cpp
+===================================================================
+--- mailody/src/messagedata.cpp	(revision 626296)
++++ mailody/src/messagedata.cpp	(revision 626297)
+@@ -114,19 +114,19 @@
+         // a case sensitive compare.
+         QString line = (*it).lower().stripWhiteSpace();
+ 
+-        if (line.startsWith("size"))
+-            m_size = (*it).section(' ',1).stripWhiteSpace().toInt();
++        if (line.startsWith("size:"))
++            m_size = (*it).section(':',1).stripWhiteSpace().toInt();
+ 
+         else if (line.startsWith("subject"))
+         {
+             const char* usedCS;
+-            QString t = (*it).section(' ',1).stripWhiteSpace();
++            QString t = (*it).section(':',1).stripWhiteSpace();
+             m_subject =
+                     KMime::decodeRFC2047String(t.local8Bit(), &usedCS, "", false);
+         }
+-        else if (line.startsWith("from"))
++        else if (line.startsWith("from:"))
+         {
+-            QString t = (*it).section(' ',1).stripWhiteSpace();
++            QString t = (*it).section(':',1).stripWhiteSpace();
+             const char* usedCS;
+             t  = KMime::decodeRFC2047String(t.local8Bit(), &usedCS, "", false);
+             if (Global::myEmail(t))
+@@ -134,11 +134,11 @@
+             m_sender = t;
+             parseEmail(m_sender);
+         }
+-        else if (m_sender.isEmpty() && line.startsWith("to"))
++        else if (m_sender.isEmpty() && line.startsWith("to:"))
+         {
+             // If there is no From address use the To address...
+             const char* usedCS;
+-            QString t = (*it).section(' ',1).stripWhiteSpace();
++            QString t = (*it).section(':',1).stripWhiteSpace();
+             m_sender =
+                     KMime::decodeRFC2047String(t.local8Bit(), &usedCS, "", false);
+             parseEmail(m_sender);
+@@ -428,7 +428,7 @@
+     }
+ 
+     // Maybe there is a: toma <toma@omat.nl>
+-    else if ((start=email.find("<"))!=-1)
++    else if ((start=email.find("<"))!=-1 && start > 2)
+     {
+         email = email.mid(0,start);
+         return;
