@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/commons-io-1.2.ebuild,v 1.3 2007/01/20 15:15:25 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/commons-io-1.2.ebuild,v 1.4 2007/01/22 12:39:23 caster Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -44,6 +44,6 @@ src_install() {
 	java-pkg_newjar build/${P}.jar ${PN}.jar
 
 	dodoc RELEASE-NOTES.txt NOTICE.txt || die
-	use doc && java-pkg_dojavadoc dist/docs/api
+	use doc && java-pkg_dojavadoc build/dist-build/${P}/docs
 	use source && java-pkg_dosrc src/java/*
 }
