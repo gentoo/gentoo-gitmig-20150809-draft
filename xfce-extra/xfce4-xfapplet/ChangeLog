@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-xfapplet
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xfapplet/ChangeLog,v 1.1 2006/12/06 04:22:49 nichoj Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xfapplet/ChangeLog,v 1.2 2007/01/22 23:38:08 mcummings Exp $
+
+  22 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  xfce4-xfapplet-0.1.0.ebuild:
+  keywording ~amd64
 
 *xfce4-xfapplet-0.1.0 (10 Dec 2006)
 
