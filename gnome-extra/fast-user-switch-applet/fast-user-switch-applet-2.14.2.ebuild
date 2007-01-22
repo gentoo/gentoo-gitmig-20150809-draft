@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/fast-user-switch-applet/fast-user-switch-applet-2.14.2.ebuild,v 1.10 2006/10/20 21:59:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/fast-user-switch-applet/fast-user-switch-applet-2.14.2.ebuild,v 1.11 2007/01/22 02:16:11 compnerd Exp $
 
 inherit eutils gnome2
 
@@ -19,7 +19,7 @@ RDEPEND="dev-libs/glib
 	gnome-base/libgnome
 	gnome-base/orbit
 	>=gnome-base/libglade-2.0
-	gnome-base/gconf
+	>=gnome-base/gconf-2.0
 	gnome-base/libbonobo
 	gnome-base/libgnomeui
 	gnome-base/gnome-vfs
