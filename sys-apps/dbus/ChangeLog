@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.178 2007/01/21 12:34:26 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.179 2007/01/22 05:11:21 tester Exp $
+
+  22 Jan 2007; Olivier Crête <tester@gentoo.org> dbus-1.0.2.ebuild:
+  Stable on amd64 per bug #154522
 
   21 Jan 2007; Andrej Kacian <ticho@gentoo.org> dbus-1.0.2.ebuild:
   Stable on x86, bug #154522.
