@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xfce-mcs-plugins
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-mcs-plugins/ChangeLog,v 1.73 2007/01/22 02:09:33 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-mcs-plugins/ChangeLog,v 1.74 2007/01/22 21:12:41 welp Exp $
+
+  22 Jan 2007; Peter Weller <welp@gentoo.org>
+  -files/xfce-mcs-plugins-4.3.99.2-icon.patch,
+  xfce-mcs-plugins-4.4.0.ebuild:
+  Removed uneeded patch, other trivial changes
 
 *xfce-mcs-plugins-4.4.0 (22 Jan 2007)
 
