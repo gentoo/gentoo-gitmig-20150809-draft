@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.214 2007/01/22 05:58:05 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.215 2007/01/22 15:17:01 beandog Exp $
+
+  22 Jan 2007; Steve Dibb <beandog@gentoo.org> xorg-server-1.0.2-r8.ebuild,
+  xorg-server-1.1.1-r4.ebuild:
+  amd64 stable, bug 157421
 
   22 Jan 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/1.1.1-fixdualhead.patch, +files/1.1.99.903-sparc-includes.patch,
