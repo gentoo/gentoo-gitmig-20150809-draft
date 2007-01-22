@@ -1,15 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.2-r1.ebuild,v 1.3 2007/01/04 16:51:39 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.2-r1.ebuild,v 1.4 2007/01/22 08:00:24 opfer Exp $
 
 inherit elisp-common eutils flag-o-matic multilib versionator
 
 # NOTE: When bumping you need to adjust the *_VER strings in
 #  src_install() to honour newer versions in the package (they
-#  are maintained separately upstream).
-#  As High Performance Erlang (HiPE) messes around a lot with
-#  assembler, it breaks hardened and some normal systems, so it has
-#  been disabled.  Try with newer versions though.
+#  are maintained separately upstream).  You even need to adjust the version number
+#  in the last comment.
 #  If you need symlinks for binaries please tell maintainers or open up a bug
 #  to let it be created.
 
@@ -74,9 +72,7 @@ src_unpack() {
 
 src_compile() {
 	use java || export JAVAC=false
-	# disable High Performance Erlang (HiPE) to avoid a lot of
-	# problems on hardened, bug #154338
-	# Test every new version on hardened!
+
 	econf \
 		--enable-threads \
 		$(use_enable hipe) \
@@ -158,5 +154,7 @@ pkg_postrm() {
 	einfo
 	einfo "If you need a symlink to one of erlang's binaries,"
 	einfo "please open a bug and tell the maintainers."
+	einfo
+	einfo "Gentoo's versioning scheme differs from the author's, so please refer to this version as R11B-2"
 	einfo
 }
