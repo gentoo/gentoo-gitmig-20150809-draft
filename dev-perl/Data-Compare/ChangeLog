@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Data-Compare
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Compare/ChangeLog,v 1.17 2007/01/07 20:05:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Compare/ChangeLog,v 1.18 2007/01/22 04:33:00 kloeri Exp $
+
+  22 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
+  Data-Compare-0.14.ebuild:
+  Stable on IA64.
 
   07 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   Data-Compare-0.14.ebuild:
