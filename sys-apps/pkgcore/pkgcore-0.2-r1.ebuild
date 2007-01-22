@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.2.ebuild,v 1.1 2007/01/22 10:24:57 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.2-r1.ebuild,v 1.1 2007/01/22 11:03:41 jokey Exp $
 
 inherit distutils toolchain-funcs
 
 DESCRIPTION="pkgcore package manager"
-HOMEPAGE="http://pkgcore.org"
-SRC_URI="http://pkgcore.org/releases/${PN}/${P}.tar.bz2"
+HOMEPAGE="http://www.pkgcore.org"
+SRC_URI="http://www.pkgcore.org/releases/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,6 +19,11 @@ RDEPEND=">=dev-lang/python-2.4
 	>=app-shells/bash-3.0
 	doc? ( >=dev-python/docutils-0.4 )"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	use hppa && epatch "${FILESDIR}/${P}-hppa-disable-filter-env.patch"
+}
 
 src_compile() {
 	# The CC export is used by the filter-env build

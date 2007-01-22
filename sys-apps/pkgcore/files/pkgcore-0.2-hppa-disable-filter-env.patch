@@ -1,0 +1,13 @@
+--- pkgcore-0.2/setup.py	2007-01-22 00:05:46.000000000 -0500
++++ pkgcore-0.2-hppa/setup.py	2007-01-22 02:58:58.181908408 -0500
+@@ -329,10 +329,6 @@
+             'pkgcore.restrictions._restrictions', ['src/restrictions.c'],
+             extra_compile_args=extra_flags, depends=common_includes),
+         core.Extension(
+-            'pkgcore.ebuild._filter_env', [
+-                'src/filter_env.c', 'src/bmh_search.c'],
+-            extra_compile_args=extra_flags, depends=common_includes),
+-        core.Extension(
+             'pkgcore.util.osutils._readdir', ['src/readdir.c'],
+             extra_compile_args=extra_flags, depends=common_includes),
+         ] + extensions,
