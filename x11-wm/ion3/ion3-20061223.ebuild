@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20061223.ebuild,v 1.1 2007/01/20 19:23:31 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20061223.ebuild,v 1.2 2007/01/22 19:58:58 mabi Exp $
 
 inherit autotools eutils
 
@@ -55,14 +55,15 @@ src_unpack() {
 	use iontruetype && patch -p1 < ${DISTDIR}/xft-ion3-for-darcs-20061202.diff
 
 	# Rewrite install directories to be prefixed by DESTDIR for sake of portage's sandbox
-	sed -i Makefile build/rules.mk \
+	sed -i Makefile */Makefile */*/Makefile build/rules.mk \
 		-e 's!\($(INSTALL\w*)\|rm -f\|ln -s\)\(.*\)\($(\w\+DIR)\)!\1\2$(DESTDIR)\3!g'
 
 	for i in "${IONFLUX_PN}-${IONFLUX_PV}" "${IONXRANDR_PN}-${IONXRANDR_PV}"
 	do
-	    cd ${WORKDIR}/${i}
-	    # Rewrite install directories to be prefixed by DESTDIR for sake of portage's sandbox
-	   	sed -i 's!\($(INSTALL\w*)\|rm -f\|ln -s\)\(.*\)\($(\w\+DIR)\)!\1\2$(DESTDIR)\3!g' Makefile */Makefile */*/Makefile
+		cd ${WORKDIR}/${i}
+		# Rewrite install directories to be prefixed by DESTDIR for sake of portage's sandbox
+		sed -i Makefile */Makefile \
+			-e 's!\($(INSTALL\w*)\|rm -f\|ln -s\)\(.*\)\($(\w\+DIR)\)!\1\2$(DESTDIR)\3!g'
 	done
 	cd ${S}
 
