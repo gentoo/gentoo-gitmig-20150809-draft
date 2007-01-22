@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2517 2007/01/22 22:24:16 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2518 2007/01/22 22:26:52 alonbl Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -62,6 +62,7 @@ app-cdr/k3b:musicbrainz - Enable support for MusicBrainz audio lookups (musicbra
 app-cdr/pxlinux:gnuplot - enable gnuplot support
 app-cdr/serpentine:muine - Enable Muine support
 app-crypt/ccid:chipcard2 - Enable libchipcard support
+app-crypt/ccid:nousb - Disable USB support via pcsc-lite
 app-crypt/ccid:twinserial - Enable twinserial reader
 app-crypt/gnupg:ecc - Use elliptic curve cryptosystem patch
 app-crypt/gnupg:gpg2-experimental - Install experimental development version of gnupg
