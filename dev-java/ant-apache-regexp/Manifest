@@ -1,9 +1,12 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST ant-1.7.0-gentoo.tar.bz2 11720 RMD160 51d24f2c0c98195ed6ef1852045201a567a5d9ea SHA1 41acb8398a5ac9713dec30d6305b5abc6c014fff SHA256 7b1e0c63bec193c010c3fcca7a3524e2e35cc4ca56b86e4571737ac1e169e35c
 DIST apache-ant-1.7.0-src.tar.bz2 6831017 RMD160 e18ecde1996401f03529d80d2b6f3be2c55e64ab SHA1 3f01c35265ba50a49caafe1fb34ec8998bf45eb3 SHA256 a6698e8420f6d1cefd9e02c5a6b610b84495a3f9bfe1fc9e1b4fe8a8769e3779
-EBUILD ant-apache-regexp-1.7.0.ebuild 396 RMD160 00f58e5a7e6d8a83b84c60157ca5bb02dc09c114 SHA1 26cfbcb6c5ee6b29df94606f3bbe7e288721e2bc SHA256 bc85d65122ab00bbd7511e52c028791fab54ab958ab5271559ae08ef9777b1d4
-MD5 f09ede64f906700511321a42b0d1b0f0 ant-apache-regexp-1.7.0.ebuild 396
-RMD160 00f58e5a7e6d8a83b84c60157ca5bb02dc09c114 ant-apache-regexp-1.7.0.ebuild 396
-SHA256 bc85d65122ab00bbd7511e52c028791fab54ab958ab5271559ae08ef9777b1d4 ant-apache-regexp-1.7.0.ebuild 396
+EBUILD ant-apache-regexp-1.7.0.ebuild 409 RMD160 7b33883dac018f323d792568ffa8a6b866b9d0fc SHA1 a0db713afdf56cc4b5f1a59a5a1bdf9716c0980f SHA256 ef43145ff1d14c9baf7a50df921f992d4afd42cb0614f2a2f6ca36c6e49f4945
+MD5 e42eaf423b364cbfe8b40b3d1f3e571f ant-apache-regexp-1.7.0.ebuild 409
+RMD160 7b33883dac018f323d792568ffa8a6b866b9d0fc ant-apache-regexp-1.7.0.ebuild 409
+SHA256 ef43145ff1d14c9baf7a50df921f992d4afd42cb0614f2a2f6ca36c6e49f4945 ant-apache-regexp-1.7.0.ebuild 409
 MISC ChangeLog 420 RMD160 fbe9af239dc5b5fe325f7fe16e85acb1829db75e SHA1 f8465261e8963f27f5e9b63c4bc37436b1678dd3 SHA256 8a884e0e7003c3ad0ffe1ea2b20c1cf74aff205612cb7180de2f8f1069a0aebc
 MD5 537ea2f0fa646d5abb8fb3cb5d4ee455 ChangeLog 420
 RMD160 fbe9af239dc5b5fe325f7fe16e85acb1829db75e ChangeLog 420
@@ -15,3 +18,10 @@ SHA256 ea882ceccfd160b16cf7e79de423bdcc12b3fa000f124491a6df36f5783894fb metadata
 MD5 a7b309b2642e68941a45f02dd5a5c96d files/digest-ant-apache-regexp-1.7.0 518
 RMD160 d03eca1d95f01c905fe3b77f5a2c39ac67d13c22 files/digest-ant-apache-regexp-1.7.0 518
 SHA256 99ca534318f44bd6e836a90ba168e57156af32905f50619d14887361de2823b9 files/digest-ant-apache-regexp-1.7.0 518
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFtJIsAiZjviIA2XgRAlEfAJoDTCyVCZR6ts4s+h6+Y1uXubGQnACgkHbf
+pgn6hcb2lqWEewJh9eC4b8E=
+=vBpG
+-----END PGP SIGNATURE-----
