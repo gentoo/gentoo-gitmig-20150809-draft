@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/qhull
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/ChangeLog,v 1.18 2006/04/27 23:13:41 marienz Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/ChangeLog,v 1.19 2007/01/22 19:24:29 antarus Exp $
+
+*qhull-2003.1 (22 Jan 2007)
+
+  22 Jan 2007; Alec Warner <antarus@gentoo.org>
+  +files/qhull-2003.1-makefile.patch, +qhull-2003.1.ebuild:
+  bumpity bump for bug 108223
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-qhull-3.1-r1,
   Manifest:
