@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-de/aspell-de-0.60_pre20030222.ebuild,v 1.5 2007/01/02 04:03:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-de/aspell-de-0.60_pre20030222.ebuild,v 1.6 2007/01/22 08:07:55 flameeyes Exp $
 
 ASPELL_LANG="German and Swiss-German"
 ASPOSTFIX="6"
@@ -13,6 +13,6 @@ KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 
 FILENAME=aspell6-de-20030222-1
 
-SRC_URI="ftp://ftp.gnu.org/gnu/aspell/dict/de/${FILENAME}.tar.bz2"
+SRC_URI="mirror://gnu/aspell/dict/de/${FILENAME}.tar.bz2"
 S=${WORKDIR}/${FILENAME}
 

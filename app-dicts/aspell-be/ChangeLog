@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-be
 # Copyright 2006-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-be/ChangeLog,v 1.5 2007/01/01 11:51:02 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-be/ChangeLog,v 1.6 2007/01/22 08:05:36 flameeyes Exp $
+
+  22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> aspell-be-0.01.ebuild,
+  aspell-be-0.01-r1.ebuild:
+  Use mirror://gnu/ rather than ftp.gnu.org.
 
   01 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
   Removed arj as he is retired.
