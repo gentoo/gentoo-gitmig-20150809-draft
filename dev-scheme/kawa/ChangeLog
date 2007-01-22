@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/kawa
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/kawa/ChangeLog,v 1.4 2006/11/26 19:01:47 opfer Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/kawa/ChangeLog,v 1.5 2007/01/22 11:00:26 hkbst Exp $
+
+  22 Jan 2007; Marijn Schouten <hkBst@gentoo.org> kawa-1.6.97.ebuild,
+  kawa-1.7.ebuild, kawa-1.8.ebuild:
+  change src_uri`s to mirror://gnu
 
   26 Nov 2006; Christian Faulhammer <opfer@gentoo.org> metadata.xml:
   added scheme herd
