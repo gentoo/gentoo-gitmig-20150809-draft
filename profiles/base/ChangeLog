@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.2 2007/01/18 16:33:29 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.3 2007/01/22 07:23:51 opfer Exp $
+
+  22 Jan 2007; Christian Faulhammer <opfer@gentoo.org> use.mask:
+  masked bmpx USE flag in order to stable conky
 
   18 Jan 2007; Robert Buchholz <rbu@gentoo.org> use.mask:
   Masked lcd_devices_svga as it only works on x86
