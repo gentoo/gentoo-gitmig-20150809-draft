@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jai-bin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/ChangeLog,v 1.9 2007/01/05 23:38:10 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/ChangeLog,v 1.10 2007/01/22 16:36:09 corsair Exp $
+
+  22 Jan 2007; Markus Rothe <corsair@gentoo.org>
+  sun-jai-bin-1.1.2.01-r1.ebuild:
+  Added ~ppc64
 
   05 Jan 2007; Vlastimil Babka <caster@gentoo.org>
   sun-jai-bin-1.1.2.01-r1.ebuild:
