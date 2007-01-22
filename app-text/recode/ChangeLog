@@ -1,6 +1,10 @@
 # ChangeLog for app-text/recode
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.44 2006/09/06 20:46:31 christel Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.45 2007/01/22 08:30:34 flameeyes Exp $
+
+  22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> recode-3.6-r1.ebuild,
+  recode-3.6-r2.ebuild:
+  Use mirror://gnu/ rather than ftp.gnu.org.
 
   06 Sep 2006; Christel Dahlskjaer <christel@gentoo.org>
   recode-3.6-r2.ebuild:
