@@ -1,6 +1,14 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.82 2007/01/11 21:30:38 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.83 2007/01/22 21:14:46 dang Exp $
+
+  22 Jan 2007; Daniel Gryniewicz <dang@gentoo.org> ChangeLog:
+  Bump to 1.2.4
+  	* Fixes a possible GUI deadlock usually happening when
+  	  using the Gecko rendering during background feed updates.
+  	* Fixes a problem with relative feed base URLs.
+  	* Update of French translation (Vincent Lefevre)
+  	* New Turkish translation (Mehmet Atif Ergun)
 
   11 Jan 2007; Daniel Gryniewicz <dang@gentoo.org> liferea-1.2.3.ebuild:
   Fix libxml2 dep; bug #161626

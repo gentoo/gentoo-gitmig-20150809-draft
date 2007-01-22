@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.2.3.ebuild,v 1.3 2007/01/11 21:30:38 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.2.4.ebuild,v 1.1 2007/01/22 21:14:46 dang Exp $
 
 WANT_AUTOMAKE=1.7
 WANT_AUTOCONF=latest
