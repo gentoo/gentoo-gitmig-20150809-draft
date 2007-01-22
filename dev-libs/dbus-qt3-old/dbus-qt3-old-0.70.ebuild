@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-qt3-old/dbus-qt3-old-0.70.ebuild,v 1.8 2007/01/21 12:34:49 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-qt3-old/dbus-qt3-old-0.70.ebuild,v 1.9 2007/01/22 05:15:54 tester Exp $
 
 inherit qt3
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.kolumbus.fi/juuso.alasuutari/${P/-old}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 ~sparc x86"
 IUSE="debug"
 
 RDEPEND=">=sys-apps/dbus-0.91"
