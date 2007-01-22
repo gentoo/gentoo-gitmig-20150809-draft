@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gcal
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/ChangeLog,v 1.19 2005/05/17 11:26:38 ka0ttic Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/ChangeLog,v 1.20 2007/01/22 08:28:56 flameeyes Exp $
+
+  22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> gcal-3.01.ebuild,
+  gcal-3.01-r1.ebuild, gcal-3.01-r2.ebuild:
+  Use mirror://gnu/ rather than ftp.gnu.org.
 
   17 May 2005; Aaron Walker <ka0ttic@gentoo.org> gcal-3.01-r2.ebuild:
   Don't install locale.alias as it conflicts with glibc.
