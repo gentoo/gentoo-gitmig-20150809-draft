@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/linux-igd-0.95.ebuild,v 1.1 2007/01/22 06:01:40 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/linux-igd-0.95.ebuild,v 1.2 2007/01/22 18:23:32 antarus Exp $
 
 MY_PN="linuxigd"
 S="${WORKDIR}/${MY_PN}-${PV}"
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 IUSE=""
 
-DEPEND="<net-misc/upnp-1.1
+DEPEND=">=net-misc/upnp-1.3
 	net-firewall/iptables"
 
 
