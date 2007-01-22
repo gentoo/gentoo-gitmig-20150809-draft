@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/jline-0.9.9-r1.ebuild,v 1.5 2007/01/21 20:32:33 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/jline-0.9.9-r1.ebuild,v 1.6 2007/01/22 02:00:01 caster Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -30,6 +30,8 @@ src_unpack() {
 	# - mvn ant:ant
 	# - tweak build.xml to not load properties from home dir
 	# - tweak the test target to match the test cases
+	# - change maven.repo.local from ~/.maven to "lib" in .properties
+	# - change classpath definitions to "*.jar"
 	cp ${FILESDIR}/maven-build.xml build.xml || die "failed to copy build.xml"
 	cp ${FILESDIR}/maven-build.properties . || die
 	java-ant_ignore-system-classes

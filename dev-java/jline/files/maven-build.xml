@@ -42,12 +42,12 @@
 
   <path id="build.classpath">
     <fileset dir="${maven.repo.local}">
-      <include name="junit/junit/3.8.1/junit-3.8.1.jar"/>
+      <include name="*.jar"/>
     </fileset>
   </path>
   <path id="build.test.classpath">
     <fileset dir="${maven.repo.local}">
-      <include name="junit/junit/3.8.1/junit-3.8.1.jar"/>
+      <include name="*.jar"/>
     </fileset>
   </path>
 
