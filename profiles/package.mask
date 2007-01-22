@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6652 2007/01/22 02:58:45 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6653 2007/01/22 08:10:55 antarus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -995,10 +995,6 @@ net-im/ohphone
 # get the word out. Also see bug 148333 for packages that still needs to fixed
 >=dev-lang/python-2.5
 >=dev-python/python-docs-2.5
-
-# Michael Sterrett <mr_bones_@gentoo.org> (14 Sep 2006)
-# All versions in portage need <net-misc/upnp-1.1 which was removed
-net-misc/linux-igd
 
 # Donnie Berkholz <dberkholz@gentoo.org> (13 Sep 2006)
 # Monolithic X.Org is no longer supported and is subject
