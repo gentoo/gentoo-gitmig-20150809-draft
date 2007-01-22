@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/skim
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.52 2007/01/05 16:33:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.53 2007/01/22 19:09:11 gustavoz Exp $
+
+  22 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> skim-1.4.5.ebuild:
+  Stable on sparc
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> skim-1.4.2.ebuild,
   skim-1.4.5.ebuild:

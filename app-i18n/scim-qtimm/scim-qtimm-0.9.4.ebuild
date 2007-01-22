@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.9.4.ebuild,v 1.12 2007/01/05 16:31:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.9.4.ebuild,v 1.13 2007/01/22 19:10:52 gustavoz Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="latest"
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="debug"
 
 RDEPEND=">=app-i18n/scim-1.4.2

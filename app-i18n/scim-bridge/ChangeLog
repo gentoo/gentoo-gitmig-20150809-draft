@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-bridge
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/ChangeLog,v 1.10 2007/01/05 16:26:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/ChangeLog,v 1.11 2007/01/22 19:09:59 gustavoz Exp $
+
+  22 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  scim-bridge-0.4.9.ebuild:
+  Stable on sparc
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   scim-bridge-0.4.7.ebuild, scim-bridge-0.4.8.ebuild,
