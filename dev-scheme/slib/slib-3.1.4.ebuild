@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.1.4.ebuild,v 1.5 2007/01/17 11:19:19 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.1.4.ebuild,v 1.6 2007/01/22 18:37:38 hkbst Exp $
 
 inherit versionator eutils
 
@@ -32,12 +32,12 @@ RESTRICT="test"
 # maybe also do "make infoz"
 
 src_install() {
-	insinto /usr/lib/slib/ #don't install directly into guile dir
+	insinto /usr/share/slib/ #don't install directly into guile dir
 	doins *.scm
 	doins *.init
 	dodoc ANNOUNCE ChangeLog FAQ README
 	doinfo slib.info
-	dosym /usr/lib/slib/ /usr/share/guile/slib # link from guile dir
+	dosym /usr/share/slib/ /usr/share/guile/slib # link from guile dir
 }
 
 pkg_postinst() {
