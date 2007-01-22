@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Simple-TimedExpiry/Cache-Simple-TimedExpiry-0.27.ebuild,v 1.3 2007/01/07 19:30:14 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Simple-TimedExpiry/Cache-Simple-TimedExpiry-0.27.ebuild,v 1.4 2007/01/22 04:19:05 kloeri Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/J/JE/JESSE/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc sparc ~x86"
+KEYWORDS="alpha amd64 ~hppa ia64 ~ppc sparc ~x86"
 IUSE=""
 
 SRC_TEST="do"
