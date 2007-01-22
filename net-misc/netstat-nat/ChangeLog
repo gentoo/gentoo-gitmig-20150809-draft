@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netstat-nat
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/ChangeLog,v 1.19 2006/10/10 12:36:05 jokey Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/ChangeLog,v 1.20 2007/01/22 08:40:16 opfer Exp $
+
+  22 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
+  netstat-nat-1.4.7.ebuild:
+  stable x86, bug #156473
 
 *netstat-nat-1.4.7 (10 Oct 2006)
 
