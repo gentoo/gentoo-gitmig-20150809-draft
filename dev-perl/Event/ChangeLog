@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Event
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.48 2007/01/08 13:11:47 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.49 2007/01/22 04:46:18 kloeri Exp $
+
+  22 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> Event-1.08.ebuild:
+  Stable on Alpha + IA64.
 
   08 Jan 2007; Michael Cummings <mcummings@gentoo.org> -Event-0.87.ebuild,
   -Event-1.00.ebuild, Event-1.08.ebuild:
