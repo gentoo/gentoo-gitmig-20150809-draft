@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/istanbul-0.2.0.ebuild,v 1.2 2006/07/15 11:17:40 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/istanbul-0.2.0.ebuild,v 1.3 2007/01/22 02:20:49 compnerd Exp $
 
 inherit eutils gnome2
 
@@ -16,7 +16,7 @@ RDEPEND=">=media-libs/gst-plugins-base-0.10.8
 	dev-lang/python
 	>=dev-python/pygtk-2.6
 	>=dev-python/gnome-python-extras-2.11.3
-	gnome-base/gconf
+	>=gnome-base/gconf-2.0
 	>=dev-python/gst-python-0.10.0
 	media-plugins/gst-plugins-ogg
 	media-plugins/gst-plugins-theora
