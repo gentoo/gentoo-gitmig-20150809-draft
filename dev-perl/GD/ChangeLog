@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GD
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.68 2007/01/11 14:14:36 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.69 2007/01/22 13:27:19 kloeri Exp $
+
+  22 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> GD-2.35-r1.ebuild:
+  Stable on Alpha + IA64.
 
   11 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> GD-2.35-r1.ebuild:
   Stable on sparc
