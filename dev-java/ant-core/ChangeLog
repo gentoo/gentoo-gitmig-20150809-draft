@@ -1,73 +1,13 @@
 # ChangeLog for dev-java/ant-core
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.63 2007/01/22 16:38:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.64 2007/01/22 16:43:54 corsair Exp $
 
 # Ant-core blocks lower/older versions of ant-tasks, 
 # since it will not run when there is a version mismatch betwean the 2 packages
 # Please unemerge ant-tasks when updating ant-core.
 
   22 Jan 2007; Markus Rothe <corsair@gentoo.org> ant-core-1.7.0.ebuild:
-  Added ~ppc64; bug #107736
-
-  22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ant-core-1.7.0.ebuild:
-  Add ~x86-fbsd keyword. popd
-
-  22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ant-core-1.7.0.ebuild:
-  Add ~x86-fbsd keyword. popd
-
-  22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ant-core-1.7.0.ebuild:
-  Add ~x86-fbsd keyword. popd
-
-  22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ant-core-1.7.0.ebuild:
-  Add ~x86-fbsd keyword. popd
-
-  22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ant-core-1.7.0.ebuild:
-  Add ~x86-fbsd keyword. popd
-
-  22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ant-core-1.7.0.ebuild:
-  Add ~x86-fbsd keyword. popd
-
-  22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ant-core-1.7.0.ebuild:
-  Add ~x86-fbsd keyword. popd
-
-  22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ant-core-1.7.0.ebuild:
-  Add ~x86-fbsd keyword. popd
-
-  22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ant-core-1.7.0.ebuild:
-  Add ~x86-fbsd keyword. popd
-
-  22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ant-core-1.7.0.ebuild:
-  Add ~x86-fbsd keyword. popd
-
-  22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ant-core-1.7.0.ebuild:
-  Add ~x86-fbsd keyword. popd
-
-  22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ant-core-1.7.0.ebuild:
-  Add ~x86-fbsd keyword. popd
-
-  22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ant-core-1.7.0.ebuild:
-  Add ~x86-fbsd keyword. popd
-
-  22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ant-core-1.7.0.ebuild:
-  Add ~x86-fbsd keyword. popd
-
-  22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ant-core-1.7.0.ebuild:
-  Add ~x86-fbsd keyword. popd
-
-  22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ant-core-1.7.0.ebuild:
-  Add ~x86-fbsd keyword. popd
-
-  22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ant-core-1.7.0.ebuild:
-  Add ~x86-fbsd keyword. popd
-
-  22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ant-core-1.7.0.ebuild:
-  Add ~x86-fbsd keyword. popd
-
-  22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ant-core-1.7.0.ebuild:
-  Add ~x86-fbsd keyword. popd
-
-  22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ant-core-1.7.0.ebuild:
-  Add ~x86-fbsd keyword. popd
+  Added ~ppc64; bug #159820
 
   22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ant-core-1.7.0.ebuild:
   Add ~x86-fbsd keyword. popd
