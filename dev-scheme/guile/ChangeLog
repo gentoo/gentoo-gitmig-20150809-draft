@@ -1,13 +1,18 @@
 # ChangeLog for dev-util/guile
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.2 2007/01/12 14:45:43 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.3 2007/01/22 18:24:37 hkbst Exp $
+
+*guile-1.8.1 (22 Jan 2007)
+
+  22 Jan 2007; Marijn Schouten <hkBst@gentoo.org> +guile-1.8.1.ebuild:
+  added guile-1.8.1
 
 *guile-1.6.8 (12 Jan 2007)
 
-  12 Jan 2007; <hkBst@gentoo.org> +guile-1.6.8.ebuild:
+  12 Jan 2007;  Marijn Schouten <hkBst@gentoo.org> +guile-1.6.8.ebuild:
   Added 1.6.8 ebuild
 
-  10 Jan 2007; <hkBst@gentoo.org> +files/guile-1.4-inet_aton.patch,
+  10 Jan 2007;  Marijn Schouten <hkBst@gentoo.org> +files/guile-1.4-inet_aton.patch,
   +files/guile-amd64.patch, +files/guile-1.6.7-gcc4.patch,
   +files/guile-1.6.7-posix.patch, +files/guile-1.6.7-scmsigs.patch,
   +metadata.xml, +guile-1.4-r3.ebuild, +guile-1.4.1.ebuild,
