@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.7.0.ebuild,v 1.2 2007/01/22 10:33:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.7.0.ebuild,v 1.3 2007/01/22 17:09:44 corsair Exp $
 
 inherit java-pkg-2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://ant.apache.org/"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~x86 ~x86-fbsd"
+KEYWORDS="~ppc64 ~x86 ~x86-fbsd"
 IUSE="jai javamail noantlr nobcel nobsf nocommonsnet nocommonslogging nojdepend
 	nojmf nojsch nolog4j nooro noregexp noresolver noswing noxalan"
 # nobeanutils nobsh nojython norhino noxerces 
