@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfmedia/xfmedia-0.9.2-r1.ebuild,v 1.2 2006/12/11 10:14:37 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfmedia/xfmedia-0.9.2-r1.ebuild,v 1.3 2007/01/23 21:42:27 welp Exp $
 
 inherit xfce44
 
@@ -11,8 +11,7 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="dbus debug startup-notification"
 
-DEPEND=">=dev-util/intltool-0.31
-	x11-libs/libX11
+RDEPEND="x11-libs/libX11
 	x11-libs/libSM
 	>=dev-libs/glib-2.6.0
 	>=x11-libs/gtk+-2.6.0
@@ -27,7 +26,8 @@ DEPEND=">=dev-util/intltool-0.31
 			>=sys-apps/dbus-0.34 )
 	) )
 	media-libs/taglib"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/intltool"
 
 XFCE_CONFIG="$(use_enable debug) \
 	$(use_enable startup-notification) \
