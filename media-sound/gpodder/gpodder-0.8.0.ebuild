@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gpodder/gpodder-0.8.0.ebuild,v 1.1 2006/07/28 19:10:07 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gpodder/gpodder-0.8.0.ebuild,v 1.2 2007/01/23 11:20:11 beandog Exp $
 
 inherit distutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://perli.net/projekte/gpodder/"
 SRC_URI="http://perli.net/projekte/${PN}/releases/${PV}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="ipod"
 
 DEPEND="dev-python/pygtk
