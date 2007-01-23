@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Template-Toolkit
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/ChangeLog,v 1.32 2007/01/04 15:12:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/ChangeLog,v 1.33 2007/01/23 00:20:40 kloeri Exp $
+
+  23 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
+  Template-Toolkit-2.15-r1.ebuild:
+  Add ~ia64 keyword.
 
   04 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
   Template-Toolkit-2.15-r1.ebuild:

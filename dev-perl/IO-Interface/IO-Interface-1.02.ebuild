@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Interface/IO-Interface-1.02.ebuild,v 1.5 2007/01/06 17:24:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Interface/IO-Interface-1.02.ebuild,v 1.6 2007/01/23 00:07:02 kloeri Exp $
 
 inherit perl-module
 
@@ -12,6 +12,6 @@ IUSE=""
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~alpha amd64 ppc sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ppc sparc ~x86"
 
 SRC_TEST="do"

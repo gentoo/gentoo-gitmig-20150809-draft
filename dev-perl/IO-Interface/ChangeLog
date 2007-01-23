@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IO-Interface
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Interface/ChangeLog,v 1.10 2007/01/06 17:24:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Interface/ChangeLog,v 1.11 2007/01/23 00:07:02 kloeri Exp $
+
+  23 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
+  IO-Interface-1.02.ebuild:
+  Add ~ia64 keyword.
 
   06 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
   IO-Interface-1.02.ebuild:

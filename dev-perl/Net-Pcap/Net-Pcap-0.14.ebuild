@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Pcap/Net-Pcap-0.14.ebuild,v 1.9 2007/01/06 17:25:10 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Pcap/Net-Pcap-0.14.ebuild,v 1.10 2007/01/23 00:08:18 kloeri Exp $
 
 inherit perl-module eutils
 
@@ -13,4 +13,4 @@ DEPEND="net-libs/libpcap
 	dev-lang/perl"
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~alpha amd64 ppc sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ppc sparc ~x86"
