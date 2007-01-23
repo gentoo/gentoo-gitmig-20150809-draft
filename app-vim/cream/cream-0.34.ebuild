@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.34.ebuild,v 1.6 2006/10/19 13:13:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.34.ebuild,v 1.7 2007/01/23 16:31:50 genone Exp $
 
 inherit vim-plugin eutils fdo-mime
 
@@ -123,22 +123,22 @@ src_install() {
 }
 
 pkg_setup() {
-	einfo "Cream comes with several dictionaries for spell checking. In"
-	einfo "all cases, at least a small English dictionary will be installed."
-	einfo
-	einfo "To specify which optional dictionaries are installed, set the"
-	einfo "LINGUAS variable in /etc/make.conf. For example, to install full"
-	einfo "English and French dictionaries, use:"
-	einfo "    LINGUAS=\"en fr\""
-	einfo
-	einfo "Available dictionaries are:"
+	elog "Cream comes with several dictionaries for spell checking. In"
+	elog "all cases, at least a small English dictionary will be installed."
+	elog
+	elog "To specify which optional dictionaries are installed, set the"
+	elog "LINGUAS variable in /etc/make.conf. For example, to install full"
+	elog "English and French dictionaries, use:"
+	elog "    LINGUAS=\"en fr\""
+	elog
+	elog "Available dictionaries are:"
 	for dict in "English en" "French fr" "German de" "Spanish es" ; do
 		# portage bug: shouldn't get a QA notice for linguas stuff...
-		einfo "    ${dict% *} \t(${dict#* }) $( ( \
+		elog "    ${dict% *} \t(${dict#* }) $( ( \
 			use linguas_${dict#* } &>/dev/null && \
 			echo '(Will be installed)' ) || echo '(Will not be installed)' )"
 	done
-	einfo
+	elog
 	# give the user time to cancel if necessary
 	epause
 }

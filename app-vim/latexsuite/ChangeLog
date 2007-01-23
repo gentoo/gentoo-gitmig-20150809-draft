@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/latexsuite
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/latexsuite/ChangeLog,v 1.24 2006/10/19 16:08:55 kloeri Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/latexsuite/ChangeLog,v 1.25 2007/01/23 16:35:46 genone Exp $
+
+  23 Jan 2007; Marius Mauch <genone@gentoo.org> latexsuite-1.5_rc1.ebuild,
+  latexsuite-1.5.ebuild, latexsuite-1.5.20060124.ebuild,
+  latexsuite-1.5.20060325.ebuild:
+  Replacing einfo with elog
 
   19 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   latexsuite-1.5.20060124.ebuild:

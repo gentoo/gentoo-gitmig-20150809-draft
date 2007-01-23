@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/cream
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.36 2007/01/10 15:26:12 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.37 2007/01/23 16:31:50 genone Exp $
+
+  23 Jan 2007; Marius Mauch <genone@gentoo.org> cream-0.32.ebuild,
+  cream-0.34.ebuild, cream-0.36.ebuild:
+  Replacing einfo with elog
 
   10 Jan 2007; Mike Kelly <pioto@gentoo.org> -cream-0.31.ebuild:
   Remove old version.
