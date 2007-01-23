@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.44 2007/01/16 22:55:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.45 2007/01/23 05:47:51 jer Exp $
+
+  23 Jan 2007; Jeroen Roovers <jer@gentoo.org>
+  alsa-plugins-1.0.14_rc1-r1.ebuild:
+  Stable for HPPA (bug #158678).
 
 *alsa-plugins-1.0.14_rc2 (16 Jan 2007)
 
