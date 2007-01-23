@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/libxfce4mcs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4mcs/ChangeLog,v 1.76 2007/01/22 02:05:22 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4mcs/ChangeLog,v 1.77 2007/01/23 16:40:51 welp Exp $
+
+  23 Jan 2007; Peter Weller <welp@gentoo.org> libxfce4mcs-4.4.0.ebuild:
+  Removing usage of virtual/x11,  and hardcoding in depends. Minor clean ups.
 
 *libxfce4mcs-4.4.0 (22 Jan 2007)
 

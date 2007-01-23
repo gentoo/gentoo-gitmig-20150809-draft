@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/libxfcegui4
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/ChangeLog,v 1.83 2007/01/22 02:07:26 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/ChangeLog,v 1.84 2007/01/23 16:38:08 welp Exp $
+
+  23 Jan 2007; Peter Weller <welp@gentoo.org> libxfcegui4-4.4.0.ebuild:
+  Removing usage of virtual/x11,  and hardcoding in depends. Minor clean ups.
 
 *libxfcegui4-4.4.0 (22 Jan 2007)
 
