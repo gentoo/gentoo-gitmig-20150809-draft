@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.4.0.ebuild,v 1.2 2007/01/23 17:32:34 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.4.0.ebuild,v 1.3 2007/01/23 20:59:08 welp Exp $
 
 inherit xfce44
 
@@ -32,6 +32,12 @@ RDEPEND="${DEPEND}
 		    >=xfce-extra/mousepad-0.2.10
 		    >=xfce-extra/xfwm4-themes-${XFCE_MASTER_VERSION}
 		    >=xfce-extra/terminal-0.2.6 )"
+
+# hack to avoid exporting function from eclass.
+# we need eclass to get _MASTER_VERSION.
+src_compile() { 
+	echo
+}
 
 src_install() {
 	dodir /etc/X11/Sessions
