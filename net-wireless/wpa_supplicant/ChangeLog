@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.89 2007/01/15 14:34:19 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.90 2007/01/23 14:08:41 uberlord Exp $
+
+  23 Jan 2007; Roy Marples <uberlord@gentoo.org>
+  +files/wpa_supplicant-0.5.7-gnutls.patch, wpa_supplicant-0.5.7.ebuild:
+  Add support for gnutls and internal tls, #163390 thanks to
+  Nikolas 'Atrus' Coukouma.
 
 *wpa_supplicant-0.5.7 (15 Jan 2007)
 

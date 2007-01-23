@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.7.ebuild,v 1.1 2007/01/15 14:34:19 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.7.ebuild,v 1.2 2007/01/23 14:08:41 uberlord Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ LICENSE="|| ( GPL-2 BSD )"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="dbus gsm madwifi qt3 qt4 readline ssl kernel_linux kernel_FreeBSD"
+IUSE="dbus gnutls gsm madwifi qt3 qt4 readline ssl kernel_linux kernel_FreeBSD"
 
 RDEPEND="dbus? ( sys-apps/dbus )
 		kernel_linux? (
@@ -24,15 +24,11 @@ RDEPEND="dbus? ( sys-apps/dbus )
 		qt4? ( =x11-libs/qt-4* )
 		!qt4? ( qt3? ( =x11-libs/qt-3* ) )
 		readline? ( sys-libs/ncurses sys-libs/readline )
-		ssl? ( dev-libs/openssl )"
+		ssl? ( dev-libs/openssl )
+		gnutls? ( net-libs/gnutls )
+		!ssl? ( !gnutls? ( dev-libs/libtommath ) )"
 
 pkg_setup() {
-	if use kernel_linux ; then
-		ewarn
-		ewarn "${PN} requires kernel support for Packet Socket (CONFIG_PACKET)."
-		ewarn
-	fi
-
 	if use qt3 && use qt4; then
 		einfo "You have USE=\"qt3 qt4\" selected, defaulting to USE=\"qt4\""
 	fi
@@ -48,6 +44,8 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${FILESDIR}/${P}"-gnutls.patch
 
 	# net/bpf.h needed for net-libs/libpcap on Gentoo FreeBSD
 	sed -i \
@@ -73,6 +71,11 @@ src_unpack() {
 	echo "CONFIG_IEEE8021X_EAPOL=y" >> .config
 	echo "CONFIG_PKCS12=y"          >> .config
 	echo "CONFIG_PEERKEY=y"         >> .config
+	echo "CONFIG_EAP_LEAP=y"        >> .config
+	echo "CONFIG_EAP_MSCHAPV2=y"    >> .config
+	echo "CONFIG_EAP_PEAP=y"        >> .config
+	echo "CONFIG_EAP_TLS=y"         >> .config
+	echo "CONFIG_EAP_TTLS=y"        >> .config
 
 	if use dbus ; then
 		echo "CONFIG_CTRL_IFACE_DBUS=y" >> .config
@@ -92,12 +95,13 @@ src_unpack() {
 
 	if use ssl ; then
 		# SSL authentication methods
-		echo "CONFIG_EAP_LEAP=y"     >> .config
-		echo "CONFIG_EAP_MSCHAPV2=y" >> .config
-		echo "CONFIG_EAP_PEAP=y"     >> .config
-		echo "CONFIG_EAP_TLS=y"      >> .config
-		echo "CONFIG_EAP_TTLS=y"     >> .config
-		echo "CONFIG_SMARTCARD=y"    >> .config
+		echo "CONFIG_TLS=openssl" >> .config
+		echo "CONFIG_SMARTCARD=y" >> .config
+	elif use gnutls ; then
+		echo "CONFIG_TLS=gnutls" >> .config
+		echo "CONFIG_GNUTLS_EXTRA=y" >> .config
+	else
+		echo "CONFIG_TLS=internal" >> .config
 	fi
 
 	if use kernel_linux ; then
@@ -117,9 +121,7 @@ src_unpack() {
 			echo "CFLAGS += -I${ROOT}/usr/include/madwifi" >> .config
 			echo "CONFIG_DRIVER_MADWIFI=y"                 >> .config
 		fi
-	fi
-
-	if use kernel_FreeBSD ; then
+	elif use kernel_FreeBSD ; then
 		# FreeBSD specific driver
 		echo "CONFIG_DRIVER_BSD=y" >> .config
 	fi
