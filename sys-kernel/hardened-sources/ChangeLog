@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.131 2007/01/14 05:35:01 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.132 2007/01/23 20:51:19 phreak Exp $
+
+*hardened-sources-2.6.19-r5 (23 Jan 2007)
+
+  23 Jan 2007; Christian Heim <phreak@gentoo.org>
+  +hardened-sources-2.6.19-r5.ebuild:
+  Revision bump, closing the recently discovered PaX expand_stack()
+  vulnerability.
 
 *hardened-sources-2.6.19-r4 (14 Jan 2007)
 
