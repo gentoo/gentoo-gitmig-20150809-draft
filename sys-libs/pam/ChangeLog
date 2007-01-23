@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.142 2007/01/23 13:53:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.143 2007/01/23 15:21:36 beandog Exp $
+
+  23 Jan 2007; Steve Dibb <beandog@gentoo.org> pam-0.78-r5.ebuild:
+  amd64 stable, bug 150859
 
   23 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> pam-0.99.7.0.ebuild:
   Keyworded ~sparc wrt #152713
