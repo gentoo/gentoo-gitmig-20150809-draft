@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/xfce4-extras-4.4.0.ebuild,v 1.4 2007/01/23 21:04:22 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/xfce4-extras-4.4.0.ebuild,v 1.5 2007/01/23 23:07:09 welp Exp $
 
 inherit xfce44
 
@@ -37,6 +37,7 @@ RDEPEND=">=xfce-base/xfce4-${XFCE_MASTER_VERSION}
 	>=xfce-extra/xfce4-fsguard-0.3
 	>=xfce-extra/xfce4-cpugraph-0.3
 	>=xfce-extra/xfce4-taskmanager-0.3.2
+	>=xfce-extra/xfce4-timer-0.5.1
 	battery? ( >=xfce-extra/xfce4-battery-0.5 )
 	cpufreq? ( >=xfce-extra/xfce4-cpu-freq-0.0.1 )
 	wlan? ( >=xfce-extra/xfce4-wavelan-0.5.4 )"
