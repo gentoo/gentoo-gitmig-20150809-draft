@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.1_rc1.ebuild,v 1.7 2006/12/24 22:32:06 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.1_rc1.ebuild,v 1.8 2007/01/23 10:18:19 beandog Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
-KEYWORDS="alpha ~amd64 hppa ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
 
 IUSE="acl authfile clamav hardened ifsession ipv6 ldap mysql ncurses nls noauthunix opensslcrypt pam postgres radius rewrite selinux shaper sitemisc softquota ssl tcpd vroot xinetd"
 
@@ -24,7 +24,7 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="acl? ( sys-apps/acl sys-apps/attr )
-		clamav? ( app-antivirus/clamav )
+		!mips? ( clamav? ( app-antivirus/clamav ) )
 		ldap? ( >=net-nds/openldap-1.2.11 )
 		mysql? ( virtual/mysql )
 		ncurses? ( sys-libs/ncurses )
