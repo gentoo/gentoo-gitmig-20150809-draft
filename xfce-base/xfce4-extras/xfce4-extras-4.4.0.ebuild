@@ -1,6 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/xfce4-extras-4.4.0.ebuild,v 1.2 2007/01/23 13:35:30 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/xfce4-extras-4.4.0.ebuild,v 1.3 2007/01/23 17:37:55 welp Exp $
+
+inherit xfce44
+
+xfce44
 
 DESCRIPTION="Xfce4 extras meta ebuild"
 HOMEPAGE="http://www.xfce.org/"
@@ -9,7 +13,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
 SLOT="0"
 IUSE="battery cpufreq gnome wlan"
 
-RDEPEND=">=xfce-base/xfce4-${PV}
+RDEPEND=">=xfce-base/xfce4-${XFCE_MASTER_VERSION}
 	>=xfce-extra/thunar-archive-0.2.4
 	>=xfce-extra/thunar-media-tags-0.1.2
 	>=xfce-extra/verve-0.3.5
