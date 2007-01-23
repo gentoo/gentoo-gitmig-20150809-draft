@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/colorcvs
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/colorcvs/ChangeLog,v 1.6 2006/02/10 19:20:59 slarti Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/colorcvs/ChangeLog,v 1.7 2007/01/23 19:39:54 welp Exp $
+
+  23 Jan 2007; Peter Weller <welp@gentoo.org> colorcvs-1.4.ebuild:
+  Keyworded ~x86-fbsd
 
   10 Feb 2006; Tom Martin <slarti@gentoo.org> colorcvs-1.4.ebuild:
   Add missing cvs RDEPED. Duh.
