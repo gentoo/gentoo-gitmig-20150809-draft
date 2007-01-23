@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/vnc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.66 2007/01/10 16:50:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.67 2007/01/23 20:07:41 armin76 Exp $
+
+*vnc-4.1.2-r1 (23 Jan 2007)
+
+  23 Jan 2007; Raúl Porcel <armin76@gentoo.org> +vnc-4.1.2-r1.ebuild:
+  New patchset
 
   10 Jan 2007; Raúl Porcel <armin76@gentoo.org> vnc-4.1.2.ebuild:
   Add patch to fix bug 154644
