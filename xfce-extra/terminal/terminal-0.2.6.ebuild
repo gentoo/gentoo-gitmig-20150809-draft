@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/terminal-0.2.6.ebuild,v 1.2 2007/01/23 18:49:15 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/terminal-0.2.6.ebuild,v 1.3 2007/01/23 22:47:44 welp Exp $
 
 inherit gnome2-utils xfce44
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.xfce.org"
 LICENSE="LGPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="dbus startup-notification doc"
+IUSE="dbus debug startup-notification doc"
 
 RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/gtk+-2.6
