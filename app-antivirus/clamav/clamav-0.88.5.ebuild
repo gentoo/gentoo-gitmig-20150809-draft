@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.88.5.ebuild,v 1.8 2006/10/24 14:35:43 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.88.5.ebuild,v 1.9 2007/01/23 15:22:40 genone Exp $
 
 inherit eutils flag-o-matic fixheadtails
 
@@ -105,8 +105,8 @@ pkg_postinst() {
 	ewarn "You should restart them with: /etc/init.d/clamd restart"
 	echo
 	if use milter ; then
-		einfo "For simple instructions how to setup the clamav-milter type:"
-		echo "  zless /usr/share/doc/${PF}/clamav-milter.README.gentoo.gz"
+		elog "For simple instructions how to setup the clamav-milter"
+		elog "read /usr/share/doc/${PF}/clamav-milter.README.gentoo.gz"
 		echo
 	fi
 }

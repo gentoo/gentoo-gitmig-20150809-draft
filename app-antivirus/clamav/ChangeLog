@@ -1,6 +1,11 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.194 2007/01/10 11:25:34 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.195 2007/01/23 15:22:40 genone Exp $
+
+  23 Jan 2007; Marius Mauch <genone@gentoo.org> clamav-0.88.5.ebuild,
+  clamav-0.88.6.ebuild, clamav-0.88.7.ebuild, clamav-0.88.7-r1.ebuild,
+  clamav-0.88.7-r2.ebuild, clamav-0.90_rc1.ebuild, clamav-0.90_rc2.ebuild:
+  Replacing einfo with elog
 
   10 Jan 2007; Andrej Kacian <ticho@gentoo.org> files/clamav.logrotate:
   Fixed the logrotate script. Bug #161294, reported by Jochen Schalanda
