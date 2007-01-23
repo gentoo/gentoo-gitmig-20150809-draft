@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.0-r4.ebuild,v 1.3 2006/09/11 16:44:57 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.0-r4.ebuild,v 1.4 2007/01/23 13:46:09 markusle Exp $
 
 inherit autotools eutils fortran multilib
 
@@ -9,7 +9,7 @@ MyPN="${PN/-reference/}"
 DESCRIPTION="FORTRAN reference implementation of LAPACK Linear Algebra PACKage"
 LICENSE="lapack"
 HOMEPAGE="http://www.netlib.org/lapack/index.html"
-SRC_URI="http://www.netlib.org/lapack/${MyPN}.tgz
+SRC_URI="http://www.netlib.org/lapack/${MyPN}-${PV}.tgz
 	mirror://gentoo/${MyPN}-20020531-20021004.patch.bz2"
 
 SLOT="0"
