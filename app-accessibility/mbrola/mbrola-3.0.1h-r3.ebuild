@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r3.ebuild,v 1.8 2006/07/20 03:15:53 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r3.ebuild,v 1.9 2007/01/23 14:56:25 genone Exp $
 
 IUSE="linguas_de linguas_es linguas_fr"
 
@@ -53,7 +53,7 @@ src_unpack () {
 			cp mbrola-linux-alpha mbrola || die
 			;;
 		*)
-			einfo "mbrola binary not available on this architecture.  Still installing voices."
+			elog "mbrola binary not available on this architecture.  Still installing voices."
 	esac
 }
 

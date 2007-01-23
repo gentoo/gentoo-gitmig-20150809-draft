@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/java-access-bridge-1.6.0.ebuild,v 1.7 2006/11/24 20:57:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/java-access-bridge-1.6.0.ebuild,v 1.8 2007/01/23 14:52:32 genone Exp $
 
 inherit java-pkg-2 gnome2
 
@@ -43,13 +43,13 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "The Java Accessibility Bridge for GNOME has been installed."
-	einfo
-	einfo "To enable accessibility support with your java applications, you"
-	einfo "have to enable CORBA traffic over IP. To do this, you may add the"
-	einfo "following line to your /etc/orbitrc or ~/.orbitrc file:"
-	einfo
-	einfo "  ORBIIOPIPv4=1"
-	einfo
+	elog
+	elog "The Java Accessibility Bridge for GNOME has been installed."
+	elog
+	elog "To enable accessibility support with your java applications, you"
+	elog "have to enable CORBA traffic over IP. To do this, you may add the"
+	elog "following line to your /etc/orbitrc or ~/.orbitrc file:"
+	elog
+	elog "  ORBIIOPIPv4=1"
+	elog
 }

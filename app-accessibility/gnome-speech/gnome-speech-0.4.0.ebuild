@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.4.0.ebuild,v 1.10 2006/10/19 14:46:34 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.4.0.ebuild,v 1.11 2007/01/23 14:47:40 genone Exp $
 
 inherit java-pkg gnome2
 
@@ -74,8 +74,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Gnome Speech has been successfully installed. You may now use the"
-	einfo "speech interface using app-accessibility/gnopernicus."
-	einfo
+	elog
+	elog "Gnome Speech has been successfully installed. You may now use the"
+	elog "speech interface using app-accessibility/gnopernicus."
+	elog
 }
