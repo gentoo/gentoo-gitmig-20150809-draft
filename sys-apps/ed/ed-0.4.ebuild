@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ed-0.4.ebuild,v 1.1 2007/01/22 18:03:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ed-0.4.ebuild,v 1.2 2007/01/23 00:59:40 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -36,5 +36,6 @@ src_compile() {
 src_install() {
 	emake install DESTDIR="${D}" || die
 	doman doc/ed.1
+	dosym ed.1 /usr/share/man/man1/red.1
 	dodoc AUTHORS ChangeLog NEWS README TODO
 }
