@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/xmltoman
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/xmltoman/ChangeLog,v 1.3 2006/11/26 17:21:39 beandog Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/xmltoman/ChangeLog,v 1.4 2007/01/23 17:12:57 nixnut Exp $
+
+  23 Jan 2007; nixnut <nixnut@gentoo.org> xmltoman-0.3.ebuild:
+  Added ~ppc wrt bug 163326
 
   26 Nov 2006; Steve Dibb <beandog@gentoo.org> xmltoman-0.3.ebuild:
   Fix homepage
