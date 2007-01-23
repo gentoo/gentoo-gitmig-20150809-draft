@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/evms
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.57 2006/12/09 09:09:17 dev-zero Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.58 2007/01/23 20:37:06 dev-zero Exp $
+
+*evms-2.5.5-r5 (23 Jan 2007)
+
+  23 Jan 2007; Tiziano Müller <dev-zero@gentoo.org>
+  +files/evms-2.5.5-use_disk_group.patch, evms-2.5.5-r4.ebuild,
+  +evms-2.5.5-r5.ebuild:
+  Added src_test(). Added patch from Debian to set group for /dev/evms/* to
+  disk, bug #159358
 
   09 Dec 2006; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
   Corrected dependencies to fix #157497, thanks to Gour.

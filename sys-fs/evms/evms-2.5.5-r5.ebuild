@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r4.ebuild,v 1.3 2007/01/23 20:37:06 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r5.ebuild,v 1.1 2007/01/23 20:37:06 dev-zero Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -42,9 +42,10 @@ src_unpack() {
 	epatch "${FILESDIR}/${PV}/get_geometry.patch"
 	epatch "${FILESDIR}/${PV}/BaseName.patch"
 
-	epatch "${FILESDIR}/evms-2.5.5-as-needed.patch"
-	epatch "${FILESDIR}/evms-2.5.5-glib_dep.patch"
-	epatch "${FILESDIR}/evms-2.5.5-ocfs2.patch"
+	epatch "${FILESDIR}/${P}-as-needed.patch"
+	epatch "${FILESDIR}/${P}-glib_dep.patch"
+	epatch "${FILESDIR}/${P}-ocfs2.patch"
+	epatch "${FILESDIR}/${P}-use_disk_group.patch"
 
 	eautoreconf
 }
