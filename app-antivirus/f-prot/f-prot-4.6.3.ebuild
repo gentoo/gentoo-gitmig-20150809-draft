@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/f-prot-4.6.3.ebuild,v 1.4 2006/10/26 23:50:50 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/f-prot-4.6.3.ebuild,v 1.5 2007/01/23 15:28:33 genone Exp $
 
 inherit eutils
 
@@ -54,15 +54,15 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo
-	einfo "Remember to run /opt/f-prot/tools/check-updates.pl regularly to keep virus"
-	einfo "database up to date. Recommended method is to use cron. See manpages for"
-	einfo "cron(8) and crontab(5) for more info."
-	einfo "An example crontab entry, causing check-updates.pl to run every night at 4AM:"
-	echo
-	echo "0 4 * * * /opt/f-prot/tools/check-updates.pl >/dev/null"
-	echo
-	einfo "For more examples, see /usr/share/doc/${PF}/html/auto_updt.html"
+	elog
+	elog "Remember to run /opt/f-prot/tools/check-updates.pl regularly to keep virus"
+	elog "database up to date. Recommended method is to use cron. See manpages for"
+	elog "cron(8) and crontab(5) for more info."
+	elog "An example crontab entry, causing check-updates.pl to run every night at 4AM:"
+	elog
+	elog "0 4 * * * /opt/f-prot/tools/check-updates.pl >/dev/null"
+	elog
+	elog "For more examples, see /usr/share/doc/${PF}/html/auto_updt.html"
 	echo
 	ewarn "As of 4.5.4, the update script is installed correctly into directory designed"
 	ewarn "by upstream again. Check your crontab, so the path matches the one above."
