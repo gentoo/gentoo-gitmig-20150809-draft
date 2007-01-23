@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4-panel
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.78 2007/01/23 17:45:43 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.79 2007/01/23 21:36:05 welp Exp $
+
+  23 Jan 2007; Peter Weller <welp@gentoo.org> xfce4-panel-4.4.0.ebuild:
+  Added block due to issues reported in #gentoo-xfce
 
   23 Jan 2007; Peter Weller <welp@gentoo.org> xfce4-panel-4.4.0.ebuild:
   Removing usage of virtual/x11,  and hardcoding in depends. Minor clean ups.

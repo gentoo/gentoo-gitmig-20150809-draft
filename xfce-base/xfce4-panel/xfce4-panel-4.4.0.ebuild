@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-4.4.0.ebuild,v 1.3 2007/01/23 17:45:43 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-4.4.0.ebuild,v 1.4 2007/01/23 21:36:05 welp Exp $
 
 inherit xfce44
 
@@ -28,6 +28,7 @@ DEPEND="${RDEPEND}
 	!xfce-extra/xfce4-taskbar
 	!xfce-extra/xfce4-toys
 	!xfce-extra/xfce4-windowlist
+	!xfce-extra/xfce4-trigger-launcher
 	>=dev-util/gtk-doc-1"
 
 XFCE_CONFIG="${XFCE_CONFIG} $(use_enable startup-notification)"
