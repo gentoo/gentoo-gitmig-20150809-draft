@@ -1,0 +1,9 @@
+# ChangeLog for xfce-extra/xfce4-timer
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-timer/ChangeLog,v 1.1 2007/01/23 23:01:19 welp Exp $
+
+*xfce4-timer-0.5.1 (23 Jan 2007)
+
+  23 Jan 2007; Peter Weller <welp@gentoo.org> +xfce4-timer-0.5.1.ebuild:
+  Initial commit, thanks to drac
+
