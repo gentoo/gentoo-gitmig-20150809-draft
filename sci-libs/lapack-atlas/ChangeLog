@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/lapack-atlas
 # Copyright 2004-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.36 2007/01/03 02:51:48 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.37 2007/01/23 13:57:22 markusle Exp $
+
+  23 Jan 2007; Markus Dittrich <markusle@gentoo.org>
+  lapack-atlas-3.6.0.ebuild, lapack-atlas-3.6.0-r1.ebuild,
+  lapack-atlas-3.6.0-r2.ebuild, lapack-atlas-3.7.11.ebuild,
+  lapack-atlas-3.7.11-r1.ebuild, -lapack-atlas-3.7.23.ebuild,
+  lapack-atlas-3.7.24.ebuild:
+  Versioned the lapack source tarballs according to the new upstream
+  naming convention (see bug #162667). Also removed old ebuild.
 
   03 Jan 2007; Markus Dittrich <markusle@gentoo.org>
   lapack-atlas-3.7.24.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.24.ebuild,v 1.2 2007/01/03 02:51:48 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.24.ebuild,v 1.3 2007/01/23 13:57:22 markusle Exp $
 
 inherit eutils flag-o-matic toolchain-funcs fortran
 
@@ -9,7 +9,7 @@ LICENSE="BSD"
 HOMEPAGE="http://math-atlas.sourceforge.net/"
 MY_PN="${PN/lapack-/}"
 SRC_URI1="mirror://sourceforge/math-atlas/${MY_PN}${PV}.tar.bz2"
-SRC_URI2="http://www.netlib.org/lapack/lapack.tgz"
+SRC_URI2="http://www.netlib.org/lapack/lapack-3.0.tgz"
 SRC_URI="${SRC_URI1} ${SRC_URI2}
 	mirror://gentoo/lapack-20020531-20021004.patch.bz2
 	mirror://gentoo/${MY_PN}-3.7.23-shared-libs.patch.bz2"
