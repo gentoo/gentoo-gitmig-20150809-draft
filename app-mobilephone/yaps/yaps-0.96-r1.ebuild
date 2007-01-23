@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/yaps-0.96-r1.ebuild,v 1.7 2006/07/28 01:15:51 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/yaps-0.96-r1.ebuild,v 1.8 2007/01/23 16:28:56 genone Exp $
 
 inherit eutils
 
@@ -60,7 +60,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Please edit /etc/yaps.rc to suit your needs."
-	einfo
+	elog
+	elog "Please edit /etc/yaps.rc to suit your needs."
+	elog
 }

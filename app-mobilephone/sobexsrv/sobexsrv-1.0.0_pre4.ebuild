@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/sobexsrv-1.0.0_pre4.ebuild,v 1.8 2006/08/22 04:18:18 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/sobexsrv-1.0.0_pre4.ebuild,v 1.9 2007/01/23 16:27:38 genone Exp $
 
 inherit eutils
 
@@ -58,13 +58,13 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo
-	einfo "/usr/bin/sobexsrv is *NOT* installed set-uid root by"
-	einfo "default. suid is required for the chroot option (-R)."
-	echo
-	einfo "Execute the following commands to enable suid:"
-	echo
-	einfo "chown root:sobexsrv /usr/bin/sobexsrv"
-	einfo "chmod 4710 /usr/bin/sobexsrv"
-	echo
+	elog
+	elog "/usr/bin/sobexsrv is *NOT* installed set-uid root by"
+	elog "default. suid is required for the chroot option (-R)."
+	elog
+	elog "Execute the following commands to enable suid:"
+	elog
+	elog "chown root:sobexsrv /usr/bin/sobexsrv"
+	elog "chmod 4710 /usr/bin/sobexsrv"
+	elog
 }

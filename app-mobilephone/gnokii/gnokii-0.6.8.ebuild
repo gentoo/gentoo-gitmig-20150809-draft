@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.8.ebuild,v 1.7 2006/11/23 17:12:49 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.8.ebuild,v 1.8 2007/01/23 16:26:00 genone Exp $
 
 inherit eutils flag-o-matic linux-info
 
@@ -89,7 +89,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "gnokii does not need it's own group anymore."
-	einfo "Make sure the user that runs gnokii has read/write access to the device"
-	einfo "which your phone is connected to. eg. chown <user> /dev/ttyS0"
+	elog "gnokii does not need it's own group anymore."
+	elog "Make sure the user that runs gnokii has read/write access to the device"
+	elog "which your phone is connected to. eg. chown <user> /dev/ttyS0"
 }

@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/bemused
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bemused/ChangeLog,v 1.5 2006/10/24 08:43:00 mrness Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bemused/ChangeLog,v 1.6 2007/01/23 16:21:24 genone Exp $
+
+  23 Jan 2007; Marius Mauch <genone@gentoo.org> bemused-1.73-r1.ebuild:
+  Replacing einfo with elog
 
 *bemused-1.73-r1 (24 Oct 2006)
 

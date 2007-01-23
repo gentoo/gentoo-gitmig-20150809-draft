@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bemused/bemused-1.73-r1.ebuild,v 1.1 2006/10/24 08:43:00 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bemused/bemused-1.73-r1.ebuild,v 1.2 2007/01/23 16:21:24 genone Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ src_install() {
 
 	dodoc ChangeLog authors copying readme todo
 
-	einfo "Please note that due to the specific hardware nature"
-	einfo "of this package, only upstream support can be"
-	einfo "provided!"
+	elog "Please note that due to the specific hardware nature"
+	elog "of this package, only upstream support can be"
+	elog "provided!"
 }

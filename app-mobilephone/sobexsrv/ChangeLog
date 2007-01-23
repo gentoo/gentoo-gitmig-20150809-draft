@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/sobexsrv
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/ChangeLog,v 1.9 2006/08/22 04:18:18 joker Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/ChangeLog,v 1.10 2007/01/23 16:27:38 genone Exp $
+
+  23 Jan 2007; Marius Mauch <genone@gentoo.org> sobexsrv-1.0.0_pre4.ebuild:
+  Replacing einfo with elog
 
   22 Aug 2006; Christian Birchinger <joker@gentoo.org>
   sobexsrv-1.0.0_pre4.ebuild:
