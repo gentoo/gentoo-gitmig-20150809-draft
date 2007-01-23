@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pmount
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.40 2007/01/22 05:11:47 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.41 2007/01/23 04:56:42 jer Exp $
+
+  23 Jan 2007; Jeroen Roovers <jer@gentoo.org> pmount-0.9.13.ebuild:
+  Stable for HPPA (bug #162992).
 
   22 Jan 2007; Olivier Crête <tester@gentoo.org> pmount-0.9.13.ebuild:
   stable on amd64 per bug #162992
