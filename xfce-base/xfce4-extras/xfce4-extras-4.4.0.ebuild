@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/xfce4-extras-4.4.0.ebuild,v 1.1 2007/01/22 02:59:23 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/xfce4-extras-4.4.0.ebuild,v 1.2 2007/01/23 13:35:30 nichoj Exp $
 
 DESCRIPTION="Xfce4 extras meta ebuild"
 HOMEPAGE="http://www.xfce.org/"
 LICENSE="GPL-2 BSD LGPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 SLOT="0"
-IUSE="battery cpufreq wlan"
+IUSE="battery cpufreq gnome wlan"
 
 RDEPEND=">=xfce-base/xfce4-${PV}
 	>=xfce-extra/thunar-archive-0.2.4
@@ -27,7 +27,7 @@ RDEPEND=">=xfce-base/xfce4-${PV}
 	>=xfce-extra/xfce4-smartbookmark-0.4.2
 	>=xfce-extra/xfce4-systemload-0.4.2
 	>=xfce-extra/xfce4-weather-0.6
-	>=xfce-extra/xfce4-xfapplet-0.1
+	gnome? ( >=xfce-extra/xfce4-xfapplet-0.1 )
 	>=xfce-extra/xfce4-xkb-0.4.3
 	>=xfce-extra/xfce4-netload-0.4
 	>=xfce-extra/xfce4-fsguard-0.3

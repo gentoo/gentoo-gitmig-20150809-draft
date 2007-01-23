@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4-extras
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/ChangeLog,v 1.26 2007/01/22 02:59:23 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/ChangeLog,v 1.27 2007/01/23 13:35:30 nichoj Exp $
+
+  23 Jan 2007; Joshua Nichols <nichoj@gentoo.org> xfce4-extras-4.4.0.ebuild:
+  Added USE=gnome. See bug #163225.
 
 *xfce4-extras-4.4.0 (22 Jan 2007)
 
