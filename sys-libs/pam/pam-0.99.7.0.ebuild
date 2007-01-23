@@ -1,18 +1,20 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.6.3-r2.ebuild,v 1.2 2006/11/24 20:17:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.7.0.ebuild,v 1.1 2007/01/23 06:34:51 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
 inherit libtool multilib eutils autotools pam toolchain-funcs
 
-MY_P="Linux-PAM-${PV}"
+MY_PN="Linux-PAM"
+MY_P="${MY_PN}-${PV}"
 
 HOMEPAGE="http://www.kernel.org/pub/linux/libs/pam/"
 DESCRIPTION="Linux-PAM (Pluggable Authentication Modules)"
 
-SRC_URI="http://www.kernel.org/pub/linux/libs/pam/pre/library/${MY_P}.tar.bz2"
+SRC_URI="mirror://kernel/linux/libs/pam/pre/library/${MY_P}.tar.bz2
+	mirror://gentoo/${MY_P}-ldflags-to-libadd.patch.bz2"
 
 LICENSE="PAM"
 SLOT="0"
@@ -24,9 +26,6 @@ RDEPEND="nls? ( virtual/libintl )
 	sys-libs/pwdb
 	selinux? ( >=sys-libs/libselinux-1.28 )"
 DEPEND="${RDEPEND}
-	~app-text/docbook-xml-dtd-4.1.2
-	~app-text/docbook-xml-dtd-4.3
-	~app-text/docbook-xml-dtd-4.4
 	nls? ( sys-devel/gettext )"
 PDEPEND="vim-syntax? ( app-vim/pam-syntax )"
 
@@ -46,9 +45,9 @@ src_unpack() {
 			sed -e 's|^modules/||')
 	done
 
-	epatch "${FILESDIR}/${MY_P}-berkdb.patch"
-	epatch "${FILESDIR}/${MY_P}-linking.patch"
-	epatch "${FILESDIR}/${MY_P}-selinux.patch"
+	epatch "${FILESDIR}/${MY_PN}-0.99.6.3-berkdb.patch"
+	epatch "${DISTDIR}/${MY_P}-ldflags-to-libadd.patch.bz2"
+	epatch "${FILESDIR}/${MY_P}-disable-regenerate-man.patch"
 
 	AT_M4DIR="m4" eautoreconf
 
@@ -57,13 +56,6 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-
-	# don't build documentation as it doesn't seem to really work
-	export SGML2PS=no
-	export SGML2TXT=no
-	export SGML2HTML=no
-	export SGML2LATEX=no
-	export PS2PDF=no
 
 	if use hppa || use elibc_FreeBSD; then
 		myconf="${myconf} --disable-pie"
@@ -79,6 +71,7 @@ src_compile() {
 		--disable-dependency-tracking \
 		--disable-prelude \
 		--enable-docdir=/usr/share/doc/${PF} \
+		--disable-regenerate-man \
 		${myconf} || die "econf failed"
 	emake || die "emake failed"
 }
@@ -105,7 +98,7 @@ src_install() {
 		[[ -f "${x}" ]] && dopamd "${x}"
 	done
 
-	# Remove the wrongly isntalled manpage
+	# Remove the wrongly installed manpage
 	rm -f "${D}"/usr/share/man/man8/pam_userdb.8*
 }
 

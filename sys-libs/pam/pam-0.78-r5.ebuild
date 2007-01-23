@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r5.ebuild,v 1.4 2007/01/05 20:55:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r5.ebuild,v 1.5 2007/01/23 06:34:51 flameeyes Exp $
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://www.kernel.org/pub/linux/libs/pam/"
 
 S="${WORKDIR}/Linux-PAM-${PV}"
 S2="${WORKDIR}/pam-${PV}-patches"
-SRC_URI="http://www.kernel.org/pub/linux/libs/pam/pre/library/Linux-PAM-${PV}.tar.gz
+SRC_URI="mirror://kernel/linux/libs/pam/pre/library/Linux-PAM-${PV}.tar.gz
 	mirror://gentoo/pam-${PV}-patches-${PATCH_LEVEL}.tar.bz2
 	berkdb? ( http://downloads.sleepycat.com/db-${BDB_VER}.tar.gz )
 	pam_console? ( ftp://ftp.gtk.org/pub/gtk/v2.6/glib-${GLIB_VER}.tar.bz2 )"

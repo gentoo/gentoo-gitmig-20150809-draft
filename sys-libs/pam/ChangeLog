@@ -1,6 +1,18 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.137 2007/01/05 20:55:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.138 2007/01/23 06:34:51 flameeyes Exp $
+
+*pam-0.99.7.0 (23 Jan 2007)
+
+  23 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/Linux-PAM-0.99.6.3-linking.patch,
+  -files/Linux-PAM-0.99.6.3-selinux.patch,
+  +files/Linux-PAM-0.99.7.0-disable-regenerate-man.patch,
+  pam-0.78-r3.ebuild, pam-0.78-r5.ebuild, -pam-0.99.6.3-r2.ebuild,
+  +pam-0.99.7.0.ebuild:
+  Version bump, fix linking for all modules (huge patch), disable manpage
+  regeneration, cuts down the dependencies over docbook stuff, use
+  mirror://kernel.
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> pam-0.78-r3.ebuild,
   pam-0.78-r5.ebuild:
