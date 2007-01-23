@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.7.3.ebuild,v 1.5 2007/01/22 17:41:56 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.7.3.ebuild,v 1.6 2007/01/23 08:56:26 opfer Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnupg/alpha/gpa/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc sparc x86"
 IUSE="nls"
 
 DEPEND=">=x11-libs/gtk+-2.2
