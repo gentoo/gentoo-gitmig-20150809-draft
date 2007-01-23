@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r5.ebuild,v 1.5 2007/01/23 06:34:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r5.ebuild,v 1.6 2007/01/23 07:16:48 flameeyes Exp $
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
@@ -52,7 +52,7 @@ DEPEND="${RDEPEND}
 PROVIDE="virtual/pam"
 
 #inherit needs to be after DEPEND definition to protect RDEPEND
-inherit toolchain-funcs eutils flag-o-matic gnuconfig pam
+inherit eutils toolchain-funcs flag-o-matic gnuconfig pam
 
 DESCRIPTION="Pluggable Authentication Modules"
 
