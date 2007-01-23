@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/blas-atlas
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.53 2007/01/03 02:36:46 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.54 2007/01/23 14:01:50 markusle Exp $
+
+  23 Jan 2007; Markus Dittrich <markusle@gentoo.org>
+  -blas-atlas-3.7.23.ebuild:
+  Removed obsolete version.
 
   03 Jan 2007; Markus Dittrich <markusle@gentoo.org>
   blas-atlas-3.7.24.ebuild:
