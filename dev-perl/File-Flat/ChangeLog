@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Flat
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Flat/ChangeLog,v 1.42 2007/01/23 00:43:06 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Flat/ChangeLog,v 1.43 2007/01/23 13:52:59 jer Exp $
+
+  23 Jan 2007; Jeroen Roovers <jer@gentoo.org> File-Flat-1.00.ebuild:
+  Marked ~hppa (bug #163004).
 
   23 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> File-Flat-1.00.ebuild:
   Add ~alpha + ~ia64 keywords.
