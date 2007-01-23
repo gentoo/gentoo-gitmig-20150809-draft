@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/terminal-0.2.6.ebuild,v 1.1 2007/01/22 02:13:46 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/terminal-0.2.6.ebuild,v 1.2 2007/01/23 18:49:15 welp Exp $
 
-inherit gnome2 xfce44
+inherit gnome2-utils xfce44
 
 xfce44
 
@@ -25,16 +25,17 @@ RDEPEND=">=dev-libs/glib-2
 	dbus? ( || 	( >=dev-libs/dbus-glib-0.71
 				( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.34 ) )
 	)
-	|| ( ( x11-libs/libICE
+	x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libX11
 	x11-libs/libXft
-	x11-libs/libXrender )
-	virtual/x11 )
+	x11-libs/libXrender
 	startup-notification? ( >=x11-libs/startup-notification-0.5 )
 	>=x11-libs/vte-0.11.11
-	doc? ( dev-libs/libxslt )
 	>=xfce-extra/exo-0.3.2"
+DEPEND="${RDEPEND}
+	doc? ( dev-libs/libxslt )"
+
 
 XFCE_CONFIG="$(use_enable startup-notification) $(use_enable dbus) \
 	$(use_enable doc xsltproc)"
