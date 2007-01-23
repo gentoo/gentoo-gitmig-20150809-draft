@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.7.3.ebuild,v 1.1 2006/12/11 22:31:03 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.7.3.ebuild,v 1.2 2007/01/23 09:39:45 beandog Exp $
 
 inherit eutils linux-mod
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.ivtvdriver.org"
 SRC_URI="http://dl.ivtvdriver.org/ivtv/archive/0.7.x/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86 ~ppc"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 BUILD_TARGETS="all"
