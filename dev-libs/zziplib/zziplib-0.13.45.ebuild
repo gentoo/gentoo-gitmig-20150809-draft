@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.45.ebuild,v 1.13 2007/01/20 12:20:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.45.ebuild,v 1.14 2007/01/23 20:41:57 vapier Exp $
 
 inherit libtool fixheadtails eutils
 
@@ -24,6 +24,7 @@ src_unpack() {
 	ht_fix_file configure docs/Makefile.in uses/depcomp
 
 	epatch "${FILESDIR}"/${P}-sys-types.patch
+	epatch "${FILESDIR}"/${P}-manpages.patch
 	elibtoolize
 }
 
