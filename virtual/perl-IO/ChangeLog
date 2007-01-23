@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-IO
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO/ChangeLog,v 1.5 2007/01/08 16:48:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO/ChangeLog,v 1.6 2007/01/23 00:28:47 kloeri Exp $
+
+  23 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> perl-IO-1.23.01.ebuild:
+  Add ~ia64 keyword.
 
   08 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   perl-IO-1.23.01.ebuild:
