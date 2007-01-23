@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/ulogd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.40 2007/01/23 03:03:22 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.41 2007/01/23 19:26:20 masterdriverz Exp $
+
+  23 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  -ulogd-1.01.ebuild, -ulogd-1.02.ebuild, -ulogd-1.02-r1.ebuild:
+  Remove old versions
 
   23 Jan 2007; Alec Warner <antarus@gentoo.org>
   +files/configure-fixes.patch, ulogd-1.24.ebuild:
