@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.238 2007/01/22 00:09:33 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.239 2007/01/23 10:22:11 beandog Exp $
+
+  23 Jan 2007; Steve Dibb <beandog@gentoo.org> phpmyadmin-2.9.2_rc1.ebuild:
+  amd64 stable, security bug 161460
 
 *phpmyadmin-2.9.2 (22 Jan 2007)
 
