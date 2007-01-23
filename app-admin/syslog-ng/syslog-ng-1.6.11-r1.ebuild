@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.11-r1.ebuild,v 1.5 2006/12/24 00:09:46 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.11-r1.ebuild,v 1.6 2007/01/23 23:00:16 mr_bones_ Exp $
 
 inherit fixheadtails
 
@@ -16,7 +16,6 @@ IUSE="hardened selinux static tcpd"
 RDEPEND=">=dev-libs/libol-0.3.16
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 DEPEND="${RDEPEND}
-	>=sys-apps/portage-2.0.51
 	sys-devel/flex"
 PROVIDE="virtual/logger"
 

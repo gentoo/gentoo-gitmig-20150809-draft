@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.144 2007/01/15 21:44:59 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.145 2007/01/23 23:00:16 mr_bones_ Exp $
+
+  23 Jan 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  syslog-ng-1.6.9.ebuild, syslog-ng-1.6.11-r1.ebuild:
+  remove portage dep (bug #163507)
 
   15 Jan 2007; Roy Marples <uberlord@gentoo.org> Manifest:
   Fix Manifest
