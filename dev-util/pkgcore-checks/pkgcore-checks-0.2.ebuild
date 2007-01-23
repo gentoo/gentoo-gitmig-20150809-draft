@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-0.2.ebuild,v 1.1 2007/01/22 15:10:17 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-0.2.ebuild,v 1.2 2007/01/23 07:02:21 corsair Exp $
 
 inherit distutils eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.pkgcore.org/releases/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND="=sys-apps/pkgcore-0.2*

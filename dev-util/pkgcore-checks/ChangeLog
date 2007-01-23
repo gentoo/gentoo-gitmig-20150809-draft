@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgcore-checks
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.8 2007/01/22 15:10:17 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.9 2007/01/23 07:02:21 corsair Exp $
+
+  23 Jan 2007; Markus Rothe <corsair@gentoo.org> pkgcore-checks-0.2.ebuild:
+  Added ~ppc64
 
 *pkgcore-checks-0.2 (22 Jan 2007)
 
