@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/acer_acpi
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acer_acpi/ChangeLog,v 1.1 2006/10/27 23:07:29 jurek Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acer_acpi/ChangeLog,v 1.2 2007/01/23 16:09:56 genone Exp $
+
+  23 Jan 2007; Marius Mauch <genone@gentoo.org> acer_acpi-0.3.ebuild:
+  Replacing einfo with elog
 
 *acer_acpi-0.3 (27 Oct 2006)
 

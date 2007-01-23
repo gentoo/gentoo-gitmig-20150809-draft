@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.7.9.ebuild,v 1.4 2006/12/18 06:24:31 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.7.9.ebuild,v 1.5 2007/01/23 16:19:30 genone Exp $
 
 inherit autotools flag-o-matic
 
@@ -61,22 +61,22 @@ src_install() {
 pkg_postinst() {
 	ewarn "Ensure that the evdev kernel module is loaded otherwise"
 	ewarn "pbbuttonsd won't work."
-	einfo
+	ewarn
 	ewarn "If you need extra security, you can tell pbbuttonsd to only accept"
 	ewarn "input from one user.  You can set the userallowed option in"
 	ewarn "/etc/pbbuttonsd.conf to limit access."
-	einfo
+	ewarn
 
 	if use ppc ; then
-		einfo "It's recommended that you let pbbuttonsd act as the low level"
-		einfo "power manager instead of using pmud."
-		einfo
+		elog "It's recommended that you let pbbuttonsd act as the low level"
+		elog "power manager instead of using pmud."
+		elog
 	fi
 	if use ibam; then
-		einfo "To properly initialize the IBaM battery database, you will"
-		einfo "need to perform a full discharge/charge cycle.  For more"
-		einfo "details, please see the pbbuttonsd man page."
-		einfo
+		elog "To properly initialize the IBaM battery database, you will"
+		elog "need to perform a full discharge/charge cycle.  For more"
+		elog "details, please see the pbbuttonsd man page."
+		elog
 	fi
 	ewarn "Warning: the NoTapTyping option is unstable, see bug #86768."
 }

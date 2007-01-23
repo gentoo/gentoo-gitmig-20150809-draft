@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/fnfx
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/fnfx/ChangeLog,v 1.3 2006/06/03 21:50:05 halcy0n Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/fnfx/ChangeLog,v 1.4 2007/01/23 16:12:58 genone Exp $
+
+  23 Jan 2007; Marius Mauch <genone@gentoo.org> fnfx-0.3.ebuild:
+  Replacing einfo with elog
 
   03 Jun 2006; Mark Loeser <halcy0n@gentoo.org> fnfx-0.3.ebuild:
   Stable on x86; bug #134627

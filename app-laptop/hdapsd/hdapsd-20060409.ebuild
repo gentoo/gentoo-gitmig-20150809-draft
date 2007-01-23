@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/hdapsd-20060409.ebuild,v 1.3 2006/06/28 08:58:14 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/hdapsd-20060409.ebuild,v 1.4 2007/01/23 16:14:46 genone Exp $
 
 inherit eutils linux-info
 
@@ -85,7 +85,7 @@ pkg_postinst(){
 
 	if ! kernel_patched ; then
 		ewarn "Your kernel has NOT been patched for blk_freeze"
-		einfo "The ebuild can attempt to patch your kernel like so"
-		einfo "   emerge --config =${PF}"
+		elog "The ebuild can attempt to patch your kernel like so"
+		elog "   emerge --config =${PF}"
 	fi
 }

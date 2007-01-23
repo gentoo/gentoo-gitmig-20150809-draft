@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acer_acpi/acer_acpi-0.3.ebuild,v 1.1 2006/10/27 23:07:29 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acer_acpi/acer_acpi-0.3.ebuild,v 1.2 2007/01/23 16:09:56 genone Exp $
 
 inherit linux-mod
 
@@ -29,12 +29,13 @@ src_install() {
 pkg_postinst() {
 	linux-mod_pkg_postinst
 
-	einfo "You can load the module:"
-	einfo "% modprobe acer_acpi"
+	elog "You can load the module:"
+	elog "% modprobe acer_acpi"
+	elog
 	ewarn "From Version 0.3 on it is sufficient to load acer_acpi ONCE in your"
 	ewarn "/etc/modules.autoload.d/kernel-2.${KV_MINOR} file!"
 	ewarn "If you upgraded from version 0.1 or 0.2, than please delete on of the lines from that file!"
-	echo
-	einfo "If you need more info about this driver you can read the README file"
-	einfo "% zmore /usr/share/doc/${PF}/README.gz"
+	elog
+	elog "If you need more info about this driver you can read the README file"
+	elog "% zmore /usr/share/doc/${PF}/README.gz"
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibam/ibam-0.4.ebuild,v 1.2 2006/02/17 13:16:08 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibam/ibam-0.4.ebuild,v 1.3 2007/01/23 16:15:53 genone Exp $
 
 inherit toolchain-funcs
 
@@ -37,8 +37,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "You will need to install media-gfx/gnuplot if you wish to use"
-	einfo "the --plot argument to ibam."
-	einfo
+	elog
+	elog "You will need to install media-gfx/gnuplot if you wish to use"
+	elog "the --plot argument to ibam."
+	elog
 }

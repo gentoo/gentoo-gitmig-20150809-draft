@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/fnfx/fnfx-0.3.ebuild,v 1.2 2006/06/03 21:50:05 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/fnfx/fnfx-0.3.ebuild,v 1.3 2007/01/23 16:12:58 genone Exp $
 
 DESCRIPTION="Daemon and client allowing use of Toshiba special keys"
 HOMEPAGE="http://fnfx.sourceforge.net/"
@@ -21,12 +21,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo
-	einfo
-	einfo "The Fnfx Toshiba function key package has been installed."
-	einfo
-	einfo "If you would like the service to start automatically on boot"
-	einfo "please execute the command rc-update add fnfxd default."
-	einfo
-	echo
+	elog
+	elog "If you would like the service to start automatically on boot"
+	elog "please execute the command rc-update add fnfxd default."
+	elog
 }

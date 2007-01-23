@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.6.6.ebuild,v 1.7 2006/08/26 07:23:19 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.6.6.ebuild,v 1.8 2007/01/23 16:19:30 genone Exp $
 
 inherit eutils
 
@@ -39,11 +39,10 @@ pkg_postinst() {
 	ewarn "If you need extra security, you can tell pbbuttonsd to only accept"
 	ewarn "input from one user.  You can set the userallowed option in"
 	ewarn "/etc/pbbuttonsd.conf to limit access."
-	einfo
-
-	einfo "This version of pbbuttonsd can replace PMUD functionality."
-	einfo "If you want PMUD installed and running, you should set"
-	einfo "replace_pmud=no in /etc/pbbuttonsd.conf. Otherwise you can"
-	einfo "try setting replace_pmud=yes in /etc/pbbuttonsd.conf and"
-	einfo "disabling PMUD"
+	elog
+	elog "This version of pbbuttonsd can replace PMUD functionality."
+	elog "If you want PMUD installed and running, you should set"
+	elog "replace_pmud=no in /etc/pbbuttonsd.conf. Otherwise you can"
+	elog "try setting replace_pmud=yes in /etc/pbbuttonsd.conf and"
+	elog "disabling PMUD"
 }
