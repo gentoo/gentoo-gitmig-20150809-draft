@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libpng
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.116 2007/01/22 18:49:01 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.117 2007/01/23 08:48:44 opfer Exp $
+
+  23 Jan 2007; Christian Faulhammer <opfer@gentoo.org> libpng-1.2.15.ebuild:
+  stable x86, bug #156061
 
   22 Jan 2007; Luca Barbato <lu_zero@gentoo.org> libpng-1.2.15.ebuild:
   Marked ppc
