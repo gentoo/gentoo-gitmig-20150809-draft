@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/xfce4-extras-4.4.0.ebuild,v 1.3 2007/01/23 17:37:55 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/xfce4-extras-4.4.0.ebuild,v 1.4 2007/01/23 21:04:22 welp Exp $
 
 inherit xfce44
 
@@ -40,3 +40,13 @@ RDEPEND=">=xfce-base/xfce4-${XFCE_MASTER_VERSION}
 	battery? ( >=xfce-extra/xfce4-battery-0.5 )
 	cpufreq? ( >=xfce-extra/xfce4-cpu-freq-0.0.1 )
 	wlan? ( >=xfce-extra/xfce4-wavelan-0.5.4 )"
+
+# hack to avoid exporting functions from eclass.
+# we need eclass to get XFCE_MASTER_VERSION
+src_compile() {
+	echo
+}
+
+src_install() {
+	echo
+}
