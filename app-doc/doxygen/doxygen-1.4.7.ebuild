@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.7.ebuild,v 1.16 2006/10/24 19:42:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.7.ebuild,v 1.17 2007/01/23 16:00:16 genone Exp $
 
 inherit eutils flag-o-matic toolchain-funcs qt3
 
@@ -42,7 +42,7 @@ src_unpack() {
 	    ewarn "optimized code which breaks doxygen."
 	    echo
 	    epause 6
-	    einfo "Continuing with -O2 instead ..."
+	    elog "Continuing with -O2 instead ..."
 	    echo
 	    replace-flags "-O3" "-O2"
 	fi
@@ -106,13 +106,13 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "The USE flags qt, doc, and tetex will enable doxywizard, or"
-	einfo "the html and pdf documentation, respectively.  For examples"
-	einfo "and other goodies, see the source tarball.  For some example"
-	einfo "output, run doxygen on the doxygen source using the Doxyfile"
-	einfo "provided in the top-level source dir."
-	einfo
-	einfo "See the Doxygen homepage for additional language support tools."
-	einfo
+	elog
+	elog "The USE flags qt, doc, and tetex will enable doxywizard, or"
+	elog "the html and pdf documentation, respectively.  For examples"
+	elog "and other goodies, see the source tarball.  For some example"
+	elog "output, run doxygen on the doxygen source using the Doxyfile"
+	elog "provided in the top-level source dir."
+	elog
+	elog "See the Doxygen homepage for additional language support tools."
+	elog
 }

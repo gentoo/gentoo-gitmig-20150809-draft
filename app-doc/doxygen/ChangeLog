@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/doxygen
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.119 2006/11/02 00:32:44 nerdboy Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.120 2007/01/23 16:00:16 genone Exp $
+
+  23 Jan 2007; Marius Mauch <genone@gentoo.org> doxygen-1.4.2.ebuild,
+  doxygen-1.4.3-r1.ebuild, doxygen-1.4.4.ebuild, doxygen-1.4.5.ebuild,
+  doxygen-1.4.6.ebuild, doxygen-1.4.7.ebuild, doxygen-1.5.1.ebuild:
+  Replacing einfo with elog
 
 *doxygen-1.5.1 (01 Nov 2006)
 

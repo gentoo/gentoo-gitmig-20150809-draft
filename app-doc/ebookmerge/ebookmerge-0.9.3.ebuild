@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/ebookmerge/ebookmerge-0.9.3.ebuild,v 1.7 2006/11/26 23:51:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/ebookmerge/ebookmerge-0.9.3.ebuild,v 1.8 2007/01/23 16:01:51 genone Exp $
 
 DESCRIPTION="Script to manage eBooks in Gentoo"
 HOMEPAGE="http://www.josealberto.org/blog/2005/11/28/ebookmerge/"
@@ -21,13 +21,13 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo
-	einfo "Need help?  Just run:"
-	einfo "ebookmerge.sh -h"
-	echo
-	einfo "You first must run:"
-	einfo "ebookmerge.sh -r"
-	echo
-	einfo "Use -m for an alternative mirror."
-	echo
+	elog
+	elog "Need help?  Just run:"
+	elog "ebookmerge.sh -h"
+	elog
+	elog "You first must run:"
+	elog "ebookmerge.sh -r"
+	elog
+	elog "Use -m for an alternative mirror."
+	elog
 }
