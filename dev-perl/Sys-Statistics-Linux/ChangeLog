@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Sys-Statistics-Linux
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Statistics-Linux/ChangeLog,v 1.1 2007/01/23 13:34:20 mcummings Exp $
+
+*Sys-Statistics-Linux-0.06 (23 Jan 2007)
+
+  23 Jan 2007; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Sys-Statistics-Linux-0.06.ebuild:
+  Bug 163403
+
