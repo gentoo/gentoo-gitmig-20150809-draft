@@ -1,8 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.24.ebuild,v 1.1 2007/01/17 19:40:37 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.24.ebuild,v 1.2 2007/01/23 03:03:22 antarus Exp $
 
-inherit eutils flag-o-matic
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+inherit eutils flag-o-matic autotools
 
 DESCRIPTION="A userspace logging daemon for netfilter/iptables related logging"
 SRC_URI="http://ftp.netfilter.org/pub/ulogd/${P}.tar.bz2"
@@ -21,6 +23,9 @@ src_compile() {
 	# enables logfiles over 2G (#74924)
 	append-lfs-flags
 
+	epatch "${FILESDIR}/configure-fixes.patch"
+	ewarn "Regenerating build system (this may take a bit)..."
+	eautoconf || die "Autoreconf failed"
 	econf \
 		$(use_with mysql) \
 		$(use_with postgres pgsql) \
