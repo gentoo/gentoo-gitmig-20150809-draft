@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_mono
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.31 2007/01/23 16:04:26 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.32 2007/01/23 19:12:32 nixnut Exp $
+
+  23 Jan 2007; nixnut <nixnut@gentoo.org> mod_mono-1.2.1.ebuild:
+  Stable on ppc wrt bug 163298
 
   23 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
   mod_mono-1.2.1.ebuild:
