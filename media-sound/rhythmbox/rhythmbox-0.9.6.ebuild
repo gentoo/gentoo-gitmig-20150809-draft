@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.9.6.ebuild,v 1.5 2007/01/23 03:57:21 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.9.6.ebuild,v 1.6 2007/01/23 04:17:40 joem Exp $
 
 inherit gnome2 eutils
 
@@ -106,6 +106,6 @@ pkg_postinst() {
 	elog "The aac flag has been removed from rhythmbox."
 	elog "This is due to stabilization issues with any gst-bad plugins."
 	elog "Please emerge gst-plugins-bad and gst-plugins-faad to be able to play m4a files"
-	elog"See bug #159538 for more information"
+	elog "See bug #159538 for more information"
 }
 
