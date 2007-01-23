@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.3.ebuild,v 1.5 2005/01/01 10:52:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.3.ebuild,v 1.6 2007/01/23 15:06:36 genone Exp $
 
 inherit eutils libtool
 
@@ -51,7 +51,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo
-	einfo "To enable Festival support, you must install app-accessibility/festival-freebsoft-utils."
-	echo
+	elog
+	elog "To enable Festival support, you must install app-accessibility/festival-freebsoft-utils."
+	elog
 }

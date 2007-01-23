@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-el/speechd-el-1.0.ebuild,v 1.1 2006/01/29 03:53:34 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-el/speechd-el-1.0.ebuild,v 1.2 2007/01/23 15:11:29 genone Exp $
 
 inherit elisp-common
 
@@ -30,6 +30,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Execute the following command from within emacs to get it to speak:"
-	einfo "  M-x load-library RET speechd-speak RET"
+	elog "Execute the following command from within emacs to get it to speak:"
+	elog "  M-x load-library RET speechd-speak RET"
 }

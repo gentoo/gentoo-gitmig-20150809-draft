@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/speech-dispatcher
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.18 2006/11/01 01:09:04 williamh Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.19 2007/01/23 15:06:36 genone Exp $
+
+  23 Jan 2007; Marius Mauch <genone@gentoo.org>
+  speech-dispatcher-0.3.ebuild, speech-dispatcher-0.4.1.ebuild,
+  speech-dispatcher-0.5.ebuild, speech-dispatcher-0.6.ebuild:
+  Replacing einfo with elog
 
 *speech-dispatcher-0.6.1 (01 Nov 2006)
 

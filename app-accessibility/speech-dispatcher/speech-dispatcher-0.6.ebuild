@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.6.ebuild,v 1.2 2006/10/28 01:47:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.6.ebuild,v 1.3 2007/01/23 15:06:36 genone Exp $
 
 DESCRIPTION="speech-dispatcher speech synthesis interface"
 HOMEPAGE="http://www.freebsoft.org/speechd"
@@ -29,7 +29,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo
-	einfo "To enable Festival support, you must install app-accessibility/festival-freebsoft-utils."
-	echo
+	elog
+	elog "To enable Festival support, you must install app-accessibility/festival-freebsoft-utils."
+	elog
 }

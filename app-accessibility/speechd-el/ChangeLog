@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/speechd-el
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-el/ChangeLog,v 1.8 2006/01/29 03:53:34 williamh Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-el/ChangeLog,v 1.9 2007/01/23 15:11:29 genone Exp $
+
+  23 Jan 2007; Marius Mauch <genone@gentoo.org> speechd-el-0.3.ebuild,
+  speechd-el-0.4.ebuild, speechd-el-1.0.ebuild:
+  Replacing einfo with elog
 
 *speechd-el-1.0 (29 Jan 2006)
 
