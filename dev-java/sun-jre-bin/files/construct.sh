@@ -179,7 +179,7 @@ preparecds() {
 jreman () {
   echo "setting up the JRE man pages..."
   # note this list is slightly different for OpenSolaris bundles
-  jreman=/tmp/jre.man.txt
+  jreman="${T}/jre.man.txt"
 cat <<EOF > $jreman
 man/ja_JP.eucJP/man1/java.1
 man/ja_JP.eucJP/man1/javaws.1
@@ -228,7 +228,7 @@ EOF
 
 elimdups() {
   echo "eliminating duplication between the JDK and JDK/jre..."
-  jdkcomm=/tmp/jdk.bin.comm.txt
+  jdkcomm="${T}/jdk.bin.comm.txt"
 cat <<EOF > $jdkcomm
 bin/ControlPanel
 bin/java
