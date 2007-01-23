@@ -1,0 +1,10 @@
+# ChangeLog for app-portage/gatt-svn
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt-svn/ChangeLog,v 1.1 2007/01/23 07:14:33 opfer Exp $
+
+*gatt-svn-9999 (23 Jan 2007)
+
+  23 Jan 2007; Christian Faulhammer <opfer@gentoo.org> +metadata.xml,
+  +gatt-svn-9999.ebuild:
+  initial commit, imported from Sunrise
+
