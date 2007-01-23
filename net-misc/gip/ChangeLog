@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/gip
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/ChangeLog,v 1.7 2006/08/05 22:59:40 chriswhite Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/ChangeLog,v 1.8 2007/01/23 19:53:38 masterdriverz Exp $
+
+*gip-1.6.1.1 (23 Jan 2007)
+
+  23 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  -gip-1.0.0.1.ebuild, -gip-1.1.0.1.ebuild, -gip-1.2.0.1.ebuild,
+  -gip-1.6.0.1.ebuild, +gip-1.6.1.1.ebuild:
+  Bump to version 1.6.1.1; thanks to Alessio D'Ascanio; bug 110214
 
   05 Aug 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
   metadata.xml translation by Yoshino-san in bug #135159
