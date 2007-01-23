@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/xxdiff
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/ChangeLog,v 1.32 2005/12/24 22:01:16 vanquirius Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/ChangeLog,v 1.33 2007/01/23 00:12:48 masterdriverz Exp $
+
+*xxdiff-3.2 (23 Jan 2007)
+
+  23 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  +files/xxdiff-3.2-kdesupport.patch, -xxdiff-3.1.ebuild,
+  +xxdiff-3.2.ebuild:
+  Bump to version 3.2, thanks to Michael Vogt for the ebuild, bug 138844
 
 *xxdiff-3.1 (24 Dec 2005)
 
