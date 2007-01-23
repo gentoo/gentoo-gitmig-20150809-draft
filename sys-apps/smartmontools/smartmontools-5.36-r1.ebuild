@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.36-r1.ebuild,v 1.10 2007/01/15 17:18:24 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.36-r1.ebuild,v 1.11 2007/01/23 22:16:35 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 ia64 ppc ppc-macos sparc x86 ~x86-fbsd"
 IUSE="static"
 
 RDEPEND=""
-DEPEND=">=sys-apps/portage-2.0.51"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}
