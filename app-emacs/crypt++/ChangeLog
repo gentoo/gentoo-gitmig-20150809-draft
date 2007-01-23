@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/crypt++
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/crypt++/ChangeLog,v 1.7 2006/05/17 06:08:52 mkennedy Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/crypt++/ChangeLog,v 1.8 2007/01/23 06:19:49 opfer Exp $
+
+  23 Jan 2007; Christian Faulhammer <opfer@gentoo.org> crypt++-2.92.ebuild:
+  using mirror:// syntax for Debian, as requested in bug #163304
 
 *crypt++-2.92 (17 May 2006)
 
