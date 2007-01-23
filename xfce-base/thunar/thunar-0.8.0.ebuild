@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-0.8.0.ebuild,v 1.1 2007/01/22 02:08:17 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-0.8.0.ebuild,v 1.2 2007/01/23 16:57:24 welp Exp $
 
 inherit xfce44
 
@@ -27,7 +27,6 @@ RDEPEND="
 	>=x11-libs/gtk+-2.6.4
 	>=dev-libs/glib-2.6.4
 	>=xfce-extra/exo-0.3.2
-	>=dev-util/intltool-0.30
 	>=media-libs/libpng-1.2.0
 	>=x11-misc/shared-mime-info-0.15
 	>=dev-util/desktop-file-utils-0.10
@@ -47,11 +46,11 @@ RDEPEND="
 	>=media-libs/jpeg-6b
 	startup-notification? ( >=x11-libs/startup-notification-0.4 )
 	pcre? ( >=dev-libs/libpcre-6.0 )
-	trash-panel-plugin? ( dbus? ( >=xfce-base/xfce4-panel-${XFCE_MASTER_VERSION} ) )
-	"
+	trash-panel-plugin? ( dbus? ( >=xfce-base/xfce4-panel-${XFCE_MASTER_VERSION} ) )"
 
 DEPEND="${RDEPEND}
-	|| ( x11-proto/xproto virtual/x11 )"
+	dev-util/intltool
+	x11-proto/xproto"
 
 # TODO report upstream:
 #	--enable/disable for jpeg
