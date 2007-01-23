@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/urwid-0.9.7.1.ebuild,v 1.3 2007/01/23 15:29:47 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/urwid-0.9.7.1.ebuild,v 1.4 2007/01/23 20:34:57 nixnut Exp $
 
 inherit distutils eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://excess.org/urwid/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ia64 ppc ~sparc x86"
 
 IUSE="examples"
 
