@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/volanomark/volanomark-2.5.0.9.ebuild,v 1.5 2005/01/01 12:06:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/volanomark/volanomark-2.5.0.9.ebuild,v 1.6 2007/01/23 15:54:07 genone Exp $
 
 DESCRIPTION="Java server benchmark utility"
 HOMEPAGE="http://www.volano.com/benchmarks.html"
@@ -49,17 +49,17 @@ src_install() {
 pkg_postinst() {
 
 	ewarn "The vendor provided installation script is somewhat broken!"
-	einfo
-	einfo "startup.sh was patched to allow the use of the current JVM as"
-	einfo "selected by java-config. This means that regardless of the"
-	einfo "Java vendor you specify to ${PN}, it will STILL use the default"
-	einfo "JVM configured via java-config"
-	einfo
-	einfo "Just make sure that when you run ${PN}, the Java vendor you specify"
-	einfo "matches up with what java-config is configured for. Otherwise specific"
-	einfo "vendor specific options runtime may not work."
-	einfo
-	einfo "Remember to check the host property in startup.sh to the host that is"
-	einfo "running the server"
+	elog
+	elog "startup.sh was patched to allow the use of the current JVM as"
+	elog "selected by java-config. This means that regardless of the"
+	elog "Java vendor you specify to ${PN}, it will STILL use the default"
+	elog "JVM configured via java-config"
+	elog
+	elog "Just make sure that when you run ${PN}, the Java vendor you specify"
+	elog "matches up with what java-config is configured for. Otherwise specific"
+	elog "vendor specific options runtime may not work."
+	elog
+	elog "Remember to check the host property in startup.sh to the host that is"
+	elog "running the server"
 
 }

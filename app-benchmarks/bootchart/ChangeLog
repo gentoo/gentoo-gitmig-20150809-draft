@@ -1,6 +1,10 @@
 # ChangeLog for app-benchmarks/bootchart
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart/ChangeLog,v 1.2 2007/01/19 13:21:17 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart/ChangeLog,v 1.3 2007/01/23 15:45:41 genone Exp $
+
+  23 Jan 2007; Marius Mauch <genone@gentoo.org> bootchart-0.9.ebuild,
+  bootchart-0.9-r1.ebuild:
+  Replacing einfo with elog
 
 *bootchart-0.9-r1 (19 Jan 2007)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.61-r1.ebuild,v 1.3 2006/12/13 23:45:52 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.61-r1.ebuild,v 1.4 2007/01/23 15:51:26 genone Exp $
 
 inherit eutils bash-completion autotools
 
@@ -47,7 +47,7 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "An example ~/.siegerc file has been installed as"
-	einfo "/usr/share/doc/${PF}/siegerc-example.gz"
+	elog "An example ~/.siegerc file has been installed as"
+	elog "/usr/share/doc/${PF}/siegerc-example.gz"
 	bash-completion_pkg_postinst
 }

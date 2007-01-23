@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/dbench-3.04.ebuild,v 1.2 2006/09/22 18:31:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/dbench-3.04.ebuild,v 1.3 2007/01/23 15:48:50 genone Exp $
 
 DESCRIPTION="Popular filesystem benchmark"
 SRC_URI="ftp://ftp.samba.org/pub/tridge/dbench/${P}.tar.gz"
@@ -21,5 +21,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "You can find the client.txt file in ${ROOT}usr/share/dbench."
+	elog "You can find the client.txt file in ${ROOT}usr/share/dbench."
 }

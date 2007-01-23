@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart/bootchart-0.9-r1.ebuild,v 1.1 2007/01/19 13:21:17 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart/bootchart-0.9-r1.ebuild,v 1.2 2007/01/23 15:45:41 genone Exp $
 
 inherit eutils java-pkg-opt-2 java-ant-2
 
@@ -91,24 +91,24 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "To generate the chart, set RC_USE_BOOTCHART=\"yes\""
-	einfo "in /etc/conf.d/rc and reboot"
-	einfo
+	elog "To generate the chart, set RC_USE_BOOTCHART=\"yes\""
+	elog "in /etc/conf.d/rc and reboot"
+	elog
 
 	if use java; then
-		einfo "The chart will be saved as /var/log/bootchart.png"
+		elog "The chart will be saved as /var/log/bootchart.png"
 	else
-		einfo "Post the file /var/log/bootchart.tgz here:"
-		einfo "   http://www.bootchart.org/download.html"
-		einfo "to render the chart"
+		elog "Post the file /var/log/bootchart.tgz here:"
+		elog "   http://www.bootchart.org/download.html"
+		elog "to render the chart"
 	fi
 
-	einfo
-	einfo "For best results: "
-	einfo "  Enable BSD process accounting v3 in the kernel"
-	einfo "    This will produce more accurate process trees"
-	einfo "  Set AUTO_RENDER_FORMAT to svg in /etc/bootchartd.conf"
-	einfo "    and view /var/log/bootchart.svgz with batik or"
-	einfo "    Adobe SVG viewer. This will give you additional"
-	einfo "    information about the processes in tooltips"
+	elog
+	elog "For best results: "
+	elog "  Enable BSD process accounting v3 in the kernel"
+	elog "    This will produce more accurate process trees"
+	elog "  Set AUTO_RENDER_FORMAT to svg in /etc/bootchartd.conf"
+	elog "    and view /var/log/bootchart.svgz with batik or"
+	elog "    Adobe SVG viewer. This will give you additional"
+	elog "    information about the processes in tooltips"
 }
