@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.71.ebuild,v 1.8 2007/01/22 05:14:58 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.71.ebuild,v 1.9 2007/01/23 05:01:40 jer Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://dbus.freedesktop.org/releases/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="|| ( GPL-2 AFL-2.1 )"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 
 RDEPEND=">=dev-lang/python-2.4
 	>=dev-python/pyrex-0.9.3-r2
