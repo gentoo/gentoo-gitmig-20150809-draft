@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.8.1.ebuild,v 1.1 2007/01/23 19:15:24 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.8.1.ebuild,v 1.2 2007/01/23 19:31:59 dang Exp $
 
 inherit gnome2 eutils autotools
 
@@ -48,6 +48,9 @@ src_unpack() {
 	# as-needed #130284
 	# New as-needed, including gphoto fixes
 	epatch "${FILESDIR}"/${PN}-2.8.1-as-needed.patch
+
+	# Respect zoom preferences.  Bug #156342
+	epatch "${FILESDIR}"/${PN}-2.8.1-respect-zoom-pref.patch
 
 	eautoreconf
 }
