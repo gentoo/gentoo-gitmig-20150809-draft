@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r2.ebuild,v 1.1 2007/01/21 20:05:10 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r2.ebuild,v 1.2 2007/01/23 19:21:29 fordfrog Exp $
 
 inherit eutils java-pkg-2 java-ant-2 versionator
 
@@ -65,7 +65,7 @@ DEPEND=">=virtual/jdk-1.5
 	>=dev-java/jcalendar-1.2
 	>=dev-java/jdom-1.0
 	dev-java/jtidy
-	dev-java/prefuse
+	>=dev-java/prefuse-20060715_beta
 	>=dev-java/rome-0.6
 	=dev-java/servletapi-2.3*
 	dev-java/sun-jmx
