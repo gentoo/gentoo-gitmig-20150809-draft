@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/muse
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/muse/ChangeLog,v 1.10 2006/11/28 05:01:14 wrobel Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/muse/ChangeLog,v 1.11 2007/01/23 15:51:01 gustavoz Exp $
+
+  23 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> muse-3.02.93.ebuild:
+  Keyworded ~sparc wrt #163401
 
   28 Nov 2006; <wrobel@gentoo.org> muse-3.02.8.ebuild:
   Removed unnecessary function in muse-3.02.8.ebuild
