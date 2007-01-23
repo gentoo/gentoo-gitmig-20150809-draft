@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-mcs-plugins/xfce-mcs-plugins-4.4.0.ebuild,v 1.2 2007/01/22 21:12:41 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-mcs-plugins/xfce-mcs-plugins-4.4.0.ebuild,v 1.3 2007/01/23 17:13:00 welp Exp $
 
 inherit xfce44
 
@@ -20,15 +20,14 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXxf86vm
 	>=dev-libs/glib-2
 	>=x11-libs/gtk+-2.6
-	>=xfce-base/libxfce4mcs-4.4
-	>=xfce-base/libxfce4util-4.4
-	>=xfce-base/libxfcegui4-4.4
-	>=xfce-base/xfce-mcs-manager-4.4"
+	>=xfce-base/libxfce4mcs-${XFCE_MASTER_VERSION}
+	>=xfce-base/libxfce4util-${XFCE_MASTER_VERSION}
+	>=xfce-base/libxfcegui4-${XFCE_MASTER_VERSION}
+	>=xfce-base/xfce-mcs-manager-${XFCE_MASTER_VERSION}"
 DEPEND="${RDEPEND}
 	x11-proto/xf86miscproto
 	x11-proto/xf86vidmodeproto
-	x11-proto/xproto
-	>=xfce-extra/xfce4-dev-tools-${PV}"
+	x11-proto/xproto"
 
 XFCE_CONFIG="${XFCE_CONFIG} --enable-xf86misc --enable-xkb --enable-randr --enable-xf86vm"
 
