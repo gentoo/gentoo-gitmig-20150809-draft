@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/scrot
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/ChangeLog,v 1.17 2005/09/13 17:05:42 agriffis Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/ChangeLog,v 1.18 2007/01/23 20:26:09 welp Exp $
+
+  23 Jan 2007; Peter Weller <welp@gentoo.org> scrot-0.8.ebuild:
+  Keyworded ~x86-fbsd
 
   13 Sep 2005; Aron Griffis <agriffis@gentoo.org> scrot-0.8.ebuild:
   Mark 0.8 stable on alpha
