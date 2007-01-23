@@ -8,14 +8,3 @@
  EOT
      chmod 755 $1
  }
---- patches/src680/apply 
-+++ patches/src680/apply 
-@@ -812,6 +816,8 @@
- # strictly required on SL10.1/SLED10 where the xulrunner-nss.pc is broken, n#195272
- libxmlsec-system-nss.diff, i#69368, pmladek
- 
-+# add --with-seamonkey configure flag to link with seamonkey-*.pc
-+config_with-seamonkey.diff, i#73440, hmth
- 
- [ MandrivaOnly ]
- SectionOwner => gghibo

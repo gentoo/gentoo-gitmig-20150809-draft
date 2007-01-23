@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.1.0.ebuild,v 1.10 2007/01/14 16:31:41 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.1.0.ebuild,v 1.11 2007/01/23 12:50:06 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -9,7 +9,7 @@ inherit check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functi
 
 IUSE="binfilter branding cairo cups dbus debug eds firefox gnome gstreamer gtk kde ldap sound odk pam seamonkey webdav"
 
-MY_PV="2.1"
+MY_PV="2.1.1"
 PATCHLEVEL="OOE680"
 SRC="OOo_${PV}_src"
 S="${WORKDIR}/ooo"
@@ -198,9 +198,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PV}/gentoo-${PV}.diff
 	epatch ${FILESDIR}/${PV}/wrapper-readd.diff
-	use !java && epatch ${FILESDIR}/${PV}/disable_cxxhelplinker.diff
 	cp -f ${FILESDIR}/${PV}/ooo-wrapper.in ${S}/bin || die
-	cp -f ${FILESDIR}/${PV}/config_with-seamonkey.diff ${S}/patches/src680 || die
 
 	#Use flag checks
 	if use java ; then
