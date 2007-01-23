@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/pam_console
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_console/ChangeLog,v 1.10 2006/11/24 20:22:03 corsair Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_console/ChangeLog,v 1.11 2007/01/23 07:11:34 flameeyes Exp $
+
+*pam_console-0.99.7.0.2.7 (23 Jan 2007)
+
+  23 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -pam_console-0.99.6.2.3.6.ebuild, +pam_console-0.99.7.0.2.7.ebuild:
+  Version bump, closes bug #156056 and bug #154099.
 
   24 Nov 2006; Markus Rothe <corsair@gentoo.org>
   pam_console-0.99.6.2.3.6.ebuild:

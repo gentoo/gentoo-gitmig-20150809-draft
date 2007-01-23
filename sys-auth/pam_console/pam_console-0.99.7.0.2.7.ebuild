@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_console/pam_console-0.99.6.2.3.6.ebuild,v 1.9 2006/11/24 20:22:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_console/pam_console-0.99.7.0.2.7.ebuild,v 1.1 2007/01/23 07:11:34 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -22,7 +22,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE=""
 
-RDEPEND=">=sys-libs/pam-0.99"
+RDEPEND=">=sys-libs/pam-0.99
+	=dev-libs/glib-2*"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
@@ -45,9 +46,16 @@ src_install() {
 	emake -j1 DESTDIR="${D}" install || die "emake install failed"
 	dodoc README
 	exeinto /etc/dev.d/default
-	doexec ${FILESDIR}/pam_console.dev
+	doexec "${FILESDIR}/pam_console.dev"
 	insinto /etc/pam.d
-	doins ${FILESDIR}/login
-	doins ${FILESDIR}/gdm
-	doins ${FILESDIR}/gdm-autologin
+	doins "${FILESDIR}/login"
+	doins "${FILESDIR}/gdm"
+	doins "${FILESDIR}/gdm-autologin"
+}
+
+pkg_postinst() {
+	ewarn "${CATEGORY}/${PN} is provided without any warranty on its"
+	ewarn "working state out of the box."
+	ewarn "Please don't report default permission problems to Gentoo"
+	ewarn "bugzilla, as Gentoo developers are not responsible for them."
 }
