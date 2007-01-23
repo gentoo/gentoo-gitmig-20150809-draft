@@ -1,8 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.3.0.ebuild,v 1.1 2007/01/22 15:52:37 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.3.0.ebuild,v 1.2 2007/01/23 09:28:47 beandog Exp $
 
-inherit eutils flag-o-matic subversion
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit eutils flag-o-matic subversion autotools
 
 MY_P=${PN}_${PV}
 S=${WORKDIR}/${MY_P}
@@ -58,9 +61,8 @@ pkg_setup() {
 	filter-flags "-fforce-addr"
 
 	if ! built_with_use dev-lang/spidermonkey threadsafe; then
-		eerror "dev-lang/spidermonkey is missing threadsafe support, please make"
-		eerror "sure you get the spidermonkey ebuild with threadsafe USE flag"
-		eerror "from an overlay, enable the threadsafe USE flag and re-emerge"
+		eerror "dev-lang/spidermonkey is missing threadsafe support, please"
+		eerror "enable the threadsafe USE flag and re-emerge"
 		eerror "dev-lang/spidermonkey - this avidemux build will not compile"
 		eerror "nor work without it!"
 		die "dev-lang/spidermonkey needs threadsafe support"
@@ -74,12 +76,11 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S} || die
+	cd ${S}
 
 	epatch ${FILESDIR}/${P}-dts.patch
 	epatch ${FILESDIR}/${P}-configure.patch
 	#sed -i -e 's/x264=no,-lm/x264=no,-lm -lX11/' configure.in.in || die "sed failed."
-
 
 	gmake -f Makefile.dist || die "autotools failed."
 }
