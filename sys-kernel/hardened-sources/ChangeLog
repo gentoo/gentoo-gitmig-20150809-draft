@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.132 2007/01/23 20:51:19 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.133 2007/01/23 21:28:13 phreak Exp $
+
+  23 Jan 2007; Christian Heim <phreak@gentoo.org>
+  files/digest-hardened-sources-2.6.19-r5, Manifest:
+  Fixing the patch-tarball digest.
 
 *hardened-sources-2.6.19-r5 (23 Jan 2007)
 
