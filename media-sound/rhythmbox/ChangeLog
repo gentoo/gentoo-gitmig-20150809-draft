@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.84 2007/01/17 13:18:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.85 2007/01/23 03:57:21 joem Exp $
+
+  23 Jan 2007; Joe McCann <joem@gentoo.org> rhythmbox-0.9.6.ebuild,
+  rhythmbox-0.9.7.ebuild:
+  Remove aac use flag as per bug 159538
 
   17 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   rhythmbox-0.9.6.ebuild:

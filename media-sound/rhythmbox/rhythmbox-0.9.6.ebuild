@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.9.6.ebuild,v 1.4 2007/01/17 13:18:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.9.6.ebuild,v 1.5 2007/01/23 03:57:21 joem Exp $
 
 inherit gnome2 eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://www.rhythmbox.org/"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ia64 ~ppc sparc ~x86"
-IUSE="vorbis flac aac mad ipod avahi hal howl daap dbus libnotify lirc musicbrainz
+IUSE="vorbis flac mad ipod avahi hal howl daap dbus libnotify lirc musicbrainz
 tagwriting python"
 #I want tagwriting to be on by default in the future. It is just a local flag
 #now because it is still considered experimental by upstream and doesn't work
@@ -39,7 +39,6 @@ RDEPEND=">=x11-libs/gtk+-2.5.4
 				>=media-plugins/gst-plugins-ogg-0.10 )
 	mad? ( >=media-plugins/gst-plugins-mad-0.10 )
 	flac? ( >=media-plugins/gst-plugins-flac-0.10 )
-	aac? ( >=media-plugins/gst-plugins-faad-0.10 )
 	libnotify? ( >=x11-libs/libnotify-0.3.2 )
 	python? ( >=dev-lang/python-2.4.2
 				>=dev-python/pygtk-2.6
@@ -101,3 +100,12 @@ src_compile() {
 	addpredict "$(unset HOME; echo ~)/.gconfd"
 	gnome2_src_compile
 }
+
+pkg_postinst() {
+	gnome2_pkg_postinst
+	elog "The aac flag has been removed from rhythmbox."
+	elog "This is due to stabilization issues with any gst-bad plugins."
+	elog "Please emerge gst-plugins-bad and gst-plugins-faad to be able to play m4a files"
+	elog"See bug #159538 for more information"
+}
+
