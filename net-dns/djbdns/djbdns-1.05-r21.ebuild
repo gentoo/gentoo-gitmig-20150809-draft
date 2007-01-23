@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r20.ebuild,v 1.1 2007/01/16 19:53:49 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r21.ebuild,v 1.1 2007/01/23 18:00:04 hansmi Exp $
 
 IUSE="doc ipv6 selinux static"
 
@@ -63,7 +63,12 @@ src_unpack() {
 		ewarn "this feature. You're on your own from now!"
 		echo
 		ebeep
-		epatch "${DJBDNS_PATCH_DIR}/"*
+
+		cd "${S}" && epatch "${DJBDNS_PATCH_DIR}/"*
+
+		if use ipv6; then
+			cd "${S}-noipv6" && epatch "${DJBDNS_PATCH_DIR}/"*
+		fi
 	fi
 }
 
@@ -101,8 +106,6 @@ src_install() {
 	dodoc CHANGES FILES README SYSDEPS TARGETS TODO VERSION
 
 	dobin "${FILESDIR}/dnscache-setup"
-	use fwdzone && cd "${D}${DESTTREE}/bin" && \
-		epatch "${FILESDIR}/fwdzone-fix.patch"
 	dobin "${FILESDIR}/tinydns-setup"
 	newbin "${FILESDIR}/djbdns-setup-${PR}" djbdns-setup
 }

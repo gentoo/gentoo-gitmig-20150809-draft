@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.87 2007/01/16 19:53:49 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.88 2007/01/23 18:00:04 hansmi Exp $
+
+*djbdns-1.05-r21 (23 Jan 2007)
+
+  23 Jan 2007; Michael Hanselmann <hansmi@gentoo.org>
+  -djbdns-1.05-r20.ebuild, +djbdns-1.05-r21.ebuild:
+  Fix bug #163398.
 
 *djbdns-1.05-r20 (16 Jan 2007)
 
