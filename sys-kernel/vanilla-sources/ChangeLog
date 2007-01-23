@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.268 2007/01/23 14:44:24 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.269 2007/01/23 17:56:18 masterdriverz Exp $
+
+  23 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  -vanilla-sources-2.6.20_rc1.ebuild, -vanilla-sources-2.6.20_rc2.ebuild,
+  -vanilla-sources-2.6.20_rc3.ebuild, -vanilla-sources-2.6.20_rc4.ebuild,
+  -vanilla-sources-2.6.20_rc5.ebuild:
+  Remove release candidates - they are in git-sources already
 
   23 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   vanilla-sources-2.4.34.ebuild:
