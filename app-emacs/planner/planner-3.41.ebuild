@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/planner/planner-3.41.ebuild,v 1.2 2007/01/23 06:33:37 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/planner/planner-3.41.ebuild,v 1.3 2007/01/23 06:54:59 opfer Exp $
 
 inherit elisp
 
@@ -12,7 +12,9 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=">=app-emacs/muse-3.02.6a
-	sys-apps/texinfo"
+	sys-apps/texinfo
+	app-emacs/bbdb"
+RDEPEND="${DEPEND}"
 
 SITEFILE=80planner-gentoo.el
 
