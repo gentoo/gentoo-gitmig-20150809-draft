@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-3.2.ebuild,v 1.1 2007/01/23 00:12:48 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-3.2.ebuild,v 1.2 2007/01/23 20:57:20 masterdriverz Exp $
 
 inherit distutils eutils kde-functions
 
@@ -16,7 +16,7 @@ IUSE="kde python"
 DEPEND="=x11-libs/qt-3*
 	kde? ( >=kde-base/kdelibs-3.1 )
 	sys-devel/flex
-	dev-util/yacc"
+	|| ( sys-devel/bison dev-util/yacc )"
 RDEPEND="${DEPEND}
 	sys-apps/diffutils"
 
