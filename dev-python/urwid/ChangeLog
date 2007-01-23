@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/urwid
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.19 2007/01/18 23:12:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.20 2007/01/23 15:29:47 beandog Exp $
+
+  23 Jan 2007; Steve Dibb <beandog@gentoo.org> urwid-0.9.7.1.ebuild:
+  amd64 stable, bug 154198
 
   18 Jan 2007; Raúl Porcel <armin76@gentoo.org> urwid-0.9.7.1.ebuild:
   x86 stable wrt bug 154198

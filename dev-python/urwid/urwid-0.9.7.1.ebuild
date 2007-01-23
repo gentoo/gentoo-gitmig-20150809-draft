@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/urwid-0.9.7.1.ebuild,v 1.2 2007/01/18 23:12:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/urwid-0.9.7.1.ebuild,v 1.3 2007/01/23 15:29:47 beandog Exp $
 
 inherit distutils eutils
 
@@ -13,7 +13,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~sparc x86"
 
 IUSE="examples"
-DEPEND="virtual/python"
 
 src_unpack() {
 	unpack ${A}
