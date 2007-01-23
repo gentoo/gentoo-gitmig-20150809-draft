@@ -1,6 +1,12 @@
 # ChangeLog for net-news/snownews
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/snownews/ChangeLog,v 1.10 2007/01/22 17:28:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/snownews/ChangeLog,v 1.11 2007/01/23 22:57:57 cedk Exp $
+
+*snownews-1.5.7-r2 (23 Jan 2007)
+
+  23 Jan 2007; Cedric Krier <cedk@gentoo.org>
+  +files/snownews-1.5.7-manpath.patch, +snownews-1.5.7-r2.ebuild:
+  Add patch for bug #163439
 
   22 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   snownews-1.5.7-r1.ebuild:

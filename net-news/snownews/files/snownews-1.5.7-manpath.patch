@@ -1,0 +1,36 @@
+diff -ru snownews-1.5.7~/Makefile snownews-1.5.7/Makefile
+--- snownews-1.5.7~/Makefile	2007-01-23 23:49:40.000000000 +0100
++++ snownews-1.5.7/Makefile	2007-01-23 23:49:53.000000000 +0100
+@@ -2,6 +2,7 @@
+ MAKE=       make
+ INSTALL=    install
+ LOCALEPATH= $(PREFIX)/share/locale
++MANPATH=    $(PREFIX)/share
+ 
+ ### Compiler/linker flags   ###
+ ### Generated via configure ###
+@@ -75,17 +76,17 @@
+ 	done
+ 
+ install-man: manpages
+-	if [ ! -d "$(DESTDIR)$(PREFIX)/man/man1" ]; then \
+-		mkdir -p $(DESTDIR)$(PREFIX)/man/man1; \
++	if [ ! -d "$(DESTDIR)$(MANPATH)/man/man1" ]; then \
++		mkdir -p $(DESTDIR)$(MANPATH)/man/man1; \
+ 	fi
+-	$(INSTALL) -m 0644 $(MAN)/snownews.1 $(DESTDIR)$(PREFIX)/man/man1
+-	$(INSTALL) -m 0644 $(MAN)/opml2snow.1 $(DESTDIR)$(PREFIX)/man/man1
++	$(INSTALL) -m 0644 $(MAN)/snownews.1 $(DESTDIR)$(MANPATH)/man/man1
++	$(INSTALL) -m 0644 $(MAN)/opml2snow.1 $(DESTDIR)$(MANPATH)/man/man1
+ 	
+ 	for L in $(LANGS); do \
+-		if [ ! -d "$(DESTDIR)$(PREFIX)/man/$$L/man1" ]; then \
+-			mkdir -p $(DESTDIR)$(PREFIX)/man/$$L/man1; \
++		if [ ! -d "$(DESTDIR)$(MANPATH)/man/$$L/man1" ]; then \
++			mkdir -p $(DESTDIR)$(MANPATH)/man/$$L/man1; \
+ 		fi; \
+-		$(INSTALL) -m 0644 $(MAN)/$$L/snownews.1 $(DESTDIR)$(PREFIX)/man/$$L/man1; \
++		$(INSTALL) -m 0644 $(MAN)/$$L/snownews.1 $(DESTDIR)$(MANPATH)/man/$$L/man1; \
+ 	done
+ 
+ ### Cleanup ###
