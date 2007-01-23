@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6658 2007/01/23 22:25:20 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6659 2007/01/23 22:58:19 welp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -753,6 +753,7 @@ xfce-extra/xfce4-smartbookmark
 xfce-extra/xfce4-xfapplet
 >=xfce-extra/xfce4-xkb-0.4.1
 >=xfce-extra/xfce4-wavelan-0.5.3
+xfce-extra/xfce4-timer
 
 # Joshua Baergen <joshuabaergen@gentoo.org> (04 Dec 2006)
 # X.Org 7.2
