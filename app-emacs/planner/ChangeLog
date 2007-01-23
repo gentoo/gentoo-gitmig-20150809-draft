@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/planner
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/planner/ChangeLog,v 1.7 2006/11/28 04:09:02 mkennedy Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/planner/ChangeLog,v 1.8 2007/01/23 06:33:37 opfer Exp $
+
+  23 Jan 2007; Christian Faulhammer <opfer@gentoo.org> planner-3.30.ebuild,
+  planner-3.41.ebuild:
+  using mirror:// syntax for Debian, as requested in bug #163307 and added a
+  quote
 
 *planner-3.41 (28 Nov 2006)
 

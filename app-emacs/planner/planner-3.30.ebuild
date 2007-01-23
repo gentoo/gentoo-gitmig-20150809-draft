@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/planner/planner-3.30.ebuild,v 1.1 2005/12/20 18:06:46 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/planner/planner-3.30.ebuild,v 1.2 2007/01/23 06:33:37 opfer Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.emacswiki.org/cgi-bin/wiki/PlannerMode"
 # Upstream sources are not reliably available, so we use the Debian
 # project's source archives
 
-SRC_URI="http://ftp.debian.org/debian/pool/main/p/planner-el/planner-el_${PV}.orig.tar.gz"
+SRC_URI="mirror://debian/pool/main/p/planner-el/planner-el_${PV}.orig.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
@@ -29,7 +29,7 @@ src_compile() {
 
 src_install() {
 	elisp-install ${PN} *.{el,elc}
-	elisp-site-file-install ${FILESDIR}/${SITEFILE}
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	dodoc ChangeLog PLANNER-README
 	doinfo planner-el.info*
 }
