@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/bitdefender-console/bitdefender-console-7.0.1.ebuild,v 1.12 2007/01/14 04:30:20 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/bitdefender-console/bitdefender-console-7.0.1.ebuild,v 1.13 2007/01/23 15:15:18 genone Exp $
 
 IUSE=""
 
@@ -68,5 +68,5 @@ src_install ()
 
 pkg_postinst ()
 {
-	einfo You should upgrade  virus database by running bdc --update
+	elog You should upgrade  virus database by running bdc --update
 }
