@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/SphinxTrain/SphinxTrain-0.9.1-r1.ebuild,v 1.9 2005/10/10 04:42:54 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/SphinxTrain/SphinxTrain-0.9.1-r1.ebuild,v 1.10 2007/01/23 14:35:53 genone Exp $
 
 inherit eutils
 
@@ -35,6 +35,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Detailed usage and training instructions can be found at"
-	einfo "http://www.speech.cs.cmu.edu/SphinxTrain/"
+	elog "Detailed usage and training instructions can be found at"
+	elog "http://www.speech.cs.cmu.edu/SphinxTrain/"
 }
