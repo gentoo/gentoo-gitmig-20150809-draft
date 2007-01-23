@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-appfinder
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-appfinder/ChangeLog,v 1.39 2007/01/22 02:14:46 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-appfinder/ChangeLog,v 1.40 2007/01/23 21:20:18 welp Exp $
+
+  23 Jan 2007; Peter Weller <welp@gentoo.org> xfce4-appfinder-4.4.0.ebuild:
+  Fix depends for bug 163244. Fix meta builds.
 
 *xfce4-appfinder-4.4.0 (22 Jan 2007)
 

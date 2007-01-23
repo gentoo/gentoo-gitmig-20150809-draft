@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-appfinder/xfce4-appfinder-4.4.0.ebuild,v 1.1 2007/01/22 02:14:46 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-appfinder/xfce4-appfinder-4.4.0.ebuild,v 1.2 2007/01/23 21:20:18 welp Exp $
 
 inherit xfce44
 
@@ -12,7 +12,8 @@ IUSE="debug"
 
 RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/gtk+-2.4
-	>=xfce-base/libxfce4util-${PV}
-	>=xfce-base/libxfcegui4-${PV}"
+	>=xfce-base/libxfce4util-${XFCE_MASTER_VERSION}
+	>=xfce-base/libxfcegui4-${XFCE_MASTER_VERSION}"
+DEPEND="${RDEPEND}"
 
 xfce44_core_package
