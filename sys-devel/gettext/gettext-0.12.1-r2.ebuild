@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1-r2.ebuild,v 1.20 2007/01/05 09:15:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1-r2.ebuild,v 1.21 2007/01/23 19:46:08 grobian Exp $
 
 inherit eutils toolchain-funcs libtool
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ppc-macos s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="emacs nls"
 
 DEPEND="virtual/libc"
@@ -20,12 +20,11 @@ src_unpack() {
 	cd ${S}
 	epunt_cxx
 	epatch ${FILESDIR}/${P}-tempfile.patch #66355
-	use ppc-macos || elibtoolize --reverse-deps
 }
 
 src_compile() {
 	local myconf=""
-	use ppc-macos && myconf="--enable-nls" || myconf="`use_enable nls`"
+	myconf="`use_enable nls`"
 
 	# Compaq Java segfaults trying to build gettext stuff, and there's
 	# no good way to tell gettext to refrain from building the java
@@ -65,14 +64,9 @@ src_install() {
 	doexe gettext-tools/misc/gettextize || die "doexe"
 
 	# remove stuff that glibc handles
-	if ! use ppc-macos; then
-		# these files are not provided on Mac OS X
-		rm -f ${D}/usr/include/libintl.h
-		rm -f ${D}/usr/$(get_libdir)/libintl.*
-	fi
+	rm -f ${D}/usr/include/libintl.h
+	rm -f ${D}/usr/$(get_libdir)/libintl.*
 	rm -rf ${D}/usr/share/locale/locale.alias
-	# /usr/lib/charset.alias is provided by Mac OS X
-	use ppc-macos && rm -f ${D}/usr/lib/charset.alias
 
 	if [ -d ${D}/usr/doc/gettext ]
 	then

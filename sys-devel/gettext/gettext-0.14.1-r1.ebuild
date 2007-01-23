@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.1-r1.ebuild,v 1.5 2007/01/05 09:15:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.1-r1.ebuild,v 1.6 2007/01/23 19:46:08 grobian Exp $
 
 inherit eutils toolchain-funcs mono libtool
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc-macos ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="emacs nls"
 
 DEPEND=""
@@ -27,11 +27,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-without_java.patch
 	epatch "${FILESDIR}"/${P}-no-java-tests.patch
 
-	if use ppc-macos ; then
-		elibtoolize
-	else
-		elibtoolize --reverse-deps
-	fi
+	elibtoolize --reverse-deps
 }
 
 src_compile() {
@@ -60,27 +56,16 @@ src_install() {
 	doexe gettext-tools/misc/gettextize || die "doexe"
 
 	# remove stuff that glibc handles
-	if ! use ppc-macos; then
-		# Mac OS X does not provide these files.
-		rm -f ${D}/usr/include/libintl.h
-		rm -f ${D}/usr/$(get_libdir)/libintl.*
-	fi
+	rm -f ${D}/usr/include/libintl.h
+	rm -f ${D}/usr/$(get_libdir)/libintl.*
 	rm -rf ${D}/usr/share/locale/locale.alias
 
 	# older gettext's sometimes installed libintl ...
 	# need to keep the linked version or the system
 	# could die (things like sed link against it :/)
-	if use ppc-macos; then
-		rm -f ${D}/usr/lib/charset.alias
-		if [ -e "${ROOT}"/usr/$(get_libdir)/libintl.2.dylib ] ; then
-			cp -pPR ${ROOT}/usr/$(get_libdir)/libintl.2.dylib ${D}/usr/$(get_libdir)/
-			touch ${D}/usr/$(get_libdir)/libintl.2.dylib
-		fi
-	else
-		if [ -e "${ROOT}"/usr/$(get_libdir)/libintl.so.2 ] ; then
-			cp -pPR ${ROOT}/usr/$(get_libdir)/libintl.so.2* ${D}/usr/$(get_libdir)/
-			touch ${D}/usr/$(get_libdir)/libintl.so.2*
-		fi
+	if [ -e "${ROOT}"/usr/$(get_libdir)/libintl.so.2 ] ; then
+		cp -pPR ${ROOT}/usr/$(get_libdir)/libintl.so.2* ${D}/usr/$(get_libdir)/
+		touch ${D}/usr/$(get_libdir)/libintl.so.2*
 	fi
 
 	if [ -d ${D}/usr/doc/gettext ]

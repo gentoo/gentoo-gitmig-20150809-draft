@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.4.ebuild,v 1.15 2006/03/09 23:49:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.4.ebuild,v 1.16 2007/01/23 19:46:08 grobian Exp $
 
 inherit flag-o-matic eutils toolchain-funcs mono libtool elisp-common
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc-macos ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="emacs nls doc"
 
 DEPEND="|| ( sys-libs/glibc dev-libs/libiconv )"
@@ -41,11 +41,6 @@ src_unpack() {
 		gettext-tools/configure \
 		gettext-tools/examples/installpaths.in \
 		|| die "sed docdir"
-
-	if use ppc-macos ; then
-		glibtoolize
-		append-flags -bind_at_load
-	fi
 }
 
 src_compile() {
@@ -81,17 +76,9 @@ src_install() {
 	# older gettext's sometimes installed libintl ...
 	# need to keep the linked version or the system
 	# could die (things like sed link against it :/)
-	if use ppc-macos; then
-		rm -f "${D}"/usr/lib/charset.alias
-		if [ -e "${ROOT}"/usr/$(get_libdir)/libintl.2.dylib ] ; then
-			cp -pPR ${ROOT}/usr/$(get_libdir)/libintl.2.dylib ${D}/usr/$(get_libdir)/
-			touch ${D}/usr/$(get_libdir)/libintl.2.dylib
-		fi
-	else
-		if [ -e "${ROOT}"/usr/$(get_libdir)/libintl.so.2 ] ; then
-			cp -pPR ${ROOT}/usr/$(get_libdir)/libintl.so.2* ${D}/usr/$(get_libdir)/
-			touch ${D}/usr/$(get_libdir)/libintl.so.2*
-		fi
+	if [ -e "${ROOT}"/usr/$(get_libdir)/libintl.so.2 ] ; then
+		cp -pPR ${ROOT}/usr/$(get_libdir)/libintl.so.2* ${D}/usr/$(get_libdir)/
+		touch ${D}/usr/$(get_libdir)/libintl.so.2*
 	fi
 
 	if ! use doc ; then
