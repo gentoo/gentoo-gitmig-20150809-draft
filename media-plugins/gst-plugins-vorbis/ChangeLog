@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-vorbis
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vorbis/ChangeLog,v 1.107 2007/01/10 03:39:19 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vorbis/ChangeLog,v 1.108 2007/01/23 14:32:37 gustavoz Exp $
+
+  23 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  gst-plugins-vorbis-0.10.11.ebuild:
+  Stable on sparc
 
   10 Jan 2007; Mart Raudsepp <leio@gentoo.org>
   -gst-plugins-vorbis-0.8.8.ebuild, -gst-plugins-vorbis-0.8.9.ebuild,
