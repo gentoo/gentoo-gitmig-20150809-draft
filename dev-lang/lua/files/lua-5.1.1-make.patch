@@ -1,5 +1,5 @@
---- /home/mabi/gentoo/lua-5.1.1.orig/Makefile	2006-06-02 12:53:38.000000000 +0200
-+++ ./Makefile	2006-11-16 02:16:53.000000000 +0100
+--- lua-5.1.1.orig/Makefile	2006-06-02 12:53:38.000000000 +0200
++++ lua-5.1.1/Makefile	2006-11-16 02:16:53.000000000 +0100
 @@ -22,10 +22,10 @@
  # How to install. You may prefer "install" instead of "cp" if you have it.
  # To remove debug information from binaries, use "install -s" in INSTALL_EXEC.
@@ -38,8 +38,8 @@
 +	cd src; $(INSTALL_DATA) $(TO_INC) $(INSTALL_INC)
 +	cd src; $(LIBTOOL) --mode=install $(INSTALL_DATA) liblua.la $(INSTALL_LIB)
 +	cd src; $(LIBTOOL) --mode=install $(INSTALL_DATA) liblua.a $(INSTALL_LIB)
---- /home/mabi/gentoo/lua-5.1.1.orig/src/Makefile	2006-03-22 01:41:49.000000000 +0100
-+++ ./src/Makefile	2006-11-16 02:10:27.000000000 +0100
+--- lua-5.1.1.orig/src/Makefile	2006-03-22 01:41:49.000000000 +0100
++++ lua-5.1.1/src/Makefile	2006-11-16 02:10:27.000000000 +0100
 @@ -176,3 +176,36 @@
    ltm.h lzio.h lmem.h lopcodes.h lundump.h
  
@@ -64,16 +64,16 @@
 +$(LIB_NAME:.la=.a): $(LIB_OBJS)
 +	$(LIBTOOL) --mode=link $(CC) -static -o $(LIB_NAME:.la=.a) $(LIB_OBJS)
 +
-+lua: $(LUA_O) $(LIB_NAME)
++$(LUA_T): $(LUA_O) $(LIB_NAME)
 +	$(LIBTOOL) --mode=link $(CC) -Wl,-E -o $@ $(LUA_O) $(LUA_LIBS) -llua
 +
 +lua_test: $(LUA_O) $(LIB_NAME)
 +	$(LIBTOOL) --mode=link $(CC) -static -Wl,-E -o $@ $(LUA_O) $(LIB_NAME) $(LUA_LIBS)
 +
-+luac: $(LUAC_O) $(LIB_NAME)
++$(LUAC_T): $(LUAC_O) $(LIB_NAME)
 +	$(LIBTOOL) --mode=link $(CC) -static -o $@ $(LUAC_O) $(LIB_NAME)
 +
 +gentoo_clean:
 +	$(LIBTOOL) --mode=clean $(RM) $(ALL_O:.o=.lo) $(LIB_NAME) lua luac
 +
-+gentoo_all: $(LIB_NAME) $(LIB_NAME:.la=.a) lua lua_test luac
++gentoo_all: $(LIB_NAME) $(LIB_NAME:.la=.a) $(LUA_T) lua_test $(LUAC_T)

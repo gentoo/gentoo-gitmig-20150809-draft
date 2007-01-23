@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/lua
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.62 2007/01/22 21:39:57 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.63 2007/01/23 09:47:09 mabi Exp $
+
+  23 Jan 2007; Matti Bickel <mabi@gentoo.org> files/lua-5.1.1-make.patch:
+  Fixing slotted fallout in make.patch
 
   22 Jan 2007; Matti Bickel <mabi@gentoo.org>
   -files/lua-5.1.1-Makefile.patch, -lua-5.0.3-r1.ebuild,
