@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.66 2007/01/19 18:57:42 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.67 2007/01/23 10:57:21 beandog Exp $
+
+  23 Jan 2007; Steve Dibb <beandog@gentoo.org> geoip-1.4.0-r1.ebuild:
+  amd64 stable, bug 161288
 
   19 Jan 2007; Alexander H. Færøy <eroyf@gentoo.org>
   geoip-1.4.0-r1.ebuild:
