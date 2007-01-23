@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/stuffit
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/ChangeLog,v 1.15 2006/10/26 23:53:15 blubb Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/ChangeLog,v 1.16 2007/01/23 15:43:01 genone Exp $
+
+  23 Jan 2007; Marius Mauch <genone@gentoo.org> stuffit-5.2.0.611.ebuild:
+  Replacing einfo with elog
 
   26 Oct 2006; <blubb@gentoo.org> stuffit-5.2.0.611.ebuild:
   remove emul-linux-x86 use flag

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ipkg-utils/ipkg-utils-1.7.ebuild,v 1.7 2006/08/06 14:44:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ipkg-utils/ipkg-utils-1.7.ebuild,v 1.8 2007/01/23 15:40:07 genone Exp $
 
 inherit distutils eutils toolchain-funcs
 
@@ -26,8 +26,8 @@ src_unpack() {
 	sed '/python setup.py build/d' -i Makefile
 
 	if use minimal; then
-		einfo "ipkg-upload is not installed when the \`minimal' USE flag is set.  If you"
-		einfo "need ipkg-upload then rebuild this package without the \`minimal' USE flag."
+		elog "ipkg-upload is not installed when the \`minimal' USE flag is set.  If you"
+		elog "need ipkg-upload then rebuild this package without the \`minimal' USE flag."
 	fi
 }
 

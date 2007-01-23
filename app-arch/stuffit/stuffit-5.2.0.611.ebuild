@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/stuffit-5.2.0.611.ebuild,v 1.16 2006/10/26 23:53:15 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/stuffit-5.2.0.611.ebuild,v 1.17 2007/01/23 15:43:01 genone Exp $
 
 MY_P="stuffit520.611linux-i386"
 DESCRIPTION="Aladdin Software's StuffIt and StuffIt Expander"
@@ -63,12 +63,12 @@ src_install() {
 
 pkg_postinst() {
 	env-update
-	einfo
-	einfo "Reminder: StuffIt requires registration within 15 days."
-	einfo "The registration program is located in ${INSTALLDIR}/extra"
-	einfo
-	einfo "The binaries are named 'stuff' and 'unstuff'"
-	einfo
+	elog
+	elog "Reminder: StuffIt requires registration within 15 days."
+	elog "The registration program is located in ${INSTALLDIR}/extra"
+	elog
+	elog "The binaries are named 'stuff' and 'unstuff'"
+	elog
 }
 
 pkg_postrm() {
