@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/last-exit
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/ChangeLog,v 1.6 2006/10/31 00:58:18 cardoe Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/ChangeLog,v 1.7 2007/01/23 23:26:54 steev Exp $
+
+*last-exit-4.0 (23 Jan 2007)
+
+  23 Jan 2007; Steev Klimaszewski <steev@gentoo.org> +last-exit-4.0.ebuild:
+  New version of last-exit.  Now includes the new dbus-sharp so no need for the
+  old unmaintained crap.  Closes bug #163236.  Thanks to Daniel Herzog for
+  reporting.
 
   31 Oct 2006; Doug Goldstein <cardoe@gentoo.org> last-exit-1.0.ebuild,
   last-exit-2.0.ebuild, last-exit-3.0.ebuild:
