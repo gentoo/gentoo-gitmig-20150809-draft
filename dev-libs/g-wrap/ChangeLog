@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/g-wrap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.33 2007/01/20 10:02:22 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.34 2007/01/24 17:15:21 hkbst Exp $
+
+*g-wrap-1.9.7-r2 (24 Jan 2007)
+*g-wrap-1.9.6-r1 (24 Jan 2007)
+
+  24 Jan 2007; Marijn Schouten <hkBst@gentoo.org> -g-wrap-1.9.6.ebuild,
+  +g-wrap-1.9.6-r1.ebuild, -g-wrap-1.9.7-r1.ebuild, +g-wrap-1.9.7-r2.ebuild:
+  force glib on
 
   20 Jan 2007; Marijn Schouten <hkBst@gentoo.org>
   files/g-wrap-1.9.6_glib_automagic.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.9.6.ebuild,v 1.1 2007/01/19 15:37:25 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.9.6-r1.ebuild,v 1.1 2007/01/24 17:15:21 hkbst Exp $
 
 inherit eutils autotools
 
@@ -11,10 +11,10 @@ SRC_URI="http://download.savannah.gnu.org/releases/g-wrap/${P}.tar.gz"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="GPL-2"
-IUSE="glib"
+IUSE=""
 
 DEPEND="=dev-scheme/guile-1.6*
-	glib? ( =dev-libs/glib-2* )"
+	=dev-libs/glib-2*"
 # seems not to work. g-wrap builds its own libffi-4.0.1
 # dev-libs/libffi
 
@@ -29,7 +29,7 @@ src_unpack() {
 
 #looks like parallel build and install fails occasionally
 src_compile() {
-	econf $(use_with glib)
+	econf --with-glib
 	emake -j1 || die 'make failed'
 }
 
