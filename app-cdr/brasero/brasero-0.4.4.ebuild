@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.4.4.ebuild,v 1.4 2006/11/04 18:45:40 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.4.4.ebuild,v 1.5 2007/01/24 02:13:35 genone Exp $
 
 inherit gnome2
 
@@ -50,8 +50,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "For a best experience you should have a Linux Kernel >= 2.6.13"
-	einfo "to enable system features such as Extended Attributes and inotify."
-	einfo
+	elog
+	elog "For a best experience you should have a Linux Kernel >= 2.6.13"
+	elog "to enable system features such as Extended Attributes and inotify."
+	elog
 }

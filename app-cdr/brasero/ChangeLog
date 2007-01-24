@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.10 2007/01/13 17:17:49 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.11 2007/01/24 02:13:35 genone Exp $
+
+  24 Jan 2007; Marius Mauch <genone@gentoo.org> brasero-0.4.4.ebuild,
+  brasero-0.5.1.ebuild:
+  Replacing einfo with elog
 
   13 Jan 2007; nixnut <nixnut@gentoo.org> brasero-0.5.1.ebuild:
   Added ~ppc wrt bug 156453
