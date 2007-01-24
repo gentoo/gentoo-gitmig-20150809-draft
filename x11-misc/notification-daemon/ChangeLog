@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/notification-daemon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.35 2007/01/24 03:42:04 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.36 2007/01/24 03:48:35 compnerd Exp $
+
+  24 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  -files/notification-daemon-0.3.5-icon-data.patch,
+  -files/notification-daemon-0.3.5-unrealize-in-destroy.patch,
+  -notification-daemon-0.3.5.ebuild, -notification-daemon-0.3.5-r2.ebuild,
+  -notification-daemon-0.3.6.ebuild:
+  cleanup old versions now that we have a new stable version
 
   24 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   notification-daemon-0.3.6-r1.ebuild:
