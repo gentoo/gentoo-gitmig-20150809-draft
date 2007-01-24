@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/getdelta-0.7.6.ebuild,v 1.1 2006/10/08 00:53:44 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/getdelta-0.7.6.ebuild,v 1.2 2007/01/24 03:40:30 genone Exp $
 
 DESCRIPTION="dynamic deltup client"
 HOMEPAGE="http://linux01.gwdg.de/~nlissne/"
@@ -18,9 +18,9 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "You need to put"
-	einfo "FETCHCOMMAND=\"/usr/bin/getdelta.sh \\\${URI}\""
-	einfo "into your /etc/make.conf to make use of getdelta"
+	elog "You need to put"
+	elog "FETCHCOMMAND=\"/usr/bin/getdelta.sh \\\${URI}\""
+	elog "into your /etc/make.conf to make use of getdelta"
 
 	# make sure permissions are ok
 	touch ${ROOT}/var/log/getdelta.log

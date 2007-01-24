@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genflags/genflags-0.96.ebuild,v 1.6 2005/01/01 15:52:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genflags/genflags-0.96.ebuild,v 1.7 2007/01/24 03:37:42 genone Exp $
 
 DESCRIPTION="Gentoo CFLAGS generator"
 HOMEPAGE="http://www.gentoo.org/"
@@ -42,7 +42,8 @@ pkg_postinst() {
 	ewarn "This program does currently NOT detect all AMD chips correctly."
 	ewarn "It CANNOT identify athlon-tbirds. It also gets confused between"
 	ewarn "AMD-K6{,-2,-3} and Athlon vs. Athlon-4."
-	einfo "Please file any patches/bugs to robbat2@gentoo.org via the Gentoo"
-	einfo "Bugzilla."
-	einfo "See /usr/share/doc/${PF}/README.gz for quick instructions."
+	elog
+	elog "Please file any patches/bugs to robbat2@gentoo.org via the Gentoo"
+	elog "Bugzilla."
+	elog "See /usr/share/doc/${PF}/README.gz for quick instructions."
 }

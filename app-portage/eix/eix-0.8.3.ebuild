@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.8.3.ebuild,v 1.2 2006/12/16 14:15:24 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.8.3.ebuild,v 1.3 2007/01/24 03:36:25 genone Exp $
 
 inherit eutils
 
@@ -39,6 +39,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "As of >=eix-0.5.4, \"metadata\" is the new default cache."
-	einfo "It's independent of the portage-version and the cache used by portage."
+	elog "As of >=eix-0.5.4, \"metadata\" is the new default cache."
+	elog "It's independent of the portage-version and the cache used by portage."
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.91.ebuild,v 1.1 2006/01/19 11:23:43 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.91.ebuild,v 1.2 2007/01/24 03:42:33 genone Exp $
 
 inherit bash-completion eutils
 
@@ -66,29 +66,29 @@ pkg_postinst() {
 	# format has changed, and may cause bugs.
 	rm -f ${ROOT}/var/lib/herdstat/*cache*
 
-	einfo
-	einfo "You must be in the portage group to use herdstat."
-	einfo
+	elog
+	elog "You must be in the portage group to use herdstat."
+	elog
 	if use doc ; then
-		einfo "See /usr/share/doc/${PF}/html/examples.html"
+		elog "See /usr/share/doc/${PF}/html/examples.html"
 	else
-		einfo "See /usr/share/doc/${PF}/examples.txt.gz"
+		elog "See /usr/share/doc/${PF}/examples.txt.gz"
 	fi
-	einfo "for a sleu of examples on using herdstat."
-	einfo
-	einfo "As of 1.1.1, ${PN} supports configuration files."
-	einfo "See /usr/share/doc/${PF}/herdstatrc.example.gz"
-	einfo "for more information."
-	einfo
+	elog "for a sleu of examples on using herdstat."
+	elog
+	elog "As of 1.1.1, ${PN} supports configuration files."
+	elog "See /usr/share/doc/${PF}/herdstatrc.example.gz"
+	elog "for more information."
+	elog
 
 	if use readline ; then
-		einfo "For information on using the new readline front-end,"
+		elog "For information on using the new readline front-end,"
 		if use doc ; then
-			einfo "see /usr/share/doc/${PF}/html/readline.html"
+			elog "see /usr/share/doc/${PF}/html/readline.html"
 		else
-			einfo "see /usr/share/doc/${PF}/readline.txt.gz."
+			elog "see /usr/share/doc/${PF}/readline.txt.gz."
 		fi
-		einfo
+		elog
 	fi
 
 	bash-completion_pkg_postinst

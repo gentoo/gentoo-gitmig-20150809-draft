@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/genflags
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genflags/ChangeLog,v 1.7 2005/01/01 15:52:14 eradicator Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genflags/ChangeLog,v 1.8 2007/01/24 03:37:42 genone Exp $
+
+  24 Jan 2007; Marius Mauch <genone@gentoo.org> genflags-0.96.ebuild:
+  Replacing einfo with elog
 
   16 Nov 2004; Robin H. Johnson <robbat2@gentoo.org> genflags-0.96.ebuild:
   fix bug #68012.

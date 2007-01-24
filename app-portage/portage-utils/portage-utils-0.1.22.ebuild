@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.1.22.ebuild,v 1.4 2007/01/15 22:38:05 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.1.22.ebuild,v 1.5 2007/01/24 03:45:36 genone Exp $
 
 inherit toolchain-funcs
 
@@ -53,10 +53,10 @@ __EOF__
 	if [ ! -e ${ROOT}/etc/portage/postsync.d/q-reinitialize ]; then
 		mkdir -p ${ROOT}/etc/portage/postsync.d/
 		echo '[ -x /usr/bin/q ] && /usr/bin/q -qr' > ${ROOT}/etc/portage/postsync.d/q-reinitialize
-		einfo "${ROOT}/etc/portage/postsync.d/q-reinitialize has been installed for convenience"
-		einfo "If you wish for it to be automatically run at the end of every --sync simply chmod +x ${ROOT}/etc/portage/postsync.d/q-reinitialize"
-		einfo "Normally this should only take a few seconds to run but file systems such as ext3 can take a lot longer."
-		einfo "If ever you find this to be an inconvenience simply chmod -x ${ROOT}/etc/portage/postsync.d/q-reinitialize"
+		elog "${ROOT}/etc/portage/postsync.d/q-reinitialize has been installed for convenience"
+		elog "If you wish for it to be automatically run at the end of every --sync simply chmod +x ${ROOT}/etc/portage/postsync.d/q-reinitialize"
+		elog "Normally this should only take a few seconds to run but file systems such as ext3 can take a lot longer."
+		elog "If ever you find this to be an inconvenience simply chmod -x ${ROOT}/etc/portage/postsync.d/q-reinitialize"
 	fi
 	:
 }

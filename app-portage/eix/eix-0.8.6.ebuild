@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.8.6.ebuild,v 1.1 2007/01/22 21:06:43 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.8.6.ebuild,v 1.2 2007/01/24 03:36:25 genone Exp $
 
 DESCRIPTION="Small utility for searching ebuilds with indexing for fast results"
 HOMEPAGE="http://dev.croup.de/proj/eix"
@@ -30,6 +30,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "As of >=eix-0.5.4, \"metadata\" is the new default cache."
-	einfo "It's independent of the portage-version and the cache used by portage."
+	elog "As of >=eix-0.5.4, \"metadata\" is the new default cache."
+	elog "It's independent of the portage-version and the cache used by portage."
 }
