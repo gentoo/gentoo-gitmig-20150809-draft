@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.14.2.ebuild,v 1.2 2007/01/08 00:52:09 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.16.0.ebuild,v 1.1 2007/01/24 22:24:25 pioto Exp $
 
 inherit bash-completion eutils flag-o-matic
 
@@ -34,6 +34,7 @@ RDEPEND="${COMMON_DEPEND}
 PROVIDE="virtual/portage"
 
 pkg_setup() {
+	# gcc generates bad code...
 	use amd64 && replace-flags -Os -O2
 
 	if is-ldflagq -Wl,--as-needed || is-ldflagq --as-needed ; then
@@ -45,12 +46,6 @@ pkg_setup() {
 		epause 10
 	fi
 	filter-ldflags -Wl,--as-needed --as-needed
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-ruby-so.patch
 }
 
 src_compile() {
