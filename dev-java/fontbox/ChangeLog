@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/fontbox
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fontbox/ChangeLog,v 1.1 2007/01/24 14:47:10 betelgeuse Exp $
+
+*fontbox-0.1.0 (24 Jan 2007)
+
+  24 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> +metadata.xml,
+  +fontbox-0.1.0.ebuild:
+  Initial addition. Ebuild written by me. Fixes bug #161929.
+
