@@ -1,6 +1,15 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.136 2007/01/13 11:59:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.137 2007/01/24 17:40:27 armin76 Exp $
+
+  24 Jan 2007; Raúl Porcel <armin76@gentoo.org>
+  -files/mldonkey-2.7.3-configure.patch, -files/mldonkey-2.7.6-magic.patch,
+  +files/mldonkey.confd-2.8, -files/mldonkey.initd-2.8,
+  +files/mldonkey.initd-2.8-r1, -mldonkey-2.6.4-r2.ebuild,
+  -mldonkey-2.7.3.ebuild, -mldonkey-2.7.6-r1.ebuild, -mldonkey-2.8.2.ebuild,
+  mldonkey-2.8.2-r1.ebuild:
+  Drop old , add new initd script and confd, thanks to Christian Schlotter
+  <again at gmx at de>, bug 141177
 
   13 Jan 2007; Raúl Porcel <armin76@gentoo.org> mldonkey-2.7.7.ebuild,
   mldonkey-2.8.2-r1.ebuild:

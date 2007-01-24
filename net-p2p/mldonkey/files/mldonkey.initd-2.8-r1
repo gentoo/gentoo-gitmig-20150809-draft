@@ -1,0 +1,146 @@
+#!/sbin/runscript
+
+opts="start stop restart reload slow fast info"
+
+MLDONKEY_BINARY=${MLDONKEY_BINARY:-/usr/bin/mlnet}
+MLDONKEY_TIMEOUT=${TIMEOUT:-10}
+
+depend() {
+	need net
+	${USE_LOGGER} && use logger
+}
+
+start() {
+	ebegin "Starting ${SVCNAME}"
+
+	if [ -z "${MLDONKEY_DIR}" ]; then
+		ewarn "mldonkey's start script has been changed. You should remove"
+		ewarn "BASEDIR and SUBDIR from /etc/conf.d/mldonkey and set MLDONKEY_DIR"
+		ewarn "to the correct value (you probably want"
+		ewarn "MLDONKEY_DIR=${BASEDIR}/${SUBDIR})"
+		MLDONKEY_DIR=${BASEDIR}/${SUBDIR}
+		einfo "Using ${MLDONKEY_DIR} as working directory"
+	fi
+
+	local result=0
+	if [ ! -d ${MLDONKEY_DIR} ]; then
+		einfo "Directory ${MLDONKEY_DIR} not existing, trying to create..."
+		if `mkdir -p ${MLDONKEY_DIR} 2>/dev/null`; then
+			chown ${USER}:users ${MLDONKEY_DIR}
+		else
+			eerror "Directory ${MLDONKEY_DIR} could not be created!"
+			((result++))
+		fi
+	fi
+
+	cd ${MLDONKEY_DIR}
+	env MLDONKEY_DIR=${MLDONKEY_DIR} start-stop-daemon --quiet --start \
+		-c ${USER} -N ${NICE} -x ${MLDONKEY_BINARY} &>${LOG} &
+	sleep 5
+
+	if ! pgrep -u ${USER} mlnet >/dev/null; then
+		eerror "${SVCNAME} could not be started! Check logfile: ${LOG}"
+		((result++))
+	fi
+
+	eend $result
+}
+
+setup_uri() {
+	BASE="http://"
+	if [[ -n ${USERNAME} && -n ${PASSWORD} ]]; then
+		BASE=${BASE}${USERNAME}:${PASSWORD}@
+	fi
+	BASE=${BASE}${SERVER}:${PORT}
+}
+
+stop() {
+	ebegin "Stopping ${SVCNAME} -- please wait"
+
+	setup_uri
+	wget --spider --timeout=${MLDONKEY_TIMEOUT} ${BASE}/submit?q=close_fds -q
+	wget --spider --timeout=${MLDONKEY_TIMEOUT} ${BASE}/submit?q=save -q
+	wget --spider --timeout=${MLDONKEY_TIMEOUT} ${BASE}/submit?q=kill -q
+
+	# give it a chance to die:
+	local timeout=${MLDONKEY_TIMEOUT}
+	while [ $timeout -gt 0 ] && pgrep -u ${USER} mlnet &>/dev/null; do
+		sleep 1
+		((timeout--))
+	done
+
+	start-stop-daemon --oknodo --stop -x ${MLDONKEY_BINARY} &>${LOG}
+
+	eend $?
+}
+
+restart() {
+	svc_stop
+	sleep 5
+	svc_start
+}
+
+reload() {
+	if ! service_started ${SVCNAME}; then
+		eerror "${SVCNAME} is not started"
+		return 0
+	fi
+
+	ebegin "Reloading ${SVCNAME}"
+
+	start-stop-daemon --stop --signal HUP --oknodo \
+		--exec ${MLDONKEY_BINARY} &>${LOG}
+
+	eend $?
+}
+
+slow() {
+	if ! service_started ${SVCNAME}; then
+		start_service ${SVCNAME}
+	fi
+
+	ebegin "Reducing bandwidth to ${LOW_DOWN}k/${LOW_UP}k"
+
+	setup_uri
+	wget --spider --timeout=${MLDONKEY_TIMEOUT} \
+		${BASE}/submit?q=set+max_hard_download_rate+${LOW_DOWN} -q
+	wget --spider --timeout=${MLDONKEY_TIMEOUT} \
+		${BASE}/submit?q=set+max_hard_upload_rate+${LOW_UP} -q
+
+	eend $?
+}
+
+fast() {
+	if ! service_started ${SVCNAME}; then
+		start_service ${SVCNAME}
+	fi
+
+	ebegin "Increasing bandwidth to ${HIGH_DOWN}k/${HIGH_UP}k"
+
+	setup_uri
+	wget --spider --timeout=${MLDONKEY_TIMEOUT} \
+		${BASE}/submit?q=set+max_hard_download_rate+${HIGH_DOWN} -q
+	wget --spider --timeout=${MLDONKEY_TIMEOUT} \
+		${BASE}/submit?q=set+max_hard_upload_rate+${HIGH_UP} -q
+
+	eend $?
+}
+
+
+info() {
+	if ! service_started ${SVCNAME}; then
+		eerror "${SVCNAME} is not started"
+		return 0
+	fi
+
+	setup_uri
+	local result=$(/usr/bin/wget --timeout=${MLDONKEY_TIMEOUT} \
+		-O - ${BASE}/submit?q=vo 2> /dev/null | \
+		/bin/grep -C1 max_hard_upload | \
+		/bin/grep value=\" | /bin/cut -d\" -f2)
+	if [[ ${result} -eq ${LOW_UP} ]]; then
+		einfo "${SVCNAME} runs slow"
+	else
+		einfo "${SVCNAME} runs fast"
+	fi
+}
