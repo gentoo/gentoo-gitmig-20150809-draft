@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/mesa
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.134 2006/12/08 05:02:30 joshuabaergen Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.135 2007/01/24 07:15:44 dberkholz Exp $
+
+  24 Jan 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  -files/64bit-fix-have-dix-config.patch,
+  -files/64bit-fix-indirect-vertex-array.patch,
+  -files/6.5-fix-radeon-PCIE.patch,
+  -files/change-default-dri-driver-dir.patch,
+  -files/makedepend-location.patch, -files/radeon-texture-problem.patch,
+  -mesa-6.4.2-r2.ebuild, -mesa-6.5-r4.ebuild, -mesa-6.5.1-r2.ebuild:
+  Clean up.
 
   08 Dec 2006; Joshua Baergen <joshuabaergen@gentoo.org> mesa-6.5.2.ebuild:
   leio bets his gold watch that this version needs a better libdrm too.
