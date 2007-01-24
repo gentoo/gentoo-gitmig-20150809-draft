@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.2-r3.ebuild,v 1.1 2007/01/23 23:33:03 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.2-r4.ebuild,v 1.1 2007/01/24 22:19:33 zmedico Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
@@ -91,6 +91,7 @@ src_compile() {
 	fi
 
 	if use epydoc; then
+		einfo "Generating api docs"
 		mkdir "${WORKDIR}"/api
 		local my_modules
 		my_modules="$(find "${S}/pym" -name "*.py" \

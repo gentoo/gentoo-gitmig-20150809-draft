@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.336 2007/01/23 23:33:03 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.337 2007/01/24 22:19:33 zmedico Exp $
+
+*portage-2.1.2-r4 (24 Jan 2007)
+
+  24 Jan 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.2-r4.ebuild:
+  2.1.2-r4 revbump.  Bugs #162453 and #147007 track fixes since 2.1.1.
+  KEYWORDS.missing is only a warning now.  Ebuilds with no KEYWORDS can now be
+  accepted in package.keywords via the new ** token.  This will allow
+  KEYWORDS="-*" to be phased out as per bug #160519.
 
 *portage-2.1.2-r3 (23 Jan 2007)
 
