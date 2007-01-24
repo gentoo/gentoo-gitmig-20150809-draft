@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.2.4.ebuild,v 1.9 2006/12/04 10:21:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.2.4.ebuild,v 1.10 2007/01/24 02:19:17 genone Exp $
 
 inherit eutils flag-o-matic
 
@@ -80,15 +80,15 @@ src_install() {
 
 pkg_postinst() {
 	if use mysql || use sqlite ; then
-		echo
-		einfo "You have chosen, either by selecting 'USE=mysql' or 'USE=sqlite'"
-		einfo "to install Disk Catalog support."
-		einfo "You will have a new tool called cdwdic."
-		echo
-		einfo "The directory /usr/share/${PF}/"
-		einfo "contains a cdw.sql file. You must install this to your system"
-		einfo "for using the Disk Catalog. The installation process is very"
-		einfo "simple, you can find the instructions in"
-		einfo "/usr/share/doc/${PF}/README.gz"
+		elog
+		elog "You have chosen, either by selecting 'USE=mysql' or 'USE=sqlite'"
+		elog "to install Disk Catalog support."
+		elog "You will have a new tool called cdwdic."
+		elog
+		elog "The directory /usr/share/${PF}/"
+		elog "contains a cdw.sql file. You must install this to your system"
+		elog "for using the Disk Catalog. The installation process is very"
+		elog "simple, you can find the instructions in"
+		elog "/usr/share/doc/${PF}/README.gz"
 	fi
 }

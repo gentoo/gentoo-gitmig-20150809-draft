@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/kiso
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/ChangeLog,v 1.31 2006/04/27 13:04:14 flameeyes Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/ChangeLog,v 1.32 2007/01/24 02:24:56 genone Exp $
+
+  24 Jan 2007; Marius Mauch <genone@gentoo.org> kiso-0.8.2c.ebuild,
+  kiso-0.8.3.ebuild:
+  Replacing einfo with elog
 
   27 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   files/kiso-0.8.3-libcdio-077.patch:

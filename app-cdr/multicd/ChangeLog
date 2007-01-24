@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/multicd
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/multicd/ChangeLog,v 1.7 2005/12/29 03:40:09 metalgod Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/multicd/ChangeLog,v 1.8 2007/01/24 02:26:26 genone Exp $
+
+  24 Jan 2007; Marius Mauch <genone@gentoo.org> multicd-1.7.2.ebuild,
+  multicd-1.7.5.ebuild:
+  Replacing einfo with elog
 
 *multicd-1.7.5 (29 Dec 2005)
 

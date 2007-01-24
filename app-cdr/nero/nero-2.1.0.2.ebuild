@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-2.1.0.2.ebuild,v 1.2 2007/01/19 20:59:47 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-2.1.0.2.ebuild,v 1.3 2007/01/24 02:28:14 genone Exp $
 
 inherit eutils rpm multilib
 
@@ -100,22 +100,22 @@ pkg_setup() {
 # }
 
 pkg_postinst() {
-	einfo
-	einfo "Please make sure that no hdX=ide-scsi option is passed"
-	einfo "to your kernel command line."
-	einfo
-	einfo "For setting up your burning device correctly you also"
-	einfo "have to give your regular user(s) read/write access to"
-	einfo "the disc writer devices, for example by adding the user(s)"
-	einfo "to the system group 'cdrom', e.g. like this:"
-	einfo
-	einfo "\tgpasswd -a <username> cdrom"
-	einfo
-	einfo "NOTE: This is demo software, it will run for a trial"
-	einfo "period only until unlocked with a serial number."
-	einfo "See ${HOMEPAGE} for details."
-	einfo
-	einfo "Technical support for NeroLINUX is provided by CDFreaks"
-	einfo "Linux forum at http://club.cdfreaks.com/forumdisplay.php?f=104"
-	einfo
+	elog
+	elog "Please make sure that no hdX=ide-scsi option is passed"
+	elog "to your kernel command line."
+	elog
+	elog "For setting up your burning device correctly you also"
+	elog "have to give your regular user(s) read/write access to"
+	elog "the disc writer devices, for example by adding the user(s)"
+	elog "to the system group 'cdrom', e.g. like this:"
+	elog
+	elog "\tgpasswd -a <username> cdrom"
+	elog
+	elog "NOTE: This is demo software, it will run for a trial"
+	elog "period only until unlocked with a serial number."
+	elog "See ${HOMEPAGE} for details."
+	elog
+	elog "Technical support for NeroLINUX is provided by CDFreaks"
+	elog "Linux forum at http://club.cdfreaks.com/forumdisplay.php?f=104"
+	elog
 }
