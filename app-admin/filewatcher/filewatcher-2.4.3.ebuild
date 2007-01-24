@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/filewatcher/filewatcher-2.4.3.ebuild,v 1.2 2006/05/08 05:06:17 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/filewatcher/filewatcher-2.4.3.ebuild,v 1.3 2007/01/24 14:15:05 genone Exp $
 
 DESCRIPTION="This is a configuration file control system and IDS"
 HOMEPAGE="http://www.willingminds.com/resources/filewatcher.html"
@@ -28,11 +28,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo " A basic configuration has been provided in"
-	einfo " /etc/filewatcher.conf.  It is strongly"
-	einfo " recommended that you invoke filewatcher via"
-	einfo " crontab."
-	echo
-	einfo " 55,25,40 * * * * root /usr/sbin/filewatcher"
-	einfo " --config=/etc/filewatcher.conf"
+	elog " A basic configuration has been provided in"
+	elog " /etc/filewatcher.conf.  It is strongly"
+	elog " recommended that you invoke filewatcher via"
+	elog " crontab."
+	elog
+	elog " 55,25,40 * * * * root /usr/sbin/filewatcher"
+	elog " --config=/etc/filewatcher.conf"
 }

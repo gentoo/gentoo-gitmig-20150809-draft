@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.5.ebuild,v 1.4 2007/01/22 17:43:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.5.ebuild,v 1.5 2007/01/24 14:01:15 genone Exp $
 
 inherit eutils
 # used for epause
@@ -91,20 +91,20 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo 'Default configuration file is "~/.conkyrc"'
-	einfo "You can find a sample configuration file in"
-	einfo "/usr/share/doc/${PF}/conkyrc.sample.gz"
-	einfo
-	einfo "For more info on Conky's new features,"
-	einfo "please look at the README and ChangeLog:"
-	einfo "/usr/share/doc/${PF}/README.gz"
-	einfo "/usr/share/doc/${PF}/ChangeLog.gz"
-	einfo "There are also pretty html docs available"
-	einfo "on Conky's site or in /usr/share/doc/${PF}"
-	einfo
-	einfo "Also see http://www.gentoo.org/doc/en/conky-howto.xml"
-	einfo
-	einfo "Vim syntax highlighting for conkyrc now enabled with"
-	einfo "USE=vim-syntax"
-	einfo
+	elog 'Default configuration file is "~/.conkyrc"'
+	elog "You can find a sample configuration file in"
+	elog "/usr/share/doc/${PF}/conkyrc.sample.gz"
+	elog
+	elog "For more info on Conky's new features,"
+	elog "please look at the README and ChangeLog:"
+	elog "/usr/share/doc/${PF}/README.gz"
+	elog "/usr/share/doc/${PF}/ChangeLog.gz"
+	elog "There are also pretty html docs available"
+	elog "on Conky's site or in /usr/share/doc/${PF}"
+	elog
+	elog "Also see http://www.gentoo.org/doc/en/conky-howto.xml"
+	elog
+	elog "Vim syntax highlighting for conkyrc now enabled with"
+	elog "USE=vim-syntax"
+	elog
 }

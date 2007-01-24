@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r4.ebuild,v 1.15 2007/01/04 13:48:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r4.ebuild,v 1.16 2007/01/24 14:12:20 genone Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -56,30 +56,30 @@ src_install() {
 
 pkg_postinst() {
 
-	einfo "To enable fam on	 boot you will have to add it to the"
-	einfo "default profile, issue the following command as root to do so."
-	echo
-	einfo "rc-update add famd default"
+	elog "To enable fam on	 boot you will have to add it to the"
+	elog "default profile, issue the following command as root to do so."
+	elog
+	elog "rc-update add famd default"
 
 	# temporary warning for people upgrading
 	# 6-12-03 foser <foser@gentoo.org>
 	if [ -e /etc/init.d/fam ]
 	then
 		echo
+		elog "IMPORTANT INFO FOR USERS UPGRADING FROM OLDER (<2.7.0) FAM VERSIONS :"
+		elog
+		elog "With the 2.7.0 version the fam daemon moved to sbin and was"
+		elog "renamed from 'fam' to 'famd'. These changes are for consistency"
+		elog "reasons also applied to the Gentoo init script. This means you"
+		elog "will have to remove fam from the default runlevel and add famd."
+		elog "This can be done by issueing the following commands :"
+		elog
+		elog "rc-update del fam"
+		elog "rc-update add famd default"
+		elog "rm /etc/init.d/fam"
+		elog
+		elog "The last command removes the old init script."
 		echo
-		ewarn "IMPORTANT INFO FOR USERS UPGRADING FROM OLDER (<2.7.0) FAM VERSIONS :"
-		echo
-		einfo "With the 2.7.0 version the fam daemon moved to sbin and was"
-		einfo "renamed from 'fam' to 'famd'. These changes are for consistency"
-		einfo "reasons also applied to the Gentoo init script. This means you"
-		einfo "will have to remove fam from the default runlevel and add famd."
-		einfo "This can be done by issueing the following commands :"
-		echo
-		einfo "rc-update del fam"
-		einfo "rc-update add famd default"
-		einfo "rm /etc/init.d/fam"
-		echo
-		einfo "The last command removes the old init script."
 	fi
 
 }

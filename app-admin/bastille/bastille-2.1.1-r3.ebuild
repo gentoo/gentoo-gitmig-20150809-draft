@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/bastille-2.1.1-r3.ebuild,v 1.3 2005/11/28 12:07:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/bastille-2.1.1-r3.ebuild,v 1.4 2007/01/24 13:57:14 genone Exp $
 
 inherit perl-app eutils
 
@@ -96,5 +96,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	use X || einfo "When not using the Tk interface you will need to start use the -c flag when calling ${PN} from command line. example ${PN} -c --os GE1.4"
+	use X || elog "When not using the Tk interface you will need to start use the -c flag when calling ${PN} from command line. example ${PN} -c --os GE1.4"
 }

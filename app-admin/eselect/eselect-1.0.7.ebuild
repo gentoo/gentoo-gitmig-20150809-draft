@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.0.7.ebuild,v 1.10 2007/01/16 06:04:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.0.7.ebuild,v 1.11 2007/01/24 14:07:12 genone Exp $
 
 DESCRIPTION="Modular -config replacement utility"
 HOMEPAGE="http://www.gentoo.org/proj/en/eselect/"
@@ -45,22 +45,18 @@ src_install() {
 
 pkg_postinst() {
 	if use bash-completion ; then
-		echo
-		einfo
-		einfo "To enable command-line completion for eselect, run:"
-		einfo
-		einfo "  eselect bashcomp enable eselect"
-		einfo
-		echo
+		elog
+		elog "To enable command-line completion for eselect, run:"
+		elog
+		elog "  eselect bashcomp enable eselect"
+		elog
 	fi
 
-	echo
-	einfo "Modules cblas.eselect, blas.eselect and lapack.eselect have"
-	einfo "been split-out to separate packages called:"
-	einfo
-	einfo "  app-admin/eselect-cblas"
-	einfo "  app-admin/eselect-blas"
-	einfo "  app-admin/eselect-lapack"
-	einfo
-	echo
+	elog "Modules cblas.eselect, blas.eselect and lapack.eselect have"
+	elog "been split-out to separate packages called:"
+	elog
+	elog "  app-admin/eselect-cblas"
+	elog "  app-admin/eselect-blas"
+	elog "  app-admin/eselect-lapack"
+	elog
 }

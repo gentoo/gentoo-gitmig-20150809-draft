@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/gamin-0.1.7.ebuild,v 1.16 2006/10/26 10:01:54 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/gamin-0.1.7.ebuild,v 1.17 2007/01/24 14:17:18 genone Exp $
 
 inherit autotools eutils libtool
 
@@ -52,8 +52,8 @@ src_install() {
 
 pkg_postinst() {
 	if use kernel_linux; then
-		einfo "It is strongly suggested you use Gamin with an inotify enabled"
-		einfo "kernel for best performance. For this release of gamin you need"
-		einfo "at least gentoo-sources-2.6.13 or later."
+		elog "It is strongly suggested you use Gamin with an inotify enabled"
+		elog "kernel for best performance. For this release of gamin you need"
+		elog "at least gentoo-sources-2.6.13 or later."
 	fi
 }

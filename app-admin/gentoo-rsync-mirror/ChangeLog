@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gentoo-rsync-mirror
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.30 2007/01/04 22:42:54 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.31 2007/01/24 14:19:18 genone Exp $
+
+  24 Jan 2007; Marius Mauch <genone@gentoo.org>
+  gentoo-rsync-mirror-1.0-r4.ebuild, gentoo-rsync-mirror-1.0-r5.ebuild:
+  Replacing einfo with elog
 
   04 Jan 2007; Steve Dibb <beandog@gentoo.org>
   gentoo-rsync-mirror-1.0-r4.ebuild, gentoo-rsync-mirror-1.0-r5.ebuild:

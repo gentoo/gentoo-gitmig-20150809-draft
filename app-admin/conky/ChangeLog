@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.42 2007/01/22 17:43:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.43 2007/01/24 14:01:15 genone Exp $
+
+  24 Jan 2007; Marius Mauch <genone@gentoo.org> conky-1.4.0-r1.ebuild,
+  conky-1.4.2.ebuild, conky-1.4.4.ebuild, conky-1.4.5.ebuild:
+  Replacing einfo with elog
 
   22 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> conky-1.4.5.ebuild:
   Stable on sparc wrt #158886

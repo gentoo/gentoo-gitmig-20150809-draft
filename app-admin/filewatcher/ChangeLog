@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/filewatcher
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/filewatcher/ChangeLog,v 1.6 2006/05/08 05:06:17 tcort Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/filewatcher/ChangeLog,v 1.7 2007/01/24 14:15:05 genone Exp $
+
+  24 Jan 2007; Marius Mauch <genone@gentoo.org> filewatcher-2.4.0.ebuild,
+  filewatcher-2.4.3.ebuild:
+  Replacing einfo with elog
 
   08 May 2006; Thomas Cort <tcort@gentoo.org> filewatcher-2.4.0.ebuild,
   filewatcher-2.4.3.ebuild:

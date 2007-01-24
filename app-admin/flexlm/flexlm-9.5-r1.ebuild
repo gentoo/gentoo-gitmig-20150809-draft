@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/flexlm-9.5-r1.ebuild,v 1.2 2006/12/19 23:33:08 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/flexlm-9.5-r1.ebuild,v 1.3 2007/01/24 14:16:07 genone Exp $
 
 inherit eutils
 
@@ -67,6 +67,6 @@ src_install () {
 pkg_postinst() {
 	enewgroup flexlm
 	enewuser flexlm -1 /bin/bash /opt/flexlm flexlm -c "FlexLM server user"
-	einfo "FlexLM installed. Config is in /etc/conf.d/flexlm"
-	einfo "Default location for license file is /etc/flexlm/license.dat"
+	elog "FlexLM installed. Config is in /etc/conf.d/flexlm"
+	elog "Default location for license file is /etc/flexlm/license.dat"
 }

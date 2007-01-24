@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/denyhosts-2.5.ebuild,v 1.6 2006/11/16 00:21:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/denyhosts-2.5.ebuild,v 1.7 2007/01/24 14:03:00 genone Exp $
 
 inherit distutils eutils
 
@@ -50,16 +50,16 @@ pkg_postinst() {
 		touch /etc/hosts.deny
 	fi
 
-	einfo "You can configure DenyHosts to run as a daemon by running:"
-	einfo
-	einfo "rc-update add denyhosts default"
-	einfo
-	einfo "or as a cronjob, by adding the following to /etc/crontab"
-	einfo "# run DenyHosts every 10 minutes"
-	einfo "*/10  *  * * *	root	python /usr/bin/denyhosts -c /etc/denyhosts.conf"
-	einfo
-	einfo "More information can be found at http://denyhosts.sourceforge.net/faq.html"
-	einfo
+	elog "You can configure DenyHosts to run as a daemon by running:"
+	elog
+	elog "rc-update add denyhosts default"
+	elog
+	elog "or as a cronjob, by adding the following to /etc/crontab"
+	elog "# run DenyHosts every 10 minutes"
+	elog "*/10  *  * * *	root	python /usr/bin/denyhosts -c /etc/denyhosts.conf"
+	elog
+	elog "More information can be found at http://denyhosts.sourceforge.net/faq.html"
+	elog
 	ewarn "Modify /etc/denyhosts.conf to suit your environment system."
 }
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fetchlog/fetchlog-0.94.ebuild,v 1.7 2005/01/01 10:59:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fetchlog/fetchlog-0.94.ebuild,v 1.8 2007/01/24 14:13:55 genone Exp $
 
 DESCRIPTION="Displays the last new messages of a logfile"
 HOMEPAGE="http://fetchlog.sourceforge.net/"
@@ -17,13 +17,13 @@ DEPEND="snmp? (
 	)"
 
 pkg_preinst() {
-	einfo
-	einfo "This utility can be used together with Nagios"
-	einfo "To make use of these features you need to"
-	einfo "install net-analyzer/nagios."
-	einfo "This feature depends on SNMP, so make use you"
-	einfo "have 'snmp' in your USE flags"
-	einfo
+	elog
+	elog "This utility can be used together with Nagios"
+	elog "To make use of these features you need to"
+	elog "install net-analyzer/nagios."
+	elog "This feature depends on SNMP, so make use you"
+	elog "have 'snmp' in your USE flags"
+	elog
 }
 
 src_compile() {

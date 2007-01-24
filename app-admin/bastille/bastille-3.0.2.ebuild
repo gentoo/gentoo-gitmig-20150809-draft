@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/bastille-3.0.2.ebuild,v 1.2 2005/08/19 23:33:34 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/bastille-3.0.2.ebuild,v 1.3 2007/01/24 13:57:14 genone Exp $
 
 inherit eutils
 
@@ -51,8 +51,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Please be aware that when using the Server Lax, Server Moderate, or"
-	einfo "Server Paranoia configurations, you may need to use InteractiveBastille"
-	einfo "to set any advanced network information, such as masquerading and"
-	einfo "internal interfaces, if you plan to use them."
+	elog "Please be aware that when using the Server Lax, Server Moderate, or"
+	elog "Server Paranoia configurations, you may need to use InteractiveBastille"
+	elog "to set any advanced network information, such as masquerading and"
+	elog "internal interfaces, if you plan to use them."
 }

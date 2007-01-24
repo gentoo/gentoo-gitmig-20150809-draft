@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/gentoo-rsync-mirror-1.0-r4.ebuild,v 1.9 2007/01/04 22:42:54 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/gentoo-rsync-mirror-1.0-r4.ebuild,v 1.10 2007/01/24 14:19:18 genone Exp $
 
 DESCRIPTION="Ebuild for setting up a Gentoo rsync mirror"
 HOMEPAGE="http://www.gentoo.org/doc/en/rsync.xml"
@@ -23,28 +23,28 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "The rsync-mirror is now installed into /opt/gentoo-rsync"
-	einfo "The local portage copy resides in      /opt/gentoo-rsync/portage"
-	einfo "Please change /opt/gentoo-rsync/rsync-gentoo-portage.sh for"
-	einfo "configuration of your main rsync server and use it so sync."
-	einfo "Change /etc/rsync/rsyncd.motd to display your correct alias."
-	einfo
-	einfo "RSYNC_OPTS="--config=/etc/rsync/rsyncd.conf" needs"
-	einfo "to be set in /etc/conf.d/rsyncd to make allow syncing."
-	einfo
-	einfo "The service can be started using /etc/init.d/rsyncd start"
-	einfo "If you are setting up an official mirror, don't forget to add"
-	einfo "00,30 * * * *      root    /opt/gentoo-rsync/rsync-gentoo-portage.sh"
-	einfo "to your /etc/crontab to sync your tree every 30 minutes."
-	einfo
-	einfo "If you are setting up a private (unofficial) mirror, you can add"
-	einfo "0 3 * * *	root	/opt/gentoo-rsync/rsync-gentoo-portage.sh"
-	einfo "to your /etc/crontab to sync your tree once per day."
-	einfo
-	einfo "****IMPORTANT****"
-	einfo "If you are setting up a private mirror, DO NOT sync against the"
-	einfo "gentoo.org official rotations more than once a day.  Doing so puts"
-	einfo "you at risk of having your IP address banned from the rotations."
-	einfo
-	einfo "For more information visit: http://www.gentoo.org/doc/en/rsync.xml"
+	elog "The rsync-mirror is now installed into /opt/gentoo-rsync"
+	elog "The local portage copy resides in      /opt/gentoo-rsync/portage"
+	elog "Please change /opt/gentoo-rsync/rsync-gentoo-portage.sh for"
+	elog "configuration of your main rsync server and use it so sync."
+	elog "Change /etc/rsync/rsyncd.motd to display your correct alias."
+	elog
+	elog "RSYNC_OPTS="--config=/etc/rsync/rsyncd.conf" needs"
+	elog "to be set in /etc/conf.d/rsyncd to make allow syncing."
+	elog
+	elog "The service can be started using /etc/init.d/rsyncd start"
+	elog "If you are setting up an official mirror, don't forget to add"
+	elog "00,30 * * * *      root    /opt/gentoo-rsync/rsync-gentoo-portage.sh"
+	elog "to your /etc/crontab to sync your tree every 30 minutes."
+	elog
+	elog "If you are setting up a private (unofficial) mirror, you can add"
+	elog "0 3 * * *	root	/opt/gentoo-rsync/rsync-gentoo-portage.sh"
+	elog "to your /etc/crontab to sync your tree once per day."
+	elog
+	elog "****IMPORTANT****"
+	elog "If you are setting up a private mirror, DO NOT sync against the"
+	elog "gentoo.org official rotations more than once a day.  Doing so puts"
+	elog "you at risk of having your IP address banned from the rotations."
+	elog
+	elog "For more information visit: http://www.gentoo.org/doc/en/rsync.xml"
 }

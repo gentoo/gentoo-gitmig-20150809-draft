@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/fetchlog
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fetchlog/ChangeLog,v 1.9 2006/09/07 23:58:01 dang Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fetchlog/ChangeLog,v 1.10 2007/01/24 14:13:55 genone Exp $
+
+  24 Jan 2007; Marius Mauch <genone@gentoo.org> fetchlog-0.94.ebuild,
+  fetchlog-1.0.ebuild:
+  Replacing einfo with elog
 
   07 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> fetchlog-1.0.ebuild:
   Marked stable on amd64 for bug #146729

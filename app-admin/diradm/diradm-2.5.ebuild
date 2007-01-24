@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/diradm-2.5.ebuild,v 1.3 2007/01/04 21:13:11 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/diradm-2.5.ebuild,v 1.4 2007/01/24 14:04:47 genone Exp $
 
 DESCRIPTION="diradm is a nearly complete nss/shadow suite for managing POSIX users/groups/data in LDAP."
 HOMEPAGE="http://research.iat.sfu.ca/custom-software/diradm/"
@@ -34,7 +34,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "The new diradm pulls many settings from your LDAP configuration."
-	einfo "But don't forget to customize /etc/diradm.conf for other settings."
-	einfo "Please see the README to instructions if you problems."
+	elog "The new diradm pulls many settings from your LDAP configuration."
+	elog "But don't forget to customize /etc/diradm.conf for other settings."
+	elog "Please see the README to instructions if you problems."
 }

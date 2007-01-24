@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/diradm-1.1-r1.ebuild,v 1.3 2007/01/04 21:13:11 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/diradm-1.1-r1.ebuild,v 1.4 2007/01/24 14:04:47 genone Exp $
 
 DESCRIPTION="diradm is for managing posix users/groups in an LDAP directory"
 HOMEPAGE="http://www.hits.at/diradm/"
@@ -23,5 +23,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Don't forget to customize /etc/diradm.conf for your LDAP schema"
+	elog "Don't forget to customize /etc/diradm.conf for your LDAP schema"
 }
