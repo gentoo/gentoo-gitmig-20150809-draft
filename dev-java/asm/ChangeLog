@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/asm
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.28 2006/11/19 05:26:41 nichoj Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.29 2007/01/24 17:49:52 caster Exp $
+
+  24 Jan 2007; Vlastimil Babka <caster@gentoo.org> -asm-1.4.1.ebuild,
+  -asm-1.4.1-r1.ebuild, -asm-2.2.3.ebuild:
+  Remove unneeded versions.
 
 *asm-2.2.3-r1 (19 Nov 2006)
 
