@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/webcdwriter-2.6.8-r1.ebuild,v 1.3 2006/09/17 03:38:53 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/webcdwriter-2.6.8-r1.ebuild,v 1.4 2007/01/24 02:33:21 genone Exp $
 
 inherit eutils java-pkg
 
@@ -116,11 +116,11 @@ src_install() {
 
 pkg_postinst() {
 	# ripped from the makefile
-	einfo "Now you can start CDWserver by"
-	einfo "   /etc/init.d/CDWserver start"
-	einfo "Then visit"
-	einfo "   http://localhost:12411"
-	einfo "or try rcdrecord or files2cd on the command line."
+	elog "Now you can start CDWserver by"
+	elog "   /etc/init.d/CDWserver start"
+	elog "Then visit"
+	elog "   http://localhost:12411"
+	elog "or try rcdrecord or files2cd on the command line."
 	echo
 	ewarn "Remember to setup /etc/CDWserver/config"
 }

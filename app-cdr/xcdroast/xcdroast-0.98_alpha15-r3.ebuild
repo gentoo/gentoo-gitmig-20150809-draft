@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r3.ebuild,v 1.22 2006/11/11 04:51:57 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r3.ebuild,v 1.23 2007/01/24 02:35:01 genone Exp $
 
 inherit eutils
 
@@ -63,14 +63,14 @@ src_install() {
 
 pkg_postinst() {
 	if use dvdr; then
-		echo
-		einfo "cdrecord-ProDVD has been installed with this package.  It will be used only"
-		einfo "for images larger than 1GB."
-		einfo "You have to type in the license key that is available free for personal use."
-		einfo "See ftp://ftp.berlios.de/pub/cdrecord/ProDVD/README for further information."
-		echo
+		elog
+		elog "cdrecord-ProDVD has been installed with this package.  It will be used only"
+		elog "for images larger than 1GB."
+		elog "You have to type in the license key that is available free for personal use."
+		elog "See ftp://ftp.berlios.de/pub/cdrecord/ProDVD/README for further information."
+		elog
 	fi
-	einfo "Gtk1.x support have been removed from this package."
-	einfo "All gtk use flags were removed."
-	einfo "This package will only support GTK2.x from now on."
+	elog "Gtk1.x support have been removed from this package."
+	elog "All gtk use flags were removed."
+	elog "This package will only support GTK2.x from now on."
 }

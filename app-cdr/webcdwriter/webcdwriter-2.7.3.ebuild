@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/webcdwriter-2.7.3.ebuild,v 1.3 2006/09/17 03:38:53 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/webcdwriter-2.7.3.ebuild,v 1.4 2007/01/24 02:33:21 genone Exp $
 
 inherit eutils java-pkg
 
@@ -162,12 +162,12 @@ pkg_postinst() {
 	else
 		PORTEXT=":${PORT}"
 	fi
-	einfo "To do:"
-	einfo "1. Enter \"/etc/init.d/CDWserver start\" to start your webCDwriter"
-	einfo "2. Open your web browser and try"
-	einfo "   \"http://127.0.0.1${PORTEXT}\" or \"http://`hostname`${PORTEXT}\""
-	einfo "to check the status of your webCDwriter"
-#	einfo "3. Run \"/usr/sbin/CDWconfig.sh\" to set the rights of CDWserver"
+	elog "To do:"
+	elog "1. Enter \"/etc/init.d/CDWserver start\" to start your webCDwriter"
+	elog "2. Open your web browser and try"
+	elog "   \"http://127.0.0.1${PORTEXT}\" or \"http://`hostname`${PORTEXT}\""
+	elog "to check the status of your webCDwriter"
+#	elog "3. Run \"/usr/sbin/CDWconfig.sh\" to set the rights of CDWserver"
 	echo
 	ewarn "Remember to setup /etc/CDWserver/config"
 }

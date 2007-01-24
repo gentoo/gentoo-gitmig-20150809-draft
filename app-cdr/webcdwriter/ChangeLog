@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/webcdwriter
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/ChangeLog,v 1.9 2006/08/18 01:44:27 metalgod Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/ChangeLog,v 1.10 2007/01/24 02:33:21 genone Exp $
+
+  24 Jan 2007; Marius Mauch <genone@gentoo.org> webcdwriter-2.6.8-r1.ebuild,
+  webcdwriter-2.7.1.ebuild, webcdwriter-2.7.2.ebuild,
+  webcdwriter-2.7.3.ebuild, webcdwriter-2.8.0.ebuild:
+  Replacing einfo with elog
 
 *webcdwriter-2.8.0 (18 Aug 2006)
 
