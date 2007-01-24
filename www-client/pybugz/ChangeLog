@@ -1,6 +1,9 @@
 # ChangeLog for www-client/pybugz
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.14 2007/01/15 21:19:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.15 2007/01/24 15:00:04 corsair Exp $
+
+  24 Jan 2007; Markus Rothe <corsair@gentoo.org> pybugz-0.6.11.ebuild:
+  Added ~ppc64
 
   15 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> pybugz-0.6.11.ebuild:
   Keyworded ~sparc wrt #161818
