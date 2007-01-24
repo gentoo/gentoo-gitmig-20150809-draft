@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.4.ebuild,v 1.1 2007/01/24 20:13:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.4.ebuild,v 1.2 2007/01/24 20:49:00 seemant Exp $
 
 inherit eutils gnome2
 
@@ -15,7 +15,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 
-IUSE="ofx hbci chipcard doc debug quotes nls"
+IUSE="ofx hbci chipcard doc debug quotes nls mt940"
 
 RDEPEND=">=dev-libs/glib-2.4.0
 	=dev-scheme/guile-1.6*
@@ -64,13 +64,21 @@ src_compile() {
 		myconf="${myconf} --enable-latex-docs"
 	fi
 
+	if use hbci ; then
+		myconf="${myconf} --enable-hbci"
+
+		if use mt940 ; then
+			myconf="${myconf} --enable-mt940"
+		fi
+	fi
+
+
 	econf \
 		$(use_enable debug) \
 		$(use_enable ofx) \
 		$(use_enable doc doxygen) \
 		$(use_enable doc html-docs) \
 		$(use_enable doc dot) \
-		$(use_enable hbci) \
 		--enable-locale-specific-tax \
 		${myconf} || die "econf failed"
 
