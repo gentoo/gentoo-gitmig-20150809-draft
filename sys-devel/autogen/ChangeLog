@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/autogen
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.17 2007/01/10 18:43:45 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.18 2007/01/24 04:57:02 vapier Exp $
+
+*autogen-5.8.8 (24 Jan 2007)
+
+  24 Jan 2007; Mike Frysinger <vapier@gentoo.org> +autogen-5.8.8.ebuild:
+  Version bump #163349 by Pierre Poissinger.
 
   10 Jan 2007; Piotr Jaroszyński <peper@gentoo.org> Manifest:
   Fix Manifest.
