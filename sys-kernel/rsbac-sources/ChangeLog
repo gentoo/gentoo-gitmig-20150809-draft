@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/rsbac-sources
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.52 2007/01/12 13:35:35 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.53 2007/01/24 13:19:14 kang Exp $
+
+  24 Jan 2007; Guillaume Destuynder <kang@gentoo.org>
+  files/digest-rsbac-sources-2.6.13, files/digest-rsbac-sources-2.6.14,
+  files/digest-rsbac-sources-2.6.14-r1, Manifest:
+  regenerated digests
 
 *rsbac-sources-2.6.19 (12 Jan 2007)
 
