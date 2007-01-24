@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6666 2007/01/24 17:53:41 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6667 2007/01/24 19:29:59 mabi Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -444,11 +444,6 @@ x11-apps/mkcfm
 # Dead upstream, no release in 2 years and
 # doesn't work with PostgreSQL 8.X releases.
 www-misc/pglogd
-
-# Matti Bickel <mabi@gentoo.org> (13 Jan 2007)
-# Masked slotted versions pending further testing, needs further investigation
-=dev-lang/lua-5.0.3-r1
-=dev-lang/lua-5.1.1-r1
 
 # Marijn Schouten <hkBst@gentoo.org> (13 Jan 2007)
 # Pending removal
