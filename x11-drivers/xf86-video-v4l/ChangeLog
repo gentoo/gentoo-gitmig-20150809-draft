@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-v4l
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-v4l/ChangeLog,v 1.23 2006/10/13 23:15:48 joshuabaergen Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-v4l/ChangeLog,v 1.24 2007/01/24 07:12:36 dberkholz Exp $
+
+  24 Jan 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  -xf86-video-v4l-0.0.1.5.ebuild:
+  Stop supporting Xorg 7.0.
 
   13 Oct 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   xf86-video-v4l-0.1.1.ebuild:

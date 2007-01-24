@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-citron
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-citron/ChangeLog,v 1.29 2006/10/13 23:15:49 joshuabaergen Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-citron/ChangeLog,v 1.30 2007/01/24 06:43:19 dberkholz Exp $
+
+  24 Jan 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  -xf86-input-citron-2.1.5.ebuild:
+  Stop supporting Xorg 7.0.
 
   13 Oct 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   xf86-input-citron-2.2.0.ebuild:
