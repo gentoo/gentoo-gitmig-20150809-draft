@@ -1,0 +1,12 @@
+diff -NurdB espeak-1.18-source/src/Makefile espeak-1.18-source-patched/src/Makefile
+--- espeak-1.18-source/src/Makefile	2007-01-15 01:08:03.000000000 +0000
++++ espeak-1.18-source-patched/src/Makefile	2007-01-24 18:17:25.000000000 +0000
+@@ -50,7 +50,7 @@
+ $(BIN_NAME): $(OBJS1)
+ 	$(CXX) -o $@ $(OBJS1) $(LIBS1)
+ 
+-$(BIN2_NAME): $(OBJS3)
++$(BIN2_NAME): $(OBJS3) $(LIB_NAME)
+ 	$(CXX) -o $@ $(OBJS3) $(LIBS3)
+ 
+ 

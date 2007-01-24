@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.18.ebuild,v 1.1 2007/01/22 18:53:25 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.18.ebuild,v 1.2 2007/01/24 18:52:12 leonardop Exp $
+
+inherit eutils
 
 MY_P="${P}-source"
 
@@ -20,14 +22,19 @@ S=${WORKDIR}/${MY_P}
 
 
 src_unpack() {
-	unpack ${A}
-	cd "${S}/src"
+	unpack "${A}"
+	cd "${S}"
 
-	# select the version of portaudio to use
-	if has_version "=media-libs/portaudio-18*" ; then
-		mv -f portaudio18.h portaudio.h
-	elif has_version "=media-libs/portaudio-19*" ; then
-		mv -f portaudio19.h portaudio.h
+	# Fix compilation in 64bit systems (e.g. amd64)
+	epatch "${FILESDIR}/${P}-64bits.patch"
+
+	# Fix parallel compilation
+	epatch "${FILESDIR}/${P}-parallel.patch"
+
+	# portaudio.h is by default the same as portaudio18.h, but use the version
+	# 19 API if available
+	if has_version "=media-libs/portaudio-19*" ; then
+		mv -f "${S}/src/portaudio19.h" "${S}/src/portaudio.h"
 	fi
 }
 
