@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.7.0.ebuild,v 1.3 2007/01/22 16:38:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.7.0.ebuild,v 1.4 2007/01/24 14:42:59 betelgeuse Exp $
 
 inherit java-pkg-2
 
@@ -43,7 +43,7 @@ src_compile() {
 	# this ensures that when building ant with bootstrapped ant,
 	# only the source is used for resolving references, and not
 	# the classes in bootstrapped ant
-	# but jikes in kaffe has issues with this...	
+	# but jikes in kaffe has issues with this...
 	if ! java-pkg_current-vm-matches kaffe; then
 		bsyscp="-Dbuild.sysclasspath=ignore"
 	fi
