@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2-r1.ebuild,v 1.11 2006/02/01 10:11:54 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2-r1.ebuild,v 1.12 2007/01/24 15:04:55 genone Exp $
 
 inherit eutils flag-o-matic
 
@@ -96,10 +96,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "After installing this package, you should run \"/etc/tripwire/twinstall.sh\""
-	einfo "to generate cryptographic keys, and \"tripwire --init\" to initialize the"
-	einfo "database Tripwire uses."
-	einfo
-	einfo "A quickstart guide is included with the documentation."
-	einfo
+	elog "After installing this package, you should run \"/etc/tripwire/twinstall.sh\""
+	elog "to generate cryptographic keys, and \"tripwire --init\" to initialize the"
+	elog "database Tripwire uses."
+	elog
+	elog "A quickstart guide is included with the documentation."
+	elog
 }

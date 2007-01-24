@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.220.ebuild,v 1.5 2006/08/01 12:25:17 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.220.ebuild,v 1.6 2007/01/24 15:07:40 genone Exp $
 
 IUSE="ssl"
 
@@ -81,8 +81,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "To make usermin start at boot time, run: 'rc-update add usermin default'."
-	einfo "Point your web browser to http://localhost:20000 to use usermin."
+	elog "To make usermin start at boot time, run: 'rc-update add usermin default'."
+	elog "Point your web browser to http://localhost:20000 to use usermin."
 }
 
 pkg_prerm() {

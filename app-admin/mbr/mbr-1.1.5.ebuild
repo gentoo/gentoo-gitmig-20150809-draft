@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mbr/mbr-1.1.5.ebuild,v 1.11 2005/10/02 14:24:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mbr/mbr-1.1.5.ebuild,v 1.12 2007/01/24 14:41:35 genone Exp $
 
 DESCRIPTION="A replacement master boot record for IBM-PC compatible computers"
 HOMEPAGE="http://www.chiark.greenend.org.uk/~neilt/mbr/"
@@ -20,5 +20,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "To install the MBR, run /sbin/install-mbr"
+	elog "To install the MBR, run /sbin/install-mbr"
 }

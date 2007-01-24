@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/osiris-1.5.2.ebuild,v 1.12 2006/11/23 15:08:07 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/osiris-1.5.2.ebuild,v 1.13 2007/01/24 14:46:42 genone Exp $
 
 DESCRIPTION="File integrity verification system"
 HOMEPAGE="http://osiris.shmoo.com/"
@@ -25,8 +25,8 @@ src_compile() {
 	# Osiris provides the necessary gdbm source so that gdbm does not
 	# need to be installed to use Osiris. If mysql is set as a USE
 	# variable, Osiris will use mysql instead of gdbm.
-	einfo "Osiris uses gdbm by default, and will use MySQL if \"mysql\""
-	einfo "is set as a USE variable; it cannot be configured to use both."
+	elog "Osiris uses gdbm by default, and will use MySQL if \"mysql\""
+	elog "is set as a USE variable; it cannot be configured to use both."
 
 	local myconf
 	use mysql \

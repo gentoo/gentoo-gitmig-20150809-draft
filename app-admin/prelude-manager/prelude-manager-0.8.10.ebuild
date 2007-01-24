@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.8.10.ebuild,v 1.12 2006/11/23 15:11:25 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.8.10.ebuild,v 1.13 2007/01/24 14:49:40 genone Exp $
 
 inherit flag-o-matic
 
@@ -55,7 +55,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "If you want to use unstable prelude, consider using unstable"
-	einfo "app-admin/prelude-manager to avoid undesired downgrades of"
-	einfo "dev-libs/libprelude."
+	elog "If you want to use unstable prelude, consider using unstable"
+	elog "app-admin/prelude-manager to avoid undesired downgrades of"
+	elog "dev-libs/libprelude."
 }

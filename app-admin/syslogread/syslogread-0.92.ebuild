@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/syslogread-0.92.ebuild,v 1.2 2006/07/24 19:14:33 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/syslogread-0.92.ebuild,v 1.3 2007/01/24 15:02:03 genone Exp $
 
 inherit eutils toolchain-funcs
 
@@ -59,11 +59,11 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "Run "
-	einfo "emerge --config =${PF}"
-	einfo "to create or update your run files (backups are created) in"
-	einfo "    /var/lib/supervise/klogd (kernel logger)"
-	einfo "    /var/lib/supervise/syslog (system logger)"
+	elog "Run "
+	elog "emerge --config =${PF}"
+	elog "to create or update your run files (backups are created) in"
+	elog "    /var/lib/supervise/klogd (kernel logger)"
+	elog "    /var/lib/supervise/syslog (system logger)"
 	echo
 }
 

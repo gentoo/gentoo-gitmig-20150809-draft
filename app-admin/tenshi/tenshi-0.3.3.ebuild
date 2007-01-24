@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/tenshi-0.3.3.ebuild,v 1.4 2005/08/23 12:47:51 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/tenshi-0.3.3.ebuild,v 1.5 2007/01/24 15:03:16 genone Exp $
 
 inherit eutils
 
@@ -34,15 +34,15 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "This app was formerly known as wasabi. The name was changed"
-	einfo "due to trademark issues. If you are upgrading from an old"
-	einfo "wasabi version please consider removing the 'wasabi' user"
-	einfo "which was created by the old ebuilds."
-	einfo
-	einfo "Please also be aware that if upgrading from versions <=0.2"
-	einfo "the configuration syntax for time intervals has changed to"
-	einfo "crontab style entries, old configurations won't work. Please"
-	einfo "check the manpage for full details."
-	einfo
+	elog
+	elog "This app was formerly known as wasabi. The name was changed"
+	elog "due to trademark issues. If you are upgrading from an old"
+	elog "wasabi version please consider removing the 'wasabi' user"
+	elog "which was created by the old ebuilds."
+	elog
+	elog "Please also be aware that if upgrading from versions <=0.2"
+	elog "the configuration syntax for time intervals has changed to"
+	elog "crontab style entries, old configurations won't work. Please"
+	elog "check the manpage for full details."
+	elog
 }

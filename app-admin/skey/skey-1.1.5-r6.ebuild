@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r6.ebuild,v 1.1 2007/01/05 10:40:56 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r6.ebuild,v 1.2 2007/01/24 14:58:14 genone Exp $
 
 inherit flag-o-matic ccc eutils
 
@@ -108,6 +108,6 @@ pkg_postinst() {
 	# these permissions are applied by the skey system if missing.
 	chmod 0600 /etc/skey/skeykeys
 
-	einfo "For an instroduction into using s/key authentication, take"
-	einfo "a look at the EXAMPLES section from the skey(1) manpage."
+	elog "For an instroduction into using s/key authentication, take"
+	elog "a look at the EXAMPLES section from the skey(1) manpage."
 }

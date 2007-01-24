@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/sxid-4.0.4.ebuild,v 1.8 2005/01/01 11:29:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/sxid-4.0.4.ebuild,v 1.9 2007/01/24 15:00:36 genone Exp $
 
 DESCRIPTION="suid, sgid file and directory checking"
 SRC_URI="http://www.phunnypharm.org/pub/sxid/${P/-/_}.tar.gz"
@@ -35,5 +35,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "You will need to configure sxid.conf for your system using the manpage and example"
+	elog "You will need to configure sxid.conf for your system using the manpage and example"
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sdsc-syslog/sdsc-syslog-1.0.2.ebuild,v 1.10 2006/10/19 00:21:05 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sdsc-syslog/sdsc-syslog-1.0.2.ebuild,v 1.11 2007/01/24 14:56:55 genone Exp $
 
 DESCRIPTION="SDSC Secure Syslog provides RFC3080 and RFC3081 logging services"
 HOMEPAGE="http://security.sdsc.edu/software/sdsc-syslog/"
@@ -73,6 +73,6 @@ src_install() {
 
 
 pkg_postinst() {
-	einfo "See /etc/syslogd.conf.sample for client configuration and"
-	einfo "/etc/syslogd.conf.sample-loghost for server configuration"
+	elog "See /etc/syslogd.conf.sample for client configuration and"
+	elog "/etc/syslogd.conf.sample-loghost for server configuration"
 }

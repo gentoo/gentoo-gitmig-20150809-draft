@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/psmon-1.0.4.ebuild,v 1.10 2006/02/11 21:00:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/psmon-1.0.4.ebuild,v 1.11 2007/01/24 14:50:48 genone Exp $
 
 DESCRIPTION="Monitors process table to slay aggressive, and spawn dead, processes"
 HOMEPAGE="http://www.psmon.com/"
@@ -25,6 +25,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "NOTICE: Please modify at least the NotifyEmail parameter"
-	einfo "		found from the /etc/psmon.conf"
+	elog "NOTICE: Please modify at least the NotifyEmail parameter"
+	elog "		found from the /etc/psmon.conf"
 }

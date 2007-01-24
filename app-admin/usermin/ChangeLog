@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/usermin
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.101 2006/10/24 10:48:53 tcort Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.102 2007/01/24 15:07:40 genone Exp $
+
+  24 Jan 2007; Marius Mauch <genone@gentoo.org> usermin-1.220.ebuild,
+  usermin-1.230.ebuild:
+  Replacing einfo with elog
 
   24 Oct 2006; Thomas Cort <tcort@gentoo.org> usermin-1.230.ebuild:
   Stable on alpha wrt security Bug #145829.

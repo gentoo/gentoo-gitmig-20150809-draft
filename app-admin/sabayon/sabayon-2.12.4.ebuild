@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.12.4.ebuild,v 1.13 2007/01/21 20:33:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.12.4.ebuild,v 1.14 2007/01/24 14:55:50 genone Exp $
 
 inherit gnome2 eutils python multilib
 
@@ -71,10 +71,10 @@ src_unpack() {
 
 pkg_postinst() {
 	# unfortunately /etc/gconf is CONFIG_PROTECT_MASK'd
-	einfo "To apply Sabayon defaults and mandatory settings to all users, put"
-	einfo '    include "$(HOME)/.gconf.path.mandatory"'
-	einfo "in /etc/gconf/2/local-mandatory.path and put"
-	einfo '    include "$(HOME)/.gconf.path.defaults"'
-	einfo "in /etc/gconf/2/local-defaults.path."
-	einfo "You can safely create these files if they do not already exist."
+	elog "To apply Sabayon defaults and mandatory settings to all users, put"
+	elog '    include "$(HOME)/.gconf.path.mandatory"'
+	elog "in /etc/gconf/2/local-mandatory.path and put"
+	elog '    include "$(HOME)/.gconf.path.defaults"'
+	elog "in /etc/gconf/2/local-defaults.path."
+	elog "You can safely create these files if they do not already exist."
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/zope-config-0.3.ebuild,v 1.13 2005/01/01 11:38:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/zope-config-0.3.ebuild,v 1.14 2007/01/24 15:11:32 genone Exp $
 
 DESCRIPTION="A Gentoo Zope multi-Instance configure tool"
 SRC_URI=""
@@ -31,6 +31,6 @@ src_install() {
 
 pkg_postinst() {
 	source ${FILESDIR}/${PV}/zope-config.conf
-	einfo "Please note that new instances now log into ${EVENTLOGDIR}"
-	einfo "Please see the configuration file /etc/zope-config.conf"
+	elog "Please note that new instances now log into ${EVENTLOGDIR}"
+	elog "Please see the configuration file /etc/zope-config.conf"
 }

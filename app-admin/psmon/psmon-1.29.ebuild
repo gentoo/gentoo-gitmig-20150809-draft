@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/psmon-1.29.ebuild,v 1.5 2006/02/11 21:00:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/psmon-1.29.ebuild,v 1.6 2007/01/24 14:50:48 genone Exp $
 
 inherit perl-app
 
@@ -25,6 +25,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "NOTICE: Please modify at least the NotifyEmail parameter"
-	einfo "		found from the /etc/psmon.conf"
+	elog "NOTICE: Please modify at least the NotifyEmail parameter"
+	elog "		found from the /etc/psmon.conf"
 }

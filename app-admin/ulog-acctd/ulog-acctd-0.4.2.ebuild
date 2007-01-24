@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulog-acctd/ulog-acctd-0.4.2.ebuild,v 1.7 2005/07/09 13:50:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulog-acctd/ulog-acctd-0.4.2.ebuild,v 1.8 2007/01/24 15:06:07 genone Exp $
 
 inherit eutils
 
@@ -51,5 +51,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "ulog-acctd get's it's packages via ULOG-targets in your iptables-rules."
+	elog "ulog-acctd get's it's packages via ULOG-targets in your iptables-rules."
 }

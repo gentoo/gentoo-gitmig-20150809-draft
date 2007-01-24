@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/osiris-4.2.2.ebuild,v 1.1 2006/12/12 07:38:10 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/osiris-4.2.2.ebuild,v 1.2 2007/01/24 14:46:42 genone Exp $
 
 inherit eutils autotools
 
@@ -55,26 +55,26 @@ src_compile()
 }
 
 src_install() {
-	einfo "Osiris Scanning Daemon Version $VERSION for $SYSTEM"
-	einfo "Copyright (c) 2006 Brian Wotring. All Rights Reserved."
-	einfo ""
-	einfo ""
-	einfo "This installation was configured and built to run as osiris"
-	einfo "     agent user name: osiris"
-	einfo "management user name: osiris"
-	einfo ""
-	einfo "This installation was configured and built to use osiris"
-	einfo "     agent root directory: /var/lib/osiris"
-	einfo "management root directory: /var/lib/osiris"
-	einfo ""
-	einfo "The username and directory will be created during the"
-	einfo "installation process if they do not already exist."
-	einfo ""
-	einfo "By installing this product you agree that you have read the"
-	einfo "LICENSE file and will comply with its terms. "
-	einfo ""
-	einfo "---------------------------------------------------------------------"
-	einfo ""
+	elog "Osiris Scanning Daemon Version $VERSION for $SYSTEM"
+	elog "Copyright (c) 2006 Brian Wotring. All Rights Reserved."
+	elog ""
+	elog ""
+	elog "This installation was configured and built to run as osiris"
+	elog "     agent user name: osiris"
+	elog "management user name: osiris"
+	elog ""
+	elog "This installation was configured and built to use osiris"
+	elog "     agent root directory: /var/lib/osiris"
+	elog "management root directory: /var/lib/osiris"
+	elog ""
+	elog "The username and directory will be created during the"
+	elog "installation process if they do not already exist."
+	elog ""
+	elog "By installing this product you agree that you have read the"
+	elog "LICENSE file and will comply with its terms. "
+	elog ""
+	elog "---------------------------------------------------------------------"
+	elog ""
 
 #	if ! use noagent ; then
 		dosbin src/osirisd/osirisd
@@ -113,9 +113,9 @@ src_install() {
 #pkg_postinst()
 #{
 #	if ! use console ; then
-#		einfo "By default, the osiris ebuild only installs the agent."
-#		einfo "To enable installing the console, please add the 'console' flag"
-#		einfo "to your USE variable and re-emerge osiris."
+#		elog "By default, the osiris ebuild only installs the agent."
+#		elog "To enable installing the console, please add the 'console' flag"
+#		elog "to your USE variable and re-emerge osiris."
 #	fi
 #}
 
@@ -129,7 +129,7 @@ pkg_postrm()
 	# configs, and other things should
 	# be
 	# removed.
-	einfo "The directory /var/lib/osiris will not be removed. You may remove"
-	einfo "it manually if you will not be reinstalling osiris at a later time."
+	elog "The directory /var/lib/osiris will not be removed. You may remove"
+	elog "it manually if you will not be reinstalling osiris at a later time."
 }
 

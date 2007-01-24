@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/prelude-lml
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/ChangeLog,v 1.29 2007/01/07 14:11:44 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/ChangeLog,v 1.30 2007/01/24 14:48:22 genone Exp $
+
+  24 Jan 2007; Marius Mauch <genone@gentoo.org> prelude-lml-0.8.6.ebuild:
+  Replacing einfo with elog
 
 *prelude-lml-0.9.8.1 (07 Jan 2007)
 

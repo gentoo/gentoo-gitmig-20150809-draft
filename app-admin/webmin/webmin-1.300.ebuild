@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.300.ebuild,v 1.8 2006/10/24 10:47:58 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.300.ebuild,v 1.9 2007/01/24 15:09:51 genone Exp $
 
 inherit eutils pam
 
@@ -125,9 +125,9 @@ pkg_postinst() {
 	crypt=${crypt//\//\\\/}
 	sed -i -e "s/root:XXX/root:${crypt}/" /etc/webmin/miniserv.users
 
-	einfo "To make webmin start at boot time, run: 'rc-update add webmin default'."
-	use ssl && einfo "Point your web browser to https://localhost:10000 to use webmin."
-	use ssl || einfo "Point your web browser to http://localhost:10000 to use webmin."
+	elog "To make webmin start at boot time, run: 'rc-update add webmin default'."
+	use ssl && elog "Point your web browser to https://localhost:10000 to use webmin."
+	use ssl || elog "Point your web browser to http://localhost:10000 to use webmin."
 }
 
 pkg_prerm() {

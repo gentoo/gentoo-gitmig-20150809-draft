@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/recursos/recursos-2.0.ebuild,v 1.4 2006/08/24 10:18:13 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/recursos/recursos-2.0.ebuild,v 1.5 2007/01/24 14:52:47 genone Exp $
 
 DESCRIPTION="Script to create html and text report about your system."
 HOMEPAGE="http://www.josealberto.org"
@@ -38,20 +38,20 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Fist you must configure /etc/recursos2.conf"
-	einfo "Then follow these steps:"
-	echo
-	einfo "1. Run R2createrrd.sh"
-	echo
-	einfo "2. Add crontab jobs (this is an example):"
-	einfo "*/2 * * * *     root    /usr/bin/R2updaterrd.sh"
-	einfo "*/5 * * * *     root    /usr/bin/R2generarrd.sh"
-	einfo "*/10 * * * *    root    /usr/bin/Recursos2.sh \ "
-	einfo "    title general system disks net \ "
-	einfo "    > /var/www/localhost/htdocs/recursos.html"
-	echo
-	einfo "You can use Recursos2.sh to extract info about your system"
-	einfo "in html or plain text and mail the file or whatever."
-	echo
+	elog "Fist you must configure /etc/recursos2.conf"
+	elog "Then follow these steps:"
+	elog
+	elog "1. Run R2createrrd.sh"
+	elog
+	elog "2. Add crontab jobs (this is an example):"
+	elog "*/2 * * * *     root    /usr/bin/R2updaterrd.sh"
+	elog "*/5 * * * *     root    /usr/bin/R2generarrd.sh"
+	elog "*/10 * * * *    root    /usr/bin/Recursos2.sh \ "
+	elog "    title general system disks net \ "
+	elog "    > /var/www/localhost/htdocs/recursos.html"
+	elog
+	elog "You can use Recursos2.sh to extract info about your system"
+	elog "in html or plain text and mail the file or whatever."
+	elog
 }
 

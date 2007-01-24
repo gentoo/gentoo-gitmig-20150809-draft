@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sdsc-syslog
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sdsc-syslog/ChangeLog,v 1.9 2006/10/19 00:21:05 jokey Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sdsc-syslog/ChangeLog,v 1.10 2007/01/24 14:56:55 genone Exp $
+
+  24 Jan 2007; Marius Mauch <genone@gentoo.org> sdsc-syslog-1.0.2.ebuild:
+  Replacing einfo with elog
 
   19 Oct 2006; Markus Ullmann <jokey@gentoo.org> sdsc-syslog-1.0.2.ebuild:
   minor QA: IUSE wrt bug #150083

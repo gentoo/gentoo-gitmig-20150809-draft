@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/nologin/nologin-20050522.ebuild,v 1.8 2006/11/05 09:22:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/nologin/nologin-20050522.ebuild,v 1.9 2007/01/24 14:43:41 genone Exp $
 
 inherit toolchain-funcs
 
@@ -27,11 +27,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "To use nologin, edit /etc/passwd and replace /bin/false with"
-	einfo "/sbin/nologin for those accounts."
-	einfo
-	einfo "If the file /etc/nologin.txt exists, nologin displays it's"
-	einfo "contents instead of the default message."
-	einfo
+	elog
+	elog "To use nologin, edit /etc/passwd and replace /bin/false with"
+	elog "/sbin/nologin for those accounts."
+	elog
+	elog "If the file /etc/nologin.txt exists, nologin displays it's"
+	elog "contents instead of the default message."
+	elog
 }
