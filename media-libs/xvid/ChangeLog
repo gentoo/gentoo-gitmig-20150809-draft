@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xvid
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.79 2006/12/03 19:51:09 corsair Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.80 2007/01/24 22:16:25 aballier Exp $
+
+*xvid-1.1.2 (24 Jan 2007)
+
+  24 Jan 2007; Alexis Ballier <aballier@gentoo.org> +xvid-1.1.2.ebuild:
+  Version bump, bug #155842
 
   03 Dec 2006; Markus Rothe <corsair@gentoo.org> xvid-1.1.0-r3.ebuild:
   Stable on ppc64
