@@ -1,6 +1,22 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.217 2007/01/24 06:25:09 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.218 2007/01/24 06:34:12 dberkholz Exp $
+
+  24 Jan 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  -files/1.0.2-Xprint-xprintdir.patch, -files/1.0.2-dbe-render.diff,
+  -files/1.0.2-fix-readKernelMapping-overrun.patch,
+  -files/1.0.2-fix-rom-read-dualhead.patch,
+  -files/1.0.2-fix-xorgconfig-rgbpath-and-mouse.patch,
+  -files/1.0.2-try-to-fix-xorgcfg.patch, -files/x11r7.0-setuid.diff,
+  -files/xorg-server-1.0.2-64bit-fix-for-glx.patch,
+  -files/xorg-server-1.0.2-64bit-fix-have-dix-config.patch,
+  -files/xorg-server-1.0.2-64bit-fix-indirect-vertex-array.patch,
+  -files/xorg-server-1.0.2-Sbus.patch,
+  -files/xorg-server-1.0.2-Xprt-build.patch,
+  -files/xorg-server-1.0.2-sparc64-cfbrrop-fix.patch,
+  -files/xorg-server-1.0.2-xprint-init.patch,
+  -files/CVE-2006-1526-xrender-mitri.patch, -xorg-server-1.0.2-r8.ebuild:
+  Stop supporting Xorg 7.0.
 
   24 Jan 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   -files/1.0.99.901-Xprint-xprintdir.patch,
