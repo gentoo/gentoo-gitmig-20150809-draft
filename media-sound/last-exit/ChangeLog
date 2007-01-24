@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/last-exit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/ChangeLog,v 1.7 2007/01/23 23:26:54 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/ChangeLog,v 1.8 2007/01/24 02:15:01 steev Exp $
+
+  24 Jan 2007; Steev Klimaszewski <steev@gentoo.org> last-exit-4.0.ebuild:
+  Fix the path for 4.0, Closes bug #163529. Thanks to Jose daLuz
+  <jdaluz@gmail.com> for reporting.
 
 *last-exit-4.0 (23 Jan 2007)
 

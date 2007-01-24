@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/last-exit-4.0.ebuild,v 1.1 2007/01/23 23:26:54 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/last-exit-4.0.ebuild,v 1.2 2007/01/24 02:15:01 steev Exp $
 
 inherit mono gnome2 eutils
 
@@ -27,7 +27,7 @@ DEPEND=">=gnome-base/gconf-2.0
 		>=dev-dotnet/gconf-sharp-1.9.2
 		|| ( >=dev-libs/dbus-glib-0.71 <sys-apps/dbus-0.90 )"
 
-S=${WORKDIR}/"${PN}-3"
+S=${WORKDIR}/"${PN}-4"
 
 pkg_setup() {
 	G2CONF="${G2CONF} \
