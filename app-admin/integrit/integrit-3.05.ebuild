@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/integrit-3.05.ebuild,v 1.2 2006/05/08 05:08:33 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/integrit-3.05.ebuild,v 1.3 2007/01/24 14:28:16 genone Exp $
 
 DESCRIPTION="file integrity verification program"
 HOMEPAGE="http://integrit.sourceforge.net/"
@@ -50,7 +50,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "It is recommended that the integrit binary is copied to a secure"
-	einfo "location and re-copied at runtime or run from a secure medium."
-	einfo "You should also create a configuration file (see examples)."
+	elog "It is recommended that the integrit binary is copied to a secure"
+	elog "location and re-copied at runtime or run from a secure medium."
+	elog "You should also create a configuration file (see examples)."
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hpasm/hpasm-6.30.0.12-r1.ebuild,v 1.18 2005/08/23 17:39:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hpasm/hpasm-6.30.0.12-r1.ebuild,v 1.19 2007/01/24 14:25:25 genone Exp $
 
 inherit rpm
 
@@ -64,12 +64,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo ""
-	einfo "If you want to run cpqimlview or hpimlview you will"
-	einfo "need to emerge an X11 implementation, tix, and tclx"
-	einfo ""
-	einfo "You now need to execute /etc/init.d/hpasm start in"
-	einfo "order to use the installed package. The kernel"
-	einfo "modules will automatically build for you."
-	einfo ""
+	elog
+	elog "If you want to run cpqimlview or hpimlview you will"
+	elog "need to emerge an X11 implementation, tix, and tclx"
+	elog
+	elog "You now need to execute /etc/init.d/hpasm start in"
+	elog "order to use the installed package. The kernel"
+	elog "modules will automatically build for you."
+	elog
 }

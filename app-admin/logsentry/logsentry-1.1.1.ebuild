@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/logsentry-1.1.1.ebuild,v 1.25 2006/08/06 16:14:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/logsentry-1.1.1.ebuild,v 1.26 2007/01/24 14:32:04 genone Exp $
 
 DESCRIPTION="automatically monitor system logs and mail security violations on a periodic basis"
 # Seems that the project has been discontinued by CISCO?
@@ -56,8 +56,8 @@ EOF
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Uncomment the logcheck line in /etc/cron.hourly/logsentry.cron,"
-	einfo "or add directly to root's crontab"
-	einfo
+	elog
+	elog "Uncomment the logcheck line in /etc/cron.hourly/logsentry.cron,"
+	elog "or add directly to root's crontab"
+	elog
 }

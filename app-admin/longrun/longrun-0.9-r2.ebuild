@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/longrun-0.9-r2.ebuild,v 1.2 2005/09/03 21:35:27 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/longrun-0.9-r2.ebuild,v 1.3 2007/01/24 14:34:58 genone Exp $
 
 inherit eutils linux-info
 
@@ -51,15 +51,15 @@ src_install() {
 
 pkg_postinst() {
 	if linux_chkconfig_module X86_MSR; then
-		einfo "You have compiled MSR as a module."
-		einfo "You need to load it before using Longrun."
-		einfo "The module is called msr."
-		einfo
+		elog "You have compiled MSR as a module."
+		elog "You need to load it before using Longrun."
+		elog "The module is called msr."
+		elog
 	fi
 
 	if linux_chkconfig_module X86_CPUID; then
-		einfo "You have compiled CPUID as a module."
-		einfo "You need to load it before using Longrun."
-		einfo "The module is called cpuid."
+		elog "You have compiled CPUID as a module."
+		elog "You need to load it before using Longrun."
+		elog "The module is called cpuid."
 	fi
 }
