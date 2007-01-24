@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sdlvexed/sdlvexed-0.6.ebuild,v 1.4 2005/10/31 08:52:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sdlvexed/sdlvexed-0.6.ebuild,v 1.5 2007/01/24 18:57:30 mr_bones_ Exp $
 
 inherit games
 
@@ -25,7 +25,6 @@ src_unpack() {
 		-e "/PREFIX=/s:\.:${GAMES_DATADIR}/${PN}:" sdlvexed \
 		|| die "sed sdlvexed failed"
 }
-
 
 src_install() {
 	dogamesbin sdlvexed || die "dogamesbin failed"
