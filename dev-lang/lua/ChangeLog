@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/lua
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.63 2007/01/23 09:47:09 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.64 2007/01/24 17:12:14 beandog Exp $
+
+  24 Jan 2007; Steve Dibb <beandog@gentoo.org> lua-5.1.1.ebuild:
+  Add ~amd64, bug 155518
 
   23 Jan 2007; Matti Bickel <mabi@gentoo.org> files/lua-5.1.1-make.patch:
   Fixing slotted fallout in make.patch
