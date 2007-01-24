@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.2_p9-r1.ebuild,v 1.2 2007/01/18 18:35:43 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.2_p9-r1.ebuild,v 1.3 2007/01/24 02:36:48 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -42,10 +42,6 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${MY_P}.tar.gz
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-3.1-gentoo.patch
-
-	# Fix process substitution on BSD.
-	epatch "${FILESDIR}"/${PN}-3.2-process-subst.patch
 
 	# Include official patches
 	local i
@@ -59,6 +55,11 @@ src_unpack() {
 	cd ../..
 
 	if ! use vanilla ; then
+		epatch "${FILESDIR}"/${PN}-3.1-gentoo.patch
+
+		# Fix process substitution on BSD.
+		epatch "${FILESDIR}"/${PN}-3.2-process-subst.patch
+
 		epatch "${FILESDIR}"/${PN}-3.2-ulimit.patch
 		# Don't barf on handled signals in scripts
 		epatch "${FILESDIR}"/${PN}-3.0-trap-fg-signals.patch
@@ -126,7 +127,7 @@ src_install() {
 
 	doman doc/*.1
 	dodoc README NEWS AUTHORS CHANGES COMPAT Y2K doc/FAQ doc/INTRO
-	dosym bash.info.bz2 /usr/share/info/bashref.info.bz2
+	dosym bash.info /usr/share/info/bashref.info
 }
 
 pkg_preinst() {
