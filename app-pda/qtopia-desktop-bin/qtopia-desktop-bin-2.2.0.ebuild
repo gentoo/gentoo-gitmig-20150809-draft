@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/qtopia-desktop-bin/qtopia-desktop-bin-2.2.0.ebuild,v 1.1 2006/07/09 05:16:21 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/qtopia-desktop-bin/qtopia-desktop-bin-2.2.0.ebuild,v 1.2 2007/01/24 03:33:55 genone Exp $
 
 inherit eutils rpm multilib
 
@@ -61,18 +61,16 @@ src_install() {
 }
 
 pkg_postinst() {
-
-	einfo " Finished installing Qtopia Desktop ${PV}-${REV} into ${QD}"
-	einfo
-	einfo " To start Qtopia Desktop, run:"
-	einfo
-	einfo "   $ qtopiadesktop"
-	einfo
-	einfo "See the usb0.conf file for a static network configuration for the"
-	einfo "Zaurus cradle interface (it works with an SL-5x00).  Note the old"
-	einfo "way of adding a config script to /etc/hotplug/usb also works, but"
-	einfo "depends on the desktop kernel version and module name, since the"
-	einfo "latest 2.6.16 module is cdc_ether for older models of the Zaurus"
-	einfo "(such as above) running OZ with kernel 2.4.x."
-	einfo
+	elog " Finished installing Qtopia Desktop ${PV}-${REV} into ${QD}"
+	elog
+	elog " To start Qtopia Desktop, run:"
+	elog "   $ qtopiadesktop"
+	elog
+	elog "See the usb0.conf file for a static network configuration for the"
+	elog "Zaurus cradle interface (it works with an SL-5x00).  Note the old"
+	elog "way of adding a config script to /etc/hotplug/usb also works, but"
+	elog "depends on the desktop kernel version and module name, since the"
+	elog "latest 2.6.16 module is cdc_ether for older models of the Zaurus"
+	elog "(such as above) running OZ with kernel 2.4.x."
+	elog
 }

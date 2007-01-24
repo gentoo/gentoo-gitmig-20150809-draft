@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/p3nfs
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/p3nfs/ChangeLog,v 1.15 2006/06/02 17:10:39 mrness Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/p3nfs/ChangeLog,v 1.16 2007/01/24 03:32:04 genone Exp $
+
+  24 Jan 2007; Marius Mauch <genone@gentoo.org> p3nfs-5.19.ebuild:
+  Replacing einfo with elog
 
   02 Jun 2006; Alin Nastac <mrness@gentoo.org>
   -files/p3nfs-5.18-fix-defines.patch, -p3nfs-5.18-r1.ebuild:

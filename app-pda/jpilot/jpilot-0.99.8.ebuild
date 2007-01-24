@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.8.ebuild,v 1.2 2006/08/29 03:54:47 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.8.ebuild,v 1.3 2007/01/24 03:30:21 genone Exp $
 
 inherit eutils multilib
 
@@ -52,13 +52,13 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "The jpilot-syncmal plugin has moved to its own ebuild."
-	einfo "If you want to use that plugin, please run"
-	einfo "    emerge jpilot-syncmal"
-	einfo
-	einfo "There are other plugins available as well.  To see the"
-	einfo "list, please run"
-	einfo "    emerge -s jpilot"
-	einfo
+	elog
+	elog "The jpilot-syncmal plugin has moved to its own ebuild."
+	elog "If you want to use that plugin, please run"
+	elog "    emerge jpilot-syncmal"
+	elog
+	elog "There are other plugins available as well.  To see the"
+	elog "list, please run"
+	elog "    emerge -s jpilot"
+	elog
 }

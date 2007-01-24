@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/qtopia-desktop-bin/qtopia-desktop-bin-1.7.0.ebuild,v 1.7 2006/07/09 05:16:21 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/qtopia-desktop-bin/qtopia-desktop-bin-1.7.0.ebuild,v 1.8 2007/01/24 03:33:55 genone Exp $
 
 inherit rpm
 
@@ -41,11 +41,9 @@ src_install() {
 }
 
 pkg_postinst() {
-
-	einfo " Finished installing Qtopia Desktop ${PV}${REV} into ${QD}"
-	einfo
-	einfo " To start Qtopia Desktop, run:"
-	einfo
-	einfo "   $ qtopiadesktop"
-	einfo
+	elog " Finished installing Qtopia Desktop ${PV}${REV} into ${QD}"
+	elog
+	elog " To start Qtopia Desktop, run:"
+	elog "   $ qtopiadesktop"
+	elog
 }
