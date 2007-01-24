@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.6_p10-r1.ebuild,v 1.2 2007/01/23 15:52:35 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.6_p10-r1.ebuild,v 1.3 2007/01/24 16:51:04 genone Exp $
 
 inherit flag-o-matic eutils linux-mod toolchain-funcs multilib
 
@@ -93,17 +93,16 @@ src_install() {
 
 
 pkg_postinst() {
+	elog "If you are using the serpent or rc6 encryption modules and have any problems,"
+	elog "please submit bugs to http://bugs.gentoo.org because these modules are not part"
+	elog "of the standard distribution of BestCrypt for Linux released by Jetico."
+	elog "For more information on these additional modules:"
+	elog "visit http://www.carceri.dk/index.php?redirect=other_bestcrypt"
 
-	einfo "If you are using the serpent or rc6 encryption modules and have any problems,"
-	einfo "please submit bugs to http://bugs.gentoo.org because these modules are not part"
-	einfo "of the standard distribution of BestCrypt for Linux released by Jetico."
-	einfo "For more information on these additional modules:"
-	einfo "visit http://www.carceri.dk/index.php?redirect=other_bestcrypt"
-
-	einfo
+	ewarn
 	ewarn "The BestCrypt drivers are not free - Please purchace a license from "
 	ewarn "http://www.jetico.com/"
+	ewarn
 
-	einfo
 	linux-mod_pkg_postinst
 }

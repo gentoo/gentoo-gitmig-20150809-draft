@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/asedriveiiie-serial/asedriveiiie-serial-3.4.ebuild,v 1.1 2006/12/16 11:05:13 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/asedriveiiie-serial/asedriveiiie-serial-3.4.ebuild,v 1.2 2007/01/24 16:47:57 genone Exp $
 
 DESCRIPTION="ASEDriveIIIe Serial Card Reader"
 HOMEPAGE="http://www.athena-scs.com"
@@ -25,10 +25,10 @@ src_install() {
 	insinto "$(dirname "${conf}")"
 	newins "etc/reader.conf" "$(basename "${conf}")"
 
-	einfo "NOTICE:"
-	einfo "1. update ${conf} file"
-	einfo "2. run update-reader.conf, yes this is a command..."
-	einfo "3. restart pcscd"
+	elog "NOTICE:"
+	elog "1. update ${conf} file"
+	elog "2. run update-reader.conf, yes this is a command..."
+	elog "3. restart pcscd"
 }
 
 pkg_postrm() {
@@ -39,8 +39,8 @@ pkg_postrm() {
 	if ! [ -f "$(grep LIBPATH "${conf}" | sed 's/LIBPATH *//' | sed 's/ *$//g')" ]; then
 		rm "${conf}"
 		update-reader.conf
-		einfo "NOTICE:"
-		einfo "You need to restart pcscd"
+		elog "NOTICE:"
+		elog "You need to restart pcscd"
 	fi
 }
 

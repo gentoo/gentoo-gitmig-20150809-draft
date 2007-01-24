@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/cryptoapi
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/ChangeLog,v 1.13 2005/03/12 01:43:26 dragonheart Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/ChangeLog,v 1.14 2007/01/24 16:52:26 genone Exp $
+
+  24 Jan 2007; Marius Mauch <genone@gentoo.org> cryptoapi-2.4.7.0.ebuild:
+  Replacing einfo with elog
 
   12 Mar 2005; Daniel Black <dragonheart@gentoo.org> cryptoapi-2.4.7.0.ebuild:
   Transition to linux-info eclass

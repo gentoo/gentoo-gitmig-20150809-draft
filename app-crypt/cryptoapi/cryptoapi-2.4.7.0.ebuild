@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/cryptoapi-2.4.7.0.ebuild,v 1.24 2005/03/12 01:43:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/cryptoapi-2.4.7.0.ebuild,v 1.25 2007/01/24 16:52:26 genone Exp $
 
 inherit linux-info
 
@@ -45,12 +45,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo  " "
-	einfo "Please add cryptoloop to your /etc/modules.autoload."
-	echo  "   If you would like to enable the module now:"
-	echo  "       depmod"
-	echo  "       modprobe cryptoloop"
-	einfo "Make sure loopback support is included within your kernel."
-	echo  " "
+	elog  " "
+	elog "Please add cryptoloop to your /etc/modules.autoload."
+	elog  "   If you would like to enable the module now:"
+	elog  "       depmod"
+	elog  "       modprobe cryptoloop"
+	elog "Make sure loopback support is included within your kernel."
+	elog  " "
 }
 

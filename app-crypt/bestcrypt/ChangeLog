@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/bestcrypt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.55 2007/01/23 19:38:17 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.56 2007/01/24 16:51:04 genone Exp $
+
+  24 Jan 2007; Marius Mauch <genone@gentoo.org> bestcrypt-1.6_p10-r1.ebuild:
+  Replacing einfo with elog
 
   23 Jan 2007; Alon Bar-Lev <alonbl@gentoo.org>
   -files/bestcrypt-1.6_p2-path.patch, -files/bestcrypt-1.6_p5-gcc41.patch,

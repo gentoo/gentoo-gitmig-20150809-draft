@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/asekey/asekey-3.3.ebuild,v 1.1 2006/12/16 11:05:46 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/asekey/asekey-3.3.ebuild,v 1.2 2007/01/24 16:49:49 genone Exp $
 
 DESCRIPTION="ASEKey USB SIM Card Reader"
 HOMEPAGE="http://www.athena-scs.com"
@@ -25,9 +25,9 @@ src_install() {
 	insinto "$(dirname "${conf}")"
 	newins "etc/reader.conf" "$(basename "${conf}")"
 
-	einfo "NOTICE:"
-	einfo "1. run update-reader.conf, yes this is a command..."
-	einfo "2. restart pcscd"
+	elog "NOTICE:"
+	elog "1. run update-reader.conf, yes this is a command..."
+	elog "2. restart pcscd"
 }
 
 pkg_postrm() {
@@ -38,8 +38,8 @@ pkg_postrm() {
 	if ! [ -f "$(grep LIBPATH "${conf}" | sed 's/LIBPATH *//' | sed 's/ *$//g')" ]; then
 		rm "${conf}"
 		update-reader.conf
-		einfo "NOTICE:"
-		einfo "You need to restart pcscd"
+		elog "NOTICE:"
+		elog "You need to restart pcscd"
 	fi
 }
 
