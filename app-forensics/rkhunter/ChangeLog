@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/rkhunter
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.53 2006/02/22 02:35:06 ka0ttic Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.54 2007/01/24 03:22:16 genone Exp $
+
+  24 Jan 2007; Marius Mauch <genone@gentoo.org> rkhunter-1.2.7-r1.ebuild,
+  rkhunter-1.2.8.ebuild:
+  Replacing einfo with elog
 
 *rkhunter-1.2.8 (22 Feb 2006)
 

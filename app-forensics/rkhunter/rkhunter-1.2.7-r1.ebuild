@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/rkhunter-1.2.7-r1.ebuild,v 1.3 2006/01/21 21:06:46 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/rkhunter-1.2.7-r1.ebuild,v 1.4 2007/01/24 03:22:16 genone Exp $
 
 inherit eutils bash-completion
 
@@ -52,9 +52,10 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "A cron script has been installed to /etc/cron.daily/rkhunter."
-	einfo "To enable it, edit /etc/cron.daily/rkhunter and follow the"
-	einfo "directions."
+	elog "A cron script has been installed to /etc/cron.daily/rkhunter."
+	elog "To enable it, edit /etc/cron.daily/rkhunter and follow the"
+	elog "directions."
+	echo
 	bash-completion_pkg_postinst
 }
 

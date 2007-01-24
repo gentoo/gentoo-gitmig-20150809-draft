@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/pyflag/pyflag-0.82.ebuild,v 1.2 2006/11/23 15:33:03 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/pyflag/pyflag-0.82.ebuild,v 1.3 2007/01/24 03:20:44 genone Exp $
 
 inherit eutils autotools
 
@@ -49,12 +49,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Optionally enter database details in /etc/pyflagrc"
-	einfo
-	einfo "To start PyFlag just run \"pyflag\" as a normal user"
-	einfo "then open your web browser on http://localhost:8000"
-	einfo
-	einfo "To create a database user \"emerge --config =${PF}\""
+	elog "Optionally enter database details in /etc/pyflagrc"
+	elog
+	elog "To start PyFlag just run \"pyflag\" as a normal user"
+	elog "then open your web browser on http://localhost:8000"
+	elog
+	elog "To create a database user \"emerge --config =${PF}\""
 }
 
 pkg_config() {

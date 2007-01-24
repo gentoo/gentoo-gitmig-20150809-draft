@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/air/air-1.2.8.ebuild,v 1.1 2005/09/28 21:42:54 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/air/air-1.2.8.ebuild,v 1.2 2007/01/24 03:13:42 genone Exp $
 
 DESCRIPTION="A GUI front-end to dd/dcfldd"
 HOMEPAGE="http://air-imager.sourceforge.net/"
@@ -49,10 +49,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "This will use programs from the following packages if installed:"
-	einfo "sys-apps/dcfldd"
-	einfo "net-analyzer/netcat"
-	einfo "net-analyzer/cryptcat"
+	elog "This will use programs from the following packages if installed:"
+	elog "sys-apps/dcfldd"
+	elog "net-analyzer/netcat"
+	elog "net-analyzer/cryptcat"
 
-	einfo "The author, steve@unixgurus.com, would appreciate and email of the install file /usr/share/doc/${PF}/air-install.log"
+	elog "The author, steve@unixgurus.com, would appreciate and email of the install file /usr/share/doc/${PF}/air-install.log"
 }

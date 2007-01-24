@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/chkrootkit-0.45.ebuild,v 1.9 2005/08/06 16:15:17 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/chkrootkit-0.45.ebuild,v 1.10 2007/01/24 03:16:55 genone Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -44,10 +44,10 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "Edit /etc/cron.weekly/chkrootkit to activate chkrootkit!"
-	einfo
-	einfo "Some applications, such as portsentry, will cause chkrootkit"
-	einfo "to produce false positives.  Read the chkrootkit FAQ at"
-	einfo "http://www.chkrootkit.org/ for more information."
+	elog "Edit /etc/cron.weekly/chkrootkit to activate chkrootkit!"
+	elog
+	elog "Some applications, such as portsentry, will cause chkrootkit"
+	elog "to produce false positives.  Read the chkrootkit FAQ at"
+	elog "http://www.chkrootkit.org/ for more information."
 	echo
 }

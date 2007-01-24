@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/samhain/samhain-2.1.3.ebuild,v 1.3 2006/11/23 15:33:49 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/samhain/samhain-2.1.3.ebuild,v 1.4 2007/01/24 03:26:26 genone Exp $
 
 KEYWORDS="~x86"
 DESCRIPTION="Advanced file integrity and intrusion detection tool."
@@ -161,48 +161,48 @@ src_install() {
 
 pkg_postinst() {
 	if [[ -n "${STEALTH}" ]] ; then
-		echo
-		einfo "Manual pages, documentation, and init script were NOT installed in order to"
-		einfo "obscure Samhain's presence. You should also remove samhain's installation"
-		einfo "traces from ${ROOT}/var/cache/edb/world and ${ROOT}/var/db/pkg."
+		elog
+		elog "Manual pages, documentation, and init script were NOT installed in order to"
+		elog "obscure Samhain's presence. You should also remove samhain's installation"
+		elog "traces from ${ROOT}/var/cache/edb/world and ${ROOT}/var/db/pkg."
 	fi
 
 	if [[ "${STEALTH}" == "full" ]] ; then
-		echo
-		einfo "In stealth mode, the configuration file must be steganographically hidden"
-		einfo "in a postscript image file. The sample config has been created this way by"
-		einfo "the installation process. Use the samhain_stealth utility to modify or"
-		einfo "create your own configuration file."
+		elog
+		elog "In stealth mode, the configuration file must be steganographically hidden"
+		elog "in a postscript image file. The sample config has been created this way by"
+		elog "the installation process. Use the samhain_stealth utility to modify or"
+		elog "create your own configuration file."
 	fi
 
 	if [[ -z "${KEY_FPR}" ]] ; then
-		echo
+		elog
 		ewarn "GnuPG support has been enabled, but fingerprint verification will be"
 		ewarn "ignored. To enable fingerprint verification (strongly recommended),"
 		ewarn "you must re-emerge this package with the KEY_FPR variable set to"
 		ewarn "your default signing key fingerprint."
 		ewarn "Please read the Samhain manual for more details."
-		echo
-		einfo "Enabling GnuPG support in Samhain requires that you sign your configuration"
-		einfo "and and database files. Please run the following commands as root:"
-		einfo
-		einfo "    gpg -a --clearsign --not-dash-escaped ${ROOT}/etc/samhainrc"
-		einfo "    mv ${ROOT}/etc/samhainrc.asc ${ROOT}/etc/samhainrc"
-		einfo "    chmod 600 ${ROOT}/etc/samhainrc"
-		einfo
-		einfo "Run the same commands on ${ROOT}/var/lib/samhain/samhain_file after initialization."
+		elog
+		elog "Enabling GnuPG support in Samhain requires that you sign your configuration"
+		elog "and and database files. Please run the following commands as root:"
+		elog
+		elog "    gpg -a --clearsign --not-dash-escaped ${ROOT}/etc/samhainrc"
+		elog "    mv ${ROOT}/etc/samhainrc.asc ${ROOT}/etc/samhainrc"
+		elog "    chmod 600 ${ROOT}/etc/samhainrc"
+		elog
+		elog "Run the same commands on ${ROOT}/var/lib/samhain/samhain_file after initialization."
 	fi
 
-	echo
-	einfo "Be sure to check your settings in ${ROOT}/etc/samhainrc. When ready, run:"
-	einfo "    samhain -t init"
-	einfo "to initialize Samhain."
+	elog
+	elog "Be sure to check your settings in ${ROOT}/etc/samhainrc. When ready, run:"
+	elog "    samhain -t init"
+	elog "to initialize Samhain."
 
-	echo
-	einfo "Samhain stealth-mode options are also available. Please view the comments"
-	einfo "in the Samhain ebuild for further configuration instructions."
+	elog
+	elog "Samhain stealth-mode options are also available. Please view the comments"
+	elog "in the Samhain ebuild for further configuration instructions."
 
-	echo
+	elog
 	ewarn "Please be sure to read the Samhain manual to understand and correctly"
 	ewarn "configure the Samhain utility."
 	ewarn "HTML version available for viewing at http://la-samhna.de/samhain/manual/ ."

@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/pyflag
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/pyflag/ChangeLog,v 1.6 2006/11/23 15:33:03 vivo Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/pyflag/ChangeLog,v 1.7 2007/01/24 03:20:44 genone Exp $
+
+  24 Jan 2007; Marius Mauch <genone@gentoo.org> pyflag-0.80.1.ebuild,
+  pyflag-0.82.ebuild:
+  Replacing einfo with elog
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> pyflag-0.80.1.ebuild,
   pyflag-0.82.ebuild:

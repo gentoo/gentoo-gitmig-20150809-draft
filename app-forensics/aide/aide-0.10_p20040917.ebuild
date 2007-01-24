@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.10_p20040917.ebuild,v 1.8 2005/04/21 18:46:53 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.10_p20040917.ebuild,v 1.9 2007/01/24 03:12:05 genone Exp $
 
 inherit eutils
 
@@ -78,22 +78,22 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo
-	einfo "A sample configuration file has been installed as"
-	einfo "/etc/aide/aide.conf.  Please edit to meet your needs."
-	einfo "Read the aide.conf(5) manual page for more information."
-	echo
+	elog
+	elog "A sample configuration file has been installed as"
+	elog "/etc/aide/aide.conf.  Please edit to meet your needs."
+	elog "Read the aide.conf(5) manual page for more information."
+	elog
 
 	if use postgres; then
-		einfo "Due to a bad assumption by aide, you must issue the following"
-		einfo "command after the database initialization (aide --init ...):"
-		einfo
-		einfo 'psql -c "update pg_index set indisunique=false from pg_class \\ '
-		einfo "  where pg_class.relname='TABLE_pkey' and \ "
-		einfo '  pg_class.oid=pg_index.indexrelid" -h HOSTNAME -p PORT DBASE USER'
-		einfo
-		einfo "where TABLE, HOSTNAME, PORT, DBASE, and USER are the same as"
-		einfo "your aide.conf."
-		echo
+		elog "Due to a bad assumption by aide, you must issue the following"
+		elog "command after the database initialization (aide --init ...):"
+		elog
+		elog 'psql -c "update pg_index set indisunique=false from pg_class \\ '
+		elog "  where pg_class.relname='TABLE_pkey' and \ "
+		elog '  pg_class.oid=pg_index.indexrelid" -h HOSTNAME -p PORT DBASE USER'
+		elog
+		elog "where TABLE, HOSTNAME, PORT, DBASE, and USER are the same as"
+		elog "your aide.conf."
+		elog
 	fi
 }

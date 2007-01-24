@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/air
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/air/ChangeLog,v 1.14 2005/09/28 21:42:54 dragonheart Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/air/ChangeLog,v 1.15 2007/01/24 03:13:42 genone Exp $
+
+  24 Jan 2007; Marius Mauch <genone@gentoo.org> air-1.2.7.ebuild,
+  air-1.2.8.ebuild:
+  Replacing einfo with elog
 
 *air-1.2.8 (28 Sep 2005)
 
