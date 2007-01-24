@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/hibernate
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/ChangeLog,v 1.28 2007/01/24 17:48:47 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/ChangeLog,v 1.29 2007/01/24 20:07:44 caster Exp $
+
+  24 Jan 2007; Vlastimil Babka <caster@gentoo.org> hibernate-2.1.8.ebuild:
+  Correct cglib-2 dep to pull correct slot.
 
   24 Jan 2007; Vlastimil Babka <caster@gentoo.org>
   hibernate-3.0.5-r2.ebuild, hibernate-3.1.3.ebuild:
