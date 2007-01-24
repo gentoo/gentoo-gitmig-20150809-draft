@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/ldcc
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ldcc/ChangeLog,v 1.7 2005/02/06 01:24:13 blubb Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ldcc/ChangeLog,v 1.8 2007/01/24 10:08:18 armin76 Exp $
+
+  24 Jan 2007; Raúl Porcel <armin76@gentoo.org>
+  +files/ldcc-2.0.7-tvision2.1.0.patch, ldcc-2.0.7.ebuild:
+  Add patch to make it compile with tvision-2.1.0, thanks to truedfx <truedfx
+  at gentoo dot org> for the patch, bug 146465
 
   06 Feb 2005; Simon Stelling <blubb@gentoo.org> ldcc-2.0.7.ebuild:
   added ~amd64

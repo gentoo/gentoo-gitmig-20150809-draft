@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ldcc/ldcc-2.0.7.ebuild,v 1.9 2005/07/10 20:02:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ldcc/ldcc-2.0.7.ebuild,v 1.10 2007/01/24 10:08:18 armin76 Exp $
+
+inherit eutils
 
 IUSE=""
 
@@ -14,6 +16,13 @@ KEYWORDS="x86 ~ppc ~amd64"
 
 DEPEND="net-p2p/dctc
 	dev-libs/tvision"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-tvision2.1.0.patch"
+}
 
 src_compile() {
 	econf \
