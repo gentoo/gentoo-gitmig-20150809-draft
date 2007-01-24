@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/commons-lang
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.33 2007/01/11 13:20:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.34 2007/01/24 16:50:27 betelgeuse Exp $
+
+  24 Jan 2007; Petteri Räty <betelgeuse@gentoo.org>
+  commons-lang-2.0-r2.ebuild:
+  Cleanup ebuild and documentation installation and add a workaround for bug
+  #158720.
 
   11 Jan 2007; Markus Rothe <corsair@gentoo.org> commons-lang-2.0-r2.ebuild:
   Stable on ppc64
