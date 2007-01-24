@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/slib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/ChangeLog,v 1.14 2007/01/24 16:59:50 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/ChangeLog,v 1.15 2007/01/24 17:06:06 hkbst Exp $
+
+*slib-3.1.1-r1 (24 Jan 2007)
+
+  24 Jan 2007; Marijn Schouten <hkBst@gentoo.org> +slib-3.1.1-r1.ebuild:
+  backport 3.1.4-r1 to 3.1.1-r1
 
 *slib-3.1.4-r1 (24 Jan 2007)
 
