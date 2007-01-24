@@ -1,20 +1,20 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2-r1.ebuild,v 1.2 2007/01/23 22:50:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2-r1.ebuild,v 1.3 2007/01/24 10:11:41 armin76 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 inherit eutils toolchain-funcs multilib autotools
 
 XSERVER_VERSION="1.1.1"
-PATCH_VER=0.3
+PATCH_VER=0.1
 
 MY_P="vnc-4_1_2-unixsrc"
 DESCRIPTION="Remote desktop viewer display system"
 HOMEPAGE="http://www.realvnc.com/"
 SRC_URI="http://ltsp.mirrors.tds.net/pub/ltsp/tarballs/${MY_P}.tar.gz
 	http://ftp.plusline.de/FreeBSD/distfiles/xc/${MY_P}.tar.gz
-	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2
+	mirror://gentoo/${PF}-patches-${PATCH_VER}.tar.bz2
 	server? ( ftp://ftp.freedesktop.org/pub/xorg/individual/xserver/xorg-server-${XSERVER_VERSION}.tar.bz2	)"
 
 LICENSE="GPL-2"
