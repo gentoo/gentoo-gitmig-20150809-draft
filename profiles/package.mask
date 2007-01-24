@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6664 2007/01/24 17:41:55 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6665 2007/01/24 17:45:48 armin76 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Raúl Porcel <armin76@gentoo.org> (24 Jan 2007)
+# Mask cvs version of net-p2p/linuxdcpp
+=net-p2p/linuxdcpp-9999
 
 # Alec Warner <antarus@gentoo.org> (24 Jan 2007)
 # Masked by me cause it's old a crappy.
