@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX gentoo-mirror.conf 456 RMD160 a4490580cb06616b3157885efaf185ff717e81ab SHA1 8a801ab4c91395322b06967fb5b6d6af2529ffa5 SHA256 8b1bb6f2d49d6eefc2280a926641aeb3f71e58636e061304dacfa502ef5312fa
 MD5 2772b1fe18c7c54ea201fa2a7dd2f19b files/gentoo-mirror.conf 456
 RMD160 a4490580cb06616b3157885efaf185ff717e81ab files/gentoo-mirror.conf 456
@@ -18,25 +21,32 @@ AUX rsynclogparse-extended.pl 3476 RMD160 afaa54076cc517bb1798c9f77b6d7c96d3abb9
 MD5 866f4631fad8ab795f8420dfb8144ffb files/rsynclogparse-extended.pl 3476
 RMD160 afaa54076cc517bb1798c9f77b6d7c96d3abb99e files/rsynclogparse-extended.pl 3476
 SHA256 9b496670cc75f9fdd99c29fd3ff88627a4d145f2cdfdb3457b9524d66a702418 files/rsynclogparse-extended.pl 3476
-EBUILD gentoo-rsync-mirror-1.0-r4.ebuild 2108 RMD160 800129c9941a00a15017b47eac115e4386a92c65 SHA1 95affb095621c0c0c3e362ad326c2e9dcfc95d35 SHA256 21c1b6917d48354825295e856967ff5dd5dd9cd9a32d9ab8b60b3362d9d2d824
-MD5 8d2a50fc5031d0f953a9ae573b5e514f gentoo-rsync-mirror-1.0-r4.ebuild 2108
-RMD160 800129c9941a00a15017b47eac115e4386a92c65 gentoo-rsync-mirror-1.0-r4.ebuild 2108
-SHA256 21c1b6917d48354825295e856967ff5dd5dd9cd9a32d9ab8b60b3362d9d2d824 gentoo-rsync-mirror-1.0-r4.ebuild 2108
-EBUILD gentoo-rsync-mirror-1.0-r5.ebuild 2114 RMD160 b2d5b8b82df2f90a462c821e36f277f36d5a80a0 SHA1 eb011a043cc5eb26a30744aeaea5be74a4a32081 SHA256 6fe75522811d94f5ced7cd865ddb6f0c2f2fa3177ddc1f0205c2571a155258ed
-MD5 1875515901da0cfb27558bd70b04f59b gentoo-rsync-mirror-1.0-r5.ebuild 2114
-RMD160 b2d5b8b82df2f90a462c821e36f277f36d5a80a0 gentoo-rsync-mirror-1.0-r5.ebuild 2114
-SHA256 6fe75522811d94f5ced7cd865ddb6f0c2f2fa3177ddc1f0205c2571a155258ed gentoo-rsync-mirror-1.0-r5.ebuild 2114
-MISC ChangeLog 3819 RMD160 ff0205acec7b16b9ca77bccba9e033d1cdd6a477 SHA1 b420e6347cbc66ada057e0bd3c40981daf4b3c1b SHA256 f1372f7774952ff28c2d53f98080401f38e8425fe0ef31f9c0147ebd255a53b3
-MD5 3aae071b6d444bc4ba9b1944258eee0c ChangeLog 3819
-RMD160 ff0205acec7b16b9ca77bccba9e033d1cdd6a477 ChangeLog 3819
-SHA256 f1372f7774952ff28c2d53f98080401f38e8425fe0ef31f9c0147ebd255a53b3 ChangeLog 3819
+EBUILD gentoo-rsync-mirror-1.0-r4.ebuild 2084 RMD160 4b2368b2300add45be0c403b2ac7d49ca9b4c3ed SHA1 a0c50d70998910978f472afd7390b7ba2734ed77 SHA256 b13cc7ff71d8eb1c9c87587ad42a49242ca7a3d7119755ec16eb43f89838f227
+MD5 6dad1aa1e4df9ccece3683eb29749948 gentoo-rsync-mirror-1.0-r4.ebuild 2084
+RMD160 4b2368b2300add45be0c403b2ac7d49ca9b4c3ed gentoo-rsync-mirror-1.0-r4.ebuild 2084
+SHA256 b13cc7ff71d8eb1c9c87587ad42a49242ca7a3d7119755ec16eb43f89838f227 gentoo-rsync-mirror-1.0-r4.ebuild 2084
+EBUILD gentoo-rsync-mirror-1.0-r5.ebuild 2089 RMD160 62468f362a3f9727524ea4434222eae37278bb84 SHA1 a537a47457e4dd70b9294ba59f378e175f37c652 SHA256 d9113c8c8232535b246dd7cfcbd1253a4f7f665bf91fd555eccc8077da6f4503
+MD5 137302319368ba06e50bbca309d3ed56 gentoo-rsync-mirror-1.0-r5.ebuild 2089
+RMD160 62468f362a3f9727524ea4434222eae37278bb84 gentoo-rsync-mirror-1.0-r5.ebuild 2089
+SHA256 d9113c8c8232535b246dd7cfcbd1253a4f7f665bf91fd555eccc8077da6f4503 gentoo-rsync-mirror-1.0-r5.ebuild 2089
+MISC ChangeLog 3967 RMD160 624242ad99a2f353eae4582c1dc0df1a8dc45303 SHA1 92438cda0548af46c074ced7409f00ed17065a55 SHA256 26bedb3f955e1ab0e4449a8432522ac2ea319f1c71b76e11ef6ec8b387dddb4b
+MD5 9e606427840d478eebdea795b62abf25 ChangeLog 3967
+RMD160 624242ad99a2f353eae4582c1dc0df1a8dc45303 ChangeLog 3967
+SHA256 26bedb3f955e1ab0e4449a8432522ac2ea319f1c71b76e11ef6ec8b387dddb4b ChangeLog 3967
 MISC metadata.xml 291 RMD160 129ae108d95ac001021022657067cce029ab8d95 SHA1 39746640cb9155ed2e991047fdae56cd16ced989 SHA256 c3eb7344dfca678cfee47368651a674e13070f1f62656697ab3168ba04e611c8
 MD5 d2daa22c953834b3854c99417e6f0a19 metadata.xml 291
 RMD160 129ae108d95ac001021022657067cce029ab8d95 metadata.xml 291
 SHA256 c3eb7344dfca678cfee47368651a674e13070f1f62656697ab3168ba04e611c8 metadata.xml 291
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-gentoo-rsync-mirror-1.0-r4 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-gentoo-rsync-mirror-1.0-r4 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-gentoo-rsync-mirror-1.0-r4 1
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-gentoo-rsync-mirror-1.0-r5 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-gentoo-rsync-mirror-1.0-r5 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-gentoo-rsync-mirror-1.0-r5 1
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gentoo-rsync-mirror-1.0-r4 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-gentoo-rsync-mirror-1.0-r4 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-gentoo-rsync-mirror-1.0-r4 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gentoo-rsync-mirror-1.0-r5 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-gentoo-rsync-mirror-1.0-r5 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-gentoo-rsync-mirror-1.0-r5 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFt22H6J2i8a8J4okRAt1rAJ4xEvyEZm6xxuz+nmtKmxMC6IhzlACeIHWd
+a2h9ZTgvh4NQzmTFluCj5vk=
+=gGwo
+-----END PGP SIGNATURE-----
