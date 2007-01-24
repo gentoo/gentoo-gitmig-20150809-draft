@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-1.21.8.ebuild,v 1.3 2006/12/02 01:47:39 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-1.21.8.ebuild,v 1.4 2007/01/24 03:52:45 genone Exp $
 
 DESCRIPTION="fish is the Friendly Interactive SHell"
 HOMEPAGE="http://fishshell.org/"
@@ -29,14 +29,14 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "If you want to use fish as your default shell, you need to add it"
-	einfo "to /etc/shells. This is not recommended because fish doesn't install"
-	einfo "to /bin."
-	einfo
+	elog
+	elog "If you want to use fish as your default shell, you need to add it"
+	elog "to /etc/shells. This is not recommended because fish doesn't install"
+	elog "to /bin."
+	elog
 	ewarn "Many files moved to ${ROOT}usr/share/fish/completions from /etc/fish.d/."
 	ewarn "Delete everything in ${ROOT}etc/fish.d/ except fish_interactive.fish."
 	ewarn "Otherwise, fish won't notice updates to the installed files,"
 	ewarn "because the ones in /etc will override the new ones in /usr."
-	einfo
+	echo
 }

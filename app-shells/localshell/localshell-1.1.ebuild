@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/localshell/localshell-1.1.ebuild,v 1.2 2005/07/18 11:49:23 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/localshell/localshell-1.1.ebuild,v 1.3 2007/01/24 03:54:04 genone Exp $
 
 DESCRIPTION="Localshell allows per-user/group local control of shell execution."
 HOMEPAGE="http://research.iat.sfu.ca/custom-software/localshell/"
@@ -23,6 +23,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Remember to add /bin/localshell to /etc/shells and create"
-	einfo "/etc/localshell.conf based on the included configuration examples"
+	elog "Remember to add /bin/localshell to /etc/shells and create"
+	elog "/etc/localshell.conf based on the included configuration examples"
 }

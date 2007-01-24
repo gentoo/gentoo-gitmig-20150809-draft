@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion-config/bash-completion-config-0.8-r2.ebuild,v 1.4 2006/01/05 03:07:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion-config/bash-completion-config-0.8-r2.ebuild,v 1.5 2007/01/24 03:47:23 genone Exp $
 
 inherit eutils
 
@@ -41,9 +41,9 @@ pkg_preinst() {
 
 pkg_postinst() {
 	echo
-	einfo "To enable command-line completion for bash-completion-config,"
-	einfo "run the following as root:"
-	einfo
-	einfo " bash-completion-config --global --install bash-completion-config"
+	elog "To enable command-line completion for bash-completion-config,"
+	elog "run the following as root:"
+	elog
+	elog " bash-completion-config --global --install bash-completion-config"
 	echo
 }

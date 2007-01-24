@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/csh
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/ChangeLog,v 1.29 2005/11/02 22:55:01 taviso Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/ChangeLog,v 1.30 2007/01/24 03:50:04 genone Exp $
+
+  24 Jan 2007; Marius Mauch <genone@gentoo.org> csh-1.29-r2.ebuild,
+  csh-1.29-r3.ebuild, csh-1.29-r4.ebuild:
+  Replacing einfo with elog
 
 *csh-1.29-r4 (02 Nov 2005)
 

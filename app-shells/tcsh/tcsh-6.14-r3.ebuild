@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.14-r3.ebuild,v 1.16 2006/12/02 14:03:37 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.14-r3.ebuild,v 1.17 2007/01/24 03:57:08 genone Exp $
 
 inherit eutils
 
@@ -74,7 +74,7 @@ src_install() {
 
 pkg_postinst() {
 
-	while read line; do einfo "${line}"; done <<EOF
+	while read line; do elog "${line}"; done <<EOF
 The default behaviour of tcsh has significantly changed starting from
 version 6.14-r1.  In contrast to previous ebuilds, the amount of
 customisation to the default shell's behaviour has been reduced to a

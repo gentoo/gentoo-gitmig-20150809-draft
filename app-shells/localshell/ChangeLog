@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/localshell
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/localshell/ChangeLog,v 1.4 2005/08/30 01:06:52 robbat2 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/localshell/ChangeLog,v 1.5 2007/01/24 03:54:04 genone Exp $
+
+  24 Jan 2007; Marius Mauch <genone@gentoo.org> localshell-1.1.ebuild,
+  localshell-1.2.ebuild:
+  Replacing einfo with elog
 
   30 Aug 2005; Robin H. Johnson <robbat2@gentoo.org> localshell-1.2.ebuild:
   Stable on x86, also add ~amd64.

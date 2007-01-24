@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash-completion-config
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion-config/ChangeLog,v 1.36 2005/06/09 11:42:06 ka0ttic Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion-config/ChangeLog,v 1.37 2007/01/24 03:47:23 genone Exp $
+
+  24 Jan 2007; Marius Mauch <genone@gentoo.org>
+  bash-completion-config-0.8-r2.ebuild:
+  Replacing einfo with elog
 
   09 Jun 2005; Aaron Walker <ka0ttic@gentoo.org>
   -bash-completion-config-0.7.ebuild, -bash-completion-config-0.8-r1.ebuild:

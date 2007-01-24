@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completion/zsh-completion-20040730.ebuild,v 1.5 2005/04/06 04:49:56 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completion/zsh-completion-20040730.ebuild,v 1.6 2007/01/24 04:00:44 genone Exp $
 
 DESCRIPTION="Programmable Completion for zsh (includes emerge and ebuild commands)"
 HOMEPAGE="http://www.zsh.org/"
@@ -22,9 +22,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "If you happen to compile your functions, you may need to delete"
-	einfo "~/.zcompdump{,.zwc} and recompile to make zsh-completion available"
-	einfo "to your shell."
-	einfo
+	elog
+	elog "If you happen to compile your functions, you may need to delete"
+	elog "~/.zcompdump{,.zwc} and recompile to make zsh-completion available"
+	elog "to your shell."
+	elog
 }

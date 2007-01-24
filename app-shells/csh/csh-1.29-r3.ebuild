@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r3.ebuild,v 1.15 2005/05/02 18:31:46 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r3.ebuild,v 1.16 2007/01/24 03:50:04 genone Exp $
 
 inherit flag-o-matic eutils ccc
 
@@ -126,24 +126,24 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo
+	elog
 	if use doc; then
-		einfo "An Introduction to the C shell by Bill Joy, a "
-		einfo "postscript document included with this shell has"
-		einfo "been installed in /usr/share/doc/${PF}, if you are new"
-		einfo "to the C shell, you may find it interesting."
+		elog "An Introduction to the C shell by Bill Joy, a "
+		elog "postscript document included with this shell has"
+		elog "been installed in /usr/share/doc/${PF}, if you are new"
+		elog "to the C shell, you may find it interesting."
 	else
-		einfo "You don't have USE=doc, so the"
-		einfo "postscript document \"An Introduction to the C"
-		einfo "shell by Bill Joy\" was not installed."
+		elog "You don't have USE=doc, so the"
+		elog "postscript document \"An Introduction to the C"
+		elog "shell by Bill Joy\" was not installed."
 	fi
-	echo
-	einfo "Example login scripts have been installed in /usr/share/doc/${PF}."
-	einfo "You can install a simple dot.cshrc like this:"
-	einfo
-	einfo "	% zcat /usr/share/doc/${PF}/dot.cshrc > ~/.cshrc"
-	einfo "	% zcat /usr/share/doc/${PF}/dot.login > ~/.login"
-	einfo
-	einfo "And then edit to your liking."
-	echo
+	elog
+	elog "Example login scripts have been installed in /usr/share/doc/${PF}."
+	elog "You can install a simple dot.cshrc like this:"
+	elog
+	elog "	% zcat /usr/share/doc/${PF}/dot.cshrc > ~/.cshrc"
+	elog "	% zcat /usr/share/doc/${PF}/dot.login > ~/.login"
+	elog
+	elog "And then edit to your liking."
+	elog
 }
