@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/teco-1.00-r2.ebuild,v 1.7 2005/07/08 17:53:28 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/teco-1.00-r2.ebuild,v 1.8 2007/01/24 02:54:35 genone Exp $
 
 inherit ccc
 
@@ -47,6 +47,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "The TECO binary is called te."
-	einfo "Sample configurations and documentation is available in /usr/share/doc/"
+	elog "The TECO binary is called te."
+	elog "Sample configurations and documentation is available in /usr/share/doc/"
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/gobby-0.4.1.ebuild,v 1.1 2006/08/29 23:24:43 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/gobby-0.4.1.ebuild,v 1.2 2007/01/24 02:38:34 genone Exp $
 
 inherit eutils
 
@@ -40,15 +40,15 @@ src_install() {
 pkg_postinst() {
 	if built_with_use net-libs/obby howl
 	then
-		einfo "Zeroconf support has been enabled for gobby"
+		elog "Zeroconf support has been enabled for gobby"
 	else
-		einfo "net-libs/obby was not build with zeroconf support,"
-		einfo "thus	zeroconf is not enabled for ${PN}."
-		einfo ""
-		einfo "To get zeroconf support, rebuild net-libs/obby"
-		einfo "with \"howl\" in your USE flags."
-		einfo "Try USE=\"howl\" emerge net-libs/obby app-editors/gobby,"
-		einfo "or add \"howl\" to your USE string in /etc/make.conf and"
-		einfo "emerge net-libs/obby"
+		elog "net-libs/obby was not build with zeroconf support,"
+		elog "thus	zeroconf is not enabled for ${PN}."
+		elog
+		elog "To get zeroconf support, rebuild net-libs/obby"
+		elog "with \"howl\" in your USE flags."
+		elog "Try USE=\"howl\" emerge net-libs/obby app-editors/gobby,"
+		elog "or add \"howl\" to your USE string in /etc/make.conf and"
+		elog "emerge net-libs/obby"
 	fi
 }

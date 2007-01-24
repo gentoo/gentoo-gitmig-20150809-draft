@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/nvu
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/ChangeLog,v 1.24 2006/10/23 22:02:23 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/ChangeLog,v 1.25 2007/01/24 02:48:25 genone Exp $
+
+  24 Jan 2007; Marius Mauch <genone@gentoo.org> nvu-1.0-r2.ebuild,
+  nvu-1.0-r4.ebuild:
+  Replacing einfo with elog
 
   23 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> nvu-1.0-r2.ebuild,
   nvu-1.0-r4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/xxe-3.5.1.ebuild,v 1.2 2007/01/19 14:10:27 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/xxe-3.5.1.ebuild,v 1.3 2007/01/24 02:56:17 genone Exp $
 
 MY_PV="${PV//./_}"
 
@@ -41,9 +41,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "XXE has been installed in /opt/xxe, to include this"
-	einfo "in your path, run the following:"
-	einfo "    /usr/sbin/env-update && source /etc/profile"
+	elog "XXE has been installed in /opt/xxe, to include this"
+	elog "in your path, run the following:"
+	elog "    /usr/sbin/env-update && source /etc/profile"
 	echo
 	ewarn "If you need special/accented characters, you'll need to export LANG"
 	ewarn "to your locale.  Example: export LANG=es_ES.ISO8859-1"

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/teco-1.00-r3.ebuild,v 1.5 2005/09/09 15:49:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/teco-1.00-r3.ebuild,v 1.6 2007/01/24 02:54:35 genone Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -43,6 +43,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "The TECO binary is called te."
-	einfo "Sample configurations and documentation is available in /usr/share/doc/"
+	elog "The TECO binary is called te."
+	elog "Sample configurations and documentation is available in /usr/share/doc/"
 }

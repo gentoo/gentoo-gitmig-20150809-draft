@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/screem-0.16.1.ebuild,v 1.3 2006/03/25 13:24:43 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/screem-0.16.1.ebuild,v 1.4 2007/01/24 02:53:01 genone Exp $
 
 inherit gnome2 autotools
 
@@ -72,11 +72,11 @@ src_unpack()
 pkg_postinst() {
 	gnome2_pkg_postinst
 
-	echo
-	einfo "Run gconftool-2 --shutdown in order to be able to run screem."
-	einfo "(As a normal user)"
-	einfo "Otherwise, you will get an error about missing configuration"
-	einfo "files."
-	echo
+	elog
+	elog "Run gconftool-2 --shutdown in order to be able to run screem."
+	elog "(As a normal user)"
+	elog "Otherwise, you will get an error about missing configuration"
+	elog "files."
+	elog
 }
 

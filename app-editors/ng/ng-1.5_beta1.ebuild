@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ng/ng-1.5_beta1.ebuild,v 1.9 2005/08/28 16:59:16 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ng/ng-1.5_beta1.ebuild,v 1.10 2007/01/24 02:46:21 genone Exp $
 
 inherit eutils
 
@@ -55,9 +55,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "If you want to use user Config"
-	einfo "cp /etc/skel/.ng ~/.ng"
-	einfo "and edit your .ng configuration file."
-	einfo
+	elog
+	elog "If you want to use user Config"
+	elog "cp /etc/skel/.ng ~/.ng"
+	elog "and edit your .ng configuration file."
+	elog
 }

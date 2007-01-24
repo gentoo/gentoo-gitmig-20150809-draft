@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-3.2.ebuild,v 1.11 2006/04/06 13:02:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-3.2.ebuild,v 1.12 2007/01/24 02:40:53 genone Exp $
 
 inherit flag-o-matic
 
@@ -41,8 +41,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo
-	einfo "Global configuration has been moved from /etc to /etc/joe."
-	einfo "You should move or remove your old configuration files."
-	echo
+	elog
+	elog "Global configuration has been moved from /etc to /etc/joe."
+	elog "You should move or remove your old configuration files."
+	elog
 }

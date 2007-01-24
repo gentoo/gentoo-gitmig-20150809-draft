@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-2.0.1.ebuild,v 1.11 2007/01/19 20:28:31 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-2.0.1.ebuild,v 1.12 2007/01/24 02:43:53 genone Exp $
 
 #ECVS_SERVER="savannah.gnu.org:/cvsroot/nano"
 #ECVS_MODULE="nano"
@@ -72,6 +72,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "More helpful info about nano, visit the GDP page:"
-	einfo "http://www.gentoo.org/doc/en/nano-basics-guide.xml"
+	elog "More helpful info about nano, visit the GDP page:"
+	elog "http://www.gentoo.org/doc/en/nano-basics-guide.xml"
 }
