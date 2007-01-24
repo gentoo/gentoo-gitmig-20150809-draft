@@ -12,7 +12,7 @@ start() {
 
 	ebegin "Starting fuse"
 	if ! grep -qw fuse /proc/filesystems; then
-		modprobe fuse >/dev/null 2>&1 || echo "Error loading fuse module"
+		modprobe fuse >/dev/null 2>&1 || eerror $? "Error loading fuse module"
 	fi
 	if grep -qw fusectl /proc/filesystems && \
 	   ! grep -qw $MOUNTPOINT /proc/mounts; then
@@ -28,7 +28,7 @@ stop() {
 	ebegin "Stopping fuse"
 	if grep -qw $MOUNTPOINT /proc/mounts; then
 		umount $MOUNTPOINT >/dev/null 2>&1 || \
-			eerror "Error unmounting control filesystem"
+			eerror $? "Error unmounting control filesystem"
 	fi
 	if grep -qw "^fuse" /proc/modules; then
 		rmmod fuse >/dev/null 2>&1 || eerror $? "Error unloading fuse module"
