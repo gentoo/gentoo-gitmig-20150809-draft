@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.268 2007/01/12 20:33:19 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.269 2007/01/24 17:05:34 genone Exp $
+
+  24 Jan 2007; Marius Mauch <genone@gentoo.org> gnupg-1.4.2.2.ebuild,
+  gnupg-1.4.4.ebuild, gnupg-1.4.5.ebuild, gnupg-1.4.5-r1.ebuild,
+  gnupg-1.4.5-r2.ebuild, gnupg-1.4.6.ebuild, gnupg-1.9.20-r3.ebuild,
+  gnupg-1.9.21.ebuild, gnupg-1.9.21-r1.ebuild, gnupg-1.9.22.ebuild,
+  gnupg-1.9.94.ebuild, gnupg-2.0.0.ebuild, gnupg-2.0.1.ebuild:
+  Replacing einfo with elog
 
   12 Jan 2007; Alon Bar-Lev <alonbl@gentoo.org> gnupg-2.0.1-r2.ebuild:
   Remove WANT_AUTO*

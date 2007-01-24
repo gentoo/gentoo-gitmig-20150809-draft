@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.20-r3.ebuild,v 1.11 2006/10/30 10:09:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.20-r3.ebuild,v 1.12 2007/01/24 17:05:34 genone Exp $
 
 WANT_AUTOMAKE='latest'
 
@@ -97,11 +97,11 @@ src_install() {
 
 pkg_postinst() {
 	if ! use caps; then
-		einfo "gpg is installed suid root to make use of protected memory space"
-		einfo "This is needed in order to have a secure place to store your"
-		einfo "passphrases, etc. at runtime but may make some sysadmins nervous."
+		elog "gpg is installed suid root to make use of protected memory space"
+		elog "This is needed in order to have a secure place to store your"
+		elog "passphrases, etc. at runtime but may make some sysadmins nervous."
 	fi
-	einfo
-	einfo "See http://www.gentoo.org/doc/en/gnupg-user.xml for documentation on gnupg"
-	einfo
+	elog
+	elog "See http://www.gentoo.org/doc/en/gnupg-user.xml for documentation on gnupg"
+	elog
 }

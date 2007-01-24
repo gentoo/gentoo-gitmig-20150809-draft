@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.6.ebuild,v 1.9 2006/12/08 19:58:58 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.6.ebuild,v 1.10 2007/01/24 17:05:34 genone Exp $
 
 inherit eutils flag-o-matic
 
@@ -175,30 +175,30 @@ pkg_postinst() {
 	ewarn "you MUST make the gpg binary setuid."
 	echo
 	if use !bindist && use idea; then
-		einfo "-----------------------------------------------------------------------------------"
-		einfo "IDEA"
-		ewarn "you have compiled ${PN} with support for the IDEA algorithm, this code"
-		ewarn "is distributed under the GPL in countries where it is permitted to do so"
-		ewarn "by law."
-		einfo
-		einfo "Please read http://www.gnupg.org/(en)/faq/why-not-idea.html for more information."
-		einfo
+		elog
+		elog "IDEA"
+		elog "you have compiled ${PN} with support for the IDEA algorithm, this code"
+		elog "is distributed under the GPL in countries where it is permitted to do so"
+		elog "by law."
+		elog
+		elog "Please read http://www.gnupg.org/(en)/faq/why-not-idea.html for more information."
+		elog
 		ewarn "If you are in a country where the IDEA algorithm is patented, you are permitted"
 		ewarn "to use it at no cost for 'non revenue generating data transfer between private"
 		ewarn "individuals'."
-		einfo
-		einfo "Countries where the patent applies are listed here"
-		einfo "http://www.mediacrypt.com/_contents/10_idea/101030_ea_pi.asp"
-		einfo
-		einfo "Further information and other licenses are availble from http://www.mediacrypt.com/"
-		einfo "-----------------------------------------------------------------------------------"
+		ewarn
+		ewarn "Countries where the patent applies are listed here"
+		ewarn "http://www.mediacrypt.com/_contents/10_idea/101030_ea_pi.asp"
+		ewarn
+		ewarn "Further information and other licenses are availble from http://www.mediacrypt.com/"
+		ewarn
 	fi
 	if use !bindist && use ecc; then
-		einfo
+		ewarn
 		ewarn "The elliptical curves patch is experimental"
-		einfo "Further info available at http://alumnes.eps.udl.es/%7Ed4372211/index.en.html"
+		ewarn "Further info available at http://alumnes.eps.udl.es/%7Ed4372211/index.en.html"
 	fi
-	einfo
-	einfo "See http://www.gentoo.org/doc/en/gnupg-user.xml for documentation on gnupg"
-	einfo
+	elog
+	elog "See http://www.gentoo.org/doc/en/gnupg-user.xml for documentation on gnupg"
+	elog
 }

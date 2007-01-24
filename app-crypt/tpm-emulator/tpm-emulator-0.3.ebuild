@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/tpm-emulator-0.3.ebuild,v 1.3 2006/10/19 00:19:21 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/tpm-emulator-0.3.ebuild,v 1.4 2007/01/24 17:11:52 genone Exp $
 
 inherit toolchain-funcs linux-mod eutils flag-o-matic
 
@@ -36,6 +36,6 @@ src_install() {
 
 pkg_postinst() {
 	linux-mod_pkg_postinst
-	einfo 'when starting for the first time:'
-	einfo 'modprobe tpm_emulator startup="clear"'
+	elog 'when starting for the first time:'
+	elog 'modprobe tpm_emulator startup="clear"'
 }

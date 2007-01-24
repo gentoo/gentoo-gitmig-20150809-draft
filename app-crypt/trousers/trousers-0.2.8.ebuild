@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.2.8.ebuild,v 1.2 2007/01/12 20:39:05 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.2.8.ebuild,v 1.3 2007/01/24 17:14:25 genone Exp $
 
 inherit eutils linux-info autotools
 
@@ -34,9 +34,9 @@ pkg_setup() {
 	elif [ -n "${tpm_module}" ] ; then
 		einfo "Good, you seem to have TPM support with the external module."
 		if [ -n "${tpm_kernel_version}" ] ; then
-			einfo
-			einfo "Note that since you have a >=2.6.12 kernel, you could use"
-			einfo "the in-kernel driver instead (CONFIG_TCG_TPM)."
+			elog
+			elog "Note that since you have a >=2.6.12 kernel, you could use"
+			elog "the in-kernel driver instead of (CONFIG_TCG_TPM)."
 		fi
 	elif [ -n "${tpm_kernel_version}" ] ; then
 		eerror

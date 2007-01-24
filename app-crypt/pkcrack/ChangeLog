@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/pkcrack
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pkcrack/ChangeLog,v 1.4 2007/01/17 14:28:40 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pkcrack/ChangeLog,v 1.5 2007/01/24 17:10:15 genone Exp $
+
+  24 Jan 2007; Marius Mauch <genone@gentoo.org> pkcrack-1.2.2.ebuild:
+  Replacing einfo with elog
 
   17 Jan 2007; Steve Dibb <beandog@gentoo.org> pkcrack-1.2.2.ebuild:
   Add ~amd64, bug 122604

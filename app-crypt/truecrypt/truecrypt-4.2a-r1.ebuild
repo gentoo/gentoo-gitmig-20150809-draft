@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-4.2a-r1.ebuild,v 1.1 2006/12/06 21:31:02 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-4.2a-r1.ebuild,v 1.2 2007/01/24 17:17:52 genone Exp $
 
 inherit linux-mod toolchain-funcs
 
@@ -72,16 +72,16 @@ src_install() {
 
 pkg_postinst() {
 	linux-mod_pkg_postinst
-	einfo " For TrueCrypt 4.2 to work you have to load a "
-	einfo " kernel module. This can be done in three ways: "
-	einfo
-	einfo " 1. Loading the module automatically by the running kernel. "
-	einfo "    For this 'Automatic kernel module loading' needs to be "
-	einfo "    enabled (CONFIG_KMOD=y). "
-	einfo " 2. Loading the module manually before mounting the volume. "
-	einfo "    Try 'modprobe truecrypt' as root to load the module. "
-	einfo " 3. Load the module during boot by listing it in "
-	einfo "    '/etc/modules.autoload.d/kernel-2.6' "
+	elog " For TrueCrypt 4.2 to work you have to load a "
+	elog " kernel module. This can be done in three ways: "
+	elog
+	elog " 1. Loading the module automatically by the running kernel. "
+	elog "    For this 'Automatic kernel module loading' needs to be "
+	elog "    enabled (CONFIG_KMOD=y). "
+	elog " 2. Loading the module manually before mounting the volume. "
+	elog "    Try 'modprobe truecrypt' as root to load the module. "
+	elog " 3. Load the module during boot by listing it in "
+	elog "    '/etc/modules.autoload.d/kernel-2.6' "
 }
 
 dmcrypt_check() {

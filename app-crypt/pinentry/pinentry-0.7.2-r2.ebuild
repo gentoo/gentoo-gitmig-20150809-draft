@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2-r2.ebuild,v 1.10 2006/06/23 23:54:49 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2-r2.ebuild,v 1.11 2007/01/24 17:09:02 genone Exp $
 
 inherit flag-o-matic qt3 multilib
 
@@ -56,8 +56,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "pinentry-curses and pinentry-qt are installed SUID root to make use of"
-	einfo "protected memory space. This is needed in order to have a secure place"
-	einfo "to store your passphrases, etc. at runtime but may make some sysadmins"
-	einfo "nervous."
+	elog "pinentry-curses and pinentry-qt are installed SUID root to make use of"
+	elog "protected memory space. This is needed in order to have a secure place"
+	elog "to store your passphrases, etc. at runtime but may make some sysadmins"
+	elog "nervous."
 }

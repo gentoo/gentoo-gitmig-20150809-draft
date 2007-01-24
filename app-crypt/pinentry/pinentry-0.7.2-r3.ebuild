@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2-r3.ebuild,v 1.17 2007/01/13 23:11:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2-r3.ebuild,v 1.18 2007/01/24 17:09:02 genone Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -65,11 +65,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "We no longer install pinentry-curses and pinentry-qt SUID root by default."
-	einfo "Linux kernels >=2.6.9 support memory locking for unprivileged processes."
-	einfo "The soft resource limit for memory locking specifies the limit an"
-	einfo "unprivileged process may lock into memory. You can also use POSIX"
-	einfo "capabilities to allow pinentry to lock memory. To do so activate the caps"
-	einfo "USE flag and add the CAP_IPC_LOCK capability to the permitted set of"
-	einfo "your users."
+	elog "We no longer install pinentry-curses and pinentry-qt SUID root by default."
+	elog "Linux kernels >=2.6.9 support memory locking for unprivileged processes."
+	elog "The soft resource limit for memory locking specifies the limit an"
+	elog "unprivileged process may lock into memory. You can also use POSIX"
+	elog "capabilities to allow pinentry to lock memory. To do so activate the caps"
+	elog "USE flag and add the CAP_IPC_LOCK capability to the permitted set of"
+	elog "your users."
 }
