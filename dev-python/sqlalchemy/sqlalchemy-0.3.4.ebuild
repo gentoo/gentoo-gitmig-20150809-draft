@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.3.3.ebuild,v 1.1 2006/12/26 23:13:49 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.3.4.ebuild,v 1.1 2007/01/24 11:26:47 dev-zero Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-IUSE="firebird mssql mysql postgres sqlite"
+IUSE="firebird mssql mysql postgres sqlite test"
 KEYWORDS="~amd64 ~x86"
 
 # note: if you use psycopg-1, then you need egenix-mx-base
@@ -28,7 +28,8 @@ RDEPEND=">=dev-lang/python-2.4
 	)
 	sqlite? ( || ( dev-python/pysqlite >=dev-lang/python-2.5 ) )"
 
-DEPEND="dev-python/setuptools"
+DEPEND="dev-python/setuptools
+	test? ( || ( dev-python/pysqlite >=dev-lang/python-2.5 ) )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -49,8 +50,5 @@ src_install() {
 }
 
 src_test() {
-	if use sqlite; then
-		export PYTHONPATH="${PYTHONPATH}:./test/"
-		python test/alltests.py
-	fi
+	PYTHONPATH="./test/" python test/alltests.py
 }
