@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.1.3.ebuild,v 1.2 2007/01/11 19:13:59 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.1.3.ebuild,v 1.3 2007/01/24 17:48:47 caster Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~amd64"
 
 COMMON_DEPEND="
 	dev-java/antlr
-	=dev-java/asm-2*
+	=dev-java/asm-2.0*
 	dev-java/c3p0
 	=dev-java/cglib-2.1*
 	dev-java/commons-collections

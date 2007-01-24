@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/hibernate
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/ChangeLog,v 1.27 2007/01/12 12:53:38 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/ChangeLog,v 1.28 2007/01/24 17:48:47 caster Exp $
+
+  24 Jan 2007; Vlastimil Babka <caster@gentoo.org>
+  hibernate-3.0.5-r2.ebuild, hibernate-3.1.3.ebuild:
+  Correct asm-2 dep which could have pulled different slot.
 
   12 Jan 2007; Vlastimil Babka <caster@gentoo.org>
   hibernate-3.0.5-r2.ebuild:
