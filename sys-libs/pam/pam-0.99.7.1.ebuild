@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.7.0.ebuild,v 1.2 2007/01/23 13:53:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.7.1.ebuild,v 1.1 2007/01/24 19:52:59 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -47,7 +47,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${MY_PN}-0.99.6.3-berkdb.patch"
 	epatch "${DISTDIR}/${MY_P}-ldflags-to-libadd.patch.bz2"
-	epatch "${FILESDIR}/${MY_P}-disable-regenerate-man.patch"
+	epatch "${FILESDIR}/${MY_PN}-0.99.7.0-disable-regenerate-man.patch"
 
 	AT_M4DIR="m4" eautoreconf
 
