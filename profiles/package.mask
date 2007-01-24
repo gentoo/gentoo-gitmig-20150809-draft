@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6660 2007/01/23 23:21:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6661 2007/01/24 06:28:39 dberkholz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -747,12 +747,6 @@ xfce-extra/xfce4-xfapplet
 >=xfce-extra/xfce4-xkb-0.4.1
 >=xfce-extra/xfce4-wavelan-0.5.3
 xfce-extra/xfce4-timer
-
-# Joshua Baergen <joshuabaergen@gentoo.org> (04 Dec 2006)
-# X.Org 7.2
->=x11-base/xorg-server-1.1.99
->=media-libs/mesa-6.5.2
->=x11-apps/mesa-progs-6.5.2
 
 # Patrick McLean <chutzpah@gentoo.org> (04 Dec 2006)
 # masked pending removal as there is no bmpx that deps on
