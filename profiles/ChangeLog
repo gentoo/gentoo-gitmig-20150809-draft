@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.38 2007/01/24 17:41:54 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.39 2007/01/24 19:41:54 alonbl Exp $
+
+  24 Jan 2007; Alon Bar-Lev <alonbl@gentoo.org> package.mask:
+  Remove sys-apps/pcsc-ase-iiie-drv
 
   24 Jan 2007; Hanno Boeck <hanno@gentoo.org> package.mask:
   Remove mask for kerry, as 0.2.x is now the stable series.
