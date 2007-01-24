@@ -1,8 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.2.11-r2.ebuild,v 1.11 2007/01/05 07:09:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.2.18.ebuild,v 1.1 2007/01/24 20:22:15 jokey Exp $
 
-inherit perl-module flag-o-matic eutils multilib
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit perl-module flag-o-matic eutils multilib autotools
 
 DESCRIPTION="A system to store and display time-series data"
 HOMEPAGE="http://people.ee.ethz.ch/~oetiker/webtools/rrdtool/"
@@ -10,20 +13,20 @@ SRC_URI="http://people.ee.ethz.ch/~oetiker/webtools/${PN}/pub/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm ~hppa ia64 ~mips ppc ppc64 sh ~sparc ~x86"
-IUSE="doc perl python tcl"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ~ppc ppc64 sh sparc x86"
+IUSE="doc perl python rrdcgi tcl uclibc"
 
 RDEPEND="tcl? ( dev-lang/tcl )
 	>=sys-libs/zlib-1.2.1
 	>=media-libs/freetype-2.1.5
 	>=media-libs/libart_lgpl-2.3.16
-	>=media-libs/libpng-1.2.5"
+	>=media-libs/libpng-1.2.5
+	rrdcgi? ( >=dev-libs/cgilib-0.5 )"
 
 DEPEND="${RDEPEND}
 	perl? ( dev-lang/perl )
 	python? ( dev-lang/python )
-	sys-apps/gawk
-	>=dev-libs/cgilib-0.5"
+	sys-apps/gawk"
 
 TCLVER=""
 
@@ -38,8 +41,9 @@ src_unpack() {
 		bindings/python/Makefile.* || die "sed failed"
 	sed -i -e 's:\$TCL_PACKAGE_PATH:${TCL_PACKAGE_PATH%% *}:' \
 		configure.ac
-	libtoolize --copy --force
-	autoreconf
+	epatch "${FILESDIR}"/${PN}-1.2.15-newstyle-resize.patch
+	use uclibc && epatch "${FILESDIR}"/${PN}-1.2.15-no-man.patch
+	eautoreconf
 }
 
 pkg_setup() {
@@ -62,10 +66,14 @@ src_compile() {
 	use python || myconf="${myconf} --disable-python"
 
 	if use perl ; then
-		econf ${myconf} --with-perl-options='PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D}' || \
+		econf ${myconf} \
+			$(use_enable rrdcgi) \
+			--with-perl-options='PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D}' || \
 			die "econf failed"
 	else
-		econf ${myconf} --disable-perl || die "econf failed"
+		econf ${myconf} \
+			$(use_enable rrdcgi) \
+			--disable-perl || die "econf failed"
 	fi
 
 	make || die "make failed"
@@ -94,14 +102,6 @@ src_install() {
 
 		# remove duplicate installation into /usr/lib/perl
 		rm -Rf "${D}"/usr/lib/perl
-	fi
-
-	if use tcl ; then
-		mv "${S}"/bindings/tcl/tclrrd.so "${S}"/bindings/tcl/tclrrd${PV}.so
-		insinto /usr/$(get_libdir)/tcl${TCL_VER}/tclrrd${PV}
-		doins "${S}"/bindings/tcl/tclrrd${PV}.so
-		echo "package ifneeded Rrd ${PV} [list load [file join \$$dir .. tclrrd${PV}.so]]" \
-			>> "${D}"/usr/$(get_libdir)/tcl${TCL_VER}/tclrrd${PV}/pkgIndex.tcl
 	fi
 
 	dodoc CONTRIBUTORS README TODO

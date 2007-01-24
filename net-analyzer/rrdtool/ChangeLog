@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.112 2007/01/14 23:38:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.113 2007/01/24 20:22:15 jokey Exp $
+
+*rrdtool-1.2.18 (24 Jan 2007)
+
+  24 Jan 2007; Markus Ullmann <jokey@gentoo.org> -rrdtool-1.2.6-r1.ebuild,
+  -rrdtool-1.2.11-r2.ebuild, +rrdtool-1.2.18.ebuild:
+  Version bump try #3 ( see bug #163179 ), thanks to Frederic Mangeant for
+  reporting
 
   14 Jan 2007; Jeroen Roovers <jer@gentoo.org> rrdtool-1.2.15-r3.ebuild:
   Stable for HPPA (bug #160321).
