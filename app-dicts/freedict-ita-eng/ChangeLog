@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/freedict-ita-eng
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/freedict-ita-eng/ChangeLog,v 1.1 2005/04/24 13:26:28 arj Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/freedict-ita-eng/ChangeLog,v 1.2 2007/01/25 21:48:33 eroyf Exp $
+
+  25 Jan 2007; Alexander H. Færøy <eroyf@gentoo.org>
+  freedict-ita-eng-1.0.ebuild:
+  QA: fixing KEYWORDS; bug #163818
 
 *freedict-ita-eng-1.0 (24 Apr 2005)
 
