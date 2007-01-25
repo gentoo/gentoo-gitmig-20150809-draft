@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.0.5.ebuild,v 1.8 2007/01/16 06:02:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.0.5.ebuild,v 1.9 2007/01/25 20:42:36 eroyf Exp $
 
 inherit multilib
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://gentoo/glext.h-${GLEXT}.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 RESTRICT="multilib-pkg-force"
 
