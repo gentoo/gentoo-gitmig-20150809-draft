@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-9999.ebuild,v 1.5 2007/01/08 11:12:57 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-9999.ebuild,v 1.6 2007/01/25 18:45:28 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.alsa-project.org/"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 
-KEYWORDS="-*"
+KEYWORDS=""
 IUSE="oss doc debug"
 
 IUSE_CARDS="seq-dummy dummy virmidi mtpav mts64 serial-u16550 mpu401 loopback
