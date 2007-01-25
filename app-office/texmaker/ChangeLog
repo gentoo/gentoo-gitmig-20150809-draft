@@ -1,6 +1,10 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.25 2007/01/04 15:40:06 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.26 2007/01/25 06:03:17 genone Exp $
+
+  25 Jan 2007; Marius Mauch <genone@gentoo.org> texmaker-1.11-r1.ebuild,
+  texmaker-1.30.ebuild, texmaker-1.40.ebuild, texmaker-1.50.ebuild:
+  Replacing einfo with elog
 
 *texmaker-1.50 (04 Jan 2007)
 

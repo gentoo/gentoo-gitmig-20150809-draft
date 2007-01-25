@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.11-r1.ebuild,v 1.8 2006/10/01 13:19:28 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.11-r1.ebuild,v 1.9 2007/01/25 06:03:17 genone Exp $
 
 inherit kde-functions eutils
 
@@ -60,6 +60,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "A user manual with many screenshots is available at:"
-	einfo "/usr/share/doc/${PF}/html/usermanual.html"
+	elog "A user manual with many screenshots is available at:"
+	elog "/usr/share/doc/${PF}/html/usermanual.html"
 }

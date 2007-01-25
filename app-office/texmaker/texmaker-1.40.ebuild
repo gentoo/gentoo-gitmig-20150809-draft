@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.40.ebuild,v 1.2 2007/01/04 15:22:24 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.40.ebuild,v 1.3 2007/01/25 06:03:17 genone Exp $
 
 inherit eutils versionator qt4
 
@@ -71,7 +71,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "A user manual with many screenshots is available at:"
-	einfo "/usr/share/doc/${PF}/html/usermanual.html"
-	einfo ""
+	elog "A user manual with many screenshots is available at:"
+	elog "/usr/share/doc/${PF}/html/usermanual.html"
+	elog
 }
