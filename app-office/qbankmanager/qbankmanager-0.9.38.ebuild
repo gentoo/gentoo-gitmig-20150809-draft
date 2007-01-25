@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qbankmanager/qbankmanager-0.9.38.ebuild,v 1.5 2006/11/13 13:27:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qbankmanager/qbankmanager-0.9.38.ebuild,v 1.6 2007/01/25 05:45:18 genone Exp $
 
 inherit eutils qt3
 
@@ -19,8 +19,8 @@ S=${WORKDIR}/${P}
 
 pkg_setup() {
 	if ! built_with_use net-libs/aqbanking qt3; then
-		einfo "qbankmanager needs the qt3-bindings of aqbanking."
-		einfo "To enable them, rebuild aqbanking with qt3 in USE."
+		eerror "qbankmanager needs the qt3-bindings of aqbanking."
+		eerror "To enable them, rebuild aqbanking with qt3 in USE."
 		die "aqbanking was built without qt3 support."
 	fi
 }
