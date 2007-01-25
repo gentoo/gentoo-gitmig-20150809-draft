@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/revelation-0.4.11.ebuild,v 1.2 2007/01/17 19:45:35 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/revelation-0.4.11.ebuild,v 1.3 2007/01/25 14:27:24 beandog Exp $
 
 inherit python gnome2
 
@@ -16,7 +16,8 @@ IUSE=""
 DEPEND=">=dev-python/gnome-python-desktop-2.16
 	>=dev-python/pygtk-2.10.3
 	dev-python/pycrypto
-	sys-libs/cracklib"
+	sys-libs/cracklib
+	dev-python/gnome-python-extras"
 
 src_unpack() {
 	gnome2_src_unpack
