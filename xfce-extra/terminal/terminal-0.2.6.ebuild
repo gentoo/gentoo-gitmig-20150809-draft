@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/terminal-0.2.6.ebuild,v 1.3 2007/01/23 22:47:44 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/terminal-0.2.6.ebuild,v 1.4 2007/01/25 20:35:20 welp Exp $
 
-inherit gnome2-utils xfce44
+inherit xfce44
 
 xfce44
 
@@ -39,11 +39,3 @@ DEPEND="${RDEPEND}
 
 XFCE_CONFIG="$(use_enable startup-notification) $(use_enable dbus) \
 	$(use_enable doc xsltproc)"
-
-pkg_postinst() {
-	gnome2_icon_cache_update
-}
-
-pkg_postrm() {
-	gnome2_icon_cache_update
-}
