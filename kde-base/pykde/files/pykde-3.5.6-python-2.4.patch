@@ -1,0 +1,343 @@
+Index: kdebindings/python/pykde/sip/kio/global.sip
+===================================================================
+--- kdebindings/python/pykde/sip/kio/global.sip	(revision 626831)
++++ kdebindings/python/pykde/sip/kio/global.sip	(revision 626832)
+@@ -675,7 +675,7 @@
+     QMap<QString,QString> *cppmap = new QMap<QString,QString>;
+ 
+     PyObject *aelem, *belem;
+-    ssize_t pos = 0;
++    _SIP_SSIZE_T pos = 0;
+     QString *acpp;
+     QString *bcpp;
+ 
+Index: kdebindings/python/pykde/sip/kio/authinfo.sip
+===================================================================
+--- kdebindings/python/pykde/sip/kio/authinfo.sip	(revision 626831)
++++ kdebindings/python/pykde/sip/kio/authinfo.sip	(revision 626832)
+@@ -176,7 +176,7 @@
+     QMap<QString, QStringList> *map = new QMap<QString, QStringList>;
+ 
+     PyObject *key, *value;
+-    ssize_t pos = 0;
++    _SIP_SSIZE_T pos = 0;
+     QString *sKey;
+     QStringList *sData;
+ 
+Index: kdebindings/python/pykde/sip/kio/kservicetype.sip
+===================================================================
+--- kdebindings/python/pykde/sip/kio/kservicetype.sip	(revision 626831)
++++ kdebindings/python/pykde/sip/kio/kservicetype.sip	(revision 626832)
+@@ -184,7 +184,7 @@
+     QMap<QString,QVariant::Type> *cppmap = new QMap<QString,QVariant::Type>;
+ 
+     PyObject *aelem, *belem;
+-    ssize_t pos = 0;
++    _SIP_SSIZE_T pos = 0;
+     QString *acpp;
+     QVariant::Type bcpp;
+ 
+Index: kdebindings/python/pykde/sip/kmdi/kmdichildfrm.sip
+===================================================================
+--- kdebindings/python/pykde/sip/kmdi/kmdichildfrm.sip	(revision 626831)
++++ kdebindings/python/pykde/sip/kmdi/kmdichildfrm.sip	(revision 626832)
+@@ -245,7 +245,7 @@
+     QDict<QWidget::FocusPolicy>* qdict = new QDict<QWidget::FocusPolicy>;
+ 
+     PyObject *key, *value;
+-    ssize_t pos = 0;
++    _SIP_SSIZE_T pos = 0;
+     QString *a0;
+     QWidget::FocusPolicy a1;
+ 
+Index: kdebindings/python/pykde/sip/kdeui/kkeydialog.sip
+===================================================================
+--- kdebindings/python/pykde/sip/kdeui/kkeydialog.sip	(revision 626831)
++++ kdebindings/python/pykde/sip/kdeui/kkeydialog.sip	(revision 626832)
+@@ -231,7 +231,7 @@
+     QDict<int>* qdict = new QDict<int>;
+ 
+     PyObject *key, *value;
+-    ssize_t pos = 0;
++    _SIP_SSIZE_T pos = 0;
+     QString *a0;
+     int a1;
+ 
+Index: kdebindings/python/pykde/sip/kparts/browserextension.sip
+===================================================================
+--- kdebindings/python/pykde/sip/kparts/browserextension.sip	(revision 626831)
++++ kdebindings/python/pykde/sip/kparts/browserextension.sip	(revision 626832)
+@@ -404,7 +404,7 @@
+     QMap<QCString,QCString> *cppmap = new QMap<QCString,QCString>;
+ 
+     PyObject *aelem, *belem;
+-    ssize_t pos = 0;
++    _SIP_SSIZE_T pos = 0;
+     QCString *acpp;
+     QCString *bcpp;
+ 
+@@ -487,7 +487,7 @@
+     QMap<QCString,int> *cppmap = new QMap<QCString,int>;
+ 
+     PyObject *aelem, *belem;
+-    ssize_t pos = 0;
++    _SIP_SSIZE_T pos = 0;
+     QCString *acpp;
+     int bcpp;
+ 
+Index: kdebindings/python/pykde/sip/kdecore/bytearray.sip
+===================================================================
+--- kdebindings/python/pykde/sip/kdecore/bytearray.sip	(revision 626831)
++++ kdebindings/python/pykde/sip/kdecore/bytearray.sip	(revision 626832)
+@@ -620,7 +620,7 @@
+     QMap<QCString,DCOPRef> *cppmap = new QMap<QCString,DCOPRef>;
+ 
+     PyObject *aelem, *belem;
+-    ssize_t pos = 0;
++    _SIP_SSIZE_T pos = 0;
+     QCString *acpp;
+     DCOPRef *bcpp;
+ 
+@@ -705,7 +705,7 @@
+     QMap<QString,DCOPRef> *cppmap = new QMap<QString,DCOPRef>;
+ 
+     PyObject *aelem, *belem;
+-    ssize_t pos = 0;
++    _SIP_SSIZE_T pos = 0;
+     QString *acpp;
+     DCOPRef *bcpp;
+ 
+Index: kdebindings/python/pykde/sip/kdecore/kconfigdata.sip
+===================================================================
+--- kdebindings/python/pykde/sip/kdecore/kconfigdata.sip	(revision 626831)
++++ kdebindings/python/pykde/sip/kdecore/kconfigdata.sip	(revision 626832)
+@@ -141,7 +141,7 @@
+     QMap<KEntryKey,KEntry> *cppmap = new QMap<KEntryKey,KEntry>;
+ 
+     PyObject *aelem, *belem;
+-    ssize_t pos = 0;
++    _SIP_SSIZE_T pos = 0;
+     KEntryKey *acpp;
+     KEntry *bcpp;
+ 
+Index: kdebindings/python/pykde/sip/kdecore/kaccel.sip
+===================================================================
+--- kdebindings/python/pykde/sip/kdecore/kaccel.sip	(revision 626831)
++++ kdebindings/python/pykde/sip/kdecore/kaccel.sip	(revision 626832)
+@@ -209,7 +209,7 @@
+     QMap<int,QString> *map = new QMap<int,QString>;
+ 
+         PyObject *key, *value;
+-        ssize_t pos = 0;
++        _SIP_SSIZE_T pos = 0;
+         int iKey;
+         QString *sData;
+ 
+Index: kdebindings/python/pykde/sip/kdecore/kcompletion.sip
+===================================================================
+--- kdebindings/python/pykde/sip/kdecore/kcompletion.sip	(revision 626831)
++++ kdebindings/python/pykde/sip/kdecore/kcompletion.sip	(revision 626832)
+@@ -201,7 +201,7 @@
+     QMap<KCompletionBase::KeyBindingType,KShortcut> *kbmap = new QMap<KCompletionBase::KeyBindingType,KShortcut>;
+ 
+     PyObject *key, *value;
+-        ssize_t pos = 0;
++        _SIP_SSIZE_T pos = 0;
+         KShortcut *cValue;
+         int iserr;
+ 
+Index: kdebindings/python/pykde/sip/kdecore/kmacroexpander.sip
+===================================================================
+--- kdebindings/python/pykde/sip/kdecore/kmacroexpander.sip	(revision 626831)
++++ kdebindings/python/pykde/sip/kdecore/kmacroexpander.sip	(revision 626832)
+@@ -169,7 +169,7 @@
+     QMap<QChar,QString> *map = new QMap<QChar,QString>;
+ 
+     PyObject *key, *value;
+-    ssize_t pos = 0;
++    _SIP_SSIZE_T pos = 0;
+     QChar *cKey;
+     QString *sData;
+ 
+@@ -255,7 +255,7 @@
+     QMap<QString, QStringList> *map = new QMap<QString, QStringList>;
+ 
+     PyObject *key, *value;
+-    ssize_t pos = 0;
++    _SIP_SSIZE_T pos = 0;
+     QString *sKey;
+     QStringList *slData;
+ 
+@@ -343,7 +343,7 @@
+     QMap<QChar,QStringList> *map = new QMap<QChar,QStringList>;
+ 
+     PyObject *key, *value;
+-    ssize_t pos = 0;
++    _SIP_SSIZE_T pos = 0;
+     QChar *cKey;
+     QStringList *slData;
+ 
+Index: kdebindings/python/pykde/sip/kdecore/kurl.sip
+===================================================================
+--- kdebindings/python/pykde/sip/kdecore/kurl.sip	(revision 626831)
++++ kdebindings/python/pykde/sip/kdecore/kurl.sip	(revision 626832)
+@@ -234,7 +234,7 @@
+         void                 __setitem__ (int, const KURL&);
+ %MethodCode
+ //takes index | (int) | value | (KURL)
+-    ssize_t len;
++    _SIP_SSIZE_T len;
+ 
+     len = sipCpp -> count();
+ 
+@@ -248,7 +248,7 @@
+ %MethodCode
+ //takes range | (a Python slice) | urlList | (KURL.List)
+ 
+-    ssize_t len, start, stop, step, slicelength;
++    _SIP_SSIZE_T len, start, stop, step, slicelength;
+ 
+     len = sipCpp -> count();
+ 
+@@ -278,7 +278,7 @@
+         void                 __delitem__ (int);
+ %MethodCode
+ //takes index | (int)
+-    ssize_t len;
++    _SIP_SSIZE_T len;
+ 
+     len = sipCpp -> count();
+ 
+@@ -291,7 +291,7 @@
+         void                 __delitem__ (SIP_PYSLICE);
+ %MethodCode
+ //takes range | (a Python slice)
+-    ssize_t len, start, stop, step, slicelength;
++    _SIP_SSIZE_T len, start, stop, step, slicelength;
+ 
+     len = sipCpp -> count();
+     if (sipConvertFromSliceObject(a0,len,&start,&stop,&step,&slicelength) < 0)
+@@ -308,7 +308,7 @@
+ %MethodCode
+ //returns (KURL)
+ //takes index | (int)
+-    ssize_t len;
++    _SIP_SSIZE_T len;
+ 
+     len = sipCpp -> count();
+ 
+@@ -322,7 +322,7 @@
+ %MethodCode
+ //returns (KURL.List)
+ //takes range | (a Python slice)
+-    ssize_t len, start, stop, step, slicelength;
++    _SIP_SSIZE_T len, start, stop, step, slicelength;
+ 
+     len = sipCpp -> count();
+ 
+Index: kdebindings/python/pykde/sip/kdecore/kconfig.sip
+===================================================================
+--- kdebindings/python/pykde/sip/kdecore/kconfig.sip	(revision 626831)
++++ kdebindings/python/pykde/sip/kdecore/kconfig.sip	(revision 626832)
+@@ -158,7 +158,7 @@
+     QMap<QString,QString> *cppmap = new QMap<QString,QString>;
+ 
+     PyObject *aelem, *belem;
+-    ssize_t  pos = 0;
++    _SIP_SSIZE_T  pos = 0;
+     QString *acpp;
+     QString *bcpp;
+ 
+Index: kdebindings/python/pyqt/sip/qt/qstring.sip
+===================================================================
+--- kdebindings/python/pyqt/sip/qt/qstring.sip	(revision 626831)
++++ kdebindings/python/pyqt/sip/qt/qstring.sip	(revision 626832)
+@@ -746,7 +746,7 @@
+ 
+ 	QString operator[](SIP_PYSLICE) const;
+ %MethodCode
+-		ssize_t len, start, stop, step, slicelength;
++		_SIP_SSIZE_T len, start, stop, step, slicelength;
+ 
+ 		len = sipCpp -> length();
+ 
+Index: kdebindings/python/pyqt/sip/qt/qdir.sip
+===================================================================
+--- kdebindings/python/pyqt/sip/qt/qdir.sip	(revision 626831)
++++ kdebindings/python/pyqt/sip/qt/qdir.sip	(revision 626832)
+@@ -238,7 +238,7 @@
+ 
+ 	QString operator[](int) const;
+ %MethodCode
+-		ssize_t len;
++		_SIP_SSIZE_T len;
+ 
+ 		Py_BEGIN_ALLOW_THREADS
+ 		len = sipCpp -> count();
+@@ -256,7 +256,7 @@
+ 
+ 	QStringList operator[](SIP_PYSLICE) const;
+ %MethodCode
+-		ssize_t len, start, stop, step, slicelength;
++		_SIP_SSIZE_T len, start, stop, step, slicelength;
+ 
+ 		Py_BEGIN_ALLOW_THREADS
+ 		len = sipCpp -> count();
+Index: kdebindings/python/pyqt/sip/qt/qstringlist.sip
+===================================================================
+--- kdebindings/python/pyqt/sip/qt/qstringlist.sip	(revision 626831)
++++ kdebindings/python/pyqt/sip/qt/qstringlist.sip	(revision 626832)
+@@ -99,7 +99,7 @@
+ 
+ 	void __setitem__(int,const QString &);
+ %MethodCode
+-		ssize_t len;
++		_SIP_SSIZE_T len;
+ 
+ 		len = sipCpp -> count();
+ 
+@@ -111,7 +111,7 @@
+ 
+ 	void __setitem__(SIP_PYSLICE,const QStringList &);
+ %MethodCode
+-		ssize_t len, start, stop, step, slicelength;
++		_SIP_SSIZE_T len, start, stop, step, slicelength;
+ 
+ 		len = sipCpp -> count();
+ 
+@@ -142,7 +142,7 @@
+ 
+ 	void __delitem__(int);
+ %MethodCode
+-		ssize_t len;
++		_SIP_SSIZE_T len;
+ 
+ 		len = sipCpp -> count();
+ 
+@@ -154,7 +154,7 @@
+ 
+ 	void __delitem__(SIP_PYSLICE);
+ %MethodCode
+-		ssize_t len, start, stop, step, slicelength;
++		_SIP_SSIZE_T len, start, stop, step, slicelength;
+ 
+ 		len = sipCpp -> count();
+ 
+@@ -170,7 +170,7 @@
+ 
+ 	QString operator[](int);
+ %MethodCode
+-		ssize_t len;
++		_SIP_SSIZE_T len;
+ 
+ 		len = sipCpp -> count();
+ 
+@@ -182,7 +182,7 @@
+ 
+ 	QStringList operator[](SIP_PYSLICE);
+ %MethodCode
+-		ssize_t len, start, stop, step, slicelength;
++		_SIP_SSIZE_T len, start, stop, step, slicelength;
+ 
+ 		len = sipCpp -> count();
+ 
