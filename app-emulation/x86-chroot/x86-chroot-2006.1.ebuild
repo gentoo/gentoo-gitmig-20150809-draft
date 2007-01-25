@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x86-chroot/x86-chroot-2006.1.ebuild,v 1.2 2006/10/04 08:57:08 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x86-chroot/x86-chroot-2006.1.ebuild,v 1.3 2007/01/25 23:04:14 genone Exp $
 
 inherit linux-info
 
@@ -58,9 +58,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Your chroot system is now installed. To do all the necessary setup"
-	einfo "work, run '/etc/init.d/x86-chroot start'. To start a chroot session,"
-	einfo "run 'x86-chroot'."
+	elog "Your chroot system is now installed. To do all the necessary setup"
+	elog "work, run '/etc/init.d/x86-chroot start'. To start a chroot session,"
+	elog "run 'x86-chroot'."
 }
 
 pkg_prerm() {

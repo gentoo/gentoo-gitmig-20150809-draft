@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/x48-0.4.3.ebuild,v 1.3 2006/01/26 22:25:22 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/x48-0.4.3.ebuild,v 1.4 2007/01/25 23:02:23 genone Exp $
 
 inherit eutils
 
@@ -41,8 +41,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "The X48 emulator requires an HP48 ROM Image to run."
-	einfo
-	einfo "You can use the ROMDump utility and documentation included with this"
-	einfo "package to obtain this from your HP48 calculator."
+	elog "The X48 emulator requires an HP48 ROM Image to run."
+	elog
+	elog "You can use the ROMDump utility and documentation included with this"
+	elog "package to obtain this from your HP48 calculator."
 }

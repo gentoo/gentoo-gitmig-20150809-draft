@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.2.ebuild,v 1.7 2006/10/06 23:20:25 aross Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.2.ebuild,v 1.8 2007/01/25 23:07:09 genone Exp $
 
 inherit mount-boot flag-o-matic
 
@@ -87,22 +87,22 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Please visit the Xen and Gentoo wiki:"
-	einfo "http://gentoo-wiki.com/HOWTO_Xen_and_Gentoo"
+	elog "Please visit the Xen and Gentoo wiki:"
+	elog "http://gentoo-wiki.com/HOWTO_Xen_and_Gentoo"
 
 	echo
-	einfo "Note: xen tools have been moved to app-emulation/xen-tools;"
-	einfo "you need to install that package to manage your domains."
+	elog "Note: xen tools have been moved to app-emulation/xen-tools;"
+	elog "you need to install that package to manage your domains."
 
 	if [[ -n ${XEN_UNSTABLE} ]]; then
 		echo
-		einfo "This is a snapshot of the xen-unstable tree."
-		einfo "Please report bugs in xen itself (and not the packaging) to"
-		einfo "bugzilla.xensource.com"
+		elog "This is a snapshot of the xen-unstable tree."
+		elog "Please report bugs in xen itself (and not the packaging) to"
+		elog "bugzilla.xensource.com"
 	fi
 
 	if use pae; then
 		echo
-		einfo "This is a PAE build of Xen. It will *only* boot PAE kernels!"
+		ewarn "This is a PAE build of Xen. It will *only* boot PAE kernels!"
 	fi
 }

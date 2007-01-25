@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xcopilot/xcopilot-0.6.6.ebuild,v 1.7 2006/02/24 22:45:54 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xcopilot/xcopilot-0.6.6.ebuild,v 1.8 2007/01/25 23:05:16 genone Exp $
 
 MY_P="xcopilot-0.6.6-uc0"
 
@@ -40,5 +40,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "See /usr/share/doc/${PF}/README.uClinux for more info"
+	elog "See /usr/share/doc/${PF}/README.uClinux for more info"
 }

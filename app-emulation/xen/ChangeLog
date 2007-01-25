@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xen
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.42 2006/10/06 23:20:25 aross Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.43 2007/01/25 23:07:09 genone Exp $
+
+  25 Jan 2007; Marius Mauch <genone@gentoo.org> xen-3.0.2.ebuild:
+  Replacing einfo with elog
 
   06 Oct 2006; <aross@gentoo.org> xen-3.0.2.ebuild:
   Allow compilation under AMD64 with a 64 bit kernel but 32 bit userland.

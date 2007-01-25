@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/x48-0.4.3-r1.ebuild,v 1.13 2006/11/25 15:51:38 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/x48-0.4.3-r1.ebuild,v 1.14 2007/01/25 23:02:23 genone Exp $
 
 inherit eutils
 
@@ -49,18 +49,18 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "The X48 emulator requires an HP48 ROM Image to run."
-	einfo
-	einfo "If you own an HP-48 calculator, you can use the ROMDump utility"
-	einfo "included with this package to obtain this from your calculator."
-	einfo
-	einfo "Alternatively, HP has provided two ROM images for non-commercial"
-	einfo "use only."
-	einfo
-	einfo "For an HP-48SX type: x48 -rom /usr/share/hp48/sxrom-j"
-	einfo "For an HP-48GX type: x48 -rom /usr/share/hp48/gxrom-r"
-	einfo
-	einfo "(If you're not sure which one you want, go with HP-48GX)"
-	einfo
-	einfo "Note: you only need to use the '-rom' argument once"
+	elog "The X48 emulator requires an HP48 ROM Image to run."
+	elog
+	elog "If you own an HP-48 calculator, you can use the ROMDump utility"
+	elog "included with this package to obtain this from your calculator."
+	elog
+	elog "Alternatively, HP has provided two ROM images for non-commercial"
+	elog "use only."
+	elog
+	elog "For an HP-48SX type: x48 -rom /usr/share/hp48/sxrom-j"
+	elog "For an HP-48GX type: x48 -rom /usr/share/hp48/gxrom-r"
+	elog
+	elog "(If you're not sure which one you want, go with HP-48GX)"
+	elog
+	elog "Note: you only need to use the '-rom' argument once"
 }
