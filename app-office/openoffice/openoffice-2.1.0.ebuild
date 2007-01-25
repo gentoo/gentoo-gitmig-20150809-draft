@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.1.0.ebuild,v 1.12 2007/01/25 05:31:42 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.1.0.ebuild,v 1.13 2007/01/25 08:24:51 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -28,8 +28,8 @@ SRC_URI="mirror://openoffice/stable/${PV}/${SRC}_core.tar.bz2
 	http://go-oo.org/packages/xt/xt-20051206-src-only.zip
 	http://go-oo.org/packages/SRC680/lp_solve_5.5.tar.gz"
 
-LANGS1="af ar as_IN be_BY bg bn bs ca cs cy da el en_GB en_ZA es et fa fi fr gu_IN he hi_IN hr hu it ja km ko lt lv mk nb nl nn nr ns or_IN pa_IN pl pt pt_BR ru rw sh_YU sk sl sr_CS st sv sw_TZ ta_IN te_IN tg th ti_ER tn tr ts ur_IN ve vi xh zh_CN zh_TW zu"
-LANGS="${LANGS1} de en en_US"
+LANGS1="af ar as_IN be_BY bg bn bs ca cs cy da de el en_GB en_ZA es et fa fi fr gu_IN he hi_IN hr hu it ja km ko lt lv mk nb nl nn nr ns or_IN pa_IN pl pt pt_BR ru rw sh_YU sk sl sr_CS st sv sw_TZ ta_IN te_IN tg th ti_ER tn tr ts ur_IN ve vi xh zh_CN zh_TW zu"
+LANGS="${LANGS1} en en_US"
 
 for X in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${X}"

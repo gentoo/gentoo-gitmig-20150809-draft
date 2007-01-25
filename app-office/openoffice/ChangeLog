@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.299 2007/01/25 05:31:42 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.300 2007/01/25 08:24:51 suka Exp $
+
+  25 Jan 2007; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.1.0.ebuild:
+  Obviously we still need the l10n-tarball for german users, otherwise 
+  help does not get translated, see bug #162803
 
   25 Jan 2007; Marius Mauch <genone@gentoo.org> openoffice-2.0.4.ebuild,
   openoffice-2.1.0.ebuild:
