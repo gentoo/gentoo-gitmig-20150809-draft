@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.ebuild,v 1.1 2007/01/24 16:21:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.ebuild,v 1.2 2007/01/25 11:45:36 armin76 Exp $
 
 unset ALLOWED_FLAGS  # Stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozcoreconf mozconfig-2 mozilla-launcher makeedit multilib autotools
@@ -18,7 +18,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/${PN}/releases/${PV}/${P}.source
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
-IUSE="java ldap mozcalendar mozdevelop moznocompose moznoirc moznomail moznoroaming postgres crypt"
+IUSE="java ldap mozdevelop moznocompose moznoirc moznomail moznoroaming postgres crypt"
 
 RDEPEND="java? ( virtual/jre )
 	>=www-client/mozilla-launcher-1.47
@@ -112,17 +112,16 @@ src_compile() {
 		export MOZ_PGSQL_LIBS=/usr/$(get_libdir)
 	fi
 
-	mozconfig_use_enable mozcalendar calendar
 	mozconfig_use_enable ldap
 	mozconfig_use_enable ldap ldap-experimental
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
 	mozconfig_annotate '' --with-user-appdir=.mozilla
 
-	if use moznomail && ! use mozcalendar; then
-		mozconfig_annotate "+moznomail -mozcalendar" --disable-mailnews
+	if use moznomail; then
+		mozconfig_annotate "+moznomail" --disable-mailnews
 	fi
 
-	if use moznocompose && ! use mozcalendar; then
+	if use moznocompose; then
 		if use moznoirc && use moznomail; then
 			mozconfig_annotate "+moznocompose" --disable-composer
 		fi
