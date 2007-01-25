@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-neon
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-neon/ChangeLog,v 1.2 2006/07/20 21:40:53 zaheerm Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-neon/ChangeLog,v 1.3 2007/01/25 20:07:58 lack Exp $
+
+*gst-plugins-neon-0.10.4 (25 Jan 2007)
+
+  25 Jan 2007; Jim Ramsay <lack@gentoo.org> +gst-plugins-neon-0.10.4.ebuild:
+  Version bump - gst-plugins-bad-0.10.4 is released
 
 *gst-plugins-neon-0.10.3 (20 Jul 2006)
 
