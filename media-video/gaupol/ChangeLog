@@ -1,6 +1,11 @@
 # ChangeLog for media-video/gaupol
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gaupol/ChangeLog,v 1.1 2006/12/01 02:51:22 beandog Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/gaupol/ChangeLog,v 1.2 2007/01/25 05:30:51 beandog Exp $
+
+*gaupol-0.7.2 (25 Jan 2007)
+
+  25 Jan 2007; Steve Dibb <beandog@gentoo.org> +gaupol-0.7.2.ebuild:
+  Version bump, bug 162575
 
   01 Dec 2006; Steve Dibb <beandog@gentoo.org> ChangeLog:
   Initial import, bug 118703, thanks to Ben de Groot for ebuild
