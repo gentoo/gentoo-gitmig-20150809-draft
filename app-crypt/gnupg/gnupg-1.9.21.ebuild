@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.21.ebuild,v 1.14 2007/01/24 17:05:34 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.21.ebuild,v 1.15 2007/01/25 20:30:47 eroyf Exp $
 
 WANT_AUTOMAKE='latest'
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnupg/alpha/gnupg/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="1.9"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="X gpg2-experimental ldap nls smartcard selinux"
 #IUSE+=caps
 

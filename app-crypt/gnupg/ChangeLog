@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.269 2007/01/24 17:05:34 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.270 2007/01/25 20:30:47 eroyf Exp $
+
+  25 Jan 2007; Alexander H. Færøy <eroyf@gentoo.org> gnupg-1.9.21.ebuild:
+  Stable on MIPS.
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org> gnupg-1.4.2.2.ebuild,
   gnupg-1.4.4.ebuild, gnupg-1.4.5.ebuild, gnupg-1.4.5-r1.ebuild,
