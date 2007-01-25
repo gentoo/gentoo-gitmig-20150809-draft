@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.1.1.ebuild,v 1.8 2007/01/24 17:12:14 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.1.1.ebuild,v 1.9 2007/01/25 09:18:20 mabi Exp $
 
 inherit eutils portability
 
@@ -67,7 +67,8 @@ src_compile() {
 }
 
 src_install() {
-	emake INSTALL_TOP="${D}/usr/" V=${PV} gentoo_install \
+	emake INSTALL_TOP="${D}/usr/" INSTALL_LIB="${D}/usr/$(get_libdir)/" \
+			V=${PV} gentoo_install \
 	|| die "emake install gentoo_install failed"
 
 	dodoc HISTORY README
