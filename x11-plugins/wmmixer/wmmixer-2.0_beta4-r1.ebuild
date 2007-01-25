@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmixer/wmmixer-2.0_beta4-r1.ebuild,v 1.3 2006/10/15 19:31:46 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmixer/wmmixer-2.0_beta4-r1.ebuild,v 1.4 2007/01/25 16:11:30 s4t4n Exp $
 
 inherit eutils
 
-IUSE="alsa oss"
+IUSE="alsa"
 
 DESCRIPTION="The next generation of WMMixer with native ALSA and OSS support."
 SRC_URI="http://freakzone.net/gordon/src/${PN}-2.0b4.tar.gz"
@@ -13,14 +13,12 @@ HOMEPAGE="http://freakzone.net/gordon/#wmmixer"
 RDEPEND="|| ( (
 		x11-libs/libX11
 		x11-libs/libXext
-		x11-libs/libXpm )
-	virtual/x11 )"
-DEPEND="${RDEPEND}
-	|| ( (
+		x11-libs/libXpm
 		x11-proto/xproto
 		x11-proto/xextproto )
 	virtual/x11 )
-	alsa? ( media-libs/alsa-lib )
+	alsa? ( media-libs/alsa-lib )"
+DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 SLOT="0"
@@ -48,8 +46,6 @@ src_compile() {
 
 	if use alsa ; then
 		myconf="${myconf} --enable-alsa"
-	elif use oss ; then
-		myconf="${myconf} --disable-alsatest --enable-oss"
 	fi
 
 	econf "${myconf}" || die
