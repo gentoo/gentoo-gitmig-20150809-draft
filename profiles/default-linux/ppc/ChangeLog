@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ppc profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.7 2007/01/22 17:56:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.8 2007/01/25 21:20:05 lu_zero Exp $
+
+  25 Jan 2007; Luca Barbato <lu_zero@gentoo.org> ppc32/2006.1/packages:
+  remove unneeded constraint on gcc (fixes qemu)
 
   22 Jan 2007; Markus Rothe <corsair@gentoo.org> use.mask:
   added lcd_devices_graphlcd to use.mask; bug #150925
