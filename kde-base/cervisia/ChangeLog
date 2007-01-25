@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/cervisia
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.58 2007/01/16 19:21:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.59 2007/01/25 18:48:32 flameeyes Exp $
+
+  25 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> cervisia-3.5.6.ebuild:
+  Drop ~hppa and ~mips keywords because of missing kdelibs-3.5.6 keywording.
 
 *cervisia-3.5.6 (16 Jan 2007)
 

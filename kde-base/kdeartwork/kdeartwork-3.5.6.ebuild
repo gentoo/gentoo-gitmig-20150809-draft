@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/kdeartwork-3.5.6.ebuild,v 1.2 2007/01/16 22:21:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/kdeartwork-3.5.6.ebuild,v 1.3 2007/01/25 18:51:39 flameeyes Exp $
 
 inherit kde-dist
 
 DESCRIPTION="KDE artwork package"
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="opengl xscreensaver"
 
 DEPEND="~kde-base/kdebase-${PV}

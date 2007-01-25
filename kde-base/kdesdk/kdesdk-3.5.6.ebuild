@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-3.5.6.ebuild,v 1.2 2007/01/16 22:29:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-3.5.6.ebuild,v 1.3 2007/01/25 19:03:07 flameeyes Exp $
 
 inherit db-use kde-dist
 
 DESCRIPTION="KDE SDK: Cervisia, KBabel, KCachegrind, Kompare, Umbrello,..."
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="berkdb kdehiddenvisibility subversion"
 
 DEPEND="x86? ( >=dev-util/valgrind-3.2.0 )

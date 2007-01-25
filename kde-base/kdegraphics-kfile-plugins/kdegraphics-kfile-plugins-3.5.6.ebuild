@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-kfile-plugins/kdegraphics-kfile-plugins-3.5.6.ebuild,v 1.2 2007/01/17 03:09:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-kfile-plugins/kdegraphics-kfile-plugins-3.5.6.ebuild,v 1.3 2007/01/25 18:57:09 flameeyes Exp $
 
 KMNAME=kdegraphics
 KMMODULE=kfile-plugins
@@ -9,7 +9,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="kfile plugins from kdegraphics"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="openexr"
 DEPEND="media-libs/tiff
 	openexr? ( media-libs/openexr )"
