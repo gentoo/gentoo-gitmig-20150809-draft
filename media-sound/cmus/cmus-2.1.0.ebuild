@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.1.0.ebuild,v 1.2 2007/01/25 07:38:26 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.1.0.ebuild,v 1.3 2007/01/25 14:42:09 beandog Exp $
 
 inherit eutils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://onion.dynserv.net/~timo/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="alsa ao arts debug flac mad mikmod modplug mp3 musepack oss vorbis"
 
 DEPEND="sys-libs/ncurses
