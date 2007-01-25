@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mvcase
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mvcase/ChangeLog,v 1.5 2005/12/20 00:31:04 ticho Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mvcase/ChangeLog,v 1.6 2007/01/25 14:51:30 beandog Exp $
+
+  25 Jan 2007; Steve Dibb <beandog@gentoo.org> mvcase-0.1.ebuild:
+  add ~amd64, bug 161227
 
   20 Dec 2005; Andrej Kacian <ticho@gentoo.org> mvcase-0.1.ebuild:
   Added ~x86 keyword.
