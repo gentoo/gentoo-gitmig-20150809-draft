@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wyrd/wyrd-1.4.1.ebuild,v 1.1 2006/07/18 17:05:01 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wyrd/wyrd-1.4.1.ebuild,v 1.2 2007/01/25 04:24:40 beandog Exp $
 
 DESCRIPTION="Text-based front-end to Remind"
 HOMEPAGE="http://www.eecs.umich.edu/~pelzlpj/wyrd/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.eecs.umich.edu/~pelzlpj/wyrd/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/ocaml-3.08
