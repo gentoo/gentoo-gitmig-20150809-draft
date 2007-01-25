@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.39 2007/01/24 19:41:54 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.40 2007/01/25 03:26:43 chutzpah Exp $
+
+  25 Jan 2007; Patrick McLean <chutzpah@gentoo.org> use.local.desc:
+  Add tftp USE flag for net-dns/dnsmasq
 
   24 Jan 2007; Alon Bar-Lev <alonbl@gentoo.org> package.mask:
   Remove sys-apps/pcsc-ase-iiie-drv
