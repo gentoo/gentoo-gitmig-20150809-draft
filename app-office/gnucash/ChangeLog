@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.116 2007/01/24 20:49:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.117 2007/01/25 16:03:50 seemant Exp $
+
+  25 Jan 2007; Seemant Kulleen <seemant@gentoo.org> gnucash-2.0.4.ebuild:
+  remove unused keywords
 
   24 Jan 2007; Seemant Kulleen <seemant@gentoo.org> gnucash-2.0.4.ebuild:
   add support for mt940 (depends on hbci and mt940 flags), to close bug #156932
