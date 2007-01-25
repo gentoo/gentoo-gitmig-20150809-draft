@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/shhopt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/shhopt/ChangeLog,v 1.5 2007/01/10 13:58:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/shhopt/ChangeLog,v 1.6 2007/01/25 14:49:24 beandog Exp $
+
+  25 Jan 2007; Steve Dibb <beandog@gentoo.org> shhopt-1.1.7.ebuild,
+  shhopt-1.1.7-r1.ebuild:
+  add ~amd64, bug 161227
 
 *shhopt-1.1.7-r2 (10 Jan 2007)
 
