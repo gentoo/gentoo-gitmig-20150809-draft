@@ -1,7 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.0-r5.ebuild,v 1.5 2006/12/07 22:34:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.0-r5.ebuild,v 1.6 2007/01/25 11:52:05 caster Exp $
 
+JAVA_PKG_IUSE="doc source test"
 inherit java-pkg-2 java-ant-2 eutils
 
 DESCRIPTION="The CLI library provides a simple and easy to use API for working with the command line arguments and options."
@@ -11,39 +12,37 @@ SRC_URI="mirror://apache/jakarta/commons/cli/source/cli-${PV}-src.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="1"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="doc junit source"
+IUSE=""
 
-RDEPEND=">=virtual/jre-1.3
-	>=dev-java/commons-logging-1.0
+CDEPEND="dev-java/commons-logging
 	=dev-java/commons-lang-2.0*"
-DEPEND=">=virtual/jdk-1.3
-	${RDEPEND}
-	junit? ( >=dev-java/junit-3.7  >=dev-java/ant-tasks-1.6.2 )
-	source? ( app-arch/zip )
-	>=dev-java/ant-core-1.6.2"
+RDEPEND=">=virtual/jre-1.4
+	${CDEPEND}"
+DEPEND=">=virtual/jdk-1.4
+	test? ( =dev-java/junit-3*  dev-java/ant )
+	!test? ( dev-java/ant-core )
+	${CDEPEND}"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/${P}-gentoo.diff
-	echo "commons-logging.jar=$(java-pkg_getjar commons-logging	commons-logging.jar)" >> build.properties
-	echo "commons-lang.jar=$(java-pkg_getjars commons-lang)" >> build.properties
-	use junit && echo "junit.jar=$(java-pkg_getjars junit)" >> build.properties
+	epatch ${FILESDIR}/${P}-build.xml.patch
+
+	mkdir lib && cd lib
+	java-pkg_jar-from commons-logging commons-logging.jar
+	java-pkg_jar-from commons-lang
 }
 
-src_compile() {
-	local antflags="jar"
-	use doc && antflags="${antflags} javadoc"
-	use junit && antflags="${antflags} test"
-	eant ${antflags} || die "compilation failed"
+src_test() {
+	java-pkg_jar-from --into lib junit
+	eant test
 }
 
 src_install() {
-	java-pkg_newjar target/${P}.jar ${PN}.jar
+	java-pkg_newjar target/${P}.jar
 
 	dodoc README.txt
-	use doc && java-pkg_dohtml -r target/docs/
-	use source && java-pkg_dosrc src/java/*
+	use doc && java-pkg_dojavadoc target/docs/apidocs
+	use source && java-pkg_dosrc src/java/org
 }
-
