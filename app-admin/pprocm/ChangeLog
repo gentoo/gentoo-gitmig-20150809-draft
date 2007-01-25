@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/pprocm
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pprocm/ChangeLog,v 1.1 2007/01/25 18:31:56 mcummings Exp $
+
+*pprocm-0.9_beta1 (25 Jan 2007)
+
+  25 Jan 2007; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +pprocm-0.9_beta1.ebuild:
+  Bug 162831
+
