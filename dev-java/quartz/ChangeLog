@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/quartz
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/ChangeLog,v 1.18 2005/10/15 11:41:22 axxo Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/ChangeLog,v 1.19 2007/01/25 08:58:10 betelgeuse Exp $
+
+  25 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> quartz-1.4.5.ebuild:
+  Rename servlet-2.3 and servlet-2.4 use flags to servlet-2_3 and servlet-2_4
+  because you can't use dots in use flag names.
 
   15 Oct 2005; Thomas Matthijs <axxo@gentoo.org> quartz-1.4.5.ebuild:
   move dev-java/jmx dev-java/sun-jmx

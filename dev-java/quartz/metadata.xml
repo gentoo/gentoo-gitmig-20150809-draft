@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>java</herd>
-  <maintainer>
-    <email>st_lim@gentoo.org</email>
-  </maintainer>
-  <longdescription>Quartz from OpenSymphony</longdescription>
+	<herd>java</herd>
+	<maintainer>
+		<email>st_lim@gentoo.org</email>
+	</maintainer>
+	<longdescription>Quartz from OpenSymphony</longdescription>
 </pkgmetadata>

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/quartz-1.4.5.ebuild,v 1.4 2005/10/15 11:41:22 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/quartz-1.4.5.ebuild,v 1.5 2007/01/25 08:58:10 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -11,11 +11,11 @@ SRC_URI="mirror://sourceforge/quartz/${P}.zip"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
-IUSE="dbcp doc jboss jikes jmx jta oracle servlet-2.3 servlet-2.4 struts"
+IUSE="dbcp doc jboss jikes jmx jta oracle servlet-2_3 servlet-2_4 struts"
 RDEPEND=">=virtual/jre-1.4
 		oracle? ( >=dev-java/jdbc3-oracle-9.2.0.3 )
-		servlet-2.3? ( >=dev-java/servletapi-2.3 )
-		servlet-2.4? ( >=dev-java/servletapi-2.4 )
+		servlet-2_3? ( >=dev-java/servletapi-2.3 )
+		servlet-2_4? ( >=dev-java/servletapi-2.4 )
 		dbcp? ( >=dev-java/commons-dbcp-1.1 )
 		jboss? ( >=www-servers/jboss-3.2.3 )
 		jta? ( >=dev-java/jta-1.0.1 )
@@ -32,8 +32,8 @@ src_compile() {
 	local antflags=""
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 
-	use servlet-2.3 && CLASSPATH="$CLASSPATH:$(java-pkg_getjars servletapi-2.3)"
-	use servlet-2.4 && CLASSPATH="$CLASSPATH:$(java-pkg_getjars servletapi-2.4)"
+	use servlet-2_3 && CLASSPATH="$CLASSPATH:$(java-pkg_getjars servletapi-2.3)"
+	use servlet-2_4 && CLASSPATH="$CLASSPATH:$(java-pkg_getjars servletapi-2.4)"
 	use dbcp && CLASSPATH="$CLASSPATH:$(java-pkg_getjars commons-dbcp)"
 	use jta && CLASSPATH="$CLASSPATH:$(java-pkg_getjars jta)"
 	use oracle && CLASSPATH="$CLASSPATH:$(java-pkg_getjars jdbc2-oracle-5)"
