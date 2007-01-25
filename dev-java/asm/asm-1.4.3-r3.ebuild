@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/asm-1.4.3-r3.ebuild,v 1.2 2006/07/22 21:26:56 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/asm-1.4.3-r3.ebuild,v 1.3 2007/01/25 08:10:37 opfer Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://asm.objectweb.org"
 SRC_URI="http://download.forge.objectweb.org/${PN}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="1.4"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="doc source"
 DEPEND=">=virtual/jdk-1.3
 	dev-java/ant-core
