@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.41 2007/01/16 14:13:19 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.42 2007/01/25 07:29:04 opfer Exp $
+
+  25 Jan 2007; Christian Faulhammer <opfer@gentoo.org> libetpan-0.48.ebuild:
+  stable x86; bug #163611
 
   16 Jan 2007; Roy Marples <uberlord@gentoo.org> ChangeLog:
   Added ~x86-fbsd keyword.
