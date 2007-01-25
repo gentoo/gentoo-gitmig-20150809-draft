@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/obexftp
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.19 2006/11/26 09:16:12 mrness Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.20 2007/01/25 07:57:04 mrness Exp $
+
+  25 Jan 2007; Alin Nastac <mrness@gentoo.org>
+  +files/obexftp-0.21-no_iconv.patch, obexftp-0.21.ebuild:
+  Add nls USE flag (#148618).
 
   26 Nov 2006; Alin Nastac <mrness@gentoo.org> obexftp-0.21.ebuild:
   Add ruby USE flag (#156041).
