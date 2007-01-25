@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.6.3.ebuild,v 1.8 2006/10/15 01:22:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.6.3.ebuild,v 1.9 2007/01/25 05:14:16 genone Exp $
 
 inherit eutils flag-o-matic gnome2
 
@@ -57,10 +57,10 @@ pkg_setup() {
 		$(use_enable static)"
 
 	if use gnome && ! built_with_use gnome-extra/libgsf gnome; then
-		einfo "libgsf needs to be compiled with gnome in USE"
-		einfo "for this version of gnumeric to work. Rebuild"
-		einfo "libgsf first like this :"
-		einfo "USE=gnome emerge libgsf -vp"
+		eerror "libgsf needs to be compiled with gnome in USE"
+		eerror "for this version of gnumeric to work. Rebuild"
+		eerror "libgsf first like this :"
+		eerror "USE=gnome emerge libgsf -vp"
 		die "libgsf was built without gnome support..."
 	fi
 
