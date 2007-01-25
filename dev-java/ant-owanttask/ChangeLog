@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-owanttask
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ChangeLog,v 1.15 2007/01/24 17:57:16 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ChangeLog,v 1.16 2007/01/25 08:08:36 opfer Exp $
+
+  25 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
+  ant-owanttask-1.1-r11.ebuild:
+  stable x86; bug #163639
 
 *ant-owanttask-1.1-r12 (24 Jan 2007)
 
