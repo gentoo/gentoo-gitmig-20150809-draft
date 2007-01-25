@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.33.ebuild,v 1.5 2006/10/02 15:47:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.36.ebuild,v 1.1 2007/01/25 03:27:41 chutzpah Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs flag-o-matic
 
 MY_P="${P/_/}"
 MY_PV="${PV/_rc*/}"
@@ -13,11 +13,12 @@ SRC_URI="http://www.thekelleys.org.uk/dnsmasq/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="resolvconf"
+IUSE="resolvconf tftp dbus"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
 	>=sys-apps/portage-2.0.51
+	dbus? ( sys-apps/dbus )
 	resolvconf? ( net-dns/resolvconf-gentoo )"
 
 S=${WORKDIR}/${PN}-${MY_PV}
@@ -31,6 +32,8 @@ src_unpack() {
 }
 
 src_compile() {
+	use tftp || append-flags -DNO_TFTP
+	use dbus && sed -i '$ a #define HAVE_DBUS' src/config.h
 	emake CC="$(tc-getCC)" || die
 }
 
