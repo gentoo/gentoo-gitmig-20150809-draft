@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.4.6.ebuild,v 1.3 2007/01/25 05:10:46 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.4.6.ebuild,v 1.4 2007/01/25 21:46:18 welp Exp $
 
 inherit alternatives eutils fdo-mime
 
@@ -40,10 +40,15 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${P}/abi"
 
-src_compile() {
-	# Patch from debian to use fullpath for file history
-	epatch ${FILESDIR}/11_history_fullpath.dpatch
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
 
+	epatch ${FILESDIR}/11_history_fullpath.dpatch
+	epatch ${FILESDIR}/freebsd_fix.patch
+}
+
+src_compile() {
 	econf $(use_enable debug)           \
 		  $(use_enable debug symbols)   \
 		  $(use_enable gnome)           \

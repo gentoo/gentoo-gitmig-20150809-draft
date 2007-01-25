@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.4.5-r1.ebuild,v 1.3 2007/01/25 05:10:46 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.4.5-r1.ebuild,v 1.4 2007/01/25 21:46:18 welp Exp $
 
 inherit eutils fdo-mime alternatives
 
@@ -38,13 +38,15 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${P}/abi
 
-src_compile() {
-	# Patch taken from debian to use full path for file history
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
 	epatch ${FILESDIR}/11_history_fullpath.dpatch
+	epatch ${FILESDIR}/11_fcfini_crash.dpatch
+}
 
-	# Patch taken from debian to prevent crash on exit
-	epatch ${FILESDIR}/16_fcfini_crash.dpatch
-
+src_compile() {
 	# this is a hack since I don't want to go hack in the gnome-vfs
 	# headerfiles. The issue is about gnome-vfs containing "long long"
 	# which makes gcc 3.3.1 balk
