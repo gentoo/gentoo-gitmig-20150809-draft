@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.3.0_alpha2.ebuild,v 1.2 2007/01/25 14:47:12 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.3.0_alpha3.ebuild,v 1.1 2007/01/25 14:47:12 chainsaw Exp $
 
 inherit flag-o-matic
 
@@ -14,12 +14,12 @@ SRC_URI="http://static.audacious-media-player.org/release/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="aac alsa arts chardet esd flac jack lirc modplug mp3 musepack nls oss sid sndfile timidity vorbis wavpack wma pulseaudio"
+IUSE="aac alsa arts chardet esd flac jack lirc modplug mp3 musepack nls oss sid sndfile timidity tta vorbis wavpack wma pulseaudio"
 
 RDEPEND="app-arch/unzip
 	dev-libs/libxml2
 	net-misc/curl
-	>=media-sound/audacious-1.3.0_alpha3
+	>=media-sound/audacious-1.3.0_alpha2
 	>=x11-libs/gtk+-2.6
 	>=gnome-base/libglade-2.3.1
 	>=dev-cpp/libbinio-1.4
@@ -41,6 +41,7 @@ RDEPEND="app-arch/unzip
 	sid? ( media-libs/libsidplay )
 	sndfile? ( media-libs/libsndfile )
 	timidity? ( media-sound/timidity++ )
+	tta? ( media-libs/libid3tag )
 	vorbis? ( >=media-libs/libvorbis-1.0
 		  >=media-libs/libogg-1.0 )
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.3 )
@@ -89,6 +90,7 @@ src_compile() {
 		$(use_enable pulseaudio pulse) \
 		$(use_enable chardet) \
 		$(use_enable wavpack) \
+		$(use_enable tta) \
 		|| die
 
 	emake || die "make failed"

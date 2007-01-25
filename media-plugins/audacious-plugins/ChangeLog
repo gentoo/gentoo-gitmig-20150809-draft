@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.28 2007/01/08 00:32:39 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.29 2007/01/25 14:47:12 chainsaw Exp $
+
+*audacious-plugins-1.3.0_alpha3 (25 Jan 2007)
+
+  25 Jan 2007; Tony Vroon <chainsaw@gentoo.org>
+  +audacious-plugins-1.3.0_alpha3.ebuild:
+  New alpha release. Significant improvements to HTTP stream handling, do test
+  that. Add TTA USE-flag as suggested by Kazuki Oikawa <kazuki@panicode.com>
+  in bug #163557.
 
 *audacious-plugins-1.3.0_alpha2 (08 Jan 2007)
 
