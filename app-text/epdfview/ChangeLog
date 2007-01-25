@@ -1,6 +1,10 @@
 # ChangeLog for app-text/epdfview
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.6 2007/01/24 20:21:11 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.7 2007/01/25 22:09:24 welp Exp $
+
+  25 Jan 2007; Peter Weller <welp@gentoo.org> +files/search_fix.patch,
+  epdfview-0.1.5.ebuild:
+  Added a patch to prevent segfaults whilst searching on x86-fbsd
 
   24 Jan 2007; Peter Weller <welp@gentoo.org> epdfview-0.1.5.ebuild:
   Removed ~x86-fbsd keyword due to segfaults whilst searching...
