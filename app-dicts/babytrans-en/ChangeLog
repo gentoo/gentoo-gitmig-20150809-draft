@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/babytrans-en
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en/ChangeLog,v 1.8 2006/10/14 11:46:01 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en/ChangeLog,v 1.9 2007/01/25 08:49:02 kevquinn Exp $
+
+  25 Jan 2007; Kevin F. Quinn <kevquinn@gentoo.org>
+  files/digest-babytrans-en-0.2, Manifest:
+  Regenerate Manifest (bug #163701)
 
   14 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove angusyoung from metadata.xml due to retiring.
