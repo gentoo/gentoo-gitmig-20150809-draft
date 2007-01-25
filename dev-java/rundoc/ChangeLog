@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/rundoc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rundoc/ChangeLog,v 1.1 2007/01/25 20:04:42 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rundoc/ChangeLog,v 1.2 2007/01/25 23:12:07 betelgeuse Exp $
+
+  25 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> rundoc-0.11.ebuild:
+  No need to make the rundoc task globally available any more with the split
+  ant work.
 
 *rundoc-0.11 (25 Jan 2007)
 

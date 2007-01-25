@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rundoc/rundoc-0.11.ebuild,v 1.1 2007/01/25 20:04:42 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rundoc/rundoc-0.11.ebuild,v 1.2 2007/01/25 23:12:07 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -30,8 +30,6 @@ EANT_GENTOO_CLASSPATH="ant-core"
 
 src_install() {
 	java-pkg_newjar dist/${P}.jar ${PN}.jar
-	dodir /usr/share/ant-core/lib
-	dosym /usr/share/${PN}/lib/${PN}.jar /usr/share/ant-core/lib/${PN}.jar
 
 	use doc && java-pkg_dojavadoc javadoc
 	use source && java-pkg_dosrc src/java/com
