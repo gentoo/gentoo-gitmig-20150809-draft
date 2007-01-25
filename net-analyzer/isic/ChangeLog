@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/isic
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/isic/ChangeLog,v 1.11 2005/08/16 19:25:29 blubb Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/isic/ChangeLog,v 1.12 2007/01/25 17:37:32 vanquirius Exp $
+
+*isic-0.07 (25 Jan 2007)
+
+  25 Jan 2007; Marcelo Goes <vanquirius@gentoo.org> +isic-0.07.ebuild:
+  0.07 version bump. Updated HOMEPAGE, SRC_URI. gcc and makefile patches no
+  longer necessary. Includes ipv6 tools.
 
   16 Aug 2005; Simon Stelling <blubb@gentoo.org> isic-0.06.ebuild:
   added ~amd64 keyword
