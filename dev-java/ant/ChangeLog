@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.103 2007/01/22 17:11:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.104 2007/01/25 18:32:39 wltjr Exp $
+
+  25 Jan 2007; William L. Thomson Jr. <wltjr@gentoo.org> ant-1.7.0.ebuild:
+  Added ~amd64 keyword
 
   22 Jan 2007; Markus Rothe <corsair@gentoo.org> ant-1.7.0.ebuild:
   Added ~ppc64; bug #159820
