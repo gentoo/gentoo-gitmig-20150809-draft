@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-smime
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-smime/ChangeLog,v 1.4 2007/01/23 19:37:26 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-smime/ChangeLog,v 1.5 2007/01/25 08:16:03 opfer Exp $
+
+  25 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
+  claws-mail-smime-0.5.7.ebuild:
+  stable x86; bug #163611
 
   23 Jan 2007; Peter Weller <welp@gentoo.org> claws-mail-smime-0.6.ebuild:
   Keyworded ~x86-fbsd
