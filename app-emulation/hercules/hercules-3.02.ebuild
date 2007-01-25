@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/hercules-3.02.ebuild,v 1.1 2005/02/24 01:59:37 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/hercules-3.02.ebuild,v 1.2 2007/01/25 22:11:56 genone Exp $
 
 inherit flag-o-matic
 
@@ -46,19 +46,19 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Hercules System/370, ESA/390 and zArchitecture Mainframe"
-	einfo "Emulator has been installed. Some useful utility files have"
-	einfo "been placed in /usr/share/hercules. For detailed configuration"
-	einfo "and operating instructions, see http://www.conmicro.cx/hercules"
-	einfo
-	einfo "In order to use Hercules you will need a guest operating"
-	einfo "system. There are several flavors of 'Linux for S/390' and"
-	einfo "'Linux for zSeries' available, or if you want that 'Big Iron'"
-	einfo "feel, you can download several real mainframe operating systems"
-	einfo "such as OS/360, DOS/VS, MVS, or VM370 from http://www.cbttape.org"
-	einfo
-	einfo "Hercules is also capable of running OS/390, z/OS, and z/VM with an"
-	einfo "appropriate license."
-	einfo
+	elog
+	elog "Hercules System/370, ESA/390 and zArchitecture Mainframe"
+	elog "Emulator has been installed. Some useful utility files have"
+	elog "been placed in /usr/share/hercules. For detailed configuration"
+	elog "and operating instructions, see http://www.conmicro.cx/hercules"
+	elog
+	elog "In order to use Hercules you will need a guest operating"
+	elog "system. There are several flavors of 'Linux for S/390' and"
+	elog "'Linux for zSeries' available, or if you want that 'Big Iron'"
+	elog "feel, you can download several real mainframe operating systems"
+	elog "such as OS/360, DOS/VS, MVS, or VM370 from http://www.cbttape.org"
+	elog
+	elog "Hercules is also capable of running OS/390, z/OS, and z/VM with an"
+	elog "appropriate license."
+	elog
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.71.1.ebuild,v 1.2 2007/01/08 22:03:08 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.71.1.ebuild,v 1.3 2007/01/25 22:15:36 genone Exp $
 
 inherit flag-o-matic eutils linux-mod
 
@@ -38,8 +38,8 @@ MODULE_NAMES="mol(mol:${S}/src/kmod/Linux)
 
 pkg_setup() {
 	echo
-	einfo "If you want to use MOL fullscreen on a virtual console"
-	einfo "be sure to have the USE-flag \"fbcon\" set!"
+	elog "If you want to use MOL fullscreen on a virtual console"
+	elog "be sure to have the USE-flag \"fbcon\" set!"
 	echo
 
 	linux-mod_pkg_setup
@@ -102,27 +102,27 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "Mac-on-Linux is now installed.  To run, use the command startmol."
-	einfo "You might want to configure video modes first with molvconfig."
-	einfo "Other configuration is in /etc/molrc.  For more info see:"
-	einfo "              http://www.maconlinux.org"
-	einfo "Also try man molrc, man molvconfig, man startmol"
+	elog "Mac-on-Linux is now installed.  To run, use the command startmol."
+	elog "You might want to configure video modes first with molvconfig."
+	elog "Other configuration is in /etc/molrc.  For more info see:"
+	elog "              http://www.maconlinux.org"
+	elog "Also try man molrc, man molvconfig, man startmol"
 	echo
 	ewarn "For networking and sound you might install the drivers in the"
 	ewarn "folder \"MOL-Install\" on your Mac OS X-Desktop."
 	echo
 	ewarn "If errors with networking occur, make sure you have the following"
 	ewarn "kernel functions enabled:"
-	einfo "For connecting to Linux:"
-	einfo "    Universal TUN/TAP device driver support (CONFIG_TUN)"
-	einfo "For the dhcp server:"
-	einfo "    Packet Socket (CONFIG_PACKET)"
-	einfo "For NAT:"
-	einfo "    Network packet filtering (CONFIG_NETFILTER)"
-	einfo "    Connection tracking (CONFIG_IP_NF_CONNTRACK)"
-	einfo "    IP tables support (CONFIG_IP_NF_IPTABLES)"
-	einfo "    Packet filtering (CONFIG_IP_NF_FILTER)"
-	einfo "    Full NAT (CONFIG_IP_NF_NAT)"
-	einfo "    MASQUERADE target support (CONFIG_IP_NF_TARGET_MASQUERADE)"
+	ewarn "For connecting to Linux:"
+	ewarn "    Universal TUN/TAP device driver support (CONFIG_TUN)"
+	ewarn "For the dhcp server:"
+	ewarn "    Packet Socket (CONFIG_PACKET)"
+	ewarn "For NAT:"
+	ewarn "    Network packet filtering (CONFIG_NETFILTER)"
+	ewarn "    Connection tracking (CONFIG_IP_NF_CONNTRACK)"
+	ewarn "    IP tables support (CONFIG_IP_NF_IPTABLES)"
+	ewarn "    Packet filtering (CONFIG_IP_NF_FILTER)"
+	ewarn "    Full NAT (CONFIG_IP_NF_NAT)"
+	ewarn "    MASQUERADE target support (CONFIG_IP_NF_TARGET_MASQUERADE)"
 	echo
 }

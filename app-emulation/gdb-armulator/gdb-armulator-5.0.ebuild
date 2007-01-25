@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/gdb-armulator/gdb-armulator-5.0.ebuild,v 1.1 2006/01/03 23:35:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/gdb-armulator/gdb-armulator-5.0.ebuild,v 1.2 2007/01/25 22:09:38 genone Exp $
 
 inherit flag-o-matic eutils
 
@@ -51,6 +51,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "For instructions on how to use this emulator, please see:"
-	einfo " ${HOMEPAGE}"
+	elog "For instructions on how to use this emulator, please see:"
+	elog " ${HOMEPAGE}"
 }
