@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/libxfcegui4-4.4.0.ebuild,v 1.2 2007/01/23 16:38:08 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/libxfcegui4-4.4.0.ebuild,v 1.3 2007/01/25 19:26:07 welp Exp $
 
 inherit xfce44
 
@@ -24,8 +24,11 @@ RDEPEND="x11-libs/libICE
 	sys-libs/zlib
 	x11-libs/cairo"
 DEPEND="${RDEPEND}
+	!=xfce-base/xfce-mcs-plugins-4.3*
+	!=xfce-base/xfce4-panel-4.3*
 	>=dev-util/gtk-doc-1
 	x11-proto/xproto"
 
 XFCE_CONFIG="${XFCE_CONFIG} $(use_enable startup-notification)"
+
 xfce44_core_package

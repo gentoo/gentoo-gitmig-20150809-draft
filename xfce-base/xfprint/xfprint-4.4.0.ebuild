@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfprint/xfprint-4.4.0.ebuild,v 1.2 2007/01/23 18:12:51 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfprint/xfprint-4.4.0.ebuild,v 1.3 2007/01/25 19:27:44 welp Exp $
 
-inherit xfce44 gnome2-utils
+inherit xfce44
 
 xfce44
 
@@ -30,11 +30,3 @@ DEPEND="${RDEPEND}
 XFCE_CONFIG="--enable-bsdlpr --enable-cups"
 
 xfce44_core_package
-
-pkg_postinst() {
-	gnome2_icon_cache_update
-}
-
-pkg_postrm() {
-	gnome2_icon_cache_update
-}

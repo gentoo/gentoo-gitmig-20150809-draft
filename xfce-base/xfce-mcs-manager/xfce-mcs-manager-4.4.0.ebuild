@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-mcs-manager/xfce-mcs-manager-4.4.0.ebuild,v 1.3 2007/01/23 22:38:16 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-mcs-manager/xfce-mcs-manager-4.4.0.ebuild,v 1.4 2007/01/25 19:30:56 welp Exp $
 
-inherit gnome2-utils xfce44
+inherit xfce44
 
 xfce44
 
@@ -18,15 +18,6 @@ RDEPEND=">=dev-libs/glib-2
 	>=xfce-base/libxfce4util-${XFCE_MASTER_VERSION}
 	>=xfce-base/libxfcegui4-${XFCE_MASTER_VERSION}
 	media-libs/libpng"
+DEPEND="${RDEPEND}"
 
 xfce44_core_package
-
-pkg_postinst() {
-	gnome2_icon_cache_update
-}
-
-pkg_postrm() {
-	gnome2_icon_cache_update
-}
-
-
