@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.5.6.ebuild,v 1.5 2007/01/25 18:45:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.5.6-r1.ebuild,v 1.1 2007/01/25 18:45:06 flameeyes Exp $
 
 inherit db-use kde-dist
 
@@ -17,6 +17,8 @@ DEPEND="~kde-base/kdepim-${PV}
 	berkdb? ( =sys-libs/db-4* )
 	!kde-misc/metabar"
 RDEPEND="${DEPEND}"
+
+PATCHES="${FILESDIR}/konq-plugins-3.5-archiver.patch"
 
 src_unpack() {
 	einfo "NOTICE: If the compilation dies complaining with"

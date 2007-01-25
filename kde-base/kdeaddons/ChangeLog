@@ -1,6 +1,24 @@
 # ChangeLog for kde-base/kdeaddons
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.196 2007/01/21 17:27:17 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.197 2007/01/25 18:45:06 flameeyes Exp $
+
+  25 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +files/konq-plugins-3.5-archiver.patch, +kdeaddons-3.5.5-r1.ebuild,
+  kdeaddons-3.5.6.ebuild, +kdeaddons-3.5.6-r1.ebuild:
+  Remove ~hppa keyword as they misses last kdelibs version.
+
+  25 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +files/konq-plugins-3.5-archiver.patch, +kdeaddons-3.5.5-r1.ebuild,
+  kdeaddons-3.5.6.ebuild, +kdeaddons-3.5.6-r1.ebuild:
+  Remove ~mips keyword as they misses last kdelibs version.
+
+*kdeaddons-3.5.6-r1 (25 Jan 2007)
+*kdeaddons-3.5.5-r1 (25 Jan 2007)
+
+  25 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +files/konq-plugins-3.5-archiver.patch, +kdeaddons-3.5.5-r1.ebuild,
+  +kdeaddons-3.5.6-r1.ebuild:
+  Add a patch to fix a privacy issue with the archiver.
 
   21 Jan 2007; Ioannis Aslanidis <deathwing00@gentoo.org>
   kdeaddons-3.5.6.ebuild:
