@@ -1,10 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfce44.eclass,v 1.12 2007/01/22 01:04:50 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfce44.eclass,v 1.13 2007/01/25 19:32:16 welp Exp $
 
 # Xfce44 Eclass
 #
 # Eclass to simplify Xfce4 package installation
+
+inherit fdo-mime gnome2-utils
 
 ## set some variable values:
 ## COMPRESS is the default compression extension
@@ -127,4 +129,16 @@ xfce44_src_install() {
 	${INSTALL} || die
 }
 
-EXPORT_FUNCTIONS src_compile src_install
+xfce44_pkg_postinst() {
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
+	gnome2_icon_cache_update
+}
+
+xfce44_pkg_postrm() {
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
+	gnome2_icon_cache_update
+}
+
+EXPORT_FUNCTIONS src_compile src_install pkg_postinst pkg_postrm
