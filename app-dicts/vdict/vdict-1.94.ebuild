@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/vdict/vdict-1.94.ebuild,v 1.3 2005/12/03 10:29:16 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/vdict/vdict-1.94.ebuild,v 1.4 2007/01/25 04:54:29 genone Exp $
 
 inherit eutils
 
@@ -20,6 +20,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "You may want to install app-dicts/vdict-* packages"
-	einfo "to have corresponding dictionaries"
+	elog "You may want to install app-dicts/vdict-* packages"
+	elog "to have corresponding dictionaries"
 }

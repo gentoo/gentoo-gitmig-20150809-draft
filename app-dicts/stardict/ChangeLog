@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/stardict
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.31 2006/08/03 18:08:16 gustavoz Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.32 2007/01/25 04:53:02 genone Exp $
+
+  25 Jan 2007; Marius Mauch <genone@gentoo.org> stardict-2.4.2.ebuild,
+  stardict-2.4.6-r1.ebuild, stardict-2.4.8.ebuild:
+  Replacing einfo with elog
 
   03 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   stardict-2.4.6-r1.ebuild:

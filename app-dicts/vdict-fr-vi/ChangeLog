@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/vdict-fr-vi
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/vdict-fr-vi/ChangeLog,v 1.2 2005/08/23 22:27:50 pclouds Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/vdict-fr-vi/ChangeLog,v 1.3 2007/01/25 04:57:00 genone Exp $
+
+  25 Jan 2007; Marius Mauch <genone@gentoo.org> vdict-fr-vi-20050224.ebuild:
+  Replacing einfo with elog
 
   23 Aug 2005; <pclouds@gentoo.org> vdict-fr-vi-20050224.ebuild:
   Stable on x86

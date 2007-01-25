@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/vdict-vi-en/vdict-vi-en-20050224.ebuild,v 1.2 2005/08/23 22:28:08 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/vdict-vi-en/vdict-vi-en-20050224.ebuild,v 1.3 2007/01/25 04:58:49 genone Exp $
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -20,5 +20,5 @@ src_install() {
 	doins vi-en.vdbf vi-en.vdbi
 }
 pkg_postinst() {
-	einfo "Please do search for dictionaries in vdict"
+	elog "Please do search for dictionaries in vdict"
 }

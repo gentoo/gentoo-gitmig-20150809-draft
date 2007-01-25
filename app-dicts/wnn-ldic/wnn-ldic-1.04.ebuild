@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/wnn-ldic/wnn-ldic-1.04.ebuild,v 1.2 2005/01/01 13:03:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/wnn-ldic/wnn-ldic-1.04.ebuild,v 1.3 2007/01/25 05:03:16 genone Exp $
 
 DESCRIPTION="Wnn dictionary for librarian"
 
@@ -31,6 +31,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "lib.dic is installed in /usr/lib/wnn/ja_JP/dic/misc."
-	einfo "You have to edit your wnnenvrc or eggrc to use it."
+	elog "lib.dic is installed in /usr/lib/wnn/ja_JP/dic/misc."
+	elog "You have to edit your wnnenvrc or eggrc to use it."
 }
