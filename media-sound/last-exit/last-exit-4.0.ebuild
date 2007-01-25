@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/last-exit-4.0.ebuild,v 1.3 2007/01/25 15:27:20 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/last-exit-4.0.ebuild,v 1.4 2007/01/25 17:27:03 steev Exp $
 
-inherit mono gnome2 eutils
+inherit mono gnome2 eutils autotools
 
 DESCRIPTION="Gnome/GTK+ alternative to the last.fm player"
 HOMEPAGE="http://www.o-hand.com/~iain/last-exit/"
@@ -38,6 +38,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch "${FILESDIR}"/${PN}-dbus-sharp-parallel-build-fix.patch
+	eautoreconf
 }
 
 src_install() {

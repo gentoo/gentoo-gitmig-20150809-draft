@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/last-exit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/ChangeLog,v 1.9 2007/01/25 15:27:20 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/ChangeLog,v 1.10 2007/01/25 17:27:03 steev Exp $
+
+  25 Jan 2007; Steev Klimaszewski <steev@gentoo.org> last-exit-4.0.ebuild:
+  Need to run eautoreconf when patching Makefile.am.  I fail.  Fixed now, thanks
+  to Priit Laes for reporting to me.
 
   25 Jan 2007; Steev Klimaszewski <steev@gentoo.org>
   +files/last-exit-dbus-sharp-parallel-build-fix.patch,
