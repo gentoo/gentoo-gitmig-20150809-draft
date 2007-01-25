@@ -1,6 +1,9 @@
 # ChangeLog for dev-ada/adabroker
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adabroker/ChangeLog,v 1.9 2006/05/13 20:39:02 george Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adabroker/ChangeLog,v 1.10 2007/01/25 23:34:31 genone Exp $
+
+  25 Jan 2007; Marius Mauch <genone@gentoo.org> adabroker-1.0_pre4.ebuild:
+  Replacing einfo with elog
 
   13 May 2006; George Shapovalov <george@gentoo.org>
   adabroker-1.0_pre4.ebuild:

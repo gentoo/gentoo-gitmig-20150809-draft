@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/adasockets-1.7-r1.ebuild,v 1.13 2006/05/13 20:46:04 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/adasockets-1.7-r1.ebuild,v 1.14 2007/01/25 23:37:08 genone Exp $
 
 DESCRIPTION="An Interface to BSD sockets from Ada (TCP, UDP and multicast)."
 SRC_URI="http://www.rfc1149.net/download/adasockets/${P}.tar.gz"
@@ -54,9 +54,9 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "The envaironment has been set up to make gnat automatically find files for"
-	einfo "AdaSockets. In order to immediately activate these settings please do:"
-	einfo "env-update"
-	einfo "source /etc/profile"
-	einfo "Otherwise the settings will become active next time you login"
+	elog "The environment has been set up to make gnat automatically find files for"
+	elog "AdaSockets. In order to immediately activate these settings please do:"
+	elog "env-update"
+	elog "source /etc/profile"
+	elog "Otherwise the settings will become active next time you login"
 }

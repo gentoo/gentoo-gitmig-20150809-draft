@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.4.6.ebuild,v 1.2 2006/09/09 21:49:09 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.4.6.ebuild,v 1.3 2007/01/25 23:39:26 genone Exp $
 
 inherit eutils flag-o-matic gnatbuild
 
@@ -135,7 +135,7 @@ src_install () {
 
 pkg_postinst() {
 	echo
-	einfo "The ASIS is installed for the active gnat compiler at gnat's	location."
-	einfo "No further configuration is necessary. Enjoy."
+	elog "The ASIS is installed for the active gnat compiler at gnat's	location."
+	elog "No further configuration is necessary. Enjoy."
 	echo
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ada/asis-gpl
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gpl/ChangeLog,v 1.1 2006/10/26 15:31:39 george Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gpl/ChangeLog,v 1.2 2007/01/25 23:43:15 genone Exp $
+
+  25 Jan 2007; Marius Mauch <genone@gentoo.org> asis-gpl-3.4.6.2006.ebuild:
+  Replacing einfo with elog
 
 *asis-gpl-3.4.6.2006 (26 Oct 2006)
 

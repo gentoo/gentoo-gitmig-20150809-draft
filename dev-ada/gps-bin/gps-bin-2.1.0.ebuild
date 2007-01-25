@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gps-bin/gps-bin-2.1.0.ebuild,v 1.1 2005/05/27 14:44:42 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gps-bin/gps-bin-2.1.0.ebuild,v 1.2 2007/01/25 23:51:01 genone Exp $
 
 IUSE=""
 
@@ -43,8 +43,8 @@ src_install () {
 }
 
 pkg_postinst(){
-	einfo "This is GNAT Programming System, enjoy!"
-	einfo "Please note, if you plan on using gtkada, beware that while compiling
+	elog "This is GNAT Programming System, enjoy!"
+	elog "Please note, if you plan on using gtkada, beware that while compiling
 	your app from within gps, it will link against its own libraries
 	instead of the system-wide gtkada library!"
 }

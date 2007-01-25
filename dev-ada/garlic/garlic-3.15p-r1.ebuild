@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/garlic/garlic-3.15p-r1.ebuild,v 1.9 2006/05/13 20:58:05 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/garlic/garlic-3.15p-r1.ebuild,v 1.10 2007/01/25 23:53:37 genone Exp $
 
 S="${WORKDIR}/glade-${PV}-src"
 DESCRIPTION="The GNAT implementation of the ARM Annex for Distributed Systems."
@@ -65,9 +65,9 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "The envaironment has been set up to make gnat automatically find files for"
-	einfo "Garlic. In order to immediately activate these settings please do:"
-	einfo "env-update"
-	einfo "source /etc/profile"
-	einfo "Otherwise the settings will become active next time you login"
+	elog "The environment has been set up to make gnat automatically find files for"
+	elog "Garlic. In order to immediately activate these settings please do:"
+	elog "env-update"
+	elog "source /etc/profile"
+	elog "Otherwise the settings will become active next time you login"
 }

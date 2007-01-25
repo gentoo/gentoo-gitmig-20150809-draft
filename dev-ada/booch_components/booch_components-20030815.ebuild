@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/booch_components-20030815.ebuild,v 1.8 2006/05/13 20:50:39 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/booch_components-20030815.ebuild,v 1.9 2007/01/25 23:46:13 genone Exp $
 
 IUSE=""
 
@@ -56,9 +56,9 @@ src_install () {
 }
 
 pkg_postinst(){
-	einfo "The envaironment has been set up to make gnat automatically find files in"
-	einfo "Booch components. In order to immediately activate these settings please do"
-	einfo "env-update"
-	einfo "source /etc/profile"
-	einfo "Otherwise the settings will become active next time you login"
+	elog "The environment has been set up to make gnat automatically find files in"
+	elog "Booch components. In order to immediately activate these settings please do"
+	elog "env-update"
+	elog "source /etc/profile"
+	elog "Otherwise the settings will become active next time you login"
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adadoc/adadoc-2.1.ebuild,v 1.2 2006/11/13 16:58:28 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adadoc/adadoc-2.1.ebuild,v 1.3 2007/01/25 23:35:37 genone Exp $
 
 inherit eutils gnat
 
@@ -52,9 +52,9 @@ src_install() {
 
 pkg_postinst() {
 	eselect gnat update
-	einfo "The environment has been set up to make gnat automatically find files for"
-	einfo "${PN}. In order to immediately activate these settings please do:"
-	einfo "env-update && source /etc/profile"
-	einfo "Otherwise the settings will become active next time you login"
+	elog "The environment has been set up to make gnat automatically find files for"
+	elog "${PN}. In order to immediately activate these settings please do:"
+	elog "env-update && source /etc/profile"
+	elog "Otherwise the settings will become active next time you login"
 }
 

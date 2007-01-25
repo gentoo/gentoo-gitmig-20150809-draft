@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/aunit/aunit-1.01.ebuild,v 1.6 2006/05/13 20:48:11 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/aunit/aunit-1.01.ebuild,v 1.7 2007/01/25 23:44:27 genone Exp $
 
 IUSE=""
 
@@ -40,9 +40,9 @@ src_install () {
 }
 
 pkg_postinst(){
-	einfo "The envaironment has been set up to make gnat automatically find files for"
-	einfo "Aunit. In order to immediately activate these settings please do:"
-	einfo "env-update"
-	einfo "source /etc/profile"
-	einfo "Otherwise the settings will become active next time you login"
+	elog "The environment has been set up to make gnat automatically find files for"
+	elog "Aunit. In order to immediately activate these settings please do:"
+	elog "env-update"
+	elog "source /etc/profile"
+	elog "Otherwise the settings will become active next time you login"
 }

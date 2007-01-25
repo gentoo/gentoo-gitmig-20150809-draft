@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.2.1-r1.ebuild,v 1.5 2006/05/13 21:01:51 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.2.1-r1.ebuild,v 1.6 2007/01/25 23:55:40 genone Exp $
 
 inherit eutils
 
@@ -75,10 +75,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "The environment has been set up to make gnat automatically find files for"
-	einfo "GtkAda. In order to immediately activate these settings please do:"
-	einfo "env-update"
-	einfo "source /etc/profile"
-	einfo "Otherwise the settings will become active next time you login"
+	elog "The environment has been set up to make gnat automatically find files for"
+	elog "GtkAda. In order to immediately activate these settings please do:"
+	elog "env-update"
+	elog "source /etc/profile"
+	elog "Otherwise the settings will become active next time you login"
 }
 

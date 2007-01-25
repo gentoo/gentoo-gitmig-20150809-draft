@@ -1,6 +1,9 @@
 # ChangeLog for dev-ada/aunit
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/aunit/ChangeLog,v 1.6 2006/11/14 13:57:53 george Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/aunit/ChangeLog,v 1.7 2007/01/25 23:44:27 genone Exp $
+
+  25 Jan 2007; Marius Mauch <genone@gentoo.org> aunit-1.01.ebuild:
+  Replacing einfo with elog
 
 *aunit-1.03 (14 Nov 2006)
 

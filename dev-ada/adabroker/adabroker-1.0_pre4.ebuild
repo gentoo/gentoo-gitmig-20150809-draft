@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adabroker/adabroker-1.0_pre4.ebuild,v 1.12 2006/05/13 20:39:02 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adabroker/adabroker-1.0_pre4.ebuild,v 1.13 2007/01/25 23:34:31 genone Exp $
 
 S="${WORKDIR}/${PN}-1.0pre4"
 DESCRIPTION="AdaBroker is a CORBA implementation for Ada."
@@ -71,9 +71,9 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "The envaironment has been set up to make gnat automatically find files for"
-	einfo "AdaBroker. In order to immediately activate these settings please do:"
-	einfo "env-update"
-	einfo "source /etc/profile"
-	einfo "Otherwise the settings will become active next time you login"
+	elog "The environment has been set up to make gnat automatically find files for"
+	elog "AdaBroker. In order to immediately activate these settings please do:"
+	elog "env-update"
+	elog "source /etc/profile"
+	elog "Otherwise the settings will become active next time you login"
 }

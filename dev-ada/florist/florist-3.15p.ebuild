@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/florist/florist-3.15p.ebuild,v 1.10 2006/05/13 20:56:09 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/florist/florist-3.15p.ebuild,v 1.11 2007/01/25 23:52:28 genone Exp $
 
 DESCRIPTION="POSIX Ada Bindings"
 HOMEPAGE="http://www.cs.fsu.edu/~baker/florist.html"
@@ -66,10 +66,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "The envaironment has been set up to make gnat automatically find files for"
-	einfo "Florist. In order to immediately activate these settings please do:"
-	einfo "env-update"
-	einfo "source /etc/profile"
-	einfo "Otherwise the settings will become active next time you login"
+	elog "The environment has been set up to make gnat automatically find files for"
+	elog "Florist. In order to immediately activate these settings please do:"
+	elog "env-update"
+	elog "source /etc/profile"
+	elog "Otherwise the settings will become active next time you login"
 }
 

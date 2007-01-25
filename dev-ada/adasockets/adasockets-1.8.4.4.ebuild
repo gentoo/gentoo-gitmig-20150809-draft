@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/adasockets-1.8.4.4.ebuild,v 1.2 2006/05/13 20:46:04 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/adasockets-1.8.4.4.ebuild,v 1.3 2007/01/25 23:37:08 genone Exp $
 
 inherit eutils
 
@@ -59,9 +59,9 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "The envaironment has been set up to make gnat automatically find files for"
-	einfo "AdaSockets. In order to immediately activate these settings please do:"
-	einfo "env-update"
-	einfo "source /etc/profile"
-	einfo "Otherwise the settings will become active next time you login"
+	elog "The environment has been set up to make gnat automatically find files for"
+	elog "AdaSockets. In order to immediately activate these settings please do:"
+	elog "env-update"
+	elog "source /etc/profile"
+	elog "Otherwise the settings will become active next time you login"
 }

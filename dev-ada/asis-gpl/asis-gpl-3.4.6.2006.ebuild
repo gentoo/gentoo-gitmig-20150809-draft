@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gpl/asis-gpl-3.4.6.2006.ebuild,v 1.1 2006/10/26 15:31:39 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gpl/asis-gpl-3.4.6.2006.ebuild,v 1.2 2007/01/25 23:43:15 genone Exp $
 
 inherit eutils flag-o-matic gnatbuild
 
@@ -34,8 +34,8 @@ pkg_setup() {
 		eerror "The active gnat profile does not correspond to the selected"
 		eerror "version of asis!  Please install the appropriate gnat (if you"
 		eerror "did not so yet) and run:"
-		einfo  "eselect gnat set ${CTARGET}-${Gnat_Name}-${SLOT}"
-		einfo  "env-update && source /etc/profile"
+		eerror "eselect gnat set ${CTARGET}-${Gnat_Name}-${SLOT}"
+		eerror "env-update && source /etc/profile"
 		eerror "and then emerge =dev-ada/${P} again.."
 		echo
 		die
@@ -111,7 +111,7 @@ src_install () {
 
 pkg_postinst() {
 	echo
-	einfo "The ASIS is installed for the active gnat compiler at gnat's	location."
-	einfo "No further configuration is necessary. Enjoy."
+	elog "The ASIS is installed for the active gnat compiler at gnat's	location."
+	elog "No further configuration is necessary. Enjoy."
 	echo
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ada/garlic
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/garlic/ChangeLog,v 1.10 2006/05/13 20:58:05 george Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/garlic/ChangeLog,v 1.11 2007/01/25 23:53:37 genone Exp $
+
+  26 Jan 2007; Marius Mauch <genone@gentoo.org> garlic-3.15p-r1.ebuild:
+  Replacing einfo with elog
 
   13 May 2006; George Shapovalov <george@gentoo.org> garlic-3.15p-r1.ebuild:
   removed inherit gnat until adapted for new eclass

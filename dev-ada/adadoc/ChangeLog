@@ -1,6 +1,9 @@
 # ChangeLog for dev-ada/adadoc
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adadoc/ChangeLog,v 1.9 2006/11/13 16:49:02 george Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adadoc/ChangeLog,v 1.10 2007/01/25 23:35:37 genone Exp $
+
+  25 Jan 2007; Marius Mauch <genone@gentoo.org> adadoc-2.1.ebuild:
+  Replacing einfo with elog
 
 *adadoc-2.1 (13 Nov 2006)
 
