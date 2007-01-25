@@ -1,6 +1,23 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.146 2007/01/23 10:18:19 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.147 2007/01/25 13:03:50 chtekk Exp $
+
+*proftpd-1.3.1_rc2 (25 Jan 2007)
+
+  25 Jan 2007; Luca Longinotti <chtekk@gentoo.org>
+  -files/proftpd-1.2.10-ftpshut.patch,
+  -files/proftpd-1.2.10-gcc4_mod_quotatab_sql.patch,
+  -files/proftpd-1.2.10-openssl_0.9.8.patch,
+  -files/proftpd-1.2.10-sqlshowinfo.patch,
+  -files/proftpd-1.3.0-main_commandbuf.patch,
+  -files/proftpd-1.3.0-mod_ctrls_sighup.patch,
+  -files/proftpd-1.3.0-mod_sql_mysql.patch,
+  -files/proftpd-1.3.0-mod_tls_overflow.patch, -proftpd-1.2.10-r7.ebuild,
+  -proftpd-1.3.0a.ebuild, -proftpd-1.3.1_rc1.ebuild,
+  +proftpd-1.3.1_rc2.ebuild:
+  Remove old 1.2.10 and 1.3.0a versions. Move 1.3.1_rc1 to 1.3.1_rc2, which
+  just fixes a few bugs, two of which important/critical, see Gentoo bugs
+  #159066 and #159772.
 
   23 Jan 2007; Steve Dibb <beandog@gentoo.org> proftpd-1.3.1_rc1.ebuild:
   amd64 stable, security bug 158122
