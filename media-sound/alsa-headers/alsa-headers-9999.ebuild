@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/alsa-headers-9999.ebuild,v 1.5 2007/01/05 17:19:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/alsa-headers-9999.ebuild,v 1.6 2007/01/25 18:53:35 flameeyes Exp $
 
 inherit eutils mercurial
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.alsa-project.org/"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="-*"
+KEYWORDS=""
 IUSE=""
 
 DEPEND=""
