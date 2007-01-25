@@ -1,14 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.8.1.ebuild,v 1.2 2007/01/23 19:31:59 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.8.1.ebuild,v 1.3 2007/01/25 23:14:22 leonardop Exp $
 
-inherit gnome2 eutils autotools
+WANT_AUTOCONF="2.5"
+WANT_AUTOMAKE="1.8"
+
+inherit eutils autotools gnome2
 
 DESCRIPTION="Image viewer and browser for Gnome"
 HOMEPAGE="http://gthumb.sourceforge.net/"
 LICENSE="GPL-2"
 
-IUSE="exif jpeg tiff gphoto2"
+IUSE="exif gphoto2 jpeg tiff"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 
@@ -38,8 +41,10 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README"
 
 pkg_setup() {
-	G2CONF="${G2CONF} $(use_enable exif) $(use_enable gphoto2) \
-			$(use_enable jpeg) $(use_enable tiff)"
+	G2CONF="$(use_enable exif) \
+		$(use_enable gphoto2) \
+		$(use_enable jpeg) \
+		$(use_enable tiff)"
 }
 
 src_unpack() {
@@ -47,10 +52,13 @@ src_unpack() {
 
 	# as-needed #130284
 	# New as-needed, including gphoto fixes
-	epatch "${FILESDIR}"/${PN}-2.8.1-as-needed.patch
+	epatch "${FILESDIR}/${PN}-2.8.1-as-needed.patch"
 
 	# Respect zoom preferences.  Bug #156342
-	epatch "${FILESDIR}"/${PN}-2.8.1-respect-zoom-pref.patch
+	epatch "${FILESDIR}/${PN}-2.8.1-respect-zoom-pref.patch"
+
+	# Fix compilation if USE=-exif (bug #163533)
+	epatch "${FILESDIR}/${P}-noexif_fixes.patch"
 
 	eautoreconf
 }

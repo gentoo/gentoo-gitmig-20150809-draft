@@ -1,0 +1,19 @@
+diff -NurdpB gthumb-2.8.1/src/rotation-utils.c gthumb-2.8.1-patched/src/rotation-utils.c
+--- gthumb-2.8.1/src/rotation-utils.c	2006-11-25 06:10:39.000000000 -0500
++++ gthumb-2.8.1-patched/src/rotation-utils.c	2007-01-25 17:43:57.000000000 -0500
+@@ -111,6 +111,7 @@ update_rotation_from_exif_data (const ch
+ void
+ reset_orientation_field (const char *path)
+ {
++#ifdef HAVE_LIBEXIF
+ 	JPEGData     *jdata;
+ 	ExifData     *edata;
+ 	unsigned int  i;
+@@ -150,6 +151,7 @@ reset_orientation_field (const char *pat
+ 
+ 	exif_data_unref (edata);
+ 	jpeg_data_unref (jdata);
++#endif /* HAVE_LIBEXIF */
+ }
+ 
+ 
