@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/last-exit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/ChangeLog,v 1.8 2007/01/24 02:15:01 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/ChangeLog,v 1.9 2007/01/25 15:27:20 steev Exp $
+
+  25 Jan 2007; Steev Klimaszewski <steev@gentoo.org>
+  +files/last-exit-dbus-sharp-parallel-build-fix.patch,
+  last-exit-4.0.ebuild:
+  Add patch from Priit Laes to fix parallel building.  Closes bug #163545
 
   24 Jan 2007; Steev Klimaszewski <steev@gentoo.org> last-exit-4.0.ebuild:
   Fix the path for 4.0, Closes bug #163529. Thanks to Jose daLuz
