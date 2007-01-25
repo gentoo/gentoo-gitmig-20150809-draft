@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/khacc/khacc-3.3.ebuild,v 1.2 2006/10/14 11:12:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/khacc/khacc-3.3.ebuild,v 1.3 2007/01/25 05:18:13 genone Exp $
 
 inherit kde
 
@@ -25,9 +25,9 @@ src_compile() {
 
 pkg_postinst() {
 	echo
-	einfo "A sample configuration is provided in /usr/share/qhacc/easysetup."
-	einfo "copy files: mkdir ~/.qhacc ; cp /usr/share/qhacc/easysetup/* ~/.qhacc"
-	einfo "run program: khacc -f ~/.qhacc/"
-	einfo "set alias: echo -e \\\n \"alias khacc=\\\"khacc -f ~/.qhacc\\\"\" >> ~/.bashrc"
+	elog "A sample configuration is provided in /usr/share/qhacc/easysetup."
+	elog "copy files: mkdir ~/.qhacc ; cp /usr/share/qhacc/easysetup/* ~/.qhacc"
+	elog "run program: khacc -f ~/.qhacc/"
+	elog "set alias: echo -e \\\n \"alias khacc=\\\"khacc -f ~/.qhacc\\\"\" >> ~/.bashrc"
 	echo
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.5.7.ebuild,v 1.5 2006/10/27 17:15:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.5.7.ebuild,v 1.6 2007/01/25 05:16:25 genone Exp $
 
 inherit eutils
 
@@ -25,13 +25,11 @@ RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	if ! use print; then
-		echo
-		einfo
-		einfo "NOTE: The USE variable 'print' is not in your USE flags."
-		einfo "For printing support in grisbi, you will need to restart"
-		einfo "the build with USE=\"print\""
-		einfo
-		echo
+		elog
+		elog "NOTE: The USE variable 'print' is not in your USE flags."
+		elog "For printing support in grisbi, you will need to restart"
+		elog "the build with USE=\"print\""
+		elog
 		ebeep 5
 	fi
 }
@@ -70,7 +68,7 @@ src_install() {
 pkg_postinst() {
 	pkg_setup
 
-	einfo "The first thing you should do is set up the browser command in"
-	einfo "preferences after you start up grisbi.  Otherwise you will not"
-	einfo "be able to see the help and manuals"
+	elog "The first thing you should do is set up the browser command in"
+	elog "preferences after you start up grisbi.  Otherwise you will not"
+	elog "be able to see the help and manuals"
 }

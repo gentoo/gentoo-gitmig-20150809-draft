@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.11b.ebuild,v 1.12 2006/01/25 08:40:28 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.11b.ebuild,v 1.13 2007/01/25 05:23:00 genone Exp $
 
 inherit elisp-common eutils fixheadtails
 
@@ -117,12 +117,12 @@ src_install() {
 
 pkg_postinst() {
 	has_emacs && elisp-site-regen
-	einfo
-	einfo "If you enabled xft2 support (default) you may specify xfont directive by"
-	einfo "font name and font registry."
-	einfo "e.g.)"
-	einfo '%deffont "standard" xfont "sazanami mincho" "jisx0208.1983"'
-	einfo
+	elog
+	elog "If you enabled xft2 support (default) you may specify xfont directive by"
+	elog "font name and font registry."
+	elog "e.g.)"
+	elog '%deffont "standard" xfont "sazanami mincho" "jisx0208.1983"'
+	elog
 }
 
 pkg_postrm() {

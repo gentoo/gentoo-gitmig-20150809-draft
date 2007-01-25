@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.4.5.ebuild,v 1.8 2006/10/15 00:38:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.4.5.ebuild,v 1.9 2007/01/25 05:10:46 genone Exp $
 
 inherit eutils fdo-mime alternatives
 
@@ -80,7 +80,7 @@ pkg_postinst() {
 
 	alternatives_auto_makesym "/usr/bin/abiword" "/usr/bin/abiword-[0-9].[0-9]"
 
-	einfo "As of version 2.4, all abiword plugins have been moved"
-	einfo "into a seperate abiword-plugins package"
-	einfo "You can install them by running emerge abiword-plugins"
+	elog "As of version 2.4, all abiword plugins have been moved"
+	elog "into a seperate abiword-plugins package"
+	elog "You can install them by running emerge abiword-plugins"
 }

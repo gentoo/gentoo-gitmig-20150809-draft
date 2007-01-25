@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/facturalux/facturalux-0.4.ebuild,v 1.7 2005/07/07 04:28:04 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/facturalux/facturalux-0.4.ebuild,v 1.8 2007/01/25 05:12:40 genone Exp $
 
 inherit eutils
 
@@ -43,11 +43,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "You must create a new database and a proper user:"
-	einfo
-	einfo "# su postgres"
-	einfo "$ createdb -E UNICODE facturalux"
-	einfo "$ createuser --pwprompt password"
-	einfo
+	elog
+	elog "You must create a new database and a proper user:"
+	elog
+	elog "# su postgres"
+	elog "$ createdb -E UNICODE facturalux"
+	elog "$ createuser --pwprompt password"
+	elog
 }

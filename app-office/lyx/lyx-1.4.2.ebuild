@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.4.2.ebuild,v 1.3 2006/10/16 06:11:43 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.4.2.ebuild,v 1.4 2007/01/25 05:20:47 genone Exp $
 
 inherit kde-functions fdo-mime eutils libtool flag-o-matic font
 
@@ -76,10 +76,10 @@ src_unpack() {
 	# bug #125309
 	epatch "${FILESDIR}"/${P}-gentoo.patch || die
 	if use qt3 && use cjk ; then
-		einfo
-		einfo "CJK-LyX now only supports the qt frontend"
-		einfo "the xforms frontend has been removed."
-		einfo
+		elog
+		elog "CJK-LyX now only supports the qt frontend"
+		elog "the xforms frontend has been removed."
+		elog
 		epatch "${DISTDIR}"/${CJK_PATCH} || die
 	fi
 	elibtoolize || die "elibtoolize failed "
@@ -160,19 +160,19 @@ pkg_postinst() {
 		fdo-mime_desktop_database_update
 	fi
 
-	einfo ""
-	einfo "How to use Hebrew in LyX:"
-	einfo "1. emerge dev-tex/ivritex."
-	einfo "2. gunzip /usr/share/doc/${PF}/preferences.gz into ~/.lyx/preferences"
-	einfo "or, read http://www.math.tau.ac.il/~dekelts/lyx/instructions2.html"
-	einfo "for instructions on using lyx's own preferences dialog to equal effect."
-	einfo "3. use lyx's qt interface (compile with USE=qt3) for maximum effect."
-	einfo ""
+	elog
+	elog "How to use Hebrew in LyX:"
+	elog "1. emerge dev-tex/ivritex."
+	elog "2. gunzip /usr/share/doc/${PF}/preferences.gz into ~/.lyx/preferences"
+	elog "or, read http://www.math.tau.ac.il/~dekelts/lyx/instructions2.html"
+	elog "for instructions on using lyx's own preferences dialog to equal effect."
+	elog "3. use lyx's qt interface (compile with USE=qt3) for maximum effect."
+	elog
 
 	if ! use qt3 ; then
-		einfo ""
-		einfo "If you have a multi-head setup not using xinerama you can only use lyx"
-		einfo "on the 2nd head if not using qt (maybe due to a xforms bug). See bug #40392."
-		einfo ""
+		elog
+		elog "If you have a multi-head setup not using xinerama you can only use lyx"
+		elog "on the 2nd head if not using qt (maybe due to a xforms bug). See bug #40392."
+		elog
 	fi
 }
