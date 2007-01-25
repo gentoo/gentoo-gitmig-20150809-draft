@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/cairomm
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.7 2006/11/25 14:37:05 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.8 2007/01/25 14:46:58 compnerd Exp $
+
+  25 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  cairomm-1.2.2.ebuild:
+  doxygen is only needed when building docs (bug #151577)
 
   25 Nov 2006; Bryan Østergaard <kloeri@gentoo.org> cairomm-1.2.2.ebuild:
   Add ~ia64 keyword.
