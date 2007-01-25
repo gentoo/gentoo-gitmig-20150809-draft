@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.1.0.ebuild,v 1.1 2007/01/03 10:37:37 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.1.0.ebuild,v 1.2 2007/01/25 07:38:26 opfer Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="A ncurses based music player with plugin support for many formats"
 HOMEPAGE="http://onion.dynserv.net/~timo/cmus.html"
@@ -66,8 +66,8 @@ src_compile() {
 	my_config oss CONFIG_OSS
 	my_config vorbis CONFIG_VORBIS
 
-	# econf doesn't work, because configure wants "prefix" without dashes
-	./configure prefix=/usr ${myconf} DEBUG=$debuglevel || die "configure failed"
+	# econf doesn't work, because configure wants "prefix" (and similar) without dashes
+	./configure prefix=/usr ${myconf} libdir=/usr/$(get_libdir) DEBUG=$debuglevel || die "configure failed"
 
 	emake || die "emake failed"
 }
