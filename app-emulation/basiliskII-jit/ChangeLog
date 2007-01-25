@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/basiliskII-jit
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/ChangeLog,v 1.7 2006/10/20 19:56:25 genstef Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/ChangeLog,v 1.8 2007/01/25 21:59:36 genone Exp $
+
+  25 Jan 2007; Marius Mauch <genone@gentoo.org>
+  basiliskII-jit-1.0.0-r1.ebuild:
+  Replacing einfo with elog
 
   20 Oct 2006; Stefan Schweizer <genstef@gentoo.org>
   basiliskII-jit-1.0.0-r1.ebuild:

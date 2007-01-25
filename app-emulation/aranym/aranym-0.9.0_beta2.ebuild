@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/aranym/aranym-0.9.0_beta2.ebuild,v 1.3 2005/07/20 14:14:04 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/aranym/aranym-0.9.0_beta2.ebuild,v 1.4 2007/01/25 21:55:49 genone Exp $
 
 inherit flag-o-matic eutils
 
@@ -56,5 +56,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "To run ARAnyM with AFROS type: aranym --config /usr/share/aranym/afros/config"
+	elog "To run ARAnyM with AFROS type: aranym --config /usr/share/aranym/afros/config"
 }

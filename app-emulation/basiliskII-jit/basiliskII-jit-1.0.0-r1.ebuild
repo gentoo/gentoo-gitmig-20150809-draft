@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/basiliskII-jit-1.0.0-r1.ebuild,v 1.6 2006/10/20 19:56:25 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/basiliskII-jit-1.0.0-r1.ebuild,v 1.7 2007/01/25 21:59:36 genone Exp $
 
 inherit flag-o-matic eutils
 
@@ -53,9 +53,9 @@ src_unpack() {
 	#prevent prestripped binary
 	cd "${S}"
 	sed -i -e '/^INSTALL_PROGRAM/s/-s//' Makefile.in
-	
+
 	if use sdl && use dga ; then
-		einfo "SDL support was requested, DGA will be disabled"
+		elog "SDL support was requested, DGA will be disabled"
 	fi
 }
 
