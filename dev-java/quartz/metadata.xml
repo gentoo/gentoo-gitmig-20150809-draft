@@ -2,8 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>java</herd>
-	<maintainer>
-		<email>st_lim@gentoo.org</email>
-	</maintainer>
 	<longdescription>Quartz from OpenSymphony</longdescription>
 </pkgmetadata>

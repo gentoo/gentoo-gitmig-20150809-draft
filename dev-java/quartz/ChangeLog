@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/quartz
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/ChangeLog,v 1.19 2007/01/25 08:58:10 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/ChangeLog,v 1.20 2007/01/25 08:59:28 betelgeuse Exp $
+
+  25 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
+  st_lim is being retired so removing him from metadata.xml.
 
   25 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> quartz-1.4.5.ebuild:
   Rename servlet-2.3 and servlet-2.4 use flags to servlet-2_3 and servlet-2_4
