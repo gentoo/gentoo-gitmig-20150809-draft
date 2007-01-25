@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.27-r1.ebuild,v 1.4 2006/12/02 21:54:00 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.27-r1.ebuild,v 1.5 2007/01/25 04:15:33 beandog Exp $
 
 # ROX-Session-0.27 now is compatible with dbus >=0.3
 # This version is all python, no more compiling
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/rox/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="|| ( >=dev-python/dbus-python-0.71
