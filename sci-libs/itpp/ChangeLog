@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/itpp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.19 2007/01/25 16:19:36 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.20 2007/01/25 21:16:03 fmccor Exp $
+
+  25 Jan 2007; Ferris McCormick <fmccor@gentoo.org> itpp-3.10.8.ebuild:
+  Add ~sparc keyword --- Bug #163755 (Comment #3, upstream request) --- builds
+  and installs fine; runs all tests successfully.
 
   25 Jan 2007; Ferris McCormick <fmccor@gentoo.org> itpp-3.10.7.ebuild:
   Add ~sparc keyword --- Bug #163755 --- builds with suggested USE flags and the
