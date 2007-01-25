@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.48 2007/01/21 21:12:52 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.49 2007/01/25 11:46:22 caster Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -759,8 +759,12 @@ java-pkg_recordjavadoc()
 # Example: get junit.jar which is needed only for building
 #	java-pkg_jar-from --build-only junit junit.jar
 #
-# @param $1 - (optional) "--build-only" makes the jar(s) not added into
-#	package.env DEPEND line.
+# @param $opt 
+#	--build-only - makes the jar(s) not added into package.env DEPEND line.
+#	  (assumed automatically when called inside src_test)
+#	--with-dependencies - get jars also from requested package's dependencies
+#	  transitively.
+#	--into $dir - symlink jar(s) into $dir (must exist) instead of .
 # @param $1 - Package to get jars from.
 # @param $2 - jar from package. If not specified, all jars will be used.
 # @param $3 - When a single jar is specified, destination filename of the
@@ -771,16 +775,24 @@ java-pkg_jar-from() {
 	debug-print-function ${FUNCNAME} $*
 
 	local build_only=""
+	local destdir="."
+	local deep=""
+	
+	[[ "${EBUILD_PHASE}" == "test" ]] && build_only="true"
 
-	if [[ "${1}" = "--build-only" || "${EBUILD_PHASE}" == "test" ]]; then
-		build_only="true"
+	while [[ "${1}" == --* ]]; do
+		if [[ "${1}" = "--build-only" ]]; then
+			build_only="true"
+		elif [[ "${1}" = "--with-dependencies" ]]; then
+			deep="--with-dependencies"
+		elif [[ "${1}" = "--into" ]]; then
+			destdir="${2}"
+			shift
+		else
+			die "java-pkg_jar-from called with unknown parameter: ${1}"
+		fi
 		shift
-	fi
-
-	if [[ "${1}" = "--with-dependencies" ]]; then
-		local deep="--with-dependencies"
-		shift
-	fi
+	done
 
 	local target_pkg="${1}" target_jar="${2}" destjar="${3}"
 
@@ -794,6 +806,8 @@ java-pkg_jar-from() {
 	classpath="$(java-config ${deep} --classpath=${target_pkg})"
 	[[ $? != 0 ]] && die ${error_msg}
 
+	pushd ${destdir} > /dev/null \
+		|| die "failed to change directory to ${destdir}"
 	local jar
 	for jar in ${classpath//:/ }; do
 		local jar_name=$(basename "${jar}")
@@ -816,6 +830,7 @@ java-pkg_jar-from() {
 			return 0
 		fi
 	done
+	popd > /dev/null
 	# if no target was specified, we're ok
 	if [[ -z "${target_jar}" ]] ; then
 		return 0
@@ -849,25 +864,34 @@ java-pkg_jarfrom() {
 # Example Return:
 #	/usr/share/xerces-2/lib/xml-apis.jar:/usr/share/xerces-2/lib/xmlParserAPIs.jar:/usr/share/xalan/lib/xalan.jar
 #
-# @param $1 - (optional) "--build-only" makes the jar(s) not added into
-#	package.env DEPEND line.
-# @param $2 - list of packages to get jars from
+# @param $opt 
+#	--build-only - makes the jar(s) not added into package.env DEPEND line.
+#	  (assumed automatically when called inside src_test)
+#	--with-dependencies - get jars also from requested package's dependencies
+#	  transitively.
+# @param $1 - list of packages to get jars from
 #   (passed to java-config --classpath)
 # ------------------------------------------------------------------------------
 java-pkg_getjars() {
 	debug-print-function ${FUNCNAME} $*
 
-	if [[ "${1}" = "--build-only" || "${EBUILD_PHASE}" == "test" ]]; then
-		local build_only="true"
-		shift
-	fi
+	local build_only=""
+	local deep=""
+	
+	[[ "${EBUILD_PHASE}" == "test" ]] && build_only="true"
 
-	if [[ "${1}" = "--with-dependencies" ]]; then
-		local deep="--with-dependencies"
+	while [[ "${1}" == --* ]]; do
+		if [[ "${1}" = "--build-only" ]]; then
+			build_only="true"
+		elif [[ "${1}" = "--with-dependencies" ]]; then
+			deep="--with-dependencies"
+		else
+			die "java-pkg_jar-from called with unknown parameter: ${1}"
+		fi
 		shift
-	fi
+	done
 
-	[[ ${#} -ne 1 ]] && die "${FUNCNAME} takes only one argument besides --build-only"
+	[[ ${#} -ne 1 ]] && die "${FUNCNAME} takes only one argument besides --*"
 
 	local classpath pkgs="${1}"
 	jars="$(java-config ${deep} --classpath=${pkgs})"
@@ -907,8 +931,8 @@ java-pkg_getjars() {
 # @example-return
 #	/usr/share/xerces-2/lib/xml-apis.jar
 #
-# @param $1 - (optional) "--build-only" makes the jar not added into
-#	package.env DEPEND line.
+# @param $opt
+#	--build-only - makes the jar not added into package.env DEPEND line.
 # @param $1 - package to use
 # @param $2 - jar to get
 # ------------------------------------------------------------------------------
@@ -916,11 +940,19 @@ java-pkg_getjar() {
 	debug-print-function ${FUNCNAME} $*
 
 	local build_only=""
+	
+	[[ "${EBUILD_PHASE}" == "test" ]] && build_only="true"
 
-	if [[ "${1}" = "--build-only" || "${EBUILD_PHASE}" == "test" ]]; then
-		build_only="true"
+	while [[ "${1}" == --* ]]; do
+		if [[ "${1}" = "--build-only" ]]; then
+			build_only="true"
+		else
+			die "java-pkg_jar-from called with unknown parameter: ${1}"
+		fi
 		shift
-	fi
+	done
+
+	[[ ${#} -ne 2 ]] && die "${FUNCNAME} takes only two arguments besides --*"
 
 	local pkg="${1}" target_jar="${2}" jar
 	[[ -z ${pkg} ]] && die "Must specify package to get a jar from"
