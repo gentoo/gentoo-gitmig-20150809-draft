@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.41 2007/01/25 08:58:02 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.42 2007/01/25 18:51:41 betelgeuse Exp $
+
+  25 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
+  package.masked =dev-java/asm-3* because it uses splitted ant
 
   25 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> use.local.desc:
   Rename servlet-2.3 and servlet-2.4 use flags to servlet-2_3 and servlet-2_4
