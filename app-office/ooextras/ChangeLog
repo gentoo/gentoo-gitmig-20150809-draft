@@ -1,6 +1,10 @@
 # ChangeLog for app-office/ooextras
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ooextras/ChangeLog,v 1.7 2006/10/04 18:30:18 suka Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/ooextras/ChangeLog,v 1.8 2007/01/25 05:28:27 genone Exp $
+
+  25 Jan 2007; Marius Mauch <genone@gentoo.org> ooextras-20050216.ebuild,
+  ooextras-20060909.ebuild:
+  Replacing einfo with elog
 
 *ooextras-20060909 (04 Oct 2006)
 

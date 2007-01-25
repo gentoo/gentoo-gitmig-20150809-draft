@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.1.0.ebuild,v 1.6 2007/01/09 10:59:45 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.1.0.ebuild,v 1.7 2007/01/25 05:33:46 genone Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -152,17 +152,17 @@ pkg_postinst() {
 
 	[ -x /sbin/chpax ] && [ -e /usr/lib/openoffice/program/soffice.bin ] && chpax -zm /usr/lib/openoffice/program/soffice.bin
 
-	einfo " To start OpenOffice.org, run:"
-	einfo
-	einfo " $ ooffice2"
-	einfo
-	einfo " Also, for individual components, you can use any of:"
-	einfo
-	einfo " oobase2, oocalc2, oodraw2, oofromtemplate2, ooimpress2, oomath2,"
-	einfo " ooweb2 or oowriter2"
-	einfo
-	einfo " Spell checking is now provided through our own myspell-ebuilds, "
-	einfo " if you want to use it, please install the correct myspell package "
-	einfo " according to your language needs. "
+	elog " To start OpenOffice.org, run:"
+	elog
+	elog " $ ooffice2"
+	elog
+	elog " Also, for individual components, you can use any of:"
+	elog
+	elog " oobase2, oocalc2, oodraw2, oofromtemplate2, ooimpress2, oomath2,"
+	elog " ooweb2 or oowriter2"
+	elog
+	elog " Spell checking is now provided through our own myspell-ebuilds, "
+	elog " if you want to use it, please install the correct myspell package "
+	elog " according to your language needs. "
 
 }

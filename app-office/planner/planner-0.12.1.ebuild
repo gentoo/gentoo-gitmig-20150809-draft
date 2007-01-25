@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.12.1.ebuild,v 1.10 2006/10/27 14:52:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.12.1.ebuild,v 1.11 2007/01/25 05:37:30 genone Exp $
 
 inherit gnome2 fdo-mime
 
@@ -50,9 +50,9 @@ src_install() {
 pkg_postinst () {
 
 	gnome2_pkg_postinst
-	einfo "You will have to unmerge mrproject and libmrproject after this"
-	einfo "those projects will soon dissapear, as soon as we can mark planner as stable"
-	echo ""
-	einfo "emerge unmerge mrproject libmrproject"
+	elog "You will have to unmerge mrproject and libmrproject after this"
+	elog "those projects will soon dissapear, as soon as we can mark planner as stable"
+	elog
+	elog "emerge unmerge mrproject libmrproject"
 
 }

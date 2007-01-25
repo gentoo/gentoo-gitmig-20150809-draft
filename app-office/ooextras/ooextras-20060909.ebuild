@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ooextras/ooextras-20060909.ebuild,v 1.1 2006/10/04 18:30:18 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ooextras/ooextras-20060909.ebuild,v 1.2 2007/01/25 05:28:27 genone Exp $
 
 DESCRIPTION="OOExtras: Extra Templates for OpenOffice.org!"
 HOMEPAGE="http://ooextras.sourceforge.net/"
@@ -26,7 +26,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Please add ${INSTDIR} to your template paths in OpenOffice.org"
-	einfo "You can do this under:"
-	einfo "Tools > Options > OpenOffice.org > Paths"
+	elog "Please add ${INSTDIR} to your template paths in OpenOffice.org"
+	elog "You can do this under:"
+	elog "Tools > Options > OpenOffice.org > Paths"
 }

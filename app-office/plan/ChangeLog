@@ -1,6 +1,9 @@
 # ChangeLog for app-office/plan
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/plan/ChangeLog,v 1.13 2006/10/30 02:23:50 weeve Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/plan/ChangeLog,v 1.14 2007/01/25 05:35:51 genone Exp $
+
+  25 Jan 2007; Marius Mauch <genone@gentoo.org> plan-1.9.ebuild:
+  Replacing einfo with elog
 
   30 Oct 2006; Jason Wever <weeve@gentoo.org> -plan-1.8.6.ebuild,
   -plan-1.8.7.ebuild, plan-1.9.ebuild:
