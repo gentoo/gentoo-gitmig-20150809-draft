@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/dbus-python
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.10 2007/01/23 05:01:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.11 2007/01/25 03:17:36 cardoe Exp $
+
+*dbus-python-0.80.1 (25 Jan 2007)
+
+  25 Jan 2007; Doug Goldstein <cardoe@gentoo.org>
+  +dbus-python-0.80.1.ebuild:
+  Completely re-written Python bindings by Simon McVittie
+  <simon.mcvittie@collabora.co.uk>. They've become the official bindings.
 
   23 Jan 2007; Jeroen Roovers <jer@gentoo.org> dbus-python-0.71.ebuild:
   Stable for HPPA (bug #162880).
