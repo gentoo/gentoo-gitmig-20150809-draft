@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/softgun
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/softgun/ChangeLog,v 1.6 2005/08/18 00:18:15 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/softgun/ChangeLog,v 1.7 2007/01/25 22:53:19 genone Exp $
+
+  25 Jan 2007; Marius Mauch <genone@gentoo.org> softgun-0.07.ebuild,
+  softgun-0.08.ebuild, softgun-0.09.ebuild, softgun-0.11.ebuild:
+  Replacing einfo with elog
 
 *softgun-0.11 (18 Aug 2005)
 

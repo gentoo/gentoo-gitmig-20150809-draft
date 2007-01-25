@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/pearpc-0.4.ebuild,v 1.5 2006/08/24 21:58:50 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/pearpc-0.4.ebuild,v 1.6 2007/01/25 22:50:47 genone Exp $
 
 inherit eutils flag-o-matic linux-info
 
@@ -72,14 +72,14 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "You will need to update your configuration files to point"
-	einfo "to the new location of video.x, which is now"
-	einfo "/usr/share/${P}/video.x"
-	einfo ""
-	einfo "To create disk images for PearPC, you can use the Python"
-	einfo "script located at: /usr/share/${P}/scripts/createdisk.py"
-	einfo "Usage: createdisk.py <image name> <image size>"
-	einfo ""
-	einfo "Also, be sure to check /usr/share/doc/${P}/ppccfg.example.gz"
-	einfo "for new configuration options."
+	elog "You will need to update your configuration files to point"
+	elog "to the new location of video.x, which is now"
+	elog "/usr/share/${P}/video.x"
+	elog ""
+	elog "To create disk images for PearPC, you can use the Python"
+	elog "script located at: /usr/share/${P}/scripts/createdisk.py"
+	elog "Usage: createdisk.py <image name> <image size>"
+	elog ""
+	elog "Also, be sure to check /usr/share/doc/${P}/ppccfg.example.gz"
+	elog "for new configuration options."
 }

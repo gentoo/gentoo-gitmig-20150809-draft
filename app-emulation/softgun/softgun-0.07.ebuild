@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/softgun/softgun-0.07.ebuild,v 1.2 2005/01/01 14:16:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/softgun/softgun-0.07.ebuild,v 1.3 2007/01/25 22:53:19 genone Exp $
 
 inherit toolchain-funcs
 
@@ -35,6 +35,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "To create a configuration file, run as user:"
-	einfo "   gzcat /usr/share/doc/${PF}/defaultconfig.gz > ~/.emuconfig"
+	elog "To create a configuration file, run as user:"
+	elog "   gzcat /usr/share/doc/${PF}/defaultconfig.gz > ~/.emuconfig"
 }
