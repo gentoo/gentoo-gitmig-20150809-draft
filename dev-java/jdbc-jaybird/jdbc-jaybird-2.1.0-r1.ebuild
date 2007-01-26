@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/jdbc-jaybird-2.1.0-r1.ebuild,v 1.2 2007/01/05 00:35:58 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/jdbc-jaybird-2.1.0-r1.ebuild,v 1.3 2007/01/26 16:19:38 wltjr Exp $
 
 inherit eutils java-pkg-2
 
@@ -51,6 +51,7 @@ src_unpack() {
 }
 
 src_compile() {
+	java-pkg_filter-compiler jikes
 	eant $(use test && echo "-Dtests=true") jars \
 		$(use jni && echo "compile-native") \
 		$(use_doc javadocs)
