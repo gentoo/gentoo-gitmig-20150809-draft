@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.34 2006/12/21 02:12:17 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.35 2007/01/26 20:53:53 chainsaw Exp $
 
 inherit libtool sgml-catalog eutils flag-o-matic multilib
 
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-msggen.pl.patch
+	epatch "${FILESDIR}"/${P}-ldflags.patch
 }
 
 src_compile() {
