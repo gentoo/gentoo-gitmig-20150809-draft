@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-3.1-r1.ebuild,v 1.3 2007/01/26 10:13:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-3.1-r1.ebuild,v 1.4 2007/01/26 12:52:02 gustavoz Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm ~hppa ia64 ~mips ~ppc ~ppc-macos ~ppc64 s390 sh ~sparc x86"
+KEYWORDS="~alpha ~amd64 arm ~hppa ia64 ~mips ~ppc ~ppc-macos ~ppc64 s390 sh sparc x86"
 IUSE=""
 
 DEPEND=""
