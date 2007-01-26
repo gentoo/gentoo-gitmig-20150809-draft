@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.244 2007/01/25 19:00:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.245 2007/01/26 02:10:01 flameeyes Exp $
+
+  26 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  kdenetwork-3.5.6.ebuild:
+  Remove ksirc patch from 3.5.6, thanks to Volker Hemmann for reporting in bug
+  #163852.
 
   25 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   kdenetwork-3.5.6.ebuild:
