@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/solarwolf/solarwolf-1.5.ebuild,v 1.14 2006/09/27 16:30:34 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/solarwolf/solarwolf-1.5.ebuild,v 1.15 2007/01/26 08:30:31 vapier Exp $
 
 inherit eutils games
 
@@ -26,12 +26,14 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	find "${S}" -name .xvpics -print0 | xargs -0 rm -fr
+	cd "${S}"
+	find . -name .xvpics -print0 | xargs -0 rm -fr
+	gunzip dist/solarwolf.6.gz || die
 }
 
 src_install() {
 	dodoc readme.txt
-	doman dist/solarwolf.6.gz
+	doman dist/solarwolf.6
 	dodir "${GAMES_LIBDIR}/${PN}"
 	cp -r code/ data/ *py "${D}/${GAMES_LIBDIR}/${PN}/" || die "cp failed"
 	games_make_wrapper solarwolf "python ./solarwolf.py" "${GAMES_LIBDIR}/${PN}"
