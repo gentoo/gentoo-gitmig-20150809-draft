@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.2.99.ebuild,v 1.8 2007/01/23 21:37:58 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.2.99.ebuild,v 1.9 2007/01/26 22:52:12 dang Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="An HTTP library implementation in C"
 HOMEPAGE="http://www.gnome.org/"
@@ -11,7 +11,6 @@ LICENSE="LGPL-2"
 SLOT="2.2"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~sh sparc x86"
 IUSE="doc ssl"
-RESTRICT="test"
 
 RDEPEND=">=dev-libs/glib-2.6
 	>=dev-libs/libxml2-2
@@ -26,4 +25,10 @@ DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
 	G2CONF="$(use_enable ssl)"
+}
+
+src_unpack() {
+	gnome2_src_unpack
+
+	epatch "${FILESDIR}"/${P}-fix-tests.patch
 }

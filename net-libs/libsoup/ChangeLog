@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.114 2007/01/23 21:37:58 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.115 2007/01/26 22:52:12 dang Exp $
+
+  26 Jan 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/libsoup-2.2.99-fix-tests.patch, libsoup-2.2.99.ebuild:
+  Fix broken tests.  Bug #162044
 
   23 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> libsoup-2.2.99.ebuild:
   Stable on Alpha + IA64.
