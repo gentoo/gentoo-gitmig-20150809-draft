@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.1.0.ebuild,v 1.9 2007/01/13 21:20:56 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.1.0.ebuild,v 1.10 2007/01/26 21:40:04 dev-zero Exp $
 
 inherit eutils versionator eutils toolchain-funcs multilib flag-o-matic
 
@@ -41,10 +41,10 @@ src_compile() {
 	EOF
 
 	sed -i \
-		-e "s/\(CC :=\) gcc/\1 $(tc-getCC)/" \
-		-e "s/\(CXX :=\) c++/\1 $(tc-getCXX)/" \
-		-e "s/^\(CFLAGS = \)/\1 ${CFLAGS} /" \
-		-e "s/^\(CCFLAGS = \)/\1 ${CFLAGS} /" \
+		-e "s|\(CC :=\) gcc|\1 $(tc-getCC)|" \
+		-e "s|\(CXX :=\) c++|\1 $(tc-getCXX)|" \
+		-e "s|^\(CFLAGS = \)|\1 ${CFLAGS} |" \
+		-e "s|^\(CCFLAGS = \)|\1 ${CFLAGS} |" \
 		build/Makefiles/gmake/gcc.mak || die "sed failed"
 
 	local myconf
