@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX ac_adapter.patch 844 RMD160 f45412afe6fd641f6ca0ed2c4ea8e16e19a62652 SHA1 0868dd50e9738f4a0ca906de7c86f4795a20c1c5 SHA256 c95c971fdef386dd71efad82963a2dab74fb9295d6bc323565488c16c5301b9d
 MD5 7e83c3e57eb87b819dec88cdfeb289df files/ac_adapter.patch 844
 RMD160 f45412afe6fd641f6ca0ed2c4ea8e16e19a62652 files/ac_adapter.patch 844
@@ -9,10 +12,10 @@ EBUILD xfce4-battery-0.3.0-r1.ebuild 378 RMD160 6d3fd097cbab9a3b9aa29460af050173
 MD5 afec8a5d76e482e3ef6d30248c306e1f xfce4-battery-0.3.0-r1.ebuild 378
 RMD160 6d3fd097cbab9a3b9aa29460af05017320e46b16 xfce4-battery-0.3.0-r1.ebuild 378
 SHA256 88be13516863375d6525a12511c04f084a614c03a317088bf9e5281d35f799ae xfce4-battery-0.3.0-r1.ebuild 378
-EBUILD xfce4-battery-0.3.0-r2.ebuild 524 RMD160 cd0543ee5775ceac4f91aa751418d28c095a249c SHA1 2105f4418152041cf2ff5a34c0d1e8c4f778dbed SHA256 2df489298d322a4e2900fe47f8c8d645a1cfcaf037cc81fde460e27bd06b920b
-MD5 37bb3d00b9fbe88efc4f913b3e197101 xfce4-battery-0.3.0-r2.ebuild 524
-RMD160 cd0543ee5775ceac4f91aa751418d28c095a249c xfce4-battery-0.3.0-r2.ebuild 524
-SHA256 2df489298d322a4e2900fe47f8c8d645a1cfcaf037cc81fde460e27bd06b920b xfce4-battery-0.3.0-r2.ebuild 524
+EBUILD xfce4-battery-0.3.0-r2.ebuild 522 RMD160 b5bdd3b2354f1132475e99639f1540953ad8eade SHA1 66cc9b73e1a0b22fabca800d6561b5325ed42aea SHA256 1ebbe3dd6a8cb7b0355ec7e50bb69bb45ad595e3d76842a3b520b074e01aefb1
+MD5 1efca8b8ed8db8b988253912ef1b8435 xfce4-battery-0.3.0-r2.ebuild 522
+RMD160 b5bdd3b2354f1132475e99639f1540953ad8eade xfce4-battery-0.3.0-r2.ebuild 522
+SHA256 1ebbe3dd6a8cb7b0355ec7e50bb69bb45ad595e3d76842a3b520b074e01aefb1 xfce4-battery-0.3.0-r2.ebuild 522
 EBUILD xfce4-battery-0.4.90.3-r1.ebuild 623 RMD160 e5a0a2804f8ce9ee560c5ae633448dd6948abc96 SHA1 3cf98f5124bb0b24d7462954603ae5375e1cb8bc SHA256 7e30a7dabc41c443559291e0df4233e164a697f0e9a411b2d423575e8201e517
 MD5 4fe339e350bcde64a2e2b4ed318143ce xfce4-battery-0.4.90.3-r1.ebuild 623
 RMD160 e5a0a2804f8ce9ee560c5ae633448dd6948abc96 xfce4-battery-0.4.90.3-r1.ebuild 623
@@ -48,3 +51,10 @@ SHA256 cc0730ded4b2ca328ef177affdc1f8919822e28b5a19854b3d383138a107a8a3 files/di
 MD5 e2eec6e047896be338d150e33d940ace files/digest-xfce4-battery-0.5.0 283
 RMD160 9e29a0847e5a193a1ac5d9808f367b45d39f9817 files/digest-xfce4-battery-0.5.0 283
 SHA256 45a858bae490c0a8e69b0891d7d8c1ccf7274476e0b27d34e33130d1a3720272 files/digest-xfce4-battery-0.5.0 283
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFucub8bi6rjpTunYRAs2WAKDG29mgDTvLR23Rd+pNdo7tx45JbQCeLikH
+oLBohHSozzFT20M8z0TT7zo=
+=wnNV
+-----END PGP SIGNATURE-----
