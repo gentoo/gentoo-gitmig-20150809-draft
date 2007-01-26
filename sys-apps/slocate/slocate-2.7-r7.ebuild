@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r7.ebuild,v 1.3 2005/05/22 08:09:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r7.ebuild,v 1.4 2007/01/26 08:40:42 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -36,7 +36,9 @@ src_unpack() {
 		-e "/groupadd/s/^/#/" \
 		-e "/chown.*slocate/s/^/#/" \
 		-e '/^CFLAGS/d' \
+		-e '/man1/s:\.gz::g' \
 		Makefile.in || die
+	gunzip doc/*.gz || die
 }
 
 src_install() {
@@ -55,8 +57,8 @@ src_install() {
 	dodoc AUTHORS README ChangeLog
 
 	# man page fixing
-	rm -f "${D}"/usr/share/man/man1/locate.1.gz
-	dosym slocate.1.gz /usr/share/man/man1/locate.1.gz
+	rm -f "${D}"/usr/share/man/man1/locate.1*
+	dosym slocate.1 /usr/share/man/man1/locate.1
 
 	insinto /etc
 	doins "${FILESDIR}/updatedb.conf"
