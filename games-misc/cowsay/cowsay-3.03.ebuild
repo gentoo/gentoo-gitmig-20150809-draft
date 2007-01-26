@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/cowsay-3.03.ebuild,v 1.16 2006/12/06 17:21:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/cowsay-3.03.ebuild,v 1.17 2007/01/26 08:51:25 vapier Exp $
 
 inherit bash-completion
 
@@ -17,7 +17,7 @@ RDEPEND=">=dev-lang/perl-5"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed	-i \
 		-e '1 c\#!/usr/bin/perl'\
 		-e 's/\$version/\$VERSION/g'\
@@ -33,8 +33,8 @@ src_install() {
 	dobin cowsay || die "dobin failed"
 	doman cowsay.1
 	dosym cowsay /usr/bin/cowthink
-	dosym cowsay.1.gz /usr/share/man/man1/cowthink.1.gz
-	dodir "/usr/share/${P}/cows"
-	cp -r cows "${D}/usr/share/${P}/" || die "cp failed"
-	dobashcompletion ${FILESDIR}/${PN}.bashcomp
+	dosym cowsay.1 /usr/share/man/man1/cowthink.1
+	dodir /usr/share/${PF}/cows
+	cp -r cows "${D}"/usr/share/${PF}/ || die "cp failed"
+	dobashcompletion "${FILESDIR}"/${PN}.bashcomp
 }
