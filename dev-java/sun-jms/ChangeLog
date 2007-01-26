@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-jms
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jms/ChangeLog,v 1.8 2007/01/26 06:01:54 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jms/ChangeLog,v 1.9 2007/01/26 09:44:07 caster Exp $
+
+  26 Jan 2007; Vlastimil Babka <caster@gentoo.org> -sun-jms-1.1-r1.ebuild:
+  Gen-1 punt.
 
   26 Jan 2007; Steve Dibb <beandog@gentoo.org> sun-jms-1.1-r2.ebuild:
   amd64 stable, bug 158489
