@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-docklet/audacious-docklet-0.1.1-r1.ebuild,v 1.7 2007/01/08 19:11:56 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-docklet/audacious-docklet-0.1.1-r1.ebuild,v 1.8 2007/01/26 09:48:41 chainsaw Exp $
 
 inherit eutils
 
 DESCRIPTION="Audacious plugin that displays an icon in your systemtray"
-HOMEPAGE="http://nedudu.hu/?page_id=11"
+HOMEPAGE="http://nedudu.hu/index.php?page=downloads&id=2"
 SRC_URI="http://nedudu.hu/downloads/${P}.tar.bz2"
 
 LICENSE="GPL-2"

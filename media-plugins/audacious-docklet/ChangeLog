@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/audacious-docklet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-docklet/ChangeLog,v 1.9 2007/01/08 19:11:56 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-docklet/ChangeLog,v 1.10 2007/01/26 09:48:41 chainsaw Exp $
+
+  26 Jan 2007; Tony Vroon <chainsaw@gentoo.org>
+  audacious-docklet-0.1.1-r1.ebuild:
+  Change homepage as the link is no longer valid, as suggested by Ilya Hegai
+  <vyacheslavovich@gmail.com> in bug #163426.
 
   08 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   audacious-docklet-0.1.1-r1.ebuild:
