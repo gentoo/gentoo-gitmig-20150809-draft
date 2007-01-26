@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/tipcutils
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tipcutils/ChangeLog,v 1.1 2007/01/26 19:07:09 gustavoz Exp $
+
+*tipcutils-1.0.4 (26 Jan 2007)
+
+  26 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> +metadata.xml,
+  +tipcutils-1.0.4.ebuild:
+  New tool for the TIPC protocol wrt #130002
+
