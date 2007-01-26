@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-103.ebuild,v 1.7 2007/01/16 16:49:32 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-103.ebuild,v 1.8 2007/01/26 13:59:20 zzam Exp $
 
-inherit eutils flag-o-matic multilib
+inherit eutils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace devfs)"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
