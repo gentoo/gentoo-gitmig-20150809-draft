@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX dnsmasq-fbsd-config.patch 451 RMD160 c9103d329ff429cdadea346db59678815fe3317d SHA1 28f48fc050c3cc964e717a1c09edb47b4438597a SHA256 8973971c4a161f48815c41045cb350394f330276085e9b8f3c578077abc0f359
 MD5 76c037c6372d10106bfaddc92bc6f898 files/dnsmasq-fbsd-config.patch 451
 RMD160 c9103d329ff429cdadea346db59678815fe3317d files/dnsmasq-fbsd-config.patch 451
@@ -54,3 +57,10 @@ SHA256 b7556692de6def5af09946319cfd19d19de3348a1223875671b0bfeeacfe76ef files/di
 MD5 a1946d200e2840ae9b50e2d7fdbbd5d8 files/digest-dnsmasq-2.36 238
 RMD160 643fcf0014a59fb1ceed56131c440230ff5d3399 files/digest-dnsmasq-2.36 238
 SHA256 ba08fbc405229631822f7e957812c5e814875a86e260e1fcd1c2ddba8be4ea80 files/digest-dnsmasq-2.36 238
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFuXwJWt/XSf2CZdkRAnk9AJkBKuS9fhylUqRO8YQb1sFsqVyPowCfV7Ze
+VSARm8ySkz9CbpDmorIa7J8=
+=Lz+7
+-----END PGP SIGNATURE-----
