@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/fsviewer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/fsviewer/ChangeLog,v 1.13 2006/09/03 22:28:37 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/fsviewer/ChangeLog,v 1.14 2007/01/26 17:16:00 s4t4n Exp $
+
+  26 Jan 2006; Michele Noberasco <s4t4n@gentoo.org> fsviewer-0.2.5.ebuild:
+  Fixed DEPEND. Closes bug #150634.
+  -fsviewer-0.2.3e-r1.ebuild:
+  Wiped out previous release.
 
   03 Sep 2006; Joshua Jackson <tsunam@gentoo.org> fsviewer-0.2.5.ebuild:
   Stable x86; bug #144835
