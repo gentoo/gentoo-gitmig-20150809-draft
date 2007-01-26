@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-gnome2.eclass,v 1.10 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-gnome2.eclass,v 1.11 2007/01/26 15:53:18 pclouds Exp $
 #
 # This eclass simplifies installation of the various pieces of
 # ruby-gnome2 since they share a very common installation procedure.
@@ -8,7 +8,10 @@
 # ruby-module.eclass, but at the moment it contains some things
 # specific to ruby-gnome2
 
-EXPORT_FUNCTIONS src_compile src_install
+# Variables:
+# PATCHES	Space delimited list of patch files.
+
+EXPORT_FUNCTIONS src_compile src_install src_unpack
 
 IUSE=""
 
@@ -26,6 +29,29 @@ SLOT="0"
 
 DEPEND="virtual/ruby"
 RDEPEND="virtual/ruby"
+
+ruby-gnome2_src_unpack() {
+	if [ ! -x /bin/install -a -x /usr/bin/install ]; then
+		cat <<END >${T}/mkmf.rb
+require 'mkmf'
+
+STDERR.puts 'patching mkmf'
+CONFIG['INSTALL'] = '/usr/bin/install'
+END
+		# save it because rubygems needs it (for unsetting RUBYOPT)
+		export GENTOO_RUBYOPT="-r${T}/mkmf.rb"
+		export RUBYOPT="${RUBYOPT} ${GENTOO_RUBYOPT}"
+	fi
+
+	unpack ${A}
+	cd ${S}
+	# apply bulk patches
+	if [[ -n "${PATCHES}" ]] ; then
+		for p in ${PATCHES} ; do
+			epatch $p
+		done
+	fi
+}
 
 ruby-gnome2_src_compile() {
 	ruby extconf.rb || die "extconf.rb failed"

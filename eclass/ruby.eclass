@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.58 2007/01/21 07:38:43 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.59 2007/01/26 15:53:18 pclouds Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -60,6 +60,18 @@ fi
 [[ -z "${RUBY}" ]] && export RUBY=/usr/bin/ruby
 
 ruby_src_unpack() {
+
+	if [ ! -x /bin/install -a -x /usr/bin/install ]; then
+		cat <<END >${T}/mkmf.rb
+require 'mkmf'
+
+STDERR.puts 'patching mkmf'
+CONFIG['INSTALL'] = '/usr/bin/install'
+END
+		# save it because rubygems needs it (for unsetting RUBYOPT)
+		export GENTOO_RUBYOPT="-r${T}/mkmf.rb"
+		export RUBYOPT="${RUBYOPT} ${GENTOO_RUBYOPT}"
+	fi
 
 	unpack ${A}
 	cd ${S}
