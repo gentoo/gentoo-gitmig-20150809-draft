@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.8_alpha.ebuild,v 1.2 2007/01/26 16:22:02 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.8_alpha-r1.ebuild,v 1.1 2007/01/26 21:07:52 wltjr Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -20,7 +20,8 @@ RDEPEND="|| ( >=virtual/jre-1.5 >=virtual/jre-1.6 )
 	>=dev-java/commons-daemon-1.0.1
 	>=dev-java/commons-dbcp-1.2.1
 	>=dev-java/commons-logging-1.1
-	>=dev-java/commons-pool-1.2"
+	>=dev-java/commons-pool-1.2
+	=dev-java/tomcat-servlet-api-${PV}"
 
 DEPEND="|| ( >=virtual/jdk-1.5 >=virtual/jdk-1.6 )
 	${RDEPEND}
@@ -31,7 +32,6 @@ DEPEND="|| ( >=virtual/jdk-1.5 >=virtual/jdk-1.6 )
 	!test? ( dev-java/ant-core )"
 
 S=${WORKDIR}/${MY_P}
-NS=${WORKDIR}/tomcat-native-${TC_NV}-src
 
 TOMCAT_NAME="${PN}-${SLOT}"
 TOMCAT_HOME="/usr/share/${TOMCAT_NAME}"
@@ -57,7 +57,13 @@ src_unpack() {
 
 src_compile(){
 	# Prevent out of memory/heap space errors
-	java-pkg_force-compiler ecj-3.2
+	# Not sure if this is happening for others
+
+	# Old way
+#	java-pkg_force-compiler ecj-3.2
+
+	# New way if others get out of heap space
+#	ANT_OPTS=-XX:MaxPermSize=128m
 
 	local antflags="build-jasper-jdt build-only -Dbase.path=${T}"
 	antflags="${antflags} -Dant.jar=$(java-pkg_getjar ant-core ant.jar)"
@@ -114,6 +120,9 @@ src_install() {
 	keepdir               ${WEBAPPS_DIR}
 	chown  tomcat:tomcat ${D}/${WEBAPPS_DIR} || die "Failed to change owner off ${1}."
 	chmod  750           ${D}/${WEBAPPS_DIR} || die "Failed to change permissions off ${1}."
+
+	cd "${D}/usr/share/${TOMCAT_NAME}/lib"
+	java-pkg_jar-from tomcat-servlet-api-2.5
 
 	cd ${S}
 

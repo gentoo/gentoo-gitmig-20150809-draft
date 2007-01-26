@@ -1,6 +1,46 @@
---- build.xml	2006-11-15 18:33:20.000000000 -0500
-+++ ../build.xml	2006-11-19 16:47:58.000000000 -0500
-@@ -446,11 +446,16 @@
+--- ../build.xml	2007-01-26 14:42:58.000000000 -0500
++++ build.xml	2007-01-26 14:58:59.000000000 -0500
+@@ -94,6 +94,7 @@
+            excludes="**/CVS/**,**/.svn/**">
+       <classpath refid="tomcat.classpath" />
+       <exclude name="org/apache/tomcat/util/net/puretls/**" />
++      <exclude name="javax/servlet/**" />
+     </javac>
+     <tstamp>
+       <format property="TODAY" pattern="MMM d yyyy" locale="en"/>
+@@ -133,27 +134,27 @@
+       </fileset>
+     </jar>
+ 
+-    <!-- Servlet 2.5 Implementation JAR File -->
++    <!-- Servlet 2.5 Implementation JAR File
+     <jar  jarfile="${servlet-api.jar}">
+       <fileset dir="${tomcat.classes}">
+         <include name="javax/servlet/*" />
+         <include name="javax/servlet/http/*" />
+         <include name="javax/servlet/resources/*" />
+-        <!-- Javadoc and i18n exclusions -->
+         <exclude name="**/package.html" />
+         <exclude name="**/LocalStrings_*" />
+       </fileset>
+     </jar>
++	-->
+ 
+-    <!-- JSP 2.1 Implementation JAR File -->
++    <!-- JSP 2.1 Implementation JAR File
+     <jar  jarfile="${jsp-api.jar}">
+       <fileset dir="${tomcat.classes}">
+         <include name="javax/servlet/jsp/**" />
+-        <!-- Javadoc and i18n exclusions -->
+         <exclude name="**/package.html" />
+         <exclude name="**/LocalStrings_*" />
+       </fileset>
+     </jar>
++	-->
+ 
+     <!-- JSP 2.1 EL Implementation JAR File -->
+     <jar  jarfile="${el-api.jar}">
+@@ -447,11 +448,16 @@
  
    <target name="deploy" depends="build-only,build-docs">
  
@@ -17,7 +57,7 @@
  
    	<!-- Copy scripts -->
      <copy todir="${tomcat.build}/bin">
-@@ -489,8 +494,10 @@
+@@ -492,8 +498,10 @@
               excludes="**/CVS/**,**/.svn/**">
      </javac>
  

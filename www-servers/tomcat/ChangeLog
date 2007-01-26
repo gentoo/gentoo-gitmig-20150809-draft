@@ -1,6 +1,18 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.107 2007/01/26 16:22:02 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.108 2007/01/26 21:07:52 wltjr Exp $
+
+*tomcat-6.0.8_alpha-r1 (26 Jan 2007)
+*tomcat-6.0.7_beta-r4 (26 Jan 2007)
+
+  26 Jan 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  files/6/build-xml.patch, -tomcat-6.0.7_beta-r3.ebuild,
+  +tomcat-6.0.7_beta-r4.ebuild, -tomcat-6.0.8_alpha.ebuild,
+  +tomcat-6.0.8_alpha-r1.ebuild:
+  Updating 6.0.x to dep on tomcat-servlet-api. Modified patch to no longer
+  build or install servletapi from tomcat package. Dropped force of ecj
+  compiler for now, added commented out code to deal with oom/heap issues if
+  they pop up again. Synced ebuilds and backported ~ppc keyword.
 
   26 Jan 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   tomcat-6.0.8_alpha.ebuild:
