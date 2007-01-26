@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/predict/predict-2.2.3.ebuild,v 1.1 2007/01/12 02:31:40 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/predict/predict-2.2.3.ebuild,v 1.2 2007/01/26 11:43:04 armin76 Exp $
 
 inherit toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.amsat.org/amsat/ftp/software/Linux/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="xforms xplanet gtk nls"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 DEPEND="sys-libs/ncurses
 	gtk? ( =x11-libs/gtk+-1.2* )
