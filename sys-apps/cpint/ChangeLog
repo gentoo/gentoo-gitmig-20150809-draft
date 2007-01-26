@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/cpint
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpint/ChangeLog,v 1.4 2004/06/30 14:43:30 agriffis Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpint/ChangeLog,v 1.5 2007/01/26 17:00:58 eroyf Exp $
+
+  26 Jan 2007; Alexander H. Færøy <eroyf@gentoo.org> cpint-1.1.6.ebuild:
+  Moving SLOT to 0.
 
   30 Jun 2004; Aron Griffis <agriffis@gentoo.org> cpint-1.1.6.ebuild:
   sync IUSE (missing), trim trailing whitespace
