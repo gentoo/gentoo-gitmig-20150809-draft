@@ -1,0 +1,5 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/dev/2007.0/server/make.defaults,v 1.1 2007/01/26 13:36:50 kloeri Exp $
+
+USE="apache2 mailwrapper mysql snmp"
