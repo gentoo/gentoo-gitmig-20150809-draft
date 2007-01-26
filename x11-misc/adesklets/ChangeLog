@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/adesklets
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/ChangeLog,v 1.32 2007/01/24 08:43:32 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/ChangeLog,v 1.33 2007/01/26 09:47:21 s4t4n Exp $
+
+  26 Jan 2007; Michele Noberasco <s4t4n@gentoo.org> adesklets-0.6.1-r1.ebuild:
+  Re-fixed bug #148988.
 
   24 Jan 2007; Michele Noberasco <s4t4n@gentoo.org> adesklets-0.6.1-r1.ebuild:
   Made fontconfig 2.4 patch be applied only if fontconfig >=2.4 is actually installed.

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/adesklets-0.6.1-r1.ebuild,v 1.3 2007/01/24 08:43:32 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/adesklets-0.6.1-r1.ebuild,v 1.4 2007/01/26 09:47:21 s4t4n Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -48,7 +48,7 @@ src_unpack()
 	#Fix for bug #148988: fontconfig >= 2.4 support
 	use fontconfig &&
 	{
-		if has_version ">=dev-libs/fontconfig-2.4"; then
+		if has_version ">=media-libs/fontconfig-2.4"; then
 			epatch ${FILESDIR}/${P}-fontconfig.patch
 			eautoreconf
 		fi
@@ -78,7 +78,7 @@ src_install()
 	#a bit of black magick to fix bug #157002
 	use fontconfig &&
 	{
-		if has_version ">=dev-libs/fontconfig-2.4"; then
+		if has_version ">=media-libs/fontconfig-2.4"; then
 			if [ "`cat doc/Makefile | grep \/bin\/sh\ \$\(SHELL\)`" != "" ]; then
 				sed -i 's/\/bin\/sh//' doc/Makefile
 			fi
