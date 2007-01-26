@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-java
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.15 2007/01/26 00:54:15 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.16 2007/01/26 01:46:38 wltjr Exp $
+
+*emul-linux-x86-java-1.6.0 (26 Jan 2007)
+
+  26 Jan 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  +files/emul-linux-x86-java-1.6.env, +files/construct-1.6.sh,
+  files/construct.sh, +emul-linux-x86-java-1.6.0.ebuild:
+  Added 1.6.0 version of emul package, providing a 1.6 plugin for amd64
 
 *emul-linux-x86-java-1.5.0.10 (26 Jan 2007)
 
