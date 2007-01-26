@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r7.ebuild,v 1.2 2007/01/10 21:06:33 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r7.ebuild,v 1.3 2007/01/26 02:07:51 caster Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -163,8 +163,8 @@ src_compile(){
 		antflags="${antflags} -Dxml-apis.jar=$(java-pkg_getjar xml-commons-external-1.3 xml-apis.jar)"
 	fi
 
-	eant ${antflags}
-
+	# prevent classpath bloat with ant-1.7.0 which makes admin app fail
+	ANT_TASKS="ant-trax" eant ${antflags}
 }
 
 src_install() {
