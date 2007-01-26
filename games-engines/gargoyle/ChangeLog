@@ -1,6 +1,13 @@
 # ChangeLog for games-engines/gargoyle
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/ChangeLog,v 1.5 2007/01/22 10:59:52 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/ChangeLog,v 1.6 2007/01/26 10:15:07 s4t4n Exp $
+
+*gargoyle-20060917-r1 (26 Jan 2007)
+
+  26 Jan 2007; Michele Noberasco <s4t4n@gentoo.org> gargoyle-20060917-r1.ebuild:
+  Revision bump, with patch to fix level9 interpreter compilation. Closes bug #163374.
+  gargoyle-20060917.ebuild:
+  Wiped out previous revision.
 
 *gargoyle-20060917 (22 Jan 2007)
 
