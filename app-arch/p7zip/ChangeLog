@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.51 2007/01/04 14:18:28 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.52 2007/01/26 20:59:00 radek Exp $
+
+*p7zip-4.44 (26 Jan 2007)
+
+  26 Jan 2007; Radoslaw Stachowiak <radek@gentoo.org> +p7zip-4.44.ebuild:
+  version bump
 
   04 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> p7zip-4.43.ebuild:
   Add ~alpha keyword.
