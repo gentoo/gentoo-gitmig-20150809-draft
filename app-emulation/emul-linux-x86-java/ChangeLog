@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-java
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.14 2007/01/23 11:47:50 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.15 2007/01/26 00:54:15 wltjr Exp $
+
+*emul-linux-x86-java-1.5.0.10 (26 Jan 2007)
+
+  26 Jan 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  +emul-linux-x86-java-1.5.0.10.ebuild:
+  Bumping 1.5 package per GSLA# 200701-15 and CERT# TA07-022A. Just changed
+  package name from .08
 
   23 Jan 2007; Vlastimil Babka <caster@gentoo.org> files/construct.sh:
   Fix construct.sh to write into  instead of /tmp/ for bug #159547.
