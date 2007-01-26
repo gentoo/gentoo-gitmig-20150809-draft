@@ -1,21 +1,20 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.01-r2.ebuild,v 1.3 2007/01/11 17:12:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.01-r2.ebuild,v 1.4 2007/01/26 09:41:13 vapier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.4"
 
 inherit eutils flag-o-matic pam fixheadtails autotools
 
-IUSE="gnome jpeg insecure-savers new-login nls offensive opengl pam xinerama"
-
 DESCRIPTION="A modular screen saver and locker for the X Window System"
 SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
 HOMEPAGE="http://www.jwz.org/xscreensaver/"
 
 LICENSE="BSD"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
 SLOT="0"
+KEYWORDS="~alpha ~amd64 arm ~hppa ia64 ~mips ~ppc ~ppc64 sh sparc ~x86 ~x86-fbsd"
+IUSE="gnome jpeg insecure-savers new-login nls offensive opengl pam xinerama"
 
 RDEPEND="x11-libs/libXxf86misc
 	x11-apps/xwininfo
@@ -31,8 +30,7 @@ RDEPEND="x11-libs/libXxf86misc
 	opengl? ( virtual/opengl
 		>=media-libs/gle-3.0.1 )
 	xinerama? ( x11-libs/libXinerama )
-	!arm? ( new-login? ( gnome-base/gdm ) )"
-
+	new-login? ( gnome-base/gdm )"
 DEPEND="${RDEPEND}
 	x11-proto/xf86vidmodeproto
 	x11-proto/xextproto
@@ -44,19 +42,9 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	xinerama? ( x11-proto/xineramaproto )"
 
-pkg_setup() {
-
-	if use arm && use new-login; then
-		ewarn "gnome-base/gdm is required for USE=\"new-login\", and is not"
-		ewarn "available for the arm platform. please disable this use flag"
-		die "new-login USE is not supported on arm"
-	fi
-
-}
-
 src_unpack() {
 
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	# Bug fixes:
