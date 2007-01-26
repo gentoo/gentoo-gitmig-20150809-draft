@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svnmailer/svnmailer-1.0.8.ebuild,v 1.2 2006/06/30 11:25:36 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svnmailer/svnmailer-1.0.8.ebuild,v 1.3 2007/01/26 22:14:09 aross Exp $
 
 inherit distutils
 
@@ -12,6 +12,7 @@ IUSE=""
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 LICENSE="Apache-2.0"
+
 DEPEND=">=dev-lang/python-2.3"
 RDEPEND="${DEPEND}
 	dev-util/subversion
@@ -22,6 +23,5 @@ DOCS="CHANGES NOTICE CREDITS"
 src_install() {
 	distutils_src_install
 
-	cd "${S}"
-	cp -r docs/* "${D}/usr/share/doc/${PF}" || die
+	dohtml -r docs/* || die "failed to install HTML documentation"
 }
