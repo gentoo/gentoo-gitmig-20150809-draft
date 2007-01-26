@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/commons-net-1.4.1-r1.ebuild,v 1.5 2006/10/17 02:47:29 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/commons-net-1.4.1-r1.ebuild,v 1.6 2007/01/26 18:34:28 betelgeuse Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -26,24 +26,20 @@ IUSE="doc examples source" # junit
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	mkdir -p target/lib
 	cd target/lib
 	java-pkg_jar-from jakarta-oro-2.0 jakarta-oro.jar oro.jar
 
-	cd ${S}
+	cd "${S}"
 	# always disable tests
 	sed -i 's/depends="compile,test"/depends="compile"/' build.xml || die "Failed to disable junit"
-}
-
-src_compile() {
-	eant jar -Dnoget=true $(use_doc)
 }
 
 src_install() {
 	java-pkg_newjar target/${P}.jar ${PN}.jar
 
-	use doc && java-pkg_dohtml -r dist/docs/
+	use doc && java-pkg_dojavadoc dist/docs/api
 	if use examples; then
 		dodir /usr/share/doc/${PF}/examples
 		cp -r src/java/examples/* ${D}/usr/share/doc/${PF}/examples

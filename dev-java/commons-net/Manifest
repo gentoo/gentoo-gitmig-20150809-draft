@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX gentoo-1.2.diff 3152 RMD160 2cbeb62099824ed3adb7810fa29e4c0176aef7bb SHA1 667a701e51dc07664e99efc624e8c15499bfe9af SHA256 1abca16847bf83747c3913faf999e9ffeb969af29fd5f9bd3af23c691e1db14f
 MD5 cd5dd0f16006dfa0491e9fb71981d402 files/gentoo-1.2.diff 3152
 RMD160 2cbeb62099824ed3adb7810fa29e4c0176aef7bb files/gentoo-1.2.diff 3152
@@ -6,8 +9,8 @@ AUX gentoo.diff 4678 RMD160 41986e7e77078542b217f0f5c4a47d863e0f121a SHA1 ac5a6d
 MD5 e2628a3419f04cdb65cb4a3caad1c9df files/gentoo.diff 4678
 RMD160 41986e7e77078542b217f0f5c4a47d863e0f121a files/gentoo.diff 4678
 SHA256 28ee2afa9c99ecde7e232eef5ece9d56cd381d85eb2ac97c2cc8a86952dd0873 files/gentoo.diff 4678
-DIST commons-net-1.2.2-src.tar.gz 178572
-DIST commons-net-1.3.0-src.tar.gz 267046
+DIST commons-net-1.2.2-src.tar.gz 178572 RMD160 c0c802942db133d00b412489a685b13526a5e800 SHA1 4066ca4ebcfada42c9510f0c0f7ec776b4691a66 SHA256 41039a2368f715549cb693a7b5cdf6922d9706ab95a6838531878516d609a588
+DIST commons-net-1.3.0-src.tar.gz 267046 RMD160 05189b5ceb59a24fb115d69530dc0dd62445dc17 SHA1 c28ac1f1f5918c7f7fb01f6ad24b8b7149183599 SHA256 ed684e930984cb941b00062279654400b2dd415cc401e10283c9825d3a52a9c4
 DIST commons-net-1.4.1-src.tar.gz 229198 RMD160 31af13be8d1bac7d821c9d5618a9661197a4b42f SHA1 3598998e730311765cd913a9a0527a589043b82e SHA256 fdea779f261f70b9bbec40121c830b11e3e63b6188f662f95505045ff8d44add
 EBUILD commons-net-1.2.2-r1.ebuild 1335 RMD160 418fac54028b7929d7dbc248fed80f69de406acc SHA1 05f973fccbe3c3760619b7d72a5db383836afebb SHA256 2c17955fe1874f497a8e6d1f67d2850e3ae1e6173ad93354e538e0ed443b762e
 MD5 54b6f32ac508e52d92eeb5dc7768cdec commons-net-1.2.2-r1.ebuild 1335
@@ -17,31 +20,38 @@ EBUILD commons-net-1.3.0-r1.ebuild 1719 RMD160 da7d986ef6810e98ba1990116b14d6be4
 MD5 890300dcd2a2acf7a2bf7cef54a6719a commons-net-1.3.0-r1.ebuild 1719
 RMD160 da7d986ef6810e98ba1990116b14d6be4e07035a commons-net-1.3.0-r1.ebuild 1719
 SHA256 3fdbeceec0419b3f598c952ac8c73907093edc6452e96100a476c614a73c12fb commons-net-1.3.0-r1.ebuild 1719
-EBUILD commons-net-1.4.1-r1.ebuild 1492 RMD160 6721cd90bba9a72d785c682b5a53b0afea43bbb9 SHA1 737703e7f2c555f76b1223ec96c80da402a0c27f SHA256 abbf93239a2f568abf9053e951deed6eaa2f90a273a2c477b63f7c68a8395ffa
-MD5 2d2220f1ea371a63a6a0606aee081b08 commons-net-1.4.1-r1.ebuild 1492
-RMD160 6721cd90bba9a72d785c682b5a53b0afea43bbb9 commons-net-1.4.1-r1.ebuild 1492
-SHA256 abbf93239a2f568abf9053e951deed6eaa2f90a273a2c477b63f7c68a8395ffa commons-net-1.4.1-r1.ebuild 1492
+EBUILD commons-net-1.4.1-r1.ebuild 1450 RMD160 e9dc62b633feee82f2a8ff02a821d096c98fe185 SHA1 160ca8a01d961648bde42095e7a8fa47cca42664 SHA256 dbf69d43e7cbadfdcf2e562f9b482776f1de440f6fba07dd496ddb8cc56c4931
+MD5 f70c5f9e8bcd844460bc5f9486aac5fb commons-net-1.4.1-r1.ebuild 1450
+RMD160 e9dc62b633feee82f2a8ff02a821d096c98fe185 commons-net-1.4.1-r1.ebuild 1450
+SHA256 dbf69d43e7cbadfdcf2e562f9b482776f1de440f6fba07dd496ddb8cc56c4931 commons-net-1.4.1-r1.ebuild 1450
 EBUILD commons-net-1.4.1.ebuild 1603 RMD160 3309ac2ac4846cb67ea188653a59e75b0914aae4 SHA1 a181a897b31f5ea92e7db3dede404048b2b02c44 SHA256 9f5776599b7d7b9e8ac8bef0eb0326582a3045bc24da4d2edf66f309a4c9b5dd
 MD5 2d33a3bdbc4e457cd113742d7bd4f19c commons-net-1.4.1.ebuild 1603
 RMD160 3309ac2ac4846cb67ea188653a59e75b0914aae4 commons-net-1.4.1.ebuild 1603
 SHA256 9f5776599b7d7b9e8ac8bef0eb0326582a3045bc24da4d2edf66f309a4c9b5dd commons-net-1.4.1.ebuild 1603
-MISC ChangeLog 4833 RMD160 75fd4fbc58048e8bed594babff6d48fc57d7063f SHA1 fc24edcdb1026b07eb85ddf34111635cdf38f802 SHA256 7f03a7de3f5c295bba1194da5ecb9d022f3b28daace5c249fbdca2caa6efdb44
-MD5 698a34fe877600fa198da612baa1b5f9 ChangeLog 4833
-RMD160 75fd4fbc58048e8bed594babff6d48fc57d7063f ChangeLog 4833
-SHA256 7f03a7de3f5c295bba1194da5ecb9d022f3b28daace5c249fbdca2caa6efdb44 ChangeLog 4833
+MISC ChangeLog 4971 RMD160 dacb0ff12fc61c4a35e8cda7b95903740f69fae2 SHA1 aa1540581d1e40949a29f364646387de83d909d7 SHA256 644c63da3e36d614d3a62949ec4ddd49f30d2d7c13bb7258a6710f08c8a2643c
+MD5 9e2365239a7e079133224e6e38662028 ChangeLog 4971
+RMD160 dacb0ff12fc61c4a35e8cda7b95903740f69fae2 ChangeLog 4971
+SHA256 644c63da3e36d614d3a62949ec4ddd49f30d2d7c13bb7258a6710f08c8a2643c ChangeLog 4971
 MISC metadata.xml 157 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 SHA1 c37a6b9922aef61b5b3387655bccb6e3b16e0e26 SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
 SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
-MD5 fb9978c1444923f864212fcb8914da67 files/digest-commons-net-1.2.2-r1 73
-RMD160 591af86fecc6338e914f51a15b75b38b2bec66d5 files/digest-commons-net-1.2.2-r1 73
-SHA256 65f43b5c5f9a70cca6f700f2b4d71e4aac7e92f11f5c1c31e35e47cf7721ef4d files/digest-commons-net-1.2.2-r1 73
-MD5 36815c4f205c7a6b95614626967da49b files/digest-commons-net-1.3.0-r1 73
-RMD160 bdf18bf55c5a48c89cede2f1f3f1b67da91b2610 files/digest-commons-net-1.3.0-r1 73
-SHA256 c75c692044d5f1e7e67c909beb2c1b640618e85a0524e973acee38e05ce1f529 files/digest-commons-net-1.3.0-r1 73
+MD5 1c8aebed734ce5e1be97c3cf0b08c0bc files/digest-commons-net-1.2.2-r1 265
+RMD160 fa3ee3d4a8c0d75cf93fd36217bd170bcaaf6113 files/digest-commons-net-1.2.2-r1 265
+SHA256 f6846ae5d40eecd3ce8f725dbe23e3d010475acc3f84ffb56f85c3bc5e6cc1f6 files/digest-commons-net-1.2.2-r1 265
+MD5 18e3180fe05def669c278ef3cb2515a7 files/digest-commons-net-1.3.0-r1 265
+RMD160 a96e5027e20e7d14d5048e8754648e1fb9d71505 files/digest-commons-net-1.3.0-r1 265
+SHA256 8ad0f4b94bb473b8619f0f4947d4518c738ef556545e2700e3e2e6bf6bb4bea4 files/digest-commons-net-1.3.0-r1 265
 MD5 94a85b944acacb61427cdcf9bc7d5c12 files/digest-commons-net-1.4.1 265
 RMD160 18feab5fad83a305a1633e80cec728b4ea5db028 files/digest-commons-net-1.4.1 265
 SHA256 8558611aa72dd7ab61bfb90859763779cb0b92bb037be9f16ab48e7cf0d58acc files/digest-commons-net-1.4.1 265
 MD5 94a85b944acacb61427cdcf9bc7d5c12 files/digest-commons-net-1.4.1-r1 265
 RMD160 18feab5fad83a305a1633e80cec728b4ea5db028 files/digest-commons-net-1.4.1-r1 265
 SHA256 8558611aa72dd7ab61bfb90859763779cb0b92bb037be9f16ab48e7cf0d58acc files/digest-commons-net-1.4.1-r1 265
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFukm9cxLzpIGCsLQRAnFvAKCdhuyaHxNzQ6bX8FCxRyCtkiS/+gCgknSU
+hk3OsjRa3eNhrizo5/xfLUs=
+=qucM
+-----END PGP SIGNATURE-----
