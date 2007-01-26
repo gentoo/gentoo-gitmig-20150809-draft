@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/plextor-tool/plextor-tool-0.5.0.ebuild,v 1.2 2006/09/10 08:11:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/plextor-tool/plextor-tool-0.5.0.ebuild,v 1.3 2007/01/26 08:27:42 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="Tool to change the parameters of a Plextor CD-ROM drive"
 HOMEPAGE="http://plextor-tool.sourceforge.net/"
@@ -17,10 +19,9 @@ S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"/src
-	sed -i \
-		-e "/^CFLAGS=/s:$: ${CFLAGS}:" \
-		Makefile || die "sed Makefile failed"
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-build.patch
+	gunzip src/plextor-tool.8.gz || die
 }
 
 src_compile() {
@@ -34,9 +35,9 @@ src_compile() {
 }
 
 src_install() {
-	local targets="$(<src/my-make-targets)"
+	local targets=$(<src/my-make-targets)
 	dodoc src/TODO doc/README doc/NEWS
 	cd src
 	dobin ${targets} || die "dobin failed"
-	doman plextor-tool.8.gz
+	doman plextor-tool.8
 }
