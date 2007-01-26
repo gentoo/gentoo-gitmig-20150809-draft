@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.4.6.ebuild,v 1.2 2007/01/10 00:21:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.4.6.ebuild,v 1.3 2007/01/26 22:54:06 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -41,7 +41,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 	# configure.in should be fixed as
-	# --enable-gl and 
+	# --enable-gl and
 	# --disable-gl are treated the same
 	use opengl && myconf="--enable-gl"
 	# leave --disable-cpu-opt in otherwise the configure script
