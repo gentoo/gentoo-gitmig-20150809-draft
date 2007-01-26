@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/STLport
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.42 2007/01/26 21:40:04 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.43 2007/01/26 22:21:13 dev-zero Exp $
+
+  26 Jan 2007; Tiziano Müller <dev-zero@gentoo.org>
+  files/STLport-5.1.0-wrong_russian_currency_name.patch:
+  Corrected the test-fix to make it work with older glibc versions.
 
   26 Jan 2007; Tiziano Müller <dev-zero@gentoo.org> STLport-5.1.0.ebuild:
   Changed sed separators to fix bug when CXX contains a full path (bug
