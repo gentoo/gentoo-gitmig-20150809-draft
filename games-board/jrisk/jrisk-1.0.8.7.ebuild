@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/jrisk/jrisk-1.0.8.7.ebuild,v 1.3 2006/08/23 07:12:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/jrisk/jrisk-1.0.8.7.ebuild,v 1.4 2007/01/26 22:22:57 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -28,7 +28,7 @@ src_compile() {
 		antflags="${antflags} -Dbuild.compiler=jikes"
 	fi
 	ant ${antflags} || die "failed to build"
-	# change the cd directory of the executable 
+	# change the cd directory of the executable
 	# has to be done after the ant compilation
 	sed \
 		-e "/dirname/ s:.*:cd \"${GAMES_DATADIR}/${PN}\":" \
