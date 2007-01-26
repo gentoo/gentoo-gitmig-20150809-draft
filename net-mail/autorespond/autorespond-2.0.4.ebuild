@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/autorespond/autorespond-2.0.4.ebuild,v 1.13 2006/02/20 00:11:02 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/autorespond/autorespond-2.0.4.ebuild,v 1.14 2007/01/26 09:43:27 vapier Exp $
 
 inherit eutils
 
@@ -13,15 +13,15 @@ SRC_URI="mirror://sourceforge/qmailadmin/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc s390 sh sparc x86"
 IUSE=""
 
 RDEPEND="virtual/qmail"
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	epatch ${DISTDIR}/${DEBIAN_P}.diff.gz
+	epatch "${DISTDIR}"/${DEBIAN_P}.diff.gz
 }
 
 src_compile() {
