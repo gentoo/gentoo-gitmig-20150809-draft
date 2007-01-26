@@ -1,0 +1,30 @@
+--- configure.ok	2007-01-26 16:58:37.000000000 +0100
++++ configure	2007-01-26 16:59:22.000000000 +0100
+@@ -4563,12 +4563,6 @@
+    fi
+ fi
+ 
+-if test ! -d $HOME/.dbhub; then
+-   echo "creating config directory: $HOME/.dbhub"
+-   mkdir $HOME/.dbhub
+-   chmod 700 $HOME/.dbhub;
+-fi
+-
+ # Check whether --enable-perl or --disable-perl was given.
+ if test "${enable_perl+set}" = set; then
+   enableval="$enable_perl"
+@@ -4626,14 +4620,6 @@
+ 
+        perl_libs=`perl -MExtUtils::Embed -e ldopts`
+ 
+-                     if test ! -d $HOME/.dbhub/scripts; then
+-       	  echo "creating script directory: $HOME/.dbhub/scripts"
+-       	  mkdir $HOME/.dbhub/scripts
+-	  chmod 700 $HOME/.dbhub/scripts;
+-	  for i in Samplescripts/*; do
+-	      cp $i $HOME/.dbhub/scripts;
+-	  done
+-       fi
+    fi
+ else
+     echo "Perl script support is disabled."
