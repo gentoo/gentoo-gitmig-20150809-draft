@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dos2unix
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.17 2007/01/26 12:52:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.18 2007/01/26 22:25:42 eroyf Exp $
+
+  26 Jan 2007; Alexander H. Færøy <eroyf@gentoo.org>
+  dos2unix-3.1-r1.ebuild:
+  Stable on MIPS; bug #163872
 
   26 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   dos2unix-3.1-r1.ebuild:
