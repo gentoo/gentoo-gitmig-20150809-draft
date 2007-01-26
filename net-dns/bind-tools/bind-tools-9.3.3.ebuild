@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.3.3.ebuild,v 1.5 2006/12/19 20:26:57 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.3.3.ebuild,v 1.6 2007/01/26 09:43:02 vapier Exp $
 
 inherit flag-o-matic
 
@@ -13,14 +13,14 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV/_}/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~s390 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~mips ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="idn ipv6"
 
 DEPEND=""
 
 src_unpack() {
-	unpack ${A} || die
-	cd ${S} || die
+	unpack ${A}
+	cd "${S}"
 
 	use idn && {
 		epatch ${S}/contrib/idn/idnkit-1.0-src/patch/bind9/bind-${PV}-patch
