@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/qtads/qtads-1.6c.ebuild,v 1.3 2006/08/17 02:58:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/qtads/qtads-1.6c.ebuild,v 1.4 2007/01/26 08:32:55 vapier Exp $
 
 inherit flag-o-matic qt3 games
 
@@ -14,6 +14,12 @@ KEYWORDS="~ppc x86"
 IUSE=""
 
 DEPEND="$(qt_min_version 3)"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	gunzip qtads.6.gz || die
+}
 
 src_compile () {
 	append-flags -fno-strict-aliasing
@@ -35,6 +41,6 @@ src_install () {
 	dodoc \
 		AUTHORS BUGS CREDITS INSTALL NEWS PORTABILITY README \
 		SOURCE_README TIPS TODO
-	doman qtads.6.gz
+	doman qtads.6
 	prepgamesdirs
 }
