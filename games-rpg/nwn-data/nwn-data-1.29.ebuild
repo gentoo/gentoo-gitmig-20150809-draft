@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.20 2006/09/27 20:25:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.21 2007/01/26 19:58:33 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -55,11 +55,11 @@ pkg_setup() {
 			ArcadeInstallNWNXP213f.EXE
 	elif use sou
 	then
-		 echo "You will need the SoU CD for this installation."
+		echo "You will need the SoU CD for this installation."
 		cdrom_get_cds NWNSoUInstallGuide.rtf
 	elif use hou
 	then
-		 echo "You will need the HoU CD for this installation."
+		echo "You will need the HoU CD for this installation."
 		cdrom_get_cds ArcadeInstallNWNXP213f.EXE
 	fi
 }

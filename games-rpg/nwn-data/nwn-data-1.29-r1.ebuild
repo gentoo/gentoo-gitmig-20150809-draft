@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r1.ebuild,v 1.5 2006/12/19 16:34:08 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r1.ebuild,v 1.6 2007/01/26 19:58:33 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -153,7 +153,7 @@ get_cd_set() {
 		einfo "Underdark, it will be installed afterwards."
 		touch .metadata/orig || die "touch orig"
 		touch .metadata/sou || die "touch sou"
-		export CDROM_NAME_4="CD4" 
+		export CDROM_NAME_4="CD4"
 		if use hou
 		then
 			einfo "You will also need the HoU CD for this installation."
@@ -348,13 +348,13 @@ src_unpack() {
 	rm -rf override/*
 	for a in ${A}
 	do
-	    currentlocale=""
-	    if [ -z ${a/*german*/} ]
-	    then
-	        currentlocale=de
-	    elif [ -z ${a/*spanish*/} ]
-	    then
-	    	currentlocale=es
+		currentlocale=""
+		if [ -z ${a/*german*/} ]
+		then
+			currentlocale=de
+		elif [ -z ${a/*spanish*/} ]
+		then
+			currentlocale=es
 		elif [ -z ${a/*italian*/} ]
 		then
 			currentlocale=it
@@ -423,7 +423,7 @@ then \
 fi \
 cd "${p}" || die "cd ${p}" \
 if [[ ! -a nwn.ini ]]; then \
-        cp nwn.ini.default nwn.ini \
+	cp nwn.ini.default nwn.ini \
 fi \
 if [[ -r ./nwmovies.so ]]; then \
 	export LD_PRELOAD=./nwmovies.so:$LD_PRELOAD \
@@ -445,7 +445,7 @@ src_install() {
 	if ! use videos
 	then
 		rm -rf "${S}"/movies/*
-	fi	
+	fi
 	mv "${S}"/* "${Ddir}"
 	mv "${S}"/.metadata "${Ddir}"
 	keepdir "${dir}"/servervault
@@ -536,7 +536,7 @@ pkg_postinst() {
 		ewarn "Some/all demo modules will be missing. You can copy them manually into :"
 		ewarn "${dir}/modules"
 		ewarn "or emerge with USE=nowin."
- 	fi
+	fi
 	if ! use cdinstall && use nowin && use videos
 	then
 		ewarn "Some/all movies will be missing. You can copy them manually into :"
