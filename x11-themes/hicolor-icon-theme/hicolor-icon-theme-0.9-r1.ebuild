@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/hicolor-icon-theme-0.9-r1.ebuild,v 1.11 2007/01/21 19:01:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/hicolor-icon-theme-0.9-r1.ebuild,v 1.12 2007/01/26 09:34:48 vapier Exp $
 
 # The gnome2 eclass must be inherited to update the icon cache.  All exported
 # functions should be overridden
@@ -13,7 +13,7 @@ SRC_URI="http://icon-theme.freedesktop.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
@@ -28,7 +28,7 @@ src_unpack() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "install failed"
+	emake DESTDIR="${D}" install || die "install failed"
 	dodoc ChangeLog README
 }
 
