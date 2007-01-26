@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6676 2007/01/26 08:40:20 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6677 2007/01/26 17:41:05 trapni Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -234,7 +234,6 @@ x11-misc/gpasman
 # net-www/mod_fastcgi	-> www-apache/mod_fcgid
 # net-www/mod_bwshare	-> apache1 - net-www/mod_bandwidth
 #                        apache2 - net-www/mod_bw or www-apache/mod_cband
-# www-apache/mod_depends-> www-apache/mod_umask
 # net-www/mod_injection	-> www-apache/mod_cband or net-www/mod_security
 # net-www/mod_random	-> use something else (a simple script in ruby, php, python, ..)
 # net-www/mod_encoding	-> apache builtin feature
@@ -242,7 +241,6 @@ x11-misc/gpasman
 net-www/mod_encoding
 net-www/mod_random
 net-www/mod_injection
-www-apache/mod_depends
 net-www/mod_bwshare
 net-www/mod_fastcgi
 
