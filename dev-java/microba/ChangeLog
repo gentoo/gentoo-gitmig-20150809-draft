@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/microba
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/microba/ChangeLog,v 1.4 2007/01/25 20:01:42 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/microba/ChangeLog,v 1.5 2007/01/26 15:01:59 nelchael Exp $
+
+  26 Jan 2007; Krzysiek Pawlik <nelchael@gentoo.org> microba-0.4.3.ebuild:
+  Added ~ppc.
 
   25 Jan 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   microba-0.4.3.ebuild:

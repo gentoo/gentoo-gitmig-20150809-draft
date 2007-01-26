@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glazedlists/glazedlists-1.5.0.ebuild,v 1.4 2007/01/25 20:00:27 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glazedlists/glazedlists-1.5.0.ebuild,v 1.5 2007/01/26 15:03:10 nelchael Exp $
 
 # java-ant-2 not needed - build.xml sets source/target properly
 inherit java-pkg-2 eutils
@@ -11,7 +11,7 @@ HOMEPAGE="http://publicobject.com/${PN}/"
 SRC_URI="https://${PN}.dev.java.net/files/documents/1073/26115/${P}-source_java14.zip"
 LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="doc source test"
 RDEPEND=">=virtual/jre-1.4"
 DEPEND=">=virtual/jdk-1.4
