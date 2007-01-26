@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6674 2007/01/26 03:42:28 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6675 2007/01/26 06:55:51 dberkholz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -708,15 +708,6 @@ net-im/ohphone
 # get the word out. Also see bug 148333 for packages that still needs to fixed
 >=dev-lang/python-2.5
 >=dev-python/python-docs-2.5
-
-# Donnie Berkholz <dberkholz@gentoo.org> (13 Sep 2006)
-# Monolithic X.Org is no longer supported and is subject
-# to multiple security vulnerabilities.
-<x11-base/xorg-x11-7
-<virtual/glu-7
-<virtual/opengl-7
-<virtual/x11-7
-<virtual/xft-7
 
 # Daniel Gryniewicz <dang@gentoo.org> (11 Sep 2006)
 # orbit 2.14.3 is broken.  bug #146929
