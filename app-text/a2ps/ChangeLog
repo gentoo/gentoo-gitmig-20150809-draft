@@ -1,6 +1,9 @@
 # ChangeLog for app-text/a2ps
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.60 2007/01/15 11:40:57 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.61 2007/01/26 01:45:24 kloeri Exp $
+
+  26 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> a2ps-4.13c-r5.ebuild:
+  Stable on Alpha.
 
   15 Jan 2007; Steve Dibb <beandog@gentoo.org> a2ps-4.13c-r5.ebuild:
   amd64 stable, bug 145048
