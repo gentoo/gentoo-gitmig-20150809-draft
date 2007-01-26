@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r7.ebuild,v 1.3 2007/01/22 20:32:24 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r7.ebuild,v 1.4 2007/01/26 08:50:44 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -68,7 +68,7 @@ src_install() {
 	doman telnet/telnet.1
 	doman telnetd/*.8
 	doman telnetd/issue.net.5
-	dosym telnetd.8.gz /usr/share/man/man8/in.telnetd.8.gz
+	dosym telnetd.8 /usr/share/man/man8/in.telnetd.8
 	doman telnetlogin/telnetlogin.8
 	dodoc BUGS ChangeLog README
 	dodoc ${FILESDIR}/net.issue.sample
