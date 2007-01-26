@@ -1,0 +1,42 @@
+Index: lib/rubygems/installer.rb
+===================================================================
+--- lib/rubygems/installer.rb	(revision 1195)
++++ lib/rubygems/installer.rb	(working copy)
+@@ -7,6 +7,8 @@ require 'rubygems/dependency_list'
+ 
+ module Gem
+ 
++  class InstallError < Gem::Exception; end
++
+   class DependencyRemovalException < Gem::Exception; end
+ 
+   ##
+@@ -321,14 +323,20 @@ TEXT
+     #
+     def extract_files(directory, format)
+       require 'fileutils'
+-      wd = Dir.getwd
+-      Dir.chdir directory do
+-        format.file_entries.each do |entry, file_data|
+-          path = entry['path']
+-          FileUtils.mkdir_p File.dirname(path)
+-          File.open(path, "wb") do |out|
+-            out.write file_data
+-          end
++      format.file_entries.each do |entry, file_data|
++        path = entry['path']
++        if path =~ /\A\// then # for extra sanity
++          raise Gem::InstallError,
++                "attempt to install file into #{entry['path'].inspect}"
++        end
++        path = File.expand_path File.join(directory, path)
++        if path !~ /\A#{Regexp.escape directory}/ then
++          raise Gem::InstallError,
++                "attempt to install file into #{entry['path'].inspect}"
++        end
++        FileUtils.mkdir_p File.dirname(path)
++        File.open(path, "wb") do |out|
++          out.write file_data
+         end
+       end
+     end
