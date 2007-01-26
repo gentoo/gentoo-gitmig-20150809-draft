@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/snip
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/snip/ChangeLog,v 1.1 2007/01/26 16:09:54 betelgeuse Exp $
+
+*snip-0.11 (26 Jan 2007)
+
+  26 Jan 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +files/snip-0.11-build.xml.patch, +metadata.xml, +snip-0.11.ebuild:
+  Initial commit. Original ebuild by Iván Pérez Domínguez
+  <iperez@babel.ls.fi.upm.es> and then improved by me. Fixes bug #145936.
+
