@@ -1,6 +1,10 @@
 # ChangeLog for virtual/x11
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/x11/ChangeLog,v 1.17 2006/08/23 21:25:25 swegener Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/x11/ChangeLog,v 1.18 2007/01/26 06:53:14 dberkholz Exp $
+
+  26 Jan 2007; Donnie Berkholz <dberkholz@gentoo.org>; -x11-6.8.ebuild:
+  Pull monolithic Xorg. It's moved to the (new) x11 overlay, accessible via
+  layman.
 
   23 Aug 2006; Sven Wegener <swegener@gentoo.org> x11-7.0-r2.ebuild:
   Virtual packages have no build-time dependencies.
