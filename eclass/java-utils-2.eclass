@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.49 2007/01/25 11:46:22 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.50 2007/01/26 20:24:23 caster Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -213,7 +213,7 @@ java-pkg_dojar() {
 
 	local jar
 	# for each jar
-	for jar in ${@}; do
+	for jar in "${@}"; do
 		local jar_basename=$(basename "${jar}")
 
 		java-pkg_check-versioned-jar ${jar_basename}
@@ -300,7 +300,7 @@ java-pkg_regjar() {
 	java-pkg_init_paths_
 
 	local jar jar_dir jar_file
-	for jar in ${@}; do
+	for jar in "${@}"; do
 		# TODO use java-pkg_check-versioned-jar
 		if [[ -e "${jar}" || -e "${D}${jar}" ]]; then
 			[[ -d "${jar}" || -d "${D}${jar}" ]] \
@@ -562,7 +562,7 @@ java-pkg_dosrc() {
 	local zip_name="${PN}-src.zip"
 	local zip_path="${T}/${zip_name}"
 	local dir
-	for dir in ${@}; do
+	for dir in "${@}"; do
 		local dir_parent=$(dirname "${dir}")
 		local dir_name=$(basename "${dir}")
 		pushd ${dir_parent} > /dev/null || die "problem entering ${dir_parent}"
