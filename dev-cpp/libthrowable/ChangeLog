@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libthrowable
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libthrowable/ChangeLog,v 1.3 2007/01/25 14:57:12 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libthrowable/ChangeLog,v 1.4 2007/01/26 12:58:15 gustavoz Exp $
+
+  26 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  libthrowable-0.9.6.ebuild:
+  Keyworded ~sparc wrt #163396
 
   25 Jan 2007; Steve Dibb <beandog@gentoo.org> libthrowable-0.9.6.ebuild:
   Add ~amd64, bug 163396
