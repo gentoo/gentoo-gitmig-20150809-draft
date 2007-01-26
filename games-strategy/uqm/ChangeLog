@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/uqm
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/ChangeLog,v 1.16 2006/12/12 17:23:48 wolf31o2 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/ChangeLog,v 1.17 2007/01/26 04:02:30 mr_bones_ Exp $
+
+*uqm-0.6.2 (26 Jan 2007)
+
+  26 Jan 2007; Michael Sterrett <mr_bones_@gentoo.org> +uqm-0.6.2.ebuild:
+  version bump (patch from nedrandersoff@yahoo.com) - bug #158640
 
   12 Dec 2006; Chris Gianelloni <wolf31o2@gentoo.org> uqm-0.5.0.ebuild:
   Fixed compilation on amd64 with a patch from Lukasz Demianiuk
