@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6673 2007/01/25 23:20:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6674 2007/01/26 03:42:28 dang Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Daniel Gryniewicz <dang@gentoo.org> (25 Jan 2007)
+# Masked for removal; depricated, replaced by evolution-exchange
+mail-client/ximian-connector
 
 # Diego Pettenò <flameeyes@gentoo.org> (25 Jan 2007)
 # Live Subversion version for Amarok.
