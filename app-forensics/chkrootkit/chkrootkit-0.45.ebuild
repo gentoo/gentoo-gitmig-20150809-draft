@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/chkrootkit-0.45.ebuild,v 1.10 2007/01/24 03:16:55 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/chkrootkit-0.45.ebuild,v 1.11 2007/01/26 20:10:52 eroyf Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.pangeia.com.br/pub/seg/pac/${P}.tar.gz
 
 LICENSE="AMS"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
