@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2524 2007/01/26 03:54:26 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2525 2007/01/26 21:05:51 jer Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1650,6 +1650,8 @@ sys-cluster/vserver-utils:diet - Enables linking against dietlibc
 sys-cluster/vzctl:logrotate - Enable logrotate file installation
 sys-cluster/vzctl:udev - Enable udev rules file installation
 sys-devel/bfin-toolchain:bfin-elf - Also install the bfin-elf toolchain
+sys-devel/binutils-hppa64:multislot - Allow for multiple versions of binutils to be emerged at once for same CTARGET
+sys-devel/binutils-hppa64:multitarget - Adds support to binutils for cross compiling (does not work with gas)
 sys-devel/binutils-nios2:multislot - Allow for multiple versions of binutils to be emerged at once for same CTARGET
 sys-devel/binutils-nios2:multitarget - Adds support to binutils for cross compiling (does not work with gas)
 sys-devel/binutils:multislot - Allow for multiple versions of binutils to be emerged at once for same CTARGET

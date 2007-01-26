@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.44 2007/01/26 06:55:51 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.45 2007/01/26 21:05:51 jer Exp $
+
+  26 Jan 2007; Jeroen Roovers <jer@gentoo.org> use.local.desc:
+  Add multislot and multitarget USE flags for sys-devel/binutils-hppa64 (bug
+  #163351).
 
   26 Jan 2007; Donnie Berkholz <dberkholz@gentoo.org>; package.mask:
   Pull monolithic Xorg. It's moved to the (new) x11 overlay, accessible via
