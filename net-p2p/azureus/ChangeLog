@@ -1,6 +1,20 @@
 # ChangeLog for net-p2p/azureus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.36 2007/01/20 11:09:04 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.37 2007/01/26 23:00:06 caster Exp $
+
+*azureus-2.5.0.4 (26 Jan 2007)
+
+  26 Jan 2007; Vlastimil Babka <caster@gentoo.org>
+  +files/fedora-2.5.0.4/azureus-cache-size.patch,
+  +files/fedora-2.5.0.4/azureus-no-restart.patch,
+  +files/fedora-2.5.0.4/azureus-remove-manifest-classpath.patch,
+  +files/fedora-2.5.0.4/azureus-remove-win32-PlatformManagerUpdateChecker.pa
+  tch, +files/fedora-2.5.0.4/azureus-remove-win32-osx-platforms.patch,
+  +azureus-2.5.0.4.ebuild:
+  Version bump, bug #163941. Thanks to Kalidarn <dcecchin@gmail.com> for
+  finding out the distfile capitalization change (even the links on homepage
+  and sf.net were wrong, fun) and Joshua A. Manis <semhirage@hotmail.com> for
+  updated platform patch.
 
 *azureus-2.5.0.2 (20 Jan 2007)
 
