@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.42 2007/01/25 18:51:41 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.43 2007/01/26 03:54:26 chutzpah Exp $
+
+  26 Jan 2007; Patrick McLean <chutzpah@gentoo.org> use.local.desc:
+  Add "isc" USE flag for net-dns/dnsmasq
 
   25 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
   package.masked =dev-java/asm-3* because it uses splitted ant
