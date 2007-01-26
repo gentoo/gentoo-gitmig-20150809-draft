@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-jai
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-jai/ChangeLog,v 1.3 2007/01/25 18:24:40 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-jai/ChangeLog,v 1.4 2007/01/26 13:49:07 nelchael Exp $
+
+  26 Jan 2007; Krzysiek Pawlik <nelchael@gentoo.org> ant-jai-1.7.0.ebuild:
+  Added ~ppc.
 
   25 Jan 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   ant-jai-1.7.0.ebuild:
