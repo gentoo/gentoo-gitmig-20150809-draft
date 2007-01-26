@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/zangband-2.7.4c.ebuild,v 1.3 2006/11/05 01:31:22 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/zangband-2.7.4c.ebuild,v 1.4 2007/01/26 22:53:08 mr_bones_ Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~ppc ~x86 ~x86-fbsd"
 IUSE="gtk tk"
 
-# Dropping X use keyword: 
+# Dropping X use keyword:
 #  it had to be $(use_with X x11)
 #  but ebuild fails to link without-x11
 RDEPEND="tk? (
