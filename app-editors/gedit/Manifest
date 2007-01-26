@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX gedit-2.16.2-no_python_module_docs.patch 730 RMD160 81afcad6cca9d0be7311fca0da788d93368beef4 SHA1 70f11ceb222c58a85f5ce4d08474dbc70b3abfe5 SHA256 7cff8d687f0def86ccabd6bc584e9a57de23e48e9b8fb7d5f241f60ac7c3b38c
 MD5 c9080dd00ae9152286919d162aeddc26 files/gedit-2.16.2-no_python_module_docs.patch 730
 RMD160 81afcad6cca9d0be7311fca0da788d93368beef4 files/gedit-2.16.2-no_python_module_docs.patch 730
@@ -13,10 +16,10 @@ EBUILD gedit-2.14.4.ebuild 1143 RMD160 4c5a9e6a3a4f02202dca90e0584ce8ee9b36da71 
 MD5 3a5c57f66bec600caa885dbddea067a9 gedit-2.14.4.ebuild 1143
 RMD160 4c5a9e6a3a4f02202dca90e0584ce8ee9b36da71 gedit-2.14.4.ebuild 1143
 SHA256 de9d3cfd20e55190b533bb9b4021e8176d316e443054bb9f580fbb007cc6adb2 gedit-2.14.4.ebuild 1143
-EBUILD gedit-2.16.2-r1.ebuild 1493 RMD160 169613b9cb69191c52b704f761476e6b48708bb6 SHA1 2ffcc413bf579d40e3d1a99d670fea5f4a63553b SHA256 b686740a100feb67c1b54f4eefdbd205298de03e85cd2fbceaf286e28f231684
-MD5 17f0952ed5ceff42b2ac726e5c3180f2 gedit-2.16.2-r1.ebuild 1493
-RMD160 169613b9cb69191c52b704f761476e6b48708bb6 gedit-2.16.2-r1.ebuild 1493
-SHA256 b686740a100feb67c1b54f4eefdbd205298de03e85cd2fbceaf286e28f231684 gedit-2.16.2-r1.ebuild 1493
+EBUILD gedit-2.16.2-r1.ebuild 1536 RMD160 d9bf3ca8e05b3a17f06a01a7d006c8d6e5aef732 SHA1 34dc991db09a493638927d4c282ed9aa6bacc86b SHA256 1315e2e881dfcb63b96bbafb08fbcb8b780bf4ab98fc67ce30a114503c22dcd0
+MD5 b6e6dfd86cb444126d06ef8621905138 gedit-2.16.2-r1.ebuild 1536
+RMD160 d9bf3ca8e05b3a17f06a01a7d006c8d6e5aef732 gedit-2.16.2-r1.ebuild 1536
+SHA256 1315e2e881dfcb63b96bbafb08fbcb8b780bf4ab98fc67ce30a114503c22dcd0 gedit-2.16.2-r1.ebuild 1536
 EBUILD gedit-2.16.2.ebuild 1438 RMD160 de0dbe4da6cf30594362edd0edcdcbb2401a7720 SHA1 4df457b53781bf3a99bd77bf912d6e74f61fd091 SHA256 f94077563861c02c3286081e02ce8d0a3575fc042cca5200f402f54f983cca02
 MD5 dc74417af46075a17fb8e27a8e1109b7 gedit-2.16.2.ebuild 1438
 RMD160 de0dbe4da6cf30594362edd0edcdcbb2401a7720 gedit-2.16.2.ebuild 1438
@@ -41,3 +44,10 @@ SHA256 16eed35338e9a39d0b14f8b00547b3fded708a4d8f6db023f2cf1508441355f3 files/di
 MD5 e613a7cef12f0c659bd2ea6fba337a0c files/digest-gedit-2.16.2-r1 244
 RMD160 174add1f67c28f44a647fe28a6d5eb348c341279 files/digest-gedit-2.16.2-r1 244
 SHA256 16eed35338e9a39d0b14f8b00547b3fded708a4d8f6db023f2cf1508441355f3 files/digest-gedit-2.16.2-r1 244
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFuc4m8bi6rjpTunYRAtmIAKCMkKKpifg343+FypS/ghsFlmoIewCgiVh0
+WBrBg2l4MoPb/t9VQtojz1w=
+=pssh
+-----END PGP SIGNATURE-----
