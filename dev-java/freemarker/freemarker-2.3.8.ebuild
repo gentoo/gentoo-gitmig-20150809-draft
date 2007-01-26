@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/freemarker-2.3.8.ebuild,v 1.3 2006/09/24 01:57:11 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/freemarker-2.3.8.ebuild,v 1.4 2007/01/26 23:17:56 nelchael Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -14,13 +14,14 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="source doc"
 
 DEPEND=">=virtual/jdk-1.4
-	dev-java/ant-core"
+	dev-java/jython
+	dev-java/ant"
 RDEPEND=">=virtual/jre-1.4
 	=dev-java/servletapi-2.3*
 	=dev-java/jaxen-1.1*
 	dev-java/javacc"
 
-GETJARS_ARG="servletapi-2.3,jaxen-1.1"
+GETJARS_ARG="servletapi-2.3,jaxen-1.1,jython"
 
 src_unpack() {
 	unpack ${A}

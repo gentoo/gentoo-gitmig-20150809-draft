@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/freemarker
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/ChangeLog,v 1.6 2006/09/24 01:57:11 nichoj Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/ChangeLog,v 1.7 2007/01/26 23:17:56 nelchael Exp $
+
+  26 Jan 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  freemarker-2.3.8.ebuild:
+  Fix deps.
 
   24 Sep 2006; Joshua Nichols <nichoj@gentoo.org> freemarker-2.3.8.ebuild:
   Some cleanups.
