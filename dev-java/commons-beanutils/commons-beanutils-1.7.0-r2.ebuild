@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.7.0-r2.ebuild,v 1.6 2007/01/11 13:18:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.7.0-r2.ebuild,v 1.7 2007/01/26 18:24:57 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -27,22 +27,18 @@ S="${WORKDIR}/${P}-src"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	echo "commons-collections.jar=$(java-pkg_getjars commons-collections)" 	> build.properties
 	echo "commons-logging.jar=$(java-pkg_getjar commons-logging commons-logging.jar)" >> build.properties
 }
 
-src_compile() {
-	eant $(use_doc) jar
-}
-
 src_install() {
 	java-pkg_dojar dist/${PN}*.jar
 
-	dodoc RELEASE-NOTES.txt
-	java-pkg_dohtml STATUS.html PROPOSAL.html
+	dodoc RELEASE-NOTES.txt || die
+	dohtml STATUS.html PROPOSAL.html || die
 
-	use doc && java-pkg_dohtml -r dist/docs/*
+	use doc && java-pkg_dojavadoc dist/docs/api
 	use source && java-pkg_dosrc src/java/*
 }
