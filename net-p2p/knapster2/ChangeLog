@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/knapster2
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/knapster2/ChangeLog,v 1.9 2004/08/14 14:52:13 swegener Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/knapster2/ChangeLog,v 1.10 2007/01/26 14:08:13 armin76 Exp $
+
+  26 Jan 2007; Raúl Porcel <armin76@gentoo.org>
+  -files/knapster2-0.4-gcc3.2.diff, -knapster2-0.4.ebuild:
+  drop old
 
   14 Aug 2004; Sven Wegener <swegener@gentoo.org> knapster2-0.4.ebuild,
   knapster2-0.5.ebuild:
