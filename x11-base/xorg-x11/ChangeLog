@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.579 2007/01/25 03:35:57 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.580 2007/01/26 06:47:42 dberkholz Exp $
+
+  26 Jan 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  -files/6.9.0-fix-rom-read-dualhead.patch, -files/x11r6.9.0-setuid.diff,
+  -files/xorg-68x-setuid.patch, -files/CVE-2006-1526-xrender-mitri.patch,
+  -xorg-x11-6.8.2-r8.ebuild, -xorg-x11-6.9.0-r3.ebuild:
+  Pull monolithic Xorg. It's moved to the (new) x11 overlay, accessible via
+  layman. If anyone is interested in updating it for security patches etc,
+  please contact x11@gentoo.org and we can work on getting you commit access.
 
 *xorg-x11-7.2 (25 Jan 2007)
 
