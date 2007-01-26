@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.2_pre20061230.ebuild,v 1.1 2006/12/31 10:30:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.2_pre20061230.ebuild,v 1.2 2007/01/26 01:10:02 kloeri Exp $
 
 inherit eutils flag-o-matic
 
@@ -33,7 +33,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${MY_P}-accept.patch
 	epatch "${FILESDIR}"/${MY_P}-querymod.patch
-	epatch "${FILESDIR}"/${MY_P}-punt-SO_BSDCOMPAT.patch 
+	epatch "${FILESDIR}"/${MY_P}-punt-SO_BSDCOMPAT.patch
 	epatch "${FILESDIR}"/${MY_P}-ksym-headers.patch
 
 	# CAEN/OWL security patches
