@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/gle-3.1.0-r1.ebuild,v 1.5 2006/12/16 18:57:30 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/gle-3.1.0-r1.ebuild,v 1.6 2007/01/26 09:40:58 vapier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.4"
@@ -15,7 +15,7 @@ SRC_URI="http://www.linas.org/gle/pub/${P}.tar.gz"
 
 LICENSE="Artistic GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc"
 
 DEPEND="virtual/opengl
@@ -50,7 +50,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" -j1 install || die "make install failed."
+	emake -j1 DESTDIR="${D}" install || die "make install failed."
 	dodoc AUTHORS ChangeLog NEWS README
 	rm -rf "${D}/usr/share/doc/gle"
 }
