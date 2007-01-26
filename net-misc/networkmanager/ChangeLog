@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.8 2007/01/14 11:09:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.9 2007/01/26 14:40:07 leio Exp $
+
+  26 Jan 2007; Mart Raudsepp <leio@gentoo.org>
+  networkmanager-0.6.4_pre20061028.ebuild,
+  networkmanager-0.6.4_pre20061028-r1.ebuild:
+  Really fix gnome and gcrypt use on configure
 
   14 Jan 2007; Markus Rothe <corsair@gentoo.org>
   networkmanager-0.6.4_pre20061028-r1.ebuild:
