@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.59 2007/01/26 15:53:18 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.60 2007/01/26 16:03:48 pclouds Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -42,12 +42,6 @@ EXPORT_FUNCTIONS src_unpack src_compile src_install
 
 HOMEPAGE="http://raa.ruby-lang.org/list.rhtml?name=${PN}"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
-
-# prepare for #145222 fix
-# once testing is ok, this condition will be removed
-if [ "${RUBY_BUG_145222}" != "yes" ]; then
-	IUSE="examples"
-fi
 
 SLOT="0"
 LICENSE="Ruby"
