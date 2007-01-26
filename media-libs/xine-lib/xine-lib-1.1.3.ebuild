@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.3.ebuild,v 1.11 2007/01/18 01:01:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.3.ebuild,v 1.12 2007/01/26 19:33:19 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -28,7 +28,7 @@ KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 
 IUSE="aalib libcaca arts esd win32codecs nls dvd X directfb vorbis alsa
 gnome sdl speex theora ipv6 altivec opengl aac fbcon xv xvmc
-samba dxr3 vidix mng flac oss v4l xinerama vcd a52 mad imagemagick dts
+dxr3 vidix mng flac oss v4l xinerama vcd a52 mad imagemagick dts
 debug modplug gtk pulseaudio mmap truetype"
 
 RDEPEND="
@@ -52,7 +52,6 @@ RDEPEND="
 	theora? ( media-libs/libogg media-libs/libvorbis >=media-libs/libtheora-1.0_alpha6 )
 	speex? ( media-libs/libogg media-libs/libvorbis media-libs/speex )
 	libcaca? ( >=media-libs/libcaca-0.99_beta1 )
-	samba? ( net-fs/samba )
 	mng? ( media-libs/libmng )
 	vcd? ( media-video/vcdimager )
 	a52? ( >=media-libs/a52dec-0.7.4-r5 )
@@ -121,7 +120,6 @@ src_compile() {
 		$(use_enable gnome gnomevfs) \
 		$(use_enable nls) \
 		$(use_enable ipv6) \
-		$(use_enable samba) \
 		$(use_enable altivec) \
 		$(use_enable v4l) \
 		\
@@ -166,6 +164,7 @@ src_compile() {
 		--with-external-ffmpeg \
 		--disable-optimizations \
 		--disable-syncfb \
+		--disable-samba \
 		${myconf} \
 		--with-xv-path=/usr/$(get_libdir) \
 		--with-w32-path=/usr/lib/win32 \

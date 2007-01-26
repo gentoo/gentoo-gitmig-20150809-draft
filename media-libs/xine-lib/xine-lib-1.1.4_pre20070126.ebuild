@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.4_pre20070119.ebuild,v 1.1 2007/01/19 03:12:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.4_pre20070126.ebuild,v 1.1 2007/01/26 19:33:19 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -166,10 +166,7 @@ src_compile() {
 }
 
 src_install() {
-	emake -j1 DESTDIR="${D}" install || die "Install failed"
-
-	dodoc AUTHORS ChangeLog README TODO doc/README* doc/faq/faq.txt
-	dohtml doc/faq/faq.html doc/hackersguide/*.html doc/hackersguide/*.png
-
-	rm -rf "${D}/usr/share/doc/xine"
+	emake -j1 DESTDIR="${D}" \
+		docdir="/usr/share/doc/${PF}" htmldir="/usr/share/doc/${PF}/html" \
+		install || die "Install failed"
 }

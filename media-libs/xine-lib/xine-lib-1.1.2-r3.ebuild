@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2-r3.ebuild,v 1.9 2006/12/02 16:28:45 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2-r3.ebuild,v 1.10 2007/01/26 19:33:19 flameeyes Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
@@ -33,7 +33,7 @@ IUSE_VIDEO_CARDS="video_cards_nvidia video_cards_via video_cards_i810"
 
 IUSE="aalib libcaca arts esd win32codecs nls dvd X directfb vorbis alsa
 gnome sdl speex theora ipv6 altivec opengl aac fbcon xv xvmc
-samba dxr3 vidix mng flac oss v4l xinerama vcd a52 mp3 imagemagick dts asf
+dxr3 vidix mng flac oss v4l xinerama vcd a52 mp3 imagemagick dts asf
 debug modplug ${IUSE_VIDEO_CARDS}"
 
 RDEPEND="vorbis? ( media-libs/libvorbis )
@@ -64,7 +64,6 @@ RDEPEND="vorbis? ( media-libs/libvorbis )
 	theora? ( media-libs/libtheora )
 	speex? ( media-libs/speex )
 	libcaca? ( media-libs/libcaca )
-	samba? ( net-fs/samba )
 	mng? ( media-libs/libmng )
 	vcd? ( media-video/vcdimager )
 	a52? ( >=media-libs/a52dec-0.7.4-r5 )
@@ -185,7 +184,6 @@ src_compile() {
 		$(use_enable gnome gnomevfs) \
 		$(use_enable nls) \
 		$(use_enable ipv6) \
-		$(use_enable samba) \
 		$(use_enable altivec) \
 		$(use_enable v4l) \
 		\
@@ -224,6 +222,7 @@ src_compile() {
 		--disable-polypaudio \
 		--disable-optimizations \
 		--disable-freetype \
+		--disable-samba \
 		${myconf} \
 		--with-w32-path=/usr/lib/win32 \
 		--enable-fast-install \
