@@ -1,6 +1,9 @@
 # ChangeLog for app-text/jabref
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.40 2007/01/25 20:03:38 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.41 2007/01/26 15:05:40 nelchael Exp $
+
+  26 Jan 2007; Krzysiek Pawlik <nelchael@gentoo.org> jabref-2.1.ebuild:
+  Added ~ppc.
 
   25 Jan 2007; William L. Thomson Jr. <wltjr@gentoo.org> jabref-2.1.ebuild:
   Added ~amd64 keyword
