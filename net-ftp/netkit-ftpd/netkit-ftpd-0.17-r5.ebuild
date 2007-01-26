@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-ftpd/netkit-ftpd-0.17-r5.ebuild,v 1.1 2007/01/21 18:54:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-ftpd/netkit-ftpd-0.17-r5.ebuild,v 1.2 2007/01/26 14:29:23 gustavoz Exp $
 
 inherit eutils ssl-cert
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${MY_P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~s390 ~sh sparc ~x86"
 IUSE="ssl"
 
 DEPEND="ssl? ( dev-libs/openssl )"

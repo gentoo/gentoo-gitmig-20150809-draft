@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/netkit-ftpd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-ftpd/ChangeLog,v 1.1 2007/01/21 18:54:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-ftpd/ChangeLog,v 1.2 2007/01/26 14:29:23 gustavoz Exp $
+
+  26 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  netkit-ftpd-0.17-r5.ebuild:
+  Stable on sparc wrt security #155317
 
 *ftpd-0.17-r5 (21 Jan 2007)
 
