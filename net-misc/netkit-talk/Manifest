@@ -17,11 +17,11 @@ AUX talk.xinetd 265 RMD160 9cfd18a1ac8fa1a516d876bd31b7fe8e26fa0dfa SHA1 f5a4577
 MD5 c2bea2eb9cd8008b29f499010a39c62e files/talk.xinetd 265
 RMD160 9cfd18a1ac8fa1a516d876bd31b7fe8e26fa0dfa files/talk.xinetd 265
 SHA256 6ce5286c8d51ce80c7c0833d4fdbf2f29657ad3dd3c58b6fb6da7b444766baa7 files/talk.xinetd 265
-DIST netkit-ntalk-0.17.tar.gz 37396
-EBUILD netkit-talk-0.17-r4.ebuild 1160 RMD160 20fcf8c08164f25fabe3ec7098143a8ca8fefd19 SHA1 30ddcd675d245cf30050351bdb6221398cad56b7 SHA256 aa884ae603d5c505fcbb55b5ee18cf06c6c2b71b47e1debe74b167c8a82c189b
-MD5 826446b1af5ce81d298ef61922750aed netkit-talk-0.17-r4.ebuild 1160
-RMD160 20fcf8c08164f25fabe3ec7098143a8ca8fefd19 netkit-talk-0.17-r4.ebuild 1160
-SHA256 aa884ae603d5c505fcbb55b5ee18cf06c6c2b71b47e1debe74b167c8a82c189b netkit-talk-0.17-r4.ebuild 1160
+DIST netkit-ntalk-0.17.tar.gz 37396 RMD160 70f43d927775e278d8f1182f150da28031de339c SHA1 476daa31c774ff05745dc8cc6b4509013458264c SHA256 d8f614e8d4d7981a0adf0f84d2d3954018d5fe0e57a8e5731256d66cbcf45e90
+EBUILD netkit-talk-0.17-r4.ebuild 1111 RMD160 2ed22dce0f1334f05c9d26794b7cba94b94259ab SHA1 4683558dde57c05fd0ee08f73b321c27aa24554d SHA256 c2907833c9949e2a9308b2c0b40dd1621786beab22dacdd5f18921d6b0457673
+MD5 4f1c8dec0673bd9595584c3a3d0d7985 netkit-talk-0.17-r4.ebuild 1111
+RMD160 2ed22dce0f1334f05c9d26794b7cba94b94259ab netkit-talk-0.17-r4.ebuild 1111
+SHA256 c2907833c9949e2a9308b2c0b40dd1621786beab22dacdd5f18921d6b0457673 netkit-talk-0.17-r4.ebuild 1111
 MISC ChangeLog 2900 RMD160 5140d4aa22c73e842afe1a5b4acf8d84f4d178ca SHA1 f5e62045622d16f2402123c734ae8cd1552ef1ee SHA256 49f6bed4a7882fab6cfa8b64155ab9a79aa171da0f36ddcb44041e71cc091b92
 MD5 a6bcbdc6213d9aaebc4099c4724c70eb ChangeLog 2900
 RMD160 5140d4aa22c73e842afe1a5b4acf8d84f4d178ca ChangeLog 2900
@@ -30,13 +30,13 @@ MISC metadata.xml 210 RMD160 c9fe92a44d079ef04bcdd31de9867de5bb9f26e5 SHA1 efa00
 MD5 c667f921ee8d48ce17ebef0f8d601ea4 metadata.xml 210
 RMD160 c9fe92a44d079ef04bcdd31de9867de5bb9f26e5 metadata.xml 210
 SHA256 90082fe26a119a63ca8fbe227f66c33ba74167b6cf28e2cef02dea6c4f656c39 metadata.xml 210
-MD5 3d0dd3176e4b560813366a5f3ec7e914 files/digest-netkit-talk-0.17-r4 68
-RMD160 b1e89026354caee5dd8b6c8da25de91e77a03054 files/digest-netkit-talk-0.17-r4 68
-SHA256 4896c377754f571970d1448639d06aaf8b9a00e5886cc5fa628a8c72fc2f9d90 files/digest-netkit-talk-0.17-r4 68
+MD5 db282fc05f2f9d5e5b5317dbe05fa0fc files/digest-netkit-talk-0.17-r4 250
+RMD160 bec280d5720a9fa8dfe7cffeba95937964cb0a4a files/digest-netkit-talk-0.17-r4 250
+SHA256 5f36ce580e195fd79e256b5dfb5398cf81d9d37652dc5422e533d95470fcb4eb files/digest-netkit-talk-0.17-r4 250
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
+Version: GnuPG v2.0.1 (GNU/Linux)
 
-iD8DBQFFoam05mJXAu5GbtIRAqk4AJ0ZYMezE0YpCTQ40xCeeAOJg80qmACfXn5m
-Wqdm6vitiE1bcWWlOAxbBdE=
-=FLn3
+iD8DBQFFucCd8bi6rjpTunYRAjzFAKCROdhfbnbNJbYCdqa/Hv2Chq/FdgCg2CqI
+Nvt/Mmx8103bglgj++32mZQ=
+=8qz5
 -----END PGP SIGNATURE-----
