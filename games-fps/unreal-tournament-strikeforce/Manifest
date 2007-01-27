@@ -1,14 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d17e5d15e2ad00632eae48033b24e637 ChangeLog 801
+DIST sf180lnx.zip 11965
+DIST sf_180_server_files.tar.gz 396772949
+DIST unreal-tournament-strikeforce-1.81.tar.bz2 42039142
+EBUILD unreal-tournament-strikeforce-1.81.ebuild 1232 RMD160 226c7fcf456ab9974b8279152690ac5e6b5769d8 SHA1 2d0e680e86c5a89cb2b08160ee2e0d5ccab7b86a SHA256 5079ff98d71a72c5f14a3cb2f374173d371b8b0f71174dbcf78fd55fa8d9d79c
 MD5 5e5f7cce1afa65507db0401f33679046 unreal-tournament-strikeforce-1.81.ebuild 1232
+RMD160 226c7fcf456ab9974b8279152690ac5e6b5769d8 unreal-tournament-strikeforce-1.81.ebuild 1232
+SHA256 5079ff98d71a72c5f14a3cb2f374173d371b8b0f71174dbcf78fd55fa8d9d79c unreal-tournament-strikeforce-1.81.ebuild 1232
+MISC ChangeLog 801 RMD160 e820fb3771ca247fb03d8f2cc9fd63a7897c6237 SHA1 4e4bb8005314e25939736ad166089f948fd7816d SHA256 a58c4f1da848d41bf1fd8decac3227a79f4299fa3d91cb3b480e8a6134b90c36
+MD5 d17e5d15e2ad00632eae48033b24e637 ChangeLog 801
+RMD160 e820fb3771ca247fb03d8f2cc9fd63a7897c6237 ChangeLog 801
+SHA256 a58c4f1da848d41bf1fd8decac3227a79f4299fa3d91cb3b480e8a6134b90c36 ChangeLog 801
+MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be5251fa1dacef5c41b74761bb1c8c54fb633b9e SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
 MD5 b4175cea6bbee6364950f9db8d734b32 files/digest-unreal-tournament-strikeforce-1.81 219
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBiCaOHTu7gpaalycRAs6rAKDGk0uua3tnPGrli0VzfUlfTHcihQCgq948
-S4/TPKh4GxVAv2UiOkgerSw=
-=0xaD
------END PGP SIGNATURE-----
+RMD160 ee374fd21bf47650907f3f7cc1f885cd5b16e105 files/digest-unreal-tournament-strikeforce-1.81 219
+SHA256 420074e08768eb5b555466dbda94e4b952ad2256c6acd294a14d734571bf4b6d files/digest-unreal-tournament-strikeforce-1.81 219

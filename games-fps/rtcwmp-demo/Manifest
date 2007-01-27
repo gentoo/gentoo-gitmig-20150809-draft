@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX rtcwmp-demo-ded.rc 610 RMD160 115a32f126d2dd3d8275ca85d329710094f47e1f SHA1 06180c6378fe6ba33ae73850fed7d4d1f5506885 SHA256 9d1ccc384bf17e3699b4c29cbba2ca17dd7fafa97edf84974389434246beb38a
 MD5 46750bb4a954658c8a32bf92a5180936 files/rtcwmp-demo-ded.rc 610
 RMD160 115a32f126d2dd3d8275ca85d329710094f47e1f files/rtcwmp-demo-ded.rc 610
@@ -21,10 +18,3 @@ SHA256 c23e03ac8d15ec78ae34ae2d9faaf9c9581f39968fb4c7c833e54fc4af7a19f1 metadata
 MD5 184a873f700ba8c8d299255fd53dad87 files/digest-rtcwmp-demo-1.1 78
 RMD160 0cdbe1e35728eaaa63e859b20ce6b1eb6682c48f files/digest-rtcwmp-demo-1.1 78
 SHA256 08b1863dea049c2b27bfb4ecffc2a98b53b410653583bea55c2d320a68742106 files/digest-rtcwmp-demo-1.1 78
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-
-iD8DBQFFdbMUkT4lNIS36YERAmBeAJ0cDe2KSBRTpb+1+8rs/2mhAKLwEwCgr3iV
-QBjH/HIDrj5UiJOmE2mD1TE=
-=rwm5
------END PGP SIGNATURE-----

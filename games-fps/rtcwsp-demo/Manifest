@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST wolfspdemo-linux-1.1b.x86.run 117813349
 EBUILD rtcwsp-demo-1.1b.ebuild 1404 RMD160 86ebd32b196b5baa9ce7a4068df7decd7ed547e6 SHA1 b5102cf567124962d2de3b69eb1461806669ecf0 SHA256 35e31b89084b6824b1614c7a7efbcb6a2e311811830a248135c3ba527ceec9d1
 MD5 6621646da0bf262092b3072091789da4 rtcwsp-demo-1.1b.ebuild 1404
@@ -17,10 +14,3 @@ SHA256 4e386214c1ec4ec11ee9a32fff3ec6f9eb26910f575c60267865bf909a3710ee metadata
 MD5 9f57f88954584d71dbacc353ff41ae9d files/digest-rtcwsp-demo-1.1b 77
 RMD160 d10980ba48118843cd3a528a4df2e3c8ca9585d5 files/digest-rtcwsp-demo-1.1b 77
 SHA256 38b60e95a1013f2cbcee47e728041f8a2406ebe53496738a601b5f1f6f954c84 files/digest-rtcwsp-demo-1.1b 77
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-
-iD8DBQFFdbNskT4lNIS36YERAi61AJ0b4SQtfyGhayLNx3fVlwBLezJ3fwCdG5eH
-IYK221hvlXwkjeLESTEi+hs=
-=cHxG
------END PGP SIGNATURE-----

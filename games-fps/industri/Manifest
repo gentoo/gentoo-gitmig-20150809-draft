@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX industri.pretty 42 RMD160 45b349d4a44a8cdeb4fd2215af11be46b2ce33e3 SHA1 9d44b2cdfe7862993cba4581bad1b4d87b87960c SHA256 127a00f5ce37b1502a09d049d9ad32e468c398ba0a98fbf66142d1408c382ba3
 MD5 5c2c277e6fc318889a5bc2bf4f26c473 files/industri.pretty 42
 RMD160 45b349d4a44a8cdeb4fd2215af11be46b2ce33e3 files/industri.pretty 42
@@ -22,10 +19,3 @@ SHA256 2a18b6d76e1fe87370d6113bca5c558e0073866f5fa2ef316d76874b79aafb2a metadata
 MD5 c85d9088fac1afff8639c4e07123c098 files/digest-industri-1.01 138
 RMD160 37f48def6b58ff605e43d8a1c6b2d553374886c5 files/digest-industri-1.01 138
 SHA256 65992b4a329a128e4a9c150e3d8516e4e65c2e36d959fcf2266de63d5793e574 files/digest-industri-1.01 138
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.6 (GNU/Linux)
-
-iD8DBQFFpq9vkT4lNIS36YERAo5RAKDAqnm+3MiazJkPmj7g8GCF7c0sKwCgsl5w
-c1Dk+n6jWTNhTHmhNN8XF38=
-=hjuX
------END PGP SIGNATURE-----

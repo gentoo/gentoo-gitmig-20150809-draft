@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-DIST sof-1.06a-cdrom-x86.run 22928437
+DIST sof-1.06a-cdrom-x86.run 22928437 RMD160 a05f5e7e96fb62bebd2f9396eed6cc45a0187155 SHA1 d617f7dc5fad3bd114adb065836a02e691454763 SHA256 44546073f26a610ec554f3d197e157a6691c0891651689308e62feccc01a1c16
 EBUILD soldieroffortune-1.06a.ebuild 2190 RMD160 b710009b17ec0fccc326e2e24675177ddbc7199f SHA1 0390f9bcc799c176df48afab54b06fa5a40a6766 SHA256 5af4c7c61e1ccd6389264dcd2a3ae4e18deff5142bf45c8d2d3a2cf170f3f7f4
 MD5 59831b9439dc49a73ede1f0b2c50da9d soldieroffortune-1.06a.ebuild 2190
 RMD160 b710009b17ec0fccc326e2e24675177ddbc7199f soldieroffortune-1.06a.ebuild 2190
@@ -14,13 +11,6 @@ MISC metadata.xml 968 RMD160 8a462613ef25275be4aa93ab9519c2257efb1dea SHA1 4b9fa
 MD5 e055f0cedd35a8ca9240ec727e52acf2 metadata.xml 968
 RMD160 8a462613ef25275be4aa93ab9519c2257efb1dea metadata.xml 968
 SHA256 568ea1d121306b19903c4f5e7dc1407ac36a0cf932cc13245f7f908e29e035e0 metadata.xml 968
-MD5 428261b94ec1355a846a1797056c894c files/digest-soldieroffortune-1.06a 70
-RMD160 74306ff7c19f2ad60e403e1279b5be1a5dfd016d files/digest-soldieroffortune-1.06a 70
-SHA256 15bc1ccb18c5b220c465772f778a3449784eeac57b95e0a39ff9fafb57d45cc7 files/digest-soldieroffortune-1.06a 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.6 (GNU/Linux)
-
-iD8DBQFFpBRzkT4lNIS36YERAjKLAJ0V37vAv6zqJ6JXcVrWDge3FliemACgnPTQ
-9W7WejvYgWzRjHJ4pGrR4wg=
-=XU+o
------END PGP SIGNATURE-----
+MD5 32564913ff9c36d4e1da1400b1261205 files/digest-soldieroffortune-1.06a 256
+RMD160 d9c315aba6d269fddcc4e081c3c5a3e173daa792 files/digest-soldieroffortune-1.06a 256
+SHA256 d8dc049d21c3a1125157ebe91d7fe7b77282fdcc59788dbc9b297fe7c02d019f files/digest-soldieroffortune-1.06a 256

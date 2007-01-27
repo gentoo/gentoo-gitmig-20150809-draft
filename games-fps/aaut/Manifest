@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX aaut 130 RMD160 ba579bfb42b2c3bdae217b7ecd28cced92da8bac SHA1 dc940c6f0925c341ff8f3a0249770ae2e388c1bf SHA256 a9b10b01c808a2cd17d87a2202f4ac2a9ba4efc56aca6c6fb158c4acbd27d5d4
 MD5 8b1d62997264b21872364e5eabd476c7 files/aaut 130
 RMD160 ba579bfb42b2c3bdae217b7ecd28cced92da8bac files/aaut 130
@@ -17,13 +14,6 @@ MISC metadata.xml 382 RMD160 5914eb3ae45c044abda7ddd38706a78380929d85 SHA1 6b383
 MD5 8f79f8e7a19927b5c8fc36b04ec5b9b8 metadata.xml 382
 RMD160 5914eb3ae45c044abda7ddd38706a78380929d85 metadata.xml 382
 SHA256 f9e6dc3ef0dee14760c41298386db643092bcf7ae3b2c76512fd0feb1f5a04d4 metadata.xml 382
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-aaut-1 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-aaut-1 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-aaut-1 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-
-iD8DBQFFRCTPamhnQswr0vIRArQeAKCIzmzIYvpTK0zc7gB/m6i3+ShFdQCfaX6M
-4641r26Z09Ngzyxv99PzBNE=
-=adzs
------END PGP SIGNATURE-----
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-aaut-1 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-aaut-1 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-aaut-1 1
