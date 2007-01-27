@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.2.0.2.ebuild,v 1.5 2006/06/06 20:27:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.2.0.2.ebuild,v 1.6 2007/01/27 14:16:57 dertobi123 Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ MY_PSDK_ppc64="${MY_P_ppc64/basic/sdk}"
 
 S=${WORKDIR}
 DESCRIPTION="Oracle 10g client installation for Linux with SDK"
-HOMEPAGE="http://otn.oracle.com/software/tech/oci/instantclient/htdocs/linuxsoft.html"
+HOMEPAGE="http://www.oracle.com/technology/tech/oci/instantclient/index.html"
 SRC_URI="x86? ( ${MY_P_x86}.zip ${MY_PSDK_x86}.zip )
 		 amd64? ( ${MY_P_amd64}.zip ${MY_PSDK_amd64}.zip )
 		 ppc? ( ${MY_P_ppc}.zip ${MY_PSDK_ppc}.zip )
@@ -48,7 +48,8 @@ pkg_nofetch() {
 	my_arch
 	eerror "Please go to:"
 	eerror "  ${HOMEPAGE}"
-	eerror "and download the Basic client package with SDK, which are:"
+	eerror "select your platform and download the"
+	eerror "Basic client package with SDK, which are:"
 	eerror "  ${MY_P}.zip"
 	eerror "  ${MY_PSDK}.zip"
 	eerror "Then after downloading put them in:"

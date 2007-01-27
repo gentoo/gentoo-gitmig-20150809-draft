@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.1.0.5.ebuild,v 1.2 2006/12/26 18:48:39 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.1.0.5.ebuild,v 1.3 2007/01/27 14:16:57 dertobi123 Exp $
 
 inherit eutils
 
@@ -24,7 +24,8 @@ DEPEND="app-arch/unzip"
 pkg_nofetch() {
 	eerror "Please go to:"
 	eerror "  ${HOMEPAGE}"
-	eerror "and download the Basic client package with SDK, which are:"
+	eerror "select your platform and download the"
+	eerror "Basic client package with SDK, which are:"
 	eerror "  ${MY_P}.zip"
 	eerror "  ${MY_PSDK}.zip"
 	eerror "Then after downloading put them in:"

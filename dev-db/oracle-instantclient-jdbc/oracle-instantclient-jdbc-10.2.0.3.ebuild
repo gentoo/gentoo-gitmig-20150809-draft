@@ -1,20 +1,21 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-jdbc/oracle-instantclient-jdbc-10.2.0.3.ebuild,v 1.1 2006/12/26 17:59:03 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-jdbc/oracle-instantclient-jdbc-10.2.0.3.ebuild,v 1.2 2007/01/27 14:15:47 dertobi123 Exp $
 
 inherit eutils
 
 MY_P_x86="${PN/oracle-/}-linux32-${PV}-20061115"
-
+MY_P_amd64="${PN/oracle-/}-linux-x86-64-${PV}-20070103"
 
 S=${WORKDIR}
 DESCRIPTION="Oracle 10g client installation for Linux: JDBC supplement"
-HOMEPAGE="http://otn.oracle.com/software/tech/oci/instantclient/htdocs/linuxsoft.html"
-SRC_URI="x86? ( ${MY_P_x86}.zip )"
+HOMEPAGE="http://www.oracle.com/technology/tech/oci/instantclient/index.html"
+SRC_URI="amd64? ( ${MY_P_amd64}.zip )
+		 x86? ( ${MY_P_x86}.zip )"
 
 LICENSE="OTN"
 SLOT="0"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* ~amd64 ~x86"
 RESTRICT="fetch"
 IUSE=""
 

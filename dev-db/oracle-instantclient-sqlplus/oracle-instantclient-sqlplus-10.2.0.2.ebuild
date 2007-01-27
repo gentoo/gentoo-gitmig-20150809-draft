@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-sqlplus/oracle-instantclient-sqlplus-10.2.0.2.ebuild,v 1.3 2006/06/06 20:37:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-sqlplus/oracle-instantclient-sqlplus-10.2.0.2.ebuild,v 1.4 2007/01/27 14:15:07 dertobi123 Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ MY_P_ppc64="${PN/oracle-/}-linuxppc-${PV}-20060327"
 
 S=${WORKDIR}
 DESCRIPTION="Oracle 10g client installation for Linux: SQL*Plus"
-HOMEPAGE="http://otn.oracle.com/software/tech/oci/instantclient/htdocs/linuxsoft.html"
+HOMEPAGE="http://www.oracle.com/technology/tech/oci/instantclient/index.html"
 SRC_URI="x86? ( ${MY_P_x86}.zip )
 		 amd64? ( ${MY_P_amd64}.zip )
 		 ppc? ( ${MY_P_ppc}.zip )
@@ -36,7 +36,8 @@ pkg_setup() {
 pkg_nofetch() {
 	eerror "Please go to:"
 	eerror "  ${HOMEPAGE}"
-	eerror "and download the SQL*Plus package.  Put it in:"
+	eerror "select your platform and download the"
+	eerror "SQL*Plus package.  Put it in:"
 	eerror "  ${DISTDIR}"
 	eerror "after downloading it."
 }
