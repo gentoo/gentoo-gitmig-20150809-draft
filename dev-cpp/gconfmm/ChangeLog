@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/gconfmm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.45 2007/01/04 14:30:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.46 2007/01/27 15:18:38 dertobi123 Exp $
+
+  27 Jan 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  gconfmm-2.12.0.ebuild:
+  Added AT_M4DIR="scripts" as per bug #159987, patch by Jeremy Wilkins
 
   04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> gconfmm-2.12.0.ebuild:
   Fix broken autotools handling.
