@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/longrun
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/ChangeLog,v 1.15 2007/01/24 14:34:58 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/ChangeLog,v 1.16 2007/01/27 21:12:44 kugelfang Exp $
+
+  27 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -longrun-0.9-r2.ebuild:
+  QA: Removed unused versions.
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org> longrun-0.9-r2.ebuild,
   longrun-0.9-r3.ebuild:
