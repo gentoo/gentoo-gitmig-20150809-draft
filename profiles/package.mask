@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6684 2007/01/27 15:15:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6685 2007/01/27 17:44:58 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -875,10 +875,6 @@ mail-client/mahogany
 # Diego Pettenò <flameeyes@gentoo.org> (5 Jul 2006)
 # Beta version
 >=app-cdr/k9copy-1.1.0_beta
-
-# Diego Pettenò <flameeyes@gentoo.org> (30 Jun 2006)
-# beta versions.
->=dev-util/kdevelop-3.3.90
 
 # Stefan Schweizer <genstef@gentoo.org> (29 Jun 2006)
 # 1.0.* is the stable version, we do not want to break any users
