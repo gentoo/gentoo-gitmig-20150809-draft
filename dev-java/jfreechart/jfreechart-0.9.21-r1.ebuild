@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/jfreechart-0.9.21-r1.ebuild,v 1.1 2006/09/11 12:59:25 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/jfreechart-0.9.21-r1.ebuild,v 1.2 2007/01/27 23:03:57 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -20,28 +20,21 @@ DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core"
 
 src_unpack() {
-
 	unpack ${A}
-	cd ${S}
-	rm -f lib/* *.jar
-
+	cd "${S}"
+	rm -v lib/* *.jar
 }
 
 src_compile() {
-
 	local antflags="compile -Djcommon.jar=$(java-pkg_getjars jcommon) \
 		-Dservlet.jar=$(java-pkg_getjar servletapi-2.3 servlet.jar) \
 		-Dgnujaxp.jar=$(java-pkg_getjars gnu-jaxp)"
-	use doc && antflags="${antflags} javadoc"
-	eant -f ant/build.xml ${antflags} || die "compile failed"
-
+	eant -f ant/build.xml ${antflags} $(use_doc) || die "compile failed"
 }
 
 src_install() {
-
 	java-pkg_newjar ${P}.jar ${PN}.jar
-	dodoc README.txt CHANGELOG.txt
-	use doc && java-pkg_dohtml -r javadoc/
+	dodoc README.txt CHANGELOG.txt || die
+	use doc && java-pkg_dojavadoc javadoc/
 	use source && java-pkg_dosrc source/*
-
 }
