@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/graveman-0.3.12_p5.ebuild,v 1.9 2006/10/13 12:34:28 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/graveman-0.3.12_p5.ebuild,v 1.10 2007/01/27 15:25:14 dertobi123 Exp $
 
 inherit gnome2 eutils
 
@@ -46,6 +46,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/joliet-long.patch
 	epatch ${FILESDIR}/rename.patch
+	epatch ${FILESDIR}/fix-menu.patch
 }
 DOCS="AUTHORS ChangeLog INSTALL NEWS README* THANKS"
 USE_DESTDIR="1"
