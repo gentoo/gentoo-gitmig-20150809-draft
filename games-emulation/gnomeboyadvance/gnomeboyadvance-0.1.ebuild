@@ -1,9 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomeboyadvance/gnomeboyadvance-0.1.ebuild,v 1.9 2006/12/06 17:16:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomeboyadvance/gnomeboyadvance-0.1.ebuild,v 1.10 2007/01/27 00:39:33 mr_bones_ Exp $
 
 inherit games
-
 
 DESCRIPTION="A GNOME Python frontend to VisualBoyAdvance"
 HOMEPAGE="http://developer.berlios.de/projects/gnomeboyadvance/"
