@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdepim-meta
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.70 2007/01/18 00:32:28 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.71 2007/01/27 15:07:56 flameeyes Exp $
+
+  27 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  kdepim-meta-3.5.6.ebuild:
+  Allow using kpilot 3.5.5 as the new version requires a new library we don't
+  have n portage. See bug #163853.
 
   18 Jan 2007; Carsten Lohrke <carlo@gentoo.org> kdepim-meta-3.5.6.ebuild:
   Update minimal needed versions.
