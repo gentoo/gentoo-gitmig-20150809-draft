@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/dcopperl
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopperl/ChangeLog,v 1.36 2006/11/14 01:56:22 kugelfang Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopperl/ChangeLog,v 1.37 2007/01/27 15:05:24 flameeyes Exp $
+
+*dcopperl-3.5.6 (27 Jan 2007)
+
+  27 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> +dcopperl-3.5.6.ebuild:
+  Version bump as this was still stuck at 3.5.0; closes bug #164054.
 
   13 Nov 2006; Danny van Dyk <kugelfang@gentoo.org> ChangeLog:
   Marked stable on amd64 wrt bug #147570.
