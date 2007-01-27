@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta6.ebuild,v 1.1 2007/01/21 23:32:32 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta6.ebuild,v 1.2 2007/01/27 00:47:05 tester Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib mono autotools perl-app gnome2
 
@@ -14,8 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="avahi bonjour cjk crypt dbus debug doc eds gadu gnutls gstreamer meanwhile nls perl silc startup-notification tcl tk xscreensaver custom-cflags spell ssl qq msn gadu"
-IUSE="${IUSE} gtk sasl console groupwise"
-# removed  IUSE mono because it doesnt build
+IUSE="${IUSE} gtk sasl console groupwise mono"
 
 RDEPEND="
 	bonjour? ( !avahi? ( net-misc/howl )
@@ -50,8 +49,8 @@ RDEPEND="
 	gstreamer? ( >=media-libs/gstreamer-0.10 )
 	sasl? ( >=dev-libs/cyrus-sasl-2 )
 	doc? ( app-doc/doxygen )
-	dev-libs/libxml2"
-#	mono? ( dev-lang/mono )
+	dev-libs/libxml2
+	mono? ( dev-lang/mono )"
 
 DEPEND="$RDEPEND
 	dev-util/pkgconfig
@@ -150,6 +149,9 @@ pkg_setup() {
 
 src_unpack() {
 	gnome2_src_unpack
+
+	cd ${S}
+	epatch ${FILESDIR}/${P}-mono-api-change-update.patch
 }
 
 src_compile() {
@@ -235,10 +237,9 @@ src_compile() {
 		$(use_enable gstreamer) \
 		$(use_enable sasl cyrus-sasl ) \
 		$(use_enable doc doxygen) \
-		--disable-mono \
+		$(use_enable mono) \
 		"--with-dynamic-prpls=${DYNAMIC_PRPLS}" \
 		${myconf} || die "Configuration failed"
-#		$(use_enable mono) \
 
 	# This is a tempory fix until Makefile is fixed!!
 	if use mono; then
