@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.5 2007/01/27 19:47:37 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.6 2007/01/27 20:07:40 compnerd Exp $
+
+  27 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  tracker-0.5.4.ebuild:
+  add minor hack for misinstalled file that I didnt catch
 
   27 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   -files/tracker-0.5.3-delete-services-missing.patch,

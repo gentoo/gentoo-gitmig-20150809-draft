@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.5.4.ebuild,v 1.1 2007/01/27 19:42:04 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.5.4.ebuild,v 1.2 2007/01/27 20:07:40 compnerd Exp $
 
-inherit eutils flag-o-matic linux-info
+inherit eutils flag-o-matic linux-info multilib
 
 DESCRIPTION="A tagging metadata database, search tool and indexer"
 HOMEPAGE="http://www.gnome.org/~jamiemcc/tracker/"
@@ -106,6 +106,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf="--enable-external-sqlite"
+	myconf="${myconf} --with-deskbar-applet-handler-dir=${ROOT}usr/$(get_libdir)/deskbar-applet/handlers/"
 
 	if use gstreamer ; then
 		myconf="${myconf} --enable-video-extractor=gstreamer"
