@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.8_alpha-r1.ebuild,v 1.1 2007/01/26 21:07:52 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.8_alpha-r1.ebuild,v 1.2 2007/01/27 05:16:11 wltjr Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -25,11 +25,7 @@ RDEPEND="|| ( >=virtual/jre-1.5 >=virtual/jre-1.6 )
 
 DEPEND="|| ( >=virtual/jdk-1.5 >=virtual/jdk-1.6 )
 	${RDEPEND}
-	test? (
-		dev-java/junit
-		dev-java/ant
-	)
-	!test? ( dev-java/ant-core )"
+	test? ( dev-java/junit )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -66,6 +62,7 @@ src_compile(){
 #	ANT_OPTS=-XX:MaxPermSize=128m
 
 	local antflags="build-jasper-jdt build-only -Dbase.path=${T}"
+	antflags="${antflags} -Dcompile.debug=false"
 	antflags="${antflags} -Dant.jar=$(java-pkg_getjar ant-core ant.jar)"
 	antflags="${antflags} -Dcommons-daemon.jar=$(java-pkg_getjar commons-daemon commons-daemon.jar)"
 	antflags="${antflags} -Djdt.jar=$(java-pkg_getjar eclipse-ecj-3.2 ecj.jar)"

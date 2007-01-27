@@ -1,6 +1,19 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.108 2007/01/26 21:07:52 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.109 2007/01/27 05:16:11 wltjr Exp $
+
+*tomcat-5.5.20-r9 (27 Jan 2007)
+
+  27 Jan 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  +files/5.5.20/jsr154_examples_build-xml.patch,
+  +files/5.5.20/tomcat_build-xml.patch,
+  +files/5.5.20/jsr152_examples_build-xml.patch, +tomcat-5.5.20-r9.ebuild,
+  tomcat-6.0.7_beta-r4.ebuild, tomcat-6.0.8_alpha-r1.ebuild:
+  Finally stopped building jsp/servlet-api.jars despite not using them after
+  being built. Updated compilation of examples to use system
+  jsp/servlet-api.jars. Switched from soon to be deprecated servletapi to
+  tomcat-servlet-api. Dropped dep on ant in 6.0.x in order to use new split
+  ant.
 
 *tomcat-6.0.8_alpha-r1 (26 Jan 2007)
 *tomcat-6.0.7_beta-r4 (26 Jan 2007)

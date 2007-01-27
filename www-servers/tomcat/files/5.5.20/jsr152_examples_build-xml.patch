@@ -1,0 +1,10 @@
+--- apache-tomcat-5.5.20-src/servletapi/jsr152/build.xml	2007-01-27 00:02:27.000000000 -0500
++++ build.xml	2007-01-27 00:02:44.000000000 -0500
+@@ -20,6 +20,7 @@
+ 
+   <path id="examples.classpath">
+     <pathelement location="${jsp-api.build}/classes"/>
++    <pathelement location="${jsp-api.jar}"/>
+     <pathelement location="${servlet-api.jar}"/>
+     <pathelement location="${mail.jar}"/>
+   </path>
