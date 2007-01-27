@@ -1,17 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/units-1.86.ebuild,v 1.2 2007/01/18 04:38:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/units-1.86.ebuild,v 1.3 2007/01/27 19:40:02 tester Exp $
 
 inherit eutils
 
 DESCRIPTION="program for units conversion and units calculation"
 SRC_URI="http://ftp.gnu.org/gnu/${PN}/${P}.tar.gz"
-HOMEPAGE="http://freshmeat.net/projects/units/"
+HOMEPAGE="http://www.gnu.org/software/units/units.html"
 
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="~alpha ~amd64 hppa ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 hppa ~ppc ~sparc ~x86"
 
 DEPEND=">=sys-libs/readline-4.1-r2
 	>=sys-libs/ncurses-5.2-r3"
