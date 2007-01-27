@@ -1,6 +1,13 @@
 # ChangeLog for app-doc/gimp-help
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.25 2007/01/22 14:22:18 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.26 2007/01/27 08:41:31 pva Exp $
+
+*gimp-help-0.11-r2 (27 Jan 2007)
+
+  27 Jan 2007; <pva@gentoo.org>
+  files/gimp-help-2.0.11-image-honour-ALL_LINGUAS.patch,
+  -gimp-help-0.11-r1.ebuild, +gimp-help-0.11-r2.ebuild:
+  Fixed issues on Mac OS. Always install en (fallback) images.
 
   22 Jan 2007; <pva@gentoo.org>
   files/gimp-help-2.0.11-image-honour-ALL_LINGUAS.patch:
