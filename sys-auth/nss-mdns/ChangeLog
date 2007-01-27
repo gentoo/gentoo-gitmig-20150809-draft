@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/nss-mdns
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/ChangeLog,v 1.16 2007/01/11 05:48:34 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/ChangeLog,v 1.17 2007/01/27 03:41:22 jer Exp $
+
+  27 Jan 2007; Jeroen Roovers <jer@gentoo.org> nss-mdns-0.9-r1.ebuild:
+  Marked ~hppa (bug #160781).
 
 *nss-mdns-0.9-r1 (11 Jan 2007)
 
