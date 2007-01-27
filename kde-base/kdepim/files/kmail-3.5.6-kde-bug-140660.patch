@@ -1,0 +1,19 @@
+Index: kmfolder.cpp
+===================================================================
+--- kdepim-3.5.6/kmail/kmfolder.cpp	(revision 627528)
++++ kdepim-3.5.6/kmail/kmfolder.cpp	(working copy)
+@@ -426,12 +426,12 @@ int KMFolder::moveMsg(QPtrList<KMMessage
+ 
+ int KMFolder::find( const KMMsgBase* msg ) const
+ {
+-  return mStorage->find( msg );
++  return mStorage ? mStorage->find( msg ) : 0;
+ }
+ 
+ int KMFolder::find( const KMMessage* msg ) const
+ {
+-  return mStorage->find( msg );
++  return mStorage ? mStorage->find( msg ) : 0;
+ }
+ 
+ int KMFolder::count( bool cache ) const
