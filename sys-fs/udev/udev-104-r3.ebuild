@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-104-r3.ebuild,v 1.2 2007/01/26 13:59:20 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-104-r3.ebuild,v 1.3 2007/01/27 11:26:59 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -241,44 +241,6 @@ pkg_postinst() {
 
 	# people want reminders, I'll give them reminders.  Odds are they will
 	# just ignore them anyway...
-	if has_version '<sys-fs/udev-046' ; then
-		ewarn "Note: If you rely on the output of udevinfo for anything, please"
-		ewarn "      either run 'udevstart' now, or reboot, in order to get a"
-		ewarn "      up-to-date udev database."
-		ewarn
-	fi
-	if has_version '<sys-fs/udev-050' ; then
-		ewarn "Note: If you had written some custom permissions rules, please"
-		ewarn "      realize that the permission rules are now part of the main"
-		ewarn "      udev rules files and are not stand-alone anymore.  This means"
-		ewarn "      you need to rewrite them."
-		ewarn
-	fi
-	if has_version '<sys-fs/udev-059' ; then
-		ewarn "Note: If you are upgrading from a version of udev prior to 059"
-		ewarn "      and you have written custom rules, and rely on the etc/dev.d/"
-		ewarn "      functionality, or the etc/hotplug.d functionality, or just"
-		ewarn "      want to write some very cool and power udev rules, please "
-		ewarn "      read the RELEASE-NOTES file for details on what has changed"
-		ewarn "      with this feature, and how to change your rules to work properly."
-		ewarn
-	elif has_version '<sys-fs/udev-057' ; then
-		ewarn "Note: If you have written custom rules, and rely on the etc/dev.d/"
-		ewarn "      functionality, please read the RELEASE-NOTES file for details"
-		ewarn "      on what has changed with this feature, and how to change your"
-		ewarn "      rules to work properly."
-		ewarn
-	fi
-	if has_version '<sys-fs/udev-063' ; then
-		ewarn "Note: If you use the devfs-style names for your block devices"
-		ewarn "      or use devfs-style names in /etc/inittab or /etc/securetty or"
-		ewarn "      your GRUB or LILO kernel boot command line, you need to"
-		ewarn "      change them back to LSB compliant names, as the devfs names are"
-		ewarn "      now gone.  If you wish to use some persistent names for your"
-		ewarn "      block devices, look at the symlinks in /dev/disk/ for the names"
-		ewarn "      you can use."
-		ewarn
-	fi
 
 	if [[ ${coldplug_stale} == "1" ]] ; then
 		ewarn "A stale coldplug init script found. You should run:"
