@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6678 2007/01/27 02:11:15 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6679 2007/01/27 05:24:59 wltjr Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -473,12 +473,6 @@ x11-themes/bmpx-themes
 # Michael Cummings <mcummings@gentoo.org>
 # Masked for removal
 dev-perl/Msql-Mysql-modules
-
-# William L. Thomson Jr. <wltjr@gentoo.org> (19 Nov 2006)
-# Alpha sources from upstream. Tested minimally, but not
-# with any webapps beyond the shipped ones. jni USE flag
-# does not work yet, help there is appreciated
->=www-servers/tomcat-6.0.2
 
 # George Shapovalov <george@gentoo.org> (19 Nov 2006)
 # dead upstream, does not compile anymore (and seems not 64bt clean)
