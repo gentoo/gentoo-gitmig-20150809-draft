@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/guifications/guifications-2.13_beta5.ebuild,v 1.2 2007/01/27 02:49:49 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/guifications/guifications-2.13_beta6.ebuild,v 1.1 2007/01/27 02:49:49 tester Exp $
 
 MY_PN=gaim-${PN}
 MY_PV=${PV/_beta/beta}
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
 IUSE="debug nls"
 
-DEPEND=">=net-im/gaim-2.0.0_beta5"
+DEPEND="=net-im/gaim-2.0.0_beta6"
 
 src_compile() {
 	econf \
