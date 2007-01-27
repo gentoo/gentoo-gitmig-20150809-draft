@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/lsdldoom/lsdldoom-1.4.4.4.ebuild,v 1.13 2007/01/10 00:15:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/lsdldoom/lsdldoom-1.4.4.4.ebuild,v 1.14 2007/01/27 00:50:44 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -29,7 +29,7 @@ src_unpack() {
 
 src_compile() {
 	# The SDL_mixer implementation is VERY broken ...
-	# it relies on internal function calls rather than 
+	# it relies on internal function calls rather than
 	# the exported API ... bad programmer !
 	# i386-asm -> build failure
 	# cpu-opt -> just adds -mcpu crap to CFLAGS

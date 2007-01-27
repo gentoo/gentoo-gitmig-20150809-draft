@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomlegacy/doomlegacy-1.42.ebuild,v 1.5 2006/12/04 23:03:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomlegacy/doomlegacy-1.42.ebuild,v 1.6 2007/01/27 00:50:44 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -27,7 +27,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	x86? ( >=dev-lang/nasm-0.98 )
 	x11-proto/xextproto
-    x11-proto/xf86vidmodeproto
+	x11-proto/xf86vidmodeproto
 	dga? ( x11-proto/xf86dgaproto )"
 
 S=${WORKDIR}/doomlegacy_${PV/.}_src
