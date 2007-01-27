@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gphoto2
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/ChangeLog,v 1.50 2007/01/11 21:48:10 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/ChangeLog,v 1.51 2007/01/27 16:39:31 alonbl Exp $
+
+*gphoto2-2.3.1 (27 Jan 2007)
+
+  27 Jan 2007; Alon Bar-Lev <alonbl@gentoo.org> +gphoto2-2.3.1.ebuild:
+  Version bump, bug#159609, maintainer is not responsive
 
   11 Jan 2007; Daniel Gryniewicz <dang@gentoo.org> gphoto2-2.2.0.ebuild:
   Marked stable on amd64 for bug #158684
