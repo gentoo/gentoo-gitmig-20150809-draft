@@ -1,6 +1,15 @@
 # ChangeLog for app-editors/hteditor
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.24 2006/10/29 08:50:30 dragonheart Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.25 2007/01/27 10:32:57 dragonheart Exp $
+
+*hteditor-2.0_beta2 (27 Jan 2007)
+
+  27 Jan 2007; Daniel Black <dragonheart@gentoo.org>
+  +files/hteditor-2.0_beta2-optionallzo.patch,
+  +files/hteditor-2.0_beta2-regexneedstdlib.patch,
+  +hteditor-2.0_beta2.ebuild:
+  version bump. adds x86_64 arm and powerpc_64 disassembly. Also compiles on
+  gcc-4. bug #155313 thanks to katerina
 
 *hteditor-0.9.4 (29 Oct 2006)
 
