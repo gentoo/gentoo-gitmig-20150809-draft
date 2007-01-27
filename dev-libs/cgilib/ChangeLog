@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cgilib
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cgilib/ChangeLog,v 1.22 2006/02/08 22:21:09 tove Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cgilib/ChangeLog,v 1.23 2007/01/27 11:11:49 eroyf Exp $
+
+  27 Jan 2007; Alexander H. Færøy <eroyf@gentoo.org> cgilib-0.5.ebuild:
+  Stable on MIPS.
 
   07 Feb 2006; Marcelo Goes <vanquirius@gentoo.org> -cgilib-0.5-r1.ebuild:
   Removing 0.5-r1: test is broken. Nothing depends on it.
