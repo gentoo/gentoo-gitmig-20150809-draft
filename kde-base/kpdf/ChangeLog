@@ -1,6 +1,20 @@
 # ChangeLog for kde-base/kpdf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.121 2007/01/17 12:44:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.122 2007/01/27 17:19:33 flameeyes Exp $
+
+*kpdf-3.5.6-r1 (27 Jan 2007)
+*kpdf-3.5.5-r1 (27 Jan 2007)
+
+  27 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/post-3.4.3-kdegraphics-CAN-2005-3193.diff,
+  -files/post-3.4.3-kdegraphics-CVE-2006-0301.diff,
+  +files/post-3.5.5-kdegraphics-CVE-2007-0104.diff, +kpdf-3.5.5-r1.ebuild,
+  +kpdf-3.5.6-r1.ebuild:
+  As the current situation with Gentoo KDE team and KPDF developers changed
+  since we originally decided to use KUbuntu's patch for Poppler, add two
+  testing revisions of kpdf that are vanilla. For 3.5.5 version, add the patch
+  to fix last week's security problem too. Remove old patches in the mean
+  time.
 
   17 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   files/digest-kpdf-3.5.6, Manifest:
