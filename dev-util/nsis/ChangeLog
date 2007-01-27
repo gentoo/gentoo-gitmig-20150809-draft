@@ -1,10 +1,11 @@
 # ChangeLog for dev-util/nsis
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/ChangeLog,v 1.5 2007/01/27 12:50:36 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/ChangeLog,v 1.6 2007/01/27 12:54:47 mrness Exp $
 
   27 Jan 2007; Alin Năstac <mrness@gentoo.org>
   +files/nsis-2.23-32bit.patch, nsis-2.23.ebuild:
-  Add ~amd64 keyword, thanks to Roie Marianer <roie@int2001.co.il> (#163567).
+  Add ~amd64 keyword, thanks to Roie Marianer <roie at int2001 dot co dot il>
+  (#163567).
 
 *nsis-2.23 (15 Jan 2007)
 
