@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.3.92.ebuild,v 1.2 2007/01/05 16:52:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.4.0.ebuild,v 1.1 2007/01/27 17:43:55 flameeyes Exp $
 
 inherit kde eutils db-use
 
 DESCRIPTION="Integrated Development Environment for Unix, supporting KDE/Qt, C/C++ and many other languages."
 HOMEPAGE="http://www.kdevelop.org"
-SRC_URI="mirror://kde/unstable/apps/KDE3.x/ide/${P}.tar.bz2"
+SRC_URI="mirror://kde/stable/${P}/src/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ada clearcase cvs fortran haskell java pascal perforce perl php python ruby sql subversion graphviz"
 
 DEPEND="sys-devel/gdb
-	=sys-libs/db-4*
+	>=sys-libs/db-4.1
 	cvs? ( || ( kde-base/cervisia kde-base/kdesdk ) )
 	graphviz? ( media-gfx/graphviz )"
 
@@ -56,6 +56,19 @@ src_compile() {
 		   --with-db-lib=$(db_libname)"
 
 	kde_src_compile
+}
+
+src_install() {
+	kde_src_install
+
+	# Default to exuberant-ctags so that we don't end up trying to run emacs's
+	# ctags.
+	cat - >> "${D}/usr/share/config/kdeveloprc" <<EOF
+
+[CTAGS]
+ctags binary=/usr/bin/exuberant-ctags
+
+EOF
 }
 
 pkg_postinst() {
