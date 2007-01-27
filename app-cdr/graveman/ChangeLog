@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/graveman
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.40 2007/01/27 15:25:14 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.41 2007/01/27 17:27:28 dertobi123 Exp $
+
+*graveman-0.3.12_p5-r1 (27 Jan 2007)
+
+  27 Jan 2007; Tobias Scherbaum <dertobi123@gentoo.org> +files/sox.patch,
+  +graveman-0.3.12_p5-r1.ebuild:
+  Add patch to make graveman work with >=sox-12.18, bug #156595
 
   27 Jan 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   +files/fix-menu.patch, graveman-0.3.12_p5.ebuild:
