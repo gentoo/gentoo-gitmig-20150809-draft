@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/freepops-0.0.99.ebuild,v 1.1 2006/07/11 12:03:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/freepops-0.0.99.ebuild,v 1.2 2007/01/27 04:36:54 dragonheart Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE="gnutls"
 RDEPEND=">=net-misc/curl-7.10.8
 		gnutls? ( net-libs/gnutls )
 		!gnutls? ( dev-libs/openssl )
-		dev-lang/lua"
+		<dev-lang/lua-5.1"
 
 src_unpack() {
 	unpack ${A}

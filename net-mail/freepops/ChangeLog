@@ -1,6 +1,15 @@
 # ChangeLog for net-mail/freepops
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/ChangeLog,v 1.26 2006/07/11 12:03:58 dragonheart Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/ChangeLog,v 1.27 2007/01/27 04:36:54 dragonheart Exp $
+
+*freepops-0.0.99-r1 (27 Jan 2007)
+
+  27 Jan 2007; Daniel Black <dragonheart@gentoo.org>
+  +files/freepops-0.0.99-system-lua.patch, -freepops-0.0.98-r1.ebuild,
+  freepops-0.0.99.ebuild, +freepops-0.0.99-r1.ebuild:
+  clean up as per bug #163912 - added dep on <lua-5.1 due to incompatibilies
+  thanks Oliver. added upstream patches as per bug #152199 thanks Luca
+  Scarsini
 
 *freepops-0.0.99 (11 Jul 2006)
 
