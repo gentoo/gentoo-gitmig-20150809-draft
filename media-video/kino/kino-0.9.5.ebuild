@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.9.5.ebuild,v 1.1 2007/01/22 21:06:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.9.5.ebuild,v 1.2 2007/01/27 17:27:55 calchan Exp $
 
 DESCRIPTION="Kino is a non-linear DV editor for GNU/Linux"
 HOMEPAGE="http://www.kinodv.org/"
@@ -28,7 +28,8 @@ DEPEND=">=x11-libs/gtk+-2.6.0
 RDEPEND="${DEPEND}
 	media-video/mjpegtools
 	media-sound/rawrec
-	dvdr? ( media-video/dvdauthor )
+	dvdr? ( media-video/dvdauthor
+		app-cdr/dvd+rw-tools )
 	sox? ( media-sound/sox )
 	vorbis? ( media-sound/vorbis-tools )"
 
