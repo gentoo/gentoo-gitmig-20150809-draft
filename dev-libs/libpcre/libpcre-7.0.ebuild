@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-7.0.ebuild,v 1.1 2007/01/27 11:53:28 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-7.0.ebuild,v 1.2 2007/01/27 20:03:36 masterdriverz Exp $
 
 inherit libtool eutils
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/${MY_P}.tar.bz2"
 LICENSE="BSD"
 SLOT="3"
 KEYWORDS="~x86"
-IUSE="doc unicode static"
+IUSE="doc unicode"
 
 DEPEND="dev-util/pkgconfig"
 RDEPEND=""
@@ -37,7 +37,9 @@ src_compile() {
 		myconf="--enable-utf8 --enable-unicode-properties"
 	fi
 
-	econf ${myconf} $(use_enable static) || die "econf failed"
+	# Enable building of static libs too - grep and others
+	# depend on them being built: bug 164099
+	econf ${myconf} --enable-static || die "econf failed"
 	emake all libpcrecpp.la || die "emake failed"
 }
 
