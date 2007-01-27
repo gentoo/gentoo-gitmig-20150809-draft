@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.ebuild,v 1.5 2007/01/26 02:03:10 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.ebuild,v 1.6 2007/01/27 02:41:09 jer Exp $
 
 inherit fixheadtails flag-o-matic perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="as-is BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ppc64 ~s390 ~sh sparc x86"
 IUSE="diskio doc elf ipv6 lm_sensors mfd-rewrites minimal perl rpm selinux smux
 ssl tcpd X sendmail"
 
