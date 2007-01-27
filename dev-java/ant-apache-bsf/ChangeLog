@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-apache-bsf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-bsf/ChangeLog,v 1.4 2007/01/26 13:41:41 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-bsf/ChangeLog,v 1.5 2007/01/27 02:01:22 caster Exp $
+
+  27 Jan 2007; Vlastimil Babka <caster@gentoo.org>
+  ant-apache-bsf-1.7.0.ebuild:
+  Add ~ia64 keyword, bug #159820.
 
   26 Jan 2007; Krzysiek Pawlik <nelchael@gentoo.org>
   ant-apache-bsf-1.7.0.ebuild:
