@@ -1,9 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-9999.ebuild,v 1.6 2007/01/25 18:45:28 flameeyes Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-9999.ebuild,v 1.7 2007/01/27 20:53:29 flameeyes Exp $
 
 inherit linux-mod flag-o-matic eutils multilib autotools mercurial
 
@@ -14,7 +11,7 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 
 KEYWORDS=""
-IUSE="oss doc debug"
+IUSE="oss debug"
 
 IUSE_CARDS="seq-dummy dummy virmidi mtpav mts64 serial-u16550 mpu401 loopback
 portman2x4 pcsp ad1848-lib cs4231-lib adlib ad1816a ad1848 als100 azt2320 cmi8330
@@ -57,7 +54,6 @@ pkg_setup() {
 	#
 	ALSA_CARDS=${ALSA_CARDS:-${IUSE_ALSA_CARDS}}
 
-	# Which drivers need PNP
 	local PNP_DRIVERS="interwave interwave-stb"
 	local PNP_ERROR="Some of the drivers you selected require PnP support in your kernel (${PNP_DRIVERS}). Either enable PnP in your kernel or trim which drivers get compiled using ALSA_CARDS in /etc/make.conf."
 
@@ -131,20 +127,9 @@ src_compile() {
 
 	ARCH=$(tc-arch-kernel)
 	ABI=${KERNEL_ABI}
-	emake LDFLAGS="$(raw-ldflags)" HOSTCC=$(tc-getBUILD_CC) CC=$(tc-getCC) || die "Make Failed"
+	emake LDFLAGS="$(raw-ldflags)" HOSTCC="$(tc-getBUILD_CC)" CC="$(tc-getCC)" || die "Make Failed"
 	ARCH=$(tc-arch)
 	ABI=${myABI}
-
-	if use doc;
-	then
-		ebegin "Building Documentation"
-		cd ${S}/scripts
-		emake || die Failed making docs in ${S}/scripts
-
-		cd ${S}/doc/DocBook
-		emake || die Failed making docs in ${S}/doc/DocBook
-		eend $?
-	fi
 }
 
 
@@ -152,19 +137,6 @@ src_install() {
 	emake DESTDIR="${D}" install-modules || die "make install failed"
 
 	dodoc CARDS-STATUS FAQ README WARNING TODO
-
-	if use doc; then
-		docinto doc
-		dodoc doc/*
-		rm ${D}/usr/share/doc/${PF}/doc/Makefile.gz
-
-		docinto DocBook
-		dodoc doc/DocBook/*
-		rm ${D}/usr/share/doc/${PF}/DocBook/Makefile.gz
-
-		docinto Documentation
-		dodoc sound/Documentation/*
-	fi
 
 	if kernel_is 2 6; then
 		# mv the drivers somewhere they won't be killed by the kernel's make modules_install
