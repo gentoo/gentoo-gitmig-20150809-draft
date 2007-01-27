@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-lapack
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lapack/ChangeLog,v 1.9 2006/10/01 17:32:35 dberkholz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lapack/ChangeLog,v 1.10 2007/01/27 11:32:40 eroyf Exp $
+
+  27 Jan 2007; Alexander H. Færøy <eroyf@gentoo.org>
+  eselect-lapack-0.1.ebuild:
+  Added ~mips.
 
   01 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Remove myself as maintainer so it goes to all of the sci team.
