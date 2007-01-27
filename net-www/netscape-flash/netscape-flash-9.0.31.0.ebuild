@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-9.0.31.0.ebuild,v 1.3 2007/01/19 14:58:47 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-9.0.31.0.ebuild,v 1.4 2007/01/27 23:04:28 tester Exp $
 
 inherit nsplugins
 
@@ -44,7 +44,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}	
+	cd ${S}
 	if use debug; then
 		unpack ./${MY_PD}/plugin/debugger/${MY_P}.tar.gz
 		unpack ./${MY_PD}/standalone/debugger/flashplayer.tar.gz
@@ -58,7 +58,7 @@ src_install() {
 
 	dodoc ${MY_PD}/README
 	use debug || dodoc ${MY_P}/Readme.txt
-	
+
 	cd ${MY_P}
 	exeinto /opt/netscape/plugins
 	doexe libflashplayer.so
@@ -67,4 +67,11 @@ src_install() {
 
 	inst_plugin /opt/netscape/plugins/libflashplayer.so
 	inst_plugin /opt/netscape/plugins/flashplayer.xpt
+}
+
+pkg_postinst() {
+	if use debug ; then
+		elog "You are installing content debugger version of the package."
+		elog "This is NOT intended for normal use!"
+	fi
 }
