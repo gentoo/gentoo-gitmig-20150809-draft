@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/chmlib
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/ChangeLog,v 1.24 2007/01/27 13:57:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/ChangeLog,v 1.25 2007/01/27 18:01:53 dertobi123 Exp $
+
+  27 Jan 2007; Tobias Scherbaum <dertobi123@gentoo.org> chmlib-0.39.ebuild:
+  Stable on ppc wrt bug #163989.
 
   27 Jan 2007; Raúl Porcel <armin76@gentoo.org> chmlib-0.39.ebuild:
   x86 stable wrt bug 163989
