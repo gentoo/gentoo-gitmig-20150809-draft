@@ -1,29 +1,30 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/cameras.desc,v 1.1 2007/01/27 16:09:33 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/cameras.desc,v 1.2 2007/01/27 16:24:11 alonbl Exp $
 
 # This file contains descriptions of CAMERAS USE_EXPAND flags.
 
 # Keep it sorted.
 
 adc65 - libgphoto support for adc65 cameras
-agfa-c120 - libgphoto support for agfa-c120 cameras
+agfa-cl20 - libgphoto support for agfa-c120 cameras
 aox - libgphoto support for aox cameras
 aox - libgphoto support for aox cameras
 barbie - libgphoto support for barbie cameras
-canoncameras_casio - libgphoto support for canoncameras_casio cameras
+canon - libgphoto support for canon cameras
+casio - libgphoto support for casio cameras
 clicksmart310 - libgphoto support for clicksmart310 cameras
 digigr8 - libgphoto support for digigr8 cameras
 digita - libgphoto support for digita cameras
 dimera - libgphoto support for dimera cameras
 directory - libgphoto support for directory cameras
-enigmal3 - libgphoto support for enigmal3 cameras
+enigma13 - libgphoto support for enigma13 cameras
 fuji - libgphoto support for fuji cameras
 gsmart300 - libgphoto support for gsmart300 cameras
 hp215 - libgphoto support for hp215 cameras
 iclick - libgphoto support for iclick cameras
 jamcam - libgphoto support for jamcam cameras
-jdll - libgphoto support for jdll cameras
+jd11 - libgphoto support for jd11 cameras
 kodak - libgphoto support for kodak cameras
 konica - libgphoto support for konica cameras
 largan - libgphoto support for largan cameras
@@ -40,15 +41,15 @@ ricoh - libgphoto support for ricoh cameras
 samsung - libgphoto support for samsung cameras
 sierra - libgphoto support for sierra cameras
 sipix - libgphoto support for sipix cameras
-small - libgphoto support for small cameras
+smal - libgphoto support for smal cameras
 sonix - libgphoto support for sonix cameras
-sonydscfl - libgphoto support for sonydscfl cameras
+sonydscf1 - libgphoto support for sonydscf1 cameras
 sonydscf55 - libgphoto support for sonydscf55 cameras
 soundvision - libgphoto support for soundvision cameras
 spca50x - libgphoto support for spca50x cameras
 sq905 - libgphoto support for sq905 cameras
 stv0674 - libgphoto support for stv0674 cameras
 stv0680 - libgphoto support for stv0680 cameras
-sx330x - libgphoto support for sx330x cameras
+sx330z - libgphoto support for sx330x cameras
 template - libgphoto support for template cameras
 toshiba - libgphoto support for toshiba cameras
