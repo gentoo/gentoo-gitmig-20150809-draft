@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.113 2007/01/27 10:24:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.114 2007/01/27 13:51:38 armin76 Exp $
+
+  27 Jan 2007; Raúl Porcel <armin76@gentoo.org> snort-2.6.1.2.ebuild:
+  x86 stable wrt bug 161632
 
   27 Jan 2007; Markus Rothe <corsair@gentoo.org> snort-2.6.1.2.ebuild:
   Stable on ppc64; bug #161632
