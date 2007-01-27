@@ -1,9 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-gaim/festival-gaim-1.1-r1.ebuild,v 1.2 2007/01/04 13:52:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-gaim/festival-gaim-1.1-r1.ebuild,v 1.3 2007/01/27 05:30:25 tester Exp $
 
 WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+WANT_AUTOMAKE="1.7"
 
 inherit autotools
 
