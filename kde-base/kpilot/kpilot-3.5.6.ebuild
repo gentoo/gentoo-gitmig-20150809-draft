@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/kpilot-3.5.6.ebuild,v 1.1 2007/01/16 21:08:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/kpilot-3.5.6.ebuild,v 1.2 2007/01/27 15:17:34 flameeyes Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -10,7 +10,7 @@ inherit kde-meta eutils
 DESCRIPTION="KPilot - HotSync software for KDE."
 KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE=""
-DEPEND="app-pda/pilot-link
+DEPEND=">=app-pda/pilot-link-0.12.0
 	dev-libs/libmal
 $(deprange $PV $MAXKDEVER kde-base/libkcal)
 $(deprange $PV $MAXKDEVER kde-base/libkdepim)

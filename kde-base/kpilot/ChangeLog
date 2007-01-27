@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kpilot
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/ChangeLog,v 1.55 2007/01/27 15:14:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/ChangeLog,v 1.56 2007/01/27 15:17:34 flameeyes Exp $
+
+  27 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> kpilot-3.5.6.ebuild:
+  Update the dependency version so who tries to unmask this will see what the
+  problem is.
 
   27 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> kpilot-3.5.5.ebuild:
   Allow installing on newer versions of kde.
