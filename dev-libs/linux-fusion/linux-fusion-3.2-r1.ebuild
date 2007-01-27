@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/linux-fusion/linux-fusion-3.2-r1.ebuild,v 1.2 2007/01/27 11:26:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/linux-fusion/linux-fusion-3.2-r1.ebuild,v 1.3 2007/01/27 21:25:19 jer Exp $
 
 inherit linux-mod
 
@@ -10,7 +10,7 @@ SRC_URI="http://directfb.org/downloads/Core/${PN}-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="udev"
 
 MODULE_NAMES="fusion(drivers/char:${S}:${S}/linux/drivers/char/fusion)"
