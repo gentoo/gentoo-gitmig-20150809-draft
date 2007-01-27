@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/linux-fusion/linux-fusion-3.2-r1.ebuild,v 1.1 2006/11/26 18:16:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/linux-fusion/linux-fusion-3.2-r1.ebuild,v 1.2 2007/01/27 11:26:05 vapier Exp $
 
 inherit linux-mod
 
@@ -24,6 +24,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/linux-fusion-3.2-newer-kernel.patch #163740
 	convert_to_m Makefile
 }
 
