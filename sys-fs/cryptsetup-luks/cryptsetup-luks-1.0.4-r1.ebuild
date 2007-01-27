@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/cryptsetup-luks-1.0.4-r1.ebuild,v 1.1 2007/01/26 15:06:12 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/cryptsetup-luks-1.0.4-r1.ebuild,v 1.2 2007/01/27 02:18:18 strerror Exp $
 
 inherit linux-info eutils flag-o-matic multilib
 
@@ -37,7 +37,7 @@ crypto_check() {
 
 cbc_check() {
 	local CONFIG_CHECK="~CRYPTO_CBC"
-	local WARNING_CRYPTO="CONFIG_CRYPTO_CBC:\tis not set (required for Kernel 2.6.19)"
+	local WARNING_CRYPTO_CBC="CONFIG_CRYPTO_CBC:\tis not set (required for Kernel 2.6.19)"
 	check_extra_config
 	echo
 }
