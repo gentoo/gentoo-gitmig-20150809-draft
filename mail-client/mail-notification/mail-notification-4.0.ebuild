@@ -1,16 +1,14 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-4.0_rc2.ebuild,v 1.3 2007/01/27 12:26:43 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-4.0.ebuild,v 1.1 2007/01/27 12:26:43 slarti Exp $
 
-inherit eutils gnome2 multilib flag-o-matic versionator
-
-MY_PV=$(replace_version_separator 2 '-')
+inherit eutils gnome2 multilib flag-o-matic
 
 DESCRIPTION="A GNOME trayicon which checks for email. Supports mbox, MH,
 Maildir, IMAP, Sylpheed, POP3, Gmail and Evolution.  Authenticates via
 apop, ssl, sasl."
 HOMEPAGE="http://www.nongnu.org/mailnotify/"
-SRC_URI="http://savannah.nongnu.org/download/mailnotify/${PN}-${MY_PV}.tar.gz"
+SRC_URI="http://savannah.nongnu.org/download/mailnotify/${P}.tar.gz"
 
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 SLOT="0"
@@ -35,8 +33,6 @@ DEPEND=">=x11-libs/gtk+-2.6
 	evolution? ( >=mail-client/evolution-2.6 )
 	sylpheed? ( virtual/sylpheed )"
 
-S="${WORKDIR}/${P/_/-}"
-
 pkg_setup() {
 	if use evolution ; then
 		EVO_INSTALLED="$(best_version mail-client/evolution)"
@@ -59,6 +55,7 @@ pkg_setup() {
 }
 
 src_unpack() {
+	S=${WORKDIR}/${PN}-${MY_PV}
 	gnome2_src_unpack
 	gnome2_omf_fix
 
