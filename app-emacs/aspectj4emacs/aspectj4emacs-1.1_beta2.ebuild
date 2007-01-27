@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/aspectj4emacs/aspectj4emacs-1.1_beta2.ebuild,v 1.8 2005/07/01 18:14:57 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/aspectj4emacs/aspectj4emacs-1.1_beta2.ebuild,v 1.9 2007/01/27 22:11:35 betelgeuse Exp $
 
 inherit elisp eutils
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND="app-emacs/jde
-	=dev-java/aspectj-1.1*"
+	=dev-java/aspectj-1*"
 DEPEND="${RDEPEND}
 	app-arch/unzip
 	>=sys-apps/sed-4"
