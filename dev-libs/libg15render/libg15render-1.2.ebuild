@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15render/libg15render-1.2.ebuild,v 1.1 2007/01/02 02:35:13 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15render/libg15render-1.2.ebuild,v 1.2 2007/01/27 18:58:01 josejx Exp $
 
 DESCRIPTION="Small library for display text and graphics on a Logitech G15 keyboard"
 HOMEPAGE="http://g15tools.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/g15tools/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 IUSE="truetype"
 
