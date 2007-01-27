@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.232 2007/01/27 11:26:59 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.233 2007/01/27 12:27:35 zzam Exp $
+
+*udev-104-r4 (27 Jan 2007)
+
+  27 Jan 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev.rules-104-r4, +udev-104-r4.ebuild:
+  Changing serial,isdn,capi and all other dialout-devices to group uucp, mode
+  0660, solving Bug #108249.
 
   27 Jan 2007; Matthias Schwarzott <zzam@gentoo.org>
   -files/05-udev-early.rules-104, -files/udev.rules-104,
