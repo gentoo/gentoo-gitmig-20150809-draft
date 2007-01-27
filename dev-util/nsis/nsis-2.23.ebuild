@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.23.ebuild,v 1.1 2007/01/15 12:39:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.23.ebuild,v 1.2 2007/01/27 12:50:36 mrness Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=dev-util/scons-0.96.93"
@@ -31,6 +31,8 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-config.patch
+	#makensis code is not portable on 64-bit arches so we compile 32-bit executables 
+	use amd64 && epatch "${FILESDIR}"/${P}-32bit.patch
 }
 
 src_compile() {
