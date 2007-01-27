@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/x86-chroot
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x86-chroot/ChangeLog,v 1.6 2007/01/25 23:04:14 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x86-chroot/ChangeLog,v 1.7 2007/01/27 21:26:14 blubb Exp $
+
+  27 Jan 2007; <blubb@gentoo.org> x86-chroot-2006.1.ebuild:
+  fix bug 162696
 
   25 Jan 2007; Marius Mauch <genone@gentoo.org> x86-chroot-2006.1.ebuild:
   Replacing einfo with elog
