@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.5.6.ebuild,v 1.6 2007/01/25 19:02:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.5.6.ebuild,v 1.7 2007/01/27 15:13:04 flameeyes Exp $
 
 inherit kde-dist
 
@@ -10,16 +10,17 @@ SRC_URI="${SRC_URI}
 DESCRIPTION="KDE PIM (Personal Information Management) apps: korganizer, kmail, knode..."
 
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="crypt gnokii pda"
+IUSE="crypt gnokii"
 
 # We use GnuPG 1.4.x for OpenPGP and 1.9 (via gpgme) for s/mime as upstream advises.
 DEPEND="~kde-base/kdebase-${PV}
 	>=dev-libs/cyrus-sasl-2
-	pda? ( app-pda/pilot-link dev-libs/libmal )
 	gnokii? ( app-mobilephone/gnokii )
 	crypt? ( >=app-crypt/gpgme-1.1.2-r1
 		|| ( >=app-crypt/gnupg-2.0.1-r1 <app-crypt/gnupg-1.9 ) )
 		x11-libs/libXScrnSaver"
+#	Requires pilot-link-0.12.0
+#	pda? ( >=app-pda/pilot-link-0.12.0 dev-libs/libmal )
 
 RDEPEND="${DEPEND}
 	crypt? ( app-crypt/pinentry )"
@@ -36,6 +37,9 @@ src_unpack() {
 src_compile() {
 	local myconf="--with-sasl $(use_with gnokii)"
 	use crypt && myconf="${myconf} --with-gpg=/usr/bin/gpg"
+
+	# use pda || DO_NOT_COMPILE="${DO_NOT_COMPILE} kpilot"
+	DO_NOT_COMPILE="${DO_NOT_COMPILE} kpilot"
 
 	kde_src_compile
 }
