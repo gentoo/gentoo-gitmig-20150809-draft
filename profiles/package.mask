@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6679 2007/01/27 05:24:59 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6680 2007/01/27 12:07:46 armin76 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Raúl Porcel <armin76@gentoo.org> (27 Jan 2007)
+# Masked for removal 26 Feb 2007, bug 135257, security issues
+# Replaced by www-client/seamonkey[-bin]
+www-client/mozilla
+www-client/mozilla-bin
 
 # Christian Faulhammer <opfer@gentoo.org> (26 Jan 2007)
 # masked as it is a live ebuild 
