@@ -1,6 +1,9 @@
 # ChangeLog for app-text/htmltidy
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/ChangeLog,v 1.35 2007/01/27 14:06:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/ChangeLog,v 1.36 2007/01/27 16:48:07 josejx Exp $
+
+  27 Jan 2007; Joseph Jezak <josejx@gentoo.org> htmltidy-5.10.26-r2.ebuild:
+  Marked ppc stable for bug #155327.
 
   27 Jan 2007; Raúl Porcel <armin76@gentoo.org> htmltidy-5.10.26-r2.ebuild:
   x86 stable wrt bug 155327
