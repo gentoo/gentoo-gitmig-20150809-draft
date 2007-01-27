@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.1.2.ebuild,v 1.1 2007/01/24 22:16:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.1.2.ebuild,v 1.2 2007/01/27 11:09:30 vapier Exp $
 
 inherit eutils fixheadtails autotools
 
@@ -8,7 +8,7 @@ MY_P=${PN}core-${PV/_beta/-beta}
 DESCRIPTION="XviD, a high performance/quality MPEG-4 video de-/encoding solution"
 HOMEPAGE="http://www.xvid.org/"
 SRC_URI="http://downloads.xvid.org/downloads/${MY_P}.tar.bz2
-	mirror://gentoo/${PN}-1.1.0-noexec-stack.patch.bz2"
+	mirror://gentoo/${PN}-1.1.2-noexec-stack.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="1"
@@ -25,11 +25,11 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${WORKDIR}"/${MY_P}
-	epatch "${FILESDIR}/${PN}-1.1.0_beta2-altivec.patch"
-	epatch "${WORKDIR}/${PN}-1.1.0-noexec-stack.patch"
-	epatch "${FILESDIR}/${PN}-1.1.0-3dnow-2.patch"
+	epatch "${FILESDIR}"/${PN}-1.1.0_beta2-altivec.patch
+	epatch "${WORKDIR}"/${PN}-1.1.2-noexec-stack.patch
+	epatch "${FILESDIR}"/${PN}-1.1.0-3dnow-2.patch
 
-	cd ${S}
+	cd "${S}"
 	eautoreconf
 }
 
@@ -39,7 +39,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 
 	cd "${S}"/../../
 	dodoc AUTHORS ChangeLog README TODO doc/*
