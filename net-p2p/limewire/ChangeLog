@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/limewire
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/ChangeLog,v 1.25 2007/01/02 19:52:16 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/ChangeLog,v 1.26 2007/01/27 22:07:19 wltjr Exp $
+
+  27 Jan 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -limewire-4.12.6.ebuild:
+  Removed version that has full bundled deps
 
 *limewire-4.12.6-r1 (02 Jan 2007)
 
