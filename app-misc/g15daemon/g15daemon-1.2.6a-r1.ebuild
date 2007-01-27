@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.2.6a-r1.ebuild,v 1.1 2007/01/07 03:09:00 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.2.6a-r1.ebuild,v 1.2 2007/01/27 19:00:04 josejx Exp $
 
 inherit eutils linux-info perl-module python multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/g15daemon/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="perl python"
 
 DEPEND="dev-libs/libusb

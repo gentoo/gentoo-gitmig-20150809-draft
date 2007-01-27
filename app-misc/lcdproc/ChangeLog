@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lcdproc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.45 2007/01/24 22:27:14 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.46 2007/01/27 19:00:52 josejx Exp $
+
+  27 Jan 2007; Joseph Jezak <josejx@gentoo.org> lcdproc-0.5.1-r2.ebuild:
+  Marked ~ppc for bug #148072.
 
 *lcdproc-0.5.1-r2 (24 Jan 2007)
 
