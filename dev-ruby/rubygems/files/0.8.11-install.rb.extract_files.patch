@@ -30,7 +30,7 @@ Index: lib/rubygems/installer.rb
 +                "attempt to install file into #{entry['path'].inspect}"
 +        end
 +        path = File.expand_path File.join(directory, path)
-+        if path !~ /\A#{Regexp.escape directory}/ then
++        if path !~ /\A#{Regexp.escape(File.expand_path(directory))}/ then
 +          raise Gem::InstallError,
 +                "attempt to install file into #{entry['path'].inspect}"
 +        end
