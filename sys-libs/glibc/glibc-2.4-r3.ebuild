@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r3.ebuild,v 1.25 2006/09/29 23:08:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r3.ebuild,v 1.26 2007/01/27 02:21:17 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -751,7 +751,7 @@ check_nptl_support() {
 	echo
 
 	ebegin "Checking gcc for __thread support"
-	if ! eend $(want__thread) ; then
+	if ! eend $(want__thread ; echo $?) ; then
 		echo
 		eerror "Could not find a gcc that supports the __thread directive!"
 		eerror "Please update your binutils/gcc and try again."
@@ -761,7 +761,7 @@ check_nptl_support() {
 	if ! is_crosscompile && ! tc-is-cross-compiler ; then
 		# Building fails on an non-supporting kernel
 		ebegin "Checking kernel version (>=${NPTL_KERNEL_VERSION})"
-		if ! eend $([[ $(get_KV) -ge ${min_kernel_version} ]]) ; then
+		if ! eend $([[ $(get_KV) -ge ${min_kernel_version} ]] ; echo $?) ; then
 			echo
 			eerror "You need a kernel of at least version ${NPTL_KERNEL_VERSION}"
 			eerror "for NPTL support!"
@@ -771,7 +771,7 @@ check_nptl_support() {
 
 	# Building fails with too low linux-headers
 	ebegin "Checking linux-headers version (>=${NPTL_KERNEL_VERSION})"
-	if ! eend $(check_kheader_version "${min_kernel_version}") ; then
+	if ! eend $(check_kheader_version "${min_kernel_version}" ; echo $?) ; then
 		echo
 		eerror "You need linux-headers of at least version ${NPTL_KERNEL_VERSION}"
 		eerror "for NPTL support!"
