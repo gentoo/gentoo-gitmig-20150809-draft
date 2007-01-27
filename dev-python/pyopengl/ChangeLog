@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyopengl
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.16 2006/09/12 14:18:01 marienz Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.17 2007/01/27 22:41:46 lucass Exp $
+
+*pyopengl-2.0.1.09-r1 (27 Jan 2007)
+
+  27 Jan 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  +pyopengl-2.0.1.09-r1.ebuild:
+  Added doc use-flag and fixed to install docs in /usr/share/doc (bug #158511).
 
   12 Sep 2006; Marien Zwart <marienz@gentoo.org> pyopengl-2.0.0.44.ebuild,
   pyopengl-2.0.1.09.ebuild:
