@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/files/tmpwatch.cron,v 1.3 2007/01/17 21:24:23 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/files/tmpwatch.cron,v 1.4 2007/01/27 16:51:37 masterdriverz Exp $
 # vim: ft=sh
 
 # This cron script contains several (commented out) examples.  You may use
@@ -30,7 +30,7 @@ TMPWATCH="/usr/sbin/tmpwatch"
 
 # Delete everything in PORTAGE_TMPDIR that hasn't been modified in 2 weeks.
 #
-# if [[ -d ${PORTAGE_TMPDIR:-/var/tmp/portage} ]]; then
+# if [[ -d ${PORTAGE_TMPDIR:-/var/tmp/portage} && -z $(/usr/bin/pgrep emerge) ]]; then
 #   ${TMPWATCH} --mtime --all 336 ${PORTAGE_TMPDIR:-/var/tmp/portage}
 # fi
 

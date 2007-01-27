@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/tmpwatch-2.9.4.1.ebuild,v 1.10 2005/12/17 02:23:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/tmpwatch-2.9.4.1.ebuild,v 1.11 2007/01/27 16:51:37 masterdriverz Exp $
 
 inherit rpm versionator
 
@@ -35,5 +35,5 @@ src_install() {
 	doman tmpwatch.8 || die "doman failed"
 
 	exeinto /etc/cron.daily
-	newexe "${FILESDIR}/${PN}.cron" "${PN}" || die
+	newexe "${FILESDIR}/${PN}.cron" "${PN}" || die 'failed to install cron'
 }

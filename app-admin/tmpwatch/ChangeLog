@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/tmpwatch
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.50 2007/01/17 21:24:23 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.51 2007/01/27 16:51:37 masterdriverz Exp $
+
+  27 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  files/tmpwatch.cron, tmpwatch-2.9.4.1.ebuild:
+  Don't clean /var/tmp/portage in the example cron if emerge is running;
+  thanks to Ulf Schaper; bug 146973
 
   17 Jan 2007; Alec Warner <antarus@gentoo.org> files/tmpwatch.cron:
   modifiy the cronjob to provide hints about cleaning up portage log files,
