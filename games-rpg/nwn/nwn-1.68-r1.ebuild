@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.68-r1.ebuild,v 1.3 2006/12/19 16:53:26 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.68-r1.ebuild,v 1.4 2007/01/27 01:08:58 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -248,8 +248,6 @@ src_unpack() {
 				unpack "${a}" || die "unpack ${a}"
 				cd ..
 			fi
-
-
 		fi
 	done )
 	for a in ${A}
