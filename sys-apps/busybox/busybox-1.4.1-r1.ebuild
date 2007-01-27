@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.4.1-r1.ebuild,v 1.1 2007/01/27 00:39:16 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.4.1-r1.ebuild,v 1.2 2007/01/27 10:54:35 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -114,6 +114,7 @@ src_unpack() {
 		-e 's:-Os -falign-functions=1 -falign-jumps=1 -falign-loops=1::' \
 		-e 's:-fomit-frame-pointer::' \
 		Makefile.flags
+	sed -i 's:-Wl,--gc-sections::' Makefile
 	sed -i "/^CFLAGS.*:=/s:$: ${CFLAGS}:" Makefile
 	echo "CROSS_COMPILE := ${CHOST}-" >> Makefile.flags
 
