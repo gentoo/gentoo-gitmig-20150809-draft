@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.5.3-r1.ebuild,v 1.1 2006/11/09 20:39:21 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.5.3-r2.ebuild,v 1.1 2007/01/27 22:45:22 dragonheart Exp $
 
 inherit eutils autotools
 
@@ -67,6 +67,7 @@ src_install() {
 	make ACE_ROOT="${S}" DESTDIR="${D}" install || die "failed to install"
 	insinto /usr/include/ace
 	doins "${S}"/ace/OS.inl
+	doins "${S}"/ace/Select_Reactor.h
 	# punt gperf stuff
 	rm -rf "${D}"/usr/bin "${D}"/usr/share
 }
