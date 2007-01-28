@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/tork
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.14 2007/01/28 12:58:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.15 2007/01/28 17:39:08 flameeyes Exp $
+
+  28 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> tork-0.12.ebuild,
+  tork-0.13.ebuild:
+  Add a warning when tordns useflag is disabled on tsocks.
 
 *tork-0.13 (28 Jan 2007)
 

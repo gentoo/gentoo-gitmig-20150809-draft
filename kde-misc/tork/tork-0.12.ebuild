@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/tork-0.12.ebuild,v 1.1 2006/11/26 15:44:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/tork-0.12.ebuild,v 1.2 2007/01/28 17:39:08 flameeyes Exp $
 
 inherit kde
 
@@ -31,4 +31,13 @@ src_compile() {
 src_install() {
 	kde_src_install
 	rm -rf "${D}/usr/share/applnk"
+}
+
+pkg_postinst() {
+	if ! built_with_use --missing false net-proxy/tsocks tordns; then
+		ewarn "WARNING: you have net-proxy/tsocks installed without"
+		ewarn "the patch to avoid DNS leaking while using Tor."
+		ewarn "For better privacy, please emerge again net-proxy/tsocks"
+		ewarn "with the USE flag 'tordns' enabled."
+	fi
 }
