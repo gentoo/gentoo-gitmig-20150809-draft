@@ -1,9 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.1.12.ebuild,v 1.5 2007/01/18 13:22:52 gustavoz Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.1.12.ebuild,v 1.6 2007/01/28 07:54:54 vapier Exp $
 
 inherit eutils autotools libtool
 
@@ -13,7 +10,7 @@ SRC_URI="http://downloads.xiph.org/releases/speex/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="ogg sse vorbis-psy"
 
 RDEPEND="ogg? ( >=media-libs/libogg-1.0 )"
@@ -37,7 +34,7 @@ src_unpack() {
 }
 
 src_compile() {
-	# ogg autodetect only
+	# FIXME: ogg autodetect only
 	econf \
 		$(use_enable vorbis-psy) \
 		$(use_enable sse) \
@@ -46,7 +43,6 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR="${D}" install || die
-
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog README* TODO NEWS
 }
