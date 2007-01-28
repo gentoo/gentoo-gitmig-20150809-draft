@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swidgets/swidgets-0.1.1-r1.ebuild,v 1.2 2007/01/28 19:50:52 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swidgets/swidgets-0.1.1-r1.ebuild,v 1.3 2007/01/28 20:48:13 wltjr Exp $
 
 inherit java-ant-2 java-pkg-2
 
@@ -13,13 +13,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="source"
 
+RDEPEND=">=virtual/jre-1.3
+		 dev-java/toolbar"
+
 DEPEND="${RDEPEND}
 		dev-java/ant-core
 		>=virtual/jdk-1.3
 		app-arch/unzip
 		source? ( app-arch/zip )"
-RDEPEND=">=virtual/jre-1.3
-		 dev-java/toolbar"
 
 src_unpack() {
 	unpack ${A}
