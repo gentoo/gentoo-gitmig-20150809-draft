@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/b2evolution-0.9.2.ebuild,v 1.4 2006/11/23 16:23:46 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/b2evolution-0.9.2.ebuild,v 1.5 2007/01/28 01:35:48 dsd Exp $
 
 inherit webapp eutils
 
@@ -12,8 +12,7 @@ SRC_URI="mirror://sourceforge/evocms/${P}${MY_EXT}.zip"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 IUSE=""
-RDEPEND="virtual/httpd-php
-	 virtual/mysql"
+RDEPEND="virtual/httpd-php"
 
 DEPEND="${DEPEND} ${RDEPEND}
 	app-arch/unzip"
