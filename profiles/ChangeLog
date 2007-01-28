@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.46 2007/01/27 10:15:01 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.47 2007/01/28 17:14:17 phreak Exp $
+
+  28 Jan 2007; Christian Heim <phreak@gentoo.org> use.local.desc:
+  Removing stale entries for sys-cluster/util-vserver, sys-cluster/vzctl and
+  sys-cluster/vserver-utils (which is long gone from the tree).
 
   27 Jan 2007; Marijn Schouten <hkBst@gentoo.org> use.local.desc:
   add guile-1.8.1 use flag descriptions
