@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.9-r1.ebuild,v 1.2 2007/01/17 21:14:10 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.9-r1.ebuild,v 1.3 2007/01/28 06:50:37 genone Exp $
 
 inherit eutils nsplugins
 
@@ -211,18 +211,18 @@ src_install() {
 pkg_postinst () {
 	local ll lc
 	use ldap ||
-		einfo "The Acrobat(TM) Security Plugin can be enabled with USE=ldap"
+		elog "The Acrobat(TM) Security Plugin can be enabled with USE=ldap"
 	use nsplugin ||
-		einfo "The Acrobat(TM) Browser Plugin can be enabled with USE=nsplugin"
+		elog "The Acrobat(TM) Browser Plugin can be enabled with USE=nsplugin"
 	lc=0
 	for ll in ${LINGUA_LIST}; do
 		use linguas_${ll/:*} && (( lc = ${lc} + 1 ))
 	done
 	if [[ ${lc} > 1 ]]; then
-		einfo "Multiple languages have been installed, selected via a wrapper script."
-		einfo "The language is selected according to the LANG environment variable"
-		einfo "(defaulting to English if LANG is not set, or no matching language"
-		einfo "version is installed).  Users may need to remove their preferences in"
-		einfo "~/.adobe to switch languages."
+		elog "Multiple languages have been installed, selected via a wrapper script."
+		elog "The language is selected according to the LANG environment variable"
+		elog "(defaulting to English if LANG is not set, or no matching language"
+		elog "version is installed).  Users may need to remove their preferences in"
+		elog "~/.adobe to switch languages."
 	fi
 }
