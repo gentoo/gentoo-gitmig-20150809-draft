@@ -1,0 +1,94 @@
+--- XSB.orig/build/topMakefile.in	2006-06-25 13:09:42.000000000 +1200
++++ XSB/build/topMakefile.in	2007-01-28 12:01:01.000000000 +1300
+@@ -72,7 +72,7 @@
+ # Everything is placed in subdirectories of this directory.
+ # The values for many of the variables below are expressed
+ # in terms of this one, so you do not need to change them.
+-prefix=@prefix@
++prefix=$(DESTDIR)/usr/lib/xsb
+ 
+ srcdir=@topdir@
+ VPATH=$(srcdir)
+@@ -101,7 +101,7 @@
+ 
+ # Like `prefix', but used for architecture-specific files.
+ src_config_prefix=@arch_config_prefix@
+-install_config_prefix=@arch_install_config_prefix@
++install_config_prefix=$(DESTDIR)@arch_install_config_prefix@
+ # we copy the xsb.o module here
+ install_config_objlibdir=$(install_config_prefix)/saved.o
+ 
+@@ -150,7 +150,7 @@
+ emumake_goal=@emumake_goal@
+ 
+ # Normal user
+-all: prepare emu xsbmod xsbdll gpp remake_dot_O_files register emu_clean
++all: prepare emu xsbmod xsbdll gpp remake_dot_O_files emu_clean
+ 
+ # Developer who just checked out or updated CVS copy
+ devel: prepare emu xsbmod xsbdll gpp remake_dot_O_files emu_clean
+@@ -178,18 +178,11 @@
+ 	@cat $(srcdir)/build/.*.tmp 2> /dev/null | \
+ 			tee -a Installation_summary
+ prepare:
+-	@cd $(src_emudir); \
+-	  rm -f *.o Makefile  2> /dev/null || echo "" ; \
+-	  ln -s ${src_config_objlibdir}/*.o . 2> /dev/null || echo "" ; \
+-	  ln -s ${src_config_prefix}/emuMakefile ./Makefile
+-	@cd $(srcdir)/gpp; \
+-	  rm -f *.o Makefile ; \
+-	  ln -s ${src_config_prefix}/gppMakefile ./Makefile
+-	@rm -f $(srcdir)/build/.*.tmp
++	@mkdir $(src_bindir)
++	@mkdir $(src_config_objlibdir)
+ 
+ emu: ${src_config_prefix}/xsb_config.h ${src_config_prefix}/xsb_debug.h
+ 	@cd ${src_emudir}; \
+-		make depend; \
+ 		rm -f $(srcdir)/build/.xsb_build_failed; \
+ 		(make EXECUTABLE="$(EXECUTABLE)" $(emumake_goal) || \
+ 			$(srcdir)/build/touch.sh $(srcdir)/build/.xsb_build_failed) \
+@@ -266,7 +259,7 @@
+ 	@./register.sh
+ 
+ 
+-install:: make_directories copy_files configure_packages_install
++install:: make_directories copy_files
+ 
+ make_directories::
+ 	@echo "Verifying that installtion directories exist..."
+@@ -296,11 +289,6 @@
+ 		mkdir -p "${install_scriptdir}" ) && \
+ 		  echo "ok" || \
+ 		(echo "FAILED"; echo "+++Can't create ${install_scriptdir}" >> .missingdirs.tmp)
+-	@echo -n "Directory: ${install_builddir}..."
+-	  @(test -d "${install_builddir}" || \
+-		mkdir -p "${install_builddir}" ) && \
+-		  echo "ok" || \
+-		(echo "FAILED"; echo "+++Can't create ${install_builddir}" >> .missingdirs.tmp)
+ 	@echo -n "Directory: ${install_bindir}..."
+ 	  @(test -d "${install_bindir}" || \
+ 		mkdir -p "${install_bindir}" ) && \
+@@ -357,10 +345,6 @@
+ 		cp -f ${src_scriptdir}/xsb${config_tag} \
+ 				${install_scriptdir}/xsb${config_tag}; \
+ 		chmod 755 ${install_scriptdir}/* ${install_bindir}/* ; \
+-		cp -f ${srcdir}/build/config.sub \
+-		  ${srcdir}/build/config.guess \
+-		  ${prefix}/build; \
+-		chmod 755 ${prefix}/build/* ; \
+ 		echo "Copying config..." ; \
+ 		cp -f ${src_config_libdir}/xsb_configuration.* \
+ 			  ${install_config_libdir} ; \
+@@ -396,11 +380,6 @@
+ 		cp -f ${src_cmplibdir}/*$(xsb_obj_extension) ${install_cmplibdir} ; \
+ 		chmod 644 ${install_cmplibdir}/*$(xsb_obj_extension) ; \
+ 		./copysubdirs.sh ${src_cmplibdir} ${install_cmplibdir} ; \
+-		echo "Copying packages..."; \
+-		cp -f ${src_pkgdir}/*$(xsb_obj_extension) ${install_pkgdir}; \
+-		cp -f ${src_pkgdir}/*.P ${install_pkgdir}; \
+-		./touch.sh ${install_pkgdir}/*$(xsb_obj_extension); \
+-		./copysubdirs.sh ${src_pkgdir} ${install_pkgdir} ; \
+ 		echo "Copying etc..."; \
+ 		cp -fr ${src_etcdir}/* ${install_etcdir}; \
+ 		echo "Copying examples..."; \

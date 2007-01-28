@@ -1,0 +1,17 @@
+# ChangeLog for dev-lang/xsb
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.1 2007/01/28 09:19:36 keri Exp $
+
+*xsb-3.0.1 (28 Jan 2007)
+
+  28 Jan 2007; keri <keri@gentoo.org> +files/xsb-3.0.1-chr_d.patch,
+  +files/xsb-3.0.1-configure.patch, +files/xsb-3.0.1-gap.patch,
+  +files/xsb-3.0.1-justify.patch, +files/xsb-3.0.1-libwww.patch,
+  +files/xsb-3.0.1-mysql.patch, +files/xsb-3.0.1-nostrip.patch,
+  +files/xsb-3.0.1-odbc.patch, +files/xsb-3.0.1-packages.patch,
+  +files/xsb-3.0.1-perlmatch.patch, +files/xsb-3.0.1-portage.patch,
+  +files/xsb-3.0.1-sgml.patch, +files/xsb-3.0.1-slx.patch,
+  +files/xsb-3.0.1-wildmatch.patch, +files/xsb-3.0.1-xpath.patch,
+  +files/xsb-3.0.1-xsb-script.patch, +metadata.xml, +xsb-3.0.1.ebuild:
+  Initial import.
+
