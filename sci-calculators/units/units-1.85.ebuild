@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/units-1.85.ebuild,v 1.3 2007/01/12 15:04:15 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/units-1.85.ebuild,v 1.4 2007/01/28 22:11:30 armin76 Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://freshmeat.net/projects/units/"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="~alpha ~amd64 hppa ~ppc sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ppc sparc x86"
 
 DEPEND=">=sys-libs/readline-4.1-r2
 	>=sys-libs/ncurses-5.2-r3"
