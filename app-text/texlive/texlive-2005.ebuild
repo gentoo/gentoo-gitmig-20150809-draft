@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2005.ebuild,v 1.3 2006/12/02 13:07:32 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2005.ebuild,v 1.4 2007/01/28 06:10:10 genone Exp $
 
 inherit eutils flag-o-matic toolchain-funcs versionator virtualx
 
@@ -277,8 +277,8 @@ pkg_postinst() {
 		/usr/sbin/texmf-update
 	fi
 
-	einfo
-	einfo "If you have configuration files in /etc/texmf to merge,"
-	einfo "please update them and run /usr/sbin/texmf-update."
-	einfo
+	elog
+	elog "If you have configuration files in /etc/texmf to merge,"
+	elog "please update them and run /usr/sbin/texmf-update."
+	elog
 }

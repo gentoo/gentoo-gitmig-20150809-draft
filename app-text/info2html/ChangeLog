@@ -1,6 +1,10 @@
 # ChangeLog for app-text/info2html
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/info2html/ChangeLog,v 1.16 2006/09/01 14:39:52 kevquinn Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/info2html/ChangeLog,v 1.17 2007/01/28 05:50:39 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> info2html-1.4.ebuild,
+  info2html-1.4-r1.ebuild:
+  Replacing einfo with elog
 
 *info2html-2.0 (01 Sep 2006)
 

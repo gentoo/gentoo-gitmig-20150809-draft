@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kaspaliste/kaspaliste-0.96-r1.ebuild,v 1.4 2006/06/01 18:34:09 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kaspaliste/kaspaliste-0.96-r1.ebuild,v 1.5 2007/01/28 05:53:42 genone Exp $
 
 ARTS_REQUIRED="yes"
 
@@ -25,8 +25,8 @@ src_unpack() {
 }
 
 pkg_postinst() {
-	einfo "You have to create a database named kaspaliste: %createdb kaspaliste."
-	einfo "And then import the file kaspaliste/data/create.tables.sql from the kaspaliste directory:"
-	einfo "%psql kaspaliste -f create.tables.sql"
+	elog "You have to create a database named kaspaliste: %createdb kaspaliste."
+	elog "And then import the file kaspaliste/data/create.tables.sql from the kaspaliste directory:"
+	elog "%psql kaspaliste -f create.tables.sql"
 }
 

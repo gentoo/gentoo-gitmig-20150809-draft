@@ -1,6 +1,9 @@
 # ChangeLog for app-text/clara
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/clara/ChangeLog,v 1.11 2006/09/16 16:57:40 spock Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/clara/ChangeLog,v 1.12 2007/01/28 05:39:38 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> clara-20031214.ebuild:
+  Replacing einfo with elog
 
   16 Sep 2006; Michał Januszewski <spock@gentoo.org> clara-20031214.ebuild:
   Don't install COPYING into /usr/share/doc.

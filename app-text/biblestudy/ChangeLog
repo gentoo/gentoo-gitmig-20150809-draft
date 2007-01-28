@@ -1,6 +1,9 @@
 # ChangeLog for app-text/biblestudy
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/biblestudy/ChangeLog,v 1.8 2007/01/19 14:36:39 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/biblestudy/ChangeLog,v 1.9 2007/01/28 05:38:38 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> biblestudy-1.0.ebuild:
+  Replacing einfo with elog
 
   19 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
   biblestudy-1.0.ebuild:

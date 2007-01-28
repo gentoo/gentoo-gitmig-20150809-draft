@@ -1,6 +1,9 @@
 # ChangeLog for app-text/expander
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/expander/ChangeLog,v 1.4 2005/10/12 17:44:57 grobian Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/expander/ChangeLog,v 1.5 2007/01/28 05:44:27 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> expander-2.0.5.ebuild:
+  Replacing einfo with elog
 
   12 Oct 2005; Fabian Groffen <grobian@gentoo.org> expander-2.0.5.ebuild:
   Marked ~ppc-macos (bug #108631)

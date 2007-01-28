@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sword-modules
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/ChangeLog,v 1.21 2007/01/22 17:28:33 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/ChangeLog,v 1.22 2007/01/28 06:06:37 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org>
+  sword-modules-20041209.ebuild:
+  Replacing einfo with elog
 
   22 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
   files/digest-sword-modules-20041209, Manifest:

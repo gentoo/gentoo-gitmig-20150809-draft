@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/gnomesword-2.1.7.ebuild,v 1.6 2006/10/21 17:08:59 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/gnomesword-2.1.7.ebuild,v 1.7 2007/01/28 05:47:45 genone Exp $
 
 inherit libtool gnome2 eutils
 
@@ -40,7 +40,7 @@ src_unpack() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 
-	einfo "Gnomesword requires modules to be of any use. You may install the"
-	einfo "sword-modules package, or download modules individually from the"
-	einfo "sword website: http://crosswire.org/sword/"
+	elog "Gnomesword requires modules to be of any use. You may install the"
+	elog "sword-modules package, or download modules individually from the"
+	elog "sword website: http://crosswire.org/sword/"
 }

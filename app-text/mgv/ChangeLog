@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mgv
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mgv/ChangeLog,v 1.15 2005/07/16 16:26:51 josejx Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/mgv/ChangeLog,v 1.16 2007/01/28 05:57:00 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> mgv-3.1.5-r1.ebuild:
+  Replacing einfo with elog
 
   16 Jul 2005; Joseph Jezak <josejx@gentoo.org> mgv-3.1.5.ebuild:
   Marked ~ppc at the request of bug #99216.

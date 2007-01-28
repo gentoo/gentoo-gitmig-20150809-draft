@@ -1,6 +1,10 @@
 # ChangeLog for app-text/active-dvi
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.13 2006/11/28 20:16:27 opfer Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.14 2007/01/28 05:36:28 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> active-dvi-1.4.0.ebuild,
+  active-dvi-1.6.0.ebuild, active-dvi-1.6.0-r1.ebuild:
+  Replacing einfo with elog
 
   28 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
   active-dvi-1.4.0.ebuild, active-dvi-1.6.0.ebuild,

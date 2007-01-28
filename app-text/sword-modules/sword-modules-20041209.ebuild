@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/sword-modules-20041209.ebuild,v 1.9 2006/04/22 12:27:49 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/sword-modules-20041209.ebuild,v 1.10 2007/01/28 06:06:37 genone Exp $
 
 CROSSWIREFTP="http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip"
 DESCRIPTION="a collection of modules for the sword project"
@@ -90,13 +90,13 @@ src_install () {
 
 pkg_postinst() {
 	echo
-	einfo "You should now have modules for The SWORD Project."
-	einfo "You can download more modules from the SWORD homepage:"
-	einfo "  http://www.crosswire.org/sword/"
+	elog "You should now have modules for The SWORD Project."
+	elog "You can download more modules from the SWORD homepage:"
+	elog "  http://www.crosswire.org/sword/"
 	if ! use intl; then
 		echo
-		einfo "To enable different languages of selected texts contained"
-		einfo "in this ebuild,"
-		einfo "USE=\"intl\" emerge ${PN}"
+		elog "To enable different languages of selected texts contained"
+		elog "in this ebuild,"
+		elog "USE=\"intl\" emerge ${PN}"
 	fi
 }

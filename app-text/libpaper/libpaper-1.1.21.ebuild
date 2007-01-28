@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/libpaper-1.1.21.ebuild,v 1.3 2006/11/27 17:32:49 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/libpaper-1.1.21.ebuild,v 1.4 2007/01/28 05:55:03 genone Exp $
 
 inherit eutils libtool
 
@@ -33,5 +33,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "run \"paperconfig -p letter\" to use letter-pagesizes"
+	elog "run \"paperconfig -p letter\" to use letter-pagesizes"
 }

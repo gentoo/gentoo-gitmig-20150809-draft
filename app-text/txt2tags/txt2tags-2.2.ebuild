@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/txt2tags-2.2.ebuild,v 1.4 2006/11/28 20:20:38 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/txt2tags-2.2.ebuild,v 1.5 2007/01/28 06:11:49 genone Exp $
 
 inherit elisp-common
 
@@ -71,11 +71,11 @@ src_install() {
 pkg_postinst() {
 	use emacs && elisp-site-regen
 	echo
-	einfo "NOTE: the format of .t2t files has changed between versions"
-	einfo "1.7 -> 2.0.  To convert your .t2t files to the new format,"
-	einfo "use the included t2tconv script:"
-	einfo
-	einfo "    t2tconv file1.t2t file2.t2t ..."
+	elog "NOTE: the format of .t2t files has changed between versions"
+	elog "1.7 -> 2.0.  To convert your .t2t files to the new format,"
+	elog "use the included t2tconv script:"
+	elog
+	elog "    t2tconv file1.t2t file2.t2t ..."
 	echo
 }
 

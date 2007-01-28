@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mgv/mgv-3.1.5-r1.ebuild,v 1.7 2005/05/31 21:06:30 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mgv/mgv-3.1.5-r1.ebuild,v 1.8 2007/01/28 05:57:00 genone Exp $
 
 inherit eutils
 
@@ -39,6 +39,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "The default browser for help documents is netscape"
-	einfo "You can change it in /etc/mgv.conf"
+	elog "The default browser for help documents is netscape"
+	elog "You can change it in /etc/mgv.conf"
 }

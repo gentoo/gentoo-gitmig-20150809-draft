@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/biblestudy/biblestudy-1.0.ebuild,v 1.8 2007/01/19 14:36:39 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/biblestudy/biblestudy-1.0.ebuild,v 1.9 2007/01/28 05:38:38 genone Exp $
 
 IUSE="unicode"
 DESCRIPTION="Bible study software based on the sword library"
@@ -27,6 +27,6 @@ pkg_postinst() {
 		ewarn
 	fi
 
-	einfo "If you are looking for some texts to use with biblestudy,"
-	einfo "then you can emerge app-text/sword-modules"
+	elog "If you are looking for some texts to use with biblestudy,"
+	elog "then you can emerge app-text/sword-modules"
 }

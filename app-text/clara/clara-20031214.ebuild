@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/clara/clara-20031214.ebuild,v 1.13 2006/09/16 16:57:40 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/clara/clara-20031214.ebuild,v 1.14 2007/01/28 05:39:38 genone Exp $
 
 DESCRIPTION="An OCR (Optical Character Recognition) program"
 SRC_URI="http://www.geocities.com/claraocr/clara-20031214.tar.gz"
@@ -30,10 +30,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Please note that Clara OCR has to be trained to recognize text,"
-	einfo "without a training session it simply won't work. Have a look at"
-	einfo "the docs in /usr/share/doc/${P}/html/ to get more "
-	einfo "info about the training procedure."
-	einfo
+	elog
+	elog "Please note that Clara OCR has to be trained to recognize text,"
+	elog "without a training session it simply won't work. Have a look at"
+	elog "the docs in /usr/share/doc/${P}/html/ to get more "
+	elog "info about the training procedure."
+	elog
 }

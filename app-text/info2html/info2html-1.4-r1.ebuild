@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/info2html/info2html-1.4-r1.ebuild,v 1.5 2005/05/20 21:47:00 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/info2html/info2html-1.4-r1.ebuild,v 1.6 2007/01/28 05:50:39 genone Exp $
 
 inherit eutils webapp-apache
 
@@ -39,6 +39,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Info files can be found at:"
-	einfo "\thttp://localhost/cgi-bin/infocat"
+	elog "Info files can be found at:"
+	elog "\thttp://localhost/cgi-bin/infocat"
 }

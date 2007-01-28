@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.4.0.ebuild,v 1.10 2006/11/28 20:16:27 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.4.0.ebuild,v 1.11 2007/01/28 05:36:28 genone Exp $
 
 inherit eutils
 
@@ -98,8 +98,8 @@ pkg_postinst() {
 	if use cjk; then
 
 		echo ""
-		einfo "If you wish to use Japanese True Type fonts with"
-		einfo "active-dvi, please edit /usr/share/texmf/advi/jpfonts.conf"
+		elog "If you wish to use Japanese True Type fonts with"
+		elog "active-dvi, please edit /usr/share/texmf/advi/jpfonts.conf"
 		echo ""
 
 	fi

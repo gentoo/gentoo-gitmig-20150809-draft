@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/winefish/winefish-1.3.3.ebuild,v 1.4 2006/09/01 00:42:21 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/winefish/winefish-1.3.3.ebuild,v 1.5 2007/01/28 06:13:23 genone Exp $
 
 inherit eutils fdo-mime
 
@@ -37,5 +37,5 @@ pkg_postinst() {
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 
-	einfo "You need to emerge a TeX distribution to gain winfish's full capacity"
+	elog "You need to emerge a TeX distribution to gain winfish's full capacity"
 }

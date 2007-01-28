@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.6.1-r2.ebuild,v 1.9 2006/07/30 20:54:51 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.6.1-r2.ebuild,v 1.10 2007/01/28 05:42:06 genone Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Tools to convert docbook to man and info"
@@ -44,6 +44,6 @@ src_install () {
 		doexe ${exe}.pl
 	done
 	doexe docbook2man-spec.pl docbook2texi-spec.pl manpage_makelinks.pl
-	einfo "To avoid conflict with docbook-sgml-utils, which is much more widely used,"
-	einfo "all executables have been renamed to *.pl."
+	elog "To avoid conflict with docbook-sgml-utils, which is much more widely used,"
+	elog "all executables have been renamed to *.pl."
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.10_beta3.ebuild,v 1.1 2006/11/14 17:36:42 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.10_beta3.ebuild,v 1.2 2007/01/28 06:00:36 genone Exp $
 
 TETEX_PV=3.0
 
@@ -196,8 +196,8 @@ pkg_postinst() {
 	sed -i -e '/TEXINPUTS.platex/d' ${ROOT}/etc/texmf/texmf.d/00texmf.cnf
 	tetex-3_pkg_postinst
 
-	einfo
-	einfo "Japanese dvips and xdvi have been renamed to pdvips and pxdvi."
-	einfo "You also need to emerge app-text/dvipdfmx to convert dvi into PDF."
-	einfo
+	elog
+	elog "Japanese dvips and xdvi have been renamed to pdvips and pxdvi."
+	elog "You also need to emerge app-text/dvipdfmx to convert dvi into PDF."
+	elog
 }

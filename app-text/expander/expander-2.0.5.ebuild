@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/expander/expander-2.0.5.ebuild,v 1.6 2005/10/12 17:44:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/expander/expander-2.0.5.ebuild,v 1.7 2007/01/28 05:44:27 genone Exp $
 
 inherit eutils
 
@@ -49,8 +49,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Instructions for using expander with NEdit are in /usr/share/doc/${P}/INSTALL"
-	einfo "Macro, definition and template files can be found in /usr/share/${P}"
-	einfo
+	elog
+	elog "Instructions for using expander with NEdit are in /usr/share/doc/${P}/INSTALL"
+	elog "Macro, definition and template files can be found in /usr/share/${P}"
+	elog
 }

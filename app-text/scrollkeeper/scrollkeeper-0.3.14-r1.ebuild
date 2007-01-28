@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.14-r1.ebuild,v 1.13 2006/01/30 09:11:38 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.14-r1.ebuild,v 1.14 2007/01/28 06:03:51 genone Exp $
 
 inherit libtool eutils
 
@@ -89,7 +89,7 @@ pkg_postrm() {
 			"${ROOT}/usr/share/xml/scrollkeeper/dtds/scrollkeeper-omf.dtd" \
 			${ROOT}/etc/xml/catalog
 
-		einfo "Scrollkeeper ${PV} unmerged, if you removed the package"
-		einfo "you might want to clean up /var/lib/scrollkeeper."
+		elog "Scrollkeeper ${PV} unmerged, if you removed the package"
+		elog "you might want to clean up /var/lib/scrollkeeper."
 	fi
 }
