@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/idesk-0.7.5-r1.ebuild,v 1.7 2006/05/23 20:29:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/idesk-0.7.5-r1.ebuild,v 1.8 2007/01/28 19:36:06 nelchael Exp $
+
+inherit eutils
 
 DESCRIPTION="Utility to place icons on the root window"
 HOMEPAGE="http://idesk.sourceforge.net/"
@@ -21,6 +23,15 @@ DEPEND=">=media-libs/imlib2-1.1.2.20040912
 	=x11-libs/gtk+-2*
 	media-libs/libart_lgpl
 	x11-libs/startup-notification"
+
+pkg_setup() {
+
+	if ! built_with_use media-libs/imlib2 X; then
+		eerror "You need to have media-libs/imlib2 compiled with USE=\"X\""
+		die "You need to have media-libs/imlib2 compiled with USE=\"X\""
+	fi
+
+}
 
 src_unpack() {
 	unpack "${A}"
