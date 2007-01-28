@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.52 2007/01/28 20:58:29 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.53 2007/01/28 21:11:42 betelgeuse Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -1579,7 +1579,7 @@ eant() {
 		if [[ ${arg} = -lib ]]; then
 			if is-java-strict; then
 				eerror "You should not use the -lib argument to eant because it will fail"
-				eerror "with JAVA_PKG_STRICT. Please use for example java-pkg_jar-from or"
+				eerror "with JAVA_PKG_STRICT. Please use for example java-pkg_jar-from"
 				eerror "or ant properties to make dependencies available."
 				eerror "For ant tasks use WANT_ANT_TASKS or ANT_TASKS from."
 				eerror "split ant (>=dev-java/ant-core-1.7)."
