@@ -1,6 +1,10 @@
 # ChangeLog for app-office/qhacc
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/ChangeLog,v 1.30 2006/11/23 19:35:23 vivo Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/ChangeLog,v 1.31 2007/01/28 05:34:23 genone Exp $
+
+  25 Jan 2007; Marius Mauch <genone@gentoo.org> qhacc-3.2.1.ebuild,
+  qhacc-3.4.ebuild:
+  Replacing einfo with elog
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> ChangeLog:
   dev-db/mysql => virtual/mysql

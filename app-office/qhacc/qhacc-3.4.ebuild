@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/qhacc-3.4.ebuild,v 1.4 2006/02/25 15:40:59 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/qhacc-3.4.ebuild,v 1.5 2007/01/28 05:34:23 genone Exp $
 
 inherit libtool kde-functions eutils
 
@@ -54,12 +54,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo ""
-	einfo "A sample configuration is provided in /usr/share/qhacc/easysetup."
-	einfo "copy files: mkdir ~/.qhacc ; cp /usr/share/qhacc/easysetup/* ~/.qhacc"
-	einfo "run program: qhacc -f ~/.qhacc/"
-	einfo "set alias: echo -e \\\n \"alias qhacc=\\\"qhacc -f ~/.qhacc\\\"\" >> ~/.bashrc"
-	echo ""
+	echo
+	elog "A sample configuration is provided in /usr/share/qhacc/easysetup."
+	elog "copy files: mkdir ~/.qhacc ; cp /usr/share/qhacc/easysetup/* ~/.qhacc"
+	elog "run program: qhacc -f ~/.qhacc/"
+	elog "set alias: echo -e \\\n \"alias qhacc=\\\"qhacc -f ~/.qhacc\\\"\" >> ~/.bashrc"
+	echo
 	ewarn "To update from a previous version, please read /usr/share/doc/${PF}/UPGRADE.gz"
 	echo ""
 }
