@@ -1,6 +1,17 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.109 2007/01/27 05:16:11 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.110 2007/01/28 07:26:59 wltjr Exp $
+
+*tomcat-6.0.8_alpha-r2 (28 Jan 2007)
+*tomcat-6.0.7_beta-r5 (28 Jan 2007)
+*tomcat-5.5.20-r10 (28 Jan 2007)
+
+  28 Jan 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  files/5.5.20/tomcat.init, files/6/tomcat.init, -tomcat-5.5.20-r9.ebuild,
+  +tomcat-5.5.20-r10.ebuild, -tomcat-6.0.7_beta-r4.ebuild,
+  +tomcat-6.0.7_beta-r5.ebuild, -tomcat-6.0.8_alpha-r1.ebuild,
+  +tomcat-6.0.8_alpha-r2.ebuild:
+  Updated init script to capture std out per bug# 162379
 
 *tomcat-5.5.20-r9 (27 Jan 2007)
 

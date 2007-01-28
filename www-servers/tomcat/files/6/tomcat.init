@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/6/tomcat.init,v 1.3 2007/01/10 21:06:33 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/6/tomcat.init,v 1.4 2007/01/28 07:26:59 wltjr Exp $
 
 init_env_vars() {
 	# Set some sane defaults
@@ -36,8 +36,6 @@ init_env_vars() {
 		touch "${CATALINA_BASE}logs/catalina.out"
 		chown tomcat:tomcat "${CATALINA_BASE}logs/catalina.out"
 	fi
-
-	STD_OUT=" 2<&1 >> ${CATALINA_BASE}logs/catalina.out"
 }
 
 start-helper() {
@@ -45,7 +43,7 @@ start-helper() {
 	shift
 	local arguments="--start --quiet --background --chuid ${CATALINA_USER}:${CATALINA_GROUP} \
 		--make-pidfile --pidfile /var/run/tomcat.pid"
-	start-stop-daemon ${arguments} --exec ${executor} -- ${OPTS_CP} "$@" ${CATALINA_ARGS} ${STD_OUT} ${TOMCAT_START}
+	start-stop-daemon ${arguments} --exec ${executor} -- ${OPTS_CP} "$@" ${CATALINA_ARGS} ${TOMCAT_START} >> "$CATALINA_BASE"/logs/catalina.out 2>&1
 	return $?
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r9.ebuild,v 1.1 2007/01/27 05:16:11 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r10.ebuild,v 1.1 2007/01/28 07:26:59 wltjr Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
