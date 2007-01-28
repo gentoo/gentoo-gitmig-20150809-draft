@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.16.2.ebuild,v 1.10 2007/01/21 20:20:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.16.2.ebuild,v 1.11 2007/01/28 07:47:08 vapier Exp $
 
 # make sure games is inherited first so that the gnome2
 # functions will be called if they are not overridden
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86"
 IUSE="artworkextra guile" #avahi disabled upstream due to crashes
 
 RDEPEND=">=gnome-base/gconf-2
@@ -27,7 +27,6 @@ RDEPEND=">=gnome-base/gconf-2
 	artworkextra? ( gnome-extra/gnome-games-extra-data )
 	>=gnome-base/gnome-common-2.12.0"
 #	avahi? ( net-dns/avahi )
-
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.35
@@ -35,7 +34,6 @@ DEPEND="${RDEPEND}
 	>=app-text/scrollkeeper-0.3.8"
 
 DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README TODO"
-
 
 pkg_setup() {
 	# create the games user / group
