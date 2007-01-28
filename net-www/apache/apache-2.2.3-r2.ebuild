@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.3-r2.ebuild,v 1.3 2007/01/20 16:03:26 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.3-r2.ebuild,v 1.4 2007/01/28 20:00:33 chtekk Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib autotools
 
@@ -24,8 +24,8 @@ IUSE="debug doc ldap mpm-event mpm-peruser mpm-prefork mpm-worker no-suexec seli
 
 DEPEND="app-misc/mime-types
 		dev-lang/perl
-		>=dev-libs/apr-1.2.7
-		>=dev-libs/apr-util-1.2.7
+		=dev-libs/apr-1*
+		=dev-libs/apr-util-1*
 		dev-libs/expat
 		dev-libs/libpcre
 		sys-libs/zlib

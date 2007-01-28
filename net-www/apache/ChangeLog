@@ -1,6 +1,10 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.510 2007/01/21 16:04:19 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.511 2007/01/28 20:00:32 chtekk Exp $
+
+  28 Jan 2007; Luca Longinotti <chtekk@gentoo.org> apache-2.0.58-r2.ebuild,
+  apache-2.0.59-r2.ebuild, apache-2.2.3-r2.ebuild, apache-2.2.4.ebuild:
+  Fix apr deps.
 
 *apache-2.2.4 (21 Jan 2007)
 
