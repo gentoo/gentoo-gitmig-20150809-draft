@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/color-tools/color-tools-1.3.0.ebuild,v 1.5 2006/11/11 17:07:37 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/color-tools/color-tools-1.3.0.ebuild,v 1.6 2007/01/28 06:38:34 genone Exp $
 
 inherit ruby gems
 
@@ -16,12 +16,12 @@ USE_RUBY="ruby18"
 DEPEND="virtual/ruby"
 
 pkg_postinst() {
-	einfo "This package was installed using a 'gem'."
-	einfo "If you are intending to write code which"
-	einfo "requires ${PN}, you will need to"
-	einfo
-	einfo "require 'rubygems'"
-	einfo
-	einfo "before requiring '${PN}'."
+	elog "This package was installed using a 'gem'."
+	elog "If you are intending to write code which"
+	elog "requires ${PN}, you will need to"
+	elog
+	elog "require 'rubygems'"
+	elog
+	elog "before requiring '${PN}'."
 }
 
