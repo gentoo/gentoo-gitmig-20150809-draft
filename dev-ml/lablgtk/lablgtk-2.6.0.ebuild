@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.6.0.ebuild,v 1.10 2006/10/31 03:09:52 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.6.0.ebuild,v 1.11 2007/01/28 06:24:18 genone Exp $
 
 inherit eutils
 
@@ -82,6 +82,6 @@ src_install () {
 }
 
 pkg_postinst () {
-	use doc && einfo "To run the examples you can use the lablgtk2 toplevel."
-	use doc && einfo "e.g: lablgtk2 /usr/share/doc/${P}/examples/testgtk.ml"
+	use doc && elog "To run the examples you can use the lablgtk2 toplevel."
+	use doc && elog "e.g: lablgtk2 /usr/share/doc/${P}/examples/testgtk.ml"
 }

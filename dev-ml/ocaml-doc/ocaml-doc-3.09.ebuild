@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-doc/ocaml-doc-3.09.ebuild,v 1.2 2006/10/22 15:34:55 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-doc/ocaml-doc-3.09.ebuild,v 1.3 2007/01/28 06:25:45 genone Exp $
 
 DESCRIPTION="Ocaml reference manual (html)"
 HOMEPAGE="http://caml.inria.fr/pub/docs/manual-ocaml/"
@@ -19,5 +19,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "This manual is available online at http://caml.inria.fr/pub/docs/manual-ocaml/"
+	elog "This manual is available online at http://caml.inria.fr/pub/docs/manual-ocaml/"
 }
