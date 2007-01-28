@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-9999.ebuild,v 1.3 2007/01/25 19:02:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-9999-r1.ebuild,v 1.1 2007/01/28 14:52:30 flameeyes Exp $
 
 inherit kde subversion
 
@@ -38,6 +38,9 @@ RDEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase ) )
 	=dev-lang/ruby-1.8*"
 
 DEPEND="${RDEPEND}"
+
+RDEPEND="${RDEPEND}
+	www-servers/mongrel"
 
 need-kde 3.3
 
@@ -77,4 +80,16 @@ src_compile() {
 				  --without-nmm"
 
 	kde_src_compile
+}
+
+src_install() {
+	kde_src_install
+
+	# As much as I respect Ian, I'd rather leave Amarok to use mongrel
+	# from Portage, for security and policy reasons.
+	rm -rf "${D}"/usr/share/apps/amarok/ruby_lib/rbconfig \
+		"${D}"/usr/share/apps/amarok/ruby_lib/mongrel* \
+		"${D}"/usr/share/apps/amarok/ruby_lib/rubygems* \
+		"${D}"/usr/share/apps/amarok/ruby_lib/gem* \
+		"${D}"/usr/$(get_libdir)/ruby_lib
 }
