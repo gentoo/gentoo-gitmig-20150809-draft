@@ -1,6 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.14.3.ebuild,v 1.4 2006/11/07 01:06:47 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.14.3.ebuild,v 1.5 2007/01/28 03:50:58 dang Exp $
+
+WANT_AUTOMAKE=1.9
+WANT_AUTOCONF=2.5
 
 inherit eutils gnome2 multilib autotools
 
@@ -79,7 +82,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-1.9.2-broken-firefox.patch
 
 	cp aclocal.m4 old_macros.m4
-	AT_M4DIR=". ${S}/m4" WANT_AUTOCONF="2.5" \
+	AT_M4DIR=". ${S}/m4" \
 	eautoreconf || die "Failed to reconfigure"
 }
 
