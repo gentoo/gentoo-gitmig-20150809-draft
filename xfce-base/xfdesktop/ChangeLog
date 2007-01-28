@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfdesktop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.76 2007/01/23 18:03:35 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.77 2007/01/28 15:30:18 welp Exp $
+
+  28 Jan 2007; Peter Weller <welp@gentoo.org> xfdesktop-4.4.0.ebuild:
+  Dep fixes, various other fixes
 
   23 Jan 2007; Peter Weller <welp@gentoo.org> xfdesktop-4.4.0.ebuild:
   Removing usage of virtual/x11,  and hardcoding in depends. Minor clean ups.
