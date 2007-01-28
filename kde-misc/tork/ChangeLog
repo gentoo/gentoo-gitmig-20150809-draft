@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/tork
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.13 2006/11/26 15:44:24 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.14 2007/01/28 12:58:16 flameeyes Exp $
+
+*tork-0.13 (28 Jan 2007)
+
+  28 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> -tork-0.10.ebuild,
+  +tork-0.13.ebuild:
+  Remove old version, and add a new one that depends on alpha Tor (because of
+  new features used).
 
 *tork-0.12 (26 Nov 2006)
 
