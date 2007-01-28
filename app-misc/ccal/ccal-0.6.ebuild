@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ccal/ccal-0.6.ebuild,v 1.7 2005/11/08 03:32:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ccal/ccal-0.6.ebuild,v 1.8 2007/01/28 05:00:00 genone Exp $
 
 DESCRIPTION="Curses-based calendar/journal/diary/todo utility"
 HOMEPAGE="http://www.jamiehillman.co.uk/ccal/"
@@ -22,7 +22,7 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "Read /usr/share/doc/${PF}/html/instructions.htm for"
-	einfo "information on using ccal."
+	elog "Read /usr/share/doc/${PF}/html/instructions.htm for"
+	elog "information on using ccal."
 	echo
 }

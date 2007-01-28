@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/vifm
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/ChangeLog,v 1.10 2005/11/01 20:21:40 nelchael Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/ChangeLog,v 1.11 2007/01/28 05:30:03 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> vifm-0.2.ebuild,
+  vifm-0.2a.ebuild:
+  Replacing einfo with elog
 
   01 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> vifm-0.2a.ebuild:
   Stable on x86. Bug 111167.

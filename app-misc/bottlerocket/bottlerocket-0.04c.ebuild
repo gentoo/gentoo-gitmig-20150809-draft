@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bottlerocket/bottlerocket-0.04c.ebuild,v 1.8 2005/07/21 17:14:47 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bottlerocket/bottlerocket-0.04c.ebuild,v 1.9 2007/01/28 04:58:32 genone Exp $
 
 IUSE=""
 
@@ -23,9 +23,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Be sure to create a /dev/firecracker symlink to the"
-	einfo "serial port that has the Firecracker serial interface"
-	einfo "installed on it."
-	einfo
+	elog
+	elog "Be sure to create a /dev/firecracker symlink to the"
+	elog "serial port that has the Firecracker serial interface"
+	elog "installed on it."
+	elog
 }

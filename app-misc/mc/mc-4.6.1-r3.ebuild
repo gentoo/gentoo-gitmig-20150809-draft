@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.1-r3.ebuild,v 1.1 2006/11/15 11:00:22 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.1-r3.ebuild,v 1.2 2007/01/28 05:19:47 genone Exp $
 
 inherit flag-o-matic eutils
 
@@ -137,11 +137,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Add the following line to your ~/.bashrc to"
-	einfo "allow mc to chdir to its latest working dir at exit"
-	einfo ""
-	einfo "# Midnight Commander chdir enhancement"
-	einfo "if [ -f /usr/share/mc/mc.gentoo ]; then"
-	einfo "	. /usr/share/mc/mc.gentoo"
-	einfo "fi"
+	elog "Add the following line to your ~/.bashrc to"
+	elog "allow mc to chdir to its latest working dir at exit"
+	elog ""
+	elog "# Midnight Commander chdir enhancement"
+	elog "if [ -f /usr/share/mc/mc.gentoo ]; then"
+	elog "	. /usr/share/mc/mc.gentoo"
+	elog "fi"
 }

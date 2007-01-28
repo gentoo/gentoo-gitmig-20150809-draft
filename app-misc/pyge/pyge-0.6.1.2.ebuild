@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pyge/pyge-0.6.1.2.ebuild,v 1.9 2005/06/05 11:55:35 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pyge/pyge-0.6.1.2.ebuild,v 1.10 2007/01/28 05:23:12 genone Exp $
 
 inherit eutils
 
@@ -32,7 +32,7 @@ src_unpack() {
 }
 
 pkg_postinst() {
-	einfo "You can find a sample database in /usr/share/pyge/gutenberg.xml"
-	einfo "For speech output you may optionally install app-accessibility/festival"
+	elog "You can find a sample database in /usr/share/pyge/gutenberg.xml"
+	elog "For speech output you may optionally install app-accessibility/festival"
 }
 

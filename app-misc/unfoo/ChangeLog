@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/unfoo
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.18 2006/07/30 01:52:28 deltacow Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.19 2007/01/28 05:28:36 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> unfoo-1.0.4.ebuild,
+  unfoo-1.0.5.ebuild:
+  Replacing einfo with elog
 
   30 Jul 2006; Scott Stoddard <deltacow@gentoo.org> unfoo-1.0.5.ebuild:
   Stable on amd64 (re bug 142119)

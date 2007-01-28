@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/secure-delete/secure-delete-3.1.ebuild,v 1.2 2006/03/09 19:46:04 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/secure-delete/secure-delete-3.1.ebuild,v 1.3 2007/01/28 05:25:58 genone Exp $
 
 inherit eutils
 
@@ -51,6 +51,6 @@ pkg_postinst() {
 	ewarn "such as reiserfs or XFS."
 	ewarn "See documentation for more information."
 
-	einfo "The kernel module has been removed since it does not compile"
-	einfo "for non-smp kernels."
+	elog "The kernel module has been removed since it does not compile"
+	elog "for non-smp kernels."
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/unfoo-1.0.4.ebuild,v 1.14 2005/05/18 19:28:03 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/unfoo-1.0.4.ebuild,v 1.15 2007/01/28 05:28:36 genone Exp $
 
 DESCRIPTION="A simple bash driven frontend to simplify decompression of files"
 HOMEPAGE="http://obsoleet.org/code/unfoo"
@@ -25,8 +25,8 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "unfoo can handle far more than just .tar*, but it requires some"
-	einfo "optional packages to do so. For a list, either consult the source"
-	einfo "(less /usr/bin/unfoo), or see http://obsoleet.org/code/unfoo"
+	elog "unfoo can handle far more than just .tar*, but it requires some"
+	elog "optional packages to do so. For a list, either consult the source"
+	elog "(less /usr/bin/unfoo), or see http://obsoleet.org/code/unfoo"
 	echo
 }

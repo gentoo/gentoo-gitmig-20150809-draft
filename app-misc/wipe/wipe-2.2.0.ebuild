@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/wipe-2.2.0.ebuild,v 1.11 2006/05/18 00:42:57 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/wipe-2.2.0.ebuild,v 1.12 2007/01/28 05:32:15 genone Exp $
 
 DESCRIPTION="Secure file wiping utility based on Peter Gutman's patterns"
 HOMEPAGE="http://wipe.sourceforge.net/"
@@ -20,6 +20,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Note that wipe is useless on journalling filesystems, such as reiserfs or XFS."
-	einfo "See documentation for more info."
+	elog "Note that wipe is useless on journalling filesystems, such as reiserfs or XFS."
+	elog "See documentation for more info."
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9005.483.ebuild,v 1.9 2004/07/11 02:19:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9005.483.ebuild,v 1.10 2007/01/28 05:11:23 genone Exp $
 
 MAJ_PV=${PV:0:6}
 MIN_PV=${PV:7:9}
@@ -50,12 +50,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Either configure your email address in /etc/conf.d/dnetc"
-	einfo "or create the configuration file /opt/distributed.net/dnetc.ini"
+	elog "Either configure your email address in /etc/conf.d/dnetc"
+	elog "or create the configuration file /opt/distributed.net/dnetc.ini"
 }
 
 pkg_postrm() {
 	if [ -d /opt/distributed.net ]; then
-		einfo "All files has not been removed from /opt/distributed.net"
+		elog "All files has not been removed from /opt/distributed.net"
 	fi
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/digitemp-3.2.0.ebuild,v 1.7 2005/01/01 14:58:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/digitemp-3.2.0.ebuild,v 1.8 2007/01/28 05:08:08 genone Exp $
 
 DESCRIPTION="Temperature logging and reporting using Dallas Semiconductor's iButtons and 1-Wire protocol"
 HOMEPAGE="http://www.digitemp.com http://www.ibutton.com"
@@ -53,8 +53,8 @@ src_install() {
 pkg_postinst() {
 	ewarn "set the SERIAL_DRIVER environment variable to ds9097 to build"
 	ewarn "for that controller instead"
-	einfo ""
-	einfo "examples of using digitemp with python, perl, and rrdtool are"
-	einfo "located in ${exampledir}"
-	einfo ""
+	elog ""
+	elog "examples of using digitemp with python, perl, and rrdtool are"
+	elog "located in ${exampledir}"
+	elog ""
 }

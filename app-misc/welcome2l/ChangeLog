@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/welcome2l
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/welcome2l/ChangeLog,v 1.9 2005/04/21 19:46:04 blubb Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/welcome2l/ChangeLog,v 1.10 2007/01/28 05:31:07 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> welcome2l-3.04.ebuild:
+  Replacing einfo with elog
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> welcome2l-3.04.ebuild:
   stable on amd64

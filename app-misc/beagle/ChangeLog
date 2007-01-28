@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/beagle
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.43 2007/01/15 02:58:26 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.44 2007/01/28 04:55:05 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> beagle-0.2.7.ebuild,
+  beagle-0.2.13.ebuild, beagle-0.2.14.ebuild:
+  Replacing einfo with elog
 
   15 Jan 2007; Luis Medinas <metalgod@gentoo.org> beagle-0.2.13.ebuild,
   beagle-0.2.14.ebuild:

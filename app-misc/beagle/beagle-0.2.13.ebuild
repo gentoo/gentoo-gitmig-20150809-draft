@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.13.ebuild,v 1.3 2007/01/15 02:58:26 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.13.ebuild,v 1.4 2007/01/28 04:55:05 genone Exp $
 
 inherit gnome.org eutils autotools mono
 
@@ -123,15 +123,15 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "If available, Beagle greatly benefits from using certain operating"
-	einfo "system features such as Extended Attributes and inotify."
+	elog "If available, Beagle greatly benefits from using certain operating"
+	elog "system features such as Extended Attributes and inotify."
 	echo
-	einfo "If you want static queryables such as the portage tree and system"
-	einfo "documentation you will need to edit the /etc/beagle/crawl-* files"
-	einfo "and change CRAWL_ENABLE from 'no' to 'yes'."
+	elog "If you want static queryables such as the portage tree and system"
+	elog "documentation you will need to edit the /etc/beagle/crawl-* files"
+	elog "and change CRAWL_ENABLE from 'no' to 'yes'."
 	echo
-	einfo "For more info on how to create the optimal beagle environment, and"
-	einfo "basic usage info, see the Gentoo page of the Beagle website:"
-	einfo " http://www.beagle-project.org/Gentoo_Installation"
+	elog "For more info on how to create the optimal beagle environment, and"
+	elog "basic usage info, see the Gentoo page of the Beagle website:"
+	elog " http://www.beagle-project.org/Gentoo_Installation"
 }
 

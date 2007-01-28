@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/digitemp-3.3.2.ebuild,v 1.5 2007/01/02 23:42:03 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/digitemp-3.3.2.ebuild,v 1.6 2007/01/28 05:08:08 genone Exp $
 
 DESCRIPTION="Temperature logging and reporting using Dallas Semiconductor's iButtons and 1-Wire protocol"
 HOMEPAGE="http://www.digitemp.com http://www.ibutton.com"
@@ -62,7 +62,7 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "Examples of using digitemp with python, perl, and rrdtool are"
-	einfo "located in /usr/share/doc/${PF}/"
+	elog "Examples of using digitemp with python, perl, and rrdtool are"
+	elog "located in /usr/share/doc/${PF}/"
 	echo
 }

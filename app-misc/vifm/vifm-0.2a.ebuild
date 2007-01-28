@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/vifm-0.2a.ebuild,v 1.9 2005/11/01 20:21:40 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/vifm-0.2a.ebuild,v 1.10 2007/01/28 05:30:03 genone Exp $
 
 DESCRIPTION="Console file manager with vi/vim-like keybindings"
 HOMEPAGE="http://vifm.sourceforge.net/"
@@ -40,10 +40,10 @@ src_install() {
 	dodoc INSTALL AUTHORS TODO README
 }
 pkg_postinst() {
-	einfo "To use vim to view the vifm help, copy /usr/share/${P}/vifm.txt"
-	einfo "to ~/.vim/doc/ and run ':helptags ~/.vim/doc' in vim"
-	einfo "Then edit ~/.vifm/vifmrc${PV/a/} and set USE_VIM_HELP=1"
-	einfo ""
-	einfo "To use the vifm plugin in vim, copy /usr/share/${P}/vifm.vim to"
-	einfo "/usr/share/vim/vim62/"
+	elog "To use vim to view the vifm help, copy /usr/share/${P}/vifm.txt"
+	elog "to ~/.vim/doc/ and run ':helptags ~/.vim/doc' in vim"
+	elog "Then edit ~/.vifm/vifmrc${PV/a/} and set USE_VIM_HELP=1"
+	elog ""
+	elog "To use the vifm plugin in vim, copy /usr/share/${P}/vifm.vim to"
+	elog "/usr/share/vim/vim62/"
 }

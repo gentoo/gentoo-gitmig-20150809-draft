@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ccal
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ccal/ChangeLog,v 1.7 2005/11/08 03:32:29 weeve Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ccal/ChangeLog,v 1.8 2007/01/28 05:00:00 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> ccal-0.6.ebuild:
+  Replacing einfo with elog
 
   08 Nov 2005; Jason Wever <weeve@gentoo.org> ccal-0.6.ebuild:
   Added ~sparc keyword wrt bug #111759.

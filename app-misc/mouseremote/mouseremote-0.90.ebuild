@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mouseremote/mouseremote-0.90.ebuild,v 1.15 2006/02/11 21:23:07 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mouseremote/mouseremote-0.90.ebuild,v 1.16 2007/01/28 05:20:58 genone Exp $
 
 inherit eutils
 
@@ -44,20 +44,20 @@ pkg_postinst() {
 	[ -e /dev/mumse ] || mkfifo ${ROOT}/dev/mumse
 	[ -e /dev/x10fifo ] || mkfifo ${ROOT}/dev/x10fifo
 
-	einfo "To use the mouse function in X, add the following to your XF86Config"
-	einfo "Section \"InputDevice\""
-	einfo "	Identifier  \"MouseREM\""
-	einfo "	Driver      \"mouse\""
-	einfo "	Option      \"Protocol\"      \"MouseSystems\""
-	einfo "	Option      \"Device\"        \"/dev/mumse\""
-	einfo "EndSection"
-	einfo
-	einfo "Don't forget to add the new device to the section \"ServerLayout\""
-	einfo "like:	InputDevice \"MouseREM\" \"SendCoreEvents\""
-	einfo
-	einfo "Enable the daemon with \"rc-update add mouseremote default\"."
-	einfo
-	einfo "Configure the daemon is run in /etc/conf.d/mouseremote."
-	einfo
-	einfo "See /usr/share/doc/${PF} on how to configure the buttons."
+	elog "To use the mouse function in X, add the following to your XF86Config"
+	elog "Section \"InputDevice\""
+	elog "	Identifier  \"MouseREM\""
+	elog "	Driver      \"mouse\""
+	elog "	Option      \"Protocol\"      \"MouseSystems\""
+	elog "	Option      \"Device\"        \"/dev/mumse\""
+	elog "EndSection"
+	elog
+	elog "Don't forget to add the new device to the section \"ServerLayout\""
+	elog "like:	InputDevice \"MouseREM\" \"SendCoreEvents\""
+	elog
+	elog "Enable the daemon with \"rc-update add mouseremote default\"."
+	elog
+	elog "Configure the daemon is run in /etc/conf.d/mouseremote."
+	elog
+	elog "See /usr/share/doc/${PF} on how to configure the buttons."
 }

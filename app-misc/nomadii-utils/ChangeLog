@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/nomadii-utils
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nomadii-utils/ChangeLog,v 1.7 2005/09/24 19:11:41 vanquirius Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nomadii-utils/ChangeLog,v 1.8 2007/01/28 05:22:07 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> nomadii-utils-0.8.ebuild,
+  nomadii-utils-0.8-r1.ebuild:
+  Replacing einfo with elog
 
 *nomadii-utils-0.8-r1 (24 Sep 2005)
 

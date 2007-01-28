@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/welcome2l/welcome2l-3.04.ebuild,v 1.12 2005/04/21 19:46:04 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/welcome2l/welcome2l-3.04.ebuild,v 1.13 2007/01/28 05:31:07 genone Exp $
 
 inherit eutils
 
@@ -37,6 +37,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "NOTE: To start Welcome2L on boot, please type:"
-	einfo "rc-update add Welcome2L default"
+	elog "NOTE: To start Welcome2L on boot, please type:"
+	elog "rc-update add Welcome2L default"
 }

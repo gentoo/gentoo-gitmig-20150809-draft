@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fujiplay/fujiplay-1.33.ebuild,v 1.12 2006/11/25 01:11:15 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fujiplay/fujiplay-1.33.ebuild,v 1.13 2007/01/28 05:12:30 genone Exp $
 
 inherit eutils
 
@@ -32,15 +32,15 @@ src_install() {
 
 pkg_postinst() {
 	ln -s /dev/ttyS0 /dev/fujifilm
-	einfo "A symbolic link /dev/ttyS0 -> /dev/fujifilm was created."
-	einfo "You may want to create a serial group to allow non-root"
-	einfo "members R/W access to the serial device."
+	elog "A symbolic link /dev/ttyS0 -> /dev/fujifilm was created."
+	elog "You may want to create a serial group to allow non-root"
+	elog "members R/W access to the serial device."
 	echo
 }
 
 pkg_postrm() {
 	rm -f /dev/fujifilm
 	echo
-	einfo "The symbolic link /dev/fujifilm was removed."
+	elog "The symbolic link /dev/fujifilm was removed."
 	echo
 }

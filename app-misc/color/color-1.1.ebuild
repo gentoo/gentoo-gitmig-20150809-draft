@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/color/color-1.1.ebuild,v 1.15 2006/02/06 17:12:57 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/color/color-1.1.ebuild,v 1.16 2007/01/28 05:04:09 genone Exp $
 
 inherit ccc
 
@@ -37,11 +37,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "For information on using colour in your shell scripts,"
-	einfo "run \`color\` without any arguments."
-	einfo
-	einfo "To see all the colours available, use this command"
-	einfo "	$ color --list"
-	einfo
-	einfo "More examples are available in /usr/share/doc/${PF}."
+	elog "For information on using colour in your shell scripts,"
+	elog "run \`color\` without any arguments."
+	elog
+	elog "To see all the colours available, use this command"
+	elog "	$ color --list"
+	elog
+	elog "More examples are available in /usr/share/doc/${PF}."
 }

@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/secure-delete
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/secure-delete/ChangeLog,v 1.18 2006/03/08 20:20:33 smithj Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/secure-delete/ChangeLog,v 1.19 2007/01/28 05:25:58 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> secure-delete-3.0.ebuild,
+  secure-delete-3.1.ebuild:
+  Replacing einfo with elog
 
 *secure-delete-3.1 (08 Mar 2006)
 

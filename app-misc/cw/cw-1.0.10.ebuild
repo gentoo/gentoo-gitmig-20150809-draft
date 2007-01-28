@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/cw-1.0.10.ebuild,v 1.4 2005/06/05 11:49:45 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/cw-1.0.10.ebuild,v 1.5 2007/01/28 05:05:11 genone Exp $
 
 DESCRIPTION="A non-intrusive real-time ANSI color wrapper for common unix-based commands"
 HOMEPAGE="http://cwrapper.sourceforge.net/"
@@ -47,14 +47,14 @@ pkg_postinst() {
 	eend $?
 
 	echo
-	einfo "To enable color-wrapper, as your user, run:"
-	einfo "  colorcfg [1|2|3]"
-	einfo "to add relevant environment variables to your ~/.bash_profile"
-	einfo "Run colorcfg without options to see what [1|2|3] means."
-	einfo
-	einfo "After sourcing your ~/.bash_profile, commands for which definitions"
-	einfo "are provided should have colored output."
-	einfo
-	einfo "To enable/disable colored output, run: 'colors [on|off]'."
+	elog "To enable color-wrapper, as your user, run:"
+	elog "  colorcfg [1|2|3]"
+	elog "to add relevant environment variables to your ~/.bash_profile"
+	elog "Run colorcfg without options to see what [1|2|3] means."
+	elog
+	elog "After sourcing your ~/.bash_profile, commands for which definitions"
+	elog "are provided should have colored output."
+	elog
+	elog "To enable/disable colored output, run: 'colors [on|off]'."
 	echo
 }

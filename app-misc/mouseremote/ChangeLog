@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mouseremote
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mouseremote/ChangeLog,v 1.9 2006/02/11 21:23:07 mcummings Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mouseremote/ChangeLog,v 1.10 2007/01/28 05:20:59 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> mouseremote-0.90.ebuild:
+  Replacing einfo with elog
 
   11 Feb 2006; Michael Cummings <mcummings@gentoo.org>
   mouseremote-0.90.ebuild:

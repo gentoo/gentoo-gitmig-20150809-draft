@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nomadii-utils/nomadii-utils-0.8.ebuild,v 1.14 2005/08/16 18:10:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nomadii-utils/nomadii-utils-0.8.ebuild,v 1.15 2007/01/28 05:22:07 genone Exp $
 
 IUSE="readline"
 
@@ -39,12 +39,12 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "To use nomadii, you need to have usbdevfs compiled in your kernel"
-	einfo "Look for: CONFIG_USB_DEVICEFS or Preliminary USB device filesystem"
+	elog "To use nomadii, you need to have usbdevfs compiled in your kernel"
+	elog "Look for: CONFIG_USB_DEVICEFS or Preliminary USB device filesystem"
 	echo
-	einfo "To use nomadii as a regular user, add the following to /etc/fstab"
-	einfo "   usbdevfs /proc/bus/usb usbdevfs devmode=0660,devgid=85 0 0"
-	einfo "Remount it, then add the regular user to the usb group"
-	einfo "   usermod -G usb <username>"
+	elog "To use nomadii as a regular user, add the following to /etc/fstab"
+	elog "   usbdevfs /proc/bus/usb usbdevfs devmode=0660,devgid=85 0 0"
+	elog "Remount it, then add the regular user to the usb group"
+	elog "   usermod -G usb <username>"
 	echo
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/towitoko/towitoko-2.0.7-r1.ebuild,v 1.4 2005/01/01 15:26:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/towitoko/towitoko-2.0.7-r1.ebuild,v 1.5 2007/01/28 05:27:08 genone Exp $
 
 IUSE="static moneyplex"
 
@@ -32,8 +32,8 @@ src_install() {
 pkg_postinst() {
 	if ! use moneyplex
 	then
-		einfo "If you want to use the moneyplex home banking software from"
-		einfo "http://www.matrica.de"
-		einfo "then please re-emerge this package with 'moneyplex' in USE"
+		elog "If you want to use the moneyplex home banking software from"
+		elog "http://www.matrica.de"
+		elog "then please re-emerge this package with 'moneyplex' in USE"
 	fi
 }

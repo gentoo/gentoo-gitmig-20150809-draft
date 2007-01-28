@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.19-r1.ebuild,v 1.8 2005/12/30 16:40:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.19-r1.ebuild,v 1.9 2007/01/28 05:06:50 genone Exp $
 
 inherit eutils bash-completion flag-o-matic
 
@@ -46,7 +46,7 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "Because of a conflict with app-misc/tdl, the tdl symbolic link"
-	einfo "and manual page have been removed."
+	elog "Because of a conflict with app-misc/tdl, the tdl symbolic link"
+	elog "and manual page have been removed."
 	bash-completion_pkg_postinst
 }

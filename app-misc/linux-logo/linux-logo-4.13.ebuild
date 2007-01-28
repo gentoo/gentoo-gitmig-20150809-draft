@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-4.13.ebuild,v 1.1 2006/05/07 19:45:10 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-4.13.ebuild,v 1.2 2007/01/28 05:17:00 genone Exp $
 
 inherit eutils
 
@@ -54,15 +54,15 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "Linux_logo ebuild for Gentoo comes with two Gentoo logos."
-	einfo ""
-	einfo "To display the first Gentoo logo type: linux_logo -L 3"
-	einfo "To display the second Gentoo logo type: linux_logo -L 4"
-	einfo "To display all the logos available type: linux_logo -L list."
-	einfo ""
-	einfo "To start linux_logo on boot, please type:"
-	einfo "   rc-update add linux-logo default"
-	einfo "which uses the settings found in"
-	einfo "   /etc/conf.d/linux-logo"
+	elog "Linux_logo ebuild for Gentoo comes with two Gentoo logos."
+	elog ""
+	elog "To display the first Gentoo logo type: linux_logo -L 3"
+	elog "To display the second Gentoo logo type: linux_logo -L 4"
+	elog "To display all the logos available type: linux_logo -L list."
+	elog ""
+	elog "To start linux_logo on boot, please type:"
+	elog "   rc-update add linux-logo default"
+	elog "which uses the settings found in"
+	elog "   /etc/conf.d/linux-logo"
 	echo
 }

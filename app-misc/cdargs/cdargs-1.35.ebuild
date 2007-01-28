@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdargs/cdargs-1.35.ebuild,v 1.3 2006/06/13 03:23:19 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdargs/cdargs-1.35.ebuild,v 1.4 2007/01/28 05:02:48 genone Exp $
 
 DESCRIPTION="Bookmarks and browser for the shell builtin cd command"
 HOMEPAGE="http://www.skamphausen.de/software/cdargs"
@@ -28,23 +28,23 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "Add the following line to your ~/.bashrc to enable cdargs helper"
-	einfo "functions/aliases in your environment:"
-	einfo "[ -f /usr/share/cdargs/cdargs-bash.sh ] && \\ "
-	einfo "		source /usr/share/cdargs/cdargs-bash.sh"
-	einfo
-	einfo "Users of tcshell will find cdargs-tcsh.csh there with a reduced"
-	einfo "feature set.  See INSTALL file in the documentation directory for"
-	einfo "more information."
+	elog "Add the following line to your ~/.bashrc to enable cdargs helper"
+	elog "functions/aliases in your environment:"
+	elog "[ -f /usr/share/cdargs/cdargs-bash.sh ] && \\ "
+	elog "		source /usr/share/cdargs/cdargs-bash.sh"
+	elog
+	elog "Users of tcshell will find cdargs-tcsh.csh there with a reduced"
+	elog "feature set.  See INSTALL file in the documentation directory for"
+	elog "more information."
 
 	if use emacs ; then
-		einfo
-		einfo "To get an interactive cv defun in (X)Emacs load cdargs.el:"
-		einfo " (setq load-path"
-		einfo "       (append (list "
-		einfo "        \"/usr/share/cdargs/\")"
-		einfo "        load-path))"
-		einfo " (require 'cdargs)"
+		elog
+		elog "To get an interactive cv defun in (X)Emacs load cdargs.el:"
+		elog " (setq load-path"
+		elog "       (append (list "
+		elog "        \"/usr/share/cdargs/\")"
+		elog "        load-path))"
+		elog " (require 'cdargs)"
 	fi
 	echo
 }

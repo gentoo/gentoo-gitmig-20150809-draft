@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/wipe-2.2.20050509.ebuild,v 1.1 2006/12/03 23:22:47 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/wipe-2.2.20050509.ebuild,v 1.2 2007/01/28 05:32:15 genone Exp $
 
 inherit versionator
 
@@ -26,6 +26,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Note that wipe is useless on journalling filesystems, such as reiserfs or XFS."
-	einfo "See documentation for more info."
+	elog "Note that wipe is useless on journalling filesystems, such as reiserfs or XFS."
+	elog "See documentation for more info."
 }

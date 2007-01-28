@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/cw
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/ChangeLog,v 1.9 2006/02/13 01:50:05 malc Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/ChangeLog,v 1.10 2007/01/28 05:05:11 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> cw-1.0.10.ebuild,
+  cw-1.0.12.ebuild, cw-1.0.14.ebuild:
+  Replacing einfo with elog
 
   13 Feb 2006; <malc@gentoo.org> cw-1.0.14.ebuild:
   Added ~amd64, bug #122454

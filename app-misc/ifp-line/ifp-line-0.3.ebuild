@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ifp-line/ifp-line-0.3.ebuild,v 1.2 2006/02/05 19:53:58 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ifp-line/ifp-line-0.3.ebuild,v 1.3 2007/01/28 05:13:44 genone Exp $
 
 inherit eutils
 
@@ -33,17 +33,17 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "To enable non-root usage of ${PN}, you use any of the following"
-	einfo "methods."
-	einfo
-	einfo " 1. Merge media-sound/libifp-module and add the module to"
-	einfo "    /etc/modules.autoload.d/kernel-2.X (X being 4 or 6 depending"
-	einfo "    on what kernel you use."
-	einfo
-	einfo " 2. Follow the instructions in"
-	einfo "      /usr/share/doc/${PF}/TIPS.gz"
-	einfo
-	einfo " 3. Run /usr/share/${PN}/nonroot.sh"
-	einfo
+	elog
+	elog "To enable non-root usage of ${PN}, you use any of the following"
+	elog "methods."
+	elog
+	elog " 1. Merge media-sound/libifp-module and add the module to"
+	elog "    /etc/modules.autoload.d/kernel-2.X (X being 4 or 6 depending"
+	elog "    on what kernel you use."
+	elog
+	elog " 2. Follow the instructions in"
+	elog "      /usr/share/doc/${PF}/TIPS.gz"
+	elog
+	elog " 3. Run /usr/share/${PN}/nonroot.sh"
+	elog
 }

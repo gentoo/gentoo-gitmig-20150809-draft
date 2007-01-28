@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/secure-delete/secure-delete-3.0.ebuild,v 1.17 2005/11/25 20:36:37 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/secure-delete/secure-delete-3.0.ebuild,v 1.18 2007/01/28 05:25:58 genone Exp $
 
 MY_P=${PN//-/_}-${PV}
 S=${WORKDIR}/${MY_P}
@@ -41,7 +41,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "sfill and srm are useless on journaling filesystems,"
-	einfo "such as reiserfs or XFS."
-	einfo "See documentation for more information."
+	elog "sfill and srm are useless on journaling filesystems,"
+	elog "such as reiserfs or XFS."
+	elog "See documentation for more information."
 }
