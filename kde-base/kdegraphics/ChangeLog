@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.289 2007/01/25 19:10:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.290 2007/01/28 12:01:48 flameeyes Exp $
+
+  28 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/post-3.4.3-kdegraphics-CAN-2005-3193.diff,
+  -files/post-3.4.3-kdegraphics-CVE-2006-0301.diff,
+  -files/kdegraphics-3.4-configure.patch, -files/kdegraphics-3.4-gcc4.patch,
+  -files/kdegraphics-3.4.1-gocr.patch, -files/CAN-2005-0064.patch:
+  Remove a bunch of orphaned files.
 
   25 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   kdegraphics-3.5.6.ebuild:
