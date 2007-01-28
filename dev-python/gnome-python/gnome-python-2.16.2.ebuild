@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-2.16.2.ebuild,v 1.9 2007/01/21 19:46:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-2.16.2.ebuild,v 1.10 2007/01/28 07:37:32 vapier Exp $
 
 inherit gnome2 python eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.pygtk.org/"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86"
 IUSE="doc"
 
 RDEPEND=">=dev-lang/python-2.2
@@ -42,7 +42,7 @@ src_unpack() {
 src_install() {
 	gnome2_src_install
 
-	insinto /usr/share/doc/${P}
+	insinto /usr/share/doc/${PF}
 	doins -r examples
 }
 
