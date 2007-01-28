@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfce44.eclass,v 1.13 2007/01/25 19:32:16 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfce44.eclass,v 1.14 2007/01/28 14:20:43 welp Exp $
 
 # Xfce44 Eclass
 #
@@ -10,13 +10,19 @@ inherit fdo-mime gnome2-utils
 
 ## set some variable values:
 ## COMPRESS is the default compression extension
-## INSTALL is default make install directive
+## INSTALL is default gmake install directive
 ## *_VERSION sets the minimum version required for the panel
 
 COMPRESS=".tar.bz2"
-
 CONFIGURE="econf"
-INSTALL="make DESTDIR=${D} install"
+
+## Using gmake instead of make for FreeBSD. For you welp.
+
+## It actually should be using emake instead of gmake but
+## there was issues like files of package xyz got owned by
+## other package. Please test building several packages with
+## emake on your system and replace this accordingly.
+INSTALL="gmake DESTDIR=${D} install"
 
 XFCE_BETA_VERSION="4.3.99.2"
 XFCE_VERSION="4.4.0"
@@ -64,7 +70,6 @@ xfce44_goodies() {
 	[[ -z ${HOMEPAGE} ]] && HOMEPAGE="http://goodies.xfce.org"
 	S="${WORKDIR}/${MY_P:-${P}}"
 	SRC_URI="http://goodies.xfce.org/releases/${MY_PN}/${MY_P}${COMPRESS}"
-
 }
 
 ## goodies_panel_plugin calls panel_plugin and goodies funtions in correct order
@@ -81,7 +86,7 @@ xfce44_goodies_thunar_plugin() {
 
 ## sets SRC_URI and HOMPAGE for all Xfce core packages
 xfce44_core_package() {
-	SRC_URI="http://www.xfce.org/archive/xfce-${PV}/src/${P}${COMPRESS}"
+	SRC_URI="http://www.xfce.org/archive/xfce-${XFCE_MASTER_VERSION}/src/${P}${COMPRESS}"
 	HOMEPAGE="http://www.xfce.org/"
 }
 
@@ -115,6 +120,14 @@ DEPEND="${RDEPEND}
 
 xfce44_src_compile() {
 	## XFCE_CONFIG sets extra config parameters
+	if has doc ${IUSE} && use doc ; then
+		XFCE_CONFIG="${XFCE_CONFIG} $(use_enable doc gtk-doc)"
+	fi
+
+	if has startup-notification ${IUSE} && use startup-notification ; then
+		XFCE_CONFIG="${XFCE_CONFIG} $(use_enable startup-notification)"
+	fi
+
 	if has debug ${IUSE} && use debug ; then
 		XFCE_CONFIG="${XFCE_CONFIG} $(use_enable debug)"
 	fi
@@ -125,6 +138,9 @@ xfce44_src_compile() {
 }
 
 xfce44_src_install() {
+	## Install documentation from sources defined in DOCS
+	[[ -n "${DOCS}" ]] && dodoc ${DOCS}
+
 	## INSTALL is default make install string
 	${INSTALL} || die
 }
