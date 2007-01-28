@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.3.3.ebuild,v 1.7 2007/01/23 13:08:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.3.3.ebuild,v 1.8 2007/01/28 07:39:56 vapier Exp $
 
 inherit python wxwidgets eutils multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/wxpython/${MY_P}.tar.bz2"
 
 LICENSE="wxWinLL-3"
 SLOT="2.6"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="unicode opengl"
 
 RDEPEND=">=dev-lang/python-2.1
@@ -29,11 +29,11 @@ RDEPEND=">=dev-lang/python-2.1
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-S="${WORKDIR}/${MY_P}/wxPython/"
+S=${WORKDIR}/${MY_P}/wxPython/
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}" || die "failed to cd to ${S}"
+	cd "${S}"
 	sed -i "s:cflags.append('-O3'):pass:" config.py || die "sed failed"
 	epatch "${FILESDIR}/scripts-multiver-2.6.1.0.diff"
 }
@@ -102,10 +102,8 @@ src_install() {
 }
 
 pkg_postinst() {
-
 	elog "Gentoo now uses the Multi-version method for SLOT'ing"
 	elog "Developers see this site for instructions on using 2.4 or 2.6"
 	elog "with your apps:"
 	elog "http://wiki.wxpython.org/index.cgi/MultiVersionInstalls"
 }
-
