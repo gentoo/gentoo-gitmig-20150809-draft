@@ -16,10 +16,10 @@ EBUILD gst-plugins-base-0.10.10.ebuild 1436 RMD160 131e493461a0715efda1adc89fd0b
 MD5 7ce8a08f40468b6e64b983855bd3dbe3 gst-plugins-base-0.10.10.ebuild 1436
 RMD160 131e493461a0715efda1adc89fd0b611027a22fd gst-plugins-base-0.10.10.ebuild 1436
 SHA256 b905260c0d4d86f87be0da9b098b6e901be70d9f75d71e641689797d4b00782c gst-plugins-base-0.10.10.ebuild 1436
-EBUILD gst-plugins-base-0.10.11.ebuild 1434 RMD160 8d80a9b9db49f1c852f7a5db145578fde177e044 SHA1 df722286bfaa0bca1d1b5a0cc2b6f6e64d20c9df SHA256 2d7e7f572bd28f4f0393751670ee80db9f1c816ce8d2bbbb534e6f456cbcbcf1
-MD5 a1db7f19bb73d2cb4da0fca08f8b44d1 gst-plugins-base-0.10.11.ebuild 1434
-RMD160 8d80a9b9db49f1c852f7a5db145578fde177e044 gst-plugins-base-0.10.11.ebuild 1434
-SHA256 2d7e7f572bd28f4f0393751670ee80db9f1c816ce8d2bbbb534e6f456cbcbcf1 gst-plugins-base-0.10.11.ebuild 1434
+EBUILD gst-plugins-base-0.10.11.ebuild 1430 RMD160 1bdea95283613c4e42bc378efdb602371d3a4135 SHA1 32e1f95d44ed1fec4ae2b2659a41ebef1984397d SHA256 9f4bb8b7b88db65320c46493eadb66160e2e04c67d4833f48719b0742a860f38
+MD5 2f2f7e4ba2be8ca71e381eff473f6c10 gst-plugins-base-0.10.11.ebuild 1430
+RMD160 1bdea95283613c4e42bc378efdb602371d3a4135 gst-plugins-base-0.10.11.ebuild 1430
+SHA256 9f4bb8b7b88db65320c46493eadb66160e2e04c67d4833f48719b0742a860f38 gst-plugins-base-0.10.11.ebuild 1430
 EBUILD gst-plugins-base-0.10.4-r1.ebuild 1554 RMD160 781d05d64ea220abed887a604a844d635fe4e904 SHA1 0ab1c5d32e02ec9b421327ec531744cfd2d4fd57 SHA256 75d671d980a3fcbe83737d298940e15918c6d84e786e2afef1ee332a45e6d665
 MD5 a9f6af88021e5a9366b8c51845d3fdd5 gst-plugins-base-0.10.4-r1.ebuild 1554
 RMD160 781d05d64ea220abed887a604a844d635fe4e904 gst-plugins-base-0.10.4-r1.ebuild 1554
@@ -70,9 +70,9 @@ MD5 7ce537e51ee617c9ee048f4ac69cca7e files/digest-gst-plugins-base-0.10.9 277
 RMD160 9d96682e02c0781fec575fef3e6f9bdd1e53684f files/digest-gst-plugins-base-0.10.9 277
 SHA256 e134e257d23eae065d30d0457b3084a5ab5c51438cce341e43bf5d49222e661f files/digest-gst-plugins-base-0.10.9 277
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.6 (GNU/Linux)
+Version: GnuPG v2.0.1 (GNU/Linux)
 
-iD8DBQFFutxf+IXOQtHLm/gRAuH7AKCMSXhzUsiuTcWfEPeYUobKEGelKACdHoRJ
-woSwiDqrnKX8JgPzFanbTko=
-=utCi
+iD8DBQFFvFai8bi6rjpTunYRAoEVAJ41GNe8bBUAgKKM7QpyC/Ixmc8IDACgrSCc
+0VLERTIICDRAALYY7QmFyPQ=
+=vyj2
 -----END PGP SIGNATURE-----
