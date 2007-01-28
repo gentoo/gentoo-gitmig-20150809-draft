@@ -1,31 +1,29 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.0.2.ebuild,v 1.8 2007/01/23 04:56:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.0.2.ebuild,v 1.9 2007/01/28 07:32:33 vapier Exp $
 
-WANT_AUTOCONF=2.5
 inherit eutils multilib autotools
 
 DESCRIPTION="A message bus system, a simple way for applications to talk to each other"
 HOMEPAGE="http://dbus.freedesktop.org/"
 SRC_URI="http://dbus.freedesktop.org/releases/dbus/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="|| ( GPL-2 AFL-2.1 )"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+SLOT="0"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh ~sparc x86 ~x86-fbsd"
 IUSE="debug doc selinux X"
 
 RDEPEND="X? ( x11-libs/libXt x11-libs/libX11 )
 	selinux? ( sys-libs/libselinux )
 	>=dev-libs/expat-1.95.8
 	!<sys-apps/dbus-0.91"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? (	app-doc/doxygen
 		app-text/xmlto )"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	# fix dnotify issue with not detecting created files
