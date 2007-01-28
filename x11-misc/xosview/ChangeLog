@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xosview
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.31 2007/01/05 09:20:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.32 2007/01/28 19:26:17 nelchael Exp $
+
+  28 Jan 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/xosview-1.8.3-remove-serialmeter.patch, xosview-1.8.3.ebuild:
+  Fix bug #156304, removed SerialMeter.
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   xosview-1.8.2-r1.ebuild, xosview-1.8.3.ebuild:
