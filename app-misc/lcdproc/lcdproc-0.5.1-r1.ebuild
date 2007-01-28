@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.1-r1.ebuild,v 1.4 2007/01/24 22:27:14 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.1-r1.ebuild,v 1.5 2007/01/28 15:18:55 rbu Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -40,7 +40,6 @@ EXTRA_DRIVERS="bayrad CFontz CFontz633 CFontzPacket CwLnx EyeboxOne \
 	sed1520 serialVFD sli stv5730 t6963 text tyan "
 ALL_DRIVERS="${USE_DRIVERS} ${EXTRA_DRIVERS}"
 
-
 # compatibility with 0.4-ebuild format
 LCDPROC_DRIVERS=${LCDPROC_DRIVERS//,/ }
 
@@ -51,7 +50,6 @@ has all ${LCDPROC_DRIVERS} \
 	&& LCDPROC_DRIVERS="${EXTRA_DRIVERS}"
 has none ${LCDPROC_DRIVERS} \
 	&& LCDPROC_DRIVERS=""
-
 
 pkg_setup() {
 	echo
@@ -134,7 +132,7 @@ src_compile() {
 	# convert space separated LCDPROC_DRIVERS to comma separated COMMA_DRIVERS
 	local COMMA_DRIVERS
 	for driver in ${LCDPROC_DRIVERS}; do
-	    if [ -z "${COMMA_DRIVERS}" ] ; then
+		if [ -z "${COMMA_DRIVERS}" ] ; then
 			COMMA_DRIVERS="${driver}"
 		else
 			COMMA_DRIVERS="${COMMA_DRIVERS},${driver}"

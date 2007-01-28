@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.1-r2.ebuild,v 1.2 2007/01/27 19:00:52 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.1-r2.ebuild,v 1.3 2007/01/28 15:18:55 rbu Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -53,7 +53,6 @@ DEPEND="${RDEPEND}
 	doc?      ( app-text/xmlto )"
 RDEPEND="${RDEPEND}
 	lcd_devices_g15?      ( app-misc/g15daemon )"
-
 
 pkg_setup() {
 	if [ -n "${LCDPROC_DRIVERS}" ] ; then
@@ -157,7 +156,6 @@ append-driver() {
 	fi
 	return 0
 }
-
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
