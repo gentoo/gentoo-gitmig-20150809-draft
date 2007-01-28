@@ -1,5 +1,5 @@
---- ../build.xml	2007-01-26 14:42:58.000000000 -0500
-+++ build.xml	2007-01-26 14:58:59.000000000 -0500
+--- ../build.xml	2007-01-28 17:08:59.000000000 -0500
++++ build.xml	2007-01-28 17:15:32.000000000 -0500
 @@ -94,6 +94,7 @@
             excludes="**/CVS/**,**/.svn/**">
        <classpath refid="tomcat.classpath" />
@@ -40,6 +40,15 @@
  
      <!-- JSP 2.1 EL Implementation JAR File -->
      <jar  jarfile="${el-api.jar}">
+@@ -299,7 +300,7 @@
+ 
+   </target>
+ 
+-  <target name="build-docs">
++  <target name="build-docs" unless="nobuild.docs">
+ 
+     <copy todir="${tomcat.build}/webapps">
+       <fileset dir="webapps">
 @@ -447,11 +448,16 @@
  
    <target name="deploy" depends="build-only,build-docs">
@@ -57,7 +66,12 @@
  
    	<!-- Copy scripts -->
      <copy todir="${tomcat.build}/bin">
-@@ -492,8 +498,10 @@
+@@ -488,12 +494,14 @@
+              destdir="${tomcat.build}/webapps/examples/WEB-INF/classes"
+              debug="${compile.debug}" deprecation="${compile.deprecation}"
+              optimize="${compile.optimize}"
+-    	     classpath="${tomcat.classes}"
++    	     classpath="${tomcat.classes}:${jsp-api.jar}"
               excludes="**/CVS/**,**/.svn/**">
      </javac>
  

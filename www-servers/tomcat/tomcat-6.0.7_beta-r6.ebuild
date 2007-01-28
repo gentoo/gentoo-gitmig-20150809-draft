@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.7_beta-r5.ebuild,v 1.1 2007/01/28 07:26:59 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.7_beta-r6.ebuild,v 1.1 2007/01/28 23:00:55 wltjr Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -37,18 +37,17 @@ pkg_setup() {
 	enewgroup tomcat 265
 	enewuser tomcat 265 -1 /dev/null tomcat
 
-	JAVA_PKG_WANT_SOURCE="1.5"
-	JAVA_PKG_WANT_TARGET="1.5"
+	WANT_ANT_TASKS="ant-trax"
 }
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	epatch "${FILESDIR}/${SLOT}/build-xml.patch"
 
-	cd ${S}/bin
-	java-pkg_jar-from commons-daemon
+#	cd "${S}/bin"
+#	java-pkg_jar-from commons-daemon
 }
 
 src_compile(){
@@ -61,11 +60,16 @@ src_compile(){
 	# New way if others get out of heap space
 #	ANT_OPTS=-XX:MaxPermSize=128m
 
-	local antflags="build-jasper-jdt build-only -Dbase.path=${T}"
+	local antflags="build-jasper-jdt deploy -Dbase.path=${T}"
 	antflags="${antflags} -Dcompile.debug=false"
+	if ! use doc; then
+		antflags="${antflags} -Dnobuild.docs=true"
+	fi
 	antflags="${antflags} -Dant.jar=$(java-pkg_getjar ant-core ant.jar)"
 	antflags="${antflags} -Dcommons-daemon.jar=$(java-pkg_getjar commons-daemon commons-daemon.jar)"
 	antflags="${antflags} -Djdt.jar=$(java-pkg_getjar eclipse-ecj-3.2 ecj.jar)"
+	antflags="${antflags} -Djsp-api.jar=$(java-pkg_getjar tomcat-servlet-api-2.5 jsp-api.jar)"
+	antflags="${antflags} -Dservlet-api.jar=$(java-pkg_getjar tomcat-servlet-api-2.5 servlet-api.jar)"
 	eant ${antflags}
 }
 
@@ -87,7 +91,7 @@ src_install() {
 	dodir   ${CATALINA_BASE}
 	diropts -m0755
 
-	cd ${S}
+	cd "${S}"
 	# we don't need dos scripts
 	rm -f bin/*.bat
 	chmod 755 bin/*.sh
@@ -121,7 +125,7 @@ src_install() {
 	cd "${D}/usr/share/${TOMCAT_NAME}/lib"
 	java-pkg_jar-from tomcat-servlet-api-2.5
 
-	cd ${S}
+	cd "${S}"
 
 	# Copy over webapps, some controlled by use flags
 	cp -p RELEASE-NOTES webapps/ROOT/RELEASE-NOTES.txt
@@ -133,11 +137,10 @@ src_install() {
 	cp -pr webapps/manager ${D}${TOMCAT_HOME}/webapps
 
 	if use doc; then
-		cp -pr webapps/docs ${D}${CATALINA_BASE}/webapps
+		cp -pr output/build/webapps/docs ${D}${CATALINA_BASE}/webapps
 	fi
 	if use examples; then
-		cp -pr webapps/examples \
-			${D}${CATALINA_BASE}/webapps
+		cp -pr output/build/webapps/examples ${D}${CATALINA_BASE}/webapps
 	fi
 
 	# symlink the directories to make CATALINA_BASE possible

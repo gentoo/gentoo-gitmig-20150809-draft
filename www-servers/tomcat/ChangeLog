@@ -1,6 +1,18 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.110 2007/01/28 07:26:59 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.111 2007/01/28 23:00:54 wltjr Exp $
+
+*tomcat-6.0.8_alpha-r3 (28 Jan 2007)
+*tomcat-6.0.7_beta-r6 (28 Jan 2007)
+
+  28 Jan 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  files/6/build-xml.patch, -tomcat-6.0.7_beta-r5.ebuild,
+  +tomcat-6.0.7_beta-r6.ebuild, -tomcat-6.0.8_alpha-r2.ebuild,
+  +tomcat-6.0.8_alpha-r3.ebuild:
+  Fixed issue with examples not being compiled and/or complete. Thanks to
+  nostromo who provided some help there. Updated patch for examples
+  compilation and to make docs compilation depend on doc USE flag. A few other
+  syntax and policy corrections
 
 *tomcat-6.0.8_alpha-r2 (28 Jan 2007)
 *tomcat-6.0.7_beta-r5 (28 Jan 2007)
