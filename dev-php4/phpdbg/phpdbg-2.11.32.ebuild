@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/phpdbg/phpdbg-2.11.32.ebuild,v 1.5 2006/04/15 22:26:55 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/phpdbg/phpdbg-2.11.32.ebuild,v 1.6 2007/01/28 06:36:35 genone Exp $
 
 PHP_EXT_NAME="dbg"
 PHP_EXT_INI="yes"
@@ -49,10 +49,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Please reload Apache to activate the changes."
+	elog "Please reload Apache to activate the changes."
 }
 
 pkg_postrm() {
-	einfo "You need to remove all lines referring to the debugger, and"
-	einfo "extension=dbg.so. Please reload Apache to activate the changes."
+	elog "You need to remove all lines referring to the debugger, and"
+	elog "extension=dbg.so. Please reload Apache to activate the changes."
 }

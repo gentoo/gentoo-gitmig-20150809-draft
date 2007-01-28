@@ -1,6 +1,10 @@
 # ChangeLog for dev-php4/phpdbg
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/phpdbg/ChangeLog,v 1.6 2006/05/27 00:53:45 chtekk Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/phpdbg/ChangeLog,v 1.7 2007/01/28 06:36:35 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> phpdbg-2.11.32.ebuild,
+  phpdbg-2.13.1.ebuild:
+  Replacing einfo with elog
 
   27 May 2006; Luca Longinotti <chtekk@gentoo.org> phpdbg-2.13.1.ebuild:
   Added to ~amd64.
