@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/helpgui
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/helpgui/ChangeLog,v 1.1 2005/05/22 16:02:45 luckyduck Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/helpgui/ChangeLog,v 1.2 2007/01/28 17:09:22 wltjr Exp $
+
+*helpgui-1.1-r1 (28 Jan 2007)
+
+  28 Jan 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  +helpgui-1.1-r1.ebuild:
+  Migrated to gen 2, potential stale and might need to be removed from tree,
+  last release from upstream was October 11, 2003
 
 *helpgui-1.1 (22 May 2005)
 
