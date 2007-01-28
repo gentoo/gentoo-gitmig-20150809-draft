@@ -1,17 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/make.defaults,v 1.13 2007/01/20 14:21:41 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/make.defaults,v 1.14 2007/01/28 17:20:18 phreak Exp $
 
 ARCH="x86"
 ACCEPT_KEYWORDS="${ARCH}"
 USE="${ARCH} berkdb crypt dlloader hardened ncurses nls pam pic readline ssl tcpd zlib"
 GRP_STAGE23_USE="${ARCH} ${USE}"
-PORTDIR=/usr/portage/
-PKGDIR=${PORTDIR}/packages/${ARCH}/
 
 # x86
 CHOST="i386-pc-linux-gnu"
 CFLAGS="-O2 -mcpu=i386 -pipe -fforce-addr"
 CXXFLAGS="${CFLAGS}"
-
-
