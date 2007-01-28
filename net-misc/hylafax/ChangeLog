@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/hylafax
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.72 2006/10/01 17:54:59 dertobi123 Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.73 2007/01/28 23:59:35 nerdboy Exp $
+
+*hylafax-4.3.1 (28 Jan 2007)
+
+  28 Jan 2007; Steve Arnold <nerdboy@gentoo.org>
+  -files/hylafax-4.2.3-faxrcvd-eval-vulnerability.patch,
+  -files/hylafax-4.2.3-notify-eval-vulnerability.patch,
+  -files/hylafax-4.2.3-tiff_version.patch, -hylafax-4.2.3-r1.ebuild,
+  +hylafax-4.3.1.ebuild:
+  Added latest upstream version and removed oldest stale version.
 
   01 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   hylafax-4.3.0.ebuild:
