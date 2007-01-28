@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.19.2-r1.ebuild,v 1.2 2007/01/17 23:55:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.19.2-r1.ebuild,v 1.3 2007/01/28 13:01:53 vapier Exp $
 
 ETYPE="headers"
 H_SUPPORTEDARCH="alpha amd64 arm cris hppa m68k mips ia64 ppc ppc64 s390 sh sparc x86"
@@ -22,4 +22,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	[[ -n ${PATCH_VER} ]] && EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/${PV}
+}
+
+src_test() {
+	make ARCH=$(tc-arch-kernel) headers_check || die
 }
