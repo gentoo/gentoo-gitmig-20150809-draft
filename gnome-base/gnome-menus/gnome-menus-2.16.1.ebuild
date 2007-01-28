@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-2.16.1.ebuild,v 1.10 2007/01/21 19:51:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-2.16.1.ebuild,v 1.11 2007/01/28 07:40:42 vapier Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.6
@@ -27,5 +27,5 @@ src_unpack() {
 	gnome2_src_unpack
 
 	# Add a couple of important LegacyDir entries. See bug #97839.
-	epatch "${FILESDIR}/${PN}-2.10.2-legacy_dirs.patch"
+	epatch "${FILESDIR}"/${PN}-2.10.2-legacy_dirs.patch
 }
