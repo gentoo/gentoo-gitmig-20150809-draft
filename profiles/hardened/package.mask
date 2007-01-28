@@ -1,8 +1,12 @@
 # Copyright 2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.15 2006/11/29 21:47:49 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.16 2007/01/28 21:09:06 phreak Exp $
 
 # This file is additional masking for the hardened profile
+
+# Christian Heim <phreak@gentoo.org> (28 January 2007)
+# Mask sys-devel/autoconf-2.61 due to bug #161566
+=sys-devel/autoconf-2.61
 
 # Mask off gcc-4 for all hardened arches until SSP is sorted out (i.e.
 # backport for gcc-4.0 and 4.0/4.1 rigged for SSP support in the C
