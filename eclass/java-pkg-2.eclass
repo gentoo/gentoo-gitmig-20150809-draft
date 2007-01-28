@@ -5,7 +5,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-2.eclass,v 1.18 2007/01/28 19:53:17 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-2.eclass,v 1.19 2007/01/28 20:04:59 betelgeuse Exp $
 
 inherit java-utils-2
 
@@ -74,11 +74,6 @@ java-pkg-2_pkg_setup() {
 # ------------------------------------------------------------------------------
 java-pkg-2_src_compile() {
 	if [[ -e "${EANT_BUILD_XML:=build.xml}" ]]; then
-		if ! hasq java-ant-2 ${INHERITED}; then
-			msg="You should inherit java-ant-2 always when using eant"
-			ewarn ${msg}
-			is-java-strict && die ${msg}
-		fi
 		[[ "${EANT_FILTER_COMPILER}" ]] && \
 			java-pkg_filter-compiler ${EANT_FILTER_COMPILER}
 

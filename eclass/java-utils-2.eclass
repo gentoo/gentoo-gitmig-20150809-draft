@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.50 2007/01/26 20:24:23 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.51 2007/01/28 20:04:59 betelgeuse Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -1540,6 +1540,12 @@ eant() {
 #		java-pkg_announce-qa-violation \
 #			"Using eant, but not depending on dev-java/ant or dev-java/ant-core"
 #	fi
+
+	if ! hasq java-ant-2 ${INHERITED} && is-java-strict; then
+		msg="You should inherit java-ant-2 when using eant"
+		java-pkg_announce-qa-violation ${msg}
+		die ${msg}
+	fi
 
 	local antflags="-Dnoget=true -Dmaven.mode.offline=true"
 	java-pkg_init-compiler_
