@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/libxfce4util
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/ChangeLog,v 1.73 2007/01/25 19:21:35 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/ChangeLog,v 1.74 2007/01/28 14:25:52 welp Exp $
+
+  28 Jan 2007; Peter Weller <welp@gentoo.org> libxfce4util-4.4.0.ebuild:
+  Dep fixes, various other fixes
 
   25 Jan 2007; Peter Weller <welp@gentoo.org> libxfce4util-4.4.0.ebuild:
   fixed deps, removing usage of gnome2-utils, cleanup
