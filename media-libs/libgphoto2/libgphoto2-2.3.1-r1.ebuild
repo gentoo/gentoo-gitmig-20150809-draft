@@ -1,6 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.3.1.ebuild,v 1.1 2007/01/27 16:26:33 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.3.1-r1.ebuild,v 1.1 2007/01/28 18:20:59 alonbl Exp $
+
+# TODO
+# 1. Track upstream bug --disable-docs does not work.
+#	http://sourceforge.net/tracker/index.php?func=detail&aid=1643870&group_id=8874&atid=108874
+# 2. Track upstream bug udevscriptdir does not work.
+#	http://sourceforge.net/tracker/index.php?func=detail&aid=1646520&group_id=8874&atid=108874
 
 inherit eutils
 
@@ -74,9 +80,10 @@ src_compile() {
 		--with-doc-dir=/usr/share/doc/${PF} \
 		--with-html-dir=/usr/share/doc/${PF}/html \
 		--with-hotplug-doc-dir=/usr/share/doc/${PF}/hotplug \
+		udevscriptdir=/lib/udev \
 		$(use_enable nls) \
 		${myconf} || die "econf failed"
-#		$(use_enable doc docs) \
+#		$(use_enable doc docs) \		TODO
 
 	emake || die "make failed"
 }
@@ -84,10 +91,16 @@ src_compile() {
 src_install() {
 	emake DESTDIR=${D} install || die "install failed"
 
-	# fixup autoconf bug
+	# fixup autoconf bug TODO
 	if ! use doc && [ -d ${D}/usr/share/doc/${PF}/apidocs.html ]; then
 		rm -fr "${D}/usr/share/doc/${PF}/apidocs.html"
 	fi
+	# end fixup
+
+	# fixup udevscriptdir is not working TODO
+	dodir /lib
+	mv "${D}/usr/lib/udev" "${D}/lib"
+	# end fixup
 
 	dodoc ChangeLog NEWS* README AUTHORS TESTERS MAINTAINERS HACKING
 
