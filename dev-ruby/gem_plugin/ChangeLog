@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/gem_plugin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gem_plugin/ChangeLog,v 1.1 2007/01/04 13:35:15 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gem_plugin/ChangeLog,v 1.2 2007/01/28 13:32:29 flameeyes Exp $
+
+  28 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  gem_plugin-0.2.2.ebuild:
+  Add ~amd64 and ~x86-fbsd keywords.
 
 *gem_plugin-0.2.2 (04 Jan 2007)
 

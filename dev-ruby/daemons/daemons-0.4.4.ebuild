@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/daemons-0.4.4.ebuild,v 1.1 2006/04/17 23:17:07 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/daemons-0.4.4.ebuild,v 1.2 2007/01/28 13:31:43 flameeyes Exp $
 
 inherit ruby gems
 
@@ -11,6 +11,6 @@ SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~ia64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~x86 ~x86-fbsd"
 IUSE=""
 
