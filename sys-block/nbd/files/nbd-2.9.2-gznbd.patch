@@ -1,0 +1,13 @@
+--- gznbd/gznbd.c
++++ gznbd/gznbd.c
+@@ -49,8 +49,8 @@
+ /* asm/types defines __u??, at least on my system */
+ #include <asm/types.h>
+ 
+-#define u32 __u32
+-#define u64 __u64
++#include <syslog.h>
++#define MY_NAME "gznbd"
+ 
+ /* these headers take care of endianness */
+ #include "../config.h"
