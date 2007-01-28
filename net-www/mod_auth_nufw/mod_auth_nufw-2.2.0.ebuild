@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_nufw/mod_auth_nufw-2.2.0.ebuild,v 1.4 2007/01/15 21:58:36 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_nufw/mod_auth_nufw-2.2.0.ebuild,v 1.5 2007/01/28 19:09:57 chtekk Exp $
 
 inherit eutils apache-module autotools
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="ldap mysql postgres"
 
-DEPEND="<=dev-libs/apr-1
+DEPEND="=dev-libs/apr-0*
 		ldap? ( net-nds/openldap )
 		mysql? ( virtual/mysql )
 		postgres? ( dev-db/postgresql )"
