@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-0.9.0-r2.ebuild,v 1.4 2007/01/26 15:59:37 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-0.9.0-r2.ebuild,v 1.5 2007/01/28 10:13:23 pclouds Exp $
 
 inherit ruby
 
@@ -18,6 +18,7 @@ IUSE=""
 DEPEND=">=dev-lang/ruby-1.8"
 
 PATCHES="${FILESDIR}/no_post_install.patch
+	${FILESDIR}/no-system-rubygems.patch
 	${FILESDIR}/${P}-build-c-extensions.patch
 	${FILESDIR}/${P}-build-from-yaml.patch"
 USE_RUBY="ruby18"

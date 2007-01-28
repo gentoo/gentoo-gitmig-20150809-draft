@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-0.9.1.ebuild,v 1.3 2007/01/26 15:59:37 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-0.9.1.ebuild,v 1.4 2007/01/28 10:13:23 pclouds Exp $
 
 RUBY_BUG_145222=yes
 inherit ruby
@@ -19,7 +19,8 @@ IUSE="doc server examples"
 DEPEND=">=dev-lang/ruby-1.8"
 PDEPEND="server? ( dev-ruby/builder )" # index_gem_repository.rb
 
-PATCHES="${FILESDIR}/${P}-no_post_install.patch"
+PATCHES="${FILESDIR}/${P}-no_post_install.patch
+	${FILESDIR}/no-system-rubygems.patch"
 USE_RUBY="ruby18"
 
 src_unpack() {
