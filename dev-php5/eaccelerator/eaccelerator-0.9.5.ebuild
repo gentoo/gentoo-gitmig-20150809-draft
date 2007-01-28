@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/eaccelerator-0.9.5.ebuild,v 1.7 2006/11/10 14:24:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/eaccelerator-0.9.5.ebuild,v 1.8 2007/01/28 06:29:40 genone Exp $
 
 PHP_EXT_NAME="eaccelerator"
 PHP_EXT_INI="yes"
@@ -89,14 +89,14 @@ pkg_postinst() {
 
 	# You only need to restart the webserver if you're using mod_php.
 	if built_with_use =${PHP_PKG} apache || built_with_use =${PHP_PKG} apache2 ; then
-		einfo
-		einfo "You need to restart your Apache webserver to activate eAccelerator."
-		einfo
+		elog
+		elog "You need to restart your Apache webserver to activate eAccelerator."
+		elog
 	fi
 
-	einfo
-	einfo "Please see the files in ${ROOT}/usr/share/${PN}-php5/ for some examples"
-	einfo "and information on how to use the functions that"
-	einfo "eAccelerator adds to PHP."
-	einfo
+	elog
+	elog "Please see the files in ${ROOT}/usr/share/${PN}-php5/ for some examples"
+	elog "and information on how to use the functions that"
+	elog "eAccelerator adds to PHP."
+	elog
 }
