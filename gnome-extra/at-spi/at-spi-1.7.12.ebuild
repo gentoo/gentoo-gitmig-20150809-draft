@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.7.12.ebuild,v 1.10 2007/01/21 22:19:02 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.7.12.ebuild,v 1.11 2007/01/28 07:44:03 vapier Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://developer.gnome.org/projects/gap/"
 
 LICENSE="LGPL-2"
 SLOT="1"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/atk-1.12
@@ -38,7 +38,6 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
-
 
 src_unpack() {
 	gnome2_src_unpack
