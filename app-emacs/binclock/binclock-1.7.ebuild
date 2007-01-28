@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/binclock/binclock-1.7.ebuild,v 1.11 2005/07/01 18:14:57 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/binclock/binclock-1.7.ebuild,v 1.12 2007/01/28 04:03:25 genone Exp $
 
 inherit elisp
 
@@ -26,7 +26,7 @@ src_install() {
 
 pkg_postinst() {
 	elisp-site-regen
-	einfo "Please see ${SITELISP}/${PN}/binclock.el for the complete documentation."
+	elog "Please see ${SITELISP}/${PN}/binclock.el for the complete documentation."
 }
 
 pkg_postrm() {

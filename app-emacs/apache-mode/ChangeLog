@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/apache-mode
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/apache-mode/ChangeLog,v 1.12 2007/01/09 12:15:21 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/apache-mode/ChangeLog,v 1.13 2007/01/28 03:59:53 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> apache-mode-1.1.ebuild:
+  Replacing einfo with elog
 
   09 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
   apache-mode-1.1.ebuild:

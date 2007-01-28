@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/analog/analog-1.29.ebuild,v 1.10 2007/01/09 12:14:32 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/analog/analog-1.29.ebuild,v 1.11 2007/01/28 03:58:48 genone Exp $
 
 inherit elisp
 
@@ -28,7 +28,7 @@ src_install() {
 
 pkg_postinst() {
 	elisp-site-regen
-	einfo "Please see ${SITELISP}/${PN}/analog.el for the complete documentation."
+	elog "Please see ${SITELISP}/${PN}/analog.el for the complete documentation."
 }
 
 pkg_postrm() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bubblet/bubblet-0.74.ebuild,v 1.9 2005/09/29 05:13:39 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bubblet/bubblet-0.74.ebuild,v 1.10 2007/01/28 04:04:15 genone Exp $
 
 inherit elisp
 
@@ -28,7 +28,7 @@ src_install() {
 
 pkg_postinst() {
 	elisp-site-regen
-	einfo "Please see ${SITELISP}/${PN}/bubblet.el for the complete documentation."
+	elog "Please see ${SITELISP}/${PN}/bubblet.el for the complete documentation."
 }
 
 pkg_postrm() {

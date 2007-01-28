@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/crypt++/crypt++-2.91.ebuild,v 1.8 2005/10/24 13:40:42 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/crypt++/crypt++-2.91.ebuild,v 1.9 2007/01/28 04:05:30 genone Exp $
 
 inherit elisp
 
@@ -28,7 +28,7 @@ src_install() {
 
 pkg_postinst() {
 	elisp-site-regen
-	einfo "Please see ${SITELISP}/${PN}/crypt++.el for the complete documentation."
+	elog "Please see ${SITELISP}/${PN}/crypt++.el for the complete documentation."
 }
 
 pkg_postrm() {

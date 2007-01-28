@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/bbdb-2.35_pre20040323.ebuild,v 1.10 2005/04/21 18:30:18 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/bbdb-2.35_pre20040323.ebuild,v 1.11 2007/01/28 04:02:26 genone Exp $
 
 inherit elisp eutils
 
@@ -39,8 +39,8 @@ src_unpack() {
 
 	if ! use crypt ; then
 		rm ${S}/bits/bbdb-pgp.el
-		einfo "Excluding bits/bbdb-pgp.el because the \`crypt' USE flag was not"
-		einfo "specified."
+		elog "Excluding bits/bbdb-pgp.el because the \`crypt' USE flag was not"
+		elog "specified."
 	fi
 
 }
