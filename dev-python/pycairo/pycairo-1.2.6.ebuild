@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.2.6.ebuild,v 1.2 2007/01/26 22:16:26 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.2.6.ebuild,v 1.3 2007/01/28 17:50:33 uberlord Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -39,7 +39,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
+	make DESTDIR="${D}" install || die "install failed"
 
 	if use examples ; then
 		insinto /usr/share/doc/${PF}/examples
