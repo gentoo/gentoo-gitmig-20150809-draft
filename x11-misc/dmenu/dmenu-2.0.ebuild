@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/dmenu-2.0.ebuild,v 1.1 2007/01/16 19:32:47 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/dmenu-2.0.ebuild,v 1.2 2007/01/28 17:39:39 cedk Exp $
 
 inherit toolchain-funcs
 
 DESCRIPTION="a generic, highly customizable, and efficient menu for the X Window System"
-HOMEPAGE="http://suckless.org/view/dynamic+window+manager"
+HOMEPAGE="http://tools.suckless.org/view.sh/x+tools"
 SRC_URI="http://suckless.org/download/${P}.tar.gz"
 
 LICENSE="MIT"
