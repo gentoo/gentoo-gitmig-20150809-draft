@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r2.ebuild,v 1.2 2007/01/23 19:21:29 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r3.ebuild,v 1.1 2007/01/28 05:10:37 wltjr Exp $
 
 inherit eutils java-pkg-2 java-ant-2 versionator
 
@@ -78,7 +78,7 @@ BUILDDESTINATION="${S}/nbbuild/netbeans"
 ENTERPRISE="3"
 IDE_VERSION="7"
 PLATFORM="6"
-MY_FDIR="${FILESDIR}/${SLOT}-${PR}"
+MY_FDIR="${FILESDIR}/${SLOT}-r2"
 DESTINATION="/usr/share/netbeans-${SLOT}"
 JAVA_PKG_BSFIX="off"
 
@@ -144,6 +144,10 @@ src_compile() {
 
 	# Set a initial default jdk
 	echo "netbeans_jdkhome=\"\$(java-config -O)\"" >> ${BUILDDESTINATION}/etc/netbeans.conf
+
+	# fix paths per bug# 163483
+	sed -i -e 's:"$progdir"/../etc/:/etc/netbeans-5.5/:' ${BUILDDESTINATION}/bin/netbeans
+	sed -i -e 's:"${userdir}"/etc/:/etc/netbeans-5.5/:' ${BUILDDESTINATION}/bin/netbeans
 }
 
 src_install() {
