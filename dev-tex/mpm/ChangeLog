@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/mpm
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/mpm/ChangeLog,v 1.2 2006/08/08 21:19:15 nattfodd Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/mpm/ChangeLog,v 1.3 2007/01/28 06:44:50 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> mpm-2.5.2199_beta4.ebuild,
+  mpm-2.5.2398_beta14.ebuild:
+  Replacing einfo with elog
 
 *mpm-2.5.2398_beta14 (08 Aug 2006)
 

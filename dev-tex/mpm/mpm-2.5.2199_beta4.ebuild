@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/mpm/mpm-2.5.2199_beta4.ebuild,v 1.1 2006/01/12 00:37:18 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/mpm/mpm-2.5.2199_beta4.ebuild,v 1.2 2007/01/28 06:44:50 genone Exp $
 
 MY_PV=${PV/_beta/-beta-}
 DESCRIPTION="MiKTeX Tools -- package manager for a TeX distribution"
@@ -23,7 +23,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo ""
-	einfo "Remember to run \"mpm --update-db\" as root before using mpm."
-	einfo ""
+	elog ""
+	elog "Remember to run \"mpm --update-db\" as root before using mpm."
+	elog ""
 }

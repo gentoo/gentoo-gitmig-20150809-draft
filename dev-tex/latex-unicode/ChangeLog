@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/latex-unicode
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-unicode/ChangeLog,v 1.15 2006/10/27 17:12:56 gustavoz Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-unicode/ChangeLog,v 1.16 2007/01/28 06:43:02 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org>
+  latex-unicode-20030605.ebuild, latex-unicode-20040307.ebuild,
+  latex-unicode-20041017.ebuild:
+  Replacing einfo with elog
 
   27 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   latex-unicode-20041017.ebuild:

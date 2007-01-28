@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tipa/tipa-1.3.ebuild,v 1.2 2006/03/13 20:20:36 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tipa/tipa-1.3.ebuild,v 1.3 2007/01/28 06:46:37 genone Exp $
 
 DESCRIPTION="International Phonetic Alphabet package for LaTeX"
 HOMEPAGE="http://www.l.u-tokyo.ac.jp/~fkr/"
@@ -32,18 +32,18 @@ src_install() {
 	make DESTDIR=${D} install || die "make install failed."
 	dodoc doc/*.{tex,sty,bib,bbl} || die "dodoc failed."
 
-	einfo "A huge documentation can be found in '/usr/share/doc/${P}'."
+	elog "A huge documentation can be found in '/usr/share/doc/${P}'."
 }
 
 pkg_postinst() {
 	einfo "Running mktexlsr..."
 	mktexlsr || die "mktexlsr failed"
 
-	einfo
-	einfo "Append the line"
-	einfo "p +tipa.map"
-	einfo "to /usr/share/texmf/dvips/config/config.ps"
-	einfo
+	elog
+	elog "Append the line"
+	elog "p +tipa.map"
+	elog "to /usr/share/texmf/dvips/config/config.ps"
+	elog
 }
 
 pkg_postrm() {
