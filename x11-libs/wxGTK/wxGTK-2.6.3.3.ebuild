@@ -1,19 +1,18 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.3.3.ebuild,v 1.12 2007/01/20 22:08:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.3.3.ebuild,v 1.13 2007/01/28 07:39:58 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
 HTML_PV="$(get_version_component_range 1-3)"
 
-DESCRIPTION="GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit and
-wxbase non-gui library"
+DESCRIPTION="GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit and wxbase non-gui library"
 
 SRC_URI="mirror://sourceforge/wxpython/wxPython-src-${PV}.tar.bz2
 	doc? ( mirror://sourceforge/wxwindows/wxWidgets-${HTML_PV}-HTML.tar.gz )"
 
 SLOT="2.6"
-KEYWORDS="~alpha ~amd64 arm hppa ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="debug doc gnome joystick odbc opengl sdl unicode X"
 LICENSE="wxWinLL-3"
 HOMEPAGE="http://www.wxwidgets.org"
