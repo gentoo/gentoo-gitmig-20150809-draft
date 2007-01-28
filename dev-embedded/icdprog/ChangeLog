@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/icdprog
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/icdprog/ChangeLog,v 1.5 2005/01/01 17:54:03 eradicator Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/icdprog/ChangeLog,v 1.6 2007/01/28 06:15:24 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> icdprog-0.3.ebuild:
+  Replacing einfo with elog
 
   14 Apr 2004; Daniel Black <dragonheart@gentoo.org> icdprog-0.3.ebuild:
   QA removed surperflous S=

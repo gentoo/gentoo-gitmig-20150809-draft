@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.06c.ebuild,v 1.8 2006/03/16 13:57:02 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.06c.ebuild,v 1.9 2007/01/28 06:17:50 genone Exp $
 
 S=${WORKDIR}
 DESCRIPTION="EEprom e Pic Programmer"
@@ -42,13 +42,13 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "To use the COM port in user mode (not as root) you need"
-	einfo "make sure you have the rights to write /dev/ttyS? devices "
-	einfo "and /var/lock directory."
-	einfo ""
-	einfo "To use the LPT port in user mode (not as root) you need a 2.4.x kernel "
-	einfo "with ppdev, parport and parport_pc compiled in as modules. You need the "
-	einfo "rights to write /dev/parport? devices."
-	einfo ""
-	einfo "You can use /opt/bin/ponyprog"
+	elog "To use the COM port in user mode (not as root) you need"
+	elog "make sure you have the rights to write /dev/ttyS? devices "
+	elog "and /var/lock directory."
+	elog
+	elog "To use the LPT port in user mode (not as root) you need a 2.4.x kernel "
+	elog "with ppdev, parport and parport_pc compiled in as modules. You need the "
+	elog "rights to write /dev/parport? devices."
+	elog
+	elog "You can use /opt/bin/ponyprog"
 }

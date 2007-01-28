@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.9.2.1.ebuild,v 1.1 2006/11/02 13:04:05 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.9.2.1.ebuild,v 1.2 2007/01/28 06:16:34 genone Exp $
 
 inherit kde versionator
 
@@ -48,8 +48,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "The author requests that you email him at alain.gibaud@free.fr when you"
-	einfo "install this package. See http://pikdev.free.fr/download.php3 for details"
+	elog "The author requests that you email him at alain.gibaud@free.fr when you"
+	elog "install this package. See http://pikdev.free.fr/download.php3 for details"
 
 	ewarn "CAUTION: If you already have a previous version of PiKdev, do not forget to delete the"
 	ewarn " ~/.kde/share/apps/pikdev directory before installing the new version. This directory"

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/icdprog/icdprog-0.3.ebuild,v 1.6 2005/01/01 17:54:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/icdprog/icdprog-0.3.ebuild,v 1.7 2007/01/28 06:15:24 genone Exp $
 
 DESCRIPTION="Microchip PIC Programmer using ICD hardware"
 HOMEPAGE="http://icdprg.sf.net/"
@@ -36,5 +36,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Please read the README if the ICD seems to be very slow."
+	elog "Please read the README if the ICD seems to be very slow."
 }
