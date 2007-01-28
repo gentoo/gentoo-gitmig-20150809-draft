@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.1.4.ebuild,v 1.6 2007/01/22 18:37:38 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.1.4-r2.ebuild,v 1.1 2007/01/28 11:19:38 hkbst Exp $
 
 inherit versionator eutils
 
@@ -38,9 +38,10 @@ src_install() {
 	dodoc ANNOUNCE ChangeLog FAQ README
 	doinfo slib.info
 	dosym /usr/share/slib/ /usr/share/guile/slib # link from guile dir
+	dodir /etc/env.d/ && echo "SCHEME_LIBRARY_PATH=/usr/share/slib/" > ${D}/etc/env.d/50slib
 }
 
 pkg_postinst() {
 	einfo "Installing slib for guile..."
-	guile -c "(use-modules (ice-9 slib)) (require 'new-catalog)"
+	${ROOT}/usr/bin/guile -c "(use-modules (ice-9 slib)) (require 'new-catalog)"
 }
