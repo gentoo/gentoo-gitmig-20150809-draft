@@ -1,6 +1,15 @@
 # ChangeLog for sys-cluster/torque
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.42 2006/11/24 07:14:56 opfer Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.43 2007/01/28 21:02:17 dberkholz Exp $
+
+  28 Jan 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  -files/torque-1.2.0_p5-destdir-fixes.patch,
+  -files/2.1.2-queue-recov-freemem-fix.patch,
+  -files/torque-1.2.0_p5-setuid-safety.patch,
+  -files/2.1.2-skip-dotnames.patch, -files/pbs.rc,
+  -torque-1.2.0_p5-r1.ebuild, -torque-1.2.0_p5-r2.ebuild,
+  -torque-2.1.2-r1.ebuild, -torque-2.1.2-r2.ebuild:
+  (164192) Clean out vulnerable ebuilds.
 
   24 Nov 2006; Christian Faulhammer <opfer@gentoo.org> torque-2.1.6.ebuild:
   stable x86, security bug #152104
