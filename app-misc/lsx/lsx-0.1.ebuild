@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lsx/lsx-0.1.ebuild,v 1.2 2007/01/28 05:18:16 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lsx/lsx-0.1.ebuild,v 1.3 2007/01/28 17:44:15 cedk Exp $
 
 inherit toolchain-funcs
 
 DESCRIPTION="list executables"
-HOMEPAGE="http://tools.suckless.org/view/other+tools"
+HOMEPAGE="http://tools.suckless.org/view.sh/other+tools"
 SRC_URI="http://suckless.org/download/${P}.tar.gz"
 
 LICENSE="MIT"
@@ -44,5 +44,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Run ${PN} with ${PN}-suckless"
+	einfo "Run ${PN} with ${PN}-suckless"
 }
