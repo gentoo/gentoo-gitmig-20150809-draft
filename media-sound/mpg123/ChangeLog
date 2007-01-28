@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.106 2007/01/06 14:08:04 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.107 2007/01/28 11:47:34 flameeyes Exp $
+
+  28 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -mpg123-0.59s-r9.ebuild:
+  Remove vulnerable version, see bug #164226.
 
   06 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
   mpg123-0.61.ebuild:
