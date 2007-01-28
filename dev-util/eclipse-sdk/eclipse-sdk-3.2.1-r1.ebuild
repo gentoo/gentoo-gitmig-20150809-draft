@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.2.1-r1.ebuild,v 1.2 2006/10/08 15:04:43 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.2.1-r1.ebuild,v 1.3 2007/01/28 13:24:45 betelgeuse Exp $
 
 inherit eutils java-pkg-2 flag-o-matic check-reqs multilib
 
@@ -92,7 +92,8 @@ src_unpack() {
 	rm *.jar
 	java-pkg_jar-from lucene-1 lucene.jar lucene-1.4.3.jar
 	popd >/dev/null
-
+	# For some reason popd above fails to go back to workdir
+	cd "${WORKDIR}"
 	apply-patchset
 }
 
