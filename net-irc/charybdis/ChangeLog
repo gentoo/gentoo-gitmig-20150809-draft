@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/charybdis
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/charybdis/ChangeLog,v 1.2 2006/04/27 21:51:41 antarus Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/charybdis/ChangeLog,v 1.3 2007/01/28 19:42:09 antarus Exp $
+
+*charybdis-2.1.0 (28 Jan 2007)
+
+  28 Jan 2007; Alec Warner <antarus@gentoo.org> +charybdis-2.1.0.ebuild:
+  add charybdis 2.1 for nenolod and bug # 152209
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
   Fixing SHA256 digest, pass four
