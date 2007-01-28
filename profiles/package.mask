@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6695 2007/01/28 20:25:18 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6696 2007/01/28 20:58:45 george Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -577,14 +577,6 @@ net-misc/networkmanager
 # Masked for removal (treecleaner), see bug #65923
 # remove on 2006-11-26
 dev-java/bluej-bin
-
-# George Shapovalov <george@gentoo.org> (26 Oct 2006)
-# Masked for removal - "proper" versions have been added under 
-# asis-gcc and asis-gpl. Please consider switching!
-=dev-ada/asis-3.4.6
-=dev-ada/asis-3.4.6.2006
-# Masked for removal as old style gnat is going to be masked soon. 
-dev-ada/asis
 
 # Piotr Jaroszyński <peper@gentoo.org> (23 Oct 2006)
 # Masking alpha version of mozilla-thunderbird-2.0 and enigmail for it.
