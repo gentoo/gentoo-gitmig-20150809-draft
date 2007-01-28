@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.210 2007/01/28 13:01:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.211 2007/01/28 23:55:05 vapier Exp $
+
+*linux-headers-2.6.19.2-r2 (28 Jan 2007)
+
+  28 Jan 2007; Mike Frysinger <vapier@gentoo.org>
+  +linux-headers-2.6.19.2-r2.ebuild:
+  Fixup some exported ioctls.
 
   28 Jan 2007; Mike Frysinger <vapier@gentoo.org>
   linux-headers-2.6.19.2-r1.ebuild:
