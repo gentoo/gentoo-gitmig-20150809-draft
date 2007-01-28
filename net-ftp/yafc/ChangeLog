@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/yafc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.21 2007/01/08 01:55:32 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.22 2007/01/28 11:19:43 masterdriverz Exp $
+
+  28 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  files/yafc-1.1.1-gcc4.patch:
+  Fix yafc-1.1.1-gcc4.patch; thanks to Alex Unigovsky; bug 164170
 
   08 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -yafc-1.0.ebuild:
   QA: Removed unused versions.
