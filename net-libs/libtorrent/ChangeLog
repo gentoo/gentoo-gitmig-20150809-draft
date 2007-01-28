@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libtorrent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.83 2007/01/27 15:11:05 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.84 2007/01/28 13:54:36 flameeyes Exp $
+
+  28 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  libtorrent-0.11.2.ebuild:
+  Fix building on ~amd64, thanks to Matt Hamilton for pointing out the fix in
+  bug #164161.
 
 *libtorrent-0.11.2 (27 Jan 2007)
 
