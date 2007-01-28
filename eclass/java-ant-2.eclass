@@ -10,7 +10,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-ant-2.eclass,v 1.14 2007/01/21 01:20:21 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-ant-2.eclass,v 1.15 2007/01/28 21:42:24 betelgeuse Exp $
 
 inherit java-utils-2
 
@@ -27,8 +27,10 @@ inherit java-utils-2
 
 # We need some tools from javatoolkit. We also need portage 2.1 for phase hooks
 DEPEND=">=dev-java/javatoolkit-0.1.5 ${JAVA_PKG_PORTAGE_DEP}"
+
 # add ant-core into DEPEND, unless disabled
-[[ "${JAVA_ANT_DISABLE_ANT_CORE_DEP:-true}" ]] || DEPEND="${DEPEND} dev-java/ant-core"
+[[ "${JAVA_ANT_DISABLE_ANT_CORE_DEP}" ]] || DEPEND="${DEPEND} dev-java/ant-core"
+
 # add ant tasks specified in WANT_ANT_TASKS to DEPEND
 local ANT_TASKS_DEPEND;
 ANT_TASKS_DEPEND="$(java-pkg_ant-tasks-depend)"

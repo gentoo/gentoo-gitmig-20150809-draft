@@ -5,7 +5,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-2.eclass,v 1.19 2007/01/28 20:04:59 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-2.eclass,v 1.20 2007/01/28 21:42:24 betelgeuse Exp $
 
 inherit java-utils-2
 
@@ -79,7 +79,9 @@ java-pkg-2_src_compile() {
 
 		local antflags="${EANT_BUILD_TARGET:=jar}"
 		hasq doc ${IUSE} && antflags="${antflags} $(use_doc ${EANT_DOC_TARGET})"
-		ANT_TASKS="${ANT_TASKS} ${EANT_ANT_TASKS}" \
+		local tasks
+		[[ ${EANT_ANT_TASKS} ]] && tasks="${ANT_TASKS} ${EANT_ANT_TASKS}"
+		ANT_TASKS="${tasks}" \
 			eant ${antflags} -f "${EANT_BUILD_XML}" ${EANT_EXTRA_ARGS} "${@}"
 	else
 		echo "${FUNCNAME}: ${EANT_BUILD_XML} not found so nothing to do."
