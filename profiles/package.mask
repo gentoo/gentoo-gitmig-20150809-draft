@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6687 2007/01/27 23:50:19 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6688 2007/01/28 00:25:15 wltjr Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -289,11 +289,6 @@ media-radio/ax25-tools
 # It will die in 30 days (Moz team if you want it shorter make
 # it so)
 net-www/gplflash
-
-# William L. Thomson Jr. <wltjr@gentoo.org> (30 Dec 2006)
-# Old versions of Netbeans no longer supported
-# Neither are some of it's deps like Tomcat 5.0.28
-=dev-util/netbeans-4.0-r2
 
 # William L. Thomson Jr. <wltjr@gentoo.org> (30 Dec 2006)
 # Old versions of Tomcat no longer supported
