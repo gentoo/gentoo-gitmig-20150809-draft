@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-4.1.ebuild,v 1.9 2005/04/24 11:01:59 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-4.1.ebuild,v 1.10 2007/01/28 04:24:58 genone Exp $
 
 inherit elisp
 
@@ -38,9 +38,9 @@ src_install() {
 
 pkg_postinst() {
 	elisp-site-regen
-	einfo
-	einfo "Please refer to /usr/share/doc/${PF} for sample configuration files."
-	einfo
+	elog
+	elog "Please refer to /usr/share/doc/${PF} for sample configuration files."
+	elog
 }
 
 pkg_postrm() {

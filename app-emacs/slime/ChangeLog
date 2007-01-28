@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/slime
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.29 2006/11/22 15:38:28 josejx Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.30 2007/01/28 04:32:04 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> slime-1.2.1.20050804.ebuild,
+  slime-1.2.1.20051211.ebuild, slime-1.2.1.20060205.ebuild,
+  slime-2.0.0.20060617.ebuild, slime-2.0.0.20060805.ebuild:
+  Replacing einfo with elog
 
   22 Nov 2006; Joseph Jezak <josejx@gentoo.org> slime-1.2.1.20050804.ebuild:
   Marked ppc stable for bug #154512.

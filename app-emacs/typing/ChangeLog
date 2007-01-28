@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/typing
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/typing/ChangeLog,v 1.6 2005/08/28 02:28:17 tester Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/typing/ChangeLog,v 1.7 2007/01/28 04:34:26 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> typing-1.1.2.ebuild:
+  Replacing einfo with elog
 
   28 Aug 2005; Olivier Crête <tester@gentoo.org> typing-1.1.2.ebuild:
   Marked ~amd64, thanks to AT AJ Armstrong <aja@gentoo.org> for testing

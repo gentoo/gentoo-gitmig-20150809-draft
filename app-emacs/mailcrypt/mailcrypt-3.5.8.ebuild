@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mailcrypt/mailcrypt-3.5.8.ebuild,v 1.9 2005/01/01 13:53:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mailcrypt/mailcrypt-3.5.8.ebuild,v 1.10 2007/01/28 04:23:31 genone Exp $
 
 inherit elisp
 
@@ -31,9 +31,9 @@ src_install() {
 
 pkg_postinst() {
 	elisp-site-regen
-	einfo ""
-	einfo "See /usr/share/doc/${P}/INSTALL.gz for how to customize mailcrypt"
-	einfo ""
+	elog
+	elog "See /usr/share/doc/${P}/INSTALL.gz for how to customize mailcrypt"
+	elog
 }
 
 pkg_postrm() {

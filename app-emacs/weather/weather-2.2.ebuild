@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/weather/weather-2.2.ebuild,v 1.8 2005/10/24 15:07:09 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/weather/weather-2.2.ebuild,v 1.9 2007/01/28 04:39:25 genone Exp $
 
 inherit elisp
 
@@ -31,7 +31,7 @@ src_install() {
 
 pkg_postinst() {
 	elisp-site-regen
-	einfo "Please see ${SITELISP}/${PN}/weather.el for the complete documentation."
+	elog "Please see ${SITELISP}/${PN}/weather.el for the complete documentation."
 }
 
 pkg_postrm() {

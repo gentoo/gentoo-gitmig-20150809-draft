@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/junkbust/junkbust-0.8.ebuild,v 1.10 2005/07/01 19:49:37 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/junkbust/junkbust-0.8.ebuild,v 1.11 2007/01/28 04:22:19 genone Exp $
 
 inherit elisp
 
@@ -30,7 +30,7 @@ src_install() {
 
 pkg_postinst() {
 	elisp-site-regen
-	einfo "Please see ${SITELISP}/${PN}/junkbust.el for the complete documentation."
+	elog "Please see ${SITELISP}/${PN}/junkbust.el for the complete documentation."
 }
 
 pkg_postrm() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/haskell-mode-2.0.ebuild,v 1.1 2005/08/19 03:12:17 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/haskell-mode-2.0.ebuild,v 1.2 2007/01/28 04:16:00 genone Exp $
 
 inherit elisp
 
@@ -38,5 +38,5 @@ src_install() {
 
 pkg_postinst() {
 	elisp_pkg_postinst
-	einfo "See /usr/share/doc/${PF}/html/installation-guide.html"
+	elog "See /usr/share/doc/${PF}/html/installation-guide.html"
 }

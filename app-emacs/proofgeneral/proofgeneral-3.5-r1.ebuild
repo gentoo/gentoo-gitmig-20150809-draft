@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/proofgeneral-3.5-r1.ebuild,v 1.1 2006/11/02 20:23:00 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/proofgeneral-3.5-r1.ebuild,v 1.2 2007/01/28 04:26:49 genone Exp $
 
 SIMPLE_ELISP='nil'
 inherit elisp eutils
@@ -51,9 +51,9 @@ src_install() {
 
 pkg_postinst() {
 	elisp-site-regen
-	einfo "Please register your use of Proof General on the web at:"
-	einfo "  http://proofgeneral.inf.ed.ac.uk/register "
-	einfo "(see the REGISTER file for more information)"
+	elog "Please register your use of Proof General on the web at:"
+	elog "  http://proofgeneral.inf.ed.ac.uk/register "
+	elog "(see the REGISTER file for more information)"
 }
 
 pkg_postrm() {

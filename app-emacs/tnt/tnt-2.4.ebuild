@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tnt/tnt-2.4.ebuild,v 1.8 2005/08/28 02:27:40 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tnt/tnt-2.4.ebuild,v 1.9 2007/01/28 04:33:20 genone Exp $
 
 inherit elisp
 
@@ -27,11 +27,11 @@ src_install() {
 
 pkg_postinst() {
 	elisp-site-regen
-	einfo ""
-	einfo "See /usr/share/doc/${P}/README.gz for how to use TNT"
-	einfo "Use the following to start TNT:"
-	einfo "	M-x tnt RET"
-	einfo ""
+	elog
+	elog "See /usr/share/doc/${P}/README.gz for how to use TNT"
+	elog "Use the following to start TNT:"
+	elog "	M-x tnt RET"
+	elog
 }
 
 pkg_postrm() {

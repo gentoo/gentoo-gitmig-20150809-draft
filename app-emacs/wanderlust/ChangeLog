@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/wanderlust
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.46 2006/03/06 07:11:08 mkennedy Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.47 2007/01/28 04:38:33 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> wanderlust-2.8.1.ebuild,
+  wanderlust-2.10.1-r2.ebuild:
+  Replacing einfo with elog
 
 *wanderlust-2.14.0-r2 (06 Mar 2006)
 

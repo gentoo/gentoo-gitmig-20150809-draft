@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/proofgeneral
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/ChangeLog,v 1.10 2006/11/02 20:23:00 opfer Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/ChangeLog,v 1.11 2007/01/28 04:26:49 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> proofgeneral-3.5.ebuild,
+  proofgeneral-3.5-r1.ebuild:
+  Replacing einfo with elog
 
 *proofgeneral-3.5-r1 (02 Nov 2006)
 

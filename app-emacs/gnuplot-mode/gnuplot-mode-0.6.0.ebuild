@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuplot-mode/gnuplot-mode-0.6.0.ebuild,v 1.7 2006/01/29 19:44:03 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuplot-mode/gnuplot-mode-0.6.0.ebuild,v 1.8 2007/01/28 04:14:24 genone Exp $
 
 inherit elisp
 
@@ -36,7 +36,7 @@ src_install() {
 
 pkg_postinst() {
 	elisp-site-regen
-	einfo "Please see ${SITELISP}/${PN}/${PN}.el for the complete documentation."
+	elog "Please see ${SITELISP}/${PN}/${PN}.el for the complete documentation."
 }
 
 pkg_postrm() {

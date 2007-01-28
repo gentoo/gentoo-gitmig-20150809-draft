@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/psql/psql-1.10.ebuild,v 1.7 2005/01/01 13:57:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/psql/psql-1.10.ebuild,v 1.8 2007/01/28 04:27:42 genone Exp $
 
 inherit elisp
 
@@ -29,7 +29,7 @@ src_install() {
 
 pkg_postinst() {
 	elisp-site-regen
-	einfo "Please see ${SITELISP}/${PN}/psql.el for the complete documentation."
+	elog "Please see ${SITELISP}/${PN}/psql.el for the complete documentation."
 }
 
 pkg_postrm() {

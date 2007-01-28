@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/mailcrypt
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mailcrypt/ChangeLog,v 1.11 2006/11/24 09:45:33 opfer Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mailcrypt/ChangeLog,v 1.12 2007/01/28 04:23:31 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> mailcrypt-3.5.8.ebuild,
+  mailcrypt-3.5.8-r1.ebuild:
+  Replacing einfo with elog
 
 *mailcrypt-3.5.8-r1 (24 Nov 2006)
 

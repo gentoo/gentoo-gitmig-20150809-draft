@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/gnuplot-mode
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuplot-mode/ChangeLog,v 1.7 2006/01/30 10:08:40 robbat2 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuplot-mode/ChangeLog,v 1.8 2007/01/28 04:14:24 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> gnuplot-mode-0.6.0.ebuild:
+  Replacing einfo with elog
 
   30 Jan 2006; Robin H. Johnson <robbat2@gentoo.org> Manifest:
   Manifest fix.

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.10.1-r2.ebuild,v 1.7 2005/01/01 14:06:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.10.1-r2.ebuild,v 1.8 2007/01/28 04:38:33 genone Exp $
 
 inherit elisp eutils
 
@@ -59,8 +59,8 @@ src_install() {
 
 pkg_postinst() {
 	elisp-site-regen
-	einfo "Please see /usr/share/doc/${P}/INSTALL.gz."
-	einfo "And Sample configuration files exist on /usr/share/wl/samples."
+	elog "Please see /usr/share/doc/${P}/INSTALL.gz."
+	elog "And Sample configuration files exist on /usr/share/wl/samples."
 }
 
 pkg_postrm() {

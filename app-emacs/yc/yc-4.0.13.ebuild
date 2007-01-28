@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yc/yc-4.0.13.ebuild,v 1.3 2005/01/01 14:07:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yc/yc-4.0.13.ebuild,v 1.4 2007/01/28 04:40:30 genone Exp $
 
 inherit elisp
 
@@ -32,17 +32,17 @@ src_install() {
 
 pkg_postinst() {
 	elisp-site-regen
-	einfo "See /usr/share/doc/${P}/sample.dot.emacs.gz."
-	einfo ""
-	einfo "And If you use unix domain socket for connecting the canna server, "
-	einfo "  please confirm that there's *no* following line in your .emacs ."
-	einfo "  (setq yc-server-host \"localhost\")"
-	einfo ""
-	einfo "If you use inet domain socket for connecting the canna server, "
-	einfo "  please modify as following in /etc/conf.d/canna."
-	einfo "  CANNASERVER_OPTS=\"-inet\""
-	einfo "  And create /etc/hosts.canna."
-	einfo "  (sample is /usr/share/doc/${P}/sample.hosts.canna.gz)"
+	elog "See /usr/share/doc/${P}/sample.dot.emacs.gz."
+	elog
+	elog "And If you use unix domain socket for connecting the canna server, "
+	elog "  please confirm that there's *no* following line in your .emacs ."
+	elog "  (setq yc-server-host \"localhost\")"
+	elog
+	elog "If you use inet domain socket for connecting the canna server, "
+	elog "  please modify as following in /etc/conf.d/canna."
+	elog "  CANNASERVER_OPTS=\"-inet\""
+	elog "  And create /etc/hosts.canna."
+	elog "  (sample is /usr/share/doc/${P}/sample.hosts.canna.gz)"
 }
 
 pkg_postrm() {

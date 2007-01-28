@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-1.2.1.20060205.ebuild,v 1.1 2006/02/05 08:51:07 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-1.2.1.20060205.ebuild,v 1.2 2007/01/28 04:32:04 genone Exp $
 
 inherit elisp eutils
 
@@ -56,5 +56,5 @@ pkg_postrm() {
 pkg_postinst() {
 	register-common-lisp-source $CLPACKAGE || die
 	elisp-site-regen || die
-	zcat /usr/share/doc/${PF}/README.Gentoo |while read line; do einfo "${line}"; done
+	zcat /usr/share/doc/${PF}/README.Gentoo |while read line; do elog "${line}"; done
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-2.3-r1.ebuild,v 1.9 2005/01/01 13:53:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-2.3-r1.ebuild,v 1.10 2007/01/28 04:24:58 genone Exp $
 
 inherit elisp eutils
 
@@ -48,9 +48,9 @@ pkg_postinst() {
 
 	elisp-site-regen
 
-	einfo
-	einfo "Refer to the Info documentation on Mew for how to get started."
-	einfo
+	elog
+	elog "Refer to the Info documentation on Mew for how to get started."
+	elog
 }
 
 pkg_postrm() {

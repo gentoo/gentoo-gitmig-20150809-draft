@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0.0.20061118.ebuild,v 1.1 2006/11/19 06:41:01 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0.0.20061118.ebuild,v 1.2 2007/01/28 04:32:04 genone Exp $
 
 inherit elisp eutils
 
@@ -27,10 +27,10 @@ src_compile() {
 src_install() {
 	elisp-install ${PN} *
 	elisp-site-file-install ${FILESDIR}/70slime-gentoo.el
- 	dodoc README* ChangeLog HACKING NEWS PROBLEMS
- 	dodir /usr/share/common-lisp/systems
- 	dosym /usr/share/emacs/site-lisp/${PN}/swank.asd \
- 		/usr/share/common-lisp/systems/
+	dodoc README* ChangeLog HACKING NEWS PROBLEMS
+	dodir /usr/share/common-lisp/systems
+	dosym /usr/share/emacs/site-lisp/${PN}/swank.asd \
+		/usr/share/common-lisp/systems/
 	if use doc; then
 		doinfo doc/slime.info
 	fi
