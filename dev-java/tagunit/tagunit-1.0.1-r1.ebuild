@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tagunit/tagunit-1.0.1-r1.ebuild,v 1.1 2007/01/28 20:52:04 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tagunit/tagunit-1.0.1-r1.ebuild,v 1.2 2007/01/28 21:10:38 betelgeuse Exp $
 
 inherit java-ant-2 java-pkg-2
 
@@ -26,24 +26,20 @@ S="${WORKDIR}/${P}-src/tagunit-core"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	java-ant_rewrite-classpath
-}
-
-src_compile() {
 	echo ${PV} > ../version.txt
 	mkdir ../lib
-
-	local antflags="build"
-	antflags="${antflags} -Dgentoo.classpath=$(java-pkg_getjars ant-core,servletapi-2.4)"
-	eant ${antflags} $(use_doc javadoc)
 }
+
+EANT_BUILD_TARGET="build"
+EANT_GENTOO_CLASSPATH="ant-core,servletapi-2.4"
 
 src_install() {
 	java-pkg_dojar lib/${PN}.jar
 	cd ${S}/..
-	dodoc changes.txt readme.txt
-	use doc && java-pkg_dohtml -r doc/api/*
+	dodoc changes.txt readme.txt || die
+	use doc && java-pkg_dojavadoc tagunit-core/doc/api
 	use source && java-pkg_dosrc tagunit-core/src/*
 }
