@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.51 2007/01/28 20:04:59 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.52 2007/01/28 20:58:29 betelgeuse Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -1542,7 +1542,7 @@ eant() {
 #	fi
 
 	if ! hasq java-ant-2 ${INHERITED} && is-java-strict; then
-		msg="You should inherit java-ant-2 when using eant"
+		local msg="You should inherit java-ant-2 when using eant"
 		java-pkg_announce-qa-violation ${msg}
 		die ${msg}
 	fi
@@ -1575,6 +1575,22 @@ eant() {
 		antflags="${antflags} -Dbuild.sysclasspath=ignore"
 	fi
 
+	for arg in "${@}"; do
+		if [[ ${arg} = -lib ]]; then
+			if is-java-strict; then
+				eerror "You should not use the -lib argument to eant because it will fail"
+				eerror "with JAVA_PKG_STRICT. Please use for example java-pkg_jar-from or"
+				eerror "or ant properties to make dependencies available."
+				eerror "For ant tasks use WANT_ANT_TASKS or ANT_TASKS from."
+				eerror "split ant (>=dev-java/ant-core-1.7)."
+				die "eant -lib is deprecated/forbidden"
+			else
+				echo "eant -lib is deprecated. Turn JAVA_PKG_STRICT on for"
+				echo "more info."
+			fi
+		fi
+	done
+
 	if has_version ">=dev-java/ant-core-1.7.0"; then
 		# default ANT_TASKS to WANT_ANT_TASKS, if ANT_TASKS is not set explicitly
 		ANT_TASKS="${ANT_TASKS:-${WANT_ANT_TASKS}}"
@@ -1600,7 +1616,7 @@ eant() {
 		else
 			einfo "Using following ANT_TASKS: ${ANT_TASKS}"
 		fi
-		
+
 		export ANT_TASKS
 	fi
 
