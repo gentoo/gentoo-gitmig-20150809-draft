@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-1.8.1-r1.ebuild,v 1.1 2007/01/25 17:53:16 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-1.8.1-r1.ebuild,v 1.2 2007/01/28 12:08:13 hkbst Exp $
 
 inherit autotools
 
@@ -28,7 +28,7 @@ src_compile() {
 		--enable-posix \
 		$(use_enable networking) \
 		$(use_enable regex) \
-		$(use_enable discouraged) \
+		$(use deprecated || use_enable discouraged) \
 		$(use_enable deprecated) \
 		$(use_enable elisp) \
 		$(use_enable nls) \

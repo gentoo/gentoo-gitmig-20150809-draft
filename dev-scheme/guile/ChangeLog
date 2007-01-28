@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/guile
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.5 2007/01/28 11:30:21 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.6 2007/01/28 12:08:13 hkbst Exp $
+
+  28 Jan 2007; Marijn Schouten <hkBst@gentoo.org> guile-1.8.1-r1.ebuild:
+  deprecated depends on discouraged being enabled, bug 164206
 
   28 Jan 2007; Marijn Schouten <hkBst@gentoo.org> Manifest:
   remove guile-1.8.1 with broken econf
