@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXfont
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.55 2007/01/24 06:30:03 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.56 2007/01/28 20:51:28 eroyf Exp $
+
+  28 Jan 2007; Alexander H. Færøy <eroyf@gentoo.org>
+  libXfont-1.2.2.ebuild:
+  Stable on MIPS; bug #164196
 
 *libXfont-1.2.7 (24 Jan 2007)
 
