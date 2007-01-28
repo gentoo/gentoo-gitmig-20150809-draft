@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/vyqchat
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/vyqchat/ChangeLog,v 1.11 2005/07/07 04:53:45 caleb Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/vyqchat/ChangeLog,v 1.12 2007/01/28 05:03:36 dirtyepic Exp $
+
+*vyqchat-0.2.8 (28 Jan 2007)
+
+  28 Jan 2007; Ryan Hill <dirtyepic@gentoo.org>
+  +files/vyqchat-0.2.8-gcc41.patch, +vyqchat-0.2.8.ebuild:
+  Fix building with GCC 4.1 and overhaul ebuild.
 
   07 Jul 2005; Caleb Tennis <caleb@gentoo.org> vyqchat-0.1.1.ebuild,
   vyqchat-0.2.3.ebuild, vyqchat-0.2.6.ebuild:
