@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/smarty-2.6.14.ebuild,v 1.8 2006/10/20 21:05:01 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/smarty-2.6.14.ebuild,v 1.9 2007/01/28 06:27:38 genone Exp $
 
 inherit php-lib-r1
 
@@ -25,17 +25,17 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "${PHP_LIB_NAME} has been installed in /usr/share/php/${PHP_LIB_NAME}/."
-	einfo "To use it in your scripts, either"
-	einfo "1. define('SMARTY_DIR', \"/usr/share/php/${PHP_LIB_NAME}/\") in your scripts, or"
-	einfo "2. add '/usr/share/php/${PHP_LIB_NAME}/' to the 'include_path' variable in your"
-	einfo "php.ini file under /etc/php/SAPI (where SAPI is one of apache-php[45],"
-	einfo "cgi-php[45] or cli-php[45])."
-	echo
-	einfo "If you're upgrading from a previous version make sure to clear out your"
-	einfo "templates_c and cache directories as some include paths have changed!"
-	echo
-	einfo "The Smarty include directory has changed in 2.6.12 from /usr/share/php/Smarty/"
-	einfo "to /usr/share/php/${PHP_LIB_NAME}/ you will need to change your SMARTY_DIR or"
-	einfo "include_path accordingly."
+	elog "${PHP_LIB_NAME} has been installed in /usr/share/php/${PHP_LIB_NAME}/."
+	elog "To use it in your scripts, either"
+	elog "1. define('SMARTY_DIR', \"/usr/share/php/${PHP_LIB_NAME}/\") in your scripts, or"
+	elog "2. add '/usr/share/php/${PHP_LIB_NAME}/' to the 'include_path' variable in your"
+	elog "php.ini file under /etc/php/SAPI (where SAPI is one of apache-php[45],"
+	elog "cgi-php[45] or cli-php[45])."
+	elog
+	elog "If you're upgrading from a previous version make sure to clear out your"
+	elog "templates_c and cache directories as some include paths have changed!"
+	elog
+	elog "The Smarty include directory has changed in 2.6.12 from /usr/share/php/Smarty/"
+	elog "to /usr/share/php/${PHP_LIB_NAME}/ you will need to change your SMARTY_DIR or"
+	elog "include_path accordingly."
 }
