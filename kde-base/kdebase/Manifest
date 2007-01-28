@@ -9,58 +9,10 @@ AUX agent-startup.sh 550 RMD160 62b38cdc14970db4f8ae09c90d7bc2a388255301 SHA1 86
 MD5 016f5ae82399f6d6c1b9f82aa80ac831 files/agent-startup.sh 550
 RMD160 62b38cdc14970db4f8ae09c90d7bc2a388255301 files/agent-startup.sh 550
 SHA256 f43a591922dd5a2649cad7b3d42827ee56aa21c09564e5eebb0cf7fa2eeb5fc4 files/agent-startup.sh 550
-AUX drkonqi-3.5.2-splitdebug.patch 799 RMD160 211658bff9164ba46497c920cf37dd22b0b4d77e SHA1 fcdb862cb03c6d6f051dccce44731dd21b9e2470 SHA256 df95b4607e84c05bfb5a86cf7b830f7974c493640ca25bb63aa7f2dd4a19458d
-MD5 708b51c47797b3d6ca71bb924ab3bb70 files/drkonqi-3.5.2-splitdebug.patch 799
-RMD160 211658bff9164ba46497c920cf37dd22b0b4d77e files/drkonqi-3.5.2-splitdebug.patch 799
-SHA256 df95b4607e84c05bfb5a86cf7b830f7974c493640ca25bb63aa7f2dd4a19458d files/drkonqi-3.5.2-splitdebug.patch 799
 AUX kate-3.5.5-visibility.patch 2248 RMD160 58915fcb0f8083e25a2ed85022312b53a6bce816 SHA1 14aa880d8e12e31051df193e162f4a515ed5d45c SHA256 d6546f8f188d6d4f5d75de61ede58f901d2a7d3410d7bb853ad40205aba2d560
 MD5 c0e7ab602ca07d635870a66aa125e636 files/kate-3.5.5-visibility.patch 2248
 RMD160 58915fcb0f8083e25a2ed85022312b53a6bce816 files/kate-3.5.5-visibility.patch 2248
 SHA256 d6546f8f188d6d4f5d75de61ede58f901d2a7d3410d7bb853ad40205aba2d560 files/kate-3.5.5-visibility.patch 2248
-AUX kde-np.pam 379 RMD160 a7ce9d94fac98f513e0df2b59026c17e0999c33c SHA1 c3ad41d329f3ef768f595d06ae361e2dd54ea287 SHA256 e84fa10df5ec9b81b9a19d373fa60d4ebeaad4cd748a775f3dcc15921c7657e0
-MD5 2b5419b0b173138e22fe03f4157d5660 files/kde-np.pam 379
-RMD160 a7ce9d94fac98f513e0df2b59026c17e0999c33c files/kde-np.pam 379
-SHA256 e84fa10df5ec9b81b9a19d373fa60d4ebeaad4cd748a775f3dcc15921c7657e0 files/kde-np.pam 379
-AUX kde.desktop 3910 RMD160 a66efb59c231330e211f4fd4d604caae3fe2aa6d SHA1 5c19669d60998cc24e9b93a2196dff9b17703e62 SHA256 416172223bf8fc23b26a48c2cda24810f939342fd48037717d0005f6217ce6b4
-MD5 78fb451ad534b71fc3e541e9e5759dac files/kde.desktop 3910
-RMD160 a66efb59c231330e211f4fd4d604caae3fe2aa6d files/kde.desktop 3910
-SHA256 416172223bf8fc23b26a48c2cda24810f939342fd48037717d0005f6217ce6b4 files/kde.desktop 3910
-AUX kde.pam 405 RMD160 f3f47a59375b02c2645af558a44e0ad94a203411 SHA1 fdd5d0f2e09711a58f25933ab46227647698a1ad SHA256 1864f6ba56e3d8352539aef94f75e507be4283e11d7e2347c013eba8fee6bd77
-MD5 b048371a651391ef2bb4166e40e6adff files/kde.pam 405
-RMD160 f3f47a59375b02c2645af558a44e0ad94a203411 files/kde.pam 405
-SHA256 1864f6ba56e3d8352539aef94f75e507be4283e11d7e2347c013eba8fee6bd77 files/kde.pam 405
-AUX kdebase-3.4-configure.patch 7273 RMD160 971dd8ee9199219cf7ae266120bb67e92aecb2ac SHA1 9582c0947cfd6982cd2a2030966aa7da1d0a814d SHA256 2b7cb9084c06e4da53e906aa0d3bb7ff52ae1c6d0dcaa1e983d3d84534c56211
-MD5 c13bb6243f0c10dd3892ca00a9fce333 files/kdebase-3.4-configure.patch 7273
-RMD160 971dd8ee9199219cf7ae266120bb67e92aecb2ac files/kdebase-3.4-configure.patch 7273
-SHA256 2b7cb9084c06e4da53e906aa0d3bb7ff52ae1c6d0dcaa1e983d3d84534c56211 files/kdebase-3.4-configure.patch 7273
-AUX kdebase-3.4.1-configure.patch 6497 RMD160 e48887385354d82ff3c9726006b3839a6da22524 SHA1 e959d7fb8ffa5e033a1378d272f0174ad3a89739 SHA256 cca11083fcb7ca6e1c3c22e89c476569f8c3ad8bd20448d56314879d42f30b90
-MD5 49ebf63cda60ba3265f1231f295bc51b files/kdebase-3.4.1-configure.patch 6497
-RMD160 e48887385354d82ff3c9726006b3839a6da22524 files/kdebase-3.4.1-configure.patch 6497
-SHA256 cca11083fcb7ca6e1c3c22e89c476569f8c3ad8bd20448d56314879d42f30b90 files/kdebase-3.4.1-configure.patch 6497
-AUX kdebase-3.4.1-startkde-gentoo.patch 1284 RMD160 ed121f7b31d54262af7fd85995bb2a258c9e2590 SHA1 dd21b4eafdf4833554c979989bc2611e7c90ff59 SHA256 047293bb0cdcaf19ec21fb8381c304306a4753023f8e7c82ede8fabab862cc48
-MD5 acdc4850637dc2fafa8803790f771164 files/kdebase-3.4.1-startkde-gentoo.patch 1284
-RMD160 ed121f7b31d54262af7fd85995bb2a258c9e2590 files/kdebase-3.4.1-startkde-gentoo.patch 1284
-SHA256 047293bb0cdcaf19ec21fb8381c304306a4753023f8e7c82ede8fabab862cc48 files/kdebase-3.4.1-startkde-gentoo.patch 1284
-AUX kdebase-3.4.2-kinfocenter-opengl-fix.patch 346 RMD160 6eda9169a469f4b403588266c359af960574be77 SHA1 ae3faa8b024626fe82765fc687204049583042de SHA256 913a471769ed045badc10cec6d1788896b3c6a8b993e234ca74ebb7c415cb5c0
-MD5 65ca7243fb9d880e763019fdcf5b7264 files/kdebase-3.4.2-kinfocenter-opengl-fix.patch 346
-RMD160 6eda9169a469f4b403588266c359af960574be77 files/kdebase-3.4.2-kinfocenter-opengl-fix.patch 346
-SHA256 913a471769ed045badc10cec6d1788896b3c6a8b993e234ca74ebb7c415cb5c0 files/kdebase-3.4.2-kinfocenter-opengl-fix.patch 346
-AUX kdebase-3.4.2-konqueror-filter.patch 899 RMD160 5161e8c9895372eef07a962d7f64adabb951313e SHA1 d327caae0b0522016b9b41fc66973afb5d1a363e SHA256 0debb9cd5d8ac571924a135893c146d58aa5770e9fc60fd6363607432d6bab77
-MD5 3a0e10a5717024b020d970bd121d589a files/kdebase-3.4.2-konqueror-filter.patch 899
-RMD160 5161e8c9895372eef07a962d7f64adabb951313e files/kdebase-3.4.2-konqueror-filter.patch 899
-SHA256 0debb9cd5d8ac571924a135893c146d58aa5770e9fc60fd6363607432d6bab77 files/kdebase-3.4.2-konqueror-filter.patch 899
-AUX kdebase-3.4.3-noimake.patch 2214 RMD160 72eaff49bea56612492a88ddeaa3ad529001b251 SHA1 155e10998c1987aa38580d6df00f5729d9385bc5 SHA256 8cb4a0ed5f5c02bc9c1e1b9e1ba8f45f963bcbbe08210c02d8a9bb00434d143f
-MD5 cbfa9f15423035b33eb50456dfb04691 files/kdebase-3.4.3-noimake.patch 2214
-RMD160 72eaff49bea56612492a88ddeaa3ad529001b251 files/kdebase-3.4.3-noimake.patch 2214
-SHA256 8cb4a0ed5f5c02bc9c1e1b9e1ba8f45f963bcbbe08210c02d8a9bb00434d143f files/kdebase-3.4.3-noimake.patch 2214
-AUX kdebase-3.4.3-xdmcp.patch 614 RMD160 10d4bba34bb3c6bb398f68423a766ca27dab92e8 SHA1 72aed5b42b2e8dbd91f56ff66e54b2bd37aec281 SHA256 bedfb9a156f13f721f74e30ff525bbe982a27d7d8dc3a25787745a1380f8513f
-MD5 789aca95df83dac88fe68a3cbeeea13a files/kdebase-3.4.3-xdmcp.patch 614
-RMD160 10d4bba34bb3c6bb398f68423a766ca27dab92e8 files/kdebase-3.4.3-xdmcp.patch 614
-SHA256 bedfb9a156f13f721f74e30ff525bbe982a27d7d8dc3a25787745a1380f8513f files/kdebase-3.4.3-xdmcp.patch 614
-AUX kdebase-kioslaves-3.5.4-dbuscrash.patch 634 RMD160 6edaeef25e548c9626bc040fa6d265f4f60bf69c SHA1 40dfefed182fdcedb2e47b9d9a480f7fc44ebeae SHA256 b206db33a2dbde889f1ce90bc352634542c70e6f8fe20c483d94cb5a6302b312
-MD5 69db6d085265e9a44d90a99061329859 files/kdebase-kioslaves-3.5.4-dbuscrash.patch 634
-RMD160 6edaeef25e548c9626bc040fa6d265f4f60bf69c files/kdebase-kioslaves-3.5.4-dbuscrash.patch 634
-SHA256 b206db33a2dbde889f1ce90bc352634542c70e6f8fe20c483d94cb5a6302b312 files/kdebase-kioslaves-3.5.4-dbuscrash.patch 634
 AUX kdebase-kioslaves-3.5.5-fstab.patch 3103 RMD160 53a4f0ded4d368f93eb29650d12d266735d7bf9e SHA1 1ffe0d67e77970774a5a2420f79b0579716dc8a7 SHA256 6a17470a3245a59c6e84a0142e64633e74b2bb12649e9c46c0903dd8fa4edb29
 MD5 76bc9dcbf83bccc0cbb0aaaf8560772e files/kdebase-kioslaves-3.5.5-fstab.patch 3103
 RMD160 53a4f0ded4d368f93eb29650d12d266735d7bf9e files/kdebase-kioslaves-3.5.5-fstab.patch 3103
@@ -73,30 +25,10 @@ AUX kdesktop-3.5.3-screensaver.patch 3336 RMD160 f8ac6f039ea14dbbf1f8579cd610a8f
 MD5 c1c21846f3ff96630e1faebbd6a450c8 files/kdesktop-3.5.3-screensaver.patch 3336
 RMD160 f8ac6f039ea14dbbf1f8579cd610a8f5e0f26bd2 files/kdesktop-3.5.3-screensaver.patch 3336
 SHA256 0e6fa9e399914805c72042ddb358ea3760f30f6d1b2b782f744a3fe20d9c18d8 files/kdesktop-3.5.3-screensaver.patch 3336
-AUX kdm-3.5.3-strict-aliasing.patch 1454 RMD160 d3ea02774130bf4f59805d2d3b9f760a335443fc SHA1 7f16dfae587909018fe8ffbf9ad89e57217bb8f7 SHA256 89f7a9d6cb4913fa2fcfd6fa733160ca5649ea4103f69d05802aecfceb54e960
-MD5 8ea4ae52af137ff483c245689f8fa5a0 files/kdm-3.5.3-strict-aliasing.patch 1454
-RMD160 d3ea02774130bf4f59805d2d3b9f760a335443fc files/kdm-3.5.3-strict-aliasing.patch 1454
-SHA256 89f7a9d6cb4913fa2fcfd6fa733160ca5649ea4103f69d05802aecfceb54e960 files/kdm-3.5.3-strict-aliasing.patch 1454
-AUX kdm-3.5.4-strict-aliasing.patch 402 RMD160 641395d16228df627ff16017f67ae4f17e0d7288 SHA1 77ab5687e06774ea1f1d3a56544ad566350d566d SHA256 ad8e466afc748a15bc04750a9231f668de5c953d9ba0e25e73e79f89587acd55
-MD5 10c1612d3d573ef3db770458da6a400d files/kdm-3.5.4-strict-aliasing.patch 402
-RMD160 641395d16228df627ff16017f67ae4f17e0d7288 files/kdm-3.5.4-strict-aliasing.patch 402
-SHA256 ad8e466afc748a15bc04750a9231f668de5c953d9ba0e25e73e79f89587acd55 files/kdm-3.5.4-strict-aliasing.patch 402
-AUX konsole-3.5.1-detach-send2all.patch 951 RMD160 e299f233a2960feb34ceea378ce80e09bebfbf33 SHA1 23d50f2e93d6bab79adfa55357edd95cdcca0de7 SHA256 7ac555c300f1de47672bdd186a1ef40eb4f0db4054861cd40aac4b87dad3133a
-MD5 568485759876c71e1165233732805315 files/konsole-3.5.1-detach-send2all.patch 951
-RMD160 e299f233a2960feb34ceea378ce80e09bebfbf33 files/konsole-3.5.1-detach-send2all.patch 951
-SHA256 7ac555c300f1de47672bdd186a1ef40eb4f0db4054861cd40aac4b87dad3133a files/konsole-3.5.1-detach-send2all.patch 951
-AUX kwin-3.5.2-parallel-make.diff 920 RMD160 2a1a02fa56e2b7c79601d38abd08388c54b2f3d0 SHA1 b1fce48dabf3e0cff38f5606e2d932454ee5caba SHA256 5160b4419c302cb01a71dd8a28f804bcd8c1eabad5b345d62765d64cee3f0660
-MD5 acbb4de9f0ed620e73cf727388f64315 files/kwin-3.5.2-parallel-make.diff 920
-RMD160 2a1a02fa56e2b7c79601d38abd08388c54b2f3d0 files/kwin-3.5.2-parallel-make.diff 920
-SHA256 5160b4419c302cb01a71dd8a28f804bcd8c1eabad5b345d62765d64cee3f0660 files/kwin-3.5.2-parallel-make.diff 920
 AUX kwin-3.5.5-input-shape.patch 2920 RMD160 d059a3386e6ff4ed06b5c843cc68105524808820 SHA1 3e1d3993ba87c157c6bf2c2db9f07a235e657568 SHA256 29f7c0677f0d799f983122e5ce05689ac326046452b6c9f6f71d2488161ac9db
 MD5 acec9d692344d8f456265c517248496b files/kwin-3.5.5-input-shape.patch 2920
 RMD160 d059a3386e6ff4ed06b5c843cc68105524808820 files/kwin-3.5.5-input-shape.patch 2920
 SHA256 29f7c0677f0d799f983122e5ce05689ac326046452b6c9f6f71d2488161ac9db files/kwin-3.5.5-input-shape.patch 2920
-AUX nsplugins-3.5.3-applet-redirects.patch 2317 RMD160 dcced9a334b8ffa745f92e934450d96257dcfde8 SHA1 f41bd9752c71c39249850f9ebb192b208f47e196 SHA256 7f6b1f2a81877404326b1aac04ffc30d1c74e2b2d1f54c6111c2911f8afc36da
-MD5 70a6642163fca943fb5beb6fd73fc5d6 files/nsplugins-3.5.3-applet-redirects.patch 2317
-RMD160 dcced9a334b8ffa745f92e934450d96257dcfde8 files/nsplugins-3.5.3-applet-redirects.patch 2317
-SHA256 7f6b1f2a81877404326b1aac04ffc30d1c74e2b2d1f54c6111c2911f8afc36da files/nsplugins-3.5.3-applet-redirects.patch 2317
 AUX nsplugins-3.5.5-npapi-64bit.patch 718 RMD160 c4420f4625bfde9eb5e647371297192f8831a28f SHA1 dd5c2a8f60810eaeee06fdb94537d33b698cae7f SHA256 932895b1724ad7bc21d0732130169b967f8704696a86cfa2a154f0129b6472f2
 MD5 da09cd773016524764a40b2106a098dc files/nsplugins-3.5.5-npapi-64bit.patch 718
 RMD160 c4420f4625bfde9eb5e647371297192f8831a28f files/nsplugins-3.5.5-npapi-64bit.patch 718
@@ -119,10 +51,6 @@ EBUILD kdebase-3.5.5-r1.ebuild 6078 RMD160 a6ac9ee4d04b8d2c77a0147391687021521ff
 MD5 ccd37f5c1d4eeac10da9f09827e5aecb kdebase-3.5.5-r1.ebuild 6078
 RMD160 a6ac9ee4d04b8d2c77a0147391687021521ffa41 kdebase-3.5.5-r1.ebuild 6078
 SHA256 6aa4d4629f5a6abfeead4d14a23798faaca7772aa25048eb274a517704cb456a kdebase-3.5.5-r1.ebuild 6078
-EBUILD kdebase-3.5.5-r2.ebuild 6132 RMD160 fc834167330aa474f7fb234d2ccba98610c00a20 SHA1 5cb20e1b39a73ceaef10298e46a60585fbc9a28d SHA256 8faf4ade2d59bc5c41fbcbd6e45222186f60a1cdeba0992171cc794dcbbf505d
-MD5 2721288cb3395ec5f6cf9b8a4aa5c686 kdebase-3.5.5-r2.ebuild 6132
-RMD160 fc834167330aa474f7fb234d2ccba98610c00a20 kdebase-3.5.5-r2.ebuild 6132
-SHA256 8faf4ade2d59bc5c41fbcbd6e45222186f60a1cdeba0992171cc794dcbbf505d kdebase-3.5.5-r2.ebuild 6132
 EBUILD kdebase-3.5.5-r3.ebuild 6173 RMD160 b42aae21ec3fce420bf72b9d188fe2b57f264270 SHA1 456a627199c96e4e746f0595d401d1c6691d6cb2 SHA256 52d377a441388463a88d5513e9decbccd1d64bafd9f049f94b7246ade1a3c153
 MD5 0de4fe383b8617b3c5e5aa65c0943212 kdebase-3.5.5-r3.ebuild 6173
 RMD160 b42aae21ec3fce420bf72b9d188fe2b57f264270 kdebase-3.5.5-r3.ebuild 6173
@@ -131,14 +59,10 @@ EBUILD kdebase-3.5.6-r1.ebuild 5918 RMD160 bde8e3a644a9ac185cb6d3620cf3631c08109
 MD5 70edd269825891a05cf42c93f7272422 kdebase-3.5.6-r1.ebuild 5918
 RMD160 bde8e3a644a9ac185cb6d3620cf3631c08109078 kdebase-3.5.6-r1.ebuild 5918
 SHA256 4a9fe220feedf388ecd9b1841cf67ea1cd0deab2ec235acf3057072556097c28 kdebase-3.5.6-r1.ebuild 5918
-EBUILD kdebase-3.5.6.ebuild 5757 RMD160 174a80bb916837f4fe84c5f6c6a0a65a18ee05ff SHA1 f6a37d547d43529389a8b1492f2888ec62052001 SHA256 10561c793ecf9bd81b7c0b656cbaabd8366e1a30fefd0e2deb26a6dedf7c6f66
-MD5 5de691378551239c85a191d13ecd7443 kdebase-3.5.6.ebuild 5757
-RMD160 174a80bb916837f4fe84c5f6c6a0a65a18ee05ff kdebase-3.5.6.ebuild 5757
-SHA256 10561c793ecf9bd81b7c0b656cbaabd8366e1a30fefd0e2deb26a6dedf7c6f66 kdebase-3.5.6.ebuild 5757
-MISC ChangeLog 57846 RMD160 6e0f34209a1c320b4f43d3a411b31496f70a510f SHA1 948b8c3e128d588838fe072abff2a37418a1b494 SHA256 476bb691aff31803e29712ed3a49040b1c57eb79ee95c5bce0008ad85be4a184
-MD5 d85b3df3e9318d4f3a27dfa72a1fc1f0 ChangeLog 57846
-RMD160 6e0f34209a1c320b4f43d3a411b31496f70a510f ChangeLog 57846
-SHA256 476bb691aff31803e29712ed3a49040b1c57eb79ee95c5bce0008ad85be4a184 ChangeLog 57846
+MISC ChangeLog 58700 RMD160 a984236d129430789a909de9a26c115d8a5be7d0 SHA1 613d796394f06654691e24978a0138df1a255b82 SHA256 c2c2d5b785bab0be23fa5ea97d12ce1e46b8aa266004556bdd90e49916d5f9a7
+MD5 d14923770951aa1838e8158b1f21bfff ChangeLog 58700
+RMD160 a984236d129430789a909de9a26c115d8a5be7d0 ChangeLog 58700
+SHA256 c2c2d5b785bab0be23fa5ea97d12ce1e46b8aa266004556bdd90e49916d5f9a7 ChangeLog 58700
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
@@ -149,22 +73,16 @@ SHA256 597ab4944116d710976429afa6318b5eb3243417225fe3db430c63d2568dfcba files/di
 MD5 4413bb62e0a3313d499ee48fb91adfaf files/digest-kdebase-3.5.5-r1 521
 RMD160 4631b6a312d8f0a17d62d4a7f98bb92ab09fa8d1 files/digest-kdebase-3.5.5-r1 521
 SHA256 f8d736f629130da8e0d90a8ebd0a550634334af2739900a17d0e04c688b248e2 files/digest-kdebase-3.5.5-r1 521
-MD5 4413bb62e0a3313d499ee48fb91adfaf files/digest-kdebase-3.5.5-r2 521
-RMD160 4631b6a312d8f0a17d62d4a7f98bb92ab09fa8d1 files/digest-kdebase-3.5.5-r2 521
-SHA256 f8d736f629130da8e0d90a8ebd0a550634334af2739900a17d0e04c688b248e2 files/digest-kdebase-3.5.5-r2 521
 MD5 4413bb62e0a3313d499ee48fb91adfaf files/digest-kdebase-3.5.5-r3 521
 RMD160 4631b6a312d8f0a17d62d4a7f98bb92ab09fa8d1 files/digest-kdebase-3.5.5-r3 521
 SHA256 f8d736f629130da8e0d90a8ebd0a550634334af2739900a17d0e04c688b248e2 files/digest-kdebase-3.5.5-r3 521
-MD5 ee171b889b6d1bf06db7b9807b6ecd54 files/digest-kdebase-3.5.6 521
-RMD160 b1bca8eff5d846ea0f0d76494fc35c512f14ddba files/digest-kdebase-3.5.6 521
-SHA256 95625db1a4a2c6cd94814f008a4518537d78318c35aff50d1f295ad9944965be files/digest-kdebase-3.5.6 521
 MD5 ee171b889b6d1bf06db7b9807b6ecd54 files/digest-kdebase-3.5.6-r1 521
 RMD160 b1bca8eff5d846ea0f0d76494fc35c512f14ddba files/digest-kdebase-3.5.6-r1 521
 SHA256 95625db1a4a2c6cd94814f008a4518537d78318c35aff50d1f295ad9944965be files/digest-kdebase-3.5.6-r1 521
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.1 (GNU/Linux)
 
-iD8DBQFFvIo8AiZjviIA2XgRAs2+AKC3P/5vYb49Z1Zhr+cgJRCGhVK3vACeN1vd
-/M5n+t1h9bfrkKdp4ZRPX1E=
-=mP1Y
+iD8DBQFFvI84AiZjviIA2XgRAjI4AJ0RKg8ah+d18OTEfyeiCma50/aazACg0GrP
+NTcsyGLejSoTjTV2L58EILE=
+=YQuX
 -----END PGP SIGNATURE-----
