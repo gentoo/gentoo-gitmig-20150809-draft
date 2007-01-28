@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/pcb
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.29 2006/10/09 15:09:52 calchan Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.30 2007/01/28 10:30:09 calchan Exp $
+
+  28 Jan 2007; Denis Dupeyron <calchan@gentoo.org> pcb-20060822.ebuild:
+  Added dependency to pkgconfig, bug #153620.
 
   09 Oct 2006; Denis Dupeyron <calchan@gentoo.org> pcb-20060822.ebuild:
   Fixed bug #150552, thanks to Lari Korpi.

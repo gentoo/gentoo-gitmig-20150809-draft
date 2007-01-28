@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20060822.ebuild,v 1.6 2006/10/09 15:09:52 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20060822.ebuild,v 1.7 2007/01/28 10:30:09 calchan Exp $
 
 inherit eutils
 
@@ -20,7 +20,8 @@ DEPEND="${RDEPEND}
 	|| (
 		virtual/x11
 		x11-proto/xproto
-	   )"
+	   )
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
