@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.5_p12.ebuild,v 1.3 2007/01/01 16:31:20 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.5_p12.ebuild,v 1.4 2007/01/28 02:54:06 pclouds Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -27,7 +27,7 @@ RDEPEND=">=sys-libs/gdbm-1.8.0
 	>=sys-libs/ncurses-5.2
 	socks5? ( >=net-proxy/dante-1.1.13 )
 	tk? ( dev-lang/tk )
-	>=dev-ruby/ruby-config-0.3
+	>=dev-ruby/ruby-config-0.3.1
 	!=dev-lang/ruby-cvs-1.8*
 	!dev-ruby/rdoc
 	!dev-ruby/rexml"
