@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kima/kima-0.6.2.ebuild,v 1.1 2007/01/20 16:27:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kima/kima-0.6.3.ebuild,v 1.1 2007/01/28 16:55:11 flameeyes Exp $
 
 inherit kde
 
