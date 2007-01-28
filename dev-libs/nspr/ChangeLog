@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.61 2007/01/05 21:43:27 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.62 2007/01/28 12:08:53 armin76 Exp $
+
+  28 Jan 2007; Raúl Porcel <armin76@gentoo.org> metadata.xml:
+  Move to mozilla herd, bug 160313
 
 *nspr-4.6.4-r1 (05 Jan 2007)
 
