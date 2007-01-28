@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.4_pre20070126.ebuild,v 1.1 2007/01/26 19:33:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.4.ebuild,v 1.1 2007/01/28 23:53:02 flameeyes Exp $
 
-inherit eutils flag-o-matic toolchain-funcs libtool autotools
+inherit eutils flag-o-matic toolchain-funcs libtool
 
 # This should normally be empty string, unless a release has a suffix.
 if [[ "${P/_pre/}" != "${P}" ]]; then
@@ -12,7 +12,7 @@ else
 	MY_P="${PN}-${PV/_/-}${MY_PKG_SUFFIX}"
 	S="${WORKDIR}/${MY_P}"
 
-	SRC_URI="mirror://sourceforge/xine/${MY_P}.tar.gz"
+	SRC_URI="mirror://sourceforge/xine/${MY_P}.tar.bz2"
 fi
 
 DESCRIPTION="Core libraries for Xine movie player"
@@ -20,7 +20,7 @@ HOMEPAGE="http://xine.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 IUSE="aalib libcaca arts esd win32codecs nls dvd X directfb vorbis alsa
 gnome sdl speex theora ipv6 altivec opengl aac fbcon xv xvmc
