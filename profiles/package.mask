@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6696 2007/01/28 20:58:45 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6697 2007/01/28 21:14:09 george Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -518,8 +518,6 @@ dev-ada/adabroker
 
 # George Shapovalov <george@gentoo.org> (13 Nov 2006)
 # Masked "old style" lib versions for removal 
-<dev-ada/gtkada-2.4
-<=dev-ada/xmlada-1.0
 =dev-ada/adadoc-2.01
 <dev-ada/gps-bin-2.1
 =dev-ada/aunit-1.01
