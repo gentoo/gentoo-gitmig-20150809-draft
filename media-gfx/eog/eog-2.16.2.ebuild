@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.16.2.ebuild,v 1.9 2007/01/21 22:13:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.16.2.ebuild,v 1.10 2007/01/28 07:48:43 vapier Exp $
 
 inherit eutils gnome2 autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
 IUSE="jpeg lcms"
 
 RDEPEND=">=gnome-base/gnome-vfs-2.5.91
@@ -26,7 +26,6 @@ RDEPEND=">=gnome-base/gnome-vfs-2.5.91
 		>=media-libs/libexif-0.6.12
 		media-libs/jpeg )
 	lcms? ( media-libs/lcms )"
-
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	>=dev-util/intltool-0.35
@@ -47,7 +46,7 @@ src_unpack() {
 	gnome2_src_unpack
 
 	# Fix pkg-config detection if --without-libexif is passed.
-	epatch ${FILESDIR}/${PN}-2.11.90-pkgconfig_macro.patch
+	epatch "${FILESDIR}"/${PN}-2.11.90-pkgconfig_macro.patch
 
 	eautoreconf
 }
