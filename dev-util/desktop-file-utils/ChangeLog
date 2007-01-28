@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/desktop-file-utils
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.46 2007/01/21 13:22:33 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.47 2007/01/28 22:36:20 dang Exp $
+
+  28 Jan 2007; Daniel Gryniewicz <dang@gentoo.org> ChangeLog:
+  Bump to 0.12
+    o improves category validation code to not catch false positives (Vincent
+      Fretin, Ville Skyttä, Ray Strode, Vincent Untz) 
+    o make category validation code non-fatal (Ray)
+    o fix mem leaks and double frees (Pascal Terjan)
 
   21 Jan 2007; Alexander H. Færøy <eroyf@gentoo.org>
   desktop-file-utils-0.11.ebuild:
