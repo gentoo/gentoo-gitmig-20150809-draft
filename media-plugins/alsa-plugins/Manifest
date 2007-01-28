@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX alsa-plugins-1.0.11-automagic.patch 2387 RMD160 7ba1283bd2ac8c94b690db18ed80f2154df4e755 SHA1 fd6242d06959e20ecf4f69dabefd0f29e2fe192c SHA256 ce8a8a7de749167dce31008283045548077fc8a29704ab7742071e7deff87d39
 MD5 11501a02f6428eb443cb507593790efd files/alsa-plugins-1.0.11-automagic.patch 2387
 RMD160 7ba1283bd2ac8c94b690db18ed80f2154df4e755 files/alsa-plugins-1.0.11-automagic.patch 2387
@@ -26,10 +29,10 @@ EBUILD alsa-plugins-1.0.13.ebuild 1780 RMD160 f77c031d4e1620be5bd67f5b47d639cba7
 MD5 7a8e5076fec65d37ab2a858c8016464a alsa-plugins-1.0.13.ebuild 1780
 RMD160 f77c031d4e1620be5bd67f5b47d639cba76388d3 alsa-plugins-1.0.13.ebuild 1780
 SHA256 1643da5a7127eb348ccb9acae05feba76ab378011271ec7e822587bfd86f2011 alsa-plugins-1.0.13.ebuild 1780
-EBUILD alsa-plugins-1.0.14_rc1-r1.ebuild 1975 RMD160 9f8bed7643de09d1d023906dc78126a23a1109b1 SHA1 5879c6b9e79bba2440e89dd0ffd2821b4993e0cc SHA256 418651898a1e1a191d39332c8cd011de3ac3e05516bc6671468ddb867c2fb570
-MD5 7a60aaaba99e3d1c095ad7abd1c1ecdd alsa-plugins-1.0.14_rc1-r1.ebuild 1975
-RMD160 9f8bed7643de09d1d023906dc78126a23a1109b1 alsa-plugins-1.0.14_rc1-r1.ebuild 1975
-SHA256 418651898a1e1a191d39332c8cd011de3ac3e05516bc6671468ddb867c2fb570 alsa-plugins-1.0.14_rc1-r1.ebuild 1975
+EBUILD alsa-plugins-1.0.14_rc1-r1.ebuild 1976 RMD160 38bcf8a607eb54ad13634cd1b496566562184e13 SHA1 b3f7cf93f902f257707a7ddcd954dc57c4721775 SHA256 a40b6e393705916bff94d7c572d424aa446d6d73e075415b735e474e1240b1df
+MD5 7f43bdef245ad760ec0ce55a4eb67b25 alsa-plugins-1.0.14_rc1-r1.ebuild 1976
+RMD160 38bcf8a607eb54ad13634cd1b496566562184e13 alsa-plugins-1.0.14_rc1-r1.ebuild 1976
+SHA256 a40b6e393705916bff94d7c572d424aa446d6d73e075415b735e474e1240b1df alsa-plugins-1.0.14_rc1-r1.ebuild 1976
 EBUILD alsa-plugins-1.0.14_rc1-r2.ebuild 2081 RMD160 771bb015beb182fb096d6697cfb9b1e7a06dd8b9 SHA1 32f046978d641c6677fb4c51d580706ac30deaa1 SHA256 e61cc625a5a1b360097e2c6c10a10261db4756df6f6561681d0d275283c069b8
 MD5 5438115bd7a4528481ff0ed4e73bdcd5 alsa-plugins-1.0.14_rc1-r2.ebuild 2081
 RMD160 771bb015beb182fb096d6697cfb9b1e7a06dd8b9 alsa-plugins-1.0.14_rc1-r2.ebuild 2081
@@ -61,3 +64,10 @@ SHA256 312aabedc10ebec429bc2e873989bbc3be013f3761a9f6cbb786a1f0ba5b42cd files/di
 MD5 9572f01a2b679a535c46f60ae23ff48e files/digest-alsa-plugins-1.0.14_rc2 271
 RMD160 bd2849c82ce9abd47f23894a720dc0ecf558b0b8 files/digest-alsa-plugins-1.0.14_rc2 271
 SHA256 7b8cda389b16db713054fbc9e50d7ab9e087e2709aafd4107086b5a8f67003c4 files/digest-alsa-plugins-1.0.14_rc2 271
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFvFcT8bi6rjpTunYRAoj5AJ9NC/mKF+n2yD4pwS3qTDJcLK92bgCaAihS
+AQxLmIbw3x1YYlGIAeeDesE=
+=8zfw
+-----END PGP SIGNATURE-----
