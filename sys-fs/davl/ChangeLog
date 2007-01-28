@@ -1,0 +1,11 @@
+# ChangeLog for sys-fs/davl
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/davl/ChangeLog,v 1.1 2007/01/28 22:22:08 armin76 Exp $
+
+*davl-1.2.1 (28 Jan 2007)
+
+  28 Jan 2007; Raúl Porcel <armin76@gentoo.org> +metadata.xml,
+  +davl-1.2.1.ebuild:
+  Initial import, bug 120182, thanks to Paul Bredbury <brebs at sent dot com>
+  for the initial ebuild
+
