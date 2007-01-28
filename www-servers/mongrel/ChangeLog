@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/mongrel
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/ChangeLog,v 1.1 2007/01/04 13:54:42 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/ChangeLog,v 1.2 2007/01/28 13:32:27 flameeyes Exp $
+
+  28 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> mongrel-1.0.ebuild:
+  Add ~amd64 and ~x86-fbsd keywords.
 
 *mongrel-1.0 (04 Jan 2007)
 
