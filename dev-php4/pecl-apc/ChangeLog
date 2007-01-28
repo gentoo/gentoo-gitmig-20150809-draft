@@ -1,6 +1,9 @@
 # ChangeLog for dev-php4/pecl-apc
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-apc/ChangeLog,v 1.18 2006/10/15 11:46:01 chtekk Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-apc/ChangeLog,v 1.19 2007/01/28 06:31:28 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> pecl-apc-3.0.12_p2.ebuild:
+  Replacing einfo with elog
 
   15 Oct 2006; Luca Longinotti <chtekk@gentoo.org>
   pecl-apc-3.0.12_p2.ebuild:
