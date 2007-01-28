@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r3.ebuild,v 1.1 2007/01/28 05:10:37 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r4.ebuild,v 1.1 2007/01/28 19:40:16 fordfrog Exp $
 
 inherit eutils java-pkg-2 java-ant-2 versionator
 
@@ -80,7 +80,11 @@ IDE_VERSION="7"
 PLATFORM="6"
 MY_FDIR="${FILESDIR}/${SLOT}-r2"
 DESTINATION="/usr/share/netbeans-${SLOT}"
-JAVA_PKG_BSFIX="off"
+# NOTE: We cannot turn JAVA_PKG_BSFIX="off" as build file misses target=1.5 for
+# ./enterprise3/modules/ext/jsp-parser-ext.jar which causes it to be built using
+# default target which depends on JDK used for compilation. If JDK used for
+# compilation > 1.5 then it causes bug #164256.
+
 
 src_unpack () {
 	unpack ${A}
@@ -274,7 +278,8 @@ function place_unpack_symlinks() {
 	# MISSING: webserver.jar (something from tomcat)
 
 	# java
-	# MISSING: java/external/gjast.jar (no ebuild)
+	# cd java/external
+	#gjast.jar (netbeans stuff)
 
 	einfo "Symlinking jars for junit"
 	cd ${S}/junit/external
@@ -426,7 +431,7 @@ function symlink_extjars() {
 	#ddl.jar (netbeans stuff)
 	java-pkg_jar-from flute
 	java-pkg_jar-from jgoodies-forms forms.jar forms-1.0.5.jar
-	# MISSING: gjast.jar (no ebuild)
+	#gjast.jar (netbeans stuff)
 	#java-parser.jar (netbeans stuff)
 	java-pkg_jar-from jmi-interface jmi.jar jmi.jar
 	#jmiutils.jar (netbeans stuff)
