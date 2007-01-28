@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/actkbd/actkbd-0.2.7.ebuild,v 1.1 2006/10/27 15:56:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/actkbd/actkbd-0.2.7.ebuild,v 1.2 2007/01/28 04:49:59 genone Exp $
 
 inherit linux-info eutils
 
@@ -35,13 +35,13 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "actkbd currently needs the event interface from 2.6 kernels to work. Add"
-	einfo "evdev to /etc/modules.autoload.d/kernel-2.6 to have it loaded during boot."
-	einfo "System-wide configuration file is /etc/actkbd.conf, but you can use the -c"
-	einfo "option to specify a custom configuration file. Use actkbd.conf from"
-	einfo "/usr/share/doc/${PF} as a template. We don't install it by default,"
-	einfo "because it contains some dangerous examples. You may also need to supply"
-	einfo "the -d option to use the right /dev/input/event* device."
-	einfo
+	elog
+	elog "actkbd currently needs the event interface from 2.6 kernels to work. Add"
+	elog "evdev to /etc/modules.autoload.d/kernel-2.6 to have it loaded during boot."
+	elog "System-wide configuration file is /etc/actkbd.conf, but you can use the -c"
+	elog "option to specify a custom configuration file. Use actkbd.conf from"
+	elog "/usr/share/doc/${PF} as a template. We don't install it by default,"
+	elog "because it contains some dangerous examples. You may also need to supply"
+	elog "the -d option to use the right /dev/input/event* device."
+	elog
 }
