@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/slock
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/ChangeLog,v 1.2 2007/01/13 15:23:45 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/ChangeLog,v 1.3 2007/01/28 17:46:55 cedk Exp $
+
+  28 Jan 2007; Cedric Krier <cedk@gentoo.org> -slock-0.3.ebuild,
+  slock-0.4.ebuild:
+  Fix HOMEPAGE and remove old
 
 *slock-0.4 (13 Jan 2007)
 
