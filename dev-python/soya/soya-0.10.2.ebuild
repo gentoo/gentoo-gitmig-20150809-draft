@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/soya-0.10.2.ebuild,v 1.2 2006/06/13 21:11:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/soya-0.10.2.ebuild,v 1.3 2007/01/28 19:17:41 dev-zero Exp $
 
 inherit distutils
 
@@ -81,7 +81,6 @@ src_install() {
 		doins tutorial/data/sounds/*
 		insinto /usr/share/${PN}/tutorial/data/svg
 		doins tutorial/data/svg/*
-		insopts -m0666
 		insinto /usr/share/${PN}/tutorial/data/worlds
 		doins tutorial/data/worlds/*
 		insinto /usr/share/${PN}/tutorial/data/materials

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/soya
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/ChangeLog,v 1.19 2007/01/28 19:12:18 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/ChangeLog,v 1.20 2007/01/28 19:17:41 dev-zero Exp $
+
+  28 Jan 2007; Tiziano Müller <dev-zero@gentoo.org> soya-0.10.2.ebuild:
+  Removed insopts-line for tutorial (bug #164166).
 
 *soya-0.13_rc1 (28 Jan 2007)
 
