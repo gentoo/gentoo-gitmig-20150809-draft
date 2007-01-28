@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/xnview-1.70-r2.ebuild,v 1.3 2006/07/16 17:28:52 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/xnview-1.70-r2.ebuild,v 1.4 2007/01/28 19:52:36 nelchael Exp $
 
 DESCRIPTION="XnView image viewer/converter"
 HOMEPAGE="http://www.xnview.com/"
@@ -11,19 +11,17 @@ LICENSE="free-noncomm as-is"
 KEYWORDS="-* x86"
 IUSE=""
 
-RDEPEND="|| ( (
-		x11-libs/libXau
-		x11-libs/libX11
-		x11-libs/libXt
-		x11-libs/libXext
-		x11-libs/libXp
-		x11-libs/libXdmcp
-		media-fonts/font-bh-lucidatypewriter-100dpi
-		media-fonts/font-bh-lucidatypewriter-75dpi )
-	virtual/x11 )"
-DEPEND="${RDEPEND}
-		sys-libs/glibc"
+RDEPEND="x11-libs/libXau
+	x11-libs/libX11
+	x11-libs/libXt
+	x11-libs/libXext
+	x11-libs/libXp
+	x11-libs/libXdmcp
+	media-fonts/font-bh-lucidatypewriter-100dpi
+	media-fonts/font-bh-lucidatypewriter-75dpi"
+DEPEND=""
 
+RESTRICT="strip"
 S="${WORKDIR}/XnView-1.70-x86-unknown-linux2.x-static-fc4"
 
 src_unpack() {
@@ -40,18 +38,17 @@ src_unpack() {
 
 src_install() {
 
-	BASE_DIR=/opt/XnView
+	into /opt/XnView
+	for x in xnview nview nconvert ; do
+		dobin bin/${x}
+		dosym /opt/XnView/bin/${x} /opt/bin/${x}
+	done
 
-	into /opt
-	dobin bin/{xnview,nview,nconvert}
-
-	cp app-defaults/XnView.ad app-defaults/XnView
-	insinto /usr/lib/X11/app-defaults/XnView
-	doins app-defaults/XnView
-	fperms 444 /usr/lib/X11/app-defaults/XnView
-
-	doman man/*.1
+	insinto /usr/share/X11/app-defaults
+	newins app-defaults/XnView.ad XnView
+	fperms 444 /usr/share/X11/app-defaults/XnView
 
 	dodoc *.txt
+	doman man/*.1
 
 }
