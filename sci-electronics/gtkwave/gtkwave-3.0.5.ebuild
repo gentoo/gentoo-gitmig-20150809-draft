@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/gtkwave-3.0.5.ebuild,v 1.5 2006/09/05 18:21:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/gtkwave-3.0.5.ebuild,v 1.6 2007/01/28 14:06:59 calchan Exp $
 
 inherit eutils
 
@@ -13,7 +13,8 @@ LICENSE="GPL-2 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ppc sparc x86"
 
-DEPEND=">=x11-libs/gtk+-2"
+DEPEND=">=x11-libs/gtk+-2
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
