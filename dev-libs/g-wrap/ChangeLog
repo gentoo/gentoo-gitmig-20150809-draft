@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/g-wrap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.34 2007/01/24 17:15:21 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.35 2007/01/28 22:59:06 weeve Exp $
+
+  28 Jan 2007; Jason Wever <weeve@gentoo.org> g-wrap-1.9.6-r1.ebuild:
+  Added ~sparc keyword wrt bug #163735.
 
 *g-wrap-1.9.7-r2 (24 Jan 2007)
 *g-wrap-1.9.6-r1 (24 Jan 2007)
