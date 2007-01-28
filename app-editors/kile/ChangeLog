@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/kile
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.89 2007/01/11 16:47:11 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.90 2007/01/28 11:41:53 masterdriverz Exp $
+
+  28 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  -kile-1.8.1-r1.ebuild, -kile-1.9.ebuild, -kile-1.9.1.ebuild,
+  -kile-1.9.2.ebuild:
+  Remove insecure versions due to glsa 200611-21; bug 164198
 
   11 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> kile-1.9.3.ebuild:
   Stable on sparc
