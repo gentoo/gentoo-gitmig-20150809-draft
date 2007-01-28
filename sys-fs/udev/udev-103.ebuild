@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-103.ebuild,v 1.8 2007/01/26 13:59:20 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-103.ebuild,v 1.9 2007/01/28 23:14:11 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -256,13 +256,14 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	if [ "${ROOT}" = "/" -a -n "`pidof udevd`" ]
-	then
-		killall -15 udevd &>/dev/null
-		sleep 1
-		killall -9 udevd &>/dev/null
+	if [[ ${ROOT} == "/" ]] ; then
+		if [[ -n $(pidof udevd) ]] ; then
+			killall -15 udevd &>/dev/null
+			sleep 1
+			killall -9 udevd &>/dev/null
+		fi
+		/sbin/udevd --daemon
 	fi
-	/sbin/udevd --daemon
 
 	# people want reminders, I'll give them reminders.  Odds are they will
 	# just ignore them anyway...
