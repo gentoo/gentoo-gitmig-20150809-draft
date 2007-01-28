@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/electric-8.04.ebuild,v 1.1 2006/10/09 17:23:43 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/electric-8.04.ebuild,v 1.2 2007/01/28 10:07:26 calchan Exp $
 
 inherit eutils java-pkg
 
 DESCRIPTION="Complete Electronic Design Automation (EDA) system that can handle many forms of circuit design"
 HOMEPAGE="http://www.gnu.org/software/electric/electric.html"
-SRC_URI="ftp://ftp.gnu.org/pub/gnu/electric/${PN}Binary-${PV}.jar"
+SRC_URI="mirror://gnu/electric/${PN}Binary-${PV}.jar"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
