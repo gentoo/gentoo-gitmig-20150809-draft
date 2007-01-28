@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/swidgets
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swidgets/ChangeLog,v 1.8 2007/01/28 19:36:52 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swidgets/ChangeLog,v 1.9 2007/01/28 19:50:52 wltjr Exp $
+
+  28 Jan 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  swidgets-0.1.1-r1.ebuild:
+  Forgot java-ant-2 in inherit, added back dep on ant-core
 
 *swidgets-0.1.1-r1 (28 Jan 2007)
 
