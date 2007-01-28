@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.3.6.ebuild,v 1.2 2007/01/20 04:32:07 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.3.6.ebuild,v 1.3 2007/01/28 15:06:14 hanno Exp $
 
 inherit eutils gnome2
 
@@ -26,11 +26,10 @@ DEPEND=">=media-libs/mesa-6.5.1-r1
 		>=gnome-base/control-center-2.16.1 )
 	svg? ( gnome-base/librsvg )
 	dbus? ( >=sys-apps/dbus-1.0
-		>dev-libs/glib-2
-		kde? ( dev-libs/dbus-qt3-old ) )
+		>dev-libs/glib-2 )
 	kde? (
-	|| ( kde-base/kwin kde-base/kdebase )
-	)"
+		|| ( kde-base/kwin kde-base/kdebase )
+		dev-libs/dbus-qt3-old )"
 
 src_compile() {
 	econf --with-default-plugins \
