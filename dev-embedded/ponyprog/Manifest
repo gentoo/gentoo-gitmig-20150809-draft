@@ -1,12 +1,26 @@
-MD5 0870ec5eb817062873d2afd0d8612cda ChangeLog 829
-RMD160 064bafa3f26dd0ae277e176f107a6ecede433af8 ChangeLog 829
-SHA256 25d06cda381f1a778db5c403eecfb79fbc675fc429bb605cd2728ffe6261afab ChangeLog 829
-MD5 8ba0cc1b1a46aac397541edeab26441e files/digest-ponyprog-2.06c 71
-RMD160 01802a2f6a25ceecb024b4e688aa66ccece4d8ba files/digest-ponyprog-2.06c 71
-SHA256 bb8871bfa047d2b3994b5b6b5fb08d1df8811f4159cf03fd0974f811452462d0 files/digest-ponyprog-2.06c 71
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST ponyprog-2.06c-rh70.tar.gz 325807 RMD160 3332b34504d04dd2f3ae7cda3df2db7d81e9f078 SHA1 3e6a139e5c7e9b1ba8e8d63828dbeacdad182b98 SHA256 7c19a95820a5ca95125e57b83cd81efb9219eadcaa87506ec16de0b1a7de805e
+EBUILD ponyprog-2.06c.ebuild 1454 RMD160 fb058c1ad0104e96b4f7b900ccf9c29c3f88bfa9 SHA1 746050cf42392cea08fd57fd9cb536db85f3484a SHA256 dfe69a3b4e6162e6b2f3ab3f965eb2a61af2aacd750b2549c020e1bdd7e9072a
+MD5 fa531a3263522fe201002b07822c07f5 ponyprog-2.06c.ebuild 1454
+RMD160 fb058c1ad0104e96b4f7b900ccf9c29c3f88bfa9 ponyprog-2.06c.ebuild 1454
+SHA256 dfe69a3b4e6162e6b2f3ab3f965eb2a61af2aacd750b2549c020e1bdd7e9072a ponyprog-2.06c.ebuild 1454
+MISC ChangeLog 930 RMD160 c42fdaf4bfad19d6bbcbdaafdbbeb26a13af71f4 SHA1 9639449ee51e70ddbea95c92a62ffc7c0636ca4a SHA256 9b85a8f32e726b33aee4c636c2e7fbb213a9a3b5b32eec6a97ae7b86f5aab02e
+MD5 ffbd3c986970acc1ef9930788443a74c ChangeLog 930
+RMD160 c42fdaf4bfad19d6bbcbdaafdbbeb26a13af71f4 ChangeLog 930
+SHA256 9b85a8f32e726b33aee4c636c2e7fbb213a9a3b5b32eec6a97ae7b86f5aab02e ChangeLog 930
+MISC metadata.xml 283 RMD160 47f7877ddc89bb621ec4b68b2b9bc9dfb1715d6a SHA1 cfa5d3dd2138b02277b89ac78eef3ffd862306ef SHA256 69cfda14b4b1d7f27fbd3cd7c412e620ef1118df2a4debecee49bf94d24f70bf
 MD5 2908d8bdd9992128fe936e0bbef636b4 metadata.xml 283
 RMD160 47f7877ddc89bb621ec4b68b2b9bc9dfb1715d6a metadata.xml 283
 SHA256 69cfda14b4b1d7f27fbd3cd7c412e620ef1118df2a4debecee49bf94d24f70bf metadata.xml 283
-MD5 e68e3d8ef34483f4aa352b1f5229ce39 ponyprog-2.06c.ebuild 1468
-RMD160 278b6eae53274d9579fcb53e9750b04fb83d8a85 ponyprog-2.06c.ebuild 1468
-SHA256 6024d3efdec4fdd1e38fa91bd26b1f0614e613e0b30f56ff24b40d7f93ed14a4 ponyprog-2.06c.ebuild 1468
+MD5 ea893c71fb139b4dd8369e80f0e53549 files/digest-ponyprog-2.06c 259
+RMD160 389c95fc64dc3c03cd305fdffc8e3b821948444a files/digest-ponyprog-2.06c 259
+SHA256 849540afdb718c35ad8c387d7138150ecc83d4633918183bd8ebe0e766627c74 files/digest-ponyprog-2.06c 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFvEK36J2i8a8J4okRApJYAJ0SgtGdYQ2hl7b2kPrJdlNOpfSFTQCfVuNT
+ORqIXqZkLiNQRa+VB1Fk+8k=
+=HXNk
+-----END PGP SIGNATURE-----
