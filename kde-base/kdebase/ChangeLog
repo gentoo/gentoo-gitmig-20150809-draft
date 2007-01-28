@@ -1,6 +1,25 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.337 2007/01/28 11:34:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.338 2007/01/28 11:55:28 flameeyes Exp $
+
+  28 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/kdebase-3.4.1-configure.patch,
+  -files/kdebase-3.4.1-startkde-gentoo.patch,
+  -files/kdebase-3.4.2-kinfocenter-opengl-fix.patch,
+  -files/kdebase-3.4.2-konqueror-filter.patch,
+  -files/kdebase-3.4.3-noimake.patch, -files/kdebase-3.4.3-xdmcp.patch,
+  -files/kdebase-3.4-configure.patch,
+  -files/konsole-3.5.1-detach-send2all.patch,
+  -files/kwin-3.5.2-parallel-make.diff,
+  -files/drkonqi-3.5.2-splitdebug.patch,
+  -files/nsplugins-3.5.3-applet-redirects.patch,
+  -files/kdm-3.5.3-strict-aliasing.patch,
+  -files/kdebase-kioslaves-3.5.4-dbuscrash.patch,
+  -files/kdm-3.5.4-strict-aliasing.patch, -files/kde.desktop,
+  -files/kde.pam, -files/kde-np.pam, -kdebase-3.5.5-r2.ebuild,
+  -kdebase-3.5.6.ebuild:
+  Remove old versions and a bunch of files that are orphaned for quite a while
+  now.
 
 *kdebase-3.5.6-r1 (28 Jan 2007)
 

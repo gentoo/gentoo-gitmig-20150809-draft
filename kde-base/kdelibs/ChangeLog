@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.409 2007/01/28 11:29:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.410 2007/01/28 11:59:14 flameeyes Exp $
+
+  28 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/kdelibs-3.4.3-inttypes.patch, -files/post-3.4.3-kdelibs-kjs.diff,
+  -files/kde3-dcopidlng.patch, -files/kdelibs-3.4.1-configure.patch,
+  -kdelibs-3.5.5-r6.ebuild, -kdelibs-3.5.6.ebuild:
+  Remove old versions and a bunch of files that are orphaned for quite a while
+  now.
 
 *kdelibs-3.5.6-r1 (28 Jan 2007)
 
