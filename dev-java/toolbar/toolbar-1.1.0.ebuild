@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/toolbar/toolbar-1.1.0.ebuild,v 1.1 2005/12/10 20:04:55 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/toolbar/toolbar-1.1.0.ebuild,v 1.2 2007/01/28 19:19:02 wltjr Exp $
 
 inherit java-pkg
 
