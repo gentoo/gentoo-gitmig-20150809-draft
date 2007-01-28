@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/yelp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/ChangeLog,v 1.144 2007/01/21 22:08:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/ChangeLog,v 1.145 2007/01/28 09:12:24 remi Exp $
+
+  28 Jan 2007; Remi Cardona <remi@gentoo.org> yelp-2.14.2-r2.ebuild:
+  adding WANT_AUTO*, see bug #164160
 
   21 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> yelp-2.16.2.ebuild:
   Stable on IA64, bug 156662.

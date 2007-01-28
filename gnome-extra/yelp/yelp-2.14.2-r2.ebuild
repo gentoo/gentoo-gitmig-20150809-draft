@@ -1,6 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.14.2-r2.ebuild,v 1.8 2006/10/20 21:10:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.14.2-r2.ebuild,v 1.9 2007/01/28 09:12:24 remi Exp $
+
+WANT_AUTOMAKE=1.9
+WANT_AUTOCONF=2.5
 
 inherit eutils gnome2 autotools
 
