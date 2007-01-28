@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/inspircd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.8 2007/01/04 18:51:12 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.9 2007/01/28 22:02:47 hansmi Exp $
+
+  28 Jan 2007; Michael Hanselmann <hansmi@gentoo.org>
+  -inspircd-1.0.6.ebuild, -inspircd-1.0.7.ebuild:
+  Remove old ebuilds.
 
   04 Jan 2007; Michael Hanselmann <hansmi@gentoo.org>
   inspircd-1.0.7-r1.ebuild:
