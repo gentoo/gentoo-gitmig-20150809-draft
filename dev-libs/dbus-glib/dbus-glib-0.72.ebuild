@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/dbus-glib-0.72.ebuild,v 1.11 2007/01/23 04:59:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/dbus-glib-0.72.ebuild,v 1.12 2007/01/28 07:32:47 vapier Exp $
 
 inherit eutils multilib autotools
 
@@ -8,9 +8,9 @@ DESCRIPTION="D-Bus bindings for glib"
 HOMEPAGE="http://dbus.freedesktop.org/"
 SRC_URI="http://dbus.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="|| ( GPL-2 AFL-2.1 )"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+SLOT="0"
+KEYWORDS="~alpha amd64 arm hppa ia64 ppc ppc64 s390 sh ~sparc x86 ~x86-fbsd"
 IUSE="doc selinux debug"
 
 RDEPEND=">=sys-apps/dbus-0.94
@@ -18,16 +18,14 @@ RDEPEND=">=sys-apps/dbus-0.94
 	selinux? ( sys-libs/libselinux )
 	>=dev-libs/libxml2-2.6.21"
 	# expat code now sucks.. libxml2 is the default
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	doc? (	app-doc/doxygen
-		app-text/xmlto )"
+	doc? ( app-doc/doxygen app-text/xmlto )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-introspection.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-introspection.patch
 }
 
 src_compile() {
@@ -57,7 +55,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	dodoc AUTHORS ChangeLog HACKING NEWS README
 }
