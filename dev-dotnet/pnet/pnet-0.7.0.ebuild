@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.7.0.ebuild,v 1.4 2006/06/20 04:24:18 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.7.0.ebuild,v 1.5 2007/01/28 06:20:58 genone Exp $
 
 DESCRIPTION="Portable.NET runtime, compiler, tools"
 HOMEPAGE="http://www.dotgnu.org/"
@@ -51,13 +51,13 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "If you want to avoid typing '<runtime> program.exe'"
-	einfo "you can configure your runtime in /etc/conf.d/dotnet"
-	einfo "Use /etc/init.d/dotnet to register your runtime"
+	elog "If you want to avoid typing '<runtime> program.exe'"
+	elog "you can configure your runtime in /etc/conf.d/dotnet"
+	elog "Use /etc/init.d/dotnet to register your runtime"
 	echo
-	einfo "dev-dotnet/pnet is only the runtime, compiler and tools"
-	einfo "for DotGNU Portable.NET."
-	einfo "For running and developing applications that use .NET APIs"
-	einfo "you will also need to install the library: dev-dotnet/pnetlib"
+	elog "dev-dotnet/pnet is only the runtime, compiler and tools"
+	elog "for DotGNU Portable.NET."
+	elog "For running and developing applications that use .NET APIs"
+	elog "you will also need to install the library: dev-dotnet/pnetlib"
 	echo
 }

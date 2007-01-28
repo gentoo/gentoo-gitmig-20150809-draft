@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mysql-connector-net/mysql-connector-net-1.0.4.ebuild,v 1.5 2007/01/19 15:00:00 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mysql-connector-net/mysql-connector-net-1.0.4.ebuild,v 1.6 2007/01/28 06:18:58 genone Exp $
 
 inherit eutils multilib mono
 
@@ -51,7 +51,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Adding the path for this connector in your mod_mono"
-	einfo "configuration may be needed:"
-	einfo "MonoPath \"/usr/lib/mono/1.0/mysql-connector-net/\""
+	elog "Adding the path for this connector in your mod_mono"
+	elog "configuration may be needed:"
+	elog "MonoPath \"/usr/lib/mono/1.0/mysql-connector-net/\""
 }
