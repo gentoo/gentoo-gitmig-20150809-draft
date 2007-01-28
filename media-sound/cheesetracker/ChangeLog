@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cheesetracker
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cheesetracker/ChangeLog,v 1.22 2006/10/24 10:44:11 tcort Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cheesetracker/ChangeLog,v 1.23 2007/01/28 11:48:38 flameeyes Exp $
+
+  28 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -cheesetracker-0.9.9.ebuild:
+  Remove vulnerable version, see bug #164225.
 
   24 Oct 2006; Thomas Cort <tcort@gentoo.org> cheesetracker-0.9.9-r1.ebuild:
   Stable on alpha and amd64 wrt security Bug #142391.
