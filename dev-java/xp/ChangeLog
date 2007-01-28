@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/xp
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xp/ChangeLog,v 1.3 2005/02/17 17:47:09 luckyduck Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xp/ChangeLog,v 1.4 2007/01/28 21:10:19 wltjr Exp $
+
+*xp-0.5-r1 (28 Jan 2007)
+
+  28 Jan 2007; William L. Thomson Jr. <wltjr@gentoo.org> +xp-0.5-r1.ebuild:
+  Migrated to gen 2, warnings about package using enum keyword.
 
   17 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> xp-0.5.ebuild:
   added missing unzip dependency. see #69831
