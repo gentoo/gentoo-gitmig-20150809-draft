@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/datavision-1.0.0-r2.ebuild,v 1.1 2007/01/21 00:00:54 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/datavision-1.0.0-r2.ebuild,v 1.2 2007/01/28 16:57:22 wltjr Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://datavision.sourceforge.net/"
 IUSE="doc mysql postgres ruby"
 SLOT="1.0"
 LICENSE="Apache-1.1"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 RDEPEND=">=virtual/jre-1.4
 	>=dev-java/itext-1.02b
 	>=dev-java/jcalendar-1.2
