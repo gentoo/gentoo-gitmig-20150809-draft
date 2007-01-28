@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.223 2007/01/06 10:28:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.224 2007/01/28 17:17:59 swegener Exp $
+
+  28 Jan 2007; Sven Wegener <swegener@gentoo.org> +files/xc280-fix-ja.diff,
+  xchat-2.8.0.ebuild:
+  Pull in a small i18n fix from upstream.
 
   06 Jan 2007; Sven Wegener <swegener@gentoo.org> xchat-2.8.0.ebuild:
   Add postinst message about integrated systray icon.
