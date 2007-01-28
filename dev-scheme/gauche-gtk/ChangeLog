@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/gauche-gtk
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gtk/ChangeLog,v 1.10 2007/01/10 17:11:45 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gtk/ChangeLog,v 1.11 2007/01/28 06:40:42 genone Exp $
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> gauche-gtk-0.4.1.ebuild:
+  Replacing einfo with elog
 
   10 Jan 2007; <marijn@gentoo.org> gauche-gtk-0.4.1.ebuild:
   Dependency update: dev-lang/gauche -> dev-scheme/gauche.

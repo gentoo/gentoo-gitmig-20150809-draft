@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gtk/gauche-gtk-0.4.1.ebuild,v 1.7 2007/01/10 17:11:45 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gtk/gauche-gtk-0.4.1.ebuild,v 1.8 2007/01/28 06:40:42 genone Exp $
 
 inherit eutils flag-o-matic
 
@@ -99,7 +99,7 @@ src_install() {
 pkg_postinst() {
 
 	if use opengl; then
-		einfo "If you want to use OpenGL with Gauche, please emerge Gauche-gl."
+		elog "If you want to use OpenGL with Gauche, please emerge Gauche-gl."
 	fi
 
 }
