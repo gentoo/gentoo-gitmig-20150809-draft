@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-4.0.ebuild,v 1.1 2007/01/27 12:26:43 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-4.0.ebuild,v 1.2 2007/01/29 21:57:08 slarti Exp $
 
-inherit eutils gnome2 multilib flag-o-matic
+inherit eutils gnome2 multilib flag-o-matic versionator
 
 DESCRIPTION="A GNOME trayicon which checks for email. Supports mbox, MH,
 Maildir, IMAP, Sylpheed, POP3, Gmail and Evolution.  Authenticates via
@@ -55,9 +55,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	S=${WORKDIR}/${PN}-${MY_PV}
 	gnome2_src_unpack
-	gnome2_omf_fix
 
 	sed -i -e 's:gtk-update-icon-cache:true:' ./art/Makefile.in
 }
