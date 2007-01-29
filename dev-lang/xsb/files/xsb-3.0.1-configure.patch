@@ -1,5 +1,5 @@
 --- XSB.orig/build/configure.in	2006-06-25 13:08:48.000000000 +1200
-+++ XSB/build/configure.in	2007-01-28 12:01:01.000000000 +1300
++++ XSB/build/configure.in	2007-01-29 19:38:38.000000000 +1300
 @@ -258,9 +258,9 @@
  dnl prefix given by the user. The prefix variable will later get
  dnl the <xsb-version> subdirectory added in.
@@ -147,22 +147,35 @@
      if test "${java_support}" != "yes"; then
          echo "Interprolog not supported due to failure to find Java"
          with_interprolog=""
-@@ -1553,11 +1556,11 @@
+@@ -1547,20 +1550,20 @@
+ #fi
+ 
+ # dnl ODBC library
+-if test "${with_odbc}" = yes ; then
++#if test "${with_odbc}" = yes ; then
+    case "$canonical" in
+     *-cygwin*)  LDFLAGS="-lodbc32 ${LDFLAGS}"
                  LINKFLAGS="-lodbc32 ${LINKFLAGS}"
          ;;
-     *)          if test -n "${with_iodbc}"; then
+-    *)          if test -n "${with_iodbc}"; then
 -                    LDFLAGS="-liodbc ${LDFLAGS}"
 -                    LINKFLAGS="-liodbc ${LINKFLAGS}"
-+                    LDFLAGS="$(iodbc-config --libs) ${LDFLAGS}"
-+#                    LINKFLAGS="-liodbc ${LINKFLAGS}"
-                 else
+-                else
 -                    LDFLAGS="-lodbc ${LDFLAGS}"
 -                    LINKFLAGS="-lodbc ${LINKFLAGS}"
++    *)          if test "${with_iodbc}" = "yes"; then
++                    LDFLAGS="$(iodbc-config --libs) ${LDFLAGS}"
++#                    LINKFLAGS="-liodbc ${LINKFLAGS}"
++                elif test "${with_odbc}" = "yes"; then
 +                    LDFLAGS="$(odbc_config --libs) ${LDFLAGS}"
 +#                    LINKFLAGS="-lodbc ${LINKFLAGS}"
                  fi
      esac
- fi
+-fi
++#fi
+ 
+ # this is needed for -mno-cygwin dll compilation
+ DLLTYPE=nodll
 @@ -1726,11 +1729,11 @@
  AC_SUBST(xsb_asm_extension)
  AC_SUBST(xsb_dcl_extension)

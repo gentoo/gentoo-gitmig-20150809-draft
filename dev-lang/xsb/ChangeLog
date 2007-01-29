@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/xsb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.1 2007/01/28 09:19:36 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.2 2007/01/29 06:45:05 keri Exp $
+
+  29 Jan 2007; keri <keri@gentoo.org> files/xsb-3.0.1-configure.patch:
+  Enable use of iODBC driver manager without explicit support for ODBC.
 
 *xsb-3.0.1 (28 Jan 2007)
 
