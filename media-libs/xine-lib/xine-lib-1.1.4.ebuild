@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.4.ebuild,v 1.2 2007/01/29 04:24:29 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.4.ebuild,v 1.3 2007/01/29 18:50:01 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool
 
@@ -55,7 +55,7 @@ RDEPEND="
 	mad? ( media-libs/libmad )
 	imagemagick? ( media-gfx/imagemagick )
 	dts? ( media-libs/libdts )
-	>=media-video/ffmpeg-0.4.9_p20060816
+	>=media-video/ffmpeg-0.4.9_p20070129
 	modplug? ( media-libs/libmodplug )
 	nls? ( virtual/libintl )
 	gtk? ( =x11-libs/gtk+-2* )
