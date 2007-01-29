@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/kplato-1.6.0.ebuild,v 1.2 2006/10/20 15:41:04 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/kplato-1.6.0.ebuild,v 1.3 2007/01/29 01:53:16 mr_bones_ Exp $
 
 KMNAME=koffice
 MAXKOFFICEVER=${PV}

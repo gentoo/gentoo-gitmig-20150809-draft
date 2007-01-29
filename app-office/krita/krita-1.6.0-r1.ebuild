@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-1.6.0-r1.ebuild,v 1.1 2006/10/22 16:34:11 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-1.6.0-r1.ebuild,v 1.2 2007/01/29 01:56:04 mr_bones_ Exp $
 
 MAXKOFFICEVER=${PV}
 KMNAME=koffice
