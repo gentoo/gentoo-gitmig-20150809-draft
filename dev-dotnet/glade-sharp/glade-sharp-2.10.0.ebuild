@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/glade-sharp/glade-sharp-2.10.0.ebuild,v 1.1 2006/09/07 05:29:31 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/glade-sharp/glade-sharp-2.10.0.ebuild,v 1.2 2007/01/29 11:55:35 opfer Exp $
 
 inherit gtk-sharp-component
 
 SLOT="2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="${DEPEND} >=gnome-base/libglade-2.3.6"
