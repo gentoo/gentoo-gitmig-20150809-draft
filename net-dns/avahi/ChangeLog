@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.90 2007/01/15 19:33:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.91 2007/01/29 11:09:41 swegener Exp $
+
+  29 Jan 2007; Sven Wegener <swegener@gentoo.org> avahi-0.6.16-r1.ebuild:
+  Drop useless autoconf dependency.
 
   15 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> avahi-0.6.16-r1.ebuild:
   Stable on Alpha, bug 159306.
