@@ -1,8 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.9.0-r1.ebuild,v 1.1 2007/01/10 21:30:45 dev-zero Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.10.0.ebuild,v 1.1 2007/01/29 17:29:31 dev-zero Exp $
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
@@ -13,7 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="ares bittorrent gnutls metalink nls ssl"
 
-# Tests are still broken
+# Tests are still broken and useless
 RESTRICT="test"
 
 CDEPEND="ssl? (
@@ -26,12 +24,6 @@ DEPEND="${CDEPEND}
 	nls? ( sys-devel/gettext )"
 RDEPEND="${CDEPEND}
 	nls? ( virtual/libiconv virtual/libintl )"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-isalpha_exception.patch"
-}
 
 src_compile() {
 	use ssl && \

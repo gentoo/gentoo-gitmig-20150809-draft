@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/aria2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.10 2007/01/10 21:30:45 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.11 2007/01/29 17:29:31 dev-zero Exp $
+
+*aria2-0.10.0 (29 Jan 2007)
+
+  29 Jan 2007; Tiziano Müller <dev-zero@gentoo.org>
+  -files/aria2-0.9.0-isalpha_exception.patch, -aria2-0.9.0-r1.ebuild,
+  +aria2-0.10.0.ebuild:
+  Version bump.
 
 *aria2-0.9.0-r1 (10 Jan 2007)
 
