@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.49 2007/01/29 17:53:11 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.50 2007/01/29 21:12:36 drizzt Exp $
+
+  29 Jan 2007; Timothy Redaelli <drizzt@gentoo.org> use.local.desc:
+  Add custom-cflags use to zsnes
 
   29 Jan 2007; Marijn Schouten <hkBst@gentoo.org> use.local.desc:
   add gambit gcc-opts use flag

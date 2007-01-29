@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2535 2007/01/29 18:15:02 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2536 2007/01/29 21:12:36 drizzt Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -582,6 +582,7 @@ games-emulation/mupen64-glN64:asm - Enable use of asm routines to improve perfor
 games-emulation/mupen64:asm - Enable use of asm routines to improve performance
 games-emulation/xmame:net - Add network support
 games-emulation/xmess:net - Add network support
+games-emulation/zsnes:custom-cflags - Enables custom cflags (not supported)
 games-engines/exult:timidity - Add sound support (timidity)
 games-engines/scummvm:fluidsynth - compile with support for fluidsynth
 games-fps/darkplaces:cdsound - Enables using CD audio in the engine
