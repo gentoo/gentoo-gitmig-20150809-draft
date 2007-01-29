@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/pchar
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pchar/ChangeLog,v 1.3 2006/11/01 21:15:57 chutzpah Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pchar/ChangeLog,v 1.4 2007/01/29 20:45:15 chutzpah Exp $
+
+  29 Jan 2007; Patrick McLean <chutzpah@gentoo.org> pchar-1.5.ebuild:
+  Add WANT_AUTOCONF and WANT_AUTOMAKE vars so this will actually build again.
 
   01 Nov 2006; Patrick McLean <chutzpah@gentoo.org>
   +files/pchar-1.5-snmp.patch, pchar-1.5.ebuild:
