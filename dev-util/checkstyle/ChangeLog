@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/checkstyle
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/ChangeLog,v 1.21 2007/01/11 20:38:42 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/ChangeLog,v 1.22 2007/01/29 11:47:33 nelchael Exp $
+
+  29 Jan 2007; Krzysiek Pawlik <nelchael@gentoo.org> checkstyle-4.2.ebuild:
+  Add ~ppc, see bug #161618.
 
 *checkstyle-4.2 (12 Jan 2007)
 
