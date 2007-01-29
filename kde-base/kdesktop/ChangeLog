@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesktop
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/ChangeLog,v 1.79 2007/01/18 00:25:18 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/ChangeLog,v 1.80 2007/01/29 12:11:57 opfer Exp $
+
+  29 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
+  kdesktop-3.5.5-r1.ebuild:
+  stable x86; bug #164079
 
   18 Jan 2007; Carsten Lohrke <carlo@gentoo.org> kdesktop-3.5.6.ebuild:
   Update minimal needed versions.
