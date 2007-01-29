@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gtkam
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.42 2006/11/23 00:10:35 tomk Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.43 2007/01/29 04:22:45 compnerd Exp $
+
+  29 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  -files/gtkam-0.1.10-gtk24.patch, -files/gtkam-0.1.11-gtk24.patch,
+  -gtkam-0.1.12-r1.ebuild:
+  Prune old release
 
   23 Nov 2006; Tom Knight <tomk@gentoo.org> gtkam-0.1.12-r2.ebuild:
   stable on amd64, fixes bug #154662
