@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2532 2007/01/29 04:29:12 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2533 2007/01/29 17:53:11 hkbst Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -511,6 +511,7 @@ dev-ruby/og:kirbybase - enable Kirbybase support
 dev-ruby/ruby-sdl:image - enable sdl-image support
 dev-ruby/ruby-sdl:mixer - enable sdl-mixer support
 dev-ruby/ruby-sdl:sge - enable sdl-sge support
+dev-scheme/gambit:gcc-opts - use expensive GCC optimizations
 dev-scheme/guile:debug-freelist - include garbage collector freelist debugging code
 dev-scheme/guile:debug-malloc - include malloc debugging code
 dev-scheme/guile:deprecated - enable deprecated features

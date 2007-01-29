@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.48 2007/01/28 19:58:21 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.49 2007/01/29 17:53:11 hkbst Exp $
+
+  29 Jan 2007; Marijn Schouten <hkBst@gentoo.org> use.local.desc:
+  add gambit gcc-opts use flag
 
   28 Jan 2007; Denis Dupeyron <calchan@gentoo.org> package.mask:
   Deleted mask for app-emulation/i8086emu, package removed. See bug #153190.
