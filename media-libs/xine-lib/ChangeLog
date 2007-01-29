@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.449 2007/01/29 18:50:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.450 2007/01/29 18:51:49 flameeyes Exp $
+
+  29 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Sign manifest.
 
   29 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> xine-lib-1.1.4.ebuild:
   Bump requirement of ffmpeg version, as the new xine-lib requires a new ffmpeg.
