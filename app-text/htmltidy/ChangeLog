@@ -1,6 +1,10 @@
 # ChangeLog for app-text/htmltidy
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/ChangeLog,v 1.37 2007/01/27 20:59:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/ChangeLog,v 1.38 2007/01/29 15:41:49 gustavoz Exp $
+
+  29 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  htmltidy-5.10.26-r2.ebuild:
+  Stable on sparc wrt #155327
 
   27 Jan 2007; Jeroen Roovers <jer@gentoo.org> htmltidy-5.10.26-r2.ebuild:
   Stable for HPPA (bug #155327).
