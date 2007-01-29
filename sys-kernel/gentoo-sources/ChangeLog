@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.358 2007/01/15 20:31:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.359 2007/01/29 18:17:02 dsd Exp $
+
+*gentoo-sources-2.6.19-r5 (29 Jan 2007)
+
+  29 Jan 2007; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.19-r5.ebuild:
+  Add support for composite input of Terratec Cinergy 1400 DVB-T. Fix IPv6
+  address obtain regression. Fix x86_64 NFS compilation on GCC 3.4. Work
+  around problem with Kyocera FS-820 initialization. Fix knfsd crash with
+  unaligned memory access.
 
   15 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   gentoo-sources-2.6.17-r9.ebuild:
