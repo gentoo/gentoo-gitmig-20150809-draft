@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2531 2007/01/28 17:14:17 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2532 2007/01/29 04:29:12 compnerd Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -788,6 +788,7 @@ media-gfx/digikam:nfs - Create sqlite db within ~/.kde, instead in the albums ba
 media-gfx/gimp:gimpprint - Enable gimp-print printing support
 media-gfx/gimp:print - Enable print plug-in
 media-gfx/gimp:smp - Enable support for multiprocessors
+media-gfx/gtkam:gimp - GIMP plugin from gtkam
 media-gfx/graphicsmagick:depth16 - use 16-bit color depth as default
 media-gfx/graphicsmagick:depth32 - use 32-bit color depth as default
 media-gfx/graphicsmagick:gs - enable ghostscript support
