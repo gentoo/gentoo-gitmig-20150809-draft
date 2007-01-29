@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.102 2007/01/04 21:49:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.103 2007/01/29 18:04:37 gustavoz Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -16,9 +16,7 @@ directfb
 djbfft
 dvb
 dmi
-g15
 glitz
-graphlcd
 i8x0
 ibm
 lirc
@@ -35,7 +33,6 @@ real
 tcc
 tordns
 trusted
-ula200
 uml
 voodoo3
 wavelan
@@ -221,3 +218,12 @@ alsa_cards_wavefront
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # Enable H264 with x264
 -x264
+
+# Gustavo Zacarias <gustavoz@gentoo.org>
+# LCDproc masks see bug #148072
+g15
+graphlcd
+ula200
+lcd_devices_g15
+lcd_device_graphlcd
+lcd_devices_ula200
