@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/xfce4-extras-4.4.0.ebuild,v 1.5 2007/01/23 23:07:09 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/xfce4-extras-4.4.0.ebuild,v 1.6 2007/01/29 20:25:04 welp Exp $
 
 inherit xfce44
 
@@ -14,8 +14,6 @@ SLOT="0"
 IUSE="battery cpufreq gnome wlan"
 
 RDEPEND=">=xfce-base/xfce4-${XFCE_MASTER_VERSION}
-	>=xfce-extra/thunar-archive-0.2.4
-	>=xfce-extra/thunar-media-tags-0.1.2
 	>=xfce-extra/verve-0.3.5
 	>=xfce-extra/xfce4-clipman-0.8
 	>=xfce-extra/xfce4-datetime-0.4
