@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/wengophone/wengophone-2.0_rc2.ebuild,v 1.5 2007/01/06 15:52:45 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/wengophone/wengophone-2.0_rc2.ebuild,v 1.6 2007/01/29 12:44:06 drizzt Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.prato.linux.it/~mnencia/debian/wengophone-ng/source/${MY_P}.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS=""
 IUSE=""
 
 RDEPEND="dev-libs/boost
