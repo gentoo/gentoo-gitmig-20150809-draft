@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfce44.eclass,v 1.14 2007/01/28 14:20:43 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfce44.eclass,v 1.15 2007/01/29 17:47:44 welp Exp $
 
 # Xfce44 Eclass
 #
@@ -12,17 +12,21 @@ inherit fdo-mime gnome2-utils
 ## COMPRESS is the default compression extension
 ## INSTALL is default gmake install directive
 ## *_VERSION sets the minimum version required for the panel
+## LICENSE is set to Xfce base packages default
+
+LICENSE="GPL-2"
+SLOT="0"
+
+IUSE="${IUSE}"
+
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
+
+#S="${WORKDIR}/${MY_P:-${P}}"
 
 COMPRESS=".tar.bz2"
 CONFIGURE="econf"
-
-## Using gmake instead of make for FreeBSD. For you welp.
-
-## It actually should be using emake instead of gmake but
-## there was issues like files of package xyz got owned by
-## other package. Please test building several packages with
-## emake on your system and replace this accordingly.
-INSTALL="gmake DESTDIR=${D} install"
+INSTALL="emake DESTDIR=${D} install"
 
 XFCE_BETA_VERSION="4.3.99.2"
 XFCE_VERSION="4.4.0"
@@ -106,17 +110,6 @@ xfce44_single_make() {
 xfce44_want_einstall() {
 	INSTALL="einstall"
 }
-
-## LICENSE is set to Xfce base packages default
-LICENSE="GPL-2"
-SLOT="0"
-
-IUSE="${IUSE}"
-
-DEPEND="${RDEPEND}
-		dev-util/pkgconfig"
-
-#S="${WORKDIR}/${MY_P:-${P}}"
 
 xfce44_src_compile() {
 	## XFCE_CONFIG sets extra config parameters
