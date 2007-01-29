@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.11.1-r1.ebuild,v 1.1 2006/12/02 17:23:42 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.11.1-r1.ebuild,v 1.2 2007/01/29 22:11:35 alonbl Exp $
+
+WANT_AUTOMAKE="1.9"
 
 inherit eutils libtool autotools
 
