@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-mailsync/pilot-mailsync-0.8.3.ebuild,v 1.2 2005/07/22 17:22:10 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-mailsync/pilot-mailsync-0.8.3.ebuild,v 1.3 2007/01/29 01:57:12 mr_bones_ Exp $
 
 inherit flag-o-matic
 
