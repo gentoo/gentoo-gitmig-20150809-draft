@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cmake
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.51 2007/01/04 22:32:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.52 2007/01/29 01:31:52 flameeyes Exp $
+
+*cmake-2.4.6 (29 Jan 2007)
+
+  29 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> +cmake-2.4.6.ebuild:
+  Version bump, closes bug #163487.
 
   04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> cmake-2.0.6-r1.ebuild:
   Get rid of debug.eclass usage.
