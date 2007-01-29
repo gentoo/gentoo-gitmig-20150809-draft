@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/enet
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/enet/ChangeLog,v 1.6 2007/01/08 01:56:36 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/enet/ChangeLog,v 1.7 2007/01/29 05:44:04 mr_bones_ Exp $
+
+*enet-1.0 (29 Jan 2007)
+
+  29 Jan 2007; Michael Sterrett <mr_bones_@gentoo.org> +enet-1.0.ebuild:
+  version bump - ebuild supplied by Santiago M. Mola Velasco via bug #125990
 
   08 Jan 2007; Danny van Dyk <kugelfang@gentoo.org>
   -enet-0_pre20031103.ebuild:
