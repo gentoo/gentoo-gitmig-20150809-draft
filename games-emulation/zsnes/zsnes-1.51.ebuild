@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51.ebuild,v 1.2 2007/01/29 21:10:31 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51.ebuild,v 1.3 2007/01/29 21:15:39 drizzt Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -62,13 +62,13 @@ src_compile() {
 
 	use amd64 && multilib_toolchain_setup x86
 
-	local myconf
+	local myconf=""
 	use custom-cflags && myconf="--disable-cpucheck force_arch=no"
 
 	if use ao && [[ "${ARCH}" != amd64 ]]; then
-		myconf="--enable-ao"
+		myconf="${myconf} --enable-ao"
 	else
-		myconf="--disable-ao"
+		myconf="${myconf} --disable-ao"
 	fi
 
 	egamesconf \
