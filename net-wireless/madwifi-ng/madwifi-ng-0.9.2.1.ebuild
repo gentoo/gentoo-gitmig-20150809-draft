@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.2.1.ebuild,v 1.4 2006/12/10 20:52:52 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.2.1.ebuild,v 1.5 2007/01/29 23:01:50 genstef Exp $
 
 inherit linux-mod
 
@@ -16,7 +16,7 @@ LICENSE="as-is
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 
-IUSE="amrr onoe"
+IUSE="amrr injection onoe"
 DEPEND="app-arch/sharutils"
 RDEPEND="!net-wireless/madwifi-old
 		~net-wireless/madwifi-ng-tools-${PV:0:5}"
@@ -76,6 +76,7 @@ src_unpack() {
 
 src_compile() {
 	epatch ${FILESDIR}/madwifi-ng-uudecode-gcda-fix.patch
+	if use injection; then epatch ${FILESDIR}/madwifi-ng-r1886.patch; fi
 #	epatch ${FILESDIR}/madwifi-association-fix.patch
 
 	# assists in debugging
