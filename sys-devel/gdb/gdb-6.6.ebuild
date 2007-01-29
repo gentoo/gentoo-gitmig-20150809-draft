@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.6.ebuild,v 1.1 2006/12/19 06:30:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.6.ebuild,v 1.2 2007/01/29 00:34:29 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -22,7 +22,7 @@ LICENSE="GPL-2 LGPL-2"
 [[ ${CTARGET} != ${CHOST} ]] \
 	&& SLOT="${CTARGET}" \
 	|| SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 arm ~hppa ia64 ~mips ~ppc ~ppc64 s390 ~sparc ~x86 ~x86-fbsd"
 IUSE="nls test vanilla"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r2"
@@ -51,7 +51,7 @@ src_test() {
 }
 
 src_install() {
-	make \
+	emake \
 		DESTDIR="${D}" \
 		libdir=/nukeme includedir=/nukeme \
 		install || die
@@ -74,4 +74,9 @@ src_install() {
 
 	# Remove shared info pages
 	rm -f "${D}"/usr/share/info/{annotate,bfd,configure,standards}.info*
+}
+
+pkg_postinst() {
+	# portage sucks and doesnt unmerge files in /etc
+	rm -vf "${ROOT}"/etc/skel/.gdbinit
 }
