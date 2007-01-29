@@ -1,0 +1,15 @@
+diff -urNp gnupg-2.0.1.org/g10/call-agent.c gnupg-2.0.1/g10/call-agent.c
+--- gnupg-2.0.1.org/g10/call-agent.c	2006-10-04 16:49:27.000000000 +0200
++++ gnupg-2.0.1/g10/call-agent.c	2007-01-29 21:46:57.000000000 +0200
+@@ -87,7 +87,10 @@ start_agent (void)
+     return 0; /* fixme: We need a context for each thread or serialize
+                  the access to the agent. */
+ 
+-  infostr = force_pipe_server? NULL : getenv ("GPG_AGENT_INFO");
++  if (opt.gpg_agent_info != NULL)
++    infostr = opt.gpg_agent_info;
++  else
++    infostr = force_pipe_server? NULL : getenv ("GPG_AGENT_INFO");
+   if (!infostr || !*infostr)
+     {
+       const char *pgmname;

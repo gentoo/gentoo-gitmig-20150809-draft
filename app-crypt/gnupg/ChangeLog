@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.271 2007/01/28 19:04:24 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.272 2007/01/29 20:01:35 alonbl Exp $
+
+*gnupg-2.0.1-r3 (29 Jan 2007)
+
+  29 Jan 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/gnupg-2.0.1-agent.patch, +gnupg-2.0.1-r3.ebuild:
+  Fixed gpg-agent-info being ignored
 
   28 Jan 2007; Alon Bar-Lev <alonbl@gentoo.org> -gnupg-1.4.2.2.ebuild,
   -gnupg-1.4.4.ebuild, -gnupg-1.4.5.ebuild, -gnupg-1.4.5-r1.ebuild,
