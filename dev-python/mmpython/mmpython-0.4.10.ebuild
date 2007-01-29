@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mmpython/mmpython-0.4.10.ebuild,v 1.1 2006/11/01 09:53:31 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mmpython/mmpython-0.4.10.ebuild,v 1.2 2007/01/29 02:03:19 mr_bones_ Exp $
 
 inherit eutils distutils
 
