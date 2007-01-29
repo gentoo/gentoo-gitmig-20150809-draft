@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/rocksndiamonds-3.2.3.ebuild,v 1.1 2007/01/26 03:26:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/rocksndiamonds-3.2.3.ebuild,v 1.2 2007/01/29 03:17:50 mr_bones_ Exp $
 
 inherit flag-o-matic eutils games
 
@@ -91,7 +91,8 @@ src_install() {
 
 	newman rocksndiamonds.{1,6}
 	dodoc CHANGES CREDITS HARDWARE README TODO docs/elements/*.txt
-	make_desktop_entry rocksndiamonds "Rocks 'N' Diamonds"
+	newicon graphics/gfx_classic/rocks_icon_32x32.pcx ${PN}.pcx
+	make_desktop_entry rocksndiamonds "Rocks 'N' Diamonds" /usr/share/pixmaps/${PN}.pcx
 
 	prepgamesdirs
 }
