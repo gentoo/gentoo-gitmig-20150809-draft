@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/datavision
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/ChangeLog,v 1.16 2007/01/28 16:57:22 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/ChangeLog,v 1.17 2007/01/29 19:14:19 betelgeuse Exp $
+
+  29 Jan 2007; Petteri Räty <betelgeuse@gentoo.org>
+  datavision-1.0.0-r2.ebuild:
+  The build system needs ruby so we need to always DEPEND on it. I chose jruby
+  over dev-lang/ruby because we might be needing jruby for the scripting
+  support with the ruby use flag during runtime too. Fixes bug #164402.
 
   28 Jan 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -datavision-0.8.2.ebuild, -datavision-1.0.0.ebuild,

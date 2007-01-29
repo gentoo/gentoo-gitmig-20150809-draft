@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/datavision-1.0.0-r2.ebuild,v 1.2 2007/01/28 16:57:22 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/datavision-1.0.0-r2.ebuild,v 1.3 2007/01/29 19:14:19 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -19,6 +19,8 @@ RDEPEND=">=virtual/jre-1.4
 	mysql? ( >=dev-java/jdbc-mysql-3.0 )
 	postgres? ( >=dev-java/jdbc2-postgresql-7.3 )"
 DEPEND=">=virtual/jdk-1.4
+	dev-java/jruby
+	dev-java/ant-core
 	${RDEPEND}"
 #	test? ( >=dev-java/junit-3.7 )"
 
@@ -35,6 +37,11 @@ src_unpack() {
 	use ruby && java-pkg_jar-from jruby
 
 	cd "${S}"
+	# Let's use jruby instead as this is java and we can RDEPEND on it
+	# during run time any way
+	# https://bugs.gentoo.org/show_bug.cgi?id=164402
+	sed -e 's/executable=\"ruby\"/executable=\"jruby\"/' -i build.xml \
+		|| die "Failed to replace ruby with jruby"
 	use mysql && java-pkg_jar-from jdbc-mysql
 	use postgres && java-pkg_jar-from jdbc2-postgresql-6
 }
@@ -83,4 +90,7 @@ pkg_postinst() {
 	elog "Because we need to change the current working directory"
 	elog "in the launcher for the help to work, the launcher can't be"
 	elog "used with relative paths. Patches are welcome."
+	elog ""
+	elog "The build system needs ruby so the ruby use flag only affects"
+	elog "RDEPEND."
 }
