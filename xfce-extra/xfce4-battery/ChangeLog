@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-battery
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery/ChangeLog,v 1.37 2007/01/23 21:24:24 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery/ChangeLog,v 1.38 2007/01/29 19:50:49 welp Exp $
+
+  29 Jan 2007; Peter Weller <welp@gentoo.org>
+  +files/xfce4-battery-0.5.0-freebsd.patch, xfce4-battery-0.5.0.ebuild:
+  A number of fixes, patch to make it work on gentoo/freebsd
 
   23 Jan 2007; Peter Weller <welp@gentoo.org> xfce4-battery-0.5.0.ebuild:
   Fix depends for bug 163244. Fix meta builds.
