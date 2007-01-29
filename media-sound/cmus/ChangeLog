@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cmus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/ChangeLog,v 1.5 2007/01/25 14:42:09 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/ChangeLog,v 1.6 2007/01/29 09:09:52 opfer Exp $
+
+  29 Jan 2007; Christian Faulhammer <opfer@gentoo.org> -cmus-2.0.4.ebuild:
+  clean up
 
   25 Jan 2007; Steve Dibb <beandog@gentoo.org> cmus-2.1.0.ebuild:
   Add ~amd64, bug 162375
