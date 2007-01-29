@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/xsb-3.0.1.ebuild,v 1.1 2007/01/28 09:19:36 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/xsb-3.0.1.ebuild,v 1.2 2007/01/29 17:46:06 keri Exp $
 
 MY_PN="XSB"
 MY_P="${MY_PN}-${PV}"
@@ -59,7 +59,7 @@ src_compile() {
 		$(use_with perl) \
 		$(use_with odbc) \
 		$(use_with iodbc) \
-		$(use_with java interprolog) \
+		$(use_enable java interprolog) \
 		|| die "econf failed"
 	emake -j1 || die "emake failed"
 
