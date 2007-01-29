@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-maildir/claws-mail-maildir-0.24.3.ebuild,v 1.2 2007/01/25 07:51:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-maildir/claws-mail-maildir-0.24.3.ebuild,v 1.3 2007/01/29 00:05:19 weeve Exp $
 
 MY_P="${P#claws-mail-}"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.claws-mail.org"
 SRC_URI="http://www.claws-mail.org/downloads/plugins/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 sparc x86"
 IUSE=""
 DEPEND=">=mail-client/claws-mail-2.6.1
 		=sys-libs/db-4.2*"
