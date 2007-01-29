@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/konqburn/konqburn-0.8.ebuild,v 1.1 2006/04/25 19:03:15 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/konqburn/konqburn-0.8.ebuild,v 1.2 2007/01/29 03:05:35 mr_bones_ Exp $
 
 inherit kde
 
