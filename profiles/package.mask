@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6699 2007/01/29 01:53:28 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6700 2007/01/29 12:56:08 phreak Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Christian Heim <phreak@gentoo.org> (29 January 2007)
+# masking apr-0.9.13/apr-util-0.9.13 as they break net-www/apache
+# (see #164379 for reference)
+=dev-libs/apr-0.9.13
+=dev-libs/apr-util-0.9.13
 
 # Michael Sterrett <mr_bones_@gentoo.org> (28 Jan 2007)
 # masked pending new beta due to bug #164186
