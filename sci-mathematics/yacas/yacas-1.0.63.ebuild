@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.0.63.ebuild,v 1.1 2007/01/28 13:34:29 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.0.63.ebuild,v 1.2 2007/01/29 16:09:01 markusle Exp $
 
 inherit eutils flag-o-matic
 
-IUSE="glut server proteus"
+IUSE="glut server"
 
 DESCRIPTION="very powerful general purpose computer algebra system"
 HOMEPAGE="http://yacas.sourceforge.net/"
@@ -18,7 +18,6 @@ DEPEND="virtual/libc
 	>=sys-apps/sed-4
 	dev-lang/perl
 	glut? ( virtual/glut )
-	proteus? ( x11-libs/fltk )
 	www-client/lynx"
 
 src_unpack() {
@@ -39,10 +38,6 @@ src_compile() {
 
 	if use server; then
 		myconf="${myconf} --enable-server"
-	fi
-
-	if use proteus; then
-		myconf="${myconf} --enable-proteus"
 	fi
 
 	econf ${myconf} || die "./configure failed"
