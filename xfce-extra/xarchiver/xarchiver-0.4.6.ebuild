@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xarchiver/xarchiver-0.4.6.ebuild,v 1.10 2007/01/23 21:13:56 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xarchiver/xarchiver-0.4.6.ebuild,v 1.11 2007/01/29 19:27:09 welp Exp $
 
 inherit xfce44
 
-DESCRIPTION="Xfce4 archiver"
+DESCRIPTION="Archive manager"
 HOMEPAGE="http://xarchiver.xfce.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
@@ -20,3 +20,5 @@ RDEPEND=">=x11-libs/gtk+-2.6
 	lha? ( app-arch/lha )"
 DEPEND="${RDEPEND}
 	dev-util/intltool"
+
+DOCS="AUTHORS ChangeLog NEWS README TODO"
