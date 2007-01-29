@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/svn2cl
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svn2cl/ChangeLog,v 1.1 2005/10/03 12:49:55 ka0ttic Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svn2cl/ChangeLog,v 1.2 2007/01/29 00:30:42 trapni Exp $
+
+  29 Jan 2007; Christian Parpart <trapni@gentoo.org> svn2cl-0.3.ebuild:
+  adding to ~amd64
 
 *svn2cl-0.3 (03 Oct 2005)
 

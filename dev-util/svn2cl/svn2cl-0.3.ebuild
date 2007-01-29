@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svn2cl/svn2cl-0.3.ebuild,v 1.1 2005/10/03 12:49:55 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svn2cl/svn2cl-0.3.ebuild,v 1.2 2007/01/29 00:30:42 trapni Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="${HOMEPAGE}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~mips"
+KEYWORDS="~amd64 ~mips ~x86"
 IUSE=""
 
 RDEPEND="dev-libs/libxslt
