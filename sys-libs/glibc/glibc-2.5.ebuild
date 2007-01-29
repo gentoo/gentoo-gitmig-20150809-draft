@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5.ebuild,v 1.22 2007/01/27 02:21:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5.ebuild,v 1.23 2007/01/29 07:33:46 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -449,7 +449,7 @@ toolchain-glibc_src_install() {
 
 		make \
 			-C "${GBUILDDIR}" \
-			PARALLELMFLAGS="${MAKEOPTS} -j1" \
+			PARALLELMFLAGS="${MAKEOPTS}" \
 			install_root="${install_root}" \
 			info -i || die
 	fi
@@ -468,7 +468,7 @@ toolchain-glibc_src_install() {
 	doinitd "${WORKDIR}"/extra/etc/nscd || die
 
 	cd "${S}"
-	dodoc BUGS ChangeLog* CONFORMANCE FAQ INTERFACE NEWS NOTES PROJECTS README*
+	dodoc BUGS ChangeLog* CONFORMANCE FAQ NEWS NOTES PROJECTS README*
 
 	# Prevent overwriting of the /etc/localtime symlink.  We'll handle the
 	# creation of the "factory" symlink in pkg_postinst().
