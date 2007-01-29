@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-2.7.0.ebuild,v 1.1 2007/01/09 00:12:20 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-2.7.0.ebuild,v 1.2 2007/01/29 19:57:24 ticho Exp $
 
 IUSE="gnome dillo crypt spell ssl ldap ipv6 pda clamav xface kde imap spamassassin doc startup-notification bogofilter"
 
@@ -98,6 +98,9 @@ src_install() {
 	dodoc AUTHORS ChangeLog* INSTALL* NEWS README* TODO*
 	docinto tools
 	dodoc tools/README*
+
+	insinto /usr/share/applications
+	doins ${PN}.desktop
 
 	einfo "Installing extra tools"
 	cd ${S}/tools
