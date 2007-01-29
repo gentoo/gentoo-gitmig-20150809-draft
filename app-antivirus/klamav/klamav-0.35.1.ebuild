@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/klamav-0.35.1.ebuild,v 1.3 2006/08/25 18:58:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/klamav-0.35.1.ebuild,v 1.4 2007/01/29 03:03:46 mr_bones_ Exp $
 
 inherit kde eutils flag-o-matic
 
