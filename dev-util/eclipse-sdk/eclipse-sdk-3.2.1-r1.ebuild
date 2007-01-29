@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.2.1-r1.ebuild,v 1.3 2007/01/28 13:24:45 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.2.1-r1.ebuild,v 1.4 2007/01/29 18:42:36 betelgeuse Exp $
 
 inherit eutils java-pkg-2 flag-o-matic check-reqs multilib
 
@@ -92,7 +92,11 @@ src_unpack() {
 	rm *.jar
 	java-pkg_jar-from lucene-1 lucene.jar lucene-1.4.3.jar
 	popd >/dev/null
-	# For some reason popd above fails to go back to workdir
+	# For some reason popd above fails to go back to workdir.
+	# ^Was caused by the three argument form of java-pkg_jar-from
+	# that Caster recently broke in the eclass. The cd here does not
+	# hurt and I like these comments.
+	# https://bugs.gentoo.org/show_bug.cgi?id=163969
 	cd "${WORKDIR}"
 	apply-patchset
 }
