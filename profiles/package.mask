@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6701 2007/01/29 16:33:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6702 2007/01/29 17:39:59 opfer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Christian Faulhammer <opfer@gentoo.org> (26 Jan 2007)
+# this is a revamp and rebuild of the whole ebuild,
+# better hide it for a while
+=app-editors/emacs-cvs-22.0.93-r1
 
 # Christian Heim <phreak@gentoo.org> (29 January 2007)
 # masking apr-0.9.13/apr-util-0.9.13 as they break net-www/apache
