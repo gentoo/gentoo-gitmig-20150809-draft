@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.33 2007/01/05 23:30:11 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.34 2007/01/29 09:33:06 opfer Exp $
+
+  29 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
+  java-gnome-2.14.3.ebuild:
+  stable x86; bug #160002
 
   05 Jan 2007; Vlastimil Babka <caster@gentoo.org> ChangeLog:
   Convert einfo to elog.
