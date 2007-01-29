@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gecko-sharp
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/ChangeLog,v 1.46 2007/01/29 16:34:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/ChangeLog,v 1.47 2007/01/29 18:25:26 kloeri Exp $
+
+  29 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> gecko-sharp-0.6.ebuild:
+  Fix Manifest.
 
   29 Jan 2007; Raúl Porcel <armin76@gentoo.org> +gecko-sharp-0.6.ebuild:
   Bring back 0.6 version

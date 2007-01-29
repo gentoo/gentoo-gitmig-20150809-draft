@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX gecko-sharp-0.7-1.9.3-compat.diff 698 RMD160 330dad0155f44405ea6dc11b6affb93aeb19eaaf SHA1 732495808b542535dd7485756ace7a3a2a532cc1 SHA256 5454f6b8207ea789e4bccaff0a818017e2a305ba09ca325b025084bfe59516b4
 MD5 54b9bdcc1876fbeb916b8a5fb29adaa2 files/gecko-sharp-0.7-1.9.3-compat.diff 698
 RMD160 330dad0155f44405ea6dc11b6affb93aeb19eaaf files/gecko-sharp-0.7-1.9.3-compat.diff 698
@@ -12,14 +15,14 @@ EBUILD gecko-sharp-0.11-r1.ebuild 1328 RMD160 dfe96ad5e6677049ee26cc2c04bfcdf747
 MD5 4dc8e5f7fb60e8157c76d21aac445228 gecko-sharp-0.11-r1.ebuild 1328
 RMD160 dfe96ad5e6677049ee26cc2c04bfcdf7475010f4 gecko-sharp-0.11-r1.ebuild 1328
 SHA256 77d2375df3e4e81f72522fbc1bdb0e6854fffd04d94bb61ab039de615273796d gecko-sharp-0.11-r1.ebuild 1328
-EBUILD gecko-sharp-0.6.ebuild 908 RMD160 e0c14cad7c8d717dbf7074b89d89625815d444ba SHA1 0b46f57ae54d7ea2f0613b85a3d4ea146476efca SHA256 0e47810f0626cabbc4cb12f1da7bd099078ec6493f123d0a67e3c2119d0bb8bb
-MD5 387cbc921cf14d1c0d8de4b3a1e8c743 gecko-sharp-0.6.ebuild 908
-RMD160 e0c14cad7c8d717dbf7074b89d89625815d444ba gecko-sharp-0.6.ebuild 908
-SHA256 0e47810f0626cabbc4cb12f1da7bd099078ec6493f123d0a67e3c2119d0bb8bb gecko-sharp-0.6.ebuild 908
-MISC ChangeLog 6108 RMD160 efcb5d7802d151d67fa44891ca57e641b20dcd4c SHA1 228d85110feb27439d218fbd66e7a3bd4a1fc6f0 SHA256 6e37701279adc19ce0cdc8bb01beaf2bd1b0585c7a44bca8dc1957d6bdbe47d8
-MD5 effa1021fcdaf826496001c79f816e9d ChangeLog 6108
-RMD160 efcb5d7802d151d67fa44891ca57e641b20dcd4c ChangeLog 6108
-SHA256 6e37701279adc19ce0cdc8bb01beaf2bd1b0585c7a44bca8dc1957d6bdbe47d8 ChangeLog 6108
+EBUILD gecko-sharp-0.6.ebuild 901 RMD160 3b42a7c9922bb1a1fbbfa1f88db71c05a94113f5 SHA1 acc815b4e90e4ca0bdd4ffabd0fa6e38535222d5 SHA256 8032d8b7057feebefbdfce5e8987661abd338751a13171d6dbb3d84abdf61bbb
+MD5 6758b6cb5cceb731c3ad82827c4980cf gecko-sharp-0.6.ebuild 901
+RMD160 3b42a7c9922bb1a1fbbfa1f88db71c05a94113f5 gecko-sharp-0.6.ebuild 901
+SHA256 8032d8b7057feebefbdfce5e8987661abd338751a13171d6dbb3d84abdf61bbb gecko-sharp-0.6.ebuild 901
+MISC ChangeLog 6201 RMD160 6e51f763db519f39a248a873040bde5280149485 SHA1 ffb1ab3eb7f07bb21d9c7f2163e4d54777d85b38 SHA256 0db7f106982c4930c822717a84bb7e62799b926df9d2cb137e5284b5a598ad96
+MD5 dca2156a2fc129d0d2d38f3cc3ef7d51 ChangeLog 6201
+RMD160 6e51f763db519f39a248a873040bde5280149485 ChangeLog 6201
+SHA256 0db7f106982c4930c822717a84bb7e62799b926df9d2cb137e5284b5a598ad96 ChangeLog 6201
 MISC metadata.xml 159 RMD160 41527b6d3fa74dfdcd619b7d91c478b72ecc8ae8 SHA1 ac19a418765e817e54d4c54c1992c9062d5dcf3e SHA256 986c3e2fa3baa5d6e8c0b5c27a2550601780d0cc7857f7f1c01523491706d909
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
 RMD160 41527b6d3fa74dfdcd619b7d91c478b72ecc8ae8 metadata.xml 159
@@ -27,6 +30,13 @@ SHA256 986c3e2fa3baa5d6e8c0b5c27a2550601780d0cc7857f7f1c01523491706d909 metadata
 MD5 e0feabb87ae3d80a8052558094c7df12 files/digest-gecko-sharp-0.11-r1 262
 RMD160 6658f0ee4f048bbd9025833135b9bc5ca522fe9e files/digest-gecko-sharp-0.11-r1 262
 SHA256 121586206eac5a2bd7cbd22ec5575ae59c86725263cee87ea8c437fec9aa7414 files/digest-gecko-sharp-0.11-r1 262
-MD5 f2c3182eb3bf219f83c107c18403278e files/digest-gecko-sharp-0.6 247
-RMD160 89c5acd69d3f34e76bfab577b03ff8cb5aed9c88 files/digest-gecko-sharp-0.6 247
-SHA256 2e14b05b6dbbc8c9b5c9d78ca0ded3a94cce7a04f6263d611fc3788c44f4510e files/digest-gecko-sharp-0.6 247
+MD5 e3aeceb2b12e70982f9531f0c762b542 files/digest-gecko-sharp-0.6 180
+RMD160 d531fa44ffd5db00fd8ae998b41f7fc82f7d92e0 files/digest-gecko-sharp-0.6 180
+SHA256 87d36bafdabbae1760140990590d42ed40f6d558d138fb3b88476e888582bdc2 files/digest-gecko-sharp-0.6 180
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFvjvbugEuf3OQ0akRAt7zAJ9Ov40uUZHjJMpCOTes28N6yE3jzACfaDst
+iGLiA2YXcfl2i38Ae/35uv8=
+=a9bf
+-----END PGP SIGNATURE-----
