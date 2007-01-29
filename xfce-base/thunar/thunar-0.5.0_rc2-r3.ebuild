@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-0.5.0_rc2-r3.ebuild,v 1.2 2007/01/06 19:10:50 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-0.5.0_rc2-r3.ebuild,v 1.3 2007/01/29 18:44:53 welp Exp $
 
 inherit xfce44 versionator
 
@@ -18,7 +18,7 @@ DESCRIPTION="Xfce 4 file manager"
 HOMEPAGE="http://thunar.xfce.org"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="doc dbus debug exif hal pcre startup-notification thumbnail trash-panel-plugin"
+IUSE="doc dbus debug exif hal pcre startup-notification thumbnail plugins"
 
 # The order of RDEPEND is based on the list in README, by:
 # 	required packages
@@ -50,7 +50,7 @@ RDEPEND="
 	>=media-libs/jpeg-6b
 	startup-notification? ( >=x11-libs/startup-notification-0.4 )
 	pcre? ( >=dev-libs/libpcre-6.0 )
-	trash-panel-plugin? ( >=xfce-base/xfce4-panel-${XFCE_MASTER_VERSION} )
+	plugins? ( >=xfce-base/xfce4-panel-${XFCE_MASTER_VERSION} )
 	"
 
 DEPEND="${RDEPEND}
@@ -68,7 +68,7 @@ XFCE_CONFIG="
 	$(use_enable pcre) \
 	$(use_enable startup-notification) \
 	$(use_enable thumbnail gnome-thumbnailers) \
-	$(use_enable trash-panel-plugin tpa-plugin)
+	$(use_enable plugins tpa-plugin)
 	"
 
 if use hal; then
