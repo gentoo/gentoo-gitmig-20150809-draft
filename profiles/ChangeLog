@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.50 2007/01/29 21:12:36 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.51 2007/01/29 22:42:21 leonardop Exp $
+
+  29 Jan 2007; Leonardo Boshell <leonardop@gentoo.org> package.mask:
+  Added entries for GNOME-DB 3.0 packages, for testing purposes.
 
   29 Jan 2007; Timothy Redaelli <drizzt@gentoo.org> use.local.desc:
   Add custom-cflags use to zsnes
