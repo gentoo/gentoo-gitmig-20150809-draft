@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51.ebuild,v 1.3 2007/01/29 21:15:39 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51.ebuild,v 1.4 2007/01/29 21:56:51 drizzt Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -50,6 +50,7 @@ src_unpack() {
 		strip-flags
 	fi
 	sed -i \
+		-e 's:^\s*STRIP="-s":STRIP="":'	\
 		-e 's:^\s*CFLAGS=.* -I\/usr\/local\/include .*$:CFLAGS="${CFLAGS} -I.":'	\
 		-e '/^\s*LDFLAGS=.* -L\/usr\/local\/lib /d'		\
 		configure.in || die
@@ -84,8 +85,8 @@ src_compile() {
 src_install() {
 	dogamesbin zsnes || die "dogamesbin failed"
 	newman linux/zsnes.1 zsnes.6
-	dodoc "${WORKDIR}"/docs/{*.txt,README.LINUX}
-	dohtml -r "${WORKDIR}"/docs/Linux/*
+	dodoc ../docs/{*.txt,README.LINUX}
+	dohtml -r ../docs/Linux/*
 	make_desktop_entry zsnes ZSNES zsnes.png
 	doicon "${T}/${PN}.png"
 	prepgamesdirs
