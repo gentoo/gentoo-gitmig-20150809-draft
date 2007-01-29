@@ -1,0 +1,139 @@
+diff -NurdpB mergeant-0.65/configure.in mergeant-0.65-patched/configure.in
+--- mergeant-0.65/configure.in	2006-12-22 14:57:36.000000000 -0500
++++ mergeant-0.65-patched/configure.in	2007-01-29 16:47:26.000000000 -0500
+@@ -80,6 +80,7 @@ ALL_LINGUAS="am ar az ca cs da de el en_
+ AM_GLIB_GNU_GETTEXT
+ 
+ PKG_CHECK_MODULES(MERGEANT, libgnomedb-3.0 >= 2.99.2 \
++	libgnomedb-graph-3.0 \
+         libgda-3.0 >= 2.99.2 \
+ 	gconf-2.0 \
+         gtk+-2.0 >= 2.6.0 \
+diff -NurdpB mergeant-0.65/src/query-druid.c mergeant-0.65-patched/src/query-druid.c
+--- mergeant-0.65/src/query-druid.c	2006-10-27 10:02:09.000000000 -0500
++++ mergeant-0.65-patched/src/query-druid.c	2007-01-29 16:55:56.000000000 -0500
+@@ -19,6 +19,7 @@
+  */
+ 
+ #include "query-druid.h"
++#include <libgnomedb-graph/libgnomedb-graph.h>
+ #include <libgnomedb/libgnomedb.h>
+ #include <libgda/libgda.h>
+ #include "workspace-page.h"
+diff -NurdpB mergeant-0.65/src/query-editor.c mergeant-0.65-patched/src/query-editor.c
+--- mergeant-0.65/src/query-editor.c	2006-12-22 05:06:35.000000000 -0500
++++ mergeant-0.65-patched/src/query-editor.c	2007-01-29 16:54:56.000000000 -0500
+@@ -22,6 +22,7 @@
+ #include "query-fields-editor.h"
+ #include "query-params-editor.h"
+ #include <libgnomedb/gnome-db-editor.h>
++#include <libgnomedb-graph/libgnomedb-graph.h>
+ 
+ static void query_editor_class_init (QueryEditorClass * class);
+ static void query_editor_init (QueryEditor * wid);
+@@ -488,8 +489,8 @@ query_changed_cb (GdaQuery *query, Query
+ 		gtk_entry_set_text (GTK_ENTRY (qedit->priv->q_descr), "");
+ 
+ 	/* SQL version */
+-	sql = gda_renderer_render_as_sql (GDA_RENDERER (qedit->priv->query), NULL, 
+-					 GDA_RENDERER_EXTRA_PRETTY_SQL | GDA_RENDERER_EXTRA_VAL_ATTRS, NULL);
++	sql = gda_renderer_render_as_sql (GDA_RENDERER (qedit->priv->query), NULL, NULL,
++					 GDA_RENDERER_EXTRA_PRETTY_SQL | GDA_RENDERER_PARAMS_AS_DETAILED, NULL);
+ 	if (sql) {
+ 		gnome_db_editor_set_text (GNOME_DB_EDITOR (qedit->priv->sql_editor), sql, -1);
+ 		g_free (sql);
+@@ -503,8 +504,8 @@ query_changed_cb (GdaQuery *query, Query
+ 		sql = NULL;
+ 
+ 		if (cond) 
+-			sql = gda_renderer_render_as_sql (GDA_RENDERER (cond), NULL, 
+-							 GDA_RENDERER_EXTRA_PRETTY_SQL | GDA_RENDERER_EXTRA_VAL_ATTRS, NULL);
++			sql = gda_renderer_render_as_sql (GDA_RENDERER (cond), NULL, NULL,
++							 GDA_RENDERER_EXTRA_PRETTY_SQL | GDA_RENDERER_PARAMS_AS_DETAILED, NULL);
+ 		if (sql) {
+ 			gnome_db_editor_set_text (GNOME_DB_EDITOR (qedit->priv->select_where), sql, -1);
+ 			g_free (sql);
+diff -NurdpB mergeant-0.65/src/query-fields-editor.c mergeant-0.65-patched/src/query-fields-editor.c
+--- mergeant-0.65/src/query-fields-editor.c	2006-10-27 10:02:09.000000000 -0500
++++ mergeant-0.65-patched/src/query-fields-editor.c	2007-01-29 16:39:33.000000000 -0500
+@@ -476,7 +476,7 @@ renderer_field_filter_edited_cb (GtkCell
+ 		newcond = gda_query_condition_new_from_sql (fedit->priv->query, new_text, NULL, &error);
+ 		if (!newcond) {
+ 			gchar *sql;
+-			sql = gda_renderer_render_as_sql (GDA_RENDERER (field), NULL, 0, NULL);
++			sql = gda_renderer_render_as_sql (GDA_RENDERER (field), NULL, NULL, 0, NULL);
+ 			if (sql) {
+ 				gchar *text = g_strdup_printf ("%s %s", sql, new_text);
+ 				g_free (sql);
+@@ -700,7 +700,7 @@ query_changed_cb (GdaQuery *query, Query
+ 		}
+ 		
+ 		/* modify the model at iter */
+-		sql = gda_renderer_render_as_sql (GDA_RENDERER (field), NULL, 0, NULL);
++		sql = gda_renderer_render_as_sql (GDA_RENDERER (field), NULL, NULL, 0, NULL);
+ 		order = gda_query_get_order_by_field (fedit->priv->query, field, &asc);
+ 		if (order >= 0) {
+ 			order_str = g_strdup_printf ("%d", order + 1);
+@@ -709,8 +709,8 @@ query_changed_cb (GdaQuery *query, Query
+ 		cond = g_object_get_data (G_OBJECT (field), "qf_filter_cond");
+ 		g_object_set_data (G_OBJECT (field), "qf_filter_cond", NULL);
+ 		if (cond) 
+-			cond_sql = gda_renderer_render_as_sql (GDA_RENDERER (cond), NULL, 
+-								    GDA_RENDERER_EXTRA_VAL_ATTRS,
++			cond_sql = gda_renderer_render_as_sql (GDA_RENDERER (cond), NULL, NULL,
++								    GDA_RENDERER_PARAMS_AS_DETAILED,
+ 								    NULL);
+ 		gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+ 				    COLUMN_FIELD_PTR, field,
+diff -NurdpB mergeant-0.65/src/ws-dbrels.c mergeant-0.65-patched/src/ws-dbrels.c
+--- mergeant-0.65/src/ws-dbrels.c	2006-10-27 10:02:10.000000000 -0500
++++ mergeant-0.65-patched/src/ws-dbrels.c	2007-01-29 16:45:50.000000000 -0500
+@@ -23,7 +23,6 @@
+ #include <string.h>
+ #include <glib-object.h>
+ #include <gtk/gtk.h>
+-#include <libgnomedb/libgnomedb.h>
+ #include <glib/gi18n-lib.h>
+ 
+ /* 
+diff -NurdpB mergeant-0.65/src/ws-dbrels.h mergeant-0.65-patched/src/ws-dbrels.h
+--- mergeant-0.65/src/ws-dbrels.h	2006-10-27 10:02:10.000000000 -0500
++++ mergeant-0.65-patched/src/ws-dbrels.h	2007-01-29 16:46:05.000000000 -0500
+@@ -24,6 +24,7 @@
+ 
+ #include <libgda/libgda.h>
+ #include <libgnomedb/libgnomedb.h>
++#include <libgnomedb-graph/libgnomedb-graph.h>
+ 
+ 
+ G_BEGIN_DECLS
+diff -NurdpB mergeant-0.65/src/ws-queries.c mergeant-0.65-patched/src/ws-queries.c
+--- mergeant-0.65/src/ws-queries.c	2006-10-27 10:02:10.000000000 -0500
++++ mergeant-0.65-patched/src/ws-queries.c	2007-01-29 16:18:51.000000000 -0500
+@@ -613,7 +613,7 @@ utility_query_execute_modif (GdaQuery *q
+ 	while (parent_window && !GTK_IS_WINDOW (parent_window)) 
+ 		parent_window = gtk_widget_get_parent (parent_window);
+ 
+-	sql = gda_renderer_render_as_sql (GDA_RENDERER (query), context, 0, &error);
++	sql = gda_renderer_render_as_sql (GDA_RENDERER (query), context, NULL, 0, &error);
+ 	qtype = gda_query_get_query_type (query);
+ 
+ 	switch (qtype) {
+@@ -843,7 +843,7 @@ action_query_exec_cb (GtkAction *action,
+ 				gchar *msg;
+ 				const gchar *sql;
+ 				
+-				sql = gda_renderer_render_as_sql (GDA_RENDERER (query), context, 
++				sql = gda_renderer_render_as_sql (GDA_RENDERER (query), context, NULL,
+ 								  GDA_RENDERER_EXTRA_PRETTY_SQL, NULL);
+ 				query_exec_instance_free (qei);
+ 				msg = g_strdup_printf (_("<b><big>Execute the following query ?</big></b>\n"
+@@ -957,7 +957,7 @@ query_info_display_update (GdaQuery *que
+ 	if (query) {
+ 		gchar *sql;
+ 		GError *error = NULL;
+-		sql = gda_renderer_render_as_sql (GDA_RENDERER (query), NULL,
++		sql = gda_renderer_render_as_sql (GDA_RENDERER (query), NULL, NULL,
+ 						  GDA_RENDERER_EXTRA_PRETTY_SQL, &error);
+ 		if (sql) {
+ 			gnome_db_editor_set_text (GNOME_DB_EDITOR (ws->priv->sql_editor), sql, -1);
