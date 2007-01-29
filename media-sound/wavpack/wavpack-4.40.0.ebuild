@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavpack/wavpack-4.40.0.ebuild,v 1.1 2006/12/26 03:30:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavpack/wavpack-4.40.0.ebuild,v 1.2 2007/01/29 04:23:29 kloeri Exp $
 
 DESCRIPTION="WavPack audio compression tools"
 HOMEPAGE="http://www.wavpack.com/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.wavpack.com/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 src_install() {
