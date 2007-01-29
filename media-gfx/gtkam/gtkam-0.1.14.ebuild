@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.14.ebuild,v 1.1 2007/01/29 04:30:13 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.14.ebuild,v 1.2 2007/01/29 17:40:26 compnerd Exp $
 
 inherit autotools eutils gnome2
 
@@ -33,14 +33,14 @@ pkg_setup() {
 		$(use_with gnome) \
 		$(use_with gnome bonobo) \
 		$(use_enable nls) \
-		--with-rpmbuild=/bin/false --without-gimp"
+		--with-rpmbuild=/bin/false"
 }
 
 src_unpack() {
 	gnome2_src_unpack
 
 	epatch ${FILESDIR}/${PN}-0.1.14-as-needed.patch
-	eautoreconf
+	AT_M4DIR="m4m" eautomake
 }
 
 src_install() {
