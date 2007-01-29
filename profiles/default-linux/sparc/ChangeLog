@@ -1,6 +1,11 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.21 2007/01/29 18:04:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.22 2007/01/29 18:13:22 gustavoz Exp $
+
+  29 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  sparc32/2006.0/2.4/package.mask, sparc32/2006.1/2.4/package.mask,
+  sparc64/2006.0/2.4/package.mask:
+  Add compnerd's glade mask in all places that apply
 
   29 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> use.mask:
   New lcdproc masks wrt #148072
