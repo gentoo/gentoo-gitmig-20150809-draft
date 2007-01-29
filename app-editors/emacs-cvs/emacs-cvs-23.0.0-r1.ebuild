@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0-r1.ebuild,v 1.5 2007/01/05 14:16:50 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0-r1.ebuild,v 1.6 2007/01/29 13:28:37 opfer Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -123,7 +123,6 @@ src_install () {
 	do
 		if [ "${i##*/}" != emacs-${SLOT} ] ; then
 			mv ${i} ${i/info/info/emacs-${SLOT}}.info
-			gzip -9 ${i/info/info/emacs-${SLOT}}.info
 		fi
 	done
 
