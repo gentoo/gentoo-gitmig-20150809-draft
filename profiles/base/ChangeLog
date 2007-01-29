@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.4 2007/01/27 16:09:33 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.5 2007/01/29 22:14:40 flameeyes Exp $
+
+  29 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> make.defaults:
+  Add midi useflag by default to cope with newer alsa versions.
 
   27 Jan 2007; Alon Bar-Lev <alonbl@gentoo.org> make.defaults:
   Added CAMERAS USE_EXPAND bug#139884
