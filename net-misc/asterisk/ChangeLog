@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.143 2007/01/27 18:03:21 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.144 2007/01/29 07:14:58 rajiv Exp $
+
+  29 Jan 2007; Rajiv Aaron Manglani <rajiv@gentoo.org>
+  -asterisk-1.0.11_p1.ebuild:
+  removing old ebuild. bugs #154136 and #164217.
 
   27 Jan 2007; Joseph Jezak <josejx@gentoo.org> asterisk-1.0.12.ebuild:
   Marked ~ppc for bug #154136.
