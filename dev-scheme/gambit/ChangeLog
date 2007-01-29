@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/gambit
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/ChangeLog,v 1.1 2005/10/17 04:09:47 mkennedy Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/ChangeLog,v 1.2 2007/01/29 17:56:36 hkbst Exp $
+
+*gambit-4.0_beta20 (29 Jan 2007)
+
+  29 Jan 2007; Marijn Schouten <hkBst@gentoo.org> +gambit-4.0_beta20.ebuild:
+  add beta20
 
 *gambit-4.0_beta15 (17 Oct 2005)
 
