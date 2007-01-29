@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.2.ebuild,v 1.1 2006/07/06 02:50:04 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.2.ebuild,v 1.2 2007/01/29 18:44:37 betelgeuse Exp $
 
 inherit eutils java-pkg-2 flag-o-matic check-reqs multilib
 
@@ -116,7 +116,7 @@ src_unpack() {
 	epatch ${WORKDIR}/${P}-swttools.patch # patch18
 	popd >/dev/null
 
-	# install location should automatically be added to homedir 
+	# install location should automatically be added to homedir
 	# if ECLIPSE_HOME is not writable
 	# https://bugs.eclipse.org/bugs/show_bug.cgi?id=90630
 	epatch ${WORKDIR}/${P}-updatehomedir.patch # patch22
@@ -127,7 +127,7 @@ src_unpack() {
 	epatch ${WORKDIR}/${P}-fileinitializer.patch # patch24
 	popd >/dev/null
 
-	# https://bugs.eclipse.org/bugs/show_bug.cgi?id=98707 
+	# https://bugs.eclipse.org/bugs/show_bug.cgi?id=98707
 	# https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=178726
 # TODO figure out why this doesn't apply
 #	pushd plugins/org.eclipse.compare >/dev/null
@@ -169,7 +169,7 @@ src_unpack() {
 	epatch ${WORKDIR}/${P}-javadoclinks.patch # patch48
 
 	# generic releng plugins that can be used to build plugins
-	# see this thread for deails: 
+	# see this thread for deails:
 	# https://www.redhat.com/archives/fedora-devel-java-list/2006-April/msg00048.html
 	pushd plugins/org.eclipse.pde.build >/dev/null
 	epatch ${WORKDIR}/${P}-pde.build-add-package-build.patch # patch53

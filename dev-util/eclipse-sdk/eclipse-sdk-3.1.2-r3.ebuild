@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1.2-r3.ebuild,v 1.1 2006/07/06 02:50:04 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1.2-r3.ebuild,v 1.2 2007/01/29 18:44:37 betelgeuse Exp $
 
 inherit eutils java-pkg java-utils flag-o-matic check-reqs
 
@@ -39,7 +39,7 @@ ECLIPSE_LINKS_DIR="${ECLIPSE_DIR}/links"
 # - ppc support not tested, but not explicitly broken either
 # - make a extension location in /var/lib that's writable by 'eclipse' group
 # - use make_desktop_entry from eutils instead of our own stuff
-# - 
+# -
 
 pkg_setup() {
 	java-pkg_pkg_setup
@@ -94,7 +94,7 @@ src_unpack() {
 }
 
 src_compile() {
-	# karltk: this should be handled by the java-pkg eclass in setup-vm 
+	# karltk: this should be handled by the java-pkg eclass in setup-vm
 	addwrite "/proc/self/maps"
 	addwrite "/proc/cpuinfo"
 	addwrite "/dev/random"
