@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j-core/mx4j-core-3.0.1.ebuild,v 1.4 2007/01/11 22:47:21 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j-core/mx4j-core-3.0.1.ebuild,v 1.5 2007/01/29 16:01:14 nelchael Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -25,7 +25,7 @@ RDEPEND="${RDEPEND}
 
 LICENSE="mx4j"
 SLOT="3.0"
-KEYWORDS="~amd64 x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
 IUSE="doc source"
 
 S="${WORKDIR}/${MY_P}"

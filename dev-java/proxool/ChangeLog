@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/proxool
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/proxool/ChangeLog,v 1.7 2007/01/11 21:15:31 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/proxool/ChangeLog,v 1.8 2007/01/29 16:03:43 nelchael Exp $
+
+  29 Jan 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  proxool-0.8.3-r1.ebuild:
+  Add ~ppc, see bug #161544.
 
   12 Jan 2007; Petteri Räty <betelgeuse@gentoo.org>
   proxool-0.8.3-r1.ebuild:
