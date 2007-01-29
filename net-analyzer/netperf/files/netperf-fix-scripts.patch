@@ -1,0 +1,111 @@
+diff -u doc/examples.ori/arr_script doc/examples/arr_script
+--- doc/examples.ori/arr_script	2007-01-29 20:01:45.000000000 +0000
++++ doc/examples/arr_script	2007-01-29 20:01:16.000000000 +0000
+@@ -10,8 +10,8 @@
+   TOLERANCE=15
+   MAX_RETRIES=3
+ 
+-  NETPERF="/usr/local/netperf/netperf"
+-  NETPERF="./netperf"
++#  NETPERF="/usr/local/netperf/netperf"
++  NETPERF="/usr/bin/netperf"
+ 
+   NPROC_LIST=""
+   RR_SIZES=""
+diff -u doc/examples.ori/packet_byte_script doc/examples/packet_byte_script
+--- doc/examples.ori/packet_byte_script	2007-01-29 20:01:45.000000000 +0000
++++ doc/examples/packet_byte_script	2007-01-29 20:01:16.000000000 +0000
+@@ -22,7 +22,7 @@
+ fi
+ 
+ # where is netperf
+-NETPERF_CMD=${NETPERF_CMD:=/opt/netperf/netperf}
++NETPERF_CMD=${NETPERF_CMD:=/usr/bin/netperf}
+ 
+ # at what port will netserver be waiting? If you decide to run
+ # netserver at a differnet port than the default of 12865, then set
+diff -u doc/examples.ori/sctp_stream_script doc/examples/sctp_stream_script
+--- doc/examples.ori/sctp_stream_script	2007-01-29 20:01:45.000000000 +0000
++++ doc/examples/sctp_stream_script	2007-01-29 20:01:16.000000000 +0000
+@@ -24,7 +24,7 @@
+ # where the programs are
+ #NETHOME=/usr/local/netperf
+ #NETHOME="/opt/netperf"
+-NETHOME=.
++NETHOME=/usr/bin/
+ 
+ # at what port will netserver be waiting? If you decide to run
+ # netserver at a differnet port than the default of 12865, then set
+diff -u doc/examples.ori/snapshot_script doc/examples/snapshot_script
+--- doc/examples.ori/snapshot_script	2007-01-29 20:01:45.000000000 +0000
++++ doc/examples/snapshot_script	2007-01-29 20:01:16.000000000 +0000
+@@ -37,7 +37,7 @@
+ #
+ # where is netperf installed, there are a few possible places:
+ 
+-NETPERF_CMD=${NETPERF_CMD:=/opt/netperf/netperf}
++NETPERF_CMD=${NETPERF_CMD:=/usr/bin/netperf}
+ 
+ 
+ # there should be no more than two parms passed
+Only in doc/examples: .svn
+diff -u doc/examples.ori/tcp_range_script doc/examples/tcp_range_script
+--- doc/examples.ori/tcp_range_script	2007-01-29 20:01:45.000000000 +0000
++++ doc/examples/tcp_range_script	2007-01-29 20:01:16.000000000 +0000
+@@ -43,7 +43,7 @@
+ # where is netperf, and are there any "constant" options such as 
+ # the netserver port number
+ #NETHOME=/usr/etc/net_perf
+-NETHOME="."
++NETHOME="/usr/bin"
+ NETPERF=$NETHOME/netperf $PORT
+ 
+ # How accurate we want the estimate of performance: 
+diff -u doc/examples.ori/tcp_rr_script doc/examples/tcp_rr_script
+--- doc/examples.ori/tcp_rr_script	2007-01-29 20:01:45.000000000 +0000
++++ doc/examples/tcp_rr_script	2007-01-29 20:01:16.000000000 +0000
+@@ -25,7 +25,7 @@
+ # where the programs are
+ #NETHOME=/usr/local/netperf
+ #NETHOME="/opt/netperf"
+-NETHOME=.
++NETHOME="/usr/bin"
+ 
+ # at what port will netserver be waiting? If you decide to run
+ # netserver at a differnet port than the default of 12865, then set
+diff -u doc/examples.ori/tcp_stream_script doc/examples/tcp_stream_script
+--- doc/examples.ori/tcp_stream_script	2007-01-29 20:01:45.000000000 +0000
++++ doc/examples/tcp_stream_script	2007-01-29 20:01:16.000000000 +0000
+@@ -24,7 +24,7 @@
+ # where the programs are
+ #NETHOME=/usr/local/netperf
+ #NETHOME="/opt/netperf"
+-NETHOME=.
++NETHOME="/usr/bin"
+ 
+ # at what port will netserver be waiting? If you decide to run
+ # netserver at a different port than the default of 12865, then set
+diff -u doc/examples.ori/udp_rr_script doc/examples/udp_rr_script
+--- doc/examples.ori/udp_rr_script	2007-01-29 20:01:45.000000000 +0000
++++ doc/examples/udp_rr_script	2007-01-29 20:01:16.000000000 +0000
+@@ -22,7 +22,7 @@
+ 
+ #NETHOME=/usr/local/netperf
+ #NETHOME="/opt/netperf"
+-NETHOME="."
++NETHOME="/usr/bin"
+ 
+ # at what port will netserver be waiting? If you decide to run
+ # netserver at a differnet port than the default of 12865, then set
+diff -u doc/examples.ori/udp_stream_script doc/examples/udp_stream_script
+--- doc/examples.ori/udp_stream_script	2007-01-29 20:01:45.000000000 +0000
++++ doc/examples/udp_stream_script	2007-01-29 20:01:16.000000000 +0000
+@@ -19,7 +19,7 @@
+ 
+ #NETHOME=/usr/local/netperf
+ #NETHOME="/opt/netperf"
+-NETHOME="."
++NETHOME="/usr/bin"
+ 
+ # at what port will netserver be waiting? If you decide to run
+ # netserver at a differnet port than the default of 12865, then set

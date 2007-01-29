@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.4.2.ebuild,v 1.1 2006/10/31 23:18:10 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.4.2-r1.ebuild,v 1.1 2007/01/29 20:05:05 humpback Exp $
 
 WANT_AUTOCONF="latest"
 inherit eutils flag-o-matic autotools
@@ -23,6 +23,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-2.4.0-gcc41.patch
+	epatch ${FILESDIR}/${PN}-fix-scripts.patch
 	eautoconf
 }
 
@@ -41,5 +42,6 @@ src_install () {
 	# documentation and example scripts
 	dodoc AUTHORS ChangeLog COPYING NEWS README Release_Notes doc/netperf.pdf
 	dodir /usr/share/doc/${PF}/examples
-	mv ${D}/usr/bin/*_script ${D}/usr/share/doc/${PF}/examples
+	#Scripts no longer get installed by einstall
+	cp doc/examples/*_script ${D}/usr/share/doc/${PF}/examples
 }
