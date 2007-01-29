@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.0.ebuild,v 1.2 2006/12/24 22:01:41 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.0-r1.ebuild,v 1.1 2007/01/29 01:57:03 nerdboy Exp $
 
 inherit eutils autotools
 
@@ -69,7 +69,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	if use glw && ! use opengl; then
 		ewarn "You set USE='glw -opengl'. GLw support needs OpenGL."
-		die "Set 'opengl' useflag!"
+		ewarn "OpenGL support also requires Tcl and Tk support."
+		die "Set opengl, tcl, and tk useflags!"
 	fi
 	if use glw && ! built_with_use media-libs/mesa motif; then
 		ewarn "GRASS OpenGL support needs mesa with motif headers."
@@ -109,14 +110,14 @@ src_compile() {
 	myconf="--prefix=/usr --with-cxx --enable-shared \
 		--with-gdal=$(which gdal-config) --with-curses --with-proj \
 		--with-proj-includes=/usr/include --with-proj-libs=/usr/lib \
-		--with-proj-share=/usr/share/proj --with-x"
+		--with-proj-share=/usr/share/proj"
 
 	if use tcl || use tk; then
 		myconf="${myconf} --with-tcltk \
 		    --with-tcltk-includes=/usr/include \
-		    --with-tcltk-libs=/usr/$(get_libdir)/tcl8.4"
+		    --with-tcltk-libs=/usr/$(get_libdir)/tcl8.4 --with-x"
 	else
-		myconf="${myconf} --without-tcltk"
+		myconf="${myconf} --without-tcltk --without-x"
 	fi
 
 	if use ffmpeg; then
@@ -140,6 +141,8 @@ src_compile() {
 	    if use glw; then
 		myconf="${myconf} --with-glw"
 	    fi
+	else
+	    epatch ${FILESDIR}/${P}-html-nonviz.patch
 	fi
 
 	if use sqlite; then
@@ -174,10 +177,14 @@ src_compile() {
 
 src_install() {
 	make install UNIX_BIN=${D}usr/bin BINDIR=${D}usr/bin \
-		PREFIX=${D}usr INST_DIR=${D}usr/${P} \
+		PREFIX=${D}usr INST_DIR=${D}usr/grass62 \
 		|| die "Error: make install failed!"
-	sed -i "s:^GISBASE=.*$:GISBASE=/usr/${P}:" \
+
+	sed -i "s:^GISBASE=.*$:GISBASE=/usr/grass62:" \
 		${D}usr/bin/grass62 || die "Error: sed failed!"
+
+	# Grass Extension Manager conflicts with ruby gems
+	mv ${D}usr/bin/gem ${D}usr/grass62/bin/
 
 	einfo "Adding env.d entry for Grass6"
 	newenvd ${FILESDIR}/99${P} 99grass

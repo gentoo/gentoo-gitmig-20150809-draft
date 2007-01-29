@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.30 2007/01/08 00:55:11 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.31 2007/01/29 01:57:03 nerdboy Exp $
+
+*grass-6.2.0-r1 (29 Jan 2007)
+
+  29 Jan 2007; Steve Arnold <nerdboy@gentoo.org> files/99grass-6.2.0,
+  +files/grass-6.2.0-html-nonviz.patch, -grass-6.2.0.ebuild,
+  +grass-6.2.0-r1.ebuild:
+  Added fix for bug 160809 and workaround for bug 159074.
 
   08 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -grass-6.1.0.ebuild:
   QA: Removed unused versions.
