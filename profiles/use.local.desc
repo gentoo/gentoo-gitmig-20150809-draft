@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2534 2007/01/29 18:07:42 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2535 2007/01/29 18:15:02 welp Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1925,7 +1925,7 @@ x11-wm/stumpwm-cvs:sbcl - Use SBCL for the runtime
 x11-wm/windowmaker:modelock - Enable XKB language status lock support. README says: "If you don't know what it is you probably don't need it."
 xfce-base/thunar:freetype - Enable support for font thumbnailing.
 xfce-base/thunar:thumbnail - enable thumbnail support in the file browser.
-xfce-base/thunar:trash-panel-plugin - Build and install the trash panel plugin
+xfce-base/thunar:plugins - Enable various plugins
 xfce-base/xfce4-extras:battery - Pulls in xfce4-battery dependency
 xfce-base/xfce4-extras:cpufreq - Pulls in xfce4-cpu-freq dependency
 xfce-base/xfce4-extras:wlan - Pulls in xfce4-wavelan dependency
