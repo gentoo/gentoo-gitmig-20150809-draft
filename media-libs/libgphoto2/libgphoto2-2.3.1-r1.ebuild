@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.3.1-r1.ebuild,v 1.1 2007/01/28 18:20:59 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.3.1-r1.ebuild,v 1.2 2007/01/29 21:32:55 alonbl Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -53,6 +53,12 @@ pkg_setup() {
 	enewgroup plugdev || die "Error creating plugdev group"
 }
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-rpm.patch"
+}
+
 src_compile() {
 	local cameras
 	local cam
@@ -80,10 +86,11 @@ src_compile() {
 		--with-doc-dir=/usr/share/doc/${PF} \
 		--with-html-dir=/usr/share/doc/${PF}/html \
 		--with-hotplug-doc-dir=/usr/share/doc/${PF}/hotplug \
-		udevscriptdir=/lib/udev \
+		$(use_enable doc docs) \
 		$(use_enable nls) \
+		--with-rpmbuild=/bin/true \
+		udevscriptdir=/lib/udev \
 		${myconf} || die "econf failed"
-#		$(use_enable doc docs) \		TODO
 
 	emake || die "make failed"
 }

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.88 2007/01/28 18:20:59 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.89 2007/01/29 21:32:55 alonbl Exp $
+
+  29 Jan 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/libgphoto2-2.3.1-rpm.patch, libgphoto2-2.3.1-r1.ebuild:
+  Fixed rpm sandbox issue, closes bug#157773
 
 *libgphoto2-2.3.1-r1 (28 Jan 2007)
 
