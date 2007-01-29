@@ -1,0 +1,12 @@
+diff --exclude-from=/opt/home/dang/.diffrc -up -ruN gnome-screensaver-2.16.2.orig/src/gs-auth-pam.c gnome-screensaver-2.16.2/src/gs-auth-pam.c
+--- gnome-screensaver-2.16.2.orig/src/gs-auth-pam.c	2006-11-09 11:17:35.000000000 -0500
++++ gnome-screensaver-2.16.2/src/gs-auth-pam.c	2007-01-29 16:17:04.000000000 -0500
+@@ -226,7 +226,7 @@ pam_conversation (int                   
+                         if (res) {
+                                 reply [replies].resp_retcode = PAM_SUCCESS;
+                         } else {
+-                                reply [replies].resp_retcode = PAM_INCOMPLETE;
++                                reply [replies].resp_retcode = PAM_TRY_AGAIN;
+                         }
+                 }
+ 

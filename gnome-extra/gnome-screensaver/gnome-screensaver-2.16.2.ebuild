@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.16.2.ebuild,v 1.10 2007/01/21 22:07:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.16.2.ebuild,v 1.11 2007/01/29 21:39:16 dang Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="Replaces xscreensaver, integrating with the desktop."
 HOMEPAGE="http://live.gnome.org/GnomeScreensaver"
@@ -70,6 +70,11 @@ pkg_setup() {
 		--with-gdm-config=/usr/share/gdm/defaults.conf \
 		--with-xscreensaverdir=/usr/share/xscreensaver/config \
 		--with-xscreensaverhackdir=/usr/lib/misc/xscreensaver"
+}
+
+src_unpack() {
+	gnome2_src_unpack
+	epatch "${FILESDIR}"/${P}-openpam.patch
 }
 
 src_install() {
