@@ -1,0 +1,23 @@
+diff -Nur xcache/processor/processor.m4 xcache-hardened/processor/processor.m4
+--- xcache/processor/processor.m4	2006-07-10 19:19:26.000000000 +0200
++++ xcache-hardened/processor/processor.m4	2006-07-10 19:03:00.000000000 +0200
+@@ -70,6 +70,9 @@
+ 		ZVAL_REFCOUNT(dst) = 1;
+ 		DONE(value)
+ 		DONE(refcount)
++#ifdef HARDENING_PATCH 
++		DISPATCH(zend_ushort, flags); 
++#endif
+ 		DONE(type)
+ 		DONE(is_ref)
+ 	} while(0);
+@@ -136,6 +139,9 @@
+ 		DISPATCH(zval_data_type, type)
+ 		DISPATCH(zend_uchar, is_ref)
+ 		DISPATCH(zend_ushort, refcount)
++#ifdef HARDENING_PATCH
++	DISPATCH(zend_ushort, flags);
++#endif
+ 	')dnl IFDASM
+ ')
+ dnl }}}
