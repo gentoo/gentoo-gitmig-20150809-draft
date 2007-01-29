@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/dbus-qt3-old
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-qt3-old/ChangeLog,v 1.9 2007/01/23 04:59:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-qt3-old/ChangeLog,v 1.10 2007/01/29 15:45:43 gustavoz Exp $
+
+  29 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  dbus-qt3-old-0.70.ebuild:
+  Stable on sparc wrt #162879
 
   23 Jan 2007; Jeroen Roovers <jer@gentoo.org> dbus-qt3-old-0.70.ebuild:
   Stable for HPPA (bug #162879).
