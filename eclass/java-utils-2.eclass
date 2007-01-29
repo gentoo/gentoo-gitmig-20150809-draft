@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.53 2007/01/28 21:11:42 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.54 2007/01/29 18:37:24 betelgeuse Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -827,6 +827,7 @@ java-pkg_jar-from() {
 			ln -snf "${jar}" "${destjar}" \
 				|| die "Failed to make symlink from ${jar} to ${destjar}"
 			[[ -z "${build_only}" ]] && java-pkg_record-jar_ "${target_pkg}" "${jar}"
+			popd > /dev/null
 			return 0
 		fi
 	done
