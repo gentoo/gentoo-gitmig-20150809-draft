@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.180 2007/01/23 04:56:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.181 2007/01/29 15:43:56 gustavoz Exp $
+
+  29 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> dbus-1.0.2.ebuild:
+  Stable on sparc wrt #154522
 
   23 Jan 2007; Jeroen Roovers <jer@gentoo.org> dbus-1.0.2.ebuild:
   Stable for HPPA (bug #154522).
