@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.447 2007/01/28 23:53:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.448 2007/01/29 04:24:29 kloeri Exp $
+
+  29 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> xine-lib-1.1.4.ebuild:
+  Add ~alpha + ~ia64 keywords.
 
 *xine-lib-1.1.4 (28 Jan 2007)
 
