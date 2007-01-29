@@ -1,5 +1,5 @@
 --- XSB.orig/build/xsb.in	2005-01-15 07:30:43.000000000 +1300
-+++ XSB/build/xsb.in	2007-01-28 22:08:36.000000000 +1300
++++ XSB/build/xsb.in	2007-01-29 20:53:13.000000000 +1300
 @@ -72,9 +72,9 @@
  scriptdir=`dirname $thisfile`
  topdir=`dirname $scriptdir`
@@ -13,7 +13,14 @@
  executable=${exec_dir}/bin/xsb
  
  # The purpose of this complex thing is to make sure that arguments
-@@ -101,12 +101,12 @@
+@@ -95,18 +95,18 @@
+ fi
+ 
+ if test -x "$executable" ; then
+-   eval "exec @CROSS_SIMULATOR@ $executable $xsb_cmd"
++   LD_LIBRARY_PATH=${exec_dir}/lib eval "exec @CROSS_SIMULATOR@ $executable $xsb_cmd"
+ else
+    echo "${executable}: "
     echo "       file doesn't exist or is not executable"
     echo ""
     echo "XSB might not have have been compiled for the following machine configuration:"

@@ -74,7 +74,7 @@ diff -ur XSB.orig/packages/dbdrivers/odbc/odbc_driver_config.P XSB/packages/dbdr
 -			     ' %s %s %s%sdriver_manager.so %s%sodbc_driver.so -lodbc -ldl',
 -			     f(OdbcRunpathFlag, ODBC_libdir_flag, 
 -			       ConfigLibDir, Slash, ConfigLibDir, Slash))
-+			     ' %s %s ./driver_manager.so -lodbc -ldl',
++			     ' %s %s driver_manager.so -lodbc -ldl',
 +			     f(OdbcRunpathFlag, ODBC_libdir_flag))
  	),
  	package_configuration(dir(odbc_driver), ODBCDriverDir),
