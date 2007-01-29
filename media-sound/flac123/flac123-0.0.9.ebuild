@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/flac123/flac123-0.0.9.ebuild,v 1.8 2007/01/23 15:56:19 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/flac123/flac123-0.0.9.ebuild,v 1.9 2007/01/29 15:19:16 beandog Exp $
 
 WANT_AUTOCONF=2.5
 WANT_AUTOMAKE=1.6
@@ -17,7 +17,8 @@ KEYWORDS="amd64 ~ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="media-libs/flac
-	media-libs/libao"
+	media-libs/libao
+	media-libs/libogg"
 
 src_unpack() {
 	unpack ${A}
