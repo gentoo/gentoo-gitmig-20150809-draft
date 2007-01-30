@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/jxtray
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/ChangeLog,v 1.15 2007/01/25 23:15:08 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/ChangeLog,v 1.16 2007/01/30 10:52:41 caster Exp $
+
+*jxtray-0.5-r3 (30 Jan 2007)
+
+  30 Jan 2007; Vlastimil Babka <caster@gentoo.org> jxtray-0.5-r1.ebuild,
+  jxtray-0.5-r2.ebuild, +jxtray-0.5-r3.ebuild:
+  Revbump to use jdom-1.0 final instead of beta9 (the API changes there don't
+  seem to affect this package). Add java-ant-2 to inherit in all gen-2
+  revisions.
 
   25 Jan 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   jxtray-0.5-r1.ebuild, jxtray-0.5-r2.ebuild:
