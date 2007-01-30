@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.29.ebuild,v 1.1 2007/01/30 16:59:22 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.29.ebuild,v 1.2 2007/01/30 17:53:05 lack Exp $
 
 ROX_LIB_VER="2.0.0"
 inherit eutils rox
@@ -41,13 +41,12 @@ src_install() {
 
 	dobin "${FILESDIR}/rox-start"
 
-	dodir /usr/share/xsessions
-	insinto /usr/share/xsessions
-	doins "${FILESDIR}/rox.desktop"
+	local wm="rox"
+	make_session_desktop "ROX Desktop" /usr/bin/rox-start
 
 	dodir /etc/X11/Sessions
-	echo "/usr/bin/rox-start" > "${D}/etc/X11/Sessions/ROX"
-	fperms a+x /etc/X11/Sessions/ROX
+	echo "/usr/bin/rox-start" > "${D}/etc/X11/Sessions/ROX_Desktop"
+	fperms a+x /etc/X11/Sessions/ROX_Desktop
 }
 
 pkg_postinst() {
