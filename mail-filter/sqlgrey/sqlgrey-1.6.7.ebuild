@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation# Distributed under the terms of the GNU General Public License v2
+# Copyright 1999-2007 Gentoo Foundation# Distributed under the terms of the GNU General Public License v2
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/sqlgrey-1.6.7.ebuild,v 1.3 2006/10/23 20:12:26 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/sqlgrey-1.6.7.ebuild,v 1.4 2007/01/30 00:26:50 ticho Exp $
 
 inherit eutils
 
@@ -13,6 +13,7 @@ IUSE="mysql postgres sqlite"
 RDEPEND="dev-lang/perl
 	dev-perl/DBI
 	dev-perl/net-server
+	dev-perl/Date-Calc
 	virtual/mailx
 	|| ( postgres? ( dev-perl/DBD-Pg )
 		sqlite? ( dev-perl/DBD-SQLite )
