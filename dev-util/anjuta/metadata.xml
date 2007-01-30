@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer><email>malverian@gentoo.org</email></maintainer>
+<maintainer>
+	<email>compnerd@gentoo.org</email>
+	<name>Saleem Abdulrasool</name>
+</maintainer>
 </pkgmetadata>
