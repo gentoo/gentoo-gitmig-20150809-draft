@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-9999.ebuild,v 1.8 2007/01/30 03:50:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-9999.ebuild,v 1.9 2007/01/30 22:20:30 wolf31o2 Exp $
 
 # quake3-9999          -> latest svn
 # quake3-9999.REV      -> use svn REV
@@ -26,30 +26,27 @@ else
 	inherit flag-o-matic toolchain-funcs eutils games
 	MY_PV=${PV/_/-}
 	MY_P=io${PN}_${MY_PV}
-	SRC_URI="http://icculus.org/quake3/files/${MY_P}.tar.bz2"
+	SRC_URI="http://icculus.org/quake3/files/${MY_P}.tar.bz2
+		http://ioquake3.org/files/${MY_P}.tar.bz2"
 	S=${WORKDIR}/${MY_P}
 fi
 
 DESCRIPTION="Quake III Arena - 3rd installment of the classic id 3D first-person shooter"
-HOMEPAGE="http://icculus.org/quake3/"
+HOMEPAGE="http://ioquake3.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-*"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="dedicated opengl teamarena"
 
-UIRDEPEND="virtual/opengl
+UIDEPEND="virtual/opengl
 	media-libs/openal
-	x11-libs/libXext
-	x11-libs/libX11
-	x11-libs/libXau
-	x11-libs/libXdmcp
 	media-libs/libsdl"
 
-RDEPEND="opengl? (
-	${UIRDEPEND} )
-	!dedicated? (
-		${UIRDEPEND} )
+DEPEND="opengl? ( ${UIRDEPEND} )
+	!dedicated? ( ${UIRDEPEND} )"
+
+RDEPEND="${DEPEND}
 	games-fps/quake3-data
 	teamarena? ( games-fps/quake3-teamarena )"
 
