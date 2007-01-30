@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX postgrey.conf 1882 RMD160 d3e01459a4a50815a9a08fda10544d9d9c88eafc SHA1 f6d448b94a9043e0bb72cd67c0c060c22cf36a6f SHA256 193b077aaf3fcbeb275cebed91122cdc1e781a617127135731049517d4375d8c
 MD5 6dfb29bdf769bd95b3da9611e89e9e67 files/postgrey.conf 1882
 RMD160 d3e01459a4a50815a9a08fda10544d9d9c88eafc files/postgrey.conf 1882
@@ -46,3 +49,10 @@ SHA256 7ec77baad4af9c88a7eb41da924a0b715cc77ee7b71cd57a93d8a57f3e481585 files/di
 MD5 d8ae53825dcd0af0f064d12226ca9289 files/digest-postgrey-1.27 238
 RMD160 43f472a3c76458f4196e0420e71b726566c1a1f2 files/digest-postgrey-1.27 238
 SHA256 de3b7d41fcb5554e62a73fe837b54170efa7ee4c35d6cfca2fd93f9bc5d6fb39 files/digest-postgrey-1.27 238
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFv1kdWt/XSf2CZdkRAtzyAKCFVjfnkZj+K8ELcjJE59lhFklXVgCghqIi
+d96hOhw3BbKNsM3JvG8ZAFo=
+=Jelj
+-----END PGP SIGNATURE-----
