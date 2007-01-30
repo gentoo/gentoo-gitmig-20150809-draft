@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.55 2007/01/30 12:50:25 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.56 2007/01/30 14:12:34 caster Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -2214,24 +2214,33 @@ java-pkg_jar-list() {
 	fi
 }
 
-# TODO document
-# Verify that the classes were compiled for the right source / target
-# If $1 is present will check that file otherwise the ${D} directory
-# recursively.
+# ------------------------------------------------------------------------------
+# @internal-function java-pkg_verify-classes
+#
+# Verify that the classes were compiled for the right source / target. Dies if
+# not.
+# @param $1 (optional) - the file to check, otherwise checks whole ${D}
+# ------------------------------------------------------------------------------
 java-pkg_verify-classes() {
 	#$(find ${D} -type f -name '*.jar' -o -name '*.class')
 	local target=$(java-pkg_get-target)
-	ebegin "Verifying java class versions (target: ${target})"
+	local result
+	local log="${T}/class-version-verify.log"
 	if [[ -n "${1}" ]]; then
-		class-version-verify.py -t ${target} "${1}"
+		class-version-verify.py -v -t ${target} "${1}" > "${log}"
+		result=$?
 	else
-		class-version-verify.py -t ${target} -r "${D}"
+		ebegin "Verifying java class versions (target: ${target})"
+		class-version-verify.py -v -t ${target} -r "${D}" > "${log}"
+		result=$?
+		eend ${result}
 	fi
-	result=$?
-	eend ${result}
+	[[ -n ${JAVA_PKG_DEBUG} ]] && cat "${log}"
 	if [[ ${result} != 0 ]]; then
-		ewarn "Possible problem"
-		die "Bad class files found"
+		eerror "Incorrect bytecode version found"
+		[[ -n "${1}" ]] && eerror "in file: ${1}"
+		eerror "See ${log} for more details."
+		die "Incorrect bytecode found"
 	fi
 }
 
