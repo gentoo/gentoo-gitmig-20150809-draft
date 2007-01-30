@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ant-owanttask-1.1-r12.ebuild,v 1.1 2007/01/24 17:57:16 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ant-owanttask-1.1-r12.ebuild,v 1.2 2007/01/30 00:05:12 caster Exp $
 
-inherit java-ant-2 java-pkg-2 eutils
+inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="ObjectWeb's Ant tasks"
 HOMEPAGE="http://monolog.objectweb.org"
