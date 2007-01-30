@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libebt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libebt/ChangeLog,v 1.18 2007/01/30 06:29:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libebt/ChangeLog,v 1.19 2007/01/30 07:27:13 ferdy Exp $
+
+  30 Jan 2007; Fernando J. Pereda <ferdy@gentoo.org> libebt-1.3.0.ebuild:
+  Stable on Alpha as per bug #164487
 
   30 Jan 2007; Jeroen Roovers <jer@gentoo.org> libebt-1.3.0.ebuild:
   Stable for HPPA (bug #164487).
