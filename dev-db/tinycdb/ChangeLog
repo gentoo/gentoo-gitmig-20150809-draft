@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/tinycdb
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/ChangeLog,v 1.9 2006/07/14 14:25:58 hattya Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/ChangeLog,v 1.10 2007/01/30 19:56:23 chutzpah Exp $
+
+  30 Jan 2007; Patrick McLean <chutzpah@gentoo.org> tinycdb-0.74.ebuild:
+  Add ~amd64
 
   14 Jul 2006; Akinori Hattori <hattya@gentoo.org> tinycdb-0.74.ebuild:
   enclose D, S and FILESDIR in double quotes.
