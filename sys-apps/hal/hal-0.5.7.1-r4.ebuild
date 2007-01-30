@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r2.ebuild,v 1.5 2007/01/18 05:34:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r4.ebuild,v 1.1 2007/01/30 16:42:06 cardoe Exp $
 
 inherit eutils linux-info
 
@@ -23,7 +23,6 @@ RDEPEND=">=dev-libs/glib-2.6
 	sys-libs/libcap
 	sys-apps/pciutils
 	dev-libs/libusb
-	sys-apps/hotplug-base
 	virtual/eject
 	dmi? ( >=sys-apps/dmidecode-2.7 )
 	crypt? ( >=sys-fs/cryptsetup-luks-1.0.1 )
@@ -99,7 +98,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-0.5.7.1-ignored-volumes.patch
 
 	# Fix bash in hald scripts
-	epatch "${FILESDIR}"/${PN}-0.5.7-hald-scripts.patch
+	epatch "${FILESDIR}"/${PN}-0.5.7.1-hald-scripts.patch
 
 	# probe partition table
 	epatch "${FILESDIR}"/${PN}-0.5.7-part-table.patch
@@ -116,17 +115,20 @@ src_unpack() {
 	# rescan devices on resume
 	epatch "${FILESDIR}"/${PN}-0.5.7-rescan-on-resume.patch
 
-	# detect hibernate-ram script as well
-	epatch "${FILESDIR}"/${PN}-0.5.7-hibernate.patch
-
 	# dbus deprecated dbus_connection_disconnect
 	epatch "${FILESDIR}"/${PN}-0.5.7.1-dbus-close.patch
 
 	# sr driver fix
 	epatch "${FILESDIR}"/${PN}-0.5.7.1-sr-driver.patch
 
-	# hibernate sequence fix
-	epatch "${FILESDIR}"/${PN}-0.5.7.1-hibernate-fix.patch
+	# mounting autofs & subfs fixes
+	epatch "${FILESDIR}"/${PN}-0.5.7.1-autofs-subfs.patch
+
+	# iPod Nano detected as RAID fix
+	epatch "${FILESDIR}"/${PN}-0.5.7.1-ipod-nano.patch
+
+	# Floppies mounting fix
+	epatch "${FILESDIR}"/${PN}-0.5.7.1-floppies-fix.patch
 }
 
 src_compile() {
@@ -142,7 +144,7 @@ src_compile() {
 		--with-doc-dir=/usr/share/doc/${PF} \
 		--with-os-type=gentoo \
 		--with-pid-file=/var/run/hald.pid \
-		--with-data=${hwdata}
+		--with-hwdata=${hwdata} \
 		--enable-hotplug-map \
 		$(use_enable debug verbose-mode) \
 		$(use_enable pcmcia pcmcia-support) \
@@ -162,16 +164,8 @@ src_install() {
 	# remove dep on gnome-python
 	mv "${D}"/usr/bin/hal-device-manager "${D}"/usr/share/hal/device-manager/
 
-	# hal umount for unclean unmounts
-	exeinto /lib/udev/
-	newexe "${FILESDIR}"/hal-unmount.dev hal_unmount
-
 	# initscript
 	newinitd "${FILESDIR}"/0.5-hald.rc hald
-
-	# Script to unmount devices if they are yanked out (from upstream)
-	exeinto /etc/dev.d/default
-	doexe "${FILESDIR}"/hal-unmount.dev
 
 	# We now create and keep /media here as both gnome-mount and pmount
 	# use these directories, to avoid collision.

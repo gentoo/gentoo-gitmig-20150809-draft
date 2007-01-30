@@ -1,6 +1,19 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.121 2007/01/29 15:49:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.122 2007/01/30 16:42:06 cardoe Exp $
+
+*hal-0.5.7.1-r4 (30 Jan 2007)
+
+  30 Jan 2007; Doug Goldstein <cardoe@gentoo.org>
+  +files/hal-0.5.7.1-autofs-subfs.patch,
+  +files/hal-0.5.7.1-floppies-fix.patch,
+  +files/hal-0.5.7.1-hald-scripts.patch,
+  -files/hal-0.5.7.1-hibernate-fix-r1.patch,
+  +files/hal-0.5.7.1-ipod-nano.patch, -hal-0.5.5.1-r3.ebuild,
+  -hal-0.5.7.1-r2.ebuild, hal-0.5.7.1-r3.ebuild, +hal-0.5.7.1-r4.ebuild:
+  Fixed hotplug depend. Fixed installing old unused udev rule. Fix for bug
+  #133743 from Gilles Dartiguelongue <dartigug@esiee.fr>. Fix bug #154648. Fix
+  bug #158304. Fix bug #163233.
 
   29 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> hal-0.5.7.1-r3.ebuild:
   Stable on sparc wrt #162942
