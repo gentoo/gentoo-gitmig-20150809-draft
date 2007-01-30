@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/linphone-1.5.1.ebuild,v 1.3 2007/01/30 15:12:44 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/linphone-1.6.0.ebuild,v 1.1 2007/01/30 15:12:44 drizzt Exp $
 
 MY_DPV="${PV%.*}.x"
 
@@ -11,7 +11,7 @@ inherit eutils autotools
 
 DESCRIPTION="Linphone is a SIP phone with a GNOME interface."
 HOMEPAGE="http://www.linphone.org"
-SRC_URI="http://download.savannah.nongnu.org/releases/${PN}/${MY_DPV}/source/${P}.tar.gz"
+SRC_URI="http://download.savannah.nongnu.org/releases/${PN}/${MY_DPV}/sources/${P}.tar.gz"
 SLOT=1
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
@@ -41,7 +41,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${P}-pkgconfig.patch
+	epatch "${FILESDIR}"/${PN}-1.5.1-pkgconfig.patch
 	./autogen.sh
 }
 

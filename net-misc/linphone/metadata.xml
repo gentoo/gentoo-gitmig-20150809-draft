@@ -3,8 +3,8 @@
 <pkgmetadata>
 <herd>voip</herd>
 <maintainer>
-  <email>stkn@gentoo.org</email>
-  <name>Stefan Knoblich</name>
-  <description>voip herd will be taking care of this</description>
+	<email>stkn@gentoo.org</email>
+	<name>Stefan Knoblich</name>
+	<description>voip herd will be taking care of this</description>
 </maintainer>
 </pkgmetadata>
