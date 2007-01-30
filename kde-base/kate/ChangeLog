@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kate
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kate/ChangeLog,v 1.69 2007/01/30 17:02:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kate/ChangeLog,v 1.70 2007/01/30 17:04:43 gustavoz Exp $
+
+  30 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> kate-3.5.5-r1.ebuild:
+  Stable on sparc wrt #164080
 
   30 Jan 2007; Raúl Porcel <armin76@gentoo.org> kate-3.5.5-r1.ebuild:
   x86 stable wrt bug 164080

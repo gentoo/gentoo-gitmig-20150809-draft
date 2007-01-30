@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.339 2007/01/30 16:59:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.340 2007/01/30 17:03:38 gustavoz Exp $
+
+  30 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  kdebase-3.5.5-r3.ebuild:
+  Stable on sparc wrt #164080
 
   30 Jan 2007; Raúl Porcel <armin76@gentoo.org> kdebase-3.5.5-r3.ebuild:
   x86 stable wrt bug 164080
