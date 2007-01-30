@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.3 2007/01/19 10:46:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.4 2007/01/30 15:53:30 armin76 Exp $
+
+  30 Jan 2007; Raúl Porcel <armin76@gentoo.org>
+  files/icon/seamonkey-bin.desktop:
+  Fix icon display in menu, bug 164381
 
 *seamonkey-bin-1.1 (19 Jan 2007)
 
