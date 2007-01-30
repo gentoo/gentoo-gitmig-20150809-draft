@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/megamek/megamek-0.32.0.ebuild,v 1.1 2006/10/17 21:57:48 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/megamek/megamek-0.32.0.ebuild,v 1.2 2007/01/30 00:53:55 caster Exp $
 
-inherit java-ant-2 java-pkg-2 games
+inherit java-pkg-2 java-ant-2 games
 
 DESCRIPTION="an unofficial, online version of the Classic BattleTech board game"
 HOMEPAGE="http://megamek.sourceforge.net/"
