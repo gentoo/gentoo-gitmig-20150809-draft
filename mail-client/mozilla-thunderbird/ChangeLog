@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.165 2007/01/11 15:44:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.166 2007/01/30 22:40:23 armin76 Exp $
+
+  30 Jan 2007; Raúl Porcel <armin76@gentoo.org>
+  mozilla-thunderbird-2.0_beta1.ebuild:
+  Move branding USE-flag to mozbranding, bug 157335
 
   11 Jan 2007; Raúl Porcel <armin76@gentoo.org>
   mozilla-thunderbird-1.5.0.8.ebuild, mozilla-thunderbird-1.5.0.9.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0_beta1.ebuild,v 1.4 2007/01/11 15:44:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0_beta1.ebuild,v 1.5 2007/01/30 22:40:23 armin76 Exp $
 
 #
 # There are no linguas supported in alpha builds
@@ -24,7 +24,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/nightly/${MY_PV}-can
 KEYWORDS="~amd64 ~ia64 -mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
-IUSE="ldap crypt branding mozdom replytolist"
+IUSE="ldap crypt mozbranding mozdom replytolist"
 
 #for X in ${LANGS} ; do
 #	SRC_URI="${SRC_URI} linguas_${X/-/_}? ( mirror://gentoo/thunderbird-${X}-${PV}.xpi )"
@@ -137,7 +137,7 @@ src_compile() {
 		mozconfig_annotate '' --enable-extensions=default
 	fi
 
-	if use branding; then
+	if use mozbranding; then
 		mozconfig_annotate '' --enable-official-branding
 	fi
 
