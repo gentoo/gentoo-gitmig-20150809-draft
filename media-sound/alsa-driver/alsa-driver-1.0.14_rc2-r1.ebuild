@@ -1,16 +1,20 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-9999.ebuild,v 1.8 2007/01/30 00:34:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.14_rc2-r1.ebuild,v 1.1 2007/01/30 00:34:06 flameeyes Exp $
 
-inherit linux-mod flag-o-matic eutils multilib autotools mercurial
+inherit linux-mod flag-o-matic eutils multilib
+
+MY_P="${P/_rc/rc}"
+S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
+SRC_URI="mirror://alsaproject/driver/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~x86"
 IUSE="oss debug midi"
 
 IUSE_CARDS="seq-dummy dummy virmidi mtpav mts64 serial-u16550 mpu401 loopback
@@ -41,8 +45,6 @@ DEPEND="${RDEPEND}
 	sys-apps/debianutils"
 
 PROVIDE="virtual/alsa"
-
-S="${WORKDIR}/alsa-driver"
 
 pkg_setup() {
 	# By default, drivers for all supported cards will be compiled.
@@ -95,16 +97,14 @@ pkg_setup() {
 }
 
 src_unpack() {
-	mercurial_fetch http://hg.alsa-project.org/alsa-driver
-	mercurial_fetch http://hg.alsa-project.org/alsa-kernel alsa-driver/alsa-kernel
+	unpack ${A}
+
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-tumbler-ppc.patch"
 
 	convert_to_m "${S}/Makefile"
 	sed -i -e 's:\(.*depmod\):#\1:' "${S}/Makefile"
-
-	cd "${S}"
-	emake -j1 ALSAKERNELDIR="${S}/alsa-kernel" all-deps
-	eaclocal
-	eautoconf
 }
 
 src_compile() {
@@ -114,7 +114,6 @@ src_compile() {
 	is-flag "-malign-double" && filter-flags "-fomit-frame-pointer"
 	append-flags "-I${KV_DIR}/arch/$(tc-arch-kernel)/include"
 
-	ALSAKERNELDIR="${S}/alsa-kernel" \
 	econf $(use_with oss) \
 		$(use_with debug debug full) \
 		--with-kernel="${KV_DIR}" \
