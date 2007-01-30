@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.9999-r1.ebuild,v 1.2 2007/01/30 07:15:22 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.9999-r1.ebuild,v 1.3 2007/01/30 08:29:56 opfer Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -67,7 +67,6 @@ src_compile() {
 
 	local myconf
 
-	myconf="${myconf} $(use_enable mudflap multilib)"
 	if use X; then
 		myconf="${myconf} --with-x"
 		myconf="${myconf} --with-xpm"
