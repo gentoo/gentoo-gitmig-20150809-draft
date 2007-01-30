@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/poedit-1.3.6.ebuild,v 1.4 2007/01/30 17:33:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/poedit-1.3.6.ebuild,v 1.5 2007/01/30 21:31:28 wolf31o2 Exp $
 
 WX_GTK_VER="2.6"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://poedit.sourceforge.net/"
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="~amd64 ~hppa ~ppc sparc x86"
+KEYWORDS="amd64 ~hppa ~ppc sparc x86"
 IUSE="spell"
 
 DEPEND=">x11-libs/wxGTK-2.6
