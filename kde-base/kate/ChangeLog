@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kate
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kate/ChangeLog,v 1.68 2007/01/17 00:07:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kate/ChangeLog,v 1.69 2007/01/30 17:02:20 armin76 Exp $
+
+  30 Jan 2007; Raúl Porcel <armin76@gentoo.org> kate-3.5.5-r1.ebuild:
+  x86 stable wrt bug 164080
 
   17 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> kate-3.5.6.ebuild:
   Remove unneeded patch.
