@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.238 2007/01/30 14:33:00 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.239 2007/01/30 16:14:14 zzam Exp $
+
+*udev-104-r6 (30 Jan 2007)
+
+  30 Jan 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-104-peristent-net-disable-xen.patch, +udev-104-r6.ebuild:
+  Stop persistent-net from touching xen-network-devices, solving Bug #162730.
 
   30 Jan 2007; Matthias Schwarzott <zzam@gentoo.org>
   -files/05-udev-early.rules-104-r2, -files/udev.rules-104-r2,
