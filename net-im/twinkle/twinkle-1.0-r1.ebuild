@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.0-r1.ebuild,v 1.1 2007/01/30 09:39:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.0-r1.ebuild,v 1.2 2007/01/30 19:35:35 dragonheart Exp $
 
 inherit eutils qt3 kde
 
@@ -39,6 +39,7 @@ src_compile() {
 			$(use_with arts) \
 			$(use_with zrtp) \
 			$(use_with speex)"
+	set-kdedir
 	kde_src_compile
 }
 
