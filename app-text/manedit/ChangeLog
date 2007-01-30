@@ -1,6 +1,9 @@
 # ChangeLog for app-text/manedit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/ChangeLog,v 1.27 2007/01/09 02:19:09 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/ChangeLog,v 1.28 2007/01/30 05:13:03 beandog Exp $
+
+  30 Jan 2007; Steve Dibb <beandog@gentoo.org> manedit-0.7.1.ebuild:
+  amd64 stable, bug 160291
 
   09 Jan 2007; Andrej Kacian <ticho@gentoo.org> manedit-0.7.1.ebuild:
   Stable on x86, bug #160291.
