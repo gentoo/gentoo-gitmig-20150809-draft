@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nessus-bin
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-bin/ChangeLog,v 1.5 2006/11/29 16:53:30 jokey Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-bin/ChangeLog,v 1.6 2007/01/30 03:14:41 vanquirius Exp $
+
+*nessus-bin-3.0.5 (30 Jan 2007)
+
+  30 Jan 2007; Marcelo Goes <vanquirius@gentoo.org>
+  +nessus-bin-3.0.5.ebuild:
+  3.0.5 version bump. Thanks to ChazeFroy <chazefroy at gmail dot com>. Fixes
+  bug 162614.
 
 *nessus-bin-3.0.4 (29 Nov 2006)
 
