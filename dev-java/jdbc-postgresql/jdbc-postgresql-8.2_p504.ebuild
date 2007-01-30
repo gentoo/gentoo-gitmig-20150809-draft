@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/jdbc-postgresql-8.2_p504.ebuild,v 1.3 2007/01/20 09:36:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/jdbc-postgresql-8.2_p504.ebuild,v 1.4 2007/01/30 00:35:39 caster Exp $
 
-inherit java-ant-2 java-pkg-2
+inherit java-pkg-2 java-ant-2
 
 MY_PN="postgresql-jdbc"
 MY_PV="${PV/_p/-}"
