@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/hicolor-icon-theme-0.9-r1.ebuild,v 1.12 2007/01/26 09:34:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/hicolor-icon-theme-0.9-r1.ebuild,v 1.13 2007/01/30 17:40:13 dang Exp $
 
 # The gnome2 eclass must be inherited to update the icon cache.  All exported
 # functions should be overridden
 
-inherit eutils gnome2
+inherit eutils gnome2-utils
 
 DESCRIPTION="Fallback theme for the freedesktop icon theme specification"
 HOMEPAGE="http://icon-theme.freedesktop.org/wiki/HicolorTheme"
