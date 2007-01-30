@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0-r2.ebuild,v 1.4 2007/01/15 12:36:38 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0-r2.ebuild,v 1.5 2007/01/30 02:24:35 josejx Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.jdom.org/dist/source/${P}.tar.gz"
 HOMEPAGE="http://www.jdom.org"
 LICENSE="JDOM"
 SLOT="${PV}"
-KEYWORDS="amd64 ~ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 
 COMMON_DEP="
 		dev-java/saxpath
