@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0_rc19.ebuild,v 1.1 2007/01/25 14:27:10 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0_rc19.ebuild,v 1.2 2007/01/30 18:47:41 uberlord Exp $
 
 inherit autotools eutils ssl-cert
 
@@ -115,8 +115,8 @@ src_install () {
 
 	# Update ssl cert locations
 	if use ssl ; then
-		sed -i -e 's,^#ssl_cert_file =.*,#ssl_cert_file = /etc/ssl/dovecot/server.pem,' \
-			-e 's,^#ssl_key_file =.*,#ssl_key_file = /etc/ssl/dovecot/server.key,' \
+		sed -i -e 's,^#ssl_cert_file =.*,ssl_cert_file = /etc/ssl/dovecot/server.pem,' \
+			-e 's,^#ssl_key_file =.*,ssl_key_file = /etc/ssl/dovecot/server.key,' \
 			"${conf}" || die
 
 		# Let's not make a new certificate if we already have one
