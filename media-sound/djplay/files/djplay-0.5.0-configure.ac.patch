@@ -1,0 +1,198 @@
+--- configure.ac.orig	2006-12-03 18:36:01.000000000 +0100
++++ configure.ac	2007-01-13 18:24:59.000000000 +0100
+@@ -21,23 +21,26 @@
+ AC_PROG_LIBTOOL
+ AM_GNU_GETTEXT([external])
+ 
+-AC_ARG_WITH([mpeg3includes],[  --with-mpeg3includes=/path/to/mpeg3/includes
+-                          path to mpeg 3 includes to use],[
++AC_ARG_WITH([mpeg], AS_HELP_STRING([--without-mpeg], [Build without mpeg library (default: with)]),[with_mpeg=$withval],[with_mpeg=yes])
++if test "x$with_mpeg" == xyes ; then
++	AC_ARG_WITH([mpeg3includes], AS_HELP_STRING([--with-mpeg3includes=/path/to/mpeg3/includes], [
++                          path to mpeg 3 includes to use]), [
+ 						  	if test "x$withval" != "x/usr/include" ; then
+ 								CPPFLAGS="-I$withval $CPPFLAGS"
+ 							fi
+ 							CPPFLAGS="-I$withval/audio $CPPFLAGS"
+ 						  ],)
+-AC_ARG_WITH([mpeg3lib],[  --with-mpeg3lib=/path/to/mpeg3/lib
+-                          path to mpeg 3 lib to use],[LDFLAGS="-L$withval $LDFLAGS"],)
++	AC_ARG_WITH([mpeg3lib], AS_HELP_STRING([--with-mpeg3lib=/path/to/mpeg3/lib], 
++                          [path to mpeg 3 lib to use]) ,[LDFLAGS="-L$withval $LDFLAGS"],)
++fi
+ 
+-AC_ARG_WITH([uic],[  --with-uic             use this uic instead of looking for it],[ac_uic=$withval])
+-AC_ARG_WITH([plugins-qtdir],[  --with-plugins-qtdir   dir to install Qt plugins to],[ac_plugins_qtdir=$withval])
+-AC_ARG_WITH([ladspa-pitch],[  --with-ladspa-pitch    use LADSPA pitch shifter plugin instead of SoundTouch],[
++AC_ARG_WITH([uic], AS_HELP_STRING([--with-uic], [use this uic instead of looking for it]),[ac_uic=$withval])
++AC_ARG_WITH([plugins-qtdir], AS_HELP_STRING([--with-plugins-qtdir], [dir to install Qt plugins to]),[ac_plugins_qtdir=$withval])
++AC_ARG_WITH([ladspa-pitch], AS_HELP_STRING([--with-ladspa-pitch], [use LADSPA pitch shifter plugin instead of SoundTouch]) ,[
+ 	AC_DEFINE([USE_LADSPA_PITCH],[1],[Define if you wish to use LADSPA pitch shifting even if SoundTouch is available])
+ ])
+-AC_ARG_WITH([SoundTouchincludes],[  --with-SoundTouchincludes=/path/to/SoundTouch/includes
+-                          path to SoundTouch includes to use],[
++AC_ARG_WITH([SoundTouchincludes], AS_HELP_STRING([--with-SoundTouchincludes=/path/to/SoundTouch/includes],
++                          [path to SoundTouch includes to use]),[
+ 						  	if test "x$withval" != "x/usr/include" ; then
+ 								CPPFLAGS="-I$withval $CPPFLAGS"
+ 							fi
+@@ -55,9 +58,9 @@
+ 	AC_MSG_ERROR([dlopen() is needed for compiling DJPlay])
+ fi
+ 
+-AC_ARG_WITH([qt-libraries],[  --with-qt-libraries    use this qt lib instead of looking for it],[QT_LIBDIR="$withval"],[QT_LIBDIR="$QTDIR/lib"])
++AC_ARG_WITH([qt-libraries],AS_HELP_STRING([--with-qt-libraries], [use this qt lib instead of looking for it]),[QT_LIBDIR="$withval"],[QT_LIBDIR="$QTDIR/lib"])
+ 
+-AC_ARG_WITH([qt-includes],[  --with-qt-includes     use this qt include dir instead of looking for it],[QT_CPPFLAGS="-I$withval"],[QT_CPPFLAGS="-I$QTDIR/include"])
++AC_ARG_WITH([qt-includes],AS_HELP_STRING([--with-qt-includes], [use this qt include dir instead of looking for it]),[QT_CPPFLAGS="-I$withval"],[QT_CPPFLAGS="-I$QTDIR/include"])
+ 
+ PLUGIN_QTDIR=`dirname $QT_LIBDIR`
+ AC_SUBST(PLUGIN_QTDIR)
+@@ -119,8 +122,10 @@
+ CXXFLAGS="$CXXFLAGS $LIBDJCONSOLE_CFLAGS"
+ LIBS="$LIBDJCONSOLE_LIBS $LIBS"
+ 
+-AC_ARG_WITH([video],[  --with-video           use video playback],[
++AC_ARG_WITH([video],AS_HELP_STRING([--with-video],[use video playback]),[with_video=$withval],[with_video=no])
++if test "x$with_video" == xyes ; then
+ 	AC_DEFINE([USE_VIDEO],[1],[Define if you wish to use video output])
++	
+ 	AC_LANG([C])
+ 	AM_PATH_SDL([1.2.0])
+ 
+@@ -130,23 +135,30 @@
+ 	AC_CHECK_LIB(SDL, SDL_Init)
+ 
+ 	AC_LANG([C++])
+-])
++fi
+ 
+ #AC_CHECK_HEADERS([jack.h],[
+ #	AC_CHECK_LIB([jack],[jack_client_activate],,[AC_MSG_ERROR([Jack is required for building DJPlay])])
+ #])
+ 
+ AC_CHECK_LIB([pthread], [pthread_create])
+-AC_CHECK_HEADERS([audiofile.h],[
+-	AC_CHECK_LIB([audiofile], [afOpenFile],[
+-		AC_DEFINE([HAVE_LIBAUDIOFILE],[1],[Define if you have the audiofile library])
+-		LIBS="-laudiofile $LIBS"
++
++AC_ARG_WITH([audiofile], AS_HELP_STRING([--without-audiofile], [Build without audiofile library (default: with)]),[with_audiofile=$withval],[with_audiofile=yes])
++if test "x$with_audiofile" == xyes ; then
++	AC_CHECK_HEADERS([audiofile.h],[
++		AC_CHECK_LIB([audiofile], [afOpenFile],[
++			AC_DEFINE([HAVE_LIBAUDIOFILE],[1],[Define if you have the audiofile library])
++			LIBS="-laudiofile $LIBS"
++		],[
++			dontbuild_moc="$dontbuild_moc moc_audiofile.cpp"
++		])
+ 	],[
+ 		dontbuild_moc="$dontbuild_moc moc_audiofile.cpp"
+ 	])
+-],[
++else  
+ 	dontbuild_moc="$dontbuild_moc moc_audiofile.cpp"
+-])
++fi
++
+ 
+ XIPH_PATH_VORBIS([
+ 	AC_DEFINE([HAVE_LIBVORBIS],[1],[Define if you have the vorbis library])
+@@ -158,29 +170,36 @@
+ OLDCXX="$CXXFLAGS"
+ CXXFLAGS="$CXXFLAGS -I/usr/include/cdda"
+ 
+-AC_CHECK_HEADERS([cdda_interface.h],[
+-	AC_CHECK_LIB([cdda_interface], [cdda_identify],[
+-		AC_DEFINE([HAVE_LIBCDDA_INTERFACE],[1],[Define if you have the cdda_interface library])
+-		AC_CHECK_HEADERS([cdda_paranoia.h],[
+-			AC_CHECK_LIB([cdda_paranoia], [paranoia_init],[
+-				AC_DEFINE([HAVE_LIBCDDA_PARANOIA],[1],[Define if you have the cdda_paranoia library])
+-				LIBS="-lcdda_interface -lcdda_paranoia $LIBS"
++AC_ARG_WITH([cdparanoia], AS_HELP_STRING([--without-cdparanoia], [Build without cdparanoia library (default: with)]),[with_cdparanoia=$withval],[with_cdparanoia=yes])
++if test "x$with_cdparanoia" == xyes ; then
++	AC_CHECK_HEADERS([cdda_interface.h],[
++		AC_CHECK_LIB([cdda_interface], [cdda_identify],[
++			AC_DEFINE([HAVE_LIBCDDA_INTERFACE],[1],[Define if you have the cdda_interface library])
++			AC_CHECK_HEADERS([cdda_paranoia.h],[
++				AC_CHECK_LIB([cdda_paranoia], [paranoia_init],[
++					AC_DEFINE([HAVE_LIBCDDA_PARANOIA],[1],[Define if you have the cdda_paranoia library])
++					LIBS="-lcdda_interface -lcdda_paranoia $LIBS"
++				],[
++					dontbuild_moc="$dontbuild_moc moc_cdda.cpp moc_cdlist.cpp"
++					CXXFLAGS="$OLDCXX"
++				],[-lcdda_interface])
+ 			],[
+ 				dontbuild_moc="$dontbuild_moc moc_cdda.cpp moc_cdlist.cpp"
+ 				CXXFLAGS="$OLDCXX"
+-			],[-lcdda_interface])
++			],[#include <cdda_interface.h>])
+ 		],[
+ 			dontbuild_moc="$dontbuild_moc moc_cdda.cpp moc_cdlist.cpp"
+ 			CXXFLAGS="$OLDCXX"
+-		],[#include <cdda_interface.h>])
++		])
+ 	],[
+ 		dontbuild_moc="$dontbuild_moc moc_cdda.cpp moc_cdlist.cpp"
+ 		CXXFLAGS="$OLDCXX"
+ 	])
+-],[
++else
+ 	dontbuild_moc="$dontbuild_moc moc_cdda.cpp moc_cdlist.cpp"
+ 	CXXFLAGS="$OLDCXX"
+-])
++fi
++
+ AC_CHECK_HEADERS([samplerate.h],[
+ 	AC_CHECK_LIB([samplerate], src_callback_new,[
+ 		AC_DEFINE([HAVE_LIBSAMPLERATE],[1],[Define if you have libsamplerate])
+@@ -201,26 +220,37 @@
+ 		],,"-lz")
+ 	])
+ ])
+-AC_CHECK_HEADERS([mad.h],[
+-	AC_CHECK_LIB([mad], [mad_frame_init],[
+-		AC_DEFINE([HAVE_LIBMAD],[1],[Define if you have the mad library])
+-		LIBS="-lmad $LIBS"
++
++AC_ARG_WITH([mad], AS_HELP_STRING([--without-mad], [Build without mad library (default: with)]),[with_mad=$withval],[with_mad=yes])
++if test "x$with_mad" == xyes ; then
++	AC_CHECK_HEADERS([mad.h],[
++		AC_CHECK_LIB([mad], [mad_frame_init],[
++			AC_DEFINE([HAVE_LIBMAD],[1],[Define if you have the mad library])
++			LIBS="-lmad $LIBS"
++		],[
++			dontbuild_moc="$dontbuild_moc moc_mp3.cpp"
++		])
+ 	],[
+ 		dontbuild_moc="$dontbuild_moc moc_mp3.cpp"
+ 	])
+-],[
++else
+ 	dontbuild_moc="$dontbuild_moc moc_mp3.cpp"
+-])
+-AC_CHECK_HEADERS([mpeg3audio.h],[
+-	AC_CHECK_LIB([mpeg3], [mpeg3_check_sig],[
+-		AC_DEFINE([HAVE_LIBMPEG3],[1],[Define if you have the mpeg3 library])
+-		LIBS="-lmpeg3 $LIBS"
++fi
++
++if test "x$with_mpeg" == xyes ; then
++	AC_CHECK_HEADERS([mpeg3audio.h],[
++		AC_CHECK_LIB([mpeg3], [mpeg3_check_sig],[
++			AC_DEFINE([HAVE_LIBMPEG3],[1],[Define if you have the mpeg3 library])
++			LIBS="-lmpeg3 $LIBS"
++		],[
++			dontbuild_moc="$dontbuild_moc moc_mpeg.cpp"
++		])
+ 	],[
+ 		dontbuild_moc="$dontbuild_moc moc_mpeg.cpp"
+ 	])
+-],[
++else
+ 	dontbuild_moc="$dontbuild_moc moc_mpeg.cpp"
+-])
++fi
+ 
+ # Checks for header files.
+ AC_HEADER_DIRENT

@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/djplay
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/djplay/ChangeLog,v 1.5 2007/01/05 20:55:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/djplay/ChangeLog,v 1.6 2007/01/30 20:42:04 aballier Exp $
+
+*djplay-0.5.0 (30 Jan 2007)
+
+  30 Jan 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/djplay-0.5.0-configure.ac.patch,
+  +files/djplay-0.5.0-libmpeg3.patch, +djplay-0.5.0.ebuild:
+  Version bump, thanks to Steven De Bock <steven_debock@yahoo.com> and
+  masterdriverz for reviewing, bug #161936
 
   05 Jan 2007; Alexis Ballier <aballier@gentoo.org> djplay-0.3.0.ebuild:
   Adding libogg and libvorbis missing deps, bug #159722, thanks to Steven De

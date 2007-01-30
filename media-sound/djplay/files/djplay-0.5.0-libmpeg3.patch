@@ -1,0 +1,15 @@
+--- mpeg.cpp.old	2007-01-25 19:43:58.000000000 +0100
++++ mpeg.cpp	2007-01-25 19:45:16.000000000 +0100
+@@ -56,7 +56,12 @@
+ 	if(mpeg3_check_sig((char *)(const char *)file) == 0)
+ 		return -1;
+ 	
++#if MPEG3_MINOR  < 7
+ 	fp=mpeg3_open((char *)(const char *)file);
++#else
++	int error_return;
++	fp=mpeg3_open((char *)(const char *)file, &error_return);
++#endif
+ 	if(fp == NULL)
+ 		return -1;
+ 	
