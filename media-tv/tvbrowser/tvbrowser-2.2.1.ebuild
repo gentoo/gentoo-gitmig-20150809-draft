@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.2.1.ebuild,v 1.5 2007/01/06 10:04:10 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.2.1.ebuild,v 1.6 2007/01/30 04:45:55 beandog Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip
 themes? ( http://www.tvbrowser.org/downloads/themepacks/allthemepacks.zip )"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND="|| ( ( x11-libs/libXt
 			x11-libs/libSM
@@ -70,7 +70,6 @@ src_unpack() {
 	java-pkg_jar-from bsh bsh.jar bsh-2.0b1.jar
 	java-pkg_jar-from skinlf
 	java-pkg_jar-from l2fprod-common l2fprod-common-tasks.jar
-
 
 	cd ${S}/deployment/x11
 	rm src/libDesktopIndicator.so
