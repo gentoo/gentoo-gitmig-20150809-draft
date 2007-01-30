@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/kicad
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.13 2006/10/15 16:23:34 calchan Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.14 2007/01/30 20:37:45 calchan Exp $
+
+*kicad-20070115 (30 Jan 2007)
+
+  30 Jan 2007; Denis Dupeyron <calchan@gentoo.org> +kicad-20070115.ebuild:
+  Version bump.
 
   15 Oct 2006; Denis Dupeyron <calchan@gentoo.org> -kicad-20060626.ebuild:
   Removed old ebuild.
