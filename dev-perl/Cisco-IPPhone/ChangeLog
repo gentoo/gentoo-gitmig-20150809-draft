@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Cisco-IPPhone
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cisco-IPPhone/ChangeLog,v 1.1 2007/01/30 17:47:43 chainsaw Exp $
+
+*Cisco-IPPhone-0.05 (30 Jan 2007)
+
+  30 Jan 2007; Tony Vroon <chainsaw@gentoo.org> +metadata.xml,
+  +Cisco-IPPhone-0.05.ebuild:
+  Initial commit, ebuild by G-CPAN. Privately maintained, perl herd approval
+  by: mcummings.
+
