@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/keytouch-2.2.2.ebuild,v 1.1 2006/10/06 13:19:11 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/keytouch-2.2.4.ebuild,v 1.1 2007/01/30 19:52:53 nyhm Exp $
 
 inherit eutils versionator
 
@@ -13,11 +13,11 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc kde"
 
 RDEPEND=">=x11-libs/gtk+-2
-	>=gnome-base/gnome-menus-2.12
+	gnome-base/gnome-menus
 	x11-misc/xbindkeys
 	kde? ( || (
 		kde-base/kdesu
@@ -65,15 +65,15 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	elog "To use keyTouch, add \"keytouchd &\" to your"
+	elog "To use keyTouch, add \"keytouchd\" to your"
 	elog "X startup programs and run"
 	elog "\"rc-update add keytouch default\""
 	elog
 	elog "If support for your keyboard is not included in"
 	elog "this release, check for new keyboard files at"
 	elog "http://keytouch.sourceforge.net/dl-keyboards.html"
-#	elog
-#	elog "x11-misc/keytouch-editor can be used to create"
-#	elog "your own keyboard files"
+	elog
+	elog "x11-misc/keytouch-editor can be used to create"
+	elog "your own keyboard files"
 	echo
 }
