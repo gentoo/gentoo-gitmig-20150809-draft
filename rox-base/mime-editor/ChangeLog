@@ -1,6 +1,11 @@
 # ChangeLog for rox-base/mime-editor
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/mime-editor/ChangeLog,v 1.8 2006/11/20 18:10:19 opfer Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/mime-editor/ChangeLog,v 1.9 2007/01/30 22:11:43 lack Exp $
+
+*mime-editor-0.5-r1 (30 Jan 2007)
+
+  30 Jan 2007; Jim Ramsay <lack@gentoo.org> +mime-editor-0.5-r1.ebuild:
+  Added APPCATEGORY so a .desktop file will be installed
 
   20 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
   mime-editor-0.5.ebuild:
