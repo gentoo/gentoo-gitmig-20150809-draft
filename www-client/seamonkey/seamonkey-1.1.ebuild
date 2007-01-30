@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.ebuild,v 1.2 2007/01/25 11:45:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.ebuild,v 1.3 2007/01/30 21:42:28 armin76 Exp $
 
 unset ALLOWED_FLAGS  # Stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozcoreconf mozconfig-2 mozilla-launcher makeedit multilib autotools
@@ -18,7 +18,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/${PN}/releases/${PV}/${P}.source
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
-IUSE="java ldap mozdevelop moznocompose moznoirc moznomail moznoroaming postgres crypt"
+IUSE="java ldap mozdevelop moznocompose moznoirc moznomail moznoroaming postgres crypt xforms"
 
 RDEPEND="java? ( virtual/jre )
 	>=www-client/mozilla-launcher-1.47
@@ -125,6 +125,10 @@ src_compile() {
 		if use moznoirc && use moznomail; then
 			mozconfig_annotate "+moznocompose" --disable-composer
 		fi
+	fi
+
+	if use xforms; then
+		mozconfig_annotate "+xforms" --enable-extensions=xforms,schema-validation
 	fi
 
 	# Finalize and report settings
