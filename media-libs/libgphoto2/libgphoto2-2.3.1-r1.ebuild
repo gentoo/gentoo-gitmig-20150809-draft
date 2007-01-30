@@ -1,12 +1,14 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.3.1-r1.ebuild,v 1.2 2007/01/29 21:32:55 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.3.1-r1.ebuild,v 1.3 2007/01/30 19:57:28 alonbl Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
 #	http://sourceforge.net/tracker/index.php?func=detail&aid=1643870&group_id=8874&atid=108874
 # 2. Track upstream bug udevscriptdir does not work.
 #	http://sourceforge.net/tracker/index.php?func=detail&aid=1646520&group_id=8874&atid=108874
+# 3. Track upstream bug regarding rpm usage.
+#	http://sourceforge.net/tracker/index.php?func=detail&aid=1643813&group_id=8874&atid=358874
 
 inherit eutils
 
@@ -86,11 +88,13 @@ src_compile() {
 		--with-doc-dir=/usr/share/doc/${PF} \
 		--with-html-dir=/usr/share/doc/${PF}/html \
 		--with-hotplug-doc-dir=/usr/share/doc/${PF}/hotplug \
-		$(use_enable doc docs) \
 		$(use_enable nls) \
 		--with-rpmbuild=/bin/true \
+		--disable-docs \
 		udevscriptdir=/lib/udev \
+		GTKDOC=/bin/true \
 		${myconf} || die "econf failed"
+#		$(use_enable doc docs) \	TODO
 
 	emake || die "make failed"
 }
