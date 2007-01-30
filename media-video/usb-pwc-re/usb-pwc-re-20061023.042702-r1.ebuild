@@ -1,7 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/usb-pwc-re-20061023.042702-r1.ebuild,v 1.4 2007/01/11 11:15:42 opfer Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/usb-pwc-re-20061023.042702-r1.ebuild,v 1.5 2007/01/30 05:08:10 beandog Exp $
 
 inherit linux-mod eutils
 
@@ -12,7 +11,7 @@ SRC_URI="http://www.saillard.org/linux/pwc/snapshots/pwc-v4l2-${MY_PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 ~ppc ppc64 ~sparc x86"
 
 IUSE=""
 DEPEND="sys-kernel/linux-headers"
@@ -39,6 +38,7 @@ pkg_setup() {
 	linux-mod_pkg_setup
 
 	if kernel_is 2 4; then
+		eerror "${P} does not support building against kernel 2.4.x"
 		die "${P} does not support building against kernel 2.4.x"
 	fi
 }
