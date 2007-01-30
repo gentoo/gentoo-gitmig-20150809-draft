@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/unace
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/ChangeLog,v 1.26 2007/01/04 14:19:42 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/ChangeLog,v 1.27 2007/01/30 04:03:46 vapier Exp $
+
+*unace-2.5 (30 Jan 2007)
+
+  30 Jan 2007; Mike Frysinger <vapier@gentoo.org> +unace-2.5.ebuild:
+  Version bump #102347 by Dick Marinus et al.
 
   04 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> unace-1.2b-r1.ebuild:
   Add ~alpha keyword.
