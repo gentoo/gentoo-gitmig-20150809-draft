@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/datavision-1.0.0-r2.ebuild,v 1.3 2007/01/29 19:14:19 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/datavision-1.0.0-r2.ebuild,v 1.4 2007/01/30 18:50:59 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -19,7 +19,7 @@ RDEPEND=">=virtual/jre-1.4
 	mysql? ( >=dev-java/jdbc-mysql-3.0 )
 	postgres? ( >=dev-java/jdbc2-postgresql-7.3 )"
 DEPEND=">=virtual/jdk-1.4
-	dev-java/jruby
+	>=dev-java/jruby-0.9.0
 	dev-java/ant-core
 	${RDEPEND}"
 #	test? ( >=dev-java/junit-3.7 )"

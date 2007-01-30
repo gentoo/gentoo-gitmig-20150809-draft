@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/datavision
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/ChangeLog,v 1.17 2007/01/29 19:14:19 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/ChangeLog,v 1.18 2007/01/30 18:50:59 betelgeuse Exp $
+
+  30 Jan 2007; Petteri Räty <betelgeuse@gentoo.org>
+  datavision-1.0.0-r2.ebuild:
+  We need >=dev-java/jruby-0.9.0 to have the jruby wrapper installed.
 
   29 Jan 2007; Petteri Räty <betelgeuse@gentoo.org>
   datavision-1.0.0-r2.ebuild:
