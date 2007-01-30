@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dcoppython
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcoppython/ChangeLog,v 1.46 2007/01/30 18:19:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcoppython/ChangeLog,v 1.47 2007/01/30 18:30:26 armin76 Exp $
+
+  30 Jan 2007; Raúl Porcel <armin76@gentoo.org> dcoppython-3.5.5-r1.ebuild:
+  x86 stable wrt bug 163802
 
   30 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   dcoppython-3.5.5-r1.ebuild:
