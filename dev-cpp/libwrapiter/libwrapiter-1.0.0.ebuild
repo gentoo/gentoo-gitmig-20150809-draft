@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libwrapiter/libwrapiter-1.0.0.ebuild,v 1.6 2007/01/30 14:49:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libwrapiter/libwrapiter-1.0.0.ebuild,v 1.7 2007/01/30 15:42:16 ticho Exp $
 
 DESCRIPTION="C++ template library for avoiding exposing privates via iterators"
 HOMEPAGE="http://libwrapiter.berlios.de/"
@@ -8,7 +8,7 @@ SRC_URI="http://download.berlios.de/libwrapiter/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~mips ~ppc sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ~mips ~ppc sparc x86 ~x86-fbsd"
 IUSE="doc"
 
 DEPEND="
