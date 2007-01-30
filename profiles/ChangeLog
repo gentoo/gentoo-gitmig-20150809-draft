@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.52 2007/01/30 00:36:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.53 2007/01/30 21:38:44 calchan Exp $
+
+  30 Jan 2007; Denis Dupeyron <calchan@gentoo.org> package.mask:
+  package.mask'd dev-embedded/gpsim-led pending removal on 1 March 2007 at the
+  latest. See bug #96578.
 
   30 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
   Add midi useflag for media-sound/alsa-driver.
