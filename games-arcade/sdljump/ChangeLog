@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/sdljump
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdljump/ChangeLog,v 1.5 2006/11/23 21:17:25 blubb Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdljump/ChangeLog,v 1.6 2007/01/30 20:21:29 nyhm Exp $
+
+  30 Jan 2007; Tristan Heaven <nyhm@gentoo.org> sdljump-1.0.0.ebuild:
+  Update HOMEPAGE, bug #155466
 
   23 Nov 2006; <blubb@gentoo.org> sdljump-1.0.0.ebuild:
   stable on amd64

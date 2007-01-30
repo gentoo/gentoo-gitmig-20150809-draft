@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdljump/sdljump-1.0.0.ebuild,v 1.2 2006/11/23 21:17:25 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdljump/sdljump-1.0.0.ebuild,v 1.3 2007/01/30 20:21:29 nyhm Exp $
 
-inherit eutils versionator games
+inherit eutils games
 
-DESCRIPTION="XJump clone"
-HOMEPAGE="http://www.nongnu.org/sdljump/"
-SRC_URI="http://download.savannah.nongnu.org/releases/${PN}/${P}.tar.gz"
+DESCRIPTION="Xjump clone with added features"
+HOMEPAGE="http://www.gnu.org/software/gnujump/"
+SRC_URI="http://download.savannah.gnu.org/releases/gnujump/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
