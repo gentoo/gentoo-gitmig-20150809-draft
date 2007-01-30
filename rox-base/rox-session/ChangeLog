@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/rox-session
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/ChangeLog,v 1.17 2007/01/30 16:59:22 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/ChangeLog,v 1.18 2007/01/30 17:32:36 lack Exp $
+
+  30 Jan 2007; Jim Ramsay <lack@gentoo.org> rox-session-0.27-r1.ebuild:
+  Bug 164537: 0.27 is not compatible with >=dbus-python-0.80. 0.29 is, so just
+  making 0.27 depend on <dbus-python-0.80
 
 *rox-session-0.29 (30 Jan 2007)
 
