@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/radmind
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/radmind/ChangeLog,v 1.1 2006/10/09 20:24:49 jokey Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/radmind/ChangeLog,v 1.2 2007/01/30 20:21:52 vanquirius Exp $
+
+*radmind-1.7.1 (30 Jan 2007)
+
+  30 Jan 2007; Marcelo Goes <vanquirius@gentoo.org> +radmind-1.7.1.ebuild:
+  1.7.1 version bump.
 
 *radmind-1.7.0 (09 Oct 2006)
 
