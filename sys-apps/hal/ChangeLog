@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.122 2007/01/30 16:42:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.123 2007/01/30 19:43:04 cardoe Exp $
+
+  30 Jan 2007; Doug Goldstein <cardoe@gentoo.org>
+  +files/hal-0.5.7.1-ctype-fix.patch, hal-0.5.7.1-r4.ebuild:
+  Fix undefined ctype.h include so everyone can stop getting their panties in
+  a bundle.
 
 *hal-0.5.7.1-r4 (30 Jan 2007)
 
