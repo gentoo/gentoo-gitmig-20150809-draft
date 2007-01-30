@@ -10,7 +10,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-ant-2.eclass,v 1.16 2007/01/28 21:45:38 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-ant-2.eclass,v 1.17 2007/01/30 21:51:15 caster Exp $
 
 inherit java-utils-2
 
@@ -25,11 +25,33 @@ inherit java-utils-2
 # Please see the description in java-utils-2.eclass.
 #WANT_ANT_TASKS
 
-# We need some tools from javatoolkit. We also need portage 2.1 for phase hooks
-DEPEND=">=dev-java/javatoolkit-0.1.5 ${JAVA_PKG_PORTAGE_DEP}"
+# -----------------------------------------------------------------------------
+# @variable-preinherit WANT_SPLIT_ANT
+# @variable-default ""
+#
+# If set, ant-core dependency specifies version with startup script that
+# honours ANT_TASKS variable, i.e. >=1.7.0. Using WANT_ANT_TASKS implies
+# split-ant already, so you need this only if you manually depend on some
+# external package providing ant tasks and want to use it via ANT_TASKS.
+[[ -n "${WANT_ANT_TASKS}" ]] && WANT_SPLIT_ANT="true"
 
-# add ant-core into DEPEND, unless disabled
-[[ "${JAVA_ANT_DISABLE_ANT_CORE_DEP:-true}" ]] || DEPEND="${DEPEND} dev-java/ant-core"
+# -----------------------------------------------------------------------------
+# @variable-preinherit JAVA_ANT_DISABLE_ANT_CORE_DEP
+# @variable-default unset for java-pkg-2, true for java-pkg-opt-2
+#
+# Setting this variable non-empty before inheriting java-ant-2 disables adding
+# dev-java/ant-core into DEPEND.
+
+# construct ant-speficic DEPEND
+JAVA_ANT_E_DEPEND=""
+# add ant-core into DEPEND, unless disabled; respect WANT_SPLIT_ANT
+if [[ -z "${JAVA_ANT_DISABLE_ANT_CORE_DEP}" ]]; then
+	if [[ -n "${WANT_SPLIT_ANT}" ]]; then
+		JAVA_ANT_E_DEPEND="${JAVA_ANT_E_DEPEND} >=dev-java/ant-core-1.7.0"
+	else
+		JAVA_ANT_E_DEPEND="${JAVA_ANT_E_DEPEND} dev-java/ant-core"
+	fi
+fi
 
 # add ant tasks specified in WANT_ANT_TASKS to DEPEND
 local ANT_TASKS_DEPEND;
@@ -39,7 +61,19 @@ if [[ $? != 0 ]]; then
 	eerror "${ANT_TASKS_DEPEND}"
 	die "java-pkg_ant-tasks-depend() failed"
 fi
-DEPEND="${DEPEND} ${ANT_TASKS_DEPEND}"
+JAVA_ANT_E_DEPEND="${JAVA_ANT_E_DEPEND} ${ANT_TASKS_DEPEND}"
+
+# this eclass must be inherited after java-pkg-2 or java-pkg-opt-2
+# if it's java-pkg-opt-2, ant dependencies are pulled based on USE flag
+if hasq java-pkg-opt-2 ${INHERITED}; then
+	JAVA_ANT_E_DEPEND="${JAVA_PKG_OPT_USE}? ( ${JAVA_ANT_E_DEPEND} )"
+elif ! hasq java-pkg-2 ${INHERITED}; then
+	eerror "java-ant-2 eclass can only be inherited AFTER java-pkg-2 or java-pkg-opt-2"
+fi
+
+# We need some tools from javatoolkit. We also need portage 2.1 for phase hooks
+# and ant dependencies constructed above
+DEPEND=">=dev-java/javatoolkit-0.1.5 ${JAVA_PKG_PORTAGE_DEP} ${JAVA_ANT_E_DEPEND}"
 
 # ------------------------------------------------------------------------------
 # @global JAVA_PKG_BSFIX
