@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.42a-r1.ebuild,v 1.7 2007/01/04 18:52:13 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.42a-r1.ebuild,v 1.8 2007/01/30 13:18:31 lu_zero Exp $
 
 inherit multilib flag-o-matic eutils python
 
@@ -28,7 +28,7 @@ RDEPEND="
 	openal? ( media-libs/openal
 			  media-libs/freealut )
 	>=media-libs/libsdl-1.2
-	ffmpeg? ( ~media-video/ffmpeg-${FFMPEG_SNAP/-/_}
+	ffmpeg? ( >=media-video/ffmpeg-${FFMPEG_SNAP/-/_}
 			  ~media-libs/x264-svn-20061014 )
 	>=dev-libs/openssl-0.9.6
 	>=media-gfx/yafray-0.0.7
