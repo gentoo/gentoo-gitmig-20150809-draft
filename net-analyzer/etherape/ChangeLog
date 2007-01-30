@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/etherape
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/ChangeLog,v 1.38 2006/11/02 13:54:44 pva Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/ChangeLog,v 1.39 2007/01/30 02:39:24 vanquirius Exp $
+
+  30 Jan 2007; Marcelo Goes <vanquirius@gentoo.org>
+  etherape-0.9.6-r1.ebuild:
+  Mark 0.9.6-r1 x86 stable for bug 160028, reported by Diego Petteno
+  <flameeyes at gentoo dot org>.
 
   02 Nov 2006; Peter Volkov <pva@gentoo.org> -etherape-0.9.6.ebuild,
   etherape-0.9.6-r1.ebuild:
