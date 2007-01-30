@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegrogl/allegrogl-0.4.0.ebuild,v 1.1 2007/01/24 21:57:18 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegrogl/allegrogl-0.4.0.ebuild,v 1.2 2007/01/30 20:15:13 mr_bones_ Exp $
 
 inherit eutils
 
@@ -27,11 +27,11 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc changelog {bugs,extensions,faq,howto,quickstart,readme,todo}.txt
 	dohtml -r docs/html/*
 	if use examples ; then
-		insinto /usr/share/${PN}/examples
+		insinto /usr/share/${PF}/examples
 		doins examp/*.{bmp,c,dat,h,pcx,tga} || die "doins failed"
 	fi
 }
