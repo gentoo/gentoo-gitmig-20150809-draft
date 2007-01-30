@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.34_rc3.ebuild,v 1.1 2006/11/29 23:39:26 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.34_rc3.ebuild,v 1.2 2007/01/30 03:50:34 vapier Exp $
 
 # quake3-9999          -> latest svn
 # quake3-9999.REV      -> use svn REV
@@ -61,6 +61,9 @@ src_unpack() {
 		unpack ${A}
 		cd "${S}"
 	fi
+	sed -i \
+		-e '/INSTALL/s: -s : :' \
+		Makefile code/tools/lcc/Makefile code/tools/asm/Makefile
 }
 
 src_compile() {
