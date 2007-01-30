@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.4.4.ebuild,v 1.3 2007/01/26 22:17:13 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.4.4.ebuild,v 1.4 2007/01/30 00:18:32 ticho Exp $
 
 inherit eutils
 
@@ -75,8 +75,10 @@ src_unpack() {
 		epatch "amavisd-new-qmqpqq.patch" || die "patch failed"
 
 		einfo "Patching with qmail lf bug workaround."
-		epatch "${FILESDIR}/${P%.*}-qmail-lf-workaround.patch" || die "patch failed"
+		epatch "${FILESDIR}/${P}-qmail-lf-workaround.patch" || die "patch failed"
 	fi
+		einfo "Patching with qmail lf bug workaround."
+		epatch "${FILESDIR}/${P}-qmail-lf-workaround.patch" || die "patch failed"
 
 	epatch "${FILESDIR}/${P}-amavisd.conf-gentoo.patch" || die "patch failed"
 }
