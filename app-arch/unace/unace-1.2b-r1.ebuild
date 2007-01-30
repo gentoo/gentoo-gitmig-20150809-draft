@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/unace-1.2b-r1.ebuild,v 1.12 2007/01/30 03:58:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/unace-1.2b-r1.ebuild,v 1.13 2007/01/30 04:05:05 vapier Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="ACE unarchiver"
 HOMEPAGE="http://www.winace.com/"
 SRC_URI="http://wilma.vub.ac.be/~pdewacht/${P}.tar.gz"
 
-LICENSE="freedist"
+LICENSE="GPL-2" #92846
 SLOT="1"
 KEYWORDS="~alpha amd64 ~hppa ppc ppc64 s390 x86"
 IUSE=""
