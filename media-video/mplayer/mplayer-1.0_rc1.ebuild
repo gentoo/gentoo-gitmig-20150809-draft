@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1.ebuild,v 1.25 2007/01/17 17:27:22 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1.ebuild,v 1.26 2007/01/30 15:22:24 beandog Exp $
 
 inherit eutils flag-o-matic
 
@@ -19,7 +19,7 @@ for X in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${X}"
 done
 
-BLUV=1.6
+BLUV=1.7
 SVGV=1.9.17
 
 # Handle PREversions as wel
