@@ -1,9 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.14.2.ebuild,v 1.12 2007/01/04 20:49:29 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.14.2.ebuild,v 1.13 2007/01/30 16:39:41 dang Exp $
 
 WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+WANT_AUTOMAKE="1.9"
 
 inherit autotools eutils gnome2
 
