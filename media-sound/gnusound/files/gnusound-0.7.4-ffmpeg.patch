@@ -1,0 +1,10 @@
+--- gnusound-0.7.4/modules/file_ffmpeg.c.old	2007-01-30 11:59:43.000000000 +0100
++++ gnusound-0.7.4/modules/file_ffmpeg.c	2007-01-30 11:59:51.000000000 +0100
+@@ -99,7 +99,6 @@
+     int err, i, audio_index = -1;
+ 
+     memset(&format_params, 0, sizeof(format_params));
+-    format_params.image_format = NULL;
+     format_params.initial_pause = 1; /* we force a pause when starting an RTSP
+                                         stream */
+ 

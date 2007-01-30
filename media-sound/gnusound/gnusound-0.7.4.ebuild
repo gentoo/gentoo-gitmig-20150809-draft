@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/gnusound-0.7.4.ebuild,v 1.2 2006/12/04 07:57:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/gnusound-0.7.4.ebuild,v 1.3 2007/01/30 20:23:02 aballier Exp $
 
 inherit toolchain-funcs
 
@@ -53,6 +53,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-ffmpeg-struct.patch"
 	epatch "${FILESDIR}/${P}-automagic.patch"
 	epatch "${FILESDIR}/${P}-flac-1.1.3.patch"
+	epatch "${FILESDIR}/${P}-ffmpeg.patch"
 
 	AT_M4DIR="config" eaclocal
 	eautoconf
