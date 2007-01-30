@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.4.0.ebuild,v 1.5 2007/01/30 19:38:54 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.4.0-r1.ebuild,v 1.1 2007/01/30 19:38:54 welp Exp $
 
 inherit xfce44
 
@@ -16,7 +16,8 @@ RDEPEND="x11-apps/xrdb
 	>=x11-libs/gtk+-2.6
 	>=xfce-base/libxfcegui4-${XFCE_MASTER_VERSION}
 	>=xfce-base/libxfce4mcs-${XFCE_MASTER_VERSION}
-	>=xfce-base/xfce-mcs-manager-${XFCE_MASTER_VERSION}"
+	>=xfce-base/xfce-mcs-manager-${XFCE_MASTER_VERSION}
+	dbus? ( dev-libs/dbus-glib )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
