@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/version
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/version/ChangeLog,v 1.28 2007/01/22 16:14:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/version/ChangeLog,v 1.29 2007/01/30 03:55:12 jer Exp $
+
+  30 Jan 2007; Jeroen Roovers <jer@gentoo.org> version-0.69.ebuild:
+  Marked ~hppa (bug #161486).
 
   22 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> version-0.68.ebuild:
   Stable on IA64.
