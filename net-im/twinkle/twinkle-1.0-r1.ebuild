@@ -1,7 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.0-r1.ebuild,v 1.2 2007/01/30 19:35:35 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.0-r1.ebuild,v 1.3 2007/01/30 19:47:38 dragonheart Exp $
 
+
+ARTS_REQUIRED="no"
 inherit eutils qt3 kde
 
 DESCRIPTION="a soft phone for your VOIP communcations using SIP"
@@ -17,7 +19,6 @@ IUSE="arts speex ilbc zrtp kdehiddenvisibility"
 RDEPEND=">=net-libs/ccrtp-1.5.0
 	>=dev-cpp/commoncpp2-1.4.2
 	$(qt_min_version 3.3.0)
-	arts? ( kde-base/arts )
 	media-libs/libsndfile
 	dev-libs/boost
 	speex? ( media-libs/speex )
