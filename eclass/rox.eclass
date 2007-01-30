@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.18 2007/01/30 22:05:26 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.19 2007/01/30 22:07:49 lack Exp $
 
 # ROX eclass Version 2
 
@@ -20,6 +20,10 @@
 # the ebuild:
 #
 # APPNAME - the actual name of the application as the app folder is named
+# APPCATEGORY - the .desktop categories this application should be placed in.
+#    If unset, no .desktop file will be created.  For a list of acceptable
+#    category names, see
+#    http://standards.freedesktop.org/menu-spec/latest/apa.html
 # KEEP_SRC - this flag, if set, will not remove the source directory
 #    but will do a make clean in it. This is useful if users wish to
 #    preserve the source code for anything
