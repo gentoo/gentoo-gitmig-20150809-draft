@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.3.ebuild,v 1.12 2007/01/26 19:33:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.3.ebuild,v 1.13 2007/01/30 18:46:43 flameeyes Exp $
+
+WANT_AUTOMAKE="1.9"
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -85,7 +87,10 @@ src_unpack() {
 	# EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 	epatch "${WORKDIR}/patches/120"*
 
-	# AT_M4DIR="m4" eautoreconf
+	sed -i -e '/FFMPEG_POSTPROC/s:libpostproc >= .*]:libpostproc]:' \
+		"${S}/configure.ac"
+
+	AT_M4DIR="m4" eautoreconf
 }
 
 src_compile() {

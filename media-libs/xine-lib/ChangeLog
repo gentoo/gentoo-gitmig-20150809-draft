@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.450 2007/01/29 18:51:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.451 2007/01/30 18:46:43 flameeyes Exp $
+
+  30 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> xine-lib-1.1.3.ebuild:
+  Fix libpostproc pkg-config check so that it does not bail out with newer
+  version. Closes bug #164480.
 
   29 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Sign manifest.
