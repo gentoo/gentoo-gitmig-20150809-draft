@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/pvr-firmware/pvr-firmware-20061007.ebuild,v 1.4 2007/01/30 04:12:21 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/pvr-firmware/pvr-firmware-20061007.ebuild,v 1.5 2007/01/30 15:09:38 cardoe Exp $
 
 inherit eutils
 
@@ -17,8 +17,7 @@ LICENSE="Conexant-firmware"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-RDEPEND="|| ( >=sys-fs/udev-103 sys-apps/hotplug )
-		sys-apps/hotplug-base"
+RDEPEND="|| ( >=sys-fs/udev-103 sys-apps/hotplug )"
 
 S="${WORKDIR}"
 
