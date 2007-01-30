@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/postgrey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.24 2007/01/06 00:44:52 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.25 2007/01/30 14:41:18 chutzpah Exp $
+
+  30 Jan 2007; Patrick McLean <chutzpah@gentoo.org> files/postgrey.rc.new:
+  Add "reload" to rc script.
 
   06 Jan 2007; Fernando J. Pereda <ferdy@gentoo.org> -postgrey-1.23.ebuild:
   QA: Clean unused versions.
