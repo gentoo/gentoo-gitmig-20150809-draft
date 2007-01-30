@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.54 2007/01/29 18:37:24 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.55 2007/01/30 12:50:25 betelgeuse Exp $
 
 
 # -----------------------------------------------------------------------------
@@ -229,6 +229,9 @@ java-pkg_dojar() {
 
 			# install it into JARDEST if it's a non-symlink
 			if [[ ! -L "${jar}" ]] ; then
+				#but first check class version when in strict mode.
+				is-java-strict && java-pkg_verify-classes "${jar}"
+
 				INSDESTTREE="${JAVA_PKG_JARDEST}" \
 					doins "${jar}" || die "failed to install ${jar}"
 				java-pkg_append_ JAVA_PKG_CLASSPATH "${JAVA_PKG_JARDEST}/${jar_basename}"
@@ -305,6 +308,10 @@ java-pkg_regjar() {
 		if [[ -e "${jar}" || -e "${D}${jar}" ]]; then
 			[[ -d "${jar}" || -d "${D}${jar}" ]] \
 				&& die "Called ${FUNCNAME} on a	directory $*"
+
+			#check that class version correct when in strict mode
+			is-java-strict && java-pkg_verify-classes "${jar}"
+
 			# nelchael: we should strip ${D} in this case too, here's why:
 			# imagine such call:
 			#    java-pkg_regjar ${D}/opt/java/*.jar
@@ -2209,15 +2216,20 @@ java-pkg_jar-list() {
 
 # TODO document
 # Verify that the classes were compiled for the right source / target
+# If $1 is present will check that file otherwise the ${D} directory
+# recursively.
 java-pkg_verify-classes() {
-	ebegin "Verifying java class versions"
 	#$(find ${D} -type f -name '*.jar' -o -name '*.class')
-	class-version-verify.py -t $(java-pkg_get-target) -r ${D}
+	local target=$(java-pkg_get-target)
+	ebegin "Verifying java class versions (target: ${target})"
+	if [[ -n "${1}" ]]; then
+		class-version-verify.py -t ${target} "${1}"
+	else
+		class-version-verify.py -t ${target} -r "${D}"
+	fi
 	result=$?
 	eend ${result}
-	if [[ ${result} == 0 ]]; then
-		einfo "All good"
-	else
+	if [[ ${result} != 0 ]]; then
 		ewarn "Possible problem"
 		die "Bad class files found"
 	fi
