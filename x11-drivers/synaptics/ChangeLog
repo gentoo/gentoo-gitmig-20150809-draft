@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/synaptics
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.24 2007/01/19 21:42:33 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.25 2007/01/30 05:37:20 beandog Exp $
+
+  30 Jan 2007; Steve Dibb <beandog@gentoo.org> synaptics-0.14.6.ebuild:
+  amd64 stable, bug 159972
 
   19 Jan 2007; Markus Rothe <corsair@gentoo.org> synaptics-0.14.6.ebuild:
   Stable on ppc64; bug #159972
