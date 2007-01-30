@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/triplea-0.9.0.2.ebuild,v 1.1 2007/01/28 08:47:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/triplea-0.9.0.2.ebuild,v 1.2 2007/01/30 00:57:05 caster Exp $
 
-inherit eutils java-ant-2 java-pkg-2 versionator games
+inherit eutils java-pkg-2 java-ant-2 versionator games
 
 MY_PV=$(replace_all_version_separators _)
 DESCRIPTION="An open source clone of the popular Axis and Allies boardgame"

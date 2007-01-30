@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/freecol-0.5.3-r1.ebuild,v 1.2 2007/01/15 12:37:10 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/freecol-0.5.3-r1.ebuild,v 1.3 2007/01/30 00:55:32 caster Exp $
 
-inherit eutils java-ant-2 java-pkg-2 games
+inherit eutils java-pkg-2 java-ant-2 games
 
 DESCRIPTION="An open source clone of the game Colonization"
 HOMEPAGE="http://www.freecol.org/"
