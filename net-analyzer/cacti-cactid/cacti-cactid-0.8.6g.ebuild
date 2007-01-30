@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-cactid/cacti-cactid-0.8.6g.ebuild,v 1.6 2007/01/29 04:07:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-cactid/cacti-cactid-0.8.6g.ebuild,v 1.7 2007/01/30 18:44:01 armin76 Exp $
 
 WANT_AUTOCONF="latest"
 inherit autotools
@@ -13,7 +13,7 @@ SRC_URI="http://www.cacti.net/downloads/cactid/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ppc64 sparc ~x86"
+KEYWORDS="~ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="net-analyzer/net-snmp
