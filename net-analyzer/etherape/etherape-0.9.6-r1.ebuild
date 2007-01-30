@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.9.6-r1.ebuild,v 1.4 2007/01/30 17:35:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.9.6-r1.ebuild,v 1.5 2007/01/30 21:32:52 wolf31o2 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -12,7 +12,7 @@ HOMEPAGE="http://etherape.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc sparc x86"
+KEYWORDS="amd64 ~ppc sparc x86"
 IUSE=""
 
 DEPEND=">=gnome-base/libglade-2.0
