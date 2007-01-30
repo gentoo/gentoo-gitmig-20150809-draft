@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.51 2007/01/29 18:31:57 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.52 2007/01/30 16:50:47 compnerd Exp $
+
+  30 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  no-nptl/2.4/package.mask:
+  Masked >=dev-util/anjuta-2.0 in no-nptl/2.4
 
   29 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
   no-nptl/2.4/package.mask:
