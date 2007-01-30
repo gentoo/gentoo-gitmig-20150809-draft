@@ -1,6 +1,11 @@
 # ChangeLog for rox-extra/contacts
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/contacts/ChangeLog,v 1.4 2006/11/17 14:44:11 lack Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/contacts/ChangeLog,v 1.5 2007/01/30 22:15:10 lack Exp $
+
+*contacts-0.8.3-r1 (30 Jan 2007)
+
+  30 Jan 2007; Jim Ramsay <lack@gentoo.org> +contacts-0.8.3-r1.ebuild:
+  Added APPCATEGORY so a .desktop file will be installed
 
   17 Nov 2006; Jim Ramsay <lack@gentoo.org> contacts-0.8.3.ebuild:
   Bug 155429 - Fixed inherit order
