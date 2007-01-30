@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/cdfs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cdfs/ChangeLog,v 1.5 2007/01/23 11:07:42 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cdfs/ChangeLog,v 1.6 2007/01/30 22:45:18 drizzt Exp $
+
+  30 Jan 2007; Timothy Redaelli <drizzt@gentoo.org>
+  -files/cdfs-2.6.18-kernel-2.6.19.patch, -cdfs-2.6.18.ebuild:
+  Remove old version
 
   23 Jan 2007; Steve Dibb <beandog@gentoo.org> cdfs-2.6.19.ebuild:
   add ~amd64, bug 159487
