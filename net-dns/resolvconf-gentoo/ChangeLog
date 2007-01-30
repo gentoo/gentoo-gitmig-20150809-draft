@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/resolvconf-gentoo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/resolvconf-gentoo/ChangeLog,v 1.24 2007/01/08 14:19:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/resolvconf-gentoo/ChangeLog,v 1.25 2007/01/30 05:49:17 beandog Exp $
+
+  30 Jan 2007; Steve Dibb <beandog@gentoo.org> resolvconf-gentoo-1.2.ebuild:
+  amd64 stable, bug 159450
 
   08 Jan 2007; Jeroen Roovers <jer@gentoo.org> resolvconf-gentoo-1.2.ebuild:
   Stable for HPPA (bug #159450).
