@@ -1,6 +1,21 @@
 # ChangeLog for dev-libs/gdl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.3 2007/01/30 16:46:55 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.4 2007/01/30 17:20:09 dang Exp $
+
+  30 Jan 2007; Daniel Gryniewicz <dang@gentoo.org> ChangeLog:
+  Bump to 0.7.1
+  	(bug #164237)
+  * Use canonical property names (#381845)
+  * fix undefined symbol in python bindings (#397562)
+  * New translation: dz (Pema Geyleg  <pema.geyleg@gmail.com>)
+  * Added support to build without GNOME
+  * Split into libgdl and libgdl-gnome
+  * Removed some deprecated API
+  * Bug fixes for window positioning (thanks for the patches)
+  * Some fixes to build system
+  * Added dockbar style setting.
+  * Restore dockitem demensions when showing them.
+  * Improved restoring dockitem placements when showing them.
 
 *gdl-0.7.0 (30 Jan 2007)
 
