@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX tinycdb-libbase.diff 385 RMD160 135bcb3abfe5889a7ae2e22b894a0c3889d68b77 SHA1 4d8bc54eab63e766327753ea1c01737685a36338 SHA256 935d3832441463039976863b2e9d6236acdedd036b5582e084cff9b856d8ba47
 MD5 244663b6896ea4d20caec08ea5e0cba3 files/tinycdb-libbase.diff 385
 RMD160 135bcb3abfe5889a7ae2e22b894a0c3889d68b77 files/tinycdb-libbase.diff 385
@@ -18,3 +21,10 @@ SHA256 87fc07a55ee7814a0505ae1c24a871ac29ae7691c5383550647382a2b26277ae metadata
 MD5 0e481667f7fc9e7d954d0c7a9939ec59 files/digest-tinycdb-0.74 235
 RMD160 e6a183aaadd57f033a0a1e552c0f28e0f3a9f5cf files/digest-tinycdb-0.74 235
 SHA256 041da920dcf15b384ef414a8a3b1c4740cdbf6fcced35aae7246e24344500836 files/digest-tinycdb-0.74 235
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFv6L+Wt/XSf2CZdkRAjJrAKCZuPYbXip3bGtpZnQQuw+cMJhorQCgld11
+G3JeeA2XBnWtbHk0DeW/Kk8=
+=BuHS
+-----END PGP SIGNATURE-----
