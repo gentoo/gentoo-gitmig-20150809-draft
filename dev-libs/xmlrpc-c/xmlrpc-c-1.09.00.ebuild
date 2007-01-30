@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.06.02.ebuild,v 1.1 2006/07/31 06:35:57 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.09.00.ebuild,v 1.1 2007/01/30 09:44:33 hollow Exp $
 
 inherit eutils
 
@@ -13,8 +13,7 @@ IUSE="curl libwww threads"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND="virtual/libc
-	dev-libs/libxml2
+DEPEND="dev-libs/libxml2
 	libwww? ( net-libs/libwww )
 	curl? ( net-misc/curl )"
 
@@ -34,7 +33,6 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${PN}-1.05-pic.patch
 	epatch "${FILESDIR}"/${PN}-1.06.02-threadupdatestatus.patch
-	epatch "${FILESDIR}"/${PN}-1.06.02-strsol.patch
 }
 
 src_compile() {
