@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.68-r1.ebuild,v 1.4 2007/01/27 01:08:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.68-r1.ebuild,v 1.5 2007/01/31 22:31:49 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -13,8 +13,7 @@ PACKAGE_NAME=_linuxclient${MY_PV}_orig.tar.gz
 SOU_NAME=_linuxclient${MY_PV}_xp1.tar.gz
 HOU_NAME=_linuxclient${MY_PV}_xp2.tar.gz
 
-DESCRIPTION="role-playing game set in a huge medieval fantasy world of Dungeons
-and Dragons"
+DESCRIPTION="role-playing game set in a huge medieval fantasy world of Dungeons and Dragons"
 HOMEPAGE="http://nwn.bioware.com/downloads/linuxclient.html"
 SRC_URI="linguas_fr? (
 		${PATCH_URL_BASE}/French${PACKAGE_NAME}
@@ -248,6 +247,8 @@ src_unpack() {
 				unpack "${a}" || die "unpack ${a}"
 				cd ..
 			fi
+
+
 		fi
 	done )
 	for a in ${A}
