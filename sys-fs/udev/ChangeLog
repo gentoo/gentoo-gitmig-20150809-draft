@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.239 2007/01/30 16:14:14 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.240 2007/01/31 10:30:32 zzam Exp $
+
+*udev-104-r7 (31 Jan 2007)
+
+  31 Jan 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev.rules-104-r7, +udev-104-r7.ebuild:
+  Fix rule for sg-devices of scsi-cdroms, to only match attributes that are
+  reliable, Bug #164595.
 
 *udev-104-r6 (30 Jan 2007)
 
