@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/getdelta
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/ChangeLog,v 1.12 2007/01/24 03:40:30 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/ChangeLog,v 1.13 2007/01/31 07:35:12 genstef Exp $
+
+*getdelta-0.7.7 (31 Jan 2007)
+
+  31 Jan 2007; <genstef@gentoo.org> +getdelta-0.7.7.ebuild:
+  version bump
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org> getdelta-0.7.6.ebuild:
   Replacing einfo with elog
