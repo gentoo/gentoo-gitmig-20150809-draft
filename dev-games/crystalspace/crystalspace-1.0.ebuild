@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.0.ebuild,v 1.2 2007/01/31 19:48:10 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.0.ebuild,v 1.3 2007/01/31 22:14:56 tupone Exp $
 
 MY_P=${PN}-src-${PV}
 
@@ -76,4 +76,8 @@ src_install() {
 		cslight -video=null ${D}/usr/share/${PN}/data/maps/$dir;
 	done
 	dodoc README
+
+	echo "CRYSTAL_PLUGIN=/usr/lib/crystalspace" >> 90crystalspace
+	echo "CRYSTAL_CONFIG=/etc/crystalspace" >> 90crystalspace
+	doenvd 90crystalspace
 }
