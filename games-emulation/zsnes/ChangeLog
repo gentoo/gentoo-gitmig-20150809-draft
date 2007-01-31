@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/zsnes
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.26 2007/01/29 21:56:51 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.27 2007/01/31 14:40:50 drizzt Exp $
+
+  31 Jan 2007; Timothy Redaelli <drizzt@gentoo.org> zsnes-1.51.ebuild:
+  Fixed ao configure argument, thanks to Andreas Fackler for reporting wrt bug
+  #164704
 
   29 Jan 2007; Timothy Redaelli <drizzt@gentoo.org> zsnes-1.51.ebuild:
   Remove -s from CFLAGS
