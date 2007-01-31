@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.93 2007/01/31 20:26:24 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.94 2007/01/31 20:55:28 zzam Exp $
+
+  31 Jan 2007; Matthias Schwarzott <zzam@gentoo.org>
+  libgphoto2-2.3.1-r3.ebuild:
+  Inherit multilib to make people happy, Bug #164715.
 
 *libgphoto2-2.3.1-r3 (31 Jan 2007)
 
