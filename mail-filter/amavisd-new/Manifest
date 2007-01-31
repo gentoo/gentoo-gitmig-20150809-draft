@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX amavisd-new-2.2.1-qmail-lf-workaround.patch 688 RMD160 45092cfb4180d5cac8abc38068105b619945dfe6 SHA1 5ab50c58bd125d545dd6a2081c3b4bc2892af7a2 SHA256 5e32e1fbcf172ce108ba1b494722894719ea31ed90d55610bffdb241246cfb57
 MD5 ee33de51df853bd8426a4304f264245f files/amavisd-new-2.2.1-qmail-lf-workaround.patch 688
 RMD160 45092cfb4180d5cac8abc38068105b619945dfe6 files/amavisd-new-2.2.1-qmail-lf-workaround.patch 688
@@ -97,3 +100,10 @@ SHA256 3efe36b42ef294cc88b43fd99e066f1599af37a38b5764681067bb76b601a091 files/di
 MD5 8a753a8cbf16255eed1625def44bdfa5 files/digest-amavisd-new-2.4.5 253
 RMD160 e972ad004ce2186c1dde42911606a16645c1df95 files/digest-amavisd-new-2.4.5 253
 SHA256 c53492eedc474159bc50f0ee9f20bd171ad2f0b460f564203bdbaaceeec00ca6 files/digest-amavisd-new-2.4.5 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFwLohWt/XSf2CZdkRAg8pAJ9+A6k3mdgo0Sv6uI2F5nTX8h7psQCeJUqT
+zkFjzLeTU+HQ6j/3vu6dQG8=
+=/TBx
+-----END PGP SIGNATURE-----
