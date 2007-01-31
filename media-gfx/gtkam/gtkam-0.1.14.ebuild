@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.14.ebuild,v 1.2 2007/01/29 17:40:26 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.14.ebuild,v 1.3 2007/01/31 19:01:02 compnerd Exp $
 
 inherit autotools eutils gnome2
 
@@ -38,6 +38,9 @@ pkg_setup() {
 
 src_unpack() {
 	gnome2_src_unpack
+
+	# The icon in the tarball is busted, so overwrite it
+	cp ${FILESDIR}/${PN}.png ${S}/${PN}.png
 
 	epatch ${FILESDIR}/${PN}-0.1.14-as-needed.patch
 	AT_M4DIR="m4m" eautomake
