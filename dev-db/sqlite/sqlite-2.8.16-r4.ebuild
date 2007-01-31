@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.16-r4.ebuild,v 1.13 2006/11/11 13:13:18 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.16-r4.ebuild,v 1.14 2007/01/31 13:54:33 genone Exp $
 
 inherit eutils toolchain-funcs alternatives
 
@@ -82,8 +82,8 @@ src_compile() {
 src_test() {
 	if use tcl ; then
 		if has userpriv ${FEATURES} ; then
-			einfo "sqlite 2.x is known to have problems on 64 bit architectures"
-			einfo "if you observe segmentation faults please use 3.x instead"
+			elog "sqlite 2.x is known to have problems on 64 bit architectures"
+			elog "if you observe segmentation faults please use 3.x instead"
 
 			cd ${S}
 			emake test || die "some test failed"

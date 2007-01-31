@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-jdbc/oracle-instantclient-jdbc-10.2.0.3.ebuild,v 1.2 2007/01/27 14:15:47 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-jdbc/oracle-instantclient-jdbc-10.2.0.3.ebuild,v 1.3 2007/01/31 13:50:44 genone Exp $
 
 inherit eutils
 
@@ -49,10 +49,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "The JDBC supplement package for Oracle 10g has been installed."
-	einfo "You may wish to install the oracle-instantclient-sqlplus (for "
-	einfo "running the SQL*Plus application) package as well."
-	einfo
-	einfo "oracle-instantclient-* packages aren't installed in different"
-	einfo "SLOTs any longer. You may want to uninstall older versions."
+	elog "The JDBC supplement package for Oracle 10g has been installed."
+	elog "You may wish to install the oracle-instantclient-sqlplus (for "
+	elog "running the SQL*Plus application) package as well."
+	elog
+	elog "oracle-instantclient-* packages aren't installed in different"
+	elog "SLOTs any longer. You may want to uninstall older versions."
 }

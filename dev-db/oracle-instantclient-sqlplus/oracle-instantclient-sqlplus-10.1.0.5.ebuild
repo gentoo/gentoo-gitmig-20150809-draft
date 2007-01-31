@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-sqlplus/oracle-instantclient-sqlplus-10.1.0.5.ebuild,v 1.2 2007/01/27 14:15:07 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-sqlplus/oracle-instantclient-sqlplus-10.1.0.5.ebuild,v 1.3 2007/01/31 13:52:23 genone Exp $
 
 inherit eutils
 
@@ -50,10 +50,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "The SQL*Plus package for Oracle 10g has been installed."
-	einfo "You may wish to install the oracle-instantclient-jdbc (for"
-	einfo "the supplemental JDBC functionality) package as well."
-	einfo
-	einfo "If you have any questions, be sure to read the README:"
-	einfo "http://otn.oracle.com/docs/tech/sql_plus/10102/readme_ic.htm"
+	elog "The SQL*Plus package for Oracle 10g has been installed."
+	elog "You may wish to install the oracle-instantclient-jdbc (for"
+	elog "the supplemental JDBC functionality) package as well."
+	elog
+	elog "If you have any questions, be sure to read the README:"
+	elog "http://otn.oracle.com/docs/tech/sql_plus/10102/readme_ic.htm"
 }
