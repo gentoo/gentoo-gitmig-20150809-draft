@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/xcircuit
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/ChangeLog,v 1.25 2006/10/10 09:20:13 calchan Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/ChangeLog,v 1.26 2007/01/31 18:07:40 calchan Exp $
+
+  31 Jan 2007; Denis Dupeyron <calchan@gentoo.org> xcircuit-3.6.59.ebuild:
+  Fixed KEYWORDS, see bug #160519.
 
 *xcircuit-3.6.59 (10 Oct 2006)
 

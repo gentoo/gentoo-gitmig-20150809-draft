@@ -1,13 +1,13 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/xcircuit-3.6.59.ebuild,v 1.1 2006/10/10 09:20:13 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/xcircuit-3.6.59.ebuild,v 1.2 2007/01/31 18:07:40 calchan Exp $
 
 DESCRIPTION="Circuit drawing and schematic capture program."
 SRC_URI="http://opencircuitdesign.com/xcircuit/archive/${P}.tgz"
 HOMEPAGE="http://opencircuitdesign.com/xcircuit"
 
 # This is a development version. Do not keyword without contacting maintainer as we add/remove these at random.
-KEYWORDS="-*"
+KEYWORDS=""
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
@@ -23,10 +23,10 @@ DEPEND="virtual/ghostscript
 
 src_compile() {
 	econf \
-	--with-tcl \
-	--with-ngspice \
-	--disable-dependency-tracking \
-	|| die 'econf failed!'
+		--with-tcl \
+		--with-ngspice \
+		--disable-dependency-tracking \
+		|| die 'econf failed!'
 	emake || die 'emake failed!'
 }
 
