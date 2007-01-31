@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-libglade2
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade2/ChangeLog,v 1.27 2007/01/03 20:46:11 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade2/ChangeLog,v 1.28 2007/01/31 00:48:05 kloeri Exp $
+
+  31 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
+  ruby-libglade2-0.14.1.ebuild:
+  Stable on Alpha.
 
 *ruby-libglade2-0.16.0-r1 (03 Jan 2007)
 
