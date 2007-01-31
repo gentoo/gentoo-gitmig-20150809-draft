@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2.03-r12.ebuild,v 1.8 2006/12/16 12:39:24 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2.03-r12.ebuild,v 1.9 2007/01/31 14:00:08 genone Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit java-vm-2 versionator
@@ -142,7 +142,7 @@ pkg_postinst() {
 		# /opt/blackdown-jdk-1.4.1/jre/bin/java_vm
 		chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${P}/jre/bin/java_vm
 
-		einfo "you should have seen lots of chpax output above now"
+		ewarn "you should have seen lots of chpax output above now"
 		ewarn "make sure the grsec ACL contains those entries also"
 		ewarn "because enabling it will override the chpax setting"
 		ewarn "on the physical files - help for PaX and grsecurity"
