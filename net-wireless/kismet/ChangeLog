@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.91 2007/01/20 13:04:26 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.92 2007/01/31 18:10:39 phreak Exp $
+
+  31 Jan 2007; Christian Heim <phreak@gentoo.org> kismet-2006.04.1.ebuild,
+  kismet-2007.01.1b.ebuild:
+  Prevent kismet from pre-stripping the binaries, thanks to Alec Warner for
+  the modified ebuild.
 
 *kismet-2007.01.1b (20 Jan 2007)
 

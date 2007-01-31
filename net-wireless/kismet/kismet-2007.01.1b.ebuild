@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2007.01.1b.ebuild,v 1.1 2007/01/20 13:04:26 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2007.01.1b.ebuild,v 1.2 2007/01/31 18:10:39 phreak Exp $
 
 inherit toolchain-funcs linux-info eutils
 
@@ -29,6 +29,9 @@ src_unpack() {
 
 	sed -i -e "s:^\(logtemplate\)=\(.*\):\1=/tmp/\2:" \
 		"${S}"/conf/kismet.conf.in
+
+	# Remove -s from install options
+	sed -i -e 's| -s||g' "${S}"/Makefile.in
 }
 
 src_compile() {
