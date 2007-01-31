@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-3.99.0.ebuild,v 1.1 2007/01/29 15:57:59 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-3.99.0.ebuild,v 1.2 2007/01/31 21:02:27 corsair Exp $
 
 inherit fortran
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://itpp.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc64 ~sparc ~x86"
 IUSE="blas cblas debug doc fftw lapack minimal"
 
 DEPEND="!minimal? ( fftw? ( >=sci-libs/fftw-3.0.0 ) )
