@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gramps
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.40 2007/01/09 20:41:16 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.41 2007/01/31 22:32:16 dang Exp $
+
+  31 Jan 2007; Daniel Gryniewicz <dang@gentoo.org> metadata.xml:
+  Re-assign to maintainer-needed.  Gnome doesn't want it
 
   09 Jan 2007; Tiziano Müller <dev-zero@gentoo.org> gramps-2.0.9.ebuild,
   gramps-2.2.2.ebuild:
