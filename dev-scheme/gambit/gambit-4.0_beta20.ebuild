@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.0_beta20.ebuild,v 1.1 2007/01/29 17:56:36 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.0_beta20.ebuild,v 1.2 2007/01/31 11:00:45 hkbst Exp $
 
 inherit eutils elisp-common check-reqs autotools multilib
 
@@ -16,7 +16,7 @@ LICENSE="Apache-2.0 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc64 ~x86"
 
-DEPEND="emacs? ( app-editors/emacs )"
+DEPEND="emacs? ( virtual/emacs )"
 
 SITEFILE="50gambit-gentoo.el"
 
