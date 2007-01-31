@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.177 2007/01/29 16:02:13 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.178 2007/01/31 21:09:40 corsair Exp $
+
+  31 Jan 2007; Markus Rothe <corsair@gentoo.org> util-linux-2.12r-r5.ebuild:
+  Stable on ppc64; bug #164011
 
   29 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   util-linux-2.12r-r5.ebuild:
