@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-2.5.5.ebuild,v 1.2 2006/12/01 20:14:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-2.5.5.ebuild,v 1.3 2007/01/31 19:57:47 wolf31o2 Exp $
 
 inherit toolchain-funcs eutils games
 
@@ -30,6 +30,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-build.patch
+	epatch "${FILESDIR}"/${P}-64bit.patch
 	sed -i \
 		-e "/^BINDIR/s:=.*:=${GAMES_BINDIR}:" \
 		-e "/^DATADIR/s:=.*:=${GAMES_DATADIR}:" \
@@ -74,19 +75,19 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	echo
-	einfo "Before playing, you should get a copy of the installed "
-	einfo "global XShipWars client configuration file and copy it to "
-	einfo "your home directory: "
+	elog "Before playing, you should get a copy of the installed "
+	elog "global XShipWars client configuration file and copy it to "
+	elog "your home directory:"
 	echo
-	einfo "# mkdir ~/.shipwars/"
-	einfo "# cd /usr/share/games/xshipwars/etc/ "
-	einfo "# cp xsw.ini ~/.shipwars/ "
-	einfo "# cp universes ~/.shipwars/universes "
+	elog "# mkdir ~/.shipwars/"
+	elog "# cd /usr/share/games/xshipwars/etc/"
+	elog "# cp xsw.ini ~/.shipwars/"
+	elog "# cp universes.ini ~/.shipwars"
 	echo
-	einfo "You will probably need to edit the xisw.ini to fit your needs."
+	elog "You will probably need to edit the xisw.ini to fit your needs."
 	echo
-	einfo "Then type 'xsw &' to start the game"
+	elog "Then type 'xsw &' to start the game"
 	echo
-	einfo "Type 'monitor &' to start the Universe Monitor"
-	einfo "Type 'unvedit &' to start the Universe Editor"
+	elog "Type 'monitor &' to start the Universe Monitor"
+	elog "Type 'unvedit &' to start the Universe Editor"
 }
