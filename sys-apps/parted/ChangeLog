@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/parted
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.103 2006/10/14 17:22:51 plasmaroo Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.104 2007/01/31 18:40:10 wolf31o2 Exp $
+
+  31 Jan 2007; Chris Gianelloni <wolf31o2@gentoo.org> -parted-1.6.23.ebuild,
+  -parted-1.6.25.ebuild:
+  Cleaning up older ebuilds that are no longer necessary.
 
   14 Oct 2006; Tim Yamin <plasmaroo@gentoo.org> parted-1.7.1-r1.ebuild:
   Stable on IA64; bug #145892.
