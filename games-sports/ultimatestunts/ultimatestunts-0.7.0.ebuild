@@ -1,9 +1,7 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ultimatestunts-0.6.2.ebuild,v 1.3 2006/10/26 19:12:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ultimatestunts-0.7.0.ebuild,v 1.1 2007/01/31 16:44:48 nyhm Exp $
 
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
 inherit autotools eutils versionator games
 
 MY_P=${PN}-srcdata-$(replace_all_version_separators)1
@@ -17,17 +15,11 @@ KEYWORDS="~amd64 ~x86"
 IUSE="nls"
 
 RDEPEND="media-libs/libsdl
+	media-libs/sdl-image
 	media-libs/openal
 	media-libs/freealut
 	virtual/opengl
 	virtual/glu
-	x11-libs/libSM
-	x11-libs/libICE
-	x11-libs/libX11
-	x11-libs/libXi
-	x11-libs/libXext
-	x11-libs/libXmu
-	x11-libs/libXt
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	dev-util/cvs
@@ -38,27 +30,26 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	epatch \
-		"${FILESDIR}"/${P}-gcc41.patch \
-		"${FILESDIR}"/${P}-freealut.patch \
-		"${FILESDIR}"/${P}-paths.patch
-
+	epatch "${FILESDIR}"/${P}-paths.patch
 	autopoint -f || die "autopoint failed"
+	sed -i 's:$(datadir)/locale:@top_srcdir@/data/lang:' po/Makefile.in.in \
+		|| die "sed failed"
 	AT_M4DIR=m4 eautoreconf
 }
 
 src_compile() {
-	egamesconf $(use_enable nls) || die
+	egamesconf \
+		--disable-dependency-tracking \
+		$(use_enable nls) \
+		|| die
 	emake || die "emake failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-
+	newicon data/cars/diablo/steer.png ${PN}.png
 	make_desktop_entry ustunts "Ultimate Stunts"
 	dodoc AUTHORS README
-
 	rm -rf $(find "${D}" -name CVS)
 	prepgamesdirs
 }

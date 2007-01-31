@@ -1,6 +1,6 @@
 --- configure.ac
 +++ configure.ac
-@@ -210,9 +210,9 @@
+@@ -222,9 +222,9 @@
  dnl ------------------
  dnl The directory locations
  dnl ------------------
@@ -12,7 +12,6 @@
  
  AC_SUBST(netlibs)
  AC_SUBST(soundlibs)
-
 --- data/Makefile.am
 +++ data/Makefile.am
 @@ -1,4 +1,4 @@
@@ -21,7 +20,6 @@
  
  install:
  	$(mkinstalldirs) ${usdatadir}
-
 --- shared/usmisc.cpp
 +++ shared/usmisc.cpp
 @@ -42,7 +42,7 @@
