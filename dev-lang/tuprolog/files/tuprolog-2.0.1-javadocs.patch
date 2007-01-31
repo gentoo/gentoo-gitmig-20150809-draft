@@ -1,0 +1,283 @@
+diff -ur src.orig/alice/tuprolog/BuiltIn.java src/alice/tuprolog/BuiltIn.java
+--- src.orig/alice/tuprolog/BuiltIn.java	2007-01-30 15:12:42.000000000 +1300
++++ src/alice/tuprolog/BuiltIn.java	2007-01-31 19:41:26.000000000 +1300
+@@ -88,7 +88,6 @@
+ 	
+ 	/**
+ 	 * usata per la retract in basicLibrary
+-	 * @return
+ 	 */
+ 	public boolean $restore_db_0() {
+ 		theoryManager.transRestore();
+Only in src/alice/tuprolog: BuiltIn.java.orig
+diff -ur src.orig/alice/tuprolog/ChoicePointStore.java src/alice/tuprolog/ChoicePointStore.java
+--- src.orig/alice/tuprolog/ChoicePointStore.java	2007-01-30 15:12:42.000000000 +1300
++++ src/alice/tuprolog/ChoicePointStore.java	2007-01-31 19:41:26.000000000 +1300
+@@ -35,7 +35,6 @@
+ 	
+ 	/**
+ 	 * Return the actual choice-point store
+-	 * @return
+ 	 */
+ 	public ChoicePointContext getPointer() {
+ 		return pointer;
+@@ -44,7 +43,6 @@
+ 	/**
+ 	 * Check if a choice point exists in the store.
+ 	 * As a side effect, removes choice points which have been already used and are now empty. 
+-	 * @return
+ 	 */
+ 	protected boolean existChoicePoint() {
+ 		if (pointer == null) return false;
+diff -ur src.orig/alice/tuprolog/ClauseStore.java src/alice/tuprolog/ClauseStore.java
+--- src.orig/alice/tuprolog/ClauseStore.java	2007-01-30 15:12:42.000000000 +1300
++++ src/alice/tuprolog/ClauseStore.java	2007-01-31 19:41:26.000000000 +1300
+@@ -58,8 +58,6 @@
+ 	
+ 	/**
+ 	 * Verify if there is a term in compatibleGoals compatible with goal. 
+-	 * @param goal
+-	 * @param compGoals
+ 	 * @return true if compatible or false otherwise.
+ 	 */
+ 	protected boolean existCompatibleClause() {
+diff -ur src.orig/alice/tuprolog/EngineManager.java src/alice/tuprolog/EngineManager.java
+--- src.orig/alice/tuprolog/EngineManager.java	2007-01-30 15:12:42.000000000 +1300
++++ src/alice/tuprolog/EngineManager.java	2007-01-31 19:41:26.000000000 +1300
+@@ -81,7 +81,7 @@
+ 	/**
+ 	 *  Solves a query
+ 	 *
+-	 * @param g the term representing the goal to be demonstrated
++	 * @param query the term representing the goal to be demonstrated
+ 	 * @return the result of the demonstration
+ 	 * @see SolveInfo
+ 	 **/
+diff -ur src.orig/alice/tuprolog/PrimitiveManager.java src/alice/tuprolog/PrimitiveManager.java
+--- src.orig/alice/tuprolog/PrimitiveManager.java	2007-01-30 15:12:42.000000000 +1300
++++ src/alice/tuprolog/PrimitiveManager.java	2007-01-31 19:41:26.000000000 +1300
+@@ -89,7 +89,7 @@
+ 	 * This involves identifying structs representing builtin
+ 	 * predicates and functors, and setting up related structures and links
+ 	 *
+-	 * @parm term the term to be identified
++	 * @param term the term to be identified
+ 	 */
+ 	public void identifyDirective(Term term) {
+ 		identify(term,PrimitiveInfo.DIRECTIVE);
+diff -ur src.orig/alice/tuprolog/lib/BasicLibrary.java src/alice/tuprolog/lib/BasicLibrary.java
+--- src.orig/alice/tuprolog/lib/BasicLibrary.java	2007-01-30 15:12:42.000000000 +1300
++++ src/alice/tuprolog/lib/BasicLibrary.java	2007-01-31 19:43:17.000000000 +1300
+@@ -96,7 +96,7 @@
+ 	/**
+ 	 * Loads a library constructed from a theory.
+ 	 * 
+-	 * @param theory theory text
++	 * @param th theory text
+ 	 * @param libName name of the library
+ 	 * @return true if the library has been succesfully loaded.
+ 	 */
+@@ -342,13 +342,13 @@
+ 		Term val0 = evalExpression(arg1);
+ 		if (val0!=null && val0.isNumber()) {
+ 			alice.tuprolog.Number val0n = (alice.tuprolog.Number) val0;
+-			if (val0n.isInt()) {
++			if (val0n.isInt()) {
+ 				return new Int(val0n.intValue() * -1);
+-			} else if (val0n.isDouble()) {
++			} else if (val0n.isDouble()) {
+ 				return new alice.tuprolog.Double(val0n.doubleValue() * -1);
+-			} else if (val0n.isLong()) {
++			} else if (val0n.isLong()) {
+ 				return new alice.tuprolog.Long(val0n.longValue() * -1);
+-			} else if (val0n.isFloat()) {
++			} else if (val0n.isFloat()) {
+ 				return new alice.tuprolog.Float(val0n.floatValue() * -1);
+ 			} else {
+ 				return null;
+@@ -367,24 +367,24 @@
+ 		}
+ 	}
+ 	
+-	alice.tuprolog.Number getIntegerNumber(long num) {
+-		if (num > Integer.MIN_VALUE && num < Integer.MAX_VALUE)
+-			return new Int((int) num);
+-		else
+-			return new alice.tuprolog.Long(num);
+-	}
+-	
++	alice.tuprolog.Number getIntegerNumber(long num) {
++		if (num > Integer.MIN_VALUE && num < Integer.MAX_VALUE)
++			return new Int((int) num);
++		else
++			return new alice.tuprolog.Long(num);
++	}
++	
+ 	public Term expression_plus_2(Term arg0,Term arg1) {
+ 		Term val0 = evalExpression(arg0);
+ 		Term val1 = evalExpression(arg1);
+ 		if (val0!=null && val1!=null && val0.isNumber() && (val1.isNumber())) {
+ 			alice.tuprolog.Number val0n = (alice.tuprolog.Number) val0;
+ 			alice.tuprolog.Number val1n = (alice.tuprolog.Number) val1;
+-			if (val0n.isInteger() && (val1n.isInteger()))
+-				return getIntegerNumber(val0n.longValue() + val1n.longValue());
+-			else
++			if (val0n.isInteger() && (val1n.isInteger()))
++				return getIntegerNumber(val0n.longValue() + val1n.longValue());
++			else
+ 				return new alice.tuprolog.Double(val0n.doubleValue() + val1n.doubleValue());
+-		} else
++		} else
+ 			return null;
+ 		}
+ 	
+@@ -394,11 +394,11 @@
+ 		if (val0!=null && val1!=null && val0.isNumber() && (val1.isNumber())) {
+ 			alice.tuprolog.Number val0n = (alice.tuprolog.Number) val0;
+ 			alice.tuprolog.Number val1n = (alice.tuprolog.Number) val1;
+-			if (val0n.isInteger() && (val1n.isInteger()))
+-				return getIntegerNumber(val0n.longValue() - val1n.longValue());
+-			else
++			if (val0n.isInteger() && (val1n.isInteger()))
++				return getIntegerNumber(val0n.longValue() - val1n.longValue());
++			else
+ 				return new alice.tuprolog.Double(val0n.doubleValue() - val1n.doubleValue());
+-		} else
++		} else
+ 			return null;
+ 		}
+ 	
+@@ -408,11 +408,11 @@
+ 		if (val0!=null && val1!=null && val0.isNumber() && (val1.isNumber())) {
+ 			alice.tuprolog.Number val0n = (alice.tuprolog.Number) val0;
+ 			alice.tuprolog.Number val1n = (alice.tuprolog.Number) val1;
+-			if (val0n.isInteger() && (val1n.isInteger()))
+-				return getIntegerNumber(val0n.longValue() * val1n.longValue());
+-			else
++			if (val0n.isInteger() && (val1n.isInteger()))
++				return getIntegerNumber(val0n.longValue() * val1n.longValue());
++			else
+ 				return new alice.tuprolog.Double(val0n.doubleValue() * val1n.doubleValue());
+-		} else
++		} else
+ 			return null;
+ 		}
+ 	
+@@ -424,7 +424,7 @@
+ 			Number val1n = (Number) val1;
+ 			alice.tuprolog.Double result = new alice.tuprolog.Double(val0n.doubleValue()/val1n.doubleValue());
+ 			if (val0n.isInteger() && val1n.isInteger())
+-				return getIntegerNumber(result.longValue());
++				return getIntegerNumber(result.longValue());
+ 			else
+ 				return result;
+ 		} else
+@@ -437,7 +437,7 @@
+ 		if (val0!=null && val1!=null && val0.isNumber() && (val1.isNumber())) {
+ 			alice.tuprolog.Number val0n = (alice.tuprolog.Number) val0;
+ 			alice.tuprolog.Number val1n = (alice.tuprolog.Number) val1;
+-			return getIntegerNumber(val0n.longValue() / val1n.longValue());
++			return getIntegerNumber(val0n.longValue() / val1n.longValue());
+ 		} else {
+ 			return null;
+ 		}
+Only in src/alice/tuprolog/lib: BasicLibrary.java.orig
+Only in src/alice/tuprolog/lib: BasicLibrary.java.rej
+diff -ur src.orig/alice/tuprolog/lib/JavaLibrary.java src/alice/tuprolog/lib/JavaLibrary.java
+--- src.orig/alice/tuprolog/lib/JavaLibrary.java	2007-01-30 15:12:42.000000000 +1300
++++ src/alice/tuprolog/lib/JavaLibrary.java	2007-01-31 19:41:26.000000000 +1300
+@@ -1227,7 +1227,6 @@
+ 	
+ 	/**
+ 	 * Generates a fresh numeric identifier
+-	 * @return
+ 	 */
+ 	protected Struct generateFreshId() {
+ 		return new Struct("$obj_" + id++);        
+diff -ur src.orig/alice/util/jedit/InputHandler.java src/alice/util/jedit/InputHandler.java
+--- src.orig/alice/util/jedit/InputHandler.java	2007-01-30 15:12:42.000000000 +1300
++++ src/alice/util/jedit/InputHandler.java	2007-01-31 19:41:26.000000000 +1300
+@@ -24,7 +24,7 @@
+  *
+  * @author Slava Pestov
+  * @version $Id: tuprolog-2.0.1-javadocs.patch,v 1.1 2007/01/31 07:01:33 keri Exp $
+- * @see org.gjt.sp.jedit.textarea.DefaultInputHandler
++ * @see alice.util.jedit.DefaultInputHandler
+  */
+ public abstract class InputHandler extends KeyAdapter
+ {
+@@ -187,7 +187,7 @@
+ 	/**
+ 	 * Grabs the next key typed event and invokes the specified
+ 	 * action with the key as a the action command.
+-	 * @param action The action
++	 * @param listener The action
+ 	 */
+ 	public void grabNextKeyStroke(ActionListener listener)
+ 	{
+diff -ur src.orig/alice/util/jedit/JEditTextArea.java src/alice/util/jedit/JEditTextArea.java
+--- src.orig/alice/util/jedit/JEditTextArea.java	2007-01-30 15:12:42.000000000 +1300
++++ src/alice/util/jedit/JEditTextArea.java	2007-01-31 19:41:26.000000000 +1300
+@@ -1389,7 +1389,7 @@
+ 
+ 	/**
+ 	 * Sets if the selection should be rectangular.
+-	 * @param overwrite True if the selection should be rectangular,
++	 * @param rectSelect True if the selection should be rectangular,
+ 	 * false otherwise.
+ 	 */
+ 	public final void setSelectionRectangular(boolean rectSelect)
+diff -ur src.orig/alice/util/jedit/KeywordMap.java src/alice/util/jedit/KeywordMap.java
+--- src.orig/alice/util/jedit/KeywordMap.java	2007-01-30 15:12:42.000000000 +1300
++++ src/alice/util/jedit/KeywordMap.java	2007-01-31 19:41:26.000000000 +1300
+@@ -75,7 +75,7 @@
+ 	/**
+ 	 * Adds a key-value mapping.
+ 	 * @param keyword The key
+-	 * @Param id The value
++	 * @param id The value
+ 	 */
+ 	public void add(String keyword, byte id)
+ 	{
+diff -ur src.orig/alice/util/jedit/TextAreaPainter.java src/alice/util/jedit/TextAreaPainter.java
+--- src.orig/alice/util/jedit/TextAreaPainter.java	2007-01-30 15:12:42.000000000 +1300
++++ src/alice/util/jedit/TextAreaPainter.java	2007-01-31 19:41:26.000000000 +1300
+@@ -75,7 +75,7 @@
+ 	/**
+ 	 * Returns the syntax styles used to paint colorized text. Entry <i>n</i>
+ 	 * will be used to paint tokens with id = <i>n</i>.
+-	 * @see org.gjt.sp.jedit.syntax.Token
++	 * @see alice.util.jedit.Token
+ 	 */
+ 	public final SyntaxStyle[] getStyles()
+ 	{
+@@ -86,7 +86,7 @@
+ 	 * Sets the syntax styles used to paint colorized text. Entry <i>n</i>
+ 	 * will be used to paint tokens with id = <i>n</i>.
+ 	 * @param styles The syntax styles
+-	 * @see org.gjt.sp.jedit.syntax.Token
++	 * @see alice.util.jedit.Token
+ 	 */
+ 	public final void setStyles(SyntaxStyle[] styles)
+ 	{
+@@ -356,7 +356,7 @@
+ 
+ 	/**
+ 	 * Repaints the text.
+-	 * @param g The graphics context
++	 * @param gfx The graphics context
+ 	 */
+ 	public void paint(Graphics gfx)
+ 	{
+diff -ur src.orig/alice/util/jedit/TokenMarker.java src/alice/util/jedit/TokenMarker.java
+--- src.orig/alice/util/jedit/TokenMarker.java	2007-01-30 15:12:42.000000000 +1300
++++ src/alice/util/jedit/TokenMarker.java	2007-01-31 19:41:26.000000000 +1300
+@@ -24,7 +24,7 @@
+  * @author Slava Pestov
+  * @version $Id: tuprolog-2.0.1-javadocs.patch,v 1.1 2007/01/31 07:01:33 keri Exp $
+  *
+- * @see org.gjt.sp.jedit.syntax.Token
++ * @see alice.util.jedit.Token
+  */
+ public abstract class TokenMarker
+ {
