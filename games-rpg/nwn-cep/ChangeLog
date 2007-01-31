@@ -1,6 +1,13 @@
 # ChangeLog for games-rpg/nwn-cep
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/ChangeLog,v 1.7 2006/11/20 17:11:21 wolf31o2 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/ChangeLog,v 1.8 2007/01/31 21:01:31 wolf31o2 Exp $
+
+*nwn-cep-2.0 (31 Jan 2007)
+
+  31 Jan 2007; Chris Gianelloni <wolf31o2@gentoo.org> +nwn-cep-2.0.ebuild:
+  Added 2.0 ebuild. Ebuild by Benedikt Morbach
+  <benedikt.morbach+bugzilla@googlemail.com> and modified by me. Closing bug
+  #150195.
 
   20 Nov 2006; Chris Gianelloni <wolf31o2@gentoo.org> -nwn-cep-1.52.ebuild,
   -nwn-cep-1.52-r1.ebuild, -nwn-cep-1.53.ebuild, -nwn-cep-1.53-r1.ebuild,
