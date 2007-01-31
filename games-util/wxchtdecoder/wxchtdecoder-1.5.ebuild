@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/wxchtdecoder/wxchtdecoder-1.5.ebuild,v 1.2 2006/11/19 22:01:03 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/wxchtdecoder/wxchtdecoder-1.5.ebuild,v 1.3 2007/01/31 00:37:04 nyhm Exp $
 
 inherit wxwidgets
 
-DESCRIPTION="A program to decode .CHT files in Snes9x and ZNSES to plain text"
+DESCRIPTION="A program to decode .CHT files in Snes9x and ZSNES to plain text"
 HOMEPAGE="http://games.technoplaza.net/chtdecoder/"
 SRC_URI="http://games.technoplaza.net/chtdecoder/wx/history/${P}.tar.bz2"
 
