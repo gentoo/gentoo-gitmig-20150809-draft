@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.301 2007/01/25 08:57:54 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.302 2007/01/31 12:02:32 suka Exp $
+
+  31 Jan 2007; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.1.0.ebuild:
+  Silent bump to ooo-build-2.1.2, this fixes a bunch of bugs and also
+  introduces a new MS Works import filter
 
   25 Jan 2007; Andreas Proschofsky <suka@gentoo.org>
   +files/2.1.0/disable-regcomp-java.diff,
