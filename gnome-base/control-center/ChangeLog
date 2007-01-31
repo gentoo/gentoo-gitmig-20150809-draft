@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/control-center
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.215 2007/01/21 20:17:04 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.216 2007/01/31 21:10:01 dang Exp $
+
+  31 Jan 2007; Daniel Gryniewicz <dang@gentoo.org>
+  control-center-2.16.2.ebuild:
+  Make hal optional; bug #157867
 
   21 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
   control-center-2.16.2.ebuild:
