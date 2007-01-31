@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.92 2007/01/31 18:52:49 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.93 2007/01/31 20:26:24 zzam Exp $
+
+*libgphoto2-2.3.1-r3 (31 Jan 2007)
+
+  31 Jan 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +libgphoto2-2.3.1-r3.ebuild:
+  Make position of udev-script check-ptp-camera also correct on multilib
+  systems, Bug #164715.
 
   31 Jan 2007; Alon Bar-Lev <alonbl@gentoo.org> -libgphoto2-2.3.1-r1.ebuild,
   libgphoto2-2.3.1-r2.ebuild:
