@@ -1,11 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51.ebuild,v 1.5 2007/01/31 14:40:50 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51.ebuild,v 1.6 2007/01/31 15:35:47 nyhm Exp $
 
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
-
-inherit eutils autotools flag-o-matic games toolchain-funcs
+inherit eutils autotools flag-o-matic toolchain-funcs games
 
 DESCRIPTION="SNES (Super Nintendo) emulator that uses x86 assembly"
 HOMEPAGE="http://www.zsnes.com/ http://ipherswipsite.com/zsnes/"
@@ -16,18 +13,19 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="ao custom-cflags opengl png"
 
-RDEPEND=">=media-libs/libsdl-1.2.0
+RDEPEND="media-libs/libsdl
 	>=sys-libs/zlib-1.2.3-r1
 	amd64? ( app-emulation/emul-linux-x86-sdl )
 	!amd64? ( ao? ( media-libs/libao ) )
 	opengl? ( virtual/opengl )
 	png? ( media-libs/libpng )"
 DEPEND="${RDEPEND}
-	>=dev-lang/nasm-0.98"
+	dev-lang/nasm"
 
-S="${WORKDIR}/${PN}_${PV//./_}/src"
+S=${WORKDIR}/${PN}_${PV//./_}/src
 
 pkg_setup() {
+	games_pkg_setup
 	if use ao && [[ "${ARCH}" = "amd64" ]]; then
 		ewarn "libao use flag is disabled on amd64 since deps cannot be met."
 	fi
@@ -36,7 +34,6 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	cp "icons/48x48x32.png" "${T}/${PN}.png"
 
 	# Workaround for old libz
 	[[ "${ARCH}" = amd64 ]] && epatch "${FILESDIR}"/${P}-gzdirect.patch
@@ -88,6 +85,6 @@ src_install() {
 	dodoc ../docs/{*.txt,README.LINUX}
 	dohtml -r ../docs/Linux/*
 	make_desktop_entry zsnes ZSNES zsnes.png
-	doicon "${T}/${PN}.png"
+	newicon icons/48x48x32.png ${PN}.png
 	prepgamesdirs
 }
