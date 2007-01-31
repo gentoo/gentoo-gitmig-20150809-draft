@@ -1,6 +1,11 @@
 # ChangeLog for rox-extra/reticker
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/reticker/ChangeLog,v 1.3 2006/11/20 18:29:17 opfer Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/reticker/ChangeLog,v 1.4 2007/01/31 01:06:24 lack Exp $
+
+*reticker-0.4.5k-r1 (31 Jan 2007)
+
+  31 Jan 2007; Jim Ramsay <lack@gentoo.org> +reticker-0.4.5k-r1.ebuild:
+  Added APPCATEGORY so a .desktop file will be installed
 
   20 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
   reticker-0.4.5k.ebuild:

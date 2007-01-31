@@ -1,6 +1,11 @@
 # ChangeLog for rox-extra/resolution
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/resolution/ChangeLog,v 1.6 2006/11/20 18:27:42 opfer Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/resolution/ChangeLog,v 1.7 2007/01/31 01:04:31 lack Exp $
+
+*resolution-0.2-r1 (31 Jan 2007)
+
+  31 Jan 2007; Jim Ramsay <lack@gentoo.org> +resolution-0.2-r1.ebuild:
+  Added APPCATEGORY so a .desktop file will be installed
 
   20 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
   resolution-0.2.ebuild:
