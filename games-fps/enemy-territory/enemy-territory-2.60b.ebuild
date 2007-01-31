@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60b.ebuild,v 1.8 2007/01/27 00:50:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60b.ebuild,v 1.9 2007/01/31 07:59:44 vapier Exp $
 
 inherit eutils games
 
@@ -12,7 +12,8 @@ SRC_URI="mirror://3dgamers/wolfensteinet/et-linux-2.60.x86.run
 	mirror://idsoftware/et/ET-${PV}.zip
 	dedicated? (
 		http://dev.gentoo.org/~wolf31o2/sources/dump/${PN}-all-0.1.tar.bz2
-		mirror://gentoo/${PN}-all-0.1.tar.bz2 )"
+		mirror://gentoo/${PN}-all-0.1.tar.bz2
+	)"
 
 LICENSE="RTCW-ETEULA"
 SLOT="0"
@@ -27,7 +28,7 @@ RDEPEND="sys-libs/glibc
 	opengl? ( virtual/opengl )
 	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.0-r1 )"
 
-S="${WORKDIR}"
+S=${WORKDIR}
 
 GAMES_CHECK_LICENSE="yes"
 dir="${GAMES_PREFIX_OPT}/${PN}"
