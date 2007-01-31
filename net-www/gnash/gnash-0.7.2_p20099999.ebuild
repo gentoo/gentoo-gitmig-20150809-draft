@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.2_p20099999.ebuild,v 1.4 2006/11/30 17:45:25 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.2_p20099999.ebuild,v 1.5 2007/01/31 18:12:53 genstef Exp $
 
 WANT_AUTOCONF=latest
 inherit nsplugins autotools cvs kde-functions
@@ -17,7 +17,7 @@ S=${WORKDIR}/${PN}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-*"
+KEYWORDS=""
 IUSE="agg gstreamer ffmpeg kde nsplugin xml video_cards_i810"
 #dmalloc, broken see bug 142939
 #dmalloc? ( dev-libs/dmalloc )
