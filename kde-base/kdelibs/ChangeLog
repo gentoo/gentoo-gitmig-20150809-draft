@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.413 2007/01/30 05:10:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.414 2007/01/31 04:10:39 josejx Exp $
+
+  31 Jan 2007; Joseph Jezak <josejx@gentoo.org> kdelibs-3.5.5-r7.ebuild:
+  Marked ppc stable for bug #164079.
 
   30 Jan 2007; Jeroen Roovers <jer@gentoo.org> kdelibs-3.5.5-r7.ebuild:
   Stable for HPPA (bug #164079).
