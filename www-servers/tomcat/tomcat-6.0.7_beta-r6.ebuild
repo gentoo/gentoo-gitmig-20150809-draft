@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.7_beta-r6.ebuild,v 1.1 2007/01/28 23:00:55 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.7_beta-r6.ebuild,v 1.2 2007/01/31 10:31:50 caster Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -21,7 +21,7 @@ RDEPEND="|| ( >=virtual/jre-1.5 >=virtual/jre-1.6 )
 	>=dev-java/commons-dbcp-1.2.1
 	>=dev-java/commons-logging-1.1
 	>=dev-java/commons-pool-1.2
-	=dev-java/tomcat-servlet-api-${PV}"
+	~dev-java/tomcat-servlet-api-${PV}"
 
 DEPEND="|| ( >=virtual/jdk-1.5 >=virtual/jdk-1.6 )
 	${RDEPEND}
