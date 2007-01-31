@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/herdstat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.71 2007/01/24 03:42:33 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.72 2007/01/31 20:48:49 compnerd Exp $
+
+  31 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  +files/herdstat-1.1.91-undefined-lhp.patch, herdstat-1.1.91.ebuild:
+  Patch to fix compiling with gcc 4.x
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org> herdstat-1.1.1_p7.ebuild,
   herdstat-1.1.2.ebuild, herdstat-1.1.91.ebuild:

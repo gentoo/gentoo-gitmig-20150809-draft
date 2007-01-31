@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.91.ebuild,v 1.2 2007/01/24 03:42:33 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.91.ebuild,v 1.3 2007/01/31 20:48:49 compnerd Exp $
 
 inherit bash-completion eutils
 
@@ -28,6 +28,13 @@ pkg_setup() {
 	if has test $FEATURES && ! use test ; then
 		die "FEATURES=test is set but USE=test is not; tests will fail without USE=test"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${PN}-1.1.91-undefined-lhp.patch
 }
 
 src_compile() {
