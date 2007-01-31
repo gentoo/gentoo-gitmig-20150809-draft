@@ -1,16 +1,16 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.93-r1.ebuild,v 1.1 2007/01/30 06:18:40 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.93-r1.ebuild,v 1.2 2007/01/31 08:36:55 opfer Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
-inherit alternatives autotools elisp-common  eutils flag-o-matic
+inherit alternatives autotools elisp-common	 eutils flag-o-matic
 
 DESCRIPTION="The extensible, customizable, self-documenting real-time display editor"
 SRC_URI="ftp://alpha.gnu.org/gnu/emacs/pretest/emacs-${PV}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/emacs/"
-IUSE="alsa aqua gif gnome gtk gzip-el jpeg lesstif motif nls png spell  source tiff  toolkit-scroll-bars X Xaw3d "
+IUSE="alsa aqua gif gnome gtk gzip-el jpeg lesstif motif nls png spell	source tiff	 toolkit-scroll-bars X Xaw3d "
 
 RESTRICT="$RESTRICT nostrip"
 
@@ -29,7 +29,7 @@ DEPEND="sys-libs/ncurses
 		!Xaw3d? ( motif? ( x11-libs/openmotif ) )
 		!motif? ( lesstif? ( x11-libs/lesstif ) )
 		gnome? ( gnome-base/gnome-desktop ) )
-	alsa? ( media-sound/alsa-headers )	
+	alsa? ( media-sound/alsa-headers )
 	gzip-el? ( app-arch/gzip  )
 	nls? ( sys-devel/gettext )"
 
@@ -164,7 +164,7 @@ EOF
 	fi
 	dodoc BUGS ChangeLog README
 
-	make_desktop_entry /usr/bin/emacs Emacs /usr/share/emacs/${SLOT}/etc/images/icons/emacs_48.png  editors
+	make_desktop_entry /usr/bin/emacs Emacs /usr/share/emacs/${SLOT}/etc/images/icons/emacs_48.png	editors
 }
 
 update-alternatives() {
@@ -178,8 +178,17 @@ update-alternatives() {
 pkg_postinst() {
 	use ppc-macos || update-alternatives
 	elisp-site-regen
+
+	# ecompress from Portage 2.2.* does auto-compression
+	# which is not desired for the dir file
+	# temporary fix until we know how to fix it properly
+	if [ -f /usr/share/info/emacs-${SLOT}/dir.bz2 ]; then
+		bunzip2 -q /usr/share/info/emacs-${SLOT}/dir.bz2
+	fi
+
+
 	if use X; then
-		elog "You need to install some fonts for Emacs.  Under monolithic"
+		elog "You need to install some fonts for Emacs.	 Under monolithic"
 		elog "XFree86/Xorg you typically had such fonts installed by default."
 		elog "With modular Xorg, you will have to perform this step yourself."
 		elog "Installing media-fonts/font-adobe-{75,100}dpi would satisfy basic"
