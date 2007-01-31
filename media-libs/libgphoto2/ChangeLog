@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.90 2007/01/30 19:57:28 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.91 2007/01/31 15:53:38 cardoe Exp $
+
+*libgphoto2-2.3.1-r2 (31 Jan 2007)
+
+  31 Jan 2007; Doug Goldstein <cardoe@gentoo.org>
+  +files/libgphoto2-2.3.1-udev-rules-fix.diff, +libgphoto2-2.3.1-r2.ebuild:
+  Fix for generating udev rules properly. Rather then recursive it just
+  changes the device. Also don't accidentally match on VendorID=0.
 
   30 Jan 2007; Alon Bar-Lev <alonbl@gentoo.org> libgphoto2-2.3.1-r1.ebuild:
   Fix an issue with gtk-doc installed, bug#164530
