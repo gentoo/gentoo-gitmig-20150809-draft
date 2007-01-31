@@ -6,8 +6,8 @@
 
 <longdescription>
 
-Network Security Services for Java (JSS) is a Java interface to NSS. It supports 
-most of the security standards and encryption technologies supported by NSS. JSS 
+Network Security Services for Java (JSS) is a Java interface to NSS. It supports
+most of the security standards and encryption technologies supported by NSS. JSS
 also provides a pure Java interface for ASN.1 types and BER/DER encoding.
 
 </longdescription>
