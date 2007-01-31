@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ruby-mode
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.21 2007/01/02 21:45:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.22 2007/01/31 03:41:44 jer Exp $
+
+  31 Jan 2007; Jeroen Roovers <jer@gentoo.org> ruby-mode-1.8.4.ebuild:
+  Marked ~hppa (bug #156388).
 
   02 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ruby-mode-1.8.4.ebuild:
   Add ~sparc-fbsd keyword.
