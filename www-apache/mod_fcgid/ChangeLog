@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_fcgid
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.20 2007/01/15 16:22:38 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.21 2007/01/31 20:48:29 dertobi123 Exp $
+
+  31 Jan 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  mod_fcgid-1.10.ebuild:
+  Stable on ppc wrt bug #161193.
 
   15 Jan 2007; Luca Longinotti <chtekk@gentoo.org>
   -files/20_mod_fcgid.conf-oldlayout, -mod_fcgid-1.07-r1.ebuild,
