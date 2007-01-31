@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gst-plugins-good
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/ChangeLog,v 1.28 2007/01/30 07:21:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/ChangeLog,v 1.29 2007/01/31 19:18:28 corsair Exp $
+
+  31 Jan 2007; Markus Rothe <corsair@gentoo.org>
+  gst-plugins-good-0.10.4.ebuild:
+  Stable on ppc64; bug #163541
 
   30 Jan 2007; Jeroen Roovers <jer@gentoo.org>
   gst-plugins-good-0.10.4.ebuild:
