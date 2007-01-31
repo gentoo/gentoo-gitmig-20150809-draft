@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.4 2006/12/05 17:56:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.5 2007/01/31 08:00:45 vapier Exp $
 
 inherit eutils games
 
@@ -22,21 +22,15 @@ UIDEPEND="virtual/opengl
 		x11-libs/libX11
 		x11-libs/libXext
 		x11-libs/libXau
-		x11-libs/libXdmcp )
-	amd64? (
-		app-emulation/emul-linux-x86-xlibs )"
-
+		x11-libs/libXdmcp
+	)
+	amd64? ( app-emulation/emul-linux-x86-xlibs )"
 RDEPEND="sys-libs/glibc
-	dedicated? (
-		app-misc/screen )
-	!dedicated? (
-		${UIDEPEND} )
-	opengl? (
-		${UIDEPEND} )
-	x86? (
-		sys-libs/lib-compat )
-	amd64? (
-		app-emulation/emul-linux-x86-compat )"
+	dedicated? ( app-misc/screen )
+	!dedicated? ( ${UIDEPEND} )
+	opengl? ( ${UIDEPEND} )
+	x86? ( sys-libs/lib-compat )
+	amd64? ( app-emulation/emul-linux-x86-compat )"
 
 S=${WORKDIR}
 

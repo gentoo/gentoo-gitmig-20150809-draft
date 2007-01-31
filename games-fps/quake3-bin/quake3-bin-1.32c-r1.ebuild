@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32c-r1.ebuild,v 1.2 2006/10/25 16:03:24 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32c-r1.ebuild,v 1.3 2007/01/31 08:01:35 vapier Exp $
 
 inherit eutils games
 
@@ -20,15 +20,17 @@ UIDEPEND="virtual/opengl
 		x11-libs/libXext
 		x11-libs/libX11
 		x11-libs/libXau
-		x11-libs/libXdmcp )
+		x11-libs/libXdmcp
+	)
 	amd64? (
 		app-emulation/emul-linux-x86-xlibs
 		|| (
 			>=app-emulation/emul-linux-x86-xlibs-7.0
 			x11-drivers/nvidia-drivers
 			x11-drivers/nvidia-legacy-drivers
-			>=x11-drivers/ati-drivers-8.8.25-r1 ) )"
-
+			>=x11-drivers/ati-drivers-8.8.25-r1
+		)
+	)"
 DEPEND="app-arch/unzip"
 RDEPEND="sys-libs/glibc
 	dedicated? ( app-misc/screen )

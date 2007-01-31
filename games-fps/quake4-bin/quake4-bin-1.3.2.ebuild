@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.3.2.ebuild,v 1.4 2007/01/07 20:37:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.3.2.ebuild,v 1.5 2007/01/31 08:01:00 vapier Exp $
 
 inherit eutils versionator games
 
@@ -22,7 +22,8 @@ UIDEPEND="virtual/opengl
 		x11-libs/libX11
 		x11-libs/libXau
 		x11-libs/libXdmcp
-		media-libs/libsdl )
+		media-libs/libsdl
+	)
 	amd64? (
 		app-emulation/emul-linux-x86-sdl
 		app-emulation/emul-linux-x86-xlibs
@@ -30,9 +31,10 @@ UIDEPEND="virtual/opengl
 			>=app-emulation/emul-linux-x86-xlibs-7.0
 			x11-drivers/nvidia-drivers
 			x11-drivers/nvidia-legacy-drivers
-			>=x11-drivers/ati-drivers-8.8.25-r1 ) )
+			>=x11-drivers/ati-drivers-8.8.25-r1
+		)
+	)
 	alsa? ( >=media-libs/alsa-lib-1.0.6 )"
-
 RDEPEND="sys-libs/glibc
 	dedicated? ( app-misc/screen )
 	amd64? ( app-emulation/emul-linux-x86-baselibs )
