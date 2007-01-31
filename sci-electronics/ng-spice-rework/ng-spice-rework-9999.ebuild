@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ng-spice-rework-9999.ebuild,v 1.2 2006/05/12 19:09:19 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ng-spice-rework-9999.ebuild,v 1.3 2007/01/31 18:14:15 calchan Exp $
 
 inherit eutils cvs
 
@@ -15,7 +15,7 @@ LICENSE="BSD GPL-2"
 
 SLOT="0"
 IUSE="readline debug"
-KEYWORDS="-*"
+KEYWORDS=""
 
 DEPEND="readline? ( >=sys-libs/readline-5.0 )"
 

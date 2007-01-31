@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/ng-spice-rework
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ChangeLog,v 1.15 2006/09/05 18:26:10 gustavoz Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ChangeLog,v 1.16 2007/01/31 18:14:15 calchan Exp $
+
+  31 Jan 2007; Denis Dupeyron <calchan@gentoo.org>
+  ng-spice-rework-9999.ebuild:
+  Fixed KEYWORDS, see bug #160519.
 
   05 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   ng-spice-rework-17-r1.ebuild:
