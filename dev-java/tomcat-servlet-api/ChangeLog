@@ -1,6 +1,17 @@
 # ChangeLog for dev-java/tomcat-servlet-api
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.7 2007/01/28 07:26:11 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.8 2007/01/31 06:49:12 wltjr Exp $
+
+*tomcat-servlet-api-6.0.8_alpha-r1 (31 Jan 2007)
+*tomcat-servlet-api-6.0.7_beta-r1 (31 Jan 2007)
+
+  31 Jan 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -tomcat-servlet-api-6.0.7_beta.ebuild,
+  +tomcat-servlet-api-6.0.7_beta-r1.ebuild,
+  -tomcat-servlet-api-6.0.8_alpha.ebuild,
+  +tomcat-servlet-api-6.0.8_alpha-r1.ebuild:
+  Revision bump to address failure to install sources when flag is used per
+  bug# 164557
 
   28 Jan 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   tomcat-servlet-api-5.5.20.ebuild, tomcat-servlet-api-6.0.7_beta.ebuild,
