@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gnome-vfsmm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/ChangeLog,v 1.38 2007/01/31 02:24:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/ChangeLog,v 1.39 2007/01/31 18:21:12 corsair Exp $
+
+  31 Jan 2007; Markus Rothe <corsair@gentoo.org> gnome-vfsmm-2.16.0.ebuild:
+  Stable on ppc64; bug #147331
 
   31 Jan 2007; Jeroen Roovers <jer@gentoo.org> gnome-vfsmm-2.16.0.ebuild:
   Stable for HPPA (bug #147331).
