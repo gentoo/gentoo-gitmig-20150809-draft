@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-maildir
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-maildir/ChangeLog,v 1.4 2007/01/29 00:05:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-maildir/ChangeLog,v 1.5 2007/01/31 19:35:26 corsair Exp $
+
+  31 Jan 2007; Markus Rothe <corsair@gentoo.org>
+  claws-mail-maildir-0.24.3.ebuild:
+  Stable on ppc64; bug #163611
 
   29 Jan 2007; Jason Wever <weeve@gentoo.org>
   claws-mail-maildir-0.24.3.ebuild:
