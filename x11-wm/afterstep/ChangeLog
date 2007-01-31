@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/afterstep
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.73 2007/01/31 13:46:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.74 2007/01/31 18:34:50 corsair Exp $
+
+  31 Jan 2007; Markus Rothe <corsair@gentoo.org> afterstep-2.2.4.ebuild:
+  Stable on ppc64; bug #153726
 
   31 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   afterstep-2.2.4.ebuild:
