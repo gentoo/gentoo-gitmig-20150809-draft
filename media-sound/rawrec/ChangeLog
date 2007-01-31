@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rawrec
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rawrec/ChangeLog,v 1.10 2006/07/02 19:08:59 pylon Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rawrec/ChangeLog,v 1.11 2007/01/31 20:58:29 corsair Exp $
+
+  31 Jan 2007; Markus Rothe <corsair@gentoo.org> rawrec-0.9.98.ebuild:
+  Stable on ppc64; bug #163699
 
   02 Jul 2006; Lars Weiler <pylon@gentoo.org> rawrec-0.9.98.ebuild:
   Stable on ppc.
