@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javassist/javassist-2.6.ebuild,v 1.3 2005/04/30 19:59:19 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javassist/javassist-2.6.ebuild,v 1.4 2007/01/31 12:44:04 drizzt Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.csg.is.titech.ac.jp/~chiba/javassist/"
 
 LICENSE="MPL-1.1"
 SLOT="2"
-KEYWORDS="x86 amd64 ~ppc"
+KEYWORDS="amd64 ppc x86"
 IUSE="doc jikes source"
 
 RDEPEND=">=virtual/jre-1.4"

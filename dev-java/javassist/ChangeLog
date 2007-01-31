@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/javassist
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javassist/ChangeLog,v 1.6 2006/09/11 16:03:19 nelchael Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javassist/ChangeLog,v 1.7 2007/01/31 12:44:04 drizzt Exp $
+
+  31 Jan 2007; Timothy Redaelli <drizzt@gentoo.org> javassist-2.6.ebuild,
+  javassist-3.1_rc2-r1.ebuild:
+  Stable on ppc, thanks to Nathan Smith for reporting.
 
   11 Sep 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   +files/javassist-3.1_rc2-classpath.patch, -javassist-3.1_rc2.ebuild,
