@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.45.ebuild,v 1.6 2005/02/06 14:00:15 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.45.ebuild,v 1.7 2007/01/31 14:37:37 genone Exp $
 
 inherit eutils
 
@@ -95,7 +95,7 @@ src_install() {
 
 pkg_postinst()
 {
-	einfo
-	einfo "You need to run env-update to get a working installation"
-	einfo
+	elog
+	elog "You need to run env-update to get a working installation"
+	elog
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/nqc-2.5.1.ebuild,v 1.11 2006/06/18 14:06:51 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/nqc-2.5.1.ebuild,v 1.12 2007/01/31 14:32:38 genone Exp $
 
 inherit eutils
 
@@ -37,7 +37,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "To change the default serial name for nqc (/dev/ttyS0) set"
-	einfo "the environment variable NQC_SERIAL and reemerge nqc, e.g.:"
-	einfo " NQC_SERIAL='/dev/ttyS1' emerge nqc"
+	elog "To change the default serial name for nqc (/dev/ttyS0) set"
+	elog "the environment variable NQC_SERIAL and reemerge nqc, e.g.:"
+	elog " NQC_SERIAL='/dev/ttyS1' emerge nqc"
 }

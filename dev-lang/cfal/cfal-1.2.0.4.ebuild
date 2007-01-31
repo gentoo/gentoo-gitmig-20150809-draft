@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cfal/cfal-1.2.0.4.ebuild,v 1.7 2006/11/23 06:40:08 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cfal/cfal-1.2.0.4.ebuild,v 1.8 2007/01/31 14:24:59 genone Exp $
 
 IUSE=""
 
@@ -120,10 +120,10 @@ src_install() {
 }
 
 pkg_postinst () {
-	einfo
-	einfo "cfal has been merged successfully, the EULA"
-	einfo "is available in"
-	einfo
-	einfo "/usr/share/doc/${PF}/README"
-	einfo
+	elog
+	elog "cfal has been merged successfully, the EULA"
+	elog "is available in"
+	elog
+	elog "/usr/share/doc/${PF}/README"
+	elog
 }

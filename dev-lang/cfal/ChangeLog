@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/cfal
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cfal/ChangeLog,v 1.6 2006/11/23 06:40:08 masterdriverz Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cfal/ChangeLog,v 1.7 2007/01/31 14:24:59 genone Exp $
+
+  31 Jan 2007; Marius Mauch <genone@gentoo.org> cfal-1.2.0.4.ebuild:
+  Replacing einfo with elog
 
   23 Nov 2006; Charlie Shepherd <masterdriverz@gentoo.org> ChangeLog:
   Remove prepallman call as its invoked automatically, bug 140697

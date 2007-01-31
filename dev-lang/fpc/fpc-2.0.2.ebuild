@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.2.ebuild,v 1.3 2006/08/05 15:15:49 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.2.ebuild,v 1.4 2007/01/31 14:31:05 genone Exp $
 
 inherit eutils
 
@@ -157,6 +157,6 @@ pkg_postinst() {
 		sparc)	FPC_ARCH="sparc" ;;
 		*) die "This ebuild doesn't support ${ARCH}." ;;
 	esac
-	einfo "/usr/bin/ppc${FPC_ARCH} now points to the new binary:"
-	einfo "			/usr/lib/${PN}/${PV}/ppc${FPC_ARCH}"
+	elog "/usr/bin/ppc${FPC_ARCH} now points to the new binary:"
+	elog "			/usr/lib/${PN}/${PV}/ppc${FPC_ARCH}"
 }

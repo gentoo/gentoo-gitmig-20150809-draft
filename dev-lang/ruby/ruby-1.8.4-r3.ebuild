@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4-r3.ebuild,v 1.14 2007/01/04 22:17:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4-r3.ebuild,v 1.15 2007/01/31 14:40:50 genone Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -135,9 +135,9 @@ pkg_postinst() {
 		if [ ! -n "$(readlink ${ROOT}usr/bin/ruby)" ] ; then
 			${ROOT}usr/sbin/ruby-config ruby${SLOT/./}
 		fi
-		einfo
-		einfo "You can change the default ruby interpreter by ${ROOT}usr/sbin/ruby-config"
-		einfo
+		elog
+		elog "You can change the default ruby interpreter by ${ROOT}usr/sbin/ruby-config"
+		elog
 	fi
 }
 

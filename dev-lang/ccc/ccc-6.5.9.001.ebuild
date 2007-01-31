@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ccc-6.5.9.001.ebuild,v 1.8 2006/10/28 13:58:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ccc-6.5.9.001.ebuild,v 1.9 2007/01/31 14:22:04 genone Exp $
 #
 # Ebuild contributed by Tavis Ormandy <taviso@sdf.lonestar.org>
 # and edited by Aron Griffis <agriffis@gentoo.org>
@@ -161,29 +161,29 @@ pkg_config () {
 }
 
 pkg_postinst () {
-	einfo
-	einfo "ccc has been merged successfully, the EULA"
-	einfo "is available in"
-	einfo
-	einfo "/usr/lib/compaq/ccc-${ccc_release}/alpha-linux/bin/LICENSE.txt"
-	einfo
+	elog
+	elog "ccc has been merged successfully, the EULA"
+	elog "is available in"
+	elog
+	elog "/usr/lib/compaq/ccc-${ccc_release}/alpha-linux/bin/LICENSE.txt"
+	elog
 	if use doc >/dev/null; then
-		einfo "You can also view the compiler documentation"
-		einfo "in /usr/share/doc/ccc-${PV}"
+		elog "You can also view the compiler documentation"
+		elog "in /usr/share/doc/ccc-${PV}"
 	fi
 	ewarn
 	ewarn "you _MUST_ now run:"
 	ewarn "emerge --config =${CATEGORY}/${PF}"
 	ewarn "to complete the installation"
 	ewarn
-	einfo "Hopefullly soon we will get a ccc USE flag"
-	einfo "on packages (or at least individual"
-	einfo "components) that can be successfully built"
-	einfo "using this compiler, until then you will"
-	einfo "just have to experiment :)"
-	einfo
-	einfo "Please report successes/failures with ccc"
-	einfo "to http://bugs.gentoo.org so that the USE"
-	einfo "flags can be updated."
-	einfo
+	elog "Hopefullly soon we will get a ccc USE flag"
+	elog "on packages (or at least individual"
+	elog "components) that can be successfully built"
+	elog "using this compiler, until then you will"
+	elog "just have to experiment :)"
+	elog
+	elog "Please report successes/failures with ccc"
+	elog "to http://bugs.gentoo.org so that the USE"
+	elog "flags can be updated."
+	elog
 }

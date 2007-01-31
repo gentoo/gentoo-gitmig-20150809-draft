@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/nqc
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/ChangeLog,v 1.10 2006/06/18 14:06:51 pylon Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/ChangeLog,v 1.11 2007/01/31 14:32:38 genone Exp $
+
+  31 Jan 2007; Marius Mauch <genone@gentoo.org> nqc-2.5.1.ebuild,
+  nqc-3.1_p4.ebuild:
+  Replacing einfo with elog
 
 *nqc-3.1_p4 (18 Jun 2006)
 

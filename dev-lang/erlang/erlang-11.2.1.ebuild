@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.1.ebuild,v 1.10 2006/12/22 14:59:47 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.1.ebuild,v 1.11 2007/01/31 14:28:59 genone Exp $
 
 inherit eutils multilib flag-o-matic elisp-common versionator
 
@@ -131,10 +131,10 @@ src_install() {
 
 pkg_postinst() {
 	use emacs && elisp-site-regen
-	einfo
-	einfo "If you need a symlink to one of erlang's binaries,"
-	einfo "please open a bug and tell the maintainers."
-	einfo
+	elog
+	elog "If you need a symlink to one of erlang's binaries,"
+	elog "please open a bug and tell the maintainers."
+	elog
 }
 
 pkg_postrm() {

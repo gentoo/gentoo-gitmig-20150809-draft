@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.0-r1.ebuild,v 1.5 2005/12/17 16:17:58 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.0-r1.ebuild,v 1.6 2007/01/31 14:31:05 genone Exp $
 
 inherit eutils
 
@@ -156,6 +156,6 @@ pkg_postinst() {
 		FPCARCH=x64
 		;;
 	esac
-	einfo "/usr/bin/ppc${FPCARCH} now points to the new binary:"
-	einfo "			/usr/lib/${PN}/${MY_PV}/ppc${FPCARCH}"
+	elog "/usr/bin/ppc${FPCARCH} now points to the new binary:"
+	elog "			/usr/lib/${PN}/${MY_PV}/ppc${FPCARCH}"
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/nqc-3.1_p4.ebuild,v 1.1 2006/06/18 14:06:51 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/nqc-3.1_p4.ebuild,v 1.2 2007/01/31 14:32:38 genone Exp $
 
 inherit eutils
 
@@ -38,16 +38,16 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "To change the default serial name for nqc (/dev/ttyS0) set"
-	einfo "the environment variable RCX_PORT or use the nqc command line"
-	einfo "option -S to specify your serial port."
+	elog "To change the default serial name for nqc (/dev/ttyS0) set"
+	elog "the environment variable RCX_PORT or use the nqc command line"
+	elog "option -S to specify your serial port."
 	if use usb; then
-		einfo
-		einfo "You have enabled USB support. To use usb on the"
-		einfo "command line use the -Susb command line option"
+		elog
+		elog "You have enabled USB support. To use usb on the"
+		elog "command line use the -Susb command line option"
 	else
-		einfo
-		einfo "You have not enabled usb support and will be unable"
-		einfo "to use the usb IR tower. To enable USB use the usb use flag"
+		elog
+		elog "You have not enabled usb support and will be unable"
+		elog "to use the usb IR tower. To enable USB use the usb use flag"
 	fi
 }
