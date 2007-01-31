@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-1.1.17-r1.ebuild,v 1.2 2007/01/29 12:03:57 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-1.1.17-r1.ebuild,v 1.3 2007/01/31 07:22:45 compnerd Exp $
 
 inherit eutils mono multilib autotools
 
@@ -57,7 +57,7 @@ src_unpack() {
 src_compile() {
 	local myconf="$(use_enable gtkhtml) $(use_enable seamonkey mozilla)"
 
-	if ! use gtktml && ! use seamonkey ; then
+	if ! use gtkhtml && ! use seamonkey ; then
 		myconf="--enable-gtkhtml --disable-mozilla"
 	fi
 
