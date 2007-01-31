@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/nas
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.49 2007/01/05 17:16:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.50 2007/01/31 14:46:56 beandog Exp $
+
+*nas-1.8 (31 Jan 2007)
+
+  31 Jan 2007; Steve Dibb <beandog@gentoo.org> +nas-1.8.ebuild:
+  Version bump, bug 137221
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> nas-1.7-r1.ebuild:
   Convert to use elog.
