@@ -1,12 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.3.1-r2.ebuild,v 1.1 2007/01/31 15:53:38 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.3.1-r2.ebuild,v 1.2 2007/01/31 18:52:49 alonbl Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
 #	http://sourceforge.net/tracker/index.php?func=detail&aid=1643870&group_id=8874&atid=108874
 # 2. Track upstream bug udevscriptdir does not work.
 #	http://sourceforge.net/tracker/index.php?func=detail&aid=1646520&group_id=8874&atid=108874
+#	http://sourceforge.net/tracker/index.php?func=detail&aid=1648346&group_id=8874&atid=108874
 # 3. Track upstream bug regarding rpm usage.
 #	http://sourceforge.net/tracker/index.php?func=detail&aid=1643813&group_id=8874&atid=358874
 
