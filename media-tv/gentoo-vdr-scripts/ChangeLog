@@ -1,6 +1,17 @@
 # ChangeLog for media-tv/gentoo-vdr-scripts
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.70 2007/01/18 20:18:43 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.71 2007/01/31 21:38:29 hd_brummy Exp $
+
+*gentoo-vdr-scripts-0.3.8 (31 Jan 2007)
+
+  31 Jan 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +gentoo-vdr-scripts-0.3.8.ebuild:
+  Set default log-level to 3 to make logs more usefull.
+  Make the time to wait for running vdr configurable.
+  Move start-log file to tmp-folder.
+  Store list of plugins when starting vdr, to call correct rcaddons at stopping.
+  Creating empty channels.conf if none exists.
+  Added none-wakeup methode
 
   18 Jan 2007; Matthias Schwarzott <zzam@gentoo.org>
   -gentoo-vdr-scripts-0.3.6.ebuild:
