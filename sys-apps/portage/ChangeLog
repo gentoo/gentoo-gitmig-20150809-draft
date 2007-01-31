@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.338 2007/01/29 03:20:32 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.339 2007/01/31 17:42:49 zmedico Exp $
+
+  31 Jan 2007; Zac Medico <zmedico@gentoo.org> portage-2.1.2-r5.ebuild:
+  Add RDEPEND=">=coreutils-6.4" for bug #164532.
 
 *portage-2.1.2-r5 (29 Jan 2007)
 
