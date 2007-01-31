@@ -1,6 +1,11 @@
 # ChangeLog for rox-extra/picky
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/picky/ChangeLog,v 1.8 2006/11/20 18:26:45 opfer Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/picky/ChangeLog,v 1.9 2007/01/31 00:12:12 lack Exp $
+
+*picky-0.4.5-r1 (31 Jan 2007)
+
+  31 Jan 2007; Jim Ramsay <lack@gentoo.org> +picky-0.4.5-r1.ebuild:
+  Added APPCATEGORY so a .desktop file will be installed
 
   20 Nov 2006; Christian Faulhammer <opfer@gentoo.org> picky-0.4.5.ebuild:
   stable x86, bug #155521

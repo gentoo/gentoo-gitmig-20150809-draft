@@ -1,6 +1,11 @@
 # ChangeLog for rox-extra/musicbox
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/musicbox/ChangeLog,v 1.6 2006/11/20 18:25:57 opfer Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/musicbox/ChangeLog,v 1.7 2007/01/31 00:10:58 lack Exp $
+
+*musicbox-027-r1 (31 Jan 2007)
+
+  31 Jan 2007; Jim Ramsay <lack@gentoo.org> +musicbox-027-r1.ebuild:
+  Added APPCATEGORY so a .desktop file will be installed
 
   20 Nov 2006; Christian Faulhammer <opfer@gentoo.org> musicbox-027.ebuild:
   stable x86, bug #155521
