@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/scipy
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.14 2006/11/01 00:51:46 dberkholz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.15 2007/01/31 09:03:43 nerdboy Exp $
+
+*scipy-0.5.2 (31 Jan 2007)
+
+  31 Jan 2007; Steve Arnold <nerdboy@gentoo.org> +scipy-0.5.2.ebuild:
+  version bump with fix for bug 149153 (needs cleanup and stablization)
 
   01 Nov 2006; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
   Update for my nick change spyderous -> dberkholz.
