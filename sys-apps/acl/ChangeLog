@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/acl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.69 2007/01/30 06:30:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.70 2007/01/31 20:47:08 dertobi123 Exp $
+
+  31 Jan 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  acl-2.2.39-r1.ebuild:
+  Stable on ppc wrt bug #161640.
 
   30 Jan 2007; Jeroen Roovers <jer@gentoo.org> acl-2.2.39-r1.ebuild:
   Stable for HPPA (bug #161640).
