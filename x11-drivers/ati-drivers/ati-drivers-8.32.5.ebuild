@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.32.5.ebuild,v 1.1 2006/12/25 13:39:28 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.32.5.ebuild,v 1.2 2007/01/31 23:17:29 lu_zero Exp $
 
 IUSE="acpi doc opengl"
 
@@ -20,7 +20,8 @@ RDEPEND="|| ( x11-base/xorg-server virtual/x11 )
 	 acpi? (
 	 	|| ( x11-apps/xauth virtual/x11 )
 	 	sys-power/acpid
-	 )"
+	 )
+	 x11-libs/libXrandr"
 
 DEPEND=">=virtual/linux-sources-2.4
 	${RDEPEND}"
