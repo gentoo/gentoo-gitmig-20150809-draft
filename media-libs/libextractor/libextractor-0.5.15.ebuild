@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-0.5.15.ebuild,v 1.4 2007/01/20 21:29:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-0.5.15.ebuild,v 1.5 2007/01/31 11:50:05 armin76 Exp $
 
 inherit libtool
 
@@ -21,12 +21,13 @@ DEPEND="virtual/libc
 	gtk? ( >=x11-libs/gtk+-2.6.10 )
 	zlib? ( sys-libs/zlib )
 	vorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
+MAKEOPTS="${MAKEOPTS} -j1"
 
 src_compile() {
 	elibtoolize
 	econf --enable-glib --enable-exiv2 \
 		$(use_enable static) $(use_enable nls) || die "econf failed"
-	emake MAKEOPTS="-j1" || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install () {
