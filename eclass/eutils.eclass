@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.271 2007/01/22 06:03:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.272 2007/01/31 04:40:31 vapier Exp $
 #
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
@@ -894,7 +894,7 @@ make_desktop_entry() {
 	else
 		local desktop_name="${PN}-${SLOT}"
 	fi
-	local desktop=${T}/${exec%% *}-${desktop_name}.desktop
+	local desktop="${T}/$(echo ${exec} | sed 's:[[:space:]/:]:_:g')-${desktop_name}.desktop"
 	#local desktop=${T}/${exec%% *:-${desktop_name}}.desktop
 
 	cat <<-EOF > "${desktop}"
