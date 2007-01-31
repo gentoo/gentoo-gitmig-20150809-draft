@@ -1,0 +1,9 @@
+# ChangeLog for xfce-extra/thunar-volman
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/ChangeLog,v 1.1 2007/01/31 15:17:42 welp Exp $
+
+*thunar-volman-0.1.2 (31 Jan 2007)
+
+  31 Jan 2007; Peter Weller <welp@gentoo.org> +thunar-volman-0.1.2.ebuild:
+  Initial commit, new ebuild
+
