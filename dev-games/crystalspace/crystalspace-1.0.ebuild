@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.0.ebuild,v 1.1 2007/01/31 08:50:46 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.0.ebuild,v 1.2 2007/01/31 19:48:10 tupone Exp $
 
 MY_P=${PN}-src-${PV}
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/crystal/${MY_P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="3ds alsa cal3d cegui cg java jpeg lcms mng ode perl png python sdl
+IUSE="3ds alsa cal3d cegui cg java jpeg mng ode perl png python sdl
 truetype vorbis wxwindows"
 
 RDEPEND="virtual/opengl
@@ -20,8 +20,7 @@ RDEPEND="virtual/opengl
 	cg? ( media-gfx/nvidia-cg-toolkit )
 	ode? (  dev-games/ode )
 	cal3d? ( =media-libs/cal3d-0.11* )
-	jpeg? ( media-libs/jpeg
-		    lcms? ( media-libs/lcms ) )
+	jpeg? ( media-libs/jpeg )
 	sdl? ( media-libs/libsdl )
 	vorbis? ( media-libs/libogg
 		      media-libs/libvorbis )
@@ -45,12 +44,12 @@ S="${WORKDIR}/${MY_P}"
 
 src_compile() {
 	econf --enable-cpu-specific-optimizations=no \
+		--without-lcms \
 		$(use_with perl) \
 		$(use_with python) \
 		$(use_with java) \
 		$(use_with png) \
 		$(use_with jpeg) \
-		$(use_with lcms) \
 		$(use_with mng) \
 		$(use_with vorbis) \
 		$(use_with 3ds) \
