@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/dazuko
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dazuko/ChangeLog,v 1.19 2007/01/24 06:47:30 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dazuko/ChangeLog,v 1.20 2007/01/31 22:51:44 alonbl Exp $
+
+  31 Jan 2007; Alon Bar-Lev <alonbl@gentoo.org> dazuko-2.3.3_pre1.ebuild:
+  Added kernel 2.4 support, bug#164754, thanks to f.mensik
 
   24 Jan 2007; Alon Bar-Lev <alonbl@gentoo.org> -dazuko-2.1.0.ebuild,
   -dazuko-2.1.1.ebuild, -dazuko-2.2.0.ebuild, -dazuko-2.3.1.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dazuko/dazuko-2.3.3_pre1.ebuild,v 1.1 2007/01/19 19:31:09 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dazuko/dazuko-2.3.3_pre1.ebuild,v 1.2 2007/01/31 22:51:44 alonbl Exp $
 
 inherit linux-mod toolchain-funcs flag-o-matic
 
@@ -17,9 +17,13 @@ RDEPEND=${DEPEND}
 S="${WORKDIR}/${MY_P}"
 
 # kernel settings
-CONFIG_CHECK="SECURITY_CAPABILITIES"
+if [ "${KERNEL}" = "linux" ] && kernel_is le 2 4; then
+	BUILD_TARGETS="all"
+else
+	CONFIG_CHECK="SECURITY_CAPABILITIES"
+	BUILD_TARGETS="dummy_rule"
+fi
 MODULE_NAMES="dazuko(misc:)"
-BUILD_TARGETS="dummy_rule"
 
 pkg_setup() {
 	[ "${KERNEL}" = "linux" ] && linux-mod_pkg_setup
