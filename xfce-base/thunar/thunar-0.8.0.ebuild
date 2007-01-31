@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-0.8.0.ebuild,v 1.4 2007/01/29 18:44:53 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-0.8.0.ebuild,v 1.5 2007/01/31 14:40:53 welp Exp $
 
 inherit eutils xfce44
 
@@ -41,27 +41,24 @@ DEPEND="${RDEPEND}
 XFCE_CONFIG="${XFCE_CONFIG} $(use_enable exif) $(use_enable gnome gnome-thumbnailers) \
 	$(use_enable dbus) $(use_enable pcre)"
 
-use plugins && use dbus || XFCE_CONFIG="${XFCE_CONFIG} --disable-tpa-plugin"
-
 if use hal; then
 	XFCE_CONFIG="${XFCE_CONFIG} --with-volume-manager=hal"
 	else
 	XFCE_CONFIG="${XFCE_CONFIG} --with-volume-manager=none"
 fi
 
-pkg_setup() {
-	if use plugins && ! use dbus ; then
+if use plugins && ! use dbus ; then
+	XFCE_CONFIG="${XFCE_CONFIG} --disable-tpa-plugin"
 	ewarn "Plugins requires ${PN} with dbus support. Enable dbus use flag"
 	ewarn "and re-emerge this ebuild if you want this feature."
 	epause 3
-	fi
+fi
 
-	if use hal && ! use dbus ; then
+if use hal && ! use dbus ; then
 	ewarn "HAL requires ${PN} with dbus support. Enable dbus use flag"
 	ewarn "and re-emerge this ebuild if you want this feature."
 	die "re-emerge with USE dbus"
-	fi
-}
+fi
 
 DOCS="AUTHORS ChangeLog HACKING FAQ THANKS TODO README NEWS"
 
