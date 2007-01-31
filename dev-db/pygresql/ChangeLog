@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/pygresql
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.38 2006/11/30 09:42:12 mabi Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.39 2007/01/31 02:39:05 jer Exp $
+
+  31 Jan 2007; Jeroen Roovers <jer@gentoo.org> pygresql-3.8.1.ebuild:
+  Marked ~hppa (bug #154793).
 
   30 Nov 2006; Matti Bickel <mabi@gentoo.org> pygresql-3.8.1.ebuild:
   Remarked ~ppc (bug #154793)

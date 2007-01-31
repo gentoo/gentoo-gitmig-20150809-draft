@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/pygresql-3.8.1.ebuild,v 1.2 2006/11/30 09:42:12 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/pygresql-3.8.1.ebuild,v 1.3 2007/01/31 02:39:04 jer Exp $
 
 inherit eutils distutils
 
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~hppa ~ppc ~sparc ~x86"
 
 MY_P="PyGreSQL-${PV}"
 
