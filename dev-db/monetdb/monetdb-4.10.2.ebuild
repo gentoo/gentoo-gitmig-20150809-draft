@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/monetdb-4.10.2.ebuild,v 1.6 2006/09/20 08:17:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/monetdb-4.10.2.ebuild,v 1.7 2007/01/31 13:41:05 genone Exp $
 
 inherit flag-o-matic eutils
 
@@ -224,7 +224,7 @@ src_test() {
 }
 
 pkg_postinst() {
-	while read line; do einfo "${line}"; done <<EOF
+	while read line; do elog "${line}"; done <<EOF
 MonetDB has been installed on your system, using data directory
 ${DATA_DIR}.
 To get started using SQL, XQuery or MIL see:

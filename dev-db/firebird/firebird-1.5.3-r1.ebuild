@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.3-r1.ebuild,v 1.8 2006/11/23 20:33:20 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.3-r1.ebuild,v 1.9 2007/01/31 13:38:06 genone Exp $
 
 inherit flag-o-matic eutils
 
@@ -138,26 +138,26 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "1. If haven't done so already, please run:"
-	einfo
-	einfo "   \"emerge --config =${PF}\""
-	einfo
-	einfo "   to create lockfiles, set permissions and more"
-	einfo
-	einfo "2. Firebird now runs with it's own user. Please remember to"
-	einfo "   set permissions to firebird:firebird on databases you "
-	einfo "   already have (if any)."
-	einfo
+	elog
+	elog "1. If haven't done so already, please run:"
+	elog
+	elog "   \"emerge --config =${PF}\""
+	elog
+	elog "   to create lockfiles, set permissions and more"
+	elog
+	elog "2. Firebird now runs with it's own user. Please remember to"
+	elog "   set permissions to firebird:firebird on databases you "
+	elog "   already have (if any)."
+	elog
 
 	if ! use xinetd
 	then
-		einfo "3. You've built the stand alone deamon version,"
-		einfo "   SuperServer. If you were using pre 1.5.0 ebuilds"
-		einfo "   you're probably have one installed via xinetd. please"
-		einfo "   remember to disable it (usually in /etc/xinetd.d/firebird),"
-		einfo "   since the current one has it's own init script under"
-		einfo "   /etc/init.d"
+		elog "3. You've built the stand alone deamon version,"
+		elog "   SuperServer. If you were using pre 1.5.0 ebuilds"
+		elog "   you're probably have one installed via xinetd. please"
+		elog "   remember to disable it (usually in /etc/xinetd.d/firebird),"
+		elog "   since the current one has it's own init script under"
+		elog "   /etc/init.d"
 	fi
 }
 
@@ -215,11 +215,11 @@ pkg_config() {
 		chown firebird:firebird /etc/firebird/{isc4.*,security.*}
 		chmod 660 /etc/firebird/{isc4.*,security.*}
 
-		einfo
-		einfo "Converted old isc4.gdb to security.fdb, isc4.gdb has been "
-		einfo "renamed to isc4.gdb.old. if you had previous security.fdb, "
-		einfo "it's backed to security.fdb.old (all under /etc/firebird)."
-		einfo
+		elog
+		elog "Converted old isc4.gdb to security.fdb, isc4.gdb has been "
+		elog "renamed to isc4.gdb.old. if you had previous security.fdb, "
+		elog "it's backed to security.fdb.old (all under /etc/firebird)."
+		elog
 	fi
 
 	# we need to enable local access to the server
@@ -243,6 +243,6 @@ pkg_config() {
 		einfo "Added ${HS_NAME} to /etc/hosts.equiv"
 	fi
 
-	einfo "If you're using UDFs, please remember to move them"
-	einfo "to /opt/firebird/UDF"
+	elog "If you're using UDFs, please remember to move them"
+	elog "to /opt/firebird/UDF"
 }

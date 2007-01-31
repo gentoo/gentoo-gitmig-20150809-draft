@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/dbdesigner/dbdesigner-4.0.5.4.ebuild,v 1.9 2006/02/24 03:28:17 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/dbdesigner/dbdesigner-4.0.5.4.ebuild,v 1.10 2007/01/31 13:32:41 genone Exp $
 
 DESCRIPTION="DBDesigner 4 is a visual database design system that integrates database design, modeling, creation and maintenance."
 HOMEPAGE="http://www.fabforce.net/dbdesigner4/"
@@ -49,7 +49,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "To start DBDesigner4, run 'startdbd'"
-	einfo
+	elog
+	elog "To start DBDesigner4, run 'startdbd'"
+	elog
 }

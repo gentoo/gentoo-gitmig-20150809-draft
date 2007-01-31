@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/dbdesigner
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/dbdesigner/ChangeLog,v 1.9 2006/02/24 03:28:17 allanonjl Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/dbdesigner/ChangeLog,v 1.10 2007/01/31 13:32:41 genone Exp $
+
+  31 Jan 2007; Marius Mauch <genone@gentoo.org> dbdesigner-4.0.5.4.ebuild:
+  Replacing einfo with elog
 
   24 Feb 2006; John N. Laliberte <allanonjl@gentoo.org>
   dbdesigner-4.0.5.4.ebuild:
