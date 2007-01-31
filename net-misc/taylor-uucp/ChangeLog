@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/taylor-uucp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/taylor-uucp/ChangeLog,v 1.28 2007/01/23 07:29:30 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/taylor-uucp/ChangeLog,v 1.29 2007/01/31 00:34:59 kloeri Exp $
+
+  31 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
+  taylor-uucp-1.07-r1.ebuild:
+  Stable on Alpha.
 
   23 Jan 2007; Alin Nastac <mrness@gentoo.org> taylor-uucp-1.07-r1.ebuild:
   Use GNU mirror (#163198); stable on amd64.
