@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtjava/qtjava-3.5.6-r1.ebuild,v 1.1 2007/02/01 00:44:11 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtjava/qtjava-3.5.6-r1.ebuild,v 1.2 2007/02/01 13:31:53 caster Exp $
 
 KMNAME=kdebindings
 KM_MAKEFILESREV=1
@@ -40,9 +40,10 @@ src_compile() {
 src_install() {
 	kde-meta_src_install
 
+	local libdir="${D}/usr/kde/${SLOT}/$(get_libdir)"
 	# Is there a cleaner way?
-	rm -rf ${D}/usr/kde/${SLOT}/lib/java
+	rm -rf "${libdir}/java" || die "rm failed"
 
 	java-pkg_dojar ${S}/${PN}/javalib/${PN}.jar
-	java-pkg_regso "${D}/usr/kde/${SLOT}"/lib/*.so
+	java-pkg_regso "${libdir}"/*.so
 }
