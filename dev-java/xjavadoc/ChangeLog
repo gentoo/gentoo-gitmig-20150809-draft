@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xjavadoc
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavadoc/ChangeLog,v 1.5 2006/08/25 01:29:41 nichoj Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavadoc/ChangeLog,v 1.6 2007/02/01 08:55:50 opfer Exp $
+
+  01 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  xjavadoc-1.1-r1.ebuild:
+  stable x86; bug #164268
 
 *xjavadoc-1.1-r1 (25 Aug 2006)
 
