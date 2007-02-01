@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcoppython/dcoppython-3.5.5-r1.ebuild,v 1.4 2007/01/30 18:30:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcoppython/dcoppython-3.5.5-r1.ebuild,v 1.5 2007/02/01 12:28:31 corsair Exp $
 
 KMNAME=kdebindings
 KM_MAKEFILESREV=1
@@ -9,7 +9,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="KDE: Python bindings for DCOP"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ppc64 sparc x86"
 IUSE=""
 DEPEND="virtual/python"
 
