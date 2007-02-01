@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gnochm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnochm/ChangeLog,v 1.1 2007/01/22 03:42:24 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnochm/ChangeLog,v 1.2 2007/02/01 15:07:27 beandog Exp $
+
+  01 Feb 2007; Steve Dibb <beandog@gentoo.org> gnochm-0.9.9.ebuild:
+  Add ~amd64, bug 164847
 
 *gnochm-0.9.9 (22 Jan 2007)
 
