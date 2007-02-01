@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-ffmpeg
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.72 2007/01/10 04:24:42 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.73 2007/02/01 18:15:03 gustavoz Exp $
+
+  01 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  gst-plugins-ffmpeg-0.10.1-r1.ebuild, gst-plugins-ffmpeg-0.10.2.ebuild:
+  0.10.1 not good for sparc so unkeyworded, 0.10.2 kinda works but not fine
+  for all media types, ~sparc it anyway
 
   10 Jan 2007; Mart Raudsepp <leio@gentoo.org>
   -gst-plugins-ffmpeg-0.10.1.ebuild:
