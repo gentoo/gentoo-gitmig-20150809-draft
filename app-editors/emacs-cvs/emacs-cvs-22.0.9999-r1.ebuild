@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.9999-r1.ebuild,v 1.4 2007/01/31 08:36:55 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.9999-r1.ebuild,v 1.5 2007/02/01 06:56:36 opfer Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -185,11 +185,9 @@ pkg_postinst() {
 	elisp-site-regen
 
 	# ecompress from Portage 2.2.* does auto-compression
-	# which is not desired for the dir file
-	# temporary fix until we know how to fix it properly
-	if [ -f /usr/share/info/emacs-${SLOT}/dir.bz2 ]; then
-		bunzip2 -q /usr/share/info/emacs-${SLOT}/dir.bz2
-	fi
+	# which is not desired for the dir file, so remove it to
+	# let it be recreated
+	rm "${D}/usr/share/info/emacs-${SLOT}/dir.bz2"
 
 	if use X; then
 		elog "You need to install some fonts for Emacs.	 Under monolithic"
