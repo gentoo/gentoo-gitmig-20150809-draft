@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/echoping-5.2.0.ebuild,v 1.6 2006/07/27 02:47:09 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/echoping-5.2.0.ebuild,v 1.7 2007/02/01 21:44:37 jokey Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="gnutls http icp idn priority smtp ssl tos"
 
-# Add suport to libidn 
+# Add suport to libidn
 DEPEND="gnutls? ( >=net-libs/gnutls-1.0.17 )
 	ssl?	( >=dev-libs/openssl-0.9.7d )
 	idn?	( net-dns/libidn )"
@@ -37,7 +37,7 @@ src_unpack() {
 	cd "${S}"
 
 	if ! use http ; then
-		# This patch defines maxtoread eventhough http is not 
+		# This patch defines maxtoread eventhough http is not
 		# enabled. This avoids an error in readline.c:56.
 		epatch "${FILESDIR}"/maxtoread-${PV}.patch
 	fi
@@ -59,7 +59,7 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die
+	emake install DESTDIR="${D}" || die "emake install failed"
 
 	# They are not installed by make install
 	dodoc README AUTHORS ChangeLog DETAILS NEWS TODO

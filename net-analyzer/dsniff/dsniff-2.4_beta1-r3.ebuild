@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.4_beta1-r3.ebuild,v 1.4 2006/12/01 23:16:06 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.4_beta1-r3.ebuild,v 1.5 2007/02/01 21:42:14 jokey Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -57,13 +57,13 @@ src_compile() {
 		append-flags -DCLK_TCK=CLOCKS_PER_SEC
 	fi
 	econf \
-	    $(use_with X x) \
-	    || die "econf failed"
+		$(use_with X x) \
+		|| die "econf failed"
 	emake CC="$(tc-getCC)" || die "emake failed"
 }
 
 src_install() {
-	make install install_prefix="${D}" || die "make install failed"
+	emake install install_prefix="${D}" || die "emake install failed"
 	dodir /etc/dsniff
 	cp "${D}"/usr/share/dsniff/{dnsspoof.hosts,dsniff.{magic,services}} \
 		"${D}"/etc/dsniff/
