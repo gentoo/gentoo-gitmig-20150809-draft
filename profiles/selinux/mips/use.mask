@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/mips/use.mask,v 1.7 2007/02/01 12:03:49 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/mips/use.mask,v 1.8 2007/02/01 12:06:59 eroyf Exp $
+
+# Alexander Færøy <eroyf@gentoo.org>
+# Clamav -- untested, masking for now.
+clamav
 
 # Alexander H. Færøy <eroyf@gentoo.org>
 # Untested on mips. Masking!
