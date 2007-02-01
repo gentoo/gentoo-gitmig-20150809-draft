@@ -1,24 +1,24 @@
-DIST stardict-xdict-ce-gb-2.1.0.tar.bz2 2582127
-DIST stardict-xdict-ce-gb-2.4.2.tar.bz2 2438365
+DIST stardict-xdict-ce-gb-2.1.0.tar.bz2 2582127 RMD160 a73c10e979d445e9bdcf247c18dc38a38d701465 SHA1 97c5343926c438256e603c7f9d45322d40cb3729 SHA256 550f8f5847a1e52d85f5dc3f49949de4a88333a661e564d3c640e8914555068c
+DIST stardict-xdict-ce-gb-2.4.2.tar.bz2 2438365 RMD160 d35eaf05234032f3d7b8596fa6df33e6ea35b856 SHA1 fbf8604f242f7b59c3afbcdb5e069fb25a619f21 SHA256 2c27c87d428cf43f4824b738649f18c95aeceecdf82b67b41e30ffd4cc3fb4e6
 EBUILD stardict-xdict-zh-en-gb-2.1.0.ebuild 370 RMD160 e724ef484740e726cc419ec5cc1987dad8ff77a7 SHA1 58dc9354993250f939f9cb4d570afa242010384f SHA256 71bbd80988d477bea10a22fe6bd85953a121ef9069450087ccf4b40a4008ce9e
 MD5 fd2adc10c4e0f17fa9ca20a0b8df1a66 stardict-xdict-zh-en-gb-2.1.0.ebuild 370
 RMD160 e724ef484740e726cc419ec5cc1987dad8ff77a7 stardict-xdict-zh-en-gb-2.1.0.ebuild 370
 SHA256 71bbd80988d477bea10a22fe6bd85953a121ef9069450087ccf4b40a4008ce9e stardict-xdict-zh-en-gb-2.1.0.ebuild 370
-EBUILD stardict-xdict-zh-en-gb-2.4.2.ebuild 510 RMD160 18ad2141747428ce9e679ee2fa9647f6fc6e12ef SHA1 70c72999ee2c0adb57f13c2a8dda7b2b68770944 SHA256 2fd32478c12030abaf49f3906e44a236bcd391fdc6e725d11c4911082e1d9fb3
-MD5 13e07fbecc7fa6f7a9b4c4fe660cea96 stardict-xdict-zh-en-gb-2.4.2.ebuild 510
-RMD160 18ad2141747428ce9e679ee2fa9647f6fc6e12ef stardict-xdict-zh-en-gb-2.4.2.ebuild 510
-SHA256 2fd32478c12030abaf49f3906e44a236bcd391fdc6e725d11c4911082e1d9fb3 stardict-xdict-zh-en-gb-2.4.2.ebuild 510
-MISC ChangeLog 855 RMD160 26e060c9923f1ff4c4c235250b30b2930d7c5aee SHA1 784a4fa776930ee55768de7ae0f35405805ac3bf SHA256 0cad683a492e1dc3a4565ae3828685f3d4c439e7994addb0ee538367ecf24d45
-MD5 305dd577db3e674b16da81a63240a8b6 ChangeLog 855
-RMD160 26e060c9923f1ff4c4c235250b30b2930d7c5aee ChangeLog 855
-SHA256 0cad683a492e1dc3a4565ae3828685f3d4c439e7994addb0ee538367ecf24d45 ChangeLog 855
+EBUILD stardict-xdict-zh-en-gb-2.4.2.ebuild 514 RMD160 6fe09192de1a0ad4d4e62ec8122edac7843c500d SHA1 c4106eb2554ae8b97cbd11405fe1131fa2b6e722 SHA256 9a348be11c826e29d4848f03332c6491c45fa25b2dee0c17c5dd07e31ef8006f
+MD5 0ce288aa1299baa5e02ebc33c70ab614 stardict-xdict-zh-en-gb-2.4.2.ebuild 514
+RMD160 6fe09192de1a0ad4d4e62ec8122edac7843c500d stardict-xdict-zh-en-gb-2.4.2.ebuild 514
+SHA256 9a348be11c826e29d4848f03332c6491c45fa25b2dee0c17c5dd07e31ef8006f stardict-xdict-zh-en-gb-2.4.2.ebuild 514
+MISC ChangeLog 955 RMD160 ba5e63e3db34856fc90b7ffed2ed59ad89a2ad28 SHA1 493f29f61177536f6566131e2795aa2142581247 SHA256 c2dd326c870c2e3e6ca4ebbe7b2d41c46992450db401e745ccbf2408e81f552b
+MD5 da94dcb9fabc752449d6eb79c833994d ChangeLog 955
+RMD160 ba5e63e3db34856fc90b7ffed2ed59ad89a2ad28 ChangeLog 955
+SHA256 c2dd326c870c2e3e6ca4ebbe7b2d41c46992450db401e745ccbf2408e81f552b ChangeLog 955
 MISC metadata.xml 221 RMD160 90f3698c29bec2ca3c3fced8e7b7f0bd18b4a050 SHA1 fb2b2c0ad00bfe8d7bd38a83d10b2db92e550769 SHA256 83ce5769df6ad434e554ae009a8c16bef3e37aa07f6ca0b8c44b365a0b293cd2
 MD5 a2351235ac3573cc2d61c384874430d4 metadata.xml 221
 RMD160 90f3698c29bec2ca3c3fced8e7b7f0bd18b4a050 metadata.xml 221
 SHA256 83ce5769df6ad434e554ae009a8c16bef3e37aa07f6ca0b8c44b365a0b293cd2 metadata.xml 221
-MD5 14b0aab475ae7681faa653935b2e45dc files/digest-stardict-xdict-zh-en-gb-2.1.0 80
-RMD160 753777e37e1b2d2ec8526929aaeb67525429100b files/digest-stardict-xdict-zh-en-gb-2.1.0 80
-SHA256 6148a511b0befbc77a6b5fddf211317a8824f214cff9fd483b132693bfe5c13d files/digest-stardict-xdict-zh-en-gb-2.1.0 80
-MD5 888e2a6b07424ff0a0be4ece9a1a24a6 files/digest-stardict-xdict-zh-en-gb-2.4.2 80
-RMD160 64a963301e1442b45a5c6a1842f8359789ed0995 files/digest-stardict-xdict-zh-en-gb-2.4.2 80
-SHA256 d87f63d9ca6b3614ca91fa5d1fa86c70fd6bdbdc0aef959268ba1b631fcd69bb files/digest-stardict-xdict-zh-en-gb-2.4.2 80
+MD5 86c78c1210dcefc79fc0657f31f73018 files/digest-stardict-xdict-zh-en-gb-2.1.0 286
+RMD160 2f2f9c9d6d340a11c91725934231a7d82ee200d1 files/digest-stardict-xdict-zh-en-gb-2.1.0 286
+SHA256 8686bda0dbb61c0e9107c9c51af9caed93bf8e20af38ce80868178bbc5d3de91 files/digest-stardict-xdict-zh-en-gb-2.1.0 286
+MD5 eb5a517546cd95df75b0063afb6893c7 files/digest-stardict-xdict-zh-en-gb-2.4.2 286
+RMD160 c06bc0c760401bda320920e59240913d539da912 files/digest-stardict-xdict-zh-en-gb-2.4.2 286
+SHA256 e07c0e18616a50ff17affd806d914c4c0c64925e6b665c21ae7a280fd4ea7c7b files/digest-stardict-xdict-zh-en-gb-2.4.2 286

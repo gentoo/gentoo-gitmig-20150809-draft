@@ -1,24 +1,24 @@
-DIST stardict-quick_eng-fra-2.1.0.tar.bz2 300051
-DIST stardict-quick_eng-fra-2.4.2.tar.bz2 304397
+DIST stardict-quick_eng-fra-2.1.0.tar.bz2 300051 RMD160 11deed0c02336a6219f71285164a40d1a8451d6d SHA1 13b47facb0b0b2cca0c4f30f36e4657afa661a1c SHA256 73ef04b6fa265231edb928777b354a48cfb2bebe2740c04984bf17c2e80a76f1
+DIST stardict-quick_eng-fra-2.4.2.tar.bz2 304397 RMD160 6803a957c01c724586c838217901b5a981c6f562 SHA1 3316102b08b52b5ec9179d4e60a9f4989be14260 SHA256 2952e4bbb919412e9544e8f9b046c19053f5209acbe81eff4c8535a1f934f65c
 EBUILD stardict-quick-eng-fra-2.1.0.ebuild 331 RMD160 cdea6b466d97184aca517bd515619891c51f114c SHA1 0eccb9583543a2097f2b30224cae11a26dd67d2c SHA256 10a5b33a74734367658b69d1526e060131896b8f29ed3b2fe66c5831586541ea
 MD5 a782fcbf3438726a3443645221a498d6 stardict-quick-eng-fra-2.1.0.ebuild 331
 RMD160 cdea6b466d97184aca517bd515619891c51f114c stardict-quick-eng-fra-2.1.0.ebuild 331
 SHA256 10a5b33a74734367658b69d1526e060131896b8f29ed3b2fe66c5831586541ea stardict-quick-eng-fra-2.1.0.ebuild 331
-EBUILD stardict-quick-eng-fra-2.4.2.ebuild 471 RMD160 6609eb55545ae674073aac27afcda509d0740ce6 SHA1 3a6c764984f31d4806f7a0f5b07777c9c4cd9734 SHA256 56f80854409c1264a23b253db7d7b8cda81b138ec584f425d7d0c5764e670879
-MD5 2ca98d1543034db1e074d5ed705184a6 stardict-quick-eng-fra-2.4.2.ebuild 471
-RMD160 6609eb55545ae674073aac27afcda509d0740ce6 stardict-quick-eng-fra-2.4.2.ebuild 471
-SHA256 56f80854409c1264a23b253db7d7b8cda81b138ec584f425d7d0c5764e670879 stardict-quick-eng-fra-2.4.2.ebuild 471
-MISC ChangeLog 833 RMD160 07fb7f5fe5907b313114b4ef59cc1e6cae8ed20e SHA1 72c6bc8dc74487e178de1b59cdb7dcc932ddc544 SHA256 cb396676085d4329e3dbc7b6040f3fbc34e95716cedc8d125e225628a441f802
-MD5 1f154072a0c78a54e8ee5674ceb9916e ChangeLog 833
-RMD160 07fb7f5fe5907b313114b4ef59cc1e6cae8ed20e ChangeLog 833
-SHA256 cb396676085d4329e3dbc7b6040f3fbc34e95716cedc8d125e225628a441f802 ChangeLog 833
+EBUILD stardict-quick-eng-fra-2.4.2.ebuild 475 RMD160 b4d1fb0c589d08c430a6eb32891feb058f427df3 SHA1 c38e3fe086c1d06152fd35b3b4e71878633d3f4d SHA256 620790a61a6d704d68fd9e95817b0094065e826ad3f8245a1b30db87954d91a7
+MD5 e5fcbf2d5bdb998a2f2659378c12ad36 stardict-quick-eng-fra-2.4.2.ebuild 475
+RMD160 b4d1fb0c589d08c430a6eb32891feb058f427df3 stardict-quick-eng-fra-2.4.2.ebuild 475
+SHA256 620790a61a6d704d68fd9e95817b0094065e826ad3f8245a1b30db87954d91a7 stardict-quick-eng-fra-2.4.2.ebuild 475
+MISC ChangeLog 932 RMD160 191dd247781e6aefbce90541e548071c3e2cb116 SHA1 3ff175d7cee2b8852ee36f7f5cdaabf704cd7517 SHA256 f276dbc9aa83b285995beaead2d6decf688ab834379f1412e9bbde35f8abfaab
+MD5 9efa06409d25d303e6ff45af4cf5d9db ChangeLog 932
+RMD160 191dd247781e6aefbce90541e548071c3e2cb116 ChangeLog 932
+SHA256 f276dbc9aa83b285995beaead2d6decf688ab834379f1412e9bbde35f8abfaab ChangeLog 932
 MISC metadata.xml 219 RMD160 fd2bbaf1c19b4ad2d876f02846608907516e2403 SHA1 aad05fa7d0ab2c9304502d4843d10f775afad2a8 SHA256 f39a99f0777bf9eac2d5a444a392d3b93da834a6de01613747bad25c84637138
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
 RMD160 fd2bbaf1c19b4ad2d876f02846608907516e2403 metadata.xml 219
 SHA256 f39a99f0777bf9eac2d5a444a392d3b93da834a6de01613747bad25c84637138 metadata.xml 219
-MD5 7645bb90b745218a1bc254783f293106 files/digest-stardict-quick-eng-fra-2.1.0 81
-RMD160 1a4c69777e8e5fed19a7761a480ff1d823859154 files/digest-stardict-quick-eng-fra-2.1.0 81
-SHA256 b258a996589526ce57910e42771e905881f05372e8f9188aa366b32bb29d4683 files/digest-stardict-quick-eng-fra-2.1.0 81
-MD5 7d9423acbbd4c89f3e7d248b22b62e66 files/digest-stardict-quick-eng-fra-2.4.2 81
-RMD160 285bc8324203d7100d17cdc6632aea8d5bb558a2 files/digest-stardict-quick-eng-fra-2.4.2 81
-SHA256 b53b558fc4d1a0420055ffbefb16ced605af6fdb535eba42f64abd55b0704638 files/digest-stardict-quick-eng-fra-2.4.2 81
+MD5 b75e42ddbd596584c89dbaae97e5005a files/digest-stardict-quick-eng-fra-2.1.0 289
+RMD160 7b8028bdcdad412519a500b536a0535a8cb04567 files/digest-stardict-quick-eng-fra-2.1.0 289
+SHA256 924a0a390a29dec9097614de36dbfc5d4d67f7accab2bc461c243b85e98b69c3 files/digest-stardict-quick-eng-fra-2.1.0 289
+MD5 4a95af8b43ab069fbd74f14965e22cc8 files/digest-stardict-quick-eng-fra-2.4.2 289
+RMD160 f771f168a7a443d5458dd2728e4d1ee2672e472a files/digest-stardict-quick-eng-fra-2.4.2 289
+SHA256 60a24b55a6f545043728453fe00a72de1f32ac8afa6c67c3832d7a88eba2bf07 files/digest-stardict-quick-eng-fra-2.4.2 289
