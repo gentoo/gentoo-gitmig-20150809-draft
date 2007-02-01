@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/librsvg
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.132 2007/01/26 18:23:49 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.133 2007/02/01 17:18:12 gustavoz Exp $
+
+  01 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> librsvg-2.16.1.ebuild:
+  Stable on sparc
 
   26 Jan 2007; Daniel Gryniewicz <dang@gentoo.org> librsvg-2.16.1.ebuild:
   Marked stable on amd64 Mark stable; there are themes that don't work with
