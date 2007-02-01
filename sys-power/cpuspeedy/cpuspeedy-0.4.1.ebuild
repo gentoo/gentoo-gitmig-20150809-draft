@@ -1,18 +1,16 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpuspeedy/cpuspeedy-0.4.1.ebuild,v 1.1 2005/03/15 17:42:10 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpuspeedy/cpuspeedy-0.4.1.ebuild,v 1.2 2007/02/01 11:31:14 dragonheart Exp $
 
-inherit python
+inherit python multilib
 
 DESCRIPTION="A simple and easy to use program to control the speed and the voltage of CPUs on the fly."
 SRC_URI="mirror://sourceforge/cpuspeedy/${P}.tar.gz"
 HOMEPAGE="http://cpuspeedy.sourceforge.net/"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="~amd64 ppc x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
-RESTRICT="nomirror"
-DEPEND=">=sys-apps/sed-4"
 RDEPEND="virtual/python"
 
 src_compile() {
@@ -20,16 +18,17 @@ src_compile() {
 }
 
 src_install() {
-	make install PREFIX=${D}/usr || die "make install failed"
+	emake install PREFIX="${D}"/usr || die "make install failed"
 	sed -i -e "s:${D}::" ${D}/usr/sbin/cpuspeedy
-	mv ${D}/usr/share/doc/cpuspeedy ${D}/usr/share/doc/${PF}
+	mv "${D}"/usr/share/doc/cpuspeedy "${D}"/usr/share/doc/${PF}
+	dodir /usr/share
+	mv "${D}"/usr/man "${D}"/usr/share
 }
 
 pkg_postinst() {
-	python_mod_optimize /usr/lib/cpuspeedy
+	python_mod_optimize "${ROOT}"usr/$(get_libdir)/${PN}
 }
 
 pkg_postrm() {
-	python_mod_cleanup /usr/lib/cpuspeedy
+	python_mod_cleanup "${ROOT}"usr/$(get_libdir)/${PN}
 }
-
