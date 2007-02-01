@@ -1,11 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.2.18.ebuild,v 1.2 2007/01/24 21:26:46 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.2.19.ebuild,v 1.1 2007/02/01 14:48:52 jokey Exp $
 
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
-
-inherit perl-module flag-o-matic eutils multilib autotools
+inherit autotools eutils flag-o-matic multilib perl-module
 
 DESCRIPTION="A system to store and display time-series data"
 HOMEPAGE="http://people.ee.ethz.ch/~oetiker/webtools/rrdtool/"
@@ -33,15 +30,9 @@ TCLVER=""
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -i -e 's:<rrd_\(.*\)>:"../../src/rrd_\1":g' \
-		bindings/tcl/tclrrd.c || die "sed failed"
-	sed -i -e 's:-lrrd_private:-ltcl -lrrd:' \
-		bindings/tcl/Makefile.* || die "sed failed"
-	sed -i -e 's:python_PROGRAMS:pyexec_PROGRAMS:' \
-		bindings/python/Makefile.* || die "sed failed"
-	sed -i -e 's:\$TCL_PACKAGE_PATH:${TCL_PACKAGE_PATH%% *}:' \
-		configure.ac
 	epatch "${FILESDIR}"/${PN}-1.2.15-newstyle-resize.patch
+	epatch "${FILESDIR}"/${P}-as-needed.patch
+	epatch "${FILESDIR}"/${P}-tclbindings.patch
 	use uclibc && epatch "${FILESDIR}"/${PN}-1.2.15-no-man.patch
 	eautoreconf
 }
@@ -55,7 +46,9 @@ src_compile() {
 	filter-flags -ffast-math
 
 	local myconf
-	myconf="--datadir=/usr/share --enable-shared"
+	myconf="--datadir=/usr/share --enable-shared $(use_enable rrdcgi)"
+
+	use python || myconf="${myconf} --disable-python"
 
 	if use tcl ; then
 		myconf="${myconf} --with-tcllib=/usr/$(get_libdir)"
@@ -63,32 +56,24 @@ src_compile() {
 		myconf="${myconf} --disable-tcl"
 	fi
 
-	use python || myconf="${myconf} --disable-python"
-
 	if use perl ; then
-		econf ${myconf} \
-			$(use_enable rrdcgi) \
-			--with-perl-options='PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D}' || \
-			die "econf failed"
+		econf ${myconf} --with-perl-options='PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D}' || die "econf failed"
 	else
-		econf ${myconf} \
-			$(use_enable rrdcgi) \
-			--disable-perl || die "econf failed"
+		econf ${myconf} --disable-perl || die "econf failed"
 	fi
 
-	make || die "make failed"
+	emake || die "make failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	rm -fr "${D}"/usr/examples
 	rm -fr "${D}"/usr/shared
 
 	if use doc ; then
 		dohtml doc/*.html
-		dodoc doc/*.pod
-		dodoc doc/*.txt
+		dodoc doc/*.pod doc/*.txt
 		insinto /usr/share/doc/${PF}/examples
 		doins examples/*
 		insinto /usr/share/doc/${PF}/contrib
@@ -99,9 +84,6 @@ src_install() {
 		perlinfo
 		mytargets="site-perl-install"
 		perl-module_src_install || die
-
-		# remove duplicate installation into /usr/lib/perl
-		rm -Rf "${D}"/usr/lib/perl
 	fi
 
 	dodoc CONTRIBUTORS README TODO

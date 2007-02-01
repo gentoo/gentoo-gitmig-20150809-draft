@@ -1,6 +1,18 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.117 2007/01/31 20:52:45 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.118 2007/02/01 14:48:52 jokey Exp $
+
+  01 Feb 2007; Markus Ullmann <jokey@gentoo.org>
+  +files/rrdtool-1.2.19-as-needed.patch,
+  +files/rrdtool-1.2.19-as-needed.patch-new,
+  +files/rrdtool-1.2.19-tclbindings.patch, -rrdtool-1.0.50.ebuild,
+  -rrdtool-1.2.15-r2.ebuild, -rrdtool-1.2.18.ebuild, +rrdtool-1.2.19.ebuild:
+  Version bump (again), thanks to Frederic Mangeant in bug #164798 for reporting
+
+*rrdtool-1.2.19 (01 Feb 2007)
+
+  01 Feb 2007; Markus Ullmann <jokey@gentoo.org> +rrdtool-1.2.19.ebuild:
+  Version bump (again), thanks to Frederic Mangeant in bug #164798 for reporting
 
   31 Jan 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   rrdtool-1.2.15-r3.ebuild:
