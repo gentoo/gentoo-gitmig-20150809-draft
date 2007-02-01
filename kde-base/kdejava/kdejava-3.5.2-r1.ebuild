@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/kdejava-3.5.2-r1.ebuild,v 1.1 2007/02/01 00:45:15 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/kdejava-3.5.2-r1.ebuild,v 1.2 2007/02/01 13:47:59 caster Exp $
 
 KMNAME=kdebindings
 KMEXTRACTONLY=qtjava
@@ -51,8 +51,9 @@ src_compile() {
 src_install() {
 	kde-meta_src_install
 
-	rm -rf ${D}/usr/kde/${SLOT}/lib/java
+	local libdir="${D}/usr/kde/${SLOT}/$(get_libdir)"
+	rm -rf "${libdir}/java" || die "rm failed"
 
 	java-pkg_dojar ${S}/${PN}/koala/koala.jar
-	java-pkg_regso "${D}/usr/kde/${SLOT}"/lib/*.so
+	java-pkg_regso "${libdir}"/*.so
 }
