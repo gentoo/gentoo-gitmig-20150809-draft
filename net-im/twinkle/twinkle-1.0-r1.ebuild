@@ -1,9 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.0-r1.ebuild,v 1.3 2007/01/30 19:47:38 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.0-r1.ebuild,v 1.4 2007/02/01 09:36:17 dragonheart Exp $
 
 
-ARTS_REQUIRED="no"
+ARTS_REQUIRED="never"
 inherit eutils qt3 kde
 
 DESCRIPTION="a soft phone for your VOIP communcations using SIP"
