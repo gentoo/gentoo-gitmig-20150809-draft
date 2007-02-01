@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/prelude-manager
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/ChangeLog,v 1.40 2007/01/24 14:49:40 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/ChangeLog,v 1.41 2007/02/01 20:12:54 jokey Exp $
+
+  01 Feb 2007; Markus Ullmann <jokey@gentoo.org>
+  -files/digest-prelude-manager-0.8.10, -files/digest-prelude-manager-0.9.3:
+  cleanup
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org>
   prelude-manager-0.8.10.ebuild:
