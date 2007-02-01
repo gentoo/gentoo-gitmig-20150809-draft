@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/bmon
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.31 2007/02/01 19:18:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.32 2007/02/01 21:29:46 jokey Exp $
+
+  01 Feb 2007; Markus Ullmann <jokey@gentoo.org>
+  +files/bmon-2.1.0-nostrip.patch, -files/bmon-nostrip.patch,
+  -bmon-2.1.0.ebuild, bmon-2.1.0-r2.ebuild:
+  cleanup
 
   01 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> bmon-2.1.0.ebuild:
   Removing sparc keywords, see #105527
