@@ -1,0 +1,11 @@
+# ChangeLog for games-server/cyphesis
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/ChangeLog,v 1.1 2007/02/01 21:14:21 tupone Exp $
+
+*cyphesis-0.5.11 (01 Feb 2007)
+
+  01 Feb 2007; <tupone@gentoo.org> +files/cyphesis-0.5.11-gentoo.patch,
+  +metadata.xml, +cyphesis-0.5.11.ebuild:
+  New ebuild.
+  Fixes bug #90938 by kalium@gmx.de and partially bug #58213 Boris Smus
+
