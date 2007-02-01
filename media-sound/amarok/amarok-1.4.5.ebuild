@@ -1,21 +1,29 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-9999-r1.ebuild,v 1.2 2007/02/01 20:44:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.5.ebuild,v 1.1 2007/02/01 20:44:24 flameeyes Exp $
 
-inherit kde subversion
+LANGS="af ar az bg br ca cs cy da de el en_GB es et fa fi fr ga gl he
+hi hu is it ja ka km ko lt ms nb nl nn pa pl pt pt_BR ro ru rw se sk
+sl sq sr sr@Latn sv ta tg th tr uk uz zh_CN zh_TW"
+LANGS_DOC="da de es et fr it nl pl pt pt_BR ru sv"
 
-ESVN_REPO_URI="svn://anonsvn.kde.org/home/kde/trunk/extragear/multimedia/amarok"
-ESVN_STORE_DIR="${PORTAGE_ACTUAL_DISTDIR-${DISTDIR}}/svn-src/"
+USE_KEG_PACKAGING=1
+
+inherit kde eutils flag-o-matic
 
 PKG_SUFFIX=""
+
+MY_P="${P/_/-}"
+S="${WORKDIR}/${P/_/-}"
 
 DESCRIPTION="Advanced audio player based on KDE framework."
 HOMEPAGE="http://amarok.kde.org/"
 
+SRC_URI="mirror://kde/stable/amarok/${PV}/src/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="aac kde mysql noamazon opengl postgres
 visualization ipod ifp real njb mtp musicbrainz daap"
 # kde: enables compilation of the konqueror sidebar plugin
@@ -43,24 +51,6 @@ RDEPEND="${RDEPEND}
 	daap? ( www-servers/mongrel )"
 
 need-kde 3.3
-
-S="${WORKDIR}/${PN}"
-
-src_unpack() {
-	ESVN_UPDATE_CMD="svn update -N" \
-	ESVN_FETCH_CMD="svn checkout -N" \
-	ESVN_REPO_URI=`dirname ${ESVN_REPO_URI}` \
-		subversion_src_unpack
-
-	S="${WORKDIR}/${PN}/admin" \
-	ESVN_REPO_URI="svn://anonsvn.kde.org/home/kde/branches/KDE/3.5/kde-common/admin" \
-		subversion_src_unpack
-
-	ESVN_UPDATE_CMD="svn up" \
-	ESVN_FETCH_CMD="svn checkout" \
-	S="${WORKDIR}/${PN}/amarok" \
-		subversion_src_unpack
-}
 
 src_compile() {
 	# Extra, unsupported engines are forcefully disabled.

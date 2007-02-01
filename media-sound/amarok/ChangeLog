@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.197 2007/01/31 14:01:19 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.198 2007/02/01 20:44:24 flameeyes Exp $
+
+*amarok-1.4.5 (01 Feb 2007)
+
+  01 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> +amarok-1.4.5.ebuild,
+  amarok-9999-r1.ebuild:
+  Version bump (pre-release), and update also 9999-r1 to have a daap useflag
+  to disable mongrel dependency.
 
   31 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   amarok-1.4.4-r4.ebuild:
