@@ -1,8 +1,0 @@
-# Config file for /etc/init.d/xsp
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/files/1.1.13/xsp.confd,v 1.1 2006/10/27 13:40:34 jurek Exp $
-
-# This is the document root; trailing slash is not necessary
-MonoServerRoot=/usr/lib/xsp/test
-
-# Port for the server to run on
-MonoServerPort=8000
