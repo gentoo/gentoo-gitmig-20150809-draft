@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.12.ebuild,v 1.14 2006/10/15 09:28:38 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.12.ebuild,v 1.15 2007/02/01 12:42:27 drizzt Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -40,7 +40,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake -j1 DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS NEWS README || die "dodoc failed"
 	if use doc ; then
 		dohtml doc/html/*.html || die "dohtml failed"
