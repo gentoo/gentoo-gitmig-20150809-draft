@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/tinyerp-server/tinyerp-server-4.0.2.ebuild,v 1.1 2007/01/20 19:21:39 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/tinyerp-server/tinyerp-server-4.0.2.ebuild,v 1.2 2007/02/01 19:51:56 cedk Exp $
 
 inherit eutils distutils
 
@@ -65,7 +65,7 @@ pkg_config() {
 	einfo "In the following, the 'postgres' user will be used."
 	if ! pquery "SELECT usename FROM pg_user WHERE usename = '${TINYERP_USER}'" | grep -q ${TINYERP_USER}; then
 		ebegin "Creating database user ${TINYERP_USER}"
-		createuser --quiet --username=postgres --createdb --no-adduser --no-createrole ${TINYERP_USER}
+		createuser --quiet --username=postgres --createdb ${TINYERP_USER}
 		eend $? || die "Failed to create database user"
 	fi
 }

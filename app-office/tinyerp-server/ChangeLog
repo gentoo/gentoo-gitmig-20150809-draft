@@ -1,6 +1,13 @@
 # ChangeLog for app-office/tinyerp-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/tinyerp-server/ChangeLog,v 1.5 2007/01/20 19:21:39 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/tinyerp-server/ChangeLog,v 1.6 2007/02/01 19:51:56 cedk Exp $
+
+  01 Feb 2007; Cedric Krier <cedk@gentoo.org> -tinyerp-server-4.0.0.ebuild,
+  -tinyerp-server-4.0.1.ebuild, tinyerp-server-4.0.2.ebuild:
+  Remove old
+
+  01 Feb 2007; Cedric Krier <cedk@gentoo.org> tinyerp-server-4.0.2.ebuild:
+  Remove --no-createrole for bug #164701
 
 *tinyerp-server-4.0.2 (20 Jan 2007)
 
