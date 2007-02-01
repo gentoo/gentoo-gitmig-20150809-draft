@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.174 2007/01/18 23:53:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.175 2007/02/01 17:23:57 gustavoz Exp $
+
+  01 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  gedit-2.16.2-r1.ebuild:
+  Stable on sparc
 
   18 Jan 2007; Jeroen Roovers <jer@gentoo.org> gedit-2.16.2-r1.ebuild:
   Stable for HPPA (bug #147751).
