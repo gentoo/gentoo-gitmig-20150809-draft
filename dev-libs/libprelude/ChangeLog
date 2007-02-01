@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libprelude
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/ChangeLog,v 1.50 2007/01/07 01:17:02 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/ChangeLog,v 1.51 2007/02/01 20:37:23 jokey Exp $
+
+  01 Feb 2007; Markus Ullmann <jokey@gentoo.org>
+  -libprelude-0.8.10-r1.ebuild, -libprelude-0.9.9.ebuild,
+  -libprelude-0.9.10.ebuild:
+  cleanup
 
 *libprelude-0.9.12.1 (07 Jan 2007)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.15 2007/01/14 11:07:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.16 2007/02/01 20:32:52 jokey Exp $
+
+  01 Feb 2007; Markus Ullmann <jokey@gentoo.org> -libnl-1.0_pre5.ebuild:
+  cleanup
 
   14 Jan 2007; Markus Rothe <corsair@gentoo.org> libnl-0.5.0.ebuild,
   libnl-1.0_pre5.ebuild, libnl-1.0_pre6.ebuild:

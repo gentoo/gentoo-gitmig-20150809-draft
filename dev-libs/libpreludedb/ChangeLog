@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libpreludedb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/ChangeLog,v 1.30 2007/01/07 00:45:27 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/ChangeLog,v 1.31 2007/02/01 20:39:53 jokey Exp $
+
+  01 Feb 2007; Markus Ullmann <jokey@gentoo.org> -libpreludedb-0.9.8.ebuild,
+  -libpreludedb-0.9.8.1.ebuild:
+  cleanup
 
 *libpreludedb-0.9.11.1 (07 Jan 2007)
 
