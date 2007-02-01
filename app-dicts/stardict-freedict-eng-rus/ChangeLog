@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/stardict-freedict-eng-rus
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-freedict-eng-rus/ChangeLog,v 1.8 2005/09/19 13:54:17 gustavoz Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-freedict-eng-rus/ChangeLog,v 1.9 2007/02/01 14:42:27 blubb Exp $
+
+  01 Feb 2007; Simon Stelling <blubb@gentoo.org>
+  stardict-freedict-eng-rus-2.4.2.ebuild:
+  add ~amd64
 
   19 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   stardict-freedict-eng-rus-2.4.2.ebuild:
