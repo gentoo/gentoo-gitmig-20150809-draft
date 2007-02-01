@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.122 2007/01/25 05:37:18 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.123 2007/02/01 18:13:05 gustavoz Exp $
+
+  01 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> icewm-1.2.30.ebuild:
+  Stable on sparc wrt #164879
 
   25 Jan 2007; Steve Dibb <beandog@gentoo.org> icewm-1.2.30.ebuild:
   Fix deps, bug 158581
