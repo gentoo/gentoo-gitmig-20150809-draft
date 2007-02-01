@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.6.2.ebuild,v 1.3 2007/01/23 10:06:17 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.6.2-r1.ebuild,v 1.1 2007/02/01 17:25:07 jokey Exp $
 
 DESCRIPTION="Bans IP that make too many password failures"
 HOMEPAGE="http://fail2ban.sourceforge.net/"
@@ -11,8 +11,7 @@ KEYWORDS="amd64 hppa ~ppc ~ppc64 x86"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.4"
-RDEPEND="${DEPEND}
-	net-firewall/iptables"
+RDEPEND=${DEPEND}
 
 src_install() {
 	# Use python setup

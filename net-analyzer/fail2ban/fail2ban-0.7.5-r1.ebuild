@@ -1,20 +1,20 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.7.5.ebuild,v 1.2 2006/12/10 21:48:12 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.7.5-r1.ebuild,v 1.1 2007/02/01 17:25:07 jokey Exp $
 
 inherit distutils
 
 DESCRIPTION="Bans IP that make too many password failures"
 HOMEPAGE="http://fail2ban.sourceforge.net/"
 SRC_URI="mirror://sourceforge/fail2ban/${P}.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.4"
-RDEPEND="${DEPEND}
-	net-firewall/iptables"
+RDEPEND=${DEPEND}
 
 src_install() {
 	distutils_src_install
