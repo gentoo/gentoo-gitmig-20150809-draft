@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/gramps
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.41 2007/01/31 22:32:16 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.42 2007/02/01 02:50:32 beandog Exp $
+
+*gramps-2.2.6 (01 Feb 2007)
+
+  01 Feb 2007; Steve Dibb <beandog@gentoo.org> metadata.xml,
+  +gramps-2.2.6.ebuild:
+  Version bump, assume maintenance, bug 156918
 
   31 Jan 2007; Daniel Gryniewicz <dang@gentoo.org> metadata.xml:
   Re-assign to maintainer-needed.  Gnome doesn't want it

@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer><email>maintainer-needed@gentoo.org</email></maintainer>
-<herd>none</herd>
+<herd></herd>
+<maintainer>
+<email>beandog@gentoo.org</email>
+<name>Steve Dibb</name>
+</maintainer>
+<longdescription lang="en">
+GRAMPS helps you track your family tree. It allows you to store, edit, and
+research genealogical data. GRAMPS attempts to provide all of the common
+capabilities of other genealogical programs, but, more importantly, to provide
+an additional capability of integration not common to these programs. This is
+the ability to input any bits and pieces of information directly into GRAMPS and
+rearrange/manipulate any/all data events in the entire data base (in any order
+or sequence) to assist the user in doing research, analysis and correlation with
+the potential of filling relationship gaps.
+</longdescription>
 </pkgmetadata>
+
