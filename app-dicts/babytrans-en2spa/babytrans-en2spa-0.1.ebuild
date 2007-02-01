@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2spa/babytrans-en2spa-0.1.ebuild,v 1.2 2005/07/08 13:31:24 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2spa/babytrans-en2spa-0.1.ebuild,v 1.3 2007/02/01 15:06:21 blubb Exp $
 
 MY_P="EngtoSpa.dic.gz"
 MY_F="Engtospa.dic"
@@ -10,7 +10,7 @@ SRC_URI="${MY_P}"
 
 LICENSE="Babylon"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="app-dicts/babytrans"

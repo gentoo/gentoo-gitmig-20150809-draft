@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/babytrans-en2pt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2pt/ChangeLog,v 1.9 2007/01/25 08:51:31 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2pt/ChangeLog,v 1.10 2007/02/01 15:04:14 blubb Exp $
+
+  01 Feb 2007; Simon Stelling <blubb@gentoo.org> babytrans-en2pt-0.2.ebuild:
+  added ~amd64
 
   25 Jan 2007; Kevin F. Quinn <kevquinn@gentoo.org>
   files/digest-babytrans-en2pt-0.2, Manifest:

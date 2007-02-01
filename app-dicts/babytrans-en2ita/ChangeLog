@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/babytrans-en2ita
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2ita/ChangeLog,v 1.4 2007/01/25 08:51:03 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2ita/ChangeLog,v 1.5 2007/02/01 15:05:49 blubb Exp $
+
+  01 Feb 2007; Simon Stelling <blubb@gentoo.org>
+  babytrans-en2ita-0.1.ebuild:
+  added ~amd64
 
   25 Jan 2007; Kevin F. Quinn <kevquinn@gentoo.org>
   files/digest-babytrans-en2ita-0.1, Manifest:

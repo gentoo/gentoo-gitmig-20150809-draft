@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/babytrans-en2fre
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2fre/ChangeLog,v 1.4 2007/01/25 08:50:05 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2fre/ChangeLog,v 1.5 2007/02/01 15:05:17 blubb Exp $
+
+  01 Feb 2007; Simon Stelling <blubb@gentoo.org>
+  babytrans-en2fre-0.1.ebuild:
+  added ~amd64
 
   25 Jan 2007; Kevin F. Quinn <kevquinn@gentoo.org>
   files/digest-babytrans-en2fre-0.1, Manifest:
