@@ -1,6 +1,15 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.121 2007/01/08 07:47:30 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.122 2007/02/01 16:58:52 jokey Exp $
+
+*shorewall-3.2.8 (01 Feb 2007)
+
+  01 Feb 2007; Markus Ullmann <jokey@gentoo.org> -files/shorewall,
+  -shorewall-2.4.2.ebuild, -shorewall-3.0.4.ebuild, -shorewall-3.0.6.ebuild,
+  -shorewall-3.0.9.ebuild, -shorewall-3.2.3.ebuild, -shorewall-3.2.4.ebuild,
+  +shorewall-3.2.8.ebuild:
+  Version bump and cleanup, intention is to call for stable on 3.2.8 after
+  30day period
 
   06 Jan 2007; Stephanie Lockwood-Childs <wormo@gentoo.org>
   shorewall-3.2.4.ebuild:

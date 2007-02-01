@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-3.2.4.ebuild,v 1.6 2007/01/08 07:47:30 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-3.2.8.ebuild,v 1.1 2007/02/01 16:58:52 jokey Exp $
+
+inherit eutils
 
 MY_P_DOCS="${P/${PN}/${PN}-docs-html}"
 
@@ -11,11 +13,17 @@ SRC_URI="http://shorewall.net/pub/${PN}/3.2/${P}/${P}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc64 ~sparc ~x86"
 IUSE="doc"
 
 DEPEND=">=net-firewall/iptables-1.2.4
 	sys-apps/iproute2"
+
+pkg_setup() {
+	if built_with_use sys-apps/iproute2 minimal; then
+	    die "Shorewall requires sys-apps/iproute2 to be built without the \"minimal\" USE flag."
+	fi
+}
 
 src_compile() {
 	einfo "Nothing to compile."
@@ -42,6 +50,7 @@ pkg_postinst() {
 	einfo
 	if use doc ; then
 		einfo "Documentation is available at /usr/share/doc/${PF}/html."
+		einfo "Please read the Release Notes in /usr/share/doc/${PF}."
 		einfo "Samples are available at /usr/share/doc/${PF}/Samples."
 	else
 		einfo "Documentation is available at http://www.shorewall.net"
