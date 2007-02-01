@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-2.1.0.ebuild,v 1.4 2005/09/08 13:29:02 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-2.1.0.ebuild,v 1.5 2007/02/01 19:18:23 gustavoz Exp $
 
 inherit toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="http://people.suug.ch/~tgr/bmon/files/${P}.tar.gz
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ppc sparc x86"
+KEYWORDS="amd64 ~hppa ~ppc x86"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.3-r2"
