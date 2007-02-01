@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6714 2007/02/01 03:13:46 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6715 2007/02/01 10:46:49 opfer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ##
+
+# Christian Faulhammer <opfer@gentoo.org> (01 Feb 2007)
+# live ebuild for the 22 branch
+~app-editors/emacs-cvs-22.0.9999
+# emacs-unicode-2 branch is not stable and SLOT support for emacs
+# is incomplete. info directory handling should be reconsidered.
+=app-editors/emacs-cvs-23.0.0*
 
 # Denis Dupeyron <calchan@gentoo.org> (31 Jan 2007)
 # This module is now included in all versions of gpsim
@@ -56,11 +63,6 @@ dev-embedded/gpsim-led
 >=gnome-extra/libgnomedb-1.3
 dev-db/mergeant
 
-# Christian Faulhammer <opfer@gentoo.org> (26 Jan 2007)
-# this is a revamp and rebuild of the whole ebuild,
-# better hide it for a while
-=app-editors/emacs-cvs-22.0.93-r1
-
 # Christian Heim <phreak@gentoo.org> (29 January 2007)
 # masking apr-0.9.13/apr-util-0.9.13 as they break net-www/apache
 # (see #164379 for reference)
@@ -84,10 +86,6 @@ games-strategy/ufo2000
 # Masked because a dependency is missing in Portage.
 # See bug #163853.
 >=kde-base/kpilot-3.5.6
-
-# Christian Faulhammer <opfer@gentoo.org> (26 Jan 2007)
-# masked as it is a live ebuild 
-~app-editors/emacs-cvs-22.0.9999
 
 # Daniel Gryniewicz <dang@gentoo.org> (25 Jan 2007)
 # Masked for removal; depricated, replaced by evolution-exchange
@@ -1385,11 +1383,6 @@ kde-base/dcopjava
 # won't build for now
 dev-lisp/cl-rsm-gen-prog
 dev-lisp/cl-rsm-genetic-alg
-
-# <usata@gentoo.org> (02 July 2004)
-# emacs-unicode-2 branch is not stable and SLOT support for emacs
-# is incomplete. info directory handling should be reconsidered.
-=app-editors/emacs-cvs-23.0.0*
 
 # <klieber@gentoo.org> (01 Apr 2004)
 # The following packages contain a remotely-exploitable
