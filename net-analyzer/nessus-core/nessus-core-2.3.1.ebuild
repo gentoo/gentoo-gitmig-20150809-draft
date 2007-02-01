@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.3.1.ebuild,v 1.8 2006/02/18 19:50:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.3.1.ebuild,v 1.9 2007/02/01 19:59:35 jokey Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 IUSE="tcpd gtk debug prelude"
 
-DEPEND="=net-analyzer/nessus-libraries-${PV}
-	=net-analyzer/libnasl-${PV}
+DEPEND="~net-analyzer/nessus-libraries-${PV}
+	~net-analyzer/libnasl-${PV}
 	tcpd? ( sys-apps/tcp-wrappers )
 	gtk? ( =x11-libs/gtk+-2* )
 	prelude? ( dev-libs/libprelude )

@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nessus-core
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.107 2007/01/05 08:37:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.108 2007/02/01 19:59:35 jokey Exp $
+
+  01 Feb 2007; Markus Ullmann <jokey@gentoo.org>
+  -files/nessus-core-2.0.7.patch, -files/patch_1.nessus-core.2.0.7,
+  -files/nessusd-r6, -nessus-core-2.2.7.ebuild, -nessus-core-2.2.8.ebuild:
+  cleanup
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   nessus-core-2.2.6.ebuild, nessus-core-2.2.7.ebuild,
