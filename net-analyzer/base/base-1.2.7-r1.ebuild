@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/base-1.2.4.ebuild,v 1.3 2006/11/23 19:45:10 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/base-1.2.7-r1.ebuild,v 1.1 2007/02/01 16:44:29 jokey Exp $
 
 inherit webapp versionator eutils depend.apache depend.php
 
@@ -8,15 +8,15 @@ CONF_DIR="/etc/${PN}"
 CONF_OLD="base_conf.php.dist"
 CONF_NEW="base_conf.php"
 MIDDLEMAN="base_path.php"
+DBTYPES="mssql mysql oracle postgres"
 
 DESCRIPTION="A web-based front-end to the Snort IDS."
 HOMEPAGE="http://base.secureideas.net"
 SRC_URI="mirror://sourceforge/secureideas/${P}.tar.gz"
+
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 # SLOT is intentionally omitted because this package uses webapp-config
-
-DBTYPES="mssql mysql oracle postgres"
 IUSE="gd ${DBTYPES}"
 
 # BASE *should* work with any php-driven web server, so only require Apache
@@ -39,9 +39,7 @@ RDEPEND="${DEPEND}
 		    >=dev-php/PEAR-Numbers_Words-0.14.0
 		    >=dev-php/PEAR-Image_Canvas-0.2.4
 		    >=dev-php/PEAR-Image_Graph-0.7.1
-		    >=media-libs/gd-2.0.32
-	mysql? ( virtual/mysql )
-	postgres? ( >=dev-db/postgresql-7.1.0 ) )"
+		    >=media-libs/gd-2.0.32 )"
 	# A local database isn't necessary, so only require one when the user
 	# has use-flags set for one of the supported DBs.
 	# Snort can also be installed on a remote system, so don't require it.
