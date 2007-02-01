@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.182 2007/01/24 17:34:47 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.183 2007/02/01 12:47:15 hanno Exp $
+
+  01 Feb 2007; Hanno Boeck <hanno@gentoo.org> gimp-2.3.14.ebuild:
+  Fix dep on glib, needs more current version.
 
 *gimp-2.3.14 (24 Jan 2007)
 

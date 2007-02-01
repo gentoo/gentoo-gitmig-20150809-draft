@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.3.14.ebuild,v 1.1 2007/01/24 17:34:47 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.3.14.ebuild,v 1.2 2007/02/01 12:47:15 hanno Exp $
 
 inherit fdo-mime flag-o-matic
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="alsa aalib altivec debug doc gtkhtml gnome jpeg lcms mmx mng pdf png python smp sse svg tiff wmf"
 
-RDEPEND=">=dev-libs/glib-2.8.2
+RDEPEND=">=dev-libs/glib-2.12.3
 		>=x11-libs/gtk+-2.8.20-r1
 		>=x11-libs/pango-1.12.2
 		>=media-libs/freetype-2.1.7
