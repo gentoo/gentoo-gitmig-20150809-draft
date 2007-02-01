@@ -1,6 +1,14 @@
 # ChangeLog for dev-dotnet/xsp
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.37 2007/01/23 19:10:37 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.38 2007/02/01 23:42:02 jurek Exp $
+
+  01 Feb 2007; Jurek Bartuszek <jurek@gentoo.org>
+  -files/1.1.13/mod-mono-server.confd, -files/1.1.13/xsp.confd,
+  -files/1.1.18/mod-mono-server.confd, -files/1.1.13/mod-mono-server.initd,
+  -files/1.1.13/xsp.initd, -files/1.1.18/mod-mono-server.initd,
+  -files/1.1.18/xsp.confd, -files/1.1.18/xsp.initd, -xsp-1.1.13.7.ebuild,
+  -xsp-1.1.18.ebuild:
+  Cleaned out old ebuilds
 
   23 Jan 2007; nixnut <nixnut@gentoo.org> xsp-1.2.1.ebuild:
   Stable on ppc wrt bug 163298
