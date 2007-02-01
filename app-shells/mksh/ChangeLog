@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/mksh
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/ChangeLog,v 1.5 2006/09/03 22:27:33 hanno Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/ChangeLog,v 1.6 2007/02/01 14:08:22 beandog Exp $
+
+  01 Feb 2007; Steve Dibb <beandog@gentoo.org> mksh-28.ebuild:
+  Add ~amd64, bug 164065
 
 *mksh-28 (03 Sep 2006)
 
