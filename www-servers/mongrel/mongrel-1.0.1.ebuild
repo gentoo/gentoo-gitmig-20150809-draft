@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/mongrel-1.0.ebuild,v 1.5 2007/02/01 06:26:30 pingu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/mongrel-1.0.1.ebuild,v 1.1 2007/02/01 06:26:30 pingu Exp $
 
 inherit ruby gems
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 USE_RUBY="any"
-DEPEND=">=dev-ruby/daemons-0.4.2
+DEPEND=">=dev-ruby/daemons-1.0.3
 	>=dev-ruby/gem_plugin-0.2.1
-	>=dev-ruby/fastthread-0.5.3.1
+	>=dev-ruby/fastthread-0.6.2
 	>=dev-ruby/cgi_multipart_eof_fix-0.2.1"
