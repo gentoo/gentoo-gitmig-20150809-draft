@@ -1,10 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.9-r2.ebuild,v 1.2 2006/11/23 19:43:25 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.9-r2.ebuild,v 1.3 2007/02/01 21:03:55 jokey Exp $
 
-inherit webapp eutils
-
-IUSE="samba mysql apache2 http"
+inherit eutils webapp eutils
 
 MY_P="${P}d"
 WAS_VER="0.1.2b"
@@ -14,15 +12,12 @@ HOMEPAGE="http://www.aimsniff.com/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
 	http? ( mirror://sourceforge/${PN}/was-${WAS_VER}.tar.gz )"
 
-RESTRICT="nomirror"
-
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
+#SLOT empty due to webapp
+IUSE="samba mysql apache2 http"
 
-S="${WORKDIR}/${MY_P}"
-
-# We need >= perl-5.8.4 for GDBM_File
-DEPEND=">=dev-lang/perl-5.8.4
+DEPEND="dev-lang/perl
 	dev-perl/Net-Pcap
 	dev-perl/NetPacket
 	dev-perl/Unicode-String
@@ -34,6 +29,10 @@ DEPEND=">=dev-lang/perl-5.8.4
 	mysql? ( virtual/mysql dev-perl/DBD-mysql )
 	samba? ( net-fs/samba )
 	http? ( apache2? ( =net-www/apache-2* ) !apache2? ( =net-www/apache-1* ) )"
+
+RESTRICT="nomirror"
+
+S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	if use http
@@ -69,7 +68,7 @@ src_install() {
 		webapp_serverowned ${MY_HTDOCSDIR}/was
 
 		# This file needs to be serverowned as the server won't be able to write to it if it were
-		# webapp_configfile'ed. 
+		# webapp_configfile'ed.
 		webapp_serverowned ${MY_HTDOCSDIR}/was/.config.php
 
 		for phpfile in `ls -a "${D}"${MY_HTDOCSDIR}/was/ | grep ".php$"`; do
@@ -83,7 +82,6 @@ src_install() {
 }
 
 pkg_postinst() {
-
 	if use mysql
 	then
 		echo
@@ -106,7 +104,6 @@ pkg_postinst() {
 		echo "Go to http://${HOSTNAME}/was/admin.php to configure WAS." > was-postinst
 		webapp_postinst_txt en was-postinst
 	fi
-
 }
 
 pkg_config() {
