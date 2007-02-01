@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/base-1.2.7-r2.ebuild,v 1.1 2007/02/01 17:57:18 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/base-1.2.7-r2.ebuild,v 1.2 2007/02/01 21:14:01 jokey Exp $
 
 inherit webapp versionator eutils depend.apache depend.php
 
@@ -29,18 +29,17 @@ DEPEND=">=app-arch/tar-1.14
 	>=app-arch/gzip-1.3.5-r4
 	>=sys-apps/coreutils-5.2.1-r2
 	>=sys-apps/sed-4.0.9"
-
 RDEPEND="${DEPEND}
 	>=dev-php/adodb-4.68
 	gd? ( || ( >=dev-php4/jpgraph-1.19 >=dev-php5/jpgraph-2.0_beta )
-		    >=dev-php/PEAR-PEAR-1.3.6-r1
-		    >=dev-php/PEAR-Image_Color-1.0.2
-		    >=dev-php/PEAR-Log-1.9.3
-		    >=dev-php/PEAR-Numbers_Roman-0.2.0
-		    >=dev-php/PEAR-Numbers_Words-0.14.0
-		    >=dev-php/PEAR-Image_Canvas-0.2.4
-		    >=dev-php/PEAR-Image_Graph-0.7.1
-		    >=media-libs/gd-2.0.32 )"
+		>=dev-php/PEAR-PEAR-1.3.6-r1
+		>=dev-php/PEAR-Image_Color-1.0.2
+		>=dev-php/PEAR-Log-1.9.3
+		>=dev-php/PEAR-Numbers_Roman-0.2.0
+		>=dev-php/PEAR-Numbers_Words-0.14.0
+		>=dev-php/PEAR-Image_Canvas-0.2.4
+		>=dev-php/PEAR-Image_Graph-0.7.1
+		>=media-libs/gd-2.0.32 )"
 	# A local database isn't necessary, so only require one when the user
 	# has use-flags set for one of the supported DBs.
 	# Snort can also be installed on a remote system, so don't require it.
