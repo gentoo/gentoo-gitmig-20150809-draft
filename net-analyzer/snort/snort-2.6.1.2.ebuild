@@ -1,9 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.6.1.2.ebuild,v 1.4 2007/01/31 19:00:47 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.6.1.2.ebuild,v 1.5 2007/02/01 16:04:30 jokey Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
+AT_M4DIR=m4
+
 inherit eutils autotools
 
 DESCRIPTION="Libpcap-based packet sniffer/logger/lightweight IDS"
@@ -60,7 +62,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${PN}-2.6.1.1-libnet.patch"
 	use gre && epatch "${FILESDIR}/${PN}-2.6.1.1-gre.patch"
-
+	use react && epatch "${FILESDIR}/${P}-react.patch"
 	sed -i "s:var RULE_PATH ../rules:var RULE_PATH /etc/snort/rules:" \
 		etc/snort.conf
 
@@ -77,7 +79,7 @@ src_unpack() {
 	fi
 
 	einfo "Regenerating autoconf/automake files"
-	AT_M4DIR=m4 eautoreconf
+	eautoreconf
 }
 
 src_compile() {

@@ -1,0 +1,25 @@
+diff -urN ./snort-2.6.1.2-orig/configure.in ./snort-2.6.1.2/configure.in
+--- ./snort-2.6.1.2-orig/configure.in	2007-02-01 16:09:42.000000000 +0100
++++ ./snort-2.6.1.2/configure.in	2007-02-01 16:59:55.000000000 +0100
+@@ -963,7 +963,7 @@
+     AC_MSG_WARN(are using a precompiled package please notify the)
+     AC_MSG_WARN(maintainer.)
+     LDFLAGS="${LDFLAGS} -L/usr/local/lib -L/sw/lib"
+-    LIBS="${LIBS} -lnet"
++    LIBS="${LIBS} -lnet-1.0"
+   fi
+ 
+   LNET=""
+@@ -1011,10 +1011,10 @@
+   fi
+ 
+   LNET=""
+-  AC_CHECK_LIB(net, libnet_build_ip,, LNET="no")
++  AC_CHECK_LIB(net-1.0, libnet_build_ip,, LNET="no")
+   if test "$LNET" = "no"; then
+     echo
+-    echo "   ERROR!  Libnet library not found, go get it from"
++    echo "   ERROR!  Libnet-1.0 library not found, go get it from"
+     echo "   http://www.packetfactory.net/projects/libnet/"
+     echo "   or use the --with-libnet-* options, if you have it installed"
+     echo "   in unusual place"

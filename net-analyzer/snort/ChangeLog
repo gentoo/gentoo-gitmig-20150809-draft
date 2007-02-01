@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.115 2007/01/31 19:00:47 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.116 2007/02/01 16:04:30 jokey Exp $
+
+  01 Feb 2007; Markus Ullmann <jokey@gentoo.org>
+  +files/snort-2.6.1.2-react.patch, snort-2.6.1.2.ebuild:
+  Add patch for react failure, see bug #162598 for details, thanks to
+  perry@csk.pl
 
   31 Jan 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   snort-2.6.1.2.ebuild:
