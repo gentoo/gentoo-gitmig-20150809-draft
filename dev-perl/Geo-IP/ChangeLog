@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Geo-IP
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.31 2006/10/21 14:11:56 dertobi123 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.32 2007/02/01 20:51:15 jokey Exp $
+
+  01 Feb 2007; Markus Ullmann <jokey@gentoo.org> Geo-IP-1.27.ebuild:
+  stable on x86
+
+  01 Feb 2007; Markus Ullmann <jokey@gentoo.org> Geo-IP-1.25.ebuild,
+  Geo-IP-1.27.ebuild:
+  ebuild cleanup
 
   21 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org> Geo-IP-1.27.ebuild:
   ppc stable
