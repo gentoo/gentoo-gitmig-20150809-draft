@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.62 2007/02/01 20:47:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.63 2007/02/01 22:20:14 jokey Exp $
+
+  01 Feb 2007; Markus Ullmann <jokey@gentoo.org> use.local.desc:
+  Add mask for bug #164924
 
   01 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
   Add daap useflag for amarok.
