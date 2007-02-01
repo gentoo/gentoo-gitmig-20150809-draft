@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libxklavier
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.82 2007/01/18 22:52:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.83 2007/02/01 17:15:27 gustavoz Exp $
+
+  01 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  libxklavier-3.1.ebuild:
+  Stable on sparc
 
   18 Jan 2007; Jeroen Roovers <jer@gentoo.org> libxklavier-3.1.ebuild:
   Stable for HPPA (bug #147751).
