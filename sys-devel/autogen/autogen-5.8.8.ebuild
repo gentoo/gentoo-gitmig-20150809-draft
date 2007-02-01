@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/autogen-5.8.8.ebuild,v 1.4 2007/01/28 22:47:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/autogen-5.8.8.ebuild,v 1.5 2007/02/01 04:12:32 vapier Exp $
 
 inherit eutils
 
@@ -18,6 +18,7 @@ DEPEND=">=dev-scheme/guile-1.6.6
 	dev-libs/libxml2"
 
 pkg_setup() {
+	has_version '>=dev-scheme/guile-1.8' || return 0
 	if ! built_with_use --missing false dev-scheme/guile deprecated discouraged threads ; then
 		eerror "You need to build dev-scheme/guile with USE='deprecated discouraged threads'"
 		die "re-emerge dev-scheme/guile with USE='deprecated discouraged threads'"
