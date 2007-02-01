@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2546 2007/02/01 17:54:57 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2547 2007/02/01 20:47:01 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -890,6 +890,7 @@ media-radio/xastir:festival - Enable festival support
 media-radio/xastir:shape - Enable shapelib support
 media-sound/alsa-driver:midi - Build the sequencer (midi) modules
 media-sound/alsa-utils:midi - Build the sequencer (midi) utilities
+media-sound/amarok:daap - Enable support for DAAP Music Sharing
 media-sound/amarok:ifp - Enable support for iRiver devices access through libifp
 media-sound/amarok:mtp - Enable support for libMTP (Plays4Sure) devices access through libmtp
 media-sound/amarok:musicbrainz - Enable support for MusicBrainz audio lookups (musicbrainz.org)
