@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/darkstat
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.23 2007/02/01 21:33:06 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.24 2007/02/01 21:35:33 jokey Exp $
+
+  01 Feb 2007; Markus Ullmann <jokey@gentoo.org> files/darkstat-confd,
+  -files/darkstat-confd2, -files/darkstat-confd3, files/darkstat-init,
+  -files/darkstat-init2, -files/darkstat-init3, -files/ipcheck.patch,
+  -darkstat-2.6-r1.ebuild:
+  cleanup
 
   01 Feb 2007; Markus Ullmann <jokey@gentoo.org> -darkstat-3.0.540.ebuild,
   darkstat-3.0.540-r1.ebuild:

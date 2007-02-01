@@ -1,4 +1,13 @@
-# Config file for /etc/init.d/darkstat
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/files/darkstat-confd,v 1.2 2004/07/18 03:46:13 dragonheart Exp $
-# Set preferred options here
-DARKSTAT_OPTS="-i ppp0"
+# The interface to listen on
+# Use only with /etc/init.d/darkstat init script. If you use
+# /etc/init.d/darkstat.if init script, then this option should be ignored.
+#INTERFACE="eth0"
+
+# The port for the embedded webserver
+#PORT="667"
+
+# The address embedded webserver should bind to
+#ADDRESS="0.0.0.0"
+
+# Set the filter. See tcpdump documenation for details.
+#FILTER=""

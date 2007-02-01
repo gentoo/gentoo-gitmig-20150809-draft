@@ -1,20 +1,56 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/files/darkstat-init,v 1.3 2004/08/14 13:39:25 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/files/darkstat-init,v 1.4 2007/02/01 21:35:33 jokey Exp $
+
+IF=${SVCNAME##*.}
+
+if [[ -n "${IF}" && ${SVCNAME} != "darkstat" ]] ; then
+	PIDFILE=/var/run/darkstat.${IF}.pid
+else
+	PIDFILE=/var/run/darkstat.pid
+fi
 
 depend() {
         need net
 }
 
+chkconfig() {
+	if [[ -n "${IF}" && ${SVCNAME} != "darkstat" ]] ; then
+		if [[ ! -f "/etc/conf.d/darkstat.${IF}" ]]; then
+			eerror "/etc/conf.d/darkstat.${IF} does not exist. Please, create."
+			return 1
+		fi
+		INTERFACE=${IF}
+	else
+		if [[ ! -f "/etc/conf.d/darkstat" ]]; then
+			eerror "/etc/conf.d/darkstat does not exist. Please, create."
+			return 1
+		fi
+	fi
+
+	if [[ -z "${INTERFACE}" ]]; then
+		ewarn "No interface specified. Trying to use eth0."
+		INTERFACE="eth0"
+	fi
+
+	DARKSTAT_OPTS="-i ${INTERFACE}"
+	[[ -n "${PORT}" ]] && DARKSTAT_OPTS="${DARKSTAT_OPTS} -p ${PORT}"
+	[[ -n "${ADDRESS}" ]] && DARKSTAT_OPTS="${DARKSTAT_OPTS} -b ${ADDRESS}"
+	[[ -n "${FILTER}" ]] && DARKSTAT_OPTS="${DARKSTAT_OPTS} -f ${FILTER}"
+	return 0
+}
+
 start() {
-	ebegin "Starting darkstat"
-	start-stop-daemon --start --quiet --exec /usr/sbin/darkstat -- --detach -d /var/spool/darkstat ${DARKSTAT_OPTS} >/dev/null
+	chkconfig || return 1
+	ebegin "Starting darkstat on ${INTERFACE}"
+	# Remove --background option for debugging.
+	start-stop-daemon --start --exec /usr/sbin/darkstat --pidfile ${PIDFILE} --make-pidfile --background -- ${DARKSTAT_OPTS}
 	eend $?
 }
 
 stop() {
-	ebegin "Stopping darkstat"
-	start-stop-daemon --stop --quiet --retry 5 --exec /usr/sbin/darkstat
+	ebegin "Stopping darkstat on ${INTERFACE}"
+	start-stop-daemon --stop --quiet --retry 5 --pidfile ${PIDFILE}
 	eend $?
 }
