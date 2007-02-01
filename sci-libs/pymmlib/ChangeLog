@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/pymmlib
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/ChangeLog,v 1.11 2006/09/26 07:54:00 dberkholz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/ChangeLog,v 1.12 2007/02/01 14:36:56 markusle Exp $
+
+  01 Feb 2007; Markus Dittrich <markusle@gentoo.org> pymmlib-0.9.8.ebuild:
+  Fixed hardcoded python version and have ebuild do proper cleanup.
+  Thanks to Jakub Moc <jakub@gentoo.org> for pointing this out 
+  (fixes bug #164807).
 
   26 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; pymmlib-0.9.8.ebuild:
   Stable on x86/ppc.

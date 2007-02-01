@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/pymmlib-0.9.8.ebuild,v 1.4 2006/09/26 07:54:00 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/pymmlib-0.9.8.ebuild,v 1.5 2007/02/01 14:36:56 markusle Exp $
 
 inherit multilib python
 
@@ -43,5 +43,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize ${ROOT}usr/$(get_libdir)/python2.4/site-packages/mmLib
+	python_mod_optimize ${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/mmLib
+}
+
+pkg_postrm() {
+	python_version
+	python_mod_cleanup ${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/mmLib
 }
