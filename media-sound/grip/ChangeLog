@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/grip
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.69 2007/01/05 07:08:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.70 2007/02/01 12:13:39 opfer Exp $
+
+  01 Feb 2007; Christian Faulhammer <opfer@gentoo.org> grip-3.3.1.ebuild:
+  stable x86; bug #136137
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> grip-3.3.0.ebuild,
   grip-3.3.1.ebuild:
