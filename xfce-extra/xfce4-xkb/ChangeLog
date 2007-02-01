@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-xkb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xkb/ChangeLog,v 1.7 2007/01/21 23:34:55 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xkb/ChangeLog,v 1.8 2007/02/01 22:27:29 welp Exp $
+
+*xfce4-xkb-0.4.3-r1 (01 Feb 2007)
+
+  01 Feb 2007; Peter Weller <welp@gentoo.org> +xfce4-xkb-0.4.3-r1.ebuild:
+  Fixed deps for xfce4-xkb-0.4.3, revbumped
 
 *xfce4-xkb-0.4.3 (22 Jan 2007)
 
