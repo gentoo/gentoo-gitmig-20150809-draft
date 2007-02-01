@@ -3,8 +3,8 @@
 <pkgmetadata>
 <herd>gnome</herd>
 <maintainer>
-	<email>gnome@gentoo.org</email>
-	<description>Maintainers of the stable branch 0.6* and 0.8*</description>
+	<email>compnerd@gentoo.org</email>
+	<name>Saleem Abdulrasool</name>
 </maintainer>
 <longdescription>Seahorse is a Gnome interface for GnuPG.  It's main purpose is to be a PGP/GPG Key Manager, though 
 it has other components including a text editor and file manager.
