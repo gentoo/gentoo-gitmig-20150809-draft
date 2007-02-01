@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastthread/fastthread-0.6.3.ebuild,v 1.1 2007/02/01 05:51:24 pingu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastthread/fastthread-0.6.3.ebuild,v 1.2 2007/02/01 06:57:08 corsair Exp $
 
 inherit ruby gems
 
@@ -12,5 +12,5 @@ SRC_URI="http://mongrel.rubyforge.org/releases/gems/${P}.gem"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
