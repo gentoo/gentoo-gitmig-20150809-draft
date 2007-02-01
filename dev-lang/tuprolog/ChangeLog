@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/tuprolog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/ChangeLog,v 1.9 2007/01/31 07:01:33 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/ChangeLog,v 1.10 2007/02/01 09:19:08 keri Exp $
+
+  01 Feb 2007; keri <keri@gentoo.org> files/build.xml,
+  tuprolog-2.0.1.ebuild:
+  Run Prolog Theory testsuite in src_test()
 
 *tuprolog-2.0.1 (31 Jan 2007)
 
