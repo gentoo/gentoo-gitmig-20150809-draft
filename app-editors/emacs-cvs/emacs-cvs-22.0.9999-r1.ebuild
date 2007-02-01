@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.9999-r1.ebuild,v 1.5 2007/02/01 06:56:36 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.9999-r1.ebuild,v 1.6 2007/02/01 17:21:58 opfer Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -76,10 +76,9 @@ src_compile() {
 		if use gtk; then
 			einfo "Configuring to build with GTK support"
 			myconf="${myconf} --with-x-toolkit=gtk"
-			myconf="${myconf} --with-x-toolkit=athena"
 		elif use Xaw3d; then
 			einfo "Configuring to build with Xaw3d(athena) support"
-
+			myconf="${myconf} --with-x-toolkit=athena"
 			myconf="${myconf} --without-gtk"
 			myconf="${myconf} --with-x-toolkit=lucid"
 		elif use motif; then
