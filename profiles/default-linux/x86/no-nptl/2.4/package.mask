@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.49 2007/01/30 16:50:47 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.50 2007/02/01 21:37:36 kloeri Exp $
 
 # Saleem Abdulrasool <compnerd@gentoo.org>
 # Requires >=dev-util/glade-3.0
@@ -8,7 +8,8 @@
 
 # Bryan Østergaard <kloeri@gentoo.org>
 # Needs =dev-dotnet/gtkhtml-sharp-2*
-=dev-util/mono-tools-1.1.17-r1
+>=dev-util/mono-tools-1.1.17-r1
+>=dev-util/monodoc-1.1.18
 
 # Ryan Hill <dirtyepic@gentoo.org>
 # Needs >=x11-libs/pango-1.14.3
