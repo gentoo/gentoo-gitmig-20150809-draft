@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.15-r3.ebuild,v 1.2 2006/12/11 10:33:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.15-r3.ebuild,v 1.3 2007/02/01 21:09:13 jokey Exp $
 
 inherit eutils versionator
 
@@ -53,8 +53,8 @@ src_install () {
 	keepdir /var/lib/arpwatch
 	dodoc README CHANGES
 
-	newinitd "${FILESDIR}"/arpwatch.init-2 arpwatch
-	newconfd "${FILESDIR}"/arpwatch.confd-2 arpwatch
+	newinitd "${FILESDIR}"/arpwatch.init arpwatch
+	newconfd "${FILESDIR}"/arpwatch.confd arpwatch
 }
 
 pkg_config() {
