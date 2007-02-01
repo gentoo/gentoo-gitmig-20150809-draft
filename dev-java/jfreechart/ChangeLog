@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jfreechart
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/ChangeLog,v 1.16 2007/01/27 23:03:57 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/ChangeLog,v 1.17 2007/02/01 08:21:21 opfer Exp $
+
+  01 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  jfreechart-0.9.21-r1.ebuild:
+  stable x86; bug #164121
 
   27 Jan 2007; Petteri Räty <betelgeuse@gentoo.org>
   jfreechart-0.9.21-r1.ebuild:
