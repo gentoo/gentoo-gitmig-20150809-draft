@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/FlowScan
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/FlowScan/ChangeLog,v 1.8 2007/02/01 20:56:27 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/FlowScan/ChangeLog,v 1.9 2007/02/01 20:57:14 jokey Exp $
+
+  01 Feb 2007; Markus Ullmann <jokey@gentoo.org> +files/flowscan.init:
+  fix exec bit
 
   01 Feb 2007; Markus Ullmann <jokey@gentoo.org> -files/flowscan.init,
   -FlowScan-1.006.ebuild, -FlowScan-1.006-r1.ebuild:
