@@ -1,0 +1,9 @@
+# ChangeLog for dev-games/wfmath
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/wfmath/ChangeLog,v 1.1 2007/02/01 07:59:53 tupone Exp $
+
+*wfmath-0.3.5 (01 Feb 2007)
+
+  01 Feb 2007; <tupone@gentoo.org> +metadata.xml, +wfmath-0.3.5.ebuild:
+  Initial ebuild, version 0.3.6 Bug #58213 by Boris Smus
+
