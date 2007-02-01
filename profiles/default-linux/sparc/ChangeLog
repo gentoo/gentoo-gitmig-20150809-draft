@@ -1,6 +1,9 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.22 2007/01/29 18:13:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.23 2007/02/01 19:26:53 gustavoz Exp $
+
+  01 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> use.mask:
+  use.mask battery
 
   29 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   sparc32/2006.0/2.4/package.mask, sparc32/2006.1/2.4/package.mask,
