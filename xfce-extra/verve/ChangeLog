@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/verve
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/verve/ChangeLog,v 1.2 2007/01/21 23:38:23 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/verve/ChangeLog,v 1.3 2007/02/01 12:39:14 corsair Exp $
+
+  01 Feb 2007; Markus Rothe <corsair@gentoo.org> verve-0.3.5.ebuild:
+  Added ~ppc64; bug #164775
 
 *verve-0.3.5 (22 Jan 2007)
 
