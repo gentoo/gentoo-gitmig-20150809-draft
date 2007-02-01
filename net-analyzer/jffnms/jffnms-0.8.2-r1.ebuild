@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jffnms/jffnms-0.8.2.ebuild,v 1.4 2006/11/23 19:48:53 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jffnms/jffnms-0.8.2-r1.ebuild,v 1.1 2007/02/01 16:37:54 jokey Exp $
 
 inherit eutils
 
@@ -14,8 +14,6 @@ KEYWORDS="~x86"
 IUSE="mysql postgres snmp"
 
 DEPEND="net-www/apache
-	mysql? ( virtual/mysql )
-	postgres? ( dev-db/postgresql )
 	net-analyzer/rrdtool
 	media-libs/gd
 	=dev-lang/php-4*
@@ -26,6 +24,7 @@ DEPEND="net-www/apache
 	net-analyzer/nmap
 	net-analyzer/fping
 	app-mobilephone/smsclient"
+RDEPEND=${DEPEND}
 
 pkg_setup() {
 	local flags="gd wddx sockets session spl cli"

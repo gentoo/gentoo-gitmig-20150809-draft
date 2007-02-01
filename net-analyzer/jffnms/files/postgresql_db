@@ -1,2 +1,0 @@
-create user jffnms password 'jffnms' createdb;
-\connect template1 jffnms

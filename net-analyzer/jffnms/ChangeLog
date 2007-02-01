@@ -1,6 +1,21 @@
 # ChangeLog for net-analyzer/jffnms
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jffnms/ChangeLog,v 1.7 2006/11/23 19:48:53 vivo Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jffnms/ChangeLog,v 1.8 2007/02/01 16:37:54 jokey Exp $
+
+  01 Feb 2007; Markus Ullmann <jokey@gentoo.org> -files/mysql_db,
+  -files/postgresql_db, -files/postgresql_db_table, -jffnms-0.8.2.ebuild,
+  +jffnms-0.8.2-r1.ebuild, -jffnms-0.8.3.ebuild, +jffnms-0.8.3-r1.ebuild:
+  Dropping direct DB deps wrt bug #159828
+
+*jffnms-0.8.3-r1 (01 Feb 2007)
+
+  01 Feb 2007;  <>  jffnms-0.8.3-r1.ebuild files/digest-jffnms-0.8.3-r1
+  # INSERT ENTRY HERE
+
+*jffnms-0.8.2-r1 (01 Feb 2007)
+
+  01 Feb 2007;  <>  jffnms-0.8.2-r1.ebuild files/digest-jffnms-0.8.2-r1
+  # INSERT ENTRY HERE
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> jffnms-0.8.2.ebuild,
   jffnms-0.8.3.ebuild:
