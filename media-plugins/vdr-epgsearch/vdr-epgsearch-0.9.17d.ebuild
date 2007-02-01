@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/vdr-epgsearch-0.9.17d.ebuild,v 1.2 2006/09/08 09:49:41 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/vdr-epgsearch-0.9.17d.ebuild,v 1.3 2007/02/01 10:42:11 zzam Exp $
 
 inherit vdr-plugin
 
 DESCRIPTION="Video Disk Recorder epgsearch plugin"
-HOMEPAGE="http://www.cwieninger.de.vu/html/vdr-epg-search.html"
+HOMEPAGE="http://freenet-homepage.de/cwieninger/html/vdr-epg-search.html"
 SRC_URI="http://people.freenet.de/cwieninger/${P}.tgz"
 
 LICENSE="GPL-2"
