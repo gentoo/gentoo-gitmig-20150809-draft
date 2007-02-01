@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/scons
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.40 2007/01/19 15:14:13 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.41 2007/02/01 10:35:40 twp Exp $
+
+*scons-0.96.94 (01 Feb 2007)
+
+  01 Feb 2007; <twp@gentoo.org> -scons-0.96.91.ebuild,
+  -scons-0.96.92-r3.ebuild, -scons-0.96.93.ebuild, +scons-0.96.94.ebuild:
+  Version bump.  Bug #162333.  Remove old versions.
 
   19 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
   scons-0.96.1.ebuild, scons-0.96.91.ebuild, scons-0.96.92-r3.ebuild,
