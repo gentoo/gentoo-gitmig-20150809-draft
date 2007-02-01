@@ -1,10 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-smartbookmark
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-smartbookmark/ChangeLog,v 1.2 2007/02/01 12:41:52 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-smartbookmark/ChangeLog,v 1.3 2007/02/01 12:44:04 corsair Exp $
 
   01 Feb 2007; Markus Rothe <corsair@gentoo.org>
   xfce4-smartbookmark-0.4.2.ebuild:
-  Added ~ppc64; bug #164776
+  Added ~ppc64; bug #164778
 
 *xfce4-smartbookmark-0.4.2 (11 Dec 2006)
 
