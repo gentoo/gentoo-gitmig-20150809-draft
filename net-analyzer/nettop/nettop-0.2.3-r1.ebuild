@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nettop/nettop-0.2.3.ebuild,v 1.15 2006/07/28 06:12:25 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nettop/nettop-0.2.3-r1.ebuild,v 1.1 2007/02/01 19:17:45 jokey Exp $
 
 inherit eutils
 
@@ -20,17 +20,18 @@ DEPEND="=sys-libs/slang-1*
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/nettop.c.patch
+	epatch "${FILESDIR}"/${P}-gcc411.patch
+	epatch "${FILESDIR}"/${P}-offbyone.patch
 }
 
 src_compile() {
 	local myconf
 	myconf="--prefix=/usr"
-	./configure ${myconf} || die
-	emake || die
+	./configure ${myconf} || die "configure failed"
+	emake || die "emake failed"
 }
 
 src_install() {
-	dosbin nettop || die
+	dosbin nettop
 	dodoc ChangeLog README THANKS
 }
