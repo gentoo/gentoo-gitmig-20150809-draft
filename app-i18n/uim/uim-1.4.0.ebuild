@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.3.1.ebuild,v 1.3 2007/02/01 14:55:32 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.4.0.ebuild,v 1.1 2007/02/01 14:55:32 matsuu Exp $
 
-inherit eutils kde-functions flag-o-matic multilib elisp-common
+inherit eutils qt3 multilib elisp-common
 
 DESCRIPTION="Simple, secure and flexible input method library"
 HOMEPAGE="http://uim.freedesktop.org/"
-SRC_URI="http://uim.freedesktop.org/releases/${P}.tar.gz"
+SRC_URI="http://uim.freedesktop.org/releases/uim/stable/${P}.tar.bz2"
 
 LICENSE="BSD GPL-2 LGPL-2.1"
 SLOT="0"
@@ -60,8 +60,10 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-1.2.1-nls.patch
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 }
 
 src_compile() {
@@ -113,20 +115,20 @@ pkg_postinst() {
 	elog "To use uim-skk you should emerge app-i18n/skk-jisyo."
 	elog
 
-	ewarn
-	ewarn "New input method switcher has been introduced. You need to set"
-	ewarn
-	ewarn "% GTK_IM_MODULE=uim ; export GTK_IM_MODULE"
-	ewarn "% QT_IM_MODULE=uim ; export QT_IM_MODULE"
-	ewarn "% XMODIFIERS=@im=uim ; export XMODIFIERS"
-	ewarn
-	ewarn "If you would like to use uim-anthy as default input method, put"
-	ewarn "(define default-im-name 'anthy)"
-	ewarn "to your ~/.uim."
-	ewarn
-	ewarn "All input methods can be found by running uim-im-switcher-gtk"
-	ewarn "or uim-im-switcher-qt."
-	ewarn
+	elog
+	elog "New input method switcher has been introduced. You need to set"
+	elog
+	elog "% GTK_IM_MODULE=uim ; export GTK_IM_MODULE"
+	elog "% QT_IM_MODULE=uim ; export QT_IM_MODULE"
+	elog "% XMODIFIERS=@im=uim ; export XMODIFIERS"
+	elog
+	elog "If you would like to use uim-anthy as default input method, put"
+	elog "(define default-im-name 'anthy)"
+	elog "to your ~/.uim."
+	elog
+	elog "All input methods can be found by running uim-im-switcher-gtk"
+	elog "or uim-im-switcher-qt."
+	elog
 
 	use gtk && gtk-query-immodules-2.0 > "${ROOT}"/${GTK2_CONFDIR}/gtk.immodules
 	use emacs && elisp-site-regen

@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.155 2007/01/05 16:35:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.156 2007/02/01 14:55:32 matsuu Exp $
+
+*uim-1.4.0 (01 Feb 2007)
+
+  01 Feb 2007; MATSUU Takuto <matsuu@gentoo.org> +files/uim-1.2.1-nls.patch,
+  +files/uim-1.4.0-gentoo.patch, uim-1.2.1.ebuild, -uim-1.3.0.ebuild,
+  uim-1.3.1.ebuild, +uim-1.4.0.ebuild:
+  Version bumped.
+  Fixed USE="-nls" issue, bug #162502.
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> uim-0.5.0.1.ebuild,
   uim-1.2.1.ebuild, uim-1.3.0.ebuild, uim-1.3.1.ebuild:
