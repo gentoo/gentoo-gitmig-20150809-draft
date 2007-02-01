@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/httping
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/ChangeLog,v 1.32 2007/01/21 13:30:06 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/ChangeLog,v 1.33 2007/02/01 17:10:06 jokey Exp $
+
+  01 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Refresh digest
 
   21 Jan 2007; Markus Ullmann <jokey@gentoo.org> -httping-1.0.10.ebuild:
   Drop old wrt bug #155904
