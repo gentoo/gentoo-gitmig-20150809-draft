@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/base-1.2.7-r1.ebuild,v 1.1 2007/02/01 16:44:29 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/base-1.2.7-r2.ebuild,v 1.1 2007/02/01 17:57:18 jokey Exp $
 
 inherit webapp versionator eutils depend.apache depend.php
 
@@ -12,12 +12,13 @@ DBTYPES="mssql mysql oracle postgres"
 
 DESCRIPTION="A web-based front-end to the Snort IDS."
 HOMEPAGE="http://base.secureideas.net"
-SRC_URI="mirror://sourceforge/secureideas/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/secureideas/${P}.tar.gz
+	signatures? ( http://www.snort.org/pub-bin/downloads.cgi/Download/vrt_pr/snortrules-pr-2.4.tar.gz )"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 # SLOT is intentionally omitted because this package uses webapp-config
-IUSE="gd ${DBTYPES}"
+IUSE="gd signatures ${DBTYPES}"
 
 # BASE *should* work with any php-driven web server, so only require Apache
 # when the user has an apache use-flag set.
@@ -154,6 +155,11 @@ src_install() {
 	# location instead of installing them in every virtual host directory.
 	cd docs
 	dodoc *
+	if use signatures ; then
+		cd "${WORKDIR}"
+		insinto ${MY_HTDOCSDIR}/signatures
+		doins doc/signatures/*
+	fi
 	cd "${S}"
 	rm -rf docs
 
@@ -179,11 +185,9 @@ pkg_postinst() {
 	# Notify the user of any problems at the very end.
 	if [ "${HTTPD_GROUP}" == "root" ]; then
 			ewarn ""
-			ewarn "It looks like you are not using Apache or Cherokee"
+			ewarn "It looks like you are not using Apache"
 			ewarn "as your web server. For BASE to work properly, you will"
 			ewarn "need to change the ownership of ${CONF_DIR}/${CONF_NEW} to"
-			ewarn "root:[www user] To use Apache, add \"apache\" or"
-			ewarn "\"apache2\" to your USE flags and re-emerge BASE."
 	fi
 	if [ "${FPERMS}" == "FALSE" ]; then
 			ewarn ""
