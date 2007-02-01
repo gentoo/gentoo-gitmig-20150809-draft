@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.55 2007/01/31 23:23:58 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.56 2007/02/01 14:14:55 gustavoz Exp $
+
+  01 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> gmime-2.2.3.ebuild:
+  Stable on sparc
 
   31 Jan 2007; Andrej Kacian <ticho@gentoo.org> gmime-2.2.3.ebuild:
   Stable on x86, bug #164700.
