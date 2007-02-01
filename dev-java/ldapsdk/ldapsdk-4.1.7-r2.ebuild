@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ldapsdk/ldapsdk-4.1.7-r2.ebuild,v 1.2 2007/01/31 18:37:09 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ldapsdk/ldapsdk-4.1.7-r2.ebuild,v 1.3 2007/02/01 18:30:30 betelgeuse Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -38,6 +38,8 @@ src_unpack() {
 
 	cd ${S}/ldapsp/lib
 	rm *.jar
+
+	java-pkg_filter-compiler jikes
 }
 
 src_compile() {

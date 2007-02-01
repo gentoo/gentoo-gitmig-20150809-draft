@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ldapsdk
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ldapsdk/ChangeLog,v 1.10 2007/01/31 18:37:09 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ldapsdk/ChangeLog,v 1.11 2007/02/01 18:30:30 betelgeuse Exp $
+
+  01 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
+  ldapsdk-4.1.7-r2.ebuild:
+  Does not compile with jikes so filtering it. Fixes bug #164828.
 
   31 Jan 2007; Petteri Räty <betelgeuse@gentoo.org>
   ldapsdk-4.1.7-r1.ebuild, ldapsdk-4.1.7-r2.ebuild:
