@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.59 2007/01/31 19:41:32 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.60 2007/02/01 03:13:46 beandog Exp $
+
+  01 Feb 2007; Steve Dibb <beandog@gentoo.org> package.mask:
+  Remove dxr2-driver, treecleaned, bug 153365
 
   31 Jan 2007; Denis Dupeyron <calchan@gentoo.org> package.mask:
   package.mask'd dev-embedded/gpsim-logic pending removal on 1 March 2007 at
