@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/daimonin-client
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/daimonin-client/ChangeLog,v 1.16 2006/08/16 17:29:06 mr_bones_ Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/daimonin-client/ChangeLog,v 1.17 2007/02/01 13:01:35 blubb Exp $
+
+  01 Feb 2007; Simon Stelling <blubb@gentoo.org>
+  daimonin-client-0.96.7_beta3.ebuild:
+  de-keyword for amd64 per bug 91950
 
 *daimonin-client-0.96.7_beta3 (16 Aug 2006)
 
