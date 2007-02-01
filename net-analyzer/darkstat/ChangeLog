@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/darkstat
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.22 2006/10/31 13:31:00 pva Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.23 2007/02/01 21:33:06 jokey Exp $
+
+  01 Feb 2007; Markus Ullmann <jokey@gentoo.org> -darkstat-3.0.540.ebuild,
+  darkstat-3.0.540-r1.ebuild:
+  stable on x86
 
 *darkstat-3.0.540-r1 (31 Oct 2006)
 
