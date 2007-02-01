@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nessus
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.82 2006/06/01 21:46:35 jokey Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.83 2007/02/01 19:49:54 jokey Exp $
+
+  01 Feb 2007; Markus Ullmann <jokey@gentoo.org> -nessus-2.2.7.ebuild,
+  -nessus-2.2.8.ebuild:
+  cleanup
 
 *nessus-2.2.8 (01 Jun 2006)
 
