@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-xfapplet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xfapplet/ChangeLog,v 1.3 2007/01/23 22:01:26 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xfapplet/ChangeLog,v 1.4 2007/02/01 12:43:13 corsair Exp $
+
+  01 Feb 2007; Markus Rothe <corsair@gentoo.org>
+  xfce4-xfapplet-0.1.0.ebuild:
+  Added ~ppc64; bug #164779
 
   23 Jan 2007; Peter Weller <welp@gentoo.org> xfce4-xfapplet-0.1.0.ebuild:
   Fix bugs 163246 and 163419.
