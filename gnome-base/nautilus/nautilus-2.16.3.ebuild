@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.16.3.ebuild,v 1.9 2007/01/18 23:33:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.16.3.ebuild,v 1.10 2007/02/01 04:52:18 dang Exp $
 
 inherit virtualx eutils gnome2
 
@@ -68,4 +68,10 @@ src_unpack() {
 
 	# fix relative include path breaking libIDL (#129366)
 	epatch "${FILESDIR}"/${PN}-2.16.0-idl_include.patch
+}
+
+pkg_postinst() {
+	einfo "nautilus can use mpg123 (media-sound/mpg123 or media-sound/mpg321)"
+	einfo "to preview mp3 files, and ogg123 (media-sound/vorbis-tools) to"
+	einfo "preview ogg files.  If you want such previews, emerge those packages"
 }
