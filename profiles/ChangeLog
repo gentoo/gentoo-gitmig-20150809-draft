@@ -1,9 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.69 2007/02/02 20:20:40 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.70 2007/02/02 21:47:29 joem Exp $
 
   02 Feb 2007; Tristan Heaven <nyhm@gentoo.org> use.local.desc:
   Add media-libs/allegro:vga
+
+  02 Feb 2007; Joe McCann <joem@gentoo.org>
+  default-linux/sparc/sparc64/2006.1/2.4/package.mask,
+  default-linux/x86/no-nptl/2.4/package.mask:
+  Remove net-libs/libsoup from package.mask on x86 and sparc 2.4 profiles
+  since it is only a small lib used by certain gnome packages, and does not
+  require gnome or any bits that are 2.6 only
 
   02 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> use.local.desc:
   Added device-mapper to use.local.desc for parted, since it now has optional
