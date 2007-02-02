@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6726 2007/02/02 17:10:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6727 2007/02/02 17:22:28 armin76 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -379,10 +379,6 @@ games-action/descent2-demodata
 >=games-action/d2x-0.2.5-r3
 games-action/d2x-xl
 games-action/d2x-rebirth
-
-# Mike Frysinger <vapier@gentoo.org> (28 Dec 2006)
-# Does not work with bittorrent-4.x+ #152442
-net-p2p/gnome-btdownload
 
 # Joshua Nichols <nichoj@gentoo.org> (27 Dec 2006)
 # Python bindings for XFCE 4.4
