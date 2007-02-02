@@ -1,6 +1,15 @@
 # ChangeLog for app-emacs/planner
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/planner/ChangeLog,v 1.10 2007/01/23 15:52:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/planner/ChangeLog,v 1.11 2007/02/02 09:48:05 opfer Exp $
+
+*planner-3.41-r1 (02 Feb 2007)
+
+  02 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  +files/81planner-gentoo.el, +planner-3.41-r1.ebuild:
+  added app-emacs/emacs-w3m, app-emacs/remember as dependencies
+  removed texinfo from DEPEND as it is a base package
+  reworked SITEFILE a bit to load some extras on start
+  all inspired by thierry volpiatto <tvolpiatt@neuf.fr>
 
   23 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> planner-3.41.ebuild:
   Keyworded ~sparc wrt #163401
