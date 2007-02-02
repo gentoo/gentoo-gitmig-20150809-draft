@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r1.ebuild,v 1.6 2007/01/26 19:58:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r1.ebuild,v 1.7 2007/02/02 16:42:01 wolf31o2 Exp $
 
 inherit eutils games
 
 # Diamond DVD - NWN, SoU, HotU (1 disk)
-# Platinum CD/DVD - NWN, SoU (4 disks/1 disk)
+# Platinum CD/DVD - NWN, SoU, HotU (4 disks/1 disk)
 # Deluxe CD - NWN, SoU, HotU (5 disks)
 # Gold CD - NWN, SoU
 # Original CD - NWN (1 disk)
@@ -50,7 +50,6 @@ DEPEND="${RDEPEND}
 	cdinstall? (
 		games-util/biounzip
 		app-arch/unshield )
-	amd64? ( cdinstall? ( ~app-arch/unshield-0.2 ) )
 	app-arch/unzip"
 
 QA_TEXTRELS="${GAMES_PREFIX_OPT:1}/nwn/lib/libSDL-1.2.so.0.0.5
@@ -148,23 +147,14 @@ get_cd_set() {
 		cdrom_get_cds KingmakerSetup.exe
 		;;
 	platinum_cd)
-		einfo "Shadows of the Undentride will be installed along with"
-		einfo "Neverwinter Nights.  If you also have Hordes of the"
-		einfo "Underdark, it will be installed afterwards."
+		einfo "Both Shadows of Undrentide and Hordes of the Underdark will"
+		einfo "be installed from your CDs along with Neverwinter Nights."
 		touch .metadata/orig || die "touch orig"
 		touch .metadata/sou || die "touch sou"
-		export CDROM_NAME_4="CD4"
-		if use hou
-		then
-			einfo "You will also need the HoU CD for this installation."
-			export CDROM_NAME_5="HoU"
-			cdrom_get_cds ArcadeInstallNWNXP213f.EXE \
-				disk2.zip disk3.zip disk4.zip \
-				ArcadeInstallNWNXP213f.EXE
-		else
-			cdrom_get_cds ArcadeInstallNWNXP213f.EXE \
-				disk2.zip disk3.zip disk4.zip
-		fi
+		touch .metadata/hou || die "touching hou"
+		export CDROM_NAME_4="CD4" 
+		cdrom_get_cds ArcadeInstallNWNXP213f.EXE \
+			disk2.zip disk3.zip disk4.zip
 		;;
 	original_cd)
 		einfo "We will be installing the original Neverwinter Nights.  If"
@@ -239,26 +229,34 @@ src_unpack() {
 			unzip -qo "${CDROM_ROOT}"/Data_Shared.zip || die "unpacking"
 			unzip -qo "${CDROM_ROOT}"/Language_data.zip || die "unpacking"
 			unzip -qo "${CDROM_ROOT}"/Language_update.zip || die "unpacking"
-			cdrom_load_next_cd
-			einfo "Unpacking files..."
-			unzip -qo "${CDROM_ROOT}"/disk2.zip || die "unpacking"
-			cdrom_load_next_cd
-			einfo "Unpacking files..."
-			unzip -qo "${CDROM_ROOT}"/disk3.zip || die "unpacking"
-			cdrom_load_next_cd
-			einfo "Unpacking files..."
-			unzip -qo "${CDROM_ROOT}"/disk4.zip || die "unpacking"
-			unzip -qo "${CDROM_ROOT}"/xp1.zip || die "unpacking"
-			unzip -qo "${CDROM_ROOT}"/xp1_data.zip || die "unpacking"
-			if use hou
+			unshield x "${CDROM_ROOT}"/data2.cab || die "unpacking"
+			# We have to adjust the files after unpacking the cab file.
+			rm -rf _*
+			mv -f NWN_Platinum/Miles/* miles/
+			mv -f NWN_Platinum/ambient/*.wav ambient/
+			mv -f NWN_Platinum/docs .
+			mv -f NWN_Platinum/modules .
+			mv -f NWN_Platinum/nwm .
+			mv -f NWN_Platinum/nwm .
+			mv -f NWN_Platinum/utils/nwupdateskins/*.bmp utils/nwupdateskins/
+			rm -rf NWN_Platinum/
+			# If we have the DVD, we're done.  If not, we need to switch CDs and
+			# unpack the files on them.
+			if [ `du -b "${CDROM_ROOT}"/Data_Shared.zip` -lt 700000000 ]
 			then
 				cdrom_load_next_cd
-				rm -f xp1patch.key data/xp1patch.bif override/*
 				einfo "Unpacking files..."
-				unzip -qo "${CDROM_ROOT}"/Data_Shared.zip || die "unpacking"
-				unzip -qo "${CDROM_ROOT}"/Language_data.zip || die "unpacking"
-				unzip -qo "${CDROM_ROOT}"/Language_update.zip || die "unpacking"
-				touch .metadata/hou || die "touching hou"
+				unzip -qo "${CDROM_ROOT}"/disk2.zip || die "unpacking"
+				cdrom_load_next_cd
+				einfo "Unpacking files..."
+				unzip -qo "${CDROM_ROOT}"/disk3.zip || die "unpacking"
+				unzip -qo "${CDROM_ROOT}"/Data_Linux.zip || die "unpacking"
+				unzip -qo "${CDROM_ROOT}"/language_data.zip || die "unpacking"
+				cdrom_load_next_cd
+				einfo "Unpacking files..."
+				unzip -qo "${CDROM_ROOT}"/disk4.zip || die "unpacking"
+				unzip -qo "${CDROM_ROOT}"/xp1.zip || die "unpacking"
+				unzip -qo "${CDROM_ROOT}"/xp1_data.zip || die "unpacking"
 			fi
 			;;
 		original_cd)
@@ -327,10 +325,11 @@ src_unpack() {
 				unzip -qo "${CDROM_ROOT}"/Language_update.zip || die "unpacking"
 				touch .metadata/hou || die "touching hou"
 			fi
-			unpack nwclient${MY_PV}.tar.gz
 			;;
 		esac
 	fi
+	# We unpack this for all media sets.
+	unpack nwclient${MY_PV}.tar.gz
 	if use nowin
 	then
 		if (use sou || use hou) && ! use cdinstall ; then
@@ -338,7 +337,6 @@ src_unpack() {
 			ewarn "emerge with USE=cdinstall."
 			die "SoU and/or HoU require USE=cdinstall."
 		fi
-		unpack nwclient${MY_PV}.tar.gz
 		cd "${WORKDIR}"
 		unpack nwresources${MY_PV}.tar.gz \
 			|| die "unpacking nwresources${MY_PV}.tar.gz"
@@ -348,13 +346,13 @@ src_unpack() {
 	rm -rf override/*
 	for a in ${A}
 	do
-		currentlocale=""
-		if [ -z ${a/*german*/} ]
-		then
-			currentlocale=de
-		elif [ -z ${a/*spanish*/} ]
-		then
-			currentlocale=es
+	    currentlocale=""
+	    if [ -z ${a/*german*/} ]
+	    then
+	        currentlocale=de
+	    elif [ -z ${a/*spanish*/} ]
+	    then
+	    	currentlocale=es
 		elif [ -z ${a/*italian*/} ]
 		then
 			currentlocale=it
@@ -423,7 +421,7 @@ then \
 fi \
 cd "${p}" || die "cd ${p}" \
 if [[ ! -a nwn.ini ]]; then \
-	cp nwn.ini.default nwn.ini \
+        cp nwn.ini.default nwn.ini \
 fi \
 if [[ -r ./nwmovies.so ]]; then \
 	export LD_PRELOAD=./nwmovies.so:$LD_PRELOAD \
@@ -445,7 +443,7 @@ src_install() {
 	if ! use videos
 	then
 		rm -rf "${S}"/movies/*
-	fi
+	fi	
 	mv "${S}"/* "${Ddir}"
 	mv "${S}"/.metadata "${Ddir}"
 	keepdir "${dir}"/servervault
@@ -536,7 +534,7 @@ pkg_postinst() {
 		ewarn "Some/all demo modules will be missing. You can copy them manually into :"
 		ewarn "${dir}/modules"
 		ewarn "or emerge with USE=nowin."
-	fi
+ 	fi
 	if ! use cdinstall && use nowin && use videos
 	then
 		ewarn "Some/all movies will be missing. You can copy them manually into :"
