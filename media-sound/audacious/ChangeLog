@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.101 2007/01/25 14:47:13 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.102 2007/02/02 14:19:05 chainsaw Exp $
+
+  02 Feb 2007; Tony Vroon <chainsaw@gentoo.org>
+  -audacious-1.3.0_alpha2.ebuild:
+  Remove alpha 2 now that alpha 3 has proven itself. Stream probing is a bit
+  on the slow side, this is currently being optimized.
 
 *audacious-1.3.0_alpha3 (25 Jan 2007)
 
