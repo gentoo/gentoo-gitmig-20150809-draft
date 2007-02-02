@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-xosd/audacious-xosd-0.5.ebuild,v 1.1 2007/01/06 14:06:03 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-xosd/audacious-xosd-0.5.ebuild,v 1.2 2007/02/02 19:41:07 gustavoz Exp $
 
 DESCRIPTION="Audacious plugin for overlaying text/glyphs in X-On-Screen-Display"
 HOMEPAGE="http://www.netswarm.net/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.netswarm.net/misc/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=x11-libs/xosd-2.2.14
