@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.86 2007/01/31 18:52:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.87 2007/02/02 23:35:56 eroyf Exp $
+
+  02 Feb 2007; Alexander H. Færøy <eroyf@gentoo.org>
+  pax-utils-0.1.15.ebuild:
+  Stable on MIPS; bug #163453
 
   31 Jan 2007; Markus Rothe <corsair@gentoo.org> pax-utils-0.1.15.ebuild:
   Stable on ppc64; bug #163453
