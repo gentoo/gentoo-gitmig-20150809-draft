@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/comical/comical-0.8.ebuild,v 1.3 2007/01/08 07:07:51 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/comical/comical-0.8.ebuild,v 1.4 2007/02/02 02:12:31 beandog Exp $
 
 inherit wxwidgets eutils
 DESCRIPTION="Comical is a sequential image display program, to deal with .cbr and .cbz files."
@@ -11,7 +11,7 @@ LICENSE="GPL-2 unRAR"
 
 SLOT="0"
 
-KEYWORDS="x86 ~x86-fbsd"
+KEYWORDS="~amd64 x86 ~x86-fbsd"
 
 DEPEND=">=x11-libs/wxGTK-2.6.2"
 
