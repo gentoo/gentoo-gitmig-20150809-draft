@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.2.1.ebuild,v 1.1 2007/01/14 03:41:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.2.1.ebuild,v 1.2 2007/02/02 02:47:54 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs flag-o-matic games
 
@@ -22,7 +22,12 @@ RDEPEND=">=media-libs/libsdl-1.2.7
 	>=media-libs/sdl-image-1.2
 	media-libs/sdl-net
 	nls? ( virtual/libintl )"
+# the configure script is broken and checks for freetype even if
+# it won't be used.  until it's either patched out or upstream fixes
+# it, just make it a DEPEND.
+# reported by Miika Linnapuomi
 DEPEND="${RDEPEND}
+	dedicated? ( >=media-libs/freetype-2 )
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${PN}-${MY_PV}
