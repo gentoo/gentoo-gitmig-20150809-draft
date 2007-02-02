@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.104 2007/02/01 19:26:53 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.105 2007/02/02 04:41:36 mr_bones_ Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -226,5 +226,5 @@ g15
 graphlcd
 ula200
 lcd_devices_g15
-lcd_device_graphlcd
+lcd_devices_graphlcd
 lcd_devices_ula200
