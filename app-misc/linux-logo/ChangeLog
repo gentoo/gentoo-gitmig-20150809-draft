@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/linux-logo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.40 2007/01/28 05:17:00 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.41 2007/02/02 17:28:46 spock Exp $
+
+  02 Feb 2007; Michał Januszewski <spock@gentoo.org>
+  files/linux-logo-4.07-gentoo-logo.patch:
+  Fix the colouring of the border in the 3rd logo (bug #164332).
 
   28 Jan 2007; Marius Mauch <genone@gentoo.org> linux-logo-4.12.ebuild,
   linux-logo-4.13.ebuild, linux-logo-4.14.ebuild, linux-logo-4.15.ebuild:
