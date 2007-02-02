@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/audacious-dumb
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-dumb/ChangeLog,v 1.9 2006/11/07 08:01:19 blubb Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-dumb/ChangeLog,v 1.10 2007/02/02 14:18:23 joker Exp $
+
+  02 Feb 2007; Christian Birchinger <joker@gentoo.org>
+  -audacious-dumb-0.10.ebuild, audacious-dumb-0.24.ebuild:
+  Removed old version. Adjusted DEPEND because this plugin version wont work
+  with Audacious 1.3 final.
 
   07 Nov 2006; <blubb@gentoo.org> audacious-dumb-0.24.ebuild:
   stable on amd64
