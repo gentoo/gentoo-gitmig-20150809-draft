@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/videotrans/videotrans-1.5.2.ebuild,v 1.2 2007/01/14 08:56:02 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/videotrans/videotrans-1.5.2.ebuild,v 1.3 2007/02/02 03:49:17 dang Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/videotrans/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE=""
 
