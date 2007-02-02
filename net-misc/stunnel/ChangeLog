@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.61 2007/02/02 16:47:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.62 2007/02/02 17:02:53 agriffis Exp $
+
+  02 Feb 2007; Aron Griffis <agriffis@gentoo.org> stunnel-3.26.ebuild,
+  stunnel-4.09-r1.ebuild, stunnel-4.14-r1.ebuild, stunnel-4.15.ebuild,
+  stunnel-4.16.ebuild, stunnel-4.20.ebuild:
+  Add sys-apps/tcp-wrappers to DEPEND #154205
 
 *stunnel-4.20 (02 Feb 2007)
 
