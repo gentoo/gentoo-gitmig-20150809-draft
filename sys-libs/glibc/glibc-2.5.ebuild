@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5.ebuild,v 1.23 2007/01/29 07:33:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5.ebuild,v 1.24 2007/02/02 04:55:51 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -742,7 +742,7 @@ want_nptl() {
 
 	# Only list the arches that cannot do NPTL
 	case $(tc-arch) in
-		hppa|m68k) return 1;;
+		m68k) return 1;;
 		sparc)
 			# >= v9 is needed for nptl.
 			[[ ${PROFILE_ARCH} == "sparc" ]] && return 1
