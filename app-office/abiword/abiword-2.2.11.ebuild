@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.2.11.ebuild,v 1.11 2006/07/05 07:51:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.2.11.ebuild,v 1.12 2007/02/02 21:42:05 compnerd Exp $
 
 inherit eutils fdo-mime alternatives
 
@@ -85,7 +85,7 @@ src_install() {
 	rm -f ${D}/usr/bin/abiword
 	dosym AbiWord-2.2 /usr/bin/abiword-2.2
 
-	dodoc COPYING *.TXT docs/build/BUILD.TXT user/wp/readme.txt
+	dodoc COPYING *.TXT user/wp/readme.txt
 
 	# install plugins
 	cd ${S_P}
