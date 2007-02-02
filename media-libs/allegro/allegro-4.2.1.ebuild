@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.2.1.ebuild,v 1.1 2006/11/29 20:13:19 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.2.1.ebuild,v 1.2 2007/02/02 20:25:46 nyhm Exp $
 
-inherit flag-o-matic eutils
+inherit eutils
 
 DESCRIPTION="cross-platform multimedia library"
 HOMEPAGE="http://alleg.sourceforge.net/"
@@ -11,26 +11,28 @@ SRC_URI="mirror://sourceforge/alleg/${P}.tar.gz"
 LICENSE="Allegro"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 -sparc ~x86"
-IUSE="X alsa arts doc esd fbcon mmx oss sse svga tetex"
+IUSE="X alsa arts esd fbcon mmx oss sse svga vga"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
 	esd? ( media-sound/esound )
 	arts? ( kde-base/arts )
-	alsa? ( media-libs/alsa-lib )
-	X? ( x11-libs/libX11
+	X? (
+		x11-libs/libX11
 		x11-libs/libXcursor
 		x11-libs/libXext
 		x11-libs/libXpm
 		x11-libs/libXt
 		x11-libs/libXxf86dga
-		x11-libs/libXxf86vm )
+		x11-libs/libXxf86vm
+	)
 	svga? ( media-libs/svgalib )"
 DEPEND="${RDEPEND}
-	tetex? ( virtual/tetex )
-	X? ( x11-proto/xextproto
+	X? (
+		x11-proto/xextproto
 		x11-proto/xf86dgaproto
 		x11-proto/xf86vidmodeproto
-		x11-proto/xproto )"
+		x11-proto/xproto
+	)"
 
 src_unpack() {
 	unpack ${A}
@@ -41,11 +43,10 @@ src_unpack() {
 }
 
 src_compile() {
-	filter-flags -fPIC -fprefetch-loop-arrays
 	econf \
 		--enable-linux \
 		--enable-static \
-		--enable-vga \
+		--disable-jackdigi \
 		$(use_enable mmx) \
 		$(use_enable sse) \
 		$(use_enable oss ossdigi) \
@@ -61,30 +62,18 @@ src_compile() {
 		$(use_enable X xwin-dga2) \
 		$(use_enable fbcon) \
 		$(use_enable svga svgalib) \
+		$(use_enable vga) \
 		|| die
-
 	emake -j1 CFLAGS="${CFLAGS}" || die "emake failed"
-
-	if use tetex ; then
-		addwrite /var/lib/texmf
-		addwrite /usr/share/texmf
-		addwrite /var/cache/fonts
-		emake docs-dvi docs-ps || die
-	fi
 }
 
 src_install() {
-	addpredict /usr/share/info
-	emake -j1 DESTDIR="${D}" \
-		install \
-		install-gzipped-man \
-		install-gzipped-info \
-		|| die "emake install failed"
+	emake -j1 DESTDIR="${D}" install || die "emake install failed"
 
 	# Different format versions of the Allegro documentation
 	dodoc AUTHORS CHANGES THANKS readme.txt todo.txt
-	use tetex && dodoc docs/allegro.{dvi,ps}
-	use doc && dodoc examples/*
+	doman docs/man/*.3
+	doinfo docs/info/${PN}.info
 	dohtml docs/html/*
 	docinto txt
 	dodoc docs/txt/*.txt
