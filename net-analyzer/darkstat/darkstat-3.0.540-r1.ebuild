@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/darkstat-3.0.540-r1.ebuild,v 1.2 2007/02/01 21:33:06 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/darkstat-3.0.540-r1.ebuild,v 1.3 2007/02/02 11:18:17 jokey Exp $
 
 DESCRIPTION="darkstat is a network traffic analyzer"
 HOMEPAGE="http://dmr.ath.cx/net/darkstat/"
@@ -24,8 +24,8 @@ src_install() {
 
 	dodoc AUTHORS README THANKS
 
-	newinitd "${FILESDIR}"/darkstat-init3 darkstat
-	newconfd "${FILESDIR}"/darkstat-confd3 darkstat
+	newinitd "${FILESDIR}"/darkstat-init darkstat
+	newconfd "${FILESDIR}"/darkstat-confd darkstat
 }
 
 pkg_postinst() {
