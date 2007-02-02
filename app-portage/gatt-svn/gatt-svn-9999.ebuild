@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt-svn/gatt-svn-9999.ebuild,v 1.3 2007/01/26 14:24:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt-svn/gatt-svn-9999.ebuild,v 1.4 2007/02/02 08:11:48 opfer Exp $
 
 inherit subversion
 
@@ -27,9 +27,11 @@ RDEPEND="${DEPEND}
 pkg_setup() {
 	ewarn
 	ewarn "This is an Subversion snapshot, so no functionality is"
-	ewarn "guaranteed!  Better not use it as root for now and backup"
+	ewarn "guaranteed!	Better not use it as root for now and backup"
 	ewarn "at least your data in /etc/portage/!"
-	ewarn
+	einfo
+	einfo "Read the README file to learn how to use the Gentoo Arch"
+	einfo "Testing Tool"
 	ebeep
 }
 
