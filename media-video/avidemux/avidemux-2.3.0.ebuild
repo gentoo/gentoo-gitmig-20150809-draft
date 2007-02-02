@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.3.0.ebuild,v 1.2 2007/01/23 09:28:47 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.3.0.ebuild,v 1.3 2007/02/02 07:35:46 aballier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -76,10 +76,11 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-dts.patch
-	epatch ${FILESDIR}/${P}-configure.patch
+	epatch "${FILESDIR}/${P}-dts.patch"
+	epatch "${FILESDIR}/${P}-configure.patch"
+	epatch "${FILESDIR}/${P}-po.makefile.patch"
 	#sed -i -e 's/x264=no,-lm/x264=no,-lm -lX11/' configure.in.in || die "sed failed."
 
 	gmake -f Makefile.dist || die "autotools failed."
@@ -115,9 +116,9 @@ src_install() {
 
 pkg_postinst() {
 	if use ppc && use oss; then
-		echo
-		einfo "OSS sound output may not work on ppc"
-		einfo "If your hear only static noise, try"
-		einfo "changing the sound device to ALSA or arts"
+		elog ""
+		elog "OSS sound output may not work on ppc"
+		elog "If your hear only static noise, try"
+		elog "changing the sound device to ALSA or arts"
 	fi
 }
