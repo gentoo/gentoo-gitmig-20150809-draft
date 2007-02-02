@@ -1,0 +1,11 @@
+# ChangeLog for dev-lang/interprolog
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/interprolog/ChangeLog,v 1.1 2007/02/02 19:12:31 keri Exp $
+
+*interprolog-2.1.2 (02 Feb 2007)
+
+  02 Feb 2007; keri <keri@gentoo.org>
+  +files/interprolog-2.1.2-java1.4.patch, +files/build.xml, +metadata.xml,
+  +interprolog-2.1.2.ebuild:
+  New ebuild for InterProlog.
+
