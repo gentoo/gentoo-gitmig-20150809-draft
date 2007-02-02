@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/gerris-0.9.2.ebuild,v 1.1 2006/04/05 14:07:52 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/gerris-0.9.2.ebuild,v 1.2 2007/02/02 14:42:03 markusle Exp $
 
 
 DESCRIPTION="The Gerris Flow Solver"
@@ -31,7 +31,7 @@ src_compile() {
 		$(use_enable dx) \
 		|| die "configure failed"
 
-	emake || die "make failed"
+	emake -j1 || die "make failed"
 }
 
 src_install() {
