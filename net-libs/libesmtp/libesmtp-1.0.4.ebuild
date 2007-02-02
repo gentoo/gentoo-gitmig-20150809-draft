@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/libesmtp-1.0.4.ebuild,v 1.4 2006/09/23 20:37:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/libesmtp-1.0.4.ebuild,v 1.5 2007/02/02 23:07:01 metalgod Exp $
 
 inherit toolchain-funcs eutils
 
@@ -16,7 +16,7 @@ DEPEND=">=sys-devel/libtool-1.4.1
 
 IUSE="ssl debug"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc-macos ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc-macos ~sparc ~x86"
 
 src_compile() {
 	local myconf
