@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/sparc/use.mask,v 1.7 2007/01/04 21:49:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/sparc/use.mask,v 1.8 2007/02/02 04:42:46 mr_bones_ Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -183,6 +183,7 @@ mpe-sdk
 # uses libaio
 romio
 
+lcd_devices_graphlcd
 
 # Diego Pettenò <flameeyes@gentoo.org> (6 Dec 2006)
 # Unmask the Sun-specific drivers
