@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/verve
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/verve/ChangeLog,v 1.4 2007/02/02 18:13:41 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/verve/ChangeLog,v 1.5 2007/02/02 23:57:35 jer Exp $
+
+  02 Feb 2007; Jeroen Roovers <jer@gentoo.org> verve-0.3.5.ebuild:
+  Marked ~hppa (bug #164775).
 
   02 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> verve-0.3.5.ebuild:
   Keyworded ~sparc wrt #164775
