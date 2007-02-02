@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/jardinains
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jardinains/ChangeLog,v 1.1 2007/02/02 15:18:50 humpback Exp $
+
+*jardinains-2.0 (02 Feb 2007)
+
+  02 Feb 2007; Gustavo Felisberto <humpback@gentoo.org>; +files/strings-pt.patch,
+  +metadata.xml, +jardinains-2.0.ebuild:
+  Initial import. Will clean it up VERY SOON!
+
