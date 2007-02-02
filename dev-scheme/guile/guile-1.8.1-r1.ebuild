@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-1.8.1-r1.ebuild,v 1.2 2007/01/28 12:08:13 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-1.8.1-r1.ebuild,v 1.3 2007/02/02 18:58:52 mr_bones_ Exp $
 
 inherit autotools
 
