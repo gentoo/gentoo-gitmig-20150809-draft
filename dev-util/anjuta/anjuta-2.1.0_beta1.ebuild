@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.1.0_beta1.ebuild,v 1.1 2007/01/30 16:54:23 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.1.0_beta1.ebuild,v 1.2 2007/02/02 20:40:12 compnerd Exp $
 
 inherit eutils gnome2 eutils autotools
 
@@ -60,7 +60,7 @@ S="${WORKDIR}/${PF//_*}"
 
 pkg_setup() {
 	G2CONF="${G2CONF}
-		--enable-plugin-devehelp \
+		--enable-plugin-devhelp \
 		$(use_enable debug) \
 		$(use_enable doc gtk-doc) \
 		$(use_enable glade plugin-glade) \

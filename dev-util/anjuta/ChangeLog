@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.61 2007/01/30 16:56:30 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.62 2007/02/02 20:40:12 compnerd Exp $
+
+  02 Feb 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  anjuta-2.1.0_beta1.ebuild:
+  Fix typo noticed by Anton Romanov <theli@ukr.net>
 
   30 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org> metadata.xml:
   Add myself as co-maintainer
