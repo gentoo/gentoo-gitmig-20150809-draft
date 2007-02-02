@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.105 2007/02/02 04:41:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.106 2007/02/02 16:44:15 gustavoz Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -13,6 +13,7 @@ battery
 cle266
 cmucl
 commercial
+cpufreq
 directfb
 djbfft
 dvb
@@ -38,6 +39,7 @@ uml
 voodoo3
 wavelan
 wifi
+wlan
 xvmc
 
 # Asterisk use flag masking
