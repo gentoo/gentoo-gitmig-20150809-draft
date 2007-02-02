@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/evms
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.60 2007/02/02 16:43:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.61 2007/02/02 17:22:08 gustavoz Exp $
+
+  02 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> evms-2.5.5-r5.ebuild:
+  Stable on sparc wrt #163495
 
   02 Feb 2007; Raúl Porcel <armin76@gentoo.org> evms-2.5.5-r5.ebuild:
   x86 stable wrt bug 163495
