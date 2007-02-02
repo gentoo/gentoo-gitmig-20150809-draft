@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/hydrogen
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.45 2006/10/07 15:41:01 eldad Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.46 2007/02/02 14:33:42 blubb Exp $
+
+  02 Feb 2007; Simon Stelling <blubb@gentoo.org> hydrogen-0.9.3.ebuild:
+  multilib-strict fix; bug 155967; credit to Malcolm Lashley
 
   07 Oct 2006; Eldad Zack <eldad@gentoo.org> hydrogen-0.9.3.ebuild:
   fixed make problem with -j>2. closes bug #147297. Thanks to Christian Becke

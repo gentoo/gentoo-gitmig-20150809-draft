@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3.ebuild,v 1.11 2006/10/07 15:41:01 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3.ebuild,v 1.12 2007/02/02 14:33:42 blubb Exp $
 
-inherit eutils kde-functions autotools
+inherit eutils kde-functions autotools multilib
 
 DESCRIPTION="Linux Drum Machine"
 HOMEPAGE="http://hydrogen.sourceforge.net/"
@@ -39,6 +39,7 @@ src_unpack() {
 	sed -e "s:pa_unix_oss:lib:g" -e "s:pa_common:include:g" \
 		-e "s:pm_linux:lib:g" -e "s:pm_common:include:g" \
 		-i configure.in
+	sed -e "s:lib/hydrogen:$(get_libdir)/hydrogen:g" -i plugins/wasp/Makefile.in
 	make -f Makefile.cvs
 
 	epatch ${FILESDIR}/hydrogen-0.9.2-configure.in.patch
