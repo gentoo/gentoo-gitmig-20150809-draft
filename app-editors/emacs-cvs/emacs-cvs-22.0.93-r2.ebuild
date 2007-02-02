@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.93-r2.ebuild,v 1.2 2007/02/02 15:35:10 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.93-r2.ebuild,v 1.3 2007/02/02 20:38:07 opfer Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -177,7 +177,7 @@ update-alternatives() {
 
 	for j in emacs emacsclient etags ctags
 	do
-		alternatives_auto_makesym "/usr/share/man/man1/$j.1" "/usr/share/man/man1/$j.emacs-${SLOT}*"
+		alternatives_auto_makesym "/usr/share/man/man1/$j.1.gz" "/usr/share/man/man1/$j.emacs-${SLOT}*"
 	done
 }
 
