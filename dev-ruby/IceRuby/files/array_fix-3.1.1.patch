@@ -1,0 +1,65 @@
+--- src/IceRuby/Types.cpp.orig	2007-02-02 08:58:24.000000000 -0500
++++ src/IceRuby/Types.cpp	2007-02-02 09:02:41.000000000 -0500
+@@ -548,7 +548,7 @@
+ 	{
+ 	    RARRAY(arr)->ptr[i] = INT2FIX(seq[i]);
+ 	}
+-	RARRAY(arr)->len = sz;
++	RARRAY(arr)->len++;
+ 	break;
+     }
+     case PrimitiveInfo::KindShort:
+@@ -561,7 +561,7 @@
+ 	{
+ 	    RARRAY(arr)->ptr[i] = INT2FIX(seq[i]);
+ 	}
+-	RARRAY(arr)->len = sz;
++	RARRAY(arr)->len++;
+ 	break;
+     }
+     case PrimitiveInfo::KindInt:
+@@ -574,7 +574,7 @@
+ 	{
+ 	    RARRAY(arr)->ptr[i] = INT2FIX(seq[i]);
+ 	}
+-	RARRAY(arr)->len = sz;
++	RARRAY(arr)->len++;
+ 	break;
+     }
+     case PrimitiveInfo::KindLong:
+@@ -587,7 +587,7 @@
+ 	{
+ 	    RARRAY(arr)->ptr[i] = callRuby(rb_ll2inum, seq[i]);
+ 	}
+-	RARRAY(arr)->len = sz;
++	RARRAY(arr)->len++;
+ 	break;
+     }
+     case PrimitiveInfo::KindFloat:
+@@ -600,7 +600,7 @@
+ 	{
+ 	    RARRAY(arr)->ptr[i] = callRuby(rb_float_new, seq[i]);
+ 	}
+-	RARRAY(arr)->len = sz;
++	RARRAY(arr)->len++;
+ 	break;
+     }
+     case PrimitiveInfo::KindDouble:
+@@ -613,7 +613,7 @@
+ 	{
+ 	    RARRAY(arr)->ptr[i] = callRuby(rb_float_new, seq[i]);
+ 	}
+-	RARRAY(arr)->len = sz;
++	RARRAY(arr)->len++;
+ 	break;
+     }
+     case PrimitiveInfo::KindString:
+@@ -626,7 +626,7 @@
+ 	{
+ 	    RARRAY(arr)->ptr[i] = createString(seq[i]);
+ 	}
+-	RARRAY(arr)->len = sz;
++	RARRAY(arr)->len++;
+ 	break;
+     }
+     }
