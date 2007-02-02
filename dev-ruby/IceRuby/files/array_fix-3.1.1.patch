@@ -1,65 +1,72 @@
---- src/IceRuby/Types.cpp.orig	2007-02-02 08:58:24.000000000 -0500
-+++ src/IceRuby/Types.cpp	2007-02-02 09:02:41.000000000 -0500
-@@ -548,7 +548,7 @@
+--- src/IceRuby/Types.cpp.orig	2007-02-02 12:50:42.000000000 -0500
++++ src/IceRuby/Types.cpp	2007-02-02 12:51:39.000000000 -0500
+@@ -547,8 +547,8 @@
+ 	for(long i = 0; i < sz; ++i)
  	{
  	    RARRAY(arr)->ptr[i] = INT2FIX(seq[i]);
++	    RARRAY(arr)->len++;
  	}
 -	RARRAY(arr)->len = sz;
-+	RARRAY(arr)->len++;
  	break;
      }
      case PrimitiveInfo::KindShort:
-@@ -561,7 +561,7 @@
+@@ -560,8 +560,8 @@
+ 	for(long i = 0; i < sz; ++i)
  	{
  	    RARRAY(arr)->ptr[i] = INT2FIX(seq[i]);
++	    RARRAY(arr)->len++;
  	}
 -	RARRAY(arr)->len = sz;
-+	RARRAY(arr)->len++;
  	break;
      }
      case PrimitiveInfo::KindInt:
-@@ -574,7 +574,7 @@
+@@ -573,8 +573,8 @@
+ 	for(long i = 0; i < sz; ++i)
  	{
  	    RARRAY(arr)->ptr[i] = INT2FIX(seq[i]);
++	    RARRAY(arr)->len++;
  	}
 -	RARRAY(arr)->len = sz;
-+	RARRAY(arr)->len++;
  	break;
      }
      case PrimitiveInfo::KindLong:
-@@ -587,7 +587,7 @@
+@@ -586,8 +586,8 @@
+ 	for(long i = 0; i < sz; ++i)
  	{
  	    RARRAY(arr)->ptr[i] = callRuby(rb_ll2inum, seq[i]);
++	    RARRAY(arr)->len++;
  	}
 -	RARRAY(arr)->len = sz;
-+	RARRAY(arr)->len++;
  	break;
      }
      case PrimitiveInfo::KindFloat:
-@@ -600,7 +600,7 @@
+@@ -599,8 +599,8 @@
+ 	for(long i = 0; i < sz; ++i)
  	{
  	    RARRAY(arr)->ptr[i] = callRuby(rb_float_new, seq[i]);
++	    RARRAY(arr)->len++;
  	}
 -	RARRAY(arr)->len = sz;
-+	RARRAY(arr)->len++;
  	break;
      }
      case PrimitiveInfo::KindDouble:
-@@ -613,7 +613,7 @@
+@@ -612,8 +612,8 @@
+ 	for(long i = 0; i < sz; ++i)
  	{
  	    RARRAY(arr)->ptr[i] = callRuby(rb_float_new, seq[i]);
++	    RARRAY(arr)->len++;
  	}
 -	RARRAY(arr)->len = sz;
-+	RARRAY(arr)->len++;
  	break;
      }
      case PrimitiveInfo::KindString:
-@@ -626,7 +626,7 @@
+@@ -625,8 +625,8 @@
+ 	for(long i = 0; i < sz; ++i)
  	{
  	    RARRAY(arr)->ptr[i] = createString(seq[i]);
++	    RARRAY(arr)->len++;
  	}
 -	RARRAY(arr)->len = sz;
-+	RARRAY(arr)->len++;
  	break;
      }
      }
