@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/graphicsmagick
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/ChangeLog,v 1.45 2006/12/26 05:01:48 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/ChangeLog,v 1.46 2007/02/02 22:54:33 kloeri Exp $
+
+  02 Feb 2007; Bryan Østergaard <kloeri@gentoo.org> -files/xwd-dos.patch,
+  -graphicsmagick-1.1.7.ebuild, -graphicsmagick-1.1.7-r1.ebuild,
+  -graphicsmagick-1.1.7-r2.ebuild:
+  Remove vulnerable versions, bug 164180.
 
   26 Dec 2006; Mike Frysinger <vapier@gentoo.org>
   graphicsmagick-1.1.7-r3.ebuild:
