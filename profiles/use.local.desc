@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2559 2007/02/02 05:45:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2560 2007/02/02 11:45:51 pclouds Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -515,6 +515,7 @@ dev-ruby/og:kirbybase - enable Kirbybase support
 dev-ruby/ruby-sdl:image - enable sdl-image support
 dev-ruby/ruby-sdl:mixer - enable sdl-mixer support
 dev-ruby/ruby-sdl:sge - enable sdl-sge support
+dev-ruby/rubygems:server - rubygems server support
 dev-scheme/drscheme:3m - compile drscheme3m binary that uses the 3m GC instead of the Bohem GC
 dev-scheme/drscheme:backtrace - support GC backtrace dumps
 dev-scheme/drscheme:sgc - use Senora GC instead of the Boehm GC
