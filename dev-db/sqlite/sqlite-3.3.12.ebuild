@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.3.12.ebuild,v 1.1 2007/02/02 18:18:19 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.3.12.ebuild,v 1.2 2007/02/02 18:23:20 betelgeuse Exp $
 
 inherit eutils alternatives libtool
 
@@ -30,9 +30,11 @@ src_unpack() {
 			ewarn "The userpriv feature must be enabled to run tests."
 			ewarn "Testsuite will not be run."
 		fi
-		if ! use test; then
-			eerror "The test useflag must be enabled to run tests."
-			die "test use flag disabled"
+		if ! use test || ! use tcl; then
+			eerror "The test and tcl useflags must be enabled to run tests."
+			ewarn "Please note that turning on tcl installs runtime support"
+			ewarn "too."
+			die "test or tcl use flag disabled"
 		fi
 	fi
 

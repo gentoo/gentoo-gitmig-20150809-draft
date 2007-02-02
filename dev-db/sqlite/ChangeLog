@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.134 2007/02/02 18:18:19 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.135 2007/02/02 18:23:20 betelgeuse Exp $
+
+  02 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> sqlite-3.3.12.ebuild:
+  The optional tcl support in sqlite must be enabled in sqlite to run tests.
+  Just having tcl is not enough.
 
 *sqlite-3.3.12 (02 Feb 2007)
 
