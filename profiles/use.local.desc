@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2550 2007/02/02 03:19:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2551 2007/02/02 03:20:41 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1211,7 +1211,6 @@ net-ftp/proftpd:ifsession - Enable support for the ifsession module
 net-ftp/proftpd:noauthunix - Disable support for auth-unix module
 net-ftp/proftpd:opensslcrypt - Enable support for openssly crypto
 net-ftp/proftpd:rewrite - Enable support for rewrite module
-net-ftp/proftpd:sendfile - Enable support for sendfile()
 net-ftp/proftpd:shaper - Enable support for the mod_shaper
 net-ftp/proftpd:sitemisc - Enable support for sitemisc module
 net-ftp/proftpd:softquota - Enable support for the mod_quotatab
