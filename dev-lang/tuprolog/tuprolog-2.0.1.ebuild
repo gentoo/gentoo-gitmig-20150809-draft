@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/tuprolog-2.0.1.ebuild,v 1.2 2007/02/01 09:19:08 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/tuprolog-2.0.1.ebuild,v 1.3 2007/02/02 06:50:33 keri Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.alice.unibo.it/download/tuprolog/files/core/2p-2.0.1.zip"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc test"
 
 DEPEND=">=virtual/jdk-1.4
