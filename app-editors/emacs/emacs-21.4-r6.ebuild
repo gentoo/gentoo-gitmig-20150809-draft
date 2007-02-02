@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r6.ebuild,v 1.1 2007/02/02 14:41:33 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r6.ebuild,v 1.2 2007/02/02 15:35:18 opfer Exp $
 
 inherit flag-o-matic eutils alternatives toolchain-funcs
 
@@ -129,7 +129,6 @@ src_install() {
 	for i in ${D}/usr/share/info/*
 	do
 		mv ${i} ${T}/emacs-${SLOT}/${i##*/}.info
-		gzip -9 ${T}/emacs-${SLOT}/${i##*/}.info
 	done
 	mv ${T}/emacs-${SLOT} ${D}/usr/share/info
 	mv ${T}/dir ${D}/usr/share/info/emacs-${SLOT}
@@ -169,7 +168,7 @@ update-alternatives() {
 
 	for j in emacs emacsclient etags ctags
 	do
-		alternatives_auto_makesym "/usr/share/man/man1/$j" "/usr/share/man/man1/$j.emacs-*"
+		alternatives_auto_makesym "/usr/share/man/man1/$j.1" "/usr/share/man/man1/$j.emacs-${SLOT}*"
 	done
 }
 
