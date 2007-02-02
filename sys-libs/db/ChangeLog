@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.191 2007/01/26 15:57:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.192 2007/02/02 20:54:21 gustavoz Exp $
+
+  02 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> db-3.2.9-r11.ebuild:
+  Stable on sparc
 
   26 Jan 2007; Jeroen Roovers <jer@gentoo.org> db-4.3.29-r2.ebuild:
   Marked ~hppa (bug #152713).
