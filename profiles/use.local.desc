@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2553 2007/02/02 03:27:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2554 2007/02/02 03:32:32 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -679,7 +679,6 @@ kde-base/kcontrol:logitech-mouse - Build the Control Center module to configure 
 kde-base/kdeartwork-kscreensaver:xscreensaver - Detection of xscreensavers.
 kde-base/kdeartwork:xscreensaver - Detection of xscreensavers.
 kde-base/kdebase:logitech-mouse - Build the Control Center module to configure logitech mice
-kde-base/kdebase:xcomposite - Support for the Xorg composite extension.
 kde-base/kdebase:xscreensaver - support for the XScreenSaver extension.
 kde-base/kdebase:zeroconf - Support for DNS Service Discovery (DNS-SD).
 kde-base/kdeedu:kig-scripting - Support Python scripting in kig.
@@ -695,7 +694,6 @@ kde-base/kdesdk-meta:subversion - Support for the subversion ioslave.
 kde-base/kdesdk:subversion - Support for the subversion ioslave.
 kde-base/kdesktop:xscreensaver - Support for XScreenSaver extension.
 kde-base/kdeutils:pbbuttonsd - Support for the Apple PMU daemon pbbuttonsd.
-kde-base/kicker:xcomposite - Support for the Xorg composite extension.
 kde-base/kig:kig-scripting - Support Python scripting.
 kde-base/kmilo:pbbuttonsd - Support for the Apple PMU daemon pbbuttonsd.
 kde-base/kopete:addbookmarks - Builds Add Bookmarks plugin
@@ -722,7 +720,6 @@ kde-base/kopete:winpopup - Builds WinPopUp protocol handler
 kde-base/kopete:xscreensaver - Enables support for XScreenSaver extension
 kde-base/ksysguard:zeroconf - Support for DNS Service Discovery (DNS-SD).
 kde-base/kttsd:akode - Support for the aKode audio-decoding frame-work.
-kde-base/kwin:xcomposite - Support for Xorg composite extension.
 mail-client/balsa:gtkspell - Use gtkspell for dictionary support
 mail-client/claws-mail:bogofilter - Build bogofilter plugin
 mail-client/claws-mail:dillo - Enables support for inline http email viewing with a plugin (which depends on the dillo browser)
@@ -1930,7 +1927,6 @@ x11-wm/ion3:iontruetype - Enable *unsupported* and *experimental* TrueType suppo
 x11-wm/matchbox-desktop:dnotify - Use the linux kernel directory notification feature.
 x11-wm/matchbox-panel:dnotify - Use the linux kernel directory notification feature.
 x11-wm/matchbox-panel:lowres - Optimize for low resolution screens.
-x11-wm/matchbox-window-manager:xcomposite - Enable support for Xorg Composite extension
 x11-wm/openbox:pango - Enable pango support
 x11-wm/sawfish:pango - Enable pango support
 x11-wm/stumpwm-cvs:clisp - Use CLISP for the runtime
@@ -1942,7 +1938,6 @@ xfce-base/xfce4-extras:cpufreq - Pulls in xfce4-cpu-freq dependency
 xfce-base/xfce4-extras:wlan - Pulls in xfce4-wavelan dependency
 xfce-base/xfdesktop:plugins - Enable various plugins
 xfce-base/xfdesktop:thunar-vfs - Enable thunar-vfs support for desktop icons.
-xfce-base/xfwm4:xcomposite - Support for Xorg composite extension.
 xfce-extra/xarchiver:7zip - Adds support for 7zip archives
 xfce-extra/xarchiver:arj - Adds support for arj archives
 xfce-extra/xarchiver:lha - Adds support for lha archives
