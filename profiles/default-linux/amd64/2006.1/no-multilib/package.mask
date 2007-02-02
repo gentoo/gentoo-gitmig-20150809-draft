@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.1/no-multilib/package.mask,v 1.18 2007/01/09 00:24:46 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.1/no-multilib/package.mask,v 1.19 2007/02/02 15:07:21 humpback Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -65,6 +65,7 @@ games-action/phobiaii
 games-action/rune
 games-action/spacetripper-demo
 games-arcade/barbarian-bin
+games-arcade/jardinains
 games-arcade/gish-demo
 games-emulation/goosnes
 games-emulation/nestra
