@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/slib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/ChangeLog,v 1.17 2007/02/02 06:25:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/ChangeLog,v 1.18 2007/02/02 16:41:55 hkbst Exp $
+
+  02 Feb 2007; Marijn Schouten <hkBst@gentoo.org> -slib-3.1.4-r1.ebuild:
+  remove redundant ebuild
 
   02 Feb 2007; Seemant Kulleen <seemant@gentoo.org> slib-3.1.1-r1.ebuild:
   remove the restricted dependency on guile-1.6, this was just because of
