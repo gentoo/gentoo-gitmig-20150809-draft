@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.2.1.ebuild,v 1.2 2007/02/02 20:25:46 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.2.1.ebuild,v 1.3 2007/02/02 23:59:14 nyhm Exp $
 
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="cross-platform multimedia library"
 HOMEPAGE="http://alleg.sourceforge.net/"
@@ -40,6 +40,7 @@ src_unpack() {
 	epatch \
 		"${FILESDIR}"/${P}-exec-stack.patch \
 		"${FILESDIR}"/${P}-flags.patch
+	eautoreconf
 }
 
 src_compile() {
@@ -64,7 +65,7 @@ src_compile() {
 		$(use_enable svga svgalib) \
 		$(use_enable vga) \
 		|| die
-	emake -j1 CFLAGS="${CFLAGS}" || die "emake failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
@@ -81,12 +82,4 @@ src_install() {
 	dodoc docs/rtf/*.rtf
 	docinto build
 	dodoc docs/build/*.txt
-}
-
-pkg_postinst() {
-	ewarn "\"revdep-rebuild\" must be run now for applications already"
-	ewarn "using allegro to continue to work."
-	ewarn "revdep-rebuild is part of the gentoolkit package."
-	ewarn "(Run \"emerge gentoolkit\" if revdep-rebuild isn't already"
-	ewarn "available on your system.)"
 }

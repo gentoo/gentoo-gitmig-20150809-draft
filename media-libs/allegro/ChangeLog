@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.62 2007/02/02 20:25:46 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.63 2007/02/02 23:59:14 nyhm Exp $
+
+  02 Feb 2007; Tristan Heaven <nyhm@gentoo.org>
+  files/allegro-4.2.1-flags.patch, allegro-4.2.1.ebuild:
+  strip ldflags from allegro-config --libs
 
   02 Feb 2007; Tristan Heaven <nyhm@gentoo.org> allegro-4.2.1.ebuild:
   Add vga USE flag for bug #129534
