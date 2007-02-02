@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.0.31.ebuild,v 1.5 2007/01/20 16:14:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.0.31.ebuild,v 1.6 2007/02/02 23:21:29 beandog Exp $
 
 inherit base distutils eutils
 
@@ -10,12 +10,10 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="dev-lang/python"
-RDEPEND="${DEPEND}
-	dev-java/java-config-wrapper"
+RDEPEND="dev-java/java-config-wrapper"
 
 src_install() {
 	distutils_src_install
@@ -36,7 +34,6 @@ src_install() {
 	exeinto /etc/profile.d
 	newexe ${FILESDIR}/${PN}-${SLOT}.profiled.sh ${PN}-${SLOT}.sh || die "newexe failed"
 }
-
 
 pkg_postrm() {
 	python_mod_cleanup /usr/share/java-config-2/pym/java_config
