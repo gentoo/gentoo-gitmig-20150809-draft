@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/beagle
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.44 2007/01/28 04:55:05 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.45 2007/02/02 22:48:38 metalgod Exp $
+
+*beagle-0.2.15.1 (02 Feb 2007)
+
+  02 Feb 2007; Luis Medinas <metalgod@gentoo.org>
+  +files/beagle-0.2.15.1-crawllocation.patch,
+  +files/beagle-log-level-warn.patch, +beagle-0.2.15.1.ebuild:
+  Version Bump. This release closes bgo #155732 #163958 #164039 #163081
+  #159454 and #158446.
 
   28 Jan 2007; Marius Mauch <genone@gentoo.org> beagle-0.2.7.ebuild,
   beagle-0.2.13.ebuild, beagle-0.2.14.ebuild:

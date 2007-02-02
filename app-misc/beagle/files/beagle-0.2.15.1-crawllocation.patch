@@ -1,0 +1,107 @@
+--- trunk/beagle/tools/Makefile.am	2007/01/20 00:18:26	3290
++++ trunk/beagle/tools/Makefile.am	2007/01/31 23:44:13	3357
+@@ -29,18 +29,17 @@
+ CRAWL_WRAPPER = beagle-crawl-system
+ CRAWL_WRAPPER_IN = $(CRAWL_WRAPPER).in
+ 
+-$(CRAWL_WRAPPER) : $(CRAWL_WRAPPER_IN)
++$(CRAWL_WRAPPER): $(CRAWL_WRAPPER_IN)
+ 	$(WRAPPER_SED) < $(srcdir)/$(CRAWL_WRAPPER_IN) > $@
+ 	chmod +x $(CRAWL_WRAPPER)
+ 
++crondir = $(sysconfdir)/cron.daily
++
+ CRAWL_RULES = \
+ 	$(srcdir)/crawl-rules/crawl-windows		\
+ 	$(srcdir)/crawl-rules/crawl-applications	\
+ 	$(srcdir)/crawl-rules/crawl-documentation
+ 
+-crondir = $(sysconfdir)/cron.daily
+-cron_SCRIPTS = $(CRAWL_WRAPPER)
+-
+ # FIXME: Per-distribution specific crawl rules
+ configdir = $(sysconfdir)/beagle
+ config_DATA = $(CRAWL_RULES)
+@@ -142,7 +141,7 @@
+ 
+ TARGETS_MDB = $(TARGETS:%=%.mdb)
+ 
+-WRAPPERS = 				\
++BUILT_WRAPPERS = 			\
+ 	$(INFO_WRAPPER)			\
+ 	$(SHUTDOWN_WRAPPER)		\
+ 	$(QUERY_WRAPPER)		\
+@@ -150,11 +149,11 @@
+ 	$(CONFIG_WRAPPER)
+ 
+ if ENABLE_GUI
+-WRAPPERS += $(SETTINGS_WRAPPER)
++BUILT_WRAPPERS += $(SETTINGS_WRAPPER)
+ endif
+ 
+ if ENABLE_WV1
+-WRAPPERS += $(DOC_EXTRACTOR_WRAPPER)
++BUILT_WRAPPERS += $(DOC_EXTRACTOR_WRAPPER)
+ endif
+ 
+ PREBUILT_WRAPPERS =		\
+@@ -162,9 +161,11 @@
+ 	beagle-ping		\
+ 	beagle-status
+ 
+-BIN_WRAPPERS = 			\
+-	$(WRAPPERS)		\
+-	$(PREBUILT_WRAPPERS)
++BIN_WRAPPERS = $(BUILT_WRAPPERS) $(PREBUILT_WRAPPERS)
++
++WRAPPERS =			\
++	$(BIN_WRAPPERS)		\
++	$(CRAWL_WRAPPER)
+ 
+ man_MANS = 			\
+ 	beagle-query.1		\
+@@ -184,12 +185,13 @@
+ 
+ all: $(TARGETS) $(WRAPPERS)
+ 
+-install-data-local: $(TARGETS)
+-	$(mkinstalldirs) $(DESTDIR)$(bindir)
++install-data-local: $(TARGETS) $(WRAPPERS)
+ 	$(mkinstalldirs) $(DESTDIR)$(pkglibdir)
+ 	$(INSTALL_DATA) $(TARGETS) $(TARGETS_MDB) $(DESTDIR)$(pkglibdir)
+ 
+-	@for i in $(WRAPPERS); do						\
++	$(mkinstalldirs) $(DESTDIR)$(bindir)
++
++	@for i in $(BUILT_WRAPPERS); do						\
+ 		sed -e "s|\#installed=1|installed=1|" < $$i > $$i.tmp;		\
+ 		echo "$(INSTALL_SCRIPT) $$i.tmp $(DESTDIR)$(bindir)/$$i";	\
+ 		$(INSTALL_SCRIPT) $$i.tmp $(DESTDIR)$(bindir)/$$i || exit 1;	\
+@@ -203,6 +205,9 @@
+ 		rm -f $$i.tmp;							\
+ 	done
+ 
++	$(mkinstalldirs) $(DESTDIR)$(crondir)
++	$(INSTALL_SCRIPT) $(CRAWL_WRAPPER) $(DESTDIR)$(crondir)
++
+ uninstall-local:
+ 	cd $(DESTDIR)$(pkglibdir) && rm -f $(TARGETS) && rm -f $(TARGETS_MDB)
+ 
+@@ -211,6 +216,8 @@
+ 		rm -f $(DESTDIR)$(bindir)/$$i || exit 1;	\
+ 	done
+ 
++	cd $(DESTDIR)$(crondir) && rm -f $(CRAWL_WRAPPER)
++
+ EXTRA_DIST =				\
+ 	$(WRAPPER_IN)			\
+ 	$(CRAWL_WRAPPER_IN)		\
+@@ -236,7 +243,7 @@
+ CLEANFILES = 				\
+ 	$(TARGETS)			\
+ 	$(TARGETS_MDB)			\
+-	$(WRAPPERS)			\
++	$(BUILT_WRAPPERS)		\
+ 	$(CRAWL_WRAPPER)		\
+ 	$(desktop_DATA)		 	\
+ 	$(desktop_h_files)		\
