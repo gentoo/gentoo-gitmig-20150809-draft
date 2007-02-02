@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.123 2007/02/01 18:13:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.124 2007/02/02 08:21:41 opfer Exp $
+
+  02 Feb 2007; Christian Faulhammer <opfer@gentoo.org> icewm-1.2.30.ebuild:
+  stable x86; bug #164879
 
   01 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> icewm-1.2.30.ebuild:
   Stable on sparc wrt #164879
