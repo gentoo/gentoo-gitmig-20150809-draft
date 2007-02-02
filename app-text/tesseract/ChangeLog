@@ -1,0 +1,12 @@
+# ChangeLog for app-text/tesseract
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.1 2007/02/02 21:34:24 chutzpah Exp $
+
+*tesseract-1.02.02022007 (02 Feb 2007)
+
+  02 Feb 2007; Patrick McLean <chutzpah@gentoo.org>
+  +files/tesseract-1.0.xterm-path.patch, +metadata.xml,
+  +tesseract-1.02.02022007.ebuild:
+  Initial commit, ebuild based on ebuild contributed by Dan Davis
+  <d-web-gentoo@dandavis.com>. Closes bug #146390.
+
