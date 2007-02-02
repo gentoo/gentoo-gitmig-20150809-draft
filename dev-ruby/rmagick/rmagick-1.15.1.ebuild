@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-1.15.1.ebuild,v 1.1 2007/02/02 13:08:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-1.15.1.ebuild,v 1.2 2007/02/02 19:38:19 graaff Exp $
 
 inherit ruby
 
@@ -60,4 +60,7 @@ src_install() {
 		${RUBY_ECONF} || die "setup.rb config failed"
 	${RUBY} setup.rb install --prefix=${D} "$@" \
 		${RUBY_ECONF} || die "setup.rb install failed"
+
+	cd "${S}"
+	dodoc ChangeLog README.html README-Mac-OSX.txt README.txt
 }
