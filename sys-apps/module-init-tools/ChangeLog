@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/module-init-tools
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.116 2007/01/06 05:14:31 tgall Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.117 2007/02/02 15:16:31 gustavoz Exp $
+
+  02 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  module-init-tools-3.2.2-r2.ebuild:
+  Stable on sparc
 
   06 Jan 2007; Tom Gall <tgall@gentoo.org> module-init-tools-3.2.2-r2:
   stable on ppc64, part of the baselayout aggressive move.

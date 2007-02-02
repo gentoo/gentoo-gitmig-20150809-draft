@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/sysvinit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.37 2007/01/11 20:49:35 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.38 2007/02/02 15:13:14 gustavoz Exp $
+
+  02 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  sysvinit-2.86-r7.ebuild:
+  Stable on sparc
 
   11 Jan 2007; Daniel Ostrow <dostrow@gentoo.org> sysvinit-2.86-r7.ebuild:
   Stable on ppc64 for stage builds to include inittab again.
