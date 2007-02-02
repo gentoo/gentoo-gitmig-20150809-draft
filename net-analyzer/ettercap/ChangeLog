@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ettercap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.57 2007/02/01 21:52:46 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.58 2007/02/02 13:31:33 gustavoz Exp $
+
+  02 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  ettercap-0.7.3-r2.ebuild:
+  Stable on sparc wrt #164922
 
 *ettercap-0.7.3-r2 (01 Feb 2007)
 
