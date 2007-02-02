@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2554 2007/02/02 03:32:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2555 2007/02/02 03:41:23 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1855,15 +1855,6 @@ x11-base/xorg-server:aiglx - Includes extra AIGLX patches that allow compiz to f
 x11-base/xorg-server:dmx - Build the Distributed Multiheaded X server
 x11-base/xorg-server:kdrive - Build the kdrive X servers
 x11-base/xorg-server:xorg - Build the Xorg X server (HIGHLY RECOMMENDED)
-x11-base/xorg-x11:bitmap-fonts - Builds the crappy 100 DPI and 75 DPI fonts
-x11-base/xorg-x11:dlloader - Enable dynamic module loader instead of ELF loader
-x11-base/xorg-x11:dmx - Build Distributed Multiheaded X
-x11-base/xorg-x11:font-server - Build XFS, the X Font Server
-x11-base/xorg-x11:GAPING_SECURITY_HOLE - Set this to install X.Org 6.x versions with known security holes
-x11-base/xorg-x11:insecure-drivers - Builds insecure DRI stuff for via, mach64 and savage
-x11-base/xorg-x11:sdk - Builds the software development kit
-x11-base/xorg-x11:truetype-fonts - Build TrueType fonts
-x11-base/xorg-x11:type1-fonts - Build Type1 fonts
 x11-drivers/nvidia-drivers:dlloader - Installs dynamically linked synaptics Xorg driver
 x11-drivers/nvidia-legacy-drivers:dlloader - Installs dynamically linked synaptics Xorg driver
 x11-drivers/synaptics:dlloader - Installs dynamically linked synaptics Xorg driver
