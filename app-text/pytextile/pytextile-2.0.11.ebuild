@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/pytextile-2.0.11.ebuild,v 1.1 2007/02/01 15:02:10 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/pytextile-2.0.11.ebuild,v 1.2 2007/02/02 14:46:22 dju Exp $
 
 inherit distutils
 
@@ -15,6 +15,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="dev-lang/python"
+DEPEND="dev-python/setuptools"
 
 S=${WORKDIR}/${MY_P}
