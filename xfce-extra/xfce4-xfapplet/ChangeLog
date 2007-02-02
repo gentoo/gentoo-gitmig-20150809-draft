@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-xfapplet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xfapplet/ChangeLog,v 1.4 2007/02/01 12:43:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xfapplet/ChangeLog,v 1.5 2007/02/02 18:16:31 gustavoz Exp $
+
+  02 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  xfce4-xfapplet-0.1.0.ebuild:
+  Keyworded ~sparc wrt #164778
 
   01 Feb 2007; Markus Rothe <corsair@gentoo.org>
   xfce4-xfapplet-0.1.0.ebuild:
