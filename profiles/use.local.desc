@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2558 2007/02/02 05:38:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2559 2007/02/02 05:45:02 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1817,6 +1817,7 @@ www-client/mozilla:mozdevelop - Enable features for web developers (e.g. Venkman
 www-client/mozilla:moznocompose - Disable building of mozilla's HTML editor component
 www-client/mozilla:moznoirc - Disable building of mozilla's IRC client
 www-client/mozilla:moznomail - Disable building mozilla's mail client
+www-client/mozilla:moznopango - Disable pango during runtime
 www-client/mozilla:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
 www-client/mozilla:mozsvg - Enable SVG support in mozilla and firefox
 www-client/netscape:moznomail - Do not install Netscape Mail
