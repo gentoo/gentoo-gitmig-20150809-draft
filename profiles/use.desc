@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.336 2007/01/10 17:57:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.337 2007/02/02 03:31:59 mr_bones_ Exp $
 
 # Keep them sorted
 
@@ -231,9 +231,9 @@ mysql - Adds mySQL Database support
 mysqli - Adds support for the improved mySQL libraries
 nas - Adds support for network audio sound
 ncurses - Adds ncurses support (console display library)
+neXt - Enable neXt toolkit
 netboot - Enables network booting
 netcdf - Enable NetCDF data format support
-neXt - Enable neXt toolkit
 nis - Support for NIS/YP services
 nls - Adds Native Language Support (using gettext - GNU locale utilities)
 nntp - Add support for newsgroups (Network News Transfer Protocol)
@@ -250,8 +250,8 @@ ogg - Adds support for the Ogg container format (commonly used by Vorbis, Theora
 openal - Adds support for the Open Audio Library
 openexr - Support for the OpenEXR graphics file format
 opengl - Adds support for OpenGL (3D graphics)
-oracle7 - Adds support for the Oracle 7 Database
 oracle - Enable Oracle Database support
+oracle7 - Adds support for the Oracle 7 Database
 osc - Enables support for Open Sound Control
 oscar - Enable Oscar (AIM/ICQ) IM protocol support
 oss - Adds support for OSS (Open Sound System)
@@ -356,6 +356,7 @@ win32codecs - use win32codecs package for dll avi decoding support (wmv and what
 wmf - Adds support for the wmf vector image format
 wxwindows - Adds support for wxWindows/wxGTK GUI toolkit
 x264 - Enable h264 encoding using x264
+xcomposite - Enable support for the Xorg composite extension
 xface - Adds xface support used to allow a small image of xface format to be included in an email via the header 'X-Face'.
 xine - Add support for the XINE movie libraries
 xinerama - Add support for the xinerama X11 extension, which allows you to stretch your display across multiple monitors
