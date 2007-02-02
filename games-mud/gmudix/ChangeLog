@@ -1,6 +1,10 @@
 # ChangeLog for games-mud/gmudix
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gmudix/ChangeLog,v 1.10 2005/10/24 15:50:34 dertobi123 Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gmudix/ChangeLog,v 1.11 2007/02/02 17:37:04 nyhm Exp $
+
+  02 Feb 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/gmudix-1.0-as-needed.patch, gmudix-1.0.ebuild:
+  Fix for --as-needed, bug #164777
 
   24 Oct 2005; Tobias Scherbaum <dertobi123@gentoo.org> gmudix-1.0.ebuild:
   Marked ppc stable, Thanks to Owen in bug #109868
