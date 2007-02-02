@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gprolog
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.20 2007/01/05 20:33:37 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.21 2007/02/02 20:30:11 keri Exp $
+
+  02 Feb 2007; keri <keri@gentoo.org> -gprolog-1.3.0_pre20061215.ebuild:
+  Remove old -1.3.0 prerelease.
 
 *gprolog-1.3.0 (05 Jan 2007)
 
