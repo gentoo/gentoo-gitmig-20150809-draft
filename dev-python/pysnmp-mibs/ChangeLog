@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/pysnmp-mibs
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp-mibs/ChangeLog,v 1.1 2007/02/02 01:15:36 mjolnir Exp $
+
+*pysnmp-mibs-0.0.4a (02 Feb 2007)
+
+  02 Feb 2007; Martin Jackson <mjolnir@gentoo.org> +metadata.xml,
+  +pysnmp-mibs-0.0.4a.ebuild:
+  Adding ebuild for bug #159345
+
