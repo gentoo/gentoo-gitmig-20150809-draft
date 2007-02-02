@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/omniORB
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.41 2006/07/24 18:32:44 liquidx Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.42 2007/02/02 23:28:21 kloeri Exp $
+
+*omniORB-4.1.0 (02 Feb 2007)
+
+  02 Feb 2007; Bryan Østergaard <kloeri@gentoo.org> +omniORB-4.1.0.ebuild:
+  Version bump, bug 165019.
 
 *omniORB-4.0.7 (24 Jul 2006)
 
