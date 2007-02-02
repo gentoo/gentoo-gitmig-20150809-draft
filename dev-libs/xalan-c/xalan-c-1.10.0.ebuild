@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/xalan-c-1.10.0.ebuild,v 1.5 2006/12/04 17:49:19 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/xalan-c-1.10.0.ebuild,v 1.6 2007/02/02 14:28:30 blubb Exp $
 
-inherit toolchain-funcs eutils flag-o-matic
+inherit toolchain-funcs eutils flag-o-matic multilib
 
 MY_PV=${PV//./_}
 
@@ -41,7 +41,8 @@ src_compile() {
 	export XERCESCROOT="/usr/include/xercesc"
 	append-ldflags -pthread
 
-	./runConfigure -p linux -c "$(tc-getCC)" -x "$(tc-getCXX)" -P /usr || die "configure failed"
+	./runConfigure -p linux -c "$(tc-getCC)" -x "$(tc-getCXX)" -P /usr -C
+	--libdir=/usr/$(get_libdir) || die "configure failed"
 	emake -j1 || die "emake failed"
 
 	if use doc ; then
