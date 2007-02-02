@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.85 2007/01/23 03:57:21 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.86 2007/02/02 21:50:32 joem Exp $
+
+*rhythmbox-0.9.7-r1 (02 Feb 2007)
+
+  02 Feb 2007; Joe McCann <joem@gentoo.org>
+  +files/rhythmbox-0.9.7-daap_fix.patch, +rhythmbox-0.9.7-r1.ebuild:
+  Adding patch to fix playback from daap shares. See bug 162956 for more info.
+  Also added gst-plugins-cdparanoia dep as per bug 164983
 
   23 Jan 2007; Joe McCann <joem@gentoo.org> rhythmbox-0.9.6.ebuild,
   rhythmbox-0.9.7.ebuild:
