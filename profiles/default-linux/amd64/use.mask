@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.47 2007/02/02 14:11:15 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.48 2007/02/02 14:57:27 blubb Exp $
 
 # SECTION: Unmask
 
@@ -102,5 +102,9 @@ pvm
 # 2007/02/02 - Simon Stelling <blubb@gentoo.org>
 # firebird 1.5* has known problems on amd64; bug 156885
 firebird
+
+# 2007/02/02 - Simon Stelling <blubb@gentoo.org>
+# we don't have no gcc64; bug 144535
+gcc64
 
 # NOT NECESSARY - SECTION
