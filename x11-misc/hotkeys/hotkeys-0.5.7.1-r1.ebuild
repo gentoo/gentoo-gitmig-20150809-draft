@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.7.1-r1.ebuild,v 1.13 2007/01/02 19:56:55 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.7.1-r1.ebuild,v 1.14 2007/02/02 20:56:23 gustavoz Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://ypwong.org/hotkeys/"
 IUSE="gtk xosd"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc amd64 ppc"
+KEYWORDS="x86 sparc amd64 ppc"
 
 DEPEND="|| ( ( x11-libs/libXmu 
 		x11-libs/libxkbfile )
