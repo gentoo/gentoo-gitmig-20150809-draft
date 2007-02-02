@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xarchiver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xarchiver/ChangeLog,v 1.18 2007/01/29 19:27:09 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xarchiver/ChangeLog,v 1.19 2007/02/02 19:43:59 gustavoz Exp $
+
+  02 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  xarchiver-0.4.6.ebuild:
+  Keyworded ~sparc wrt #157879
 
   29 Jan 2007; Peter Weller <welp@gentoo.org> xarchiver-0.4.6.ebuild:
   A number of fixes
