@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.0.ebuild,v 1.3 2007/01/31 22:14:56 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.0.ebuild,v 1.4 2007/02/02 06:50:41 tupone Exp $
 
 MY_P=${PN}-src-${PV}
 
@@ -11,8 +11,8 @@ SRC_URI="mirror://sourceforge/crystal/${MY_P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="3ds alsa cal3d cegui cg java jpeg mng ode perl png python sdl
-truetype vorbis wxwindows"
+IUSE="3ds alsa cal3d cegui cg doc java javascript jpeg mng ode perl png python
+sdl truetype vorbis wxwindows"
 
 RDEPEND="virtual/opengl
 	virtual/glu
@@ -30,6 +30,7 @@ RDEPEND="virtual/opengl
 	png? ( media-libs/libpng )
 	wxwindows? ( x11-libs/pango
 				 x11-libs/wxGTK )
+	javascript? ( dev-lang/spidermonkey )
 	x11-libs/libXaw
 	x11-libs/libXxf86vm"
 
@@ -42,9 +43,26 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# Installing doc conflict with dodoc on src_install
+	# Removing conflicting target
+	sed -i -e "/^InstallDoc/d" \
+		Jamfile.in \
+		docs/Jamfile
+}
+
 src_compile() {
 	econf --enable-cpu-specific-optimizations=no \
+		--disable-separate-debug-info \
 		--without-lcms \
+		--without-caca \
+		--without-bullet \
+		--without-openal \
+		--without-jackasyn \
+		--without-mikmod \
+		--disable-make-emulation \
 		$(use_with perl) \
 		$(use_with python) \
 		$(use_with java) \
@@ -60,6 +78,7 @@ src_compile() {
 		$(use_with wxwindows wx) \
 		$(use_with cegui CEGUI) \
 		$(use_with cg Cg) \
+		$(use_with javascript js) \
 		$(use_with alsa asound)
 	#remove unwanted CFLAGS added by ./configure
 	sed -i -e '/COMPILER\.CFLAGS\.optimize/d' \
@@ -68,14 +87,22 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "make install failed"
+	for installTarget in install_bin install_plugin install_lib \
+		install_include install_data install_config
+	do
+		jam -q -s DESTDIR=${D} ${installTarget} \
+			|| die "jam ${installTarget} failed"
+	done
+	if use doc; then
+		jam -q -s DESTDIR=${D} install_doc || die "make install failed"
+	fi
 	# Fill cache directory for the examples
 	for dir in castle flarge isomap parallaxtest partsys r3dtest stenciltest \
 		terrain terrainf;
 	do
-		cslight -video=null ${D}/usr/share/${PN}/data/maps/$dir;
+		${D}/usr/bin/cslight -video=null ${D}/usr/share/${PN}/data/maps/$dir;
 	done
-	dodoc README
+	dodoc README docs/history* docs/todo_*
 
 	echo "CRYSTAL_PLUGIN=/usr/lib/crystalspace" >> 90crystalspace
 	echo "CRYSTAL_CONFIG=/etc/crystalspace" >> 90crystalspace

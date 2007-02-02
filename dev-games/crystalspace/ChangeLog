@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/crystalspace
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.21 2007/01/31 22:14:56 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.22 2007/02/02 06:50:41 tupone Exp $
+
+  02 Feb 2007; <tupone@gentoo.org> crystalspace-1.0.ebuild:
+  Work around problems raised with bug #155788 comment 18 by Frank Richter
 
   31 Jan 2007; <tupone@gentoo.org> crystalspace-1.0.ebuild:
   Adding environment variable definition
