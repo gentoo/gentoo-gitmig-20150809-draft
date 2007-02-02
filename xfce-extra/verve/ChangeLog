@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/verve
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/verve/ChangeLog,v 1.3 2007/02/01 12:39:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/verve/ChangeLog,v 1.4 2007/02/02 18:13:41 gustavoz Exp $
+
+  02 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> verve-0.3.5.ebuild:
+  Keyworded ~sparc wrt #164775
 
   01 Feb 2007; Markus Rothe <corsair@gentoo.org> verve-0.3.5.ebuild:
   Added ~ppc64; bug #164775
