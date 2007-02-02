@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base-r1.eclass,v 1.4 2005/11/20 01:35:05 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base-r1.eclass,v 1.5 2007/02/02 19:09:33 chtekk Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -28,9 +28,6 @@ EXPORT_FUNCTIONS src_install
 # Wether or not to add a line in the php.ini for the extension
 # (defaults to "yes" and shouldn't be changed in most cases)
 [ -z "${PHP_EXT_INI}" ] && PHP_EXT_INI="yes"
-
-# find out where to install extensions
-EXT_DIR="`${PHPCONFIG} --extension-dir 2>/dev/null`"
 
 # ---end ebuild configurable settings
 
