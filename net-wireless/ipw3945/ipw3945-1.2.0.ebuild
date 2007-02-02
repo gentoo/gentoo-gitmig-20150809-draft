@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ipw3945-1.2.0.ebuild,v 1.1 2007/02/02 20:22:20 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ipw3945-1.2.0.ebuild,v 1.2 2007/02/02 20:27:34 phreak Exp $
 
 inherit linux-mod eutils
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P/_pre/-pre}.tgz
 	${SRC_URI_PATCHBASE}-1.1.3-2.6.20-2.patch
 	${SRC_URI_PATCHBASE}-1.1.3-2.6.20-1.patch"
 
-LICENSE="GPL-2"
+LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
