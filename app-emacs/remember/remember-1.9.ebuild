@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/remember/remember-1.9.ebuild,v 1.1 2006/08/31 23:58:43 jmglov Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/remember/remember-1.9.ebuild,v 1.2 2007/02/02 16:55:43 gustavoz Exp $
 
 inherit elisp
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.emacswiki.org/cgi-bin/wiki/RememberMode"
 SRC_URI="http://download.gna.org/remember-el/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
 IUSE="bbdb planner"
 RDEPEND="virtual/emacs"
 DEPEND="${RDEPEND}
