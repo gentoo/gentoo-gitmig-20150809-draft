@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/String-Approx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/String-Approx/ChangeLog,v 1.5 2007/01/08 16:37:37 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/String-Approx/ChangeLog,v 1.6 2007/02/02 20:12:27 dertobi123 Exp $
+
+  02 Feb 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  String-Approx-3.26.ebuild:
+  Added ~ppc
 
   08 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   String-Approx-3.26.ebuild:
