@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.1.0_beta1.ebuild,v 1.2 2007/02/02 20:40:12 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.1.0_beta1.ebuild,v 1.3 2007/02/02 20:50:33 compnerd Exp $
 
 inherit eutils gnome2 eutils autotools
 
@@ -73,6 +73,14 @@ pkg_setup() {
 	if ! use sourceview ; then
 		G2CONF="${G2CONF} --enable-plugin-scintilla"
 	fi
+}
+
+src_unpack() {
+	gnome2_src_unpack
+	cd ${S}
+
+	# Patch to prevent an access violation (bug #164740)
+	epatch ${FILESDIR}/${PN}-2.1.0-sandbox-fix.patch
 }
 
 src_install() {
