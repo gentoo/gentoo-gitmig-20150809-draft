@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.93-r1.ebuild,v 1.4 2007/02/01 17:21:58 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.93-r1.ebuild,v 1.5 2007/02/02 07:59:43 opfer Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -181,7 +181,7 @@ pkg_postinst() {
 	# ecompress from Portage 2.2.* does auto-compression
 	# which is not desired for the dir file, so remove it to
 	# let it be recreated
-	rm "${D}/usr/share/info/emacs-${SLOT}/dir.bz2"
+	rm "${D}/usr/share/info/emacs-${SLOT}/dir.bz2" 2> /dev/null
 
 
 	if use X; then
