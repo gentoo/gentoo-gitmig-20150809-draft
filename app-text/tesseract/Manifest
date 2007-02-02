@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX tesseract-1.0.xterm-path.patch 629 RMD160 bcfd96f1ee65420c9a20260f67b52d3968bed6a4 SHA1 f1e88fb8dcb275b7ada4ca89a09069efa1f12c2c SHA256 14d0ea0dbfa35f8b457da1c568af95c01a5401392f1fc92f3f30f1b1146cd88a
 MD5 295f0f50f90c5be7176218c9f943c251 files/tesseract-1.0.xterm-path.patch 629
 RMD160 bcfd96f1ee65420c9a20260f67b52d3968bed6a4 files/tesseract-1.0.xterm-path.patch 629
@@ -18,3 +21,10 @@ SHA256 f42a3773900c016a5453b563b46aabb1cdac673dfa88f5553edf609b588ea3fa metadata
 MD5 8bf3b78f7032a3ca2649ca351dd75b0c files/digest-tesseract-1.02.02022007 274
 RMD160 6dbfbdb7c3650a6f4448538dc4cf47bb1907aa3b files/digest-tesseract-1.02.02022007 274
 SHA256 33b139e38a68e0de37d8f47628dd017de7faca0d68085def904a2597e85876e5 files/digest-tesseract-1.02.02022007 274
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFFw66CWt/XSf2CZdkRAvi6AJ9EfpuYBhkBhzT74QWZwRVyTn8emgCgktfG
+EUV1i1f/iuqHCaziyAZmjgI=
+=uMwC
+-----END PGP SIGNATURE-----
