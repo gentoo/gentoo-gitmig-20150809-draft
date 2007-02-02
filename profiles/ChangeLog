@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.66 2007/02/02 11:45:51 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.67 2007/02/02 17:25:56 jokey Exp $
+
+  02 Feb 2007; Markus Ullmann <jokey@gentoo.org> package.mask:
+  mask net-analyzer/prelude-nagios for removal
 
   02 Feb 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org> use.local.desc:
   Add rubygems:server
