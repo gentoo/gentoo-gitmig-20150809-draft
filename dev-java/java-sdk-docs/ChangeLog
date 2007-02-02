@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/java-sdk-docs
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.43 2006/12/13 01:26:31 caster Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.44 2007/02/02 23:37:34 betelgeuse Exp $
+
+  02 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -java-sdk-docs-1.2.2.006.ebuild, -java-sdk-docs-1.3.1.ebuild:
+  Removed 1.2 and 1.3 slots because we don't have those versions of jdks in
+  the tree any more. Allows us to close bug #110778.
 
 *java-sdk-docs-1.6.0 (13 Dec 2006)
 
