@@ -1,14 +1,6 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-AUX gnome-mount-0.4-fix-segv-on-no-media.patch 2028 RMD160 20a53ba84af5cd6434b702b80a6ed306820a5311 SHA1 a696b92642108e00bbc23f1e8cf6810961361f7b SHA256 1f55612af18786a7a9275765ab2c6bd4ea3f47654b6c5c890607833af0ff3197
-MD5 513dc3798c037e4d3ddf19ec0fb2b8fe files/gnome-mount-0.4-fix-segv-on-no-media.patch 2028
-RMD160 20a53ba84af5cd6434b702b80a6ed306820a5311 files/gnome-mount-0.4-fix-segv-on-no-media.patch 2028
-SHA256 1f55612af18786a7a9275765ab2c6bd4ea3f47654b6c5c890607833af0ff3197 files/gnome-mount-0.4-fix-segv-on-no-media.patch 2028
-AUX gnome-mount-0.4-hal-mountable.patch 564 RMD160 e4cc5e3901738f0d15e51df2603586dbfa7c69b5 SHA1 91d5e00d8138be5a9be0b4585f8535e236b29f05 SHA256 889921c0867d0855d5b343a7e61b0c4a07202f81ce87cb5320842d68f875bd13
-MD5 cbbc2b9e3b351a389b877bbb0423e34b files/gnome-mount-0.4-hal-mountable.patch 564
-RMD160 e4cc5e3901738f0d15e51df2603586dbfa7c69b5 files/gnome-mount-0.4-hal-mountable.patch 564
-SHA256 889921c0867d0855d5b343a7e61b0c4a07202f81ce87cb5320842d68f875bd13 files/gnome-mount-0.4-hal-mountable.patch 564
 AUX gnome-mount-0.4-ntfs3g.patch 765 RMD160 95cfd9ea57cc0b38fab0b2732bfffef61e0a947a SHA1 ef8af3919b4082245ddb60acf9a67cac12a12edb SHA256 b3d74f64f4cae0731e33df00c213750a815a77971cba6aa6795e898682966ca9
 MD5 534285925d6d02bead2c5fdd1bc7ef00 files/gnome-mount-0.4-ntfs3g.patch 765
 RMD160 95cfd9ea57cc0b38fab0b2732bfffef61e0a947a files/gnome-mount-0.4-ntfs3g.patch 765
@@ -18,46 +10,25 @@ MD5 7a04f8633da7884e72aaf1016bc8ca96 files/gnome-mount-hal-no-media-fstab.patch 
 RMD160 53fc945ecca7fb7ba7a3805002e23b4abc160351 files/gnome-mount-hal-no-media-fstab.patch 15854
 SHA256 49fe069d1fc5ebe16cb4f6929c457ae459056195f242891e20bb05e3b9fc91f8 files/gnome-mount-hal-no-media-fstab.patch 15854
 DIST gnome-mount-0.4.tar.gz 364546 RMD160 a4f28e3111bfcfce2101cbf53f9c57f63d9ba2be SHA1 35df047b54a2dbbaa5e297396b880472679af085 SHA256 fa9456c0cd1adeda962721fed955914bdc23723a403bebf31bd95a1f54211dd8
-EBUILD gnome-mount-0.4-r2.ebuild 928 RMD160 f3e42debaf5ff8b50b9ef5ecd98c3e837a1d56b2 SHA1 4fc2ef3fd3cd2a149322cb060d81058e3a34a630 SHA256 ab3c526a7785d7cab7959950ef1a59f65b8ff5dc78f9c94754b511dfab4e3267
-MD5 8bd044bdf0d00887e0e3da13fa6bf382 gnome-mount-0.4-r2.ebuild 928
-RMD160 f3e42debaf5ff8b50b9ef5ecd98c3e837a1d56b2 gnome-mount-0.4-r2.ebuild 928
-SHA256 ab3c526a7785d7cab7959950ef1a59f65b8ff5dc78f9c94754b511dfab4e3267 gnome-mount-0.4-r2.ebuild 928
-EBUILD gnome-mount-0.4-r3.ebuild 1006 RMD160 18fbfc9cb5ca2aebad3121c96977fc48ff37a2ec SHA1 5be9b2625575fdecb4b2302f532b0117eda88573 SHA256 c962d298d89b3b454eabe45d585f19ee05762c615178aa05123e6ec50a4ef6ee
-MD5 e831f937604f12e534659b5a07a36b48 gnome-mount-0.4-r3.ebuild 1006
-RMD160 18fbfc9cb5ca2aebad3121c96977fc48ff37a2ec gnome-mount-0.4-r3.ebuild 1006
-SHA256 c962d298d89b3b454eabe45d585f19ee05762c615178aa05123e6ec50a4ef6ee gnome-mount-0.4-r3.ebuild 1006
-EBUILD gnome-mount-0.4-r4.ebuild 959 RMD160 a0bd5d7d66c475dbe2747e69d765170902e0981e SHA1 da27cc1b15a9cf4470005d60b57631251c286654 SHA256 7b9d3fc4fe61fa8cd37ece80fc6840d3f35bfe46734d4f9f57553379be82f2a0
-MD5 2289ba6e1b939582e378932220f8ccee gnome-mount-0.4-r4.ebuild 959
-RMD160 a0bd5d7d66c475dbe2747e69d765170902e0981e gnome-mount-0.4-r4.ebuild 959
-SHA256 7b9d3fc4fe61fa8cd37ece80fc6840d3f35bfe46734d4f9f57553379be82f2a0 gnome-mount-0.4-r4.ebuild 959
 EBUILD gnome-mount-0.4-r5.ebuild 1107 RMD160 7e812d6808fd0d389524c87826758239b2d3b632 SHA1 a587a4ad685aeeb1c9f5e9a651956bb0df9845fa SHA256 3f23337b5a72a34100a1bd877ca7413466b57c71a95da7a2e1badcf31baa302b
 MD5 78fdf3f647f4a22a98a9dba4fef9a7e1 gnome-mount-0.4-r5.ebuild 1107
 RMD160 7e812d6808fd0d389524c87826758239b2d3b632 gnome-mount-0.4-r5.ebuild 1107
 SHA256 3f23337b5a72a34100a1bd877ca7413466b57c71a95da7a2e1badcf31baa302b gnome-mount-0.4-r5.ebuild 1107
-MISC ChangeLog 4058 RMD160 183d685065f48bf776bed06cadc8b63f1b0d4115 SHA1 f299cab107811fc57d6d086fd1580a719a223ebc SHA256 bdf6feafcc5ca92b04a6f8fdc72dc386e3e92216d0769c7d268f4e3e55a2f9e0
-MD5 e9c90a82347ded39b2773b952a950e2f ChangeLog 4058
-RMD160 183d685065f48bf776bed06cadc8b63f1b0d4115 ChangeLog 4058
-SHA256 bdf6feafcc5ca92b04a6f8fdc72dc386e3e92216d0769c7d268f4e3e55a2f9e0 ChangeLog 4058
+MISC ChangeLog 4302 RMD160 3ef7ec4dc35ee3258ad463a8005f4cba8a204ca2 SHA1 371c9a04ef62eb57a657b1c886f73dcc3328b576 SHA256 aa27f785516f8767d2e9bad553f99bf104790ad663877c1ef376f906954fb3ca
+MD5 b9404316e1a0aa647009cfdd47d7c8c2 ChangeLog 4302
+RMD160 3ef7ec4dc35ee3258ad463a8005f4cba8a204ca2 ChangeLog 4302
+SHA256 aa27f785516f8767d2e9bad553f99bf104790ad663877c1ef376f906954fb3ca ChangeLog 4302
 MISC metadata.xml 206 RMD160 61d950942f566dfc272d4f115fa2fb390fbbe301 SHA1 3f059bf106cd99ac3eb9aab89e0708f5fa86ddf9 SHA256 91b15066df76a399233847c54c04eca1d95ab2b73fdef41207dfeb17dbb38193
 MD5 8f804bac2d3835f24ed9a73034f969a1 metadata.xml 206
 RMD160 61d950942f566dfc272d4f115fa2fb390fbbe301 metadata.xml 206
 SHA256 91b15066df76a399233847c54c04eca1d95ab2b73fdef41207dfeb17dbb38193 metadata.xml 206
-MD5 76c05d7960a8436e6bc7d220bef1f23c files/digest-gnome-mount-0.4-r2 247
-RMD160 38b79354b5e9ed2371393b9c9c45d5e228d2d665 files/digest-gnome-mount-0.4-r2 247
-SHA256 f10621810bfe345f1c0576989c8f938017419cd5cd3c96f320d412831afadde7 files/digest-gnome-mount-0.4-r2 247
-MD5 76c05d7960a8436e6bc7d220bef1f23c files/digest-gnome-mount-0.4-r3 247
-RMD160 38b79354b5e9ed2371393b9c9c45d5e228d2d665 files/digest-gnome-mount-0.4-r3 247
-SHA256 f10621810bfe345f1c0576989c8f938017419cd5cd3c96f320d412831afadde7 files/digest-gnome-mount-0.4-r3 247
-MD5 76c05d7960a8436e6bc7d220bef1f23c files/digest-gnome-mount-0.4-r4 247
-RMD160 38b79354b5e9ed2371393b9c9c45d5e228d2d665 files/digest-gnome-mount-0.4-r4 247
-SHA256 f10621810bfe345f1c0576989c8f938017419cd5cd3c96f320d412831afadde7 files/digest-gnome-mount-0.4-r4 247
 MD5 76c05d7960a8436e6bc7d220bef1f23c files/digest-gnome-mount-0.4-r5 247
 RMD160 38b79354b5e9ed2371393b9c9c45d5e228d2d665 files/digest-gnome-mount-0.4-r5 247
 SHA256 f10621810bfe345f1c0576989c8f938017419cd5cd3c96f320d412831afadde7 files/digest-gnome-mount-0.4-r5 247
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.1 (GNU/Linux)
+Version: GnuPG v1.4.6 (GNU/Linux)
 
-iD8DBQFFvFPZ8bi6rjpTunYRAsl4AJ4omR7A9kb98ejdduAm44CaDbNrwwCgrZoO
-Qin1mxZ9eM7Q3kFPn31994g=
-=/U2H
+iD8DBQFFwwsAkeYb6olFHJcRAogOAJ0d7AyxBFMMGQ3Nk0IzH85c4P+4/wCghmd7
+0T681UU3rw7rlkiQK1/zVfo=
+=VZJV
 -----END PGP SIGNATURE-----
