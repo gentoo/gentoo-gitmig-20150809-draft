@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/ipw3945
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ChangeLog,v 1.19 2007/01/08 20:35:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ChangeLog,v 1.20 2007/02/02 20:22:20 phreak Exp $
+
+*ipw3945-1.2.0 (02 Feb 2007)
+
+  02 Feb 2007; Christian Heim <phreak@gentoo.org>
+  +files/ipw3945-1.2.0-Makefile.patch, +ipw3945-1.2.0.ebuild:
+  Version bump, Intel announced a new stable version for it's ipw3945 device
+  driver.
 
   08 Jan 2007; Robin H. Johnson <robbat2@gentoo.org>
   -ipw3945-1.1.3-r1.ebuild, ipw3945-1.1.3-r2.ebuild:
