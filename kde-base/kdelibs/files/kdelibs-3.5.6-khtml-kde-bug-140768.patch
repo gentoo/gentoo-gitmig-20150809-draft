@@ -1,0 +1,46 @@
+From: Leo Savernik <l.savernik@aon.at>
+To: kde-commits@kde.org
+Subject: branches/KDE/3.5/kdelibs/khtml/html
+X-Commit-Directories: (0) branches/KDE/3.5/kdelibs/khtml/html
+MIME-Version: 1.0
+Date: Tue, 30 Jan 2007 17:25:36 +0000
+Message-Id: <1170177936.253127.26374.nullmailer@svn.kde.org>
+Content-Type: text/plain;
+  charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Length: 4145
+X-UID: 241
+
+SVN commit 628618 by savernik:
+
+Reverting r617941. This fixes jumping to the top right before loading a
+new page and also fixes page loading time increase.
+
+Attention packagers! Please include this patch in new versions of your
+khtml-3.5.6 packages. Web surfing experience can be considered broken
+without it.
+
+CCMAIL: kde-packager@kde.org
+BUG: 140768
+CCBUG: 140777    
+CCBUG: 24820
+
+
+ M  +1 -1      html_documentimpl.cpp  
+
+
+--- branches/KDE/3.5/kdelibs/khtml/html/html_documentimpl.cpp #628617:628618
+@@ -222,7 +222,7 @@
+ 
+ void HTMLDocumentImpl::slotHistoryChanged()
+ {
+-    if ( !m_render )
++    if ( true || !m_render )
+         return;
+ 
+     recalcStyle( Force );
+_______________________________________________
+Kde-packager mailing list
+Kde-packager@kde.org
+https://mail.kde.org/mailman/listinfo/kde-packager
+
