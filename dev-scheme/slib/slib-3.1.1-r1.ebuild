@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.1.1-r1.ebuild,v 1.1 2007/01/24 17:06:06 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.1.1-r1.ebuild,v 1.2 2007/02/02 06:25:22 seemant Exp $
 
 inherit versionator eutils
 
@@ -22,7 +22,7 @@ IUSE=""
 
 #unzip for unpacking
 #depend on guile for now, until slib actually works with another scheme implementation in portage
-RDEPEND="=dev-scheme/guile-1.6*"
+RDEPEND="dev-scheme/guile"
 DEPEND="app-arch/unzip
 	${RDEPEND}"
 
