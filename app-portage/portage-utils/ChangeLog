@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/portage-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.64 2007/01/24 03:45:36 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.65 2007/02/02 23:32:02 eroyf Exp $
+
+  02 Feb 2007; Alexander H. Færøy <eroyf@gentoo.org>
+  portage-utils-0.1.23.ebuild:
+  Stable on MIPS; bug #165074
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org> portage-utils-0.1.20.ebuild,
   portage-utils-0.1.21.ebuild, portage-utils-0.1.22.ebuild,
