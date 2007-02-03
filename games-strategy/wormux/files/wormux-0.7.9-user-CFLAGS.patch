@@ -1,0 +1,30 @@
+--- configure
++++ configure
+@@ -7314,13 +7314,11 @@
+             GCC_FLAGS="$GCC_FLAGS -Wno-unused-parameter"
+ 
+     if test "x${debug}" = "xyes"; then
+-        GCC_FLAGS="$GCC_FLAGS -O0 -g -DDEBUG"
+-    else
+-        GCC_FLAGS="$GCC_FLAGS -O2"
++        GCC_FLAGS="$GCC_FLAGS -DDEBUG"
+     fi
+ 
+-            CFLAGS="$GCC_FLAGS"
+-        CXXFLAGS="$GCC_FLAGS"
++        CFLAGS="$CFLAGS $GCC_FLAGS"
++        CXXFLAGS="$CXXFLAGS $GCC_FLAGS"
+ 
+ else
+     if test "x${debug}" = "xyes"; then
+--- src/Makefile.in
++++ src/Makefile.in
+@@ -518,7 +518,7 @@
+ 	weapon/submachine_gun.h weapon/polecat.cpp weapon/polecat.h \
+ 	weapon/blowtorch.cpp weapon/blowtorch.h weapon/syringe.cpp \
+ 	weapon/syringe.h $(am__append_1)
+-AM_CXXFLAGS = -DINSTALL_DATADIR=\"$(pkgdatadir)\" -DINSTALL_LOCALEDIR=\"$(localedir)\" -DFONT_FILE=\"$(fontfile)\" -DPACKAGE_VERSION=\"$(PACKAGE_VERSION)\" -Werror
++AM_CXXFLAGS = -DINSTALL_DATADIR=\"$(pkgdatadir)\" -DINSTALL_LOCALEDIR=\"$(localedir)\" -DFONT_FILE=\"$(fontfile)\" -DPACKAGE_VERSION=\"$(PACKAGE_VERSION)\"
+ all: config.h
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
+ 
