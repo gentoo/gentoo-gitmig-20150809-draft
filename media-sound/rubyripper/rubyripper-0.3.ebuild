@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.3.ebuild,v 1.4 2007/02/03 18:56:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.3.ebuild,v 1.5 2007/02/03 20:45:03 blubb Exp $
 
 inherit ruby
 
@@ -10,7 +10,7 @@ SRC_URI="http://rubyforge.org/frs/download.php/15318/${P}.tar.bz2"
 IUSE="flac mp3 vorbis"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 RDEPEND="dev-ruby/ruby-libglade2
 	virtual/eject
 	media-sound/cd-discid
