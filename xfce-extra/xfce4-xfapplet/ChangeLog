@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-xfapplet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xfapplet/ChangeLog,v 1.5 2007/02/02 18:16:31 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xfapplet/ChangeLog,v 1.6 2007/02/03 00:01:50 jer Exp $
+
+  03 Feb 2007; Jeroen Roovers <jer@gentoo.org> xfce4-xfapplet-0.1.0.ebuild:
+  Marked ~hppa (bug #164779).
 
   02 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   xfce4-xfapplet-0.1.0.ebuild:
