@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/iputils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.45 2007/02/03 22:34:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.46 2007/02/03 23:01:50 weeve Exp $
+
+  03 Feb 2007; Jason Wever <weeve@gentoo.org> iputils-20060512.ebuild:
+  Stable on SPARC wrt bug #165179.
 
 *iputils-20070202 (03 Feb 2007)
 
