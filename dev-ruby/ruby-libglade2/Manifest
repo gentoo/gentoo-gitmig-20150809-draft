@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX ruby-libglade2-0.16.0-upstreamfix.patch 387 RMD160 ff4f0fbc2ee90ed552a2bdea4edcc729751d172c SHA1 1c216eba628b3bc8f2bfd865dfe4ce4e59129327 SHA256 08eb47da773149efb2e873dc5cf8ac95cb4eb38191ad1714b5a6accf205cfb80
 MD5 c03f72d16cc837e6c07beaf778ae550f files/ruby-libglade2-0.16.0-upstreamfix.patch 387
 RMD160 ff4f0fbc2ee90ed552a2bdea4edcc729751d172c files/ruby-libglade2-0.16.0-upstreamfix.patch 387
@@ -21,10 +18,10 @@ EBUILD ruby-libglade2-0.15.0.ebuild 549 RMD160 6553ac99e6c4d8541633059b09123f4c6
 MD5 5f9f167fe67565f0f0b100b4f6be4a44 ruby-libglade2-0.15.0.ebuild 549
 RMD160 6553ac99e6c4d8541633059b09123f4c62558548 ruby-libglade2-0.15.0.ebuild 549
 SHA256 70c7efc06178f02381615163c3fb236296bf6f0bcf8654c9fc03c3ca4b606fc7 ruby-libglade2-0.15.0.ebuild 549
-EBUILD ruby-libglade2-0.16.0-r1.ebuild 654 RMD160 2afd85ef3a8b5ff6bd285f332c62a5025bc891a1 SHA1 0669e596051796768a115250cbfa4aed7975453d SHA256 66e60d9c7cbe9e32fd46bba64986ce99a76406a591d6c046ab96d8346d88c9a9
-MD5 7bca6da74c8301329281dc81776a1545 ruby-libglade2-0.16.0-r1.ebuild 654
-RMD160 2afd85ef3a8b5ff6bd285f332c62a5025bc891a1 ruby-libglade2-0.16.0-r1.ebuild 654
-SHA256 66e60d9c7cbe9e32fd46bba64986ce99a76406a591d6c046ab96d8346d88c9a9 ruby-libglade2-0.16.0-r1.ebuild 654
+EBUILD ruby-libglade2-0.16.0-r1.ebuild 656 RMD160 924219b3d3dedfba24df2abfb750ac4b6ba5e660 SHA1 44f4ba5048531cee10b6150139ef24a08f45087a SHA256 78c34c912544bbbe374ce8c30080a1ee23c48e45877d3e04abd2bee0dcd86893
+MD5 1637ae91a4c175e2d6ff7ec042fa624a ruby-libglade2-0.16.0-r1.ebuild 656
+RMD160 924219b3d3dedfba24df2abfb750ac4b6ba5e660 ruby-libglade2-0.16.0-r1.ebuild 656
+SHA256 78c34c912544bbbe374ce8c30080a1ee23c48e45877d3e04abd2bee0dcd86893 ruby-libglade2-0.16.0-r1.ebuild 656
 EBUILD ruby-libglade2-0.16.0.ebuild 550 RMD160 fbc03cda1d6c82da6fb30436b268dbd178ff2411 SHA1 dcd64b0aeb40ac3d87f652cf8d49eb2117c4c5ba SHA256 097a72dd7b0874e224bb248e6e61fcb36f1c0f0d362179cdefcd8b5a121e13a3
 MD5 056d7c31c5ee9d29352868af53bfa37d ruby-libglade2-0.16.0.ebuild 550
 RMD160 fbc03cda1d6c82da6fb30436b268dbd178ff2411 ruby-libglade2-0.16.0.ebuild 550
@@ -52,10 +49,3 @@ SHA256 088599799e062e45fb5eee803a9bb1d349ca7c6ba9fd60638edd1557bcab4e1a files/di
 MD5 502b7d91321b650b261e5363f1211d20 files/digest-ruby-libglade2-0.16.0-r1 271
 RMD160 f113e366affba68c0310698ecd3ee7f6a3f9ec19 files/digest-ruby-libglade2-0.16.0-r1 271
 SHA256 088599799e062e45fb5eee803a9bb1d349ca7c6ba9fd60638edd1557bcab4e1a files/digest-ruby-libglade2-0.16.0-r1 271
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.1 (GNU/Linux)
-
-iD8DBQFFv+b+ugEuf3OQ0akRAic4AJ44Gduisn5NM/WBe3gYbYj6cgaGHQCgknr2
-wRpnFQGk6bQPnrhZ5fzS4Tk=
-=5mfU
------END PGP SIGNATURE-----
