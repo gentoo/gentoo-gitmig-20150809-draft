@@ -1,22 +1,9 @@
-AUX xfce4-diskperf-2.0-asneeded.patch 527 RMD160 e8564f2747e9e932628cebe7dddd98c64b89fe88 SHA1 d02de60b0e921d7a76ceef84a7d7cc24ffc13550 SHA256 ed916779b763756efca0a469f19cdfc26d27e42f49e05568f88184c76a3185a8
-MD5 f5d360f3a000d9ab836017d4a1eb4ea7 files/xfce4-diskperf-2.0-asneeded.patch 527
-RMD160 e8564f2747e9e932628cebe7dddd98c64b89fe88 files/xfce4-diskperf-2.0-asneeded.patch 527
-SHA256 ed916779b763756efca0a469f19cdfc26d27e42f49e05568f88184c76a3185a8 files/xfce4-diskperf-2.0-asneeded.patch 527
 DIST xfce4-diskperf-plugin-1.5.tar.gz 226767 RMD160 2eeb070aeb2be2b53ff57e86f684c9d430d637ab SHA1 1c1f2bea61d48c5a5ac25dd072d5734af0491854 SHA256 a7bcb1d4de8d1e22fee0e5115bff5f10b7ee522a9b98e99950894519db9b2bb6
-DIST xfce4-diskperf-plugin-2.0.tar.bz2 109199 RMD160 4bc180ca146db93288e3ebdae3ef537c24425a26 SHA1 e5bf8526521ad7841001cad9ff5b9b1dc001001f SHA256 852057f6a0c2135b2bde5bae1e6fb42270baddf88de97b42370bec0e10d4d732
 DIST xfce4-diskperf-plugin-2.1.0.tar.bz2 183492 RMD160 7e66634d48499dc9be777580ac48e66c9e51039b SHA1 66db93af32f4a3ca0ce931fed312b267a3a3dece SHA256 492a45d6520eb654434ee2ee0a518f0605a219706e863279afd7e9c0165b17d5
 EBUILD xfce4-diskperf-1.5-r2.ebuild 377 RMD160 d1df08ae9ebb21f97737d8242f1001b680ce64d0 SHA1 cb42b16b7c282aa09808a00cc7e10a024abed8d2 SHA256 82c85ce7d98852f38f0e4a73cff6fa2ac8a88ca9f3ccacf47b59bf5501e1f86e
 MD5 08222a913852017f8e515a3b0c7bc48c xfce4-diskperf-1.5-r2.ebuild 377
 RMD160 d1df08ae9ebb21f97737d8242f1001b680ce64d0 xfce4-diskperf-1.5-r2.ebuild 377
 SHA256 82c85ce7d98852f38f0e4a73cff6fa2ac8a88ca9f3ccacf47b59bf5501e1f86e xfce4-diskperf-1.5-r2.ebuild 377
-EBUILD xfce4-diskperf-2.0-r1.ebuild 604 RMD160 a31eeed20067320815ff5f19bddffa4c4ae0b11e SHA1 600bae705acc7d069df0f35e9205e643bf56ca38 SHA256 9cdd9b854b2b6765ec2b0552f9d046c338b19236da63559dc0019ff5882c0bf7
-MD5 fa7c9ef82f8cfc7e77ef1e5be3f48e16 xfce4-diskperf-2.0-r1.ebuild 604
-RMD160 a31eeed20067320815ff5f19bddffa4c4ae0b11e xfce4-diskperf-2.0-r1.ebuild 604
-SHA256 9cdd9b854b2b6765ec2b0552f9d046c338b19236da63559dc0019ff5882c0bf7 xfce4-diskperf-2.0-r1.ebuild 604
-EBUILD xfce4-diskperf-2.0.ebuild 401 RMD160 c4770f05c1d4c25dd88255ebd7625d07f134bf00 SHA1 9b7e28586ee6a7edb26b84c6df2b354545871e1b SHA256 355f715de86e1006c2f16a12672d28287d46d44d53248729234c3a0f70f6cb89
-MD5 8bc774642b9bda480c5bc36fd0cd8c59 xfce4-diskperf-2.0.ebuild 401
-RMD160 c4770f05c1d4c25dd88255ebd7625d07f134bf00 xfce4-diskperf-2.0.ebuild 401
-SHA256 355f715de86e1006c2f16a12672d28287d46d44d53248729234c3a0f70f6cb89 xfce4-diskperf-2.0.ebuild 401
 EBUILD xfce4-diskperf-2.1.0.ebuild 402 RMD160 832fccd168880ede5671a02c44408f3018999fcb SHA1 80f4ce0a45f839b1a67de5cbf71946f47ec333ff SHA256 17c7f96f8a3039856b767679f59cc5dcce801895ed971a856041ae56f645196f
 MD5 660c32298a3860330b6fb9f7b9591db9 xfce4-diskperf-2.1.0.ebuild 402
 RMD160 832fccd168880ede5671a02c44408f3018999fcb xfce4-diskperf-2.1.0.ebuild 402
@@ -32,12 +19,6 @@ SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata
 MD5 9e5f06605c7fc064e2796571da8bdf87 files/digest-xfce4-diskperf-1.5-r2 277
 RMD160 cc228dcb575e12679b4a2bff6697bd25e6adeaa9 files/digest-xfce4-diskperf-1.5-r2 277
 SHA256 fab2390d96ef43ea3c96032bde6e0527ef78de946408d74531b2b3a378dbec42 files/digest-xfce4-diskperf-1.5-r2 277
-MD5 12b6fafcf09d81be8a2adfba6979daaa files/digest-xfce4-diskperf-2.0 280
-RMD160 7e18db348553ebbe04c4dffc903aa66aab275233 files/digest-xfce4-diskperf-2.0 280
-SHA256 a40775c4400ae1384f0e8b4b68d61255ddfe796966fbcef2e8c12fb5ddf50a6e files/digest-xfce4-diskperf-2.0 280
-MD5 12b6fafcf09d81be8a2adfba6979daaa files/digest-xfce4-diskperf-2.0-r1 280
-RMD160 7e18db348553ebbe04c4dffc903aa66aab275233 files/digest-xfce4-diskperf-2.0-r1 280
-SHA256 a40775c4400ae1384f0e8b4b68d61255ddfe796966fbcef2e8c12fb5ddf50a6e files/digest-xfce4-diskperf-2.0-r1 280
 MD5 1dda3a0c638efb4f2e3cbcd32f68465d files/digest-xfce4-diskperf-2.1.0 286
 RMD160 9f09f8adf53fdfe56f27758450d33528c5e930b3 files/digest-xfce4-diskperf-2.1.0 286
 SHA256 dbb55bdaf387add9ef59db22480d2a35586d59dcf85912718b14159d1654a498 files/digest-xfce4-diskperf-2.1.0 286
