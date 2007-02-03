@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mel-base/cl-mel-base-0.5.11.ebuild,v 1.2 2005/02/07 21:24:39 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mel-base/cl-mel-base-0.5.11.ebuild,v 1.3 2007/02/03 09:12:51 mr_bones_ Exp $
 
 inherit common-lisp eutils
 
