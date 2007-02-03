@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/meld
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.52 2007/01/17 16:49:00 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.53 2007/02/03 21:38:27 kloeri Exp $
+
+  03 Feb 2007; Bryan Østergaard <kloeri@gentoo.org> meld-1.1.4.ebuild:
+  Stable on IA64, bug 152878.
 
   17 Jan 2007; Jose Luis Rivero <yoswink@gentoo.org> meld-1.1.4.ebuild:
   Stable on alpha wrt to bug #152878
