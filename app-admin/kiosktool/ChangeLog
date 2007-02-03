@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/kiosktool
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kiosktool/ChangeLog,v 1.17 2005/07/17 11:42:47 voxus Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kiosktool/ChangeLog,v 1.18 2007/02/03 23:49:09 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   17 Jul 2005; Konstantin Arkhipov <voxus@gentoo.org> -kiosktool-0.9.ebuild,
   kiosktool-1.0.ebuild:
