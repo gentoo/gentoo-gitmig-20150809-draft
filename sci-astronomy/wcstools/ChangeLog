@@ -1,6 +1,15 @@
 # ChangeLog for sci-astronomy/wcstools
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcstools/ChangeLog,v 1.1 2005/10/02 15:22:55 ribosome Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcstools/ChangeLog,v 1.2 2007/02/03 17:06:54 bicatali Exp $
+
+*wcstools-3.6.6 (02 Feb 2007)
+
+  02 Feb 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/wcstools-3.6.6-autotools.patch,
+  +files/wcstools-3.6.6-codewarn.patch, metadata.xml,
+  +wcstools-3.6.6.ebuild:
+  Version bump. Changed LICENSE, headers location and autotoolization.
+  Close #151001. Also thanks to Joshua Rich <joshua@mso.anu.edu.au>.
 
 *wcstools-3.6.2 (02 Oct 2005)
 
