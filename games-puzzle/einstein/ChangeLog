@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/einstein
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/einstein/ChangeLog,v 1.4 2006/10/06 18:18:36 wolf31o2 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/einstein/ChangeLog,v 1.5 2007/02/03 14:02:12 blubb Exp $
+
+  03 Feb 2007; Simon Stelling <blubb@gentoo.org> einstein-2.0.ebuild:
+  stable on amd64
 
   06 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org> einstein-2.0.ebuild:
   Added icon and closing bug #140428.

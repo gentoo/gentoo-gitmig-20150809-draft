@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/shaaft
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/ChangeLog,v 1.6 2006/05/21 12:00:22 tupone Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/ChangeLog,v 1.7 2007/02/03 14:03:16 blubb Exp $
+
+  03 Feb 2007; Simon Stelling <blubb@gentoo.org> shaaft-0.5.0.ebuild:
+  stable on amd64
 
   21 May 2006; <Tupone@gentoo.org> +files/shaaft-0.5.0-gcc41.patch,
   shaaft-0.5.0.ebuild:
