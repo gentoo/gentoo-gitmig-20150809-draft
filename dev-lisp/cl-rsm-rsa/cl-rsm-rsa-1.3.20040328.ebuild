@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rsm-rsa/cl-rsm-rsa-1.3.20040328.ebuild,v 1.4 2005/05/24 18:48:35 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rsm-rsa/cl-rsm-rsa-1.3.20040328.ebuild,v 1.5 2007/02/03 17:47:08 flameeyes Exp $
 
 inherit common-lisp eutils
 
@@ -9,7 +9,7 @@ CVS_PV=${PV:4:4}.${PV:8:2}.${PV:10}
 
 DESCRIPTION="McIntire's Common Lisp RSA Library"
 HOMEPAGE="http://packages.debian.org/unstable/devel/${PN}.html"
-SRC_URI="http://ftp.debian.org/debian/pool/main/c/${PN}/cl-rsm-rsa_${MY_PV}+cvs.${CVS_PV}.tar.gz"
+SRC_URI="mirror://gentoo/cl-rsm-rsa_${MY_PV}+cvs.${CVS_PV}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~sparc ~x86"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-base64
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-base64/ChangeLog,v 1.12 2006/09/02 17:38:01 mkennedy Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-base64/ChangeLog,v 1.13 2007/02/03 17:33:18 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> cl-base64-3.3.1.ebuild:
+  Use mirror://debian/ where applicable, or use mirror://gentoo/ if the file
+  has been removed from debian's mirrors.
 
 *cl-base64-3.3.2 (02 Sep 2006)
 

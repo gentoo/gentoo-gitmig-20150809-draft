@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r2.ebuild,v 1.3 2006/12/30 13:12:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r2.ebuild,v 1.4 2007/02/03 17:55:59 flameeyes Exp $
 
 inherit elisp-common flag-o-matic
 
@@ -8,8 +8,8 @@ DEB_PV=32
 
 DESCRIPTION="GNU Common Lisp"
 HOMEPAGE="http://www.gnu.org/software/gcl/gcl.html"
-SRC_URI="http://ftp.debian.org/debian/pool/main/g/gcl/gcl_${PV}.orig.tar.gz
-	http://ftp.debian.org/debian/pool/main/g/gcl/gcl_${PV}-${DEB_PV}.diff.gz
+SRC_URI="mirror://debian/pool/main/g/gcl/gcl_${PV}.orig.tar.gz
+	mirror://debian/pool/main/g/gcl/gcl_${PV}-${DEB_PV}.diff.gz
 	ftp://ftp.gnu.org/pub/gnu/gcl/${PN}.info.tgz"
 
 LICENSE="GPL-2"

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-split-sequence/cl-split-sequence-20011114.1-r1.ebuild,v 1.8 2005/05/24 18:48:35 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-split-sequence/cl-split-sequence-20011114.1-r1.ebuild,v 1.9 2007/02/03 17:48:56 flameeyes Exp $
 
 inherit common-lisp eutils
 
@@ -8,8 +8,8 @@ DEB_PV=1
 
 DESCRIPTION="Functions to partition a Common Lisp sequence into multiple result sequences"
 HOMEPAGE="http://www.cliki.net/SPLIT-SEQUENCE http://packages.debian.org/unstable/devel/cl-split-sequence.html"
-SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-split-sequence/${PN}_${PV}.orig.tar.gz
-	http://ftp.debian.org/debian/pool/main/c/cl-split-sequence/${PN}_${PV}-${DEB_PV}.diff.gz"
+SRC_URI="mirror://gentoo/${PN}_${PV}.orig.tar.gz
+	mirror://gentoo/${PN}_${PV}-${DEB_PV}.diff.gz"
 LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~amd64 ppc ~sparc x86"

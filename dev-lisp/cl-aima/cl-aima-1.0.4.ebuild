@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aima/cl-aima-1.0.4.ebuild,v 1.4 2006/01/29 16:16:19 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aima/cl-aima-1.0.4.ebuild,v 1.5 2007/02/03 17:31:46 flameeyes Exp $
 
 inherit common-lisp eutils
 
@@ -8,8 +8,8 @@ DEB_PV=1
 
 DESCRIPTION="Common Lisp source code from Peter Norvig's Artificial Intelligence: A Modern Approach"
 HOMEPAGE="http://aima.cs.berkeley.edu/ http://www.norvig.com/ http://packages.debian.org/unstable/devel/cl-aima.html"
-SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-aima/cl-aima_${PV}.orig.tar.gz
-	http://ftp.debian.org/debian/pool/main/c/cl-aima/cl-aima_${PV}-${DEB_PV}.diff.gz"
+SRC_URI="mirror://gentoo/cl-aima_${PV}.orig.tar.gz
+	mirror://gentoo/cl-aima_${PV}-${DEB_PV}.diff.gz"
 LICENSE="Norvig"
 SLOT="0"
 KEYWORDS="~amd64 ~sparc x86"

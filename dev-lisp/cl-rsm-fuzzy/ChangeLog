@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/cl-rsm-fuzzy
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rsm-fuzzy/ChangeLog,v 1.6 2005/05/24 18:48:35 mkennedy Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rsm-fuzzy/ChangeLog,v 1.7 2007/02/03 17:43:36 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  cl-rsm-fuzzy-1.2.ebuild, cl-rsm-fuzzy-1.2-r1.ebuild,
+  cl-rsm-fuzzy-1.2-r2.ebuild:
+  Use mirror://debian/ where applicable, or use mirror://gentoo/ if the file
+  has been removed from debian's mirrors.
 
   24 May 2005; <mkennedy@gentoo.org> cl-rsm-fuzzy-1.2.ebuild,
   cl-rsm-fuzzy-1.2-r1.ebuild, cl-rsm-fuzzy-1.2-r2.ebuild:

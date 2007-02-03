@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-ssl
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ssl/ChangeLog,v 1.5 2005/04/17 00:51:42 mkennedy Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ssl/ChangeLog,v 1.6 2007/02/03 17:49:16 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  cl-ssl-0.2.2004.01.04.ebuild:
+  Use mirror://debian/ where applicable, or use mirror://gentoo/ if the file
+  has been removed from debian's mirrors.
 
   17 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org>
   -cl-ssl-0.2.2003.09.10.ebuild, cl-ssl-0.2.2004.01.04.ebuild:

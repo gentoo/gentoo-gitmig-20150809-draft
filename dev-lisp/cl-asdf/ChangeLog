@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-asdf
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf/ChangeLog,v 1.26 2006/05/07 20:34:53 corsair Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf/ChangeLog,v 1.27 2007/02/03 17:32:11 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> cl-asdf-1.86-r1.ebuild,
+  cl-asdf-1.89.ebuild:
+  Use mirror://debian/ where applicable, or use mirror://gentoo/ if the file
+  has been removed from debian's mirrors.
 
   07 May 2006; Markus Rothe <corsair@gentoo.org> cl-asdf-1.86-r1.ebuild:
   Stable on ppc64

@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/openmcl
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/openmcl/ChangeLog,v 1.4 2006/11/09 04:28:51 mkennedy Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/openmcl/ChangeLog,v 1.5 2007/02/03 17:56:20 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  openmcl-0.14.2_p1.ebuild, openmcl-0.14.2_p1-r1.ebuild:
+  Use mirror://debian/ where applicable, or use mirror://gentoo/ if the file
+  has been removed from debian's mirrors.
 
 *openmcl-0.14.2_p1-r1 (09 Nov 2006)
 

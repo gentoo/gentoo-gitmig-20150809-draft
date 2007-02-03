@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/openmcl/openmcl-0.14.2_p1-r1.ebuild,v 1.1 2006/11/09 04:28:51 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/openmcl/openmcl-0.14.2_p1-r1.ebuild,v 1.2 2007/02/03 17:56:20 flameeyes Exp $
 
 inherit eutils common-lisp-common-3
 
@@ -10,7 +10,7 @@ MY_PV=${PV/_p/.p}
 DESCRIPTION="OpenMCL is a Common Lisp implementation, derived from Digitool's MCL product"
 HOMEPAGE="http://openmcl.clozure.com/
 	http://packages.debian.org/unstable/devel/openmcl"
-SRC_URI="http://ftp.debian.org/debian/pool/main/o/${PN}/${PN}_${MY_PV}.${EXTRA_PV}.tar.gz"
+SRC_URI="mirror://debian/pool/main/o/${PN}/${PN}_${MY_PV}.${EXTRA_PV}.tar.gz"
 LICENSE="LLGPL-2.1"
 SLOT="0"
 KEYWORDS="~ppc"

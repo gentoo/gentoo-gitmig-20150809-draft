@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-plus
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-plus/ChangeLog,v 1.6 2006/05/11 21:29:01 mkennedy Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-plus/ChangeLog,v 1.7 2007/02/03 17:39:32 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> cl-plus-1.0.ebuild:
+  Use mirror://debian/ where applicable, or use mirror://gentoo/ if the file
+  has been removed from debian's mirrors.
 
   11 May 2006; Matthew Kennedy <mkennedy@gentoo.org>
   files/digest-cl-plus-1.0, Manifest:

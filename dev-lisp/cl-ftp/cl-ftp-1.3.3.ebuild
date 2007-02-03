@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ftp/cl-ftp-1.3.3.ebuild,v 1.3 2005/05/24 18:48:33 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ftp/cl-ftp-1.3.3.ebuild,v 1.4 2007/02/03 17:34:58 flameeyes Exp $
 
 inherit common-lisp
 
@@ -8,7 +8,7 @@ DESCRIPTION="CL-FTP is a Networking Library that provides FTP client (for now) f
 HOMEPAGE="http://www.mapcar.org/~mrd/cl-ftp/
 	http://packages.debian.org/unstable/devel/cl-ftp
 	http://www.cliki.net/CL-FTP"
-SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-ftp/${PN}_${PV}.tar.gz"
+SRC_URI="mirror://debian/pool/main/c/cl-ftp/${PN}_${PV}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc x86"

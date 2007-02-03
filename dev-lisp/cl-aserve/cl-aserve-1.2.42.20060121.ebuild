@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aserve/cl-aserve-1.2.42.20060121.ebuild,v 1.2 2006/11/29 02:58:05 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aserve/cl-aserve-1.2.42.20060121.ebuild,v 1.3 2007/02/03 17:32:34 flameeyes Exp $
 
 inherit common-lisp eutils
 
@@ -10,7 +10,7 @@ CVS_PV=${PV:7:4}.${PV:11:2}.${PV:13}
 DESCRIPTION="A portable version of AllegroServe which is a web application server for Common Lisp programs."
 HOMEPAGE="http://portableaserve.sourceforge.net/
 	http://packages.debian.org/unstable/web/cl-aserve.html"
-SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-portable-aserve/cl-portable-aserve_${MY_PV}+cvs.${CVS_PV}.orig.tar.gz"
+SRC_URI="mirror://gentoo/cl-portable-aserve_${MY_PV}+cvs.${CVS_PV}.orig.tar.gz"
 LICENSE="LLGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"

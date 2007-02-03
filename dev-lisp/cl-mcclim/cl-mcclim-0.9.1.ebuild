@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/cl-mcclim-0.9.1.ebuild,v 1.5 2005/07/09 16:13:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/cl-mcclim-0.9.1.ebuild,v 1.6 2007/02/03 17:36:24 flameeyes Exp $
 
 inherit common-lisp elisp eutils
 
@@ -11,8 +11,8 @@ HOMEPAGE="http://clim.mikemac.com/
 	http://clim.mikemac.com/spec/clim.html
 	http://packages.debian.org/unstable/devel/cl-mcclim
 	http://clim.mikemac.com/spec/clim.html"
-SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-mcclim/cl-mcclim_${PV}.orig.tar.gz
-	http://ftp.debian.org/debian/pool/main/c/cl-mcclim/cl-mcclim_${PV}-${DEB_PV}.diff.gz"
+SRC_URI="mirror://debian/pool/main/c/cl-mcclim/cl-mcclim_${PV}.orig.tar.gz
+	mirror://debian/pool/main/c/cl-mcclim/cl-mcclim_${PV}-${DEB_PV}.diff.gz"
 LICENSE="LLGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc x86"

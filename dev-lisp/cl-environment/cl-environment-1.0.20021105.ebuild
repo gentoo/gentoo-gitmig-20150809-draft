@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-environment/cl-environment-1.0.20021105.ebuild,v 1.6 2005/05/24 18:48:33 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-environment/cl-environment-1.0.20021105.ebuild,v 1.7 2007/02/03 17:34:37 flameeyes Exp $
 
 inherit common-lisp
 
@@ -9,7 +9,7 @@ CVS_PV=${PV:4:4}.${PV:8:2}.${PV:10}
 
 DESCRIPTION="Provides an CLOS (CL Object System) encapsulation of the current CL implementation environment"
 HOMEPAGE="http://packages.debian.org/unstable/devel/cl-environment"
-SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-environment/cl-environment_${MY_PV}+cvs.${CVS_PV}.orig.tar.gz"
+SRC_URI="mirror://debian/pool/main/c/cl-environment/cl-environment_${MY_PV}+cvs.${CVS_PV}.orig.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc x86"

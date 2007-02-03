@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-19a-r1.ebuild,v 1.4 2005/08/18 02:41:35 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-19a-r1.ebuild,v 1.5 2007/02/03 17:55:25 flameeyes Exp $
 
 inherit common-lisp-common-2 eutils
 
@@ -10,9 +10,9 @@ MY_PV=${PV}-release-20040728
 DESCRIPTION="CMU Common Lisp is an implementation of ANSI Common Lisp"
 HOMEPAGE="http://www.cons.org/cmucl/
 	http://packages.debian.org/unstable/devel/cmucl.html"
-SRC_URI="http://ftp.debian.org/debian/pool/main/c/cmucl/cmucl_${MY_PV}.orig.tar.gz
-	http://ftp.debian.org/debian/pool/main/c/cmucl/cmucl_${MY_PV}-${DEB_PV}.diff.gz
-	ftp://ftp.common-lisp.net/pub/project/cmucl/release/${PV}/${PN}-${PV}-x86-linux.tar.bz2"
+SRC_URI="mirror://gentoo/cmucl_${MY_PV}.orig.tar.gz
+	mirror://gentoo/cmucl_${MY_PV}-${DEB_PV}.diff.gz
+	mirror://gentoo/${PN}-${PV}-x86-linux.tar.bz2"
 
 LICENSE="public-domain"
 SLOT="0"

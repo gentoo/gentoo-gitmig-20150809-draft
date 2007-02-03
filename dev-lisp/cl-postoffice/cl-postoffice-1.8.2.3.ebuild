@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-postoffice/cl-postoffice-1.8.2.3.ebuild,v 1.5 2005/07/09 16:17:02 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-postoffice/cl-postoffice-1.8.2.3.ebuild,v 1.6 2007/02/03 17:40:34 flameeyes Exp $
 
 inherit common-lisp eutils
 
@@ -9,8 +9,8 @@ DEB_PV=1
 DESCRIPTION="Franz's SMTP, POP, & IMAP interface library for Common Lisp Programs"
 HOMEPAGE="http://opensource.franz.com/postoffice/index.html
 	http://packages.debian.org/unstable/devel/cl-postoffice"
-SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-postoffice/cl-postoffice_${PV}.orig.tar.gz
-	http://ftp.debian.org/debian/pool/main/c/cl-postoffice/cl-postoffice_${PV}-${DEB_PV}.diff.gz"
+SRC_URI="mirror://gentoo/cl-postoffice_${PV}.orig.tar.gz
+	mirror://gentoo/cl-postoffice_${PV}-${DEB_PV}.diff.gz"
 LICENSE="LLGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc x86"
