@@ -1,12 +1,12 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4.eclass,v 1.8 2007/01/31 13:02:35 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4.eclass,v 1.9 2007/02/03 07:30:40 nyhm Exp $
 #
 # Author Caleb Tennis <caleb@gentoo.org>
 #
 # This eclass is simple.  Inherit it, and in your depend, do something like this:
 #
-# DEPEND="$(qt_min_version 4)"
+# DEPEND="$(qt4_min_version 4)"
 #
 # and it handles the rest for you
 #
