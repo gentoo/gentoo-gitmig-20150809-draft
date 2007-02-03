@@ -1,6 +1,6 @@
---- vncserver.old	2007-01-16 23:50:14.000000000 +0100
-+++ vncserver	2007-01-16 23:51:00.000000000 +0100
-@@ -36,12 +36,12 @@
+--- vncserver.ok	2007-02-03 19:41:44.000000000 +0100
++++ vncserver	2007-02-03 19:43:48.000000000 +0100
+@@ -36,15 +36,15 @@
  $geometry = "1024x768";
  $depth = 24;
  $desktopName = "X";
@@ -12,7 +12,11 @@
  
  # Here is another example of setting the font path:
 -# $fontPath = "/usr/lib/X11/fonts/misc/,/usr/lib/X11/fonts/75dpi/";
-+$fontPath = "/usr/lib/X11/fonts/misc/,/usr/lib/X11/fonts/75dpi/";
++$fontPath = "/usr/share/fonts/misc/,/usr/share/fonts/Type1/";
  
  # X colors database path is optional, uncomment and edit to use:
- # $colorPath = "/usr/lib/X11/rgb";
+-# $colorPath = "/usr/lib/X11/rgb";
++$colorPath = "/usr/share/X11/rgb";
+ 
+ # You might wish to make your vnc directory under /tmp, to make sure
+ # passwords are always kept on the local filesystem. To do that, just
