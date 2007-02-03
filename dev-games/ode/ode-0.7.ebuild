@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.7.ebuild,v 1.2 2006/10/30 10:11:06 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.7.ebuild,v 1.3 2007/02/03 19:17:34 blubb Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -32,6 +32,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-flags.patch
+	epatch "${FILESDIR}"/${P}-libdir.patch
 	eautoreconf
 
 	sed -i -e "s/..\/..\/drawstuff\/textures/\/usr\/share\/${PF}\/examples/" ode/test/*.c*

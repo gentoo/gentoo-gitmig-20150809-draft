@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/ode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.35 2007/01/06 01:46:56 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.36 2007/02/03 19:17:34 blubb Exp $
+
+  03 Feb 2007; Simon Stelling <blubb@gentoo.org>
+  +files/ode-0.7-libdir.patch, ode-0.7.ebuild:
+  fix multilib-strict bug 154426
 
   06 Jan 2007; Tristan Heaven <nyhm@gentoo.org> ode-0.6-r1.ebuild:
   Set WANT_AUTOCONF and WANT_AUTOMAKE
