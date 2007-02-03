@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/assp-1.2.6-r2.ebuild,v 1.1 2007/01/20 20:56:45 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/assp-1.2.6-r3.ebuild,v 1.1 2007/02/03 05:00:58 wltjr Exp $
 
 inherit eutils
 
@@ -52,6 +52,9 @@ src_unpack() {
 	for file in ${FILES}; do
 		edos2unix ${file}
 	done
+
+	# fix upstrean error
+	sed -i -e 's:if(PopB4SMTPMerak):if($PopB4SMTPMerak):' assp.pl
 
 	# patch is against unix-format, so patch after dos2unix
 	epatch ${FILESDIR}/assp-${PV}.patch
