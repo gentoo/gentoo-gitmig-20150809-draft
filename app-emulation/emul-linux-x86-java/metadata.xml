@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>amd64</herd>
+	<herd>java</herd>
 	<maintainer>
 		<email>herbs@gentoo.org</email>
 	</maintainer>
