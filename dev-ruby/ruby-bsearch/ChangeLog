@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-bsearch
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bsearch/ChangeLog,v 1.14 2007/02/03 21:42:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bsearch/ChangeLog,v 1.15 2007/02/03 21:43:14 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  ruby-bsearch-1.5-r1.ebuild:
+  Fix HOMEPAGE/SRC_URI.
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
