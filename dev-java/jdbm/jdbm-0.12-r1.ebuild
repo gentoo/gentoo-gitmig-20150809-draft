@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbm/jdbm-0.12-r1.ebuild,v 1.2 2007/01/26 08:05:59 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbm/jdbm-0.12-r1.ebuild,v 1.3 2007/02/03 13:48:48 beandog Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -10,11 +10,10 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip"
 
 LICENSE="BSD"
 SLOT="1"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="doc source"
 
-COMMON_DEP="
-	dev-java/jta
+COMMON_DEP="dev-java/jta
 	=dev-java/xerces-1.3*"
 
 # Needs to depend on 1.3 because this uses assert

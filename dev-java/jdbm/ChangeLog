@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jdbm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbm/ChangeLog,v 1.6 2007/01/26 08:05:59 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbm/ChangeLog,v 1.7 2007/02/03 13:48:48 beandog Exp $
+
+  03 Feb 2007; Steve Dibb <beandog@gentoo.org> jdbm-0.12-r1.ebuild:
+  amd64 stable, bug 163811
 
   26 Jan 2007; Christian Faulhammer <opfer@gentoo.org> jdbm-0.12-r1.ebuild:
   stable x86; bug #163811
