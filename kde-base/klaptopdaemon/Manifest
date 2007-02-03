@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX kdeutils-3.4.3-klaptopdaemon.patch 1895 RMD160 eeaeb21b03240775fb0127b6b0f871a51c6c834c SHA1 9a3ab27ae603d6f51334a2e9c1f8adcca55fe24b SHA256 f7534bc07a62556f446f0cc2d607f8907ea2b872b499ae5ea36306694642f9a3
 MD5 0ebe4d00a1fd5845db2172027d12f531 files/kdeutils-3.4.3-klaptopdaemon.patch 1895
 RMD160 eeaeb21b03240775fb0127b6b0f871a51c6c834c files/kdeutils-3.4.3-klaptopdaemon.patch 1895
@@ -13,10 +10,10 @@ EBUILD klaptopdaemon-3.5.2.ebuild 750 RMD160 3f44dc3ba15d389b5d4d1e8631fb23a1543
 MD5 955bfad160e8afebf3584cfb363f5d6c klaptopdaemon-3.5.2.ebuild 750
 RMD160 3f44dc3ba15d389b5d4d1e8631fb23a15430be89 klaptopdaemon-3.5.2.ebuild 750
 SHA256 710af177ba375b3c9681bd9b9a924f577b039952f32914ba66241eb21e8614fb klaptopdaemon-3.5.2.ebuild 750
-EBUILD klaptopdaemon-3.5.5.ebuild 712 RMD160 332fe3a660b2493aa4b0271b1a7846bf52ab2068 SHA1 a8f1f1ca3255dec2978f227a567ad15d49bce4bc SHA256 c7814a1fa85c4fd5e6607290f6850e6cba36200318a64bae4c25946bafa969b1
-MD5 bc4ed3d206bc46294958725749ee5dd4 klaptopdaemon-3.5.5.ebuild 712
-RMD160 332fe3a660b2493aa4b0271b1a7846bf52ab2068 klaptopdaemon-3.5.5.ebuild 712
-SHA256 c7814a1fa85c4fd5e6607290f6850e6cba36200318a64bae4c25946bafa969b1 klaptopdaemon-3.5.5.ebuild 712
+EBUILD klaptopdaemon-3.5.5.ebuild 717 RMD160 f3cf0bb6088c86c76e50fc3135006d9d1263e5ac SHA1 9b49caa77ded1ee799c866421d37ff39cefebe66 SHA256 2f36ec90f553d37ea2fa8e4cc1b7db0c67d0e5b3fb2338e479ead4398f7064fe
+MD5 5df38fe33ded87f96b8266e2ee503752 klaptopdaemon-3.5.5.ebuild 717
+RMD160 f3cf0bb6088c86c76e50fc3135006d9d1263e5ac klaptopdaemon-3.5.5.ebuild 717
+SHA256 2f36ec90f553d37ea2fa8e4cc1b7db0c67d0e5b3fb2338e479ead4398f7064fe klaptopdaemon-3.5.5.ebuild 717
 EBUILD klaptopdaemon-3.5.6.ebuild 722 RMD160 cd41eb2b1fe7e02fa2920e1438c4bc050fc666de SHA1 a2be94bad0c5391623037e14f3691872dfacdbe9 SHA256 6598d5aaad41474cdcd38bd8ece01b3f7c6a957bb67f16f84d728672f912e908
 MD5 4bc6f99e8e6213b7c80394ced7702ce8 klaptopdaemon-3.5.6.ebuild 722
 RMD160 cd41eb2b1fe7e02fa2920e1438c4bc050fc666de klaptopdaemon-3.5.6.ebuild 722
@@ -38,10 +35,3 @@ SHA256 69be8fec0a0816db7341ccc47361b7837bd077b4572e7fca1cf85e3385295cae files/di
 MD5 d74a5ff65f818f97453c12dedfc9071b files/digest-klaptopdaemon-3.5.6 521
 RMD160 cfdaaf0effddc5c1e8a2c22a547b0a5d9f3be0d6 files/digest-klaptopdaemon-3.5.6 521
 SHA256 510464d237221e2a05ff65053fa957cc4ff853c577330d70900946f9345e6b19 files/digest-klaptopdaemon-3.5.6 521
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.1 (GNU/Linux)
-
-iD8DBQFFrTkMAiZjviIA2XgRAvttAKCWFTRTtOgAn2FcUPHOZYIJer/+9ACcCYsj
-jvSQLYfZ7eKYBeFG/oMAbwY=
-=eHmQ
------END PGP SIGNATURE-----
