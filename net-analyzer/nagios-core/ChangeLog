@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.92 2006/11/23 19:50:31 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.93 2007/02/03 07:04:42 mjolnir Exp $
+
+*nagios-core-2.5-r1 (03 Feb 2007)
+
+  03 Feb 2007; Martin Jackson <mjolnir@gentoo.org>  +nagios-core-2.5-r1.ebuild,
+  +files/digest-nagios-core-2.5-r1, +nagios-core-2.4-r1.ebuild, 
+  +files/digest-nagios-core-2.4-r1, +nagios-core-2.3.1-r1.ebuild, 
+  +files/digest-nagios-core-2.3.1-r1, +nagios-core-1.4.1-r1.ebuild,
+  +files/digest-nagios-core-1.4.1-r1:
+
+  Adding use firewall to init script to fix #150593.  Revbumps for all versions.
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> nagios-core-1.4.1.ebuild:
   dev-db/mysql => virtual/mysql
