@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.71 2007/02/03 01:39:58 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.72 2007/02/03 13:56:57 masterdriverz Exp $
+
+  03 Feb 2007; Charlie Shepherd <masterdriverz@gentoo.org> use.local.desc:
+  Remove net-im/kopete references - it has been killed
 
   03 Feb 2007; Michael Marineau <marineam@gentoo.org>
   default-linux/x86/no-nptl/2.4/package.mask:
