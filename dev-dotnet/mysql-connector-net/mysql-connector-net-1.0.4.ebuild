@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mysql-connector-net/mysql-connector-net-1.0.4.ebuild,v 1.6 2007/01/28 06:18:58 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mysql-connector-net/mysql-connector-net-1.0.4.ebuild,v 1.7 2007/02/03 02:05:16 beandog Exp $
 
 inherit eutils multilib mono
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://mysql/Downloads/Connector-Net/${P}-noinstall.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc"
 
 RDEPEND=">=dev-lang/mono-1.0
