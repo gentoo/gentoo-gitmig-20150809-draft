@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20061223.ebuild,v 1.2 2007/01/22 19:58:58 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20061223.ebuild,v 1.3 2007/02/03 18:07:26 weeve Exp $
 
 inherit autotools eutils
 
@@ -27,7 +27,7 @@ SRC_URI="http://iki.fi/tuomov/dl/${MY_PN}.tar.gz
 	http://clemens.endorphin.org/patches/xft-ion3-for-darcs-20061202.diff )"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="xinerama unicode iontruetype"
 DEPEND="
 	|| (

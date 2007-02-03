@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/ion3
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ChangeLog,v 1.41 2007/01/22 19:58:58 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ChangeLog,v 1.42 2007/02/03 18:07:26 weeve Exp $
+
+  03 Feb 2007; Jason Wever <weeve@gentoo.org> ion3-20061223.ebuild:
+  Added ~sparc keyword wrt bug #162985.
 
   22 Jan 2007; Matti Bickel <mabi@gentoo.org> ion3-20061223.ebuild:
   Fixing sandbox violation (missing sed add) (bug #163104)
