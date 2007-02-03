@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/pablio
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pablio/ChangeLog,v 1.4 2005/12/31 00:15:58 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pablio/ChangeLog,v 1.5 2007/02/03 18:34:35 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   31 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> pablio-18.1.ebuild:
   Drop the macos Makefile hack as it's not in $FILESDIR, and userland_Darwin

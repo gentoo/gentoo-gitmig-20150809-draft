@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdif
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdif/ChangeLog,v 1.5 2005/01/31 17:28:58 eradicator Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdif/ChangeLog,v 1.6 2007/02/03 18:35:34 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   31 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org> sdif-3.8.6.ebuild:
   Stable sparc.

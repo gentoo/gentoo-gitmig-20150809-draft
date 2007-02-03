@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/fluidsynth-dssi
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fluidsynth-dssi/ChangeLog,v 1.3 2006/03/24 23:01:33 wormo Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fluidsynth-dssi/ChangeLog,v 1.4 2007/02/03 18:26:01 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   24 Mar 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   fluidsynth-dssi-0.9.1.ebuild:
