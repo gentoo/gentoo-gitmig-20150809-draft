@@ -1,6 +1,9 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.168 2007/02/02 21:49:28 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.169 2007/02/03 19:15:56 nixnut Exp $
+
+  03 Feb 2007; nixnut <nixnut@gentoo.org> abiword-2.4.5-r1.ebuild:
+  Stable on ppc wrt bug 165022
 
   02 Feb 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   -files/abiword-2.4.2-spell_crash_1.patch,

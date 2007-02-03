@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.4.5-r1.ebuild,v 1.5 2007/02/02 21:42:05 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.4.5-r1.ebuild,v 1.6 2007/02/03 19:15:56 nixnut Exp $
 
 inherit eutils fdo-mime alternatives
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.abisource.com/downloads/${PN}/${PV}/source/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc ~x86"
 IUSE="debug gnome spell xml"
 
 RDEPEND="virtual/xft
@@ -43,7 +43,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch ${FILESDIR}/11_history_fullpath.dpatch
-	epatch ${FILESDIR}/11_fcfini_crash.dpatch
+	epatch ${FILESDIR}/16_fcfini_crash.dpatch
 }
 
 src_compile() {
