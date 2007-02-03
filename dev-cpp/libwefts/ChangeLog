@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/libwefts
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libwefts/ChangeLog,v 1.2 2006/01/12 07:47:19 swegener Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libwefts/ChangeLog,v 1.3 2007/02/03 21:41:05 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  libwefts-0.99c_p20060109.ebuild:
+  Regenerate digest in Manifest2 format.
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *libwefts-0.99c_p20060109 (09 Jan 2006)
 

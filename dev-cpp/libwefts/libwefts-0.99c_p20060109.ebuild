@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libwefts/libwefts-0.99c_p20060109.ebuild,v 1.2 2006/01/09 19:49:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libwefts/libwefts-0.99c_p20060109.ebuild,v 1.3 2007/02/03 21:41:05 flameeyes Exp $
 
 inherit libtool
 
 DESCRIPTION="A C++ high-level yet efficent multithreading library, portable across pthread-enabled platforms."
 
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 HOMEPAGE="http://wefts.sourceforge.net/"
 
 DEPEND="doc? ( app-doc/doxygen )"
