@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-games-extra-data
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games-extra-data/ChangeLog,v 1.26 2007/02/03 03:28:25 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games-extra-data/ChangeLog,v 1.27 2007/02/03 07:36:55 dertobi123 Exp $
+
+  03 Feb 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  gnome-games-extra-data-2.12.0.ebuild:
+  Stable on ppc wrt bug #164978.
 
   03 Feb 2007; Olivier Crête <tester@gentoo.org>
   gnome-games-extra-data-2.12.0.ebuild:
