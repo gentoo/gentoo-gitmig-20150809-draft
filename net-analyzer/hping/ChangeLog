@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/hping
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.40 2007/01/20 17:00:45 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.41 2007/02/03 22:20:02 weeve Exp $
+
+  03 Feb 2007; Jason Wever <weeve@gentoo.org> hping-3_pre20051105.ebuild:
+  Added ~sparc keyword.
 
   20 Jan 2007; Alexander H. Færøy <eroyf@gentoo.org>
   hping-2.0.0_rc3-r1.ebuild:
