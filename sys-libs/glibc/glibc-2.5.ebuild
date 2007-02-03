@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5.ebuild,v 1.24 2007/02/02 04:55:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5.ebuild,v 1.25 2007/02/03 02:02:57 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -27,7 +27,7 @@ GLIBC_MANPAGE_VERSION="none"
 GLIBC_INFOPAGE_VERSION="none"
 
 # Gentoo patchset
-PATCH_VER="1.3"
+PATCH_VER="1.3.1"
 
 GENTOO_TOOLCHAIN_BASE_URI="mirror://gentoo"
 GENTOO_TOOLCHAIN_DEV_URI="http://dev.gentoo.org/~azarah/glibc/XXX http://dev.gentoo.org/~vapier/dist/XXX"
