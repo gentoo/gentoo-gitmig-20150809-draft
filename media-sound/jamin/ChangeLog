@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/jamin
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jamin/ChangeLog,v 1.17 2006/01/14 11:51:04 fvdpol Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jamin/ChangeLog,v 1.18 2007/02/03 19:22:18 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *jamin-0.95.0-r2 (14 Jan 2006)
 

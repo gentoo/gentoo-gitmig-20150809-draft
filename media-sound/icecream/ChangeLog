@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/icecream
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/icecream/ChangeLog,v 1.5 2006/01/24 20:58:12 chutzpah Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/icecream/ChangeLog,v 1.6 2007/02/03 19:18:52 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *icecream-1.0 (24 Jan 2006)
 
