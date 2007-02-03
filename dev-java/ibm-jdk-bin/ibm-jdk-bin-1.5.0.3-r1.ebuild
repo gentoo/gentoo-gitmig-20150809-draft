@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.3-r1.ebuild,v 1.6 2007/01/09 10:12:37 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.3-r1.ebuild,v 1.7 2007/02/03 05:23:22 beandog Exp $
 
 inherit java-vm-2 versionator eutils rpm
 
@@ -62,7 +62,7 @@ SRC_URI="x86? ( ${X86_JDK_DIST} )
 		ppc64? ( ${PPC64_JAVACOMM_DIST} )
 		)"
 LICENSE="IBM-J1.5"
-KEYWORDS="-* ~amd64 ppc ppc64 x86"
+KEYWORDS="-* amd64 ppc ppc64 x86"
 RESTRICT="fetch"
 
 RDEPEND="
