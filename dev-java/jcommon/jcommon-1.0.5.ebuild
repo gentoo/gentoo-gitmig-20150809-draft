@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/jcommon-1.0.5.ebuild,v 1.1 2006/09/11 12:31:50 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/jcommon-1.0.5.ebuild,v 1.2 2007/02/03 10:40:56 nixnut Exp $
 
 inherit java-pkg-2 java-ant-2 versionator
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.jfree.org"
 SRC_URI="mirror://sourceforge/jfreechart/${P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="1.0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE="debug doc source"
 DEPEND=">=virtual/jdk-1.4
 		dev-java/ant-core
