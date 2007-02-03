@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmcs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/ChangeLog,v 1.3 2007/02/03 21:22:15 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/ChangeLog,v 1.4 2007/02/03 23:03:45 jer Exp $
+
+  03 Feb 2007; Jeroen Roovers <jer@gentoo.org> libmcs-0.2.1.ebuild:
+  Marked ~hppa (bug #165161).
 
   03 Feb 2007; Jason Wever <weeve@gentoo.org> libmcs-0.2.1.ebuild:
   Added ~sparc keyword wrt bug #165161.
