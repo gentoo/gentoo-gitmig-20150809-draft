@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/muse/muse-3.02.6b.ebuild,v 1.1 2006/04/29 11:29:03 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/muse/muse-3.02.6b.ebuild,v 1.2 2007/02/03 02:57:21 beandog Exp $
 
 inherit elisp
 
@@ -11,13 +11,13 @@ HOMEPAGE="http://www.mwolson.org/projects/MuseMode.html"
 SRC_URI="http://download.gna.org/muse-el/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND="virtual/emacs"
 
 SITEFILE=50muse-mode-gentoo.el
 
-S="${WORKDIR}/${P}"
+#S="${WORKDIR}/${P}"
 
 src_compile() {
 	emake || die
