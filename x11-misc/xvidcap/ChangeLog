@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xvidcap
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/ChangeLog,v 1.29 2006/11/19 12:32:17 nelchael Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/ChangeLog,v 1.30 2007/02/03 14:14:57 nelchael Exp $
+
+  03 Feb 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/xvidcap-1.1.4-xtoxwd.c.patch, xvidcap-1.1.4.ebuild:
+  Add patch that fixes creating xwd files on 64 bit archs, see bug #158143.
 
   19 Nov 2006; Krzysiek Pawlik <nelchael@gentoo.org> xvidcap-1.1.4.ebuild:
   Add missing app-text/scrollkeeper, see bug #155547.

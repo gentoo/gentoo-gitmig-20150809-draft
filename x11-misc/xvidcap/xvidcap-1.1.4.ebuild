@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.4.ebuild,v 1.2 2006/11/19 12:32:17 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.4.ebuild,v 1.3 2007/02/03 14:14:57 nelchael Exp $
 
 inherit eutils autotools
 
@@ -22,6 +22,14 @@ RDEPEND=">=media-video/ffmpeg-0.4.9_pre1
 	gnome-base/libgnomeui"
 
 DEPEND="${RDEPEND}"
+
+src_unpack() {
+
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-xtoxwd.c.patch"
+
+}
 
 src_compile() {
 
