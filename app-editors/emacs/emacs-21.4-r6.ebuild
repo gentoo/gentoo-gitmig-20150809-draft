@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r6.ebuild,v 1.3 2007/02/02 20:14:12 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r6.ebuild,v 1.4 2007/02/03 11:25:24 opfer Exp $
 
 inherit flag-o-matic eutils alternatives toolchain-funcs
 
@@ -159,6 +159,9 @@ src_install() {
 }
 
 update-alternatives() {
+	# extract the suffix of the manpages to determine the correct compression program
+	local suffix=`ls /usr/share/man/man1/emacs.emacs-* |sed s/".*\."//g|tail -n 1`
+
 	# this creates symlinks for binaries and man pages, so the correct ones in a slotted
 	# environment can be accessed
 	for i in emacs emacsclient etags ctags b2m ebrowse \
@@ -168,7 +171,7 @@ update-alternatives() {
 
 	for j in emacs emacsclient etags ctags
 	do
-		alternatives_auto_makesym "/usr/share/man/man1/$j.1.gz" "/usr/share/man/man1/$j.emacs-${SLOT}*"
+		alternatives_auto_makesym "/usr/share/man/man1/$j.1.${suffix}" "/usr/share/man/man1/$j.emacs-*"
 	done
 }
 
