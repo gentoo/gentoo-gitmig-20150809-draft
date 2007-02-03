@@ -1,6 +1,34 @@
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 79c48efceca7ecb851c31f7482cfb5b8 streamtranscoder-1.2.8.ebuild 726
-MD5 e66013b61c4eb0fb27fb78c5a5ea4641 ChangeLog 1094
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST streamtranscoder-1.2.4.tar.gz 352873 RMD160 0f21228ebf21ecb92de233ce686926a487b1fb2e SHA1 7d83b43f1673302ac781c80bc80fa41cb757b501 SHA256 8cea5f0f4b27a31eb92b6e72c73d6bbf737f7a7ac6248399c591e44e1b280c71
+DIST streamtranscoder-1.2.8.tar.gz 355078 RMD160 8a2cfc265104f7da55bd65f3210688cab56e8dc5 SHA1 3ba0adbb385f5a5d4f63d4ca009e1a2e11ccbbc7 SHA256 10fe722d44bd2d0ff02ae9ed5086a4894d98e3c7d234305ff59fa0250a9fd855
+EBUILD streamtranscoder-1.2.4.ebuild 730 RMD160 d9dc56708ac650dea3dd5a483ef0b7591c2af290 SHA1 b14992f052de6a21728aa399a93958e622e06a6b SHA256 834e85f8220c01a688c44506a6e708fe47b737e0860a2cde33a7c38d135d81e5
 MD5 0e053bb11ad54c2ce6115c6d8d6e03ac streamtranscoder-1.2.4.ebuild 730
-MD5 4b27cbe42d2e621e2e6cd7463cdbc893 files/digest-streamtranscoder-1.2.4 74
-MD5 c1ffbe331a371c687777fb9691286f3b files/digest-streamtranscoder-1.2.8 74
+RMD160 d9dc56708ac650dea3dd5a483ef0b7591c2af290 streamtranscoder-1.2.4.ebuild 730
+SHA256 834e85f8220c01a688c44506a6e708fe47b737e0860a2cde33a7c38d135d81e5 streamtranscoder-1.2.4.ebuild 730
+EBUILD streamtranscoder-1.2.8.ebuild 726 RMD160 23124333cdb35ce3d6251c9c9f7acbd1477c86b5 SHA1 37afafeacbc2abeaef158a84960747e0834be9f1 SHA256 67938c6cfe6f52cdbd8aa0cb0e546d6b7f7de4d493d9a9f6d0ec7c256706cc6b
+MD5 79c48efceca7ecb851c31f7482cfb5b8 streamtranscoder-1.2.8.ebuild 726
+RMD160 23124333cdb35ce3d6251c9c9f7acbd1477c86b5 streamtranscoder-1.2.8.ebuild 726
+SHA256 67938c6cfe6f52cdbd8aa0cb0e546d6b7f7de4d493d9a9f6d0ec7c256706cc6b streamtranscoder-1.2.8.ebuild 726
+MISC ChangeLog 1203 RMD160 f65653c1913b149e17da5c3cc71a72198a26d1f4 SHA1 afed74f23053eecd04f60d20d7cb656d49e142c9 SHA256 7fe8dece0a1e444bad693d43585def457b06beaa8e07256feaf3dc8bbb76f510
+MD5 073ed7f63acb44875a5542f9663c61a7 ChangeLog 1203
+RMD160 f65653c1913b149e17da5c3cc71a72198a26d1f4 ChangeLog 1203
+SHA256 7fe8dece0a1e444bad693d43585def457b06beaa8e07256feaf3dc8bbb76f510 ChangeLog 1203
+MISC metadata.xml 158 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e SHA1 703cea5a2109d41f7c87993c1f01d418a4c85174 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 cca0adccab5f9e9a30b86ba9437c2bf8 files/digest-streamtranscoder-1.2.4 268
+RMD160 84265a4143b85316bb7915b59bdfdef8c945e015 files/digest-streamtranscoder-1.2.4 268
+SHA256 202af331bebd8ab0dc6901240ddd0c249040c34a655e169691c339238bb2f6cf files/digest-streamtranscoder-1.2.4 268
+MD5 e889a7405b9ac8dea023f0d60d857cbf files/digest-streamtranscoder-1.2.8 268
+RMD160 6f9529684b25a80c8cca056961822c73451aa10c files/digest-streamtranscoder-1.2.8 268
+SHA256 087e71ffe5c8ddd1de67776dce5305c86eb4fad2f325302c909fec19d046e781 files/digest-streamtranscoder-1.2.8 268
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.2 (GNU/Linux)
+
+iD8DBQFFxPDwAiZjviIA2XgRAp6sAJ9+VRtrwtU4uCU45Uo2rRO6lE/hegCgjcjF
+K0SkzVpHjxc8htQTxDYprhE=
+=bUcb
+-----END PGP SIGNATURE-----
