@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.61 2007/01/16 23:04:09 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.62 2007/02/03 20:45:02 masterdriverz Exp $
+
+*courier-authlib-0.59.1 (03 Feb 2007)
+
+  03 Feb 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  +files/0.59.1-configure-db4.patch,
+  +files/0.59.1-remove-obsolete-macro.patch, +courier-authlib-0.59.1.ebuild:
+  Bump to version, bug 162531, thanks to Conrad Kostecki. Add a vpopmail use
+  flag, bug 161754, thanks to Georgi Georgiev.
 
 *courier-authlib-0.58-r1 (16 Jan 2007)
 
