@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/vntex
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/vntex/ChangeLog,v 1.6 2005/08/19 09:14:09 pclouds Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/vntex/ChangeLog,v 1.7 2007/02/03 23:48:15 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   19 Aug 2005; <pclouds@gentoo.org> vntex-20030303.ebuild:
   HOMEPAGE updated

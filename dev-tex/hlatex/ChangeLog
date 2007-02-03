@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/hlatex
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hlatex/ChangeLog,v 1.7 2005/08/24 05:13:41 leonardop Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hlatex/ChangeLog,v 1.8 2007/02/03 23:46:28 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   24 Aug 2005; Leonardo Boshell <leonardop@gentoo.org> hlatex-0.991.ebuild:
   Modified calls to 'cp -a' as described on bug #103487.

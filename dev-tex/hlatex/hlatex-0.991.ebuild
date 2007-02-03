@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hlatex/hlatex-0.991.ebuild,v 1.7 2005/08/24 05:13:41 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hlatex/hlatex-0.991.ebuild,v 1.8 2007/02/03 23:46:28 flameeyes Exp $
 
 inherit latex-package
 
 DESCRIPTION="HLaTeX is a LaTeX package to use Hangul with LaTeX."
 HOMEPAGE="http://ftp.ktug.or.kr/mirrors/HLaTeX/hlatex.html"
 #SRC_URI="ftp://ftp.dante.de/tex-archive/languages/korean/HLaTeX.tar.gz ftp://ftp.dante.de/tex-archive/fonts/korean/HLaTeX.tar.gz"
-SRC_URI="http://user.chollian.net/~jh1228/data/gentoo/${P}.tar.gz
+SRC_URI="mirror://gentoo/${P}.tar.gz
 	mirror://gentoo/${P}-gentoo.tar.gz"
 LICENSE="GPL-2"
 
@@ -27,7 +27,7 @@ add_line() {
 
 	if [ -z "`grep "^${STRING}$" ${FILE}`" ]
 	then
-		echo "${STRING}" >>  ${FILE}
+		echo "${STRING}" >>	 ${FILE}
 	fi
 
 }
