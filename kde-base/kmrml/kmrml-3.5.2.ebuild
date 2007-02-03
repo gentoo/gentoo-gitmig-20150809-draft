@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmrml/kmrml-3.5.2.ebuild,v 1.10 2006/09/03 11:37:53 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmrml/kmrml-3.5.2.ebuild,v 1.11 2007/02/03 10:00:20 mr_bones_ Exp $
 
 KMNAME=kdegraphics
 MAXKDEVER=$PV
