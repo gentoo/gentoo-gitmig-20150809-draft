@@ -1,6 +1,11 @@
 # ChangeLog for net-zope/plone
 # Copyright 2003-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/ChangeLog,v 1.42 2007/01/09 22:55:54 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/ChangeLog,v 1.43 2007/02/03 19:29:13 radek Exp $
+
+*plone-2.5.2 (03 Feb 2007)
+
+  03 Feb 2007; Radoslaw Stachowiak <radek@gentoo.org> +plone-2.5.2.ebuild:
+  version bump
 
 *plone-2.5.1-r1 (09 Jan 2007)
 
