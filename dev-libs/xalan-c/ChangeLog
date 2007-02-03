@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xalan-c
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/ChangeLog,v 1.10 2007/02/02 14:28:30 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/ChangeLog,v 1.11 2007/02/03 21:41:37 blubb Exp $
+
+  03 Feb 2007; Simon Stelling <blubb@gentoo.org> xalan-c-1.10.0.ebuild:
+  fix typo causing bug 165168
 
   02 Feb 2007; Simon Stelling <blubb@gentoo.org> xalan-c-1.10.0.ebuild:
   fix multilib-strict; bug 154279; credits to Christoph Mende
