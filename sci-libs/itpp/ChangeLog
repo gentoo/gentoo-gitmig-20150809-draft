@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/itpp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.22 2007/01/31 21:02:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.23 2007/02/03 22:02:01 nixnut Exp $
+
+  03 Feb 2007; nixnut <nixnut@gentoo.org> itpp-3.10.8.ebuild:
+  Added ~ppc wrt bug 164755
 
   31 Jan 2007; Markus Rothe <corsair@gentoo.org> itpp-3.10.8.ebuild,
   itpp-3.99.0.ebuild:
