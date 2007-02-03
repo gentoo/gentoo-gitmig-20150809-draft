@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vstrip
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vstrip/ChangeLog,v 1.3 2005/09/16 02:36:27 mr_bones_ Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vstrip/ChangeLog,v 1.4 2007/02/03 21:14:30 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   16 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org> vstrip-0.8f.ebuild:
   needs app-arch/unzip; tidy

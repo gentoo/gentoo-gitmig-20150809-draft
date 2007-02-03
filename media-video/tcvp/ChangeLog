@@ -1,6 +1,9 @@
 # ChangeLog for media-video/tcvp
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tcvp/ChangeLog,v 1.9 2005/12/16 12:05:56 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/tcvp/ChangeLog,v 1.10 2007/02/03 21:13:52 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> tcvp-0.2.0.ebuild:
   Remove --with-gnu-ld option, bug #108386.
