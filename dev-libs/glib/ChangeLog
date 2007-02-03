@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.240 2007/02/03 16:25:50 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.241 2007/02/03 16:42:49 blubb Exp $
+
+  03 Feb 2007; Simon Stelling <blubb@gentoo.org> glib-2.12.7.ebuild:
+  stable on amd64
 
   03 Feb 2007; Tobias Scherbaum <dertobi123@gentoo.org> glib-2.12.7.ebuild:
   Stable on ppc wrt bug #164978.
