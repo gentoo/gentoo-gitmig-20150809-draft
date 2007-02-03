@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6734 2007/02/03 19:56:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6735 2007/02/03 19:59:00 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Diego Pettenò <flameeyes@gentoo.org> (03 Feb 2007)
+# Pending removal March 3rd, no upstream, old package
+# improper PIC handling
+media-sound/pd-cyclone
 
 # Diego Pettenò <flameeyes@gentoo.org> (03 Feb 2007)
 # Pending removal March 3rd, no upstream, old package
