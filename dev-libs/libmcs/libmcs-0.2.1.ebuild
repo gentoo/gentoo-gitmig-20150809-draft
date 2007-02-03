@@ -1,8 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/libmcs-0.2.0.ebuild,v 1.1 2007/02/03 19:28:51 chainsaw Exp $
-
-inherit autotools
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/libmcs-0.2.1.ebuild,v 1.1 2007/02/03 19:50:25 chainsaw Exp $
 
 MY_P=${P/lib/}
 S=${WORKDIR}/${MY_P}
@@ -18,7 +16,6 @@ IUSE="gnome"
 RDEPEND="gnome? ( >=gnome-base/gconf-2.6.0 )"
 
 src_compile() {
-	eautoreconf
 	econf $(use_enable gnome gconf) || die "econf failed"
 	emake || die "emake failed"
 }
