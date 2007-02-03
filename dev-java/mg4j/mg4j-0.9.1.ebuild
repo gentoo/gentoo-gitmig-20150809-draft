@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j/mg4j-0.9.1.ebuild,v 1.6 2005/07/15 14:11:44 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j/mg4j-0.9.1.ebuild,v 1.7 2007/02/03 17:02:36 betelgeuse Exp $
 
 inherit eutils java-pkg
 
@@ -15,7 +15,7 @@ IUSE="doc jikes source"
 RDEPEND=">=virtual/jre-1.4
 	=dev-java/fastutil-4.3*
 	>=dev-java/jal-20031117
-	=dev-java/colt-1.1*
+	dev-java/colt
 	=dev-java/java-getopt-1.0*
 	=dev-java/libreadline-java-0.8*"
 
