@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/bidiv
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/bidiv/ChangeLog,v 1.9 2005/04/24 11:16:38 hansmi Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/bidiv/ChangeLog,v 1.10 2007/02/03 17:57:22 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> files/digest-bidiv-1.4,
+  Manifest:
+  Regenerate digest in Manifest2 format.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> bidiv-1.4.ebuild:
   Stable on ppc.
