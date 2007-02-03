@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_fcgid
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.22 2007/02/01 21:01:09 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.23 2007/02/03 23:35:58 beandog Exp $
+
+  03 Feb 2007; Steve Dibb <beandog@gentoo.org> mod_fcgid-1.10.ebuild:
+  amd64 stable, bug 161193
 
   01 Feb 2007; Luca Longinotti <chtekk@gentoo.org> -mod_fcgid-1.08.ebuild:
   Cleanup redundant version.
