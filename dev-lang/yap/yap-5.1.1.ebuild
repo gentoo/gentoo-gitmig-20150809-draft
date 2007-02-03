@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-5.1.1.ebuild,v 1.9 2007/01/23 18:19:00 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-5.1.1.ebuild,v 1.10 2007/02/03 04:41:14 keri Exp $
 
-inherit autotools eutils
+inherit autotools eutils java-pkg-opt-2
 
 MY_P="Yap-${PV}"
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ppc x86"
 IUSE="debug doc examples gmp java mpi mysql odbc readline static tk threads"
 
 DEPEND="gmp? ( dev-libs/gmp )
-	java? ( virtual/jdk )
+	java? ( >=virtual/jdk-1.4 )
 	mpi? ( virtual/mpi )
 	mysql? ( virtual/mysql )
 	odbc? ( dev-db/unixODBC )
@@ -36,6 +36,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-analyst.patch
 	epatch "${FILESDIR}"/${P}-myddas.patch
 	epatch "${FILESDIR}"/${P}-tabling.patch
+	epatch "${FILESDIR}"/${P}-jpl.patch
 	epatch "${FILESDIR}"/${P}-tkyap.patch
 }
 
