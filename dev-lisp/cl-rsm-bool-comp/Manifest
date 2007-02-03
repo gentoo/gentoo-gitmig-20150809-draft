@@ -1,7 +1,37 @@
-MD5 1566f2c00b84a44e4c55d60f6ecf7712 ChangeLog 930
-MD5 612cb9d21e09e752e0218256d2fe776f cl-rsm-bool-comp-1.0-r1.ebuild 928
-MD5 bbd25bd2b1e4b9b436a38abaec3572fb cl-rsm-bool-comp-1.0.ebuild 1056
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX cl-rsm-bool-comp-1.0-gentoo.patch 19288 RMD160 0021314e21a41da228a9d7874a7b59f4a81595ec SHA1 514253c18026e93be8d30df8655e2eac43a3c5b7 SHA256 053b175022f9315594286d373a879988b32f90e571cbcdbd800d53b45a7e2bc1
 MD5 9c82f70b89f0c41a2c3b149260559aa2 files/cl-rsm-bool-comp-1.0-gentoo.patch 19288
-MD5 0fbad6485f85dc363be884ca3363c0ef files/digest-cl-rsm-bool-comp-1.0 71
-MD5 0fbad6485f85dc363be884ca3363c0ef files/digest-cl-rsm-bool-comp-1.0-r1 71
+RMD160 0021314e21a41da228a9d7874a7b59f4a81595ec files/cl-rsm-bool-comp-1.0-gentoo.patch 19288
+SHA256 053b175022f9315594286d373a879988b32f90e571cbcdbd800d53b45a7e2bc1 files/cl-rsm-bool-comp-1.0-gentoo.patch 19288
+DIST cl-rsm-bool-comp_1.0.tar.gz 42526 RMD160 f938f915188d85855f1f338c534c0db5828e60d9 SHA1 e6a3442e1f44693b67c7fa04e2589374bad4b4b0 SHA256 1c2071458392b87a16586fb96330f3e414c0c6c441e705e285290a760a558954
+EBUILD cl-rsm-bool-comp-1.0-r1.ebuild 890 RMD160 c0646e694149d9680a2aa1208de3d8aaaa56322a SHA1 8b4c73c46af7c7c9610e824fbe62d8aea9e87aaf SHA256 9cc6250b93048f4a78566add12e2830f08db93bc3bde6c4aa4a80f485840270f
+MD5 d6ecdd872cc132dec96fd112e29e8a78 cl-rsm-bool-comp-1.0-r1.ebuild 890
+RMD160 c0646e694149d9680a2aa1208de3d8aaaa56322a cl-rsm-bool-comp-1.0-r1.ebuild 890
+SHA256 9cc6250b93048f4a78566add12e2830f08db93bc3bde6c4aa4a80f485840270f cl-rsm-bool-comp-1.0-r1.ebuild 890
+EBUILD cl-rsm-bool-comp-1.0.ebuild 1018 RMD160 4116cade849d439e80c0a419690a4bfe565bcd52 SHA1 5c055eb72f8022b288a3b29bded04f6c855e8020 SHA256 ce29d69aef7b4ca5d46b586f9a5d1a34d12f3e55d7485a0aacad00be607d96e6
+MD5 664cf5ab4f71ee9b7d266717189f3f6a cl-rsm-bool-comp-1.0.ebuild 1018
+RMD160 4116cade849d439e80c0a419690a4bfe565bcd52 cl-rsm-bool-comp-1.0.ebuild 1018
+SHA256 ce29d69aef7b4ca5d46b586f9a5d1a34d12f3e55d7485a0aacad00be607d96e6 cl-rsm-bool-comp-1.0.ebuild 1018
+MISC ChangeLog 1170 RMD160 ca2dc5cb4460f76bafb51b1f5a76bb86e3883f4a SHA1 9aef52028c5063f7ce8d3f4c6e57a11ed60c5966 SHA256 49622284980579f4c2af70f215b282c852858136bb0a3f2526afe994df80d8de
+MD5 682d1c5c10173297796fcd6f3f4ac91f ChangeLog 1170
+RMD160 ca2dc5cb4460f76bafb51b1f5a76bb86e3883f4a ChangeLog 1170
+SHA256 49622284980579f4c2af70f215b282c852858136bb0a3f2526afe994df80d8de ChangeLog 1170
+MISC metadata.xml 164 RMD160 5edb79931b874dc3a72128f0742b9d4c4eb3c8c1 SHA1 2f781e1fca36d790a027079805d56cf397e6a6f8 SHA256 f8efc9385015233c71f279f85bd0a327525b7136cf8714cc04449d8bea4ce22f
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+RMD160 5edb79931b874dc3a72128f0742b9d4c4eb3c8c1 metadata.xml 164
+SHA256 f8efc9385015233c71f279f85bd0a327525b7136cf8714cc04449d8bea4ce22f metadata.xml 164
+MD5 f5df01a29494084ff1976bf41fdeba3d files/digest-cl-rsm-bool-comp-1.0 259
+RMD160 830733bd161f649be7e347177141df021d2d2bf8 files/digest-cl-rsm-bool-comp-1.0 259
+SHA256 049e88c21536fdaf74ebdea7f5950a5fd3e84ff560e0d2597d23d0da76068b9f files/digest-cl-rsm-bool-comp-1.0 259
+MD5 f5df01a29494084ff1976bf41fdeba3d files/digest-cl-rsm-bool-comp-1.0-r1 259
+RMD160 830733bd161f649be7e347177141df021d2d2bf8 files/digest-cl-rsm-bool-comp-1.0-r1 259
+SHA256 049e88c21536fdaf74ebdea7f5950a5fd3e84ff560e0d2597d23d0da76068b9f files/digest-cl-rsm-bool-comp-1.0-r1 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.2 (GNU/Linux)
+
+iD8DBQFFxMloAiZjviIA2XgRAnVyAJ4z/x3UIMOii9xxugvyfofd0t36/ACfWKQy
+fymEl7UZp15dg3FqOzkBu3o=
+=rU5L
+-----END PGP SIGNATURE-----
