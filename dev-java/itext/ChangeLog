@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/itext
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.32 2007/02/01 12:15:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.33 2007/02/03 13:13:24 beandog Exp $
+
+  03 Feb 2007; Steve Dibb <beandog@gentoo.org> itext-1.4.8.ebuild:
+  amd64 stable, bug 162950
 
   01 Feb 2007; Markus Rothe <corsair@gentoo.org> itext-1.4.8.ebuild:
   Stable on ppc64
