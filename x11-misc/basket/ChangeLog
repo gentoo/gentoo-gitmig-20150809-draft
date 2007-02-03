@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/basket
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/ChangeLog,v 1.22 2006/12/06 12:36:16 tove Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/ChangeLog,v 1.23 2007/02/03 13:11:48 nelchael Exp $
+
+*basket-1.0_beta3 (03 Feb 2007)
+
+  03 Feb 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  +basket-1.0_beta3.ebuild:
+  Version bump, see bug #162494.
 
 *basket-0.6.0 (23 Oct 2006)
 
