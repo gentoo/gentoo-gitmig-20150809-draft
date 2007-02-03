@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dvdstyler
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.21 2005/12/29 01:23:41 halcy0n Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.22 2007/02/03 21:01:17 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   29 Dec 2005; Mark Loeser <halcy0n@gentoo.org>
   +files/dvdstyler-1.4-gcc4.patch, dvdstyler-1.4.ebuild:
