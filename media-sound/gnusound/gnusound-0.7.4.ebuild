@@ -1,16 +1,14 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/gnusound-0.7.4.ebuild,v 1.3 2007/01/30 20:23:02 aballier Exp $
-
-inherit toolchain-funcs
-
-IUSE="3dnow alsa audiofile cpudetection flac ffmpeg jack lame libsamplerate mmx
-ogg oss sse vorbis"
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/gnusound-0.7.4.ebuild,v 1.4 2007/02/03 23:06:26 aballier Exp $
 
 WANT_ATUOMAKE=1.8
 WANT_AUTOCONF=2.5
 
-inherit eutils autotools
+inherit toolchain-funcs eutils autotools
+
+IUSE="3dnow alsa audiofile cpudetection flac ffmpeg jack lame libsamplerate mmx
+ogg oss sse vorbis"
 
 DESCRIPTION="GNUsound is a sound editor for Linux/x86"
 HOMEPAGE="http://gnusound.sourceforge.net/"
@@ -55,8 +53,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-flac-1.1.3.patch"
 	epatch "${FILESDIR}/${P}-ffmpeg.patch"
 
-	AT_M4DIR="config" eaclocal
-	eautoconf
+	AT_M4DIR="config" eautoreconf
 }
 
 src_compile() {
@@ -85,6 +82,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc README NOTES TODO CHANGES
 }
