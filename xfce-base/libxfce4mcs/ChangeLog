@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/libxfce4mcs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4mcs/ChangeLog,v 1.78 2007/01/28 12:51:34 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4mcs/ChangeLog,v 1.79 2007/02/03 00:49:03 nichoj Exp $
+
+  03 Feb 2007; Joshua Nichols <nichoj@gentoo.org>
+  -libxfce4mcs-4.3.99.2.ebuild:
+  Removing old version.
 
   28 Jan 2007; Peter Weller <welp@gentoo.org> libxfce4mcs-4.4.0.ebuild:
   Dep fixes, various other fixes
