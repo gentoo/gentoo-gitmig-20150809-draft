@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/ladcca
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladcca/ChangeLog,v 1.21 2005/04/24 04:20:06 jnc Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladcca/ChangeLog,v 1.22 2007/02/03 23:17:19 beandog Exp $
+
+  03 Feb 2007; Steve Dibb <beandog@gentoo.org> ladcca-0.3.2.ebuild,
+  ladcca-0.4.0.ebuild, ladcca-0.4.0-r1.ebuild:
+  Update src_uri
 
 *ladcca-0.4.0-r1 (24 Apr 2005)
 

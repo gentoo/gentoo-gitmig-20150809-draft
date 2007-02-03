@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladcca/ladcca-0.4.0-r1.ebuild,v 1.1 2005/04/24 04:20:06 jnc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladcca/ladcca-0.4.0-r1.ebuild,v 1.2 2007/02/03 23:17:19 beandog Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ IUSE=""
 
 DESCRIPTION="Linux Audio Developer's Configuration and Connection API (LADCCA)"
 HOMEPAGE="http://pkl.net/~node/ladcca.html"
-SRC_URI="http://pkl.net/~node/software/${P}.tar.gz"
+SRC_URI="http://pkl.net/~node/ladcca.html/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

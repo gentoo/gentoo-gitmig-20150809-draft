@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/liblrdf
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/ChangeLog,v 1.22 2006/05/15 07:09:25 wormo Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/ChangeLog,v 1.23 2007/02/03 23:21:23 beandog Exp $
+
+  03 Feb 2007; Steve Dibb <beandog@gentoo.org> liblrdf-0.3.7.ebuild:
+  Update src_uri
 
   09 May 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   liblrdf-0.3.7.ebuild:
