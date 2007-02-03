@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp32ogg
-# Copyright 2003-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp32ogg/ChangeLog,v 1.10 2005/01/01 15:59:45 chainsaw Exp $
+# Copyright 2003-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp32ogg/ChangeLog,v 1.11 2007/02/03 19:45:22 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *mp32ogg-0.11-r4 (01 Jan 2005)
 

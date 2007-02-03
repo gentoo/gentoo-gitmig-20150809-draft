@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ogg2mp3
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ogg2mp3/ChangeLog,v 1.5 2005/08/23 22:32:04 chainsaw Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ogg2mp3/ChangeLog,v 1.6 2007/02/03 19:51:17 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   23 Aug 2005; Tony Vroon <chainsaw@gentoo.org> ogg2mp3-0.5.ebuild:
   Stable on x86.

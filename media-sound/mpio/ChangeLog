@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpio
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpio/ChangeLog,v 1.2 2004/11/23 09:54:39 eradicator Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpio/ChangeLog,v 1.3 2007/02/03 19:49:20 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   23 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   mpio-0.7.1_pre2.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/litestream
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/litestream/ChangeLog,v 1.8 2005/12/17 11:33:29 flameeyes Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/litestream/ChangeLog,v 1.9 2007/02/03 19:39:28 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *litestream-1.3_rc3 (17 Dec 2005)
 
