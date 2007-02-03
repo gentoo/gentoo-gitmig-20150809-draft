@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/mx4j-3.0.1-r2.ebuild,v 1.4 2007/01/11 22:48:38 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/mx4j-3.0.1-r2.ebuild,v 1.5 2007/02/03 22:49:14 beandog Exp $
 
 JAVA_PKG_OPT_USE="examples"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.gz
 LICENSE="GPL-2"
 SLOT="3.0"
 
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 
 IUSE="doc examples source"
 
