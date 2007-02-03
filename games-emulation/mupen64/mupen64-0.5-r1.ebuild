@@ -1,26 +1,25 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.5-r1.ebuild,v 1.2 2006/10/18 22:26:31 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.5-r1.ebuild,v 1.3 2007/02/03 06:54:35 nyhm Exp $
 
 inherit eutils flag-o-matic multilib games
 
+MY_P=${PN}_src-${PV}
 DESCRIPTION="A Nintendo 64 (N64) emulator"
 HOMEPAGE="http://mupen64.emulation64.com/"
-SRC_URI="http://mupen64.emulation64.com/files/${PV}/mupen64_src-${PV}.tar.bz2"
+SRC_URI="http://mupen64.emulation64.com/files/${PV}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="opengl"
 
-RDEPEND="sys-libs/zlib
-	opengl? ( virtual/opengl )
+RDEPEND="opengl? ( virtual/opengl )
 	>=x11-libs/gtk+-2
 	amd64? ( app-emulation/emul-linux-x86-gtklibs
 		 app-emulation/emul-linux-x86-sdl )
 	media-libs/libsdl
 	media-libs/sdl-sound"
-
 # Block the now included external plugins.
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -28,16 +27,17 @@ DEPEND="${RDEPEND}
 	!games-emulation/mupen64-glN64
 	!games-emulation/mupen64-jttl_sound"
 
-
-S=${WORKDIR}/mupen64_src-${PV}
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-	epatch "${FILESDIR}/${PN}-gentoo.patch"
+	epatch "${FILESDIR}"/${PN}-gentoo.patch
 
 	cd "${S}"
+	rm -f plugins/empty
 
-	sed -i "s:#undef WITH_HOME:#define WITH_HOME \"/usr/games/\":" config.h \
+	sed -i "s:#undef WITH_HOME:#define WITH_HOME \"${GAMES_PREFIX}/\":" \
+		config.h \
 		|| die "sed failed"
 
 	sed -i \
@@ -51,7 +51,7 @@ src_unpack() {
 src_compile() {
 	use amd64 && multilib_toolchain_setup x86
 
-	emake mupen64 || die "emake failed on $d"
+	emake mupen64 || die "emake failed"
 	emake mupen64_nogui || die "emake failed"
 	emake plugins/mupen64_input.so || die "emake failed"
 	emake plugins/mupen64_hle_rsp_azimer.so || die "emake failed"
@@ -68,33 +68,21 @@ src_compile() {
 }
 
 src_install() {
-	local dir=${GAMES_LIBDIR}/${PN}
+	dogamesbin mupen64 mupen64_nogui || die "dogamesbin failed"
 
-	exeinto "${GAMES_BINDIR}"
-	doexe mupen64 || die "doexe failed"
-	doexe mupen64_nogui || die "doexe failed"
+	insinto "${GAMES_LIBDIR}"/${PN}
+	doins -r mupen64.ini jttl_audio.conf lang roms plugins || die "doins failed"
 
-	insinto "${dir}"
-	doins mupen64.ini jttl_audio.conf || "doins failed"
-
-	dodir ${dir}/save
-
-	cp -r lang roms plugins "${D}/${dir}/" \
-		|| die "cp failed"
-
-	rm "${D}/${dir}/plugins/empty"
-	dodoc *.txt
-	cp doc/readme.pdf "${D}/usr/share/doc/${PF}"
-
+	dodoc *.txt doc/readme.pdf
 	prepgamesdirs
 }
 
 pkg_postinst() {
 	games_pkg_postinst
 	echo
-	ewarn "If you are upgrading from previous version of mupen64"
-	ewarn "backup your saved games then do a rm -rf on your"
-	ewarn ".mupen64 directory. After launching then new mupen copy"
-	ewarn "your saved games to the original place."
+	ewarn "If you are upgrading from a previous version of mupen64,"
+	ewarn "backup your saved games then run rm -rf on your"
+	ewarn ".mupen64 directory. After launching the new version, copy"
+	ewarn "your saved games to their original place."
 	echo
 }
