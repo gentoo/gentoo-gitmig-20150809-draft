@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/ipband
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipband/ChangeLog,v 1.1 2007/02/03 21:15:51 mjolnir Exp $
+
+*ipband-0.8 (03 Feb 2007)
+
+  03 Feb 2007; Martin Jackson <mjolnir@gentoo.org> +files/ipband-init,
+  +metadata.xml, +ipband-0.8.ebuild:
+  Adding new ebuild for bug #149548.  Thanks to Shane Denovan for reporting.
+
