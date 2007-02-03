@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/burgerspace
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/ChangeLog,v 1.6 2006/09/20 16:41:27 blubb Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/ChangeLog,v 1.7 2007/02/03 09:13:06 nyhm Exp $
+
+  03 Feb 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/burgerspace-1.8.1-build.patch, burgerspace-1.8.1.ebuild:
+  Don't use egamesinstall
 
   20 Sep 2006; <blubb@gentoo.org> burgerspace-1.8.1.ebuild:
   stable on amd64
