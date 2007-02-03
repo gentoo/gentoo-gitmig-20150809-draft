@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/verve
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/verve/ChangeLog,v 1.5 2007/02/02 23:57:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/verve/ChangeLog,v 1.6 2007/02/03 21:47:05 nichoj Exp $
+
+  03 Feb 2007; Joshua Nichols <nichoj@gentoo.org> verve-0.3.5.ebuild:
+  Added ~ppc, see bug #164775.
 
   02 Feb 2007; Jeroen Roovers <jer@gentoo.org> verve-0.3.5.ebuild:
   Marked ~hppa (bug #164775).
