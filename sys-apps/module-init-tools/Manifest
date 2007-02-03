@@ -13,10 +13,10 @@ AUX module-init-tools-3.2_pre7-abort-on-modprobe-failure.patch 1425 RMD160 ce073
 MD5 54fcfc62bd715c9557b321dfb4654044 files/module-init-tools-3.2_pre7-abort-on-modprobe-failure.patch 1425
 RMD160 ce073d744e0eb191ef10f3a1186f393b42620813 files/module-init-tools-3.2_pre7-abort-on-modprobe-failure.patch 1425
 SHA256 5a058a5dfae5bd6eaf6fa338b800f477b542dd9da0c09283d274504beb19c3b6 files/module-init-tools-3.2_pre7-abort-on-modprobe-failure.patch 1425
-AUX modules-update 11154 RMD160 e85b6a0de10cf482d1da64ccef4a3589275001bf SHA1 d33dc14d702ca80c03040c28f76743a588d0f41b SHA256 d3e9f4853d6d60e7df786d54cd551a8ce3e6590173540582d538b1e87fc859cc
-MD5 bb11561aedf6389b7c590adcd2763a8f files/modules-update 11154
-RMD160 e85b6a0de10cf482d1da64ccef4a3589275001bf files/modules-update 11154
-SHA256 d3e9f4853d6d60e7df786d54cd551a8ce3e6590173540582d538b1e87fc859cc files/modules-update 11154
+AUX modules-update 11312 RMD160 7af3ec6aa2e6e86db9327b934f7c395f5cc5310e SHA1 793a2dd061b0e31786879bd5eb3796f742ec3621 SHA256 6149e543955cbb97e42aaa3de027311ca41d483882239c6d7ec0373c097e80b2
+MD5 e3af3656ea89f3563e7633b5ddb2f2ec files/modules-update 11312
+RMD160 7af3ec6aa2e6e86db9327b934f7c395f5cc5310e files/modules-update 11312
+SHA256 6149e543955cbb97e42aaa3de027311ca41d483882239c6d7ec0373c097e80b2 files/modules-update 11312
 AUX modutils-2.4.27-alias.patch 2246 RMD160 bcf4fffbecae76e5b14b05c9003ba4f0cf2675ff SHA1 7d69355210aaccbd2dc6dd8a9b1b736f74dfdd36 SHA256 453e3ab982088e2e85164e63b4944af58cd01c2b2d45d75fdcda6649a339878f
 MD5 5428d53f18b5fac287741b23634d84dc files/modutils-2.4.27-alias.patch 2246
 RMD160 bcf4fffbecae76e5b14b05c9003ba4f0cf2675ff files/modutils-2.4.27-alias.patch 2246
@@ -51,10 +51,10 @@ EBUILD module-init-tools-3.2.2-r2.ebuild 5127 RMD160 ff8cde4e4b3fec3a73a647c708d
 MD5 66ac73f93989ebb2fc3fba2c38d127d4 module-init-tools-3.2.2-r2.ebuild 5127
 RMD160 ff8cde4e4b3fec3a73a647c708d0bdd7326a788c module-init-tools-3.2.2-r2.ebuild 5127
 SHA256 a0d30bda4f69f62aa07721024fcf601508445ae0f018925a9ec69ed8dd0e3ffd module-init-tools-3.2.2-r2.ebuild 5127
-MISC ChangeLog 21450 RMD160 6f82016ccecd282940da1df6b867f7b434989b3d SHA1 c59ee70bc085668461ee230bc38047e8772c97ee SHA256 923cd73b79e6e0d1e6ad54302e8509870f41080dacdbb9d57d22a6c42cf3e053
-MD5 81cf7caef8558b5a90439338c284f47f ChangeLog 21450
-RMD160 6f82016ccecd282940da1df6b867f7b434989b3d ChangeLog 21450
-SHA256 923cd73b79e6e0d1e6ad54302e8509870f41080dacdbb9d57d22a6c42cf3e053 ChangeLog 21450
+MISC ChangeLog 21598 RMD160 c27002da1f641306f118b9caa43cc9ea2d979df0 SHA1 19005c26b057080a02c6fdb4530738ed7264b43a SHA256 9d75f32204ea5c75d1bb9ad26041a7f23e7845c5d6d53dedba942900bb4aa6b0
+MD5 d3a92d0ce6fc68b67d47f919bfb8553d ChangeLog 21598
+RMD160 c27002da1f641306f118b9caa43cc9ea2d979df0 ChangeLog 21598
+SHA256 9d75f32204ea5c75d1bb9ad26041a7f23e7845c5d6d53dedba942900bb4aa6b0 ChangeLog 21598
 MISC metadata.xml 164 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 SHA1 9c213f5803676c56439df3716be07d6692588856 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
@@ -66,9 +66,9 @@ MD5 de56fee3dadb3285694b097dfa7848a0 files/digest-module-init-tools-3.2.2-r2 524
 RMD160 dfc478dc854fdd48bb3526ef421d560becb4a37e files/digest-module-init-tools-3.2.2-r2 524
 SHA256 a0137b244c6cab76e8a2cb31e651484992231b823af1d8d4fc2e1a5db10fe5f6 files/digest-module-init-tools-3.2.2-r2 524
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.6-ecc01.6 (GNU/Linux)
+Version: GnuPG v2.0.2 (GNU/Linux)
 
-iD8DBQFFw1XgKRy60XGEcJIRAp3KAJ0eiBdworzYHUPTiTlWUzjlNrX9aACgqZg8
-HtjJn/U7AYtjFFVuxy5gTTY=
-=TgyX
+iD8DBQFFxRnF8bi6rjpTunYRAkHZAKDUiq1Gn2y1e+6ZUI9vcDH9K1xQ5wCgnMmG
+P8yeywxzLq+rX0vUHsDMfeU=
+=QbG4
 -----END PGP SIGNATURE-----

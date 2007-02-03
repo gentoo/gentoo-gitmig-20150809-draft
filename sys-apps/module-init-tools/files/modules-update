@@ -402,11 +402,14 @@ if [[ -d ${depfile%/*} ]] ; then
 		           /boot /usr/src/linux ""
 		do
 			cfg="${cfg}/System.map"
-			[[ -f ${cfg} ]] && break
+			for suffix in -genkernel-${KV} -${KV} "" ; do
+				[[ -f ${cfg}${suffix} ]] && cfg="${cfg}${suffix}" && break 2
+			done
 		done
 		[[ -n ${cfg} ]] && cfg="-F ${cfg}"
 		depmod -a ${cfg} ${KV}
 		eend $?
+		[[ ${VERBOSE} -gt 0 ]] && einfo "Ran: depmod -a ${cfg} ${KV}"
 	fi
 else
 	vewarn "The dir '${depfile}' does not exist, skipping call to depmod"
