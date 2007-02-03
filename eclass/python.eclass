@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.30 2007/02/03 00:18:52 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.31 2007/02/03 02:10:23 kloeri Exp $
 #
 # Author: Alastair Tse <liquidx@gentoo.org>
 #
@@ -217,8 +217,8 @@ python_mod_cleanup() {
 
 	for path in ${SEARCH_PATH}; do
 		einfo "Cleaning orphaned Python bytecode from ${path} .."
-		for obj in $(find ${path} -name *.pyc); do
-			src_py="${obj%c}"
+		for obj in $(find ${path} -name *.py[co]); do
+			src_py="${obj%[co]}"
 			if [ ! -f "${src_py}" ]; then
 				einfo "Purging ${src_py}[co]"
 				rm -f ${src_py}[co]
