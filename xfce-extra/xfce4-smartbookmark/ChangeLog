@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-smartbookmark
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-smartbookmark/ChangeLog,v 1.4 2007/02/02 18:15:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-smartbookmark/ChangeLog,v 1.5 2007/02/03 00:00:34 jer Exp $
+
+  03 Feb 2007; Jeroen Roovers <jer@gentoo.org>
+  xfce4-smartbookmark-0.4.2.ebuild:
+  Marked ~hppa (bug #164778).
 
   02 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   xfce4-smartbookmark-0.4.2.ebuild:
