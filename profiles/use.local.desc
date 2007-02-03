@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2564 2007/02/03 07:08:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2565 2007/02/03 07:10:07 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1739,9 +1739,6 @@ sys-libs/glibc:erandom - Enable erandom/frandom support in glibc for ssp
 sys-libs/glibc:glibc-compat20 - Enable the glibc-compat addon.
 sys-libs/glibc:glibc-omitfp - Configure glibc with --enable-omitfp which lets the build system determine when it is safe to use -fomit-frame-pointer
 sys-libs/glibc:linuxthreads-tls - Configure the linuxthreads glibc with --with-__thread if supported by your system.  --with-tls is always enabled if supported and is NOT controlled by this switch.  So the glibc built will always support TLS binaries.  This toggle chooses whether or not glibc itself uses TLS.  If you're concerned about backwards compatibility with old binaries, leave this off.
-sys-libs/glibc:n32 - Enable n32 ABI support on mips
-sys-libs/glibc:n64 - Enable n64 ABI support on mips
-sys-libs/glibc:nomalloccheck - default to not performing some sanity checks that prevent and detect data corruption. this removes the small overhead introduced by the check.
 sys-libs/glibc:nptlonly - Disables building the linuxthreads fallback in glibc ebuilds that support building both linuxthreads and nptl.
 sys-libs/glibc:userlocales - build only the locales specified in /etc/locales.build
 sys-libs/libuser:quotas - Enables support for user quotas
