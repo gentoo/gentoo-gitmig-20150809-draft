@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mu-cite/mu-cite-8.1_p20020225.ebuild,v 1.3 2005/07/01 19:49:37 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mu-cite/mu-cite-8.1_p20020225.ebuild,v 1.4 2007/02/03 23:29:38 flameeyes Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="Message citation utilities for emacsen"
 HOMEPAGE="http://www.jpl.org/elips/mu/"
-SRC_URI="http://www.jpl.org/elips/mu/snapshots/${MY_P}.tar.gz"
+SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"

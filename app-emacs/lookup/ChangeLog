@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/lookup
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/lookup/ChangeLog,v 1.8 2005/07/01 19:49:37 mkennedy Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/lookup/ChangeLog,v 1.9 2007/02/03 23:26:07 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   01 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org> lookup-1.4.ebuild:
   Keywording ~amd64.
