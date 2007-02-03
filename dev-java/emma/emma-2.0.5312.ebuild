@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/emma/emma-2.0.5312.ebuild,v 1.2 2007/01/29 11:44:33 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/emma/emma-2.0.5312.ebuild,v 1.3 2007/02/03 22:56:36 beandog Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip"
 
 LICENSE="CPL-1.0"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 # No support for javadocs in build.xml
 IUSE="source"

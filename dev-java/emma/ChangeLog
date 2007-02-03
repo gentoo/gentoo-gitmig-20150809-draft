@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/emma
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/emma/ChangeLog,v 1.2 2007/01/29 11:44:33 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/emma/ChangeLog,v 1.3 2007/02/03 22:56:36 beandog Exp $
+
+  03 Feb 2007; Steve Dibb <beandog@gentoo.org> emma-2.0.5312.ebuild:
+  add ~amd64, bug 161618
 
   29 Jan 2007; Krzysiek Pawlik <nelchael@gentoo.org> emma-2.0.5312.ebuild:
   Add ~ppc, see bug #161618.
