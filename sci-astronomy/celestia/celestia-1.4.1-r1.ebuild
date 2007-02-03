@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.4.1-r1.ebuild,v 1.1 2007/02/03 17:05:39 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.4.1-r1.ebuild,v 1.2 2007/02/03 17:20:36 flameeyes Exp $
 
 #WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -109,7 +109,6 @@ src_compile() {
 	addwrite ${QTDIR}/etc/settings
 
 	filter-flags "-funroll-loops -frerun-loop-opt"
-	filter-ldflags -Wl,--as-needed --as-needed
 
 	econf \
 		--with-${mygui} \
