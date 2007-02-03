@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/xdiskusage-1.48.ebuild,v 1.5 2006/09/21 12:14:51 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/xdiskusage-1.48.ebuild,v 1.6 2007/02/03 23:06:19 omp Exp $
 
 inherit eutils
 
@@ -13,14 +13,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
-DEPEND="x11-libs/fltk
-	virtual/glut"
+DEPEND="x11-libs/fltk"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
-
 	unpack ${A}
 	epatch "${FILESDIR}/${P}-amd64.patch"
-
 }
 
 src_compile() {

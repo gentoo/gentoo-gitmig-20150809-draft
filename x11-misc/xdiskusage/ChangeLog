@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xdiskusage
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/ChangeLog,v 1.13 2006/09/21 12:14:51 nelchael Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/ChangeLog,v 1.14 2007/02/03 23:06:19 omp Exp $
+
+  03 Feb 2007; David Shakaryan <omp@gentoo.org> xdiskusage-1.48.ebuild:
+  Remove virtual/glut from dependencies. (bug #45141)
 
   21 Sep 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   +files/xdiskusage-1.48-amd64.patch, xdiskusage-1.48.ebuild:
