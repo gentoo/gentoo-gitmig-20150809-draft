@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.341 2007/02/03 10:46:57 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.342 2007/02/03 14:12:20 zmedico Exp $
+
+*portage-2.1.2-r7 (03 Feb 2007)
+
+  03 Feb 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.2-r7.ebuild:
+  2.1.2-r7 revbump.  Bugs #162453 and #147007 track fixes since 2.1.1.
 
   03 Feb 2007; Zac Medico <zmedico@gentoo.org> -portage-2.1.2-r6.ebuild:
   Punt 2.1.2-r6 due to bug #165034.
