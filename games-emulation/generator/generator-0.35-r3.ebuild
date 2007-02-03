@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35-r3.ebuild,v 1.2 2007/02/03 08:01:50 nyhm Exp $
 
-inherit eutils toolchain-funcs flag-o-matic games
+inherit eutils toolchain-funcs games
 
 DESCRIPTION="Sega Genesis / Mega Drive emulator"
 HOMEPAGE="http://www.ghostwhitecrab.com/generator/"
@@ -11,9 +11,9 @@ SRC_URI="http://www.ghostwhitecrab.com/generator/${P}-cbiere-r2.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="svga gtk sdlaudio"
+IUSE="gtk sdlaudio svga"
 
-S="${WORKDIR}/${P}-cbiere-r2"
+S=${WORKDIR}/${P}-cbiere-r2
 
 RDEPEND="media-libs/jpeg
 	media-libs/libsdl
@@ -46,9 +46,6 @@ src_compile() {
 	use gtk && myguis="${myguis} gtk"
 	use svga && myguis="${myguis} svgalib"
 
-	# these are removed from configure by the sed above
-	use x86 && append-flags -ffast-math -fomit-frame-pointer
-
 	for mygui in ${myguis}; do
 		[[ -f Makefile ]] && make -s clean
 		egamesconf \
@@ -56,7 +53,7 @@ src_compile() {
 			--with-${mygui} \
 			--with-gcc=$(gcc-major-version) \
 			$(use_with sdlaudio sdl-audio) \
-			--disable-dependency-tracking || die "econf failed"
+			--disable-dependency-tracking || die
 		emake -j1 || die "building ${mygui}"
 		mv main/generator-${mygui} my-bins/
 	done
