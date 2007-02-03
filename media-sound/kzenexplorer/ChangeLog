@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kzenexplorer
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kzenexplorer/ChangeLog,v 1.6 2005/10/23 16:46:37 carlo Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kzenexplorer/ChangeLog,v 1.7 2007/02/03 19:31:32 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   23 Oct 2005; Carsten Lohrke <carlo@gentoo.org> kzenexplorer-0.6.ebuild:
   QA: inheriting eutils not necessary, need-kde() belongs after R/DEPEND
