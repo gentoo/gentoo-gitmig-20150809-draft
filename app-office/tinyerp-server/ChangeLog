@@ -1,6 +1,9 @@
 # ChangeLog for app-office/tinyerp-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/tinyerp-server/ChangeLog,v 1.6 2007/02/01 19:51:56 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/tinyerp-server/ChangeLog,v 1.7 2007/02/03 04:19:20 beandog Exp $
+
+  03 Feb 2007; Steve Dibb <beandog@gentoo.org> tinyerp-server-4.0.2.ebuild:
+  add ~amd64, bug 164086
 
   01 Feb 2007; Cedric Krier <cedk@gentoo.org> -tinyerp-server-4.0.0.ebuild,
   -tinyerp-server-4.0.1.ebuild, tinyerp-server-4.0.2.ebuild:
