@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_caucho
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/ChangeLog,v 1.11 2007/01/26 10:20:42 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/ChangeLog,v 1.12 2007/02/03 13:43:13 beandog Exp $
+
+  03 Feb 2007; Steve Dibb <beandog@gentoo.org> mod_caucho-3.0.22.ebuild:
+  amd64 stable, bug 163278
 
   26 Jan 2007; Krzysiek Pawlik <nelchael@gentoo.org>
   mod_caucho-3.0.22.ebuild, mod_caucho-3.1.0.ebuild:
