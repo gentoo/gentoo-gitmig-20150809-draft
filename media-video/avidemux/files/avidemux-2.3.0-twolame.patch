@@ -1,0 +1,112 @@
+diff -u -r -B avidemux_2.3.0.old/avidemux/ADM_audiofilter/audioencoder_twolame.cpp avidemux_2.3.0/avidemux/ADM_audiofilter/audioencoder_twolame.cpp
+--- avidemux_2.3.0.old/avidemux/ADM_audiofilter/audioencoder_twolame.cpp	2007-02-03 13:29:35.000000000 +0100
++++ avidemux_2.3.0/avidemux/ADM_audiofilter/audioencoder_twolame.cpp	2007-02-03 13:30:01.000000000 +0100
+@@ -30,7 +30,7 @@
+ 
+ extern "C"
+ {
+-#include "libtoolame/twolame.h"
++#include <twolame.h>
+ }
+ #include "ADM_toolkit/ADM_debugID.h"
+ #define MODULE_NAME MODULE_AUDIO_FILTER
+diff -u -r -B avidemux_2.3.0.old/avidemux/Makefile.am avidemux_2.3.0/avidemux/Makefile.am
+--- avidemux_2.3.0.old/avidemux/Makefile.am	2007-02-03 13:29:35.000000000 +0100
++++ avidemux_2.3.0/avidemux/Makefile.am	2007-02-03 13:31:45.000000000 +0100
+@@ -17,7 +17,7 @@
+ 	ADM_colorspace ADM_editor ADM_encoder ADM_filter  ADM_inpics ADM_nuv \
+ 	ADM_toolkit oplug_mpeg xpm ADM_video oplug_avi ADM_audiodevice ADM_vp32 \
+ 	libMpeg2Dec oplug_mpegFF ADM_h263 ADM_gui2 ADM_dialog \
+-	ADM_ogm ADM_3gp mpeg2enc ADM_openDML ADM_lvemux libtoolame ADM_requant \
++	ADM_ogm ADM_3gp mpeg2enc ADM_openDML ADM_lvemux ADM_requant \
+ 	ADM_script oplug_ogm ADM_xvidratectl ADM_mplex ADM_ocr ADM_libswscale \
+ 	ADM_mpegdemuxer ADM_tray ADM_lavutil ADM_lavformat ADM_lavcodec oplug_mp4 \
+ 	ADM_avsproxy  ADM_liba52 ADM_libMad ADM_matroska ADM_asf
+@@ -63,7 +63,6 @@
+ ./ADM_video/libADM_video.a   ./ADM_encoder/libADM_encoder.a  \
+ ./ADM_codecs/libADM_codecs.a ./ADM_vp32/libADM_vp32.a  \
+ ./ADM_audiofilter/libADM_audiofilter.a \
+-./libtoolame/liblibtoolame.a \
+ ./ADM_gui2/libADM_gui2.a  \
+ ./ADM_libswscale/libswscale.a \
+ ./mpeg2enc/libmpeg2enc.a \
+@@ -91,17 +90,19 @@
+ ./ADM_library/libADM_library.a \
+ ./ADM_toolkit/libADM_toolkit.a  \
+ ./libass/libass.a \
+-$(libmpeg2enc_Altivec) 
++$(libmpeg2enc_Altivec) \
++$(TWOLAME_LIBS)
+ 
+ 
+ INCLUDES = $(all_includes) $(GTK_CFLAGS) $(XML_CFLAGS) \
+ 	$(SMONKEY_CFLAGS) \
+ 	-DADMLOCALE='"'$(ADM_LOCALEDIR)'"' \
+-	-IADM_lavutil
++	-IADM_lavutil \
++	$(TWOLAME_CFLAGS)
+ 
+ # the library search path.
+ avidemux2_LDFLAGS = $(all_libraries)  $(SDL_LIBS) $(GTK_LIBS) \
+-	$(FREETYPE_LIBS) $(FC_LIBS) $(ARTS_LIBS) $(XML_LIBS) 
++	$(FREETYPE_LIBS) $(FC_LIBS) $(ARTS_LIBS) $(XML_LIBS)
+ 
+ noinst_HEADERS = ADM_pp.h admmangle.h
+ AM_CFLAGS = -g
+diff -u -r -B avidemux_2.3.0.old/configure.in avidemux_2.3.0/configure.in
+--- avidemux_2.3.0.old/configure.in	2007-02-03 13:29:35.000000000 +0100
++++ avidemux_2.3.0/configure.in	2007-02-03 13:30:01.000000000 +0100
+@@ -165,6 +165,37 @@
+    AC_SUBST(CCAS)
+    AC_SUBST(CCASFLAGS)
+ 
++
++dnl ____________TWOLAME____________
++   TWOLAME_LIBS=`$PKG_CONFIG twolame --libs`
++   TWOLAME_CFLAGS=`$PKG_CONFIG twolame --cflags`
++   TWOLAME_VERSION=`$PKG_CONFIG twolame --modversion`
++
++ if test "x$TWOLAME_VERSION" = "x" ; then
++  echo "************ Cannot identify TWOLAME version ***************"
++  AC_MSG_ERROR([*** pkg-config installed incorrectly or twolame absent ! ***])
++ fi
++ VEROK=`echo "$TWOLAME_VERSION" | perl -ne '@a=split(/\./,$_);
++                 if( $a[[0]] > 0 ) {
++                    print "OK"
++                }
++                else {
++                    if( $a[[1]] >= 3 and $a[[2]] >= 6 ) {
++                       print "OK"
++                    }
++                    else {
++                       print "FAILED"
++                    }
++                }'`
++ if test "x$VEROK" != "xOK" ; then
++  AC_MSG_ERROR([*** need twolame v0.3.6 or greater ! ***])
++ fi
++
++   AC_SUBST(TWOLAME_CFLAGS)
++   AC_SUBST(TWOLAME_LIBS)
++   AC_SUBST(TWOLAME_VERSION)
++
++
+ dnl ______________________
+ dnl AC_DEFINE(USE_DIV5,0,[Divx 5])
+ dnl AC_DEFINE(USE_AC3,0,[A52dec])
+@@ -1378,7 +1409,6 @@
+ AC_CONFIG_FILES([ avidemux/ADM_xvidratectl/Makefile ])
+ AC_CONFIG_FILES([ avidemux/libMpeg2Dec/Makefile ])
+ AC_CONFIG_FILES([ avidemux/libass/Makefile ])
+-AC_CONFIG_FILES([ avidemux/libtoolame/Makefile ])
+ AC_CONFIG_FILES([ avidemux/mpeg2enc/Makefile ])
+ AC_CONFIG_FILES([ avidemux/mpeg2enc/altivec/Makefile ])
+ AC_CONFIG_FILES([ avidemux/oplug_avi/Makefile ])
+@@ -1392,6 +1422,7 @@
+ AC_OUTPUT
+ dnl **   mean   ***
+ echo " GTK+ version        : $GTK_VERSION"
++echo " TwoLAME version     : $TWOLAME_VERSION"
+ echo " Divx5.0.5 ?         : $have_divx"
+ echo " *** DISABLED ***"
+ echo " Xvid 0.9 Codec      : $have_xx_xvid"

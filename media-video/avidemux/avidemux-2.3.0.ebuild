@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.3.0.ebuild,v 1.4 2007/02/02 16:00:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.3.0.ebuild,v 1.5 2007/02/03 13:11:28 aballier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -22,6 +22,7 @@ RDEPEND="
 	>=x11-libs/gtk+-2.6
 	>=dev-libs/libxml2-2.6.7
 	>=dev-lang/spidermonkey-1.5-r2
+	>=media-sound/twolame-0.3.6
 	a52? ( >=media-libs/a52dec-0.7.4 )
 	encode? ( >=media-sound/lame-3.93 )
 	aac? ( >=media-libs/faac-1.23.5
@@ -42,7 +43,6 @@ RDEPEND="
 			x11-libs/libXext
 			x11-libs/libXrender
 		) virtual/x11 )"
-# media-sound/toolame is supported as well
 
 DEPEND="$RDEPEND
 	|| ( (
@@ -80,7 +80,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-configure.patch"
 	epatch "${FILESDIR}/${P}-po.makefile.patch"
 	epatch "${FILESDIR}/${P}-amprogas.patch"
-	#sed -i -e 's/x264=no,-lm/x264=no,-lm -lX11/' configure.in.in || die "sed failed."
+	epatch "${FILESDIR}/${P}-twolame.patch"
 
 	AT_M4DIR="m4" eautoreconf
 }
