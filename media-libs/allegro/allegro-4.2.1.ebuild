@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.2.1.ebuild,v 1.3 2007/02/02 23:59:14 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.2.1.ebuild,v 1.4 2007/02/03 00:47:30 nyhm Exp $
 
 inherit autotools eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/alleg/${P}.tar.gz"
 LICENSE="Allegro"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 -sparc ~x86"
-IUSE="X alsa arts esd fbcon mmx oss sse svga vga"
+IUSE="X alsa arts esd fbcon jack mmx oss sse svga vga"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
 	esd? ( media-sound/esound )
@@ -25,8 +25,10 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 		x11-libs/libXxf86dga
 		x11-libs/libXxf86vm
 	)
-	svga? ( media-libs/svgalib )"
+	svga? ( media-libs/svgalib )
+	jack? ( media-sound/jack-audio-connection-kit )"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	X? (
 		x11-proto/xextproto
 		x11-proto/xf86dgaproto
@@ -47,7 +49,6 @@ src_compile() {
 	econf \
 		--enable-linux \
 		--enable-static \
-		--disable-jackdigi \
 		$(use_enable mmx) \
 		$(use_enable sse) \
 		$(use_enable oss ossdigi) \
@@ -64,6 +65,7 @@ src_compile() {
 		$(use_enable fbcon) \
 		$(use_enable svga svgalib) \
 		$(use_enable vga) \
+		$(use_enable jack jackdigi) \
 		|| die
 	emake -j1 || die "emake failed"
 }

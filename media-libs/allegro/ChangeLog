@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.63 2007/02/02 23:59:14 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.64 2007/02/03 00:47:30 nyhm Exp $
+
+  03 Feb 2007; Tristan Heaven <nyhm@gentoo.org> allegro-4.2.1.ebuild:
+  Add jack USE flag
 
   02 Feb 2007; Tristan Heaven <nyhm@gentoo.org>
   files/allegro-4.2.1-flags.patch, allegro-4.2.1.ebuild:
