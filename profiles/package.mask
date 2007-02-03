@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6744 2007/02/03 21:56:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6745 2007/02/03 22:33:57 george Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# George Shapovalov <george@gentoo.org> (03 Feb 2007)
+# masking "old-style" version for removal
+=dev-ada/florist-3.15p
 
 # Diego Pettenò <flameeyes@gentoo.org> (03 Feb 2007)
 # Masking for removal on March 3rd all the packages
