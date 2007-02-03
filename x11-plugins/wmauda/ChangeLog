@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmauda
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmauda/ChangeLog,v 1.2 2006/10/31 05:03:51 vericgar Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmauda/ChangeLog,v 1.3 2007/02/03 03:02:15 beandog Exp $
+
+  03 Feb 2007; Steve Dibb <beandog@gentoo.org> wmauda-0.2.ebuild,
+  wmauda-0.3.ebuild:
+  Add ~amd64, bug 153549
 
 *wmauda-0.3 (31 Oct 2006)
 
