@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/libmcs
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/ChangeLog,v 1.1 2007/02/03 19:28:52 chainsaw Exp $
+
+*libmcs-0.2.0 (03 Feb 2007)
+
+  03 Feb 2007; Tony Vroon <chainsaw@gentoo.org> +metadata.xml,
+  +libmcs-0.2.0.ebuild:
+  Initial commit. Ebuild by me.
+
