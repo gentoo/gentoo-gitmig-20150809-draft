@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/dangerdeep/dangerdeep-0.2.0.ebuild,v 1.3 2007/01/06 16:51:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/dangerdeep/dangerdeep-0.2.0.ebuild,v 1.4 2007/02/03 11:25:52 nyhm Exp $
 
 inherit eutils toolchain-funcs games
 
 DESCRIPTION="a World War II German submarine simulation"
 HOMEPAGE="http://www.dangerdeep.net/"
-SRC_URI="mirror://sourceforge/${PN}/dangerdeep-${PV}.tar.gz
-	mirror://sourceforge/${PN}/dangerdeep-data-${PV}.zip"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
+	mirror://sourceforge/${PN}/${PN}-data-${PV}.zip"
 
 LICENSE="GPL-2 CCPL-Attribution-NonCommercial-NoDerivs-2.0"
 SLOT="0"
@@ -22,11 +22,11 @@ RDEPEND="virtual/opengl
 	media-libs/sdl-image
 	media-libs/sdl-net"
 DEPEND="${RDEPEND}
+	app-arch/unzip
 	dev-util/scons"
 
 src_unpack() {
 	unpack ${A}
-	mv "${WORKDIR}"/data "${S}" || die "mv failed"
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-build.patch"
 	sed -i \
@@ -45,8 +45,6 @@ src_compile() {
 	scons \
 		usex86sse=${sse} \
 		datadir="${GAMES_DATADIR}"/${PN} \
-		DESTDIR="${D}" \
-		--cache-disable \
 		|| die "scons failed"
 }
 
@@ -54,7 +52,7 @@ src_install() {
 	dogamesbin build/linux/${PN} || die "dogamesbin failed"
 
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r data/* || die "doins failed"
+	doins -r ../data/* || die "doins failed"
 
 	newicon logo.xpm ${PN}.xpm
 	make_desktop_entry ${PN} "Danger from the Deep" ${PN}.xpm
