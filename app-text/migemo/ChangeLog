@@ -1,6 +1,9 @@
 # ChangeLog for app-text/migemo
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/migemo/ChangeLog,v 1.13 2005/01/01 16:26:26 eradicator Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/migemo/ChangeLog,v 1.14 2007/02/03 23:35:07 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   11 Sep 2004; Tom Martin <slarti@gentoo.org> migemo-0.40-r1.ebuild:
   Stable on amd64.
