@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-imagepack
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-imagepack/ChangeLog,v 1.11 2006/10/21 22:08:00 tcort Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-imagepack/ChangeLog,v 1.12 2007/02/03 06:31:33 mjolnir Exp $
+
+  03 Feb 2007; Martin Jackson <mjolnir@gentoo.org> ChangeLog:
+  Update digests - tarball seems to have been re-rolled for
+  imagepak-werschler.tar.gz
 
   21 Oct 2006; Thomas Cort <tcort@gentoo.org>
   nagios-imagepack-1.0-r1.ebuild:
