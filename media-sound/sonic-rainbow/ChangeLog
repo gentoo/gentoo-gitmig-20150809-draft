@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sonic-rainbow
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-rainbow/ChangeLog,v 1.9 2005/09/10 15:45:29 flameeyes Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-rainbow/ChangeLog,v 1.10 2007/02/03 20:27:53 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   10 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   sonic-rainbow-0.5.1.ebuild, sonic-rainbow-0.6.2.1.ebuild,

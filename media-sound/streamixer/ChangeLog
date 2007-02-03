@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/streamixer
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/streamixer/ChangeLog,v 1.7 2005/09/04 10:53:23 flameeyes Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/streamixer/ChangeLog,v 1.8 2007/02/03 20:29:29 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   streamixer-1.19.0.ebuild:

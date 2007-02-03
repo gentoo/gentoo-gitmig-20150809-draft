@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/squelch
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squelch/ChangeLog,v 1.12 2006/01/07 19:21:25 carlo Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squelch/ChangeLog,v 1.13 2007/02/03 20:28:33 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   07 Jan 2006; Carsten Lohrke <carlo@gentoo.org> squelch-1.0.1.ebuild:
   QA: need-qt() needs to be called after R/DEPEND.

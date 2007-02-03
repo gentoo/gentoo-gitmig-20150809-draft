@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/SmarTagger
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/SmarTagger/ChangeLog,v 1.5 2005/09/10 15:51:35 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/SmarTagger/ChangeLog,v 1.6 2007/02/03 20:24:40 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   10 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> SmarTagger-0.1.ebuild:
   Don't install INSTALL file.
