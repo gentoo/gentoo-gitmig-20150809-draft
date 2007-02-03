@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/stellarium
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.29 2007/02/03 15:06:06 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.30 2007/02/03 22:47:25 tgall Exp $
+
+  03 Feb 2007; Tom Gall <tgall@gentoo.org> stellarium-0.8.2.ebuild:
+  stable on ppc64
 
   03 Feb 2007; Simon Stelling <blubb@gentoo.org> stellarium-0.8.2.ebuild:
   stable on amd64
