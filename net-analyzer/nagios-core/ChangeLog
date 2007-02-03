@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nagios-core
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.93 2007/02/03 07:04:42 mjolnir Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.94 2007/02/03 20:01:35 mjolnir Exp $
+
+  03 Feb 2007; Martin Jackson <mjolnir@gentoo.org>
+  -nagios-core-2.3.1.ebuild, -nagios-core-2.4.ebuild,
+  -nagios-core-2.5.ebuild:
+  Clean up old ebuilds
 
 *nagios-core-2.5-r1 (03 Feb 2007)
 
