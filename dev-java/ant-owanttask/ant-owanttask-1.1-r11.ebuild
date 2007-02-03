@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ant-owanttask-1.1-r11.ebuild,v 1.4 2007/01/30 00:05:12 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ant-owanttask-1.1-r11.ebuild,v 1.5 2007/02/03 13:40:14 beandog Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://monolog.objectweb.org"
 SRC_URI="http://www.gentoo.org/~karltk/java/distfiles/owanttask-${PV}-gentoo.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 DEPEND=">=virtual/jdk-1.4"
 RDEPEND=">=virtual/jre-1.4
@@ -36,4 +36,3 @@ src_install() {
 	dodir /usr/share/ant-core/lib
 	dosym /usr/share/ant-owanttask/lib/ow_util_ant_tasks.jar /usr/share/ant-core/lib/
 }
-
