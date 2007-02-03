@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powersave/powersave-0.14.0.ebuild,v 1.6 2007/01/01 22:30:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powersave/powersave-0.14.0.ebuild,v 1.7 2007/02/03 12:58:09 armin76 Exp $
 
 inherit eutils libtool kde-functions autotools
 
 DESCRIPTION="Powersave Daemon"
 SRC_URI="mirror://sourceforge/powersave/${P}.tar.bz2"
 HOMEPAGE="http://powersave.sf.net/"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="pam_console doc"
