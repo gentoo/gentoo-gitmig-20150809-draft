@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Proc-Simple
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-Simple/ChangeLog,v 1.16 2007/01/19 15:40:08 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-Simple/ChangeLog,v 1.17 2007/02/03 07:21:38 nixnut Exp $
+
+  03 Feb 2007; nixnut <nixnut@gentoo.org> Proc-Simple-1.21.ebuild:
+  Stable on ppc wrt bug 164913
 
   19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   Proc-Simple-1.21.ebuild:
