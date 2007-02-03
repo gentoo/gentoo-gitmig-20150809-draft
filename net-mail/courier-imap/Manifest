@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX authdaemond-3.0.4-r1 1062 RMD160 5e9184dc8c8ccbb528252c0795b5cd62b1d1b9c8 SHA1 55180242453ee47c951d265615da7a0902a5dc1f SHA256 2731b87fec98ae4ecdb5cfdb5917894e28eaf768f68555462d801c116cfa2a0d
 MD5 71a551a4f772f4299f9752f3d043b8c5 files/authdaemond-3.0.4-r1 1062
 RMD160 5e9184dc8c8ccbb528252c0795b5cd62b1d1b9c8 files/authdaemond-3.0.4-r1 1062
@@ -125,6 +122,46 @@ AUX courier-imap-4.0.6-db4-configure.in.patch 1623 RMD160 10dcea6643be49b1be4241
 MD5 c1fdae0da5552decc362bc031c3a4b5b files/courier-imap-4.0.6-db4-configure.in.patch 1623
 RMD160 10dcea6643be49b1be4241a02cd153a508898332 files/courier-imap-4.0.6-db4-configure.in.patch 1623
 SHA256 809e730d6fb147bc1e8b59c6f23127cf3a38b14a00d723161cd6c85b1ab5e957 files/courier-imap-4.0.6-db4-configure.in.patch 1623
+AUX courier-imap-4.0.6-r1-courier-imapd-ssl.rc6 1183 RMD160 06e216bac647def373ea24fcef13e22825c3ed17 SHA1 35f814a65e79a87709a57e18fcc1b3f9ea442be8 SHA256 8d80d80cc06cc2855bef882f77dc17ccd06bd0062ce77beb11055c1fd4ccb485
+MD5 182d79e3ae41c713e5292dfb4043fbe5 files/courier-imap-4.0.6-r1-courier-imapd-ssl.rc6 1183
+RMD160 06e216bac647def373ea24fcef13e22825c3ed17 files/courier-imap-4.0.6-r1-courier-imapd-ssl.rc6 1183
+SHA256 8d80d80cc06cc2855bef882f77dc17ccd06bd0062ce77beb11055c1fd4ccb485 files/courier-imap-4.0.6-r1-courier-imapd-ssl.rc6 1183
+AUX courier-imap-4.0.6-r1-courier-imapd.indirect 85 RMD160 3b6790ccee0c7271c23f76a393b9d0a0d0b575ef SHA1 807e2294f80b95f0bae856a64774ffed7175dbef SHA256 96f7cd8cb1f4817be039df630b0e5da3838530955881b7217527307514b1b8a3
+MD5 8e5fabd0adf4a3c6a496e2a220a14e10 files/courier-imap-4.0.6-r1-courier-imapd.indirect 85
+RMD160 3b6790ccee0c7271c23f76a393b9d0a0d0b575ef files/courier-imap-4.0.6-r1-courier-imapd.indirect 85
+SHA256 96f7cd8cb1f4817be039df630b0e5da3838530955881b7217527307514b1b8a3 files/courier-imap-4.0.6-r1-courier-imapd.indirect 85
+AUX courier-imap-4.0.6-r1-courier-imapd.rc6 938 RMD160 94964c9d8763dd53bc64bc764ccb6cb18fbe20b6 SHA1 98aac67bdb3882b8d7e337c43248d93a5e056690 SHA256 86f63733187b408dbcfd173e22f16ac5c0d29ec18971cfe321d3ef1506ca9e4f
+MD5 707a227e7d86690861b2dba5696e74c7 files/courier-imap-4.0.6-r1-courier-imapd.rc6 938
+RMD160 94964c9d8763dd53bc64bc764ccb6cb18fbe20b6 files/courier-imap-4.0.6-r1-courier-imapd.rc6 938
+SHA256 86f63733187b408dbcfd173e22f16ac5c0d29ec18971cfe321d3ef1506ca9e4f files/courier-imap-4.0.6-r1-courier-imapd.rc6 938
+AUX courier-imap-4.0.6-r1-courier-pop3d-ssl.rc6 1191 RMD160 c87240aa2addfa2a10c588fc2339fedd3a82ef70 SHA1 77b11cca7c911fff9f5de9e55ac95462843504f2 SHA256 6121adab2453464b2c9b112255df4dcb4120dc02305cae6ef881775b128e4a30
+MD5 ce0408bd68bf5fe2d7446f872568beb5 files/courier-imap-4.0.6-r1-courier-pop3d-ssl.rc6 1191
+RMD160 c87240aa2addfa2a10c588fc2339fedd3a82ef70 files/courier-imap-4.0.6-r1-courier-pop3d-ssl.rc6 1191
+SHA256 6121adab2453464b2c9b112255df4dcb4120dc02305cae6ef881775b128e4a30 files/courier-imap-4.0.6-r1-courier-pop3d-ssl.rc6 1191
+AUX courier-imap-4.0.6-r1-courier-pop3d.indirect 85 RMD160 f0750ff2a958b9a24112c9352bdc6a70b4a077f4 SHA1 6b7859075554104f0fe04f1e74fde2565a77e65d SHA256 df03082133b598631c4e47b5f448bba385f5993c0bd55a4eca9637b8176d8593
+MD5 a7541301dc4597f7eb5193b047f00b4b files/courier-imap-4.0.6-r1-courier-pop3d.indirect 85
+RMD160 f0750ff2a958b9a24112c9352bdc6a70b4a077f4 files/courier-imap-4.0.6-r1-courier-pop3d.indirect 85
+SHA256 df03082133b598631c4e47b5f448bba385f5993c0bd55a4eca9637b8176d8593 files/courier-imap-4.0.6-r1-courier-pop3d.indirect 85
+AUX courier-imap-4.0.6-r1-courier-pop3d.rc6 946 RMD160 6a4e665c2a6a501ef31e2020f86bd02b41a40395 SHA1 e805b1dadfbb2be6f06068c01ff7585ee1ca06ff SHA256 a8a7a24fce1e933076bdcfcfdcd417e6357f433852dd879f3ddee54ce341a29e
+MD5 9e28035cda81928e137c4951bb5ffeb6 files/courier-imap-4.0.6-r1-courier-pop3d.rc6 946
+RMD160 6a4e665c2a6a501ef31e2020f86bd02b41a40395 files/courier-imap-4.0.6-r1-courier-pop3d.rc6 946
+SHA256 a8a7a24fce1e933076bdcfcfdcd417e6357f433852dd879f3ddee54ce341a29e files/courier-imap-4.0.6-r1-courier-pop3d.rc6 946
+AUX courier-imap-4.0.6-r1-gentoo-imapd-ssl.rc 1162 RMD160 eeef2f4c5690a1dce594da5b9d99b1315c2b5ca7 SHA1 5febf4fc4d568e8ef2250b2ebce16ef44c82ad9a SHA256 2055f9bfe80978aa1e17855a6d1a9a1c903a9c67c67c06e6eba80954f144078a
+MD5 bf7ca5a232429518a7c301f7aa6a9d98 files/courier-imap-4.0.6-r1-gentoo-imapd-ssl.rc 1162
+RMD160 eeef2f4c5690a1dce594da5b9d99b1315c2b5ca7 files/courier-imap-4.0.6-r1-gentoo-imapd-ssl.rc 1162
+SHA256 2055f9bfe80978aa1e17855a6d1a9a1c903a9c67c67c06e6eba80954f144078a files/courier-imap-4.0.6-r1-gentoo-imapd-ssl.rc 1162
+AUX courier-imap-4.0.6-r1-gentoo-imapd.rc 1199 RMD160 5b6239e5d5e2dd4b533ad427364032bc2121b1c3 SHA1 461c2c1f9f6ef872858babc0623f24a6ef199508 SHA256 d0276deff2a43fa7ef553bd0cdad7c3ff7705b7127336bef3b2f897e15ccfc6b
+MD5 2cb29266ee4b1af3622723466c4ba8ca files/courier-imap-4.0.6-r1-gentoo-imapd.rc 1199
+RMD160 5b6239e5d5e2dd4b533ad427364032bc2121b1c3 files/courier-imap-4.0.6-r1-gentoo-imapd.rc 1199
+SHA256 d0276deff2a43fa7ef553bd0cdad7c3ff7705b7127336bef3b2f897e15ccfc6b files/courier-imap-4.0.6-r1-gentoo-imapd.rc 1199
+AUX courier-imap-4.0.6-r1-gentoo-pop3d-ssl.rc 1137 RMD160 7fe8cb76e23bae125e67783038908d0120f65cc9 SHA1 c24a0a407d037bbce9433a046af25c1cfe93b9eb SHA256 cf938c03d9089ab9d48e76318519d3f37a956b1fe6921675bb68946d34c92883
+MD5 b77769bc30b840b4d3fc53e9032b6b1c files/courier-imap-4.0.6-r1-gentoo-pop3d-ssl.rc 1137
+RMD160 7fe8cb76e23bae125e67783038908d0120f65cc9 files/courier-imap-4.0.6-r1-gentoo-pop3d-ssl.rc 1137
+SHA256 cf938c03d9089ab9d48e76318519d3f37a956b1fe6921675bb68946d34c92883 files/courier-imap-4.0.6-r1-gentoo-pop3d-ssl.rc 1137
+AUX courier-imap-4.0.6-r1-gentoo-pop3d.rc 1145 RMD160 ecd07be4f3b1e0fedce91f3389c585211aea3357 SHA1 1e56d8e67c269b11d7428a00ea6e3c3a9f49a332 SHA256 ab32df3ab7a4070b6b6029b59f41b2a144ca44a7f8e3d573e885c58eee8984d8
+MD5 3dcf7c14a50e6d756825de78b1c145a7 files/courier-imap-4.0.6-r1-gentoo-pop3d.rc 1145
+RMD160 ecd07be4f3b1e0fedce91f3389c585211aea3357 files/courier-imap-4.0.6-r1-gentoo-pop3d.rc 1145
+SHA256 ab32df3ab7a4070b6b6029b59f41b2a144ca44a7f8e3d573e885c58eee8984d8 files/courier-imap-4.0.6-r1-gentoo-pop3d.rc 1145
 AUX courier-imap-gentoo.readme 2827 RMD160 1429340ccc518b019a42dd274a7c15f01f125d25 SHA1 72c4f79c6ed08c4423925b05303f97287b8d95d1 SHA256 fbfe0396d87bcfe2722df94b2c68ef1a1993edcf776c8572604aed0390e4061f
 MD5 aebf119b54b485aa50571173566f4a09 files/courier-imap-gentoo.readme 2827
 RMD160 1429340ccc518b019a42dd274a7c15f01f125d25 files/courier-imap-gentoo.readme 2827
@@ -198,14 +235,18 @@ EBUILD courier-imap-4.0.4.ebuild 10107 RMD160 43ea2e5c9fb6b0bd0ff5faba019955a3a5
 MD5 8f84dc3b4ba8ce8a3565e999c4291eb5 courier-imap-4.0.4.ebuild 10107
 RMD160 43ea2e5c9fb6b0bd0ff5faba019955a3a5c640c8 courier-imap-4.0.4.ebuild 10107
 SHA256 4fc0bbf8c26602eb84b6575b1862d875479d72a0c2edec3d2bc96980d536fd50 courier-imap-4.0.4.ebuild 10107
+EBUILD courier-imap-4.0.6-r1.ebuild 9691 RMD160 ca325980b0a6eb07de21f82a3b0c526439d776c5 SHA1 dd7a3cc8469c99e66be7e100e89a65f78e131939 SHA256 e78d4d615af8a083d14179756717f2275632711a0a90974efe8decd16dd2cea7
+MD5 09f87b7627aaf8b2fa906fc11bcffa17 courier-imap-4.0.6-r1.ebuild 9691
+RMD160 ca325980b0a6eb07de21f82a3b0c526439d776c5 courier-imap-4.0.6-r1.ebuild 9691
+SHA256 e78d4d615af8a083d14179756717f2275632711a0a90974efe8decd16dd2cea7 courier-imap-4.0.6-r1.ebuild 9691
 EBUILD courier-imap-4.0.6.ebuild 10128 RMD160 ef2b87dd3905044dc01721e54bfa6d1c790b5e29 SHA1 5f62d780a0f4c1c59d0932d16d47269f26917e69 SHA256 48623443290cb6095f32eb70967d89213bd2eff2ca61abba164cd6a0d8cb6d10
 MD5 175193eaa4b40b00df0b16acc074c64d courier-imap-4.0.6.ebuild 10128
 RMD160 ef2b87dd3905044dc01721e54bfa6d1c790b5e29 courier-imap-4.0.6.ebuild 10128
 SHA256 48623443290cb6095f32eb70967d89213bd2eff2ca61abba164cd6a0d8cb6d10 courier-imap-4.0.6.ebuild 10128
-MISC ChangeLog 26215 RMD160 a8c0e3dd5ac122ae624331a22569dc044dc43c07 SHA1 63b389b50cdc1407335a670b6aea0b049633bd90 SHA256 a6668efd1d57369b36d46fc8d7960cecfe9ee7900169496620e40b26278110d8
-MD5 cd22e673e038c4ef72313a504643eb86 ChangeLog 26215
-RMD160 a8c0e3dd5ac122ae624331a22569dc044dc43c07 ChangeLog 26215
-SHA256 a6668efd1d57369b36d46fc8d7960cecfe9ee7900169496620e40b26278110d8 ChangeLog 26215
+MISC ChangeLog 872 RMD160 60cf670d61e30ced7119bd0a2a0d03fbf5b88e96 SHA1 a3f6b37839c19a72baa45c383e66f0f5959e278a SHA256 ab00b15a225c050db306e45e3fa2f1d4796d253ccc6b4124f15b96a5521193f7
+MD5 e5de9613c66d1e42c4bb3d92166a41e9 ChangeLog 872
+RMD160 60cf670d61e30ced7119bd0a2a0d03fbf5b88e96 ChangeLog 872
+SHA256 ab00b15a225c050db306e45e3fa2f1d4796d253ccc6b4124f15b96a5521193f7 ChangeLog 872
 MISC metadata.xml 280 RMD160 9f5cd4ae71c9c7e45161110dd38d67f6604cd7b8 SHA1 4b9a055d510dca2f97d61f7df74fcefbc0cc0a2c SHA256 1e7cf6dbb378d12f4d6569350ba23c49aa55a855240b78b5487532028b0ff540
 MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
 RMD160 9f5cd4ae71c9c7e45161110dd38d67f6604cd7b8 metadata.xml 280
@@ -231,10 +272,6 @@ SHA256 600c9f86d4fc9f5a5fa19815037042f46f2754d1e4366074e92b63ddca79fb03 files/di
 MD5 a0dd501fdeeb92ac5fca1408ac919288 files/digest-courier-imap-4.0.6 262
 RMD160 9ef1122d21d9d29de6d2ae8f02fb3bd559c9d6b7 files/digest-courier-imap-4.0.6 262
 SHA256 3e0023761481fb070682400be05dfb6c3c02547c4a5db2fe0d8c1beffb37d7bf files/digest-courier-imap-4.0.6 262
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.1 (GNU/Linux)
-
-iD8DBQFFnhGkAiZjviIA2XgRAu7sAJ9pv1WgtiCPJYFXpy40+5DnKlp1IwCg8hxO
-TmP6YBCteHi6EBlnp0mk+XU=
-=/pYd
------END PGP SIGNATURE-----
+MD5 a0dd501fdeeb92ac5fca1408ac919288 files/digest-courier-imap-4.0.6-r1 262
+RMD160 9ef1122d21d9d29de6d2ae8f02fb3bd559c9d6b7 files/digest-courier-imap-4.0.6-r1 262
+SHA256 3e0023761481fb070682400be05dfb6c3c02547c4a5db2fe0d8c1beffb37d7bf files/digest-courier-imap-4.0.6-r1 262
