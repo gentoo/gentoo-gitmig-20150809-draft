@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/interprolog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/interprolog/ChangeLog,v 1.1 2007/02/02 19:12:31 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/interprolog/ChangeLog,v 1.2 2007/02/03 07:03:33 keri Exp $
+
+  03 Feb 2007; keri <keri@gentoo.org> interprolog-2.1.2.ebuild:
+  Add ~amd64 to KEYWORDS.
 
 *interprolog-2.1.2 (02 Feb 2007)
 
