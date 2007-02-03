@@ -1,6 +1,19 @@
 # ChangeLog for sci-astronomy/celestia
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.24 2006/10/20 20:12:28 gustavoz Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.25 2007/02/03 17:05:39 bicatali Exp $
+
+*celestia-1.4.1-r1 (03 Feb 2007)
+
+  03 Feb 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/celestia-1.4.1-cfg.patch, +files/celestia-1.4.1-kde-datadir.patch,
+  +files/celestia-1.4.1-lua.patch, +files/celestia-1.4.1-lua51.patch,
+  +files/celestia-1.4.1-strictalias.patch, metadata.xml,
+  +celestia-1.4.1-r1.ebuild:
+  Some cleaning in the ebuild. Added more patches for lua, a default 
+  config file, longdescription in metadata.xml.
+  Fixed bugs #128218, #142786 and #162777 (with the kde-datadir patch)
+  Fixed bug #130091 with a filter on as-needed
+  Tested with kde and gtk only on amd64 and x86 (not yet with gnome).
 
   20 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> celestia-1.4.1.ebuild:
   Stable on sparc

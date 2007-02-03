@@ -1,0 +1,13 @@
+--- celestia-1.4.1/src/celengine/modelfile.cpp.strictalias	2006-11-22 14:04:15.000000000 +0100
++++ celestia-1.4.1/src/celengine/modelfile.cpp	2006-11-22 14:01:27.000000000 +0100
+@@ -1080,7 +1080,9 @@
+ static float readFloat(istream& in)
+ {
+     int i = readUint(in);
+-    return *((float*) &i);
++    float f;
++    memcpy(&f, &i, sizeof(float));
++    return f;
+ }
+ 
+ 
