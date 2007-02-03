@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gnomeradio
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomeradio/ChangeLog,v 1.13 2005/08/07 13:16:15 hansmi Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomeradio/ChangeLog,v 1.14 2007/02/03 18:59:49 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> gnomeradio-1.4.ebuild:
   Stable on ppc.

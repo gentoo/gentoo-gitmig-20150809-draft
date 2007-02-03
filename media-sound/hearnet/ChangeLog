@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/hearnet
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hearnet/ChangeLog,v 1.9 2005/01/29 21:44:09 dragonheart Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hearnet/ChangeLog,v 1.10 2007/02/03 19:08:20 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   30 Jan 2005; Daniel Black <dragonheart@gentoo.org> hearnet-0.0.2.ebuild:
   dependancy transition net-libs/libpcap -> virtual/libpcap

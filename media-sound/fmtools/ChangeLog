@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/fmtools
-# Copyright 2003-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fmtools/ChangeLog,v 1.7 2005/11/07 10:40:28 flameeyes Exp $
+# Copyright 2003-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fmtools/ChangeLog,v 1.8 2007/02/03 18:55:48 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   07 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> fmtools-0.99.1.ebuild,
   fmtools-1.0.ebuild:

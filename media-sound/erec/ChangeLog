@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/erec
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/erec/ChangeLog,v 1.8 2005/09/04 10:36:59 flameeyes Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/erec/ChangeLog,v 1.9 2007/02/03 18:53:32 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> erec-2.2.0.1.ebuild:
   Don't install COPYING file.
