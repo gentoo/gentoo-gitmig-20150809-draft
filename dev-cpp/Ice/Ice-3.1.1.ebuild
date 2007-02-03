@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/Ice-3.1.1.ebuild,v 1.1 2006/10/30 13:31:47 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/Ice-3.1.1.ebuild,v 1.2 2007/02/03 03:14:53 beandog Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.zeroc.com/download/Ice/3.1/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="ncurses test debug"
 
 DEPEND="ncurses? ( sys-libs/ncurses sys-libs/readline )
@@ -21,7 +21,11 @@ RDEPEND=">=dev-libs/expat-1.9
 	>=app-arch/bzip2-1.0"
 
 pkg_setup() {
-	built_with_use sys-libs/db nocxx && die "DB must be compiled with C++ support!"
+	if built_with_use sys-libs/db nocxx; then
+		eerror "sys-libs/db must be compiled with C++ support!"
+		eerror "Remove the 'nocxx' use flag and try again."
+		die "Fix use flags and re-emerge"
+	fi
 }
 
 src_unpack() {

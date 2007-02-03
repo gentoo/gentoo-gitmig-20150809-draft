@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/Ice
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/ChangeLog,v 1.2 2006/11/10 01:12:35 swegener Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/ChangeLog,v 1.3 2007/02/03 03:14:53 beandog Exp $
+
+  03 Feb 2007; Steve Dibb <beandog@gentoo.org> Ice-3.1.1.ebuild:
+  Add ~amd64, bug 142045
 
 *Ice-3.1.1 (30 Oct 2006)
 
