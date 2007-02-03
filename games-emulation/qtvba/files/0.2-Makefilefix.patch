@@ -1,5 +1,5 @@
---- Makefile.orig	2004-05-01 22:37:34.000000000 +0200
-+++ Makefile	2004-05-01 22:41:14.000000000 +0200
+--- Makefile
++++ Makefile
 @@ -12,11 +12,9 @@
  CXX      = g++
  LEX      = flex
@@ -25,18 +25,3 @@
  	$(QMAKE) -o Makefile qtvba.pro
  qmake: 
  	@$(QMAKE) -o Makefile qtvba.pro
-@@ -233,10 +228,10 @@
- ####### Install
- 
- install_target: 
--	@$(CHK_DIR_EXISTS) $(INSTALL_ROOT)/usr/local/bin/ || $(MKDIR) $(INSTALL_ROOT)/usr/local/bin/
--	$(DEL_FILE) "$(INSTALL_ROOT)/usr/local/bin/$(QMAKE_TARGET)"
--	-$(COPY) "$(QMAKE_TARGET)" "$(INSTALL_ROOT)/usr/local/bin/$(QMAKE_TARGET)"
--	-strip "$(INSTALL_ROOT)/usr/local/bin/$(QMAKE_TARGET)"
-+	@$(CHK_DIR_EXISTS) $(DESTDIR)/$(prefix)/bin/ || $(MKDIR) $(DESTDIR)/$(prefix)/bin/
-+	$(DEL_FILE) "$(DESTDIR)/$(prefix)/bin/$(QMAKE_TARGET)"
-+	-$(COPY) "$(QMAKE_TARGET)" "$(DESTDIR)/$(prefix)/bin/$(QMAKE_TARGET)"
-+	-strip "$(DESTDIR)/$(prefix)/bin/$(QMAKE_TARGET)"
- 
- uninstall_target: 
- 	-$(DEL_FILE) "$(INSTALL_ROOT)/usr/local/bin/$(QMAKE_TARGET)"

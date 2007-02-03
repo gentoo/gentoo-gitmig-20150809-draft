@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/qtvba/qtvba-0.2.ebuild,v 1.5 2005/02/14 09:34:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/qtvba/qtvba-0.2.ebuild,v 1.6 2007/02/03 07:27:51 nyhm Exp $
 
-inherit eutils kde-functions
+inherit eutils qt3 games
 
 DESCRIPTION="VisualBoyAdvance Frontend"
 HOMEPAGE="http://www.apex.net.au/~twalker/qtvba/"
@@ -13,8 +13,9 @@ SLOT="0"
 KEYWORDS="ppc x86"
 IUSE=""
 
-RDEPEND=">=games-emulation/visualboyadvance-1.5.1"
-need-qt 3
+DEPEND="$(qt_min_version 3)"
+RDEPEND="${DEPEND}
+	games-emulation/visualboyadvance"
 
 src_unpack() {
 	unpack ${A}
@@ -22,11 +23,8 @@ src_unpack() {
 	epatch "${FILESDIR}/${PV}-Makefilefix.patch"
 }
 
-src_compile() {
-	emake || die "emake failed"
-}
-
-src_install () {
-	make DESTDIR="${D}" install || die "make install failed"
+src_install() {
+	dogamesbin ${PN} || die "dogamesbin failed"
 	dodoc README
+	prepgamesdirs
 }
