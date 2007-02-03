@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/thunar-archive
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-archive/ChangeLog,v 1.4 2007/01/31 15:04:01 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-archive/ChangeLog,v 1.5 2007/02/03 00:08:56 nichoj Exp $
+
+  03 Feb 2007; Joshua Nichols <nichoj@gentoo.org> ChangeLog:
+  Restored IUSE=debug, see bug #164834.
 
   31 Jan 2007; Peter Weller <welp@gentoo.org> thunar-archive-0.2.4.ebuild:
   Removed useage of gnome2 eclass
