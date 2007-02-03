@@ -42,7 +42,7 @@
  
  sexypsf:	${OBJS}
 -		${CC} ${CFLAGS} ${OBJS} -o sexypsf ${LIBS}
-+		${CC} ${LDFLAGS} ${OBJS} -o sexypsf ${LIBS}
++		${CC} ${LDFLAGS} ${CFLAGS} ${OBJS} -o sexypsf ${LIBS}
  
  .PHONY: clean sexypsf
  
