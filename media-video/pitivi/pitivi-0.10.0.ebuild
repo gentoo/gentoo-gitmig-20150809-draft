@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.10.0.ebuild,v 1.2 2006/06/03 01:45:48 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.10.0.ebuild,v 1.3 2007/02/03 04:07:35 beandog Exp $
 
 DESCRIPTION="A non-linear video editor using the GStreamer multimedia framework"
 HOMEPAGE="http://www.pitivi.org"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=media-libs/gstreamer-0.10.0
