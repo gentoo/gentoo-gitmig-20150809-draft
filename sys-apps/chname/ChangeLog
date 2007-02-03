@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/chname
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/chname/ChangeLog,v 1.1 2007/02/03 01:45:40 marineam Exp $
+
+*chname-1.0 (03 Feb 2007)
+
+  03 Feb 2007; Michael Marineau <marineam@gentoo.org> +metadata.xml,
+  +chname-1.0.ebuild:
+  First release
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+
+<pkgmetadata>
+	<maintainer>
+		<email>marineam@gentoo.org</email>
+		<description>Actively maintained</description>
+	</maintainer>
+	<longdescription lang="en">
+		Run a command with a new system hostname. Requires utsname namespaces.
+	</longdescription>
+</pkgmetadata>
