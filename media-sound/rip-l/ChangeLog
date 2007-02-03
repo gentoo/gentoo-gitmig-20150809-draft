@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rip-l
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rip-l/ChangeLog,v 1.1 2005/01/15 11:19:09 mkennedy Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rip-l/ChangeLog,v 1.2 2007/02/03 20:13:57 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *rip-l-0.4 (15 Jan 2005)
 
