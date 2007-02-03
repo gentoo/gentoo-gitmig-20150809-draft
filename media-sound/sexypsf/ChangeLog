@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sexypsf
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sexypsf/ChangeLog,v 1.22 2007/01/20 07:34:23 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sexypsf/ChangeLog,v 1.23 2007/02/03 11:46:42 truedfx Exp $
+
+  03 Feb 2007; Harald van Dĳk <truedfx@gentoo.org>
+  files/sexypsf-0.4.7-misc.patch:
+  Use CFLAGS when linking
 
   20 Jan 2007; Harald van Dĳk <truedfx@gentoo.org>
   -files/sexypsf-0.4.5-gentoo.patch, -files/sexypsf-0.4.6-gentoo.patch,
