@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/ant-tasks
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.51 2007/01/27 02:06:35 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.52 2007/02/03 15:03:04 beandog Exp $
+
+  03 Feb 2007; Steve Dibb <beandog@gentoo.org> ant-tasks-1.6.5-r3.ebuild:
+  amd64 stable, bug 165058
+
+  03 Feb 2007; Steve Dibb <beandog@gentoo.org> ant-tasks-1.6.5-r3.ebuild:
+  amd64 stable, bug 165058
 
   27 Jan 2007; Vlastimil Babka <caster@gentoo.org> ant-tasks-1.7.0.ebuild:
   Add ~ia64 keyword, bug #159820.
