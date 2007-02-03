@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-1.0.3.ebuild,v 1.4 2006/11/23 21:48:54 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-1.0.3.ebuild,v 1.5 2007/02/03 17:32:36 blubb Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="IRSSI-based text client for Secure Internet Live Conferencing"
 SRC_URI="http://www.silcnet.org/download/client/sources/${P}.tar.bz2"
@@ -36,7 +36,7 @@ src_compile() {
 	econf \
 		--datadir=/usr/share \
 		--with-datadir=/usr/share/${PN} \
-		--with-simdir=/usr/lib/${PN} \
+		--with-simdir=/usr/$(get_libdir)/${PN} \
 		--with-ncurses \
 		--without-silcd \
 		$(use_enable ipv6) \
@@ -53,7 +53,7 @@ src_install() {
 		R1="s/installsitearch='//"
 		R2="s/';//"
 		perl_sitearch="`perl -V:installsitearch | sed -e ${R1} -e ${R2}`"
-		myflags="${myflags} INSTALLPRIVLIB=/usr/lib"
+		myflags="${myflags} INSTALLPRIVLIB=/usr/$(get_libdir)"
 		myflags="${myflags} INSTALLARCHLIB=${perl_sitearch}"
 		myflags="${myflags} INSTALLSITELIB=${perl_sitearch}"
 		myflags="${myflags} INSTALLSITEARCH=${perl_sitearch}"
