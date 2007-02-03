@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/xsb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.5 2007/02/02 21:27:25 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.6 2007/02/03 00:58:27 keri Exp $
+
+  03 Feb 2007; keri <keri@gentoo.org> +files/xsb-3.0.1-debug.patch,
+  xsb-3.0.1.ebuild:
+  Fix clause_reference hashing in debug mode.
 
   02 Feb 2007; keri <keri@gentoo.org> files/xsb-3.0.1-portage.patch:
   Parallelize compile of Prolog engine.
