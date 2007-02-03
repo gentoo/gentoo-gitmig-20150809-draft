@@ -1,0 +1,11 @@
+--- doc/Makefile.am	2007/01/08 20:02:30	1.1
++++ doc/Makefile.am	2007/01/08 20:05:54
+@@ -16,7 +16,7 @@ $(HTML_APIDOC_INTERNALS_DIR).stamp: Doxy
+ 
+ # FIXME: Depending on the source files would be sufficient...
+ # This generates HTML_APIDOC_DIR as well as DOXYGEN_OUTPUT_DIR
+-$(DOXYGEN_OUTPUT_DIR).stamp: Doxyfile $(top_builddir)/libexif/libexif.la
++$(DOXYGEN_OUTPUT_DIR).stamp $(HTML_APIDOC_DIR).stamp: Doxyfile $(top_builddir)/libexif/libexif.la
+ 	doxygen $<
+ 	echo > $@
+ 
