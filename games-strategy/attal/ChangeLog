@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/attal
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/ChangeLog,v 1.20 2006/11/19 13:06:44 nyhm Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/ChangeLog,v 1.21 2007/02/03 01:58:59 beandog Exp $
+
+  03 Feb 2007; Steve Dibb <beandog@gentoo.org> attal-0.10.1.ebuild:
+  Add ~amd64, bug 124299
 
   19 Nov 2006; Tristan Heaven <nyhm@gentoo.org> attal-0.10.1.ebuild:
   Respect CXXFLAGS and LDFLAGS
