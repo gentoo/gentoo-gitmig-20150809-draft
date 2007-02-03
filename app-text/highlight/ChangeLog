@@ -1,6 +1,11 @@
 # ChangeLog for app-text/highlight
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/ChangeLog,v 1.5 2006/03/09 12:17:54 ehmsen Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/ChangeLog,v 1.6 2007/02/03 15:36:51 blubb Exp $
+
+*highlight-2.4.8 (03 Feb 2007)
+
+  03 Feb 2007; Simon Stelling <blubb@gentoo.org> +highlight-2.4.8.ebuild:
+  version bump and add ~amd64; bug 154789
 
   09 Mar 2006; Martin Ehmsen <ehmsen@gentoo.org> highlight-2.4.3.ebuild:
   Removed unnecessary S=${WORKDIR}/${P}
