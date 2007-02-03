@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-2.0.0.44.ebuild,v 1.14 2006/09/12 14:18:01 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-2.0.0.44.ebuild,v 1.15 2007/02/03 08:24:57 lucass Exp $
 
 MY_P=${P/pyopengl/PyOpenGL}
 S=${WORKDIR}/${MY_P}
@@ -30,6 +30,8 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/config.diff
 	epatch ${FILESDIR}/${P}-fix_togl.patch
+
+	sed -e 's/self\.NUMERIC/self.HAS_NUMERIC/' -i setup/dist.py
 
 	if built_with_use dev-lang/python tk; then
 		tkv=$(grep TK_VER /usr/include/tk.h | sed 's/^.*"\(.*\)".*/\1/')
