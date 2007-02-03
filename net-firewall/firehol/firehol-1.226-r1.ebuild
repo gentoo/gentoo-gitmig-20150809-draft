@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-1.226-r1.ebuild,v 1.5 2006/08/20 03:58:25 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-1.226-r1.ebuild,v 1.6 2007/02/03 18:17:17 centic Exp $
 
 inherit eutils
 
@@ -50,7 +50,7 @@ src_install() {
 	insinto /etc/conf.d
 	newins ${FILESDIR}/firehol.conf.d firehol || die
 
-	dodoc ChangeLog COPYING README TODO WhatIsNew || die
+	dodoc ChangeLog README TODO WhatIsNew || die
 	dohtml doc/*.html doc/*.css  || die
 
 	docinto scripts
