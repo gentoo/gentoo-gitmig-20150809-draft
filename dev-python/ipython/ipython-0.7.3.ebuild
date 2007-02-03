@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.7.3.ebuild,v 1.2 2007/02/03 10:55:56 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.7.3.ebuild,v 1.3 2007/02/03 11:15:31 dev-zero Exp $
 
 NEED_PYTHON=2.3
 
-inherit distutils
+inherit distutils elisp-common
 
 DESCRIPTION="An advanced interactive shell for Python."
 HOMEPAGE="http://ipython.scipy.org/"
@@ -15,10 +15,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~s390 ~x86"
 IUSE="doc examples emacs gnuplot test"
 
-DEPEND="test? ( dev-python/pexpect )"
-RDEPEND="gnuplot? ( dev-python/gnuplot-py )"
+RDEPEND="gnuplot? ( dev-python/gnuplot-py )
+	emacs? ( virtual/emacs )"
+DEPEND="${RDEPEND}
+	test? ( dev-python/pexpect )"
 
 PYTHON_MODNAME="IPython"
+SITEFILE="50ipython-mode-gentoo.el"
 
 src_unpack() {
 	unpack ${A}
@@ -29,6 +32,14 @@ src_unpack() {
 		-e "/'manual'/d" -e '/manfiles)/d' \
 		-e 's/^docfiles.*/docfiles=""/' \
 		setup.py || die "sed failed"
+}
+
+src_compile() {
+	distutils_src_compile
+	if use emacs ; then
+		cd doc
+		elisp-comp ipython.el || die "elisp-comp failed"
+	fi
 }
 
 src_install() {
@@ -46,7 +57,7 @@ src_install() {
 		doins -r examples
 	fi
 	if use emacs ; then
-		insinto /usr/share/emacs/site-lisp
-		doins ipython.el
+		elisp-install ${PN} ipython.el ipython.elc || die "elisp-install failed"
+		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	fi
 }

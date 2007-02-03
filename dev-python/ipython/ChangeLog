@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/ipython
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.32 2007/02/03 10:44:59 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.33 2007/02/03 11:15:31 dev-zero Exp $
+
+  03 Feb 2007; Tiziano Müller <dev-zero@gentoo.org>
+  +files/50ipython-mode-gentoo.el, ipython-0.7.3.ebuild:
+  Added 50ipython-mode-gentoo.el from bug 92218 and inherit from elisp-common
+  to complete emacs support (thanks to dan).
 
 *ipython-0.7.3 (03 Feb 2007)
 
