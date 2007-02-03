@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/yap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.14 2007/02/03 04:41:14 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.15 2007/02/03 22:08:06 keri Exp $
+
+  03 Feb 2007; keri <keri@gentoo.org> -files/yap-5.0.1-analyst.patch,
+  -files/yap-5.0.1-configure.patch, -files/yap-5.0.1-doc.patch,
+  -files/yap-5.0.1-malloc.patch, -files/yap-5.0.1-rclause.patch,
+  -files/yap-5.0.1-tabling.patch, -files/yap-5.0.1-tkyap.patch,
+  -yap-5.0.1.ebuild:
+  Remove old -5.0.1 version.
 
   03 Feb 2007; keri <keri@gentoo.org> +files/yap-5.1.1-jpl.patch,
   yap-5.1.1.ebuild:
