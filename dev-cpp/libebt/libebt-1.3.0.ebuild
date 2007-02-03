@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libebt/libebt-1.3.0.ebuild,v 1.8 2007/01/31 19:16:42 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libebt/libebt-1.3.0.ebuild,v 1.9 2007/02/03 23:41:37 eroyf Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -14,7 +14,7 @@ RESTRICT="primaryuri"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~mips ppc sparc x86"
+KEYWORDS="alpha amd64 hppa mips ppc sparc x86"
 IUSE="doc test"
 
 DEPEND="doc? ( app-doc/doxygen )
