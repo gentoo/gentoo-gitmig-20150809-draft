@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/checkstyle-4.2.ebuild,v 1.2 2007/01/29 11:47:33 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/checkstyle-4.2.ebuild,v 1.3 2007/02/03 23:01:27 beandog Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -11,34 +11,31 @@ SRC_URI="mirror://sourceforge/checkstyle/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc source test"
 
-COMMON_DEP="
-		dev-java/antlr
-		=dev-java/commons-beanutils-1.7*
-		=dev-java/commons-cli-1*
-		dev-java/commons-logging"
+COMMON_DEP="dev-java/antlr
+	=dev-java/commons-beanutils-1.7*
+	=dev-java/commons-cli-1*
+	dev-java/commons-logging"
 
-RDEPEND="
-		!test? ( >=virtual/jre-1.4 )
-		test? ( >=virtual/jre-1.5 )
-		${COMMON_DEP}"
+RDEPEND="!test? ( >=virtual/jre-1.4 )
+	test? ( >=virtual/jre-1.5 )
+	${COMMON_DEP}"
 
 # Uses antlr and as such needs ant-tasks
 # Tests only pass with 1.5 but I think that
 # is a problem with the test classes so running
 # with 1.6 should be fine
-DEPEND="
-		!test? ( >=virtual/jdk-1.4 )
-		test? ( =virtual/jdk-1.5* )
-		${COMMON_DEP}
-		dev-java/ant-core
-		dev-java/ant-tasks
-		test? (
-			dev-java/junit
-			dev-java/emma
-		)"
+DEPEND="!test? ( >=virtual/jdk-1.4 )
+	test? ( =virtual/jdk-1.5* )
+	${COMMON_DEP}
+	dev-java/ant-core
+	dev-java/ant-tasks
+	test? (
+		dev-java/junit
+		dev-java/emma
+	)"
 S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
