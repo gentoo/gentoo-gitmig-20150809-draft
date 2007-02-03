@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-DIST kaffeine-mozilla-0.2.tar.bz2 223559
-EBUILD kaffeine-mozilla-plugin-0.2.ebuild 804 RMD160 bcb9d7ce50c7b9995e856de124290dce001aae19 SHA1 0637fc769f1d9948f79844df2aee428db0abe880 SHA256 2ada63293a94ae8af7d1af2715c8cd93226abd13474f62be80d6b8af0221dd31
-MD5 3158b1a6d979eb2bb88808260f8b6c1e kaffeine-mozilla-plugin-0.2.ebuild 804
-RMD160 bcb9d7ce50c7b9995e856de124290dce001aae19 kaffeine-mozilla-plugin-0.2.ebuild 804
-SHA256 2ada63293a94ae8af7d1af2715c8cd93226abd13474f62be80d6b8af0221dd31 kaffeine-mozilla-plugin-0.2.ebuild 804
-MISC ChangeLog 1551 RMD160 25a8539cb695a5abc848c35427a1fa84bad46cde SHA1 91f49946101a4313abb1ad4738b4e669f9f949cd SHA256 71cf9371f1de8fa16c8454517fda356332a49b015df99b315bec0939130bed0d
-MD5 acd5af2a2d9ca94df4ff5667f16a8ff6 ChangeLog 1551
-RMD160 25a8539cb695a5abc848c35427a1fa84bad46cde ChangeLog 1551
-SHA256 71cf9371f1de8fa16c8454517fda356332a49b015df99b315bec0939130bed0d ChangeLog 1551
+DIST kaffeine-mozilla-0.2.tar.bz2 223559 RMD160 7e340dfd72d970205b4c56ce45cab71087bb054e SHA1 08ec173cfa2ba5187e15ab17f0f2b5b860c4ef4d SHA256 10cdc4019d8a6babb350a5b8ca184631c9e0c33bc03c4163d272dfaf1c2155bb
+EBUILD kaffeine-mozilla-plugin-0.2.ebuild 839 RMD160 d3743afdbd8a35f19e340ffc6a61184c5c5260a5 SHA1 9e6aa4ddf8b50a0f51f2a46150d752f38a5ca76e SHA256 616718aceace0c9410d0169ccd69083f630cd5790d4e8412aed609354fd7a10f
+MD5 fde4cf14581e941453562b59addfeadc kaffeine-mozilla-plugin-0.2.ebuild 839
+RMD160 d3743afdbd8a35f19e340ffc6a61184c5c5260a5 kaffeine-mozilla-plugin-0.2.ebuild 839
+SHA256 616718aceace0c9410d0169ccd69083f630cd5790d4e8412aed609354fd7a10f kaffeine-mozilla-plugin-0.2.ebuild 839
+MISC ChangeLog 1680 RMD160 f7cf5a0b053a9d87055eb1a5376fba916691111a SHA1 449f9cfd733c2e35d0f9f82b8ce73dbcaacd49e7 SHA256 4ffd9ecff48a57bed32c11f58cfbc831789275f187be6cc7d8f97c24e37aea63
+MD5 34d1a63d755c859541340a4b46c9b189 ChangeLog 1680
+RMD160 f7cf5a0b053a9d87055eb1a5376fba916691111a ChangeLog 1680
+SHA256 4ffd9ecff48a57bed32c11f58cfbc831789275f187be6cc7d8f97c24e37aea63 ChangeLog 1680
 MISC metadata.xml 301 RMD160 5424abb33cb1576f2742e6bbd75fa370c40214d1 SHA1 ce66e4b54d1cd620faddeacacceac59b5ede47ed SHA256 76010afeff62952f70b9b598778d4d198eabd1ec9e233902acd2c4019911745a
 MD5 80b81e0016b1f3cb6c95459a0e35fc87 metadata.xml 301
 RMD160 5424abb33cb1576f2742e6bbd75fa370c40214d1 metadata.xml 301
 SHA256 76010afeff62952f70b9b598778d4d198eabd1ec9e233902acd2c4019911745a metadata.xml 301
-MD5 0b74a792ba8a8759ff195ab011cf3b7d files/digest-kaffeine-mozilla-plugin-0.2 73
-RMD160 4f3adc75ea1694c3ec9ec2ad7e6b41592e6e5a90 files/digest-kaffeine-mozilla-plugin-0.2 73
-SHA256 5cd0f2b20afcebf240b5c98c1e78092e141f3452cc3b1f806569fead9c5b38b9 files/digest-kaffeine-mozilla-plugin-0.2 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.1 (GNU/Linux)
-
-iD8DBQFFpV4lAiZjviIA2XgRAsaLAKDf2FtoJ4XQgglPPWul9tZSat5owgCgsDQq
-ATVzeqOtN/CLl/4rp2+SF40=
-=N15T
------END PGP SIGNATURE-----
+MD5 917a8baa1a0173658e064bf06b616527 files/digest-kaffeine-mozilla-plugin-0.2 265
+RMD160 de418067326028fd6d0ff4e0ff96f9957b191ba6 files/digest-kaffeine-mozilla-plugin-0.2 265
+SHA256 9cb69eeb8e526f5b6b5b9ddc3a499511ce1fa3aae6758905578b33d1bdfdac04 files/digest-kaffeine-mozilla-plugin-0.2 265
