@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalyptus/kalyptus-3.5.4.ebuild,v 1.11 2007/01/16 19:27:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalyptus/kalyptus-3.5.4.ebuild,v 1.12 2007/02/03 09:26:07 mr_bones_ Exp $
 
 KMNAME=kdebindings
 KM_MAKEFILESREV=1
