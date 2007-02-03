@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/pyflakes-0.2.1.ebuild,v 1.3 2006/06/06 22:28:46 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/pyflakes-0.2.1.ebuild,v 1.4 2007/02/03 09:14:46 mr_bones_ Exp $
 
 NEED_PYTHON=2.3
 

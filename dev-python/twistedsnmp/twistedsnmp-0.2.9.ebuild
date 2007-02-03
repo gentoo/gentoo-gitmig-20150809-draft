@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twistedsnmp/twistedsnmp-0.2.9.ebuild,v 1.3 2006/04/01 19:16:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twistedsnmp/twistedsnmp-0.2.9.ebuild,v 1.4 2007/02/03 09:16:11 mr_bones_ Exp $
 
 inherit distutils
 MY_PN="TwistedSNMP"
