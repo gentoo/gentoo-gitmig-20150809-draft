@@ -1,0 +1,58 @@
+--- wxPythonSrc-2.4.2.4/wxPython/src/gtk/html.cpp~	2003-06-25 22:35:44.000000000 +0100
++++ wxPythonSrc-2.4.2.4/wxPython/src/gtk/html.cpp	2006-01-05 17:50:12.000000000 +0000
+@@ -4198,7 +4198,7 @@
+     int  _arg1 = (int ) -1;
+     wxPoint * _arg2 = (wxPoint *) &wxDefaultPosition;
+     wxSize * _arg3 = (wxSize *) &wxDefaultSize;
+-    int  _arg4 = (int ) (wxHW_SCROLLBAR_AUTO);
++    long  _arg4 = (long ) (wxHW_SCROLLBAR_AUTO);
+     wxString * _arg5 = (wxString *) &wxPyHtmlWindowNameStr;
+     PyObject * _argo0 = 0;
+     wxPoint  temp;
+@@ -4210,7 +4210,7 @@
+     char _ptemp[128];
+ 
+     self = self;
+-    if(!PyArg_ParseTupleAndKeywords(args,kwargs,"O|iOOiO:new_wxHtmlWindow",_kwnames,&_argo0,&_arg1,&_obj2,&_obj3,&_arg4,&_obj5)) 
++    if(!PyArg_ParseTupleAndKeywords(args,kwargs,"O|iOOlO:new_wxHtmlWindow",_kwnames,&_argo0,&_arg1,&_obj2,&_obj3,&_arg4,&_obj5)) 
+         return NULL;
+     if (_argo0) {
+         if (_argo0 == Py_None) { _arg0 = NULL; }
+@@ -4292,7 +4292,7 @@
+     int  _arg2 = (int ) -1;
+     wxPoint * _arg3 = (wxPoint *) &wxDefaultPosition;
+     wxSize * _arg4 = (wxSize *) &wxDefaultSize;
+-    int  _arg5 = (int ) (wxHW_SCROLLBAR_AUTO);
++    long  _arg5 = (long ) (wxHW_SCROLLBAR_AUTO);
+     wxString * _arg6 = (wxString *) &wxPyHtmlWindowNameStr;
+     PyObject * _argo0 = 0;
+     PyObject * _argo1 = 0;
+@@ -4304,7 +4304,7 @@
+     char *_kwnames[] = { "self","parent","id","pos","size","style","name", NULL };
+ 
+     self = self;
+-    if(!PyArg_ParseTupleAndKeywords(args,kwargs,"OO|iOOiO:wxHtmlWindow_Create",_kwnames,&_argo0,&_argo1,&_arg2,&_obj3,&_obj4,&_arg5,&_obj6)) 
++    if(!PyArg_ParseTupleAndKeywords(args,kwargs,"OO|iOOlO:wxHtmlWindow_Create",_kwnames,&_argo0,&_argo1,&_arg2,&_obj3,&_obj4,&_arg5,&_obj6)) 
+         return NULL;
+     if (_argo0) {
+         if (_argo0 == Py_None) { _arg0 = NULL; }
+--- wxPythonSrc-2.4.2.4/wxPython/src/gtk/misc2.cpp~	2003-06-25 22:35:35.000000000 +0100
++++ wxPythonSrc-2.4.2.4/wxPython/src/gtk/misc2.cpp	2006-01-05 17:50:44.000000000 +0000
+@@ -943,7 +943,7 @@
+     int  _result;
+     wxString * _arg0;
+     wxString * _arg1 = (wxString *) &wxPyEmptyString;
+-    int  _arg2 = (int ) wxOK|wxCENTRE;
++    long  _arg2 = (long ) wxOK|wxCENTRE;
+     wxWindow * _arg3 = (wxWindow *) NULL;
+     int  _arg4 = (int ) -1;
+     int  _arg5 = (int ) -1;
+@@ -953,7 +953,7 @@
+     char *_kwnames[] = { "message","caption","style","parent","x","y", NULL };
+ 
+     self = self;
+-    if(!PyArg_ParseTupleAndKeywords(args,kwargs,"O|OiOii:wxMessageBox",_kwnames,&_obj0,&_obj1,&_arg2,&_argo3,&_arg4,&_arg5)) 
++    if(!PyArg_ParseTupleAndKeywords(args,kwargs,"O|OlOii:wxMessageBox",_kwnames,&_obj0,&_obj1,&_arg2,&_argo3,&_arg4,&_arg5)) 
+         return NULL;
+ {
+     _arg0 = wxString_in_helper(_obj0);
