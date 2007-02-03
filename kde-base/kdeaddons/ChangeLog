@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaddons
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.197 2007/01/25 18:45:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.198 2007/02/03 15:57:49 eroyf Exp $
+
+  03 Feb 2007; Alexander H. Færøy <eroyf@gentoo.org>
+  kdeaddons-3.5.5-r1.ebuild:
+  Stable on MIPS; bug #164176
 
   25 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   +files/konq-plugins-3.5-archiver.patch, +kdeaddons-3.5.5-r1.ebuild,

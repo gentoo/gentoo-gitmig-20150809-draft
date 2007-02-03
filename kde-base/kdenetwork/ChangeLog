@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.245 2007/01/26 02:10:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.246 2007/02/03 15:46:29 eroyf Exp $
+
+  03 Feb 2007; Alexander H. Færøy <eroyf@gentoo.org>
+  kdenetwork-3.5.5-r2.ebuild:
+  Stable on MIPS; bug #164176
 
   26 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   kdenetwork-3.5.6.ebuild:
