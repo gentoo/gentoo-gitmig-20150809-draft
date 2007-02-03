@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/albumart
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/ChangeLog,v 1.18 2006/01/14 15:38:13 nixnut Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/ChangeLog,v 1.19 2007/02/03 18:37:00 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   14 Jan 2006; <nixnut@gentoo.org> albumart-1.5.0-r1.ebuild:
   Stable on ppc. bug 117246

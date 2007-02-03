@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audio-entropyd
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/ChangeLog,v 1.13 2005/08/24 16:43:13 flameeyes Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/ChangeLog,v 1.14 2007/02/03 18:38:35 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
   audio-entropyd-0.0.6.ebuild:
