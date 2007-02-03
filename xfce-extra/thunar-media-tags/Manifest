@@ -1,9 +1,4 @@
-DIST thunar-media-tags-plugin-0.1.0.tar.bz2 276234 RMD160 3f445d5696e41f75e5d1015d7f7bc425f58a6b0c SHA1 6730fbd8b7a68d8cefdce99763adf3db55c7dd71 SHA256 a3cf00828890b94f1ccc758c4c90187056eb844f1c146362e40fc5d21fe7e59d
 DIST thunar-media-tags-plugin-0.1.2.tar.bz2 282877 RMD160 31b3e1719be7983d33541fb62bb8e9920341ad32 SHA1 5f7fab5e647a2678629cc297a367611715ad8a57 SHA256 41305171a3f2a0962b1324fa402bc97e3e1e93595dd3168f6fe778f079bb0240
-EBUILD thunar-media-tags-0.1.0.ebuild 390 RMD160 2322a58b50cfb4e8149eec4ffffdcfc8e3078633 SHA1 47e4896ee1b6769ee67dc263e7986a77c7239e26 SHA256 82f135d37a2086769399f9e71ac54d1fc498e46cf0be8cc1c1da8af4f15eb2f0
-MD5 e997a7ea64f60d94e8b6bd9f5af63514 thunar-media-tags-0.1.0.ebuild 390
-RMD160 2322a58b50cfb4e8149eec4ffffdcfc8e3078633 thunar-media-tags-0.1.0.ebuild 390
-SHA256 82f135d37a2086769399f9e71ac54d1fc498e46cf0be8cc1c1da8af4f15eb2f0 thunar-media-tags-0.1.0.ebuild 390
 EBUILD thunar-media-tags-0.1.2.ebuild 418 RMD160 c427393a045becfab54bbeab393aa11848271855 SHA1 d837020f547c1a28744ce5166921447f255566c3 SHA256 d20b0f05301ef68a738d7cc5c311577200a338be9f49385f61b3900270ca18b4
 MD5 532a2a7852cd12cb245f4f88eb4db385 thunar-media-tags-0.1.2.ebuild 418
 RMD160 c427393a045becfab54bbeab393aa11848271855 thunar-media-tags-0.1.2.ebuild 418
@@ -16,9 +11,6 @@ MISC metadata.xml 157 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 SHA1 7eae9
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
 SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
-MD5 57ab9e62bd134ed8cc379c7f1efc5324 files/digest-thunar-media-tags-0.1.0 295
-RMD160 7076b7992d5fdea415e7c97c14ecbe4d3b9b738d files/digest-thunar-media-tags-0.1.0 295
-SHA256 0b1b721d5f51863125c9e5af318ddf5dfa7965852dbbf621df32329ee5ab371c files/digest-thunar-media-tags-0.1.0 295
 MD5 42e2ce6ff7303ee04e9de269aad3b247 files/digest-thunar-media-tags-0.1.2 295
 RMD160 017f9a51e38d0e37f90304de9acec51ac76658cc files/digest-thunar-media-tags-0.1.2 295
 SHA256 ac78419ead4001e9a225b434016710639704867fa35a2c0a3f70a544529faf41 files/digest-thunar-media-tags-0.1.2 295
