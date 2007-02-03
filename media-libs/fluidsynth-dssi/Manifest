@@ -1,14 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5748dd1fcec064bba674c380ebe0413d ChangeLog 607
-MD5 f0a08f2bb47564f1460fcdd326d2dd2b files/digest-fluidsynth-dssi-0.9.1 73
+DIST fluidsynth-dssi-0.9.1.tar.gz 343784 RMD160 ee99a6838b1dedd56227997f7bec18946c5da6c3 SHA1 7b301bea334c77d090a153acffe8ad0afb0e1da5 SHA256 87dd0b0cc38eecfce64d4de3d083cc4d8e3d905dd11a26e6e13f758b02d4c728
+EBUILD fluidsynth-dssi-0.9.1.ebuild 666 RMD160 af54e4248ec4cf7bfdcb63e9b6fe033626fc269b SHA1 dbd6d92d26cc89b974c3de0a5b57ebb372f49013 SHA256 61b08fe95da377db1d7e89881735c2b04d14f25a327d6cdd49de93f8ff06ac47
 MD5 021934d6da0f32df9528b96b1fd73df8 fluidsynth-dssi-0.9.1.ebuild 666
+RMD160 af54e4248ec4cf7bfdcb63e9b6fe033626fc269b fluidsynth-dssi-0.9.1.ebuild 666
+SHA256 61b08fe95da377db1d7e89881735c2b04d14f25a327d6cdd49de93f8ff06ac47 fluidsynth-dssi-0.9.1.ebuild 666
+MISC ChangeLog 717 RMD160 2f396faaa37f5bc3d8ac2e79088cf929696e85cc SHA1 c1018432c4a55b84ffb439981938e5e0605f0f7e SHA256 091db070d37efee121b86ac6a74993a30ff2d6b8b6ed6c8ce1b7de2fcc0bcf23
+MD5 fb1b0c8af9fb18f904e15ba0ab1df0f2 ChangeLog 717
+RMD160 2f396faaa37f5bc3d8ac2e79088cf929696e85cc ChangeLog 717
+SHA256 091db070d37efee121b86ac6a74993a30ff2d6b8b6ed6c8ce1b7de2fcc0bcf23 ChangeLog 717
+MISC metadata.xml 159 RMD160 7de82f3b6f859e6482fc1fff7244c90cec80f394 SHA1 6a32e352e1abdcd2cbcd3cfd956130b94777cdbf SHA256 9bb575bfe4faa90e5e20978ca698d5abebb928ab0b5e4c81ff9ef5778c1284aa
 MD5 46a390b7ebca59519b2906976eb4c712 metadata.xml 159
+RMD160 7de82f3b6f859e6482fc1fff7244c90cec80f394 metadata.xml 159
+SHA256 9bb575bfe4faa90e5e20978ca698d5abebb928ab0b5e4c81ff9ef5778c1284aa metadata.xml 159
+MD5 2b2be6a2f48046bde155798fbe190382 files/digest-fluidsynth-dssi-0.9.1 265
+RMD160 fc03a2618d36ca81ed1a7f339dd331e68eed1d44 files/digest-fluidsynth-dssi-0.9.1 265
+SHA256 1c5824ce62b0b5a5a0b6766c2159acbb3b898e2d439bd6de049faa192d52c71e files/digest-fluidsynth-dssi-0.9.1 265
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v2.0.2 (GNU/Linux)
 
-iD8DBQFEJHQX/NoSW7FuNV8RAi7wAJ4w97eR0y4mYlJF7M6K/7lMZIFmYQCeKd3M
-xl28mHo0sgUJEyeDaDfEgO0=
-=p/fV
+iD8DBQFFxNPAAiZjviIA2XgRAkepAJ0Tg/Vn4qd0jMf9eiTmFR4bdm1QBgCeJdIR
+ZthbLCeyShC9w4bNS6cxzIs=
+=6feD
 -----END PGP SIGNATURE-----
