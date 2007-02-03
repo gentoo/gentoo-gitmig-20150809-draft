@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/xmltoman
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/xmltoman/ChangeLog,v 1.4 2007/01/23 17:12:57 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/xmltoman/ChangeLog,v 1.5 2007/02/03 17:17:05 swegener Exp $
+
+  03 Feb 2007; Sven Wegener <swegener@gentoo.org> xmltoman-0.3.ebuild:
+  Add ~amd64 keyword.
 
   23 Jan 2007; nixnut <nixnut@gentoo.org> xmltoman-0.3.ebuild:
   Added ~ppc wrt bug 163326
