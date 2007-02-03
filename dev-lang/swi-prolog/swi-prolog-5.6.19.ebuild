@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.19.ebuild,v 1.6 2006/10/24 19:13:37 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.19.ebuild,v 1.7 2007/02/03 03:28:41 keri Exp $
 
-inherit eutils
+inherit eutils java-pkg-opt-2
 
 DESCRIPTION="free, small, and standard compliant Prolog compiler"
 HOMEPAGE="http://www.swi-prolog.org/"
