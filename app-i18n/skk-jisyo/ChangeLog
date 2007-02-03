@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/skk-jisyo
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/ChangeLog,v 1.39 2005/07/02 09:15:45 usata Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/ChangeLog,v 1.40 2007/02/03 18:18:53 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *skk-jisyo-200507 (02 Jul 2005)
 

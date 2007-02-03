@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/skk-jisyo-extra
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo-extra/ChangeLog,v 1.28 2005/08/03 19:55:06 kloeri Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo-extra/ChangeLog,v 1.29 2007/02/03 18:21:45 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   03 Aug 2005; Bryan Østergaard <kloeri@gentoo.org>
   skk-jisyo-extra-200504.ebuild:

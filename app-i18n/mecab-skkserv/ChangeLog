@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/mecab-skkserv
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/mecab-skkserv/ChangeLog,v 1.1 2005/04/02 06:50:40 usata Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/mecab-skkserv/ChangeLog,v 1.2 2007/02/03 18:15:51 flameeyes Exp $
+
+  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *mecab-skkserv-0.02 (02 Apr 2005)
 
