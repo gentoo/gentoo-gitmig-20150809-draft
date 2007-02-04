@@ -1,6 +1,9 @@
 # ChangeLog for www-client/htmlview
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/htmlview/ChangeLog,v 1.10 2007/01/20 15:20:11 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/htmlview/ChangeLog,v 1.11 2007/02/04 18:47:53 beandog Exp $
+
+  04 Feb 2007; Steve Dibb <beandog@gentoo.org> htmlview-3.0.0-r1.ebuild:
+  amd64 stable, bug 151899
 
   20 Jan 2007; Alexander H. Færøy <eroyf@gentoo.org>
   htmlview-3.0.0-r1.ebuild:
