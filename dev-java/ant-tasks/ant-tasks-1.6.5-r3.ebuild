@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.5-r3.ebuild,v 1.5 2007/02/04 09:18:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.5-r3.ebuild,v 1.6 2007/02/04 13:36:41 betelgeuse Exp $
 
 inherit java-pkg-2 eutils
 
@@ -76,7 +76,7 @@ src_compile() {
 	use noxalan || p="${p},xalan"
 	use noxerces || p="${p},xml-commons-external-1.3,xerces-2"
 
-	use javamail && p="${p},sun-javamail-bin,sun-jaf-bin"
+	use javamail && p="${p},sun-javamail,sun-jaf-bin"
 
 	CLASSPATH="${JAVA_HOME}/lib/tools.jar:.:$(java-pkg_getjars ant-core,${p})" \
 		java org.apache.tools.ant.launch.Launcher  -Dant.install=${ANT_HOME} \

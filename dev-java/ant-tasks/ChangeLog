@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/ant-tasks
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.53 2007/02/04 09:18:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.54 2007/02/04 13:36:41 betelgeuse Exp $
+
+  04 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
+  ant-tasks-1.6.5-r3.ebuild:
+  The ebuild was still using jar-from on sun-javamail-bin but dependent on
+  sun-javamail. Thanks to Markus Meier <meier_markus@bluewin.ch> in bug
+  #165058.
 
   04 Feb 2007; Markus Rothe <corsair@gentoo.org> ant-tasks-1.6.5-r3.ebuild:
   Stable on ppc64; bug #165058
