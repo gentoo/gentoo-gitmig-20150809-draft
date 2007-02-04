@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bluecloth
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.7 2007/01/05 16:42:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.8 2007/02/04 16:38:26 graaff Exp $
+
+  04 Feb 2007; Hans de Graaff <graaff@gentoo.org> bluecloth-1.0.0.ebuild:
+  Seems to work fine on amd64, all tests pass.
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> bluecloth-1.0.0.ebuild:
   Convert to use elog.
