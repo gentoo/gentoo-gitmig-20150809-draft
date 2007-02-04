@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxklavier
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.86 2007/02/03 21:51:32 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.87 2007/02/04 08:48:24 corsair Exp $
+
+  04 Feb 2007; Markus Rothe <corsair@gentoo.org> libxklavier-3.1.ebuild:
+  Stable on ppc64; bug #164978
 
   03 Feb 2007; Andrej Kacian <ticho@gentoo.org> libxklavier-3.1.ebuild:
   Stable on x86, bug #164978.
