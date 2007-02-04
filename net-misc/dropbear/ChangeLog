@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/dropbear
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.42 2007/01/04 06:06:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.43 2007/02/04 13:46:26 dragonheart Exp $
+
+*dropbear-0.48.1-r1 (04 Feb 2007)
+
+  04 Feb 2007; Daniel Black <dragonheart@gentoo.org>
+  +dropbear-0.48.1-r1.ebuild:
+  added savedconfig.eclass prototype - similar to bug #158185
 
   04 Jan 2007; Mike Frysinger <vapier@gentoo.org> dropbear-0.48.1.ebuild:
   Set default sftp path to point to the openssh binary #159894 by Lars Weiler.
