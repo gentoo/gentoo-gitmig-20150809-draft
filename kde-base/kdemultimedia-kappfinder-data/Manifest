@@ -1,13 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-DIST kdemultimedia-3.5.2.tar.bz2 6272386 RMD160 4f6fcb790e63f4af7a309677babd5e2ed938514f SHA1 68e5e24709a2c06777bb3f12fc76e733f5896c5d SHA256 01562af68008c10c04346a94d0dea7cedcb77673c0b7cd5cfc74360bf309a2f8
 DIST kdemultimedia-3.5.5.tar.bz2 6287234 RMD160 c31d81efeb02cea29048fbdefcb8c4f13726fded SHA1 8ddc3174d400827e58e2e5cf87a5bd279a6bfdc1 SHA256 1c15f9572bec29fbfac5224b7f7c88bd57375c827622a9017d3861475881fb4c
 DIST kdemultimedia-3.5.6.tar.bz2 6291692 RMD160 7411019e2765f740ad0f3fd592e74f62e04b8387 SHA1 030ca0b5e79f04c6baa99108f1c871f194effee7 SHA256 1a08f71c73cacb1da1d2269d0376193c23de727235a255866f869caeea300719
-EBUILD kdemultimedia-kappfinder-data-3.5.2.ebuild 483 RMD160 02f56e5a4d3519ec5b4036486ac304e3105c64d7 SHA1 b245ceac7bdae841cdead785f91deb85d79cebcf SHA256 0a7ead895a6922855f1d389557641fa456a4bbde2ed74f907dceda01c73fa387
-MD5 52c0261f0637644b54f7d13e17ecb107 kdemultimedia-kappfinder-data-3.5.2.ebuild 483
-RMD160 02f56e5a4d3519ec5b4036486ac304e3105c64d7 kdemultimedia-kappfinder-data-3.5.2.ebuild 483
-SHA256 0a7ead895a6922855f1d389557641fa456a4bbde2ed74f907dceda01c73fa387 kdemultimedia-kappfinder-data-3.5.2.ebuild 483
 EBUILD kdemultimedia-kappfinder-data-3.5.5.ebuild 493 RMD160 fb077a4aa877ad0b8a5b4cc27112a7e94ec06a02 SHA1 84f1e8bc787d0f236353d911e81566790890033e SHA256 c9448754ed5c80a3214876619d6bd0f60f545f7779182bc2f58eb00b4b90cc27
 MD5 72c3ffc3f95e79444f062f4f74d28b45 kdemultimedia-kappfinder-data-3.5.5.ebuild 493
 RMD160 fb077a4aa877ad0b8a5b4cc27112a7e94ec06a02 kdemultimedia-kappfinder-data-3.5.5.ebuild 493
@@ -16,17 +11,14 @@ EBUILD kdemultimedia-kappfinder-data-3.5.6.ebuild 503 RMD160 989164a6c5e3208c640
 MD5 f4079b719a2c34fd2dbebbe2e29ed167 kdemultimedia-kappfinder-data-3.5.6.ebuild 503
 RMD160 989164a6c5e3208c640a5cc4425671f8eba7cca5 kdemultimedia-kappfinder-data-3.5.6.ebuild 503
 SHA256 69219f2d7edd422207e5711e4e7bf28c12b4b0cd553cc379fe29b3bd2df15c0d kdemultimedia-kappfinder-data-3.5.6.ebuild 503
-MISC ChangeLog 9322 RMD160 9785622194a1f6874895d72f45f57ec84bf0cc6f SHA1 c3ed78f85b3792c37206e88b49437b258c55776e SHA256 2a1474665ae5703e242cbce379152bad833a92f668f2d3d1df6f162f0a79571f
-MD5 b36306240936356e8c442a13f8525e95 ChangeLog 9322
-RMD160 9785622194a1f6874895d72f45f57ec84bf0cc6f ChangeLog 9322
-SHA256 2a1474665ae5703e242cbce379152bad833a92f668f2d3d1df6f162f0a79571f ChangeLog 9322
+MISC ChangeLog 9446 RMD160 bd06460731dfba41177b8eeb8ee53a41501765f4 SHA1 b66ff6e3ee80e1557b64a8360a69949dd184a727 SHA256 99aeea2bc6b940167ac85352671ebd87e664849ffa854ad4e7e8df9b3abe050d
+MD5 e5d5ba80e244d9c615a5ef5d22bbc7b0 ChangeLog 9446
+RMD160 bd06460731dfba41177b8eeb8ee53a41501765f4 ChangeLog 9446
+SHA256 99aeea2bc6b940167ac85352671ebd87e664849ffa854ad4e7e8df9b3abe050d ChangeLog 9446
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
-MD5 c6f3f23fcb5a1fa806c5073f45b26b59 files/digest-kdemultimedia-kappfinder-data-3.5.2 265
-RMD160 5e81c0b91adc803bf7923ec3176b9ff50217ed22 files/digest-kdemultimedia-kappfinder-data-3.5.2 265
-SHA256 da5960a94d94974711cce49b9e15a2465e392feb2dd48db846adce8d9e02d864 files/digest-kdemultimedia-kappfinder-data-3.5.2 265
 MD5 bb57e866bc990bddc1cdc63fe142e497 files/digest-kdemultimedia-kappfinder-data-3.5.5 265
 RMD160 ef29f6429dedc81798491e528124510ee9fdd065 files/digest-kdemultimedia-kappfinder-data-3.5.5 265
 SHA256 111420f825959311ddc64c7db1fd49d34f2e21b5cf5187fdba09feef59f83ddc files/digest-kdemultimedia-kappfinder-data-3.5.5 265
@@ -34,9 +26,9 @@ MD5 a7633ce4b94337a83bcb97d203366623 files/digest-kdemultimedia-kappfinder-data-
 RMD160 df099dd3f0f56e5dc2a7dc37a0ff582d10ffb076 files/digest-kdemultimedia-kappfinder-data-3.5.6 265
 SHA256 8c8f0b56dd810d9202f532206814eed4c4ff4e6062a88e0bbee4523b8cf5f4d7 files/digest-kdemultimedia-kappfinder-data-3.5.6 265
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.1 (GNU/Linux)
+Version: GnuPG v2.0.2 (GNU/Linux)
 
-iD8DBQFFrTG6AiZjviIA2XgRAvQvAJ4nI4vwaic88Ou6PveQIFbw1dDIqgCgiz2F
-SJ+C5IspS2WqXTnR7v1qG1M=
-=ViM2
+iD8DBQFFxUAUAiZjviIA2XgRAlHqAKCW4rWlnsP2FusF5pVvj4VoyQk0SQCgvKqP
+/YrJW4A8XjDGpCqhP+77SZM=
+=B/cX
 -----END PGP SIGNATURE-----

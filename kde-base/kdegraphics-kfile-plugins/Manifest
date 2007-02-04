@@ -9,39 +9,24 @@ AUX post-3.5.5-kdegraphics.diff 5324 RMD160 e67762766b9a77d855e189012c5eff526a97
 MD5 1ce5fb77aff8f97ed21da046c1385000 files/post-3.5.5-kdegraphics.diff 5324
 RMD160 e67762766b9a77d855e189012c5eff526a9716fc files/post-3.5.5-kdegraphics.diff 5324
 SHA256 45fabc5f38aef16c17456346a3423e996b5c025fef00f6b3e96eb21f3cfb105d files/post-3.5.5-kdegraphics.diff 5324
-DIST kdegraphics-3.5.2.tar.bz2 7288264 RMD160 cf2fce91b76af7d570b20f336ba551c5c3bd767f SHA1 80703d46fd90b7ab95f92d7b7c411a04f431d13b SHA256 b33e26d99188f0aee2dc0ff95923a1c1bca7f2a2510a1f761b155b8d2781e64f
 DIST kdegraphics-3.5.5.tar.bz2 7334117 RMD160 c6febdf8ebd67110be3f27ada4c00e148403217f SHA1 e063f9351e2781cc6a5d23834611fc7dc7dc4fbd SHA256 b6706d37568686e1ca4b4bb2cf1f79c027b94a512f6fe1156b7c7b7f79336f16
 DIST kdegraphics-3.5.6.tar.bz2 7332938 RMD160 4cb41696ffb1284252009edfe8bd0933ef541800 SHA1 481d3f3733c042f7dfe7d9fc6620d17f8b945957 SHA256 2c397f3c524b7c465e6d9289944aa8ed2acc43c8bafb983eb3f252aba7a19a1f
-EBUILD kdegraphics-kfile-plugins-3.5.2.ebuild 836 RMD160 e74a3c1d3a0d9bc03d67eed8bb7e1a390fb467cf SHA1 df92cde9b0f658330bf44ee73bcbe07612762fc8 SHA256 4baaa6fba727fd2434c45147c819a1b2b9bda4b5f38737e6d3245af02732890c
-MD5 40d9a5addabf3b0fbbbfc7f4b15fdf3a kdegraphics-kfile-plugins-3.5.2.ebuild 836
-RMD160 e74a3c1d3a0d9bc03d67eed8bb7e1a390fb467cf kdegraphics-kfile-plugins-3.5.2.ebuild 836
-SHA256 4baaa6fba727fd2434c45147c819a1b2b9bda4b5f38737e6d3245af02732890c kdegraphics-kfile-plugins-3.5.2.ebuild 836
 EBUILD kdegraphics-kfile-plugins-3.5.5-r1.ebuild 893 RMD160 17500dd4c2b3bc55b5ce47af61ae226c88098175 SHA1 3d6019561c2fb0309c76a1cbb15ea72de5f022e5 SHA256 6f749b9b4d6439b7b1460398ce5e4ea710ad490758506cd60071967deb207195
 MD5 6812e1520ad8998129fe5a08f71ed11b kdegraphics-kfile-plugins-3.5.5-r1.ebuild 893
 RMD160 17500dd4c2b3bc55b5ce47af61ae226c88098175 kdegraphics-kfile-plugins-3.5.5-r1.ebuild 893
 SHA256 6f749b9b4d6439b7b1460398ce5e4ea710ad490758506cd60071967deb207195 kdegraphics-kfile-plugins-3.5.5-r1.ebuild 893
-EBUILD kdegraphics-kfile-plugins-3.5.5.ebuild 835 RMD160 7770952ad708a571a05dd2747a30588313e16bca SHA1 e515765802bf2985e0f1f28525ec91eacc593651 SHA256 808e9f4a266eb4c8031fed8f53bf750e0b9a27e7920fd3682c2d97443e9a1ac3
-MD5 84d2975028d3ae3c7cfcd08cdf6b4010 kdegraphics-kfile-plugins-3.5.5.ebuild 835
-RMD160 7770952ad708a571a05dd2747a30588313e16bca kdegraphics-kfile-plugins-3.5.5.ebuild 835
-SHA256 808e9f4a266eb4c8031fed8f53bf750e0b9a27e7920fd3682c2d97443e9a1ac3 kdegraphics-kfile-plugins-3.5.5.ebuild 835
 EBUILD kdegraphics-kfile-plugins-3.5.6.ebuild 851 RMD160 30657c2bc0bd3610cfc6c39451ffd52315b44a0f SHA1 f50d70bf4c70eed233a8d372cfd49f5326656268 SHA256 237947d1dabf3df4c079dffe909203bf2caf3b7fab71580e72f102dfe1639bc0
 MD5 bd69f10ffca400c5007fce9f591414e8 kdegraphics-kfile-plugins-3.5.6.ebuild 851
 RMD160 30657c2bc0bd3610cfc6c39451ffd52315b44a0f kdegraphics-kfile-plugins-3.5.6.ebuild 851
 SHA256 237947d1dabf3df4c079dffe909203bf2caf3b7fab71580e72f102dfe1639bc0 kdegraphics-kfile-plugins-3.5.6.ebuild 851
-MISC ChangeLog 10960 RMD160 86ca90c04c836bd311f7235c174d301f405d18bd SHA1 e3f569da89e112234554ad51ed33671bba3d2b38 SHA256 afc634aad2cc4333b50c91cc28f9a4de5e6d37b37a467d42968387e5a840e706
-MD5 4d8a728b3904bf19e06196f461dd5fdd ChangeLog 10960
-RMD160 86ca90c04c836bd311f7235c174d301f405d18bd ChangeLog 10960
-SHA256 afc634aad2cc4333b50c91cc28f9a4de5e6d37b37a467d42968387e5a840e706 ChangeLog 10960
+MISC ChangeLog 11123 RMD160 0774d126bd2fc25e5e1f255a9e41e3f5d31d73dd SHA1 fcbe33be674ce00eff08fb6f72c31226ba7b853e SHA256 d852ab756329d6d1e0ebd89cf0960be236cac47fc42b7a744fc83750b6556c5c
+MD5 ab141b3cc9263bb939ade020e108a1d0 ChangeLog 11123
+RMD160 0774d126bd2fc25e5e1f255a9e41e3f5d31d73dd ChangeLog 11123
+SHA256 d852ab756329d6d1e0ebd89cf0960be236cac47fc42b7a744fc83750b6556c5c ChangeLog 11123
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
-MD5 64d3a195496428cb92d68de29ebf0fa0 files/digest-kdegraphics-kfile-plugins-3.5.2 259
-RMD160 2a4a7d812c7c571f5c5a8e4d4b8c8eb4fe7f52ae files/digest-kdegraphics-kfile-plugins-3.5.2 259
-SHA256 087152d6d869b8938c16752f1b5571e63dc1db0fa19f2e8913c00e77cebe3970 files/digest-kdegraphics-kfile-plugins-3.5.2 259
-MD5 a3aaa0343f00484f85258058e8ac348c files/digest-kdegraphics-kfile-plugins-3.5.5 259
-RMD160 2a9a22c3f7376170cd8d44cb1979ef76636fb43d files/digest-kdegraphics-kfile-plugins-3.5.5 259
-SHA256 5f1d4470a3e6814d9f1f1ccbaaa1dc86001c6d16985f48f21c1063a2b5968686 files/digest-kdegraphics-kfile-plugins-3.5.5 259
 MD5 a3aaa0343f00484f85258058e8ac348c files/digest-kdegraphics-kfile-plugins-3.5.5-r1 259
 RMD160 2a9a22c3f7376170cd8d44cb1979ef76636fb43d files/digest-kdegraphics-kfile-plugins-3.5.5-r1 259
 SHA256 5f1d4470a3e6814d9f1f1ccbaaa1dc86001c6d16985f48f21c1063a2b5968686 files/digest-kdegraphics-kfile-plugins-3.5.5-r1 259
@@ -49,9 +34,9 @@ MD5 84871ccbdb3c5b89fdc0bb1c1175faa6 files/digest-kdegraphics-kfile-plugins-3.5.
 RMD160 b68729ada6badaf6558bafcbb091a3701068fcc7 files/digest-kdegraphics-kfile-plugins-3.5.6 259
 SHA256 585aa29db716746963d4e4383f027d3afd88cc73550bdb8010fd688152b7afd8 files/digest-kdegraphics-kfile-plugins-3.5.6 259
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.1 (GNU/Linux)
+Version: GnuPG v2.0.2 (GNU/Linux)
 
-iD8DBQFFuP2NAiZjviIA2XgRArECAJ9lp5mVgUwlyo36o2yBgYTriCWIdACfTBaq
-teb0Fhj/tIBIQtwWPzmyahI=
-=xhY6
+iD8DBQFFxT87AiZjviIA2XgRAk7+AJ9TofxRyujjz2Jk0g3vyBdB1hg0XwCfX6V3
+c8mIpY6HKCegpkMHAI4gPaQ=
+=fEBO
 -----END PGP SIGNATURE-----
