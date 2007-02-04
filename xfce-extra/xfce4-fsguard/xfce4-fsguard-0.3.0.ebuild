@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-fsguard/xfce4-fsguard-0.3.0.ebuild,v 1.1 2007/01/22 00:12:07 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-fsguard/xfce4-fsguard-0.3.0.ebuild,v 1.2 2007/02/04 18:25:13 nichoj Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
 
 inherit xfce44 eutils autotools
 
-xfce44_beta
+xfce44
 xfce44_goodies_panel_plugin
 
 DESCRIPTION="Xfce4 panel fsguard plugin"
