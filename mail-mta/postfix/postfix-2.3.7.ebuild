@@ -1,30 +1,44 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2.10.ebuild,v 1.11 2007/02/04 04:20:29 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.3.7.ebuild,v 1.1 2007/02/04 04:20:29 ticho Exp $
 
+# NOTE: this ebuild is regular ebuild without mailer-config support
+# comment lines below "regular ebuild" and uncomment lines below "mailer-config support"
+# to turn this ebuild to mailer-config supported ebuild.
+
+# regular ebuild
 inherit eutils ssl-cert toolchain-funcs flag-o-matic pam
-IUSE="ipv6 pam ldap mysql postgres ssl sasl mailwrapper mbox nis vda selinux hardened cdb"
-#IUSE="ipv6 pam ldap mysql postgres ssl sasl mailwrapper mbox nis vda selinux hardened devel"
+# mailer-config support.
+#inherit eutils ssl-cert toolchain-funcs flag-o-matic mailer pam
 
-MY_PV=${PV}
+# regular ebuild.
+IUSE="ipv6 pam ldap mysql postgres ssl sasl dovecot-sasl mailwrapper mbox nis selinux hardened cdb vda"
+# mailer-config support.
+#IUSE="ipv6 pam ldap mysql postgres ssl sasl dovecot-sasl mbox nis selinux hardened cdb"
+
+MY_PV=${PV/_rc/-RC}
 MY_SRC=${PN}-${MY_PV}
-#DEV_SRC=${MY_SRC}-newdb-nonprod
-VDA_VER=2.2.8
+MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official"
+VDA_VER=2.3.3
 VDA_P="${PN}-${VDA_VER}-vda"
 RC_VER="2.2.9"
 
 DESCRIPTION="A fast and secure drop-in replacement for sendmail."
 HOMEPAGE="http://www.postfix.org/"
-SRC_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official/${MY_SRC}.tar.gz
+SRC_URI="${MY_URI}/${MY_SRC}.tar.gz
 	vda? ( http://web.onda.com.br/nadal/postfix/VDA/${VDA_P}.patch.gz ) "
 #	devel? ( ftp://ftp.porcupine.org/mirrors/postfix-release/experimental/${DEV_SRC}.tar.gz ) "
 
 LICENSE="IPL-1"
 SLOT="0"
 #KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 
+# regular ebuild.
 PROVIDE="virtual/mta virtual/mda"
+# mailer-config support.
+#PROVIDE="${PROVIDE} virtual/mda"
+
 DEPEND="cdb? ( || ( >=dev-db/cdb-0.75-r1 >=dev-db/tinycdb-0.74 ) )
 	>=sys-libs/db-3.2
 	>=dev-libs/libpcre-3.4
@@ -33,12 +47,19 @@ DEPEND="cdb? ( || ( >=dev-db/cdb-0.75-r1 >=dev-db/tinycdb-0.74 ) )
 	mysql? ( virtual/mysql )
 	postgres? ( >=dev-db/postgresql-7.1 )
 	ssl? ( >=dev-libs/openssl-0.9.6g )
-	sasl? ( >=dev-libs/cyrus-sasl-2 )"
+	sasl? (  >=dev-libs/cyrus-sasl-2 )"
+
+# regular ebuild.
 RDEPEND="${DEPEND}
 	>=net-mail/mailbase-0.00
 	!mailwrapper? ( !virtual/mta )
 	mailwrapper? ( >=net-mail/mailwrapper-0.2 )
 	selinux? ( sec-policy/selinux-postfix )"
+
+# mailer-config support.
+#RDEPEND="${DEPEND}
+#	>=net-mail/mailbase-0.00
+#	selinux? ( sec-policy/selinux-postfix )"
 
 #if use devel; then
 #	MY_SRC=${DEV_SRC}
@@ -56,9 +77,9 @@ group_user_check() {
 }
 
 pkg_setup() {
-	# do not upgrade from postfix-2.1. logic to fix bug #53324
+	# do not upgrade live from postfix <2.3.
 	if [[ -f /var/lib/init.d/started/postfix ]] ; then
-		if has_version '<mail-mta/postfix-2.2' ; then
+		if has_version '<mail-mta/postfix-2.3.0' ; then
 			if [ "${FORCE_UPGRADE}" ]; then
 				echo
 				ewarn "You are upgrading from a incompatible version and"
@@ -126,9 +147,16 @@ pkg_setup() {
 		echo
 	fi
 
+	if use sasl ; then
+		echo
+		elog "postfix 2.3 supports two SASL implementations."
+		elog "Cyrus SASL and Dovecot protocol version 1 (server only)"
+		elog "detail at http://www.postfix.org/SASL_README.html"
+		echo
+	fi
+
 	# add postfix, postdrop user/group. Bug #77565.
 	group_user_check || die "failed to check/add needed user/group"
-
 }
 
 src_unpack() {
@@ -182,8 +210,14 @@ src_compile() {
 	fi
 
 	if use sasl ; then
-		mycc="${mycc} -DUSE_SASL_AUTH -I/usr/include/sasl"
+		if use dovecot-sasl ; then
+			# set dovecot as default.
+			mycc="${mycc} -DDEF_SASL_SERVER=\\\"dovecot\\\""
+		fi
+		mycc="${mycc} -DUSE_SASL_AUTH -DUSE_CYRUS_SASL -I/usr/include/sasl"
 		mylibs="${mylibs} -lsasl2"
+	elif use dovecot-sasl ; then
+		mycc="${mycc} -DUSE_SASL_AUTH -DDEF_SERVER_SASL_TYPE=\\\"dovecot\\\""
 	fi
 
 	if ! use nis; then
@@ -225,7 +259,7 @@ src_compile() {
 	# workaround for bug #76512
 	[ "$(gcc-version)" == "3.4" ] && use hardened && replace-flags -O? -Os
 
-	make CC="${my_cc:=gcc}" OPT="${CFLAGS}" CCARGS="${mycc}" AUXLIBS="${mylibs}" \
+	make DEBUG="" CC="${my_cc:=gcc}" OPT="${CFLAGS}" CCARGS="${mycc}" AUXLIBS="${mylibs}" \
 		makefiles || die "configure problem"
 
 	emake || die "compile problem"
@@ -250,6 +284,8 @@ src_install () {
 	if use mailwrapper ; then
 		mv "${D}/usr/sbin/sendmail" "${D}/usr/sbin/sendmail.postfix"
 		mv "${D}/usr/bin/rmail" "${D}/usr/bin/rmail.postfix"
+		# mailer-config support
+		#rm "${D}/usr/bin/mailq" "${D}/usr/bin/newaliases"
 
 		mv "${D}/usr/share/man/man1/sendmail.1" \
 			"${D}/usr/share/man/man1/sendmail-postfix.1"
@@ -260,8 +296,11 @@ src_install () {
 		mv "${D}/usr/share/man/man5/aliases.5" \
 			"${D}/usr/share/man/man5/aliases-postfix.5"
 
+		# regular ebuild.
 		insinto /etc/mail
 		doins "${FILESDIR}/mailer.conf"
+		# mailer-config support
+		#mailer_install_conf
 	else
 		# Provide another link for legacy FSH.
 		dosym /usr/sbin/sendmail /usr/lib/sendmail
@@ -285,7 +324,6 @@ src_install () {
 	else
 		mypostconf="home_mailbox=.maildir/"
 	fi
-
 	"${D}/usr/sbin/postconf" -c "${D}/etc/postfix" -e \
 		${mypostconf} || die "postconf failed"
 
@@ -317,7 +355,6 @@ src_install () {
 }
 
 pkg_postinst() {
-
 	# add postfix, postdrop user/group. Bug #77565.
 	group_user_check || die "failed to check/add needed user/group"
 
@@ -336,6 +373,7 @@ pkg_postinst() {
 		ewarn "work correctly without it."
 	fi
 
+	# regular ebuild
 	if ! use mailwrapper && [[ -e /etc/mailer.conf ]]
 	then
 		einfo
@@ -343,5 +381,6 @@ pkg_postinst() {
 		einfo "you probably want to 'emerge -C mailwrapper' now."
 		einfo
 	fi
-
+	# mailer-config support
+	#mailer_pkg_postinst
 }

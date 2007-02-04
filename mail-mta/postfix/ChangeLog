@@ -1,6 +1,13 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.113 2007/01/04 18:43:44 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.114 2007/02/04 04:20:29 ticho Exp $
+
+*postfix-2.3.7 (04 Feb 2007)
+
+  04 Feb 2007; Andrej Kacian <ticho@gentoo.org> postfix-2.2.10.ebuild,
+  postfix-2.3.6.ebuild, +postfix-2.3.7.ebuild:
+  Version bump. Add postfix user to both postfix and mail groups to fix bug
+  #134776.
 
 *postfix-2.3.6 (04 Jan 2007)
 
