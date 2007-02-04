@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/gpsim
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.31 2007/01/31 18:58:54 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.32 2007/02/04 14:54:46 blubb Exp $
+
+  04 Feb 2007; Simon Stelling <blubb@gentoo.org> gpsim-0.22.0.ebuild:
+  stable on amd64
 
   31 Jan 2007; Denis Dupeyron <calchan@gentoo.org>
   -files/gpsim-0.21.11-asneeded.patch, -gpsim-0.21.11.ebuild:
