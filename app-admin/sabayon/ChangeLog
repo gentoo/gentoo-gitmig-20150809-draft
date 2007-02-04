@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sabayon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.15 2007/01/24 14:55:50 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.16 2007/02/04 08:54:59 corsair Exp $
+
+  04 Feb 2007; Markus Rothe <corsair@gentoo.org> sabayon-2.12.4.ebuild:
+  Stable on ppc64; bug #164978
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org> sabayon-2.12.4.ebuild:
   Replacing einfo with elog
