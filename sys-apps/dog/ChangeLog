@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dog
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.20 2005/08/19 19:06:51 hansmi Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.21 2007/02/04 07:25:13 dirtyepic Exp $
+
+  04 Feb 2007; Ryan Hill <dirtyepic@gentoo.org> metadata.xml:
+  Removed ka0ttic from metadata.
 
   19 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> dog-1.7-r2.ebuild:
   Stable on ppc.
