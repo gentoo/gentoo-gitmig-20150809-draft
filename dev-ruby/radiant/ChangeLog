@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/radiant
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/radiant/ChangeLog,v 1.1 2007/02/04 07:34:22 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/radiant/ChangeLog,v 1.2 2007/02/04 16:46:03 graaff Exp $
+
+  04 Feb 2007; Hans de Graaff <graaff@gentoo.org> radiant-0.5.2.ebuild:
+  Add ~amd64 now that bluecloth and redcloth dependencies are also marked
+  ~amd64.
 
 *radiant-0.5.2 (04 Feb 2007)
 
