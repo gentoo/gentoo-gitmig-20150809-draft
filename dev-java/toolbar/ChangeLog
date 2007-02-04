@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/toolbar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/toolbar/ChangeLog,v 1.10 2007/01/28 19:44:07 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/toolbar/ChangeLog,v 1.11 2007/02/04 14:16:19 ticho Exp $
+
+  04 Feb 2007; Andrej Kacian <ticho@gentoo.org> toolbar-1.1.0.ebuild:
+  Stable on x86, bug #164283.
 
   28 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
   Remove compnerd from metadata.
