@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pretrace/pretrace-0.4.ebuild,v 1.2 2006/05/16 19:31:53 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pretrace/pretrace-0.4.ebuild,v 1.3 2007/02/04 12:12:00 blubb Exp $
 
-inherit toolchain-funcs flag-o-matic
+inherit toolchain-funcs flag-o-matic multilib
 
 DESCRIPTION="Start dynamically linked applications under debugging environment"
 HOMEPAGE="http://dev.inversepath.com/trac/pretrace"
@@ -27,7 +27,7 @@ src_install() {
 	dodir /usr/share/man/man{3,8}
 	dodir /usr/bin
 
-	einstall LIBDIR=${D}/lib PREFIX=${D}/usr || die
+	einstall LIBDIR="${D}/usr/$(get_libdir)" PREFIX="${D}/usr" || die
 	prepalldocs
 }
 
