@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/museseq
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.45 2007/01/14 00:35:09 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.46 2007/02/04 21:37:03 welp Exp $
+
+  04 Feb 2007; <welp@gentoo.org> museseq-0.8.1-r1.ebuild:
+  Stable on amd64 wrt bug #149637
 
   14 Jan 2007; MATSUU Takuto <matsuu@gentoo.org> museseq-0.7.2_pre5.ebuild,
   museseq-0.8.1-r1.ebuild, museseq-0.9_pre2.ebuild:
