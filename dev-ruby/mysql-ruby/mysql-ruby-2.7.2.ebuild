@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/mysql-ruby-2.7.2.ebuild,v 1.2 2007/01/05 16:48:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/mysql-ruby-2.7.2.ebuild,v 1.3 2007/02/04 17:23:58 gmsoft Exp $
 
 inherit ruby
 
@@ -16,6 +16,14 @@ IUSE=""
 USE_RUBY="ruby16 ruby18 ruby19"
 DEPEND="virtual/ruby
 	virtual/mysql"
+
+src_unpack() {
+	unpack ${A}
+	if use hppa
+	then
+		sed -e 's/LONG_LONG/long long/' -i "${S}"/mysql.c.in
+	fi
+}
 
 src_compile() {
 	ruby extconf.rb || die
