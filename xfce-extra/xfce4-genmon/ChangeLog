@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-genmon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-genmon/ChangeLog,v 1.7 2007/02/04 18:52:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-genmon/ChangeLog,v 1.8 2007/02/04 22:45:11 welp Exp $
+
+  04 Feb 2007; Peter Weller <welp@gentoo.org> xfce4-genmon-3.1.ebuild:
+  Keyworded on x86-fbsd wrt bug #165310
 
 *xfce4-genmon-3.1 (04 Feb 2007)
 
