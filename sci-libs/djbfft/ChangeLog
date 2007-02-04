@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/djbfft
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/djbfft/ChangeLog,v 1.7 2006/07/06 20:17:50 flameeyes Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/djbfft/ChangeLog,v 1.8 2007/02/04 18:26:10 blubb Exp $
+
+  04 Feb 2007; Simon Stelling <blubb@gentoo.org> djbfft-0.76.ebuild:
+  fix multilib-strict; bug 158373
 
   06 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> djbfft-0.76.ebuild:
   Add ~x86-fbsd keyword.

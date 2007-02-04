@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/djbfft/djbfft-0.76.ebuild,v 1.7 2006/07/06 20:17:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/djbfft/djbfft-0.76.ebuild,v 1.8 2007/02/04 18:26:10 blubb Exp $
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs multilib
 
 DESCRIPTION="extremely fast library for floating-point convolution"
 HOMEPAGE="http://cr.yp.to/djbfft.html"
@@ -41,6 +41,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-gcc3.patch"
 	epatch "${FILESDIR}/${P}-shared.patch"
+	sed -i -e "s:\"lib\":\"$(get_libdir)\":" hier.c
 	if use static ; then
 		echo "$(tc-getCC) $MY_CFLAGS" > "conf-cc"
 	else
