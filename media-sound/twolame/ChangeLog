@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/twolame
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/twolame/ChangeLog,v 1.2 2007/02/01 18:44:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/twolame/ChangeLog,v 1.3 2007/02/04 23:45:42 beandog Exp $
+
+  04 Feb 2007; Steve Dibb <beandog@gentoo.org> twolame-0.3.8.ebuild:
+  amd64 stable, bug 133776
 
   01 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> twolame-0.3.8.ebuild:
   Keyworded ~sparc
