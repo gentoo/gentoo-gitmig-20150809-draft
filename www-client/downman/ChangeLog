@@ -1,6 +1,9 @@
 # ChangeLog for www-client/downman
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/downman/ChangeLog,v 1.2 2005/03/18 10:35:49 swegener Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/downman/ChangeLog,v 1.3 2007/02/04 01:59:56 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *downman-0.0.5 (17 Mar 2005)
 *downman-0.0.4 (17 Mar 2005)
