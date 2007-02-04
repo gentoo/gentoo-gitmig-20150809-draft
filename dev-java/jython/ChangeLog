@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jython
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.47 2007/02/03 12:56:40 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.48 2007/02/04 00:11:13 caster Exp $
+
+  04 Feb 2007; Vlastimil Babka <caster@gentoo.org> -files/jython,
+  -files/jythonc, -jython-2.1-r6.ebuild:
+  Cleanup.
 
   03 Feb 2007; Steve Dibb <beandog@gentoo.org> jython-2.1-r10.ebuild:
   amd64 stable, bug 162038

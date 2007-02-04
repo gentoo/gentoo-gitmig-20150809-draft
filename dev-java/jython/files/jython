@@ -1,7 +1,0 @@
-#!/bin/sh
-
-exec $(java-config --java) \
-	-Djava.library.path="$(java-config -i libreadline-java)" \
-	-Dpython.home="/usr/share/jython" \
-	-classpath "${CLASSPATH}:$(java-config --classpath=jython,libreadline-java 2>/dev/null)" \
-	"org.python.util.jython" "$@"
