@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/terminal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/ChangeLog,v 1.26 2007/02/03 01:51:27 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/ChangeLog,v 1.27 2007/02/04 17:39:17 drac Exp $
+
+*terminal-0.2.6-r1 (04 Feb 2007)
+
+  04 Feb 2007; Samuli Suominen <drac@gentoo.org> +terminal-0.2.6-r1.ebuild:
+  Revert dbus dep again, this time for mips.
 
   03 Feb 2007; Joshua Nichols <nichoj@gentoo.org>
   -terminal-0.2.5.8_rc2.ebuild:
