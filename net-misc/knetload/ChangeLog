@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/knetload
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knetload/ChangeLog,v 1.27 2005/12/10 13:30:42 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knetload/ChangeLog,v 1.28 2007/02/04 00:09:03 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   10 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   knetload-3.0_alpha2.ebuild:

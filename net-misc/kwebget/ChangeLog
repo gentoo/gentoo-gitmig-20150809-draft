@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/kwebget
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kwebget/ChangeLog,v 1.4 2005/01/01 01:11:16 weeve Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kwebget/ChangeLog,v 1.5 2007/02/04 00:11:30 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   31 Dec 2004; Jason Wever <weeve@gentoo.org> kwebget-0.8.1.ebuild:
   Added ~sparc keyword.

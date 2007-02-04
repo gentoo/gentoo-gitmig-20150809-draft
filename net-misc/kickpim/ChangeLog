@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/kickpim
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kickpim/ChangeLog,v 1.9 2004/12/31 06:00:21 weeve Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kickpim/ChangeLog,v 1.10 2007/02/04 00:07:22 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   30 Dec 2004; Jason Wever <weeve@gentoo.org> kickpim-0.5.3.ebuild:
   Added ~sparc keyword.
