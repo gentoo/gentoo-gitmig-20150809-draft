@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/filelight
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/ChangeLog,v 1.17 2007/02/04 00:09:51 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/ChangeLog,v 1.18 2007/02/04 11:35:55 troll Exp $
+
+  04 Feb 2007; Przemysław Maciąg <troll@gentoo.org>
+  filelight-1.0_rc2.ebuild:
+  Desktop file fix
 
 *filelight-1.0 (04 Feb 2007)
 
