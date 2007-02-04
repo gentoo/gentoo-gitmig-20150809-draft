@@ -1,13 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/gle-3.1.0-r1.ebuild,v 1.6 2007/01/26 09:40:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/gle-3.1.0-r1.ebuild,v 1.7 2007/02/04 15:28:23 drac Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.4"
 
 inherit autotools multilib
-
-# Using method from media-libs/mesa.
 
 DESCRIPTION="GL extrusion library"
 HOMEPAGE="http://www.linas.org/gle"
@@ -28,29 +26,28 @@ src_unpack() {
 	cd "${S}"
 
 	# Replace inclusion of malloc.h with stdlib.h as needed by Mac OS X and
-	# FreeBSD. See bug #130340.
+	# FreeBSD. See bug #130340
 	sed -i -e 's:malloc.h:stdlib.h:g' src/*
 
-	# Don't build binary examples as they never get installed. See bug 141859.
+	# Don't build binary examples as they never get installed. See bug 141859
 	sed -i -e 's:examples::' Makefile.am
+
 	eautoreconf
 }
 
 src_compile() {
-	econf --with-x \
-		--x-libraries=/usr/$(get_libdir)/opengl/xorg-x11 \
-		|| die "econf failed."
+	econf --with-x --x-libraries=/usr/$(get_libdir)/opengl/xorg-x11 || die "econf failed"
 
 	if use doc; then
 		sed -i -e 's:\$(datadir)/doc/gle:\$(datadir)/doc/${PF}:' doc/Makefile
 		sed -i -e 's:\$(datadir)/doc/gle/html:\$(datadir)/doc/${PF}/html:' doc/html/Makefile
 	fi
 
-	emake || die "emake failed."
+	emake || die "emake failed"
 }
 
 src_install() {
-	emake -j1 DESTDIR="${D}" install || die "make install failed."
+	emake -j1 DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS README
-	rm -rf "${D}/usr/share/doc/gle"
+	rm -rf "${D}"/usr/share/doc/gle
 }
