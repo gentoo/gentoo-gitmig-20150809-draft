@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+extra
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/ChangeLog,v 1.17 2007/01/09 07:19:56 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/ChangeLog,v 1.18 2007/02/04 14:54:51 blubb Exp $
+
+  04 Feb 2007; Simon Stelling <blubb@gentoo.org> gtk+extra-2.1.1.ebuild:
+  stable on amd64
 
 *gtk+extra-2.1.1-r1 (09 Jan 2007)
 
