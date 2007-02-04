@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST kbandwidth-1.0.2.tar.gz 690185
 DIST kbandwidth-1.0.3.tar.gz 762883
 DIST kbandwidth-1.0.4.tar.gz 611681
@@ -12,10 +9,10 @@ EBUILD kbandwidth-1.0.3.ebuild 537 RMD160 ce2119780251d3e7d6eb005f10d0d80e675ac5
 MD5 abab69b4697ba261e0cb9adaf1b68f96 kbandwidth-1.0.3.ebuild 537
 RMD160 ce2119780251d3e7d6eb005f10d0d80e675ac53d kbandwidth-1.0.3.ebuild 537
 SHA256 f6806e9bbe0d8f1b5f9a8af9f6cbbaeffc725bae4be92adfcf87087d4c742dee kbandwidth-1.0.3.ebuild 537
-EBUILD kbandwidth-1.0.4.ebuild 565 RMD160 380fbc264ccdf31f45f0b37a874da463ffd602f8 SHA1 3a88ca1c8509c5ecf862c69a8d604b199767a5d5 SHA256 37c615277aee491f301ce3aaf374ffd9971054f1c269e63d0035ba68c7c0608e
-MD5 4896c6b27e5c4ba1a6dbd94546ae0ded kbandwidth-1.0.4.ebuild 565
-RMD160 380fbc264ccdf31f45f0b37a874da463ffd602f8 kbandwidth-1.0.4.ebuild 565
-SHA256 37c615277aee491f301ce3aaf374ffd9971054f1c269e63d0035ba68c7c0608e kbandwidth-1.0.4.ebuild 565
+EBUILD kbandwidth-1.0.4.ebuild 569 RMD160 bcbc20cbb7ced2b844f01fa6f533afdd52ee6cfa SHA1 0fab488b627ad849a22c153a1c99c8b4c9ecee54 SHA256 5f267d84b46df9df5820dc07528bc339f3d5b6ba1f5082c469b914013c88c2f6
+MD5 3a936a8117a0e31606a9976d75d11bbb kbandwidth-1.0.4.ebuild 569
+RMD160 bcbc20cbb7ced2b844f01fa6f533afdd52ee6cfa kbandwidth-1.0.4.ebuild 569
+SHA256 5f267d84b46df9df5820dc07528bc339f3d5b6ba1f5082c469b914013c88c2f6 kbandwidth-1.0.4.ebuild 569
 MISC ChangeLog 1033 RMD160 26f855d6d4334924ad6eeda5525b242c8de4699c SHA1 00951777a0e5db173947fa63e12485e4ab8fad86 SHA256 11bd568736d69d22f152c96f25595ae81a2a2da9aed6129842f358daa7ef3477
 MD5 cfc259416afffd33a4964a5a1a619106 ChangeLog 1033
 RMD160 26f855d6d4334924ad6eeda5525b242c8de4699c ChangeLog 1033
@@ -33,10 +30,3 @@ SHA256 a0b0260f7f770c8cfe0026a546e0b867f045895694b6d4a4d1cfa132e8126460 files/di
 MD5 5c30b8515b54ef64bb001de3b22f62c8 files/digest-kbandwidth-1.0.4 68
 RMD160 274ac9797f7d517459334b37fa02068e254fc91d files/digest-kbandwidth-1.0.4 68
 SHA256 48c5e8838d104095bc1663d5a7b271bebcbeb9e2dcbbb8a8a71aa9c1ed22fef8 files/digest-kbandwidth-1.0.4 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEhl7zSENan+PfizARAtKxAJ9nb3BgEqxc2qqsvqi24O4QdXNXUgCfU94W
-dd+vjgMvGzJwTHxOKKWJt/Q=
-=BXhf
------END PGP SIGNATURE-----
