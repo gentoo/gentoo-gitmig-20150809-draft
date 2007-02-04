@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpa
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.42 2007/01/23 20:48:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.43 2007/02/04 22:11:30 welp Exp $
+
+  04 Feb 2007; <welp@gentoo.org> gpa-0.7.3.ebuild:
+  Stable on amd64 wrt bug #150386
 
   23 Jan 2007; nixnut <nixnut@gentoo.org> gpa-0.7.3.ebuild:
   Stable on ppc wrt bug 150386
