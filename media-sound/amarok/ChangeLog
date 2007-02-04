@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.199 2007/02/01 21:40:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.200 2007/02/04 20:04:23 mabi Exp $
+
+  04 Feb 2007; Matti Bickel <mabi@gentoo.org> amarok-1.4.4-r4.ebuild:
+  readd ~ppc (bug #164242)
 
   01 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> amarok-9999-r1.ebuild:
   Update not to use trunk anymore for Live SVN.
