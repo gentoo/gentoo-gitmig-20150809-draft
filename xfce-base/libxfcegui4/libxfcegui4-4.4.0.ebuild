@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/libxfcegui4-4.4.0.ebuild,v 1.4 2007/01/28 14:24:25 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/libxfcegui4-4.4.0.ebuild,v 1.5 2007/02/04 00:05:51 drac Exp $
 
 inherit xfce44
 
@@ -19,7 +19,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( dev-util/gtk-doc )
 	!=xfce-base/xfce-mcs-plugins-4.3*
-	!=xfce-base/xfce4-panel-4.3*"
+	!<xfce-base/xfce4-panel-4.4"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
