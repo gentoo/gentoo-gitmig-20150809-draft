@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r1.ebuild,v 1.1 2007/02/04 16:58:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r1.ebuild,v 1.2 2007/02/04 17:23:31 aballier Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -45,6 +45,7 @@ src_unpack() {
 	epatch "${WORKDIR}/${P}-64bit.patch"
 	epatch "${WORKDIR}/${P}-analyzer.patch"
 	epatch "${WORKDIR}/${P}-gforce.patch"
+	epatch "${FILESDIR}/${P}-libs.patch"
 	eautoreconf
 }
 

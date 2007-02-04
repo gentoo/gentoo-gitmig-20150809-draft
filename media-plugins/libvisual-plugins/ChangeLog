@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/libvisual-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.26 2007/02/04 16:58:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.27 2007/02/04 17:23:31 aballier Exp $
+
+  04 Feb 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/libvisual-plugins-0.4.0-libs.patch,
+  libvisual-plugins-0.4.0-r1.ebuild:
+  Fixes gstreamer plugin linkage
 
 *libvisual-plugins-0.4.0-r1 (04 Feb 2007)
 

@@ -1,0 +1,11 @@
+--- libvisual-plugins-0.4.0/plugins/actor/gstreamer/Makefile.am.old	2007-02-04 18:14:53.000000000 +0100
++++ libvisual-plugins-0.4.0/plugins/actor/gstreamer/Makefile.am	2007-02-04 18:15:15.000000000 +0100
+@@ -2,7 +2,7 @@
+ 
+ actor_plugin_LTLIBRARIES = actor_gstreamer.la
+ 
+-LIBADD = $(LIBVISUAL_LIBS) $(GSTREAMER_LIBS)
++actor_gstreamer_la_LIBADD = $(LIBVISUAL_LIBS) $(GSTREAMER_LIBS)
+ 
+ AM_CFLAGS = $(LIBVISUAL_CFLAGS) $(GSTREAMER_CFLAGS)
+ 
