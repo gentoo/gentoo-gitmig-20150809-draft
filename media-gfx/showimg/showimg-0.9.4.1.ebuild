@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/showimg-0.9.4.1.ebuild,v 1.4 2005/04/07 15:46:30 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/showimg-0.9.4.1.ebuild,v 1.5 2007/02/04 08:22:45 mr_bones_ Exp $
 
 inherit kde
 

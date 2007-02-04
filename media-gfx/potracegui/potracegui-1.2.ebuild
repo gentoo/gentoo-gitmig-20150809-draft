@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/potracegui/potracegui-1.2.ebuild,v 1.4 2005/10/23 16:39:17 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/potracegui/potracegui-1.2.ebuild,v 1.5 2007/02/04 08:22:23 mr_bones_ Exp $
 
 inherit kde
 
