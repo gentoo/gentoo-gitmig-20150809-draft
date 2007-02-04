@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.206 2007/02/04 02:02:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.207 2007/02/04 17:13:01 jer Exp $
+
+  04 Feb 2007; Jeroen Roovers <jer@gentoo.org> kdeedu-3.5.6.ebuild:
+  Marked ~hppa (bug #foo).
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> -kdeedu-3.5.2.ebuild:
   Remove old versions.
