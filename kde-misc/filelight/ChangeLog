@@ -1,6 +1,14 @@
 # ChangeLog for kde-misc/filelight
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/ChangeLog,v 1.16 2006/10/29 01:11:09 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/ChangeLog,v 1.17 2007/02/04 00:09:51 troll Exp $
+
+*filelight-1.0 (04 Feb 2007)
+
+  04 Feb 2007; Przemysław Maciąg <troll@gentoo.org>
+  -files/filelight-1.0_beta6-pic.patch, -filelight-1.0_beta6.ebuild,
+  -filelight-1.0_rc1.ebuild, +filelight-1.0.ebuild:
+  Version bump (1.0). Desktop file fix from Andrej Kacian (#165149). Removed
+  eutils from inherited eclasses. Deleted old ebuild.
 
   29 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   filelight-1.0_rc2.ebuild:
