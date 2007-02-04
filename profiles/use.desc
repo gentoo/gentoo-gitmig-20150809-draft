@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.337 2007/02/02 03:31:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.338 2007/02/04 13:42:34 dragonheart Exp $
 
 # Keep them sorted
 
@@ -288,6 +288,7 @@ ruby - Adds support/bindings for the Ruby language
 samba - Adds support for SAMBA (Windows File and Printer sharing)
 sapdb - Adds support for SAP DB
 sasl - Adds support for the Simple Authentication and Security Layer
+savedconfig - Use this to restore your config from /etc/portage/savedconfig ${CATEGORY}/${PN}. Make sure you USE flags allow for approprate dependencies
 scanner - Adds support for scanner hardware (e.g. build the sane frontend in kdegraphics)
 sdl - Adds support for Simple Direct Layer (media library)
 seamonkey - Adds support for the Seamonkey web-browser
