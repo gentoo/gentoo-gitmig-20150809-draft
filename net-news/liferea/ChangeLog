@@ -1,6 +1,23 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.83 2007/01/22 21:14:46 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.84 2007/02/04 21:18:42 dang Exp $
+
+*liferea-1.2.5 (04 Feb 2007)
+
+  04 Feb 2007; Daniel Gryniewicz <dang@gentoo.org> +liferea-1.2.5.ebuild:
+  Bump to 1.2.5
+
+  04 Feb 2007; Daniel Gryniewicz <dang@gentoo.org> ChangeLog:
+  Bump to 1.2.5
+  	* Disabling GtkHTML2 support for x86_64 platforms.
+  	  Maintainers: please do discontinue any GtkHTML2 support
+  	  on such platforms if possible, as it cause only trouble!
+  	* Removed console warning that was given on each startup
+  	  as long as social bookmarking site was not set.
+  	* Fixes Debian #408475: liferea wrapper script is brittle, 
+  	  depends on $0 (report and patch by jrodman)
+  	* Fixes a type problem in the Digest authentication that 
+  	  caused crashes on AMD64 (SF #1636563)
 
   22 Jan 2007; Daniel Gryniewicz <dang@gentoo.org> ChangeLog:
   Bump to 1.2.4
