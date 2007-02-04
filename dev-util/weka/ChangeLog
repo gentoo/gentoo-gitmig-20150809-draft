@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/weka
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.17 2007/02/03 13:01:38 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.18 2007/02/04 00:18:25 caster Exp $
+
+  04 Feb 2007; Vlastimil Babka <caster@gentoo.org>
+  -files/weka-build_xml.patch, -weka-3.4.3_p20041113.ebuild:
+  Cleanup.
 
   03 Feb 2007; Steve Dibb <beandog@gentoo.org> weka-3.4.6.ebuild:
   amd64 stable, bug 162410
