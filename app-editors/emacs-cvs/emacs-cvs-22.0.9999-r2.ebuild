@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.9999-r2.ebuild,v 1.4 2007/02/03 11:21:02 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.9999-r2.ebuild,v 1.5 2007/02/04 14:57:58 opfer Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -174,6 +174,9 @@ EOF
 update-alternatives() {
 	# extract the suffix of the manpages to determine the correct compression program
 	local suffix=`ls /usr/share/man/man1/emacs.emacs-* |sed s/".*\."//g|tail -n 1`
+	if [ suffix = 1 ]; then
+		suffix=""
+	fi
 
 	# this creates symlinks for binaries and man pages, so the correct ones in a slotted
 	# environment can be accessed
