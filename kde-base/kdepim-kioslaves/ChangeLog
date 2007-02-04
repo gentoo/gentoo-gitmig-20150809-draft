@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-kioslaves
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kioslaves/ChangeLog,v 1.72 2007/01/18 00:21:13 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kioslaves/ChangeLog,v 1.73 2007/02/04 02:12:08 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -kdepim-kioslaves-3.5.2-r3.ebuild:
+  Remove old versions.
 
   18 Jan 2007; Carsten Lohrke <carlo@gentoo.org>
   kdepim-kioslaves-3.5.6.ebuild:

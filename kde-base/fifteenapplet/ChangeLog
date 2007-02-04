@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/fifteenapplet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/fifteenapplet/ChangeLog,v 1.61 2007/01/16 19:24:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/fifteenapplet/ChangeLog,v 1.62 2007/02/04 01:39:37 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -fifteenapplet-3.5.2.ebuild:
+  Remove old versions.
 
 *fifteenapplet-3.5.6 (16 Jan 2007)
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia-kioslaves
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/ChangeLog,v 1.66 2007/01/17 11:14:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/ChangeLog,v 1.67 2007/02/04 02:09:00 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -kdemultimedia-kioslaves-3.5.2.ebuild:
+  Remove old versions.
 
   17 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   kdemultimedia-kioslaves-3.5.6.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kstars
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.67 2007/01/18 16:24:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.68 2007/02/04 02:58:27 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> -kstars-3.5.2.ebuild:
+  Remove old versions.
 
   18 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> kstars-3.5.6.ebuild:
   Fix libkdeedu dependency.

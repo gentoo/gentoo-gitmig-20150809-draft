@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksystraycmd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystraycmd/ChangeLog,v 1.54 2007/01/16 21:27:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystraycmd/ChangeLog,v 1.55 2007/02/04 02:59:47 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -ksystraycmd-3.5.1.ebuild:
+  Remove old versions.
 
   16 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   ksystraycmd-3.5.5.ebuild:

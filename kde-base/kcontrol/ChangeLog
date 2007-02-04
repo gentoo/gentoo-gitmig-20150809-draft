@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcontrol
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.81 2007/01/18 16:13:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.82 2007/02/04 01:51:29 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> -kcontrol-3.5.2.ebuild:
+  Remove old versions.
 
   18 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> kcontrol-3.5.6.ebuild:
   Don't depend on arts 3.5.6, as 3.5.5 is just the same.

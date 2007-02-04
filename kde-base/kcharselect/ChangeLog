@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcharselect
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcharselect/ChangeLog,v 1.51 2007/01/16 19:40:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcharselect/ChangeLog,v 1.52 2007/02/04 01:50:23 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -kcharselect-3.5.2.ebuild:
+  Remove old versions.
 
 *kcharselect-3.5.6 (16 Jan 2007)
 

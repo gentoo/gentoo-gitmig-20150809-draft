@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kbabel
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbabel/ChangeLog,v 1.53 2007/01/16 19:34:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbabel/ChangeLog,v 1.54 2007/02/04 01:46:45 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> -kbabel-3.5.2.ebuild:
+  Remove old versions.
 
 *kbabel-3.5.6 (16 Jan 2007)
 

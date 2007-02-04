@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kttsd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.64 2007/01/16 21:32:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.65 2007/02/04 03:02:50 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> -kttsd-3.5.2.ebuild:
+  Remove old versions.
 
 *kttsd-3.5.6 (16 Jan 2007)
 

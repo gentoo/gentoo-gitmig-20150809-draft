@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/korundum
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/ChangeLog,v 1.55 2007/01/18 00:18:40 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/ChangeLog,v 1.56 2007/02/04 02:47:21 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> -korundum-3.5.2.ebuild:
+  Remove old versions.
 
   18 Jan 2007; Carsten Lohrke <carlo@gentoo.org> korundum-3.5.6.ebuild:
   Update minimal needed versions.

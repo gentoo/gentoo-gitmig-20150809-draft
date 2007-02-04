@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kiten
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kiten/ChangeLog,v 1.61 2007/01/16 20:42:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kiten/ChangeLog,v 1.62 2007/02/04 02:30:55 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> -kiten-3.5.2.ebuild:
+  Remove old versions.
 
 *kiten-3.5.6 (16 Jan 2007)
 

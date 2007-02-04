@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kgeography
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgeography/ChangeLog,v 1.35 2007/01/16 20:34:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgeography/ChangeLog,v 1.36 2007/02/04 02:25:27 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -kgeography-3.5.1.ebuild:
+  Remove old versions.
 
 *kgeography-3.5.6 (16 Jan 2007)
 

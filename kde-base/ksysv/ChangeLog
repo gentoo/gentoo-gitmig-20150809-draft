@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksysv
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysv/ChangeLog,v 1.38 2007/01/16 21:27:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysv/ChangeLog,v 1.39 2007/02/04 03:00:06 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> -ksysv-3.5.1.ebuild:
+  Remove old versions.
 
 *ksysv-3.5.6 (16 Jan 2007)
 

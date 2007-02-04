@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkcal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcal/ChangeLog,v 1.68 2007/01/17 18:45:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcal/ChangeLog,v 1.69 2007/02/04 03:09:52 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -libkcal-3.5.2-r1.ebuild:
+  Remove old versions.
 
   17 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Tarball was refreshed, regenerate digest.

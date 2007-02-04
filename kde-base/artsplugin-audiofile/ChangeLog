@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/artsplugin-audiofile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-audiofile/ChangeLog,v 1.49 2007/01/16 19:18:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-audiofile/ChangeLog,v 1.50 2007/02/04 01:34:38 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -artsplugin-audiofile-3.5.0.ebuild:
+  Remove old versions.
 
   16 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   artsplugin-audiofile-3.5.4.ebuild:

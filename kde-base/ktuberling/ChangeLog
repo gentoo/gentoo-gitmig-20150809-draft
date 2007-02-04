@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ktuberling
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktuberling/ChangeLog,v 1.62 2007/01/16 21:33:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktuberling/ChangeLog,v 1.63 2007/02/04 03:03:10 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -ktuberling-3.5.2.ebuild:
+  Remove old versions.
 
 *ktuberling-3.5.6 (16 Jan 2007)
 

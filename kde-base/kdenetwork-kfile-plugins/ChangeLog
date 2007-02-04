@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdenetwork-kfile-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-kfile-plugins/ChangeLog,v 1.61 2007/01/16 20:15:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-kfile-plugins/ChangeLog,v 1.62 2007/02/04 02:10:32 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -kdenetwork-kfile-plugins-3.5.2.ebuild:
+  Remove old versions.
 
 *kdenetwork-kfile-plugins-3.5.6 (16 Jan 2007)
 

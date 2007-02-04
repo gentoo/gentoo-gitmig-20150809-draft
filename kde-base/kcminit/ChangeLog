@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcminit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.51 2007/01/20 00:32:05 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.52 2007/02/04 01:50:45 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> -kcminit-3.5.0.ebuild:
+  Remove old versions.
 
   20 Jan 2007; Carsten Lohrke <carlo@gentoo.org> kcminit-3.5.6.ebuild:
   Correct MAXKDEVER.

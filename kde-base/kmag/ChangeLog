@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmag
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmag/ChangeLog,v 1.60 2007/01/16 20:47:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmag/ChangeLog,v 1.61 2007/02/04 02:34:48 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> -kmag-3.5.2.ebuild:
+  Remove old versions.
 
 *kmag-3.5.6 (16 Jan 2007)
 

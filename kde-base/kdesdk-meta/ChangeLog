@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-meta
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-meta/ChangeLog,v 1.60 2007/01/18 00:34:49 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-meta/ChangeLog,v 1.61 2007/02/04 02:15:38 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -kdesdk-meta-3.5.2.ebuild:
+  Remove old versions.
 
   18 Jan 2007; Carsten Lohrke <carlo@gentoo.org> kdesdk-meta-3.5.6.ebuild:
   Update minimal needed versions.

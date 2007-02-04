@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kaddressbook
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.69 2007/01/17 18:38:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.70 2007/02/04 01:41:00 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -kaddressbook-3.5.2-r1.ebuild:
+  Remove old versions.
 
   17 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Tarball was refreshed, regenerate digest.

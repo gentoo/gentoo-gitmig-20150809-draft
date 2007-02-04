@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeadmin-kfile-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-kfile-plugins/ChangeLog,v 1.57 2007/01/16 19:51:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-kfile-plugins/ChangeLog,v 1.58 2007/02/04 01:55:10 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -kdeadmin-kfile-plugins-3.5.1.ebuild:
+  Remove old versions.
 
 *kdeadmin-kfile-plugins-3.5.6 (16 Jan 2007)
 

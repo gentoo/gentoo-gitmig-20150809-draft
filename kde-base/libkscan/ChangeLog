@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkscan
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkscan/ChangeLog,v 1.61 2007/01/16 21:54:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkscan/ChangeLog,v 1.62 2007/02/04 03:14:17 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> -libkscan-3.5.2.ebuild:
+  Remove old versions.
 
   16 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> libkscan-3.5.5.ebuild:
   Bump to 3.5.6 (prerelease).
