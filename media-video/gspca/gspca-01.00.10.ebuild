@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gspca/gspca-01.00.10.ebuild,v 1.3 2007/01/20 17:12:52 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gspca/gspca-01.00.10.ebuild,v 1.4 2007/02/04 08:25:15 mr_bones_ Exp $
 
 inherit linux-mod
 
