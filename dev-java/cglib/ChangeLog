@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/cglib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.20 2007/02/03 13:51:38 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.21 2007/02/04 22:29:09 caster Exp $
+
+  04 Feb 2007; Vlastimil Babka <caster@gentoo.org> -cglib-2.0.2-r1.ebuild,
+  -cglib-2.1.2.ebuild:
+  Cleanup.
 
   03 Feb 2007; Steve Dibb <beandog@gentoo.org> cglib-2.0.2-r2.ebuild:
   amd64 stable, bug 163646
