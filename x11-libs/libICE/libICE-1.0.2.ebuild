@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libICE/libICE-1.0.2.ebuild,v 1.1 2006/10/22 17:58:37 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libICE/libICE-1.0.2.ebuild,v 1.2 2007/02/04 18:21:54 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -11,7 +11,6 @@ DESCRIPTION="X.Org ICE library"
 
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="ipv6"
-RESTRICT="mirror"
 
 RDEPEND="x11-libs/xtrans
 	x11-proto/xproto"

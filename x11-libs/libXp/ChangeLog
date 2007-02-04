@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXp
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXp/ChangeLog,v 1.28 2006/10/29 18:37:05 joshuabaergen Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXp/ChangeLog,v 1.29 2007/02/04 18:25:36 joshuabaergen Exp $
+
+  04 Feb 2007; Joshua Baergen <joshuabaergen@gentoo.org> libXp-1.0.0.ebuild:
+  Drop mirroring restriction.  Thanks to Zhang Le of bug #163088.
 
   29 Oct 2006; Joshua Baergen <joshuabaergen@gentoo.org> libXp-1.0.0.ebuild:
   Move printproto to RDEPEND from DEPEND, fixing bug #150956.  (Thanks to Evil
