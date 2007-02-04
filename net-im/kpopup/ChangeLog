@@ -1,6 +1,9 @@
 # ChangeLog for net-im/kpopup
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kpopup/ChangeLog,v 1.7 2005/09/21 17:02:09 dang Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/kpopup/ChangeLog,v 1.8 2007/02/04 00:06:38 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   21 Sep 2005; <dang@gentoo.org> kpopup-0.9.7.ebuild:
   Marked ~amd64
