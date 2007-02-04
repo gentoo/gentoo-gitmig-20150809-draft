@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.241 2007/02/03 22:42:00 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.242 2007/02/04 22:27:57 zzam Exp $
+
+*udev-104-r9 (04 Feb 2007)
+
+  04 Feb 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-105-unlink-db-files.patch, +udev-104-r9.ebuild:
+  Adding another patch from udev-105, to unlink database files before
+  (re)creating them, fixing some symlink issues.
 
 *udev-104-r8 (03 Feb 2007)
 
