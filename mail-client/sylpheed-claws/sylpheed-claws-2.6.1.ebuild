@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-2.6.1.ebuild,v 1.4 2007/01/29 00:06:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-2.6.1.ebuild,v 1.5 2007/02/04 08:22:03 mr_bones_ Exp $
 
 IUSE=""
 DESCRIPTION="Sylpheed-Claws is an email client (and news reader) based on GTK+"

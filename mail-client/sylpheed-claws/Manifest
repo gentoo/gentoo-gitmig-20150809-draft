@@ -25,10 +25,10 @@ EBUILD sylpheed-claws-2.6.0.ebuild 4683 RMD160 34f678b5c5161b4e089ef12510ae96e99
 MD5 aeac2aeec7fd87eb3d1c90b794c0aa03 sylpheed-claws-2.6.0.ebuild 4683
 RMD160 34f678b5c5161b4e089ef12510ae96e99f6a5509 sylpheed-claws-2.6.0.ebuild 4683
 SHA256 97404b864e9b1b25d1bb1974fac34f535c4714b665206851fccaefbf00a460c3 sylpheed-claws-2.6.0.ebuild 4683
-EBUILD sylpheed-claws-2.6.1.ebuild 560 RMD160 9190a1ca40a2d0b7ffe4b717ec0b3acc557f7158 SHA1 ace428faeddd6218edaaf4ab15e6a769b8c73c1c SHA256 38d320c94e746479b470436030ce93367b7f2b0ae7ea62b53aa351c3d04b1190
-MD5 ee61729727ebdb1b200f0e995cfed162 sylpheed-claws-2.6.1.ebuild 560
-RMD160 9190a1ca40a2d0b7ffe4b717ec0b3acc557f7158 sylpheed-claws-2.6.1.ebuild 560
-SHA256 38d320c94e746479b470436030ce93367b7f2b0ae7ea62b53aa351c3d04b1190 sylpheed-claws-2.6.1.ebuild 560
+EBUILD sylpheed-claws-2.6.1.ebuild 565 RMD160 4141a3023e8b0620b28c0a39fdad9272ead45505 SHA1 c2de256fe1e9823a7c705a37cc967fc8fe14663d SHA256 f9690855aa881a0bfc0707885d1a9c2849566d1f8e3432b9b528accefe2e10d6
+MD5 f03380e7efcbb85aee4328e6dade8132 sylpheed-claws-2.6.1.ebuild 565
+RMD160 4141a3023e8b0620b28c0a39fdad9272ead45505 sylpheed-claws-2.6.1.ebuild 565
+SHA256 f9690855aa881a0bfc0707885d1a9c2849566d1f8e3432b9b528accefe2e10d6 sylpheed-claws-2.6.1.ebuild 565
 MISC ChangeLog 34009 RMD160 818d51602b6541b907e0c02e3496ce89af0e7dbe SHA1 93e16ca4a50278ebb506d92f6f72393ef04d24e9 SHA256 ef749e84934167ccd658f103e163ebf93b37ebb1f32fcb78cf002aa89350f5aa
 MD5 4bb78dfff661b39507ff1c3e4f6efe26 ChangeLog 34009
 RMD160 818d51602b6541b907e0c02e3496ce89af0e7dbe ChangeLog 34009
@@ -46,6 +46,6 @@ SHA256 7a4f65043e2a2750ec76e077c268059e281e36a35cfa6274e49cb8d0db94cd56 files/di
 MD5 815c5ec74b8768a49b5c222326ce0062 files/digest-sylpheed-claws-2.6.0 268
 RMD160 fa7eeb7e4dcb9b69304e38a5cf3e082ec0175cea files/digest-sylpheed-claws-2.6.0 268
 SHA256 a49818c1d536b7ddd3fd469f2a5e6333a305d5875f0c9ceca0e3289064ebe336 files/digest-sylpheed-claws-2.6.0 268
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-sylpheed-claws-2.6.1 0
-RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-sylpheed-claws-2.6.1 0
-SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-sylpheed-claws-2.6.1 0
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-sylpheed-claws-2.6.1 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-sylpheed-claws-2.6.1 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-sylpheed-claws-2.6.1 1
