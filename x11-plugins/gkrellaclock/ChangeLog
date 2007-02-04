@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/gkrellaclock
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellaclock/ChangeLog,v 1.18 2007/02/04 15:51:07 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellaclock/ChangeLog,v 1.19 2007/02/04 18:11:38 masterdriverz Exp $
+
+*gkrellaclock-0.3.4 (04 Feb 2007)
+
+  04 Feb 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  -gkrellaclock-0.3.2.ebuild, +gkrellaclock-0.3.4.ebuild:
+  Bump to 0.3.4; bug 165250
 
   04 Feb 2007; Charlie Shepherd <masterdriverz@gentoo.org>
   -gkrellaclock-0.2.1.ebuild:
