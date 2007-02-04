@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/isomaster-0.7.ebuild,v 1.2 2007/02/04 02:38:25 pylon Exp $
 
 inherit eutils
 
