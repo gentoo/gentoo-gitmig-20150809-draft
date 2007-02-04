@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.62 2007/02/04 13:54:54 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.63 2007/02/04 18:35:07 blubb Exp $
+
+  04 Feb 2007; Simon Stelling <blubb@gentoo.org>
+  2006.0/no-multilib/package.mask, 2006.1/no-multilib/package.mask:
+  mask games-emulation/caps on no-multilib as it's 32bit only
 
   04 Feb 2007; Simon Stelling <blubb@gentoo.org>
   2006.0/no-multilib/package.mask, 2006.1/no-multilib/package.mask:
