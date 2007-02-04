@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-i18n
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.130 2007/02/04 02:05:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.131 2007/02/04 17:04:04 jer Exp $
+
+  04 Feb 2007; Jeroen Roovers <jer@gentoo.org> kde-i18n-3.5.6.ebuild:
+  Marked ~hppa (bug #foo).
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -kde-i18n-3.5.2-r1.ebuild:
