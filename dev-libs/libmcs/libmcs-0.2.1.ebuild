@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/libmcs-0.2.1.ebuild,v 1.3 2007/02/03 23:03:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/libmcs-0.2.1.ebuild,v 1.4 2007/02/04 09:24:05 corsair Exp $
 
 MY_P=${P/lib/}
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ SRC_URI="http://sacredspiral.co.uk/~nenolod/mcs/${MY_P}.tgz"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~hppa ~ppc ~sparc"
+KEYWORDS="~hppa ~ppc ~ppc64 ~sparc"
 IUSE="gnome"
 
 RDEPEND="gnome? ( >=gnome-base/gconf-2.6.0 )"
