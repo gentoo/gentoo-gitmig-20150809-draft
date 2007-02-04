@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libsmtp
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsmtp/ChangeLog,v 1.3 2005/06/28 08:24:11 blubb Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsmtp/ChangeLog,v 1.4 2007/02/04 00:31:08 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   28 Jun 2005; Simon Stelling <blubb@gentoo.org> libsmtp-0.8.ebuild:
   added ~amd64 keyword
