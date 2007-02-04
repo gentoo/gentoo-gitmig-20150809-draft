@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mount/xfce4-mount-0.4.8.ebuild,v 1.1 2007/01/22 14:24:54 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mount/xfce4-mount-0.4.8.ebuild,v 1.2 2007/02/04 19:13:47 nichoj Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=1.9
 
 inherit xfce44 eutils autotools
 
-xfce44_beta
+xfce44
 xfce44_goodies_panel_plugin
 
 DESCRIPTION="Xfce4 panel mount point plugin"

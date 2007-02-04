@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-mount
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mount/ChangeLog,v 1.15 2007/01/22 14:24:54 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mount/ChangeLog,v 1.16 2007/02/04 19:13:47 nichoj Exp $
+
+  04 Feb 2007; Joshua Nichols <nichoj@gentoo.org> xfce4-mount-0.4.8.ebuild:
+  Updated to use final 4.4 release.
 
 *xfce4-mount-0.4.8 (22 Jan 2007)
 
