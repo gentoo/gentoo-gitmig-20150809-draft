@@ -1,6 +1,9 @@
 # ChangeLog for media-video/camorama
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/ChangeLog,v 1.11 2007/02/04 00:41:07 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/ChangeLog,v 1.12 2007/02/04 17:49:48 beandog Exp $
+
+  04 Feb 2007; Steve Dibb <beandog@gentoo.org> camorama-0.18.ebuild:
+  amd64 stable, bug 165238
 
   04 Feb 2007; Samuli Suominen <drac@gentoo.org> camorama-0.18.ebuild:
   Reordering depends. Closing bug 165141.
