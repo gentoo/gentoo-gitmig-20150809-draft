@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.2.ebuild,v 1.1 2007/02/02 14:13:49 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.2.ebuild,v 1.2 2007/02/04 08:44:45 alonbl Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -80,8 +80,8 @@ src_install() {
 
 	dosym gpg2 /usr/bin/gpg
 	dosym gpgv2 /usr/bin/gpgv
-	cp "${D}/usr/share/man/man1/gpg2.1" "${D}/usr/share/man/man1/gpg.1"
-	cp "${D}/usr/share/man/man1/gpgv2.1" "${D}/usr/share/man/man1/gpgv.1"
+	echo ".so man1/gpg2.1" > "${D}/usr/share/man/man1/gpg.1"
+	echo ".so man1/gpgv2.1" > "${D}/usr/share/man/man1/gpgv.1"
 
 	use doc && dohtml doc/gnupg.html/* doc/*jpg doc/*png
 }
