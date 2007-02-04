@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kzenexplorer/kzenexplorer-0.6.ebuild,v 1.2 2005/10/23 16:46:37 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kzenexplorer/kzenexplorer-0.6.ebuild,v 1.3 2007/02/04 08:24:34 mr_bones_ Exp $
 
 inherit kde
 
