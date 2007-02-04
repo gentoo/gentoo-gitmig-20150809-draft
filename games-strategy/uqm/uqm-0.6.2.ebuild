@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.6.2.ebuild,v 1.1 2007/01/26 04:02:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.6.2.ebuild,v 1.2 2007/02/04 21:57:45 blubb Exp $
 
-inherit eutils games
+inherit eutils multilib games
 
 DESCRIPTION="The Ur-Quan Masters: Port of Star Control 2"
 HOMEPAGE="http://sc2.sourceforge.net/"
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/sc2/${P}-source.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="music opengl remix voice"
 
 RDEPEND="media-libs/libvorbis
@@ -78,6 +78,9 @@ src_install() {
 	# Using the included install scripts seems quite painful.
 	# This manual install is totally fragile but maybe they'll
 	# use a sane build system for the next release.
+	sed -i \
+		-e "s@/usr/games/lib/@${GAMES_LIBDIR}/@g" uqm-wrapper \
+		|| die "sed uqm-wrapper failed"
 	newgamesbin uqm-wrapper uqm || die "newgamesbin failed"
 	exeinto "${GAMES_LIBDIR}/${PN}"
 	echo "${GAMES_LIBDIR}/${PN}"
@@ -108,6 +111,7 @@ src_install() {
 	dodoc doc/devel/*
 	make_desktop_entry uqm "The Ur-Quan Masters"
 	prepgamesdirs
+
 }
 
 pkg_postinst() {
