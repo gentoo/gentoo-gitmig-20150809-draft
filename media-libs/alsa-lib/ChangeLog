@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.220 2007/01/23 05:45:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.221 2007/02/04 23:58:46 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/alsa-lib-1.0.10-no-wordexp-header.patch,
+  -files/alsa-lib-1.0.11-lowsamplerate.patch, -alsa-lib-1.0.11-r1.ebuild:
+  Remove old versions.
 
   23 Jan 2007; Jeroen Roovers <jer@gentoo.org> alsa-lib-1.0.14_rc1.ebuild:
   Stable for HPPA (bug #158678).
