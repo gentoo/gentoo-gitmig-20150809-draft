@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6753 2007/02/04 15:44:58 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6754 2007/02/04 17:13:00 george Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# George Shapovalov <george@gentoo.org> (04 Feb 2007)
+# masked, pending removal, does not support new gnat compilers,
+# likele does not build anyway. dev-ada/glade is  a substitute
+dev-ada/garlic
 
 # Daniel Drake <dsd@gentoo.org> (04 Feb 2007)
 # unmaintained here, dead upstream; masked for removal on Feb 17th
