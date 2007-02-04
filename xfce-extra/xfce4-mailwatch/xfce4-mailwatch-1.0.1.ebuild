@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mailwatch/xfce4-mailwatch-1.0.1.ebuild,v 1.5 2007/02/03 21:48:36 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mailwatch/xfce4-mailwatch-1.0.1.ebuild,v 1.6 2007/02/04 18:56:30 nichoj Exp $
 
 inherit xfce44
 
-xfce44_beta
+xfce44
 xfce44_panel_plugin
 
 DESCRIPTION="Xfce4 mail notification panel plugin"
