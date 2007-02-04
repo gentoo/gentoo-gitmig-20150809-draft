@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/thunar-media-tags
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-media-tags/ChangeLog,v 1.3 2007/02/04 05:26:25 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-media-tags/ChangeLog,v 1.4 2007/02/04 19:43:26 chainsaw Exp $
+
+  04 Feb 2007; Tony Vroon <chainsaw@gentoo.org>
+  thunar-media-tags-0.1.2.ebuild:
+  Add ~ppc64 keyword. Tested on 64UL (GCC 4.1.1).
 
   04 Feb 2007; Joshua Nichols <nichoj@gentoo.org>
   thunar-media-tags-0.1.2.ebuild:
