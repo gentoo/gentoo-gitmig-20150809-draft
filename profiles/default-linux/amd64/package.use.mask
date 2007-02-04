@@ -62,6 +62,7 @@ media-tv/xdtv -mmx
 media-plugins/vdr-softdevice -mmx -mmxext
 dev-libs/openssl -sse2
 media-libs/libsoundtouch -sse
+>=media-libs/imlib2-1.2.2.001 -mmx
 
 # Jan 14th 2007; blubb@gentoo.org
 # bug 136853: We'd need aspell in emul-libs to make this flag useful
