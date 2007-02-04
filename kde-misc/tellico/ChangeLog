@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/tellico
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.55 2007/02/04 19:33:47 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.56 2007/02/04 19:36:42 beandog Exp $
+
+  04 Feb 2007; Steve Dibb <beandog@gentoo.org> metadata.xml:
+  Update maintainer
 
 *tellico-1.2.8 (04 Feb 2007)
 
