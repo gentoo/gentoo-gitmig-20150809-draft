@@ -1,12 +1,32 @@
-MD5 23e4f44f9dc7f48b3955aa7afa562df8 gkrellm-bgchanger-0.1.2.ebuild 797
-MD5 de35d8f600d3d75d8075a8d848787013 metadata.xml 223
-MD5 cabf00dacdad9f3b3116777c433a0f96 gkrellm-bgchanger-0.0.4-r1.ebuild 750
-MD5 8dc32041078ae147b93df80cd5b8cdc2 ChangeLog 1738
+DIST gkrellmbgchg2-0.1.0.tar.gz 10003
+DIST gkrellmbgchg2-0.1.2.tar.gz 11431
+DIST gkrellmbgchg2-0.1.7.tar.gz 16743 RMD160 a80ef6797a3e11c0047a1b9b063e594cbaa38d2e SHA1 8757de261227ce564c3a701a781b0013695e9ec5 SHA256 e1872d7a336a348a3ad62ac68744836d5e38fa3d5af180b95354738278e529d5
+EBUILD gkrellm-bgchanger-0.1.0.ebuild 767 RMD160 6dc4e62216196b9217254d0915bd24181a67a865 SHA1 f9ffb7735171fb72f3815eafad3c82e24b27ed92 SHA256 36d799e414cc5950d1fe1e0aa0b92c92f461360dab46809cfa5de455eac2a7a4
 MD5 a6676364c22e07b8bcb916dcaeb09524 gkrellm-bgchanger-0.1.0.ebuild 767
-MD5 7de90264d9b99bfd592fe92171d93d9b gkrellm-bgchanger-0.0.9.ebuild 760
-MD5 0e3785ed199ca1387385aa8bdebed1b4 gkrellm-bgchanger-0.0.8.ebuild 761
-MD5 6fef03f8c3e46cbc98399f67da5e847f files/digest-gkrellm-bgchanger-0.0.8 69
-MD5 bdad4dc3616d5aabd89e322f3219ac05 files/digest-gkrellm-bgchanger-0.0.4-r1 68
-MD5 790237b61f85b9be44f90057871b0636 files/digest-gkrellm-bgchanger-0.0.9 69
-MD5 b2d1066375450fa477bd730196b9e6e7 files/digest-gkrellm-bgchanger-0.1.2 70
+RMD160 6dc4e62216196b9217254d0915bd24181a67a865 gkrellm-bgchanger-0.1.0.ebuild 767
+SHA256 36d799e414cc5950d1fe1e0aa0b92c92f461360dab46809cfa5de455eac2a7a4 gkrellm-bgchanger-0.1.0.ebuild 767
+EBUILD gkrellm-bgchanger-0.1.2.ebuild 797 RMD160 8bd33880bb376320049bac75723f892e917310c1 SHA1 6fd5da5e2b06a50c546d071350145739b226ce29 SHA256 c19e8deb0f3153ddbf2c0f51bbc8b30f60c1254282238b35644304596d9d979a
+MD5 23e4f44f9dc7f48b3955aa7afa562df8 gkrellm-bgchanger-0.1.2.ebuild 797
+RMD160 8bd33880bb376320049bac75723f892e917310c1 gkrellm-bgchanger-0.1.2.ebuild 797
+SHA256 c19e8deb0f3153ddbf2c0f51bbc8b30f60c1254282238b35644304596d9d979a gkrellm-bgchanger-0.1.2.ebuild 797
+EBUILD gkrellm-bgchanger-0.1.7.ebuild 800 RMD160 946814e02bbd9055538da6e5f79857d9f50e157d SHA1 d67db94dabfb25f33546340829cb668f22331e7c SHA256 36f0044b9b2106e6e3cb0c14213b632f86f0391a29581f98153bd28ef7895d5b
+MD5 d248814da630811c5df48e68a76953d4 gkrellm-bgchanger-0.1.7.ebuild 800
+RMD160 946814e02bbd9055538da6e5f79857d9f50e157d gkrellm-bgchanger-0.1.7.ebuild 800
+SHA256 36f0044b9b2106e6e3cb0c14213b632f86f0391a29581f98153bd28ef7895d5b gkrellm-bgchanger-0.1.7.ebuild 800
+MISC ChangeLog 2053 RMD160 f78d33e2964722dbdfca613db2d7334080ba70a4 SHA1 a279509c20bcb6cc9b6d378af774b83a2584401b SHA256 82d23193f502b960683e15f962b7b2fef4d1790219f42f000e5e30876fea40bb
+MD5 2619b21e7d3af855af85bbc93b00fd6b ChangeLog 2053
+RMD160 f78d33e2964722dbdfca613db2d7334080ba70a4 ChangeLog 2053
+SHA256 82d23193f502b960683e15f962b7b2fef4d1790219f42f000e5e30876fea40bb ChangeLog 2053
+MISC metadata.xml 223 RMD160 13df98db6609a9a7ddffa345a64e3f08222ce1f9 SHA1 041466a94004d9e3c5aeeb568c77748745bcc35b SHA256 dbb0b5bf8c3292e19f54df0cca95ed2297622fa5abf48c6e835ee8ac2fcfdf70
+MD5 de35d8f600d3d75d8075a8d848787013 metadata.xml 223
+RMD160 13df98db6609a9a7ddffa345a64e3f08222ce1f9 metadata.xml 223
+SHA256 dbb0b5bf8c3292e19f54df0cca95ed2297622fa5abf48c6e835ee8ac2fcfdf70 metadata.xml 223
 MD5 cf0d0247faa74ae758e4258365c997e5 files/digest-gkrellm-bgchanger-0.1.0 70
+RMD160 bf1373951d8d6c7fa4f71f4a20e3758999ca070b files/digest-gkrellm-bgchanger-0.1.0 70
+SHA256 9d2264402051e2becc904af67c9954f28bff8ae881925670aec18ca6a08373a9 files/digest-gkrellm-bgchanger-0.1.0 70
+MD5 b2d1066375450fa477bd730196b9e6e7 files/digest-gkrellm-bgchanger-0.1.2 70
+RMD160 f51dff464f68676b277b18bde94b999cafe81ed2 files/digest-gkrellm-bgchanger-0.1.2 70
+SHA256 6f71d4c9ec2e1f24ac2c2471857ae49a7dcadc0dfd9e5e233f5cc776bd4f5e86 files/digest-gkrellm-bgchanger-0.1.2 70
+MD5 689acc9b074232c8ad0278078bac484b files/digest-gkrellm-bgchanger-0.1.7 256
+RMD160 30b25164b5ed8386268c7faa7dca106837bc0378 files/digest-gkrellm-bgchanger-0.1.7 256
+SHA256 ae0ddcebe746e9c2520787ddc06cb2401d474e25140ab7103d68a5401a8aa2c8 files/digest-gkrellm-bgchanger-0.1.7 256
