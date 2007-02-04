@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/gkrellm-plugins
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/ChangeLog,v 1.9 2006/11/18 05:21:39 compnerd Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/ChangeLog,v 1.10 2007/02/04 17:06:12 masterdriverz Exp $
+
+*gkrellm-plugins-2.0 (04 Feb 2007)
+
+  04 Feb 2007; Charlie Shepherd <masterdriverz@gentoo.org> +metadata.xml,
+  -gkrellm-plugins-1.2.11-r1.ebuild, +gkrellm-plugins-2.0.ebuild:
+  Kill old gkrellm-plugins and add new one; bug 151446
 
   18 Nov 2006; Saleem Abdulrasool <compnerd@gentoo.org>
   gkrellm-plugins-1.2.11-r1.ebuild:
