@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/asm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.35 2007/02/03 14:01:14 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.36 2007/02/04 15:04:39 nixnut Exp $
+
+  04 Feb 2007; nixnut <nixnut@gentoo.org> asm-1.4.3-r3.ebuild,
+  asm-1.5.2-r2.ebuild, asm-2.0-r1.ebuild:
+  Stable on ppc wrt bug 163641, 163642 and 163644
 
   03 Feb 2007; Steve Dibb <beandog@gentoo.org> asm-2.0-r1.ebuild:
   amd64 stable, bug 163644
