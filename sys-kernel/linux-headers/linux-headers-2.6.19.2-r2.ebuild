@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.19.2-r2.ebuild,v 1.1 2007/01/28 23:55:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.19.2-r2.ebuild,v 1.2 2007/02/04 22:28:57 vapier Exp $
 
 ETYPE="headers"
 H_SUPPORTEDARCH="alpha amd64 arm cris hppa m68k mips ia64 ppc ppc64 s390 sh sparc x86"
 inherit kernel-2
 detect_version
 
-PATCH_VER="3"
+PATCH_VER="4"
 SRC_URI="mirror://gentoo/gentoo-headers-base-${PV}.tar.bz2"
 [[ -n ${PATCH_VER} ]] && SRC_URI="${SRC_URI} mirror://gentoo/gentoo-headers-${PV}-${PATCH_VER}.tar.bz2"
 
