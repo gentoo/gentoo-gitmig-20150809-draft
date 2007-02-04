@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/madplay-0.15.2b.ebuild,v 1.20 2007/02/04 18:01:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/madplay-0.15.2b-r1.ebuild,v 1.1 2007/02/04 18:01:54 aballier Exp $
 
 inherit eutils
 
@@ -10,8 +10,8 @@ SRC_URI="mirror://sourceforge/mad/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 -mips ppc ppc64 sparc x86 ~ppc-macos"
-IUSE="debug nls esd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 -mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
+IUSE="debug nls esd alsa"
 
 #	~media-libs/libmad-${PV}
 #	~media-libs/libid3tag-${PV}
@@ -20,6 +20,7 @@ IUSE="debug nls esd"
 
 RDEPEND="esd? ( media-sound/esound )
 	~media-libs/libmad-0.15.1b
+	alsa? ( media-libs/alsa-lib )
 	~media-libs/libid3tag-0.15.1b"
 DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.11.2 )"
@@ -32,10 +33,17 @@ src_unpack() {
 }
 
 src_compile() {
+	# configure will bail out if both esd and alsa are enabled
+	local myconf
+	use alsa && myconf="--with-alsa --without-esd"
+	use esd && myconf="--without-alsa --with-esd"
+	use alsa || use esd || myconf="--without-alsa --without-esd"
+
+
 	econf \
 		$(use_enable nls) \
 		$(use_enable debug debugging) \
-		$(use_with esd) \
+		${myconf} \
 		|| die "configure failed"
 	emake || die "make failed"
 }
