@@ -1,8 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/caps/caps-20060612.ebuild,v 1.4 2006/09/09 22:47:30 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/caps/caps-20060612.ebuild,v 1.5 2007/02/04 18:32:15 blubb Exp $
 
-inherit eutils
+use amd64 && ABI=x86
+inherit eutils multilib
 
 DESCRIPTION="Support library that allows third party applications access and use C.A.P.S. images"
 HOMEPAGE="http://www.softpres.org/"
@@ -15,7 +16,7 @@ LICENSE="CAPS"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="doc"
-RESTRICT="strip"
+RESTRICT="nostrip"
 
 S="${WORKDIR}"
 
@@ -36,7 +37,7 @@ src_install() {
 			eerror "Unsupported platform"
 			;;
 	esac
-	dosym /usr/lib/libcapsimage.so.2.0 /usr/lib/libcapsimage.so.2
+	dosym /usr/$(get_libdir)/libcapsimage.so.2.0 /usr/$(get_libdir)/libcapsimage.so.2
 
 	insinto /usr/share/${PN}
 	doins OCS_13_1Mb_800_600.uae
