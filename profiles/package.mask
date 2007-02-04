@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6756 2007/02/04 19:09:41 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6757 2007/02/04 19:11:38 markusle Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Markus Dittrich <markusle@gentoo.org> (04 Feb 2007)
+# masked for a few days to give the new test routines
+# a spin (see bug #157410)
+=sci-libs/lapack-reference-3.1.0
 
 # George Shapovalov <george@gentoo.org> (04 Feb 2007)
 # masked, pending removal, does not support new gnat compilers,
