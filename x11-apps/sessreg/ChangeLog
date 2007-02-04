@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/sessreg
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/sessreg/ChangeLog,v 1.27 2007/01/13 00:05:27 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/sessreg/ChangeLog,v 1.28 2007/02/04 18:33:01 joshuabaergen Exp $
+
+  04 Feb 2007; Joshua Baergen <joshuabaergen@gentoo.org>
+  sessreg-1.0.0.ebuild, sessreg-1.0.2.ebuild:
+  Drop mirroring restriction.  Thanks to Zhang Le of bug #163088.
 
   13 Jan 2007; Joshua Baergen <joshuabaergen@gentoo.org>
   sessreg-1.0.0.ebuild, sessreg-1.0.2.ebuild:

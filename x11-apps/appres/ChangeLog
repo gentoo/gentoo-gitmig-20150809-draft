@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/appres
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/appres/ChangeLog,v 1.23 2007/01/25 03:49:12 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/appres/ChangeLog,v 1.24 2007/02/04 18:32:27 joshuabaergen Exp $
+
+  04 Feb 2007; Joshua Baergen <joshuabaergen@gentoo.org>
+  appres-1.0.0.ebuild:
+  Drop mirroring restriction.  Thanks to Zhang Le of bug #163088.
 
 *appres-1.0.1 (25 Jan 2007)
 
