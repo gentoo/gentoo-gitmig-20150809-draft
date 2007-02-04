@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/alsa-headers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/ChangeLog,v 1.119 2007/01/25 18:53:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/ChangeLog,v 1.120 2007/02/04 23:53:53 flameeyes Exp $
+
+*alsa-headers-1.0.14_rc2_p3234 (04 Feb 2007)
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +alsa-headers-1.0.14_rc2_p3234.ebuild:
+  Add a new snapshot required for kernel 2.6.20.
 
   25 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   alsa-headers-9999.ebuild:
