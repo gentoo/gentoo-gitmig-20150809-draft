@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/java-sdk-docs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.44 2007/02/02 23:37:34 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.45 2007/02/04 23:40:09 caster Exp $
+
+*java-sdk-docs-1.6.0-r1 (04 Feb 2007)
+
+  04 Feb 2007; Vlastimil Babka <caster@gentoo.org>
+  +java-sdk-docs-1.6.0-r1.ebuild:
+  Revbump for upstream distfile change. Reported by Akos Ladanyi
+  <ladanyi@tmit.bme.hu> in bug #67266.
 
   02 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
   -java-sdk-docs-1.2.2.006.ebuild, -java-sdk-docs-1.3.1.ebuild:
