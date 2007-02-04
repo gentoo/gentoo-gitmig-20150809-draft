@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/dasher
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.87 2007/02/03 22:00:11 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.88 2007/02/04 09:02:38 corsair Exp $
+
+  04 Feb 2007; Markus Rothe <corsair@gentoo.org> dasher-4.2.2.ebuild:
+  Stable on ppc64; bug #164978
 
   03 Feb 2007; Andrej Kacian <ticho@gentoo.org> dasher-4.2.2.ebuild:
   Stable on x86, bug #164978.
