@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-2.3.1.ebuild,v 1.3 2006/12/25 20:02:52 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-2.3.1.ebuild,v 1.4 2007/02/04 23:34:22 beandog Exp $
 
 inherit multilib elisp-common flag-o-matic eutils toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnu.org/software/smalltalk/smalltalk.html"
 SRC_URI="http://ftp.gnu.org/gnu/smalltalk/smalltalk-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~sparc ~x86 ~amd64"
+KEYWORDS="amd64 ~sparc ~x86"
 IUSE="tk readline emacs gtk gmp"
 
 DEPEND="sys-libs/gdbm
@@ -19,7 +19,6 @@ DEPEND="sys-libs/gdbm
 	tk? ( dev-lang/tk )
 	gtk? ( =x11-libs/gtk+-2* )
 	gmp? ( dev-libs/gmp )"
-RDEPEND=""
 
 S=${WORKDIR}/smalltalk-${PV}
 
