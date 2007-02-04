@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.131 2007/02/04 15:48:28 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.132 2007/02/04 16:33:02 eroyf Exp $
+
+  04 Feb 2007; Alexander H. Færøy <eroyf@gentoo.org>
+  gkrellm-2.2.9-r1.ebuild:
+  Stable on MIPS; bug #140955
 
   04 Feb 2007; Charlie Shepherd <masterdriverz@gentoo.org>
   -gkrellm-1.2.13.ebuild:
