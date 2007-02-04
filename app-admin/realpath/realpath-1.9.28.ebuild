@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/realpath/realpath-1.9.28.ebuild,v 1.3 2006/04/20 20:10:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/realpath/realpath-1.9.28.ebuild,v 1.4 2007/02/04 01:56:12 dirtyepic Exp $
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Return the canonicalized absolute pathname"
 HOMEPAGE="http://packages.debian.org/unstable/utils/realpath.html"
@@ -31,6 +33,11 @@ src_unpack() {
 	else
 		unpack ${A}
 	fi
+
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-Makefile.patch
+
+	sed -i -e "s:gcc:$(tc-getCC):" Makefile || die "sed failed."
 }
 
 src_compile() {
