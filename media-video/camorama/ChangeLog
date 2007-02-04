@@ -1,6 +1,9 @@
 # ChangeLog for media-video/camorama
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/ChangeLog,v 1.10 2006/11/29 09:00:58 zzam Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/ChangeLog,v 1.11 2007/02/04 00:41:07 drac Exp $
+
+  04 Feb 2007; Samuli Suominen <drac@gentoo.org> camorama-0.18.ebuild:
+  Reordering depends. Closing bug 165141.
 
   29 Nov 2006; Matthias Schwarzott <zzam@gentoo.org> camorama-0.18.ebuild:
   Now depend on gtk+-2.10 instead of gtk-2.0, thanks to Philip Allison
