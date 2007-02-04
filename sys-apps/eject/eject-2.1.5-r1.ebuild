@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.1.5-r1.ebuild,v 1.2 2007/02/03 15:58:23 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.1.5-r1.ebuild,v 1.3 2007/02/04 23:13:58 vapier Exp $
 
 inherit eutils
 
@@ -25,6 +25,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}"-2.0.13-xmalloc.patch
 	epatch "${FILESDIR}/${PN}"-2.1.4-scsi-rdwr.patch
 	epatch "${FILESDIR}/${PN}"-2.1.5-handle-spaces.patch #151257
+	epatch "${FILESDIR}/${PN}"-2.1.5-man-typo.patch #165248
 }
 
 src_compile() {
@@ -33,6 +34,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc ChangeLog README PORTING TODO AUTHORS NEWS PROBLEMS
 }
