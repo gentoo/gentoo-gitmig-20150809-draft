@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/mailody
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailody/ChangeLog,v 1.7 2007/01/27 18:54:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailody/ChangeLog,v 1.8 2007/02/04 01:39:03 flameeyes Exp $
+
+*mailody-0.4.0 (04 Feb 2007)
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/mailody-0.4.0_rc1-fix-parsing.patch, -mailody-0.4.0_rc1.ebuild,
+  -mailody-0.4.0_rc2.ebuild, +mailody-0.4.0.ebuild:
+  Version bump and remove rcs.
 
 *mailody-0.4.0_rc2 (27 Jan 2007)
 
