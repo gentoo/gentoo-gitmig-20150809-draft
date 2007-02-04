@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/exaile
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.1 2007/02/04 09:02:01 drac Exp $
+
+*exaile-0.2.8 (04 Feb 2007)
+
+  04 Feb 2007; <drac@gentoo.org> +exaile-0.2.8.ebuild:
+  New ebuild for bug 134865 from Sunrise Overlay. Thanks to Tiziano M., Juan
+  A. and Santiago M.
+
