@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/savedconfig.eclass,v 1.1 2007/02/04 13:43:34 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/savedconfig.eclass,v 1.2 2007/02/04 20:23:28 dragonheart Exp $
 
 # Original Author: Daniel Black <dragonheart@gentoo.org>
 #
@@ -11,9 +11,6 @@
 # TODO
 #
 # - Move away from cp --parents because BSD doesn't like it
-
-# Should I be using: $PORTAGE_CONFIGROOT ???? Whatever it means, whereever it is
-# documented.
 
 IUSE="savedconfig"
 
@@ -36,19 +33,19 @@ save_config() {
 		0) die "Tell me what to save"
 		    ;;
 		1) if [[ -f "$1" ]]; then
-				dodir /etc/portage/savedconfig/${CATEGORY}
-				cp "$1" "${D}"/etc/portage/savedconfig/${CATEGORY}/${PF} \
+				dodir "${PORTAGE_CONFIGROOT}"/etc/portage/savedconfig/${CATEGORY}
+				cp "$1" "${D}/${PORTAGE_CONFIGROOT}"/etc/portage/savedconfig/${CATEGORY}/${PF} \
 					|| die "Failed to save $1"
 			else
-				dodir /etc/portage/savedconfig/${CATEGORY}/${PF}
-				cp --parents -pPR "$1" "${D}"/etc/portage/savedconfig/${CATEGORY}/${PF} \
+				dodir "${PORTAGE_CONFIGROOT}"/etc/portage/savedconfig/${CATEGORY}/${PF}
+				cp --parents -pPR "$1" "${D}/${PORTAGE_CONFIGROOT}"/etc/portage/savedconfig/${CATEGORY}/${PF} \
 					|| die "Failed to save $1"
 			fi
 			;;
 		*)
-			dodir /etc/portage/savedconfig/${CATEGORY}/${PF}
+			dodir "${PORTAGE_CONFIGROOT}"/etc/portage/savedconfig/${CATEGORY}/${PF}
 			while [ "$1" ]; do
-				cp --parents -pPR "$1" "${D}"/etc/portage/savedconfig/${CATEGORY}/${PF} \
+				cp --parents -pPR "$1" "${D}/${PORTAGE_CONFIGROOT}"/etc/portage/savedconfig/${CATEGORY}/${PF} \
 					|| die "Failed to save $1"
 				shift
 			done
@@ -64,15 +61,15 @@ save_config() {
 # save_config. Otherwise it restores the directory structure.
 #
 # Looks for config files in the following order.
-# ${ROOT}/etc/portage/savedconfig/${CTARGET}/${CATEGORY}/${PF}
-# ${ROOT}/etc/portage/savedconfig/${CHOST}/${CATEGORY}/${PF}
-# ${ROOT}/etc/portage/savedconfig/${CATEGORY}/${PF}
-# ${ROOT}/etc/portage/savedconfig/${CTARGET}/${CATEGORY}/${P}
-# ${ROOT}/etc/portage/savedconfig/${CHOST}/${CATEGORY}/${P}
-# ${ROOT}/etc/portage/savedconfig/${CATEGORY}/${P}
-# ${ROOT}/etc/portage/savedconfig/${CTARGET}/${CATEGORY}/${PN}
-# ${ROOT}/etc/portage/savedconfig/${CHOST}/${CATEGORY}/${PN}
-# ${ROOT}/etc/portage/savedconfig/${CATEGORY}/${PN}
+# ${PORTAGE_CONFIGROOT}/etc/portage/savedconfig/${CTARGET}/${CATEGORY}/${PF}
+# ${PORTAGE_CONFIGROOT}/etc/portage/savedconfig/${CHOST}/${CATEGORY}/${PF}
+# ${PORTAGE_CONFIGROOT}/etc/portage/savedconfig/${CATEGORY}/${PF}
+# ${PORTAGE_CONFIGROOT}/etc/portage/savedconfig/${CTARGET}/${CATEGORY}/${P}
+# ${PORTAGE_CONFIGROOT}/etc/portage/savedconfig/${CHOST}/${CATEGORY}/${P}
+# ${PORTAGE_CONFIGROOT}/etc/portage/savedconfig/${CATEGORY}/${P}
+# ${PORTAGE_CONFIGROOT}/etc/portage/savedconfig/${CTARGET}/${CATEGORY}/${PN}
+# ${PORTAGE_CONFIGROOT}/etc/portage/savedconfig/${CHOST}/${CATEGORY}/${PN}
+# ${PORTAGE_CONFIGROOT}/etc/portage/savedconfig/${CATEGORY}/${PN}
 #
 #
 
@@ -86,7 +83,7 @@ restore_config() {
 		;;
 	esac
 	local found;
-	local base=${ROOT}/etc/portage/savedconfig
+	local base=${PORTAGE_CONFIGROOT}/etc/portage/savedconfig
 	for check in {${CATEGORY}/${PF},${CATEGORY}/${P},${CATEGORY}/${PN}}; do
 		configfile=${base}/${CTARGET}/${check}
 		[[ -r ${configfile} ]] || configfile=${base}/${CHOST}/${check} 
@@ -114,7 +111,7 @@ restore_config() {
 		die "do not know how to handle non-file/directory ${found}"
 	else
 		eerror "No saved config to restore - please remove USE=saveconfig or"
-		die "provide a configuration file in /etc/portage/savedconfig/${CATEGORY}/${PN}"
+		die "provide a configuration file in ${PORTAGE_CONFIGROOT}/etc/portage/savedconfig/${CATEGORY}/${PN}"
 	fi
 }
 
