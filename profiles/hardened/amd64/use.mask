@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.22 2007/01/18 15:08:06 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.23 2007/02/04 07:27:39 mr_bones_ Exp $
 
 # 2006/06/13 - Danny van Dyk <kugelfang@gentoo.org>
 # Mask clvm on amd64, as it isn't keyworded at all.
@@ -113,5 +113,5 @@ vidix
 # Unmask the flags for PHP that are available only on x86/amd64
 -oci8
 -oracle7
--firebird
+#-firebird - commented since firebird has been pushed back to ~amd64
 -db2
