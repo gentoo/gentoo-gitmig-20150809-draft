@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/slib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/ChangeLog,v 1.18 2007/02/02 16:41:55 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/ChangeLog,v 1.19 2007/02/04 17:25:57 nixnut Exp $
+
+  04 Feb 2007; nixnut <nixnut@gentoo.org> slib-3.1.1.ebuild:
+  Stable on ppc wrt bug 161781
 
   02 Feb 2007; Marijn Schouten <hkBst@gentoo.org> -slib-3.1.4-r1.ebuild:
   remove redundant ebuild
