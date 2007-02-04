@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/okle/okle-0.4.ebuild,v 1.9 2006/07/23 14:08:45 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/okle/okle-0.4.ebuild,v 1.10 2007/02/04 08:58:44 mr_bones_ Exp $
 
 inherit kde eutils
 
