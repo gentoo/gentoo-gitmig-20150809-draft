@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cfs/cfs-1.4.1.14.ebuild,v 1.5 2005/01/01 12:27:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cfs/cfs-1.4.1.14.ebuild,v 1.6 2007/02/04 19:16:12 masterdriverz Exp $
 
 inherit eutils
 
@@ -13,8 +13,8 @@ DEB_PV=${PV:6:2}
 DESCRIPTION="Cryptographic Filesystem"
 HOMEPAGE="http://packages.debian.org/unstable/utils/cfs
 	http://www.crypto.com/software/"
-SRC_URI="http://ftp.debian.org/debian/pool/main/c/cfs/cfs_${MY_PV}.orig.tar.gz
-	http://ftp.debian.org/debian/pool/main/c/cfs/cfs_${MY_PV}-${DEB_PV}.diff.gz"
+SRC_URI="mirror://debian/pool/main/c/cfs/cfs_${MY_PV}.orig.tar.gz
+	mirror://debian/pool/main/c/cfs/cfs_${MY_PV}-${DEB_PV}.diff.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
