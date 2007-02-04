@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6755 2007/02/04 19:08:06 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6756 2007/02/04 19:09:41 masterdriverz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -447,11 +447,6 @@ app-i18n/jmode
 # Removal 05 Feb 2007 (bug #159726)
 app-emacs/gnuplot-mode
 
-# Charlie Shepherd <masterdriverz@gentoo.org> (02 Jan 2007)
-# masking media-radio/ax25-tools for treecleaners, bug(s) 97275
-# Pending removal Feb 2nd
-media-radio/ax25-tools
-
 # Doug Goldstein <cardoe@gentoo.org> (31 Dec 2006)
 # Masked for testing
 >x11-libs/cairo-1.3.10
@@ -509,11 +504,6 @@ dev-python/pyxfce
 xfce-extra/thunar-archive
 xfce-extra/thunar-media-tags
 xfce-extra/thunar-volman
-
-# Charlie Shepherd <masterdriverz@gentoo.org> (13 Dec 2006)
-# pending removal Jan 13 2007(bug 156608)
-# Homepage returns 404 and RESTRICT="nomirror"
-kde-misc/styleclock
 
 # Daniel Drake <dsd@gentoo.org> (12 Dec 2006)
 # Broken again with new kernel release, no maintainer, no upstream
