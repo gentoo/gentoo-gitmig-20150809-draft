@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery/xfce4-battery-0.5.0.ebuild,v 1.3 2007/01/29 19:50:49 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery/xfce4-battery-0.5.0.ebuild,v 1.4 2007/02/04 05:33:52 nichoj Exp $
 
 inherit eutils xfce44
 
-xfce44_beta
+xfce44
 xfce44_goodies_panel_plugin
 
 DESCRIPTION="Battery status panel plugin"
