@@ -12,10 +12,6 @@ EBUILD xfce-utils-4.2.3.ebuild 740 RMD160 89f5c1ad5599352b213fef2bc1e1ebace4259f
 MD5 b2ff51954dccba26cf711ce62eb22dfb xfce-utils-4.2.3.ebuild 740
 RMD160 89f5c1ad5599352b213fef2bc1e1ebace4259f9e xfce-utils-4.2.3.ebuild 740
 SHA256 6c4e904b45f9c0c470b5ce4e2766ab134e07a014ac814cb3bc1b29c29586158e xfce-utils-4.2.3.ebuild 740
-EBUILD xfce-utils-4.4.0-r1.ebuild 949 RMD160 1cb905aa6d47f06624379a8937d6cf7f0be45adc SHA1 5d279713199a2f30a4c43135430cbd08441b8c42 SHA256 5e059e077b02225f5d3c0b57028944bd6d1927e13523a5fd00209d95cd8601f7
-MD5 abd3106f0ab6760129e20bf40bc1f842 xfce-utils-4.4.0-r1.ebuild 949
-RMD160 1cb905aa6d47f06624379a8937d6cf7f0be45adc xfce-utils-4.4.0-r1.ebuild 949
-SHA256 5e059e077b02225f5d3c0b57028944bd6d1927e13523a5fd00209d95cd8601f7 xfce-utils-4.4.0-r1.ebuild 949
 EBUILD xfce-utils-4.4.0-r2.ebuild 954 RMD160 17d5d8a7960a7b1eb3af3c704b69dc46409b1188 SHA1 119f643833e5cb3662642f3fe21561ec67fc2d72 SHA256 1ef649b4ea18a3796bf367afa4b807609f89e392c20b26f4920766694c95534d
 MD5 50fa89e6617b341c39d4959d6f32b022 xfce-utils-4.4.0-r2.ebuild 954
 RMD160 17d5d8a7960a7b1eb3af3c704b69dc46409b1188 xfce-utils-4.4.0-r2.ebuild 954
@@ -31,9 +27,6 @@ SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata
 MD5 3658895694b52336bc11aa5e7a370f1a files/digest-xfce-utils-4.2.3 253
 RMD160 0ed7c4873a0249cd6849000fde35d434026ad6cd files/digest-xfce-utils-4.2.3 253
 SHA256 8fe6300e1ebc7c0212f2b10e66a8c4c1cdb05f1cfc2c558ba91c002336fe42ac files/digest-xfce-utils-4.2.3 253
-MD5 647e6fbc8e329f415a2b8c434d4e3970 files/digest-xfce-utils-4.4.0-r1 253
-RMD160 6bcf776bab98f4c2a6a81425a1ccf5bcda4ae6ae files/digest-xfce-utils-4.4.0-r1 253
-SHA256 ce45e806ecb968c9c13e4ef00b768a7bea71f0a9f46c2b6c246d739fa5bab939 files/digest-xfce-utils-4.4.0-r1 253
 MD5 647e6fbc8e329f415a2b8c434d4e3970 files/digest-xfce-utils-4.4.0-r2 253
 RMD160 6bcf776bab98f4c2a6a81425a1ccf5bcda4ae6ae files/digest-xfce-utils-4.4.0-r2 253
 SHA256 ce45e806ecb968c9c13e4ef00b768a7bea71f0a9f46c2b6c246d739fa5bab939 files/digest-xfce-utils-4.4.0-r2 253
