@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.53 2007/02/03 01:39:58 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.54 2007/02/04 06:57:15 drac Exp $
 
 # Michael Marineau <marineam@gentoo.org>
 # Requires Linux 2.6.19
@@ -143,6 +143,10 @@ x11-plugins/compiz-extra
 # Luis Medinas <metalgod@gentoo.org>
 # Mask because it needs hal
 app-cdr/brasero
+
+# Samuli Suominen <drac@gentoo.org>
+# Mask because it needs hal
+xfce-extra/thunar-volman
 
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # New toys enabled by 2.6 headers
