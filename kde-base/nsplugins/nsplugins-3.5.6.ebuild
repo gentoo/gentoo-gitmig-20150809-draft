@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/nsplugins-3.5.6.ebuild,v 1.2 2007/01/19 00:43:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/nsplugins-3.5.6.ebuild,v 1.3 2007/02/04 08:21:14 mr_bones_ Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
