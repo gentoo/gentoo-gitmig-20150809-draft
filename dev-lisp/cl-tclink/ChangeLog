@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-tclink
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tclink/ChangeLog,v 1.8 2005/05/24 18:48:36 mkennedy Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tclink/ChangeLog,v 1.9 2007/02/04 01:18:09 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   24 May 2005; <mkennedy@gentoo.org> cl-tclink-3.3.1-r1.ebuild:
   Keywording ~sparc

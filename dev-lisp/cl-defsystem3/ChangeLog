@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-defsystem3
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-defsystem3/ChangeLog,v 1.18 2006/01/02 17:08:51 mkennedy Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-defsystem3/ChangeLog,v 1.19 2007/02/04 00:56:33 flameeyes Exp $
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   02 Jan 2006; Matthew Kennedy <mkennedy@gentoo.org>
   cl-defsystem3-3.3i-r5.ebuild:
