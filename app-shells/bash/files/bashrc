@@ -25,7 +25,7 @@ shopt -s histappend
 
 # Change the window title of X terminals 
 case ${TERM} in
-	xterm*|rxvt*|Eterm|aterm|kterm|gnome)
+	xterm*|rxvt*|Eterm|aterm|kterm|gnome*)
 		PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}\007"'
 		;;
 	screen)
@@ -37,7 +37,7 @@ use_color=false
 #BSD#@# BSD doesn't typically come with dircolors so we need
 #BSD#@# to hardcode some terminals in here.
 #BSD#@case ${TERM} in
-#BSD#@	xterm*|rxvt*|Eterm|aterm|kterm|gnome|screen|cons25) use_color=true;;
+#BSD#@	xterm*|rxvt*|Eterm|aterm|kterm|gnome*|screen|cons25) use_color=true;;
 #BSD#@esac
 
 # Set colorful PS1 only on colorful terminals.
