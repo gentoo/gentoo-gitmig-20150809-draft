@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/ruby-inline
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inline/ChangeLog,v 1.1 2007/02/04 04:10:05 pclouds Exp $
+
+*ruby-inline-3.6.2 (04 Feb 2007)
+
+  04 Feb 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org> +metadata.xml,
+  +ruby-inline-3.6.2.ebuild:
+  Initial ebuild by Guillaume Benny <guillaume.benny@sympatico.ca>, #147065
+
