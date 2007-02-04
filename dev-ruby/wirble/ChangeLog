@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/wirble
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wirble/ChangeLog,v 1.1 2007/02/04 03:37:29 pclouds Exp $
+
+*wirble-0.1.2 (04 Feb 2007)
+
+  04 Feb 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  +wirble-0.1.2.ebuild:
+  Initial ebuild by Armando Di Cianno <armando@goodship.net>, #163492
+
