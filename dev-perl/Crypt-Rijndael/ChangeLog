@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Crypt-Rijndael
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Rijndael/ChangeLog,v 1.11 2007/01/13 22:41:11 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Rijndael/ChangeLog,v 1.12 2007/02/04 23:04:38 mcummings Exp $
+
+*Crypt-Rijndael-1.02 (04 Feb 2007)
+
+  04 Feb 2007; Michael Cummings <mcummings@gentoo.org>
+  +Crypt-Rijndael-1.02.ebuild:
+  Version bump
 
 *Crypt-Rijndael-1.01 (13 Jan 2007)
 
