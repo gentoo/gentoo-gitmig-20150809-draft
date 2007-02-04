@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/iputils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.48 2007/02/04 09:25:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.49 2007/02/04 14:13:51 nixnut Exp $
+
+  04 Feb 2007; nixnut <nixnut@gentoo.org> iputils-20060512.ebuild:
+  Stable on ppc wrt bug 165179
 
   04 Feb 2007; Markus Rothe <corsair@gentoo.org> iputils-20060512.ebuild:
   Added ~ppc64; bug #165179
