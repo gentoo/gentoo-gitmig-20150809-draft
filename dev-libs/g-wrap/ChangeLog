@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/g-wrap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.37 2007/02/02 20:24:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.38 2007/02/04 13:48:14 hkbst Exp $
+
+  04 Feb 2007; Marijn Schouten <hkBst@gentoo.org> g-wrap-1.9.6-r1.ebuild:
+  add check for deprecated use flag for guile-1.8*, bug 165156
 
   02 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   g-wrap-1.9.7-r2.ebuild:
