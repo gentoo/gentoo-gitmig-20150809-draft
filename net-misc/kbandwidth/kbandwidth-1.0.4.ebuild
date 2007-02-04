@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kbandwidth/kbandwidth-1.0.4.ebuild,v 1.3 2006/06/07 05:06:39 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kbandwidth/kbandwidth-1.0.4.ebuild,v 1.4 2007/02/04 08:27:11 mr_bones_ Exp $
 
 inherit kde
 
