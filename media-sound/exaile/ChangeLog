@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/exaile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.1 2007/02/04 09:02:01 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.2 2007/02/04 09:42:18 drac Exp $
+
+  04 Feb 2007; <drac@gentoo.org> exaile-0.2.8.ebuild:
+  Removed some extra tabs and whitespacing.
 
 *exaile-0.2.8 (04 Feb 2007)
 
