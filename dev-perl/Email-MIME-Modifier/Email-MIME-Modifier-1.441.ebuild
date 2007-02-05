@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-Modifier/Email-MIME-Modifier-1.441.ebuild,v 1.1 2007/02/05 19:58:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-Modifier/Email-MIME-Modifier-1.441.ebuild,v 1.2 2007/02/05 20:02:04 mcummings Exp $
 
 inherit perl-module
 
-DESCRIPTION="No description available"
+DESCRIPTION="Modify Email::MIME Objects Easily"
 HOMEPAGE="http://search.cpan.org/~rjbs/"
 SRC_URI="mirror://cpan/authors/id/R/RJ/RJBS/${P}.tar.gz"
 
