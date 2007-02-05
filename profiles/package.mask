@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6765 2007/02/05 12:20:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6766 2007/02/05 17:11:41 antarus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Alec Warner <antarus@gentoo.org> (05 Feb 2007)
+# Masked to security problems, use 1.23-r1 until I fix it
+>=app-admin/ulogd-1.24
 
 # Raúl Porcel <armin76@gentoo.org> (05 Feb 2007)
 # Masked, pending removal 04 Mar 2007, unsupported and vulnerable
