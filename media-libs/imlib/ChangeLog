@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/imlib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.40 2007/01/19 21:37:57 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.41 2007/02/05 19:27:27 drac Exp $
+
+*imlib-1.9.15-r1 (05 Feb 2007)
+
+  05 Feb 2007; Samuli Suominen <drac@gentoo.org> +files/imlib-1.9.15.patch,
+  +files/imlib-security.patch, +imlib-1.9.15-r1.ebuild:
+  Fix fix for 3425, sed call was outdated. Remove USE static. Fix autotools
+  handling. Fix documentation installation. Clean up.
 
   19 Jan 2007; Daniel Gryniewicz <dang@gentoo.org> metadata.xml:
   Gnome herd doesn't want to maintain this anymore

@@ -1,0 +1,47 @@
+diff -ur imlib-1.9.15.orig/configure.in imlib-1.9.15/configure.in
+--- imlib-1.9.15.orig/configure.in	2004-09-23 04:13:45.000000000 +0300
++++ imlib-1.9.15/configure.in	2007-02-05 20:10:48.000000000 +0200
+@@ -17,10 +17,20 @@
+ dnl incase it is broken for example.
+ AC_ARG_ENABLE(shm, [  --enable-shm            support shared memory if available [default=yes]], echo $enable_shm, enable_shm="yes")
+ 
+-AM_PATH_GTK(1.2.1,[
+-  GDK_IMLIB="gdk_imlib utils"],[
+-  GDK_IMLIB="" 
+-  AC_MSG_WARN([*** gdk_imlib will not be built ***])])
++AC_ARG_ENABLE(gdk, [  --enable-gdk            enable gdk_imlib compilation [default=yes]],[
++  if test x$enableval = xyes; then
++    disable_gdk="no"
++  else
++    disable_gdk="yes"
++  fi],disable_gdk=no)
++
++if test x$disable_gdk = xno; then
++  AC_MSG_RESULT(no)
++  GDK_IMLIB="gdk_imlib utils"
++else
++  AC_MSG_RESULT(yes)
++  GDK_IMLIB=""
++fi
+ 
+ AC_MSG_CHECKING(whether to build gmodulized imlib)
+ 
+diff -ur imlib-1.9.15.orig/imlib-config.in imlib-1.9.15/imlib-config.in
+--- imlib-1.9.15.orig/imlib-config.in	2004-08-27 19:03:11.000000000 +0300
++++ imlib-1.9.15/imlib-config.in	2007-02-05 20:59:43.000000000 +0200
+@@ -46,15 +46,9 @@
+       echo @VERSION@
+       ;;
+     --cflags)
+-      if test @includedir@ != /usr/include ; then
+-        includes=-I@includedir@
+-      fi
+       echo $includes @X_CFLAGS@ 
+       ;;
+     --cflags-gdk)
+-      if test @includedir@ != /usr/include ; then
+-        includes=-I@includedir@
+-      fi
+       echo `@GTK_CONFIG@ --cflags` $includes @X_CFLAGS@
+       ;;
+     --libs)
