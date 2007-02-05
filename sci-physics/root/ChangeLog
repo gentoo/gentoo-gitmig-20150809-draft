@@ -1,6 +1,14 @@
 # ChangeLog for sci-physics/root
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.4 2006/11/23 20:05:43 vivo Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.5 2007/02/05 16:04:09 bicatali Exp $
+
+*root-5.14.00b (05 Feb 2007)
+
+  05 Feb 2007; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
+  +root-5.14.00b.ebuild:
+  Major version bump, with a lot of changes in ebuild. LICENSE changed.
+  Closing bugs #34415, #98235, #109307. Thanks for everyone in bug #109307 
+  for testing.
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> root-3.05.04.ebuild,
   root-3.10.02-r1.ebuild, root-4.02.00.ebuild:
