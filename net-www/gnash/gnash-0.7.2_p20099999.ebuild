@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.2_p20099999.ebuild,v 1.5 2007/01/31 18:12:53 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.2_p20099999.ebuild,v 1.6 2007/02/05 13:24:47 genstef Exp $
 
 WANT_AUTOCONF=latest
 inherit nsplugins autotools cvs kde-functions
@@ -8,7 +8,7 @@ set-kdedir
 
 DESCRIPTION="Gnash is a GNU Flash movie player that supports many SWF v7 features"
 HOMEPAGE="http://www.gnu.org/software/gnash"
-#SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${PV}/${P}.tar.bz2"
+#SRC_URI="mirror://gnu/${PN}/${PV}/${P}.tar.bz2"
 ECVS_SERVER="cvs.sv.gnu.org:/sources/${PN}"
 ECVS_MODULE="${PN}"
 [ "${PV/0.7.2_p}" != "20099999" ] && ECVS_CO_OPTS="-D ${PV/0.7.2_p}"
