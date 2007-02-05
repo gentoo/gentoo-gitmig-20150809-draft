@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmbups/gkrellmbups-2.0.2.ebuild,v 1.3 2007/02/05 15:59:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmbups/gkrellmbups-2.0.2.ebuild,v 1.4 2007/02/05 16:04:00 armin76 Exp $
 
 IUSE=""
 DESCRIPTION="GKrellM2 Belkin UPS monitor Plugin"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.starforge.co.uk/gkrellm/gkrellmbups.shtml"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~ppc ~sparc x86"
 
 DEPEND="=app-admin/gkrellm-2*"
 
