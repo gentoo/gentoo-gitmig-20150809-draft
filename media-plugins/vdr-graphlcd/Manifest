@@ -25,6 +25,10 @@ AUX 0.1.4/graphlcd-0.1.4-span.diff 13307 RMD160 ad56e604871b0ad681b46d2efb8e4b93
 MD5 282df25630e2f3bf9212a6b73a9d9482 files/0.1.4/graphlcd-0.1.4-span.diff 13307
 RMD160 ad56e604871b0ad681b46d2efb8e4b934bddec8a files/0.1.4/graphlcd-0.1.4-span.diff 13307
 SHA256 20016c754c948664dd0fad53f70f68a5e9b95d1b8d14b9d0f959d664194d6876 files/0.1.4/graphlcd-0.1.4-span.diff 13307
+AUX 0.1.4/vdr-graphlcd-0.1.4-missing-include.patch 316 RMD160 099abb5f1cf7d6e81af41d6a3f5ab3ca029fd5b5 SHA1 bb48fddb12ab2dcb6a25789c9d6049951d73c369 SHA256 f5db943352b5cfb505e0a505659e267c9c046314c5006f53044e0abd7fe1b131
+MD5 afcb680c6883ff8f08d84a952a7270cc files/0.1.4/vdr-graphlcd-0.1.4-missing-include.patch 316
+RMD160 099abb5f1cf7d6e81af41d6a3f5ab3ca029fd5b5 files/0.1.4/vdr-graphlcd-0.1.4-missing-include.patch 316
+SHA256 f5db943352b5cfb505e0a505659e267c9c046314c5006f53044e0abd7fe1b131 files/0.1.4/vdr-graphlcd-0.1.4-missing-include.patch 316
 AUX confd 681 RMD160 db009f002ee7608a45dbfd16097d0746fb3aa14d SHA1 220bbb0afa62dad0ab384fc16e5dcc5e5f2ec2b6 SHA256 77daae38d4a0a98b214365620c4397ef81516f2f62b7a131a2d0aa1af378f4d3
 MD5 b52e340ed185e77044523dcee028aae6 files/confd 681
 RMD160 db009f002ee7608a45dbfd16097d0746fb3aa14d files/confd 681
@@ -52,14 +56,14 @@ EBUILD vdr-graphlcd-0.1.3.ebuild 2263 RMD160 1e19002ae7ef77eab6be906d6772e072f2d
 MD5 d9bb61e1af0e81951175051abd2aa565 vdr-graphlcd-0.1.3.ebuild 2263
 RMD160 1e19002ae7ef77eab6be906d6772e072f2df41e9 vdr-graphlcd-0.1.3.ebuild 2263
 SHA256 e9499c489172147d70a3dd248decc0d04ac87a88bef36c7caee2643207ed30fb vdr-graphlcd-0.1.3.ebuild 2263
-EBUILD vdr-graphlcd-0.1.4.ebuild 2348 RMD160 09c9d11acbe52656da2c5bce743e5df4dd993660 SHA1 cdc280968a156d404b2a999f34592ab47b429430 SHA256 4855ca3abc8c63bcb5ca1fb2615036e98679889005043e08a74b8f8c522dcb30
-MD5 7841cc69b62f08152c1078fa68ad92f3 vdr-graphlcd-0.1.4.ebuild 2348
-RMD160 09c9d11acbe52656da2c5bce743e5df4dd993660 vdr-graphlcd-0.1.4.ebuild 2348
-SHA256 4855ca3abc8c63bcb5ca1fb2615036e98679889005043e08a74b8f8c522dcb30 vdr-graphlcd-0.1.4.ebuild 2348
-MISC ChangeLog 2379 RMD160 ab46ad53324d6da0e29bb52397584d04eb755275 SHA1 0bec6aa7ea6f73559e1a2e6da4f6c776121e6d90 SHA256 365d2dfaa787184a1ce8cb844b24f739cc41f78758ac8899e7b9b0c56c29ca0c
-MD5 ff60ee8733b51959a8b8245659cbb975 ChangeLog 2379
-RMD160 ab46ad53324d6da0e29bb52397584d04eb755275 ChangeLog 2379
-SHA256 365d2dfaa787184a1ce8cb844b24f739cc41f78758ac8899e7b9b0c56c29ca0c ChangeLog 2379
+EBUILD vdr-graphlcd-0.1.4.ebuild 2388 RMD160 4d0644ebb398596e1bfbddb51c098effca71abe9 SHA1 dab50087c86dd97a7c92f287904e9a13696cad07 SHA256 bc4421fea1e9ae2f3f8d1d1527bf365fa4b02ba5edf186b7dd7e6e87d27cbd6d
+MD5 88c694553cfa1f317f638eb92f9c8d95 vdr-graphlcd-0.1.4.ebuild 2388
+RMD160 4d0644ebb398596e1bfbddb51c098effca71abe9 vdr-graphlcd-0.1.4.ebuild 2388
+SHA256 bc4421fea1e9ae2f3f8d1d1527bf365fa4b02ba5edf186b7dd7e6e87d27cbd6d vdr-graphlcd-0.1.4.ebuild 2388
+MISC ChangeLog 2549 RMD160 fdcb76cfaf42a42569324e1cd267d944f089e04c SHA1 a09f9dfb0a0514ab22960c8ca75160dc3580d73c SHA256 71c9aaafe7795b8e8eaef1c74883b3e50cac52ba7f5bcc12a3f74fde45407721
+MD5 b414169ad6c3702840aaddb70f15ad47 ChangeLog 2549
+RMD160 fdcb76cfaf42a42569324e1cd267d944f089e04c ChangeLog 2549
+SHA256 71c9aaafe7795b8e8eaef1c74883b3e50cac52ba7f5bcc12a3f74fde45407721 ChangeLog 2549
 MISC metadata.xml 399 RMD160 da803ab914b85f48f99cd09321a577b2ae2df876 SHA1 ed8cb826e20b52e381e5926e3f5df01da6d02fd8 SHA256 fb14b64f0c614498c334e60f3774e886fbb5a6143bce4f162f39bb61fee0be67
 MD5 d620f1598e91e4b0e15a579df112c8f0 metadata.xml 399
 RMD160 da803ab914b85f48f99cd09321a577b2ae2df876 metadata.xml 399
@@ -77,10 +81,9 @@ MD5 9bf29d35bc734f973ebbcb5fe8c7d586 files/digest-vdr-graphlcd-0.1.4 247
 RMD160 34b54054fdf74bfab72ea20b395317a9d48640cb files/digest-vdr-graphlcd-0.1.4 247
 SHA256 53fd99ce448b67cb1014be71d9da0ee3ff1008b65fd01cc9d4e4dafbba8bdbe0 files/digest-vdr-graphlcd-0.1.4 247
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-Comment: added by hd_brummy@gentoo.org
+Version: GnuPG v2.0.2 (GNU/Linux)
 
-iD8DBQFFxm6Gdn07HTTCgIoRAiP8AJ9Y9kLz1Amd53m3ENCz8m8L6/lZxwCfUfGc
-QxPY9ualqP2PEF+wzIJuDPY=
-=QgUo
+iD8DBQFFxwlht2vP6XvVdOcRAtdIAJ9qtaCJQIwbwfpm2abNeUQC/ma6wgCeI48B
+W3+A3n/yCDGOro6FkmrwAT8=
+=ew/y
 -----END PGP SIGNATURE-----
