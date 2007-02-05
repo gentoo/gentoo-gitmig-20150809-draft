@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.3-r3.ebuild,v 1.1 2007/02/04 23:10:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.3-r3.ebuild,v 1.2 2007/02/05 01:05:58 vapier Exp $
 
 inherit eutils libtool multilib
 
@@ -30,7 +30,7 @@ src_compile() {
 }
 
 src_install() {
-	emake INSTALL_ROOT="${D}" install install-compat || die
+	emake -j1 INSTALL_ROOT="${D}" install install-compat || die
 	mv "${D}"/usr/include/gdbm/gdbm.h "${D}"/usr/include/ || die
 	dodoc ChangeLog NEWS README
 }
