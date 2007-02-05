@@ -1,0 +1,11 @@
+# ChangeLog for media-libs/libafterimage
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/ChangeLog,v 1.1 2007/02/05 16:00:43 bicatali Exp $
+
+*libafterimage-1.07 (05 Feb 2007)
+
+  05 Feb 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/libafterimage-config.patch, +files/libafterimage-examples.patch,
+  +metadata.xml, +libafterimage-1.07.ebuild:
+  Initial import. Closing bug #149088.
+
