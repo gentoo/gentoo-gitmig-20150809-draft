@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/imaging
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.29 2007/01/09 13:24:53 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.30 2007/02/05 20:15:32 jer Exp $
+
+  05 Feb 2007; Jeroen Roovers <jer@gentoo.org> imaging-1.1.5.ebuild:
+  Stable for HPPA (inkscape).
 
 *imaging-1.1.6 (09 Jan 2007)
 

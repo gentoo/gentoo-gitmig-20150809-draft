@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-2.0.ebuild,v 1.1 2006/07/16 14:10:30 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-2.0.ebuild,v 1.2 2007/02/05 20:18:21 jer Exp $
 
 #goofy tarball versioning
 vmaj=${PV%%.*}
@@ -22,7 +22,7 @@ DEPEND=">=dev-lang/python-2.4.2
 IUSE=""
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 src_unpack() {
 	unpack ${A} || die

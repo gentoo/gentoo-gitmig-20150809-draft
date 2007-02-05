@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/reportlab
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.32 2006/07/16 14:10:30 liquidx Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.33 2007/02/05 20:18:21 jer Exp $
+
+  05 Feb 2007; Jeroen Roovers <jer@gentoo.org> reportlab-2.0.ebuild:
+  Stable for HPPA (inkscape).
 
 *reportlab-2.0 (16 Jul 2006)
 
