@@ -1,6 +1,14 @@
 # ChangeLog for www-client/kita
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kita/ChangeLog,v 1.28 2006/06/20 07:52:19 tove Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/kita/ChangeLog,v 1.29 2007/02/05 09:42:51 flameeyes Exp $
+
+*kita-0.177.3-r1 (05 Feb 2007)
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> -kita-0.177.0.ebuild,
+  -kita-0.177.3.ebuild, +kita-0.177.3-r1.ebuild:
+  Improved ebuild, using kde.eclass and without all the forced dependencies
+  (like FAM); this version also updates the admin directory so that it can be
+  built without aRTs at all.
 
 *kita-0.177.3 (17 Jun 2006)
 
