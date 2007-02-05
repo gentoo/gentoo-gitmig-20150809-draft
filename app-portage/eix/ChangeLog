@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.145 2007/01/24 03:36:25 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.146 2007/02/05 13:09:10 genstef Exp $
+
+*eix-0.8.7 (05 Feb 2007)
+
+  05 Feb 2007; <genstef@gentoo.org> -files/eix-0.8.3-fbsd.patch,
+  -eix-0.8.3.ebuild, -eix-0.8.4.ebuild, -eix-0.8.5.ebuild,
+  -eix-0.8.6.ebuild, +eix-0.8.7.ebuild:
+  version bump
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org> eix-0.6.4.ebuild,
   eix-0.7.9.ebuild, eix-0.8.3.ebuild, eix-0.8.4.ebuild, eix-0.8.5.ebuild,
