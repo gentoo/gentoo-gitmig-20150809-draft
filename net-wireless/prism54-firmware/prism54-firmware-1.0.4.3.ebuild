@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54-firmware/prism54-firmware-1.0.4.3.ebuild,v 1.7 2005/12/13 09:47:11 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54-firmware/prism54-firmware-1.0.4.3.ebuild,v 1.8 2007/02/05 05:34:03 cardoe Exp $
 
 RESTRICT="nomirror"
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 
 IUSE=""
-RDEPEND=">=sys-apps/hotplug-20040923"
+RDEPEND="|| ( >=sys-fs/udev-096 >=sys-apps/hotplug-20040923 )"
 
 src_unpack() {
 	true
