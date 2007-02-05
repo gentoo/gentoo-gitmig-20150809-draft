@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.22 2007/01/26 13:36:50 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.23 2007/02/05 18:57:06 wolf31o2 Exp $
+
+  05 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> make.defaults:
+  Added an initial set of ALSA_CARDS for bug #158680. This was copied from x86
+  and modified to remove the chipset-based modem drivers. I'm sure this could
+  use some more cleaning up, but this will allow us to stabilize a newer ALSA.
 
   26 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
   +dev/2007.0/desktop/make.defaults, +dev/2007.0/desktop/parent,
