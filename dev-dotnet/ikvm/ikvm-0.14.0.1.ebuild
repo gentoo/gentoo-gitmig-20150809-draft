@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.14.0.1.ebuild,v 1.3 2006/03/19 22:09:20 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.14.0.1.ebuild,v 1.4 2007/02/05 00:23:11 jurek Exp $
 
 inherit mono
 
@@ -9,7 +9,7 @@ CLASSPATH_P="classpath-0.15"
 DESCRIPTION="Java VM for .NET"
 HOMEPAGE="http://www.ikvm.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.zip
-		ftp://ftp.gnu.org/gnu/classpath/${CLASSPATH_P}.tar.gz"
+		mirror://gnu/classpath/${CLASSPATH_P}.tar.gz"
 LICENSE="as-is"
 
 SLOT="0"
