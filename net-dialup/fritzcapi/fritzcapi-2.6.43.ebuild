@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.43.ebuild,v 1.7 2007/02/04 22:25:24 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.43.ebuild,v 1.8 2007/02/05 23:08:15 genstef Exp $
 
 inherit linux-mod rpm eutils
 
@@ -62,12 +62,6 @@ pkg_setup() {
 					FRITZCAPI_BUILD_CARDS="${FRITZCAPI_BUILD_CARDS} ${FRITZCAPI_MODULES[CARD]}"
 					FRITZCAPI_BUILD_TARGETS="${FRITZCAPI_BUILD_TARGETS} ${FRITZCAPI_TARGETS[CARD]}"
 					MODULE_NAMES="${MODULE_NAMES} `get_card_module_name ${CARD}`"
-
-					if [ "${FRITZCAPI_MODULES[CARD]/pcmcia/}" != ${FRITZCAPI_MODULES[CARD]} ] && kernel_is ge 2 6 17; then
-						eerror "kernel 2.6.17 fails to build fcpcmcia"
-						eerror "Please use an older kernel or the isdn4linux drivers"
-						die "kernel 2.6.17 fails to build fcpcmcia"
-					fi
 					continue 2
 				fi
 			done
@@ -118,6 +112,9 @@ src_unpack() {
 		cd fritz.usb2; epatch ${FILESDIR}/fcusb2-2.6.19.patch; cd ..
 	fi
 	epatch ${FILESDIR}/2.6.43-linux-2.6.19-irq_handler.patch
+	if kernel_is ge 2 6 17; then
+		epatch ${FILESDIR}/2.6.43-fcpcmcia.patch
+	fi
 	find -name \*.[hc] -print0 | xargs -0 sed -i '
 		s:#include <linux/config\.h>:#include <linux/autoconf.h>:;
 		s/driver_init/fc_driver_init/g; s/driver_exit/fc_driver_exit/;'
