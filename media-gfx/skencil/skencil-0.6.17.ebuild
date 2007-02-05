@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/skencil-0.6.17.ebuild,v 1.10 2006/06/27 22:56:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/skencil-0.6.17.ebuild,v 1.11 2007/02/05 20:22:35 jer Exp $
 
 inherit python multilib
 
@@ -16,7 +16,7 @@ DEPEND=">=dev-python/imaging-1.1.2-r1
 RDEPEND="!elibc_glibc? ( nls? ( sys-devel/gettext ) )"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~hppa ppc ppc64 sparc x86"
+KEYWORDS="amd64 hppa ppc ppc64 sparc x86"
 
 pkg_setup() {
 	python_tkinter_exists
