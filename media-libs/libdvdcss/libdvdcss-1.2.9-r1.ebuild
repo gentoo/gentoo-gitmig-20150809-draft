@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.9.ebuild,v 1.20 2007/02/05 11:25:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.9-r1.ebuild,v 1.1 2007/02/05 11:25:05 flameeyes Exp $
 
-inherit eutils autotools flag-o-matic
+inherit eutils autotools
 
 DESCRIPTION="A portable abstraction library for DVD decryption"
 HOMEPAGE="http://developers.videolan.org/libdvdcss/"
@@ -10,7 +10,7 @@ SRC_URI="http://www.videolan.org/pub/${PN}/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="1.2"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc-macos ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc"
 
 DEPEND="doc? ( app-doc/doxygen )"
@@ -37,10 +37,6 @@ src_unpack() {
 }
 
 src_compile() {
-	# Dont use custom optimiziations, as it gives problems
-	# on some archs
-	strip-flags
-
 	# See bug #98854, requires access to fonts cache for TeX
 	use doc && addwrite /var/cache/fonts
 

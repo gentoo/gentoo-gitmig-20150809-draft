@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/libdvdcss
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.61 2007/02/05 11:20:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.62 2007/02/05 11:25:05 flameeyes Exp $
+
+*libdvdcss-1.2.9-r1 (05 Feb 2007)
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> libdvdcss-1.2.9.ebuild,
+  +libdvdcss-1.2.9-r1.ebuild:
+  Unsetting CFLAGS is a very bad idea, get a revbump without any kind of
+  filtering to see if there are still problems (and where, as the comment
+  refers of some otherwise unspecified arches), while using strip-flags for
+  the current stable.
 
   05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> libdvdcss-1.2.9.ebuild:
   Remove static useflag, always build both shared and static library, thanks
