@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.78 2007/01/19 22:05:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.79 2007/02/05 19:22:42 wolf31o2 Exp $
+
+  05 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  xemacs-21.4.20-r1.ebuild:
+  Stable on ppc wrt bug #162039.
 
   19 Jan 2007; Markus Rothe <corsair@gentoo.org> xemacs-21.4.20-r1.ebuild:
   Stable on ppc64; bug #162039
