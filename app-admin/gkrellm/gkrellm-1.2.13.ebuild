@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-1.2.13.ebuild,v 1.21 2007/02/05 17:16:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-1.2.13.ebuild,v 1.22 2007/02/05 19:33:23 mr_bones_ Exp $
 
 DESCRIPTION="Single process stack of various system monitors"
 SRC_URI="http://web.wt.net/~billw/gkrellm/${P}.tar.bz2"
@@ -21,8 +21,7 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/{bin,include,share/man}
-	dodir /usr/share/gkrellm/{themes,plugins}
+	dodir /usr/{bin,include,share/man} /usr/share/gkrellm/{themes,plugins}
 
 	make install \
 		INSTALLDIR=${D}/usr/bin \
