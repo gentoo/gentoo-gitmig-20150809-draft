@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.16.1.1.ebuild,v 1.1 2006/11/09 08:06:18 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.16.3.ebuild,v 1.1 2007/02/05 09:42:21 leio Exp $
 
-inherit eutils gnome2 autotools
+inherit gnome2 autotools
 
-DESCRIPTION="Eye Of Gnome, an image viewer"
-HOMEPAGE="http://www.gnome.org/"
+DESCRIPTION="The Eye of GNOME image viewer"
+HOMEPAGE="http://www.gnome.org/projects/eog/"
 
 LICENSE="GPL-2"
 SLOT="1"
@@ -26,14 +26,10 @@ RDEPEND=">=gnome-base/gnome-vfs-2.5.91
 		>=media-libs/libexif-0.6.12
 		media-libs/jpeg )
 	lcms? ( media-libs/lcms )"
-
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	>=dev-util/intltool-0.35
-	>=dev-util/pkgconfig-0.17
-	>=gnome-base/gnome-common-2.12.0
-	>=app-text/gnome-doc-utils-0.3.2"
-# gnome-common and gnome-doc-utils only necessary with eautoreconf
+	>=dev-util/pkgconfig-0.17"
 
 DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README THANKS TODO"
 
@@ -41,13 +37,4 @@ pkg_setup() {
 	G2CONF="${G2CONF} $(use_with jpeg libjpeg) \
 		$(use_with jpeg libexif) \
 		$(use_with lcms cms)"
-}
-
-src_unpack() {
-	gnome2_src_unpack
-
-	# Fix pkg-config detection if --without-libexif is passed.
-	epatch ${FILESDIR}/${PN}-2.11.90-pkgconfig_macro.patch
-
-	eautoreconf
 }
