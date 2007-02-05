@@ -1,6 +1,9 @@
 # ChangeLog for www-client/ochusha
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/ochusha/ChangeLog,v 1.22 2006/11/24 22:33:02 usata Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/ochusha/ChangeLog,v 1.23 2007/02/05 12:07:42 armin76 Exp $
+
+  05 Feb 2007; Raúl Porcel <armin76@gentoo.org> ochusha-0.5.8.2-r2.ebuild:
+  x86 stable wrt bug 165415
 
   24 Nov 2006; Mamoru KOMACHI <usata@gentoo.org> ochusha-0.5.8.2-r1.ebuild,
   ochusha-0.5.8.2-r2.ebuild:
