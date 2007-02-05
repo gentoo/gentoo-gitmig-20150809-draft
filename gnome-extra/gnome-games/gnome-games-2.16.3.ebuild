@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.16.1-r1.ebuild,v 1.3 2007/01/10 19:44:50 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.16.3.ebuild,v 1.1 2007/02/05 13:13:14 leio Exp $
 
 # make sure games is inherited first so that the gnome2
 # functions will be called if they are not overridden
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2 FDL-1.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
-IUSE="artworkextra guile avahi"
+IUSE="artworkextra guile" #avahi disabled upstream due to crashes
 
 RDEPEND=">=gnome-base/gconf-2
 	>=gnome-base/libgnomeui-2
@@ -24,26 +24,25 @@ RDEPEND=">=gnome-base/gconf-2
 	>=gnome-base/gnome-vfs-2
 	>=x11-libs/cairo-1
 	guile? ( >=dev-scheme/guile-1.6.5 )
-	avahi? ( net-dns/avahi )
 	artworkextra? ( gnome-extra/gnome-games-extra-data )
 	>=gnome-base/gnome-common-2.12.0"
-
+#	avahi? ( net-dns/avahi )
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.35
 	>=sys-devel/gettext-0.10.40
 	>=app-text/scrollkeeper-0.3.8"
 
-DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README TODO"
-
+# Others are installed below; multiples in this package.
+DOCS="HACKING MAINTAINERS"
 
 pkg_setup() {
 	# create the games user / group
 	games_pkg_setup
 
 	G2CONF="--with-scores-group=${GAMES_GROUP} \
-		$(use_enable guile) \
-		$(use_enable avahi)"
+		$(use_enable guile)"
+#		$(use_enable avahi)"
 }
 
 src_unpack() {
