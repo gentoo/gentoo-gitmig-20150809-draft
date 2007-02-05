@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.14-r3.ebuild,v 1.13 2006/07/05 05:27:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.14-r3.ebuild,v 1.14 2007/02/05 22:06:51 drac Exp $
 
 inherit gnome.org libtool eutils
 
@@ -31,7 +31,7 @@ src_unpack() {
 	# Security fix per bug #62487
 	epatch "${FILESDIR}"/${P}-bound.patch
 	#Security fix for bug #72681
-	epatch "${FILESDIR}"/${P}-sec2.patch
+	epatch "${FILESDIR}"/${PN}-security.patch
 	# shutup aclocal
 	epatch "${FILESDIR}"/${P}-m4.patch
 
