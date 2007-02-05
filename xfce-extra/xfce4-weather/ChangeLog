@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-weather
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather/ChangeLog,v 1.21 2007/01/22 00:38:24 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather/ChangeLog,v 1.22 2007/02/05 00:04:28 nichoj Exp $
+
+  05 Feb 2007; Joshua Nichols <nichoj@gentoo.org>
+  xfce4-weather-0.6.0.ebuild:
+  Updated to use final 4.4 release.
 
 *xfce4-weather-0.6.0 (22 Jan 2007)
 
