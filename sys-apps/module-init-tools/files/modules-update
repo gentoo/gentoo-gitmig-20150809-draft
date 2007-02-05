@@ -399,7 +399,7 @@ if [[ -d ${depfile%/*} ]] ; then
 	if [[ ${CFG_NEW_FILE} -nt ${depfile} ]] ; then
 		arch=$(uname -m)
 		ebegin "Updating modules.dep"
-		for cfg in /boot /lib/modules/${KV}/build /usr/src/linux-${KV} \
+		for cfg in /lib/modules/${KV}/build /usr/src/linux-${KV} \
 		           /boot /usr/src/linux ""
 		do
 			cfg="${cfg}/System.map"
