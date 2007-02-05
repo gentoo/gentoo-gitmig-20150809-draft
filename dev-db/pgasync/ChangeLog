@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/pgasync
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgasync/ChangeLog,v 1.2 2005/03/15 18:12:37 nakano Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgasync/ChangeLog,v 1.3 2007/02/05 23:31:07 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *pgasync-2.01 (15 Mar 2005)
 
