@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/cryptlib-3.3.0.ebuild,v 1.1 2006/10/22 13:49:00 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/cryptlib-3.3.0-r1.ebuild,v 1.1 2007/02/05 08:53:35 alonbl Exp $
 
 inherit eutils multilib flag-o-matic
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.franken.de/pub/crypt/cryptlib/cl${MY_PV}.zip
 LICENSE="Sleepycat"
 KEYWORDS="~x86 ~amd64"
 SLOT="0"
-IUSE="doc static odbc"
+IUSE="doc odbc"
 
 S="${WORKDIR}"
 
@@ -50,21 +50,21 @@ src_compile() {
 	replace-flags -O  -O2
 	replace-flags -Os -O2
 	replace-flags -O1 -O2
-	local MYCFLAGS="-c -D__UNIX__ -DNDEBUG -I. ${CFLAGS}"
+	append-flags -c -D__UNIX__ -DNDEBUG -I.
+	# QA issue for pthread_yield
+	append-flags -D_GNU_SOURCE
 
-	if use static; then
-		emake -j1 CFLAGS="${MYCFLAGS}" SCFLAGS="${MYCFLAGS} -fPIC" || \
-			die "emake static failed"
-	fi
+	emake -j1 CFLAGS="${CFLAGS}" SCFLAGS="${CFLAGS} -fPIC" || \
+		die "emake static failed"
 
-	emake -j1 shared CFLAGS="${MYCFLAGS}" SCFLAGS="${MYCFLAGS} -fPIC" || \
+	emake -j1 shared CFLAGS="${CFLAGS}" SCFLAGS="${CFLAGS} -fPIC" || \
 		die "emake shared failed"
 }
 
 src_install() {
 	dolib.so "libcl.so.${PV}"
 	dosym "libcl.so.${PV}" "/usr/$(get_libdir)/libcl.so"
-	use static && dolib.a "libcl.a"
+	dolib.a "libcl.a"
 
 	insinto /usr/include
 	doins cryptlib.h
