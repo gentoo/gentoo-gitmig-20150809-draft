@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.203 2007/02/05 12:41:34 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.204 2007/02/05 13:54:25 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> amarok-1.4.5.ebuild:
+  Add ~ppc as requested by lu_zero in bug #164242.
 
   05 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> amarok-1.4.5.ebuild:
   Rekeyworded ~sparc wrt #164242
