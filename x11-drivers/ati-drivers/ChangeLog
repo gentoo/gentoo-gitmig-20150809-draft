@@ -1,6 +1,15 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.58 2007/02/05 10:01:57 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.59 2007/02/05 11:02:29 marienz Exp $
+
+*ati-drivers-8.28.8-r1 (05 Feb 2007)
+
+  05 Feb 2007; Marien Zwart <marienz@gentoo.org>
+  +files/ati-drivers-8.28.8-linux-2.6.18.patch,
+  +ati-drivers-8.28.8-r1.ebuild:
+  Revision bump to 8.28.8 (last version that works with a couple of chipsets)
+  to compile with older kernels thanks to a patch from alonbl@gentoo.org (bug
+  #148424). Some minor cleanup and RESTRICT=stricter fixes.
 
 *ati-drivers-8.33.6 (05 Feb 2007)
 
