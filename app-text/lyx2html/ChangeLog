@@ -1,6 +1,9 @@
 # ChangeLog for app-text/lyx2html
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lyx2html/ChangeLog,v 1.3 2005/10/15 20:31:08 blubb Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/lyx2html/ChangeLog,v 1.4 2007/02/05 20:55:59 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   15 Oct 2005; Simon Stelling <blubb@gentoo.org> lyx2html-0.2.ebuild:
   added ~amd64 keyword

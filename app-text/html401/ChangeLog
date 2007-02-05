@@ -1,6 +1,9 @@
 # ChangeLog for app-text/html401
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html401/ChangeLog,v 1.15 2006/01/15 14:21:30 cryos Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/html401/ChangeLog,v 1.16 2007/02/05 20:55:02 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   15 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org>
   html401-19991224-r2.ebuild:

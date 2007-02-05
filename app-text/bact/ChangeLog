@@ -1,6 +1,9 @@
 # ChangeLog for app-text/bact
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bact/ChangeLog,v 1.1 2005/12/24 18:58:09 usata Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/bact/ChangeLog,v 1.2 2007/02/05 20:53:54 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *bact-0.13 (24 Dec 2005)
 
