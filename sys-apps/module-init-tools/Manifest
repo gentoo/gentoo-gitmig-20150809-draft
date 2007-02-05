@@ -13,10 +13,10 @@ AUX module-init-tools-3.2_pre7-abort-on-modprobe-failure.patch 1425 RMD160 ce073
 MD5 54fcfc62bd715c9557b321dfb4654044 files/module-init-tools-3.2_pre7-abort-on-modprobe-failure.patch 1425
 RMD160 ce073d744e0eb191ef10f3a1186f393b42620813 files/module-init-tools-3.2_pre7-abort-on-modprobe-failure.patch 1425
 SHA256 5a058a5dfae5bd6eaf6fa338b800f477b542dd9da0c09283d274504beb19c3b6 files/module-init-tools-3.2_pre7-abort-on-modprobe-failure.patch 1425
-AUX modules-update 11312 RMD160 7af3ec6aa2e6e86db9327b934f7c395f5cc5310e SHA1 793a2dd061b0e31786879bd5eb3796f742ec3621 SHA256 6149e543955cbb97e42aaa3de027311ca41d483882239c6d7ec0373c097e80b2
-MD5 e3af3656ea89f3563e7633b5ddb2f2ec files/modules-update 11312
-RMD160 7af3ec6aa2e6e86db9327b934f7c395f5cc5310e files/modules-update 11312
-SHA256 6149e543955cbb97e42aaa3de027311ca41d483882239c6d7ec0373c097e80b2 files/modules-update 11312
+AUX modules-update 11387 RMD160 89f974c85038a7d10e30a4b6033642ec94ebdae3 SHA1 185796c9b3e36e8e0b8c665f6e4f9830859f54a1 SHA256 ea69606d33a9e5dfa525fe95d20d0564c22bda8816c17939179aa5dc7f9fe8d3
+MD5 871bf80d14efcbc82cdac7979318a81d files/modules-update 11387
+RMD160 89f974c85038a7d10e30a4b6033642ec94ebdae3 files/modules-update 11387
+SHA256 ea69606d33a9e5dfa525fe95d20d0564c22bda8816c17939179aa5dc7f9fe8d3 files/modules-update 11387
 AUX modutils-2.4.27-alias.patch 2246 RMD160 bcf4fffbecae76e5b14b05c9003ba4f0cf2675ff SHA1 7d69355210aaccbd2dc6dd8a9b1b736f74dfdd36 SHA256 453e3ab982088e2e85164e63b4944af58cd01c2b2d45d75fdcda6649a339878f
 MD5 5428d53f18b5fac287741b23634d84dc files/modutils-2.4.27-alias.patch 2246
 RMD160 bcf4fffbecae76e5b14b05c9003ba4f0cf2675ff files/modutils-2.4.27-alias.patch 2246
@@ -68,7 +68,7 @@ SHA256 a0137b244c6cab76e8a2cb31e651484992231b823af1d8d4fc2e1a5db10fe5f6 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.2 (GNU/Linux)
 
-iD8DBQFFxRnF8bi6rjpTunYRAkHZAKDUiq1Gn2y1e+6ZUI9vcDH9K1xQ5wCgnMmG
-P8yeywxzLq+rX0vUHsDMfeU=
-=QbG4
+iD8DBQFFxnYp8bi6rjpTunYRApwLAKDGxZsOpulaE0rvWcBev3g8iOfmCACg2CKa
+Cr2TV+dbbS7xShgD7GBtlE4=
+=YD10
 -----END PGP SIGNATURE-----

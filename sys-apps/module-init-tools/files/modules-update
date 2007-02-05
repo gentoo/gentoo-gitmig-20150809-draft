@@ -397,13 +397,16 @@ depfile=$(grab_depfile)
 
 if [[ -d ${depfile%/*} ]] ; then
 	if [[ ${CFG_NEW_FILE} -nt ${depfile} ]] ; then
+		arch=$(uname -m)
 		ebegin "Updating modules.dep"
-		for cfg in /lib/modules/${KV}/build /usr/src/linux-${KV} \
+		for cfg in /boot /lib/modules/${KV}/build /usr/src/linux-${KV} \
 		           /boot /usr/src/linux ""
 		do
 			cfg="${cfg}/System.map"
-			for suffix in -genkernel-${KV} -${KV} "" ; do
-				[[ -f ${cfg}${suffix} ]] && cfg="${cfg}${suffix}" && break 2
+			for suffix in -genkernel-{${arch},'*'}-${KV} -${KV} "" ; do
+				scfg=$(echo ${cfg}${suffix})
+				scfg=${scfg%% *}
+				[[ -f ${scfg} ]] && cfg=${scfg} && break 2
 			done
 		done
 		[[ -n ${cfg} ]] && cfg="-F ${cfg}"
