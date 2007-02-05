@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.19 2006/06/15 15:20:26 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.20 2007/02/05 11:02:09 george Exp $
 #
 # Author: George Shapovalov <george@gentoo.org>
 # Belongs to: ada herd <ada@gentoo.org>
@@ -126,6 +126,7 @@ get_gnat_Arch() {
 # The purpose of this one is to remove all parts of the env entry specific to a
 # given lib. Usefull when some lib wants to act differently upon detecting
 # itself installed..
+#
 # params:
 #  $1 - name of env var to process
 #  $2 (opt) - name of the lib to filter out (defaults to ${PN})
@@ -141,6 +142,18 @@ filter_env_var() {
 		fi
 	done
 	echo ${env_str}
+}
+
+# A simpler helper, for the libs that need to extract active gnat location
+# Returns a first entry for a specified env var. Relies on the (presently true)
+# convention that first gnat's entries are listed and then of the other
+# installed libs.
+#
+# params:
+#  $1 - name of env var to process
+get_gnat_value() {
+	local entries=(${!1//:/ })
+	echo ${entries[0]}
 }
 
 
