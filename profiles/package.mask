@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6766 2007/02/05 17:11:41 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6767 2007/02/05 19:21:58 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1369,7 +1369,7 @@ media-video/dirac
 # Leonardo Boshell <leonardop@gentoo.org> (31 May 2005)
 # Masked for testing, it includes an experimental patch to make Gtk+
 # dependency optional. See bug #40453.
-=media-libs/imlib-1.9.15
+=media-libs/imlib-1.9.15*
 
 # Danny van Dyk <kugelfang@gentoo.org> (27 May 2005)
 # Needs some testing and love before going gold
