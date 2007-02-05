@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-104-r9.ebuild,v 1.1 2007/02/04 22:27:57 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-104-r9.ebuild,v 1.2 2007/02/05 17:30:48 armin76 Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
 IUSE="selinux"
 
 DEPEND="selinux? ( sys-libs/libselinux )"
