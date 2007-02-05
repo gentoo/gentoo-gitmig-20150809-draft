@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/grc
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grc/ChangeLog,v 1.11 2006/01/30 16:32:38 chutzpah Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grc/ChangeLog,v 1.12 2007/02/05 14:18:21 blubb Exp $
+
+*grc-1.0.9 (05 Feb 2007)
+
+  05 Feb 2007; Simon Stelling <blubb@gentoo.org> +grc-1.0.9.ebuild:
+  version bump to fix bug 159728
 
   30 Jan 2006; Patrick McLean <chutzpah@gentoo.org> grc-1.0.6.ebuild:
   Added ~amd64 (bug #120947).
