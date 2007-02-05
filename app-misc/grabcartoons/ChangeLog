@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/grabcartoons
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grabcartoons/ChangeLog,v 1.1 2005/08/20 05:04:18 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grabcartoons/ChangeLog,v 1.2 2007/02/05 00:54:56 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *grabcartoons-1.11 (20 Aug 2005)
 
