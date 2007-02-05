@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/annotations
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/annotations/ChangeLog,v 1.4 2005/02/21 21:29:05 blubb Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/annotations/ChangeLog,v 1.5 2007/02/05 19:55:48 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   21 Feb 2005; Simon Stelling <blubb@gentoo.org> annotations-0.4.3.ebuild:
   added ~amd64

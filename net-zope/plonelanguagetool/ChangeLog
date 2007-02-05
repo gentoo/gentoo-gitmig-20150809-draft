@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/plonelanguagetool
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plonelanguagetool/ChangeLog,v 1.1 2005/04/19 17:14:12 radek Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plonelanguagetool/ChangeLog,v 1.2 2007/02/05 20:24:29 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *plonelanguagetool-0.5 (19 Apr 2005)
 

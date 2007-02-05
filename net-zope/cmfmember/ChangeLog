@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/cmfmember
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfmember/ChangeLog,v 1.4 2005/03/26 01:08:30 radek Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfmember/ChangeLog,v 1.5 2007/02/05 20:01:11 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *cmfmember-1.0 (26 Mar 2005)
 

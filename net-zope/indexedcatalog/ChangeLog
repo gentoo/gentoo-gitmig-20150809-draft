@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/indexedcatalog
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/indexedcatalog/ChangeLog,v 1.3 2004/06/25 01:21:50 agriffis Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/indexedcatalog/ChangeLog,v 1.4 2007/02/05 20:11:29 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *indexedcatalog-0.6.0 (09 Nov 2003)
 

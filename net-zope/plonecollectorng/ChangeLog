@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/plonecollectorng
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plonecollectorng/ChangeLog,v 1.5 2005/05/06 14:56:29 swegener Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plonecollectorng/ChangeLog,v 1.6 2007/02/05 20:19:56 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   06 May 2005; Sven Wegener <swegener@gentoo.org>
   plonecollectorng-1.2.6.ebuild:

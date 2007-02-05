@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/ldapuserfolder
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/ldapuserfolder/ChangeLog,v 1.8 2005/05/22 21:17:32 weeve Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/ldapuserfolder/ChangeLog,v 1.9 2007/02/05 20:12:36 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   22 May 2005; Jason Wever <weeve@gentoo.org> ldapuserfolder-2.4.ebuild:
   Added ~sparc keyword.

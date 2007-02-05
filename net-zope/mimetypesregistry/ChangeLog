@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/mimetypesregistry
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/mimetypesregistry/ChangeLog,v 1.7 2005/05/21 14:37:43 blubb Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/mimetypesregistry/ChangeLog,v 1.8 2007/02/05 20:14:05 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   21 May 2005; Simon Stelling <blubb@gentoo.org>
   mimetypesregistry-1.3.3.ebuild:
