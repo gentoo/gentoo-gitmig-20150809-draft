@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.16.1.ebuild,v 1.2 2006/10/14 21:30:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.16.3.ebuild,v 1.1 2007/02/05 10:06:29 leio Exp $
 
 inherit gnome2
 
@@ -18,6 +18,7 @@ RDEPEND=">=x11-libs/gtk+-2.8
 	>=gnome-base/libgnomecanvas-2
 	>=gnome-base/gnome-vfs-2
 	>=x11-libs/startup-notification-0.5
+	>=dev-libs/libxml2-2.4.20
 	!gnome-base/gnome-core"
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
