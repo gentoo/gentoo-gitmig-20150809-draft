@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.606 2007/02/05 00:46:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.607 2007/02/05 13:58:54 blubb Exp $
+
+  05 Feb 2007; Simon Stelling <blubb@gentoo.org> gcc-4.1.1-r3.ebuild:
+  stable on amd64; bug 160663
 
 *gcc-4.0.4 (05 Feb 2007)
 
