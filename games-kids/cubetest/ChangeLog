@@ -1,6 +1,10 @@
 # ChangeLog for games-kids/cubetest
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/cubetest/ChangeLog,v 1.8 2006/10/09 11:34:36 nyhm Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/cubetest/ChangeLog,v 1.9 2007/02/05 21:24:17 mr_bones_ Exp $
+
+  05 Feb 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  cubetest-0.9.4.ebuild:
+  require >=x11-libs/qt-4.2.2 to have qt3support use flag set (bug #165458)
 
   09 Oct 2006; Tristan Heaven <nyhm@gentoo.org> cubetest-0.9.4.ebuild:
   Add prepgamesdirs to src_install
