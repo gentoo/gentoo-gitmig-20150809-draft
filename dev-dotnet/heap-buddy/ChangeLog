@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/heap-buddy
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/heap-buddy/ChangeLog,v 1.3 2006/03/19 15:50:25 metalgod Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/heap-buddy/ChangeLog,v 1.4 2007/02/05 00:57:35 jurek Exp $
+
+*heap-buddy-0.2 (05 Feb 2007)
+
+  05 Feb 2007; Jurek Bartuszek <jurek@gentoo.org> +heap-buddy-0.2.ebuild:
+  Version bump
 
   19 Mar 2006; Luis Medinas <metalgod@gentoo.org> heap-buddy-0.1.ebuild:
   Added ~amd64 keyword.
