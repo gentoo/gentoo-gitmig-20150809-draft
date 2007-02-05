@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/l7-filter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/ChangeLog,v 1.43 2007/01/31 04:35:02 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/ChangeLog,v 1.44 2007/02/05 19:03:41 wolf31o2 Exp $
+
+  05 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> l7-filter-2.8.ebuild:
+  Added ~alpha for bug #150343.
 
   31 Jan 2007; Joseph Jezak <josejx@gentoo.org> l7-filter-2.8.ebuild:
   Marked ppc stable for bug #150343.
