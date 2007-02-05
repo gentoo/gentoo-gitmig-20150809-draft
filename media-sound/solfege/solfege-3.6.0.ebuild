@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.6.0.ebuild,v 1.1 2006/10/08 06:58:05 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.6.0.ebuild,v 1.2 2007/02/05 19:35:44 aballier Exp $
 
 IUSE="oss"
 
@@ -26,12 +26,11 @@ DEPEND="${RDEPEND}
 	sys-apps/texinfo
 	dev-libs/libxslt
 	sys-apps/sed
-	=app-text/docbook-xsl-stylesheets-1.6*"
+	>=app-text/docbook-xsl-stylesheets-1.60"
 
 src_compile() {
 	# Try to figure out where is this damn stylesheet
-	local xslloc=$( ls /usr/share/sgml/docbook/xsl-stylesheets-1.6*/html/chunk.xsl | tail -n 1 )
-	[ -n "$xslloc" ] || die "XSL stylesheet not found"
+	local xslloc=$( xmlcatalog /etc/xml/catalog	http://docbook.sourceforge.net/release/xsl/current/html/chunk.xsl | sed 's@file://@@' )
 
 	econf --enable-docbook-stylesheet=${xslloc} \
 		$(use_enable oss oss-sound) || die "Configuration failed."
