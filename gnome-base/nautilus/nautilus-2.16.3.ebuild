@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.16.3.ebuild,v 1.10 2007/02/01 04:52:18 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.16.3.ebuild,v 1.11 2007/02/05 01:30:29 leio Exp $
 
 inherit virtualx eutils gnome2
 
@@ -19,7 +19,7 @@ RDEPEND=">=media-libs/libart_lgpl-2.3.10
 	>=media-sound/esound-0.2.27
 	>=dev-libs/glib-2.6
 	>=gnome-base/gnome-desktop-2.9.91
-	>=gnome-base/libgnome-2.1.1
+	>=gnome-base/libgnome-2.14
 	>=gnome-base/libgnomeui-2.6
 	>=gnome-base/gnome-vfs-2.15
 	>=gnome-base/orbit-2.4
