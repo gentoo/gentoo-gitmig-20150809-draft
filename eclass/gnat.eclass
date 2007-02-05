@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.20 2007/02/05 11:02:09 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.21 2007/02/05 13:21:57 george Exp $
 #
 # Author: George Shapovalov <george@gentoo.org>
 # Belongs to: ada herd <ada@gentoo.org>
@@ -214,12 +214,12 @@ gnat_pkg_setup() {
 gnat_pkg_postinst() {
 	einfo "Updating gnat configuration to pick up ${PN} library..."
 	eselect gnat update
-	einfo "The environment has been set up to make gnat automatically find files"
-	einfo "for the installed library. In order to immediately activate these"
-	einfo "settings please run:"
-	einfo
-	einfo "env-update"
-	einfo "source /etc/profile"
+	elog "The environment has been set up to make gnat automatically find files"
+	elog "for the installed library. In order to immediately activate these"
+	elog "settings please run:"
+	elog
+	elog "env-update"
+	elog "source /etc/profile"
 	einfo
 	einfo "Otherwise the settings will become active next time you login"
 }
