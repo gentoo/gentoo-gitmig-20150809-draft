@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pcre++
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcre++/ChangeLog,v 1.7 2006/09/06 01:39:53 gustavoz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcre++/ChangeLog,v 1.8 2007/02/05 08:33:21 killerfox Exp $
+
+  05 Feb 2007; René Nussbaumer <killerfox@gentoo.org> pcre++-0.9.5.ebuild:
+  Stable on amd64, hppa.
 
   06 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> pcre++-0.9.5.ebuild:
   Stable on sparc
