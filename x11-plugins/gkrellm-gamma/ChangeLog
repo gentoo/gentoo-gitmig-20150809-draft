@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-gamma
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-gamma/ChangeLog,v 1.6 2007/02/05 00:53:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-gamma/ChangeLog,v 1.7 2007/02/05 15:55:39 gustavoz Exp $
+
+  05 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  gkrellm-gamma-2.03.ebuild:
+  Keyworded ~sparc wrt #151446
 
   05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

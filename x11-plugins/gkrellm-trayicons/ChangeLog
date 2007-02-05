@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-trayicons
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-trayicons/ChangeLog,v 1.7 2007/02/05 15:53:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-trayicons/ChangeLog,v 1.8 2007/02/05 15:58:39 gustavoz Exp $
+
+  05 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  gkrellm-trayicons-1.02.ebuild:
+  Keyworded ~sparc wrt #151446
 
   05 Feb 2007; Raúl Porcel <armin76@gentoo.org>
   gkrellm-trayicons-1.02.ebuild:
