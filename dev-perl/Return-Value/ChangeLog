@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Return-Value
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Return-Value/ChangeLog,v 1.1 2007/02/05 19:31:57 mcummings Exp $
+
+*Return-Value-1.302 (05 Feb 2007)
+
+  05 Feb 2007; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Return-Value-1.302.ebuild:
+  Dep for Email-Send
+
