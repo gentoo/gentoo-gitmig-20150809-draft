@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellm-gamma
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-gamma/ChangeLog,v 1.5 2004/11/06 16:31:07 pyrania Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-gamma/ChangeLog,v 1.6 2007/02/05 00:53:16 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   06 Nov 2004; <pyrania@gentoo.org> gkrellm-gamma-2.03.ebuild:
   Marked stable on x86.

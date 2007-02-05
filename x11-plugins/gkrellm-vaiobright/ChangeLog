@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellm-vaiobright
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-vaiobright/ChangeLog,v 1.3 2004/06/24 22:58:13 agriffis Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-vaiobright/ChangeLog,v 1.4 2007/02/05 00:51:45 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *gkrellm-vaiobright-2.5 (16 Mar 2003)
 

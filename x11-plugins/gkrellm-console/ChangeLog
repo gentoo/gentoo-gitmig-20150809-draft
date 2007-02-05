@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellm-console
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-console/ChangeLog,v 1.12 2004/09/02 18:22:39 pvdabeel Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-console/ChangeLog,v 1.13 2007/02/05 00:53:44 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   gkrellm-console-0.1.2.ebuild:
