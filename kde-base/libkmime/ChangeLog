@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkmime
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkmime/ChangeLog,v 1.52 2007/02/04 03:12:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkmime/ChangeLog,v 1.53 2007/02/05 12:30:36 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/libkmime-3.5.0-fix.diff:
+  Remove unneeded patches.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -libkmime-3.5.0-r1.ebuild:

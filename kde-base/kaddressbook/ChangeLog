@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kaddressbook
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.70 2007/02/04 01:41:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.71 2007/02/05 12:14:46 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/configure-fix-kdepim-gnokii-3.4.patch,
+  -files/kaddressbook-3.5.2-addressee-hompage-fix.diff:
+  Remove unneeded patches.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -kaddressbook-3.5.2-r1.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeutils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.196 2007/02/04 17:46:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.197 2007/02/05 12:22:11 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/kdeutils-3.4.3-klaptopdaemon.patch,
+  -files/kdeutils-3.4-configure.patch:
+  Remove unneeded patches.
 
   04 Feb 2007; Jeroen Roovers <jer@gentoo.org> kdeutils-3.5.6.ebuild:
   Marked ~hppa.

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/artsplugin-akode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-akode/ChangeLog,v 1.45 2007/02/04 01:34:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-akode/ChangeLog,v 1.46 2007/02/05 12:34:13 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/artsplugin-akode-3.5.2-memleak.patch:
+  Remove unneeded patches.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -artsplugin-akode-3.5.2-r1.ebuild:

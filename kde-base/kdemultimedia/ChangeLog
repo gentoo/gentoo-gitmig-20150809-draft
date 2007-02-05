@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.240 2007/02/04 18:04:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.241 2007/02/05 12:37:58 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/juk-3.5.2-do_not_use_gstreamer-0.10.diff,
+  -files/juk-3.5.2-filerename.diff,
+  -files/artsplugin-akode-3.5.2-memleak.patch,
+  -files/kdemultimedia-64bit.patch:
+  Remove unneeded patches.
 
   04 Feb 2007; Jeroen Roovers <jer@gentoo.org> kdemultimedia-3.5.6.ebuild:
   Marked ~hppa.

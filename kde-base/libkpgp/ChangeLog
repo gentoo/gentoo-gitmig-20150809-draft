@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkpgp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpgp/ChangeLog,v 1.53 2007/02/04 03:13:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpgp/ChangeLog,v 1.54 2007/02/05 12:07:46 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/libkpgp-3.5.0-fixes.diff:
+  Remove unneeded patches.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -libkpgp-3.5.0-r1.ebuild:

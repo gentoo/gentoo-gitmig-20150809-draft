@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kttsd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.65 2007/02/04 03:02:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.66 2007/02/05 11:56:26 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/kdeaccessibility-3.4.0-noarts.patch:
+  Remove unneeded patches.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> -kttsd-3.5.2.ebuild:
   Remove old versions.

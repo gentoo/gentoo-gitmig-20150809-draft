@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.89 2007/02/04 02:21:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.90 2007/02/05 11:42:38 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/kdebase-3.4.3-noimake.patch, -files/kdebase-3.4.3-xdmcp.patch,
+  -files/post-3.5.0-kdebase-kdm.diff,
+  -files/kdm-3.5.3-strict-aliasing.patch, -files/kdm-3.5.4-grub-patch.diff,
+  -files/kdm-3.5.4-strict-aliasing.patch:
+  Remove unneeded patches.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> -kdm-3.5.2-r1.ebuild:
   Remove old versions.

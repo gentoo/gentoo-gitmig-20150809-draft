@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libkdepim
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.73 2007/02/04 03:11:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.74 2007/02/05 11:51:30 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/libkdepim-3.5.2-call_qt3_designer.diff,
+  -files/libkdepim-3.5.2-fixes.diff:
+  Remove unneeded patches.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -libkdepim-3.5.2-r1.ebuild:

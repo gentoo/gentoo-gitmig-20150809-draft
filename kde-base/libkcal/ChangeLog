@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkcal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcal/ChangeLog,v 1.69 2007/02/04 03:09:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcal/ChangeLog,v 1.70 2007/02/05 12:07:15 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/libkcal-3.5.2-fixes.diff:
+  Remove unneeded patches.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -libkcal-3.5.2-r1.ebuild:

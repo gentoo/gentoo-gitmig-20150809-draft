@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/khexedit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khexedit/ChangeLog,v 1.64 2007/02/04 02:27:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khexedit/ChangeLog,v 1.65 2007/02/05 11:52:54 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/khexedit-configure-magic.diff:
+  Remove unneeded patches.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> -khexedit-3.5.2.ebuild:
   Remove old versions.

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.74 2007/02/04 02:43:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.75 2007/02/05 12:36:13 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/kdebase-3.4.2-konqueror-filter.patch,
+  -files/konqueror-3.5.4-clear-history.patch:
+  Remove unneeded patches.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -konqueror-3.5.2.ebuild:

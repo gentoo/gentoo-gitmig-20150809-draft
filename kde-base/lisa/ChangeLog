@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/lisa
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/lisa/ChangeLog,v 1.64 2007/02/04 03:14:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/lisa/ChangeLog,v 1.65 2007/02/05 11:46:13 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/lisa-3.5.0-bindnow.patch, -files/lisa, -files/lisa.conf,
+  -files/reslisa, -files/reslisa.conf:
+  Remove unneeded patches.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> -lisa-3.5.2.ebuild:
   Remove old versions.

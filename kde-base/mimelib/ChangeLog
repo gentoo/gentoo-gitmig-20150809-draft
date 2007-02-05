@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/mimelib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/mimelib/ChangeLog,v 1.59 2007/02/04 03:15:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/mimelib/ChangeLog,v 1.60 2007/02/05 12:14:14 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/mimelib-3.5.1-memleak-fix.diff:
+  Remove unneeded patches.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -mimelib-3.5.1-r1.ebuild:

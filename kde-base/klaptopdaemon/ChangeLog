@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/klaptopdaemon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klaptopdaemon/ChangeLog,v 1.72 2007/02/04 02:32:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klaptopdaemon/ChangeLog,v 1.73 2007/02/05 12:10:28 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/kdeutils-3.4.3-klaptopdaemon.patch:
+  Remove unneeded patches.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -klaptopdaemon-3.5.2.ebuild:

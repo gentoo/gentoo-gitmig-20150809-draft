@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kcontrol
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.82 2007/02/04 01:51:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.83 2007/02/05 12:16:34 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/kdebase-3.4.1-configure.patch,
+  -files/kdebase-3.4.2-kinfocenter-opengl-fix.patch,
+  -files/configure.in.in-kdm-settings.diff:
+  Remove unneeded patches.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> -kcontrol-3.5.2.ebuild:
   Remove old versions.

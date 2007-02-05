@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.104 2007/02/04 02:46:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.105 2007/02/05 12:24:44 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/kopete-0.12.1-icqfix3.patch, -files/kopete-3.5.3-icqfix.patch,
+  -files/kopete-3.5.x-oscarcontacts.patch,
+  -files/configure-fix-kdenetwork-gadu.patch,
+  -files/configure-fix-kdenetwork-xmms.patch, -files/disable-meanwhile.diff:
+  Remove unneeded patches.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> -kopete-3.5.2.ebuild:
   Remove old versions.

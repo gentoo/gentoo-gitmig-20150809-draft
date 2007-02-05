@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksayit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksayit/ChangeLog,v 1.70 2007/02/04 02:53:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksayit/ChangeLog,v 1.71 2007/02/05 12:26:08 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/ksayit-3.4.3-pointer.patch:
+  Remove unneeded patches.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> -ksayit-3.5.2.ebuild:
   Remove old versions.
