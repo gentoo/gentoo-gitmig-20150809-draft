@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-zebu
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-zebu/ChangeLog,v 1.1 2004/11/08 02:55:44 mkennedy Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-zebu/ChangeLog,v 1.2 2007/02/05 00:38:05 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *cl-zebu-3.5.5 (07 Nov 2004)
 

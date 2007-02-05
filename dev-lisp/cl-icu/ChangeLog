@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-icu
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-icu/ChangeLog,v 1.4 2005/05/24 18:48:33 mkennedy Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-icu/ChangeLog,v 1.5 2007/02/05 00:31:05 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   24 May 2005; <mkennedy@gentoo.org> cl-icu-0.0_p11.ebuild:
   Keywording ~sparc

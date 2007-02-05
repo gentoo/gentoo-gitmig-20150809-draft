@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-curl
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-curl/ChangeLog,v 1.1 2005/06/10 04:45:43 mkennedy Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-curl/ChangeLog,v 1.2 2007/02/05 00:29:11 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *cl-curl-20050609 (10 Jun 2005)
 

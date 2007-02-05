@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-yaclml
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-yaclml/ChangeLog,v 1.6 2005/07/07 22:21:03 mkennedy Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-yaclml/ChangeLog,v 1.7 2007/02/05 00:37:42 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   07 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org>
   cl-yaclml-0.5_p26.ebuild:
