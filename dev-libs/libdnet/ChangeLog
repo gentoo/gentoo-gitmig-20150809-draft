@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdnet
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.30 2007/02/03 23:15:08 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.31 2007/02/05 16:40:46 gustavoz Exp $
+
+  05 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> libdnet-1.11.ebuild:
+  Stable on sparc
 
   03 Feb 2007; Marcelo Goes <vanquirius@gentoo.org> libdnet-1.11.ebuild:
   Mark 1.11 x86 stable.
