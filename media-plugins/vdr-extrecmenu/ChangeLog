@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-extrecmenu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extrecmenu/ChangeLog,v 1.14 2007/02/04 21:40:07 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extrecmenu/ChangeLog,v 1.15 2007/02/05 09:59:03 zzam Exp $
+
+  05 Feb 2007; Matthias Schwarzott <zzam@gentoo.org>
+  files/digest-vdr-extrecmenu-0.13, Manifest:
+  Fixed upstream modified tarball.
 
 *vdr-extrecmenu-0.13 (04 Feb 2007)
 
