@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sysklogd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.54 2007/01/31 05:27:17 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.55 2007/02/05 22:33:26 hansmi Exp $
+
+  05 Feb 2007; Michael Hanselmann <hansmi@gentoo.org>
+  sysklogd-1.4.2_pre20061230.ebuild:
+  Added to ~ppc.
 
   31 Jan 2007; Joseph Jezak <josejx@gentoo.org>
   sysklogd-1.4.2_pre20051017.ebuild:
