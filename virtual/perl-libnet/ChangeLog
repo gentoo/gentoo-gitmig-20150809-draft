@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-libnet
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-libnet/ChangeLog,v 1.5 2006/10/26 22:13:10 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-libnet/ChangeLog,v 1.6 2007/02/05 17:15:45 mcummings Exp $
+
+*perl-libnet-1.20 (05 Feb 2007)
+
+  05 Feb 2007; Michael Cummings <mcummings@gentoo.org>
+  +perl-libnet-1.20.ebuild:
+  Version bump
 
   26 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   perl-libnet-1.19.ebuild:
