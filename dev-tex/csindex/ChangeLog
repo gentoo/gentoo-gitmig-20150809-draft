@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/csindex
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/csindex/ChangeLog,v 1.4 2004/07/02 05:02:24 eradicator Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/csindex/ChangeLog,v 1.5 2007/02/05 21:08:13 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> csindex-2.11c.ebuild:
   virtual/glibc -> virtual/libc

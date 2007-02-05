@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/hevea
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.10 2005/08/05 16:17:35 mkennedy Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.11 2007/02/05 21:12:53 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   05 Aug 2005; <mkennedy@gentoo.org> hevea-1.08.ebuild:
   Keywording ~sparc.

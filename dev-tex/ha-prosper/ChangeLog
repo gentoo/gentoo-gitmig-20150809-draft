@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/ha-prosper
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/ha-prosper/ChangeLog,v 1.4 2005/04/06 04:04:19 usata Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/ha-prosper/ChangeLog,v 1.5 2007/02/05 21:12:07 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   06 Apr 2005; Mamoru KOMACHI <usata@gentoo.org> ha-prosper-4.21.ebuild:
   Added tetex-3 as an alternative dependency. Marked stable on x86 and ppc.

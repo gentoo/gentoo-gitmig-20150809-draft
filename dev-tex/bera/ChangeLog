@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/bera
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/bera/ChangeLog,v 1.1 2005/12/01 17:23:07 nattfodd Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/bera/ChangeLog,v 1.2 2007/02/05 21:06:21 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *bera-20040930 (01 Dec 2005)
 

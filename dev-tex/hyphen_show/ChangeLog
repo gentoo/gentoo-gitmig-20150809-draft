@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/hyphen_show
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hyphen_show/ChangeLog,v 1.2 2005/11/28 10:04:32 nattfodd Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hyphen_show/ChangeLog,v 1.3 2007/02/05 21:13:25 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   28 Nov 2005; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Added myself as maintainer.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/tth
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tth/ChangeLog,v 1.1 2005/02/12 14:23:11 usata Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tth/ChangeLog,v 1.2 2007/02/05 21:19:36 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *tth-3.66 (12 Feb 2005)
 

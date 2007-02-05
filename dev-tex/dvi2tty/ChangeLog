@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/dvi2tty
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvi2tty/ChangeLog,v 1.6 2004/12/28 20:59:04 absinthe Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvi2tty/ChangeLog,v 1.7 2007/02/05 21:08:43 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   28 Dec 2004; Dylan Carlson <absinthe@gentoo.org> dvi2tty-5.3.1.ebuild:
   Keywords ~amd64.
