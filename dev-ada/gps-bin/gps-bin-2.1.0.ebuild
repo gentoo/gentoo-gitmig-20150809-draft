@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gps-bin/gps-bin-2.1.0.ebuild,v 1.2 2007/01/25 23:51:01 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gps-bin/gps-bin-2.1.0.ebuild,v 1.3 2007/02/05 10:57:33 george Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 DEPEND="virtual/libc"
-RDEPEND=">=dev-lang/gnat-3.15p
+RDEPEND="virtual/gnat
 	>=x11-libs/gtk+-2.2.0
 	>=dev-ada/gtkada-2.4.0
 	>=media-libs/libpng-1.2.4"
