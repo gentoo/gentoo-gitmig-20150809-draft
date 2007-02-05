@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/nss
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.77 2007/02/04 20:17:09 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.78 2007/02/05 14:45:11 armin76 Exp $
+
+  05 Feb 2007; Raúl Porcel <armin76@gentoo.org> -nss-3.9.2-r2.ebuild,
+  -nss-3.9.2-r3.ebuild, -nss-3.11-r1.ebuild, -nss-3.11.1-r1.ebuild,
+  -nss-3.11.2.ebuild:
+  clean old
 
   04 Feb 2007; Alexander H. Færøy <eroyf@gentoo.org> nss-3.11.3.ebuild:
   Stable on MIPS; bug #148283
