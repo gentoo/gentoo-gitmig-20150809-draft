@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/htun
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htun/ChangeLog,v 1.5 2006/01/09 18:23:52 kloeri Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htun/ChangeLog,v 1.6 2007/02/05 00:44:53 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   09 Jan 2006; Bryan Østergaard <kloeri@gentoo.org metadata.xml:
   Remove retired dev from metadata.xml

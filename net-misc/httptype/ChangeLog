@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/httptype
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/httptype/ChangeLog,v 1.3 2004/08/28 01:45:30 tgall Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/httptype/ChangeLog,v 1.4 2007/02/05 00:45:14 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   27 Aug 2004; Tom Gall <tgall@gentoo.org> httptype-1.3.9.ebuild:
   stable on ppc64, bug #59350
