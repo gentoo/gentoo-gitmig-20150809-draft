@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.200 2007/02/04 20:04:23 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.201 2007/02/05 05:00:27 jer Exp $
+
+  05 Feb 2007; Jeroen Roovers <jer@gentoo.org> files/digest-amarok-1.4.5,
+  Manifest:
+  Fix the 1.4.5 digest for mabi.
 
   04 Feb 2007; Matti Bickel <mabi@gentoo.org> amarok-1.4.4-r4.ebuild:
   readd ~ppc (bug #164242)
