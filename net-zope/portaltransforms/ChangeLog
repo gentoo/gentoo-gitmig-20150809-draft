@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/portaltransforms
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/portaltransforms/ChangeLog,v 1.22 2006/01/26 07:09:50 robbat2 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/portaltransforms/ChangeLog,v 1.23 2007/02/05 20:35:28 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   26 Jan 2006; Robin H. Johnson <robbat2@gentoo.org>
   portaltransforms-1.0.3.ebuild, portaltransforms-1.0.4.ebuild,

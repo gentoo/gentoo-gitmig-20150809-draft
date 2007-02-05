@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zmysqlda
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zmysqlda/ChangeLog,v 1.8 2005/01/02 12:59:41 batlogg Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zmysqlda/ChangeLog,v 1.9 2007/02/05 20:47:02 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *zmysqlda-2.0.8-r1 (02 Jan 2005)
 

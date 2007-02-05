@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/verbosesecurity
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/verbosesecurity/ChangeLog,v 1.4 2005/01/13 20:56:11 radek Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/verbosesecurity/ChangeLog,v 1.5 2007/02/05 20:44:23 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *verbosesecurity-0.6 (13 Jan 2005)
 

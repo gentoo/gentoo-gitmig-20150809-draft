@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/squishdot
-# Copyright 2003-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/squishdot/ChangeLog,v 1.5 2005/05/08 03:03:35 nerdboy Exp $
+# Copyright 2003-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/squishdot/ChangeLog,v 1.6 2007/02/05 20:41:38 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   07 May 2005; Steve Arnold <nerdboy@gentoo.org> squishdot-1.5.0.ebuild
   +squishdot-1.5.0-r1.ebuild:

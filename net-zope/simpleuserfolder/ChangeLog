@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/simpleuserfolder
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/simpleuserfolder/ChangeLog,v 1.3 2004/06/25 01:25:11 agriffis Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/simpleuserfolder/ChangeLog,v 1.4 2007/02/05 20:39:42 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   05 Dec 2003; Heinrich Wendel <lanius@gentoo.org>
   simpleuserfolder-0.9.0.ebuild:

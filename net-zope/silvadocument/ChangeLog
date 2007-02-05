@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/silvadocument
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/silvadocument/ChangeLog,v 1.6 2005/05/08 19:23:33 radek Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/silvadocument/ChangeLog,v 1.7 2007/02/05 20:37:49 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *silvadocument-1.2.1 (08 May 2005)
 *silvadocument-1.1.5 (08 May 2005)
