@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/csconv
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/csconv/ChangeLog,v 1.11 2005/04/24 12:37:36 hansmi Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/csconv/ChangeLog,v 1.12 2007/02/05 00:13:42 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   csconv-12.1_p2002.ebuild:
