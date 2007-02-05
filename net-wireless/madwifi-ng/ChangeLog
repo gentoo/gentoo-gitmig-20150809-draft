@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/madwifi-ng
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.22 2007/01/29 23:01:50 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.23 2007/02/05 20:16:44 dsd Exp $
+
+  05 Feb 2007; Daniel Drake <dsd@gentoo.org>
+  +files/madwifi-ng-0.9.2.1-linux-2.6.20.patch, madwifi-ng-0.9.2.1.ebuild:
+  Move patches into src_unpack, and add 2.6.20 compatibility patch
 
   29 Jan 2007; <genstef@gentoo.org> +files/madwifi-ng-r1886.patch,
   madwifi-ng-0.9.2.1.ebuild:

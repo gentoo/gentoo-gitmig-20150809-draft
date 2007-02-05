@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.2.1.ebuild,v 1.5 2007/01/29 23:01:50 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.2.1.ebuild,v 1.6 2007/02/05 20:16:44 dsd Exp $
 
 inherit linux-mod
 
@@ -72,13 +72,15 @@ src_unpack() {
 	for dir in ath net80211 ath_rate/amrr ath_rate/onoe ath_rate/sample; do
 		convert_to_m ${S}/${dir}/Makefile
 	done
-}
 
-src_compile() {
 	epatch ${FILESDIR}/madwifi-ng-uudecode-gcda-fix.patch
 	if use injection; then epatch ${FILESDIR}/madwifi-ng-r1886.patch; fi
 #	epatch ${FILESDIR}/madwifi-association-fix.patch
 
+	epatch ${FILESDIR}/${P}-linux-2.6.20.patch
+}
+
+src_compile() {
 	# assists in debugging
 	emake KERNELPATH=${KV_OUT_DIR} info || die "emake info failed"
 
