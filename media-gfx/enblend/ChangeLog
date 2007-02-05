@@ -1,6 +1,16 @@
 # ChangeLog for media-gfx/enblend
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/ChangeLog,v 1.12 2006/07/15 10:50:33 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/ChangeLog,v 1.13 2007/02/05 03:46:34 vanquirius Exp $
+
+*enblend-3.0 (05 Feb 2007)
+
+  05 Feb 2007; Marcelo Goes <vanquirius@gentoo.org>
+  +files/enblend-3.0-amd64_compilation.patch,
+  +files/enblend-3.0-endless_loop_anneal.patch, +enblend-3.0.ebuild:
+  3.0 version bump for bug 164677. Thanks to Ralph Holz <ralph-bugzillagentoo
+  at ralphholz dot de>, Tim Harder <thorium90 at gmail dot com>, Hal Engel
+  <hvengel at astound dot net> and Christian Kanzian <christian.kanzian at gmx
+  dot at>.
 
   15 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove halcy0n from metadata.xml as he's retired.
