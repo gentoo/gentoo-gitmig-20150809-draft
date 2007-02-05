@@ -1,6 +1,11 @@
 # ChangeLog for rox-extra/videothumbnail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/videothumbnail/ChangeLog,v 1.8 2007/02/03 02:30:17 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/videothumbnail/ChangeLog,v 1.9 2007/02/05 13:20:03 lack Exp $
+
+*videothumbnail-0.1.13 (05 Feb 2007)
+
+  05 Feb 2007; Jim Ramsay <lack@gentoo.org> +videothumbnail-0.1.13.ebuild:
+  Version bump - 0.1.13 is released
 
   03 Feb 2007; Steve Dibb <beandog@gentoo.org> videothumbnail-0.1.12.ebuild:
   Add ~amd64, bug 144793
