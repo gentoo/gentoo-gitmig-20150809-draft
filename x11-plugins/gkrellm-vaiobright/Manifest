@@ -1,3 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST vaiobright-2.5.tar.gz 6178 RMD160 e507f6cf02ba1cb4c276e0e9d074605d8359ac1e SHA1 564f5fb7338515523fbed210751387dc119b423e SHA256 de80a3d29d00a5230958e65488846bd959244a2b3be881883b349b9c9e20a0e4
+EBUILD gkrellm-vaiobright-2.5.ebuild 664 RMD160 214cc01c7f4a53fd06abebb9fc078f28d52e04c6 SHA1 5ad4ab30618a79480ae5b51d5d4ae5f81034f661 SHA256 ac11a002f87ca56bdee7357f5a2d2567288503ae0475665d5a3dfa763b335948
 MD5 0b1f0168263ab2893bb51a82a929499f gkrellm-vaiobright-2.5.ebuild 664
-MD5 58a22e7f1a3cbdc4762665d87aefd4cd ChangeLog 475
-MD5 0be817eec94e97665f0a151f9dcde668 files/digest-gkrellm-vaiobright-2.5 64
+RMD160 214cc01c7f4a53fd06abebb9fc078f28d52e04c6 gkrellm-vaiobright-2.5.ebuild 664
+SHA256 ac11a002f87ca56bdee7357f5a2d2567288503ae0475665d5a3dfa763b335948 gkrellm-vaiobright-2.5.ebuild 664
+MISC ChangeLog 582 RMD160 eebba1a386c22ed6b49a623fa4a4318a6b751f25 SHA1 0248bf4554821206ace785d1bd7ca5f1c05c39b9 SHA256 237fed1e1272feca0f4b3bd01ec1ca9fb69ab93c9fc9459366176a04c4d087a2
+MD5 fc468d00f8dbd006a25f496c05a9b25e ChangeLog 582
+RMD160 eebba1a386c22ed6b49a623fa4a4318a6b751f25 ChangeLog 582
+SHA256 237fed1e1272feca0f4b3bd01ec1ca9fb69ab93c9fc9459366176a04c4d087a2 ChangeLog 582
+MD5 a68d39740c800e26ab020de062d5adbb files/digest-gkrellm-vaiobright-2.5 238
+RMD160 e246dde79af1cde409726e9a54cae34d1b62ced6 files/digest-gkrellm-vaiobright-2.5 238
+SHA256 148a2f070e1fa9073815ab420383e7a00ee651a77937ae36cc6e20dec301bbb6 files/digest-gkrellm-vaiobright-2.5 238
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.2 (GNU/Linux)
+
+iD8DBQFFxn+nAiZjviIA2XgRAtgrAKCFbl8UAR/dp/Xz4qRSSpuDvoZoDACePZ2o
+6Aa2Qniqq1onssPTQ+dupLQ=
+=hWcD
+-----END PGP SIGNATURE-----
