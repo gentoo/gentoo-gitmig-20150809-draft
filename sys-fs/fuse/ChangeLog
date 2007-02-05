@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.71 2007/01/24 07:31:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.72 2007/02/05 08:07:41 genstef Exp $
+
+  05 Feb 2007; <genstef@gentoo.org> +files/fuse-2.6.20.patch,
+  fuse-2.6.1.ebuild:
+  Add 2.6.20 patch, bug 159573
 
   24 Jan 2007; <genstef@gentoo.org> +files/fuse.init, fuse-2.6.1.ebuild:
   Gentooify init script thanks to David B. Ferguson <david@microtask.ca>

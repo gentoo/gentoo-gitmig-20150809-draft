@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.6.1.ebuild,v 1.4 2007/01/24 07:31:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.6.1.ebuild,v 1.5 2007/02/05 08:07:41 genstef Exp $
 
 inherit linux-mod eutils libtool
 
@@ -24,13 +24,18 @@ FUSE_FS_ERROR="We have detected FUSE already built into the kernel.
 We will continue, but we wont build the module this time."
 
 pkg_setup() {
-	use kernel_linux && linux-mod_pkg_setup
+	if use kernel_linux ; then
+		linux-mod_pkg_setup
+		kernel_is 2 4 && die "kernel 2.4 is not supported by this ebuild. Get an
+			older version from viewcvs"
+	fi
 }
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/fuse-fix-lazy-binding.patch
+	epatch "${FILESDIR}"/fuse-2.6.20.patch
 	elibtoolize
 }
 

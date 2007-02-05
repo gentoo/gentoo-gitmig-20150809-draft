@@ -1,0 +1,35 @@
+diff -Naud fuse-2.6.1/work/fuse-2.6.1/kernel/dev.c fuse-2.6.1-fixed/work/fuse-2.6.1/kernel/dev.c
+--- fuse-2.6.1/work/fuse-2.6.1/kernel/dev.c	2006-11-19 17:02:34.000000000 +0100
++++ fuse-2.6.1-fixed/work/fuse-2.6.1/kernel/dev.c	2006-12-30 18:52:07.000000000 +0100
+@@ -43,7 +43,7 @@
+ 
+ struct fuse_req *fuse_request_alloc(void)
+ {
+-	struct fuse_req *req = kmem_cache_alloc(fuse_req_cachep, SLAB_KERNEL);
++	struct fuse_req *req = kmem_cache_alloc(fuse_req_cachep, GFP_KERNEL);
+ 	if (req)
+ 		fuse_request_init(req);
+ 	return req;
+diff -Naud fuse-2.6.1/work/fuse-2.6.1/kernel/file.c fuse-2.6.1-fixed/work/fuse-2.6.1/kernel/file.c
+--- fuse-2.6.1/work/fuse-2.6.1/kernel/file.c	2006-10-20 19:33:56.000000000 +0200
++++ fuse-2.6.1-fixed/work/fuse-2.6.1/kernel/file.c	2006-12-30 19:00:13.000000000 +0100
+@@ -501,7 +501,6 @@
+ 		spin_unlock(&fc->lock);
+ 
+ 		if (offset == 0 && to == PAGE_CACHE_SIZE) {
+-			clear_page_dirty(page);
+ 			SetPageUptodate(page);
+ 		}
+ 	}
+diff -Naud fuse-2.6.1/work/fuse-2.6.1/kernel/inode.c fuse-2.6.1-fixed/work/fuse-2.6.1/kernel/inode.c
+--- fuse-2.6.1/work/fuse-2.6.1/kernel/inode.c	2006-11-28 15:04:45.000000000 +0100
++++ fuse-2.6.1-fixed/work/fuse-2.6.1/kernel/inode.c	2006-12-30 18:52:26.000000000 +0100
+@@ -52,7 +52,7 @@
+ 	struct inode *inode;
+ 	struct fuse_inode *fi;
+ 
+-	inode = kmem_cache_alloc(fuse_inode_cachep, SLAB_KERNEL);
++	inode = kmem_cache_alloc(fuse_inode_cachep, GFP_KERNEL);
+ 	if (!inode)
+ 		return NULL;
+ 
