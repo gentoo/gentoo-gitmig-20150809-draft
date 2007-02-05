@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/hibernate-script-1.94-r3.ebuild,v 1.2 2007/01/30 15:33:52 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/hibernate-script-1.94-r3.ebuild,v 1.3 2007/02/05 00:01:46 beandog Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.suspend2.net/downloads/all/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 
 IUSE="logrotate vim"
 
