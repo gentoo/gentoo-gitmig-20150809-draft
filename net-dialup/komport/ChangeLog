@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/komport
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/komport/ChangeLog,v 1.7 2005/05/10 17:25:01 carlo Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/komport/ChangeLog,v 1.8 2007/02/05 11:01:00 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/komport-0.5.9-configure-arts.diff, komport-0.5.9.ebuild:
+  Update admin directory rather than patching configure to remove aRTs checks.
 
   10 May 2005; Carsten Lohrke <carlo@gentoo.org>
   +files/komport-0.5.9-configure-arts.diff, komport-0.5.9.ebuild:
