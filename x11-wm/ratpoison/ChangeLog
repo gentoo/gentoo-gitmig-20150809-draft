@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/ratpoison
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.40 2007/01/04 19:09:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.41 2007/02/05 23:23:39 weeve Exp $
+
+*ratpoison-1.4.1 (05 Feb 2007)
+
+  05 Feb 2007; Jason Wever <weeve@gentoo.org> +ratpoison-1.4.1.ebuild:
+  Version bump.
 
   04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ratpoison-1.4.0.ebuild:
   Fix broken autotools handling.
