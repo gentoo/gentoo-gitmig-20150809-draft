@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.29 2007/01/25 14:47:12 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.30 2007/02/05 20:29:38 chainsaw Exp $
+
+*audacious-plugins-1.3.0_alpha4 (05 Feb 2007)
+
+  05 Feb 2007; Tony Vroon <chainsaw@gentoo.org>
+  +audacious-plugins-1.3.0_alpha4.ebuild:
+  New developer release. Three new plugins: a stable status icon (not be
+  confused with the third-party docklet plugin), OSD (based on ghosd) and
+  support for evdev input devices. The opengl USE-flag now enables projectm,
+  as requested by Jozsef Daniel <simius@mail.tvnet.hu> in bug #163764.
 
 *audacious-plugins-1.3.0_alpha3 (25 Jan 2007)
 
