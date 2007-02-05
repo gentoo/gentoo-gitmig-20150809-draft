@@ -1,6 +1,11 @@
 # ChangeLog for app-text/tesseract
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.1 2007/02/02 21:34:24 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.2 2007/02/05 16:50:56 chutzpah Exp $
+
+*tesseract-1.03 (05 Feb 2007)
+
+  05 Feb 2007; Patrick McLean <chutzpah@gentoo.org> +tesseract-1.03.ebuild:
+  Version bump.
 
 *tesseract-1.02.02022007 (02 Feb 2007)
 
