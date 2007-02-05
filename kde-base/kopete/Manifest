@@ -1,18 +1,6 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-AUX configure-fix-kdenetwork-gadu.patch 2626 RMD160 e348401fcbe734b2e0d5ba767a3f64b31abf31dc SHA1 44ea1fb88aee6042d7c7d1f04a159977478453a7 SHA256 b71d184ff9c44bfeb2f8e90e75145ae5c77ff5a5f23165eca3c538374d40ef3b
-MD5 100ba684bf2f7b3bd7061b488264a21d files/configure-fix-kdenetwork-gadu.patch 2626
-RMD160 e348401fcbe734b2e0d5ba767a3f64b31abf31dc files/configure-fix-kdenetwork-gadu.patch 2626
-SHA256 b71d184ff9c44bfeb2f8e90e75145ae5c77ff5a5f23165eca3c538374d40ef3b files/configure-fix-kdenetwork-gadu.patch 2626
-AUX configure-fix-kdenetwork-xmms.patch 1183 RMD160 ba1cb86adebf3cc33a9b7741ec98ac3b3cecb4bc SHA1 1cb2fe4631a1578cd732b7312985daf89aa29d24 SHA256 87dd8614031341ce461a102eea6234761326a4b3f970ce27df3302e4bcca2c93
-MD5 3a5877277804af9bdafd5fd0e80c9f61 files/configure-fix-kdenetwork-xmms.patch 1183
-RMD160 ba1cb86adebf3cc33a9b7741ec98ac3b3cecb4bc files/configure-fix-kdenetwork-xmms.patch 1183
-SHA256 87dd8614031341ce461a102eea6234761326a4b3f970ce27df3302e4bcca2c93 files/configure-fix-kdenetwork-xmms.patch 1183
-AUX disable-meanwhile.diff 351 RMD160 e97ecb2f463f98a14857352647800d6402629146 SHA1 581ca7fa8ccc05949443291defcf0948961ded84 SHA256 4331c4edfe1e81ad1372dee39940e2fb12bf35b12dc298ebe5b8fb435ad35434
-MD5 2db2170b384350ce6c05cd23c0bb21c7 files/disable-meanwhile.diff 351
-RMD160 e97ecb2f463f98a14857352647800d6402629146 files/disable-meanwhile.diff 351
-SHA256 4331c4edfe1e81ad1372dee39940e2fb12bf35b12dc298ebe5b8fb435ad35434 files/disable-meanwhile.diff 351
 AUX gnomemeeting-ekiga.patch 2073 RMD160 d8e695ed5a8a6f2fd6819b965dccade6d288a938 SHA1 13cdedb9087de6757a11f8bf03dd2a992ae37ffe SHA256 5f908d8491a286db761d4c7e0bc07da05ad0ec7cc5c94bc69533706bbd8d552c
 MD5 9e1eafd475bca7ccb4c199e2fbdca02a files/gnomemeeting-ekiga.patch 2073
 RMD160 d8e695ed5a8a6f2fd6819b965dccade6d288a938 files/gnomemeeting-ekiga.patch 2073
@@ -21,26 +9,14 @@ AUX kdenetwork-3.5.5-linux-headers-2.6.18.patch 799 RMD160 1e12373bef6f0a69d9b5d
 MD5 c4a46d3f1920fbef1afaf9d47f1edc6b files/kdenetwork-3.5.5-linux-headers-2.6.18.patch 799
 RMD160 1e12373bef6f0a69d9b5d453c9a63b84f7b48645 files/kdenetwork-3.5.5-linux-headers-2.6.18.patch 799
 SHA256 1e282677beb1bec1c32e12c2c289e498b487b9f0bd0fa9c7b38a4944d48d6e9a files/kdenetwork-3.5.5-linux-headers-2.6.18.patch 799
-AUX kopete-0.12.1-icqfix3.patch 584 RMD160 12b8de0555fe71321139d2d2ffca2e94c70f765f SHA1 3d7b5ec003c9c9ba8abf48f04ba695b63ea92e12 SHA256 b3f942f94403135f30990574a74f36755c8ffb496a6496fa823ae1b028f8ca82
-MD5 01b42c4e8b58d78005e6f3870b5fda16 files/kopete-0.12.1-icqfix3.patch 584
-RMD160 12b8de0555fe71321139d2d2ffca2e94c70f765f files/kopete-0.12.1-icqfix3.patch 584
-SHA256 b3f942f94403135f30990574a74f36755c8ffb496a6496fa823ae1b028f8ca82 files/kopete-0.12.1-icqfix3.patch 584
 AUX kopete-0.12_alpha1-xscreensaver.patch 778 RMD160 d188f074982191f6f961c7e32ec97a79746e73df SHA1 85dea3f727af4393740bacb237c80ee666f1bdae SHA256 2152d2d2d1ed29b986d5b7f80a6f7bcabd56e5580146298973b4114353b5686d
 MD5 638d3cc679fc614b53fbeff0c41aa05c files/kopete-0.12_alpha1-xscreensaver.patch 778
 RMD160 d188f074982191f6f961c7e32ec97a79746e73df files/kopete-0.12_alpha1-xscreensaver.patch 778
 SHA256 2152d2d2d1ed29b986d5b7f80a6f7bcabd56e5580146298973b4114353b5686d files/kopete-0.12_alpha1-xscreensaver.patch 778
-AUX kopete-3.5.3-icqfix.patch 1018 RMD160 a8f98e36c6abe06068fea05df7019a8e43b96b81 SHA1 1399c0a08ff2cc3dfa303dfa5a12a5986a9d225e SHA256 b267d693d266c17af48916bb51f12c74764c97d5367ee9e2bf90009e459278ed
-MD5 028773fca0d39e36c363fa1b6e8ffcfb files/kopete-3.5.3-icqfix.patch 1018
-RMD160 a8f98e36c6abe06068fea05df7019a8e43b96b81 files/kopete-3.5.3-icqfix.patch 1018
-SHA256 b267d693d266c17af48916bb51f12c74764c97d5367ee9e2bf90009e459278ed files/kopete-3.5.3-icqfix.patch 1018
 AUX kopete-3.5.5-icqfix.patch 749 RMD160 129efdaa2bf0dbf88fe4714b4daab5f3606cbc91 SHA1 f3ef29b821ba5f0b62438a7b78a982625e42bd94 SHA256 e165e409343918ac49da0df867f7df34fffa5adfd550ca3079016d0b576a1987
 MD5 33f9ea10ff35fd56a9f3c4cd2b983583 files/kopete-3.5.5-icqfix.patch 749
 RMD160 129efdaa2bf0dbf88fe4714b4daab5f3606cbc91 files/kopete-3.5.5-icqfix.patch 749
 SHA256 e165e409343918ac49da0df867f7df34fffa5adfd550ca3079016d0b576a1987 files/kopete-3.5.5-icqfix.patch 749
-AUX kopete-3.5.x-oscarcontacts.patch 3522 RMD160 517648e2a4711995bf4aac388a5b5ff88d6d81b9 SHA1 7e64722238b63dc56ba614690c3aeee228d17099 SHA256 25bad95c67ebdfa22e297057406bdb50fdb1e24ddd9cc31e9008f175f326816e
-MD5 ddd5bd40a322656a0e236b8aa185a27b files/kopete-3.5.x-oscarcontacts.patch 3522
-RMD160 517648e2a4711995bf4aac388a5b5ff88d6d81b9 files/kopete-3.5.x-oscarcontacts.patch 3522
-SHA256 25bad95c67ebdfa22e297057406bdb50fdb1e24ddd9cc31e9008f175f326816e files/kopete-3.5.x-oscarcontacts.patch 3522
 DIST kdenetwork-3.5-patchset-01.tar.bz2 2986 RMD160 288113734e7767a7526f4b9311c1985ac8aa91bf SHA1 cacc9ad8137e5c9e44bda1faa05e26cf2450f4e6 SHA256 0bbde1adaa4e8fff02c1f1fd6ceb66ec9af14dd19ff64567ab0fd03926d7d05b
 DIST kdenetwork-3.5.5.tar.bz2 9235564 RMD160 3e757d10ee5bf24b2ccf131e693fb614b9fdb9f4 SHA1 a95bac9de9770f551870fb73ce456d779ba36878 SHA256 c3f36e69bbd23902f2bdd9a1a8cda93b0436338ada422bb8ac6bc3d2bcd8e38f
 DIST kdenetwork-3.5.6.tar.bz2 9245468 RMD160 2f93badae14fab4d7911c74d2f427e85ca104827 SHA1 494c67139415e3b18a1d5d054d872e90b8289832 SHA256 786e6c25d5cba4ed1eeac947c5554d7fe57de593abf6551c58c178043b82475e
@@ -52,10 +28,10 @@ EBUILD kopete-3.5.6.ebuild 4102 RMD160 b82ff7b0deff10ad925222743d79f1a74d1383ff 
 MD5 2bed61ae03b2c7a8c9de1162df972f61 kopete-3.5.6.ebuild 4102
 RMD160 b82ff7b0deff10ad925222743d79f1a74d1383ff kopete-3.5.6.ebuild 4102
 SHA256 1c3df5ca652fbb7a234e38555f208a15df38f543b392690f60fa00a7846a8dc6 kopete-3.5.6.ebuild 4102
-MISC ChangeLog 14769 RMD160 c540f364764e085f594144f541681a87f5d3c472 SHA1 44e00b850b7d956e49a44718838298227e141d62 SHA256 1ce81847931537383362360ffc24e5ab1bcfd2fe716ffe75f551f8b9efe513ef
-MD5 7c97147d599cce523f8e170fe2469014 ChangeLog 14769
-RMD160 c540f364764e085f594144f541681a87f5d3c472 ChangeLog 14769
-SHA256 1ce81847931537383362360ffc24e5ab1bcfd2fe716ffe75f551f8b9efe513ef ChangeLog 14769
+MISC ChangeLog 15088 RMD160 5dedd9da31f0adedec90e7612cdb29b3e9ddd087 SHA1 6dbdcd5af49cf2f9ac6327641cb86b69f1bccaa0 SHA256 046a47d79aaf3ad2c6ce93f26fd6dbd242be9ab16198a50d260fb628d6111065
+MD5 d119a36380395f62f27671807865f7c8 ChangeLog 15088
+RMD160 5dedd9da31f0adedec90e7612cdb29b3e9ddd087 ChangeLog 15088
+SHA256 046a47d79aaf3ad2c6ce93f26fd6dbd242be9ab16198a50d260fb628d6111065 ChangeLog 15088
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
@@ -69,7 +45,7 @@ SHA256 ecaf8d329908f4d5793e6d91319908764cafce446759c0f51fe509f877cd8219 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.2 (GNU/Linux)
 
-iD8DBQFFxUkEAiZjviIA2XgRAk7JAJ9MtLLht0NH672YZlZHGSZFwhlmiwCgkLxD
-YzTFJ9W8rT4NuvsSNQ0lGtE=
-=e3CE
+iD8DBQFFxyITAiZjviIA2XgRAtefAKDlxuuGCedYtNjUdKKc5wevnmP/uwCgwrQh
+ODtXtyp8Jd+gpqrhm/6vrvU=
+=eVok
 -----END PGP SIGNATURE-----
