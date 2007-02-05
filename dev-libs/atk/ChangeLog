@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/atk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.129 2007/02/02 09:37:03 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.130 2007/02/05 12:04:51 leio Exp $
+
+*atk-1.12.4 (05 Feb 2007)
+
+  05 Feb 2007; Mart Raudsepp <leio@gentoo.org> +atk-1.12.4.ebuild:
+  New version for translation updates
 
   02 Feb 2007; Mart Raudsepp <leio@gentoo.org> -atk-1.12.2.ebuild:
   Remove old
