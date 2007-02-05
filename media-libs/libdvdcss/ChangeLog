@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libdvdcss
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.60 2006/11/09 09:25:36 zzam Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.61 2007/02/05 11:20:44 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> libdvdcss-1.2.9.ebuild:
+  Remove static useflag, always build both shared and static library, thanks
+  to Jakub Moc in bug #165385. Remove the broken idea of ABI compatibility
+  symlinks.
 
   09 Nov 2006; Matthias Schwarzott <zzam@gentoo.org> libdvdcss-1.2.9.ebuild:
   Changed automake-dependency to latest.

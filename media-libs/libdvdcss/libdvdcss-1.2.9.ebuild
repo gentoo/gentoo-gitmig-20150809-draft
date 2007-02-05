@@ -1,9 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.9.ebuild,v 1.18 2006/11/09 09:25:36 zzam Exp $
-
-WANT_AUTOMAKE="latest"
-WANT_AUTOCONF="latest"
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.9.ebuild,v 1.19 2007/02/05 11:20:44 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -14,7 +11,7 @@ SRC_URI="http://www.videolan.org/pub/${PN}/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="1.2"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc-macos ppc64 sh sparc x86 ~x86-fbsd"
-IUSE="doc static"
+IUSE="doc"
 
 DEPEND="doc? ( app-doc/doxygen )"
 RDEPEND=""
@@ -49,7 +46,7 @@ src_compile() {
 	use doc && addwrite /var/cache/fonts
 
 	econf \
-		$(use_enable static) \
+		--enable-static --enable-shared \
 		$(use_enable doc) \
 		--disable-dependency-tracking || die
 	emake || die
@@ -60,18 +57,4 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog NEWS README
 	use doc && dohtml doc/html/*
-
-	##
-	## 0.0.3.* and 1.0.0 compat
-	##
-
-	# NOTE: this should be the last code in src_install() !!!
-
-	if [ -L ${D}/usr/$(get_libdir)/libdvdcss.so ]; then
-		realname=$(readlink ${D}/usr/$(get_libdir)/libdvdcss.so)
-
-		for x in libdvdcss.so.0 libdvdcss.so.1; do
-			dosym ${realname} /usr/$(get_libdir)/${x}
-		done
-	fi
 }
