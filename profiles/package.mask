@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6760 2007/02/05 10:59:24 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6761 2007/02/05 11:11:12 george Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# George Shapovalov <george@gentoo.org> (04 Feb 2007)
+# masked, pending removal, old versions not supporting new gnat compilers
+<=dev-ada/adasockets-1.8.4.4.ebuild
+=dev-ada/booch_components-20030815.ebuild
 
 # Markus Dittrich <markusle@gentoo.org> (04 Feb 2007)
 # masked for a few days to give the new test routines
@@ -619,11 +624,6 @@ dev-perl/Msql-Mysql-modules
 # therefore, refuses to compile. Unless somebody steps up 
 # to fix it we should probably remove it from the tree.
 sci-mathematics/gturing
-
-# George Shapovalov <george@gentoo.org> (14 Nov 2006)
-# dead upstream, should be replaced by PolyORB
-# masked for removal
-dev-ada/adabroker
 
 # Peter Volkov <pva@gentoo.org> (12 Nov 2006)
 # app-emulation/uae for bug(s) 153191, 112675, 140707, 137018
