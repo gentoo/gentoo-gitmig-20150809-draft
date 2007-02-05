@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.221 2007/02/04 23:58:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.222 2007/02/05 19:37:08 wolf31o2 Exp $
+
+  05 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  alsa-lib-1.0.14_rc1.ebuild:
+  Stable on alpha wrt bug #158678.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -files/alsa-lib-1.0.10-no-wordexp-header.patch,
