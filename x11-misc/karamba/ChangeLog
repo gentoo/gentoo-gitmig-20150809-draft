@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/karamba
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/karamba/ChangeLog,v 1.19 2005/11/02 19:44:18 nelchael Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/karamba/ChangeLog,v 1.20 2007/02/05 10:26:34 flameeyes Exp $
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/karamba-0.17-configure-arts.patch, -karamba-0.17-r1.ebuild,
+  karamba-0.17-r2.ebuild:
+  Update admin directory rather than patching configure to disable aRTs checks.
 
   02 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> karamba-0.17-r2.ebuild:
   Added missing eutils to inherit.
