@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.3.ebuild,v 1.1 2006/12/03 15:09:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.3.ebuild,v 1.2 2007/02/05 22:05:55 aballier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -24,6 +24,7 @@ RDEPEND="ogg? ( >=media-libs/libogg-1.0_rc2 )"
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )
 	sys-apps/gawk
+	sys-devel/gettext
 	doc? ( app-doc/doxygen )
 	dev-util/pkgconfig"
 
