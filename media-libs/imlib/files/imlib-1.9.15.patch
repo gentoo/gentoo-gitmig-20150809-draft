@@ -45,3 +45,24 @@ diff -ur imlib-1.9.15.orig/imlib-config.in imlib-1.9.15/imlib-config.in
        echo `@GTK_CONFIG@ --cflags` $includes @X_CFLAGS@
        ;;
      --libs)
+diff -ur imlib-1.9.15.orig/imlib.m4 imlib-1.9.15/imlib.m4
+--- imlib-1.9.15.orig/imlib.m4	2004-08-27 19:03:11.000000000 +0300
++++ imlib-1.9.15/imlib.m4	2007-02-05 21:36:58.000000000 +0200
+@@ -6,7 +6,7 @@
+ dnl AM_PATH_IMLIB([MINIMUM-VERSION, [ACTION-IF-FOUND [, ACTION-IF-NOT-FOUND]]])
+ dnl Test for IMLIB, and define IMLIB_CFLAGS and IMLIB_LIBS
+ dnl
+-AC_DEFUN(AM_PATH_IMLIB,
++AC_DEFUN([AM_PATH_IMLIB],
+ [dnl 
+ dnl Get the cflags and libraries from the imlib-config script
+ dnl
+@@ -164,7 +164,7 @@
+ ])
+ 
+ # Check for gdk-imlib
+-AC_DEFUN(AM_PATH_GDK_IMLIB,
++AC_DEFUN([AM_PATH_GDK_IMLIB],
+ [dnl 
+ dnl Get the cflags and libraries from the imlib-config script
+ dnl
