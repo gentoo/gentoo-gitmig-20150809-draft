@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/nss_ldap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.37 2007/01/27 03:27:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.38 2007/02/06 04:48:04 robbat2 Exp $
+
+*nss_ldap-253-r1 (31 Jan 2007)
+
+  31 Jan 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +nss_ldap-253-r1.ebuild:
+  Fix kerberos support in nss_ldap, bug #163362.
 
   27 Jan 2007; Jeroen Roovers <jer@gentoo.org> nss_ldap-253.ebuild:
   Stable for HPPA (bug #158254).
