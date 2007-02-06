@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/cpp2latex/cpp2latex-2.3-r1.ebuild,v 1.1 2006/01/25 16:09:19 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cpp2latex/cpp2latex-2.3-r1.ebuild,v 1.2 2007/02/06 16:45:54 nattfodd Exp $
 
 inherit eutils
 
 DESCRIPTION="A program to convert C++ code to LaTeX source"
-HOMEPAGE="http://roederberg.dyndns.org/~arnold/cpp2latex"
-SRC_URI="http://www.arnoldarts.de/${P}.tar.gz"
+HOMEPAGE="http://www.arnoldarts.de/drupal/?q=Cpp2LaTeX"
+SRC_URI="http://www.arnoldarts.de/drupal/files/downloads/cpp2latex/${P}.tar.gz"
 LICENSE="GPL-2"
 
 IUSE=""

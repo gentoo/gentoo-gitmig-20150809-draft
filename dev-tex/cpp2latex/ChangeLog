@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/cpp2latex
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/cpp2latex/ChangeLog,v 1.8 2006/01/25 16:09:19 ehmsen Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cpp2latex/ChangeLog,v 1.9 2007/02/06 16:45:54 nattfodd Exp $
+
+  06 Feb 2007; Alexandre Buisse <nattfodd@gentoo.org> cpp2latex-2.3.ebuild,
+  cpp2latex-2.3-r1.ebuild:
+  Updated HOMEPAGE and SRC_URI.
 
 *cpp2latex-2.3-r1 (25 Jan 2006)
 
