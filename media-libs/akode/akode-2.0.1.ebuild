@@ -1,6 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/akode-2.0.1.ebuild,v 1.9 2006/10/20 21:37:38 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/akode-2.0.1.ebuild,v 1.10 2007/02/06 21:49:43 flameeyes Exp $
+
+WANT_AUTOMAKE="1.9"
+WANT_AUTOCONF="2.5"
+
+inherit eutils autotools
 
 MY_P=${P/_beta/b}
 S=${WORKDIR}/${MY_P}
@@ -23,12 +28,26 @@ DEPEND="media-libs/libsamplerate
 	vorbis? ( media-libs/libvorbis )
 	speex? ( media-libs/speex )"
 
+src_unpack() {
+	unpack ${A}
+
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-alsa-tests.patch"
+
+	sed -i -e '/case $AUTO\(CONF\|HEADER\)_VERSION in/,+1 s/2\.5/2.[56]/g' \
+		admin/cvs.sh
+
+	emake -j1 -f admin/Makefile.common || die "unable to regenerate configure"
+
+	elibtoolize
+}
+
 src_compile() {
 	local myconf="--with-libsamplerate
-	              $(use_with oss) $(use_with alsa) $(use_with jack)
-	              $(use_with flac) $(use_with mp3 libmad)
-	              $(use_with vorbis) $(use_with speex)
-	              --without-polypaudio"
+				  $(use_with oss) $(use_with alsa) $(use_with jack)
+				  $(use_with flac) $(use_with mp3 libmad)
+				  $(use_with vorbis) $(use_with speex)
+				  --without-polypaudio"
 
 	econf ${myconf} || die
 	emake || die

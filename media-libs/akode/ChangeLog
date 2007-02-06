@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/akode
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/ChangeLog,v 1.23 2006/10/20 21:37:38 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/ChangeLog,v 1.24 2007/02/06 21:49:43 flameeyes Exp $
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +files/akode-2.0.1-alsa-tests.patch, akode-2.0.1.ebuild:
+  Add a patch to allow building akode with the experimental alsa-lib with
+  sequencer (midi) disabled.
 
   20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> akode-2.0.1.ebuild:
   Stable on Alpha.

@@ -1,0 +1,76 @@
+Index: akode-2.0.1/akode/configure.in.in
+===================================================================
+--- akode-2.0.1.orig/akode/configure.in.in
++++ akode-2.0.1/akode/configure.in.in
+@@ -105,59 +105,11 @@ AC_DEFUN([KDE_CHECK_SUN],
+ 
+ AC_DEFUN([KDE_CHECK_ALSA],
+ [
+-  have_alsa=no
++  PKG_CHECK_MODULES([ALSA], [alsa >= 0.9], [have_alsa=yes], [have_alsa=no])
+ 
+-  AC_CHECK_HEADERS([sys/asoundlib.h alsa/asoundlib.h],
+-    [have_alsa=yes])
+-
+-  AC_CHECK_LIB(asound, snd_seq_create_simple_port,
+-    [:], [have_alsa=no])
+-
+-  AC_LANG_SAVE
+-  AC_LANG_C
+-  if test "x$have_alsa" = xyes; then
+-    AC_TRY_COMPILE([
+-      #include "confdefs.h"
+-      #ifdef HAVE_SYS_ASOUNDLIB_H
+-      #include <sys/asoundlib.h>
+-      #endif
+-      #ifdef HAVE_ALSA_ASOUNDLIB_H
+-      #include <alsa/asoundlib.h>
+-      #endif
+-    ],[
+-      #if (SND_LIB_MAJOR == 0) && (SND_LIB_MINOR == 9)
+-        /* we have ALSA 0.9.x */
+-      #else
+-        #error not ALSA 0.9.x
+-      #endif
+-    ],
+-    have_alsa_0_9=yes)
+-
+-    AC_TRY_COMPILE([
+-      #include "confdefs.h"
+-      #ifdef HAVE_SYS_ASOUNDLIB_H
+-      #include <sys/asoundlib.h>
+-      #endif
+-      #ifdef HAVE_ALSA_ASOUNDLIB_H
+-      #include <alsa/asoundlib.h>
+-      #endif
+-    ],[
+-      #if (SND_LIB_MAJOR == 1)
+-        /* we have ALSA 1.x */
+-      #else
+-        #error not ALSA 1.x
+-      #endif
+-    ],
+-    have_alsa_1=yes)
+-  fi
+-  AC_LANG_RESTORE
+-
+-  if test "x$have_alsa_0_9" = xyes || test "x$have_alsa_1" = xyes; then
+-    LIBASOUND="-lasound"
++  if test "x$have_alsa" = "xyes"; then
+     AC_DEFINE(HAVE_LIBASOUND2, 1, [Define if you have libasound.so.2 (required for ALSA 0.9.x/1.x support)])
+   fi
+-
+-  AC_SUBST(LIBASOUND)
+ ])
+ 
+ AC_ARG_WITH(flac,AC_HELP_STRING([--with-flac],[Enable FLAC support @<:@default=check@:>@]),[flac_test="$withval"],[flac_test="yes"])
+Index: akode-2.0.1/akode/plugins/alsa_sink/Makefile.am
+===================================================================
+--- akode-2.0.1.orig/akode/plugins/alsa_sink/Makefile.am
++++ akode-2.0.1/akode/plugins/alsa_sink/Makefile.am
+@@ -4,4 +4,4 @@ lib_LTLIBRARIES	= libakode_alsa_sink.la
+ 
+ libakode_alsa_sink_la_SOURCES = alsa_sink.cpp
+ libakode_alsa_sink_la_LDFLAGS = -module -avoid-version -no-undefined
+-libakode_alsa_sink_la_LIBADD = ../../lib/libakode.la $(LIBASOUND)
++libakode_alsa_sink_la_LIBADD = ../../lib/libakode.la $(ALSA_LIBS)
