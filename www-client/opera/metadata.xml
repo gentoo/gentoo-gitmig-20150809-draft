@@ -5,4 +5,8 @@
 	<maintainer>
 		<email>axxo@gentoo.org</email>
 	</maintainer>
+	<maintainer>
+		<email>jer@gentoo.org</email>
+		<name>Jeroen Roovers</name>
+	</maintainer>
 </pkgmetadata>

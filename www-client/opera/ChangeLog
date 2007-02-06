@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.79 2007/01/17 05:13:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.80 2007/02/06 05:02:33 jer Exp $
+
+  06 Feb 2007; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Set myself up as (co)maintainer while axxo is away. You know, just to catch
+  the bugs and such.
 
   17 Jan 2007; Jeroen Roovers <jer@gentoo.org> -opera-9.02.ebuild:
   Remove vulnerable version.
