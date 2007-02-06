@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/tse3
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/ChangeLog,v 1.16 2006/11/19 04:30:41 matsuu Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/ChangeLog,v 1.17 2007/02/06 23:21:21 aballier Exp $
+
+  06 Feb 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/tse3-0.3.1-parallelmake.patch, tse3-0.3.1.ebuild:
+  Fix parallel make, bug #155715
 
 *tse3-0.3.1 (19 Nov 2006)
 

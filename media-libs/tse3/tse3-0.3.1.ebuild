@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/tse3-0.3.1.ebuild,v 1.1 2006/11/19 04:30:41 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/tse3-0.3.1.ebuild,v 1.2 2007/02/06 23:21:21 aballier Exp $
 
 inherit eutils libtool autotools
 
@@ -29,6 +29,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-0.2.7-size_t-64bit.patch
 	# gcc-4 patch (bug #100708)
 	epatch "${FILESDIR}"/${PN}-0.2.7-gcc4.patch
+
+	epatch "${FILESDIR}/${P}-parallelmake.patch"
 
 	eautoreconf
 	elibtoolize

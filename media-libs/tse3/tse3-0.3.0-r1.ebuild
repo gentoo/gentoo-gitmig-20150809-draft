@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/tse3-0.3.0-r1.ebuild,v 1.1 2005/10/30 14:14:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/tse3-0.3.0-r1.ebuild,v 1.2 2007/02/06 23:21:21 aballier Exp $
 
 inherit eutils libtool autotools
 
