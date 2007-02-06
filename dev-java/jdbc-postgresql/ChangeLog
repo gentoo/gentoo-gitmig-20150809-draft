@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc-postgresql
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.8 2007/02/03 19:45:04 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.9 2007/02/06 06:20:05 opfer Exp $
+
+  06 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  jdbc-postgresql-8.2_p504.ebuild:
+  stable x86; bug #160569
 
   03 Feb 2007; Steve Dibb <beandog@gentoo.org>
   jdbc-postgresql-8.2_p504.ebuild:
