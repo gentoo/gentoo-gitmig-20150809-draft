@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/lapack-atlas
 # Copyright 2004-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.37 2007/01/23 13:57:22 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.38 2007/02/06 21:31:02 markusle Exp $
+
+*lapack-atlas-3.7.24-r1 (06 Feb 2007)
+
+  06 Feb 2007; Markus Dittrich <markusle@gentoo.org>
+  +files/lapack-reference-3.1.0-autotool.patch,
+  +lapack-atlas-3.7.24-r1.ebuild:
+  This new revision uses the new lapack-3.1.0 and also implements
+  lapack's test functionality.
 
   23 Jan 2007; Markus Dittrich <markusle@gentoo.org>
   lapack-atlas-3.6.0.ebuild, lapack-atlas-3.6.0-r1.ebuild,
