@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.34_pre20061214.ebuild,v 1.1 2006/12/18 23:17:00 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.34_pre20061214.ebuild,v 1.2 2007/02/06 23:54:38 dev-zero Exp $
 
-inherit distutils flag-o-matic multilib python toolchain-funcs versionator
+inherit distutils flag-o-matic multilib toolchain-funcs versionator
 
 KEYWORDS="~amd64 ~x86"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.boost.org/"
 SRC_URI="http://dev.gentoo.org/~dev-zero/distfiles/${MY_P}.tar.bz2"
 LICENSE="freedist Boost-1.0"
 SLOT="0"
-IUSE="debug doc icc icu pyste static threads threadsonly tools"
+IUSE="debug doc icc icu pyste static threads threadsonly tools userland_Darwin"
 
 DEPEND="icu? ( >=dev-libs/icu-3.2 )
 		sys-libs/zlib
@@ -23,14 +23,23 @@ RDEPEND="${DEPEND}
 
 S=${WORKDIR}/${MY_P}
 
+pkg_setup() {
+	if ! built_with_use dev-lang/python ucs2 ; then
+		eerror "dev-lang/python has to be built with the ucs2 USE-flag enabled"
+		die "missing USE-flag for dev-lang/python"
+	fi
+}
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
 	rm boost-build.jam
 
-	mkdir -p libs/random/build
-	cp "${FILESDIR}/random-Jamfile" libs/random/build/Jamfile.v2
+	if ! use userland_Darwin ; then
+		mkdir -p libs/random/build
+		cp "${FILESDIR}/random-Jamfile" libs/random/build/Jamfile.v2
+	fi
 }
 
 generate_options() {
@@ -61,15 +70,16 @@ generate_options() {
 
 generate_userconfig() {
 	einfo "Writing new user-config.jam"
-	python_version
+	distutils python_version
 
 	local compiler compilerVersion compilerExecutable
 	if use icc ; then
 		compiler=intel-linux
 		compilerExecutable=icc
-	elif [ "${ARCH}" == "ppc-macos" ] ; then
+	elif use userland_Darwin ; then
 		compiler=darwin
-		compilerExecutable=cc
+		compilerExecutable=c++
+		append-ldflags -ldl
 	else
 		compiler=gcc
 		compilerVersion=$(gcc-version)
@@ -92,8 +102,8 @@ src_compile() {
 	generate_userconfig
 	generate_options
 
-	BOOST_ROOT=${S}
-	BOOST_BUILD_PATH=${ROOT}/usr/share/boost-build
+	export BOOST_ROOT=${S}
+	export BOOST_BUILD_PATH=${ROOT}/usr/share/boost-build
 
 	# Note: The line "debug-symbols=on" only adds '-g' to compiler and linker invocation
 	# and prevents boost-build from stripping the libraries/binaries
@@ -114,7 +124,7 @@ src_compile() {
 
 	if use tools; then
 		cd "${S}/tools/"
-		# We have to set optimization to -O0 or -O1 to work aroudn a gcc-bug
+		# We have to set optimization to -O0 or -O1 to work around a gcc-bug
 		# optimization=off adds -O0 to the compiler call and overwrites our settings.
 		bjam ${NUMJOBS} \
 			release \
@@ -129,8 +139,8 @@ src_install () {
 
 	generate_options
 
-	BOOST_ROOT=${S}
-	BOOST_BUILD_PATH=${ROOT}/usr/share/boost-build
+	export BOOST_ROOT=${S}
+	export BOOST_BUILD_PATH=${ROOT}/usr/share/boost-build
 
 	for linkoption in ${LINK_OPTIONS} ; do
 		bjam \
