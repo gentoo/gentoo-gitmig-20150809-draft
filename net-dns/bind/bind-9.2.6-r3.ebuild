@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.6-r3.ebuild,v 1.3 2006/11/23 17:17:55 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.6-r3.ebuild,v 1.4 2007/02/06 16:31:32 voxus Exp $
 
 inherit eutils libtool autotools
 
@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="ssl ipv6 doc dlz postgres berkdb bind-mysql mysql odbc ldap selinux idn threads"
 
-DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
+DEPEND="!net-dns/idnkit
+	ssl? ( >=dev-libs/openssl-0.9.6g )
 	mysql? ( >=virtual/mysql-4.0 )
 	bind-mysql? ( >=virtual/mysql-4.0 )
 	odbc? ( >=dev-db/unixODBC-2.2.6 )
