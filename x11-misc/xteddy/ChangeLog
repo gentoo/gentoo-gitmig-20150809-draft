@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xteddy
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xteddy/ChangeLog,v 1.3 2006/01/19 19:27:25 ticho Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xteddy/ChangeLog,v 1.4 2007/02/06 01:36:08 flameeyes Exp $
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   19 Jan 2006; Andrej Kacian <ticho@gentoo.org> xteddy-2.0.1.ebuild:
   Fixed deps to support modular X.

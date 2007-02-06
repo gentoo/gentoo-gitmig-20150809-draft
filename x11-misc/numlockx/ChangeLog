@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/numlockx
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/ChangeLog,v 1.17 2005/12/13 19:17:02 cardoe Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/ChangeLog,v 1.18 2007/02/06 01:31:02 flameeyes Exp $
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   13 Dec 2005; Doug Goldstein <cardoe@gentoo.org> numlockx-1.0.ebuild:
   adding modular X depends

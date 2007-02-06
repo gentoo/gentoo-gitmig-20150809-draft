@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/mgm
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mgm/ChangeLog,v 1.13 2005/06/19 20:56:57 smithj Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mgm/ChangeLog,v 1.14 2007/02/06 01:30:33 flameeyes Exp $
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   19 Jun 2005; Jonathan Smith <smithj@gentoo.org> mgm-1.1.ebuild:
   fixed a horrific description
