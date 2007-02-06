@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/thinks
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/thinks/ChangeLog,v 1.6 2005/09/09 16:10:16 agriffis Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/thinks/ChangeLog,v 1.7 2007/02/06 13:54:06 flameeyes Exp $
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   09 Sep 2005; Aron Griffis <agriffis@gentoo.org> thinks-1.8.ebuild:
   Mark 1.8 stable on alpha

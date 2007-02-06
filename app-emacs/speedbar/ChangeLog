@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/speedbar
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/speedbar/ChangeLog,v 1.7 2005/04/24 11:06:16 hansmi Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/speedbar/ChangeLog,v 1.8 2007/02/06 13:53:04 flameeyes Exp $
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   speedbar-0.14_beta4.ebuild:

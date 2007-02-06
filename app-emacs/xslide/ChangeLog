@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/xslide
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/xslide/ChangeLog,v 1.10 2005/09/09 16:14:46 agriffis Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/xslide/ChangeLog,v 1.11 2007/02/06 13:57:26 flameeyes Exp $
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   09 Sep 2005; Aron Griffis <agriffis@gentoo.org> xslide-0.2.2.ebuild:
   Mark 0.2.2 stable on alpha
