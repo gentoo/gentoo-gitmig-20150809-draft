@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.3.ebuild,v 1.9 2006/12/18 20:11:25 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.3.ebuild,v 1.10 2007/02/06 08:40:33 genone Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -44,9 +44,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "You may want to run"
-	einfo
-	einfo "\trc-update add rxstack default"
-	einfo
-	einfo "to enable Rexx queues (optional)."
+	elog "You may want to run"
+	elog
+	elog "\trc-update add rxstack default"
+	elog
+	elog "to enable Rexx queues (optional)."
 }

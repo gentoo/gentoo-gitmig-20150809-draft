@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.5-r3.ebuild,v 1.10 2006/11/12 04:59:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.5-r3.ebuild,v 1.11 2007/02/06 08:39:15 genone Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -242,13 +242,13 @@ src_test() {
 		mv ${T}/test_${test}.py ${S}/Lib/test/test_${test}.py
 	done
 
-	einfo "Portage skipped the following tests which aren't able to run from emerge:"
+	elog "Portage skipped the following tests which aren't able to run from emerge:"
 	for test in ${skip_tests} ; do
-		einfo "test_${test}.py"
+		elog "test_${test}.py"
 	done
 
-	einfo "If you'd like to run them, you may:"
-	einfo "cd /usr/lib/python${PYVER}/test"
-	einfo "and run the tests separately."
+	elog "If you'd like to run them, you may:"
+	elog "cd /usr/lib/python${PYVER}/test"
+	elog "and run the tests separately."
 }
 

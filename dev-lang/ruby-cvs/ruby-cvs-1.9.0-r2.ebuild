@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ruby-cvs-1.9.0-r2.ebuild,v 1.6 2006/12/07 19:42:11 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ruby-cvs-1.9.0-r2.ebuild,v 1.7 2007/02/06 08:43:11 genone Exp $
 
 IUSE="socks5 tk doc threads"
 
@@ -89,9 +89,9 @@ pkg_postinst() {
 	if [ ! -n "$(readlink /usr/bin/ruby)" ] ; then
 		/usr/sbin/ruby-config ruby${SLOT/./}
 	fi
-	einfo
-	einfo "You can change the default ruby interpreter by /usr/sbin/ruby-config"
-	einfo
+	elog
+	elog "You can change the default ruby interpreter by /usr/sbin/ruby-config"
+	elog
 }
 
 pkg_postrm() {

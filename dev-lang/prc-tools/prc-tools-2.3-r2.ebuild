@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/prc-tools-2.3-r2.ebuild,v 1.4 2006/12/12 10:25:29 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/prc-tools-2.3-r2.ebuild,v 1.5 2007/02/06 08:34:49 genone Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -121,17 +121,17 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo
-	einfo "PRC-Tools is now compiled and installed!"
-	einfo "<HTML docs are installed in /opt/palmdev>"
-	echo
-	einfo "For a complete Palm Development Environment you will also need..."
-	echo
-	einfo "[ ] PilRC; the Palm resource compiler; emerge pilrc"
-	einfo "[ ] POSE; The Palm OS Emulator; emerge pose"
-	echo  "   ->> A ROM for POSE; available from Palm"
-	einfo "[ ] An SDK; available from the Palm Website"
-	echo  "   ->> Decompress this to /opt/palmdev and then run"
-	echo  "       'palmdev-prep /opt/palmdev'"
-	echo
+	elog
+	elog "PRC-Tools is now compiled and installed!"
+	elog "<HTML docs are installed in /opt/palmdev>"
+	elog
+	elog "For a complete Palm Development Environment you will also need..."
+	elog
+	elog "[ ] PilRC; the Palm resource compiler; emerge pilrc"
+	elog "[ ] POSE; The Palm OS Emulator; emerge pose"
+	elog  "   ->> A ROM for POSE; available from Palm"
+	elog "[ ] An SDK; available from the Palm Website"
+	elog  "   ->> Decompress this to /opt/palmdev and then run"
+	elog  "       'palmdev-prep /opt/palmdev'"
+	elog
 }
