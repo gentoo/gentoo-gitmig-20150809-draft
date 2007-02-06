@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/dbhub
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dbhub/ChangeLog,v 1.3 2007/02/03 13:15:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dbhub/ChangeLog,v 1.4 2007/02/06 07:02:46 corsair Exp $
+
+  06 Feb 2007; Markus Rothe <corsair@gentoo.org> dbhub-0.399.ebuild:
+  Added ~ppc64
 
   03 Feb 2007; Raúl Porcel <armin76@gentoo.org> dbhub-0.399.ebuild:
   Fix exe install dir, bug 149677
