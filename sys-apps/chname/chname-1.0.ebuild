@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/chname/chname-1.0.ebuild,v 1.1 2007/02/03 01:45:40 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/chname/chname-1.0.ebuild,v 1.2 2007/02/06 00:48:45 marineam Exp $
 
 DESCRIPTION="Run a command with a new system hostname."
 HOMEPAGE="http://code.google.com/p/chname"
@@ -8,7 +8,7 @@ SRC_URI="http://chname.googlecode.com/files/chname-1.0.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND=">=sys-kernel/linux-headers-2.6.16"
