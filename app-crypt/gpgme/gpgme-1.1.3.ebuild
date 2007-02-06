@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.1.3.ebuild,v 1.1 2007/02/03 19:05:33 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.1.3.ebuild,v 1.2 2007/02/06 10:40:24 uberlord Exp $
 
-inherit eutils
+inherit eutils libtool
 
 DESCRIPTION="GnuPG Made Easy is a library for making GnuPG easier to use"
 HOMEPAGE="http://www.gnupg.org/(en)/related_software/gpgme/index.html"
@@ -25,6 +25,9 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-fbsd.patch"
+
+	# We need to call elibtoolize so that we get sane .so versioning on fbsd.
+	elibtoolize
 }
 
 src_compile() {
