@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/nss_ldap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.38 2007/02/06 04:48:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.39 2007/02/06 04:50:25 robbat2 Exp $
+
+*nss_ldap-254 (06 Feb 2007)
+
+  06 Feb 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +files/nss_ldap-254-nss_getgrent_skipmembers.patch, +nss_ldap-254.ebuild:
+  Bug #155492 - allow skipping members for large LDAP installs. Feature not
+  enabled by default.
 
 *nss_ldap-253-r1 (31 Jan 2007)
 
