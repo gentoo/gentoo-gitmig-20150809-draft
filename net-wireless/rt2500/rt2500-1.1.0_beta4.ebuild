@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/rt2500-1.1.0_beta4.ebuild,v 1.6 2006/12/03 20:33:00 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/rt2500-1.1.0_beta4.ebuild,v 1.7 2007/02/06 23:13:37 uberlord Exp $
 
 inherit eutils linux-mod kde-functions
 set-qtdir 3
@@ -39,6 +39,8 @@ src_unpack() {
 	if kernel_is ge 2 6 19 ; then
 		sed -i -e '/^#include <linux\/config.h> .*/ d' Module/rt_config.h || die
 	fi
+
+	epatch "${FILESDIR}/${P}"-kernel-2.6.20.patch
 }
 
 src_compile() {
