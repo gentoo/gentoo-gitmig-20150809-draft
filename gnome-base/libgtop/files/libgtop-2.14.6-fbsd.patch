@@ -1,0 +1,378 @@
+diff --exclude-from=/home/dang/.diffrc -up -ruN libgtop-2.14.6.orig/libgtop-sysdeps.m4 libgtop-2.14.6/libgtop-sysdeps.m4
+--- libgtop-2.14.6.orig/libgtop-sysdeps.m4	2007-01-02 17:50:31.000000000 -0500
++++ libgtop-2.14.6/libgtop-sysdeps.m4	2007-02-05 20:07:58.000000000 -0500
+@@ -203,6 +203,7 @@ AC_DEFUN([GNOME_LIBGTOP_SYSDEPS],[
+ 	    msginfo_needs=
+ 	    for def in nothing KERNEL _KERNEL; do
+ 	      AC_COMPILE_IFELSE([#define $def
++#include <sys/types.h>
+ #include <sys/ipc.h>
+ #include <sys/msg.h>
+ #include <stdio.h>
+diff --exclude-from=/home/dang/.diffrc -up -ruN libgtop-2.14.6.orig/sysdeps/freebsd/fsusage.c libgtop-2.14.6/sysdeps/freebsd/fsusage.c
+--- libgtop-2.14.6.orig/sysdeps/freebsd/fsusage.c	2007-01-02 17:50:28.000000000 -0500
++++ libgtop-2.14.6/sysdeps/freebsd/fsusage.c	2007-02-05 20:07:58.000000000 -0500
+@@ -1,4 +1,11 @@
+ #include <config.h>
++
++/* Although FreeBSD ships with statvfs it seems incomplete, so prefer statfs */
++#if defined (__FreeBSD__) || defined (__FreeBSD_kernel__)
++#undef HAVE_SYS_STATVFS_H
++#undef STAT_STATVFS
++#endif
++
+ #include <glibtop.h>
+ #include <glibtop/error.h>
+ #include <glibtop/fsusage.h>
+@@ -46,9 +53,8 @@ _glibtop_freebsd_get_fsusage_read_write(
+ 	if (result == -1) {
+ 		return;
+ 	}
+-#if !defined(__FreeBSD_kernel__)
++
+ 	buf->read = sfs.f_syncreads + sfs.f_asyncreads;
+ 	buf->write = sfs.f_syncwrites + sfs.f_asyncwrites;
+-#endif
+ 	buf->flags |= (1 << GLIBTOP_FSUSAGE_READ) | (1 << GLIBTOP_FSUSAGE_WRITE);
+ }
+diff --exclude-from=/home/dang/.diffrc -up -ruN libgtop-2.14.6.orig/sysdeps/freebsd/netload.c libgtop-2.14.6/sysdeps/freebsd/netload.c
+--- libgtop-2.14.6.orig/sysdeps/freebsd/netload.c	2007-01-02 17:50:28.000000000 -0500
++++ libgtop-2.14.6/sysdeps/freebsd/netload.c	2007-02-05 20:07:58.000000000 -0500
+@@ -28,6 +28,8 @@
+ 
+ #include <glibtop_suid.h>
+ 
++#include <string.h>
++
+ #include <net/if.h>
+ #include <net/if_dl.h>
+ #include <net/if_types.h>
+@@ -83,9 +85,11 @@ glibtop_get_netload_p (glibtop *server, 
+ 		       const char *interface)
+ {
+     struct ifnet ifnet;
+-    u_long ifnetaddr, ifnetfound, ifaddraddr;
++    u_long ifnetaddr, ifnetfound;
+     struct sockaddr *sa = NULL;
++#if (defined(__FreeBSD__) && (__FreeBSD_version < 501113)) || defined(__bsdi__)
+     char tname [16];
++#endif
+     char name [32];
+ 
+     union {
+@@ -101,12 +105,12 @@ glibtop_get_netload_p (glibtop *server, 
+ 		  &ifnetaddr, sizeof (ifnetaddr)) != sizeof (ifnetaddr))
+ 	glibtop_error_io_r (server, "kvm_read (ifnet)");
+ 
+-    ifaddraddr = 0;
+-    while (ifnetaddr || ifaddraddr) {
++    while (ifnetaddr) {
+ 	struct sockaddr_in *sin;
+ 	register char *cp;
++	u_long ifaddraddr;
+ 
+-	if (ifaddraddr == 0) {
++	{
+ 	    ifnetfound = ifnetaddr;
+ 
+ 	    if (kvm_read (server->machine.kd, ifnetaddr, &ifnet,
+@@ -151,7 +155,11 @@ glibtop_get_netload_p (glibtop *server, 
+ 		buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_LOOPBACK);
+ 	if (ifnet.if_flags & IFF_POINTOPOINT)
+ 		buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_POINTOPOINT);
++#ifdef IFF_DRV_RUNNING
++	if (ifnet.if_drv_flags & IFF_DRV_RUNNING)
++#else
+ 	if (ifnet.if_flags & IFF_RUNNING)
++#endif
+ 		buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_RUNNING);
+ 	if (ifnet.if_flags & IFF_NOARP)
+ 		buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_NOARP);
+@@ -159,7 +167,11 @@ glibtop_get_netload_p (glibtop *server, 
+ 		buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_PROMISC);
+ 	if (ifnet.if_flags & IFF_ALLMULTI)
+ 		buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_ALLMULTI);
++#ifdef IFF_DRV_OACTIVE
++	if (ifnet.if_drv_flags & IFF_DRV_OACTIVE)
++#else
+ 	if (ifnet.if_flags & IFF_OACTIVE)
++#endif
+ 		buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_OACTIVE);
+ 	if (ifnet.if_flags & IFF_SIMPLEX)
+ 		buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_SIMPLEX);
+@@ -191,7 +203,7 @@ glibtop_get_netload_p (glibtop *server, 
+ 	buf->collisions = ifnet.if_collisions;
+ 	buf->flags = _glibtop_sysdeps_netload;
+ 
+-	if (ifaddraddr) {
++	while (ifaddraddr) {
+ 	    if ((kvm_read (server->machine.kd, ifaddraddr, &ifaddr,
+ 			   sizeof (ifaddr)) != sizeof (ifaddr)))
+ 		glibtop_error_io_r (server, "kvm_read (ifaddraddr)");
+@@ -201,7 +213,12 @@ glibtop_get_netload_p (glibtop *server, 
+ 		CP(&ifaddr);
+ 	    sa = (struct sockaddr *)cp;
+ 
+-	    if (sa->sa_family == AF_INET) {
++	    if (sa->sa_family == AF_LINK) {
++		struct sockaddr_dl *dl = (struct sockaddr_dl *) sa;
++
++		memcpy (buf->hwaddress, LLADDR (dl), sizeof (buf->hwaddress));
++		buf->flags |= GLIBTOP_NETLOAD_HWADDRESS;
++	    } else if (sa->sa_family == AF_INET) {
+ 		sin = (struct sockaddr_in *)sa;
+ #if !defined(__bsdi__)
+ 		/* Commenting out to "fix" #13345. */
+@@ -211,8 +228,14 @@ glibtop_get_netload_p (glibtop *server, 
+ 		buf->mtu = ifnet.if_mtu;
+ 
+ 		buf->flags |= _glibtop_sysdeps_netload_data;
++	    } else if (sa->sa_family == AF_INET6) {
++		struct sockaddr_in6 *sin6 = (struct sockaddr_in6 *) sa;
+ 
++		memcpy (buf->address6, &sin6->sin6_addr, sizeof (buf->address6));
++		buf->flags |= GLIBTOP_NETLOAD_ADDRESS6;
+ 	    }
++	    /* FIXME prefix6, scope6 */
++	    ifaddraddr = (u_long) ifaddr.ifa.ifa_link.tqe_next;
+ 	}
+ 	return;
+     }
+diff --exclude-from=/home/dang/.diffrc -up -ruN libgtop-2.14.6.orig/sysdeps/freebsd/prockernel.c libgtop-2.14.6/sysdeps/freebsd/prockernel.c
+--- libgtop-2.14.6.orig/sysdeps/freebsd/prockernel.c	2007-01-02 17:50:28.000000000 -0500
++++ libgtop-2.14.6/sysdeps/freebsd/prockernel.c	2007-02-05 20:07:58.000000000 -0500
+@@ -116,8 +116,10 @@ glibtop_get_proc_kernel_p (glibtop *serv
+ 
+ 	/* Get the process information */
+ 	pinfo = kvm_getprocs (server->machine.kd, KERN_PROC_PID, pid, &count);
+-	if ((pinfo == NULL) || (count != 1))
+-		glibtop_error_io_r (server, "kvm_getprocs (%d)", pid);
++	if ((pinfo == NULL) || (count != 1)) {
++		glibtop_warn_io_r (server, "kvm_getprocs (%d)", pid);
++		return;
++	}
+ 
+ #if (defined(__FreeBSD__) && (__FreeBSD_version >= 500013)) || defined(__FreeBSD_kernel__)
+ 
+diff --exclude-from=/home/dang/.diffrc -up -ruN libgtop-2.14.6.orig/sysdeps/freebsd/procmap.c libgtop-2.14.6/sysdeps/freebsd/procmap.c
+--- libgtop-2.14.6.orig/sysdeps/freebsd/procmap.c	2007-01-02 17:50:28.000000000 -0500
++++ libgtop-2.14.6/sysdeps/freebsd/procmap.c	2007-02-05 20:07:58.000000000 -0500
+@@ -108,7 +108,9 @@ glibtop_get_proc_map_p (glibtop *server,
+ #else
+ 	struct vm_object object;
+ #endif
+-	glibtop_map_entry *maps;
++	GArray *maps = g_array_sized_new(FALSE, FALSE,
++					 sizeof(glibtop_map_entry),
++					 100);
+ #if (defined __FreeBSD__) || defined(__FreeBSD_kernel__)
+ 	struct vnode vnode;
+ #if (__FreeBSD_version < 500039) && !defined(__FreeBSD_kernel__)
+@@ -123,15 +125,15 @@ glibtop_get_proc_map_p (glibtop *server,
+ 	memset (buf, 0, sizeof (glibtop_proc_map));
+ 
+ 	/* It does not work for the swapper task. */
+-	if (pid == 0) return NULL;
++	if (pid == 0) return (glibtop_map_entry*) g_array_free(maps, TRUE);
+ 
+ 	glibtop_suid_enter (server);
+ 
+ 	/* Get the process data */
+ 	pinfo = kvm_getprocs (server->machine.kd, KERN_PROC_PID, pid, &count);
+ 	if ((pinfo == NULL) || (count < 1)) {
+-		glibtop_error_io_r (server, "kvm_getprocs (%d)", pid);
+-		return NULL;
++		glibtop_warn_io_r (server, "kvm_getprocs (%d)", pid);
++		return (glibtop_map_entry*) g_array_free(maps, TRUE);
+ 	}
+ 
+ 	/* Now we get the memory maps. */
+@@ -159,8 +161,6 @@ glibtop_get_proc_map_p (glibtop *server,
+ 
+ 	buf->total = buf->number * buf->size;
+ 
+-	maps = g_malloc0(buf->total);
+-
+ 	buf->flags = _glibtop_sysdeps_proc_map;
+ 
+ 	/* Walk through the `vm_map_entry' list ... */
+@@ -170,6 +170,10 @@ glibtop_get_proc_map_p (glibtop *server,
+ 	 * to OBJT_DEFAULT so if seems this really works. */
+ 
+ 	do {
++		glibtop_map_entry *mentry;
++		unsigned long inum, dev;
++		guint len;
++
+ 		if (update) {
+ 			if (kvm_read (server->machine.kd,
+ 				      (unsigned long) entry.next,
+@@ -197,22 +201,6 @@ glibtop_get_proc_map_p (glibtop *server,
+ #endif
+ #endif
+ 
+-		maps [i].flags  = _glibtop_sysdeps_map_entry;
+-
+-		maps [i].start  = entry.start;
+-		maps [i].end    = entry.end;
+-		maps [i].offset = entry.offset;
+-
+-		maps [i].perm   = 0;
+-
+-		if (entry.protection & VM_PROT_READ)
+-			maps [i].perm |= GLIBTOP_MAP_PERM_READ;
+-		if (entry.protection & VM_PROT_WRITE)
+-			maps [i].perm |= GLIBTOP_MAP_PERM_WRITE;
+-		if (entry.protection & VM_PROT_EXECUTE)
+-			maps [i].perm |= GLIBTOP_MAP_PERM_EXECUTE;
+-
+-		i++;
+ 
+ #if defined(__NetBSD__) && (__NetBSD_Version__ >= 104000000)
+ 		if (!entry.object.uvm_obj)
+@@ -224,7 +212,7 @@ glibtop_get_proc_map_p (glibtop *server,
+ 			      (unsigned long) entry.object.uvm_obj,
+ 			      &vnode, sizeof (vnode)) != sizeof (vnode)) {
+ 			glibtop_warn_io_r (server, "kvm_read (vnode)");
+-			return NULL;
++			return (glibtop_map_entry*) g_array_free(maps, TRUE);
+ 		}
+ #else
+ 		if (!entry.object.vm_object)
+@@ -251,8 +239,8 @@ glibtop_get_proc_map_p (glibtop *server,
+ 			      &inode, sizeof (inode)) != sizeof (inode))
+ 			glibtop_error_io_r (server, "kvm_read (inode)");
+ 
+-		maps [i-1].inode  = inode.i_number;
+-		maps [i-1].device = inode.i_dev;
++		inum  = inode.i_number;
++		dev = inode.i_dev;
+ #endif
+ 
+ 
+@@ -274,8 +262,8 @@ glibtop_get_proc_map_p (glibtop *server,
+                switch (vnode.v_type) {
+                    case VREG:
+ #if (__FreeBSD_version < 600006) && !defined(__FreeBSD_kernel__)
+-                       maps [i-1].inode = vnode.v_cachedid;
+-                       maps [i-1].device = vnode.v_cachedfs;
++                       inum = vnode.v_cachedid;
++		       dev = vnode.v_cachedfs;
+ #endif
+                    default:
+                    continue;
+@@ -289,11 +277,37 @@ glibtop_get_proc_map_p (glibtop *server,
+ 			      &inode, sizeof (inode)) != sizeof (inode))
+ 			glibtop_error_io_r (server, "kvm_read (inode)");
+ 
+-		maps [i-1].inode  = inode.i_number;
+-		maps [i-1].device = inode.i_dev;
++		inum  = inode.i_number;
++		dev = inode.i_dev;
+ #endif
+ #endif
++		len = maps->len;
++		g_array_set_size(maps, len + 1);
++		mentry = &g_array_index(maps, glibtop_map_entry, len);
++
++		mentry->flags  = _glibtop_sysdeps_map_entry;
++
++		mentry->start  = (guint64) entry.start;
++		mentry->end    = (guint64) entry.end;
++		mentry->offset = (guint64) entry.offset;
++		mentry->device = (guint64) dev;
++		mentry->inode  = (guint64) inum;
++
++		mentry->perm   = (guint64) 0;
++
++		if (entry.protection & VM_PROT_READ)
++			mentry->perm |= GLIBTOP_MAP_PERM_READ;
++		if (entry.protection & VM_PROT_WRITE)
++			mentry->perm |= GLIBTOP_MAP_PERM_WRITE;
++		if (entry.protection & VM_PROT_EXECUTE)
++			mentry->perm |= GLIBTOP_MAP_PERM_EXECUTE;
+ 	} while (entry.next != first);
+ 
+-	return maps;
++	buf->flags = _glibtop_sysdeps_proc_map;
++
++	buf->number = maps->len;
++	buf->size = sizeof (glibtop_map_entry);
++	buf->total = buf->number * buf->size;
++
++	return (glibtop_map_entry*) g_array_free(maps, FALSE);
+ }
+diff --exclude-from=/home/dang/.diffrc -up -ruN libgtop-2.14.6.orig/sysdeps/freebsd/proctime.c libgtop-2.14.6/sysdeps/freebsd/proctime.c
+--- libgtop-2.14.6.orig/sysdeps/freebsd/proctime.c	2007-01-02 17:50:28.000000000 -0500
++++ libgtop-2.14.6/sysdeps/freebsd/proctime.c	2007-02-05 20:07:58.000000000 -0500
+@@ -139,8 +139,10 @@ glibtop_get_proc_time_p (glibtop *server
+ 
+ 	/* Get the process information */
+ 	pinfo = kvm_getprocs (server->machine.kd, KERN_PROC_PID, pid, &count);
+-	if ((pinfo == NULL) || (count != 1))
+-		glibtop_error_io_r (server, "kvm_getprocs (%d)", pid);
++	if ((pinfo == NULL) || (count != 1)) {
++		glibtop_warn_io_r (server, "kvm_getprocs (%d)", pid);
++		return;
++	}
+ 
+ #if (defined(__FreeBSD__) && (__FreeBSD_version >= 500013)) || defined(__FreeBSD_kernel__)
+ 	buf->rtime = pinfo [0].ki_runtime;
+@@ -186,9 +188,13 @@ glibtop_get_proc_time_p (glibtop *server
+        if ((pinfo [0].ki_flag & P_INMEM)) {
+ #endif
+            buf->utime = pinfo [0].ki_runtime;
+-           buf->stime = 0; /* XXX */
++		   buf->stime = tv2sec (pinfo [0].ki_rusage.ru_stime);
+            buf->cutime = tv2sec (pinfo [0].ki_childtime);
+-           buf->cstime = 0; /* XXX */
++#if (__FreeBSD_version >= 600000) || (__FreeBSD_kernel_version >= 600000)
++		   buf->cstime = tv2sec (pinfo [0].ki_rusage_ch.ru_stime);
++#else
++		   buf->cstime = 0;
++#endif
+            buf->start_time = tv2sec (pinfo [0].ki_start);
+            buf->flags = _glibtop_sysdeps_proc_time_user;
+        }
+diff --exclude-from=/home/dang/.diffrc -up -ruN libgtop-2.14.6.orig/sysdeps/freebsd/siglist.c libgtop-2.14.6/sysdeps/freebsd/siglist.c
+--- libgtop-2.14.6.orig/sysdeps/freebsd/siglist.c	2007-01-02 17:50:28.000000000 -0500
++++ libgtop-2.14.6/sysdeps/freebsd/siglist.c	2007-02-05 20:07:58.000000000 -0500
+@@ -26,4 +26,37 @@
+ #include <glibtop/signal.h>
+ 
+ const glibtop_signame glibtop_sys_siglist [] =
+-{ { 0, NULL, NULL } };
++{  {  1, "SIGHUP",  "Hangup" },
++   {  2, "SIGINT",  "Interrupt" },
++   {  3, "SIGQUIT", "Quit" },
++   {  4, "SIGILL",  "Illegal Instruction" },
++   {  5, "SIGTRAP", "Trace/Breakpoint Trap" },
++   {  6, "SIGABRT", "Abort" },
++   {  7, "SIGEMT",  "Emulation Trap" },
++   {  8, "SIGFPE",  "Arithmetic Exception" },
++   {  9, "SIGKILL", "Killed" },
++   { 10, "SIGBUS",  "Bus Error" },
++   { 11, "SIGSEGV", "Segmentation Fault" },
++   { 12, "SIGSYS",  "Bad System Call" },
++   { 13, "SIGPIPE", "Broken Pipe" },
++   { 14, "SIGALRM", "Alarm Clock" },
++   { 15, "SIGTERM", "Terminated" },
++   { 16, "SIGURG",  "Urgent Condition Present On Socket" },
++   { 17, "SIGSTOP", "Stop (cannot be caught or ignored)" },
++   { 18, "SIGTSTP", "Stop Signal Generated From Keyboard" },
++   { 19, "SIGCONT", "Continue After Stop" },
++   { 20, "SIGCHLD", "Child Status Has Changed" },
++   { 21, "SIGTTIN", "Background Read Attempted From Control Terminal" },
++   { 22, "SIGTTOU", "Background Write Attempted To Control Terminal" },
++   { 23, "SIGIO",   "I/O Is Possible On A Descriptor" },
++   { 24, "SIGXCPU", "CPU Time Limit Exceeded" },
++   { 25, "SIGXFSZ", "File Size Limit Exceeded" },
++   { 26, "SIGVTALRM","Virtual Time Alarm" },
++   { 27, "SIGPROF", "Profiling Timer Alarm" },
++   { 28, "SIGWINCH","Window Size Change" },
++   { 29, "SIGINFO", "Status Request From Keyboard" },
++   { 30, "SIGUSR1", "User Defined Signal 1" },
++   { 31, "SIGUSR2", "User Defined Signal 2" },
++   { 32, "SIGTHR",  "Thread Interrupt" },
++   {  0, NULL, NULL }
++};
