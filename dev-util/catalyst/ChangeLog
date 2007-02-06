@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.158 2007/01/21 19:40:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.159 2007/02/06 22:55:50 wolf31o2 Exp $
+
+*catalyst-2.0.2 (06 Feb 2007)
+
+  06 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  +catalyst-2.0.2.ebuild:
+  Version bump to the new 2.0.2 release of catalyst. This closes bug #143725,
+  bug #145941, bug #147195, bug #159040, bug #159103, bug #159598, and bug
+  #161915.
 
   21 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> catalyst-2.0.1.ebuild:
   Add ~x86-fbsd keyword.
