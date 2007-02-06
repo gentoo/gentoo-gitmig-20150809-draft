@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.11.3.ebuild,v 1.3 2006/12/11 02:50:56 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.11.6.ebuild,v 1.1 2007/02/06 00:57:01 metalgod Exp $
 
 inherit autotools eutils gnome2 mono
 
@@ -46,7 +46,8 @@ RDEPEND=">=dev-lang/mono-1.1.17
 	>=sys-apps/hal-0.5.2
 	boo? ( >=dev-lang/boo-0.7.6 )
 	>=dev-db/sqlite-3
-	>=gnome-extra/nautilus-cd-burner-2.12"
+	>=gnome-extra/nautilus-cd-burner-2.12
+	!media-plugins/banshee-official-plugins"
 
 USE_DESTDIR=1
 DOCS="ChangeLog HACKING NEWS README"
@@ -97,8 +98,5 @@ pkg_postinst() {
 	einfo "In case you have an ipod please rebuild this package with USE=ipod"
 	einfo "If you have a audio player supported by libnjb please"
 	einfo "rebuild this package with USE=njb"
-	einfo
-	einfo "If you want to improve your experience with Banshee"
-	einfo "we recommend to emerge media-plugins/banshee-official-plugins"
 	einfo
 }
