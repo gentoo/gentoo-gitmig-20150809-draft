@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/cmail
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cmail/ChangeLog,v 1.6 2005/07/01 18:14:57 mkennedy Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cmail/ChangeLog,v 1.7 2007/02/06 13:23:34 flameeyes Exp $
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   01 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org> cmail-2.62.ebuild:
   Keywording ~amd64.

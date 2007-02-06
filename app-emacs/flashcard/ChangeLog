@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/flashcard
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/flashcard/ChangeLog,v 1.2 2005/09/19 17:09:40 mkennedy Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/flashcard/ChangeLog,v 1.3 2007/02/06 13:29:23 flameeyes Exp $
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *flashcard-2.3.2 (19 Sep 2005)
 

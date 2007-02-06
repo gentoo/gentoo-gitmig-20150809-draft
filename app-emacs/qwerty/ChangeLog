@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/qwerty
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/qwerty/ChangeLog,v 1.7 2005/08/28 02:22:37 tester Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/qwerty/ChangeLog,v 1.8 2007/02/06 13:42:20 flameeyes Exp $
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   28 Aug 2005; Olivier Crête <tester@gentoo.org> qwerty-1.1.ebuild:
   Marked ~amd64, thanks to AT AJ Armstrong <aja@gentoo.org> for testing

@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/md5
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/md5/ChangeLog,v 1.7 2005/10/24 14:45:40 josejx Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/md5/ChangeLog,v 1.8 2007/02/06 13:37:35 flameeyes Exp $
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   24 Oct 2005; Joseph Jezak <josejx@gentoo.org> md5-1.0-r1.ebuild:
   Marked ~ppc.

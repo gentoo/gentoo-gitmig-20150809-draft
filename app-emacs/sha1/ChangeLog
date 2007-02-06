@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/sha1
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/sha1/ChangeLog,v 1.6 2005/10/24 14:57:43 josejx Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/sha1/ChangeLog,v 1.7 2007/02/06 13:46:35 flameeyes Exp $
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   24 Oct 2005; Joseph Jezak <josejx@gentoo.org> sha1-19990113.ebuild:
   Marked ~ppc.

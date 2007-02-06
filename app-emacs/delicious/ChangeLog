@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/delicious
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/delicious/ChangeLog,v 1.2 2006/02/02 19:38:53 wrobel Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/delicious/ChangeLog,v 1.3 2007/02/06 13:24:37 flameeyes Exp $
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   02 Feb 2006; <wrobel@gentoo.org> metadata.xml:
   Modified maintainer

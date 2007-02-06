@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/jam-mode
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/jam-mode/ChangeLog,v 1.6 2005/09/09 16:00:42 agriffis Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jam-mode/ChangeLog,v 1.7 2007/02/06 13:34:52 flameeyes Exp $
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   09 Sep 2005; Aron Griffis <agriffis@gentoo.org> jam-mode-0.1.ebuild:
   Mark 0.1 stable on alpha

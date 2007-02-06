@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/dictionary
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/dictionary/ChangeLog,v 1.9 2005/07/16 15:49:37 josejx Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/dictionary/ChangeLog,v 1.10 2007/02/06 13:25:36 flameeyes Exp $
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   16 Jul 2005; Joseph Jezak <josejx@gentoo.org> dictionary-1.8.7.ebuild:
   Marked ppc stable for bug #99186.

@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/redo
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/redo/ChangeLog,v 1.8 2005/09/09 16:04:28 agriffis Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/redo/ChangeLog,v 1.9 2007/02/06 13:42:51 flameeyes Exp $
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   09 Sep 2005; Aron Griffis <agriffis@gentoo.org> redo-1.02.ebuild:
   Mark 1.02 stable on alpha

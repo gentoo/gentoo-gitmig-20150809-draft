@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/rfcview
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/rfcview/ChangeLog,v 1.6 2005/09/09 16:06:43 agriffis Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/rfcview/ChangeLog,v 1.7 2007/02/06 13:44:05 flameeyes Exp $
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   09 Sep 2005; Aron Griffis <agriffis@gentoo.org> rfcview-0.5.ebuild:
   Mark 0.5 stable on alpha

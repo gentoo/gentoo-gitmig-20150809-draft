@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/prom-wl
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/prom-wl/ChangeLog,v 1.3 2005/08/28 02:20:50 tester Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/prom-wl/ChangeLog,v 1.4 2007/02/06 13:41:20 flameeyes Exp $
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   28 Aug 2005; Olivier Crête <tester@gentoo.org> prom-wl-2.7.0.ebuild:
   Marked ~amd64, thanks to AT AJ Armstrong <aja@gentoo.org> for testing

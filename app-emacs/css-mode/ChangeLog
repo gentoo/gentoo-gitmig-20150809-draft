@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/css-mode
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/css-mode/ChangeLog,v 1.8 2005/04/21 18:31:49 blubb Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/css-mode/ChangeLog,v 1.9 2007/02/06 13:24:04 flameeyes Exp $
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> css-mode-0.11.ebuild:
   stable on amd64

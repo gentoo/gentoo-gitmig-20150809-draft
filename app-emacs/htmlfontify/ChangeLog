@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/htmlfontify
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/htmlfontify/ChangeLog,v 1.7 2005/10/24 14:31:53 josejx Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/htmlfontify/ChangeLog,v 1.8 2007/02/06 13:31:26 flameeyes Exp $
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   24 Oct 2005; Joseph Jezak <josejx@gentoo.org> htmlfontify-0.17.ebuild:
   Marked ~ppc.

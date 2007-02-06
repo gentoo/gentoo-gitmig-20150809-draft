@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/semantic
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/semantic/ChangeLog,v 1.12 2005/06/05 11:42:07 hansmi Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/semantic/ChangeLog,v 1.13 2007/02/06 13:44:38 flameeyes Exp $
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   semantic-1.4.4-r1.ebuild:
