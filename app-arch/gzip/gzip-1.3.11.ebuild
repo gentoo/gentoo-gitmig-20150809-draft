@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/gzip-1.3.11.ebuild,v 1.1 2007/02/06 01:15:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/gzip-1.3.11.ebuild,v 1.2 2007/02/06 13:34:07 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -43,6 +43,5 @@ src_install() {
 
 	# keep most things in /usr, just the fun stuff in /
 	dodir /bin
-	mv "${D}"/usr/bin/{gunzip,gzip,zcat} "${D}"/bin/ || die
-	dosym /bin/gunzip /usr/bin/gunzip || die
+	mv "${D}"/usr/bin/{gunzip,gzip,uncompress,zcat} "${D}"/bin/ || die
 }

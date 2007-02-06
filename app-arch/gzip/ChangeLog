@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/gzip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/ChangeLog,v 1.75 2007/02/06 01:15:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/ChangeLog,v 1.76 2007/02/06 13:34:07 vapier Exp $
+
+  06 Feb 2007; Mike Frysinger <vapier@gentoo.org> gzip-1.3.11.ebuild:
+  Move uncompress to /bin so we dont conflict with app-arch/ncompress #165608
+  by barthek.
 
 *gzip-1.3.11 (06 Feb 2007)
 
