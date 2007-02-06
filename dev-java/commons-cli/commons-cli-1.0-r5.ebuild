@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.0-r5.ebuild,v 1.6 2007/01/25 11:52:05 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.0-r5.ebuild,v 1.7 2007/02/06 19:47:32 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source test"
 inherit java-pkg-2 java-ant-2 eutils
@@ -19,13 +19,13 @@ CDEPEND="dev-java/commons-logging
 RDEPEND=">=virtual/jre-1.4
 	${CDEPEND}"
 DEPEND=">=virtual/jdk-1.4
-	test? ( =dev-java/junit-3*  dev-java/ant )
-	!test? ( dev-java/ant-core )
+	test? ( dev-java/ant-junit )
+	dev-java/ant-core
 	${CDEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	epatch ${FILESDIR}/${P}-build.xml.patch
 
@@ -36,13 +36,13 @@ src_unpack() {
 
 src_test() {
 	java-pkg_jar-from --into lib junit
-	eant test
+	ANT_TASKS="ant-junit" eant test
 }
 
 src_install() {
 	java-pkg_newjar target/${P}.jar
 
-	dodoc README.txt
+	dodoc README.txt || die
 	use doc && java-pkg_dojavadoc target/docs/apidocs
 	use source && java-pkg_dosrc src/java/org
 }

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-cli
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/ChangeLog,v 1.26 2007/01/25 11:52:05 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/ChangeLog,v 1.27 2007/02/06 19:47:32 betelgeuse Exp $
+
+  06 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
+  commons-cli-1.0-r5.ebuild:
+  Use split-ant for the test use flag.
 
   25 Jan 2007; Vlastimil Babka <caster@gentoo.org>
   +files/commons-cli-1.0-build.xml.patch, commons-cli-1.0-r5.ebuild:
