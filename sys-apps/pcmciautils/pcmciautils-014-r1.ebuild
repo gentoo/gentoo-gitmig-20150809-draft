@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-014-r1.ebuild,v 1.4 2007/01/14 09:43:40 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-014-r1.ebuild,v 1.5 2007/02/06 13:38:09 blubb Exp $
 
 inherit eutils toolchain-funcs linux-info
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://kernel/linux/utils/kernel/pcmcia/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 arm ppc sh x86"
+KEYWORDS="amd64 arm ppc sh x86"
 
 IUSE="debug static staticsocket udev"
 RDEPEND=">=sys-fs/sysfsutils-1.2.0-r1
