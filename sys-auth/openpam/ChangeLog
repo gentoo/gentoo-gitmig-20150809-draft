@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/openpam
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/ChangeLog,v 1.7 2006/10/30 09:54:57 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/ChangeLog,v 1.8 2007/02/06 15:05:19 uberlord Exp $
+
+*openpam-20050616-r1 (06 Feb 2007)
+
+  06 Feb 2007; Roy Marples <uberlord@gentoo.org>
+  +files/openpam-20050616-optional.patch, +openpam-20050616-r1.ebuild:
+  Added a patch so that services don't fail if they list a missing module as
+  "optional" or "sufficient".
 
   30 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   openpam-20050616.ebuild:
