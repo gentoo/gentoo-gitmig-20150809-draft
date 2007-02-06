@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.17 2007/02/03 19:21:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.18 2007/02/06 12:20:36 blubb Exp $
+
+  06 Feb 2007; Simon Stelling <blubb@gentoo.org> setuptools-0.6_rc3.ebuild:
+  stable on amd64; bug 163759
 
   03 Feb 2007; nixnut <nixnut@gentoo.org> setuptools-0.6_rc3.ebuild:
   Stable on ppc wrt bug 163759
