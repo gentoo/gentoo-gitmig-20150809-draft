@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/hatari-0.90.ebuild,v 1.1 2006/10/01 21:20:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/hatari-0.90.ebuild,v 1.2 2007/02/06 06:14:44 mr_bones_ Exp $
 
 inherit games
 
@@ -30,8 +30,9 @@ src_unpack() {
 }
 
 src_compile() {
-	# broken deps in the makefiles
+	# broken deps in the makefiles - bug #164068
 	emake -C src/uae-cpu gencpu || die "emake failed"
+	emake -C src/uae-cpu all || die "emake failed"
 	emake -C src || die "emake failed"
 }
 
