@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/aalib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.28 2007/01/04 23:21:46 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.29 2007/02/06 22:33:06 armin76 Exp $
+
+  06 Feb 2007; Raúl Porcel <armin76@gentoo.org> aalib-1.4_rc5.ebuild:
+  x86 stable wrt bug 165617
 
   04 Jan 2007; Timothy Redaelli <drizzt@gentoo.org> aalib-1.4_rc5.ebuild:
   Fix linking of aalib.so
