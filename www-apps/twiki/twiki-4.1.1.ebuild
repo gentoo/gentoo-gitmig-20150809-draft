@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-4.1.0.ebuild,v 1.1 2007/01/22 00:19:56 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-4.1.1.ebuild,v 1.1 2007/02/06 21:49:47 rl03 Exp $
 
-inherit webapp eutils
+inherit webapp eutils depend.apache
 
 MY_PN="TWiki"
 
@@ -12,7 +12,7 @@ SRC_URI="http://twiki.org/p/pub/Codev/Release/${MY_PN}-${PV}.tgz"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="apache2"
+IUSE=""
 
 S=${WORKDIR}
 
@@ -32,8 +32,9 @@ RDEPEND=">=dev-lang/perl-5.8
 		dev-perl/URI
 		virtual/cron
 		dev-perl/HTML-Parser
-		apache2? ( >=net-www/apache-2.0.54 )
-		!apache2? ( =net-www/apache-1* )"
+"
+
+want_apache
 
 src_unpack() {
 	unpack ${A}
