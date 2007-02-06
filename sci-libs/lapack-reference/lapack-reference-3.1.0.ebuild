@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.1.0.ebuild,v 1.1 2007/02/04 20:23:18 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.1.0.ebuild,v 1.2 2007/02/06 21:33:23 markusle Exp $
 
 inherit autotools eutils fortran multilib
 
@@ -59,8 +59,8 @@ src_install() {
 }
 
 src_test() {
-	cd TESTING/MATGEN && make || die "Failed to create tmglib.a"
-	cd ../ && make || die "lapack-reference tests failed."
+	cd TESTING/MATGEN && emake || die "Failed to create tmglib.a"
+	cd ../ && emake || die "lapack-reference tests failed."
 }
 
 pkg_postinst() {
