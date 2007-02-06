@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/gsl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/ChangeLog,v 1.17 2007/01/18 13:27:39 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/ChangeLog,v 1.18 2007/02/06 13:18:06 gustavoz Exp $
+
+  06 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> gsl-1.8.ebuild:
+  Stable on sparc
 
   18 Jan 2007; Ferris McCormick <fmccor@gentoo.org> gsl-1.7.ebuild:
   Stable on sparc (no problems reported for 15 months).
