@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/idnkit-1.0.ebuild,v 1.14 2007/02/06 11:03:16 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/idnkit-1.0.ebuild,v 1.15 2007/02/06 16:15:07 voxus Exp $
 
 S="${WORKDIR}/${P}-src"
 
@@ -13,8 +13,7 @@ LICENSE="JNIC"
 KEYWORDS="~alpha ~amd64 ~hppa ppc ~ppc64 ~sparc x86"
 IUSE=""
 
-DEPEND="!<net-dns/bind-9.4
-	sys-libs/glibc"
+DEPEND="sys-libs/glibc"
 # non gnu systems need libiconv
 
 src_unpack()
