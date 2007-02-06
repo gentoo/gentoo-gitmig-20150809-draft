@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-libs/popplerkit
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/ChangeLog,v 1.4 2006/01/08 12:40:06 hansmi Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/ChangeLog,v 1.5 2007/02/06 14:16:49 flameeyes Exp $
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   08 Jan 2006; Michael Hanselmann <hansmi@gentoo.org> metadata.xml:
   Remove retiring dev from metadata.
