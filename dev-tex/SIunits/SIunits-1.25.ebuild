@@ -1,12 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/SIunits/SIunits-1.25.ebuild,v 1.11 2004/12/28 21:25:49 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/SIunits/SIunits-1.25.ebuild,v 1.12 2007/02/06 16:26:47 nattfodd Exp $
 
 inherit latex-package
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="LaTeX package used to set SI units correct."
-SRC_URI="ftp://ftp.dante.de/tex-archive/macros/latex/contrib/supported/${PN}.tar.gz"
+SRC_URI="ftp://ftp.dante.de/tex-archive/macros/latex/contrib/${PN}.tar.gz"
 HOMEPAGE="ftp://ftp.dante.de/tex-archive/help/Catalogue/entries/siunits.html"
 LICENSE="LPPL-1.2"
 SLOT="0"
