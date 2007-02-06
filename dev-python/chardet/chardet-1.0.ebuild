@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chardet/chardet-1.0.ebuild,v 1.2 2007/01/25 12:01:59 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chardet/chardet-1.0.ebuild,v 1.3 2007/02/06 12:20:54 blubb Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ DEPEND=""
 RDEPEND=""
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 
 src_install() {
 	distutils_src_install
