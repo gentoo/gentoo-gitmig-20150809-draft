@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.4-r1.ebuild,v 1.1 2007/02/02 06:29:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.4-r1.ebuild,v 1.2 2007/02/06 02:46:19 seemant Exp $
 
 inherit eutils gnome2
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="ofx hbci chipcard doc debug quotes nls"
 
 RDEPEND=">=dev-libs/glib-2.4.0
-	dev-scheme/guile
+	>=dev-scheme/guile-1.8
 	=dev-scheme/slib-3.1.1*
 	>=sys-libs/zlib-1.1.4
 	>=dev-libs/popt-1.5
@@ -54,6 +54,9 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	built_with_use gnome-extra/libgsf gnome || die "gnome-extra/libgsf must be built with gnome"
 	built_with_use x11-libs/goffice gnome || die "x11-libs/goffice must be built with gnome"
+	built_with_use dev-scheme/guile regex || die "dev-scheme/guile must be built with regex"
+	built_with_use dev-scheme/guile deprecated || die "dev-scheme/guile must be built with deprecated"
+	built_with_use dev-scheme/guile discouraged || die "dev-scheme/guile must be built with discouraged"
 }
 
 src_compile() {
