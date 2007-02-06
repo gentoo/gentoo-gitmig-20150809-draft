@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-Which
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Which/ChangeLog,v 1.7 2007/01/15 19:44:34 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Which/ChangeLog,v 1.8 2007/02/06 14:44:32 mcummings Exp $
+
+  06 Feb 2007; Michael Cummings <mcummings@gentoo.org>
+  File-Which-0.05.ebuild:
+  Keywording ~mips, tested on swarm
 
   15 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   File-Which-0.05.ebuild:
