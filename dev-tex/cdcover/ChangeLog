@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/cdcover
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/cdcover/ChangeLog,v 1.8 2004/12/28 20:51:23 absinthe Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cdcover/ChangeLog,v 1.9 2007/02/06 16:40:59 nattfodd Exp $
+
+  06 Feb 2007; Alexandre Buisse <nattfodd@gentoo.org> cdcover-1.3b.ebuild:
+  Corrected SRC_URI and HOMEPAGE.
 
   28 Dec 2004; Dylan Carlson <absinthe@gentoo.org> cdcover-1.3b.ebuild:
   Stable on amd64.
