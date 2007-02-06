@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ltrace
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.25 2006/09/24 09:06:03 dragonheart Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.26 2007/02/06 22:47:09 armin76 Exp $
+
+  06 Feb 2007; Raúl Porcel <armin76@gentoo.org> ltrace-0.4.ebuild:
+  x86 stable wrt bug 161844
 
 *ltrace-0.4 (24 Sep 2006)
 
