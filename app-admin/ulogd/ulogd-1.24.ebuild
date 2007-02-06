@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.24.ebuild,v 1.2 2007/01/23 03:03:22 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.24.ebuild,v 1.3 2007/02/06 16:13:30 antarus Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -33,6 +33,9 @@ src_compile() {
 
 	# Configure uses incorrect syntax for ld
 	use mysql && sed -i -e "s:-Wl,::g" Rules.make
+
+	EPATCH_OPTS="-F3" \
+		epatch "${FILESDIR}/glsa-200701.patch"
 
 	# not parallel make safe: bug #128976
 	emake -j1 || die "make failed"
