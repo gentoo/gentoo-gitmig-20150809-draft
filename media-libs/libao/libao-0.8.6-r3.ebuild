@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.6-r3.ebuild,v 1.13 2007/01/28 07:51:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.6-r3.ebuild,v 1.14 2007/02/06 21:25:47 wolf31o2 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -16,7 +16,7 @@ SRC_URI="http://downloads.xiph.org/releases/ao/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 arm hppa ~ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 arm hppa ~ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="alsa arts esd nas mmap pulseaudio doc"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
