@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.15p-r5.ebuild,v 1.2 2006/05/13 20:17:48 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.15p-r5.ebuild,v 1.3 2007/02/06 08:09:10 genone Exp $
 
 inherit eutils
 
@@ -176,15 +176,15 @@ src_install() {
 
 pkg_postinst() {
 	# Notify the user what changed
-	einfo ""
+	elog
 	if [ "${ARCH}" = "x86" ]; then
-		einfo "Both the native-threads and the FSU-threads runtimes have been"
-		einfo "installed. The native-threads version is the default on linux."
-		einfo "If you want to use FSU-threads (required if you are using"
-		einfo "Annex D) simply use the following switch: --RTS=fsu"
-		einfo ""
+		elog "Both the native-threads and the FSU-threads runtimes have been"
+		elog "installed. The native-threads version is the default on linux."
+		elog "If you want to use FSU-threads (required if you are using"
+		elog "Annex D) simply use the following switch: --RTS=fsu"
+		elog
 	fi
-	einfo "The compiler has been installed as gnatgcc, and the coverage testing"
-	einfo "tool as gnatgcov."
-	einfo ""
+	elog "The compiler has been installed as gnatgcc, and the coverage testing"
+	elog "tool as gnatgcov."
+	elog
 }

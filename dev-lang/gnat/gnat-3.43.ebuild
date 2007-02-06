@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.43.ebuild,v 1.4 2006/05/13 20:17:48 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.43.ebuild,v 1.5 2007/02/06 08:09:10 genone Exp $
 
 MY_PV=3.4.3
 DESCRIPTION="GNAT Ada Compiler"
@@ -139,12 +139,12 @@ src_install() {
 
 pkg_postinst() {
 	# Notify the user what changed
-	einfo ""
-	einfo "The compiler has been installed as gnatgcc, and the coverage testing"
-	einfo "tool as gnatgcov."
-	einfo ""
-	einfo "If you are upgrading from GNAT-3.15p or older you will have to"
-	einfo "reemerge all Ada packages as GNAT-${MY_PV} has updated to a version of"
-	einfo "GCC which is not backwards compatible with 2.8.1."
-	einfo ""
+	elog
+	elog "The compiler has been installed as gnatgcc, and the coverage testing"
+	elog "tool as gnatgcov."
+	elog
+	elog "If you are upgrading from GNAT-3.15p or older you will have to"
+	elog "reemerge all Ada packages as GNAT-${MY_PV} has updated to a version of"
+	elog "GCC which is not backwards compatible with 2.8.1."
+	elog
 }

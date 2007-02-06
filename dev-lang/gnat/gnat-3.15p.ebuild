@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.15p.ebuild,v 1.5 2005/02/23 09:41:19 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.15p.ebuild,v 1.6 2007/02/06 08:09:10 genone Exp $
 #
 # Never replace this with the Ada compiler in the gcc tree. They are based
 # on the same source but this is the official validated compiler from ACT.
@@ -135,18 +135,18 @@ src_install() {
 
 pkg_postinst() {
 	# Notify the user what changed
-	einfo ""
-	einfo "Both the native-threads and the FSU-threads libraries have been"
-	einfo "installed. The native-threads version is the default on linux."
-	einfo "If you want to use FSU-threads (required if you are using Annex D)"
-	einfo "you must set the following two environment variables:"
-	einfo "ADA_INCLUDE_PATH=/usr/lib/gcc-lib/${CHOST}/2.8.1/rts-fsu/adainclude:\$ADA_INCLUDE_PATH"
-	einfo "ADA_OBJECTS_PATH=/usr/lib/gcc-lib/${CHOST}/2.8.1/rts-fsu/adalib:\$ADA_OBJECTS_PATH"
-	einfo "or use the -aI/usr/lib/gcc-lib/${CHOST}/2.8.1/rts-fsu/adainclude"
-	einfo "-aO/usr/lib/gcc-lib/${CHOST}/2.8.1/rts-fsu/adalib"
-	einfo "or you can give gnatmake the following switch: --RTS=fsu"
-	einfo ""
-	einfo "The compiler has been installed as gnatgcc, and the coverage testing"
-	einfo "tool as gnatgcov."
-	einfo ""
+	elog
+	elog "Both the native-threads and the FSU-threads libraries have been"
+	elog "installed. The native-threads version is the default on linux."
+	elog "If you want to use FSU-threads (required if you are using Annex D)"
+	elog "you must set the following two environment variables:"
+	elog "ADA_INCLUDE_PATH=/usr/lib/gcc-lib/${CHOST}/2.8.1/rts-fsu/adainclude:\$ADA_INCLUDE_PATH"
+	elog "ADA_OBJECTS_PATH=/usr/lib/gcc-lib/${CHOST}/2.8.1/rts-fsu/adalib:\$ADA_OBJECTS_PATH"
+	elog "or use the -aI/usr/lib/gcc-lib/${CHOST}/2.8.1/rts-fsu/adainclude"
+	elog "-aO/usr/lib/gcc-lib/${CHOST}/2.8.1/rts-fsu/adalib"
+	elog "or you can give gnatmake the following switch: --RTS=fsu"
+	elog
+	elog "The compiler has been installed as gnatgcc, and the coverage testing"
+	elog "tool as gnatgcov."
+	elog
 }

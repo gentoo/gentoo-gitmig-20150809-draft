@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-3.4.5.2005.ebuild,v 1.1 2006/09/08 13:18:53 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-3.4.5.2005.ebuild,v 1.2 2007/02/06 08:11:12 genone Exp $
 
 inherit gnatbuild
 
@@ -65,13 +65,13 @@ src_install() {
 pkg_postinst() {
 	gnatbuild_pkg_postinst
 
-	einfo
-	einfo "This is an experimental issue of the gnat-gpl compiler, supporting"
-	einfo "some of the new features of Ada2005. You may consider registering with"
-	einfo "AdaCore at https://libre2.adacore.com/."
-	einfo
+	elog
+	elog "This is an experimental issue of the gnat-gpl compiler, supporting"
+	elog "some of the new features of Ada2005. You may consider registering with"
+	elog "AdaCore at https://libre2.adacore.com/."
+	elog
 	ewarn "Please note!!!"
 	ewarn "gnat-gpl is distributed under the GPL-2 license, without the GMGPL provision!!"
-	einfo "For the GMGPL version you may look at the gnat-gcc compiler."
-	einfo
+	ewarn "For the GMGPL version you may look at the gnat-gcc compiler."
+	ewarn
 }
