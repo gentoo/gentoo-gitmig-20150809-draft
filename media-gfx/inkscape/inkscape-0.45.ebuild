@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.45.ebuild,v 1.1 2007/02/06 04:44:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.45.ebuild,v 1.2 2007/02/06 04:51:19 jer Exp $
 
 inherit gnome2
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="gnome mmx bonobo inkjar lcms boost doc plugin spell"
 RESTRICT="test"
 
-RDEPEND=">=x11-libs/gtk+-2.4.1
+RDEPEND=">=x11-libs/gtk+-2.10.7
 	>=dev-libs/glib-2.6.5
 	>=media-libs/libart_lgpl-2.3.16
 	>=dev-libs/libxml2-2.6.20
