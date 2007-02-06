@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.4.1-r1.ebuild,v 1.2 2007/02/03 17:20:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.4.1-r1.ebuild,v 1.3 2007/02/06 10:18:36 bicatali Exp $
 
 #WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -65,17 +65,16 @@ pkg_setup() {
 src_unpack() {
 
 	unpack ${A}
+	# some lua patches to make it work for lua-5.1
+	has_version ">=dev-lang/lua-5.1.1" &&  \
+		epatch "${FILESDIR}/${P}-lua51.patch"
 	cd "${S}"
-
 	# standard set of gcc-4.1 patches
 	epatch "${FILESDIR}/${P}-gcc-4.1.patch"
 	# fix kde datadir in makefile.am and .desktop location
 	epatch "${FILESDIR}/${P}-kde-datadir.patch"
-	#epatch "${FILESDIR}/${P}-makefile.am.patch"
 	# add a ~/.celestia for extra directories
 	epatch "${FILESDIR}/${P}-cfg.patch"
-	# some lua patches on celx.cpp
-	epatch "${FILESDIR}/${P}-lua.patch"
 	# strict aliasing from mandriva
 	epatch "${FILESDIR}/${P}-strictalias.patch"
 

@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/celestia
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.26 2007/02/03 17:20:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.27 2007/02/06 10:18:36 bicatali Exp $
+
+  06 Feb 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/celestia-1.4.1-lua.patch, celestia-1.4.1-r1.ebuild:
+  Apply proper lua-5.1.1 patch, fixing bug #165475.
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   celestia-1.4.1-r1.ebuild:
