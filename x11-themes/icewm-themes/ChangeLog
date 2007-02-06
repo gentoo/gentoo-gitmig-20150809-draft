@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/icewm-themes
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/ChangeLog,v 1.10 2005/12/16 11:50:55 flameeyes Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/ChangeLog,v 1.11 2007/02/06 02:09:10 flameeyes Exp $
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
   icewm-themes-0.0.1-r1.ebuild:
