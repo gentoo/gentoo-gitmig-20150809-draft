@@ -1,6 +1,9 @@
 # ChangeLog for virtual/init
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/init/ChangeLog,v 1.4 2007/02/02 15:14:18 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/init/ChangeLog,v 1.5 2007/02/06 12:31:44 blubb Exp $
+
+  06 Feb 2007; Simon Stelling <blubb@gentoo.org> init-0.ebuild:
+  stable on amd64; bug 159097
 
   02 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> init-0.ebuild:
   Stable on sparc
