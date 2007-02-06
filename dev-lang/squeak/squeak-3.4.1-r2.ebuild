@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.4.1-r2.ebuild,v 1.10 2006/03/07 11:21:17 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.4.1-r2.ebuild,v 1.11 2007/02/06 08:57:22 genone Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -127,7 +127,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo 'Run "inisqueak" to get a private copy of the VM image.'
-	einfo ''
-	einfo 'To setup the browser plugin, create a working set named npsqueak.* in /usr/lib/squeak/<version>/'
+	elog 'Run "inisqueak" to get a private copy of the VM image.'
+	elog
+	elog 'To setup the browser plugin, create a working set named npsqueak.* in /usr/lib/squeak/<version>/'
 }

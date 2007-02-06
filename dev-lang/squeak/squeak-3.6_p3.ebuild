@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.6_p3.ebuild,v 1.7 2006/03/19 22:26:13 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.6_p3.ebuild,v 1.8 2007/02/06 08:57:22 genone Exp $
 
 inherit nsplugins libtool flag-o-matic eutils
 
@@ -80,5 +80,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo 'Run "inisqueak" to get a private copy of the VM image.'
+	elog 'Run "inisqueak" to get a private copy of the VM image.'
 }

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/squeak-basicimage
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-basicimage/ChangeLog,v 1.6 2006/03/19 22:28:02 halcy0n Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-basicimage/ChangeLog,v 1.7 2007/02/06 09:01:52 genone Exp $
+
+  06 Feb 2007; Marius Mauch <genone@gentoo.org>
+  squeak-basicimage-3.8.6665.ebuild:
+  Replacing einfo with elog
 
   19 Mar 2006; Mark Loeser <halcy0n@gentoo.org>
   squeak-basicimage-3.6.5429.ebuild, squeak-basicimage-3.8.6665.ebuild:

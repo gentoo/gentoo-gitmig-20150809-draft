@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-basicimage/squeak-basicimage-3.8.6665.ebuild,v 1.2 2006/03/19 22:28:02 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-basicimage/squeak-basicimage-3.8.6665.ebuild,v 1.3 2007/02/06 09:01:52 genone Exp $
 
 MY_P="Squeak3.8-6665"
 DESCRIPTION="Squeak basic image file"
@@ -42,5 +42,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Squeak ${PV} image, changes and sources files installed in /usr/lib/squeak"
+	elog "Squeak ${PV} image, changes and sources files installed in /usr/lib/squeak"
 }
