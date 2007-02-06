@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.4.ebuild,v 1.3 2007/01/29 18:50:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.4.ebuild,v 1.4 2007/02/06 20:25:13 armin76 Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool
 
@@ -85,6 +85,7 @@ src_compile() {
 	if [[ $(tc-arch) == "x86" ]]; then
 		filter-flags -fforce-addr
 		filter-flags -momit-leaf-frame-pointer # break on gcc 3.4/4.x
+		filter-flags -fno-omit-frame-pointer #breaks per bug #149704
 		is-flag -O? || append-flags -O2
 	fi
 

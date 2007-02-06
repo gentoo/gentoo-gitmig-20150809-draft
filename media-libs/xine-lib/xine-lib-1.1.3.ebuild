@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.3.ebuild,v 1.13 2007/01/30 18:46:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.3.ebuild,v 1.14 2007/02/06 20:25:13 armin76 Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -101,6 +101,7 @@ src_compile() {
 	if [[ $(tc-arch) == "x86" ]]; then
 		filter-flags -fforce-addr
 		filter-flags -momit-leaf-frame-pointer # break on gcc 3.4/4.x
+		filter-flags -fno-omit-frame-pointer #breaks per bug #149704
 		is-flag -O? || append-flags -O2
 	fi
 
