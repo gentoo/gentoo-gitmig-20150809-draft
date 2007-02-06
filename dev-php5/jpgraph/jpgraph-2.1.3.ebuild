@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/jpgraph/jpgraph-2.1.3.ebuild,v 1.2 2007/01/24 18:18:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/jpgraph/jpgraph-2.1.3.ebuild,v 1.3 2007/02/06 19:36:38 gustavoz Exp $
 
 inherit php-lib-r1
 
-KEYWORDS="~alpha ~amd64 hppa ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ppc sparc ~x86"
 DESCRIPTION="Fully OO graph drawing library for PHP."
 HOMEPAGE="http://www.aditus.nu/jpgraph/"
 LICENSE="QPL-1.0"
