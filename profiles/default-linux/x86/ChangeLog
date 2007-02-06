@@ -1,6 +1,13 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.55 2007/02/05 18:53:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.56 2007/02/06 22:18:06 wolf31o2 Exp $
+
+  06 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  dev/2007.0/desktop/make.defaults:
+  Added a few extra USE flags to the defaults for 2007.0, so programs will
+  work out of the box and as expected. This gives us more flexibility on the
+  LiveDVD, and only affects the desktop profile, which nothing but the
+  LiveCD/LiveDVD is built against.
 
   05 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> make.defaults:
   Updated the default ALSA_CARDS to build both emu10k1 drivers, since the
