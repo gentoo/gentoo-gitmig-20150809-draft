@@ -1,9 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.6.4.ebuild,v 1.12 2007/01/24 03:36:25 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.6.4.ebuild,v 1.13 2007/02/06 21:11:45 genstef Exp $
 
 DESCRIPTION="Small utility for searching ebuilds with indexing for fast results"
-HOMEPAGE="http://dev.croup.de/proj/eix"
+HOMEPAGE="http://eix.sourceforge.net"
 SRC_URI="mirror://sourceforge/eix/${P}.tar.bz2"
 
 LICENSE="GPL-2"
