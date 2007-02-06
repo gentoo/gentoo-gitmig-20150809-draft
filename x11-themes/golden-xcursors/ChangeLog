@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/golden-xcursors
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/golden-xcursors/ChangeLog,v 1.21 2006/01/03 21:14:28 nelchael Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/golden-xcursors/ChangeLog,v 1.22 2007/02/06 01:36:43 flameeyes Exp $
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   03 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   golden-xcursors-0.8.ebuild:
