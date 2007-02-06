@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/achemso
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/achemso/ChangeLog,v 1.6 2004/12/28 20:57:00 absinthe Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/achemso/ChangeLog,v 1.7 2007/02/06 16:36:53 nattfodd Exp $
+
+  06 Feb 2007; Alexandre Buisse <nattfodd@gentoo.org> achemso-1.0.ebuild:
+  Corrected SRC_URI/HOMEPAGE and mirrored tarball with correct version number.
 
   28 Dec 2004; Dylan Carlson <absinthe@gentoo.org> achemso-1.0.ebuild:
   Keywords ~amd64.
