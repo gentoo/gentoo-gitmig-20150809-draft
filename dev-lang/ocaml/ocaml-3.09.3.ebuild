@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.09.3.ebuild,v 1.6 2006/12/14 20:56:22 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.09.3.ebuild,v 1.7 2007/02/06 08:26:45 genone Exp $
 
 inherit flag-o-matic eutils multilib
 
@@ -88,11 +88,11 @@ pkg_postinst() {
 	fi
 
 	echo
-	einfo "OCaml is not binary compatible from version to version,"
-	einfo "so you (may) need to rebuild all packages depending on it that"
-	einfo "are actually installed on your system."
-	einfo "To do so, you can run: "
-	einfo "sh ${FILESDIR}/ocaml-rebuild.sh [-h | emerge options]"
-	einfo "Which will call emerge on all old packages with the given options"
+	elog "OCaml is not binary compatible from version to version,"
+	elog "so you (may) need to rebuild all packages depending on it that"
+	elog "are actually installed on your system."
+	elog "To do so, you can run: "
+	elog "sh ${FILESDIR}/ocaml-rebuild.sh [-h | emerge options]"
+	elog "Which will call emerge on all old packages with the given options"
 	echo
 }
