@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.43.ebuild,v 1.8 2007/02/05 23:08:15 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.43.ebuild,v 1.9 2007/02/06 08:14:34 genstef Exp $
 
 inherit linux-mod rpm eutils
 
@@ -112,9 +112,8 @@ src_unpack() {
 		cd fritz.usb2; epatch ${FILESDIR}/fcusb2-2.6.19.patch; cd ..
 	fi
 	epatch ${FILESDIR}/2.6.43-linux-2.6.19-irq_handler.patch
-	if kernel_is ge 2 6 17; then
-		epatch ${FILESDIR}/2.6.43-fcpcmcia.patch
-	fi
+	kernel_is ge 2 6 17 && epatch ${FILESDIR}/2.6.43-fcpcmcia.patch
+	kernel_is ge 2 6 20 && epatch ${FILESDIR}/fritzcapi-2.6.20.patch
 	find -name \*.[hc] -print0 | xargs -0 sed -i '
 		s:#include <linux/config\.h>:#include <linux/autoconf.h>:;
 		s/driver_init/fc_driver_init/g; s/driver_exit/fc_driver_exit/;'
