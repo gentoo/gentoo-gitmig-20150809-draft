@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.1-r2.ebuild,v 1.11 2007/01/20 16:03:56 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.1-r2.ebuild,v 1.12 2007/02/06 09:45:27 genone Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
@@ -65,7 +65,7 @@ src_unpack() {
 		epatch "${WORKDIR}/${PN}-${PV}${PATCHVER}.patch"
 	fi
 	if [ "${PR}" != "r0" ]; then
-		elog "Setting portage.VERSION to ${PVR} ..."
+		einfo "Setting portage.VERSION to ${PVR} ..."
 		sed -i "s/^VERSION=.*/VERSION=\"${PVR}\"/" pym/portage.py || \
 			die "Failed to patch portage.VERSION"
 		eend 0
