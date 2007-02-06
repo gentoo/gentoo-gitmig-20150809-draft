@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/mips/use.mask,v 1.9 2007/02/03 12:20:16 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/mips/use.mask,v 1.10 2007/02/06 22:19:27 eroyf Exp $
+
+# Alexander H. Færøy <eroyf@gentoo.org>
+# USE masking for now.
+libnotify
 
 # Alexander Færøy <eroyf@gentoo.org>
 # sync with default-linux/mips
