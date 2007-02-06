@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/imlib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.43 2007/02/05 22:06:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.44 2007/02/06 16:31:12 drac Exp $
+
+  06 Feb 2007; Samuli Suominen <drac@gentoo.org> imlib-1.9.15-r1.ebuild:
+  Stop using eautomake.
 
   05 Feb 2007; Samuli Suominen <drac@gentoo.org> imlib-1.9.14-r3.ebuild:
   Simple patch name change.

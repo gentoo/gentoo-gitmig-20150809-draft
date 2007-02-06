@@ -1,9 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.15-r1.ebuild,v 1.3 2007/02/05 21:59:28 drac Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.15-r1.ebuild,v 1.4 2007/02/06 16:31:12 drac Exp $
 
 inherit autotools eutils gnome.org
 
@@ -35,7 +32,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-security.patch
 
 	eautoconf
-	eautomake
 	_elibtoolize
 }
 
