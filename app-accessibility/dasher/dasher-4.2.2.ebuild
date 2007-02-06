@@ -1,7 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-4.2.2.ebuild,v 1.7 2007/02/04 09:02:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-4.2.2.ebuild,v 1.8 2007/02/06 01:38:51 leonardop Exp $
 
+WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.8"
 
 inherit autotools eutils gnome2
@@ -65,10 +66,10 @@ src_unpack() {
 
 	sed -i -e 's:gtk-update-icon-cache:true:' ./Data/Makefile.am
 
-	epatch "${FILESDIR}"/${PN}-4.1.10-as-needed.patch
+	epatch "${FILESDIR}/${PN}-4.1.10-as-needed.patch"
 
-	# Patch to fix compilation when USE=-gnome is used
-	epatch "${FILESDIR}"/${PN}-4.2.1-sk_conditional_fix.patch
+	# Patch to fix compilation when USE=-gnome is used (bug #165154)
+	epatch "${FILESDIR}/${P}-gnome_help.patch"
 
 	eautoreconf
 }

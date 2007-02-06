@@ -1,0 +1,32 @@
+diff -NurdB dasher-4.2.2/Data/Help/Makefile.am dasher-4.2.2-patched/Data/Help/Makefile.am
+--- dasher-4.2.2/Data/Help/Makefile.am	2006-11-20 10:22:57.000000000 -0500
++++ dasher-4.2.2-patched/Data/Help/Makefile.am	2007-02-05 19:50:42.000000000 -0500
+@@ -1 +1,5 @@
+-SUBDIRS = Gnome
++SUBDIRS =
++
++if GNOME_HELP
++SUBDIRS += Gnome
++endif
+diff -NurdB dasher-4.2.2/configure.in dasher-4.2.2-patched/configure.in
+--- dasher-4.2.2/configure.in	2006-11-20 10:22:30.000000000 -0500
++++ dasher-4.2.2-patched/configure.in	2007-02-05 19:50:25.000000000 -0500
+@@ -293,6 +293,7 @@
+ AM_CONDITIONAL(DOQTE, test x$WITHQTE = xtrue)
+ AM_CONDITIONAL(GNOME_SPEECH, test x$WITHSPEECH = xtrue)
+ AM_CONDITIONAL(GNOME_A11Y, test x$WITHA11Y = xtrue)
++AM_CONDITIONAL(GNOME_HELP, test x$WITHGNOME = xtrue)
+ AM_CONDITIONAL(WITH_GPE, test x$WITHGPE = xtrue)
+ AM_CONDITIONAL(WITH_MAEMO, test x$WITHMAEMO = xtrue)
+ AM_CONDITIONAL(WITH_MAEMOFULLSCREEN, test x$WITHMAEMOFULLSCREEN = xtrue)
+@@ -325,7 +326,9 @@
+ AC_SUBST(GTK2BUILD_LIBS)
+ 
+ if [[ x"$WITHGNOME" = xtrue ]]; then
+-GNOME_DOC_INIT
++	GNOME_DOC_INIT
++else
++	AM_CONDITIONAL(ENABLE_SK, test "x$enable_scrollkeeper" = "xyes")
+ fi
+ 
+ AC_CONFIG_FILES([Makefile

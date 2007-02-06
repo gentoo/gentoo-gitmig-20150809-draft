@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/dasher
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.88 2007/02/04 09:02:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.89 2007/02/06 01:38:51 leonardop Exp $
+
+  06 Feb 2007; Leonardo Boshell <leonardop@gentoo.org>
+  +files/dasher-4.2.2-gnome_help.patch, dasher-4.2.2.ebuild:
+  Added patch to fix compilation when USE=-gnome and gnome-doc-utils is not
+  installed in the system (bug #165154)..
 
   04 Feb 2007; Markus Rothe <corsair@gentoo.org> dasher-4.2.2.ebuild:
   Stable on ppc64; bug #164978
