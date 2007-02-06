@@ -1,6 +1,20 @@
 # ChangeLog for net-misc/cisco-vpnclient-3des
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.47 2006/12/12 15:08:12 wolf31o2 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.48 2007/02/06 22:05:51 wolf31o2 Exp $
+
+  06 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/4.6.00.0045-2.6.14.patch, -files/4.0.1a-linux26-gentoo.patch,
+  -files/4.6.00.0045-supported_device.patch, -files/4.0.5-2.6.14.patch,
+  -files/atheros.patch, -files/register_netdevice.patch,
+  -cisco-vpnclient-3des-4.0.1a-r1.ebuild,
+  -cisco-vpnclient-3des-4.0.3b-r4.ebuild,
+  -cisco-vpnclient-3des-4.0.5-r1.ebuild,
+  -cisco-vpnclient-3des-4.6.00.0045-r1.ebuild:
+  As painful as this is for me, I'm removing older versions of this ebuild.
+  This is due to my lack of access to the distfiles for the older ebuilds, and
+  bug #164344. If you use these older ebuilds and want to see them back in
+  portage, you'll need to contact me directly so we can work out arrangements
+  to make that possible. I apologize for any inconvenience this may cause.
 
   12 Dec 2006; Chris Gianelloni <wolf31o2@gentoo.org> files/vpnclient.rc:
   Changed exit 1 to eend 1 for bug #157596.
