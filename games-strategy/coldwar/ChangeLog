@@ -1,0 +1,10 @@
+# ChangeLog for games-strategy/coldwar
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/coldwar/ChangeLog,v 1.1 2007/02/06 23:31:54 wolf31o2 Exp $
+
+*coldwar-1.0.1 (06 Feb 2007)
+
+  06 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +coldwar-1.0.1.ebuild:
+  Initial import.  Ebuild by Paul Bredbury <brebs@sent.com> and edited by me.
+
