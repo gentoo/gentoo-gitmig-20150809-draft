@@ -1,0 +1,10 @@
+# ChangeLog for dev-ml/ocaml-ssl
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-ssl/ChangeLog,v 1.1 2007/02/06 20:56:28 nattfodd Exp $
+
+*ocaml-ssl-0.4.0 (06 Feb 2007)
+
+  06 Feb 2007; Alexandre Buisse <nattfodd@gentoo.org> +metadata.xml,
+  +ocaml-ssl-0.4.0.ebuild:
+  Initial commit, ebuild courtesy of Oscar Hellström (bug #164449).
+
