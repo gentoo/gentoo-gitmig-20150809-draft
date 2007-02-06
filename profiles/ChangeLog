@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.75 2007/02/04 18:16:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.76 2007/02/06 23:21:00 wolf31o2 Exp $
+
+  06 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> thirdpartymirrors:
+  Added http://home.coc-ag.de/dressler-ro/liflg/files/native to liflg mirror
+  list.
 
   04 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   default-linux/packages.build:
