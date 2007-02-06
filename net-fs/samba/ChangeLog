@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.263 2007/02/06 10:35:59 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.264 2007/02/06 18:51:21 gustavoz Exp $
+
+  06 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> samba-3.0.24.ebuild:
+  Stable on sparc wrt security #165549
 
 *samba-3.0.24 (06 Feb 2007)
 
