@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6772 2007/02/06 21:37:42 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6773 2007/02/06 22:28:11 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -275,11 +275,6 @@ mail-client/ximian-connector
 # See bug # 159648
 net-misc/e100
 
-# Peter Weller <welp@gentoo.org> (23 Jan 2007)
-# Goes with Xfce 4.4, can to be unmasked when Xfce 4.4 is
-# unmasked
->=dev-libs/dbh-4.5.0
-
 # Christian Faulhammer <opfer@gentoo.org> (23 Jan 2007)
 # masked for testing
 app-portage/gatt-svn
@@ -492,10 +487,6 @@ games-action/descent2-demodata
 games-action/d2x-xl
 games-action/d2x-rebirth
 
-# Joshua Nichols <nichoj@gentoo.org> (27 Dec 2006)
-# Python bindings for XFCE 4.4
-dev-python/pyxfce
-
 # Andrej Kacian <ticho@gentoo.org> (25 Dec 2006)
 # Masked for debugging
 >=app-antivirus/bitdefender-console-7.1
@@ -518,12 +509,6 @@ dev-python/pyxfce
 # Testing for FreeBSD support
 =x11-base/x11-drm-20060608-r1
 
-# Joshua Nichols <nichoj@gentoo.org> (05 Dec 2006)
-# Plugins for XFCE 4.4's Thunar file manager
-xfce-extra/thunar-archive
-xfce-extra/thunar-media-tags
-xfce-extra/thunar-volman
-
 # Daniel Drake <dsd@gentoo.org> (12 Dec 2006)
 # Broken again with new kernel release, no maintainer, no upstream
 # Masked for removal on 2nd Jan 2007
@@ -538,51 +523,9 @@ app-antivirus/vlnx
 # needs more compatibilty testing - bug #157718 for incompatibilites
 >=net-misc/curl-7.16.0
 
-# Joshua Nichols <nichoj@gentoo.org> (05 Dec 2006)
-# Archive tool for XFCE 4.4
-xfce-extra/xarchiver
-
 # Patrick Kursawe <phosphan@gentoo.org> (06 Dec 2006)
 # Only partially working, see bug #153667
 media-tv/nuppelvideo
-
-# Joshua Nichols <nichoj@gentoo.org> (05 Dec 2006)
-# XFCE 4.4 dev tools
->=xfce-extra/xfce4-dev-tools-4.3
-
-# Joshua Nichols <nichoj@gentoo.org> (05 Dec 2006)
-# XFCE 4.4 plugins
-xfce-extra/xfce4-eyes
-xfce-extra/verve
->=xfce-extra/xfce4-battery-0.4.90.3
->=xfce-extra/xfce4-clipman-0.5.99.1
->=xfce-extra/xfce4-cpugraph-0.3.0
-xfce-extra/xfce4-cpu-freq
->=xfce-extra/xfce4-datetime-0.4.0
-xfce-extra/xfce4-dict
->=xfce-extra/xfce4-diskperf-2.0
->=xfce-extra/xfce4-fsguard-0.3.0
->=xfce-extra/xfce4-genmon-3.0
-xfce-extra/xfce4-mailwatch
->=xfce-extra/xfce4-mount-0.4.7
->=xfce-extra/xfce4-netload-0.4.0
->=xfce-extra/xfce4-notes-1.4
->=xfce-extra/xfce4-quicklauncher-1.9.2
-xfce-extra/xfce4-screenshooter
->=xfce-extra/xfce4-sensors-0.7.0
-xfce-extra/xfce4-smartbookmark
->=xfce-extra/xfce4-systemload-0.4
->=xfce-extra/xfce4-taskmanager-0.3.2
->=xfce-extra/xfce4-weather-0.5.99.1
-xfce-extra/xfce4-xfapplet
->=xfce-extra/xfce4-xkb-0.4.1
->=xfce-extra/xfce4-wavelan-0.5.3
-xfce-extra/xfce4-timer
-
-# Patrick McLean <chutzpah@gentoo.org> (04 Dec 2006)
-# masked pending removal as there is no bmpx that deps on
-# this anymore and it is deprecated
-x11-themes/bmpx-themes
 
 # Timothy Redaelli <drizzt@gentoo.org> (01 Dec 2006)
 # Beta versions
@@ -1043,32 +986,6 @@ games-strategy/netpanzer
 # Tavis Ormandy <taviso@gentoo.org> (21 Apr 2006)
 # unresolved security issues #125491
 net-analyzer/tcpick
-
-## Daniel Ostrow <dostrow@gentoo.org> (20 Apr 2006)
-## XFCE 4.4 beta1
->=xfce-base/libxfce4util-4.3.90.1
->=xfce-base/libxfce4mcs-4.3.90.1
->=xfce-base/libxfcegui4-4.3.90.1
->=xfce-base/xfce4-panel-4.3.90.1
->=xfce-base/xfce-mcs-manager-4.3.90.1
->=xfce-extra/xfce4-mixer-4.3.90.1
->=xfce-base/xfprint-4.3.90.1
->=xfce-base/xfce-mcs-plugins-4.3.90.1
->=xfce-extra/xfce4-icon-theme-4.3.90.1
->=xfce-extra/mousepad-0.2.4
->=xfce-extra/exo-0.3.1.6_beta1
->=xfce-extra/terminal-0.2.5.1_beta1
->=xfce-base/orage-4.3.90.1
->=xfce-base/thunar-0.3.0_beta1
->=xfce-base/xfdesktop-4.3.90.1
->=xfce-extra/xfce4-appfinder-4.3.90.1
->=xfce-base/xfce-utils-4.3.90.1
->=xfce-base/xfwm4-4.3.90.1
->=x11-themes/gtk-engines-xfce-2.3.90.1
->=xfce-base/xfce4-session-4.3.90.1
->=xfce-extra/xfwm4-themes-4.3.90.1
->=xfce-base/xfce4-4.3.90.1
->=xfce-base/xfce4-extras-4.3.90.1
 
 # Brent Baude <ranger@gentoo.org> (18 Apr 2006)
 # Masked pending removal. This package had been deprecated
