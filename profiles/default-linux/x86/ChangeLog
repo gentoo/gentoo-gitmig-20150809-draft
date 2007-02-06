@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.56 2007/02/06 22:18:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.57 2007/02/06 22:19:32 wolf31o2 Exp $
+
+  06 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  dev/2007.0/desktop/virtuals:
+  Changed virtual/cdrtools for 2007.0's desktop profile to cdrkit until it
+  becomes the default virtual globally.
 
   06 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   dev/2007.0/desktop/make.defaults:
