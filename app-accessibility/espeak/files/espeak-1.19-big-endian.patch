@@ -1,0 +1,24 @@
+--- src/Makefile	2007-02-05 21:09:47.000000000 -0600
++++ src/Makefile	2007-02-05 22:10:32.000000000 -0600
+@@ -39,9 +39,6 @@
+ LIBS3=-lstdc++ ./libespeak.so
+ 
+ CXXFLAGS=-O2
+-ifeq ($(shell uname -m), ppc)
+-	CXXFLAGS += -D ARCH_BIG
+-endif
+ 
+ 
+ all: $(BIN_NAME) $(LIB_NAME) $(BIN2_NAME)
+--- src/speech.h	2007-02-05 22:06:44.000000000 -0600
++++ src/speech.h	2007-02-05 23:15:02.000000000 -0600
+@@ -31,6 +31,9 @@
+ #define USE_ASYNC
+ #endif
+ 
++#if defined(BYTE_ORDER) && BYTE_ORDER == BIG_ENDIAN
++#define ARCH_BIG
++#endif
+ 
+ // will look for espeak_data directory here, and also in user's home directory
+ #ifndef PATH_ESPEAK_DATA

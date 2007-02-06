@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.19.ebuild,v 1.1 2007/01/31 06:00:27 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.19.ebuild,v 1.2 2007/02/06 06:27:38 williamh Exp $
 
 inherit eutils
 
@@ -30,6 +30,10 @@ src_unpack() {
 	if has_version "=media-libs/portaudio-19*" ; then
 		mv -f "${S}/src/portaudio19.h" "${S}/src/portaudio.h"
 	fi
+	# Apply patch to support big-endian processors
+	epatch ${FILESDIR}/${P}-big-endian.patch
+	# Apply patch for ppc64 segfault
+	epatch ${FILESDIR}/${P}-ppc64-segfault.patch
 }
 
 src_compile() {
