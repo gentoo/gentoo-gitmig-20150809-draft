@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce4-extras
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/ChangeLog,v 1.33 2007/02/04 03:03:34 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/ChangeLog,v 1.34 2007/02/06 21:57:21 drac Exp $
+
+  06 Feb 2007; Samuli Suominen <drac@gentoo.org>
+  xfce4-extras-4.4.0-r1.ebuild:
+  Adjust depends for bugs 165299 165308 165310.
 
 *xfce4-extras-4.4.0-r1 (04 Feb 2007)
 
