@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Graph
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/ChangeLog,v 1.33 2007/01/22 13:30:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/ChangeLog,v 1.34 2007/02/06 15:03:22 mcummings Exp $
+
+*Graph-0.81 (06 Feb 2007)
+
+  06 Feb 2007; Michael Cummings <mcummings@gentoo.org> +Graph-0.81.ebuild:
+  Version bump
 
   22 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> Graph-0.80.ebuild:
   Stable on Alpha + IA64.
