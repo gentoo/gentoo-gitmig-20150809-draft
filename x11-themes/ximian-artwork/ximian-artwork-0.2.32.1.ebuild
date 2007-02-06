@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ximian-artwork-0.2.32.1.ebuild,v 1.6 2007/01/04 12:56:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ximian-artwork-0.2.32.1.ebuild,v 1.7 2007/02/06 14:18:19 blubb Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.novell.com/products/desktop/"
 SRC_URI="http://apt.sw.be/packages/ximian-artwork/ximian-artwork-${MY_PV}-${RPM_V}.rf.src.rpm"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc sparc ~x86"
+KEYWORDS="amd64 ppc sparc ~x86"
 IUSE=""
 
 DEPEND="app-arch/rpm2targz
@@ -51,6 +51,20 @@ src_install () {
 
 	# remove xmms skin if unneeded
 	rm -rf "${D}"/usr/share/xmms
+
+	# remove colliding files, see bug 150272
+	DUPES="/usr/share/icons/gnome/32x32/apps/file-manager.png
+		/usr/share/icons/gnome/32x32/apps/logviewer.png
+		/usr/share/icons/gnome/48x48/apps/administration.png
+		/usr/share/icons/gnome/48x48/apps/apacheconf.png
+		/usr/share/icons/gnome/48x48/apps/applets-screenshooter.png
+		/usr/share/icons/gnome/48x48/apps/gnome-networktool.png
+		/usr/share/icons/gnome/48x48/apps/network-config.png
+		/usr/share/icons/gnome/48x48/apps/postscript-viewer.png
+		/usr/share/icons/gnome/48x48/apps/serviceconf.png"
+	for i in $DUPES; do
+		rm -f "${D}/${i}"
+	done
 
 	cd "${S}"
 	dodoc ChangeLog
