@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libhttpd-persistent
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libhttpd-persistent/ChangeLog,v 1.15 2005/10/16 23:41:19 eradicator Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libhttpd-persistent/ChangeLog,v 1.16 2007/02/06 01:21:59 flameeyes Exp $
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   16 Oct 2005; Jeremy Huddleston <eradicator@gentoo.org>
   libhttpd-persistent-1.3p-r8.ebuild:
