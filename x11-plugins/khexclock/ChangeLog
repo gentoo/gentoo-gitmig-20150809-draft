@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/khexclock
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/khexclock/ChangeLog,v 1.9 2006/01/22 12:00:13 nelchael Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/khexclock/ChangeLog,v 1.10 2007/02/06 01:49:26 flameeyes Exp $
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   22 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> metadata.xml:
   Moved to desktop-dock.

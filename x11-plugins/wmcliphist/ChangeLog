@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmcliphist
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcliphist/ChangeLog,v 1.5 2004/07/20 11:02:20 s4t4n Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcliphist/ChangeLog,v 1.6 2007/02/06 01:58:05 flameeyes Exp $
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   20 Jul 2004; Michele Noberasco <s4t4n@gentoo.org> wmcliphist-0.5.ebuild:
   Fix ebuild to make it produce a working binary. Closes #56782.

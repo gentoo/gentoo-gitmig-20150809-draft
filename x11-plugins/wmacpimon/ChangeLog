@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmacpimon
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpimon/ChangeLog,v 1.4 2006/01/22 12:16:40 nelchael Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpimon/ChangeLog,v 1.5 2007/02/06 01:53:42 flameeyes Exp $
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   22 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> wmacpimon-0.2.1.ebuild:
   Fixed DEPEND for modular X.
