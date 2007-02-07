@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.338 2007/02/04 13:42:34 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.339 2007/02/07 06:10:03 jer Exp $
 
 # Keep them sorted
 
@@ -102,7 +102,6 @@ filepro - Adds support for filePro databases
 firebird - Adds support for the Firebird relational database
 firefox - Build against Firefox instead of Seamonkey/Mozilla
 flac - Adds support for the flac audio codec
-flash - Adds support for creating flash files using Ming
 flatfile - Adds dbm support for flat files
 fltk - Adds support for the Fast Light Toolkit gui interface
 foomaticdb - Adds support for the foomatic printing driver database
@@ -207,7 +206,6 @@ migemo - Enables migemo support for Japanese
 mikmod - Adds libmikmod support to allow playing of SoundTracker-style music files
 milter - Adds sendmail mail filter (milter) support
 mime - Adds MIME support
-ming - Adds support for ming library for creating flash format files
 minimal - Install a very minimal build (disables, for example, plugins, fonts, most drivers, non-critical features)
 mmap - Adds mmap (memory map) support
 mmx - Adds support for optimizations for Pentium MMX and Athlon class processors
