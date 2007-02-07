@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20061220.ebuild,v 1.2 2007/01/11 13:54:28 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20061220.ebuild,v 1.3 2007/02/07 04:57:26 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -32,13 +32,12 @@ src_unpack() {
 
 src_compile() {
 	filter-mfpmath "sse" "387"
-
 	econf \
 		--with-multilayer \
 		--without-freetype-src \
 		$(use_with X x) \
 		|| die "econf failed"
-	make || die
+	emake || die
 }
 
 src_install() {
