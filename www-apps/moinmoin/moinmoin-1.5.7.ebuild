@@ -1,26 +1,26 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/moinmoin-1.3.5-r1.ebuild,v 1.4 2006/07/11 05:01:39 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/moinmoin-1.5.7.ebuild,v 1.1 2007/02/07 22:44:18 rl03 Exp $
 
 inherit webapp
 
-PN0="moin"
-S=${WORKDIR}/${PN0}-${PV}
+MY_PN="moin"
+S=${WORKDIR}/${MY_PN}-${PV}
 
 DESCRIPTION="Python WikiClone"
-SRC_URI="http://download.sourceforge.net/${PN0}/${PN0}-${PV}.tar.gz"
-HOMEPAGE="http://moin.sourceforge.net"
-KEYWORDS="~amd64 ppc sparc x86"
+SRC_URI="mirror://sourceforge/${MY_PN}/${MY_PN}-${PV}.tar.gz"
+HOMEPAGE="http://moinmoin.wikiwikiweb.de"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 LICENSE="GPL-2"
 IUSE="rss"
 
 SLOT="0"
 WEBAPP_MANUAL_SLOT="yes"
 
-DEPEND=">=dev-lang/python-2.2"
+DEPEND=">=dev-lang/python-2.3"
 RDEPEND="${DEPEND}
-	rss? ( >=dev-python/pyxml-0.8.4 )
-	!<www-apps/moinmoin-1.3.5-r1"
+	>=dev-python/docutils-0.4
+	rss? ( >=dev-python/pyxml-0.8.4 )"
 
 src_compile() {
 	python setup.py build || die "python build failed"
@@ -31,8 +31,8 @@ src_install () {
 
 	python setup.py install --root=${D} --prefix=/usr install || die "python install failed"
 
-	dodoc ChangeLog README docs/CHANGES docs/README.migration
-	dohtml docs/INSTALL.html docs/UPDATE.html
+	dodoc ChangeLog README docs/CHANGES* docs/HACKS docs/README.migration
+	dohtml docs/INSTALL.html
 	dodir ${MY_HOSTROOTDIR}/${PF}
 
 	cd ${D}/usr/share/moin
@@ -56,7 +56,8 @@ src_install () {
 }
 
 pkg_postinst() {
-	ewarn "If you are upgrading from 1.2.x to 1.3.x, please read"
+	ewarn "If you are upgrading from 1.3.x, please read"
 	ewarn "/usr/share/doc/${PF}/README.migration.gz"
+	ewarn "and http://moinmoin.wikiwikiweb.de/HelpOnUpdating"
 	webapp_pkg_postinst
 }
