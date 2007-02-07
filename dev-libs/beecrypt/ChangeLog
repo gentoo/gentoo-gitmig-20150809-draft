@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/beecrypt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.53 2007/01/24 01:25:45 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.54 2007/02/07 19:47:17 sanchan Exp $
+
+  07 Feb 2007; Sandro Bonazzola <sanchan@gentoo.org>
+  beecrypt-4.1.2-r1.ebuild, beecrypt-4.1.2-r2.ebuild:
+  Replace flag pentium4m with pentium4, fix bug #165635. Thanks to Jiri
+  Pittner <jiri.pittner@jh-inst.cas.cz> for reporting and to Jackub Moc for
+  his patience.
 
   24 Jan 2007; Alec Warner <antarus@gentoo.org> beecrypt-4.1.2-r2.ebuild:
   fix minor bug with USE=doc, bug # 163375

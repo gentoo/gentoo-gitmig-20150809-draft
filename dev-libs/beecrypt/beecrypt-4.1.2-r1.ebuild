@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-4.1.2-r1.ebuild,v 1.19 2007/01/13 23:15:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-4.1.2-r1.ebuild,v 1.20 2007/02/07 19:47:17 sanchan Exp $
 
 inherit flag-o-matic eutils multilib autotools java-pkg-opt-2
 
@@ -47,6 +47,7 @@ src_compile() {
 	[[ -z ${myarch} ]] && myarch=${CHOST%%-*}
 	[[ ${myarch} == "athlon64" || ${myarch} == "k8" || ${myarch} == "opteron" || ${myarch} == "athlon-fx" ]] && \
 		[[ ${CHOST%%-*} != "x86_64" ]] && myarch=${CHOST%%-*}
+	replace-flags pentium4m pentium4
 	econf \
 		$(use_enable threads) \
 		$(use_with !nocxx cplusplus) \
