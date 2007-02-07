@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/beagle
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.45 2007/02/02 22:48:38 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.46 2007/02/07 19:09:15 metalgod Exp $
+
+*beagle-0.2.16 (07 Feb 2007)
+
+  07 Feb 2007; Luis Medinas <metalgod@gentoo.org>
+  -files/beagle-0.2.15.1-crawllocation.patch, -beagle-0.2.13.ebuild,
+  -beagle-0.2.14.ebuild, -beagle-0.2.15.1.ebuild, +beagle-0.2.16.ebuild:
+  Version Bump. Fixes bug #164039.
 
 *beagle-0.2.15.1 (02 Feb 2007)
 

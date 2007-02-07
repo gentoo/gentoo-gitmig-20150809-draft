@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.15.1.ebuild,v 1.1 2007/02/02 22:48:38 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.16.ebuild,v 1.1 2007/02/07 19:09:15 metalgod Exp $
 
 inherit gnome.org eutils autotools mono
 
@@ -13,7 +13,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="chm doc evo galago gtk ole pdf python thunderbird"
 
 RDEPEND="
-	>=dev-lang/mono-1.1.16.1
+	>=dev-lang/mono-1.1.13.5
 	app-shells/bash
 	app-arch/zip
 	sys-devel/gettext
@@ -88,7 +88,6 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${PN}-0.2.7-crawltweek.patch
 	epatch ${FILESDIR}/${PN}-log-level-warn.patch
-	epatch ${FILESDIR}/${P}-crawllocation.patch
 
 	eautoreconf
 }
