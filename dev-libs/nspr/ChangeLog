@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.65 2007/02/07 10:56:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.66 2007/02/07 20:29:19 armin76 Exp $
+
+*nspr-4.6.5-r1 (07 Feb 2007)
+*nspr-4.6.4-r3 (07 Feb 2007)
+
+  07 Feb 2007; Raúl Porcel <armin76@gentoo.org> -nspr-4.6.4-r2.ebuild,
+  +nspr-4.6.4-r3.ebuild, -nspr-4.6.5.ebuild, +nspr-4.6.5-r1.ebuild:
+  Fix pkgconfig file correctly, thanks to plaes from IRC for testing this
 
 *nspr-4.6.5 (07 Feb 2007)
 *nspr-4.6.4-r2 (07 Feb 2007)
