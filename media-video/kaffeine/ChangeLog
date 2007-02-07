@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kaffeine
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.65 2007/01/10 21:32:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.66 2007/02/07 00:09:21 flameeyes Exp $
+
+  07 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/kaffeine-0.8.2-fbsd.patch, -kaffeine-0.8.2-r1.ebuild:
+  Remove old version.
 
   10 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Add missing email address for herd with name != alias.
