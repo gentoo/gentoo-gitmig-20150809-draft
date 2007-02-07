@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.118.ebuild,v 1.18 2007/01/15 16:34:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.118.ebuild,v 1.19 2007/02/07 03:35:07 vapier Exp $
 
-inherit eutils
+inherit eutils autotools
 
 PVER="1.0"
 DESCRIPTION="Libraries/utilities to handle ELF objects (drop in replacement for libelf)"
@@ -36,8 +36,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-PaX-support.patch
 	epatch "${FILESDIR}"/${P}-no-nested-functions.patch #116968
 
-	# Needed by ${P}-portability.patch
-	autoreconf || die
+	eautoreconf
 
 	find . -name Makefile.in -print0 | xargs -0 sed -i -e 's:-W\(error\|extra\)::g'
 }
