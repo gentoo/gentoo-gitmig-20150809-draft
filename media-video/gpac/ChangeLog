@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.36 2007/02/04 06:46:07 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.37 2007/02/07 21:06:10 mabi Exp $
+
+  07 Feb 2007; Matti Bickel <mabi@gentoo.org> gpac-0.4.2-r1.ebuild:
+  ppc stable (bug #157894)
 
   04 Feb 2007; Steve Dibb <beandog@gentoo.org> gpac-0.4.2-r1.ebuild:
   amd64 stable, bug 157894
