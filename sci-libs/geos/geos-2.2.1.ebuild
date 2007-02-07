@@ -1,8 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-2.2.1.ebuild,v 1.6 2006/11/07 22:31:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-2.2.1.ebuild,v 1.7 2007/02/07 12:25:54 djay Exp $
 
-inherit eutils
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
+inherit eutils autotools
 
 DESCRIPTION="Geometry Engine - Open Source"
 HOMEPAGE="http://geos.refractions.net"
@@ -11,7 +13,7 @@ SRC_URI="http://geos.refractions.net/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
-IUSE="static doc python"
+IUSE="doc python"
 
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
@@ -21,17 +23,12 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-gcc-41.patch
+	cd "${S}"
+	eautoreconf
 }
 
 src_compile() {
-	cd ${S}
-	libtoolize --force
-
-	local myconf
-	myconf=""
-	use static && myconf="$(use_enable static)"
-
-	econf ${myconf} || die "Error: econf failed"
+	econf --enable-static || die "Error: econf failed"
 
 	emake || die "Error: emake failed"
 	if use python; then
@@ -42,19 +39,9 @@ src_compile() {
 	fi
 }
 
-src_test() {
-	cd ${S}
-	make check || die "Tring make check without success."
-# I think this test must be made after the PyGEOS installation
-#	if use python; then
-#		cd ${S}/swig/python
-#		python tests/runtests.py -v
-#	fi
-}
-
 src_install(){
 	into /usr
-	einstall
+	make DESTDIR="${D}" install
 	dodoc AUTHORS COPYING INSTALL NEWS README TODO
 	if use doc; then
 		cd ${S}/doc
