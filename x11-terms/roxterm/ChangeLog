@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/roxterm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.6 2007/01/28 06:19:34 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.7 2007/02/07 17:32:32 compnerd Exp $
+
+  07 Feb 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  files/roxterm-1.3.1-bgimage-entry.patch:
+  Change patch to make roxterm build for others too
 
 *roxterm-1.3.1 (28 Jan 2007)
 
