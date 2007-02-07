@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.38 2007/02/07 12:26:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.39 2007/02/07 12:31:42 wolf31o2 Exp $
+
+  07 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  nvidia-drivers-1.0.8776.ebuild, nvidia-drivers-1.0.9631.ebuild,
+  nvidia-drivers-1.0.9746.ebuild:
+  Fixed the executable stack warnings with a patch from Vlastimil Babka
+  <caster@gentoo.org> and closing bug #114894.
 
   07 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   -nvidia-drivers-1.0.8774.ebuild, -nvidia-drivers-1.0.9742.ebuild:

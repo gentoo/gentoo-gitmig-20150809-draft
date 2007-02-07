@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9631.ebuild,v 1.2 2006/12/12 14:46:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9631.ebuild,v 1.3 2007/02/07 12:31:42 wolf31o2 Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic
 
@@ -46,7 +46,7 @@ QA_TEXTRELS_x86_fbsd="boot/modules/nvidia.ko
 	usr/lib/opengl/nvidia/extensions/libglx.so
 	usr/lib/xorg/modules/drivers/nvidia_drv.so"
 
-QA_EXECSTACK_x86="usr/lib/opengl/nvidia/lib/libGL.so.${PV}
+QA_WX_LOAD_x86="usr/lib/opengl/nvidia/lib/libGL.so.${PV}
 	usr/lib/opengl/nvidia/lib/libGLcore.so.${PV}
 	usr/lib/opengl/nvidia/extensions/libglx.so"
 
@@ -67,7 +67,7 @@ QA_TEXTRELS_amd64="usr/lib64/xorg/libXvMCNVIDIA.so.${PV}
 	usr/lib32/xorg/modules/drivers/nvidia_drv.so
 	usr/lib32/opengl/nvidia/extensions/libglx.so"
 
-QA_EXECSTACK_amd64="usr/lib64/opengl/nvidia/lib/libGL.so.${PV}
+QA_WX_LOAD_amd64="usr/lib64/opengl/nvidia/lib/libGL.so.${PV}
 	usr/lib64/opengl/nvidia/lib/libGLcore.so.${PV}
 	usr/lib64/opengl/nvidia/extensions/libglx.so
 	usr/lib32/opengl/nvidia/lib/libGL.so.${PV}
@@ -345,7 +345,7 @@ src_install-libs() {
 	# fix Bug 131315
 	[[ -f ${libdir}/libXvMCNVIDIA.so.${PV} ]] && \
 		doexe ${libdir}/libXvMCNVIDIA.so.${PV} && \
-		dosym /usr/${inslibdir}/libXvMCNVIDIA.so.${PV} \
+		dosym libXvMCNVIDIA.so.${PV} \
 			/usr/${inslibdir}/libXvMCNVIDIA.so
 
 	exeinto ${NV_ROOT}/extensions
