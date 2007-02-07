@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2574 2007/02/07 06:10:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2575 2007/02/07 11:18:12 drac Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1922,4 +1922,4 @@ xfce-extra/xarchiver:7zip - Adds support for 7zip archives.
 xfce-extra/xarchiver:arj - Adds support for arj archives.
 xfce-extra/xarchiver:lha - Adds support for lha archives.
 xfce-extra/xarchiver:rar - Adds support for rar archives.
-xfce-extra/xarchiver:zip - Adds support for zip archivess.
+xfce-extra/xarchiver:zip - Adds support for zip archives.
