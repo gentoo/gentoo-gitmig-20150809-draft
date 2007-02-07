@@ -1,22 +1,21 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/pvpgn-1.8.0.ebuild,v 1.2 2006/11/23 19:40:00 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/pvpgn-1.8.0.ebuild,v 1.3 2007/02/07 14:10:49 nyhm Exp $
 
 inherit eutils games
 
 SUPPORTP="pvpgn-support-1.0"
 DESCRIPTION="A gaming server for Battle.Net compatible clients"
 HOMEPAGE="http://pvpgn.berlios.de/"
-SRC_URI="http://download.berlios.de/pvpgn/${PN}-${PV/_/}.tar.bz2
-	http://download.berlios.de/pvpgn/${SUPPORTP}.tar.gz"
+SRC_URI="mirror://berlios/${PN}/${PN}-${PV/_/}.tar.bz2
+	mirror://berlios/${PN}/${SUPPORTP}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
 IUSE="mysql postgres"
 
-DEPEND="sys-libs/zlib
-	mysql? ( virtual/mysql )
+DEPEND="mysql? ( virtual/mysql )
 	postgres? ( >=dev-db/postgresql-7 )"
 
 S=${WORKDIR}/${PN}-${PV/_/}
@@ -47,7 +46,7 @@ src_install() {
 	dodoc docs/*
 
 	cd src
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	insinto "${GAMES_DATADIR}/pvpgn"
 	doins "${WORKDIR}/${SUPPORTP}/"* || die "doins failed"
