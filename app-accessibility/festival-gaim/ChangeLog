@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/festival-gaim
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-gaim/ChangeLog,v 1.30 2007/02/03 16:34:23 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-gaim/ChangeLog,v 1.31 2007/02/07 22:00:10 blubb Exp $
+
+  07 Feb 2007; Simon Stelling <blubb@gentoo.org>
+  festival-gaim-1.1-r1.ebuild:
+  stable on amd64; bug 164020
 
   03 Feb 2007; nixnut <nixnut@gentoo.org> festival-gaim-1.1-r1.ebuild:
   Stable on ppc wrt bug 164020
