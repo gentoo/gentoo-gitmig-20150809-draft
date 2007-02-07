@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.4.4.4.ebuild,v 1.7 2007/01/15 17:17:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.4.4.4.ebuild,v 1.8 2007/02/07 21:46:40 vapier Exp $
 
 inherit python toolchain-funcs eutils elisp-common perl-module bash-completion
 
@@ -14,21 +14,21 @@ SRC_URI="mirror://kernel/software/scm/git/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="curl doc elibc_uclibc emacs gtk mozsha1 ppcsha1 tk webdav"
 
 DEPEND="dev-libs/openssl
-		sys-libs/zlib
-		!app-misc/git
-		curl? ( net-misc/curl )
-		webdav? ( dev-libs/expat )
-		emacs? ( virtual/emacs )"
+	sys-libs/zlib
+	!app-misc/git
+	curl? ( net-misc/curl )
+	webdav? ( dev-libs/expat )
+	emacs? ( virtual/emacs )"
 RDEPEND="${DEPEND}
-		dev-lang/perl
-		>=dev-lang/python-2.3
-		app-text/rcs
-		tk? ( dev-lang/tk )
-		gtk? ( >=dev-python/pygtk-2.6 )"
+	dev-lang/perl
+	>=dev-lang/python-2.3
+	app-text/rcs
+	tk? ( dev-lang/tk )
+	gtk? ( >=dev-python/pygtk-2.6 )"
 
 # This is needed because for some obscure reasons future calls to make don't
 # pick up these exports if we export them in src_unpack()
