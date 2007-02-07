@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.9.5.ebuild,v 1.3 2007/01/31 21:00:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.9.5.ebuild,v 1.4 2007/02/07 22:55:15 calchan Exp $
 
 DESCRIPTION="Kino is a non-linear DV editor for GNU/Linux"
 HOMEPAGE="http://www.kinodv.org/"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/kino/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="alsa dvdr ffmpeg quicktime sox vorbis"
+IUSE="alsa dvdr quicktime sox vorbis"
 
 DEPEND=">=x11-libs/gtk+-2.6.0
 	>=gnome-base/libglade-2.5.0
@@ -23,7 +23,7 @@ DEPEND=">=x11-libs/gtk+-2.6.0
 	=dev-libs/lzo-1*
 	!sparc? ( media-libs/libiec61883 )
 	alsa? ( >=media-libs/alsa-lib-1.0.9 )
-	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20051216 )
+	>=media-video/ffmpeg-0.4.9_p20061016
 	quicktime? ( || ( >=media-libs/libquicktime-0.9.5 media-video/cinelerra-cvs ) )"
 RDEPEND="${DEPEND}
 	media-video/mjpegtools
@@ -50,7 +50,6 @@ src_compile() {
 		--disable-dependency-tracking \
 		--disable-debug \
 		$(use_enable quicktime) \
-		$(use_with ffmpeg avcodec) \
 		$(use_with sparc dv1394) \
 		|| die "Configuration failed"
 	emake || die "Compilation failed"
