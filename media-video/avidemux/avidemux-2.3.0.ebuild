@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.3.0.ebuild,v 1.7 2007/02/03 23:07:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.3.0.ebuild,v 1.8 2007/02/07 21:03:45 aballier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -97,7 +97,7 @@ src_compile() {
 		$(use_with vorbis) \
 		$(use_with sdl libsdl) \
 		$(use_with truetype freetype2) \
-		$(use_enable aac faac) $(use_with aac faad2) \
+		$(use_with aac faac) $(use_with aac faad2) \
 		$(use_with encode lame) \
 		--with-extern-twolame \
 		--with-newfaad --with-jsapi-include=/usr/include/js \
