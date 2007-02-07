@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.6.0-r7.ebuild,v 1.2 2007/01/05 17:18:22 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.6.0-r7.ebuild,v 1.3 2007/02/07 10:55:31 zzam Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -14,7 +14,7 @@ SRC_URI="http://www.freepgs.com/${PN}/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 x86"
 IUSE="ffmpeg imagemagick"
 
 DEPEND="media-libs/libmpeg2
