@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.44 2007/02/07 13:16:54 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.45 2007/02/07 21:28:32 killerfox Exp $
+
+  07 Feb 2007; René Nussbaumer <killerfox@gentoo.org>
+  +files/paludis-0.18.0-do_config.patch, paludis-0.18.0.ebuild:
+  Fix bug #165824
 
 *paludis-0.18.0 (07 Feb 2007)
 

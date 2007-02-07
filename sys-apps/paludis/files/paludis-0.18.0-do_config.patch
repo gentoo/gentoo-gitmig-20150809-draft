@@ -1,0 +1,15 @@
+Index: src/clients/paludis/do_config.cc
+===================================================================
+--- src/clients/paludis/do_config.cc    (revision 2400)
++++ src/clients/paludis/do_config.cc    (working copy)
+@@ -41,6 +41,10 @@
+             matches(m)
+         {
+         }
++
++        ~AmbiguousConfigTarget() throw ()
++        {
++        }
+     };
+
+     int
