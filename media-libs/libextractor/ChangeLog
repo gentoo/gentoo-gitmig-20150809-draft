@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libextractor
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/ChangeLog,v 1.38 2007/01/31 11:50:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/ChangeLog,v 1.39 2007/02/07 22:49:37 armin76 Exp $
+
+  07 Feb 2007; Raúl Porcel <armin76@gentoo.org> libextractor-0.5.15.ebuild:
+  Fix bug 165764, and stable x86
 
   31 Jan 2007; Raúl Porcel <armin76@gentoo.org> libextractor-0.5.15.ebuild:
   Fix again the parallel compile issues, bug 164384
