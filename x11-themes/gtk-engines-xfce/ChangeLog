@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/gtk-engines-xfce
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.59 2007/01/28 12:45:34 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.60 2007/02/07 16:34:21 drac Exp $
+
+*gtk-engines-xfce-2.2.8-r1 (07 Feb 2007)
+*gtk-engines-xfce-2.2.7-r2 (07 Feb 2007)
+
+  07 Feb 2007; Samuli Suominen <drac@gentoo.org>
+  -gtk-engines-xfce-2.2.7-r1.ebuild, +gtk-engines-xfce-2.2.7-r2.ebuild,
+  -gtk-engines-xfce-2.2.8.ebuild, +gtk-engines-xfce-2.2.8-r1.ebuild:
+  Unslot ebuilds because of file collisions for bug 165781
 
   28 Jan 2007; Peter Weller <welp@gentoo.org> gtk-engines-xfce-2.4.0.ebuild:
   Dep fixes
