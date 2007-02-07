@@ -1,17 +1,17 @@
-#!/bin/bash
+#!/bin/sh
 # Copyright (c) 2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # Contributed by Roy Marples (uberlord@gentoo.org)
 
 # If we have a service specific script, run this now
-if [[ -x /etc/openvpn/"${SVCNAME}"-down.sh ]] ; then
-	( /etc/openvpn/"${SVCNAME}"-down.sh )
+if [ -x /etc/openvpn/"${SVCNAME}"-down.sh ] ; then
+	/etc/openvpn/"${SVCNAME}"-down.sh
 fi
 
 # Restore resolv.conf to how it was
-if [[ -x /sbin/resolvconf ]] ; then
+if [ -x /sbin/resolvconf ] ; then
 	/sbin/resolvconf -d "${dev}"
-elif [[ -e /etc/resolv.conf-"${dev}".sv ]] ; then
+elif [ -e /etc/resolv.conf-"${dev}".sv ] ; then
 	# Important that we copy instead of move incase resolv.conf is
 	# a symlink and not an actual file
 	cp /etc/resolv.conf-"${dev}".sv /etc/resolv.conf
