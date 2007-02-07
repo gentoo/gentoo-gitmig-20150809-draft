@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.2.ebuild,v 1.15 2007/02/06 16:31:32 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.2.ebuild,v 1.16 2007/02/07 22:48:23 mr_bones_ Exp $
 
 inherit eutils libtool
 
