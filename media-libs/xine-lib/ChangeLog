@@ -1,10 +1,13 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.452 2007/02/06 20:25:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.453 2007/02/07 02:23:24 flameeyes Exp $
 
   06 Feb 2007; Raúl Porcel <armin76@gentoo.org> xine-lib-1.1.3.ebuild,
   xine-lib-1.1.4.ebuild:
   fix x86 flag filtering, bug 149704
+
+  07 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> xine-lib-1.1.4.ebuild:
+  Run elibtoolize, I forgot about it.
 
   30 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> xine-lib-1.1.3.ebuild:
   Fix libpostproc pkg-config check so that it does not bail out with newer

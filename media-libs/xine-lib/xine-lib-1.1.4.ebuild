@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.4.ebuild,v 1.4 2007/02/06 20:25:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.4.ebuild,v 1.5 2007/02/07 02:23:24 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool
 
@@ -106,6 +106,7 @@ src_compile() {
 	# So that the relative path is used to identify them.
 	mkdir "${WORKDIR}/build"
 
+	elibtoolize
 	ECONF_SOURCE="${S}" econf \
 		$(use_enable gnome gnomevfs) \
 		$(use_enable nls) \
