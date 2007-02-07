@@ -1,7 +1,7 @@
-Index: /trunk/scripts/vupdateworld
+Index: util-vserver-0.30.212/scripts/vupdateworld
 ===================================================================
---- /trunk/scripts/vupdateworld (revision 2452)
-+++ /trunk/scripts/vupdateworld (revision 2486)
+--- util-vserver-0.30.212/scripts/vupdateworld (revision 2452)
++++ util-vserver-0.30.212/scripts/vupdateworld (revision 2486)
 @@ -65,4 +65,14 @@
  done
  
@@ -22,19 +22,19 @@ Index: /trunk/scripts/vupdateworld
  test ${#vsomething_opts[@]} -eq 0 || vsomething_opts=( "${vsomething_opts[@]}" -- )
 -exec $_VSOMETHING "${send_through[@]}" emerge "${vsomething_opts[@]}" --update --deep --newuse "$@"
 +exec $_VSOMETHING "${send_through[@]}" emerge "${vsomething_opts[@]}" "${vserver_names[@]}" -- world --update --deep --newuse "$@"
-Index: /trunk/scripts/vdispatch-conf
+Index: util-vserver-0.30.212/scripts/vdispatch-conf
 ===================================================================
---- /trunk/scripts/vdispatch-conf (revision 2363)
-+++ /trunk/scripts/vdispatch-conf (revision 2486)
+--- util-vserver-0.30.212/scripts/vdispatch-conf (revision 2363)
++++ util-vserver-0.30.212/scripts/vdispatch-conf (revision 2486)
 @@ -70,3 +70,3 @@
  export VSOMETHING_TITLE VSOMETHING_PKGMGMT
  
 -exec $_VSOMETHING "${send_through[@]}" dispatch-conf "${vsomething_opts[@]}"
 +exec $_VSOMETHING "${send_through[@]}" dispatch-conf "${vsomething_opts[@]}" "$@"
-Index: /trunk/scripts/vesync
+Index: util-vserver-0.30.212/scripts/vesync
 ===================================================================
---- /trunk/scripts/vesync (revision 2363)
-+++ /trunk/scripts/vesync (revision 2486)
+--- util-vserver-0.30.212/scripts/vesync (revision 2363)
++++ util-vserver-0.30.212/scripts/vesync (revision 2486)
 @@ -76,15 +76,13 @@
  export VSOMETHING_TITLE VSOMETHING_PKGMGMT
  
