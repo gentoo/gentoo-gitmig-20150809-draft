@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyxfce
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxfce/ChangeLog,v 1.1 2006/12/28 02:32:44 nichoj Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxfce/ChangeLog,v 1.2 2007/02/07 10:35:50 drac Exp $
+
+*pyxfce-4.4.0 (07 Feb 2007)
+
+  07 Feb 2007; Samuli Suominen <drac@gentoo.org> +pyxfce-4.4.0.ebuild:
+  Version bump for final Xfce4-4.4.0 release.
 
 *pyxfce-4.3.91 (28 Dec 2006)
 
