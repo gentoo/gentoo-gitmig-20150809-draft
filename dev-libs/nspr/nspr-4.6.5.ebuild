@@ -1,11 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.6.4-r1.ebuild,v 1.1 2007/01/05 21:43:27 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.6.5.ebuild,v 1.1 2007/02/07 10:56:12 armin76 Exp $
 
-WANT_AUTOMAKE='latest'
-WANT_AUTOCONF='latest'
-
-inherit eutils autotools
+inherit eutils
 
 DESCRIPTION="Netscape Portable Runtime"
 HOMEPAGE="http://www.mozilla.org/projects/nspr/"
@@ -17,21 +14,19 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
 IUSE="ipv6 debug"
 
 DEPEND=""
-S="${WORKDIR}/${P}/mozilla/nsprpub"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	EPATCH_OPTS="-p2" epatch "${FILESDIR}"/${PN}-4.6.1-config.patch
-	EPATCH_OPTS="-p2" epatch "${FILESDIR}"/${PN}-4.6.1-config-1.patch
-	epatch "${FILESDIR}"/${PN}-4.6.4-config-2.patch
-	EPATCH_OPTS="-p2" epatch "${FILESDIR}"/${PN}-4.6.1-lang.patch
-	EPATCH_OPTS="-p2" epatch "${FILESDIR}"/${PN}-4.6.1-prtime.patch
-	eautoreconf
+	mkdir build inst
+	epatch "${FILESDIR}"/${PN}-4.6.1-config.patch
+	epatch "${FILESDIR}"/${PN}-4.6.1-config-1.patch
+	epatch "${FILESDIR}"/${PN}-4.6.1-lang.patch
+	epatch "${FILESDIR}"/${PN}-4.6.1-prtime.patch
 }
 
 src_compile() {
-	cd "${S}/build"
+	cd build
 
 	if use amd64 || use ppc64 || use ia64 || use s390; then
 		myconf="${myconf} --enable-64bit"
@@ -43,15 +38,9 @@ src_compile() {
 		myconf="${myconf} --enable-ipv6"
 	fi
 
-	../configure \
-		--build=${CBUILD:-${CHOST}} \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--libdir=/usr/$(get_libdir)/nspr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man \
+	ECONF_SOURCE="../mozilla/nsprpub" econf \
 		$(use_enable debug) \
-		${myconf} || die "./configure failed"
+		${myconf} || die "econf failed"
 	make || die
 }
 
