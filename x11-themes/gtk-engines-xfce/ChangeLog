@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-xfce
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.61 2007/02/07 16:38:47 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.62 2007/02/07 19:18:49 drac Exp $
+
+  07 Feb 2007; Samuli Suominen <drac@gentoo.org>
+  gtk-engines-xfce-2.4.0.ebuild:
+  Remove blocker against old versions and use profiles/updates instead.
 
   07 Feb 2007; Samuli Suominen <drac@gentoo.org>
   gtk-engines-xfce-2.4.0.ebuild:
