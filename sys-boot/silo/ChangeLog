@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/silo
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.34 2007/01/17 14:26:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.35 2007/02/07 14:40:05 gustavoz Exp $
+
+  07 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> silo-1.4.13.ebuild:
+  Fix build bug #162537
 
   17 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   -silo-1.4.11-r1.ebuild:
