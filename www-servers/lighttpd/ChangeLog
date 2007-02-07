@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.96 2007/01/19 19:26:05 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.97 2007/02/07 23:38:19 robbat2 Exp $
+
+  07 Feb 2007; Robin H. Johnson <robbat2@gentoo.org> lighttpd-1.4.13.ebuild,
+  lighttpd-1.4.13-r1.ebuild:
+  Remove ~alpha, ~arm, ~ia64, ~mips pending resolution of bug #155518.
 
   19 Jan 2007; Alexander H. Færøy <eroyf@gentoo.org>
   lighttpd-1.4.11.ebuild:
