@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/libgeda-20060906.ebuild,v 1.3 2007/01/10 17:38:23 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/libgeda-20060906.ebuild,v 1.4 2007/02/07 18:46:34 calchan Exp $
 
 HOMEPAGE="http://www.geda.seul.org"
 DESCRIPTION="libgeda - this library provides functions needed for the gEDA core suite"
 SRC_URI="http://www.geda.seul.org/devel/${PV}/libgeda-${PV}.tar.gz"
 
-IUSE="static"
+IUSE=""
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 SLOT="0"
@@ -26,12 +26,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
-
-	use static && myconf="${myconf} --enable-static --disable-shared"
-
 	econf \
-		${myconf} \
 		--disable-gdgeda \
 		--disable-dependency-tracking \
 		|| die "Configuration failed"
