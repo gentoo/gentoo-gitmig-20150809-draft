@@ -1,0 +1,11 @@
+--- mapscript/php3/php_mapscript.c	2006-09-06 18:42:36.000000000 +0200
++++ mapscript/php3/php_mapscript.c	2007-03-07 03:36:47.000000000 +0100
+@@ -6078,7 +6078,7 @@
+         retVal = 0;
+ 
+ 
+-        php_header(TSRMLS_C);
++        php_header();
+ 
+ #if !defined(USE_GD_GIF) || defined(GD_HAS_GDIMAGEGIFPTR)
+         if( MS_DRIVER_GD(im->format) )

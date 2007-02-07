@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-4.10.0.ebuild,v 1.2 2006/11/25 04:28:19 djay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-4.10.0.ebuild,v 1.3 2007/02/07 07:43:55 djay Exp $
 
 PHP_EXT_NAME="php_mapscript php_proj"
 RUBY_OPTIONAL="yes"
@@ -19,7 +19,7 @@ KEYWORDS="~x86"
 
 #I must check for mygis use flag availability 
 #"mono"
-IUSE="xml pdf proj geos tiff gdal xpm postgis ming php python perl ruby tcl java"
+IUSE="xml pdf proj geos tiff gdal xpm postgis flash php python perl ruby tcl java"
 
 
 DEPEND="media-libs/libpng
@@ -31,11 +31,11 @@ DEPEND="media-libs/libpng
 	geos? ( sci-libs/geos )
 	proj? ( sci-libs/proj net-misc/curl )
 	xml? ( dev-libs/libxml2 )
-	gdal? ( sci-libs/gdal )
+	gdal? ( >sci-libs/gdal-1.2.6 )
 	postgis? ( dev-db/postgis )
 	tiff? ( media-libs/tiff sci-libs/libgeotiff )
 	xpm? ( x11-libs/libXpm )
-	ming? ( media-libs/ming )
+	flash? ( media-libs/ming )
 	pdf? ( media-libs/pdflib )
 	php? ( dev-lang/php dev-lang/swig )
 	ruby? ( dev-lang/ruby dev-lang/swig )
@@ -64,6 +64,7 @@ pkg_setup(){
 		fi
 		if has_version '=dev-lang/php-4*' ; then
 			np="$(expr ${np} + 1)"
+			myphp4=true
 		fi
 		toD="$(if [ ${np} -gt 1 ]; then echo s; fi)"
 		einfo "Using ${np} PHP version${toD}"
@@ -86,6 +87,9 @@ src_unpack() {
 			epatch "${FILESDIR}"/${PF}_php.patch
 		fi
 	fi
+	if [ ! -z "${myphp4}" ]; then
+		epatch "${FILESDIR}"/${PN}_php4.patch
+	fi
 }
 
 src_compile() {
@@ -102,23 +106,20 @@ src_compile() {
 		myconf="${myconf} --with-geos=$(which geos-config)"
 	fi
 
-	local MYPUSE="wmsserver wmsclient"
-	local MYGPUSE="wfs wcs wmsclient wfsclient"
+	local MYGPUSE="wfs wcs wfsclient"
 
 	if (use gdal && use proj); then
 		myconf="--with-ogr ${myconf}";
 		for i in ${MYGPUSE}; do
 			myconf="${myconf} --with-${i}"
 		done
-	fi
-
-	if (use proj); then
-		for i in ${MYPUSE}; do
-			myconf="${myconf} --with-${i}"
-		done
 		if (use xml); then
 			myconf="${myconf} --with-sos"
 		fi
+	fi
+
+	if (use proj); then
+		myconf="${myconf} --with-wmsclient"
 	fi
 
 	if (use php); then
@@ -147,7 +148,7 @@ src_compile() {
 		$(use_with postgis)\
 		$(use_with tiff)\
 		$(use_with pdf)\
-		$(use_with ming)\
+		$(use_with flash ming)\
 		$(use_with java)\
 		${myconf}\
 		|| die "econf failed"

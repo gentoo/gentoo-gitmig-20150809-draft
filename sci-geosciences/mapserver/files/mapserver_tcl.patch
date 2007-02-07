@@ -20,3 +20,25 @@
  #endif /* SWIGTCL8 */
  
  /* 
+--- mapscript/tcl/Makefile.in	2007-03-07 04:23:42.000000000 +0100
++++ mapscript/tcl/Makefile.in	2007-03-07 04:28:06.000000000 +0100
+@@ -48,8 +48,7 @@
+ 	$(TCL_SHLIB_LD) -o $(DLTARGET)$(TCL_SHLIB_SUFFIX) mapscript_wrap.o \
+ 		$(TCL_LD_SEARCH_FLAGS) \
+ 		$(TCL_STUB_LIB_SPEC) \
+-		$(TCL_LIBS) \
+-		-L$(MAPSERVERHOME) $(MAPSERVERLIBS)
++		$(TCL_LIBS)
+ 
+ mapscript_wrap.c:
+ 	swig -tcl8 -dhtml -namespace $(MAPSERVERDEFS) $(MAPSERVERINCS) \
+@@ -63,8 +62,7 @@
+ 	$(TCL_SHLIB_LD) -o $(DLTARGET)$(TCL_SHLIB_SUFFIX) mapscript_wrap.o \
+ 		$(TCL_LD_SEARCH_FLAGS) \
+ 		$(TCL_LIB_SPEC) \
+-		$(TCL_LIBS) \
+-		-L$(MAPSERVERHOME) $(MAPSERVERLIBS)
++		$(TCL_LIBS)
+ 
+ $(DLTARGET)$(TCL_SHLIB_SUFFIX): mapscript_wrap.o
+ 
