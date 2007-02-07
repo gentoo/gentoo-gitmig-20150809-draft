@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/ulogd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.42 2007/02/06 16:13:30 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.43 2007/02/07 09:13:42 dragonheart Exp $
+
+  07 Feb 2007; Daniel Black <dragonheart@gentoo.org>
+  +files/glsa-200701.patch:
+  added patch now too. thanks<analyzer> on #gentoo-bugs for bringing it to our
+  attention
 
 *ulogd-1.23-r1 (06 Feb 2007)
 
