@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/kiwi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.2 2007/02/03 04:01:31 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.3 2007/02/07 22:25:09 pythonhead Exp $
+
+  07 Feb 2007; Rob Cakebread <pythonhead@gentoo.org> kiwi-1.9.11.ebuild:
+  Move docs to proper directory. Thanks Chris Mayo <mayo@clara.co.uk> bug# 165143
 
   03 Feb 2007; Steve Dibb <beandog@gentoo.org> kiwi-1.9.11.ebuild:
   add ~amd64, bug 162948
