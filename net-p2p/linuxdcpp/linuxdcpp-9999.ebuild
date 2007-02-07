@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-9999.ebuild,v 1.3 2007/01/24 17:49:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-9999.ebuild,v 1.4 2007/02/07 22:17:47 armin76 Exp $
 
 inherit cvs eutils
 
@@ -50,7 +50,5 @@ src_install() {
 pkg_postinst() {
 	elog
 	elog "After adding first directory to shares you might need to restart linuxdcpp."
-	elog "UTF-8 is known to cause issues, read /usr/share/doc/${P}/Readme.txt.gz"
-	elog "for information."
 	elog
 }
