@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/bashburn-1.8.5.ebuild,v 1.1 2007/02/07 20:02:26 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/bashburn-1.8.5.ebuild,v 1.2 2007/02/07 20:07:56 sekretarz Exp $
 
 MY_P=BashBurn-${PV}
 
