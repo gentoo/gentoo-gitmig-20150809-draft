@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.293 2007/02/04 17:56:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.294 2007/02/07 18:26:13 flameeyes Exp $
+
+*kdegraphics-3.5.6-r1 (07 Feb 2007)
+*kdegraphics-3.5.5-r2 (07 Feb 2007)
+
+  07 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +files/post-3.5.5-kdegraphics-CVE-2007-0104.diff,
+  +kdegraphics-3.5.5-r2.ebuild, +kdegraphics-3.5.6-r1.ebuild:
+  New revisions, not using the poppler patch. Add patch for security bug in
+  3.5.5-r2 too.
 
   04 Feb 2007; Jeroen Roovers <jer@gentoo.org> kdegraphics-3.5.6.ebuild:
   Marked ~hppa.
