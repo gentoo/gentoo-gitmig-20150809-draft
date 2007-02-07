@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity-ng/lincity-ng-1.0.3.ebuild,v 1.4 2006/11/24 16:07:56 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity-ng/lincity-ng-1.0.3.ebuild,v 1.5 2007/02/07 14:15:48 nyhm Exp $
 
 inherit eutils games
 
 DESCRIPTION="city/country simulation game for X and opengl"
 HOMEPAGE="http://lincity-ng.berlios.de/"
-SRC_URI="http://download.berlios.de/lincity-ng/${P}.tar.bz2"
+SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -14,19 +14,16 @@ KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="virtual/opengl
-	>=dev-libs/libxml2-2.6.11
-	>=media-libs/libsdl-1.2.5
-	>=media-libs/sdl-mixer-1.2.4
-	>=media-libs/sdl-image-1.2.3
-	>=media-libs/sdl-ttf-2.0.0
-	>=media-libs/sdl-gfx-2.0.13
-	>=dev-games/physfs-1.0.0"
+	dev-libs/libxml2
+	media-libs/libsdl
+	media-libs/sdl-mixer
+	media-libs/sdl-image
+	media-libs/sdl-ttf
+	media-libs/sdl-gfx
+	dev-games/physfs"
 DEPEND="${RDEPEND}
-	x11-libs/libXt
-	x11-libs/libX11
-	x11-proto/xproto
 	dev-util/pkgconfig
-	>=dev-util/jam-2.5"
+	dev-util/jam"
 
 pkg_setup() {
 	games_pkg_setup
@@ -38,7 +35,7 @@ pkg_setup() {
 }
 
 src_compile() {
-	egamesconf || die "configure failed"
+	egamesconf || die
 	jam || die "jam failed"
 }
 
