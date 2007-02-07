@@ -1,0 +1,10 @@
+# ChangeLog for games-board/fruit
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/fruit/ChangeLog,v 1.1 2007/02/07 23:11:03 tupone Exp $
+
+*fruit-2.1 (07 Feb 2007)
+
+  07 Feb 2007; <tupone@gentoo.org> +files/fruit-2.1-gentoo.patch,
+  +metadata.xml, +fruit-2.1.ebuild:
+  New ebuild. Bug #108154 by Kamil Rytarowski
+
