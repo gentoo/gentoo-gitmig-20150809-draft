@@ -1,5 +1,5 @@
---- src/Makefile	2007-02-05 21:09:47.000000000 -0600
-+++ src/Makefile	2007-02-05 22:10:32.000000000 -0600
+--- src/Makefile	2007-01-26 03:20:06.000000000 -0600
++++ src/Makefile	2007-02-06 20:37:41.000000000 -0600
 @@ -39,9 +39,6 @@
  LIBS3=-lstdc++ ./libespeak.so
  
@@ -10,15 +10,21 @@
  
  
  all: $(BIN_NAME) $(LIB_NAME) $(BIN2_NAME)
---- src/speech.h	2007-02-05 22:06:44.000000000 -0600
-+++ src/speech.h	2007-02-05 23:15:02.000000000 -0600
-@@ -31,6 +31,9 @@
- #define USE_ASYNC
- #endif
+--- src/speech.h	2007-01-26 03:11:59.000000000 -0600
++++ src/speech.h	2007-02-06 20:41:11.000000000 -0600
+@@ -18,9 +18,15 @@
+  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
+  ***************************************************************************/
+ 
++#include <sys/types.h>
++
+ // conditional compilation options
+ 
  
 +#if defined(BYTE_ORDER) && BYTE_ORDER == BIG_ENDIAN
 +#define ARCH_BIG
 +#endif
- 
- // will look for espeak_data directory here, and also in user's home directory
- #ifndef PATH_ESPEAK_DATA
++ 
+ #define PLATFORM_POSIX
+ #define PATHSEP  '/'
+ #define USE_PORTAUDIO

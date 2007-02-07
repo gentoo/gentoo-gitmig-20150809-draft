@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/espeak
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.6 2007/02/06 06:32:25 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.7 2007/02/07 03:15:25 williamh Exp $
+
+  07 Feb 2007; William Hubbs <williamh@gentoo.org>
+  -files/espeak-1.18-64bits.patch, -files/espeak-1.18-parallel.patch,
+  files/espeak-1.19-big-endian.patch, -espeak-1.16.ebuild,
+  -espeak-1.18.ebuild:
+  Removed old versions, also updated espeak-1.19-big-endian.patch.
 
   06 Feb 2007; William Hubbs <williamh@gentoo.org> espeak-1.19.ebuild:
   Added patches to fix a segfault on ppc64 and to move ARCH_BIG out of the
