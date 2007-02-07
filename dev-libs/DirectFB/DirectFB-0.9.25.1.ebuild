@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.25.1.ebuild,v 1.10 2007/01/04 00:00:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.25.1.ebuild,v 1.11 2007/02/07 17:00:28 mr_bones_ Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.directfb.org/download/DirectFB/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha amd64 arm hppa ia64 -mips ppc sh -sparc x86"
-IUSE="debug fbcon fusion gif jpeg mmx mpeg png sdl sse static sysfs truetype v4l v4l2 zlib"
+IUSE="debug fbcon fusion gif jpeg mmx mpeg png sdl sse sysfs truetype v4l v4l2 zlib"
 
 #	fusion? ( dev-libs/linux-fusion )
 DEPEND="sdl? ( media-libs/libsdl )
@@ -83,6 +83,7 @@ src_compile() {
 
 	use mpeg && export CPPFLAGS="${CPPFLAGS} -I/usr/include/libmpeg3"
 	econf \
+		--enable-static \
 		$(use_enable fbcon fbdev) \
 		$(use_enable mmx) \
 		$(use_enable sse) \
@@ -93,7 +94,6 @@ src_compile() {
 		$(use_enable truetype freetype) \
 		$(use_enable fusion multi) \
 		$(use_enable debug) \
-		$(use_enable static) \
 		$(use_enable sysfs) \
 		$(use_enable zlib) \
 		$(use_enable v4l video4linux) \

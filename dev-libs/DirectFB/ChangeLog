@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.60 2007/01/04 00:00:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.61 2007/02/07 17:00:28 mr_bones_ Exp $
+
+  07 Feb 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  DirectFB-0.9.25.1.ebuild:
+  removed static use flag and always build static libs (bug #165761)
 
   04 Jan 2007; Jeroen Roovers <jer@gentoo.org> DirectFB-0.9.25.1.ebuild:
   Stable for HPPA (bug #159554).
