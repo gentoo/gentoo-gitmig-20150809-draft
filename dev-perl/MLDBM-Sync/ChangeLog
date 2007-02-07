@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/MLDBM-Sync
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MLDBM-Sync/ChangeLog,v 1.1 2007/02/07 20:45:16 ian Exp $
+
+*MLDBM-Sync-0.30 (07 Feb 2007)
+
+  07 Feb 2007; Christian Hartmann <ian@gentoo.org> +metadata.xml,
+  +MLDBM-Sync-0.30.ebuild:
+  Dep for new pending package mail-filter/spamassassin-fuzzyocr; bug #158445
+
