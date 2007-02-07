@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/openmortal
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/openmortal/ChangeLog,v 1.14 2006/04/02 13:47:04 tupone Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/openmortal/ChangeLog,v 1.15 2007/02/07 06:40:28 nyhm Exp $
+
+  07 Feb 2007; Tristan Heaven <nyhm@gentoo.org> openmortal-0.7.ebuild:
+  Install menu entry, bug #160239
 
   02 Apr 2006; <Tupone@gentoo.org> +files/openmortal-0.7-gcc41.patch,
   openmortal-0.7.ebuild:

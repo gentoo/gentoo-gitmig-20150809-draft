@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/openmortal/openmortal-0.7.ebuild,v 1.6 2006/04/02 13:47:04 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/openmortal/openmortal-0.7.ebuild,v 1.7 2007/02/07 06:40:28 nyhm Exp $
 
 inherit eutils games
 
-DESCRIPTION="A spoof of the famous Mortal Combat game"
-HOMEPAGE="http://apocalypse.rulez.org/~upi/Mortal/"
-SRC_URI="mirror://sourceforge/openmortal/${P}.tar.bz2"
+DESCRIPTION="A spoof of the famous Mortal Kombat game"
+HOMEPAGE="http://openmortal.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,7 +28,9 @@ src_unpack() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS ChangeLog TODO README
+	emake DESTDIR="${D}" install || die "emake install failed"
+	newicon data/gfx/icon.png ${PN}.png
+	make_desktop_entry ${PN} OpenMortal
+	dodoc AUTHORS ChangeLog README TODO
 	prepgamesdirs
 }
