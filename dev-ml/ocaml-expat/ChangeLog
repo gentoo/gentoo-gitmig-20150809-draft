@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/ocaml-expat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-expat/ChangeLog,v 1.1 2007/02/06 21:26:43 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-expat/ChangeLog,v 1.2 2007/02/07 19:02:15 nattfodd Exp $
+
+  07 Feb 2007; Alexandre Buisse <nattfodd@gentoo.org>
+  ocaml-expat-0.9.1.ebuild:
+  Changed LICENSE to the correct value (MIT instead of as-is). Fixes bug #165723.
 
 *ocaml-expat-0.9.1 (06 Feb 2007)
 

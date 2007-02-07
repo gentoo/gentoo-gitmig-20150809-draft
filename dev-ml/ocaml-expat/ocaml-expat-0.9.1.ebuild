@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-expat/ocaml-expat-0.9.1.ebuild,v 1.1 2007/02/06 21:26:43 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-expat/ocaml-expat-0.9.1.ebuild,v 1.2 2007/02/07 19:02:15 nattfodd Exp $
 
 inherit findlib eutils
 
@@ -15,7 +15,7 @@ DEPEND="dev-libs/expat"
 RDEPEND="$DEPEND"
 
 SLOT="0"
-LICENSE="as-is"
+LICENSE="MIT"
 KEYWORDS="~x86"
 
 src_compile() {
