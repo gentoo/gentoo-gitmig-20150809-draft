@@ -1,0 +1,44 @@
+Wed Feb  7 13:05:23 GMT 2007  Robert McQueen <robert.mcqueen@collabora.co.uk>
+  * fix debug headers putting G_BEGIN_DECLS inside #ifdef ENABLE_DEBUG, but G_END_DECLS outside
+diff -rN -u old-telepathy-gabble/lib/telepathy-glib/internal-debug.h new-telepathy-gabble/lib/telepathy-glib/internal-debug.h
+--- old-telepathy-gabble/lib/telepathy-glib/internal-debug.h	2007-02-07 13:22:06.972650000 +0000
++++ new-telepathy-gabble/lib/telepathy-glib/internal-debug.h	2007-02-07 13:22:07.304670750 +0000
+@@ -24,6 +24,8 @@
+ void _tp_debug (TpDebugFlags flag, const gchar *format, ...)
+     G_GNUC_PRINTF (2, 3);
+ 
++G_END_DECLS
++
+ #ifdef DEBUG_FLAG
+ 
+ #define DEBUG(format, ...) \
+@@ -47,6 +49,4 @@
+ 
+ #endif /* ENABLE_DEBUG */
+ 
+-G_END_DECLS
+-
+-#endif
++#endif /* __DEBUG_H__ */
+diff -rN -u old-telepathy-gabble/src/debug.h new-telepathy-gabble/src/debug.h
+--- old-telepathy-gabble/src/debug.h	2007-02-07 13:22:06.968649750 +0000
++++ new-telepathy-gabble/src/debug.h	2007-02-07 13:22:06.984650750 +0000
+@@ -32,6 +32,8 @@
+ void gabble_debug (GabbleDebugFlags flag, const gchar *format, ...)
+     G_GNUC_PRINTF (2, 3);
+ 
++G_END_DECLS
++
+ #ifdef DEBUG_FLAG
+ 
+ #define DEBUG(format, ...) \
+@@ -62,7 +64,5 @@
+ 
+ #endif /* ENABLE_DEBUG */
+ 
+-G_END_DECLS
+-
+-#endif
++#endif /* __DEBUG_H__ */
+ 
+
