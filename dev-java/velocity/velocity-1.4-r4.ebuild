@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.4-r4.ebuild,v 1.1 2006/08/14 19:28:37 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.4-r4.ebuild,v 1.2 2007/02/07 09:27:47 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -13,12 +13,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc source"
 
-DEPEND=">=virtual/jdk-1.3.1
+DEPEND="
+	!doc? ( >=virtual/jdk-1.4 )
+	doc? ( || ( =virtual/jdk-1.4* =virtual/jdk-1.5* ) )
 	dev-java/ant-core
 	dev-java/antlr
 	dev-java/junit
 	source? ( app-arch/zip )"
-RDEPEND=">=virtual/jdk-1.3.1
+RDEPEND=">=virtual/jdk-1.4
 	dev-java/bcel
 	dev-java/commons-collections
 	=dev-java/jdom-1.0_beta9*
@@ -35,15 +37,16 @@ pkg_setup() {
 		eerror "flag turned on."
 		die "log4j not built with the javamail use flag"
 	fi
+	java-pkg-2_pkg_setup
 }
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	epatch ${FILESDIR}/${P}-versioned_jar.patch
 
-	cd ${S}/build/lib
+	cd "${S}/build/lib"
 	rm *.jar
 	java-pkg_jar-from antlr
 	java-pkg_jar-from bcel
@@ -59,18 +62,17 @@ src_unpack() {
 }
 
 src_compile () {
-	cd ${S}/build
+	cd "${S}/build"
 	local antflags="jar jar-core jar-util jar-servlet"
-	use doc && antflags="${antflags} javadocs"
-
-	eant ${antflags} || die "Ant failed"
+	eant ${antflags} $(use_doc javadocs) || die "Ant failed"
 }
 
 
 src_install () {
 	java-pkg_dojar bin/*.jar
 
-	dodoc NOTICE README.txt
+	dodoc NOTICE README.txt || die
+	#has other stuff besides api too
 	use doc && java-pkg_dohtml -r docs/*
 	use source && java-pkg_dosrc src/java/*
 }
