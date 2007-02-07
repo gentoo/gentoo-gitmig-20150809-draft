@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.77 2007/02/03 23:31:28 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.78 2007/02/07 03:04:09 rl03 Exp $
+
+*bugzilla-2.23.4 (07 Feb 2007)
+
+  07 Feb 2007; Renat Lumpau <rl03@gentoo.org>
+  +files/2.23/postinstall-en.txt, +files/2.23/reconfig,
+  +files/bugzilla.cron.daily, +files/bugzilla.cron.tab,
+  +bugzilla-2.23.4.ebuild:
+  Added bleeding edge version
 
 *bugzilla-2.22.2 (03 Feb 2007)
 *bugzilla-2.20.4 (03 Feb 2007)
