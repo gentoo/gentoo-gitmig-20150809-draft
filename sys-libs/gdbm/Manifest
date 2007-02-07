@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-AUX gdbm-1.8.3-compat-linking.patch 409 RMD160 f80695aa404dbee8da4ef2dbac6e38e63883b5e9 SHA1 8d1b2929215c04faf96e082a2622ff016eb934c5 SHA256 49e10c9edd6be4371431b633605de0be6e0a8bb8bf21386f6c749b20a0d5f217
-MD5 d656d161130b93a1361ee861858056bc files/gdbm-1.8.3-compat-linking.patch 409
-RMD160 f80695aa404dbee8da4ef2dbac6e38e63883b5e9 files/gdbm-1.8.3-compat-linking.patch 409
-SHA256 49e10c9edd6be4371431b633605de0be6e0a8bb8bf21386f6c749b20a0d5f217 files/gdbm-1.8.3-compat-linking.patch 409
+AUX gdbm-1.8.3-compat-linking.patch 611 RMD160 f144f776f38acb1ea046009b2de0376b5149edb9 SHA1 b8fa52996a9eb24b818b427b5137397b091dcc07 SHA256 832cfffff5d1cb26cf3f2618014e8e1ff4d30153f34abda8db074788abef7dac
+MD5 13a8dfda02d8f0d1db1a982cd9950e7f files/gdbm-1.8.3-compat-linking.patch 611
+RMD160 f144f776f38acb1ea046009b2de0376b5149edb9 files/gdbm-1.8.3-compat-linking.patch 611
+SHA256 832cfffff5d1cb26cf3f2618014e8e1ff4d30153f34abda8db074788abef7dac files/gdbm-1.8.3-compat-linking.patch 611
 AUX gdbm-1.8.3-fix-install-ownership.patch 1567 RMD160 e058ffe36f57dd421ac70bdbb4ed64cd1e641aa6 SHA1 efdbd776a434ccfd885e2f505e8cb2f8e54f5887 SHA256 e08df8b252176475c47615fbe87e554fc7391b29192131aba03e91f687a8076c
 MD5 9ed34cb95efec19c95fbf28a2e7e0986 files/gdbm-1.8.3-fix-install-ownership.patch 1567
 RMD160 e058ffe36f57dd421ac70bdbb4ed64cd1e641aa6 files/gdbm-1.8.3-fix-install-ownership.patch 1567
@@ -28,7 +28,7 @@ SHA256 ed3955b7dd86a349fb2e9d9a0f7c88ff1983f693a675d853f4c5591ee43e78f1 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.2 (GNU/Linux)
 
-iD8DBQFFxoMR8bi6rjpTunYRApu/AKDBuiEACWmTWZsx1UKLBSu5p7J2XgCfZAkT
-Uhugp/v1qn9DYa+r41JFLOQ=
-=rg7+
+iD8DBQFFyVMG8bi6rjpTunYRAgQvAJ0UhWTGpKX7jIgo4Bl1FJ8TztJlawCeJnJZ
+TnKwwSOsOIqKBN7rW3sloiY=
+=UYct
 -----END PGP SIGNATURE-----
