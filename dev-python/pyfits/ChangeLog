@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/pyfits
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/ChangeLog,v 1.1 2007/02/07 11:18:26 bicatali Exp $
+
+*pyfits-1.0.1 (06 Feb 2007)
+
+  06 Feb 2007; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +pyfits-1.0.1.ebuild:
+  Initial import. Close bug #65691.
+
