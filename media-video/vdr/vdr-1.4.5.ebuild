@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.5.ebuild,v 1.2 2007/01/19 19:44:35 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.5.ebuild,v 1.3 2007/02/07 10:40:27 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://www.cadsoft.de/vdr/"
 SRC_URI="ftp://ftp.cadsoft.de/vdr/${MY_P}.tar.bz2
 	mirror://gentoo/${PATCHSET_NAME}.tar.bz2"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 SLOT="0"
 LICENSE="GPL-2"
 
