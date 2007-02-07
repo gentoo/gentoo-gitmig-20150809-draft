@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.139 2007/02/06 21:11:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.140 2007/02/07 03:42:20 jer Exp $
+
+  07 Feb 2007; Jeroen Roovers <jer@gentoo.org> bind-9.2.8.ebuild:
+  Stable for HPPA (bug #163692).
 
   06 Feb 2007; Raúl Porcel <armin76@gentoo.org> bind-9.2.8.ebuild,
   bind-9.3.4.ebuild:
