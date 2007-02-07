@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml/libxml-1.8.17-r2.ebuild,v 1.27 2006/07/05 05:32:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml/libxml-1.8.17-r2.ebuild,v 1.28 2007/02/07 14:09:48 truedfx Exp $
 
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 DESCRIPTION="Version 1 of the library to manipulate XML files"
 HOMEPAGE="http://www.xmlsoft.org/"
@@ -17,6 +17,12 @@ RDEPEND=">=sys-libs/ncurses-5.2
 	doc? ( >=dev-util/gtk-doc-1 )"
 DEPEND="${RDEPEND}
 	>=sys-libs/readline-4.1"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/configure-LANG.patch
+}
 
 src_compile() {
 	append-ldflags -lncurses
