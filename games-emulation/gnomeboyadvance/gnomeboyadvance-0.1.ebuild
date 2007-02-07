@@ -1,18 +1,17 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomeboyadvance/gnomeboyadvance-0.1.ebuild,v 1.10 2007/01/27 00:39:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomeboyadvance/gnomeboyadvance-0.1.ebuild,v 1.11 2007/02/07 13:56:41 nyhm Exp $
 
 inherit games
 
 DESCRIPTION="A GNOME Python frontend to VisualBoyAdvance"
 HOMEPAGE="http://developer.berlios.de/projects/gnomeboyadvance/"
-SRC_URI="http://download.berlios.de/gnomeboyadvance/${P}.tar.bz2"
+SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="ppc x86"
 IUSE=""
-RESTRICT="mirror"
 
 RDEPEND=">=dev-lang/python-2.2
 	 >=dev-python/gnome-python-1.99
