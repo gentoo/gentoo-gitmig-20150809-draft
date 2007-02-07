@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/numarray-1.5.2.ebuild,v 1.1 2007/02/07 11:10:13 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/numarray-1.5.2.ebuild,v 1.2 2007/02/07 20:55:38 marienz Exp $
 
 inherit distutils fortran
 
 DESCRIPTION="Large array processing extension module for Python"
 SRC_URI="mirror://sourceforge/numpy/${P}.tar.gz
-	doc? mirror://sourceforge/numpy/${PN}-1.5.html.tar.gz"
+	doc? ( mirror://sourceforge/numpy/${PN}-1.5.html.tar.gz )"
 HOMEPAGE="http://www.stsci.edu/resources/software_hardware/numarray"
 DEPEND=">=dev-lang/python-2.3
 	lapack? ( virtual/lapack )"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/numarray
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/ChangeLog,v 1.19 2007/02/07 11:10:13 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/ChangeLog,v 1.20 2007/02/07 20:55:38 marienz Exp $
+
+  07 Feb 2007; Marien Zwart <marienz@gentoo.org> numarray-1.5.2.ebuild:
+  Fix syntax error in SRC_URI. Closes bug #165789, thanks to Darren Dale for
+  reporting.
 
 *numarray-1.5.2 (07 Feb 2007)
 
