@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/lapack-docs/lapack-docs-3.1.ebuild,v 1.1 2007/02/07 13:17:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/lapack-docs/lapack-docs-3.1.ebuild,v 1.2 2007/02/07 13:25:16 bicatali Exp $
 
 inherit toolchain-funcs
 
@@ -16,16 +16,9 @@ IUSE=""
 
 S=${WORKDIR}
 
-src_compile() {
-	$(tc-getCC) -o equivalence equivalence.c || "compiling equivalence failed"
-}
-
 src_install() {
-	dobin equivalence
 	# These belong to the blas-docs
 	rm -f man/manl/{lsame,xerbla}.*
-	# This one is empty
-	rm -f man/manl/zbcon.l
 	# rename because doman do not yet understand manl files
 	rename .l .n man/manl/*.l
 	doman man/manl/* || "doman failed"
