@@ -1,24 +1,22 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertux/supertux-0.1.3.ebuild,v 1.8 2006/12/23 01:19:37 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertux/supertux-0.1.3.ebuild,v 1.9 2007/02/07 13:42:06 nyhm Exp $
 
 GAMES_USE_SDL="nojoystick" #bug #100372
 inherit eutils games
 
 DESCRIPTION="A game similar to Super Mario Bros."
 HOMEPAGE="http://super-tux.sourceforge.net"
-SRC_URI=" http://download.berlios.de/supertux/${P}.tar.bz2"
+SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ~ppc64 sparc x86"
 IUSE="opengl"
 
-RDEPEND=">=media-libs/libsdl-1.2.4
-	>=media-libs/sdl-image-1.2.2
-	>=media-libs/sdl-mixer-1.2.5
-	sys-libs/zlib"
-DEPEND="${RDEPEND}
+DEPEND="media-libs/libsdl
+	media-libs/sdl-image
+	media-libs/sdl-mixer
 	x11-libs/libXt"
 
 pkg_setup() {
@@ -30,7 +28,6 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-
 	epatch "${FILESDIR}"/${P}-gcc41.patch
 }
 
@@ -44,10 +41,10 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" \
+	emake DESTDIR="${D}" \
 		desktopdir=/usr/share/applications \
 		icondir=/usr/share/pixmaps \
-		install || die "make install failed"
+		install || die "emake install failed"
 	dodoc AUTHORS ChangeLog LEVELDESIGN README TODO
 	prepgamesdirs
 }
