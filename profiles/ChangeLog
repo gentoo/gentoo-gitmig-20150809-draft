@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.80 2007/02/07 13:54:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.81 2007/02/07 23:18:46 joker Exp $
+
+  08 Feb 2007; Christian Birchinger <joker@gentoo.org> package.mask:
+  Added >=media-plugins/audacious-dumb-0.40
 
   07 Feb 2007; Jeroen Roovers <jer@gentoo.org> use.local.desc:
   ming to flash for mapserver in use.local.desc
@@ -53,7 +56,7 @@
   02 Feb 2007; Markus Ullmann <jokey@gentoo.org> package.mask:
   mask net-analyzer/prelude-nagios for removal
 
-  02 Feb 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org> use.local.desc:
+  02 Feb 2007; Nguyá»n ThÃ¡i Ngá»c Duy <pclouds@gentoo.org> use.local.desc:
   Add rubygems:server
 
   02 Feb 2007; Alexis Ballier <aballier@gentoo.org> package.mask:
@@ -65,7 +68,7 @@
   01 Feb 2007; Markus Ullmann <jokey@gentoo.org> use.local.desc:
   Add mask for bug #164924
 
-  01 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
+  01 Feb 2007; Diego PettenÃ² <flameeyes@gentoo.org> use.local.desc:
   Add daap useflag for amarok.
 
   01 Feb 2007; Markus Ullmann <jokey@gentoo.org> use.local.desc:
@@ -90,18 +93,18 @@
   31 Jan 2007; Steve Dibb <beandog@gentoo.org> package.mask:
   Package masked libmtp-0.1.3 for testing
 
-  30 Jan 2007; Raúl Porcel <armin76@gentoo.org> use.local.desc:
+  30 Jan 2007; RaÃºl Porcel <armin76@gentoo.org> use.local.desc:
   Move branding USE-flag to mozbranding in mail-client/mozilla-thunderbird,
   bug 157335
 
-  30 Jan 2007; Raúl Porcel <armin76@gentoo.org> use.local.desc:
+  30 Jan 2007; RaÃºl Porcel <armin76@gentoo.org> use.local.desc:
   Add xforms USE-flag for www-client/seamonkey, bug 164591
 
   30 Jan 2007; Denis Dupeyron <calchan@gentoo.org> package.mask:
   package.mask'd dev-embedded/gpsim-led pending removal on 1 March 2007 at the
   latest. See bug #96578.
 
-  30 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
+  30 Jan 2007; Diego PettenÃ² <flameeyes@gentoo.org> use.local.desc:
   Add midi useflag for media-sound/alsa-driver.
 
   29 Jan 2007; Leonardo Boshell <leonardop@gentoo.org> package.mask:
@@ -134,10 +137,10 @@
   26 Jan 2007; Patrick McLean <chutzpah@gentoo.org> use.local.desc:
   Add "isc" USE flag for net-dns/dnsmasq
 
-  25 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
+  25 Jan 2007; Petteri RÃ¤ty <betelgeuse@gentoo.org> package.mask:
   package.masked =dev-java/asm-3* because it uses splitted ant
 
-  25 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> use.local.desc:
+  25 Jan 2007; Petteri RÃ¤ty <betelgeuse@gentoo.org> use.local.desc:
   Rename servlet-2.3 and servlet-2.4 use flags to servlet-2_3 and servlet-2_4
   because you can't use dots in use flag names.
 
@@ -194,7 +197,7 @@
   17 Jan 2007; Robert Buchholz <rbu@gentoo.org> +desc/lcd_devices.desc:
   Add desc for new LCD_DEVICES USEs
 
-  16 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
+  16 Jan 2007; Diego PettenÃ² <flameeyes@gentoo.org> use.local.desc:
   Add midi useflag for media-sound/alsa-utils.
 
   16 Jan 2007; Sandro Bonazzola <sanchan@gentoo.org> package.mask:
@@ -228,7 +231,7 @@
   13 Jan 2007; Marijn Schouten <hkBst@gentoo.org> package.mask:
   masked ancient guile-gtk
 
-  12 Jan 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
+  12 Jan 2007; RaÃºl Porcel <armin76@gentoo.org> package.mask:
   Mask net-p2p/teknap for removal, bug 153268
 
   12 Jan 2007; Luca Longinotti <chtekk@gentoo.org> package.mask:
