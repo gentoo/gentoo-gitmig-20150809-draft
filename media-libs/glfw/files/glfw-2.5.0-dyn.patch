@@ -1,0 +1,69 @@
+diff -Nur glfw-2.5-orig/compile.sh glfw-2.5/compile.sh
+--- glfw-2.5-orig/compile.sh	2004-07-24 22:36:46.000000000 +0200
++++ glfw-2.5/compile.sh	2005-09-28 09:11:09.906189824 +0200
+@@ -429,9 +429,9 @@
+ # Post fixups
+ ##########################################################################
+ if [ "x$use_gcc" = xyes ]; then
+-  CFLAGS_SPEED="-c -I. -I.. $CFLAGS -O3 -ffast-math -Wall"
+-  CFLAGS="-c -I. -I.. $CFLAGS -Os -Wall"
+-  CFLAGS_LINK="$INCS -O3 -ffast-math -Wall"
++  CFLAGS_SPEED="-c -I. -I.. $CFLAGS -O3 -ffast-math -Wall -fPIC"
++  CFLAGS="-c -I. -I.. $CFLAGS -Os -Wall -fPIC"
++  CFLAGS_LINK="$INCS -O3 -ffast-math -Wall -fPIC"
+ else
+   CFLAGS_SPEED="-c -I. -I.. $CFLAGS -O"
+   CFLAGS="-c -I. -I.. $CFLAGS -O"
+diff -Nur glfw-2.5-orig/lib/x11/Makefile.x11.in glfw-2.5/lib/x11/Makefile.x11.in
+--- glfw-2.5-orig/lib/x11/Makefile.x11.in	2003-01-31 22:52:48.000000000 +0100
++++ glfw-2.5/lib/x11/Makefile.x11.in	2005-09-28 09:08:18.955178328 +0200
+@@ -2,14 +2,20 @@
+ ##########################################################################
+ # Default: Build GLFW static library
+ ##########################################################################
+-default: libglfw.a
++default: libglfw.a libglfw.so.2.5
+ 
+ 
+ ##########################################################################
+ # Library builder settings
+ ##########################################################################
+ MKLIB    = ar
++MKLIB_SO = gcc
++
+ LIBFLAGS = -rcs
++LIBFLAGS_SO = -shared -Wall $(OBJS) -lc -Wl,-soname
++
++SONAME = libglfw.so.2.5
++SONAMEVERSION = libglfw.so.2.5
+ 
+ 
+ ##########################################################################
+@@ -44,6 +50,10 @@
+ libglfw.a: $(OBJS)
+ 	$(MKLIB) $(LIBFLAGS) $@ $(OBJS)
+ 
++$(SONAME): $(OBJS)
++	$(MKLIB_SO) $(LIBFLAGS_SO) -Wl,$(SONAMEVERSION) -lGLU \
++	-lGL -lX11 -lXxf86vm -lXext -o $(SONAME)
++
+ 
+ ##########################################################################
+ # Rules for building library object files
+diff -Nur glfw-2.5-orig/lib/x11/x11_time.c glfw-2.5/lib/x11/x11_time.c
+--- glfw-2.5-orig/lib/x11/x11_time.c	2005-01-01 18:49:56.000000000 +0100
++++ glfw-2.5/lib/x11/x11_time.c	2005-09-28 09:09:38.251123512 +0200
+@@ -71,10 +71,12 @@
+ #endif // __i386
+ 
+ // Should we use inline x86 assembler?
++/* Disable for shared build */
++/*
+ #if defined(__i386) && defined(__GNUC__)
+ #define _USE_X86_ASM
+ #endif
+-
++*/
+ 
+ 
+ //************************************************************************
