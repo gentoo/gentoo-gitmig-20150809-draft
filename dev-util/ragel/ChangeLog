@@ -1,0 +1,9 @@
+# ChangeLog for dev-util/ragel
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.1 2007/02/07 12:49:40 twp Exp $
+
+*ragel-5.17 (07 Feb 2007)
+
+  07 Feb 2007; <twp@gentoo.org> +metadata.xml, +ragel-5.17.ebuild:
+  Initial commit.
+
