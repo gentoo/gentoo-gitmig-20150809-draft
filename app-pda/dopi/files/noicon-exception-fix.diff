@@ -1,0 +1,16 @@
+--- dopi-old/src/DopiWindow.cs	2007-02-05 23:53:15.000000000 +0100
++++ dopi/src/DopiWindow.cs	2007-02-06 23:33:42.000000000 +0100
+@@ -54,7 +54,12 @@ namespace Dopi {
+ 
+             tips = new Tooltips ();
+ 
+-            Gdk.Pixbuf pixbuf = IconTheme.Default.LoadIcon ("gnome-dev-ipod", 24, 0);
++            Gdk.Pixbuf pixbuf = null;
++            try {
++                pixbuf = IconTheme.Default.LoadIcon ("gnome-dev-ipod", 24, 0);
++            } catch (GLib.GException e) {
++            }
++
+             if (pixbuf != null) {
+                 this.Icon = pixbuf;
+             }

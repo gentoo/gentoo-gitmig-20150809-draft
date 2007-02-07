@@ -1,6 +1,15 @@
 # ChangeLog for app-pda/dopi
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/dopi/ChangeLog,v 1.1 2006/04/20 07:51:58 latexer Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/dopi/ChangeLog,v 1.2 2007/02/07 00:34:39 jurek Exp $
+
+*dopi-0.3.4 (07 Feb 2007)
+
+  07 Feb 2007; Jurek Bartuszek <jurek@gentoo.org>
+  +files/noicon-exception-fix.diff, metadata.xml, +dopi-0.3.4.ebuild:
+  - Version bump (0.3.4). Credit goes to Dieter Verfaillie 
+  <dieterv@optionexplicit.be> for providing and maintaining the ebuild. Fixing
+  bug #158727
+  - Added Jurek Bartuszek <jurek@gentoo.org> to metadata.xml
 
 *dopi-0.3.2 (20 Apr 2006)
 
