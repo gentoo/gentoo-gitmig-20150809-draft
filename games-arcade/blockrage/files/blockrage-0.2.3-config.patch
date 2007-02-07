@@ -1,0 +1,10 @@
+--- configure.old	2007-02-07 00:30:26.000000000 +0100
++++ configure	2007-02-07 00:30:39.000000000 +0100
+@@ -75,7 +75,6 @@
+     --build=*) build_alias="$cfg_optarg";;
+     --host=*) if test ."$build_alias" != ."$cfg_optarg" ; then
+         printf "configure: cross-compiling not supported\n" >&2
+-	exit 1
+       fi;;
+     
+     --bindir=*) bindir="$cfg_optarg";;
