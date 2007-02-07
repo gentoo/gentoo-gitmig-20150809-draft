@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.118 2007/02/07 04:50:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.119 2007/02/07 10:28:21 armin76 Exp $
+
+  07 Feb 2007; Raúl Porcel <armin76@gentoo.org> file-4.19.ebuild:
+  x86 stable wrt bug 165717
 
 *file-4.19-r1 (07 Feb 2007)
 
