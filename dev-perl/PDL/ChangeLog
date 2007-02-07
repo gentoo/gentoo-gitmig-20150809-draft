@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PDL
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.60 2007/02/06 17:52:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.61 2007/02/07 14:13:46 jer Exp $
+
+  07 Feb 2007; Jeroen Roovers <jer@gentoo.org> PDL-2.4.3.ebuild:
+  Marked ~hppa (bug #165651).
 
 *PDL-2.4.3 (06 Feb 2007)
 
