@@ -1,14 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/gngeo-0.7.ebuild,v 1.3 2007/01/05 20:17:57 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/gngeo-0.7.ebuild,v 1.4 2007/02/07 13:51:06 nyhm Exp $
 
-WANT_AUTOCONF=latest
-WANT_AUTOMAKE=latest
 inherit eutils autotools games
 
 DESCRIPTION="A NeoGeo emulator"
 HOMEPAGE="http://m.peponas.free.fr/gngeo/"
-SRC_URI="http://download.berlios.de/gngeo/${P}.tar.gz"
+SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
