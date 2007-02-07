@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.79 2007/02/07 06:10:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.80 2007/02/07 13:54:37 jer Exp $
+
+  07 Feb 2007; Jeroen Roovers <jer@gentoo.org> use.local.desc:
+  ming to flash for mapserver in use.local.desc
 
   06 Feb 2007; Renat Lumpau <rl03@gentoo.org> package.mask:
   Mask bleeding edge version of www-apps/bugzilla
