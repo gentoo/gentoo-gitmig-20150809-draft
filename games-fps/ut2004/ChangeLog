@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2004
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.59 2006/12/06 19:52:03 wolf31o2 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.60 2007/02/07 12:06:16 wolf31o2 Exp $
+
+  07 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> ut2004-3369-r4.ebuild:
+  Fixed an error with sed and error check it in the ebuild and converted einfo
+  to elog where appropriate.
 
   06 Dec 2006; Chris Gianelloni <wolf31o2@gentoo.org> files/ut2004.xml,
   ut2004-3369-r4.ebuild:

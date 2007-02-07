@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r4.ebuild,v 1.14 2006/12/06 19:52:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r4.ebuild,v 1.15 2007/02/07 12:06:16 wolf31o2 Exp $
 
 # To use system libraries, uncomment the following line and comment the one
 # below it.
@@ -76,8 +76,8 @@ src_install() {
 		"${Ddir}"/System/ut2004-bin-linux-amd64
 
 	# Creating .manifest files
-	sed -e "s/GAMES_PREFIX_OPT/${GAMES_PREFIX_OPT}/" "${FILESDIR}"/${PN}.xml > \
-		${T}/${PN}.xml
+	sed -e "s:GAMES_PREFIX_OPT:${GAMES_PREFIX_OPT}:" "${FILESDIR}"/${PN}.xml > \
+		${T}/${PN}.xml || die "sed failed"
 	insinto "${dir}"/.manifest
 	doins "${T}"/${PN}.xml
 
@@ -105,25 +105,25 @@ pkg_postinst() {
 		ewarn "That way you can [re]enter your cdkey."
 	fi
 	echo
-	einfo "Starting with 3369, the game supports render-to-texture.  To enable"
-	einfo "it, you will need the Nvidia drivers of at least version 7676 and"
-	einfo "you should edit the following:"
-	einfo 'Set "UseRenderTargets=True" in the "[OpenGLDrv.OpenGLRenderDevice]"'
-	einfo 'section of your UT2004.ini/Default.ini and set "bPlayerShadows=True"'
-	einfo 'and "bBlobShadow=False" in the "[UnrealGame.UnrealPawn]" section of'
-	einfo 'your User.ini/DefUser.ini'
+	elog "Starting with 3369, the game supports render-to-texture.  To enable"
+	elog "it, you will need the Nvidia drivers of at least version 7676 and"
+	elog "you should edit the following:"
+	elog 'Set "UseRenderTargets=True" in the "[OpenGLDrv.OpenGLRenderDevice]"'
+	elog 'section of your UT2004.ini/Default.ini and set "bPlayerShadows=True"'
+	elog 'and "bBlobShadow=False" in the "[UnrealGame.UnrealPawn]" section of'
+	elog 'your User.ini/DefUser.ini'
 	echo
 	if use x86
 	then
-		einfo "The 32-bit version of UT2004 uses Pixomatic, which means it"
-		einfo "really does need an executable stack.  It is safe to ignore any"
-		einfo "warnings from portage about this.  See:"
-		einfo "http://bugs.gentoo.org/show_bug.cgi?id=114733"
-		einfo "for more information."
+		elog "The 32-bit version of UT2004 uses Pixomatic, which means it"
+		elog "really does need an executable stack.  It is safe to ignore any"
+		elog "warnings from portage about this.  See:"
+		elog "http://bugs.gentoo.org/show_bug.cgi?id=114733"
+		elog "for more information."
+		echo
 	fi
-	echo
-	einfo "To play the game run:"
-	einfo " ut2004"
+	elog "To play the game run:"
+	elog " ut2004"
 	echo
 }
 
