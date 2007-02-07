@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/perlpanel
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/perlpanel/ChangeLog,v 1.18 2006/11/13 14:37:46 flameeyes Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/perlpanel/ChangeLog,v 1.19 2007/02/07 17:23:27 mcummings Exp $
+
+  07 Feb 2007; Michael Cummings <mcummings@gentoo.org>
+  perlpanel-0.9.1-r2.ebuild:
+  Dep for Audio-Mixer added, thanks to Georg over at arch ;)
 
   13 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   perlpanel-0.9.1-r1.ebuild, perlpanel-0.9.1-r2.ebuild:
