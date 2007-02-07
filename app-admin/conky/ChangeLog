@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.44 2007/01/31 05:12:14 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.45 2007/02/07 18:55:57 blubb Exp $
+
+  07 Feb 2007; Simon Stelling <blubb@gentoo.org> conky-1.4.5.ebuild:
+  stable on amd64; bug 158886
 
   31 Jan 2007; Joseph Jezak <josejx@gentoo.org> conky-1.4.5.ebuild:
   Marked ppc stable for bug #158886.
