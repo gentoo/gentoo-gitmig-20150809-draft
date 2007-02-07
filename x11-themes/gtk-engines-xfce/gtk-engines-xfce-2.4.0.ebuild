@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/gtk-engines-xfce-2.4.0.ebuild,v 1.2 2007/01/28 12:45:34 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/gtk-engines-xfce-2.4.0.ebuild,v 1.3 2007/02/07 16:38:47 drac Exp $
 
 MY_P="gtk-xfce-engine-${PV}"
 S="${WORKDIR}/${MY_P}"
@@ -17,7 +17,8 @@ RDEPEND=">=x11-libs/gtk+-2.6
 	x11-libs/cairo
 	x11-libs/pango"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	!<x11-themes/gtk-engines-xfce-2.4"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
