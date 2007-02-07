@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Astro-FITS-Header
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Astro-FITS-Header/ChangeLog,v 1.2 2007/02/06 17:43:58 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Astro-FITS-Header/ChangeLog,v 1.3 2007/02/07 06:24:58 jer Exp $
+
+  07 Feb 2007; Jeroen Roovers <jer@gentoo.org> Astro-FITS-Header-3.0.ebuild:
+  Marked ~hppa (bug #165651).
 
   06 Feb 2007; Michael Cummings <mcummings@gentoo.org>
   Astro-FITS-Header-3.0.ebuild:
