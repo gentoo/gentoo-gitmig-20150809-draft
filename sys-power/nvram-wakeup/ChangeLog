@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/nvram-wakeup
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nvram-wakeup/ChangeLog,v 1.3 2005/12/13 23:14:19 zzam Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nvram-wakeup/ChangeLog,v 1.4 2007/02/07 04:25:16 vapier Exp $
+
+*nvram-wakeup-0.97_p863 (07 Feb 2007)
+
+  07 Feb 2007; Mike Frysinger <vapier@gentoo.org>
+  +nvram-wakeup-0.97_p863.ebuild:
+  Add new ebuild to fetch updated motherboard definitions from upstream svn
+  #165567 by Sebastian.
 
   13 Dec 2005; Matthias Schwarzott <zzam@gentoo.org>
   nvram-wakeup-0.97-r1.ebuild:
