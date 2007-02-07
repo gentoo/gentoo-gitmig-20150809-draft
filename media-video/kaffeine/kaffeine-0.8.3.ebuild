@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.3.ebuild,v 1.1 2006/11/30 10:27:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.3.ebuild,v 1.2 2007/02/07 03:05:34 flameeyes Exp $
 
 inherit eutils kde flag-o-matic
 
@@ -33,7 +33,7 @@ src_compile() {
 	# see bug #143168
 	replace-flags -O3 -O2
 
-	myconf="${myconf}
+	local myconf="${myconf}
 		$(use_with xinerama)
 		$(use_with dvb)
 		$(use_with gstreamer)
