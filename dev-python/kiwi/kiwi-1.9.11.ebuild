@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/kiwi-1.9.11.ebuild,v 1.3 2007/02/07 22:25:09 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/kiwi-1.9.11.ebuild,v 1.4 2007/02/07 22:30:17 pythonhead Exp $
 
 inherit distutils versionator
 
@@ -18,5 +18,6 @@ DEPEND=">=dev-lang/python-2.3.5
 
 src_unpack() {
 	unpack ${A}
-	sed -i "s:share/doc/kiwi:share/doc/${PF}:g" ${S}/setup.py || die
+	sed -i "s:share/doc/kiwi:share/doc/${PF}:g" ${S}/setup.py || die "sed
+	failed"
 }
