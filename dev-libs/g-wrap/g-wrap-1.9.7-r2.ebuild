@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.9.7-r2.ebuild,v 1.2 2007/02/02 20:24:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.9.7-r2.ebuild,v 1.3 2007/02/07 10:54:49 hkbst Exp $
 
 inherit eutils autotools
 
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
 
-DEPEND="=dev-scheme/guile-1.6*
+DEPEND="dev-scheme/guile
 	=dev-libs/glib-2*"
 # seems not to work. g-wrap builds its own libffi-4.0.1
 # dev-libs/libffi
@@ -21,6 +21,9 @@ DEPEND="=dev-scheme/guile-1.6*
 RDEPEND="${DEPEND}"
 
 src_unpack() {
+	if has_version =guile-1.8*; then
+		built_with_use dev-scheme/guile deprecated || die "guile must be built with deprecated use flag"
+	fi
 	unpack ${A}
 	cd "${S}"
 	epatch ${FILESDIR}/${P}_glib_automagic.patch
