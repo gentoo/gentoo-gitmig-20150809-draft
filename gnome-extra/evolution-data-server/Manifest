@@ -31,6 +31,7 @@ RMD160 d86bf9a9ed25615bcb3dab23977ac01c341a799c files/evolution-data-server-no_l
 SHA256 772bdd99f3936d377cd0ce59c4f03789d227b79c4a2ca2d5e7e3165c378c6403 files/evolution-data-server-no_lazy_bindings.patch 551
 DIST evolution-data-server-1.6.2.tar.bz2 7179353 RMD160 59af916ab4a9fabc14c65c16189188f829459985 SHA1 b9bcea4fbcdd0a39cb23e7cd1bc53a59c474a74d SHA256 3b02b940aaa90034609b9401d3da586e5439363ade9bf8d7fc562acacd28bfde
 DIST evolution-data-server-1.8.2.tar.bz2 6963774 RMD160 b3ae6d2dafa0abbbaf5ffe2fbdc39b6b20fe762d SHA1 7b6ba62d96b6c54e762be4ddf1c476ebf8201dc1 SHA256 63a765c237504ed34344f7ef505c495d9a40c6022b7d69ca6ded32016508fecd
+DIST evolution-data-server-1.8.3.tar.bz2 7024111 RMD160 8051f35a0db514f919bf730cd35c37ea75029061 SHA1 f822fe520d778d0cd8efe8d6a767a5c0b483e798 SHA256 cbc067d87722afef84e8c4914787d990015e0c69b3bf3576fc15c8193ffd2fcc
 EBUILD evolution-data-server-1.6.2.ebuild 2706 RMD160 211d5019853b66abbe33c9946a2e9f8e03fb306a SHA1 36a19989ac93ee07fef25c058af82221a6f3e204 SHA256 2a113f8725e2d9cc2c232ed480ff7a80802edce463871000f1dd7435d78a7d78
 MD5 4f8fcace4cd514a092c08e3b5a1e5162 evolution-data-server-1.6.2.ebuild 2706
 RMD160 211d5019853b66abbe33c9946a2e9f8e03fb306a evolution-data-server-1.6.2.ebuild 2706
@@ -39,10 +40,14 @@ EBUILD evolution-data-server-1.8.2.ebuild 4451 RMD160 01d7b589b6acdd2e542e3915da
 MD5 be83ac24b8e2a92a92be39fc751c8a47 evolution-data-server-1.8.2.ebuild 4451
 RMD160 01d7b589b6acdd2e542e3915da884ce1c25051a7 evolution-data-server-1.8.2.ebuild 4451
 SHA256 4a96402ba329fa2c2c2e451ed21b52e96865c9ca05ed7f7e4fe3ffca1d1671b7 evolution-data-server-1.8.2.ebuild 4451
-MISC ChangeLog 16065 RMD160 d423907e328cff7701e2cacf8ac45eedb70669eb SHA1 0128470705b6576faafe946f4a525c7c0e6f7169 SHA256 3516575792448e3151ae1ed917b408eeae6e96bf060ccd580501aaaffb21a315
-MD5 456ad6771d57a2d077a7780fcb05328c ChangeLog 16065
-RMD160 d423907e328cff7701e2cacf8ac45eedb70669eb ChangeLog 16065
-SHA256 3516575792448e3151ae1ed917b408eeae6e96bf060ccd580501aaaffb21a315 ChangeLog 16065
+EBUILD evolution-data-server-1.8.3.ebuild 4456 RMD160 739ab21a5ee61efccd182835315f7cc0b076caf7 SHA1 46e9e396087b2a5166b50e7cde1fb3190314ba1a SHA256 90a7626fd78d05c351857c3c47b924380b91fa70412956eedce6b4f7b14c97d2
+MD5 bab7c9bf45e596156ca9873fa460ed11 evolution-data-server-1.8.3.ebuild 4456
+RMD160 739ab21a5ee61efccd182835315f7cc0b076caf7 evolution-data-server-1.8.3.ebuild 4456
+SHA256 90a7626fd78d05c351857c3c47b924380b91fa70412956eedce6b4f7b14c97d2 evolution-data-server-1.8.3.ebuild 4456
+MISC ChangeLog 16232 RMD160 69cde6d1596a6a23f524242bf592dbc97b61f895 SHA1 9966ae60433d28c767c1fb118024d78c4a7185e5 SHA256 e0fcd03cd422598d96aaf8ab9a5de098ee2dfcb2800199a99820f7e4a99f9a8f
+MD5 d5e7b61073642d425a2a13dc0d1beae4 ChangeLog 16232
+RMD160 69cde6d1596a6a23f524242bf592dbc97b61f895 ChangeLog 16232
+SHA256 e0fcd03cd422598d96aaf8ab9a5de098ee2dfcb2800199a99820f7e4a99f9a8f ChangeLog 16232
 MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
@@ -53,10 +58,13 @@ SHA256 c474de3fb11f9641e62deea95bc409b7d208389cf6deca8c15c08a39a0c70d14 files/di
 MD5 74393fb4db3fbf45310fa2141a7dc047 files/digest-evolution-data-server-1.8.2 289
 RMD160 bb30bba0b9040f1814f971dcb2f92d509a82759c files/digest-evolution-data-server-1.8.2 289
 SHA256 0385bd5f744f65836836983a6ffa381ce6e536914986f9ab3c5dbf4ee1b058bd files/digest-evolution-data-server-1.8.2 289
+MD5 159e4efbb6f5fe2e3973464851a6015b files/digest-evolution-data-server-1.8.3 289
+RMD160 9311383fcc0546bb79ba3632bf984e3bb2783652 files/digest-evolution-data-server-1.8.3 289
+SHA256 00dcc94a5030febdfc278394de4449c744c57e0fa812818a260fa807276ecca8 files/digest-evolution-data-server-1.8.3 289
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.1 (GNU/Linux)
+Version: GnuPG v1.4.6 (GNU/Linux)
 
-iD8DBQFFvFNn8bi6rjpTunYRAvk0AJkBiXNB2KWdWB6zLv8IUz3UVd97wgCfSyAe
-IzYM7UziSnaJei0nU/rzAGo=
-=Wptk
+iD8DBQFFyqC9keYb6olFHJcRAu0dAKDCA+j3HlevKpwxXcshQeBqgpiF1wCfZm/Y
+v2okcugACfB1C4gGWGxL9HI=
+=80SJ
 -----END PGP SIGNATURE-----
