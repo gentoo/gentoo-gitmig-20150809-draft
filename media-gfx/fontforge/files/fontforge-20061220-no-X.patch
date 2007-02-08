@@ -1,0 +1,16 @@
+Fix from upstream
+
+http://bugs.gentoo.org/159007
+
+--- configure
++++ configure
+@@ -22716,9 +22716,6 @@
+ X_11LIB=-lX11
+ if test "$no_x" = "yes"; then
+  X_11LIB=
+- cat >>confdefs.h <<\_ACEOF
+-#define FONTFORGE_CONFIG_NO_WINDOWING_UI 1
+-_ACEOF
+ 
+ else
+ 

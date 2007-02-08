@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20061220.ebuild,v 1.3 2007/02/07 04:57:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20061220.ebuild,v 1.4 2007/02/08 04:36:23 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -26,6 +26,7 @@ DEPEND="png? ( >=media-libs/libpng-1.2.4 )
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-no-X.patch #159007
 	sed -i -e 's:ungif:gif:g' configure* || die
 	sed -i -e 's:"libungif":"libgif":g' gdraw/gimagereadgif.c || die
 }
