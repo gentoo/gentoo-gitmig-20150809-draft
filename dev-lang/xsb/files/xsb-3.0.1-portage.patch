@@ -1,5 +1,51 @@
+--- XSB.orig/build/emuMakefile.in	2006-06-25 13:09:42.000000000 +1200
++++ XSB/build/emuMakefile.in	2007-02-08 20:57:51.000000000 +1300
+@@ -42,6 +42,7 @@
+ LDFLAGS=@LDFLAGS@
+ ODBCSRC=@ODBCSRC@
+ ODBCOBJ=@ODBCOBJ@
++ODBC_CFLAGS=@ODBC_CFLAGS@
+ INTERPROLOGSRC=@INTERPROLOGSRC@
+ INTERPROLOGOBJ=@INTERPROLOGOBJ@
+ DLLTYPE=@DLLTYPE@
+@@ -239,26 +240,31 @@
+ 	@cp dynload.o $(arch_config_objlibdir) 2> /dev/null || echo ""
+ 
+ emuloop.o: emuloop.c
+-	@echo -e "\t[$(CC)] emuloop.c using $(emuloopCFLAGS)"
++	@echo -e "\t[$(CC)] emuloop.c"
+ 	@$(CC) -I$(arch_config_prefix)  -c $(emuloopCFLAGS) emuloop.c
+ 	@cp emuloop.o $(arch_config_objlibdir) 2> /dev/null || echo ""
+ 
+ # Higher optimization level has problem with some versions of gcc
+ tr_utils.o: tr_utils.c
+-	@echo -e "\t[$(CC)] tr_utils.c using $(trutilsCFLAGS)"
++	@echo -e "\t[$(CC)] tr_utils.c"
+ 	@$(CC) -I$(arch_config_prefix)  -c $(trutilsCFLAGS) tr_utils.c
+ 	@cp tr_utils.o $(arch_config_objlibdir) 2> /dev/null || echo ""
+ 
+ builtin.o: builtin.c
+-	@echo -e "\t[$(CC)] builtin.c using $(builtinsCFLAGS)"
++	@echo -e "\t[$(CC)] builtin.c"
+ 	@$(CC) -I$(arch_config_prefix)  -c $(builtinsCFLAGS) builtin.c
+ 	@cp builtin.o $(arch_config_objlibdir) 2> /dev/null || echo ""
+ 
+ loader_xsb.o: loader_xsb.c
+-	@echo -e "\t[$(CC)] loader_xsb.c using $(loaderCFLAGS)"
++	@echo -e "\t[$(CC)] loader_xsb.c"
+ 	@$(CC) -I$(arch_config_prefix)  -c $(loaderCFLAGS) loader_xsb.c
+ 	@cp loader_xsb.o $(arch_config_objlibdir) 2> /dev/null || echo ""
+ 
++odbc_xsb.o: odbc_xsb.c
++	@echo -e "\t[$(CC)] odbc_xsb.c"
++	@$(CC) -I$(arch_config_prefix)  -c $(ODBC_CFLAGS) $(CFLAGS) odbc_xsb.c
++	@cp odbc_xsb.o $(arch_config_objlibdir) 2> /dev/null || echo ""
++
+ .c.o:
+ 	@echo -e "\t[$(CC)] $*.c"
+ 	@$(CC) -I$(arch_config_prefix)  -c $(CFLAGS) $*.c
 --- XSB.orig/build/topMakefile.in	2006-06-25 13:09:42.000000000 +1200
-+++ XSB/build/topMakefile.in	2007-02-03 10:14:38.000000000 +1300
++++ XSB/build/topMakefile.in	2007-02-03 14:02:29.000000000 +1300
 @@ -72,7 +72,7 @@
  # Everything is placed in subdirectories of this directory.
  # The values for many of the variables below are expressed
@@ -95,7 +141,19 @@
  	@echo -n "Directory: ${install_bindir}..."
  	  @(test -d "${install_bindir}" || \
  		mkdir -p "${install_bindir}" ) && \
-@@ -357,10 +345,6 @@
+@@ -331,11 +319,6 @@
+ 		mkdir -p "${install_pkgxmcdir}" ) && \
+ 		  echo "ok" || \
+ 		(echo "FAILED"; echo "+++Can't create ${install_pkgxmcdir}" >> .missingdirs.tmp)
+-	@echo -n "Directory: ${install_examples}..."
+-	  @(test -d "${install_examples}" || \
+-		mkdir -p "${install_examples}" ) && \
+-		  echo "ok" || \
+-		(echo "FAILED"; echo "+++Can't create ${install_examples}" >> .missingdirs.tmp)
+ 	@echo -n "Directory: ${install_prolog_includes}..."
+ 	  @(test -d "${install_prolog_includes}" || \
+ 		mkdir -p "${install_prolog_includes}" ) && \
+@@ -357,10 +340,6 @@
  		cp -f ${src_scriptdir}/xsb${config_tag} \
  				${install_scriptdir}/xsb${config_tag}; \
  		chmod 755 ${install_scriptdir}/* ${install_bindir}/* ; \
@@ -106,7 +164,7 @@
  		echo "Copying config..." ; \
  		cp -f ${src_config_libdir}/xsb_configuration.* \
  			  ${install_config_libdir} ; \
-@@ -396,11 +380,6 @@
+@@ -396,11 +375,6 @@
  		cp -f ${src_cmplibdir}/*$(xsb_obj_extension) ${install_cmplibdir} ; \
  		chmod 644 ${install_cmplibdir}/*$(xsb_obj_extension) ; \
  		./copysubdirs.sh ${src_cmplibdir} ${install_cmplibdir} ; \
@@ -118,12 +176,14 @@
  		echo "Copying etc..."; \
  		cp -fr ${src_etcdir}/* ${install_etcdir}; \
  		echo "Copying examples..."; \
-@@ -416,7 +395,7 @@
+@@ -416,8 +390,8 @@
  	@./pkg_config.sh $(install_scriptdir)/xsb$(config_tag) ; \
  	  chmod 644  $(install_config_libdir)/xsb_configuration$(xsb_obj_extension)
  
 -remake_dot_O_files:
+-	@cd $(srcdir); make XSB=$(src_scriptdir)/xsb$(config_tag)
 +remake_dot_O_files: gpp
- 	@cd $(srcdir); make XSB=$(src_scriptdir)/xsb$(config_tag)
++	@cd $(srcdir); $(MAKE) XSB=$(src_scriptdir)/xsb$(config_tag)
  
  remake_dot_O_files_force:
+ 	@cd $(srcdir); make force XSB=$(src_scriptdir)/xsb$(config_tag)
