@@ -1,5 +1,5 @@
---- kernelcookies.orig	2004-09-22 21:36:28.000000000 -0700
-+++ kernelcookies	2004-09-22 21:36:40.000000000 -0700
+--- kernelcookies
++++ kernelcookies
 @@ -1,42 +1,3 @@
 -/* Only Sun can take such nice parts and fuck up the programming interface
 - * like this.  Good job guys...
@@ -117,4 +117,24 @@
 -%
  panic ("No CPUs found.  System halted.\n");
          linux-2.4.3/arch/parisc/kernel/setup.c
+ %
+@@ -492,19 +414,6 @@
+ printk("CPU[%d]: Giving pardon to imprisoned penguins\n", smp_processor_id());
+         linux-2.4.8/arch/sparc64/kernel/smp.c
+ %
+-/* Welcome to Sun Microsystems, can I take your order please? */
+-/* Would you like fries with that? */
+-/* Anything else? */
+-/* Fifty-two cents is your change, have a nice day. */
+-/* Would you like to try our SMCC Delux? */
+-/* We have a special on GNU/Viking hardware bugs today. */
+-/* Will that be all? */
+-/* Don't forget your vik_1137125_wa.  Have a nice day. */
+-/* We're consolidating our STB products, it's your lucky day. */
+-/* Come back next week when we are "Sun Microelectronics". */
+-/* Remember: "Different name, same old buggy as shit hardware." */
+-	linux-2.6.6/drivers/net/sunhme.c
+-%
+ printk (KERN_INFO "NM256: Congratulations. You're not running Eunice.\n");
+ 	linux-2.6.19/sound/oss/nm256_audio.c
  %

@@ -1,6 +1,12 @@
 # ChangeLog for games-misc/fortune-mod-kernelcookies
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-kernelcookies/ChangeLog,v 1.8 2006/07/19 19:53:08 flameeyes Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-kernelcookies/ChangeLog,v 1.9 2007/02/08 10:36:19 nyhm Exp $
+
+*fortune-mod-kernelcookies-9 (08 Feb 2007)
+
+  08 Feb 2007; Tristan Heaven <nyhm@gentoo.org> +files/9-offensive.patch,
+  +fortune-mod-kernelcookies-9.ebuild:
+  Version bump, bug #165695
 
   19 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   fortune-mod-kernelcookies-8.ebuild:
