@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-slackware/fortune-mod-slackware-1.13.ebuild,v 1.1 2006/07/31 05:02:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-slackware/fortune-mod-slackware-1.13.ebuild,v 1.2 2007/02/08 08:01:59 nyhm Exp $
 
 # this ebuild now uses the offensive flag since AOLS
 # is not exactly 'G' rated :)

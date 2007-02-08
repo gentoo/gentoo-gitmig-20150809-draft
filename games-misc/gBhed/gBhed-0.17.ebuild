@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/gBhed/gBhed-0.17.ebuild,v 1.1 2006/10/12 00:03:14 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/gBhed/gBhed-0.17.ebuild,v 1.2 2007/02/08 08:07:36 nyhm Exp $
 
 inherit eutils games
 
@@ -13,14 +13,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gtk"
 
-DEPEND="gtk? (
-	>=x11-libs/gtk+-2.2
-	>=dev-libs/glib-2.2 )"
+DEPEND="gtk? ( >=x11-libs/gtk+-2.2 )"
 
 src_compile() {
 	egamesconf \
-		--datadir="${GAMES_DATADIR}/${PN}" \
-		$(use_enable gtk gbhed) || die
+		--datadir="${GAMES_DATADIR}"/${PN} \
+		$(use_enable gtk gbhed) \
+		|| die
 	emake || die "emake failed"
 }
 

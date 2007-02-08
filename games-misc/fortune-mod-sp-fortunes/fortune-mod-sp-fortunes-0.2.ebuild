@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-sp-fortunes/fortune-mod-sp-fortunes-0.2.ebuild,v 1.3 2006/07/19 19:59:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-sp-fortunes/fortune-mod-sp-fortunes-0.2.ebuild,v 1.4 2007/02/08 08:03:59 nyhm Exp $
 
 MY_P=${P/fortune-mod-sp-fortunes/SP}
 MY_PN=${PN/fortune-mod-sp-fortunes/SP}
