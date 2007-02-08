@@ -1,21 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-DIST slack-fortunes-all-1.10.tgz 81920
-DIST slack-fortunes-all-1.12.tgz 92160 RMD160 2c3886212aa52d2a4ab2d31f7b4939bc9b773561 SHA1 cd780371e5c83bac75a24cb9a34b0c374da1f129 SHA256 227879572442adad573a8a8bacc3b6fb7380e149ebbf28ba40fb0d1179da4800
 DIST slack-fortunes-all-1.13.tgz 102400 RMD160 1ed0b105f2dd59e0bffad061142c7c605895dad5 SHA1 43c95994dddb0bd8824612b82ab843578d74e1e3 SHA256 1b347883e8798fd5e2e507c21e89be099571525dd4db9a4440b3a2a90423d2aa
-EBUILD fortune-mod-slackware-1.10.ebuild 750 RMD160 f1defb4c72f717177e9649c27d5474dbee54c397 SHA1 4c0e7b9f243b2c7004ece2c83973c4b602f13eef SHA256 fe149cf81389e1dac04a20d9301a4db61c5b40d976c6c689a88bd043f89413f9
-MD5 4fae43d447a82882195083a2cf878ce3 fortune-mod-slackware-1.10.ebuild 750
-RMD160 f1defb4c72f717177e9649c27d5474dbee54c397 fortune-mod-slackware-1.10.ebuild 750
-SHA256 fe149cf81389e1dac04a20d9301a4db61c5b40d976c6c689a88bd043f89413f9 fortune-mod-slackware-1.10.ebuild 750
-EBUILD fortune-mod-slackware-1.12.ebuild 1086 RMD160 33d6a9bcbe09ef2e91c7940c0c736e39f47898ba SHA1 3c9140ffac181a794899ad9fa8411206169a9b5d SHA256 34fae6be717641d9abcc701ecf4958660b385fb1669fc6a84374e18f64483252
-MD5 eef2a9c607153a1071f4874ba51eee91 fortune-mod-slackware-1.12.ebuild 1086
-RMD160 33d6a9bcbe09ef2e91c7940c0c736e39f47898ba fortune-mod-slackware-1.12.ebuild 1086
-SHA256 34fae6be717641d9abcc701ecf4958660b385fb1669fc6a84374e18f64483252 fortune-mod-slackware-1.12.ebuild 1086
-EBUILD fortune-mod-slackware-1.13.ebuild 1181 RMD160 086a245abf2837038e4efe0730f00db4e6a7c539 SHA1 44b6179d8c3901f0b0312965511695e4c966304d SHA256 7ccc54c0f298874f8bdb731f259c514ef1624553506dc098f7aea58f1b9703d5
-MD5 f4f8af2350607e0d1eab11455d6822ab fortune-mod-slackware-1.13.ebuild 1181
-RMD160 086a245abf2837038e4efe0730f00db4e6a7c539 fortune-mod-slackware-1.13.ebuild 1181
-SHA256 7ccc54c0f298874f8bdb731f259c514ef1624553506dc098f7aea58f1b9703d5 fortune-mod-slackware-1.13.ebuild 1181
+EBUILD fortune-mod-slackware-1.13.ebuild 1179 RMD160 ed3df7ee412b01f229f8399191cbe3e09ac04232 SHA1 b87d7f9245b79c4baea6a018b85b0905f24e1da9 SHA256 4af88d2e4a2bfaa14485937dc4b4a71ea172b28e07558b9ae5fce051966a94a1
+MD5 633810c5bd603188e2b84669e2e1c7a8 fortune-mod-slackware-1.13.ebuild 1179
+RMD160 ed3df7ee412b01f229f8399191cbe3e09ac04232 fortune-mod-slackware-1.13.ebuild 1179
+SHA256 4af88d2e4a2bfaa14485937dc4b4a71ea172b28e07558b9ae5fce051966a94a1 fortune-mod-slackware-1.13.ebuild 1179
 MISC ChangeLog 909 RMD160 1700b4fd22dc3a46be3ba729b6476a56e3cbf521 SHA1 03e04a7e1d70a32c7c99e288208d6acbd516b4df SHA256 3264bb1f5e336b9796a3548ff8b39575913a69e5ec5840ea1b65212de8293a1e
 MD5 103628da2ff82b6c8ee05cf308798586 ChangeLog 909
 RMD160 1700b4fd22dc3a46be3ba729b6476a56e3cbf521 ChangeLog 909
@@ -24,19 +14,13 @@ MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be525
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
 SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
-MD5 6ca591bd3e84a114f5d7766e08cd28e4 files/digest-fortune-mod-slackware-1.10 71
-RMD160 7bbd1cbfd4cfcdd7294d7cb128ae2dddffe8e72a files/digest-fortune-mod-slackware-1.10 71
-SHA256 f2f3f51ce43ff7c045519ed3db2f3d40b15e9a5b0eebf7f4fc4d6e2537caad43 files/digest-fortune-mod-slackware-1.10 71
-MD5 41dff42b0970fd03aae31ca77ba20fa3 files/digest-fortune-mod-slackware-1.12 259
-RMD160 e516d1691bdb21d976831b45733b4ba1765ebc8e files/digest-fortune-mod-slackware-1.12 259
-SHA256 537df2cffe218e3847486344255819d9d5b288d192d10a1ebd9de64db2cd4244 files/digest-fortune-mod-slackware-1.12 259
 MD5 5b70ea1b7fbbeff1681ae82e968f4101 files/digest-fortune-mod-slackware-1.13 262
 RMD160 b8917bfdce1bcb7ff44bd6e91596ea32405a8d31 files/digest-fortune-mod-slackware-1.13 262
 SHA256 795ee244d6d6f17904857e59f08bfda4c33bfdf44622807bcb37652de96c135f files/digest-fortune-mod-slackware-1.13 262
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
+Version: GnuPG v2.0.2 (GNU/Linux)
 
-iD8DBQFEzY7uamhnQswr0vIRAvwhAJ412w8/fQ6l7cQPbOLQiGjPEzGH7ACeKk7w
-ZA1auaQZwZHxXIBidTuXkW8=
-=2L1l
+iD8DBQFFytj9dz7hIScOURERAi4XAJ9go29Pow10MRjjm5lE1X5Vilk70gCgma8W
+XYb4y/4hmNUypyaSnCkBwuY=
+=pE3/
 -----END PGP SIGNATURE-----

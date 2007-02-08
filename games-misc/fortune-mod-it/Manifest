@@ -1,16 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-DIST fortune-it-1.99.tar.gz 739886
-DIST fortune-mod-it-1.51.tar.gz 409124
-EBUILD fortune-mod-it-1.51.ebuild 862 RMD160 9a13add8b5f748d77dfac8e691df30dcf9fe1504 SHA1 dd70f5c225b74ccc8c5c20d98a6584648b9527b7 SHA256 aef90032713e3a753948a08655b6dae471f9d66e2ce8559fda69aac02a9cc8fc
-MD5 94cd5a68157514c9afc596f13bd1be00 fortune-mod-it-1.51.ebuild 862
-RMD160 9a13add8b5f748d77dfac8e691df30dcf9fe1504 fortune-mod-it-1.51.ebuild 862
-SHA256 aef90032713e3a753948a08655b6dae471f9d66e2ce8559fda69aac02a9cc8fc fortune-mod-it-1.51.ebuild 862
-EBUILD fortune-mod-it-1.99.ebuild 884 RMD160 f0d4e8f7362bb36621182f6298cbe816cf80df76 SHA1 ed6975aa363d86bc490f3e2a8f1155f3dfd6d75a SHA256 2b10630313597c379486c61d863fd0dad08df0536391e5b84f27b7c0cc62a0a0
-MD5 7ca9fa10e89c50e5ed014eade5079a7c fortune-mod-it-1.99.ebuild 884
-RMD160 f0d4e8f7362bb36621182f6298cbe816cf80df76 fortune-mod-it-1.99.ebuild 884
-SHA256 2b10630313597c379486c61d863fd0dad08df0536391e5b84f27b7c0cc62a0a0 fortune-mod-it-1.99.ebuild 884
+DIST fortune-it-1.99.tar.gz 739886 RMD160 2a800345910e40a8c65087a2d06f71451f80839e SHA1 ff19e081dfd61aef0c4165ec188349d1d45026fc SHA256 f282626904701671d814411665e42edcd3257df8b6f1244993cc014424fa7e6c
+EBUILD fortune-mod-it-1.99.ebuild 879 RMD160 506f0feb5faf7b7f52164797bcdcba639c82c1f4 SHA1 45340ab02ea14369314012d942e00573cb45fa45 SHA256 a07abe149a1542de5fe2d49b42c59300004fca70d957a5e2abbb4e95e9d7ed96
+MD5 b5c5890c17c165daf1cffcde59315169 fortune-mod-it-1.99.ebuild 879
+RMD160 506f0feb5faf7b7f52164797bcdcba639c82c1f4 fortune-mod-it-1.99.ebuild 879
+SHA256 a07abe149a1542de5fe2d49b42c59300004fca70d957a5e2abbb4e95e9d7ed96 fortune-mod-it-1.99.ebuild 879
 MISC ChangeLog 870 RMD160 e1e57cef46140f960633da023bfc2977d08637a5 SHA1 e54d0bae0c7dba6a577a2962dc78894261e315d4 SHA256 f7ccea46a449a970ed1e68edcb2f7c1ac47b61841ba0dfddd36ffefbe6c11c33
 MD5 2c028bfa46961676cd5ee8d2809731eb ChangeLog 870
 RMD160 e1e57cef46140f960633da023bfc2977d08637a5 ChangeLog 870
@@ -19,16 +14,13 @@ MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be525
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
 SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
-MD5 c1d4d8d790431e155c71391b0fa0ac1d files/digest-fortune-mod-it-1.51 71
-RMD160 49efcd6b2ba3cd39e73451bf5dc7f7e4471c291e files/digest-fortune-mod-it-1.51 71
-SHA256 d08a55c52941acc14d7b776707fa84aa9b4d364d12773899e6b673e3ab934c14 files/digest-fortune-mod-it-1.51 71
-MD5 3026a0d48d5b2e3f2b9b0169da93d838 files/digest-fortune-mod-it-1.99 67
-RMD160 14086f0d3e070d36f3d0e4386c4df990a3afcabe files/digest-fortune-mod-it-1.99 67
-SHA256 e6bc821dddd42ae21e8b9ec119d70f6e50c95a58eef30766eefc808eca2a0815 files/digest-fortune-mod-it-1.99 67
+MD5 42e64cbce6e4d12ef49e5b0dbee689d8 files/digest-fortune-mod-it-1.99 247
+RMD160 d006bfa57fdbad044620af7154ebde683ac354fd files/digest-fortune-mod-it-1.99 247
+SHA256 c7121e52bbbd9b682ca422e528525dd76d4dea73bcc6e20fefde269b0202a425 files/digest-fortune-mod-it-1.99 247
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
+Version: GnuPG v2.0.2 (GNU/Linux)
 
-iD8DBQFEvo2DAiZjviIA2XgRArg7AKCy9jILm3kkBlXbDTb+UUUpLPMy6gCfW4zu
-EhrFM/naqh+8SBQoZh5eNCM=
-=cR1x
+iD8DBQFFytY0dz7hIScOURERAhrVAJsEC/DvMBPMsSykwA15sOGNwi6m3gCgj7le
+92KLtJOryd2tE7p4JojZQmo=
+=mc4x
 -----END PGP SIGNATURE-----
