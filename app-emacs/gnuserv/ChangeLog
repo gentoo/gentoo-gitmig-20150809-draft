@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/gnuserv
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/ChangeLog,v 1.10 2005/10/24 14:29:28 josejx Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/ChangeLog,v 1.11 2007/02/08 14:10:43 opfer Exp $
+
+  08 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  -gnuserv-3.12.4.ebuild:
+  clean up
 
   24 Oct 2005; Joseph Jezak <josejx@gentoo.org> gnuserv-3.12.7.ebuild:
   Marked ~ppc.
