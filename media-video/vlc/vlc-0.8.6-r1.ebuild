@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6-r1.ebuild,v 1.7 2007/01/27 17:11:58 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6-r1.ebuild,v 1.8 2007/02/08 18:48:53 opfer Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
 
-inherit eutils wxwidgets multilib autotools toolchain-funcs gnome2 nsplugins
+inherit autotools eutils flag-o-matic gnome2 multilib nsplugins toolchain-funcs wxwidgets
 
 RESTRICT="confcache"
 
@@ -143,6 +143,7 @@ src_unpack() {
 src_compile () {
 	local XPIDL=""
 	local MOZILLA_CONFIG=""
+	replace-flags -O0 -O1
 
 	use vlm && \
 		myconf="${myconf} --enable-vlm --enable-sout" || \
