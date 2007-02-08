@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.18.1.ebuild,v 1.1 2007/02/08 18:13:08 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.18.1.ebuild,v 1.2 2007/02/08 19:22:32 ferdy Exp $
 
 inherit bash-completion eutils flag-o-matic
 
@@ -45,9 +45,6 @@ pkg_setup() {
 src_compile() {
 	local repositories=`echo default $(usev cran) | tr -s \  ,`
 	local clients=`echo default $(usev contrarius) $(usev inquisitio) | tr -s \  ,`
-
-	# Fix bug #165824
-	epatch ${FILESDIR}/${P}-do_config.patch
 
 	econf \
 		$(use_enable doc doxygen ) \

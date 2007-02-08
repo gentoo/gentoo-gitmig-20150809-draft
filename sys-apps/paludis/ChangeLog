@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.45 2007/02/07 21:28:32 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.46 2007/02/08 19:22:32 ferdy Exp $
+
+  08 Feb 2007; Fernando J. Pereda <ferdy@gentoo.org> paludis-0.18.1.ebuild:
+  New upstream version.
 
   07 Feb 2007; René Nussbaumer <killerfox@gentoo.org>
   +files/paludis-0.18.0-do_config.patch, paludis-0.18.0.ebuild:
