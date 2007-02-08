@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.2.1.ebuild,v 1.4 2006/10/01 13:43:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.2.1-r1.ebuild,v 1.1 2007/02/08 14:04:34 flameeyes Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic libtool
 
 DESCRIPTION="A high-quality and portable font engine"
 HOMEPAGE="http://www.freetype.org/"
@@ -29,16 +29,19 @@ RDEPEND="${DEPEND}
 src_unpack() {
 
 	unpack ${A}
+	cd "${S}"
 
 	# disable BCI when distributing binaries (patent issues)
 	use bindist || epatch "${FILESDIR}"/${PN}-2-enable_bci.patch
 
+	epatch "${FILESDIR}/${P}-foobillard.patch"
+
+	elibtoolize
 	epunt_cxx
 
 }
 
 src_compile() {
-
 	# https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=118021
 	append-flags "-fno-strict-aliasing"
 
@@ -46,11 +49,9 @@ src_compile() {
 	econf $(use_with zlib) || die
 
 	emake || die
-
 }
 
 src_install() {
-
 	make DESTDIR="${D}" install || die
 
 	dodoc ChangeLog README
@@ -58,5 +59,4 @@ src_install() {
 
 	cd "${WORKDIR}"/${PN}-doc-${PV}
 	use doc && dohtml -r docs/*
-
 }
