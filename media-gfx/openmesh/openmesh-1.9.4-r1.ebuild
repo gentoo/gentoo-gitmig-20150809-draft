@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/openmesh-1.9.4.ebuild,v 1.1 2006/12/14 21:19:35 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/openmesh-1.9.4-r1.ebuild,v 1.1 2007/02/08 15:02:57 dsd Exp $
 
 inherit eutils
 
@@ -17,24 +17,25 @@ KEYWORDS="~amd64 ~x86"
 IUSE="qt4 debug"
 
 RDEPEND="qt4? ( x11-libs/qt )"
-DEPEND="dev-util/acgmake
+DEPEND=">=dev-util/acgmake-1.2-r2
+	>=sys-apps/findutils-4.3.0
 	${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	if ! use qt4
-	then
-		sed -i "s:Apps::" ACGMakefile
-	fi
-
+	use qt4 || sed -i "s:Apps::" ACGMakefile
 	find . -name 'CVS' -type d -print0 | xargs -0 rm -rf
 }
 
 src_compile() {
-	use debug && myconf="-dbg"
-	acgmake ${myconf} || die
+	if use debug; then
+		export CXXDEFS="-UNDEBUG -DDEBUG"
+	else
+		export CXXDEFS="-DNDEBUG -UDEBUG"
+	fi
+	acgmake -env || die
 
 	# fix insecure runpaths
 	TMPDIR=${S} scanelf -BXRr ${S} -o /dev/null || die
@@ -55,6 +56,5 @@ src_install() {
 
 	cp -a Core ${D}/usr/include/${MY_PN}
 	cp -a Tools ${D}/usr/include/${MY_PN}
-
 }
 
