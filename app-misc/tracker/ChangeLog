@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.6 2007/01/27 20:07:40 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.7 2007/02/08 16:16:37 compnerd Exp $
+
+*tracker-0.5.4-r1 (08 Feb 2007)
+
+  08 Feb 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  +files/tracker-0.5.4-deskbar-encoding.patch,
+  +files/tracker-0.5.4-deskbar-handler.patch, +tracker-0.5.4-r1.ebuild:
+  Revbump to fix installed files, and tracker-handler encoding (bug #165881)
 
   27 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   tracker-0.5.4.ebuild:
