@@ -1,12 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/sml-mode/sml-mode-3.9.5.ebuild,v 1.9 2005/09/09 16:08:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/sml-mode/sml-mode-3.9.5.ebuild,v 1.10 2007/02/08 18:17:56 opfer Exp $
 
 inherit elisp
 
 DESCRIPTION="Emacs major mode for editing Standard ML"
-HOMEPAGE="ftp://ftp.research.bell-labs.com/dist/smlnj/contrib/emacs/"
-SRC_URI="ftp://ftp.research.bell-labs.com/dist/smlnj/contrib/emacs/${P}.tar.gz"
+HOMEPAGE="http://www.iro.umontreal.ca/~monnier/elisp/"
+SRC_URI="http://www.iro.umontreal.ca/~monnier/elisp/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ~ppc-macos x86"
@@ -16,7 +16,7 @@ SITEFILE=50sml-mode-gentoo.el
 
 src_unpack() {
 	unpack ${A}
-	cat ${FILESDIR}/${SITEFILE} ${S}/sml-mode-startup.el >${WORKDIR}/${SITEFILE}
+	cat "${FILESDIR}/${SITEFILE}" "${S}/sml-mode-startup.el" >"${WORKDIR}/${SITEFILE}"
 }
 
 src_compile() {
@@ -25,7 +25,7 @@ src_compile() {
 
 src_install() {
 	elisp-install ${PN} *.el *.elc
-	elisp-site-file-install ${WORKDIR}/${SITEFILE}
+	elisp-site-file-install "${WORKDIR}/${SITEFILE}"
 	doinfo *.info*
 	dodoc BUGS ChangeLog NEWS README TODO INSTALL
 }

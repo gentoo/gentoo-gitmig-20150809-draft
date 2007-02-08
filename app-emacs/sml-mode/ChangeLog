@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/sml-mode
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/sml-mode/ChangeLog,v 1.7 2005/09/09 16:08:02 agriffis Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/sml-mode/ChangeLog,v 1.8 2007/02/08 18:17:56 opfer Exp $
+
+  08 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  sml-mode-3.9.5.ebuild:
+  SRC_URI and HOMEPAGE updated for proper Manifest generation; added some quotes
 
   09 Sep 2005; Aron Griffis <agriffis@gentoo.org> sml-mode-3.9.5.ebuild:
   Mark 3.9.5 stable on alpha
