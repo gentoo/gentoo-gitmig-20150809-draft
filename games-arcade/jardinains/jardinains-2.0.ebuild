@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jardinains/jardinains-2.0.ebuild,v 1.1 2007/02/02 15:18:50 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jardinains/jardinains-2.0.ebuild,v 1.2 2007/02/08 10:10:35 nyhm Exp $
 
 inherit eutils games
 
@@ -47,6 +47,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	games_pkg_postinst
 	einfo "Due to the way this software is designed all user preferences for"
 	einfo "graphics, audio and other in game data are shared among all users"
 	einfo "of the computer. For that reason some files in the instalation   "
