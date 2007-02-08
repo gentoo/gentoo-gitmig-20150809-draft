@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX dnsmasq-2.37-bsd.patch 700 RMD160 934efadd8577b0a4dd563d47341956caeddf8880 SHA1 302eee779c4ca4f2d4991974762fdc16879cf331 SHA256 d1056ea33acc13e1a91241bd90775077373e3d5f7da1be85b5e6f4299fca74c3
 MD5 0608dc28d0773300dfa9e249001ca31d files/dnsmasq-2.37-bsd.patch 700
 RMD160 934efadd8577b0a4dd563d47341956caeddf8880 files/dnsmasq-2.37-bsd.patch 700
@@ -50,3 +53,10 @@ SHA256 b7556692de6def5af09946319cfd19d19de3348a1223875671b0bfeeacfe76ef files/di
 MD5 6468b1c429c009ae5bb12d3e7c777ce4 files/digest-dnsmasq-2.37 238
 RMD160 59228649e3326e4cf8d28f69369783404a95a5eb files/digest-dnsmasq-2.37 238
 SHA256 6a1404d284f7bd5194d9ede205e2ffbcead86525451aeaa02a6ad0bbd0108ea5 files/digest-dnsmasq-2.37 238
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.2 (GNU/Linux)
+
+iD8DBQFFy0GuWt/XSf2CZdkRAqZ2AJ9bMEYGreA10oqKfvrqWZjG9/4sCwCggdlX
+JH9sq1mY+NQfw+RVjxvywfg=
+=dx/D
+-----END PGP SIGNATURE-----
