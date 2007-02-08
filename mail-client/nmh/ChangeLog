@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/nmh
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/ChangeLog,v 1.19 2005/11/23 00:36:48 metalgod Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/ChangeLog,v 1.20 2007/02/08 13:08:44 flameeyes Exp $
+
+  08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   23 Nov 2005; Luis Medinas <metalgod@gentoo.org> nmh-1.1-r1.ebuild:
   Added ~amd64 keyword. Closes bug #109737.

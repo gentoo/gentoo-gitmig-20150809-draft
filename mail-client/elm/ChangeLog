@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/elm
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/elm/ChangeLog,v 1.13 2005/05/26 16:52:26 ticho Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/elm/ChangeLog,v 1.14 2007/02/08 12:59:15 flameeyes Exp $
+
+  08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   26 May 2005; Andrej Kacian <ticho@gentoo.org> elm-2.4_rc100-r1.ebuild:
   Added block on net-mail/mailutils, due to conflicting (incompatible) files.
