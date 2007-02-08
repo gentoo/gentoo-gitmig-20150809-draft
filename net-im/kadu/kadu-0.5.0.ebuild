@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.5.0.ebuild,v 1.1 2007/02/01 18:31:21 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.5.0.ebuild,v 1.2 2007/02/08 01:27:38 marienz Exp $
 
 inherit flag-o-matic eutils
 
@@ -82,7 +82,7 @@ SRC_URI="http://kadu.net/download/stable/${P}.tar.bz2
 		http://kadu.net/download/additions/kompatybilne_z_GG6.tar.gz
 		http://kadu.net/download/additions/dodatkowe_emoty_GG7.tar.gz
 		http://www.kadu.net/download/additions/kadu-emots-zestaw288.tar.bz2
-		http://www.kadu.net/download/additions/kadu-emots-tex.tar.gz)
+		http://www.kadu.net/download/additions/kadu-emots-tex.tar.gz )
 	extramodules? (
 		http://gov.one.pl/svnsnap/tabs-svn-${TABS}.tar.gz
 	    http://www.kadu.net/~blysk/weather-${WEATHER}.tar.bz2
