@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-0.5.15.ebuild,v 1.6 2007/02/07 22:49:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-0.5.15.ebuild,v 1.7 2007/02/08 11:55:10 armin76 Exp $
 
 inherit libtool
 
@@ -16,7 +16,7 @@ RESTRICT="test"
 DEPEND=">=sys-devel/libtool-1.4.1
 	>=dev-libs/glib-2.0.0
 	media-libs/libmpeg2
-	nls? ( sys-devel/gettext )
+	nls? ( virtual/libintl )
 	gtk? ( >=x11-libs/gtk+-2.6.10 )
 	zlib? ( sys-libs/zlib )
 	vorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
