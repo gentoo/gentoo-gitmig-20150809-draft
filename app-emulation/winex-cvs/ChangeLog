@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/winex-cvs
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/ChangeLog,v 1.23 2005/09/17 00:58:07 ciaranm Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/ChangeLog,v 1.24 2007/02/08 21:54:51 flameeyes Exp $
+
+  08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> winex-cvs-3000.ebuild:
   Converted to UTF-8, fixed encoding screwups
