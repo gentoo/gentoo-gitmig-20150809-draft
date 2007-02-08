@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/hawknl
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/ChangeLog,v 1.9 2005/12/17 03:09:42 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/ChangeLog,v 1.10 2007/02/08 20:46:07 wolf31o2 Exp $
+
+  08 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   17 Dec 2005; Mike Frysinger <vapier@gentoo.org>
   +files/hawknl-1.68-build.patch, hawknl-1.68-r1.ebuild:
