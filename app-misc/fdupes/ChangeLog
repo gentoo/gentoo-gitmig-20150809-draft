@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/fdupes
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/ChangeLog,v 1.10 2005/04/21 19:11:28 blubb Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/ChangeLog,v 1.11 2007/02/08 22:32:33 flameeyes Exp $
+
+  08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> fdupes-1.40.ebuild:
   stable on amd64

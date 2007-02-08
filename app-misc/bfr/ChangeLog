@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/bfr
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bfr/ChangeLog,v 1.15 2005/06/06 16:12:46 slarti Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bfr/ChangeLog,v 1.16 2007/02/08 22:24:57 flameeyes Exp $
+
+  08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   06 Jun 2005; Tom Martin <slarti@gentoo.org> bfr-1.5.ebuild,
   bfr-1.6.ebuild, bfr-1.6-r1.ebuild:

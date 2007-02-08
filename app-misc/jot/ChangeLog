@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/jot
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jot/ChangeLog,v 1.10 2005/06/05 11:51:08 hansmi Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jot/ChangeLog,v 1.11 2007/02/08 22:36:17 flameeyes Exp $
+
+  08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> jot-9.0.ebuild:
   Stable on ppc.
