@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/crystalspace
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.22 2007/02/02 06:50:41 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.23 2007/02/08 07:22:32 nyhm Exp $
+
+  08 Feb 2007; Tristan Heaven <nyhm@gentoo.org> crystalspace-1.0.ebuild:
+  Use java-pkg-opt-2 eclass
 
   02 Feb 2007; <tupone@gentoo.org> crystalspace-1.0.ebuild:
   Work around problems raised with bug #155788 comment 18 by Frank Richter

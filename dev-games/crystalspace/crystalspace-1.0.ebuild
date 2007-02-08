@@ -1,9 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.0.ebuild,v 1.4 2007/02/02 06:50:41 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.0.ebuild,v 1.5 2007/02/08 07:22:32 nyhm Exp $
+
+inherit java-pkg-opt-2 multilib
 
 MY_P=${PN}-src-${PV}
-
 DESCRIPTION="Portable 3D Game Development Kit written in C++"
 HOMEPAGE="http://crystal.sourceforge.net/"
 SRC_URI="mirror://sourceforge/crystal/${MY_P}.tar.bz2"
@@ -16,32 +17,32 @@ sdl truetype vorbis wxwindows"
 
 RDEPEND="virtual/opengl
 	virtual/glu
-	java? ( virtual/jre )
+	java? ( >=virtual/jre-1.5 )
 	cg? ( media-gfx/nvidia-cg-toolkit )
-	ode? (  dev-games/ode )
-	cal3d? ( =media-libs/cal3d-0.11* )
+	ode? ( dev-games/ode )
+	cal3d? ( >=media-libs/cal3d-0.11 )
 	jpeg? ( media-libs/jpeg )
 	sdl? ( media-libs/libsdl )
 	vorbis? ( media-libs/libogg
-		      media-libs/libvorbis )
+		media-libs/libvorbis )
 	truetype? ( >=media-libs/freetype-2.1 )
 	alsa? ( media-libs/alsa-lib )
 	mng? ( media-libs/libmng )
 	png? ( media-libs/libpng )
 	wxwindows? ( x11-libs/pango
-				 x11-libs/wxGTK )
+		>=x11-libs/wxGTK-2.6 )
 	javascript? ( dev-lang/spidermonkey )
 	x11-libs/libXaw
 	x11-libs/libXxf86vm"
-
 DEPEND="${RDEPEND}
 	3ds? ( media-libs/lib3ds )
 	java? ( dev-java/ant-core
-			virtual/jdk )
+		>=virtual/jdk-1.5 )
 	dev-util/jam
-	dev-lang/swig"
+	dev-lang/swig
+	dev-util/pkgconfig"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
@@ -50,7 +51,8 @@ src_unpack() {
 	# Removing conflicting target
 	sed -i -e "/^InstallDoc/d" \
 		Jamfile.in \
-		docs/Jamfile
+		docs/Jamfile \
+		|| die "sed failed"
 }
 
 src_compile() {
@@ -82,29 +84,32 @@ src_compile() {
 		$(use_with alsa asound)
 	#remove unwanted CFLAGS added by ./configure
 	sed -i -e '/COMPILER\.CFLAGS\.optimize/d' \
-		Jamconfig
-	jam || die "compile failed"
+		Jamconfig \
+		|| die "sed failed"
+	jam -q || die "compile failed"
 }
 
 src_install() {
 	for installTarget in install_bin install_plugin install_lib \
 		install_include install_data install_config
 	do
-		jam -q -s DESTDIR=${D} ${installTarget} \
+		jam -q -s DESTDIR="${D}" ${installTarget} \
 			|| die "jam ${installTarget} failed"
 	done
 	if use doc; then
-		jam -q -s DESTDIR=${D} install_doc || die "make install failed"
+		jam -q -s DESTDIR="${D}" install_doc || die "jam install_doc failed"
 	fi
 	# Fill cache directory for the examples
+	local dir
 	for dir in castle flarge isomap parallaxtest partsys r3dtest stenciltest \
 		terrain terrainf;
 	do
-		${D}/usr/bin/cslight -video=null ${D}/usr/share/${PN}/data/maps/$dir;
+		"${D}"/usr/bin/cslight -video=null \
+			"${D}"/usr/share/${PN}/data/maps/${dir}
 	done
 	dodoc README docs/history* docs/todo_*
 
-	echo "CRYSTAL_PLUGIN=/usr/lib/crystalspace" >> 90crystalspace
+	echo "CRYSTAL_PLUGIN=/usr/$(get_libdir)/crystalspace" > 90crystalspace
 	echo "CRYSTAL_CONFIG=/etc/crystalspace" >> 90crystalspace
 	doenvd 90crystalspace
 }
