@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6-r1.ebuild,v 1.8 2007/02/08 18:48:53 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6-r1.ebuild,v 1.9 2007/02/08 21:44:49 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -71,7 +71,7 @@ RDEPEND="
 		lirc? ( app-misc/lirc )
 		3dfx? ( media-libs/glide-v3 )
 		bidi? ( >=dev-libs/fribidi-0.10.4 )
-		gnutls? ( >=net-libs/gnutls-1.0.17 )
+		gnutls? ( >=net-libs/gnutls-1.2.9 )
 		sys-libs/zlib
 		png? ( media-libs/libpng )
 		media-libs/libdvbpsi
