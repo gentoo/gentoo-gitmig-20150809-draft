@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/gkrellm-pmu
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/gkrellm-pmu/ChangeLog,v 1.11 2006/02/03 06:57:10 wormo Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/gkrellm-pmu/ChangeLog,v 1.12 2007/02/08 22:20:34 flameeyes Exp $
+
+  08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *gkrellm-pmu-2.5 (02 Feb 2006)
 
