@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/DB_File/DB_File-1.815.ebuild,v 1.1 2007/02/06 15:26:06 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/DB_File/DB_File-1.815.ebuild,v 1.2 2007/02/08 12:19:21 mcummings Exp $
 
 inherit perl-module multilib eutils
 
@@ -17,8 +17,6 @@ DEPEND="dev-lang/perl
 		sys-libs/db"
 
 SRC_TEST="do"
-
-mydoc="Changes"
 
 src_unpack() {
 	unpack ${A}
