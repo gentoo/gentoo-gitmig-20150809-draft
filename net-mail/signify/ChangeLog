@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/signify
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/signify/ChangeLog,v 1.12 2005/06/04 10:13:03 tove Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/signify/ChangeLog,v 1.13 2007/02/08 13:38:15 flameeyes Exp $
+
+  08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   04 Jun 2005; Torsten Veller <tove@gentoo.org> -signify-1.07.ebuild:
   Removed old version.

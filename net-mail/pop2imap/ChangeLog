@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/pop2imap
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pop2imap/ChangeLog,v 1.3 2006/05/10 21:00:44 tcort Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pop2imap/ChangeLog,v 1.4 2007/02/08 13:33:37 flameeyes Exp $
+
+  08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   10 May 2006; Thomas Cort <tcort@gentoo.org> pop2imap-1.12.ebuild:
   Added ~alpha keyword wrt Bug #129854.
