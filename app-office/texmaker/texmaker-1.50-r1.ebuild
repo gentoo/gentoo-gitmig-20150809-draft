@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.50-r1.ebuild,v 1.1 2007/02/08 13:47:46 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.50-r1.ebuild,v 1.2 2007/02/08 19:44:59 nattfodd Exp $
 
 inherit eutils versionator qt4
 
@@ -63,7 +63,7 @@ src_install() {
 	doins utilities/texmaker.svg || die "doins failed."
 
 	dodoc utilities/AUTHORS || die "dodoc failed"
-	dodoc utilities/CHANGELOG || die "dodoc failed"
+	dodoc utilities/CHANGELOG.txt || die "dodoc failed"
 
 	dohtml utilities/*.{html,gif,css,txt} utilities/doc*.png || die "dohtml failed"
 
