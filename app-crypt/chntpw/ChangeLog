@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/chntpw
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/chntpw/ChangeLog,v 1.6 2005/04/09 22:17:33 vanquirius Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/chntpw/ChangeLog,v 1.7 2007/02/08 21:07:31 flameeyes Exp $
+
+  08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   09 Apr 2005; Marcelo Goes <vanquirius@gentoo.org>
   +files/chntpw-0.99.3.20040818-gcc4.diff, chntpw-0.99.3.20040818.ebuild:

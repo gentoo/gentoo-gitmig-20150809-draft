@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/cryptplug
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptplug/ChangeLog,v 1.29 2005/08/07 09:46:21 dragonheart Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptplug/ChangeLog,v 1.30 2007/02/08 21:08:41 flameeyes Exp $
+
+  08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   07 Aug 2005; Daniel Black <dragonheart@gentoo.org>
   cryptplug-0.3.16-r1.ebuild:
