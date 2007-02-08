@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.50.ebuild,v 1.2 2007/01/25 06:03:17 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.50-r1.ebuild,v 1.1 2007/02/08 13:47:46 nattfodd Exp $
 
 inherit eutils versionator qt4
 
-DESCRIPTION="a nice LaTeX-IDE"
+DESCRIPTION="A nice LaTeX-IDE"
 
 # The upstream version numbering is bad, so we have to remove a dot in the
 # minor version number
@@ -34,7 +34,7 @@ DEPEND="|| ( ( x11-libs/libX11
 			virtual/x11
 		)
 		app-text/aspell
-		$(qt4_min_version 4.1.4)"
+		>=x11-libs/qt-4.2.2"
 
 RDEPEND="${DEPEND}
 	virtual/tetex
@@ -44,7 +44,14 @@ RDEPEND="${DEPEND}
 
 src_compile() {
 	cd ${S}
-	qmake -unix texmaker.pro || die "qmake failed"
+	if use x86-fbsd; then
+		myspec="-spec freebsd-g++ -unix"
+	else
+		myspec="-spec linux-g++ -unix"
+	fi
+	qmake PREFIX="/usr" QMAKE_CFLAGS="${CFLAGS}" \
+		QMAKE_CXXFLAGS="${CXXFLAGS}" ${myspec} \
+		texmaker.pro || die "qmake failed"
 	emake || die "emake failed"
 }
 
@@ -53,8 +60,10 @@ src_install() {
 
 	insinto /usr/share/pixmaps/texmaker
 	doins utilities/texmaker*.png || die "doins failed."
+	doins utilities/texmaker.svg || die "doins failed."
 
 	dodoc utilities/AUTHORS || die "dodoc failed"
+	dodoc utilities/CHANGELOG || die "dodoc failed"
 
 	dohtml utilities/*.{html,gif,css,txt} utilities/doc*.png || die "dohtml failed"
 
