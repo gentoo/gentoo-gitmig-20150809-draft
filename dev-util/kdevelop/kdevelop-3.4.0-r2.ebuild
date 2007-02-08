@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.4.0-r1.ebuild,v 1.1 2007/02/07 16:31:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.4.0-r2.ebuild,v 1.1 2007/02/08 15:26:17 flameeyes Exp $
 
 inherit kde eutils db-use
 
 DESCRIPTION="Integrated Development Environment for Unix, supporting KDE/Qt, C/C++ and many other languages."
 HOMEPAGE="http://www.kdevelop.org"
 SRC_URI="mirror://kde/stable/${P}/src/${P}.tar.bz2
-	mirror://gentoo/${P}-qmake-parser.patch.bz2"
+	mirror://gentoo/${P}-qmake-parser-2.patch.bz2"
 
 LICENSE="GPL-2"
 
@@ -26,7 +26,7 @@ DEPEND="${DEPEND}
 	sys-devel/flex"
 need-kde 3.5
 
-PATCHES="${DISTDIR}/${P}-qmake-parser.patch.bz2"
+PATCHES="${DISTDIR}/${P}-qmake-parser-2.patch.bz2"
 
 src_unpack() {
 	kde_src_unpack
