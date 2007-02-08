@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.0.ebuild,v 1.5 2007/02/08 07:22:32 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.0.ebuild,v 1.6 2007/02/08 19:02:31 tupone Exp $
 
 inherit java-pkg-opt-2 multilib
 
@@ -32,6 +32,7 @@ RDEPEND="virtual/opengl
 	wxwindows? ( x11-libs/pango
 		>=x11-libs/wxGTK-2.6 )
 	javascript? ( dev-lang/spidermonkey )
+	cegui? ( >=dev-games/cegui-0.5.0 )
 	x11-libs/libXaw
 	x11-libs/libXxf86vm"
 DEPEND="${RDEPEND}
