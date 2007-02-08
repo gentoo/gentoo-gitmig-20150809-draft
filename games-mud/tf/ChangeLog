@@ -1,6 +1,11 @@
 # ChangeLog for games-mud/tf
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/ChangeLog,v 1.17 2006/10/01 23:49:32 mr_bones_ Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/ChangeLog,v 1.18 2007/02/08 10:52:44 nyhm Exp $
+
+*tf-50_beta8 (08 Feb 2007)
+
+  08 Feb 2007; Tristan Heaven <nyhm@gentoo.org> +tf-50_beta8.ebuild:
+  Version bump, bug #165517
 
   01 Oct 2006; Michael Sterrett <mr_bones_@gentoo.org>
   +files/tf-40-gcc4.patch, files/tf-40-gentoo.diff, tf-40-r2.ebuild:
