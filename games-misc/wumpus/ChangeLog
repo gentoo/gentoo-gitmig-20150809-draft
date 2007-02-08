@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/wumpus
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/wumpus/ChangeLog,v 1.10 2005/09/20 16:53:33 kito Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/wumpus/ChangeLog,v 1.11 2007/02/08 21:09:02 wolf31o2 Exp $
+
+  08 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   20 Sep 2005; Kito <kito@gentoo.org> wumpus-1.4.ebuild:
   ~ppc-macos. Closes Bug 106570
