@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.2.ebuild,v 1.2 2007/02/04 08:44:45 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.2.ebuild,v 1.3 2007/02/08 15:29:59 alonbl Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -20,6 +20,7 @@ COMMON_DEPEND="
 	>=dev-libs/libksba-1.0.0
 	>=dev-libs/libgpg-error-1.4
 	>=dev-libs/libassuan-1.0.1
+	>=net-misc/curl-7.7.2
 	bzip2? ( app-arch/bzip2 )
 	pcsc-lite? ( >=sys-apps/pcsc-lite-1.3.0 )
 	openct? ( >=dev-libs/openct-0.5.0 )
