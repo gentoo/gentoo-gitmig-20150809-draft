@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.94 2007/02/08 14:04:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.95 2007/02/08 14:15:13 flameeyes Exp $
+
+  08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/freetype-2.1.10-security_batch.patch, -freetype-2.1.10.ebuild,
+  -freetype-2.1.10-r1.ebuild:
+  Remove old vulnerable versions.
 
 *freetype-2.2.1-r1 (08 Feb 2007)
 
