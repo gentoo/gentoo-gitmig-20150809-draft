@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/sawfish
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/sawfish/ChangeLog,v 1.6 2007/02/01 16:06:31 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/sawfish/ChangeLog,v 1.7 2007/02/08 18:23:52 opfer Exp $
+
+  08 Feb 2007; Christian Faulhammer <opfer@gentoo.org> -sawfish-1.31.ebuild:
+  clean up
 
   01 Feb 2007; Simon Stelling <blubb@gentoo.org> sawfish-1.32.ebuild:
   added ~amd64
