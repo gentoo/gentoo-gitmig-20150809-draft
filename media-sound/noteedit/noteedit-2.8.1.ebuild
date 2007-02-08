@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/noteedit-2.8.1.ebuild,v 1.1 2007/02/08 18:20:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/noteedit-2.8.1.ebuild,v 1.2 2007/02/08 18:44:49 aballier Exp $
 
 IUSE="kmid tse3"
 
@@ -26,6 +26,7 @@ pkg_setup() {
 	myconf="$(use_with tse3 libtse3)\
 		$(use_with kmid libkmid) ${myconf}"
 
+	kde_pkg_setup
 }
 
 src_install() {
