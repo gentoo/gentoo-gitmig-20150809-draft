@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.3.0.5.ebuild,v 1.9 2006/11/27 00:21:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.3.0.5.ebuild,v 1.10 2007/02/08 16:01:46 dsd Exp $
 
 inherit eutils multilib perl-app
 
@@ -19,7 +19,6 @@ IUSE="bzip2 doc fpx graphviz gs jbig jpeg jpeg2k lcms mpeg nocxx perl png tiff t
 
 RDEPEND="bzip2? ( app-arch/bzip2 )
 	zlib? ( sys-libs/zlib )
-	media-fonts/corefonts
 	X? (
 		x11-libs/libXext
 		x11-libs/libXt
@@ -32,7 +31,7 @@ RDEPEND="bzip2? ( app-arch/bzip2 )
 	png? ( media-libs/libpng )
 	tiff? ( >=media-libs/tiff-3.5.5 )
 	xml? ( >=dev-libs/libxml2-2.4.10 )
-	truetype? ( =media-libs/freetype-2* )
+	truetype? ( =media-libs/freetype-2* media-fonts/corefonts )
 	wmf? ( >=media-libs/libwmf-0.2.8 )
 	jbig? ( media-libs/jbigkit )
 	jpeg? ( >=media-libs/jpeg-6b )
@@ -56,6 +55,9 @@ src_unpack() {
 	einfo ${S}
 	epatch "${FILESDIR}"/${PN}-6.3.0.5-docs.patch
 #	epatch "${FILESDIR}"/imagemagick-perl.patch
+
+	# from bug #146713, sent upstream
+	epatch "${FILESDIR}"/${P}-configure-windows-fonts.patch
 }
 
 src_compile() {
@@ -64,7 +66,7 @@ src_compile() {
 		--with-modules \
 		$(use_with perl) \
 		--with-gs-font-dir=/usr/share/fonts/default/ghostscript \
-		--with-windows-font-dir=/usr/share/fonts/corefonts \
+		$(use_with truetype windows-font-dir /usr/share/fonts/corefonts) \
 		$(use_with !nocxx magick-plus-plus) \
 		$(use_with bzip2 bzlib) \
 		$(use_with fpx) \
