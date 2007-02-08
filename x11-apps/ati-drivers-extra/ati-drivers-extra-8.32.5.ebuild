@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/ati-drivers-extra/ati-drivers-extra-8.32.5.ebuild,v 1.1 2007/01/21 15:58:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/ati-drivers-extra/ati-drivers-extra-8.32.5.ebuild,v 1.2 2007/02/08 17:24:24 opfer Exp $
 
 IUSE="qt3"
 
@@ -12,7 +12,7 @@ ATI_URL="https://a248.e.akamai.net/f/674/9206/0/www2.ati.com/drivers/linux/"
 SRC_URI="${ATI_URL}/ati-driver-installer-${PV}-x86.x86_64.run"
 
 LICENSE="ATI GPL-2 QPL-1.0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 DEPEND="=x11-drivers/ati-drivers-${PV}*
 	qt3? ( =x11-libs/qt-3* )"
