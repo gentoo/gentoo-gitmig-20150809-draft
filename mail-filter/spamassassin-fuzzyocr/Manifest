@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST fuzzyocr-2.3b.tar.gz 76411 RMD160 36b77add4645b462a7eb52540aba1212d55cd3f0 SHA1 e897ed9bcdfe313af78c6d89d09726dd5fb96ae5 SHA256 10db14b33a42249de40e347a8ad26cff150c2a6f6580246bce8689d8f1dc0a82
 EBUILD spamassassin-fuzzyocr-2.3b.ebuild 1970 RMD160 57d57e5fe8e1dab896a2d15cf7d041ca382ace72 SHA1 927442d8508a5747cd7b9caf44af76a8fbe8cd07 SHA256 7f5421ce3511b4515dd599c1e81cf30a607db1beedb6f93c3dcba9f66be3b626
 MD5 682f557ce65e623de04adeb0fb28ed55 spamassassin-fuzzyocr-2.3b.ebuild 1970
@@ -14,3 +17,10 @@ SHA256 39e916df5be09516aed189bc9a8fcc3f16623699f33c35d364e9a49c71f4c31a metadata
 MD5 ef2b51883c013055c460f71ab2cda785 files/digest-spamassassin-fuzzyocr-2.3b 238
 RMD160 ff580dd45e0096b3b945863e42c37c2dc62f4a20 files/digest-spamassassin-fuzzyocr-2.3b 238
 SHA256 8f570404c99302a9e5db522fd3262907566e2ef0ab6ede71ed582dfa52ec1252 files/digest-spamassassin-fuzzyocr-2.3b 238
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.2 (GNU/Linux)
+
+iD8DBQFFy7VTWt/XSf2CZdkRAmLBAJ9wd8WL4PphcP6clLdsvAAAUobMpQCeM1dE
+1zkzVDwyy2hCxD1GrZlVFQ4=
+=A/zP
+-----END PGP SIGNATURE-----
