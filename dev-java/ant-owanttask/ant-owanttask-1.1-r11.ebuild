@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ant-owanttask-1.1-r11.ebuild,v 1.5 2007/02/03 13:40:14 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ant-owanttask-1.1-r11.ebuild,v 1.6 2007/02/08 21:57:54 caster Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -14,6 +14,7 @@ IUSE=""
 DEPEND=">=virtual/jdk-1.4"
 RDEPEND=">=virtual/jre-1.4
 	dev-java/ant-core
+	!>=dev-java/ant-core-1.7.0
 	dev-java/xalan"
 S=${WORKDIR}/owanttask-${PV}
 
