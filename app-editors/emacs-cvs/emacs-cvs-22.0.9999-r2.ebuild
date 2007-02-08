@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.9999-r2.ebuild,v 1.6 2007/02/06 06:02:41 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.9999-r2.ebuild,v 1.7 2007/02/08 14:03:45 opfer Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -85,7 +85,7 @@ src_compile() {
 			einfo "Configuring to build with motif toolkit support"
 			myconf="${myconf} --without-gtk"
 			myconf="${myconf} --with-x-toolkit=motif"
-		else use lesstif;
+		elif use lesstif; then
 			einfo "Configuring to build with lesstif toolkit support"
 			myconf="${myconf} --without-gtk"
 			myconf="${myconf} --with-x-toolkit=motif"

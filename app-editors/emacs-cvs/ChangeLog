@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.80 2007/02/06 06:02:41 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.81 2007/02/08 14:03:45 opfer Exp $
+
+  08 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  emacs-cvs-22.0.93-r2.ebuild, emacs-cvs-22.0.9999-r2.ebuild:
+  repair inclusion of motif; correct handling of USE flags; thanks to John R.
+  Graham <john_r_graham@mindspring.com> in bug 165663
 
   06 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
   emacs-cvs-22.0.93-r2.ebuild, emacs-cvs-22.0.9999-r2.ebuild:
