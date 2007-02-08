@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.95 2007/02/08 14:15:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.96 2007/02/08 18:37:38 flameeyes Exp $
+
+*freetype-2.3.1 (08 Feb 2007)
+
+  08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml,
+  +freetype-2.3.1.ebuild:
+  Bump to freetype 2.3.1, thanks to Eike Hein and Ron MacNeil in bug #162550.
 
   08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -files/freetype-2.1.10-security_batch.patch, -freetype-2.1.10.ebuild,
