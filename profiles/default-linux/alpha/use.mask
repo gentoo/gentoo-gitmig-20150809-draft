@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.56 2007/01/20 14:21:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.57 2007/02/08 18:17:07 ferdy Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -116,9 +116,6 @@ firefox
 
 # Masked until bmpx works and is re-keyworded, see Bug #111975
 bmpx
-
-# Paludis-0.6's QA tools need pcre++ which doesn't yet work
-qa
 
 # disable until tested
 # # bug 148402
