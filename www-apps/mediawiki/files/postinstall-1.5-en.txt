@@ -56,3 +56,13 @@ You may also have to execute
 $ texconfig dvips printcmd -
 
 if you have not configured tetex before.
+
+
+Things you need to have on the server:
+- SQL database of your choice.
+- dev-php/PEAR-Mail for external smtp server.
+
+These are not installed as dependencies as it is possible to run the database
+and other services on other machines.
+
+
