@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/kwest
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/kwest/ChangeLog,v 1.8 2005/04/24 03:16:37 hansmi Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/kwest/ChangeLog,v 1.9 2007/02/08 21:06:43 wolf31o2 Exp $
+
+  08 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> kwest-1.0.ebuild:
   Stable on ppc.
