@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.8.1.1.ebuild,v 1.3 2006/11/21 01:40:57 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.8.3.ebuild,v 1.1 2007/02/08 12:26:36 leio Exp $
 
 inherit eutils flag-o-matic alternatives gnome2 autotools
 
@@ -11,7 +11,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="2.0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 # gstreamer for audio-inline, when it uses 0.10
 IUSE="bogofilter crypt dbus debug doc hal ipv6 kerberos krb4 ldap mono nntp pda profile spell ssl"
 
@@ -42,7 +42,7 @@ RDEPEND=">=x11-themes/gnome-icon-theme-1.2
 		>=app-pda/gnome-pilot-2
 		>=app-pda/gnome-pilot-conduits-2 )
 	spell? ( >=app-text/gnome-spell-1.0.5 )
-	crypt? ( >=app-crypt/gnupg-1.2.2 )
+	crypt? ( || ( =app-crypt/gnupg-1.4* >=app-crypt/gnupg-2.0.1-r2  ) )
 	ssl? (
 		>=dev-libs/nspr-4.6.1
 		>=dev-libs/nss-3.11 )
@@ -84,6 +84,14 @@ pkg_setup() {
 		$(use_enable profile profiling)  \
 		$(use_with ldap openldap)        \
 		$(use_with kerberos krb5 /usr)"
+
+	# We need a graphical pinentry frontend to be able to ask for the GPG
+	# password from inside evolution, bug 160302
+	if use crypt && has_version '>=app-crypt/gnupg-2.0.1-r2'; then
+		if ! built_with_use -o app-crypt/pinentry gtk qt3; then
+			die "You must build app-crypt/pinentry with GTK or QT3 support"
+		fi
+	fi
 
 	if use krb4 && ! built_with_use virtual/krb5 krb4; then
 		ewarn
@@ -153,10 +161,10 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.8.0-uri.patch.gz
 
 	# Fix 64-bit warnings
-	epatch ${FILESDIR}/${P}-64-bit.patch
+	epatch ${FILESDIR}/${PN}-2.8.1.1-64-bit.patch
 
 	# Add bogofilter junk plugin source
-	use bogofilter && epatch ${FILESDIR}/${PN}-2.7.3-bf-junk.patch.gz
+	use bogofilter && epatch ${FILESDIR}/${PN}-2.8.2.1-bf-junk.patch.gz
 
 
 	eaclocal || die
