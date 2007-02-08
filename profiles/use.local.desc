@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2579 2007/02/08 18:19:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2580 2007/02/08 18:39:37 jer Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -400,6 +400,7 @@ dev-lang/php:force-cgi-redirect - Switch on common security setting for CGI SAPI
 dev-lang/php:hash - Enable the hash extension
 dev-lang/php:java-external - Use the external java extension rather than the bundled one
 dev-lang/php:java-internal - Use the bundled java extension in PHP4
+dev-lang/php:ming - Adds support for creating SWF files using Ming
 dev-lang/php:oci8-instant-client - Use dev-db/oracle-instantclient-basic as Oracle provider instead of requiring a full Oracle server install
 dev-lang/php:overload - Enable the overload extension
 dev-lang/php:pdo - Enable the bundled PDO extensions
