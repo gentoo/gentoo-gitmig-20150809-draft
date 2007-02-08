@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.62 2007/02/07 17:17:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.63 2007/02/08 18:05:20 opfer Exp $
+
+  08 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  libsndfile-1.0.17.ebuild:
+  stable x86; bug #165776
 
   07 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   libsndfile-1.0.17.ebuild:
