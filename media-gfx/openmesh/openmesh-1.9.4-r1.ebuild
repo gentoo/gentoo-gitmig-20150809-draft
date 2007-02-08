@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/openmesh-1.9.4-r1.ebuild,v 1.1 2007/02/08 15:02:57 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/openmesh-1.9.4-r1.ebuild,v 1.2 2007/02/08 18:34:00 dsd Exp $
 
 inherit eutils
 
@@ -43,9 +43,9 @@ src_compile() {
 
 src_install() {
 	into /usr
-	dolib Core/Linux_gcc_dbg/libOpenMesh_Core.so
-	dolib Tools/Linux_gcc_dbg/libOpenMesh_Tools.so
-	dolib Tools/Subdivider/Adaptive/Composite/Linux_gcc_dbg/libOpenMesh_Tools_Subdivider_Adaptive_Composite.so
+	dolib Core/Linux_gcc_env/libOpenMesh_Core.so
+	dolib Tools/Linux_gcc_env/libOpenMesh_Tools.so
+	dolib Tools/Subdivider/Adaptive/Composite/Linux_gcc_env/libOpenMesh_Tools_Subdivider_Adaptive_Composite.so
 
 	make clean
 
