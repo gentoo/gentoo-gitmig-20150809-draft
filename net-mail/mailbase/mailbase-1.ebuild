@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/mailbase-1.ebuild,v 1.16 2007/01/06 13:44:07 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/mailbase-1.ebuild,v 1.17 2007/02/08 22:22:25 grobian Exp $
 
 DESCRIPTION="MTA layout package"
 SRC_URI=""
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.gentoo.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ~ppc-macos ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="pam"
 
 RDEPEND="pam? ( virtual/pam )"
@@ -16,9 +16,9 @@ RDEPEND="pam? ( virtual/pam )"
 S=${WORKDIR}
 
 get_permissions_oct() {
-	if [[ ${USERLAND} = GNU ]]; then
+	if [[ ${USERLAND} = GNU ]] ; then
 		stat -c%a "${ROOT}$1"
-	elif [[ ${USERLAND} = BSD ]] || [[ ${USERLAND} = Darwin ]]; then
+	elif [[ ${USERLAND} = BSD ]] ; then
 		stat -f%p "${ROOT}$1" | cut -c 3-
 	fi
 }
