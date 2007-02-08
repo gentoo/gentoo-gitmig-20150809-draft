@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/linkers-and-loaders
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linkers-and-loaders/ChangeLog,v 1.1 2005/01/15 00:51:33 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linkers-and-loaders/ChangeLog,v 1.2 2007/02/08 21:29:20 flameeyes Exp $
+
+  08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *linkers-and-loaders-0 (14 Jan 2004)
 
