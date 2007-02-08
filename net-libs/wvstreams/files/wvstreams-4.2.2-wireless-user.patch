@@ -5,7 +5,7 @@ diff -Nur wvstreams-4.2.2.orig/linuxstreams/wvinterface.cc wvstreams-4.2.2/linux
  #include <errno.h>
  #include <linux/sockios.h>
  
-+#include <linux/compiler.h>
++#include <sys/sysctl.h>
  #define _LINUX_IF_H /* Hack to prevent loading linux/if.h */
  #include <linux/wireless.h>
  
