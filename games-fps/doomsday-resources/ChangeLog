@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doomsday-resources
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday-resources/ChangeLog,v 1.2 2006/09/27 09:27:23 nyhm Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday-resources/ChangeLog,v 1.3 2007/02/08 08:53:24 nyhm Exp $
+
+  08 Feb 2007; Tristan Heaven <nyhm@gentoo.org>
+  doomsday-resources-1.01.ebuild:
+  Fix hardcoded paths
 
   27 Sep 2006; Tristan Heaven <nyhm@gentoo.org>
   doomsday-resources-1.01.ebuild:

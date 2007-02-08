@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday-resources/doomsday-resources-1.01.ebuild,v 1.2 2006/09/27 09:27:23 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday-resources/doomsday-resources-1.01.ebuild,v 1.3 2007/02/08 08:53:24 nyhm Exp $
 
 inherit eutils games
 
@@ -13,28 +13,26 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="games-fps/doomsday
-	app-arch/unzip"
+
+RDEPEND="games-fps/doomsday"
+DEPEND="app-arch/unzip"
 
 S=${WORKDIR}
 
 src_install() {
-	insinto /usr/share/games/deng/Data/jDoom/Auto/
-	doins data/jDoom/* *.pk3
+	insinto "${GAMES_DATADIR}"/doomsday/data/jdoom/auto
+	doins data/jDoom/* *.pk3 || die "doins failed"
 
 	# The definitions file cannot be auto-loaded
-	insinto /usr/share/games/deng/Defs/jDoom/
-	doins defs/jDoom/*
+	insinto "${GAMES_DATADIR}"/doomsday/defs/jdoom
+	doins defs/jDoom/* || die "doins failed"
 
 	dodoc *.txt docs/*
-
 	prepgamesdirs
 }
 
 pkg_postinst() {
 	games_pkg_postinst
-	# Must specify full path to .ded file
-	einfo "Add the following to the jdoom/doomsday command-line options:"
-	einfo "  -def /usr/share/games/deng/Defs/jDoom/jDRP.ded"
-	echo
+	elog "Add the following to the jdoom/doomsday command-line options:"
+	elog "  -def ${GAMES_DATADIR}/doomsday/defs/jdoom/jDRP.ded"
 }
