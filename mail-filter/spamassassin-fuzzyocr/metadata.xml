@@ -6,6 +6,10 @@
 		<email>tomk@gentoo.org</email>
 		<name>Tom Knight</name>
 	</maintainer>
+	<maintainer>
+		<email>chutzpah@gentoo.org</email>
+		<name>Patrick McLean</name>
+	</maintainer>
 	<longdescription>This plugin checks for specific keywords in image/gif,
 	image/jpeg or image/png attachments, using gocr (an optical character
 	recognition program).
