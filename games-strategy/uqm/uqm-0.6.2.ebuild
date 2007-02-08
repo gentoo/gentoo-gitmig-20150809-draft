@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.6.2.ebuild,v 1.2 2007/02/04 21:57:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.6.2.ebuild,v 1.3 2007/02/08 17:01:24 mr_bones_ Exp $
 
 inherit eutils multilib games
 
@@ -26,6 +26,7 @@ RDEPEND="media-libs/libvorbis
 	>=media-libs/sdl-image-1.2.4
 	media-libs/libogg
 	media-libs/libvorbis
+	media-libs/libmikmod
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
