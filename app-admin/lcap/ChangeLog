@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/lcap
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lcap/ChangeLog,v 1.9 2005/06/05 11:27:10 hansmi Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lcap/ChangeLog,v 1.10 2007/02/08 20:48:52 flameeyes Exp $
+
+  08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> lcap-0.0.6-r1.ebuild:
   Stable on ppc.
