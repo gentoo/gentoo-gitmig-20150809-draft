@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.3.3.ebuild,v 1.1 2007/01/06 12:39:44 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.3.3.ebuild,v 1.2 2007/02/08 09:12:19 nyhm Exp $
 
 inherit eutils flag-o-matic games
 
@@ -114,6 +114,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	games_pkg_postinst
 	einfo "Auto Update is now enabled in Eternal Lands"
 	ewarn "If an update occurs then the client will suddenly exit"
 	einfo "Updates only happen when the game first loads"

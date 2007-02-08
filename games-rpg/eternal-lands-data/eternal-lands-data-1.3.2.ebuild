@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/eternal-lands-data-1.3.2.ebuild,v 1.3 2006/10/26 16:26:35 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/eternal-lands-data-1.3.2.ebuild,v 1.4 2007/02/08 09:14:34 nyhm Exp $
 
 inherit games
 
@@ -54,6 +54,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	games_pkg_postinst
 	# Ensure that the files are writable by the game group for auto
 	# updating.
 	chmod -R g+rw "${ROOT}/${GAMES_DATADIR}/${MY_PN}"
