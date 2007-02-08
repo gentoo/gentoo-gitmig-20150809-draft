@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/sauerbraten/sauerbraten-2006.12.04.ebuild,v 1.2 2007/02/04 13:55:26 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/sauerbraten/sauerbraten-2006.12.04.ebuild,v 1.3 2007/02/08 00:30:39 nyhm Exp $
 
 use amd64 && ABI=x86
 
-inherit eutils games multilib
+inherit eutils multilib games
 
 DESCRIPTION="free multiplayer/singleplayer first person shooter (major redesign of the Cube FPS)"
 HOMEPAGE="http://sauerbraten.org/"
@@ -15,12 +15,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="!amd64? ( 
+DEPEND="x86? (
 		media-libs/libsdl
 		media-libs/sdl-mixer
 		media-libs/sdl-image
 		media-libs/libpng
-		sys-libs/zlib
 		virtual/opengl
 	)
 	amd64? (
