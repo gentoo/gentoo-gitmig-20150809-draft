@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/sdlpong
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlpong/ChangeLog,v 1.1 2006/01/05 16:18:02 wolf31o2 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlpong/ChangeLog,v 1.2 2007/02/08 20:55:45 wolf31o2 Exp $
+
+  08 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *sdlpong-0.3 (05 Jan 2006)
 
