@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.3.ebuild,v 1.1 2007/01/09 20:06:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.3.ebuild,v 1.2 2007/02/08 00:21:19 mcummings Exp $
 
 inherit apache-module perl-module eutils multilib
 DESCRIPTION="An embedded Perl interpreter for Apache2"
@@ -31,11 +31,11 @@ src_unpack() {
 	ITHREADS="${useithreads}"
 	if [ "${INSTALLED_MPM}" != "prefork" ]; then
 		if [ "${ITHREADS}" == "undef" ]; then
-			ewarn "You cannot build mod_perl on a threaded apache"
-			ewarn "with an unthreaded perl. You must either emerge"
-			ewarn "perl with ithreads in your USE flags, or emerge"
-			ewarn "apache without threading support"
-			exit
+			eerror "You cannot build mod_perl on a threaded apache"
+			eerror "with an unthreaded perl. You must either emerge"
+			eerror "perl with ithreads in your USE flags, or emerge"
+			eerror "apache without threading support"
+			die
 		fi
 	fi
 
