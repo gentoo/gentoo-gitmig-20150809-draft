@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/cyphesis-0.5.11.ebuild,v 1.1 2007/02/01 21:14:21 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/cyphesis-0.5.11.ebuild,v 1.2 2007/02/08 08:59:50 nyhm Exp $
 
 inherit eutils autotools games
 
@@ -36,4 +36,5 @@ src_unpack() {
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS ChangeLog FIXME NEWS README THANKS TODO
+	prepgamesdirs
 }
