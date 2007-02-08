@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/lapack-docs/lapack-docs-3.1.ebuild,v 1.2 2007/02/07 13:25:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/lapack-docs/lapack-docs-3.1.ebuild,v 1.3 2007/02/08 11:40:21 bicatali Exp $
 
 inherit toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.netlib.org/lapack"
 SRC_URI="http://www.netlib.org/lapack/manpages.tgz
 	http://www.netlib.org/lapack/lapackqref.ps"
 
-LICENSE="public-domain"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
