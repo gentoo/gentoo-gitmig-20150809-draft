@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6787 2007/02/08 14:07:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6788 2007/02/08 14:37:29 dsd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -491,11 +491,6 @@ games-action/d2x-rebirth
 # Donnie Berkholz <dberkholz@gentoo.org> (20 Dec 2006)
 # Testing for FreeBSD support
 =x11-base/x11-drm-20060608-r1
-
-# Daniel Drake <dsd@gentoo.org> (12 Dec 2006)
-# Broken again with new kernel release, no maintainer, no upstream
-# Masked for removal on 2nd Jan 2007
-sys-fs/submount
 
 # Timothy Redaelli <drizzt@gentoo.org> (09 Dec 2006)
 # pending removal (#156989)
