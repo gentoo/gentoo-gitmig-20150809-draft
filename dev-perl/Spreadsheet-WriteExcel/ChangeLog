@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Spreadsheet-WriteExcel
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-WriteExcel/ChangeLog,v 1.29 2007/01/21 19:33:24 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-WriteExcel/ChangeLog,v 1.30 2007/02/08 12:27:00 mcummings Exp $
+
+  08 Feb 2007; Michael Cummings <mcummings@gentoo.org>
+  Spreadsheet-WriteExcel-2.15.ebuild:
+  Backported dep for OLE-StoreageLite to 2.15 for x86 folks, bug 164681
 
 *Spreadsheet-WriteExcel-2.18 (21 Jan 2007)
 
