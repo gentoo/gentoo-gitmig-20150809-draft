@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/edb
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/edb/ChangeLog,v 1.1 2005/09/04 01:51:43 mkennedy Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/edb/ChangeLog,v 1.2 2007/02/08 14:25:00 opfer Exp $
+
+  08 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  files/digest-edb-1.25, Manifest:
+  recreate Manifest
 
 *edb-1.25 (04 Sep 2005)
 
