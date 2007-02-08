@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/slrn
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/slrn/ChangeLog,v 1.7 2005/07/14 20:34:28 swegener Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/slrn/ChangeLog,v 1.8 2007/02/08 23:33:16 swegener Exp $
+
+  08 Feb 2007; Sven Wegener <swegener@gentoo.org> slrn-0.9.8.1.ebuild:
+  Fix slang dependency, bug #141947.
 
   14 Jul 2005; Sven Wegener <swegener@gentoo.org>
   -files/0.9.8.0/slrn-0.9.8.0-mime.diff,

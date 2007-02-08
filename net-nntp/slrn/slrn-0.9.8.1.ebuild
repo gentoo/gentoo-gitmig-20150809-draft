@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/slrn/slrn-0.9.8.1.ebuild,v 1.6 2005/07/14 20:38:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/slrn/slrn-0.9.8.1.ebuild,v 1.7 2007/02/08 23:33:16 swegener Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ IUSE="ssl nls unicode uudeview"
 
 RDEPEND="virtual/mta
 	>=app-arch/sharutils-4.2.1
-	>=sys-libs/slang-1.4.9-r1
+	=sys-libs/slang-1.4*
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
 DEPEND="${RDEPEND}
 	uudeview? ( dev-libs/uulib )
