@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/caps/caps-20060612.ebuild,v 1.5 2007/02/04 18:32:15 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/caps/caps-20060612.ebuild,v 1.6 2007/02/08 08:37:25 nyhm Exp $
 
 use amd64 && ABI=x86
 inherit eutils multilib
@@ -11,39 +11,41 @@ SRC_URI="mirror://gentoo/ipfdevlib_linux-${PV}.tgz
 	doc? ( mirror://gentoo/ipfdoc102a.zip )
 	mirror://gentoo/config_uae_ocs13_512c-512s.zip"
 
-DEPEND="app-arch/unzip"
 LICENSE="CAPS"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="doc"
-RESTRICT="nostrip"
+RESTRICT="strip"
 
-S="${WORKDIR}"
+DEPEND="app-arch/unzip"
+RDEPEND=""
+
+S=${WORKDIR}
 
 src_install() {
 	insinto /usr/include/caps
-	doins ipfdevlib_linux/include/caps/capsimage.h
+	doins ipfdevlib_linux/include/caps/capsimage.h || die
 
 	case ${ARCH} in
 		ppc)
-			dolib.so ipfdevlib_linux/lib/ppc/libcapsimage.so.2.0
-			dobin ipfdevlib_linux/examples/ppc/ipfinfo
+			dolib.so ipfdevlib_linux/lib/ppc/libcapsimage.so.2.0 || die
+			dobin ipfdevlib_linux/examples/ppc/ipfinfo || die
 			;;
 		x86|amd64)
-			dolib.so ipfdevlib_linux/lib/i686/libcapsimage.so.2.0
-			dobin ipfdevlib_linux/examples/i686/ipfinfo
+			dolib.so ipfdevlib_linux/lib/i686/libcapsimage.so.2.0 || die
+			dobin ipfdevlib_linux/examples/i686/ipfinfo || die
 			;;
 		*)
 			eerror "Unsupported platform"
 			;;
 	esac
-	dosym /usr/$(get_libdir)/libcapsimage.so.2.0 /usr/$(get_libdir)/libcapsimage.so.2
+	dosym /usr/$(get_libdir)/libcapsimage.so.2.0 \
+		/usr/$(get_libdir)/libcapsimage.so.2
 
 	insinto /usr/share/${PN}
-	doins OCS_13_1Mb_800_600.uae
-	doins ipfdevlib_linux/examples/ipfinfo.c
+	doins OCS_13_1Mb_800_600.uae || die
+	doins ipfdevlib_linux/examples/ipfinfo.c || die
 
 	use doc && dodoc CAPSLib102a-40.pdf
-	cd ${S}/ipfdevlib_linux
-	dodoc HISTORY README || die "doc installation failed"
+	dodoc ipfdevlib_linux/{HISTORY,README}
 }
