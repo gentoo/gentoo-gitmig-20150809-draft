@@ -1,6 +1,9 @@
 # ChangeLog for games-action/clanbomber
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/ChangeLog,v 1.6 2005/09/26 17:12:40 wolf31o2 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/ChangeLog,v 1.7 2007/02/08 20:50:05 wolf31o2 Exp $
+
+  08 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   26 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   clanbomber-1.05.ebuild:
