@@ -1,18 +1,15 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.16.1.ebuild,v 1.4 2007/01/28 03:50:58 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.16.3.ebuild,v 1.1 2007/02/08 14:06:32 leio Exp $
 
-WANT_AUTOMAKE=1.9
-WANT_AUTOCONF=2.5
-
-inherit eutils gnome2 multilib autotools
+inherit eutils gnome2 multilib
 
 DESCRIPTION="GNOME webbrowser based on the mozilla rendering engine"
 HOMEPAGE="http://www.gnome.org/projects/epiphany/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc python"
 
 RDEPEND=">=dev-libs/glib-2.12
@@ -58,14 +55,6 @@ src_unpack() {
 	gnome2_src_unpack
 
 	epatch ${FILESDIR}/${PN}-1.9.2-broken-firefox.patch
-	# Fix search from URL bar with FF2.  Requres a rebuild. bug #153902
-	epatch ${FILESDIR}/${P}-firefox2.patch
-	# Allow to build with dbus 1.0.  Bug #155380
-	epatch ${FILESDIR}/${P}-dbus-1.patch
-
-	cp aclocal.m4 old_macros.m4
-	AT_M4DIR=". ${S}/m4" \
-	eautoreconf || die "Failed to reconfigure"
 }
 
 src_compile() {
