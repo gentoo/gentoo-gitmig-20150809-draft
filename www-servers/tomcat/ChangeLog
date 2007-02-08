@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.117 2007/02/04 01:41:46 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.118 2007/02/08 15:21:51 wltjr Exp $
+
+*tomcat-6.0.9_beta (08 Feb 2007)
+
+  08 Feb 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -tomcat-6.0.7_beta-r6.ebuild, -tomcat-6.0.8_alpha-r3.ebuild,
+  -tomcat-6.0.9_alpha.ebuild, +tomcat-6.0.9_beta.ebuild:
+  Bump to latest beta, removed older versions
 
   04 Feb 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   tomcat-5.0.28-r14.ebuild, tomcat-5.5.20-r8.ebuild,

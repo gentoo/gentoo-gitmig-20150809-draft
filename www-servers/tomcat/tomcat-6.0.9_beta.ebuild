@@ -1,15 +1,14 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.9_alpha.ebuild,v 1.2 2007/02/04 01:41:46 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.9_beta.ebuild,v 1.1 2007/02/08 15:21:51 wltjr Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="Tomcat Servlet-2.5/JSP-2.1 Container"
 
-MY_P="apache-${P/_alpha/}-src"
+MY_P="apache-${P/_beta/}-src"
 SLOT="6"
-#SRC_URI="mirror://apache/${PN}/${PN}-6/v${PV/_/-}/src/${MY_P}.tar.gz"
-SRC_URI="http://people.apache.org/~remm/tomcat-6/v6.0.9/src/apache-tomcat-6.0.9-src.tar.gz"
+SRC_URI="mirror://apache/${PN}/${PN}-6/v${PV/_/-}/src/${MY_P}.tar.gz"
 HOMEPAGE="http://tomcat.apache.org/"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 LICENSE="Apache-2.0"
