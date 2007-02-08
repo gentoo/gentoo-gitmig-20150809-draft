@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ragel-5.17.ebuild,v 1.1 2007/02/07 12:49:40 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ragel-5.17-r1.ebuild,v 1.1 2007/02/08 12:38:50 twp Exp $
 
 inherit eutils
 
-DESCRIPTION="This is a sample skeleton ebuild file"
+DESCRIPTION="Compiles finite state machines from regular languages into executable code."
 HOMEPAGE="http://www.cs.queensu.ca/~thurston/ragel/"
 SRC_URI="http://www.cs.queensu.ca/~thurston/ragel/${P}.tar.gz"
 LICENSE="GPL-2"
@@ -13,7 +13,7 @@ KEYWORDS="~x86"
 IUSE="doc vim-syntax"
 DEPEND="
 	doc? (
-		app-text/tetex
+		virtual/tetex
 		media-gfx/transfig
 	)"
 RDEPEND=""
@@ -31,8 +31,8 @@ src_install() {
 	dodoc ChangeLog CREDITS README TODO
 	use doc && \
 		install -m 644 -D doc/ragel-guide.pdf \
-			${D}/usr/share/doc/${PF}/ragel-guide.pdf
+			"${D}/usr/share/doc/${PF}/ragel-guide.pdf"
 	use vim-syntax && \
 		install -m 644 -D ragel.vim \
-			${D}/usr/share/vim/vimfiles/syntax/ragel.vim
+			"${D}/usr/share/vim/vimfiles/syntax/ragel.vim"
 }
