@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/buildbot
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.4 2006/11/02 20:03:49 marienz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.5 2007/02/08 03:39:35 marienz Exp $
+
+*buildbot-0.7.5 (08 Feb 2007)
+
+  08 Feb 2007; Marien Zwart <marienz@gentoo.org> +buildbot-0.7.5.ebuild:
+  Version bump, also fixing bug #153835 (thanks to jhmartin for reporting).
 
   02 Nov 2006; Marien Zwart <marienz@gentoo.org> files/buildbot.initd:
   Do not say "buildslave" in the buildmaster startup script. Spotted by
