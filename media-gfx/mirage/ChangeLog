@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/mirage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mirage/ChangeLog,v 1.5 2007/01/23 08:29:03 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mirage/ChangeLog,v 1.6 2007/02/08 13:02:07 corsair Exp $
+
+  08 Feb 2007; Markus Rothe <corsair@gentoo.org> mirage-0.8.3.ebuild:
+  Added ~ppc64/~ppc
 
 *mirage-0.8.3 (23 Jan 2007)
 
