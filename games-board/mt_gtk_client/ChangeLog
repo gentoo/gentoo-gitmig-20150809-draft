@@ -1,6 +1,9 @@
 # ChangeLog for games-board/mt_gtk_client
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mt_gtk_client/ChangeLog,v 1.3 2004/06/24 22:20:06 agriffis Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/mt_gtk_client/ChangeLog,v 1.4 2007/02/08 21:01:38 wolf31o2 Exp $
+
+  08 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *mt_gtk_client-0.1.98 (13 Jul 2003)
 
