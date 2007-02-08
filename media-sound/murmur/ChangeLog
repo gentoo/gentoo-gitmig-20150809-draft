@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/murmur
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.1 2007/01/20 17:17:03 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.2 2007/02/08 18:48:24 drizzt Exp $
+
+  08 Feb 2007; Timothy Redaelli <drizzt@gentoo.org> murmur-0.9.4.ebuild:
+  Fix speex depend thanks to Gorch wrt bug #165927
 
 *murmur-0.9.4 (20 Jan 2007)
 

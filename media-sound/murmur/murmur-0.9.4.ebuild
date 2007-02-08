@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-0.9.4.ebuild,v 1.1 2007/01/20 17:17:03 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-0.9.4.ebuild,v 1.2 2007/02/08 18:48:24 drizzt Exp $
 
 inherit eutils toolchain-funcs
 
@@ -17,7 +17,7 @@ IUSE=""
 
 DEPEND="dev-libs/boost
 	=x11-libs/qt-4*
-	media-libs/speex
+	>=media-libs/speex-1.1.12
 	media-libs/alsa-lib
 	x11-libs/libXevie"
 
