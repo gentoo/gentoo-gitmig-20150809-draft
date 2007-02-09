@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.365 2007/02/05 22:20:54 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.366 2007/02/09 13:30:18 plasmaroo Exp $
+
+  09 Feb 2007; Tim Yamin <plasmaroo@gentoo.org>
+  gentoo-sources-2.6.19-r6.ebuild:
+  Keyword ~ia64.
 
 *gentoo-sources-2.6.19-r6 (05 Feb 2007)
 
