@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.244 2007/02/08 20:01:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.245 2007/02/09 14:59:16 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  kdemultimedia-3.5.6.ebuild:
+  Temporarily skip the alsa-tests patch until it's fixed.
 
   08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   files/kdemultimedia-3.5.6-alsa-tests.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.5.6.ebuild,v 1.6 2007/02/07 02:15:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.5.6.ebuild,v 1.7 2007/02/09 14:59:16 flameeyes Exp $
 
 inherit kde-dist flag-o-matic
 
@@ -34,8 +34,8 @@ RDEPEND="${DEPEND}
 DEPEND="${DEPEND}
 	dev-util/pkgconfig"
 
-PATCHES="${FILESDIR}/kdemultimedia-3.5.5+flac-1.1.3.patch
-	${FILESDIR}/${P}-alsa-tests.patch"
+PATCHES="${FILESDIR}/kdemultimedia-3.5.5+flac-1.1.3.patch"
+#	${FILESDIR}/${P}-alsa-tests.patch"
 
 pkg_setup() {
 	kde_pkg_setup
