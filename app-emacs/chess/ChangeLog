@@ -1,6 +1,16 @@
 # ChangeLog for app-emacs/chess
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/ChangeLog,v 1.9 2006/12/04 11:40:43 opfer Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/ChangeLog,v 1.10 2007/02/09 00:26:28 opfer Exp $
+
+*chess-2.0_beta5-r1 (09 Feb 2007)
+
+  09 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  chess-2.0_beta5.ebuild, +chess-2.0_beta5-r1.ebuild:
+  added some quotes overall; revision bump: dependency on emacs-cvs because of
+  tree-widget.el only available there; for stable package: removal of
+  scid-browser.el, as it uses unavailable package tree-widget and is just an
+  example file; fixes bug 151474, reported by Patrick Lauer
+  <bugs@dev.gentooexperimental.org>
 
   04 Dec 2006; Christian Faulhammer <opfer@gentoo.org>
   -chess-2.0_beta3.ebuild:
