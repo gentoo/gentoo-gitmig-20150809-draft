@@ -1,10 +1,49 @@
-MD5 34cd56cc840bd31554a455175bdea39d ChangeLog 2763
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX 2.0.20.1-r1/teamspeak2-server.rc6 1006 RMD160 3fd3f2de11c03c8f267f7cd13be061138f138714 SHA1 34f291e413ce53791957d93670465f736a765b4b SHA256 a9756afabfed5af084284ff3e689bb407f1e699cae391f06e003c5a40c5e1e5a
 MD5 19d949737c7a69c8d03b4054a06be23e files/2.0.20.1-r1/teamspeak2-server.rc6 1006
-MD5 9ea73cb7d7ab9d82d18ed112ba6e5435 files/digest-teamspeak2-server-bin-2.0.19.40 74
-MD5 5b1551eea3ebab04fd4494431f4ca03c files/digest-teamspeak2-server-bin-2.0.20.1 74
-MD5 5b1551eea3ebab04fd4494431f4ca03c files/digest-teamspeak2-server-bin-2.0.20.1-r1 74
+RMD160 3fd3f2de11c03c8f267f7cd13be061138f138714 files/2.0.20.1-r1/teamspeak2-server.rc6 1006
+SHA256 a9756afabfed5af084284ff3e689bb407f1e699cae391f06e003c5a40c5e1e5a files/2.0.20.1-r1/teamspeak2-server.rc6 1006
+AUX teamspeak2-server.rc6 925 RMD160 11c32a84299094427361d83be4aac5196d876b0a SHA1 73f82c2c4c368dc419cb4caf3108650f028221e4 SHA256 9f43a51e79acf3bc070cd3179b60dd4af8750c130b0f0104adf9a94b857e1581
 MD5 19ea411494a0103d83bf56f318f06d04 files/teamspeak2-server.rc6 925
+RMD160 11c32a84299094427361d83be4aac5196d876b0a files/teamspeak2-server.rc6 925
+SHA256 9f43a51e79acf3bc070cd3179b60dd4af8750c130b0f0104adf9a94b857e1581 files/teamspeak2-server.rc6 925
+DIST ts2_server_rc2_201940.tar.bz2 576981 RMD160 f6bd7a776ce0cf98066cec662559cc417342b867 SHA1 9bfc6f48cd812469bc98449e73aefbff1b8d1ecc SHA256 931695e7bcf7037166139bf6c62271cacc2a5e39874a961d6047dd2dec40225a
+DIST ts2_server_rc2_20201.tar.bz2 1112816 RMD160 7fbafd77bcd1b0765de97ae1401e8ac30740a6aa SHA1 bb53e9ed76b3364d046ac7a709853161bfdb35a5 SHA256 f7ca4319e14ecd467bd70a04452069d505e2812c888c17e9093caf29c4e062c7
+EBUILD teamspeak2-server-bin-2.0.19.40.ebuild 1448 RMD160 17b3640385979253a246e40a477d7adf89b9ef6b SHA1 b6d4b82b33cf84f202513f996e0672e0f2153bb1 SHA256 b244600bf7784098fed7ce411711e39bda34f6fecdfb6f1fe58fa68f90a509c9
+MD5 9da89cea0cc5b09e43c9d178b7791ae6 teamspeak2-server-bin-2.0.19.40.ebuild 1448
+RMD160 17b3640385979253a246e40a477d7adf89b9ef6b teamspeak2-server-bin-2.0.19.40.ebuild 1448
+SHA256 b244600bf7784098fed7ce411711e39bda34f6fecdfb6f1fe58fa68f90a509c9 teamspeak2-server-bin-2.0.19.40.ebuild 1448
+EBUILD teamspeak2-server-bin-2.0.20.1-r1.ebuild 2640 RMD160 adde8ce436f1b5e368a532491269a980b861a082 SHA1 7a94c61afcca0370e019018d17b70629328c1cce SHA256 54ac177a1494a62b5450c92fcd59976647f868e5afd2108fd929895f23cfc080
+MD5 7a88d722deb235a4f6876e579e6139a9 teamspeak2-server-bin-2.0.20.1-r1.ebuild 2640
+RMD160 adde8ce436f1b5e368a532491269a980b861a082 teamspeak2-server-bin-2.0.20.1-r1.ebuild 2640
+SHA256 54ac177a1494a62b5450c92fcd59976647f868e5afd2108fd929895f23cfc080 teamspeak2-server-bin-2.0.20.1-r1.ebuild 2640
+EBUILD teamspeak2-server-bin-2.0.20.1.ebuild 2516 RMD160 a8ffaf5ac9eb064ad3894848f2d1a6f2dd444254 SHA1 2221fe8dcd36a5d25e929f972e85ae9c69b100f7 SHA256 d99f14b47e43dc171700c7112bdf1327508857818fb3c1f4dded39fdb823a459
+MD5 a25999a46fc08dd7ac472f1adc8d18a2 teamspeak2-server-bin-2.0.20.1.ebuild 2516
+RMD160 a8ffaf5ac9eb064ad3894848f2d1a6f2dd444254 teamspeak2-server-bin-2.0.20.1.ebuild 2516
+SHA256 d99f14b47e43dc171700c7112bdf1327508857818fb3c1f4dded39fdb823a459 teamspeak2-server-bin-2.0.20.1.ebuild 2516
+MISC ChangeLog 2987 RMD160 e1763de49f0cb86766b4c716bebb7585c3b75d48 SHA1 489380812ccca2ec156913ee155765e5242e7cfc SHA256 d41c8e8d5e461648c5d74c5dcf719d3f5c52915bdc9775ab1c9955fcd17e0f0a
+MD5 2087fd8373cdba2cf648b17254582ab4 ChangeLog 2987
+RMD160 e1763de49f0cb86766b4c716bebb7585c3b75d48 ChangeLog 2987
+SHA256 d41c8e8d5e461648c5d74c5dcf719d3f5c52915bdc9775ab1c9955fcd17e0f0a ChangeLog 2987
+MISC metadata.xml 158 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e SHA1 703cea5a2109d41f7c87993c1f01d418a4c85174 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 3174551d87cb5495819d5f77767bbe5c teamspeak2-server-bin-2.0.19.40.ebuild 1428
-MD5 87fe763ab79d27baca64bf35db0a66dd teamspeak2-server-bin-2.0.20.1-r1.ebuild 2616
-MD5 41962588ac6f0a66154e131e2840cb91 teamspeak2-server-bin-2.0.20.1.ebuild 2492
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 7e6b9bcb6b924e58171134c913e5df9c files/digest-teamspeak2-server-bin-2.0.19.40 268
+RMD160 273e4cc44f3fea13074948ee3a1eed61e581fea9 files/digest-teamspeak2-server-bin-2.0.19.40 268
+SHA256 2340110063648e3d489e201bbb9c979a89d0cae6b81d7fc12a3bc41bacc35538 files/digest-teamspeak2-server-bin-2.0.19.40 268
+MD5 a6e2fa3a9813410fefc53f23b08b9627 files/digest-teamspeak2-server-bin-2.0.20.1 268
+RMD160 db0e16c3f817b372a56fe85eda8db4af900ac0ac files/digest-teamspeak2-server-bin-2.0.20.1 268
+SHA256 674fa6cb7c476b9b5ebb28883aa149a220755810f4bb2307e39fe6451129e001 files/digest-teamspeak2-server-bin-2.0.20.1 268
+MD5 a6e2fa3a9813410fefc53f23b08b9627 files/digest-teamspeak2-server-bin-2.0.20.1-r1 268
+RMD160 db0e16c3f817b372a56fe85eda8db4af900ac0ac files/digest-teamspeak2-server-bin-2.0.20.1-r1 268
+SHA256 674fa6cb7c476b9b5ebb28883aa149a220755810f4bb2307e39fe6451129e001 files/digest-teamspeak2-server-bin-2.0.20.1-r1 268
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.2 (GNU/Linux)
+
+iD8DBQFFzAYOAiZjviIA2XgRAt6zAKDaRO7EywbaGnPN/1lzdWAGVEREsgCghYsz
+XHAwGlBMSxlwHDh1F7lamaw=
+=5Jmf
+-----END PGP SIGNATURE-----
