@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libtifiles
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libtifiles/ChangeLog,v 1.5 2006/03/15 04:41:03 ribosome Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libtifiles/ChangeLog,v 1.6 2007/02/09 05:24:50 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *libtifiles-0.6.6 (15 Mar 2006)
 
