@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/safestr
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/safestr/ChangeLog,v 1.6 2005/05/06 12:01:18 ka0ttic Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/safestr/ChangeLog,v 1.7 2007/02/09 02:36:54 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   06 May 2005; Aaron Walker <ka0ttic@gentoo.org> safestr-1.0.3.ebuild:
   Stable on x86.

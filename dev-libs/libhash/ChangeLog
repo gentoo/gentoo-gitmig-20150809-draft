@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libhash
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhash/ChangeLog,v 1.4 2005/06/14 22:50:21 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhash/ChangeLog,v 1.5 2007/02/09 02:30:32 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *libhash-1.0.3 (14 Jun 2005)
 

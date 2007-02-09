@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libip_vs_user_sync
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libip_vs_user_sync/ChangeLog,v 1.4 2005/01/21 21:49:53 xmerlin Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libip_vs_user_sync/ChangeLog,v 1.5 2007/02/09 02:31:45 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   22 Jan 2005; Christian Zoffoli <xmerlin@gentoo.org> +metadata.xml,
   libip_vs_user_sync-1.0.0.ebuild:

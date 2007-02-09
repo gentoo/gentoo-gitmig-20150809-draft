@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmal
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmal/ChangeLog,v 1.14 2006/03/04 05:28:28 chriswhite Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmal/ChangeLog,v 1.15 2007/02/09 02:32:10 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   04 Mar 2006; Chris White <chriswhite@gentoo.org> -libmal-0.40.ebuild:
   Removed package.mask'ed version, as this will be replaced by opensync

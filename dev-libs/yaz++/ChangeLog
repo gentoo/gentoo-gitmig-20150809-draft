@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/yaz++
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz++/ChangeLog,v 1.4 2005/09/19 22:36:10 halcy0n Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz++/ChangeLog,v 1.5 2007/02/09 02:42:01 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   19 Sep 2005; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
   Adding to cpp herd

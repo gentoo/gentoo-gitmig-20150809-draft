@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libiiimcf
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiiimcf/ChangeLog,v 1.8 2005/04/16 13:17:00 usata Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiiimcf/ChangeLog,v 1.9 2007/02/09 02:31:00 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   16 Apr 2005; Mamoru KOMACHI <usata@gentoo.org>
   -libiiimcf-12.0.1_pre1891.ebuild, libiiimcf-12.1_p2002.ebuild:

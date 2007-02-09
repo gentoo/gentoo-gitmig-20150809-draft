@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmimedir
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmimedir/ChangeLog,v 1.7 2006/01/11 06:29:23 chriswhite Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmimedir/ChangeLog,v 1.8 2007/02/09 02:32:39 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *libmimedir-0.4 (11 Jan 2006)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/tc2
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tc2/ChangeLog,v 1.9 2005/12/16 12:02:34 flameeyes Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tc2/ChangeLog,v 1.10 2007/02/09 02:38:55 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> tc2-0.6.0.ebuild:
   Remove --with-gnu-ld option, bug #108386.
