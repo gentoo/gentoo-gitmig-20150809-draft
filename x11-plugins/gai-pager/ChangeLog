@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gai-pager
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gai-pager/ChangeLog,v 1.5 2004/10/08 18:40:43 lordvan Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gai-pager/ChangeLog,v 1.6 2007/02/09 06:23:16 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   08 Oct 2004; root <root@gentoo.org> gai-pager-0.2-r1.ebuild,
   gai-pager-0.2.ebuild:

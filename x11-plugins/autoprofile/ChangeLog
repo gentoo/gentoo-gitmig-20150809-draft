@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/autoprofile
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/autoprofile/ChangeLog,v 1.17 2005/12/12 20:47:20 halcy0n Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/autoprofile/ChangeLog,v 1.18 2007/02/09 06:22:53 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   12 Dec 2005; Mark Loeser <halcy0n@gentoo.org>
   +files/autoprofile-2.10-gcc4.patch, autoprofile-2.10.ebuild:
