@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/jcvs
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jcvs/ChangeLog,v 1.3 2005/05/15 16:18:45 luckyduck Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jcvs/ChangeLog,v 1.4 2007/02/09 03:13:19 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   15 May 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
   jcvs-5.4.2.ebuild:

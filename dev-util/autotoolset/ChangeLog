@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/autotoolset
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/autotoolset/ChangeLog,v 1.5 2006/01/01 20:57:11 metalgod Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/autotoolset/ChangeLog,v 1.6 2007/02/09 03:01:11 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   01 Jan 2006; Luis Medinas <metalgod@gentoo.org>
   autotoolset-0.11.4-r1.ebuild:

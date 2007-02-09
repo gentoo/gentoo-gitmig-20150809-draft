@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ladebug
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ladebug/ChangeLog,v 1.6 2004/07/02 05:09:50 eradicator Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ladebug/ChangeLog,v 1.7 2007/02/09 03:14:04 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   ladebug-4.0.67.ebuild:

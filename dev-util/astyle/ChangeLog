@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/astyle
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/ChangeLog,v 1.15 2005/11/05 20:48:35 grobian Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/ChangeLog,v 1.16 2007/02/09 03:00:38 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   05 Nov 2005; Fabian Groffen <grobian@gentoo.org> astyle-1.15.3-r1.ebuild:
   Marked ~ppc-macos (bug #111585)

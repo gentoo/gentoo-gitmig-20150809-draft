@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/leaktracer
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/leaktracer/ChangeLog,v 1.8 2005/09/19 22:36:59 halcy0n Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/leaktracer/ChangeLog,v 1.9 2007/02/09 03:14:28 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   19 Sep 2005; Mark Loeser <halcy0n@gentoo.org> +metadata.xml:
   Adding to cpp herd

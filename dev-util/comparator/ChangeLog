@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/comparator
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/comparator/ChangeLog,v 1.8 2005/09/13 21:49:15 dang Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/comparator/ChangeLog,v 1.9 2007/02/09 03:03:45 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   13 Sep 2005; <dang@gentoo.org> comparator-2.2.ebuild:
   Marked ~amd64

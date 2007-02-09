@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/aap
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aap/ChangeLog,v 1.21 2005/10/29 17:24:34 grobian Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aap/ChangeLog,v 1.22 2007/02/09 02:59:49 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   29 Oct 2005; Fabian Groffen <grobian@gentoo.org> aap-1.076.ebuild:
   Marked ~ppc-macos (bug #109955)

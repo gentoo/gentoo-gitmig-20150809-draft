@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/jscalltree
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jscalltree/ChangeLog,v 1.5 2005/10/31 21:59:56 g2boojum Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jscalltree/ChangeLog,v 1.6 2007/02/09 03:13:48 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   31 Oct 2005; Grant Goodyear <g2boojum@gentoo.org> jscalltree-2.3.ebuild:
   Update to satisfy bug #96547 (thanks to Georg Sauthoff!).  No version bump
