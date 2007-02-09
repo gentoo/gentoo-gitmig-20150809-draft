@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2580 2007/02/08 18:39:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2581 2007/02/09 00:21:39 opfer Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -102,6 +102,7 @@ app-editors/xemacs:dnd - Enables support for the x11-libs/dnd drag-n-drop librar
 app-editors/xemacs:eolconv - Support detection and translation of newline conventions.
 app-editors/xemacs:pop - Support POP for mail retrieval.
 app-emacs/auctex:preview-latex - Use bundled preview-latex
+app-emacs/chess:festival - Enable festival support
 app-emacs/delicious:planner - Include support for app-emacs/planner
 app-emacs/remember:bbdb - Include support for app-emacs/bbdb
 app-emacs/remember:planner - Include support for app-emacs/planner
