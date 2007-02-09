@@ -2,10 +2,10 @@ AUX tracker-0.5.3-convert-pdf-thumbnailer.patch 366 RMD160 23b7ac2c22883c271d075
 MD5 7e360c7d27a8846ce73ac4e72075475f files/tracker-0.5.3-convert-pdf-thumbnailer.patch 366
 RMD160 23b7ac2c22883c271d0751af39aa08b8a1eba8de files/tracker-0.5.3-convert-pdf-thumbnailer.patch 366
 SHA256 54f512506afbdf73b017c2a53e1d13b84ace07ea0001453fbf87ca4c70c16058 files/tracker-0.5.3-convert-pdf-thumbnailer.patch 366
-AUX tracker-0.5.4-deskbar-encoding.patch 504 RMD160 c96859e3c6c1aef4f7c3d61c35cc4953efe58f4d SHA1 1f96bcd97c7570ffc60f1c7205a274fef65e10e3 SHA256 20dc3e50fc0a3aac5db245404bbdb069c114ff678776e28e0529ae01041a8d12
-MD5 860655715e476ba7cbee8bb0aa5f8c44 files/tracker-0.5.4-deskbar-encoding.patch 504
-RMD160 c96859e3c6c1aef4f7c3d61c35cc4953efe58f4d files/tracker-0.5.4-deskbar-encoding.patch 504
-SHA256 20dc3e50fc0a3aac5db245404bbdb069c114ff678776e28e0529ae01041a8d12 files/tracker-0.5.4-deskbar-encoding.patch 504
+AUX tracker-0.5.4-deskbar-encoding.patch 357 RMD160 c100b36dd935ee495ec4e7238336d6791d8980cb SHA1 fcd9ed58bf3d1eedf7106610991191d75df89d4d SHA256 e579ace9d721868a5ff9b00d6d87b8746354fe6976aee2a402e4022b2603a682
+MD5 c5282ebb9ef50df47cb3d149a7938193 files/tracker-0.5.4-deskbar-encoding.patch 357
+RMD160 c100b36dd935ee495ec4e7238336d6791d8980cb files/tracker-0.5.4-deskbar-encoding.patch 357
+SHA256 e579ace9d721868a5ff9b00d6d87b8746354fe6976aee2a402e4022b2603a682 files/tracker-0.5.4-deskbar-encoding.patch 357
 AUX tracker-0.5.4-deskbar-handler.patch 1411 RMD160 e6fee8bf122be181f5c18359c682317044530884 SHA1 06de5e6358cb331744d703aca42968f82d359e21 SHA256 0a23fcfcbfc262dcb8464b2408e63d799b96dad497b824037767e1d503a6eaf8
 MD5 7aeda4450683b41a82b896039f773c65 files/tracker-0.5.4-deskbar-handler.patch 1411
 RMD160 e6fee8bf122be181f5c18359c682317044530884 files/tracker-0.5.4-deskbar-handler.patch 1411
@@ -19,10 +19,10 @@ EBUILD tracker-0.5.4.ebuild 3928 RMD160 3e08edef6a3079e3c65beb14d8e6dfec33e93a5a
 MD5 daf241599ebfa9bdc6c906728af94650 tracker-0.5.4.ebuild 3928
 RMD160 3e08edef6a3079e3c65beb14d8e6dfec33e93a5a tracker-0.5.4.ebuild 3928
 SHA256 cdc8ec1d1d8e1225b965094a0c43d240283e5e794d49aeae415650a46e6b84ac tracker-0.5.4.ebuild 3928
-MISC ChangeLog 2396 RMD160 90a04f4e2a93a1ac24ea4cd6387373ccc59685c6 SHA1 815a40ccec32dbf216c475fc9c82477a5116158b SHA256 2109c0582cae4ed4207b7028f0724c258b4f77ba669b24afdc86cff13c04fb68
-MD5 981cc1ae0b5cc24850aa42804701f03a ChangeLog 2396
-RMD160 90a04f4e2a93a1ac24ea4cd6387373ccc59685c6 ChangeLog 2396
-SHA256 2109c0582cae4ed4207b7028f0724c258b4f77ba669b24afdc86cff13c04fb68 ChangeLog 2396
+MISC ChangeLog 2524 RMD160 8d2229b1c1e6751d3b0b515189180d7df5931f27 SHA1 1d5c1793c4e80784df7aa1ae01351d11b13f3dac SHA256 98d2e72038b5f068d5fe6d3a6c852c94b00f0503030c3dfb1dd93269be9b5ea8
+MD5 1d738abe45fb64548a84f6001337856d ChangeLog 2524
+RMD160 8d2229b1c1e6751d3b0b515189180d7df5931f27 ChangeLog 2524
+SHA256 98d2e72038b5f068d5fe6d3a6c852c94b00f0503030c3dfb1dd93269be9b5ea8 ChangeLog 2524
 MISC metadata.xml 311 RMD160 868d0eab62db916aa47b7f440a3f4efecc6163b1 SHA1 0e56da7be32af7c553c07179c574cd7837298702 SHA256 774cc71e08a317563fb2700d5aac76af10e3e31ae7c1c58325730bfa0fbb110a
 MD5 def57195a8a8fbc9ff84bded4f4c6772 metadata.xml 311
 RMD160 868d0eab62db916aa47b7f440a3f4efecc6163b1 metadata.xml 311
