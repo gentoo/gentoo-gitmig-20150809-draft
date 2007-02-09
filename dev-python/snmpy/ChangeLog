@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/snmpy
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snmpy/ChangeLog,v 1.8 2004/06/25 01:50:22 agriffis Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snmpy/ChangeLog,v 1.9 2007/02/09 07:40:43 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   03 Sep 2003; Alastair Tse <liquidx@gentoo.org> snmpy-1.0_alpha4.ebuild:
   changed dep to virtual/snmp to allow using net-snmp or ucd-snmp (#27316)

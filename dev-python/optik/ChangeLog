@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/optik
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/optik/ChangeLog,v 1.23 2005/10/02 14:11:53 agriffis Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/optik/ChangeLog,v 1.24 2007/02/09 07:38:38 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> optik-1.5.ebuild:
   Mark 1.5 stable on ia64
