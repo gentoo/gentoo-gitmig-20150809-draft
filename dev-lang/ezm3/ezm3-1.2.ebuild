@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ezm3/ezm3-1.2.ebuild,v 1.4 2005/08/24 00:22:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ezm3/ezm3-1.2.ebuild,v 1.5 2007/02/09 07:34:10 flameeyes Exp $
 
 inherit eutils
 
@@ -8,8 +8,8 @@ DESCRIPTION="stripped down m3 compiler for building cvsup"
 HOMEPAGE="http://www.polstra.com/projects/freeware/ezm3/"
 SRC_URI="ftp://ftp.freebsd.org/pub/FreeBSD/development/CVSup/ezm3/${P}-src.tar.bz2
 	x86? ( ftp://ftp.freebsd.org/pub/FreeBSD/development/CVSup/ezm3/${P}-LINUXLIBC6-boot.tar.bz2 )
-	ppc? ( mirror://gentoo/${P}-PPC_LINUX-boot.tar.bz2 )
-	mirror://gentoo/${P}-PPC_LINUX.patch.bz2"
+	ppc? ( http://dev.gentoo.org/~vapier/${PN}/${PV}/${P}-PPC_LINUX-boot.tar.bz2 )
+	http://dev.gentoo.org/~vapier/${PN}/${PV}/${P}-PPC_LINUX.patch.bz2"
 
 LICENSE="BSD"
 SLOT="0"
@@ -53,8 +53,8 @@ src_compile() {
 	# now we disable X and OpenGL if the user doesnt have them in their USE var
 	sed -i \
 		-e "s:/usr/local:/usr:" \
-	 	-e "s:touch:ranlib:" \
-	 	-e "s:`seduse X 'import_X11():import_X11() is\nend\nproc dont_import_X11()'`:" \
+		-e "s:touch:ranlib:" \
+		-e "s:`seduse X 'import_X11():import_X11() is\nend\nproc dont_import_X11()'`:" \
 		-e "s:`seduse opengl 'import_OpenGL():import_OpenGL() is\nend\nproc dont_import_OpenGL()'`:" \
 		m3config/src/COMMON \
 		|| die "sed COMMON failed"
