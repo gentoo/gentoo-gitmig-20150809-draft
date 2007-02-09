@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sbd
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sbd/ChangeLog,v 1.2 2005/10/14 12:16:03 swegener Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sbd/ChangeLog,v 1.3 2007/02/09 04:07:49 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *sbd-1.37 (25 Aug 2005)
 
