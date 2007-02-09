@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6791 2007/02/09 18:10:05 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6792 2007/02/09 18:10:51 betelgeuse Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,7 +21,7 @@
 ##   End example
 ##
 
-# Petteri Räty <betelgeuse@gentoo.org> (09 Nov 2006)
+# Petteri Räty <betelgeuse@gentoo.org> (09 Feb 2007)
 # Commercial package whose maintainer is MIA.
 # Still uses Manifest1 and is one major version behind.
 # Target removal 2007-03-09 or earlier if 2007.1 snapshot
