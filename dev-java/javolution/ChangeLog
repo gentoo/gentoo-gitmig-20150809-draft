@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/javolution
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javolution/ChangeLog,v 1.5 2005/07/15 22:22:33 axxo Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javolution/ChangeLog,v 1.6 2007/02/09 01:58:15 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   15 Jul 2005; Thomas Matthijs <axxo@gentoo.org> javolution-2.2.0.ebuild,
   javolution-2.2.4.ebuild, javolution-3.2.4.ebuild:
