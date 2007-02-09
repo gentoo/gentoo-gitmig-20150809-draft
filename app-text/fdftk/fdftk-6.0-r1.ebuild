@@ -1,12 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fdftk/fdftk-6.0-r1.ebuild,v 1.6 2005/01/01 16:14:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fdftk/fdftk-6.0-r1.ebuild,v 1.7 2007/02/09 09:31:31 robbat2 Exp $
 
 MY_P="FDFToolkitForUnix"
 At="${MY_P}.tar.gz"
 
 DESCRIPTION="Acrobat FDF Toolkit"
-HOMEPAGE="http://partners.adobe.com/asn/acrobat/forms.jsp"
+HOMEPAGE="http://www.adobe.com/devnet/acrobat/fdftoolkit.html"
 SRC_URI="${At}"
 
 SLOT="0"
@@ -21,9 +21,10 @@ IUSE=""
 S=${WORKDIR}/${MY_P}
 
 pkg_nofetch() {
-	einfo "Please download ${At} from:"
-	einfo ${HOMEPAGE}
-	einfo "and move it to ${DISTDIR}"
+	einfo "1. Visit ${HOMEPAGE}"
+	einfo "2. Review EULA"
+	einfo "3. Download ${At}"
+	einfo "4. Move ${At} to ${DISTDIR}"
 }
 
 src_unpack() {
