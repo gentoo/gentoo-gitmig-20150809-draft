@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/exuserfolder
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/exuserfolder/ChangeLog,v 1.4 2004/06/25 01:20:40 agriffis Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/exuserfolder/ChangeLog,v 1.5 2007/02/09 08:19:30 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *exuserfolder-0.20.0-r1 (19 Jan 2004)
 
