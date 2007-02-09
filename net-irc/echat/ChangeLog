@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/echat
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/echat/ChangeLog,v 1.9 2005/05/10 22:36:39 swegener Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/echat/ChangeLog,v 1.10 2007/02/09 04:23:59 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   10 May 2005; Sven Wegener <swegener@gentoo.org> echat-0.02-r1.ebuild,
   echat-0.04_beta1.ebuild:

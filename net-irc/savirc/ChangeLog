@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/savirc
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/savirc/ChangeLog,v 1.5 2005/08/07 12:59:16 hansmi Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/savirc/ChangeLog,v 1.6 2007/02/09 04:28:38 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> savirc-1.99.ebuild:
   Stable on ppc.

@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/lostirc
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/ChangeLog,v 1.45 2005/08/18 01:59:31 swegener Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/ChangeLog,v 1.46 2007/02/09 04:25:43 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   18 Aug 2005; Sven Wegener <swegener@gentoo.org> -lostirc-0.4.4.ebuild:
   Removed old ebuild.

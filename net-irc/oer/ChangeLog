@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/oer
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/oer/ChangeLog,v 1.6 2004/12/16 02:55:39 swegener Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/oer/ChangeLog,v 1.7 2007/02/09 04:27:10 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *oer-1.0.66 (16 Dec 2004)
 
