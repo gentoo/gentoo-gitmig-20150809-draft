@@ -1,0 +1,249 @@
+Index: kaffeine-0.8.3/kaffeine/src/main.cpp
+===================================================================
+--- kaffeine-0.8.3.orig/kaffeine/src/main.cpp
++++ kaffeine-0.8.3/kaffeine/src/main.cpp
+@@ -30,8 +30,6 @@
+ #include "kaffeine.h"
+ #include "version.h"
+ 
+-#include <X11/Xlib.h>
+-
+ class KaffeineApp : public KUniqueApplication
+ {
+ public:
+@@ -91,23 +89,6 @@ int main(int argc, char *argv[])
+ 	if (!KaffeineApp::start())
+ 		return 0;
+ 
+-	/*
+-	 * XInitThreads() should the first call to xlib in multithreaded X programs -
+-	 * but because of a bug in some xfree versions that can freeze at startup,
+-	 * we also call XInitThreads() in kxinewidget.cpp
+-	 *
+-	 * kaffeinepart & konqueror: We call XInitThreads() in kxinewidget.cpp, so the part is
+-	 * not stable with buggy X implementations.
+-	 *
+-	 * FIXME: deadline for this workaround is 2007-03-16 --pfister
+-	 */
+-
+-#ifndef XINIT_WKRND /* configure flag --with-xinit-workaround not set */
+-	flush(kdDebug() << "if kaffeine hangs here run 'configure --with-xinit-workaround' and recompile / reinstall ...");
+-	XInitThreads();
+-	kdDebug() << " ok\n";
+-#endif
+-
+ 	KaffeineApp a;
+ 	return a.exec();
+ }
+Index: kaffeine-0.8.3/kaffeine/src/player-parts/xine-part/kxinewidget.cpp
+===================================================================
+--- kaffeine-0.8.3.orig/kaffeine/src/player-parts/xine-part/kxinewidget.cpp
++++ kaffeine-0.8.3/kaffeine/src/player-parts/xine-part/kxinewidget.cpp
+@@ -38,10 +38,6 @@
+ 
+ #include "kxinewidget.h"
+ 
+-#ifdef HAVE_XINERAMA
+-#include <X11/extensions/Xinerama.h>
+-#endif
+-
+ #ifndef USE_QT_ONLY
+ #include "kxinewidget.moc"
+ #include <klocale.h>
+@@ -68,7 +64,7 @@ KXineWidget::KXineWidget(QWidget* parent
+                          bool startManual, bool verbose)
+ 		: QWidget(parent,name), m_startXineManual(startManual), m_xineReady(false),
+ 		m_logoFile(pathToLogoFile), m_preferedAudio(audioDriver), m_preferedVideo(videoDriver), m_xineVerbose(verbose),
+-		m_xineEngine(NULL), m_audioDriver(NULL), m_videoDriver(NULL), m_xineStream(NULL), m_xineDisplay(NULL),
++		m_xineEngine(NULL), m_audioDriver(NULL), m_videoDriver(NULL), m_xineStream(NULL), connection(NULL),
+ 		m_eventQueue(NULL), m_osd(NULL), m_osdUnscaled(false), m_osdShow(false), m_osdSize(0), m_osdFont(NULL),
+ 		m_audioChoices(NULL), m_audioInfo(NULL), m_videoChoices(NULL), m_videoInfo(NULL), m_mixerInfo(NULL),
+ 		m_osdShowInfo(NULL),
+@@ -239,12 +235,12 @@ KXineWidget::~KXineWidget()
+ 		delete [] m_audioChoices;
+ 	}
+ 
+-	if (m_xineDisplay)
++	if (connection)
+ 	{
+ 		debugOut("Close xine display");
+-		XCloseDisplay(m_xineDisplay);  /* close xine display */
++		xcb_disconnect(connection);  /* close xine display */
+ 	}
+-	m_xineDisplay = NULL;
++	connection = NULL;
+ 
+ 	debugOut("xine closed");
+ }
+@@ -831,7 +827,7 @@ void KXineWidget::videoDriverChangedCall
+ 	xine_close_video_driver(vw->m_xineEngine, oldVideoDriver);
+ 
+ 	vw->m_videoDriver = xine_open_video_driver(vw->m_xineEngine,
+-	                    entry->enum_values[entry->num_value], XINE_VISUAL_TYPE_X11,
++	                    entry->enum_values[entry->num_value], XINE_VISUAL_TYPE_XCB,
+ 	                    (void *) &(vw->m_x11Visual));
+ 
+ 	if (!vw->m_videoDriver)
+@@ -840,7 +836,7 @@ void KXineWidget::videoDriverChangedCall
+ 		QApplication::postEvent(vw, new QTimerEvent( TIMER_EVENT_NEW_XINE_ERROR));
+ 		playing = false;
+ 		vw->m_videoDriver = xine_open_video_driver(vw->m_xineEngine,
+-		                    vw->m_videoDriverName.ascii(), XINE_VISUAL_TYPE_X11,
++		                    vw->m_videoDriverName.ascii(), XINE_VISUAL_TYPE_XCB,
+ 		                    (void *) &(vw->m_x11Visual));
+ 	}
+ 	else
+@@ -1012,14 +1008,18 @@ void KXineWidget::fontForOSDMessagesChan
+  *      EVENT LOOP
+  *********************************************/
+ 
+-bool KXineWidget::x11Event(XEvent *event)
++void KXineWidget::paintEvent(QPaintEvent *event)
+ {
+-	if (isXineReady())
+-		if (event->type == Expose)
+-			if (event->xexpose.count == 0)
+-				xine_port_send_gui_data(m_videoDriver, XINE_GUI_SEND_EXPOSE_EVENT, event);
++	if (isXineReady()) {
++		xcb_expose_event_t xcb_event;
++		memset(&xcb_event, 0, sizeof(xcb_event));
+ 
+-	return false;
++		xcb_event.count = 0;
++
++		xine_port_send_gui_data(m_videoDriver, XINE_GUI_SEND_EXPOSE_EVENT, &xcb_event);
++	}
++
++	QWidget::paintEvent(event);
+ }
+ 
+ /**********************************************************
+@@ -1044,39 +1044,17 @@ bool KXineWidget::initXine()
+ 
+ 	/**** INIT XINE DISPLAY  ****/
+ 
+-	XInitThreads();
+-
+-	m_xineDisplay = XOpenDisplay( getenv("DISPLAY") );
++	connection = xcb_connect(NULL, NULL);
+ 
+-	if (!m_xineDisplay)
++	if (!connection)
+ 	{
+ 		emit signalXineFatal(i18n("Failed to connect to X-Server!"));
+ 		return false;
+ 	}
+ 
+-	int m_xineScreen = DefaultScreen(m_xineDisplay);
+-	Window m_xineWindow = winId();
++	int m_xineWindow = winId();
+ 
+-	/* determine display aspect ratio  */
+-	double resHor = ((double) DisplayWidth(m_xineDisplay, m_xineScreen)) / DisplayWidthMM(m_xineDisplay, m_xineScreen);
+-	double resVer = ((double) DisplayHeight(m_xineDisplay, m_xineScreen)) / DisplayHeightMM(m_xineDisplay, m_xineScreen);
+-
+-	m_displayRatio = resVer / resHor;
+-
+-#ifdef HAVE_XINERAMA
+-	int dummy_event, dummy_error;
+-
+-	if (XineramaQueryExtension(m_xineDisplay, &dummy_event, &dummy_error))
+-	{
+-		int count = 1;
+-		debugOut("Xinerama extension present");
+-		XineramaQueryScreens(m_xineDisplay, &count);
+-		debugOut(QString("%1 screens detected").arg(count));
+-		if (count > 1)
+-			/* multihead -> assuming square pixels */
+-			m_displayRatio = 1.0;
+-	}
+-#endif
++	m_displayRatio = 1.0;
+ 
+ 	debugOut(QString("Display aspect ratio (v/h): %1").arg(m_displayRatio));
+ 
+@@ -1188,15 +1166,15 @@ bool KXineWidget::initXine()
+ 	/* init video driver */
+ 	debugOut("Init video driver");
+ 
+-	m_x11Visual.display          = m_xineDisplay;
+-	m_x11Visual.screen           = m_xineScreen;
+-	m_x11Visual.d                = m_xineWindow;
++	m_x11Visual.connection       = connection;
++	m_x11Visual.screen           = xcb_setup_roots_iterator(xcb_get_setup(connection)).data;
++	m_x11Visual.window           = m_xineWindow;
+ 	m_x11Visual.dest_size_cb     = &KXineWidget::destSizeCallback;
+ 	m_x11Visual.frame_output_cb  = &KXineWidget::frameOutputCallback;
+ 	m_x11Visual.user_data        = (void*)this;
+ 
+ 	m_videoDriver = xine_open_video_driver(m_xineEngine,
+-	                                       m_videoDriverName.ascii(),  XINE_VISUAL_TYPE_X11,
++	                                       m_videoDriverName.ascii(),  XINE_VISUAL_TYPE_XCB,
+ 	                                       (void *) &(m_x11Visual));
+ 
+ 	if (!m_videoDriver && m_videoDriverName != "auto")
+@@ -1204,7 +1182,7 @@ bool KXineWidget::initXine()
+ 		emit signalXineError(i18n("Can't init Video Driver '%1' - trying 'auto'...").arg(m_videoDriverName));
+ 		m_videoDriverName = "auto";
+ 		m_videoDriver = xine_open_video_driver(m_xineEngine,
+-		                                       m_videoDriverName.ascii(),  XINE_VISUAL_TYPE_X11,
++		                                       m_videoDriverName.ascii(), XINE_VISUAL_TYPE_XCB,
+ 		                                       (void *) &(m_x11Visual));
+ 	}
+ 
+Index: kaffeine-0.8.3/kaffeine/src/player-parts/xine-part/kxinewidget.h
+===================================================================
+--- kaffeine-0.8.3.orig/kaffeine/src/player-parts/xine-part/kxinewidget.h
++++ kaffeine-0.8.3/kaffeine/src/player-parts/xine-part/kxinewidget.h
+@@ -48,7 +48,6 @@ class QTime;
+ 
+ #include <qtimer.h>
+ #include <qptrlist.h>
+-#include <X11/Xlib.h>
+ #include <xine.h>
+ 
+ #ifndef USE_QT_ONLY
+@@ -57,6 +56,8 @@ class QTime;
+ typedef int PostFilter; /* dummy type */
+ #endif
+ 
++#include <xcb/xcb.h>
++
+ #define SUPPORTED_PROTOCOLS "file,http,mms,mmst,rtsp,rtp,tcp,pnm,cdda,vcd,vcdo,dvd,dvb,pvr,v4l,net,vdr,smb"
+ 
+ #define DEFAULT_TVTIME_CONFIG "tvtime:method=LinearBlend,enabled=1,pulldown=none,framerate_mode=half_top,judder_correction=0,use_progressive_frame_flag=1,chroma_filter=0,cheap_mode=1"
+@@ -308,7 +309,7 @@ protected:
+ 	void initOSD();
+ 
+ private:
+-	bool x11Event(XEvent *);
++	void paintEvent(QPaintEvent *);
+ 
+ 	/********* callbacks and threads ************/
+ 	static void destSizeCallback(void* p, int video_width, int video_height, double video_aspect,
+@@ -363,10 +364,10 @@ protected:
+ 	QStringList m_videoDriverList;
+ 
+ 	/*x11*/
+-	Display* m_xineDisplay;
++	xcb_connection_t* connection;
+ 
+ 	/*xine*/
+-	x11_visual_t m_x11Visual;
++	xcb_visual_t m_x11Visual;
+ 	xine_t* m_xineEngine;
+ 	xine_audio_port_t* m_audioDriver;
+ 	xine_video_port_t* m_videoDriver;
+Index: kaffeine-0.8.3/kaffeine/src/player-parts/xine-part/Makefile.am
+===================================================================
+--- kaffeine-0.8.3.orig/kaffeine/src/player-parts/xine-part/Makefile.am
++++ kaffeine-0.8.3/kaffeine/src/player-parts/xine-part/Makefile.am
+@@ -13,7 +13,7 @@ noinst_HEADERS =  xine_part_iface.h kxin
+ libxinepart_la_SOURCES = xine_part.cpp kxinewidget.cpp postfilter.cpp deinterlacequality.cpp \
+                              videosettings.cpp filterdialog.cpp screenshotpreview.cpp xineconfig.cpp positionslider.cpp \
+                              equalizer.cpp xine_part_iface.skel
+-libxinepart_la_LIBADD  = $(LIB_XINERAMA) $(LIB_XINE) ../kaffeine-part/libkaffeinepart.la
++libxinepart_la_LIBADD  = $(LIB_XINERAMA) $(LIB_XINE) ../kaffeine-part/libkaffeinepart.la -lxcb
+ libxinepart_la_LDFLAGS = -module $(KDE_PLUGIN) $(all_libraries) -avoid-version -no-undefined
+ 
+ 
