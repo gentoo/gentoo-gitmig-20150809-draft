@@ -1,7 +1,38 @@
-MD5 85b58b5fbfa1e19349198d08ef695829 ChangeLog 1442
-MD5 7e3c0f53a01a3078c16db5b909ca5cb2 asterisk-app_icd-1.0.0.ebuild 1619
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX asterisk-app_icd-1.0.0-bristuff.diff 457 RMD160 0022063f6ec20781544b291eadfa742d2476923b SHA1 26d896e615d85dfb24104137c595bc6f5811ceaf SHA256 39c50c8707a5796640fc0576e22bf09a324dde46860ff73851edd43ab046b370
 MD5 142035f777abdfae08ca7cb332e6a4b1 files/asterisk-app_icd-1.0.0-bristuff.diff 457
+RMD160 0022063f6ec20781544b291eadfa742d2476923b files/asterisk-app_icd-1.0.0-bristuff.diff 457
+SHA256 39c50c8707a5796640fc0576e22bf09a324dde46860ff73851edd43ab046b370 files/asterisk-app_icd-1.0.0-bristuff.diff 457
+AUX asterisk-app_icd-1.0.0-configsegv.diff 1684 RMD160 47aec442d449437eabd8322c49a9bf56399f65ec SHA1 a547afcb37ea7ac870a986e056d63b2591576a36 SHA256 cc9d6238a1175b6b7c89c4e63a4a016001b4069880f65fa6c8184617e137ff3f
 MD5 ca50446dbd8f5a351f341a467a7afd33 files/asterisk-app_icd-1.0.0-configsegv.diff 1684
+RMD160 47aec442d449437eabd8322c49a9bf56399f65ec files/asterisk-app_icd-1.0.0-configsegv.diff 1684
+SHA256 cc9d6238a1175b6b7c89c4e63a4a016001b4069880f65fa6c8184617e137ff3f files/asterisk-app_icd-1.0.0-configsegv.diff 1684
+AUX asterisk-app_icd-1.0.0-gentoo.diff 4863 RMD160 040d3a3178fb8c0ef4e609b66204ba17ad63264a SHA1 2e340efbe519bbe85d4c7fa8eef06528332c803c SHA256 f33b6dde45721634f4ba2646c52d1a0480c5b1b71ec2b484876b8326d2d92c94
 MD5 f91da9ee448dfc5a3b9528f7752d0657 files/asterisk-app_icd-1.0.0-gentoo.diff 4863
-MD5 2e6e3622140afef8d13d3022cdb206b8 files/digest-asterisk-app_icd-1.0.0 62
+RMD160 040d3a3178fb8c0ef4e609b66204ba17ad63264a files/asterisk-app_icd-1.0.0-gentoo.diff 4863
+SHA256 f33b6dde45721634f4ba2646c52d1a0480c5b1b71ec2b484876b8326d2d92c94 files/asterisk-app_icd-1.0.0-gentoo.diff 4863
+DIST icd-1.0.0.tar.gz 1405006 RMD160 97163c528632b9a2977b4dc8ede76c44b92d5397 SHA1 9e5f3a0dc37855153699ca513bbbdec8fb1b4bd9 SHA256 faec24bb65175dda9a92043417f939d5f91a6b8626e26f3e59133c055cc55568
+EBUILD asterisk-app_icd-1.0.0.ebuild 1619 RMD160 faf24823b10b66cdc4ba24ed95b48dac36fbaeb8 SHA1 020e46dbf083db87859ddedac0bde27e1eed3fff SHA256 c1303ba7fb43bb6f6c2580b6295fa8b70c4eb4fd19e903e85ef9f7a13feacd80
+MD5 7e3c0f53a01a3078c16db5b909ca5cb2 asterisk-app_icd-1.0.0.ebuild 1619
+RMD160 faf24823b10b66cdc4ba24ed95b48dac36fbaeb8 asterisk-app_icd-1.0.0.ebuild 1619
+SHA256 c1303ba7fb43bb6f6c2580b6295fa8b70c4eb4fd19e903e85ef9f7a13feacd80 asterisk-app_icd-1.0.0.ebuild 1619
+MISC ChangeLog 1553 RMD160 88bea23fd023aefc8894eb110611958b55cded5a SHA1 ab7a8b9a1d3674d0317379550e399c5ef4217c8a SHA256 792b47f35896d4536e5700cac84b84e8e9a025e7ee25bb778ea911174bfd75e5
+MD5 a01b6d69f44216ca07b315eed1c9825e ChangeLog 1553
+RMD160 88bea23fd023aefc8894eb110611958b55cded5a ChangeLog 1553
+SHA256 792b47f35896d4536e5700cac84b84e8e9a025e7ee25bb778ea911174bfd75e5 ChangeLog 1553
+MISC metadata.xml 217 RMD160 275af641d8134ee438c8e2c9f89eb3b0a286a386 SHA1 7b349815d56d7d7e2d46968341228c5267c666eb SHA256 c3eb09d27b1a9cf05b690524903c7faf096829ef1d19c0264769c277ac28d0a1
 MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
+RMD160 275af641d8134ee438c8e2c9f89eb3b0a286a386 metadata.xml 217
+SHA256 c3eb09d27b1a9cf05b690524903c7faf096829ef1d19c0264769c277ac28d0a1 metadata.xml 217
+MD5 ca0d287fbd9415cf068a0512b6d1e355 files/digest-asterisk-app_icd-1.0.0 232
+RMD160 df278d57c44e02613adbb3760e7e3fb59446dc8b files/digest-asterisk-app_icd-1.0.0 232
+SHA256 28a798f47963c574894260c2e9cb6f350287fdbc12bab3ffddf8b918177333b8 files/digest-asterisk-app_icd-1.0.0 232
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.2 (GNU/Linux)
+
+iD8DBQFFy/tQAiZjviIA2XgRAvdXAJ9Rj09lgpX6tKqxFKE0jmuxFLzj6gCfQ0kB
+UAUU7ppz6ZLBvP5sfHp2n+8=
+=A5Sr
+-----END PGP SIGNATURE-----

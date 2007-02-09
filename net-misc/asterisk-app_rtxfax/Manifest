@@ -1,13 +1,62 @@
-MD5 3fef241285244c0e32e55af802cc8d46 ChangeLog 1331
-MD5 945cb07f03b926d4f66b1839b98236d2 asterisk-app_rtxfax-0.0.2_pre10.ebuild 852
-MD5 7d6d2cf40b690177edc7d039f046b90d asterisk-app_rtxfax-0.0.2_pre18.ebuild 870
-MD5 edba36be2c65396f9f252e363b1340fc asterisk-app_rtxfax-0.0.2_pre20.ebuild 835
-MD5 444600ac586536b1816e8d5fa705975e asterisk-app_rtxfax-0.0.2_pre25.ebuild 922
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX app_rtxfax-0.0.2_pre10-astcfg.diff 946 RMD160 ad28ebbc40ab948148f2197cce3e33938c0ae87c SHA1 460966c0d2ce16103d6b3960eda2fa0b9201383c SHA256 0adf53f2820d65395ada1ebfad1f101ec9d005a182d890afc5029259b2e4f461
 MD5 bcd665be46c03da598c1ab50885c3cee files/app_rtxfax-0.0.2_pre10-astcfg.diff 946
+RMD160 ad28ebbc40ab948148f2197cce3e33938c0ae87c files/app_rtxfax-0.0.2_pre10-astcfg.diff 946
+SHA256 0adf53f2820d65395ada1ebfad1f101ec9d005a182d890afc5029259b2e4f461 files/app_rtxfax-0.0.2_pre10-astcfg.diff 946
+AUX app_rtxfax-0.0.2_pre20-gentoo.diff 1587 RMD160 80ad1e36b41b1e724eeb83f687bc871d1a4004ef SHA1 bce0fd058d4966b62fae0e124f2abf74c033f094 SHA256 0c4b002714115b10ca4b41afd9ddc99fad0792bb8aad22e4fc7ec509f57a839b
 MD5 362967e8723a04bed027389ea1514603 files/app_rtxfax-0.0.2_pre20-gentoo.diff 1587
+RMD160 80ad1e36b41b1e724eeb83f687bc871d1a4004ef files/app_rtxfax-0.0.2_pre20-gentoo.diff 1587
+SHA256 0c4b002714115b10ca4b41afd9ddc99fad0792bb8aad22e4fc7ec509f57a839b files/app_rtxfax-0.0.2_pre20-gentoo.diff 1587
+AUX app_rtxfax-0.0.2_pre25-gentoo.diff 2177 RMD160 b1f2949a1de0cab09b3053bce4d886fbd65d1e73 SHA1 0edb5a45671c97466553b992935b12d5b54bb5a3 SHA256 974e30c7429ef87da01460689a85611cc3e0aac290ff88c8b9a9089b11dbcbe3
 MD5 6858d94e4f94f51f5992bc37d274b981 files/app_rtxfax-0.0.2_pre25-gentoo.diff 2177
-MD5 7eaa5a41afe7c66fab73821801454c2b files/digest-asterisk-app_rtxfax-0.0.2_pre10 73
-MD5 b5184e2411373aee757cc11cbe64b101 files/digest-asterisk-app_rtxfax-0.0.2_pre18 73
-MD5 f93631da6831298970c2bee289446fd2 files/digest-asterisk-app_rtxfax-0.0.2_pre20 82
-MD5 07986146e87a0a4fe283208fd4f3d3ff files/digest-asterisk-app_rtxfax-0.0.2_pre25 292
+RMD160 b1f2949a1de0cab09b3053bce4d886fbd65d1e73 files/app_rtxfax-0.0.2_pre25-gentoo.diff 2177
+SHA256 974e30c7429ef87da01460689a85611cc3e0aac290ff88c8b9a9089b11dbcbe3 files/app_rtxfax-0.0.2_pre25-gentoo.diff 2177
+DIST app_rtxfax-0.0.2_pre10.tar.bz2 4471 RMD160 e692b060442a0f44801d88bd2da2ed896fae7e1a SHA1 da2b746a5c259c848403d493ffef8651e460c33e SHA256 c0ab63de642e609ebf61476c443053b7b124e2e7a0018e9989ebf84b25518003
+DIST app_rtxfax-0.0.2_pre18.tar.bz2 4983 RMD160 972b775113884c9db2eeb9c0182fd4bbc28f66ab SHA1 946227f1f18fa1b238254126d5affb613e2e0673 SHA256 b6cd61dc04e246d0a2a1ea8fa20324e7e590d7d5ddb13827ef36073fc0209ab4
+DIST asterisk-app_rtxfax-0.0.2_pre20.tar.bz2 7755 RMD160 92188d64916c3124bbb0cd3d4ddf47306a194ee5 SHA1 f9345f92f4e6bc59e8c1a6d5d07dc73c922476e5 SHA256 a49cbd94ef94471aecb31e9a9f553bbc6899a6661272a9135f7d152f3a93c741
+DIST asterisk-app_rtxfax-0.0.2_pre25.tar.bz2 6532 RMD160 fa8934079372b525ff285d11ebf95498cb08878e SHA1 d6870fbc22f6da43c74cb3d99d849701f0277c1e SHA256 6307197cd45bec6caf4785918285a47c372fddd08cb94888512f100108404729
+EBUILD asterisk-app_rtxfax-0.0.2_pre10.ebuild 852 RMD160 4dc85df4cfdb59c0de002f7981996f65497a3023 SHA1 ea07e1c6e9f7e8903bf54a6bc781593b32a248d0 SHA256 f1032f39fdea0502fa41a18d529628ccbe07d4ee4276f01b08796d740353ca29
+MD5 945cb07f03b926d4f66b1839b98236d2 asterisk-app_rtxfax-0.0.2_pre10.ebuild 852
+RMD160 4dc85df4cfdb59c0de002f7981996f65497a3023 asterisk-app_rtxfax-0.0.2_pre10.ebuild 852
+SHA256 f1032f39fdea0502fa41a18d529628ccbe07d4ee4276f01b08796d740353ca29 asterisk-app_rtxfax-0.0.2_pre10.ebuild 852
+EBUILD asterisk-app_rtxfax-0.0.2_pre18.ebuild 870 RMD160 1b32965a8b7c1bfc00e9533b893ebad093680e50 SHA1 b208ea62bc47dc2f1609dfc225deeccc9f1789cc SHA256 245015aabc1d5af413a6982ae9e4377a26de7bcbf092a3706b753fcc4daeacd6
+MD5 7d6d2cf40b690177edc7d039f046b90d asterisk-app_rtxfax-0.0.2_pre18.ebuild 870
+RMD160 1b32965a8b7c1bfc00e9533b893ebad093680e50 asterisk-app_rtxfax-0.0.2_pre18.ebuild 870
+SHA256 245015aabc1d5af413a6982ae9e4377a26de7bcbf092a3706b753fcc4daeacd6 asterisk-app_rtxfax-0.0.2_pre18.ebuild 870
+EBUILD asterisk-app_rtxfax-0.0.2_pre20.ebuild 835 RMD160 fcf397c5396909f6e40899e8321b7418bbaa6194 SHA1 b456e420491942abeb0cc6bba437e627fbee9227 SHA256 914094d2ce216a39c370f2835305c39d3ce63f3e4fb788436b4ba4796f4e2127
+MD5 edba36be2c65396f9f252e363b1340fc asterisk-app_rtxfax-0.0.2_pre20.ebuild 835
+RMD160 fcf397c5396909f6e40899e8321b7418bbaa6194 asterisk-app_rtxfax-0.0.2_pre20.ebuild 835
+SHA256 914094d2ce216a39c370f2835305c39d3ce63f3e4fb788436b4ba4796f4e2127 asterisk-app_rtxfax-0.0.2_pre20.ebuild 835
+EBUILD asterisk-app_rtxfax-0.0.2_pre25.ebuild 922 RMD160 a4f47f53785dd6da00a3483127edad4ca1f38a29 SHA1 b4a3bce8df85bdbf201ace1b845691ba6a6d01e5 SHA256 50badaa6f425ac73c9da940a72f48cb7a7b6bedb6d1a5cd238a848b88f032e2d
+MD5 444600ac586536b1816e8d5fa705975e asterisk-app_rtxfax-0.0.2_pre25.ebuild 922
+RMD160 a4f47f53785dd6da00a3483127edad4ca1f38a29 asterisk-app_rtxfax-0.0.2_pre25.ebuild 922
+SHA256 50badaa6f425ac73c9da940a72f48cb7a7b6bedb6d1a5cd238a848b88f032e2d asterisk-app_rtxfax-0.0.2_pre25.ebuild 922
+MISC ChangeLog 1442 RMD160 86543219bccff4e3789919adddd17b87641a972a SHA1 230a84c26554a03882a24545848cfa46fbc41c52 SHA256 ec648aa0f13af5f1a1530033dedd8eda1a2081fde6bc30cd6d928d8d4355eb07
+MD5 da5772302fa5cbcd866e17057701e311 ChangeLog 1442
+RMD160 86543219bccff4e3789919adddd17b87641a972a ChangeLog 1442
+SHA256 ec648aa0f13af5f1a1530033dedd8eda1a2081fde6bc30cd6d928d8d4355eb07 ChangeLog 1442
+MISC metadata.xml 217 RMD160 275af641d8134ee438c8e2c9f89eb3b0a286a386 SHA1 7b349815d56d7d7e2d46968341228c5267c666eb SHA256 c3eb09d27b1a9cf05b690524903c7faf096829ef1d19c0264769c277ac28d0a1
 MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
+RMD160 275af641d8134ee438c8e2c9f89eb3b0a286a386 metadata.xml 217
+SHA256 c3eb09d27b1a9cf05b690524903c7faf096829ef1d19c0264769c277ac28d0a1 metadata.xml 217
+MD5 27b598c33f827aa2832bb4fae8b307b2 files/digest-asterisk-app_rtxfax-0.0.2_pre10 265
+RMD160 fc5d03f32547878590de3d1de101ddc1248ebce8 files/digest-asterisk-app_rtxfax-0.0.2_pre10 265
+SHA256 88a130b7830de224bbd95b31484c7906cd8785344680d5c059bf0b30c6202ad7 files/digest-asterisk-app_rtxfax-0.0.2_pre10 265
+MD5 3c575e2067acc15b8267813645ea4f25 files/digest-asterisk-app_rtxfax-0.0.2_pre18 265
+RMD160 ab8764e427e33663a56b5e754dffb7160f544f1f files/digest-asterisk-app_rtxfax-0.0.2_pre18 265
+SHA256 331dd3f7318d410b2bc9760f366d7d3b43d9a00d4d84fef4beb8981500e355da files/digest-asterisk-app_rtxfax-0.0.2_pre18 265
+MD5 5939ea9c28877ab69695eec3b90ee0ea files/digest-asterisk-app_rtxfax-0.0.2_pre20 292
+RMD160 2105b7531b55d8acdc5c9ca99bd0024af9865d85 files/digest-asterisk-app_rtxfax-0.0.2_pre20 292
+SHA256 cccdac578c3068f6baf14a7253f94d8bea69ebf9eef74a603490b6b9a8234e25 files/digest-asterisk-app_rtxfax-0.0.2_pre20 292
+MD5 07986146e87a0a4fe283208fd4f3d3ff files/digest-asterisk-app_rtxfax-0.0.2_pre25 292
+RMD160 3817947cc839c0a5da395d489ed12b4831d69805 files/digest-asterisk-app_rtxfax-0.0.2_pre25 292
+SHA256 e605fb474ea2a41551a6e92b1796a79a41609772e51c39ea925e44dca62cfc47 files/digest-asterisk-app_rtxfax-0.0.2_pre25 292
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.2 (GNU/Linux)
+
+iD8DBQFFy/t5AiZjviIA2XgRAp2zAKDhWFy9YpEtuQ1L3hbu8XlUwRihvwCgk6gJ
+wvVVfZYUOMu+65N7Oq3S3GA=
+=VG3p
+-----END PGP SIGNATURE-----
