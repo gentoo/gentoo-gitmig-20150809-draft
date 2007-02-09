@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amp
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amp/ChangeLog,v 1.9 2006/05/15 19:05:01 tcort Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amp/ChangeLog,v 1.10 2007/02/09 03:45:27 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   15 May 2006; Thomas Cort <tcort@gentoo.org> metadata.xml,
   amp-0.7.6.ebuild:

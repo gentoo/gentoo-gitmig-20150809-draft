@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/acast
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/acast/ChangeLog,v 1.3 2005/12/05 23:15:43 zaheerm Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/acast/ChangeLog,v 1.4 2007/02/09 03:45:04 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   05 Dec 2005; Zaheer Abbas Merali <zaheerm@gentoo.org> acast-0.18.ebuild:
   Fix GStreamer dependencies
