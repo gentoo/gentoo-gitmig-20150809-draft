@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mod_bwshare
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_bwshare/ChangeLog,v 1.5 2005/11/11 22:34:55 chtekk Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_bwshare/ChangeLog,v 1.6 2007/02/09 08:17:38 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *mod_bwshare-0.1.6 (11 Nov 2005)
 
