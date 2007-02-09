@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/plustek-parallel
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/plustek-parallel/ChangeLog,v 1.4 2004/06/24 22:46:59 agriffis Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/plustek-parallel/ChangeLog,v 1.5 2007/02/09 07:50:36 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   16 Feb 2004; Michal Januszewski <spock@gentoo.org>
   plustek-parallel-0.42.9.ebuild:

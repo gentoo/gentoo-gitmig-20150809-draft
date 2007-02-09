@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/tic98
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tic98/ChangeLog,v 1.4 2005/11/03 10:39:00 grobian Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tic98/ChangeLog,v 1.5 2007/02/09 07:51:18 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   03 Nov 2005; Fabian Groffen <grobian@gentoo.org>
   +files/tic98-1.01-macos.patch, tic98-1.01-r1.ebuild:
