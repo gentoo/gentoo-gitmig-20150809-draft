@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/qmail-mysql
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-mysql/ChangeLog,v 1.11 2006/02/27 10:23:19 hansmi Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-mysql/ChangeLog,v 1.12 2007/02/09 07:49:43 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   27 Feb 2006; Michael Hanselmann <hansmi@gentoo.org>
   files/digest-qmail-mysql-1.03, files/digest-qmail-mysql-1.03-r13,
