@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ninja
-# Copyright 2003-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ninja/ChangeLog,v 1.15 2005/04/24 13:15:57 hansmi Exp $
+# Copyright 2003-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ninja/ChangeLog,v 1.16 2007/02/09 08:08:32 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   ninja-1.5.9_pre12.ebuild:
