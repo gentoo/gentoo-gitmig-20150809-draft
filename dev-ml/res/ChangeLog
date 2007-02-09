@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/res
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/res/ChangeLog,v 1.3 2005/02/17 20:48:17 mattam Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/res/ChangeLog,v 1.4 2007/02/09 07:37:56 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   17 Feb 2005; Matthieu Sozeau <mattam@gentoo.org> res-2.1.1.ebuild:
   Add -j1, doesn't support parallel builds.
