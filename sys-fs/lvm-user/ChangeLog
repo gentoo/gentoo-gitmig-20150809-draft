@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm-user
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm-user/ChangeLog,v 1.13 2005/08/22 18:57:30 gustavoz Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm-user/ChangeLog,v 1.14 2007/02/09 06:05:17 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   22 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   lvm-user-1.0.8-r1.ebuild:

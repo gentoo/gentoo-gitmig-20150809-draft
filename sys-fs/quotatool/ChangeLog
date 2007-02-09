@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/quotatool
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quotatool/ChangeLog,v 1.6 2006/01/26 01:09:48 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quotatool/ChangeLog,v 1.7 2007/02/09 06:05:56 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *quotatool-1.4.8 (26 Jan 2006)
 

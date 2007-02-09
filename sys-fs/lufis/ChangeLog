@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lufis
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufis/ChangeLog,v 1.7 2005/02/20 16:14:01 genstef Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufis/ChangeLog,v 1.8 2007/02/09 06:04:31 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   20 Feb 2005; Stefan Schweizer <genstef@gentoo.org> lufis-0.3.ebuild:
   ~amd64 thanks to lares and cricalix in #gentoo-amd64

@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/dd-rhelp
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dd-rhelp/ChangeLog,v 1.2 2006/02/28 01:56:28 kumba Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dd-rhelp/ChangeLog,v 1.3 2007/02/09 06:03:16 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   28 Feb 2006; Joshua Kinard <kumba@gentoo.org> dd-rhelp-0.0.6.ebuild:
   Remove src_compile.

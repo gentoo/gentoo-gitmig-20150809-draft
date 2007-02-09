@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/amiga-fdisk
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/amiga-fdisk/ChangeLog,v 1.4 2004/10/16 19:25:02 vapier Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/amiga-fdisk/ChangeLog,v 1.5 2007/02/09 06:02:19 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   16 Oct 2004; Mike Frysinger <vapier@gentoo.org> amiga-fdisk-0.04.ebuild:
   Fix stupid dependency on libterm-compat (i.e. remove it).

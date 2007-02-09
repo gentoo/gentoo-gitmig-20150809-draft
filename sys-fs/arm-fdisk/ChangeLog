@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/arm-fdisk
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/arm-fdisk/ChangeLog,v 1.1 2005/05/24 23:39:43 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/arm-fdisk/ChangeLog,v 1.2 2007/02/09 06:02:52 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *arm-fdisk-3.0.6 (24 May 2005)
 
