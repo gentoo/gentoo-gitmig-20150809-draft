@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/smet2html
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/smet2html/ChangeLog,v 1.6 2004/07/01 09:40:26 squinky86 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/smet2html/ChangeLog,v 1.7 2007/02/09 05:00:37 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> smet2html-0.1.ebuild:
   change virtual/glibc to virtual/libc

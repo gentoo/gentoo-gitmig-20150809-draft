@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/g2gui
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/g2gui/ChangeLog,v 1.4 2004/07/17 15:46:06 squinky86 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/g2gui/ChangeLog,v 1.5 2007/02/09 05:00:00 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   17 Jul 2004; Jon Hood <squinky86@gentoo.org> g2gui-0.3.0_pre1.ebuild:
   stable on x86
