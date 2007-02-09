@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/tex4ht
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.9 2005/11/15 18:19:54 gustavoz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.10 2007/02/09 07:41:32 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   15 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   tex4ht-20050406_p1623-r1.ebuild:
