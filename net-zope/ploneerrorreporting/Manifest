@@ -1,16 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 599774c24d53b7a50bab1cda0aa58f53 ChangeLog 889
-MD5 5572015a80c9667ba20f348cb9c6d0b8 files/digest-ploneerrorreporting-0.1 73
-MD5 7cf7cda4fadf9bb72f5213f849cfd683 files/digest-ploneerrorreporting-0.11 75
-MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
+DIST PloneErrorReporting-0.1.tar.gz 6774 RMD160 66ef66ae6e0a527146f34d28315d1f713b813284 SHA1 4225de0ea19b4a97190926e20b334c780f604e62 SHA256 e2425f459b4fa3a0705102bd9c4a7e22b1ecf023256eb7b872f7178676568589
+DIST PloneErrorReporting-0.11.tar.gz 10815 RMD160 fcc2fb55bfbcd69f53b2ba820003403836367e31 SHA1 44aa60da24908daf913a40ef7d3b184a38bfbd43 SHA256 ab361450aa9175d62402b391e963d57c1a2d5f8957d8847ee0f1556ae59667bf
+EBUILD ploneerrorreporting-0.1.ebuild 586 RMD160 f007ba962e5ecf5c7fafdfee964cfde40d2c4b1e SHA1 b7ea16a696ff74b2d045392ca208d6835728cd53 SHA256 b056ea6cce5f55e938af24bbeb249fb5c4bea6323141e5ff0a4419471ac60916
 MD5 99754cdee18d5cedcfbe69b2a3a0fa9c ploneerrorreporting-0.1.ebuild 586
+RMD160 f007ba962e5ecf5c7fafdfee964cfde40d2c4b1e ploneerrorreporting-0.1.ebuild 586
+SHA256 b056ea6cce5f55e938af24bbeb249fb5c4bea6323141e5ff0a4419471ac60916 ploneerrorreporting-0.1.ebuild 586
+EBUILD ploneerrorreporting-0.11.ebuild 599 RMD160 b0b60e7fe9d223bb33179982f0dbe4eb831d802a SHA1 10f0ff2287dedb0deb25ce4497db5219eb4b89ad SHA256 40e781fc62895ce129534b7c42b049fb5071c1f5c7894d8831ead6de980715c6
 MD5 26544f060e852f048eb52a881fc5ff67 ploneerrorreporting-0.11.ebuild 599
+RMD160 b0b60e7fe9d223bb33179982f0dbe4eb831d802a ploneerrorreporting-0.11.ebuild 599
+SHA256 40e781fc62895ce129534b7c42b049fb5071c1f5c7894d8831ead6de980715c6 ploneerrorreporting-0.11.ebuild 599
+MISC ChangeLog 999 RMD160 34b12f37d1d993ba349a60459479ed330094fc07 SHA1 c40a3905ac3cceac7c07d7c0019a640e938eb460 SHA256 1f3d88dc357d9309d44129b618145c592ae5edec990eeda40fd86ad040fbba6b
+MD5 45e95fb8499e5d6306162cbb3aaef620 ChangeLog 999
+RMD160 34b12f37d1d993ba349a60459479ed330094fc07 ChangeLog 999
+SHA256 1f3d88dc357d9309d44129b618145c592ae5edec990eeda40fd86ad040fbba6b ChangeLog 999
+MISC metadata.xml 161 RMD160 5e136d45f811478292bd2ee1798a9b0229ffe468 SHA1 9755179a2dee0511818b1f6738ded28e335e1b9a SHA256 e69ac7205cbc2e42a297e20d8f08922003390a345bbf50ccf00d1158a1c97cc5
+MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
+RMD160 5e136d45f811478292bd2ee1798a9b0229ffe468 metadata.xml 161
+SHA256 e69ac7205cbc2e42a297e20d8f08922003390a345bbf50ccf00d1158a1c97cc5 metadata.xml 161
+MD5 f4465e35fdc4d989e549a32c2d1eea6b files/digest-ploneerrorreporting-0.1 265
+RMD160 3ca27f986522db50d1b3751d147186a2636fee3e files/digest-ploneerrorreporting-0.1 265
+SHA256 2a34f5490beaa833de4a13a672c29c022be84361b44ae29559467a8427d5ed6c files/digest-ploneerrorreporting-0.1 265
+MD5 9118afd3344da4f7cf8540e3b4e4301c files/digest-ploneerrorreporting-0.11 271
+RMD160 8383cf63bd88f0a55fb7c41d2e5bda67fef2841c files/digest-ploneerrorreporting-0.11 271
+SHA256 c7f7bee287a32bc7efa7eb86346e27c3449e5a3dcd1b4f34c573131ba2dc0180 files/digest-ploneerrorreporting-0.11 271
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v2.0.2 (GNU/Linux)
 
-iD8DBQFD2YiX2+ySkm8kpY0RAkcPAJ47+eMPTlzKhDxJkEql2dnfj6SkPgCcDzvX
-gUm6XdhzEWKXxfAfd8li5kY=
-=DGxA
+iD8DBQFFzC8CAiZjviIA2XgRAkqqAKCFdlydpQ2E/yTt6WTD0bntcgRJ1ACdH4tn
+/cJUW/NELQ0+85+QfWSjkog=
+=gs7z
 -----END PGP SIGNATURE-----
