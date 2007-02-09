@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/ignorance
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/ignorance/ChangeLog,v 1.8 2005/11/07 23:35:37 gothgirl Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/ignorance/ChangeLog,v 1.9 2007/02/09 08:44:54 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *ignorance-2.3 (08 Nov 2005)
 
