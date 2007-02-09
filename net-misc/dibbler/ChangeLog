@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dibbler
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/ChangeLog,v 1.2 2006/05/16 18:46:59 gmsoft Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/ChangeLog,v 1.3 2007/02/09 04:45:42 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   16 May 2006; Guy Martin <gmsoft@gentoo.org> +files/dibbler-gcc-4.1.patch,
   dibbler-0.4.1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netkit-rwho
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.11 2006/02/21 21:28:11 vanquirius Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.12 2007/02/09 04:49:43 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   21 Feb 2006; Marcelo Goes <vanquirius@gentoo.org>
   -files/netkit-rwho-0.17-debian.patch, -files/netkit-rwho-0.17-gentoo.diff,

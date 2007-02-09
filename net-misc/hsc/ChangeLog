@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/hsc
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hsc/ChangeLog,v 1.10 2005/09/22 10:11:32 mattam Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hsc/ChangeLog,v 1.11 2007/02/09 04:47:31 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *hsc-0.999 (22 Sep 2005)
 

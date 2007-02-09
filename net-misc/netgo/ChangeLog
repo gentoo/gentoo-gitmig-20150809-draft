@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netgo
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netgo/ChangeLog,v 1.3 2006/01/07 18:48:35 carlo Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netgo/ChangeLog,v 1.4 2007/02/09 04:49:07 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   07 Jan 2006; Carsten Lohrke <carlo@gentoo.org> netgo-0.5.ebuild:
   QA: need-qt() needs to be called after R/DEPEND.

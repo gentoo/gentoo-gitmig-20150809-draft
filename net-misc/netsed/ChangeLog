@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netsed
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netsed/ChangeLog,v 1.4 2004/08/14 21:16:07 avenj Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netsed/ChangeLog,v 1.5 2007/02/09 04:50:49 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   14 Aug 2004; Jon Portnoy <avenj@gentoo.org> netsed-0.01b.ebuild :
   Fix patch (bug #60345), add AMD64 keywords.

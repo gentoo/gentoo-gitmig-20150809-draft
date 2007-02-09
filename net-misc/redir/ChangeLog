@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/redir
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/redir/ChangeLog,v 1.7 2005/06/08 15:00:40 gustavoz Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/redir/ChangeLog,v 1.8 2007/02/09 04:51:39 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   08 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org> redir-2.2.1.ebuild:
   Stable on sparc wrt #95113

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/utelnetd
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/utelnetd/ChangeLog,v 1.5 2004/10/29 13:26:45 matsuu Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/utelnetd/ChangeLog,v 1.6 2007/02/09 04:54:10 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   29 Oct 2004; MATSUU Takuto <matsuu@gentoo.org> utelnetd-0.1.9.ebuild:
   Fixed CC usage to use new toolchain-funcs.eclass. bug 69278.
