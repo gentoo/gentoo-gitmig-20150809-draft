@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/stratego
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/stratego/ChangeLog,v 1.22 2005/11/04 13:54:17 karltk Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/stratego/ChangeLog,v 1.23 2007/02/09 02:27:46 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   04 Nov 2005; Karl Trygve Kalleberg <karltk@gentoo.org>
   -stratego-0.8.ebuild, -stratego-0.8.1.ebuild, -stratego-0.9.4.ebuild,

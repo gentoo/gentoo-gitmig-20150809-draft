@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tinycobol
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tinycobol/ChangeLog,v 1.10 2005/04/24 12:35:36 hansmi Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tinycobol/ChangeLog,v 1.11 2007/02/09 02:28:12 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> tinycobol-0.61.ebuild:
   Stable on ppc.
