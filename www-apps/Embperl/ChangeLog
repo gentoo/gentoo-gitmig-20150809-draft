@@ -1,6 +1,6 @@
-# ChangeLog for www-apache/Embperl
+# ChangeLog for www-apps/Embperl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Embperl/ChangeLog,v 1.1 2007/01/20 15:30:31 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Embperl/ChangeLog,v 1.2 2007/02/09 00:06:41 swegener Exp $
 
   20 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   +files/78_mod_embperl.conf, +files/Embperl-2.0_rc4-Makefile.PL.patch,
