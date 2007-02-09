@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/htmlfontify
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/htmlfontify/ChangeLog,v 1.8 2007/02/06 13:31:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/htmlfontify/ChangeLog,v 1.9 2007/02/09 09:39:18 opfer Exp $
+
+*htmlfontify-0.20 (09 Feb 2007)
+
+  09 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  +htmlfontify-0.20.ebuild:
+  version bump: add some quotes, remove virtual/emacs from depend
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
