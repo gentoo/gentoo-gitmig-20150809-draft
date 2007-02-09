@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/metadata-extractor
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/metadata-extractor/ChangeLog,v 1.6 2005/09/09 13:59:43 axxo Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/metadata-extractor/ChangeLog,v 1.7 2007/02/09 07:23:55 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *metadata-extractor-2.2.2-r1 (09 Sep 2005)
 

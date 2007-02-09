@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/eclipse-core
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-core/ChangeLog,v 1.1 2005/10/01 23:49:18 compnerd Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-core/ChangeLog,v 1.2 2007/02/09 07:21:47 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *eclipse-core-3.2_pre2 (02 Oct 2005)
 
