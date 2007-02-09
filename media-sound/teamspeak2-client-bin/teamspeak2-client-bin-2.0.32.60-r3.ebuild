@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/teamspeak2-client-bin-2.0.32.60-r3.ebuild,v 1.13 2007/02/09 05:17:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/teamspeak2-client-bin-2.0.32.60-r3.ebuild,v 1.14 2007/02/09 05:38:26 flameeyes Exp $
 
 MY_PV=rc2_2032
 DESCRIPTION="The TeamSpeak voice communication tool"
@@ -11,14 +11,12 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* x86 amd64"
 
-IUSE="kde imagemagick"
+IUSE=""
 
 DEPEND=""
 
 RDEPEND="${DEPEND}
 	|| ( ( x11-libs/libXt ) virtual/x11 )
-	kde? ( >=kde-base/kdelibs-3.1.0 )
-	imagemagick? ( media-gfx/imagemagick )
 	amd64? ( >=app-emulation/emul-linux-x86-baselibs-1.0
 			 >=app-emulation/emul-linux-x86-xlibs-1.0 )"
 
@@ -26,11 +24,7 @@ S="${WORKDIR}/ts2_client_${MY_PV}/setup.data/image"
 
 dir="/opt/teamspeak2-client"
 
-src_compile() {
-	if use imagemagick; then
-		convert icon.xpm teamspeak.png
-	fi
-}
+src_compile() { :; }
 
 src_install() {
 	newdoc Readme.txt README
@@ -54,17 +48,12 @@ src_install() {
 
 	#Install the teamspeak icon.
 	insinto /usr/share/pixmaps
-	if use imagemagick; then
-		doins teamspeak.png
-	fi
 	newins icon.xpm teamspeak.xpm
 
-	if use kde ; then
-		# Install a teamspeak.protocol file for kde/konqueror to accept
-		# teamspeak:// links
-		insinto /usr/share/services/
-		doins ${FILESDIR}/teamspeak.protocol
-	fi
+	# Install a teamspeak.protocol file for kde/konqueror to accept
+	# teamspeak:// links
+	insinto /usr/share/services/
+	doins "${FILESDIR}/teamspeak.protocol"
 
 	# Fix bug #489010
 	dosym /usr/share/doc/${PF}/html ${dir}/manual

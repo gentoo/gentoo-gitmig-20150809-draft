@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/teamspeak2-client-bin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/ChangeLog,v 1.22 2007/02/09 05:17:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/ChangeLog,v 1.23 2007/02/09 05:38:26 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  teamspeak2-client-bin-2.0.32.60-r3.ebuild:
+  Remove the kde and imagemagick useflag: for the first, just install the
+  protocol file every time, and remove the silly dependency that is also not
+  considering slots; for the latter, install only the .xpm file, it should be
+  enough for all environments.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   teamspeak2-client-bin-2.0.32.60-r3.ebuild:
