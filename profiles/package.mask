@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6789 2007/02/09 04:24:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6790 2007/02/09 12:02:02 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Stefan Schweizer <genstef@gentoo.org> (07 Nov 2006)
+# Please use ntfs3g now - it is better. Will be removed someday
+sys-fs/captive
 
 # Diego Pettenò <flameeyes@gentoo.org> (09 Feb 2007)
 # These versions of xine-lib and Kaffeine have a new xcb useflag for the
