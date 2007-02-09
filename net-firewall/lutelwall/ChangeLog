@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/lutelwall
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/lutelwall/ChangeLog,v 1.13 2005/09/17 21:59:05 vanquirius Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/lutelwall/ChangeLog,v 1.14 2007/02/09 04:12:53 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   17 Sep 2005; Marcelo Goes <vanquirius@gentoo.org> -lutelwall-0.98.ebuild:
   Removing old version.
