@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0_rc2.ebuild,v 1.2 2007/01/05 16:04:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0_rc5.ebuild,v 1.1 2007/02/09 14:27:06 cryos Exp $
 
 inherit kde eutils
 
