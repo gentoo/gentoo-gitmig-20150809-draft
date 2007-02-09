@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/pssh
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/pssh/ChangeLog,v 1.5 2005/07/17 12:17:24 voxus Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/pssh/ChangeLog,v 1.6 2007/02/09 06:29:44 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   17 Jul 2005; Konstantin Arkhipov <voxus@gentoo.org> -pssh-1.0.0.ebuild,
   -pssh-1.1.1.ebuild, pssh-1.2.0.ebuild:
