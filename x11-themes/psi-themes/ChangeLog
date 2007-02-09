@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/psi-themes
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/ChangeLog,v 1.15 2005/04/02 15:11:13 weeve Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/ChangeLog,v 1.16 2007/02/09 06:45:03 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   02 Apr 2005; Jason Wever <weeve@gentoo.org> psi-themes-0.9.1.ebuild:
   Stable on SPARC.
