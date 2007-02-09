@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libtrash
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtrash/ChangeLog,v 1.7 2005/11/05 05:16:30 matsuu Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtrash/ChangeLog,v 1.8 2007/02/09 08:39:11 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *libtrash-2.4 (05 Nov 2005)
 
