@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.16.3-r1.ebuild,v 1.1 2007/01/22 20:53:43 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.16.3-r1.ebuild,v 1.2 2007/02/09 19:22:51 dang Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=1.9
@@ -87,6 +87,9 @@ src_unpack() {
 
 	# Fix gnome_vfs_url_show_with_env with 'Path=' in .desktop (bug 161089)
 	epatch "${FILESDIR}"/${P}-empty-desktop-entry-Path.diff
+
+	# Fix compile and crashes on fbsd.  bug #157945
+	epatch "${FILESDIR}"/${P}-fbsd.patch
 
 	# For gtk-doc macro failure when it's not installed
 	cp aclocal.m4 old_macros.m4
