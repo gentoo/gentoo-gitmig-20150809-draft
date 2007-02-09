@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/openmosixtest
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosixtest/ChangeLog,v 1.7 2005/05/21 10:38:03 tantive Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosixtest/ChangeLog,v 1.8 2007/02/09 08:37:33 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   21 May 2005; Michael Imhof <tantive@gentoo.org>
   openmosixtest-0.1-r5.ebuild, openmosixtest-0.1-r6.ebuild:

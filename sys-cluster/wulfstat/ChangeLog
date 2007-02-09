@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/wulfstat
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/wulfstat/ChangeLog,v 1.3 2004/07/01 21:49:49 eradicator Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/wulfstat/ChangeLog,v 1.4 2007/02/09 08:37:49 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   wulfstat-0.4.8.ebuild:
