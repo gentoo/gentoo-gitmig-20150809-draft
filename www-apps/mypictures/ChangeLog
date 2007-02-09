@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mypictures
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mypictures/ChangeLog,v 1.5 2006/01/06 15:33:27 rl03 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mypictures/ChangeLog,v 1.6 2007/02/09 08:40:45 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *mypictures-20040202-r1 (06 Jan 2006)
 
