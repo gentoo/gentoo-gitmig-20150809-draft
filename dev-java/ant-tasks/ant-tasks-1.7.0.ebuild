@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.7.0.ebuild,v 1.6 2007/01/27 02:06:35 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.7.0.ebuild,v 1.7 2007/02/09 18:58:58 betelgeuse Exp $
 
 inherit java-pkg-2 eutils
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="jai javamail noantlr nobcel nobsf nocommonsnet nocommonslogging nojdepend
 	nojmf nojsch nolog4j nooro noregexp noresolver noswing noxalan"
-# nobeanutils nobsh nojython norhino noxerces 
+# nobeanutils nobsh nojython norhino noxerces
 
 RDEPEND=">=virtual/jre-1.4
 	~dev-java/ant-core-${PV}
