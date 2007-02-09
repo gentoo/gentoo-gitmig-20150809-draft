@@ -1,8 +1,42 @@
-MD5 de35d8f600d3d75d8075a8d848787013 metadata.xml 223
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST gkrellm-mailwatch-2.4.2.tar.gz 27115 RMD160 c4b6f0908a0d184119f14255f58475e67d072147 SHA1 a33a4b9745c4588720214e1cc01ee8c4c4667f93 SHA256 19b7a1bcba898cfd51f3cc00569045ea1231c02135d56fb7e8d02e5aaec8432c
+DIST gkrellm-mailwatch-2.4.3.tar.gz 27407 RMD160 38e6d9339735add13481994f180e3ccdf2d1560f SHA1 695c85342e96fa23c17d27f19510d2d633ccb27d SHA256 d492d7e494800c80abc2410d4266071132da23b06ae9d903ac4bf279b2b3a4b0
+DIST mailwatch-0.7.2.tar.gz 11913 RMD160 0d49d69bcc54b1340f396cac714d76195f77a517 SHA1 bad54b42a243ddf24acfdcb66dcb88f4894c44c9 SHA256 4199a5623532be606bc5f6e000d0cedfaa4a367ef5fc1b329b8abc2b9b1a0f47
+EBUILD gkrellm-mailwatch-0.7.2.ebuild 729 RMD160 312f8483d9cf9bbb024ec1ec1b631ac59fc1f2ea SHA1 4315a3ec561da36dd2bfd13ae59791efbcf0ea24 SHA256 12dc51bbd797aac0878fc0a16aab143a9f3745fe67a4555926f004b6fbbedd8a
 MD5 db558289a4e71052d83af0615a8db5f7 gkrellm-mailwatch-0.7.2.ebuild 729
-MD5 16a6a8ebae54ebd4a03899540a2185d2 ChangeLog 2855
+RMD160 312f8483d9cf9bbb024ec1ec1b631ac59fc1f2ea gkrellm-mailwatch-0.7.2.ebuild 729
+SHA256 12dc51bbd797aac0878fc0a16aab143a9f3745fe67a4555926f004b6fbbedd8a gkrellm-mailwatch-0.7.2.ebuild 729
+EBUILD gkrellm-mailwatch-2.4.2.ebuild 676 RMD160 a8c24bcf4bceac09dad1370fe08c98cbe5bfd9bc SHA1 331087ce729fa29ce2d60d639d13ad0aa9ae0de0 SHA256 00591ea637ae6bf6dd1d7bbc463a3d644493f06121f8511e94f711cef7477078
 MD5 c65a695a63a5f11217b7b7e37896180b gkrellm-mailwatch-2.4.2.ebuild 676
+RMD160 a8c24bcf4bceac09dad1370fe08c98cbe5bfd9bc gkrellm-mailwatch-2.4.2.ebuild 676
+SHA256 00591ea637ae6bf6dd1d7bbc463a3d644493f06121f8511e94f711cef7477078 gkrellm-mailwatch-2.4.2.ebuild 676
+EBUILD gkrellm-mailwatch-2.4.3.ebuild 711 RMD160 9218614238e1e197c37d7e3d91a6fa4144a8c24b SHA1 b7abd74c2343d0c50235de969b806e7d0b59cd28 SHA256 64ae9c12fb77a3f123ef4a7d861b39345f495fde3862d0939293edbdf9b0bc9a
 MD5 bb2d6300f49b0fdee4275ef013f8f2d4 gkrellm-mailwatch-2.4.3.ebuild 711
-MD5 2682942f3d6fdc5a9af73fdf2102ec9f files/digest-gkrellm-mailwatch-0.7.2 66
-MD5 336ae67c677d06e8c118ed8e7b70482a files/digest-gkrellm-mailwatch-2.4.2 74
-MD5 d8d7837bb4a476bc2a713d77aabb87e0 files/digest-gkrellm-mailwatch-2.4.3 74
+RMD160 9218614238e1e197c37d7e3d91a6fa4144a8c24b gkrellm-mailwatch-2.4.3.ebuild 711
+SHA256 64ae9c12fb77a3f123ef4a7d861b39345f495fde3862d0939293edbdf9b0bc9a gkrellm-mailwatch-2.4.3.ebuild 711
+MISC ChangeLog 2962 RMD160 93cbb916790beb857d97118a8820525a521e81a3 SHA1 36a1bf70bbaff5e3563abdaffe8c92cc7c7ba2b0 SHA256 8d93fa8625ccad51c0e7ad993a208c4d0c802cd2981605525ba2377268bb9fc6
+MD5 09dd8570aa072568bef2cb723a36b63c ChangeLog 2962
+RMD160 93cbb916790beb857d97118a8820525a521e81a3 ChangeLog 2962
+SHA256 8d93fa8625ccad51c0e7ad993a208c4d0c802cd2981605525ba2377268bb9fc6 ChangeLog 2962
+MISC metadata.xml 223 RMD160 13df98db6609a9a7ddffa345a64e3f08222ce1f9 SHA1 041466a94004d9e3c5aeeb568c77748745bcc35b SHA256 dbb0b5bf8c3292e19f54df0cca95ed2297622fa5abf48c6e835ee8ac2fcfdf70
+MD5 de35d8f600d3d75d8075a8d848787013 metadata.xml 223
+RMD160 13df98db6609a9a7ddffa345a64e3f08222ce1f9 metadata.xml 223
+SHA256 dbb0b5bf8c3292e19f54df0cca95ed2297622fa5abf48c6e835ee8ac2fcfdf70 metadata.xml 223
+MD5 3d89319cc17c734d830c8c185bc5efaa files/digest-gkrellm-mailwatch-0.7.2 244
+RMD160 ea90b1e1cab592cdc52706f7fa97ed75f302e910 files/digest-gkrellm-mailwatch-0.7.2 244
+SHA256 25df4af6bc972f5ccef68658270253df91c0dcc8d23603fc03ee1a77991e9867 files/digest-gkrellm-mailwatch-0.7.2 244
+MD5 78aa6dde26e1d89a5fc2c93db8f04655 files/digest-gkrellm-mailwatch-2.4.2 268
+RMD160 d7ed9cf2f61b59408b6ab4d215f3d4ea7fbafadb files/digest-gkrellm-mailwatch-2.4.2 268
+SHA256 1299bd88437403d013cd4c6b7711b01f1f3949cc7c9d1ac5ae43cfb12e62e8f9 files/digest-gkrellm-mailwatch-2.4.2 268
+MD5 a0fec8f9731032a19984ddbe4463a9c0 files/digest-gkrellm-mailwatch-2.4.3 268
+RMD160 8334922622563c7e7931fe97255e3126fe14e59e files/digest-gkrellm-mailwatch-2.4.3 268
+SHA256 8d988af22d9c68473083cf50add478db22a0c7cd0e4bf25f106db36f57972fe9 files/digest-gkrellm-mailwatch-2.4.3 268
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.2 (GNU/Linux)
+
+iD8DBQFFzBPzAiZjviIA2XgRAlFUAJ9kXxZq2691bymXPICS6/nsa+t58gCg5jKH
+mEHz/vlO0ryu53kDnOe/aMg=
+=8Q46
+-----END PGP SIGNATURE-----
