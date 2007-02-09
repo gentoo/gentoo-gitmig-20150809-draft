@@ -1,6 +1,9 @@
 # ChangeLog for net-print/apsfilter
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/apsfilter/ChangeLog,v 1.12 2005/06/07 09:42:15 lanius Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/apsfilter/ChangeLog,v 1.13 2007/02/09 05:01:42 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *apsfilter-7.2.6 (07 Jun 2005)
 

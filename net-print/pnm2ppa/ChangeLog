@@ -1,6 +1,9 @@
 # ChangeLog for net-print/pnm2ppa
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/ChangeLog,v 1.14 2004/08/08 00:29:38 slarti Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/ChangeLog,v 1.15 2007/02/09 05:05:51 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   08 Aug 2004; Tom Martin <slarti@gentoo.org> pnm2ppa-1.12.ebuild:
   Typo in DESCRIPTION: queueing -> queuing. Bug 59717.

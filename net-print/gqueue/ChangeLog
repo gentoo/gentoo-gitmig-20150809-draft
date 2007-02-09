@@ -1,6 +1,9 @@
 # ChangeLog for net-print/gqueue
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gqueue/ChangeLog,v 1.6 2005/06/07 09:38:41 lanius Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/gqueue/ChangeLog,v 1.7 2007/02/09 05:02:12 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *gqueue-0.99.1 (07 Jun 2005)
 
