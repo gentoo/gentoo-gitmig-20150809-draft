@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.6.0.ebuild,v 1.4 2006/12/20 15:04:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.6.0.ebuild,v 1.5 2007/02/09 16:53:06 wolf31o2 Exp $
 
 inherit eutils gnome2
 
@@ -16,6 +16,7 @@ KEYWORDS="~amd64 ia64 ppc ~ppc64 sparc ~x86"
 DEPEND=">=gnome-base/libglade-2.0
 	>=gnome-base/libgnomeui-2.10
 	>=media-libs/gstreamer-0.10.0
+	dev-perl/XML-Parser
 	app-text/scrollkeeper"
 
 RDEPEND="${DEPEND}
