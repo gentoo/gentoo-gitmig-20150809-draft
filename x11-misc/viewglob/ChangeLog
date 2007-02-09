@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/viewglob
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/ChangeLog,v 1.8 2005/11/06 16:25:36 slarti Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/ChangeLog,v 1.9 2007/02/09 06:22:30 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   06 Nov 2005; Tom Martin <slarti@gentoo.org> viewglob-2.0.3.ebuild:
   Several stylistic changes to the ebuild. Thanks a lot to Petteri Räty

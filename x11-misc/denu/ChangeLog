@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/denu
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/denu/ChangeLog,v 1.7 2005/05/13 17:13:43 blubb Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/denu/ChangeLog,v 1.8 2007/02/09 06:18:21 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   13 May 2005; Simon Stelling <blubb@gentoo.org> denu-2.3.2.ebuild:
   stable on hppa

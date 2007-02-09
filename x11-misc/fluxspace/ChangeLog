@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/fluxspace
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxspace/ChangeLog,v 1.8 2005/09/03 22:06:26 robbat2 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxspace/ChangeLog,v 1.9 2007/02/09 06:19:01 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   03 Sep 2005; Robin H. Johnson <robbat2@gentoo.org>
   fluxspace-0.0.3-r1.ebuild:

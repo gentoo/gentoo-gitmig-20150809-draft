@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/ASFiles
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ASFiles/ChangeLog,v 1.7 2004/06/24 22:11:05 agriffis Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ASFiles/ChangeLog,v 1.8 2007/02/09 06:16:23 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> ASFiles-1.0.ebuild:
   Use in SRC_URI, added IUSE=, changed patch to epatch, inherited eutils,

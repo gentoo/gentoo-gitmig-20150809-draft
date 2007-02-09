@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbweather
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/ChangeLog,v 1.22 2005/03/27 16:10:00 gmsoft Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/ChangeLog,v 1.23 2007/02/09 06:17:58 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   27 Mar 2005; Guy Martin <gmsoft@gentoo.org> bbweather-0.6.2.ebuild:
   Stable on hppa.

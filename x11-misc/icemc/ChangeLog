@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/icemc
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icemc/ChangeLog,v 1.23 2005/07/27 13:15:42 blubb Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icemc/ChangeLog,v 1.24 2007/02/09 06:20:30 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   27 Jul 2005; Simon Stelling <blubb@gentoo.org> icemc-2.1-r1.ebuild:
   added ~amd64 keyword
