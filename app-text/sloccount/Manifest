@@ -1,11 +1,53 @@
-MD5 67f5888814e9597410fb0d6079a19e75 sloccount-2.22.ebuild 1060
-MD5 a666ec7e2fe5690bca280a648b4e4d6f sloccount-2.26.ebuild 1020
-MD5 c73a5fcc042059aba22e282c581dc58b sloccount-2.26-r1.ebuild 1050
-MD5 e159e4bdfec68c896f8cbe6446b5c8b9 ChangeLog 2155
-MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
-MD5 e4438da83f662b58c33e01f759570ff7 files/sloccount-2.26-libexec.patch 2293
-MD5 3c5bea5f23bc794e2a74524bd76d2b64 files/sloccount-2.26-coreutils-tail-n-fix.patch 468
-MD5 437c0513b3ee1b6f8c4baca3f77d001c files/digest-sloccount-2.26-r1 66
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX sloccount-2.22-libexec.patch 2324 RMD160 ff3c4abdfd3c3a4033f1e78969c05411eae4eccb SHA1 d18c5466c9d641d68fa9c8d12f4f5a61027e0d6a SHA256 ddadf5f18d88a19abe1dcf2bbb2356f8f227d77258a9a882da3bcec731ba1627
 MD5 2662f30ed5969d9f7cedd6b0addf196b files/sloccount-2.22-libexec.patch 2324
-MD5 f0620a7ad11d6c60a8098c7d253c434f files/digest-sloccount-2.22 66
-MD5 437c0513b3ee1b6f8c4baca3f77d001c files/digest-sloccount-2.26 66
+RMD160 ff3c4abdfd3c3a4033f1e78969c05411eae4eccb files/sloccount-2.22-libexec.patch 2324
+SHA256 ddadf5f18d88a19abe1dcf2bbb2356f8f227d77258a9a882da3bcec731ba1627 files/sloccount-2.22-libexec.patch 2324
+AUX sloccount-2.26-coreutils-tail-n-fix.patch 468 RMD160 b4deb152403fd879290077419d0ce7a51d0f798b SHA1 27e26f710a98625ca36d947313e17ea01cc5ece6 SHA256 79ef08b0ba5f892878fe410b6e360566202acea9d1abcf07481e9218393f7c6a
+MD5 3c5bea5f23bc794e2a74524bd76d2b64 files/sloccount-2.26-coreutils-tail-n-fix.patch 468
+RMD160 b4deb152403fd879290077419d0ce7a51d0f798b files/sloccount-2.26-coreutils-tail-n-fix.patch 468
+SHA256 79ef08b0ba5f892878fe410b6e360566202acea9d1abcf07481e9218393f7c6a files/sloccount-2.26-coreutils-tail-n-fix.patch 468
+AUX sloccount-2.26-libexec.patch 2293 RMD160 39ba8614920f96e412cc7baa36aa3b0635e48e84 SHA1 47ffdfee1f7891adfb38ba7e006aaa05f07c28d5 SHA256 c098bc1ba364a43cfb39805f6d7c46c7f3d72f4969c0bfb2dd4d62ef750df1f7
+MD5 e4438da83f662b58c33e01f759570ff7 files/sloccount-2.26-libexec.patch 2293
+RMD160 39ba8614920f96e412cc7baa36aa3b0635e48e84 files/sloccount-2.26-libexec.patch 2293
+SHA256 c098bc1ba364a43cfb39805f6d7c46c7f3d72f4969c0bfb2dd4d62ef750df1f7 files/sloccount-2.26-libexec.patch 2293
+DIST sloccount-2.22.tar.gz 186990 RMD160 2f67866fea8d3dc6a5262a9c347d5dba357be1cb SHA1 8e114e5e3fc2b995f3619b4306644ec8ec87312b SHA256 1928181813ec771e175dad0d821171e15d3ab5e9d6fdf5cdb4c0a0f70c154d02
+DIST sloccount-2.26.tar.gz 190948 RMD160 a5bd1dbe8bd5e5c52ed790990c0d5d8fc49b26ff SHA1 505031c6adfb93e454aaf8b0ee7de04122079d13 SHA256 fa7fa2bbf2f627dd2d0fdb958bd8ec4527231254c120a8b4322405d8a4e3d12b
+EBUILD sloccount-2.22.ebuild 1060 RMD160 8193c81e3972ee69cba807baf388f051bc73f8f3 SHA1 122bac8576745a421294292d4fb9d30d8b4cb836 SHA256 29a3dfdd5f135ea9c49dea40040d99d2052018b4cae143a0250bf0eb4d18ab25
+MD5 67f5888814e9597410fb0d6079a19e75 sloccount-2.22.ebuild 1060
+RMD160 8193c81e3972ee69cba807baf388f051bc73f8f3 sloccount-2.22.ebuild 1060
+SHA256 29a3dfdd5f135ea9c49dea40040d99d2052018b4cae143a0250bf0eb4d18ab25 sloccount-2.22.ebuild 1060
+EBUILD sloccount-2.26-r1.ebuild 1050 RMD160 afb5442d6a12119cf5dcbecf3202a7fdb2d24924 SHA1 afba5053e4ccfbfb1f88561ac78d66d5f4dbdca0 SHA256 ca5eb6d1c70b088242b28ed2da67525e0d9380e50fc09fae63fbe7ee32fadcb1
+MD5 c73a5fcc042059aba22e282c581dc58b sloccount-2.26-r1.ebuild 1050
+RMD160 afb5442d6a12119cf5dcbecf3202a7fdb2d24924 sloccount-2.26-r1.ebuild 1050
+SHA256 ca5eb6d1c70b088242b28ed2da67525e0d9380e50fc09fae63fbe7ee32fadcb1 sloccount-2.26-r1.ebuild 1050
+EBUILD sloccount-2.26.ebuild 1020 RMD160 523802786544fb3e2c07ab7e57fb13d6c343a2fa SHA1 f38fb846a57584f21d31d1fdd4e3bddfa768598e SHA256 d728b3e8e8468a5ff978fa82c3608ab28b1c0f896f5cf6d96920c5b03dab68eb
+MD5 a666ec7e2fe5690bca280a648b4e4d6f sloccount-2.26.ebuild 1020
+RMD160 523802786544fb3e2c07ab7e57fb13d6c343a2fa sloccount-2.26.ebuild 1020
+SHA256 d728b3e8e8468a5ff978fa82c3608ab28b1c0f896f5cf6d96920c5b03dab68eb sloccount-2.26.ebuild 1020
+MISC ChangeLog 2263 RMD160 519628be11dc3374bf5f696415dab40060fa1960 SHA1 5b74fed5af2e6a559e61bc5dae47145427bdc49c SHA256 2c2aa3475a01b56e92d4319450787198b5aa366fe41df287b4abc4e135c9d4dd
+MD5 537412ddcace7a98b278eff9276cc001 ChangeLog 2263
+RMD160 519628be11dc3374bf5f696415dab40060fa1960 ChangeLog 2263
+SHA256 2c2aa3475a01b56e92d4319450787198b5aa366fe41df287b4abc4e135c9d4dd ChangeLog 2263
+MISC metadata.xml 223 RMD160 ffa99612cf27469c417944deed0e0c9155e64331 SHA1 607c637402dd253406aa6ee684471a702c5d1a99 SHA256 d6bb9ba68629616062b4433ab3b8fb01dfcafae5bb47804d9e06cdd6c66daa44
+MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
+RMD160 ffa99612cf27469c417944deed0e0c9155e64331 metadata.xml 223
+SHA256 d6bb9ba68629616062b4433ab3b8fb01dfcafae5bb47804d9e06cdd6c66daa44 metadata.xml 223
+MD5 6e4b0aeaf770f3c80dc4a2762fc05e75 files/digest-sloccount-2.22 244
+RMD160 c8a059282f134aaf673bbc5a821b3c512ce621ca files/digest-sloccount-2.22 244
+SHA256 02ff5d043f490c273c62aa006b5c6e9b538864aaeddaeb3a8deb6600f70e7bfe files/digest-sloccount-2.22 244
+MD5 cc04e3f096258e0f2a599302e72b52e8 files/digest-sloccount-2.26 244
+RMD160 b55f1fb04a218d7dd944e208c1eacd9520443bab files/digest-sloccount-2.26 244
+SHA256 766b0e2be04a7f3ca50d02c16c27759845b23aa1a3121938d76e00df5d8b4f98 files/digest-sloccount-2.26 244
+MD5 cc04e3f096258e0f2a599302e72b52e8 files/digest-sloccount-2.26-r1 244
+RMD160 b55f1fb04a218d7dd944e208c1eacd9520443bab files/digest-sloccount-2.26-r1 244
+SHA256 766b0e2be04a7f3ca50d02c16c27759845b23aa1a3121938d76e00df5d8b4f98 files/digest-sloccount-2.26-r1 244
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.2 (GNU/Linux)
+
+iD8DBQFFy8kcAiZjviIA2XgRAgJiAKDZ4UGy9jB9l+P/zbBGPvduj4ZXEgCgkCUZ
+lJ+f+2pcI/PnYaU6vRDTLp0=
+=I8FP
+-----END PGP SIGNATURE-----
