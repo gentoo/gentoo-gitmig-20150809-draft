@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/libconf
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/ChangeLog,v 1.45 2007/01/18 19:44:30 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/ChangeLog,v 1.46 2007/02/09 22:35:27 dams Exp $
+
+  09 Feb 2007; Damien Krotkine <dams@gentoo.org> libconf-0.42.10-r1.ebuild:
+  corrected homepage. bug #166128
 
   18 Jan 2007; Damien Krotkine <dams@gentoo.org> libconf-0.42.10-r1.ebuild:
   corrected SRC_URI, corrected copyright date

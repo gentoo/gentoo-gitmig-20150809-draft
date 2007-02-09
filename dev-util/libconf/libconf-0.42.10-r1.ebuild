@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/libconf-0.42.10-r1.ebuild,v 1.4 2007/01/18 19:44:30 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/libconf-0.42.10-r1.ebuild,v 1.5 2007/02/09 22:35:27 dams Exp $
 
 inherit eutils multilib toolchain-funcs
 
 MY_P=perl-Libconf-${PV}
 
 DESCRIPTION="Centralized abstraction layer for system configuration files"
-HOMEPAGE="http://libconf.net/"
+HOMEPAGE="http://damien.krotkine.com/libconf/"
 SRC_URI="http://damien.krotkine.com/libconf/dist/${MY_P}.tar.bz2"
 
 
