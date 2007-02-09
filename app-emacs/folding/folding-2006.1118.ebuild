@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/folding/folding-2006.1118.ebuild,v 1.1 2007/02/09 09:35:06 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/folding/folding-2006.1118.ebuild,v 1.2 2007/02/09 17:34:36 mr_bones_ Exp $
 
 inherit elisp
 
