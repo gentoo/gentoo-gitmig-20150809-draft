@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/ap-utils
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ap-utils/ChangeLog,v 1.11 2004/08/08 00:30:31 slarti Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ap-utils/ChangeLog,v 1.12 2007/02/09 05:07:41 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   08 Aug 2004; Tom Martin <slarti@gentoo.org> ap-utils-1.3.1.ebuild,
   ap-utils-1.3.3.ebuild, ap-utils-1.4.1.ebuild, ap-utils-1.4.ebuild:

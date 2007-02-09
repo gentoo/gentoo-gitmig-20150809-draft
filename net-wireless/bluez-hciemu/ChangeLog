@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-hciemu
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hciemu/ChangeLog,v 1.8 2005/10/23 10:33:18 brix Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hciemu/ChangeLog,v 1.9 2007/02/09 05:10:18 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   23 Oct 2005; Henrik Brix Andersen <brix@gentoo.org>
   bluez-hciemu-1.2.ebuild:

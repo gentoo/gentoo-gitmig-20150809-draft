@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/rfswitch
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rfswitch/ChangeLog,v 1.3 2005/05/28 21:07:08 brix Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rfswitch/ChangeLog,v 1.4 2007/02/09 05:11:49 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   28 May 2005; <brix@gentoo.org> -rfswitch-0.1.ebuild:
   Removed deprecated non-linux-mod.eclas ebuild.
