@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/dev/2007.0/make.defaults,v 1.1 2007/01/26 13:36:50 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/dev/2007.0/make.defaults,v 1.2 2007/02/09 21:48:36 wolf31o2 Exp $
 
-# This will be commented and replaced with just STAGE1_USE="unicode" if we do
-# not end up with a stable glibc 2.4 by 2006.1's release.
+# We build stage1 against this
 STAGE1_USE="nptl nptlonly unicode"
 
-# These USE flags are what is common between the various sub-profiles.
-USE="cups gdbm ldap libg++ nptl nptlonly ppds truetype udev unicode xml"
+# These USE flags are what is common between the various sub-profiles. Stages 2
+# and 3 are built against these, so be careful what you add.
+USE="cups gdbm gpm libg++ nptl nptlonly ppds udev unicode"
