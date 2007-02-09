@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rdtool
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.25 2006/02/04 15:05:34 solar Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.26 2007/02/09 20:19:38 gustavoz Exp $
+
+  09 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  rdtool-0.6.14-r1.ebuild:
+  Stable on sparc
 
   04 Feb 2006; <solar@gentoo.org> :
   - redigest needed due to bad RMD160. bug #121124
