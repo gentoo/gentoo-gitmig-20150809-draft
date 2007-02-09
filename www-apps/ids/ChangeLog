@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/ids
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ids/ChangeLog,v 1.8 2005/09/11 13:55:48 rl03 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ids/ChangeLog,v 1.9 2007/02/09 06:12:41 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   11 Sep 2005; Renat Lumpau <rl03@gentoo.org> -ids-0.82.ebuild:
   Removing old and broken version
