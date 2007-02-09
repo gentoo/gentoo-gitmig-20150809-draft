@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2584 2007/02/09 16:09:51 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2585 2007/02/09 16:26:48 drac Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1920,10 +1920,10 @@ x11-wm/sawfish:pango - Enable pango support
 x11-wm/stumpwm-cvs:clisp - Use CLISP for the runtime
 x11-wm/stumpwm-cvs:sbcl - Use SBCL for the runtime
 x11-wm/windowmaker:modelock - Enable XKB language status lock support. README says: "If you don't know what it is you probably don't need it."
-xfce-base/thunar:plugins - Enable panel plugins.
+xfce-base/thunar:plugins - Enable trash panel plugin.
 xfce-base/xfce4-extras:battery - Pulls in xfce4-battery dependency.
 xfce-base/xfce4-extras:wlan - Pulls in xfce4-wavelan dependency.
-xfce-base/xfdesktop:plugins - Enable panel plugins.
+xfce-base/xfdesktop:plugins - Enable menu panel plugin.
 xfce-extra/xarchiver:7zip - Adds support for 7zip archives.
 xfce-extra/xarchiver:arj - Adds support for arj archives.
 xfce-extra/xarchiver:lha - Adds support for lha archives.
