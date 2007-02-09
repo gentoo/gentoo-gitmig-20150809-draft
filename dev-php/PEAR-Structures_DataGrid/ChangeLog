@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Structures_DataGrid
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Structures_DataGrid/ChangeLog,v 1.18 2006/05/21 18:12:17 corsair Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Structures_DataGrid/ChangeLog,v 1.19 2007/02/09 02:54:20 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   21 May 2006; Markus Rothe <corsair@gentoo.org>
   PEAR-Structures_DataGrid-0.6.3.ebuild:
