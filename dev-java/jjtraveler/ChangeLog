@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jjtraveler
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jjtraveler/ChangeLog,v 1.7 2005/04/22 08:14:10 blubb Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jjtraveler/ChangeLog,v 1.8 2007/02/09 02:08:16 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org> jjtraveler-0.4.3.ebuild:
   stable on amd64

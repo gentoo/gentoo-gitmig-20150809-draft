@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/violinstrings
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/violinstrings/ChangeLog,v 1.8 2005/04/22 08:49:50 blubb Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/violinstrings/ChangeLog,v 1.9 2007/02/09 02:13:47 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org> violinstrings-1.0.2.ebuild:
   stable on amd64
