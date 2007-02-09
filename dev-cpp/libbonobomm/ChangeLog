@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libbonobomm
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libbonobomm/ChangeLog,v 1.6 2005/01/01 17:27:37 eradicator Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libbonobomm/ChangeLog,v 1.7 2007/02/09 01:08:16 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *libbonobomm-1.3.8 (11 Jun 2004)
 

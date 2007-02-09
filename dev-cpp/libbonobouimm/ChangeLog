@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libbonobouimm
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libbonobouimm/ChangeLog,v 1.5 2005/01/01 17:27:49 eradicator Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libbonobouimm/ChangeLog,v 1.6 2007/02/09 01:08:41 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   12 Sep 2003; Alastair Tse <liquidx@gentoo.org> libbonobouimm-1.3.5.ebuild,
   libbonobouimm-1.3.6.ebuild:
