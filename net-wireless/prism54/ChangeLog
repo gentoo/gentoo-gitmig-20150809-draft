@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/prism54
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54/ChangeLog,v 1.10 2005/07/04 18:27:45 genstef Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54/ChangeLog,v 1.11 2007/02/09 08:17:05 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   04 Jul 2005; Stefan Schweizer <genstef@gentoo.org>
   prism54-20050125.ebuild:
