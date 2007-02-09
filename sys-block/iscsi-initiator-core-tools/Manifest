@@ -1,4 +1,26 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST iscsi-initiator-core-tools-2.3.tar.bz2 51623 RMD160 d3ca4706c27ce8e0e30130f1e3a54966b5047123 SHA1 ce47747b2922eb302916f592f193d657506e5f5d SHA256 87c1dbf6637bfd3b50ce55902b1884db9db54b2080272b80c3f0541e6f285f8d
+EBUILD iscsi-initiator-core-tools-2.3.ebuild 1352 RMD160 debf3433a89defe8f4254ee2677be2d5e95e73f4 SHA1 0adb7a76773dca98130730ad5efe1a72f7a54ada SHA256 d2897155757aee7c0cfb55b93585fb61d39f09207fcbbef6b35768d9a1241eab
 MD5 abf535081e51f20dd794d50903581ac1 iscsi-initiator-core-tools-2.3.ebuild 1352
-MD5 7e1cf1773d6a00bcc1d7ada3379ddc1e ChangeLog 471
+RMD160 debf3433a89defe8f4254ee2677be2d5e95e73f4 iscsi-initiator-core-tools-2.3.ebuild 1352
+SHA256 d2897155757aee7c0cfb55b93585fb61d39f09207fcbbef6b35768d9a1241eab iscsi-initiator-core-tools-2.3.ebuild 1352
+MISC ChangeLog 579 RMD160 d5abafdbca28ee384051d48c56e2ebb694b01ce3 SHA1 10b88ce24c664dce2c16fde8ea2fb82a5225b88a SHA256 82eae573fb19ab345b8cc69de6f3be192b0c634ae1cf13c414a95dbae39783aa
+MD5 27d78fa12e419293a22a5196b458595a ChangeLog 579
+RMD160 d5abafdbca28ee384051d48c56e2ebb694b01ce3 ChangeLog 579
+SHA256 82eae573fb19ab345b8cc69de6f3be192b0c634ae1cf13c414a95dbae39783aa ChangeLog 579
+MISC metadata.xml 223 RMD160 b6184a992e392253e12cd5c4e815a8fb1a9f511c SHA1 6bf24bae7fd1318a6a9d1ddfcb9a70056b525fdf SHA256 0c1b55cf0218fc9d0babc11e9d9993522fb4f36174122a0d5c3490f079a21818
 MD5 42bf7f8bbdf7a772153a3daaa02fc260 metadata.xml 223
-MD5 14f74957d4ef520d002e7f5a45e66ea3 files/digest-iscsi-initiator-core-tools-2.3 82
+RMD160 b6184a992e392253e12cd5c4e815a8fb1a9f511c metadata.xml 223
+SHA256 0c1b55cf0218fc9d0babc11e9d9993522fb4f36174122a0d5c3490f079a21818 metadata.xml 223
+MD5 bd5a977ffa4b7eb5c0a37499961e0a13 files/digest-iscsi-initiator-core-tools-2.3 292
+RMD160 43c79da2723098509f9284df1a4bb1307a286c81 files/digest-iscsi-initiator-core-tools-2.3 292
+SHA256 9fdb96336d5fddd62a25ffbfce3b745c41f3f5b1f3678eeb8bd8e9723091acc8 files/digest-iscsi-initiator-core-tools-2.3 292
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.2 (GNU/Linux)
+
+iD8DBQFFzDH3AiZjviIA2XgRAgDQAJ9vsvSJr4R2pFCvuhQxC+KV8sy0fgCdFsDQ
+GJ06u+gbtARGYjUfhsx/yjA=
+=nygT
+-----END PGP SIGNATURE-----
