@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.97 2007/02/08 19:13:30 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.98 2007/02/09 19:01:59 grobian Exp $
+
+  09 Feb 2007; Fabian Groffen <grobian@gentoo.org>
+  +freetype-2.1.9-r1.ebuild:
+  Restored freetype-2.1.9-r1.ebuild because that version is still in use by
+  alpha, sorry for the breakage
 
   08 Feb 2007; Fabian Groffen <grobian@gentoo.org>
   -freetype-2.1.9-r1.ebuild, freetype-2.1.10-r2.ebuild,
