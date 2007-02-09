@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/multisort
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/multisort/ChangeLog,v 1.1 2005/01/22 09:06:35 hollow Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/multisort/ChangeLog,v 1.2 2007/02/09 06:14:57 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *multisort-1.1 (22 Jan 2005)
 
