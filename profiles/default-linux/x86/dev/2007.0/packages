@@ -1,6 +1,6 @@
-# Copyright 2001-2004 Gentoo Foundation.
+# Copyright 2001-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/dev/2007.0/packages,v 1.1 2006/11/03 22:36:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/dev/2007.0/packages,v 1.2 2007/02/09 22:07:32 wolf31o2 Exp $
 
 # For instructions on how this file works (as an inclusion mask, primarily),
 # please refer to ${PORTDIR}/profiles/base/packages

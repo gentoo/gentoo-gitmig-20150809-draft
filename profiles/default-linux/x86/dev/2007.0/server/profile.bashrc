@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/dev/2007.0/server/profile.bashrc,v 1.1 2006/11/03 22:36:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/dev/2007.0/server/profile.bashrc,v 1.2 2007/02/09 22:07:32 wolf31o2 Exp $
 
-if [ "${EBUILD_PHASE}" == "setup" ]
+if [[ "${EBUILD_PHASE}" == "setup" ]]
 then
-	if [ ! "${I_KNOW_WHAT_I_AM_DOING}" == "yes" ]
+	if [[ ! "${I_KNOW_WHAT_I_AM_DOING}" == "yes" ]]
 	then
 		ewarn "This profile has not been tested thoroughly and is not considered to be"
 		ewarn "a supported server profile at this time.  For a supported server"
