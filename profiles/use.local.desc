@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2583 2007/02/09 15:34:01 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2584 2007/02/09 16:09:51 chainsaw Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -876,7 +876,7 @@ media-libs/xine-lib:wavpack - Build with WavPack support
 media-libs/xine-lib:xcb - Support the X C-language Binding, a replacement for Xlib
 media-libs/xine-lib:xvmc - Support for XVideo Motion Compensation (accelerated mpeg playback)
 media-plugins/audacious-plugins:adplug - Build with AdPlug (Adlib sound card emulation) support
-media-plugins/audacious-plugins:chardet - Character set detection support for non-UTF8 ID3 tags
+media-plugins/audacious-plugins:chardet - Try to handle non-UTF8 chinese/japanese/korean ID3 tags
 media-plugins/audacious-plugins:modplug - Build with modplug support
 media-plugins/audacious-plugins:sid - Build with SID (Commodore 64 Audio) support
 media-plugins/audacious-plugins:timidity - Build with Timidity++ (MIDI sequencer) support
@@ -905,7 +905,7 @@ media-sound/amarok:njb - Enable support for NJB (Creative) devices access throug
 media-sound/amarok:noamazon - Disable support for downloading covers from amazon.com
 media-sound/amarok:real - Build with real/helix player support
 media-sound/amarok:visualization - Support visualization plugins through media-libs/libvisual
-media-sound/audacious:chardet - Character set detection support for non-UTF8 ID3 tags
+media-sound/audacious:chardet - Try to handle non-UTF8 chinese/japanese/korean ID3 tags
 media-sound/audacious:modplug - Build with modplug support
 media-sound/audacious:sid - Build with SID (Commodore 64 Audio) support
 media-sound/audacious:timidity - Build with Timidity++ (MIDI sequencer) support
