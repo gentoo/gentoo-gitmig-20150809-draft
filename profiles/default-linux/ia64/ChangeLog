@@ -1,6 +1,13 @@
 # ChangeLog for ia64 profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.13 2007/02/09 20:28:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.14 2007/02/09 23:25:49 kloeri Exp $
+
+  09 Feb 2007; Bryan Østergaard <kloeri@gentoo.org>
+  +dev/2007.0/desktop/make.defaults, +dev/2007.0/desktop/parent,
+  +dev/2007.0/desktop/virtuals, dev/2007.0/make.defaults,
+  dev/2007.0/packages, +dev/2007.0/server/make.defaults,
+  +dev/2007.0/server/parent:
+  Sync dev/2007.0 profile with x86.
 
   09 Feb 2007; Bryan Østergaard <kloeri@gentoo.org>
   dev/2007.0/make.defaults:
