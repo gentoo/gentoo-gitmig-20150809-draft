@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gnome-python
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.85 2007/01/21 19:46:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.86 2007/02/09 22:02:35 uberlord Exp $
+
+  09 Feb 2007; Roy Marples <uberlord@gentoo.org> gnome-python-2.16.2.ebuild:
+  Added ~x86-fbsd keyword.
 
   21 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
   gnome-python-2.16.2.ebuild:
