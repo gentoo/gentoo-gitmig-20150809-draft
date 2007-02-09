@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-2.2.3.ebuild,v 1.1 2007/01/28 04:40:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-2.2.3.ebuild,v 1.2 2007/02/09 17:39:42 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="alsa dedicated opengl sdl"
 
 UIRDEPEND="alsa? ( media-libs/alsa-lib )
