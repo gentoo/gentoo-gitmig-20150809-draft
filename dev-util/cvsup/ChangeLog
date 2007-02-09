@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cvsup
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/ChangeLog,v 1.15 2004/07/02 05:06:21 eradicator Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/ChangeLog,v 1.16 2007/02/09 13:19:24 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> cvsup-16.1h.ebuild:
   virtual/glibc -> virtual/libc
