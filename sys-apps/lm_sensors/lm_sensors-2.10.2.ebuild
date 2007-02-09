@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.10.2.ebuild,v 1.1 2007/01/20 18:20:03 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.10.2.ebuild,v 1.2 2007/02/09 12:46:16 chtekk Exp $
 
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib
 
@@ -20,8 +20,8 @@ COMMON="sys-fs/sysfsutils
 DEPEND="${COMMON}
 		sys-apps/sed
 		ppc? ( >=virtual/linux-sources-2.5 )
-		amd64? ( >=virtual/linux-sources-2.5 )
-		x86? ( || ( >=virtual/linux-sources-2.5 sys-apps/lm_sensors-modules ) )"
+		amd64? ( || ( >=virtual/linux-sources-2.5 >=sys-kernel/vserver-sources-2.0 ) )
+		x86? ( || ( >=virtual/linux-sources-2.5 >=sys-kernel/vserver-sources-2.0 sys-apps/lm_sensors-modules ) )"
 RDEPEND="${COMMON}
 		dev-lang/perl"
 
