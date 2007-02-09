@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ed2k_recovermet
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_recovermet/ChangeLog,v 1.5 2004/07/01 09:17:08 squinky86 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_recovermet/ChangeLog,v 1.6 2007/02/09 08:15:55 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org>
   ed2k_recovermet-0.2_alpha1.ebuild:
