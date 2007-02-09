@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/e100
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/e100/ChangeLog,v 1.23 2005/04/30 10:39:01 mholzer Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/e100/ChangeLog,v 1.24 2007/02/09 13:27:59 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *e100-3.4.8 (30 Apr 2005)
 
