@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.8.ebuild,v 1.3 2007/02/04 11:49:05 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.8.ebuild,v 1.4 2007/02/09 14:55:36 drac Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,8 +13,8 @@ SRC_URI="http://www.exaile.org/files/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="aac cdaudio fam flac gnome ipod libnotify libsexy mp3 musepack ogg
-	serpentine streamripper vorbis"
+IUSE="aac alsa cdaudio fam flac gnome ipod libnotify libsexy mad musepack ogg
+	oss serpentine streamripper vorbis"
 
 RDEPEND=">=dev-lang/python-2.4
 	>=dev-python/pygtk-2.8.6
@@ -28,7 +28,9 @@ RDEPEND=">=dev-lang/python-2.4
 	dev-python/elementtree
 	dev-python/dbus-python
 	fam? ( app-admin/gamin )
-	mp3? ( >=media-plugins/gst-plugins-mad-0.10 )
+	alsa? ( >=media-plugins/gst-plugins-alsa-0.10 )
+	oss? ( >=media-plugins/gst-plugins-oss-0.10 )
+	mad? ( >=media-plugins/gst-plugins-mad-0.10 )
 	ogg? ( >=media-plugins/gst-plugins-ogg-0.10 )
 	vorbis? ( >=media-plugins/gst-plugins-vorbis-0.10 )
 	flac? ( >=media-plugins/gst-plugins-flac-0.10 )
