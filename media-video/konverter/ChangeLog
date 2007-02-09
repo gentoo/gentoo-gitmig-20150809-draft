@@ -1,6 +1,9 @@
 # ChangeLog for media-video/konverter
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/konverter/ChangeLog,v 1.8 2005/05/12 22:11:35 greg_g Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/konverter/ChangeLog,v 1.9 2007/02/09 08:02:26 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   12 May 2005; Gregorio Guidi <greg_g@gentoo.org>
   konverter-0.92_beta1.ebuild:
