@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/panda3d
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/panda3d/ChangeLog,v 1.3 2005/07/06 18:02:03 chriswhite Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/panda3d/ChangeLog,v 1.4 2007/02/09 07:56:30 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   07 Jul 2005; Chris White <chriswhite@gentoo.org> panda3d-1.0.4.ebuild:
   fixed use flag warning, freetype to truetype
