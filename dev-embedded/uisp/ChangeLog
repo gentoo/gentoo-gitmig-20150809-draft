@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/uisp
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/uisp/ChangeLog,v 1.12 2005/09/13 15:15:52 gustavoz Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/uisp/ChangeLog,v 1.13 2007/02/09 01:50:25 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   13 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   uisp-20050207-r1.ebuild:

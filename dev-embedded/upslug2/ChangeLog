@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/upslug2
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/upslug2/ChangeLog,v 1.1 2005/11/30 06:51:19 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/upslug2/ChangeLog,v 1.2 2007/02/09 01:50:48 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *upslug2-11 (30 Nov 2005)
 
