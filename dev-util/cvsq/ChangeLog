@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cvsq
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsq/ChangeLog,v 1.7 2005/04/25 11:23:51 ka0ttic Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsq/ChangeLog,v 1.8 2007/02/09 07:42:08 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   25 Apr 2005; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml,
   cvsq-0.4.4.ebuild:

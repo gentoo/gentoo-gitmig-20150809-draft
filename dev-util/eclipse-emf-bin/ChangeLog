@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/eclipse-emf-bin
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-emf-bin/ChangeLog,v 1.8 2005/04/16 13:59:04 luckyduck Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-emf-bin/ChangeLog,v 1.9 2007/02/09 07:42:56 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *eclipse-emf-bin-2.0.2 (16 Apr 2005)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/fujaba
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fujaba/ChangeLog,v 1.12 2005/08/26 13:24:20 flameeyes Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fujaba/ChangeLog,v 1.13 2007/02/09 07:45:31 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   26 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> fujaba-4.2.0.ebuild:
   Fix cp -a usage for Gentoo/FreeBSD.

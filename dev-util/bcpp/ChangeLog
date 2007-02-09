@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/bcpp
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bcpp/ChangeLog,v 1.9 2006/02/10 05:21:34 deltacow Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bcpp/ChangeLog,v 1.10 2007/02/09 07:41:51 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   10 Feb 2006; Scott Stoddard <deltacow@gentoo.org> bcpp-20050725.ebuild:
   ~amd64 added.
