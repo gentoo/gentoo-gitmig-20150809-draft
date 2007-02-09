@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.90 2007/02/05 11:46:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.91 2007/02/09 12:55:00 wolf31o2 Exp $
+
+  09 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> kwin-3.5.5-r2.ebuild:
+  Stable on alpha wrt bug #164079.
 
   05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -files/kwin-3.5.2-alt_tab_and_focus_chain_fix.diff,
