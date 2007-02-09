@@ -1,6 +1,12 @@
 # ChangeLog for app-text/yodl
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yodl/ChangeLog,v 1.11 2005/04/21 20:36:13 blubb Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/yodl/ChangeLog,v 1.12 2007/02/09 07:19:00 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> yodl-1.31.18.ebuild:
   stable on amd64
