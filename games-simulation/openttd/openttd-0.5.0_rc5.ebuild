@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.5.0_rc3.ebuild,v 1.1 2007/01/14 01:23:41 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.5.0_rc5.ebuild,v 1.1 2007/02/09 22:25:51 pylon Exp $
 
 inherit eutils games
 
@@ -31,7 +31,7 @@ RDEPEND="${DEPEND}
 		!timidity? ( alsa? ( media-sound/alsa-utils ) )
 	)"
 
-S=${WORKDIR}/${MY_P}
+S=${WORKDIR}/${MY_P/_rc5/-RC5}-source
 
 src_unpack() {
 	unpack ${MY_P}-source.tar.bz2
