@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/omni
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/omni/ChangeLog,v 1.7 2005/08/11 23:40:39 robbat2 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/omni/ChangeLog,v 1.8 2007/02/09 06:01:52 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *omni-1.6-r1 (11 Aug 2005)
 

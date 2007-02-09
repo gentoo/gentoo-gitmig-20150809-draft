@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc-compat
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-compat/ChangeLog,v 1.7 2004/08/08 00:42:18 slarti Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-compat/ChangeLog,v 1.8 2007/02/09 06:01:14 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   08 Aug 2004; Tom Martin <slarti@gentoo.org> gcc-compat-1.4.ebuild:
   Typo in DESCRIPTION: compatability -> compatibility. Bug 59717.
