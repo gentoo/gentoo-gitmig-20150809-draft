@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/led
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/led/ChangeLog,v 1.4 2006/02/13 15:00:47 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/led/ChangeLog,v 1.5 2007/02/09 04:55:39 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   13 Feb 2006; Michael Cummings <mcummings@gentoo.org> led-1.79.4.ebuild:
   Virtuals for some perl-core deps
