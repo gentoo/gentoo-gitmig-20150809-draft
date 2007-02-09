@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-base/mknfonts
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/mknfonts/ChangeLog,v 1.13 2005/05/06 17:01:22 swegener Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/mknfonts/ChangeLog,v 1.14 2007/02/09 07:49:10 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   06 May 2005; Sven Wegener <swegener@gentoo.org> mknfonts-0.5.ebuild:
   Removed * postfix from <, <=, >= and > dependencies.
