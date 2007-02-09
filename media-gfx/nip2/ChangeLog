@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/nip2
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/ChangeLog,v 1.4 2005/12/10 20:35:06 vanquirius Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/ChangeLog,v 1.5 2007/02/09 03:29:28 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *nip2-7.10.16 (10 Dec 2005)
 

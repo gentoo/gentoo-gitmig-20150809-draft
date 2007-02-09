@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/povtree
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povtree/ChangeLog,v 1.10 2006/04/07 15:55:39 vanquirius Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povtree/ChangeLog,v 1.11 2007/02/09 03:31:00 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   07 Apr 2006; Marcelo Goes <vanquirius@gentoo.org> -povtree-1.3.ebuild,
   povtree-1.5.ebuild:
