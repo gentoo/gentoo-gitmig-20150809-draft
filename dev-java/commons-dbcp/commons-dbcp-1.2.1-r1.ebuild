@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/commons-dbcp-1.2.1-r1.ebuild,v 1.4 2006/12/09 09:09:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/commons-dbcp-1.2.1-r1.ebuild,v 1.5 2007/02/09 21:35:35 nelchael Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -10,11 +10,10 @@ SRC_URI="mirror://apache/jakarta/commons/dbcp/source/${P}-src.tar.gz"
 COMMON_DEP="
 		>=dev-java/commons-collections-2.0
 		>=dev-java/commons-pool-1.1"
-RDEPEND=">=virtual/jre-1.3
+RDEPEND=">=virtual/jre-1.4
 		${COMMON_DEP}"
 # FIXME doesn't like API changes with Java 1.6
 DEPEND="|| (
-			=virtual/jdk-1.3*
 			=virtual/jdk-1.4*
 			=virtual/jdk-1.5*
 		)
