@@ -1,6 +1,10 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.26 2007/02/09 01:11:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.27 2007/02/09 19:39:39 gustavoz Exp $
+
+  09 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  sparc32/dev/gcc-4.1.1/virtuals, sparc64/dev/gcc-4.1.1/virtuals, virtuals:
+  Cleanup the dev virtuals a bit, switch to cdrkit globally
 
   09 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   sparc32/dev/gcc-4.1.1/make.defaults, sparc64/dev/gcc-4.1.1/make.defaults:
