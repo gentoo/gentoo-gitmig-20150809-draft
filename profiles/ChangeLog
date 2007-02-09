@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.88 2007/02/09 18:12:08 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.89 2007/02/09 21:26:26 alonbl Exp $
+
+  09 Feb 2007; Alon Bar-Lev <alonbl@gentoo.org> package.mask:
+  Added >=sys-kernel/suspend2-sources-2.6.20
 
   09 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
   Package.mask dev-java/jess-bin.

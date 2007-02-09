@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6793 2007/02/09 20:21:34 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6794 2007/02/09 21:26:26 alonbl Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Alon Bar-Lev <alonbl@gentoo.org> (09 Feb 2007)
+# This is a development version
+>=sys-kernel/suspend2-sources-2.6.20
 
 # Petteri Räty <betelgeuse@gentoo.org> (09 Feb 2007)
 # Commercial package whose maintainer is MIA.
