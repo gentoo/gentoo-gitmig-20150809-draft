@@ -1,6 +1,10 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.25 2007/02/08 17:15:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.26 2007/02/09 01:11:10 gustavoz Exp $
+
+  09 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  sparc32/dev/gcc-4.1.1/make.defaults, sparc64/dev/gcc-4.1.1/make.defaults:
+  Disable USE=X for the dev profiles, we don't wanna pull unnecessary stuff
 
   08 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   sparc32/dev/gcc-4.1.1/package.mask, sparc64/dev/gcc-4.1.1/package.mask,
