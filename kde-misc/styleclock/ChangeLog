@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/styleclock
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/styleclock/ChangeLog,v 1.4 2007/01/19 15:18:03 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/styleclock/ChangeLog,v 1.5 2007/02/09 16:25:42 masterdriverz Exp $
+
+  09 Feb 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  styleclock-0.5.1.ebuild:
+  Change SRC_URI to point at gentoo mirrors. Closes bug 156608
 
   19 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
   styleclock-0.5.1.ebuild:
