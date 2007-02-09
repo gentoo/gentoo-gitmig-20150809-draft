@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.182 2007/02/06 21:12:52 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.183 2007/02/09 19:36:32 kloeri Exp $
+
+  09 Feb 2007; Bryan Østergaard <kloeri@gentoo.org> dbus-1.0.2.ebuild:
+  Stable on Alpha, bug 154522.
 
   06 Feb 2007; Doug Goldstein <cardoe@gentoo.org> dbus-0.62-r2.ebuild:
   Removing keywords for ebuilds that are no longer supported. alpha and mips
