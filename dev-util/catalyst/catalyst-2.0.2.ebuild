@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.2.ebuild,v 1.1 2007/02/06 22:55:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.2.ebuild,v 1.2 2007/02/09 01:40:13 wolf31o2 Exp $
 
 inherit eutils
 
@@ -58,7 +58,7 @@ src_install() {
 	dodir /usr/bin
 	dosym /usr/lib/${PN}/catalyst /usr/bin/catalyst
 	insinto /etc/catalyst
-	doins files/catalyst.conf || die "copying catalyst.conf"
+	doins files/catalyst.conf files/catalystrc || die "copying configuration"
 	DOCDESTTREE="." dohtml -A spec,msg,example -r examples files
 	dodoc README ChangeLog ChangeLog.old AUTHORS
 	doman files/catalyst.1
