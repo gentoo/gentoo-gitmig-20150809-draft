@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocamldsort
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamldsort/ChangeLog,v 1.1 2004/10/05 07:54:53 mattam Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamldsort/ChangeLog,v 1.2 2007/02/09 02:47:43 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   04 Oct 2004; Matthieu Sozeau <mattam@gentoo.org> +ocamldsort-0.14.2
   +metadata.xml:

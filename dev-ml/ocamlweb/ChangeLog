@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocamlweb
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ChangeLog,v 1.5 2006/02/04 17:05:18 mattam Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ChangeLog,v 1.6 2007/02/09 02:49:47 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   04 Feb 2006; Matthieu Sozeau <mattam@gentoo.org> -ocamlweb-1.34.ebuild,
   +ocamlweb-1.37.ebuild:
