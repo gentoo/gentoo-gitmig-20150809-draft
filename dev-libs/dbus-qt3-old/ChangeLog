@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/dbus-qt3-old
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-qt3-old/ChangeLog,v 1.10 2007/01/29 15:45:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-qt3-old/ChangeLog,v 1.11 2007/02/09 19:38:58 kloeri Exp $
+
+  09 Feb 2007; Bryan Østergaard <kloeri@gentoo.org>
+  dbus-qt3-old-0.70.ebuild:
+  Stable on Alpha + IA64, bug 162879.
 
   29 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   dbus-qt3-old-0.70.ebuild:
