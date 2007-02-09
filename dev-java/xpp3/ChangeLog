@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/xpp3
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/ChangeLog,v 1.7 2007/01/04 05:56:17 tgall Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/ChangeLog,v 1.8 2007/02/09 20:00:34 fordfrog Exp $
+
+*xpp3-1.1.4c (09 Feb 2007)
+
+  09 Feb 2007; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/xpp3-1.1.4c-build.xml.patch, -xpp3-1.1.3.4m-r1.ebuild,
+  +xpp3-1.1.4c.ebuild:
+  Removed migrated xpp3-1.1.3.4m-r1 ebuild as it didn't work with
+  JAVA_PKG_STRICT=true, and added new version bump.
 
   03 Jan 2007; Tom Gall <tgall@gentoo.org> xpp3-1.1.3.4m.ebuild:
   stable on ppc64
