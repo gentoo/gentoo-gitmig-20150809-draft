@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/musescore
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/ChangeLog,v 1.9 2005/07/25 15:52:25 caleb Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/ChangeLog,v 1.10 2007/02/09 07:58:28 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   25 Jul 2005; Caleb Tennis <caleb@gentoo.org> musescore-0.0.6.ebuild:
   Fix qt dep per bug #100235

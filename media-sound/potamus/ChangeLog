@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/potamus
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/potamus/ChangeLog,v 1.2 2005/06/15 19:36:57 sekretarz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/potamus/ChangeLog,v 1.3 2007/02/09 07:59:03 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   15 Jun 2005; <sekretarz@gentoo.org> potamus-20040414.ebuild:
   Added to ~amd64, bug #96091
