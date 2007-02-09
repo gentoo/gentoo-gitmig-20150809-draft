@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/rox
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.30 2007/01/31 19:40:30 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.31 2007/02/09 03:21:16 wolf31o2 Exp $
+
+  09 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> rox-2.3.ebuild,
+  rox-2.5-r1.ebuild:
+  Stable on alpha wrt bug #155015.
 
 *rox-2.5-r1 (31 Jan 2007)
 
