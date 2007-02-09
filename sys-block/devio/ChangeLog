@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/devio
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/devio/ChangeLog,v 1.1 2006/01/24 02:19:01 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/devio/ChangeLog,v 1.2 2007/02/09 05:47:04 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *devio-1.2 (23 Jan 2006)
 
