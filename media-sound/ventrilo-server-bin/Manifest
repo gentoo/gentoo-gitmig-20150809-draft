@@ -1,22 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b7a69142b4e8426cc4dc07924d910b36 ChangeLog 1643
+AUX conf.d.ventrilo 82 RMD160 d0d9b4df9f0f8936b21675cd07b6276c8fec1fe9 SHA1 71805b3d815f200b26513476dc0fb7b9249bbc2a SHA256 4339d08a6ccde4b63581ec2fa827aeaf13be3dc5bf9b3485116b113ef88e72a4
 MD5 5fcc2c24b7e7ab0520b78f61f6534934 files/conf.d.ventrilo 82
-MD5 65abedc9626a604d070d71f3b2da7124 files/digest-ventrilo-server-bin-2.1.2 81
-MD5 96b88d3c1c59db4a79c58a874ec039dc files/digest-ventrilo-server-bin-2.2.0 81
-MD5 96b88d3c1c59db4a79c58a874ec039dc files/digest-ventrilo-server-bin-2.2.0-r1 81
-MD5 3bb21a4353b386866d1fe913e9f6c29f files/digest-ventrilo-server-bin-2.3.1 81
+RMD160 d0d9b4df9f0f8936b21675cd07b6276c8fec1fe9 files/conf.d.ventrilo 82
+SHA256 4339d08a6ccde4b63581ec2fa827aeaf13be3dc5bf9b3485116b113ef88e72a4 files/conf.d.ventrilo 82
+AUX init.d.ventrilo 600 RMD160 3902b8ed0d261abd58ab0c599bb07e1de07a9b87 SHA1 f8fd4a5064d401e75e21d6e3135b8127d69a9716 SHA256 5347660e5b8dcf475e39dbd10978b3792cfd455697ec4664b7f8f33f0228a013
 MD5 75e3ee40d2009f5b7709e6263323d485 files/init.d.ventrilo 600
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 db860e563e934efb51cead14168e90b3 ventrilo-server-bin-2.1.2.ebuild 811
-MD5 a7852bcd7ec855e228025310a05e69b1 ventrilo-server-bin-2.2.0-r1.ebuild 1010
-MD5 6d4ab872c0ae149eecd39051d0e092c4 ventrilo-server-bin-2.2.0.ebuild 873
+RMD160 3902b8ed0d261abd58ab0c599bb07e1de07a9b87 files/init.d.ventrilo 600
+SHA256 5347660e5b8dcf475e39dbd10978b3792cfd455697ec4664b7f8f33f0228a013 files/init.d.ventrilo 600
+DIST ventrilo_srv-2.3.1-Linux-i386.tar.gz 166862 RMD160 f5ac3cc275f73372bd46b1a3c568bd251c9ef1a4 SHA1 9d3b0d2cfae2d98b1897e902a31b5f4553c2f91e SHA256 5fd929056be6e44e61617080b157680cd3cd3432721a237076c01651ec2bb32f
+EBUILD ventrilo-server-bin-2.3.1.ebuild 1007 RMD160 47f66798139a3a26e5b27e6d1da5baecb32be6e4 SHA1 736c47a99fb2f60601be64a145011d5fa68167bf SHA256 636f275144041eef463d871798e26ac3ed34f5cbe00a1924b33809b043d24ba6
 MD5 8eaff85f7d67157994d0cf3b0a505995 ventrilo-server-bin-2.3.1.ebuild 1007
+RMD160 47f66798139a3a26e5b27e6d1da5baecb32be6e4 ventrilo-server-bin-2.3.1.ebuild 1007
+SHA256 636f275144041eef463d871798e26ac3ed34f5cbe00a1924b33809b043d24ba6 ventrilo-server-bin-2.3.1.ebuild 1007
+MISC ChangeLog 1907 RMD160 1e1de025eba875c2ef93f569dc42f3dfd70e8178 SHA1 bc7c8fbae27baf8a862dde809d852d283c281225 SHA256 ef4f587bf35556c5c7947e1e69145b857aefde5cd6c41c20201f6c864b7fcb2c
+MD5 736b6e25d5525648bce1eceb08a28499 ChangeLog 1907
+RMD160 1e1de025eba875c2ef93f569dc42f3dfd70e8178 ChangeLog 1907
+SHA256 ef4f587bf35556c5c7947e1e69145b857aefde5cd6c41c20201f6c864b7fcb2c ChangeLog 1907
+MISC metadata.xml 158 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e SHA1 703cea5a2109d41f7c87993c1f01d418a4c85174 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 508c2d480f49b381c1d306b5fff6995c files/digest-ventrilo-server-bin-2.3.1 289
+RMD160 c8457199441eff786d059674edfe8267014e2129 files/digest-ventrilo-server-bin-2.3.1 289
+SHA256 5ab0b80225777e6dd730bc60876ccaf61690a9e5a9f394a9847cec19d2a2cfbe files/digest-ventrilo-server-bin-2.3.1 289
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v2.0.2 (GNU/Linux)
 
-iD8DBQFDf21Jp5vW4rUFj5oRAoxmAJ9rmj8oaA+YHVCy7JPIxxvcUeyIiQCfaZTy
-VSESoy3Yyg56kSCZkRYIODg=
-=ehCu
+iD8DBQFFzHYNAiZjviIA2XgRAsCcAJ0a9GMf0tvPQWSdX2SGn7Ldu20nwgCeKj5u
+4XdqWNlwRhj2rdCSny2KqmA=
+=VCno
 -----END PGP SIGNATURE-----
