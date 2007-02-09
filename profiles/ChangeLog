@@ -1,6 +1,11 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.89 2007/02/09 21:26:26 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.90 2007/02/09 22:16:00 wolf31o2 Exp $
+
+  09 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  default-linux/packages.build:
+  Moved autoconf/automake/libtool before coreutils in packages.build for
+  default-linux, which should resolve bug #165787.
 
   09 Feb 2007; Alon Bar-Lev <alonbl@gentoo.org> package.mask:
   Added >=sys-kernel/suspend2-sources-2.6.20
