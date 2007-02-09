@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.28 2007/02/09 23:39:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.29 2007/02/09 23:52:51 vapier Exp $
+
+*syslinux-3.35 (09 Feb 2007)
+
+  09 Feb 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/syslinux-3.35-nopie.patch, +files/syslinux-3.35-nossp.patch,
+  +syslinux-3.35.ebuild:
+  Version bump.
 
   09 Feb 2007; Mike Frysinger <vapier@gentoo.org> syslinux-3.31.ebuild:
   Remove pregenerated dependency files #155644 by Daniel Black.
