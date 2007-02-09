@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/commons-httpclient
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.36 2006/12/26 18:55:26 betelgeuse Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.37 2007/02/09 22:08:30 fordfrog Exp $
+
+  09 Feb 2007; Miroslav Šulc <fordfrog@gentoo.org>
+  files/commons-httpclient-3.0.1-gentoo.patch,
+  commons-httpclient-3.0.1.ebuild:
+  Corrected generation of javadoc - see bug #159149. Also corrected running of
+  tests if JAVA_PKG_STRICT=true.
 
   26 Dec 2006; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
   commons-httpclient-2.0.1.ebuild, commons-httpclient-2.0.2.ebuild,
