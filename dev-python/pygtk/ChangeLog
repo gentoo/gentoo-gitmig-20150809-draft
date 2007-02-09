@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.143 2007/01/20 02:39:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.144 2007/02/09 13:50:49 lucass Exp $
+
+*pygtk-2.10.4 (09 Feb 2007)
+
+  09 Feb 2007; Lukasz Strzygowski <lucass@gentoo.org> +pygtk-2.10.4.ebuild:
+  - Version bump
+  - Fixed docs installation
+  - Fixed bug #165672
+  - Added examples use-flag
+  - Added NEED_PYTHON=2.3.5
 
   20 Jan 2007; Jeroen Roovers <jer@gentoo.org> pygtk-2.10.3.ebuild:
   Stable for HPPA (bug #156662).
