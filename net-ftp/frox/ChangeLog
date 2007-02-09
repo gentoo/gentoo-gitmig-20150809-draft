@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/frox
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/ChangeLog,v 1.10 2005/09/17 13:45:12 dragonheart Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/ChangeLog,v 1.11 2007/02/09 04:13:41 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *frox-0.7.18-r2 (17 Sep 2005)
 
