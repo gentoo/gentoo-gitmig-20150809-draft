@@ -1,6 +1,10 @@
 # ChangeLog for rox-extra/magickthumbnail
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/magickthumbnail/ChangeLog,v 1.3 2006/11/13 18:24:31 lack Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/magickthumbnail/ChangeLog,v 1.4 2007/02/09 22:08:15 opfer Exp $
+
+  09 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  magickthumbnail-0.5.2.ebuild:
+  stable x86; bug #165956
 
 *magickthumbnail-0.5.2 (08 Nov 2006)
 

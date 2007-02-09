@@ -1,6 +1,10 @@
 # ChangeLog for rox-extra/mp3ogg2wav
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/mp3ogg2wav/ChangeLog,v 1.4 2006/11/23 22:51:56 lack Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/mp3ogg2wav/ChangeLog,v 1.5 2007/02/09 22:06:05 opfer Exp $
+
+  09 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  mp3ogg2wav-1.0.ebuild:
+  stable x86; bug #165956
 
   23 Nov 2006; Jim Ramsay <lack@gentoo.org> mp3ogg2wav-1.0.ebuild:
   Updated SRC_URI/HOMEPAGE

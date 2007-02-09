@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/rox-tail/rox-tail-2.1.4.ebuild,v 1.1 2006/10/11 13:22:45 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/rox-tail/rox-tail-2.1.4.ebuild,v 1.2 2007/02/09 22:18:02 opfer Exp $
 
 ROX_CLIB_VER="2.1.8"
 inherit rox
@@ -12,7 +12,7 @@ SRC_URI="http://www.kerofin.demon.co.uk/rox/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 APPNAME=${MY_PN}
