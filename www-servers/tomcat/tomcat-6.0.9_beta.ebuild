@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.9_beta.ebuild,v 1.1 2007/02/08 15:21:51 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.9_beta.ebuild,v 1.2 2007/02/09 19:38:05 wltjr Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -25,7 +25,9 @@ RDEPEND="|| ( >=virtual/jre-1.5 >=virtual/jre-1.6 )
 
 DEPEND="|| ( >=virtual/jdk-1.5 >=virtual/jdk-1.6 )
 	${RDEPEND}
-	test? ( dev-java/junit )"
+	test? ( dev-java/junit )
+	dev-java/ant-core
+	dev-java/ant-trax"
 
 S=${WORKDIR}/${MY_P}
 
@@ -45,9 +47,6 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${SLOT}/build-xml.patch"
-
-#	cd "${S}/bin"
-#	java-pkg_jar-from commons-daemon
 }
 
 src_compile(){

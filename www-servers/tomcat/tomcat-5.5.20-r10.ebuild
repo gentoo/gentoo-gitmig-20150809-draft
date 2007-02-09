@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r10.ebuild,v 1.2 2007/02/04 01:41:46 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r10.ebuild,v 1.3 2007/02/09 19:38:05 wltjr Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -47,7 +47,8 @@ DEPEND="java5? ( || ( >=virtual/jdk-1.5 >=virtual/jdk-1.6 ) )
 	!java5? ( =virtual/jdk-1.4* )
 	${RDEPEND}
 	>=dev-java/java-config-2.0.31
-	dev-java/ant"
+	dev-java/ant-core
+	dev-java/ant-trax"
 
 S=${WORKDIR}/${MY_P}
 
@@ -60,6 +61,8 @@ pkg_setup() {
 	enewuser tomcat -1 -1 /dev/null tomcat
 
 	java-pkg_filter-compiler ecj-3.1  ecj-3.2
+
+	WANT_ANT_TASKS="ant-trax"
 
 	if use java5; then
 		JAVA_PKG_WANT_SOURCE="1.5"
