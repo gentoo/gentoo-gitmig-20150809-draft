@@ -1,7 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.87 2007/02/09 04:34:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.88 2007/02/09 18:12:08 betelgeuse Exp $
 
+  09 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
+  Package.mask dev-java/jess-bin.
+  
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
   Add xcb useflags for xine-lib and kaffeine.
 
