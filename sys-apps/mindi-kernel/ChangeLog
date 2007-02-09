@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/mindi-kernel
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi-kernel/ChangeLog,v 1.8 2005/05/06 14:57:47 swegener Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi-kernel/ChangeLog,v 1.9 2007/02/09 08:31:01 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   06 May 2005; Sven Wegener <swegener@gentoo.org> mindi-kernel-1.0.ebuild:
   Removed * postfix from <, <=, >= and > dependencies.

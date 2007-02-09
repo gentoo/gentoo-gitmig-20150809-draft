@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dnotify
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dnotify/ChangeLog,v 1.21 2006/01/27 17:35:52 blubb Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dnotify/ChangeLog,v 1.22 2007/02/09 08:28:08 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   27 Jan 2006; Simon Stelling <blubb@gentoo.org>
   +files/dnotify-0.18.0-nls.patch, dnotify-0.18.0.ebuild:

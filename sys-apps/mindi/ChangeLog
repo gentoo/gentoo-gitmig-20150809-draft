@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/mindi
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/ChangeLog,v 1.21 2005/12/16 11:43:37 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/ChangeLog,v 1.22 2007/02/09 08:30:25 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> mindi-1.11.ebuild:
   Remove GNUish cp -a call. Bug #103487.
