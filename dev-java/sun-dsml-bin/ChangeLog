@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-dsml-bin
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-dsml-bin/ChangeLog,v 1.2 2005/05/04 21:58:04 luckyduck Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-dsml-bin/ChangeLog,v 1.3 2007/02/09 13:12:43 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   04 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   sun-dsml-bin-2.1.2_pre1.ebuild:
