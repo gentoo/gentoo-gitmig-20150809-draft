@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/simple-wiki
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/simple-wiki/ChangeLog,v 1.5 2005/10/24 15:04:30 josejx Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/simple-wiki/ChangeLog,v 1.6 2007/02/09 07:12:46 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
+
+  08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   24 Oct 2005; Joseph Jezak <josejx@gentoo.org> simple-wiki-1.1.ebuild:
   Marked ~ppc.
