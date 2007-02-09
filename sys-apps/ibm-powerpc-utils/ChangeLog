@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ibm-powerpc-utils
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils/ChangeLog,v 1.6 2006/05/28 19:33:42 ranger Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils/ChangeLog,v 1.7 2007/02/09 05:31:32 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   28 May 2006; Brent Baude <ranger@gentoo.org>
   ibm-powerpc-utils-1.0.2.ebuild:

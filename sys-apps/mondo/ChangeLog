@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/mondo
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo/ChangeLog,v 1.10 2005/02/27 12:35:19 brix Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo/ChangeLog,v 1.11 2007/02/09 05:38:01 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   27 Feb 2005; Henrik Brix Andersen <brix@gentoo.org> mondo-0.9.ebuild:
   Dependency update: sys-apps/lm-sensors -> sys-apps/lm_sensors.

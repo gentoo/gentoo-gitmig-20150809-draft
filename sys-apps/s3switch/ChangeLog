@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/s3switch
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s3switch/ChangeLog,v 1.8 2004/07/01 21:38:04 eradicator Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s3switch/ChangeLog,v 1.9 2007/02/09 05:40:02 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   s3switch-19990826.ebuild:

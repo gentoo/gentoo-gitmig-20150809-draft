@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gluelog
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gluelog/ChangeLog,v 1.8 2004/06/24 22:07:51 agriffis Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gluelog/ChangeLog,v 1.9 2007/02/09 05:30:09 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   14 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> gluelog-1.0-r2.ebuild:
   don't assign default to S; IUSE; tidy

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/usbd
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbd/ChangeLog,v 1.10 2005/08/18 00:25:10 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbd/ChangeLog,v 1.11 2007/02/09 05:44:56 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   18 Aug 2005; Mike Frysinger <vapier@gentoo.org> files/usbd:
   Dont pass the full path to killall to make busybox happy #102818 by Natanael

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/cobalt-panel-utils
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cobalt-panel-utils/ChangeLog,v 1.4 2005/08/07 06:49:38 redhatter Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cobalt-panel-utils/ChangeLog,v 1.5 2007/02/09 05:29:04 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   07 Aug 2005; Stuart Longland <redhatter@gentoo.org>
   cobalt-panel-utils-1.0.2.ebuild:

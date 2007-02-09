@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hprofile
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hprofile/ChangeLog,v 1.2 2005/05/14 08:36:32 blubb Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hprofile/ChangeLog,v 1.3 2007/02/09 05:30:59 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   14 May 2005; Simon Stelling <blubb@gentoo.org> hprofile-2.0_beta2.ebuild:
   added ~amd64 keyword
