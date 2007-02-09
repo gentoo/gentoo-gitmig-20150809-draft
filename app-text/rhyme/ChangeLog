@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rhyme
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/ChangeLog,v 1.7 2005/10/07 16:05:37 taviso Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/ChangeLog,v 1.8 2007/02/09 01:05:58 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   07 Oct 2005; Tavis Ormandy <taviso@gentoo.org> rhyme-0.9.ebuild:
   dont install INSTALL into doc.

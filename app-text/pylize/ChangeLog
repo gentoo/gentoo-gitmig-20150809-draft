@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pylize
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pylize/ChangeLog,v 1.9 2005/12/18 23:34:44 lucass Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pylize/ChangeLog,v 1.10 2007/02/09 01:05:31 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *pylize-1.3b (18 Dec 2005)
 

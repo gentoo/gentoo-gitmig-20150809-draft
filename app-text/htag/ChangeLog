@@ -1,6 +1,9 @@
 # ChangeLog for app-text/htag
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htag/ChangeLog,v 1.10 2005/05/30 22:14:56 wormo Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/htag/ChangeLog,v 1.11 2007/02/09 01:04:14 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   30 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   htag-0.0.23.ebuild:

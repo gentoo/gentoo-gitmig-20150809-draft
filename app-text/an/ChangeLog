@@ -1,6 +1,9 @@
 # ChangeLog for app-text/an
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.22 2006/03/09 11:27:40 yoswink Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.23 2007/02/09 00:58:40 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   09 Mar 2006; Jose Luis Rivero <yoswink@gentoo.org> an-0.95.3.ebuild:
   Marked alpha stable for bug #113966
