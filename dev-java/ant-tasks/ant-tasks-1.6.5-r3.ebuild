@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.5-r3.ebuild,v 1.7 2007/02/05 17:43:05 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.5-r3.ebuild,v 1.8 2007/02/09 18:57:28 betelgeuse Exp $
 
 inherit java-pkg-2 eutils
 
@@ -35,7 +35,7 @@ CDEPEND="=dev-java/ant-core-${PV}*
 	!nojsch? ( >=dev-java/jsch-0.1.12 )
 	!noregexp? ( =dev-java/jakarta-regexp-1.3* )
 	!nojython? ( >=dev-java/jython-2.1-r5 )
-	javamail? ( dev-java/sun-javamail )"
+	javamail? ( dev-java/sun-javamail dev-java/sun-jaf-bin )"
 RDEPEND=">=virtual/jre-1.4
 	${CDEPEND}"
 DEPEND=">=virtual/jdk-1.4
