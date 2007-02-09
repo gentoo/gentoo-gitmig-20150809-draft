@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/libkudzu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/ChangeLog,v 1.22 2007/01/31 17:55:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/ChangeLog,v 1.23 2007/02/09 15:13:14 gustavoz Exp $
+
+*libkudzu-1.2.57.1 (09 Feb 2007)
+
+  09 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  +files/kudzu-1.2.57.1-sbusfix.patch,
+  +files/kudzu-1.2.57.1-sparc-keyboard.patch, +libkudzu-1.2.57.1.ebuild:
+  New version with sparc patches for sanitized headers
 
 *libkudzu-1.2.41 (31 Jan 2007)
 
