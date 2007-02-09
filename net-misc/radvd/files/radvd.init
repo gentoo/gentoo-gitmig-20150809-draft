@@ -1,18 +1,20 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/files/radvd.init,v 1.1 2006/07/19 13:02:36 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/files/radvd.init,v 1.2 2007/02/09 16:57:13 uberlord Exp $
 
 CONFIGFILE=/etc/radvd.conf
 PIDFILE=/var/run/radvd/radvd.pid
 SYSCTL_FORWARD=net.ipv6.conf.all.forwarding
+
+opts="reload"
 
 depend () {
 	need net
 }
 
 checkconfig() {
-	if [ ! -f ${CONFIGFILE} ]; then
+	if [ ! -f "${CONFIGFILE}" ]; then
 		eerror "Configuration file ${CONFIGFILE} not found"
 		return 1
 	fi
@@ -21,7 +23,7 @@ checkconfig() {
 start () {
 	checkconfig || return 1
 
-	if [[ ${FORWARD} != "no" ]]; then
+	if [ "${FORWARD}" != "no" ]; then
 		ebegin "Enabling IPv6 forwarding"
 		sysctl "${SYSCTL_FORWARD}=1" >/dev/null
 		eend $?
@@ -39,9 +41,24 @@ stop() {
 	start-stop-daemon --stop --exec /usr/sbin/radvd --pidfile "${PIDFILE}"
 	eend $?
 
-	if [[ ${FORWARD} != "no" ]]; then
+	if [ "${FORWARD}" != "no" ]; then
 		ebegin "Disabling IPv6 forwarding"
 		sysctl "${SYSCTL_FORWARD}=0" > /dev/null
 		eend $?
 	fi
+}
+
+reload() {
+	checkconfig || return 1
+
+	if [ "${FORWARD}" != "no" ]; then
+		ebegin "Enabling IPv6 forwarding"
+		sysctl "${SYSCTL_FORWARD}=1" >/dev/null
+		eend $?
+	fi
+
+	ebegin "Reloading IPv6 Router Advertisement Daemon"
+	start-stop-daemon --stop --signal HUP --oknodo \
+		--exec /usr/sbin/radvd --pidfile "${PIDFILE}"
+	eend $?
 }
