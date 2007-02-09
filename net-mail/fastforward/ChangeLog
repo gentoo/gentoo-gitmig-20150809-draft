@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/fastforward
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fastforward/ChangeLog,v 1.8 2004/09/04 23:19:36 dholm Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fastforward/ChangeLog,v 1.9 2007/02/09 04:36:59 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   05 Sep 2004; David Holm <dholm@gentoo.org> fastforward-0.51-r1.ebuild:
   Added to ~ppc.

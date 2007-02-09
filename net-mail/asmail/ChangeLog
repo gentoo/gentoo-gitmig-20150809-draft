@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/asmail
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/asmail/ChangeLog,v 1.6 2006/01/27 23:52:46 ticho Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/asmail/ChangeLog,v 1.7 2007/02/09 04:36:09 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   27 Jan 2006; Andrej Kacian <ticho@gentoo.org> asmail-0.56.ebuild:
   Ported dependencies for modular X.

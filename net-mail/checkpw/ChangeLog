@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/checkpw
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/checkpw/ChangeLog,v 1.4 2005/05/16 16:25:46 matsuu Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/checkpw/ChangeLog,v 1.5 2007/02/09 04:36:35 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   16 May 2005; MATSUU Takuto <matsuu@gentoo.org> checkpw-1.01.ebuild:
   Fixed inheriting gcc, Bug 92745.

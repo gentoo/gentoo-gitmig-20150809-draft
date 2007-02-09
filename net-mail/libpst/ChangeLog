@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/libpst
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.7 2005/09/13 20:01:46 metalgod Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.8 2007/02/09 04:38:09 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   13 Sep 2005; Luis Medinas <metalgod@gentoo.org> libpst-0.5.1.ebuild:
   Added ~amd64 keywords. Closes bug #105828.
