@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/bootcreator
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/bootcreator/ChangeLog,v 1.3 2005/10/15 23:33:57 josejx Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/bootcreator/ChangeLog,v 1.4 2007/02/09 05:50:08 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   15 Oct 2005; Joseph Jezak <josejx@gentoo.org> bootcreator-1.1.ebuild:
   Added virtual/bootloader to fix virtual in Pegasos profiles.

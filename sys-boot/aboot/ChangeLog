@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/aboot
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/aboot/ChangeLog,v 1.8 2005/12/17 20:20:29 kloeri Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/aboot/ChangeLog,v 1.9 2007/02/09 05:49:22 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   17 Dec 2005; Bryan Østergaard <kloeri@gentoo.org
   +files/aboot-gcc-3.4.patch, aboot-1.0_pre20040408.ebuild:
