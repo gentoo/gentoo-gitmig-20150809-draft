@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/inn
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.6 2005/12/25 15:22:59 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.7 2007/02/09 08:15:19 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> inn-2.4.1.ebuild:
   Use bindnow-flags function instead of -Wl,-z,now. Change root.root ownership

@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/suck
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/suck/ChangeLog,v 1.2 2005/01/17 21:51:29 swegener Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/suck/ChangeLog,v 1.3 2007/02/09 08:15:37 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *suck-4.3.2 (17 Jan 2005)
 
