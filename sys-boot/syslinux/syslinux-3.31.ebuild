@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-3.31.ebuild,v 1.1 2006/10/22 06:02:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-3.31.ebuild,v 1.2 2007/02/09 23:39:24 vapier Exp $
 
 inherit eutils
 
@@ -29,6 +29,7 @@ src_unpack() {
 	rm -f gethostip #137081
 	epatch "${FILESDIR}"/syslinux-3.31-nossp.patch
 	epatch "${FILESDIR}"/syslinux-3.11-nopie.patch
+	rm -f com32/lib/sys/vesa/.*.d #155644
 }
 
 src_compile() {

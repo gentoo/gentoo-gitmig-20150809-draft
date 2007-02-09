@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/syslinux
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.27 2006/10/31 13:30:32 opfer Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.28 2007/02/09 23:39:24 vapier Exp $
+
+  09 Feb 2007; Mike Frysinger <vapier@gentoo.org> syslinux-3.31.ebuild:
+  Remove pregenerated dependency files #155644 by Daniel Black.
 
   31 Oct 2006; Christian Faulhammer <opfer@gentoo.org> syslinux-3.20.ebuild:
   stabled x86 due to bug #152317
