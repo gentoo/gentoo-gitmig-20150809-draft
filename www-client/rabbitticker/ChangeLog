@@ -1,6 +1,9 @@
 # ChangeLog for www-client/rabbitticker
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rabbitticker/ChangeLog,v 1.5 2005/07/28 21:09:41 caleb Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/rabbitticker/ChangeLog,v 1.6 2007/02/09 06:14:12 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   28 Jul 2005; Caleb Tennis <caleb@gentoo.org>
   rabbitticker-1.0_beta4.ebuild:
