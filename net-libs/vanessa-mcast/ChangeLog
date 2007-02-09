@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/vanessa-mcast
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/vanessa-mcast/ChangeLog,v 1.4 2005/01/21 21:35:37 xmerlin Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/vanessa-mcast/ChangeLog,v 1.5 2007/02/09 04:34:29 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   22 Jan 2005; Christian Zoffoli <xmerlin@gentoo.org> +metadata.xml,
   vanessa-mcast-1.0.0.ebuild:

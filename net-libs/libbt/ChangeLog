@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libbt
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbt/ChangeLog,v 1.10 2006/01/13 13:32:57 mkay Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbt/ChangeLog,v 1.11 2007/02/09 04:31:38 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *libbt-1.05 (13 Jan 2006)
 

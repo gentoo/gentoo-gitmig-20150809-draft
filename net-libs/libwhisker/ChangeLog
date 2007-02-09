@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libwhisker
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwhisker/ChangeLog,v 1.12 2005/03/13 20:38:32 mcummings Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwhisker/ChangeLog,v 1.13 2007/02/09 04:32:50 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   13 Mar 2005; Michael Cummings <mcummings@gentoo.org>
   -libwhisker-1.8.ebuild, -libwhisker-2.1.ebuild, libwhisker-2.2.ebuild:
