@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-lambda-gtk
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-lambda-gtk/ChangeLog,v 1.2 2005/04/16 20:38:11 mkennedy Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-lambda-gtk/ChangeLog,v 1.3 2007/02/09 07:35:08 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   16 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org>
   cl-lambda-gtk-0.1.ebuild:

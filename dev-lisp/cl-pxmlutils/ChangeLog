@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-pxmlutils
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-pxmlutils/ChangeLog,v 1.8 2005/05/24 18:48:34 mkennedy Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-pxmlutils/ChangeLog,v 1.9 2007/02/09 07:36:18 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   24 May 2005; <mkennedy@gentoo.org> cl-pxmlutils-0.0.9-r2.ebuild:
   Keywording ~sparc
