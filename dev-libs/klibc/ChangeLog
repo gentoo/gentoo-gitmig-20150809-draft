@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.35 2007/01/20 10:58:43 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.36 2007/02/09 22:31:04 phreak Exp $
+
+  09 Feb 2007; Christian Heim <phreak@gentoo.org>
+  +files/klibc-1.4.13-types.h.patch, klibc-1.4.13.ebuild:
+  Quoting fixes, adding the -types.h patch suggested by Alon in #165472.
 
   20 Jan 2007; Christian Heim <phreak@gentoo.org>
   -files/klibc-1.1.16-mips-ldpaths.patch, -files/klibc-1.1.16-mips32.patch,

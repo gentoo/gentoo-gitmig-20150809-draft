@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.4.13.ebuild,v 1.2 2007/01/20 10:58:43 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.4.13.ebuild,v 1.3 2007/02/09 22:31:04 phreak Exp $
 
 inherit eutils linux-info multilib
 
@@ -65,8 +65,6 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	epatch "${FILESDIR}"/${P}-resumelib.patch
-
 	if [[ ! -d /usr/${CTARGET} ]] ; then
 		echo
 		eerror "It does not look like your cross-compiler is setup properly!"
@@ -89,13 +87,13 @@ src_unpack() {
 		die "Your kernel sources are not configured for your chosen arch!"
 	fi
 
-	cd ${S}
+	cd "${S}"
 
 	# Add our linux source tree symlink
 	ln -snf ${KV_DIR} linux
 
 	# Some reason .config has outdated mtime
-	touch ${S}/.config
+	touch "${S}"/.config
 
 	# We do not want all the nice prelink warnings
 	# NOTE: for amd64, we might change below to '/usr/$(get_libdir)/klibc',
@@ -109,13 +107,22 @@ src_unpack() {
 	# NOTE: Disabling this for now, as klibc have -fno-stack-protector.  Will
 	#       enable it again if there is still issues.
 	#epatch "${FILESDIR}/${PN}"-1.4.7-nostdinc-flags.patch
+
 	# Build interp.o with EXTRA_KLIBCAFLAGS (.S source)
-	epatch "${FILESDIR}/${PN}"-1.4.11-interp-flags.patch
+	epatch "${FILESDIR}"/${PN}-1.4.11-interp-flags.patch
+
+	# Fix a nasty typedef error in the sources, appearing on >= linux-2.6.19
+	# (see #165472).
+	epatch "${FILESDIR}"/${PN}-1.4.13-types.h.patch
+
+	# Fix the include in ${S}usr/kinit/resume/resumelib.c to use autoconf.h
+	# instead of config.h.
+	epatch "${FILESDIR}"/${PN}-1.4.13-resumelib.patch
 
 	# klibc detects mips64 systems as having 64bit userland
 	# Force them to 32bit userlands instead
 	if ! use n32; then
-		epatch "${FILESDIR}/${PN}"-1.4.9-mips32.patch
+		epatch "${FILESDIR}"/${PN}-1.4.9-mips32.patch
 	fi
 
 	# Linker path is awry
@@ -170,7 +177,7 @@ src_install() {
 		make \
 			EXTRA_KLIBCAFLAGS="-Wa,--noexecstack" \
 			EXTRA_KLIBCLDFLAGS="-z,noexecstack" \
-			INSTALLROOT=${D} \
+			INSTALLROOT="${D}" \
 			ARCH=$(guess_arch) \
 			CROSS="${CTARGET}-" \
 			libdir="/usr/$(get_libdir)" \
@@ -186,7 +193,7 @@ src_install() {
 		make \
 			EXTRA_KLIBCAFLAGS="-Wa,--noexecstack" \
 			EXTRA_KLIBCLDFLAGS="-z,noexecstack" \
-			INSTALLROOT=${D} \
+			INSTALLROOT="${D}" \
 			libdir="/usr/$(get_libdir)" \
 			SHLIBDIR="/$(get_libdir)" \
 			mandir="/usr/share/man" \
@@ -203,15 +210,15 @@ src_install() {
 
 	if ! is_cross ; then
 		insinto /usr/share/aclocal
-		doins ${FILESDIR}/klibc.m4
+		doins "${FILESDIR}"/klibc.m4
 
-		doenvd ${S}/70klibc
+		doenvd "${S}"/70klibc
 
-		dodoc ${S}/README ${S}/usr/klibc/{LICENSE,CAVEATS}
-		newdoc ${S}/usr/klibc/README README.klibc
-		newdoc ${S}/usr/klibc/arch/README README.klibc.arch
-		docinto dash; newdoc ${S}/usr/dash/README.klibc README
-		docinto gzip; dodoc ${S}/usr/gzip/{COPYING,README}
+		dodoc "${S}"/README "${S}"/usr/klibc/{LICENSE,CAVEATS}
+		newdoc "${S}"/usr/klibc/README README.klibc
+		newdoc "${S}"/usr/klibc/arch/README README.klibc.arch
+		docinto dash; newdoc "${S}"/usr/dash/README.klibc README
+		docinto gzip; dodoc "${S}"/usr/gzip/{COPYING,README}
 	fi
 }
 

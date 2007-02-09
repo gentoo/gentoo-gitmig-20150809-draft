@@ -1,0 +1,12 @@
+diff -urNp klibc-1.4.13.org/usr/include/sys/types.h klibc-1.4.13/usr/include/sys/types.h
+--- klibc-1.4.13.org/usr/include/sys/types.h	2006-07-25 23:55:23.000000000 +0300
++++ klibc-1.4.13/usr/include/sys/types.h	2007-02-07 15:24:03.000000000 +0200
+@@ -96,6 +96,8 @@ typedef uint32_t __bitwise __be32;
+ typedef uint64_t __bitwise __le64;
+ typedef uint64_t __bitwise __be64;
+ 
++typedef __u16 __bitwise __sum16;
++
+ /*
+  * Some headers seem to require this...
+  */
