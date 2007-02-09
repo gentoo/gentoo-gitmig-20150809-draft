@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/xd3d
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/ChangeLog,v 1.3 2006/03/17 10:31:13 corsair Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/ChangeLog,v 1.4 2007/02/09 08:27:22 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   17 Mar 2006; Markus Rothe <corsair@gentoo.org> xd3d-8.2.1.ebuild:
   Added ~ppc64; bug #126439
