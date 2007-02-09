@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.84 2007/01/11 22:11:57 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.85 2007/02/09 22:28:40 marienz Exp $
+
+  09 Feb 2007; Marien Zwart <marienz@gentoo.org> files/digest-twisted-2.2.0,
+  Manifest:
+  Fix broken digest. Thanks to Benjamin Gehrels for reporting, closes bug
+  #166124.
 
 *twisted-2.5.0 (11 Jan 2007)
 
