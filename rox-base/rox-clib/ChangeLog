@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/rox-clib
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/ChangeLog,v 1.16 2006/11/24 17:25:25 lack Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/ChangeLog,v 1.17 2007/02/09 22:02:10 opfer Exp $
+
+  09 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  rox-clib-2.1.9.ebuild:
+  stable x86; bug #165956
 
 *rox-clib-2.1.9 (24 Nov 2006)
 
