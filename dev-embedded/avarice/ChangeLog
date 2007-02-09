@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/avarice
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avarice/ChangeLog,v 1.1 2005/09/08 01:56:38 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avarice/ChangeLog,v 1.2 2007/02/09 01:10:04 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *avarice-2.3 (07 Sep 2005)
 

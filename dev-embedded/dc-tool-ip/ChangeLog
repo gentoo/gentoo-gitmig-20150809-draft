@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/dc-tool-ip
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/dc-tool-ip/ChangeLog,v 1.5 2005/01/01 17:52:19 eradicator Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/dc-tool-ip/ChangeLog,v 1.6 2007/02/09 01:10:51 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *dc-tool-ip-1.0.4 (13 Nov 2004)
 

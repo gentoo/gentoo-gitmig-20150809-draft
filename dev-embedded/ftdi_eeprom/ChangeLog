@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/ftdi_eeprom
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ftdi_eeprom/ChangeLog,v 1.2 2006/05/06 12:42:45 brix Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ftdi_eeprom/ChangeLog,v 1.3 2007/02/09 01:11:16 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *ftdi_eeprom-0.2-r1 (06 May 2006)
 
