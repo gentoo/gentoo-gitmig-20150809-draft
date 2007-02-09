@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/gomd
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gomd/ChangeLog,v 1.3 2004/06/24 22:37:50 agriffis Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gomd/ChangeLog,v 1.4 2007/02/09 05:55:58 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   07 Dec 2003; Michael Sterrett <mr_bones_@gentoo.org>
   gomd-0.1_pre20031115.ebuild:

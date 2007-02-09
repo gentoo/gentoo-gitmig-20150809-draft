@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/onesis
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/onesis/ChangeLog,v 1.2 2005/07/29 01:03:28 swegener Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/onesis/ChangeLog,v 1.3 2007/02/09 05:57:33 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   29 Jul 2005; Sven Wegener <swegener@gentoo.org> onesis-2.0_rc10.ebuild:
   Cleanup.
