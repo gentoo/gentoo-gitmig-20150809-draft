@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/ncsa-httpd
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/ncsa-httpd/ChangeLog,v 1.4 2005/08/24 11:26:20 ka0ttic Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/ncsa-httpd/ChangeLog,v 1.5 2007/02/09 06:15:23 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   24 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> ncsa-httpd-1.5.2a.ebuild:
   Don't use chown root:root, bug #103563
