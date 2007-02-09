@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/gmines
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gmines/ChangeLog,v 1.3 2004/11/12 03:52:12 fafhrd Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gmines/ChangeLog,v 1.4 2007/02/09 07:48:03 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
 *gmines-0.1-r1 (11 Nov 2004)
 
