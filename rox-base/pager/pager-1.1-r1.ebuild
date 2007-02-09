@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/pager/pager-1.1.ebuild,v 1.2 2006/11/27 19:12:09 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/pager/pager-1.1-r1.ebuild,v 1.1 2007/02/09 17:31:44 lack Exp $
 
 ROX_CLIB_VER=2.1.7
 inherit rox eutils
@@ -20,4 +20,5 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.20"
 
 APPNAME=Pager
+APPNAME_COLLISION=True
 
