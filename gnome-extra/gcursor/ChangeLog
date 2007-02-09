@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gcursor
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcursor/ChangeLog,v 1.7 2005/04/19 20:08:42 plasmaroo Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcursor/ChangeLog,v 1.8 2007/02/09 03:20:49 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   19 Apr 2005; <plasmaroo@gentoo.org> gcursor-0.061-r1.ebuild:
   Mark ~ia64; bug #89498.
