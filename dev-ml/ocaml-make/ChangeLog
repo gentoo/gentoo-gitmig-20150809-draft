@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocaml-make
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-make/ChangeLog,v 1.6 2004/09/30 00:22:50 swegener Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-make/ChangeLog,v 1.7 2007/02/09 13:17:36 flameeyes Exp $
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
 
   13 Jul 2004; Travis Tilley <lv@gentoo.org> ocaml-make-5.04.0.ebuild:
   added ~amd64 keyword
