@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.453 2007/02/07 02:23:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.454 2007/02/09 04:46:07 flameeyes Exp $
+
+*xine-lib-1.1.4-r1 (09 Feb 2007)
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +xine-lib-1.1.4-r1.ebuild:
+  Add xine-lib with a patch (not yet committed in upstream CVS, but it's going
+  to be) to use XCB rather than libX11 for xv/xshm output plugins, allowing
+  xine to be used inside frontends that embed themselves in other programs
+  (like Kaffeine with Konqueror or GwenView). The only frontend supporting
+  this right now is Kaffeine, but more will probably come.
 
   06 Feb 2007; Raúl Porcel <armin76@gentoo.org> xine-lib-1.1.3.ebuild,
   xine-lib-1.1.4.ebuild:
