@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-1.1.6.ebuild,v 1.2 2006/09/02 21:47:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-1.1.6.ebuild,v 1.3 2007/02/10 03:17:43 pclouds Exp $
 
 inherit ruby gems
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.rubyonrails.org"
 # change the filename on the end, it still downloads the same file.
 SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
 
-LICENSE="Ruby"
+LICENSE="MIT"
 SLOT="1.1"
 KEYWORDS="amd64 ia64 ppc sparc x86 ~x86-fbsd"
 

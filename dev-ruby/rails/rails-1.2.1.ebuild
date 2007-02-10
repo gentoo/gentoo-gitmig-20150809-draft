@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-1.2.1.ebuild,v 1.1 2007/01/21 08:42:04 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-1.2.1.ebuild,v 1.2 2007/02/10 03:17:43 pclouds Exp $
 
 inherit ruby gems
 
@@ -9,7 +9,7 @@ DESCRIPTION="ruby on rails is a web-application and persistance framework"
 HOMEPAGE="http://www.rubyonrails.org"
 SRC_URI="http://gems.rubyonrails.org/gems/${P}.gem"
 
-LICENSE="Ruby"
+LICENSE="MIT"
 SLOT="1.2"
 KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
 

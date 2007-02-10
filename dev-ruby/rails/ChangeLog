@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.69 2007/01/21 08:42:04 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.70 2007/02/10 03:17:43 pclouds Exp $
+
+  10 Feb 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  rails-1.1.6.ebuild, rails-1.1.6-r1.ebuild, rails-1.2.0.ebuild,
+  rails-1.2.1.ebuild:
+  Updated rails license to MIT, #165876
 
 *rails-1.2.1 (21 Jan 2007)
 
