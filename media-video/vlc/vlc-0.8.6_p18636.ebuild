@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6_p18636.ebuild,v 1.6 2007/02/10 19:05:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6_p18636.ebuild,v 1.7 2007/02/10 23:39:23 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -130,6 +130,10 @@ pkg_setup() {
 	if use skins && ! use truetype; then
 		eerror "Trying to build with skins support but without truetype."
 		die "You have to use 'truetype' to use 'skins'"
+	fi
+	if use skins && ! use wxwindows; then
+		eerror "Trying to build with skins support but without wxwindows."
+		die "You have to use 'wxwindows' to use 'skins'"
 	fi
 }
 
@@ -268,7 +272,7 @@ src_install() {
 	# First install the library, to avoid screwups during relinking.select
 	emake -j1 DESTDIR="${D}" install || die "make install failed"
 
-	dodoc AUTHORS MAINTAINERS HACKING THANKS TODO NEWS README \
+	dodoc AUTHORS MAINTAINERS HACKING THANKS NEWS README \
 		doc/fortunes.txt doc/intf-cdda.txt doc/intf-vcd.txt
 
 	if use nsplugin; then
@@ -287,5 +291,5 @@ src_install() {
 		newins "${S}"/share/vlc${res}x${res}.png vlc.png
 	done
 
-	use wxwindows && domenu "${S}/debian/vlc.desktop"
+	use wxwindows || rm "${D}/usr/share/applications/vlc.desktop"
 }

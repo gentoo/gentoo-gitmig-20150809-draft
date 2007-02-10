@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.219 2007/02/10 19:05:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.220 2007/02/10 23:39:23 aballier Exp $
+
+  10 Feb 2007; Alexis Ballier <aballier@gentoo.org> vlc-0.8.6-r1.ebuild,
+  vlc-0.8.6_p18636.ebuild:
+  Die if skins are wanted but not wxwindows, dont install vlc.desktop if not
+  using wxwindows, bug #158095, remove inexistant docs from dodoc
 
   10 Feb 2007; Alexis Ballier <aballier@gentoo.org> vlc-0.8.6-r1.ebuild,
   vlc-0.8.6_p18636.ebuild:
