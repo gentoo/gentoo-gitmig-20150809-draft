@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.51 2007/02/03 15:18:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.52 2007/02/10 15:52:37 blubb Exp $
+
+  10 Feb 2007; Simon Stelling <blubb@gentoo.org> wxpython-2.6.3.3.ebuild:
+  stable on amd64; bug 136924
 
 *wxpython-2.4.2.4-r4 (03 Feb 2007)
 
