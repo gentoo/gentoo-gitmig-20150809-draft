@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.34.ebuild,v 1.3 2007/02/10 14:31:19 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.34.ebuild,v 1.4 2007/02/10 16:34:29 pva Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.8"
@@ -47,6 +47,8 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-sussen-out-of-range.patch
+	epatch "${FILESDIR}"/${P}-po-linguas.patch
+	eautoconf
 	use gnome && gnome2_omf_fix
 }
 

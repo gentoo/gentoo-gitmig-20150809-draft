@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.29.ebuild,v 1.6 2006/12/03 15:20:38 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.29.ebuild,v 1.7 2007/02/10 16:34:29 pva Exp $
 
 inherit eutils gnome2 mono
 
@@ -10,7 +10,7 @@ SRC_URI="http://dev.mmgsecurity.com/downloads//${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 IUSE="doc dbus gnome"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc"
 
 RDEPEND="=dev-lang/mono-1.1*
 	gnome? ( >=dev-dotnet/gtk-sharp-2.4
