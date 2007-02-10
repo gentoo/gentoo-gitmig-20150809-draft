@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libnetfilter_conntrack
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/ChangeLog,v 1.2 2007/02/07 21:06:04 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/ChangeLog,v 1.3 2007/02/10 17:44:48 cedk Exp $
+
+  10 Feb 2007; Cedric Krier <cedk@gentoo.org>
+  libnetfilter_conntrack-0.0.50.ebuild:
+  Improve kernel check config for bug #165891
 
 *libnetfilter_conntrack-0.0.50 (07 Feb 2007)
 

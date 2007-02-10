@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/libnetfilter_conntrack-0.0.50.ebuild,v 1.1 2007/02/07 21:06:04 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/libnetfilter_conntrack-0.0.50.ebuild,v 1.2 2007/02/10 17:44:48 cedk Exp $
 
 inherit linux-info
 
@@ -19,8 +19,13 @@ RDEPEND=${DEPEND}
 CONFIG_CHECK="IP_NF_CONNTRACK_NETLINK"
 
 pkg_setup() {
-	linux-info_pkg_setup
 	kernel_is lt 2 6 14 && die "requires at least 2.6.14 kernel version"
+	if kernel_is le 2 6 18; then
+		CONFIG_CHECK="IP_NF_CONNTRACK_NETLINK"
+	else
+		CONFIG_CHECK="NF_CT_NETLINK"
+	fi
+	linux-info_pkg_setup
 }
 
 src_install() {
