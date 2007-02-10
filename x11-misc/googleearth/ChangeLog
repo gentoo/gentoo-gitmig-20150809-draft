@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/googleearth
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.23 2007/02/03 19:31:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.24 2007/02/10 22:55:01 genstef Exp $
+
+  10 Feb 2007; <genstef@gentoo.org> googleearth-4.ebuild:
+  remove .desktop redundancy thanks to jakub in bug 162775
 
   03 Feb 2007; Jason Wever <weeve@gentoo.org> files/digest-googleearth-4,
   Manifest:

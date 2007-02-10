@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-4.ebuild,v 1.3 2007/01/18 13:14:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-4.ebuild,v 1.4 2007/02/10 22:55:01 genstef Exp $
 
 inherit eutils fdo-mime
 
@@ -58,6 +58,7 @@ src_install() {
 	unset XDG_DATA_DIRS
 	dodir /usr/share/{appl{ications,nk},gnome/apps,mime/packages}
 	./postinstall.sh
+	rm -rf ${D}/usr/share/{applnk,gnome}
 	doicon ${PN}-icon.png
 
 	dodoc README.linux
