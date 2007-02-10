@@ -1,6 +1,9 @@
 # ChangeLog for media-video/lsdvd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lsdvd/ChangeLog,v 1.33 2007/02/10 13:18:01 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lsdvd/ChangeLog,v 1.34 2007/02/10 13:47:01 nixnut Exp $
+
+  10 Feb 2007; nixnut <nixnut@gentoo.org> lsdvd-0.16.ebuild:
+  Stable on ppc wrt bug 165376
 
   10 Feb 2007; Simon Stelling <blubb@gentoo.org> lsdvd-0.16.ebuild:
   stable on amd64; bug 165376
