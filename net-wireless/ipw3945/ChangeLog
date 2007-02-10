@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/ipw3945
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ChangeLog,v 1.24 2007/02/10 07:23:41 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ChangeLog,v 1.25 2007/02/10 21:35:17 phreak Exp $
+
+  10 Feb 2007; Christian Heim <phreak@gentoo.org> ipw3945-1.2.0.ebuild:
+  Updating the ebuild to explicitely set KV_OBJ="ko". Looks like the linux-mod
+  eclass doesn't get KV_OBJ right (wrong /usr/src/linux symlink?), thus
+  resulting in a broken src_install. Thanks to Michael C. Delorme
+  <mike.delorme at gmail.com> (in #166152) and Jan Kundrát for pointing this
+  out.
 
   10 Feb 2007; Christian Heim <phreak@gentoo.org> ipw3945-1.2.0.ebuild:
   Moving the linux_mod-pkg_setup around, Fixing #166152 (thanks to Jan).

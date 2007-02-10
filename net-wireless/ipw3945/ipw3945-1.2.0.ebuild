@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ipw3945-1.2.0.ebuild,v 1.4 2007/02/10 07:23:41 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ipw3945-1.2.0.ebuild,v 1.5 2007/02/10 21:35:17 phreak Exp $
 
 inherit linux-mod eutils
 
@@ -24,6 +24,7 @@ RDEPEND=">=net-wireless/ipw3945-ucode-${UCODE_VERSION}
 BUILD_TARGETS="all"
 MODULE_NAMES="ipw3945(net/wireless:)"
 MODULESD_IPW3945_DOCS="README.ipw3945"
+KV_OBJ="ko"
 
 CONFIG_CHECK="NET_RADIO FW_LOADER IEEE80211 IEEE80211_CRYPT_CCMP IEEE80211_CRYPT_TKIP"
 ERROR_NET_RADIO="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)."
