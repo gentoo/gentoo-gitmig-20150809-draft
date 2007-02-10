@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/lopster
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/ChangeLog,v 1.26 2007/02/03 20:34:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/ChangeLog,v 1.27 2007/02/10 18:46:16 armin76 Exp $
+
+  10 Feb 2007; Raúl Porcel <armin76@gentoo.org>
+  -files/1.2.2-bugfixes-1.patch, -lopster-1.2.0.ebuild,
+  -lopster-1.2.2-r1.ebuild, -lopster-1.2.2-r2.ebuild:
+  drop old
 
   03 Feb 2007; Simon Stelling <blubb@gentoo.org> lopster-1.2.2-r3.ebuild:
   stable on amd64; bug 155156
