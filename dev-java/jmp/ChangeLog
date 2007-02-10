@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jmp
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmp/ChangeLog,v 1.12 2007/02/09 07:23:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmp/ChangeLog,v 1.13 2007/02/10 13:55:49 betelgeuse Exp $
+
+*jmp-0.51 (10 Feb 2007)
+
+  10 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
+  +jmp-0.51.ebuild:
+  Version bump. Resolves bug #122361. Please note that jmp is only compatible
+  with 1.4 and 1.5 jres.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

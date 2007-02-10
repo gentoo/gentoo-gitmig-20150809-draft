@@ -4,8 +4,8 @@
 <herd>java</herd>
 
 <longdescription>
-JMP is a profiler for java that can be used to trace objects usage and 
-method timings. JMP uses the JVMPI interface to gather statistics 
+JMP is a profiler for java that can be used to trace objects usage and
+method timings. JMP uses the JVMPI interface to gather statistics
 and interact with the JVM. JMP uses a GTK+ interface to show the status.
 </longdescription>
 
