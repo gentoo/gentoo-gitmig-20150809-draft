@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/Xaw3d
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/ChangeLog,v 1.25 2006/10/01 17:06:03 dberkholz Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/ChangeLog,v 1.26 2007/02/10 14:57:09 grobian Exp $
+
+  10 Feb 2007; Fabian Groffen <grobian@gentoo.org> Xaw3d-1.5-r1.ebuild:
+  Dropped ppc-macos keyword, see you in prefix
 
   01 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; Xaw3d-1.5-r1.ebuild:
   libXext has a runtime dep on xextproto now, so we don't need to depend on it

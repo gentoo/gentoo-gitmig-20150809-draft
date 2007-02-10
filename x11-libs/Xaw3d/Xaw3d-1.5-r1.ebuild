@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/Xaw3d-1.5-r1.ebuild,v 1.34 2006/10/01 17:06:03 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/Xaw3d-1.5-r1.ebuild,v 1.35 2007/02/10 14:57:09 grobian Exp $
 
 # Ok, hopefully this will resolv the problem with the version of libXaw3d that
 # gets created.
@@ -26,7 +26,7 @@ SRC_URI="ftp://ftp.x.org/contrib/widgets/Xaw3d/R6.3/${P}.tar.gz
 
 LICENSE="X11"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc-macos ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 # There _might_ be something else, but I doubt it.
@@ -56,7 +56,6 @@ src_unpack() {
 }
 
 src_compile() {
-	use ppc-macos && export PATH="/usr/X11R6/bin:${PATH}"
 	# convoluted process for out-of-tree building
 	mkdir ./X11
 	cd ./X11 ; ln -sf ../../Xaw3d . ; cd ..
