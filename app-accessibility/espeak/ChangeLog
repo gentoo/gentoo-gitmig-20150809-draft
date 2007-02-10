@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/espeak
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.7 2007/02/07 03:15:25 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.8 2007/02/10 13:41:51 beandog Exp $
+
+  10 Feb 2007; Steve Dibb <beandog@gentoo.org> espeak-1.19.ebuild:
+  amd64 stable, bug 163285
 
   07 Feb 2007; William Hubbs <williamh@gentoo.org>
   -files/espeak-1.18-64bits.patch, -files/espeak-1.18-parallel.patch,
