@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/pptpd
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/ChangeLog,v 1.24 2006/11/18 13:27:12 mrness Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/ChangeLog,v 1.25 2007/02/10 09:47:26 mrness Exp $
+
+  10 Feb 2007; Alin Năstac <mrness@gentoo.org>
+  -files/pptpd-1.3.0-gentoo.patch, -files/pptpd-1.3.1-gentoo.patch,
+  -files/pptpd-1.3.2-connections-arg.patch, -files/pptpd-1.3.2-gentoo.patch,
+  -pptpd-1.2.3-r1.ebuild, -pptpd-1.3.0.ebuild, -pptpd-1.3.1.ebuild,
+  -pptpd-1.3.2.ebuild:
+  Remove obsolete versions.
 
   18 Nov 2006; Alin Nastac <mrness@gentoo.org> pptpd-1.3.3.ebuild:
   Stable on x86.
