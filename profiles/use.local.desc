@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2588 2007/02/10 20:49:45 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2589 2007/02/10 22:33:15 genstef Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -449,7 +449,6 @@ dev-libs/libsqlora8:orathreads - specifies use of Oracle threads
 dev-libs/libtomcrypt:libtommath - Use the portable math library
 dev-libs/libtomcrypt:tomsfastmath - Use the optimized math library
 dev-libs/libwbxml:nokia6600 - Add support for Nokia 6600 mobile phone
-dev-libs/linux-fusion:udev - Enable udev rules file installation
 dev-libs/log4cxx:smtp - offer SMTP support via libsmtp
 dev-libs/openobex:irda - enable IrDA support
 dev-libs/openobex:syslog - enable syslog support
@@ -1465,7 +1464,6 @@ net-voip/yate:gsm - Build gsm codec plugin
 net-voip/yate:h323 - Build H.323 Channel plugin
 net-voip/yate:ilbc - Build ILBC codec plugin
 net-voip/yate:zaptel - Build zaptel Channel plugin
-net-wireless/bluez-utils:udev - Enable udev rules file installation
 net-wireless/hostapd:logwatch - Install support files for logwatch
 net-wireless/hostapd:madwifi - Add support for madwifi (Atheros chipset)
 net-wireless/kdebluetooth:irmc - Enable the kitchensync(Multisynk)'s IrMCSync konnector
@@ -1618,7 +1616,6 @@ sys-apps/pcmcia-cs-modules:cardbus - Enable 32bit CardBus support
 sys-apps/pcmcia-cs:trusted - Assume all users are trusted (Build unsafe user-space tools)
 sys-apps/pcmcia-cs:xforms - Enable building the xforms based cardinfo binary
 sys-apps/pcmciautils:staticsocket - Add support for static sockets
-sys-apps/pcmciautils:udev - Install as an udev helper instead of a hotplug helper
 sys-apps/portage:epydoc - Generate api documentation with epydoc.
 sys-apps/qingy:logrotate - Enable logrotate file installation
 sys-apps/qingy:opensslcrypt - Encrypt communications between qingy and its GUI using OpenSSL
