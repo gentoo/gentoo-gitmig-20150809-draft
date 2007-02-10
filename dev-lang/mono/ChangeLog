@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.104 2007/01/14 03:00:50 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.105 2007/02/10 23:52:54 compnerd Exp $
+
+  10 Feb 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  -files/mono-1.1.13.8-dynamic-assembly-get-types.diff,
+  -files/mono-1.1.13-resource-manager.diff,
+  -files/mono-1.1.18-mcs-crasher-fix.diff,
+  -files/mono-1.2.1-zombie-processes.diff, -files/dotnet.conf,
+  -files/dotnet.init, -mono-1.1.13.8.1.ebuild, -mono-1.1.18.ebuild,
+  -mono-1.1.18-r1.ebuild, -mono-1.2.ebuild, -mono-1.2.1.ebuild:
+  Long overdue cleaning of mono ebuilds. 1.1.16.1 left for visual basic
 
   14 Jan 2007; Olivier Crête <tester@gentoo.org> mono-1.2.2.1.ebuild:
   Stable on amd64 per bug #159886
