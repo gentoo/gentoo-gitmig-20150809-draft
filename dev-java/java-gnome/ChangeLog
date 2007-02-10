@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.34 2007/01/29 09:33:06 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.35 2007/02/10 18:12:54 nixnut Exp $
+
+  10 Feb 2007; nixnut <nixnut@gentoo.org> ChangeLog:
+  Stable on ppc wrt bug 160002
 
   29 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
   java-gnome-2.14.3.ebuild:
