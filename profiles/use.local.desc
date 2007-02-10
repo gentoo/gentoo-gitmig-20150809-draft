@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2586 2007/02/09 16:45:47 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2587 2007/02/10 14:29:03 aballier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1085,6 +1085,7 @@ media-video/vlc:live - Enables LIVE.com support.
 media-video/vlc:mod - Enables Mod demux support.
 media-video/vlc:optimisememory - Enable optimisation for memory rather than performance.
 media-video/vlc:rtsp - Enables real audio and RTSP modules.
+media-video/vlc:sdl-image - Enables sdl image video decoder (depends on sdl)
 media-video/vlc:shout - Enables libshout output.
 media-video/vlc:skins - Enables support for the skins2 interface.
 media-video/vlc:stream - Enables vlc to stream video.
