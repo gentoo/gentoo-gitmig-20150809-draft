@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/linux-fusion
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/linux-fusion/ChangeLog,v 1.5 2007/01/27 21:25:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/linux-fusion/ChangeLog,v 1.6 2007/02/10 22:27:35 genstef Exp $
+
+  10 Feb 2007; <genstef@gentoo.org> linux-fusion-3.2-r1.ebuild:
+  remove udev useflag
 
   27 Jan 2007; Jeroen Roovers <jer@gentoo.org> linux-fusion-3.2-r1.ebuild:
   Marked ~hppa (bug #150688).
