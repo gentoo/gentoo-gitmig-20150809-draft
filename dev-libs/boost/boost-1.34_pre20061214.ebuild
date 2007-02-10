@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.34_pre20061214.ebuild,v 1.2 2007/02/06 23:54:38 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.34_pre20061214.ebuild,v 1.3 2007/02/10 12:38:14 dev-zero Exp $
 
 inherit distutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.boost.org/"
 SRC_URI="http://dev.gentoo.org/~dev-zero/distfiles/${MY_P}.tar.bz2"
 LICENSE="freedist Boost-1.0"
 SLOT="0"
-IUSE="debug doc icc icu pyste static threads threadsonly tools userland_Darwin"
+IUSE="debug doc icc icu pyste tools userland_Darwin"
 
 DEPEND="icu? ( >=dev-libs/icu-3.2 )
 		sys-libs/zlib
@@ -22,13 +22,6 @@ RDEPEND="${DEPEND}
 		pyste? ( dev-cpp/gccxml dev-python/elementtree )"
 
 S=${WORKDIR}/${MY_P}
-
-pkg_setup() {
-	if ! built_with_use dev-lang/python ucs2 ; then
-		eerror "dev-lang/python has to be built with the ucs2 USE-flag enabled"
-		die "missing USE-flag for dev-lang/python"
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
@@ -43,8 +36,7 @@ src_unpack() {
 }
 
 generate_options() {
-	LINK_OPTIONS="shared"
-	use static && LINK_OPTIONS="${LINK_OPTIONS} static"
+	LINK_OPTIONS="shared static"
 
 	if ! use debug ; then
 		OPTIONS="release debug-symbols=none"
@@ -53,16 +45,7 @@ generate_options() {
 	fi
 
 	OPTIONS="${OPTIONS} optimization=none"
-
-	if use threads ; then
-		if use threadsonly ; then
-			OPTIONS="${OPTIONS} threading=multi"
-		else
-			OPTIONS="${OPTIONS} threading=single,multi"
-		fi
-	else
-		OPTIONS="${OPTIONS} threading=single"
-	fi
+	OPTIONS="${OPTIONS} threading=single,multi"
 
 	use icu && OPTIONS="${OPTIONS} -sHAVE_ICU=1 -sICU_PATH=\"${ROOT}/usr\""
 
@@ -70,7 +53,7 @@ generate_options() {
 
 generate_userconfig() {
 	einfo "Writing new user-config.jam"
-	distutils python_version
+	distutils_python_version
 
 	local compiler compilerVersion compilerExecutable
 	if use icc ; then

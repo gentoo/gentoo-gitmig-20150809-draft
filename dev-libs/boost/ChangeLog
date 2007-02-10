@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/boost
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.105 2007/02/06 23:54:38 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.106 2007/02/10 12:38:14 dev-zero Exp $
+
+  10 Feb 2007; Tiziano Müller <dev-zero@gentoo.org>
+  boost-1.34_pre20061214.ebuild:
+  Fixed python_version typo. Removed the check for ucs2 for python.
 
   06 Feb 2007; Tiziano Müller <dev-zero@gentoo.org>
   -boost-1.34_pre20060930.ebuild, boost-1.34_pre20061214.ebuild:
