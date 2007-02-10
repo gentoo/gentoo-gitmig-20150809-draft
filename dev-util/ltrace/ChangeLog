@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ltrace
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.28 2007/02/10 14:49:09 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.29 2007/02/10 16:32:32 nixnut Exp $
+
+  10 Feb 2007; nixnut <nixnut@gentoo.org> ltrace-0.4.ebuild:
+  Stable on ppc wrt bug 161844
 
   10 Feb 2007; Simon Stelling <blubb@gentoo.org> ltrace-0.4.ebuild:
   stable on amd64; bug 161844
