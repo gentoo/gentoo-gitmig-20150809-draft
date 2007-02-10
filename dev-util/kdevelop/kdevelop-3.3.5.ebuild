@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.3.5.ebuild,v 1.6 2007/01/31 21:11:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.3.5.ebuild,v 1.7 2007/02/10 17:37:41 cryos Exp $
 
 inherit kde eutils db-use
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://kde/stable/${PV/3.3/3.5}/src/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="3"
-KEYWORDS="~amd64 ppc ppc64 sparc x86"
+KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="ada clearcase cvs fortran haskell java pascal perforce perl php python ruby sql subversion graphviz"
 
 DEPEND="sys-devel/gdb
@@ -59,18 +59,19 @@ src_compile() {
 }
 
 pkg_postinst() {
-	elog "kdevelop can use a wide range of apps for extra functionality. This is an almost"
-	elog "complete list. All these packages can be emerged after kdevelop."
+	elog "kdevelop can use a wide range of apps for extra functionality. This is an"
+	elog "almost complete list. All these packages can be emerged after kdevelop."
 	elog
-	elog "kde-base/kdebase:               (RECOMMENDED) embed konsole kpart in kdevelop ide"
-	elog "dev-util/kdbg:                  (RECOMMENDED) kde frontend to gdb"
-	elog "dev-util/valgrind:              (RECOMMENDED) integrates valgrind (memory debugger) commands"
-	elog "kde-base/kompare:               (RECOMMENDED) show differences between files"
-	elog "dev-java/ant:                   support projects using the ant build tool"
-	elog "dev-util/ctags:                 faster and more powerful code browsing logic"
-	elog "app-doc/doxygen:                generate KDE-style documentation for your project"
-	elog "www-misc/htdig:                  index and search your project's documentation"
-	elog "app-arch/rpm:                   support creating RPMs of your project"
+	elog "kde-base/konsole:       (RECOMMENDED) embed konsole kpart in kdevelop ide"
+	elog "OR kde-base/kdebase:    (RECOMMENDED) embed konsole kpart in kdevelop ide"
+	elog "dev-util/kdbg:          (RECOMMENDED) kde frontend to gdb"
+	elog "dev-util/valgrind:      (RECOMMENDED) integrates valgrind (memory debugger) commands"
+	elog "kde-base/kompare:       (RECOMMENDED) show differences between files"
+	elog "dev-java/ant:           support projects using the ant build tool"
+	elog "dev-util/ctags:         faster and more powerful code browsing logic"
+	elog "app-doc/doxygen:        generate KDE-style documentation for your project"
+	elog "www-misc/htdig:         index and search your project's documentation"
+	elog "app-arch/rpm:           support creating RPMs of your project"
 	elog "app-emulation/visualboyadvance: create and run projects for this gameboy"
 	elog
 	elog "Support for GNU-style make, tmake, qmake is included."
