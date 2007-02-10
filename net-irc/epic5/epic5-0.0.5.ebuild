@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/epic5-0.0.5.ebuild,v 1.2 2005/07/08 06:51:43 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/epic5-0.0.5.ebuild,v 1.3 2007/02/10 23:23:26 opfer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,12 +10,12 @@ HOMEPAGE="http://epicsol.org/"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="~ppc ~x86"
-IUSE="ipv6 perl ssl tcltk socks5"
+IUSE="ipv6 perl ssl tcl socks5"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	perl? ( >=dev-lang/perl-5.6.1 )
 	ssl? ( >=dev-libs/openssl-0.9.5 )
-	tcltk? ( dev-lang/tcl )
+	tcl? ( dev-lang/tcl )
 	socks5? ( net-proxy/dante )"
 
 src_unpack() {
@@ -36,7 +36,7 @@ src_compile() {
 		$(use_with ipv6) \
 		$(use_with perl) \
 		$(use_with ssl) \
-		$(use_with tcltk tcl) \
+		$(use_with tcl tcl) \
 		$(use_with socks5) \
 		|| die "econf failed"
 	emake CC="$(tc-getCC)" || die "emake failed"
