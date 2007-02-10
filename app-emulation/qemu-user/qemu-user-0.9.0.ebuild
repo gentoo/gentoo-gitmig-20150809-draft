@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-0.9.0.ebuild,v 1.1 2007/02/10 09:14:18 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-0.9.0.ebuild,v 1.2 2007/02/10 13:07:12 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -56,6 +56,8 @@ src_unpack() {
 			Makefile.target
 	# Prevent install of kernel module by qemu's makefile
 	sed -i 's/\(.\/install.sh\)/#\1/' Makefile
+	# avoid strip
+	sed -i 's:$(INSTALL) -m 755 -s:$(INSTALL) -m 755:' Makefile Makefile.target
 }
 
 src_compile() {

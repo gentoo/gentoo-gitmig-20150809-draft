@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu-user
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.24 2007/02/10 09:14:18 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.25 2007/02/10 13:07:12 lu_zero Exp $
+
+  10 Feb 2007; Luca Barbato <lu_zero@gentoo.org> qemu-user-0.9.0.ebuild:
+  Fix bug #164491
 
 *qemu-user-0.9.0 (10 Feb 2007)
 
