@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libvte-java/libvte-java-0.12.1-r1.ebuild,v 1.2 2007/01/29 09:21:55 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libvte-java/libvte-java-0.12.1-r1.ebuild,v 1.3 2007/02/10 17:56:19 nixnut Exp $
 
 inherit java-gnome autotools
 
 DESCRIPTION="Java bindings for vte"
 
 SLOT="0.12"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 
 DEPS=">=dev-java/libgtk-java-2.8.1
 		>=x11-libs/vte-0.12.1"
