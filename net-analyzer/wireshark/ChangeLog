@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.44 2007/02/03 23:59:28 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.45 2007/02/10 06:57:47 mjolnir Exp $
+
+  10 Feb 2007; Martin Jackson <mjolnir@gentoo.org>
+  +files/wireshark-epan_dissectors_packet-diameter.diff,
+  wireshark-0.99.5.ebuild:
+  Add patch from FC3/FreeBSD to fix GCC 3.4 link error (#165340)
 
 *wireshark-0.99.5 (03 Feb 2007)
 
