@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/capi4hylafax-01.03.00.99.300.4.ebuild,v 1.1 2007/01/06 21:14:07 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/capi4hylafax-01.03.00.99.300.4.ebuild,v 1.2 2007/02/10 23:25:54 sbriesen Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -15,8 +15,8 @@ MY_PV3="$(get_version_component_range 6)"
 MY_P="${PN}_${MY_PV1}.svn.${MY_PV2}"
 
 DESCRIPTION="capi4hylafax adds a faxcapi modem to the hylafax enviroment."
-SRC_URI="http://ftp.debian.org/debian/pool/main/c/capi4hylafax/${MY_P}.orig.tar.gz
-		http://ftp.debian.org/debian/pool/main/c/capi4hylafax/${MY_P}-${MY_PV3}.diff.gz"
+SRC_URI="mirror://debian/pool/main/c/capi4hylafax/${MY_P}.orig.tar.gz
+		mirror://debian/pool/main/c/capi4hylafax/${MY_P}-${MY_PV3}.diff.gz"
 HOMEPAGE="http://packages.qa.debian.org/c/capi4hylafax.html"
 
 S="${WORKDIR}/${PN}-svn"
