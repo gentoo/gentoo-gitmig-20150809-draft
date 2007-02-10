@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/mingetty
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/ChangeLog,v 1.39 2006/11/22 20:24:28 mrness Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/ChangeLog,v 1.40 2007/02/10 09:03:02 mrness Exp $
+
+  10 Feb 2007; Alin Năstac <mrness@gentoo.org> mingetty-1.07-r1.ebuild:
+  Stable on amd64 and x86.
 
 *mingetty-1.07-r1 (22 Nov 2006)
 
