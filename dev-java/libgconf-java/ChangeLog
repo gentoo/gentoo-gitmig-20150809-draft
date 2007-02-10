@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/libgconf-java
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgconf-java/ChangeLog,v 1.21 2007/01/29 09:23:28 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgconf-java/ChangeLog,v 1.22 2007/02/10 18:08:45 nixnut Exp $
+
+  10 Feb 2007; nixnut <nixnut@gentoo.org> libgconf-java-2.12.4-r1.ebuild:
+  Stable on ppc wrt bug 160002
 
   29 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
   libgconf-java-2.12.4-r1.ebuild:
