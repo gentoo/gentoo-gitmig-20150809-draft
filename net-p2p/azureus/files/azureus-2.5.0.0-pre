@@ -22,20 +22,13 @@ ${olddotazudir} is deprecated and you can delete this directory.
 END
 fi
 
-if [[ -f "${gentoocfg}" ]] ; then
-	. "${gentoocfg}"
-	echo "using ${gentoocfg}"
-elif [[ -f "${oldgentoocfg}" ]]; then
-	. "${oldgentoocfg}"
-	echo "using ${oldgentoocfg}"
-else
+create_initial_config() {
 	if [[ ! -e "${dotazudir}" ]] ; then
 		mkdir "${dotazudir}"
 		echo "Creating ${dotazudir}" 
 	fi
 
-	# Setup defaults
-	UI="swt"
+	[[ ${UI} ]] && UI="swt"
 
 	echo "Creating ${gentoocfg}"
 
@@ -49,18 +42,34 @@ UI="${UI}"
 # Options you want to pass to the java binary
 JAVA_OPTIONS=""
 END
+}
 
+if [[ -f "${gentoocfg}" ]] ; then
+	. "${gentoocfg}"
+	echo "using ${gentoocfg}"
+elif [[ -f "${oldgentoocfg}" ]]; then
+	. "${oldgentoocfg}"
+	echo "using ${oldgentoocfg}"
+else
+	create_initial_config
 fi
 
-if [[ -n "${UI_OPTIONS}" ]]; then
+if [[ -z "${UI}" && -n "${UI_OPTIONS}" ]]; then
 	echo '${UI_OPTIONS} is no longer supported. ${UI} should be used instead instead' > /dev/stderr
-	echo 'Unsetting ${UI_OPTIONS}'
+	echo 'Unsetting ${UI_OPTIONS} and trying to migrate to ${UI}' > /dev/stderr
+	if [[ ${UI_OPTIONS} = *--ui=console* ]]; then
+		UI=console
+	elif [[ ${UI_OPTIONS} = *--ui=swt* ]]; then
+		UI=swt
+	else
+		echo 'Could not make $UI from $UI_OPTIONS' > /dev/stderr
+	fi
 	unset UI_OPTIONS
 fi
 
 if [[ -z "${UI}" ]]; then
-	echo '$UI not set adding UI="swt" to your ' ${gentoocfg}
-	echo 'UI="swt"' >> ${gentoocfg}
+	echo '$UI not set defaulting to swt' > /dev/stderr
 	UI="swt"
 fi
 
+[[ ! -e "${dotazudir}" ]] && create_initial_config
