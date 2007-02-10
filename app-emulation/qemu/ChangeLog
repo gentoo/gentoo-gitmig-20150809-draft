@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.51 2007/02/06 14:49:00 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.52 2007/02/10 12:04:48 lu_zero Exp $
+
+*qemu-0.9.0 (06 Feb 2007)
+
+  06 Feb 2007; Luca Barbato <lu_zero@gentoo.org> +qemu-0.9.0.ebuild:
+  New version
 
   06 Feb 2007; Simon Stelling <blubb@gentoo.org> qemu-0.8.2.ebuild:
   stable on amd64; bug 159522
