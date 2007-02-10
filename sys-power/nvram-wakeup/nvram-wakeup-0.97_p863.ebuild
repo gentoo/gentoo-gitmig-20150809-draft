@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nvram-wakeup/nvram-wakeup-0.97_p863.ebuild,v 1.1 2007/02/07 04:25:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nvram-wakeup/nvram-wakeup-0.97_p863.ebuild,v 1.2 2007/02/10 08:22:31 vapier Exp $
 
 inherit flag-o-matic
 
@@ -28,7 +28,7 @@ src_unpack() {
 		cp "${DISTDIR}"/nvram-wakeup-mb.c?revision=${REV} "${S}"/nvram-wakeup-mb.c || die
 	fi
 	cd "${S}"
-	use nls || epatch "${FILESDIR}"/${P}-nonls.patch
+	use nls || epatch "${FILESDIR}"/${MY_P}-nonls.patch
 	# Need to be careful with CFLAGS since this could eat your bios
 	strip-flags
 	sed -i \
