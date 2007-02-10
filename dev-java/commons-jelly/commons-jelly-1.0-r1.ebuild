@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/commons-jelly-1.0-r1.ebuild,v 1.3 2006/12/26 18:12:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/commons-jelly-1.0-r1.ebuild,v 1.4 2007/02/10 14:28:42 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -32,7 +32,7 @@ RDEPEND=">=virtual/jre-1.4
 
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core
-	test? ( dev-java/ant-tasks )
+	test? ( dev-java/ant-junit )
 	${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
@@ -57,13 +57,13 @@ src_compile() {
 }
 
 src_test() {
-	eant test -Dlibdir=lib
+	ANT_TASKS="ant-junit" eant test -Dlibdir=lib
 }
 
 src_install() {
 	java-pkg_newjar target/${P}.jar ${PN}.jar
 
-	dodoc NOTICE.txt README.txt RELEASE-NOTES.txt
+	dodoc NOTICE.txt README.txt RELEASE-NOTES.txt || die
 
 	use doc && java-pkg_dojavadoc dist/docs/api
 	use source && java-pkg_dosrc src/java/*

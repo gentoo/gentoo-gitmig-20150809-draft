@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-jelly
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/ChangeLog,v 1.5 2006/12/26 18:12:06 betelgeuse Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/ChangeLog,v 1.6 2007/02/10 14:28:42 betelgeuse Exp $
+
+  10 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
+  commons-jelly-1.0-r1.ebuild:
+  Use split ant for test depends.
 
   26 Dec 2006; Petteri Räty <betelgeuse@gentoo.org>
   commons-jelly-1.0-r1.ebuild:
