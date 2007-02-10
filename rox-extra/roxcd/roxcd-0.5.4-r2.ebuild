@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxcd/roxcd-0.5.4.ebuild,v 1.2 2006/11/17 14:57:33 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxcd/roxcd-0.5.4-r2.ebuild,v 1.1 2007/02/10 19:35:47 lack Exp $
 
 ROX_LIB_VER=1.9.14
 inherit rox
@@ -16,13 +16,18 @@ KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 APPNAME=${MY_PN}
+APPCATEGORY="AudioVideo;Audio;Player"
 S=${WORKDIR}
 
-#YUCK, there is a subdiretory in Help for the Licenses.
-#need to move it
 src_unpack() {
 	unpack ${A}
-	cd ${APPNAME}/Help
+
+	# Remove this unneeded '.-preclean' directory
+	cd ${APPNAME}
+	rm -fr .-preclean
+
+	# Move the licences just into 'Help'
+	cd Help
 	mv Licenses-Text/* ./
 	rm -fr Licenses-Text
 }
