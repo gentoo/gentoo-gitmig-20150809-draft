@@ -1,2 +1,2 @@
 #!/bin/sh
-exec /usr/sbin/update-pciids
+exec /usr/sbin/update-pciids -q

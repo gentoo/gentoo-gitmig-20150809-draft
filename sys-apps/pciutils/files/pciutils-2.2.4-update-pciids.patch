@@ -1,0 +1,41 @@
+--- update-pciids.sh
++++ update-pciids.sh
+@@ -1,5 +1,7 @@
+ #!/bin/sh
+ 
++[ "$1" = "-q" ] && quiet="true" || quiet="false"
++
+ set -e
+ SRC="http://pciids.sourceforge.net/v2.2/pci.ids"
+ DEST=pci.ids
+@@ -8,6 +8,13 @@
+ PCI_COMPRESSED_IDS=
+ GREP=grep
+ 
++# if pci.ids is read-only (because the filesystem is read-only),
++# then just skip this whole process.
++if ! touch ${DEST} >&2 >/dev/null ; then
++	${quiet} || echo "${DEST} is read-only, exiting."
++	exit 0
++fi
++
+ if [ -n "$PCI_COMPRESSED_IDS" ] ; then
+ 	DECOMP="cat"
+ 	SRC="$SRC.gz"
+@@ -22,8 +24,10 @@
+ 
+ if which curl >/dev/null ; then
+ 	DL="curl -o $DEST.new $SRC"
++    ${quiet} && DL="$DL -s -S"
+ elif which wget >/dev/null ; then
+ 	DL="wget -O $DEST.new $SRC"
++	${quiet} && DL="$DL -q"
+ elif which lynx >/dev/null ; then
+ 	DL="eval lynx -source $SRC >$DEST.new"
+ else
+@@ -59,4 +66,4 @@
+ mv $DEST.neww $DEST
+ rm $DEST.new
+ 
+-echo "Done."
++${quiet} || echo "Done."
