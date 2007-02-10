@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/rt2570
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2570/ChangeLog,v 1.7 2006/08/16 21:55:11 steev Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2570/ChangeLog,v 1.8 2007/02/10 07:30:31 steev Exp $
+
+*rt2570-20070209 (10 Feb 2007)
+
+  10 Feb 2007; Steev Klimaszewski <steev@gentoo.org>
+  +rt2570-20070209.ebuild:
+  Add a cvs snapshot ebuild for rt2570. Closes bug #162128. Thanks to Paulo da
+  Silva for reporting and making the snapshot.
 
 *rt2570-1.1.0_beta2 (16 Aug 2006)
 
