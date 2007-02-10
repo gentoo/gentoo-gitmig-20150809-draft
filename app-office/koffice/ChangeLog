@@ -1,6 +1,11 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.203 2007/01/17 01:18:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.204 2007/02/10 20:22:27 flameeyes Exp $
+
+  10 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/koffice-xpdf-CVE-2007-0104.diff, -files/koffice-ole-filter.patch,
+  -koffice-1.6.0-r3.ebuild, -koffice-1.6.1.ebuild:
+  Remove old version.
 
 *koffice-1.6.1-r1 (17 Jan 2007)
 *koffice-1.5.2-r2 (17 Jan 2007)
