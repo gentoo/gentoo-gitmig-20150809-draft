@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jexcelapi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jexcelapi/ChangeLog,v 1.5 2007/02/09 02:07:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jexcelapi/ChangeLog,v 1.6 2007/02/10 00:18:45 fordfrog Exp $
+
+*jexcelapi-2.6.2 (10 Feb 2007)
+
+  10 Feb 2007; Miroslav Šulc <fordfrog@gentoo.org> +jexcelapi-2.6.2.ebuild:
+  Version bump.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
