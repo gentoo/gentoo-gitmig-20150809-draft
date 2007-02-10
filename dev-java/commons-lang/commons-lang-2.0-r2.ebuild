@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/commons-lang-2.0-r2.ebuild,v 1.7 2007/02/03 13:33:43 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/commons-lang-2.0-r2.ebuild,v 1.8 2007/02/10 18:34:59 nixnut Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -15,7 +15,7 @@ DEPEND="
 RDEPEND=">=virtual/jre-1.3"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE="doc source"
 
 S="${WORKDIR}/${P}-src"
