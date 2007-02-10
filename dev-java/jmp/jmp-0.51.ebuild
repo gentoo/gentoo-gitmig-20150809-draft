@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmp/jmp-0.51.ebuild,v 1.1 2007/02/10 13:55:49 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmp/jmp-0.51.ebuild,v 1.2 2007/02/10 13:57:19 betelgeuse Exp $
 
 inherit java-pkg-2
 
@@ -36,7 +36,9 @@ src_compile() {
 src_install() {
 	einstall || die "install failed"
 	dodoc ChangeLog README TODO || die
+}
 
+pkg_postinst() {
 	elog "Please not that jmp is not compatible with VMs newer"
 	elog "than 1.5 so make sure your vm is set to either 1.4 or"
 	elog "1.5 when using jmp with the vm."
