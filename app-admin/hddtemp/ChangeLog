@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.49 2007/02/10 13:33:33 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.50 2007/02/10 13:42:59 spock Exp $
+
+*hddtemp-0.3_beta15-r1 (10 Feb 2007)
+
+  10 Feb 2007; Michał Januszewski <spock@gentoo.org>
+  +files/hddtemp-0.3_beta15-satacmds.patch, +hddtemp-0.3_beta15-r1.ebuild:
+  Remove SATA sense checks so that hddtemp works with 2.6.20+ kernels (bug
+  #165453).
 
   10 Feb 2007; Michał Januszewski <spock@gentoo.org>
   -files/hddtemp-0.3_beta14-sizeofdsk.patch, -hddtemp-0.3_beta14.ebuild,
