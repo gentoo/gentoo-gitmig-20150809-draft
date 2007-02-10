@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.34.ebuild,v 1.1 2007/01/31 07:34:53 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.34.ebuild,v 1.2 2007/02/10 12:30:43 opfer Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.8"
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 #IUSE="doc gnome web"
 IUSE="doc gnome"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 x86"
 
 RDEPEND="dev-lang/mono
 	gnome? ( >=dev-dotnet/gtk-sharp-2.4
