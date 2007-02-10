@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/nbd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.20 2007/02/03 22:52:13 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.21 2007/02/10 13:17:40 beandog Exp $
+
+  10 Feb 2007; Steve Dibb <beandog@gentoo.org> nbd-2.9.0.ebuild:
+  amd64 stable, bug 159209
 
   03 Feb 2007; Matti Bickel <mabi@gentoo.org> nbd-2.9.0.ebuild:
   ppc stable (bug #159209)
