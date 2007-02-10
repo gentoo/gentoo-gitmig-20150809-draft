@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r2.ebuild,v 1.20 2007/01/05 20:10:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r2.ebuild,v 1.21 2007/02/10 23:12:33 opfer Exp $
 
 inherit eutils
 
@@ -15,11 +15,11 @@ SRC_URI="mirror://sourceforge/timidity/${MY_P}.tar.bz2 mirror://gentoo/${P}-exit
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~arm hppa ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="oss nas esd motif X gtk gtk vorbis tcltk slang alsa arts jack portaudio emacs ao speex flac ncurses"
+IUSE="oss nas esd motif X gtk gtk vorbis tk slang alsa arts jack portaudio emacs ao speex flac ncurses"
 
 RDEPEND="ncurses? ( >=sys-libs/ncurses-5.0 )
 	gtk? ( >=x11-libs/gtk+-2.0 )
-	tcltk? ( >=dev-lang/tk-8.1 )
+	tk? ( >=dev-lang/tk-8.1 )
 	motif? ( virtual/motif )
 	esd? ( >=media-sound/esound-0.2.22 )
 	nas? ( >=media-libs/nas-1.4 )
@@ -96,7 +96,7 @@ src_compile() {
 		$(use_enable X xaw) \
 		$(use_enable gtk) \
 		$(use_enable motif) \
-		$(use_enable tcltk) \
+		$(use_enable tk tcltk) \
 		${myconf} || die
 
 	emake || die

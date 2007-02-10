@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.80 2007/02/06 13:33:54 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.81 2007/02/10 23:12:33 opfer Exp $
+
+  10 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  timidity++-2.13.2.ebuild, timidity++-2.13.2-r2.ebuild,
+  timidity++-2.13.2-r3.ebuild:
+  moved from USE flag tcltk to tk, see bug 17808
 
   06 Feb 2007; Simon Stelling <blubb@gentoo.org>
   timidity++-2.13.2-r3.ebuild:

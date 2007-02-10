@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2.ebuild,v 1.15 2007/01/05 20:10:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2.ebuild,v 1.16 2007/02/10 23:12:33 opfer Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/timidity/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 arm hppa ppc sparc x86"
-IUSE="oss nas esd motif X gtk vorbis tcltk slang alsa arts jack portaudio emacs"
+IUSE="oss nas esd motif X gtk vorbis tk slang alsa arts jack portaudio emacs"
 
 RDEPEND=">=sys-libs/ncurses-5.0
 	esd? ( >=media-sound/esound-0.2.22 )
@@ -33,7 +33,7 @@ DEPEND="${RDEPEND}
 	sys-devel/autoconf"
 
 RDEPEND="${RDEPEND}
-	X? ( tcltk? ( >=dev-lang/tk-8.1 ) )
+	X? ( tk? ( >=dev-lang/tk-8.1 ) )
 	emacs? ( virtual/emacs )"
 
 src_unpack() {
