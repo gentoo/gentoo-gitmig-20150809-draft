@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERBOSE=no
+: ${VERBOSE:=no}
 [[ -e /dev/.udev_populate ]] && VERBOSE=yes
 
 source /sbin/functions.sh </dev/console
@@ -15,7 +15,7 @@ done
 
 # check for blacklisting
 if [[ -f /etc/modprobe.conf ]]; then
-	if grep -q 'blacklist.*[[:space:]]'"${LAST}"'\([[:space:]]\|$\)' /etc/modprobe.conf; then
+	if grep -q '^blacklist.*[[:space:]]'"${LAST}"'\([[:space:]]\|$\)' /etc/modprobe.conf; then
 		# module blacklisted
 		exit 0
 	fi
@@ -23,7 +23,7 @@ fi
 
 if [[ ${VERBOSE} != no ]]; then
 	# print line if not already loaded
-	if ! fgrep -w -q ${LAST} /proc/modules; then
+	if ! grep -q "^${LAST}[[:space:]]" /proc/modules; then
 		einfo "  udev loading module ${LAST}" > /dev/console
 	fi
 fi

@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.250 2007/02/10 22:28:14 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.251 2007/02/10 23:27:57 zzam Exp $
+
+  10 Feb 2007; Matthias Schwarzott <zzam@gentoo.org> files/modprobe.sh:
+  Corrected both grep-expressions, to not get commented blacklist entries, and
+  to get log output correct.
 
 *udev-104-r10 (10 Feb 2007)
 
