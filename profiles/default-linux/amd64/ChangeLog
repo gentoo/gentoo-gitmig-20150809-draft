@@ -1,6 +1,12 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.65 2007/02/04 22:15:10 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.66 2007/02/10 21:16:32 blubb Exp $
+
+  10 Feb 2007; Simon Stelling <blubb@gentoo.org> package.use.mask:
+  re-mask mmx for imlib2; bug 166240
+
+  05 Feb 2007; Simon Stelling <blubb@gentoo.org> use.mask:
+  unmask afs USE flag; bug 160253
 
   04 Feb 2007; Simon Stelling <blubb@gentoo.org> package.use.mask:
   unmask mmx for media-libs/imlib2; bug 164923

@@ -32,6 +32,10 @@ media-sound/mpg123 mmx 3dnow
 # bug 152646
 x11-themes/polymer mmx sse2
 
+# Feb 10th 2007; blubb@gentoo.org
+# bug 166240
+media-libs/imlib2 mmx
+
 # Oct 24th 2006; blubb@gentoo.org
 # working asm; drop this list once the flags are unmasked globally (2007.0)
 >=dev-libs/DirectFB-0.9.25.1 -mmx -sse
@@ -62,7 +66,6 @@ media-tv/xdtv -mmx
 media-plugins/vdr-softdevice -mmx -mmxext
 dev-libs/openssl -sse2
 media-libs/libsoundtouch -sse
->=media-libs/imlib2-1.2.2.001 -mmx
 
 # Jan 14th 2007; blubb@gentoo.org
 # bug 136853: We'd need aspell in emul-libs to make this flag useful
