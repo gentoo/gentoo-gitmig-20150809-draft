@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/edtftpj
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/ChangeLog,v 1.17 2007/02/04 01:34:47 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/ChangeLog,v 1.18 2007/02/10 18:32:37 nixnut Exp $
+
+  10 Feb 2007; nixnut <nixnut@gentoo.org> edtftpj-1.5.3.ebuild:
+  Stable on ppc wrt bug 159721
 
   04 Feb 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -edtftpj-1.4.4.ebuild, -edtftpj-1.5.2.ebuild:
