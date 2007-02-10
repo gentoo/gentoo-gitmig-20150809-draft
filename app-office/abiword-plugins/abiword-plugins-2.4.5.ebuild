@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.4.5.ebuild,v 1.8 2006/10/15 01:55:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.4.5.ebuild,v 1.9 2007/02/10 20:52:11 compnerd Exp $
 
 inherit eutils
 
@@ -11,8 +11,7 @@ SRC_URI="http://www.abisource.com/downloads/abiword/${PV}/abiword-${PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
-IUSE="bzip2 debug gnome grammar jpeg libgda math pdf readline svg thesaurus wmf wordperfect"
-S=${WORKDIR}/abiword-${PV}/${PN}
+IUSE="bzip2 debug gnome grammar jpeg libgda math ots pdf readline svg thesaurus wmf wordperfect"
 
 # libgsf dependency used by some document format importers
 RDEPEND="=app-office/abiword-${PV}*
@@ -31,6 +30,7 @@ RDEPEND="=app-office/abiword-${PV}*
 		>=gnome-extra/libgda-1.2
 		>=gnome-extra/libgnomedb-1.2 )
 	math? ( >=x11-libs/gtkmathview-0.7.5 )
+	!ia64? ( !ppc64? ( !sparc? ( ots? ( >=app-text/ots-0.4.1 ) ) ) )
 	pdf? ( >=app-text/poppler-0.5.0-r1 )
 	readline? ( sys-libs/readline )
 	thesaurus? ( >=app-text/aiksaurus-1.2 )
@@ -40,6 +40,8 @@ RDEPEND="=app-office/abiword-${PV}*
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9"
+
+S="${WORKDIR}/abiword-${PV}/${PN}"
 
 src_unpack() {
 	unpack ${A}
@@ -57,6 +59,7 @@ src_compile() {
 		$(use_with jpeg) \
 		$(use_with libgda gda) \
 		$(use_with math abimathview) \
+		$(use_with ots) \
 		$(use_with pdf) \
 		$(use_with readline abicommand)
 		$(use_with svg librsvg) \
