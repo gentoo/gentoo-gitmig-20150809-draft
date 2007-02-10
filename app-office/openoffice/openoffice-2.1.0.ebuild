@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.1.0.ebuild,v 1.15 2007/01/31 12:02:32 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.1.0.ebuild,v 1.16 2007/02/10 17:04:55 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -9,7 +9,7 @@ inherit check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functi
 
 IUSE="binfilter branding cairo cups dbus debug eds firefox gnome gstreamer gtk kde ldap sound odk pam seamonkey webdav"
 
-MY_PV="2.1.2"
+MY_PV="2.1.5"
 PATCHLEVEL="OOE680"
 SRC="OOo_${PV}_src"
 S="${WORKDIR}/ooo"
@@ -212,7 +212,6 @@ src_unpack() {
 	if use java ; then
 		echo "--with-ant-home=${ANT_HOME}" >> ${CONFFILE}
 		echo "--with-jdk-home=$(java-config --jdk-home 2>/dev/null)" >> ${CONFFILE}
-		echo "--with-db-jar=/usr/share/db-${db_ver}/lib/db.jar" >> ${CONFFILE}
 		echo "--with-system-beanshell" >> ${CONFFILE}
 		echo "--with-system-xalan" >> ${CONFFILE}
 		echo "--with-system-xerces" >> ${CONFFILE}

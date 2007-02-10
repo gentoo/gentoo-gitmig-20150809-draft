@@ -8,3 +8,14 @@
  EOT
      chmod 755 $1
  }
+--- patches/src680/apply 
++++ patches/src680/apply 
+@@ -1630,6 +1630,8 @@
+ 
+ [ GentooExperimental ]
+ disable-parser-jaxp.diff, hmth
++
++[ GentooOnly ]
+ # db.jar unused with CXXHelpLinker
+ no-db.jar.diff, i#70155, hmth
+ 
