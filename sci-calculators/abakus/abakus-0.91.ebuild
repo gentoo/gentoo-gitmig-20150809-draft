@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/abakus/abakus-0.91.ebuild,v 1.3 2006/12/30 21:20:41 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/abakus/abakus-0.91.ebuild,v 1.4 2007/02/10 13:24:57 troll Exp $
 
 inherit kde
 
@@ -14,9 +14,9 @@ KEYWORDS="~amd64 x86"
 # leave gmp out for now, does not work for me
 IUSE="debug gmp"
 
-DEPEND=">=dev-util/scons-0.96.1
-		gmp? ( dev-libs/mpfr )"
-#RDEPEND=""
+RDEPEND="gmp? ( dev-libs/mpfr )"
+DEPEND="${RDEPEND}
+		>=dev-util/scons-0.96.1"
 
 need-kde 3.3
 
@@ -37,5 +37,8 @@ src_compile() {
 src_install() {
 	DESTDIR="${D}/usr" scons install
 	dodoc AUTHORS README
-}
 
+	rm -fR ${D}/usr/share/applnk/
+	newicon ${S}/src/hi64-app-abakus.png ${PN}.png
+	domenu ${S}/src/${PN}.desktop
+}
