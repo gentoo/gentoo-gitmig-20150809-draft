@@ -1,7 +1,7 @@
 #!/bin/bash
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.84 2007/01/06 16:32:32 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.85 2007/02/10 03:18:12 vapier Exp $
 
 cd /
 umask 0022 #159111
@@ -70,7 +70,7 @@ parse_target() {
 			cris*)                   CPOST="axis-linux-gnu";;
 			x86|i?86*|amd64|x86_64*) CPOST="pc-linux-gnu";;
 			s390*)                   CPOST="ibm-linux-gnu";;
-			bfin*|nios2*|spu*)       CPOST="elf";;
+			h8300*|bfin*|nios2*|spu*)CPOST="elf";;
 			*)                       CPOST="unknown-linux-gnu";;
 		esac
 	fi
@@ -109,6 +109,10 @@ parse_target() {
 		      GUSE=${GUSE_DISABLE};;
 
 		bfin*)
+		      TARCH=${HARCH};
+		      LPKG="uclibc";;
+
+		h8300*)
 		      TARCH=${HARCH};
 		      LPKG="uclibc";;
 
@@ -182,15 +186,15 @@ parse_target() {
 			Special Targets:
 			   - avr      http://www.nongnu.org/avr-libc/
 			   - bfin     http://blackfin.uclinux.org/
+			   - h8300    http://h8300-hms.sourceforge.net/
 			   - mingw32  http://www.mingw.org/
 			   - msp430   http://mspgcc.sourceforge.net/
 			   - nios2    http://www.altera.com/products/ip/processors/nios2/ni2-index.html
 			   - ee / iop / dvp (ps2) [Playstation 2 targets]
 			   - ppu / spu (cell) [Cell/Playstation 3 targets]
 			Softfloat toolchains:
-			   Set the 'vendor' field to 'softfloat'
-			   e.g. armeb-softfloat-linux-uclibc
-			        powerpc-softfloat-linux-gnu
+			   Include 'softfloat' in the 'vendor' field
+			   e.g. armeb-softfloat-linux-uclibc  powerpc-booya_softfloat-linux-gnu
 			EOF
 			exit 0
 			;;
