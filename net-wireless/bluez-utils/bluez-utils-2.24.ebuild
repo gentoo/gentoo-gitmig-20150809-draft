@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.24.ebuild,v 1.6 2006/03/14 23:33:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.24.ebuild,v 1.7 2007/02/10 22:31:54 genstef Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 hppa ppc sparc x86"
 
-IUSE="alsa cups dbus gtk pcmcia udev"
+IUSE="alsa cups dbus gtk pcmcia"
 
 RDEPEND="!net-wireless/bluez-pan
 		>=net-wireless/bluez-libs-2.22
@@ -22,8 +22,7 @@ RDEPEND="!net-wireless/bluez-pan
 		dbus? ( >=sys-apps/dbus-0.31 )
 		gtk? ( >=dev-python/pygtk-2.2 )
 		pcmcia? ( virtual/pcmcia
-				  sys-apps/setserial )
-		udev? ( sys-fs/udev )"
+				  sys-apps/setserial )"
 DEPEND="sys-devel/bison
 		sys-devel/flex
 		>=sys-apps/sed-4
@@ -94,13 +93,11 @@ src_install() {
 	fi
 
 	# bug #84431
-	if use udev; then
-		insinto /etc/udev/rules.d/
-		newins ${FILESDIR}/${P}-udev.rules 70-bluetooth.rules
+	insinto /etc/udev/rules.d/
+	newins ${FILESDIR}/${P}-udev.rules 70-bluetooth.rules
 
-		exeinto /lib/udev/
-		newexe ${FILESDIR}/${P}-udev.script bluetooth.sh
-	fi
+	exeinto /lib/udev/
+	newexe ${FILESDIR}/${P}-udev.script bluetooth.sh
 }
 
 pkg_postinst() {
@@ -117,8 +114,6 @@ pkg_postinst() {
 		einfo
 	fi
 
-	if use udev; then
-		einfo "You need to run 'udevstart' or reboot for the udev rules to take effect."
-		einfo
-	fi
+	einfo "You need to run 'udevstart' or reboot for the udev rules to take effect."
+	einfo
 }

@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.82 2007/01/15 00:18:50 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.83 2007/02/10 22:31:54 genstef Exp $
+
+  10 Feb 2007; <genstef@gentoo.org> bluez-utils-2.24.ebuild,
+  bluez-utils-2.25-r1.ebuild:
+  Remove udev useflag, bug 158114
 
   15 Jan 2007; Olivier Crête <tester@gentoo.org>
   +files/bluez-utils-2.25-dinovo-mdl.patch, bluez-utils-2.25-r1.ebuild:
