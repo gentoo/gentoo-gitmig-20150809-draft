@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.2.ebuild,v 1.9 2006/12/28 15:51:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.2.ebuild,v 1.10 2007/02/10 13:04:58 beandog Exp $
 
 inherit autotools eutils fortran flag-o-matic multilib portability
 
@@ -15,17 +15,17 @@ DESCRIPTION="the LAM MPI parallel computing environment"
 SRC_URI="http://www.lam-mpi.org/download/files/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.lam-mpi.org"
 DEPEND="virtual/libc
-		pbs? ( virtual/pbs )
-		!sys-cluster/mpich
-		!sys-cluster/openmpi
-		!sys-cluster/mpich2"
+	pbs? ( virtual/pbs )
+	!sys-cluster/mpich
+	!sys-cluster/openmpi
+	!sys-cluster/mpich2"
 # we need ssh if we want to use it instead of rsh
 RDEPEND="${DEPEND}
 	crypt? ( net-misc/openssh )
 	!crypt? ( net-misc/netkit-rsh )"
 
 SLOT="6"
-KEYWORDS="~amd64 ~ppc ppc64 sparc x86"
+KEYWORDS="amd64 ~ppc ppc64 sparc x86"
 LICENSE="as-is"
 # confcache breaks the make process
 RESTRICT="confcache"

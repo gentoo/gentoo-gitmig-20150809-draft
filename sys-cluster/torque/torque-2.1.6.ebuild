@@ -1,7 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.1.6.ebuild,v 1.3 2006/11/24 07:14:56 opfer Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.1.6.ebuild,v 1.4 2007/02/10 13:04:16 beandog Exp $
 
 inherit autotools flag-o-matic eutils
 
@@ -13,7 +12,7 @@ SRC_URI="http://www.clusterresources.com/downloads/${PN}/${MY_P}.tar.gz"
 LICENSE="openpbs"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ppc64 x86"
+KEYWORDS="amd64 ~ppc ppc64 x86"
 IUSE="tk crypt server"
 PROVIDE="virtual/pbs"
 
@@ -38,14 +37,11 @@ S="${WORKDIR}/${MY_P}"
 SPOOL_LOCATION="/var/spool" # this needs to move to /var later on
 PBS_SERVER_HOME="${SPOOL_LOCATION}/PBS/"
 
-
 src_unpack() {
 	unpack "${A}"
 	cd "${S}"
 	epatch ${FILESDIR}/${PN}-setuid-safety.patch
 }
-
-
 
 src_compile() {
 
