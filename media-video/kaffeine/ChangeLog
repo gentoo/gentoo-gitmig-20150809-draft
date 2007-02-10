@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kaffeine
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.69 2007/02/09 04:47:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.70 2007/02/10 13:20:22 nixnut Exp $
+
+  10 Feb 2007; nixnut <nixnut@gentoo.org> kaffeine-0.8.3.ebuild:
+  Stable on ppc wrt bug 165694
 
 *kaffeine-0.8.3-r1 (09 Feb 2007)
 
