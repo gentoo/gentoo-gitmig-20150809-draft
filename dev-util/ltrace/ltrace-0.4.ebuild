@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.4.ebuild,v 1.3 2007/02/07 00:35:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.4.ebuild,v 1.4 2007/02/10 14:49:09 blubb Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://debian/pool/main/l/ltrace/${MY_P}.orig.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc -sparc x86"
+KEYWORDS="~alpha amd64 ~ia64 ~mips ~ppc -sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc
