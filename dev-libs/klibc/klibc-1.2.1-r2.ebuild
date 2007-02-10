@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.2.1-r2.ebuild,v 1.5 2006/09/03 09:01:01 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.2.1-r2.ebuild,v 1.6 2007/02/10 14:23:50 phreak Exp $
 
 inherit eutils linux-info multilib
+
+# klibc has no PT_GNU_STACK support, so scanning for execstacks is moot
+QA_EXECSTACK="*"
 
 export CTARGET=${CTARGET:-${CHOST}}
 if [[ ${CTARGET} == ${CHOST} ]] ; then
@@ -83,7 +86,7 @@ src_unpack() {
 		die "Your kernel sources are not configured for your chosen arch!"
 	fi
 
-	cd ${S}
+	cd "${S}"
 
 	# Add our linux source tree symlink
 	ln -snf ${KV_DIR} linux
@@ -97,19 +100,23 @@ src_unpack() {
 	EOF
 
 	# Export the NOSTDINC_FLAGS to ensure -nostdlib is passed, bug #120678
-	epatch ${FILESDIR}/${P}-nostdinc-flags.patch
+	epatch "${FILESDIR}"/${P}-nostdinc-flags.patch
 
 	# Fix building when KBUILD_OUTPUT is set, bug #122173.
-	epatch "${FILESDIR}/${PN}-1.2.4-kbuild.patch"
+	epatch "${FILESDIR}"/${PN}-1.2.4-kbuild.patch
+
+	# Fix a nasty typedef error in the sources, appearing on >= linux-2.6.19
+	# (see #165472).
+	epatch "${FILESDIR}"/${PN}-1.4.13-types.h.patch
 
 	# klibc detects mips64 systems as having 64bit userland
 	# Force them to 32bit userlands instead
 #	if ! use n32; then
-#		epatch ${FILESDIR}/${PN}-1.1.16-mips32.patch
+#		epatch "${FILESDIR}"/${PN}-1.1.16-mips32.patch
 #	fi
 
 	# Linker path is awry
-#	epatch ${FILESDIR}/${PN}-1.1.16-mips-ldpaths.patch
+#	epatch "${FILESDIR}"/${PN}-1.1.16-mips-ldpaths.patch
 }
 
 src_compile() {
@@ -148,7 +155,7 @@ src_install() {
 	if is_cross ; then
 		klibc_prefix=$("${S}/klcc/${CTARGET}-klcc" -print-klibc-prefix)
 
-		make INSTALLROOT=${D} \
+		make INSTALLROOT="${D}" \
 			ARCH=$(guess_arch) \
 			CROSS="${CTARGET}-" \
 			libdir="/usr/$(get_libdir)" \
@@ -161,7 +168,7 @@ src_install() {
 		klibc_prefix=$("${S}/klcc/klcc" -print-klibc-prefix)
 
 		env -u ARCH \
-		make INSTALLROOT=${D} \
+		make INSTALLROOT="${D}" \
 			libdir="/usr/$(get_libdir)" \
 			SHLIBDIR="/$(get_libdir)" \
 			mandir="/usr/share/man" \
@@ -178,15 +185,15 @@ src_install() {
 
 	if ! is_cross ; then
 		insinto /usr/share/aclocal
-		doins ${FILESDIR}/klibc.m4
+		doins "${FILESDIR}"/klibc.m4
 
-		doenvd ${S}/70klibc
+		doenvd "${S}"/70klibc
 
-		dodoc ${S}/README ${S}/klibc/{LICENSE,CAVEATS}
-		newdoc ${S}/klibc/README README.klibc
-		newdoc ${S}/klibc/arch/README README.klibc.arch
-		docinto dash; newdoc ${S}/dash/README.klibc README
-		docinto gzip; dodoc ${S}/gzip/{COPYING,README}
+		dodoc "${S}"/README "${S}"/klibc/{LICENSE,CAVEATS}
+		newdoc "${S}"/klibc/README README.klibc
+		newdoc "${S}"/klibc/arch/README README.klibc.arch
+		docinto dash; newdoc "${S}"/dash/README.klibc README
+		docinto gzip; dodoc "${S}"/gzip/{COPYING,README}
 	fi
 }
 
