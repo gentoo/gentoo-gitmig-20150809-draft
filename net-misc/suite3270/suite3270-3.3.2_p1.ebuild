@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.2_p1.ebuild,v 1.7 2006/01/27 00:45:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.2_p1.ebuild,v 1.8 2007/02/10 23:30:01 opfer Exp $
 
-IUSE="tcltk X cjk ssl debug"
+IUSE="tcl X cjk ssl debug"
 
 S="${WORKDIR}"
 DESCRIPTION="Complete 3270 access package"
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc ~amd64 s390"
 
 RDEPEND="X? ( || ( x11-libs/libXaw virtual/x11 ) )
-		tcltk? ( dev-lang/tcl )
+		tcl? ( dev-lang/tcl )
 		sys-libs/ncurses
 		sys-libs/readline
 		ssl? ( dev-libs/openssl )
@@ -65,7 +65,7 @@ suite3270_src_install() {
 
 suite3270_makelist() {
 	MY_PLIST="c3270 pr3287 s3270"
-	use tcltk && MY_PLIST="${MY_PLIST} tcl3270"
+	use tcl && MY_PLIST="${MY_PLIST} tcl3270"
 	use X && MY_PLIST="${MY_PLIST} x3270"
 }
 
@@ -82,7 +82,7 @@ src_compile() {
 	else
 		myconf_common="${myconf_common} --without-icu --disable-dbcs"
 	fi
-	if use tcltk; then
+	if use tcl; then
 		local tclinc
 		for j in `seq 1 5`; do
 			if has_version "=dev-lang/tcl-8.${j}*"; then
@@ -91,14 +91,14 @@ src_compile() {
 			fi
 		done
 		if [ -z "${tclinc}" ]; then
-			die "USE=tcltk, but cannot find dev-lang/tcl!"
+			die "USE=tcl, but cannot find dev-lang/tcl!"
 		fi
 		myconf_common="${myconf_common} ${tclinc}"
 	else
 		myconf_common="${myconf_common} --without-tcl"
 	fi
 	for i in ${MY_PLIST}; do
-		suite3270_src_compile ${i}  "${myconf_common}"
+		suite3270_src_compile ${i}	"${myconf_common}"
 	done
 }
 

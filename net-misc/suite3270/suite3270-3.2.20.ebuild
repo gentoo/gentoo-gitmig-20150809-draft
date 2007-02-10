@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.2.20.ebuild,v 1.8 2006/05/26 22:54:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.2.20.ebuild,v 1.9 2007/02/10 23:30:01 opfer Exp $
 
-IUSE="tcltk X"
+IUSE="tcl X"
 
 S="${WORKDIR}"
 DESCRIPTION="Complete 3270 access package"
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc"
 
 RDEPEND="X? ( || ( x11-libs/libXaw virtual/x11 ) )
-		tcltk? ( dev-lang/tcl !>=dev-lang/tcl-8.3 )
+		tcl? ( dev-lang/tcl !>=dev-lang/tcl-8.3 )
 		sys-libs/ncurses
 		sys-libs/readline"
 DEPEND="${RDEPEND}
@@ -55,7 +55,7 @@ suite3270_src_install() {
 suite3270_makelist() {
 	MY_PLIST="c3270 pr3287 s3270"
 	use X && MY_PLIST="${MY_PLIST} x3270"
-	use tcltk && MY_PLIST="${MY_PLIST} tcl3270"
+	use tcl && MY_PLIST="${MY_PLIST} tcl3270"
 }
 
 src_compile() {
@@ -63,7 +63,7 @@ src_compile() {
 	local myconf_common
 	myconf_common="--without-pr3287 --cache-file=${S}/config.cache"
 	use X && myconf_common="${myconf_common} --with-x"
-	if use tcltk; then
+	if use tcl; then
 		for j in `seq 9 1`; do
 		has_version "=dev-lang/tcl-8.${j}*"
 		if [ "$?" -eq "0" ]; then
@@ -74,7 +74,7 @@ src_compile() {
 		done
 	fi
 	for i in ${MY_PLIST}; do
-		suite3270_src_compile ${i}  "${myconf_common}"
+		suite3270_src_compile ${i}	"${myconf_common}"
 	done
 }
 
