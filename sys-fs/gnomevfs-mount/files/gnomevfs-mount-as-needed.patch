@@ -1,0 +1,9 @@
+--- src/Makefile.am 2007-01-14 21:33:09.000000000 -0500
++++ src/Makefile.am 2007-01-14 21:36:03.000000000 -0500
+@@ -9,5 +9,6 @@
+ gnomevfs_mount_CFLAGS =  @GNOME_VFS_CFLAGS@ @GNOME_KEYRING_CFLAGS@
+ 
+ gnomevfs_umount_LDFLAGS = @GLIB_LIBS@
++gnomevfs_umount_LDADD = $(GLIB_LIBS)
+ gnomevfs_umount_CFLAGS = @GLIB_CFLAGS@
+

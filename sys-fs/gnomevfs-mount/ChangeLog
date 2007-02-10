@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/gnomevfs-mount
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gnomevfs-mount/ChangeLog,v 1.2 2007/02/09 08:38:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gnomevfs-mount/ChangeLog,v 1.3 2007/02/10 22:58:29 genstef Exp $
+
+  10 Feb 2007; <genstef@gentoo.org> +files/gnomevfs-mount-as-needed.patch,
+  gnomevfs-mount-0.2.0.ebuild:
+  as-needed patch thanks to Alex <nesl247@gmail.com> in bug 162130
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
