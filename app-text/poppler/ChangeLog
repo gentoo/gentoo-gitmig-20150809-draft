@@ -1,6 +1,12 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.115 2007/01/18 22:41:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.116 2007/02/10 20:31:55 genstef Exp $
+
+*poppler-0.5.4-r1 (10 Feb 2007)
+
+  10 Feb 2007; <genstef@gentoo.org> +files/004_CVE-2007-0104.patch,
+  +poppler-0.5.4-r1.ebuild:
+  Add patch for security bug 162460
 
   18 Jan 2007; Jeroen Roovers <jer@gentoo.org> poppler-0.5.4.ebuild:
   Stable for HPPA (bug #147751).
