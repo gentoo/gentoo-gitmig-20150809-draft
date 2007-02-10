@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-cis/pcmcia-cs-cis-3.2.8-r1.ebuild,v 1.4 2005/12/12 19:59:15 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-cis/pcmcia-cs-cis-3.2.8-r1.ebuild,v 1.5 2007/02/10 06:45:43 steev Exp $
 
 inherit linux-info
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 
 IUSE=""
-DEPEND=">=sys-apps/hotplug-20040920
+DEPEND="|| ( >=sys-fs/udev-096 >=sys-apps/hotplug-20040920 )
 		!sys-apps/pcmcia-cs"
 
 CONFIG_CHECK="PCMCIA_LOAD_CIS"

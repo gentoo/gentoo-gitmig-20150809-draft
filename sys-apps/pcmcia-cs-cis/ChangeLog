@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pcmcia-cs-cis
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-cis/ChangeLog,v 1.7 2006/09/10 12:02:18 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-cis/ChangeLog,v 1.8 2007/02/10 06:45:43 steev Exp $
+
+  10 Feb 2007; Steev Klimaszewski <steev@gentoo.org>
+  pcmcia-cs-cis-3.2.8-r1.ebuild:
+  Changed dependencies wrt udev and hotplug.  Thanks to Jakub Moc for reporting.
+  Closes bug #162185
 
   10 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove brix from metadata.xml.
