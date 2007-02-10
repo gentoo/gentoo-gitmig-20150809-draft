@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/hddtemp
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.48 2006/09/16 12:54:56 dertobi123 Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.49 2007/02/10 13:33:33 spock Exp $
+
+  10 Feb 2007; Michał Januszewski <spock@gentoo.org>
+  -files/hddtemp-0.3_beta14-sizeofdsk.patch, -hddtemp-0.3_beta14.ebuild,
+  -hddtemp-0.3_beta14-r1.ebuild:
+  Remove old ebuilds.
 
   16 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   hddtemp-0.3_beta15.ebuild:
