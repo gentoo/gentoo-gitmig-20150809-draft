@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.41 2007/02/04 17:22:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.42 2007/02/10 13:22:14 beandog Exp $
+
+  10 Feb 2007; Steve Dibb <beandog@gentoo.org> rmagick-1.14.1-r1.ebuild:
+  amd64 stable, bug 162682
 
 *rmagick-1.15.2 (04 Feb 2007)
 
