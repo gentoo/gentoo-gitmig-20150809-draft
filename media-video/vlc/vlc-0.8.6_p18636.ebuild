@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6_p18636.ebuild,v 1.4 2007/02/10 14:35:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6_p18636.ebuild,v 1.5 2007/02/10 15:57:35 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -38,7 +38,7 @@ dvb dvd vcd dts flac mpeg vorbis theora X opengl truetype svg fbcon svga
 oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc stream
 mp3 xv bidi sdl sdl-image png xml samba daap corba mod speex shout rtsp
 win32codecs skins hal avahi xinerama cddb directfb upnp nsplugin seamonkey
-optimisememory libnotify"
+optimisememory libnotify jack"
 
 RDEPEND="
 		>=media-video/ffmpeg-0.4.9_p20050226-r1
@@ -112,7 +112,8 @@ RDEPEND="
 			!seamonkey? ( www-client/mozilla-firefox )
 			seamonkey? ( www-client/seamonkey )
 		)
-		libnotify? ( x11-libs/libnotify )"
+		libnotify? ( x11-libs/libnotify )
+		jack? ( >=media-sound/jack-audio-connection-kit-0.99.0-r1 )"
 
 DEPEND="${RDEPEND}
 	X? ( xinerama? ( || ( x11-proto/xineramaproto <virtual/x11-7 ) ) )
@@ -238,9 +239,9 @@ src_compile () {
 		$(use_enable upnp) \
 		$(use_enable optimisememory optimize-memory) \
 		$(use_enable libnotify) \
+		$(use_enable jack) \
 		--enable-ffmpeg \
 		--disable-faad \
-		--disable-jack \
 		--disable-dv \
 		--disable-libvc1 \
 		--disable-snapshot \
