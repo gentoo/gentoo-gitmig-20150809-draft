@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.33.6-r2.ebuild,v 1.1 2007/02/10 00:01:13 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.33.6-r2.ebuild,v 1.2 2007/02/10 00:51:57 marienz Exp $
 
 IUSE="acpi doc opengl qt3"
 
@@ -346,9 +346,9 @@ src_install-libs() {
 	dosym libGL.so.1.2 ${ATI_ROOT}/lib/libGL.so.1
 	dosym libGL.so.1.2 ${ATI_ROOT}/lib/libGL.so
 
-	# same as the xorg implementation
-	# commented out, does not seem to be necessary. --marienz
-	# dosym ../xorg-x11/extensions ${ATI_ROOT}/extensions
+	# Same as the xorg implementation (eselect opengl does not fall
+	# back to xorg-x11 if we omit this symlink, meaning no glx).
+	dosym ../xorg-x11/extensions ${ATI_ROOT}/extensions
 
 	#Workaround
 	if use opengl; then

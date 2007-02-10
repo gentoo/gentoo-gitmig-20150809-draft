@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.62 2007/02/10 00:01:13 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.63 2007/02/10 00:51:57 marienz Exp $
+
+  10 Feb 2007; Marien Zwart <marienz@gentoo.org>
+  ati-drivers-8.33.6-r2.ebuild:
+  Fix lack of glx extension.
 
 *ati-drivers-8.33.6-r2 (10 Feb 2007)
 
