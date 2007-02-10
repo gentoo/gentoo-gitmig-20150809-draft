@@ -1,13 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.15 2007/01/04 22:18:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.16 2007/02/10 23:53:13 vapier Exp $
 
-ECVS_SERVER="cvs.winehq.org:/home/wine"
-ECVS_MODULE="wine"
-ECVS_USER="cvs"
-ECVS_PASS="cvs"
+EGIT_REPO_URI="git://source.winehq.org/git/wine.git"
 
-inherit eutils flag-o-matic multilib cvs
+inherit eutils flag-o-matic multilib git
 
 DESCRIPTION="free implementation of Windows(tm) on Unix"
 HOMEPAGE="http://www.winehq.com/"
@@ -49,13 +46,11 @@ RDEPEND=">=media-libs/freetype-2.0.0
 		>=sys-kernel/linux-headers-2.6
 	)"
 DEPEND="${RDEPEND}
-	X? ( || ( ( x11-proto/inputproto
-				x11-proto/xextproto
-				x11-proto/xf86dgaproto
-				x11-proto/xf86vidmodeproto
-			)
-			virtual/x11
-		)
+	X? (
+		x11-proto/inputproto
+		x11-proto/xextproto
+		x11-proto/xf86dgaproto
+		x11-proto/xf86vidmodeproto
 	)
 	sys-devel/bison
 	sys-devel/flex"
@@ -63,7 +58,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${ECVS_MODULE}
 
 src_unpack() {
-	cvs_src_unpack
+	git_src_unpack
 	cd "${S}"
 
 	sed -i '/^UPDATE_DESKTOP_DATABASE/s:=.*:=true:' tools/Makefile.in
