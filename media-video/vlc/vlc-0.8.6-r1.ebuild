@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6-r1.ebuild,v 1.10 2007/02/10 10:50:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6-r1.ebuild,v 1.11 2007/02/10 15:09:33 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -13,7 +13,7 @@ MY_PV="${PV/_/-}"
 MY_PV="${MY_PV/-beta/-test}"
 MY_P="${PN}-${MY_PV}"
 
-PATCHLEVEL="34"
+PATCHLEVEL="35"
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
 
@@ -31,7 +31,7 @@ KEYWORDS="alpha amd64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="a52 3dfx debug altivec httpd vlm gnutls live v4l cdda ogg matroska
 dvb dvd vcd dts flac mpeg vorbis theora X opengl truetype svg fbcon svga
 oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc stream
-mp3 xv bidi sdl png xml samba daap corba mod speex shout rtsp
+mp3 xv bidi sdl sdl-image png xml samba daap corba mod speex shout rtsp
 win32codecs skins hal avahi xinerama cddb directfb upnp nsplugin seamonkey
 optimisememory libnotify"
 
@@ -75,7 +75,8 @@ RDEPEND="
 		sys-libs/zlib
 		png? ( media-libs/libpng )
 		media-libs/libdvbpsi
-		sdl? ( >=media-libs/libsdl-1.2.8 )
+		sdl? ( >=media-libs/libsdl-1.2.8
+			sdl-image? ( media-libs/sdl-image ) )
 		xml? ( dev-libs/libxml2 )
 		samba? ( net-fs/samba )
 		vcd? ( >=dev-libs/libcdio-0.72
@@ -214,6 +215,7 @@ src_compile () {
 		$(use_enable ggi) \
 		$(use_enable 3dfx glide) \
 		$(use_enable sdl) \
+		$(use_enable sdl-image) \
 		$(use_enable png) \
 		$(use_enable xml libxml2) \
 		$(use_enable samba smb) \
