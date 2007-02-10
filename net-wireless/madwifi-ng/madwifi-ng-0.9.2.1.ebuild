@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.2.1.ebuild,v 1.6 2007/02/05 20:16:44 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.2.1.ebuild,v 1.7 2007/02/10 06:38:59 steev Exp $
 
 inherit linux-mod
 
@@ -78,6 +78,9 @@ src_unpack() {
 #	epatch ${FILESDIR}/madwifi-association-fix.patch
 
 	epatch ${FILESDIR}/${P}-linux-2.6.20.patch
+	# Fix for madwifi bug 1016 and gentoo bug 157677.
+	# Thanks got Jon Howell for the patch and reporting upstream.
+	epatch ${FILESDIR}/${PN}-0.9.2-allow-cipher-none.diff
 }
 
 src_compile() {

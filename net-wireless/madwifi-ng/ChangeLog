@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/madwifi-ng
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.24 2007/02/10 00:48:41 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.25 2007/02/10 06:38:59 steev Exp $
+
+  10 Feb 2007; Steev Klimaszewski <steev@gentoo.org>
+  +files/madwifi-ng-0.9.2-allow-cipher-none.diff, madwifi-ng-0.9.2.1.ebuild:
+  Add patch from bug #157677 to fix cipher none issues.  Thanks to Jon Howell
+  for the patch.  Will be in upstream 0.9.3 release.
 
   10 Feb 2007; Mike Auty <ikelos@gentoo.org>
   files/madwifi-ng-0.9.2.1-linux-2.6.20.patch:
