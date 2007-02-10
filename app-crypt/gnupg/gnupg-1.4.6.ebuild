@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.6.ebuild,v 1.10 2007/01/24 17:05:34 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.6.ebuild,v 1.11 2007/02/10 21:16:17 alonbl Exp $
 
 inherit eutils flag-o-matic
 
@@ -130,7 +130,7 @@ src_install() {
 	rm -rf "${D}/usr/share/gnupg/FAQ" "${D}/usr/share/gnupg/faq.html"
 
 	dodoc AUTHORS BUGS ChangeLog NEWS PROJECTS README THANKS \
-		TODO VERSION doc/{FAQ,HACKING,DETAILS,ChangeLog,OpenPGP,faq.raw}
+		TODO VERSION doc/{FAQ,HACKING,DETAILS,OpenPGP,faq.raw}
 
 	docinto sgml
 	dodoc doc/*.sgml
