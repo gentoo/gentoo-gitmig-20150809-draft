@@ -34,26 +34,6 @@ AUX fedora-2.5.0.0/azureus-remove-win32-osx-platforms.patch 1205 RMD160 84682f22
 MD5 3c5862f1afbf48b4006a91247358e916 files/fedora-2.5.0.0/azureus-remove-win32-osx-platforms.patch 1205
 RMD160 84682f22471425f74dd5710d331f50341ef1a26d files/fedora-2.5.0.0/azureus-remove-win32-osx-platforms.patch 1205
 SHA256 babb97a8005b936b2ee127dd72f3534d47d33af803811a7041130fecd3fdbd3d files/fedora-2.5.0.0/azureus-remove-win32-osx-platforms.patch 1205
-AUX fedora-2.5.0.4/azureus-cache-size.patch 578 RMD160 767c48837a762f99bd36f841a178e19c765390e8 SHA1 c389d6e7d14d9352786adef624251ce43e47e574 SHA256 c929ca71e2a2435127eeb4a42f0a8c6a000f9130c240cf72f13ba000f1fb1548
-MD5 eb0038e89f3506fde9b807ac4860cc3e files/fedora-2.5.0.4/azureus-cache-size.patch 578
-RMD160 767c48837a762f99bd36f841a178e19c765390e8 files/fedora-2.5.0.4/azureus-cache-size.patch 578
-SHA256 c929ca71e2a2435127eeb4a42f0a8c6a000f9130c240cf72f13ba000f1fb1548 files/fedora-2.5.0.4/azureus-cache-size.patch 578
-AUX fedora-2.5.0.4/azureus-no-restart.patch 963 RMD160 26eac3be6eae519edababab37854ed0842d381f8 SHA1 0e1ee891ab9309194e99d1e8f83c34627e4c45bd SHA256 a70ca7d7d01b7e985f5675f29846440fe36d3e973b42434abb0e3d0bbf80cff2
-MD5 37be403097f91a08588e6229458385f4 files/fedora-2.5.0.4/azureus-no-restart.patch 963
-RMD160 26eac3be6eae519edababab37854ed0842d381f8 files/fedora-2.5.0.4/azureus-no-restart.patch 963
-SHA256 a70ca7d7d01b7e985f5675f29846440fe36d3e973b42434abb0e3d0bbf80cff2 files/fedora-2.5.0.4/azureus-no-restart.patch 963
-AUX fedora-2.5.0.4/azureus-remove-manifest-classpath.patch 544 RMD160 ad85fef763c0f575620abe61971843e709393f4a SHA1 be72aa325e87deb6c81e99585995ad592e1672b7 SHA256 7c42ac19d92ab584cc7ef546ee4dc903561647219101c942ce991c5570c890be
-MD5 3d7c9b3023f4773d27696560fe1fa050 files/fedora-2.5.0.4/azureus-remove-manifest-classpath.patch 544
-RMD160 ad85fef763c0f575620abe61971843e709393f4a files/fedora-2.5.0.4/azureus-remove-manifest-classpath.patch 544
-SHA256 7c42ac19d92ab584cc7ef546ee4dc903561647219101c942ce991c5570c890be files/fedora-2.5.0.4/azureus-remove-manifest-classpath.patch 544
-AUX fedora-2.5.0.4/azureus-remove-win32-PlatformManagerUpdateChecker.patch 610 RMD160 c3553b56ce21aabfe305de21480d5f9177394e3f SHA1 397b10da19f0b551e5f49244fa9de1829140992e SHA256 8d02f503eec5a9b0874b657dc27a6ed4bd4ac1b1127e5cf70e316c024df3339c
-MD5 c21af6f21682966b89e88a39b0c2f45a files/fedora-2.5.0.4/azureus-remove-win32-PlatformManagerUpdateChecker.patch 610
-RMD160 c3553b56ce21aabfe305de21480d5f9177394e3f files/fedora-2.5.0.4/azureus-remove-win32-PlatformManagerUpdateChecker.patch 610
-SHA256 8d02f503eec5a9b0874b657dc27a6ed4bd4ac1b1127e5cf70e316c024df3339c files/fedora-2.5.0.4/azureus-remove-win32-PlatformManagerUpdateChecker.patch 610
-AUX fedora-2.5.0.4/azureus-remove-win32-osx-platforms.patch 1550 RMD160 027a7ed97d182e1d5fde1b8d07585b1f8a52f19f SHA1 7fa035fbbd4321d3aaa1727f9fb55a4b2f651be1 SHA256 bb4fb65f7678bd711d7eb8cd5ab914a01b151429c95ee6350d7727435d3d879a
-MD5 ab96c7670004baf1457702756d196fcd files/fedora-2.5.0.4/azureus-remove-win32-osx-platforms.patch 1550
-RMD160 027a7ed97d182e1d5fde1b8d07585b1f8a52f19f files/fedora-2.5.0.4/azureus-remove-win32-osx-platforms.patch 1550
-SHA256 bb4fb65f7678bd711d7eb8cd5ab914a01b151429c95ee6350d7727435d3d879a files/fedora-2.5.0.4/azureus-remove-win32-osx-platforms.patch 1550
 DIST Azureus_2.5.0.0_source.zip 5856328 RMD160 7ec7e6ccb570651a655f6077d4b323a4d3b8fcb0 SHA1 4dfc99ace9f0755de3fe264c70c897c87ba844c1 SHA256 64aa4150bb8036f11e5207a602253431d46578ce9cd3b62732b0ae0f555a08c4
 DIST Azureus_2.5.0.2_source.zip 6623693 RMD160 fbbc59b31ffd13ec5306933d30bd617c75a998e0 SHA1 a9482efdbeea8d2c1a0cadc4860b8ac2ea2f36d8 SHA256 497f61f87b7d6b5ab6f3da81f13c46d47ddb94260347eea9fa1c20fcb663072a
 DIST azureus_2.5.0.4_source.zip 6482560 RMD160 c4f245abf19a963e077b354fccd6a04547c741b1 SHA1 46ec8c12d27374d935a4ee9b40be464d111cbda5 SHA256 9ae32cbf88baf04b0e17456e92bc2634dd54e890dbece7211a83318b96d1b081
@@ -61,10 +41,10 @@ EBUILD azureus-2.5.0.0-r2.ebuild 3552 RMD160 8f4fb308bf92604cda49b8d8feafc31e447
 MD5 5c3e3a5099437a57a6ad287b392e8c96 azureus-2.5.0.0-r2.ebuild 3552
 RMD160 8f4fb308bf92604cda49b8d8feafc31e447a25af azureus-2.5.0.0-r2.ebuild 3552
 SHA256 a8c77f60df4300dadad6fb59f3efbe2164379e22622e169ffd72bf898923755f azureus-2.5.0.0-r2.ebuild 3552
-EBUILD azureus-2.5.0.0-r3.ebuild 4188 RMD160 9e688c4b8d6bf228da145b81f99dd372a6ea0984 SHA1 cf94c1802bbb23e91e94c0bb33c2f5fdb3d69376 SHA256 ce511c146290c3696fa9c3590adb83034ed621f66275c7ff8f9254c8fad0700a
-MD5 1c389ba26e476bf2fb41584f250a5796 azureus-2.5.0.0-r3.ebuild 4188
-RMD160 9e688c4b8d6bf228da145b81f99dd372a6ea0984 azureus-2.5.0.0-r3.ebuild 4188
-SHA256 ce511c146290c3696fa9c3590adb83034ed621f66275c7ff8f9254c8fad0700a azureus-2.5.0.0-r3.ebuild 4188
+EBUILD azureus-2.5.0.0-r3.ebuild 4184 RMD160 277d02e306b6cdd8155340882b3927b479921234 SHA1 f54fad737804e88e3434fc951df2fee38ceddf07 SHA256 8b0556db47934c98302a3328cffeef97654fe4a04144a88e7ca623b010d71a4f
+MD5 e87dd370cac2f809a576da1d8015552a azureus-2.5.0.0-r3.ebuild 4184
+RMD160 277d02e306b6cdd8155340882b3927b479921234 azureus-2.5.0.0-r3.ebuild 4184
+SHA256 8b0556db47934c98302a3328cffeef97654fe4a04144a88e7ca623b010d71a4f azureus-2.5.0.0-r3.ebuild 4184
 EBUILD azureus-2.5.0.2.ebuild 4273 RMD160 2774ab5b82fde69a6ffd4c4401965f1d37ac1bc6 SHA1 74090a42633cae3f52c93d6109751bddb0b50221 SHA256 ae883baf78765d4fce77c244522aba53a28dc638b6d1e0dca14355a227b0044c
 MD5 131ea97df37c0fb4a534c130d2ebbb14 azureus-2.5.0.2.ebuild 4273
 RMD160 2774ab5b82fde69a6ffd4c4401965f1d37ac1bc6 azureus-2.5.0.2.ebuild 4273
@@ -73,10 +53,10 @@ EBUILD azureus-2.5.0.4.ebuild 4259 RMD160 68a5fde8bf371b2c0f4447670a7dbc43035d59
 MD5 9df3bbfe9ced1f07103c610c183e504e azureus-2.5.0.4.ebuild 4259
 RMD160 68a5fde8bf371b2c0f4447670a7dbc43035d5995 azureus-2.5.0.4.ebuild 4259
 SHA256 761f198f5d58da221ed0a72ce5df3d131a4b1e1793e13c017a9faa10311478d1 azureus-2.5.0.4.ebuild 4259
-MISC ChangeLog 8377 RMD160 43fbe4a6f1dbfb62303ba52acdb556728e78bc84 SHA1 d8ed51d889d6ce1654d7618e0ab270361302c580 SHA256 63e50594efbb1c43f51686559ee79c3d8c372d0981dae11e93ac2fcc3ddd97c4
-MD5 2bd81a5ffd05e82fe88a93f87a8085a6 ChangeLog 8377
-RMD160 43fbe4a6f1dbfb62303ba52acdb556728e78bc84 ChangeLog 8377
-SHA256 63e50594efbb1c43f51686559ee79c3d8c372d0981dae11e93ac2fcc3ddd97c4 ChangeLog 8377
+MISC ChangeLog 8478 RMD160 a9df2e9279a27c12052f30b65cfa3ed8bb001b7f SHA1 05a37bb14fba432192cba1faf7ce392eefcfeacd SHA256 1283d406c40444dfc47bfbf03064bfb6bd558ddf3ff83bf66a376390fb739ff0
+MD5 b20f42ec270b055dbfd85d619d7cc9b3 ChangeLog 8478
+RMD160 a9df2e9279a27c12052f30b65cfa3ed8bb001b7f ChangeLog 8478
+SHA256 1283d406c40444dfc47bfbf03064bfb6bd558ddf3ff83bf66a376390fb739ff0 ChangeLog 8478
 MISC metadata.xml 295 RMD160 544181b2b7e8b0d688b57a7290a362f3d2686f58 SHA1 f3aea2718d0f8b93e91c9fddd328b5108ce2bf53 SHA256 a96064243aa67bd00e443fd98621e45910882d3790467f8b0a837b694a351307
 MD5 315f038f311b0cb987f793266b9f5f2a metadata.xml 295
 RMD160 544181b2b7e8b0d688b57a7290a362f3d2686f58 metadata.xml 295
