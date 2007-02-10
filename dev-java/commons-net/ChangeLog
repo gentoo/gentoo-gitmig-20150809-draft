@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-net
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/ChangeLog,v 1.40 2007/02/03 15:06:03 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/ChangeLog,v 1.41 2007/02/10 19:10:09 nixnut Exp $
+
+  10 Feb 2007; nixnut <nixnut@gentoo.org> commons-net-1.4.1-r1.ebuild:
+  Stable on ppc wrt bug 163955
 
   03 Feb 2007; Steve Dibb <beandog@gentoo.org> commons-net-1.4.1-r1.ebuild:
   amd64 stable, bug 163955
