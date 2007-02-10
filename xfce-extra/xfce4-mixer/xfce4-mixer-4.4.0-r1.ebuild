@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/xfce4-mixer-4.4.0-r1.ebuild,v 1.1 2007/01/31 16:36:25 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/xfce4-mixer-4.4.0-r1.ebuild,v 1.2 2007/02/10 15:18:40 drac Exp $
 
 inherit eutils xfce44
 
@@ -28,6 +28,9 @@ fi
 DOCS="AUTHORS ChangeLog NEWS NOTES README TODO"
 
 src_install() {
+	# .desktop file has allready been created by upstrean
+	# and make install tries to create it again. Bug 166167
+	rm panel-plugin/xfce4-mixer.desktop
 	xfce44_src_install
 	make_desktop_entry ${PN} "Volume control" ${PN} AudioVideo
 }
