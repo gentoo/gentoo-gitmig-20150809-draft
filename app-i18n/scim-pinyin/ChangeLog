@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-pinyin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-pinyin/ChangeLog,v 1.24 2007/01/26 01:41:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-pinyin/ChangeLog,v 1.25 2007/02/10 03:55:15 beandog Exp $
+
+  10 Feb 2007; Steve Dibb <beandog@gentoo.org> scim-pinyin-0.5.91-r1.ebuild:
+  amd64 stable, bug 159206
 
   26 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
   scim-pinyin-0.5.91-r1.ebuild:
