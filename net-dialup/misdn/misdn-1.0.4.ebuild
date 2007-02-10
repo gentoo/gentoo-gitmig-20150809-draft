@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/misdn-1.0.4.ebuild,v 1.3 2007/01/10 18:46:08 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/misdn-1.0.4.ebuild,v 1.4 2007/02/10 09:09:27 mrness Exp $
 
 inherit eutils linux-mod
 
 MY_P=mISDN-${PV//./_}
 DESCRIPTION="mISDN is the new ISDN stack of the linux kernel 2.6."
-HOMEPAGE="http://www.isdn4linux.de/mISDN"
+HOMEPAGE="http://www.misdn.org/"
 SRC_URI="http://www.misdn.org/downloads/releases/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"

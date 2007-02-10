@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/misdn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/ChangeLog,v 1.17 2007/01/10 18:46:08 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/ChangeLog,v 1.18 2007/02/10 09:09:27 mrness Exp $
+
+  10 Feb 2007; Alin Năstac <mrness@gentoo.org> misdn-1.0.4.ebuild:
+  Update home page.
 
   10 Jan 2007; Alin Năstac <mrness@gentoo.org> misdn-1.0.4.ebuild:
   Add sys-devel/bc to RDEPEND (#161101).
