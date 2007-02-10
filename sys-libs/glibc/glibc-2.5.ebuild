@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5.ebuild,v 1.27 2007/02/08 16:01:54 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5.ebuild,v 1.28 2007/02/10 23:52:23 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -462,12 +462,14 @@ toolchain-glibc_src_install() {
 		doman *.3thr
 	fi
 
+	cd "${S}"
+
 	# Install misc network config files
 	insinto /etc
+	doins nscd/nscd.conf posix/gai.conf nss/nsswitch.conf || die
 	doins "${WORKDIR}"/extra/etc/*.conf || die
 	doinitd "${WORKDIR}"/extra/etc/nscd || die
 
-	cd "${S}"
 	dodoc BUGS ChangeLog* CONFORMANCE FAQ NEWS NOTES PROJECTS README*
 
 	# Prevent overwriting of the /etc/localtime symlink.  We'll handle the
