@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ipw3945-1.2.0.ebuild,v 1.3 2007/02/09 20:57:21 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ipw3945-1.2.0.ebuild,v 1.4 2007/02/10 07:23:41 phreak Exp $
 
 inherit linux-mod eutils
 
@@ -40,6 +40,10 @@ pkg_setup() {
 		         KERNEL_DIR or /usr/src/linux suitably"
 	fi
 
+	linux-mod_pkg_setup
+
+	BUILD_PARAMS="KSRC=${KV_DIR} KSRC_OUTPUT=${KV_OUT_DIR}"
+
 	# users don't read changelogs and wonder why the kernel check fails
 	# (1) check if the kernel dir (/usr/src/linux) is missing ieee80211
 
@@ -57,10 +61,6 @@ pkg_setup() {
 		eerror "by net-wireless/ieee80211."
 		die "Incompatible ieee80211 subsystem detected in ${KV_FULL}"
 	fi
-
-	linux-mod_pkg_setup
-
-	BUILD_PARAMS="KSRC=${KV_DIR} KSRC_OUTPUT=${KV_OUT_DIR}"
 }
 
 src_unpack() {
