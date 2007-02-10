@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/plone-2.5.2.ebuild,v 1.1 2007/02/03 19:29:13 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/plone-2.5.2.ebuild,v 1.2 2007/02/10 15:38:39 radek Exp $
 
 inherit zproduct
 
@@ -19,6 +19,7 @@ RDEPEND="
 	>=dev-python/imaging-1.1.5
 	>=www-client/lynx-2.8.5
 	=net-zope/zope-2.9*
+	>=dev-python/elementtree-1.2.6
 	"
 
 S="${WORKDIR}/${MY_P}"

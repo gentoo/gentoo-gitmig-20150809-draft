@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/plone
 # Copyright 2003-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/ChangeLog,v 1.43 2007/02/03 19:29:13 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/ChangeLog,v 1.44 2007/02/10 15:38:39 radek Exp $
+
+  10 Feb 2007; Radoslaw Stachowiak <radek@gentoo.org> plone-2.5.2.ebuild:
+  added elementtree dep, solves #166203, spotted by Elias Probst
 
 *plone-2.5.2 (03 Feb 2007)
 
