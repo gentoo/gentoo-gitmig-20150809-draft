@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/bpalogin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/bpalogin/ChangeLog,v 1.6 2007/01/13 08:05:38 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/bpalogin/ChangeLog,v 1.7 2007/02/10 04:04:50 beandog Exp $
+
+  10 Feb 2007; Steve Dibb <beandog@gentoo.org> bpalogin-2.0.2.ebuild:
+  amd64 stable, bug 161862
 
   13 Jan 2007; Steve Dibb <beandog@gentoo.org> bpalogin-2.0.2.ebuild:
   Add ~amd64, bug 161862
