@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ding
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ding/ChangeLog,v 1.14 2007/02/09 01:02:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ding/ChangeLog,v 1.15 2007/02/10 14:45:06 tove Exp $
+
+  10 Feb 2007; Torsten Veller <tove@gentoo.org> files/digest-ding-1.4,
+  Manifest:
+  ...and now Manifest/digest also matches the source.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
@@ -34,7 +38,7 @@
   Version bump. Found by Daniel Webert <daniel_webert@web.de> in #46543.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
 *ding-1.2 (04 Nov 2002)
 
   04 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> :
