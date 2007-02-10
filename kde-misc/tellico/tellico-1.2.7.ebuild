@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-1.2.7.ebuild,v 1.3 2007/02/05 14:08:18 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-1.2.7.ebuild,v 1.4 2007/02/10 13:09:15 nixnut Exp $
 
 inherit kde sgml-catalog
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.periapsis.org/tellico/download/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc sparc x86"
+KEYWORDS="~amd64 ppc sparc x86"
 IUSE="calendar cddb yaz"
 
 RDEPEND=">=dev-libs/libxml2-2.6

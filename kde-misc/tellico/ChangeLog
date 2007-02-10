@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/tellico
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.58 2007/02/05 14:08:18 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.59 2007/02/10 13:09:15 nixnut Exp $
+
+  10 Feb 2007; nixnut <nixnut@gentoo.org> tellico-1.2.7.ebuild:
+  Stable on ppc wrt bug 165391
 
   05 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> tellico-1.2.7.ebuild:
   Stable on sparc wrt #165391
