@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6-r1.ebuild,v 1.11 2007/02/10 15:09:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6-r1.ebuild,v 1.12 2007/02/10 19:05:50 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -268,10 +268,10 @@ src_install() {
 		dodir "/usr/$(get_libdir)/${PLUGINS_DIR}"
 		mv "${D}"/usr/$(get_libdir)/mozilla/{components,plugins}/* \
 			"${D}/usr/$(get_libdir)/${PLUGINS_DIR}/"
-
-		rm -rf "${D}/usr/share/doc/vlc" \
-			"${D}"/usr/share/vlc/vlc{16x16,32x32,48x48,128x128}.{png,xpm,ico}
 	fi
+
+	rm -rf "${D}/usr/share/doc/vlc" \
+		"${D}"/usr/share/vlc/vlc{16x16,32x32,48x48,128x128}.{png,xpm,ico}
 
 	use skins || rm -rf "${D}/usr/share/vlc/skins2"
 
