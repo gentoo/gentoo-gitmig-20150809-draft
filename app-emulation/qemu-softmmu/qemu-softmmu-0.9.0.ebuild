@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.9.0.ebuild,v 1.1 2007/02/07 20:38:55 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.9.0.ebuild,v 1.2 2007/02/10 11:51:23 lu_zero Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -33,10 +33,10 @@ QA_TEXTRELS="usr/bin/qemu
 QA_EXECSTACK="usr/share/qemu/openbios-sparc32"
 QA_WX_LOAD="usr/share/qemu/openbios-sparc32"
 
-set_target_list() {
-	TARGET_LIST="i386-softmmu ppc-softmmu sparc-softmmu x86_64-softmmu arm-softmmu mips-softmmu"
-	export TARGET_LIST
-}
+#set_target_list() {
+#	TARGET_LIST="i386-softmmu ppc-softmmu sparc-softmmu x86_64-softmmu arm-softmmu mips-softmmu"
+#	export TARGET_LIST
+#}
 
 pkg_setup() {
 	if [ "$(gcc-major-version)" == "4" ]; then
@@ -71,7 +71,7 @@ src_compile() {
 	# Switch off hardened tech
 	filter-flags -fpie -fstack-protector
 
-	set_target_list
+#	set_target_list
 
 	myconf="--disable-gcc-check"
 	if ! use sdl ; then
@@ -79,11 +79,12 @@ src_compile() {
 	fi
 	./configure \
 		--prefix=/usr \
-		--target-list="${TARGET_LIST}" \
 		--enable-slirp --enable-adlib \
 		--cc=$(tc-getCC) \
 		--host-cc=$(tc-getCC) \
 		--kernel-path=${KV_DIR} \
+		--disable-linux-user \
+		--enable-system \
 		$(use_enable sdl)\
 		$(use_enable kqemu) \
 		$(use_enable alsa) \
