@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/acpi4asus
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpi4asus/ChangeLog,v 1.9 2006/06/05 09:25:36 genstef Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpi4asus/ChangeLog,v 1.10 2007/02/10 10:24:12 phreak Exp $
+
+*acpi4asus-0.32 (10 Feb 2007)
+
+  10 Feb 2007; Christian Heim <phreak@gentoo.org> +acpi4asus-0.32.ebuild:
+  Version bump, thanks to Chary Corentin <corentincj at iksaif.net> and all
+  the others in #157603. Also fixing compile issues with kernel >= 2.6.18
+  (#154717).
 
 *acpi4asus-0.30 (05 Jun 2006)
 
