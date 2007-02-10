@@ -1,2 +1,2 @@
 #!/bin/sh
-exec /usr/sbin/update-usbids
+exec /usr/sbin/update-usbids -q
