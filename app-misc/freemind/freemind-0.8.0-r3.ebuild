@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.8.0-r2.ebuild,v 1.2 2007/01/19 14:18:59 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.8.0-r3.ebuild,v 1.1 2007/02/10 01:50:03 fordfrog Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -23,6 +23,13 @@ DEPEND="|| (
 RDEPEND=">=virtual/jre-1.4"
 
 S="${WORKDIR}/${PN}"
+
+src_unpack() {
+	unpack "${A}"
+	cd "${S}"
+	# patch for JDK 1.6 (see bug #109678)
+	epatch ${FILESDIR}/${P}-source.patch
+}
 
 src_compile() {
 	eant dist browser $(use_doc doc)

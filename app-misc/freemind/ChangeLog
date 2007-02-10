@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/freemind
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.25 2007/01/19 14:18:59 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.26 2007/02/10 01:50:03 fordfrog Exp $
+
+*freemind-0.8.0-r3 (10 Feb 2007)
+
+  10 Feb 2007; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/freemind-0.8.0-source.patch, -freemind-0.8.0-r2.ebuild,
+  +freemind-0.8.0-r3.ebuild:
+  Added patch from nebojsa <nebojsa@anja.ig3.net> that solves bug #166146.
 
   19 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
   freemind-0.8.0-r2.ebuild:
