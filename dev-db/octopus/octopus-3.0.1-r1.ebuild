@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/octopus/octopus-3.0.1-r1.ebuild,v 1.2 2006/12/27 23:16:19 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/octopus/octopus-3.0.1-r1.ebuild,v 1.3 2007/02/10 23:37:23 betelgeuse Exp $
 
 inherit versionator java-pkg-2 java-ant-2
 
@@ -62,6 +62,8 @@ src_install() {
 		cp dist/*-src.zip ${D}usr/share/doc/${PF}/source
 	fi
 	if use doc; then
+		docinto html/api
+		# Has multiple javadoc subdirs here
 		java-pkg_dohtml -r docs/*
 	fi
 }
