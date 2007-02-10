@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sussen
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.42 2007/02/10 12:30:43 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.43 2007/02/10 14:31:19 nixnut Exp $
+
+  10 Feb 2007; nixnut <nixnut@gentoo.org> sussen-0.34.ebuild:
+  Added ~ppc wrt bug 165849
 
   10 Feb 2007; Christian Faulhammer <opfer@gentoo.org> sussen-0.34.ebuild:
   stable x86; bug #165849
