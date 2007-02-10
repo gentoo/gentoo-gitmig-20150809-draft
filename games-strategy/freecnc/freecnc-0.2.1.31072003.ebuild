@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/freecnc-0.2.1.31072003.ebuild,v 1.9 2006/10/05 18:18:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/freecnc-0.2.1.31072003.ebuild,v 1.10 2007/02/10 20:17:54 mr_bones_ Exp $
 
 inherit flag-o-matic eutils games
 
 DESCRIPTION="SDL-rewrite of the classical real time strategy hit Command & Conquer"
-HOMEPAGE="http://freecnc-sf.holarse.net/"
+HOMEPAGE="http://www.freecnc.org/"
 #mirror://sourceforge/freecnc/freecnc++-${PV}-src.tar.bz2
 SRC_URI="mirror://gentoo/freecnc++-${PV}-src.tar.bz2
 	nocd? ( ftp://ftp.westwood.com/pub/cc1/previews/demo/cc1demo1.zip )
