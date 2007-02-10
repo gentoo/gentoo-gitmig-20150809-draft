@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgcluster/pgcluster-1.3.0c.ebuild,v 1.6 2006/07/05 07:36:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgcluster/pgcluster-1.3.0c.ebuild,v 1.7 2007/02/10 23:49:28 dev-zero Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib
 
@@ -13,7 +13,7 @@ SRC_URI="http://pgfoundry.org/frs/download.php/218/${P}.tar.gz"
 LICENSE="POSTGRESQL"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
-IUSE="doc libg++ nls pam perl pg-intdatetime python readline ssl tcltk xml zlib"
+IUSE="doc libg++ nls pam perl pg-intdatetime python readline ssl tcl xml zlib"
 
 S=${WORKDIR}/${MY_P}
 DEPEND="virtual/libc
@@ -22,7 +22,7 @@ DEPEND="virtual/libc
 	>=sys-devel/bison-1.875
 	zlib? ( >=sys-libs/zlib-1.1.3 )
 	readline? ( >=sys-libs/readline-4.1 )
-	tcltk? ( >=dev-lang/tcl-8 >=dev-lang/tk-8.3.3-r1 )
+	tcl? ( >=dev-lang/tcl-8 )
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
 	python? ( >=dev-lang/python-2.2 dev-python/egenix-mx-base )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
@@ -30,7 +30,7 @@ DEPEND="virtual/libc
 	nls? ( sys-devel/gettext )"
 RDEPEND="virtual/libc
 	zlib? ( >=sys-libs/zlib-1.1.3 )
-	tcltk? ( >=dev-lang/tcl-8 )
+	tcl? ( >=dev-lang/tcl-8 )
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
 	python? ( >=dev-lang/python-2.2 )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
@@ -64,7 +64,7 @@ src_compile() {
 	filter-flags -ffast-math
 
 	local myconf
-	use tcltk && myconf="--with-tcl"
+	use tcl && myconf="--with-tcl"
 	use python && myconf="$myconf --with-python"
 	use perl && myconf="$myconf --with-perl"
 	use ssl && myconf="$myconf --with-openssl"
