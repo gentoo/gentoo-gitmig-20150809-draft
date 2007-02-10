@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-beanutils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.34 2007/02/03 14:52:24 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.35 2007/02/10 18:59:40 nixnut Exp $
+
+  10 Feb 2007; nixnut <nixnut@gentoo.org> commons-beanutils-1.6.1-r3.ebuild:
+  Stable on ppc wrt bug 163951
 
   03 Feb 2007; Steve Dibb <beandog@gentoo.org>
   commons-beanutils-1.6.1-r3.ebuild, commons-beanutils-1.7.0-r2.ebuild:
