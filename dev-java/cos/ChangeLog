@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/cos
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cos/ChangeLog,v 1.1 2007/02/10 19:42:01 nichoj Exp $
+
+*cos-20021105-r1 (10 Feb 2007)
+
+  10 Feb 2007; Joshua Nichols <nichoj@gentoo.org> +files/build-20021105.xml,
+  +metadata.xml, +cos-20021105-r1.ebuild:
+  Initial commit, bug #97011.
+
