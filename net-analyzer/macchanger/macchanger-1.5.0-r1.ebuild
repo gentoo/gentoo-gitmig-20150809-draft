@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/macchanger/macchanger-1.5.0-r1.ebuild,v 1.3 2007/02/05 13:02:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/macchanger/macchanger-1.5.0-r1.ebuild,v 1.4 2007/02/10 12:43:45 nixnut Exp $
 
 DESCRIPTION="Utility for viewing/manipulating the MAC address of network interfaces"
 OUI_DATE="20051212"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.alobbs.com/macchanger"
 SRC_URI="mirror://gnu/macchanger/${P}.tar.gz
 		 mirror://gentoo/${OUI_FILE}.gz"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc sparc x86"
+KEYWORDS="~amd64 ppc sparc x86"
 IUSE=""
 SLOT="0"
 

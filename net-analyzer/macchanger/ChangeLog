@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/macchanger
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/macchanger/ChangeLog,v 1.18 2007/02/05 13:02:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/macchanger/ChangeLog,v 1.19 2007/02/10 12:43:45 nixnut Exp $
+
+  10 Feb 2007; nixnut <nixnut@gentoo.org> macchanger-1.5.0-r1.ebuild:
+  Stable on ppc wrt bug 165389
 
   05 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   macchanger-1.5.0-r1.ebuild:
