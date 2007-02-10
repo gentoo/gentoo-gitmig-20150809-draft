@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r5.ebuild,v 1.4 2005/05/24 05:13:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r5.ebuild,v 1.5 2007/02/10 00:32:57 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -8,7 +8,7 @@ DEB_PVER=14
 DESCRIPTION="POSIX 1003.1e capabilities"
 HOMEPAGE="http://www.kernel.org/pub/linux/libs/security/linux-privs/"
 SRC_URI="http://www.kernel.org/pub/linux/libs/security/linux-privs/kernel-2.4/${P}.tar.bz2
-	http://ftp.debian.org/debian/pool/main/libc/libcap/libcap_${PV}-${DEB_PVER}.diff.gz"
+	mirror://debian/pool/main/libc/libcap/libcap_${PV}-${DEB_PVER}.diff.gz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
