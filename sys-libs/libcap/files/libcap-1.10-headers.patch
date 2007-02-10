@@ -1,0 +1,20 @@
+--- progs/sucap.c
++++ progs/sucap.c
+@@ -11,6 +11,7 @@
+ #include <sys/types.h>
+ #include <errno.h>
+ #include <stdio.h>
++#include <stdlib.h>
+ #undef _POSIX_SOURCE
+ #include <sys/capability.h>
+ #include <pwd.h>
+--- progs/execcap.c
++++ progs/execcap.c
+@@ -10,6 +10,7 @@
+ #include <sys/types.h>
+ #include <errno.h>
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <sys/capability.h>
+ #include <unistd.h>
+ #include <string.h>
