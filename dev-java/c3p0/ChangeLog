@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/c3p0
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/c3p0/ChangeLog,v 1.22 2007/02/03 14:14:30 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/c3p0/ChangeLog,v 1.23 2007/02/10 18:56:48 nixnut Exp $
+
+  10 Feb 2007; nixnut <nixnut@gentoo.org> c3p0-0.9.0.4.ebuild:
+  Stable on ppc wrt bug 163637
 
   03 Feb 2007; Steve Dibb <beandog@gentoo.org> c3p0-0.9.0.4.ebuild:
   amd64 stable, bug 163937
