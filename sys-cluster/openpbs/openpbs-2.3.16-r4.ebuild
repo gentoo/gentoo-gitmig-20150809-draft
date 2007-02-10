@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/openpbs-2.3.16-r4.ebuild,v 1.2 2006/09/26 07:21:13 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/openpbs-2.3.16-r4.ebuild,v 1.3 2007/02/10 23:33:53 opfer Exp $
 
 inherit eutils multilib
 
@@ -14,13 +14,13 @@ LICENSE="openpbs"
 PROVIDE="virtual/pbs"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
-IUSE="X tcltk crypt doc"
+IUSE="X tcl crypt doc"
 RESTRICT="fetch"
 
 PROVIDE="virtual/pbs"
 DEPEND="virtual/libc
 		X? ( || ( x11-libs/libX11 virtual/x11 ) )
-		tcltk? ( dev-lang/tcl )
+		tcl? ( dev-lang/tcl )
 		sys-apps/ed
 		!virtual/pbs"
 RDEPEND="${DEPEND}
@@ -38,7 +38,7 @@ pkg_nofetch() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	# apply a patch I made for gcc3. 
+	# apply a patch I made for gcc3.
 	# maybe this should be done with sed but I'm too lazy
 	epatch ${FILESDIR}/makedepend-sh-gcc3.patch
 	epatch ${FILESDIR}/openpbs-${PV}-errno-fixup.patch
@@ -65,7 +65,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 	use X || myconf="--disable-gui"
-	use tcltk && myconf="${myconf} --with-tcl"
+	use tcl && myconf="${myconf} --with-tcl"
 
 	use crypt && myconf="${myconf} --with-scp"
 	use doc && myconf="${myconf} --enable-docs"
@@ -93,7 +93,7 @@ src_install() {
 	dosed /usr/bin/xpbs /usr/bin/xpbsmon
 
 	#
-	# if we are using tcltk, we need to fix up the tclIndex so that it will
+	# if we are using tcl, we need to fix up the tclIndex so that it will
 	# refer to the tcl library where it is installed, not where we have staged
 	# it.
 	for tcldir in xpbs xpbsmon; do
