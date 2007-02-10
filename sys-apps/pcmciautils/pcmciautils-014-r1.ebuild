@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-014-r1.ebuild,v 1.5 2007/02/06 13:38:09 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-014-r1.ebuild,v 1.6 2007/02/10 22:16:36 genstef Exp $
 
 inherit eutils toolchain-funcs linux-info
 
@@ -13,11 +13,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 arm ppc sh x86"
 
-IUSE="debug static staticsocket udev"
+IUSE="debug static staticsocket"
 RDEPEND=">=sys-fs/sysfsutils-1.2.0-r1
-	>=sys-apps/module-init-tools-3.2_pre4
-	udev? ( >=sys-fs/udev-068 )
-	!udev? ( >=sys-apps/hotplug-20040920 )"
+	>=sys-apps/module-init-tools-3.2_pre4"
 DEPEND="${RDEPEND}
 	dev-util/yacc
 	sys-devel/flex
@@ -59,11 +57,8 @@ src_unpack() {
 		sed -i -e "s:^\(STARTUP\) = .*:\1 = false:" ${S}/Makefile || die
 	fi
 
-	if use udev; then
-		sed -i -e "s:^\(UDEV\) = .*:\1 = true:" ${S}/Makefile || die
-	else
-		sed -i -e "s:^\(UDEV\) = .*:\1 = false:" ${S}/Makefile || die
-	fi
+	# we always use udev
+	sed -i -e "s:^\(UDEV\) = .*:\1 = true:" ${S}/Makefile || die
 }
 
 src_compile() {
