@@ -1,6 +1,15 @@
 # ChangeLog for app-portage/herdstat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.73 2007/01/31 21:02:55 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.74 2007/02/10 19:39:01 compnerd Exp $
+
+  10 Feb 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  herdstat-1.1.91.ebuild:
+  Add fix for compiling with readline from Nicolas Litchinko
+  <litchinko@noors.fr> (bug #166202)
+
+  10 Feb 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  herdstat-1.1.91.ebuild:
+  Add fix for compiling with readline from Nicolas Litchinko <litchinko@noors.fr>
 
   31 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org> metadata.xml:
   Add myself to maintainers as ka0ttic is MIA

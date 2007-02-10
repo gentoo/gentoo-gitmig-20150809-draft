@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.91.ebuild,v 1.3 2007/01/31 20:48:49 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.91.ebuild,v 1.4 2007/02/10 19:39:01 compnerd Exp $
 
 inherit bash-completion eutils
 
@@ -34,7 +34,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/${PN}-1.1.91-undefined-lhp.patch
+	if ! use readline ; then
+		epatch ${FILESDIR}/${PN}-1.1.91-undefined-lhp.patch
+	fi
 }
 
 src_compile() {
