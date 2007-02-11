@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.72_pre2.ebuild,v 1.3 2007/01/25 22:15:36 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.72_pre2.ebuild,v 1.4 2007/02/11 15:11:34 josejx Exp $
 
 inherit flag-o-matic eutils linux-mod
 
@@ -10,11 +10,12 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~ppc"
+KEYWORDS="-* ppc"
 IUSE="vnc alsa oss fbcon X oldworld sheep debug dga usb pci"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 RDEPEND="net-misc/dhcp
+	sys-libs/zlib
 	net-firewall/iptables
 	alsa? ( virtual/alsa )
 	vnc? ( net-misc/vnc )
