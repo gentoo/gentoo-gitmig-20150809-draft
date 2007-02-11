@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/libpq
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.89 2007/02/11 22:45:29 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.90 2007/02/11 23:41:22 dev-zero Exp $
+
+  11 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> libpq-7.3.18.ebuild:
+  Resetted alpha to ~alpha
 
 *libpq-7.3.18 (11 Feb 2007)
 
