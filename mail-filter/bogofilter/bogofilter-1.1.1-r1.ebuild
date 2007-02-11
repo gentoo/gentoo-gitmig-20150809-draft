@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-1.1.1-r1.ebuild,v 1.7 2007/01/06 21:10:48 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-1.1.1-r1.ebuild,v 1.8 2007/02/11 10:26:49 vapier Exp $
 
 inherit eutils
 
@@ -10,14 +10,15 @@ SRC_URI="mirror://sourceforge/bogofilter/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86"
 IUSE="gsl berkdb sqlite"
 
 DEPEND="virtual/libiconv
 	berkdb?  ( >=sys-libs/db-3.2 )
 	!berkdb? (
 		sqlite?  ( >=dev-db/sqlite-3.2.6 )
-		!sqlite? ( >=sys-libs/db-3.2 ) )
+		!sqlite? ( >=sys-libs/db-3.2 )
+	)
 	gsl? ( sci-libs/gsl )"
 #	app-arch/pax" # only needed for bf_tar
 
