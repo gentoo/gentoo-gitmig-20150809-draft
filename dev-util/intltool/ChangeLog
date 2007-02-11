@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/intltool
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.90 2007/01/22 22:16:52 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.91 2007/02/11 16:50:58 grobian Exp $
+
+  11 Feb 2007; Fabian Groffen <grobian@gentoo.org> intltool-0.35.0.ebuild,
+  intltool-0.35.4.ebuild:
+  Dropped ppc-macos keyword, see you in prefix
 
 *intltool-0.35.4 (22 Jan 2007)
 
