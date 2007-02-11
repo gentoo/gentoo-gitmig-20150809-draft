@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.8-r2.ebuild,v 1.9 2007/01/10 17:39:53 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.8-r2.ebuild,v 1.10 2007/02/11 00:14:35 opfer Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -14,7 +14,7 @@ SRC_URI="http://www.graphviz.org/pub/graphviz/ARCHIVE/${P}.tar.gz"
 LICENSE="CPL-1.0"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 m68k ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-IUSE="cairo tcltk X static guile java lua perl php python ruby ocaml"
+IUSE="cairo tcl tk X static guile java lua perl php python ruby ocaml"
 
 RDEPEND=">=sys-libs/zlib-1.1.3
 	>=media-libs/libpng-1.2
@@ -25,7 +25,8 @@ RDEPEND=">=sys-libs/zlib-1.1.3
 	dev-libs/expat
 	sys-libs/zlib
 	cairo? ( >=x11-libs/libsvg-cairo-0.1.3 )
-	tcltk? ( >=dev-lang/tk-8.3 >=dev-lang/tcl-8.3 )
+	tk? ( >=dev-lang/tk-8.3 )
+	tcl? ( >=dev-lang/tcl-8.3 )
 	guile? ( dev-scheme/guile )
 	java? ( virtual/jdk )
 	perl? ( dev-lang/perl )
@@ -39,7 +40,8 @@ RDEPEND=">=sys-libs/zlib-1.1.3
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	tcltk? ( dev-lang/swig )
+	tcl? ( dev-lang/swig )
+	tk? ( dev-lang/swig )
 	guile? ( dev-lang/swig )
 	java? ( dev-lang/swig )
 	perl? ( dev-lang/swig )
@@ -66,8 +68,8 @@ src_compile() {
 	econf ${my_conf}  \
 		--disable-dependency-tracking \
 		$(use_enable static) \
-		$(use_with tcltk tcl) \
-		$(use_with tcltk tk) \
+		$(use_with tcl) \
+		$(use_with tk) \
 		$(use_enable guile) \
 		$(use_enable java) \
 		$(use_enable lua) \
@@ -92,8 +94,8 @@ src_install() {
 		pkgconfigdir=/usr/$(get_libdir)/pkgconfig \
 		install || die "Install Failed!"
 	if use minimal ; then
-	    rm -rf "${D}"/usr/share/doc/${PF}/{pdf,html}
-	    rm -rf "${D}"/usr/$(get_libdir)/${PN}/{tcl,lua,perl,python,ruby}
+		rm -rf "${D}"/usr/share/doc/${PF}/{pdf,html}
+		rm -rf "${D}"/usr/$(get_libdir)/${PN}/{tcl,lua,perl,python,ruby}
 	fi
 	dodoc AUTHORS ChangeLog NEWS README
 }

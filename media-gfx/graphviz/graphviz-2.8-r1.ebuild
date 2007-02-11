@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.8-r1.ebuild,v 1.4 2006/10/07 05:52:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.8-r1.ebuild,v 1.5 2007/02/11 00:14:35 opfer Exp $
 
 inherit eutils libtool
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.graphviz.org/pub/graphviz/ARCHIVE/${P}.tar.gz"
 LICENSE="CPL-1.0"
 SLOT="0"
 KEYWORDS="~alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-IUSE="cairo tcltk X static minimal"
+IUSE="cairo tcl tk X static minimal"
 
 RDEPEND=">=sys-libs/zlib-1.1.3
 	>=media-libs/libpng-1.2
@@ -21,10 +21,11 @@ RDEPEND=">=sys-libs/zlib-1.1.3
 	media-libs/fontconfig
 	dev-libs/expat
 	sys-libs/zlib
-	tcltk? ( >=dev-lang/tk-8.3 >=dev-lang/tcl-8.3 )
+	tcltk? ( >=dev-lang/tcl-8.3 )
+	tk? ( >=dev-lang/tk-8.3 )
 	cairo? ( >=x11-libs/libsvg-cairo-0.1.3 )
 	X? ( || (
-	    ( x11-libs/libXaw x11-libs/libXpm )
+		( x11-libs/libXaw x11-libs/libXpm )
 	virtual/x11 )
 	)"
 
@@ -47,8 +48,8 @@ src_compile() {
 	econf ${my_conf}  \
 		--disable-dependency-tracking \
 		$(use_enable static) \
-		$(use_with tcltk tcl) \
-		$(use_with tcltk tk) \
+		$(use_with tcl) \
+		$(use_with tk) \
 		$(use_with X x) || die "Configure Failed!"
 	LC_ALL=C emake || die "Compile Failed!"
 }
@@ -63,8 +64,8 @@ src_install() {
 		pkgconfigdir=/usr/$(get_libdir)/pkgconfig \
 		install || die "Install Failed!"
 	if use minimal ; then
-	    rm -rf "${D}"usr/share/doc/${PF}/{pdf,html}
-	    rm -rf "${D}"usr/$(get_libdir)/${PN}/{tcl,lua,perl,python,ruby}
+		rm -rf "${D}"usr/share/doc/${PF}/{pdf,html}
+		rm -rf "${D}"usr/$(get_libdir)/${PN}/{tcl,lua,perl,python,ruby}
 	fi
 	dodoc AUTHORS ChangeLog NEWS README
 }
