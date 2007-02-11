@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.254 2007/01/31 14:40:50 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.255 2007/02/11 00:35:03 opfer Exp $
+
+  11 Feb 2007; Christian Faulhammer <opfer@gentoo.org> ruby-1.8.4-r3.ebuild:
+  moved from USE flag tcltk to tk, see bug 17808
 
   31 Jan 2007; Marius Mauch <genone@gentoo.org> ruby-1.8.4-r3.ebuild,
   ruby-1.8.5_p2.ebuild, ruby-1.8.5_p12.ebuild:
