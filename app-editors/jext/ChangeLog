@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/jext
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jext/ChangeLog,v 1.13 2006/10/13 14:40:53 caster Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jext/ChangeLog,v 1.14 2007/02/11 10:32:00 opfer Exp $
+
+  11 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  jext-3.2_pre3-r1.ebuild:
+  stable x86; bug #166257
 
   13 Oct 2006; Vlastimil Babka <caster@gentoo.org> jext-3.2_pre3.ebuild:
   Fixed jython dependency, solves bug #151160.
