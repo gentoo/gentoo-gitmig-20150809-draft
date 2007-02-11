@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-2.9.ebuild,v 1.1 2007/01/20 22:27:27 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-2.9.ebuild,v 1.2 2007/02/11 10:13:47 vapier Exp $
 
 inherit linux-info eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/l7-filter/${MY_P}.tar.gz
 	mirror://gentoo/additional_patch_for_2.6.13.diff"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE=""
 #break repoman
 #SLOT="${KV}"
