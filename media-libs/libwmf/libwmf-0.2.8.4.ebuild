@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.4.ebuild,v 1.11 2006/09/04 04:43:07 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.4.ebuild,v 1.12 2007/02/11 11:24:22 vapier Exp $
 
 inherit eutils autotools
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/wvware/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ~ppc-macos ppc64 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ~ppc-macos ppc64 s390 sh sparc x86"
 IUSE="jpeg X expat xml debug doc gtk gd"
 
 RDEPEND="virtual/ghostscript
@@ -25,23 +25,17 @@ RDEPEND="virtual/ghostscript
 	sys-libs/zlib
 	media-libs/libpng
 	jpeg? ( media-libs/jpeg )
-	X? ( || ( (
-				x11-libs/libICE
-				x11-libs/libSM
-				x11-libs/libX11
-			)
-			virtual/x11
-		)
+	X? (
+		x11-libs/libICE
+		x11-libs/libSM
+		x11-libs/libX11
 	)
 	gtk? ( >=x11-libs/gtk+-2.1.2 ) "
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	X? ( || ( (
-				x11-libs/libXt
-				x11-libs/libXpm
-			)
-			virtual/x11
-		)
+	X? (
+		x11-libs/libXt
+		x11-libs/libXpm
 	)"
 # plotutils are not really supported yet, so looks like that's it
 
