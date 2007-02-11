@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.1.6.ebuild,v 1.2 2007/02/11 23:31:47 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.1.6.ebuild,v 1.3 2007/02/11 23:36:08 wschlich Exp $
 
 inherit eutils
 
@@ -76,22 +76,22 @@ pkg_postinst() {
 	# here to catch wrong permissions on existing files in
 	# the live filesystem (yeah, that sucks).
 	chown zabbix:zabbix \
-		/etc/zabbix \
-		/etc/zabbix/zabbix_server.conf \
-		/var/lib/zabbix \
-		/var/lib/zabbix/home \
-		/var/lib/zabbix/scripts \
-		/var/log/zabbix \
-		/var/run/zabbix
+		${ROOT}etc/zabbix \
+		${ROOT}etc/zabbix/zabbix_server.conf \
+		${ROOT}var/lib/zabbix \
+		${ROOT}var/lib/zabbix/home \
+		${ROOT}var/lib/zabbix/scripts \
+		${ROOT}var/log/zabbix \
+		${ROOT}var/run/zabbix
 	chmod 0640 \
-		/etc/zabbix/zabbix_server.conf
+		${ROOT}etc/zabbix/zabbix_server.conf
 	chmod 0750 \
-		/etc/zabbix \
-		/var/lib/zabbix \
-		/var/lib/zabbix/home \
-		/var/lib/zabbix/scripts \
-		/var/log/zabbix \
-		/var/run/zabbix
+		${ROOT}etc/zabbix \
+		${ROOT}var/lib/zabbix \
+		${ROOT}var/lib/zabbix/home \
+		${ROOT}var/lib/zabbix/scripts \
+		${ROOT}var/log/zabbix \
+		${ROOT}var/run/zabbix
 }
 
 src_unpack() {

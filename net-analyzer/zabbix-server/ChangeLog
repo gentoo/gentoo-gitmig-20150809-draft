@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/zabbix-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/ChangeLog,v 1.10 2007/02/11 23:31:47 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/ChangeLog,v 1.11 2007/02/11 23:36:08 wschlich Exp $
+
+  11 Feb 2007; Wolfram Schlich <wschlich@gentoo.org>
+  zabbix-server-1.1.6.ebuild:
+  use ROOT variable for permission/ownership fixup
 
   11 Feb 2007; Wolfram Schlich <wschlich@gentoo.org>
   zabbix-server-1.1.6.ebuild:
