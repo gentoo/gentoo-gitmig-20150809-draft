@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/monodoc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.53 2007/01/29 15:49:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.54 2007/02/11 04:22:20 pylon Exp $
+
+  11 Feb 2007; Lars Weiler <pylon@gentoo.org> monodoc-1.1.18.ebuild:
+  Stable on ppc; bug #164048.
 
   29 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> monodoc-1.1.18.ebuild:
   Stable on x86, bug 164048.

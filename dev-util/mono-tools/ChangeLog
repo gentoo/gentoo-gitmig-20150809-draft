@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/mono-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.18 2007/01/31 07:22:45 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.19 2007/02/11 04:21:25 pylon Exp $
+
+  11 Feb 2007; Lars Weiler <pylon@gentoo.org> mono-tools-1.1.17-r1.ebuild:
+  Stable on ppc; bug #164048.
 
   31 Jan 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   mono-tools-1.1.17-r1.ebuild:
