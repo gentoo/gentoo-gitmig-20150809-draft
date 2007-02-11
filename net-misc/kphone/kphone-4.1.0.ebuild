@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/kphone-4.1.0.ebuild,v 1.3 2005/01/18 19:05:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/kphone-4.1.0.ebuild,v 1.4 2007/02/11 18:17:30 flameeyes Exp $
 
 inherit eutils kde
 
@@ -16,7 +16,7 @@ SLOT="0"
 
 S=${WORKDIR}/kphone
 
-DEPEND="alsa? ( media-libs/alsa-lib virtual/alsa )
+DEPEND="alsa? ( media-libs/alsa-lib )
 	jack? ( media-sound/jack-audio-connection-kit )"
 
 need-kde 3

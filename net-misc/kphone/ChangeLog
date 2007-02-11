@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/kphone
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/ChangeLog,v 1.41 2006/05/22 18:29:46 dertobi123 Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/ChangeLog,v 1.42 2007/02/11 18:17:30 flameeyes Exp $
+
+  11 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> kphone-4.1.0.ebuild:
+  Remove virtual/alsa dependency.
 
   22 May 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   kphone-4.2-r1.ebuild:
