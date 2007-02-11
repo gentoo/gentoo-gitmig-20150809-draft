@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.94 2007/02/11 14:53:42 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.95 2007/02/11 18:46:35 flameeyes Exp $
+
+  11 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
+  Add midi useflag for alsa-tools.
 
   11 Feb 2007; Samuli Suominen <drac@gentoo.org> package.mask:
   Mask dev-libs/{libtc,tc2,tc2-modules} and media-video/tcvp.
