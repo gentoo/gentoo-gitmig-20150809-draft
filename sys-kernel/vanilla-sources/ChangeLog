@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.273 2007/02/05 19:55:49 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.274 2007/02/11 14:05:05 pylon Exp $
+
+  11 Feb 2007; Lars Weiler <pylon@gentoo.org>
+  vanilla-sources-2.6.19.2.ebuild:
+  Stable on ppc.
 
 *vanilla-sources-2.6.19.3 (05 Feb 2007)
 
