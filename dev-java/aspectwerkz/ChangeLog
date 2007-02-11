@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/aspectwerkz
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/ChangeLog,v 1.10 2006/12/22 22:34:26 betelgeuse Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/ChangeLog,v 1.11 2007/02/11 16:44:55 nixnut Exp $
+
+  11 Feb 2007; nixnut <nixnut@gentoo.org> aspectwerkz-2.0_rc2.ebuild:
+  Stable on ppc wrt bug 165208
 
   22 Dec 2006; Petteri Räty <betelgeuse@gentoo.org>
   aspectwerkz-2.0_rc2-r2.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/aspectwerkz-2.0_rc2.ebuild,v 1.7 2006/08/05 16:56:06 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/aspectwerkz-2.0_rc2.ebuild,v 1.8 2007/02/11 16:44:55 nixnut Exp $
 
 inherit java-pkg eutils
 
@@ -9,7 +9,7 @@ SRC_URI="http://dist.codehaus.org/${PN}/distributions/${P/_rc/.RC}.zip"
 HOMEPAGE="http://aspectwerkz.codehaus.org"
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 RDEPEND=">=virtual/jre-1.4
 	=dev-java/asm-1.5*
 	dev-java/bcel
