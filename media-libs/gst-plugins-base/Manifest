@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX gst-plugins-base-0.10.4-typefindfunctions-m4v-NULL-terminator.diff 767 RMD160 8498d01d7d3a1d7869396367d33750b53456255d SHA1 c374eb10866a032f4723251bbb1d69f41ed2525a SHA256 af7a7f1e145b3b2f71e53dbbf359152fa74c2531fc678292c13e4e97a7b85268
 MD5 3fa638ac92113f4a983f9c6098ac030f files/gst-plugins-base-0.10.4-typefindfunctions-m4v-NULL-terminator.diff 767
 RMD160 8498d01d7d3a1d7869396367d33750b53456255d files/gst-plugins-base-0.10.4-typefindfunctions-m4v-NULL-terminator.diff 767
@@ -13,10 +16,10 @@ EBUILD gst-plugins-base-0.10.10.ebuild 1436 RMD160 131e493461a0715efda1adc89fd0b
 MD5 7ce8a08f40468b6e64b983855bd3dbe3 gst-plugins-base-0.10.10.ebuild 1436
 RMD160 131e493461a0715efda1adc89fd0b611027a22fd gst-plugins-base-0.10.10.ebuild 1436
 SHA256 b905260c0d4d86f87be0da9b098b6e901be70d9f75d71e641689797d4b00782c gst-plugins-base-0.10.10.ebuild 1436
-EBUILD gst-plugins-base-0.10.11.ebuild 1429 RMD160 c20980a1b5f3f3790599b7e271eb0b19baba291c SHA1 292ebb0ece002c758f664b5b12eacb767c2d1106 SHA256 62703e21610124050b06c82dc859bbbdd990447d8a75f525cf2403fa1c6981ca
-MD5 e1634fc107188c6e3ad9e55db0480eb6 gst-plugins-base-0.10.11.ebuild 1429
-RMD160 c20980a1b5f3f3790599b7e271eb0b19baba291c gst-plugins-base-0.10.11.ebuild 1429
-SHA256 62703e21610124050b06c82dc859bbbdd990447d8a75f525cf2403fa1c6981ca gst-plugins-base-0.10.11.ebuild 1429
+EBUILD gst-plugins-base-0.10.11.ebuild 1423 RMD160 86cf4b18b20620d275eb161a76fb5bbbcdb41621 SHA1 a37440dcfaa61d5c5cd4612fe29906fdaf88a5b1 SHA256 427394e1caf14fd1e3e08c1e0308ad5bc508242990128c8111ec94d814f80b8a
+MD5 1ea77fc2ceb5f98763775fe77941ed06 gst-plugins-base-0.10.11.ebuild 1423
+RMD160 86cf4b18b20620d275eb161a76fb5bbbcdb41621 gst-plugins-base-0.10.11.ebuild 1423
+SHA256 427394e1caf14fd1e3e08c1e0308ad5bc508242990128c8111ec94d814f80b8a gst-plugins-base-0.10.11.ebuild 1423
 EBUILD gst-plugins-base-0.10.4-r1.ebuild 1554 RMD160 781d05d64ea220abed887a604a844d635fe4e904 SHA1 0ab1c5d32e02ec9b421327ec531744cfd2d4fd57 SHA256 75d671d980a3fcbe83737d298940e15918c6d84e786e2afef1ee332a45e6d665
 MD5 a9f6af88021e5a9366b8c51845d3fdd5 gst-plugins-base-0.10.4-r1.ebuild 1554
 RMD160 781d05d64ea220abed887a604a844d635fe4e904 gst-plugins-base-0.10.4-r1.ebuild 1554
@@ -66,3 +69,10 @@ SHA256 818f2b5016a64f1415b9645eb70fb2e24adce4f920e2e81a9b2e4ee02e3f286f files/di
 MD5 7ce537e51ee617c9ee048f4ac69cca7e files/digest-gst-plugins-base-0.10.9 277
 RMD160 9d96682e02c0781fec575fef3e6f9bdd1e53684f files/digest-gst-plugins-base-0.10.9 277
 SHA256 e134e257d23eae065d30d0457b3084a5ab5c51438cce341e43bf5d49222e661f files/digest-gst-plugins-base-0.10.9 277
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.2 (GNU/Linux)
+
+iD8DBQFFzult8bi6rjpTunYRApenAKDP9BNXhIeXP4feTIkGwD3RAZXHEQCffh5Y
+e89ZwdICdBYdm6DNcLZNtwY=
+=xQ3s
+-----END PGP SIGNATURE-----
