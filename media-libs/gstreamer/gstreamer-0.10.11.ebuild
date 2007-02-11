@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.11.ebuild,v 1.6 2007/01/31 19:02:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.11.ebuild,v 1.7 2007/02/11 10:00:43 vapier Exp $
 
 # Create a major/minor combo for our SLOT and executables suffix
 PVP=(${PV//[-\._]/ })
@@ -13,7 +13,7 @@ SRC_URI="http://gstreamer.freedesktop.org/src/gstreamer/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT=${PV_MAJ_MIN}
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~ppc ppc64 sh sparc ~x86"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~ppc ppc64 sh sparc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.8
