@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/gcalctool
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.121 2007/02/09 23:46:59 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.122 2007/02/11 02:08:00 dang Exp $
+
+*gcalctool-5.8.25-r1 (11 Feb 2007)
+
+  11 Feb 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/gcalctool-5.8.25-hex-float.patch, +gcalctool-5.8.25-r1.ebuild:
+  Fix hex floating point input; bug #152021
 
   09 Feb 2007; Roy Marples <uberlord@gentoo.org> gcalctool-5.8.25.ebuild:
   Added ~x86-fbsd keyword.
