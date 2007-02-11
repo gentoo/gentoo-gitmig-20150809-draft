@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gconf-sharp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/ChangeLog,v 1.46 2007/01/29 11:57:19 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/ChangeLog,v 1.47 2007/02/11 04:19:14 pylon Exp $
+
+  11 Feb 2007; Lars Weiler <pylon@gentoo.org> gconf-sharp-2.16.0.ebuild:
+  Stable on ppc; bug #164048.
 
   29 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
   gconf-sharp-2.16.0.ebuild:
