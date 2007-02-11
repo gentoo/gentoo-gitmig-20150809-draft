@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.3.ebuild,v 1.7 2006/12/28 22:15:15 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.3.ebuild,v 1.8 2007/02/11 00:02:27 opfer Exp $
 
 inherit flag-o-matic eutils
 
@@ -38,7 +38,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 
-IUSE="debug alsa arts esd voice speech nas oss spell ssl tcltk
+IUSE="debug alsa arts esd voice speech nas oss spell ssl tk
 	xosd amarok extraicons extramodules mail config_wizard"
 
 DEPEND="=x11-libs/qt-3*
@@ -57,31 +57,31 @@ DEPEND="=x11-libs/qt-3*
 	spell? ( app-dicts/aspell-pl )
 	ssl? ( dev-libs/openssl )
 	speech? ( app-accessibility/powiedz )
-	tcltk? ( >=dev-lang/tcl-8.4.0 >=dev-lang/tk-8.4.0 )
+	tk? ( >=dev-lang/tk-8.4.0 )
 	xosd? ( x11-libs/xosd )"
 
 
 SRC_URI="http://kadu.net/download/stable/${P}.tar.bz2
 	amarok? ( http://scripts.one.pl/amarok/stable/0.4.0/amarok-${AMAROK}.tar.gz )
-	tcltk? ( http://scripts.one.pl/tcl4kadu/files/stable/${PV}/tcl_scripting-${TCL}.tar.gz )
+	tk? ( http://scripts.one.pl/tcl4kadu/files/stable/${PV}/tcl_scripting-${TCL}.tar.gz )
 	extraicons? (
-	    http://biprowod.wroclaw.pl/kadu/kadu-theme-alt_cryst.tar.bz2
-	    http://www.kadu.net/download/additions/kadu-theme-crystal-16.tar.bz2
-	    http://www.kadu.net/download/additions/kadu-theme-crystal-22.tar.bz2
-	    http://www.kadu.net/download/additions/kadu-theme-gg3d.tar.bz2
-	    http://www.kadu.net/download/additions/kadu-theme-noia-16.tar.bz2
-	    http://www.kadu.net/download/additions/kadu-theme-nuvola-16.tar.gz
-	    http://www.kadu.net/download/additions/kadu-theme-nuvola-22.tar.gz
-	    http://www.kadu.net/download/additions/kadu-theme-old_default.tar.bz2
-	    http://www.kadu.net/download/additions/kadu-theme-piolnet.tar.bz2
-	    http://www.kadu.net/download/additions/kadu-theme-real_gg.tar.bz2 )
+		http://biprowod.wroclaw.pl/kadu/kadu-theme-alt_cryst.tar.bz2
+		http://www.kadu.net/download/additions/kadu-theme-crystal-16.tar.bz2
+		http://www.kadu.net/download/additions/kadu-theme-crystal-22.tar.bz2
+		http://www.kadu.net/download/additions/kadu-theme-gg3d.tar.bz2
+		http://www.kadu.net/download/additions/kadu-theme-noia-16.tar.bz2
+		http://www.kadu.net/download/additions/kadu-theme-nuvola-16.tar.gz
+		http://www.kadu.net/download/additions/kadu-theme-nuvola-22.tar.gz
+		http://www.kadu.net/download/additions/kadu-theme-old_default.tar.bz2
+		http://www.kadu.net/download/additions/kadu-theme-piolnet.tar.bz2
+		http://www.kadu.net/download/additions/kadu-theme-real_gg.tar.bz2 )
 	extramodules? (
 		http://gov.one.pl/svnsnap/tabs-svn-${TABS}.tar.gz
-	    http://www.kadu.net/~blysk/weather-${WEATHER}.tar.bz2
-	    http://www.kadu.net/~dzwiedziu/pub/ext_info-${EXT_INFO}.tar.bz2
+		http://www.kadu.net/~blysk/weather-${WEATHER}.tar.bz2
+		http://www.kadu.net/~dzwiedziu/pub/ext_info-${EXT_INFO}.tar.bz2
 		http://scripts.one.pl/~przemos/download/kadu-spy-${SPY}.tar.gz
-	    http://users.skorpion.wroc.pl/arturmat/firewall/files/firewall-${FIREWALL}.tar.bz2
-	    http://pcb45.tech.us.edu.pl/~blysk/led_notify/led_notify-${LED_NOTIFY}.tar.bz2
+		http://users.skorpion.wroc.pl/arturmat/firewall/files/firewall-${FIREWALL}.tar.bz2
+		http://pcb45.tech.us.edu.pl/~blysk/led_notify/led_notify-${LED_NOTIFY}.tar.bz2
 		http://scripts.one.pl/screenshot/stable/0.4.0/screenshot-${SCREEN_SHOT}.tar.gz
 		http://obeny.kicks-ass.net/obeny/kadu/modules/contacts/contacts-${CONTACTS}.tar.bz2
 		http://www.kadu.net/~joi/kde_transparency.tar.bz2
@@ -97,8 +97,8 @@ S=${WORKDIR}/${PN}
 
 enable_module() {
 	if use ${1}; then
-	    mv ${WORKDIR}/${2} ${WORKDIR}/kadu/modules/
-	    module_config ${2} m
+		mv ${WORKDIR}/${2} ${WORKDIR}/kadu/modules/
+		module_config ${2} m
 	fi
 }
 
@@ -132,7 +132,7 @@ src_unpack() {
 	enable_module spell spellchecker
 	enable_module xosd xosd_notify
 	enable_module mail mail
-	enable_module tcltk "tcl_scripting"
+	enable_module tk "tcl_scripting"
 
 	enable_module extramodules weather
 	enable_module extramodules ext_info
@@ -144,7 +144,7 @@ src_unpack() {
 
 	# put some patches
 	epatch "${FILESDIR}"/kadu-toolbar_toggle-gentoo.diff
-	use tcltk && epatch "${FILESDIR}"/${P}-tcltk-gcc4.patch
+	use tk && epatch "${FILESDIR}"/${P}-tcltk-gcc4.patch
 #	use tcltk && epatch ${FILESDIR}/${P}-tcltk.patch
 	use xosd && epatch "${FILESDIR}"/xosd-gentoo.patch
 }
@@ -169,7 +169,7 @@ src_compile() {
 		( module_config sound m; module_config config_wizard m )
 
 	if use extramodules; then
-		if use !tcltk; then
+		if use !tk; then
 			ewarn "script_chess depends on module_tcl_scripting;"
 			ewarn "It won't be installed."
 		fi
@@ -177,7 +177,7 @@ src_compile() {
 
 	# Firewall
 	if use extramodules; then
-		if use !tcltk; then
+		if use !tk; then
 			ewarn "script_firewall depends on module_tcl_scripting;"
 			ewarn "It won't be installed."
 		fi
@@ -190,29 +190,29 @@ src_compile() {
 	use ssl && module_config encryption y
 
 	# dynamic modules
-	use alsa 	&&	( module_config sound m; module_config alsa_sound m )
-	use arts 	&& 	( module_config sound m; module_config arts_sound m )
-	use esd 	&&	( module_config sound m; module_config esd_sound m )
-	use nas 	&&	( module_config sound m; module_config nas_sound m )
-	use voice 	&&	( module_config sound m; module_config voice m )
-	use oss 	&&	( module_config sound m; module_config dsp_sound m )
+	use alsa	&&	( module_config sound m; module_config alsa_sound m )
+	use arts	&&	( module_config sound m; module_config arts_sound m )
+	use esd		&&	( module_config sound m; module_config esd_sound m )
+	use nas		&&	( module_config sound m; module_config nas_sound m )
+	use voice	&&	( module_config sound m; module_config voice m )
+	use oss		&&	( module_config sound m; module_config dsp_sound m )
 	module_config x11_docking m
 	module_config wmaker_docking m
 
 	# Some fixes
 	einfo "Fixing modules spec files"
 	if use arts; then
-	    spec_config arts_sound MODULE_INCLUDES_PATH "\"$(kde-config --prefix)/include $(kde-config --prefix)/include/artsc\""
-	    spec_config arts_sound MODULE_LIBS_PATH $(kde-config --prefix)/lib
+		spec_config arts_sound MODULE_INCLUDES_PATH "\"$(kde-config --prefix)/include $(kde-config --prefix)/include/artsc\""
+		spec_config arts_sound MODULE_LIBS_PATH $(kde-config --prefix)/lib
 	fi
 	if use amarok; then
-	    spec_config amarok MODULE_INCLUDES_PATH $(kde-config --prefix)/include
-	    spec_config amarok MODULE_LIBS_PATH $(kde-config --prefix)/lib
+		spec_config amarok MODULE_INCLUDES_PATH $(kde-config --prefix)/include
+		spec_config amarok MODULE_LIBS_PATH $(kde-config --prefix)/lib
 	fi
 
 	if use extramodules; then
-	    einfo "Changing default firewall log location to user's homedir/.gg/firewall.log"
-	    sed ${WORKDIR}/firewall.tcl -i -e \
+		einfo "Changing default firewall log location to user's homedir/.gg/firewall.log"
+		sed ${WORKDIR}/firewall.tcl -i -e \
 			's%$module(scriptpath)/firewall.log%$env(HOME)/.gg/firewall.log%g'
 	fi
 
@@ -234,7 +234,7 @@ src_install() {
 	# Installing additional scripts and plugins
 	# Chess and Firewall
 	if use extramodules; then
-	    if use tcltk; then
+		if use tk; then
 		einfo "Installing Chess script"
 		insinto /usr/share/kadu/modules/data/tcl_scripting/scripts
 		doins ${WORKDIR}/KaduChess/{data,pics,KaduChess.tcl}
@@ -244,11 +244,11 @@ src_install() {
 
 		einfo "Installing Firewall module"
 		doins ${WORKDIR}/firewall{.tcl,.png}
-	    fi
+		fi
 	fi
 
 	if use extraicons; then
-	    einfo "Installing extra icons"
+		einfo "Installing extra icons"
 		for theme in ${THEMES}; do
 			insinto /usr/share/kadu/themes/icons/${theme}
 			doins ${WORKDIR}/${theme}/{icons.conf,*.png}
