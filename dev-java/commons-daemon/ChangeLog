@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/commons-daemon
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/ChangeLog,v 1.28 2007/01/10 03:20:40 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/ChangeLog,v 1.29 2007/02/11 17:11:15 betelgeuse Exp $
+
+*commons-daemon-1.0.1-r2 (11 Feb 2007)
+
+  11 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +files/1.0.1-capabilities-non-root.patch, +files/1.0.1-execve-self.patch,
+  +commons-daemon-1.0.1-r2.ebuild:
+  Added patches from bug #162918. Thanks to Simone Piunno
+  <pioppo@ferrara.linux.it>.
 
   10 Jan 2007; Vlastimil Babka <caster@gentoo.org>
   -commons-daemon-1.0.1.ebuild:
