@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/g-cpan-0.15_rc1.ebuild,v 1.1 2007/01/03 13:21:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/g-cpan-0.15_rc2.ebuild,v 1.1 2007/02/11 18:41:13 mcummings Exp $
 
 inherit perl-module
 

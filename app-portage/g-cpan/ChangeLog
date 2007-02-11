@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/g-cpan
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/ChangeLog,v 1.26 2007/01/03 13:21:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/ChangeLog,v 1.27 2007/02/11 18:41:13 mcummings Exp $
+
+*g-cpan-0.15_rc2 (11 Feb 2007)
+
+  11 Feb 2007; Michael Cummings <mcummings@gentoo.org>
+  -g-cpan-0.15_rc1.ebuild, +g-cpan-0.15_rc2.ebuild:
+  Updated rc. Should resolve bug 158163, bug 160137.
 
 *g-cpan-0.15_rc1 (03 Jan 2007)
 
