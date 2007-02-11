@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.4.2.ebuild,v 1.7 2007/02/10 13:31:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.4.2.ebuild,v 1.8 2007/02/11 09:59:04 vapier Exp $
 
 inherit eutils libtool autotools
 
@@ -10,18 +10,16 @@ SRC_URI="http://fontconfig.org/release/${P}.tar.gz"
 
 LICENSE="fontconfig"
 SLOT="1.0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ia64 m68k ~mips ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="doc xml"
 
 RDEPEND=">=media-libs/freetype-2.1.4
 	!xml? ( >=dev-libs/expat-1.95.3 )
 	xml? ( >=dev-libs/libxml2-2.6 )"
-
 DEPEND="${RDEPEND}
 	doc? ( app-text/docbook-sgml-utils )"
 
 src_unpack() {
-
 	unpack ${A}
 
 	cd "${S}"
@@ -32,11 +30,9 @@ src_unpack() {
 
 	# elibtoolize
 	epunt_cxx #74077
-
 }
 
 src_compile() {
-
 	[ "${ARCH}" == "alpha" -a "${CC}" == "ccc" ] && \
 		die "Dont compile fontconfig with ccc, it doesnt work very well"
 
@@ -51,12 +47,10 @@ src_compile() {
 		|| die
 
 	emake -j1 || die
-
 }
 
 src_install() {
-
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 
 	insinto /etc/fonts
 	doins "${S}"/fonts.conf
@@ -76,11 +70,9 @@ src_install() {
 	fi
 
 	dodoc AUTHORS ChangeLog NEWS README
-
 }
 
 pkg_postinst() {
-
 	# Changes should be made to /etc/fonts/local.conf, and as we had
 	# too much problems with broken fonts.conf, we force update it ...
 	# <azarah@gentoo.org> (11 Dec 2002)
@@ -95,5 +87,4 @@ pkg_postinst() {
 		/usr/bin/fc-cache -s
 		eend $?
 	fi
-
 }
