@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gv
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.61 2006/11/24 20:14:09 kloeri Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.62 2007/02/11 10:07:47 grobian Exp $
+
+  11 Feb 2007; Fabian Groffen <grobian@gentoo.org> gv-3.6.1-r3.ebuild,
+  gv-3.6.1-r5.ebuild, gv-3.6.2.ebuild, gv-3.6.2-r1.ebuild:
+  Dropped ppc-macos keyword, see you in prefix
 
   24 Nov 2006; Bryan Østergaard <kloeri@gentoo.org> gv-3.6.2-r1.ebuild:
   Stable on Alpha, bug 154573.
