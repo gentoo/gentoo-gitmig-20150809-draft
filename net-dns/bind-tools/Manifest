@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX bind-tools-configure.patch 1686 RMD160 4ff8355af81705058fd411910dfae94887bcd884 SHA1 67ae0deff73689cb39cd6e7451262bdda9c25a39 SHA256 dc9386b88eac48c282d63d0be7e7be81d4a0a08035a8b97138a61133e057bcea
 MD5 e0ebf10eb8bf4542ae57ba591daa68a4 files/bind-tools-configure.patch 1686
 RMD160 4ff8355af81705058fd411910dfae94887bcd884 files/bind-tools-configure.patch 1686
@@ -46,10 +49,10 @@ EBUILD bind-tools-9.3.3.ebuild 1689 RMD160 833966f02292dc370a28bcb220cbe82f1f806
 MD5 d1c3078b052b708578befeba14087c35 bind-tools-9.3.3.ebuild 1689
 RMD160 833966f02292dc370a28bcb220cbe82f1f8064ac bind-tools-9.3.3.ebuild 1689
 SHA256 9081ddd1d89a7da53930668421519178a2449b7858c493eefdc3f7a3aa6ca703 bind-tools-9.3.3.ebuild 1689
-EBUILD bind-tools-9.3.4.ebuild 1754 RMD160 76b2953deb617b3409d8ef031c42e78b70614cff SHA1 552b654a570fa644169a2120421515b78f2fe2cc SHA256 b43bc6153e0540e186b0f810d69d0d16d5f07b3f9b6c6123ffeacdb765ba1a80
-MD5 8fef04996093a799af54f9ffc32a7499 bind-tools-9.3.4.ebuild 1754
-RMD160 76b2953deb617b3409d8ef031c42e78b70614cff bind-tools-9.3.4.ebuild 1754
-SHA256 b43bc6153e0540e186b0f810d69d0d16d5f07b3f9b6c6123ffeacdb765ba1a80 bind-tools-9.3.4.ebuild 1754
+EBUILD bind-tools-9.3.4.ebuild 1747 RMD160 57cedf41e439fe0a6a89629703559d35bad49cf9 SHA1 9847b07e3cf5edba3564e43974a5b1d387a58b99 SHA256 ccd293f3fdff0bfd428ced678f95a7a0fb6c4daf0dd0279710e0dd2ecd81e0a7
+MD5 da2ea6a9f390356fadd6213bb420f158 bind-tools-9.3.4.ebuild 1747
+RMD160 57cedf41e439fe0a6a89629703559d35bad49cf9 bind-tools-9.3.4.ebuild 1747
+SHA256 ccd293f3fdff0bfd428ced678f95a7a0fb6c4daf0dd0279710e0dd2ecd81e0a7 bind-tools-9.3.4.ebuild 1747
 EBUILD bind-tools-9.4.0_rc2.ebuild 1758 RMD160 dfbb261951b3b6b2eb32de72d57d0f517ac1f823 SHA1 72221ff97369f25b2ccd860e988c496cc7a75c12 SHA256 4f8beb11eec041ec5804b655abd361ab29ece57801be158068eaa863534634fa
 MD5 1c8b0a9c72b04bfa041813d599009c7f bind-tools-9.4.0_rc2.ebuild 1758
 RMD160 dfbb261951b3b6b2eb32de72d57d0f517ac1f823 bind-tools-9.4.0_rc2.ebuild 1758
@@ -92,3 +95,10 @@ SHA256 09af10a11578547923d7517ecdc7acad7ee53ab097a92ff61a282bf7168cd1b4 files/di
 MD5 e6a67e00dcf405c6f01bc94b3180ea65 files/digest-bind-tools-9.4.0_rc2 244
 RMD160 64d22ad4f0ec702df3571c2b4b598a7198d6f34f files/digest-bind-tools-9.4.0_rc2 244
 SHA256 fd3e8e26d37cfe2f53e6a23f1e0457b2cdc1195c665ecb1f821f5661c0d609c2 files/digest-bind-tools-9.4.0_rc2 244
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.2 (GNU/Linux)
+
+iD8DBQFFzvOP8bi6rjpTunYRAihmAJ9TxYeE8QCtm4SW/Lcet/piIwaLfQCgpigI
+jf4Seq05+eut7Kaew+4YlGM=
+=0i4g
+-----END PGP SIGNATURE-----
