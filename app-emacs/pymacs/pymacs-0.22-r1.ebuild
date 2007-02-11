@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.22-r1.ebuild,v 1.4 2007/01/07 01:44:16 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.22-r1.ebuild,v 1.5 2007/02/11 10:46:22 vapier Exp $
 
 inherit distutils elisp eutils
 
@@ -8,12 +8,13 @@ DESCRIPTION="Pymacs is a tool that allows both-side communication beetween Pytho
 HOMEPAGE="http://pymacs.progiciels-bpi.ca"
 SRC_URI="http://pymacs.progiciels-bpi.ca/archives/${P/pymacs/Pymacs}.tar.gz"
 
+LICENSE="as-is"
+SLOT="0"
+KEYWORDS="~amd64 ~arm ~ia64 ppc ppc-macos ~s390 ~sh x86"
+IUSE="doc"
+
 DEPEND="virtual/emacs
 	virtual/python"
-LICENSE="as-is"
-IUSE="doc"
-SLOT="0"
-KEYWORDS="~amd64 ppc ppc-macos x86"
 
 S=${WORKDIR}/Pymacs-${PV}
 
@@ -36,5 +37,5 @@ src_install() {
 		doins ./pymacs.pdf
 	fi
 	cd ${S}
-	dodoc PKG-INFO MANIFEST README THANKS TODO THANKS-rebox ChangeLog ChangeLog-rebox
+	dodoc PKG-INFO README THANKS TODO THANKS-rebox ChangeLog ChangeLog-rebox
 }
