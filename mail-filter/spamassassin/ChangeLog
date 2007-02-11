@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.120 2007/02/02 17:32:57 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.121 2007/02/11 19:46:32 ian Exp $
+
+  11 Feb 2007; Christian Hartmann <ian@gentoo.org> files/3.0.0-spamd.init:
+  Added reload function to spamd; bug #159933
 
   02 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   spamassassin-3.1.7.ebuild:
