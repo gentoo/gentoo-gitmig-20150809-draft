@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mp1e/mp1e-0.5.2.20040909.ebuild,v 1.3 2007/01/04 16:25:03 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mp1e/mp1e-0.5.2.20040909.ebuild,v 1.4 2007/02/11 19:58:30 zzam Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -29,7 +29,7 @@ pkg_setup() {
 		eerror "this mp1e-version requires gcc-3 in order to build correctly"
 
 		# Search gcc-3
-		local MY_GCC=$(ls -1 /usr/bin/gcc-3.*|sort -r|head -1)
+		local MY_GCC=$(ls -1 /usr/bin/gcc-3.* 2>/dev/null|sort -r|head -1)
 		MY_GCC=${MY_GCC##*/}
 
 		if [[ -n ${MY_GCC} ]]; then
