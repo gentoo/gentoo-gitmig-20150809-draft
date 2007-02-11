@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6804 2007/02/11 16:22:20 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6805 2007/02/11 20:43:27 zzam Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -37,10 +37,6 @@ media-video/tcvp
 # Mike Frysinger <vapier@gentoo.org> (11 Feb 2007)
 # Use mdadm; this package is dead.
 sys-fs/raidtools
-
-# Matthias Schwarzott <zzam@gentoo.org> (10 Feb 2007)
-# Masked for testing (before going into stable).
-=sys-fs/udev-104-r10
 
 # Marien Zwart <marienz@gentoo.org> (10 Feb 2007)
 # Masking experimental ebuild.
