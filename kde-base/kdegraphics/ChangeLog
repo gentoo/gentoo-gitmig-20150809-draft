@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.294 2007/02/07 18:26:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.295 2007/02/11 21:44:35 opfer Exp $
+
+  11 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  kdegraphics-3.5.5-r2.ebuild:
+  stable x86; security bug #162460
 
 *kdegraphics-3.5.6-r1 (07 Feb 2007)
 *kdegraphics-3.5.5-r2 (07 Feb 2007)
