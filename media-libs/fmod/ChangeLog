@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/fmod
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.21 2006/10/02 07:38:14 flameeyes Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.22 2007/02/11 02:41:01 hanno Exp $
+
+*fmod-3.75 (11 Feb 2007)
+
+  11 Feb 2007; Hanno Boeck <hanno@gentoo.org> +fmod-3.75.ebuild:
+  Version bump.
 
   02 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> fmod-3.73.ebuild,
   fmod-3.74.ebuild:
