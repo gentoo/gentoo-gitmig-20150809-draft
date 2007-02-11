@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/koffice-i18n
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.80 2007/02/10 20:20:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.81 2007/02/11 22:00:28 opfer Exp $
+
+  11 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  koffice-i18n-1.6.1.ebuild:
+  stable x86; security bug #166246
 
   10 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -koffice-i18n-1.6.0.ebuild:
