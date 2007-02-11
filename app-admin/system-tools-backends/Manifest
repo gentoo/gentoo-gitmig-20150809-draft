@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST system-tools-backends-1.4.2.tar.bz2 708733 RMD160 00fd27b4dc886a7e4a735d48d241f0035af4f80e SHA1 b047c30fdc5635c048f1509a5c0d4130c83cbe5a SHA256 32762567ece8c0ab59dc1b2186ee8cfeac6d1f92574dfb3011483431135d8940
-EBUILD system-tools-backends-1.4.2-r1.ebuild 853 RMD160 b44dc910e2914cb24258fe751b74774a1afe160a SHA1 61107fe3757d7a52c1e07b69c9a902c9d779414a SHA256 1353f4667acbca49b83e63d847ef3def0b2c82d6ad7e0c9ee05d5242e0de82d4
-MD5 c7d2235a1c3eabf2b5fac53412231ea7 system-tools-backends-1.4.2-r1.ebuild 853
-RMD160 b44dc910e2914cb24258fe751b74774a1afe160a system-tools-backends-1.4.2-r1.ebuild 853
-SHA256 1353f4667acbca49b83e63d847ef3def0b2c82d6ad7e0c9ee05d5242e0de82d4 system-tools-backends-1.4.2-r1.ebuild 853
+EBUILD system-tools-backends-1.4.2-r1.ebuild 851 RMD160 8b1dd386fdb7c8dfbebc6d8d9e61b0bec3a12cdd SHA1 67eecfecfbf2da364a3609fecea162f73e360b62 SHA256 6d427561f8e63eb19bd0402c5c2c9356c204684f6d0ee8208ef700a1a26a997b
+MD5 7d6c9d08d3b5f13196108e16ea4e0163 system-tools-backends-1.4.2-r1.ebuild 851
+RMD160 8b1dd386fdb7c8dfbebc6d8d9e61b0bec3a12cdd system-tools-backends-1.4.2-r1.ebuild 851
+SHA256 6d427561f8e63eb19bd0402c5c2c9356c204684f6d0ee8208ef700a1a26a997b system-tools-backends-1.4.2-r1.ebuild 851
 EBUILD system-tools-backends-1.4.2.ebuild 781 RMD160 94bf0b26c046dde2dcbb29e2443ee5f8ba69c115 SHA1 3b919c789eef2744ba7511c83984098faf6a394e SHA256 e5479dbadc082ab1549b5a90b31a7e3e340e1ab2c87e5dfa4539027a73420bec
 MD5 14643249235a007f7a35ca20b3c6d19b system-tools-backends-1.4.2.ebuild 781
 RMD160 94bf0b26c046dde2dcbb29e2443ee5f8ba69c115 system-tools-backends-1.4.2.ebuild 781
@@ -21,3 +24,10 @@ SHA256 3228d1653f99e908254d3e11adcae217a1cce177deb157d21042caf35b7ffb7f files/di
 MD5 19156101a8faac8b628e49c3d48b85d4 files/digest-system-tools-backends-1.4.2-r1 286
 RMD160 941fa4cc1cfe8f10dd466f7f81492108f3dab68c files/digest-system-tools-backends-1.4.2-r1 286
 SHA256 3228d1653f99e908254d3e11adcae217a1cce177deb157d21042caf35b7ffb7f files/digest-system-tools-backends-1.4.2-r1 286
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.2 (GNU/Linux)
+
+iD4DBQFFzudm8bi6rjpTunYRAirMAKDJh/lIDD7keQfxv15r58XUeqi2kgCYsrcx
+3sNr+CFR/Z3WA9UZZQn7kQ==
+=axhX
+-----END PGP SIGNATURE-----
