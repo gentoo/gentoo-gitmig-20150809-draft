@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.13.ebuild,v 1.9 2007/01/16 21:32:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.13.ebuild,v 1.10 2007/02/11 18:07:11 flameeyes Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
@@ -19,7 +19,6 @@ KEYWORDS="amd64 ia64 ~mips ppc ppc64 sparc x86"
 IUSE="fltk gtk"
 
 RDEPEND=">=media-libs/alsa-lib-1.0.0
-	virtual/alsa
 	fltk? ( =x11-libs/fltk-1.1* )
 	gtk? ( =x11-libs/gtk+-2* )"
 DEPEND="${RDEPEND}"
