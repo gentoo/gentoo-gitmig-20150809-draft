@@ -1,0 +1,10 @@
+# ChangeLog for xfce-extra/gsynaptics-mcs-plugin
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/gsynaptics-mcs-plugin/ChangeLog,v 1.1 2007/02/11 19:50:31 drac Exp $
+
+*gsynaptics-mcs-plugin-1.0.0 (11 Feb 2007)
+
+  11 Feb 2007; Samuli Suominen <drac@gentoo.org> +metadata.xml,
+  +gsynaptics-mcs-plugin-1.0.0.ebuild:
+  Initial commit.
+
