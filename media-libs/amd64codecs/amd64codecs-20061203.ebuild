@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/amd64codecs/amd64codecs-20061203.ebuild,v 1.3 2007/01/18 21:06:18 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/amd64codecs/amd64codecs-20061203.ebuild,v 1.4 2007/02/11 23:56:10 blubb Exp $
 
 inherit multilib
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://mplayer/releases/codecs/essential-amd64-${PV}.tar.bz2"
 HOMEPAGE="http://www.mplayerhq.hu/"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64"
 S="${WORKDIR}/essential-amd64-${PV}"
 RESTRICT="nostrip"
 
