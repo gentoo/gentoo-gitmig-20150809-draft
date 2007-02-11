@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.253 2007/02/11 13:14:54 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.254 2007/02/11 20:40:48 zzam Exp $
+
+  11 Feb 2007; Matthias Schwarzott <zzam@gentoo.org> udev-104-r10.ebuild:
+  Resetting all keywords which were copied from udev-104-r9 to let archs
+  themself set it stable.
 
   11 Feb 2007; Matthias Schwarzott <zzam@gentoo.org> udev-104-r10.ebuild:
   Copy over keyword modification from 104-r9 (ppc).
