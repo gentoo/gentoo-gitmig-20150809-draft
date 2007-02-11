@@ -1,6 +1,10 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.116 2007/02/10 20:31:55 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.117 2007/02/11 09:39:03 opfer Exp $
+
+  11 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  poppler-0.5.4-r1.ebuild:
+  stable x86; security bug #162460
 
 *poppler-0.5.4-r1 (10 Feb 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.4-r1.ebuild,v 1.2 2007/02/10 21:35:12 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.4-r1.ebuild,v 1.3 2007/02/11 09:39:03 opfer Exp $
 
 inherit libtool eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://poppler.freedesktop.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="cjk jpeg zlib"
 
 RDEPEND=">=media-libs/freetype-2.1.8
