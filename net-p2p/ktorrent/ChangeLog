@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.32 2007/02/10 23:04:35 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.33 2007/02/11 09:38:44 deathwing00 Exp $
+
+  11 Feb 2007; Ioannis Aslanidis <deathwing00@gentoo.org> ChangeLog:
+  Manifest regenerated.
 
 *ktorrent-2.1 (10 Feb 2007)
 
