@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.92 2007/02/10 21:23:20 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.93 2007/02/11 14:48:34 beandog Exp $
+
+  11 Feb 2007; Steve Dibb <beandog@gentoo.org> package.mask:
+  Unmask libmtp and amarok
 
   10 Feb 2007; Alexis Ballier <aballier@gentoo.org> use.local.desc:
   vlc sdl-image use flag
