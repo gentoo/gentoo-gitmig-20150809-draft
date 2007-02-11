@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.73 2007/01/23 16:34:05 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.74 2007/02/11 14:02:27 grobian Exp $
+
+  11 Feb 2007; Fabian Groffen <grobian@gentoo.org>
+  gentoo-syntax-20051221.ebuild, gentoo-syntax-20051221-r1.ebuild,
+  gentoo-syntax-20061106.ebuild:
+  Dropped ppc-macos keyword, see you in prefix
 
   23 Jan 2007; Marius Mauch <genone@gentoo.org>
   gentoo-syntax-20051221.ebuild, gentoo-syntax-20051221-r1.ebuild,
