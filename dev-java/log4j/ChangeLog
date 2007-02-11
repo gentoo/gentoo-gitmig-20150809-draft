@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/log4j
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.53 2007/02/10 18:37:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.54 2007/02/11 11:27:23 caster Exp $
+
+  11 Feb 2007; Vlastimil Babka <caster@gentoo.org> -log4j-1.2.9.ebuild:
+  Cleanup.
 
   10 Feb 2007; nixnut <nixnut@gentoo.org> log4j-1.2.14-r1.ebuild:
   Stable on ppc wrt bug 163625
