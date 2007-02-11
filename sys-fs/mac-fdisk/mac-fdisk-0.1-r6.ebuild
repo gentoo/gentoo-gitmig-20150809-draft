@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mac-fdisk/mac-fdisk-0.1-r6.ebuild,v 1.2 2006/09/23 22:30:41 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mac-fdisk/mac-fdisk-0.1-r6.ebuild,v 1.3 2007/02/11 06:54:12 josejx Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/m/mac-fdisk/${PN}_${PV}.orig.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~ppc ~ppc64 ~x86"
+KEYWORDS="ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND=""
