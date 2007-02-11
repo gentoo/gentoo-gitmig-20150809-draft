@@ -1,6 +1,17 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.80 2007/02/06 21:30:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.81 2007/02/11 12:48:45 graaff Exp $
+
+*xemacs-21.4.20-r2 (11 Feb 2007)
+
+  11 Feb 2007; Hans de Graaff <graaff@gentoo.org> -xemacs-21.4.19.ebuild,
+  -xemacs-21.4.19-r1.ebuild, -xemacs-21.4.20.ebuild,
+  +xemacs-21.4.20-r2.ebuild:
+  Add xim USE flag to enable XiM input method, default to off as is not needed
+  for many people and may cause instability in some cases, thanks to Mats Lidell
+  for the suggestion. Also add a comment about hardened incompatibility #75028
+  and make sure ia64 compiles with the system malloc #21264. Remove several old
+  versions.
 
   06 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   xemacs-21.4.20-r1.ebuild:
