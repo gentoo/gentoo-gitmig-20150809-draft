@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/kiso-0.8.3.ebuild,v 1.7 2007/01/24 02:24:56 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/kiso-0.8.3.ebuild,v 1.8 2007/02/11 00:02:32 troll Exp $
 
 inherit kde
 
@@ -20,9 +20,17 @@ RDEPEND="${DEPEND}
 	virtual/cdrtools
 	app-admin/sudo"
 
-PATCHES="${FILESDIR}/${P}-libcdio-077.patch"
+PATCHES="${FILESDIR}/${P}-libcdio-077.patch
+	${FILESDIR}/${PN}-desktop_file.patch"
 
 need-kde 3.2
+
+src_install() {
+	kde_src_install
+
+	rm -Rf ${D}/usr/share/applnk
+	domenu ${S}/src/${PN}.desktop
+}
 
 pkg_postinst() {
 	elog
