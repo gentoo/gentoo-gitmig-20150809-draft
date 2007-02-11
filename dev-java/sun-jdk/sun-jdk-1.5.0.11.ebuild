@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.11.ebuild,v 1.2 2007/02/11 11:52:31 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.11.ebuild,v 1.3 2007/02/11 20:01:43 nichoj Exp $
 
 inherit java-vm-2 eutils pax-utils
 
@@ -112,13 +112,15 @@ src_install() {
 	chmod 644 ${D}/opt/${P}/jre/.systemPrefs/.systemRootModFile
 
 	# install control panel for Gnome/KDE
-	sed -e "s/INSTALL_DIR\/JRE_NAME_VERSION/\/opt\/${P}\/jre/" \
-		-e "s/\(Name=Java\)/\1 Control Panel ${SLOT}/" \
-		${D}/opt/${P}/jre/plugin/desktop/sun_java.desktop > \
-		${T}/sun_java-${SLOT}.desktop \
-		|| die "Failed to sed .desktop file"
+	if [[ -f ${D}/opt/${P}/jre/plugin/desktop/sun_java.desktop ]]; then
+		sed -e "s/INSTALL_DIR\/JRE_NAME_VERSION/\/opt\/${P}\/jre/" \
+			-e "s/\(Name=Java\)/\1 Control Panel ${SLOT}/" \
+			${D}/opt/${P}/jre/plugin/desktop/sun_java.desktop > \
+			${T}/sun_java-${SLOT}.desktop \
+			|| die "Failed to sed .desktop file"
 
-	domenu ${T}/sun_java-${SLOT}.desktop
+		domenu ${T}/sun_java-${SLOT}.desktop
+	fi
 
 	# bug #56444
 	insinto /opt/${P}/jre/lib/
