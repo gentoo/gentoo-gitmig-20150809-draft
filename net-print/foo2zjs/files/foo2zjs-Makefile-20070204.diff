@@ -1,7 +1,7 @@
-diff -Nupr foo2zjs.orig/Makefile foo2zjs/Makefile
---- foo2zjs.orig/Makefile	2006-11-29 13:24:02.000000000 -0800
-+++ foo2zjs/Makefile	2006-12-02 00:17:04.000000000 -0800
-@@ -7,7 +7,7 @@ VERSION=0.0
+diff -Nur foo2zjs.orig/Makefile foo2zjs/Makefile
+--- foo2zjs.orig/Makefile	2007-02-11 11:08:24.000000000 +0100
++++ foo2zjs/Makefile	2007-02-11 11:07:08.000000000 +0100
+@@ -7,7 +7,7 @@
  
  # Installation prefix...
  PREFIX=/usr/local
@@ -10,7 +10,7 @@ diff -Nupr foo2zjs.orig/Makefile foo2zjs/Makefile
  
  # Pathnames for this package...
  BIN=$(PREFIX)/bin
-@@ -20,7 +20,7 @@ MANDIR=$(PREFIX)/share/man
+@@ -20,7 +20,7 @@
  DOCDIR=$(PREFIX)/share/doc/foo2zjs/
  
  # Pathnames for referenced packages...
@@ -19,7 +19,7 @@ diff -Nupr foo2zjs.orig/Makefile foo2zjs/Makefile
  
  # User ID's
  LPuid=-olp
-@@ -179,7 +179,7 @@ ifeq ($(UNAME),Linux)
+@@ -180,7 +180,7 @@
  endif
  
  # Compiler flags
@@ -28,7 +28,7 @@ diff -Nupr foo2zjs.orig/Makefile foo2zjs/Makefile
  
  #
  # Rules to create test documents
-@@ -367,12 +367,14 @@ install-test:
+@@ -368,12 +368,14 @@
      
  
  install-prog:
@@ -44,7 +44,7 @@ diff -Nupr foo2zjs.orig/Makefile foo2zjs/Makefile
  	fi
  	#
  	# Install gamma correction files.  These are just templates,
-@@ -400,6 +402,7 @@ install-foo:
+@@ -401,6 +403,7 @@
  	#
  	@if [ -d $(FOODB) ]; then \
  	    for dir in driver printer opt; do \
@@ -52,7 +52,7 @@ diff -Nupr foo2zjs.orig/Makefile foo2zjs/Makefile
  		echo install -m 644 foomatic-db/$$dir/*.xml $(FOODB)/$$dir/; \
  		install -c -m 644 foomatic-db/$$dir/*.xml $(FOODB)/$$dir/; \
  	    done \
-@@ -417,10 +420,10 @@ install-foo:
+@@ -418,10 +421,10 @@
  	#
  	# Clear foomatic cache and rebuild database if needed
  	#
@@ -67,7 +67,7 @@ diff -Nupr foo2zjs.orig/Makefile foo2zjs/Makefile
  	    foomatic-combo-xml -O >overview.xml; \
  	fi
  
-@@ -491,8 +494,8 @@ install-extra:
+@@ -492,8 +495,8 @@
  	    fi; \
  	done
  
@@ -78,18 +78,28 @@ diff -Nupr foo2zjs.orig/Makefile foo2zjs/Makefile
  install-ppd:
  	#
  	# Install PPD files for CUPS
-@@ -515,9 +518,7 @@ install-ppd:
+@@ -516,10 +519,8 @@
  	    done; \
  	fi
  
 -USBDIR=/etc/hotplug/usb
 -UDEVDIR=/etc/udev/rules.d
 -RULES=hplj10xx.rules
+-install-hotplug: install-hotplug-test install-hotplug-prog
 +USBDIR=$(DESTDIR)/etc/hotplug/usb
- install-hotplug: install-hotplug-test install-hotplug-prog
++install-hotplug: install-hotplug-test install-udev
  
  install-hotplug-test:
-@@ -541,14 +542,14 @@ install-hotplug-prog:
+ 	#
+@@ -537,18 +538,18 @@
+ 	#
+ 
+ install-hotplug-prog:
+-	if [ -d $(UDEVDIR) ]; then \
+-	    install -c -m 644 $(RULES) $(UDEVDIR)/11-$(RULES); \
+-	fi
+ 	[ -d $(USBDIR) ] || install -d -m 755 $(USBDIR)/
+ 	install -c -m 755 hplj1000 $(USBDIR)/
  	ln -sf $(USBDIR)/hplj1000 $(USBDIR)/hplj1005
  	ln -sf $(USBDIR)/hplj1000 $(USBDIR)/hplj1018
  	ln -sf $(USBDIR)/hplj1000 $(USBDIR)/hplj1020
@@ -97,21 +107,17 @@ diff -Nupr foo2zjs.orig/Makefile foo2zjs/Makefile
 -	$(USBDIR)/hplj1005 install-usermap
 -	$(USBDIR)/hplj1018 install-usermap
 -	$(USBDIR)/hplj1020 install-usermap
--	if [ -d $(UDEVDIR) ]; then \
--	    install -c -m 644 $(RULES) $(UDEVDIR)/11-$(RULES); \
--	fi
 +	install -c -m 644 hplj.usermap $(USBDIR)/
- 
++  
 +UDEVDIR=$(DESTDIR)/etc/udev/rules.d
 +RULES=hplj10xx.rules
 +install-udev:
 +	[ -d $(UDEVDIR) ] || install -d -m 755 $(UDEVDIR)/
 +	install -c -m 644 $(RULES) $(UDEVDIR)/11-$(RULES)
-+ 
+ 
  cups:	FRC
  	if [ -x /etc/init.d/cups ]; then \
- 	    /etc/init.d/cups restart; \
-@@ -860,7 +861,6 @@ install-doc: doc
+@@ -862,7 +863,6 @@
  	install -c -m 644 README $(DOCDIR)
  	install -c -m 644 ChangeLog $(DOCDIR)
  
@@ -119,17 +125,17 @@ diff -Nupr foo2zjs.orig/Makefile foo2zjs/Makefile
  GROFF=groff
  manual.pdf: $(MANPAGES)
  	-$(GROFF) -t -man $(MANPAGES) | ps2pdf - $@
-diff -Nupr foo2zjs.orig/hplj.usermap foo2zjs/hplj.usermap
---- foo2zjs.orig/hplj.usermap	1969-12-31 16:00:00.000000000 -0800
-+++ foo2zjs/hplj.usermap	2006-12-02 00:12:53.000000000 -0800
+diff -Nur foo2zjs.orig/hplj.usermap foo2zjs/hplj.usermap
+--- foo2zjs.orig/hplj.usermap	1970-01-01 01:00:00.000000000 +0100
++++ foo2zjs/hplj.usermap	2007-02-11 11:03:10.000000000 +0100
 @@ -0,0 +1,4 @@
 +hplj1000 0x0003 0x03f0 0x0517 0x0000 0x0000 0x00 0x00 0x00 0x00 0x00 0x00 0x00000000
 +hplj1005 0x0003 0x03f0 0x1317 0x0000 0x0000 0x00 0x00 0x00 0x00 0x00 0x00 0x00000000
 +hplj1018 0x0003 0x03f0 0x4117 0x0000 0x0000 0x00 0x00 0x00 0x00 0x00 0x00 0x00000000
 +hplj1020 0x0003 0x03f0 0x2b17 0x0000 0x0000 0x00 0x00 0x00 0x00 0x00 0x00 0x00000000
-diff -Nupr foo2zjs.orig/icc2ps/Makefile foo2zjs/icc2ps/Makefile
---- foo2zjs.orig/icc2ps/Makefile	2005-12-23 22:53:35.000000000 -0800
-+++ foo2zjs/icc2ps/Makefile	2006-12-02 00:12:53.000000000 -0800
+diff -Nur foo2zjs.orig/icc2ps/Makefile foo2zjs/icc2ps/Makefile
+--- foo2zjs.orig/icc2ps/Makefile	2007-02-11 11:08:24.000000000 +0100
++++ foo2zjs/icc2ps/Makefile	2007-02-11 11:03:10.000000000 +0100
 @@ -1,10 +1,10 @@
 -PREFIX=	/usr
 +PREFIX=	$(DESTDIR)/usr

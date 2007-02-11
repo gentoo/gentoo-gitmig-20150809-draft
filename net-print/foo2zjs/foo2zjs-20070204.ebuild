@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20061130.ebuild,v 1.2 2006/12/14 18:50:28 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20070204.ebuild,v 1.1 2007/02/11 10:30:33 genstef Exp $
 
 inherit eutils
 
@@ -61,8 +61,8 @@ src_unpack() {
 	done
 
 	cd ${S}
-	epatch ${FILESDIR}/foo2zjs-Makefile-20061130.diff
-	epatch ${FILESDIR}/foo2zjs-udevfwld-20061130.diff
+	epatch ${FILESDIR}/foo2zjs-Makefile-20070204.diff
+	epatch ${FILESDIR}/foo2zjs-udevfwld-20070204.diff
 }
 
 src_compile() {

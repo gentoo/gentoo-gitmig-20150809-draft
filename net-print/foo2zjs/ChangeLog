@@ -1,6 +1,15 @@
 # ChangeLog for net-print/foo2zjs
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.19 2006/12/14 18:50:28 genstef Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.20 2007/02/11 10:30:33 genstef Exp $
+
+*foo2zjs-20070204 (11 Feb 2007)
+
+  11 Feb 2007; <genstef@gentoo.org> -files/foo2zjs-Makefile-20061130.diff,
+  -files/foo2zjs-udevfwld-20061130.diff,
+  +files/foo2zjs-Makefile-20070204.diff,
+  +files/foo2zjs-udevfwld-20070204.diff, -foo2zjs-20061130.ebuild,
+  +foo2zjs-20070204.ebuild:
+  version bump thanks to roger in bug 159270, remove old
 
   14 Dec 2006; Stefan Schweizer <genstef@gentoo.org>
   -files/foo2zjs-Makefile-20060523.diff,
