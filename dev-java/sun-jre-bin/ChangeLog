@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.78 2007/01/23 11:37:49 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.79 2007/02/11 12:01:12 betelgeuse Exp $
+
+*sun-jre-bin-1.5.0.11 (11 Feb 2007)
+
+  11 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +sun-jre-bin-1.5.0.11.ebuild:
+  Version bump for bug #166305.
 
   23 Jan 2007; Vlastimil Babka <caster@gentoo.org> files/construct-1.6.sh,
   files/construct.sh, -sun-jre-bin-1.5.0.09.ebuild,
