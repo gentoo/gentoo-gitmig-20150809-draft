@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/fbpanel-4.3.ebuild,v 1.6 2006/12/04 01:27:55 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/fbpanel-4.3.ebuild,v 1.7 2007/02/11 08:14:27 josejx Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs flag-o-matic
 
 DESCRIPTION="fbpanel is a light-weight X11 desktop panel"
 HOMEPAGE="http://fbpanel.sourceforge.net/"
@@ -24,6 +24,8 @@ src_unpack() {
 }
 
 src_compile() {
+	### Compile with -E to preserve symbols for modules
+	append-ldflags -Wl,-E
 	# econf not happy here
 	./configure --prefix=/usr || die "Configure failed."
 	emake CHATTY=1 CC=$(tc-getCC) || die "Make failed."
