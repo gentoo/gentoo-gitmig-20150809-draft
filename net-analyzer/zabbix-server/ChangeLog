@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/zabbix-server
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/ChangeLog,v 1.8 2006/11/23 19:55:20 vivo Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/ChangeLog,v 1.9 2007/02/11 22:29:06 wschlich Exp $
+
+*zabbix-server-1.1.6 (11 Feb 2007)
+
+  11 Feb 2007; Wolfram Schlich <wschlich@gentoo.org>
+  +files/1.1.6/init.d/zabbix-server, +files/1.1.6/zabbix_server.conf,
+  +zabbix-server-1.1.6.ebuild:
+  version bump
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> zabbix-server-1.0.ebuild,
   zabbix-server-1.1_alpha7.ebuild, zabbix-server-1.1.ebuild:
