@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/autocutsel
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/autocutsel/ChangeLog,v 1.20 2007/02/11 13:51:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/autocutsel/ChangeLog,v 1.21 2007/02/11 14:29:06 nixnut Exp $
+
+  11 Feb 2007; nixnut <nixnut@gentoo.org> autocutsel-0.9.0.ebuild:
+  Stable on ppc wrt bug 166333
 
   11 Feb 2007; Raúl Porcel <armin76@gentoo.org> autocutsel-0.9.0.ebuild:
   x86 stable wrt bug 166333
