@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/expocity
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/expocity/ChangeLog,v 1.7 2007/02/06 01:26:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/expocity/ChangeLog,v 1.8 2007/02/11 00:56:09 troll Exp $
+
+  11 Feb 2007; Przemysław Maciąg <troll@gentoo.org>
+  expocity-2.6.2.1.ebuild:
+  Updated homepage url
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

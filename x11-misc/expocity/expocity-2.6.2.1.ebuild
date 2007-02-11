@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/expocity/expocity-2.6.2.1.ebuild,v 1.6 2006/01/15 13:44:35 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/expocity/expocity-2.6.2.1.ebuild,v 1.7 2007/02/11 00:56:09 troll Exp $
 
 inherit gnome2
 
 DESCRIPTION="metacity app for switching between apps; similar to Expose on OSX"
 
-HOMEPAGE="http://www.pycage.de/software_expocity.html"
+HOMEPAGE="http://www.pycage.de/#expocity"
 MY_P=${P/.1/-1}
 SRC_URI="http://www.pycage.de/download/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
