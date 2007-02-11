@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Mail-DKIM
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/ChangeLog,v 1.6 2006/10/21 00:28:42 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/ChangeLog,v 1.7 2007/02/11 20:35:46 ian Exp $
+
+*Mail-DKIM-0.22 (11 Feb 2007)
+
+  11 Feb 2007; Christian Hartmann <ian@gentoo.org> +Mail-DKIM-0.22.ebuild:
+  Version bump
 
   21 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   Mail-DKIM-0.19.ebuild:
