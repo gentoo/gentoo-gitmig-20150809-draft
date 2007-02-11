@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.45 2007/01/28 10:13:23 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.46 2007/02/11 10:35:50 opfer Exp $
+
+  11 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  rubygems-0.8.11-r6.ebuild:
+  stable x86; security bug #163536
 
   28 Jan 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
   +files/no-system-rubygems.patch, rubygems-0.9.0-r2.ebuild,
