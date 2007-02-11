@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/basket
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/ChangeLog,v 1.26 2007/02/11 15:02:49 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/ChangeLog,v 1.27 2007/02/11 15:56:25 nixnut Exp $
+
+  11 Feb 2007; nixnut <nixnut@gentoo.org> basket-0.6.0.ebuild:
+  Stable on ppc wrt bug 165237
 
   11 Feb 2007; Steve Dibb <beandog@gentoo.org> basket-0.6.0.ebuild:
   amd64 stable, bug 165237
