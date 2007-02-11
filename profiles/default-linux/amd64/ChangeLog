@@ -1,6 +1,14 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.66 2007/02/10 21:16:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.67 2007/02/11 15:09:14 blubb Exp $
+
+  11 Feb 2007; Simon Stelling <blubb@gentoo.org>
+  -2006.0/32bit-userland/README, +dev/32bit-userland/make.defaults,
+  -2006.0/32bit-userland/make.defaults, +dev/32bit-userland/packages,
+  -2006.0/32bit-userland/parent, +dev/32bit-userland/parent,
+  -2006.0/32bit-userland/profile.bashrc, +dev/32bit-userland/README,
+  make.defaults:
+  move the devel-profile 32bit-userland out of 2006.0
 
   10 Feb 2007; Simon Stelling <blubb@gentoo.org> package.use.mask:
   re-mask mmx for imlib2; bug 166240

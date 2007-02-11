@@ -1,0 +1,20 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/dev/32bit-userland/make.defaults,v 1.1 2007/02/11 15:09:15 blubb Exp $
+
+DEFAULT_ABI="x86"
+ABI="x86"
+CHOST="i686-pc-linux-gnu"
+
+# Catalyst specific settings:
+# This will be commented and replaced with just STAGE1_USE="unicode" if we do
+# not end up with a stable glibc 2.4 by 2006.1's release.
+STAGE1_USE="nptl nptlonly unicode"
+
+# General 2006.1 profile settings
+# These USE flags are what is common between the various sub-profiles.
+USE="cups gdbm gpm libg++ nptl nptlonly ppds udev unicode"
+
+FEATURES="multilib-strict"
+MULTILIB_STRICT_DIRS="/lib32 /lib /usr/lib32 /usr/lib /usr/kde/*/lib32 /usr/kde/*/lib /usr/qt/*/lib32 /usr/qt/*/lib /usr/X11R6/lib32 /usr/X11R6/lib"
+MULTILIB_STRICT_DENY="64-bit.*shared object"

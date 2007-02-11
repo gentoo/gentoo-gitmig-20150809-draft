@@ -1,9 +1,0 @@
-Disclaimer: Don't even think about using this profile outside a chroot.
-All problems related to the profile should block tracker bug #124816.
-
-Since getting this profile running with a stage3 is rather... "tricky",
-I've put together an experimental stage:
-
-http://dev.gentoo.org/~blubb/32bit-userland.tar.bz2
-
-Have fun!
