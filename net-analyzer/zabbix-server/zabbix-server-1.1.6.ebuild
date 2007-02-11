@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.1.6.ebuild,v 1.1 2007/02/11 22:29:06 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.1.6.ebuild,v 1.2 2007/02/11 23:31:47 wschlich Exp $
 
 inherit eutils
 
@@ -23,6 +23,9 @@ RDEPEND="${RDEPEND} net-analyzer/fping"
 S=${WORKDIR}/${MY_P}-${MY_PV}
 
 pkg_setup() {
+	enewgroup zabbix
+	enewuser zabbix -1 -1 /var/lib/zabbix/home zabbix
+
 	if useq oracle; then
 		if [ -z "${ORACLE_HOME}" ]; then
 			eerror
@@ -39,11 +42,6 @@ pkg_setup() {
 			ewarn
 		fi
 	fi
-}
-
-pkg_preinst() {
-	enewgroup zabbix
-	enewuser zabbix -1 -1 /var/lib/zabbix/home zabbix
 }
 
 pkg_postinst() {
@@ -73,6 +71,27 @@ pkg_postinst() {
 		ewarn "  usermod -d /var/lib/zabbix/home zabbix"
 		ewarn
 	fi
+
+	# repeat fowners/fperms functionality from src_install()
+	# here to catch wrong permissions on existing files in
+	# the live filesystem (yeah, that sucks).
+	chown zabbix:zabbix \
+		/etc/zabbix \
+		/etc/zabbix/zabbix_server.conf \
+		/var/lib/zabbix \
+		/var/lib/zabbix/home \
+		/var/lib/zabbix/scripts \
+		/var/log/zabbix \
+		/var/run/zabbix
+	chmod 0640 \
+		/etc/zabbix/zabbix_server.conf
+	chmod 0750 \
+		/etc/zabbix \
+		/var/lib/zabbix \
+		/var/lib/zabbix/home \
+		/var/lib/zabbix/scripts \
+		/var/log/zabbix \
+		/var/run/zabbix
 }
 
 src_unpack() {
@@ -134,7 +153,6 @@ src_install() {
 	fowners zabbix:zabbix \
 		/etc/zabbix \
 		/etc/zabbix/zabbix_server.conf \
-		/usr/share/zabbix/database \
 		/var/lib/zabbix \
 		/var/lib/zabbix/home \
 		/var/lib/zabbix/scripts \
