@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.144 2007/01/29 07:14:58 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.145 2007/02/11 07:45:13 rajiv Exp $
+
+  11 Feb 2007; Rajiv Aaron Manglani <rajiv@gentoo.org>
+  -asterisk-1.2.12.1.ebuild:
+  remove old ebuild. bug #164217.
 
   29 Jan 2007; Rajiv Aaron Manglani <rajiv@gentoo.org>
   -asterisk-1.0.11_p1.ebuild:
