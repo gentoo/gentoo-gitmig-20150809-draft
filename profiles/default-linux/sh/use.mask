@@ -33,7 +33,7 @@ netjack
 mzscheme
 beagle
 eds
-firefox
+pike
 nvtv
 xine
 ocaml
