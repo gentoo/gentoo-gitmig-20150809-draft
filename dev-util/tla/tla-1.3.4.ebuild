@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/tla-1.3.4.ebuild,v 1.2 2006/05/14 16:12:08 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/tla-1.3.4.ebuild,v 1.3 2007/02/11 21:52:43 grobian Exp $
 
 S="${WORKDIR}/${P}/src/=build"
 DESCRIPTION="Revision control system ideal for widely distributed development"
@@ -10,7 +10,7 @@ HOMEPAGE="http://savannah.gnu.org/projects/gnu-arch http://wiki.gnuarch.org/ htt
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc-macos ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="doc"
 
 DEPEND="sys-apps/coreutils
@@ -19,7 +19,7 @@ DEPEND="sys-apps/coreutils
 	sys-apps/findutils
 	sys-apps/gawk
 	app-arch/tar
-	!ppc-macos? ( sys-apps/util-linux )
+	sys-apps/util-linux
 	sys-apps/debianutils
 	sys-devel/make"
 
