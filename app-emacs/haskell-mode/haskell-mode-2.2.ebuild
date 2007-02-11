@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/haskell-mode-2.2.ebuild,v 1.1 2007/02/10 22:13:23 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/haskell-mode-2.2.ebuild,v 1.2 2007/02/11 09:32:47 opfer Exp $
 
 inherit elisp
 
@@ -16,10 +16,6 @@ KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
 
 SITEFILE="51${PN}-gentoo.el"
 
-src_compile() {
-	elisp-comp *.el || die
-}
-
 src_install() {
 	elisp-install ${PN} *.{el,elc}
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
@@ -31,5 +27,5 @@ src_install() {
 
 pkg_postinst() {
 	elisp_pkg_postinst
-	elog "See /usr/share/doc/${PF}/html/installation-guide.html"
+	elog "See /usr/share/doc/${PF}/html/index.html"
 }
