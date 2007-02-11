@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.11.ebuild,v 1.1 2007/02/11 11:43:45 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.11.ebuild,v 1.2 2007/02/11 11:52:31 betelgeuse Exp $
 
 inherit java-vm-2 eutils pax-utils
 
@@ -17,7 +17,7 @@ SRC_URI="x86? ( http://download.java.net/dlj/binaries/${X86_AT} )
 		amd64? ( http://download.java.net/dlj/binaries/${AMD64_AT} )"
 SLOT="1.5"
 LICENSE="dlj-1.1"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="~amd64 ~x86"
 RESTRICT="nostrip"
 IUSE="X alsa doc examples jce nsplugin"
 
@@ -31,15 +31,12 @@ RDEPEND="
 	sys-libs/glibc
 	alsa? ( media-libs/alsa-lib )
 	doc? ( =dev-java/java-sdk-docs-1.5.0* )
-	X? ( || ( ( x11-libs/libX11
-				x11-libs/libXext
-				x11-libs/libXi
-				x11-libs/libXp
-				x11-libs/libXt
-				x11-libs/libXtst
-			  )
-				virtual/x11
-			)
+	X? (
+			x11-libs/libX11
+			x11-libs/libXext
+			x11-libs/libXi
+			x11-libs/libXp
+			x11-libs/libXt
 		)"
 
 JAVA_PROVIDE="jdbc-stdext jdbc-rowset"
