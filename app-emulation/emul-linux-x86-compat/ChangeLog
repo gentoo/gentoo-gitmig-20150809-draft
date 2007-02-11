@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-compat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-compat/ChangeLog,v 1.15 2007/01/30 20:31:05 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-compat/ChangeLog,v 1.16 2007/02/11 23:04:41 blubb Exp $
+
+  11 Feb 2007; Simon Stelling <blubb@gentoo.org>
+  emul-linux-x86-compat-1.0-r3.ebuild:
+  block against gcc-3.3; bug 160335
 
   30 Jan 2007; Doug Goldstein <cardoe@gentoo.org>
   emul-linux-x86-compat-1.0-r3.ebuild:
