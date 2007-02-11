@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.6.1.2.ebuild,v 1.5 2007/02/01 16:04:30 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.6.1.2.ebuild,v 1.6 2007/02/11 12:44:17 blubb Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -17,7 +17,7 @@ SRC_URI="http://www.snort.org/dl/current/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ppc ppc64 -sparc x86"
+KEYWORDS="~alpha amd64 ppc ppc64 -sparc x86"
 IUSE="postgres mysql flexresp selinux snortsam odbc prelude inline dynamicplugin
 timestats perfprofiling linux-smp-stats flexresp2 react sguil gre"
 
@@ -60,6 +60,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	epatch "${FILESDIR}/${P}-libdir.patch"
 	epatch "${FILESDIR}/${PN}-2.6.1.1-libnet.patch"
 	use gre && epatch "${FILESDIR}/${PN}-2.6.1.1-gre.patch"
 	use react && epatch "${FILESDIR}/${P}-react.patch"

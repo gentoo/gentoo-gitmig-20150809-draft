@@ -1,0 +1,14 @@
+--- snort-2.6.1.2/src/dynamic-plugins/sf_engine/Makefile.am.old	2007-02-03 21:11:09.000000000 +0100
++++ snort-2.6.1.2/src/dynamic-plugins/sf_engine/Makefile.am	2007-02-03 21:11:22.000000000 +0100
+@@ -3,9 +3,9 @@
+ 
+ #INCLUDES = -I../include
+ 
+-lib_LTLIBRARIES = libsf_engine.la
++libsf_LTLIBRARIES = libsf_engine.la
+ 
+-libdir = ${exec_prefix}/lib/snort_dynamicengine
++libsfdir = ${libdir}/snort_dynamicengine
+ 
+ libsf_engine_la_LDFLAGS = -module
+ 

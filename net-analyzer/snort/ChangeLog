@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.116 2007/02/01 16:04:30 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.117 2007/02/11 12:44:17 blubb Exp $
+
+  11 Feb 2007; Simon Stelling <blubb@gentoo.org>
+  +files/snort-2.6.1.2-libdir.patch, snort-2.6.1.2.ebuild:
+  fix multilib-strict and mark stable on amd64; security bug 161632
 
   01 Feb 2007; Markus Ullmann <jokey@gentoo.org>
   +files/snort-2.6.1.2-react.patch, snort-2.6.1.2.ebuild:
