@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/asio/asio-0.3.7.ebuild,v 1.3 2006/11/17 06:22:30 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/asio/asio-0.3.7.ebuild,v 1.4 2007/02/11 20:29:18 armin76 Exp $
 
 inherit eutils
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 DESCRIPTION="asynchronous network library"
 HOMEPAGE="http://asio.sourceforge.net/"
