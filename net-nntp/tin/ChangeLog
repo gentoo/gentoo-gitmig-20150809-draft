@@ -1,6 +1,11 @@
 # ChangeLog for net-nntp/tin
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/ChangeLog,v 1.15 2006/11/13 22:20:41 swegener Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/ChangeLog,v 1.16 2007/02/11 13:47:49 swegener Exp $
+
+*tin-1.8.3 (11 Feb 2007)
+
+  11 Feb 2007; Sven Wegener <swegener@gentoo.org> +tin-1.8.3.ebuild:
+  Version bump. Add unicode support, use system libpcre.
 
   13 Nov 2006; Sven Wegener <swegener@gentoo.org>
   -files/tin-1.7.7-mbox-mmdf.patch, -tin-1.6.2.ebuild, -tin-1.7.8.ebuild:
