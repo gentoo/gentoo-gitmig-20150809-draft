@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-2.0_beta10.ebuild,v 1.1 2007/02/07 14:03:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-2.0_beta11.ebuild,v 1.1 2007/02/11 19:19:10 flameeyes Exp $
 
 inherit eutils autotools toolchain-funcs flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="http://people.freebsd.org/~kientzle/libarchive/src/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="build static acl xattr"
+IUSE="build static acl xattr test"
 
 RDEPEND="!dev-libs/libarchive
 	kernel_linux? (
@@ -24,6 +24,7 @@ RDEPEND="!dev-libs/libarchive
 		app-arch/bzip2
 		sys-libs/zlib ) )"
 DEPEND="${RDEPEND}
+	test? ( virtual/pmake )
 	kernel_linux? ( sys-fs/e2fsprogs
 		virtual/os-headers )"
 
@@ -36,6 +37,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/libarchive-1.3.1-static.patch
 	epatch "${FILESDIR}"/libarchive-2.0b6-acl.patch
 	epatch "${FILESDIR}"/libarchive-2.0b7-noacl.patch
+	epatch "${FILESDIR}"/libarchive-2.0b11-tests.patch
 
 	eautoreconf
 	epunt_cxx
@@ -60,6 +62,15 @@ src_compile() {
 		$(use_enable xattr) \
 		${myconf} || die "econf failed"
 	emake || die "emake failed"
+}
+
+src_test() {
+	cd "${S}/libarchive/test"
+	$(get_bmake) || einfo "Ignore this failure."
+	$(get_bmake) test || die "$(get_bmake) test failed"
+
+	cd "${S}/tar/test"
+	PATH="${S}:${PATH}" $(get_bmake) test || die "$(get_bmake) test failed"
 }
 
 src_install() {

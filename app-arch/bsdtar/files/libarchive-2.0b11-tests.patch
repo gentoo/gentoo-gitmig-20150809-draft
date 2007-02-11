@@ -1,0 +1,12 @@
+Index: libarchive-2.0b11/libarchive/test/main.c
+===================================================================
+--- libarchive-2.0b11.orig/libarchive/test/main.c
++++ libarchive-2.0b11/libarchive/test/main.c
+@@ -28,6 +28,7 @@
+  * Each test program is linked against this file.
+  */
+ #include <stdarg.h>
++#include <time.h>
+ 
+ #include "test.h"
+ 
