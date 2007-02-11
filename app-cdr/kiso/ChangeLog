@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/kiso
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/ChangeLog,v 1.33 2007/02/11 00:02:32 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/ChangeLog,v 1.34 2007/02/11 12:45:26 troll Exp $
+
+  11 Feb 2007; Przemysław Maciąg <troll@gentoo.org> -kiso-0.8.2c.ebuild:
+  Deleted older version
 
   11 Feb 2007; Przemysław Maciąg <troll@gentoo.org>
   +files/kiso-desktop_file.patch, kiso-0.8.3.ebuild:
