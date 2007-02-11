@@ -1,16 +1,16 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo/procinfo-18-r1.ebuild,v 1.9 2006/12/11 02:13:51 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo/procinfo-18-r1.ebuild,v 1.10 2007/02/11 13:08:56 vapier Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="A utility to prettyprint /proc/*"
-SRC_URI="http://www.kozmix.org/src/${P}.tar.gz"
 HOMEPAGE="http://www.kozmix.org/src/"
+SRC_URI="http://www.kozmix.org/src/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
+SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 src_unpack() {
@@ -27,9 +27,9 @@ src_compile() {
 }
 
 src_install() {
-	dobin procinfo
-	newbin lsdev.pl lsdev
-	newbin socklist.pl socklist
+	dobin procinfo || die
+	newbin lsdev.pl lsdev || die
+	newbin socklist.pl socklist || die
 
 	doman *.8
 	dodoc README CHANGES
