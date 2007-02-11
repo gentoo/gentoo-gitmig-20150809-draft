@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.222 2007/02/05 19:37:08 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.223 2007/02/11 18:25:15 flameeyes Exp $
+
+  11 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> alsa-lib-1.0.13.ebuild,
+  alsa-lib-1.0.14_rc1.ebuild, alsa-lib-1.0.14_rc1-r1.ebuild,
+  alsa-lib-1.0.14_rc2.ebuild, alsa-lib-1.0.14_rc2-r1.ebuild:
+  As strange as it can sound, you can use alsa-lib without a kernel with ALSA
+  support, thanks to alsa-plugins. So don't depend on virtual/alsa at all.
+  This should deprecate virtual/alsa entirely.
 
   05 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   alsa-lib-1.0.14_rc1.ebuild:
