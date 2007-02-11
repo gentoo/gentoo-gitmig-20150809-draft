@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/swig
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.82 2007/01/10 19:03:27 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.83 2007/02/11 14:23:10 grobian Exp $
+
+  11 Feb 2007; Fabian Groffen <grobian@gentoo.org> swig-1.3.25.ebuild,
+  swig-1.3.27.ebuild, swig-1.3.29.ebuild, swig-1.3.29-r1.ebuild,
+  swig-1.3.31.ebuild:
+  Dropped ppc-macos keyword, see you in prefix
 
   10 Jan 2007; Piotr Jaroszyński <peper@gentoo.org> Manifest:
   Fix Manifest.

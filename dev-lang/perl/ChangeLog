@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.238 2007/01/11 03:28:29 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.239 2007/02/11 14:15:44 grobian Exp $
+
+  11 Feb 2007; Fabian Groffen <grobian@gentoo.org> perl-5.8.8-r2.ebuild:
+  Dropped ppc-macos keyword, see you in prefix
 
   11 Jan 2007; Michael Cummings <mcummings@gentoo.org> perl-5.8.8-r2.ebuild:
   Reverting changes made for bug 59328 until we can figure out why this breaks

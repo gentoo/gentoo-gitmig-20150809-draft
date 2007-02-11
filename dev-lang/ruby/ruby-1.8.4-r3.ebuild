@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4-r3.ebuild,v 1.16 2007/02/11 00:35:03 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4-r3.ebuild,v 1.17 2007/02/11 14:19:50 grobian Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -113,38 +113,29 @@ src_install() {
 		cp -pPR sample ${D}/${ROOT}usr/share/doc/${PF}
 	fi
 
-	if use ppc-macos ; then
-		dosym /usr/lib/libruby${SLOT/./}.${PV%_*}.dylib /usr/lib/libruby.${PV%.*}.dylib
-		dosym /usr/lib/libruby${SLOT/./}.${PV%_*}.dylib /usr/lib/libruby.${PV%_*}.dylib
-	else
-		dosym libruby${SLOT/./}.so.${PV%_*} /usr/$(get_libdir)/libruby.so.${PV%.*}
-		dosym libruby${SLOT/./}.so.${PV%_*} /usr/$(get_libdir)/libruby.so.${PV%_*}
-	fi
+	dosym libruby${SLOT/./}.so.${PV%_*} /usr/$(get_libdir)/libruby.so.${PV%.*}
+	dosym libruby${SLOT/./}.so.${PV%_*} /usr/$(get_libdir)/libruby.so.${PV%_*}
 
 	dodoc COPYING* ChangeLog MANIFEST README* ToDo
 }
 
 pkg_postinst() {
-	if ! use ppc-macos ; then
-		ewarn
-		ewarn "Warning: Vim won't work if you've just updated ruby from"
-		ewarn "1.6.x to 1.8.x due to the library version change."
-		ewarn "In that case, you will need to remerge vim."
-		ewarn
+	ewarn
+	ewarn "Warning: Vim won't work if you've just updated ruby from"
+	ewarn "1.6.x to 1.8.x due to the library version change."
+	ewarn "In that case, you will need to remerge vim."
+	ewarn
 
-		if [ ! -n "$(readlink ${ROOT}usr/bin/ruby)" ] ; then
-			${ROOT}usr/sbin/ruby-config ruby${SLOT/./}
-		fi
-		elog
-		elog "You can change the default ruby interpreter by ${ROOT}usr/sbin/ruby-config"
-		elog
+	if [ ! -n "$(readlink ${ROOT}usr/bin/ruby)" ] ; then
+		${ROOT}usr/sbin/ruby-config ruby${SLOT/./}
 	fi
+	elog
+	elog "You can change the default ruby interpreter by ${ROOT}usr/sbin/ruby-config"
+	elog
 }
 
 pkg_postrm() {
-	if ! use ppc-macos ; then
-		if [ ! -n "$(readlink ${ROOT}usr/bin/ruby)" ] ; then
-			${ROOT}usr/sbin/ruby-config ruby${SLOT/./}
-		fi
+	if [ ! -n "$(readlink ${ROOT}usr/bin/ruby)" ] ; then
+		${ROOT}usr/sbin/ruby-config ruby${SLOT/./}
 	fi
 }
