@@ -1,16 +1,20 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.28-r1.ebuild,v 1.8 2006/11/14 13:33:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.29_pre20070126.ebuild,v 1.1 2007/02/11 20:44:33 pva Exp $
 
 inherit eutils flag-o-matic
 
+my_ver=${PV%%_pre*}
+snap_ver=${PV##*_pre}
+
 DESCRIPTION="The Ubiquitous Amiga Emulator with an emulation core largely based on WinUAE"
 HOMEPAGE="http://www.rcdrummond.net/uae/"
-SRC_URI="http://www.rcdrummond.net/uae/${P}/${P}.tar.bz2"
+#SRC_URI="http://www.rcdrummond.net/uae/${P}/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${PN}-${my_ver}-CVS-${snap_ver}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="X dga ncurses sdl gtk alsa oss sdl-sound capslib"
 
 # Note: opposed to ./configure --help zlib support required! Check
@@ -29,13 +33,15 @@ RDEPEND="X? ( || ( ( x11-libs/libXt
 		alsa? ( media-libs/alsa-lib )
 		!alsa? ( sdl-sound? ( media-libs/sdl-sound ) )
 		gtk? ( >=x11-libs/gtk+-2.0 )
-		capslib? ( games-emulation/caps )
+		capslib? ( >=games-emulation/caps-20060612 )
 		sys-libs/zlib
 		virtual/cdrtools"
 
 DEPEND="$RDEPEND
 		X? ( dga? ( x11-proto/xf86vidmodeproto
 					x11-proto/xf86dgaproto ) )"
+
+S="${WORKDIR}"/${PN}-${my_ver}-CVS
 
 pkg_setup() {
 	# Sound setup.
@@ -64,7 +70,9 @@ pkg_setup() {
 	# VIDEO setup. X is autodetected (there is no --with-X option).
 	if use X ; then
 		elog "Using X11 for video output."
+		ewarn "Fullscreen mode is not working in X11 currently. Use sdl."
 		myconf="$myconf --without-curses --without-sdl-gfx"
+		use dga && ewarn "To use dga you have to run e-uae as root."
 		use dga && myconf="$myconf --enable-dga --enable-vidmode"
 	elif use sdl ; then
 		elog "Using sdl for video output."
@@ -82,7 +90,7 @@ pkg_setup() {
 	use gtk && myconf="$myconf --enable-ui --enable-threads"
 	use gtk || myconf="$myconf --disable-ui"
 
-	use capslib && myconf="$myconf --with-caps"
+	myconf="$myconf $(use_with capslib caps)"
 
 	myconf="$myconf --with-zlib"
 
@@ -90,16 +98,6 @@ pkg_setup() {
 	myconf="$myconf --enable-aga"
 	myconf="$myconf --enable-autoconfig --enable-scsi-device --enable-cdtv --enable-cd32"
 	myconf="$myconf --enable-bsdsock"
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}/${P}-shm-crash.patch"
-	epatch "${FILESDIR}/${P}-fix-joystick-conflicts.patch"
-	epatch "${FILESDIR}/${P}-fix-atoscroll-screen-support.patch"
-	epatch "${FILESDIR}/${P}-fix-JIT-cache-on-NX-cpu.patch"
 }
 
 src_compile() {
@@ -115,13 +113,9 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
-	insinto /usr/share/uae/amiga-tools
-	doins amiga/{*hack,trans*,uae*,*.library}
-
 	# Rename it to e-uae
-	mv "${D}/usr/bin/uae" "${D}/usr/bin/e-uae"
+	mv "${D}/usr/bin/uae" "${D}/usr/bin/${PN}"
 	mv "${D}/usr/bin/readdisk" "${D}/usr/bin/e-readdisk"
-	mv "${D}/usr/share/uae" "${D}/usr/share/${PN}"
 
-	dodoc docs/* README ChangeLog CHANGES
+	dodoc docs/* README ChangeLog
 }

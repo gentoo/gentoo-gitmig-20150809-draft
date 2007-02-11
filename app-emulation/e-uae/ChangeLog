@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/e-uae
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/ChangeLog,v 1.28 2007/02/11 19:49:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/ChangeLog,v 1.29 2007/02/11 20:44:33 pva Exp $
+
+*e-uae-0.8.29_pre20070126 (11 Feb 2007)
+
+  11 Feb 2007; <pva@gentoo.org> -e-uae-0.8.28-r1.ebuild,
+  -e-uae-0.8.29_pre20061116.ebuild, +e-uae-0.8.29_pre20070126.ebuild:
+  Update CVS snapshot. Clean out unused versions.
 
 *e-uae-0.8.29_pre20061116-r1 (11 Feb 2007)
 
