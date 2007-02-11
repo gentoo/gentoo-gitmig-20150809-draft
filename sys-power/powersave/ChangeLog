@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/powersave
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powersave/ChangeLog,v 1.13 2007/02/03 12:58:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powersave/ChangeLog,v 1.14 2007/02/11 08:12:45 genstef Exp $
+
+  11 Feb 2007; <genstef@gentoo.org> files/plugdev_access.patch:
+  Change group to plugdev thanks to Lloeki <lloeki@gmail.com> in bug 161904
 
   03 Feb 2007; Raúl Porcel <armin76@gentoo.org> powersave-0.14.0.ebuild:
   x86 stable wrt bug 132621

@@ -5,7 +5,7 @@
  
    <!--    Allow desktop users to connect -->
 -  <policy at_console="true">
-+  <policy group="users">
++  <policy group="plugdev">
      <allow send_interface="com.novell.powersave"/>
      <allow send_interface="com.novell.powersave.manager"/>
      <allow send_interface="com.novell.powersave.request"/>
