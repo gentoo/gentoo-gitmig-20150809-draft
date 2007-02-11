@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.3.ebuild,v 1.8 2007/02/11 00:02:27 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.3.ebuild,v 1.9 2007/02/11 18:16:25 flameeyes Exp $
 
 inherit flag-o-matic eutils
 
@@ -42,7 +42,7 @@ IUSE="debug alsa arts esd voice speech nas oss spell ssl tk
 	xosd amarok extraicons extramodules mail config_wizard"
 
 DEPEND="=x11-libs/qt-3*
-	alsa? ( media-libs/alsa-lib virtual/alsa
+	alsa? ( media-libs/alsa-lib
 	media-libs/libsndfile )
 	arts? ( kde-base/arts
 			media-libs/libsndfile )

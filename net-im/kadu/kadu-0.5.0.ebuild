@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.5.0.ebuild,v 1.2 2007/02/08 01:27:38 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.5.0.ebuild,v 1.3 2007/02/11 18:16:25 flameeyes Exp $
 
 inherit flag-o-matic eutils
 
@@ -15,7 +15,7 @@ XOSD_NOTIFY="20060424"		#http://www.kadu.net/~joi/xosd_notify
 MAIL="0.2.0"				#http://michal.gov.one.pl/mail
 SPELLCHECKER="0.19"			#http://scripts.one.pl/spellchecker
 #SPY="0.0.8-2"				#http://scripts.one.pl/~przemos/projekty/kaduspy/
-LED_NOTIFY="0.9" 			#http://http://www.kadu.net/~blysk/
+LED_NOTIFY="0.9"			#http://http://www.kadu.net/~blysk/
 SCREEN_SHOT="0.4.4"			#http://scripts.one.pl/screenshot
 OSD_NOTIFY="0.3.2"			#http://www.kadu.net/~pan_wojtas/osdhints_notify/
 POWERKADU="20061109"		#http://kadu.net/~patryk/powerkadu/
@@ -24,7 +24,7 @@ FIREWALL="0.6.4"			#http://www.kadu.net/~pan_wojtas/firewall/download.html
 EXEC_NOTIFY="20060424"		#http://www.kadu.net/~joi/exec_notify/
 FILEDESC="1.12"				#http://scripts.one.pl/filedesc/
 FILTERING="0.3.6-20060816"	#http://www.kadu.net/~pinkworm/filtering/
-PROFILES="0.1"				#http://www.kadu.net/forum/viewtopic.php?t=6282 
+PROFILES="0.1"				#http://www.kadu.net/forum/viewtopic.php?t=6282
 							#(fixme: no homepage?)
 SHELLEXEC="1.2.0"			#http://www.kadu.net/~obeny/modules/shellexec/
 
@@ -56,7 +56,7 @@ IUSE="X debug alsa arts esd voice speech nas oss spell ssl xosd amarok extraicon
 
 DEPEND="=x11-libs/qt-3*
 	media-libs/libsndfile
-	alsa? ( media-libs/alsa-lib virtual/alsa )
+	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
 	amarok? ( media-sound/amarok )
 	esd? ( media-sound/esound )
@@ -69,48 +69,48 @@ DEPEND="=x11-libs/qt-3*
 SRC_URI="http://kadu.net/download/stable/${P}.tar.bz2
 	amarok? ( http://scripts.one.pl/amarok/devel/${MY_PV}/amarok-${AMAROK}.tar.gz )
 	extraicons? (
-	    http://biprowod.wroclaw.pl/kadu/kadu-theme-alt_cryst.tar.bz2
-	    http://www.kadu.net/download/additions/kadu-theme-crystal-16.tar.bz2
-	    http://www.kadu.net/download/additions/kadu-theme-crystal-22.tar.bz2
-	    http://www.kadu.net/download/additions/kadu-theme-gg3d.tar.bz2
-	    http://www.kadu.net/download/additions/kadu-theme-noia-16.tar.bz2
-	    http://www.kadu.net/download/additions/kadu-theme-nuvola-16.tar.gz
-	    http://www.kadu.net/download/additions/kadu-theme-nuvola-22.tar.gz
-	    http://www.kadu.net/download/additions/kadu-theme-old_default.tar.bz2
-	    http://www.kadu.net/download/additions/kadu-theme-piolnet.tar.bz2
-	    http://www.kadu.net/download/additions/kadu-theme-real_gg.tar.bz2 
+		http://biprowod.wroclaw.pl/kadu/kadu-theme-alt_cryst.tar.bz2
+		http://www.kadu.net/download/additions/kadu-theme-crystal-16.tar.bz2
+		http://www.kadu.net/download/additions/kadu-theme-crystal-22.tar.bz2
+		http://www.kadu.net/download/additions/kadu-theme-gg3d.tar.bz2
+		http://www.kadu.net/download/additions/kadu-theme-noia-16.tar.bz2
+		http://www.kadu.net/download/additions/kadu-theme-nuvola-16.tar.gz
+		http://www.kadu.net/download/additions/kadu-theme-nuvola-22.tar.gz
+		http://www.kadu.net/download/additions/kadu-theme-old_default.tar.bz2
+		http://www.kadu.net/download/additions/kadu-theme-piolnet.tar.bz2
+		http://www.kadu.net/download/additions/kadu-theme-real_gg.tar.bz2
 		http://kadu.net/download/additions/kompatybilne_z_GG6.tar.gz
 		http://kadu.net/download/additions/dodatkowe_emoty_GG7.tar.gz
 		http://www.kadu.net/download/additions/kadu-emots-zestaw288.tar.bz2
 		http://www.kadu.net/download/additions/kadu-emots-tex.tar.gz )
 	extramodules? (
 		http://gov.one.pl/svnsnap/tabs-svn-${TABS}.tar.gz
-	    http://www.kadu.net/~blysk/weather-${WEATHER}.tar.bz2
-	    http://www.kadu.net/~dzwiedziu/pub/ext_info-${EXT_INFO}.tar.bz2
-	    http://www.kadu.net/~blysk/led_notify-${LED_NOTIFY}.tar.bz2
+		http://www.kadu.net/~blysk/weather-${WEATHER}.tar.bz2
+		http://www.kadu.net/~dzwiedziu/pub/ext_info-${EXT_INFO}.tar.bz2
+		http://www.kadu.net/~blysk/led_notify-${LED_NOTIFY}.tar.bz2
 		http://scripts.one.pl/screenshot/devel/${MY_PV}/screenshot-${SCREEN_SHOT}.tar.gz
 		http://www.kadu.net/~joi/kde_transparency.tar.bz2
 		http://www.kadu.net/~pan_wojtas/osdhints_notify/download/kadu-osdhints_notify-${OSD_NOTIFY}.tar.gz
 		http://kadu.net/~patryk/powerkadu/powerkadu-${POWERKADU}.tar.gz
-		http://www.kadu.net/~pan_wojtas/firewall/download/kadu-firewall-${FIREWALL}.tar.gz 
-		http://www.kadu.net/~joi/exec_notify/packages/exec_notify-${EXEC_NOTIFY}.tar.bz2 
-		http://scripts.one.pl/filedesc/devel/${MY_PV}/filedesc-${FILEDESC}.tar.gz 
-		http://www.kadu.net/~pinkworm/filtering/filtering-${FILTERING}-${MY_PV}.tar.bz2 
+		http://www.kadu.net/~pan_wojtas/firewall/download/kadu-firewall-${FIREWALL}.tar.gz
+		http://www.kadu.net/~joi/exec_notify/packages/exec_notify-${EXEC_NOTIFY}.tar.bz2
+		http://scripts.one.pl/filedesc/devel/${MY_PV}/filedesc-${FILEDESC}.tar.gz
+		http://www.kadu.net/~pinkworm/filtering/filtering-${FILTERING}-${MY_PV}.tar.bz2
 		http://www.kadu.net/~obeny/modules/shellexec/0.5.x/shellexec-${SHELLEXEC}.tar.bz2 )
 	xosd? ( http://www.kadu.net/~joi/xosd_notify/packages/xosd_notify-${XOSD_NOTIFY}.tar.bz2 )
 	mail? ( http://michal.kernel-panic.cjb.net/mail/tars/release/mail-${MAIL}.tar.bz2 )
 	spell? (
 	http://scripts.one.pl/spellchecker/devel/${MY_PV}/spellchecker-${SPELLCHECKER}.tar.gz
 	)"
-#		http://www.kadu.net/~dorr/kadu-profiles-${PROFILES}.tar.gz 
+#		http://www.kadu.net/~dorr/kadu-profiles-${PROFILES}.tar.gz
 
 
 S=${WORKDIR}/${PN}
 
 enable_module() {
 	if use ${1}; then
-	    mv ${WORKDIR}/${2} ${WORKDIR}/kadu/modules/ || die "Error moving module	${2}"
-	    module_config ${2} m
+		mv ${WORKDIR}/${2} ${WORKDIR}/kadu/modules/ || die "Error moving module	${2}"
+		module_config ${2} m
 	fi
 }
 
@@ -204,12 +204,12 @@ src_compile() {
 	# Some fixes
 	einfo "Fixing modules spec files"
 	if use arts; then
-	    spec_config arts_sound MODULE_INCLUDES_PATH "\"$(kde-config --prefix)/include $(kde-config --prefix)/include/artsc\""
-	    spec_config arts_sound MODULE_LIBS_PATH $(kde-config --prefix)/lib
+		spec_config arts_sound MODULE_INCLUDES_PATH "\"$(kde-config --prefix)/include $(kde-config --prefix)/include/artsc\""
+		spec_config arts_sound MODULE_LIBS_PATH $(kde-config --prefix)/lib
 	fi
 	if use amarok; then
-	    spec_config amarok MODULE_INCLUDES_PATH $(kde-config --prefix)/include
-	    spec_config amarok MODULE_LIBS_PATH $(kde-config --prefix)/lib
+		spec_config amarok MODULE_INCLUDES_PATH $(kde-config --prefix)/include
+		spec_config amarok MODULE_LIBS_PATH $(kde-config --prefix)/lib
 	fi
 
 	local myconf
@@ -229,7 +229,7 @@ src_install() {
 		install || die
 
 	if use extraicons; then
-	    einfo "Installing extra icons"
+		einfo "Installing extra icons"
 		for theme in ${THEMES}; do
 			insinto /usr/share/kadu/themes/icons/${theme}
 			doins ${WORKDIR}/${theme}/{icons.conf,*.png}
@@ -240,7 +240,7 @@ src_install() {
 		mv $S/varia/themes/emoticons/penguins ${WORKDIR}/
 		for emots in $EMOTICONS; do
 			for i in ${WORKDIR}/$emots/*; do
-				insinto  /usr/share/kadu/themes/emoticons/$emots/${i/*\/}
+				insinto	 /usr/share/kadu/themes/emoticons/$emots/${i/*\/}
 				doins $i/*
 			done
 		done
