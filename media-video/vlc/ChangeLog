@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.223 2007/02/11 12:55:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.224 2007/02/11 22:56:04 aballier Exp $
+
+  11 Feb 2007; Alexis Ballier <aballier@gentoo.org> vlc-0.8.6-r1.ebuild,
+  vlc-0.8.6_p18636.ebuild:
+  Fix live detection, bug #160320
 
   11 Feb 2007; Alexis Ballier <aballier@gentoo.org> vlc-0.8.6-r1.ebuild,
   vlc-0.8.6_p18636.ebuild:
