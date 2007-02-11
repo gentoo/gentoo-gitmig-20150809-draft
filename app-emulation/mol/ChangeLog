@@ -1,9 +1,14 @@
 # ChangeLog for app-emulation/mol
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.72 2007/02/11 15:11:34 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.73 2007/02/11 18:22:44 flameeyes Exp $
 
   11 Feb 2007; Joseph Jezak <josejx@gentoo.org> mol-0.9.72_pre2.ebuild:
   Marked ppc stable early for 2.6.19 stabilization.
+
+  11 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> mol-0.9.71.1.ebuild,
+  mol-0.9.72_pre1.ebuild, mol-0.9.72_pre2.ebuild:
+  Don't depend on virtual/alsa (those are drivers), depend properly on
+  media-libs/alsa-lib.
 
   25 Jan 2007; Marius Mauch <genone@gentoo.org> mol-0.9.71.1.ebuild,
   mol-0.9.72_pre1.ebuild, mol-0.9.72_pre2.ebuild:

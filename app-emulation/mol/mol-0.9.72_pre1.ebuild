@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.72_pre1.ebuild,v 1.4 2007/01/25 22:15:36 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.72_pre1.ebuild,v 1.5 2007/02/11 18:22:44 flameeyes Exp $
 
 inherit flag-o-matic eutils linux-mod toolchain-funcs
 
@@ -16,7 +16,7 @@ IUSE="vnc alsa oss fbcon X oldworld sheep debug dga usb pci"
 MAKEOPTS="${MAKEOPTS} -j1"
 RDEPEND="net-misc/dhcp
 	net-firewall/iptables
-	alsa? ( virtual/alsa )
+	alsa? ( media-libs/alsa-lib )
 	vnc? ( net-misc/vnc )
 	X? ( || ( ( x11-libs/libXext
 				dga? ( x11-libs/libXxf86dga )
@@ -26,7 +26,7 @@ RDEPEND="net-misc/dhcp
 	)"
 DEPEND="${RDEPEND}
 	X? ( || ( ( x11-libs/libXt
-			    x11-proto/xextproto
+				x11-proto/xextproto
 				dga? ( x11-proto/xf86dgaproto )
 			  )
 			  virtual/x11
@@ -64,16 +64,16 @@ src_compile() {
 	sed -i "s:CONFIG_XDGA=y:# CONFIG_XDGA is not set:" .config-ppc
 	sed -i "s:CONFIG_TAP=y:# CONFIG_TAP is not set:" .config-ppc
 	sed -i "s:CONFIG_TUN=y:# CONFIG_TUN is not set:" .config-ppc
-	use alsa     || sed -i "s:CONFIG_ALSA=y:# CONFIG_ALSA is not set:" .config-ppc
-	use debug    && sed -i "s:# CONFIG_DEBUGGER is not set:CONFIG_DEBUGGER=y:" .config-ppc
-	use oss      || sed -i "s:CONFIG_OSS=y:# CONFIG_OSS is not set:" .config-ppc
+	use alsa	 || sed -i "s:CONFIG_ALSA=y:# CONFIG_ALSA is not set:" .config-ppc
+	use debug	 && sed -i "s:# CONFIG_DEBUGGER is not set:CONFIG_DEBUGGER=y:" .config-ppc
+	use oss		 || sed -i "s:CONFIG_OSS=y:# CONFIG_OSS is not set:" .config-ppc
 	use oldworld || sed -i "s:CONFIG_OLDWORLD=y:# CONFIG_OLDWORLD is not set:" .config-ppc
-	use sheep    || sed -i "s:CONFIG_SHEEP=y:# CONFIG_SHEEP is not set:" .config-ppc
-	use X        || sed -i "s:CONFIG_X11=y:# CONFIG_X11 is not set:" .config-ppc
-	use fbcon    || sed -i "s:CONFIG_FBDEV=y:# CONFIG_FBDEV is not set:" .config-ppc
-	use vnc      || sed -i "s:CONFIG_VNC=y:# CONFIG_VNC is not set:" .config-ppc
-	use dga      || sed -i "s:CONFIG_XDGA=y:# CONFIG_XDGA is not set:" .config-ppc
-	use usb      || sed -i "s:CONFIG_USBDEV=y:# CONFIG_USBDEV is not set:" .config-ppc
+	use sheep	 || sed -i "s:CONFIG_SHEEP=y:# CONFIG_SHEEP is not set:" .config-ppc
+	use X		 || sed -i "s:CONFIG_X11=y:# CONFIG_X11 is not set:" .config-ppc
+	use fbcon	 || sed -i "s:CONFIG_FBDEV=y:# CONFIG_FBDEV is not set:" .config-ppc
+	use vnc		 || sed -i "s:CONFIG_VNC=y:# CONFIG_VNC is not set:" .config-ppc
+	use dga		 || sed -i "s:CONFIG_XDGA=y:# CONFIG_XDGA is not set:" .config-ppc
+	use usb		 || sed -i "s:CONFIG_USBDEV=y:# CONFIG_USBDEV is not set:" .config-ppc
 	use pci		 || sed -i "s:CONFIG_PCIPROXY=y:# CONFIG_PCIPROXY is not set:" .config-ppc
 
 	einfo "The configuration has been altered according to your USE-flags."
@@ -105,8 +105,8 @@ pkg_postinst() {
 	echo
 	elog "Mac-on-Linux is now installed.  To run, use the command startmol."
 	elog "You might want to configure video modes first with molvconfig."
-	elog "Other configuration is in /etc/molrc.  For more info see:"
-	elog "              http://www.maconlinux.org"
+	elog "Other configuration is in /etc/molrc.	 For more info see:"
+	elog "				http://www.maconlinux.org"
 	elog "Also try man molrc, man molvconfig, man startmol"
 	echo
 	ewarn "For networking and sound you might install the drivers in the"
@@ -115,15 +115,15 @@ pkg_postinst() {
 	ewarn "If errors with networking occur, make sure you have the following"
 	ewarn "kernel functions enabled:"
 	ewarn "For connecting to Linux:"
-	ewarn "    Universal TUN/TAP device driver support (CONFIG_TUN)"
+	ewarn "	   Universal TUN/TAP device driver support (CONFIG_TUN)"
 	ewarn "For the dhcp server:"
-	ewarn "    Packet Socket (CONFIG_PACKET)"
+	ewarn "	   Packet Socket (CONFIG_PACKET)"
 	ewarn "For NAT:"
-	ewarn "    Network packet filtering (CONFIG_NETFILTER)"
-	ewarn "    Connection tracking (CONFIG_IP_NF_CONNTRACK)"
-	ewarn "    IP tables support (CONFIG_IP_NF_IPTABLES)"
-	ewarn "    Packet filtering (CONFIG_IP_NF_FILTER)"
-	ewarn "    Full NAT (CONFIG_IP_NF_NAT)"
-	ewarn "    MASQUERADE target support (CONFIG_IP_NF_TARGET_MASQUERADE)"
+	ewarn "	   Network packet filtering (CONFIG_NETFILTER)"
+	ewarn "	   Connection tracking (CONFIG_IP_NF_CONNTRACK)"
+	ewarn "	   IP tables support (CONFIG_IP_NF_IPTABLES)"
+	ewarn "	   Packet filtering (CONFIG_IP_NF_FILTER)"
+	ewarn "	   Full NAT (CONFIG_IP_NF_NAT)"
+	ewarn "	   MASQUERADE target support (CONFIG_IP_NF_TARGET_MASQUERADE)"
 	echo
 }
