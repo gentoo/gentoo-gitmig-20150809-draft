@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/twolame
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/twolame/ChangeLog,v 1.8 2007/02/07 13:44:19 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/twolame/ChangeLog,v 1.9 2007/02/11 14:45:13 pylon Exp $
+
+  11 Feb 2007; Lars Weiler <pylon@gentoo.org> twolame-0.3.9.ebuild:
+  Added ~ppc.
 
   07 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> twolame-0.3.8.ebuild:
   Stable on sparc wrt #165396
