@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.18.1.ebuild,v 1.2 2007/02/08 19:22:32 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.18.1.ebuild,v 1.3 2007/02/11 11:23:09 vapier Exp $
 
 inherit bash-completion eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~s390 ~sparc ~x86"
 IUSE="contrarius cran doc glsa inquisitio pink qa ruby selinux zsh-completion"
 
 COMMON_DEPEND="
@@ -65,7 +65,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "install failed"
+	emake DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS README ChangeLog NEWS
 
 	BASH_COMPLETION_NAME="adjutrix" dobashcompletion bash-completion/adjutrix
@@ -111,4 +111,3 @@ pkg_postinst() {
 	einfo "    http://paludis.pioto.org/faq.html"
 	echo
 }
-
