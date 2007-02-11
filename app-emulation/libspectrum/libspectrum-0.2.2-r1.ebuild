@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/libspectrum-0.2.2-r1.ebuild,v 1.2 2007/02/11 12:10:43 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/libspectrum-0.2.2-r1.ebuild,v 1.3 2007/02/11 15:41:43 nixnut Exp $
 
 DESCRIPTION="Spectrum emulation library"
 HOMEPAGE="http://www.srcf.ucam.org/~pak21/spectrum/libspectrum.html"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/fuse-emulator/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 
 DEPEND=">=dev-libs/glib-2
 	dev-libs/libgcrypt
