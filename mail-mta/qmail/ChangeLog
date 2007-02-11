@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/qmail
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.83 2006/10/21 19:40:23 hansmi Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.84 2007/02/11 19:01:05 hansmi Exp $
+
+  11 Feb 2007; Michael Hanselmann <hansmi@gentoo.org> qmail-1.03-r15.ebuild,
+  qmail-1.03-r16.ebuild:
+  Change warnings added in October to mention that mail-mta/qmail is going to
+  be masked mid March.
 
   21 Oct 2006; Michael Hanselmann <hansmi@gentoo.org> qmail-1.03-r15.ebuild,
   qmail-1.03-r16.ebuild:
