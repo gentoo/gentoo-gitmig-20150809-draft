@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/supertransball2
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertransball2/ChangeLog,v 1.1 2007/02/11 09:26:34 tupone Exp $
+
+*supertransball2-1.5 (11 Feb 2007)
+
+  11 Feb 2007; <tupone@gentoo.org> +metadata.xml,
+  +supertransball2-1.5.ebuild:
+  New ebuild by brebs. Bug #109199 by desowin.
+
