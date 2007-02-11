@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.16.ebuild,v 1.4 2007/02/09 17:02:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.16.ebuild,v 1.5 2007/02/11 04:01:43 pylon Exp $
 
 inherit gnome.org eutils autotools mono
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.beagle-project.org/"
 
 LICENSE="MIT Apache-1.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="chm doc evo galago gtk ole pdf python thunderbird"
 
 RDEPEND="
