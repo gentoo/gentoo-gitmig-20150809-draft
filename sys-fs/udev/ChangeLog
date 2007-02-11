@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.251 2007/02/10 23:27:57 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.252 2007/02/11 07:19:14 josejx Exp $
+
+  11 Feb 2007; Joseph Jezak <josejx@gentoo.org> udev-104-r9.ebuild:
+  Marked ppc stable for bug #159871.
 
   10 Feb 2007; Matthias Schwarzott <zzam@gentoo.org> files/modprobe.sh:
   Corrected both grep-expressions, to not get commented blacklist entries, and
