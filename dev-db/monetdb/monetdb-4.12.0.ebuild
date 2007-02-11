@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/monetdb-4.12.0.ebuild,v 1.3 2007/01/31 13:41:05 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/monetdb-4.12.0.ebuild,v 1.4 2007/02/11 14:12:38 grobian Exp $
 
 inherit flag-o-matic eutils
 
@@ -203,9 +203,6 @@ src_install() {
 		|| die "removing tests"
 	# remove windows cruft
 	find "${D}" -name "*.bat" | xargs rm -f || die "removing windows stuff"
-	# remove perl DBD on ppc-macos, since it gets installed in the wrong
-	# location and getting it right is not just a simple thing
-	use ppc-macos && rm -Rf "${D}/usr/Network" > /dev/null
 }
 
 src_test() {
