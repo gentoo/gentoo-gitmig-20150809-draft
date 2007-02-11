@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.14_rc1.ebuild,v 1.8 2007/02/11 18:37:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.14_rc1.ebuild,v 1.9 2007/02/11 18:47:51 flameeyes Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
@@ -16,7 +16,7 @@ SRC_URI="mirror://alsaproject/tools/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0.9"
 KEYWORDS="~amd64 ~ia64 ~mips ppc ppc64 sparc x86"
-IUSE="fltk gtk"
+IUSE="fltk gtk midi"
 
 RDEPEND=">=media-libs/alsa-lib-1.0.0
 	fltk? ( =x11-libs/fltk-1.1* )
@@ -26,12 +26,23 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	ALSA_TOOLS="ac3dec as10k1 hdsploader mixartloader seq/sbiload
-				sscape_ctl us428control usx2yloader vxloader"
+	if use midi && ! built_with_use --missing true media-libs/alsa-lib midi; then
+		eerror ""
+		eerror "To be able to build ${CATEGORY}/${PN} with midi support you"
+		eerror "need to have built media-libs/alsa-lib with midi USE flag."
+		die "Missing midi USE flag on media-libs/alsa-lib"
+	fi
+
+	ALSA_TOOLS="ac3dec as10k1 hdsploader mixartloader
+				sscape_ctl usx2yloader vxloader"
+
+	use midi && ALSA_TOOLS="${ALSA_TOOLS} seq/sbiload us428control"
 
 	use fltk && ALSA_TOOLS="${ALSA_TOOLS} hdspconf hdspmixer"
 
-	use gtk && ALSA_TOOLS="${ALSA_TOOLS} echomixer envy24control rmedigicontrol"
+	use gtk && ALSA_TOOLS="${ALSA_TOOLS} echomixer rmedigicontrol"
+	use gtk && use midi && ALSA_TOOLS="${ALSA_TOOLS} envy24control"
+
 	# sb16_csp won't build on ppc64 _AND_ ppc (and is not needed)
 	if	use !ppc64 && use !ppc; then
 		ALSA_TOOLS="${ALSA_TOOLS} sb16_csp"
@@ -68,8 +79,8 @@ src_compile() {
 	for f in ${ALSA_TOOLS}
 	do
 		cd "${S}/${f}"
-		econf --with-gtk2 || die "econf failed"
-		make || die "make failed"
+		econf --with-gtk2 || die "econf ${f} failed"
+		emake || die "emake ${f} failed"
 	done
 }
 

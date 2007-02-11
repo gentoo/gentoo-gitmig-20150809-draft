@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/alsa-tools
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.135 2007/02/11 18:37:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.136 2007/02/11 18:47:51 flameeyes Exp $
+
+  11 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  alsa-tools-1.0.14_rc1.ebuild:
+  Add a midi useflag to disable building of the tools that require snd_seq_*
+  functions, so that the package can be built with alsa-lib with the midi
+  useflag disabled.
 
   11 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   alsa-tools-1.0.13.ebuild, alsa-tools-1.0.14_rc1.ebuild:
