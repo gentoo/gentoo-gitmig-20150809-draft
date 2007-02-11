@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.187 2007/02/11 20:01:43 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.188 2007/02/11 20:41:17 nichoj Exp $
+
+  11 Feb 2007; Joshua Nichols <nichoj@gentoo.org> sun-jdk-1.6.0-r1.ebuild:
+  Applied fix for bug #166397 to 1.6.0-r1.
 
   11 Feb 2007; Joshua Nichols <nichoj@gentoo.org> sun-jdk-1.5.0.11.ebuild:
   Addressed bug #166397. Only will sed .desktop file and install it if the

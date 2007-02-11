@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0-r1.ebuild,v 1.6 2007/02/11 11:52:31 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0-r1.ebuild,v 1.7 2007/02/11 20:41:17 nichoj Exp $
 
 inherit java-vm-2 eutils pax-utils
 
@@ -115,16 +115,18 @@ src_install() {
 	touch ${D}/opt/${P}/jre/.systemPrefs/.systemRootModFile
 	chmod 644 ${D}/opt/${P}/jre/.systemPrefs/.systemRootModFile
 
-	# install control panel for Gnome/KDE
-	# The jre also installs these so make sure that they do not have the same
-	# Name
-	sed -e "s/\(Name=\)Java/\1 Java Control Panel for Sun JDK ${SLOT}/" \
-		-e "s#Exec=.*#Exec=/opt/${P}/jre/bin/ControlPanel#" \
-		-e "s#Icon=.*#Icon=/opt/${P}/jre/plugin/desktop/sun_java.png#" \
-		${D}/opt/${P}/jre/plugin/desktop/sun_java.desktop > \
-		${T}/sun_jdk-${SLOT}.desktop
+	if [[ -f ${D}/opt/${P}/jre/plugin/desktop/sun_java.desktop ]]; then
+		# install control panel for Gnome/KDE
+		# The jre also installs these so make sure that they do not have the same
+		# Name
+		sed -e "s/\(Name=\)Java/\1 Java Control Panel for Sun JDK ${SLOT}/" \
+			-e "s#Exec=.*#Exec=/opt/${P}/jre/bin/ControlPanel#" \
+			-e "s#Icon=.*#Icon=/opt/${P}/jre/plugin/desktop/sun_java.png#" \
+			${D}/opt/${P}/jre/plugin/desktop/sun_java.desktop > \
+			${T}/sun_jdk-${SLOT}.desktop
 
-	domenu ${T}/sun_jdk-${SLOT}.desktop
+		domenu ${T}/sun_jdk-${SLOT}.desktop
+	fi
 
 	# bug #56444
 	insinto /opt/${P}/jre/lib/
