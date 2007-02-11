@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/darkice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.33 2007/02/05 04:12:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.34 2007/02/11 14:46:41 pylon Exp $
+
+  11 Feb 2007; Lars Weiler <pylon@gentoo.org> darkice-0.17.1.ebuild:
+  Added ~ppc; bug #133776.
 
   05 Feb 2007; Jeroen Roovers <jer@gentoo.org> darkice-0.17.1.ebuild:
   Marked ~hppa (bug #133776).
