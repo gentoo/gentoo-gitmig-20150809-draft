@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6-r1.ebuild,v 1.13 2007/02/10 23:39:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6-r1.ebuild,v 1.14 2007/02/11 00:49:52 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -33,7 +33,7 @@ dvb dvd vcd dts flac mpeg vorbis theora X opengl truetype svg fbcon svga
 oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc stream
 mp3 xv bidi sdl sdl-image png xml samba daap corba mod speex shout rtsp
 win32codecs skins hal avahi xinerama cddb directfb upnp nsplugin seamonkey
-optimisememory libnotify"
+optimisememory libnotify musepack"
 
 RDEPEND="
 		>=media-video/ffmpeg-0.4.9_p20050226-r1
@@ -107,6 +107,7 @@ RDEPEND="
 			!seamonkey? ( www-client/mozilla-firefox )
 			seamonkey? ( www-client/seamonkey )
 		)
+		musepack? ( media-libs/libmpcdec )
 		libnotify? ( x11-libs/libnotify )"
 
 DEPEND="${RDEPEND}
@@ -236,6 +237,7 @@ src_compile () {
 		$(use_enable upnp) \
 		$(use_enable optimisememory optimize-memory) \
 		$(use_enable libnotify) \
+		$(use_enable musepack mpc) \
 		--enable-ffmpeg \
 		--disable-faad \
 		--disable-jack \
