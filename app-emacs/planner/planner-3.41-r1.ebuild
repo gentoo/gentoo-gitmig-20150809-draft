@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/planner/planner-3.41-r1.ebuild,v 1.2 2007/02/02 16:56:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/planner/planner-3.41-r1.ebuild,v 1.3 2007/02/11 07:38:06 josejx Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.gna.org/planner-el/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~sparc ~x86"
+KEYWORDS="~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=app-emacs/muse-3.02.6a
