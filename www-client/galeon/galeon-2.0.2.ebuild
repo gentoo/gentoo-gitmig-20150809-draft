@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-2.0.2.ebuild,v 1.1 2006/11/24 20:25:54 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-2.0.2.ebuild,v 1.2 2007/02/11 00:26:17 hanno Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="A GNOME Web browser based on gecko (mozilla's rendering engine)"
 HOMEPAGE="http://galeon.sourceforge.net"
