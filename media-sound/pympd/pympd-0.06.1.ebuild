@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/pympd-0.06.1.ebuild,v 1.1 2006/03/22 10:54:37 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/pympd-0.06.1.ebuild,v 1.2 2007/02/11 20:32:31 ticho Exp $
 
 inherit eutils python
 
@@ -14,6 +14,7 @@ SLOT="0"
 IUSE="gnome"
 RDEPEND=">=virtual/python-2.4
 	>=dev-python/pygtk-2.6
+	x11-themes/gnome-icon-theme
 	gnome? ( dev-python/gnome-python-extras )"
 
 DOCS="README"
