@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.30 2007/02/11 09:49:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.31 2007/02/11 12:46:52 armin76 Exp $
+
+  11 Feb 2007; Raúl Porcel <armin76@gentoo.org> syslinux-3.31.ebuild:
+  x86 stable wrt bug 166144
 
 *syslinux-3.36 (11 Feb 2007)
 
