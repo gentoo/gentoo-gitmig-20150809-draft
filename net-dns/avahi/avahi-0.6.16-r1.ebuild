@@ -1,6 +1,6 @@
 # Copyright 2000-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.16-r1.ebuild,v 1.8 2007/01/29 11:09:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.16-r1.ebuild,v 1.9 2007/02/11 10:50:48 vapier Exp $
 
 inherit eutils mono python qt3 qt4
 
@@ -11,7 +11,7 @@ SRC_URI="http://avahi.org/download/${P}.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ppc ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="bookmarks howl-compat mdnsresponder-compat gdbm dbus doc mono gtk python qt3 qt4 autoipd"
 
 RDEPEND=">=dev-libs/libdaemon-0.5
