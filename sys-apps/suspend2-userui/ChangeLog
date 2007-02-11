@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/suspend2-userui
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/suspend2-userui/ChangeLog,v 1.21 2007/02/09 21:39:16 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/suspend2-userui/ChangeLog,v 1.22 2007/02/11 10:23:47 alonbl Exp $
+
+  11 Feb 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/suspend2-userui-0.7.0-syscall.patch, suspend2-userui-0.7.0.ebuild:
+  Readd glibc fix to new version
 
 *suspend2-userui-0.7.0 (09 Feb 2007)
 

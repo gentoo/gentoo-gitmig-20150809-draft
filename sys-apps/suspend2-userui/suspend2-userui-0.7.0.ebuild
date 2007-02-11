@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/suspend2-userui/suspend2-userui-0.7.0.ebuild,v 1.1 2007/02/09 21:39:16 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/suspend2-userui/suspend2-userui-0.7.0.ebuild,v 1.2 2007/02/11 10:23:47 alonbl Exp $
 
 inherit toolchain-funcs eutils
 
@@ -20,6 +20,12 @@ DEPEND="virtual/libc
 					media-libs/lcms
 					>=media-libs/libmng-1.0.5
 					media-libs/libpng )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-syscall.patch"
+}
 
 src_compile() {
 	# allow for static linking for use in initramfs/initrd
