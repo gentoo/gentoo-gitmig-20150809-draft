@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kplato
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.33 2007/02/10 20:43:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.34 2007/02/11 21:55:41 opfer Exp $
+
+  11 Feb 2007; Christian Faulhammer <opfer@gentoo.org> kplato-1.6.1.ebuild:
+  stable x86; security bug #166246
 
   10 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> -kplato-1.6.0.ebuild:
   Remove old version.

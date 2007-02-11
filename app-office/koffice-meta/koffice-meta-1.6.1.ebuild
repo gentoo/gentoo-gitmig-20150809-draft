@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-meta/koffice-meta-1.6.1.ebuild,v 1.1 2006/12/01 18:16:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-meta/koffice-meta-1.6.1.ebuild,v 1.2 2007/02/11 22:00:36 opfer Exp $
 
 MAXKOFFICEVER=${PV}
 inherit kde-functions
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.koffice.org/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="$(deprange $PV $MAXKOFFICEVER app-office/karbon)

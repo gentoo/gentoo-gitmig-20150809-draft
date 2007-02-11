@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kchart
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kchart/ChangeLog,v 1.64 2007/02/10 20:26:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kchart/ChangeLog,v 1.65 2007/02/11 21:48:48 opfer Exp $
+
+  11 Feb 2007; Christian Faulhammer <opfer@gentoo.org> kchart-1.6.1.ebuild:
+  stable x86; security bug #166246
 
   10 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> -kchart-1.6.0.ebuild:
   Remove old version.
