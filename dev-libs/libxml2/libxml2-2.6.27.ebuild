@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.27.ebuild,v 1.8 2007/02/04 23:47:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.27.ebuild,v 1.9 2007/02/11 09:54:18 vapier Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.xmlsoft.org/"
 
 LICENSE="MIT"
 SLOT="2"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="debug doc ipv6 python readline test"
 
 XSTS_HOME="http://www.w3.org/XML/2004/xml-schema-test-suite"
@@ -26,13 +26,11 @@ SRC_URI="ftp://xmlsoft.org/${PN}/${P}.tar.gz
 RDEPEND="sys-libs/zlib
 	python? ( dev-lang/python )
 	readline? ( sys-libs/readline )"
-
 DEPEND="${RDEPEND}
 	hppa? ( >=sys-devel/binutils-2.15.92.0.2 )"
 
-
 src_unpack() {
-	unpack "${P}.tar.gz"
+	unpack ${P}.tar.gz
 	cd "${S}"
 
 	if use test; then
