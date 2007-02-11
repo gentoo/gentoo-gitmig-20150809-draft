@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.49 2007/02/03 08:34:21 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.50 2007/02/11 16:45:56 grobian Exp $
 
 WANT_AUTOMAKE="1.4"
 
@@ -61,9 +61,5 @@ src_install() {
 	dohtml -r docs
 
 	cd "${D}"/usr/$(get_libdir) || die
-	if use ppc-macos ; then
-		chmod 755 libgmodule-1.2.*.dylib
-	else
-		chmod 755 libgmodule-1.2.so.*
-	fi
+	chmod 755 libgmodule-1.2.so.*
 }
