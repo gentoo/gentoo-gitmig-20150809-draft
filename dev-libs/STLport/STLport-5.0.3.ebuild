@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.1.0.ebuild,v 1.11 2007/02/11 23:56:09 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.0.3.ebuild,v 1.1 2007/02/11 23:56:09 dev-zero Exp $
 
 inherit eutils versionator eutils toolchain-funcs multilib flag-o-matic
 
@@ -20,9 +20,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# It should be save to apply this on non-ppc systems as well
-	epatch "${FILESDIR}/${P}-ppc.patch"
-	epatch "${FILESDIR}/${P}-wrong_russian_currency_name.patch"
+	epatch "${FILESDIR}/STLport-5.0.2-gcc41.patch"
+	epatch "${FILESDIR}/STLport-5.1.0-wrong_russian_currency_name.patch"
 
 	sed -i \
 		-e 's/\(OPT += \)-O2/\1/' \
@@ -36,7 +35,7 @@ src_unpack() {
 }
 
 src_compile() {
-	cat <<- EOF >> stlport/stl/config/user_config.h
+	cat <<- EOF >> stlport/stl_user_config.h
 	#define _STLP_NATIVE_INCLUDE_PATH ../g++-v$(gcc-major-version)
 	EOF
 
@@ -52,7 +51,7 @@ src_compile() {
 		myconf="${myconf} --with-boost=${ROOT}usr/include"
 		sed -i \
 			-e 'N;N;N;s:/\**\n\(#define _STLP_USE_BOOST_SUPPORT 1\)*\n\*/:\1:' \
-			stlport/stl/config/user_config.h
+			stlport/stl_user_config.h
 	fi
 
 	cd "${S}/build/lib"
@@ -98,11 +97,11 @@ src_test() {
 	cd "${S}/build"
 
 	sed -i \
-		-e "1aLDFLAGS := -L${S}/build/lib/obj/gcc/so -L${S}/build/lib/obj/gcc/so_g -L${S}/build/lib/obj/gcc/so_stlg" \
+		-e "1aLDFLAGS := -L${S}/build/lib/obj/gcc/shared -L${S}/build/lib/obj/gcc/shared-g -L${S}/build/lib/obj/gcc/shared-stlg" \
 		test/unit/gcc.mak || die "sed failed"
 
 	emake -j1 -C test/unit -f gcc.mak || die "emake tests failed"
 
-	export LD_LIBRARY_PATH="./lib/obj/gcc/so_stlg"
-	./test/unit/obj/gcc/so_stlg/stl_unit_test || die "unit tests failed"
+	export LD_LIBRARY_PATH="./lib/obj/gcc/shared-stlg"
+	./test/unit/obj/gcc/shared-stlg/stl_unit_test || die "unit tests failed"
 }
