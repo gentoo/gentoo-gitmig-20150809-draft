@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libherdstat/libherdstat-0.2.0.ebuild,v 1.3 2007/02/11 13:13:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libherdstat/libherdstat-0.2.0.ebuild,v 1.4 2007/02/11 21:20:26 dev-zero Exp $
 
 inherit eutils autotools
 
@@ -15,7 +15,7 @@ SRC_URI="http://download.berlios.de/${PN}/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~s390 ~sh ~sparc ~x86"
-IUSE="debug doc curl static test"
+IUSE="debug doc curl test"
 
 RDEPEND=">=dev-libs/xmlwrapp-0.5.0
 	>=dev-cpp/libebt-1.1.0
@@ -44,8 +44,8 @@ src_compile() {
 	econf \
 		--disable-examples \
 		--with-test-data=${WORKDIR}/${TEST_DATA_P} \
+		--enable-static \
 		$(use_enable debug) \
-		$(use_enable static) \
 		$(use_with curl) \
 		|| die "econf failed"
 
