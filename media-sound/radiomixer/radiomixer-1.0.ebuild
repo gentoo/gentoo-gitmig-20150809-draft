@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/radiomixer/radiomixer-1.0.ebuild,v 1.2 2006/05/18 12:00:35 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/radiomixer/radiomixer-1.0.ebuild,v 1.3 2007/02/11 18:11:50 flameeyes Exp $
 
 inherit kde-functions eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="alsa debug hwmixer jack mad songdb vorbis"
 
 DEPEND="media-libs/libsamplerate
-	alsa? ( virtual/alsa )
+	alsa? ( media-libs/alsa-lib )
 	jack? ( media-sound/jack-audio-connection-kit )
 	mad? ( media-libs/libmad )
 	vorbis? ( media-libs/libvorbis )"
@@ -64,22 +64,22 @@ src_compile() {
 
 	local myconf
 	if ! use alsa ; then
-	    myconf="--disable-alsa"
+		myconf="--disable-alsa"
 	fi
 	if use hwmixer ; then
-	    myconf="${myconf} --enable-hwmixer"
+		myconf="${myconf} --enable-hwmixer"
 	fi
 	if ! use jack ; then
-	    myconf="${myconf} --disable-jackd"
+		myconf="${myconf} --disable-jackd"
 	fi
 	if ! use mad ; then
-	    myconf="${myconf} --disable-mad"
+		myconf="${myconf} --disable-mad"
 	fi
 	if use songdb ; then
-	    myconf="${myconf} --enable-songdb"
+		myconf="${myconf} --enable-songdb"
 	fi
 	if ! use vorbis ; then
-	    myconf="${myconf} --disable-vorbis"
+		myconf="${myconf} --disable-vorbis"
 	fi
 	if use debug ; then
 		myconf="${myconf} --debug"

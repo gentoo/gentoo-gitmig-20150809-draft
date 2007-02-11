@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/radiomixer
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/radiomixer/ChangeLog,v 1.4 2006/05/18 12:00:35 jokey Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/radiomixer/ChangeLog,v 1.5 2007/02/11 18:11:50 flameeyes Exp $
+
+  11 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> radiomixer-1.0.ebuild:
+  Don't depend on virtual/alsa (those are drivers), depend properly on
+  media-libs/alsa-lib.
 
   18 May 2006; Markus Ullmann <jokey@gentoo.org> radiomixer-1.0.ebuild:
   Removing the qmake call as it is done by upstreams configure now
