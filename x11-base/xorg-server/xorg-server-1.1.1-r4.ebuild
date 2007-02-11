@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r4.ebuild,v 1.10 2007/01/22 15:17:01 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r4.ebuild,v 1.11 2007/02/11 10:54:48 vapier Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -20,7 +20,7 @@ SRC_URI="${SRC_URI}
 DESCRIPTION="X.Org X servers"
 # It's suid and has lazy bindings, so FEATURES="stricter" doesn't work
 RESTRICT="stricter"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE_INPUT_DEVICES="
 	input_devices_acecad
 	input_devices_aiptek
