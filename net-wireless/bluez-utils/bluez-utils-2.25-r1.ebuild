@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.25-r1.ebuild,v 1.8 2007/02/10 22:31:54 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.25-r1.ebuild,v 1.9 2007/02/11 11:08:12 vapier Exp $
 
 inherit eutils
 
@@ -10,23 +10,22 @@ SRC_URI="http://bluez.sourceforge.net/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 hppa ppc sparc x86"
+KEYWORDS="~amd64 arm hppa ppc sh sparc x86"
 
 IUSE="alsa cups dbus gtk pcmcia"
 
 RDEPEND="!net-wireless/bluez-pan
-		>=net-wireless/bluez-libs-2.25
-		dev-libs/libusb
-		alsa? ( >=media-libs/alsa-lib-1.0.9 )
-		cups? ( net-print/cups )
-		dbus? ( >=sys-apps/dbus-0.31 )
-		gtk? ( >=dev-python/pygtk-2.2 )
-		pcmcia? ( virtual/pcmcia
-				  sys-apps/setserial )"
+	>=net-wireless/bluez-libs-2.25
+	dev-libs/libusb
+	alsa? ( >=media-libs/alsa-lib-1.0.9 )
+	cups? ( net-print/cups )
+	dbus? ( >=sys-apps/dbus-0.31 )
+	gtk? ( >=dev-python/pygtk-2.2 )
+	pcmcia? ( virtual/pcmcia sys-apps/setserial )"
 DEPEND="sys-devel/bison
-		sys-devel/flex
-		>=sys-apps/sed-4
-		${RDEPEND}"
+	sys-devel/flex
+	>=sys-apps/sed-4
+	${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
