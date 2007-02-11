@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/jext
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jext/ChangeLog,v 1.14 2007/02/11 10:32:00 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jext/ChangeLog,v 1.15 2007/02/11 14:53:12 nixnut Exp $
+
+  11 Feb 2007; nixnut <nixnut@gentoo.org> jext-3.2_pre3-r1.ebuild:
+  Stable on ppc wrt bug 166257
 
   11 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
   jext-3.2_pre3-r1.ebuild:
