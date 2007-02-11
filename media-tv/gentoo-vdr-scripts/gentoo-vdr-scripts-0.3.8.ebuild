@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.3.8.ebuild,v 1.2 2007/01/31 22:50:58 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.3.8.ebuild,v 1.3 2007/02/11 16:57:57 hd_brummy Exp $
 
 inherit eutils
 
@@ -42,6 +42,7 @@ src_install() {
 
 
 	# create necessary directories
+	diropts -ovdr -gvdr
 	keepdir "${VDR_HOME}"
 
 	local kd
