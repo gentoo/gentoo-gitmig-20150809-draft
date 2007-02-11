@@ -1,33 +1,29 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.28.ebuild,v 1.10 2006/11/06 23:45:43 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.28.ebuild,v 1.11 2007/02/11 10:32:57 vapier Exp $
 
 inherit eutils flag-o-matic
 
-IUSE="foomaticdb kerberos nls ssl"
-
 MY_PN=LPRng
-
-S=${WORKDIR}/${MY_PN}-${PV}
 DESCRIPTION="Extended implementation of the Berkeley LPR print spooler"
 HOMEPAGE="http://www.lprng.com/"
-KEYWORDS="~alpha amd64 ~hppa ~mips ppc ~ppc64 sparc x86"
 SRC_URI="ftp://ftp.lprng.com/pub/${MY_PN}/${MY_PN}/${MY_PN}-${PV}.tgz"
-
-PROVIDE="virtual/lpr"
-
-RDEPEND="virtual/libc
-	sys-process/procps
-	ssl? ( dev-libs/openssl )
-	foomaticdb? ( net-print/foomatic )
-	!virtual/lpr"
-
-DEPEND="${RDEPEND}
-	nls? ( sys-devel/gettext )
-	kerberos? ( app-crypt/mit-krb5 )"
 
 LICENSE="|| ( GPL-2 Artistic )"
 SLOT="0"
+KEYWORDS="~alpha amd64 arm ~hppa ~mips ppc ~ppc64 sh sparc x86"
+IUSE="foomaticdb kerberos nls ssl"
+
+RDEPEND="sys-process/procps
+	ssl? ( dev-libs/openssl )
+	foomaticdb? ( net-print/foomatic )
+	!virtual/lpr"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )
+	kerberos? ( app-crypt/mit-krb5 )"
+PROVIDE="virtual/lpr"
+
+S=${WORKDIR}/${MY_PN}-${PV}
 
 src_unpack() {
 	unpack ${A}
@@ -68,8 +64,7 @@ src_install() {
 		POSTINSTALL="NO" \
 		gnulocaledir=${D}/usr/share/locale || die "emake install failed"
 
-	dodoc CHANGES COPYRIGHT LICENSE README VERSION \
-		${FILESDIR}/printcap lpd.conf lpd.perms
+	dodoc CHANGES README VERSION ${FILESDIR}/printcap lpd.conf lpd.perms
 	dohtml HOWTO/*
 
 	insinto /etc/lprng
