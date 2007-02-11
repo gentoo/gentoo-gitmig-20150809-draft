@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.14_rc1.ebuild,v 1.7 2007/02/11 18:07:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.14_rc1.ebuild,v 1.8 2007/02/11 18:37:56 flameeyes Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
@@ -26,34 +26,15 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	# This is a list of the tools in the package.
-	# Some of the tools don't make proper use of CFLAGS, even though
-	# all of them seem to use autoconf.	 This needs to be fixed.
-	#
-	# By default, all the supported tools will be compiled.
-	# If you want to only compile for specific tool(s), set ALSA_TOOLS
-	# environment to a space-separated list of tools that you want to build.
-	# For example:
-	#
-	#	env ALSA_TOOLS='as10k1 ac3dec' emerge alsa-tools
-	#
-	if [ -z "${ALSA_TOOLS}" ]; then
-		ALSA_TOOLS="ac3dec as10k1 hdsploader mixartloader seq/sbiload \
-					sscape_ctl us428control usx2yloader vxloader"
+	ALSA_TOOLS="ac3dec as10k1 hdsploader mixartloader seq/sbiload
+				sscape_ctl us428control usx2yloader vxloader"
 
-		if use fltk; then
-			ALSA_TOOLS="${ALSA_TOOLS} hdspconf hdspmixer"
-		fi
+	use fltk && ALSA_TOOLS="${ALSA_TOOLS} hdspconf hdspmixer"
 
-		if use gtk; then
-			ALSA_TOOLS="${ALSA_TOOLS} echomixer envy24control rmedigicontrol"
-		fi
-
-		# sb16_csp won't build on ppc64 _AND_ ppc (and is not needed)
-		if	use !ppc64 && use !ppc; then
-			ALSA_TOOLS="${ALSA_TOOLS} sb16_csp"
-		fi
-
+	use gtk && ALSA_TOOLS="${ALSA_TOOLS} echomixer envy24control rmedigicontrol"
+	# sb16_csp won't build on ppc64 _AND_ ppc (and is not needed)
+	if	use !ppc64 && use !ppc; then
+		ALSA_TOOLS="${ALSA_TOOLS} sb16_csp"
 	fi
 }
 
