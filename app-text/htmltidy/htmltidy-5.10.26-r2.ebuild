@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-5.10.26-r2.ebuild,v 1.7 2007/02/04 19:10:46 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-5.10.26-r2.ebuild,v 1.8 2007/02/11 09:53:16 vapier Exp $
 
 WANT_AUTOMAKE=1.5
 WANT_AUTOCONF=2.5
@@ -23,15 +23,14 @@ SRC_URI="http://tidy.sourceforge.net/src/${MY_P}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ~ppc-macos ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ppc ~ppc-macos ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="debug doc xml"
 
-DEPEND="virtual/libc"
-RDEPEND="virtual/libc"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# Required to setup the source dist for autotools
 	einfo "Setting up autotools for source build"
 	export WANT_AUTOMAKE=1.5 WANT_AUTOCONF=2.5
