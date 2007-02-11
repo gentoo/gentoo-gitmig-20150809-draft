@@ -1,0 +1,11 @@
+# ChangeLog for dev-lang/mono-basic
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono-basic/ChangeLog,v 1.1 2007/02/11 07:53:52 compnerd Exp $
+
+*mono-basic-1.2.3 (11 Feb 2007)
+
+  11 Feb 2007; Saleem Abdulrasool <compnerd@gentoo.org> +metadata.xml,
+  +mono-basic-1.2.3.ebuild:
+  Initial import of mono-basic, ebuild by Saleem Abdulrasool
+  <compnerd@gentoo.org>
+
