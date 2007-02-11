@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-java
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.19 2007/02/10 19:35:52 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.20 2007/02/11 22:32:24 blubb Exp $
+
+  11 Feb 2007; Simon Stelling <blubb@gentoo.org>
+  emul-linux-x86-java-1.6.0.ebuild:
+  TEXTREL stuff; bug 164456
 
   10 Feb 2007; Joshua Nichols <nichoj@gentoo.org>
   -emul-linux-x86-java-1.4.2.03-r1.ebuild,
