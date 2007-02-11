@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.349 2007/02/11 07:32:43 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.350 2007/02/11 12:32:15 eroyf Exp $
+
+  11 Feb 2007; Alexander H. Færøy <eroyf@gentoo.org>
+  portage-2.1.2-r9.ebuild:
+  Stable on IA64; bug #166118
 
   11 Feb 2007; Joseph Jezak <josejx@gentoo.org> portage-2.1.2-r9.ebuild:
   Marked ppc stable for bug #166118.
