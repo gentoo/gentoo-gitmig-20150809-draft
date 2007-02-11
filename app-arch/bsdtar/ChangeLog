@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/bsdtar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/ChangeLog,v 1.50 2007/02/11 19:19:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/ChangeLog,v 1.51 2007/02/11 19:32:16 flameeyes Exp $
+
+  11 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/libarchive-2.0b6-linux.patch:
+  Remove extra patch.
 
 *bsdtar-2.0_beta11 (11 Feb 2007)
 
