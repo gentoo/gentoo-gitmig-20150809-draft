@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.19-r5.ebuild,v 1.4 2007/02/05 19:48:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.19-r5.ebuild,v 1.5 2007/02/11 14:00:19 pylon Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
@@ -9,7 +9,7 @@ inherit kernel-2
 detect_version
 detect_arch
 
-KEYWORDS="alpha ~amd64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="alpha ~amd64 ppc ppc64 ~sparc x86"
 HOMEPAGE="http://dev.gentoo.org/~dsd/genpatches"
 
 DESCRIPTION="Full sources including the Gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
