@@ -1,6 +1,17 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.29 2007/02/12 16:52:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.30 2007/02/12 16:57:32 gustavoz Exp $
+
+  12 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  -sparc64/2006.0/use.mask, -sparc64/2006.0/virtuals,
+  -sparc64/2006.1/use.mask, -sparc64/2006.1/virtuals,
+  +sparc64/2007.0/desktop/make.defaults, +sparc64/2007.0/desktop/parent,
+  +sparc64/2007.0/make.defaults, +sparc64/2007.0/package.mask,
+  +sparc64/2007.0/packages, +sparc64/2007.0/parent,
+  +sparc64/2007.0/server/make.defaults, +sparc64/2007.0/server/parent,
+  +sparc64/2007.0/use.mask, sparc64/use.mask, +sparc64/virtuals:
+  sparc64: moved virtuals out since we default to 2.6, move java use.mask out,
+  adding 2007.0 profile
 
   12 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   sparc32/2006.0/2.4/make.defaults, sparc64/2006.0/2.4/make.defaults,

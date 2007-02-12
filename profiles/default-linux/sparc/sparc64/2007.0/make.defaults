@@ -1,0 +1,10 @@
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2007.0/make.defaults,v 1.1 2007/02/12 16:57:32 gustavoz Exp $
+
+# We build stage1 against this
+STAGE1_USE="nptl nptlonly unicode"
+
+# These USE flags are what is common between the various sub-profiles. Stages 2
+# and 3 are built against these, so be careful what you add.
+USE="cups gdbm gpm libg++ nptl nptlonly ppds unicode"
