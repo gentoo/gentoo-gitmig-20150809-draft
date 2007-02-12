@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/zabbix-agent
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-agent/ChangeLog,v 1.8 2006/10/14 09:46:09 corsair Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-agent/ChangeLog,v 1.9 2007/02/12 00:14:43 wschlich Exp $
+
+*zabbix-agent-1.1.6 (12 Feb 2007)
+
+  12 Feb 2007; Wolfram Schlich <wschlich@gentoo.org>
+  +files/1.1.6/init.d/zabbix-agentd, +files/1.1.6/zabbix_agent.conf,
+  +files/1.1.6/zabbix_agentd.conf, +zabbix-agent-1.1.6.ebuild:
+  version bump
 
   14 Oct 2006; Markus Rothe <corsair@gentoo.org> zabbix-agent-1.1-r1.ebuild:
   Added ~ppc64; bug #151046
