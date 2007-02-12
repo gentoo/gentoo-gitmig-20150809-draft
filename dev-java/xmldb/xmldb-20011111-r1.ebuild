@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/xmldb-20011111-r1.ebuild,v 1.5 2006/12/09 09:26:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/xmldb-20011111-r1.ebuild,v 1.6 2007/02/12 20:14:05 betelgeuse Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -46,6 +46,6 @@ src_compile() {
 src_install() {
 	java-pkg_dojar dist/*.jar
 
-	use doc && java-pkg_dohtml -r dist/doc/api
+	use doc && java-pkg_dojavadoc dist/doc/api
 	use source && java-pkg_dosrc src/*
 }

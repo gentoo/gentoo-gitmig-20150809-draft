@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xmldb
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/ChangeLog,v 1.17 2007/01/04 05:39:42 tgall Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/ChangeLog,v 1.18 2007/02/12 20:14:05 betelgeuse Exp $
+
+  12 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
+  xmldb-20011111-r1.ebuild:
+  Use java-pkg_dojavadoc instead of dohtml.
 
   03 Jan 2007; Tom Gall <tgall@gentoo.org> xmldb-20011111.ebuild:
   stable on ppc64
