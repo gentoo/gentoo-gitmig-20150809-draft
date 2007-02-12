@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.13.ebuild,v 1.5 2007/01/10 00:18:40 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.13.ebuild,v 1.6 2007/02/12 01:45:01 caster Exp $
 
 inherit java-vm-2 eutils
 
@@ -60,7 +60,7 @@ src_unpack() {
 		die
 	fi
 	#Search for the ELF Header
-	testExp=`echo -e "\177\105\114\106\001\001\001"`
+	testExp=$'\177\105\114\106\001\001\001'
 	startAt=`grep -aonm 1 ${testExp}  ${DISTDIR}/${At} | cut -d: -f1`
 	tail -n +${startAt} ${DISTDIR}/${At} > install.sfx
 	chmod +x install.sfx
