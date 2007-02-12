@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/liboil
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.42 2007/01/31 19:04:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.43 2007/02/12 19:07:37 opfer Exp $
+
+  12 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  liboil-0.3.10-r1.ebuild:
+  stable x86; bug 163541
 
   31 Jan 2007; Markus Rothe <corsair@gentoo.org> liboil-0.3.10-r1.ebuild:
   Stable on ppc64; bug #163541
