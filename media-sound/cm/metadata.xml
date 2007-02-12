@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sound</herd>
+	<herd>scheme</herd>
+	<maintainer>
+		<email>hkBst@gentoo.org</email>
+		<name>Marijn Schouten</name>
+	</maintainer>
+	<longdescription lang="en">
+Common Music (CM) is an object-oriented music composition environment. It produces sound by transforming a high-level representation of musical structure into a variety of control protocols for sound synthesis and display. Common Music defines an extensive library of compositional tools and an API through which the composer can easily modify and extend the system.
+	</longdescription>
 </pkgmetadata>
