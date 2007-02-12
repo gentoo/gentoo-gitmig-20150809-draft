@@ -1,0 +1,11 @@
+--- xdelta-1.1.3/libedsio/fh.c.allocbug	2001-06-12 05:16:41.000000000 +0200
++++ xdelta-1.1.3/libedsio/fh.c	2006-05-09 12:23:04.000000000 +0200
+@@ -92,6 +92,8 @@
+     {
+       if (! ssource->fh->table->table_handle_getui (ssource->fh, &source->alloc_total))
+ 	return ST_Error;
++      /* There are 12 pointers in all required structures. So 64 bit arch needs 48 more bytes. */
++      source->alloc_total += (sizeof(void *) - 4) * 12;
+     }
+ 
+   return x;
