@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6-r1.ebuild,v 1.16 2007/02/11 22:56:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6-r1.ebuild,v 1.17 2007/02/12 07:36:18 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -249,6 +249,7 @@ src_compile () {
 		--disable-portaudio \
 		--disable-x264 \
 		--disable-libtar \
+		--disable-optimizations \
 		--enable-utf8 \
 		--enable-libtool \
 		$(use_enable nsplugin mozilla) \
