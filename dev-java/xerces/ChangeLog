@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xerces
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.75 2007/02/12 04:45:36 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.76 2007/02/12 04:57:27 nichoj Exp $
+
+  12 Feb 2007; Joshua Nichols <nichoj@gentoo.org> xerces-2.8.1.ebuild:
+  Restored ~ppc64, see bug #166450.
 
   12 Feb 2007; Joshua Nichols <nichoj@gentoo.org> xerces-2.8.1.ebuild:
   Restored ~ia64, see bug #166450.
