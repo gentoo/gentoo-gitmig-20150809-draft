@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.2.ebuild,v 1.1 2007/01/18 00:27:31 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.2.ebuild,v 1.2 2007/02/12 00:00:33 wschlich Exp $
 
 inherit cron pam eutils
 
@@ -20,6 +20,18 @@ DEPEND="app-editors/nano
 pkg_setup() {
 	ROOTUSER=$(egetent passwd 0 | cut -d ':' -f 1)
 	ROOTGROUP=$(egetent group 0 | cut -d ':' -f 1)
+	if useq debug; then
+		ewarn
+		ewarn "WARNING: debug USE flag active!"
+		ewarn "The debug USE flag makes fcron start in debug mode"
+		ewarn "by default, thus not detaching into background."
+		ewarn "This will make your system HANG on bootup if"
+		ewarn "fcron is to be started automatically by the"
+		ewarn "init system!"
+		ewarn
+		ebeep 5
+		epause 60
+	fi
 }
 
 src_unpack() {
@@ -105,6 +117,7 @@ src_install() {
 	newdoc files/fcron.conf fcron.conf.sample
 	dodoc ${FILESDIR}/crontab
 	dodoc doc/en/txt/{readme,thanks,faq,todo,relnotes,changes}.txt
+	rm -f doc/en/man/*.3 # ugly hack for bitstring.3 manpage
 	doman doc/en/man/*.[0-9]
 	use doc && dohtml doc/en/HTML/*.html
 
@@ -114,6 +127,7 @@ src_install() {
 	local lang
 	for lang in ${LANGUAGES}; do
 		hasq ${lang} ${LINGUAS} || continue
+		rm -f doc/${lang}/man/*.3 # ugly hack for bitstring.3 manpage
 		doman -i18n=${lang} doc/${lang}/man/*.[0-9]
 		use doc && docinto html/${lang} && dohtml doc/${lang}/HTML/*.html
 	done

@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/fcron
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.24 2007/01/18 18:58:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.25 2007/02/12 00:00:33 wschlich Exp $
+
+  11 Feb 2007; Wolfram Schlich <wschlich@gentoo.org> fcron-3.0.2.ebuild:
+  fix bug #156433, add warning about debug USE flag wrt bug #163126
 
   18 Jan 2007; Jeroen Roovers <jer@gentoo.org> fcron-3.0.1-r2.ebuild:
   Stable for HPPA (bug #149376).
