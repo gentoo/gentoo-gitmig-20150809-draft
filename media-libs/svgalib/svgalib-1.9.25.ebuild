@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.25.ebuild,v 1.3 2006/09/29 23:27:10 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.25.ebuild,v 1.4 2007/02/12 05:09:35 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-mod
 
@@ -135,15 +135,4 @@ src_install() {
 
 pkg_postinst() {
 	! use build && ! use no-helper && linux-mod_pkg_postinst
-	[[ ${ROOT} != "/" ]] && return 0
-
-	if [[ -e /dev/.devfsd ]] ; then
-		ebegin "Restarting devfsd to reread devfs rules"
-		killall -HUP devfsd
-		eend $?
-	elif [[ -e /dev/.udev ]] ; then
-		ebegin "Restarting udev to reread udev rules"
-		udevstart
-		eend $?
-	fi
 }
