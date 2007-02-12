@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libspectrum
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/ChangeLog,v 1.17 2007/02/11 15:41:43 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/ChangeLog,v 1.18 2007/02/12 09:30:01 blubb Exp $
+
+  12 Feb 2007; Simon Stelling <blubb@gentoo.org>
+  libspectrum-0.2.2-r1.ebuild:
+  stable on amd64; bug 166088
 
   11 Feb 2007; nixnut <nixnut@gentoo.org> libspectrum-0.2.2-r1.ebuild:
   Stable on ppc wrt bug 166088
