@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/basket
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/ChangeLog,v 1.27 2007/02/11 15:56:25 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/ChangeLog,v 1.28 2007/02/12 00:38:59 troll Exp $
+
+*basket-1.0 (12 Feb 2007)
+
+  12 Feb 2007; Przemysław Maciąg <troll@gentoo.org> -basket-0.5.0.ebuild,
+  -basket-1.0_rc2.ebuild, +basket-1.0.ebuild:
+  Version bump (final 1.0). Deleted old and rc ebuilds.
 
   11 Feb 2007; nixnut <nixnut@gentoo.org> basket-0.6.0.ebuild:
   Stable on ppc wrt bug 165237
