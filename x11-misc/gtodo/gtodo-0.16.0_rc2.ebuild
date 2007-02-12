@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/gtodo-0.16.0_rc2.ebuild,v 1.3 2007/02/12 17:21:25 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/gtodo-0.16.0_rc2.ebuild,v 1.4 2007/02/12 17:35:14 drac Exp $
 
 inherit gnome2 versionator
 
@@ -32,9 +32,9 @@ S="${WORKDIR}/${P/_rc2/}"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
-src_compile(){
+src_compile() {
 	econf
-	emake || die "emake failed"
+	emake || die "emake failed."
 
 	if use gnome; then
 		cd "${WORKDIR}/${PN}-applet-0.16-2"
@@ -43,7 +43,7 @@ src_compile(){
 	fi
 }
 
-src_install(){
+src_install() {
 	addwrite /etc/gconf
 	emake DESTDIR="${D}" install || die "emake install failed."
 
