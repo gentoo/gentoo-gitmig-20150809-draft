@@ -1,6 +1,17 @@
 # ChangeLog for sci-astronomy/celestia
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.27 2007/02/06 10:18:36 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.28 2007/02/12 22:44:20 bicatali Exp $
+
+*celestia-1.4.1-r2 (12 Feb 2007)
+
+  12 Feb 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/celestia-1.4.1-3dsmodels.patch,
+  +files/celestia-1.4.1-as-needed.patch,
+  files/celestia-1.4.1-kde-datadir.patch,
+  +files/celestia-1.4.1-locale.patch, files/celestia-1.4.1-lua51.patch,
+  -celestia-1.4.1-r1.ebuild, +celestia-1.4.1-r2.ebuild:
+  Fix for bug #130091 (real this time), bug #166362. Cleaned the ebuild 
+  and removed older buggy revision.
 
   06 Feb 2007; Sébastien Fabbro <bicatali@gentoo.org>
   -files/celestia-1.4.1-lua.patch, celestia-1.4.1-r1.ebuild:

@@ -1,26 +1,34 @@
 diff -Nur ../celestia-1.4.1.orig/Makefile.am ./Makefile.am
 --- ../celestia-1.4.1.orig/Makefile.am	2006-02-03 18:04:33.000000000 +0000
-+++ ./Makefile.am	2007-02-03 12:46:33.000000000 +0000
-@@ -66,11 +66,11 @@
++++ ./Makefile.am	2007-02-12 19:49:21.000000000 +0000
+@@ -15,7 +15,6 @@
+ pkgdata_DATA = \
+ 	celestia.cfg \
+ 	controls.txt \
+-	COPYING \
+ 	$(wildcard *.cel)
+ 
+ EXTRA_DIST = \
+@@ -66,11 +65,11 @@
  	)
  
  install-data-hook:
 -	if [ "$(kde_datadir)" -a -d $(kde_datadir)/@PACKAGE@ -a ! -h $(kde_datadir)/@PACKAGE@ ] ; then \
 -		mv -f -b $(kde_datadir)/@PACKAGE@/* $(datadir)/@PACKAGE@/ ; \
 -		rmdir $(kde_datadir)/@PACKAGE@ ; \
-+	if [ "$(DESTDIR)$(kde_datadir)" -a -d $(DESTDIR)$(kde_datadir)/@PACKAGE@ -a ! -h $(DESTDIR)$(kde_datadir)/@PACKAGE@ ] ; then \
++	if [ -n "$(kde_datadir)" -a "$(DESTDIR)$(kde_datadir)" -a -d $(DESTDIR)$(kde_datadir)/@PACKAGE@ -a ! -h $(DESTDIR)$(kde_datadir)/@PACKAGE@ ] ; then \
 +		mv -f -b $(DESTDIR)$(kde_datadir)/@PACKAGE@/* $(DESTDIR)$(datadir)/@PACKAGE@/ ; \
 +		rmdir $(DESTDIR)$(kde_datadir)/@PACKAGE@ ; \
  	fi
 -	if [ "$(kde_datadir)" -a ! -h $(kde_datadir)/@PACKAGE@ ] ; then \
 -		ln -s $(datadir)/@PACKAGE@ $(kde_datadir)/@PACKAGE@ ; \
-+	if [ "$(DESTDIR)$(kde_datadir)" -a ! -h $(DESTDIR)$(kde_datadir)/@PACKAGE@ ] ; then \
++	if [ -n "$(kde_datadir)" -a  "$(DESTDIR)$(kde_datadir)" -a ! -h $(DESTDIR)$(kde_datadir)/@PACKAGE@ ] ; then \
 +		ln -s $(datadir)/@PACKAGE@ $(DESTDIR)$(kde_datadir)/@PACKAGE@ ; \
  	fi
  
 diff -Nur ../celestia-1.4.1.orig/src/celestia/kde/data/Makefile.am ./src/celestia/kde/data/Makefile.am
 --- ../celestia-1.4.1.orig/src/celestia/kde/data/Makefile.am	2006-01-07 11:15:48.000000000 +0000
-+++ ./src/celestia/kde/data/Makefile.am	2007-02-03 12:49:04.000000000 +0000
++++ ./src/celestia/kde/data/Makefile.am	2007-02-12 19:26:45.000000000 +0000
 @@ -14,7 +14,7 @@
  mimedir = $(kde_mimedir)/application
  mime_DATA = x-celestia-script.desktop

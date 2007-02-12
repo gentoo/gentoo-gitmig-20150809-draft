@@ -1,6 +1,6 @@
-diff -Nur celestia-1.4.1.orig/configure.in celestia-1.4.1/configure.in
---- celestia-1.4.1.orig/configure.in	2006-02-03 18:09:54.000000000 +0000
-+++ celestia-1.4.1/configure.in	2006-09-19 10:04:57.000000000 +0100
+diff -Nur ../celestia-1.4.1/configure.in ./configure.in
+--- ../celestia-1.4.1/configure.in	2006-02-03 18:09:54.000000000 +0000
++++ ./configure.in	2007-02-12 16:27:42.000000000 +0000
 @@ -383,7 +383,7 @@
  AC_MSG_CHECKING([whether to enable Celestia Extension Language])
  if (test "$enable_lua" != "no"); then
@@ -10,9 +10,9 @@ diff -Nur celestia-1.4.1.orig/configure.in celestia-1.4.1/configure.in
  	
  	if (test "$lua_includes" != "no"); then
  		CXXFLAGS="$CXXFLAGS -I$lua_includes"
-diff -Nur celestia-1.4.1.orig/src/celestia/celx.cpp celestia-1.4.1/src/celestia/celx.cpp
---- celestia-1.4.1.orig/src/celestia/celx.cpp	2006-01-07 00:01:51.000000000 +0000
-+++ celestia-1.4.1/src/celestia/celx.cpp	2006-09-19 10:05:06.000000000 +0100
+diff -Nur ../celestia-1.4.1/src/celestia/celx.cpp ./src/celestia/celx.cpp
+--- ../celestia-1.4.1/src/celestia/celx.cpp	2006-01-07 00:01:51.000000000 +0000
++++ ./src/celestia/celx.cpp	2007-02-12 16:27:42.000000000 +0000
 @@ -32,9 +32,7 @@
  
  #include "celx.h"

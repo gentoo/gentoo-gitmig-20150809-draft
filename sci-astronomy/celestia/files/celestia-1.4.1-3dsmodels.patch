@@ -1,0 +1,14 @@
+--- models/Makefile.am	2006-02-02 04:12:26.000000000 +0000
++++ models/Makefile.am.new	2007-02-12 14:20:19.000000000 +0000
+@@ -3,8 +3,8 @@
+ pkgdata_DATA = \
+ 	$(wildcard *.cms) \
+ 	$(wildcard *.cmod) \
+-	$(wildcard *.pts)
++	$(wildcard *.pts) \
++	$(wildcard *.3ds)
+ 
+ EXTRA_DIST = \
+-	$(pkgdata_DATA) \
+-	$(wildcard *.3ds)
++	$(pkgdata_DATA)
