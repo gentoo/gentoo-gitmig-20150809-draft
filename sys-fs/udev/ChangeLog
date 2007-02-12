@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.255 2007/02/11 21:31:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.256 2007/02/12 05:22:47 jer Exp $
+
+  12 Feb 2007; Jeroen Roovers <jer@gentoo.org> udev-104-r10.ebuild:
+  Stable for HPPA (bug #159871).
 
   11 Feb 2007; Raúl Porcel <armin76@gentoo.org> udev-104-r10.ebuild:
   x86 stable wrt bug 159871
