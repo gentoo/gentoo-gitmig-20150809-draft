@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/glunarclock
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glunarclock/ChangeLog,v 1.16 2007/02/06 01:29:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glunarclock/ChangeLog,v 1.17 2007/02/12 19:01:06 nelchael Exp $
+
+  12 Feb 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  glunarclock-0.32.4.ebuild:
+  Fix bug #134179 - sandbox violation by scrollkeeper.
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
