@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/tvtime
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.37 2007/02/11 15:14:33 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.38 2007/02/12 17:32:52 opfer Exp $
+
+  12 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  tvtime-1.0.2-r1.ebuild:
+  stable x86; bug 166263
 
   11 Feb 2007; Steve Dibb <beandog@gentoo.org> tvtime-1.0.2-r1.ebuild:
   amd64 stable, bug 166263
