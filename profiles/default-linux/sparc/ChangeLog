@@ -1,6 +1,11 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.31 2007/02/12 17:01:19 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.32 2007/02/12 17:08:18 wolf31o2 Exp $
+
+  12 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  sparc64/2007.0/desktop/make.defaults:
+  Removing dlloader from the 2007.0 profile, which was added after my last
+  removal.
 
   12 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   sparc64/2006.0/package.mask, sparc64/2006.1/package.mask,
