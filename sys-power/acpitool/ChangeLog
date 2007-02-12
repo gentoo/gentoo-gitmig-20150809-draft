@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/acpitool
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpitool/ChangeLog,v 1.4 2006/10/28 14:03:44 swegener Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpitool/ChangeLog,v 1.5 2007/02/12 19:18:11 robbat2 Exp $
+
+*acpitool-0.4.7 (12 Feb 2007)
+
+  12 Feb 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +files/acpitool-0.4.7-proc_acpi_info_move.patch, +acpitool-0.4.7.ebuild:
+  Version bump, with patch for new kernels since the /proc/acpi/info file is
+  not present anymore.
 
   27 Oct 2006; Piotr Jaroszyński <peper@gentoo.org> -acpitool-0.2.5.ebuild:
   Remove old version.
