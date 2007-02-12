@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.319 2007/02/12 03:34:18 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.320 2007/02/12 18:14:59 gustavoz Exp $
+
+  12 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  postgresql-8.0.12.ebuild:
+  Stable on sparc wrt security #165482
 
 *postgresql-8.1.8 (12 Feb 2007)
 
