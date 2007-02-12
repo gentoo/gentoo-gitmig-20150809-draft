@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6805 2007/02/11 20:43:27 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6806 2007/02/12 12:04:01 armin76 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -394,11 +394,6 @@ www-misc/pglogd
 # Marijn Schouten <hkBst@gentoo.org> (13 Jan 2007)
 # Pending removal
 =x11-libs/guile-gtk-0.19-r1
-
-# Raúl Porcel <armin76@gentoo.org> (12 Jan 2007)
-# Upstream dead almost 3 years ago and doesn't compile with GCC 4.x.
-# Pending removal 12 Feb 2007, bug 153268
-net-p2p/teknap
 
 # Marijn Schouten <hkBst@gentoo.org> (12 Jan 2007)
 # Pending removal
