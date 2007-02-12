@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.69 2007/02/12 16:39:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.70 2007/02/12 17:36:23 blubb Exp $
+
+  12 Feb 2007; Simon Stelling <blubb@gentoo.org>
+  2006.0/no-multilib/package.mask, 2006.1/no-multilib/package.mask:
+  p.mask games-emulation/zinc on no-multilib profiles
 
   12 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> 2006.1/make.defaults,
   dev/32bit-userland/make.defaults:
