@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/gtodo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/ChangeLog,v 1.13 2007/01/05 04:48:12 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/ChangeLog,v 1.14 2007/02/12 17:10:10 drac Exp $
+
+*gtodo-0.16.0_rc2 (12 Feb 2007)
+
+  12 Feb 2007; Samuli Suominen <drac@gentoo.org> +gtodo-0.16.0_rc2.ebuild:
+  Version bump.
 
   05 Jan 2007; Ryan Hill <dirtyepic@gentoo.org> gtodo-0.14.ebuild:
   Remove debug.eclass usage for bug #160118.
