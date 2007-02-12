@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/moinmoin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.27 2007/02/11 11:04:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.28 2007/02/12 13:55:36 gustavoz Exp $
+
+  12 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> moinmoin-1.5.7.ebuild:
+  Stable on sparc wrt security #166022
 
   11 Feb 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   moinmoin-1.5.7.ebuild:
