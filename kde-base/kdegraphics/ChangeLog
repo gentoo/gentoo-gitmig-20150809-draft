@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.295 2007/02/11 21:44:35 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.296 2007/02/12 03:37:26 jer Exp $
+
+  12 Feb 2007; Jeroen Roovers <jer@gentoo.org> kdegraphics-3.5.5-r2.ebuild:
+  Stable for HPPA (bug #162460).
 
   11 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
   kdegraphics-3.5.5-r2.ebuild:
