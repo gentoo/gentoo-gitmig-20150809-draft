@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.59 2007/02/09 22:07:32 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.60 2007/02/12 16:18:07 wolf31o2 Exp $
+
+  12 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> 2006.0/make.defaults,
+  dev/2007.0/make.defaults, 2006.1/make.defaults, no-nptl/2.4/use.mask:
+  Removed udev from default USE due to bug #158114.
 
   09 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   dev/2007.0/desktop/make.defaults, dev/2007.0/desktop/virtuals,

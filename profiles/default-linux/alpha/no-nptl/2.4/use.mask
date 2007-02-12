@@ -1,9 +1,8 @@
 # Copyright 2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/use.mask,v 1.3 2006/07/06 20:57:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/use.mask,v 1.4 2007/02/12 16:09:54 wolf31o2 Exp $
 
 # All of these require 2.6 kernels/headers
-udev
 hal
 ipod
 input_devices_wacom

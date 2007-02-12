@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/alpha/2006.1/make.defaults,v 1.2 2006/10/28 13:29:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/alpha/2006.1/make.defaults,v 1.3 2007/02/12 16:19:21 wolf31o2 Exp $
 
 # This is currently commented so that the stage1 tarball can also be used to
 # build no-nptl systems.
 #STAGE1_USE="nptl"
 
-USE="alsa apache2 arts avi bitmap-fonts cups eds encode esd fortran foomaticdb gdbm gif gnome gpm gstreamer gtk gtk2 imlib jpeg kde libg++ libwww mad mikmod motif mp3 mpeg nptl nptlonly ogg opengl oss pdflib png qt qt3 qt4 quicktime sdl spell truetype truetype-fonts type1-fonts udev vorbis X xml xv"
+USE="alsa apache2 arts avi bitmap-fonts cups eds encode esd fortran foomaticdb gdbm gif gnome gpm gstreamer gtk gtk2 imlib jpeg kde libg++ libwww mad mikmod motif mp3 mpeg nptl nptlonly ogg opengl oss pdflib png qt qt3 qt4 quicktime sdl spell truetype truetype-fonts type1-fonts vorbis X xml xv"

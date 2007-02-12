@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/amd64/2006.1/make.defaults,v 1.1 2006/10/08 18:37:25 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/amd64/2006.1/make.defaults,v 1.2 2007/02/12 16:19:21 wolf31o2 Exp $
 
 ABI=amd64
 
@@ -10,4 +10,4 @@ ABI=amd64
 STAGE1_USE="nptl nptlonly unicode"
 
 # General 2006.1 profile settings
-USE="berkdb crypt ipv6 ncurses nls nptl nptlonly pam python readline ssl tcpd udev zlib"
+USE="berkdb crypt ipv6 ncurses nls nptl nptlonly pam python readline ssl tcpd zlib"

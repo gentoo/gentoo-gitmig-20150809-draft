@@ -1,6 +1,20 @@
 # ChangeLog for Gentoo/ppc profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.8 2007/01/25 21:20:05 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.9 2007/02/12 16:16:20 wolf31o2 Exp $
+
+  12 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  dev/ppc32/2007.0/make.defaults,
+  dev/ppc64/2007.0/32bit-userland/make.defaults,
+  dev/ppc64/2007.0/64bit-userland/make.defaults,
+  dev/ppc64/2007.0/multilib/make.defaults, ppc32/2006.0/make.defaults,
+  ppc32/2006.1/make.defaults, ppc64/2006.0/32bit-userland/make.defaults,
+  ppc64/2006.0/64bit-userland/make.defaults,
+  ppc64/2006.0/multilib/make.defaults,
+  ppc64/2006.1/32bit-userland/make.defaults,
+  ppc64/2006.1/64bit-userland-gcc4/make.defaults,
+  ppc64/2006.1/64bit-userland/make.defaults,
+  ppc64/2006.1/multilib/make.defaults:
+  Removed udev from default USE due to bug #158114.
 
   25 Jan 2007; Luca Barbato <lu_zero@gentoo.org> ppc32/2006.1/packages:
   remove unneeded constraint on gcc (fixes qemu)

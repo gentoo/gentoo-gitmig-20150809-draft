@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc32/2006.0/make.defaults,v 1.9 2006/10/28 13:29:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc32/2006.0/make.defaults,v 1.10 2007/02/12 16:16:20 wolf31o2 Exp $
 
 STAGE1_USE="unicode"
-USE="${STAGE1_USE} alsa apache2 apm arts bitmap-fonts bonobo cdr cups dvd eds emboss encode esd foomaticdb fortran gdbm gif gnome gpm gstreamer gtk gtkhtml imlib jpeg kde ldap libg++ libwww mad mikmod motif mozilla mp3 mpeg ogg opengl pam png qt3 qt4 quicktime ruby sdl spell truetype truetype-fonts type1-fonts udev vorbis X xml xv"
+USE="${STAGE1_USE} alsa apache2 apm arts bitmap-fonts bonobo cdr cups dvd eds emboss encode esd foomaticdb fortran gdbm gif gnome gpm gstreamer gtk gtkhtml imlib jpeg kde ldap libg++ libwww mad mikmod motif mozilla mp3 mpeg ogg opengl pam png qt3 qt4 quicktime ruby sdl spell truetype truetype-fonts type1-fonts vorbis X xml xv"

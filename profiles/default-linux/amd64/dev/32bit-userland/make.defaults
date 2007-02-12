@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/dev/32bit-userland/make.defaults,v 1.1 2007/02/11 15:09:15 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/dev/32bit-userland/make.defaults,v 1.2 2007/02/12 16:11:52 wolf31o2 Exp $
 
 DEFAULT_ABI="x86"
 ABI="x86"
@@ -13,7 +13,7 @@ STAGE1_USE="nptl nptlonly unicode"
 
 # General 2006.1 profile settings
 # These USE flags are what is common between the various sub-profiles.
-USE="cups gdbm gpm libg++ nptl nptlonly ppds udev unicode"
+USE="cups gdbm gpm libg++ nptl nptlonly ppds unicode"
 
 FEATURES="multilib-strict"
 MULTILIB_STRICT_DIRS="/lib32 /lib /usr/lib32 /usr/lib /usr/kde/*/lib32 /usr/kde/*/lib /usr/qt/*/lib32 /usr/qt/*/lib /usr/X11R6/lib32 /usr/X11R6/lib"
