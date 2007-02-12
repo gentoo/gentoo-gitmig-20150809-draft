@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/nvu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/ChangeLog,v 1.25 2007/01/24 02:48:25 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/ChangeLog,v 1.26 2007/02/12 13:03:29 armin76 Exp $
+
+  12 Feb 2007; Raúl Porcel <armin76@gentoo.org>
+  +files/1.0/nvu-1.0-const.patch, -nvu-1.0-r2.ebuild, nvu-1.0-r4.ebuild:
+  Add patch to make nvu compile with >freetype-2.1, bug 166401 and remove
+  unneeded version
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org> nvu-1.0-r2.ebuild,
   nvu-1.0-r4.ebuild:
