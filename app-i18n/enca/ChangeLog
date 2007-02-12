@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/enca
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.21 2007/02/11 21:54:39 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.22 2007/02/12 21:06:24 kloeri Exp $
+
+  12 Feb 2007; Bryan Østergaard <kloeri@gentoo.org> enca-1.9.ebuild:
+  Stable on IA64, bug 159727.
 
   11 Feb 2007; René Nussbaumer <killerfox@gentoo.org> enca-1.9.ebuild:
   Stable on hppa. See bug #159727.
