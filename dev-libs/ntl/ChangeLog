@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ntl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ntl/ChangeLog,v 1.10 2007/02/11 21:20:32 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ntl/ChangeLog,v 1.11 2007/02/12 18:53:53 opfer Exp $
+
+  12 Feb 2007; Christian Faulhammer <opfer@gentoo.org> ntl-5.4.ebuild:
+  stable x86; bug 166529
 
   11 Feb 2007; Tiziano Müller <dev-zero@gentoo.org>
   +files/ntl-5.4-endless_testrun.patch, ntl-5.4.ebuild:
