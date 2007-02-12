@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/iiimcf
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimcf/ChangeLog,v 1.9 2007/02/08 22:10:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimcf/ChangeLog,v 1.10 2007/02/12 19:43:15 opfer Exp $
+
+  12 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  -iiimcf-11.4_p1467.ebuild:
+  remove old version, see bug 166131
 
   08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
