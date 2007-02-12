@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.5.6.ebuild,v 1.1 2007/02/10 21:02:40 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.5.6.ebuild,v 1.2 2007/02/12 08:28:03 compnerd Exp $
 
 inherit gnome2 mono eutils
 
@@ -48,4 +48,11 @@ pkg_setup() {
 	fi
 
 	G2CONF="${G2CONF} $(use_enable galago) $(use_enable eds evolution)"
+}
+
+src_unpack() {
+	gnome2_src_unpack
+	cd ${S}
+
+	epatch ${FILESDIR}/${PN}-0.5.6-gtksharp.patch
 }
