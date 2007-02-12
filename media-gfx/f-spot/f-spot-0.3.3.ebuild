@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.3.2.ebuild,v 1.2 2007/02/12 23:29:37 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.3.3.ebuild,v 1.1 2007/02/12 23:29:37 joem Exp $
 
 inherit gnome2 mono eutils autotools
 
@@ -53,6 +53,7 @@ src_unpack()
 	unpack ${A}
 	cd ${S}
 
+	epatch ${FILESDIR}/${P}-dont_eat_cpu.patch
 	# Gentoo used old so version until libexif-0.6.13-r2
 	if has_version "<media-libs/libexif-0.6.13-r2";
 	then
