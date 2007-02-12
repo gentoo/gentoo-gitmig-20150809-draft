@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wv2
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.42 2006/10/29 04:06:49 nattfodd Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.43 2007/02/12 03:52:59 jer Exp $
+
+  12 Feb 2007; Jeroen Roovers <jer@gentoo.org> wv2-0.2.3.ebuild:
+  Stable for HPPA (bug #162460).
 
   29 Oct 2006; Alexandre Buisse <nattfodd@gentoo.org>
   -files/wv2-0.2.2-respectflags.patch, -wv2-0.2.ebuild, -wv2-0.2.1.ebuild,
