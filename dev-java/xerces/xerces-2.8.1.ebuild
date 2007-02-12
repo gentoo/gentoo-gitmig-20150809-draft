@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.8.1.ebuild,v 1.3 2007/02/12 00:51:34 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.8.1.ebuild,v 1.4 2007/02/12 04:45:36 nichoj Exp $
 
 WANT_SPLIT_ANT=true
 JAVA_PKG_IUSE="doc examples source"
@@ -14,7 +14,7 @@ SRC_URI="mirror://apache/xml/${PN}-j/${DIST_PN}-src.${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="2"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ~ppc ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.4
