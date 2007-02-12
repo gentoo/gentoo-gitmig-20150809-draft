@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3.ebuild,v 1.13 2007/02/12 19:23:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3-r1.ebuild,v 1.1 2007/02/12 19:23:13 aballier Exp $
 
 inherit eutils kde-functions autotools multilib
 
@@ -10,13 +10,13 @@ SRC_URI="mirror://sourceforge/hydrogen/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="alsa debug jack ladspa oss portaudio"
 
 RDEPEND="dev-libs/libxml2
 	media-libs/libsndfile
 	media-libs/audiofile
-	~media-libs/flac-1.1.2
+	media-libs/flac
 	portaudio? ( media-libs/portaudio )
 	alsa? ( media-libs/alsa-lib )
 	jack? ( media-sound/jack-audio-connection-kit )
@@ -44,6 +44,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/hydrogen-0.9.2-configure.in.patch
 	epatch ${FILESDIR}/hydrogen-0.9.3-gcc-4.1-tinyxml.h.patch
+	epatch "${FILESDIR}/${P}-flac113.patch"
 }
 
 src_compile() {

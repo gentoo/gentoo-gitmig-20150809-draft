@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.0.ebuild,v 1.13 2006/09/23 00:27:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.0.ebuild,v 1.14 2007/02/12 19:23:13 aballier Exp $
 
 inherit eutils kde-functions
 
@@ -16,7 +16,7 @@ IUSE="alsa jack ladspa"
 DEPEND=">=media-libs/libsndfile-1.0.0
 	alsa? ( media-libs/alsa-lib )
 	>=media-libs/audiofile-0.2.3
-	>=media-libs/flac-1
+	~media-libs/flac-1.1.2
 	jack? ( media-sound/jack-audio-connection-kit )
 	ladspa? ( media-libs/liblrdf )"
 need-qt 3
