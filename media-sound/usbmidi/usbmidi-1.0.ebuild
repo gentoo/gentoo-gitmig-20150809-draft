@@ -1,8 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/usbmidi/usbmidi-1.0.ebuild,v 1.8 2007/01/05 20:18:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/usbmidi/usbmidi-1.0.ebuild,v 1.9 2007/02/12 20:13:54 genstef Exp $
 
-DESCRIPTION="Sets up hotplugging support for MidiMan midisport 1x1/2x2 usb devices"
+inherit linux-info
+
+DESCRIPTION="hotplugging support for MidiMan midisport 1x1/2x2 usb devices on 2.4 kernels"
 HOMEPAGE="http://homepage3.nifty.com/StudioBreeze/software/usbmidi-e.html"
 SRC_URI="http://homepage3.nifty.com/StudioBreeze/software/bin/usbmidi-20030126.tar.gz"
 
@@ -17,6 +19,14 @@ RDEPEND="sys-apps/hotplug
 	sys-apps/fxload"
 
 S="${WORKDIR}/usbmidi-20030126"
+
+pkg_setup() {
+	if ! kernel_is 2 4 ; then
+		eerror "This ebuild is only for 2.4.x kernels."
+		die "Use in-kernel USB MIDI support instead."
+	fi
+}	    
+
 src_install() {
 	insinto /usr/share/usb/ezusbmidi
 	doins ${S}/testing/MidiSport/ezusbmidi*.ihx
@@ -36,4 +46,3 @@ pkg_postinst() {
 	elog "The midisport ports will appear as 'normal' midi ports under /dev"
 	elog
 }
-
