@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openct
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.38 2007/01/19 22:08:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.39 2007/02/12 14:18:09 blubb Exp $
+
+  12 Feb 2007; Simon Stelling <blubb@gentoo.org> openct-0.6.11-r1.ebuild:
+  stable on amd64; bug 162205
 
   19 Jan 2007; Markus Rothe <corsair@gentoo.org> openct-0.6.11-r1.ebuild:
   Stable on ppc64; bug #162205
