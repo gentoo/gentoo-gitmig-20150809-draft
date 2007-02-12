@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/elogv-0.5.1.ebuild,v 1.1 2007/01/15 09:43:47 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/elogv-0.5.1.ebuild,v 1.2 2007/02/12 18:59:32 opfer Exp $
 
 inherit eutils
 
@@ -34,10 +34,10 @@ src_install() {
 pkg_postinst() {
 	elog
 	elog "In order to use this software, you need to activate"
-	elog "Portage's elog features.  Required is"
-	elog "	     PORTAGE_ELOG_SYSTEM=\"save\" "
+	elog "Portage's elog features.	Required is"
+	elog "		 PORTAGE_ELOG_SYSTEM=\"save\" "
 	elog "and at least one out of "
-	elog "	     PORTAGE_ELOG_CLASSES=\"warn error info log\""
+	elog "		 PORTAGE_ELOG_CLASSES=\"warn error info log qa\""
 	elog "More information on the elog system can be found"
 	elog "in /etc/make.conf.example"
 	elog
