@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-1.3.4.ebuild,v 1.1 2007/02/12 17:28:00 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-1.3.4.ebuild,v 1.2 2007/02/12 18:55:09 jokey Exp $
 
 inherit eutils linux-mod qt3
 
@@ -11,7 +11,7 @@ SRC_URI="http://virtualbox.org/download/${PV}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-libs/libIDL
@@ -30,7 +30,7 @@ S=${WORKDIR}/${MY_P}
 
 BUILD_TARGETS="all"
 BUILD_PARAMS="KERN_DIR=${KERNEL_DIR}"
-MODULE_NAMES="vboxdrv(misc:${S}/out/linux.x86/release/bin/src:${S}/out/linux.x86/release/bin/src)"
+MODULE_NAMES="vboxdrv(misc:${S}/out/linux.${ARCH}/release/bin/src:${S}/out/linux.${ARCH}/release/bin/src)"
 
 src_compile() {
 	cd "${S}"
@@ -42,7 +42,7 @@ src_compile() {
 
 src_install() {
 	linux-mod_src_install
-	cd "${S}"/out/linux.x86/release/bin
+	cd "${S}"/out/linux.${ARCH}/release/bin
 	rm -rf sdk src tst* testcase additions/src
 	rm vboxdrv.ko SUPInstall SUPUninstall
 	insinto /opt/VirtualBox
