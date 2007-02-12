@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libemf
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.19 2006/06/26 22:54:57 gustavoz Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.20 2007/02/12 10:41:22 armin76 Exp $
+
+  12 Feb 2007; Raúl Porcel <armin76@gentoo.org> libemf-1.0.3.ebuild:
+  x86 stable wrt bug 160141
 
   26 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org> libemf-1.0.3.ebuild:
   Keyworded ~sparc wrt #127328
