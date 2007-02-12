@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/gml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gml/ChangeLog,v 1.5 2007/01/19 23:00:48 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gml/ChangeLog,v 1.6 2007/02/12 23:12:12 peper Exp $
+
+  12 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> gml-0.5.ebuild:
+  Add ~amd64 wrt bug #166372.
 
   19 Jan 2007; Andrej Kacian <ticho@gentoo.org> gml-0.5.ebuild:
   Use edos2unix instead of dos2unix. Bug #162841, by Christian Ludwig <cl81 at
