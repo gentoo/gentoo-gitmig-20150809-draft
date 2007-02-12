@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cscope
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.89 2007/02/11 21:47:53 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.90 2007/02/12 12:55:58 gustavoz Exp $
+
+  12 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> cscope-15.6-r1.ebuild:
+  Stable on sparc wrt security #158831
 
   11 Feb 2007; René Nussbaumer <killerfox@gentoo.org>
   cscope-15.6-r1.ebuild:
