@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.1.6.ebuild,v 1.3 2007/02/11 23:36:08 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.1.6.ebuild,v 1.4 2007/02/12 00:22:07 wschlich Exp $
 
 inherit eutils
 
@@ -92,6 +92,27 @@ pkg_postinst() {
 		${ROOT}var/lib/zabbix/scripts \
 		${ROOT}var/log/zabbix \
 		${ROOT}var/run/zabbix
+
+	# check for fping
+	fping_perms=$(stat -c %a /usr/sbin/fping 2>/dev/null)
+	case "${fping_perms}" in
+		4[157][157][157])
+			;;
+		*)
+			ewarn
+			ewarn "If you want to use the checks 'icmpping' and 'icmppingsec',"
+			ewarn "you have to make /usr/sbin/fping setuid root and executable"
+			ewarn "by everyone. Run the following command to fix it:"
+			ewarn
+			ewarn "  chmod u=rwsx,g=rx,o=rx /usr/sbin/fping"
+			ewarn
+			ewarn "Please be aware that this might impose a security risk,"
+			ewarn "depending on the code quality of fping."
+			ewarn
+			ebeep 3
+			epause 5
+			;;
+	esac
 }
 
 src_unpack() {
