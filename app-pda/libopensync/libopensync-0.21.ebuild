@@ -1,22 +1,22 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-0.19.ebuild,v 1.4 2006/10/23 19:16:34 peper Exp $
-
-inherit multilib
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-0.21.ebuild,v 1.1 2007/02/12 20:53:16 peper Exp $
 
 DESCRIPTION="OpenSync synchronisation framework library"
 HOMEPAGE="http://www.opensync.org/"
-SRC_URI="http://dev.gentooexperimental.org/~peper/distfiles/${P}.tar.gz"
+SRC_URI="http://dev.gentooexperimental.org/~peper/distfiles/${P}.tar.bz2"
 
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="LGPL-2.1"
 IUSE="debug doc python"
+#test
 #profiling" - needs tau - http://www.cs.uoregon.edu/research/tau/
 
 
 RDEPEND=">=dev-db/sqlite-3
 	>=dev-libs/glib-2
+	dev-libs/libxml2
 	python? ( >=dev-lang/python-2.2
 		>=dev-lang/swig-1.3.17 )
 	debug? ( >=dev-libs/check-0.9.2 ) "
@@ -24,33 +24,25 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9.0
 	doc? ( app-doc/doxygen )"
 
-# Tests are broken in 0.19
+# Some of the tests are still broken in 0.21
 RESTRICT="test"
 
 src_compile() {
-	# Tests are broken in 0.19
-	# hasq test ${FEATURES} && CONF_TEST="--enable-unit-tests" || \
-	CONF_TEST="--disable-unit-tests"
-	econf ${CONF_TEST} \
+		#$(use_enable test unit-tests) \
+	econf \
 		--enable-engine \
 		--enable-tools \
 		$(use_enable python) \
 		$(use_enable debug) \
-		$(use_enable debug tracing)
+		$(use_enable debug tracing) \
+		|| die "econf failed"
 
 	emake || die "emake failed"
 
-	# Create API docs if needed and possible
-	if use doc; then
-		doxygen Doxyfile
-	fi
+	use doc && doxygen Doxyfile
 }
 src_install() {
-	make DESTDIR="${D}" install || die
-
-	# Intall pkgconfig files
-	insinto /usr/"$(get_libdir)"/pkgconfig
-	doins *-1.0.pc
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	dodoc AUTHORS ChangeLog NEWS README TODO
 	use doc && dohtml docs/html/*
