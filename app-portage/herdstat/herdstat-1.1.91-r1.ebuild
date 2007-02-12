@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.91.ebuild,v 1.5 2007/02/11 13:13:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.91-r1.ebuild,v 1.1 2007/02/12 05:01:25 compnerd Exp $
 
 inherit bash-completion eutils
 
@@ -18,11 +18,11 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~s390 ~sh ~sparc ~x86"
 IUSE="debug doc readline test"
 
 RDEPEND=">=dev-cpp/libherdstat-0.2.0
-	readline? ( sys-libs/readline )"
+		 readline? ( sys-libs/readline )"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
-	dev-util/pkgconfig
-	doc? ( dev-python/docutils )"
+		>=sys-apps/sed-4
+		dev-util/pkgconfig
+		doc? ( dev-python/docutils )"
 
 pkg_setup() {
 	if has test $FEATURES && ! use test ; then
@@ -37,6 +37,8 @@ src_unpack() {
 	if ! use readline ; then
 		epatch ${FILESDIR}/${PN}-1.1.91-undefined-lhp.patch
 	fi
+
+	epatch ${FILESDIR}/herds-xml-location-update.patch
 }
 
 src_compile() {

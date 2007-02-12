@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/herdstat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.74 2007/02/10 19:39:01 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.75 2007/02/12 05:01:25 compnerd Exp $
+
+*herdstat-1.1.91-r1 (12 Feb 2007)
+
+  12 Feb 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  +files/herds-xml-location-update.patch, -herdstat-1.1.91.ebuild,
+  +herdstat-1.1.91-r1.ebuild:
+  Apply a patch for the updated location of herds.xml
 
   10 Feb 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   herdstat-1.1.91.ebuild:
