@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/atmel-firmware
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/atmel-firmware/ChangeLog,v 1.6 2007/02/09 05:09:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/atmel-firmware/ChangeLog,v 1.7 2007/02/12 20:16:24 genstef Exp $
+
+  12 Feb 2007; <genstef@gentoo.org> atmel-firmware-1.3.ebuild:
+  remove hotplug only dep, thanks jakub in bug 129882
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/at76c503a-0.14_beta1.ebuild,v 1.1 2006/09/23 21:43:28 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/at76c503a-0.14_beta1.ebuild,v 1.2 2007/02/12 20:17:07 genstef Exp $
 
 inherit linux-mod
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 RDEPEND="net-wireless/atmel-firmware
-		>=sys-apps/hotplug-20040923
+		|| ( >=sys-fs/udev-096 >=sys-apps/hotplug-20040923 )
 		>=net-wireless/wireless-tools-26-r1"
 S=${WORKDIR}/${MY_P}
 
