@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/autocutsel/autocutsel-0.9.0.ebuild,v 1.4 2007/02/11 14:29:06 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/autocutsel/autocutsel-0.9.0.ebuild,v 1.5 2007/02/12 14:25:57 gustavoz Exp $
 
 DESCRIPTION="Synchronise the two copy/paste buffers mainly used by X applications"
 HOMEPAGE="http://www.lepton.fr/tools/autocutsel/"
@@ -9,7 +9,7 @@ IUSE=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc ~sparc x86"
+KEYWORDS="ppc sparc x86"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXmu
