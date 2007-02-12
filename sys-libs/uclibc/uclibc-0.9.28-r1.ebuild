@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28-r1.ebuild,v 1.8 2007/01/28 06:54:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28-r1.ebuild,v 1.9 2007/02/12 05:07:03 vapier Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -204,7 +204,7 @@ src_unpack() {
 	sed -i -e '/ARCH_.*_ENDIAN/d' .config
 	echo "ARCH_$(uclibc_endian | tr [a-z] [A-Z])_ENDIAN=y" >> .config
 
-	if [[ ${CTARGET//_/-} == *-softfloat-* ]] ; then
+	if [[ $(tc-is-softfloat) != "yes" ]] ; then
 		sed -i -e '/^HAS_FPU=y$/d' .config
 		echo 'HAS_FPU=n' >> .config
 	fi

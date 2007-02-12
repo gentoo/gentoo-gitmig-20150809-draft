@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/newlib-20061203.ebuild,v 1.2 2006/12/10 00:46:54 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/newlib-20061203.ebuild,v 1.3 2007/02/12 05:05:23 vapier Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 export CBUILD=${CBUILD:-${CHOST}}
 export CTARGET=${CTARGET:-${CHOST}}
@@ -47,7 +47,7 @@ src_compile() {
 
 	local myconf=""
 	# hardwired to avoid breakages
-	[[ ${CTARGET} == *-softfloat-* ]] \
+	[[ $(tc-is-softfloat) == "no" ]] \
 		&& myconf="--disable-newlib-hw-fp" \
 		|| myconf="--enable-newlib-hw-fp"
 	[[ ${CTARGET} == "spu" ]] \
