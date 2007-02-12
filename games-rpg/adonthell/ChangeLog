@@ -1,6 +1,13 @@
 # ChangeLog for games-rpg/adonthell
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/ChangeLog,v 1.13 2006/11/02 23:49:40 nyhm Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/ChangeLog,v 1.14 2007/02/12 21:10:44 nyhm Exp $
+
+*adonthell-0.3.4a-r1 (12 Feb 2007)
+
+  12 Feb 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/adonthell-0.3.4a-external-libs.patch, -adonthell-0.3.4a.ebuild,
+  +adonthell-0.3.4a-r1.ebuild:
+  Use external SDL_ttf and SDL_mixer, bug #166536
 
   02 Nov 2006; Tristan Heaven <nyhm@gentoo.org> adonthell-0.3.4a.ebuild:
   Add nls dependencies

@@ -1,25 +1,21 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.4a.ebuild,v 1.8 2006/11/02 23:49:40 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.4a-r1.ebuild,v 1.1 2007/02/12 21:10:44 nyhm Exp $
 
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
 inherit autotools eutils games
 
 DESCRIPTION="roleplaying game engine"
 HOMEPAGE="http://adonthell.linuxgames.com/"
-SRC_URI="http://savannah.nongnu.org/download/adonthell/${PN}-src-${PV}.tar.gz"
+SRC_URI="http://savannah.nongnu.org/download/${PN}/${PN}-src-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE="doc nls"
 
-RDEPEND="dev-lang/python
-	>=media-libs/freetype-2
+RDEPEND="media-libs/sdl-ttf
+	media-libs/sdl-mixer
 	media-libs/libsdl
-	media-libs/libvorbis
-	media-libs/libogg
 	dev-lang/swig
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
@@ -37,17 +33,18 @@ src_unpack() {
 	epatch \
 		"${FILESDIR}"/${PV}-configure.in.patch \
 		"${FILESDIR}"/${P}-gcc-41.patch \
-		"${FILESDIR}"/${P}-inline.patch
+		"${FILESDIR}"/${P}-inline.patch \
+		"${FILESDIR}"/${P}-external-libs.patch
+	rm -f src/SDL_ttf.* # SDL_ttf
+	rm -f src/{music*,SDL_mixer.h,wavestream*,mixer.c} # SDL_mixer
 	rm -f ac{local,include}.m4
 	AT_M4DIR="m4" eautoreconf
 }
 
 src_compile() {
-	# the fugly --with-vorbis is to work around #98689
 	egamesconf \
 		--disable-dependency-tracking \
 		--disable-py-debug \
-		--with-vorbis="${T}" \
 		$(use_enable nls) \
 		$(use_enable doc) \
 		|| die
@@ -57,7 +54,7 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
-	keepdir "${GAMES_DATADIR}/${PN}/games"
+	keepdir "${GAMES_DATADIR}"/${PN}/games
 	dodoc AUTHORS ChangeLog FULLSCREEN.howto NEWBIE NEWS README
 	prepgamesdirs
 }

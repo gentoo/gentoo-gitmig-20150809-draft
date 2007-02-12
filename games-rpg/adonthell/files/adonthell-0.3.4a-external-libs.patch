@@ -1,0 +1,114 @@
+--- configure.in
++++ configure.in
+@@ -50,10 +50,6 @@
+ AC_ARG_ENABLE(py-debug,
+ [  --disable-py-debug     Disable debugging of Python scripts (enabled by default)],
+ 	pydebug=$enableval, pydebug=yes)
+-AC_ARG_WITH(ogg,
+-[  --with-ogg=DIR         Set where the Ogg library is located]) 
+-AC_ARG_WITH(vorbis,
+-[  --with-vorbis=DIR      Set where the Vorbis library is located])
+ AC_ARG_WITH(data-dir,
+ [  --with-data-dir=DIR    Directory where datas will be installed],
+             gamedatadir="$withval", gamedatadir=none)
+@@ -129,28 +125,16 @@
+ )
+ 
+ dnl *******************
+-dnl Check for FreeType2
++dnl Check for SDL_ttf
+ dnl *******************
+ 
+-AC_CHECK_FT2(6.0.0,
+-    :,
+-    AC_MSG_ERROR([*** Freetype version >= 6.0.0 not found!])
+-)
++AC_CHECK_LIB(SDL_ttf, TTF_Init,,exit 1)
+ 
+ dnl *******************
+-dnl Check for OggVorbis
++dnl Check for SDL_mixer
+ dnl *******************
+ 
+-OGG_VORBIS=no
+-XIPH_PATH_VORBIS(
+-        OGG_VORBIS="yes"
+-        ogg_music="enabled"
+-        OGG_LIBS="$VORBISFILE_LIBS $VORBIS_LIBS"
+-        OGG_DEFS="-DOGG_MUSIC"
+-        OGG_CFLAGS="$VORBIS_CFLAGS",
+-        AC_MSG_RESULT(Disabling OggVorbis support)
+-        ogg_music="disabled"
+-)
++AC_CHECK_LIB(SDL_mixer, Mix_OpenAudio,,exit 1)
+ 
+ dnl ********************
+ dnl Check for Python. 
+@@ -377,11 +361,7 @@
+    AC_CHECK_HEADERS([pthread.h])
+ fi
+ 
+-if test x$OGG_VORBIS = xyes; then
+-   AC_CHECK_HEADERS([vorbis/vorbisfile.h]) 
+-fi 
+ 
+-AM_CONDITIONAL(HAVE_OGG_VORBIS, test x$OGG_VORBIS = xyes)
+ 
+ dnl ********************************
+ dnl Generate our compiler arguements
+@@ -396,9 +376,6 @@
+ AC_SUBST(SDL_CFLAGS)
+ AC_SUBST(SDL_LIBS)
+ AC_SUBST(SDL_DEFS)
+-AC_SUBST(OGG_CFLAGS)
+-AC_SUBST(OGG_LIBS)
+-AC_SUBST(OGG_DEFS)
+ AC_SUBST(PY_CFLAGS)
+ AC_SUBST(PY_LIBS)
+ AC_SUBST(P_SWIG)
+@@ -427,11 +404,9 @@
+ echo "SDL ....................... : `$SDL_CONFIG --version`"
+ echo "Python .................... : $PY_VERSION"
+ echo "Python debugging .......... : $pydebug"
+-echo "Freetype .................. : `freetype-config --version`"
+ if test x$haveswig = xyes; then
+ echo "SWIG ...................... : $SWIG_VERSION"
+ fi
+-echo "Ogg music ................. : $ogg_music"
+ echo "Building API doc .......... : $builddoc"
+ if test x$memleaks = xyes; then
+ echo "Test for Memory Leaks ..... : enabled"
+--- src/Makefile.am
++++ src/Makefile.am
+@@ -6,7 +6,7 @@
+ 
+ EXTRA_DIST = .indent.pro prefs.l py_adonthell.i
+ 
+-AM_CPPFLAGS =$(SDL_DEFS) $(OGG_DEFS) $(SDL_CFLAGS) $(OGG_CFLAGS) $(PY_CFLAGS) $(FT2_CFLAGS)
++AM_CPPFLAGS =$(SDL_DEFS) $(SDL_CFLAGS) $(PY_CFLAGS)
+ 
+ noinst_LIBRARIES = libadonthell.a
+ 
+@@ -24,7 +24,7 @@
+ win_base.h win_border.h win_container.h str_hash.h win_font.h win_image.h \
+ win_label.h win_mapview.h label.h label_input.h win_scrollbar.h win_scroll.h \
+ win_select.h win_theme.h win_keys.h win_event.h win_types.h win_write.h \
+-win_ttf.h win_manager.h win_object.h window.h win_wrappers.h yarg.h SDL_ttf.h
++win_ttf.h win_manager.h win_object.h window.h win_wrappers.h yarg.h
+ 
+ libadonthell_a_SOURCES = adonthell.cc animation.cc audio.cc \
+ character_base.cc character.cc data_screen.cc dialog.cc dialog_screen.cc \
+@@ -39,11 +39,9 @@
+ win_background.cc win_base.cc win_border.cc win_container.cc win_font.cc \
+ win_ttf.cc win_keys.cc win_manager.cc win_scrollbar.cc win_scroll.cc \
+ win_select.cc \
+-win_theme.cc win_event.cc yarg.cc mixer.c music.c music_cmd.c music_cmd.h \
+-music_ogg.c music_ogg.h wave.h wavestream.c wavestream.h SDL_mixer.h \
+-SDL_ttf.c $(headers)
++win_theme.cc win_event.cc yarg.cc $(headers)
+ 
+-libadonthell_LDADD = $(SDL_LIBS) $(OGG_LIBS) $(PY_LIBS) $(INTLLIBS) $(FT2_LIBS)
++libadonthell_LDADD = $(SDL_LIBS) $(PY_LIBS) $(INTLLIBS)
+ 
+ adonthell_LDADD = libadonthell.a $(libadonthell_LDADD)
+ 
