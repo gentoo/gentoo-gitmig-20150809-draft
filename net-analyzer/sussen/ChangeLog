@@ -1,6 +1,17 @@
 # ChangeLog for net-analyzer/sussen
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.46 2007/02/12 19:21:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.47 2007/02/12 19:44:02 pva Exp $
+
+*sussen-0.34-r1 (12 Feb 2007)
+
+  12 Feb 2007; <pva@gentoo.org> -files/sussen-0.31--as-needed.patch,
+  -files/sussen-0.33-configopts-mono-1.1.13-fix.patch,
+  -files/sussen-0.33-ignore-unsupported-test.patch,
+  +files/sussen-0.34-editor-no-definitions.patch, -sussen-0.15.ebuild,
+  -sussen-0.29.ebuild, -sussen-0.30.ebuild, -sussen-0.31.ebuild,
+  -sussen-0.32.ebuild, -sussen-0.33.ebuild, +sussen-0.34-r1.ebuild:
+  Cleaning out old versions. Fixed crash reported by Simon Stelling in bug
+  #165849.
 
   12 Feb 2007; Simon Stelling <blubb@gentoo.org> sussen-0.34.ebuild:
   stable on amd64; bug 165849

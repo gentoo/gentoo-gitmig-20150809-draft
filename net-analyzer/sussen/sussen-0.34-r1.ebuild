@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.33.ebuild,v 1.1 2006/12/14 14:52:13 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.34-r1.ebuild,v 1.1 2007/02/12 19:44:02 pva Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.8"
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 #IUSE="doc gnome web"
 IUSE="doc gnome"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND="dev-lang/mono
 	gnome? ( >=dev-dotnet/gtk-sharp-2.4
@@ -33,7 +33,7 @@ DOCS="AUTHORS ChangeLog README TODO"
 pkg_setup() {
 	ewarn "dbus support has been removed from sussen until mono binding"
 	ewarn "issue will be resolved: http://www.j5live.com/?p=221"
-	#ebeep 5
+	ebeep 5
 
 	use gnome || { elog "You do not have gnome in your USE flags.";
 					elog "applet and editor will not be built." ; }
@@ -46,8 +46,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${P}-ignore-unsupported-test.patch
-	epatch "${FILESDIR}"/${P}-configopts-mono-1.1.13-fix.patch
+	epatch "${FILESDIR}"/${P}-sussen-out-of-range.patch
+	epatch "${FILESDIR}"/${P}-po-linguas.patch
+	epatch "${FILESDIR}"/${P}-editor-no-definitions.patch
+	eautoconf
 	use gnome && gnome2_omf_fix
 }
 
