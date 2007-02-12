@@ -1,6 +1,11 @@
 # ChangeLog for media-video/setpwc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/setpwc/ChangeLog,v 1.8 2007/02/09 08:02:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/setpwc/ChangeLog,v 1.9 2007/02/12 08:58:29 phosphan Exp $
+
+*setpwc-1.2 (12 Feb 2007)
+
+  12 Feb 2007; Patrick Kursawe <phosphan@gentoo.org> +setpwc-1.2.ebuild:
+  Version bump.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
