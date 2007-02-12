@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zinc/zinc-1.1.ebuild,v 1.5 2007/02/12 17:33:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zinc/zinc-1.1.ebuild,v 1.6 2007/02/12 17:35:51 blubb Exp $
 
 inherit games
 
@@ -16,7 +16,8 @@ RESTRICT="strip"
 QA_EXECSTACK="${GAMES_PREFIX_OPT:1}/bin/zinc"
 
 DEPEND="x11-libs/libXext
-	virtual/opengl"
+	virtual/opengl
+	amd64? ( app-emulation/emul-linux-x86-xlibs )"
 
 S=${WORKDIR}/zinc
 
