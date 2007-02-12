@@ -1,6 +1,9 @@
 # ChangeLog for media-video/chaplin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/chaplin/ChangeLog,v 1.9 2007/02/10 13:53:37 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/chaplin/ChangeLog,v 1.10 2007/02/12 14:35:16 blubb Exp $
+
+  12 Feb 2007; Simon Stelling <blubb@gentoo.org> chaplin-1.10-r1.ebuild:
+  stable on amd64; bug 165375
 
   10 Feb 2007; nixnut <nixnut@gentoo.org> chaplin-1.10-r1.ebuild:
   Stable on ppc wrt bug 165375
