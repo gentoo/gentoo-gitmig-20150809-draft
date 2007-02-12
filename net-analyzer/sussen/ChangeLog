@@ -1,8 +1,8 @@
 # ChangeLog for net-analyzer/sussen
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.45 2007/02/12 16:06:33 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.46 2007/02/12 19:21:40 blubb Exp $
 
-  12 Feb 2007; Simon Stelling <blubb@gentoo.org> ChangeLog:
+  12 Feb 2007; Simon Stelling <blubb@gentoo.org> sussen-0.34.ebuild:
   stable on amd64; bug 165849
 
   10 Feb 2007; <pva@gentoo.org> +files/sussen-0.34-po-linguas.patch,
