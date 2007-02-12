@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.50 2007/02/06 12:59:05 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.51 2007/02/12 16:40:49 blubb Exp $
 
 # SECTION: Unmask
 
@@ -80,11 +80,6 @@ cmucl
 # 2005/08/28 - Simon Stelling <blubb@gentoo.org>
 # sci-libs/cdf doesn't build
 cdf
-
-# 2005/06/04 - Simon Stelling <blubb@gentoo.org>
-# dev-util/xdelta doesn't work as expected by this use flag, it can only use
-# xdelta-files made on a 64bit system
-kdexdeltas
 
 # 2004/11/13 - Tom Martin <slarti@gentoo.org>
 # dev-libs/mzscheme won't build, #65216
