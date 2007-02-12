@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gcursor
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcursor/ChangeLog,v 1.8 2007/02/09 03:20:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcursor/ChangeLog,v 1.9 2007/02/12 18:40:46 drac Exp $
+
+  12 Feb 2007; Samuli Suominen <drac@gentoo.org> metadata.xml,
+  gcursor-0.061-r1.ebuild:
+  From gnome to desktop-misc. Fix HOMEPAGE, remove empty lines, clean up.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
