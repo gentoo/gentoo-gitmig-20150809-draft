@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/fcdsl
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/ChangeLog,v 1.25 2006/09/21 13:24:54 mrness Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/ChangeLog,v 1.26 2007/02/12 20:04:49 genstef Exp $
+
+  12 Feb 2007; <genstef@gentoo.org> +files/fcdsl-2.6.20.diff,
+  fcdsl-2.6.37.ebuild:
+  Fix building with 2.6.19 and 2.6.20 thanks to André Malo <nd@perlig.de> in
+  bug 165485
 
   21 Sep 2006; Alin Nastac <mrness@gentoo.org> -fcdsl-2.6.20.7-r5.ebuild,
   -fcdsl-2.6.30.ebuild:

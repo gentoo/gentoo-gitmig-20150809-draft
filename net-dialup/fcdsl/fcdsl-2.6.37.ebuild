@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.37.ebuild,v 1.3 2006/04/27 17:40:57 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.37.ebuild,v 1.4 2007/02/12 20:04:49 genstef Exp $
 
 inherit linux-mod eutils rpm
 
@@ -74,6 +74,9 @@ src_unpack() {
 	cd "${S}"
 	mv usr/src/kernel-modules/fcdsl/src/src.fcdslusb1 \
 		usr/src/kernel-modules/fcdsl/src/src.fcdslusb
+	# do not fail even if some drivers are not present
+	einfo "When you have FCDSL_CARDS set some errors are OK here"
+	patch -p0 -f < ${FILESDIR}/fcdsl-2.6.20.diff
 
 	if use x86; then
 		for ((CARD=0; CARD < ${#FCDSL_MODULES[*]}; CARD++)); do
