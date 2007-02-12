@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libcap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.44 2007/02/12 04:20:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.45 2007/02/12 13:02:58 gustavoz Exp $
+
+  12 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> libcap-1.10-r9.ebuild:
+  Stable on sparc wrt #165742
 
   12 Feb 2007; Jeroen Roovers <jer@gentoo.org> libcap-1.10-r9.ebuild:
   Stable for HPPA (bug #165742).
