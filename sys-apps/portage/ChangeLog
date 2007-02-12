@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.352 2007/02/11 13:15:38 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.353 2007/02/12 18:04:19 gustavoz Exp $
+
+  12 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  portage-2.1.2-r9.ebuild:
+  Stable on sparc wrt #166118
 
   11 Feb 2007; Alexander H. Færøy <eroyf@gentoo.org>
   portage-2.1.2-r9.ebuild:
