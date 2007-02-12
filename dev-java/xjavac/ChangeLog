@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/xjavac
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/ChangeLog,v 1.19 2007/01/27 22:25:02 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/ChangeLog,v 1.20 2007/02/12 00:53:52 caster Exp $
+
+*xjavac-20041208-r5 (12 Feb 2007)
+
+  12 Feb 2007; Vlastimil Babka <caster@gentoo.org>
+  xjavac-20041208-r4.ebuild, +xjavac-20041208-r5.ebuild:
+  Revbump that stops symlinking the jar into ant-core/lib, for split-ant aware
+  revisions of xerces.
 
   27 Jan 2007; Petteri Räty <betelgeuse@gentoo.org>
   -xjavac-20041208-r1.ebuild, -xjavac-20041208-r2.ebuild,
