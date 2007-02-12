@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10-r2.ebuild,v 1.1 2006/11/12 23:09:16 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10-r2.ebuild,v 1.2 2007/02/12 02:05:26 troll Exp $
 
 inherit eutils qt3
 

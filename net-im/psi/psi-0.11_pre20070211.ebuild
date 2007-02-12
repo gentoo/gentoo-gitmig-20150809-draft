@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.11_pre20070201.ebuild,v 1.1 2007/02/01 23:20:56 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.11_pre20070211.ebuild,v 1.1 2007/02/12 02:05:26 troll Exp $
 
 inherit confutils eutils qt4
 
@@ -18,6 +18,8 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 
 S="${WORKDIR}/${MY_P}"
+
+PLUGINS="chess echo noughtsandcrosses"
 
 DEPEND="$(qt4_min_version 4.2)
 	media-libs/libpng
@@ -47,7 +49,11 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/psi-jingle-gcc4.patch
-	epatch ${FILESDIR}/psi-ptr_64bit_fix.patch
+
+	if use plugins; then
+		epatch ${FILESDIR}/psi-ptr_64bit_fix.patch
+		epatch ${FILESDIR}/psi-echoplugin.patch
+	fi;
 }
 
 src_compile() {
@@ -106,8 +112,34 @@ src_compile() {
 		"CONFIG+=no_fixpath release" \
 		|| die "qmake failed"
 
+	if use jingle; then
+		cd ${S}/third-party/libjingle
+		qmake libjingle.pro \
+			QTDIR=/usr/lib \
+			QMAKE_CFLAGS_RELEASE="${CFLAGS}" \
+			QMAKE_CXXFLAGS_RELEASE="${CXXFLAGS}" \
+			QMAKE=/usr/bin/qmake \
+			QMAKE_RPATH= \
+			"CONFIG+=no_fixpath release" \
+			|| die "qmake failed"
+
+	fi;
+
 	cd ${S}
 	emake || die "make failed"
+
+	use plugins && for pl in ${PLUGINS}; do
+		cd ${S}/src/plugins/generic/${pl}
+		qmake ${pl}plugin.pro \
+			QTDIR=/usr/lib \
+			QMAKE_CFLAGS_RELEASE="${CFLAGS}" \
+			QMAKE_CXXFLAGS_RELEASE="${CXXFLAGS}" \
+			QMAKE=/usr/bin/qmake \
+			QMAKE_RPATH= \
+			"CONFIG+=no_fixpath release" \
+			|| die "qmake failed"
+		make || die "make plugin ${pl} failed"
+	done
 
 	if use doc; then
 		cd ${S}/doc
@@ -119,11 +151,17 @@ src_install() {
 	emake INSTALL_ROOT="${D}" install || die "emake install failed"
 
 	#this way the docs will also be installed in the standard gentoo dir
-	for i in roster system; do
-		newdoc ${S}/iconsets/${i}/README README.${i}
-	done;
+	newdoc ${S}/iconsets/roster/README README.roster
+	newdoc ${S}/iconsets/system/README README.system
 	newdoc certs/README README.certs
 	dodoc ChangeLog README TODO
+
+	if use plugins; then
+		dodir /usr/share/psi/plugins
+		for pl in ${PLUGINS}; do
+			cp ${S}/src/plugins/generic/${pl}/lib${pl}plugin.so ${D}/usr/share/psi/plugins
+		done;
+	fi;
 
 	use doc && cp -ar ${S}/doc/api ${D}/usr/share/psi
 }
