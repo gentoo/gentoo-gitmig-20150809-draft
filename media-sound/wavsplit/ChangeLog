@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/wavsplit
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavsplit/ChangeLog,v 1.11 2006/03/30 09:30:34 tove Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavsplit/ChangeLog,v 1.12 2007/02/12 22:26:25 blubb Exp $
+
+*wavsplit-1.2.1-r1 (12 Feb 2007)
+
+  12 Feb 2007; Simon Stelling <blubb@gentoo.org>
+  +files/wavsplit-1.2.1-64bit.patch, +wavsplit-1.2.1-r1.ebuild:
+  mark ~amd64 after applying patch from David Watzke; bug 156144
 
   30 Mar 2006; Torsten Veller <tove@gentoo.org>
   +files/wavsplit-1.2.1-Makefile.patch,
