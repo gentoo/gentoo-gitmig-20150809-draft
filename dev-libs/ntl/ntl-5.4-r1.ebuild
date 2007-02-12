@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ntl/ntl-5.4.ebuild,v 1.3 2007/02/12 18:53:53 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ntl/ntl-5.4-r1.ebuild,v 1.1 2007/02/12 22:14:20 dev-zero Exp $
 
 inherit toolchain-funcs eutils
 
@@ -39,7 +39,7 @@ src_compile() {
 }
 
 src_install() {
-	dolib.a src/ntl.a
+	newlib.a src/ntl.a libntl.a
 	insinto /usr/include
 	doins -r include/NTL
 
