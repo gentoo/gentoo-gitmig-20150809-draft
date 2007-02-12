@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.7.1.ebuild,v 1.2 2006/12/25 17:42:29 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.7.2.ebuild,v 1.1 2007/02/12 23:19:16 nyhm Exp $
 
-inherit games
+inherit autotools games
 
 DESCRIPTION="An advanced NES, GB/GBC/GBA, TurboGrafx 16/CD, NGPC and Lynx emulator"
 HOMEPAGE="http://mednafen.com/"
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="alsa cjk debug nls"
+IUSE="alsa cjk debug jack nls"
 
 RDEPEND="virtual/opengl
 	media-libs/libsndfile
@@ -19,6 +19,7 @@ RDEPEND="virtual/opengl
 	media-libs/libsdl
 	media-libs/sdl-net
 	alsa? ( media-libs/alsa-lib )
+	jack? ( media-sound/jack-audio-connection-kit )
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -32,20 +33,20 @@ src_unpack() {
 	sed -i \
 		-e 's:$(datadir)/locale:/usr/share/locale:' \
 		-e 's:$(localedir):/usr/share/locale:' \
-		$(find . -name 'Makefile.in*') \
+		$(find . -name 'Makefile.*') \
 		|| die "sed Makefile.in failed"
-	sed -i '/-fomit-frame/d' configure \
-		|| die "sed configure failed"
+	sed -i '/-fomit-frame/d' configure.ac \
+		|| die "sed configure.ac failed"
+	eautoreconf
 }
 
 src_compile() {
-	# Doesn't like --disable-jack
-	#	$(use_enable jack)
 	egamesconf \
 		--disable-dependency-tracking \
 		$(use_enable alsa) \
 		$(use_enable cjk cjk-fonts) \
 		$(use_enable debug debugger) \
+		$(use_enable jack) \
 		$(use_enable nls) \
 		|| die
 	emake || die "emake failed"
