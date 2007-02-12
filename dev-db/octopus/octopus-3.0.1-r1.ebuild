@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/octopus/octopus-3.0.1-r1.ebuild,v 1.3 2007/02/10 23:37:23 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/octopus/octopus-3.0.1-r1.ebuild,v 1.4 2007/02/12 21:57:31 betelgeuse Exp $
 
 inherit versionator java-pkg-2 java-ant-2
 
@@ -41,15 +41,22 @@ src_unpack() {
 	java-ant_rewrite-classpath build.xml
 }
 
+EANT_GENTOO_CLASSPATH="xerces-2,rhino-1.6,ant-core,junit,log4j"
+
 src_compile() {
 	cd ${S}/modules
 
 	use source && antflags="${antflags} sourcezip-all"
 
-	deps="xerces-2,rhino-1.6,ant-core,junit,log4j"
-	eant jar-all $(use_doc docs-all) ${antflags} \
-		-Dgentoo.classpath="$(java-pkg_getjars ${deps})"
+	eant jar-all $(use_doc docs-all) ${antflags}
 }
+
+RESTRICT="test"
+
+# Would need maven to work properly as the build.xml just launches maven
+#src_test() {
+#	eant test
+#}
 
 src_install() {
 	dodoc ChangeLog.txt ReleaseNotes.txt

@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/octopus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/octopus/ChangeLog,v 1.6 2007/02/10 23:37:23 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/octopus/ChangeLog,v 1.7 2007/02/12 21:57:31 betelgeuse Exp $
+
+  12 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
+  octopus-3.0.1-r1.ebuild:
+  Restrict test because we would need maven to run them properly.
 
   10 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
   octopus-3.0.1-r1.ebuild:
