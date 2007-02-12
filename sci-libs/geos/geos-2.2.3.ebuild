@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-2.2.3.ebuild,v 1.1 2006/12/14 20:51:32 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-2.2.3.ebuild,v 1.2 2007/02/12 16:35:13 djay Exp $
 
 USE_RUBY="ruby18"
 RUBY_OPTIONAL="yes"
@@ -13,7 +13,7 @@ SRC_URI="http://geos.refractions.net/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE="doc python ruby"
 
 RDEPEND="ruby? ( virtual/ruby )
