@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksplash-engine-moodin/ksplash-engine-moodin-0.4.2.ebuild,v 1.5 2007/02/11 20:50:58 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksplash-engine-moodin/ksplash-engine-moodin-0.4.2.ebuild,v 1.6 2007/02/12 16:08:57 jokey Exp $
 
 inherit kde
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 ~ppc x86"
 IUSE="arts"
 
-DEPEND="kde-base/ksplashml"
+DEPEND="|| ( kde-base/ksplashml kde-base/kdebase )"
 
 need-kde 3.4
 
