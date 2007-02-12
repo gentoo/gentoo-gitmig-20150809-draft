@@ -1,6 +1,10 @@
 # ChangeLog for ia64 profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.16 2007/02/12 16:51:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.17 2007/02/12 20:20:53 kloeri Exp $
+
+  12 Feb 2007; Bryan Østergaard <kloeri@gentoo.org>
+  dev/2007.0/make.defaults:
+  Removed unicode from STAGE1_USE as it breaks stage building.
 
   12 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   dev/2007.0/desktop/make.defaults:
