@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/rt2500
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/ChangeLog,v 1.37 2007/02/12 10:04:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/ChangeLog,v 1.38 2007/02/12 19:40:07 armin76 Exp $
+
+  12 Feb 2007; Raúl Porcel <armin76@gentoo.org>
+  rt2500-1.1.0_pre2007020911.ebuild:
+  x86 stable wrt bug 166478
 
   12 Feb 2007; Simon Stelling <blubb@gentoo.org>
   rt2500-1.1.0_pre2007020911.ebuild:
