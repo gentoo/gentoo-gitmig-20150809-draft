@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/autoconf-archive
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-archive/ChangeLog,v 1.13 2006/10/24 18:32:12 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-archive/ChangeLog,v 1.14 2007/02/12 01:20:19 vapier Exp $
+
+*autoconf-archive-2007.02.03 (12 Feb 2007)
+
+  12 Feb 2007; Mike Frysinger <vapier@gentoo.org>
+  +autoconf-archive-2007.02.03.ebuild:
+  Version bump #166369 by Peter Simons.
 
 *autoconf-archive-2006.10.25 (24 Oct 2006)
 
