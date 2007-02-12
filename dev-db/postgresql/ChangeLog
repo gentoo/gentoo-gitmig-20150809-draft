@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.316 2007/02/11 23:42:35 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.317 2007/02/12 00:13:45 mjolnir Exp $
+
+*postgresql-7.4.16 (12 Feb 2007)
+
+  12 Feb 2007; Martin Jackson <mjolnir@gentoo.org>
+  +files/postgresql-7.4.16-gentoo.patch,
+  +files/postgresql-7.4.16-hppa-testandset.patch, +postgresql-7.4.16.ebuild:
+  New version of 7.4 branch for bug 165482
 
   11 Feb 2007; Tiziano Müller <dev-zero@gentoo.org>
   postgresql-7.3.18.ebuild:
