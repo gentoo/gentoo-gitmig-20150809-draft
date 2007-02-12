@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-attachwarner
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-attachwarner/ChangeLog,v 1.3 2007/02/03 03:33:40 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-attachwarner/ChangeLog,v 1.4 2007/02/12 10:19:48 mabi Exp $
+
+  12 Feb 2007; Matti Bickel <mabi@gentoo.org>
+  claws-mail-attachwarner-0.2.4.ebuild:
+  keyworded ~ppc (bug #162409)
 
   03 Feb 2007; Steve Dibb <beandog@gentoo.org>
   claws-mail-attachwarner-0.2.3.ebuild,
