@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/sge
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sge/ChangeLog,v 1.1 2006/04/08 03:00:44 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sge/ChangeLog,v 1.2 2007/02/12 08:26:05 nyhm Exp $
+
+  12 Feb 2007; Tristan Heaven <nyhm@gentoo.org>
+  files/sge-030809-freetype.patch:
+  Fix for freetype-2.2 - bug #166467
 
 *sge-030809 (07 Apr 2006)
 
