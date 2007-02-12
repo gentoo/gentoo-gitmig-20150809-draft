@@ -1,37 +1,20 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-2.1.0.2.ebuild,v 1.3 2007/01/24 02:28:14 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-2.1.0.2.ebuild,v 1.4 2007/02/12 00:58:34 wschlich Exp $
 
 inherit eutils rpm multilib
 
 DESCRIPTION="Nero Burning ROM for Linux"
 HOMEPAGE="http://nerolinux.nero.com/"
 NERO_RPM="nerolinux-${PV}-x86.rpm"
-SRC_URI="http://httpdl1.de.nero.com/${NERO_RPM}
-	http://httpdl2.de.nero.com/${NERO_RPM}
-	http://httpdl3.de.nero.com/${NERO_RPM}
+SRC_URI="http://httpdl3.de.nero.com/${NERO_RPM}
 	http://httpdl4.de.nero.com/${NERO_RPM}
 	http://httpdl5.de.nero.com/${NERO_RPM}
 	http://httpdl6.de.nero.com/${NERO_RPM}
-	ftp://ftp1.de.nero.com/${NERO_RPM}
-	ftp://ftp2.de.nero.com/${NERO_RPM}
-	ftp://ftp2.de.nero.com/${NERO_RPM}
 	ftp://ftp3.de.nero.com/${NERO_RPM}
 	ftp://ftp4.de.nero.com/${NERO_RPM}
 	ftp://ftp5.de.nero.com/${NERO_RPM}
-	ftp://ftp6.de.nero.com/${NERO_RPM}
-	http://httpdl1.us.nero.com/${NERO_RPM}
-	http://httpdl2.us.nero.com/${NERO_RPM}
-	http://httpdl3.us.nero.com/${NERO_RPM}
-	http://httpdl4.us.nero.com/${NERO_RPM}
-	http://httpdl5.us.nero.com/${NERO_RPM}
-	http://httpdl6.us.nero.com/${NERO_RPM}
-	ftp://ftp1.us.nero.com/${NERO_RPM}
-	ftp://ftp2.us.nero.com/${NERO_RPM}
-	ftp://ftp3.us.nero.com/${NERO_RPM}
-	ftp://ftp4.us.nero.com/${NERO_RPM}
-	ftp://ftp5.us.nero.com/${NERO_RPM}
-	ftp://ftp6.us.nero.com/${NERO_RPM}"
+	ftp://ftp6.de.nero.com/${NERO_RPM}"
 LICENSE="Nero"
 SLOT="0"
 KEYWORDS="~amd64 x86"

@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/nero
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.22 2007/01/24 02:28:14 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.23 2007/02/12 00:58:34 wschlich Exp $
+
+  12 Feb 2007; Wolfram Schlich <wschlich@gentoo.org> nero-2.1.0.2.ebuild,
+  nero-2.1.0.3.ebuild:
+  fix SRC_URI due to vanished download servers
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org> nero-2.1.0.1.ebuild,
   nero-2.1.0.2.ebuild, nero-2.1.0.3.ebuild:
