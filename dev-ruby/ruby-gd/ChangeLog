@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-gd
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ChangeLog,v 1.10 2006/10/20 21:25:46 agriffis Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ChangeLog,v 1.11 2007/02/12 17:13:23 flameeyes Exp $
+
+  12 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ruby-gd-0.7.4.ebuild:
+  Fix quoting, fix local declaration of myconf, add a pkg_setup error if
+  media-libs/gd is not compiled with png useflag enabled, rather than get the
+  configure step failing.
 
   20 Oct 2006; Aron Griffis <agriffis@gentoo.org> ruby-gd-0.7.4.ebuild:
   Mark 0.7.4 stable on ia64

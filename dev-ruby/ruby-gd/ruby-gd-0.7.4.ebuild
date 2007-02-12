@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ruby-gd-0.7.4.ebuild,v 1.11 2006/10/20 21:25:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ruby-gd-0.7.4.ebuild,v 1.12 2007/02/12 17:13:23 flameeyes Exp $
 
 inherit ruby
 USE_RUBY="ruby16 ruby18 ruby19"
@@ -23,9 +23,18 @@ DEPEND="virtual/ruby
 	truetype? ( media-libs/freetype )
 	X? ( || ( x11-libs/libX11 <virtual/x11-7 ) )"
 
+pkg_setup() {
+	if ! built_with_use media-libs/gd png; then
+		eerror "dev-ruby/ruby-gd requires media-libs/gd compiled with the"
+		eerror "'png' USE flag enabled, or it won't build."
+		eerror "Please emerge media-libs/gd again with the 'png' USE flag"
+		eerror "enabled and then try again."
+		die "Missing png useflag on media-libs/gd."
+	fi
+}
+
 src_compile() {
-	local myconf=""
-	myconf="${myconf} --enable-gd2_0 --with-xpm"
+	local myconf="${myconf} --enable-gd2_0 --with-xpm"
 
 	if use X; then
 		myconf="${myconf} --with-xpm"
@@ -44,7 +53,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	dodoc Changes TODO readme.* doc/manual.rd doc/INSTALL.*
 	dohtml doc/manual.html doc/manual_index.html
