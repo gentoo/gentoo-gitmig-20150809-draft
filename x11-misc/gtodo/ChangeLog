@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gtodo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/ChangeLog,v 1.14 2007/02/12 17:10:10 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/ChangeLog,v 1.15 2007/02/12 17:15:16 drac Exp $
+
+  12 Feb 2007; Samuli Suominen <drac@gentoo.org> gtodo-0.16.0_rc2.ebuild:
+  Add missing intltool dep.
 
 *gtodo-0.16.0_rc2 (12 Feb 2007)
 

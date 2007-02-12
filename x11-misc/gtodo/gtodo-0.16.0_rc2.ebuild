@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/gtodo-0.16.0_rc2.ebuild,v 1.1 2007/02/12 17:10:10 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/gtodo-0.16.0_rc2.ebuild,v 1.2 2007/02/12 17:15:16 drac Exp $
 
 inherit gnome2 versionator
 
@@ -23,6 +23,7 @@ RDEPEND=">=x11-libs/gtk+-2.4
 	>=gnome-base/gnome-vfs-2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
+	dev-util/intltool
 	sys-devel/gettext
 	dev-libs/libxslt"
 
