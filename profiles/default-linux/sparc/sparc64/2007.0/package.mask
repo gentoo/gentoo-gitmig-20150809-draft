@@ -1,14 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2007.0/package.mask,v 1.1 2007/02/12 16:57:32 gustavoz Exp $
-
-# Jason Wever <weeve@gentoo.org>
-# gradm requires 64 bit support, which doesn't exist in this profile
->sys-apps/gradm-2.0.1-r1
-
-# Gustavo Zacarias <gustavoz@gentoo.org>
-# To avoid odd toolchain mixups
-<dev-libs/libffi-3.4.3
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2007.0/package.mask,v 1.2 2007/02/12 17:01:20 gustavoz Exp $
 
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # Masked until bug #155887 is solved
