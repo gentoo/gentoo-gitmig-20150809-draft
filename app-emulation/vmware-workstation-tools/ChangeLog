@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-workstation-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/ChangeLog,v 1.17 2007/01/18 23:46:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/ChangeLog,v 1.18 2007/02/12 23:24:13 wolf31o2 Exp $
+
+  12 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  files/digest-vmware-workstation-tools-4.5.3-r1, Manifest:
+  Manifest/digest fix.  Closing bug #166170.
 
 *vmware-workstation-tools-5.5.2 (18 Jan 2007)
 
