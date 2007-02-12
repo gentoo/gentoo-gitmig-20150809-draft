@@ -1,6 +1,10 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.84 2007/02/04 21:18:42 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.85 2007/02/12 20:09:31 dang Exp $
+
+  12 Feb 2007; Daniel Gryniewicz <dang@gentoo.org> -liferea-1.2_rc5.ebuild,
+  -liferea-1.2.0.ebuild, -liferea-1.2.2.ebuild:
+  Remove old versions
 
 *liferea-1.2.5 (04 Feb 2007)
 
