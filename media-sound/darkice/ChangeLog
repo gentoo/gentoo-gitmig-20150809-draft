@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/darkice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.34 2007/02/11 14:46:41 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.35 2007/02/12 16:15:22 gustavoz Exp $
+
+  12 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> darkice-0.17.1.ebuild:
+  Stable on sparc
 
   11 Feb 2007; Lars Weiler <pylon@gentoo.org> darkice-0.17.1.ebuild:
   Added ~ppc; bug #133776.
