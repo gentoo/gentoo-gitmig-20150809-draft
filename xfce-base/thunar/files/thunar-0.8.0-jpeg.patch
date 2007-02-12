@@ -1,12 +1,6 @@
 diff -ur Thunar-0.8.0.orig/thunar-vfs/thunar-vfs-thumb-jpeg.c Thunar-0.8.0/thunar-vfs/thunar-vfs-thumb-jpeg.c
 --- Thunar-0.8.0.orig/thunar-vfs/thunar-vfs-thumb-jpeg.c	2007-01-20 22:39:09.000000000 +0200
 +++ Thunar-0.8.0/thunar-vfs/thunar-vfs-thumb-jpeg.c	2007-02-12 20:16:29.000000000 +0200
-@@ -1,4 +1,4 @@
--/* $Id: thunar-0.8.0-jpeg.patch,v 1.1 2007/02/12 19:14:05 drac Exp $ */
-+/* $Id: thunar-0.8.0-jpeg.patch,v 1.1 2007/02/12 19:14:05 drac Exp $ */
- /*-
-  * Copyright (c) 2005-2007 Benedikt Meurer <benny@xfce.org>
-  *
 @@ -310,18 +310,18 @@
    {
      struct /* thumbnail JPEG */
