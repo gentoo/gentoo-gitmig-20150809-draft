@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.16.2.ebuild,v 1.11 2007/02/12 17:30:36 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.16.2.ebuild,v 1.12 2007/02/12 21:26:59 uberlord Exp $
 
 inherit eutils gnome2 autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="acpi apm gstreamer hal ipv6"
 
 RDEPEND=">=x11-libs/gtk+-2.6
@@ -34,8 +34,10 @@ RDEPEND=">=x11-libs/gtk+-2.6
 		>=dev-python/gnome-python-2.10
 		>=x11-themes/gnome-icon-theme-2.15.91
 		>=virtual/python-2.4
-		apm? ( sys-apps/apmd )
-		acpi? ( sys-power/acpid )
+		kernel_linux? (
+			apm? ( sys-apps/apmd )
+			acpi? ( sys-power/acpid )
+		)
 		x11-apps/xrdb x11-libs/libX11
 		>=gnome-extra/gucharmap-1.4
 		gstreamer?	(
