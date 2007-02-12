@@ -1,8 +1,19 @@
 # ChangeLog for app-arch/rpm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.78 2007/01/16 22:10:59 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.79 2007/02/12 19:44:53 sanchan Exp $
 
-  16 Jan 2007; Sandro Bonazzola <sanchan@gentoo.org>
+*rpm-4.4.7-r3 (12 Feb 2007)
+*rpm-4.4.6-r4 (12 Feb 2007)
+
+  12 Feb 2007; Sandro Bonazzola <sanchan@gentoo.org>
+  +files/rpm-4.4.6-qa-fix-undefined.patch,
+  +files/rpm-4.4.7-qa-fix-undefined.patch,
+  +files/rpm-4.4.7-qa-implicit-function-to-pointer.patch,
+  +rpm-4.4.6-r4.ebuild, rpm-4.4.7-r2.ebuild, +rpm-4.4.7-r3.ebuild:
+  ebuild bump trying to increase QA level of this package as per bug #162447.
+	Added a workaround trying to fix bug #153292. Thanks to Marti Raudsepp <marti@juffo.org>
+	for reporting. Thanks to Jeff Johnson <n3npq.jbj@gmail.com> and Ken Gilmer <ken@buglabs.net>
+	for their help.
 
 *rpm-4.4.7-r2 (16 Jan 2007)
 
@@ -237,7 +248,7 @@
   Mark stable on alpha
 
   7 Mar 2003; Stefan Jones <cretin@gentoo.org> rpm-4.2.ebuild :
-  Added dev-libs/elfutils to DEPEND 
+  Added dev-libs/elfutils to DEPEND
 
   6 Mar 2003; Stefan Jones <cretin@gentoo.org> rpm-4.2.ebuild :
   Newest rpm available from redhat rawhide. Seems to work fine.
@@ -255,7 +266,7 @@
 
 *rpm-4.1 (19 Feb 2003)
 
-  19 Feb 2003; Nick Hadaway <raker@gentoo.org> rpm-4.1.ebuild, 
+  19 Feb 2003; Nick Hadaway <raker@gentoo.org> rpm-4.1.ebuild,
   files/digest-rpm-4.1, files/rpm-4.1-system-popt.diff :
   Package builds.  rpm doesn't run.  All are -arch.  This has
   been added to portage so people can test and maybe find a
@@ -269,19 +280,19 @@
   jwarren@cheesefoam.dyndns.org (Jeremy Warren) in bug #13784.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
   12 Oct 2002; Bruce A. Locke <blocke@shivan.org> rpm-4.0.4-r4.ebuild:
   Remove dead symlink (bug #8578) and ebuild no longer blindly creates
   a database if one already exists.
 
 *rpm-4.0.4-r3 (23 Jul 2002)
 
-  14 Sep 2002; Maarten Thibaut <murphy@gentoo.org> ChangeLog rpm-4.0.4-r3.ebuild: 
+  14 Sep 2002; Maarten Thibaut <murphy@gentoo.org> ChangeLog rpm-4.0.4-r3.ebuild:
   This package can not compile on sparc64 without a --host option to configure,
   so I added that flag. Revamped ChangeLog layout according to new guidelines.
-  
-  07 Sep 2002; Seemant Kulleen <seemant@gentoo.org> rpm-4.0.4-r3.ebuild: 
-  This package can not compile with autoconf-2.53a, so autoconf-2.1 is forced. 
+
+  07 Sep 2002; Seemant Kulleen <seemant@gentoo.org> rpm-4.0.4-r3.ebuild:
+  This package can not compile with autoconf-2.53a, so autoconf-2.1 is forced.
   Thanks to:  garion@garion.mnbsyr.com (John Sutherland) in bug #7595
 
   23 Jul 2002; Seemant Kulleen <seemant@gentoo.org> rpm-4.0.4-r3.ebuild: In keeping

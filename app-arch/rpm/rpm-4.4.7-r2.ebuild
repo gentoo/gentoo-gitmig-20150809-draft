@@ -1,47 +1,34 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.7-r2.ebuild,v 1.1 2007/01/16 22:10:59 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.7-r2.ebuild,v 1.2 2007/02/12 19:44:53 sanchan Exp $
 
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
-inherit eutils autotools distutils perl-module gnuconfig toolchain-funcs
+inherit eutils autotools distutils perl-module flag-o-matic
 
 DESCRIPTION="Red Hat Package Management Utils"
 HOMEPAGE="http://www.rpm.org/"
-SRC_URI="http://wraptastic.org/pub/rpm-4.4.x/${P}.tar.gz
-	http://dev.gentoo.org/~sanchan/patches/rpm-4.4.7-patches-1.tar.gz"
+SRC_URI="http://wraptastic.org/pub/rpm-4.4.x/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="berkdb doc elibc_uclibc java lua minimal nls perl python sqlite threads"
-GUID="37"
+IUSE="nls python perl doc sqlite"
 
-RDEPEND="berkdb? ( >sys-libs/db-4 )
+RDEPEND="=sys-libs/db-3.2*
 	>=sys-libs/zlib-1.2.3-r1
 	>=app-arch/bzip2-1.0.1
 	>=dev-libs/popt-1.7
 	>=app-crypt/gnupg-1.2
-	elibc_glibc? ( dev-libs/elfutils )
+	dev-libs/elfutils
 	virtual/libintl
-	>=dev-libs/beecrypt-4.1.2
+	>=dev-libs/beecrypt-3.1.0-r1
 	python? ( >=dev-lang/python-2.2 )
 	perl? ( >=dev-lang/perl-5.8.8 )
-	nls? ( sys-devel/gettext )
+	nls? ( virtual/libintl )
 	sqlite? ( >=dev-db/sqlite-3.3.5 )
 	net-misc/neon"
-#	lua? ( dev-lang/lua )
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	doc? ( app-doc/doxygen )"
-
-pkg_setup() {
-	if ! (use berkdb || use sqlite) ; then
-		ewarn "Haven't chosen any database format, either berkdb or sqlite"
-		ewarn "have to be used!"
-		die
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
@@ -50,103 +37,36 @@ src_unpack() {
 	epatch "${FILESDIR}"/rpm-4.4.7-stupidness.patch
 	epatch "${FILESDIR}"/rpm-4.4.6-autotools.patch
 	epatch "${FILESDIR}"/rpm-4.4.6-buffer-overflow.patch
-	epatch "${WORKDIR}"/${P}-openpkg.bugfix.patch
-	epatch "${WORKDIR}"/${P}-openpkg.porting.patch
-	epatch "${WORKDIR}"/${P}-openpkg.feature.patch
-	epatch "${WORKDIR}"/${P}-libintl.patch
-	epatch "${FILESDIR}"/rpm-4.0.4-sandbox.patch
-	epatch "${WORKDIR}"/${P}-zdefs.patch
-	epatch "${WORKDIR}"/${P}-zdefs-x_functions.patch
-	epatch "${WORKDIR}"/${P}-uclibc-nolibio.patch
-	epatch "${WORKDIR}"/${P}-uclibc-no__fxstat64.patch
-	epatch "${WORKDIR}"/${P}-fix-exec_prefix.patch
-
-	epatch "${WORKDIR}"/${P}-no_threads.patch
-	epatch "${WORKDIR}"/${P}-no_threads2.patch
-	epatch "${WORKDIR}"/${P}-with-threads.patch
-
-	epatch "${WORKDIR}"/${P}-gentoo.patch
-	epatch "${WORKDIR}"/${P}-fix-redhat.patch
-	epatch "${FILESDIR}"/rpm-4.0.4-gentoo-uclibc.patch
-
-	epatch "${WORKDIR}"/${P}-external_db.patch
-	epatch "${WORKDIR}"/${P}-external_db2.patch
-	epatch "${WORKDIR}"/${P}-external_db3.patch
-
-	epatch "${WORKDIR}"/${P}-no_lua.patch
-
-	cp autodeps/linux.req autodeps/linux-uclibc.req
-	cp autodeps/linux.prov autodeps/linux-uclibc.prov
+	epatch "${FILESDIR}"/${P}-qa-implicit-function-to-pointer.patch
+	epatch "${FILESDIR}"/${P}-qa-fix-undefined.patch
 
 	# rpm uses AM_GNU_GETTEXT() but fails to actually
 	# include any of the required gettext files
-	# the gettext files exist only if gettext is installed (not on uClibc)
-	if use nls ; then
-		cp /usr/share/gettext/config.rpath . || die
-	else
-		epatch "${FILESDIR}"/${P}-config.rpath.patch
-		sed -i -e '/AM_GNU_GETTEXT/d' configure.ac
-		sed -i -e '/^SUBDIRS/s:po::' Makefile.am
-	fi
-	if use elibc_uclibc ; then
-		sed -i 's:--enable-rpc:--disable-rpc:' db3/configure
-		sed -i 's:rpmdb_svc rpmdb_stat:rpmdb_stat:' rpmdb/Makefile.am
-	fi
+	cp /usr/share/gettext/config.rpath . || die
 
 	# the following are additional libraries that might be packaged with
 	# the rpm sources. grep for "test -d" in configure.ac
 	cp file/src/{file,patchlevel}.h tools/
-	rm -rf beecrypt elfutils neon popt sqlite zlib intl file syck tools
-	use lua || rm -rf lua
-	use berkdb && rm -rf db db3
-	#use sqlite && rm -rf db db3
+	rm -rf beecrypt elfutils neon popt sqlite zlib intl file
 
 	sed -i -e "s:intl ::" Makefile.am
 	sed -i -e "s:intl/Makefile ::" configure.ac
-	use nls || sed -i -e "s:@INTLLIBS@::" lib/Makefile.am
-	sed -i -e '/lua\/Makefile/d' configure.ac
-	sed -i -e '/syck\/Makefile/d' -e '/syck\/lib\/Makefile/d' configure.ac
-	sed -i -e '/tools\/Makefile/d' configure.ac
-	sed -i -e '/^SUBDIRS/s:tools scripts:scripts:' Makefile.am
-
-	gnuconfig_update
 	AT_NO_RECURSIVE="yes" eautoreconf
-	# TODO: make it work with external lua too
+	# TODO Get rid of internal copies of lua, db and db3
 }
 
 src_compile() {
-	# we use arch-gentoo-linux-{gnu,uclibc} tuple
-	export CHOST="${CHOST//-pc-/-gentoo-}"
-	export CHOST="${CHOST//-unknown-/-gentoo-}"
-
-	local myconf
-	if use threads ; then
-		myconf="--with-threads --enable-posixmutexes"
-	else
-		myconf="--without-threads --disable-posixmutexes --with-mutex=\"UNIX/fcntl\""
-	fi
-	if use minimal ; then
-		# it does not work with berkdb, hash method is missing
-		if use berkdb ; then
-			myconf="${myconf} --disable-cryptography --disable-queue
-				--disable-replication --disable-verify"
-		else
-			myconf="${myconf} --enable-smallbuild"
-		fi
-	fi
-
-
-#$(use_with perl) \
+	# Until strict aliasing is porperly fixed...
+	filter-flags -fstrict-aliasing
+	append-flags -fno-strict-aliasing
 	python_version
-	econf ${myconf} \
+	econf \
+		--enable-posixmutexes \
 		--without-javaglue \
 		--without-selinux \
-		--without-syck \
-		$(use_with lua) \
 		$(use_with python python ${PYVER}) \
 		$(use_with doc apidocs) \
-		--without-perl \
-		$(use_with db) \
+		$(use_with perl) \
 		$(use_with sqlite) \
 		$(use_enable nls) \
 		|| die "econf failed"
@@ -161,76 +81,16 @@ src_install() {
 
 	use nls || rm -rf "${D}"/usr/share/man/??
 
-	keepdir /etc/rpm
-	keepdir /var/spool/repackage
-	keepdir /var/lib/rpm
-	local dbi
-	for dbi in \
-			Basenames Conflictname Dirnames Group Installtid Name Packages \
-			Providename Provideversion Requirename Requireversion Triggername \
-			Filemd5s Pubkeys Sha1header Sigmd5 Depends \
-			__db.001 __db.002 __db.003 __db.004 __db.006 __db.007 \
-			__db.008 __db.009
-	do
-		touch "${D}"/var/lib/rpm/${dbi}
-	done
-	keepdir /usr/src/gentoo/{SRPMS,SPECS,SOURCES,RPMS,BUILD}
-	keepdir /usr/src/gentoo/RPMS/noarch
-	keepdir /usr/src/gentoo/RPMS/$(tc-arch)
-	local x
-	if [[ $(tc-arch) == "x86" ]] ; then
-		for x in athlon i386 i486 i586 i686 pentium3 pentium4 ; do
-			keepdir /usr/src/gentoo/RPMS/${x}
-		done
-	#else
-		#[[ $(tc-arch) == "ppc64" ]] && keepdir /usr/src/gentoo/RPMS/ppc
-	fi
+	keepdir /usr/src/rpm/{SRPMS,SPECS,SOURCES,RPMS,BUILD}
 
 	dodoc CHANGES CREDITS GROUPS README* RPM*
 	use doc && dohtml -r apidocs/html/*
 
 	# Fix perllocal.pod file collision
 	use perl && fixlocalpod
-
-	# remove development stuff
-	rm -rf "${D}"/usr/include
-	rm -f "${D}"/usr/lib/lib*.*a
-	rm -f "${D}"/usr/lib/rpm/rpmcache
-	rm -f "${D}"/usr/bin/rpmgraph
-	rm -f "${D}"/usr/share/man/man*/rpmcache*
-	rm -f "${D}"/usr/share/man/man*/rpmgraph*
-	# remove unneeded links
-	rm -f "${D}"/usr/bin/rpm?
-	# remove unused utilities/files
-	#rm -f "${D}"/usr/lib/rpm/rpm.{daily,log,xinetd}
-	rm -f "${D}"/usr/lib/rpm/rpm.xinetd
-	[[ $(tc-arch) != "sparc64" ]] && rm -f "${D}"/usr/lib/rpm/*sparc64*
-	use java || rm -f "${D}"/usr/lib/rpm/*java*
-	dodir /etc/logrotate.d
-	mv "${D}"/usr/lib/rpm/rpm.log "${D}"/etc/logrotate.d/rpm
-	dodir /etc/cron.daily
-	mv "${D}"/usr/lib/rpm/rpm.daily "${D}"/etc/cron.daily/rpm
-	# remove unused requirement checks
-	rm -f "${D}"/usr/lib/rpm/{tcl,sql}.*
-	# misc
-	rm -f "${D}"/usr/lib/rpm/{Specfile.pm,cpanflute,cpanflute2,rpmdiff,rpmdiff.cgi}
-	# disable automatic perl requirements
-	# puts too much info into db
-	chmod 644 "${D}"/usr/lib/rpm/perl.req
-
-	dodir /etc/env.d
-	echo 'CONFIG_PROTECT_MASK="/var/lib/rpm"' > "${D}"/etc/env.d/50rpm
-}
-
-pkg_preinst() {
-	enewgroup ${PN} ${GUID}
-	enewuser ${PN} ${GUID} /bin/bash /var/lib/rpm rpm
 }
 
 pkg_postinst() {
-	chown -R rpm:rpm ${ROOT}/usr/lib/rpm
-	chown -R rpm:rpm ${ROOT}/var/lib/rpm
-	chown rpm:rpm ${ROOT}/usr/bin/rpm{,2cpio,build,db,query,sign,verify}
 	if [[ -f ${ROOT}/var/lib/rpm/Packages ]] ; then
 		einfo "RPM database found... Rebuilding database (may take a while)..."
 		"${ROOT}"/usr/bin/rpm --rebuilddb --root=${ROOT}
@@ -238,7 +98,6 @@ pkg_postinst() {
 		einfo "No RPM database found... Creating database..."
 		"${ROOT}"/usr/bin/rpm --initdb --root=${ROOT}
 	fi
-	chown rpm:rpm ${ROOT}/var/lib/rpm/*
 
 	distutils_pkg_postinst
 }
