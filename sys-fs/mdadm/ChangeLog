@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mdadm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.55 2007/02/11 20:26:49 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.56 2007/02/12 12:52:43 gustavoz Exp $
+
+  12 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> mdadm-2.6.ebuild:
+  Stable on sparc wrt #166309
 
   11 Feb 2007; Andrej Kacian <ticho@gentoo.org> mdadm-2.6.ebuild:
   Stable on x86, bug #166309.
