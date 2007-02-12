@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.1.3.ebuild,v 1.1 2007/02/11 11:17:36 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.1.3.ebuild,v 1.2 2007/02/12 13:55:38 blubb Exp $
 
 inherit eutils versionator
 
@@ -21,6 +21,9 @@ DEPEND=">=x11-libs/qt-4.2
 
 src_compile() {
 	./configure
+	emake -j1 qmake_all || die "emake qmake_all failed"
+	epatch ${FILESDIR}/${P}-pic.patch
+
 	emake -j1 || die "emake failed"
 }
 
