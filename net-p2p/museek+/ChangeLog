@@ -1,0 +1,11 @@
+# ChangeLog for net-p2p/museek+
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/ChangeLog,v 1.1 2007/02/12 20:32:13 armin76 Exp $
+
+*museek+-0.1.12 (12 Feb 2007)
+
+  12 Feb 2007; Raúl Porcel <armin76@gentoo.org> +metadata.xml,
+  +museek+-0.1.12.ebuild:
+  New ebuild, from bug 140047, thanks to Santiago M. Mola Velasco <cooldwind
+  at gmail dot com> for the ebuild
+
