@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zinc/zinc-1.1.ebuild,v 1.4 2006/12/01 22:07:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zinc/zinc-1.1.ebuild,v 1.5 2007/02/12 17:33:45 blubb Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.emuhype.com/files/${P//[-.]/}-lnx.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* x86"
+KEYWORDS="-* ~amd64 x86"
 IUSE=""
 RESTRICT="strip"
 QA_EXECSTACK="${GAMES_PREFIX_OPT:1}/bin/zinc"
