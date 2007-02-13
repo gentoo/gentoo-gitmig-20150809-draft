@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/omnibook
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook/ChangeLog,v 1.17 2006/12/24 08:13:26 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook/ChangeLog,v 1.18 2007/02/13 09:05:37 s4t4n Exp $
+
+*omnibook-20070211 (13 Feb 2007)
+
+  13 Feb 2007; Michele Noberasco <s4t4n@gentoo.org> metadata.xml, +omnibook-20070211.ebuild:
+  Version bump. Closes bug #166622.
 
   24 Dec 2006; Michele Noberasco <s4t4n@gentoo.org> omnibook-20060817-r1.ebuild:
   Stable for x86. Closes bug #158529.
