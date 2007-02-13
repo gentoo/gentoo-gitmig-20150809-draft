@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kexi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.67 2007/02/13 00:36:15 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.68 2007/02/13 09:44:30 corsair Exp $
+
+  13 Feb 2007; Markus Rothe <corsair@gentoo.org> kexi-1.6.1.ebuild:
+  Stable on ppc64; bug #166246
 
   13 Feb 2007; Marcus D. Hanwell <cryos@gentoo.org> kexi-1.6.1.ebuild:
   Stable on amd64, bug 166246.
