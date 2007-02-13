@@ -1,6 +1,9 @@
 # ChangeLog for virtual/init
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/init/ChangeLog,v 1.6 2007/02/13 02:37:28 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/init/ChangeLog,v 1.7 2007/02/13 17:33:46 armin76 Exp $
+
+  13 Feb 2007; Raúl Porcel <armin76@gentoo.org> init-0.ebuild:
+  x86 stable wrt bug 158637
 
   13 Feb 2007; Joseph Jezak <josejx@gentoo.org> init-0.ebuild:
   Marked ppc stable.
