@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-codec
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-codec/ChangeLog,v 1.18 2006/07/22 22:29:27 nelchael Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-codec/ChangeLog,v 1.19 2007/02/13 19:17:13 betelgeuse Exp $
+
+  13 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
+  commons-codec-1.3-r1.ebuild:
+  Ebuild cleanup.
 
 *commons-codec-1.3-r1 (22 Jul 2006)
 
