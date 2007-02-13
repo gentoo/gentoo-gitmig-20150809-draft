@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/pytextile-2.0.11.ebuild,v 1.2 2007/02/02 14:46:22 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/pytextile-2.0.11.ebuild,v 1.3 2007/02/13 20:31:55 corsair Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://cheeseshop.python.org/packages/source/t/textile/${MY_P}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="dev-python/setuptools"
