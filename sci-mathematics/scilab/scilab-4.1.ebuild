@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.ebuild,v 1.1 2007/02/11 20:26:21 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.ebuild,v 1.2 2007/02/13 03:42:56 markusle Exp $
 
 inherit eutils fortran toolchain-funcs multilib autotools java-pkg-opt-2
 
@@ -66,7 +66,7 @@ src_unpack() {
 		-e 's,$(SCIDIR)/libs/lapack.a,,' \
 		-i Makefile.OBJ.in || die "Failed to fix Makefile.OBJ.in"
 
-	sed -e "s:\$(PREFIX):\${D}/\$(PREFIX):g" \
+	sed -e "s:\$(PREFIX):\${D}\$(PREFIX):g" \
 		-e "s:\$(PREFIX)/lib:\$(PREFIX)/$(get_libdir):g" \
 		-i Makefile.in || die "Failed to fix Makefile.in"
 
@@ -114,7 +114,6 @@ src_install() {
 	# some postinstall fixes
 	echo "SCIDIR=/usr/$(get_libdir)/${P}" > \
 		"${D}/usr/$(get_libdir)/${P}/Path.incl"
-	strip "${D}/usr/$(get_libdir)/${P}/bin/scilex"
 
 	# install docs
 	dodoc ACKNOWLEDGEMENTS CHANGES README_Unix RELEASE_NOTES \
