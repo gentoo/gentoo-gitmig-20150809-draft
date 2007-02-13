@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.111 2007/02/08 15:28:18 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.112 2007/02/13 20:43:50 chutzpah Exp $
+
+*dnsmasq-2.38 (13 Feb 2007)
+
+  13 Feb 2007; Patrick McLean <chutzpah@gentoo.org>
+  -files/dnsmasq-2.37-bsd.patch, -dnsmasq-2.37.ebuild, +dnsmasq-2.38.ebuild:
+  Version bump, remove 2.37 since it has a nasty potential lockup bug.
 
   08 Feb 2007; Patrick McLean <chutzpah@gentoo.org>
   -files/dnsmasq232-ldflags.diff, +files/dnsmasq-2.37-bsd.patch,
