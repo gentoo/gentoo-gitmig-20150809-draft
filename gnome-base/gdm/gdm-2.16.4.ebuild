@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.16.4.ebuild,v 1.9 2007/01/26 09:39:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.16.4.ebuild,v 1.10 2007/02/13 10:06:44 uberlord Exp $
 
 inherit eutils pam gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/gdm/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="accessibility ipv6 pam selinux tcpd xinerama"
 
 # Name of the tarball with gentoo specific files
@@ -20,7 +20,7 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/${GDM_EXTRA}.tar.bz2"
 
 RDEPEND="pam? ( virtual/pam )
-	!pam? ( sys-apps/shadow )
+	!pam? ( kernel_linux? ( sys-apps/shadow ) )
 	>=dev-libs/glib-2.8
 	>=x11-libs/gtk+-2.6
 	>=x11-libs/pango-1.3
