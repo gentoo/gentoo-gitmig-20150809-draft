@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/gnucap
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/ChangeLog,v 1.31 2007/02/08 13:29:50 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/ChangeLog,v 1.32 2007/02/13 20:06:27 calchan Exp $
+
+  13 Feb 2007; Denis Dupeyron <calchan@gentoo.org> gnucap-20060708.ebuild,
+  gnucap-20060830.ebuild:
+  Removed ppc and ~ppc from gnucap-2006* as part of the big gnucap cleanup.
 
   08 Feb 2007; Christian Faulhammer <opfer@gentoo.org> gnucap-0.35.ebuild,
   gnucap-20060708.ebuild, gnucap-20060830.ebuild:
