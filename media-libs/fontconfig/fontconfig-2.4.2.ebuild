@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.4.2.ebuild,v 1.8 2007/02/11 09:59:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.4.2.ebuild,v 1.9 2007/02/13 10:58:53 corsair Exp $
 
 inherit eutils libtool autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://fontconfig.org/release/${P}.tar.gz"
 
 LICENSE="fontconfig"
 SLOT="1.0"
-KEYWORDS="~alpha amd64 arm hppa ia64 m68k ~mips ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="doc xml"
 
 RDEPEND=">=media-libs/freetype-2.1.4
