@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/emul-linux-x86-qtlibs-10.0.ebuild,v 1.1 2007/02/12 09:11:20 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/emul-linux-x86-qtlibs-10.0.ebuild,v 1.2 2007/02/13 14:04:00 blubb Exp $
 
 DESCRIPTION="Provides precompiled 32bit libraries"
 HOMEPAGE="http://amd64.gentoo.org/emul/content.xml"
@@ -43,13 +43,17 @@ src_unpack() {
 }
 
 src_install() {
-	[[ -d ${S}/etc/revdep-rebuild ]] && rm -rf ${S}/etc/revdep-rebuild
-	
-	if [[ -d ${S}/etc/env.d ]] ; then
-		for f in ${S}/etc/env.d/* ; do
-			mv -f $f{,-emul}
-		done
-	fi
+	 # nobody needs *.la, *.h *.a
+	 find ${S} -type f -name '*.a' -or -name '*.la' -or -name '*.h' \
+		| xargs rm -f
+
+	for dir in etc/env.d etc/revdep-rebuild ; do
+		if [[ -d ${S}/${dir} ]] ; then
+			for f in ${S}/${dir}/* ; do
+				mv -f $f{,-emul}
+			done
+		fi
+	done
 
 	cp -a "${WORKDIR}"/* "${D}"/ || die "copying files failed!"
 }
