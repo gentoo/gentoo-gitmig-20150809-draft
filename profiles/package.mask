@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6809 2007/02/13 06:14:54 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6810 2007/02/13 12:40:06 opfer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Christian Faulhammer <opfer@gentoo.org> (13 Feb 2007)
+# masked because of some serious bugs
+=app-emacs/haskell-mode-2.2
 
 # Doug Goldstein <cardoe@gentoo.org> (11 Feb 2007)
 # Masked for testing and steev's gonna tweak acpi
@@ -231,7 +235,6 @@ dev-lang/lua-wrapper
 # Christian Faulhammer <opfer@gentoo.org> (01 Feb 2007)
 # live ebuild for the 22 branch
 ~app-editors/emacs-cvs-22.0.9999
-
 # emacs-unicode-2 branch is not stable and SLOT support for emacs
 # is incomplete. info directory handling should be reconsidered.
 =app-editors/emacs-cvs-23.0.0*
@@ -772,11 +775,6 @@ net-dns/bind-dns-keygen
 # Masking media-libs/ming-0.3.0, breaks PHP compilation and ships its own
 # PHP bindings the wrong way
 =media-libs/ming-0.3.0
-
-# Matthew Kennedy <mkennedy@gentoo.org> (20 Aug 2006)
-# Unmaintained upstream, problems with recent Emacs.
-app-emacs/w3
-app-emacs/weather
 
 # Carsten Lohrke <carlo@gentoo.org> (19 Aug 2006)
 # Development versions of FWbuilder.
