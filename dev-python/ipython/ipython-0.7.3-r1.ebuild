@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.7.3.ebuild,v 1.3 2007/02/03 11:15:31 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.7.3-r1.ebuild,v 1.1 2007/02/13 19:02:30 dev-zero Exp $
 
 NEED_PYTHON=2.3
 
@@ -16,7 +16,8 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~s390 ~x86"
 IUSE="doc examples emacs gnuplot test"
 
 RDEPEND="gnuplot? ( dev-python/gnuplot-py )
-	emacs? ( virtual/emacs )"
+	emacs? ( virtual/emacs 
+		app-emacs/python-mode )"
 DEPEND="${RDEPEND}
 	test? ( dev-python/pexpect )"
 
