@@ -21,10 +21,10 @@ EBUILD twisted-mail-0.3.0.ebuild 439 RMD160 2e5fce2a24b0608e0eb69772d27cac1b1901
 MD5 e468718ad17ff88454a93d807ab65342 twisted-mail-0.3.0.ebuild 439
 RMD160 2e5fce2a24b0608e0eb69772d27cac1b19012eb8 twisted-mail-0.3.0.ebuild 439
 SHA256 38b7ed3103a31b9bf101f5a4013e780de2029ca37a8ab8980bf1abe0b8d8bb31 twisted-mail-0.3.0.ebuild 439
-EBUILD twisted-mail-0.4.0.ebuild 442 RMD160 55be002f7f26bced31d41f7410b664d2d8a4d951 SHA1 ecd4d4d4016e742fb8c3d7df541707c2ef631827 SHA256 ec905b49b80e5ee986bc5dc4ccf6fef1d32002eaedc43f4fe493250343e84857
-MD5 b1520227d0167df012d699a200f00136 twisted-mail-0.4.0.ebuild 442
-RMD160 55be002f7f26bced31d41f7410b664d2d8a4d951 twisted-mail-0.4.0.ebuild 442
-SHA256 ec905b49b80e5ee986bc5dc4ccf6fef1d32002eaedc43f4fe493250343e84857 twisted-mail-0.4.0.ebuild 442
+EBUILD twisted-mail-0.4.0.ebuild 474 RMD160 a58f8823e90a777bed212164925292e4f5d94e6c SHA1 fd771b15f71db3c67cf594ddced1dfdd319039c8 SHA256 cfc71e5bbde13bafb89f679eb4a46b0f809f8926342929cc0c9d1aa53addcfb0
+MD5 c78f6171d30ab78e49dbb9d6bd1a1827 twisted-mail-0.4.0.ebuild 474
+RMD160 a58f8823e90a777bed212164925292e4f5d94e6c twisted-mail-0.4.0.ebuild 474
+SHA256 cfc71e5bbde13bafb89f679eb4a46b0f809f8926342929cc0c9d1aa53addcfb0 twisted-mail-0.4.0.ebuild 474
 MISC ChangeLog 2924 RMD160 20addd969d3060b4c8eab19ae698f0b4de2520b2 SHA1 97337e8f34b1e0190a880b5087d394fc47caebb2 SHA256 3e15f5ca23bde0d5229b3a8611ec842ed54ab39369066e6338ac4a42700f661a
 MD5 16e86a9d289f3977401e21192d8d5fac ChangeLog 2924
 RMD160 20addd969d3060b4c8eab19ae698f0b4de2520b2 ChangeLog 2924
@@ -46,9 +46,9 @@ MD5 82001b11bf7b8c26056af8c5ddb64f5f files/digest-twisted-mail-0.4.0 256
 RMD160 6ccb5422c20151a08dad51cdbbb3e78be63cee4f files/digest-twisted-mail-0.4.0 256
 SHA256 7c59c4a015173340a8ae5d3999623dd24f0a52bce93da4d5627c503cb12b160e files/digest-twisted-mail-0.4.0 256
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.1 (GNU/Linux)
+Version: GnuPG v2.0.2 (GNU/Linux)
 
-iD8DBQFFprfTUElL7eJpfEQRAiaEAJwNTYpGk87QeS3rYidLe8qAbhI+eACgjrXw
-ls/pW8+Puc2oA4HoEiXkol0=
-=mbnD
+iD8DBQFF0bvo8bi6rjpTunYRAu07AJ9/egRgw2PYP5IQeBXP6ltbSoChsgCgrs8L
+4yp8UrJKtbLCnonKlss99YY=
+=pJDo
 -----END PGP SIGNATURE-----
