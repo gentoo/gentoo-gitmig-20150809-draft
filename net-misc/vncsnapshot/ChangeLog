@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vncsnapshot
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vncsnapshot/ChangeLog,v 1.6 2006/09/10 12:15:20 kloeri Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vncsnapshot/ChangeLog,v 1.7 2007/02/13 10:56:32 blubb Exp $
+
+  13 Feb 2007; Simon Stelling <blubb@gentoo.org> vncsnapshot-1.2a.ebuild:
+  mark ~amd64; bug 153789
 
   10 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove fserb from metadata.xml.
