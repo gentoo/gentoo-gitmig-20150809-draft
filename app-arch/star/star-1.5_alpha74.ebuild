@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/star-1.5_alpha74.ebuild,v 1.8 2007/02/06 23:13:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/star-1.5_alpha74.ebuild,v 1.9 2007/02/13 08:39:53 corsair Exp $
 
 DESCRIPTION="An enhanced (world's fastest) tar, as well as enhanced mt/rmt"
 HOMEPAGE="http://cdrecord.berlios.de/old/private/star.html"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.berlios.de/pub/${PN}/alpha/${PN}-${PV/_alpha/a}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1 CDDL-Schily"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ~ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
