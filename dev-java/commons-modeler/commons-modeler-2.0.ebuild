@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/commons-modeler-1.1-r3.ebuild,v 1.4 2007/02/13 22:33:15 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/commons-modeler-2.0.ebuild,v 1.1 2007/02/13 22:33:15 wltjr Exp $
 
 inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="A lib to make the setup of Java Management Extensions easier"
-SRC_URI="mirror://apache/jakarta/commons/modeler/source/modeler-1.1-src.tar.gz"
+SRC_URI="mirror://apache/jakarta/commons/modeler/source/${P}-src.tar.gz"
 HOMEPAGE="http://jakarta.apache.org/commons/modeler/"
 LICENSE="Apache-1.1"
 SLOT="0"
@@ -29,7 +29,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch "${FILESDIR}/1.1-commons-digester.patch"
+#	epatch "${FILESDIR}/1.1-commons-digester.patch"
 
 	# Setup the build environment
 	use commons-digester && echo "commons-digester.jar=$(java-pkg_getjar commons-digester commons-digester.jar)" >> build.properties
@@ -55,7 +55,7 @@ src_test() {
 
 src_install() {
 	java-pkg_dojar dist/${PN}.jar
-	dodoc RELEASE-NOTES-1.1.txt RELEASE-NOTES.txt
+	dodoc RELEASE-NOTES.txt RELEASE-NOTES.txt
 	use doc && java-pkg_dohtml -r dist/docs/*
 	use source && java-pkg_dosrc src/java/*
 }
