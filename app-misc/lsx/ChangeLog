@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lsx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lsx/ChangeLog,v 1.3 2007/01/28 17:44:15 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lsx/ChangeLog,v 1.4 2007/02/13 12:58:34 peper Exp $
+
+  13 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> lsx-0.1.ebuild:
+  Add ~amd64 wrt bug #166302.
 
   28 Jan 2007; Cedric Krier <cedk@gentoo.org> lsx-0.1.ebuild:
   Fix HOMEPAGE; re-use einfo because it is just information

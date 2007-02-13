@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lsx/lsx-0.1.ebuild,v 1.3 2007/01/28 17:44:15 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lsx/lsx-0.1.ebuild,v 1.4 2007/02/13 12:58:34 peper Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://suckless.org/download/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
