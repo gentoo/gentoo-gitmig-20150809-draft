@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2598 2007/02/13 17:46:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2599 2007/02/13 23:50:07 masterdriverz Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -159,7 +159,6 @@ app-i18n/uim:prime - Enable PRIME support
 app-laptop/pbbuttonsd:ibam - Enable support for Intelligent Battery Monitoring
 app-laptop/tp_smapi:hdaps - Install a compatible HDAPS module
 app-laptop/tpctl:tpctlir - enable support for thinkpad models 760 and 765
-app-misc/bbgallery:gimp - Enables support for the gimp via extra libraries
 app-misc/beagle:chm - Enable indexing of MS HTML Help files (.chm)
 app-misc/beagle:galago - Enable desktop presence via galago
 app-misc/beagle:ole - Enable ole support
