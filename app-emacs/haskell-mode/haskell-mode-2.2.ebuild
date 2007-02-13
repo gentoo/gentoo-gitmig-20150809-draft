@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/haskell-mode-2.2.ebuild,v 1.3 2007/02/12 19:35:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/haskell-mode-2.2.ebuild,v 1.4 2007/02/13 12:37:29 opfer Exp $
 
 inherit elisp
 
@@ -20,12 +20,12 @@ src_install() {
 	elisp-install ${PN} *.{el,elc}
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	dohtml *.html *.hs
-	dodoc ChangeLog NEWS
+	dodoc ChangeLog NEWS README
 	insinto /usr/share/doc/${PF}
 	doins *.hs
 }
 
 pkg_postinst() {
 	elisp_pkg_postinst
-	elog "See /usr/share/doc/${PF}/html/index.html"
+	elog "See /usr/share/doc/${PF}/README"
 }
