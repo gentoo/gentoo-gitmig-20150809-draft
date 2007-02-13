@@ -1,0 +1,10 @@
+# ChangeLog for dev-ada/tash
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/tash/ChangeLog,v 1.1 2007/02/13 14:35:09 george Exp $
+
+*tash-8.4.1a (13 Feb 2007)
+
+  13 Feb 2007; George Shapovalov <george@gentoo.org> +metadata.xml,
+  +tash-8.4.1a.ebuild:
+  first addition - a tcl/tk Ada binding
+
