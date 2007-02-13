@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.86 2007/02/12 20:50:37 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.87 2007/02/13 16:56:44 dang Exp $
+
+  13 Feb 2007; Daniel Gryniewicz <dang@gentoo.org> liferea-1.2.6b.ebuild:
+  Disable lua; it was failing to compile
 
 *liferea-1.2.6b (12 Feb 2007)
 
