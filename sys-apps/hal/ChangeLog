@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.123 2007/01/30 19:43:04 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.124 2007/02/13 16:19:32 kloeri Exp $
+
+  13 Feb 2007; Bryan Østergaard <kloeri@gentoo.org> hal-0.5.7.1-r3.ebuild:
+  Stable on Alpha + IA64.
 
   30 Jan 2007; Doug Goldstein <cardoe@gentoo.org>
   +files/hal-0.5.7.1-ctype-fix.patch, hal-0.5.7.1-r4.ebuild:
