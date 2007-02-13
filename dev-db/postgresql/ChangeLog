@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.321 2007/02/13 10:04:48 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.322 2007/02/13 10:43:39 corsair Exp $
+
+  13 Feb 2007; Markus Rothe <corsair@gentoo.org> postgresql-7.4.16.ebuild,
+  postgresql-8.0.12.ebuild:
+  Stable on ppc64; bug #165482
 
   13 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
   postgresql-7.3.18.ebuild, postgresql-7.4.16.ebuild,
