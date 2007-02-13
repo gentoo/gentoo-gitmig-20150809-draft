@@ -1,10 +1,5 @@
-DIST gtk-xfce-engine-2.2.7.tar.gz 381970 RMD160 cbc95f5e75e37e22db89b2ac9b1d60cb739e6d23 SHA1 55a2e7f00bb7e1dcf07a5756b154774bfb6fc075 SHA256 6c17648305426525d1317a93ebe6c915189963b9c87310ed8484e0af70c5e0d4
 DIST gtk-xfce-engine-2.2.8.tar.gz 391386 RMD160 7ca5285a98f059c525ee6a661d6896194fed1f18 SHA1 b9458b5639a81dfb5be675921fd4a2d2f4cb4305 SHA256 31a2d0b8b426683cf2611bab653e5fd0ca72661a6c8a6461e61a321e6a3dc420
 DIST gtk-xfce-engine-2.4.0.tar.bz2 245746 RMD160 718dea10cb41c20150d74f8e7d3e872606487f62 SHA1 8a916a76146204428861d4d8d5914b466079502b SHA256 6841ec9efb29675c0134dc5c273a779b14f2daebb117b2078be547db4effaafb
-EBUILD gtk-engines-xfce-2.2.7-r2.ebuild 881 RMD160 0a9a6ec64435a44ce4e899a60d17d6a067851314 SHA1 6513dd7bc37311bee88daa02e4bcb48fc87f5432 SHA256 dcdbfeb60059c7dafd8075aec658216f64db1f8fcc25d8b7aa4eb3a875ad4bf9
-MD5 e96863af6f9b6675547f864aceb1de38 gtk-engines-xfce-2.2.7-r2.ebuild 881
-RMD160 0a9a6ec64435a44ce4e899a60d17d6a067851314 gtk-engines-xfce-2.2.7-r2.ebuild 881
-SHA256 dcdbfeb60059c7dafd8075aec658216f64db1f8fcc25d8b7aa4eb3a875ad4bf9 gtk-engines-xfce-2.2.7-r2.ebuild 881
 EBUILD gtk-engines-xfce-2.2.8-r1.ebuild 895 RMD160 75e50dbc8ef176fd063e3fcfa65de1cb493a0970 SHA1 adbe6719749c1021742baeb0c0495be02c514483 SHA256 fb34c2b89c4e58f67b235e2379d9aa398d76408cdb2a810b883c6a93c54e0bdb
 MD5 7a48f06e202ed8d44209e5d05e5cebd1 gtk-engines-xfce-2.2.8-r1.ebuild 895
 RMD160 75e50dbc8ef176fd063e3fcfa65de1cb493a0970 gtk-engines-xfce-2.2.8-r1.ebuild 895
@@ -21,9 +16,6 @@ MISC metadata.xml 176 RMD160 2b998851ab257a5a873aad39832b746d9bf370f4 SHA1 3b080
 MD5 1a485fd099494a423e0f4287746045f0 metadata.xml 176
 RMD160 2b998851ab257a5a873aad39832b746d9bf370f4 metadata.xml 176
 SHA256 f6dd1795e73603898daafc0183f4bcba1eb702db34b9cee2cc547e0c508f0afc metadata.xml 176
-MD5 2ab628542a8db517b3944a8353b5e3c1 files/digest-gtk-engines-xfce-2.2.7-r2 265
-RMD160 fd6573b1db6c76af868ef9a3e6dec9db5fcd1fc2 files/digest-gtk-engines-xfce-2.2.7-r2 265
-SHA256 786b23fb2def544459b75dcfb2279f52d94999b77cb3c78885833d4f981c63e3 files/digest-gtk-engines-xfce-2.2.7-r2 265
 MD5 78f2df2abac7f4c478b1104c860c2150 files/digest-gtk-engines-xfce-2.2.8-r1 265
 RMD160 8a688821c5b0aa67220e9256659697fd153d3d79 files/digest-gtk-engines-xfce-2.2.8-r1 265
 SHA256 df0785cbc7c2fdca78069cf460fb86a7d9ff141e2fe6eb49d43efda8abc72c28 files/digest-gtk-engines-xfce-2.2.8-r1 265
