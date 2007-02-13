@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.100 2007/02/12 22:12:47 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.101 2007/02/13 06:14:54 alonbl Exp $
+
+  13 Feb 2007; Alon Bar-Lev <alonbl@gentoo.org> package.mask:
+  Added >=sys-apps/suspend2-userui-0.7.0, bug#166609
 
   12 Feb 2007; Alexis Ballier <aballier@gentoo.org> use.local.desc:
   Add media-sound/shntool wavpack useflag
