@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/files/fcron.init,v 1.1 2006/06/20 19:44:58 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/files/fcron.init,v 1.2 2007/02/13 16:33:57 wschlich Exp $
 
 depend() {
 	use logger slapd mysql postgresql
@@ -24,9 +24,9 @@ checkconfig() {
 		eerror "There is a sample in /etc/fcron"
 		return 1
 	fi
-	FCRON_PIDFILE=$(grep '^pidfile' ${FCRON_CONF} 2>/dev/null | sed -e 's:^pidfile\s*=\s*\(.*\)$:\1:')
+	FCRON_PIDFILE=$(grep '^pidfile' ${FCRON_CONF} 2>/dev/null | sed -e 's:^pidfile[[:space:]]*=[[:space:]]*\(.*\)$:\1:')
 	FCRON_PIDFILE=${FCRON_PIDFILE:-/var/run/fcron.pid}
-	FCRON_SPOOLDIR=$(grep '^fcrontabs' ${FCRON_CONF} 2>/dev/null | sed -e 's:^fcrontabs\s*=\s*\(.*\)$:\1:')
+	FCRON_SPOOLDIR=$(grep '^fcrontabs' ${FCRON_CONF} 2>/dev/null | sed -e 's:^fcrontabs[[:space:]]*=[[:space:]]*\(.*\)$:\1:')
 	FCRON_SPOOLDIR=${FCRON_SPOOLDIR:-/var/spool/cron/fcrontabs}
 	if [ ! -d ${FCRON_SPOOLDIR} ]; then
 		ebegin "Creating missing spooldir ${FCRON_SPOOLDIR}"
