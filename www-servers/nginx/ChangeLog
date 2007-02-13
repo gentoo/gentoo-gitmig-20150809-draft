@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.133 2007/02/05 14:58:42 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.134 2007/02/13 14:23:31 voxus Exp $
+
+*nginx-0.5.12 (13 Feb 2007)
+
+  13 Feb 2007; Konstantin V. Arkhipov <voxus@gentoo.org>
+  nginx-0.4.14.ebuild, nginx-0.5.5.ebuild, -nginx-0.5.11.ebuild,
+  +nginx-0.5.12.ebuild:
+  Version bump, stabilization.
 
 *nginx-0.5.11 (05 Feb 2007)
 
