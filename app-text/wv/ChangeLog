@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wv
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.49 2007/01/30 17:31:22 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.50 2007/02/13 17:44:10 uberlord Exp $
+
+  13 Feb 2007; Roy Marples <uberlord@gentoo.org> wv-1.2.3-r1.ebuild:
+  Added ~x86-fbsd keyword.
 
   30 Jan 2007; Daniel Gryniewicz <dang@gentoo.org>
   -files/wv-1.0.0-fix_overflow.patch, -files/wv-1.0.3-gcc4.patch,
