@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-cpu-freq
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cpu-freq/ChangeLog,v 1.5 2007/02/04 17:08:57 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cpu-freq/ChangeLog,v 1.6 2007/02/13 10:18:58 corsair Exp $
+
+  13 Feb 2007; Markus Rothe <corsair@gentoo.org>
+  xfce4-cpu-freq-0.0.1.ebuild:
+  Added ~ppc64; bug #165299
 
   04 Feb 2007; Joshua Nichols <nichoj@gentoo.org>
   xfce4-cpu-freq-0.0.1.ebuild:
