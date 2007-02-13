@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/libemf-1.0.3.ebuild,v 1.8 2007/02/12 13:01:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/libemf-1.0.3.ebuild,v 1.9 2007/02/13 09:05:52 corsair Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/pstoedit/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~ppc64 sparc x86"
+KEYWORDS="~ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND=""
