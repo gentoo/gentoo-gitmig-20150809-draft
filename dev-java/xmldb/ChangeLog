@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xmldb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/ChangeLog,v 1.18 2007/02/12 20:14:05 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/ChangeLog,v 1.19 2007/02/13 10:11:22 opfer Exp $
+
+  13 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  xmldb-20011111-r1.ebuild:
+  stable x86; bug 166560
 
   12 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
   xmldb-20011111-r1.ebuild:
