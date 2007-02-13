@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/rhino
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.43 2007/02/13 18:44:34 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.44 2007/02/13 19:00:57 betelgeuse Exp $
+
+  13 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
+  rhino-1.5.5-r2.ebuild, rhino-1.5.5-r4.ebuild, rhino-1.6.1-r2.ebuild,
+  rhino-1.6.1-r3.ebuild:
+  Cleanup.
 
   13 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> -rhino-1.5.5-r1.ebuild,
   -rhino-1.5.5-r3.ebuild, -rhino-1.6.1-r1.ebuild:

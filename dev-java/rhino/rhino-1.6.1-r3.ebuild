@@ -1,12 +1,13 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/rhino-1.6.1-r3.ebuild,v 1.6 2007/02/13 18:54:13 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/rhino-1.6.1-r3.ebuild,v 1.7 2007/02/13 19:00:57 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
 MY_P="rhino1_6R1"
-DESCRIPTION="Rhino is an open-source implementation of JavaScript written entirely in Java. It is typically embedded into Java applications to provide scripting to end users"
-SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/js/${MY_P}.zip http://dev.gentoo.org/~karltk/projects/java/distfiles/rhino-swing-ex-1.0.zip"
+DESCRIPTION="An open-source implementation of JavaScript written in Java."
+SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/js/${MY_P}.zip
+	http://dev.gentoo.org/~karltk/projects/java/distfiles/rhino-swing-ex-1.0.zip"
 HOMEPAGE="http://www.mozilla.org/rhino/"
 LICENSE="NPL-1.1"
 SLOT="1.6"
@@ -23,11 +24,11 @@ DEPEND="dev-java/ant-core
 
 src_unpack() {
 	unpack ${MY_P}.zip
-	cd ${S}
+	cd "${S}"
 
 	epatch ${FILESDIR}/rhino-1.6-gentoo.patch
 
-	cp ${DISTDIR}/rhino-swing-ex-1.0.zip swingExSrc.zip
+	cp "${DISTDIR}"/rhino-swing-ex-1.0.zip swingExSrc.zip
 
 	mkdir lib/ && cd lib/
 	java-pkg_jar-from xml-xmlbeans-1 xbean.jar
