@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX gentoo-syntax-20051221-metadata.patch 432 RMD160 61827ef68d01d567750e80bd54cbbbe2461eca0b SHA1 3a3c4885ef57dc4d10899f58cb1716ae8f3879b9 SHA256 c7fb5ed7a44d0213129cb327a25ecdcbf42cd4bf09d3d595608e05bf6275d6a0
 MD5 ced7cfe574d5be2824a321a9d9b189e2 files/gentoo-syntax-20051221-metadata.patch 432
 RMD160 61827ef68d01d567750e80bd54cbbbe2461eca0b files/gentoo-syntax-20051221-metadata.patch 432
@@ -34,3 +37,10 @@ SHA256 8d2c5950e84e4d4e83f105a33afe8e6e8ee3add87bdf60584142341cb09e486e files/di
 MD5 2c597ac05091cfaa90f3c75f50550f72 files/digest-gentoo-syntax-20070212 268
 RMD160 906727fb747a160bf0fc5b308722d1163ba124b2 files/digest-gentoo-syntax-20070212 268
 SHA256 36de5aa32cc72d06ce686850ecda90e8a0a77d78e497e64f20559686d1b459c2 files/digest-gentoo-syntax-20070212 268
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.2 (GNU/Linux)
+
+iD8DBQFF0VZ+okMzJ47YCzoRArfBAJ9rqPboViKkr4owfjPI6b8+f0wX2wCghJ+Y
++dsqD8hQfVH8fBF3oJoUADA=
+=R41m
+-----END PGP SIGNATURE-----
