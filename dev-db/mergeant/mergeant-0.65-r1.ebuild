@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mergeant/mergeant-0.65.ebuild,v 1.1 2007/01/29 22:58:09 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mergeant/mergeant-0.65-r1.ebuild,v 1.1 2007/02/13 22:27:55 leonardop Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -15,8 +15,8 @@ KEYWORDS="~x86"
 
 IUSE="debug doc"
 
-RDEPEND=">=gnome-extra/libgnomedb-2.99.2
-	>=gnome-extra/libgda-2.99.2
+RDEPEND=">=gnome-extra/libgnomedb-2.99.5
+	>=gnome-extra/libgda-2.99.5
 	>=gnome-base/gconf-2
 	>=x11-libs/gtk+-2.6
 	>=dev-libs/libxml2-2
