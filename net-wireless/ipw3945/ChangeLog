@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/ipw3945
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ChangeLog,v 1.25 2007/02/10 21:35:17 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ChangeLog,v 1.26 2007/02/13 16:43:29 wolf31o2 Exp $
+
+  13 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> ipw3945-1.2.0.ebuild:
+  Stable on amd64/x86 wrt bug #166528.
 
   10 Feb 2007; Christian Heim <phreak@gentoo.org> ipw3945-1.2.0.ebuild:
   Updating the ebuild to explicitely set KV_OBJ="ko". Looks like the linux-mod
