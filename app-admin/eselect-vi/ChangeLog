@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-vi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-vi/ChangeLog,v 1.23 2007/02/13 03:11:08 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-vi/ChangeLog,v 1.24 2007/02/13 11:11:46 corsair Exp $
+
+  13 Feb 2007; Markus Rothe <corsair@gentoo.org> eselect-vi-1.1.4.ebuild:
+  Stable on ppc64; bug #166501
 
   13 Feb 2007; Joseph Jezak <josejx@gentoo.org> eselect-vi-1.1.4.ebuild:
   Marked ppc stable for bug #166501.
