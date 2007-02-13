@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.3.18.ebuild,v 1.3 2007/02/12 21:26:10 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.3.18.ebuild,v 1.4 2007/02/13 11:06:48 corsair Exp $
 
 inherit distutils eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://download2.bittornado.com/download/${MY_P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 
-KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~ppc ppc64 ~sparc x86"
 IUSE="gtk"
 
 RDEPEND="gtk? ( >=dev-python/wxpython-2.4 )
