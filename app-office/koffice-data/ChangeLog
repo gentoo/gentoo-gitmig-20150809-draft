@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koffice-data
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-data/ChangeLog,v 1.61 2007/02/13 09:41:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-data/ChangeLog,v 1.62 2007/02/13 22:27:01 pylon Exp $
+
+  13 Feb 2007; Lars Weiler <pylon@gentoo.org> koffice-data-1.6.1.ebuild:
+  Stable on ppc; bug #166246.
 
   13 Feb 2007; Markus Rothe <corsair@gentoo.org> koffice-data-1.6.1.ebuild:
   Stable on ppc64; bug #166246
