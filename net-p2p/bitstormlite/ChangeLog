@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/bitstormlite
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitstormlite/ChangeLog,v 1.1 2007/01/26 12:12:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitstormlite/ChangeLog,v 1.2 2007/02/13 12:20:52 armin76 Exp $
+
+*bitstormlite-0.2g (13 Feb 2007)
+
+  13 Feb 2007; Raúl Porcel <armin76@gentoo.org> -bitstormlite-0.2e.ebuild,
+  +bitstormlite-0.2g.ebuild:
+  Version bump, and change HOMEPAGE thanks to the author for reminding me
 
 *bitstormlite-0.2e (26 Jan 2007)
 
