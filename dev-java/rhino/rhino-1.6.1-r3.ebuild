@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/rhino-1.6.1-r3.ebuild,v 1.5 2006/12/09 09:24:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/rhino-1.6.1-r3.ebuild,v 1.6 2007/02/13 18:54:13 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -42,5 +42,8 @@ src_install() {
 		--main org.mozilla.javascript.tools.shell.Main
 	java-pkg_dojar build/*/js.jar
 	use source && java-pkg_dosrc {src,toolsrc}/org
-	use doc && java-pkg_dohtml -r docs/*
+	if use doc; then
+		java-pkg_dohtml -r docs/*
+		dosym /usr/share/doc/${PF}/html/{apidocs,api} || die
+	fi
 }
