@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-syncml/libopensync-plugin-syncml-0.21.ebuild,v 1.1 2007/02/12 21:08:02 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-syncml/libopensync-plugin-syncml-0.21.ebuild,v 1.2 2007/02/13 16:12:48 peper Exp $
 
 inherit eutils
 
@@ -39,6 +39,15 @@ pkg_setup() {
 		einfo "Please rebuild app-pda/libsyncml with \"http\" USE flag."
 		die "Please rebuild app-pda/libsyncml with \"http\" USE flag."
 	fi
+}
+
+src_compile() {
+	econf \
+		$(use_enable http) \
+		$(use_enable obex) \
+		|| die "econf failed"
+
+	emake || die "emake failed"
 }
 
 src_install() {
