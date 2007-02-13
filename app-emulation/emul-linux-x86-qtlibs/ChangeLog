@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-qtlibs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.27 2007/02/13 21:02:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.28 2007/02/13 21:13:22 blubb Exp $
+
+  13 Feb 2007; Simon Stelling <blubb@gentoo.org>
+  emul-linux-x86-qtlibs-10.0.ebuild:
+  kill unneeded kdeartwork-styles from SRC_URI
 
   13 Feb 2007; Simon Stelling <blubb@gentoo.org>
   emul-linux-x86-qtlibs-10.0.ebuild:
