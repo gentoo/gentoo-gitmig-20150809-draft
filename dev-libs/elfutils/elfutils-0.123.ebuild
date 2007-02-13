@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.123.ebuild,v 1.6 2007/02/12 14:11:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.123.ebuild,v 1.7 2007/02/13 10:52:44 corsair Exp $
 
 inherit eutils autotools
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://sources.redhat.com/pub/systemtap/${PN}/${P}.tar.gz
 
 LICENSE="OpenSoftware"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86"
 IUSE=""
 
 # This pkg does not actually seem to compile currently in a uClibc
