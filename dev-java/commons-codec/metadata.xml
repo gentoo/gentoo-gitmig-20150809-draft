@@ -17,11 +17,11 @@ one another. XML-RPC had applied numerous fixes and patches which were
 not applied to the Commons HttpClient Base64. Different subprojects had
 differing implementations at various levels of compliance with the RFC
 2045.
- 
+
 Out of that confusing duplication of effort sprang this simple attempt
 to encourage code reuse among various projects. While this package
 contains a abstract framework for the creation of encoders and decoders,
 Codec itself is primarily focused on providing functional utilities for
-working with common encodings. 
+working with common encodings.
 </longdescription>
 </pkgmetadata>

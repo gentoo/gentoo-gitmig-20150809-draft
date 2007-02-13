@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-codec/commons-codec-1.3-r1.ebuild,v 1.2 2007/02/13 19:17:13 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-codec/commons-codec-1.3-r1.ebuild,v 1.3 2007/02/13 19:19:48 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="Common Codecs provides implementations of common encoders and decoders such as Base64, Hex, various phonetic encodings, and URLs"
+DESCRIPTION="Implementations of common encoders and decoders in Java."
 HOMEPAGE="http://jakarta.apache.org/commons/codec/"
 SRC_URI="mirror://apache/jakarta/commons/codec/source/${P}-src.tar.gz"
 
