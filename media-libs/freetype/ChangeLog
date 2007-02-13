@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.103 2007/02/13 01:09:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.104 2007/02/13 11:02:30 corsair Exp $
+
+  13 Feb 2007; Markus Rothe <corsair@gentoo.org> freetype-1.3.1-r5.ebuild:
+  Stable on ppc64; bug #166265
 
   13 Feb 2007; Jeroen Roovers <jer@gentoo.org> freetype-1.3.1-r5.ebuild:
   Stable for HPPA (bug #166265).
