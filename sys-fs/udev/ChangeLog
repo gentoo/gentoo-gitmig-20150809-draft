@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.263 2007/02/12 17:28:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.264 2007/02/13 02:08:22 cryos Exp $
+
+  13 Feb 2007; Marcus D. Hanwell <cryos@gentoo.org> udev-104-r11.ebuild:
+  Stable on amd64, bug 159871.
 
   12 Feb 2007; Bryan Østergaard <kloeri@gentoo.org> udev-104-r11.ebuild:
   Stable on Alpha, bug 159871.
