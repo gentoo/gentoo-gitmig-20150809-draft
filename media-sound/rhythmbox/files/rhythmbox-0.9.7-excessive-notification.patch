@@ -1,0 +1,16 @@
+diff --exclude-from=/home/dang/bin/scripts/diffrc -up -ruN rhythmbox-0.9.7.orig/sources/rb-streaming-source.c rhythmbox-0.9.7/sources/rb-streaming-source.c
+--- rhythmbox-0.9.7.orig/sources/rb-streaming-source.c	2006-10-30 08:51:11.000000000 -0500
++++ rhythmbox-0.9.7/sources/rb-streaming-source.c	2007-02-13 15:53:31.000000000 -0500
+@@ -360,6 +360,12 @@ set_streaming_metadata (RBStreamingSourc
+ 			const char *value)
+ {
+ 	GValue v = {0,};
++
++	/* don't do anything if the value isn't changing */
++	if (*field != NULL && strcmp (*field, value) == 0) {
++		return;
++	}
++
+ 	g_free (*field);
+ 	*field = g_strdup (value);
+ 
