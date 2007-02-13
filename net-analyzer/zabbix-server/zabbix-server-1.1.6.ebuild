@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.1.6.ebuild,v 1.4 2007/02/12 00:22:07 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.1.6.ebuild,v 1.5 2007/02/13 22:04:03 wschlich Exp $
 
 inherit eutils
 
@@ -17,15 +17,29 @@ DEPEND="virtual/libc
 	snmp? ( net-analyzer/net-snmp )
 	ldap? ( net-nds/openldap )
 	mysql? ( virtual/mysql )
-	postgres? ( dev-db/postgresql )"
+	postgres? ( dev-db/libpq )"
 RDEPEND="${RDEPEND} net-analyzer/fping"
 
 S=${WORKDIR}/${MY_P}-${MY_PV}
 
 pkg_setup() {
-	enewgroup zabbix
-	enewuser zabbix -1 -1 /var/lib/zabbix/home zabbix
-
+	local dbnum dbtypes="mysql postgres oracle" dbtype
+	declare -i dbnum=0
+	for dbtype in ${dbtypes}; do
+		useq ${dbtype} && let dbnum++
+	done
+	if [ ${dbnum} -gt 1 ]; then
+		eerror
+		eerror "You can't use more than one database type in Zabbix."
+		eerror "Select exactly one database type out of these: ${dbtypes}"
+		eerror
+		die "Multiple database types selected."
+	elif [ ${dbnum} -lt 1 ]; then
+		eerror
+		eerror "Select exactly one database type out of these: ${dbtypes}"
+		eerror
+		die "No database type selected."
+	fi
 	if useq oracle; then
 		if [ -z "${ORACLE_HOME}" ]; then
 			eerror
@@ -42,6 +56,9 @@ pkg_setup() {
 			ewarn
 		fi
 	fi
+
+	enewgroup zabbix
+	enewuser zabbix -1 -1 /var/lib/zabbix/home zabbix
 }
 
 pkg_postinst() {
@@ -113,27 +130,6 @@ pkg_postinst() {
 			epause 5
 			;;
 	esac
-}
-
-src_unpack() {
-	local dbnum dbtypes="mysql postgres oracle" dbtype
-	declare -i dbnum=0
-	for dbtype in ${dbtypes}; do
-		useq ${dbtype} && let dbnum++
-	done
-	if [ ${dbnum} -gt 1 ]; then
-		eerror
-		eerror "You can't use more than one database type in Zabbix."
-		eerror "Select exactly one database type out of these: ${dbtypes}"
-		eerror
-		die "Multiple database types selected."
-	elif [ ${dbnum} -lt 1 ]; then
-		eerror
-		eerror "Select exactly one database type out of these: ${dbtypes}"
-		eerror
-		die "No database type selected."
-	fi
-	unpack ${A}
 }
 
 src_compile() {
