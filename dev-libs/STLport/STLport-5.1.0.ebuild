@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.1.0.ebuild,v 1.12 2007/02/13 10:57:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.1.0.ebuild,v 1.13 2007/02/13 13:49:19 beandog Exp $
 
 inherit eutils versionator eutils toolchain-funcs multilib flag-o-matic
 
-KEYWORDS="~amd64 ~ppc ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ppc64 ~x86"
 
 DESCRIPTION="C++ STL library"
 HOMEPAGE="http://stlport.sourceforge.net/"
@@ -32,7 +32,6 @@ src_unpack() {
 	sed -i \
 		-e 's/_STLP_VENDOR_CSTD::wcsftime/::wcsftime/' \
 		stlport/stl/_cwchar.h || die "sed failed"
-
 }
 
 src_compile() {
