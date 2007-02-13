@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/fruit/fruit-2.1.ebuild,v 1.1 2007/02/07 23:11:03 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/fruit/fruit-2.1.ebuild,v 1.2 2007/02/13 17:29:10 peper Exp $
 
 inherit eutils versionator games
 
@@ -13,7 +13,7 @@ SRC_URI="http://arctrix.com/nas/${PN}/${MY_P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
