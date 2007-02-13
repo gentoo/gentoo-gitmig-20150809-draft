@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsaplayer
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.51 2007/02/13 07:28:27 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.52 2007/02/13 14:33:32 peper Exp $
+
+  13 Feb 2007; Piotr Jaroszyński <peper@gentoo.org>
+  alsaplayer-0.99.77.ebuild:
+  Add ~amd64 wrt bug #166464.
 
 *alsaplayer-0.99.77 (13 Feb 2007)
 
