@@ -1,6 +1,14 @@
 # ChangeLog for app-laptop/acpi4asus
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpi4asus/ChangeLog,v 1.10 2007/02/10 10:24:12 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpi4asus/ChangeLog,v 1.11 2007/02/13 16:47:26 phreak Exp $
+
+*acpi4asus-0.32-r1 (13 Feb 2007)
+
+  13 Feb 2007; Christian Heim <phreak@gentoo.org>
+  +files/acpi4asus-0.32-2.6.20.patch, +acpi4asus-0.32-r1.ebuild:
+  Fixing the compilation against 2.6.20 (#166288 thanks to Cyril Romain
+  <cyrilromain at yahoo.fr>), fixing the BUILD_PARAMS to use the selected
+  kernel and *not* the running one.
 
 *acpi4asus-0.32 (10 Feb 2007)
 

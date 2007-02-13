@@ -1,0 +1,13 @@
+Index: acpi4asus-0.32/driver/asus_acpi.c
+===================================================================
+--- acpi4asus-0.32.orig/driver/asus_acpi.c
++++ acpi4asus-0.32/driver/asus_acpi.c
+@@ -2092,7 +2092,7 @@ static int __init asus_acpi_init(void)
+ 	}
+ 
+ #ifdef CONFIG_ACPI_ASUS_NEW_BACKLIGHT
+-	bd = backlight_device_register ("asus", NULL, &asusbl_data);
++	bd = backlight_device_register ("asus", NULL, NULL, &asusbl_data);
+ 
+ 	if (IS_ERR (bd)) {
+ 		printk(KERN_ERR "Could not register asus backlight device\n");
