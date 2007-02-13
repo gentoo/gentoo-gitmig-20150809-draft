@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mrtg
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.67 2007/02/11 15:11:02 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.68 2007/02/13 10:38:41 corsair Exp $
+
+  13 Feb 2007; Markus Rothe <corsair@gentoo.org> mrtg-2.15.0.ebuild:
+  Stable on ppc64; bug #165428
 
   11 Feb 2007; Steve Dibb <beandog@gentoo.org> mrtg-2.15.0.ebuild:
   amd64 stable, bug 165428
