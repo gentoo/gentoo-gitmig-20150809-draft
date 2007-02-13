@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.65 2007/02/13 14:04:01 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.66 2007/02/13 22:29:14 blubb Exp $
+
+*emul-linux-x86-baselibs-10.0-r1 (13 Feb 2007)
+
+  13 Feb 2007; Simon Stelling <blubb@gentoo.org>
+  +emul-linux-x86-baselibs-10.0-r1.ebuild:
+  built cups without ssl & clean out more junk; bug 166584
 
   13 Feb 2007; Simon Stelling <blubb@gentoo.org>
   emul-linux-x86-baselibs-10.0.ebuild:
