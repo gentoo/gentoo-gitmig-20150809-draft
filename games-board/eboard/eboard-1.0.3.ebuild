@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/eboard-1.0.3.ebuild,v 1.2 2007/02/13 19:06:02 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/eboard-1.0.3.ebuild,v 1.3 2007/02/13 19:56:26 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -30,24 +30,24 @@ src_unpack() {
 	cd "${S}"
 
 	sed -i \
-		-e "/DATADIR/ s:\$dataprefix:${GAMES_DATADIR}:" \
-		-e "s:(\"-O6\"):split(' ', \"${CXXFLAGS}\"):" configure \
+		-e "s:(\"-O6\"):split(' ', \"${CXXFLAGS}\"):" \
+		configure \
 		|| die "sed configure failed"
 }
 
 src_compile() {
-	egamesconf $(use_enable nls) || die
+	# not an autoconf script
+	./configure \
+		--prefix="${GAMES_PREFIX}" \
+		--data-prefix="${GAMES_DATADIR}" \
+		--man-prefix="/usr/share/man" \
+		$(use_enable nls) || die
 	emake || die "emake failed"
 }
 
 src_install() {
-	emake \
-		prefix="${D}/${GAMES_PREFIX}" \
-		bindir="${D}/${GAMES_BINDIR}" \
-		mandir="${D}/usr/share/man" \
-		datadir="${D}/${GAMES_DATADIR}/${PN}" \
-		install || die "emake install failed"
-	dodoc README AUTHORS ChangeLog TODO Documentation/* || die "dodoc failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
+	dodoc README AUTHORS ChangeLog TODO Documentation/*
 
 	newicon k18.xpm ${PN}.xpm
 	make_desktop_entry ${PN} ${PN} ${PN}.xpm
