@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/adesklets-0.6.1-r1.ebuild,v 1.4 2007/01/26 09:47:21 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/adesklets-0.6.1-r1.ebuild,v 1.5 2007/02/13 18:29:37 s4t4n Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -68,6 +68,7 @@ src_compile()
 	use perl || myconf="${myconf} --without-perl-support"
 	myconf="${myconf} $(use_enable debug)"
 	use ctrlmenu && myconf="--enable-control-on-context-menu"
+	use fontconfig || myconf="${myconf} --without-fontconfig"
 
 	econf ${myconf} || die
 	emake || die
