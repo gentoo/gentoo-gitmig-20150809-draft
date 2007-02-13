@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.16.1.ebuild,v 1.5 2007/02/13 14:56:13 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.18.14.ebuild,v 1.1 2007/02/13 14:56:13 hanno Exp $
 
 inherit nsplugins eutils perl-module toolchain-funcs
 
@@ -26,7 +26,9 @@ DEPEND="|| ( (
 	media-libs/jpeg
 	>=media-libs/freetype-2
 	>=dev-lang/perl-5.8.2
-	dev-perl/XML-Parser"
+	dev-perl/XML-Parser
+	media-fonts/ttf-bitstream-vera
+	!<media-gfx/freewrl-1.18.10"
 RDEPEND="media-gfx/imagemagick
 	media-sound/sox
 	net-misc/wget
@@ -42,9 +44,7 @@ src_unpack() {
 		sed -i -e "s:NETSCAPE_:#NETSCAPE_:g" vrml.conf
 	fi
 
-	epatch "${FILESDIR}/freewrl-1.16.1-plugin-install.patch"
-	epatch "${FILESDIR}/freewrl-1.16.1-use-java-home.patch"
-	epatch "${FILESDIR}/freewrl-1.16.1-disable-rpm.patch"
+	sed -i -e 's:-DHAVE_MOTIF::g' vrml.conf
 }
 
 src_compile() {
@@ -65,4 +65,6 @@ src_install() {
 		doins java/classes/vrml.jar
 	fi
 	emake DESTDIR=${D} install || die "make install failed"
+	rm -rf ${D}/usr/share/freewrl/fonts
+	dosym /usr/share/fonts/ttf-bitstream-vera /usr/share/freewrl/fonts
 }

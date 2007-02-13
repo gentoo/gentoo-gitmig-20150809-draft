@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/freewrl
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.14 2007/01/17 07:45:27 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.15 2007/02/13 14:56:13 hanno Exp $
+
+*freewrl-1.18.14 (13 Feb 2007)
+
+  13 Feb 2007; Hanno Boeck <hanno@gentoo.org> +freewrl-1.18.14.ebuild:
+  Version bump.
 
 *freewrl-1.18.10 (17 Jan 2007)
 
