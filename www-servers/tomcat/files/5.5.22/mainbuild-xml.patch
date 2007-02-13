@@ -1,0 +1,24 @@
+--- build.xml.orig	2007-02-13 13:17:34.000000000 -0500
++++ build.xml	2007-02-13 16:57:38.000000000 -0500
+@@ -66,12 +66,10 @@
+   <target name="checkout"
+           description="Update or checkout required sources from SVN">
+ 
++    <!--
+     <echo level="info"
+           message="If the checkout fails, see http://tomcat.apache.org/svn.html and http://subversion.tigris.org/faq.html#proxy" />
+ 
+-    <!-- Bugzilla 37977: http://issues.apache.org/bugzilla/show_bug.cgi?id=37977 -->
+-    <!--  hackish: inputstring="t${line.separator}" is t+<enter> for svn         -->
+-    <!--  to temporarily accept the certificate of svn.apache.org.               -->
+     <exec dir="${basedir}"
+           executable="svn"
+           inputstring="t${line.separator}"
+@@ -80,6 +78,7 @@
+       <arg value="${svnroot}/${current.loc}" />
+       <arg value="${basedir}" />
+     </exec>
++    -->
+ 
+   </target>
+ 
