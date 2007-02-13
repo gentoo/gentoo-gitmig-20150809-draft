@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xorgautoconfig/Xorgautoconfig-0.2.4-r1.ebuild,v 1.3 2006/07/07 06:40:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xorgautoconfig/Xorgautoconfig-0.2.4-r1.ebuild,v 1.4 2007/02/13 01:02:44 josejx Exp $
 
 inherit eutils toolchain-funcs
 
@@ -21,6 +21,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/backingstore.patch
+	epatch ${FILESDIR}/${PN}-lz.patch
 }
 
 src_compile() {
