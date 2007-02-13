@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/alephone-infinity
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone-infinity/ChangeLog,v 1.1 2006/06/03 22:07:59 tupone Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone-infinity/ChangeLog,v 1.2 2007/02/13 23:21:39 nyhm Exp $
+
+  13 Feb 2007; Tristan Heaven <nyhm@gentoo.org> -files/AlephOne.png,
+  alephone-infinity-1.ebuild:
+  Move icon to mirror://gentoo
 
 *alephone-infinity-1 (03 Jun 2006)
 
