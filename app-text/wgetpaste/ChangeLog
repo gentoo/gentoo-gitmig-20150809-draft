@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wgetpaste
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.2 2007/02/12 21:24:11 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.3 2007/02/13 00:36:46 jer Exp $
+
+  13 Feb 2007; Jeroen Roovers <jer@gentoo.org> wgetpaste-1.ebuild:
+  Marked ~hppa (bug #166570).
 
   12 Feb 2007; Alexander H. Færøy <eroyf@gentoo.org> wgetpaste-1.ebuild:
   Marked ~alpha, ~ia64 and ~mips
