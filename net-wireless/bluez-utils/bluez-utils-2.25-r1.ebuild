@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.25-r1.ebuild,v 1.9 2007/02/11 11:08:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.25-r1.ebuild,v 1.10 2007/02/13 12:55:59 cryos Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://bluez.sourceforge.net/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 arm hppa ppc sh sparc x86"
+KEYWORDS="amd64 arm hppa ppc sh sparc x86"
 
 IUSE="alsa cups dbus gtk pcmcia"
 
