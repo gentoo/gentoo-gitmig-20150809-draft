@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/idnkit-1.0.ebuild,v 1.21 2007/02/13 01:42:39 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/idnkit-1.0.ebuild,v 1.22 2007/02/13 10:07:44 corsair Exp $
 
 DESCRIPTION="Toolkit for Internationalized Domain Names (IDN)"
 HOMEPAGE="http://www.nic.ad.jp/ja/idn/idnkit/download/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.nic.ad.jp/ja/idn/idnkit/download/sources/${P}-src.tar.gz"
 
 LICENSE="JNIC"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ppc ~ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 DEPEND="sys-libs/glibc"
