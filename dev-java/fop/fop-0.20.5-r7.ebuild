@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.20.5-r7.ebuild,v 1.3 2006/11/30 15:37:58 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.20.5-r7.ebuild,v 1.4 2007/02/13 08:48:45 corsair Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://apache/xml/fop/fop-${MY_V}-src.tar.gz"
 HOMEPAGE="http://xml.apache.org/fop/"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc64 ~x86"
 IUSE="doc examples jai jimi"
 
 # Doesn't like Java 1.5

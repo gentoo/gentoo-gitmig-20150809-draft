@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/batik
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.46 2007/02/03 15:02:00 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.47 2007/02/13 08:45:48 corsair Exp $
+
+  13 Feb 2007; Markus Rothe <corsair@gentoo.org> batik-1.6-r3.ebuild:
+  Added ~ppc64; bug #153229
 
   03 Feb 2007; nixnut <nixnut@gentoo.org> batik-1.5-r1.ebuild:
   Stable on ppc wrt bug 154185

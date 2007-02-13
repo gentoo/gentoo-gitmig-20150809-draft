@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fop
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.34 2006/11/30 15:37:58 caster Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.35 2007/02/13 08:48:45 corsair Exp $
+
+  13 Feb 2007; Markus Rothe <corsair@gentoo.org> fop-0.20.5-r7.ebuild:
+  Added ~ppc64; bug #153229
 
   30 Nov 2006; Vlastimil Babka <caster@gentoo.org> fop-0.20.5-r3.ebuild,
   fop-0.20.5-r7.ebuild:

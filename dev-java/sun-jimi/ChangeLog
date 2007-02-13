@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-jimi
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jimi/ChangeLog,v 1.7 2006/11/28 23:55:05 nichoj Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jimi/ChangeLog,v 1.8 2007/02/13 08:44:47 corsair Exp $
+
+  13 Feb 2007; Markus Rothe <corsair@gentoo.org> sun-jimi-1.0-r2.ebuild:
+  Added ~ppc64; bug #153229
 
   28 Nov 2006; Joshua Nichols <nichoj@gentoo.org> sun-jimi-1.0-r2.ebuild:
   Added ~ia64.
