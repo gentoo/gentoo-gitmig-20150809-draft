@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmp4v2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.26 2007/01/06 16:05:22 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.27 2007/02/13 12:15:41 opfer Exp $
+
+  13 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  libmp4v2-1.5.0.1.ebuild:
+  stable x86; bug 166539
 
   06 Jan 2007; Stuart Longland <redhatter@gentoo.org>
   libmp4v2-1.5.0.1.ebuild:

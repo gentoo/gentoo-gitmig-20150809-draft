@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/faac
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/ChangeLog,v 1.40 2006/09/24 17:26:33 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/ChangeLog,v 1.41 2007/02/13 12:19:01 opfer Exp $
+
+  13 Feb 2007; Christian Faulhammer <opfer@gentoo.org> faac-1.24-r3.ebuild:
+  stable x86; bug 166539
 
   24 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> faac-1.24.ebuild,
   faac-1.24-r2.ebuild, faac-1.24-r3.ebuild:
