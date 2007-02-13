@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libburn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.6 2007/01/31 13:46:49 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.7 2007/02/13 00:29:55 metalgod Exp $
+
+*libburn-0.3.2 (13 Feb 2007)
+
+  13 Feb 2007; Luis Medinas <metalgod@gentoo.org> +libburn-0.3.2.ebuild:
+  Version Bump.
 
 *libburn-0.3.0.1 (31 Jan 2007)
 
