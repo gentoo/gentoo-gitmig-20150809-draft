@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kino
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.59 2007/02/08 17:40:25 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.60 2007/02/13 10:56:22 corsair Exp $
+
+  13 Feb 2007; Markus Rothe <corsair@gentoo.org> kino-0.9.5.ebuild:
+  Stable on ppc64; bug #165836
 
   08 Feb 2007; Christian Faulhammer <opfer@gentoo.org> kino-0.9.5.ebuild:
   stable x86; bug #165836
@@ -24,7 +27,7 @@
   stable on amd64; bug 165836
 
   31 Jan 2007; Markus Rothe <corsair@gentoo.org> kino-0.9.5.ebuild:
-  Stable on ppc64; bug #163699
+  Added ~ppc64; bug #163699
 
   27 Jan 2007; Denis Dupeyron <calchan@gentoo.org> kino-0.9.5.ebuild:
   Added conditional dependency to app-cdr/dvd+rw-tools.
