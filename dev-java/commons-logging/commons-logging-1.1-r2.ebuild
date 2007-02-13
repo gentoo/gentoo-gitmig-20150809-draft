@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.1-r2.ebuild,v 1.4 2007/01/10 16:51:17 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.1-r2.ebuild,v 1.5 2007/02/13 20:03:11 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -8,7 +8,7 @@ DESCRIPTION="The Jakarta-Commons Logging package is an ultra-thin bridge between
 HOMEPAGE="http://jakarta.apache.org/commons/logging/"
 SRC_URI="mirror://apache/jakarta/commons/logging/source/${P}-src.tar.gz"
 
-LICENSE="Apache-1.1"
+LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="avalon-logkit log4j servletapi avalon-framework doc source"
@@ -29,7 +29,7 @@ S="${WORKDIR}/${P}-src/"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch ${FILESDIR}/${P}-gentoo.patch
 	# patch to make the build.xml respect no servletapi
 	# TODO file upstream -nichoj
@@ -43,17 +43,15 @@ src_unpack() {
 	use avalon-framework && echo "avalon-framework.jar=$(java-pkg_getjars avalon-framework-4.2)" >> build.properties
 }
 
-src_compile() {
-	eant compile $(use_doc)
-}
+EANT_BUILD_TARGET="compile"
 
 src_install() {
 	java-pkg_newjar target/${P}.jar ${PN}.jar
 	java-pkg_newjar target/${PN}-api-${PV}.jar ${PN}-api.jar
 	java-pkg_newjar target/${PN}-adapters-${PV}.jar ${PN}-adapters.jar
 
-	dodoc RELEASE-NOTES.txt
-	dohtml PROPOSAL.html STATUS.html
+	dodoc RELEASE-NOTES.txt || die
+	dohtml PROPOSAL.html STATUS.html || die
 	use doc && java-pkg_dojavadoc target/docs/
 	use source && java-pkg_dosrc src/java/org
 }

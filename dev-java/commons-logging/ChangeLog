@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-logging
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.46 2007/01/10 16:51:17 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.47 2007/02/13 20:03:11 betelgeuse Exp $
+
+  13 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
+  commons-logging-1.1-r2.ebuild:
+  Ebuild cleanup and correct LICENSE to Apache-2.0
 
   10 Jan 2007; Petteri Räty <betelgeuse@gentoo.org>
   commons-logging-1.1-r2.ebuild:
