@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/memoir
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/memoir/ChangeLog,v 1.28 2006/09/10 11:55:32 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/memoir/ChangeLog,v 1.29 2007/02/13 12:49:18 cryos Exp $
+
+  13 Feb 2007; Marcus D. Hanwell <cryos@gentoo.org> memoir-20060211.ebuild:
+  Stable on amd64.
 
   10 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove brix from metadata.xml.
