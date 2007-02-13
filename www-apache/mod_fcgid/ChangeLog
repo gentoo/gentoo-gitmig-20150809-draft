@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_fcgid
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.23 2007/02/03 23:35:58 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.24 2007/02/13 20:35:49 corsair Exp $
+
+  13 Feb 2007; Markus Rothe <corsair@gentoo.org> mod_fcgid-2.0.ebuild:
+  Added ~ppc64; bug #166675
 
   03 Feb 2007; Steve Dibb <beandog@gentoo.org> mod_fcgid-1.10.ebuild:
   amd64 stable, bug 161193
