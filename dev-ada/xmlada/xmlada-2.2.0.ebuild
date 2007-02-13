@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/xmlada-2.2.0.ebuild,v 1.2 2006/11/18 12:13:26 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/xmlada-2.2.0.ebuild,v 1.3 2007/02/13 14:50:32 george Exp $
 
 inherit gnat versionator
 
@@ -8,7 +8,7 @@ IUSE=""
 
 DESCRIPTION="XML library for Ada"
 HOMEPAGE="http://libre2.adacore.com/xmlada/"
-SRC_URI="http://dev.gentoo.org/~george/src/${P}.tar.bz2"
+SRC_URI="http://mirrors/gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
