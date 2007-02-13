@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-framework/avalon-framework-4.1.5-r1.ebuild,v 1.5 2007/02/13 08:47:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-framework/avalon-framework-4.1.5-r1.ebuild,v 1.6 2007/02/13 19:46:46 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -27,15 +27,11 @@ S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	cp ${FILESDIR}/build.xml ./build.xml || die "ANT update failure!"
+	cp "${FILESDIR}"/build.xml ./build.xml || die "ANT update failure!"
 	local libs="log4j,avalon-logkit-2.0"
 	echo "classpath=$(java-pkg_getjars ${libs})" > build.properties
-}
-
-src_compile() {
-	eant jar $(use_doc)
 }
 
 src_install() {
