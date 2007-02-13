@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libcap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.47 2007/02/13 23:46:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.48 2007/02/13 23:48:02 wolf31o2 Exp $
+
+  13 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> libcap-1.10-r9.ebuild:
+  Stable on ppc wrt bug #165742.
 
   13 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> libcap-1.10-r9.ebuild:
   Stable on alpha wrt bug #165742.
