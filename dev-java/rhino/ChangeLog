@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/rhino
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.44 2007/02/13 19:00:57 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.45 2007/02/13 20:25:17 corsair Exp $
+
+  13 Feb 2007; Markus Rothe <corsair@gentoo.org> rhino-1.5.5-r4.ebuild,
+  rhino-1.6.1-r3.ebuild:
+  Added ~ppc64 to 1.6.1-r3 and marked 1.5.5-r4 stable on ppc64; bug #166700
 
   13 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
   rhino-1.5.5-r2.ebuild, rhino-1.5.5-r4.ebuild, rhino-1.6.1-r2.ebuild,
