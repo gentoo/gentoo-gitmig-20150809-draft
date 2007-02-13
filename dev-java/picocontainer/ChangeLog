@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/picocontainer
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/picocontainer/ChangeLog,v 1.20 2007/02/13 20:46:27 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/picocontainer/ChangeLog,v 1.21 2007/02/13 20:50:49 betelgeuse Exp $
+
+  13 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
+  picocontainer-1.1-r1.ebuild:
+  Use java-pkg_dojavadoc.
 
   13 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
   -files/build-1.0_beta4.xml, -picocontainer-1.0_beta4.ebuild:
