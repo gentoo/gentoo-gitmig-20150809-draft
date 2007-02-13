@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/cbind/cbind-6.0.ebuild,v 1.3 2007/02/13 14:45:27 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/cbind/cbind-6.0.ebuild,v 1.4 2007/02/13 14:54:04 george Exp $
 
 # !NOTE!
 # this is a utility, no libs generated, no reason to do the gnat.eclass dance
