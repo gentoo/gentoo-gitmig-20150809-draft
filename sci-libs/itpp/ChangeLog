@@ -1,6 +1,15 @@
 # ChangeLog for sci-libs/itpp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.24 2007/02/05 22:16:39 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.25 2007/02/13 14:01:19 markusle Exp $
+
+*itpp-3.10.9 (13 Feb 2007)
+
+  13 Feb 2007; Markus Dittrich <markusle@gentoo.org> -itpp-3.10.5.ebuild,
+  -itpp-3.10.6.ebuild, +itpp-3.10.9.ebuild, itpp-3.99.0.ebuild:
+  Version bump (fixes bug #166238). Also added the 3.99.0 development
+  version to ~ppc since the ppc folks already marked 3.10.8.
+  Thanks to Adam Piatyszek <ediap@et.put.poznan.pl> for keeping us 
+  up to date :)
 
   05 Feb 2007; Simon Stelling <blubb@gentoo.org> itpp-3.10.7.ebuild:
   stable on amd64
