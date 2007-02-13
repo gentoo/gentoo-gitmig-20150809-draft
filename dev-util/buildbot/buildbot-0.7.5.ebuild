@@ -1,16 +1,16 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.7.5.ebuild,v 1.1 2007/02/08 03:39:35 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.7.5.ebuild,v 1.2 2007/02/13 13:23:47 vapier Exp $
 
 inherit distutils eutils
 
-DESCRIPTION="A Python system to automate the compile/test cycle to validate code changes. Similar to Tinderbox, but simpler."
+DESCRIPTION="A Python system to automate the compile/test cycle to validate code changes (similar to Tinderbox, but simpler)"
 HOMEPAGE="http://buildbot.sourceforge.net/"
 SRC_URI="mirror://sourceforge/buildbot/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="doc irc mail test web"
 
 commondepend=">=dev-lang/python-2.3
@@ -22,7 +22,6 @@ RDEPEND="${commondepend}
 DEPEND="${commondepend}
 	test? ( dev-python/twisted-web )
 	doc? ( dev-python/epydoc )"
-
 
 pkg_setup() {
 	enewuser buildbot
