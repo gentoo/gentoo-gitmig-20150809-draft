@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/picocontainer/picocontainer-1.1.ebuild,v 1.5 2006/05/29 17:29:33 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/picocontainer/picocontainer-1.1.ebuild,v 1.6 2007/02/13 20:47:22 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -22,7 +22,7 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	# Don't run tests automatically 
+	# Don't run tests automatically
 	sed -i -e 's/compile,test/compile/' build.xml
 
 	mkdir -p target/lib

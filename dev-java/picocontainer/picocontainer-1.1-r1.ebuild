@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/picocontainer/picocontainer-1.1-r1.ebuild,v 1.1 2006/08/01 12:22:41 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/picocontainer/picocontainer-1.1-r1.ebuild,v 1.2 2007/02/13 20:47:22 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -23,7 +23,7 @@ DEPEND=">=virtual/jdk-1.4
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	# Don't run tests automatically 
+	# Don't run tests automatically
 	sed -i -e 's/compile,test/compile/' build.xml
 
 # doesn't pass internal test even when trying vanilla build.xml that fetches own libs
