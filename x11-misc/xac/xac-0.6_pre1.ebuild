@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xac/xac-0.6_pre1.ebuild,v 1.2 2007/02/11 07:24:04 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xac/xac-0.6_pre1.ebuild,v 1.3 2007/02/13 00:58:48 josejx Exp $
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Xorgautoconfig (xac) generates configuration files for X.org"
 HOMEPAGE="http://dev.gentoo.org/~josejx/xac.html"
@@ -16,11 +16,18 @@ RDEPEND=">=dev-lang/python-2.3
 		 || ( x11-base/xorg-server virtual/x11 )"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
-src_compile() {
-	### Replace /usr/lib/xac with libdir version 
-	cd "${S}"
-	sed -i "s:/usr/lib/xac:/usr/$(get_libdir)/xac:" xac
+src_unpack() {
+	unpack ${A}
+	cd ${S}
 
+	### Patch for -lz
+	epatch ${FILESDIR}/${PN}-lz.patch
+
+	### Replace /usr/lib/xac with libdir version 
+	sed -i "s:/usr/lib/xac:/usr/$(get_libdir)/xac:" xac
+}
+
+src_compile() {
 	### Compile the C bindings
 	cd "${S}"/src
 	### I'm not sure of a better way to do this yet

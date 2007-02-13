@@ -1,0 +1,11 @@
+--- src/setup.bak	2007-02-12 19:52:58.000000000 -0500
++++ src/setup.py	2007-02-12 19:51:44.000000000 -0500
+@@ -2,7 +2,7 @@
+ from distutils.core import setup, Extension
+ 
+ pci_module = Extension("pci", 
+-			libraries = ["pci"],
++			libraries = ["pci", "z"],
+ 			sources = ["pcimodule.c"])
+ 
+ vbe_module = Extension("vbe",

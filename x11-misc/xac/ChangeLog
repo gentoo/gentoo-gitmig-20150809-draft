@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xac
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xac/ChangeLog,v 1.4 2007/02/11 07:24:04 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xac/ChangeLog,v 1.5 2007/02/13 00:58:48 josejx Exp $
+
+  13 Feb 2007; Joseph Jezak <josejx@gentoo.org> +files/xac-lz.patch,
+  xac-0.6_pre1.ebuild:
+  Fixed missing gzopen issue.
 
   11 Feb 2007; Joseph Jezak <josejx@gentoo.org> -xac-0.5.ebuild,
   xac-0.6_pre1.ebuild:
