@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.103 2007/01/29 22:48:43 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.104 2007/02/13 22:08:40 leonardop Exp $
+
+*libgda-2.99.5 (13 Feb 2007)
+
+  13 Feb 2007; Leonardo Boshell <leonardop@gentoo.org>
+  -files/libgda-2.99.3-collisions.patch, +files/libgda-2.99.5-gapi.patch,
+  -libgda-2.99.3.ebuild, +libgda-2.99.5.ebuild:
+  New release. Dropped 'mdb' until a new release of mdbtools comes out.
 
 *libgda-2.99.3 (29 Jan 2007)
 

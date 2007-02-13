@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/libgnomedb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/ChangeLog,v 1.51 2007/01/29 22:53:46 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/ChangeLog,v 1.52 2007/02/13 22:13:30 leonardop Exp $
+
+*libgnomedb-2.99.5 (13 Feb 2007)
+
+  13 Feb 2007; Leonardo Boshell <leonardop@gentoo.org>
+  -files/libgnomedb-2.99.3-collisions.patch, -libgnomedb-2.99.3.ebuild,
+  +libgnomedb-2.99.5.ebuild:
+  New release.
 
 *libgnomedb-2.99.3 (29 Jan 2007)
 
