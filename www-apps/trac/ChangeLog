@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/trac
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.51 2007/01/30 21:26:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.52 2007/02/13 20:42:03 corsair Exp $
+
+  13 Feb 2007; Markus Rothe <corsair@gentoo.org> trac-0.10.3.ebuild:
+  Added ~ppc64; bug #166675
 
   30 Jan 2007; Raúl Porcel <armin76@gentoo.org> trac-0.10.3.ebuild:
   x86 stable wrt bug 159136

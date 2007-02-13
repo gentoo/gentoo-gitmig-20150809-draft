@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/trac-webadmin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-webadmin/ChangeLog,v 1.5 2007/01/07 19:44:38 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-webadmin/ChangeLog,v 1.6 2007/02/13 20:39:33 corsair Exp $
+
+  13 Feb 2007; Markus Rothe <corsair@gentoo.org> trac-webadmin-0.1.2.ebuild:
+  Added ~ppc64; bug #166675
 
   07 Jan 2007; Julien Allanos <dju@gentoo.org> trac-webadmin-0.1.1.ebuild,
   trac-webadmin-0.1.2.ebuild:
