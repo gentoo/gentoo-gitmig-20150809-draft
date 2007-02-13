@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/octopus/octopus-3.0.1-r1.ebuild,v 1.4 2007/02/12 21:57:31 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/octopus/octopus-3.0.1-r1.ebuild,v 1.5 2007/02/13 06:27:42 opfer Exp $
 
 inherit versionator java-pkg-2 java-ant-2
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.forge.objectweb.org/${PN}/${PN}-${MY_PV}.src.tar.gz
 HOMEPAGE="http://octopus.objectweb.org"
 LICENSE="LGPL-2.1"
 SLOT="3.0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="doc source"
 # Does not like org.w3c.dom.Node
 # from 1.6
