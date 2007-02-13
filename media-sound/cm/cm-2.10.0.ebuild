@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.10.0.ebuild,v 1.1 2007/02/12 18:54:10 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.10.0.ebuild,v 1.2 2007/02/13 12:07:26 hkbst Exp $
 
 inherit elisp-common
 
@@ -22,12 +22,14 @@ INTERPRETERS="dev-lisp/ecls
 	dev-scheme/gauche"
 
 DEPEND="|| ( ${COMPILERS} ${INTERPRETERS} )
-	emacs? ( virtual/emacs )"
+	emacs? ( virtual/emacs app-emacs/slime )"
 RDEPEND="${DEPEND}"
 
 IUSE="doc emacs"
 
 S="${WORKDIR}/${PN}"
+
+SITEFILE="71cm-gentoo.el"
 
 # for easy testing of any implementation
 #FORCEIMPL="guile"
@@ -103,7 +105,7 @@ src_install() {
 
 	if use emacs; then
 		elisp-install ${PN} etc/xemacs/*.el
-		elisp-site-file-install etc/xemacs/cm.el
+		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	fi
 }
 
