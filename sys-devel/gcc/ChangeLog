@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.609 2007/02/12 17:37:57 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.610 2007/02/13 14:36:19 gustavoz Exp $
+
+  13 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> gcc-4.1.1-r3.ebuild:
+  Stable on sparc for 2007.0
 
   12 Feb 2007; Bryan Østergaard <kloeri@gentoo.org> gcc-4.1.1-r3.ebuild:
   Stable on Alpha + IA64, bug 160663.
