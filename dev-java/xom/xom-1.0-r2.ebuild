@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/xom-1.0-r2.ebuild,v 1.8 2007/01/09 13:29:05 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/xom-1.0-r2.ebuild,v 1.9 2007/02/13 21:22:36 caster Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -18,7 +18,7 @@ RDEPEND=">=virtual/jre-1.3
 	>=dev-java/xerces-2.7
 	dev-java/xalan
 	dev-java/junit
-	dev-java/icu4j
+	=dev-java/icu4j-3.0*
 	dev-java/tagsoup
 	=dev-java/servletapi-2.4*"
 DEPEND=">=virtual/jdk-1.3
