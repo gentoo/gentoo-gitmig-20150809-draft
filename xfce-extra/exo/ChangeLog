@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/exo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.29 2007/02/03 18:31:11 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.30 2007/02/13 20:49:04 drac Exp $
+
+  13 Feb 2007; Samuli Suominen <drac@gentoo.org> exo-0.3.2.ebuild:
+  Stop using -Werror when USE debug is enabled for bug 166568.
 
   03 Feb 2007; Joshua Nichols <nichoj@gentoo.org> exo-0.3.2.ebuild:
   Fixed file collision. See bug #164780.

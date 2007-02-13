@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/exo-0.3.2.ebuild,v 1.4 2007/02/03 18:31:11 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/exo-0.3.2.ebuild,v 1.5 2007/02/13 20:49:04 drac Exp $
 
 inherit xfce44 python
 
@@ -32,7 +32,13 @@ XFCE_CONFIG="${XFCE_CONFIG}	$(use_enable python) \
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README THANKS TODO"
 
-# See bug #164780 for reference
+# See bug 166568 for reference
+src_unpack() {
+	unpack ${A}
+	sed -i -e 's:-Werror::g' "${S}"/configure
+}
+
+# See bug 164780 for reference
 src_install() {
 	xfce44_src_install
 	rm -f "${D}"/usr/lib*/python*/site-packages/pyexo.py[co]
