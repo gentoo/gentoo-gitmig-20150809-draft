@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-10.0.ebuild,v 1.4 2007/02/13 14:04:01 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-10.0.ebuild,v 1.5 2007/02/13 23:27:27 blubb Exp $
 
 DESCRIPTION="Provides precompiled 32bit libraries"
 HOMEPAGE="http://amd64.gentoo.org/emul/content.xml"
@@ -91,7 +91,7 @@ src_install() {
 	find ${S} -type f -name '*.a' -or -name '*.la' -or -name '*.h' \
 		| xargs rm -f
 
-	
+
 	for dir in etc/env.d etc/revdep-rebuild ; do
 		if [[ -d ${S}/${dir} ]] ; then
 			for f in ${S}/${dir}/* ; do

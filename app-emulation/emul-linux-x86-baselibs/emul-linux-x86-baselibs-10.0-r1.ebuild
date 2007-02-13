@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-10.0-r1.ebuild,v 1.1 2007/02/13 22:29:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-10.0-r1.ebuild,v 1.2 2007/02/13 23:27:27 blubb Exp $
 
 DESCRIPTION="Provides precompiled 32bit libraries"
 HOMEPAGE="http://amd64.gentoo.org/emul/content.xml"
@@ -8,8 +8,8 @@ SRC_URI="mirror://gentoo/binutils-2.16.1-r3.tbz2
 		mirror://gentoo/bzip2-1.0.3-r6.tbz2
 		mirror://gentoo/com_err-1.39.tbz2
 		mirror://gentoo/cracklib-2.8.9-r1.tbz2
-		mirror://gentoo/cups-1.2.6-nossl.tbz2
 			http://dev.gentoo.org/~blubb/cups-1.2.6-nossl.tbz2
+		mirror://gentoo/cups-1.2.6-nossl.tbz2
 		mirror://gentoo/db-4.0.14-r3.tbz2
 		mirror://gentoo/db-4.2.52_p4-r2.tbz2
 		mirror://gentoo/dbus-1.0.2.tbz2
@@ -65,7 +65,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	
+
 	WHITELIST="(${S}/lib32/security/pam_filter/upperLOWER|${S}/etc/env.d)"
 	# the following line is broken up because we have files with spaces in the filename
 	find ${S} ! -type d ! -name '*.so*' | egrep -v "${WHITELIST}" | xargs -d '
@@ -85,7 +85,7 @@ src_install() {
 			done
 		fi
 	done
-	
+
 	# remove void directories or portage will show weird output
 	find ${S} -depth -type d | xargs rmdir 2&>/dev/null
 
