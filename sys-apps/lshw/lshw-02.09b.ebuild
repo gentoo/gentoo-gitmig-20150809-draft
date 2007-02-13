@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-02.09b.ebuild,v 1.1 2006/11/27 00:46:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-02.09b.ebuild,v 1.2 2007/02/13 02:49:22 beandog Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -12,10 +12,11 @@ MY_P="$PN-$MIN_PV.$MAJ_PV"
 DESCRIPTION="Hardware Lister"
 HOMEPAGE="http://ezix.org/project/wiki/HardwareLiSter"
 SRC_URI="http://ezix.org/software/files/${MY_P}.tar.gz"
+RESTRICT="strip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="gtk static"
 
 DEPEND="gtk? ( >=x11-libs/gtk+-2 )"
