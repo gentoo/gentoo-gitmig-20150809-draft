@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wgetpaste
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.4 2007/02/13 11:29:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.5 2007/02/13 14:51:44 gustavoz Exp $
+
+  13 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> wgetpaste-1.ebuild:
+  Keyworded ~sparc wrt #166570
 
   13 Feb 2007; Markus Rothe <corsair@gentoo.org> wgetpaste-1.ebuild:
   Added ~ppc64; bug #166570
