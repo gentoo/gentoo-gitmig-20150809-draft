@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/libpq
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.95 2007/02/13 01:45:28 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.96 2007/02/13 09:59:58 opfer Exp $
+
+  13 Feb 2007; Christian Faulhammer <opfer@gentoo.org> libpq-7.3.18.ebuild,
+  libpq-7.4.16.ebuild, libpq-8.0.12.ebuild:
+  stable x86; security bug 165482
 
   13 Feb 2007; Martin Jackson <mjolnir@gentoo.org>
   files/libpq-7.3.18-gentoo.patch, files/libpq-7.4.16-gentoo.patch:
