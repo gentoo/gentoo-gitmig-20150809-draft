@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ivman
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.49 2007/02/10 13:45:19 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.50 2007/02/13 10:01:37 corsair Exp $
+
+  13 Feb 2007; Markus Rothe <corsair@gentoo.org> ivman-0.6.13.ebuild:
+  Stable on ppc64; bug #163436
 
   10 Feb 2007; Steve Dibb <beandog@gentoo.org> ivman-0.6.13.ebuild:
   amd64 stable, bug 163436
