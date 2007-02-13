@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjackasyn/libjackasyn-0.13.ebuild,v 1.1 2007/02/04 13:26:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjackasyn/libjackasyn-0.13.ebuild,v 1.2 2007/02/13 22:14:50 aballier Exp $
 
 
 inherit eutils toolchain-funcs
@@ -24,6 +24,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-qa.patch"
 	epatch "${FILESDIR}/${P}-pic.patch"
 	epatch "${FILESDIR}/${P}-libdir.patch"
+	epatch "${FILESDIR}/${P}-execprefix.patch"
 }
 
 src_compile() {

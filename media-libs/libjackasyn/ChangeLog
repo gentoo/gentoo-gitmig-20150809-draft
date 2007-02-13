@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libjackasyn
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjackasyn/ChangeLog,v 1.13 2007/02/04 13:26:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjackasyn/ChangeLog,v 1.14 2007/02/13 22:14:50 aballier Exp $
+
+  13 Feb 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/libjackasyn-0.13-execprefix.patch, libjackasyn-0.13.ebuild:
+  Fix to add exec_prefix support, bug #166721
 
 *libjackasyn-0.13 (04 Feb 2007)
 
