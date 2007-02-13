@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/abakus/abakus-0.91.ebuild,v 1.4 2007/02/10 13:24:57 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/abakus/abakus-0.91.ebuild,v 1.5 2007/02/13 12:58:34 cryos Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.kde-apps.org/content/files/16751-${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 # leave gmp out for now, does not work for me
 IUSE="debug gmp"
 

@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/abakus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/abakus/ChangeLog,v 1.9 2007/02/10 13:24:57 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/abakus/ChangeLog,v 1.10 2007/02/13 12:58:34 cryos Exp $
+
+  13 Feb 2007; Marcus D. Hanwell <cryos@gentoo.org> -abakus-0.90.ebuild,
+  abakus-0.91.ebuild:
+  Stable on amd64, removed old version.
 
   10 Feb 2007; Przemysław Maciąg <troll@gentoo.org> abakus-0.91.ebuild:
   Move desktop file from applnk
