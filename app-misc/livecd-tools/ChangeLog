@@ -1,6 +1,18 @@
 # ChangeLog for app-misc/livecd-tools
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.83 2007/01/04 22:55:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.84 2007/02/13 21:37:20 wolf31o2 Exp $
+
+*livecd-tools-1.0.35 (13 Feb 2007)
+
+  13 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  +livecd-tools-1.0.35.ebuild:
+  Version bump to livecd-tools 1.0.35 with only a couple minor changes. First,
+  we always try to return RC_COLDPLUG to its original state at boot. Second,
+  we no longer manually run dhcpcd, but let udev/baselayout take care of it,
+  entirely. Since this is a required fix for 2007.0, I am taking it straight
+  to stable so it can make it into the snapshot in time. It is a very minor
+  change, and I don't think anyone will object to having working release
+  media.
 
 *livecd-tools-1.0.34 (04 Jan 2007)
 
