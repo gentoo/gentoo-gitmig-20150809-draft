@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX zopeinterface-3.0.1-gcc4.patch 752 RMD160 860b22689596dbca2862f6ce4815878a78bcd8b6 SHA1 9fe89678d9f0eace1547617fb9c1167ac39b8423 SHA256 f55bb6499317e1107ce3d9bd510c519ba4233bbea4e02be5f926dc6f180339e9
 MD5 bf5b2fab1194b14762c644e97169a595 files/zopeinterface-3.0.1-gcc4.patch 752
 RMD160 860b22689596dbca2862f6ce4815878a78bcd8b6 files/zopeinterface-3.0.1-gcc4.patch 752
@@ -6,16 +9,16 @@ AUX zopeinterface-3.0.1-with-rename.patch 9081 RMD160 3ad691e4b8170912feb7ac999e
 MD5 a39818f15d60aa088438a89aad9b3c85 files/zopeinterface-3.0.1-with-rename.patch 9081
 RMD160 3ad691e4b8170912feb7ac999eaba73e7b0d4ad8 files/zopeinterface-3.0.1-with-rename.patch 9081
 SHA256 7b4e4445064760c1a3ec47e3bc79134287d0b94235f16162bf2b09ea04b404c2 files/zopeinterface-3.0.1-with-rename.patch 9081
-DIST ZopeInterface-3.0.0.tgz 108394
+DIST ZopeInterface-3.0.0.tgz 108394 RMD160 584b5589926f22e9660aa2951618d40204ec4810 SHA1 27731748527c0da7885b3fa9c1f4d4950e0c1dd5 SHA256 40eff3c74c88ea3704c747f2396e584cc33da760c4384aae1452e85c0036b06a
 DIST ZopeInterface-3.0.1.tgz 108336 RMD160 77ae531b20e069de959807ae980a76b460e3f76c SHA1 3707f7129acf085d5a0b6b616893ab647cbc7c84 SHA256 04a960d6ea1d89c2a44ebf730bdf492f617a5fda9d3cba19c2b041daff492236
 EBUILD zopeinterface-3.0.0.ebuild 708 RMD160 ad167c0c4f17d9abb7c48ff3fedcfd6657b57bc8 SHA1 af1b0682a47a8e6606bb3af602d7ca6169cb9882 SHA256 649977dd79ebddf6795951317c384db0d5ff75617cfdfc9ba50190210b83cf5c
 MD5 ddbc3525d554fa4ac9d83a79802bbffb zopeinterface-3.0.0.ebuild 708
 RMD160 ad167c0c4f17d9abb7c48ff3fedcfd6657b57bc8 zopeinterface-3.0.0.ebuild 708
 SHA256 649977dd79ebddf6795951317c384db0d5ff75617cfdfc9ba50190210b83cf5c zopeinterface-3.0.0.ebuild 708
-EBUILD zopeinterface-3.0.1-r1.ebuild 994 RMD160 73380e26d9040c847888b292c8dd9f0e57fab4a3 SHA1 1896c0614c979889b1e886cb57cae6d6eae3e4a0 SHA256 0f28f38a64663eb9ca1814e6200ea84d59694487f8cf8b544f2c5a1a6ef91792
-MD5 9e552eeead099c99d4762761573de599 zopeinterface-3.0.1-r1.ebuild 994
-RMD160 73380e26d9040c847888b292c8dd9f0e57fab4a3 zopeinterface-3.0.1-r1.ebuild 994
-SHA256 0f28f38a64663eb9ca1814e6200ea84d59694487f8cf8b544f2c5a1a6ef91792 zopeinterface-3.0.1-r1.ebuild 994
+EBUILD zopeinterface-3.0.1-r1.ebuild 998 RMD160 e0e36ccefdc8a04d8b75be59b2fcfe92dff062be SHA1 f3b3295f8d0a72a59a438997a1b5b6d522503619 SHA256 549de42e6e656675a2940aea8d3c110df60747d4c722da4a1693523746610819
+MD5 8575aab0ab5d3ebdd1bd0d6c7fa8a23e zopeinterface-3.0.1-r1.ebuild 998
+RMD160 e0e36ccefdc8a04d8b75be59b2fcfe92dff062be zopeinterface-3.0.1-r1.ebuild 998
+SHA256 549de42e6e656675a2940aea8d3c110df60747d4c722da4a1693523746610819 zopeinterface-3.0.1-r1.ebuild 998
 EBUILD zopeinterface-3.0.1.ebuild 834 RMD160 431b9e4ac5f0bcfa679c1b1ee350e0f5ab72733d SHA1 afafd8d8674be3f390156a9e3be79a1a055d93ca SHA256 1d87f230499997e095688e4f6ecffd336500867ba39d0093e936d632a6479b27
 MD5 5444c89ecd62542b3d7b9ae23ad82df2 zopeinterface-3.0.1.ebuild 834
 RMD160 431b9e4ac5f0bcfa679c1b1ee350e0f5ab72733d zopeinterface-3.0.1.ebuild 834
@@ -28,12 +31,19 @@ MISC metadata.xml 181 RMD160 b651de9adc8c22c462ea4745c89ee71448fbaa23 SHA1 e9cc0
 MD5 832042e8ab90377649ed5ba7daa7e9ad metadata.xml 181
 RMD160 b651de9adc8c22c462ea4745c89ee71448fbaa23 metadata.xml 181
 SHA256 3501c481a2455d2f3a83f65e48f87bf5dbcad0a29a3831bd54cb174975285c20 metadata.xml 181
-MD5 f272ae0b346de2f2e7081d1e314329e2 files/digest-zopeinterface-3.0.0 68
-RMD160 53c3ebeecf19fbecfc73f2ecff0ccf2985998223 files/digest-zopeinterface-3.0.0 68
-SHA256 cfa80a59df99be5d16a23948e2624efedb410c9977327b98a2657854a33caf49 files/digest-zopeinterface-3.0.0 68
+MD5 2d299eaa3a78b224d50ff0e9395e6aa8 files/digest-zopeinterface-3.0.0 250
+RMD160 b9ee23b53de14df738bcd7e938a917b270ab3c63 files/digest-zopeinterface-3.0.0 250
+SHA256 aee278aa86e9c5a5c0281c6ae8b2d83dc2450932c9fda24800509e9e11054c86 files/digest-zopeinterface-3.0.0 250
 MD5 385e14da958bbc648c2e3c39f1b34d8e files/digest-zopeinterface-3.0.1 250
 RMD160 5e80a24e7bf1f75e8d899559908675df6c25e2ae files/digest-zopeinterface-3.0.1 250
 SHA256 1c060505086174771edf9590d373c18191a0e69e1fc696f1d32aef7d94d0a39e files/digest-zopeinterface-3.0.1 250
 MD5 385e14da958bbc648c2e3c39f1b34d8e files/digest-zopeinterface-3.0.1-r1 250
 RMD160 5e80a24e7bf1f75e8d899559908675df6c25e2ae files/digest-zopeinterface-3.0.1-r1 250
 SHA256 1c060505086174771edf9590d373c18191a0e69e1fc696f1d32aef7d94d0a39e files/digest-zopeinterface-3.0.1-r1 250
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.2 (GNU/Linux)
+
+iD8DBQFF0btJ8bi6rjpTunYRAgYfAJ9ltWAo9p/SPPMyyy+VGq+JhZTC9ACfZMGh
+RLw/R7T+vTmeU+JToFZNCDU=
+=vEYg
+-----END PGP SIGNATURE-----
