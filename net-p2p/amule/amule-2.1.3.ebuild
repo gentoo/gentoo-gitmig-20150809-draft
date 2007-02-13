@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.1.3.ebuild,v 1.9 2007/02/07 14:22:17 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.1.3.ebuild,v 1.10 2007/02/13 15:11:34 armin76 Exp $
 
 inherit eutils flag-o-matic wxwidgets
 
@@ -95,9 +95,8 @@ src_compile() {
 				${myconf} || die
 
 		# we filter ssp until bug #74457 is closed to build on hardened
-		if has_hardened; then
-				filter-flags -fstack-protector -fstack-protector-all
-		fi
+		filter-flags -fstack-protector -fstack-protector-all
+
 		emake -j1 || die
 }
 
