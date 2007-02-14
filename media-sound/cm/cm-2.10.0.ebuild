@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.10.0.ebuild,v 1.2 2007/02/13 12:07:26 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.10.0.ebuild,v 1.3 2007/02/14 17:23:52 hkbst Exp $
 
 inherit elisp-common
 
@@ -48,7 +48,7 @@ implementation() {
 	echo ${impl}
 }
 
-lisp?() {
+is_lisp() {
 	local impl="$(implementation)"
 #	echo ${impl}
 	if [[ ${impl} == "guile" || ${impl} == "gauche" ]]; then
@@ -57,7 +57,7 @@ lisp?() {
 	return $(true)
 }
 
-compiler?() {
+is_compiler() {
 	local impl="$(implementation)"
 #	echo ${impl}
 	if [[ -z $(echo ${COMPILERS} | grep -i ${impl}) ]]; then
@@ -69,9 +69,9 @@ compiler?() {
 src_compile() {
 	use emacs && elisp-comp etc/xemacs/*.el
 
-	einfo "Detected $(compiler? && echo "compiler" || echo "interpreter"): $(implementation)"
+	einfo "Detected $(is_compiler && echo "compiler" || echo "interpreter"): $(implementation)"
 
-	if compiler?; then
+	if is_compiler; then
 		einfo "Byte-compiling code and generating Lisp code"
 		echo '(quit)' | eval ${CM}
 		echo -e "\n"
