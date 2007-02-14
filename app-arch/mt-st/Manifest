@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX mt-st-0.9b-use-internal-qic117.patch 311 RMD160 798fbf8583b951ac117e2daf77dceb5812b88ceb SHA1 70959c56e00508565badbc642e2b2a66dbe4f593 SHA256 47cec61985f305d44e66558a5f379e8296e70aa9d35b14875dad9f02fc5303a6
 MD5 87020a490b02067e83f9caaa15b08efe files/mt-st-0.9b-use-internal-qic117.patch 311
 RMD160 798fbf8583b951ac117e2daf77dceb5812b88ceb files/mt-st-0.9b-use-internal-qic117.patch 311
@@ -26,3 +29,10 @@ SHA256 44155257e9c133169c0221d5cc6e7806f2ef7ced4c09a518d4a27e86b8439240 files/di
 MD5 4aa416e72b3b705a9e6e419159d6a56c files/digest-mt-st-0.9b 229
 RMD160 0995a2b709d71bb65251d9ecf9d5469693ee0063 files/digest-mt-st-0.9b 229
 SHA256 16567244ac158fee39d3f203951f5cb17a30b427bffd51c03a57fd7c2d1550df files/digest-mt-st-0.9b 229
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.2 (GNU/Linux)
+
+iD8DBQFF03JSWt/XSf2CZdkRAjkCAJ9NcmQHt97yv+E+4bKBUzfAmRsPtACdFbEL
+8GoPtWa0EnLxhRFW0vSpVWQ=
+=acHm
+-----END PGP SIGNATURE-----
