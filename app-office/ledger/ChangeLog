@@ -1,6 +1,9 @@
 # ChangeLog for app-office/ledger
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ChangeLog,v 1.3 2006/11/22 15:09:10 peper Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ChangeLog,v 1.4 2007/02/14 12:46:12 opfer Exp $
+
+  14 Feb 2007; Christian Faulhammer <opfer@gentoo.org> ledger-2.5-r1.ebuild:
+  change from elisp.eclass to elisp-common.eclass, as reported in bug 158073
 
   22 Nov 2006; Piotr Jaroszyński <peper@gentoo.org> ledger-2.5-r1.ebuild:
   Add ~amd64 wrt bug #155839.

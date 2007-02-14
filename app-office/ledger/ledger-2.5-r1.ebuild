@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ledger-2.5-r1.ebuild,v 1.2 2006/11/22 15:09:10 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ledger-2.5-r1.ebuild,v 1.3 2007/02/14 12:46:12 opfer Exp $
 
-inherit eutils elisp
+inherit eutils elisp-common
 
 DESCRIPTION="Ledger is an command-line accounting tool that provides double-entry accounting with a minimum of frills, and yet with a maximum of expressiveness and flexibility."
 HOMEPAGE="http://www.newartisans.com/software.html"
@@ -29,7 +29,7 @@ src_compile() {
 		$(use_enable xml) \
 		$(use_enable ofx) \
 		$(use_enable debug) \
-		$(use_with   emacs lispdir ${D}/usr/share/emacs/site-lisp/${PN}) \
+		$(use_with	 emacs lispdir ${D}/usr/share/emacs/site-lisp/${PN}) \
 		|| die "Configure failed!"
 
 	emake || die "Make failed!"
