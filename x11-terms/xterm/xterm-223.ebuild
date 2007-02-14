@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-223.ebuild,v 1.2 2006/12/01 14:34:39 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-223.ebuild,v 1.3 2007/02/14 14:50:29 drac Exp $
 
 inherit flag-o-matic
 
@@ -13,20 +13,18 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="truetype Xaw3d unicode toolbar paste64"
 
-RDEPEND="|| ( (	x11-libs/libX11
-		x11-libs/libXrender
-		x11-libs/libXt
-		x11-libs/libXmu
-		x11-libs/libxkbfile
-		x11-libs/libXft
-		x11-libs/libXaw
-		unicode? ( x11-apps/luit ) )
-	virtual/x11 )
+RDEPEND="x11-libs/libX11
+	x11-libs/libXrender
+	x11-libs/libXt
+	x11-libs/libXmu
+	x11-libs/libxkbfile
+	x11-libs/libXft
+	x11-libs/libXaw
+	unicode? ( x11-apps/luit )
 	Xaw3d? ( x11-libs/Xaw3d )
 	sys-libs/libutempter"
-
 DEPEND="${RDEPEND}
-	|| ( x11-proto/xproto virtual/x11 )"
+	x11-proto/xproto"
 
 pkg_setup() {
 	if has_version "x11-libs/libX11"; then

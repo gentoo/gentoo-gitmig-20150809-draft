@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.192 2007/02/05 08:15:30 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.193 2007/02/14 14:50:29 drac Exp $
+
+  14 Feb 2007; Samuli Suominen <drac@gentoo.org> xterm-223.ebuild:
+  Remove virtual/x11 from deps for bug 166361.
 
   05 Feb 2007; Alexander H. Færøy <eroyf@gentoo.org> xterm-222.ebuild:
   Stable on MIPS; bug #156741
