@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/apel
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/ChangeLog,v 1.15 2007/01/28 04:00:57 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/ChangeLog,v 1.16 2007/02/14 18:26:30 opfer Exp $
+
+*apel-10.7 (14 Feb 2007)
+
+  14 Feb 2007; Christian Faulhammer <opfer@gentoo.org> +apel-10.7.ebuild:
+  version bump
 
   28 Jan 2007; Marius Mauch <genone@gentoo.org> apel-10.6.ebuild:
   Replacing einfo with elog
