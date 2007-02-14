@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/optipng
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.28 2007/02/10 13:39:27 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.29 2007/02/14 17:25:15 dang Exp $
+
+  14 Feb 2007; Daniel Gryniewicz <dang@gentoo.org> optipng-0.5.4.ebuild:
+  Marked stable on amd64 for bug #165374
 
   10 Feb 2007; nixnut <nixnut@gentoo.org> optipng-0.5.4.ebuild:
   Stable on ppc wrt bug 165374
