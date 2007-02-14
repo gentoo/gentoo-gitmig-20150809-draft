@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r5.ebuild,v 1.4 2007/02/14 06:19:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r5.ebuild,v 1.5 2007/02/14 07:10:17 cardoe Exp $
 
 inherit eutils linux-info
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2.6
 	>=sys-apps/util-linux-2.12r
 	|| ( >=sys-kernel/linux-headers-2.6 >=sys-kernel/mips-headers-2.6 )
 	dev-libs/expat
-	sys-apps/pciutils
+	<sys-apps/pciutils-2.2.4
 	dev-libs/libusb
 	virtual/eject
 	dmi? ( >=sys-apps/dmidecode-2.7 )
@@ -140,19 +140,12 @@ src_unpack() {
 }
 
 src_compile() {
-	if [ -r "${ROOT}/usr/share/misc/pci.ids.gz" ] ; then
-		hwdata="${ROOT}/usr/share/misc/pci.ids.gz"
-	elif [ -r "${ROOT}/usr/share/misc/pci.ids" ] ; then
-		hwdata="${ROOT}/usr/share/misc/pci.ids"
-	else
-		die "pci.ids file not found. please file a bug @ bugs.gentoo.org"
-	fi
 
 	econf \
 		--with-doc-dir=/usr/share/doc/${PF} \
 		--with-os-type=gentoo \
 		--with-pid-file=/var/run/hald.pid \
-		--with-hwdata=${hwdata} \
+		--with-hwdata=/usr/share/misc \
 		--enable-hotplug-map \
 		$(use_enable debug verbose-mode) \
 		$(use_enable pcmcia pcmcia-support) \
