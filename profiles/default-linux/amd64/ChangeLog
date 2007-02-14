@@ -1,6 +1,16 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.71 2007/02/14 16:47:25 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.72 2007/02/14 17:55:19 kugelfang Exp $
+
+  14 Feb 2007; Danny van Dyk <kugelfang@gentoo.org>
+  +2007.0/desktop/make.defaults, +2007.0/desktop/parent,
+  +2007.0/desktop/virtuals, +2007.0/make.defaults,
+  +2007.0/no-multilib/make.defaults, +2007.0/no-multilib/package.mask,
+  +2007.0/no-multilib/package.use.mask, +2007.0/no-multilib/parent,
+  +2007.0/no-multilib/use.mask, +2007.0/packages, +2007.0/parent,
+  +2007.0/server/make.defaults, +2007.0/server/parent,
+  +2007.0/server/profile.bashrc:
+  Copied 2006.1 profile to 2007.0 profile.
 
   14 Feb 2007; Simon Stelling <blubb@gentoo.org> make.defaults:
   make multilib-strict shut up for rox-packages until bug 164816 is fixed
