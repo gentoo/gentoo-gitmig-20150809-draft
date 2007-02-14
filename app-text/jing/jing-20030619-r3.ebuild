@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jing/jing-20030619-r3.ebuild,v 1.1 2007/01/20 19:57:26 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jing/jing-20030619-r3.ebuild,v 1.2 2007/02/14 16:57:39 betelgeuse Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -15,12 +15,13 @@ COMMON_DEPEND="
 	=dev-java/saxon-8*
 	>=dev-java/xerces-2.7
 	dev-java/iso-relax
-	dev-java/relaxng-datatype"
+	dev-java/xalan
+	dev-java/relaxng-datatype
+	dev-java/ant-core"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEPEND}"
 DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip
-	dev-java/ant-core
 	source? ( app-arch/zip )
 	${COMMON_DEPEND}"
 
@@ -35,14 +36,14 @@ src_unpack() {
 	# Has java.util.regex, xerces2 and xerces1 implementation
 	# We only need the first one
 	rm -vr com/thaiopensource/datatype/xsd/regex/{xerces,xerces2} || die
-	epatch ${FILESDIR}/build-patch.diff
-	epatch ${FILESDIR}/${P}-xerces.patch
+	epatch "${FILESDIR}/build-patch.diff"
+	epatch "${FILESDIR}/${P}-xerces.patch"
 
 	#remove bundled relaxng-datatype
-	rm -r org
+	rm -r org || die
 
 	cd ../bin/
-	rm -v *.jar
+	rm -v *.jar || die
 	java-pkg_jar-from iso-relax
 	java-pkg_jar-from xerces-2
 	java-pkg_jar-from xalan
