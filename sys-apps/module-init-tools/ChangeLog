@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.123 2007/02/14 01:14:30 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.124 2007/02/14 03:36:52 jer Exp $
+
+  14 Feb 2007; Jeroen Roovers <jer@gentoo.org>
+  module-init-tools-3.2.2-r2.ebuild:
+  Stable for HPPA (bug #158637).
 
   14 Feb 2007; Bryan Østergaard <kloeri@gentoo.org>
   module-init-tools-3.2.2-r2.ebuild:
