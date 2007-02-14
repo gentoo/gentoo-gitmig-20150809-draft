@@ -1,3 +1,3 @@
 ;;; mercurial site-lisp configuration
 
-(load "mercurial")
+(add-to-list 'load-path "@SITELISP@")

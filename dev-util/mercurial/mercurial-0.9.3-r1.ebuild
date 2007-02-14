@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-0.9.3-r1.ebuild,v 1.1 2007/01/21 09:30:58 aross Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-0.9.3-r1.ebuild,v 1.2 2007/02/14 22:39:36 opfer Exp $
 
 inherit bash-completion distutils elisp-common flag-o-matic
 
@@ -53,7 +53,7 @@ src_install() {
 	doman doc/*.?
 
 	if use emacs; then
-		insinto ${SITELISP}
+		insinto ${SITELISP}/${PN}
 		doins contrib/mercurial.el*
 		elisp-site-file-install "${FILESDIR}"/70mercurial-gentoo.el
 	fi
