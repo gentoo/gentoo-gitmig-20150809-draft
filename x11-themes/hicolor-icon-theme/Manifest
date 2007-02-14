@@ -1,29 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX hicolor-icon-theme-0.9-stock-document-icons.patch 9354 RMD160 1169b46dab768ae4aae047f998d88a3377256f45 SHA1 15a5cf3ce13fa30a4daae24d5831874643a399d2 SHA256 d10c58d5866ab51499b7d7af3940b46f250e42d4d9284571da30b31747f3e6b1
 MD5 2b1db4509a9e83c1c1371126913889bc files/hicolor-icon-theme-0.9-stock-document-icons.patch 9354
 RMD160 1169b46dab768ae4aae047f998d88a3377256f45 files/hicolor-icon-theme-0.9-stock-document-icons.patch 9354
 SHA256 d10c58d5866ab51499b7d7af3940b46f250e42d4d9284571da30b31747f3e6b1 files/hicolor-icon-theme-0.9-stock-document-icons.patch 9354
 DIST hicolor-icon-theme-0.10.tar.gz 33616 RMD160 934a935524f1554a4bd462fe203979fd7f0d5846 SHA1 30a1526cd337ecbd9aaecfff2737884b86c72508 SHA256 9d73af8f61240fbb3c522321582cd693c5b81ef344067a3949f0aa624610adee
-DIST hicolor-icon-theme-0.8.tar.gz 31738 RMD160 7a5bfe80c467f654b864dc1b707c15fe9b2a2d1c SHA1 35d2cac984ae7b458cd544f4b29e06f03fd4fa42 SHA256 e879e512e23cdaeab5926deabda43cab67c0c87fdb2f90d7c017c7bd8eef8ffb
 DIST hicolor-icon-theme-0.9.tar.gz 32574 RMD160 31ff77d2e125e0bcfc939733ac9644f37e71cbbc SHA1 640e0f3c0d4a7d0cc983944cba626b8f025deb14 SHA256 a6abad5dd62f12870ff5b32ae414e0c611f0922b905aeab6db2676b607bb1643
 EBUILD hicolor-icon-theme-0.10.ebuild 808 RMD160 ef70339019627a2652f3cfde5bc322d4accdbae6 SHA1 e784c249883a630fbb89022dbc732d10f09118bd SHA256 b9fd78cab8be446896d8745c916a010b699fa48b79c60a44d3e30b737377b770
 MD5 ca09da0ec94d2ff3943d93333cb0a37c hicolor-icon-theme-0.10.ebuild 808
 RMD160 ef70339019627a2652f3cfde5bc322d4accdbae6 hicolor-icon-theme-0.10.ebuild 808
 SHA256 b9fd78cab8be446896d8745c916a010b699fa48b79c60a44d3e30b737377b770 hicolor-icon-theme-0.10.ebuild 808
-EBUILD hicolor-icon-theme-0.8.ebuild 635 RMD160 d62dfc295eb0af2b324c3f0e86986eb222245ea5 SHA1 5f663b578fc467e3dbddd6d7ef31c1af13989984 SHA256 270da69d6981643cb90572fbdab5ecc921fa5671c40cf906d46b2d3c2c0a561f
-MD5 1e7b64a8f9006ffae13eb9781ff7f4bb hicolor-icon-theme-0.8.ebuild 635
-RMD160 d62dfc295eb0af2b324c3f0e86986eb222245ea5 hicolor-icon-theme-0.8.ebuild 635
-SHA256 270da69d6981643cb90572fbdab5ecc921fa5671c40cf906d46b2d3c2c0a561f hicolor-icon-theme-0.8.ebuild 635
 EBUILD hicolor-icon-theme-0.9-r1.ebuild 1039 RMD160 b6a576d9540d7366c31153a1c49b2f9b849ede48 SHA1 df64eb0a48ec2c38bbd291dd52843bbca24bad2f SHA256 1fc4029817459b0da98f284532b7d235e8cd1ab962531fc4999dcb468c5594f5
 MD5 b24eb9997653c45f1795db0366c04e56 hicolor-icon-theme-0.9-r1.ebuild 1039
 RMD160 b6a576d9540d7366c31153a1c49b2f9b849ede48 hicolor-icon-theme-0.9-r1.ebuild 1039
 SHA256 1fc4029817459b0da98f284532b7d235e8cd1ab962531fc4999dcb468c5594f5 hicolor-icon-theme-0.9-r1.ebuild 1039
-MISC ChangeLog 5629 RMD160 a783e4f608a5f9f06dee85373b87f09d79b195d3 SHA1 feb2ac5679e7ead6da44bf38ba7cfd2b7dd6bb95 SHA256 730dc9b74155a5c1f2218910838f8a45578051e3463f62d576becff8e7577829
-MD5 668ebcae673f7e51a29fce048f75cd6d ChangeLog 5629
-RMD160 a783e4f608a5f9f06dee85373b87f09d79b195d3 ChangeLog 5629
-SHA256 730dc9b74155a5c1f2218910838f8a45578051e3463f62d576becff8e7577829 ChangeLog 5629
+MISC ChangeLog 5755 RMD160 4a39090c48efe8d538e2bd11f0e728db8771fb14 SHA1 b4b92800e5f8ef6ca28b5c10f9cdc93b9af3db2c SHA256 878a5b56cf1e6ac9605821551cd9dc9fc6e8bc975a14bc988be63273cab1a273
+MD5 1c486961a3b75ac4def0dea68c9078ca ChangeLog 5755
+RMD160 4a39090c48efe8d538e2bd11f0e728db8771fb14 ChangeLog 5755
+SHA256 878a5b56cf1e6ac9605821551cd9dc9fc6e8bc975a14bc988be63273cab1a273 ChangeLog 5755
 MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
@@ -31,16 +23,6 @@ SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata
 MD5 00d6bb867345605e8848ed28994be5cf files/digest-hicolor-icon-theme-0.10 268
 RMD160 1f4a00005b8190d4f882fddd8c75820a51d88c2b files/digest-hicolor-icon-theme-0.10 268
 SHA256 1aa280b602f25cdbfeebc67bad3edf32f56bf7e33c13483488daa2c7ec0004ca files/digest-hicolor-icon-theme-0.10 268
-MD5 bc0ca0779dce7dd0d92683f814b564ae files/digest-hicolor-icon-theme-0.8 265
-RMD160 171279fdbe66a38abe510edca1960920821fcebe files/digest-hicolor-icon-theme-0.8 265
-SHA256 d5f465df9f57214197ee4403c2c4009a6dbb666c83e9d2734abcc7fbd69126f9 files/digest-hicolor-icon-theme-0.8 265
 MD5 c2aded2eeca8b53e38028df100cd72a8 files/digest-hicolor-icon-theme-0.9-r1 265
 RMD160 c767f272e536ec6078cad5a044524345e1046734 files/digest-hicolor-icon-theme-0.9-r1 265
 SHA256 488942f5c9cf7b12d6cfb132373d8606e11fac0b5124117d70fc9fa3c7a8b07d files/digest-hicolor-icon-theme-0.9-r1 265
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.1 (GNU/Linux)
-
-iD8DBQFF02O+6Xxn2nLwtdQRApb5AKCA1Gf1w33mhXFI+bjsE1py+T8N2QCfTZSU
-wLZ0da/VL/g1AboPnuyTKxw=
-=/CQQ
------END PGP SIGNATURE-----
