@@ -1,6 +1,13 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.197 2007/02/04 18:07:56 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.198 2007/02/14 14:49:33 ticho Exp $
+
+*clamav-0.90 (14 Feb 2007)
+
+  14 Feb 2007; Andrej Kacian <ticho@gentoo.org> -clamav-0.90_rc3.ebuild,
+  +clamav-0.90.ebuild:
+  Version bump. Add bzip2, curl, gmp USE flags to control dependencies some
+  more. Remove the rc3 ebuild.
 
   04 Feb 2007; Andrej Kacian <ticho@gentoo.org> -clamav-0.90_rc1.ebuild,
   -clamav-0.90_rc2.ebuild:

@@ -1,31 +1,32 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.90_rc3.ebuild,v 1.1 2007/02/01 18:08:25 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.90.ebuild,v 1.1 2007/02/14 14:49:33 ticho Exp $
 
 inherit eutils flag-o-matic fixheadtails
 
-MY_P="${P/_/}"
 DESCRIPTION="Clam Anti-Virus Scanner"
 HOMEPAGE="http://www.clamav.net/"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="crypt milter selinux mailwrapper"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+IUSE="bzip2 crypt curl gmp logrotate mailwrapper milter onaccess selinux"
 
 DEPEND="virtual/libc
+	bzip2? ( app-arch/bzip2 )
 	crypt? ( >=dev-libs/gmp-4.1.2 )
+	curl? ( >=net-misc/curl-7.10.0 )
+	gmp? ( dev-libs/gmp )
 	milter? ( || ( mail-filter/libmilter mail-mta/sendmail ) )
+	onaccess? ( sys-fs/dazuko )
 	>=sys-libs/zlib-1.2.1-r3
-	>=net-misc/curl-7.10.0
 	>=sys-apps/sed-4"
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-clamav )
+	logrotate? ( app-admin/logrotate )
 	sys-apps/grep"
 PROVIDE="virtual/antivirus"
-
-S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	if use milter; then
@@ -35,6 +36,11 @@ pkg_setup() {
 			ewarn "this flag for clamav as well to disable milter support."
 			die "need milter-enabled sendmail"
 		fi
+	fi
+	if use onaccess ; then
+		echo
+		ewarn "Warning: On access scan support is experimental, use at your own risk!"
+		echo
 	fi
 	enewgroup clamav
 	enewuser clamav -1 -1 /dev/null clamav
@@ -58,7 +64,11 @@ src_compile() {
 
 	ht_fix_file configure
 	econf ${myconf} \
-		--enable-experimental \
+		$(use_enable bzip2) \
+		$(use_with curl libcurl) \
+		$(use_enable gmp dsig) \
+		$(use_enable onaccess clamuko) \
+		--disable-experimental \
 		--with-dbdir=/var/lib/clamav || die
 	emake || die
 }
@@ -91,6 +101,7 @@ src_install() {
 		-e "s:.*\(PidFile\) .*:\1 /var/run/clamav/freshclam.pid:" \
 		-e "s:.*\(DatabaseOwner\) .*:\1 clamav:" \
 		-e "s:^\#\(UpdateLogFile\) .*:\1 /var/log/clamav/freshclam.log:" \
+		-e "s:^\#\(NotifyClamd\).*:\1 /etc/clamd.conf:" \
 		${D}/etc/freshclam.conf
 
 	if use milter ; then
@@ -101,20 +112,30 @@ src_install() {
 		echo "MILTER_OPTS=\"-m 10 --timeout=0\"" \
 			>>${D}/etc/conf.d/clamd
 	fi
+
+	if use onaccess ; then
+		dodir /etc/udev/rules.d
+		echo "KERNEL==\"dazuko\", NAME=\"%k\", GROUP=\"clamav\", MODE=\"0660\"" \
+			>${D}/etc/udev/rules.d/60-dazuko.rules
+	fi
+
+	if use logrotate ; then
+		diropts ""
+		dodir /etc/logrotate.d
+		insopts -m0644
+		insinto /etc/logrotate.d
+		newins ${FILESDIR}/${PN}.logrotate ${PN}
+	fi
 }
 
 pkg_postinst() {
 	echo
 	ewarn "Warning: clamd and/or freshclam have not been restarted."
-	ewarn "You should restart them with: /etc/init.d/clamd restart"
+	ewarn "You should restart them to start using new version: /etc/init.d/clamd restart"
 	echo
 	if use milter ; then
 		elog "For simple instructions how to setup the clamav-milter"
 		elog "read /usr/share/doc/${PF}/clamav-milter.README.gentoo.gz"
 		echo
 	fi
-	ewarn "This is a RELEASE CANDIDATE version, with EXPERIMENTAL code ENABLED."
-	ewarn "USE AT YOUR OWN RISK. Report bugs at http://bugs.clamav.net"
-	echo
-	ebeep 3
 }
