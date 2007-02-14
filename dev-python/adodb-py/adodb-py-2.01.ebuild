@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/adodb-py-2.01.ebuild,v 1.4 2006/09/13 00:29:40 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/adodb-py-2.01.ebuild,v 1.5 2007/02/14 20:35:52 dev-zero Exp $
+
+NEED_PYTHON=2.3
 
 inherit distutils
 
@@ -15,16 +17,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="mysql postgres sqlite"
 
-RDEPEND=">=dev-lang/python-2.3
-	postgres? ( <dev-python/psycopg-1.99 )
+RDEPEND="postgres? ( <dev-python/psycopg-1.99 )
 	mysql? ( >=dev-python/mysql-python-0.9.2 )
 	sqlite? ( >=dev-python/pysqlite-2.0 ) "
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
-S="${WORKDIR}/${MY_P/py/}"
+PYTHON_MODNAME="adodb"
 
-DOCS="LICENSE.txt README.txt"
+S=${WORKDIR}/${MY_P/py/}
 
 src_install() {
 	distutils_src_install
