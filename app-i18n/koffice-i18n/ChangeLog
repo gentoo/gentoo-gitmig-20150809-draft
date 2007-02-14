@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/koffice-i18n
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.84 2007/02/13 22:42:13 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.85 2007/02/14 01:15:44 gustavoz Exp $
+
+  14 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  koffice-i18n-1.6.1.ebuild:
+  Stable on sparc wrt #166246
 
   13 Feb 2007; Lars Weiler <pylon@gentoo.org> koffice-i18n-1.6.1.ebuild:
   Stable on ppc; bug #166246.
