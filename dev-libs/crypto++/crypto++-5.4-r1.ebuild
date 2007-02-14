@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.4-r1.ebuild,v 1.1 2007/02/03 10:08:01 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.4-r1.ebuild,v 1.2 2007/02/14 21:18:01 alonbl Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 DEPEND="app-arch/unzip"
 RDEPEND=""
-IUSE="sse2"
+IUSE=""
 
 S="${WORKDIR}"
 
@@ -21,10 +21,6 @@ src_compile() {
 	# -O3 causes segfaults
 	replace-flags -O3 -O2
 	filter-flags -fomit-frame-pointer
-	if ! use sse2; then
-		filter-flags -msse2
-		append-flags -mno-sse2
-	fi
 	emake -f GNUmakefile \
 		CXX="$(tc-getCXX)" CXXFLAGS="${CXXFLAGS}" \
 		AR="$(tc-getAR)" \
