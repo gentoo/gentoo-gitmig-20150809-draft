@@ -1,0 +1,9 @@
+--- rhythmbox-0.9.7/daapsharing/Makefile.am.old	2007-01-07 19:28:04.000000000 +0100
++++ rhythmbox-0.9.7/daapsharing/Makefile.am	2007-01-07 19:32:24.000000000 +0100
+@@ -63,3 +63,6 @@
+ 
+ libdaapsharing_la_LDFLAGS = -export-dynamic
+ 
++libdaapsharing_la_LIBADD =				\
++	$(RHYTHMBOX_LIBS) 
++
