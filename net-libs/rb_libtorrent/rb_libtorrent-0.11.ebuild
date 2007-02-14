@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.11.ebuild,v 1.2 2007/02/13 20:50:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.11.ebuild,v 1.3 2007/02/14 15:31:46 armin76 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -25,8 +25,9 @@ RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	# We need boost built with threads
-	if ! built_with_use "dev-libs/boost" threads && ! built_with_use "dev-libs/boost" threadsonly ; then
-		die "rb_libtorrent needs dev-libs/boost built with threads or threadsonly USE flag"
+	if ! built_with_use "dev-libs/boost" threads; then
+		eerror "${PN} needs dev-libs/boost built with threads USE flag"
+		die "dev-libs/boost is built without threads USE flag"
 	fi
 }
 
