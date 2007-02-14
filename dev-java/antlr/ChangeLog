@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/antlr
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.54 2007/01/26 13:35:41 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.55 2007/02/14 17:34:03 opfer Exp $
+
+  14 Feb 2007; Christian Faulhammer <opfer@gentoo.org> antlr-2.7.7.ebuild:
+  stable x86; bug 166857
 
   26 Jan 2007; Krzysiek Pawlik <nelchael@gentoo.org> antlr-2.7.7.ebuild:
   Added ~ppc.
