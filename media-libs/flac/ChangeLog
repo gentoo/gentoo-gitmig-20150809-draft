@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/flac
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.104 2007/02/05 22:05:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.105 2007/02/14 11:08:16 flameeyes Exp $
+
+*flac-1.1.4 (14 Feb 2007)
+
+  14 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> +flac-1.1.4.ebuild:
+  Version bump, hopefully this time API and ABI are the same as 1.1.3 at least.
 
   05 Feb 2007; Alexis Ballier <aballier@gentoo.org> flac-1.1.3.ebuild:
   Add gettext build depend, bug #159596
