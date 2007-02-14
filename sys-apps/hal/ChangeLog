@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.130 2007/02/14 08:28:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.131 2007/02/14 16:53:00 cardoe Exp $
+
+  14 Feb 2007; Doug Goldstein <cardoe@gentoo.org> hal-0.5.7.1-r5.ebuild:
+  Fix issue with newer pciutils that uses gzipped pci.ids, which HAL can not
+  handle
 
   14 Feb 2007; Markus Rothe <corsair@gentoo.org> hal-0.5.7.1-r5.ebuild:
   Stable on ppc64; bug #166790

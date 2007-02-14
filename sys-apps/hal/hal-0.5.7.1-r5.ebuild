@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r5.ebuild,v 1.7 2007/02/14 08:28:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r5.ebuild,v 1.8 2007/02/14 16:53:00 cardoe Exp $
 
 inherit eutils linux-info
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2.6
 	>=sys-apps/util-linux-2.12r
 	|| ( >=sys-kernel/linux-headers-2.6 >=sys-kernel/mips-headers-2.6 )
 	dev-libs/expat
-	<sys-apps/pciutils-2.2.4
+	sys-apps/pciutils
 	dev-libs/libusb
 	virtual/eject
 	dmi? ( >=sys-apps/dmidecode-2.7 )
@@ -64,6 +64,12 @@ function notify_procfs() {
 }
 
 pkg_setup() {
+	if has_version =sys-apps/pciutils-2.2.4* ; then
+		if built_with_use --missing true =sys-apps/pciutils-2.2.4* zlib ; then
+			die "You MUST build pciutils without the zlib USE flag"
+		fi
+	fi
+
 	kernel_is ge 2 6 15 || ewarn "HAL requires a kernel version 2.6.15 or newer"
 
 	if kernel_is lt 2 6 16 ; then
