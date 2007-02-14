@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/cmus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/ChangeLog,v 1.6 2007/01/29 09:09:52 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/ChangeLog,v 1.7 2007/02/14 14:04:53 opfer Exp $
+
+*cmus-2.1.0-r1 (14 Feb 2007)
+
+  14 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  +files/cmus-2.1.0-faad-2.0.patch, +cmus-2.1.0-r1.ebuild:
+  add a patch from cmus mailing list that allows building against
+  media-libs/faad2 2.0, so now I can provide aac and mp4 USE flags
 
   29 Jan 2007; Christian Faulhammer <opfer@gentoo.org> -cmus-2.0.4.ebuild:
   clean up
