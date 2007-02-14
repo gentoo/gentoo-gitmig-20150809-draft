@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-1.8.0.ebuild,v 1.14 2007/02/09 23:34:22 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-1.8.0.ebuild,v 1.15 2007/02/14 19:58:38 dang Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="Unicode character map viewer"
 HOMEPAGE="http://gucharmap.sourceforge.net/"
@@ -36,6 +36,9 @@ pkg_setup() {
 
 src_unpack() {
 	gnome2_src_unpack
+
+	# Make it build with newer gnome-doc-utils
+	epatch "${FILESDIR}"/${P}-gnome-doc-utils.patch
 
 	# fix gtk-update-icon-cache generation
 	sed -i -e 's:gtk-update-icon-cache:true:' ./pixmaps/Makefile.in

@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gucharmap
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/ChangeLog,v 1.75 2007/02/09 23:34:22 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/ChangeLog,v 1.76 2007/02/14 19:58:38 dang Exp $
+
+  14 Feb 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/gucharmap-1.8.0-gnome-doc-utils.patch, gucharmap-1.8.0.ebuild:
+  Make it build with >=gnome-doc-utils-0.9.x. It's more picky, requiring a
+  maintainer role.
 
   09 Feb 2007; Roy Marples <uberlord@gentoo.org> gucharmap-1.8.0.ebuild:
   Added ~x86-fbsd keyword.
