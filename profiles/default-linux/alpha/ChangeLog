@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.31 2007/02/14 12:19:56 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.32 2007/02/14 19:41:37 wolf31o2 Exp $
+
+  14 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  dev/2007.0/desktop/virtuals, virtuals:
+  Move the virtual/cdrtools entry to the base architecture profile since
+  cdrkit doesn't compile on Alpha at all.
 
   14 Feb 2007; Bryan Østergaard <kloeri@gentoo.org> +package.use.force:
   Force nptlonly for glibc-2.5.
