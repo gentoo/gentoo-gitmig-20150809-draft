@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/pam-afs-session
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-afs-session/ChangeLog,v 1.1 2007/02/12 21:36:41 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-afs-session/ChangeLog,v 1.2 2007/02/14 08:31:07 stefaan Exp $
+
+  14 Feb 2007; Stefaan De Roeck <stefaan@gentoo.org>
+  pam-afs-session-1.1.ebuild:
+  Initial keywording: ~amd64 and ~x86 as per comments in bug #160082
+  (temporary proxy maintenance)
 
 *pam-afs-session-1.1 (12 Feb 2007)
 
