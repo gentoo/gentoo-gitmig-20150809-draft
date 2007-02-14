@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.2.3.ebuild,v 1.1 2007/02/11 07:28:09 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.2.3.ebuild,v 1.2 2007/02/14 19:37:03 gustavoz Exp $
 
 inherit eutils flag-o-matic toolchain-funcs autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.go-mono.com/sources/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="exif gif jpeg tiff"
 
 RDEPEND=">=dev-libs/glib-2.6

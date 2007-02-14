@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/art-sharp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/art-sharp/ChangeLog,v 1.51 2007/02/11 04:13:10 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/art-sharp/ChangeLog,v 1.52 2007/02/14 19:45:33 gustavoz Exp $
+
+  14 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  art-sharp-2.16.0.ebuild:
+  Keyworded ~sparc
 
   11 Feb 2007; Lars Weiler <pylon@gentoo.org> art-sharp-2.16.0.ebuild:
   Stable on ppc; bug #164048.
