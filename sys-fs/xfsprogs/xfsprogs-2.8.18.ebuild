@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.8.18.ebuild,v 1.1 2007/02/13 11:41:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.8.18.ebuild,v 1.2 2007/02/14 15:40:33 vapier Exp $
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 MY_P="${PN}_${PV}-1"
 DESCRIPTION="xfs filesystem utilities"
@@ -21,6 +21,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-symlinks.patch #166729
 	# Inject our own CFLAGS / docpath
 	sed -i \
 		-e "/^PKG_DOC_DIR/s:@pkg_name@:${PF}:" \
