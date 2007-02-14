@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.50 2007/02/13 10:03:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.51 2007/02/14 16:06:04 kloeri Exp $
+
+  14 Feb 2007; Bryan Østergaard <kloeri@gentoo.org>
+  rubygems-0.8.11-r6.ebuild:
+  Stable on IA64, bug 163536.
 
   13 Feb 2007; Markus Rothe <corsair@gentoo.org> rubygems-0.8.11-r6.ebuild:
   Stable on ppc64; bug #163536
