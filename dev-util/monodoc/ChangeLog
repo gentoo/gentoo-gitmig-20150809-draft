@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/monodoc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.56 2007/02/12 07:59:07 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.57 2007/02/14 07:49:59 opfer Exp $
+
+  14 Feb 2007; Christian Faulhammer <opfer@gentoo.org> monodoc-1.2.1.ebuild:
+  stable x86; bug 166463
 
   12 Feb 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   -monodoc-1.0.4-r1.ebuild, -monodoc-1.0.5.ebuild, -monodoc-1.0.6.ebuild,
