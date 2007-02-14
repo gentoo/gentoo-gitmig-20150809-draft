@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/galaxyhack
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/galaxyhack/ChangeLog,v 1.2 2006/11/20 06:22:48 beandog Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/galaxyhack/ChangeLog,v 1.3 2007/02/14 02:37:23 nyhm Exp $
+
+  14 Feb 2007; Tristan Heaven <nyhm@gentoo.org> -files/galaxyhack.png,
+  galaxyhack-1.69.ebuild:
+  Move icon to mirror://gentoo
 
   20 Nov 2006; Steve Dibb <beandog@gentoo.org> metadata.xml:
   Fix metadata herd, add maintainer email
