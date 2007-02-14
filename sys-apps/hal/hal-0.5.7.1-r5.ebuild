@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r5.ebuild,v 1.2 2007/02/14 05:40:29 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r5.ebuild,v 1.3 2007/02/14 05:48:35 cardoe Exp $
 
 inherit eutils linux-info
 
@@ -37,38 +37,36 @@ DEPEND="${RDEPEND}
 HALDAEMON_GROUPS="haldaemon,plugdev,disk,cdrom,cdrw,floppy,usb"
 
 function notify_uevent() {
-	eerror
-	eerror "You must enable Kernel Userspace Events in your kernel."
-	eerror "This can be set under 'General Setup'.  It is marked as"
-	eerror "CONFIG_KOBJECT_UEVENT in the config file."
-	eerror
+	ewarn
+	ewarn "You must enable Kernel Userspace Events in your kernel."
+	ewarn "This can be set under 'General Setup'.  It is marked as"
+	ewarn "CONFIG_KOBJECT_UEVENT in the config file."
+	ewarn
 	ebeep 5
 }
 
 function notify_uevent_2_6_16() {
-	eerror
-	eerror "You must enable Kernel Userspace Events in your kernel."
-	eerror "For this you need to enable 'Hotplug' under 'General Setup' and"
-	eerror "basic networking.  They are marked CONFIG_HOTPLUG and CONFIG_NET"
-	eerror "in the config file."
-	eerror
+	ewarn
+	ewarn "You must enable Kernel Userspace Events in your kernel."
+	ewarn "For this you need to enable 'Hotplug' under 'General Setup' and"
+	ewarn "basic networking.  They are marked CONFIG_HOTPLUG and CONFIG_NET"
+	ewarn "in the config file."
+	ewarn
 	ebeep 5
 }
 
 function notify_procfs() {
-	eerror
-	eerror "You must enable the proc filesystem in your kernel."
-	eerror "For this you need to enable '/proc file system support' under"
-	eerror "'Pseudo filesystems' in 'File systems'.  It is marked"
-	eerror "CONFIG_PROC_FS in the config file."
-	eerror
+	ewarn
+	ewarn "You must enable the proc filesystem in your kernel."
+	ewarn "For this you need to enable '/proc file system support' under"
+	ewarn "'Pseudo filesystems' in 'File systems'.  It is marked"
+	ewarn "CONFIG_PROC_FS in the config file."
+	ewarn
 	ebeep 5
 }
 
 pkg_setup() {
-	get_version || eerror "Unable to calculate Linux Kernel version"
-
-	kernel_is ge 2 6 15 || eerror "HAL requires a kernel version 2.6.15 or newer"
+	kernel_is ge 2 6 15 || ewarn "HAL requires a kernel version 2.6.15 or newer"
 
 	if kernel_is lt 2 6 16 ; then
 		linux_chkconfig_present KOBJECT_UEVENT || notify_uevent
