@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.3.ebuild,v 1.1 2007/02/11 07:37:46 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.3.ebuild,v 1.2 2007/02/14 19:38:30 gustavoz Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.go-mono.com/sources/mono/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 LGPL-2 X11 )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="X nptl"
 
 RDEPEND="!<dev-dotnet/pnet-0.6.12

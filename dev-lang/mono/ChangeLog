@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.106 2007/02/11 07:37:46 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.107 2007/02/14 19:38:30 gustavoz Exp $
+
+  14 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> mono-1.2.3.ebuild:
+  Keyworded ~sparc
 
 *mono-1.2.3 (11 Feb 2007)
 
