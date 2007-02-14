@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/wordpress
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.69 2007/01/17 03:53:27 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.70 2007/02/14 14:14:28 beandog Exp $
+
+*wordpress-2.0.8 (14 Feb 2007)
+
+  14 Feb 2007; Steve Dibb <beandog@gentoo.org> +wordpress-2.0.8.ebuild:
+  Version bump, fix php deps bug 144585, security bug 163817
 
 *wordpress-2.0.7 (17 Jan 2007)
 
