@@ -2,7 +2,7 @@
 Name=Mozilla Sunbird (bin)
 Comment=Mozilla Sunbird Calendar
 Exec=/usr/bin/sunbird-bin
-Icon=mozillasunbird-bin-icon.png
+Icon=mozilla-sunbird-bin-icon.png
 Terminal=false
 Type=Application
 Categories=Application;Network;

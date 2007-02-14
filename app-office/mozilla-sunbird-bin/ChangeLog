@@ -1,6 +1,14 @@
 # ChangeLog for app-office/mozilla-sunbird-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/ChangeLog,v 1.15 2007/01/11 16:37:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/ChangeLog,v 1.16 2007/02/14 19:18:51 armin76 Exp $
+
+  14 Feb 2007; Raúl Porcel <armin76@gentoo.org>
+  +files/icon/mozilla-sunbird-bin.desktop,
+  +files/icon/mozilla-sunbird-bin-icon.png,
+  -files/icon/mozillasunbird-bin.desktop,
+  -files/icon/mozillasunbird-bin-icon.png, mozilla-sunbird-bin-0.3.ebuild:
+  Fix .desktop files, bug 147735, and drop monolithic X deps and virtual/libc
+  and stable x86
 
 *mozilla-sunbird-bin-0.3 (11 Jan 2007)
 
