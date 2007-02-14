@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.102 2007/02/14 14:29:52 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.103 2007/02/14 14:45:15 opfer Exp $
+
+  14 Feb 2007; Christian Faulhammer <opfer@gentoo.org> updates/1Q-2007:
+  slotmove app-editors/emacs-18*
 
   14 Feb 2007; Steve Dibb <beandog@gentoo.org> package.mask:
   mask wordpress 2.1
