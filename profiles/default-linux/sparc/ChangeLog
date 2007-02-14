@@ -1,6 +1,6 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.36 2007/02/14 20:05:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.37 2007/02/14 21:48:40 wolf31o2 Exp $
 
   14 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> use.mask:
   Join mono and beagle, add galago use.mask
@@ -65,6 +65,11 @@
   sparc32/dev/gcc-4.1.1/package.mask, sparc64/dev/gcc-4.1.1/package.mask,
   sparc32/dev/gcc-4.1.1/use.mask, sparc64/dev/gcc-4.1.1/use.mask:
   Mask brltty on gcc4 profiles until bug #155887 is solved
+
+  02 Feb 2007; Joe McCann <joem@gentoo.org> sparc64/2006.1/2.4/package.mask:
+  Remove net-libs/libsoup from package.mask on x86 and sparc 2.4 profiles
+  since it is only a small lib used by certain gnome packages, and does not
+  require gnome or any bits that are 2.6 only
 
   02 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> use.mask:
   use.mask cpufreq and wlan for xfce 4.4
