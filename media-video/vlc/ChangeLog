@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.225 2007/02/12 07:36:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.226 2007/02/14 08:14:46 aballier Exp $
+
+  14 Feb 2007; Alexis Ballier <aballier@gentoo.org> vlc-0.8.6-r1.ebuild,
+  vlc-0.8.6_p18636.ebuild:
+  Really disable altivec if not wanted, bug #158126
 
   12 Feb 2007; Alexis Ballier <aballier@gentoo.org> vlc-0.8.6-r1.ebuild:
   Disable also autodetected cflags optimisations in stable vlc
