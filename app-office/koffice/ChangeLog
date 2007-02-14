@@ -1,6 +1,10 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.212 2007/02/14 01:17:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.213 2007/02/14 11:37:12 kloeri Exp $
+
+  14 Feb 2007; Bryan Østergaard <kloeri@gentoo.org>
+  koffice-1.6.1-r1.ebuild:
+  Stable on IA64, bug 166246.
 
   14 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   koffice-1.6.1-r1.ebuild:

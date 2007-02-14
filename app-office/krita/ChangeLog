@@ -1,6 +1,9 @@
 # ChangeLog for app-office/krita
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.69 2007/02/14 01:07:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.70 2007/02/14 11:53:06 kloeri Exp $
+
+  14 Feb 2007; Bryan Østergaard <kloeri@gentoo.org> krita-1.6.1.ebuild:
+  Stable on IA64, bug 166246.
 
   14 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> krita-1.6.1.ebuild:
   Stable on sparc wrt #166246
