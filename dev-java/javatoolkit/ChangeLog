@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/javatoolkit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javatoolkit/ChangeLog,v 1.28 2007/02/10 16:13:58 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javatoolkit/ChangeLog,v 1.29 2007/02/14 22:35:01 caster Exp $
+
+  14 Feb 2007; Vlastimil Babka <caster@gentoo.org>
+  -javatoolkit-0.1.9.ebuild, -javatoolkit-0.2.0.ebuild:
+  Cleanup.
 
   10 Feb 2007; nixnut <nixnut@gentoo.org> javatoolkit-0.2.0-r1.ebuild:
   Stable on ppc wrt bug 165069
