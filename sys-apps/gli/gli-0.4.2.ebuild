@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gli/gli-0.4.2.ebuild,v 1.1 2006/08/21 21:38:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gli/gli-0.4.2.ebuild,v 1.2 2007/02/14 00:40:11 wolf31o2 Exp $
 
 inherit python eutils
 
@@ -18,9 +18,9 @@ RDEPEND=">=dev-python/pyparted-1.6.6
 	gtk? ( >=dev-python/pygtk-2.4.0 )
 	=dev-python/pythondialog-2.7*
 	sys-fs/e2fsprogs
-	sys-fs/ntfsprogs
 	sys-fs/reiserfsprogs
 	sys-fs/dosfstools
+	!alpha? ( sys-fs/ntfsprogs )
 	ppc? (
 		sys-fs/hfsutils
 		sys-fs/hfsplusutils )
