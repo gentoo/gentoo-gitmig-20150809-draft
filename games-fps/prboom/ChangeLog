@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/prboom
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/ChangeLog,v 1.25 2007/01/10 00:21:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/ChangeLog,v 1.26 2007/02/14 01:06:08 nyhm Exp $
+
+  14 Feb 2007; Tristan Heaven <nyhm@gentoo.org> -files/prboom.png,
+  prboom-2.4.7.ebuild:
+  Move icon to mirror://gentoo
 
   10 Jan 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   -files/2.4.2-nvidia.patch, -files/2.4.2-nvidia-test.c,

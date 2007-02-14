@@ -1,23 +1,27 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.4.7.ebuild,v 1.3 2007/01/26 22:54:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.4.7.ebuild,v 1.4 2007/02/14 01:06:08 nyhm Exp $
 
 inherit eutils toolchain-funcs games
 
 DESCRIPTION="Port of ID's doom to SDL and OpenGL"
 HOMEPAGE="http://prboom.sourceforge.net/"
-SRC_URI="mirror://sourceforge/prboom/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
+	mirror://gentoo/${PN}.png"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86"
 IUSE="opengl"
 
-DEPEND=">=media-libs/libsdl-1.1.3
+DEPEND="media-libs/libsdl
 	media-libs/sdl-mixer
 	media-libs/sdl-net
 	!games-fps/lsdldoom
-	opengl? ( virtual/opengl virtual/glu )"
+	opengl? (
+		virtual/opengl
+		virtual/glu
+	)"
 
 src_unpack() {
 	unpack ${A}
@@ -36,6 +40,10 @@ src_unpack() {
 		-e '/^SUBDIRS/ s/doc//' \
 		Makefile.in \
 		|| die "sed failed"
+	sed -i \
+		-e 's:-ffast-math $CFLAGS_OPT::' \
+		configure \
+		|| die "sed configure failed"
 }
 
 src_compile() {
@@ -61,7 +69,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	doman doc/*.{5,6}
 	dodoc AUTHORS NEWS README TODO doc/README.* doc/*.txt
-	doicon "${FILESDIR}/${PN}.png"
+	doicon "${DISTDIR}"/${PN}.png
 	make_desktop_entry ${PN} "PrBoom"
 	prepgamesdirs
 }
