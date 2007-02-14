@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xlogical/xlogical-1.0.7.ebuild,v 1.3 2007/01/12 04:24:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xlogical/xlogical-1.0.7.ebuild,v 1.4 2007/02/14 02:49:51 nyhm Exp $
 
-inherit versionator eutils games
+inherit autotools versionator eutils games
 
 MY_PV=$(replace_version_separator 2 '-' )
 MY_P=${PN}-${MY_PV}
@@ -25,8 +25,10 @@ S=${WORKDIR}/${PN}-$(get_version_component_range 1-2)
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	sed -i '/^CXXFLAGS/d' Makefile.am || die "sed failed"
 	edos2unix properties.h anim.h exception.h
 	epatch "${FILESDIR}/${P}"-gcc41.patch
+	eautoreconf
 }
 
 src_install() {
