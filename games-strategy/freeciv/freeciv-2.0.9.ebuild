@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.0.8-r1.ebuild,v 1.5 2007/02/14 02:14:09 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.0.9.ebuild,v 1.1 2007/02/14 02:14:09 nyhm Exp $
 
 inherit eutils games
 
@@ -19,44 +19,30 @@ SRC_URI="ftp://ftp.freeciv.org/pub/freeciv/stable/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 mips ppc sparc x86"
-IUSE="alsa dedicated esd gtk nls readline sdl Xaw3d"
+KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+IUSE="alsa auth dedicated esd gtk nls readline sdl Xaw3d"
 
 RDEPEND="readline? ( sys-libs/readline )
 	!dedicated? (
 		nls? ( virtual/libintl )
-		gtk? (
-			>=x11-libs/gtk+-2.0.0
-			>=dev-libs/glib-2.0.0
-			>=dev-libs/atk-1.0.3
-			>=x11-libs/pango-1.0.5
-		)
+		gtk? ( >=x11-libs/gtk+-2 )
 		!gtk? (
-			Xaw3d? (
-				x11-libs/Xaw3d )
-			!Xaw3d? (
-				x11-libs/libXaw )
-			x11-libs/libX11
-			x11-libs/libICE
-			x11-libs/libSM
-			x11-libs/libXt
-			x11-libs/libXext
+			Xaw3d? ( x11-libs/Xaw3d )
+			!Xaw3d? ( x11-libs/libXaw )
 			x11-libs/libXmu
 			x11-libs/libXpm
 		)
 		alsa? (
-			>=media-libs/alsa-lib-1.0
-			>=media-libs/audiofile-0.2
+			media-libs/alsa-lib
+			media-libs/audiofile
 		)
-		esd? ( >=media-sound/esound-0.2 )
-		sdl? (
-			>=media-libs/sdl-mixer-1.2
-			>=media-libs/libsdl-1.2
-		)
+		esd? ( media-sound/esound )
+		sdl? ( media-libs/sdl-mixer )
+		auth? ( virtual/mysql )
 	)"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-	!dedicated? ( gtk? ( >=dev-util/pkgconfig-0.9 ) )
+	!dedicated? ( gtk? ( dev-util/pkgconfig ) )
 	x11-proto/xextproto
 	media-libs/libpng"
 
@@ -85,29 +71,20 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# bug #141563 DoS attack
-	# https://bugs.gentoo.org/show_bug.cgi?id=141563
-	epatch "${FILESDIR}/${P}-DoS.patch"
-
 	# install locales in /usr/share/locale
 	sed -i \
 		-e 's:^\(localedir = \).*:\1/usr/share/locale:' \
 		intl/Makefile.in po/Makefile.in.in \
 		|| die "sed failed"
 	sed -i \
-		-e '/^#define LOCALEDIR/s:".*":"/usr/share/locale":' \
+		-e 's:$datadir/locale:/usr/share/locale:' \
 		configure \
-		|| die "sed failed"
-
-	# change .desktop icon to the freeciv icon rather than the gnome globe
-	sed -i \
-		-e 's:^\(Icon=\).*:\1freeciv.png:' \
-		bootstrap/freeciv.desktop.in \
 		|| die "sed failed"
 
 	# change .desktop category so it is not gnome specific
 	sed -i \
 		-e 's:^\(Categories=GNOME;Application;Game;Strategy;\):Categories=Application;Game;StrategyGame;:' \
+		-e 's:^\(Icon=\).*:\1freeciv.png:' \
 		bootstrap/freeciv.desktop.in \
 		|| die "sed failed"
 	# install the .desktop in /usr/share/applications
@@ -148,6 +125,7 @@ src_compile() {
 	egamesconf \
 		--disable-dependency-tracking \
 		--with-zlib \
+		$(use_enable auth) \
 		$(use_enable nls) \
 		$(use_with readline) \
 		--enable-client=${myclient} \
@@ -158,7 +136,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	if ! use dedicated ; then
 		# Install the app-defaults if Xaw/Xaw3d toolkit
@@ -168,8 +146,8 @@ src_install() {
 		fi
 		# Install sounds if at least one sound plugin was built
 		if use alsa || use esd || use sdl ; then
-			cp -R ../data/stdsounds* "${D}${GAMES_DATADIR}/${PN}" \
-				|| die "failed to install sounds"
+			insinto "${GAMES_DATADIR}"/${PN}
+			doins -r ../data/stdsounds* || die "doins sounds failed"
 		fi
 		# Create and install the html manual. It can't be done for dedicated
 		# servers, because the 'civmanual' tool is then not built. Also
@@ -178,13 +156,12 @@ src_install() {
 		# something like that, but then it's a PITA to avoid orphan files...
 		./manual/civmanual || die "civmanual failed"
 		dohtml manual*.html || die "dohtml failed"
-		rm -f "${D}/${GAMES_BINDIR}/civmanual"
+		rm -f "${D}/${GAMES_BINDIR}"/civmanual
 	fi
 
 	dodoc ChangeLog NEWS \
 		doc/{BUGS,CodingStyle,HACKING,HOWTOPLAY,PEOPLE,README*,TODO}
 
-	doicon "${DISTDIR}/${PN}.png"
-
+	doicon "${DISTDIR}"/${PN}.png
 	prepgamesdirs
 }

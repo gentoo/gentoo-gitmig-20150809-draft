@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.0.8-r2.ebuild,v 1.9 2006/11/23 20:19:33 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.0.8-r2.ebuild,v 1.10 2007/02/14 02:14:09 nyhm Exp $
 
 inherit eutils games
 
@@ -8,6 +8,7 @@ MY_P=${PN}-${PV/_/-}
 DESCRIPTION="multiplayer strategy game (Civilization Clone)"
 HOMEPAGE="http://www.freeciv.org/"
 SRC_URI="ftp://ftp.freeciv.org/pub/freeciv/stable/${MY_P}.tar.bz2
+	mirror://gentoo/${PN}.png
 	!dedicated? (
 		alsa? (
 			http://www.freeciv.org/ftp/contrib/sounds/sets/stdsounds3.tar.gz )
@@ -170,7 +171,7 @@ src_install() {
 	dodoc ChangeLog NEWS \
 		doc/{BUGS,CodingStyle,HACKING,HOWTOPLAY,PEOPLE,README*,TODO}
 
-	doicon "${FILESDIR}/${PN}.png"
+	doicon "${DISTDIR}/${PN}.png"
 
 	prepgamesdirs
 }
