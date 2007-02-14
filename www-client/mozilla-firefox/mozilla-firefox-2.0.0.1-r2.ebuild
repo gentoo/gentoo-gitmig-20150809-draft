@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.1-r2.ebuild,v 1.3 2007/01/19 08:52:40 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.1-r2.ebuild,v 1.4 2007/02/14 19:31:34 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -224,11 +224,11 @@ src_install() {
 	# Install icon and .desktop for menu entry
 	if use mozbranding; then
 		doicon "${FILESDIR}"/icon/firefox-icon.png
-		newmenu "${FILESDIR}"/icon/mozillafirefox-1.5.desktop \
+		newmenu "${FILESDIR}"/icon/mozilla-firefox-1.5.desktop \
 			mozillafirefox-2.0.desktop
 	else
 		doicon "${FILESDIR}"/icon/firefox-icon-unbranded.png
-		newmenu "${FILESDIR}"/icon/mozillafirefox-1.5-unbranded.desktop \
+		newmenu "${FILESDIR}"/icon/mozilla-firefox-1.5-unbranded.desktop \
 			mozillafirefox-2.0.desktop
 	fi
 

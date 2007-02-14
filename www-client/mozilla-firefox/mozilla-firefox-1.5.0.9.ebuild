@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.9.ebuild,v 1.7 2007/01/11 15:27:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.9.ebuild,v 1.8 2007/02/14 19:31:34 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -226,7 +226,7 @@ src_install() {
 
 	# Install icon and .desktop for menu entry
 	doicon ${FILESDIR}/icon/firefox-icon.png
-	domenu ${FILESDIR}/icon/mozillafirefox-1.5.desktop
+	domenu ${FILESDIR}/icon/mozilla-firefox-1.5.desktop
 
 	# Fix icons to look the same everywhere
 	insinto ${MOZILLA_FIVE_HOME}/icons
