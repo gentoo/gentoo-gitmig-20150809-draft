@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koshell
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koshell/ChangeLog,v 1.59 2007/02/13 22:28:02 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koshell/ChangeLog,v 1.60 2007/02/14 01:12:48 gustavoz Exp $
+
+  14 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> koshell-1.6.1.ebuild:
+  Stable on sparc wrt #166246
 
   13 Feb 2007; Lars Weiler <pylon@gentoo.org> koshell-1.6.1.ebuild:
   Stable on ppc; bug #166246.

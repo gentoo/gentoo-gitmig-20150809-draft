@@ -1,6 +1,9 @@
 # ChangeLog for app-office/karbon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/ChangeLog,v 1.67 2007/02/13 22:35:25 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/ChangeLog,v 1.68 2007/02/14 01:11:56 gustavoz Exp $
+
+  14 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> karbon-1.6.1.ebuild:
+  Stable on sparc wrt #166246
 
   13 Feb 2007; Lars Weiler <pylon@gentoo.org> karbon-1.6.1.ebuild:
   Stable on ppc; bug #166246.
