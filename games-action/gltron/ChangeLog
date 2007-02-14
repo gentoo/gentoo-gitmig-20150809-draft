@@ -1,6 +1,10 @@
 # ChangeLog for games-action/gltron
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/gltron/ChangeLog,v 1.12 2006/03/09 18:14:39 tupone Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/gltron/ChangeLog,v 1.13 2007/02/14 00:34:36 nyhm Exp $
+
+  14 Feb 2007; Tristan Heaven <nyhm@gentoo.org> -files/gltron.png,
+  gltron-0.70-r1.ebuild:
+  Move icon to mirror://gentoo
 
   09 Mar 2006; <Tupone@gentoo.org> +files/gltron.png, gltron-0.70-r1.ebuild:
   Fixing bug #85586 (lacking of desktop entry). Thanks to Josh Nichols.
