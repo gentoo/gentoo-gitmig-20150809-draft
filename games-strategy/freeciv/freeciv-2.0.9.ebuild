@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.0.9.ebuild,v 1.1 2007/02/14 02:14:09 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.0.9.ebuild,v 1.2 2007/02/14 02:18:43 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -19,7 +19,7 @@ SRC_URI="ftp://ftp.freeciv.org/pub/freeciv/stable/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 mips ppc ppc64 sparc x86"
 IUSE="alsa auth dedicated esd gtk nls readline sdl Xaw3d"
 
 RDEPEND="readline? ( sys-libs/readline )
