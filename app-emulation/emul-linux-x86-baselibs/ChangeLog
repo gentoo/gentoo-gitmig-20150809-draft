@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.66 2007/02/13 22:29:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.67 2007/02/14 10:45:07 blubb Exp $
+
+*emul-linux-x86-baselibs-10.1 (14 Feb 2007)
+
+  14 Feb 2007; Simon Stelling <blubb@gentoo.org>
+  -emul-linux-x86-baselibs-10.0.ebuild,
+  +emul-linux-x86-baselibs-10.1.ebuild:
+  drop =db-4.0*
 
 *emul-linux-x86-baselibs-10.0-r1 (13 Feb 2007)
 

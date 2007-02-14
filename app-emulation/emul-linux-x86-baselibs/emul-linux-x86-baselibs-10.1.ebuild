@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-10.0.ebuild,v 1.5 2007/02/13 23:27:27 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-10.1.ebuild,v 1.1 2007/02/14 10:45:07 blubb Exp $
 
 DESCRIPTION="Provides precompiled 32bit libraries"
 HOMEPAGE="http://amd64.gentoo.org/emul/content.xml"
@@ -8,8 +8,7 @@ SRC_URI="mirror://gentoo/binutils-2.16.1-r3.tbz2
 		mirror://gentoo/bzip2-1.0.3-r6.tbz2
 		mirror://gentoo/com_err-1.39.tbz2
 		mirror://gentoo/cracklib-2.8.9-r1.tbz2
-		mirror://gentoo/cups-1.2.6.tbz2
-		mirror://gentoo/db-4.0.14-r3.tbz2
+		mirror://gentoo/cups-1.2.6-nossl.tbz2
 		mirror://gentoo/db-4.2.52_p4-r2.tbz2
 		mirror://gentoo/dbus-1.0.2.tbz2
 		mirror://gentoo/dbus-glib-0.72.tbz2
@@ -57,13 +56,6 @@ DEPEND=""
 RDEPEND=""
 
 pkg_setup() {
-	einfo
-	elog "This package contains prebuilt versions of the following packages:"
-	for a in ${A} ; do
-		elog "	${a//.tbz2}"
-	done
-	einfo
-	echo
 	einfo "Note: You can safely ignore the 'trailing garbage after EOF'"
 	einfo "      warnings below"
 }
@@ -72,26 +64,18 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	rm -rf {usr/,}{s,}bin/
-	rm -rf var/
-	rm -rf etc/env.d/binutils/
+	WHITELIST="(${S}/lib32/security/pam_filter/upperLOWER|${S}/etc/env.d)"
+	# the following line is broken up because we have files with spaces in the filename
+	find ${S} ! -type d ! -name '*.so*' | egrep -v "${WHITELIST}" | xargs -d '
+' rm -f
+	rm -rf ${S}/etc/env.d/binutils/ ${S}/usr/lib32/binutils/
+	rm -rf ${S}/usr/lib32/engines/ ${S}/usr/lib32/openldap/
+	rm -rf ${S}/usr/lib32/python2.4/
 
-	local dir=${S}/etc
-	find ${dir} -depth | egrep -v "(^${dir}/env.d|^${dir}$)" | xargs rm -rf
-
-	rm -rf usr/i686-pc-linux-gnu
-	rm -rf usr/include
-	[[ -d usr/lib ]] && rm -rf usr/lib/
-	rm -rf usr/libexec
-	rm -rf usr/share
+	ln -s ../share/terminfo ${S}/usr/lib32/terminfo
 }
 
 src_install() {
-	# nobody needs *.la, *.h *.a
-	find ${S} -type f -name '*.a' -or -name '*.la' -or -name '*.h' \
-		| xargs rm -f
-
-
 	for dir in etc/env.d etc/revdep-rebuild ; do
 		if [[ -d ${S}/${dir} ]] ; then
 			for f in ${S}/${dir}/* ; do
@@ -99,6 +83,9 @@ src_install() {
 			done
 		fi
 	done
+
+	# remove void directories or portage will show weird output
+	find ${S} -depth -type d | xargs rmdir 2&>/dev/null
 
 	cp -a "${WORKDIR}"/* "${D}"/ || die "copying files failed!"
 }
