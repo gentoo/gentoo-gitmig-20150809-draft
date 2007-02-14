@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.5-r2.ebuild,v 1.1 2007/02/14 14:27:57 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.5-r2.ebuild,v 1.2 2007/02/14 15:14:22 nyhm Exp $
 
 inherit eutils multilib games
 
@@ -35,6 +35,7 @@ src_unpack() {
 	cd "${S}"
 	rm -f plugins/empty blight_input/SDL_ttf*
 
+	# FIXME: libdir breakage on amd64
 	epatch \
 		"${FILESDIR}"/${P}-paths.patch \
 		"${FILESDIR}"/${P}-sdl-ttf.patch
@@ -43,6 +44,7 @@ src_unpack() {
 		config.h \
 		|| die "sed failed"
 
+	# FIXME: -fPIC should only be used on shared objects
 	sed -i \
 		-e '/strip/d' \
 		-e "s:CFLAGS[[:space:]]*=\(.*\):CFLAGS=-fPIC ${CFLAGS}:" \
