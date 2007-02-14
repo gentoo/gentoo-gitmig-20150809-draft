@@ -1,6 +1,11 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.33 2007/02/14 00:53:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.34 2007/02/14 02:18:17 gustavoz Exp $
+
+  14 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  sparc64/2007.0/desktop/make.defaults:
+  Added python to default USE for desktop - breaks gnome-doc-utils wanting
+  libxml2 built with it
 
   14 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   sparc64/2007.0/packages:
