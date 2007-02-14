@@ -1,5 +1,0 @@
---- emu64/path.cfg.orig	2004-07-05 20:37:13.000000000 +0000
-+++ emu64/path.cfg	2004-07-16 22:40:43.000000000 +0000
-@@ -1 +1 @@
--/bidon/roms/
-+/usr/games/lib/mupen64/roms/

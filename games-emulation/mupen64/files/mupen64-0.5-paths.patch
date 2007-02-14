@@ -1,7 +1,5 @@
-File mupen64_src-0.5/compare_pipe is a fifo while file mupen64_src-0.5.fixed/compare_pipe is a fifo
-diff -u -r mupen64_src-0.5/main/gui_gtk/main_gtk.c mupen64_src-0.5.fixed/main/gui_gtk/main_gtk.c
---- mupen64_src-0.5/main/gui_gtk/main_gtk.c	2005-08-26 15:08:13.000000000 -0500
-+++ mupen64_src-0.5.fixed/main/gui_gtk/main_gtk.c	2005-09-09 23:00:17.000000000 -0500
+--- main/gui_gtk/main_gtk.c
++++ main/gui_gtk/main_gtk.c
 @@ -1881,7 +1881,7 @@
  	     unsigned char byte;
  	     dest = fopen(temp, "wb");
@@ -46,9 +44,8 @@ diff -u -r mupen64_src-0.5/main/gui_gtk/main_gtk.c mupen64_src-0.5.fixed/main/gu
  		  strcat(orig, entry->d_name);
  		  symlink(orig, temp);
  	       }
-diff -u -r mupen64_src-0.5/main/main.c mupen64_src-0.5.fixed/main/main.c
---- mupen64_src-0.5/main/main.c	2005-08-26 14:52:11.000000000 -0500
-+++ mupen64_src-0.5.fixed/main/main.c	2005-09-09 22:06:12.000000000 -0500
+--- main/main.c
++++ main/main.c
 @@ -37,6 +37,8 @@
  
  #include <stdlib.h>
@@ -102,9 +99,8 @@ diff -u -r mupen64_src-0.5/main/main.c mupen64_src-0.5.fixed/main/main.c
  		  strcat(orig, entry->d_name);
  		  symlink(orig, temp);
  	       }
-diff -u -r mupen64_src-0.5/Makefile mupen64_src-0.5.fixed/Makefile
---- mupen64_src-0.5/Makefile	2005-08-26 14:52:13.000000000 -0500
-+++ mupen64_src-0.5.fixed/Makefile	2005-09-09 22:45:40.000000000 -0500
+--- Makefile
++++ Makefile
 @@ -166,7 +166,7 @@
  endif
  
@@ -114,12 +110,3 @@ diff -u -r mupen64_src-0.5/Makefile mupen64_src-0.5.fixed/Makefile
  
  PLUGINS		=plugins/mupen64_input.so plugins/blight_input.so plugins/mupen64_hle_rsp_azimer.so plugins/dummyaudio.so plugins/mupen64_audio.so plugins/jttl_audio.so plugins/mupen64_soft_gfx.so plugins/glN64.so
  
-@@ -405,7 +405,7 @@
- 	
- clean:
- 	find . -name '*.o' -print0 | xargs -0r rm -f
--	rm mupen64 mupen64_nogui mupen64_dbg plugins/mupen64_input.so blight_input/arial.ttf.c blight_input/ttftoh plugins/blight_input.so plugins/mupen64_hle_rsp_azimer.so plugins/dummyaudio.so plugins/mupen64_audio.so plugins/jttl_audio.so plugins/mupen64_soft_gfx.so plugins/glN64.so
-+	rm -f mupen64 mupen64_nogui mupen64_dbg plugins/mupen64_input.so blight_input/arial.ttf.c blight_input/ttftoh plugins/blight_input.so plugins/mupen64_hle_rsp_azimer.so plugins/dummyaudio.so plugins/mupen64_audio.so plugins/jttl_audio.so plugins/mupen64_soft_gfx.so plugins/glN64.so
- 
- clean_o:
- 	find . -name '*.o' -print0 | xargs -0r rm -f
