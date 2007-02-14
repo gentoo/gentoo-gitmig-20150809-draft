@@ -1,12 +1,13 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot-ng/xpilot-ng-4.7.2-r1.ebuild,v 1.3 2006/09/28 17:07:16 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot-ng/xpilot-ng-4.7.2-r1.ebuild,v 1.4 2007/02/14 00:39:46 nyhm Exp $
 
 inherit python eutils multilib games
 
 DESCRIPTION="Improvement of the multiplayer space game XPilot"
 HOMEPAGE="http://xpilot.sourceforge.net/"
-SRC_URI="mirror://sourceforge/xpilot/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/xpilot/${P}.tar.gz
+	mirror://gentoo/${PN}.png"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -16,15 +17,15 @@ IUSE="openal sdl"
 RDEPEND="x11-libs/libX11
 	x11-libs/libICE
 	x11-libs/libSM
-	>=dev-libs/expat-1.1
-	>=sys-libs/zlib-1.1.3
+	dev-libs/expat
 	openal? ( media-libs/openal )
-	dev-python/wxpython
+	>=dev-python/wxpython-2.6
 	sdl? (
 		virtual/opengl
-		>=media-libs/libsdl-1.2.0
-		>=media-libs/sdl-image-1.0
-		>=media-libs/sdl-ttf-2.0 )"
+		media-libs/libsdl
+		media-libs/sdl-image
+		media-libs/sdl-ttf
+	)"
 DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-proto/xproto"
@@ -52,7 +53,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog README
 	python_version
 	insinto "${GAMES_DATADIR}"/${PN}/xpngcc
@@ -62,7 +63,7 @@ src_install() {
 	dodir /usr/$(get_libdir)/python${PYVER}/site-packages
 	dosym "${GAMES_DATADIR}"/${PN}/xpngcc /usr/$(get_libdir)/python${PYVER}/site-packages/xpngcc
 	dosym "${GAMES_DATADIR}"/${PN}/xpngcc/xpngcc.py "${GAMES_BINDIR}"/xpilot-ng
-	doicon "${FILESDIR}"/${PN}.png
-	make_desktop_entry ${PN} "XPilot NG" ${PN}.png
+	doicon "${DISTDIR}"/${PN}.png
+	make_desktop_entry ${PN} "XPilot NG"
 	prepgamesdirs
 }
