@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.2.5.ebuild,v 1.1 2007/02/07 17:16:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.2.5.ebuild,v 1.2 2007/02/14 20:13:24 mr_bones_ Exp $
 
 inherit eutils autotools
 
@@ -39,6 +39,19 @@ pkg_setup() {
 		if ! built_with_use dev-libs/boost threads ; then
 			die "Please emerge dev-libs/boost with USE=threads"
 		fi
+		if use cegui && has_version '>=dev-games/cegui-0.5'; then
+			ewarn "${P} doesn't work with dev-games/cegui-0.5."
+			ewarn "Downgrade to dev-games/cegui-0.4 if cegui support is required."
+			die "${P} doesn't work with dev-games/cegui-0.5."
+		fi
+
+		ewarn "Threads support is experimental in ${PN} and is not recommended."
+		ewarn "See http://bugs.gentoo.org/show_bug.cgi?id=144819"
+		ewarn "Read the man page for portage by typing \"man portage\""
+		ewarn "and read about /etc/portage/package.use for disabling"
+		ewarn "the threads use flag for ${PN} without affecting other packages."
+		ebeep
+		epause 10
 	fi
 }
 

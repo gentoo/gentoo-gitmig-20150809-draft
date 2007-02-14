@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/ogre
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.34 2007/02/07 17:16:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.35 2007/02/14 20:13:24 mr_bones_ Exp $
+
+  14 Feb 2007; Michael Sterrett <mr_bones_@gentoo.org> ogre-1.2.5.ebuild:
+  warn for USE=threads and die for USE="threads cegui" if cegui-0.5 is installed
+  (bug #165650)
 
 *ogre-1.2.5 (07 Feb 2007)
 
