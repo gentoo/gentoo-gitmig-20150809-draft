@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/STLport
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.47 2007/02/13 13:49:19 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.48 2007/02/14 18:55:15 dev-zero Exp $
+
+  14 Feb 2007; Tiziano Müller <dev-zero@gentoo.org>
+  +files/STLport-5.0.3-ppc.patch, +files/STLport-5.0.3-sparc.patch,
+  STLport-5.0.3.ebuild:
+  Added patches for sparc and ppc.
 
   13 Feb 2007; Steve Dibb <beandog@gentoo.org> STLport-5.1.0.ebuild:
   amd64 stable, security bug 165837
