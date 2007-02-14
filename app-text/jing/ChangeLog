@@ -1,6 +1,10 @@
 # ChangeLog for app-text/jing
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jing/ChangeLog,v 1.16 2007/01/20 19:57:26 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jing/ChangeLog,v 1.17 2007/02/14 16:48:48 betelgeuse Exp $
+
+  14 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -jing-20030619-r2.ebuild:
+  Removed unused revision.
 
 *jing-20030619-r3 (20 Jan 2007)
 
