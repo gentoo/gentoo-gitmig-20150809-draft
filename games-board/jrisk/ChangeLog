@@ -1,6 +1,12 @@
 # ChangeLog for games-board/jrisk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/jrisk/ChangeLog,v 1.13 2007/02/03 16:08:01 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/jrisk/ChangeLog,v 1.14 2007/02/14 19:06:54 betelgeuse Exp $
+
+*jrisk-1.0.8.9-r1 (14 Feb 2007)
+
+  14 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +jrisk-1.0.8.9-r1.ebuild:
+  Use java eclasses.
 
   03 Feb 2007; Simon Stelling <blubb@gentoo.org> jrisk-1.0.8.8.ebuild:
   stable on amd64
