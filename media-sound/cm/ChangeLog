@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/ChangeLog,v 1.15 2007/02/14 17:23:52 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/ChangeLog,v 1.16 2007/02/14 17:59:38 hkbst Exp $
+
+  14 Feb 2007; Marijn Schouten <hkBst@gentoo.org> cm-2.10.0.ebuild:
+  remove second compile completely
 
   14 Feb 2007; Marijn Schouten <hkBst@gentoo.org> cm-2.10.0.ebuild:
   change identifiers with ? to use "is_"

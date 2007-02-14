@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.10.0.ebuild,v 1.3 2007/02/14 17:23:52 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.10.0.ebuild,v 1.4 2007/02/14 17:59:38 hkbst Exp $
 
 inherit elisp-common
 
@@ -43,7 +43,7 @@ implementation() {
 		echo "${FORCEIMPL}"
 		return
 	fi
-	local impl=$(${PN} -nv | grep Executable)
+	local impl=$(bin/cm.sh -nv | grep Executable)
 	impl=${impl##*bin/}
 	echo ${impl}
 }
@@ -72,10 +72,7 @@ src_compile() {
 	einfo "Detected $(is_compiler && echo "compiler" || echo "interpreter"): $(implementation)"
 
 	if is_compiler; then
-		einfo "Byte-compiling code and generating Lisp code"
-		echo '(quit)' | eval ${CM}
-		echo -e "\n"
-		einfo "Byte-compiling generated code"
+		einfo "Byte-compiling code"
 		echo '(quit)' | eval ${CM}
 	fi
 }
@@ -111,11 +108,10 @@ src_install() {
 
 pkg_postinst() {
 	# make compiled lisp code newer than source files to prevent recompilation 
-	find ${ROOT}/usr/share/${PN}/bin/ -iname *fasl -exec touch '{}' \;
+	sleep 1 && find ${ROOT}/usr/share/${PN}/bin/ -iname *fasl -exec touch '{}' \;
 	use emacs && elisp-site-regen
 }
 
 pkg_postrm() {
 	use emacs && elisp-site-regen
 }
-
