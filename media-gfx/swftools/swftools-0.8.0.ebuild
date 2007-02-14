@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/swftools-0.8.0.ebuild,v 1.1 2007/01/25 17:11:14 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/swftools-0.8.0.ebuild,v 1.2 2007/02/14 15:49:23 blubb Exp $
 
 inherit eutils
 
@@ -16,6 +16,15 @@ DEPEND=">=media-libs/t1lib-1.3.1
 	media-libs/freetype
 	media-libs/jpeg"
 RDEPEND=""
+
+src_compile() {
+	econf
+
+	# disable the python interface; there's no configure switch; bug 118242
+	echo "all install uninstall clean:" > lib/python/Makefile
+
+	emake
+}
 
 src_install() {
 	einstall || die "Install died."
