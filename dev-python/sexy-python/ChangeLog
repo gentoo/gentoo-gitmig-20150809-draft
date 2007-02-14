@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sexy-python
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sexy-python/ChangeLog,v 1.1 2007/02/04 08:58:42 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sexy-python/ChangeLog,v 1.2 2007/02/14 22:15:40 welp Exp $
+
+  14 Feb 2007; Peter Weller <welp@gentoo.org> sexy-python-0.1.9.ebuild:
+  Keyworded ~amd64
 
 *sexy-python-0.1.9 (04 Feb 2007)
 
