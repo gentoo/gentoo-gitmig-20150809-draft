@@ -1,0 +1,10 @@
+# ChangeLog for games-util/taxidraw
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/taxidraw/ChangeLog,v 1.1 2007/02/14 08:54:56 nyhm Exp $
+
+*taxidraw-0.3.2 (14 Feb 2007)
+
+  14 Feb 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/taxidraw-0.3.2-gcc41.patch, +metadata.xml, +taxidraw-0.3.2.ebuild:
+  Initial commit, bug #95517
+
