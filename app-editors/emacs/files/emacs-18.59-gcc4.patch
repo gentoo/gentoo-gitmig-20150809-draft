@@ -1,0 +1,1105 @@
+Prereq: 2004-03-09
+diff -ur emacs-18.59-orig/src/ChangeLog emacs-18.59/src/ChangeLog
+--- emacs-18.59-orig/src/ChangeLog	2004-03-09 08:36:49.000000000 +0100
++++ emacs-18.59/src/ChangeLog	2007-01-29 21:47:56.000000000 +0100
+@@ -1,3 +1,11 @@
++2007-01-29  Ulrich Mueller  <ulm@kph.uni-mainz.de>
++
++	* x11term.c (internal_socket_read): Handle XK_BackSpace key.
++
++	* callproc.c, doprnt.c, emacssignal.h, fns.c, lisp.h, lread.c,
++	malloc.c, process.c, s-linux.h, sysdep.c, terminfo.c, x11term.c:
++	Fix GCC 4.1 compilation issues.
++
+ 2004-03-09  Ulrich Mueller  <ulm@kph.uni-mainz.de>
+ 
+ 	* malloc.c (DONT_DEFINE_SIGNAL): Defined.
+diff -ur emacs-18.59-orig/src/alloc.c emacs-18.59/src/alloc.c
+--- emacs-18.59-orig/src/alloc.c	1992-09-21 07:45:30.000000000 +0200
++++ emacs-18.59/src/alloc.c	2007-01-29 21:47:56.000000000 +0100
+@@ -1073,7 +1073,7 @@
+ 	  mark_object (&ptr->contents[i]);
+       }
+       break;
+-#endif 0
++#endif
+ 
+     case Lisp_Symbol:
+       {
+@@ -1310,7 +1310,7 @@
+ 	}
+   }
+ 
+-#endif standalone
++#endif /* standalone */
+ 
+   /* Free all unmarked vectors */
+   {
+diff -ur emacs-18.59-orig/src/buffer.c emacs-18.59/src/buffer.c
+--- emacs-18.59-orig/src/buffer.c	1992-05-13 21:39:33.000000000 +0200
++++ emacs-18.59/src/buffer.c	2007-01-29 21:47:56.000000000 +0100
+@@ -331,7 +331,7 @@
+     return XBUFFER (buffer)->number;
+   }
+  */
+-#endif NOTDEF
++#endif /* NOTDEF */
+ 
+ DEFUN ("buffer-file-name", Fbuffer_file_name, Sbuffer_file_name, 0, 1, 0,
+   "Return name of file BUFFER is visiting, or NIL if none.\n\
+@@ -601,7 +601,7 @@
+ 
+ #ifdef subprocesses
+   kill_buffer_processes (buf);
+-#endif subprocesses
++#endif
+ 
+   tem = Vinhibit_quit;
+   Vinhibit_quit = Qt;
+diff -ur emacs-18.59-orig/src/callproc.c emacs-18.59/src/callproc.c
+--- emacs-18.59-orig/src/callproc.c	1992-07-12 05:26:01.000000000 +0200
++++ emacs-18.59/src/callproc.c	2007-01-29 21:47:56.000000000 +0100
+@@ -21,6 +21,7 @@
+ /* This must precede sys/signal.h on certain machines.  */
+ #include <sys/types.h>
+ #include <signal.h>
++#include <unistd.h>
+ 
+ #include "config.h"
+ 
+@@ -241,7 +242,7 @@
+     {
+ #ifndef subprocesses
+       wait_without_blocking ();
+-#endif subprocesses
++#endif
+       return Qnil;
+     }
+ 
+@@ -413,7 +414,7 @@
+ 
+ #ifdef vipc
+   something missing here;
+-#endif vipc
++#endif
+ 
+   /* execvp does not accept an environment arg so the only way
+      to pass this environment is to set environ.  Our caller
+diff -ur emacs-18.59-orig/src/dispnew.c emacs-18.59/src/dispnew.c
+--- emacs-18.59-orig/src/dispnew.c	1992-07-24 21:31:36.000000000 +0200
++++ emacs-18.59/src/dispnew.c	2007-01-29 21:47:56.000000000 +0100
+@@ -586,15 +586,15 @@
+ {
+ #ifndef COMPILER_REGISTER_BUG
+   register
+-#endif COMPILER_REGISTER_BUG
++#endif
+     struct window *w = XWINDOW (selected_window);
+ #ifndef COMPILER_REGISTER_BUG
+   register
+-#endif COMPILER_REGISTER_BUG
++#endif
+     int hpos = cursor_hpos;
+ #ifndef COMPILER_REGISTER_BUG
+   register
+-#endif COMPILER_REGISTER_BUG
++#endif
+     int vpos = cursor_vpos;
+ 
+   /* Give up if about to continue line */
+diff -ur emacs-18.59-orig/src/doprnt.c emacs-18.59/src/doprnt.c
+--- emacs-18.59-orig/src/doprnt.c	1991-01-08 18:26:23.000000000 +0100
++++ emacs-18.59/src/doprnt.c	2007-01-29 21:47:56.000000000 +0100
+@@ -22,6 +22,7 @@
+ 
+ #include <stdio.h>
+ #include <ctype.h>
++#include "config.h"
+ 
+ doprnt (buffer, bufsize, format, nargs, args)
+      char *buffer;
+diff -ur emacs-18.59-orig/src/editfns.c emacs-18.59/src/editfns.c
+--- emacs-18.59-orig/src/editfns.c	1992-08-08 01:38:16.000000000 +0200
++++ emacs-18.59/src/editfns.c	2007-01-29 21:47:56.000000000 +0100
+@@ -1046,7 +1046,7 @@
+     return Qnil;
+   return build_string (val);
+ }
+-#endif MAINTAIN_ENVIRONMENT
++#endif /* MAINTAIN_ENVIRONMENT */
+ 
+ void
+ syms_of_editfns ()
+diff -ur emacs-18.59-orig/src/emacs.c emacs-18.59/src/emacs.c
+--- emacs-18.59-orig/src/emacs.c	1992-10-17 04:51:00.000000000 +0100
++++ emacs-18.59/src/emacs.c	2007-01-29 21:47:56.000000000 +0100
+@@ -314,7 +314,7 @@
+ #ifdef HIGHPRI
+   setpriority (PRIO_PROCESS, getpid (), HIGHPRI);
+   setuid (getuid ());
+-#endif HIGHPRI
++#endif
+ 
+   inhibit_window_system = 0;
+ 
+@@ -402,7 +402,7 @@
+ #endif
+ #ifdef SIGXFSZ
+       signal (SIGXFSZ, fatal_error_signal);
+-#endif SIGXFSZ
++#endif
+ 
+ #ifdef AIX
+       /* This used to run fatal_error_signal,
+@@ -489,7 +489,7 @@
+       syms_of_alloc ();
+ #ifdef MAINTAIN_ENVIRONMENT
+       syms_of_environ ();
+-#endif MAINTAIN_ENVIRONMENT
++#endif /* MAINTAIN_ENVIRONMENT */
+       syms_of_read ();
+       syms_of_print ();
+       syms_of_eval ();
+diff -ur emacs-18.59-orig/src/emacssignal.h emacs-18.59/src/emacssignal.h
+--- emacs-18.59-orig/src/emacssignal.h	1991-12-31 21:52:31.000000000 +0100
++++ emacs-18.59/src/emacssignal.h	2007-01-29 21:47:56.000000000 +0100
+@@ -22,7 +22,8 @@
+ #define sighold(SIG)     ONLY_USED_IN_BSD_4_1
+ #define sigrelse(SIG)    ONLY_USED_IN_BSD_4_1
+ 
+-int (*sys_signal (int signal_number, int (*action)())) ();
++typedef void (*signal_handler_t) ();
++signal_handler_t sys_signal (int signal_number, signal_handler_t action);
+ int sys_sigpause (sigset_t new_mask);
+ sigset_t sys_sigblock (sigset_t new_mask);
+ sigset_t sys_sigunblock (sigset_t new_mask);
+diff -ur emacs-18.59-orig/src/fileio.c emacs-18.59/src/fileio.c
+--- emacs-18.59-orig/src/fileio.c	1998-05-31 05:34:39.000000000 +0200
++++ emacs-18.59/src/fileio.c	2007-01-29 21:47:56.000000000 +0100
+@@ -784,7 +784,7 @@
+ 	  if (o == target + 1 && o[-1] == '/' && o[0] == '/')
+ 	    ++o;
+ 	  else
+-#endif APOLLO
++#endif /* APOLLO */
+ 	  if (o == target && *o == '/')
+ 	    ++o;
+ 	  p += 3;
+diff -ur emacs-18.59-orig/src/fns.c emacs-18.59/src/fns.c
+--- emacs-18.59-orig/src/fns.c	1992-10-17 04:54:17.000000000 +0100
++++ emacs-18.59/src/fns.c	2007-01-29 21:47:56.000000000 +0100
+@@ -90,8 +90,6 @@
+   (arg)
+      Lisp_Object arg;
+ {
+-  extern long random ();
+-  extern srandom ();
+   extern long time ();
+ 
+   if (EQ (arg, Qt))
+diff -ur emacs-18.59-orig/src/lisp.h emacs-18.59/src/lisp.h
+--- emacs-18.59-orig/src/lisp.h	1992-03-06 00:11:31.000000000 +0100
++++ emacs-18.59/src/lisp.h	2004-05-13 02:56:53.000000000 +0200
+@@ -983,7 +983,6 @@
+ 
+ extern void debugger ();
+ 
+-extern char *malloc (), *realloc (), *getenv (), *ctime (), *getwd ();
+ extern long *xmalloc (), *xrealloc ();
+ 
+ #ifdef MAINTAIN_ENVIRONMENT
+diff -ur emacs-18.59-orig/src/lread.c emacs-18.59/src/lread.c
+--- emacs-18.59-orig/src/lread.c	1992-03-23 05:18:17.000000000 +0100
++++ emacs-18.59/src/lread.c	2007-01-29 21:47:56.000000000 +0100
+@@ -229,7 +229,7 @@
+      Lisp_Object stream;
+ {
+   fclose (*(FILE **) XSTRING (stream));
+-  free (XPNTR (stream));
++  free ((void *)(XPNTR (stream)));
+   if (--load_in_progress < 0) load_in_progress = 0;
+   return Qnil;
+ }
+@@ -465,7 +465,7 @@
+   return Qnil;
+ }
+ 
+-#endif standalone
++#endif /* standalone */
+ 
+ DEFUN ("read", Fread, Sread, 0, 1, 0,
+   "Read one Lisp expression as text from STREAM, return as Lisp object.\n\
+@@ -1141,7 +1141,7 @@
+   sym = intern (string);
+   XSET (XSYMBOL (sym)->function, Lisp_Subr, sname);
+ }
+-#endif NOTDEF
++#endif /* NOTDEF */
+ 
+ /* New replacement for DefIntVar; it ignores the doc string argument
+    on the assumption that make-docfile will handle that.  */
+@@ -1230,7 +1230,7 @@
+     abort ();
+ }
+ 
+-#endif standalone
++#endif /* standalone */
+ 
+ init_read ()
+ {
+diff -ur emacs-18.59-orig/src/malloc.c emacs-18.59/src/malloc.c
+--- emacs-18.59-orig/src/malloc.c	2004-03-09 08:33:12.000000000 +0100
++++ emacs-18.59/src/malloc.c	2007-01-29 21:47:56.000000000 +0100
+@@ -213,8 +213,6 @@
+ 
+ static void getpool ();
+ 
+-char *malloc ();
+-
+ /* Cause reinitialization based on job parameters;
+   also declare where the end of pure storage is. */
+ void
+@@ -412,7 +410,7 @@
+     }
+ }
+ 
+-char *
++void *
+ malloc (n)		/* get a block */
+      unsigned n;
+ {
+@@ -488,8 +486,9 @@
+   return (char *) p + ((sizeof *p + 7) & ~7);
+ }
+ 
++void
+ free (mem)
+-     char *mem;
++     void *mem;
+ {
+   register struct mhead *p;
+   {
+@@ -509,7 +508,7 @@
+     if (p -> mh_alloc != ISALLOC)
+       abort ();
+ 
+-#else rcheck
++#else /* rcheck */
+     if (p -> mh_alloc != ISALLOC)
+       {
+ 	if (p -> mh_alloc == ISFREE)
+@@ -544,9 +543,9 @@
+   }
+ }
+ 
+-char *
++void *
+ realloc (mem, n)
+-     char *mem;
++     void *mem;
+      register unsigned n;
+ {
+   register struct mhead *p;
+@@ -606,7 +605,7 @@
+ 
+ /* This is in case something linked with Emacs calls calloc.  */
+ 
+-char *
++void *
+ calloc (num, size)
+      unsigned num, size;
+ {
+@@ -621,8 +620,9 @@
+ 
+ /* This is in case something linked with Emacs calls cfree.  */
+ 
++void
+ cfree (mem)
+-     char *mem;
++     void *mem;
+ {
+   return free (mem);
+ }
+@@ -656,8 +656,8 @@
+ #ifndef HPUX
+ /* This runs into trouble with getpagesize on HPUX.
+    Patching out seems cleaner than the ugly fix needed.  */
+-char *
+-valloc (size)
++void *
++valloc (size_t size)
+ {
+   return memalign (getpagesize (), size);
+ }
+diff -ur emacs-18.59-orig/src/mocklisp.c emacs-18.59/src/mocklisp.c
+--- emacs-18.59-orig/src/mocklisp.c	1991-01-08 19:00:01.000000000 +0100
++++ emacs-18.59/src/mocklisp.c	2007-01-29 21:47:56.000000000 +0100
+@@ -193,7 +193,7 @@
+   XSETINT (to, XINT (to) + XINT (from));
+   return Fsubstring (string, from, to);
+ }
+-#endif NOTDEF
++#endif /* NOTDEF */
+ DEFUN ("insert-string", Finsert_string, Sinsert_string, 0, MANY, 0,
+   "Mocklisp-compatibility insert function.\n\
+ Like the function `insert' except that any argument that is a number\n\
+diff -ur emacs-18.59-orig/src/process.c emacs-18.59/src/process.c
+--- emacs-18.59-orig/src/process.c	1998-05-31 05:34:40.000000000 +0200
++++ emacs-18.59/src/process.c	2007-01-29 21:47:56.000000000 +0100
+@@ -1438,7 +1438,7 @@
+ 
+   while (1)
+     {
+-      int value = connect (s, &address, sizeof address);
++      int value = connect (s, (struct sockaddr *)&address, sizeof address);
+       /* Continue if successeful.  */
+       if (value != -1)
+ 	break;
+@@ -1592,7 +1592,8 @@
+   int xerrno;
+   Lisp_Object proc;
+ #ifdef HAVE_TIMEVAL
+-  struct timeval timeout, end_time, garbage;
++  struct timeval timeout, end_time;
++  struct timezone garbage;
+ #else
+   long timeout, end_time, temp;
+ #endif /* not HAVE_TIMEVAL */
+diff -ur emacs-18.59-orig/src/regex.c emacs-18.59/src/regex.c
+--- emacs-18.59-orig/src/regex.c	1992-07-07 17:35:33.000000000 +0200
++++ emacs-18.59/src/regex.c	2007-01-29 21:47:56.000000000 +0100
+@@ -90,7 +90,7 @@
+ 
+ #ifndef NFAILURES
+ #define NFAILURES 80
+-#endif NFAILURES
++#endif
+ 
+ /* width of a byte in bits */
+ 
+@@ -536,7 +536,7 @@
+ 	      PATFETCH (c);
+ 	      PATPUSH (syntax_spec_code[c]);
+ 	      break;
+-#endif emacs
++#endif /* emacs */
+ 
+ 	    case 'w':
+ 	      laststart = b;
+@@ -833,7 +833,7 @@
+ 	    if (SYNTAX (j) != (enum syntaxcode) k)
+ 	      fastmap[j] = 1;
+ 	  break;
+-#endif emacs
++#endif /* emacs */
+ 
+ 	case charset:
+ 	  for (j = *p++ * BYTEWIDTH - 1; j >= 0; j--)
+@@ -1475,7 +1475,7 @@
+ 	  PREFETCH;
+ 	  if (SYNTAX (*d++) != 0) goto fail;
+ 	  break;
+-#endif not emacs
++#endif /* not emacs */
+ 
+ 	case begbuf:
+ 	  if (d == string1)	/* Note, d cannot equal string2 */
+@@ -1722,4 +1722,4 @@
+   exit (1);
+ }
+ 
+-#endif test
++#endif /* test */
+diff -ur emacs-18.59-orig/src/s-linux.h emacs-18.59/src/s-linux.h
+--- emacs-18.59-orig/src/s-linux.h	2004-03-09 08:34:05.000000000 +0100
++++ emacs-18.59/src/s-linux.h	2007-01-29 21:47:56.000000000 +0100
+@@ -126,6 +126,11 @@
+ 
+ /* Special hacks needed to make Emacs run on this system.  */
+ 
++#ifdef emacs
++#include <stdlib.h>
++#include <string.h>
++#endif
++
+ /* On USG systems the system calls are interruptable by signals
+  that the user program has elected to catch.  Thus the system call
+  must be retried in these cases.  To handle this without massive
+@@ -224,6 +229,7 @@
+ #define MAXNAMLEN NAME_MAX	/* missing SYSV-ism */
+ #endif
+ 
++#undef SIGSYS
+ #define SIGSYS SIGUNUSED	/* rename to harmless work-alike */
+ #define VSWTCH VSWTC		/* mis-spelling in termios.h? */
+ 
+@@ -253,7 +259,7 @@
+ 
+ #define C_COMPILER gcc
+ #define C_DEBUG_SWITCH -g
+-#define C_OPTIMIZE_SWITCH -O2 -malign-loops=2 -malign-jumps=2 -malign-functions=2
++#define C_OPTIMIZE_SWITCH -O2 -falign-loops=2 -falign-jumps=2 -falign-functions=2
+ #define OLDXMENU_OPTIONS CFLAGS=-O2 EXTRA=insque.o
+ #define START_FILES pre-crt0.o /usr/lib/crt1.o /usr/lib/crti.o
+ #define LIBS_DEBUG		/* override in config.h to include -lg */
+diff -ur emacs-18.59-orig/src/sysdep.c emacs-18.59/src/sysdep.c
+--- emacs-18.59-orig/src/sysdep.c	1998-05-31 05:34:43.000000000 +0200
++++ emacs-18.59/src/sysdep.c	2007-01-29 21:47:56.000000000 +0100
+@@ -2051,8 +2051,6 @@
+ #endif
+ }
+ 
+-typedef int (*signal_handler_t) ();
+-
+ signal_handler_t
+ sys_signal (int signal_number, signal_handler_t action)
+ {
+@@ -2063,7 +2061,7 @@
+ #else
+   sigemptyset (&new_action.sa_mask);
+   new_action.sa_handler = action;
+-  new_action.sa_flags = NULL;
++  new_action.sa_flags = 0;
+   sigaction (signal_number, &new_action, &old_action);
+   return (old_action.sa_handler);
+ #endif /* DGUX */
+diff -ur emacs-18.59-orig/src/terminfo.c emacs-18.59/src/terminfo.c
+--- emacs-18.59-orig/src/terminfo.c	1991-01-08 19:09:05.000000000 +0100
++++ emacs-18.59/src/terminfo.c	2007-01-29 21:47:56.000000000 +0100
+@@ -17,6 +17,8 @@
+ along with GNU Emacs; see the file COPYING.  If not, write to
+ the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.  */
+ 
++#include "config.h"
++
+ /* Define these variables that serve as global parameters to termcap,
+    so that we do not need to conditionalize the places in Emacs
+    that set them.  */
+diff -ur emacs-18.59-orig/src/x11fns.c emacs-18.59/src/x11fns.c
+--- emacs-18.59-orig/src/x11fns.c	1992-07-15 21:38:49.000000000 +0200
++++ emacs-18.59/src/x11fns.c	2007-01-29 21:47:56.000000000 +0100
+@@ -884,7 +884,7 @@
+ 		rawshift = (((unsigned) (XINT (shift_mask))) & 15) << 11;
+ 		XRebindCode (rawkey, rawshift, rawstring, strsize);
+ 	}
+-#endif notdef
++#endif /* notdef */
+ 	return Qnil;
+ }
+   
+@@ -918,11 +918,11 @@
+ 			XRebindCode (rawkey, i << 11, rawstring, strsize);
+ 		}
+ 	}
+-#endif notdef
++#endif /* notdef */
+ 	return Qnil;
+ }
+ 
+-#endif foobar
++#endif /* foobar */
+ 
+ XExitWithCoreDump ()
+ {
+@@ -988,7 +988,7 @@
+   defsubr (&Sx_set_font);
+ #ifdef notdef
+   defsubr (&Sx_set_icon);
+-#endif notdef
++#endif
+   defsubr (&Scoordinates_in_window_p);
+   defsubr (&Sx_mouse_events);
+   defsubr (&Sx_proc_mouse_event);
+@@ -1012,7 +1012,7 @@
+ #ifdef notdef
+   defsubr (&Sx_rebind_key);
+   defsubr (&Sx_rebind_keys);
+-#endif notdef
++#endif
+   defsubr (&Sx_debug);
+ }
+ 
+diff -ur emacs-18.59-orig/src/x11term.c emacs-18.59/src/x11term.c
+--- emacs-18.59-orig/src/x11term.c	1992-10-24 05:31:56.000000000 +0100
++++ emacs-18.59/src/x11term.c	2007-01-29 21:47:56.000000000 +0100
+@@ -33,1 +33,1 @@
+-#endif	lint
++#endif
+@@ -1482,6 +1482,10 @@
+ 	  strcpy(mapping_buf,"\016");
+ 	  nbytes = 1;
+ 	  break;
++	case XK_BackSpace:
++	  strcpy(mapping_buf,"\177");
++	  nbytes = 1;
++	  break;
+ 	}
+ #ifndef AIX
+       }
+@@ -1715,7 +1719,6 @@
+ 
+ 	extern char *getenv ();
+ 	extern XTinterrupt_signal ();
+-	extern char *malloc ();
+ 	extern Lisp_Object Vxterm, Vxterm1, Qt;
+ 	extern int XIgnoreError();
+ 	int  ix;
+diff -ur emacs-18.59-orig/src/xdisp.c emacs-18.59/src/xdisp.c
+--- emacs-18.59-orig/src/xdisp.c	1992-07-24 21:08:13.000000000 +0200
++++ emacs-18.59/src/xdisp.c	2007-01-29 21:47:56.000000000 +0100
+@@ -2107,7 +2107,7 @@
+   Lisp_Object root_window;
+ #ifndef COMPILER_REGISTER_BUG
+   register
+-#endif COMPILER_REGISTER_BUG
++#endif
+     struct window *mini_w;
+ 
+   this_line_bufpos = 0;
+diff -ur emacs-18.59-orig/etc/ChangeLog emacs-18.59/etc/ChangeLog
+--- emacs-18.59-orig/etc/ChangeLog	1998-05-31 05:34:34.000000000 +0200
++++ emacs-18.59/etc/ChangeLog	2007-01-29 21:47:56.000000000 +0100
+@@ -1,3 +1,11 @@
++2007-01-29  Ulrich Mueller  <ulm@kph.uni-mainz.de>
++
++	* emacsclient.c, server.c: Check for HAVE_SOCKETS instead of BSD.
++
++	* cvtmail.c, emacsclient.c, env.c, etags.c, fakemail.c,
++	make-docfile.c, movemail.c, server.c, sorted-doc.c,
++	test-distrib.c, wakeup.c, yow.c: Fix GCC 4.1 compilation issues.
++
+ 1998-05-30  Noah Friedman  <friedman@splode.com>
+ 
+ 	* env.c (main): Declare sys_errlist if linux + glibc2.
+diff -ur emacs-18.59-orig/etc/cvtmail.c emacs-18.59/etc/cvtmail.c
+--- emacs-18.59-orig/etc/cvtmail.c	1991-01-08 20:06:08.000000000 +0100
++++ emacs-18.59/etc/cvtmail.c	2007-01-29 21:47:56.000000000 +0100
+@@ -36,7 +36,10 @@
+ 
+ 
+ #include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
+ 
++void *xmalloc(), *xrealloc();
+ 
+ main (argc, argv)
+      int argc;
+@@ -109,22 +112,22 @@
+     ;
+ }
+ 
+-int
++void *
+ xmalloc (size)
+      int size;
+ {
+-  int result = malloc (size);
++  void *result = malloc (size);
+   if (!result)
+     fatal ("virtual memory exhausted", 0);
+   return result;
+ }
+ 
+-int
++void *
+ xrealloc (ptr, size)
+      char *ptr;
+      int size;
+ {
+-  int result = realloc (ptr, size);
++  void *result = realloc (ptr, size);
+   if (!result)
+     fatal ("virtual memory exhausted");
+   return result;
+diff -ur emacs-18.59-orig/etc/emacsclient.c emacs-18.59/etc/emacsclient.c
+--- emacs-18.59-orig/etc/emacsclient.c	1992-08-22 09:09:47.000000000 +0200
++++ emacs-18.59/etc/emacsclient.c	2007-01-29 21:47:56.000000000 +0100
+@@ -27,8 +27,10 @@
+ #undef close
+ #endif
+ 
++#include <stdlib.h>
++#include <string.h>
+ 
+-#if !defined(BSD) && !defined(HAVE_SYSVIPC)
++#if !defined(HAVE_SOCKETS) && !defined(HAVE_SYSVIPC)
+ #include <stdio.h>
+ 
+ main (argc, argv)
+@@ -41,9 +43,9 @@
+   exit (1);
+ }
+ 
+-#else /* BSD or HAVE_SYSVIPC */
++#else /* HAVE_SOCKETS or HAVE_SYSVIPC */
+ 
+-#if defined(BSD) && ! defined (HAVE_SYSVIPC)
++#if defined(HAVE_SOCKETS)
+ /* BSD code is very different from SYSV IPC code */
+ 
+ #include <sys/types.h>
+@@ -51,10 +53,10 @@
+ #include <sys/un.h>
+ #include <stdio.h>
+ #include <errno.h>
++#include <unistd.h>
+ #include <sys/stat.h>
+ 
+ extern int sys_nerr;
+-extern char *sys_errlist[];
+ extern int errno;
+ 
+ main (argc, argv)
+@@ -69,8 +71,6 @@
+   char string[BUFSIZ];
+   struct stat statbfr;
+ 
+-  char *getenv (), *getwd ();
+-
+   if (argc < 2)
+     {
+       fprintf (stderr, "Usage: %s filename\n", argv[0]);
+@@ -112,7 +112,8 @@
+   strcat (server.sun_path, "/.emacs_server");
+ #endif
+ 
+-  if (connect (s, &server, strlen (server.sun_path) + 2) < 0)
++  if (connect (s, (struct sockaddr *)&server,
++	       strlen (server.sun_path) + 2) < 0)
+     {
+       fprintf (stderr, "%s: ", argv[0]);
+       perror ("connect");
+@@ -125,11 +126,11 @@
+       exit (1);
+     }
+ 
+-  cwd = getwd (string);
++  cwd = getcwd (string, sizeof string);
+   if (cwd == 0)
+     {
+-      /* getwd puts message in STRING if it fails.  */
+-      fprintf (stderr, "%s: %s (%s)\n", argv[0], string,
++      fprintf (stderr, "%s: %s (%s)\n", argv[0],
++	       "Cannot get current working directory",
+ 	       (errno < sys_nerr) ? sys_errlist[errno] : "unknown error");
+       exit (1);
+     }
+@@ -275,4 +276,4 @@
+ 
+ #endif /* HAVE_SYSVIPC */
+ 
+-#endif /* BSD or HAVE_SYSVIPC */
++#endif /* HAVE_SOCKETS or HAVE_SYSVIPC */
+diff -ur emacs-18.59-orig/etc/env.c emacs-18.59/etc/env.c
+--- emacs-18.59-orig/etc/env.c	1998-05-31 05:34:36.000000000 +0200
++++ emacs-18.59/etc/env.c	2007-01-29 21:47:56.000000000 +0100
+@@ -89,6 +89,8 @@
+ 
+ #include <stdio.h>
+ #include <errno.h>
++#include <stdlib.h>
++#include <string.h>
+ 
+ extern int execvp ();
+ extern char *index ();
+@@ -102,7 +104,7 @@
+ int nenv_size;
+ 
+ char *progname;
+-void setenv ();
++void xsetenv ();
+ void fatal ();
+ 
+ main (argc, argv, envp)
+@@ -134,7 +136,7 @@
+ 	if (tem)
+ 	  {
+ 	    *tem = '\000';
+-	    setenv (*envp, tem + 1);
++	    xsetenv (*envp, tem + 1);
+ 	  }
+      }
+ 
+@@ -145,7 +147,7 @@
+ 	/* If arg contains a "=" it specifies to set a variable */
+ 	{
+ 	  *tem = '\000';
+-	  setenv (*argv, tem + 1);
++	  xsetenv (*argv, tem + 1);
+ 	  argc--; argv++;
+ 	  continue;
+ 	}
+@@ -161,7 +163,7 @@
+ 	/* Unset a variable */
+ 	{
+ 	  argc--; argv++;
+-	  setenv (*argv, 0);
++	  xsetenv (*argv, 0);
+ 	  argc--; argv++;
+ 	}
+       else if (!strcmp (*argv, "-s") ||
+@@ -174,7 +176,7 @@
+ 	    fatal ("No value specified for variable \"%s\"",
+ 		   tem);
+ 	  argc--; argv++;
+-	  setenv (tem, *argv);
++	  xsetenv (tem, *argv);
+ 	  argc--; argv++;
+ 	}
+       else if (!strcmp (*argv, "-") || !strcmp (*argv, "--"))
+@@ -216,7 +218,7 @@
+ }
+ 
+ void
+-setenv (var, val)
++xsetenv (var, val)
+   register char *var, *val;
+ {
+   register char **e;
+@@ -274,8 +276,6 @@
+ }
+ 
+ 
+-extern char *malloc (), *realloc ();
+-
+ void
+ memory_fatal ()
+ {
+diff -ur emacs-18.59-orig/etc/etags.c emacs-18.59/etc/etags.c
+--- emacs-18.59-orig/etc/etags.c	1992-08-20 07:11:01.000000000 +0200
++++ emacs-18.59/etc/etags.c	2007-01-29 21:47:56.000000000 +0100
+@@ -21,6 +21,8 @@
+ 
+ #include <stdio.h>
+ #include <ctype.h>
++#include <stdlib.h>
++#include <string.h>
+ 
+ /* Define the symbol ETAGS to make the program "etags",
+  which makes emacs-style tag tables by default.
+@@ -128,11 +130,10 @@
+ 
+ char *savestr();
+ char *savenstr ();
+-char *rindex();
+-char *index();
+ char *concat ();
+ void initbuffer ();
+ long readline ();
++void *xmalloc(), *xrealloc();
+ 
+ /* A `struct linebuffer' is a structure which holds a line of text.
+  `readline' reads a line from a stream into a linebuffer
+@@ -1380,7 +1381,6 @@
+      char *defenv;
+ {
+   register char *env, *p;
+-  extern char *savenstr (), *index ();
+ 
+   struct TEX_tabent *tab;
+   int size, i;
+@@ -1530,47 +1530,6 @@
+   return dp;
+ }
+ 
+-/*
+- * Return the ptr in sp at which the character c last
+- * appears; NULL if not found
+- *
+- * Identical to v7 rindex, included for portability.
+- */
+-
+-char *
+-rindex(sp, c)
+-     register char *sp, c;
+-{
+-  register char *r;
+-
+-  r = NULL;
+-  do
+-    {
+-      if (*sp == c)
+-	r = sp;
+-    } while (*sp++);
+-  return(r);
+-}
+-
+-/*
+- * Return the ptr in sp at which the character c first
+- * appears; NULL if not found
+- *
+- * Identical to v7 index, included for portability.
+- */
+-
+-char *
+-index(sp, c)
+-     register char *sp, c;
+-{
+-  do
+-    {
+-      if (*sp == c)
+-	return (sp);
+-    } while (*sp++);
+-  return (NULL);
+-}
+-
+ /* Print error message and exit.  */
+ 
+ fatal (s1, s2)
+@@ -1609,22 +1568,22 @@
+ 
+ /* Like malloc but get fatal error if memory is exhausted.  */
+ 
+-int
++void *
+ xmalloc (size)
+      int size;
+ {
+-  int result = malloc (size);
++  void *result = malloc (size);
+   if (!result)
+     fatal ("virtual memory exhausted", 0);
+   return result;
+ }
+ 
+-int
++void *
+ xrealloc (ptr, size)
+      char *ptr;
+      int size;
+ {
+-  int result = realloc (ptr, size);
++  void *result = realloc (ptr, size);
+   if (!result)
+     fatal ("virtual memory exhausted");
+   return result;
+diff -ur emacs-18.59-orig/etc/fakemail.c emacs-18.59/etc/fakemail.c
+--- emacs-18.59-orig/etc/fakemail.c	1991-01-08 20:08:42.000000000 +0100
++++ emacs-18.59/etc/fakemail.c	2007-01-29 21:47:56.000000000 +0100
+@@ -43,6 +43,7 @@
+ #endif
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <string.h>
+ #include <ctype.h>
+ #include <time.h>
+@@ -123,16 +124,8 @@
+ 
+ extern FILE *popen ();
+ extern int fclose (), pclose ();
+-extern char *malloc (), *realloc ();
+ 
+-#ifdef CURRENT_USER
+-extern struct passwd *getpwuid ();
+-extern unsigned short geteuid ();
+-static struct passwd *my_entry;
+-#define cuserid(s)				\
+-(my_entry = getpwuid (((int) geteuid ())),	\
+- my_entry->pw_name)
+-#endif
++#define cuserid(s) (getpwuid (geteuid ())->pw_name)
+ 
+ /* Utilities */
+ 
+@@ -564,7 +557,6 @@
+   return;
+ }
+ 
+-void
+ main (argc, argv)
+      int argc;
+      char **argv;
+diff -ur emacs-18.59-orig/etc/make-docfile.c emacs-18.59/etc/make-docfile.c
+--- emacs-18.59-orig/etc/make-docfile.c	1991-10-25 19:43:28.000000000 +0100
++++ emacs-18.59/etc/make-docfile.c	2007-01-29 21:47:56.000000000 +0100
+@@ -32,6 +32,8 @@
+  */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
+ 
+ FILE *outfile;
+ 
+diff -ur emacs-18.59-orig/etc/movemail.c emacs-18.59/etc/movemail.c
+--- emacs-18.59-orig/etc/movemail.c	1992-05-07 22:11:16.000000000 +0200
++++ emacs-18.59/etc/movemail.c	2007-01-29 21:47:56.000000000 +0100
+@@ -52,6 +52,9 @@
+ #include <sys/stat.h>
+ #include <sys/file.h>
+ #include <errno.h>
++#include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
+ #define NO_SHORTNAMES   /* Tell config not to load remap.h */
+ #include "../src/config.h"
+ 
+@@ -81,6 +84,7 @@
+ #undef close
+ 
+ char *concat ();
++void *xmalloc ();
+ extern int errno;
+ 
+ /* Nonzero means this is name of a lock file to delete on fatal error.  */
+@@ -320,7 +324,6 @@
+      char *name;
+ {
+   extern int errno, sys_nerr;
+-  extern char *sys_errlist[];
+   char *s;
+ 
+   if (errno < sys_nerr)
+@@ -334,7 +337,6 @@
+      char *name;
+ {
+   extern int errno, sys_nerr;
+-  extern char *sys_errlist[];
+   char *s;
+ 
+   if (errno < sys_nerr)
+@@ -365,11 +367,11 @@
+ 
+ /* Like malloc but get fatal error if memory is exhausted.  */
+ 
+-int
++void *
+ xmalloc (size)
+      int size;
+ {
+-  int result = malloc (size);
++  void *result = malloc (size);
+   if (!result)
+     fatal ("virtual memory exhausted", 0);
+   return result;
+@@ -704,7 +706,6 @@
+ get_errmsg ()
+ {
+   extern int errno, sys_nerr;
+-  extern char *sys_errlist[];
+   char *s;
+ 
+   if (errno < sys_nerr)
+diff -ur emacs-18.59-orig/etc/server.c emacs-18.59/etc/server.c
+--- emacs-18.59-orig/etc/server.c	1992-03-23 05:06:08.000000000 +0100
++++ emacs-18.59/etc/server.c	2007-01-29 21:47:56.000000000 +0100
+@@ -36,8 +36,10 @@
+ #undef open
+ #undef close
+ 
++#include <stdlib.h>
++#include <string.h>
+ 
+-#if !defined(BSD) && !defined(HAVE_SYSVIPC)
++#if !defined(HAVE_SOCKETS) && !defined(HAVE_SYSVIPC)
+ #include <stdio.h>
+ 
+ main ()
+@@ -47,9 +49,9 @@
+   exit (1);
+ }
+ 
+-#else /* BSD or HAVE_SYSVIPC */
++#else /* HAVE_SOCKETS or HAVE_SYSVIPC */
+ 
+-#if defined (BSD) && ! defined (HAVE_SYSVIPC)
++#if defined (HAVE_SOCKETS)
+ /* BSD code is very different from SYSV IPC code */
+ 
+ #include <sys/file.h>
+@@ -110,7 +112,7 @@
+   unlink (server.sun_path);
+ #endif
+ 
+-  if (bind (s, &server, strlen (server.sun_path) + 2) < 0)
++  if (bind (s, (struct sockaddr *)&server, strlen (server.sun_path) + 2) < 0)
+     {
+       perror ("bind");
+       exit (1);
+@@ -128,14 +130,18 @@
+   signal (SIGPIPE, SIG_IGN);
+   for (;;)
+     {
+-      int rmask = (1 << s) + 1;
++      fd_set rmask;
++      FD_ZERO (&rmask);
++      FD_SET (0, &rmask);
++      FD_SET (s, &rmask);
+       if (select (s + 1, &rmask, 0, 0, 0) < 0)
+ 	perror ("select");
+-      if (rmask & (1 << s))	/* client sends list of filenames */
++      if (FD_ISSET (s, &rmask))	/* client sends list of filenames */
+ 	{
+ 	  fromlen = sizeof (fromunix);
+ 	  fromunix.sun_family = AF_UNIX;
+-	  infd = accept (s, &fromunix, &fromlen); /* open socket fd */
++	  infd = accept (s, (struct sockaddr *)&fromunix, &fromlen);
++				/* open socket fd */
+ 	  if (infd < 0)
+ 	    {
+ 	      if (errno == EMFILE || errno == ENFILE)
+@@ -184,7 +190,8 @@
+ 	  fflush (infile);
+ 	  continue;
+ 	}
+-      else if (rmask & 1) /* emacs sends codeword, fd, and string message */
++      else if (FD_ISSET (0, &rmask))
++			/* emacs sends codeword, fd, and string message */
+ 	{
+ 	  /* Read command codeword and fd */
+ 	  clearerr (stdin);
+@@ -325,6 +332,4 @@
+ 
+ #endif /* SYSV IPC */
+ 
+-#endif /* BSD && IPC */
+-
+-
++#endif /* HAVE_SOCKETS && IPC */
+diff -ur emacs-18.59-orig/etc/sorted-doc.c emacs-18.59/etc/sorted-doc.c
+--- emacs-18.59-orig/etc/sorted-doc.c	1988-06-04 06:22:22.000000000 +0200
++++ emacs-18.59/etc/sorted-doc.c	2007-01-29 21:47:56.000000000 +0100
+@@ -7,8 +7,9 @@
+ 
+ #include <stdio.h>
+ #include <ctype.h>
++#include <stdlib.h>
++#include <string.h>
+ 
+-extern char *malloc ();
+ char *xmalloc ();
+ 
+ #define NUL	'\0'
+diff -ur emacs-18.59-orig/etc/test-distrib.c emacs-18.59/etc/test-distrib.c
+--- emacs-18.59-orig/etc/test-distrib.c	1987-05-22 06:15:12.000000000 +0200
++++ emacs-18.59/etc/test-distrib.c	2007-01-29 21:47:56.000000000 +0100
+@@ -1,4 +1,5 @@
+ #include <stdio.h>
++#include <stdlib.h>
+ 
+ /* Break string in two parts to avoid buggy C compilers that ignore characters
+    after nulls in strings.  */
+diff -ur emacs-18.59-orig/etc/wakeup.c emacs-18.59/etc/wakeup.c
+--- emacs-18.59-orig/etc/wakeup.c	1991-07-30 23:03:39.000000000 +0200
++++ emacs-18.59/etc/wakeup.c	2007-01-29 21:47:56.000000000 +0100
+@@ -2,6 +2,7 @@
+ 
+ #include <stdio.h>
+ #include <time.h>
++#include <stdlib.h>
+ 
+ struct tm *localtime ();
+ 
+diff -ur emacs-18.59-orig/etc/yow.c emacs-18.59/etc/yow.c
+--- emacs-18.59-orig/etc/yow.c	1988-04-13 08:13:41.000000000 +0200
++++ emacs-18.59/etc/yow.c	2007-01-29 21:47:56.000000000 +0100
+@@ -1,5 +1,7 @@
+ #include <stdio.h>
+ #include <ctype.h>
++#include <stdlib.h>
++#include <string.h>
+ #include "../src/paths.h"
+ 
+ /* zippy.c
