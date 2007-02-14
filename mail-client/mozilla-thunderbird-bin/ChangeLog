@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/mozilla-thunderbird-bin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.61 2007/01/11 15:50:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.62 2007/02/14 18:51:47 armin76 Exp $
+
+  14 Feb 2007; Raúl Porcel <armin76@gentoo.org>
+  +files/icon/mozilla-thunderbird-bin.desktop,
+  +files/icon/mozilla-thunderbird-bin-icon.png,
+  -files/icon/mozillathunderbird-bin.desktop,
+  -files/icon/mozillathunderbird-bin-icon.png,
+  mozilla-thunderbird-bin-1.5.0.9.ebuild:
+  Fix .desktop files, bug 147735, and drop monolithic X deps and virtual/libc
 
   11 Jan 2007; Raúl Porcel <armin76@gentoo.org>
   mozilla-thunderbird-bin-1.5.0.9.ebuild:

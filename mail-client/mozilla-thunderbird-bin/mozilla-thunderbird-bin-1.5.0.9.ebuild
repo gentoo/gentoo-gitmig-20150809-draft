@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-1.5.0.9.ebuild,v 1.7 2007/01/11 15:50:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-1.5.0.9.ebuild,v 1.8 2007/02/14 18:51:47 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -27,13 +27,10 @@ for X in ${SHORTLANGS} ; do
 	IUSE="${IUSE} linguas_${X%%-*}"
 done
 
-DEPEND="virtual/libc"
-RDEPEND="|| ( (	x11-libs/libXrender
-		x11-libs/libXt
-		x11-libs/libXmu
-		)
-		virtual/x11
-	)
+DEPEND=""
+RDEPEND="x11-libs/libXrender
+	x11-libs/libXt
+	x11-libs/libXmu
 	x86? (
 		>=x11-libs/gtk+-2.2
 	)
@@ -114,9 +111,9 @@ src_install() {
 
 	# Install icon and .desktop for menu entry
 	insinto /usr/share/pixmaps
-	doins ${FILESDIR}/icon/mozillathunderbird-bin-icon.png
+	doins ${FILESDIR}/icon/mozilla-thunderbird-bin-icon.png
 	insinto /usr/share/applications
-	doins ${FILESDIR}/icon/mozillathunderbird-bin.desktop
+	doins ${FILESDIR}/icon/mozilla-thunderbird-bin.desktop
 
 	# revdep-rebuild entry
 	insinto /etc/revdep-rebuild
