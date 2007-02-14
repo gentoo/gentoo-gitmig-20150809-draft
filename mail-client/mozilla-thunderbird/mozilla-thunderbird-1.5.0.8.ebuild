@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.8.ebuild,v 1.10 2007/01/11 15:44:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.8.ebuild,v 1.11 2007/02/14 19:13:03 armin76 Exp $
 
 unset ALLOWED_FLAGS	 # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib autotools mozextension
@@ -210,7 +210,7 @@ src_install() {
 	# Fix bug 54179: Install .desktop file into /usr/share/applications
 	# instead of /usr/share/gnome/apps/Internet (18 Jun 2004 agriffis)
 	insinto /usr/share/applications
-	doins ${FILESDIR}/icon/mozillathunderbird.desktop
+	doins ${FILESDIR}/icon/${PN}.desktop
 
 	####################################
 	#

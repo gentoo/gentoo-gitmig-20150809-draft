@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0_beta2.ebuild,v 1.1 2007/02/08 11:46:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0_beta2.ebuild,v 1.2 2007/02/14 19:13:03 armin76 Exp $
 
 #
 # There are no linguas supported in alpha builds
@@ -215,7 +215,7 @@ src_install() {
 	# Fix bug 54179: Install .desktop file into /usr/share/applications
 	# instead of /usr/share/gnome/apps/Internet (18 Jun 2004 agriffis)
 	insinto /usr/share/applications
-	doins ${FILESDIR}/icon/mozillathunderbird.desktop
+	doins ${FILESDIR}/icon/${PN}.desktop
 
 	####################################
 	#

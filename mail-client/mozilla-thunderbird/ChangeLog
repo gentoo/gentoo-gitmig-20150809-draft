@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.167 2007/02/08 11:46:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.168 2007/02/14 19:13:03 armin76 Exp $
+
+  14 Feb 2007; Raúl Porcel <armin76@gentoo.org>
+  +files/icon/mozilla-thunderbird.desktop,
+  -files/icon/mozillathunderbird.desktop,
+  mozilla-thunderbird-1.5.0.8.ebuild, mozilla-thunderbird-1.5.0.9.ebuild,
+  mozilla-thunderbird-2.0_beta1.ebuild,
+  mozilla-thunderbird-2.0_beta2.ebuild:
+  Fix .desktop files, bug 147735
 
 *mozilla-thunderbird-2.0_beta2 (08 Feb 2007)
 
