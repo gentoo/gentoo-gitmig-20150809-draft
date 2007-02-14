@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.104 2007/02/14 19:45:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.105 2007/02/14 21:35:23 opfer Exp $
+
+  14 Feb 2007; Christian Faulhammer <opfer@gentoo.org> use.local.desc:
+  add mp4 USE flag for media-sound/cmus
 
   14 Feb 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   p.mask net-p2p/mnet bug 166887
