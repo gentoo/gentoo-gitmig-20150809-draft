@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.7-r4.ebuild,v 1.1 2006/12/01 18:44:57 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.7-r4.ebuild,v 1.2 2007/02/14 19:27:55 betelgeuse Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit base eutils java-vm-2 flag-o-matic
@@ -19,7 +19,7 @@ DEPEND="
 	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.1
 	app-arch/zip
-	dev-java/jikes
+	>=dev-java/jikes-1.22-r13
 	dev-libs/libxml2
 	sys-libs/zlib
 	gtk? (
@@ -99,7 +99,7 @@ src_compile() {
 		$(use_enable nls) \
 		$(use_enable gtk gtk-peer) \
 		${confargs} \
-		--with-jikes \
+		--with-jikes=/usr/bin/jikes-bin \
 		--disable-gjdoc || die "Failed to configure."
 
 	# --with-bcel

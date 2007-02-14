@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/kaffe
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.65 2006/12/01 18:44:57 betelgeuse Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.66 2007/02/14 19:27:55 betelgeuse Exp $
+
+  14 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> kaffe-1.1.7-r4.ebuild:
+  Use jikes-bin directly instead of the wrapper so that it's possible to
+  emerge kaffe without a jdk already installed (bug #163801).
 
 *kaffe-1.1.7-r4 (01 Dec 2006)
 
