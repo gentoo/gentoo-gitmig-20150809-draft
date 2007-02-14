@@ -1,6 +1,13 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.37 2007/02/07 21:06:10 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.38 2007/02/14 19:09:03 aballier Exp $
+
+  14 Feb 2007; Alexis Ballier <aballier@gentoo.org>
+  -files/gpac-0.4.0-downloader.patch,
+  -files/gpac-0.4.1_pre20060122-DESTDIR.patch,
+  -files/gpac-0.4.1_pre20060122-configure-ogg.patch, -gpac-0.4.0.ebuild,
+  -gpac-0.4.1_pre20060122.ebuild, -gpac-0.4.1_pre20060122-r1.ebuild:
+  Cleanup old versions
 
   07 Feb 2007; Matti Bickel <mabi@gentoo.org> gpac-0.4.2-r1.ebuild:
   ppc stable (bug #157894)
