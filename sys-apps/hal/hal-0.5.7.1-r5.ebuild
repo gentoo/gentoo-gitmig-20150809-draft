@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r5.ebuild,v 1.1 2007/02/13 03:54:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r5.ebuild,v 1.2 2007/02/14 05:40:29 cardoe Exp $
 
 inherit eutils linux-info
 
@@ -160,7 +160,6 @@ src_compile() {
 		--enable-hotplug-map \
 		$(use_enable debug verbose-mode) \
 		$(use_enable pcmcia pcmcia-support) \
-		$(use_enable !acpi acpi-acpid) \
 		$(use_enable acpi acpi-proc) \
 		$(use_enable doc docbook-docs) \
 		$(use_enable doc doxygen-docs) \

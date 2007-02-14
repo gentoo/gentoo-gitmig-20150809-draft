@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.124 2007/02/13 16:19:32 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.125 2007/02/14 05:40:29 cardoe Exp $
+
+  14 Feb 2007; Doug Goldstein <cardoe@gentoo.org> hal-0.5.7.1-r5.ebuild:
+  ACPI stuff didn't work for -r5. Waiting until 0.5.8.1
 
   13 Feb 2007; Bryan Østergaard <kloeri@gentoo.org> hal-0.5.7.1-r3.ebuild:
   Stable on Alpha + IA64.
