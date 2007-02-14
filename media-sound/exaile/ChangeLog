@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/exaile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.4 2007/02/09 14:55:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.5 2007/02/14 22:17:39 welp Exp $
+
+  14 Feb 2007; Peter Weller <welp@gentoo.org> exaile-0.2.8.ebuild:
+  Added ~amd64 keyword per request from drac
 
   09 Feb 2007; Samuli Suominen <drac@gentoo.org> exaile-0.2.8.ebuild:
   Changed USE mp3 to mad, and added alsa and oss.
