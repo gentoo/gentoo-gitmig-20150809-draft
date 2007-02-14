@@ -1,6 +1,6 @@
 --- update-pciids.sh
 +++ update-pciids.sh
-@@ -1,5 +1,7 @@
+@@ -1,30 +1,41 @@
  #!/bin/sh
  
 +[ "$1" = "-q" ] && quiet="true" || quiet="false"
@@ -8,7 +8,6 @@
  set -e
  SRC="http://pciids.sourceforge.net/v2.2/pci.ids"
  DEST=pci.ids
-@@ -8,6 +8,13 @@
  PCI_COMPRESSED_IDS=
  GREP=grep
  
@@ -22,20 +21,41 @@
  if [ -n "$PCI_COMPRESSED_IDS" ] ; then
  	DECOMP="cat"
  	SRC="$SRC.gz"
-@@ -22,8 +24,10 @@
+ 	GREP=zgrep
+-elif which bzip2 >/dev/null ; then
++elif which bzip2 >&2 >/dev/null ; then
+ 	DECOMP="bzip2 -d"
+ 	SRC="$SRC.bz2"
+-elif which gzip >/dev/null ; then
++elif which gzip >&2 >/dev/null ; then
+ 	DECOMP="gzip -d"
+ 	SRC="$SRC.gz"
+ else
+ 	DECOMP="cat"
+ fi
  
- if which curl >/dev/null ; then
+-if which curl >/dev/null ; then
++if which curl >&2 >/dev/null ; then
  	DL="curl -o $DEST.new $SRC"
+-elif which wget >/dev/null ; then
 +    ${quiet} && DL="$DL -s -S"
- elif which wget >/dev/null ; then
++elif which wget >&2 >/dev/null ; then
  	DL="wget -O $DEST.new $SRC"
+-elif which lynx >/dev/null ; then
 +	${quiet} && DL="$DL -q"
- elif which lynx >/dev/null ; then
++elif which lynx >&2 >/dev/null ; then
  	DL="eval lynx -source $SRC >$DEST.new"
  else
-@@ -59,4 +66,4 @@
+ 	echo >&2 "update-pciids: cannot find curl, wget or lynx"
+@@ -55,4 +66,10 @@
  mv $DEST.neww $DEST
  rm $DEST.new
  
 -echo "Done."
++# Older versions did not compress the ids file, so let's make sure we
++# clean that up.
++if [ ${DEST%.gz} != ${DEST} ] ; then
++	rm -f ${DEST%.gz} ${DEST%.gz}.old
++fi
++
 +${quiet} || echo "Done."
