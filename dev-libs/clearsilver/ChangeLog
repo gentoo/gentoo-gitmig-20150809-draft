@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/clearsilver
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.27 2007/02/13 20:34:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.28 2007/02/14 12:25:48 blubb Exp $
+
+  14 Feb 2007; Simon Stelling <blubb@gentoo.org>
+  +files/clearsilver-0.10.4-libdir.patch, clearsilver-0.10.4.ebuild:
+  multilib-strict fixes; bug 164447
 
   13 Feb 2007; Markus Rothe <corsair@gentoo.org> clearsilver-0.10.4.ebuild:
   Added ~ppc64; bug #166675
