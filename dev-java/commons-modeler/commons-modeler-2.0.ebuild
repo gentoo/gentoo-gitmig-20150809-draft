@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/commons-modeler-2.0.ebuild,v 1.1 2007/02/13 22:33:15 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/commons-modeler-2.0.ebuild,v 1.2 2007/02/14 09:44:25 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="A lib to make the setup of Java Management Extensions easier"
 SRC_URI="mirror://apache/jakarta/commons/modeler/source/${P}-src.tar.gz"
 HOMEPAGE="http://jakarta.apache.org/commons/modeler/"
-LICENSE="Apache-1.1"
+LICENSE="Apache-2.0"
 SLOT="0"
 
 # Provides ant tasks for ant to use
@@ -18,7 +18,8 @@ RDEPEND=">=virtual/jre-1.4
 	commons-digester? ( >=dev-java/commons-digester-1.4.1 )"
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}
-	source? ( app-arch/zip )"
+	source? ( app-arch/zip )
+	test? ( dev-java/junit )"
 
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="commons-digester doc source test"
@@ -27,7 +28,7 @@ S=${WORKDIR}/${P}-src
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 #	epatch "${FILESDIR}/1.1-commons-digester.patch"
 
@@ -45,9 +46,7 @@ src_unpack() {
 	mkdir dist
 }
 
-src_compile() {
-	eant $(use_doc) prepare jar
-}
+EANT_BUILD_TARGET="prepare jar"
 
 src_test() {
 	eant test -Djunit.jar=$(java-pkg_getjar --build-only junit junit.jar)
@@ -55,11 +54,7 @@ src_test() {
 
 src_install() {
 	java-pkg_dojar dist/${PN}.jar
-	dodoc RELEASE-NOTES.txt RELEASE-NOTES.txt
-	use doc && java-pkg_dohtml -r dist/docs/*
+	dodoc RELEASE-NOTES.txt || die
+	use doc && java-pkg_dojavadoc dist/docs/api
 	use source && java-pkg_dosrc src/java/*
-}
-pkg_postinst() {
-	elog "Changed to mx4j from sun-jmx due to fetch restrictions"
-	elog "If you don't like it tell us at java@gentoo.org"
 }

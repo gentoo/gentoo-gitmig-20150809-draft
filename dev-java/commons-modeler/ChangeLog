@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/commons-modeler
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/ChangeLog,v 1.21 2007/02/13 22:33:15 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/ChangeLog,v 1.22 2007/02/14 09:44:25 betelgeuse Exp $
+
+  14 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
+  commons-modeler-2.0.ebuild:
+  Corrected LICENSE to Apache-2.0, added missing junit dependency for
+  src_test, changed to use java-pkg_dojavadoc and removed pkg_postinst notice
+  about moving to mx4j from sun-jmx because of fetch restrictions because with
+  the splitted mx4j does not bring in a huge deptree any more.
 
 *commons-modeler-2.0 (13 Feb 2007)
 
