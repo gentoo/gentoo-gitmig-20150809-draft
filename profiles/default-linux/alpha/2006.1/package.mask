@@ -1,3 +1,7 @@
+# Bryan Øtergaard <kloeri@gentoo.org> (13 Feb 2007)
+# Mask as linuxthreads are broken.
+>=sys-libs/glibc-2.5
+
 # Shouldn't be merging these SELinux packages on this profile
 # but this keeps repoman happy since they require >=glibc-2.4
 # 20061008 pebenito

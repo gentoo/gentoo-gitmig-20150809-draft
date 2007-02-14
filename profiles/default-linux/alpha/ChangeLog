@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.29 2007/02/12 16:51:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.30 2007/02/14 01:46:02 kloeri Exp $
+
+  14 Feb 2007; Bryan Østergaard <kloeri@gentoo.org> +2005.0/package.mask,
+  +2006.0/package.mask, 2006.1/package.mask, no-nptl/package.mask:
+  Mask >=sys-libs/glibc-2.5 in profiles allowing linuxthreads.
 
   12 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   dev/2007.0/desktop/make.defaults:

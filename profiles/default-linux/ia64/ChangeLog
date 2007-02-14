@@ -1,6 +1,10 @@
 # ChangeLog for ia64 profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.18 2007/02/13 00:00:59 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.19 2007/02/14 01:46:02 kloeri Exp $
+
+  14 Feb 2007; Bryan Østergaard <kloeri@gentoo.org> +2004.3/package.mask,
+  +2005.0/package.mask, +2006.0/package.mask:
+  Mask >=sys-libs/glibc-2.5 on profiles allowing linuxthreads.
 
   12 Feb 2007; Bryan Østergaard <kloeri@gentoo.org> +package.use.force:
   Force nptlonly for glibc-2.5.

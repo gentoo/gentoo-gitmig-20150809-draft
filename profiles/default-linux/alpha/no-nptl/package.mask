@@ -1,3 +1,7 @@
+# Bryan Øtergaard <kloeri@gentoo.org> (13 Feb 2007)
+# Mask as linuxthreads are broken.
+>=sys-libs/glibc-2.5
+
 # Masking this since it depends on masked glibc versions
 >=sys-devel/gcc-4
 

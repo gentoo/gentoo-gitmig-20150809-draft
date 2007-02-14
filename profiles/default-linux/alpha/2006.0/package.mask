@@ -1,0 +1,3 @@
+# Bryan Østergaard <kloeri@gentoo.org> (13 Feb 2007)
+# Mask as linuxthreads are broken.
+>=sys-libs/glibc-2.5
