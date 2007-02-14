@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.8.3.ebuild,v 1.2 2007/02/08 14:51:44 tchiwam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.8.3.ebuild,v 1.3 2007/02/14 16:12:44 tchiwam Exp $
 
 inherit webapp depend.php
 
@@ -88,6 +88,7 @@ src_install() {
 		"maintenance/dtrace"
 		"maintenance/mysql5"
 		"maintenance/storage"
+		"serialized"
 		"skins"
 		"skins/chick"
 		"skins/common"
