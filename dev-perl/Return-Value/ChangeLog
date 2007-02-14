@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Return-Value
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Return-Value/ChangeLog,v 1.1 2007/02/05 19:31:57 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Return-Value/ChangeLog,v 1.2 2007/02/14 11:08:40 corsair Exp $
+
+  14 Feb 2007; Markus Rothe <corsair@gentoo.org> Return-Value-1.302.ebuild:
+  Added ~ppc64
 
 *Return-Value-1.302 (05 Feb 2007)
 

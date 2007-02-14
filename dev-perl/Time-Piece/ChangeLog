@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Time-Piece
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-Piece/ChangeLog,v 1.18 2007/01/22 15:04:13 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-Piece/ChangeLog,v 1.19 2007/02/14 11:01:21 corsair Exp $
+
+  14 Feb 2007; Markus Rothe <corsair@gentoo.org> Time-Piece-1.11.ebuild:
+  Added ~ppc64
 
   22 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> Time-Piece-1.11.ebuild:
   Stable on IA64.

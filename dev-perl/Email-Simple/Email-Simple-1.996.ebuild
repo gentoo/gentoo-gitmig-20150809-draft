@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Simple/Email-Simple-1.996.ebuild,v 1.3 2007/01/22 23:51:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Simple/Email-Simple-1.996.ebuild,v 1.4 2007/02/14 10:53:28 corsair Exp $
 
 inherit perl-module
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://cpan/authors/id/R/RJ/RJBS/${P}.tar.gz"
 HOMEPAGE="http://search.cpan.org/~rjbs/"
 
 LICENSE="Artistic"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 sparc ~x86"
 IUSE=""
 
 SRC_TEST="do"

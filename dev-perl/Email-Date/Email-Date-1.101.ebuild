@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Date/Email-Date-1.101.ebuild,v 1.2 2007/02/05 20:12:34 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Date/Email-Date-1.101.ebuild,v 1.3 2007/02/14 11:00:15 corsair Exp $
 
 inherit perl-module
 
@@ -13,7 +13,7 @@ IUSE=""
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~amd64 ~x86 ~sparc"
+KEYWORDS="~amd64 ~ppc64 ~sparc ~x86"
 
 DEPEND="virtual/perl-Test-Simple
 	>=dev-perl/Email-Abstract-2.13.1
