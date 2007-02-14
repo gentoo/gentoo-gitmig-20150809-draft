@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/drpython
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/ChangeLog,v 1.10 2007/01/11 22:41:10 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/ChangeLog,v 1.11 2007/02/14 22:37:32 dev-zero Exp $
+
+*drpython-164 (14 Feb 2007)
+
+  14 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> -drpython-163.ebuild,
+  +drpython-164.ebuild:
+  Version bump.
 
 *drpython-163 (11 Jan 2007)
 

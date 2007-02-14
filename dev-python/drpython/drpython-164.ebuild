@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/drpython-163.ebuild,v 1.1 2007/01/11 22:41:10 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/drpython-164.ebuild,v 1.1 2007/02/14 22:37:32 dev-zero Exp $
 
 inherit distutils eutils multilib
 
 DESCRIPTION="A powerful cross-platform IDE for Python"
 HOMEPAGE="http://drpython.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
+SRC_URI="mirror://sourceforge/${PN}/${P/-}.zip"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
