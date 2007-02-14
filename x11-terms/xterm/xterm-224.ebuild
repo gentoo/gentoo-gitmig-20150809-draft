@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-224.ebuild,v 1.1 2007/02/14 15:46:21 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-224.ebuild,v 1.2 2007/02/14 18:42:39 drac Exp $
 
 inherit flag-o-matic
 
@@ -63,8 +63,9 @@ src_compile() {
 	emake || die "emake failed."
 }
 
+# Parallel make causes File exists error and dies. Forcing -j1 for now.
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake -j1 DESTDIR="${D}" install || die "emake install failed."
 	dodoc README{,.i18n} ctlseqs.txt
 	dohtml xterm.log.html
 
