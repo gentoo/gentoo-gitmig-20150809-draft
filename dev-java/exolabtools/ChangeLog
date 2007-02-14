@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/exolabtools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabtools/ChangeLog,v 1.9 2007/02/14 17:47:19 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabtools/ChangeLog,v 1.10 2007/02/14 18:05:52 opfer Exp $
+
+  14 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  exolabtools-1.0_p20050205-r1.ebuild:
+  stable x86; bug 166868
 
   14 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
   exolabtools-1.0_p20050205-r1.ebuild:
