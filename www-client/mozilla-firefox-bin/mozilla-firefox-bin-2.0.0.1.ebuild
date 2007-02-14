@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.1.ebuild,v 1.5 2007/01/11 15:17:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.1.ebuild,v 1.6 2007/02/14 18:44:54 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -30,12 +30,9 @@ for X in ${LANGS} ; do
 done
 
 DEPEND="app-arch/unzip"
-RDEPEND="|| ( (	x11-libs/libXrender
-		x11-libs/libXt
-		x11-libs/libXmu
-		)
-		virtual/x11
-	)
+RDEPEND="x11-libs/libXrender
+	x11-libs/libXt
+	x11-libs/libXmu
 	x86? (
 		>=x11-libs/gtk+-2.2
 		=virtual/libstdc++-3.3
@@ -45,8 +42,7 @@ RDEPEND="|| ( (	x11-libs/libXrender
 		>=app-emulation/emul-linux-x86-gtklibs-1.0
 		app-emulation/emul-linux-x86-compat
 	)
-	>=www-client/mozilla-launcher-1.41
-	virtual/libc"
+	>=www-client/mozilla-launcher-1.41"
 
 S=${WORKDIR}/firefox
 
@@ -116,9 +112,9 @@ src_install() {
 
 	# Install icon and .desktop for menu entry
 	insinto /usr/share/pixmaps
-	doins ${FILESDIR}/icon/mozillafirefox-bin-icon.png
+	doins ${FILESDIR}/icon/mozilla-firefox-bin-icon.png
 	insinto /usr/share/applications
-	doins ${FILESDIR}/icon/mozillafirefox-bin.desktop
+	doins ${FILESDIR}/icon/mozilla-firefox-bin.desktop
 
 	# revdep-rebuild entry
 	insinto /etc/revdep-rebuild

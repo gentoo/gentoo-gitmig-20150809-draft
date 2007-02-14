@@ -1,6 +1,14 @@
 # ChangeLog for www-client/mozilla-firefox-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.69 2007/01/11 15:17:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.70 2007/02/14 18:44:54 armin76 Exp $
+
+  14 Feb 2007; Raúl Porcel <armin76@gentoo.org>
+  +files/icon/mozilla-firefox-bin.desktop,
+  +files/icon/mozilla-firefox-bin-icon.png,
+  -files/icon/mozillafirefox-bin.desktop,
+  -files/icon/mozillafirefox-bin-icon.png,
+  mozilla-firefox-bin-1.5.0.9.ebuild, mozilla-firefox-bin-2.0.0.1.ebuild:
+  Fix .desktop files, bug 147735, and drop monolithic X deps and virtual/libc
 
   11 Jan 2007; Raúl Porcel <armin76@gentoo.org>
   mozilla-firefox-bin-1.5.0.9.ebuild, mozilla-firefox-bin-2.0.0.1.ebuild:
