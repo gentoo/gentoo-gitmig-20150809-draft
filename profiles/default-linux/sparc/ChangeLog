@@ -1,6 +1,10 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.34 2007/02/14 02:18:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.35 2007/02/14 19:35:37 gustavoz Exp $
+
+  14 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> +sparc32/package.mask,
+  sparc64/package.mask:
+  Adding mono package masks
 
   14 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   sparc64/2007.0/desktop/make.defaults:
