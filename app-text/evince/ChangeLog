@@ -1,6 +1,12 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.85 2007/02/04 08:50:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.86 2007/02/14 01:30:36 dang Exp $
+
+*evince-0.6.1-r2 (14 Feb 2007)
+
+  14 Feb 2007; Daniel Gryniewicz <dang@gentoo.org> +evince-0.6.1-r2.ebuild:
+  Make evince use gnomeprint, rather than gtkprint; gtkprint is not ready, and
+  will be re-enabled in 0.7.x. bug #162151
 
   04 Feb 2007; Markus Rothe <corsair@gentoo.org> evince-0.6.1-r1.ebuild:
   Stable on ppc64; bug #164978
