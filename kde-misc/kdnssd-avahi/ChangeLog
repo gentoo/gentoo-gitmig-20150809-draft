@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kdnssd-avahi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdnssd-avahi/ChangeLog,v 1.15 2007/02/09 03:15:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdnssd-avahi/ChangeLog,v 1.16 2007/02/14 17:37:54 kloeri Exp $
+
+  14 Feb 2007; Bryan Østergaard <kloeri@gentoo.org>
+  kdnssd-avahi-0.1.2.ebuild:
+  Stable on IA64, bug 165606.
 
   09 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   kdnssd-avahi-0.1.2.ebuild:
