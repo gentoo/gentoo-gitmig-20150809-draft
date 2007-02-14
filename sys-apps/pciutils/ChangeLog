@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.93 2007/02/13 15:15:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.94 2007/02/14 07:14:18 vapier Exp $
+
+  14 Feb 2007; Mike Frysinger <vapier@gentoo.org> pciutils-2.2.4.ebuild,
+  pciutils-2.2.4-r1.ebuild:
+  Add support for USE=zlib.
 
   13 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> pciutils-2.2.4.ebuild:
   Stable on sparc

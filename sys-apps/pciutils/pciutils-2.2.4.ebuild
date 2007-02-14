@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.2.4.ebuild,v 1.3 2007/02/13 15:15:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.2.4.ebuild,v 1.4 2007/02/14 07:14:18 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -11,9 +11,9 @@ SRC_URI="ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh sparc ~x86 ~x86-fbsd"
-IUSE=""
+IUSE="zlib"
 
-DEPEND=""
+DEPEND="zlib? ( sys-libs/zlib )"
 
 src_unpack() {
 	unpack ${A}
@@ -24,6 +24,7 @@ src_unpack() {
 }
 
 src_compile() {
+	export ZLIB=$(use zlib && echo yes || echo no)
 	tc-export AR CC RANLIB
 	emake OPT="${CFLAGS}" || die "emake failed"
 }
