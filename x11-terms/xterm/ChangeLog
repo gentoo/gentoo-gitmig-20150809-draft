@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.193 2007/02/14 14:50:29 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.194 2007/02/14 15:46:21 drac Exp $
+
+*xterm-224 (14 Feb 2007)
+
+  14 Feb 2007; Samuli Suominen <drac@gentoo.org> +xterm-224.ebuild:
+  Version bump; switch to emake in src_install.
 
   14 Feb 2007; Samuli Suominen <drac@gentoo.org> xterm-223.ebuild:
   Remove virtual/x11 from deps for bug 166361.
