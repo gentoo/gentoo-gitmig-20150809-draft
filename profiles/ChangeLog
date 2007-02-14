@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.101 2007/02/13 06:14:54 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.102 2007/02/14 14:29:52 beandog Exp $
+
+  14 Feb 2007; Steve Dibb <beandog@gentoo.org> package.mask:
+  mask wordpress 2.1
 
   13 Feb 2007; Alon Bar-Lev <alonbl@gentoo.org> package.mask:
   Added >=sys-apps/suspend2-userui-0.7.0, bug#166609
