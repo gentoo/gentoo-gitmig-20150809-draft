@@ -1,6 +1,16 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.205 2007/02/06 21:27:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.206 2007/02/14 20:34:34 flameeyes Exp $
+
+*amarok-1.4.5-r1 (14 Feb 2007)
+
+  14 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/amarok-1.4.3-playlist-encoding.patch,
+  +files/amarok-1.4.5-magnatune.patch, -amarok-1.4.4-r4.ebuild,
+  -amarok-1.4.5.ebuild, +amarok-1.4.5-r1.ebuild:
+  Version bump, adding a patch to fix a possible security flaw in the
+  magnatune store support (KDE BUG #138499). Also add unzip as runtime
+  dependency as it is used for the magnatune shop.
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> amarok-1.4.5.ebuild:
   Fix dependency for amarok 1.4.5, libgpod 0.4.2 is needed at least.
