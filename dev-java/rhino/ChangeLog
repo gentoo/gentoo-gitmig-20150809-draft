@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/rhino
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.45 2007/02/13 20:25:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.46 2007/02/14 07:38:20 opfer Exp $
+
+  14 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  rhino-1.5.5-r4.ebuild, rhino-1.6.1-r3.ebuild:
+  stable x86; bug 166700
 
   13 Feb 2007; Markus Rothe <corsair@gentoo.org> rhino-1.5.5-r4.ebuild,
   rhino-1.6.1-r3.ebuild:
