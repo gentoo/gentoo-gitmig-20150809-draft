@@ -1,9 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.195 2007/02/14 18:42:39 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.196 2007/02/14 18:45:30 drac Exp $
 
   14 Feb 2007; Samuli Suominen <drac@gentoo.org> xterm-224.ebuild:
-  Forcing -j1 for emake in src_install because because of File exists error,
+  Forcing -j1 for emake in src_install because of File exists error,
   as reported by phreak.
 
 *xterm-224 (14 Feb 2007)
