@@ -1,0 +1,204 @@
+--- SConstruct.orig	2006-09-26 17:17:40.000000000 +0200
++++ SConstruct	2007-02-13 23:48:46.000000000 +0100
+@@ -32,10 +32,11 @@
+ opts.Add(BoolOption('PROFILE', 'Build for profiling (gcc only)', ''))
+ opts.Add(BoolOption('RELEASE', 'Build for release', ''))
+ opts.Add(ListOption('MULOG', 'Set debug output', '', ['debug', 'cycle', 'calltrace', 'traffictime']))
+-opts.Add(ListOption('MUSEEQTRANSLATIONS', 'Build translations for', '', ['fr','de','es','it','pl','ru','pt_BR','ja','zh','sk','he', 'ar', 'cs' ]))
+-print "Reading CFLAGS from defaults.py and Command Line arguments"
+-opts.Add(BoolOption('LOCKFLAGS', 'Don\'t modify CFLAGS, use only those selected', ''))
+-opts.Add('CFLAGS', 'Set your CCFLAGS here', '')
++opts.Add('MUSEEQTRANSLATIONS', 'Build translations for', '', )
++#['fr','de','es','it','pl','ru','pt_BR','ja','zh','sk','he', 'ar', 'cs' ]
++print "Reading FLAGS from defaults.py and Command Line arguments"
++opts.Add(BoolOption('LOCKFLAGS', 'Don\'t modify FLAGS, use only those selected', ''))
++opts.Add('FLAGS', 'Set your CCFLAGS here', '')
+ # CFLAGS are now a string, if you have a mulocal.py from 0.1.11, please remove it.
+ opts.Add(BoolOption('EPOLL', 'Use epoll when available', ''))
+ opts.Add(BoolOption('MUCOUS', 'Install Mucous (when SWIG can be found', ''))
+@@ -64,16 +65,9 @@
+ 
+ env.SConsignFile()
+ 
+-
+-# Build-dir, inspired by <...>
+-
+-if env['BUILDDIR']:
+-    arch = os.uname()[4]
+-    if arch == 'Power Macintosh': arch = 'ppc'
+-    os_name = os.uname()[0].lower().replace('-','')
+-    buildDir = 'build-%s-%s' % (arch, os_name)
+-else:
+-    buildDir = None
++# Define a static buildir, so we can clean the sources tree
++# by removing workdir/
++buildDir = 'workdir'
+ 
+ if buildDir is None:
+     libbase = '#'
+@@ -102,13 +96,7 @@
+ # All warnings if compiler is gcc
+ 
+ if os.path.basename(env['CC']) in ['gcc', 'apgcc']:
+-# env['CFLAGS'] = ['-fPIC', '-Wall', '-pipe'] # allows x86_64 to compile
+-# ['-Wall', '-pipe']) # original
+-	#flags = []
+-	#for flag in str(env['CFLAGS']).split(','):
+-		#flags.append("-"+flag)
+-	#env.Append(CCFLAGS = flags)
+-	env.Append(CCFLAGS = env['CFLAGS'].split(' '))
++	env.Append(CCFLAGS = env['FLAGS'].split(' '))
+ 	if not env['LOCKFLAGS']:
+ 		if env['RELEASE'] and "-fomit-frame-pointer" not in env["CCFLAGS"]:
+ 			env.Append(CCFLAGS = ['-fomit-frame-pointer'])
+@@ -120,8 +108,6 @@
+ 	for i in env["CCFLAGS"]:
+ 		flagstring += i + " "
+ 	print "BUILDING with CCFLAGS: "+ flagstring
+-		
+-	#print "BUILDING with CFLAGS: "+ env['CFLAGS'] 
+ 
+ 
+ # Set up additional include and library paths
+@@ -190,7 +176,8 @@
+ 		print "Couldn't figure out how to use the dynamic run-time linker"
+ 		Exit(1)
+ 	env.Replace(LIBS = libs)
+-	env.Append(CCFLAGS =  ' -fPIC' )
++	if "-fPIC" not in env["CCFLAGS"]:
++		env.Append(CCFLAGS =  ' -fPIC' )
+ 
+ 
+ if check_deps == 1:
+@@ -397,7 +384,14 @@
+ f.write('RELEASE = %s\n' % (`env['RELEASE']`))
+ f.write('MULOG = %s\n' % (`string.join(env['MULOG'], ',')`))
+ f.write('LOCKFLAGS = %s\n' % (`env['LOCKFLAGS']`))
+-f.write('CFLAGS = %s\n' % (`env['CFLAGS']`))
++
++if type(env['FLAGS']) == list:
++	CFLAGS = ""
++	for string in env['FLAGS']:
++		CFLAGS += " "+ string
++	env['FLAGS'] = CFLAGS.strip()
++	
++f.write('FLAGS = %s\n' % (`env['FLAGS']`))
+ f.write('EPOLL = %s\n' % (`env['EPOLL']`))
+ f.write('RELAY = %s\n' % (`env['RELAY']`))
+ f.write('BINRELOC = %s\n' % (`env['BINRELOC']`))
+@@ -405,7 +399,8 @@
+ f.write('MUSETUPGTK = %s\n' % (`env['MUSETUPGTK']`))
+ f.write('MUSEEQ = %s\n' % (`env['MUSEEQ']`))
+ f.write('ONLYMUSEEQ = %s\n' % (`env['ONLYMUSEEQ']`))
+-f.write('MUSEEQTRANSLATIONS = %s\n' % (`string.join(env['MUSEEQTRANSLATIONS'], ',')`))
++
++f.write('MUSEEQTRANSLATIONS = %s\n' % (`env['MUSEEQTRANSLATIONS']`))
+ f.write('MUSEEQTRAYICON = %s\n' % (`env['MUSEEQTRAYICON']`))
+ f.write('QSA = %s\n' % (`env['QSA']`))
+ f.write('RELAY_QSA = %s\n' % (`env['RELAY_QSA']`))
+--- Tools/SConscript	2006-05-26 21:47:57.000000000 +0200
++++ Tools/SConscript	2007-02-13 17:24:34.000000000 +0100
+@@ -1,5 +1,5 @@
+ Import('env')
+-import os
++import os, SCons
+ if env['RELAY']:
+ 	from muscons import Relay
+ 
+@@ -16,7 +16,20 @@
+ if env['VORBIS']:
+ 	env_libmuscan.ParseConfig('pkg-config --libs --cflags vorbisfile')
+ 	if conf.CheckLibWithHeader('', 'vorbis/vorbisfile.h', 'C++', 'ov_clear(0);'):
+-		env_libmuscan.Append(CPPDEFINES = {'HAVE_VORBIS': 1})
++		#print SCons.__version__
++		sconsversion = SCons.__version__
++		sv = sconsversion.split(".")
++		try:
++			if len(sv) > 2:
++				major, minor, micro = sv[0], sv[1], sv[2]
++			else:
++				major, minor, micro = sv[0], sv[1], 0
++			if int(minor) == 96 and int(micro) >= 93:
++				env_libmuscan.Append(CPPDEFINES = 'HAVE_VORBIS=1')
++			else:
++				env_libmuscan.Append(CPPDEFINES = {'HAVE_VORBIS':1})
++		except Exception, error:
++			print "ERROR:", error
+ 		print "OGG Vorbis found, compiling into muscan."
+ 	else:
+ 		print "OGG Vorbis NOT found, not compiled into muscan."
+--- defaults.py	2006-09-26 17:17:40.000000000 +0200
++++ defaults.py	2007-02-13 17:24:39.000000000 +0100
+@@ -29,7 +29,7 @@
+ LOCKFLAGS=0
+ 
+ # CCFLAGS (fPIC, Wall, pipe) Do not include the prefix "-"
+-CFLAGS='-fPIC -Wall -pipe'
++FLAGS='-fPIC -Wall -pipe'
+ 
+ # Enable OGG Vorbis support (if available) in file scanner (muscan)
+ VORBIS=1
+--- museeq/SConscript	2006-09-13 11:24:31.000000000 +0200
++++ museeq/SConscript	2007-02-13 17:24:33.000000000 +0100
+@@ -129,7 +129,7 @@
+ 
+ if not QTDIR and os.environ.has_key('QTDIR'):
+     QTDIR = os.environ['QTDIR']
+-ts_templates= env['MUSEEQTRANSLATIONS']
++ts_templates= env['MUSEEQTRANSLATIONS'].split(",")
+ tr_dir = "translations/"
+ translations = []
+ qm_files = []
+--- Mucipher/python/SConscript	2006-06-07 12:23:42.000000000 +0200
++++ Mucipher/python/SConscript	2007-02-13 17:24:22.000000000 +0100
+@@ -23,16 +23,26 @@
+     env_swigpy.Append(LIBS = ['ucipher'])
+     env_swigpy.Replace(SHLIBPREFIX='')
+ 
++    if not os.path.exists("mucipher.py"):
++        open(str("mucipher.py"), "w").write( open(os.path.abspath("../../../Mucipher/python/mucipher.py")).read())
++    if not os.path.exists("mucipher.i"):
++        open(str("mucipher.i"), "w").write(open(os.path.abspath("../mucipher.i")).read())
++    if not os.path.exists("wraphelp.c"):
++        open(str("wraphelp.c"), "w").write(open(os.path.abspath("../wraphelp.c")).read())
+     env_swigpy.Command("mucipher.i", "../mucipher.i", file_copy)
+     env_swigpy.Command("wraphelp.c", "../wraphelp.c", file_copy)
+ 
+     mucipherc = env_swigpy.SharedLibrary('_mucipherc', sources, SWIGFLAGS='-python')
+-
++    if type(mucipherc) == type([]):
++        mucipherc = mucipherc[0]
+     py_dest = env['DESTDIR'] + os.path.join(sys.prefix, "lib", "python" + py_ver, "site-packages")
+ 
+-    install = env.Install(py_dest, source = [ mucipherc, 'mucipherc.py',  'mucipher.py'])
++    dp1 = env_swigpy.Install(py_dest, 'mucipherc.py')
++    dp2 = env_swigpy.Install(py_dest, mucipherc)
++    dp3 = env_swigpy.Install(py_dest, "mucipher.py")
++    Depends(dp1, dp2)
+ 
+-    env.Alias('install_mucipher',  install)
++    env.Alias('install_mucipher',  [dp1, dp2, dp3])
+     env.Alias('install', 'install_mucipher')
+ else:
+ 	print "WARNING: Python.h include not found, please install Python's development packages"
+--- Mucipher/SConscript	2006-06-07 12:23:42.000000000 +0200
++++ Mucipher/SConscript	2007-02-13 17:24:22.000000000 +0100
+@@ -1,5 +1,5 @@
+ Import('env')
+-
++import os
+ sources = Split("""
+     md5.c
+     sha.c
+@@ -10,7 +10,10 @@
+ 
+ 
+ env.StaticLibrary(target = 'ucipher', source = sources)
+-
++if not os.path.exists("mucipher.i"):
++    open(str("mucipher.i"), "w").write(open(os.path.abspath("../../Mucipher/mucipher.i")).read())
++if not os.path.exists("wraphelp.c"):
++    open(str("wraphelp.c"), "w").write(open(os.path.abspath("../../Mucipher/wraphelp.c")).read())
+ 
+ if 'swig' in env['TOOLS']:
+     import os

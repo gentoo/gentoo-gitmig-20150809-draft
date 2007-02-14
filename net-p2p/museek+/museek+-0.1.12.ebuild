@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/museek+-0.1.12.ebuild,v 1.1 2007/02/12 20:32:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/museek+-0.1.12.ebuild,v 1.2 2007/02/14 10:46:54 armin76 Exp $
 
 inherit qt3 eutils
 
@@ -47,6 +47,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-libxmlpp-dep-order.patch"
+	epatch "${FILESDIR}/${P}-scons-0.96.94.patch"
+	epatch "${FILESDIR}/${P}-musetup-gtk-spaces.patch"
 }
 
 src_compile() {
@@ -74,8 +76,7 @@ src_compile() {
 src_install() {
 	scons DESTDIR="${D}" install || die "scons install failed"
 	dodoc README
-	exeinto /usr/bin
-	doexe "${FILESDIR}/museek"
+	dobin "${FILESDIR}/museek"
 
 	if use qt3 ; then
 		doicon "icons/museeq-circle2.png"
