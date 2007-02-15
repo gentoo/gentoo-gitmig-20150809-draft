@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kpresenter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kpresenter/ChangeLog,v 1.62 2007/02/14 12:01:15 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kpresenter/ChangeLog,v 1.63 2007/02/15 00:55:12 kloeri Exp $
+
+  15 Feb 2007; Bryan Østergaard <kloeri@gentoo.org>
+  kpresenter-1.6.1.ebuild:
+  Stable on Alpha, bug 166246.
 
   14 Feb 2007; Bryan Østergaard <kloeri@gentoo.org>
   kpresenter-1.6.1.ebuild:

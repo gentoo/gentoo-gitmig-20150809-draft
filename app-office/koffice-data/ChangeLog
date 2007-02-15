@@ -1,6 +1,10 @@
 # ChangeLog for app-office/koffice-data
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-data/ChangeLog,v 1.64 2007/02/14 11:40:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-data/ChangeLog,v 1.65 2007/02/15 00:41:50 kloeri Exp $
+
+  15 Feb 2007; Bryan Østergaard <kloeri@gentoo.org>
+  koffice-data-1.6.1.ebuild:
+  Stable on Alpha, bug 166246.
 
   14 Feb 2007; Bryan Østergaard <kloeri@gentoo.org>
   koffice-data-1.6.1.ebuild:
