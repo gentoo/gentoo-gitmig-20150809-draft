@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/libcpml-5.2.01-r3.ebuild,v 1.5 2004/07/02 04:44:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/libcpml-5.2.01-r3.ebuild,v 1.6 2007/02/15 11:21:58 dragonheart Exp $
 
 inherit eutils rpm
 
@@ -51,5 +51,4 @@ src_install() {
 	dosym ./compaq/cpml-5.2.0/libcpml_${EV}.so /usr/lib/libcpml.so
 	dosym ./compaq/cpml-5.2.0/libcpml_${EV}.a /usr/lib/libcpml.a
 
-	prepall
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/libcpml-5.2.01-r2.ebuild,v 1.7 2004/07/14 14:32:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/libcpml-5.2.01-r2.ebuild,v 1.8 2007/02/15 11:21:58 dragonheart Exp $
 
 S=${WORKDIR}/usr
 SRC_URI=""
@@ -52,7 +52,6 @@ src_install () {
 
 	dodir /usr/share
 	mv ${D}/usr/doc ${D}/usr/share
-	prepalldocs
 
 	dosym ./compaq/cpml-5.2.0/libcpml_${EV}.so /usr/lib/libcpml.so
 	dosym ./compaq/cpml-5.2.0/libcpml_${EV}.a /usr/lib/libcpml.a
