@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.5.4-r1.ebuild,v 1.2 2007/02/15 21:48:59 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.5.4-r1.ebuild,v 1.3 2007/02/15 22:06:12 dang Exp $
 
 inherit autotools eutils flag-o-matic linux-info
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.gnome.org/~jamiemcc/tracker/${PN}-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="applet debug fam gnome gsf gstreamer jpeg pdf test xine"
 
 RDEPEND=">=dev-libs/glib-2.12.0
@@ -35,7 +35,7 @@ RDEPEND=">=dev-libs/glib-2.12.0
 					>=gnome-base/gnome-desktop-2.14
 				)
 		 gsf? ( >=gnome-extra/libgsf-1.13 )
-		 gstreamer? ( >=media-libs/gstreamer-0.10 )
+		 !amd64? ( gstreamer? ( >=media-libs/gstreamer-0.10 ) )
 		 jpeg? ( >=media-gfx/exif-0.6 )
 		 pdf?	(
 		 			>=x11-libs/cairo-1.0
@@ -112,7 +112,7 @@ src_unpack() {
 src_compile() {
 	local myconf="--enable-external-sqlite"
 
-	if use gstreamer ; then
+	if ! use amd64 && use gstreamer ; then
 		myconf="${myconf} --enable-video-extractor=gstreamer"
 	elif use xine ; then
 		myconf="${myconf} --enable-video-extractor=xine"

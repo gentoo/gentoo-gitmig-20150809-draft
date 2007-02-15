@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.9 2007/02/15 21:48:59 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.10 2007/02/15 22:06:12 dang Exp $
+
+  15 Feb 2007; Daniel Gryniewicz <dang@gentoo.org> tracker-0.5.4-r1.ebuild:
+  amd64 keyword for tracker; don't link to gstreamer, it cores on 64-bit
 
   15 Feb 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   tracker-0.5.4-r1.ebuild:
