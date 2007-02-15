@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.22 2007/02/15 13:58:19 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.23 2007/02/15 15:24:58 george Exp $
 #
 # Author: George Shapovalov <george@gentoo.org>
 # Belongs to: ada herd <ada@gentoo.org>
@@ -8,7 +8,7 @@
 # Note: HOMEPAGE and LICENSE are set in appropriate ebuild, as
 # gnat is developed by FSF and AdaCore "in parallel"
 
-inherit eutils versionator toolchain-funcs flag-o-matic multilib libtool fixheadtails gnuconfig
+inherit eutils versionator toolchain-funcs flag-o-matic multilib libtool fixheadtails gnuconfig pax-utils
 
 EXPORT_FUNCTIONS pkg_setup pkg_postinst pkg_postrm src_unpack src_compile src_install
 
@@ -340,6 +340,7 @@ gnatbuild_src_unpack() {
 	case $1 in
 		base_unpack)
 			unpack ${A}
+			pax-mark -execstack $(find ${GNATBOOT} -name gnat1)
 
 			cd ${S}
 			# patching gcc sources, following the toolchain
