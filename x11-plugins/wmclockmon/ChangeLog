@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmclockmon
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/ChangeLog,v 1.19 2006/11/16 12:03:35 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/ChangeLog,v 1.20 2007/02/15 12:54:00 s4t4n Exp $
+
+  15 Feb 2007; Michele Noberasco <s4t4n@gentoo.org> wmclockmon-0.8.0-r1.ebuild:
+  Set proper versions in WANT_{AUTOCONF,MAKE}, fixing bug #166366. Stable for x86.
 
 *wmclockmon-0.8.0-r1 (16 Nov 2006)
 
