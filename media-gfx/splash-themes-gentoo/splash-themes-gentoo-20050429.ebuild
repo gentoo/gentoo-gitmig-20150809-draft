@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-gentoo/splash-themes-gentoo-20050429.ebuild,v 1.4 2005/07/20 20:50:29 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-gentoo/splash-themes-gentoo-20050429.ebuild,v 1.5 2007/02/15 15:23:06 wolf31o2 Exp $
 
 DESCRIPTION="A collection of Gentoo themes for splashutils."
 HOMEPAGE="http://dev.gentoo.org/~spock/"
@@ -11,6 +11,7 @@ LICENSE="freedist"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 DEPEND=">=media-gfx/splashutils-1.1.9.5"
+RESTRICT="binchecks strip"
 
 src_install() {
 	dodir /etc/splash/{emergence,gentoo}
