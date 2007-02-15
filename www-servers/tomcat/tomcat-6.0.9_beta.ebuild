@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.9_beta.ebuild,v 1.2 2007/02/09 19:38:05 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.9_beta.ebuild,v 1.3 2007/02/15 02:19:06 wltjr Exp $
+
+WANT_ANT_TASKS="ant-trax"
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -25,9 +27,7 @@ RDEPEND="|| ( >=virtual/jre-1.5 >=virtual/jre-1.6 )
 
 DEPEND="|| ( >=virtual/jdk-1.5 >=virtual/jdk-1.6 )
 	${RDEPEND}
-	test? ( dev-java/junit )
-	dev-java/ant-core
-	dev-java/ant-trax"
+	test? ( dev-java/junit )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -38,8 +38,6 @@ WEBAPPS_DIR="/var/lib/${TOMCAT_NAME}/webapps"
 pkg_setup() {
 	enewgroup tomcat 265
 	enewuser tomcat 265 -1 /dev/null tomcat
-
-	WANT_ANT_TASKS="ant-trax"
 }
 
 src_unpack() {

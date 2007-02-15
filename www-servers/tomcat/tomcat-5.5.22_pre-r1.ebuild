@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.22_pre.ebuild,v 1.1 2007/02/13 22:39:09 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.22_pre-r1.ebuild,v 1.1 2007/02/15 02:19:06 wltjr Exp $
+
+WANT_ANT_TASKS="ant-trax"
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -17,40 +19,38 @@ LICENSE="Apache-2.0"
 
 IUSE="admin java5 doc examples source test"
 
-RDEPEND="=dev-java/eclipse-ecj-3.1*
+RDEPEND="=dev-java/eclipse-ecj-3.2*
 	=dev-java/commons-beanutils-1.7*
 	>=dev-java/commons-collections-3.1
 	>=dev-java/commons-daemon-1.0.1
 	>=dev-java/commons-dbcp-1.2.1
 	>=dev-java/commons-digester-1.7
 	>=dev-java/commons-fileupload-1.1
+	=dev-java/commons-httpclient-2.0*
 	>=dev-java/commons-io-1.1
 	>=dev-java/commons-el-1.0
 	>=dev-java/commons-launcher-0.9
 	>=dev-java/commons-logging-1.0.4
 	>=dev-java/commons-modeler-2.0
 	>=dev-java/commons-pool-1.2
+	>=dev-java/junit-3.8.1
 	>=dev-java/log4j-1.2.9
+	>=dev-java/saxpath-1.0
 	~dev-java/tomcat-servlet-api-${PV}
 	admin? ( =dev-java/struts-1.2* )
 	dev-java/sun-javamail
 	java5? ( || ( >=virtual/jre-1.5 =virtual/jre-1.6 ) )
 	!java5? (
 		=virtual/jre-1.4*
-		=dev-java/commons-httpclient-2.0*
 		dev-java/sun-jaf
-		>=dev-java/junit-3.8.1
 		=dev-java/mx4j-core-3*
-		>=dev-java/saxpath-1.0
 		>=dev-java/xerces-2.7.1
 	   	=dev-java/xml-commons-external-1.3*
 	   )"
 DEPEND="java5? ( || ( >=virtual/jdk-1.5 >=virtual/jdk-1.6 ) )
 	!java5? ( =virtual/jdk-1.4* )
 	${RDEPEND}
-	>=dev-java/java-config-2.0.31
-	dev-java/ant-core
-	dev-java/ant-trax"
+	>=dev-java/java-config-2.0.31"
 
 S=${WORKDIR}/${MY_P}
 
@@ -63,8 +63,6 @@ pkg_setup() {
 	enewuser tomcat -1 -1 /dev/null tomcat
 
 	java-pkg_filter-compiler ecj-3.1  ecj-3.2
-
-	WANT_ANT_TASKS="ant-trax"
 
 	if use java5; then
 		JAVA_PKG_WANT_SOURCE="1.5"
@@ -135,16 +133,18 @@ src_compile(){
 	antflags="${antflags} -Dcommons-dbcp.jar=$(java-config -p commons-dbcp)"
 	antflags="${antflags} -Dcommons-el.jar=$(java-config -p commons-el)"
 	antflags="${antflags} -Dcommons-fileupload.jar=$(java-config -p commons-fileupload)"
+	antflags="${antflags} -Dcommons-httpclient.jar=$(java-config -p commons-httpclient)"
 	antflags="${antflags} -Dcommons-launcher.jar=$(java-config -p commons-launcher)"
 	antflags="${antflags} -Dcommons-logging.jar=$(java-pkg_getjar commons-logging commons-logging.jar)"
 	antflags="${antflags} -Dcommons-logging-api.jar=$(java-pkg_getjar commons-logging commons-logging-api.jar)"
 	antflags="${antflags} -Dcommons-pool.jar=$(java-config -p commons-pool)"
 	antflags="${antflags} -Dcommons-modeler.jar=$(java-config -p commons-modeler)"
-	antflags="${antflags} -Djdt.jar=$(java-pkg_getjar eclipse-ecj-3.1 ecj.jar)"
+	antflags="${antflags} -Djdt.jar=$(java-pkg_getjar eclipse-ecj-3.2 ecj.jar)"
 	antflags="${antflags} -Djsp-api.jar=$(java-pkg_getjar tomcat-servlet-api-2.4 jsp-api.jar)"
 	antflags="${antflags} -Djunit.jar=$(java-config -p junit)"
 	antflags="${antflags} -Dlog4j.jar=$(java-config -p log4j)"
 	antflags="${antflags} -Dmail.jar=$(java-pkg_getjar sun-javamail mail.jar)"
+	antflags="${antflags} -Dsaxpath.jar=$(java-pkg_getjar saxpath saxpath.jar)"
 	antflags="${antflags} -Dservlet-api.jar=$(java-pkg_getjar tomcat-servlet-api-2.4 servlet-api.jar)"
 	if use admin; then
 		antflags="${antflags} -Dstruts.jar=$(java-pkg_getjar struts-1.2 struts.jar)"
@@ -160,10 +160,8 @@ src_compile(){
 	antflags="${antflags} -Djasper.home=${S}/jasper"
 	if ! use java5; then
 		antflags="${antflags} -Dactivation.jar=$(java-config -p sun-jaf)"
-		antflags="${antflags} -Dcommons-httpclient.jar=$(java-config -p commons-httpclient)"
 		antflags="${antflags} -Djmx.jar=$(java-pkg_getjar mx4j-core-3.0 mx4j.jar)"
 		antflags="${antflags} -Djmx-remote.jar=$(java-pkg_getjar mx4j-core-3.0 mx4j-rjmx.jar)"
-		antflags="${antflags} -Dsaxpath.jar=$(java-pkg_getjar saxpath saxpath.jar)"
 		antflags="${antflags} -DxercesImpl.jar=$(java-pkg_getjar xerces-2 xercesImpl.jar)"
 		antflags="${antflags} -Dxml-apis.jar=$(java-pkg_getjar xml-commons-external-1.3 xml-apis.jar)"
 	fi
