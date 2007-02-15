@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/music-applet/music-applet-2.0.0.ebuild,v 1.3 2007/02/07 03:26:14 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/music-applet/music-applet-2.1.0.ebuild,v 1.1 2007/02/15 01:34:16 metalgod Exp $
 
 inherit gnome2
 
