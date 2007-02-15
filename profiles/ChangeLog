@@ -1,9 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.107 2007/02/15 14:55:23 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.108 2007/02/15 15:12:13 jurek Exp $
 
-  15 Feb 2007; Jurek Bartuszek <jurek@gentoo.org> package.mask:
-  Added dev-util/codeblocks, needs testing
+  15 Feb 2007; Jurek Bartuszek <jurek@gentoo.org> package.mask, use.local.desc:
+  Added dev-util/codeblocks to package.mask, needs testing
+  Added contrib USE flag for dev-util/codeblocks
 
   14 Feb 2007; Christian Faulhammer <opfer@gentoo.org> use.local.desc:
   add mp4 USE flag for media-sound/cmus

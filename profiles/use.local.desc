@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2600 2007/02/14 21:35:23 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2601 2007/02/15 15:12:13 jurek Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -548,6 +548,7 @@ dev-util/buildbot:irc - Add support for status delivery through an ircbot.
 dev-util/buildbot:mail - Add support for watching a maildir for commits.
 dev-util/buildbot:web - Add a web interface ("waterfall" page).
 dev-util/catalyst:ccache - Enables ccache support
+dev-util/codeblocks:contrib - Build additional contrib components
 dev-util/cvs:server - Enable server support
 dev-util/debootstrap:nodpkg - Don't install dpkg (useful for building a non-debian system)
 dev-util/eclipse-sdk:atk - Enable atk (accessibility) support
