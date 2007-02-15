@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bittornado
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/ChangeLog,v 1.58 2007/02/13 11:06:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/ChangeLog,v 1.59 2007/02/15 12:58:41 mabi Exp $
+
+  15 Feb 2007; Matti Bickel <mabi@gentoo.org> bittornado-0.3.18.ebuild:
+  ppc stable (bug #166431)
 
   13 Feb 2007; Markus Rothe <corsair@gentoo.org> bittornado-0.3.18.ebuild:
   Stable on ppc64; bug #166431
