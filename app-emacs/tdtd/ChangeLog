@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/tdtd
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tdtd/ChangeLog,v 1.6 2006/05/17 06:24:10 mkennedy Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tdtd/ChangeLog,v 1.7 2007/02/15 17:45:20 opfer Exp $
+
+  15 Feb 2007; Christian Faulhammer <opfer@gentoo.org> tdtd-0.7.1-r1.ebuild:
+  remove dependency on virtual/emacs; add a pair of quotes
 
 *tdtd-0.7.1-r1 (17 May 2006)
 
