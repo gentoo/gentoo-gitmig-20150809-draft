@@ -1,8 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.14.2.ebuild,v 1.1 2007/02/15 20:00:29 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.14.2.ebuild,v 1.2 2007/02/15 20:05:48 dev-zero Exp $
 
 NEED_PYTHON=2.4
+
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=1.9
 
@@ -29,7 +30,7 @@ RDEPEND=">=x11-libs/gtk+-2.4
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-DOCS="AUTHORS NEWS"
+DOCS="AUTHORS ChangeLog NEWS README"
 
 src_unpack() {
 	gnome2_src_unpack
