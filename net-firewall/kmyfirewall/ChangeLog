@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/kmyfirewall
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/ChangeLog,v 1.28 2007/01/18 22:14:07 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/ChangeLog,v 1.29 2007/02/15 23:00:22 jokey Exp $
+
+  15 Feb 2007; Markus Ullmann <jokey@gentoo.org> kmyfirewall-1.0.1.ebuild:
+  Stable on x86
 
   18 Jan 2007; Markus Ullmann <jokey@gentoo.org>
   -files/kmyfirewall-1.0-logprefix.diff,
