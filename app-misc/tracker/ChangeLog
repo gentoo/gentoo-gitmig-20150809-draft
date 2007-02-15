@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.10 2007/02/15 22:06:12 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.11 2007/02/15 22:12:09 compnerd Exp $
+
+  15 Feb 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  tracker-0.5.4-r1.ebuild:
+  Add mplayer or totem as a dependency in the case that you build without
+  gstreamer or xine
 
   15 Feb 2007; Daniel Gryniewicz <dang@gentoo.org> tracker-0.5.4-r1.ebuild:
   amd64 keyword for tracker; don't link to gstreamer, it cores on 64-bit
