@@ -1,21 +1,22 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.4.2-r1.ebuild,v 1.6 2006/12/01 03:25:04 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.4.3_rc2.ebuild,v 1.1 2007/02/15 15:44:04 stefaan Exp $
 
 inherit eutils linux-mod versionator toolchain-funcs
 
-PATCHVER=0.9
+PATCHVER=0.12
+MY_PV=${PV/_rc/rc}
 MY_PN=${PN/-kernel}
-MY_P=${MY_PN}-${PV}
+MY_P=${MY_PN}-${MY_PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="The OpenAFS distributed file system kernel module"
 HOMEPAGE="http://www.openafs.org/"
-SRC_URI="http://openafs.org/dl/${MY_PN}/${PV}/${MY_P}-src.tar.bz2
+SRC_URI="http://openafs.org/dl/${MY_PN}/${MY_PV}/${MY_P}-src.tar.bz2
 	mirror://gentoo/${MY_PN}-gentoo-${PATCHVER}.tar.bz2"
 
-LICENSE="IPL-1"
+LICENSE="IBM openafs-krb5 openafs-krb5-a APSL-2 sun-rpc"
 SLOT="0"
-KEYWORDS="alpha amd64 ~ia64 ppc ppc64 x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 PATCHDIR=${WORKDIR}/gentoo/patches/$(get_version_component_range 1-2)
@@ -32,9 +33,6 @@ src_unpack() {
 
 	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}
 
-	# fix unresolved symbol on amd64 (bug #149274)
-	epatch ${FILESDIR}/tasklist_lock.patch
-
 	./regen.sh || die "Failed: regenerating configure script"
 }
 
@@ -46,10 +44,10 @@ src_compile() {
 
 src_install() {
 	MOD_SRCDIR=$(expr ${S}/src/libafs/MODLOAD-*)
-	[ -f ${MOD_SRCDIR}/openafs.${KV_OBJ} ] \
+	[ -f ${MOD_SRCDIR}/libafs.${KV_OBJ} ] \
 			|| die "Couldn't find compiled kernel module"
 
-	MODULE_NAMES='openafs(fs/openafs:$MOD_SRCDIR)'
+	MODULE_NAMES='libafs(fs/openafs:$MOD_SRCDIR)'
 
 	linux-mod_src_install
 }
