@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/gnome-themes-2.16.2.ebuild,v 1.10 2007/01/21 22:10:34 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/gnome-themes-2.16.2.ebuild,v 1.11 2007/02/15 17:28:38 compnerd Exp $
 
 inherit gnome2
 
@@ -20,6 +20,9 @@ DEPEND="${RDEPEND}
 		>=dev-util/intltool-0.35"
 
 DOCS="AUTHORS ChangeLog NEWS README"
+
+# This ebuild does not install any binaries
+RESTRICT="binchecks strip"
 
 pkg_setup() {
 	G2CONF="${G2CONF} $(use_enable accessibility all-themes)"
