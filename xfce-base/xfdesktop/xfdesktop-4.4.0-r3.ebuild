@@ -1,14 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.4.0-r3.ebuild,v 1.1 2007/02/09 16:42:37 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.4.0-r3.ebuild,v 1.2 2007/02/15 01:36:53 nichoj Exp $
 
 inherit xfce44
 
 xfce44
+xfce44_core_package
 
 DESCRIPTION="Desktop manager"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="dbus debug doc minimal"
+
+LANG="ca cs da de el es et eu fi fr he hu ja ko nl pl pt_BR ro ru sk sv uk vi zh_CN zh_TW"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libSM
@@ -27,7 +30,14 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool"
 
+for X in ${LANG}; do
+	IUSE="${IUSE} linguas_${X}"
+done
+
 XFCE_CONFIG="${XFCE_CONFIG} $(use_enable doc xsltproc)"
+DOCS="AUTHORS ChangeLog NEWS TODO README"
+XFCE_LOCALIZED_CONFIGS="/etc/xdg/xfce4/desktop/xfce-registered-categories.xml
+	/etc/xdg/xfce4/desktop/menu.xml"
 
 pkg_setup() {
 	if use dbus; then
@@ -43,6 +53,17 @@ pkg_setup() {
 	fi
 }
 
-DOCS="AUTHORS ChangeLog NEWS TODO README"
+src_install() {
+	xfce44_src_install
 
-xfce44_core_package
+	# clean out the config files that don't affect us
+	local config lang
+	for config in ${XFCE_LOCALIZED_CONFIGS}; do
+		for lang in ${LANG}; do
+			local localized_config="${D}/${config}.${lang}"
+			if [[ -f ${localized_config} ]]; then
+				use "linguas_${lang}" || rm ${localized_config}
+			fi
+		done
+	done
+}
