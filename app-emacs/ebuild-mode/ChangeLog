@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/ebuild-mode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ebuild-mode/ChangeLog,v 1.10 2007/01/02 21:55:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ebuild-mode/ChangeLog,v 1.11 2007/02/15 08:09:16 opfer Exp $
+
+*ebuild-mode-1.3 (15 Feb 2007)
+
+  15 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  -ebuild-mode-1.2.ebuild, +ebuild-mode-1.3.ebuild:
+  version bump: highlight elog (bug 161121), and add ebuild-mode-hook for
+  users (thanks to Davide Angelocola <davide.angelocola@tiscali.it>); remove
+  old version
 
   02 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ebuild-mode-1.2.ebuild:
   Add ~sparc-fbsd keyword.
