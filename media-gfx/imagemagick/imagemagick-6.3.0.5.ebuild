@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.3.0.5.ebuild,v 1.11 2007/02/11 11:24:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.3.0.5.ebuild,v 1.12 2007/02/15 17:57:41 jer Exp $
 
 inherit eutils multilib perl-app
 
@@ -54,7 +54,7 @@ src_unpack() {
 	chmod +x config.sub
 	einfo ${S}
 	epatch "${FILESDIR}"/${PN}-6.3.0.5-docs.patch
-#	epatch "${FILESDIR}"/imagemagick-perl.patch
+	epatch "${FILESDIR}"/${P}-no-lMagick.patch
 
 	# from bug #146713, sent upstream
 	epatch "${FILESDIR}"/${P}-configure-windows-fonts.patch

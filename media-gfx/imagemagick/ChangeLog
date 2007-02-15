@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.212 2007/02/08 16:01:46 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.213 2007/02/15 17:57:41 jer Exp $
+
+  15 Feb 2007; Jeroen Roovers <jer@gentoo.org>
+  +files/imagemagick-6.3.0.5-no-lMagick.patch, imagemagick-6.3.0.5.ebuild:
+  Fix bug #155804 while sekretarz is MIA. Cross fingers. Thanks to kojiro for
+  the final patch.
 
   08 Feb 2007; Daniel Drake <dsd@gentoo.org>
   -files/imagemagick-6.2.5.4-docs.patch,
