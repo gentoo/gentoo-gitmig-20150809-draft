@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/sqlgrey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/ChangeLog,v 1.6 2007/01/30 00:26:51 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/ChangeLog,v 1.7 2007/02/15 11:30:39 dragonheart Exp $
+
+  15 Feb 2007; Daniel Black <dragonheart@gentoo.org> sqlgrey-1.6.7.ebuild,
+  sqlgrey-1.7.4.ebuild:
+  no more prep all as per bug #140699
 
   30 Jan 2007; Andrej Kacian <ticho@gentoo.org> sqlgrey-1.6.7.ebuild,
   sqlgrey-1.7.4.ebuild:

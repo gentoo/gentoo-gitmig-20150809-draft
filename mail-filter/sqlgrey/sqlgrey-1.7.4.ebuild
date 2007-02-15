@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation# Distributed under the terms of the GNU General Public License v2
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/sqlgrey-1.7.4.ebuild,v 1.6 2007/01/30 00:26:51 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/sqlgrey-1.7.4.ebuild,v 1.7 2007/02/15 11:30:39 dragonheart Exp $
 
 inherit eutils
 
@@ -31,8 +31,7 @@ pkg_setup() {
 }
 
 src_install () {
-	make gentoo-install ROOTDIR=${D}
-	prepall
+	make gentoo-install ROOTDIR="${D}"
 	dodoc HOWTO FAQ README README.OPTINOUT README.PERF COPYING TODO Changelog
 
 	# keeps SQLgrey data in /var/spool/sqlgrey
