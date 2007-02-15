@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pcsc-slb-rf72-drv
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-slb-rf72-drv/ChangeLog,v 1.5 2006/10/07 11:28:45 alonbl Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-slb-rf72-drv/ChangeLog,v 1.6 2007/02/15 19:38:06 alonbl Exp $
+
+  15 Feb 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  pcsc-slb-rf72-drv-1.1.0-r1.ebuild:
+  Fix postrm for multi libraries
 
 *pcsc-slb-rf72-drv-1.1.0-r1 (07 Oct 2006)
 

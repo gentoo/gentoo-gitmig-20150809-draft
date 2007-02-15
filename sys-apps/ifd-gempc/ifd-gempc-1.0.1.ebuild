@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifd-gempc/ifd-gempc-1.0.1.ebuild,v 1.1 2006/10/07 02:15:01 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifd-gempc/ifd-gempc-1.0.1.ebuild,v 1.2 2007/02/15 19:35:52 alonbl Exp $
 
 inherit eutils
 
@@ -43,7 +43,7 @@ pkg_postrm() {
 	# Without this, pcscd will not start next time.
 	#
 	local conf="/etc/reader.conf.d/${PN}.conf"
-	if ! [ -f "$(grep LIBPATH "${conf}" | sed 's/LIBPATH *//' | sed 's/ *$//g')" ]; then
+	if ! [ -f "$(grep LIBPATH "${conf}" | sed 's/LIBPATH *//' | sed 's/ *$//g' | head -n 1)" ]; then
 		rm "${conf}"
 		update-reader.conf
 		einfo "NOTICE:"

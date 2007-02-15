@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-slb-rf72-drv/pcsc-slb-rf72-drv-1.1.0-r1.ebuild,v 1.1 2006/10/07 11:28:45 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-slb-rf72-drv/pcsc-slb-rf72-drv-1.1.0-r1.ebuild,v 1.2 2007/02/15 19:38:06 alonbl Exp $
 
 inherit eutils
 
@@ -50,7 +50,7 @@ pkg_postrm() {
 	# Without this, pcscd will not start next time.
 	#
 	local conf="/etc/reader.conf.d/${PN}.conf"
-	if ! [ -f "$(grep LIBPATH "${conf}" | sed 's/LIBPATH *//' | sed 's/ *$//g')" ]; then
+	if ! [ -f "$(grep LIBPATH "${conf}" | sed 's/LIBPATH *//' | sed 's/ *$//g' | head -n 1)" ]; then
 		rm "${conf}"
 		update-reader.conf
 		einfo "NOTICE:"
