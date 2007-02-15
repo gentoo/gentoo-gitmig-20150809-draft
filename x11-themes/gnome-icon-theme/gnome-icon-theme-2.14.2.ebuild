@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/gnome-icon-theme-2.14.2.ebuild,v 1.14 2006/10/20 15:19:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/gnome-icon-theme-2.14.2.ebuild,v 1.15 2007/02/15 16:05:14 compnerd Exp $
 
 inherit gnome2
 
@@ -20,3 +20,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.29"
 
 DOCS="AUTHORS ChangeLog NEWS TODO"
+
+# This ebuild does not install any binaries
+RESTRICT="binchecks strip"
