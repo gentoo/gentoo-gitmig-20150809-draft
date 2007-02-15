@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.21 2007/02/05 13:55:47 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.22 2007/02/15 13:58:19 george Exp $
 #
 # Author: George Shapovalov <george@gentoo.org>
 # Belongs to: ada herd <ada@gentoo.org>
@@ -10,7 +10,7 @@
 
 inherit eutils versionator toolchain-funcs flag-o-matic multilib libtool fixheadtails gnuconfig
 
-EXPORT_FUNCTIONS pkg_setup pkg_postinst pkg_prerm src_unpack src_compile src_install
+EXPORT_FUNCTIONS pkg_setup pkg_postinst pkg_postrm src_unpack src_compile src_install
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
@@ -101,6 +101,10 @@ LIBEXECPATH=${PREFIX}/libexec/${PN}/${CTARGET}/${SLOT}
 INCLUDEPATH=${LIBPATH}/include
 BINPATH=${PREFIX}/${CTARGET}/${PN}-bin/${SLOT}
 DATAPATH=${PREFIX}/share/${PN}-data/${CTARGET}/${SLOT}
+# ATTN! the one below should match the path defined in eselect-gnat module
+CONFIG_PATH="/usr/share/gnat/eselect"
+gnat_config_file="${D}/${CONFIG_PATH}/${CTARGET}-${PN}-${SLOT}"
+
 
 # ebuild globals
 if [[ ${PN} == "${PN_GnatPro}" ]] && [[ ${GNATMAJOR} == "3" ]]; then
@@ -204,13 +208,9 @@ add_profile_eselect_conf() {
 
 
 create_eselect_conf() {
-	# it would be good to source gnat.eselect module here too,
-	# but we only need one path
-	local config_dir="/usr/share/gnat/eselect"
-	local gnat_config_file="${D}/${config_dir}/${CTARGET}-${PN}-${SLOT}"
 	local abi
 
-	dodir ${config_dir}
+	dodir ${CONFIG_PATH}
 
 	echo "[global]" > ${gnat_config_file}
 	echo "  version=${CTARGET}-${SLOT}" >> ${gnat_config_file}
@@ -319,30 +319,13 @@ gnatbuild_pkg_postinst() {
 	fi
 }
 
-# eselect-gnat can be unmerged together with gnat-*, so we better do this before
-# actual removal takes place, rather than in postrm, like toolchain does
-gnatbuild_pkg_prerm() {
-	# files for eselect module are left behind, so we need to cleanup.
-	if [ ! -f /usr/share/eselect/modules/gnat.eselect ] ; then
-		eerror "eselect-gnat was prematurely unmerged!"
-		eerror "You will have to manually remove unnecessary files"
-		eerror "under /etc/eselect/gnat and /etc/env.d/55gnat-xxx"
-		exit # should *not* die, as this will stop unmerge!
-	fi
 
-	# this copying/modifying and then sourcing of a gnat.eselect is a hack,
-	# but having a duplicate functionality is really bad - gnat.eselect module
-	# might change..
-	cat /usr/share/eselect/modules/gnat.eselect | \
-		grep -v "svn_date_to_version" | \
-		grep -v "DESCRIPTION" \
-		> ${WORKDIR}/gnat.esel
-	. ${WORKDIR}/gnat.esel
-
-	# see if we need to unset gnat
-	if [[ $(get_current_gnat) == "${CTARGET}-${PN}-${SLOT}" ]] ; then
-		eselect gnat unset &> /dev/null
-	fi
+gnatbuild_pkg_postrm() {
+	elog "Automatic cleanup requires a somewhat big rewamp of eclasses to not"
+	elog "breack updates. For now, if you are removing this issue of gnat compiler" 
+	elog "(if this is the last version of gnat-gcc or gnat-gpl that is being "
+	elog "removed),	please manually run:"
+	elog "   rm /etc/env.d/55gnat-*"
 }
 #---->> pkg_* <<----
 
