@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/thunar
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.19 2007/02/12 19:14:05 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.20 2007/02/15 16:18:53 drac Exp $
+
+  15 Feb 2007; Samuli Suominen <drac@gentoo.org> thunar-0.8.0-r2.ebuild:
+  Use Xemake from virtualx.eclass in src_test for DISPLAY variable.
+  Bug 166388.
 
 *thunar-0.8.0-r2 (12 Feb 2007)
 

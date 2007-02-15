@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-0.8.0-r2.ebuild,v 1.1 2007/02/12 19:14:05 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-0.8.0-r2.ebuild,v 1.2 2007/02/15 16:18:53 drac Exp $
 
-inherit eutils xfce44
+inherit eutils virtualx xfce44
 
 MY_P="${P/t/T}"
 S="${WORKDIR}/${MY_P}"
@@ -66,6 +66,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-jpeg.patch"
+}
+
+src_test() {
+	Xemake check || "emake check failed."
 }
 
 DOCS="AUTHORS ChangeLog HACKING FAQ THANKS TODO README NEWS"
