@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ipw3945-1.2.0.ebuild,v 1.6 2007/02/13 16:43:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ipw3945-1.2.0.ebuild,v 1.7 2007/02/15 23:56:17 vapier Exp $
 
 inherit linux-mod eutils
 
@@ -37,8 +37,7 @@ pkg_setup() {
 	fi
 
 	if kernel_is lt 2 6 18; then
-		die "${P} needs a kernel >=2.6.18! Please set your \
-		         KERNEL_DIR or /usr/src/linux suitably"
+		die "${P} needs a kernel >=2.6.18! Please set your KERNEL_DIR or /usr/src/linux suitably"
 	fi
 
 	linux-mod_pkg_setup
