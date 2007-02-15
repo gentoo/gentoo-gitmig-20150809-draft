@@ -1,6 +1,10 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.87 2007/02/13 16:56:44 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.88 2007/02/15 19:00:27 dang Exp $
+
+  15 Feb 2007; Daniel Gryniewicz <dang@gentoo.org> liferea-1.2.5.ebuild,
+  liferea-1.2.6b.ebuild:
+  Oops, it's use amd64 not amd64
 
   13 Feb 2007; Daniel Gryniewicz <dang@gentoo.org> liferea-1.2.6b.ebuild:
   Disable lua; it was failing to compile

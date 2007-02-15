@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.2.5.ebuild,v 1.2 2007/02/12 20:50:37 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.2.5.ebuild,v 1.3 2007/02/15 19:00:27 dang Exp $
 
 WANT_AUTOMAKE=1.7
 WANT_AUTOCONF=latest
@@ -58,7 +58,7 @@ pkg_setup() {
 
 	# if you don't choose a gecko to use, we will automatically
 	# use gtkhtml2 as the backend except on amd64 (where we failed above)
-	if ! use seamonkey && ! use firefox && ! use xulrunner && ! amd64 ; then
+	if ! use seamonkey && ! use firefox && ! use xulrunner && ! use amd64 ; then
 		G2CONF="${G2CONF} --enable-gtkhtml2"
 	elif ! use amd64 && use gtkhtml ; then
 		G2CONF="${G2CONF} --enable-gtkhtml2"
