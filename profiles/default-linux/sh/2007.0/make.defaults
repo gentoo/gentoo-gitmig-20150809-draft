@@ -1,0 +1,2 @@
+STAGE1_USE="nptl nptlonly nossp unicode"
+USE="cups nptl nptlonly nossp ppds unicode"

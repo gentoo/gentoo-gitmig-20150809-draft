@@ -1,2 +1,2 @@
-STAGE1_USE="nptl nptlonly nossp"
-USE="nptl nptlonly nossp"
+STAGE1_USE="nptl nptlonly nossp unicode"
+USE="nptl nptlonly nossp unicode"
