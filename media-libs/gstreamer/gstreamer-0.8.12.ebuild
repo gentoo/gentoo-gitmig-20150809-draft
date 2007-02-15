@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.8.12.ebuild,v 1.4 2006/10/14 21:08:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.8.12.ebuild,v 1.5 2007/02/15 14:49:50 gustavoz Exp $
 
 inherit eutils flag-o-matic libtool gnome2 flag-o-matic
 
@@ -35,6 +35,8 @@ src_unpack() {
 	# Fix doc generation with jade. See bug #55700.
 	epatch ${FILESDIR}/${PN}-0.8.3-jade_fix.patch
 
+	# gcc4 sparc fix, see http://bugzilla.gnome.org/show_bug.cgi?id=312812
+	use sparc && epatch ${FILESDIR}/cothreads-gcc4.patch
 }
 
 src_compile() {

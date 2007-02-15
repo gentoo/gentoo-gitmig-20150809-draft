@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.169 2007/02/12 19:12:57 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.170 2007/02/15 14:49:50 gustavoz Exp $
+
+  15 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  +files/cothreads-gcc4.patch, gstreamer-0.8.11.ebuild,
+  gstreamer-0.8.12.ebuild:
+  Fix gst-0.8 gcc4 sparc builds, see
+  http://bugzilla.gnome.org/show_bug.cgi?id=312812
 
   12 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
   gstreamer-0.10.11.ebuild:
