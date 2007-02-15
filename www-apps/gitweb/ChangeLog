@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/gitweb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gitweb/ChangeLog,v 1.19 2007/01/12 19:46:59 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gitweb/ChangeLog,v 1.20 2007/02/15 18:39:39 ferdy Exp $
+
+*gitweb-1.5.0 (15 Feb 2007)
+
+  15 Feb 2007; Fernando J. Pereda <ferdy@gentoo.org> +gitweb-1.5.0.ebuild:
+  New upstream version
 
   12 Jan 2007; Fernando J. Pereda <ferdy@gentoo.org> files/apache.htaccess:
   Fix apache.htaccess as per bug #161073. Thanks to Ira Snyder
