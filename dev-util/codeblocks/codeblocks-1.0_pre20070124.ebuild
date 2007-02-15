@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/codeblocks-1.0_pre20070124.ebuild,v 1.1 2007/02/15 15:18:22 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/codeblocks-1.0_pre20070124.ebuild,v 1.2 2007/02/15 15:19:44 jurek Exp $
 
 #
 # WARNING:
@@ -18,7 +18,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86"
 IUSE="unicode contrib debug"
 
 RDEPEND="=x11-libs/wxGTK-${WX_GTK_VER}*"
