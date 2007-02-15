@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tdtd/tdtd-0.7.1-r1.ebuild,v 1.2 2007/02/15 17:45:20 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tdtd/tdtd-0.7.1-r1.ebuild,v 1.3 2007/02/15 18:50:58 opfer Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.menteith.com/tdtd/"
 SRC_URI="http://www.menteith.com/tdtd/data/${PN}${PV//./}.zip"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 
 DEPEND="app-arch/unzip"
 
