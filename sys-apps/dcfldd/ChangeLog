@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/dcfldd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcfldd/ChangeLog,v 1.8 2007/02/09 05:29:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcfldd/ChangeLog,v 1.9 2007/02/15 15:38:48 george Exp $
+
+*dcfldd-1.3.4.1 (15 Feb 2007)
+
+  15 Feb 2007; George Shapovalov <george@gentoo.org> +dcfldd-1.3.4.1.ebuild:
+  new version (#155464)
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
