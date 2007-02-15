@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/ode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.37 2007/02/12 19:42:33 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.38 2007/02/15 22:25:26 nyhm Exp $
+
+  15 Feb 2007; Tristan Heaven <nyhm@gentoo.org> ode-0.8.ebuild:
+  Remove broken src_test, bug #143247
 
 *ode-0.8 (12 Feb 2007)
 

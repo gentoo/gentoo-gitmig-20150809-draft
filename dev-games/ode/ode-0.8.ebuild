@@ -1,9 +1,7 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.8.ebuild,v 1.1 2007/02/12 19:42:33 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.8.ebuild,v 1.2 2007/02/15 22:25:26 nyhm Exp $
 
-WANT_AUTOCONF=latest
-WANT_AUTOMAKE=latest
 inherit eutils autotools
 
 DESCRIPTION="Open Dynamics Engine SDK"
@@ -74,8 +72,4 @@ src_install() {
 		doins drawstuff/dstest/dstest.cpp
 		doins drawstuff/src/{drawstuff.cpp,internal.h,x11.cpp}
 	fi
-}
-
-src_test() {
-	! LD_LIBRARY_PATH=ode/src ode/test/test_ode | grep -qi fail || die "test failed"
 }
