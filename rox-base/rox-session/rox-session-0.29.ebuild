@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.29.ebuild,v 1.2 2007/01/30 17:53:05 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.29.ebuild,v 1.3 2007/02/15 02:51:41 lack Exp $
 
 ROX_LIB_VER="2.0.0"
 inherit eutils rox
@@ -14,21 +14,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND="|| ( >=dev-python/dbus-python-0.71
-		( >=sys-apps/dbus-0.3 <sys-apps/dbus-0.90 ) )"
+RDEPEND=">=dev-python/dbus-python-0.71"
 
 MY_PN="ROX-Session"
 APPNAME=${MY_PN}
-
-pkg_setup() {
-	if ! has_version dev-python/dbus-python && \
-		! built_with_use sys-apps/dbus python
-	then
-		einfo "Rox-Session requires dbus to be built with python support."
-		einfo "Please rebuild dbus with USE=\"python\"."
-		die "python dbus modules missing"
-	fi
-}
 
 pkg_preinst() {
 	# need to fixup some permissions
@@ -51,9 +40,9 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "ROX-Session has been installed into /usr/lib/rox/${APPNAME}."
+	einfo "ROX-Session has been installed into ${APPDIR}"
 	einfo "Please review its documentation about proper use. A symlink"
-	einfo "for the executable has been created as /usr/bin/${APPNAME}."
+	einfo "for the executable has been created as /usr/bin/${WRAPPERNAME}."
 	echo
 	einfo "It has also been installed as an X Session, so you should be"
 	einfo "able to select it in the Session list of gdm or kdm"
