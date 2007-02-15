@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gentoo-artwork-livecd
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork-livecd/ChangeLog,v 1.1 2006/08/30 16:43:44 wolf31o2 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork-livecd/ChangeLog,v 1.2 2007/02/15 15:24:50 wolf31o2 Exp $
+
+  15 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  gentoo-artwork-livecd-2006.1.ebuild:
+  Added RESTRICT='binchecks strip' for bug #166987.
 
 *gentoo-artwork-livecd-2006.1 (30 Aug 2006)
 

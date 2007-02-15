@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/gentoo-artwork-0.4.1.ebuild,v 1.7 2006/07/10 05:34:39 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/gentoo-artwork-0.4.1.ebuild,v 1.8 2007/02/15 15:24:06 wolf31o2 Exp $
 
 DESCRIPTION="A collection of miscellaneous Gentoo Linux logos and artwork"
 SRC_URI="mirror://gentoo/gentoo-artwork-0.2.tar.bz2
@@ -13,6 +13,7 @@ KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="kde offensive"
+RESTRICT="binchecks strip"
 
 DEPEND=""
 

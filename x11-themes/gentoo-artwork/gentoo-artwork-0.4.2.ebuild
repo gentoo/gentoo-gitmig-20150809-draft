@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/gentoo-artwork-0.4.2.ebuild,v 1.2 2006/08/12 05:00:57 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/gentoo-artwork-0.4.2.ebuild,v 1.3 2007/02/15 15:24:06 wolf31o2 Exp $
 
 BI_VER="20060811"
 
@@ -17,6 +17,7 @@ KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="kde offensive"
+RESTRICT="binchecks strip"
 
 DEPEND=""
 
