@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2603 2007/02/15 20:25:51 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2604 2007/02/15 20:35:10 jokey Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -126,6 +126,7 @@ app-emulation/uae:scsi - Enable the uaescsi.device
 app-emulation/uae:sdl-sound - Use libsdl for audio output
 app-emulation/virtualbox:additions - Install Guest System Tools ISO
 app-emulation/virtualbox:sdk - Enable building of SDK
+app-emulation/virtualbox-bin:additions - Install Guest System Tools ISO
 app-emulation/xen-tools:custom-cflags - Use CFLAGS from /etc/make.conf rather than the default Xen CFLAGS (not supported)
 app-emulation/xen-tools:pygrub - Install the pygrub boot loader
 app-emulation/xen-tools:screen - Enable support for running domain U consoles in a screen session
