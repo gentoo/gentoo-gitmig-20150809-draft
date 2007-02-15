@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/gnat-gpl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/ChangeLog,v 1.14 2007/02/06 08:11:12 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/ChangeLog,v 1.15 2007/02/15 14:08:19 george Exp $
+
+*gnat-gpl-3.4.6.2006-r1 (15 Feb 2007)
+
+  15 Feb 2007; George Shapovalov <george@gentoo.org>
+  +gnat-gpl-3.4.6.2006-r1.ebuild:
+  fixed installation (ACT's weird makefiles again). Now gprmake is installed,
+  so issuing a revbump
 
   06 Feb 2007; Marius Mauch <genone@gentoo.org> gnat-gpl-3.4.5.1-r1.ebuild,
   gnat-gpl-3.4.5.2005.ebuild, gnat-gpl-3.4.6.1.ebuild,
