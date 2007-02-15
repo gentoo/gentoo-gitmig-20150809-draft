@@ -1,0 +1,14 @@
+# ChangeLog for app-office/mozilla-sunbird
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.1 2007/02/15 21:09:16 armin76 Exp $
+
+*mozilla-sunbird-0.3 (15 Feb 2007)
+
+  15 Feb 2007; Raúl Porcel <armin76@gentoo.org>
+  +files/mozilla-sunbird-0.3-add-missing-LDFLAGS.patch,
+  +files/icon/mozilla-sunbird.desktop, +files/icon/mozilla-sunbird-icon.png,
+  +files/icon/mozilla-sunbird-unbranded.desktop,
+  +files/icon/mozilla-sunbird-unbranded-icon.png, +metadata.xml,
+  +mozilla-sunbird-0.3.ebuild:
+  New ebuild, bug 114995
+
