@@ -12,6 +12,7 @@ FEATURES="-sandbox sfperms"
 USE=" \
 acl \
 berkdb \
+bzip2 \
 crypt \
 ipv6 \
 ncurses \
