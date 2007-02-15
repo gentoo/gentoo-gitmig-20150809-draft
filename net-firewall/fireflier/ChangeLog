@@ -1,0 +1,10 @@
+# ChangeLog for net-firewall/fireflier
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fireflier/ChangeLog,v 1.1 2007/02/15 23:42:38 jokey Exp $
+
+*fireflier-1.1.6 (15 Feb 2007)
+
+  15 Feb 2007; Markus Ullmann <jokey@gentoo.org> +files/fireflier.initd,
+  +metadata.xml, +fireflier-1.1.6.ebuild:
+  Initial ebuild for bug #70667
+
