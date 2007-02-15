@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/iozone-3.263.ebuild,v 1.1 2006/07/11 14:32:44 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/iozone-3.281.ebuild,v 1.1 2007/02/15 11:26:48 dragonheart Exp $
 
 # TODO
 #        ->   linux-arm            (32bit)   <-
@@ -60,7 +60,7 @@ src_compile() {
 }
 
 src_install() {
-	dosbin src/current/iozone || die
+	dosbin src/current/iozone
 	dodoc docs/I*
 	dodoc docs/Run_rules.doc
 	dodoc src/current/Changes.txt
@@ -69,8 +69,6 @@ src_install() {
 	insinto /usr/share/doc/${PF}
 	cd src/current
 	doins Generate_Graphs Gnuplot.txt gengnuplot.sh gnu3d.dem
-
-	prepall
 }
 
 src_test() {
