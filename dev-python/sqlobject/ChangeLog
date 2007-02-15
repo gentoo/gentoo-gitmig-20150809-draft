@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/sqlobject
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/ChangeLog,v 1.14 2007/01/31 23:40:00 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/ChangeLog,v 1.15 2007/02/15 13:08:59 lucass Exp $
+
+*sqlobject-0.8.0 (15 Feb 2007)
+
+  15 Feb 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  +sqlobject-0.8.0.ebuild:
+  Version bump.
 
 *sqlobject-0.7.3 (31 Jan 2007)
 
