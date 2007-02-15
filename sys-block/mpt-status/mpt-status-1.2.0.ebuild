@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/mpt-status/mpt-status-1.2.0.ebuild,v 1.3 2007/02/03 14:05:31 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/mpt-status/mpt-status-1.2.0.ebuild,v 1.4 2007/02/15 16:25:24 nelchael Exp $
 
 inherit eutils
 
@@ -18,6 +18,9 @@ src_unpack() {
 
 	unpack ${A}
 	epatch "${FILESDIR}/${PN}-1.2.0-gentoo.patch"
+
+	cd "${S}"
+	sed -i -e 's,\(^.*linux/compiler\.h.*$\),,' mpt-status.h
 
 }
 
