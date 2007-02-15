@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-topo/embassy-topo-1.0.0-r3.ebuild,v 1.5 2006/11/03 13:23:15 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-topo/embassy-topo-1.0.0-r3.ebuild,v 1.6 2007/02/15 19:49:54 je_fro Exp $
 
 EBOV="4.0.0"
 
@@ -10,4 +10,4 @@ DESCRIPTION="EMBOSS integrated version of TOPO - Transmembrane protein display"
 SRC_URI="ftp://emboss.open-bio.org/pub/EMBOSS/EMBOSS-${EBOV}.tar.gz
 	mirror://gentoo/embassy-${EBOV}-${PN:8}-${PV}.tar.gz"
 
-KEYWORDS="ppc ~sparc x86"
+KEYWORDS="~amd64 ppc ~sparc x86"
