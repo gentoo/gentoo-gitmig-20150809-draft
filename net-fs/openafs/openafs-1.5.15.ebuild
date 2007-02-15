@@ -1,22 +1,22 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.5.12.ebuild,v 1.1 2006/12/03 08:17:44 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.5.15.ebuild,v 1.1 2007/02/15 17:48:27 stefaan Exp $
 
-inherit flag-o-matic eutils toolchain-funcs versionator
+inherit flag-o-matic eutils linux-mod toolchain-funcs versionator
 
-PATCHVER=0.10
+PATCHVER=0.12
 DESCRIPTION="The OpenAFS distributed file system"
 HOMEPAGE="http://www.openafs.org/"
 SRC_URI="http://openafs.org/dl/${PN}/${PV}/${P}-src.tar.bz2
 	doc? ( http://openafs.org/dl/${PN}/${PV}/${P}-doc.tar.bz2 )
 	mirror://gentoo/${PN}-gentoo-${PATCHVER}.tar.bz2"
 
-LICENSE="IPL-1"
+LICENSE="IBM openafs-krb5 openafs-krb5-a APSL-2 sun-rpc"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="debug kerberos pam doc"
 
-RDEPEND="=net-fs/openafs-kernel-${PV}*
+RDEPEND="~net-fs/openafs-kernel-${PV}
 	pam? ( sys-libs/pam )
 	kerberos? ( virtual/krb5 )"
 
@@ -43,12 +43,14 @@ src_compile() {
 		myconf="--with-krb5-conf=$(type -p krb5-config)"
 	fi
 
+	ARCH="$(tc-arch-kernel)" \
 	XCFLAGS="${CFLAGS}" \
 	econf \
 		$(use_enable pam) \
 		$(use_enable debug) \
 		--enable-largefile-fileserver \
 		--enable-supergroups \
+		--with-linux-kernel-headers=${KV_DIR} \
 		${myconf} || die econf
 
 	emake -j1 all_nolibafs || die "Build failed"
@@ -67,20 +69,19 @@ src_install() {
 	rm ${D}/usr/bin/compile_et
 
 	# avoid collision with mit_krb5's version of kpasswd
-	mv ${D}/usr/bin/kpasswd ${D}/usr/bin/kpasswd_afs
-	mv src/man/kpasswd.1 src/man/kpasswd_afs.1
-
-	# install manuals
-	doman src/man/*.?
-
-	use kerberos && doman src/aklog/aklog.1
-	use pam && doman src/pam/pam_afs.5
+	(cd ${D}/usr/bin; mv kpasswd kpasswd_afs)
+	use doc && (cd doc/man-pages/man1; mv kpasswd.1 kpasswd_afs.1)
 
 	# minimal documentation
 	dodoc ${CONFDIR}/README ${CONFDIR}/CellServDB
 
 	# documentation package
 	if use doc; then
+		# install manuals
+		doman doc/man-pages/man?/*.?
+
+		use pam && doman src/pam/pam_afs.5
+
 		cp -pPR doc/* ${D}/usr/share/doc/${PF}
 	fi
 
@@ -101,6 +102,9 @@ src_install() {
 	keepdir /var/lib/openafs/db
 	diropts -m0755
 	keepdir /var/lib/openafs/logs
+
+	# link logfiles to /var/log
+	dosym ../lib/openafs/logs /var/log/openafs
 }
 
 migrate_to_fhs() {

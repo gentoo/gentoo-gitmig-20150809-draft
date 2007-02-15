@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.5.12.ebuild,v 1.2 2006/12/22 14:52:24 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.5.15.ebuild,v 1.1 2007/02/15 17:47:48 stefaan Exp $
 
 inherit eutils linux-mod versionator toolchain-funcs
 
-PATCHVER=0.10
+PATCHVER=0.12
 MY_PN=${PN/-kernel}
 MY_P=${MY_PN}-${PV}
 S=${WORKDIR}/${MY_P}
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.openafs.org/"
 SRC_URI="http://openafs.org/dl/${MY_PN}/${PV}/${MY_P}-src.tar.bz2
 	mirror://gentoo/${MY_PN}-gentoo-${PATCHVER}.tar.bz2"
 
-LICENSE="IPL-1"
+LICENSE="IBM openafs-krb5 openafs-krb5-a APSL-2 sun-rpc"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 IUSE=""
@@ -32,16 +32,13 @@ src_unpack() {
 
 	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}
 
-	# fix unresolved symbol on amd64 (bug #149274)
-	epatch ${FILESDIR}/tasklist_lock_1.5.12.patch
-
 	./regen.sh || die "Failed: regenerating configure script"
 }
 
 src_compile() {
 	ARCH="$(tc-arch-kernel)" econf --with-linux-kernel-headers=${KV_DIR} || die "Failed: econf"
 
-	ARCH="$(tc-arch-kernel)" make only_libafs || die "Failed: make"
+	ARCH="$(tc-arch-kernel)" emake -j1 only_libafs || die "Failed: emake"
 }
 
 src_install() {
