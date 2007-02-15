@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/mongrel
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/ChangeLog,v 1.7 2007/02/04 18:54:58 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/ChangeLog,v 1.8 2007/02/15 08:44:42 opfer Exp $
+
+  15 Feb 2007; Christian Faulhammer <opfer@gentoo.org> mongrel-1.0.ebuild:
+  stable x86; security bug 166901
 
   04 Feb 2007; Matti Bickel <mabi@gentoo.org> mongrel-1.0.1.ebuild:
   add ~ppc for bug #164242
