@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/qgit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/ChangeLog,v 1.16 2007/02/15 13:24:03 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/ChangeLog,v 1.17 2007/02/15 18:07:07 opfer Exp $
+
+  15 Feb 2007; Christian Faulhammer <opfer@gentoo.org> qgit-1.5.3.ebuild:
+  stable x86; bug 167018
 
 *qgit-1.5.4 (15 Feb 2007)
 
