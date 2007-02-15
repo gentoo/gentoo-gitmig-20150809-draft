@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.108 2007/02/15 15:12:13 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.109 2007/02/15 20:25:51 jokey Exp $
+
+  15 Feb 2007; Markus Ullmann <jokey@gentoo.org> use.local.desc:
+  Add app-emulation/virtualbox:(additions|sdk)
 
   15 Feb 2007; Jurek Bartuszek <jurek@gentoo.org> package.mask, use.local.desc:
   Added dev-util/codeblocks to package.mask, needs testing
