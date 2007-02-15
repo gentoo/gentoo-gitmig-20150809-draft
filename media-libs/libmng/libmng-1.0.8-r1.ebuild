@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/libmng-1.0.8-r1.ebuild,v 1.16 2006/04/13 01:54:10 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/libmng-1.0.8-r1.ebuild,v 1.17 2007/02/15 21:45:12 grobian Exp $
 
 DESCRIPTION="Multiple Image Networkgraphics lib (animated png's)"
 HOMEPAGE="http://www.libmng.com/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/libmng/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc-macos ppc64 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86"
 IUSE=""
 
 RDEPEND=">=media-libs/jpeg-6b
@@ -16,7 +16,7 @@ RDEPEND=">=media-libs/jpeg-6b
 	>=media-libs/lcms-1.0.8"
 DEPEND="${RDEPEND}
 	sys-devel/autoconf
-	!ppc-macos? ( =sys-devel/automake-1.9* )"
+	=sys-devel/automake-1.9*"
 
 src_unpack() {
 	unpack ${A}
