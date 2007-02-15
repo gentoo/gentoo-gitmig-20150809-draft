@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/terminatorx
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/ChangeLog,v 1.20 2007/01/05 20:09:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/ChangeLog,v 1.21 2007/02/15 07:47:05 aballier Exp $
+
+  15 Feb 2007; Alexis Ballier <aballier@gentoo.org> terminatorx-3.82.ebuild:
+  depend on mpg123 or mpg321 when using sox, bug #99500
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   terminatorx-3.81.ebuild:

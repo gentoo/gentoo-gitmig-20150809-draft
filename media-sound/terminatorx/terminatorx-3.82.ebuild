@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.82.ebuild,v 1.5 2006/10/23 21:25:24 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.82.ebuild,v 1.6 2007/02/15 07:47:05 aballier Exp $
 
 inherit gnome2
 
@@ -18,7 +18,8 @@ IUSE="alsa mad vorbis sox"
 RDEPEND="alsa? ( >=media-libs/alsa-lib-0.9 )
 	mad? ( media-sound/madplay )
 	vorbis? ( >=media-libs/libvorbis-1.0_beta4 )
-	sox? ( media-sound/sox )
+	sox? ( media-sound/sox
+		|| ( media-sound/mpg123 media-sound/mpg321 ) )
 	>=x11-libs/gtk+-2.2.0
 	>=dev-libs/glib-2.2.0
 	|| ( ( x11-libs/libXi
@@ -37,11 +38,11 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# we need the omf fix, or else we get access violation
 	# errors related to sandbox
-	gnome2_omf_fix ${S}/doc/terminatorX-manual/C/Makefile.in
+	gnome2_omf_fix "${S}/doc/terminatorX-manual/C/Makefile.in"
 }
 
 src_compile() {
@@ -56,5 +57,5 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 }
