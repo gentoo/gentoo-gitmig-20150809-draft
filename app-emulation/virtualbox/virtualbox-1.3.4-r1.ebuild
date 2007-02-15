@@ -2,11 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
-inherit eutils linux-mod qt3 subversion
+inherit eutils linux-mod qt3
 
+MY_P=VirtualBox-OSE-${PV}
 DESCRIPTION="Softwarefamily of powerful x86 virtualization"
 HOMEPAGE="http://www.virtualbox.org/"
-ESVN_REPO_URI="http://virtualbox.org/svn/vbox/trunk"
+SRC_URI="http://www.virtualbox.org/download/${PV}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -27,7 +28,9 @@ DEPEND="${REPEND}
 	sys-devel/dev86
 	sys-power/iasl"
 RDEPEND="${REPEND}
-	additions? ( =app-emulation/virtualbox-additions-1.3.4 )"
+	additions? ( =app-emulation/virtualbox-additions-${PV} )"
+
+S=${WORKDIR}/${MY_P}
 
 BUILD_PARAMS="KERN_DIR=${KV_DIR} KERNOUT=${KV_OUT_DIR}"
 BUILD_TARGETS="all"
