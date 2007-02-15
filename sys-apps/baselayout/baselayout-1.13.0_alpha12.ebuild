@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.13.0_alpha12.ebuild,v 1.2 2007/01/20 15:16:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.13.0_alpha12.ebuild,v 1.3 2007/02/15 18:53:29 gustavoz Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -50,7 +50,6 @@ src_unpack() {
 	# SPARC does not like stty, so we disable RC_INTERACTIVE which requires it
 	# see Gentoo bug #104067.
 	if use sparc ; then \
-		sed -i -e  '/^KEYMAP=/s:us:sunkeymap:' etc/conf.d/keymaps || die
 		sed -i -e '/^RC_INTERACTIVE=/s:yes:no:' etc/conf.d/rc || die
 	fi
 }

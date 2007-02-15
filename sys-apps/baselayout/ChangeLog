@@ -1,9 +1,13 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.405 2007/02/14 03:38:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.406 2007/02/15 18:53:29 gustavoz Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+  15 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  baselayout-1.12.9.ebuild, baselayout-1.13.0_alpha12.ebuild:
+  Default to us keymap for sparc (2.6)
 
   14 Feb 2007; Jeroen Roovers <jer@gentoo.org> baselayout-1.12.9.ebuild:
   Stable for HPPA (bug #158637).

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.9.ebuild,v 1.10 2007/02/14 03:38:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.9.ebuild,v 1.11 2007/02/15 18:53:29 gustavoz Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -47,7 +47,6 @@ src_unpack() {
 
 	case $(tc-arch) in
 	sparc)
-		sed -i -e '/^KEYMAP=/s:us:sunkeymap:' etc/conf.d/keymaps || die
 		# Disable interactive boot on sparc due to stty calls, #104067
 		sed -i -e '/^RC_INTERACTIVE=/s:yes:no:' etc/conf.d/rc || die
 		;;
