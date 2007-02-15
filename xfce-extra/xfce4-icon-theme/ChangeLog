@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-icon-theme
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-icon-theme/ChangeLog,v 1.40 2007/02/03 02:16:27 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-icon-theme/ChangeLog,v 1.41 2007/02/15 15:34:12 drac Exp $
+
+  15 Feb 2007; Samuli Suominen <drac@gentoo.org>
+  xfce4-icon-theme-4.4.0.ebuild:
+  RESTRICT strip and binchecks for bug 166984.
 
   03 Feb 2007; Joshua Nichols <nichoj@gentoo.org>
   -xfce4-icon-theme-4.3.99.2.ebuild:
