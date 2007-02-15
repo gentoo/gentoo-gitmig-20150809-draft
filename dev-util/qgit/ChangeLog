@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/qgit
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/ChangeLog,v 1.15 2006/11/14 10:42:17 ferdy Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/ChangeLog,v 1.16 2007/02/15 13:24:03 ferdy Exp $
+
+*qgit-1.5.4 (15 Feb 2007)
+
+  15 Feb 2007; Fernando J. Pereda <ferdy@gentoo.org> +qgit-1.5.4.ebuild:
+  New upstream version.
 
 *qgit-1.5.3 (14 Nov 2006)
 
