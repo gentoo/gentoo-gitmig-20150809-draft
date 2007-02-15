@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/mupen64-alsasnd
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-alsasnd/ChangeLog,v 1.11 2006/10/08 23:06:15 nyhm Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-alsasnd/ChangeLog,v 1.12 2007/02/15 09:58:08 nyhm Exp $
+
+*mupen64-alsasnd-0.4-r1 (15 Feb 2007)
+
+  15 Feb 2007; Tristan Heaven <nyhm@gentoo.org> files/0.4-gentoo.patch,
+  -mupen64-alsasnd-0.4.ebuild, +mupen64-alsasnd-0.4-r1.ebuild:
+  Fix QA issues, bug #116385
 
   08 Oct 2006; Tristan Heaven <nyhm@gentoo.org> mupen64-alsasnd-0.4.ebuild:
   Use qt3 eclass
