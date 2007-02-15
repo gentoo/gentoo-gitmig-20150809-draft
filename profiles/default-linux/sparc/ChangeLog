@@ -1,6 +1,11 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.37 2007/02/14 21:48:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.38 2007/02/15 15:28:59 wolf31o2 Exp $
+
+  15 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  sparc64/2006.0/2.4/use.mask, sparc64/2006.1/2.4/use.mask:
+  Removed udev remnants using a patch from Arfrever Frehtes Taifersar Arahesis
+  <FFTA@WP.PL> and closing bug #166917.
 
   14 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> use.mask:
   Join mono and beagle, add galago use.mask

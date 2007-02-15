@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.5 2007/01/29 22:14:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.6 2007/02/15 15:29:20 wolf31o2 Exp $
+
+  15 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> use.defaults:
+  Removed udev remnants using a patch from Arfrever Frehtes Taifersar Arahesis
+  <FFTA@WP.PL> and closing bug #166917.
 
   29 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> make.defaults:
   Add midi useflag by default to cope with newer alsa versions.
