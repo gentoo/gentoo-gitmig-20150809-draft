@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/k9copy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.19 2007/02/15 16:34:26 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.20 2007/02/15 16:58:30 mattepiu Exp $
+
+  15 Feb 2007; Matteo Azzali <mattepiu@gentoo.org>
+  -k9copy-1.1.0_beta1.ebuild, -k9copy-1.1.0_beta2.ebuild:
+  Removed beta versions.
 
   15 Feb 2007; Matteo Azzali <mattepiu@gentoo.org> k9copy-1.1.0.ebuild:
   Fixed ebuild preparing to unmask.
