@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.110 2007/02/15 20:35:10 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.111 2007/02/15 22:04:09 jokey Exp $
+
+  15 Feb 2007; Markus Ullmann <jokey@gentoo.org> package.mask:
+  mask net-analyzer/netwatch for removal
 
   15 Feb 2007; Markus Ullmann <jokey@gentoo.org> use.local.desc:
   Add app-emulation/virtualbox-bin:additions
