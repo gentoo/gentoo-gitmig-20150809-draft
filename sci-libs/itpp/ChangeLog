@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/itpp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.25 2007/02/13 14:01:19 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.26 2007/02/15 13:23:58 fmccor Exp $
+
+  15 Feb 2007; Ferris McCormick <fmccor@gentoo.org> itpp-3.10.7.ebuild:
+  Stable on sparc (no problems reported for 30 days).
 
 *itpp-3.10.9 (13 Feb 2007)
 
