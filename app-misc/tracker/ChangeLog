@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.8 2007/02/09 07:36:49 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.9 2007/02/15 21:48:59 compnerd Exp $
+
+  15 Feb 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  tracker-0.5.4-r1.ebuild:
+  Fix disabling of media extrators
 
   09 Feb 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   files/tracker-0.5.4-deskbar-encoding.patch:

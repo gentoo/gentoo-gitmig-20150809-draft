@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.5.4-r1.ebuild,v 1.1 2007/02/08 16:16:37 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.5.4-r1.ebuild,v 1.2 2007/02/15 21:48:59 compnerd Exp $
 
 inherit autotools eutils flag-o-matic linux-info
 
@@ -116,6 +116,8 @@ src_compile() {
 		myconf="${myconf} --enable-video-extractor=gstreamer"
 	elif use xine ; then
 		myconf="${myconf} --enable-video-extractor=xine"
+	else
+		myconf="${myconf} --enable-video-extractor=external"
 	fi
 
 	if use fam ; then
