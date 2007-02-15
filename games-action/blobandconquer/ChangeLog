@@ -1,0 +1,10 @@
+# ChangeLog for games-action/blobandconquer
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/blobandconquer/ChangeLog,v 1.1 2007/02/15 08:08:53 nyhm Exp $
+
+*blobandconquer-0.8 (15 Feb 2007)
+
+  15 Feb 2007; Tristan Heaven <nyhm@gentoo.org> +metadata.xml,
+  +blobandconquer-0.8.ebuild:
+  Initial commit, bug #128649
+
