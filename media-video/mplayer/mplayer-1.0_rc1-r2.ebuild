@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1-r2.ebuild,v 1.10 2007/02/13 09:01:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1-r2.ebuild,v 1.11 2007/02/16 12:13:40 blubb Exp $
 
 inherit eutils flag-o-matic
 
@@ -122,6 +122,9 @@ DEPEND="${RDEPEND}
 	X? ( x11-proto/xextproto
 		 x11-proto/xf86vidmodeproto )
 	iconv? ( virtual/libiconv )"
+# Make sure the assembler USE flags are unmasked on amd64
+# Remove this once default-linux/amd64/2006.1 is deprecated
+DEPEND="${DEPEND} amd64? ( >=sys-apps/portage-2.1.2 )"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -379,18 +382,11 @@ src_compile() {
 	# Platform specific flags, hardcoded on amd64 (see below)
 	myconf="${myconf} $(use_enable 3dnow)"
 	myconf="${myconf} $(use_enable 3dnowext)";
-	use x86 && myconf="${myconf} $(use_enable sse)"
-	use x86 && myconf="${myconf} $(use_enable sse2)"
-	use x86 && myconf="${myconf} $(use_enable mmx)"
+	myconf="${myconf} $(use_enable sse)"
+	myconf="${myconf} $(use_enable sse2)"
+	myconf="${myconf} $(use_enable mmx)"
 	myconf="${myconf} $(use_enable mmxext)"
 	use debug && myconf="${myconf} --enable-debug=3"
-
-	# mplayer now contains SIMD assembler code for amd64
-	# AMD64 Team decided to hardenable SIMD assembler for all users
-	# Danny van Dyk <kugelfang@gentoo.org> 2005/01/11
-	if use amd64; then
-		myconf="${myconf} --enable-sse --enable-sse2 --enable-mmx"
-	fi
 
 	if use ppc64
 	then
