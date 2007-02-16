@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/eterm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.40 2007/01/19 04:36:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.41 2007/02/16 08:01:16 opfer Exp $
+
+  16 Feb 2007; Christian Faulhammer <opfer@gentoo.org> eterm-0.9.4.ebuild:
+  stable x86; bug 167034
 
   19 Jan 2007; Mike Frysinger <vapier@gentoo.org> eterm-0.9.3-r4.ebuild,
   eterm-0.9.4.ebuild, eterm-9999.ebuild:
