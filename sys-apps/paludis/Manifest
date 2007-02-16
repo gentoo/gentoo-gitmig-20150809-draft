@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX paludis-0.14.3-ruby-so.patch 2928 RMD160 44bd41903c00dc0b4f0de72c8013ef741cfffed6 SHA1 2ed6ec390895f2b3989e9524530161cf8cc20a6d SHA256 cd32065d3188910759e6dcd211c5ba0e6edbd9e6b7cfa4de82d09449b8a84b78
 MD5 6e833fdf8bb2c4776daed146a6cee01a files/paludis-0.14.3-ruby-so.patch 2928
 RMD160 44bd41903c00dc0b4f0de72c8013ef741cfffed6 files/paludis-0.14.3-ruby-so.patch 2928
@@ -66,3 +69,10 @@ SHA256 3c766ab4ffdb691bfeee1cef6f9a0c6b3ad6189d138aa49f5ace288fd401da99 files/di
 MD5 f4517b0d296f4cb51c6413ecc7696653 files/digest-paludis-0.18.1 250
 RMD160 907beac2d302411d12d48db013278114320ba0d3 files/digest-paludis-0.18.1 250
 SHA256 262ecc884100c4269576dfc2ef85531c621598bbe3545bc3bf1c88e586b72789 files/digest-paludis-0.18.1 250
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.2 (GNU/Linux)
+
+iD8DBQFF1b6YokMzJ47YCzoRAtwVAKCTmC045UXWYG9nfX3LujlUBnZYngCgsiMF
+91NE84K7wAFZtDUteYQQjnc=
+=EujO
+-----END PGP SIGNATURE-----
