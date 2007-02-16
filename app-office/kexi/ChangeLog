@@ -1,6 +1,12 @@
 # ChangeLog for app-office/kexi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.72 2007/02/15 00:44:39 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.73 2007/02/16 11:29:30 flameeyes Exp $
+
+*kexi-1.6.2 (16 Feb 2007)
+
+  16 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> kexi-1.6.1.ebuild,
+  +kexi-1.6.2.ebuild:
+  Bump to 1.6.2 pre-release.
 
   15 Feb 2007; Bryan Østergaard <kloeri@gentoo.org> kexi-1.6.1.ebuild:
   Stable on Alpha, bug 166246.

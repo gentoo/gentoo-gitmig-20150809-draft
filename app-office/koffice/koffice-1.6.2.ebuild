@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.6.1-r1.ebuild,v 1.10 2007/02/16 11:30:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.6.2.ebuild,v 1.1 2007/02/16 11:30:33 flameeyes Exp $
 
 inherit kde
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://kde/stable/koffice-${PV}/src/${P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2"
 
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 # See bug #130442.
 #IUSE="doc mysql opengl postgres"
@@ -28,7 +28,7 @@ RDEPEND=">=media-libs/freetype-2
 	dev-libs/libxslt
 	sys-libs/readline
 	mysql? ( virtual/mysql )
-	postgres? ( <dev-libs/libpqxx-2.6.9 )
+	postgres? ( <dev-libs/libpqxx-2.6.0 )
 	virtual/python
 	dev-lang/ruby
 	>=app-text/wv2-0.1.9
@@ -52,8 +52,6 @@ for x in $(get-child-packages ${CATEGORY}/${PN}); do
 	DEPEND="${DEPEND} !${x}"
 	RDEPEND="${RDEPEND} !${x}"
 done
-
-PATCHES="${FILESDIR}/koffice-xpdf-CVE-2007-0104.diff"
 
 need-kde 3.4
 
