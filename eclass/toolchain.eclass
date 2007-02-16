@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.323 2007/02/12 05:02:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.324 2007/02/16 20:32:00 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1263,14 +1263,15 @@ gcc_do_configure() {
 		# disable a bunch of features or gcc goes boom
 		local needed_libc=""
 		case ${CTARGET} in
-			*-linux)	needed_libc=no-fucking-clue;;
-			*-dietlibc) needed_libc=dietlibc;;
-			*-freebsd*) needed_libc=freebsd-lib;;
-			*-gnu*)		needed_libc=glibc;;
-			*-klibc)	needed_libc=klibc;;
-			*-uclibc*)	needed_libc=uclibc;;
-			mingw*)		needed_libc=mingw-runtime;;
-			avr)		confgcc="${confgcc} --enable-shared --disable-threads";;
+			*-linux)         needed_libc=no-fucking-clue;;
+			*-dietlibc)      needed_libc=dietlibc;;
+			*-elf)           needed_libc=newlib;;
+			*-freebsd*)      needed_libc=freebsd-lib;;
+			*-gnu*)          needed_libc=glibc;;
+			*-klibc)         needed_libc=klibc;;
+			*-uclibc*)       needed_libc=uclibc;;
+			mingw*|*-mingw*) needed_libc=mingw-runtime;;
+			avr)             confgcc="${confgcc} --enable-shared --disable-threads";;
 		esac
 		if [[ -n ${needed_libc} ]] ; then
 			if ! has_version ${CATEGORY}/${needed_libc} ; then
