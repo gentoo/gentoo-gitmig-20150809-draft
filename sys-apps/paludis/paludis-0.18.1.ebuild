@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.18.1.ebuild,v 1.3 2007/02/11 11:23:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.18.1.ebuild,v 1.4 2007/02/16 14:23:57 pioto Exp $
 
 inherit bash-completion eutils flag-o-matic
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~s390 ~sparc ~x86"
 IUSE="contrarius cran doc glsa inquisitio pink qa ruby selinux zsh-completion"
 
 COMMON_DEPEND="
-	>=app-shells/bash-3
+	>=app-shells/bash-3.1
 	selinux? ( sys-libs/libselinux )
 	qa? ( dev-libs/pcre++ >=dev-libs/libxml2-2.6 app-crypt/gnupg )
 	inquisitio? ( dev-libs/pcre++ )
