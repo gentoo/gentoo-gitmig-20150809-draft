@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.12.ebuild,v 1.1 2007/02/07 02:32:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.12.ebuild,v 1.2 2007/02/16 18:51:07 mr_bones_ Exp $
 
 inherit fixheadtails
 
@@ -36,7 +36,7 @@ src_unpack() {
 src_compile() {
 	econf \
 		--disable-dependency-tracking \
-		--with-libol=${ROOT}/usr/bin \
+		--with-libol=/usr/bin \
 		$(use_enable static full-static) \
 		$(use_enable tcpd tcp-wrapper) || die "econf failed"
 	emake || die "emake failed"
