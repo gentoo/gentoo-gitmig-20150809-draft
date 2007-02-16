@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.8.3.ebuild,v 1.4 2006/11/20 23:51:05 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.8.3.ebuild,v 1.5 2007/02/16 23:38:10 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -72,7 +72,7 @@ src_unpack() {
 
 src_compile() {
 	if use kde; then
-		addwrite "${ROOT}/usr/qt/3/etc/settings"
+		addwrite "/usr/qt/3/etc/settings"
 		export KDEDIR=$(kde-config --prefix)
 		einfo "KDEDIR set to ${KDEDIR}"
 	fi
