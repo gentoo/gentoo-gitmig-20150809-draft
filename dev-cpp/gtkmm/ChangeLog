@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.108 2007/02/16 07:21:00 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.109 2007/02/16 20:18:09 compnerd Exp $
+
+  16 Feb 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  +gtkmm-2.4.11.ebuild:
+  2.4.11 was not to be removed, restore it
 
   16 Feb 2007; Saleem Abdulrasool <compnerd@gentoo.org> -gtkmm-2.2.8.ebuild,
   -gtkmm-2.2.11.ebuild, -gtkmm-2.4.11.ebuild, -gtkmm-2.6.5.ebuild:
