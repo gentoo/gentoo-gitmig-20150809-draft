@@ -1,16 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/linuxdoc-tools-0.9.21_p4.ebuild,v 1.3 2006/09/22 05:36:01 dberkholz Exp $
-
-# If docs fails to generate with the following type of errors:
-#
-#   /usr/bin/nsgmls:.*:E: "X0393" is not a function name
-#
-# then its is probably sgml-common that did not add all its on catalogs
-# properly, namely:
-#
-#   /usr/share/sgml/sgml-iso-entities-8879.1986/catalog
-#
+# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/linuxdoc-tools-0.9.21_p4.ebuild,v 1.4 2007/02/16 23:29:20 leonardop Exp $
 
 inherit eutils sgml-catalog
 
@@ -64,7 +54,7 @@ src_install() {
 
 	# Besides the path being wrong, in changing perl5libdir, it cannot find the
 	# catalog.
-	export SGML_CATALOG_FILES="${ROOT}/usr/share/sgml/sgml-iso-entities-8879.1986/catalog"
+	export SGML_CATALOG_FILES="/usr/share/sgml/sgml-iso-entities-8879.1986/catalog"
 
 	eval `perl -V:installvendorarch`
 	einstall \
