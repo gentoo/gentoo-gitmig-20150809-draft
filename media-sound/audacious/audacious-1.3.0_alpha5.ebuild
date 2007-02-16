@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-1.3.0_alpha3.ebuild,v 1.1 2007/01/25 14:47:14 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-1.3.0_alpha5.ebuild,v 1.1 2007/02/16 11:21:07 chainsaw Exp $
 
 inherit flag-o-matic
 
@@ -14,18 +14,18 @@ SRC_URI="http://static.audacious-media-player.org/release/${MY_P}.tgz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="chardet nls gnome"
+IUSE="chardet nls"
 
 RDEPEND=">=x11-libs/gtk+-2.6
 	>=gnome-base/libglade-2.3.1
-	dev-libs/libxml2
-	gnome? ( >=gnome-base/gconf-2.6.0 )"
+	dev-libs/libmcs
+	dev-libs/libxml2"
 
 DEPEND="${RDEPEND}
 	nls? ( dev-util/intltool )
 	>=dev-util/pkgconfig-0.9.0"
 
-PDEPEND=">=media-plugins/audacious-plugins-1.3.0_alpha3"
+PDEPEND=">=media-plugins/audacious-plugins-1.3.0_alpha5"
 
 src_compile() {
 	# Bug #42893
@@ -34,9 +34,9 @@ src_compile() {
 	is-flag "-O*" || append-flags -O
 
 	econf \
+		--enable-mcs \
 		$(use_enable chardet) \
 		$(use_enable nls) \
-		$(use_enable gnome gconf) \
 		|| die
 
 	emake || die "make failed"
