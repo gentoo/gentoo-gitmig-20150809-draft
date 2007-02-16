@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.0.ebuild,v 1.6 2007/02/08 19:02:31 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.0.ebuild,v 1.7 2007/02/16 22:28:39 tupone Exp $
 
 inherit java-pkg-opt-2 multilib
 
@@ -100,17 +100,21 @@ src_install() {
 	if use doc; then
 		jam -q -s DESTDIR="${D}" install_doc || die "jam install_doc failed"
 	fi
-	# Fill cache directory for the examples
-	local dir
-	for dir in castle flarge isomap parallaxtest partsys r3dtest stenciltest \
-		terrain terrainf;
-	do
-		"${D}"/usr/bin/cslight -video=null \
-			"${D}"/usr/share/${PN}/data/maps/${dir}
-	done
 	dodoc README docs/history* docs/todo_*
 
 	echo "CRYSTAL_PLUGIN=/usr/$(get_libdir)/crystalspace" > 90crystalspace
 	echo "CRYSTAL_CONFIG=/etc/crystalspace" >> 90crystalspace
 	doenvd 90crystalspace
+}
+
+pkg_postinst() {
+	einfo "Examples coming with this package, need correct light calculation"
+	einfo "Do the following commands, with the root account, to fix that:"
+	# Fill cache directory for the examples
+	local dir
+	for dir in castle flarge isomap parallaxtest partsys r3dtest stenciltest \
+		terrain terrainf;
+	do
+		einfo "cslight -video=null /usr/share/${PN}/data/maps/${dir}"
+	done
 }
