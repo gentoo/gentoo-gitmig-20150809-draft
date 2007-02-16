@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.16.2.ebuild,v 1.11 2007/01/31 21:10:01 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.16.2.ebuild,v 1.12 2007/02/16 17:46:14 dang Exp $
 
 inherit eutils gnome2 autotools
 
@@ -59,6 +59,7 @@ DEPEND="${RDEPEND}
 		>=dev-util/intltool-0.35
 		>=app-text/gnome-doc-utils-0.3.2
 		app-text/scrollkeeper
+		gnome-base/gnome-common
 		dev-util/desktop-file-utils"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
