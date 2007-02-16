@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51.ebuild,v 1.6 2007/01/31 15:35:47 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51.ebuild,v 1.7 2007/02/16 23:57:34 drizzt Exp $
 
 inherit eutils autotools flag-o-matic toolchain-funcs games
 
@@ -16,20 +16,14 @@ IUSE="ao custom-cflags opengl png"
 RDEPEND="media-libs/libsdl
 	>=sys-libs/zlib-1.2.3-r1
 	amd64? ( app-emulation/emul-linux-x86-sdl )
-	!amd64? ( ao? ( media-libs/libao ) )
+	ao? ( media-libs/libao )
 	opengl? ( virtual/opengl )
 	png? ( media-libs/libpng )"
 DEPEND="${RDEPEND}
-	dev-lang/nasm"
+	dev-lang/nasm
+	amd64? ( >=sys-apps/portage-2.1 )"
 
 S=${WORKDIR}/${PN}_${PV//./_}/src
-
-pkg_setup() {
-	games_pkg_setup
-	if use ao && [[ "${ARCH}" = "amd64" ]]; then
-		ewarn "libao use flag is disabled on amd64 since deps cannot be met."
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
@@ -63,7 +57,7 @@ src_compile() {
 	local myconf=""
 	use custom-cflags && myconf="--disable-cpucheck force_arch=no"
 
-	if use ao && [[ "${ARCH}" != amd64 ]]; then
+	if use ao; then
 		myconf="${myconf} --enable-libao"
 	else
 		myconf="${myconf} --disable-libao"
