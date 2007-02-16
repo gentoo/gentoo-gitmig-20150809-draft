@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koffice-libs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.72 2007/02/16 11:31:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.73 2007/02/16 20:29:19 flameeyes Exp $
+
+  16 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Don't abuse ROOT.
 
 *koffice-libs-1.6.2 (16 Feb 2007)
 

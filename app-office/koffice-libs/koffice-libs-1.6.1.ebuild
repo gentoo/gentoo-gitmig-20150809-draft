@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/koffice-libs-1.6.1.ebuild,v 1.8 2007/02/15 00:43:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/koffice-libs-1.6.1.ebuild,v 1.9 2007/02/16 20:29:19 flameeyes Exp $
 
 MAXKOFFICEVER=${PV}
 KMNAME=koffice
@@ -49,7 +49,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf="--enable-scripting --with-pythonfir=${ROOT}/usr/$(get_libdir)/python${PYVER}/site-packages"
+	local myconf="--enable-scripting --with-pythonfir=/usr/$(get_libdir)/python${PYVER}/site-packages"
 	kde-meta_src_compile
 	if use doc; then
 		make apidox || die
