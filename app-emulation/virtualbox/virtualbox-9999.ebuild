@@ -22,11 +22,11 @@ RDEPEND="!app-emulation/virtualbox-bin
 	x11-libs/libXcursor
 	$(qt_min_version 3.3.5)
 	=virtual/libstdc++-3.3"
-DEPEND="${REPEND}
+DEPEND="${RDEPEND}
 	sys-devel/bin86
 	sys-devel/dev86
 	sys-power/iasl"
-RDEPEND="${REPEND}
+RDEPEND="${RDEPEND}
 	additions? ( =app-emulation/virtualbox-additions-1.3.4 )"
 
 BUILD_PARAMS="KERN_DIR=${KV_DIR} KERNOUT=${KV_OUT_DIR}"

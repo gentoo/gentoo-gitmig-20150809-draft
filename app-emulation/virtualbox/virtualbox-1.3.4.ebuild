@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-1.3.4.ebuild,v 1.2 2007/02/12 18:55:09 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-1.3.4.ebuild,v 1.3 2007/02/16 00:15:50 jokey Exp $
 
 inherit eutils linux-mod qt3
 
@@ -21,7 +21,7 @@ RDEPEND="dev-libs/libIDL
 	media-libs/libsdl
 	x11-libs/libXcursor
 	$(qt_min_version 3.3.5)"
-DEPEND="${REPEND}
+DEPEND="${RDEPEND}
 	sys-devel/bin86
 	sys-devel/dev86
 	sys-power/iasl"

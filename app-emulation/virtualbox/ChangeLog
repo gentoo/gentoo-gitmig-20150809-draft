@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.5 2007/02/15 20:28:11 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.6 2007/02/16 00:15:50 jokey Exp $
+
+  16 Feb 2007; Markus Ullmann <jokey@gentoo.org> virtualbox-1.3.4.ebuild,
+  virtualbox-1.3.4-r1.ebuild, virtualbox-9999.ebuild:
+  Fix typo bug #167134
 
 *virtualbox-1.3.4-r1 (15 Feb 2007)
 
