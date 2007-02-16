@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-4.2.ebuild,v 1.1 2007/01/31 18:42:40 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-4.2.ebuild,v 1.2 2007/02/16 21:23:43 betelgeuse Exp $
 
 inherit eutils java-pkg-2 versionator
 
@@ -36,7 +36,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-3.4-target_source.patch"
 	epatch "${FILESDIR}/${PN}-4.2-pkg-config.patch"
 
-	echo "INCLUDES += -I${ROOT}usr/include/nss -I${ROOT}usr/include/nspr" \
+	echo "INCLUDES += -I/usr/include/nss -I/usr/include/nspr" \
 		>> "${S}"/security/coreconf/headers.mk || die
 }
 

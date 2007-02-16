@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-3.4-r1.ebuild,v 1.2 2006/10/05 17:53:34 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-3.4-r1.ebuild,v 1.3 2007/02/16 21:23:43 betelgeuse Exp $
 
 inherit eutils java-pkg-2 versionator linux-info
 
@@ -31,7 +31,7 @@ src_unpack() {
 	cp Linux2.5.mk Linux$(get_version_component_range 1-3 ${KV}).mk
 	cp Linux2.5.mk Linux$(get_version_component_range 1-2 ${KV}).mk
 
-	echo "INCLUDES += -I${ROOT}usr/include/nss -I${ROOT}usr/include/nspr" \
+	echo "INCLUDES += -I/usr/include/nss -I/usr/include/nspr" \
 		>> ${S}/mozilla/security/coreconf/headers.mk
 
 	if use x86; then
