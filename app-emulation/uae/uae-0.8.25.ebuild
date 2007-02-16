@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.25.ebuild,v 1.1 2006/12/14 17:50:21 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.25.ebuild,v 1.2 2007/02/16 15:50:01 pva Exp $
 
 inherit eutils
 
@@ -20,8 +20,8 @@ DEPEND="sdl? ( media-libs/libsdl )
 			!X? ( svga? ( media-libs/svgalib )
 				  !svga? ( ncurses? ( sys-libs/ncurses )
 				  		   !ncurses? ( media-libs/libsdl ) ) ) )
-	alsa? ( media-libs/libsdl )
-	!alsa? ( sdl-sound? ( media-libs/alsa-lib ) )
+	alsa? ( media-libs/alsa-lib )
+	!alsa? ( sdl-sound? ( media-libs/libsdl ) )
 	scsi? ( app-cdr/cdrtools )
 	gtk? ( x11-libs/gtk+ )"
 
@@ -32,11 +32,11 @@ pkg_setup() {
 	elif use X ; then
 		elog "Enabling X11 for video output."
 		my_config="$(use_with X x) $(use_enable X vidmode)"
-		use dga? && my_config="${my_config} $(use_enable dga)"
-	elif use svga? ; then
+		use dga && my_config="${my_config} $(use_enable dga)"
+	elif use svga ; then
 		elog "Enabling svga for video output."
 		my_config="$(use_with svga svgalib)"
-	elif use ncurses? ; then
+	elif use ncurses ; then
 		elog "Enabling ncurses for video output."
 		my_config="$(use_with ncurses asciiart)"
 	else
