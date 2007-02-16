@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libglademm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.52 2007/02/16 08:03:37 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.53 2007/02/16 21:39:34 compnerd Exp $
+
+  16 Feb 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  libglademm-2.6.3.ebuild:
+  Fix QA issue with ROOT usage (bug #167271)
 
   16 Feb 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   -libglademm-2.4.0.ebuild, -libglademm-2.6.0.ebuild,
