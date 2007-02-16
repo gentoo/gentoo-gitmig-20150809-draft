@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20061016.ebuild,v 1.12 2007/02/12 11:19:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20061016.ebuild,v 1.13 2007/02/16 11:57:24 blubb Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -38,6 +38,9 @@ DEPEND="${RDEPEND}
 	doc? ( app-text/texi2html )
 	test? ( net-misc/wget )
 	amr? ( app-arch/unzip )"
+# Make sure the mmx USE flag is unmasked
+# Remove this once default-linux/amd64/2006.1 is deprecated
+DEPEND="${DEPEND} amd64? ( >=sys-apps/portage-2.1.2 )"
 
 src_unpack() {
 	unpack ${A} || die
@@ -93,7 +96,7 @@ src_compile() {
 
 	#disable mmx accelerated code if not requested, or if PIC is required
 	# as the provided asm decidedly is not PIC.
-	if ( gcc-specs-pie || ! use mmx ) && ( ! use amd64 ); then
+	if ( gcc-specs-pie || ! use mmx ) ; then
 		myconf="${myconf} --disable-mmx"
 	fi
 
