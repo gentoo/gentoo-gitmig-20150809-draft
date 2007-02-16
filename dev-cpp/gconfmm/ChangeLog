@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/gconfmm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.47 2007/02/16 07:30:47 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.48 2007/02/16 21:00:18 compnerd Exp $
+
+  16 Feb 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  +gconfmm-2.6.1.ebuild:
+  invalid prune
 
   16 Feb 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   -files/gconfmm-2.6.1-amd64-gcc4.patch, -gconfmm-2.6.1.ebuild,
