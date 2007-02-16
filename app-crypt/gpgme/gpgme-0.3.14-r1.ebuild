@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.14-r1.ebuild,v 1.19 2006/09/23 22:23:30 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.14-r1.ebuild,v 1.20 2007/02/16 22:15:55 dragonheart Exp $
 
 inherit eutils autotools
 
@@ -73,10 +73,10 @@ src_compile() {
 	use doc \
 		&& myconf="${myconf} --enable-maintainer-mode"
 
-	if [ -x "${ROOT}"usr/bin/gpg2 ]; then
-		myconf="${myconf} --with-gpg=${ROOT}usr/bin/gpg2"
+	if [ -x ""/usr/bin/gpg2 ]; then
+		myconf="${myconf} --with-gpg=/usr/bin/gpg2"
 	else
-		myconf="${myconf} --with-gpg=${ROOT}usr/bin/gpg"
+		myconf="${myconf} --with-gpg=/usr/bin/gpg"
 	fi
 
 	# For gnugpg-1.9+
