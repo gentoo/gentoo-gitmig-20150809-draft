@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.136 2007/02/14 00:25:27 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.137 2007/02/16 00:24:28 cardoe Exp $
+
+*mythtv-0.20_p12801 (16 Feb 2007)
+
+  16 Feb 2007; <cardoe@gentoo.org> +mythtv-0.20_p12801.ebuild:
+  Upstream fix for CD/DVD mounting, eject, and detection.
 
 *mythtv-0.20_p12783 (14 Feb 2007)
 
