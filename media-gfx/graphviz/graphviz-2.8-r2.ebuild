@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.8-r2.ebuild,v 1.11 2007/02/15 17:14:19 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.8-r2.ebuild,v 1.12 2007/02/16 16:26:02 chrb Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -27,7 +27,7 @@ RDEPEND=">=sys-libs/zlib-1.1.3
 	cairo? ( >=x11-libs/libsvg-cairo-0.1.3 )
 	tk? ( >=dev-lang/tk-8.3 )
 	tcl? ( >=dev-lang/tcl-8.3 )
-	guile? ( dev-scheme/guile )
+	guile? ( <dev-scheme/guile-1.8 )
 	java? ( virtual/jdk )
 	perl? ( dev-lang/perl )
 	ocaml? ( dev-lang/ocaml )
