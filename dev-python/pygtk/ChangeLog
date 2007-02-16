@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.144 2007/02/09 13:50:49 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.145 2007/02/16 10:08:17 uberlord Exp $
+
+  16 Feb 2007; Roy Marples <uberlord@gentoo.org> pygtk-2.10.4.ebuild:
+  Added ~x86-fbsd keyword.
 
 *pygtk-2.10.4 (09 Feb 2007)
 
