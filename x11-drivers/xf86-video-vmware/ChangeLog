@@ -1,6 +1,17 @@
 # ChangeLog for x11-drivers/xf86-video-vmware
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-vmware/ChangeLog,v 1.23 2007/01/24 07:14:30 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-vmware/ChangeLog,v 1.24 2007/02/16 03:52:36 joshuabaergen Exp $
+
+*xf86-video-vmware-10.15.0 (16 Feb 2007)
+
+  16 Feb 2007; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xf86-video-vmware-10.15.0.ebuild:
+  Version bump.  From upstream:
+  
+  Provide truely usable resizing support with the ability to resize larger
+  than the initial size and no wasted framebuffer space. As a bonus, a
+  variety of useful resolutions are built in to the driver and always
+  available.
 
   24 Jan 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   -xf86-video-vmware-10.12.0.0.ebuild:
