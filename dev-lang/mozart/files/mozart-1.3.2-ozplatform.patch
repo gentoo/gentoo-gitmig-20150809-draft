@@ -16,7 +16,7 @@
  # see chapter "installation" in the users manual for more information
  
 -# OZHOME=/usr/local/mozart
-+OZHOME=@prefix@/lib/mozart-oz
++OZHOME=@prefix@/lib/mozart
  
  
  
