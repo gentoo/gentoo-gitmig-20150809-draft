@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.28-r7.ebuild,v 1.12 2007/01/16 23:59:56 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.28-r7.ebuild,v 1.13 2007/02/16 20:55:55 jokey Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
@@ -300,7 +300,7 @@ src_install() {
 
 pkg_preinst() {
 	# keep old libs if needed
-	for each in lber.so.2.0.130 libldap.so.2.0.130 libldap_r.so.2.0.130 ; do
+	for each in liblber.so.2.0.130 libldap.so.2.0.130 libldap_r.so.2.0.130 ; do
 		preserve_old_lib "${ROOT}usr/$(get_libdir)/${each}"
 	done
 }
@@ -333,7 +333,7 @@ pkg_postinst() {
 	einfo "An example file for tuning BDB backends with openldap is:"
 	einfo "/usr/share/doc/${P}/DB_CONFIG.fast.example.gz"
 
-	for each in lber.so.2.0.130 libldap.so.2.0.130 libldap_r.so.2.0.130 ; do
+	for each in liblber.so.2.0.130 libldap.so.2.0.130 libldap_r.so.2.0.130 ; do
 		preserve_old_lib_notify "${ROOT}usr/$(get_libdir)/${each}"
 	done
 }

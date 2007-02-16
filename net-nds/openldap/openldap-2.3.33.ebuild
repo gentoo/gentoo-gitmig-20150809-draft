@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.33.ebuild,v 1.1 2007/01/19 20:06:12 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.33.ebuild,v 1.2 2007/02/16 20:55:55 jokey Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -447,7 +447,7 @@ pkg_preinst() {
 	# keep old libs if any
 	LIBSUFFIXES=".so.2.0.130 -2.2.so.7"
 	for LIBSUFFIX in ${LIBSUFFIXES} ; do
-		for each in lber libldap libldap_r ; do
+		for each in liblber libldap libldap_r ; do
 			preserve_old_lib "${ROOT}usr/$(get_libdir)/${each}${LIBSUFFIX}"
 		done
 	done
@@ -485,7 +485,7 @@ pkg_postinst() {
 
 	LIBSUFFIXES=".so.2.0.130 -2.2.so.7"
 	for LIBSUFFIX in ${LIBSUFFIXES} ; do
-		for each in lber libldap libldap_r ; do
+		for each in liblber libldap libldap_r ; do
 			preserve_old_lib_notify "${ROOT}usr/$(get_libdir)/${each}${LIBSUFFIX}"
 		done
 	done
