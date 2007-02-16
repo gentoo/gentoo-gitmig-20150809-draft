@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.104 2007/02/13 22:08:40 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.105 2007/02/16 17:02:23 dang Exp $
+
+  16 Feb 2007; Daniel Gryniewicz <dang@gentoo.org> libgda-2.99.5.ebuild:
+  Remove mdb dep too; bug #167186
 
 *libgda-2.99.5 (13 Feb 2007)
 
