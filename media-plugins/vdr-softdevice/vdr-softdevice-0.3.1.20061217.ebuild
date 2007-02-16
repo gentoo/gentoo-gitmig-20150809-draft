@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.3.1.20061217.ebuild,v 1.2 2007/01/05 16:51:49 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.3.1.20061217.ebuild,v 1.3 2007/02/16 12:26:37 blubb Exp $
 
 inherit vdr-plugin
 
@@ -43,7 +43,9 @@ DEPEND="${RDEPEND}
 	) )
 	fbcon? ( sys-kernel/linux-headers )
 	dev-util/pkgconfig"
-
+# Make sure the assembler USE flags are unmasked on amd64
+# Remove this once default-linux/amd64/2006.1 is deprecated
+DEPEND="${DEPEND} amd64? ( >=sys-apps/portage-2.1.2 )"
 
 PATCHES="
 		${FILESDIR}/vdr-softdevice-0.2.3-shm-fullscreen.diff
@@ -93,17 +95,13 @@ src_compile() {
 	use fbcon || MYOPTS="${MYOPTS} --disable-fb"
 	use directfb || MYOPTS="${MYOPTS} --disable-dfb"
 
-	# MMX-Support
-	# hardcode mmx for amd64 - do not disable even without use-flag
-	if ! use amd64; then
-		use mmx || MYOPTS="${MYOPTS} --disable-mmx"
-		use mmxext || MYOPTS="${MYOPTS} --disable-mmx2"
+	use mmx || MYOPTS="${MYOPTS} --disable-mmx"
+	use mmxext || MYOPTS="${MYOPTS} --disable-mmx2"
 
-		if use !mmx && use !mmxext; then
-			ewarn "${PN}"' does not compile with USE="-mmx -mmxext".'
-			ewarn 'Please enable at least one of these two use-flags.'
-			die "${PN}"' does not compile with USE="-mmx -mmxext".'
-		fi
+	if use !mmx && use !mmxext; then
+		ewarn "${PN}"' does not compile with USE="-mmx -mmxext".'
+		ewarn 'Please enable at least one of these two use-flags.'
+		die "${PN}"' does not compile with USE="-mmx -mmxext".'
 	fi
 
 	use xinerama || MYOPTS="${MYOPTS} --disable-xinerama"
