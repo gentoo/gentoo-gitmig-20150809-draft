@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/triplea-0.9.0.2.ebuild,v 1.2 2007/01/30 00:57:05 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/triplea-0.9.0.2.ebuild,v 1.3 2007/02/16 00:48:18 nyhm Exp $
 
 inherit eutils java-pkg-2 java-ant-2 versionator games
 
@@ -32,9 +32,14 @@ src_unpack() {
 	cd "${S}"
 
 	sed -i \
+		-e 's/getWindows/getMyWindows/' \
+		src/games/strategy/debug/Console.java \
+		|| die "sed Console.java failed"
+
+	sed -i \
 		-e 's:/triplea/:/.triplea/:' \
 		src/games/strategy/engine/framework/ui/SaveGameFileChooser.java \
-		|| die "sed failed"
+		|| die "sed SaveGameFileChooser.java failed"
 
 	rm -f lib/{junit.jar,derby_10_1_2.jar}
 	java-pkg_jar-from jgoodies-looks-2.0 looks.jar lib/looks-2.0.4.jar
