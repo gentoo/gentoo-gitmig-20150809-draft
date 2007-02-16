@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/katalog/katalog-0.4.ebuild,v 1.1 2007/01/13 22:16:41 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/katalog/katalog-0.4.ebuild,v 1.2 2007/02/16 22:02:38 flameeyes Exp $
 
 inherit kde
 
@@ -18,7 +18,7 @@ DEPEND=">=dev-util/scons-0.96.1"
 RDEPEND=">=dev-db/sqlite-3.1"
 
 src_compile() {
-	local myconf="kdeincludes=$(kde-config --prefix)/include prefix=${ROOT}/usr "
+	local myconf="kdeincludes=$(kde-config --prefix)/include prefix=/usr "
 	use amd64 && myconf="${myconf} libsuffix=64"
 
 	scons configure ${myconf} || die "configure failed"

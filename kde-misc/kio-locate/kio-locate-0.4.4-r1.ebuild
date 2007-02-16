@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-locate/kio-locate-0.4.4-r1.ebuild,v 1.5 2006/04/10 00:31:08 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-locate/kio-locate-0.4.4-r1.ebuild,v 1.6 2007/02/16 22:03:26 flameeyes Exp $
 
 inherit kde
 
@@ -26,7 +26,7 @@ src_compile() {
 	[ -d "$QTDIR/etc/settings" ] && addwrite "$QTDIR/etc/settings"
 	addpredict "$QTDIR/etc/settings"
 
-	local myconf="kdeincludes=$(kde-config --prefix)/include prefix=${ROOT}/usr "
+	local myconf="kdeincludes=$(kde-config --prefix)/include prefix=/usr "
 	use amd64 && myconf="${myconf} libsuffix=64"
 
 	scons configure ${myconf} || die "configure failed"
