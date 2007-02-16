@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgtk-java/libgtk-java-2.8.7-r1.ebuild,v 1.3 2007/02/10 17:50:40 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgtk-java/libgtk-java-2.8.7-r1.ebuild,v 1.4 2007/02/16 22:23:54 betelgeuse Exp $
 
 inherit java-gnome
 
@@ -11,7 +11,7 @@ KEYWORDS="~amd64 ppc x86"
 
 DEPS=">=x11-libs/gtk+-2.8.3
 		>=dev-java/glib-java-0.2.3
-		>=dev-java/cairo-java-1.0.2
+		>=dev-java/cairo-java-1.0.5
 		>=dev-libs/glib-2.6.0
 		>=x11-libs/cairo-1.0.0-r2"
 
