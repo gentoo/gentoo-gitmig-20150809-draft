@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/koffice-i18n
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.85 2007/02/14 01:15:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.86 2007/02/16 11:36:13 flameeyes Exp $
+
+*koffice-i18n-1.6.2 (16 Feb 2007)
+
+  16 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +koffice-i18n-1.6.2.ebuild:
+  Bump to 1.6.2 pre-release.
 
   14 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   koffice-i18n-1.6.1.ebuild:
