@@ -10,7 +10,7 @@ ESVN_REPO_URI="http://virtualbox.org/svn/vbox/trunk"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="-amd64 ~x86"
 IUSE="additions sdk"
 
 RDEPEND="!app-emulation/virtualbox-bin
