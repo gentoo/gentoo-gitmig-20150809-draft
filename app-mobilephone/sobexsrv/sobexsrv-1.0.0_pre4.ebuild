@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/sobexsrv-1.0.0_pre4.ebuild,v 1.9 2007/01/23 16:27:38 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/sobexsrv-1.0.0_pre4.ebuild,v 1.10 2007/02/16 21:50:06 joker Exp $
 
 inherit eutils
 
@@ -33,6 +33,10 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+
+	cd "${S}"
+	sed -e 's:/usr/man/man8:/usr/share/man/man8:' \
+	    -i Makefile
 
 	cd "${S}/src"
 	sed -e 's/^CFLAGS =/CFLAGS +=/' \
