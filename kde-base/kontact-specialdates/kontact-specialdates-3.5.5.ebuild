@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact-specialdates/kontact-specialdates-3.5.5.ebuild,v 1.8 2006/12/11 14:19:59 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact-specialdates/kontact-specialdates-3.5.5.ebuild,v 1.9 2007/02/16 13:43:33 flameeyes Exp $
 
 KMNAME=kdepim
 KMNOMODULE=true
@@ -18,7 +18,7 @@ $(deprange $PV $MAXKDEVER kde-base/kontact)
 $(deprange $PV $MAXKDEVER kde-base/kaddressbook)
 $(deprange $PV $MAXKDEVER kde-base/korganizer)
 $(deprange $PV $MAXKDEVER kde-base/libkholidays)"
-RDEPEND="${RDEPEND}
+RDEPEND="${DEPEND}
 $(deprange $PV $MAXKDEVER kde-base/kmail)" # only to enable send mail functionality
 
 KMCOPYLIB="libkdepim libkdepim/
