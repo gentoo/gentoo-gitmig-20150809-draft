@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.0.10.ebuild,v 1.1 2006/01/12 22:34:20 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.0.10.ebuild,v 1.2 2007/02/16 16:57:45 dang Exp $
 
 inherit gnome2 eutils
 
@@ -36,13 +36,4 @@ src_unpack() {
 	cd ${S}
 	# bug 101970
 	epatch ${FILESDIR}/${P}-no-extern-cluealigned.diff
-}
-
-src_compile() {
-	gnome2_src_configure
-
-	EPATCH_OPTS="${S}/libtool"
-	epatch ${FILESDIR}/${PN}-3.0.7-libtool.patch
-
-	emake || die "make failed"
 }
