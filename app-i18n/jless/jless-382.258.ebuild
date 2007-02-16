@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jless/jless-382.258.ebuild,v 1.1 2006/06/17 14:10:35 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jless/jless-382.258.ebuild,v 1.2 2007/02/16 20:36:44 flameeyes Exp $
 
 inherit eutils
 
@@ -52,9 +52,6 @@ src_install() {
 	einstall binprefix=j manprefix=j || die
 
 	newbin ${FILESDIR}/lesspipe.sh-r1 jlesspipe.sh
-	if [ ! -f ${ROOT}/usr/bin/lesspipe.sh ] ; then
-		dosym /usr/bin/jlesspipe.sh /usr/bin/lesspipe.sh
-	fi
 
 	insinto /etc/env.d
 	doins ${FILESDIR}/70jless
@@ -63,7 +60,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	# for backward compatibility
 	if [ ! -f ${ROOT}/usr/bin/lesspipe.sh ] ; then
 		ln -s /usr/bin/jlesspipe.sh ${ROOT}/usr/bin/lesspipe.sh
 	fi
