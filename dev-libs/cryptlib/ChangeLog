@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/cryptlib
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/ChangeLog,v 1.13 2007/02/05 08:53:35 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/ChangeLog,v 1.14 2007/02/16 14:36:34 alonbl Exp $
+
+*cryptlib-3.3.1 (16 Feb 2007)
+
+  16 Feb 2007; Alon Bar-Lev <alonbl@gentoo.org> +cryptlib-3.3.1.ebuild:
+  Version bump
 
 *cryptlib-3.3.0-r1 (05 Feb 2007)
 
