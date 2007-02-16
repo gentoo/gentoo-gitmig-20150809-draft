@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/gnome-netstatus
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.65 2006/11/20 04:29:58 leio Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.66 2007/02/16 21:30:58 dang Exp $
+
+  16 Feb 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/gnome-netstatus-2.12.0-gnome-doc-utils.patch,
+  gnome-netstatus-2.12.0.ebuild:
+  Make it build with >=gnome-doc-utils-0.9.x. It's more picky, requiring a
+  maintainer role
 
   20 Nov 2006; Mart Raudsepp <leio@gentoo.org>
   -files/gnome-netstatus-2.10.0-fbsd.patch,
