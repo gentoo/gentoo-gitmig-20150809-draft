@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-faad
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-faad/ChangeLog,v 1.43 2007/01/25 19:59:27 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-faad/ChangeLog,v 1.44 2007/02/16 13:15:50 uberlord Exp $
+
+  16 Feb 2007; Roy Marples <uberlord@gentoo.org>
+  gst-plugins-faad-0.10.4.ebuild:
+  Added ~x86-fbsd keyword.
 
 *gst-plugins-faad-0.10.4 (25 Jan 2007)
 
