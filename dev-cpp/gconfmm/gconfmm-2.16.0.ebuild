@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/gconfmm-2.16.0.ebuild,v 1.2 2006/09/11 16:18:24 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/gconfmm-2.16.0.ebuild,v 1.3 2007/02/16 21:37:45 compnerd Exp $
 
 inherit gnome2 eutils
 
@@ -35,7 +35,7 @@ src_compile() {
 	gnome2_src_compile
 
 	if use doc; then
-		cd "${ROOT}"/"${S}"/docs/reference
+		cd "${S}/docs/reference"
 		make all
 	fi
 }
