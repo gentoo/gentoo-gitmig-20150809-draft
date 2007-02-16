@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/epdfview-0.1.5.ebuild,v 1.8 2007/02/16 08:04:16 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/epdfview-0.1.5.ebuild,v 1.9 2007/02/16 09:43:31 blubb Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://trac.emma-soft.com/epdfview/chrome/site/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="cups nls test"
 
 COMMON_DEPEND=">=app-text/poppler-bindings-0.5.0
