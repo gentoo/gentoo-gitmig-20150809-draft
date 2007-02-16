@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/mozart-1.3.2.ebuild,v 1.1 2007/02/14 08:30:49 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/mozart-1.3.2.ebuild,v 1.2 2007/02/16 10:01:51 keri Exp $
 
 inherit eutils
 
@@ -34,6 +34,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-portage.patch
 	epatch "${FILESDIR}"/${P}-contrib.patch
+	epatch "${FILESDIR}"/${P}-emubin.patch
 	epatch "${FILESDIR}"/${P}-gcc4.patch
 	epatch "${FILESDIR}"/${P}-nostrip.patch
 	epatch "${FILESDIR}"/${P}-ozplatform.patch
