@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r4.ebuild,v 1.1 2007/02/01 03:38:26 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r4.ebuild,v 1.2 2007/02/16 12:13:28 blubb Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -50,6 +50,9 @@ RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 
 DEPEND="${RDEPEND}
 	v4l2? ( >=sys-kernel/linux-headers-2.6.11 )"
+# Make sure the assembler USE flags are unmasked on amd64
+# Remove this once default-linux/amd64/2006.1 is deprecated
+DEPEND="${DEPEND} amd64? ( >=sys-apps/portage-2.1.2 )"
 
 pkg_setup() {
 	if use X && has_version '<x11-base/xorg-x11-7.0' && ! built_with_use x11-base/xorg-x11 xv; then
@@ -91,16 +94,9 @@ src_compile() {
 	use xvid \
 		&& myconf="${myconf} --with-default-xvid=xvid4"
 
-	# Hardenable SIMD extensions on amd64
-	if use amd64; then
-		myconf="${myconf} --enable-mmx \
-				--enable-sse --enable-sse2"
-	elif use x86; then
-		myconf="${myconf} $(use_enable mmx) \
-				$(use_enable sse) \
-				$(use_enable sse2)"
-	fi
-	myconf="${myconf} $(use_enable 3dnow)"
+	myconf="${myconf} $(use_enable mmx) \
+			$(use_enable sse) \
+			$(use_enable sse2) $(use_enable 3dnow)"
 
 	append-flags -DDCT_YUV_PRECISION=1
 	econf \
