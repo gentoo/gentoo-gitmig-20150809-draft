@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/antlr
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.55 2007/02/14 17:34:03 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.56 2007/02/16 11:54:02 corsair Exp $
+
+  16 Feb 2007; Markus Rothe <corsair@gentoo.org> antlr-2.7.7.ebuild:
+  Stable on ppc64; bug #166857
 
   14 Feb 2007; Christian Faulhammer <opfer@gentoo.org> antlr-2.7.7.ebuild:
   stable x86; bug 166857
