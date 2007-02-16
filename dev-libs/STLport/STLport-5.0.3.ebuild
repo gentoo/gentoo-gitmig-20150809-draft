@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.0.3.ebuild,v 1.4 2007/02/14 18:55:15 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.0.3.ebuild,v 1.5 2007/02/16 21:50:29 dev-zero Exp $
 
 inherit eutils versionator eutils toolchain-funcs multilib flag-o-matic
 
@@ -50,7 +50,7 @@ src_compile() {
 
 	local myconf
 	if use boost ; then
-		myconf="${myconf} --with-boost=${ROOT}usr/include"
+		myconf="${myconf} --with-boost=/usr/include"
 		sed -i \
 			-e 'N;N;N;s:/\**\n\(#define _STLP_USE_BOOST_SUPPORT 1\)*\n\*/:\1:' \
 			stlport/stl_user_config.h
