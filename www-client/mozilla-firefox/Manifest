@@ -202,18 +202,18 @@ EBUILD mozilla-firefox-2.0.0.1-r2.ebuild 8898 RMD160 e74fe897129ca3ff3ff5b3eca8a
 MD5 0cd96360e930a9db47f1d33897e78c17 mozilla-firefox-2.0.0.1-r2.ebuild 8898
 RMD160 e74fe897129ca3ff3ff5b3eca8a8736f4fe96270 mozilla-firefox-2.0.0.1-r2.ebuild 8898
 SHA256 2d921691b6663145439aac768df2c12cb877cbaff270353834b3c4260d47aa17 mozilla-firefox-2.0.0.1-r2.ebuild 8898
-EBUILD mozilla-firefox-2.0.0.1-r3.ebuild 8893 RMD160 a9b7bda8b8e0cba82dc095efebcb5cab24695b7e SHA1 4658f58b7e796288bc8358a9b6bfc01b3a3f9c84 SHA256 a111dba192ec98076f12ee3e8a31feffe7604d34190c65c478ac1002a3d22545
-MD5 e3d1eb19dce018a6cdf8ad5d5c49ee68 mozilla-firefox-2.0.0.1-r3.ebuild 8893
-RMD160 a9b7bda8b8e0cba82dc095efebcb5cab24695b7e mozilla-firefox-2.0.0.1-r3.ebuild 8893
-SHA256 a111dba192ec98076f12ee3e8a31feffe7604d34190c65c478ac1002a3d22545 mozilla-firefox-2.0.0.1-r3.ebuild 8893
+EBUILD mozilla-firefox-2.0.0.1-r4.ebuild 8893 RMD160 913cf624fd622905a0eecb7d51c18186514638f2 SHA1 afc1e2a120a2375bd6bbe70a6302929119fcb572 SHA256 4bbfc0f828302de97950e0cd74b4bff5ccdd8c758ed1ad3caeb139f5dc82a1ba
+MD5 20e38508e0b8b391b8e244ed28653816 mozilla-firefox-2.0.0.1-r4.ebuild 8893
+RMD160 913cf624fd622905a0eecb7d51c18186514638f2 mozilla-firefox-2.0.0.1-r4.ebuild 8893
+SHA256 4bbfc0f828302de97950e0cd74b4bff5ccdd8c758ed1ad3caeb139f5dc82a1ba mozilla-firefox-2.0.0.1-r4.ebuild 8893
 EBUILD mozilla-firefox-2.0.0.1.ebuild 8881 RMD160 116dcf0018fd4eeec3adaa8e8e0c68eb9cdf47b1 SHA1 4e7fd2774324aaae40a820224addf8d860cdb4be SHA256 947e05927edc7815f337430738576884c17fe553c73edfc70beb2a75ac47b37a
 MD5 c031090c19e7423777a38c510926841a mozilla-firefox-2.0.0.1.ebuild 8881
 RMD160 116dcf0018fd4eeec3adaa8e8e0c68eb9cdf47b1 mozilla-firefox-2.0.0.1.ebuild 8881
 SHA256 947e05927edc7815f337430738576884c17fe553c73edfc70beb2a75ac47b37a mozilla-firefox-2.0.0.1.ebuild 8881
-MISC ChangeLog 60911 RMD160 6514225c0ea1e37f2f105ceda8c4ad69d5bd2a84 SHA1 1acc49debce6999deecb2d0cfe89743a83e03004 SHA256 10c7d3600256d3286e7cacd0c71c2078f1f3a0328b5fc7cba2df2d19e03de4ec
-MD5 aafb9f15dcc32c84a1654ba6718750e9 ChangeLog 60911
-RMD160 6514225c0ea1e37f2f105ceda8c4ad69d5bd2a84 ChangeLog 60911
-SHA256 10c7d3600256d3286e7cacd0c71c2078f1f3a0328b5fc7cba2df2d19e03de4ec ChangeLog 60911
+MISC ChangeLog 61169 RMD160 2b3bf0985f34d325af840a63e46ee4640d1cc11e SHA1 aac1718bad53d9a857a8c8e48787133c29203e06 SHA256 99ba5d68f91e4b2ba81bcc9f248b3b0ccdead22a585cbb29061079c0ea4e35ef
+MD5 6a99a26e0e97a8378a0d3e1e761d11dd ChangeLog 61169
+RMD160 2b3bf0985f34d325af840a63e46ee4640d1cc11e ChangeLog 61169
+SHA256 99ba5d68f91e4b2ba81bcc9f248b3b0ccdead22a585cbb29061079c0ea4e35ef ChangeLog 61169
 MISC metadata.xml 160 RMD160 d5a9f0bf8989621c2bde30facb53bcae00aba709 SHA1 5015c07af2083f20f9552d7fb11afb5ea69af345 SHA256 0cc5126362a12cee42ec1197c528a804cf36859329dd2c6d9225726831d14b8b
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
 RMD160 d5a9f0bf8989621c2bde30facb53bcae00aba709 metadata.xml 160
@@ -236,6 +236,6 @@ SHA256 de8940e7f1dde0c053860ccc81f9e008842ab50d4e969117efabd25d8534b4c4 files/di
 MD5 dd89dc101ed93717231aac7c17f7c555 files/digest-mozilla-firefox-2.0.0.1-r2 11538
 RMD160 20931771a494d86eeb9403b47add1c023e30ea04 files/digest-mozilla-firefox-2.0.0.1-r2 11538
 SHA256 a5f2ab7aa56bde6b81a2dd74d09e98fb6f66da0007e3bd5b69a54624e39da940 files/digest-mozilla-firefox-2.0.0.1-r2 11538
-MD5 f6c73fab83cc9c3f805b3c2064143779 files/digest-mozilla-firefox-2.0.0.1-r3 11550
-RMD160 8b983801dfe1a22211c9d3ea57a377585f1722fa files/digest-mozilla-firefox-2.0.0.1-r3 11550
-SHA256 a198fdcc398feb415e06c32dce2eea69449ad8274a3d855ffd1942a5a4ad546a files/digest-mozilla-firefox-2.0.0.1-r3 11550
+MD5 f6c73fab83cc9c3f805b3c2064143779 files/digest-mozilla-firefox-2.0.0.1-r4 11550
+RMD160 8b983801dfe1a22211c9d3ea57a377585f1722fa files/digest-mozilla-firefox-2.0.0.1-r4 11550
+SHA256 a198fdcc398feb415e06c32dce2eea69449ad8274a3d855ffd1942a5a4ad546a files/digest-mozilla-firefox-2.0.0.1-r4 11550
