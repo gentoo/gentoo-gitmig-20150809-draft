@@ -52,7 +52,7 @@ src_install() {
 	insinto /opt/VirtualBox
 	if use sdk; then
 	    doins -r sdk
-	    make_wrapper xpidl "sdk/bin/xpidl" "${ROOT}opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
+	    make_wrapper xpidl "sdk/bin/xpidl" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
 	    fperms 0755 /opt/VirtualBox/sdk/bin/xpidl
 	fi
 
@@ -62,11 +62,11 @@ src_install() {
 	for each in VBox{BFE,Manage,SDL,SVC,XPCOMIPCD} VirtualBox vditool xpidl ; do
 		fperms 0755 /opt/VirtualBox/${each}
 	done
-	make_wrapper vboxsvc "./VBoxSVC" "${ROOT}opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
-	make_wrapper virtualbox "./VirtualBox" "${ROOT}opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
-	make_wrapper vboxmanage "./VBoxManage" "${ROOT}opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
-	make_wrapper vboxsdl "./VBoxSDL" "${ROOT}opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
-	make_wrapper vboxvrdp "./VBoxVRDP" "${ROOT}opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
+	make_wrapper vboxsvc "./VBoxSVC" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
+	make_wrapper virtualbox "./VirtualBox" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
+	make_wrapper vboxmanage "./VBoxManage" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
+	make_wrapper vboxsdl "./VBoxSDL" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
+	make_wrapper vboxvrdp "./VBoxVRDP" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
 
 	# udev rule for vboxdrv
 	dodir /etc/udev/rules.d
