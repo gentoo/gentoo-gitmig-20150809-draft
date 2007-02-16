@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.29_pre20070126.ebuild,v 1.1 2007/02/11 20:44:33 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.29_pre20070126.ebuild,v 1.2 2007/02/16 06:56:50 pva Exp $
 
 inherit eutils flag-o-matic
 
@@ -50,12 +50,15 @@ pkg_setup() {
 		myconf="--with-alsa --without-sdl-sound"
 	elif use sdl-sound ; then
 		if ! use sdl ; then
-			ewarn "sdl-sound is not enabled because sdl is switched off. Leaving"
+			ewarn "sdl-sound is not enabled because sdl USE flag is disabled. Leaving"
 			ewarn "sound on oss autodetection."
 			myconf="--without-alsa --without-sdl-sound"
 			ebeep
 		else
 			elog "Choosing sdl-sound as sound target to use."
+			ewarn "E-UAE with the SDL audio back-end doesn't work correctly in Linux."
+			ewarn "Better use alsa... You've been warned ;)"
+			ebeep
 			myconf="--without-alsa --with-sdl-sound"
 		fi
 	elif use oss ; then
