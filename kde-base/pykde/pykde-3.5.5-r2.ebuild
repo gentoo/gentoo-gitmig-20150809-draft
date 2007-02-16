@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/pykde-3.5.5-r2.ebuild,v 1.4 2007/02/03 21:21:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/pykde-3.5.5-r2.ebuild,v 1.5 2007/02/16 21:58:58 flameeyes Exp $
 
 KMNAME=kdebindings
 KMMODULE=python
@@ -32,8 +32,8 @@ src_compile() {
 	cd ${S}/python/pykde
 	distutils_python_version
 
-	local myconf="-d ${ROOT}/usr/$(get_libdir)/python${PYVER}/site-packages \
-			-v ${ROOT}/usr/share/sip \
+	local myconf="-d /usr/$(get_libdir)/python${PYVER}/site-packages \
+			-v /usr/share/sip \
 			-k $(kde-config --prefix) \
 			-t ${S}/python/pykde"
 

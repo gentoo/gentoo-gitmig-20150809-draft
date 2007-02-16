@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/pykde
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/ChangeLog,v 1.24 2007/02/03 21:21:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/ChangeLog,v 1.25 2007/02/16 21:58:58 flameeyes Exp $
+
+  16 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> pykde-3.5.5-r1.ebuild,
+  pykde-3.5.5-r2.ebuild, pykde-3.5.6.ebuild:
+  Don't abuse ROOT.
 
   03 Feb 2007; nixnut <nixnut@gentoo.org> pykde-3.5.5-r2.ebuild:
   Stable on ppc wrt bug 163802
