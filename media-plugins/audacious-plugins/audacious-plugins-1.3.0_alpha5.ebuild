@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.3.0_alpha3.ebuild,v 1.1 2007/01/25 14:47:12 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.3.0_alpha5.ebuild,v 1.1 2007/02/16 11:21:07 chainsaw Exp $
 
 inherit flag-o-matic
 
@@ -14,17 +14,17 @@ SRC_URI="http://static.audacious-media-player.org/release/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="aac alsa arts chardet esd flac jack lirc modplug mp3 musepack nls oss sid sndfile timidity tta vorbis wavpack wma pulseaudio"
+IUSE="aac adplug alsa arts chardet esd flac jack lirc mad modplug musepack nls opengl oss sid sndfile timidity tta vorbis wavpack wma pulseaudio"
 
 RDEPEND="app-arch/unzip
 	dev-libs/libxml2
 	net-misc/curl
-	>=media-sound/audacious-1.3.0_alpha2
+	>=media-sound/audacious-1.3.0_alpha5
 	>=x11-libs/gtk+-2.6
 	>=gnome-base/libglade-2.3.1
-	>=dev-cpp/libbinio-1.4
 	>=media-libs/libsdl-1.2.5
 	media-libs/taglib
+	adplug? ( >=dev-cpp/libbinio-1.4 )
 	alsa? ( >=media-libs/alsa-lib-1.0.9_rc2 )
 	arts? ( kde-base/arts )
 	esd? ( >=media-sound/esound-0.2.30 )
@@ -36,8 +36,10 @@ RDEPEND="app-arch/unzip
 		media-libs/libsamplerate
 		media-sound/jack-audio-connection-kit )
 	lirc? ( app-misc/lirc )
+	mad? ( media-libs/libmad )
 	modplug? ( media-libs/libmodplug )
 	musepack? ( media-libs/libmpcdec )
+	opengl? ( =media-libs/libprojectm-0.99* )
 	sid? ( media-libs/libsidplay )
 	sndfile? ( media-libs/libsndfile )
 	timidity? ( media-sound/timidity++ )
@@ -52,9 +54,9 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9.0"
 
 mp3_warning() {
-	if ! useq mp3 ; then
+	if ! useq mad ; then
 		echo
-		ewarn "MP3 support is now optional, you may want to enable the mp3 USE-flag"
+		ewarn "MP3 support is optional, you may want to enable the mad USE-flag"
 		echo
 	fi
 }
@@ -72,7 +74,7 @@ src_compile() {
 		--with-dev-mixer=/dev/sound/mixer \
 		$(use_enable vorbis) \
 		$(use_enable esd) \
-		$(use_enable mp3) \
+		$(use_enable mad mp3) \
 		$(use_enable nls) \
 		$(use_enable oss) \
 		$(use_enable alsa) \
@@ -91,6 +93,8 @@ src_compile() {
 		$(use_enable chardet) \
 		$(use_enable wavpack) \
 		$(use_enable tta) \
+		$(use_enable opengl projectm) \
+		$(use_enable adplug) \
 		|| die
 
 	emake || die "make failed"
