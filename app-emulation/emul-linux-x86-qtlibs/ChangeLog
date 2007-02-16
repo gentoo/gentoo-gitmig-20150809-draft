@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-qtlibs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.28 2007/02/13 21:13:22 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.29 2007/02/16 10:29:03 blubb Exp $
+
+  16 Feb 2007; Simon Stelling <blubb@gentoo.org>
+  -emul-linux-x86-qtlibs-2.2.ebuild, -emul-linux-x86-qtlibs-3.4.4.ebuild,
+  -emul-linux-x86-qtlibs-3.4.4-r1.ebuild,
+  -emul-linux-x86-qtlibs-3.4.4-r4.ebuild, emul-linux-x86-qtlibs-10.0.ebuild:
+  mark 10.0 stable for security bug 153704 & clean up old versions
 
   13 Feb 2007; Simon Stelling <blubb@gentoo.org>
   emul-linux-x86-qtlibs-10.0.ebuild:
