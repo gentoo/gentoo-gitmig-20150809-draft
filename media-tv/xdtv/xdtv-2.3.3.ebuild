@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.3.3.ebuild,v 1.7 2007/01/07 15:12:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.3.3.ebuild,v 1.8 2007/02/16 12:19:35 blubb Exp $
 
 WANT_AUTOMAKE="1.7"
 WANT_AUTOCONF="2.5"
@@ -69,6 +69,9 @@ DEPEND="${RDEPEND}
 			x11-apps/mkfontscale
 			xinerama? ( x11-proto/xineramaproto )
 		) <virtual/x11-7 )"
+# Make sure the assembler USE flags are unmasked on amd64
+# Remove this once default-linux/amd64/2006.1 is deprecated
+DEPEND="${DEPEND} amd64? ( >=sys-apps/portage-2.1.2 )"
 
 FONT_S="${S}/font"
 FONT_SUFFIX="pcf.gz"
@@ -134,8 +137,7 @@ src_compile() {
 		ewarn "If you want a better GUI toolkit, enable either \"neXt\" or \"Xaw3d\" USE flags."
 	fi
 
-	( use mmx || use amd64 ) && myconf="${myconf} --enable-mmx" || \
-		myconf="${myconf} --disable-mmx"
+	myconf="${myconf} $(use_enable mmx)"
 
 	has_version '<x11-base/xorg-x11-7.0' && \
 		appdefaultsdir="/etc/X11/app-defaults" || \
