@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/cel-1.0.ebuild,v 1.2 2007/02/08 07:28:51 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/cel-1.0.ebuild,v 1.3 2007/02/16 20:09:03 tupone Exp $
 
 inherit eutils
 
@@ -20,6 +20,12 @@ DEPEND="${RDEPEND}
 	dev-util/jam"
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}"-amd64.patch
+}
 
 src_compile() {
 	econf \
