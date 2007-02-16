@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/wmclockmon-0.8.0-r1.ebuild,v 1.3 2007/02/15 18:34:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/wmclockmon-0.8.0-r1.ebuild,v 1.4 2007/02/16 11:56:10 corsair Exp $
 
 WANT_AUTOMAKE="1.4"
 WANT_AUTOCONF="1.4"
@@ -14,7 +14,7 @@ SRC_URI="http://tnemeth.free.fr/projets/programmes/${P}.tar.gz"
 HOMEPAGE="http://tnemeth.free.fr/projets/dockapps.html"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="~amd64 ~ppc ppc64 sparc x86"
 LICENSE="GPL-2"
 
 RDEPEND="gtk? ( =x11-libs/gtk+-1.2* )
