@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1-r2.ebuild,v 1.11 2007/02/16 12:13:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1-r2.ebuild,v 1.12 2007/02/17 14:16:40 blubb Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic multilib
 
 RESTRICT="nostrip"
 IUSE="3dfx 3dnow 3dnowext aac aalib alsa altivec amr arts bidi bl bindist
@@ -48,7 +48,7 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 		!livecd? (
 			!bindist? ( >=media-libs/win32codecs-20040916 ) ) )
 	x86? ( real? ( >=media-video/realplayer-10.0.3 ) )
-	amd64? ( real? ( media-libs/amd64codecs ) )
+	amd64? ( real? ( !bindist? ( media-libs/amd64codecs ) ) )
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
@@ -133,8 +133,8 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 pkg_setup() {
 	if use real && use x86; then
 		REALLIBDIR="/opt/RealPlayer/codecs"
-	elif use real && use amd64; then
-		REALLIBDIR="/usr/lib64/codecs"
+	elif use real && use amd64 && ! use bindist ; then
+		REALLIBDIR="/usr/$(get_libdir)/codecs"
 	fi
 
 	if use truetype && ! use iconv ; then
