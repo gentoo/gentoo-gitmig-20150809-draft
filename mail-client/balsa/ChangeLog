@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/balsa
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.45 2007/02/04 05:27:33 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.46 2007/02/17 00:07:42 eroyf Exp $
+
+  17 Feb 2007; Alexander H. Færøy <eroyf@gentoo.org> metadata.xml:
+  Removed allanonjl from metadata.xml
 
   04 Feb 2007; Andrej Kacian <ticho@gentoo.org> balsa-2.3.13.ebuild:
   Stable on x86, bug #164844.
