@@ -1,21 +1,21 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font-ttf/mikachan-font-ttf-8.9-r1.ebuild,v 1.15 2007/01/22 20:58:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font-ttf/mikachan-font-ttf-8.9-r1.ebuild,v 1.16 2007/02/17 13:41:46 vapier Exp $
 
 inherit font
 
 MY_PN="mikachanfont"
 
 DESCRIPTION="Mikachan Japanese TrueType fonts"
+HOMEPAGE="http://mikachan-font.com/"
 SRC_URI="mirror://sourceforge.jp/mikachan/5513/${MY_PN}-${PV}.tar.bz2
 	mirror://sourceforge.jp/mikachan/5514/${MY_PN}P-${PV}.tar.bz2
 	mirror://sourceforge.jp/mikachan/5515/${MY_PN}PB-${PV}.tar.bz2
 	mirror://sourceforge.jp/mikachan/5516/${MY_PN}PS-${PV}.tar.bz2"
-HOMEPAGE="http://mikachan-font.com/"
 
 LICENSE="free-noncomm"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 FONT_S="${WORKDIR}"
