@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-subtitles
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-subtitles/ChangeLog,v 1.8 2007/01/04 11:43:57 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-subtitles/ChangeLog,v 1.9 2007/02/17 01:24:40 zzam Exp $
+
+  17 Feb 2007; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-subtitles-0.3.10.ebuild:
+  No longer use ROOT for header-files as that will break either way, Bug #167285.
 
   04 Jan 2007; Matthias Schwarzott <zzam@gentoo.org> ChangeLog:
   Marked stable on x86.
