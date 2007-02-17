@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pyinotify
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyinotify/ChangeLog,v 1.2 2007/02/05 21:59:38 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyinotify/ChangeLog,v 1.3 2007/02/17 10:37:55 lucass Exp $
+
+*pyinotify-0.7.0 (17 Feb 2007)
+
+  17 Feb 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  +pyinotify-0.7.0.ebuild:
+  Version bump: added NEED_PYTHON, added docs and examples controlled by USE
+  flags.
 
   05 Feb 2007; Daniel Gryniewicz <dang@gentoo.org> pyinotify-0.6.3.ebuild:
   Marked ~amd64
