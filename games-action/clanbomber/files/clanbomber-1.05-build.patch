@@ -1,0 +1,22 @@
+--- clanbomber/Makefile.am
++++ clanbomber/Makefile.am
+@@ -19,7 +19,7 @@
+ 	-rm -f @datadir@/clanbomber/clanbomber.dat
+ 	-rm -f @datadir@/clanbomber/clanbomber.scr
+ 
+-clanbomber.dat: clanbomber.scr pics/*.pcx pics/*.tga wavs/*.wav maps/*.map music/bud.mod
++clanbomber.dat: clanbomber clanbomber.scr pics/*.pcx pics/*.tga wavs/*.wav maps/*.map music/bud.mod
+ 	@./clanbomber -datafile
+ 
+ all-local: clanbomber.dat
+--- configure.in
++++ configure.in
+@@ -11,6 +11,8 @@
+ AC_PROG_CXX
+ dnl Checks for libraries.
+ 
++CPPFLAGS=`clanlib0.6-config --cflags`
++LIBS=`clanlib0.6-config --libs`
+ AC_CHECK_LIB(z,main,,echo "ClanBomber requires zlib to run."; exit 1)
+ AC_CHECK_LIB(Hermes,main,,echo "ClanBomber requires Hermes to run."; exit 1)
+ AC_CHECK_LIB(clanCore,main,,echo "ClanBomber requires ClanLib to run."; exit 1)

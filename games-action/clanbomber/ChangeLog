@@ -1,6 +1,10 @@
 # ChangeLog for games-action/clanbomber
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/ChangeLog,v 1.7 2007/02/08 20:50:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/ChangeLog,v 1.8 2007/02/17 08:47:09 nyhm Exp $
+
+  17 Feb 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/clanbomber-1.05-build.patch, clanbomber-1.05.ebuild:
+  Fix ROOT abuse, bug #167277
 
   08 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

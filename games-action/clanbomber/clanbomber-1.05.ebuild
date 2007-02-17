@@ -1,20 +1,19 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/clanbomber-1.05.ebuild,v 1.6 2005/09/26 17:27:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/clanbomber-1.05.ebuild,v 1.7 2007/02/17 08:47:09 nyhm Exp $
 
-inherit eutils flag-o-matic games
+inherit autotools eutils games
 
 DESCRIPTION="Bomberman-like multiplayer game"
 HOMEPAGE="http://clanbomber.sourceforge.net/"
-SRC_URI="mirror://sourceforge/clanbomber/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="sys-libs/zlib
-	media-libs/hermes
+DEPEND="media-libs/hermes
 	=dev-games/clanlib-0.6.5*"
 
 src_unpack() {
@@ -22,21 +21,17 @@ src_unpack() {
 	cd "${S}"
 	sed -i \
 		-e 's:\(@datadir@/clanbomber/\):$(DESTDIR)\1:' \
-		clanbomber/{,*/}Makefile.in \
+		clanbomber/{,*/}Makefile.am \
 		|| die "sed failed"
-	epatch "${FILESDIR}/${PV}-no-display.patch" \
-		"${FILESDIR}/${PV}-gcc34.patch"
-}
-
-src_compile() {
-	append-flags -I${ROOT}/usr/include/clanlib-0.6.5
-	append-ldflags -L${ROOT}/usr/lib/clanlib-0.6.5
-	egamesconf || die
-	emake -j1 || die "emake failed"
+	epatch \
+		"${FILESDIR}"/${PV}-no-display.patch \
+		"${FILESDIR}"/${PV}-gcc34.patch \
+		"${FILESDIR}"/${P}-build.patch
+	eautoreconf
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog IDEAS QUOTES README
 	prepgamesdirs
 }
