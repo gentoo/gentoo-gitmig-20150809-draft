@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.274 2007/02/17 00:11:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.275 2007/02/17 00:17:39 vapier Exp $
 #
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
@@ -1625,11 +1625,18 @@ preserve_old_lib_notify() {
 # Usage: built_with_use [--missing <action>] [-a|-o] <DEPEND ATOM> <List of USE flags>
 #	 ex: built_with_use xchat gtk2
 #
-# Flags: -a	        all USE flags should be utilized
-#		 -o	        at least one USE flag should be utilized
+# Flags: -a         all USE flags should be utilized
+#        -o         at least one USE flag should be utilized
 #        --missing  peform the specified action if the flag is not in IUSE (true/false/die)
+#        --hidden   USE flag we're checking is hidden expanded so it isnt in IUSE
 # Note: the default flag is '-a'
 built_with_use() {
+	local hidden="no"
+	if [[ $1 == "--hidden" ]] ; then
+		hidden="yes"
+		shift
+	fi
+
 	local missing_action="die"
 	if [[ $1 == "--missing" ]] ; then
 		missing_action=$2
@@ -1652,7 +1659,7 @@ built_with_use() {
 
 	# if the IUSE file doesn't exist, the read will error out, we need to handle
 	# this gracefully
-	if [[ ! -e ${USEFILE} ]] || [[ ! -e ${IUSEFILE} ]] ; then
+	if [[ ! -e ${USEFILE} ]] || [[ ! -e ${IUSEFILE} && ${hidden} == "no" ]] ; then
 		case ${missing_action} in
 			true)	return 0;;
 			false)	return 1;;
@@ -1660,22 +1667,24 @@ built_with_use() {
 		esac
 	fi
 
-	local IUSE_BUILT=$(<${IUSEFILE})
-	# Don't check USE_EXPAND #147237
-	local expand
-	for expand in $(echo ${USE_EXPAND} | tr '[:upper:]' '[:lower:]') ; do
-		if [[ $1 == ${expand}_* ]] ; then
-			expand=""
-			break
-		fi
-	done
-	if [[ -n ${expand} ]] ; then
-		if ! has $1 ${IUSE_BUILT} ; then
-			case ${missing_action} in
-				true)  return 0;;
-				false) return 1;;
-				die)   die "$PKG does not actually support the $1 USE flag!";;
-			esac
+	if [[ ${hidden} == "no" ]] ; then
+		local IUSE_BUILT=$(<${IUSEFILE})
+		# Don't check USE_EXPAND #147237
+		local expand
+		for expand in $(echo ${USE_EXPAND} | tr '[:upper:]' '[:lower:]') ; do
+			if [[ $1 == ${expand}_* ]] ; then
+				expand=""
+				break
+			fi
+		done
+		if [[ -n ${expand} ]] ; then
+			if ! has $1 ${IUSE_BUILT} ; then
+				case ${missing_action} in
+					true)  return 0;;
+					false) return 1;;
+					die)   die "$PKG does not actually support the $1 USE flag!";;
+				esac
+			fi
 		fi
 	fi
 
