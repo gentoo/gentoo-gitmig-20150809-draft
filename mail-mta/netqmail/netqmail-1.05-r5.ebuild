@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.05-r5.ebuild,v 1.1 2007/02/11 18:54:22 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.05-r5.ebuild,v 1.2 2007/02/17 11:26:15 hansmi Exp $
 
 inherit eutils toolchain-funcs fixheadtails flag-o-matic
 
@@ -217,7 +217,7 @@ src_install() {
 
 	for i in /var/qmail/alias/.qmail-{mailer-daemon,postmaster,root}
 	do
-		if [[ ! -f ${ROOT}${i} ]]; then
+		if [[ ! -f ${i} ]]; then
 			touch ${D}${i}
 			fowners alias:qmail ${i}
 		fi
