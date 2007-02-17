@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-firmware
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.55 2007/02/17 02:12:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.56 2007/02/17 15:36:01 flameeyes Exp $
+
+  17 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  alsa-firmware-1.0.14_rc2-r1.ebuild:
+  For mixart and vx222, you can use either udev/hotplug or alsa-tools to load
+  the firmware.
 
 *alsa-firmware-1.0.14_rc2-r1 (17 Feb 2007)
 

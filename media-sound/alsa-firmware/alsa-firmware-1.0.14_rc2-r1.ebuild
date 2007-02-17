@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/alsa-firmware-1.0.14_rc2-r1.ebuild,v 1.1 2007/02/17 02:12:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/alsa-firmware-1.0.14_rc2-r1.ebuild,v 1.2 2007/02/17 15:36:01 flameeyes Exp $
 
 MY_P="${P/_rc/rc}"
 
@@ -20,7 +20,9 @@ S="${WORKDIR}/${MY_P}"
 DEPEND=""
 RDEPEND="alsa_cards_usb-usx2y? ( sys-apps/fxload )
 	alsa_cards_hdsp? ( media-sound/alsa-tools )
-	alsa_cards_hdspm? ( media-sound/alsa-tools )"
+	alsa_cards_hdspm? ( media-sound/alsa-tools )
+	alsa_cards_mixart? ( || ( >=sys-fs/udev-096 media-sound/alsa-tools ) )
+	alsa_cards_vx222? ( || ( >=sys-fs/udev-096 media-sound/alsa-tools ) )"
 
 src_compile() {
 	econf \
@@ -36,8 +38,8 @@ src_install () {
 	use alsa_cards_pcxhr || rm -rf "${D}/usr/share/alsa/firmware/pcxhrloader" "${D}/lib/firmware/pcxhr"
 	use alsa_cards_vx222 || rm -rf "${D}/usr/share/alsa/firmware/vxloader" "${D}/lib/firmware/vx"
 	use alsa_cards_usb-usx2y || rm -rf "${D}/usr/share/alsa/firmware/usx2yloader" "${D}/lib/firmware/vx"
-	use alsa_cards_hdsp || use alsa_cards_hdspm || rm -rf "${D}/usr/share/alsa/firmware/hdsploader"
 	use alsa_cards_mixart || rm -rf "${D}/usr/share/alsa/firmware/mixartloader" "${D}/lib/firmware/mixart"
+	use alsa_cards_hdsp || use alsa_cards_hdspm || rm -rf "${D}/usr/share/alsa/firmware/hdsploader"
 	use alsa_cards_asihpi || rm -rf "${D}/lib/firmware/asihpi"
 	use alsa_cards_sb16 || rm -rf "${D}/lib/firmware/sb16"
 	use alsa_cards_korg1212 || rm -rf "${D}/lib/firmware/korg"
