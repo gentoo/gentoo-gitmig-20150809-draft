@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/alsa-firmware-1.0.14_rc2-r1.ebuild,v 1.2 2007/02/17 15:36:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/alsa-firmware-1.0.14_rc2-r1.ebuild,v 1.3 2007/02/17 16:53:53 flameeyes Exp $
 
 MY_P="${P/_rc/rc}"
 
@@ -11,9 +11,16 @@ SRC_URI="mirror://alsaproject/firmware/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
+
+ECHOAUDIO_CARDS="alsa_cards_darla20 alsa_cards_gina20
+alsa_cards_layla20 alsa_cards_darla24 alsa_cards_gina24
+alsa_cards_layla24 alsa_cards_mona alsa_cards_mia alsa_cards_indigo
+alsa_cards_indigoio"
+
 IUSE="alsa_cards_pcxhr alsa_cards_vx222 alsa_cards_usb-usx2y
 alsa_cards_hdsp alsa_cards_hdspm alsa_cards_mixart alsa_cards_asihpi
-alsa_cards_sb16 alsa_cards_korg1212 alsa_cards_maestro3"
+alsa_cards_sb16 alsa_cards_korg1212 alsa_cards_maestro3
+${ECHOAUDIO_CARDS}"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -22,7 +29,8 @@ RDEPEND="alsa_cards_usb-usx2y? ( sys-apps/fxload )
 	alsa_cards_hdsp? ( media-sound/alsa-tools )
 	alsa_cards_hdspm? ( media-sound/alsa-tools )
 	alsa_cards_mixart? ( || ( >=sys-fs/udev-096 media-sound/alsa-tools ) )
-	alsa_cards_vx222? ( || ( >=sys-fs/udev-096 media-sound/alsa-tools ) )"
+	alsa_cards_vx222? ( || ( >=sys-fs/udev-096 media-sound/alsa-tools ) )
+	alsa_cards_pcxhr? ( || ( >=sys-fs/udev-096 >=media-sound/alsa-tools-1.0.14_rc1-r1 ) )"
 
 src_compile() {
 	econf \
@@ -44,6 +52,13 @@ src_install () {
 	use alsa_cards_sb16 || rm -rf "${D}/lib/firmware/sb16"
 	use alsa_cards_korg1212 || rm -rf "${D}/lib/firmware/korg"
 	use alsa_cards_maestro3 || rm -rf "${D}/lib/firmware/ess"
+
+	local ea="no"
+	for card in ${ECHOAUDIO_CARDS}; do
+		use ${card} && ea="yes" && break
+	done
+
+	[[ ${ea} == "no" ]] && rm -rf "${D}/lib/firmware/ea"
 
 	insinto /etc/udev/rules.d
 	use alsa_cards_usb-usx2y && doins "${FILESDIR}/52-usx2yaudio.rules"
