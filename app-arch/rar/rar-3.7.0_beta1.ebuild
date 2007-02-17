@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-3.7.0_beta1.ebuild,v 1.3 2007/02/12 16:48:43 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-3.7.0_beta1.ebuild,v 1.4 2007/02/17 20:58:35 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -15,7 +15,7 @@ KEYWORDS="-* amd64 x86"
 IUSE=""
 RESTRICT="nostrip"
 
-RDEPEND="sys-libs/glibc
+RDEPEND=">=sys-libs/glibc-2.4
 	amd64? ( app-emulation/emul-linux-x86-compat )"
 
 S=${WORKDIR}/${PN}
