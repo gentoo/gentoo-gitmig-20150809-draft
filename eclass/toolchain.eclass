@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.324 2007/02/16 20:32:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.325 2007/02/17 00:13:04 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1276,7 +1276,7 @@ gcc_do_configure() {
 		if [[ -n ${needed_libc} ]] ; then
 			if ! has_version ${CATEGORY}/${needed_libc} ; then
 				confgcc="${confgcc} --disable-shared --disable-threads --without-headers"
-			elif built_with_use ${CATEGORY}/${needed_libc} crosscompile_opts_headers-only ; then
+			elif built_with_use --missing false ${CATEGORY}/${needed_libc} crosscompile_opts_headers-only ; then
 				confgcc="${confgcc} --disable-shared --with-sysroot=${PREFIX}/${CTARGET}"
 			else
 				confgcc="${confgcc} --with-sysroot=${PREFIX}/${CTARGET}"
