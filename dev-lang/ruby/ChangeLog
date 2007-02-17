@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.256 2007/02/11 14:19:50 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.257 2007/02/17 19:17:23 flameeyes Exp $
+
+*ruby-1.8.6_pre1 (17 Feb 2007)
+
+  17 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +ruby-1.8.6_pre1.ebuild:
+  Bump to the preview version, but without CJK support for now because
+  Onigurama hasn't been updated yet. Thanks to M. Edward Borasky in bug
+  #167364.
 
   11 Feb 2007; Fabian Groffen <grobian@gentoo.org> ruby-1.8.4-r3.ebuild,
   ruby-1.8.5_p2.ebuild:
