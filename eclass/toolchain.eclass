@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.326 2007/02/17 00:17:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.327 2007/02/17 11:00:19 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -137,9 +137,10 @@ else
 
 	if [[ ${PN} != "kgcc64" ]] ; then
 		IUSE="${IUSE} altivec build fortran nls nocxx"
-		[[ -n ${PIE_VER}	]] && IUSE="${IUSE} nopie"
-		[[ -n ${PP_VER}		]] && IUSE="${IUSE} nossp"
-		[[ -n ${HTB_VER}	]] && IUSE="${IUSE} boundschecking"
+		[[ -n ${PIE_VER} ]] && IUSE="${IUSE} nopie"
+		[[ -n ${PP_VER}  ]] && IUSE="${IUSE} nossp"
+		[[ -n ${HTB_VER} ]] && IUSE="${IUSE} boundschecking"
+		[[ -n ${D_VER}   ]] && IUSE="${IUSE} d"
 
 		if version_is_at_least 3 ; then
 			IUSE="${IUSE} bootstrap doc gcj gtk hardened multilib objc vanilla"
@@ -182,6 +183,7 @@ fi
 # Travis Tilley <lv@gentoo.org> (03 Sep 2004)
 #
 gcc_get_s_dir() {
+	local GCC_S
 	if [[ -n ${PRERELEASE} ]] ; then
 		GCC_S=${WORKDIR}/gcc-${PRERELEASE}
 	elif [[ -n ${SNAPSHOT} ]] ; then
@@ -189,7 +191,6 @@ gcc_get_s_dir() {
 	else
 		GCC_S=${WORKDIR}/gcc-${GCC_RELEASE_VER}
 	fi
-
 	echo "${GCC_S}"
 }
 
@@ -337,6 +338,10 @@ get_gcc_src_uri() {
 				$(gentoo_urls ${HTBFILE})
 			)"
 	fi
+
+	# support for the D language
+	[[ -n ${D_VER} ]] && \
+		GCC_SRC_URI="${GCC_SRC_URI} d? ( mirror://sourceforge/dgcc/gdc-${D_VER}-src.tar.bz2 )"
 
 	echo "${GCC_SRC_URI}"
 }
@@ -1011,7 +1016,7 @@ gcc_src_unpack() {
 	gcc_quick_unpack
 	exclude_gcc_patches
 
-	cd ${S:=$(gcc_get_s_dir)}
+	cd "${S}"
 
 	if ! use vanilla ; then
 		if [[ -n ${PATCH_VER} ]] ; then
@@ -1110,7 +1115,7 @@ gcc_src_unpack() {
 		einfo "Touching generated files"
 		./contrib/gcc_update --touch | \
 			while read f ; do
-				einfo "	 ${f%%...}"
+				einfo "  ${f%%...}"
 			done
 	fi
 
@@ -1169,6 +1174,7 @@ gcc-compiler-configure() {
 
 	GCC_LANG="c"
 	is_cxx && GCC_LANG="${GCC_LANG},c++"
+	is_d   && GCC_LANG="${GCC_LANG},d"
 	is_gcj && GCC_LANG="${GCC_LANG},java"
 	if is_objc || is_objcxx ; then
 		GCC_LANG="${GCC_LANG},objc"
@@ -1849,10 +1855,27 @@ gcc_quick_unpack() {
 		unpack gcc-${GCC_RELEASE_VER}.tar.bz2
 		# We want branch updates to be against a release tarball
 		if [[ -n ${BRANCH_UPDATE} ]] ; then
-			pushd ${S:-"$(gcc_get_s_dir)"} > /dev/null
+			pushd "${S}" > /dev/null
 			epatch ${DISTDIR}/gcc-${GCC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2
 			popd > /dev/null
 		fi
+	fi
+
+	if [[ -n ${D_VER} ]] ; then
+		pushd "${S}"/gcc > /dev/null
+		unpack gdc-${D_VER}-src.tar.bz2
+		cd ..
+		if use d ; then
+			ebegin "Adding support for the D language"
+			./gcc/d/setup-gcc.sh >& "${T}"/dgcc.log
+			if ! eend $? ; then
+				eerror "The D gcc package failed to apply"
+				eerror "Please include this log file when posting a bug report:"
+				eerror "  ${T}/dgcc.log"
+				die "failed to include the D language"
+			fi
+		fi
+		popd > /dev/null
 	fi
 
 	[[ -n ${PATCH_VER} ]] && \
@@ -1864,7 +1887,7 @@ gcc_quick_unpack() {
 	if want_ssp ; then
 		if [[ -n ${PP_FVER} ]] ; then
 			# The gcc 3.4 propolice versions are meant to be unpacked to ${S}
-			pushd ${S:-$(gcc_get_s_dir)} > /dev/null
+			pushd "${S}" > /dev/null
 			unpack protector-${PP_FVER}.tar.gz
 			popd > /dev/null
 		else
@@ -1880,7 +1903,6 @@ gcc_quick_unpack() {
 		fi
 	fi
 
-	# pappy@gentoo.org - Fri Oct  1 23:24:39 CEST 2004
 	want_boundschecking && \
 		unpack "bounds-checking-gcc-${HTB_GCC_VER}-${HTB_VER}.patch.bz2"
 
@@ -2322,6 +2344,12 @@ is_cxx() {
 	gcc-lang-supported 'c++' || return 1
 	use build && return 1
 	! use nocxx
+}
+
+is_d() {
+	gcc-lang-supported d || return 1
+	use build && return 1
+	use d
 }
 
 is_f77() {
