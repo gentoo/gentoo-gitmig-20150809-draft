@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/libglade-java
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libglade-java/ChangeLog,v 1.25 2007/02/17 09:58:18 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libglade-java/ChangeLog,v 1.26 2007/02/17 11:33:21 betelgeuse Exp $
+
+  17 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
+  libglade-java-2.12.6-r1.ebuild:
+  Fix dependencies to not pull in gnome libraries when the gnome use flag is
+  not on. Fixes bug #158584.
 
   17 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
   -libglade-java-2.12.6.ebuild:
