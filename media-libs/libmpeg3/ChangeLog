@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmpeg3
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.61 2007/01/16 19:01:07 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.62 2007/02/17 00:47:42 flameeyes Exp $
+
+  17 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  libmpeg3-1.5.2-r3.ebuild, libmpeg3-1.7.ebuild:
+  Don't abuse $ROOT.
 
   16 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> libmpeg3-1.7.ebuild:
   Keyworded ~sparc wrt #150799

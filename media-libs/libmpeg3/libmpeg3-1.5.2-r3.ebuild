@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5.2-r3.ebuild,v 1.13 2006/11/29 13:15:41 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5.2-r3.ebuild,v 1.14 2007/02/17 00:47:42 flameeyes Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -54,7 +54,7 @@ src_unpack() {
 
 	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/${PV}
 
-	sed -i -e "/LIBS = /s:$: -L\${ROOT}usr/$(get_libdir) -la52:" Makefile
+	sed -i -e "/LIBS = /s:$: -la52:" Makefile
 
 	epatch "${FILESDIR}/${P}-a52.patch"
 	epatch "${FILESDIR}/${P}-gnustack.patch"

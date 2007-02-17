@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.7.ebuild,v 1.9 2007/01/16 19:01:07 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.7.ebuild,v 1.10 2007/02/17 00:47:42 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -50,8 +50,8 @@ src_compile() {
 	eautoreconf
 
 	#disabling css since it's a fake one.
-	#One can find in the sources this message : 
-	#  Stubs for deCSS which can't be distributed in source form 
+	#One can find in the sources this message :
+	#  Stubs for deCSS which can't be distributed in source form
 
 	econf $(use_enable mmx )\
 		--disable-css || die "Configure failed"
@@ -64,9 +64,9 @@ src_install() {
 	emake DESTDIR="${D}" install || die
 	dohtml -r docs
 	# This is a workaround, it wants to rebuild
-	# everything if the headers  have changed
+	# everything if the headers	 have changed
 	# So we patch them after install...
-	cd "${D}/${ROOT}/usr/include/libmpeg3"
+	cd "${D}/usr/include/libmpeg3"
 	# This patch patches the .h files that get installed into /usr/include
 	# to show the correct include syntax '<>' instead of '""'  This patch
 	# was also generated using info from SF's src.rpm
