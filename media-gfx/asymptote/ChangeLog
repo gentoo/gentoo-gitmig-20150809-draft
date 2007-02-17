@@ -1,0 +1,13 @@
+# ChangeLog for media-gfx/asymptote
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.1 2007/02/17 18:54:34 centic Exp $
+
+*asymptote-1.20 (17 Feb 2007)
+
+  17 Feb 2007; Dominik Stadler <centic@gentoo.org>
+  +files/asymptote-1.20-configure-ac.patch,
+  +files/asymptote-1.20-makefile.patch, +metadata.xml,
+  +asymptote-1.20.ebuild:
+  Initial version, fixes Bug 82871, thanks to 
+  Emiliano Vavassori for the ebuild and patches.
+
