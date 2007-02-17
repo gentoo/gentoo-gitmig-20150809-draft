@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libnjb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.34 2007/01/19 15:33:11 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.35 2007/02/17 01:01:19 flameeyes Exp $
+
+  17 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/libnjb-1.2-gentoo-multilib.patch,
+  -files/libnjb-2.0_pre20050208-gentoo-multilib.patch,
+  -files/libnjb-errno.patch, -files/nomadjukebox, -libnjb-1.2.ebuild,
+  -libnjb-2.2.ebuild, -libnjb-2.2.3.ebuild:
+  Remove old versions.
 
   19 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
   libnjb-1.2.ebuild:
