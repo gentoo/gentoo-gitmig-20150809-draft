@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.0.3.ebuild,v 1.5 2007/02/16 21:50:29 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.0.3.ebuild,v 1.6 2007/02/17 22:08:15 weeve Exp $
 
 inherit eutils versionator eutils toolchain-funcs multilib flag-o-matic
 
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 sparc x86"
 
 DESCRIPTION="C++ STL library"
 HOMEPAGE="http://stlport.sourceforge.net/"
