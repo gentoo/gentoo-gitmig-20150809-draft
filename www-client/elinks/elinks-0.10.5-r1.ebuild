@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.5-r1.ebuild,v 1.12 2007/01/13 15:04:38 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.5-r1.ebuild,v 1.13 2007/02/17 23:04:12 grobian Exp $
 
 inherit eutils
 
@@ -99,12 +99,6 @@ src_install() {
 	insinto /usr/share/doc/${PF}/contrib/lua ; doins contrib/lua/{*.lua,elinks-remote}
 	insinto /usr/share/doc/${PF}/contrib/conv ; doins contrib/conv/*.*
 	insinto /usr/share/doc/${PF}/contrib/guile ; doins contrib/guile/*.scm
-
-	# Remove some conflicting files on OSX.  The files provided by OSX 10.4
-	# are more or less the same.  -- Fabian Groffen (2005-06-30)
-	if use ppc-macos; then
-		rm -f ${D}/usr/lib/charset.alias
-	fi
 
 	rm -f ${D}/usr/share/locale/locale.alias
 }

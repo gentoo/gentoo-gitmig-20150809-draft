@@ -1,6 +1,6 @@
 : Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.5.ebuild,v 1.14 2007/01/13 15:04:38 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.5.ebuild,v 1.15 2007/02/17 23:04:12 grobian Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://elinks.or.cz/download/${MY_P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ~mips ppc ~ppc-macos ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~mips ppc ppc64 sparc x86"
 
 DEPEND="virtual/libc
 	>=app-arch/bzip2-1.0.2
@@ -40,7 +40,6 @@ src_unpack() {
 		-e 's:CONFIG_LEDS=.*:CONFIG_LEDS=yes:' \
 		-e 's:CONFIG_HTML_HIGHLIGHT=.*:CONFIG_HTML_HIGHLIGHT=yes:' \
 		${S}/features.conf
-	use ppc-macos && epatch ${FILESDIR}/${PN}-osx-configure.diff
 }
 
 src_compile() {
@@ -75,13 +74,6 @@ src_install() {
 	insinto /usr/share/doc/${PF}/contrib/lua ; doins contrib/lua/{*.lua,elinks-remote}
 	insinto /usr/share/doc/${PF}/contrib/conv ; doins contrib/conv/*.*
 	insinto /usr/share/doc/${PF}/contrib/guile ; doins contrib/guile/*.scm
-
-	# Remove some conflicting files on OSX.  The files provided by OSX 10.4
-	# are more or less the same.  -- Fabian Groffen (2005-06-30)
-	if use ppc-macos; then
-		rm -f ${D}/usr/lib/charset.alias
-		rm -f ${D}/usr/share/locale/locale.alias
-	fi
 }
 
 # disable it as the only test available is interactive..
