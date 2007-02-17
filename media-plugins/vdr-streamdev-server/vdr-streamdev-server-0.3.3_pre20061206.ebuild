@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev-server/vdr-streamdev-server-0.3.3_pre20061206.ebuild,v 1.2 2007/01/05 16:55:30 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev-server/vdr-streamdev-server-0.3.3_pre20061206.ebuild,v 1.3 2007/02/17 01:21:45 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -30,7 +30,7 @@ src_unpack() {
 	cd ${S}
 
 	#seems to no longer work, if needed, please open a bug
-	#if grep -q "virtual bool Active" ${ROOT}/usr/include/vdr/plugin.h; then
+	#if grep -q "virtual bool Active" /usr/include/vdr/plugin.h; then
 	#	epatch ${FILESDIR}/vdr-streamdev-server-20060502-old-vdr-headers.diff
 	#fi
 

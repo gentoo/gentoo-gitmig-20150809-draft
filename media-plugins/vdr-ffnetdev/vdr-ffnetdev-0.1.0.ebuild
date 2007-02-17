@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/vdr-ffnetdev-0.1.0.ebuild,v 1.5 2007/01/07 23:40:01 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/vdr-ffnetdev-0.1.0.ebuild,v 1.6 2007/02/17 01:18:30 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -20,7 +20,7 @@ DEPEND=">=media-video/vdr-1.3.7"
 src_unpack() {
 	vdr-plugin_src_unpack
 
-	if grep -q "virtual cString Active" ${ROOT}/usr/include/vdr/plugin.h; then
+	if grep -q "virtual cString Active" /usr/include/vdr/plugin.h; then
 	  epatch ${FILESDIR}/${P}-bigpatch-headers.diff
 	fi
 }
