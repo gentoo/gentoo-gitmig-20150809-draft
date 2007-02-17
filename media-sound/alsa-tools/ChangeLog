@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/alsa-tools
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.137 2007/02/11 23:34:58 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.138 2007/02/17 16:50:42 flameeyes Exp $
+
+*alsa-tools-1.0.14_rc1-r1 (17 Feb 2007)
+
+  17 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +alsa-tools-1.0.14_rc1-r1.ebuild:
+  New revision, this time using ALSA_CARDS to enable or disable the tools that
+  are specific to some cards (with specific ALSA driver).
 
   11 Feb 2007; Simon Stelling <blubb@gentoo.org>
   alsa-tools-1.0.14_rc1.ebuild:
