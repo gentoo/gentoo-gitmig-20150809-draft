@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-2.0.13.ebuild,v 1.1 2007/02/12 13:16:53 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-2.0.13.ebuild,v 1.2 2007/02/17 23:34:10 wschlich Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -43,12 +43,14 @@ src_unpack() {
 
 src_compile() {
 	append-flags -fno-strict-aliasing
+	local with_usbdropdir=''
+	useq pcsc-lite && with_usbdropdir="--with-usbdropdir=$(pkg-config libpcsclite --variable=usbdropdir)"
 	./configure \
 		--prefix=/usr \
 		--docdir=/usr/share/doc/"${P}" \
 		--sysconfdir=/etc/"${PN}" \
 		$(use_enable pcsc-lite pcsc) \
-		$(use_with pcsc-lite usbdropdir=$(pkg-config libpcsclite --variable=usbdropdir)) \
+		${with_usbdropdir} \
 		$(use_enable !noudev udev) \
 		|| die "Configuration of package failed."
 	emake || die "Compilation of package failed."
