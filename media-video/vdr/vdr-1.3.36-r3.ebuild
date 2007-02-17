@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.36-r3.ebuild,v 1.7 2007/01/05 17:21:12 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.36-r3.ebuild,v 1.8 2007/02/17 00:24:06 zzam Exp $
 
 inherit eutils
 
@@ -105,8 +105,8 @@ apply_vdr_patchset() {
 
 src_unpack() {
 	unpack ${A}
-	if [[ -n "${VDR_LOCAL_PATCHSET}" && -d "${ROOT}/${VDR_LOCAL_PATCHSET}" ]]; then
-		PATCHSET_DIR="${ROOT}/${VDR_LOCAL_PATCHSET}"
+	if [[ -n "${VDR_LOCAL_PATCHSET}" && -d "${VDR_LOCAL_PATCHSET}" ]]; then
+		PATCHSET_DIR="${VDR_LOCAL_PATCHSET}"
 	else
 		PATCHSET_DIR=${WORKDIR}/${PATCHSET_NAME}
 	fi

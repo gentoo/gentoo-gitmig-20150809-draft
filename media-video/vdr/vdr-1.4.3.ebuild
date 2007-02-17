@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.3.ebuild,v 1.4 2007/01/19 19:44:35 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.3.ebuild,v 1.5 2007/02/17 00:24:06 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -122,9 +122,9 @@ apply_vdr_patchset() {
 src_unpack() {
 	unpack ${P}.tar.bz2
 	if ! use vanilla; then
-		if [[ -n "${VDR_LOCAL_PATCHSET}" && -d "${ROOT}/${VDR_LOCAL_PATCHSET}" ]]; then
+		if [[ -n "${VDR_LOCAL_PATCHSET}" && -d "${VDR_LOCAL_PATCHSET}" ]]; then
 			ewarn "Using local developer patchset."
-			PATCHSET_DIR="${ROOT}/${VDR_LOCAL_PATCHSET}"
+			PATCHSET_DIR="${VDR_LOCAL_PATCHSET}"
 		else
 			unpack ${PATCHSET_NAME}.tar.bz2
 			PATCHSET_DIR=${WORKDIR}/${PATCHSET_NAME}
@@ -259,7 +259,7 @@ pkg_postinst() {
 	local remote_file=${ROOT}/etc/vdr/remote.conf
 
 	if [[ -e ${remote_file} ]]; then
-		for key in ${warn_jeys}; do
+		for key in ${warn_keys}; do
 			if grep -q -i "\.${key} " "${remote_file}"; then
 				keysfound=1
 				break
