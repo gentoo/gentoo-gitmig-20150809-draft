@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6827 2007/02/17 16:11:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6828 2007/02/17 18:36:06 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Diego Pettenò <flameeyes@gentoo.org> (17 Feb 2007)
+# Mask preview versions
+=dev-lang/ruby-1.8.6_pre*
 
 # Raúl Porcel <armin76@gentoo.org> (17 Feb 2007)
 # Mask beta versions
