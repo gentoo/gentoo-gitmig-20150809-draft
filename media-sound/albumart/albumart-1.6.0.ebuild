@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/albumart-1.6.0.ebuild,v 1.1 2006/01/03 19:24:42 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/albumart-1.6.0.ebuild,v 1.2 2007/02/17 00:49:39 flameeyes Exp $
 
 inherit eutils qt3
 
@@ -22,5 +22,5 @@ src_compile() {
 }
 
 src_install() {
-	python setup.py install --root=${D} --prefix=${ROOT}usr || die
+	python setup.py install --root=${D} --prefix=/usr || die
 }
