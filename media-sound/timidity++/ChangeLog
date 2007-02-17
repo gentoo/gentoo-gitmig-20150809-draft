@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.81 2007/02/10 23:12:33 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.82 2007/02/17 22:05:41 flameeyes Exp $
+
+  17 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  timidity++-2.13.2-r3.ebuild:
+  Add check for midi useflag presence in alsa-lib.
 
   10 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
   timidity++-2.13.2.ebuild, timidity++-2.13.2-r2.ebuild,

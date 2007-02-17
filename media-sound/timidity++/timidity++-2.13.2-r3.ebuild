@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r3.ebuild,v 1.15 2007/02/10 23:12:33 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r3.ebuild,v 1.16 2007/02/17 22:05:41 flameeyes Exp $
 
 inherit eutils
 
@@ -38,6 +38,15 @@ RDEPEND="${RDEPEND}
 	emacs? ( virtual/emacs )"
 
 PDEPEND="|| ( media-sound/timidity-eawpatches media-sound/timidity-shompatches media-sound/timidity-freepats )"
+
+pkg_setup() {
+	if use alsa && ! built_with_use --missing true media-libs/alsa-lib midi; then
+		eerror ""
+		eerror "To be able to build TiMidity++ with ALSA support you need"
+		eerror "to have built media-libs/alsa-lib with midi USE flag."
+		die "Missing midi USE flag on media-libs/alsa-lib"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
