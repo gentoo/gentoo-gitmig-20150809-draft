@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/python-mode-1.0.ebuild,v 1.6 2007/02/11 10:46:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/python-mode-1.0.ebuild,v 1.7 2007/02/17 15:13:16 vapier Exp $
 
 inherit elisp distutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ia64 ppc ppc-macos ~s390 ~sh x86"
+KEYWORDS="amd64 arm ia64 ppc ppc-macos s390 sh x86"
 IUSE=""
 
 DEPEND="app-emacs/pymacs"
@@ -19,7 +19,7 @@ SITEFILE="60python-mode-gentoo.el"
 
 src_unpack() {
 	unpack ${A}
-	cp ${FILESDIR}/setup.py ${S}
+	cp "${FILESDIR}"/setup.py ${S}
 }
 
 src_compile() {
@@ -30,7 +30,7 @@ src_compile() {
 src_install() {
 	distutils_src_install
 	elisp-install python-mode *.{el,elc}
-	elisp-site-file-install ${FILESDIR}/${SITEFILE}
+	elisp-site-file-install "${FILESDIR}"/${SITEFILE}
 }
 
 pkg_postinst() {

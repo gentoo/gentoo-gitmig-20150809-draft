@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.22-r1.ebuild,v 1.5 2007/02/11 10:46:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.22-r1.ebuild,v 1.6 2007/02/17 15:12:47 vapier Exp $
 
 inherit distutils elisp eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://pymacs.progiciels-bpi.ca/archives/${P/pymacs/Pymacs}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ia64 ppc ppc-macos ~s390 ~sh x86"
+KEYWORDS="~amd64 arm ia64 ppc ppc-macos s390 sh x86"
 IUSE="doc"
 
 DEPEND="virtual/emacs
@@ -20,7 +20,7 @@ S=${WORKDIR}/Pymacs-${PV}
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${PV}-character-encoding-gentoo.patch
+	epatch "${FILESDIR}"/${PV}-character-encoding-gentoo.patch
 }
 
 src_compile() {
@@ -30,12 +30,12 @@ src_compile() {
 
 src_install() {
 	elisp-install ${PN} pymacs.el pymacs.elc
-	elisp-site-file-install ${FILESDIR}/50pymacs-gentoo.el
+	elisp-site-file-install "${FILESDIR}"/50pymacs-gentoo.el
 	distutils_src_install
 	if use doc ; then
 		insinto /usr/share/doc/${PF}
 		doins ./pymacs.pdf
 	fi
-	cd ${S}
+	cd "${S}"
 	dodoc PKG-INFO README THANKS TODO THANKS-rebox ChangeLog ChangeLog-rebox
 }
