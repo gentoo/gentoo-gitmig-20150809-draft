@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/ploticus
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ploticus/ChangeLog,v 1.8 2006/07/16 02:09:32 dragonheart Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ploticus/ChangeLog,v 1.9 2007/02/17 09:18:14 dragonheart Exp $
+
+  17 Feb 2007; Daniel Black <dragonheart@gentoo.org> ploticus-2.32.ebuild,
+  ploticus-2.33.ebuild:
+  ensure media-libs/gd is built with jpeg and png thanks to suggestion by
+  Panagiotis in bug #166970
 
 *ploticus-2.33 (16 Jul 2006)
 

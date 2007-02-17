@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ploticus/ploticus-2.32.ebuild,v 1.4 2006/07/16 01:06:13 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ploticus/ploticus-2.32.ebuild,v 1.5 2007/02/17 09:18:14 dragonheart Exp $
 
 inherit eutils toolchain-funcs
 
-MY_P=pl${PV/./}src
+MY_P=pl${PV/.}src
 
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A command line application for producing graphs and charts"
@@ -20,6 +20,14 @@ DEPEND="media-libs/libpng
 	truetype? ( =media-libs/freetype-2* )
 	X? ( || ( x11-libs/libX11 virtual/x11 ) )"
 
+pkg_setup() {
+	if use gd;
+	then
+		if ! built_with_use media-libs/gd jpeg || ! built_with_use media-libs/gd png; then
+			die "media-libs/gd needs to be build with USE=\"png jpeg\""
+		fi
+	fi
+}
 src_unpack() {
 	unpack ${A}
 	# Fixes a problem with NOX11.
