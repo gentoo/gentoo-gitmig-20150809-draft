@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/kobodeluxe-0.4_pre10.ebuild,v 1.13 2006/04/14 04:01:37 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/kobodeluxe-0.4_pre10.ebuild,v 1.14 2007/02/17 19:10:30 corsair Exp $
 
 inherit flag-o-matic eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.olofson.net/kobodl/download/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT=0
-KEYWORDS="alpha amd64 ppc x86"
+KEYWORDS="alpha amd64 ppc ~ppc64 x86"
 IUSE="opengl"
 
 DEPEND="media-libs/libsdl
