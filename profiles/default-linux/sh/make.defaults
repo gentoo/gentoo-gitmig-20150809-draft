@@ -7,8 +7,6 @@ CHOST="sh-unknown-linux-gnu"
 CFLAGS="-O2"
 CXXFLAGS="${CFLAGS}"
 
-FEATURES="-sandbox sfperms"
-
 USE=" \
 acl \
 berkdb \
