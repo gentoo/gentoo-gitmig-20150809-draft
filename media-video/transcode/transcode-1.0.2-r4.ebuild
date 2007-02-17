@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r4.ebuild,v 1.2 2007/02/16 12:13:28 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r4.ebuild,v 1.3 2007/02/17 01:05:58 flameeyes Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -124,7 +124,7 @@ src_compile() {
 		--with-mod-path=/usr/$(get_libdir)/transcode \
 		$(use_with X x) \
 		${myconf} \
-		--with-libpostproc-builddir="${ROOT}/usr/$(get_libdir)" \
+		--with-libpostproc-builddir="/usr/$(get_libdir)" \
 		--with-lzo-includes=/usr/include/lzo \
 		--disable-avifile \
 		|| die
