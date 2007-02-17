@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.2.1-r1.ebuild,v 1.17 2007/01/11 21:47:03 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.2.1-r1.ebuild,v 1.18 2007/02/17 00:35:28 zzam Exp $
 
 inherit libtool eutils autotools
 
@@ -152,7 +152,7 @@ src_install() {
 		exeinto /lib/udev
 		doexe ${S}/packaging/generic/check_ptp_camera
 	else
-		eerror "Unable to find ${ROOT}/usr/$(get_libdir)/libgphoto2/print-camera-list"
+		eerror "Unable to find print-camera-list"
 		eerror "and therefore unable to generate hotplug usermap or HAL FDI files."
 		eerror "You will have to manually generate it by running:"
 		eerror " /usr/$(get_libdir)/libgphoto2/print-camera-list usb-usermap > ${HOTPLUG_USERMAP}"

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.3.1-r2.ebuild,v 1.2 2007/01/31 18:52:49 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.3.1-r2.ebuild,v 1.3 2007/02/17 00:35:28 zzam Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -141,7 +141,7 @@ src_install() {
 			udev-rules-0.98	group plugdev mode 0660 >> ${D}/${UDEV_RULES} \
 			|| die "failed to create udev-rules"
 	else
-		eerror "Unable to find ${ROOT}/usr/$(get_libdir)/libgphoto2/print-camera-list"
+		eerror "Unable to find print-camera-list"
 		eerror "and therefore unable to generate hotplug usermap or HAL FDI files."
 		eerror "You will have to manually generate it by running:"
 		eerror " /usr/$(get_libdir)/libgphoto2/print-camera-list udev-rules-0.98 group plugdev mode 0660 > ${UDEV_RULES}"
