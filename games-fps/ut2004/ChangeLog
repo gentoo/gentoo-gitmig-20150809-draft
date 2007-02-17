@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/ut2004
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.60 2007/02/07 12:06:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.61 2007/02/17 08:54:50 nyhm Exp $
+
+  17 Feb 2007; Tristan Heaven <nyhm@gentoo.org> ut2004-3369-r4.ebuild:
+  Fix ROOT abuse, bug #167277
 
   07 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> ut2004-3369-r4.ebuild:
   Fixed an error with sed and error check it in the ebuild and converted einfo
