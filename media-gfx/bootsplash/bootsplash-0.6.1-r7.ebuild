@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6.1-r7.ebuild,v 1.8 2006/10/23 19:37:22 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6.1-r7.ebuild,v 1.9 2007/02/17 11:42:40 spock Exp $
 
 inherit eutils
 
@@ -62,11 +62,6 @@ src_install() {
 
 	dodir /etc/${PN}
 	cp -pR themes/* ${D}/etc/${PN}
-
-	# link default config for boot images if not already set
-	if [ ! -e ${ROOT}/etc/bootsplash/default ]; then
-		dosym ./gentoo /etc/bootsplash/default
-	fi
 
 	exeinto /etc/init.d
 	doexe misc/bootsplash

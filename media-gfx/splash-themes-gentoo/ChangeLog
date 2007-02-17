@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/splash-themes-gentoo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-gentoo/ChangeLog,v 1.5 2007/02/15 15:23:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-gentoo/ChangeLog,v 1.6 2007/02/17 11:39:43 spock Exp $
+
+  17 Feb 2007; Michał Januszewski <spock@gentoo.org>
+  splash-themes-gentoo-20050429.ebuild:
+  Remove invalid usage of $ROOT (bug #167285).
 
   15 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   splash-themes-gentoo-20050429.ebuild:

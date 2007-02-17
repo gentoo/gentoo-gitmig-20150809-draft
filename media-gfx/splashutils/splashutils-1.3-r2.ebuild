@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.3-r2.ebuild,v 1.6 2007/01/27 15:40:40 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.3-r2.ebuild,v 1.7 2007/02/17 11:36:41 spock Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -76,7 +76,7 @@ src_unpack() {
 	sed -i -e 's#$(LDLIBS) -static#$(LDLIBS) -L/usr/lib/nptl -static#' Makefile
 
 	# Check whether the kernel tree has been patched with fbsplash.
-	if [[ ! -e ${ROOT}/usr/$(get_libdir)/klibc/include/linux/console_splash.h ]]; then
+	if [[ ! -e /usr/$(get_libdir)/klibc/include/linux/console_splash.h ]]; then
 		ewarn "The kernel tree against which dev-libs/klibc was built was not patched"
 		ewarn "with a compatible version of fbsplash. Splashutils will be compiled"
 		ewarn "without fbsplash support (ie. verbose mode will not work)."
@@ -110,7 +110,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
-	if [[ ! -e ${ROOT}/usr/$(get_libdir)/klibc/include/linux/console_splash.h ]]; then
+	if [[ ! -e /usr/$(get_libdir)/klibc/include/linux/console_splash.h ]]; then
 		myconf="--without-fbsplash"
 	else
 		myconf="--with-fbsplash"
