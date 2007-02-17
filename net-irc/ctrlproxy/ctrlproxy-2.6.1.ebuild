@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ctrlproxy/ctrlproxy-2.6.1.ebuild,v 1.4 2006/09/08 22:37:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ctrlproxy/ctrlproxy-2.6.1.ebuild,v 1.5 2007/02/17 14:51:09 armin76 Exp $
 
 inherit flag-o-matic
 
@@ -18,6 +18,7 @@ DEPEND=">=dev-libs/glib-2
 	dev-libs/libxml2
 	dev-libs/tdb
 	dev-libs/libpcre
+	dev-util/pkgconfig
 	ssl? ( dev-libs/openssl )"
 
 src_compile() {
