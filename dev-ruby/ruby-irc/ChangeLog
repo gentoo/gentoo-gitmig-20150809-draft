@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/ruby-irc
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-irc/ChangeLog,v 1.1 2007/02/17 10:33:17 robbat2 Exp $
+
+*ruby-irc-1.0.7 (17 Feb 2007)
+
+  17 Feb 2007; Robin H. Johnson <robbat2@gentoo.org> +ruby-irc-1.0.7.ebuild:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+

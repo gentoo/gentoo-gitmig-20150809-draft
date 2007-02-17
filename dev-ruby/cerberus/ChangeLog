@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/cerberus
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cerberus/ChangeLog,v 1.1 2007/02/17 10:34:56 robbat2 Exp $
+
+*cerberus-0.3.4 (17 Feb 2007)
+
+  17 Feb 2007; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +cerberus-0.3.4.ebuild:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+
