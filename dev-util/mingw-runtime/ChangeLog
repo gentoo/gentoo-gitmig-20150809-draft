@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/mingw-runtime
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/ChangeLog,v 1.4 2007/02/14 23:25:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/ChangeLog,v 1.5 2007/02/17 00:19:46 vapier Exp $
+
+  17 Feb 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/mingw-runtime-3.11-include.patch,
+  mingw-runtime-3.11_p20061202.ebuild:
+  Add fix from upstream #166933 by Dennis Schridde.
 
 *mingw-runtime-3.11_p20061202 (14 Feb 2007)
 

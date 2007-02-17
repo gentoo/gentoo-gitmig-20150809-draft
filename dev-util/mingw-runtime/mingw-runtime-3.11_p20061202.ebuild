@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/mingw-runtime-3.11_p20061202.ebuild,v 1.1 2007/02/14 23:25:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/mingw-runtime-3.11_p20061202.ebuild,v 1.2 2007/02/17 00:19:46 vapier Exp $
 
 # This version does not work as the configure script expects the installed
 # cross-compiler to be able to link binaries ... except we haven't provided
@@ -51,6 +51,7 @@ src_unpack() {
 	sed -i \
 		-e "/W32API_INCLUDE/s:=.*:='-I /usr/${CTARGET}/usr/include':" \
 		$(find -name configure) || die
+	epatch "${FILESDIR}"/${PN}-3.11-include.patch #166933
 	epatch "${FILESDIR}"/${PN}-3.9-DESTDIR.patch
 }
 
