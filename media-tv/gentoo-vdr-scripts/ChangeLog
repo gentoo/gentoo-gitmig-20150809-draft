@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/gentoo-vdr-scripts
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.73 2007/02/11 16:57:57 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.74 2007/02/17 01:34:05 zzam Exp $
+
+  17 Feb 2007; Matthias Schwarzott <zzam@gentoo.org>
+  gentoo-vdr-scripts-0.3.7.ebuild, gentoo-vdr-scripts-0.3.8.ebuild:
+  No longer create video-directory to not have to work with ROOT (Bug
+  #167285), init-script can do that just fine.
 
   11 Feb 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
   gentoo-vdr-scripts-0.3.7.ebuild, gentoo-vdr-scripts-0.3.8.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.3.8.ebuild,v 1.3 2007/02/11 16:57:57 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.3.8.ebuild,v 1.4 2007/02/17 01:34:05 zzam Exp $
 
 inherit eutils
 
@@ -49,18 +49,6 @@ src_install() {
 	for kd in shutdown-data merged-config-files dvd-images tmp; do
 		keepdir "${VDR_HOME}/${kd}"
 	done
-
-
-	# Only create video-directory if there is no
-	# alternative video-directory already there.
-	local MAKE_VIDEO_DIR=1
-	local testd
-	for testd in video0 video00 video.0 video.00; do
-		[[ -d ${ROOT}/${VDR_HOME}/${testd} ]] && MAKE_VIDEO_DIR=0
-	done
-	if [[ ${MAKE_VIDEO_DIR} == 1 ]]; then
-		keepdir "${VDR_HOME}"/video
-	fi
 }
 
 pkg_preinst() {
