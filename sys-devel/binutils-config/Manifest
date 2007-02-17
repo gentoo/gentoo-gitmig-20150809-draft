@@ -9,10 +9,10 @@ AUX binutils-config-1.9 10991 RMD160 31ddec59e7915df0a55e03fd20192ca63dd09a5a SH
 MD5 5665f7fe2048846c811964d579c341e6 files/binutils-config-1.9 10991
 RMD160 31ddec59e7915df0a55e03fd20192ca63dd09a5a files/binutils-config-1.9 10991
 SHA256 b788f7b4faff09e3cf0fb2bd0662299bea125f27b5560fc20dd04a3a350ebd43 files/binutils-config-1.9 10991
-AUX binutils-config.8 2989 RMD160 afb26717c9466456bbbdf6a3d6b93aeb63ff9416 SHA1 ea27aae69a152491c9e96f756b6265f68aac6849 SHA256 ffc462de3eaa865f77f00e36275a0a9b0b51782d9d4d5fcfad18583a13adf6e5
-MD5 953efbc2a688428dfb75ecfa3c2d3d43 files/binutils-config.8 2989
-RMD160 afb26717c9466456bbbdf6a3d6b93aeb63ff9416 files/binutils-config.8 2989
-SHA256 ffc462de3eaa865f77f00e36275a0a9b0b51782d9d4d5fcfad18583a13adf6e5 files/binutils-config.8 2989
+AUX binutils-config.8 3250 RMD160 901307542b481e9d4ffdca4dd4893a7eefe027fb SHA1 5ed2e6cd13b5b6a83fd26eec570fd02399495a2a SHA256 8e6dd458d03413ca7907db03413cb7002397ed3a853d1728713eebe5b126ea13
+MD5 8b530626d0afc0ca9b0f685a3f640377 files/binutils-config.8 3250
+RMD160 901307542b481e9d4ffdca4dd4893a7eefe027fb files/binutils-config.8 3250
+SHA256 8e6dd458d03413ca7907db03413cb7002397ed3a853d1728713eebe5b126ea13 files/binutils-config.8 3250
 EBUILD binutils-config-1.8-r7.ebuild 572 RMD160 ad5b5a729de7841ff268e1e88a945440ccbe3b71 SHA1 3c47f61d97eaae8a473db6f8490e82530bae7ea1 SHA256 cf8484c6f46b796de428dd5ce081aa14f1babf6247430517e5d796c0c26382b3
 MD5 5c065fbfad62f4fa969c3ade59bea58a binutils-config-1.8-r7.ebuild 572
 RMD160 ad5b5a729de7841ff268e1e88a945440ccbe3b71 binutils-config-1.8-r7.ebuild 572
@@ -36,9 +36,9 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-binutils-config-1.9-r3 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-binutils-config-1.9-r3 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-binutils-config-1.9-r3 0
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
+Version: GnuPG v2.0.2 (GNU/Linux)
 
-iD8DBQFFaZpNamhnQswr0vIRAo0tAKCW5CPzgrO1PA1kqi1hM3Z3YI1vcQCgnQKv
-TPoyfroY9LQ13+hZBT+Am9s=
-=D5lj
+iD8DBQFF10QG8bi6rjpTunYRAjm/AJ407cUpT1iRK8vyZiUbp28k8xQX/gCdE/Af
+2UbBIdYkYKvfC10uCj2ldkg=
+=vocc
 -----END PGP SIGNATURE-----

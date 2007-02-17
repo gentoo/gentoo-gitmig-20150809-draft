@@ -4,29 +4,35 @@ binutils-config \- manage active versions of the binutils programs
 .SH "DESCRIPTION"
 The \fBbinutils-config\fR script allows you to switch between different 
 versions of binutils when you have installed multiple copies via portage.  
-It also allows you to quickly manage for multiple compiling targets.
+It also allows you to manage multiple cross-compiling targets.
 
-You may have 1 version of binutils active per target at a time.  Multiple 
-targets is really only useful for those who wish to cross-compile code.
+Remember, you may have one version of binutils active per \fBCTARGET\fR.
 .SH "SYNOPSIS"
-.B binutils-config --get-current-profile [TARGET]
+\fBbinutils-config\fR \fI--get-current-profile\fR \fI[TARGET]\fR
 
-.B binutils-config --list-profiles
+\fBbinutils-config\fR \fI--list-profiles\fR
 
-.B binutils-config --uninstall <TARGET>
+\fBbinutils-config\fR \fI--uninstall\fR \fI<TARGET>\fR
 .SH "GENERIC OPTIONS"
 .TP
-\fBTARGET-VERSION\fR
-Update the system to use the \fBTARGET-VERSION\fR of binutils.
+\fBTARGET\fR
+Change the system to use the specified binutils version.  This may take the
+form of the list index number (the number shown in the
+\fI\-\-list\-profiles\fR output), a full \fBCTARGET-VERSION\fR (useful when
+working with cross-compilers), or just a binutils \fBVERSION\fR where the
+\fBCTARGET\fR is assumed to be the native \fBCHOST\fR value.
 .TP
-\fB\-\-get\-current\-profile\fR (\fB\-c\fR) \fI[TARGET]\fR
+\fB\-c\fR, \fB\-\-get\-current\-profile\fR \fI[TARGET]\fR
 Display the active profile for \fITARGET\fR.  If none is specified, the 
 host system's \fITARGET\fR will be shown.
 .TP
-\fB\-\-list\-profiles\fR (\fB\-l\fR)
-Show all the profiles that your system currently has installed.
+\fB\-l\fR, \fB\-\-list\-profiles\fR
+Show all the profiles that your system currently has installed and what
+versions are active.  The active native version is noted with a bright green
+asterisk while the active cross-compiler versions are noted with a light blue
+asterisk.
 .TP
-\fB\-\-uninstall\fR (\fB-u\fR) <\fBTARGET\fR>
+\fB-u\fR, \fB\-\-uninstall\fR <\fBTARGET\fR>
 This is really for internal use only.  Used to remove all traces of the 
 \fBTARGET\fR binutils from your system.
 .SH "SPECIFIC OPTIONS"
@@ -74,5 +80,3 @@ Please report bugs via http://bugs.gentoo.org/
 .fi
 .SH "AUTHORS"
 Mike Frysinger <vapier@gentoo.org>
-.SH "CVS HEADER"
-$Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config.8,v 1.2 2005/01/30 06:21:38 vapier Exp $
