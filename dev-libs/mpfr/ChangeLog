@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/mpfr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.45 2007/02/17 11:36:01 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.46 2007/02/17 11:52:32 eroyf Exp $
+
+  17 Feb 2007; Alexander H. Færøy <eroyf@gentoo.org>
+  mpfr-2.2.0_p16.ebuild:
+  Stable on MIPS; bug #159250
 
 *mpfr-2.2.1_p1 (17 Feb 2007)
 
