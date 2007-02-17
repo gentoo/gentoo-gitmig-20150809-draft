@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.1-r1.ebuild,v 1.11 2007/02/17 15:54:26 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.1-r1.ebuild,v 1.12 2007/02/17 21:39:40 blubb Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability
 
@@ -86,13 +86,15 @@ pkg_setup() {
 	elif use x86 ; then
 		CONFIG="linux-dri-x86"
 	elif use amd64; then
-		[[ ${ABI} -eq "amd64" ]] && CONFIG="linux-dri-x86-64"
-		[[ ${ABI} -eq "x86" ]] && CONFIG="linux-dri-x86"
+		[[ ${ABI} == "amd64" ]] && CONFIG="linux-dri-x86-64"
+		[[ ${ABI} == "x86" ]] && CONFIG="linux-dri-x86" 
 	elif use ppc; then
 		CONFIG="linux-dri-ppc"
 	else
 		CONFIG="linux-dri"
 	fi
+	eerror $CONFIG
+	eerror $ABI
 }
 
 src_unpack() {
