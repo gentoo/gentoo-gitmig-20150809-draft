@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.134 2007/01/04 19:12:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.135 2007/02/17 17:07:22 blubb Exp $
+
+  17 Feb 2007; Simon Stelling <blubb@gentoo.org> openmotif-2.2.3-r9.ebuild:
+  libdir fix for LDPATH
 
   04 Jan 2007; Fabian Groffen <grobian@gentoo.org>
   -files/openmotif-2.1.30-darwin-netbsd.diff, openmotif-2.1.30-r14.ebuild,

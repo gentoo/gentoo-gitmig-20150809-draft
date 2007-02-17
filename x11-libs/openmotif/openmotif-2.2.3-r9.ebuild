@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r9.ebuild,v 1.13 2007/01/04 19:12:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r9.ebuild,v 1.14 2007/02/17 17:07:22 blubb Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.6"
@@ -125,7 +125,7 @@ src_install() {
 
 	# profile stuff
 	dodir /etc/env.d
-	echo "LDPATH=/usr/lib/openmotif-2.2" > ${D}/etc/env.d/15openmotif-2.2
+	echo "LDPATH=/usr/$(get_libdir)/openmotif-2.2" > ${D}/etc/env.d/15openmotif-2.2
 	dodir /usr/$(get_libdir)/motif
 	echo "PROFILE=openmotif-2.2" > ${D}/usr/$(get_libdir)/motif/openmotif-2.2
 }
