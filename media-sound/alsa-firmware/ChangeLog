@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-firmware
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.57 2007/02/17 16:53:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.58 2007/02/17 19:25:15 corsair Exp $
+
+  17 Feb 2007; Markus Rothe <corsair@gentoo.org>
+  alsa-firmware-1.0.14_rc2-r1.ebuild:
+  Added ~ppc64; bug #167294
 
   17 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   alsa-firmware-1.0.14_rc2-r1.ebuild:
