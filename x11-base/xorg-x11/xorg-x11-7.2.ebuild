@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.2.ebuild,v 1.1 2007/01/25 03:35:57 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.2.ebuild,v 1.2 2007/02/17 16:27:17 joshuabaergen Exp $
 
 inherit eutils
 
@@ -50,7 +50,7 @@ RDEPEND="${RDEPEND}
 
 # Documentation
 RDEPEND="${RDEPEND}
-	>=app-doc/xorg-docs-1.2"
+	>=app-doc/xorg-docs-1.3"
 
 DEPEND="${RDEPEND}"
 
