@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/XML-SAX
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/ChangeLog,v 1.45 2006/10/20 14:50:34 agriffis Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/ChangeLog,v 1.46 2007/02/17 15:33:25 mcummings Exp $
+
+*XML-SAX-0.15 (17 Feb 2007)
+
+  17 Feb 2007; Michael Cummings <mcummings@gentoo.org> +XML-SAX-0.15.ebuild:
+  Version bump
 
   20 Oct 2006; Aron Griffis <agriffis@gentoo.org> XML-SAX-0.14-r1.ebuild:
   Mark 0.14-r1 stable on alpha
