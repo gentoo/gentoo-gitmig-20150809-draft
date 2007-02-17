@@ -1,6 +1,10 @@
 # ChangeLog for games-board/ggz-txt-client
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-txt-client/ChangeLog,v 1.13 2006/10/16 18:52:21 nyhm Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-txt-client/ChangeLog,v 1.14 2007/02/17 09:34:26 nyhm Exp $
+
+  17 Feb 2007; Tristan Heaven <nyhm@gentoo.org>
+  ggz-txt-client-0.0.13.ebuild:
+  Fix ROOT abuse, bug #167277
 
   16 Oct 2006; Tristan Heaven <nyhm@gentoo.org>
   ggz-txt-client-0.0.13.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-games/ggz-gtk-games-0.0.13.ebuild,v 1.4 2006/10/16 18:59:19 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-games/ggz-gtk-games-0.0.13.ebuild,v 1.5 2007/02/17 09:29:58 nyhm Exp $
 
 inherit games
 
@@ -40,9 +40,9 @@ src_compile() {
 }
 
 src_install() {
-	if [[ -f "${ROOT}/${GAMES_SYSCONFDIR}"/ggz/ggz.modules ]] ; then
+	if [[ -f ${GAMES_SYSCONFDIR}/ggz/ggz.modules ]] ; then
 		dodir "${GAMES_SYSCONFDIR}"/ggz
-		cp {"${ROOT}","${D}"}/"${GAMES_SYSCONFDIR}"/ggz/ggz.modules
+		cp {,"${D}"}/"${GAMES_SYSCONFDIR}"/ggz/ggz.modules
 	fi
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS QuickStart.GGZ README* TODO
