@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.161 2007/02/08 12:26:36 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.162 2007/02/17 17:25:33 dang Exp $
+
+  17 Feb 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/evolution-2.8.2.1-pilot-link-as-needed.patch,
+  evolution-2.8.2.1.ebuild, evolution-2.8.2.1-r1.ebuild:
+  Fix linking against pilot-link with --as-needed; bug #154453
 
 *evolution-2.8.3 (08 Feb 2007)
 

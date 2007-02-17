@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.8.2.1.ebuild,v 1.9 2007/01/21 21:47:51 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.8.2.1.ebuild,v 1.10 2007/02/17 17:25:33 dang Exp $
 
 inherit eutils flag-o-matic alternatives gnome2 autotools
 
@@ -154,6 +154,9 @@ src_unpack() {
 
 	# Fix 64-bit warnings
 	epatch ${FILESDIR}/${PN}-2.8.1.1-64-bit.patch
+
+	# Fix linking against pilot-link wiht --as-needed; bug #154453
+	epatch "${FILESDIR}"/${P}-pilot-link-as-needed.patch
 
 	# Add bogofilter junk plugin source
 	use bogofilter && epatch ${FILESDIR}/${PN}-2.8.2.1-bf-junk.patch.gz
