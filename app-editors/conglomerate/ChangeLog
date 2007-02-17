@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/conglomerate
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/conglomerate/ChangeLog,v 1.16 2007/02/08 21:36:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/conglomerate/ChangeLog,v 1.17 2007/02/17 00:08:32 eroyf Exp $
+
+  17 Feb 2007; Alexander H. Færøy <eroyf@gentoo.org> metadata.xml:
+  Removed allanonjl from metadata.xml
 
   08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
