@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.3.0_pre1376.ebuild,v 1.2 2007/01/17 18:26:45 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.3.0_pre1376.ebuild,v 1.3 2007/02/17 01:02:34 flameeyes Exp $
 
 inherit eutils flag-o-matic base
 
@@ -74,7 +74,7 @@ src_compile() {
 		$(use_enable !sqlite3 sqlite) \
 		$(use_enable sqlite3) \
 		$(use_enable ffmpeg) \
-		--with-ffmpeg-includes=${ROOT}/usr/include/ffmpeg \
+		--with-ffmpeg-includes=/usr/include/ffmpeg \
 		${myconf} || die "configure failed"
 	emake || die "make failed"
 
