@@ -1,15 +1,28 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/make.defaults,v 1.7 2006/09/06 05:29:36 dberkholz Exp $
+# Main ARM profile
 
 ARCH="arm"
 ACCEPT_KEYWORDS="arm"
 
 CHOST="arm-unknown-linux-gnu"
-CFLAGS="-O2 -pipe"
+CFLAGS="-O2"
 CXXFLAGS="${CFLAGS}"
 
-USE="berkdb gpm crypt ipv6 ncurses nls pam perl python readline ssl tcpd zlib"
+USE=" \
+acl \
+berkdb \
+bzip2 \
+crypt \
+ipv6 \
+ncurses \
+nls \
+pam \
+perl \
+python \
+readline \
+ssl \
+tcpd \
+zlib \
+"
 
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers
