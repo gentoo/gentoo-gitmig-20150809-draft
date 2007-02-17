@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5.ebuild,v 1.34 2007/02/14 15:36:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5.ebuild,v 1.35 2007/02/17 00:29:58 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -1025,8 +1025,10 @@ pkg_setup() {
 		fi
 	fi
 
-	if want_nptl && [[ ${CTARGET} == i386-* ]] ; then
-		eerror "NPTL requires a CHOST of i486 or better"
+	if [[ ${CTARGET} == i386-* ]] ; then
+		eerror "i386 CHOSTs are no longer supported."
+		eerror "Chances are you don't actually want/need i386."
+		eerror "Please read http://www.gentoo.org/doc/en/change-chost.xml"
 		die "please fix your CHOST"
 	fi
 
