@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/compface-1.5.2.ebuild,v 1.7 2006/10/20 21:38:45 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/compface-1.5.2.ebuild,v 1.8 2007/02/17 17:26:13 grobian Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.xemacs.org/Download/optLibs.html"
 SRC_URI="http://ftp.xemacs.org/pub/xemacs/aux/${P}.tar.gz"
 
 LICENSE="MIT"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ppc ~ppc-macos ppc64 sparc x86"
+KEYWORDS="alpha ~amd64 ~hppa ia64 ppc ppc64 sparc x86"
 SLOT="0"
 
 src_unpack() {

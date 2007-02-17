@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc5.ebuild,v 1.17 2007/02/13 05:34:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc5.ebuild,v 1.18 2007/02/17 17:21:56 grobian Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/aa-project/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc-macos ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="X slang gpm"
 
 RDEPEND="X? ( || ( x11-libs/libX11 virtual/x11 ) )"
@@ -42,10 +42,6 @@ src_compile() {
 		$(use_with slang slang-driver) \
 		$(use_with X x11-driver) \
 		|| die
-	if use ppc-macos && use X; then
-		sed -i -e 's:aafire_LDFLAGS =:aafire_LDFLAGS = -undefined define_a_way:' \
-		${S}/src/Makefile || die "Failed to edit Makefile for X compatibility"
-	fi
 	emake CC="$(tc-getCC)" || die
 }
 
