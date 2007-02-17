@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pessulus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.23 2007/02/08 18:05:05 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.24 2007/02/17 00:04:48 eroyf Exp $
+
+  17 Feb 2007; Alexander H. Færøy <eroyf@gentoo.org> metadata.xml:
+  Removed allanonjl from metadata.xml
 
 *pessulus-2.16.2 (08 Feb 2007)
 
