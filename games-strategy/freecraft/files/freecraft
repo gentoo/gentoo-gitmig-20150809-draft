@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ ! -d GENTOO_DATADIR/data/music ] ; then
+if [[ ! -d "GENTOO_DATADIR"/data/music ]] ; then
 	echo "You have to install the data files in order to play!"
 	echo "You can either \`emerge freecraft-fcmp\` or install"
 	echo "the data files from the Warcraft CD."
@@ -12,4 +12,4 @@ if [ ! -d GENTOO_DATADIR/data/music ] ; then
 	exit 1
 fi
 
-exec GENTOO_LIBDIR/freecraft -d GENTOO_DATADIR/data "$@"
+exec "GENTOO_LIBDIR"/freecraft -d "GENTOO_DATADIR"/data "$@"

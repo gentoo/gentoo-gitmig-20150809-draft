@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/freecraft-1.18-r3.ebuild,v 1.13 2006/12/21 08:21:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/freecraft-1.18-r3.ebuild,v 1.14 2007/02/17 09:26:11 nyhm Exp $
 
 inherit eutils games
 
@@ -15,11 +15,10 @@ KEYWORDS="~ppc x86"
 IUSE=""
 RESTRICT="fetch"
 
-DEPEND=">=media-libs/libpng-1.2.3
-	>=media-libs/libsdl-1.2.4
-	sys-libs/zlib"
+DEPEND="media-libs/libpng
+	media-libs/libsdl"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 pkg_nofetch() {
 	einfo "Due to a Cease and Desist given by Blizzard,"
@@ -32,60 +31,48 @@ pkg_nofetch() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${PV}-setup.patch" \
-		"${FILESDIR}/${P}"-gcc41.patch \
-		"${FILESDIR}/${P}"-Makefile.patch
+	sed -e "s:GENTOO_DATADIR:${GAMES_DATADIR}/${PN}:" \
+		-e "s:GENTOO_LIBDIR:${GAMES_LIBDIR}/${PN}:" \
+		"${FILESDIR}"/${PN} > "${T}"/${PN} \
+		|| die "sed failed"
+	epatch \
+		"${FILESDIR}"/${PV}-setup.patch \
+		"${FILESDIR}"/${P}-gcc41.patch \
+		"${FILESDIR}"/${P}-Makefile.patch
 	env GENTOO_CFLAGS="${CFLAGS}" ./setup || die
 }
 
 src_compile() {
-	make depend || die "depend generation failed"
-	make || die "build failed"
+	emake depend || die "depend generation failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
-	exeinto "${GAMES_LIBDIR}/${PN}"
+	exeinto "${GAMES_LIBDIR}"/${PN}
 	doexe freecraft || die "doexe failed"
-	dogamesbin "${FILESDIR}/freecraft" || die "dogamesbin failed"
-	sed -i \
-		-e  "s:GENTOO_DATADIR:${GAMES_DATADIR}/${PN}:" \
-		-e  "s:GENTOO_LIBDIR:${GAMES_LIBDIR}/${PN}:" \
-		"${D}${GAMES_BINDIR}/freecraft" \
-		|| die "sed failed"
+	dogamesbin "${T}"/${PN} || die "dogamesbin failed"
 
-	exeinto "${GAMES_DATADIR}/${PN}/tools"
+	exeinto "${GAMES_DATADIR}"/${PN}/tools
 	doexe tools/{build.sh,aledoc,startool,wartool} || die "doexe failed"
 
-	dodir "${GAMES_DATADIR}/${PN}"
-	cp -r contrib data "${D}/${GAMES_DATADIR}/${PN}/" || die "cp failed"
+	insinto "${GAMES_DATADIR}"/${PN}
+	doins -r contrib data || die "doins failed"
 
 	dohtml -r doc
 	dodoc README
-
 	prepgamesdirs
-
-	# make sure we dont clobber files freecraft and freecraft-fcmp share #39278
-	local fcmpver="$(best_version games-strategy/freecraft-fcmp)"
-	if [ ! -z "${fcmpver}" ] ; then
-		cd "${D}/${GAMES_DATADIR}/${PN}/data/ccl"
-		for f in $(grep ${GAMES_DATADIR}/${PN}/data/ccl/ ${ROOT}/var/db/pkg/${fcmpver}/CONTENTS) ; do
-			[ -d "${f}" ] && continue
-			[ -e "${f}" -a -e "${D}/${f}" ] && rm "${D}/${f}"
-		done
-	fi
 }
 
 pkg_postinst() {
 	games_pkg_postinst
-	echo
-	einfo "Freecraft is now installed but in order to actually play"
-	einfo "you will need to either use a Warcraft CD or install the"
-	einfo "freecraft-fcmp ebuild.  To use a Warcraft CD:"
-	einfo " 1 mount the cd as /mnt/cdrom"
-	einfo " 2 cd ${GAMES_DATADIR}/${PN}"
-	einfo " 3 run tools/build.sh"
-	einfo "This will extract the data files to the correct place."
-	einfo "Note that the CD is still needed for the music.  To"
-	einfo "start a game just run \"playfreecraft\"."
-	einfo "For more info, review \"freecraft --help\"."
+	elog "Freecraft is now installed but in order to actually play"
+	elog "you will need to either use a Warcraft CD or install the"
+	elog "freecraft-fcmp ebuild.  To use a Warcraft CD:"
+	elog " 1 mount the cd as /mnt/cdrom"
+	elog " 2 cd ${GAMES_DATADIR}/${PN}"
+	elog " 3 run tools/build.sh"
+	elog "This will extract the data files to the correct place."
+	elog "Note that the CD is still needed for the music.  To"
+	elog "start a game just run \"playfreecraft\"."
+	elog "For more info, review \"freecraft --help\"."
 }
