@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.4.4.ebuild,v 1.1 2007/02/18 05:05:01 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.4.4.ebuild,v 1.2 2007/02/18 05:11:23 matsuu Exp $
 
 inherit kde-functions fdo-mime eutils libtool flag-o-matic font
 
@@ -11,8 +11,8 @@ DESCRIPTION="WYSIWYM frontend for LaTeX"
 HOMEPAGE="http://www.lyx.org/"
 SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/${P}.tar.bz2
 	ftp://ftp.lyx.org/pub/lyx/contrib/latex-xft-fonts-0.1.tar.gz
-	http://www.math.tau.ac.il/~dekelts/lyx/files/hebrew.bind
-	http://www.math.tau.ac.il/~dekelts/lyx/files/preferences
+	http://cs.haifa.ac.il/~dekelts/lyx/files/hebrew.bind
+	http://cs.haifa.ac.il/~dekelts//lyx/files/preferences
 	qt3? ( cjk? ( ftp://cellular.phys.pusan.ac.kr/CJK-LyX/qt/${CJK_PATCH} ) )"
 
 LICENSE="GPL-2"
