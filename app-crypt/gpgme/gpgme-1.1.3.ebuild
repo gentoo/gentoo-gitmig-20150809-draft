@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.1.3.ebuild,v 1.2 2007/02/06 10:40:24 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.1.3.ebuild,v 1.3 2007/02/18 18:51:04 alonbl Exp $
 
 inherit eutils libtool
 
@@ -13,7 +13,7 @@ SLOT="1"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND=">=dev-libs/libgpg-error-0.5
+DEPEND=">=dev-libs/libgpg-error-1.4
 	dev-libs/pth
 	>=app-crypt/gnupg-1.9.20-r1"
 
