@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/qtorrent
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtorrent/ChangeLog,v 1.14 2007/02/16 18:08:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtorrent/ChangeLog,v 1.15 2007/02/18 20:22:00 weeve Exp $
+
+  18 Feb 2007; Jason Wever <weeve@gentoo.org> qtorrent-0.9.6.1-r2.ebuild:
+  Stable on SPARC wrt bug #167198.
 
   16 Feb 2007; Raúl Porcel <armin76@gentoo.org> -qtorrent-0.9.5.ebuild,
   -qtorrent-0.9.6.1-r1.ebuild:
