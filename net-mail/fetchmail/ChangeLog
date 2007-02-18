@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.125 2007/01/20 18:29:59 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.126 2007/02/18 18:39:03 ticho Exp $
+
+*fetchmail-6.3.7 (18 Feb 2007)
+
+  18 Feb 2007; Andrej Kacian <ticho@gentoo.org> +fetchmail-6.3.7.ebuild:
+  Version bump. Should fix bug #163782, reported upstream as #10133.
 
   20 Jan 2007; Alexander H. Færøy <eroyf@gentoo.org>
   fetchmail-6.3.6.ebuild:
