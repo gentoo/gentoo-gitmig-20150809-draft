@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-anthy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-anthy/ChangeLog,v 1.39 2007/01/05 16:25:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-anthy/ChangeLog,v 1.40 2007/02/18 14:31:06 armin76 Exp $
+
+  18 Feb 2007; Raúl Porcel <armin76@gentoo.org> scim-anthy-1.2.2.ebuild:
+  x86 stable wrt bug 167429
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   scim-anthy-0.7.1.ebuild, scim-anthy-1.0.0.ebuild, scim-anthy-1.2.0.ebuild,
