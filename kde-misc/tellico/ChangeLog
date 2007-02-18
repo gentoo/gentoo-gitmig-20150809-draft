@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/tellico
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.59 2007/02/10 13:09:15 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.60 2007/02/18 13:48:22 blubb Exp $
+
+  18 Feb 2007; Simon Stelling <blubb@gentoo.org> tellico-1.2.7.ebuild:
+  stable on amd64; bug 165391
 
   10 Feb 2007; nixnut <nixnut@gentoo.org> tellico-1.2.7.ebuild:
   Stable on ppc wrt bug 165391
