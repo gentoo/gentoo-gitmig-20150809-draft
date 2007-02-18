@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.14.2.1.ebuild,v 1.16 2007/01/10 19:44:50 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.14.2.1.ebuild,v 1.17 2007/02/18 03:43:57 dang Exp $
 
 inherit eutils gnome2 autotools
 
@@ -66,13 +66,16 @@ src_install() {
 			[ -s ${game}/${doc} ] && dodoc ${game}/${doc}
 		done
 	done
+}
 
+pkg_preinst() {
 	# Avoid overwriting previous .scores files
 	local basefile
 	for scorefile in ${D}/var/lib/games/*.scores; do
 		basefile=$(basename $scorefile)
 		if [ -s "${ROOT}/var/lib/games/${basefile}" ]; then
-			rm ${scorefile}
+			cp "${ROOT}/var/lib/games/${basefile}" \
+			"${D}/var/lib/games/${basefile}"
 		fi
 	done
 }

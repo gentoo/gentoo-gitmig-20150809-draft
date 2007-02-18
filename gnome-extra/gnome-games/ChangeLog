@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.188 2007/02/05 13:13:14 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.189 2007/02/18 03:43:57 dang Exp $
+
+  18 Feb 2007; Daniel Gryniewicz <dang@gentoo.org>
+  gnome-games-2.14.2.1.ebuild, gnome-games-2.16.2.ebuild,
+  gnome-games-2.16.3.ebuild:
+  Move scorefile checks to pkg_preinst; bug #167277
 
 *gnome-games-2.16.3 (05 Feb 2007)
 

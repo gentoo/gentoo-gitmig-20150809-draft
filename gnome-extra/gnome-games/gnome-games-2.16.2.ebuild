@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.16.2.ebuild,v 1.12 2007/02/04 16:31:58 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.16.2.ebuild,v 1.13 2007/02/18 03:43:57 dang Exp $
 
 # make sure games is inherited first so that the gnome2
 # functions will be called if they are not overridden
@@ -68,13 +68,16 @@ src_install() {
 			[ -s ${game}/${doc} ] && dodoc ${game}/${doc}
 		done
 	done
+}
 
+pkg_preinst() {
 	# Avoid overwriting previous .scores files
 	local basefile
 	for scorefile in ${D}/var/lib/games/*.scores; do
 		basefile=$(basename $scorefile)
 		if [ -s "${ROOT}/var/lib/games/${basefile}" ]; then
-			rm ${scorefile}
+			cp "${ROOT}/var/lib/games/${basefile}" \
+			"${D}/var/lib/games/${basefile}"
 		fi
 	done
 }
