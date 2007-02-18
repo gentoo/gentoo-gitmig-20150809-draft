@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.4.ebuild,v 1.1 2006/06/28 09:19:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.6.ebuild,v 1.1 2007/02/18 20:22:46 dragonheart Exp $
 
 
 DESCRIPTION="Multi-platform tool to check and undelete partition, supports reiserfs, ntfs, fat32, ext2/3 and many others. Also includes PhotoRec to recover pictures from digital camera memory."
@@ -20,7 +20,7 @@ DEPEND=">=sys-libs/ncurses-5.2
 RDEPEND="!static? ( ${DEPEND} )"
 
 src_compile() {
-	local myconf
+	local myconf="--without-ewf"
 	# --with-foo are broken, any use of --with/--without disable the
 	# functionality.
 	# The following variation must be used.

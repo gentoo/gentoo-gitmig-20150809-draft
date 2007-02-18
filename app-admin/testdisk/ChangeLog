@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/testdisk
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.22 2007/01/31 19:15:29 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.23 2007/02/18 20:22:46 dragonheart Exp $
+
+*testdisk-6.6 (18 Feb 2007)
+
+  18 Feb 2007; Daniel Black <dragonheart@gentoo.org> -testdisk-5.2.ebuild,
+  -testdisk-5.7.ebuild, -testdisk-5.9.ebuild, -testdisk-6.2.ebuild,
+  -testdisk-6.3.ebuild, -testdisk-6.4.ebuild, +testdisk-6.6.ebuild:
+  version bump thanks to author Christophe Grenier. old version cleanout too
 
   31 Jan 2007; Tobias Scherbaum <dertobi123@gentoo.org> testdisk-6.5.ebuild:
   Stable on ppc wrt bug #164441.
