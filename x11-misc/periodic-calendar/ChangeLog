@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/periodic-calendar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/periodic-calendar/ChangeLog,v 1.4 2007/02/09 06:21:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/periodic-calendar/ChangeLog,v 1.5 2007/02/18 23:50:31 malc Exp $
+
+  18 Feb 2007; <malc@gentoo.org> periodic-calendar-2.1.ebuild:
+  Add ~amd64 per bug #167444
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
