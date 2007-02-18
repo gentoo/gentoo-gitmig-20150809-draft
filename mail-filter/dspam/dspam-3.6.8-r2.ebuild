@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.8-r2.ebuild,v 1.1 2007/01/08 15:48:44 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.8-r2.ebuild,v 1.2 2007/02/18 07:53:57 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -195,20 +195,12 @@ src_install () {
 		newins src/tools.sqlite_drv/purge-3.sql sqlite3_purge.sql
 	fi
 	if use mysql; then
-		# Use existing configuration if possible
-		if [[ -f "${ROOT}${CONFDIR}/mysql.data" ]]; then
-			DSPAM_DB_DATA=( $(sed "s:^[\t ]*$:###:gI" "${ROOT}${CONFDIR}/mysql.data") )
-			for DB_DATA_INDEX in $(seq 0 $((${#DSPAM_DB_DATA[@]} - 1))); do
-				[[ "${DSPAM_DB_DATA[$DB_DATA_INDEX]}" = "###" ]] && DSPAM_DB_DATA[$DB_DATA_INDEX]=""
-			done
-		else
-			DSPAM_DB_DATA[0]="/var/run/mysqld/mysqld.sock"
-			DSPAM_DB_DATA[1]=""
-			DSPAM_DB_DATA[2]="dspam"
-			DSPAM_DB_DATA[3]="${PASSWORD}"
-			DSPAM_DB_DATA[4]="dspam"
-			DSPAM_DB_DATA[5]="true"
-		fi
+		DSPAM_DB_DATA[0]="/var/run/mysqld/mysqld.sock"
+		DSPAM_DB_DATA[1]=""
+		DSPAM_DB_DATA[2]="dspam"
+		DSPAM_DB_DATA[3]="${PASSWORD}"
+		DSPAM_DB_DATA[4]="dspam"
+		DSPAM_DB_DATA[5]="true"
 
 		# Modify configuration and create mysql.data file
 		sed -e "s:^#*\(MySQLServer[\t ]\{1,\}\).*:\1${DSPAM_DB_DATA[0]}:gI" \
@@ -219,7 +211,7 @@ src_install () {
 			-e "s:^#*\(MySQLCompress[\t ]\{1,\}\).*:\1${DSPAM_DB_DATA[5]}:gI" \
 			-i "${D}"/${CONFDIR}/dspam.conf
 		for DB_DATA_INDEX in $(seq 0 $((${#DSPAM_DB_DATA[@]} - 1))); do
-			echo "${DSPAM_DB_DATA[$DB_DATA_INDEX]}" >> ${D}/${CONFDIR}/mysql.data
+			echo "${DSPAM_DB_DATA[$DB_DATA_INDEX]}" >> "${D}"/${CONFDIR}/mysql.data
 		done
 
 		insinto ${CONFDIR}
@@ -237,19 +229,11 @@ src_install () {
 		fowners root:dspam ${CONFDIR}/mysql.data
 	fi
 	if use postgres ; then
-		# Use existing configuration if possible
-		if [ -f ${ROOT}${CONFDIR}/pgsql.data ]; then
-			DSPAM_DB_DATA=( $(cat "${ROOT}${CONFDIR}/pgsql.data") )
-			for DB_DATA_INDEX in $(seq 0 $((${#DSPAM_DB_DATA[@]} - 1))); do
-				[[ "${DSPAM_DB_DATA[$DB_DATA_INDEX]}" = "###" ]] && DSPAM_DB_DATA[$DB_DATA_INDEX]=""
-			done
-		else
-			DSPAM_DB_DATA[0]="127.0.0.1"
-			DSPAM_DB_DATA[1]="5432"
-			DSPAM_DB_DATA[2]="dspam"
-			DSPAM_DB_DATA[3]="${PASSWORD}"
-			DSPAM_DB_DATA[4]="dspam"
-		fi
+		DSPAM_DB_DATA[0]="127.0.0.1"
+		DSPAM_DB_DATA[1]="5432"
+		DSPAM_DB_DATA[2]="dspam"
+		DSPAM_DB_DATA[3]="${PASSWORD}"
+		DSPAM_DB_DATA[4]="dspam"
 
 		# Modify configuration and create pgsql.data file
 		sed -e "s:^#*\(PgSQLServer[\t ]\{1,\}\).*:\1${DSPAM_DB_DATA[0]}:gI" \
@@ -258,9 +242,9 @@ src_install () {
 			-e "s:^#*\(PgSQLPass[\t ]\{1,\}\).*:\1${DSPAM_DB_DATA[3]}:gI" \
 			-e "s:^#*\(PgSQLDb[\t ]\{1,\}\).*:\1${DSPAM_DB_DATA[4]}:gI" \
 			-e "s:^#*\(PgSQLConnectionCache[\t ]*.\):\1:gI" \
-			-i ${D}/${CONFDIR}/dspam.conf
+			-i "${D}"/${CONFDIR}/dspam.conf
 		for DB_DATA_INDEX in $(seq 0 $((${#DSPAM_DB_DATA[@]} - 1))); do
-			echo "${DSPAM_DB_DATA[$DB_DATA_INDEX]}" >> ${D}/${CONFDIR}/pgsql.data
+			echo "${DSPAM_DB_DATA[$DB_DATA_INDEX]}" >> "${D}"/${CONFDIR}/pgsql.data
 		done
 
 		insinto ${CONFDIR}
@@ -274,18 +258,10 @@ src_install () {
 		fowners root:dspam ${CONFDIR}/pgsql.data
 	fi
 	if use oracle ; then
-		# Use existing configuration if possible
-		if [ -f ${ROOT}${CONFDIR}/oracle.data ]; then
-			DSPAM_DB_DATA=( $(cat "${ROOT}${CONFDIR}/oracle.data") )
-			for DB_DATA_INDEX in $(seq 0 $((${#DSPAM_DB_DATA[@]} - 1))); do
-				[[ "${DSPAM_DB_DATA[$DB_DATA_INDEX]}" = "###" ]] && DSPAM_DB_DATA[$DB_DATA_INDEX]=""
-			done
-		else
-			DSPAM_DB_DATA[0]="(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=127.0.0.1)(PORT=1521))(CONNECT_DATA=(SID=PROD)))"
-			DSPAM_DB_DATA[1]="dspam"
-			DSPAM_DB_DATA[2]="${PASSWORD}"
-			DSPAM_DB_DATA[3]="dspam"
-		fi
+		DSPAM_DB_DATA[0]="(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=127.0.0.1)(PORT=1521))(CONNECT_DATA=(SID=PROD)))"
+		DSPAM_DB_DATA[1]="dspam"
+		DSPAM_DB_DATA[2]="${PASSWORD}"
+		DSPAM_DB_DATA[3]="dspam"
 
 		# Modify configuration and create oracle.data file
 		sed -e "s:^#*\(OraServer[\t ]\{1,\}\).*:\1${DSPAM_DB_DATA[0]}:gI" \
@@ -344,6 +320,14 @@ src_install () {
 	docinto sa_train
 	dodoc "${WORKDIR}"/dspam_sa_trainer/*
 	doman man/dspam*
+}
+
+pkg_preinst() {
+	# Preserve *.data files 
+	local installed_datafiles="${ROOT}"/${CONFDIR}/*.data 
+	if [[ "${installed_datafiles}" != *"*.data" ]]; then
+		cp "${ROOT}"/${CONFDIR}/*.data "${D}"/${CONFDIR}
+	fi
 }
 
 pkg_postinst() {
