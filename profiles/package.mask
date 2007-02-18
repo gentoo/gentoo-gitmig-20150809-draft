@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6831 2007/02/18 15:30:51 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6832 2007/02/18 16:37:19 beandog Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Steve Dibb <beandog@gentoo.org> (18 Feb 2007)
+# Needs lotsa testing, probably lovin
+>=media-video/mplayer-bin-1.0_rc1
 
 # Raúl Porcel <armin76@gentoo.org> (18 Feb 2007)
 # Pending removal 17 Mar 2007, doesn't compile, upstream

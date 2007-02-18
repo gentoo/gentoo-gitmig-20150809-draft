@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.117 2007/02/18 15:30:51 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.118 2007/02/18 16:37:19 beandog Exp $
+
+  18 Feb 2007; Steve Dibb <beandog@gentoo.org> package.mask:
+  p.mask newer versions of mplayer-bin for testing
 
   18 Feb 2007; Jurek Bartuszek <jurek@gentoo.org> package.mask:
   Removed dev-util/codeblocks from package.mask
