@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/lcd4linux
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.21 2007/01/07 01:51:37 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.22 2007/02/18 23:02:56 rbu Exp $
+
+*lcd4linux-0.10.0-r1 (18 Feb 2007)
+
+  18 Feb 2007; Robert Buchholz <rbu@gentoo.org>
+  +files/lcd4linux-0.10.0-no-x86-asm.patch,
+  +files/lcd4linux-0.10.0-null-driver.patch, +files/lcd4linux-0.10.0.initd,
+  metadata.xml, -lcd4linux-0.10.0.ebuild, +lcd4linux-0.10.0-r1.ebuild:
+  Introducing LCD_DEVICES, move of config file, code should compile on non-x86
+  again, new init-script and other fixes
 
   07 Jan 2007; Robert Buchholz <rbu@gentoo.org> lcd4linux-0.10.0.ebuild:
   uses elog, whitespace fix
