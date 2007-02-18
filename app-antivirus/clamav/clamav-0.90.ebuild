@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.90.ebuild,v 1.1 2007/02/14 14:49:33 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.90.ebuild,v 1.2 2007/02/18 18:26:12 ticho Exp $
 
 inherit eutils flag-o-matic fixheadtails
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="bzip2 crypt curl gmp logrotate mailwrapper milter onaccess selinux"
+IUSE="bzip2 crypt curl gmp logrotate mailwrapper milter selinux"
 
 DEPEND="virtual/libc
 	bzip2? ( app-arch/bzip2 )
@@ -19,7 +19,6 @@ DEPEND="virtual/libc
 	curl? ( >=net-misc/curl-7.10.0 )
 	gmp? ( dev-libs/gmp )
 	milter? ( || ( mail-filter/libmilter mail-mta/sendmail ) )
-	onaccess? ( sys-fs/dazuko )
 	>=sys-libs/zlib-1.2.1-r3
 	>=sys-apps/sed-4"
 RDEPEND="${DEPEND}
@@ -36,11 +35,6 @@ pkg_setup() {
 			ewarn "this flag for clamav as well to disable milter support."
 			die "need milter-enabled sendmail"
 		fi
-	fi
-	if use onaccess ; then
-		echo
-		ewarn "Warning: On access scan support is experimental, use at your own risk!"
-		echo
 	fi
 	enewgroup clamav
 	enewuser clamav -1 -1 /dev/null clamav
@@ -67,7 +61,6 @@ src_compile() {
 		$(use_enable bzip2) \
 		$(use_with curl libcurl) \
 		$(use_enable gmp dsig) \
-		$(use_enable onaccess clamuko) \
 		--disable-experimental \
 		--with-dbdir=/var/lib/clamav || die
 	emake || die
@@ -111,12 +104,6 @@ src_install() {
 			>>${D}/etc/conf.d/clamd
 		echo "MILTER_OPTS=\"-m 10 --timeout=0\"" \
 			>>${D}/etc/conf.d/clamd
-	fi
-
-	if use onaccess ; then
-		dodir /etc/udev/rules.d
-		echo "KERNEL==\"dazuko\", NAME=\"%k\", GROUP=\"clamav\", MODE=\"0660\"" \
-			>${D}/etc/udev/rules.d/60-dazuko.rules
 	fi
 
 	if use logrotate ; then
