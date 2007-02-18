@@ -1,6 +1,13 @@
 # ChangeLog for xfce-base/xfce-mcs-plugins
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-mcs-plugins/ChangeLog,v 1.78 2007/02/03 01:02:11 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-mcs-plugins/ChangeLog,v 1.79 2007/02/18 14:00:34 drac Exp $
+
+*xfce-mcs-plugins-4.4.0-r1 (18 Feb 2007)
+
+  18 Feb 2007; Samuli Suominen <drac@gentoo.org>
+  +files/xfce-mcs-plugins-4.4.0-no-broken-themes.patch,
+  +xfce-mcs-plugins-4.4.0-r1.ebuild:
+  Don't allow broken icon themes patch from bug 167180, applied also by upstream.
 
   03 Feb 2007; Joshua Nichols <nichoj@gentoo.org>
   -xfce-mcs-plugins-4.3.99.2-r3.ebuild:
