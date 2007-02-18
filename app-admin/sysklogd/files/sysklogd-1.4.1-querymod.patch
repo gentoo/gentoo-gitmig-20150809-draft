@@ -33,7 +33,7 @@ diff -Naur sysklogd-1.4.1-orig/ksym_mod.c sysklogd-1.4.1/ksym_mod.c
  static int symsort(const void *, const void *);
  
  
-@@ -185,81 +187,106 @@
+@@ -185,81 +187,107 @@
  extern int InitMsyms()
  
  {
@@ -103,8 +103,9 @@ diff -Naur sysklogd-1.4.1-orig/ksym_mod.c sysklogd-1.4.1/ksym_mod.c
 +		result=query_module(NULL, QM_MODULES, modbuf, modsize, &rtn);
 +
 +		if (result<0 && errno!=ENOSPC) {
-+			Syslog(LOG_ERR, "Error querying loaded modules " \
-+			       "- %s\n", strerror(errno));
++			if (errno != ENOSYS)
++				Syslog(LOG_ERR, "Error querying loaded modules " \
++				       "- %s\n", strerror(errno));
 +			free(modbuf);
 +			return(0);
 +		}
