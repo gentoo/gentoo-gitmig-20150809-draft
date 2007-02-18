@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8d.ebuild,v 1.18 2006/11/04 00:37:17 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8d.ebuild,v 1.19 2007/02/18 03:10:46 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://openssl/source/${P}.tar.gz"
 
 LICENSE="openssl"
 SLOT="0"
-KEYWORDS="-* alpha amd64 ~arm hppa ia64 m68k ~mips ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="-* alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="bindist emacs sse2 test zlib"
 
 RDEPEND=""
@@ -158,20 +158,11 @@ src_install() {
 }
 
 pkg_preinst() {
-	if [[ -e ${ROOT}/usr/$(get_libdir)/libcrypto.so.0.9.7 ]] ; then
-		cp -pPR "${ROOT}"/usr/$(get_libdir)/lib{crypto,ssl}.so.0.9.7 "${IMAGE}"/usr/$(get_libdir)/
-	fi
+	preserve_old_lib /usr/$(get_libdir)/libcrypto.so.0.9.{6,7}
 }
 
 pkg_postinst() {
-	if [[ -e ${ROOT}/usr/$(get_libdir)/libcrypto.so.0.9.7 ]] ; then
-		ewarn "You must re-compile all packages that are linked against"
-		ewarn "OpenSSL 0.9.7 by using revdep-rebuild from gentoolkit:"
-		ewarn "# revdep-rebuild --library libssl.so.0.9.7"
-		ewarn "# revdep-rebuild --library libcrypto.so.0.9.7"
-		ewarn "After this, you can delete /usr/$(get_libdir)/libssl.so.0.9.7"
-		ewarn "and /usr/$(get_libdir)/libcrypto.so.0.9.7"
-	fi
+	preserve_old_lib_notify /usr/$(get_libdir)/libcrypto.so.0.9.{6,7}
 
 	if [[ ${CHOST} == i686* ]] ; then
 		ewarn "Due to the way openssl is architected, you cannot"

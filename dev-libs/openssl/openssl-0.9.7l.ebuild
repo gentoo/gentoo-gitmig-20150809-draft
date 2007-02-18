@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7l.ebuild,v 1.14 2006/11/03 23:04:16 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7l.ebuild,v 1.15 2007/02/18 03:10:46 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://openssl/source/${P}.tar.gz"
 
 LICENSE="openssl"
 SLOT="0"
-KEYWORDS="-* alpha amd64 arm hppa ia64 m68k mips ppc ppc64 ~s390 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="-* alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="emacs test bindist zlib"
 
 RDEPEND=""
@@ -163,13 +163,10 @@ src_install() {
 	fperms a+x /usr/$(get_libdir)/pkgconfig #34088
 }
 
+pkg_preinst() {
+	preserve_old_lib /usr/$(get_libdir)/libcrypto.so.0.9.6
+}
+
 pkg_postinst() {
-	if [[ -e ${ROOT}/usr/lib/libcrypto.so.0.9.6 ]] ; then
-		ewarn "You must re-compile all packages that are linked against"
-		ewarn "OpenSSL 0.9.6 by using revdep-rebuild from gentoolkit:"
-		ewarn "# revdep-rebuild --library libssl.so.0.9.6"
-		ewarn "# revdep-rebuild --library libcrypto.so.0.9.6"
-		ewarn "After this, you can delete /usr/lib/libssl.so.0.9.6 and /usr/lib/libcrypto.so.0.9.6"
-		touch -c "${ROOT}"/usr/lib/lib{crypto,ssl}.so.0.9.6
-	fi
+	preserve_old_lib_notify /usr/$(get_libdir)/libcrypto.so.0.9.6
 }
