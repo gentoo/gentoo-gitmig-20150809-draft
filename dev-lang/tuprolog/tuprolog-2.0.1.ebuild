@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/tuprolog-2.0.1.ebuild,v 1.3 2007/02/02 06:50:33 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/tuprolog-2.0.1.ebuild,v 1.4 2007/02/18 08:38:02 keri Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -52,4 +52,6 @@ src_install() {
 		java-pkg_dohtml -r docs/*
 		dodoc doc/*.pdf
 	fi
+
+	dodoc CHANGELOG
 }
