@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdepend
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/ChangeLog,v 1.35 2006/10/17 02:35:52 nichoj Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/ChangeLog,v 1.36 2007/02/18 19:11:19 betelgeuse Exp $
+
+  18 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> -jdepend-2.8-r1.ebuild,
+  -jdepend-2.9.ebuild:
+  Removed old revisions.
 
   17 Oct 2006; Joshua Nichols <nichoj@gentoo.org> jdepend-2.9-r2.ebuild:
   Keyworded ~ia64.
