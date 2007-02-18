@@ -1,6 +1,9 @@
 # ChangeLog for app-office/lyx
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.92 2007/02/18 05:11:23 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.93 2007/02/18 13:13:59 nixnut Exp $
+
+  18 Feb 2007; nixnut <nixnut@gentoo.org> lyx-1.4.2.ebuild:
+  Stable on ppc wrt bug 167012
 
   18 Feb 2007; MATSUU Takuto <matsuu@gentoo.org> lyx-1.4.1-r1.ebuild,
   lyx-1.4.2.ebuild, lyx-1.4.4.ebuild:
