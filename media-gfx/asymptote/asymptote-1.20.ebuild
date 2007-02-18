@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-1.20.ebuild,v 1.1 2007/02/17 18:54:34 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-1.20.ebuild,v 1.2 2007/02/18 12:04:48 centic Exp $
 
 inherit eutils elisp-common
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 
-IUSE="boehm-gc doc fftw emacs gsl vim"
+IUSE="boehm-gc doc fftw emacs gsl vim-syntax"
 
 RDEPEND=">=sys-libs/readline-4.3-r5
 	>=sys-libs/ncurses-5.4-r5
@@ -94,7 +94,7 @@ src_install() {
 		elisp-site-file-install "${FILESDIR}"/64asy-gentoo.el
 	fi
 
-	if use vim ; then
+	if use vim-syntax ; then
 		insinto /usr/share/vim/vimfiles/syntax
 		doins base/asy.vim
 	fi
