@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.192 2007/02/11 23:35:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.193 2007/02/18 02:00:16 flameeyes Exp $
+
+*alsa-utils-1.0.14_rc2-r1 (18 Feb 2007)
+
+  18 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +files/alsasound-init-20070218, +alsa-utils-1.0.14_rc2-r1.ebuild:
+  Add a new init.d script, cleaned up, without internal changelog. This
+  version fixes bug #154598, as the modules are removed recursively with all
+  the modules depending on the them, and also bug #104441 as the oss files are
+  saved and restored during the respective functions.
 
   11 Feb 2007; Simon Stelling <blubb@gentoo.org>
   alsa-utils-1.0.14_rc1.ebuild:
