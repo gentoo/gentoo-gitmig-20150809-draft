@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xforms
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.37 2007/02/18 16:24:14 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.38 2007/02/18 16:29:06 grobian Exp $
+
+  18 Feb 2007; Fabian Groffen <grobian@gentoo.org> xforms-1.0.90-r1.ebuild:
+  Dropped ppc-macos keyword, see you in prefix
 
   18 Feb 2007; Christian Heim <phreak@gentoo.org>
   +files/xforms-1.0.90-Makefile.am.patch, xforms-1.0.90-r1.ebuild:
