@@ -1,0 +1,10 @@
+# ChangeLog for xfce-extra/thunar-thumbnailers
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-thumbnailers/ChangeLog,v 1.1 2007/02/18 16:53:03 drac Exp $
+
+*thunar-thumbnailers-0.1.1 (18 Feb 2007)
+
+  18 Feb 2007; Samuli Suominen <drac@gentoo.org>
+  +thunar-thumbnailers-0.1.1.ebuild:
+  Initial commit for bug 167489, thanks to Erlend Davidson.
+
