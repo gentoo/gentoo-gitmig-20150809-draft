@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.327 2007/02/17 11:00:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.328 2007/02/18 02:12:03 flameeyes Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -138,9 +138,9 @@ else
 	if [[ ${PN} != "kgcc64" ]] ; then
 		IUSE="${IUSE} altivec build fortran nls nocxx"
 		[[ -n ${PIE_VER} ]] && IUSE="${IUSE} nopie"
-		[[ -n ${PP_VER}  ]] && IUSE="${IUSE} nossp"
+		[[ -n ${PP_VER}	 ]] && IUSE="${IUSE} nossp"
 		[[ -n ${HTB_VER} ]] && IUSE="${IUSE} boundschecking"
-		[[ -n ${D_VER}   ]] && IUSE="${IUSE} d"
+		[[ -n ${D_VER}	 ]] && IUSE="${IUSE} d"
 
 		if version_is_at_least 3 ; then
 			IUSE="${IUSE} bootstrap doc gcj gtk hardened multilib objc vanilla"
@@ -1115,7 +1115,7 @@ gcc_src_unpack() {
 		einfo "Touching generated files"
 		./contrib/gcc_update --touch | \
 			while read f ; do
-				einfo "  ${f%%...}"
+				einfo "	 ${f%%...}"
 			done
 	fi
 
@@ -1269,15 +1269,15 @@ gcc_do_configure() {
 		# disable a bunch of features or gcc goes boom
 		local needed_libc=""
 		case ${CTARGET} in
-			*-linux)         needed_libc=no-fucking-clue;;
-			*-dietlibc)      needed_libc=dietlibc;;
-			*-elf)           needed_libc=newlib;;
-			*-freebsd*)      needed_libc=freebsd-lib;;
-			*-gnu*)          needed_libc=glibc;;
-			*-klibc)         needed_libc=klibc;;
-			*-uclibc*)       needed_libc=uclibc;;
+			*-linux)		 needed_libc=no-fucking-clue;;
+			*-dietlibc)		 needed_libc=dietlibc;;
+			*-elf)			 needed_libc=newlib;;
+			*-freebsd*)		 needed_libc=freebsd-lib;;
+			*-gnu*)			 needed_libc=glibc;;
+			*-klibc)		 needed_libc=klibc;;
+			*-uclibc*)		 needed_libc=uclibc;;
 			mingw*|*-mingw*) needed_libc=mingw-runtime;;
-			avr)             confgcc="${confgcc} --enable-shared --disable-threads";;
+			avr)			 confgcc="${confgcc} --enable-shared --disable-threads";;
 		esac
 		if [[ -n ${needed_libc} ]] ; then
 			if ! has_version ${CATEGORY}/${needed_libc} ; then
@@ -1310,6 +1310,8 @@ gcc_do_configure() {
 		[[ ${GCCMAJOR}.${GCCMINOR} == 3.3 ]] && \
 			confgcc="${confgcc} --enable-sjlj-exceptions"
 	elif [[ ${CTARGET} == *-gnu* ]] ; then
+		confgcc="${confgcc} --enable-__cxa_atexit"
+	elif [[ ${CTARGET} == *-freebsd* ]]; then
 		confgcc="${confgcc} --enable-__cxa_atexit"
 	fi
 	[[ ${CTARGET} == *-gnu* ]] && confgcc="${confgcc} --enable-clocale=gnu"
