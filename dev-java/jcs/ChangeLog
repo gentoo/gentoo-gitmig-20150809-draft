@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jcs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/ChangeLog,v 1.6 2007/01/20 18:49:48 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/ChangeLog,v 1.7 2007/02/18 20:25:48 betelgeuse Exp $
+
+  18 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> -jcs-1.2.7.8.ebuild:
+  Removed old version.
 
 *jcs-1.2.7.9 (20 Jan 2007)
 
