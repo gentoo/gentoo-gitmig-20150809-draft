@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/kelogviewer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kelogviewer/ChangeLog,v 1.5 2007/01/29 12:47:12 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kelogviewer/ChangeLog,v 1.6 2007/02/18 13:28:44 nixnut Exp $
+
+  18 Feb 2007; nixnut <nixnut@gentoo.org> kelogviewer-0.4.0.7.ebuild:
+  Added ~ppc wrt bug 166595
 
   29 Jan 2007; Piotr Jaroszyński <peper@gentoo.org>
   kelogviewer-0.4.0.7.ebuild:
