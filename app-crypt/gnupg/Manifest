@@ -1,39 +1,6 @@
-AUX gnupg-1.4-emptytrustpackets.patch 611 RMD160 b87072acd446cebeb9b837ac6bba21c9c761e0c6 SHA1 5de97cdd26d155132c828db89b28cd37e9f03aad SHA256 d7a2cfed32f0fef29edf0506fc3602473cc2c6369d672571d06bff902c9e0689
-MD5 c0b3223dbc599c2da7707cdae2b3683a files/gnupg-1.4-emptytrustpackets.patch 611
-RMD160 b87072acd446cebeb9b837ac6bba21c9c761e0c6 files/gnupg-1.4-emptytrustpackets.patch 611
-SHA256 d7a2cfed32f0fef29edf0506fc3602473cc2c6369d672571d06bff902c9e0689 files/gnupg-1.4-emptytrustpackets.patch 611
-AUX gnupg-1.4.2-jari.patch 370 RMD160 93e4099381de6cefadacf28ffd170b3cd5585c9f SHA1 6d8527bd0080d63ea851780a5394e0fd6eb00183 SHA256 d244d5d6f9f9e01f0cad2577d23c506f11e073210efbd48702ab62847cc60e73
-MD5 c23d51ccf048f10b5e8b10b45570c13a files/gnupg-1.4.2-jari.patch 370
-RMD160 93e4099381de6cefadacf28ffd170b3cd5585c9f files/gnupg-1.4.2-jari.patch 370
-SHA256 d244d5d6f9f9e01f0cad2577d23c506f11e073210efbd48702ab62847cc60e73 files/gnupg-1.4.2-jari.patch 370
-AUX gnupg-1.4.2-keyserver.patch 389 RMD160 ce11305302e2c9777913a7697c44195844fce1d2 SHA1 07d32cdd02526046b66ea4c3e697702d529a6673 SHA256 7f2a020d9fb5a8f7d4dd94f6e70168a348713afb66ad2088123a76e5e439030b
-MD5 ee3a4487eadfb9858f32adde3554394c files/gnupg-1.4.2-keyserver.patch 389
-RMD160 ce11305302e2c9777913a7697c44195844fce1d2 files/gnupg-1.4.2-keyserver.patch 389
-SHA256 7f2a020d9fb5a8f7d4dd94f6e70168a348713afb66ad2088123a76e5e439030b files/gnupg-1.4.2-keyserver.patch 389
-AUX gnupg-1.4.2-mpicoder.patch 991 RMD160 72d876fdec86f491b729ccaf95be9d0d1053a8f6 SHA1 55517a6a2ff7c0cc027c4d3fdf5d082522cee1eb SHA256 af1c3a0420546226eaa420728a06e9d8eb74e73f17cf4c350aeaebdfdc2bed0b
-MD5 fb96d149b5fc7dacc041dda2a57b2315 files/gnupg-1.4.2-mpicoder.patch 991
-RMD160 72d876fdec86f491b729ccaf95be9d0d1053a8f6 files/gnupg-1.4.2-mpicoder.patch 991
-SHA256 af1c3a0420546226eaa420728a06e9d8eb74e73f17cf4c350aeaebdfdc2bed0b files/gnupg-1.4.2-mpicoder.patch 991
-AUX gnupg-1.4.2.2-badruman.patch 558 RMD160 11954ae9fd632244781877c00b2531c6eea32583 SHA1 dc81d6d202207177756f35020f583b6895615af3 SHA256 6cdb944d17df449f2cdce1a255c6fd83e1f4a34edd4d6e5c691bcc1d3c418257
-MD5 04c1fed4cbc17d814bbdbf09cc1d9000 files/gnupg-1.4.2.2-badruman.patch 558
-RMD160 11954ae9fd632244781877c00b2531c6eea32583 files/gnupg-1.4.2.2-badruman.patch 558
-SHA256 6cdb944d17df449f2cdce1a255c6fd83e1f4a34edd4d6e5c691bcc1d3c418257 files/gnupg-1.4.2.2-badruman.patch 558
-AUX gnupg-1.4.2.2-selftest.patch 1374 RMD160 4ed131ac7605de9b672395208a10443146cbd23a SHA1 c4ca7ae9482ee66b1aef4a59e969cf54280d9451 SHA256 22ed605597427c06103e7a75d5cdc5c0acf72d60300ffaed9cab4c2bf94aceef
-MD5 81f86906b16ceca11d4820e173203475 files/gnupg-1.4.2.2-selftest.patch 1374
-RMD160 4ed131ac7605de9b672395208a10443146cbd23a files/gnupg-1.4.2.2-selftest.patch 1374
-SHA256 22ed605597427c06103e7a75d5cdc5c0acf72d60300ffaed9cab4c2bf94aceef files/gnupg-1.4.2.2-selftest.patch 1374
-AUX gnupg-1.4.2.2-test.patch 282 RMD160 2d89417dd346961f2b4fc311910e712549bea743 SHA1 c4d30ea2a4db5c10579b9dbbe29a80859460f477 SHA256 d223c78eee6c38d23e2283c48b8c553c88ff624c0075775a88dcea34c5e88081
-MD5 c1f0da84dd36a25d22814b3ee959f9c7 files/gnupg-1.4.2.2-test.patch 282
-RMD160 2d89417dd346961f2b4fc311910e712549bea743 files/gnupg-1.4.2.2-test.patch 282
-SHA256 d223c78eee6c38d23e2283c48b8c553c88ff624c0075775a88dcea34c5e88081 files/gnupg-1.4.2.2-test.patch 282
-AUX gnupg-1.4.3-badruman.patch 533 RMD160 fc42565de056e991229c3df763cc6a45ef0c47fb SHA1 a409ef9868d2c42d1b7d2926b19e35ea8263fd68 SHA256 17f10c73dce054112694a0325c78f2d25521ce1cf26bdb7c0e7d21ee2bab4274
-MD5 ee3ef9bfeaef0488113e6e0adc01575a files/gnupg-1.4.3-badruman.patch 533
-RMD160 fc42565de056e991229c3df763cc6a45ef0c47fb files/gnupg-1.4.3-badruman.patch 533
-SHA256 17f10c73dce054112694a0325c78f2d25521ce1cf26bdb7c0e7d21ee2bab4274 files/gnupg-1.4.3-badruman.patch 533
-AUX gnupg-1.4.3-jari.patch 465 RMD160 feef407fbdec662b063ead87b43ce3ce8a2d4d94 SHA1 055120c84892a0be378334bee863eb533736aa2d SHA256 09ed913655928debbdf91632e2a396e3aa6ceb7bd86f6f0f3b001c76440087a0
-MD5 e5dfde6c734ebd5cce85eec527be99e7 files/gnupg-1.4.3-jari.patch 465
-RMD160 feef407fbdec662b063ead87b43ce3ce8a2d4d94 files/gnupg-1.4.3-jari.patch 465
-SHA256 09ed913655928debbdf91632e2a396e3aa6ceb7bd86f6f0f3b001c76440087a0 files/gnupg-1.4.3-jari.patch 465
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX gnupg-1.4.3-keyserver.patch 455 RMD160 c7eec6bd5ea73cde4d084cffcc1623bea775aa9e SHA1 48818a3a333a4a8a7175f8c21ec2e811b3fd20c3 SHA256 242a8497230a75e2f4c9a34a91aef73560052925eff822d1e5e566faee8b27ec
 MD5 72be0b19653d4f2b1d1719046db9c18a files/gnupg-1.4.3-keyserver.patch 455
 RMD160 c7eec6bd5ea73cde4d084cffcc1623bea775aa9e files/gnupg-1.4.3-keyserver.patch 455
@@ -42,10 +9,6 @@ AUX gnupg-1.4.3-selftest.patch 1324 RMD160 0a8e6d50fde48a2e795907ca56e1e95261919
 MD5 5618a0682f3972bdee6a87da1af03ba6 files/gnupg-1.4.3-selftest.patch 1324
 RMD160 0a8e6d50fde48a2e795907ca56e1e95261919f43 files/gnupg-1.4.3-selftest.patch 1324
 SHA256 0ca949d63f7dbb882c0119344c47bfaa99132bb4c7f253194eea06c7472afa54 files/gnupg-1.4.3-selftest.patch 1324
-AUX gnupg-1.4.5-ecc-helper.patch 349 RMD160 d0b3f8e7a42ca3f0e55a95e4d786d2b27b47b714 SHA1 26c169ef9f2132f67c29c858e5f1d7e6fb162038 SHA256 507bac4b69e14fed3a647a4ad38c445c868fa30146e16ba5c1ef95eb2ecbe1dc
-MD5 d3dfce5c3329cbbf981328e0e1b8d175 files/gnupg-1.4.5-ecc-helper.patch 349
-RMD160 d0b3f8e7a42ca3f0e55a95e4d786d2b27b47b714 files/gnupg-1.4.5-ecc-helper.patch 349
-SHA256 507bac4b69e14fed3a647a4ad38c445c868fa30146e16ba5c1ef95eb2ecbe1dc files/gnupg-1.4.5-ecc-helper.patch 349
 AUX gnupg-1.4.6-badruman.patch 534 RMD160 7789da4ceafcc9f1bec778b9b7986359f1513178 SHA1 8423f2fb9e41fdfbcb4b1eae2c5a99b0c9e045bb SHA256 3fef6d7306823db7a8912f4454b05aef8cff035e36065097d9406f57098018e5
 MD5 0e2449e22416d4ef22158a2baa72a494 files/gnupg-1.4.6-badruman.patch 534
 RMD160 7789da4ceafcc9f1bec778b9b7986359f1513178 files/gnupg-1.4.6-badruman.patch 534
@@ -136,10 +99,10 @@ EBUILD gnupg-2.0.2.ebuild 2163 RMD160 66c9a377942a247ff2fb5b4c46e09c62c3de6fd7 S
 MD5 920aabb2fa6a43449bf3593e5b4fc2ca gnupg-2.0.2.ebuild 2163
 RMD160 66c9a377942a247ff2fb5b4c46e09c62c3de6fd7 gnupg-2.0.2.ebuild 2163
 SHA256 1b7f1cc606275e0569d7fd61dd167109cb6a42b587b078cc109ff3e488484dd1 gnupg-2.0.2.ebuild 2163
-MISC ChangeLog 43137 RMD160 a3037bdd2ca52c9b501743d1ad97a65866b24f5b SHA1 88a66affb1b7ee6766c909ae63d2f8630a941cf3 SHA256 a648f57734508e2be2e14ffbec864c14e7d45bb39467ee2cb4dd97c64bc6b6ae
-MD5 4c8fef5a4a695f71603808d442ef1db7 ChangeLog 43137
-RMD160 a3037bdd2ca52c9b501743d1ad97a65866b24f5b ChangeLog 43137
-SHA256 a648f57734508e2be2e14ffbec864c14e7d45bb39467ee2cb4dd97c64bc6b6ae ChangeLog 43137
+MISC ChangeLog 43583 RMD160 fef4ee21f8e2217772e06c96c20c01051b88f3ca SHA1 91413e8993c3ad9a39a5dff80988bb4235d9ad6d SHA256 791ed6172cb40050102e939a1070d28366d8e19470f25cfcb50b1cbf28485f0b
+MD5 3d8e4af81f03b7fe1ffb84fa7d4e4c1a ChangeLog 43583
+RMD160 fef4ee21f8e2217772e06c96c20c01051b88f3ca ChangeLog 43583
+SHA256 791ed6172cb40050102e939a1070d28366d8e19470f25cfcb50b1cbf28485f0b ChangeLog 43583
 MISC metadata.xml 481 RMD160 d5c4e2fc7b94966795cc4c039d850302d8552448 SHA1 13cb529b83ba9feaad91f1d033d6c33d1eafbd25 SHA256 d88eadc2c75a18f57dcd38f20aa72ee7c79504f62bcab3f7dea60651ccd4b672
 MD5 b507ee36c7487372de42cc9dab034370 metadata.xml 481
 RMD160 d5c4e2fc7b94966795cc4c039d850302d8552448 metadata.xml 481
@@ -180,3 +143,10 @@ SHA256 bd68ceadd1c0dcb85124b859d63408bcf8f9676d4b95ba345e5f41550614ec53 files/di
 MD5 8dd7795cd36c3bff26a4d635297c5f45 files/digest-gnupg-2.0.2 241
 RMD160 b938fa8c34590900d0b7e1efe151e2a7d18eac88 files/digest-gnupg-2.0.2 241
 SHA256 d8968e441b1b712ddafaa0a1c0cb0f6d91eeae76a6a5f2d7adb6ada1a128c23a files/digest-gnupg-2.0.2 241
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.2 (GNU/Linux)
+
+iD8DBQFF2EdVmdTrptrqvGERAmQZAJ9jZDOg7MAmfZQwREbECaDefHxARwCeMrYB
+0TLnMuFh2lDk00xE+KvQEQg=
+=wZMm
+-----END PGP SIGNATURE-----
