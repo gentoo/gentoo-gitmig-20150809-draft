@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.275 2007/02/17 00:17:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.276 2007/02/18 03:11:46 vapier Exp $
 #
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
@@ -1583,7 +1583,7 @@ set_arch_to_portage() {
 preserve_old_lib() {
 	if [[ ${EBUILD_PHASE} != "preinst" ]] ; then
 		eerror "preserve_old_lib() must be called from pkg_preinst() only"
-#		die "Invalid preserve_old_lib() usage"
+		die "Invalid preserve_old_lib() usage"
 	fi
 	[[ -z $1 ]] && die "Usage: preserve_old_lib <library to preserve> [more libraries to preserve]"
 
@@ -1600,7 +1600,7 @@ preserve_old_lib() {
 preserve_old_lib_notify() {
 	if [[ ${EBUILD_PHASE} != "postinst" ]] ; then
 		eerror "preserve_old_lib_notify() must be called from pkg_postinst() only"
-#		die "Invalid preserve_old_lib_notify() usage"
+		die "Invalid preserve_old_lib_notify() usage"
 	fi
 
 	local lib notice=0
