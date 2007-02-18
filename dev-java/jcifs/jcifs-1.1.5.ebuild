@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcifs/jcifs-1.1.5.ebuild,v 1.6 2007/01/20 20:29:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcifs/jcifs-1.1.5.ebuild,v 1.7 2007/02/18 10:22:20 nixnut Exp $
 
 inherit eutils java-pkg
 
@@ -9,7 +9,7 @@ SRC_URI="http://jcifs.samba.org/src/${P}.tgz"
 HOMEPAGE="http://jcifs.samba.org/"
 LICENSE="LGPL-2.1"
 SLOT="1.1"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE="doc jikes"
 RDEPEND=">=virtual/jre-1.4
 	=dev-java/servletapi-2.3*"
