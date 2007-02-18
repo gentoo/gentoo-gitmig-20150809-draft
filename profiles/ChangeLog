@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.115 2007/02/17 15:55:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.116 2007/02/18 15:10:13 armin76 Exp $
+
+  18 Feb 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
+  Add net-irc/cyclone for removal, bug 152480
 
   17 Feb 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   p.mask beta version of net-irc/dircproxy
