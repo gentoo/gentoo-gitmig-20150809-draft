@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.14.2.ebuild,v 1.11 2007/01/28 07:45:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.14.2.ebuild,v 1.12 2007/02/18 18:39:34 drac Exp $
 
 inherit eutils gnome2
 
@@ -33,9 +33,7 @@ G2CONF="${G2CONF} \
 	$(use_with python) \
 	$(use_enable static)"
 
-src_install() {
-	gnome2_src_install
-
+pkg_preinst() {
 	preserve_old_lib /usr/$(get_libdir)/libgsf-1.so.1
 	preserve_old_lib /usr/$(get_libdir)/libgsf-gnome-1.so.1
 	preserve_old_lib /usr/$(get_libdir)/libgsf-1.so.113
