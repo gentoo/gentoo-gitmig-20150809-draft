@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ifstatus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstatus/ChangeLog,v 1.1 2007/02/03 18:26:12 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstatus/ChangeLog,v 1.2 2007/02/18 14:12:09 nixnut Exp $
+
+  18 Feb 2007; nixnut <nixnut@gentoo.org> ifstatus-1.1.0.ebuild:
+  Added ~ppc wrt bug 166565
 
 *ifstatus-1.1.0 (03 Feb 2007)
 

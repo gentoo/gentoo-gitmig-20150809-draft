@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstatus/ifstatus-1.1.0.ebuild,v 1.1 2007/02/03 18:26:12 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstatus/ifstatus-1.1.0.ebuild,v 1.2 2007/02/18 14:12:09 nixnut Exp $
 
 inherit toolchain-funcs
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DESCRIPTION="A simple CLI program for displaying network statistics in real time."
 HOMEPAGE="http://ifstatus.sourceforge.net/"
