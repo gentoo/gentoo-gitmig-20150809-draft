@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15composer/g15composer-3.1.ebuild,v 1.2 2007/01/07 03:21:17 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15composer/g15composer-3.1.ebuild,v 1.3 2007/02/18 19:03:19 rbu Exp $
 
 inherit eutils
 
@@ -46,12 +46,12 @@ src_install() {
 	dodoc AUTHORS README ChangeLog
 
 	if use examples ; then
-		exeinto "${ROOT}/usr/share/${PN}"
+		exeinto "/usr/share/${PN}"
 		doexe examples/*
 	fi
 
 	if use amarok ; then
-		exeinto "${ROOT}/usr/share/apps/amarok/scripts"
+		exeinto "/usr/share/apps/amarok/scripts"
 		newexe examples/amarok-g15-perl.pl g15-display.pl
 	fi
 }
