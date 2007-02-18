@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound-init-20070218,v 1.1 2007/02/18 02:00:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound-init-20070218,v 1.2 2007/02/18 11:38:29 flameeyes Exp $
 #
 # Gentoo users: add this script to 'boot' run level.
 # ==================================================
@@ -188,7 +188,8 @@ restore() {
 	push_opts=$(shopt -p nullglob); shopt -s nullglob
 	for ossfile in "${alsastatedir}"/oss/card?_pcm??; do
 		# We use cat because I'm not sure if cp works properly on /proc
-		cat "${ossfile}" > /proc/asound/${ossfile/_/\/}/oss
+		local procfile=${ossfile##${alsastatedir}/oss}
+		cat "${ossfile}" > /proc/asound/${procfile/_/\/}/oss
 	done
 	eval $push_opts
 
