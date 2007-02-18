@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/sonata
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.8 2007/01/09 21:10:56 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.9 2007/02/18 03:38:34 ticho Exp $
+
+*sonata-1.0.1 (18 Feb 2007)
+
+  18 Feb 2007; Andrej Kacian <ticho@gentoo.org> +sonata-1.0.1.ebuild:
+  Version bump. Bug #165327, by Ihar Hrachyshka <ihar.hrachyshka at gmail.com>.
 
   09 Jan 2007; Sven Wegener <swegener@gentoo.org> sonata-0.9.ebuild:
   Use full atom for built_with_use.
