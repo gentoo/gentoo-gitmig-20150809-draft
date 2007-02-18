@@ -7,14 +7,14 @@ EBUILD gnome-games-extra-data-2.10.0.ebuild 548 RMD160 d0cf2ffb54e344614b9da4ead
 MD5 7bf9d069beab154886fb25eebfdea52f gnome-games-extra-data-2.10.0.ebuild 548
 RMD160 d0cf2ffb54e344614b9da4ead72d02e8bade0ad8 gnome-games-extra-data-2.10.0.ebuild 548
 SHA256 14342c0494e37a299c2888a798a97fb9a8800a2f282d8b37ee1d6e0ede29d693 gnome-games-extra-data-2.10.0.ebuild 548
-EBUILD gnome-games-extra-data-2.12.0.ebuild 540 RMD160 ec916b5e3fec2cd1babc543ff42144650b9fa0e9 SHA1 f29fd97daa200e0cd74583020929f63a3a9826a5 SHA256 3c619499e1bfba0f5f7e28036689d1e3a64613ea7acf74b4e3cd26b16ce751a4
-MD5 ad98637ac98f17794bf1e25a13c0a680 gnome-games-extra-data-2.12.0.ebuild 540
-RMD160 ec916b5e3fec2cd1babc543ff42144650b9fa0e9 gnome-games-extra-data-2.12.0.ebuild 540
-SHA256 3c619499e1bfba0f5f7e28036689d1e3a64613ea7acf74b4e3cd26b16ce751a4 gnome-games-extra-data-2.12.0.ebuild 540
-MISC ChangeLog 3798 RMD160 d4bd1531210304a1eaef355efad45eba0beb2e3b SHA1 3eb4737facf76822c2878337d3783fe520d58f76 SHA256 1593e7fe68def3e7ab05c39d70cc840218c9c5a160f524ec31327c1179c90a0e
-MD5 64ccb8b9716a7c04cffea9a913e841ae ChangeLog 3798
-RMD160 d4bd1531210304a1eaef355efad45eba0beb2e3b ChangeLog 3798
-SHA256 1593e7fe68def3e7ab05c39d70cc840218c9c5a160f524ec31327c1179c90a0e ChangeLog 3798
+EBUILD gnome-games-extra-data-2.12.0.ebuild 540 RMD160 d4e908fe867a217df6d7f12d7450f3569ecfd65a SHA1 cb01b37c47c2ed05b22497ac367e59cc1f089d7f SHA256 e2d88d70a66390abaf7a6009a2edb9d6a6bfb60cf23888b1586c71be747014a7
+MD5 3dd98a45a02c03b4364aa5e9dc58532a gnome-games-extra-data-2.12.0.ebuild 540
+RMD160 d4e908fe867a217df6d7f12d7450f3569ecfd65a gnome-games-extra-data-2.12.0.ebuild 540
+SHA256 e2d88d70a66390abaf7a6009a2edb9d6a6bfb60cf23888b1586c71be747014a7 gnome-games-extra-data-2.12.0.ebuild 540
+MISC ChangeLog 3914 RMD160 f234750477bff0f202f9846a0a9f4d325270c87d SHA1 6c895c31475eb708b7f036da44d4deba1efe7900 SHA256 7a8cf942b3180a021c054fc77e6cb6a4e8704a5d440a5fc1d8f1a4ce3087d9ef
+MD5 33321b56f7744cdab07dccca9f74d19f ChangeLog 3914
+RMD160 f234750477bff0f202f9846a0a9f4d325270c87d ChangeLog 3914
+SHA256 7a8cf942b3180a021c054fc77e6cb6a4e8704a5d440a5fc1d8f1a4ce3087d9ef ChangeLog 3914
 MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
@@ -28,7 +28,7 @@ SHA256 2e701f008d4305d8e1d0dc4cbb0fefac84e7368bafd64bae33c1f9efecd2edbb files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.2 (GNU/Linux)
 
-iD8DBQFFzu3G8bi6rjpTunYRAnY4AKDLGzpuRLwXLBrHfSHWqWcYTj0jGACgyjmH
-JtICAxoxhzHZKGIhzcgwTZk=
-=B/9/
+iD8DBQFF2FfjugEuf3OQ0akRAszcAKCW1Q9wu19Cvu7yVLBvqkJ48Eh7ywCfaFJ3
+GCvFFVHqRnlYzgfRW6mtdig=
+=nqXY
 -----END PGP SIGNATURE-----
