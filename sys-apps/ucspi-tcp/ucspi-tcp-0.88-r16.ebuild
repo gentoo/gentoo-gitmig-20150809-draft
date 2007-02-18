@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r16.ebuild,v 1.1 2007/01/15 21:24:20 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r16.ebuild,v 1.2 2007/02/18 21:07:18 grobian Exp $
 
 inherit eutils toolchain-funcs fixheadtails flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="selinux doc"
 RESTRICT="test"
 
