@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/jfbterm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/ChangeLog,v 1.40 2007/02/18 10:52:59 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/ChangeLog,v 1.41 2007/02/18 14:50:42 flameeyes Exp $
+
+  18 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -jfbterm-0.4.7-r1.ebuild:
+  Remove old version.
 
   18 Feb 2007; Matti Bickel <mabi@gentoo.org> jfbterm-0.4.7-r2.ebuild:
   ppc stable (bug #162691)
