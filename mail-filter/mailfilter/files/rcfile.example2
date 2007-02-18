@@ -82,7 +82,7 @@ MAXLENGTH = 998
 # This one filters mail from a certain person. 
 # (We need the back slash before the '.com' since we are using 
 # extended Regular Expressions.) 
-DENY=^From:.*spammer@any_spam_organisation\.com 
+DENY="^From:.*spammer@any_spam_organisation\.com"
 
 # This one filters mail from everyone at a certain organisation:
 DENY = "^From:.*@any_provider_that_spams\.org"
@@ -95,7 +95,7 @@ DENY_CASE = "^Subject:.*LEGAL"
 # logical OR '|' in Regular Expressions. 
 # (Again, the example works only with extended Regular Expressions.) 
 # Kill everything not directly addressed to own account: 
-DENY<>(^To|^Cc):(.*username@server\.com|.*anotherusername@secondserver\.com)
+DENY<>"(^To|^Cc):(.*username@server\.com|.*anotherusername@secondserver\.com)"
 
 # -----------------------------------------------------------  
 # Normalises the subject strings before parsing, e.g.
