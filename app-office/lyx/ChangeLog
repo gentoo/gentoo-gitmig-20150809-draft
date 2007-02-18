@@ -1,6 +1,9 @@
 # ChangeLog for app-office/lyx
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.95 2007/02/18 20:18:06 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.96 2007/02/18 23:52:29 weeve Exp $
+
+  18 Feb 2007; Jason Wever <weeve@gentoo.org> lyx-1.4.2.ebuild:
+  Stable on SPARC wrt bug #167012.
 
   18 Feb 2007; Simon Stelling <blubb@gentoo.org> lyx-1.4.2.ebuild:
   stable on amd64; bug 167012
