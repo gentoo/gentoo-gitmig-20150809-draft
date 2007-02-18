@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfprint/xfprint-4.4.0.ebuild,v 1.4 2007/01/28 15:33:25 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfprint/xfprint-4.4.0.ebuild,v 1.5 2007/02/18 13:46:59 drac Exp $
 
 inherit xfce44
 
@@ -8,9 +8,10 @@ xfce44
 
 DESCRIPTION="Printer manager"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="debug doc"
+IUSE="cups debug doc"
 
-RDEPEND="net-print/cups
+RDEPEND="cups? ( net-print/cups )
+	!cups? ( net-print/lprng )
 	>=dev-libs/glib-2.6
 	>=x11-libs/gtk+-2.6
 	>=xfce-base/libxfce4mcs-${XFCE_MASTER_VERSION}
@@ -25,8 +26,13 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	doc? ( dev-util/gtk-doc )"
 
-# CUPS includes support for LPR
-XFCE_CONFIG="${XFCE_CONFIG} --enable-bsdlpr --enable-cups"
+pkg_setup() {
+	if use cups; then
+		XFCE_CONFIG="${XFCE_CONFIG} --enable-bsdlpr --enable-cups"
+	else
+		XFCE_CONFIG="${XFCE_CONFIG} --enable-bsdlpr"
+	fi
+}
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
