@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wgetpaste
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.6 2007/02/13 18:38:45 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.7 2007/02/18 13:35:55 nixnut Exp $
+
+  18 Feb 2007; nixnut <nixnut@gentoo.org> wgetpaste-1.1.ebuild:
+  Added ~ppc wrt bug 166570
 
 *wgetpaste-1.1 (13 Feb 2007)
 
