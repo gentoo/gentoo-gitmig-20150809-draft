@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.54 2007/02/04 06:57:15 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.55 2007/02/18 03:24:00 dsd Exp $
 
 # Michael Marineau <marineam@gentoo.org>
 # Requires Linux 2.6.19
@@ -218,7 +218,6 @@ x11-drivers/xf86-input-evdev
 >=sys-kernel/mips-sources-2.5
 >=sys-kernel/mm-sources-2.5
 >=sys-kernel/openblocks-sources-2.5
->=sys-kernel/openmosix-sources-2.5
 >=sys-kernel/openvz-sources-2.5
 >=sys-kernel/rsbac-sources-2.5
 >=sys-kernel/sh-sources-2.5
