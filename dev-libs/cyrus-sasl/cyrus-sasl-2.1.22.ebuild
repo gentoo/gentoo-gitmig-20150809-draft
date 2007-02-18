@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22.ebuild,v 1.22 2007/01/08 20:56:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22.ebuild,v 1.23 2007/02/18 19:55:21 tove Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.9"
@@ -17,7 +17,8 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="2"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+#KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="mips"
 # Removed 'static' USE flag because it is broken upstream, Bug #94137
 IUSE="berkdb crypt gdbm ldap mysql postgres kerberos ssl java pam authdaemond sample urandom srp ntlm_unsupported_patch"
 
@@ -217,7 +218,7 @@ src_install () {
 	newconfd "${FILESDIR}/saslauthd-${SASLAUTHD_CONF_VER}.conf" saslauthd || \
 		die "failed to install /etc/conf.d/saslauthd"
 
-	exeinto "${ROOT}/usr/sbin"
+	exeinto /usr/sbin
 	newexe "${S}/saslauthd/testsaslauthd" testsaslauthd || \
 		die "failed to install testsaslauthd."
 }
