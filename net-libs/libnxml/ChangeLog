@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnxml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnxml/ChangeLog,v 1.1 2007/01/13 14:26:10 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnxml/ChangeLog,v 1.2 2007/02/18 17:05:41 mabi Exp $
+
+  18 Feb 2007; Matti Bickel <mabi@gentoo.org> libnxml-0.16.ebuild:
+  keyworded ~ppc (bug #164125)
 
 *libnxml-0.16 (13 Jan 2007)
 
