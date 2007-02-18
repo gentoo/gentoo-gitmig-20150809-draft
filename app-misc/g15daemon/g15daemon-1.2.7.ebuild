@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.2.5.ebuild,v 1.3 2007/01/27 19:00:04 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.2.7.ebuild,v 1.1 2007/02/18 19:38:16 rbu Exp $
 
 inherit eutils linux-info perl-module python multilib
 
 DESCRIPTION="G15daemon takes control of the G15 keyboard, through the linux kernel uinput device driver"
 HOMEPAGE="http://g15daemon.sourceforge.net/"
-SRC_URI="mirror://sourceforge/g15daemon/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -15,7 +15,7 @@ IUSE="perl python"
 
 DEPEND="dev-libs/libusb
 	dev-libs/libdaemon
-	>=dev-libs/libg15-1.1.0
+	>=dev-libs/libg15-1.2.0
 	perl? ( >=dev-perl/Inline-0.4 )
 	python? ( dev-lang/python )"
 
@@ -101,13 +101,14 @@ src_install() {
 
 pkg_postinst() {
 	if use python; then
-		python_mod_optimize "${ROOT}/usr/lib/python*/site-packages/g15daemon"
+		python_mod_optimize "/usr/lib/python*/site-packages/g15daemon"
 		echo ""
 	fi
 
 	elog "To use g15daemon, you need to add g15daemon to the default runlevel."
 	elog "This can be done with:"
 	elog "# /sbin/rc-update add g15daemon default"
+	elog "You can edit some g15daemon options at /etc/conf.d/g15daemon"
 	elog ""
 	elog "To have all new keys working in X11, you'll need create a "
 	elog "specific xmodmap in your home directory or edit the existent one."
@@ -117,13 +118,10 @@ pkg_postinst() {
 	elog ""
 	elog "Adding keycodes to an existing xmodmap:"
 	elog "cat /usr/share/g15daemon/contrib/xmodmaprc >> ~/.Xmodmap"
-	elog ""
-	elog "Note: the daemon now supports to use the small round key"
-	elog "instead of MR for switching LCD clients. see /etc/conf.d/g15daemon"
 }
 
 pkg_postrm() {
 	if use python; then
-		python_mod_cleanup "${ROOT}/usr/lib/python*/site-packages/g15daemon"
+		python_mod_cleanup "/usr/lib/python*/site-packages/g15daemon"
 	fi
 }
