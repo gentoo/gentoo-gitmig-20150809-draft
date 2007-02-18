@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound-init-20070218,v 1.2 2007/02/18 11:38:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound-init-20070218,v 1.3 2007/02/18 14:00:58 flameeyes Exp $
 #
 # Gentoo users: add this script to 'boot' run level.
 # ==================================================
@@ -228,6 +228,12 @@ start() {
 			eend 1
 			return 1
 		fi
+	fi
+
+	if [[ ! -d /proc/asound ]]; then
+		eerror "ALSA failed to load."
+		eend 1
+		return 1
 	fi
 
 	[[ ${RESTORE_ON_START} == "yes" ]] && restore

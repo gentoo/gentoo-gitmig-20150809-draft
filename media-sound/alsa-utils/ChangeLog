@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.195 2007/02/18 11:38:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.196 2007/02/18 14:00:58 flameeyes Exp $
+
+  18 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  files/alsasound-init-20070218:
+  Fail in case ALSA is not loaded at all (missing /proc/asound). Closes bug
+  #102015.
 
   18 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   files/alsasound-init-20070218:
