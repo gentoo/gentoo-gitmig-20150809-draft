@@ -1,0 +1,11 @@
+# ChangeLog for games-arcade/spacerider
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/spacerider/ChangeLog,v 1.1 2007/02/18 11:10:36 tupone Exp $
+
+*spacerider-0.13 (18 Feb 2007)
+
+  18 Feb 2007; <tupone@gentoo.org> +files/spacerider-0.13-gcc41.patch,
+  +files/spacerider-0.13-gentoo.patch, +metadata.xml,
+  +spacerider-0.13.ebuild:
+  New ebuild. Bug #110104 by Fernando V.
+

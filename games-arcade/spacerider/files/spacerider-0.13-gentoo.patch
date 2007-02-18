@@ -1,0 +1,24 @@
+--- Makefile.old	2007-02-18 11:15:20.000000000 +0100
++++ Makefile	2007-02-18 11:19:56.000000000 +0100
+@@ -8,7 +8,6 @@
+ MKDIR=mkdir -p
+ INSTALL=install
+ RM=rm -f
+-CXXFLAGS=-Wall -fomit-frame-pointer -O3 `sdl-config --cflags`
+ OBJS=main.o globals.o spacerider.o music.o sprite.o enemy.o effect.o visible.o box.o features.o font.o image.o bullet.o
+ OUTPUT=spacerider
+ LIBS=`sdl-config --libs` -lSDL_image -lSDL_ttf -lSDL_mixer -lSDL_net -lSDL_gfx
+@@ -22,11 +21,11 @@
+ 
+ 
+ $(OUTPUT): $(OBJS)
+-	$(CXX) $(CXXFLAGS) -o $(OUTPUT) $(OBJS) $(LIBS)
++	$(CXX) $(CXXFLAGS) `sdl-config --cflags` -o $(OUTPUT) $(OBJS) $(LIBS)
+ 	strip $(OUTPUT)
+ 
+ %.o: %.cpp
+-	$(CXX) $(CXXFLAGS) -c $<
++	$(CXX) $(CXXFLAGS) `sdl-config --cflags` -c $<
+ 
+ clean:
+ 	$(RM) $(OBJS) $(OUTPUT)
