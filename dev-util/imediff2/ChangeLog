@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/imediff2
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/imediff2/ChangeLog,v 1.1 2007/02/18 23:11:25 dev-zero Exp $
+
+*imediff2-1.1.1.1 (18 Feb 2007)
+
+  18 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> +metadata.xml,
+  +imediff2-1.1.1.1.ebuild:
+  Initial ebuild for bug #116161
+
