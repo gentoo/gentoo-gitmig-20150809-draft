@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/leafnode-2.0.0_alpha20060831.ebuild,v 1.1 2006/10/06 17:19:51 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/leafnode-2.0.0_alpha20070108.ebuild,v 1.1 2007/02/18 21:13:31 swegener Exp $
 
 inherit flag-o-matic
 
