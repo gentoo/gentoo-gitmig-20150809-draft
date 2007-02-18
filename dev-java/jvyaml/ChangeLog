@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jvyaml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jvyaml/ChangeLog,v 1.4 2007/02/10 19:27:23 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jvyaml/ChangeLog,v 1.5 2007/02/18 19:19:22 betelgeuse Exp $
+
+  18 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> -jvyaml-0.1.ebuild,
+  -jvyaml-0.2.ebuild:
+  Removed old versions.
 
 *jvyaml-0.2.1 (10 Feb 2007)
 
