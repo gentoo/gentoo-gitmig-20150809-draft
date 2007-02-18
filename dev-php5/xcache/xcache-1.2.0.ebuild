@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/xcache/xcache-1.2.0.ebuild,v 1.1 2007/01/29 22:02:24 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/xcache/xcache-1.2.0.ebuild,v 1.2 2007/02/18 17:48:02 beandog Exp $
 
 PHP_EXT_NAME="xcache"
 PHP_EXT_INI="yes"
@@ -14,7 +14,7 @@ SRC_URI="http://210.51.190.228/pub/XCache/Releases/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="${DEPEND}
