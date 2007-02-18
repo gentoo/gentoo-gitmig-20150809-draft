@@ -1,0 +1,30 @@
+--- src/Makefile	2007-01-26 03:20:06.000000000 -0600
++++ src/Makefile	2007-02-06 20:37:41.000000000 -0600
+@@ -39,9 +39,6 @@
+ LIBS3=-lstdc++ ./libespeak.so
+ 
+ CXXFLAGS=-O2
+-ifeq ($(shell uname -m), ppc)
+-	CXXFLAGS += -D ARCH_BIG
+-endif
+ 
+ 
+ all: $(BIN_NAME) $(LIB_NAME) $(BIN2_NAME)
+--- src/speech.h	2007-01-26 03:11:59.000000000 -0600
++++ src/speech.h	2007-02-06 20:41:11.000000000 -0600
+@@ -18,9 +18,15 @@
+  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
+  ***************************************************************************/
+ 
++#include <sys/types.h>
++
+ // conditional compilation options
+ 
+ 
++#if defined(BYTE_ORDER) && BYTE_ORDER == BIG_ENDIAN
++#define ARCH_BIG
++#endif
++ 
+ #define PLATFORM_POSIX
+ #define PATHSEP  '/'
+ #define USE_PORTAUDIO
