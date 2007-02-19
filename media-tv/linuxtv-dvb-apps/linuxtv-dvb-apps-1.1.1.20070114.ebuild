@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.1.20070114.ebuild,v 1.1 2007/01/14 22:03:33 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.1.20070114.ebuild,v 1.2 2007/02/19 19:47:40 malc Exp $
 
 
 inherit eutils versionator
@@ -36,11 +36,6 @@ src_unpack()
 	# do not compile test-progs
 	sed -i Makefile -e '/-C test/d'
 
-	# [QA] Fix library install paths on multilib aware platforms.
-	# (you'd think passing libdir=/usr/$(get_libdir) to emake would work, but
-	# no...)
-	sed -i Make.rules -e "s:\$(prefix)/lib:\$(prefix)/$(get_libdir):g"
-
 	# remove copy of header-files
 	rm -rf ${S}/include
 }
@@ -50,7 +45,7 @@ src_compile()
 	# interferes with variable in Makefile
 	unset ARCH
 
-	emake bindir=/usr/bin datadir=/usr/share libdir=/usr/lib || die "failed to compile"
+	emake bindir=/usr/bin datadir=/usr/share libdir=/usr/$(get_libdir) || die "failed to compile"
 }
 
 src_install()
@@ -59,7 +54,7 @@ src_install()
 	unset ARCH
 
 	insinto /usr/bin
-	emake bindir=/usr/bin datadir=/usr/share libdir=/usr/lib prefix=/usr \
+	emake bindir=/usr/bin datadir=/usr/share libdir=/usr/$(get_libdir) prefix=/usr \
 		DESTDIR=${D} INSTDIR=${T} install || die "install failed"
 
 	# rename scan to dvbscan
