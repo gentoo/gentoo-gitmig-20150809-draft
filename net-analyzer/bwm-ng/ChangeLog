@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/bwm-ng
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwm-ng/ChangeLog,v 1.4 2006/03/15 13:27:12 deltacow Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwm-ng/ChangeLog,v 1.5 2007/02/19 12:42:32 jokey Exp $
+
+  19 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   15 Mar 2006; Scott Stoddard <deltacow@gentoo.org> bwm-ng-0.5.ebuild:
   Added ~amd64.

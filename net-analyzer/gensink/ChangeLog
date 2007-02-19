@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/gensink
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gensink/ChangeLog,v 1.6 2006/03/05 20:26:33 jokey Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gensink/ChangeLog,v 1.7 2007/02/19 12:46:29 jokey Exp $
+
+  19 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   05 Mar 2006; Markus Ullmann <jokey@gentoo.org> gensink-4.1.ebuild:
   COPYING cleanup
