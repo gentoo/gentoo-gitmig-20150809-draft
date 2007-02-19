@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/manedit-0.6.1.ebuild,v 1.6 2006/03/02 04:00:34 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/manedit-0.8.1.ebuild,v 1.1 2007/02/19 22:25:17 fuzzyray Exp $
+
+inherit eutils
 
 DESCRIPTION="Man page editor using XML tags"
 HOMEPAGE="http://wolfpack.twu.net/ManEdit/"
@@ -8,7 +10,7 @@ SRC_URI="ftp://wolfpack.twu.net/users/wolfpack/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="=x11-libs/gtk+-1*
@@ -20,6 +22,13 @@ RDEPEND="=x11-libs/gtk+-1*
 	)"
 
 DEPEND="${RDEPEND}"
+
+src_unpack() {
+	# Patch to fix QA warnings and to generate man page
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${PF}-gentoo.patch
+}
 
 src_compile() {
 	# It autodetects x86 processors and adds the -march option itself
