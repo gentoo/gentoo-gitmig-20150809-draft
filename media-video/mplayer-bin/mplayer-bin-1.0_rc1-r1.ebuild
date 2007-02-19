@@ -1,24 +1,24 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-bin/mplayer-bin-1.0_rc1.ebuild,v 1.2 2007/02/18 16:40:52 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-bin/mplayer-bin-1.0_rc1-r1.ebuild,v 1.1 2007/02/19 18:21:11 beandog Exp $
 
 inherit multilib
 
 DESCRIPTION="Pre-build mplayer binary for amd64 systems"
 HOMEPAGE="http://www.gentoo.org/"
-SRC_URI="mirror://gentoo/${PF}.tbz2"
+SRC_URI="mirror://gentoo/mplayer-bin-1.0_rc1.tbz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* ~amd64"
 IUSE="lirc"
 
-RDEPEND=">=app-emulation/emul-linux-x86-baselibs-2.0
-	>=app-emulation/emul-linux-x86-soundlibs-2.2
-	>=app-emulation/emul-linux-x86-gtklibs-2.8
-	>=app-emulation/emul-linux-x86-sdl-2.1
-	>=app-emulation/emul-linux-x86-medialibs-1.2
-	>=media-libs/win32codecs-20050412
+RDEPEND=">=app-emulation/emul-linux-x86-baselibs-2.5.5-r3
+	>=app-emulation/emul-linux-x86-soundlibs-2.5-r2
+	>=app-emulation/emul-linux-x86-gtklibs-2.10.6.3-r3
+	>=app-emulation/emul-linux-x86-sdl-2.3-r1
+	>=app-emulation/emul-linux-x86-medialibs-1.2-r1
+	>=media-libs/win32codecs-20061022-r1
 	lirc? ( app-misc/lirc )"
 S="${WORKDIR}"
 RESTRICT="strip"
