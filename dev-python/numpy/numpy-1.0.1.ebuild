@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.0.1.ebuild,v 1.1 2007/01/31 08:36:28 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.0.1.ebuild,v 1.2 2007/02/19 10:15:18 bicatali Exp $
 
 inherit distutils fortran
 
@@ -83,7 +83,7 @@ src_compile() {
 		export LAPACK=None
 		export ATLAS=None
 	fi
-	
+
 	# http://projects.scipy.org/scipy/numpy/ticket/182
 	# Can't set LDFLAGS
 	unset LDFLAGS

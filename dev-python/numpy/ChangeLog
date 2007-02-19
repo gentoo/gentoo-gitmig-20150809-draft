@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.17 2007/01/31 08:36:28 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.18 2007/02/19 10:15:18 bicatali Exp $
+
+*numpy-1.0.1-r1 (19 Feb 2007)
+
+  19 Feb 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/numpy-1.0.1-f2py.patch, metadata.xml, +numpy-1.0.1-r1.ebuild:
+  Fixed for cblas deps, better testing. Now works with test. Better 
+  compliance to python packages. Added ifc treatment for amd64.
 
 *numpy-1.0.1 (31 Jan 2007)
 
