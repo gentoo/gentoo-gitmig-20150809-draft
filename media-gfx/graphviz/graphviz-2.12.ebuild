@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.12.ebuild,v 1.3 2007/02/16 16:26:02 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.12.ebuild,v 1.4 2007/02/19 18:03:03 chrb Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -47,8 +47,8 @@ DEPEND="${RDEPEND}
 	guile? ( dev-lang/swig )
 	java? ( dev-lang/swig )
 	perl? ( dev-lang/swig )
-	ocaml? ( dev-lang/swig )
-	lua? ( dev-lang/swig )
+	ocaml? ( >=dev-lang/swig-1.3.31 )
+	lua? ( >=dev-lang/swig-1.3.31 )
 	php? ( dev-lang/swig )
 	python? ( dev-lang/swig )
 	ruby? ( dev-lang/swig )"
