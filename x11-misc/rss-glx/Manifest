@@ -32,10 +32,6 @@ EBUILD rss-glx-0.8.0-r2.ebuild 4963 RMD160 f36c728ccd0ae69fa9eeaa7c2045802fe9fbc
 MD5 8e4b10b315ae0504351a28e2330492b9 rss-glx-0.8.0-r2.ebuild 4963
 RMD160 f36c728ccd0ae69fa9eeaa7c2045802fe9fbcd29 rss-glx-0.8.0-r2.ebuild 4963
 SHA256 3df000af46a82d11dc09ce6529fe43e7201ec010a2092012047773d4b2d2cf7b rss-glx-0.8.0-r2.ebuild 4963
-EBUILD rss-glx-0.8.1-r3.ebuild 4682 RMD160 d94de81f37057cf0f0f633d9bb9cd83d4f25b1f5 SHA1 146798ab0a98b592acbce14efe3c6000de0d0a88 SHA256 23fde9fb7822cbbe81c1b707c2d532db879a8ea20d27f3df6a69f8794dd1f4c4
-MD5 254aef357b837b85e79ac0178cfec379 rss-glx-0.8.1-r3.ebuild 4682
-RMD160 d94de81f37057cf0f0f633d9bb9cd83d4f25b1f5 rss-glx-0.8.1-r3.ebuild 4682
-SHA256 23fde9fb7822cbbe81c1b707c2d532db879a8ea20d27f3df6a69f8794dd1f4c4 rss-glx-0.8.1-r3.ebuild 4682
 EBUILD rss-glx-0.8.1-r4.ebuild 4649 RMD160 01f3f5239f58b3140acf10623b8af77429a15a1b SHA1 611fcbca8c1262f32f3bafdbc18671d12a5f2474 SHA256 74cefa00f945f5bcb1c0af57206c08d0740fc927cdba9b6c26512f391c359c15
 MD5 b2adc2ccce67472bf4e30bb35112faf6 rss-glx-0.8.1-r4.ebuild 4649
 RMD160 01f3f5239f58b3140acf10623b8af77429a15a1b rss-glx-0.8.1-r4.ebuild 4649
@@ -51,9 +47,6 @@ SHA256 8e7de0a7f7c15840474de373a3ce36adcc5dd658b2e4d18366fcb63b964a0826 metadata
 MD5 27d47f6eaf3ed2618f7499a5864635a1 files/digest-rss-glx-0.8.0-r2 247
 RMD160 f66d6d8628257b0331d1a7a81be2c597984daf9e files/digest-rss-glx-0.8.0-r2 247
 SHA256 583edb2d1568928863a9a8958d9e91edc54696609c34cd1f3c71fc0a48131e09 files/digest-rss-glx-0.8.0-r2 247
-MD5 bd54653bfe4eecf0c187a2c2c49fe0ec files/digest-rss-glx-0.8.1-r3 247
-RMD160 3096c08f814aebf19bd75bb6c8aeb9996d03fd8c files/digest-rss-glx-0.8.1-r3 247
-SHA256 3d56eed54693ebc7185f7780b5c40e5e05f0907f287f4c6f97e258a2fce4f456 files/digest-rss-glx-0.8.1-r3 247
 MD5 bd54653bfe4eecf0c187a2c2c49fe0ec files/digest-rss-glx-0.8.1-r4 247
 RMD160 3096c08f814aebf19bd75bb6c8aeb9996d03fd8c files/digest-rss-glx-0.8.1-r4 247
 SHA256 3d56eed54693ebc7185f7780b5c40e5e05f0907f287f4c6f97e258a2fce4f456 files/digest-rss-glx-0.8.1-r4 247
