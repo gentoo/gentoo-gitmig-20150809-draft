@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/pvr-firmware/pvr-firmware-20061007.ebuild,v 1.6 2007/02/19 22:52:19 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/pvr-firmware/pvr-firmware-20070217.ebuild,v 1.1 2007/02/19 22:52:19 cardoe Exp $
 
 inherit eutils
 
