@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/emul-linux-x86-medialibs-10.0.ebuild,v 1.1 2007/02/18 21:37:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/emul-linux-x86-medialibs-10.0.ebuild,v 1.2 2007/02/19 11:45:29 blubb Exp $
 
 DESCRIPTION="Provides precompiled 32bit libraries"
 HOMEPAGE="http://amd64.gentoo.org/emul/content.xml"
@@ -23,6 +23,7 @@ S=${WORKDIR}
 
 DEPEND=""
 RDEPEND=">=app-emulation/emul-linux-x86-baselibs-10.0
+		>=app-emulation/emul-linux-x86-soundlibs-2.5-r2
 		>=app-emulation/emul-linux-x86-xlibs-10.0"
 
 pkg_setup() {
