@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/darkplaces/darkplaces-20060616_beta1.ebuild,v 1.3 2006/12/04 22:59:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/darkplaces/darkplaces-20060616_beta1.ebuild,v 1.4 2007/02/19 20:12:59 mr_bones_ Exp $
 
 inherit eutils flag-o-matic versionator games
 
@@ -107,7 +107,7 @@ src_unpack() {
 	fi
 
 	unpack ./${PN}*.zip
-	find "${WORKDIR}" -name CVS -type d | xargs rm -r
+	find "${WORKDIR}" -name CVS -type d -print0 | xargs -0 rm -r
 	rm README-SDL.txt
 	cd "${S}"
 	rm mingw_note.txt
