@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.2.ebuild,v 1.4 2007/02/18 08:00:28 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.2.ebuild,v 1.5 2007/02/19 21:24:35 joshuabaergen Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability
 
@@ -72,6 +72,14 @@ if use debug; then
 fi
 
 pkg_setup() {
+	if use xcb; then
+		if ! built_with_use x11-libs/libX11 xcb; then
+			msg="You must build libX11 with xcb enabled."
+			eerror ${msg}
+			die ${msg}
+		fi
+	fi
+
 	if use debug; then
 		strip-flags
 		append-flags -g
