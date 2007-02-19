@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ninja
 # Copyright 2003-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ninja/ChangeLog,v 1.17 2007/02/18 15:24:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ninja/ChangeLog,v 1.18 2007/02/19 16:59:01 nixnut Exp $
+
+  19 Feb 2007; nixnut <nixnut@gentoo.org> ninja-1.5.9_pre14.ebuild:
+  Stable on ppc wrt bug 152483
 
 *ninja-1.5.9_pre14 (18 Feb 2007)
 
