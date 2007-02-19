@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r5.ebuild,v 1.10 2007/02/15 20:15:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r5.ebuild,v 1.11 2007/02/19 04:29:06 cardoe Exp $
 
 inherit eutils linux-info
 
@@ -170,6 +170,10 @@ src_install() {
 
 	# remove dep on gnome-python
 	mv "${D}"/usr/bin/hal-device-manager "${D}"/usr/share/hal/device-manager/
+
+	# hal umount for unclean unmounts
+	exeinto /lib/udev/
+	newexe "${FILESDIR}"/hal-unmount.dev hal_unmount
 
 	# initscript
 	newinitd "${FILESDIR}"/0.5-hald.rc hald
