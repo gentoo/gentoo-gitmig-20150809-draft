@@ -1,6 +1,10 @@
 # ChangeLog for app-text/a2ps
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.61 2007/01/26 01:45:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.62 2007/02/19 22:28:44 genstef Exp $
+
+  19 Feb 2007; <genstef@gentoo.org> +files/a2ps-4.13-manpage-chmod.patch,
+  a2ps-4.13c-r5.ebuild:
+  Fix chmod thanks to Adrian Frith <adrian@leg.uct.ac.za> in bug 167670
 
   26 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> a2ps-4.13c-r5.ebuild:
   Stable on Alpha.

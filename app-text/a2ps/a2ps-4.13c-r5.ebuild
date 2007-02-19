@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r5.ebuild,v 1.15 2007/01/26 01:45:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r5.ebuild,v 1.16 2007/02/19 22:28:44 genstef Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -58,6 +58,9 @@ src_unpack() {
 
 	# fix >=autoconf-2.60, bug 138161
 	epatch ${FILESDIR}/a2ps-4.13-fixcachecheck.patch
+
+	# fix chmod error, #167670
+	epatch ${FILESDIR}/a2ps-4.13-manpage-chmod.patch
 
 	AT_M4DIR="m4" eautoreconf || die "eautoreconf failed"
 }
