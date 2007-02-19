@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.8.ebuild,v 1.5 2007/02/14 22:17:39 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.8.ebuild,v 1.6 2007/02/19 22:43:16 drac Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils python toolchain-funcs
 
 MY_P=${PN}_${PV}
 
@@ -57,9 +57,11 @@ pkg_setup() {
 }
 
 src_unpack() {
-	cd "${S}"
 	unpack ${A}
+	cd "${S}"
 	epatch "${FILESDIR}"/${P}-strip.patch
+	python_version
+	sed -i -e "s:python2.4:python${PYVER}:" mmkeys/Makefile
 }
 
 src_compile() {

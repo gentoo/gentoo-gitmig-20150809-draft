@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/exaile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.5 2007/02/14 22:17:39 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.6 2007/02/19 22:43:16 drac Exp $
+
+  19 Feb 2007; Samuli Suominen <drac@gentoo.org> exaile-0.2.8.ebuild:
+  Sed out python2.4 hardcoding in mmkeys/Makefile for bug 167595, thanks to
+  Ahmed Ammar.
 
   14 Feb 2007; Peter Weller <welp@gentoo.org> exaile-0.2.8.ebuild:
   Added ~amd64 keyword per request from drac
