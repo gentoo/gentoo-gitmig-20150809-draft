@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/framerd/framerd-2.4.3-r1.ebuild,v 1.14 2006/04/01 14:29:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/framerd/framerd-2.4.3-r1.ebuild,v 1.15 2007/02/19 08:27:18 dirtyepic Exp $
+
+inherit eutils
 
 DESCRIPTION="FramerD is a portable distributed object-oriented database designed to support the maintenance and sharing of knowledge bases."
 HOMEPAGE="http://www.framerd.org/"
@@ -11,19 +13,23 @@ SLOT="0"
 KEYWORDS="~ia64 x86"
 IUSE="readline"
 
-DEPEND="virtual/libc
-	readline? ( >=sys-libs/readline-4.1-r4 )"
+DEPEND="readline? ( >=sys-libs/readline-4.1-r4 )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-gcc41.patch
+	epatch "${FILESDIR}"/${P}-setup.fdx.patch
+}
 
 src_compile() {
-	patch -p0 ${S}/etc/setup.fdx ${FILESDIR}/setup.fdx.patch
-	MY_OPTS="--enable-shared"
-	if ! use readline; then
-		MY_OPTS="${MY_OPTS} --without-readline"
-	fi
-	econf ${MY_OPTS} || die "econf failed"
+	econf \
+		$(use_with readline) \
+		--enable-shared \
+		|| die "econf failed"
 
 	emake || die "make failed"
-	#emake test || die "make test failed" # failed!!
 }
 
 src_install() {

@@ -1,6 +1,0 @@
-127,128c127,128
-< (unless (file-exists? (destdir (stringout framerd-lib "/servers")))
-<   (call-with-output-file (destdir (stringout framerd-lib "/servers"))
----
-> (unless (file-exists? (stringout framerd-lib "/servers"))
->   (call-with-output-file (stringout framerd-lib "/servers")
