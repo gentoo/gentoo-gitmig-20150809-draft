@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.2-r1.ebuild,v 1.1 2007/01/22 11:03:41 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.2.5.ebuild,v 1.1 2007/02/19 21:02:30 marienz Exp $
 
-inherit distutils toolchain-funcs
+inherit distutils
 
 DESCRIPTION="pkgcore package manager"
 HOMEPAGE="http://www.pkgcore.org"
@@ -19,15 +19,16 @@ RDEPEND=">=dev-lang/python-2.4
 	>=app-shells/bash-3.0
 	doc? ( >=dev-python/docutils-0.4 )"
 
+DOCS="AUTHORS NEWS"
+
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	use hppa && epatch "${FILESDIR}/${P}-hppa-disable-filter-env.patch"
+	cd "${S}"
+	use hppa && epatch "${FILESDIR}/${PN}-0.2-hppa-disable-filter-env.patch"
 }
 
 src_compile() {
-	# The CC export is used by the filter-env build
-	CC=$(tc-getCC) distutils_src_compile
+	distutils_src_compile
 
 	if use doc; then
 		./build_docs.py || die "doc building failed"
@@ -36,9 +37,6 @@ src_compile() {
 
 src_install() {
 	distutils_src_install
-
-	# This wrapper is not useful when called directly.
-	rm "${D}/usr/bin/pwrapper"
 
 	if use doc; then
 		dohtml -r doc dev-notes
@@ -53,10 +51,11 @@ pkg_postinst() {
 	distutils_pkg_postinst
 	echo "updating pkgcore plugin cache"
 	pplugincache
+
+	elog "If you still have an /etc/pkgcore/plugins directory from pkgcore 0.1"
+	elog "you can remove it now."
 }
 
 src_test() {
-	"${python}" setup.py build_ext --inplace || \
-		die "failed building extensions in src dir for testing"
-	"${python}" setup.py test || die "tested returned non zero"
+	"${python}" setup.py test || die "testing returned non zero"
 }
