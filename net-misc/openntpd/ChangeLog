@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/openntpd
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.27 2006/08/11 17:40:27 bangert Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.28 2007/02/19 21:56:08 bangert Exp $
+
+*openntpd-3.9_p1-r1 (19 Feb 2007)
+
+  19 Feb 2007; Thilo Bangert <bangert@gentoo.org>
+  +files/openntpd-3.9p1_reconnect_on_sendto_EINVAL.diff,
+  +openntpd-3.9_p1-r1.ebuild:
+  add patch to fix bug #122912
 
   11 Aug 2006; Thilo Bangert <bangert@gentoo.org> openntpd-3.7_p1.ebuild,
   openntpd-3.9_p1.ebuild:
