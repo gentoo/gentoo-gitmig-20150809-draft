@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/pioneers-0.9.33.ebuild,v 1.2 2007/01/04 22:50:44 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/pioneers-0.9.33.ebuild,v 1.3 2007/02/19 17:39:54 nixnut Exp $
 
 inherit eutils gnome2
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/pio/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="nls debug X"
 
 RDEPEND=">=dev-libs/glib-2.4
