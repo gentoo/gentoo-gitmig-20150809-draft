@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.119 2007/02/18 20:35:04 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.120 2007/02/19 00:48:42 rbu Exp $
+
+  19 Feb 2007; Robert Buchholz <rbu@gentoo.org> selinux/sparc/use.mask:
+  Include the lcdproc masks in sparc's selinux profiles, too (bug #148072)
 
   18 Feb 2007; Steve Dibb <beandog@gentoo.org> package.mask:
   p.mask newer versions of mplayer-bin for testing
