@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6836 2007/02/19 16:38:14 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6837 2007/02/19 18:25:35 blubb Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -23,7 +23,7 @@
 
 # Steve Dibb <beandog@gentoo.org> (19 Feb 2007)
 # Needs testing
->=emul-linux-x86-medialibs/emul-linux-x86-medialibs-10.0
+>=app-emulation/emul-linux-x86-medialibs-10.0
 >=media-video/mplayer-bin-1.0_rc1
 
 # Krzysiek Pawlik <nelchael@gentoo.org> (19 Feb 2007)
