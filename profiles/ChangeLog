@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.121 2007/02/19 11:07:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.122 2007/02/19 22:48:16 wolf31o2 Exp $
+
+  19 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> use.local.desc:
+  Removed the dlloader USE flag wrt bug #166759.
 
   19 Feb 2007; Sébastien Fabbro <bicatali@gentoo.org> use.local.desc:
   added umfpack local USE flag
