@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.128 2007/02/18 18:40:05 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.129 2007/02/19 20:54:45 malc Exp $
+
+  19 Feb 2007; <malc@gentoo.org> spamassassin-3.1.8.ebuild:
+  Stable on amd64 wrt bug #166969
 
   18 Feb 2007; Jason Wever <weeve@gentoo.org> spamassassin-3.1.8.ebuild:
   Stable on SPARC WRT security bug #166969.
