@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/dcron
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/dcron/ChangeLog,v 1.4 2007/02/19 11:15:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/dcron/ChangeLog,v 1.5 2007/02/19 17:48:21 jer Exp $
+
+  19 Feb 2007; Jeroen Roovers <jer@gentoo.org> dcron-3.2.ebuild:
+  Stable for HPPA (bug #167566).
 
   19 Feb 2007; Raúl Porcel <armin76@gentoo.org> dcron-3.2.ebuild:
   x86 stable wrt bug 167566
