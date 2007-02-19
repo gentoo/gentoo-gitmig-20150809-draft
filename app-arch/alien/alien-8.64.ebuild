@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/alien-8.64.ebuild,v 1.3 2006/12/01 20:47:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/alien-8.64.ebuild,v 1.4 2007/02/19 14:59:17 lordvan Exp $
 
 DESCRIPTION="Converts between the rpm, dpkg, stampede slp, and slackware tgz file formats"
 HOMEPAGE="http://kitenet.net/programs/alien/"
-SRC_URI="ftp://ftp.debian.org/debian/pool/main/a/alien/${PN}_${PV}.tar.gz"
+SRC_URI="mirror://debian/pool/main/a/alien/${PN}_${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
