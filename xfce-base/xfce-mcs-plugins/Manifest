@@ -12,10 +12,6 @@ EBUILD xfce-mcs-plugins-4.4.0-r1.ebuild 997 RMD160 614144596a3c9558cb4c289833d76
 MD5 f4426ac5cde72c5622ae07e70fb688c8 xfce-mcs-plugins-4.4.0-r1.ebuild 997
 RMD160 614144596a3c9558cb4c289833d7661403b03980 xfce-mcs-plugins-4.4.0-r1.ebuild 997
 SHA256 0285209c687085f4158f93b9e26d923b6ddf0db2b4f48bc61cd83c236e5e49bb xfce-mcs-plugins-4.4.0-r1.ebuild 997
-EBUILD xfce-mcs-plugins-4.4.0.ebuild 937 RMD160 32553ce2e81d934ab8af4ac0e401f510bae16101 SHA1 b879914d2f17ba99e8aebb197e6579a25b0524e8 SHA256 43879d4ec233abea9c6f43bb4d61560de1750e4ccc39eba453f1e7f002c62ddd
-MD5 69ba2a648e1795d5390aea6814139711 xfce-mcs-plugins-4.4.0.ebuild 937
-RMD160 32553ce2e81d934ab8af4ac0e401f510bae16101 xfce-mcs-plugins-4.4.0.ebuild 937
-SHA256 43879d4ec233abea9c6f43bb4d61560de1750e4ccc39eba453f1e7f002c62ddd xfce-mcs-plugins-4.4.0.ebuild 937
 MISC ChangeLog 11074 RMD160 d638bce440efcec1937383142cbac6736b2f4d4d SHA1 0136da81fe7219c13eb7e44531de909df06f2cf6 SHA256 3d75526020c944765f843ba853467edf67ae2e8d9035915a991c1f007c8a23f7
 MD5 77a5f838c0d6f3ed3b867faed14bb624 ChangeLog 11074
 RMD160 d638bce440efcec1937383142cbac6736b2f4d4d ChangeLog 11074
@@ -27,9 +23,6 @@ SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata
 MD5 c1617e3998719791117df1660ac3983d files/digest-xfce-mcs-plugins-4.2.3 271
 RMD160 4033d87f3f130da787c574121e69c2f6f9fd4f01 files/digest-xfce-mcs-plugins-4.2.3 271
 SHA256 08d4bc13661cdfafcb4e69b68b20703eb5b31eb8a11d41c878da929689c32a8a files/digest-xfce-mcs-plugins-4.2.3 271
-MD5 7f8779ced364d6da5e3a7e8a34c938e0 files/digest-xfce-mcs-plugins-4.4.0 271
-RMD160 5da6cce1ce483e62eecfb0a194f3c3a2d799fb73 files/digest-xfce-mcs-plugins-4.4.0 271
-SHA256 9ea0157bd3dc53bc329b1c235231230fa8bb5b705f34f990bd524bbc06ee298b files/digest-xfce-mcs-plugins-4.4.0 271
 MD5 7f8779ced364d6da5e3a7e8a34c938e0 files/digest-xfce-mcs-plugins-4.4.0-r1 271
 RMD160 5da6cce1ce483e62eecfb0a194f3c3a2d799fb73 files/digest-xfce-mcs-plugins-4.4.0-r1 271
 SHA256 9ea0157bd3dc53bc329b1c235231230fa8bb5b705f34f990bd524bbc06ee298b files/digest-xfce-mcs-plugins-4.4.0-r1 271
