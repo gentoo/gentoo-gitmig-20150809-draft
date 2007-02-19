@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-10.0.ebuild,v 1.1 2007/02/18 10:48:41 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-10.0.ebuild,v 1.2 2007/02/19 21:57:34 blubb Exp $
 
 DESCRIPTION="Provides precompiled 32bit libraries"
 HOMEPAGE="http://amd64.gentoo.org/emul/content.xml"
@@ -45,7 +45,7 @@ SLOT="0"
 KEYWORDS="-* ~amd64"
 IUSE="opengl"
 
-RESTRICT="nostrip"
+RESTRICT="strip"
 S=${WORKDIR}
 
 DEPEND=""

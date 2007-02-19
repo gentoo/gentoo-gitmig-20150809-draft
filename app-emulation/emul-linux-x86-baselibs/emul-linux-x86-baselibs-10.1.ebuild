@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-10.1.ebuild,v 1.2 2007/02/16 10:22:16 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-10.1.ebuild,v 1.3 2007/02/19 21:57:28 blubb Exp $
 
 DESCRIPTION="Provides precompiled 32bit libraries"
 HOMEPAGE="http://amd64.gentoo.org/emul/content.xml"
@@ -49,7 +49,7 @@ SLOT="0"
 KEYWORDS="-* amd64"
 IUSE=""
 
-RESTRICT="nostrip"
+RESTRICT="strip"
 S=${WORKDIR}
 
 DEPEND=""
