@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-3.0.20060720.ebuild,v 1.14 2006/12/28 18:58:37 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-3.0.20060720.ebuild,v 1.15 2007/02/19 21:37:57 genstef Exp $
 
 inherit eutils versionator autotools
 
@@ -28,6 +28,14 @@ DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
+pkg_setup() {
+	if use cups; then
+		CUPS_SERVERBIN="$(cups-config --serverbin)"
+	else
+		CUPS_SERVERBIN=""
+	fi
+}
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
@@ -37,8 +45,8 @@ src_unpack() {
 }
 
 src_compile() {
-	export CUPS_BACKENDS=$(cups-config --serverbin 2>/dev/null)/backend \
-		CUPS_FILTERS=$(cups-config --serverbin 2>/dev/null)/filter CUPS=$(cups-config --serverbin 2>&1)
+	export CUPS_BACKENDS=${CUPS_SERVERBIN}/backend \
+		CUPS_FILTERS=${CUPS_SERVERBIN}/filter CUPS=${CUPS_SERVERBIN}/
 	econf || die "econf failed"
 	emake || die "emake failed"
 }
@@ -49,10 +57,10 @@ src_install() {
 	dosym /usr/bin/foomatic-rip /usr/bin/lpdomatic
 
 	if use cups; then
-		dosym /usr/bin/foomatic-gswrapper $(cups-config --serverbin)/filter/foomatic-gswrapper
-		dosym /usr/bin/foomatic-rip $(cups-config --serverbin)/filter/cupsomatic
+		dosym /usr/bin/foomatic-gswrapper ${CUPS_SERVERBIN}/filter/foomatic-gswrapper
+		dosym /usr/bin/foomatic-rip ${CUPS_SERVERBIN}/filter/cupsomatic
 	else
-		rm -r "${D}"/$(cups-config --serverbin 2>/dev/null)/filter
-		rm -r "${D}"/$(cups-config --serverbin 2>/dev/null)/backend
+		rm -r "${D}"/${CUPS_SERVERBIN}/filter
+		rm -r "${D}"/${CUPS_SERVERBIN}/backend
 	fi
 }
