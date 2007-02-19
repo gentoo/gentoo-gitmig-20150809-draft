@@ -1,3 +1,7 @@
+Do not create bogus entries in $dependency_libs or $libdir
+with ${D} or ${S} in them.
+<azarah@gentoo.org> - (07 April 2002)
+
 Note that if you update this patch, please update this one as well:
 
   eclass/ELT-patches/portage/1.4.1

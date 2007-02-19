@@ -1,7 +1,12 @@
+Libtool's autoguessing at tag's sucks ... it get's confused 
+if the tag's CC says '<CHOST>-gcc' and the env CC says 'gcc'
+or vice versa ... newer automakes specify the tag so no
+guessing is needed
+
 Make the infer tag logic a bit more magical since a lot of old packages still 
 exist which utilize this functionality.
 
-http://bugs.gentoo.org/show_bug.cgi?id=77921
+http://bugs.gentoo.org/77921
 
 --- libtool-1.5.10/ltmain.in
 +++ libtool-1.5.10/ltmain.in
