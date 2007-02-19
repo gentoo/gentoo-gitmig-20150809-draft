@@ -1,6 +1,6 @@
 diff -Nur foo2zjs.orig/Makefile foo2zjs/Makefile
---- foo2zjs.orig/Makefile	2007-02-11 11:08:24.000000000 +0100
-+++ foo2zjs/Makefile	2007-02-11 11:07:08.000000000 +0100
+--- foo2zjs.orig/Makefile	2007-02-19 23:27:10.000000000 +0100
++++ foo2zjs/Makefile	2007-02-19 23:26:56.000000000 +0100
 @@ -7,7 +7,7 @@
  
  # Installation prefix...
@@ -67,7 +67,7 @@ diff -Nur foo2zjs.orig/Makefile foo2zjs/Makefile
  	    foomatic-combo-xml -O >overview.xml; \
  	fi
  
-@@ -492,8 +495,8 @@
+@@ -492,18 +495,12 @@
  	    fi; \
  	done
  
@@ -78,7 +78,17 @@ diff -Nur foo2zjs.orig/Makefile foo2zjs/Makefile
  install-ppd:
  	#
  	# Install PPD files for CUPS
-@@ -516,10 +519,8 @@
+ 	#
+-	if [ -d /usr/share/ppd/ ]; then \
+-	    find /usr/share/ppd/ -name '*foo2zjs*' | xargs rm -f; \
+-	    find /usr/share/ppd/ -name '*foo2hp*' | xargs rm -f; \
+-	    find /usr/share/ppd/ -name '*foo2xqx*' | xargs rm -f; \
+-	    find /usr/share/ppd/ -name '*foo2lava*' | xargs rm -f; \
+-	fi
+ 	if [ -d $(MODEL) ]; then \
+ 	    cd PPD; \
+ 	    for ppd in *.ppd; do \
+@@ -516,10 +513,8 @@
  	    done; \
  	fi
  
@@ -91,7 +101,7 @@ diff -Nur foo2zjs.orig/Makefile foo2zjs/Makefile
  
  install-hotplug-test:
  	#
-@@ -537,18 +538,18 @@
+@@ -537,18 +532,18 @@
  	#
  
  install-hotplug-prog:
@@ -117,7 +127,7 @@ diff -Nur foo2zjs.orig/Makefile foo2zjs/Makefile
  
  cups:	FRC
  	if [ -x /etc/init.d/cups ]; then \
-@@ -862,7 +863,6 @@
+@@ -862,7 +857,6 @@
  	install -c -m 644 README $(DOCDIR)
  	install -c -m 644 ChangeLog $(DOCDIR)
  
@@ -127,15 +137,15 @@ diff -Nur foo2zjs.orig/Makefile foo2zjs/Makefile
  	-$(GROFF) -t -man $(MANPAGES) | ps2pdf - $@
 diff -Nur foo2zjs.orig/hplj.usermap foo2zjs/hplj.usermap
 --- foo2zjs.orig/hplj.usermap	1970-01-01 01:00:00.000000000 +0100
-+++ foo2zjs/hplj.usermap	2007-02-11 11:03:10.000000000 +0100
++++ foo2zjs/hplj.usermap	2007-02-19 23:26:08.000000000 +0100
 @@ -0,0 +1,4 @@
 +hplj1000 0x0003 0x03f0 0x0517 0x0000 0x0000 0x00 0x00 0x00 0x00 0x00 0x00 0x00000000
 +hplj1005 0x0003 0x03f0 0x1317 0x0000 0x0000 0x00 0x00 0x00 0x00 0x00 0x00 0x00000000
 +hplj1018 0x0003 0x03f0 0x4117 0x0000 0x0000 0x00 0x00 0x00 0x00 0x00 0x00 0x00000000
 +hplj1020 0x0003 0x03f0 0x2b17 0x0000 0x0000 0x00 0x00 0x00 0x00 0x00 0x00 0x00000000
 diff -Nur foo2zjs.orig/icc2ps/Makefile foo2zjs/icc2ps/Makefile
---- foo2zjs.orig/icc2ps/Makefile	2007-02-11 11:08:24.000000000 +0100
-+++ foo2zjs/icc2ps/Makefile	2007-02-11 11:03:10.000000000 +0100
+--- foo2zjs.orig/icc2ps/Makefile	2007-02-19 23:27:10.000000000 +0100
++++ foo2zjs/icc2ps/Makefile	2007-02-19 23:26:08.000000000 +0100
 @@ -1,10 +1,10 @@
 -PREFIX=	/usr
 +PREFIX=	$(DESTDIR)/usr
