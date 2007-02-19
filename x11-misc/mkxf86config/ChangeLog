@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/mkxf86config
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.32 2007/02/14 21:26:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.33 2007/02/19 15:47:35 wolf31o2 Exp $
+
+  19 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  mkxf86config-0.9.8.ebuild:
+  Changed the description in an attempt to keep people from breaking their X
+  configurations. It would be nice if people wouldn't run shell scripts
+  blindly without first checking to see what it might actually *do* to their
+  system.
 
   14 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   -mkxf86config-0.9.7.ebuild:
