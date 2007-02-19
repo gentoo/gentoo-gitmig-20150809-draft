@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.12.ebuild,v 1.4 2007/02/19 18:03:03 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.12.ebuild,v 1.5 2007/02/19 18:17:42 chrb Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -23,6 +23,7 @@ RDEPEND="
 	>=media-libs/libpng-1.2.5
 	>=media-libs/jpeg-6b
 	>=dev-libs/expat-1.95.5
+	dev-libs/glib
 	virtual/libiconv
 	sys-devel/libtool
 	media-libs/fontconfig
