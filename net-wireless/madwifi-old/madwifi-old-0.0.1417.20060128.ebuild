@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-old/madwifi-old-0.0.1417.20060128.ebuild,v 1.1 2006/07/09 18:19:56 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-old/madwifi-old-0.0.1417.20060128.ebuild,v 1.2 2007/02/19 21:33:51 genstef Exp $
 
-inherit linux-mod
+inherit linux-mod eutils
 
 MY_P=${PN}-r${PV:4:4}-${PV:9:10}
 S=${WORKDIR}/${MY_P}
@@ -69,6 +69,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+	epatch ${FILESDIR}/2.6.20.patch
 	for dir in ath ath_hal net80211 ath_rate/amrr ath_rate/onoe ath_rate/sample; do
 		convert_to_m ${S}/${dir}/Makefile
 	done
