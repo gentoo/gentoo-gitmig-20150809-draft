@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/manedit-0.8.1.ebuild,v 1.1 2007/02/19 22:25:17 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/manedit-0.8.1.ebuild,v 1.2 2007/02/19 22:30:29 fuzzyray Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ RDEPEND="=x11-libs/gtk+-1*
 DEPEND="${RDEPEND}"
 
 src_unpack() {
-	# Patch to fix QA warnings and to generate man page
+	# Patch to fix QA warnings and to generate man page.
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PF}-gentoo.patch
