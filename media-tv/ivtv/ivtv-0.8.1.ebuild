@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.8.1.ebuild,v 1.5 2007/01/30 15:05:53 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.8.1.ebuild,v 1.6 2007/02/19 22:29:13 cardoe Exp $
 
 inherit eutils linux-mod
 
@@ -14,7 +14,7 @@ IUSE=""
 
 RDEPEND="|| ( >=sys-fs/udev-103 sys-apps/hotplug )"
 DEPEND="app-arch/unzip"
-PDEPEND="media-tv/pvr-firmware"
+PDEPEND="=media-tv/pvr-firmware-20061007"
 
 MODULE_NAMES="ivtv(extra:${S}/driver) \
 		saa717x(extra:${S}/i2c-drivers)"
