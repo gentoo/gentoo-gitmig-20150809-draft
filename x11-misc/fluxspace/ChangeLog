@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/fluxspace
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxspace/ChangeLog,v 1.9 2007/02/09 06:19:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxspace/ChangeLog,v 1.10 2007/02/19 00:50:31 dirtyepic Exp $
+
+  19 Feb 2007; Ryan Hill <dirtyepic@gentoo.org>
+  +files/fluxspace-0.0.3-gcc41.patch, -fluxspace-0.0.3.ebuild,
+  fluxspace-0.0.3-r1.ebuild:
+  Treecleaner fixes for bug #159504 and bug #135842.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

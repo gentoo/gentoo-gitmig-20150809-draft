@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxspace/fluxspace-0.0.3-r1.ebuild,v 1.8 2005/09/03 22:06:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxspace/fluxspace-0.0.3-r1.ebuild,v 1.9 2007/02/19 00:50:31 dirtyepic Exp $
+
+inherit eutils
 
 IUSE=""
 DESCRIPTION="Enhancements for workspace management within Fluxbox."
@@ -16,11 +18,15 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ppc ~sparc x86"
 
-myconf="--prefix=/usr"
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-gcc41.patch
+}
 
 src_compile() {
-	export LDFLAGS="-lstdc++"
-	econf ${myconf} || die "Configure failed"
+	econf || die "Configure failed"
 	emake || die "Compile failed"
 }
 
@@ -34,26 +40,21 @@ src_install () {
 }
 
 pkg_postinst() {
-	# Fix typo in the config file
-	sed -e "s/no\"\\\/no\"\//g" /usr/share/fluxspace/examples/fluxspace.xml > /tmp/fluxspace.xml
-	cp -f /tmp/fluxspace.xml /usr/share/fluxspace/examples/fluxspace.xml
-	rm -f /tmp/fluxspace.xml
-
-	einfo " NOTES:"
-	einfo
-	einfo " 1. If you want to use the optional features for idesk and rox,"
-	einfo "    you must emerge them separately. (e.g., 'emerge idesk')"
-	einfo
-	einfo " 2. Copy /usr/share/fluxspace/examples/fluxspace.xml to"
-	einfo "    ~/.fluxbox and edit the file.  Change the settings from"
-	einfo "    \"no\" to \"yes\" depending on what features you want enabled."
-	einfo
-	einfo " 3. Edit ~/.fluxbox/init to 'turn on' fluxspace.  Change line:"
-	einfo "        session.screen0.rootCommand:"
-	einfo "    to..."
-	einfo "        session.screen0.rootCommand: fluxspace"
-	einfo
-	einfo " 4. Full documentation is available online at:"
-	einfo "    http://sourceforge.net/docman/display_doc.php?docid=16037&group_id=76737"
-	einfo
+	elog " NOTES:"
+	elog
+	elog " 1. If you want to use the optional features for idesk and rox,"
+	elog "    you must emerge them separately. (e.g., 'emerge idesk')"
+	elog
+	elog " 2. Copy /usr/share/fluxspace/examples/fluxspace.xml to"
+	elog "    ~/.fluxbox and edit the file.  Change the settings from"
+	elog "    \"no\" to \"yes\" depending on what features you want enabled."
+	elog
+	elog " 3. Edit ~/.fluxbox/init to 'turn on' fluxspace.  Change line:"
+	elog "        session.screen0.rootCommand:"
+	elog "    to..."
+	elog "        session.screen0.rootCommand: fluxspace"
+	elog
+	elog " 4. Full documentation is available online at:"
+	elog "    http://sourceforge.net/docman/display_doc.php?docid=16037&group_id=76737"
+	elog
 }
