@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2608 2007/02/19 01:42:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2609 2007/02/19 01:46:36 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -156,8 +156,6 @@ app-i18n/uim-svn:fep - Build uim-fep
 app-i18n/uim-svn:immqt - Enable immodule for Qt support
 app-i18n/uim:anthy - Support for Anthy input method
 app-i18n/uim:eb - Enable EB support
-app-i18n/uim:immqt - Enable immodule for Qt support (binary incompatible)
-app-i18n/uim:immqt-bc - Enable immodule for Qt support (binary compatible)
 app-i18n/uim:prime - Enable PRIME support
 app-laptop/pbbuttonsd:ibam - Enable support for Intelligent Battery Monitoring
 app-laptop/tp_smapi:hdaps - Install a compatible HDAPS module
