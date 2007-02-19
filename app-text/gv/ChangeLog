@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gv
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.62 2007/02/11 10:07:47 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.63 2007/02/19 22:37:28 genstef Exp $
+
+  19 Feb 2007; <genstef@gentoo.org> -files/gv-3.6.1-landscape.patch,
+  -gv-3.6.1-r3.ebuild, -gv-3.6.1-r5.ebuild, -gv-3.6.2.ebuild:
+  security cleanup bug 164200
 
   11 Feb 2007; Fabian Groffen <grobian@gentoo.org> gv-3.6.1-r3.ebuild,
   gv-3.6.1-r5.ebuild, gv-3.6.2.ebuild, gv-3.6.2-r1.ebuild:
