@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.15.ebuild,v 1.1 2007/01/17 06:45:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.15.ebuild,v 1.2 2007/02/19 04:12:57 vapier Exp $
 
 inherit flag-o-matic autotools
 
@@ -21,15 +21,11 @@ src_unpack() {
 
 	#epatch "${FILESDIR}"/${PN}-4.5.11-fbsd.patch
 
-	# Fix SuperH support
 	epatch "${FILESDIR}"/strace-dont-use-REG_SYSCALL-for-sh.patch
 	epatch "${FILESDIR}"/${PN}-4.5.12-superh-update.patch
-
-	# Fix building on older ARM machines
 	epatch "${FILESDIR}"/strace-fix-arm-bad-syscall.patch
-
-	# Fix libaio support #103427
-	epatch "${FILESDIR}"/${PN}-4.5.12-libaio.patch
+	epatch "${FILESDIR}"/${PN}-4.5.15-mips-sprintsigmask.patch
+	epatch "${FILESDIR}"/${PN}-4.5.12-libaio.patch #103427
 
 	eautoreconf
 }

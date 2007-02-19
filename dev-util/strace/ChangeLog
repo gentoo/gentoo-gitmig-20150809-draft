@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.93 2007/01/17 06:45:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.94 2007/02/19 04:12:57 vapier Exp $
+
+  19 Feb 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/strace-4.5.15-mips-sprintsigmask.patch, strace-4.5.15.ebuild:
+  Fix building on mips due to updated sprintsigmask().
 
 *strace-4.5.15 (17 Jan 2007)
 
