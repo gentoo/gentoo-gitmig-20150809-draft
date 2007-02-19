@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.120 2007/02/19 00:48:42 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.121 2007/02/19 11:07:20 bicatali Exp $
+
+  19 Feb 2007; Sébastien Fabbro <bicatali@gentoo.org> use.local.desc:
+  added umfpack local USE flag
 
   19 Feb 2007; Robert Buchholz <rbu@gentoo.org> selinux/sparc/use.mask:
   Include the lcdproc masks in sparc's selinux profiles, too (bug #148072)
@@ -92,6 +95,9 @@
 
   09 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
   Package.mask dev-java/jess-bin.
+
+  09 Feb 2007; Sébastien Fabbro <bicatali@gentoo.org> use.local.desc:
+  Added an smp use flag for sci-libs/acml.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
   Add xcb useflags for xine-lib and kaffeine.

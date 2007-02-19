@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2609 2007/02/19 01:46:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2610 2007/02/19 11:07:20 bicatali Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1566,6 +1566,7 @@ sci-geosciences/mapserver:geos - Enables geos library support
 sci-geosciences/mapserver:flash - Adds support for creating SWF files using Ming
 sci-geosciences/mapserver:postgis - Enables postgis support 
 sci-geosciences/mapserver:proj - Enables proj library support (geographic projections)
+sci-libs/acml:smp - Enables multiprocessor support (needs an OpenMP aware compiler)
 sci-libs/gdal:fits - Enables support for NASA's cfitsio library
 sci-libs/gdal:geos - Adds support for geometry engine
 sci-libs/gdal:gml - Enables support for xerces-c API
@@ -1582,6 +1583,7 @@ sci-libs/libghemical:mpqc - Use the MPQC package for quantum-mechanical calculat
 sci-libs/mkl:fortran95 - Add support for a Fortran95 BLAS/LAPACK interface
 sci-libs/plplot:itcl - Support for itcl bindings.
 sci-libs/plplot:octave - Support for Octave bindings.
+sci-libs/scipy:umfpack - Add support for sparse solving via UMFPACK
 sci-libs/vtk:patented - Builds patented classes.
 sci-mathematics/coq:ide - Build the Coq IDE, a clone of proof general using lablgtk2.
 sci-mathematics/coq:norealanalysis - Do not build real analysis modules (faster compilation).
