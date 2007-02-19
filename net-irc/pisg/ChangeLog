@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/pisg
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/ChangeLog,v 1.48 2007/02/19 17:17:18 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/ChangeLog,v 1.49 2007/02/19 17:20:28 armin76 Exp $
+
+  19 Feb 2007; Raúl Porcel <armin76@gentoo.org> -pisg-0.67.ebuild,
+  -pisg-0.68.ebuild, -pisg-0.69.ebuild:
+  old
 
   19 Feb 2007; nixnut <nixnut@gentoo.org> pisg-0.70.ebuild:
   Stable on ppc wrt bug 167634
