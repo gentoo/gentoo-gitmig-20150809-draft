@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/synaptics-0.14.6.ebuild,v 1.5 2007/01/30 05:37:20 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/synaptics-0.14.6.ebuild,v 1.6 2007/02/19 22:46:28 wolf31o2 Exp $
 
 inherit toolchain-funcs eutils
 
-IUSE="dlloader"
+IUSE=""
 
 DESCRIPTION="Driver for Synaptics touchpads"
 HOMEPAGE="http://w1.894.telia.com/~u89404340/touchpad/"
@@ -30,11 +30,6 @@ src_unpack() {
 }
 
 src_compile() {
-#	if use dlloader
-#	then
-#		PICFLAG="-fPic"
-#	fi
-
 	emake || die
 }
 

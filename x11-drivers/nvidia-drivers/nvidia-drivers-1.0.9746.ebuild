@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9746.ebuild,v 1.2 2007/02/07 12:31:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9746.ebuild,v 1.3 2007/02/19 22:45:06 wolf31o2 Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic
 
@@ -18,7 +18,7 @@ SRC_URI="x86? ( http://us.download.nvidia.com/XFree86/Linux-x86/${NV_V}/${X86_NV
 LICENSE="NVIDIA"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
-IUSE="dlloader"
+IUSE=""
 RESTRICT="strip multilib-pkg-force"
 
 DEPEND="kernel_linux? ( virtual/linux-sources )"
@@ -330,14 +330,8 @@ src_install-libs() {
 
 	exeinto ${X11_LIB_DIR}/modules/drivers
 
-	if use dlloader || has_version ">=x11-base/xorg-x11-6.8.99.15" ||
-		has_version "x11-base/xorg-server"; then
-		[[ -f ${drvdir}/nvidia_drv.so ]] && \
-			doexe ${drvdir}/nvidia_drv.so
-	else
-		[[ -f ${drvdir}/nvidia_drv.o ]] && \
-			doexe ${drvdir}/nvidia_drv.o
-	fi
+	[[ -f ${drvdir}/nvidia_drv.so ]] && \
+		doexe ${drvdir}/nvidia_drv.so
 
 	insinto /usr/${inslibdir}
 	[[ -f ${libdir}/libXvMCNVIDIA.a ]] && \
