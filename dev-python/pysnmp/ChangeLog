@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysnmp
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.15 2007/02/02 01:45:27 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.16 2007/02/20 01:03:05 jokey Exp $
+
+  20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   02 Feb 2007; Martin Jackson <mjolnir@gentoo.org> metadata.xml:
   Adding netmon herd to metadata.xml, by agreement with dev-zero and dragonheart
