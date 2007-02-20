@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/javacup
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/ChangeLog,v 1.17 2007/02/20 18:56:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/ChangeLog,v 1.18 2007/02/20 23:38:29 opfer Exp $
+
+  20 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  javacup-0.10k-r1.ebuild:
+  stable x86; bug 167508
 
   20 Feb 2007; Markus Rothe <corsair@gentoo.org> javacup-0.10k-r1.ebuild:
   Stable on ppc64; bug #167508
