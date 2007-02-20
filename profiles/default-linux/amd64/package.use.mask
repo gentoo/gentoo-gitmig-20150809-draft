@@ -27,6 +27,7 @@ net-misc/asterisk mmx
 x11-terms/eterm mmx
 media-tv/xawtv mmx
 media-sound/mpg123 mmx 3dnow
+media-libs/sdl-gfx mmx
 
 # Oct 24th 2006; blubb@gentoo.org
 # bug 152646
