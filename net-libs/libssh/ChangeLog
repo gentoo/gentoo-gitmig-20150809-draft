@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.8 2007/01/07 04:17:23 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.9 2007/02/20 01:04:55 jokey Exp $
+
+  20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
 *libssh-0.2 (07 Jan 2007)
 
