@@ -1,6 +1,6 @@
-# Copyright 2004-2006 Gentoo Foundation
+# Copyright 2004-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/wargus-2.1-r1.ebuild,v 1.5 2006/10/24 23:06:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/wargus-2.1-r1.ebuild,v 1.6 2007/02/20 14:01:07 blubb Exp $
 
 inherit eutils games
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="media-libs/libpng
