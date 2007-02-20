@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.33.1-r1.ebuild,v 1.14 2007/02/18 11:15:23 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.33.1-r1.ebuild,v 1.15 2007/02/20 20:32:25 dev-zero Exp $
 
 inherit eutils distutils multilib python versionator
 
@@ -82,7 +82,7 @@ pkg_setup() {
 	fi
 
 	if use icu ; then
-		ADDITIONAL_OPTIONS="-sHAVE_ICU=1 -sICU_PATH=${ROOT}/usr"
+		ADDITIONAL_OPTIONS="-sHAVE_ICU=1 -sICU_PATH=/usr"
 	fi
 
 }
@@ -219,4 +219,50 @@ src_install () {
 		cd "${S}"/tools/build/jam_src/bin.*/
 		dobin bjam || die "bjam install failed"
 	fi
+
+	if has test ${FEATURES} ; then
+		cd "${S}/status"
+		elog "Tests enabled, installing the output to:"
+		elog "  ${ROOT}usr/share/doc/${PF}/status"
+		elog "The results are in"
+		elog "  ${ROOT}usr/share/doc/${PF}/status/cs-$(uname).html"
+		docinto status
+		sed -i -e 's|../boost.png|boost.png|' *.html
+		dohtml *.{html,gif} ../boost.png
+		dodoc regress.log
+	fi
+}
+
+src_test() {
+	ewarn "This test might take a couple of hours even on a recent machine"
+	ewarn "and you need 2 GB free space in your temp directory."
+	ebeep
+
+	elog "It is possible to provide a regression_comment file"
+	elog "which might be useful it you intend to send the generated"
+	elog "regression results table to the boost-developers."
+	elog "Just export a variable BOOST_COMMENT_PATH before starting"
+	elog "the merge containing the full path to such a file."
+	elog "If you don't know what's this all about, just ignore it."
+
+	if [ -n ${BOOST_COMMENT_PATH} ] ; then
+		elog "Creating default comment file..."
+		cat > comment.html <<- __EOF__
+			<p>Tests are run on Gentoo Linux.</p>
+		__EOF__
+		BOOST_COMMENT_PATH="$(pwd)/comment.html"
+	fi
+
+
+	cd "${S}/tools/regression"
+	sed -i \
+		-e "s|\(boost_root\)=.*|\1=\"${S}\"|" \
+		-e "s|\(toolset\)=.*|\1=\"${BOOST_TOOLSET}\"|" \
+		-e "s|\(test_tools\)=.*|\1=\"${BOOST_TOOLSET}\"|" \
+		-e "s|\(comment_path\)=.*|\1=\"${BOOST_COMMENT_PATH}\"|" \
+		run_tests.sh || die "sed failed"
+	. run_tests.sh || die "tests failed"
+
+	elog "You have to check the test output yourself"
+	elog "to see whether all tests succeeded."
 }

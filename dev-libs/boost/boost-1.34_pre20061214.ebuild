@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.34_pre20061214.ebuild,v 1.3 2007/02/10 12:38:14 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.34_pre20061214.ebuild,v 1.4 2007/02/20 20:32:25 dev-zero Exp $
 
 inherit distutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -47,7 +47,7 @@ generate_options() {
 	OPTIONS="${OPTIONS} optimization=none"
 	OPTIONS="${OPTIONS} threading=single,multi"
 
-	use icu && OPTIONS="${OPTIONS} -sHAVE_ICU=1 -sICU_PATH=\"${ROOT}/usr\""
+	use icu && OPTIONS="${OPTIONS} -sHAVE_ICU=1 -sICU_PATH=/usr"
 
 }
 
@@ -73,7 +73,7 @@ generate_userconfig() {
 import toolset : using ;
 import toolset : flags ;
 using ${compiler} : ${compilerVersion} : ${compilerExecutable} : <cxxflags>"${CXXFLAGS}" <linkflags>"${LDFLAGS}" ;
-using python : ${PYVER} : ${ROOT}usr : ${ROOT}usr/include/python${PYVER} : ${ROOT}usr/lib/python${PYVER} ;
+using python : ${PYVER} : /usr : /usr/include/python${PYVER} : /usr/lib/python${PYVER} ;
 __EOF__
 
 }
@@ -86,7 +86,7 @@ src_compile() {
 	generate_options
 
 	export BOOST_ROOT=${S}
-	export BOOST_BUILD_PATH=${ROOT}/usr/share/boost-build
+	export BOOST_BUILD_PATH=/usr/share/boost-build
 
 	# Note: The line "debug-symbols=on" only adds '-g' to compiler and linker invocation
 	# and prevents boost-build from stripping the libraries/binaries
@@ -123,7 +123,7 @@ src_install () {
 	generate_options
 
 	export BOOST_ROOT=${S}
-	export BOOST_BUILD_PATH=${ROOT}/usr/share/boost-build
+	export BOOST_BUILD_PATH=/usr/share/boost-build
 
 	for linkoption in ${LINK_OPTIONS} ; do
 		bjam \
