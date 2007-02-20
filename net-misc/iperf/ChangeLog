@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/iperf
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.18 2006/11/19 16:53:23 gmsoft Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.19 2007/02/20 01:32:01 jokey Exp $
+
+  20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   19 Nov 2006; Guy Martin <gmsoft@gentoo.org> iperf-2.0.2.ebuild:
   Stable on hppa.
