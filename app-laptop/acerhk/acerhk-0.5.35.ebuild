@@ -1,15 +1,15 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/acerhk-0.5.31.ebuild,v 1.4 2007/01/23 16:11:41 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/acerhk-0.5.35.ebuild,v 1.1 2007/02/20 23:36:44 jurek Exp $
 
 inherit linux-mod
 
 DESCRIPTION="Hotkey driver for some Acer and Acer-like laptops"
-HOMEPAGE="http://www.informatik.hu-berlin.de/~tauber/acerhk/"
-SRC_URI="http://www.informatik.hu-berlin.de/~tauber/acerhk/archives/${P}.tar.bz2"
+HOMEPAGE="http://www.cakey.de/acerhk/"
+SRC_URI="http://www.cakey.de/${PN}/archives/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="-ppc x86"
+KEYWORDS="~x86 -ppc"
 IUSE=""
 
 MODULE_NAMES="acerhk(extra:)"
@@ -30,7 +30,9 @@ pkg_setup() {
 
 src_install() {
 	linux-mod_src_install
-	dodoc README COPYING NEWS doc/*
+	dodoc README COPYING NEWS
+	docinto doc
+	dodoc doc/*
 }
 
 pkg_postinst() {

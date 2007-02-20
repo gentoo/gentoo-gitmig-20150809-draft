@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/acerhk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/ChangeLog,v 1.21 2007/01/23 16:11:41 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/ChangeLog,v 1.22 2007/02/20 23:36:44 jurek Exp $
+
+*acerhk-0.5.35 (20 Feb 2007)
+
+  20 Feb 2007; Jurek Bartuszek <jurek@gentoo.org> -acerhk-0.5.31.ebuild,
+  -acerhk-0.5.33.ebuild, acerhk-0.5.34.ebuild, +acerhk-0.5.35.ebuild:
+  - Version bump (bug #167618)
+  - Removed old versions
 
   23 Jan 2007; Marius Mauch <genone@gentoo.org> acerhk-0.5.31.ebuild,
   acerhk-0.5.33.ebuild, acerhk-0.5.34.ebuild:
