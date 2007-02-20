@@ -1,6 +1,9 @@
 # ChangeLog for hppa profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.7 2007/01/04 21:49:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.8 2007/02/20 21:23:48 wolf31o2 Exp $
+
+  20 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> virtuals:
+  Added virtuals/cdrtools to be app-cdr/cdrtools since cdrkit isn't stable.
 
   04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> use.mask:
   Revert masking of PHP binary useflags.
