@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6842 2007/02/20 01:19:33 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6843 2007/02/20 10:07:37 drizzt Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -489,11 +489,6 @@ media-video/avidemux
 # This has been dead upstream for close to eternity and is broken with GCC 4.x.
 # Use games-action/d1x-rebirth instead.  This will be removed on (09 Feb 2007).
 games-action/d1x
-
-# Timothy Redaelli <drizzt@gentoo.org> (09 Jan 2007):
-# Deprecated by x11-drivers/nvidia-drivers
-# Pending removal 2007/2/9
-media-video/nvidia-freebsd
 
 # Christian Heim <phreak@gentoo.org> (08 Jan 2007)
 # Various reasons, please use the these alternatives:
