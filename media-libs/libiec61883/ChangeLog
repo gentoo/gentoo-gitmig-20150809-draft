@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libiec61883
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/ChangeLog,v 1.18 2007/02/20 18:52:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/ChangeLog,v 1.19 2007/02/20 22:41:45 opfer Exp $
+
+  20 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  libiec61883-1.1.0.ebuild:
+  stable x86; bug 160027
 
   20 Feb 2007; Markus Rothe <corsair@gentoo.org> libiec61883-1.1.0.ebuild:
   Stable on ppc64; bug #160027
