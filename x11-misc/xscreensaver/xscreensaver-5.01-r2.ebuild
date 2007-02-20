@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.01-r2.ebuild,v 1.4 2007/01/26 09:41:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.01-r2.ebuild,v 1.5 2007/02/20 14:58:08 drac Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.4"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.jwz.org/xscreensaver/"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 arm ~hppa ia64 ~mips ~ppc ~ppc64 sh sparc ~x86 ~x86-fbsd"
-IUSE="gnome jpeg insecure-savers new-login nls offensive opengl pam xinerama"
+IUSE="gnome jpeg insecure-savers new-login offensive opengl pam xinerama"
 
 RDEPEND="x11-libs/libXxf86misc
 	x11-apps/xwininfo
@@ -39,7 +39,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xf86miscproto
 	sys-devel/bc
 	dev-util/pkgconfig
-	nls? ( sys-devel/gettext )
+	sys-devel/gettext
 	xinerama? ( x11-proto/xineramaproto )"
 
 src_unpack() {
@@ -94,7 +94,6 @@ src_compile() {
 		$(use_with pam) \
 		$(use_with opengl gl) $(use_with opengl gle) \
 		$(use_with jpeg) \
-		$(use_enable nls) \
 		|| die "econf failed"
 
 	emake || die "emake failed"
