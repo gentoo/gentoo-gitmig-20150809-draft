@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/cnet
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/ChangeLog,v 1.11 2006/11/24 22:38:17 cedk Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/ChangeLog,v 1.12 2007/02/20 00:51:00 jokey Exp $
+
+  20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   24 Nov 2006; Cedric Krier <cedk@gentoo.org>
   +files/cnet-2.0.9-parser.patch, cnet-2.0.9.ebuild:
