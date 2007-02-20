@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-5.0.5.ebuild,v 1.2 2007/01/21 13:05:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-5.0.5.ebuild,v 1.3 2007/02/20 19:49:44 armin76 Exp $
 
 inherit distutils fdo-mime eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://download.bittorrent.com/dl/${MY_P}.tar.gz"
 
 LICENSE="BitTorrent"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~s390 ~sparc x86"
 IUSE="gtk"
 
 RDEPEND=">=dev-lang/python-2.3
