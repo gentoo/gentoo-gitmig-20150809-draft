@@ -1,6 +1,10 @@
 # ChangeLog for app-text/acroread
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.97 2007/02/20 11:07:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.98 2007/02/20 13:56:38 cryos Exp $
+
+  20 Feb 2007; Marcus D. Hanwell <cryos@gentoo.org>
+  acroread-7.0.9-r1.ebuild:
+  Stable on amd64, bug 156215.
 
   20 Feb 2007; Raúl Porcel <armin76@gentoo.org> acroread-7.0.9-r1.ebuild:
   x86 stable wrt bug 156215
