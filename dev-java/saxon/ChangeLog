@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/saxon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/ChangeLog,v 1.23 2007/01/20 18:13:15 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/ChangeLog,v 1.24 2007/02/20 23:16:48 opfer Exp $
+
+  20 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  saxon-6.5.2-r1.ebuild, saxon-8.4b-r2.ebuild:
+  stable x86; bug 167315
 
   20 Jan 2007; nixnut <nixnut@gentoo.org> saxon-8.4b-r2.ebuild:
   Stable on ppc wrt bug 142187
