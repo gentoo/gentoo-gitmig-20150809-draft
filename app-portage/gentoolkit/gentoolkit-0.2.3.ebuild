@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.3_pre2.ebuild,v 1.2 2006/10/17 14:20:15 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.3.ebuild,v 1.1 2007/02/20 16:56:40 fuzzyray Exp $
 
 inherit eutils python
 
@@ -24,12 +24,6 @@ src_install() {
 	make DESTDIR=${D} install-gentoolkit || die
 }
 
-# Completely remove if no issues found during gentoolkit-0.2.3_pre testing
-#pkg_preinst() {
-#	# FIXME: Remove from future ebuilds after gentoolkit-0.2.2 is stable
-#	rm -f ${ROOT}/usr/lib/gentoolkit/pym/gentoolkit.py[co] ${ROOT}/usr/lib/gentoolkit/pym/gentoolkit/*.py[co]
-#}
-
 pkg_postinst() {
 	python_mod_optimize ${ROOT}usr/lib/gentoolkit
 	echo
@@ -37,10 +31,10 @@ pkg_postinst() {
 	ewarn "are no longer installed in ${ROOT}usr/bin in this release."
 	ewarn "They are still available in ${ROOT}usr/share/doc/${PF}/deprecated/"
 	ewarn "if you *really* want to use them."
-	echo
+	elog
 	elog "Another alternative to qpkg and equery are the q applets in"
 	elog "app-portage/portage-utils"
-	echo
+	elog
 }
 
 pkg_postrm() {
