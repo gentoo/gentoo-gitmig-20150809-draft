@@ -1,9 +1,9 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.82 2007/02/20 16:58:10 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.83 2007/02/20 18:30:54 blubb Exp $
 
   20 Feb 2007; Simon Stelling <blubb@gentoo.org> PyQt-3.14.1-r2.ebuild:
-  mark 3.14.1-r2 ~amd64 until bug 155170 is properly resolved
+  mark 3.14.1-r2 -amd64 until bug 155170 is properly resolved
 
   04 Dec 2006; Caleb Tennis <caleb@gentoo.org> PyQt-3.14.1-r1.ebuild,
   PyQt-3.14.1-r2.ebuild:
