@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/mono-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.23 2007/02/14 19:51:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.24 2007/02/20 17:56:43 dang Exp $
+
+  20 Feb 2007; Daniel Gryniewicz <dang@gentoo.org> mono-tools-1.2.1.ebuild:
+  Marked stable on amd64 for bug #166463
 
   14 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   mono-tools-1.2.3.ebuild:
