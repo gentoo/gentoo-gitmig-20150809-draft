@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/magic
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/ChangeLog,v 1.26 2007/02/06 20:27:34 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/ChangeLog,v 1.27 2007/02/20 22:06:16 calchan Exp $
+
+*magic-7.4.33 (20 Feb 2007)
+
+  20 Feb 2007; Denis Dupeyron <calchan@gentoo.org> +magic-7.4.33.ebuild,
+  magic-7.5.69.ebuild:
+  Stable branch version bump. Various cleanups and fixes.
 
   06 Feb 2007; Denis Dupeyron <calchan@gentoo.org> -magic-7.5.40.ebuild:
   Removed old development version.
