@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.93-r2.ebuild,v 1.7 2007/02/08 14:03:45 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.93-r2.ebuild,v 1.8 2007/02/20 22:21:59 opfer Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -49,6 +49,7 @@ src_unpack() {
 		-e "s:/usr/lib/crtend.o:$(`tc-getCC` -print-file-name=crtend.o):g" \
 		"${S}"/src/s/freebsd.h || die "unable to sed freebsd.h settings"
 	epatch "${FILESDIR}/${PN}-freebsd-sparc.patch"
+	epatch "${FILESDIR}/emacs-cvs-blessmail-build.patch"
 	eautoreconf
 }
 
@@ -163,7 +164,7 @@ EOF
 	fi
 	dodoc BUGS ChangeLog README
 
-	make_desktop_entry emacs Emacs /usr/share/emacs/${SLOT}/etc/images/icons/emacs_48.png	editors
+	make_desktop_entry /usr/bin/emacs Emacs /usr/share/emacs/${SLOT}/etc/images/icons/emacs_48.png	editors
 }
 
 update-alternatives() {
