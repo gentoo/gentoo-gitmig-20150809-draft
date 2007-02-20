@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.0.1-r1.ebuild,v 1.1 2007/02/19 10:15:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.0.1-r1.ebuild,v 1.2 2007/02/20 00:16:20 bicatali Exp $
 
 NEED_PYTHON=2.3
 
@@ -13,7 +13,8 @@ SRC_URI="mirror://sourceforge/numpy/${MY_P}.tar.gz"
 HOMEPAGE="http://numeric.scipy.org/"
 
 RDEPEND="!dev-python/f2py
-	lapack? ( || ( sci-libs/blas-atlas sci-libs/cblas-reference )
+	lapack? ( || ( >=sci-libs/blas-atlas-3.7.11-r1
+				   >=sci-libs/cblas-reference-20030223-r3 )
 				  virtual/lapack )"
 DEPEND="${RDEPEND}
 	lapack? ( app-admin/eselect-cblas )"
