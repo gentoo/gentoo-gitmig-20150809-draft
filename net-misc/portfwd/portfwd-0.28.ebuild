@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/portfwd/portfwd-0.28.ebuild,v 1.5 2006/10/26 09:39:00 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/portfwd/portfwd-0.28.ebuild,v 1.6 2007/02/20 13:32:00 blubb Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.4"
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="Port Forwarding Daemon"
 SRC_URI="mirror://sourceforge/${PN}/${P/_/}.tar.gz"
@@ -21,6 +21,8 @@ RDEPEND=""
 src_unpack() {
 	unpack ${A}
 	cd ${WORKDIR}/${P/_/}
+
+	epatch "${FILESDIR}"/${P}-64bit.patch
 
 	cd src
 	sed -iorig \
