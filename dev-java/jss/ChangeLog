@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jss
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/ChangeLog,v 1.12 2007/02/16 21:23:43 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/ChangeLog,v 1.13 2007/02/20 22:57:36 opfer Exp $
+
+  20 Feb 2007; Christian Faulhammer <opfer@gentoo.org> jss-3.4-r1.ebuild:
+  stable x86; bug 167273
 
   16 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> jss-3.4-r1.ebuild,
   jss-4.2.ebuild:
