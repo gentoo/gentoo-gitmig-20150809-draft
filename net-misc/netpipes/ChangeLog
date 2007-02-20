@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netpipes
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipes/ChangeLog,v 1.4 2006/10/22 01:32:37 tcort Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipes/ChangeLog,v 1.5 2007/02/20 01:06:01 jokey Exp $
+
+  20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   22 Oct 2006; Thomas Cort <tcort@gentoo.org> netpipes-4.2.ebuild:
   Added ~amd64 keyword wrt Bug #138357.
