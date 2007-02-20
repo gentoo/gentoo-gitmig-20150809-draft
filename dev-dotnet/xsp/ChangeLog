@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/xsp
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.39 2007/02/13 19:44:39 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.40 2007/02/20 19:38:28 sekretarz Exp $
+
+  20 Feb 2007; Karol Wojtaszek <sekretarz@gentoo.org> xsp-1.2.1.ebuild:
+  Marked stable on amd64, bug #163298
 
 *xsp-1.2.3 (13 Feb 2007)
 
