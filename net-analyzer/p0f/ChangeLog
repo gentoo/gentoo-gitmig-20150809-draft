@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/p0f
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/ChangeLog,v 1.29 2007/01/06 19:14:42 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/ChangeLog,v 1.30 2007/02/20 00:25:13 jokey Exp $
+
+  20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   06 Jan 2007; Cedric Krier <cedk@gentoo.org> files/p0f.confd,
   files/p0f.initd2, p0f-2.0.8.ebuild:

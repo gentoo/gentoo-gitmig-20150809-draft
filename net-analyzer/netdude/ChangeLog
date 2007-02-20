@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netdude
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netdude/ChangeLog,v 1.4 2006/11/28 00:24:24 jokey Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netdude/ChangeLog,v 1.5 2007/02/20 00:17:43 jokey Exp $
+
+  20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   28 Nov 2006; Markus Ullmann <jokey@gentoo.org> netdude-0.4.6.ebuild,
   netdude-0.4.7.ebuild:

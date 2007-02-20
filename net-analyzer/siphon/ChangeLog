@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/siphon
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/ChangeLog,v 1.12 2006/05/02 22:13:48 weeve Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/ChangeLog,v 1.13 2007/02/20 00:30:39 jokey Exp $
+
+  20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   02 May 2006; Jason Wever <weeve@gentoo.org> siphon-666.ebuild:
   Stable on SPARC.
