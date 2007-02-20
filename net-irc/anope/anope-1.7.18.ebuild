@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/anope-1.7.15.ebuild,v 1.2 2006/11/23 17:26:15 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/anope-1.7.18.ebuild,v 1.1 2007/02/20 15:40:37 armin76 Exp $
 
 inherit eutils
 
@@ -121,6 +121,8 @@ src_install() {
 	fowners anope:anope ${INSTALL_DIR}/data/languages/pt
 	fowners anope:anope ${INSTALL_DIR}/data/languages/ru
 	fowners anope:anope ${INSTALL_DIR}/data/languages/tr
+
+	dodoc Changes Changes.conf Changes.lang Changes.mysql docs/*
 }
 
 pkg_postinst() {
@@ -128,4 +130,8 @@ pkg_postinst() {
 	ewarn "Anope won't run out of the box, you still have to configure it to match your IRCDs configuration."
 	ewarn "Edit ${INSTALL_DIR}/data/services.conf to configure Anope."
 	echo
+	ewarn "!!! ATTENTION !!!"
+	ewarn "If you had used 1.7.15 before, be sure to read Changes.mysql to update your MySQL"
+	ewarn "tables or anope will break after restart"
+	ewarn "!!! ATTENTION !!!"
 }
