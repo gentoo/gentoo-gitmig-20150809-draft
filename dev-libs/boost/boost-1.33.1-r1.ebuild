@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.33.1-r1.ebuild,v 1.15 2007/02/20 20:32:25 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.33.1-r1.ebuild,v 1.16 2007/02/20 20:43:00 dev-zero Exp $
 
-inherit eutils distutils multilib python versionator
+inherit eutils distutils multilib python versionator check-reqs
 
 MY_P=${PN}_$(replace_all_version_separators _)
 
@@ -40,6 +40,12 @@ src_unpack() {
 }
 
 pkg_setup() {
+
+	if has test ${FEATURES} ; then
+		CHECKREQS_DISK_BUILD="2048"
+		check_reqs
+	fi
+
 	BOOSTJAM="${S}/tools/build/jam_src/bin.*/bjam"
 
 	# FIXME: Until we have a better way to do that
@@ -234,9 +240,7 @@ src_install () {
 }
 
 src_test() {
-	ewarn "This test might take a couple of hours even on a recent machine"
-	ewarn "and you need 2 GB free space in your temp directory."
-	ebeep
+	ewarn "This test might take a couple of hours even on a recent machine!"
 
 	elog "It is possible to provide a regression_comment file"
 	elog "which might be useful it you intend to send the generated"
