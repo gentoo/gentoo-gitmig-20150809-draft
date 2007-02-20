@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios-nrpe
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.35 2006/10/21 22:13:35 tcort Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.36 2007/02/20 00:07:20 jokey Exp $
+
+  20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   21 Oct 2006; Thomas Cort <tcort@gentoo.org> nagios-nrpe-2.5.2-r1.ebuild:
   Added ~alpha keyword wrt Bug #110130.
