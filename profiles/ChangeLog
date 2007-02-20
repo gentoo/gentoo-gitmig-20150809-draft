@@ -1,6 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.126 2007/02/20 19:23:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.127 2007/02/20 22:43:17 wolf31o2 Exp $
+
+  20 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  default-bsd/fbsd/make.defaults, default-linux/make.defaults,
+  hardened/amd64/make.defaults, hardened/ppc/make.defaults,
+  hardened/ppc64/make.defaults, hardened/x86/2.6/make.defaults,
+  hardened/x86/2.6/minimal/make.defaults, hardened/x86/make.defaults,
+  selinux/2005.1/x86/hardened/make.defaults:
+  Removed all of the last instances of dlloader in the tree and also made sure
+  nobody had GRP_STAGE23_USE anymore, since catalyst hasn't used it for well
+  over a year.
 
   20 Feb 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   p.mask www-client/mozilla[-bin] again for removal, bug 135257

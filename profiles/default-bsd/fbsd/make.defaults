@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/make.defaults,v 1.8 2006/10/30 17:10:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/make.defaults,v 1.9 2007/02/20 22:43:17 wolf31o2 Exp $
 
 FEATURES="-sandbox"
 
@@ -26,10 +26,6 @@ USE="${USE} cli pcre reflection session spl"
 # 2006/04/21 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: Build the Xorg X server by default
 USE="${USE} xorg"
-
-# 2006/07/01 - Donnie Berkholz <dberkholz@gentoo.org>
-# X: Build dlloader-using drivers, since >=6.9 uses dlloader, not elfloader
-USE="${USE} dlloader"
 
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers

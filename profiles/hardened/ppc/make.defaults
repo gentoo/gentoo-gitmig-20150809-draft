@@ -1,11 +1,10 @@
 # Copyright 2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/make.defaults,v 1.6 2007/01/28 17:20:18 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/make.defaults,v 1.7 2007/02/20 22:43:17 wolf31o2 Exp $
 
 ARCH="ppc"
 ACCEPT_KEYWORDS="${ARCH}"
-GRP_STAGE23_USE="${ARCH} berkdb crypt dlloader hardened nls pam pic readline ssl tcpd zlib"
-USE="${ARCH} dlloader ${GRP_STAGE23_USE}"
+USE="${ARCH} berkdb crypt hardened nls pam pic readline ssl tcpd zlib"
 
 # ppc
 CHOST="powerpc-unknown-linux-gnu"
