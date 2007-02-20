@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtelepathy/libtelepathy-0.0.40.ebuild,v 1.1 2006/11/27 17:03:48 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtelepathy/libtelepathy-0.0.42.ebuild,v 1.1 2007/02/20 18:40:18 peper Exp $
 
 DESCRIPTION="A glib based library for Telepathy client development"
 HOMEPAGE="http://telepathy.freedesktop.org"
