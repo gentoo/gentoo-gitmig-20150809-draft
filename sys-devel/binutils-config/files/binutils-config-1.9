@@ -1,11 +1,15 @@
 #!/bin/bash
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.9,v 1.6 2006/11/26 13:40:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.9,v 1.7 2007/02/20 15:18:16 vapier Exp $
 
 # Format of /etc/env.d/binutils/:
 #  config-TARGET:	CURRENT=version for TARGET
 #  TARGET-VER:		has a TARGET and VER variable
+
+[[ -z ${ROOT} ]] && ROOT="/"
+[[ ${ROOT} != */ ]] && ROOT="${ROOT}/"
+[[ ${ROOT} != /* ]] && ROOT="${PWD}${ROOT}"
 
 cd /
 
@@ -289,8 +293,6 @@ set_HOST() {
 	fi
 }
 
-[[ -z ${ROOT} ]] && ROOT="/"
-[[ ${ROOT:0-1} != "/" ]] && ROOT="${ROOT}/"
 ENV_D="${ROOT}etc/env.d/binutils"
 
 DEBUG="no"
@@ -332,7 +334,7 @@ while [[ $# -gt 0 ]] ; do
 			exit 0
 			;;
 		-V|--version)
-			cvsver="$Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.9,v 1.6 2006/11/26 13:40:14 vapier Exp $"
+			cvsver="$Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.9,v 1.7 2007/02/20 15:18:16 vapier Exp $"
 			cvsver=${cvsver##*binutils-config-}
 			bver=${cvsver%%,v *}
 			cvsver=${cvsver#* }
