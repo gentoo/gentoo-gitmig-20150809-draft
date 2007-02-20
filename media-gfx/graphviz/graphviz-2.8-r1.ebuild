@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.8-r1.ebuild,v 1.6 2007/02/15 17:14:19 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.8-r1.ebuild,v 1.7 2007/02/20 16:17:51 vapier Exp $
 
 inherit eutils libtool
 
@@ -16,7 +16,7 @@ IUSE="cairo tcl tk X static minimal"
 RDEPEND=">=sys-libs/zlib-1.1.3
 	>=media-libs/libpng-1.2
 	>=media-libs/jpeg-6b
-	<media-libs/gd-2.0.34
+	media-libs/gd
 	media-libs/freetype
 	media-libs/fontconfig
 	dev-libs/expat
@@ -30,6 +30,7 @@ RDEPEND=">=sys-libs/zlib-1.1.3
 	)"
 
 DEPEND="${RDEPEND}
+	<media-libs/gd-2.0.34
 	dev-util/pkgconfig
 	!minimal? ( dev-lang/swig )"
 
