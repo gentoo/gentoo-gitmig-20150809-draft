@@ -1,6 +1,9 @@
-DIST tcpreplay-1.4.6.tar.gz 488637
-DIST tcpreplay-2.2.2.tar.gz 526814
-DIST tcpreplay-2.3.2.tar.gz 577483
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST tcpreplay-1.4.6.tar.gz 488637 RMD160 23147ade38aa33a7590c361bf74331c1889db374 SHA1 ed67c0822837b024fa8c8fc6028e76fa8e17aa48 SHA256 c0caa35289751166b0730387256bcce008c56b2fac43d7fae23297458262e35c
+DIST tcpreplay-2.2.2.tar.gz 526814 RMD160 fd71d89e49651c070101f95d20c29671dd8a03e1 SHA1 04148a1d0d5a58f9c474cf46b835c29925640971 SHA256 7ada24dfe9c4c45d756c6537b474a0ef227f9d5592d06bd755a8e5a80d9656eb
+DIST tcpreplay-2.3.2.tar.gz 577483 RMD160 13dc9f4cc56257180ad45605ed52bff1bc91566d SHA1 da102c81c55f037adb03a97e1b589f4ca3eb9b63 SHA256 0f2732c1b64fed61645d2db794a9029ad0a4621f6f38b0bbfc0c7e7c3e0de8fa
 DIST tcpreplay-2.3.3.tar.gz 585406 RMD160 c523415ed0b2b17ea0bf68e1fa3489e60bc3a240 SHA1 52005528c57b5c82983c4491266c0c08385860d0 SHA256 4fdadaaeb13e5212deb75512e6207f19f0197586b2e6f23f18b9077ba99b0c2b
 DIST tcpreplay-2.3.5.tar.gz 682045 RMD160 f94e35bbe96e95416bbc320cb853fe889f2b630d SHA1 161eb4ac7985d3026f068eda93314f988eff05c7 SHA256 8582d169b8c56b7eb1bea2cf58ccc5e686d327a7039cca5a7b8279d26bc71fdc
 DIST tcpreplay-3.0.beta7.tar.gz 1199745 RMD160 3ff908af325f7a98cd582c8c7c1e941a89f867e3 SHA1 17eb855b7976539c00a37249350f21e9043a35f3 SHA256 ec999d91f93c3c21d5f7faa928bce16ea39d108da2923324b41de21e44d5e4c0
@@ -32,23 +35,23 @@ EBUILD tcpreplay-3.0_beta7.ebuild 1211 RMD160 e208bcb2805a91fc7b7c44edb4a4fb819f
 MD5 212120ae3b459846761702cd8190bdf4 tcpreplay-3.0_beta7.ebuild 1211
 RMD160 e208bcb2805a91fc7b7c44edb4a4fb819f345125 tcpreplay-3.0_beta7.ebuild 1211
 SHA256 fe694b290dc0edaca9adb1a5aadd715cadd7035ccb6ffa75dee89c766b51deaa tcpreplay-3.0_beta7.ebuild 1211
-MISC ChangeLog 2848 RMD160 f33e51441c71075ebf1bd487d5d8b548adaebeaf SHA1 d874a93d683e31c733fff023dbe9c507686478cb SHA256 633cbb9734458045d346e6b7d2aa21e2685949df6e743dfc433ca2ea89535cd1
-MD5 3ae0c0f3d30a8f7b09e7c1f1592a1fec ChangeLog 2848
-RMD160 f33e51441c71075ebf1bd487d5d8b548adaebeaf ChangeLog 2848
-SHA256 633cbb9734458045d346e6b7d2aa21e2685949df6e743dfc433ca2ea89535cd1 ChangeLog 2848
+MISC ChangeLog 2934 RMD160 3abfb61d7a23be3ca9c91cbd9e7ecbacd843a4b3 SHA1 db100286d2df7e5c731304383683eb501f4035d9 SHA256 b90dee1f245f673719fecc48545ec6dc12755d563810a67d2a9e5a9c54d104f9
+MD5 f690d22a72eaf6b3c293d70eb1a052bb ChangeLog 2934
+RMD160 3abfb61d7a23be3ca9c91cbd9e7ecbacd843a4b3 ChangeLog 2934
+SHA256 b90dee1f245f673719fecc48545ec6dc12755d563810a67d2a9e5a9c54d104f9 ChangeLog 2934
 MISC metadata.xml 250 RMD160 b25b7c0d87b753feb76b6628b4facc197baffc05 SHA1 95cff9718e31aea03e554bdafe0f468e2f46ae41 SHA256 54665bdee6cbcbfdd605c2d53212c530599cb523867ddf5cebbaa6d05dce4fc9
 MD5 1cd3590be14655cd8346c467d76e8484 metadata.xml 250
 RMD160 b25b7c0d87b753feb76b6628b4facc197baffc05 metadata.xml 250
 SHA256 54665bdee6cbcbfdd605c2d53212c530599cb523867ddf5cebbaa6d05dce4fc9 metadata.xml 250
-MD5 0b75692f271546f9eb50aa1af1887fdf files/digest-tcpreplay-1.4.6 67
-RMD160 f3be3c5969c30a97dc96bb7bf9ae77d0c096c809 files/digest-tcpreplay-1.4.6 67
-SHA256 d621e45482d165f696cf0c1cbd0ec6a9298948b1404085d475449e65afc5a264 files/digest-tcpreplay-1.4.6 67
-MD5 a2e378f507f02665aa74c92df8ea254b files/digest-tcpreplay-2.2.2 67
-RMD160 ca2e7a6564f302ec6fe91ae51aad7a2647b03afb files/digest-tcpreplay-2.2.2 67
-SHA256 d5a6a0e879b782bc793ab05135cc83819ecdb1547ec6d48a12fbd7fcedda82e7 files/digest-tcpreplay-2.2.2 67
-MD5 bc5984507a3e4ebbee2b6d68de8d6eae files/digest-tcpreplay-2.3.2 67
-RMD160 f913832946528e81d5acc3ab5d99de35adc57882 files/digest-tcpreplay-2.3.2 67
-SHA256 a1ce2262e3c997b5c69549881f5cec27f4c5ce0893b0be8cfec47696eece58aa files/digest-tcpreplay-2.3.2 67
+MD5 84e182ede3dca68179148d48bc6109ea files/digest-tcpreplay-1.4.6 247
+RMD160 ce3ce40a9ddcd921d52d83cedd396dc1eeffe7ce files/digest-tcpreplay-1.4.6 247
+SHA256 985e03469f1a2f1171b029cbbaf6188048851cbdea18f72c9b7189868303dd2d files/digest-tcpreplay-1.4.6 247
+MD5 49cfdbf019821adcd01b452aae8fafac files/digest-tcpreplay-2.2.2 247
+RMD160 50f72bfca25d8839ce742e3e4e546a74e22292a5 files/digest-tcpreplay-2.2.2 247
+SHA256 ef54609c77f84f1969e855bb7f475a0ad0d7187ea77ff0951ae2fe2183fc2906 files/digest-tcpreplay-2.2.2 247
+MD5 8da5a8252883abc8c172d6435185312e files/digest-tcpreplay-2.3.2 247
+RMD160 3d3f9c9aa60ba26f91f81c3f9c9c7375679b8909 files/digest-tcpreplay-2.3.2 247
+SHA256 1f27f9bcad911f0cf34b36031fd9bf93d3a8d3b4db2be1b1cfaeca79d908bc7c files/digest-tcpreplay-2.3.2 247
 MD5 eec081eb56bfe08b1cfe2e8787ec9dfd files/digest-tcpreplay-2.3.3 247
 RMD160 a11aa35fec5b419b24a493f1ea0e314311d86b3e files/digest-tcpreplay-2.3.3 247
 SHA256 33a47dc047f3efe6ebf7d88ddee3fcd7b77cb9780c416e7a6c681f741a57bedf files/digest-tcpreplay-2.3.3 247
@@ -61,3 +64,10 @@ SHA256 5be97d30d4df034edfb5da46d2473432160c5ededa91416ff2edb9090e5d50ab files/di
 MD5 bcf07af2a0ae2709ec9028b6ab89a25c files/digest-tcpreplay-3.0_beta7 262
 RMD160 4613c812af997cc8edf305fae516df4c8586e3a4 files/digest-tcpreplay-3.0_beta7 262
 SHA256 b6a24cc0130c614b4671c837d4902a95c3cf5bdc00fd70f868b858362e4a3248 files/digest-tcpreplay-3.0_beta7 262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFF2kNJz974XjDVpbkRAj4KAKCE6YcLNLuHSmcbgUMWtHYGYjjQ5gCfeQbu
+dpNa9llEprtkiWjnf2KL4eQ=
+=kTKx
+-----END PGP SIGNATURE-----
