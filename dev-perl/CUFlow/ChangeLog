@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/CUFlow
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CUFlow/ChangeLog,v 1.2 2006/02/25 23:23:17 jokey Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CUFlow/ChangeLog,v 1.3 2007/02/20 01:26:41 jokey Exp $
+
+  20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   25 Feb 2006; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Removing COPYING from docdir as it is already in standard license dir
