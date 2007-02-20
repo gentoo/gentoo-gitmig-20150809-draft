@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netwag
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwag/ChangeLog,v 1.13 2006/10/31 21:41:11 jokey Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwag/ChangeLog,v 1.14 2007/02/20 01:28:02 jokey Exp $
+
+  20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   31 Oct 2006; Markus Ullmann <jokey@gentoo.org> netwag-5.28.0.ebuild,
   netwag-5.31.0.ebuild, netwag-5.32.0.ebuild, netwag-5.33.0.ebuild:
