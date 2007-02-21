@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mppenc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mppenc/ChangeLog,v 1.3 2007/02/10 22:48:34 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mppenc/ChangeLog,v 1.4 2007/02/21 09:50:45 opfer Exp $
+
+  21 Feb 2007; Christian Faulhammer <opfer@gentoo.org> mppenc-1.16.ebuild:
+  added ~x86; bug 167850
 
   10 Feb 2007; Matti Bickel <mabi@gentoo.org> mppenc-1.16.ebuild:
   added fix for ppc (permission from Diego), keyworded ~ppc
