@@ -1,6 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.1/2.4/package.mask,v 1.11 2007/02/02 21:47:29 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.1/2.4/package.mask,v 1.12 2007/02/21 19:41:01 drac Exp $
+
+# Samuli Suominen <drac@gentoo.org>
+# This needs icon-naming-utils which is allready masked here. GNOME 2.16.
+x11-themes/tango-icon-theme
+x11-themes/tango-icon-theme-extras
 
 # Saleem Abdulrasool <compnerd@gentoo.org>
 # This needs GNOME 2.16+
