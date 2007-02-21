@@ -1,6 +1,10 @@
 # ChangeLog for rox-extra/roxget
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxget/ChangeLog,v 1.7 2006/11/17 15:03:16 lack Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxget/ChangeLog,v 1.8 2007/02/21 18:12:55 lack Exp $
+
+  21 Feb 2007; Jim Ramsay <lack@gentoo.org> files/digest-roxget-0.0.4,
+  files/digest-roxget-0.0.5c, Manifest:
+  Updating Manifest
 
   17 Nov 2006; Jim Ramsay <lack@gentoo.org> roxget-0.0.4.ebuild:
   Bug 155429 - Fixed inherit order
