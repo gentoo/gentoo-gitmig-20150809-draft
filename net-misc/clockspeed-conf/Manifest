@@ -2,7 +2,7 @@ AUX clockspeed-conf-0.4.5-gentoo.patch 674 RMD160 49aa749237ab8d5f5a25b1fb5e59dd
 MD5 d7846d884b197274ba50d50473217534 files/clockspeed-conf-0.4.5-gentoo.patch 674
 RMD160 49aa749237ab8d5f5a25b1fb5e59dd883ba672ea files/clockspeed-conf-0.4.5-gentoo.patch 674
 SHA256 6ff1a21eb60969f3dfce2990ef9427a57ca9f061c4c380441df107f11b020533 files/clockspeed-conf-0.4.5-gentoo.patch 674
-DIST clockspeed-conf-0.4.5.tar.gz 7190
+DIST clockspeed-conf-0.4.5.tar.gz 7190 RMD160 bb862a7c87a0f7673e6f12f5eede6b9ac403ecc7 SHA1 58d4c3ae8cc46d79453241d2a6b1ce22f2eea888 SHA256 6f61d140481286637d87dc29c519b06b0716348072e3b67b3d13f87285169a86
 EBUILD clockspeed-conf-0.4.5-r1.ebuild 764 RMD160 dc5248a21aad3f2a8ef08b6575a13d52ba45a287 SHA1 cb1a0484724d770eb97ae61e712552895e8043de SHA256 64ecd633ca94bcfdb60f73214d9ec7c61f4f3fe646fa6beeeee84645367fb321
 MD5 d41701b14b08b67884275965b79d3b5e clockspeed-conf-0.4.5-r1.ebuild 764
 RMD160 dc5248a21aad3f2a8ef08b6575a13d52ba45a287 clockspeed-conf-0.4.5-r1.ebuild 764
@@ -15,6 +15,6 @@ MISC metadata.xml 210 RMD160 c9fe92a44d079ef04bcdd31de9867de5bb9f26e5 SHA1 efa00
 MD5 c667f921ee8d48ce17ebef0f8d601ea4 metadata.xml 210
 RMD160 c9fe92a44d079ef04bcdd31de9867de5bb9f26e5 metadata.xml 210
 SHA256 90082fe26a119a63ca8fbe227f66c33ba74167b6cf28e2cef02dea6c4f656c39 metadata.xml 210
-MD5 fcff2d4f599d8921bf32f06e71cf1860 files/digest-clockspeed-conf-0.4.5-r1 71
-RMD160 8956549019c301daf885cbd583af1259b2f4b669 files/digest-clockspeed-conf-0.4.5-r1 71
-SHA256 78b122f133c1c70ff28d8796b9127b9f98bf957a5c0dae57ef1ff4677f50fab2 files/digest-clockspeed-conf-0.4.5-r1 71
+MD5 9b7723afa9496bbb4674357eadb94b64 files/digest-clockspeed-conf-0.4.5-r1 259
+RMD160 7223c988e1f674f1c27c931e6171ae8bfbba82fa files/digest-clockspeed-conf-0.4.5-r1 259
+SHA256 f522d69f50af21c4a39314a08840bb5b9725e644511d383502cf05dd48eaa74c files/digest-clockspeed-conf-0.4.5-r1 259
