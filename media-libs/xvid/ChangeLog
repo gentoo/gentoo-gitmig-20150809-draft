@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xvid
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.83 2007/02/03 13:53:42 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.84 2007/02/21 03:44:39 vapier Exp $
+
+  21 Feb 2007; Mike Frysinger <vapier@gentoo.org> xvid-1.1.2.ebuild:
+  Force just yasm for now #165682 ... it's better than nasm anyways.
 
   03 Feb 2007; Simon Stelling <blubb@gentoo.org> xvid-1.1.2.ebuild:
   depend on yasm-0.5; bug 154369
