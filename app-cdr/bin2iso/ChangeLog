@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/bin2iso
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bin2iso/ChangeLog,v 1.19 2005/09/12 17:59:52 grobian Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bin2iso/ChangeLog,v 1.20 2007/02/21 20:13:01 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   12 Sep 2005; Fabian Groffen <grobian@gentoo.org> bin2iso-19b-r2.ebuild:
   Marking ~ppc-macos (Bug #105620)

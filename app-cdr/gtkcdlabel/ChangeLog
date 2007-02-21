@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/gtkcdlabel
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/ChangeLog,v 1.29 2007/01/19 13:43:33 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/ChangeLog,v 1.30 2007/02/21 20:15:51 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   19 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
   gtkcdlabel-1.0_pre6.ebuild, gtkcdlabel-1.0_pre7-r1.ebuild,
