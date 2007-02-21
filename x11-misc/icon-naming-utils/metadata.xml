@@ -6,4 +6,8 @@
 <email>metalgod@gentoo.org</email>
 <name>Luis Medinas</name>
 </maintainer>
+<maintainer>
+<email>drac@gentoo.org</email>
+<name>Samuli Suominen</name>
+</maintainer>
 </pkgmetadata>
