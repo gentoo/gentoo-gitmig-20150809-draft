@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.1-r4.ebuild,v 1.1 2007/02/16 22:24:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.1-r4.ebuild,v 1.2 2007/02/21 15:11:19 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -236,7 +236,6 @@ src_install() {
 	insinto "${MOZILLA_FIVE_HOME}"/icons
 	doins "${S}"/dist/branding/mozicon16.xpm
 	doins "${S}"/dist/branding/mozicon50.xpm
-
 
 	# Install files necessary for applications to build against firefox
 	einfo "Installing includes and idl files..."

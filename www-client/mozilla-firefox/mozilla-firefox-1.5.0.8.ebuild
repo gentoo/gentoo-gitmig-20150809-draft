@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.8.ebuild,v 1.12 2007/02/14 19:31:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.8.ebuild,v 1.13 2007/02/21 15:11:19 armin76 Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime mozextension autotools
 
-# All: ar bg ca cs da de el en-GB es-AR es-ES eu fi fr fy-NL ga-IE gu-IN he hu it ja ko lt mk nb-NO nl pa-IN pl pt-BR ro ru sk sl sv-SE tr zh-CN zh-TW 
+# All: ar bg ca cs da de el en-GB es-AR es-ES eu fi fr fy-NL ga-IE gu-IN he hu it ja ko lt mk nb-NO nl pa-IN pl pt-BR ro ru sk sl sv-SE tr zh-CN zh-TW
 # New:    bg                                  eu       fy-NL       gu-IN                lt             pa-IN
 # Ignored: fy-NL (due to repoman griping about it)
 LANGS="ar bg ca cs da de el en-GB es-AR es-ES eu fi fr       ga-IE gu-IN he hu it ja ko lt mk nb-NO nl pa-IN pl pt-BR ro ru sk sl sv-SE tr zh-CN zh-TW"
@@ -253,7 +253,6 @@ src_install() {
 	dosym ${MOZILLA_FIVE_HOME}/include/necko/nsIURI.h \
 		/usr/$(get_libdir)/${MOZILLA_FIVE_HOME##*/}/include/nsIURI.h
 
-
 	# Fix pkgconfig files and install them
 	insinto /usr/$(get_libdir)/pkgconfig
 	for x in ${S}/build/unix/*.pc; do
@@ -261,7 +260,7 @@ src_install() {
 	done
 
 	####################################
-	# 
+	#
 	# Some preferences, probably gentoo.org as start-page also
 	#
 	####################################

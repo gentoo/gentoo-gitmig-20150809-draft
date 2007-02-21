@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.9.ebuild,v 1.8 2007/02/14 19:31:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.9.ebuild,v 1.9 2007/02/21 15:11:19 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -249,7 +249,6 @@ src_install() {
 	dosym ${MOZILLA_FIVE_HOME}/include/necko/nsIURI.h \
 		/usr/$(get_libdir)/${MOZILLA_FIVE_HOME##*/}/include/nsIURI.h
 
-
 	# Fix pkgconfig files and install them
 	insinto /usr/$(get_libdir)/pkgconfig
 	for x in ${S}/build/unix/*.pc; do
@@ -257,7 +256,7 @@ src_install() {
 	done
 
 	####################################
-	# 
+	#
 	# Some preferences, probably gentoo.org as start-page also
 	#
 	####################################
