@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/wily
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/wily/ChangeLog,v 1.11 2006/08/24 00:20:49 mr_bones_ Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/wily/ChangeLog,v 1.12 2007/02/21 21:23:42 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   24 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org> wily-1.0.ebuild:
   backport modX deps from wily-1.0-r1

@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/qe
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qe/ChangeLog,v 1.7 2005/08/28 17:04:24 metalgod Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qe/ChangeLog,v 1.8 2007/02/21 21:21:31 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   28 Aug 2005; Luis Medinas <metalgod@gentoo.org> qe-0.1.1.ebuild:
   Added ~amd64 keywords. Closes bug #103760.
