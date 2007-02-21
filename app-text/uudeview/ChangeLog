@@ -1,6 +1,11 @@
 # ChangeLog for app-text/uudeview
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/ChangeLog,v 1.23 2006/11/28 18:03:03 opfer Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/ChangeLog,v 1.24 2007/02/21 00:21:17 opfer Exp $
+
+  21 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  uudeview-0.5.20.ebuild:
+  removed tcl and X USE flags as they are just useless. USE=tk now properly
+  builds the X version of the software
 
   28 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
   uudeview-0.5.20.ebuild:

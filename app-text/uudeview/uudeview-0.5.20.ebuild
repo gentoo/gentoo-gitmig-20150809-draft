@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/uudeview-0.5.20.ebuild,v 1.13 2006/11/29 16:16:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/uudeview-0.5.20.ebuild,v 1.14 2007/02/21 00:21:17 opfer Exp $
 
-IUSE="X tcl tk debug"
+IUSE="tk debug"
 
 DESCRIPTION="uu, xx, base64, binhex decoder"
 HOMEPAGE="http://www.fpx.de/fp/Software/UUDeview/"
@@ -12,8 +12,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ppc ~ppc-macos sparc x86"
 
-RDEPEND="tcl? ( dev-lang/tcl )
-	tk? ( dev-lang/tk )"
+RDEPEND="tk? ( dev-lang/tk )"
 
 DEPEND="${RDEPEND}
 	sys-devel/autoconf"
@@ -29,19 +28,19 @@ src_compile() {
 		myconf="--enable-optimize"
 	fi
 
-	if use tk && use X
+	if use tk
 	then
 		myconf="${myconf} --enable-tk"
 	fi
 
 	econf \
-		`use_enable tcl tcl` \
+		`use_enable tk tcl` \
 		`use_enable debug optimize` \
-		$myconf || die
+		${myconf} || die
 	emake || die "emake failed"
 }
 
 src_install() {
-	einstall MANDIR=${D}/usr/share/man/ || die
+	einstall MANDIR="${D}/usr/share/man/" || die
 	dodoc HISTORY INSTALL README
 }
