@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.235 2007/02/18 18:25:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.236 2007/02/21 00:41:29 opfer Exp $
+
+  21 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  vim-core-7.0.174.ebuild:
+  stable x86; bug 167816
 
   18 Feb 2007; Markus Rothe <corsair@gentoo.org> vim-core-7.0.91.ebuild:
   Stable on ppc64
