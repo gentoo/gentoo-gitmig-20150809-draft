@@ -1,4 +1,4 @@
-DIST ucspi-tcp-0.88-man-20020317.tar.gz 7562
+DIST ucspi-tcp-0.88-man-20020317.tar.gz 7562 RMD160 6285882adea8f3c1f700ef82bec0d34078dfa559 SHA1 7b2507ff1b49917b44ee64af5995a94a50effd44 SHA256 09b1dd69ca3722b62c030abb27df9560cb72ff5d6247e4628e0c61e957b408ef
 EBUILD ucspi-tcp-man-20020317.ebuild 620 RMD160 677f1c2ed9862824ced5c225fedd2a3e32fe9b2a SHA1 a316010b4a98feb8b7148cf2505cffba67487efc SHA256 3c0fe965bcd091f3abb4e743ce39ee5cee63511a7d9c25f7776aa83c6a98e129
 MD5 3f4facaa6aa4a730e537460786469a0d ucspi-tcp-man-20020317.ebuild 620
 RMD160 677f1c2ed9862824ced5c225fedd2a3e32fe9b2a ucspi-tcp-man-20020317.ebuild 620
@@ -11,6 +11,6 @@ MISC metadata.xml 307 RMD160 f737ba1cfecb3bbbbddb760937d1a88eac2e8ca6 SHA1 2fc4b
 MD5 53a31b089630c0419f3f8d597acb0a03 metadata.xml 307
 RMD160 f737ba1cfecb3bbbbddb760937d1a88eac2e8ca6 metadata.xml 307
 SHA256 385fb8fca53b56c7cb79a9be3ad890aac22bc72941a6fd7a5eac871e623c218e metadata.xml 307
-MD5 5f32104538b60bc8d4f95686a8b2620b files/digest-ucspi-tcp-man-20020317 77
-RMD160 62ed13c10e15bec9b68f315a9c5959c71fd053bc files/digest-ucspi-tcp-man-20020317 77
-SHA256 bf5aa0d9e493e7e9b048eb404bf9faba4fd9a89ba6b3dbba8d0fa346c97d71f3 files/digest-ucspi-tcp-man-20020317 77
+MD5 c926dbc66c95213c9347a947b40690d9 files/digest-ucspi-tcp-man-20020317 277
+RMD160 f15fec49d2912d28b3acac3c6e0e341791b558cd files/digest-ucspi-tcp-man-20020317 277
+SHA256 32e34fd4641a15f748fdc9bb0a1d1e88b41f4f1ea437aaedfd2d05f54dae4390 files/digest-ucspi-tcp-man-20020317 277
