@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.6.ebuild,v 1.3 2007/02/21 17:26:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.6.ebuild,v 1.4 2007/02/21 17:32:08 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -93,14 +93,14 @@ do_compile() {
 }
 
 src_install() {
-	# install unicode version first so that the non-unicode
-	# files overwrite the unicode versions
+	# install unicode version second so that the binaries in /usr/bin
+	# support both wide and narrow
+	cd "${WORKDIR}"/narrowc
+	emake DESTDIR="${D}" install || die "make narrowc install failed"
 	if use unicode ; then
 		cd "${WORKDIR}"/widec
-		make DESTDIR="${D}" install || die "make widec install failed"
+		emake DESTDIR="${D}" install || die "make widec install failed"
 	fi
-	cd "${WORKDIR}"/narrowc
-	make DESTDIR="${D}" install || die "make narrowc install failed"
 
 	if [[ ${CHOST} != *-darwin* ]] ; then
 		# Move static and extraneous ncurses libraries out of /lib
@@ -136,22 +136,10 @@ src_install() {
 	echo "CONFIG_PROTECT_MASK=\"/etc/terminfo\"" > "${T}"/50ncurses
 	doenvd "${T}"/50ncurses
 
-	if use build ; then
-		cd "${D}"
-		rm -rf usr/share/man
-		cd usr/share/terminfo
-		cp -pPR l/linux n/nxterm v/vt100 "${T}"
-		rm -rf *
-		mkdir l x v
-		cp -pPR "${T}"/linux l
-		cp -pPR "${T}"/nxterm x/xterm
-		cp -pPR "${T}"/vt100 v
-	else
-		use minimal && rm -r "${D}"/usr/share/terminfo
-		cd "${S}"
-		dodoc ANNOUNCE MANIFEST NEWS README* TO-DO doc/*.doc
-		use doc && dohtml -r doc/html/
-	fi
+	use minimal && rm -r "${D}"/usr/share/terminfo
+	cd "${S}"
+	dodoc ANNOUNCE MANIFEST NEWS README* TO-DO doc/*.doc
+	use doc && dohtml -r doc/html/
 }
 
 pkg_preinst() {
