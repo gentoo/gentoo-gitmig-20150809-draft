@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tmpwatch
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.51 2007/01/27 16:51:37 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.52 2007/02/21 19:48:32 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   27 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
   files/tmpwatch.cron, tmpwatch-2.9.4.1.ebuild:

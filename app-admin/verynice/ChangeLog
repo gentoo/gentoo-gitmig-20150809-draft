@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/verynice
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/verynice/ChangeLog,v 1.9 2005/05/01 17:15:23 hansmi Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/verynice/ChangeLog,v 1.10 2007/02/21 19:49:27 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org> verynice-1.1.ebuild:
   Stable on ppc.

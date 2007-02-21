@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/paxtest
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.27 2007/01/25 15:38:57 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.28 2007/02/21 19:43:11 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *paxtest-0.9.7_pre4 (23 Jan 2007)
 

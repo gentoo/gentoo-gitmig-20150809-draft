@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/superadduser
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/superadduser/ChangeLog,v 1.36 2005/07/22 12:39:10 omkhar Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/superadduser/ChangeLog,v 1.37 2007/02/21 19:46:58 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   22 Jul 2005; <omkhar@gentoo.org> superadduser-1.0.9.ebuild:
   Marked stable on ppc64
