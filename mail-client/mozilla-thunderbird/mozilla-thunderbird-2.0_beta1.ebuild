@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0_beta1.ebuild,v 1.6 2007/02/14 19:13:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0_beta1.ebuild,v 1.7 2007/02/21 15:17:16 armin76 Exp $
 
 #
 # There are no linguas supported in alpha builds
 # Anarchy ( Jory A. Pratt )
 #
 
-unset ALLOWED_FLAGS	 # stupid extra-functions.sh ... bug 49179
+unset ALLOWED_FLAGS	# stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib autotools mozextension
 
 #LANGS="bg ca cs da de el en-GB es-AR es-ES eu fi fr ga-IE gu-IN he hu it ja ko lt mk nb-NO nl pa-IN pl pt-BR ru sk sl sv-SE tr zh-CN"
@@ -18,7 +18,6 @@ MY_PV=${PV/_beta1/b1}
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="http://www.mozilla.org/projects/thunderbird/"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/nightly/${MY_PV}-candidates/rc2/thunderbird-${MY_PV}-source.tar.bz2
-	http://dev.gentooexperimental.org/~anarchy/dist/${PN}-2.0_alpha1-patches-${PVER}.tar.bz2
 	mirror://gentoo/${PN}-2.0_alpha1-patches-${PVER}.tar.bz2"
 
 KEYWORDS="~amd64 ~ia64 -mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
