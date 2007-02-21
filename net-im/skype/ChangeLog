@@ -1,6 +1,10 @@
 # ChangeLog for net-im/skype
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.63 2006/11/25 17:58:23 humpback Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.64 2007/02/21 21:43:05 blubb Exp $
+
+  21 Feb 2007; Simon Stelling <blubb@gentoo.org> skype-1.2.0.18.ebuild,
+  skype-1.3.0.53-r1.ebuild:
+  this depends on app-emulation/emul-linux-x86-compat
 
   25 Nov 2006; Gustavo Felisberto <humpback@gentoo.org>;
   skype-1.3.0.53-r1.ebuild:
