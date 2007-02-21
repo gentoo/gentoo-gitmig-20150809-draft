@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/supertuxkart-0.2.ebuild,v 1.7 2007/02/07 13:36:13 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/supertuxkart-0.2.ebuild,v 1.8 2007/02/21 17:32:44 mr_bones_ Exp $
 
 inherit games
 
@@ -26,4 +26,3 @@ src_install() {
 	dodoc AUTHORS NEWS README
 	prepgamesdirs
 }
-
