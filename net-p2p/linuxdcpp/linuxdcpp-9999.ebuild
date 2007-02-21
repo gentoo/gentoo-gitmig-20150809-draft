@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-9999.ebuild,v 1.4 2007/02/07 22:17:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-9999.ebuild,v 1.5 2007/02/21 10:05:25 armin76 Exp $
 
 inherit cvs eutils
 
@@ -24,7 +24,8 @@ RDEPEND=">=gnome-base/libglade-2.4
 	app-arch/bzip2"
 
 DEPEND="${RDEPEND}
-	>=dev-util/scons-0.96"
+	>=dev-util/scons-0.96
+	dev-util/pkgconfig"
 
 src_compile() {
 	local myconf=""
