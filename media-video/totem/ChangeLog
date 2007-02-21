@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.152 2007/02/04 09:12:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.153 2007/02/21 12:42:08 uberlord Exp $
+
+  21 Feb 2007; Roy Marples <uberlord@gentoo.org> totem-2.16.4.ebuild:
+  Add ~x86-fbsd keyword.
 
   04 Feb 2007; Markus Rothe <corsair@gentoo.org> totem-2.16.4.ebuild:
   Stable on ppc64; bug #164978
