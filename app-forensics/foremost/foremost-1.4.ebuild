@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/foremost-1.4.ebuild,v 1.1 2007/02/21 19:58:37 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/foremost-1.4.ebuild,v 1.2 2007/02/21 20:03:13 ikelos Exp $
 
 inherit eutils toolchain-funcs
 
@@ -8,7 +8,7 @@ DESCRIPTION="A console program to recover files based on their headers and foote
 HOMEPAGE="http://foremost.sourceforge.net/"
 SRC_URI="http://foremost.sourceforge.net/pkg/${P}.tar.gz"
 
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc ~x86 ~amd64"
 IUSE=""
 LICENSE="public-domain"
 SLOT="0"

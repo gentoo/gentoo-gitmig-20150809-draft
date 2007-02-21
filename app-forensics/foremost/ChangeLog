@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/foremost
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/ChangeLog,v 1.8 2007/02/21 19:58:37 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/ChangeLog,v 1.9 2007/02/21 20:03:13 ikelos Exp $
+
+  21 Feb 2007; Mike Auty <ikelos@gentoo.org> foremost-1.4.ebuild:
+  Added in ~amd64 after reported success.
 
 *foremost-1.4 (21 Feb 2007)
 
