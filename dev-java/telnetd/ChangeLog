@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/telnetd
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/telnetd/ChangeLog,v 1.10 2006/11/30 15:56:02 caster Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/telnetd/ChangeLog,v 1.11 2007/02/21 23:45:34 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   30 Nov 2006; Vlastimil Babka <caster@gentoo.org> telnetd-1.0-r1.ebuild:
   Update xerces dep for upcoming 2.6 slotmove.

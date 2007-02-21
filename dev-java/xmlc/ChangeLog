@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xmlc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlc/ChangeLog,v 1.4 2007/01/05 23:43:41 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlc/ChangeLog,v 1.5 2007/02/21 23:47:28 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   05 Jan 2007; Vlastimil Babka <caster@gentoo.org> xmlc-2.2.5-r1.ebuild:
   Convert einfo to elog.
