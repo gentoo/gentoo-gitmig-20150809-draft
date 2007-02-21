@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/tiger
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/tiger/ChangeLog,v 1.8 2005/05/30 18:08:30 swegener Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/tiger/ChangeLog,v 1.9 2007/02/21 21:46:11 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   30 May 2005; Sven Wegener <swegener@gentoo.org> tiger-0.8.ebuild:
   Removed unneeded use of gcc.eclass.
