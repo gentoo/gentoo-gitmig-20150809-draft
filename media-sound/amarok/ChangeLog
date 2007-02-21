@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.211 2007/02/19 22:45:00 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.212 2007/02/21 20:25:40 dertobi123 Exp $
+
+  21 Feb 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  amarok-1.4.5-r1.ebuild:
+  Stable on ppc wrt bug #166901.
 
   19 Feb 2007; <malc@gentoo.org> amarok-1.4.5-r1.ebuild:
   Stable on amd64 wrt security bug #166901
