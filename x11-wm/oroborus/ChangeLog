@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/oroborus
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.23 2006/07/01 21:01:52 nelchael Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.24 2007/02/21 22:40:30 jokey Exp $
+
+  21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
 *oroborus-2.0.18 (01 Jul 2006)
 

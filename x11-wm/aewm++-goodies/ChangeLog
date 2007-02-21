@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/aewm++-goodies
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++-goodies/ChangeLog,v 1.9 2006/02/03 15:02:20 nelchael Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++-goodies/ChangeLog,v 1.10 2007/02/21 22:35:07 jokey Exp $
+
+  21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   03 Feb 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   aewm++-goodies-1.0.ebuild:
