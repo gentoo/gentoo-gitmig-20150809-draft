@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/vbs
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/vbs/ChangeLog,v 1.4 2006/07/02 16:04:48 calchan Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/vbs/ChangeLog,v 1.5 2007/02/21 18:57:34 calchan Exp $
+
+  21 Feb 2007; Denis Dupeyron <calchan@gentoo.org> files/digest-vbs-1.4.0,
+  Manifest:
+  Transition to Manifest2.
 
   02 Jul 2006; Denis Dupeyron <calchan@gentoo.org> metadata.xml:
   Adjusted metadata, see bug #138062.
