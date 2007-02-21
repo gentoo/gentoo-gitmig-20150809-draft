@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libexif-gtk
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif-gtk/ChangeLog,v 1.19 2006/04/01 04:52:07 eradicator Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif-gtk/ChangeLog,v 1.20 2007/02/21 17:58:08 drac Exp $
+
+*libexif-gtk-0.3.5-r1 (21 Feb 2007)
+
+  21 Feb 2007; Samuli Suominen <drac@gentoo.org>
+  -files/libexif-gtk-0.3.3-gtk24.patch, -libexif-gtk-0.3.3.ebuild,
+  +libexif-gtk-0.3.5-r1.ebuild:
+  Fix bug 167729. Use emake. Install ChangeLog. Remove old version.
 
   01 Apr 2006; Jeremy Huddleston <eradicator@gentoo.org>
   +files/libexif-gtk-0.3.5-confcheck.patch, libexif-gtk-0.3.5.ebuild:
