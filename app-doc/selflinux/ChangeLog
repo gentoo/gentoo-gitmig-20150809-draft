@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/selflinux
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/selflinux/ChangeLog,v 1.15 2007/01/05 23:42:09 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/selflinux/ChangeLog,v 1.16 2007/02/21 20:55:56 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   05 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -selflinux-0.8.1.ebuild,
   -selflinux-0.10.0.ebuild:

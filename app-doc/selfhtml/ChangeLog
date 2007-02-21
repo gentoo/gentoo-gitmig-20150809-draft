@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/selfhtml
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/selfhtml/ChangeLog,v 1.14 2006/05/28 11:44:04 pylon Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/selfhtml/ChangeLog,v 1.15 2007/02/21 20:55:24 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   28 May 2006; Lars Weiler <pylon@gentoo.org> selfhtml-8.1.1.ebuild:
   Stable on all given arches, as there is a simple copy only during installation.
