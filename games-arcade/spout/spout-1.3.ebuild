@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/spout/spout-1.3.ebuild,v 1.4 2006/01/29 00:00:27 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/spout/spout-1.3.ebuild,v 1.5 2007/02/21 17:00:10 mr_bones_ Exp $
 
 inherit eutils games
 
 MY_P="spout-unix-${PV}"
 DESCRIPTION="Abstract Japanese caveflier / shooter"
-HOMEPAGE="http://code.mizzenblog.com/category/spout/"
-SRC_URI="http://code.mizzenblog.com/spout/${MY_P}.tar.bz2"
+HOMEPAGE="http://freshmeat.net/projects/spout/"
+SRC_URI="http://rohanpm.net/files/old/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
