@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmacpi
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpi/ChangeLog,v 1.19 2006/02/07 21:13:16 blubb Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpi/ChangeLog,v 1.20 2007/02/21 23:32:03 jokey Exp $
+
+  21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   07 Feb 2006; Simon Stelling <blubb@gentoo.org> wmacpi-2.1_rc1.ebuild:
   stable on amd64

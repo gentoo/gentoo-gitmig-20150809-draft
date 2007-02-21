@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmsensormon
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsensormon/ChangeLog,v 1.16 2006/02/02 16:33:13 nelchael Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsensormon/ChangeLog,v 1.17 2007/02/21 23:49:04 jokey Exp $
+
+  21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   02 Feb 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   wmsensormon-1.2.1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/guifications
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/guifications/ChangeLog,v 1.41 2007/01/27 02:49:49 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/guifications/ChangeLog,v 1.42 2007/02/21 23:30:10 jokey Exp $
+
+  21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
 *guifications-2.13_beta6 (27 Jan 2007)
 

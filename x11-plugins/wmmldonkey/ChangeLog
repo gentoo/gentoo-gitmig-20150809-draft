@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmldonkey
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmldonkey/ChangeLog,v 1.4 2006/02/03 13:47:38 nelchael Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmldonkey/ChangeLog,v 1.5 2007/02/21 23:41:15 jokey Exp $
+
+  21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   03 Feb 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   wmmldonkey-0.003.ebuild:

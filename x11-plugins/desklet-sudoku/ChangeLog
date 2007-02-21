@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/desklet-sudoku
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-sudoku/ChangeLog,v 1.3 2006/10/06 15:46:02 nixnut Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-sudoku/ChangeLog,v 1.4 2007/02/21 23:22:18 jokey Exp $
+
+  21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   06 Oct 2006; <nixnut@gentoo.org> desklet-sudoku-0.3.ebuild:
   Added ~ppc wrt bug 130966

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmaiload
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/ChangeLog,v 1.23 2006/08/05 08:16:11 hansmi Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/ChangeLog,v 1.24 2007/02/21 23:39:18 jokey Exp $
+
+  21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   05 Aug 2006; Michael Hanselmann <hansmi@gentoo.org>
   wmmaiload-2.2.1.ebuild:

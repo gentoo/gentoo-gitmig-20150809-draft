@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/desklet-sidecandygmail
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-sidecandygmail/ChangeLog,v 1.4 2006/03/24 23:14:05 agriffis Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-sidecandygmail/ChangeLog,v 1.5 2007/02/21 23:21:06 jokey Exp $
+
+  21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   24 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   desklet-sidecandygmail-0.4.2.ebuild:

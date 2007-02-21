@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmgtemp
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgtemp/ChangeLog,v 1.11 2006/02/02 16:28:10 nelchael Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgtemp/ChangeLog,v 1.12 2007/02/21 23:35:10 jokey Exp $
+
+  21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   02 Feb 2006; Krzysiek Pawlik <nelchael@gentoo.org> -wmgtemp-0.6.ebuild,
   wmgtemp-0.7.ebuild:

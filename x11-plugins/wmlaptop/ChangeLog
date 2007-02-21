@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmlaptop
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlaptop/ChangeLog,v 1.5 2006/01/31 19:38:33 nelchael Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlaptop/ChangeLog,v 1.6 2007/02/21 23:37:47 jokey Exp $
+
+  21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   31 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> wmlaptop-1.3.ebuild:
   Fixed DEPEND for modular X.
