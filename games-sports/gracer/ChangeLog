@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/gracer
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/ChangeLog,v 1.15 2006/09/27 07:21:41 blubb Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/ChangeLog,v 1.16 2007/02/21 23:54:04 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   27 Sep 2006; Simon Stelling <blubb@gentoo.org> gracer-0.1.5.ebuild:
   stable on amd64
