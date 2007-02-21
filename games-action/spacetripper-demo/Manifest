@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-DIST spacetripperdemo.sh 5179095
+DIST spacetripperdemo.sh 5179095 RMD160 56fcc475c1587a06a45861755a44d4148ee768c5 SHA1 a925ef9ec83241357bac460adf81ed36aa9c1f3d SHA256 0045e78c96f124cad6c04c6d69fef12db4b3cfe7e53ca91bfad84ce797144f21
 EBUILD spacetripper-demo-1.ebuild 1439 RMD160 c2fb81a06662f90d9aa27d574187d6cd9109c095 SHA1 edbb755b3ea03d2cf88537b78fad5663ae463b66 SHA256 3863b1ff5aaab1fbec085cef822cd3ad1af3025a3d2a50e04375d9e7ff89344a
 MD5 e234c90f711f78e3b11d36774db386cd spacetripper-demo-1.ebuild 1439
 RMD160 c2fb81a06662f90d9aa27d574187d6cd9109c095 spacetripper-demo-1.ebuild 1439
@@ -14,13 +11,6 @@ MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be525
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
 SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
-MD5 6a0fa9710525ff8873539df94f5c3986 files/digest-spacetripper-demo-1 65
-RMD160 bb87dbb7b852af9b4a1e473b8ab588df0fc4a9cb files/digest-spacetripper-demo-1 65
-SHA256 167a298a9c827186efd8f20798d00f4a262aeb26fe33218913bf4584200095c5 files/digest-spacetripper-demo-1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-
-iD8DBQFFUOMBkT4lNIS36YERAmrAAJ951L0/fF+Hz6fTj7j5LoEff/lSCACfd6GA
-43YCZJqSwbOryY8UoJDy4X0=
-=xYwr
------END PGP SIGNATURE-----
+MD5 a142be3a109565afb1f2e531069b5516 files/digest-spacetripper-demo-1 241
+RMD160 d85b15a44ee136e040a557e25a9548a9a53e697e files/digest-spacetripper-demo-1 241
+SHA256 df4dcd98a4ad9459dc4b63fc1f5e2bdd8adb79450aa77f6d65f1c869a5603685 files/digest-spacetripper-demo-1 241
