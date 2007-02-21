@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/color-theme
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/ChangeLog,v 1.22 2007/01/02 21:54:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/ChangeLog,v 1.23 2007/02/21 21:28:02 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   02 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   color-theme-6.6.0.ebuild:

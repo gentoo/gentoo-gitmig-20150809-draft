@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/slime
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.30 2007/01/28 04:32:04 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.31 2007/02/21 21:36:34 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   28 Jan 2007; Marius Mauch <genone@gentoo.org> slime-1.2.1.20050804.ebuild,
   slime-1.2.1.20051211.ebuild, slime-1.2.1.20060205.ebuild,

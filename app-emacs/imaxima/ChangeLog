@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/imaxima
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/ChangeLog,v 1.7 2006/10/31 13:13:19 je_fro Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/ChangeLog,v 1.8 2007/02/21 21:33:36 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   31 Oct 2006; Jeff Gardner <je_fro@gentoo.org>
   +files/imaxima-0.94b-imaxima.el.patch:
