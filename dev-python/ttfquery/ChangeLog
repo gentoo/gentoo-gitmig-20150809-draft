@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/ttfquery
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ttfquery/ChangeLog,v 1.5 2006/04/01 19:10:19 agriffis Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ttfquery/ChangeLog,v 1.6 2007/02/21 17:22:27 lucass Exp $
+
+  21 Feb 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  files/digest-ttfquery-1.0.0, Manifest:
+  Convert to Manifest2.
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> ttfquery-1.0.0.ebuild:
   Mark 1.0.0 ~ia64

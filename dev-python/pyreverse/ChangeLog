@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyreverse
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyreverse/ChangeLog,v 1.11 2006/04/01 18:50:11 agriffis Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyreverse/ChangeLog,v 1.12 2007/02/21 17:03:39 lucass Exp $
+
+  21 Feb 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  files/digest-pyreverse-0.4.2-r1, files/digest-pyreverse-0.5.1, Manifest:
+  Convert to Manifest2.
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> pyreverse-0.5.1.ebuild:
   Mark 0.5.1 ~ia64

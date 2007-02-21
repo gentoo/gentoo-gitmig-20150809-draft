@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/generator
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/generator/ChangeLog,v 1.8 2006/04/01 14:56:57 agriffis Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/generator/ChangeLog,v 1.9 2007/02/21 16:49:58 lucass Exp $
+
+  21 Feb 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  files/digest-generator-1.0.1, files/digest-generator-1.2.3, Manifest:
+  Convert to Manifest2.
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> generator-1.2.3.ebuild:
   Mark 1.2.3 ~ia64

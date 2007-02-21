@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pydispatcher
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydispatcher/ChangeLog,v 1.6 2006/04/01 15:19:47 agriffis Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydispatcher/ChangeLog,v 1.7 2007/02/21 16:55:22 lucass Exp $
+
+  21 Feb 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  files/digest-pydispatcher-1.0.0, files/digest-pydispatcher-1.0.1,
+  Manifest:
+  Convert to Manifest2.
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> pydispatcher-1.0.1.ebuild:
   Mark 1.0.1 ~ia64

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyifp
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyifp/ChangeLog,v 1.3 2006/04/01 15:23:01 agriffis Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyifp/ChangeLog,v 1.4 2007/02/21 16:59:48 lucass Exp $
+
+  21 Feb 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  files/digest-pyifp-0.2.2, Manifest:
+  Convert to Manifest2.
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> pyifp-0.2.2.ebuild:
   Mark 0.2.2 ~ia64

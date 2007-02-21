@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/ldaptor
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.18 2006/02/13 23:02:32 marienz Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.19 2007/02/21 16:52:16 lucass Exp $
+
+  21 Feb 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  files/digest-ldaptor-0.0.6, files/digest-ldaptor-0.0.42, Manifest:
+  Convert to Manifest2.
 
   13 Feb 2006; Marien Zwart <marienz@gentoo.org> ldaptor-0.0.42.ebuild:
   Do not pass -R to trial versions that do not support it.
