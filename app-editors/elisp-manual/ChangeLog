@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/elisp-manual
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/elisp-manual/ChangeLog,v 1.8 2005/01/01 13:23:30 eradicator Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elisp-manual/ChangeLog,v 1.9 2007/02/21 21:00:27 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   elisp-manual-21.2.8.ebuild:
