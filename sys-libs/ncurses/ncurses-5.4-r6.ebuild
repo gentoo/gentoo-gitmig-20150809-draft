@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r6.ebuild,v 1.13 2007/02/21 06:52:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r6.ebuild,v 1.14 2007/02/21 17:26:10 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -141,16 +141,7 @@ src_install() {
 		cp -pPR "${T}"/nxterm x/xterm
 		cp -pPR "${T}"/vt100 v
 	else
-		# Install xterm-debian terminfo entry to satisfy bug #18486
-		LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${D}/usr/$(get_libdir):${D}/$(get_libdir) \
-		TERMINFO=${D}/usr/share/terminfo \
-			"${D}"/usr/bin/tic "${FILESDIR}"/xterm-debian.ti
-
-		if use minimal ; then
-			cp "${D}"/usr/share/terminfo/x/xterm-debian "${D}"/etc/terminfo/x/
-			rm -r "${D}"/usr/share/terminfo
-		fi
-
+		use minimal && rm -r "${D}"/usr/share/terminfo
 		cd "${S}"
 		dodoc ANNOUNCE MANIFEST NEWS README* TO-DO doc/*.doc
 		use doc && dohtml -r doc/html/
