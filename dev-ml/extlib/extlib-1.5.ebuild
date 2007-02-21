@@ -1,9 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/extlib/extlib-1.5.ebuild,v 1.1 2006/09/14 16:23:22 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/extlib/extlib-1.5.ebuild,v 1.2 2007/02/21 00:49:35 nattfodd Exp $
 
-inherit findlib
-inherit eutils
+inherit findlib eutils
 
 DESCRIPTION="Standard library extensions for O'Caml"
 HOMEPAGE="http://ocaml-lib.sourceforge.net/"
