@@ -1,6 +1,13 @@
 # ChangeLog for sci-electronics/oregano
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.23 2006/11/07 21:44:05 gustavoz Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.24 2007/02/21 20:23:01 calchan Exp $
+
+  21 Feb 2007; Denis Dupeyron <calchan@gentoo.org> oregano-0.60.0.ebuild:
+  Fixed copyright date.
+
+  21 Feb 2007; Denis Dupeyron <calchan@gentoo.org>
+  files/digest-oregano-0.40.5, Manifest:
+  Transition to Manifest2.
 
   07 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org> oregano-0.60.0.ebuild:
   Stable on sparc
