@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.10.6.ebuild,v 1.13 2007/01/05 04:07:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.10.6.ebuild,v 1.14 2007/02/21 12:54:25 blubb Exp $
 
 inherit gnome.org flag-o-matic eutils autotools virtualx
 
@@ -56,7 +56,6 @@ pkg_setup() {
 set_gtk2_confdir() {
 	# An arch specific config directory is used on multilib systems
 	has_multilib_profile && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
-	use x86 && [ "$(get_libdir)" == "lib32" ] && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
 	GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0}
 }
 
@@ -70,12 +69,6 @@ src_unpack() {
 	# use an arch-specific config directory so that 32bit and 64bit versions
 	# dont clash on multilib systems
 	has_multilib_profile && epatch "${FILESDIR}"/${PN}-2.8.0-multilib.patch
-
-	# and this line is just here to make building emul-linux-x86-gtklibs a bit
-	# easier, so even this should be amd64 specific.
-	if use x86 && [ "$(get_libdir)" == "lib32" ]; then
-		epatch "${FILESDIR}"/${PN}-2.8.0-multilib.patch
-	fi
 
 	# -O3 and company cause random crashes in applications. Bug #133469
 	replace-flags -O3 -O2

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.14.10.ebuild,v 1.2 2007/02/04 03:12:33 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.14.10.ebuild,v 1.3 2007/02/21 12:49:26 blubb Exp $
 
 inherit eutils gnome2
 
@@ -41,10 +41,6 @@ src_unpack() {
 	# wont fight with each other on a multilib system
 	use amd64 && epatch ${FILESDIR}/pango-1.2.5-lib64.patch
 
-	# and this line is just here to make building emul-linux-x86-gtklibs a bit
-	# easier, so even this should be amd64 specific.
-	use x86 && [ "${CONF_LIBDIR}" == "lib32" ] && epatch ${FILESDIR}/pango-1.2.5-lib64.patch
-
 	epunt_cxx
 }
 
@@ -53,7 +49,6 @@ pkg_postinst() {
 		einfo "Generating modules listing..."
 
 		use amd64 && PANGO_CONFDIR="/etc/pango/${CHOST}"
-		use x86 && [ "${CONF_LIBDIR}" == "lib32" ] && PANGO_CONFDIR="/etc/pango/${CHOST}"
 
 		PANGO_CONFDIR=${PANGO_CONFDIR:=/etc/pango}
 		mkdir -p ${PANGO_CONFDIR}
