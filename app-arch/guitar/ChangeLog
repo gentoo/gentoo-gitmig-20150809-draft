@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/guitar
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/ChangeLog,v 1.16 2005/01/01 11:45:32 eradicator Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/ChangeLog,v 1.17 2007/02/21 19:55:04 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   18 Dec 2004; Simon Stelling <blubb@gentoo.org> guitar-0.1.4.ebuild:
   was testing for a long time, marking stable on amd64

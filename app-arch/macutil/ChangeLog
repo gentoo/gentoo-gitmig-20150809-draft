@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/macutil
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/macutil/ChangeLog,v 1.13 2005/12/11 19:11:40 grobian Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/macutil/ChangeLog,v 1.14 2007/02/21 19:55:57 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   11 Dec 2005; Fabian Groffen <grobian@gentoo.org> macutil-2.0_beta3.ebuild:
   Marked ~ppc-macos (bug #105847)
