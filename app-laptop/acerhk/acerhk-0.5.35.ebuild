@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/acerhk-0.5.35.ebuild,v 1.1 2007/02/20 23:36:44 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/acerhk-0.5.35.ebuild,v 1.2 2007/02/21 19:45:32 jurek Exp $
 
 inherit linux-mod
 
@@ -19,8 +19,6 @@ src_unpack()
 {
 	unpack ${A}
 	cd ${S}
-
-	epatch ${FILESDIR}/kernel-2.6.19-config.h.patch || die "epatch failed"
 }
 
 pkg_setup() {
