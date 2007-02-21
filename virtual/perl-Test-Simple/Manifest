@@ -17,10 +17,10 @@ EBUILD perl-Test-Simple-0.65.ebuild 516 RMD160 b3fbd466ec34ad36008dd9ca962e536cb
 MD5 c78cfc65c5a5380c925d0873653320d4 perl-Test-Simple-0.65.ebuild 516
 RMD160 b3fbd466ec34ad36008dd9ca962e536cba65b716 perl-Test-Simple-0.65.ebuild 516
 SHA256 feb157ab894b05be13c4f7f5cd7b8b21376d73a2e2bbca4be94beabf4c377d93 perl-Test-Simple-0.65.ebuild 516
-EBUILD perl-Test-Simple-0.66.ebuild 511 RMD160 02b88ce3d937b56585a2358795682559920b9069 SHA1 25bd6e8fcbd01e7fe013905330f13da0c1196166 SHA256 376bac818039302f62b3de083807dc4bafb05f4a7db8f74ca0baba5be54bbe3e
-MD5 4ca99d6b80c5133e5a7017343693729a perl-Test-Simple-0.66.ebuild 511
-RMD160 02b88ce3d937b56585a2358795682559920b9069 perl-Test-Simple-0.66.ebuild 511
-SHA256 376bac818039302f62b3de083807dc4bafb05f4a7db8f74ca0baba5be54bbe3e perl-Test-Simple-0.66.ebuild 511
+EBUILD perl-Test-Simple-0.66.ebuild 507 RMD160 7fdd47a4d45c992c983bee75a504d27507459f1e SHA1 b561d31aa3c41d1a3a6bc5d5555acf56a3dcce5e SHA256 adefef4e4696c19b636a7b673fa85ac4fb82bf689fea7f7c279862196440fd1d
+MD5 2bb1eaa57a522146f2c4bcbac2b4c278 perl-Test-Simple-0.66.ebuild 507
+RMD160 7fdd47a4d45c992c983bee75a504d27507459f1e perl-Test-Simple-0.66.ebuild 507
+SHA256 adefef4e4696c19b636a7b673fa85ac4fb82bf689fea7f7c279862196440fd1d perl-Test-Simple-0.66.ebuild 507
 EBUILD perl-Test-Simple-0.67.ebuild 517 RMD160 dbc0ddf78fe57a4ba3f28a02a1f23e9d2162f71a SHA1 30bede2c21feb0487b40683ac31b80e773c9633d SHA256 5cf1ff179cde612631fc4f71d9437aad4727b2e9c8bd9b17ba42d3a3a646a77c
 MD5 e1224fef6f66bff0a8a4b4fc4d29044e perl-Test-Simple-0.67.ebuild 517
 RMD160 dbc0ddf78fe57a4ba3f28a02a1f23e9d2162f71a perl-Test-Simple-0.67.ebuild 517
@@ -52,9 +52,9 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Test-Simple-0.67 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-Test-Simple-0.67 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-Test-Simple-0.67 0
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.6 (GNU/Linux)
+Version: GnuPG v2.0.2 (GNU/Linux)
 
-iD8DBQFFx2dCtG5z4I8BtQoRAoODAJ9OKLrEqbI+AsDOIS4Dh3/jKupXxACeI1GO
-gAALc47s6STI4Ff0uokIEA8=
-=leiO
+iD8DBQFF29bb8bi6rjpTunYRAvoSAKDLGCkjEMsMHsVV1Ez29doJQzwWewCg1wWM
+Mv2BAO14bdIPuvkOM4BQflc=
+=iorr
 -----END PGP SIGNATURE-----
