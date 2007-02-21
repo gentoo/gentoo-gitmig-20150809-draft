@@ -17,7 +17,7 @@
  dnl Check for Lua.
  AC_ARG_VAR(LUA_CFLAGS,    [C compiler flags for Lua])
  AC_ARG_VAR(LUA_LIBS,      [linker flags for Lua])
-@@ -124,14 +127,17 @@
+@@ -124,14 +127,18 @@
    AC_DEFINE(HAVE_LUA_H, 1, [Assuming <lua.h> is present])
    AC_DEFINE(HAVE_LUALIB_H, 1, [Assuing <lualib.h> is present])
  fi
@@ -25,8 +25,8 @@
  
 +if [[ "x$enable_speex" = "xyes" ]]; then
  dnl Check for Speex
--AC_CHECK_HEADERS(speex.h, [
-+AC_CHECK_HEADERS(speex/speex.h, [
++CPPFLAGS="$CPPFLAGS -I/usr/include/speex"
+ AC_CHECK_HEADERS(speex.h, [
    AC_CHECK_LIB(speex, speex_decoder_init, [
      LIBS="-lspeex $LIBS"
      AC_DEFINE(SPEEX, 1, [Speex support is enabled])

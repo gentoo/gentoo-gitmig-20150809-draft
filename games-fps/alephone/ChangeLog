@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/alephone
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/ChangeLog,v 1.17 2007/02/14 16:11:27 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/ChangeLog,v 1.18 2007/02/21 19:42:04 nyhm Exp $
+
+  21 Feb 2007; Tristan Heaven <nyhm@gentoo.org>
+  files/alephone-20061228-configure.patch:
+  Fix USE=speex, bug #167724
 
   14 Feb 2007; Simon Stelling <blubb@gentoo.org> alephone-20061228.ebuild:
   stable on amd64; security bug 162092
