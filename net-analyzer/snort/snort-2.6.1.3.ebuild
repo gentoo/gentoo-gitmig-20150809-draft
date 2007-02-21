@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.6.1.3.ebuild,v 1.3 2007/02/20 19:29:52 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.6.1.3.ebuild,v 1.4 2007/02/21 12:23:31 dragonheart Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -62,7 +62,6 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${PN}-2.6.1.2-libdir.patch"
 	epatch "${FILESDIR}/${PN}-2.6.1.1-libnet.patch"
-	use gre && epatch "${FILESDIR}/${PN}-2.6.1.1-gre.patch"
 	use react && epatch "${FILESDIR}/${PN}-2.6.1.2-react.patch"
 	sed -i "s:var RULE_PATH ../rules:var RULE_PATH /etc/snort/rules:" \
 		etc/snort.conf
@@ -96,7 +95,7 @@ src_compile() {
 		myconf="${myconf} --enable-react"
 	fi
 
-	use gre && --enable-gre
+	use gre && myconf="${myconf} --enable-gre"
 
 	myconf="${myconf} --with-libipq-includes=/usr/include/libipq"
 

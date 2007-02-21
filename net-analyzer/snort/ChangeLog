@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.120 2007/02/20 19:29:52 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.121 2007/02/21 12:23:31 dragonheart Exp $
+
+  21 Feb 2007; Daniel Black <dragonheart@gentoo.org> snort-2.6.1.2.ebuild,
+  snort-2.6.1.3.ebuild:
+  gre patches included in the latest. Fix ebuild error with USE=gre too.
+  Thanks Tobias bug #167730
 
   20 Feb 2007; Markus Rothe <corsair@gentoo.org> snort-2.6.1.3.ebuild:
   Stable on ppc64; bug #167730
