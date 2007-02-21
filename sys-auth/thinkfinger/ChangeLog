@@ -1,0 +1,11 @@
+# ChangeLog for sys-auth/thinkfinger
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/ChangeLog,v 1.1 2007/02/21 16:40:45 chainsaw Exp $
+
+*thinkfinger-0.2.2 (21 Feb 2007)
+
+  21 Feb 2007; Tony Vroon <chainsaw@gentoo.org> +metadata.xml,
+  +thinkfinger-0.2.2.ebuild:
+  Initial commit, ebuild by me but heavily inspired by the work of John
+  Schember <j5483@yahoo.com>. Closes bug #162297.
+
