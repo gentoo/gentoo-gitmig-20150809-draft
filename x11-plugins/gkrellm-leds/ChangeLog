@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-leds
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-leds/ChangeLog,v 1.17 2007/02/21 17:21:49 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-leds/ChangeLog,v 1.18 2007/02/21 21:19:52 lack Exp $
+
+  21 Feb 2007; Jim Ramsay <lack@gentoo.org> -gkrellm-leds-0.6.1.ebuild,
+  -gkrellm-leds-0.8.0.ebuild:
+  Cleaning up old versions for gkrellm-1.2 removal
 
   21 Feb 2007; Jim Ramsay <lack@gentoo.org> +metadata.xml:
   Accepting maintainership
