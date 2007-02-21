@@ -1,6 +1,13 @@
 # ChangeLog for app-text/tesseract
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.2 2007/02/05 16:50:56 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.3 2007/02/21 19:28:46 chutzpah Exp $
+
+*tesseract-1.03-r1 (21 Feb 2007)
+
+  21 Feb 2007; Patrick McLean <chutzpah@gentoo.org>
+  +tesseract-1.03-r1.ebuild:
+  Revision bump, for some reason this needs libtiff support specifically
+  turned off to actually work (bug #167047).
 
 *tesseract-1.03 (05 Feb 2007)
 
