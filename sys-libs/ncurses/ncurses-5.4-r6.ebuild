@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r6.ebuild,v 1.12 2006/06/07 18:46:54 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r6.ebuild,v 1.13 2007/02/21 06:52:44 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -158,18 +158,9 @@ src_install() {
 }
 
 pkg_preinst() {
-	if [[ ! -f ${ROOT}/etc/env.d/50ncurses ]] ; then
-		mkdir -p "${ROOT}"/etc/env.d
-		echo "CONFIG_PROTECT_MASK=\"/etc/terminfo\"" > \
-			"${ROOT}"/etc/env.d/50ncurses
-	fi
+	use unicode || preserve_old_lib /$(get_libdir)/libncursesw.so.5
 }
 
 pkg_postinst() {
-	# Old ncurses may still be around from old build tbz2's.
-	rm -f "${ROOT}"/lib/libncurses.so.5.[23] "${ROOT}"/usr/lib/lib{form,menu,panel}.so.5.[23]
-	if [[ $(get_libdir) != "lib" ]] ; then
-		rm -f "${ROOT}"/$(get_libdir)/libncurses.so.5.[23] \
-			"${ROOT}"/usr/$(get_libdir)/lib{form,menu,panel}.so.5.[23]
-	fi
+	use unicode || preserve_old_lib_notify /$(get_libdir)/libncursesw.so.5
 }
