@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7l.ebuild,v 1.15 2007/02/18 03:10:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7l.ebuild,v 1.16 2007/02/21 04:59:42 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -164,9 +164,9 @@ src_install() {
 }
 
 pkg_preinst() {
-	preserve_old_lib /usr/$(get_libdir)/libcrypto.so.0.9.6
+	preserve_old_lib /usr/$(get_libdir)/lib{crypto,ssl}.so.0.9.6
 }
 
 pkg_postinst() {
-	preserve_old_lib_notify /usr/$(get_libdir)/libcrypto.so.0.9.6
+	preserve_old_lib_notify /usr/$(get_libdir)/lib{crypto,ssl}.so.0.9.6
 }
