@@ -1,9 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.97.ebuild,v 1.8 2007/02/19 03:59:11 weeve Exp $
-
-WANT_AUTOMAKE="latest"
-WANT_AUTOCONF="latest"
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.97.ebuild,v 1.9 2007/02/21 02:49:07 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils autotools
 
@@ -13,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="gtk debug mp3rtp"
 
 RDEPEND=">=sys-libs/ncurses-5.2
@@ -47,8 +44,6 @@ src_compile() {
 	is-flag "-march=k6-2" && filter-flags "-fomit-frame-pointer"
 	is-flag "-march=k6" && filter-flags "-fomit-frame-pointer"
 
-	[ "`gcc-fullversion`" == "3.3.2" ] && replace-flags -march=2.0 -march=1.0
-
 	# The user sets compiler optimizations... But if you'd like
 	# lame to choose it's own... uncomment one of these (experiMENTAL)
 	# myconf="${myconf} --enable-expopt=full \
@@ -65,7 +60,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" pkghtmldir="/usr/share/doc/${PF}/html" install || die
+	emake DESTDIR="${D}" pkghtmldir="/usr/share/doc/${PF}/html" install || die
 
 	dodoc API ChangeLog HACKING README* STYLEGUIDE TODO USAGE
 	dohtml misc/lameGUI.html Dll/LameDLLInterface.htm
