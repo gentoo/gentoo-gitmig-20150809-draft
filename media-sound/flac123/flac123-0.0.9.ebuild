@@ -1,8 +1,7 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/flac123/flac123-0.0.9.ebuild,v 1.10 2007/02/11 11:01:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/flac123/flac123-0.0.9.ebuild,v 1.11 2007/02/21 02:49:46 vapier Exp $
 
-WANT_AUTOCONF=2.5
 WANT_AUTOMAKE=1.6
 
 inherit eutils autotools
@@ -13,7 +12,7 @@ SRC_URI="mirror://sourceforge/flac-tools/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc ppc64 ~sh sparc x86"
+KEYWORDS="amd64 arm ~ppc ppc64 sh sparc x86"
 IUSE=""
 
 DEPEND="media-libs/flac
