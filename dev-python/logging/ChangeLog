@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/logging
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logging/ChangeLog,v 1.10 2006/04/01 15:06:01 agriffis Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logging/ChangeLog,v 1.11 2007/02/21 16:30:14 lucass Exp $
+
+  21 Feb 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  files/digest-logging-0.4.7, files/digest-logging-0.4.9.5, Manifest:
+  Convert to Manifest2.
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> logging-0.4.9.6.ebuild:
   Mark 0.4.9.6 ~ia64

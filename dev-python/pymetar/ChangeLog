@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pymetar
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymetar/ChangeLog,v 1.8 2006/04/01 18:46:21 agriffis Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymetar/ChangeLog,v 1.9 2007/02/21 16:24:48 lucass Exp $
+
+  21 Feb 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  files/digest-pymetar-0.8, files/digest-pymetar-0.10,
+  files/digest-pymetar-0.12, Manifest:
+  Convert to Manifest2.
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> pymetar-0.12.ebuild:
   Mark 0.12 ~ia64
