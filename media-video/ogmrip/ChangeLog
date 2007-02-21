@@ -1,6 +1,12 @@
 # ChangeLog for media-video/ogmrip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ChangeLog,v 1.21 2007/02/06 18:12:33 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ChangeLog,v 1.22 2007/02/21 18:31:25 beandog Exp $
+
+  21 Feb 2007; Steve Dibb <beandog@gentoo.org>
+  -files/ogmrip-0.10.0-mp3-quality.patch,
+  -files/ogmrip-0.10.0-x264-suboptions.patch, -ogmrip-0.10.0-r1.ebuild,
+  -ogmrip-0.10.0-r2.ebuild:
+  Remove old versions, patches
 
 *ogmrip-0.10.2 (06 Feb 2007)
 
