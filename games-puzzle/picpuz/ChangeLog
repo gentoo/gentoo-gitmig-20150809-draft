@@ -1,0 +1,10 @@
+# ChangeLog for games-puzzle/picpuz
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/picpuz/ChangeLog,v 1.1 2007/02/21 18:36:38 mr_bones_ Exp $
+
+*picpuz-06 (21 Feb 2007)
+
+  21 Feb 2007; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +picpuz-06.ebuild:
+  initial commit - ebuild submitted by Wojciech Myrda via bug #158391
+
