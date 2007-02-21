@@ -1,6 +1,9 @@
 # ChangeLog for dev-php4/pecl-radius
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-radius/ChangeLog,v 1.3 2006/03/03 07:36:44 sebastian Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-radius/ChangeLog,v 1.4 2007/02/21 23:48:42 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   03 Mar 2006; Sebastian Bergmann <sebastian@gentoo.org>
   pecl-radius-1.2.4.ebuild:

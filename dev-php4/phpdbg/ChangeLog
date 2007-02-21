@@ -1,6 +1,9 @@
 # ChangeLog for dev-php4/phpdbg
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/phpdbg/ChangeLog,v 1.7 2007/01/28 06:36:35 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/phpdbg/ChangeLog,v 1.8 2007/02/21 23:50:35 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   28 Jan 2007; Marius Mauch <genone@gentoo.org> phpdbg-2.11.32.ebuild,
   phpdbg-2.13.1.ebuild:
