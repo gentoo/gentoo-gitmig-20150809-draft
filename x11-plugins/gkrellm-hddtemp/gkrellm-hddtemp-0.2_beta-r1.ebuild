@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/gkrellm-hddtemp-0.2_beta.ebuild,v 1.20 2006/12/16 21:55:39 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/gkrellm-hddtemp-0.2_beta-r1.ebuild,v 1.1 2007/02/21 20:04:30 lack Exp $
 
 inherit multilib
 
@@ -16,7 +16,8 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 ppc sparc x86"
 
 DEPEND="=app-admin/gkrellm-2*"
-RDEPEND=">=app-admin/hddtemp-0.3_beta6"
+RDEPEND="${DEPEND}
+	>=app-admin/hddtemp-0.3_beta6"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
@@ -25,31 +26,14 @@ src_unpack() {
 }
 
 src_compile() {
-	GKRELLM1=0
-	GKRELLM2=0
-	if [ -f /usr/bin/gkrellm2 ]; then
-		GKRELLM2=1
-		einfo "Building plugin for gkrellm-2.*"
-		make gkrellm2 || die
-	elif [ -f /usr/bin/gkrellm ]; then
-		GKRELLM1=1
-		einfo "Building plugin for gkrellm-1.*"
-		make gkrellm1 || die
-	fi
+	make gkrellm2 || die
 }
 
 src_install() {
 	dodoc README COPYING
-	if [ $GKRELLM1 = 1 ]; then
-		einfo "Installing plugin for gkrellm-1.*"
-		insinto /usr/$(get_libdir)/gkrellm/plugins
-		doins gkrellm-hddtemp.so
-	fi
-	if [ $GKRELLM2 = 1 ]; then
-		einfo "Installing plugin for gkrellm-2.*"
-		insinto /usr/$(get_libdir)/gkrellm2/plugins
-		doins gkrellm-hddtemp.so
-	fi
+
+	insinto /usr/$(get_libdir)/gkrellm2/plugins
+	doins gkrellm-hddtemp.so
 }
 
 pkg_postinst() {
