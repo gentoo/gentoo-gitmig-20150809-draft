@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.237 2007/02/21 04:01:51 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.238 2007/02/21 12:20:25 jer Exp $
+
+  21 Feb 2007; Jeroen Roovers <jer@gentoo.org> vim-core-7.0.174.ebuild:
+  Stable for HPPA (bug #167816).
 
   21 Feb 2007; Joseph Jezak <josejx@gentoo.org> vim-core-7.0.174.ebuild:
   Marked ppc stable for bug #167816.
