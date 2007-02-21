@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2612 2007/02/20 04:41:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2613 2007/02/21 06:42:30 anant Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -505,6 +505,9 @@ dev-php5/eaccelerator:disassembler - Enable the eA disassembler.
 dev-php5/pecl-imagick:graphicsmagick - Use graphicsmagick instead of imagemagick
 dev-php5/pecl-pdo-oci:oci8-instant-client - Use dev-db/oracle-instantclient-basic as Oracle provider instead of requiring a full Oracle server install
 dev-php5/pecl-pdo:oci8-instant-client - Use dev-db/oracle-instantclient-basic as Oracle provider instead of requiring a full Oracle server install
+dev-php5/php-gtk:mozembed - Enable GtkMozembed support using either Mozilla or Firefox as backend
+dev-php5/php-gtk:sourceview - Enable source code highlighting widget using GtkSourceView
+dev-php5/php-gtk:nolibglade - Disable support for libglade
 dev-php5/znf:pear-db - Include support for PEAR-DB.
 dev-php5/znf:smarty - Include support for Smarty.
 dev-python/cgkit:3ds - enable support for importing 3D Studio models
