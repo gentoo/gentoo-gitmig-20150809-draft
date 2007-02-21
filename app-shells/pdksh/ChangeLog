@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/pdksh
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdksh/ChangeLog,v 1.18 2005/12/04 19:32:30 tgall Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdksh/ChangeLog,v 1.19 2007/02/21 23:11:02 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   04 Dec 2005; Tom Gall <tgall@gentoo.org> pdksh-5.2.14-r4.ebuild:
   stable on ppc64

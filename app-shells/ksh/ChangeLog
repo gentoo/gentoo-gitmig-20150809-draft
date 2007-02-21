@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/ksh
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.27 2006/10/13 05:43:55 corsair Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.28 2007/02/21 23:10:32 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   13 Oct 2006; Markus Rothe <corsair@gentoo.org> ksh-93.20060214-r1.ebuild:
   Added ~ppc64
