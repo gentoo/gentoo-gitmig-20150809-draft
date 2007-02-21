@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/hping
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.41 2007/02/03 22:20:02 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.42 2007/02/21 22:31:15 masterdriverz Exp $
+
+  21 Feb 2007; Charlie Shepherd <masterdriverz@gentoo.org> metadata.xml:
+  avenj has retired - removing from metadata
 
   03 Feb 2007; Jason Wever <weeve@gentoo.org> hping-3_pre20051105.ebuild:
   Added ~sparc keyword.
