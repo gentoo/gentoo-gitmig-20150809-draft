@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/imhangul-status-applet
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul-status-applet/ChangeLog,v 1.3 2006/11/13 14:38:50 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul-status-applet/ChangeLog,v 1.4 2007/02/21 22:04:42 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   13 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   imhangul-status-applet-0.2-r1.ebuild, imhangul-status-applet-0.3.ebuild:

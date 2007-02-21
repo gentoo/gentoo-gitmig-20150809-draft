@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/kanjipad
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kanjipad/ChangeLog,v 1.11 2006/10/14 09:20:14 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kanjipad/ChangeLog,v 1.12 2007/02/21 22:05:08 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   14 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> kanjipad-2.0.0.ebuild:
   Add missing pkgconfig dependencies, thanks to Patrick Lauer in bug #151272.

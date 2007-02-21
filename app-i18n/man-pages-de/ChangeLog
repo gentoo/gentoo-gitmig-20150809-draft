@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/man-pages-de
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/ChangeLog,v 1.1 2005/09/02 04:28:32 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/ChangeLog,v 1.2 2007/02/21 22:06:30 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   10 Aug 2004; <solar@gentoo.org> manpages-de-0.4.ebuild:
   fixed security problem with ebuild

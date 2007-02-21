@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/chinput
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/chinput/ChangeLog,v 1.4 2006/02/10 21:52:38 liquidx Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/chinput/ChangeLog,v 1.5 2007/02/21 22:00:39 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   10 Feb 2006; Alastair Tse <liquidx@gentoo.org>
   -files/chinput-3.0.2-config.patch, -files/chinput-3.0.2-debian.patch,

@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/man-pages-nl
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-nl/ChangeLog,v 1.1 2005/09/02 04:26:29 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-nl/ChangeLog,v 1.2 2007/02/21 22:07:33 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *man-pages-nl-0.13.3 (01 Sep 2005)
 
