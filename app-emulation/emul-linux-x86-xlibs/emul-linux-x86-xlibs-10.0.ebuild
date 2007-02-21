@@ -1,9 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-10.0.ebuild,v 1.2 2007/02/19 21:57:34 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-10.0.ebuild,v 1.3 2007/02/21 09:29:52 blubb Exp $
 
-DESCRIPTION="Provides precompiled 32bit libraries"
-HOMEPAGE="http://amd64.gentoo.org/emul/content.xml"
+inherit emul-libs
+
 SRC_URI="mirror://gentoo/fontconfig-2.4.2.tbz2
 	mirror://gentoo/freetype-2.1.10-r2.tbz2
 	mirror://gentoo/glut-3.7.1.tbz2
@@ -41,45 +41,13 @@ LICENSE="fontconfig FTL GPL-2 LGPL-2 glut libdrm libICE libSM libX11 libXau
 		libXaw libXcomposite libXcursor libXdamage libXdmcp libXext libXfixes libXft
 		libXi libXinerama libXmu libXp libXpm libXrandr libXrender libXScrnSaver libXt
 		libXtst libXv libXvMC libXxf86dga libXxf86dga libXxf86vm"
-SLOT="0"
 KEYWORDS="-* ~amd64"
 IUSE="opengl"
-
-RESTRICT="strip"
-S=${WORKDIR}
 
 DEPEND=""
 RDEPEND=">=app-emulation/emul-linux-x86-baselibs-10.0
 	x11-libs/libX11
 	opengl? ( app-admin/eselect-opengl )"
-
-pkg_setup() {
-	einfo "Note: You can safely ignore the 'trailing garbage after EOF'"
-	einfo "      warnings below"
-}
-
-src_unpack() {
-	unpack ${A}
-
-	# we only want the libs
-	ALLOWED="${S}/etc/env.d"
-	find ${S} ! -type d ! -name '*.so*' | grep -v "${ALLOWED}" | xargs rm -f
-}
-
-src_install() {
-	for dir in etc/env.d etc/revdep-rebuild ; do
-		if [[ -d ${S}/${dir} ]] ; then
-			for f in ${S}/${dir}/* ; do
-				mv -f $f{,-emul}
-			done
-		fi
-	done
-
-	# remove void directories or portage will show weird output
-	find ${S} -type d -depth | xargs rmdir 2&>/dev/null
-
-	cp -a "${WORKDIR}"/* "${D}"/ || die "copying files failed!"
-}
 
 pkg_postinst() {
 	#update GL symlinks
