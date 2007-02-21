@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/mirrorselect
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.65 2006/07/15 16:24:19 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.66 2007/02/21 23:04:04 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   15 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   mirrorselect-1.2.ebuild:

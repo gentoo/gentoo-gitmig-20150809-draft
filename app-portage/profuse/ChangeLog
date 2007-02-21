@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/profuse
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.54 2006/06/25 16:50:45 blubb Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.55 2007/02/21 23:05:57 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   25 Jun 2006; Simon Stelling <blubb@gentoo.org> profuse-0.25.4.ebuild:
   stable on amd64
