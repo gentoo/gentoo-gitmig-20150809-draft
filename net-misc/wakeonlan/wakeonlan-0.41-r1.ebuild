@@ -1,9 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wakeonlan/wakeonlan-0.41-r1.ebuild,v 1.3 2006/12/14 21:35:37 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wakeonlan/wakeonlan-0.41-r1.ebuild,v 1.4 2007/02/21 00:41:00 jokey Exp $
 
-inherit eutils
-inherit perl-app
+inherit eutils perl-app
 
 DESCRIPTION="Client for Wake-On-LAN"
 HOMEPAGE="http://gsd.di.uminho.pt/jpo/software/wakeonlan/"

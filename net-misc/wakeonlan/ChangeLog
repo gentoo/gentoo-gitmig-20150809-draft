@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wakeonlan
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wakeonlan/ChangeLog,v 1.14 2007/01/08 02:22:31 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wakeonlan/ChangeLog,v 1.15 2007/02/21 00:41:00 jokey Exp $
+
+  21 Feb 2007; Markus Ullmann <jokey@gentoo.org> wakeonlan-0.41-r1.ebuild:
+  Fix multiple inheritance
 
   08 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -wakeonlan-0.41.ebuild:
   QA: Removed unused versions.
