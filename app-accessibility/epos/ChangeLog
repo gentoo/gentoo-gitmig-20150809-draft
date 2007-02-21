@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/epos
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/ChangeLog,v 1.18 2007/01/04 13:49:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/ChangeLog,v 1.19 2007/02/21 19:21:09 peper Exp $
+
+  21 Feb 2007; <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> epos-2.5.37.ebuild:
   Fix broken autotools handling.

@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/festival-freebsoft-utils
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-freebsoft-utils/ChangeLog,v 1.13 2006/01/28 23:41:19 williamh Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-freebsoft-utils/ChangeLog,v 1.14 2007/02/21 19:21:35 peper Exp $
+
+  21 Feb 2007; <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *festival-freebsoft-utils-0.6 (28 Jan 2006)
 
