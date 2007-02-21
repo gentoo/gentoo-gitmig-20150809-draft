@@ -1,6 +1,14 @@
 # ChangeLog for app-forensics/foremost
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/ChangeLog,v 1.7 2007/02/09 07:13:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/ChangeLog,v 1.8 2007/02/21 19:58:37 ikelos Exp $
+
+*foremost-1.4 (21 Feb 2007)
+
+  21 Feb 2007; Mike Auty <ikelos@gentoo.org>
+  +files/foremost-1.4-config-location.patch, metadata.xml,
+  +foremost-1.4.ebuild:
+  Version bump, and taking over maintainership of the package. Fixes bug
+  #144065.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
