@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/thinkfinger-0.2.2.ebuild,v 1.1 2007/02/21 16:40:45 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/thinkfinger-0.2.2-r1.ebuild,v 1.1 2007/02/21 17:15:41 chainsaw Exp $
 
 DESCRIPTION="Support for the UPEK/SGS Thomson Microelectronics fingerprint reader, often seen in Thinkpads"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -17,12 +17,14 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="pam"
 
+inherit pam
+
 src_compile() {
 	econf \
 		$(use_enable pam) \
+		"--with-securedir=$(getpam_mod_dir)" \
 		|| die
-
-	emake || die "make failed"
+	emake || die
 }
 
 src_install() {
