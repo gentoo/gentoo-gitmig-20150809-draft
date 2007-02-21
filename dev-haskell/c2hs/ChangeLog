@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/c2hs
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.21 2006/10/11 18:14:38 dcoutts Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.22 2007/02/21 23:17:54 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   11 Oct 2006; Duncan Coutts <dcoutts@gentoo.org>
   +files/c2hs-0.14.5-ghc66.patch, c2hs-0.14.5.ebuild:
