@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glsof/glsof-0.9.17.ebuild,v 1.4 2005/07/26 14:23:47 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glsof/glsof-0.9.17.ebuild,v 1.5 2007/02/21 18:51:35 ticho Exp $
 
 inherit gnome2  # Saves us work
 
@@ -23,5 +23,12 @@ RDEPEND=">=x11-libs/gtk+-2.3.1
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_unpack() {
+	unpack ${A} || die
+	cd ${S}
+	sed -i -e "s:^glsof_LDFLAGS = :glsof_LDFLAGS = -export-dynamic :" \
+		src/Makefile.in
+}
 
 DOCS="AUTHORS COPYING ChangeLog INSTALL README"
