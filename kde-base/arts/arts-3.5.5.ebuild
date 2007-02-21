@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.5.ebuild,v 1.10 2007/01/05 16:54:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.5.ebuild,v 1.11 2007/02/21 10:40:28 blubb Exp $
 
 inherit kde flag-o-matic eutils versionator
 set-kdedir 3.5
@@ -39,6 +39,10 @@ PATCHES="${FILESDIR}/arts-1.5.0-bindnow.patch
 
 src_unpack() {
 	kde_src_unpack
+
+	sed -i -e "s:GENTOO_LIB64:$(get_abi_LIBDIR amd64):" \
+		-e "s:GENTOO_LIB32:$(get_abi_LIBDIR x86):" artsc/artsdsp.in \
+		|| die "multilib-sed failed"
 
 	# Alternative to arts-1.4-mcopidl.patch, make sure that flags are supported
 	# before trying to use them, for non-GCC, vanilla GCC or GCC 4.1 compilers
