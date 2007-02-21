@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/ipodslave
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/ipodslave/ChangeLog,v 1.10 2006/07/02 18:28:36 jhuebel Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/ipodslave/ChangeLog,v 1.11 2007/02/21 22:56:09 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   02 Jul 2006; Jason Huebel <jhuebel@gentoo.org> ipodslave-0.7.3.ebuild:
   stable on x86 and amd64
