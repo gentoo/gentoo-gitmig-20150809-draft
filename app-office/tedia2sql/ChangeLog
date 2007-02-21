@@ -1,6 +1,9 @@
 # ChangeLog for app-office/tedia2sql
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/tedia2sql/ChangeLog,v 1.7 2006/02/11 21:25:29 mcummings Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/tedia2sql/ChangeLog,v 1.8 2007/02/21 22:51:49 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   11 Feb 2006; Michael Cummings <mcummings@gentoo.org>
   tedia2sql-1.2.8.ebuild:
