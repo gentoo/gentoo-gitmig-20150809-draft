@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gal
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.116 2007/01/10 06:35:21 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.117 2007/02/21 16:08:41 dang Exp $
+
+  21 Feb 2007; Daniel Gryniewicz <dang@gentoo.org> files/digest-gal-1.99.11,
+  Manifest:
+  Fix new-style manifest
 
   10 Jan 2007; Mart Raudsepp <leio@gentoo.org> -files/gal-0.24-sgml-1.patch,
   -gal-2.2.4.ebuild, -gal-2.4.1.ebuild:
