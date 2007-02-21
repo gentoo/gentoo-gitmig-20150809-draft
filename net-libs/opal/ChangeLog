@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/opal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.17 2007/01/19 01:21:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.18 2007/02/21 23:04:28 remi Exp $
+
+*opal-2.2.5 (21 Feb 2007)
+
+  21 Feb 2007; Remi Cardona <remi@gentoo.org> +opal-2.2.5.ebuild:
+  bumping opal to 2.2.5
 
   19 Jan 2007; Jeroen Roovers <jer@gentoo.org> opal-2.2.3.ebuild:
   Stable for HPPA (bug #147751).
