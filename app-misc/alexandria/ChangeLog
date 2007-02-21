@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/alexandria
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.18 2006/08/20 07:50:41 wormo Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.19 2007/02/21 22:19:37 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   20 Aug 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   alexandria-0.6.0.ebuild, alexandria-0.6.1.ebuild:

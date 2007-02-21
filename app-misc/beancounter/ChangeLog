@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/beancounter
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beancounter/ChangeLog,v 1.8 2006/05/09 10:06:21 satya Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beancounter/ChangeLog,v 1.9 2007/02/21 22:20:39 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *beancounter-0.8.7 (09 May 2006)
 

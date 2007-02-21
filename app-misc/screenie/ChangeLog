@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/screenie
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screenie/ChangeLog,v 1.5 2006/10/23 03:51:37 chriswhite Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screenie/ChangeLog,v 1.6 2007/02/21 22:42:02 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   23 Oct 2006; Chris White <chriswhite@gentoo.org> ChangeLog:
   Signed manifest test for new gnupg

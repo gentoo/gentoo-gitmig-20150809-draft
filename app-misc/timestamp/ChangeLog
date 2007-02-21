@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/timestamp
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/timestamp/ChangeLog,v 1.5 2006/09/03 19:56:25 blubb Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/timestamp/ChangeLog,v 1.6 2007/02/21 22:44:55 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   03 Sep 2006; <blubb@gentoo.org> timestamp-1.1.ebuild:
   stable on amd64

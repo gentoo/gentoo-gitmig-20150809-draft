@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/cw
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/ChangeLog,v 1.10 2007/01/28 05:05:11 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/ChangeLog,v 1.11 2007/02/21 22:25:03 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   28 Jan 2007; Marius Mauch <genone@gentoo.org> cw-1.0.10.ebuild,
   cw-1.0.12.ebuild, cw-1.0.14.ebuild:

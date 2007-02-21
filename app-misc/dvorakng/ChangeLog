@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/dvorakng
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dvorakng/ChangeLog,v 1.8 2005/04/21 19:10:59 blubb Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dvorakng/ChangeLog,v 1.9 2007/02/21 22:28:22 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> dvorakng-0.6.0.ebuild:
   stable on amd64

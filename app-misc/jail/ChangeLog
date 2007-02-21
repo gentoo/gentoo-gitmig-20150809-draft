@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/jail
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/ChangeLog,v 1.19 2005/06/09 22:00:49 gustavoz Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/ChangeLog,v 1.20 2007/02/21 22:33:51 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   09 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org> jail-1.9-r2.ebuild:
   Stable on sparc

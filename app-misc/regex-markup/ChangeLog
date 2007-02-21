@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/regex-markup
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/regex-markup/ChangeLog,v 1.9 2007/01/27 10:58:31 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/regex-markup/ChangeLog,v 1.10 2007/02/21 22:39:33 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *regex-markup-0.10.0 (27 Jan 2007)
 

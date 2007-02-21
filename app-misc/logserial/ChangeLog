@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/logserial
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/logserial/ChangeLog,v 1.4 2006/02/20 18:21:32 malverian Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/logserial/ChangeLog,v 1.5 2007/02/21 22:35:44 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   20 Feb 2006; <malverian@gentoo.org> logserial-0.4.2.ebuild:
   Minor ebuild cleanup
