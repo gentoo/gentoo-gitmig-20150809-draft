@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/db4o
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/db4o/ChangeLog,v 1.4 2006/03/20 00:47:46 metalgod Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/db4o/ChangeLog,v 1.5 2007/02/21 23:06:44 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> files/digest-db4o-4.6,
+  files/digest-db4o-5.0, ChangeLog:
+  Transition to Manifest2.
 
   20 Mar 2006; Luis Medinas <metalgod@gentoo.org> db4o-5.0.ebuild:
   Added ~amd64 keyword. Closes bug #124194.
