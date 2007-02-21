@@ -1,10 +1,15 @@
 # ChangeLog for sci-libs/gsl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/ChangeLog,v 1.19 2007/02/21 15:14:51 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/ChangeLog,v 1.20 2007/02/21 15:41:09 markusle Exp $
+
+*gsl-1.9 (21 Feb 2007)
+
+  21 Feb 2007; Markus Dittrich <markusle@gentoo.org> +gsl-1.9.ebuild:
+  Version bump.
 
   21 Feb 2007; Markus Dittrich <markusle@gentoo.org> gsl-1.8.ebuild:
-  Removed filtering of mfpmath=sse since otherwise tests fail
-  on a mfpmath=sse toolchain.
+  Removed filtering of -mfpmath=sse since otherwise tests fail
+  on a -mfpmath=sse built toolchain.
 
   06 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> gsl-1.8.ebuild:
   Stable on sparc
