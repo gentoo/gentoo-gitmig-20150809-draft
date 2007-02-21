@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.0.5.ebuild,v 1.7 2007/02/18 12:44:26 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.0.5.ebuild,v 1.8 2007/02/21 02:47:57 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,23 +10,21 @@ SRC_URI="ftp://vsftpd.beasts.org/users/cevans/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="~alpha ~amd64 arm ia64 ppc ppc64 s390 sh sparc x86"
 IUSE="caps logrotate pam tcpd ssl selinux xinetd"
 
 DEPEND="caps? ( sys-libs/libcap )
 	pam? ( || ( virtual/pam sys-libs/pam ) )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
-	ssl? ( >=dev-libs/openssl-0.9.7d )
-"
+	ssl? ( >=dev-libs/openssl-0.9.7d )"
 RDEPEND="${DEPEND}
 	net-ftp/ftpbase
 	logrotate? ( app-admin/logrotate )
 	selinux? ( sec-policy/selinux-ftpd )
-	xinetd? ( sys-apps/xinetd )
-"
+	xinetd? ( sys-apps/xinetd )"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	# Patch the source, config and the manpage to use /etc/vsftpd/
@@ -57,10 +55,10 @@ src_compile() {
 src_install() {
 	into /usr
 	doman vsftpd.conf.5 vsftpd.8
-	dosbin vsftpd
+	dosbin vsftpd || die
 
 	dodoc AUDIT BENCHMARKS BUGS Changelog FAQ \
-		LICENSE README README.security REWARD SIZE \
+		README README.security REWARD SIZE \
 		SPEED TODO TUNING
 	newdoc vsftpd.conf vsftpd.conf.example
 
