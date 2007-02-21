@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-HTML_Common
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Common/ChangeLog,v 1.33 2006/05/21 01:21:20 chtekk Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Common/ChangeLog,v 1.34 2007/02/21 23:17:37 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   21 May 2006; Luca Longinotti <chtekk@gentoo.org>
   -PEAR-HTML_Common-1.2.1.ebuild:
