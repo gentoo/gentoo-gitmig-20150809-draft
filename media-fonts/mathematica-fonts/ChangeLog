@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/mathematica-fonts
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mathematica-fonts/ChangeLog,v 1.5 2006/11/26 23:49:23 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mathematica-fonts/ChangeLog,v 1.6 2007/02/21 16:57:39 opfer Exp $
+
+  21 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  mathematica-fonts-5.2.ebuild:
+  stable x86; bug 167022
 
   26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   mathematica-fonts-5.2.ebuild:
