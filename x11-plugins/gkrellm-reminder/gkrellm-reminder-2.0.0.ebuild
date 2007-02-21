@@ -1,12 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-reminder/gkrellm-reminder-2.0.0.ebuild,v 1.11 2005/04/27 20:33:48 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-reminder/gkrellm-reminder-2.0.0.ebuild,v 1.12 2007/02/21 17:28:59 lack Exp $
 
 inherit multilib
 
 IUSE=""
 DESCRIPTION="a Reminder Plugin for GKrellM2"
-SRC_URI="http://web.wt.net/~billw/gkrellm/Plugins/${P}.tar.gz"
+SRC_URI="http://members.dslextreme.com/users/billw/gkrellm/Plugins/${P}.tar.gz"
 HOMEPAGE="http://www.gkrellm.net/"
 
 SLOT="2"
