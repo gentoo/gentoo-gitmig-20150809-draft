@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netsed
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netsed/ChangeLog,v 1.5 2007/02/09 04:50:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netsed/ChangeLog,v 1.6 2007/02/21 22:35:27 masterdriverz Exp $
+
+  21 Feb 2007; Charlie Shepherd <masterdriverz@gentoo.org> metadata.xml:
+  avenj has retired - removing from metadata
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
