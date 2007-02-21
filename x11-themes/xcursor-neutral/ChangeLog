@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/xcursor-neutral
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-neutral/ChangeLog,v 1.2 2006/04/30 18:59:17 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-neutral/ChangeLog,v 1.3 2007/02/21 22:58:32 jokey Exp $
+
+  21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   30 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   xcursor-neutral-1.13a.ebuild:
