@@ -1,6 +1,9 @@
 # ChangeLog for app-text/reed
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/reed/ChangeLog,v 1.5 2005/01/01 16:33:18 eradicator Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/reed/ChangeLog,v 1.6 2007/02/21 23:38:51 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   04 Nov 2003; Brandy Westcott brandy@gentoo.org reed-5.4.ebuild:
   Small fix to install docs.

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/flpsed
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/ChangeLog,v 1.10 2006/11/05 19:30:56 dang Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/ChangeLog,v 1.11 2007/02/21 23:27:03 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   05 Nov 2006; Daniel Gryniewicz <dang@gentoo.org> flpsed-0.3.7.ebuild:
   Marked stable on amd64 for bug #151424

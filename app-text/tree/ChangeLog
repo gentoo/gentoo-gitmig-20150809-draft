@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tree
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.31 2005/08/30 14:15:49 ka0ttic Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.32 2007/02/21 23:42:31 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   30 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> +files/tree.bashcomp,
   tree-1.5.0.ebuild:

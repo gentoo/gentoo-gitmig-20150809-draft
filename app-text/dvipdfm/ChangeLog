@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dvipdfm
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfm/ChangeLog,v 1.12 2006/04/10 09:20:07 ehmsen Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfm/ChangeLog,v 1.13 2007/02/21 23:25:19 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   10 Apr 2006; Martin Ehmsen <ehmsen@gentoo.org> dvipdfm-0.13.2c.ebuild:
   Removed INSTALL, found by QA script.

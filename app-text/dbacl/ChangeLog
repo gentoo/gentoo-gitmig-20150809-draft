@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dbacl
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dbacl/ChangeLog,v 1.14 2006/09/17 19:23:48 steev Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dbacl/ChangeLog,v 1.15 2007/02/21 23:23:04 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   17 Sep 2006; Steev Klimaszewski <steev@gentoo.org> metadata.xml,
   dbacl-1.12.ebuild:
