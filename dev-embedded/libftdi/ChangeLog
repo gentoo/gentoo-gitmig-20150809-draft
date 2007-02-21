@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/libftdi
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/ChangeLog,v 1.7 2006/10/10 16:16:07 jokey Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/ChangeLog,v 1.8 2007/02/21 19:18:52 calchan Exp $
+
+  21 Feb 2007; Denis Dupeyron <calchan@gentoo.org> files/digest-libftdi-0.5,
+  files/digest-libftdi-0.6, files/digest-libftdi-0.7, Manifest:
+  Transition to Manifest2.
 
   10 Oct 2006; Markus Ullmann <jokey@gentoo.org> libftdi-0.7.ebuild:
   Works on ~amd64

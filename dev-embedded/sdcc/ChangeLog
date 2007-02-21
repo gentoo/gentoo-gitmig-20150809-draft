@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/sdcc
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.35 2006/09/02 18:52:57 calchan Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.36 2007/02/21 19:26:37 calchan Exp $
+
+  21 Feb 2007; Denis Dupeyron <calchan@gentoo.org> Manifest:
+  Transition to Manifest2.
 
   02 Sep 2006; Denis Dupeyron <calchan@gentoo.org> -sdcc-2.5.0.ebuild:
   Getting rid of sdcc-2.5.0 now that the 20060502 snapshot has been marked

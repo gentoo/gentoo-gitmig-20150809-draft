@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/gnusim8085
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnusim8085/ChangeLog,v 1.9 2006/09/20 16:24:35 calchan Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnusim8085/ChangeLog,v 1.10 2007/02/21 19:13:31 calchan Exp $
+
+  21 Feb 2007; Denis Dupeyron <calchan@gentoo.org>
+  files/digest-gnusim8085-1.2.89, Manifest:
+  Transition to Manifest2.
 
   20 Sep 2006; Denis Dupeyron <calchan@gentoo.org> gnusim8085-1.2.90.ebuild:
   Fixed doc installation.
