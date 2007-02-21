@@ -1,40 +1,40 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 03ef551e8c808ed3ed880625f8cb3105 ChangeLog 1625
-RMD160 a7572b7f36c3cb3b45350b3b8b63f27d591a9793 ChangeLog 1625
-SHA256 f7f510dba67068d9eb933e49274d0c4e49f7f0a4defd9e9b12358cf9d172712e ChangeLog 1625
-MD5 7cf6c46055f841330b7540122edfe404 files/digest-synce-trayicon-0.1 70
-RMD160 1ef2f74d84a34ad1f9ce73b24c068910f1b03ecd files/digest-synce-trayicon-0.1 70
-SHA256 572a9f85bc09df7b2f8037a5eb1a2558be36fbc3e6b45d648bb9ef42a1fb7898 files/digest-synce-trayicon-0.1 70
-MD5 6c8237704b30a6931b8db50b011af622 files/digest-synce-trayicon-0.7 70
-RMD160 2ba75630596d8c4ec25bdc56896b6e97f6ae589e files/digest-synce-trayicon-0.7 70
-SHA256 4c42223e984ec57c7b258b5c3a289784adea7eafa7de06f66e04838370e81569 files/digest-synce-trayicon-0.7 70
-MD5 507eb400a46be42eaf48af2f916299d9 files/digest-synce-trayicon-0.8 70
-RMD160 5b727b21781a7d200f3f121dee6171e106a98778 files/digest-synce-trayicon-0.8 70
-SHA256 0167634fd6bad60967d7153797643372dbed37f1b056b457c2e27e0d715738cb files/digest-synce-trayicon-0.8 70
-MD5 ecada659aab9cec7c3c8222653bf7ebe files/digest-synce-trayicon-0.9.0 72
-RMD160 742b2da1bd2b377386fc0a4cc0c2354cfa787723 files/digest-synce-trayicon-0.9.0 72
-SHA256 3fe96b1808cda3aea599efefbc4741cb40c5fa0fedf2fa9ce823e64cb2a820d4 files/digest-synce-trayicon-0.9.0 72
-MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
-RMD160 6a6d0f6bfe83e3a54c2d72444564ed6ab19857fe metadata.xml 156
-SHA256 7f72b73f6e0d6e26603d85e52cca524711faddf6b516640104c3b82aab4754fb metadata.xml 156
+DIST synce-trayicon-0.1.tar.gz 233272 RMD160 db97b81939577b0b1b42fa889386f9f3964fc3d3 SHA1 28e89f7d52ac23df09f805dc94dd4bfe419fb322 SHA256 3aa46687916c8756f9b4a9f53593025ccc364c03efc28d7077162f8ec8d104bc
+DIST synce-trayicon-0.7.tar.gz 223040 RMD160 65b8c791b62a4823bf7cc989dc302fee435425f7 SHA1 153c221e0a48acf9f914a49aa2059f15fb443b59 SHA256 996f504804a41b5626664c80c9c61ce02f2c7ec6de59413844edb5439adbf42f
+DIST synce-trayicon-0.8.tar.gz 303176 RMD160 02208e5f2b9d43fa6588baf4b74d2cb2e817bdbe SHA1 ff6cb14cdb82a6011404fac5276b7f041ccf7401 SHA256 8e80254fcb79ef021d7a2cd5cb8934e010c5485124c39d3d243dcc33bafdfade
+DIST synce-trayicon-0.9.0.tar.gz 375464 RMD160 b0ad6a259bb6444c88b5dc572d9ade6c74e120aa SHA1 49b5b5c68907198822a47e29624a9cb0bedc6963 SHA256 1904254ff51a3be56ed8d21bc993df580f16bb01fec25a6bf35fe080dd42ed9e
+EBUILD synce-trayicon-0.1.ebuild 698 RMD160 b87da3a02074617a0fe12a59075ae5f577cfbef0 SHA1 b29db5e1175b67c1d183807b06dcc547a042338b SHA256 68dd7babdd464b833cd21dc7baea0b8c3e6f7be015dfcc7d39af30e5749cdfd1
 MD5 782b0bc43e7ee9aab5cd94fae2e7fe95 synce-trayicon-0.1.ebuild 698
 RMD160 b87da3a02074617a0fe12a59075ae5f577cfbef0 synce-trayicon-0.1.ebuild 698
 SHA256 68dd7babdd464b833cd21dc7baea0b8c3e6f7be015dfcc7d39af30e5749cdfd1 synce-trayicon-0.1.ebuild 698
+EBUILD synce-trayicon-0.7.ebuild 697 RMD160 eae389cd6ccfb09018f3ddfb6a7691e767db4ed6 SHA1 704da879b31572c97cb8a9cf4d2c4ce8cb00f2e9 SHA256 50d7a4a35c63b355789ff264c94f689c138f32938e08afba434402be47b6d89f
 MD5 e5d160b5c68c027f0e6ff489c99c6aae synce-trayicon-0.7.ebuild 697
 RMD160 eae389cd6ccfb09018f3ddfb6a7691e767db4ed6 synce-trayicon-0.7.ebuild 697
 SHA256 50d7a4a35c63b355789ff264c94f689c138f32938e08afba434402be47b6d89f synce-trayicon-0.7.ebuild 697
+EBUILD synce-trayicon-0.8.ebuild 701 RMD160 eff83d4a74b3deeb06207b3ea7b74e8c8325f1bf SHA1 1ffc2b731787a9775269ddc35bd036c647aaea10 SHA256 7cdd3e2cabe74cf9e0753b44bcb5aaf73226bfa20ea47001e6f88b9f5c7970c8
 MD5 8d8012dd7140d9d75cb3453a1a93dbac synce-trayicon-0.8.ebuild 701
 RMD160 eff83d4a74b3deeb06207b3ea7b74e8c8325f1bf synce-trayicon-0.8.ebuild 701
 SHA256 7cdd3e2cabe74cf9e0753b44bcb5aaf73226bfa20ea47001e6f88b9f5c7970c8 synce-trayicon-0.8.ebuild 701
+EBUILD synce-trayicon-0.9.0.ebuild 790 RMD160 7a9a030ac64d04e7fe6a2f7dafecb0d388ee143e SHA1 8302d58b1c7ea3211b0a3ed255a1f3ce0c8de783 SHA256 18695f61999da80712f7d87751b2db70711e79bf857b7847d5f3f424c959ec3e
 MD5 345bcb7cab735fc27c5906f781545022 synce-trayicon-0.9.0.ebuild 790
 RMD160 7a9a030ac64d04e7fe6a2f7dafecb0d388ee143e synce-trayicon-0.9.0.ebuild 790
 SHA256 18695f61999da80712f7d87751b2db70711e79bf857b7847d5f3f424c959ec3e synce-trayicon-0.9.0.ebuild 790
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEGbuXub4+zaPCR/oRAmn6AJ4lr9T4TUQZIqjPib8RqSj8qNGnrQCfe+VL
-YojSJuEz4g9/BmVcZFir2ws=
-=evvA
------END PGP SIGNATURE-----
+MISC ChangeLog 1713 RMD160 200aad7d44a0e397db0139392406d967168e4d42 SHA1 ed49f52e3fd4f6a0a15d6de0a0142f5424d9aad3 SHA256 85e338ab11a1d663c061e00405a2dd433ec2ab7b19da1e575a1cb8c1f75dbec8
+MD5 22de8118c92be538e6deb9a72fc7189c ChangeLog 1713
+RMD160 200aad7d44a0e397db0139392406d967168e4d42 ChangeLog 1713
+SHA256 85e338ab11a1d663c061e00405a2dd433ec2ab7b19da1e575a1cb8c1f75dbec8 ChangeLog 1713
+MISC metadata.xml 156 RMD160 6a6d0f6bfe83e3a54c2d72444564ed6ab19857fe SHA1 5b9cb277159d763c133920e483df8d3d587cf7e2 SHA256 7f72b73f6e0d6e26603d85e52cca524711faddf6b516640104c3b82aab4754fb
+MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
+RMD160 6a6d0f6bfe83e3a54c2d72444564ed6ab19857fe metadata.xml 156
+SHA256 7f72b73f6e0d6e26603d85e52cca524711faddf6b516640104c3b82aab4754fb metadata.xml 156
+MD5 c0b57ea7238c556c85df22b286194881 files/digest-synce-trayicon-0.1 256
+RMD160 31d00bd37229e7c55ee255257da1484edce38c4b files/digest-synce-trayicon-0.1 256
+SHA256 2c7ccb88026d59a29517792f139dc820e6d155b858cb83ee663ae9c139b84172 files/digest-synce-trayicon-0.1 256
+MD5 a5c323cb13406980aa8bbaa8ff589769 files/digest-synce-trayicon-0.7 256
+RMD160 f0b0f4e7c9866d5bcd9ab8e8f8656846acae07d6 files/digest-synce-trayicon-0.7 256
+SHA256 ec1c7d62fa02329009212592f0f530efdd70316b90de3193dd8bc8494c61bfa3 files/digest-synce-trayicon-0.7 256
+MD5 94f6610a385e24f32c1418dd8240dda8 files/digest-synce-trayicon-0.8 256
+RMD160 85528e4a84e6cadbacbe4bb87a556ad1176a7f53 files/digest-synce-trayicon-0.8 256
+SHA256 bdfa902198e74b2c56340d66e05eea2904b9ce9a23972f5e9a0289a33e166bb3 files/digest-synce-trayicon-0.8 256
+MD5 fc9ad613aa050869525e4aacbb6db216 files/digest-synce-trayicon-0.9.0 262
+RMD160 36d415da5462298317ad6fec25eb53790779956a files/digest-synce-trayicon-0.9.0 262
+SHA256 49530041eca6952a9dba34389872ba54d45b11cfe4db477951b81f541f8acffc files/digest-synce-trayicon-0.9.0 262

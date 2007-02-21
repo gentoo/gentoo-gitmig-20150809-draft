@@ -6,8 +6,8 @@ AUX gnome-pilot-conduits-2.0.10-memofile.patch 1343 RMD160 7a691e0edb4bdd21392e9
 MD5 c0f29f8ad2fa1877f8faa55abd1f4902 files/gnome-pilot-conduits-2.0.10-memofile.patch 1343
 RMD160 7a691e0edb4bdd21392e966a0048403d4cc127ab files/gnome-pilot-conduits-2.0.10-memofile.patch 1343
 SHA256 9e571e40aa5a6b4172422ff1aa0567a06e040124801998561e04971725999c2e files/gnome-pilot-conduits-2.0.10-memofile.patch 1343
-DIST gnome-pilot-conduits-2.0.10.tar.bz2 390631
-DIST gnome-pilot-conduits-2.0.12.tar.bz2 462474
+DIST gnome-pilot-conduits-2.0.10.tar.bz2 390631 RMD160 f58f7b8b8ef5a3916df205ed623e71c4a3e5dc48 SHA1 0c2d05435f68e46efd74c8f3e5a77e5d3b515a3d SHA256 fb3db85fe9f5c32e27e8810f3b0b3d2387c8c63899ad5a9659b8c10bde772f73
+DIST gnome-pilot-conduits-2.0.12.tar.bz2 462474 RMD160 bd50303fced44d16fe43016da1093fcba754b45a SHA1 34e925c17d0d4c4f0a7ff0b8ca8e5ce2e33f99e4 SHA256 cb4d576fe95c853c4586b6a09b079a72d6a883df749da4a86b38decfa54c04a1
 DIST gnome-pilot-conduits-2.0.13.tar.bz2 478059 RMD160 9c7b13dab4c6c28adde8275375a4509235c1ab8f SHA1 5ad07ddd7eca70434f3fcecc1cbdcf1a2809cac0 SHA256 fe32fe3622696d0773c2292f2d6a755bd2077427a1d253f2231042e26d7400dd
 EBUILD gnome-pilot-conduits-2.0.10-r1.ebuild 797 RMD160 ed5a2e04d33c24f1ea123d9997277a3b35f884b7 SHA1 4cda0e05d99267a557f64b4be45f97ced304bfc4 SHA256 6ef471f5d6f98c9285e656d0c5febcf3fd822c9276545fb21c5e374b5595335b
 MD5 eabfd9516ebbe45cc044ac8a305c89b9 gnome-pilot-conduits-2.0.10-r1.ebuild 797
@@ -25,23 +25,23 @@ EBUILD gnome-pilot-conduits-2.0.13.ebuild 637 RMD160 b4edbf14c8a124bfa1adb38969a
 MD5 49efbb6a0edd8b4629bfdde9be12802e gnome-pilot-conduits-2.0.13.ebuild 637
 RMD160 b4edbf14c8a124bfa1adb38969a039e6894b8106 gnome-pilot-conduits-2.0.13.ebuild 637
 SHA256 a0371e746ce04b64e2b221f7d6b1b7175f98c0bbe8b7d3232e6fc445c0301991 gnome-pilot-conduits-2.0.13.ebuild 637
-MISC ChangeLog 4710 RMD160 00048a21d5a6386acec619662bf4cc00af602d0c SHA1 2cff8e76e866a6a4484623bff7975e2f4ad3acda SHA256 15222e97e24eb8aeaba3170a1d83c55bcd6aa4b4f710aed8c7d3f4dac1241d8d
-MD5 4a3660cbb4c9d1f97412f043796e4608 ChangeLog 4710
-RMD160 00048a21d5a6386acec619662bf4cc00af602d0c ChangeLog 4710
-SHA256 15222e97e24eb8aeaba3170a1d83c55bcd6aa4b4f710aed8c7d3f4dac1241d8d ChangeLog 4710
+MISC ChangeLog 4799 RMD160 3dfca83204a011aba0e7a73caa8f7e71afb8aa0b SHA1 3f2f25d0f1942d73f42d1b50d3666a96741cf815 SHA256 b46aed465e4fe3f12e80b24c04174655342d55409062b66b786e62d10cc1cd3f
+MD5 b631587bf687c16e3eddf0bb030d25ce ChangeLog 4799
+RMD160 3dfca83204a011aba0e7a73caa8f7e71afb8aa0b ChangeLog 4799
+SHA256 b46aed465e4fe3f12e80b24c04174655342d55409062b66b786e62d10cc1cd3f ChangeLog 4799
 MISC metadata.xml 175 RMD160 5a758a9c6be5886bcabe17412a27ddb9c4c1a091 SHA1 5f39f2aee5dc458e1f1184425ff00a600cfbeb93 SHA256 ad69c13297c0e440519a25f99fdcefd579e75f58d652bb174055ae0c827b8543
 MD5 1e1031eae2f36a13b2cd73550a31d03d metadata.xml 175
 RMD160 5a758a9c6be5886bcabe17412a27ddb9c4c1a091 metadata.xml 175
 SHA256 ad69c13297c0e440519a25f99fdcefd579e75f58d652bb174055ae0c827b8543 metadata.xml 175
-MD5 dfa62058be26fe2b26b39fef4de1658b files/digest-gnome-pilot-conduits-2.0.10-r1 80
-RMD160 b9f883c94e110755fef1b047a4f58fecbfdf7ae6 files/digest-gnome-pilot-conduits-2.0.10-r1 80
-SHA256 cf24d7ad11186befaafe1406362c5c221ee14375df5c68da1fb60751c0400226 files/digest-gnome-pilot-conduits-2.0.10-r1 80
-MD5 dfa62058be26fe2b26b39fef4de1658b files/digest-gnome-pilot-conduits-2.0.10-r2 80
-RMD160 b9f883c94e110755fef1b047a4f58fecbfdf7ae6 files/digest-gnome-pilot-conduits-2.0.10-r2 80
-SHA256 cf24d7ad11186befaafe1406362c5c221ee14375df5c68da1fb60751c0400226 files/digest-gnome-pilot-conduits-2.0.10-r2 80
-MD5 d8d0a176e2cb31938b4cefb832fcf1d2 files/digest-gnome-pilot-conduits-2.0.12 80
-RMD160 0a2a44b751885b6b5ed0fbfd7d6277ddee02ffc3 files/digest-gnome-pilot-conduits-2.0.12 80
-SHA256 92a64bdccc5e9b0c695617616bed273c2220d39628df89c6b23e8ac68db1d549 files/digest-gnome-pilot-conduits-2.0.12 80
+MD5 6ca161078511419958244b56ed98922b files/digest-gnome-pilot-conduits-2.0.10-r1 286
+RMD160 35ecf4685513992f1e9fd4c265472cfcbab63f60 files/digest-gnome-pilot-conduits-2.0.10-r1 286
+SHA256 55c6d0a11a916e93a9a07209ecf205cdf2dba4a947d92e98b263bb632654f0d7 files/digest-gnome-pilot-conduits-2.0.10-r1 286
+MD5 6ca161078511419958244b56ed98922b files/digest-gnome-pilot-conduits-2.0.10-r2 286
+RMD160 35ecf4685513992f1e9fd4c265472cfcbab63f60 files/digest-gnome-pilot-conduits-2.0.10-r2 286
+SHA256 55c6d0a11a916e93a9a07209ecf205cdf2dba4a947d92e98b263bb632654f0d7 files/digest-gnome-pilot-conduits-2.0.10-r2 286
+MD5 ee751ac0294d28d0f79bf594305d19b3 files/digest-gnome-pilot-conduits-2.0.12 286
+RMD160 a192e17e1c5172f0752185749abb3dd7284e9a9f files/digest-gnome-pilot-conduits-2.0.12 286
+SHA256 486519d1fbb9e1ee5dcab443ae58629bebd33fb3f2e0879e6e808138066ea7bc files/digest-gnome-pilot-conduits-2.0.12 286
 MD5 685d6d56920624bc2912444812513a50 files/digest-gnome-pilot-conduits-2.0.13 286
 RMD160 9fe020dd56bbce6b4f13e7034de445fce3f768f5 files/digest-gnome-pilot-conduits-2.0.13 286
 SHA256 3383bf296f96d149a16b2b11f15cef9104fd68233e35769cd2405476d9bd3175 files/digest-gnome-pilot-conduits-2.0.13 286
