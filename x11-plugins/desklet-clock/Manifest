@@ -1,7 +1,10 @@
-DIST clock-desklet-0.31.tar.bz2 157225
-DIST clock-desklet-0.32.tar.bz2 159655
-DIST clock-desklet-0.40.tar.gz 263673
-DIST clock-desklet-0.50.tar.gz 264243 RMD160 c57dbaa9780b5852b72ad98e38b2bfb0af2984da SHA256 e1223aada67bd1375fd43d1bcbbca82acf6e15063160009a06d3e3f853834120
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST clock-desklet-0.31.tar.bz2 157225 RMD160 584065ac5c4512bc2cce8ded59676280b41a2dba SHA1 0c396da1dd0a942c335d165b2ee4822a95033a24 SHA256 694fb6293c89cf7eab41f8642dd421fbfc788f91c39cdac45800ac08685246ba
+DIST clock-desklet-0.32.tar.bz2 159655 RMD160 f19476d65e178e0da3afe6a89c3e013027a6cb26 SHA1 fc78a4e83f6df525494b80388720d180749cd1dc SHA256 83d50abf487f2e0f6d9e5a53e82d6f113bca33843dcb1cd46a7f38a23745635d
+DIST clock-desklet-0.40.tar.gz 263673 RMD160 8e9bda05ff7cb1798c00b64d261ad833d580e023 SHA1 b0dbfb5abb905fcbf27d92eabdf596f808b3e014 SHA256 703475f5ed5a686311dbe679f9d014f87ad648021a94f4ce22197973acaffed0
+DIST clock-desklet-0.50.tar.gz 264243 RMD160 c57dbaa9780b5852b72ad98e38b2bfb0af2984da SHA1 f4b9f94bf838da556db79bcd84fd99f10ab84912 SHA256 e1223aada67bd1375fd43d1bcbbca82acf6e15063160009a06d3e3f853834120
 EBUILD desklet-clock-0.31.ebuild 1085 RMD160 fbc4c67306d489247f06d69ccf4ae51c2c4deb6b SHA1 96c225ef1fe45afc837212ac3f1ca1416fa5eee3 SHA256 1999f6c88cdff2864db8ee8b98ee3a1016499b2ab8e4a60e8505d88882447242
 MD5 61b514eb7ae6b6b3af48824e98d69c7a desklet-clock-0.31.ebuild 1085
 RMD160 fbc4c67306d489247f06d69ccf4ae51c2c4deb6b desklet-clock-0.31.ebuild 1085
@@ -22,26 +25,33 @@ EBUILD desklet-clock-0.50.ebuild 686 RMD160 c7be74f45173512f9a21f9beeac6c466bb08
 MD5 fcf84e15c963e641435377d0838ad8a2 desklet-clock-0.50.ebuild 686
 RMD160 c7be74f45173512f9a21f9beeac6c466bb08709a desklet-clock-0.50.ebuild 686
 SHA256 521c39a4db98d9ec6d96cece9b0bda05f58012000bd9094873579634a5d89525 desklet-clock-0.50.ebuild 686
-MISC ChangeLog 2893 RMD160 8eac0d41763e061c2bbf29c62646cd206a30815a SHA1 14ac3900306d78858ddc84f802342598a24fd3f6 SHA256 f92fa6c10754923a714463dd78ec6077758aa8f18b38eb00fcefb718cb3de21a
-MD5 763bc6be9d9dc75a83486ace7229387e ChangeLog 2893
-RMD160 8eac0d41763e061c2bbf29c62646cd206a30815a ChangeLog 2893
-SHA256 f92fa6c10754923a714463dd78ec6077758aa8f18b38eb00fcefb718cb3de21a ChangeLog 2893
+MISC ChangeLog 2978 RMD160 9c3658aa40263a08e3be2f7a8faa86d0ea760869 SHA1 75aec96ca1febf402b7e62ae5a84f708a046cb2a SHA256 0515fd8d82384a454a3f5c5883ff5d40cdf2a228c02c7fc3254d0520f5525214
+MD5 7e9c24a2c69190138ff35e43d7f16ca5 ChangeLog 2978
+RMD160 9c3658aa40263a08e3be2f7a8faa86d0ea760869 ChangeLog 2978
+SHA256 0515fd8d82384a454a3f5c5883ff5d40cdf2a228c02c7fc3254d0520f5525214 ChangeLog 2978
 MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
-MD5 5d9158812e523c5765f013a933fddfdf files/digest-desklet-clock-0.31 71
-RMD160 f1bac653168fad7158cb8b65609e29a054fe31af files/digest-desklet-clock-0.31 71
-SHA256 38d0b9514ff89647b6319ec9b15c2f7462a80bb0e854e0ff0a22b3b1fa52fb9d files/digest-desklet-clock-0.31 71
-MD5 093c33f89910f51e4696c9cc9ed03901 files/digest-desklet-clock-0.32 71
-RMD160 ceafbb01735752123b390cf1e6864422a864908d files/digest-desklet-clock-0.32 71
-SHA256 30cd4351a962549f1afeacdb6c606f676a95d113b74a18325bd3b1b443c0ec95 files/digest-desklet-clock-0.32 71
-MD5 093c33f89910f51e4696c9cc9ed03901 files/digest-desklet-clock-0.32-r1 71
-RMD160 ceafbb01735752123b390cf1e6864422a864908d files/digest-desklet-clock-0.32-r1 71
-SHA256 30cd4351a962549f1afeacdb6c606f676a95d113b74a18325bd3b1b443c0ec95 files/digest-desklet-clock-0.32-r1 71
-MD5 3ea2aac5596dbc13e63928ee6ba46738 files/digest-desklet-clock-0.40 70
-RMD160 3473098a96f0a0b296b3be43c2746cacd29e4caa files/digest-desklet-clock-0.40 70
-SHA256 719b7ecfaab9e67fa39120c27cd3e9e418b81c158d6a40aee401ebd921c902f5 files/digest-desklet-clock-0.40 70
+MD5 72e4a931563c6a1a81987af8f07adcf0 files/digest-desklet-clock-0.31 259
+RMD160 42d2686712f85df7dabbb7fc77374b19b6eaa33c files/digest-desklet-clock-0.31 259
+SHA256 411b22918d3dbd476d77d9bc3eebc99e550f773e1c8a19690ec2af34aabe893f files/digest-desklet-clock-0.31 259
+MD5 d21f00d2eeeb7358e369244d09ee1154 files/digest-desklet-clock-0.32 259
+RMD160 001e3f38e5632a105b3193f6126bec1cd3c17d0e files/digest-desklet-clock-0.32 259
+SHA256 f79e9952bd6771ccae70188efa237d874dc71ce579067333ff49d54723af01d7 files/digest-desklet-clock-0.32 259
+MD5 d21f00d2eeeb7358e369244d09ee1154 files/digest-desklet-clock-0.32-r1 259
+RMD160 001e3f38e5632a105b3193f6126bec1cd3c17d0e files/digest-desklet-clock-0.32-r1 259
+SHA256 f79e9952bd6771ccae70188efa237d874dc71ce579067333ff49d54723af01d7 files/digest-desklet-clock-0.32-r1 259
+MD5 86e39906c67e3df20e725e48d48bc5a8 files/digest-desklet-clock-0.40 256
+RMD160 6fa26cda6aaaba9015ef0ed10e225db170355442 files/digest-desklet-clock-0.40 256
+SHA256 adb2e71181fa2475a45636ea5121215661f2c709133f4e8d5ce9039889009d76 files/digest-desklet-clock-0.40 256
 MD5 16bfcbc7755799989db38555a50d7c0b files/digest-desklet-clock-0.50 256
 RMD160 0b88dbe35ad9a21980b5591d8edacc66ca2f282d files/digest-desklet-clock-0.50 256
 SHA256 bfb38f66ea1a2c779ffda14be4eeedf67d0cd2c162e52f8ccfc69d6d78bb8b96 files/digest-desklet-clock-0.50 256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFF3NJFz974XjDVpbkRAuw7AKDTt89dZ4rk9NHgl7P5I4hzzRXTJwCcCNic
+UCynBq7nyGqUrO2jAftBIXQ=
+=vkpU
+-----END PGP SIGNATURE-----
