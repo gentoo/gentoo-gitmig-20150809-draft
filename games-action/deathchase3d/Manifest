@@ -1,4 +1,4 @@
-DIST deathchase3d-0.9.tar.gz 587888
+DIST deathchase3d-0.9.tar.gz 587888 RMD160 2fdd59e7495f26db8f5e733d458b6209f6794388 SHA1 73e7db9a6eb6bb3bcec6e00a6ca11b31b0547c86 SHA256 42b4c5551be4662fcba6a6c7476ff6235307cf39e13781d6f1f13abe26a7db2a
 EBUILD deathchase3d-0.9.ebuild 646 RMD160 0cdde09f1e6d48394bdadf36ac9b68315c362cd7 SHA1 15e4c53250f2c4469659642a7686b6f0ed4f9fc2 SHA256 ca874c457c1106a2c7d17ae3704e0d8850ba1d6ae54bea3537fe17620f8ec257
 MD5 206e7cfc990a3d7d799fefbd479fd1a4 deathchase3d-0.9.ebuild 646
 RMD160 0cdde09f1e6d48394bdadf36ac9b68315c362cd7 deathchase3d-0.9.ebuild 646
@@ -11,6 +11,6 @@ MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be525
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
 SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
-MD5 7244886bb5cc19968d977dcea8c39b5c files/digest-deathchase3d-0.9 68
-RMD160 79cf19e9464c27bfd4ce5c9a6cb0e6e2867531df files/digest-deathchase3d-0.9 68
-SHA256 5f514ee5bc79a5e7aeede297fcdcff394ad23fee3c039592278b1c3fe0b761bf files/digest-deathchase3d-0.9 68
+MD5 f09e9b7d6f023558f2c1388457eb18ef files/digest-deathchase3d-0.9 250
+RMD160 19aee4488c245deebc4b1fea3e4e13821f92f7da files/digest-deathchase3d-0.9 250
+SHA256 3b4455867ab1f43289a0a41cf2d8475bd2d563a05b96a0b71bee8b8f5da1af7c files/digest-deathchase3d-0.9 250

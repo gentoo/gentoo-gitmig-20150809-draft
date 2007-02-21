@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-DIST tbt.0.5.src.zip 5321239
+DIST tbt.0.5.src.zip 5321239 RMD160 d2a037785faa09fd959d7cc612fd1bf73192420e SHA1 2e9479283098cb06ca0a1c8b217cdfe862e6ff1f SHA256 a4640db7039d3ffd9e7a136cc81e33e3b090da03bb4daf6a2d908aec0d4b70b2
 EBUILD towbowl-tactics-0.5.ebuild 1592 RMD160 91f65a5786056e2f87a5f3b00c5bca74410bb88b SHA1 7e724494f815e8474e3cd9430b7cb25327f2a1e8 SHA256 cb0eea0e9437b14296417d29960213261df1f1ee8eaa1d3e13b5957899883060
 MD5 f1c1596c7f2ba37b016919c998251bb0 towbowl-tactics-0.5.ebuild 1592
 RMD160 91f65a5786056e2f87a5f3b00c5bca74410bb88b towbowl-tactics-0.5.ebuild 1592
@@ -14,13 +11,6 @@ MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be525
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
 SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
-MD5 cfa388127da9669f2fdc08df6cc8f8db files/digest-towbowl-tactics-0.5 61
-RMD160 8c3cbb32b1f2f44f0283ba4121cb736166aea1cb files/digest-towbowl-tactics-0.5 61
-SHA256 6a878955687e8c91f5343db86f4a962b9694779cf3006a5fc9d2a4f3f7baa3c0 files/digest-towbowl-tactics-0.5 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-
-iD8DBQFFdbddkT4lNIS36YERAlv9AJ0WaWvPGAsGflX5wv14AugttB3L4QCgq+0D
-BqSsR/6jiZ0gaAsos2zT1Yc=
-=rR+b
------END PGP SIGNATURE-----
+MD5 df8c13570a37ba982ca0a7ebb30b703b files/digest-towbowl-tactics-0.5 229
+RMD160 7fab877fab507b26d8a1f87dc53df4b97f9a2994 files/digest-towbowl-tactics-0.5 229
+SHA256 232291c870dbd86b3b8ea5dd487e989fd442ea3f43845d525a916baf0dc9b5d0 files/digest-towbowl-tactics-0.5 229
