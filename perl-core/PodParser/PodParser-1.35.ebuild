@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/PodParser/PodParser-1.35.ebuild,v 1.4 2007/01/22 00:37:19 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/PodParser/PodParser-1.35.ebuild,v 1.5 2007/02/21 05:19:08 vapier Exp $
 
 inherit perl-module
+
 MY_P=Pod-Parser-${PV}
-S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="Base class for creating POD filters and translators"
 HOMEPAGE="http://search.cpan.org/~marekr/"
@@ -12,9 +12,11 @@ SRC_URI="mirror://cpan/authors/id/M/MA/MAREKR/${MY_P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 arm ~hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE=""
 
-SRC_TEST="do"
-
 DEPEND="dev-lang/perl"
+
+S=${WORKDIR}/${MY_P}
+
+SRC_TEST="do"
