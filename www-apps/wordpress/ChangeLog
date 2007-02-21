@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/wordpress
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.72 2007/02/20 19:03:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.73 2007/02/21 15:09:14 beandog Exp $
+
+*wordpress-2.1.1 (21 Feb 2007)
+*wordpress-2.0.9 (21 Feb 2007)
+
+  21 Feb 2007; Steve Dibb <beandog@gentoo.org>
+  -files/wordpress-2.0.5-templates-sec.diff, -wordpress-2.0.8.ebuild,
+  +wordpress-2.0.9.ebuild, -wordpress-2.1.ebuild, +wordpress-2.1.1.ebuild:
+  Version bumps, remove old patch
 
   20 Feb 2007; Markus Rothe <corsair@gentoo.org> wordpress-2.1.ebuild:
   Added ~ppc64; bug #167587
