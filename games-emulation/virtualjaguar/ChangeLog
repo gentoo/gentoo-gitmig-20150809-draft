@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/virtualjaguar
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/ChangeLog,v 1.8 2006/03/24 21:37:52 wolf31o2 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/ChangeLog,v 1.9 2007/02/21 23:33:06 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   24 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   virtualjaguar-1.0.6.ebuild:

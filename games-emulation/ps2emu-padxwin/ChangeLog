@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/ps2emu-padxwin
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-padxwin/ChangeLog,v 1.7 2006/05/03 18:07:22 tupone Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-padxwin/ChangeLog,v 1.8 2007/02/21 23:28:55 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   03 May 2006; <Tupone@gentoo.org> +files/ps2emu-padxwin-0.9-gcc41.patch,
   ps2emu-padxwin-0.9.ebuild:

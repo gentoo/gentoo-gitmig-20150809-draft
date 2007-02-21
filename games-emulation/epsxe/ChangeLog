@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/epsxe
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/epsxe/ChangeLog,v 1.9 2006/11/28 18:36:58 nyhm Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/epsxe/ChangeLog,v 1.10 2007/02/21 23:19:45 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   28 Nov 2006; Tristan Heaven <nyhm@gentoo.org> epsxe-1.6.0-r3.ebuild:
   Fix wrapper
