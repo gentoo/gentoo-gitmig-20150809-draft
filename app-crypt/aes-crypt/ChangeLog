@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/aes-crypt
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/aes-crypt/ChangeLog,v 1.8 2005/08/10 16:47:29 kito Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/aes-crypt/ChangeLog,v 1.9 2007/02/21 20:22:17 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   10 Aug 2005; Kito <kito@gentoo.org> aes-crypt-1.0.7.ebuild:
   ~ppc-macos keyword.
