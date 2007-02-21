@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-DIST MarbleBlastGoldDemo-1.4.1.sh.bin 11180534 RMD160 14df788928910fd20bc9faa6cac67ebb56ed9fc6 SHA256 a0a3102324a9ee03a8b397af9bf1ec904344c93d4fdd70fa00e1408fce6dc4e5
+DIST MarbleBlastGoldDemo-1.4.1.sh.bin 11180534 RMD160 14df788928910fd20bc9faa6cac67ebb56ed9fc6 SHA1 da2f45d5739f11de264244ce60fe2e71cba03283 SHA256 a0a3102324a9ee03a8b397af9bf1ec904344c93d4fdd70fa00e1408fce6dc4e5
 EBUILD marbleblastgold-demo-1.4.1.ebuild 1028 RMD160 72db35a5c0ae8a4d232dd34ab50d7e3e5120f779 SHA1 0d443e7dffe942118a8c96713b443df0eb222c29 SHA256 a887fc12269a9be85ba1cf2c8bb245cc6161a04d5a857427f2311f18e9b0370d
 MD5 d964002c7bbbf2ef02c7462a368d4367 marbleblastgold-demo-1.4.1.ebuild 1028
 RMD160 72db35a5c0ae8a4d232dd34ab50d7e3e5120f779 marbleblastgold-demo-1.4.1.ebuild 1028
@@ -17,10 +14,3 @@ SHA256 d40d7d7d6bfa7bd88ac6e08d6c422be8cbfc76f9f6175b803d375384e6412fa6 metadata
 MD5 e1d7b59d16ff7924a6826202a1fd29d1 files/digest-marbleblastgold-demo-1.4.1 283
 RMD160 27af073d0a57542c6952267570b8b5ba4cc7dd5c files/digest-marbleblastgold-demo-1.4.1 283
 SHA256 d69e101e993bc620c7fe403d2fc00d4a66fcb5f95a91b320363976aa4b3d433d files/digest-marbleblastgold-demo-1.4.1 283
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-
-iD8DBQFFRCCuamhnQswr0vIRApgpAKCQc1tmHig6QYuA9dFknbI3vKDE3QCdFLuw
-k/IGvfq3bS0WfBrIqvNL+bM=
-=a8QI
------END PGP SIGNATURE-----

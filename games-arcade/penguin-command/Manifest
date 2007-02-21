@@ -1,5 +1,5 @@
 DIST penguin-command-1.6.10.tar.gz 1184709 RMD160 e2f97f8929106adc161c6bca6bac57e3106668d4 SHA1 b34fc33c2e9a4882c2a596ac2091d147df941fe1 SHA256 e6ebc9b67a9809c5832bdc92a2dcf3835f169f86989d89501cb91e7e9dbae815
-DIST penguin-command-1.6.9.tar.gz 1182053
+DIST penguin-command-1.6.9.tar.gz 1182053 RMD160 94ef38a3f17f79e5e467c6c6acf9610e427b044f SHA1 a2aa6cd371007210422a93503770fbc97f468ab0 SHA256 9d8436db884db57c4aaa3713f41caaad2efd5a2fac7d91f497b8dc1ddd77a5a0
 EBUILD penguin-command-1.6.10.ebuild 1007 RMD160 2b6157f8ec41168ad20ce106794ab0e34d7ce7b7 SHA1 802818393311e51f380b2c9d07fcdec67edc1a3c SHA256 1d7c5e6582e946489bf7f9f2d856a7e1d15c8cd6d0828777657f1ad99ad200f8
 MD5 9eb6df3f097f7c4e99b11737b1088000 penguin-command-1.6.10.ebuild 1007
 RMD160 2b6157f8ec41168ad20ce106794ab0e34d7ce7b7 penguin-command-1.6.10.ebuild 1007
@@ -19,6 +19,6 @@ SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata
 MD5 e6f9167b0ae05f062354e824d7fa906a files/digest-penguin-command-1.6.10 271
 RMD160 1501b42d080c520331245beb41b4d0110724773b files/digest-penguin-command-1.6.10 271
 SHA256 1a575cfd40f87966972da70ffbaf8c63b213c05cd1541a43331af3a6eb3eb04e files/digest-penguin-command-1.6.10 271
-MD5 6b0f0c67ae6778539181fb73f07258b0 files/digest-penguin-command-1.6.9 74
-RMD160 d23ad86a151b661a0df719d5aeab7f228ad9b699 files/digest-penguin-command-1.6.9 74
-SHA256 628301fec13c26b58e2ee7f32873f4815068930d49d78ac9cdf4bfeaa117ca86 files/digest-penguin-command-1.6.9 74
+MD5 82f7b20ea25d2ba4c6f85f6a1efcff05 files/digest-penguin-command-1.6.9 268
+RMD160 11c59e3706d624d1ea08dfbcc0491fa6b35e57d4 files/digest-penguin-command-1.6.9 268
+SHA256 71c50ba03e1d88e58aee08a500afd4fce94f42869f5c8b9e6d38a429b42be2fc files/digest-penguin-command-1.6.9 268
