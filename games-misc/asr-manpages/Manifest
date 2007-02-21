@@ -1,8 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-DIST asr-manpages_1.3-5.diff.gz 3518
-DIST asr-manpages_1.3.orig.tar.gz 14711
+DIST asr-manpages_1.3-5.diff.gz 3518 RMD160 718d93bad967f178110fb13869113adf0a2c6c10 SHA1 29e297ce20a0bca57236018fc4d61804a4a6b605 SHA256 3e55c5022296168f7ba0f16cb18ec36482c6c206929faace80caf09bfa7f5885
+DIST asr-manpages_1.3.orig.tar.gz 14711 RMD160 8c45e53df405404a241b0230f21ecadfd68f4cc5 SHA1 df6d9462d3b476a5a396b963d17d1f9db8941875 SHA256 5c60c53eb9ebe5e6a26ca2bd1c920a2332ea2a6db3fd64b14ccc4537e955f354
 EBUILD asr-manpages-1.3_rc5.ebuild 805 RMD160 b21a4c7ed409543195786ba3ccf0c34ac8fb6555 SHA1 ee7d5fd50e5afaaa01bb3319255f835591172358 SHA256 d557050e7d64ec4e739e91fc1997f44734149a608c3edcb222da4fa29553042a
 MD5 025b75f40ffdaebedca9f591fed67c9b asr-manpages-1.3_rc5.ebuild 805
 RMD160 b21a4c7ed409543195786ba3ccf0c34ac8fb6555 asr-manpages-1.3_rc5.ebuild 805
@@ -15,13 +12,6 @@ MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be525
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
 SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
-MD5 672c2ded6b405f2cff899b53d8848a47 files/digest-asr-manpages-1.3_rc5 141
-RMD160 0c56eceef85c264f7c75c32cd76866301e870eee files/digest-asr-manpages-1.3_rc5 141
-SHA256 26da6260a767575a674c3a2c1c5f2681fe7a1fbb2555fd545965fee430dc2020 files/digest-asr-manpages-1.3_rc5 141
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEmYLPamhnQswr0vIRAm1wAJoDFNoheFVI8gmGUXOHHf4VzB0lPQCeNuNk
-gKy/RuDc9uNvpVObUESX8eQ=
-=iZab
------END PGP SIGNATURE-----
+MD5 c035589b7d7298218834aefda9ec4940 files/digest-asr-manpages-1.3_rc5 515
+RMD160 238c3382df8ee5ead926e2e866d10e5272c2face files/digest-asr-manpages-1.3_rc5 515
+SHA256 69f5333c078a62a736c4885d5174d3f3c6a1046c17a0ef2f5baf23834a86a3fb files/digest-asr-manpages-1.3_rc5 515

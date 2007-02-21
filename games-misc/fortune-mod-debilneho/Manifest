@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-DIST fortune-debilneho.tar.bz2 16982
+DIST fortune-debilneho.tar.bz2 16982 RMD160 e95659b8bd7edd8764ecca621c6b3da34286edf4 SHA1 bf1a5e7bcbf509f65777bcf87f547a1e1fe48a4a SHA256 65bd5d71530447f093f5637e6baff06861621dd73ac141efbaf0e30888220ae8
 EBUILD fortune-mod-debilneho-0.1.ebuild 680 RMD160 052e5539c08761fb91b94284dce88f288bdb9391 SHA1 64a32f8a80fe24f4be315cf79683057a9ef826ef SHA256 d91ec97eb6977f9221ac4299a368c1fc37b4f39e3b743afe660be7538e168e18
 MD5 7828a2d81f7108565efe41d173567013 fortune-mod-debilneho-0.1.ebuild 680
 RMD160 052e5539c08761fb91b94284dce88f288bdb9391 fortune-mod-debilneho-0.1.ebuild 680
@@ -14,13 +11,6 @@ MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be525
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
 SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
-MD5 a3797ce0c16dc36f9911dd84838e2558 files/digest-fortune-mod-debilneho-0.1 69
-RMD160 e5ec9db9f6d877a35b51cc4c424afc8a929f4061 files/digest-fortune-mod-debilneho-0.1 69
-SHA256 7e55aa1244bafffe4d296b841e81aa5c01ff3e31d7089ec2c1ce547ed7849011 files/digest-fortune-mod-debilneho-0.1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
-
-iD8DBQFEvoutAiZjviIA2XgRAkn/AJ4jAa3UwRI0pm44efIgMM79FwRd6wCgw38f
-U8+JN+vw6nUn+d2wNXbl4dc=
-=5CuX
------END PGP SIGNATURE-----
+MD5 f8c9dd41d8145d71531f5d6f35d46497 files/digest-fortune-mod-debilneho-0.1 253
+RMD160 06c0aeeb9d054d258951acf459041839e82ed4f1 files/digest-fortune-mod-debilneho-0.1 253
+SHA256 97364e87375a86cd5249924adb6c07b61189254f4b077e50dc1c9d524880599b files/digest-fortune-mod-debilneho-0.1 253
