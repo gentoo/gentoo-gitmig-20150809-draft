@@ -1,42 +1,55 @@
-MD5 1e5e5b7ecb976b7735b47cacfee99606 ChangeLog 4470
-RMD160 e5e9a8d515590b7face129af21e77592730bac43 ChangeLog 4470
-SHA256 864fd2c1f654ab56bd2db10869819cdf73069192d4ce7a5c9928b92784dc6b16 ChangeLog 4470
-MD5 cc6d3e76dc6a18f3a3bca84b79a0b8f5 files/digest-html-xml-utils-2.8-r1 70
-RMD160 d5f7bcac8fa5be97fd33de55744b51b2c2a953fc files/digest-html-xml-utils-2.8-r1 70
-SHA256 5fe954e023962afcd8bab5f07725056c97b4ffe3f6bece42c973630828b2e561 files/digest-html-xml-utils-2.8-r1 70
-MD5 cc6d3e76dc6a18f3a3bca84b79a0b8f5 files/digest-html-xml-utils-2.8-r2 70
-RMD160 d5f7bcac8fa5be97fd33de55744b51b2c2a953fc files/digest-html-xml-utils-2.8-r2 70
-SHA256 5fe954e023962afcd8bab5f07725056c97b4ffe3f6bece42c973630828b2e561 files/digest-html-xml-utils-2.8-r2 70
-MD5 1911d1290459bc65c1319f67fef70e77 files/digest-html-xml-utils-3.4 70
-RMD160 50516e3aa1a89e35021646795640e9e4c8118355 files/digest-html-xml-utils-3.4 70
-SHA256 479d67baf067dd221093b157a58afd2f2e0c75bd14d777e34e9ae4ef2dfc3f4e files/digest-html-xml-utils-3.4 70
-MD5 b49c111127cc870efe38354665cefde0 files/digest-html-xml-utils-3.6 70
-RMD160 00fe6fc3afeda1b991341a2df4208126b6c203df files/digest-html-xml-utils-3.6 70
-SHA256 8aebea0621099fc31c252394d594c450963f91539a9d782df47f6dbe3d03c9db files/digest-html-xml-utils-3.6 70
-MD5 fae38bc3b6580eeb86380274604c401b files/digest-html-xml-utils-3.7 70
-RMD160 7ebc2e321c182f38128cc574384c3772599d8bd7 files/digest-html-xml-utils-3.7 70
-SHA256 9e0f655945891ffb5e34e0c45961ba0e49bc5cdb1a6d2b66c52aea336e5d1625 files/digest-html-xml-utils-3.7 70
+AUX html-xml-utils-addid-man 2033 RMD160 0beec0b1cf75fa6ad138668ee988eb330bf71eea SHA1 4c0f12744b1283ef16a456cf1418c054664d99bf SHA256 8c7af613d5fed86d05386868223ad1cea82fc8b462d0fcf389b60491d41ec3a9
 MD5 171bede4d22a09f2068d6dd6c9c030db files/html-xml-utils-addid-man 2033
 RMD160 0beec0b1cf75fa6ad138668ee988eb330bf71eea files/html-xml-utils-addid-man 2033
 SHA256 8c7af613d5fed86d05386868223ad1cea82fc8b462d0fcf389b60491d41ec3a9 files/html-xml-utils-addid-man 2033
+AUX html-xml-utils-incl-man-fix.patch 1813 RMD160 4fca2f88cc2e6a5827f2d32dc20d45cad016c66f SHA1 6168695e56bcf6ea69a2010aef17ca39f6b0b05a SHA256 42c19a70577da34c6ef8015994deee7e99cb5e971918ea48917a503b5ebcfadb
 MD5 c38f364e7304aad97fc8fe22b6cbcec2 files/html-xml-utils-incl-man-fix.patch 1813
 RMD160 4fca2f88cc2e6a5827f2d32dc20d45cad016c66f files/html-xml-utils-incl-man-fix.patch 1813
 SHA256 42c19a70577da34c6ef8015994deee7e99cb5e971918ea48917a503b5ebcfadb files/html-xml-utils-incl-man-fix.patch 1813
+DIST html-xml-utils-2.8.tar.gz 193198 RMD160 38596222bd890278b902546f8c43a8eb6407ff24 SHA1 1b7f6a9186758eec9f115b8e6e30ed7d1f42f306 SHA256 41d5407a3baf4f82c6f6673f6590d835efe59f3a2c684a98ea620161e61608e4
+DIST html-xml-utils-3.4.tar.gz 205307 RMD160 c4cbcda8f6ea494e3902a315592703adf4e7675f SHA1 5011cf6f289276a257ddd92d43951931c57a6f58 SHA256 cee636b03488862ed0081f82a067d1c38d10673ca18e68226148cac96f9ba4b8
+DIST html-xml-utils-3.6.tar.gz 211872 RMD160 6bb86f0cd5823112946667bcf442ba0f3d3f2359 SHA1 4d50412a45d7f6587fadb8035c7ae9154987d4cd SHA256 114b412eab8ba635b453a483b610429c663969a767a934b2f65a3c9d97b7c1dd
+DIST html-xml-utils-3.7.tar.gz 213404 RMD160 ae907ecfc87ba5e64f86000d251ef42ba0662cfa SHA1 8a6365a9413328069c89e5d81de0ff9de2f09541 SHA256 796136e8e288164ea6f6b6d657080bbbb2942b20ba38e2f70a334d750ccc14fc
+EBUILD html-xml-utils-2.8-r1.ebuild 941 RMD160 bb61bf82724411b09c908908fd4d9060256847cd SHA1 ca8c3f253e6712304c3dd6f26c1b20b5b38d7f5d SHA256 23fed6cfe5488fecb8c934ad53b228af671ccf24c821a8005885f4c58db56956
 MD5 e00bba81e666a0bebb58934e988028bc html-xml-utils-2.8-r1.ebuild 941
 RMD160 bb61bf82724411b09c908908fd4d9060256847cd html-xml-utils-2.8-r1.ebuild 941
 SHA256 23fed6cfe5488fecb8c934ad53b228af671ccf24c821a8005885f4c58db56956 html-xml-utils-2.8-r1.ebuild 941
+EBUILD html-xml-utils-2.8-r2.ebuild 1252 RMD160 bcc09aacfe689bdecf969bc3d4d462056119c20f SHA1 43ff105ec79fdc225424e9c8cbb5579dbdd8a659 SHA256 6742c62bbfe310d57396d0724f825984b17ffff44ffcaddbc465d215e35d32cd
 MD5 c2ad0b65fd8c4de68a1ad1eabf9372d6 html-xml-utils-2.8-r2.ebuild 1252
 RMD160 bcc09aacfe689bdecf969bc3d4d462056119c20f html-xml-utils-2.8-r2.ebuild 1252
 SHA256 6742c62bbfe310d57396d0724f825984b17ffff44ffcaddbc465d215e35d32cd html-xml-utils-2.8-r2.ebuild 1252
+EBUILD html-xml-utils-3.4.ebuild 1253 RMD160 295682abf4cd6d84a90629d2da949253a87fc99e SHA1 e15035f897353cf8ff76f207e2e033c15ab9313c SHA256 9be37a4f656a32e9f690892f3433d2b9ba38fa964dc04b7fb79d56343c477fb7
 MD5 3514d0c509a4baa1ce196c4f15f6ca5b html-xml-utils-3.4.ebuild 1253
 RMD160 295682abf4cd6d84a90629d2da949253a87fc99e html-xml-utils-3.4.ebuild 1253
 SHA256 9be37a4f656a32e9f690892f3433d2b9ba38fa964dc04b7fb79d56343c477fb7 html-xml-utils-3.4.ebuild 1253
+EBUILD html-xml-utils-3.6.ebuild 1168 RMD160 65af1cd10af251911e38a5605fc79fa9bb634815 SHA1 af5a7a9d580453062d933f907b71a5cbc8276fae SHA256 fc4f7a1a636d77da619e2e62d7a507846863147e5eeba2bd9236d100c7560de0
 MD5 48575ffce7452b9df7598f26276df8cd html-xml-utils-3.6.ebuild 1168
 RMD160 65af1cd10af251911e38a5605fc79fa9bb634815 html-xml-utils-3.6.ebuild 1168
 SHA256 fc4f7a1a636d77da619e2e62d7a507846863147e5eeba2bd9236d100c7560de0 html-xml-utils-3.6.ebuild 1168
+EBUILD html-xml-utils-3.7.ebuild 1168 RMD160 99d987a2522916a7a778658fc00b06021da89799 SHA1 c41421a88b556e8f269e01f8eac743c3fdeb3e48 SHA256 f492b56471bb1ffbd42a0c94e1e088e727d4bd2b8ce9944d921610cdd12f8799
 MD5 243fc989166eaea27ea36febafd43451 html-xml-utils-3.7.ebuild 1168
 RMD160 99d987a2522916a7a778658fc00b06021da89799 html-xml-utils-3.7.ebuild 1168
 SHA256 f492b56471bb1ffbd42a0c94e1e088e727d4bd2b8ce9944d921610cdd12f8799 html-xml-utils-3.7.ebuild 1168
+MISC ChangeLog 4561 RMD160 945b7dbc267204e7093343124b3c38290a7fef58 SHA1 7ad6ab0a5b5d508bdd1baa6f1519826830758b1b SHA256 f83fc1893841a9e17b957e0fcbaa25e014a7aa4f7b98c4e0349230ae5be28735
+MD5 b752155ed02938d30e6e959c367772ef ChangeLog 4561
+RMD160 945b7dbc267204e7093343124b3c38290a7fef58 ChangeLog 4561
+SHA256 f83fc1893841a9e17b957e0fcbaa25e014a7aa4f7b98c4e0349230ae5be28735 ChangeLog 4561
+MISC metadata.xml 164 RMD160 698422e821458386b8da17baa6014296f8284e0b SHA1 a805613d38e6e3bff93cba3858d6a92cc79fe2f7 SHA256 7bd4d93c657a26aa9af1dea4232520c0d388cc92115dd9ca0eb04259228e044f
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 RMD160 698422e821458386b8da17baa6014296f8284e0b metadata.xml 164
 SHA256 7bd4d93c657a26aa9af1dea4232520c0d388cc92115dd9ca0eb04259228e044f metadata.xml 164
+MD5 2427ceb06284e578b44c456ee78f5221 files/digest-html-xml-utils-2.8-r1 256
+RMD160 383028b03f818454ab31776e9706dbc35ff26762 files/digest-html-xml-utils-2.8-r1 256
+SHA256 9a70643bdbcf7d9c08f0df84ecab83be6a80e2d22d725d05656af3378a1ddf7b files/digest-html-xml-utils-2.8-r1 256
+MD5 2427ceb06284e578b44c456ee78f5221 files/digest-html-xml-utils-2.8-r2 256
+RMD160 383028b03f818454ab31776e9706dbc35ff26762 files/digest-html-xml-utils-2.8-r2 256
+SHA256 9a70643bdbcf7d9c08f0df84ecab83be6a80e2d22d725d05656af3378a1ddf7b files/digest-html-xml-utils-2.8-r2 256
+MD5 883dc399af3cacb6f26ac23eb3db4a82 files/digest-html-xml-utils-3.4 256
+RMD160 c5033ee8c3276671e78c9a68e22e1d299ffb8377 files/digest-html-xml-utils-3.4 256
+SHA256 68fc3dac34d020067f972ba5c16cd17df498c0803614f9658de359fb8c74c125 files/digest-html-xml-utils-3.4 256
+MD5 a1f61dcb97d3ef182af31c8cb95d283c files/digest-html-xml-utils-3.6 256
+RMD160 1f67d125ac2bab66bda369576e3aa8828767947f files/digest-html-xml-utils-3.6 256
+SHA256 407947678f155c119760ef3b3c96fc1b0976dbc531c1075886c3b61f0f5f5dab files/digest-html-xml-utils-3.6 256
+MD5 6089cb0f5e9ac5d7a36ba1b3ea04fd0e files/digest-html-xml-utils-3.7 256
+RMD160 89cad381e80433a80ebbc783962bdfd522cf9509 files/digest-html-xml-utils-3.7 256
+SHA256 de3022867089677c038ee02eec3435bbf60d9afa37b6a64bdf64b9c5ae025d91 files/digest-html-xml-utils-3.7 256
