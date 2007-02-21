@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ipadic
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ChangeLog,v 1.13 2006/09/16 13:41:20 dertobi123 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ChangeLog,v 1.14 2007/02/21 20:34:01 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   16 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org> ipadic-2.7.0.ebuild:
   ppc stable

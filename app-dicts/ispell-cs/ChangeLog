@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-cs
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-cs/ChangeLog,v 1.11 2005/07/05 01:04:47 arj Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-cs/ChangeLog,v 1.12 2007/02/21 20:34:55 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *ispell-cs-20040229 (05 Jul 2005)
 

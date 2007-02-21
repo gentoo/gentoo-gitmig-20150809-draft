@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-it
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-it/ChangeLog,v 1.9 2005/02/21 21:14:40 blubb Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-it/ChangeLog,v 1.10 2007/02/21 20:39:17 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   21 Feb 2005; Simon Stelling <blubb@gentoo.org> ispell-it-2001.ebuild:
   stable on amd64
