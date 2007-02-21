@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/apollon
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/apollon/ChangeLog,v 1.20 2006/05/24 18:40:50 kloeri Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/apollon/ChangeLog,v 1.21 2007/02/21 20:10:59 armin76 Exp $
+
+  21 Feb 2007; Raúl Porcel <armin76@gentoo.org>
+  files/digest-apollon-0.9.4-r1, files/digest-apollon-1.0.2.1, Manifest:
+  Convert to Manifest2
 
   24 May 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove svyatogor from metadata.xml, bug 131936.
