@@ -2,8 +2,8 @@ AUX 0.1.2-configure.patch 625 RMD160 fb0dde20f86778aec55c8b2a17978b05407f0961 SH
 MD5 560d4730e30a40e198e204eabdb76249 files/0.1.2-configure.patch 625
 RMD160 fb0dde20f86778aec55c8b2a17978b05407f0961 files/0.1.2-configure.patch 625
 SHA256 2ee028779a180661174b6a77bf2e78888da8dd3bfa49530382ec2d95e049f05b files/0.1.2-configure.patch 625
-DIST streamtuner-python-0.1.0.tar.gz 338666
-DIST streamtuner-python-0.1.2.tar.gz 344685
+DIST streamtuner-python-0.1.0.tar.gz 338666 RMD160 5d9b69ea32d93a8ef7c47fa50cb8afd2c1a9ac91 SHA1 167dfb8a48c46b8410d1d8297deb44b3a86eea1a SHA256 2bfef441463a6274624405dc86353d1def0a7f1d0fdfa9fbb28ed9639ff4663a
+DIST streamtuner-python-0.1.2.tar.gz 344685 RMD160 878fa2a5cb290b78fc89a0099c6aa89f568b2aa0 SHA1 6a1d573ce4f02c1a1c247a386c416f4748366961 SHA256 d9cb0c71907e9610994f8c9d3a673c5f947c67e0b3be6e7b2403f15986da65ad
 EBUILD streamtuner-python-0.1.0.ebuild 657 RMD160 a48b68864f7313800cf66b7436f3b2644f3aa280 SHA1 118b2758e2b0b818019600010ffbab1dd6d048be SHA256 80fd5a5d4eca0fdb244bdf853a8429731f01beab2afc56f282a33d3084204107
 MD5 b4a492a9c77a3df48b5bbcdc47a1f750 streamtuner-python-0.1.0.ebuild 657
 RMD160 a48b68864f7313800cf66b7436f3b2644f3aa280 streamtuner-python-0.1.0.ebuild 657
@@ -12,17 +12,17 @@ EBUILD streamtuner-python-0.1.2.ebuild 766 RMD160 e3fc8059d6520fd5ce7b318d3dee95
 MD5 082aaa412815983f8036cfd427892443 streamtuner-python-0.1.2.ebuild 766
 RMD160 e3fc8059d6520fd5ce7b318d3dee95beaf3ce96f streamtuner-python-0.1.2.ebuild 766
 SHA256 d2516c8f1cc0ca75af4e14045605f260a2150f7b63fc2e39020c9240842ee8f1 streamtuner-python-0.1.2.ebuild 766
-MISC ChangeLog 1628 RMD160 0197a0af4a6c44c7f06c2a7aa393fdb72c288751 SHA1 b916cbc0200e5b672fb7fb5535a8e7ef3d607c94 SHA256 ff7cc845c64dede615366b5dc4b7d4911f3fde44434e17655fb4c2311bacee15
-MD5 28e0417bac94d32712edfe3c44ce0a38 ChangeLog 1628
-RMD160 0197a0af4a6c44c7f06c2a7aa393fdb72c288751 ChangeLog 1628
-SHA256 ff7cc845c64dede615366b5dc4b7d4911f3fde44434e17655fb4c2311bacee15 ChangeLog 1628
+MISC ChangeLog 1716 RMD160 6ec184ee6a0b80bdfba78e779e348900cb79b052 SHA1 aa515ecf996eb6c791ddd9062dde15f59084ad8d SHA256 e05401837ca0ef535f7bf2009aa67da01e1b6f338b5e5f90832476e625a3f092
+MD5 e0e197e005c94b422e1cd756237609a6 ChangeLog 1716
+RMD160 6ec184ee6a0b80bdfba78e779e348900cb79b052 ChangeLog 1716
+SHA256 e05401837ca0ef535f7bf2009aa67da01e1b6f338b5e5f90832476e625a3f092 ChangeLog 1716
 MISC metadata.xml 158 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e SHA1 703cea5a2109d41f7c87993c1f01d418a4c85174 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
-MD5 951449f1ac39d6797561853f13e0bb0e files/digest-streamtuner-python-0.1.0 76
-RMD160 30826a3bb85bdf811c211f193b84c8924b5b0c8f files/digest-streamtuner-python-0.1.0 76
-SHA256 548b3d10e62bcfc2e7a3b64502d77ba851a5b50e78ac6644f2c4485f66116ed8 files/digest-streamtuner-python-0.1.0 76
-MD5 89caed73d02f617144b00c1cee83a1eb files/digest-streamtuner-python-0.1.2 76
-RMD160 2faa63dc6894cdfe1c0e5631833a8975ed2906d9 files/digest-streamtuner-python-0.1.2 76
-SHA256 56e04d9fc36686eb81fe1a1c597b2d48e739f86f0eaffb0ffa957971b553efab files/digest-streamtuner-python-0.1.2 76
+MD5 c09b99b497478183d227a8ae1eb77fa3 files/digest-streamtuner-python-0.1.0 274
+RMD160 9c0d437bfa3b051f91d943349c443c6ef6c7e5d2 files/digest-streamtuner-python-0.1.0 274
+SHA256 fe95eb723f9ed2f4d6f2b3b4c6cf7695eadf9638e78a5afa25c5cde2ea9c5bff files/digest-streamtuner-python-0.1.0 274
+MD5 46e3572b83e6633d300aec22e9c0c6f4 files/digest-streamtuner-python-0.1.2 274
+RMD160 9fbe5e6efae57716006d85b22c687db3aafb56fa files/digest-streamtuner-python-0.1.2 274
+SHA256 b4aa43bffc696da7a2a0fcd789b4cd64f9e74b96b69c61afa855409cc7c0e507 files/digest-streamtuner-python-0.1.2 274
