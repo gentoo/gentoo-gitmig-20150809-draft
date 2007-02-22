@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/gnu-smalltalk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.26 2007/02/05 05:52:09 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.27 2007/02/22 09:38:34 araujo Exp $
+
+*gnu-smalltalk-2.3.3 (22 Feb 2007)
+
+  22 Feb 2007; Luis F. Araujo <araujo@gentoo.org>
+  +files/gst-stack-2.3.3.patch, +gnu-smalltalk-2.3.3.ebuild:
+  New package version. This version fixes bug #158434
 
 *gnu-smalltalk-2.3.2 (05 Feb 2007)
 
