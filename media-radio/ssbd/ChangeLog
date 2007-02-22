@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/ssbd
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/ssbd/ChangeLog,v 1.1 2005/08/10 21:55:37 killsoft Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ssbd/ChangeLog,v 1.2 2007/02/22 02:32:39 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   10 Aug 2005; Robb Romans <killsoft@gentoo.org> ChangeLog:
   New ebuild for ssbd - an SSB Voice Keyer Daemon for tucnak.
