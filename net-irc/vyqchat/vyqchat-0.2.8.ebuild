@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/vyqchat/vyqchat-0.2.8.ebuild,v 1.1 2007/01/28 05:03:36 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/vyqchat/vyqchat-0.2.8.ebuild,v 1.2 2007/02/22 22:20:17 armin76 Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://linux.bydg.org/~yogin/"
 SRC_URI="http://linux.bydg.org/~yogin/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~ppc x86"
 
 IUSE="arts"
 
