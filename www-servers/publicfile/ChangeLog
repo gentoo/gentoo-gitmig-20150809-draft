@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/publicfile
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/ChangeLog,v 1.8 2005/12/31 13:58:54 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/ChangeLog,v 1.9 2007/02/22 00:27:33 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   31 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> publicfile-0.52.ebuild:
   Change /bin/false to -1 in enewuser call.

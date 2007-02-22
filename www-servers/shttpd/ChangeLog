@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/shttpd
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/shttpd/ChangeLog,v 1.8 2006/10/24 07:23:30 stuart Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/shttpd/ChangeLog,v 1.9 2007/02/22 00:28:10 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
 *shttpd-1.35 (24 Oct 2006)
 
