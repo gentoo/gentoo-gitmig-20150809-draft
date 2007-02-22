@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/acml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.17 2007/01/08 01:37:01 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.18 2007/02/22 02:03:00 je_fro Exp $
+
+  22 Feb 2007; Jeff Gardner <je_fro@gentoo.org> files/digest-acml-3.0.0,
+  Manifest:
+  Updating acml-3.0.0 digest.
 
   08 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -acml-2.5.0.ebuild,
   -acml-2.7.0.ebuild, -acml-3.1.0.ebuild:
