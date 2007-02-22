@@ -1,0 +1,11 @@
+# ChangeLog for net-irc/ii
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ii/ChangeLog,v 1.1 2007/02/22 12:29:29 armin76 Exp $
+
+*ii-1 (22 Feb 2007)
+
+  22 Feb 2007; Raúl Porcel <armin76@gentoo.org> +metadata.xml,
+  +ii-1.ebuild:
+  New ebuild, bug 157822, thanks to Christian Berendt (lhunephel) <christian
+  at suppentopf dot net> for the initial ebuild
+
