@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.50 2007/02/21 19:16:25 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.51 2007/02/22 00:04:30 cardoe Exp $
+
+  22 Feb 2007; Doug Goldstein <cardoe@gentoo.org> ChangeLog, Manifest:
+  Manifest2 fix
+
+  22 Feb 2007; Doug Goldstein <cardoe@gentoo.org> ChangeLog:
+  Manifest2 fix
 
   21 Feb 2007; <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
