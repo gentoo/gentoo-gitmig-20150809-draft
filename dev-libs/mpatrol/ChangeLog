@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mpatrol
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpatrol/ChangeLog,v 1.12 2004/09/30 00:16:11 swegener Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpatrol/ChangeLog,v 1.13 2007/02/22 01:07:37 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org> mpatrol-1.4.8.ebuild:
   Fix use invocation

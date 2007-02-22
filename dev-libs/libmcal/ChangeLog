@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmcal
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.36 2006/04/02 06:50:35 robbat2 Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.37 2007/02/22 00:57:41 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   02 Apr 2006; Robin H. Johnson <robbat2@gentoo.org>
   +files/libmcal-0.7-flexfix.patch, libmcal-0.7-r5.ebuild:
