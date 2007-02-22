@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/modutils
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.52 2005/09/03 21:02:33 corsair Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.53 2007/02/22 01:15:13 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   03 Sep 2005; Markus Rothe <corsair@gentoo.org> modutils-2.4.27.ebuild:
   Stable on ppc64

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dmidecode
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/ChangeLog,v 1.15 2006/08/18 23:10:24 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/ChangeLog,v 1.16 2007/02/22 01:07:52 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   19 Aug 2006; Bryan Østergaard <kloeri@gentoo.org> dmidecode-2.8.ebuild:
   Stable on ia64.

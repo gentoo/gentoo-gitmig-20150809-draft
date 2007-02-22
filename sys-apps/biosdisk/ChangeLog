@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/biosdisk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/biosdisk/ChangeLog,v 1.4 2007/01/08 01:38:19 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/biosdisk/ChangeLog,v 1.5 2007/02/22 01:03:12 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   08 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -biosdisk-0.50.ebuild:
   QA: Removed unused versions.

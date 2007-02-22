@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/count
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/count/ChangeLog,v 1.1 2005/01/07 23:09:57 stuart Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/count/ChangeLog,v 1.2 2007/02/22 01:05:43 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
 *count-1.20 (07 Jan 2005)
 
