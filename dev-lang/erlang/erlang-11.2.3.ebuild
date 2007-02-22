@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.3.ebuild,v 1.1 2007/02/20 23:33:08 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.3.ebuild,v 1.2 2007/02/22 10:28:43 blubb Exp $
 
 inherit elisp-common eutils flag-o-matic multilib versionator
 
@@ -53,6 +53,7 @@ src_unpack() {
 
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}/${PN}-10.2.6-export-TARGET.patch"
 	use odbc || sed -i 's: odbc : :' lib/Makefile
 #	epatch "${DISTDIR}"/otp_src_${MY_PV}_epoll.patch
 	epatch "${FILESDIR}/erl_process_dump_R11B-3.patch"
