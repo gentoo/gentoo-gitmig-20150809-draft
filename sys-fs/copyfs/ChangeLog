@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/copyfs
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/copyfs/ChangeLog,v 1.2 2004/12/18 21:20:05 stuart Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/copyfs/ChangeLog,v 1.3 2007/02/22 00:46:08 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   18 Dec 2004; Stuart Herbert <stuart@gentoo.org>
   files/copyfs-1.0-unlink.patch:

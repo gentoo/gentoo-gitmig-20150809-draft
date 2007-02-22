@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/unionfs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/ChangeLog,v 1.29 2007/01/07 19:19:39 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/ChangeLog,v 1.30 2007/02/22 00:55:06 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
 *unionfs-1.5_pre200701042308 (07 Jan 2007)
 

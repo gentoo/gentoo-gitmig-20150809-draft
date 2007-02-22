@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/jdiskreport-bin
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/jdiskreport-bin/ChangeLog,v 1.4 2006/08/18 17:08:57 compnerd Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/jdiskreport-bin/ChangeLog,v 1.5 2007/02/22 00:49:20 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
 *jdiskreport-bin-1.2.5 (18 Aug 2006)
 

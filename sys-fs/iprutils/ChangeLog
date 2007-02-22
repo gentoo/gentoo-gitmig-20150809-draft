@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/iprutils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/ChangeLog,v 1.15 2007/01/23 14:41:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/ChangeLog,v 1.16 2007/02/22 00:48:47 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
 *iprutils-2.2.3 (23 Jan 2007)
 
