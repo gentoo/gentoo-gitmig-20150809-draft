@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake3-nsco
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-nsco/ChangeLog,v 1.10 2006/10/25 20:30:53 wolf31o2 Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-nsco/ChangeLog,v 1.11 2007/02/22 15:33:09 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org>
+  files/digest-quake3-nsco-1.90, files/digest-quake3-nsco-1.91,
+  files/digest-quake3-nsco-1.91a, files/digest-quake3-nsco-1.93, Manifest:
+  Transition to Manifest2.
 
 *quake3-nsco-1.93-r1 (25 Oct 2006)
 
