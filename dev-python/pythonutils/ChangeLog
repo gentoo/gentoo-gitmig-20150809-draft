@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pythonutils
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonutils/ChangeLog,v 1.5 2006/04/30 19:55:36 lucass Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonutils/ChangeLog,v 1.6 2007/02/22 00:48:31 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *pythonutils-0.2.5 (30 Apr 2006)
 

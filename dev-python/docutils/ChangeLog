@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/docutils
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.55 2007/01/12 21:13:40 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.56 2007/02/22 00:23:15 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   12 Jan 2007; nixnut <nixnut@gentoo.org> docutils-0.4.ebuild:
   Stable on ppc wrt bug 159855

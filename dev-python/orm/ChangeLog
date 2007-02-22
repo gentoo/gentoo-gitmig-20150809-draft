@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/orm
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/orm/ChangeLog,v 1.6 2006/07/28 12:03:51 liquidx Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/orm/ChangeLog,v 1.7 2007/02/22 00:31:44 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   28 Jul 2006; Alastair Tse <liquidx@gentoo.org> orm-0.15.ebuild,
   orm-1.0.1.ebuild:
