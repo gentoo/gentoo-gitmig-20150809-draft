@@ -19,7 +19,7 @@ store_persistent_rules() {
 		tmp_rules=/dev/.udev/tmp-rules--${base}
 		real_rules=/etc/udev/rules.d/${base}
 
-		if [[ -f ${tmp_rules} ]]; then
+		if [ -f ${tmp_rules} ]; then
 			einfo "Saving udev persistent ${type} rules to /etc/udev/rules.d"
 			cat ${tmp_rules} >> ${real_rules}
 			rm ${tmp_rules}
@@ -30,8 +30,8 @@ store_persistent_rules() {
 main() {
 	store_persistent_rules
 
-	if [[ -e /dev/.devfsd || ! -e /dev/.udev || ! -z ${CDBOOT} || \
-	   ${RC_DEVICE_TARBALL} != "yes" ]] || \
+	if [ -e /dev/.devfsd ] || [ ! -e /dev/.udev ] || [ ! -z "${CDBOOT}" ] || \
+	   [ "${RC_DEVICE_TARBALL}" != "yes" ] || \
 	   ! touch /lib/udev/state/devices.tar.bz2 2>/dev/null
 	then
 		return 0
@@ -50,22 +50,20 @@ main() {
 	touch "${devices_udev}" "${devices_real}" \
 		"${devices_totar}" "${device_tarball}"
 	
-	if [[ ! ( -f ${devices_udev} && -f ${devices_real} && \
-		  -f ${devices_totar} && -f ${device_tarball} ) ]] ; then
-		eend 1 "Could not create temporary files!"
-	else
+	if [ -f ${devices_udev} ] && [ -f ${devices_real} ] && \
+	   [ -f ${devices_totar} ] && [ -f ${device_tarball} ] ; then
 		cd /dev
 		# Find all devices
 		find . -xdev -type b -or -type c -or -type l | cut -d/ -f2- > \
 			"${devices_real}"
 		# Figure out what udev created
 		eval $(grep '^[[:space:]]*udev_db=' /etc/udev/udev.conf)
-		if [[ -d ${udev_db} ]]; then
+		if [ -d ${udev_db} ]; then
 			# New udev_db is clear text ...
 			udevinfo=$(cat "${udev_db}"/*)
 		else
 			# if no udev_db
-			if [[ $(udev_version) -ge "104" ]]; then
+			if [ $(udev_version) -ge 104 ]; then
 				udevinfo=$(udevinfo --export-db)
 			else
 				# Old one is not ...
@@ -85,7 +83,7 @@ main() {
 		for x in MAKEDEV core fd initctl pts shm stderr stdin stdout; do
 			echo "${x}" >> "${devices_udev}"
 		done
-		if [[ -d /lib/udev/devices ]]; then
+		if [ -d /lib/udev/devices ]; then
 			cd /lib/udev/devices
 			find . -xdev -type b -or -type c -or -type l | cut -d/ -f2- >> "${devices_udev}"
 		fi
@@ -94,7 +92,7 @@ main() {
 		  grep -v ^\\.udev > "${devices_totar}"
 
 		# Now only tarball those not created by udev if we have any
-		if [[ -s ${devices_totar} ]]; then
+		if [ -s ${devices_totar} ]; then
 			# we dont want to descend into mounted filesystems (e.g. devpts)
 			# looking up username may involve NIS/network, and net may be down
 			tar --one-file-system --numeric-owner -jcpf "${device_tarball}" -T "${devices_totar}"
@@ -103,6 +101,8 @@ main() {
 			rm -f /lib/udev/state/devices.tar.bz2
 		fi
 		eend 0
+	else
+		eend 1 "Could not create temporary files!"
 	fi
 
 	rm -rf "${save_tmp_base}"

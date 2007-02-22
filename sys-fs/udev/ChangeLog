@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.267 2007/02/20 10:28:41 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.268 2007/02/22 15:49:01 uberlord Exp $
+
+  22 Feb 2007; Roy Marples <uberlord@gentoo.org>
+  files/udev-start-104-r12.sh, files/udev-stop-104-r8.sh:
+  udev-start,shop.sh now work with any shell
 
 *udev-104-r12 (20 Feb 2007)
 
