@@ -1,6 +1,11 @@
 # ChangeLog for games-sports/bygfoot
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/bygfoot/ChangeLog,v 1.15 2007/01/12 01:19:43 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/bygfoot/ChangeLog,v 1.16 2007/02/22 17:25:03 mr_bones_ Exp $
+
+  22 Feb 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  -bygfoot-1.9.3.ebuild, -bygfoot-1.9.4.ebuild, -bygfoot-1.9.5.ebuild,
+  -bygfoot-1.9.6.ebuild, -bygfoot-2.0.0.ebuild:
+  clean out old ebuilds
 
   12 Jan 2007; Tristan Heaven <nyhm@gentoo.org> bygfoot-2.0.1.ebuild:
   Fix locale install directory, bug #159645
