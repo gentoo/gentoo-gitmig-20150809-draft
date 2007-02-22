@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/asuka
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/asuka/ChangeLog,v 1.13 2006/10/31 23:18:29 ticho Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/asuka/ChangeLog,v 1.14 2007/02/22 02:29:41 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   31 Oct 2006; Andrej Kacian <ticho@gentoo.org> asuka-1.2.1.ebuild:
   Stable on x86, bug #152922.
