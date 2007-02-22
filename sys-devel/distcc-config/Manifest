@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-DIST distcc-config-1.3-r1.tar.bz2 2321
-DIST distcc-config-1.3.tar.bz2 2328
+DIST distcc-config-1.3-r1.tar.bz2 2321 RMD160 12fd0f8503c235a997b50666f31d944bcbdff0da SHA1 34b406e4205c80c5966f57931783c02a7d7a4a03 SHA256 de308f658e63ae1fc8e47918f38dead4b580baa6f4264ca3497a1d01ef305a70
+DIST distcc-config-1.3.tar.bz2 2328 RMD160 073973a1493357f7fae15e9fd8f4ad7ffdef6a56 SHA1 bba5bb58d0c199d0555ec1f235d5293a283576b8 SHA256 4006fd5c3971abecc2ec1e59883e111ca81965537d1e6fd974af424738b0c5c6
 EBUILD distcc-config-1.3-r1.ebuild 585 RMD160 52228d9ade6d2289ed3e81dcbd303c4a1841bd86 SHA1 54281fb347f5cc2dea94b60047e434a5faf598df SHA256 10366bdeb4f12d3684fcd85ca39532920a107d4ce75c76f9c07e4f8e1cbc4028
 MD5 14bfdd91a4d36d518ceda0a4e0e79100 distcc-config-1.3-r1.ebuild 585
 RMD160 52228d9ade6d2289ed3e81dcbd303c4a1841bd86 distcc-config-1.3-r1.ebuild 585
@@ -11,24 +11,24 @@ EBUILD distcc-config-1.3.ebuild 575 RMD160 9851c0ff7d0bdcf3f1caf2d40240563c93915
 MD5 7c73215e64602b560c4cdd1d54eaab8b distcc-config-1.3.ebuild 575
 RMD160 9851c0ff7d0bdcf3f1caf2d40240563c93915758 distcc-config-1.3.ebuild 575
 SHA256 5c29159b8dce179eb0104a17683ecdb75c8db38a8fb7e9adc091be6a01dc8fca distcc-config-1.3.ebuild 575
-MISC ChangeLog 605 RMD160 f3b0c39978d124a992701f0f9788e78ddf0ae9fd SHA1 cdf29e394ad8e0f764253e55fddec04d28f741b9 SHA256 f467724d86e77df823624a11f8e54697aec5c37d1c2be9ee1a6a949cce310f59
-MD5 baf5d0511667e4cfc17801d7e7650c4a ChangeLog 605
-RMD160 f3b0c39978d124a992701f0f9788e78ddf0ae9fd ChangeLog 605
-SHA256 f467724d86e77df823624a11f8e54697aec5c37d1c2be9ee1a6a949cce310f59 ChangeLog 605
+MISC ChangeLog 689 RMD160 f007a35e246a9af37f1a3033a97d82870ab9cc9b SHA1 6bce15359cfa1a7445a2a075a2a45faca72d3cee SHA256 dddd7401efb161c2e343bae2fe8de5eb01aa8cf6744db58151633b566bd494a9
+MD5 2130ebd625c3b66ac8ef610d2df98e1d ChangeLog 689
+RMD160 f007a35e246a9af37f1a3033a97d82870ab9cc9b ChangeLog 689
+SHA256 dddd7401efb161c2e343bae2fe8de5eb01aa8cf6744db58151633b566bd494a9 ChangeLog 689
 MISC metadata.xml 335 RMD160 a0646d2ccff6fd32d153e9bbdb16ed38cdfdafe8 SHA1 b77b5ba6c560415ab4d9058945d3b012115800fc SHA256 1631f4efb45bfd104315c4b266eb68717b1f72d0fffaf2bd1629322da98b405b
 MD5 75efaf772a6c78df9ec1441cb98f34a1 metadata.xml 335
 RMD160 a0646d2ccff6fd32d153e9bbdb16ed38cdfdafe8 metadata.xml 335
 SHA256 1631f4efb45bfd104315c4b266eb68717b1f72d0fffaf2bd1629322da98b405b metadata.xml 335
-MD5 c68a7deb09ddd39c470cebaeb8863b83 files/digest-distcc-config-1.3 68
-RMD160 9eec395505e0b0370004b218c3118a0cf9652e1d files/digest-distcc-config-1.3 68
-SHA256 ddf44716e7310a26e6878b9fff500cde179054d6cd6c9cf0be5e23213d9ca446 files/digest-distcc-config-1.3 68
-MD5 c1b376dea6fb3124295431a3f9653abb files/digest-distcc-config-1.3-r1 71
-RMD160 f3899882c685b8ffe823ec1d38af7fab1fa86d5d files/digest-distcc-config-1.3-r1 71
-SHA256 f7119a6c1acd1e55149878ca8f7cc0d071564f776ba6b9a6c4de58ca08476083 files/digest-distcc-config-1.3-r1 71
+MD5 20c86bfa365c7b1547d993deb0cd0530 files/digest-distcc-config-1.3 250
+RMD160 92d336bc851bc62b0cb4a60be1564101990447ac files/digest-distcc-config-1.3 250
+SHA256 9078cf86ce190501fa513022a064e8958b8ffb7651054d822ceda69bedac0dd5 files/digest-distcc-config-1.3 250
+MD5 0d592b5b886cc629e09bd95789ecd9d1 files/digest-distcc-config-1.3-r1 259
+RMD160 31d67e7e5d21b48b541fb4ca31a87d58ee4e2457 files/digest-distcc-config-1.3-r1 259
+SHA256 d7e7ba1b14033a3c382e12a8e4e74af1cd750370274e82fa6ac0e3a1891dbb50 files/digest-distcc-config-1.3-r1 259
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
+Version: GnuPG v2.0.1 (GNU/Linux)
 
-iD8DBQFFOqc9amhnQswr0vIRAgBYAJ0ejB3kN0eOVaoKwYpRJ7zxM/ycnQCgj59o
-piF5jfH2IUVh0GboqHKjrUo=
-=nefq
+iD8DBQFF3Oguz974XjDVpbkRAv7NAKC1Tt7XYSI6vanYXSlObY/05pbmowCfXEgL
+1IETs9w5gnFUIjlOeULjEd0=
+=isAB
 -----END PGP SIGNATURE-----
