@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/auctex
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.51 2007/02/20 21:45:33 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.52 2007/02/22 12:49:55 opfer Exp $
+
+  22 Feb 2007; Christian Faulhammer <opfer@gentoo.org> auctex-11.84.ebuild:
+  applied better checks for the contents of TEXMFSITE: if it is defined at all
+  (emerge process fails then), to choose an entry if several paths are in it
+  and use the dodir function instead of an manual mkdir command
 
   20 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
   files/52auctex-gentoo.el:

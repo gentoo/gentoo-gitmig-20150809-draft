@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.84.ebuild,v 1.1 2007/01/15 10:13:43 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.84.ebuild,v 1.2 2007/02/22 12:49:55 opfer Exp $
 
 inherit elisp eutils latex-package autotools
 
@@ -29,9 +29,29 @@ src_unpack() {
 src_compile() {
 	# Don't install in the main tree, as this causes file collisions
 	# with app-text/tetex, see bug #155944
-	# Does no harm when used with USE=-preview-latex 
-	local PREVIEW_TEXMFDIR="${D}`kpsewhich -var-value=TEXMFSITE`"
-	mkdir -p "${PREVIEW_TEXMFDIR}"
+	if use preview-latex; then
+		local TEXMFPATH="$(kpsewhich -var-value=TEXMFSITE)"
+
+		if [ -z "${TEXMFPATH}" ]; then
+			local TEXMFCONFIGFILE="$(kpsewhich texmf.cnf)"
+
+			eerror "You haven't defined the TEXMFSITE variable in your TeX config."
+			eerror "Please do so in the file ${TEXMFCONFIGFILE:-/var/lib/texmf/web2c/texmf.cnf}"
+			die "Define TEXMFSITE in TeX configuration!"
+		else
+			# go through the colon separated list of directories (maybe only one) provided in the variable
+			# TEXMFPATH (generated from TEXMFSITE from TeX's config) and choose only the first entry
+			local IFS="${IFS}:"
+
+			for strippedpath in ${TEXMFPATH}
+			do
+				local PREVIEW_TEXMFDIR="${D}/${strippedpath}"
+				break
+			done
+
+			dodir "${PREVIEW_TEXMFDIR}"
+		fi
+	fi
 
 	econf --disable-build-dir-test \
 		--with-auto-dir="${D}/var/lib/auctex" \
