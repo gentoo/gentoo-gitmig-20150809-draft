@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/schedtool
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/schedtool/ChangeLog,v 1.7 2007/02/02 18:21:43 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/schedtool/ChangeLog,v 1.8 2007/02/22 00:35:40 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
 *schedtool-1.2.9 (02 Feb 2007)
 

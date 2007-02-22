@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/audit
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.13 2006/11/13 11:41:07 robbat2 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.14 2007/02/22 00:33:30 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
 *audit-1.2.9 (13 Nov 2006)
 *audit-1.2.5 (13 Nov 2006)
