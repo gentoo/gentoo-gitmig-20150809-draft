@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dcetest
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dcetest/ChangeLog,v 1.5 2006/07/02 21:02:14 chriswhite Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dcetest/ChangeLog,v 1.6 2007/02/22 02:14:05 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   02 Jul 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
   Japanese metadata.xml translation.  Thanks to Yoshino-san in bug #134838.

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/asterisk-cdr_shell
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-cdr_shell/ChangeLog,v 1.4 2006/05/06 15:16:25 stkn Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-cdr_shell/ChangeLog,v 1.5 2007/02/22 02:05:18 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *asterisk-cdr_shell-20060120 (06 May 2006)
 

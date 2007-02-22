@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/cipe
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cipe/ChangeLog,v 1.8 2006/07/02 20:55:15 chriswhite Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cipe/ChangeLog,v 1.9 2007/02/22 02:12:18 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   02 Jul 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
   Japanese metdata.xml translation.  Thanks to Yoshino-san in bug #134102.

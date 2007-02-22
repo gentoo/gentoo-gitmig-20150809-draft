@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/blinkperl
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/blinkperl/ChangeLog,v 1.4 2004/06/24 23:36:52 agriffis Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/blinkperl/ChangeLog,v 1.5 2007/02/22 02:09:30 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   07 Jun 2003; <rac@gentoo.org> blinkperl-20030301.ebuild:
   Add IUSE

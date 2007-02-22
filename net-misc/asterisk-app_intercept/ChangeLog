@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/asterisk-app_intercept
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_intercept/ChangeLog,v 1.4 2006/05/06 15:23:37 stkn Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_intercept/ChangeLog,v 1.5 2007/02/22 02:03:40 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *asterisk-app_intercept-20060120 (06 May 2006)
 

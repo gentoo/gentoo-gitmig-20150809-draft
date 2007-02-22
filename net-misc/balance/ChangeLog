@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/balance
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/balance/ChangeLog,v 1.8 2005/11/02 20:21:55 genstef Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/balance/ChangeLog,v 1.9 2007/02/22 02:09:05 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   02 Nov 2005; Stefan Schweizer <genstef@gentoo.org> balance-3.24.ebuild,
   balance-3.26.ebuild:

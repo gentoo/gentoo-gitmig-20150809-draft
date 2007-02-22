@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/6tunnel
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/6tunnel/ChangeLog,v 1.8 2004/11/22 09:18:51 dragonheart Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/6tunnel/ChangeLog,v 1.9 2007/02/22 01:59:14 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *6tunnel-0.11_rc1 (22 Nov 2004)
 
