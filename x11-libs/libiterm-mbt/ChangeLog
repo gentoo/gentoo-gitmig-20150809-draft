@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libiterm-mbt
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libiterm-mbt/ChangeLog,v 1.4 2006/08/20 21:48:19 dberkholz Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libiterm-mbt/ChangeLog,v 1.5 2007/02/22 00:00:47 jokey Exp $
+
+  21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   20 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Change herd to cjk, since the only package still in the tree depending on

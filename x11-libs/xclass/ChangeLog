@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xclass
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xclass/ChangeLog,v 1.13 2006/03/15 08:10:10 spyderous Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xclass/ChangeLog,v 1.14 2007/02/22 00:02:21 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   15 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
   xclass-0.8.2-r1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtkscintilla2
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkscintilla2/ChangeLog,v 1.10 2005/11/06 10:53:13 blubb Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkscintilla2/ChangeLog,v 1.11 2007/02/21 23:58:04 jokey Exp $
+
+  21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   06 Nov 2005; Simon Stelling <blubb@gentoo.org> gtkscintilla2-0.1.0.ebuild:
   fix bug 95603 and a multilib-strict issue

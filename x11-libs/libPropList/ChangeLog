@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libPropList
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libPropList/ChangeLog,v 1.10 2004/11/02 15:38:13 agriffis Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libPropList/ChangeLog,v 1.11 2007/02/21 23:59:39 jokey Exp $
+
+  21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   02 Nov 2004; Aron Griffis <agriffis@gentoo.org>
   libPropList-0.10.1-r3.ebuild:
