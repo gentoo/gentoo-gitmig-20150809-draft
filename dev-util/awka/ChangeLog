@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/awka
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/awka/ChangeLog,v 1.5 2006/03/06 19:18:05 metalgod Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/awka/ChangeLog,v 1.6 2007/02/22 01:54:02 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   06 Mar 2006; Luis Medinas <metalgod@gentoo.org> awka-0.7.5.ebuild:
   Fix multilib and add ~amd64 keyword this closes bug #124370.
