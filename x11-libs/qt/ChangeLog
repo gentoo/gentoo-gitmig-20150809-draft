@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.413 2007/02/18 15:43:00 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.414 2007/02/22 14:10:18 caleb Exp $
+
+*qt-3.3.8 (22 Feb 2007)
+
+  22 Feb 2007; Caleb Tennis <caleb@gentoo.org>
+  +files/qt-3.3.8-seli-xinerama.patch, +files/qt-3.3.8-uic-fix.patch,
+  +files/qt-3.3.8-visibility.patch, +qt-3.3.8.ebuild:
+  Bump to latest version
 
   18 Feb 2007; Fabian Groffen <grobian@gentoo.org>
   -files/qt-3.3.4-macos.patch, -files/qt-3.3.5-macos.patch,
