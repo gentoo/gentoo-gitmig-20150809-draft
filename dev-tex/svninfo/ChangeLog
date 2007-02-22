@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/svninfo
-# Copyright 2005-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/ChangeLog,v 1.7 2006/07/17 10:45:32 cryos Exp $
+# Copyright 2005-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/ChangeLog,v 1.8 2007/02/22 01:47:38 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   17 Jul 2006; Marcus D. Hanwell <cryos@gentoo.org> svninfo-0.6.ebuild:
   Added -j1 to emake to solve parallel build issues encountered.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/prosper
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/prosper/ChangeLog,v 1.16 2006/03/09 12:38:25 ehmsen Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/prosper/ChangeLog,v 1.17 2007/02/22 01:46:17 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   09 Mar 2006; Martin Ehmsen <ehmsen@gentoo.org> prosper-1.5-r1.ebuild:
   Do not install INSTALL to doc.
