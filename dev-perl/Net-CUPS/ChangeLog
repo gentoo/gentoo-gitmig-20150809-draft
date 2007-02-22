@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-CUPS
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CUPS/ChangeLog,v 1.15 2007/02/18 12:53:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CUPS/ChangeLog,v 1.16 2007/02/22 12:33:58 ian Exp $
+
+  22 Feb 2007; Christian Hartmann <ian@gentoo.org> -Net-CUPS-0.37.ebuild:
+  Removed broken version
 
   18 Feb 2007; Raúl Porcel <armin76@gentoo.org> Net-CUPS-0.41-r1.ebuild:
   x86 stable wrt bug 167375
