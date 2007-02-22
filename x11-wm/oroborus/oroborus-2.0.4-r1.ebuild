@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/oroborus-2.0.4-r1.ebuild,v 1.18 2006/03/15 08:07:48 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/oroborus-2.0.4-r1.ebuild,v 1.19 2007/02/22 05:55:31 omp Exp $
 
 DESCRIPTION="Yet another window manager"
 SRC_URI="http://www.kensden.pwp.blueyonder.co.uk/Oroborus/files/${P}.tar.gz"
@@ -26,11 +26,11 @@ DEPEND="${RDEPEND}
 src_compile() {
 
 	./configure --host=${CHOST} \
-		    --prefix=/usr \
-		    --sysconfdir=/etc/X11/oroborus \
-	 	    --infodir=/usr/share/info \
-		    --mandir=/usr/share/man \
-		    || die
+		--prefix=/usr \
+		--sysconfdir=/etc/X11/oroborus \
+		--infodir=/usr/share/info \
+		--mandir=/usr/share/man \
+		|| die
 
 	emake || die
 }
@@ -38,10 +38,10 @@ src_compile() {
 src_install () {
 
 	make prefix=${D}/usr \
-	     sysconfdir=${D}/etc/X11/oroborus \
-	     infodir=${D}/usr/share/info \
-	     mandir=${D}/usr/share/man \
-	     install || die
+		sysconfdir=${D}/etc/X11/oroborus \
+		infodir=${D}/usr/share/info \
+		mandir=${D}/usr/share/man \
+		install || die
 
 	if use gnome ; then
 

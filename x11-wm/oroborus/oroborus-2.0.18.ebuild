@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/oroborus-2.0.18.ebuild,v 1.1 2006/07/01 21:01:52 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/oroborus-2.0.18.ebuild,v 1.2 2007/02/22 05:55:31 omp Exp $
 
 DESCRIPTION="Small and fast window manager."
 HOMEPAGE="http://www.oroborus.org/"
@@ -28,20 +28,20 @@ src_compile() {
 	automake --add-missing
 	autoconf
 	./configure --host=${CHOST} \
-		    --prefix=/usr \
-		    --sysconfdir=/etc/X11/oroborus \
-	 	    --infodir=/usr/share/info \
-		    --mandir=/usr/share/man \
-		    || die
+		--prefix=/usr \
+		--sysconfdir=/etc/X11/oroborus \
+		--infodir=/usr/share/info \
+		--mandir=/usr/share/man \
+		|| die
 	emake || die
 }
 
 src_install () {
 	make prefix=${D}/usr \
-	     sysconfdir=${D}/etc/X11/oroborus \
-	     infodir=${D}/usr/share/info \
-	     mandir=${D}/usr/share/man \
-	     install || die
+		sysconfdir=${D}/etc/X11/oroborus \
+		infodir=${D}/usr/share/info \
+		mandir=${D}/usr/share/man \
+		install || die
 
 	if use gnome ; then
 		insinto /usr/share/gnome/wm-properties
