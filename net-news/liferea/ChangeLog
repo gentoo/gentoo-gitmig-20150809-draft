@@ -1,6 +1,15 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.88 2007/02/15 19:00:27 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.89 2007/02/22 18:44:33 dang Exp $
+
+*liferea-1.2.7 (22 Feb 2007)
+
+  22 Feb 2007; Daniel Gryniewicz <dang@gentoo.org> +liferea-1.2.7.ebuild:
+  Bump to 1.2.7
+  	* Fixes in the feed list loading error handling.
+  	* Now after successful feed list import on startup a
+  	  feedlist.opml backup file will be created.
+  	* Fixes LUA support detection.
 
   15 Feb 2007; Daniel Gryniewicz <dang@gentoo.org> liferea-1.2.5.ebuild,
   liferea-1.2.6b.ebuild:
