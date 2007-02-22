@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/qalculate-bases
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-bases/ChangeLog,v 1.8 2007/01/04 14:59:52 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-bases/ChangeLog,v 1.9 2007/02/22 01:26:06 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
 *qalculate-bases-0.9.4-r1 (04 Jan 2007)
 
