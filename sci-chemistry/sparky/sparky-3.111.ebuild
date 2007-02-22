@@ -1,12 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/sparky-3.111.ebuild,v 1.3 2005/12/18 20:42:32 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/sparky-3.111.ebuild,v 1.4 2007/02/22 14:23:16 peper Exp $
 
 inherit eutils toolchain-funcs multilib python
 
 DESCRIPTION="Graphical NMR assignment and integration program for proteins, nucleic acids, and other polymers"
 HOMEPAGE="http://www.cgl.ucsf.edu/home/sparky/"
-SRC_URI="http://www.cgl.ucsf.edu/home/sparky/distrib/${PN}-source-${PV}.tar.gz"
+SRC_URI="http://www.cgl.ucsf.edu/home/sparky/distrib-3.110/${PN}-source-${PV}.tar.gz"
 LICENSE="sparky"
 SLOT="0"
 # Note: this package will probably require significant work for lib{32,64},
