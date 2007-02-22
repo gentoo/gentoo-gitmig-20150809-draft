@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/gfsview
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gfsview/ChangeLog,v 1.3 2006/04/05 04:06:15 markusle Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gfsview/ChangeLog,v 1.4 2007/02/22 01:08:35 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
 *gfsview-0.4.2 (05 Apr 2006)
 

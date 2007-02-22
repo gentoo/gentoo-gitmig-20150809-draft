@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/opendx
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/ChangeLog,v 1.3 2006/04/09 21:52:22 cryos Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/ChangeLog,v 1.4 2007/02/22 01:09:47 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   09 Apr 2006; Marcus D. Hanwell <cryos@gentoo.org> -opendx-4.3.2.ebuild:
   Prune old version.

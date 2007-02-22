@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/qmatplot
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qmatplot/ChangeLog,v 1.2 2006/02/16 19:29:20 swegener Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qmatplot/ChangeLog,v 1.3 2007/02/22 01:10:59 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   29 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org>
   +files/qmatplot-0.4.2-gcc34.patch, +files/qmatplot-0.4.2-gentoo.patch,
