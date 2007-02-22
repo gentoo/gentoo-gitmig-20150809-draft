@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/enblend
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/ChangeLog,v 1.13 2007/02/05 03:46:34 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/ChangeLog,v 1.14 2007/02/22 01:26:48 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *enblend-3.0 (05 Feb 2007)
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/transfig
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/ChangeLog,v 1.31 2006/09/02 17:03:47 jer Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/ChangeLog,v 1.32 2007/02/22 01:41:41 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   02 Sep 2006; Jeroen Roovers <jer@gentoo.org> transfig-3.2.4-r2.ebuild:
   Stable for HPPA (bug #140903).

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimmage
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimmage/ChangeLog,v 1.4 2006/09/23 18:58:09 nixnut Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimmage/ChangeLog,v 1.5 2007/02/22 01:29:16 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   23 Sep 2006; <nixnut@gentoo.org> gimmage-0.1.8.ebuild:
   Added ~ppc wrt bug 148140

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/truevision
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/truevision/ChangeLog,v 1.14 2006/07/09 22:27:13 vanquirius Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/truevision/ChangeLog,v 1.15 2007/02/22 01:42:04 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   09 Jul 2006; Marcelo Goes <vanquirius@gentoo.org>
   -truevision-0.3.10.ebuild:

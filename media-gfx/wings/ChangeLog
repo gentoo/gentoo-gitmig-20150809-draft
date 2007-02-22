@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/wings
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wings/ChangeLog,v 1.14 2006/06/11 12:33:31 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wings/ChangeLog,v 1.15 2007/02/22 01:42:59 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   11 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> wings-0.98.32a.ebuild:
   Make multilib-strict compatible.
