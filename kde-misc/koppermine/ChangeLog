@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/koppermine
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/koppermine/ChangeLog,v 1.1 2006/04/17 21:49:54 deathwing00 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/koppermine/ChangeLog,v 1.2 2007/02/22 00:47:07 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *koppermine-1.1 (17 Apr 2006)
 
