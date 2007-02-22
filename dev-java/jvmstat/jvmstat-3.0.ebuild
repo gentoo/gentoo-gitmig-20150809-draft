@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jvmstat/jvmstat-3.0.ebuild,v 1.2 2006/07/07 04:13:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jvmstat/jvmstat-3.0.ebuild,v 1.3 2007/02/22 18:15:46 nelchael Exp $
 
 inherit java-pkg-2 versionator
 
@@ -40,5 +40,14 @@ src_install() {
 
 	dodoc README
 	use doc && dodoc -r docs
+
+	dodir /opt/bin
+	cat > "${D}/opt/bin/visualgc" <<-EOF
+	#!/bin/bash
+	export JVMSTAT_JAVA_HOME=$(java-config -O)
+	cd /opt/jvmstat/bin/
+	./visualgc \${@}
+	EOF
+	fperms 755 /opt/bin/visualgc
 
 }
