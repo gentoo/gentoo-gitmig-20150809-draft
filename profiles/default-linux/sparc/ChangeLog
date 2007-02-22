@@ -1,6 +1,10 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.39 2007/02/21 19:41:01 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.40 2007/02/22 14:50:16 drac Exp $
+
+  22 Feb 2007; Samuli Suominen <drac@gentoo.org>
+  Unmasked tango-icon-theme* and icon-naming-utils in 2.4 profile because
+  icon-naming-utils was accidentally included in GNOME 2.16 mask.
 
   21 Feb 2007; Samuli Suominen <drac@gentoo.org>
   Masked tango-icon-theme* in sparc64/2006.1/2.4 because of icon-naming-utils dep.
