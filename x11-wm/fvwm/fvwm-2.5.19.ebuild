@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.19.ebuild,v 1.4 2007/01/17 10:51:22 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.19.ebuild,v 1.5 2007/02/22 05:48:36 omp Exp $
 
 inherit eutils flag-o-matic
 
@@ -37,7 +37,6 @@ RDEPEND="readline? ( sys-libs/readline sys-libs/ncurses )
 # XXX:	netpbm is used by FvwmScript-ScreenDump, worth a dependency?
 DEPEND="${RDEPEND}
 		dev-util/pkgconfig
-		!x11-wm/metisse
 		|| ( (
 			x11-libs/libXrandr
 			x11-proto/xextproto
