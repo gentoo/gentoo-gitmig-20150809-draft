@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/testunit-mock
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/testunit-mock/ChangeLog,v 1.2 2006/03/30 04:00:07 agriffis Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/testunit-mock/ChangeLog,v 1.3 2007/02/22 01:22:14 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> testunit-mock-0.03.ebuild:
   Mark 0.03 ~ia64

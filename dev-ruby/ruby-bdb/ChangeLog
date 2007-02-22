@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-bdb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ChangeLog,v 1.14 2007/01/21 08:10:22 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ChangeLog,v 1.15 2007/02/22 01:09:52 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   21 Jan 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
   ruby-bdb-0.4.8.ebuild, ruby-bdb-0.5.0.ebuild, ruby-bdb-0.5.3.ebuild,
