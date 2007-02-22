@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.29 2007/02/22 06:42:19 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.30 2007/02/22 07:26:09 opfer Exp $
+
+*vpnc-0.4.0-r1 (22 Feb 2007)
+
+  22 Feb 2007; Christian Faulhammer <opfer@gentoo.org> +files/vpnc.init,
+  +vpnc-0.4.0-r1.ebuild:
+  added an impoved init file, provided by James Wells
+  <james_wells@users.sourceforge.net> in bug 167913; added a check for
+  CONFIG_TUN in the Kernel config
 
   22 Feb 2007; Christian Faulhammer <opfer@gentoo.org> files/vpnc:
   correct init file entry

@@ -1,0 +1,57 @@
+#!/sbin/runscript
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+VPNDIR="/etc/vpnc"
+VPN="${SVCNAME#*.}"
+if [[ -n ${VPN} && ${SVCNAME} != "vpnc" ]]; then
+	VPNPID="/var/run/vpnc/${VPN}.pid"
+else
+	VPNPID="/var/run/vpnc.pid"
+fi
+VPNCONF="${VPNDIR}/${VPN}.conf"
+
+depend() {
+	need net
+	before netmount
+}
+
+checktundevice() {
+	if [[ ! -e /dev/net/tun ]]; then
+		if ! modprobe tun ; then
+			eerror "TUN/TAP support is not available in this kernel"
+			return 1
+		fi
+	fi
+	if [[ -h /dev/net/tun && -c /dev/misc/net/tun ]]; then
+		ebegin "Detected broken /dev/net/tun symlink, fixing..."
+		rm -f /dev/net/tun
+		ln -s /dev/misc/net/tun /dev/net/tun
+		eend $?
+	fi
+}
+
+start() {
+	ebegin "Starting VPNC: ${VPN}"
+
+	checktundevice || return 1
+
+	if [[ ! -e "${VPNCONF}" ]]; then
+		eend 1 "${VPNCONF} does not exist"
+		return 1
+	fi
+
+	local args=""
+
+	start-stop-daemon --start --exec /usr/sbin/vpnc --pidfile "${VPNPID}" \
+		-- "${VPNCONF}"
+	eend $? "Check your logs to see why startup failed"
+}
+
+stop() {
+	ebegin "Stopping VPNC: ${VPN}"
+	start-stop-daemon --stop --exec /usr/sbin/vpnc --pidfile "${VPNPID}"
+	eend $?
+}
+
+# vim: ts=4
