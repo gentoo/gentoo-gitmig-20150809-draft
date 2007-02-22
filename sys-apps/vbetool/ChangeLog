@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/vbetool
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vbetool/ChangeLog,v 1.7 2006/09/28 19:56:59 robbat2 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vbetool/ChangeLog,v 1.8 2007/02/22 01:33:05 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
 *vbetool-0.7 (28 Sep 2006)
 

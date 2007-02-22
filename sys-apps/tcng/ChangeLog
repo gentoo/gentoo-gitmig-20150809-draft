@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/tcng
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/ChangeLog,v 1.16 2006/01/30 10:09:52 robbat2 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/ChangeLog,v 1.17 2007/02/22 01:32:26 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   30 Jan 2006; Robin H. Johnson <robbat2@gentoo.org> Manifest:
   Manifest fix.
