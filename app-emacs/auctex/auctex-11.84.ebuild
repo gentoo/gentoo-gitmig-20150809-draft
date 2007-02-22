@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.84.ebuild,v 1.2 2007/02/22 12:49:55 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.84.ebuild,v 1.3 2007/02/22 15:05:39 opfer Exp $
 
 inherit elisp eutils latex-package autotools
 
@@ -31,23 +31,34 @@ src_compile() {
 	# with app-text/tetex, see bug #155944
 	if use preview-latex; then
 		local TEXMFPATH="$(kpsewhich -var-value=TEXMFSITE)"
+		local TEXMFCONFIGFILE="$(kpsewhich texmf.cnf)"
 
 		if [ -z "${TEXMFPATH}" ]; then
-			local TEXMFCONFIGFILE="$(kpsewhich texmf.cnf)"
-
 			eerror "You haven't defined the TEXMFSITE variable in your TeX config."
 			eerror "Please do so in the file ${TEXMFCONFIGFILE:-/var/lib/texmf/web2c/texmf.cnf}"
 			die "Define TEXMFSITE in TeX configuration!"
 		else
 			# go through the colon separated list of directories (maybe only one) provided in the variable
-			# TEXMFPATH (generated from TEXMFSITE from TeX's config) and choose only the first entry
+			# TEXMFPATH (generated from TEXMFSITE from TeX's config) and choose only the first entry.
+			# All entries are separated by colons, even when defined with semi-colons, kpsewhich changes
+			# the output to a generic format, so IFS has to be redefined.
 			local IFS="${IFS}:"
 
 			for strippedpath in ${TEXMFPATH}
 			do
-				local PREVIEW_TEXMFDIR="${D}/${strippedpath}"
-				break
+				if [ -d ${strippedpath} ]; then
+					local PREVIEW_TEXMFDIR="${strippedpath}"
+					break
+				fi
 			done
+
+			# verify if an existing path was chosen to prevent from installing into the wrong directory
+			if [ -z ${PREVIEW_TEXMFDIR} ]; then
+				eerror "TEXMFSITE does not contain any existing directory."
+				eerror "Please define an existing directory in your TeX config file"
+				eerror "${TEXMFCONFIGFILE:-/var/lib/texmf/web2c/texmf.cnf} or create at least one of the there specified directories"
+				die "TEXMFSITE variable did not contain an existing directory"
+			fi
 
 			dodir "${PREVIEW_TEXMFDIR}"
 		fi
@@ -56,7 +67,7 @@ src_compile() {
 	econf --disable-build-dir-test \
 		--with-auto-dir="${D}/var/lib/auctex" \
 		--with-lispdir="${D}/usr/share/emacs/site-lisp" \
-		--with-texmf-dir="${PREVIEW_TEXMFDIR}" \
+		--with-texmf-dir="${D}/${PREVIEW_TEXMFDIR}" \
 		$(use_enable preview-latex preview) || die "econf failed"
 	emake || die
 }
