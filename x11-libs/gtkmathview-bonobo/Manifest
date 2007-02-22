@@ -1,5 +1,8 @@
-DIST gtkmathview-bonobo-0.0.2.tar.gz 313941
-DIST gtkmathview-bonobo-0.0.4.tar.gz 315844
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST gtkmathview-bonobo-0.0.2.tar.gz 313941 RMD160 6cf5d8a0b653f3f05416bcb627360c3cee6bc39e SHA1 9a3c4cf476b25918afd8f54a79cec2fe4885cf80 SHA256 ba9d93128b41eec26b8a5f03f24958d2ffe6204744aaeb77af997dce2bdc829c
+DIST gtkmathview-bonobo-0.0.4.tar.gz 315844 RMD160 6e18982b84bd1d6a0999d84353a81533cbd01867 SHA1 01d1084637c19e5bac95861d0e400bd1022a94a7 SHA256 d29d749e11572f95ead5f128d79a9796494a4fbf5beff7404be03447363e2a69
 EBUILD gtkmathview-bonobo-0.0.2.ebuild 640 RMD160 3f9ab1f4a6eca9bdd51a6d57f2d861c7ac9bba73 SHA1 c5ce6f192e2c959b5f5c6aefd5538776f9234770 SHA256 925e6d5b74ec7edc597dfde385d74a1245ba06cc680c98e5957aaa7d1c45b80c
 MD5 b1c4724d109231dfb0e60f550eaa5658 gtkmathview-bonobo-0.0.2.ebuild 640
 RMD160 3f9ab1f4a6eca9bdd51a6d57f2d861c7ac9bba73 gtkmathview-bonobo-0.0.2.ebuild 640
@@ -8,17 +11,24 @@ EBUILD gtkmathview-bonobo-0.0.4.ebuild 701 RMD160 31e41f2ee9a47aa6f1b8fcbb9bd296
 MD5 f31438a5c92bc5f546638944f8091210 gtkmathview-bonobo-0.0.4.ebuild 701
 RMD160 31e41f2ee9a47aa6f1b8fcbb9bd29633419694cf gtkmathview-bonobo-0.0.4.ebuild 701
 SHA256 8a2e893cab20bd35e00d064bb53d6c38d9d6ff2ac72657fb1693e5a6d3661f29 gtkmathview-bonobo-0.0.4.ebuild 701
-MISC ChangeLog 765 RMD160 673d77fb7387d6dd12e0f3362363bfba9c74696c SHA1 b59a512de6c4e11194165027cfc126fed297c386 SHA256 bbc00740731d6868b37f289f1ffaaf569ecb3f09776db9c1bd76e302fee20b48
-MD5 ee9107cbfe73e1239f3016fa2f222428 ChangeLog 765
-RMD160 673d77fb7387d6dd12e0f3362363bfba9c74696c ChangeLog 765
-SHA256 bbc00740731d6868b37f289f1ffaaf569ecb3f09776db9c1bd76e302fee20b48 ChangeLog 765
+MISC ChangeLog 848 RMD160 347cdff2072286ccb893d217533fbbd083359445 SHA1 6e17039314643fe9922508295d8430aadd820470 SHA256 025b4ae3bf5a6671d7ccdde97d4417bdabd1b87186eb71a59395798458b52565
+MD5 37fff5801084aa745ba0adb7df08f93c ChangeLog 848
+RMD160 347cdff2072286ccb893d217533fbbd083359445 ChangeLog 848
+SHA256 025b4ae3bf5a6671d7ccdde97d4417bdabd1b87186eb71a59395798458b52565 ChangeLog 848
 MISC metadata.xml 388 RMD160 7f43775878be2265e42a2db52fb1aeb318fe7dcc SHA1 455b989480d399464af53ba1e42bb6c0b2d2884a SHA256 e6c48abfe8c616cf55b813c05f6bd82c4e7fbc48523864e31d60221afa84800d
 MD5 40e9c1ad5ee46a272fc3377fe7714ab3 metadata.xml 388
 RMD160 7f43775878be2265e42a2db52fb1aeb318fe7dcc metadata.xml 388
 SHA256 e6c48abfe8c616cf55b813c05f6bd82c4e7fbc48523864e31d60221afa84800d metadata.xml 388
-MD5 4e28dbf397264184303c4b57964cb9e9 files/digest-gtkmathview-bonobo-0.0.2 76
-RMD160 61d0b34e7710d2676ae82562f67b13d81b35559c files/digest-gtkmathview-bonobo-0.0.2 76
-SHA256 e700571dc2f31ddc1db2fcfa2840a924605e23e16cd3b14fc81bc89db6b4e5e9 files/digest-gtkmathview-bonobo-0.0.2 76
-MD5 16fb3cc4d6471c6c3b684e167393a528 files/digest-gtkmathview-bonobo-0.0.4 76
-RMD160 6c779731505be8070397e1e9f61537d795d55c77 files/digest-gtkmathview-bonobo-0.0.4 76
-SHA256 627dd1429e78d364d847606a4c112fb729df402e0f0f65f70a89d143fa2240e3 files/digest-gtkmathview-bonobo-0.0.4 76
+MD5 08950d8bcd3b488471d82ef8224ca349 files/digest-gtkmathview-bonobo-0.0.2 274
+RMD160 d6ef88b6f917ceba9cfdfa9a7115558b759c3163 files/digest-gtkmathview-bonobo-0.0.2 274
+SHA256 f3281b44b32adfb3ff841956bd9f8881beaf3e8b1415cbdb4dfccecfb02477c2 files/digest-gtkmathview-bonobo-0.0.2 274
+MD5 bec284237e4654638258dbc59eca71c3 files/digest-gtkmathview-bonobo-0.0.4 274
+RMD160 c755fdd01a55ac9a9df9aee9fc21d1edc927210b files/digest-gtkmathview-bonobo-0.0.4 274
+SHA256 03695bb3ac00fe6e0e202ea3fdf228904ebb2617ea289b556b5dd274a603c0aa files/digest-gtkmathview-bonobo-0.0.4 274
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.1 (GNU/Linux)
+
+iD8DBQFF3NwFz974XjDVpbkRAnK1AKDXjaJpRqkmfJQxc94GYOIu4vAERQCdG4k2
+WqGI5cMUfdWp25p27np1A+I=
+=94bN
+-----END PGP SIGNATURE-----
