@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.96.2.ebuild,v 1.5 2007/01/14 22:37:01 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.96.2.ebuild,v 1.6 2007/02/22 16:00:23 bangert Exp $
 
 inherit toolchain-funcs
 
@@ -48,5 +48,5 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "Please see /usr/share/doc/${PF}/README.gz for per-user configurations"
+	elog "Please see /usr/share/doc/${PF}/README.gz for per-user configurations"
 }

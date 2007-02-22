@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.96.1-r1.ebuild,v 1.14 2006/11/23 16:09:41 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.96.1-r1.ebuild,v 1.15 2007/02/22 16:00:23 bangert Exp $
 
 inherit fixheadtails eutils toolchain-funcs
 
@@ -59,5 +59,5 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "Please see /usr/share/doc/${PF}/README.gz for per-user configurations"
+	elog "Please see /usr/share/doc/${PF}/README.gz for per-user configurations"
 }
