@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mpeg-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/ChangeLog,v 1.17 2007/01/05 20:39:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/ChangeLog,v 1.18 2007/02/22 01:51:36 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   mpeg-tools-1.5b-r2.ebuild:

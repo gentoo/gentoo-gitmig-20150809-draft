@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kdenlive
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.13 2006/08/02 13:25:37 zypher Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.14 2007/02/22 01:48:24 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   02 Aug 2006; Marc Hildebrand <zypher@gentoo.org> kdenlive-0.3.0.ebuild:
   Fixed missing IUSE.
