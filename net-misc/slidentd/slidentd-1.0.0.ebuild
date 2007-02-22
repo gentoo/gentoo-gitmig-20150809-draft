@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/slidentd/slidentd-1.0.0.ebuild,v 1.9 2006/07/16 16:47:27 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/slidentd/slidentd-1.0.0.ebuild,v 1.10 2007/02/22 16:05:51 bangert Exp $
 
 DESCRIPTION="A secure, lightweight ident daemon"
 HOMEPAGE="http://www.uncarved.com/static/slidentd/"
@@ -38,6 +38,6 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "You need to start your supervise service:"
-	einfo '# ln -s /var/lib/supervise/slidentd /service/'
+	elog "You need to start your supervise service:"
+	elog '# ln -s /var/lib/supervise/slidentd /service/'
 }
