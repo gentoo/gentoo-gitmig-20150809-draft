@@ -1,6 +1,9 @@
 # ChangeLog for net-news/eventwatcher
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/eventwatcher/ChangeLog,v 1.19 2006/11/12 22:08:54 troll Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/eventwatcher/ChangeLog,v 1.20 2007/02/22 02:59:37 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   12 Nov 2006; Przemysław Maciąg <troll@gentoo.org>
   +files/eventwatcher-0.4.3-gcc4.patch, eventwatcher-0.4.3.ebuild:
