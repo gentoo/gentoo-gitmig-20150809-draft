@@ -1,6 +1,32 @@
 # ChangeLog for app-pda/gnome-pilot-conduits
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot-conduits/ChangeLog,v 1.19 2007/02/21 22:55:00 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot-conduits/ChangeLog,v 1.20 2007/02/22 01:28:59 dang Exp $
+
+  22 Feb 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +gnome-pilot-conduits-2.0.15.ebuild:
+  bump to 2.0.15
+
+*gnome-pilot-conduits-2.0.15 (22 Feb 2007)
+
+  22 Feb 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +gnome-pilot-conduits-2.0.15.ebuild:
+  Bump to 2.0.15
+  Main changes:
+     - Updated to work with pilot-link 0.12.0
+     - Several critical bugs fixed.
+  
+  Bugzilla bugs fixed (see http://bugzilla.gnome.org):
+     - #113979: Support for non-UTF8 locales, using PILOT_CHARSET
+     - #117172: gpilot-control-applet crashed while viewing pilot settings
+     - #157907: Crashed when enabled finances app
+     - #311072: Patch to fix crashes in expense conduit
+     - #322894: Editing memo and expense conduit causes misbehaviour and crash
+     - #340152: gpilotd crashes while syncing avantgo conduit
+  
+  
+  Other bugs
+  
+     - Improve layout of configuration panels, to make it more HIG compliant.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
