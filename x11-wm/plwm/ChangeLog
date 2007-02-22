@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/plwm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/plwm/ChangeLog,v 1.7 2007/02/06 02:11:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/plwm/ChangeLog,v 1.8 2007/02/22 05:58:11 omp Exp $
+
+  22 Feb 2007; David Shakaryan <omp@gentoo.org> plwm-2.5.ebuild:
+  Remove redundant src_compile.
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

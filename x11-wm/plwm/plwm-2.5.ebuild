@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/plwm/plwm-2.5.ebuild,v 1.6 2004/06/24 23:44:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/plwm/plwm-2.5.ebuild,v 1.7 2007/02/22 05:58:11 omp Exp $
 
 DESCRIPTION="Python classes for, and an implementation of, a window manager."
 
@@ -15,10 +15,6 @@ IUSE=""
 DEPEND=">=dev-lang/python-2.2.2"
 RDEPEND=">=dev-lang/python-2.2.2
 	>=dev-python/python-xlib-0.12"
-
-src_compile() {
-	econf || die "econf failed for ${P}"
-}
 
 src_install() {
 	# bulk of the package
