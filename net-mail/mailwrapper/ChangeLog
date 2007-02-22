@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailwrapper
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/ChangeLog,v 1.33 2006/10/17 10:56:50 uberlord Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/ChangeLog,v 1.34 2007/02/22 01:46:38 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   17 Oct 2006; Roy Marples <uberlord@gentoo.org>
   mailwrapper-0.2.1-r1.ebuild:

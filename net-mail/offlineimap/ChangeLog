@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/offlineimap
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.28 2006/12/24 10:43:11 ticho Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.29 2007/02/22 01:48:41 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   24 Dec 2006; Andrej Kacian <ticho@gentoo.org> offlineimap-4.0.8.ebuild,
   offlineimap-4.0.11.ebuild, offlineimap-4.0.13.ebuild,
