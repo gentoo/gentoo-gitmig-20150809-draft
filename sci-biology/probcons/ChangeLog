@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/probcons
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/probcons/ChangeLog,v 1.4 2006/10/01 17:38:49 dberkholz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/probcons/ChangeLog,v 1.5 2007/02/22 01:28:37 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   01 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Remove myself as maintainer so it goes to all of the sci-biology team.
