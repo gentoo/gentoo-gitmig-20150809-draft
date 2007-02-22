@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX libxmlpp-2.10.0-use-correct-callback.diff 751 RMD160 f65f896b3c5153507f0c62022e0236fe4bdbe5ff SHA1 b3111995df0e66c14c50f8cf4c7a54eacebd0e7f SHA256 8e5dae76d0157d609ce2875839e73bd9040dc11a9c87172c5cfa0dba753c0b71
 MD5 785183ae0a7196fc94879a9cfaa70d1a files/libxmlpp-2.10.0-use-correct-callback.diff 751
 RMD160 f65f896b3c5153507f0c62022e0236fe4bdbe5ff files/libxmlpp-2.10.0-use-correct-callback.diff 751
@@ -13,14 +10,14 @@ AUX libxmlpp-2.8.0-use-correct-callback.diff 749 RMD160 e0628a15f168db903bf76a75
 MD5 125040d4312a3a7ab325bc5ea3b974f0 files/libxmlpp-2.8.0-use-correct-callback.diff 749
 RMD160 e0628a15f168db903bf76a75e7b71739ed8391fa files/libxmlpp-2.8.0-use-correct-callback.diff 749
 SHA256 6b726af80a632a2ba67c7456ee9840680632a36afb7cfe1e7f8662ad48ef497b files/libxmlpp-2.8.0-use-correct-callback.diff 749
-DIST libxml++-0.27.0.tar.gz 269465
-DIST libxml++-1.0.2.tar.bz2 258755
-DIST libxml++-1.0.4.tar.bz2 281768
-DIST libxml++-1.0.5.tar.bz2 303965
-DIST libxml++-2.10.0.tar.bz2 658315
+DIST libxml++-0.27.0.tar.gz 269465 RMD160 ee52e7bdf16df99dd586f11808b10f9e7884dccd SHA1 b734066440a3bf00fc90452bc59c9fe2379c0afb SHA256 91893babc4bf9f5b05cd5a63d8060ef6b3d679362f8c6c7a785ac83a5e8bb9fb
+DIST libxml++-1.0.2.tar.bz2 258755 RMD160 e2873ba85d31c38882c6db64d0545cad7bce55db SHA1 0c337351a1385efabb332bdc402beaa6c7a6a9bb SHA256 5f88c0820da736619a1bc49d36b14519f783d33aa1c320cba771201db6791a90
+DIST libxml++-1.0.4.tar.bz2 281768 RMD160 136f4d20ceec770abb936810062cf34c1f102b9e SHA1 9e74448cdf5725153ce4b53a9e825be3e1aa4164 SHA256 ddf8c443338ee313bda8c7fa7b4a8db6845eb7cdcb9915b24cc0c91b80932f5e
+DIST libxml++-1.0.5.tar.bz2 303965 RMD160 073cff2d7a07ca62552c001d9560a21bcc447d35 SHA1 e90e66beff0af2e2f2a320ffbf8f4c1a3790bc44 SHA256 512b71e38d8b3593e716774a5bb8d074531ae0509cc947eba8f98af60c5d5563
+DIST libxml++-2.10.0.tar.bz2 658315 RMD160 9b66453d5531ed24eb79e46846837820bc0c551f SHA1 f899f6e181d0f22bf9f08a152bcf83dae3c2216a SHA256 bb4425c24c2d07c32e7617d4218ce803975e21f6c2e6aa9d231d78a624836039
 DIST libxml++-2.12.0.tar.bz2 669798 RMD160 28e9bded7c228c76296921008d923133c4207d82 SHA1 3a48587eb711a68f40930f8e60404fd6c5cc6905 SHA256 ecd017dbb9196c6d7475a16bf26e41c829bf63327ec91d4bfdb49cf312a969ab
 DIST libxml++-2.13.1.tar.bz2 1363452 RMD160 4584ca436b9a1a2b1c27bd004fd79223c583ca0b SHA1 3b9c9890805b30b7e019e7b8450692d4e69f0f00 SHA256 73a06adf6624e7db531eaac2cbc88e9db3eeafdee8e167a19f9455454fbe139d
-DIST libxml++-2.8.0.tar.bz2 297029
+DIST libxml++-2.8.0.tar.bz2 297029 RMD160 a4bedcee974cbb9988cc169130bdf999caa66801 SHA1 2d9afc5ea4d9447210b120cde9381f755237ddde SHA256 be878217e436bf5ce4b0199fe895fe3daf8a4992a61fe1bf5f291287ca8d290d
 EBUILD libxmlpp-0.27.0.ebuild 890 RMD160 960755421179b99bd932edcb71e12aca787cd58f SHA1 f52218ae118ea625c9bec01ed4a89e34d1b91c4a SHA256 75dd30bda7366d1436a25abed3155f4f7d3c4437d94b9262984959a0d51a2d7d
 MD5 f3893471a4182b1fd0340f5f6d9576b8 libxmlpp-0.27.0.ebuild 890
 RMD160 960755421179b99bd932edcb71e12aca787cd58f libxmlpp-0.27.0.ebuild 890
@@ -53,42 +50,35 @@ EBUILD libxmlpp-2.8.0-r2.ebuild 1197 RMD160 64ae30e44f68ffdf07f46fb4dbfd0f1395ef
 MD5 5c17a05be406dbe943ddd3ef9dc53b52 libxmlpp-2.8.0-r2.ebuild 1197
 RMD160 64ae30e44f68ffdf07f46fb4dbfd0f1395ef0755 libxmlpp-2.8.0-r2.ebuild 1197
 SHA256 3c17877116edbd5c2e8767da33c8945638cd75a16209e2c5612ae13816d15da7 libxmlpp-2.8.0-r2.ebuild 1197
-MISC ChangeLog 7444 RMD160 b2bf8c595f6da24f2bd53729d48f7e730faeae91 SHA1 3e9f957e257b6fd7a09166cd17b068126aca1d86 SHA256 9757678ebfb3c6a9a65dec86b04a92914d7fadaba1f1dbf324fef9bc91bbc6db
-MD5 82c0fd643c6b7984733294f78aa26319 ChangeLog 7444
-RMD160 b2bf8c595f6da24f2bd53729d48f7e730faeae91 ChangeLog 7444
-SHA256 9757678ebfb3c6a9a65dec86b04a92914d7fadaba1f1dbf324fef9bc91bbc6db ChangeLog 7444
+MISC ChangeLog 7537 RMD160 eca157c412c97b48ff4c56d231240c98df163c6b SHA1 153803ebacf94e2beb2dee03f35383d0ffaae82f SHA256 5ba45983f429c4884f26cb18dd9b7aedb9d0940e8cd70fca41b2c1cf39e093ff
+MD5 c656986f3e526d09e583be755f2758f0 ChangeLog 7537
+RMD160 eca157c412c97b48ff4c56d231240c98df163c6b ChangeLog 7537
+SHA256 5ba45983f429c4884f26cb18dd9b7aedb9d0940e8cd70fca41b2c1cf39e093ff ChangeLog 7537
 MISC metadata.xml 255 RMD160 c1e23d640a73041f03935350f8f37801b501fcf5 SHA1 4f2140c34df8e2600388538d969ce3cab1da1924 SHA256 1e5199bee2c4d0abb806c1cd58b1706d527f570dcec26aec624a5c5777763811
 MD5 57fc113c79155fc9e1e055642befa01e metadata.xml 255
 RMD160 c1e23d640a73041f03935350f8f37801b501fcf5 metadata.xml 255
 SHA256 1e5199bee2c4d0abb806c1cd58b1706d527f570dcec26aec624a5c5777763811 metadata.xml 255
-MD5 ababb33432c4d45282fa2fe2c0a2b0d5 files/digest-libxmlpp-0.27.0 67
-RMD160 6d631847223c1ce1a3ede797cb3ba80a7ae233f2 files/digest-libxmlpp-0.27.0 67
-SHA256 0bf6a042265ba86a003d98b0372179641b8dac6236b12f0b671e0c3c21a0cbb3 files/digest-libxmlpp-0.27.0 67
-MD5 d8908feca35d34dbd88eab2dc2eaa621 files/digest-libxmlpp-1.0.2 67
-RMD160 37db6074fe9ffd1d8e8729e93debd39876f05091 files/digest-libxmlpp-1.0.2 67
-SHA256 45d1cae9e54894f77cc56e46f10f2c97f74751cc7ceefdb917654e12c9ac0938 files/digest-libxmlpp-1.0.2 67
-MD5 ddefcfb1e4627340a979fe347b62745e files/digest-libxmlpp-1.0.4-r2 67
-RMD160 00b7b955d8044f77b09104f4f9d1691204458509 files/digest-libxmlpp-1.0.4-r2 67
-SHA256 a31e058acecad1e0a071d96d0737dd25e190de7fdb88d768e89d2d763577732e files/digest-libxmlpp-1.0.4-r2 67
-MD5 62f7d4c685947e054906d6838d292069 files/digest-libxmlpp-1.0.5 67
-RMD160 a4891c36bd05ca46df3cbf98b1171278bba60b22 files/digest-libxmlpp-1.0.5 67
-SHA256 3200f8827d0e8a9a116ec8230e7e8f1da97c8573278468f1e9193ca1a0da0aff files/digest-libxmlpp-1.0.5 67
-MD5 335a2cd8fe569196d631a0a54d8cac32 files/digest-libxmlpp-2.10.0-r1 68
-RMD160 dacdb84b655164ad5f334d87414e577cfb3863f8 files/digest-libxmlpp-2.10.0-r1 68
-SHA256 bd0c6386764d730ef3796139d95d61c8e63995ba0b977b2174b6e3e602f3bc37 files/digest-libxmlpp-2.10.0-r1 68
+MD5 ab9617f0b5a59b2f16a10d30bd14eeea files/digest-libxmlpp-0.27.0 247
+RMD160 d99c6461740713830f8aa564141430588ea65a26 files/digest-libxmlpp-0.27.0 247
+SHA256 95fcbe6154e5250245d3e440a64a698c136c3a8760cd9466ef7f8767f0258b4c files/digest-libxmlpp-0.27.0 247
+MD5 8b3cfd937a29744ebcc1596d840b8cee files/digest-libxmlpp-1.0.2 247
+RMD160 9212f466ddb0a94b3116ac1e450268baca179195 files/digest-libxmlpp-1.0.2 247
+SHA256 44123a3f042a5a7d430143c6a891ccdd5af8cdf6bcc53edb85b2eb3260c73d1e files/digest-libxmlpp-1.0.2 247
+MD5 868725e0223e45210d7eb48696f991c1 files/digest-libxmlpp-1.0.4-r2 247
+RMD160 d34575f69acc8a8183f0d1814408be0d6a262cff files/digest-libxmlpp-1.0.4-r2 247
+SHA256 9889da153537283bb4d647927fc27ff50cf2e3bd8d397f20f450c8cfb3ff6ff2 files/digest-libxmlpp-1.0.4-r2 247
+MD5 5030bbc94015b1d010a9f71e25421f3d files/digest-libxmlpp-1.0.5 247
+RMD160 f906c6dc51fca9d6b925ddd7ac6fa8cc6c54b2bc files/digest-libxmlpp-1.0.5 247
+SHA256 a42353cd7b9958205b755fb7c5ccae2cb9967a2fcc0974aa5a06dc8f973ae60d files/digest-libxmlpp-1.0.5 247
+MD5 898304a0abaf57fb5890b9750748b597 files/digest-libxmlpp-2.10.0-r1 250
+RMD160 4e1ee8b6a11744de06013b76fb076e36b29c5a14 files/digest-libxmlpp-2.10.0-r1 250
+SHA256 c5ba0d6fa737be9e0ded955c2b8e8153bcdd227b8d9015f614ccc578e0c57818 files/digest-libxmlpp-2.10.0-r1 250
 MD5 f6d58c078b808f04482843c27a6a58bd files/digest-libxmlpp-2.12.0 250
 RMD160 ef9eb473ec762573f1a7b465aef87e5fbbe89dd8 files/digest-libxmlpp-2.12.0 250
 SHA256 532f4a122f39ab75b450170750c3b0ba4e69917d32efc226c2f459f5b29e67d0 files/digest-libxmlpp-2.12.0 250
 MD5 a2988d58c9a98e634404371c9a4a68a7 files/digest-libxmlpp-2.13.1 253
 RMD160 ac000f9fa7ce423c46f22439bc5bb856b52cea36 files/digest-libxmlpp-2.13.1 253
 SHA256 9c3cdf8780ac9195f5719e68f08eb89d025fd3b752d69bf8b1cb3ddbff8d0fb8 files/digest-libxmlpp-2.13.1 253
-MD5 5ec1396a583e911f6878f55a92c91d91 files/digest-libxmlpp-2.8.0-r2 67
-RMD160 b6040d414e1f8ee4cec9847fa8e32a8814dee19a files/digest-libxmlpp-2.8.0-r2 67
-SHA256 674dce0547e2109e0c7d74115bd52bb04ac2522e265abed6556e780bc7480cfe files/digest-libxmlpp-2.8.0-r2 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFE/57iomPajV0RnrERAsJvAJwOlNbKFGOyhuv1siYkDZvS5ERSQQCfVdos
-i0G/GqmRujj8IYMBwMzdmUk=
-=WDIG
------END PGP SIGNATURE-----
+MD5 334dadf83b80e3e564f2b7a67f97bf5a files/digest-libxmlpp-2.8.0-r2 247
+RMD160 6bb64774d28367226f5bf5670ffbaac595659a91 files/digest-libxmlpp-2.8.0-r2 247
+SHA256 ee56ac53ab719a3018e46528066c55d9b376df1755f924e3f746185e4225d60d files/digest-libxmlpp-2.8.0-r2 247
