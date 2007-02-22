@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/libggz
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/ChangeLog,v 1.16 2007/02/04 09:27:48 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/ChangeLog,v 1.17 2007/02/22 14:03:26 nyhm Exp $
+
+  22 Feb 2007; Tristan Heaven <nyhm@gentoo.org> libggz-0.0.14.ebuild:
+  Use games-ggz eclass
 
 *libggz-0.0.14 (04 Feb 2007)
 
