@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zodb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.25 2007/02/02 02:24:03 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.26 2007/02/22 01:50:38 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   02 Feb 2007; Steve Dibb <beandog@gentoo.org> zodb-3.6.0.ebuild:
   Add ~amd64, bug 163805

@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/externaleditor
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/externaleditor/ChangeLog,v 1.14 2006/05/27 14:32:10 radek Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/externaleditor/ChangeLog,v 1.15 2007/02/22 01:47:23 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
 *externaleditor-0.9.1 (27 May 2006)
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zpsycopgda
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zpsycopgda/ChangeLog,v 1.6 2006/07/28 12:22:18 liquidx Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zpsycopgda/ChangeLog,v 1.7 2007/02/22 01:53:48 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   28 Jul 2006; Alastair Tse <liquidx@gentoo.org> zpsycopgda-1.1.2.ebuild,
   zpsycopgda-1.1.15.ebuild, zpsycopgda-1.1.21.ebuild:
