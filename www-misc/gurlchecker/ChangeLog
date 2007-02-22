@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/gurlchecker
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.17 2006/10/31 22:10:29 leonardop Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.18 2007/02/22 00:17:05 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   31 Oct 2006; Leonardo Boshell <leonardop@gentoo.org>
   gurlchecker-0.8.2.ebuild:
