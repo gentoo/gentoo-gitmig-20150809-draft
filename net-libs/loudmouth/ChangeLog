@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/loudmouth
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.42 2006/10/15 11:27:59 genstef Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.43 2007/02/22 01:35:37 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *loudmouth-1.1.4 (15 Oct 2006)
 

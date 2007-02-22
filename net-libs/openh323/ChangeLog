@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/openh323
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.79 2006/10/24 03:33:36 dang Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.80 2007/02/22 01:37:04 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   24 Oct 2006; Daniel Gryniewicz <dang@gentoo.org> openh323-1.18.0.ebuild:
   Marked stable on amd64 for bug #145783

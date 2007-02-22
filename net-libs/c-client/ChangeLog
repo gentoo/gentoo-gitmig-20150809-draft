@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/c-client
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.31 2005/10/06 20:21:17 robbat2 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.32 2007/02/22 01:26:41 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *c-client-2004g (06 Oct 2005)
 

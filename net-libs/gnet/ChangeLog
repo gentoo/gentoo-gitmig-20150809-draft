@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnet
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.46 2005/09/17 12:09:22 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.47 2007/02/22 01:27:58 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   13 Sep 2005; <dang@gentoo.org> +files/gnet-2.0.7-amd64-fixes.patch,
   gnet-2.0.7.ebuild:

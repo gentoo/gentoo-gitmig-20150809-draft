@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libesmtp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.32 2007/02/02 23:07:01 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.33 2007/02/22 01:29:20 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   02 Feb 2007; Luis Medinas <metalgod@gentoo.org> libesmtp-1.0.4.ebuild:
   Stable on amd64. Bug #164844.
