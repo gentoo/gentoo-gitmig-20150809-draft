@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/nusmv
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nusmv/ChangeLog,v 1.1 2006/04/02 11:40:21 robbat2 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nusmv/ChangeLog,v 1.2 2007/02/22 01:29:59 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
 *nusmv-2.3.1 (02 Apr 2006)
 

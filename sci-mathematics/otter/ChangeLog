@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/otter
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/otter/ChangeLog,v 1.7 2006/07/01 12:05:09 nattfodd Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/otter/ChangeLog,v 1.8 2007/02/22 01:32:57 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   01 Jul 2006; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced sci herd by newly created math-proof herd in metadata.xml, as a

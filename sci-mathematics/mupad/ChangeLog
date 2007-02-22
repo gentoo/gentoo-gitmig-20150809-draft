@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/mupad
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mupad/ChangeLog,v 1.5 2005/12/22 00:18:52 markusle Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mupad/ChangeLog,v 1.6 2007/02/22 01:28:36 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   22 Dec 2005; Markus Dittrich <markusle@gentoo.org> ChangeLog:
   package.mask'ed since binaries contain insecure runpaths. See bug #81745 and
