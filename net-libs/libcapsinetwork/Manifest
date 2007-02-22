@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-DIST libcapsinetwork-0.3.0.tar.bz2 189244
+DIST libcapsinetwork-0.3.0.tar.bz2 189244 RMD160 67595c44154b1d7eb4411725dac3e78e6bb5beb5 SHA1 ddd4ddf6b5c96719e72722dff099c119a4e736b8 SHA256 3177f82d08c125aef1cf1c3d7aaf222cdc8605ec38d6dae9deeaffcffc72e3eb
 EBUILD libcapsinetwork-0.3.0.ebuild 695 RMD160 cc87c974a2bc45a7c1fefc3cde070fdaed6dbfef SHA1 7ff0a76d1041cee889ec67bfa220cde0fc1a9aee SHA256 294c9187ad557f8c48c46576da34a873999edf6adf60245c6724e371157adf6f
 MD5 c3a1ece51c17e41a2e8108b962eee2c3 libcapsinetwork-0.3.0.ebuild 695
 RMD160 cc87c974a2bc45a7c1fefc3cde070fdaed6dbfef libcapsinetwork-0.3.0.ebuild 695
 SHA256 294c9187ad557f8c48c46576da34a873999edf6adf60245c6724e371157adf6f libcapsinetwork-0.3.0.ebuild 695
-MISC ChangeLog 1348 RMD160 6ce892ee827dbc761799a34df24abafb49786b40 SHA1 f7ebfd5f3d7b72ad31ba6c1b44cd3e96a2875e14 SHA256 02a397f32c085e5be104cb52b50b68662d4925b394688c3b34cddffffa51de27
-MD5 4ba230e80209c4114c2fbf6d701280f4 ChangeLog 1348
-RMD160 6ce892ee827dbc761799a34df24abafb49786b40 ChangeLog 1348
-SHA256 02a397f32c085e5be104cb52b50b68662d4925b394688c3b34cddffffa51de27 ChangeLog 1348
+MISC ChangeLog 1436 RMD160 f94c773f6f4da272c7d1b97b7c9ca5b3e0e1402a SHA1 b43b73285aeca4cd565df2a29bfff517023de01e SHA256 92498f625ba271bd95c20c2e53fd81269d67329c8a8ad2f20739ec48c743bd7e
+MD5 e103f7d024f11bebe6ceeabd3ea7deb1 ChangeLog 1436
+RMD160 f94c773f6f4da272c7d1b97b7c9ca5b3e0e1402a ChangeLog 1436
+SHA256 92498f625ba271bd95c20c2e53fd81269d67329c8a8ad2f20739ec48c743bd7e ChangeLog 1436
 MISC metadata.xml 210 RMD160 c9fe92a44d079ef04bcdd31de9867de5bb9f26e5 SHA1 efa00493ddec7289a21bc4cbcc6e95ec4de749d5 SHA256 90082fe26a119a63ca8fbe227f66c33ba74167b6cf28e2cef02dea6c4f656c39
 MD5 c667f921ee8d48ce17ebef0f8d601ea4 metadata.xml 210
 RMD160 c9fe92a44d079ef04bcdd31de9867de5bb9f26e5 metadata.xml 210
 SHA256 90082fe26a119a63ca8fbe227f66c33ba74167b6cf28e2cef02dea6c4f656c39 metadata.xml 210
-MD5 833276a2ec2be65c36622b16d8781ec6 files/digest-libcapsinetwork-0.3.0 74
-RMD160 abce7fa388e8902b43485bb8f77242a2abaceaa4 files/digest-libcapsinetwork-0.3.0 74
-SHA256 78fa2597548e4b5be2393aba45d7b06a0e33a379694295b5f76ebcd18239f472 files/digest-libcapsinetwork-0.3.0 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
-
-iD8DBQFFoaVB5mJXAu5GbtIRAraPAJ9qKp3wRQYK5wk0IiJzcnU8PedJ8ACfbKDP
-42AqOPjziwpaAucNZCoEKkk=
-=HhLm
------END PGP SIGNATURE-----
+MD5 9ebd980169f7e46a4498f55c2192168d files/digest-libcapsinetwork-0.3.0 268
+RMD160 61ac3452b64fd95540a8485640ef4df45ba07fd8 files/digest-libcapsinetwork-0.3.0 268
+SHA256 728d8dc1b4520624322e4bdf70d92ed4f2a4ebebb9a0b92889e757cd861c2cc9 files/digest-libcapsinetwork-0.3.0 268
