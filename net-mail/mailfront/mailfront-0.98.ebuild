@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.98.ebuild,v 1.3 2007/01/18 11:25:36 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.98.ebuild,v 1.4 2007/02/22 15:56:41 bangert Exp $
 
 inherit toolchain-funcs
 
 DESCRIPTION="Mail server network protocol front-ends"
 HOMEPAGE="http://untroubled.org/mailfront/"
-SRC_URI="${HOMEPAGE}${P}.tar.gz"
+SRC_URI="http://untroubled.org/mailfront/archive/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -57,10 +57,10 @@ pkg_config() {
 
 pkg_postinst() {
 	echo
-	einfo "Run"
-	einfo "emerge --config =${CATEGORY}/${PF}"
-	einfo "to update your run files (backups are created) in"
-	einfo "		/var/qmail/supervise/qmail-pop3d and"
-	einfo "		/var/qmail/supervise/qmail-smtpd"
+	elog "Run"
+	elog "emerge --config =${CATEGORY}/${PF}"
+	elgo "to update your run files (backups are created) in"
+	elog "		/var/qmail/supervise/qmail-pop3d and"
+	elog "		/var/qmail/supervise/qmail-smtpd"
 	echo
 }
