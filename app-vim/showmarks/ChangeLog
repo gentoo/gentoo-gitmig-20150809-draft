@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/showmarks
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/showmarks/ChangeLog,v 1.21 2005/04/24 12:18:32 hansmi Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/showmarks/ChangeLog,v 1.22 2007/02/22 00:07:30 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> showmarks-2.2.ebuild:
   Stable on ppc.

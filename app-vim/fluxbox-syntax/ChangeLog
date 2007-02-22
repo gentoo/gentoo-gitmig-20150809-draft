@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/fluxbox-syntax
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/fluxbox-syntax/ChangeLog,v 1.15 2006/12/07 02:09:58 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/fluxbox-syntax/ChangeLog,v 1.16 2007/02/21 23:59:59 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   07 Dec 2006; Diego Pettenò <flameeyes@gentoo.org>
   fluxbox-syntax-1.5.ebuild:
