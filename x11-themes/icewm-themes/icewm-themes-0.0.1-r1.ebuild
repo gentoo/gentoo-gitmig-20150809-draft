@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/icewm-themes-0.0.1-r1.ebuild,v 1.5 2005/12/16 11:50:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/icewm-themes-0.0.1-r1.ebuild,v 1.6 2007/02/22 05:43:16 omp Exp $
 
 DESCRIPTION="Collection of IceWM themes"
 HOMEPAGE="http://www.icewm.org/
@@ -12,11 +12,11 @@ HOMEPAGE="http://www.icewm.org/
 	http://themes.freshmeat.net/projects/1in1-xp/"
 THEME_URI="http://download.freshmeat.net/themes"
 SRC_URI="${THEME_URI}/icecrack/icecrack-default-2.0.0.tar.gz
-	 ${THEME_URI}/icebox-red/icebox-red-default-1.2.13.tar.gz
-	 ${THEME_URI}/cyrusicewm/cyrusicewm-1.0.0.tar
-	 ${THEME_URI}/greyscaled/greyscaled-stable.tar.gz
-	 ${THEME_URI}/ufosightings/ufosightings-1.0.0.tar.gz
-	 ${THEME_URI}/1in1-xp/1in1-xp-default.tar.gz"
+	${THEME_URI}/icebox-red/icebox-red-default-1.2.13.tar.gz
+	${THEME_URI}/cyrusicewm/cyrusicewm-1.0.0.tar
+	${THEME_URI}/greyscaled/greyscaled-stable.tar.gz
+	${THEME_URI}/ufosightings/ufosightings-1.0.0.tar.gz
+	${THEME_URI}/1in1-xp/1in1-xp-default.tar.gz"
 
 SLOT="0"
 
