@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/ksymoops
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.22 2006/11/16 22:42:51 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.23 2007/02/22 00:42:13 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   16 Nov 2006; Mike Frysinger <vapier@gentoo.org>
   +files/ksymoops-2.4.11-build.patch, ksymoops-2.4.11.ebuild:

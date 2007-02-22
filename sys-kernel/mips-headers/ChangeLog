@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/mips-headers
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/ChangeLog,v 1.37 2006/07/26 15:41:43 kumba Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/ChangeLog,v 1.38 2007/02/22 00:43:47 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   27 Jul 2006; Joshua Kinard <kumba@gentoo.org>
   -mips-headers-2.6.11-r1.ebuild:
