@@ -1,6 +1,39 @@
 # ChangeLog for app-pda/gnome-pilot
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.29 2007/02/21 22:54:33 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.30 2007/02/22 01:23:26 dang Exp $
+
+*gnome-pilot-2.0.15 (22 Feb 2007)
+
+  22 Feb 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/gnome-pilot-2.0.15-as-needed.patch, +gnome-pilot-2.0.15.ebuild:
+  Bump to 2.0.15
+  This is primarily a bugfix release, to patch issues that cropped up
+  with the new features introduced in version 2.0.14.
+  
+     - #357602.  Fix memory leak in the usbfs scanning code (with
+  	       thanks to Brian Warner)
+     - #362565.  Add a 400ms pause between HAL detection of a USB
+  	       device and the first attempt to sync.  Several
+  	       devices were reported to reset themselves if
+  	       communication was attempted too soon after the
+  	       first appearance of the USB device.
+     - #365181.  Fix a long-standing bug that probably turned up
+  	       now because of the multiple attempts to add a new
+  	       pilot due to #362565.  Avoid accessing freed memory
+  	       when the 'add pilot' dialog is opened multiple times.
+  
+  Other changes:
+     - Maintainership has passed from JP Rosevear to Matt Davey.
+       Many thanks to JP for stepping in when gnome-pilot could
+       otherwise have died a nasty death by abandonment.
+     - #364589.  With thanks to Glynn Foster.  Tweaks to window
+  	       placement to support multihead displays.  Also,
+  	       added missing description to .server file for
+  	       panel applet.
+     - Fix another long-standing bug, that could cause garbage to
+       be shown when a configured conduit was unavailable (e.g.
+       if the .conduit files were in the wrong place after an upgrade).
+     - Fix distcheck target
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
