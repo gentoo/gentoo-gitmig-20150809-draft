@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.147 2007/02/14 13:41:39 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.148 2007/02/22 11:12:46 voxus Exp $
+
+*bind-9.3.4-r1 (22 Feb 2007)
+*bind-9.2.8-r1 (22 Feb 2007)
+
+  22 Feb 2007; Konstantin V. Arkhipov <voxus@gentoo.org>
+  +files/bind-dlzbdb-close_cursor.patch, +bind-9.2.8-r1.ebuild,
+  +bind-9.3.4-r1.ebuild:
+  Closing bug #167605.
 
   14 Feb 2007; Bryan Østergaard <kloeri@gentoo.org> bind-9.2.8.ebuild,
   bind-9.3.4.ebuild:

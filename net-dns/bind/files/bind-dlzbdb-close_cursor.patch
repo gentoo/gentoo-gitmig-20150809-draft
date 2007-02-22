@@ -1,0 +1,11 @@
+--- bin/named/dlz_bdbhpt_driver.c	Thu May  4 13:13:20 2006
++++ bin/named/dlz_bdbhpt_driver.c	Thu May  4 13:27:05 2006
+@@ -462,7 +462,7 @@
+ 		xfr_cursor->c_close(xfr_cursor);
+ 		
+    if(dns_cursor != NULL)
+-      dns_cursor->c_close(xfr_cursor);
++      dns_cursor->c_close(dns_cursor);
+ 
+ 	return result;
+ }
