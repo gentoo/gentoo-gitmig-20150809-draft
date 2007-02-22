@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/squeak-fullimage
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-fullimage/ChangeLog,v 1.8 2007/02/06 09:05:08 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-fullimage/ChangeLog,v 1.9 2007/02/22 00:12:57 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   06 Feb 2007; Marius Mauch <genone@gentoo.org>
   squeak-fullimage-3.8.6665.ebuild:

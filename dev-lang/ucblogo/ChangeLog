@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ucblogo
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ucblogo/ChangeLog,v 1.3 2006/03/24 00:12:51 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ucblogo/ChangeLog,v 1.4 2007/02/22 00:15:07 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   24 Mar 2006; Mike Frysinger <vapier@gentoo.org>
   files/ucblogo-5.5-destdir.patch, ucblogo-5.5.ebuild:

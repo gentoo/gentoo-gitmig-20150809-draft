@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/bashforth
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/bashforth/ChangeLog,v 1.2 2006/05/26 03:05:48 mkennedy Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/bashforth/ChangeLog,v 1.3 2007/02/21 23:53:59 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *bashforth-0.55 (26 May 2006)
 
