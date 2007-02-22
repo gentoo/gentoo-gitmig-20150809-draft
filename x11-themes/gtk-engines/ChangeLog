@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.88 2007/01/09 05:57:10 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.89 2007/02/22 22:35:05 dang Exp $
+
+*gtk-engines-2.8.2-r1 (22 Feb 2007)
+
+  22 Feb 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/gtk-engines-2.8.2-smooth-arrow.patch, +gtk-engines-2.8.2-r1.ebuild:
+  Bump to 2.8.2-r1
+  	- fix crasher in smooth engine.  Bug #167569
 
   09 Jan 2007; Mart Raudsepp <leio@gentoo.org> -gtk-engines-2.8.1.ebuild:
   Remove old
