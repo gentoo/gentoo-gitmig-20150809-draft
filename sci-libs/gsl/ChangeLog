@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/gsl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/ChangeLog,v 1.20 2007/02/21 15:41:09 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/ChangeLog,v 1.21 2007/02/22 16:59:51 jer Exp $
+
+  22 Feb 2007; Jeroen Roovers <jer@gentoo.org> gsl-1.8.ebuild:
+  Stable for HPPA (bug #167860).
 
 *gsl-1.9 (21 Feb 2007)
 
