@@ -6,7 +6,7 @@ SRC_URI="http://www.sixxs.net/archive/sixxs/aiccu/unix/${PN}_${PV//\./}.tar.gz"
 
 LICENSE="SixXS"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~x86"
+KEYWORDS="~amd64 ~arm hppa ~ppc x86"
 IUSE=""
 DEPEND="net-libs/gnutls
 		sys-apps/iproute2"
