@@ -11,6 +11,8 @@ MD5 bc536e7fe6e3c79f9b66a4254bf0ad43 autofs-4.1.3-replicated_server_select.patch
 RMD160 52f13fed9e443e0810d3e29408b06e797344e8c1 autofs-4.1.3-replicated_server_select.patch 962
 SHA256 95e2f7d1ca19c67b8116a8d5f382a7bb116255fbd507dc6689faea7da9a67dad autofs-4.1.3-replicated_server_select.patch 962
 MD5 3cd31c9522651686f4b5ace5cf63c430 autofs-4.1.3-signal-race-fix.patch 635
+RMD160 dd7fc2df1b4cb5ab59a81b5613887554524cbc7e autofs-4.1.3-signal-race-fix.patch 635
+SHA256 98e6f5eea8e83fc5db31259ac8a97983e5130d09fc80171523cff792b7de2d2f autofs-4.1.3-signal-race-fix.patch 635
 MD5 14681387a1fc5229c2c73f593334071b autofs-4.1.3-sock-leak-fix.patch 1236
 RMD160 09ca250b5711d04336f61fb7a227d99ae2b4d053 autofs-4.1.3-sock-leak-fix.patch 1236
 SHA256 6aaa548688e7d48eb735dfa9acb1c097b82f8ef68a3ca30aab70a92b9b36453b autofs-4.1.3-sock-leak-fix.patch 1236
