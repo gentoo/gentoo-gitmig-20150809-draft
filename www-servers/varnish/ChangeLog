@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/varnish
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.3 2007/02/20 16:37:03 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.4 2007/02/22 16:10:56 bangert Exp $
+
+  22 Feb 2007; Thilo Bangert <bangert@gentoo.org> varnish-1.0.3.ebuild:
+  einfo -> elog
 
 *varnish-1.0.3 (20 Feb 2007)
 
