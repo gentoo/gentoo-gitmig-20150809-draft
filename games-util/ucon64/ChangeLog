@@ -1,6 +1,9 @@
 # ChangeLog for games-util/ucon64
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ChangeLog,v 1.8 2006/09/26 18:55:58 nyhm Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ChangeLog,v 1.9 2007/02/22 10:32:53 drizzt Exp $
+
+  22 Feb 2007; Timothy Redaelli <drizzt@gentoo.org> ucon64-2.0.0.ebuild:
+  Add ~amd64 keyword
 
   26 Sep 2006; Tristan Heaven <nyhm@gentoo.org> ucon64-2.0.0.ebuild:
   Let portage strip binaries, bug #137836
