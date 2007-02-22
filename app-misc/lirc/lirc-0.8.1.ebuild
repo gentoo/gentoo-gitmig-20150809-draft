@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.1.ebuild,v 1.1 2007/01/07 19:39:40 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.1.ebuild,v 1.2 2007/02/22 19:04:19 zzam Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -237,6 +237,7 @@ src_unpack() {
 	# Fix a sandbox violation while checking which cc to use for Kernel 2.6.19
 	# and newer
 	epatch ${FILESDIR}/${PN}-0.8.0-sandbox-fix.diff
+	epatch ${FILESDIR}/${P}-kernel-2.6.20.diff
 
 	# Rip out dos CRLF
 	edos2unix contrib/lirc.rules
