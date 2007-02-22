@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/alienwave/alienwave-0.3.0.ebuild,v 1.7 2006/09/27 07:15:22 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/alienwave/alienwave-0.3.0.ebuild,v 1.8 2007/02/22 05:19:52 mr_bones_ Exp $
 
 inherit games
 
@@ -31,4 +31,3 @@ src_install() {
 	dodoc TO_DO README STORY
 	prepgamesdirs
 }
-

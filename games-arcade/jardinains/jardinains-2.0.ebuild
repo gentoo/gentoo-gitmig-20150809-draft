@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jardinains/jardinains-2.0.ebuild,v 1.2 2007/02/08 10:10:35 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jardinains/jardinains-2.0.ebuild,v 1.3 2007/02/22 05:21:56 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -43,7 +43,6 @@ src_install() {
 	prepgamesdirs
 	chmod g+rw "${Ddir}/data/prefs.xml"
 	chmod -R g+rw "${Ddir}/data/players"
-
 }
 
 pkg_postinst() {

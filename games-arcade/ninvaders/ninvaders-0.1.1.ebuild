@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ninvaders/ninvaders-0.1.1.ebuild,v 1.2 2005/05/03 09:00:41 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ninvaders/ninvaders-0.1.1.ebuild,v 1.3 2007/02/22 05:22:14 mr_bones_ Exp $
 
 inherit toolchain-funcs games
 
@@ -27,4 +27,3 @@ src_install() {
 	dodoc README
 	prepgamesdirs
 }
-
