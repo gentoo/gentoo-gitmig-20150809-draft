@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/qt-unixODBC
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qt-unixODBC/ChangeLog,v 1.24 2006/10/15 21:41:54 kloeri Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qt-unixODBC/ChangeLog,v 1.25 2007/02/22 01:09:12 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   15 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   qt-unixODBC-3.3.6.ebuild:
