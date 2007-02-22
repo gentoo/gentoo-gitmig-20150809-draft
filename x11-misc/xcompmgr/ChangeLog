@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xcompmgr
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/ChangeLog,v 1.20 2006/11/05 16:46:35 joshuabaergen Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/ChangeLog,v 1.21 2007/02/22 00:01:42 jokey Exp $
+
+  21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   05 Nov 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   xcompmgr-1.1.ebuild:

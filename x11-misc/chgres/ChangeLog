@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/chgres
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/chgres/ChangeLog,v 1.10 2006/10/22 00:11:42 omp Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/chgres/ChangeLog,v 1.11 2007/02/21 23:34:30 jokey Exp $
+
+  21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   22 Oct 2006; David Shakaryan <omp@gentoo.org> chgres-0.1.ebuild:
   Remove monolithic X from dependencies.

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/iceked
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/iceked/ChangeLog,v 1.15 2006/02/27 07:02:21 morfic Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/iceked/ChangeLog,v 1.16 2007/02/21 23:42:50 jokey Exp $
+
+  21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   27 Feb 2006; Daniel Goller <morfic@gentoo.org> iceked-1.5.ebuild:
   Adding ~amd64 keyword

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xbattbar
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbattbar/ChangeLog,v 1.10 2006/10/11 12:10:36 nelchael Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbattbar/ChangeLog,v 1.11 2007/02/21 23:59:55 jokey Exp $
+
+  21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   11 Oct 2006; Krzysiek Pawlik <nelchael@gentoo.org> xbattbar-1.4.2.ebuild:
   Add missing x11-misc/imake to DEPEND, see bug #150820.

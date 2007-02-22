@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/sisctrl
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sisctrl/ChangeLog,v 1.13 2006/11/15 20:13:27 nelchael Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sisctrl/ChangeLog,v 1.14 2007/02/21 23:56:09 jokey Exp $
+
+  21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
 *sisctrl-0.0.20051202 (15 Nov 2006)
 

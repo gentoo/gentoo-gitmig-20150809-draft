@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/e16menuedit
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16menuedit/ChangeLog,v 1.6 2005/03/29 14:44:06 luckyduck Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16menuedit/ChangeLog,v 1.7 2007/02/21 23:35:40 jokey Exp $
+
+  21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   29 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> e16menuedit-0.1.ebuild:
   added ~amd64 to KEYWORDS, fixes #86563

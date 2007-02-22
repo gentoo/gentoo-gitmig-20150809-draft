@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xwit
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwit/ChangeLog,v 1.8 2006/10/22 01:43:00 tcort Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwit/ChangeLog,v 1.9 2007/02/22 00:13:05 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   22 Oct 2006; Thomas Cort <tcort@gentoo.org> xwit-3.4.ebuild:
   Added ~amd64 wrt Bug #151022.

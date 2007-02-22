@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xcalendar
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.17 2006/07/29 14:52:29 nelchael Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.18 2007/02/22 00:00:25 jokey Exp $
+
+  21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   29 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org> xcalendar-4.0.ebuild:
   Added x11-misc/imake to DEPEND, see bug #140611.

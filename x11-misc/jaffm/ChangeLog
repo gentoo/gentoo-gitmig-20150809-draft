@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/jaffm
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/jaffm/ChangeLog,v 1.14 2006/09/03 08:57:21 nelchael Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/jaffm/ChangeLog,v 1.15 2007/02/21 23:46:44 jokey Exp $
+
+  21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   03 Sep 2006; Krzysiek Pawlik <nelchael@gentoo.org> -jaffm-1.0.ebuild:
   Removed old version, see bug #146066.

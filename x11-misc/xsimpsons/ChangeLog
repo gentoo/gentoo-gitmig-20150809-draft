@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xsimpsons
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsimpsons/ChangeLog,v 1.12 2006/10/21 22:05:25 omp Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsimpsons/ChangeLog,v 1.13 2007/02/22 00:10:26 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   21 Oct 2006; David Shakaryan <omp@gentoo.org> xsimpsons-0.1.ebuild:
   Remove monolithic X from dependencies.

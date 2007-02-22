@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/vnc2swf
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/ChangeLog,v 1.15 2006/10/14 17:04:36 nelchael Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/ChangeLog,v 1.16 2007/02/21 23:58:52 jokey Exp $
+
+  21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   14 Oct 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   -files/vnc2swf-0.4.2-gcc4.patch, -vnc2swf-0.4.2-r1.ebuild:

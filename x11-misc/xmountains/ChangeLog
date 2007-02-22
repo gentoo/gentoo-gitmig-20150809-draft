@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xmountains
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmountains/ChangeLog,v 1.13 2006/10/22 00:23:09 omp Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmountains/ChangeLog,v 1.14 2007/02/22 00:07:04 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   22 Oct 2006; David Shakaryan <omp@gentoo.org> xmountains-2.7.ebuild:
   Remove monolithic X from dependencies.
