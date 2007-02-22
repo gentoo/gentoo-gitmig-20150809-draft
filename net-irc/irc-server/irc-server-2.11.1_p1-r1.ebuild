@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-server/irc-server-2.11.1_p1-r1.ebuild,v 1.1 2006/09/25 07:39:03 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-server/irc-server-2.11.1_p1-r1.ebuild,v 1.2 2007/02/22 12:21:51 armin76 Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -49,9 +49,9 @@ src_compile () {
 		-e "s/^#undef\tIRC_UID$/#define\tIRC_UID\t$IRCUID/" \
 		-e "s/^#undef\tIRC_GID$/#define\tIRC_GID\t$IRCGID/" \
 		-e "s/^#undef USE_SERVICES$/#define\tUSE_SERVICES/" \
-		"${S}"/config.h.dist
+		"${S}"/support/config.h.dist
 
-	use zlib && sed -i -e "s/^#undef\tZIP_LINKS$/#define\tZIP_LINKS/" ${S}/config.h.dist
+	use zlib && sed -i -e "s/^#undef\tZIP_LINKS$/#define\tZIP_LINKS/" ${S}/support/config.h.dist
 
 	econf \
 		--sysconfdir=/etc/ircd \
