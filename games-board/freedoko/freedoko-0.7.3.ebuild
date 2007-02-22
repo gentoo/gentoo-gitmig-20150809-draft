@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/freedoko-0.7.3.ebuild,v 1.3 2007/01/19 22:29:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/freedoko-0.7.3.ebuild,v 1.4 2007/02/22 05:22:49 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -38,7 +38,6 @@ src_unpack() {
 	use !doc && epatch "${FILESDIR}"/nodoc.patch
 	use !net && epatch "${FILESDIR}"/nonet.patch
 	sed -i -e 's/linux binary/Gentoo '${ARCH}' binary/g' Makefile
-
 
 	cd ${S}/data/cardsets
 	use xskatcards && unpack xskat.zip
