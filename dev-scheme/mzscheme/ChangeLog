@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/mzscheme
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/mzscheme/ChangeLog,v 1.4 2006/11/26 19:04:38 opfer Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/mzscheme/ChangeLog,v 1.5 2007/02/22 01:27:29 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   26 Nov 2006; Christian Faulhammer <opfer@gentoo.org> metadata.xml:
   added scheme herd
