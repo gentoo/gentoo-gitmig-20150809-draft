@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/xmlsysd
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/xmlsysd/ChangeLog,v 1.5 2006/10/28 12:40:08 swegener Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/xmlsysd/ChangeLog,v 1.6 2007/02/22 00:55:21 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   28 Oct 2006; Sven Wegener <swegener@gentoo.org> xmlsysd-0.1.5.ebuild:
   Use emerge --config instead of ebuild config.

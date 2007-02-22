@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/lam-mpi
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.54 2007/02/10 13:04:58 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.55 2007/02/22 00:52:36 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   10 Feb 2007; Steve Dibb <beandog@gentoo.org> lam-mpi-7.1.2.ebuild:
   amd64 stable, bug 157799
