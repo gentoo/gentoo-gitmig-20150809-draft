@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r1.ebuild,v 1.8 2007/02/22 04:53:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r1.ebuild,v 1.9 2007/02/22 05:29:30 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -152,7 +152,7 @@ get_cd_set() {
 		touch .metadata/orig || die "touch orig"
 		touch .metadata/sou || die "touch sou"
 		touch .metadata/hou || die "touching hou"
-		export CDROM_NAME_4="CD4" 
+		export CDROM_NAME_4="CD4"
 		cdrom_get_cds ArcadeInstallNWNXP213f.EXE \
 			disk2.zip disk3.zip disk4.zip
 		;;
@@ -443,7 +443,7 @@ src_install() {
 	if ! use videos
 	then
 		rm -rf "${S}"/movies/*
-	fi	
+	fi
 	mv "${S}"/* "${Ddir}"
 	mv "${S}"/.metadata "${Ddir}"
 	keepdir "${dir}"/servervault
