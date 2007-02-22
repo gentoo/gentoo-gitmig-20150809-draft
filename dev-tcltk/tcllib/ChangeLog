@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tcllib
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/ChangeLog,v 1.19 2006/07/11 10:57:40 matsuu Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/ChangeLog,v 1.20 2007/02/22 01:32:09 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *tcllib-1.8 (11 Jul 2006)
 
