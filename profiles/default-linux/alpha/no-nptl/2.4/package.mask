@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.9 2007/02/18 03:24:00 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.10 2007/02/22 14:45:17 drac Exp $
 
 # Saleem Abdulrasool <compnerd@gentoo.org>
 # Depends on GNOME 2.16+
@@ -141,7 +141,6 @@ x11-drivers/xf86-input-evdev
 >=dev-python/pygtk-2.10.1
 >=x11-libs/libxklavier-3.0
 >=www-client/epiphany-extensions-2.16.0
->=x11-misc/icon-naming-utils-0.8.1
 >=gnome-base/gnome-2.16.0
 >=gnome-extra/gnome2-user-docs-2.16.0
 >=gnome-base/gconf-2.16.0
