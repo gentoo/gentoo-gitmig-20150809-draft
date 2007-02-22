@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r1.ebuild,v 1.7 2007/02/02 16:42:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r1.ebuild,v 1.8 2007/02/22 04:53:32 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -421,7 +421,7 @@ then \
 fi \
 cd "${p}" || die "cd ${p}" \
 if [[ ! -a nwn.ini ]]; then \
-        cp nwn.ini.default nwn.ini \
+	cp nwn.ini.default nwn.ini \
 fi \
 if [[ -r ./nwmovies.so ]]; then \
 	export LD_PRELOAD=./nwmovies.so:$LD_PRELOAD \
@@ -534,7 +534,7 @@ pkg_postinst() {
 		ewarn "Some/all demo modules will be missing. You can copy them manually into :"
 		ewarn "${dir}/modules"
 		ewarn "or emerge with USE=nowin."
- 	fi
+	fi
 	if ! use cdinstall && use nowin && use videos
 	then
 		ewarn "Some/all movies will be missing. You can copy them manually into :"
