@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gnu-smalltalk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.27 2007/02/22 09:38:34 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.28 2007/02/22 11:08:02 opfer Exp $
+
+  22 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  gnu-smalltalk-2.3.3.ebuild:
+  stable x86; bug 158434
 
 *gnu-smalltalk-2.3.3 (22 Feb 2007)
 
