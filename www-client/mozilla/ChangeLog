@@ -1,6 +1,9 @@
 # ChangeLog for www-client/mozilla
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.99 2006/07/03 01:03:45 anarchy Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.100 2007/02/22 00:24:06 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   03 Jul 2006; anarchy <anarchy@gentoo.org> mozilla-1.7.13.ebuild:
   block on seamonkey
