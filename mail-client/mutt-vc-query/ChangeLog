@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/mutt-vc-query
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt-vc-query/ChangeLog,v 1.7 2007/01/19 15:26:00 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt-vc-query/ChangeLog,v 1.8 2007/02/22 00:55:52 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   19 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
   mutt-vc-query-002.ebuild:
