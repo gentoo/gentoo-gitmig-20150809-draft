@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/mead
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mead/ChangeLog,v 1.4 2006/10/01 17:39:57 dberkholz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mead/ChangeLog,v 1.5 2007/02/22 14:44:24 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org>
+  files/digest-mead-2.2.5, Manifest:
+  Transition to Manifest2.
 
   01 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Remove myself as maintainer so it goes to all of the sci-chemistry team.
