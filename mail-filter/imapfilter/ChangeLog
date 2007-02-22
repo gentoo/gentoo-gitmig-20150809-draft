@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/imapfilter
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/imapfilter/ChangeLog,v 1.17 2007/01/22 20:51:20 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/imapfilter/ChangeLog,v 1.18 2007/02/22 00:59:22 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   22 Jan 2007; Matti Bickel <mabi@gentoo.org> imapfilter-1.2.2.ebuild:
   Make it compile with lua-5.1.1 (bug #158460)

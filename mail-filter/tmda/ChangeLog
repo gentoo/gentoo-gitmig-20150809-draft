@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/tmda
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/tmda/ChangeLog,v 1.15 2007/01/06 00:52:03 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/tmda/ChangeLog,v 1.16 2007/02/22 01:04:04 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   06 Jan 2007; Fernando J. Pereda <ferdy@gentoo.org> -tmda-0.92.ebuild,
   -tmda-1.0.ebuild, -tmda-1.0-r1.ebuild:
