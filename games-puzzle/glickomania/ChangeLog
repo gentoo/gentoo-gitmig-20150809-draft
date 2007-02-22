@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/glickomania
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/glickomania/ChangeLog,v 1.5 2006/02/17 22:05:37 tupone Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/glickomania/ChangeLog,v 1.6 2007/02/22 01:10:39 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   17 Feb 2006; <Tupone@gentoo.org> glickomania-1.0.ebuild:
   Modular X dependency fix
