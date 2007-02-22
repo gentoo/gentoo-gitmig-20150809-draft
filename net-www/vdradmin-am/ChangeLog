@@ -1,6 +1,9 @@
 # ChangeLog for net-www/vdradmin-am
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/ChangeLog,v 1.14 2007/01/25 20:41:39 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/ChangeLog,v 1.15 2007/02/22 03:14:46 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   25 Jan 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
   files/digest-vdradmin-am-3.5.3, Manifest:
