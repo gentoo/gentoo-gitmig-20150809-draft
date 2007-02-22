@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.8.ebuild,v 1.1 2007/02/22 14:10:18 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.8.ebuild,v 1.2 2007/02/22 18:37:02 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -49,18 +49,23 @@ S=${WORKDIR}/qt-x11-${SRCTYPE}-${PV}
 QTBASE=/usr/qt/3
 
 pkg_setup() {
-	if use immqt && use immqt-bc ; then
-		ewarn
-		ewarn "immqt and immqt-bc are exclusive. You cannot set both."
-		ewarn "Please specify either immqt or immqt-bc."
-		ewarn
+#	if use immqt && use immqt-bc ; then
+#		ewarn
+#		ewarn "immqt and immqt-bc are exclusive. You cannot set both."
+#		ewarn "Please specify either immqt or immqt-bc."
+#		ewarn
+#		die
+#	elif use immqt ; then
+#		ewarn
+#		ewarn "You are going to compile binary imcompatible immodule for Qt. This means"
+#		ewarn "you have to recompile everything depending on Qt after you install it."
+#		ewarn "Be aware."
+#		ewarn
+#	fi
+
+	if use immqt || use immqt-bc; then
+		eerror "This version of Qt hasn't been modified yet to work with immqt."
 		die
-	elif use immqt ; then
-		ewarn
-		ewarn "You are going to compile binary imcompatible immodule for Qt. This means"
-		ewarn "you have to recompile everything depending on Qt after you install it."
-		ewarn "Be aware."
-		ewarn
 	fi
 
 	export QTDIR=${S}
