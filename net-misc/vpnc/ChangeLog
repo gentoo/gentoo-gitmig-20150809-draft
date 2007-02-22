@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.28 2007/02/21 20:47:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.29 2007/02/22 06:42:19 opfer Exp $
+
+  22 Feb 2007; Christian Faulhammer <opfer@gentoo.org> files/vpnc:
+  correct init file entry
 
   21 Feb 2007; Markus Rothe <corsair@gentoo.org> vpnc-0.4.0.ebuild:
   Stable on ppc64; bug #166801

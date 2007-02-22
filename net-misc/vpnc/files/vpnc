@@ -6,14 +6,14 @@ depend() {
 
 start() {
   ebegin "Starting Virtual Private Network"
-  start-stop-daemon --start --exec /usr/bin/vpnc \
+  start-stop-daemon --start --exec /usr/sbin/vpnc \
     --pidfile /var/run/vpnc/pid
   eend $?
 }
 
 stop() {
   ebegin "Stopping Virtual Private Network"
-  start-stop-daemon --stop --exec /usr/bin/vpnc-disconnect \
+  start-stop-daemon --stop --exec /usr/sbin/vpnc-disconnect \
     --pidfile /var/run/vpnc/pid
   eend $?
 }
