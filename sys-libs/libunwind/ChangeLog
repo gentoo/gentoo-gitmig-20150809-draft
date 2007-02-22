@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libunwind
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/ChangeLog,v 1.2 2005/09/21 02:40:53 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/ChangeLog,v 1.3 2007/02/22 00:36:58 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
 *libunwind-0.98.5 (21 Sep 2005)
 
