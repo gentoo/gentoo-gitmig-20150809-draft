@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/jedit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.72 2007/01/09 15:27:13 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.73 2007/02/22 01:34:04 nichoj Exp $
+
+*jedit-4.3_pre9 (22 Feb 2007)
+
+  22 Feb 2007; Joshua Nichols <nichoj@gentoo.org> +jedit-4.3_pre9.ebuild:
+  Version bump. See bug #167892.
 
   09 Jan 2007; Vlastimil Babka <caster@gentoo.org>
   -files/jedit-4.1-jikes-fix.patch, -files/jedit.desktop, -jedit-4.2.ebuild,
