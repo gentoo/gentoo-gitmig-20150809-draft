@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/jwm
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/ChangeLog,v 1.9 2006/06/17 16:20:26 usata Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/ChangeLog,v 1.10 2007/02/22 05:50:18 omp Exp $
+
+  22 Feb 2007; David Shakaryan <omp@gentoo.org> jwm-1.5.ebuild,
+  jwm-1.7.ebuild:
+  Fix whitespace.
 
 *jwm-1.7 (17 Jun 2006)
 

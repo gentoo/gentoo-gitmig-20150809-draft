@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ctwm-3.7.ebuild,v 1.6 2006/11/11 18:46:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ctwm-3.7.ebuild,v 1.7 2007/02/22 05:45:24 omp Exp $
 
 inherit eutils
 
@@ -43,9 +43,9 @@ src_compile() {
 
 src_install() {
 	make BINDIR=/usr/bin \
-		 MANPATH=/usr/share/man \
-		 TWMDIR=/usr/share/${PN} \
-		 DESTDIR=${D} install || die
+		MANPATH=/usr/share/man \
+		TWMDIR=/usr/share/${PN} \
+		DESTDIR=${D} install || die
 
 	make MANPATH=/usr/share/man \
 		DOCHTMLDIR=/usr/share/doc/${PF}/html \

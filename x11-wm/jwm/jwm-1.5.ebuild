@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/jwm-1.5.ebuild,v 1.3 2006/06/17 16:20:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/jwm-1.5.ebuild,v 1.4 2007/02/22 05:50:18 omp Exp $
 
 inherit autotools eutils
 
@@ -51,7 +51,7 @@ src_compile() {
 		$(use_enable bidi fribidi) \
 		--enable-shape --enable-xrender || die "configure failed"
 
-	 emake -j1 || die "make failed"
+	emake -j1 || die "make failed"
 }
 
 
