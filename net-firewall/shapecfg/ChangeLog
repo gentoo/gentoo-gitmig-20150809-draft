@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/shapecfg
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shapecfg/ChangeLog,v 1.2 2006/11/26 18:16:00 beandog Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shapecfg/ChangeLog,v 1.3 2007/02/22 02:09:22 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   26 Nov 2006; Steve Dibb <beandog@gentoo.org> +metadata.xml,
   shapecfg-36.ebuild:
