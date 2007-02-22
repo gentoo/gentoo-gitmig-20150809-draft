@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-pitfdll
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pitfdll/ChangeLog,v 1.5 2005/12/05 23:12:56 zaheerm Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pitfdll/ChangeLog,v 1.6 2007/02/22 02:20:45 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   05 Dec 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
   gst-plugins-pitfdll-0.8.1.ebuild:

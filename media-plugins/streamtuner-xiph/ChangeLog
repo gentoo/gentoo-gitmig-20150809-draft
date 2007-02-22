@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/streamtuner-xiph
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-xiph/ChangeLog,v 1.9 2005/09/04 10:31:21 flameeyes Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-xiph/ChangeLog,v 1.10 2007/02/22 02:29:48 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   streamtuner-xiph-0.1.0.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-dts
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dts/ChangeLog,v 1.8 2007/01/10 04:31:34 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dts/ChangeLog,v 1.9 2007/02/22 02:16:12 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   10 Jan 2007; Mart Raudsepp <leio@gentoo.org>
   -gst-plugins-dts-0.8.10.ebuild, -gst-plugins-dts-0.8.11.ebuild:

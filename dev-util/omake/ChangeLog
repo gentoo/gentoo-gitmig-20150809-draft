@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/omake
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/ChangeLog,v 1.10 2006/10/09 14:47:44 nattfodd Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/ChangeLog,v 1.11 2007/02/22 02:19:56 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *omake-0.9.6.9 (09 Oct 2006)
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-cdio
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-cdio/ChangeLog,v 1.5 2007/01/25 18:23:49 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-cdio/ChangeLog,v 1.6 2007/02/22 02:15:49 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *gst-plugins-cdio-0.10.5 (25 Jan 2007)
 

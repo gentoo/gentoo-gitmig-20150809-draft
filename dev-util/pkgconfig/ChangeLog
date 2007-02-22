@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.53 2007/01/04 02:05:50 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.54 2007/02/22 02:21:51 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   04 Jan 2007; Daniel Gryniewicz <dang@gentoo.org>
   +files/pkg-config-0.21-fix-tests.patch, pkgconfig-0.21-r1.ebuild:

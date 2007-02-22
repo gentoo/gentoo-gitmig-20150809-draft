@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gob
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.53 2006/11/14 21:38:17 metalgod Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.54 2007/02/22 02:10:43 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *gob-2.0.14 (14 Nov 2006)
 

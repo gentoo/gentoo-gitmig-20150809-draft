@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/flawfinder
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/flawfinder/ChangeLog,v 1.8 2006/02/06 10:09:21 truedfx Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/flawfinder/ChangeLog,v 1.9 2007/02/22 02:08:22 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *flawfinder-1.26-r1 (06 Feb 2006)
 

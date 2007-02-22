@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/j
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/j/ChangeLog,v 1.6 2006/11/30 16:02:26 caster Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/j/ChangeLog,v 1.7 2007/02/22 02:13:03 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   30 Nov 2006; Vlastimil Babka <caster@gentoo.org> j-0.20.2.ebuild:
   Update xerces dep for upcoming 2.6 slotmove.

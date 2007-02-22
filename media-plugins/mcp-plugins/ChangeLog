@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/mcp-plugins
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mcp-plugins/ChangeLog,v 1.9 2004/07/26 07:40:50 eradicator Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mcp-plugins/ChangeLog,v 1.10 2007/02/22 02:25:30 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   26 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   mcp-plugins-0.3.0.ebuild:
