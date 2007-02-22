@@ -17,8 +17,8 @@ AUX xrootconsole-0.6.noversion.patch 1776 RMD160 7937db54ad8d38773cafafbfae33e68
 MD5 c2c648b90b678a3fd48da14587c19ff2 files/xrootconsole-0.6.noversion.patch 1776
 RMD160 7937db54ad8d38773cafafbfae33e68a247c0c04 files/xrootconsole-0.6.noversion.patch 1776
 SHA256 609d3952c207159bd701d0f637896d958c08c0e332527c940f00bf70c8a46042 files/xrootconsole-0.6.noversion.patch 1776
-DIST xrootconsole-0.4.tar.gz 15397
-DIST xrootconsole-0.6.tar.gz 15951
+DIST xrootconsole-0.4.tar.gz 15397 RMD160 fd77dd338153bc8fbd48148dc1888c38c513eecd SHA1 cd10e96e3cc0783de63e70c08f09cda6769f5c18 SHA256 0543dc39e0ce9980620214d4885644d18ad249f2a1c8367b93a00bf538df425d
+DIST xrootconsole-0.6.tar.gz 15951 RMD160 3dd6058316fd72f428fbef9fd5385e75c82a9683 SHA1 6c4bdbe979ce15d00c2e1efde672a6a99228ceb4 SHA256 8306de6f4d3f39677334ee65214e46729cf2dd89aeff1705df3c499738a4076d
 EBUILD xrootconsole-0.4-r1.ebuild 787 RMD160 902387d3a3a80ee7c6f6969d923744b383a116cf SHA1 3e1e67110417cda4df5d52705f54b953497911c3 SHA256 4b8ae3cf2a9d01acd03e3116dd00aa148c233fe63499c32cd2d22f2085651f50
 MD5 45cc49770632eb1cd80b9bff7f9b1724 xrootconsole-0.4-r1.ebuild 787
 RMD160 902387d3a3a80ee7c6f6969d923744b383a116cf xrootconsole-0.4-r1.ebuild 787
@@ -27,24 +27,24 @@ EBUILD xrootconsole-0.6.ebuild 903 RMD160 e149a2293f7324699602bce6d17aa212939bad
 MD5 c0a159374d171ee8ecc2de33f9bd0544 xrootconsole-0.6.ebuild 903
 RMD160 e149a2293f7324699602bce6d17aa212939bada2 xrootconsole-0.6.ebuild 903
 SHA256 a248425b316c5bb3d6f0ab18c2774066605debe48c0c9ffcaf18c7e9376d5e71 xrootconsole-0.6.ebuild 903
-MISC ChangeLog 2428 RMD160 2aa0790daafbcbbae1d4a376135223feca6fcd5b SHA1 3537fd259393f1b74ce0f7d235326b6bfa9740e2 SHA256 c6dcdc559130d8e2af5e2bbbbfc3be3fc6acd14593ff6f6475bde73c4483d770
-MD5 2833d6805857aa808add298451d259c3 ChangeLog 2428
-RMD160 2aa0790daafbcbbae1d4a376135223feca6fcd5b ChangeLog 2428
-SHA256 c6dcdc559130d8e2af5e2bbbbfc3be3fc6acd14593ff6f6475bde73c4483d770 ChangeLog 2428
+MISC ChangeLog 2516 RMD160 882ce2926b60db594842a689ba06b678f513fca6 SHA1 0c1b49a0a64c0c0a3642c9c891deffa3f34228fb SHA256 3a65cc5d3b9efa0690b8b0f197a64bfe5ddaef0836df003d5f57618fe919c0de
+MD5 6d21ce44017945fcc5348cf388f46596 ChangeLog 2516
+RMD160 882ce2926b60db594842a689ba06b678f513fca6 ChangeLog 2516
+SHA256 3a65cc5d3b9efa0690b8b0f197a64bfe5ddaef0836df003d5f57618fe919c0de ChangeLog 2516
 MISC metadata.xml 166 RMD160 7b80226659bf40e97050b1ffce1858d5f20b3c60 SHA1 e6c6436c304a65b4a012a5b7be7ee264b228a645 SHA256 8e7de0a7f7c15840474de373a3ce36adcc5dd658b2e4d18366fcb63b964a0826
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
 RMD160 7b80226659bf40e97050b1ffce1858d5f20b3c60 metadata.xml 166
 SHA256 8e7de0a7f7c15840474de373a3ce36adcc5dd658b2e4d18366fcb63b964a0826 metadata.xml 166
-MD5 33a1c8a9645fbd7f65d7d85a8fb207cd files/digest-xrootconsole-0.4-r1 67
-RMD160 40a1f2e3ef58476b5ffa9fc31af355128b8aaf9f files/digest-xrootconsole-0.4-r1 67
-SHA256 410a4342898ba35b468513178ef133173c11de22a6729241e61b4b23d65edea4 files/digest-xrootconsole-0.4-r1 67
-MD5 f2e59d47ba386ca64ee01f606b94a4a0 files/digest-xrootconsole-0.6 67
-RMD160 c10228fcded4dbe8f51bc797fc8ce958d8e9b515 files/digest-xrootconsole-0.6 67
-SHA256 f40b340d57b06c18af996290274aeb09743ee7f5dc2ba205165ae6306bf53ad7 files/digest-xrootconsole-0.6 67
+MD5 2073f4c7d513053951abb5833c68fc5f files/digest-xrootconsole-0.4-r1 247
+RMD160 1edac8d9e9b53dd3f4c28329336ec43b8bafaf13 files/digest-xrootconsole-0.4-r1 247
+SHA256 accc49a291a12622adf182e2c58de2169e3725fc2fbd7388c7eee560fc48b18f files/digest-xrootconsole-0.4-r1 247
+MD5 0d339c4965fcecdc82ea56d5253fba2b files/digest-xrootconsole-0.6 247
+RMD160 4495710dfe8ea25c0aa264fa1102d83a2380a502 files/digest-xrootconsole-0.6 247
+SHA256 17d1c6bbc4379939ac1564cd242d2f092a14f31d404a4a6f2d78115aaad00d46 files/digest-xrootconsole-0.6 247
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
+Version: GnuPG v2.0.1 (GNU/Linux)
 
-iD8DBQFFOpBqvSApE0uP4UsRAgggAJ0cC1168yXaxrezAc/LG8WRfU/gTACfbDZe
-mNx2GwmhfNY4Yh9sAkMQrCE=
-=spnu
+iD8DBQFF3N7Mz974XjDVpbkRAhuvAKChpX/IJRUN8+qilUBHftNWiqM0XgCdF4Nt
+PMHF5rr4zQpAs2XEbHKULWs=
+=XDu2
 -----END PGP SIGNATURE-----
