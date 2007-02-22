@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.7.3-r3.ebuild,v 1.1 2007/02/17 09:52:21 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.7.3-r3.ebuild,v 1.2 2007/02/22 06:48:57 opfer Exp $
 
 NEED_PYTHON=2.3
 
@@ -22,7 +22,7 @@ RDEPEND="gnuplot? ( dev-python/gnuplot-py )
 DEPEND="${RDEPEND}"
 
 PYTHON_MODNAME="IPython"
-SITEFILE="50ipython-mode-gentoo.el"
+SITEFILE="62ipython-gentoo.el"
 
 src_unpack() {
 	unpack ${A}

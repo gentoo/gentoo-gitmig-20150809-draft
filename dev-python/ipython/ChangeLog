@@ -1,6 +1,18 @@
 # ChangeLog for dev-python/ipython
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.36 2007/02/17 09:52:21 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.37 2007/02/22 06:48:57 opfer Exp $
+
+  22 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  -files/50ipython-mode-gentoo.el, +files/62ipython-gentoo.el,
+  ipython-0.7.3-r2.ebuild, ipython-0.7.3-r3.ebuild:
+  changed file name for cosmetics (removed mode) and loading order, so it gets
+  loaded after app-emacs/python-mode's site file
+
+  20 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  +files/62ipython-gentoo.el, ipython-0.7.3-r2.ebuild,
+  ipython-0.7.3-r3.ebuild:
+  changed file name for cosmetics (removed mode) and loading order, so it gets
+  loaded after app-emacs/python-mode's site file
 
 *ipython-0.7.3-r3 (17 Feb 2007)
 
