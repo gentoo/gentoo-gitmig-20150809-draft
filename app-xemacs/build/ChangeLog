@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/build
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/build/ChangeLog,v 1.7 2006/11/11 13:18:50 graaff Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/build/ChangeLog,v 1.8 2007/02/22 00:22:17 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *build-1.14 (11 Nov 2006)
 

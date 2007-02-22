@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/ruby-modes
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ruby-modes/ChangeLog,v 1.8 2006/11/12 12:24:11 graaff Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ruby-modes/ChangeLog,v 1.9 2007/02/22 00:46:01 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *ruby-modes-1.02 (12 Nov 2006)
 

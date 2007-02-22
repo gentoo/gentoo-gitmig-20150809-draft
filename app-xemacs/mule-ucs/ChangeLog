@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/mule-ucs
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mule-ucs/ChangeLog,v 1.8 2006/11/12 15:43:20 graaff Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mule-ucs/ChangeLog,v 1.9 2007/02/22 00:41:25 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *mule-ucs-1.14 (12 Nov 2006)
 
