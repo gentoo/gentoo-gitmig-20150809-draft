@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/dmenu-2.2.ebuild,v 1.1 2007/02/20 20:32:46 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/dmenu-2.2.ebuild,v 1.2 2007/02/22 20:41:45 cedk Exp $
 
 inherit toolchain-funcs savedconfig
 
@@ -30,7 +30,7 @@ src_unpack() {
 		config.mk || die "sed failed"
 
 	if use savedconfig; then
-		restore_config config.h
+		restore_config ${PN}.h
 	fi
 }
 
@@ -48,7 +48,7 @@ src_install() {
 
 	dodoc README
 
-	save_config config.h
+	save_config ${PN}.h
 }
 
 pkg_postinst() {
