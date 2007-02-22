@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrelltop
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrelltop/ChangeLog,v 1.16 2007/02/21 23:29:33 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrelltop/ChangeLog,v 1.17 2007/02/22 20:59:26 lack Exp $
+
+  22 Feb 2007; Jim Ramsay <lack@gentoo.org> metadata.xml:
+  Accepting maintainership
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

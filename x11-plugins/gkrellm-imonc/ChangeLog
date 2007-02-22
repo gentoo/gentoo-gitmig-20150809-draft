@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellm-imonc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-imonc/ChangeLog,v 1.3 2007/02/09 06:24:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-imonc/ChangeLog,v 1.4 2007/02/22 20:54:34 lack Exp $
+
+  22 Feb 2007; Jim Ramsay <lack@gentoo.org> metadata.xml:
+  Accepting maintainership
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
