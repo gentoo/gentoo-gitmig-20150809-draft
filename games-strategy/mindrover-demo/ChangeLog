@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/mindrover-demo
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/mindrover-demo/ChangeLog,v 1.4 2006/04/27 20:09:15 marienz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/mindrover-demo/ChangeLog,v 1.5 2007/02/22 00:03:01 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-mindrover-demo-1.07b, Manifest:

@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/attal
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/ChangeLog,v 1.21 2007/02/03 01:58:59 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/ChangeLog,v 1.22 2007/02/21 23:58:35 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   03 Feb 2007; Steve Dibb <beandog@gentoo.org> attal-0.10.1.ebuild:
   Add ~amd64, bug 124299
