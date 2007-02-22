@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.44 2007/01/04 18:17:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.45 2007/02/22 01:19:45 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> fftw-2.1.5-r2.ebuild,
   fftw-3.0.1-r2.ebuild:
