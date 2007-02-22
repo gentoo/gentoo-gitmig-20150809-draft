@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dmalloc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.27 2007/01/04 22:39:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.28 2007/02/22 00:32:18 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   dmalloc-4.8.2-r1.ebuild, dmalloc-5.3.0.ebuild, dmalloc-5.4.2.ebuild:

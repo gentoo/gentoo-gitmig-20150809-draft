@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cpl-stratego
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cpl-stratego/ChangeLog,v 1.13 2005/05/16 21:54:49 gustavoz Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cpl-stratego/ChangeLog,v 1.14 2007/02/22 00:30:50 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   16 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   cpl-stratego-0.4.ebuild:
