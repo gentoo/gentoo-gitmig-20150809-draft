@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/aespipe/aespipe-2.3b.ebuild,v 1.11 2007/02/18 18:21:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/aespipe/aespipe-2.3b.ebuild,v 1.12 2007/02/22 11:43:48 alonbl Exp $
 
 inherit flag-o-matic
 
@@ -13,16 +13,18 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc-macos ppc64 sparc x86"
 IUSE="static"
 DEPEND=""
+RDEPEND="app-arch/sharutils"
 
-S=${WORKDIR}/${PN}-v${PV}
+S="${WORKDIR}/${PN}-v${PV}"
 
 src_compile() {
 	use static && append-ldflags -static
 	econf || die
 	emake || die
 }
+
 src_install() {
-	dobin aespipe bz2aespipe || die
+	dobin aespipe bz2aespipe
 	dodoc README
 	doman aespipe.1
 }

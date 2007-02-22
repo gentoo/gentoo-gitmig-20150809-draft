@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/aespipe
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/aespipe/ChangeLog,v 1.20 2007/02/18 18:21:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/aespipe/ChangeLog,v 1.21 2007/02/22 11:43:48 alonbl Exp $
+
+  22 Feb 2007; Alon Bar-Lev <alonbl@gentoo.org> metadata.xml,
+  -aespipe-2.2a.ebuild, aespipe-2.3b.ebuild:
+  Acquire ownership, cleanup, fix bug#155647, thank to Spooky Ghost
 
   18 Feb 2007; Markus Rothe <corsair@gentoo.org> aespipe-2.3b.ebuild:
   Stable on ppc64
