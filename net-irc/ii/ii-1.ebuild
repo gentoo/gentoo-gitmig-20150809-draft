@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ii/ii-1.ebuild,v 1.1 2007/02/22 12:29:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ii/ii-1.ebuild,v 1.2 2007/02/22 17:02:38 armin76 Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="A minimalist FIFO and filesystem-based IRC client"
 HOMEPAGE="http://www.suckless.org/wiki/tools/irc"
@@ -14,8 +16,18 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	sed -i \
+		-e "s/CFLAGS      = -g -O0/CFLAGS += -g/" \
+		-e "s/LDFLAGS     =/LDFLAGS +=/" \
+		config.mk || die "sed failed"
+}
+
 src_compile() {
-	emake || die "emake failed"
+	emake CC=$(tc-getCC) || die "emake failed"
 }
 
 src_install() {
