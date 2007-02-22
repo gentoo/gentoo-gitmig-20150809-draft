@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audiocompress
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/ChangeLog,v 1.17 2006/11/20 20:40:01 blubb Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/ChangeLog,v 1.18 2007/02/22 00:48:58 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   20 Nov 2006; <blubb@gentoo.org> audiocompress-1.5.2.ebuild:
   bug 131438; marking ~amd64

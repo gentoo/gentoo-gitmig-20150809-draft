@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gramofile
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/ChangeLog,v 1.14 2006/04/19 22:22:35 malc Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/ChangeLog,v 1.15 2007/02/22 01:02:24 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   19 Apr 2006; <malc@gentoo.org> gramofile-1.6-r1.ebuild:
   Undefine -DREDHAT50 in bplaysrc/Makefile to get a valid prototype for

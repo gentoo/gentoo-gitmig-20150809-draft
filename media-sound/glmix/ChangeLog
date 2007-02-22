@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/glmix
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glmix/ChangeLog,v 1.6 2006/02/16 08:49:43 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glmix/ChangeLog,v 1.7 2007/02/22 00:59:45 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   16 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> glmix-0.1.ebuild:
   Make pkgconfig only a build-time dependency.

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/daudio
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/daudio/ChangeLog,v 1.8 2006/03/07 14:20:35 flameeyes Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/daudio/ChangeLog,v 1.9 2007/02/22 00:55:18 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/daudio-0.3-makefile.patch, daudio-0.3.ebuild:

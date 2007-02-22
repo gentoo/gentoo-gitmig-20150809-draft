@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ermixer
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ermixer/ChangeLog,v 1.23 2006/06/24 01:37:36 cardoe Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ermixer/ChangeLog,v 1.24 2007/02/22 00:57:34 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   24 Jun 2006; Doug Goldstein <cardoe@gentoo.org> ermixer-0.8.ebuild:
   USE flag qt->qt3/qt4 change bug #137785

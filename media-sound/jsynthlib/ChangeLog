@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/jsynthlib
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jsynthlib/ChangeLog,v 1.3 2006/03/08 15:38:05 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jsynthlib/ChangeLog,v 1.4 2007/02/22 01:05:33 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   08 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml,
   jsynthlib-0.19_pre20041220.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/neutrino
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/neutrino/ChangeLog,v 1.2 2006/02/15 23:31:42 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/neutrino/ChangeLog,v 1.3 2007/02/22 01:19:10 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   15 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> neutrino-0.8.3.ebuild:
   Make pkgconfig and intal only build-time dependencies.

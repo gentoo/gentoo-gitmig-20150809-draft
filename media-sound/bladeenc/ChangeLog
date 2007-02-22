@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/bladeenc
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bladeenc/ChangeLog,v 1.15 2006/03/07 13:27:49 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bladeenc/ChangeLog,v 1.16 2007/02/22 00:49:55 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   bladeenc-0.94.2-r1.ebuild:

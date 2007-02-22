@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kguitar
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kguitar/ChangeLog,v 1.4 2006/10/21 14:01:42 carlo Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kguitar/ChangeLog,v 1.5 2007/02/22 01:07:21 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   21 Oct 2006; Carsten Lohrke <carlo@gentoo.org> kguitar-0.5.ebuild:
   QA: need-kde() has to be called after setting R/DEPEND.
