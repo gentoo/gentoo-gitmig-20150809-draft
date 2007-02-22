@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/tango-icon-theme
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/ChangeLog,v 1.24 2007/02/22 15:06:44 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/ChangeLog,v 1.25 2007/02/22 15:27:34 drac Exp $
+
+  22 Feb 2007; Samuli Suominen <drac@gentoo.org>
+  tango-icon-theme-0.8.0.ebuild:
+  Fix Sandbox Violation. Thanks to Sami Laitinen for reporting.
 
   22 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
   tango-icon-theme-0.7.2.ebuild:

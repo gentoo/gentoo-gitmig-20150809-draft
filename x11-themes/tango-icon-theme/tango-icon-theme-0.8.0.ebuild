@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/tango-icon-theme-0.8.0.ebuild,v 1.1 2007/02/21 19:44:50 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/tango-icon-theme-0.8.0.ebuild,v 1.2 2007/02/22 15:27:34 drac Exp $
 
 inherit eutils
 
@@ -30,6 +30,8 @@ pkg_setup() {
 }
 
 src_compile() {
+	addpredict "/root/.gnome2"
+
 	if use png; then
 		econf --enable-png-creation
 	else
