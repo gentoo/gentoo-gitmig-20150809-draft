@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-demodata/descent2-demodata-1.0.ebuild,v 1.3 2007/02/03 11:28:03 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-demodata/descent2-demodata-1.0.ebuild,v 1.4 2007/02/22 05:18:35 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="~ppc ~x86"
 IUSE=""
 
-# d2x-0.2.5-r2 may include the demo data itself 
+# d2x-0.2.5-r2 may include the demo data itself
 # d2x-0.2.5-r3 does not include the demo data
 RDEPEND="|| (
 	games-action/d2x-rebirth

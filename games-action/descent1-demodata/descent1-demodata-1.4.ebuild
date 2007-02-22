@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent1-demodata/descent1-demodata-1.4.ebuild,v 1.2 2007/01/10 17:39:22 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent1-demodata/descent1-demodata-1.4.ebuild,v 1.3 2007/02/22 05:16:04 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -58,4 +58,3 @@ pkg_postinst() {
 	elog "Not all Descent 1 clients support the demo data."
 	echo
 }
-
