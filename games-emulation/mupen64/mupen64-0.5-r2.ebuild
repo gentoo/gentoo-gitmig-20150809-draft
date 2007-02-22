@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.5-r2.ebuild,v 1.2 2007/02/14 15:14:22 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.5-r2.ebuild,v 1.3 2007/02/22 09:59:30 blubb Exp $
 
 inherit eutils multilib games
 
@@ -20,7 +20,7 @@ RDEPEND="virtual/opengl
 	media-libs/sdl-ttf
 	amd64? (
 		app-emulation/emul-linux-x86-gtklibs
-		app-emulation/emul-linux-x86-sdl
+		>=app-emulation/emul-linux-x86-sdl-10.0
 	)"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
