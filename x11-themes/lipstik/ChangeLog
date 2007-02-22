@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/lipstik
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/lipstik/ChangeLog,v 1.18 2006/11/28 00:40:39 flameeyes Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/lipstik/ChangeLog,v 1.19 2007/02/22 10:36:23 voxus Exp $
+
+*lipstik-2.2.2 (22 Feb 2007)
+
+  22 Feb 2007; Konstantin V. Arkhipov <voxus@gentoo.org>
+  -lipstik-1.3.ebuild, -lipstik-1.3-r1.ebuild, -lipstik-2.1.ebuild,
+  lipstik-2.2.ebuild, +lipstik-2.2.2.ebuild:
+  Version bump, SRC_URI fixed (wrt bug #167368).
 
   28 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> lipstik-2.2.ebuild:
   Add ~x86-fbsd keyword.
