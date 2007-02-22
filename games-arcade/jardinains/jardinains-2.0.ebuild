@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jardinains/jardinains-2.0.ebuild,v 1.3 2007/02/22 05:21:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jardinains/jardinains-2.0.ebuild,v 1.4 2007/02/22 05:42:31 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -36,7 +36,6 @@ src_install() {
 	cp -r LICENSE.txt data help "${Ddir}" || die "cp failed"
 
 	games_make_wrapper jardinains ./jardinains "${dir}" "${dir}"
-
 
 	make_desktop_entry jardinains "Jardinains 2"
 	touch "${Ddir}/data/prefs.xml"
