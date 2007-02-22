@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.9b.ebuild,v 1.4 2006/07/12 08:37:01 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.9b.ebuild,v 1.5 2007/02/22 21:15:17 lack Exp $
 
 IUSE="gtk"
 
@@ -14,7 +14,7 @@ DEPEND="virtual/libc
 	dev-libs/openssl
 	gtk? (
 		>=x11-libs/gtk+-2
-		app-admin/gkrellm
+		=app-admin/gkrellm-2*
 		dev-util/pkgconfig
 	)
 	( || (
@@ -29,7 +29,7 @@ RDEPEND="virtual/libc
 	dev-libs/openssl
 	gtk? (
 		>=x11-libs/gtk+-2
-		app-admin/gkrellm
+		=app-admin/gkrellm-2*
 	)
 	!gtk? ( x11-wm/windowmaker )
 	( || (
