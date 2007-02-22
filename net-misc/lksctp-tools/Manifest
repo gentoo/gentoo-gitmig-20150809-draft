@@ -2,8 +2,8 @@ AUX lksctp-tools-1.0.6-as-needed.patch 1435 RMD160 f79cf5be17db2a5e7dd8aaa0e8c75
 MD5 ec30a7546aba1ceb3e501d60c0d8af7f files/lksctp-tools-1.0.6-as-needed.patch 1435
 RMD160 f79cf5be17db2a5e7dd8aaa0e8c75e7cf4277f9d files/lksctp-tools-1.0.6-as-needed.patch 1435
 SHA256 da7b365dd1855f630d419e6f9cf02365a9e2551fa9875979ea3e5458ed38080d files/lksctp-tools-1.0.6-as-needed.patch 1435
-DIST lksctp-tools-1.0.1.tar.gz 541979
-DIST lksctp-tools-1.0.2.tar.gz 685395
+DIST lksctp-tools-1.0.1.tar.gz 541979 RMD160 67addb397af12d028b8d9bf89b801b66bfd0ecdf SHA1 09ef610f8ed61128ad9de1b08453c72c33e49f09 SHA256 22eef1c9bb5320987f8607c3d334f669820b56249ccc70ad2cc87e90f3dcb5ba
+DIST lksctp-tools-1.0.2.tar.gz 685395 RMD160 bc3559c030bc62b6da3971033a5d5f35d98e0095 SHA1 fd177ee7c0bbb87e3df1e7efe23e804428cd3198 SHA256 74d8b176392cb6e138ada3fe8ae80d2407a607897ca2771d9c5dcfe8df9cd921
 DIST lksctp-tools-1.0.4.tar.gz 728115 RMD160 bfeb50d70a53bd2ece95caf80feb2ed949ca950a SHA1 7f71bbd7f974651f3f01cf1319d6815cb831b5b7 SHA256 0cd0dca1ef51032971d34dc740edf85d4c32166bb6218d30e22e0e179b53ca85
 DIST lksctp-tools-1.0.6.tar.gz 742843 RMD160 078d4b2037c9988301c3c30886cd5a3f6739a7e8 SHA1 318858876f8569cfb1e1a577b481e9cceca62bc4 SHA256 7835b2eef5f01201493641634db8c93352a109c8ab0f6b438b695f20da8891fd
 EBUILD lksctp-tools-1.0.1.ebuild 768 RMD160 e554b64ced8ad7212fcbda2d3a432c587f4a4dfb SHA1 3e3185f7d85a63aa7e25071a5bded62bfc8ff9e4 SHA256 d1a4dda89c31779562d229101fe70b6c57cc780dc2f78d171593605d6f3eb7fa
@@ -22,20 +22,20 @@ EBUILD lksctp-tools-1.0.6.ebuild 905 RMD160 b75d5ae6dd11cf594e5dfc0f6c3dccee8ab4
 MD5 3f2c7e5b7807638263f4205a927b20e0 lksctp-tools-1.0.6.ebuild 905
 RMD160 b75d5ae6dd11cf594e5dfc0f6c3dccee8ab48453 lksctp-tools-1.0.6.ebuild 905
 SHA256 00396e504a37a031bc0ffa07e0cb21a59dfb080296bd3a1762c5c2d3c18bf417 lksctp-tools-1.0.6.ebuild 905
-MISC ChangeLog 1315 RMD160 5eb6a9ee876e34327c7962475ffc1e701ed626cd SHA1 bfed4cca074968969f7dbb1100b29de5b852d453 SHA256 c7d2ed87e13dc08988fa8cb240312026696aa75f694322fabda5415b19dea7a8
-MD5 77eedaa039b4b8d04642486c1c305aef ChangeLog 1315
-RMD160 5eb6a9ee876e34327c7962475ffc1e701ed626cd ChangeLog 1315
-SHA256 c7d2ed87e13dc08988fa8cb240312026696aa75f694322fabda5415b19dea7a8 ChangeLog 1315
+MISC ChangeLog 1405 RMD160 a587701c11cba735b4adec88086ff8bb9e45f5f3 SHA1 9b0620637271814cf1438d1e363227f94578028c SHA256 bd1ffdc170d3187ded8de0f5c83261b4289764df82f4a2578ed297305d19de30
+MD5 e596545d050b8b101de1807882e13088 ChangeLog 1405
+RMD160 a587701c11cba735b4adec88086ff8bb9e45f5f3 ChangeLog 1405
+SHA256 bd1ffdc170d3187ded8de0f5c83261b4289764df82f4a2578ed297305d19de30 ChangeLog 1405
 MISC metadata.xml 279 RMD160 f84566b5a463b59cc5ddd8a2210a54de9492ed2f SHA1 98caf044b8fce3f5ff202c7f7b71f0dcb9d51947 SHA256 785db7b7f8e4f9a526dc574ce2aa10024cc83af170f38ec9af9f56c23fc15543
 MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
 RMD160 f84566b5a463b59cc5ddd8a2210a54de9492ed2f metadata.xml 279
 SHA256 785db7b7f8e4f9a526dc574ce2aa10024cc83af170f38ec9af9f56c23fc15543 metadata.xml 279
-MD5 bfc154edf9f162d5dbb3bfff4034c354 files/digest-lksctp-tools-1.0.1 70
-RMD160 0604869ff49c378231072f348b2515963cf071db files/digest-lksctp-tools-1.0.1 70
-SHA256 ce6816c120e1b5cc397b3de2276ad4a89e5ef2a08cfb0dadc5519c8224647a2e files/digest-lksctp-tools-1.0.1 70
-MD5 038fd0a35e5638ef6683dbfb6c94da8b files/digest-lksctp-tools-1.0.2 70
-RMD160 6de29b374768a2e240ec5b211ff4c2bde015b48a files/digest-lksctp-tools-1.0.2 70
-SHA256 4369e0c0f1852a32b1fc262ce8f03242a02b41686421ae5d8adbf2f25390cd77 files/digest-lksctp-tools-1.0.2 70
+MD5 72b6baa8577a727b702f060722cb88b1 files/digest-lksctp-tools-1.0.1 256
+RMD160 ef66218be5e80584bbaa053696d28cfe06fe5977 files/digest-lksctp-tools-1.0.1 256
+SHA256 f0c5abb98557e2ce411775129a531c027d679eb6a3062d7bc00cacde41bd65f9 files/digest-lksctp-tools-1.0.1 256
+MD5 013e559d5f9a5a5eeea058932a072c96 files/digest-lksctp-tools-1.0.2 256
+RMD160 5168ad384f45c19584fefaf0f451ce82dd748f32 files/digest-lksctp-tools-1.0.2 256
+SHA256 7aea0cff5822c33dd0d8a69e38a36d1967cfcdcd48448e6926f00d3e9da1d331 files/digest-lksctp-tools-1.0.2 256
 MD5 4063f86af38d9b537844ec7187ab267d files/digest-lksctp-tools-1.0.4 256
 RMD160 c71a789e8bd1fd9affabf0fc884e81893b0c0b23 files/digest-lksctp-tools-1.0.4 256
 SHA256 e550dd64b9b3e3dad225f0bd5c8031b6ba315b186a10eecdb00c96b705e6fb66 files/digest-lksctp-tools-1.0.4 256
