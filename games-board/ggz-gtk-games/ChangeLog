@@ -1,6 +1,12 @@
 # ChangeLog for games-board/ggz-gtk-games
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-games/ChangeLog,v 1.16 2007/02/17 09:29:58 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-games/ChangeLog,v 1.17 2007/02/22 14:57:45 nyhm Exp $
+
+*ggz-gtk-games-0.0.14 (22 Feb 2007)
+
+  22 Feb 2007; Tristan Heaven <nyhm@gentoo.org>
+  +ggz-gtk-games-0.0.14.ebuild:
+  Version bump
 
   17 Feb 2007; Tristan Heaven <nyhm@gentoo.org> ggz-gtk-games-0.0.13.ebuild:
   Fix ROOT abuse, bug #167277
