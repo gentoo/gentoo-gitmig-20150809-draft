@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/gopenmol
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gopenmol/ChangeLog,v 1.6 2007/01/07 02:18:50 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gopenmol/ChangeLog,v 1.7 2007/02/22 01:26:22 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
   07 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -gopenmol-3.00.ebuild:
   QA: Removed unused versions.
