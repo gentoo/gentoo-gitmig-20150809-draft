@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.23.ebuild,v 1.1 2007/02/22 21:03:45 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.23.ebuild,v 1.2 2007/02/22 21:21:20 drac Exp $
 
 inherit eutils pam flag-o-matic
 
@@ -29,14 +29,6 @@ RDEPEND="opengl? ( media-libs/mesa )
 DEPEND="${RDEPEND}
 	x11-proto/xineramaproto"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	# avoid prestripping
-	sed -i -e 's:$stripprog:echo:g' install-sh
-}
-
 src_compile() {
 	econf --enable-appdefaultdir=/usr/share/X11/app-defaults \
 		--enable-vtlock \
@@ -53,7 +45,7 @@ src_compile() {
 		$(use_with motif) \
 		$(use_with esd esound) \
 		$(use_with nas) \
-		$(use_with debug editres) \
+		$(use_with debug editres)
 
 	# fixes suid-with-lazy-bindings problem
 	append-flags $(bindnow-flags)
