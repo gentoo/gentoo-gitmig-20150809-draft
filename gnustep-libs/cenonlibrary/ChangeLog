@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-libs/cenonlibrary
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/cenonlibrary/ChangeLog,v 1.1 2006/03/26 13:36:16 grobian Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/cenonlibrary/ChangeLog,v 1.2 2007/02/22 00:27:57 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *cenonlibrary-3.80.1 (26 Mar 2006)
 
