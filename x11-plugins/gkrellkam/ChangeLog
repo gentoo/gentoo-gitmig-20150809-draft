@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellkam
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellkam/ChangeLog,v 1.13 2007/02/04 15:49:43 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellkam/ChangeLog,v 1.14 2007/02/22 21:27:56 lack Exp $
+
+  22 Feb 2007; Jim Ramsay <lack@gentoo.org> +metadata.xml:
+  Accepting maintainership
 
   04 Feb 2007; Charlie Shepherd <masterdriverz@gentoo.org>
   -gkrellkam-0.3.4.ebuild:
