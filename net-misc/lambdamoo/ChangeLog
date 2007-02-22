@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/lambdamoo
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lambdamoo/ChangeLog,v 1.5 2004/06/24 23:53:28 agriffis Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lambdamoo/ChangeLog,v 1.6 2007/02/22 02:30:33 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   06 Dec 2003; Jason Wever <weeve@gentoo.org> lambdamoo-1.8.1-r1.ebuild:
   Added ~sparc keyword.

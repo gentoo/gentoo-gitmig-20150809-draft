@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/omniORB
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.42 2007/02/02 23:28:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.43 2007/02/22 02:39:29 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *omniORB-4.1.0 (02 Feb 2007)
 

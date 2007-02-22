@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/sipcalc
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sipcalc/ChangeLog,v 1.6 2006/06/28 18:22:14 gustavoz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sipcalc/ChangeLog,v 1.7 2007/02/22 02:45:42 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   28 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org> sipcalc-1.1.2.ebuild:
   Stable on sparc

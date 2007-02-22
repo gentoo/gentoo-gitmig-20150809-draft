@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netdate
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netdate/ChangeLog,v 1.6 2005/02/12 11:41:12 jhhudso Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netdate/ChangeLog,v 1.7 2007/02/22 02:34:19 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   12 Feb 2005; Jared Hudson <jhhudso@gentoo.org> netdate-1.2.ebuild:
   Marked netdate-1.2 as stable for all architectures.

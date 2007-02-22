@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/kbandwidth
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kbandwidth/ChangeLog,v 1.7 2006/06/07 05:06:39 tsunam Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kbandwidth/ChangeLog,v 1.8 2007/02/22 02:28:53 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   07 Jun 2006; Joshua Jackson <tsunam@gentoo.org> kbandwidth-1.0.4.ebuild:
   Stable on x86; bug #135657

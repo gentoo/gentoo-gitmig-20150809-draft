@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.62 2007/02/02 17:02:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.63 2007/02/22 02:49:37 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   02 Feb 2007; Aron Griffis <agriffis@gentoo.org> stunnel-3.26.ebuild,
   stunnel-4.09-r1.ebuild, stunnel-4.14-r1.ebuild, stunnel-4.15.ebuild,

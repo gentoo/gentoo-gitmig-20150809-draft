@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pimpd
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pimpd/ChangeLog,v 1.9 2005/04/24 02:54:08 hansmi Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pimpd/ChangeLog,v 1.10 2007/02/22 02:41:16 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> pimpd-0.8.ebuild:
   Stable on ppc.
