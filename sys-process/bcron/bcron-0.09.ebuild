@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/bcron-0.09.ebuild,v 1.3 2006/10/19 09:11:05 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/bcron-0.09.ebuild,v 1.4 2007/02/22 16:06:58 bangert Exp $
 
 CRON_SYSTEM_CRONTAB="yes"
 
@@ -102,12 +102,12 @@ pkg_config() {
 
 pkg_postinst() {
 	echo
-	einfo "Run "
-	einfo "emerge --config =${PF}"
-	einfo "to create or update your run files (backups are created) in"
-	einfo "		/var/lib/supervise/bcron (bcron daemon) and"
-	einfo "		/var/lib/supervise/bcron-spool (crontab receiver) and"
-	einfo "		/var/lib/supervise/bcron-update (system crontab updater)"
+	elog "Run "
+	elog "emerge --config =${PF}"
+	elog "to create or update your run files (backups are created) in"
+	elog "		/var/lib/supervise/bcron (bcron daemon) and"
+	elog "		/var/lib/supervise/bcron-spool (crontab receiver) and"
+	elog "		/var/lib/supervise/bcron-update (system crontab updater)"
 
 #	cron_pkg_postinst
 }
