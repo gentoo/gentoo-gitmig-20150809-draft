@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/qhull
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/ChangeLog,v 1.19 2007/01/22 19:24:29 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/ChangeLog,v 1.20 2007/02/22 02:05:28 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *qhull-2003.1 (22 Jan 2007)
 

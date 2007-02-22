@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdc1394
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.25 2006/09/13 02:10:20 seemant Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.26 2007/02/22 01:52:44 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   13 Sep 2006; Seemant Kulleen <seemant@gentoo.org>
   +files/libdc1394-1.2.1-nox11.patch, libdc1394-1.2.1.ebuild:

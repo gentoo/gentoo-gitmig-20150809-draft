@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/vgui
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vgui/ChangeLog,v 1.7 2006/08/27 22:51:44 mr_bones_ Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vgui/ChangeLog,v 1.8 2007/02/22 02:07:55 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   27 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org> -vgui-1.90a.ebuild:
   clean out old, non-modX ebuild

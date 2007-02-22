@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libkexif
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexif/ChangeLog,v 1.22 2007/01/02 14:13:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexif/ChangeLog,v 1.23 2007/02/22 01:56:11 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   02 Jan 2007; Gustavo Zacarias <gustavoz@gentoo.org> libkexif-0.2.4.ebuild:
   Stable on sparc

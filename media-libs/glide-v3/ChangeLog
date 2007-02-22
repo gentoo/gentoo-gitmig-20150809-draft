@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/glide-v3
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/ChangeLog,v 1.29 2006/09/24 08:34:13 dberkholz Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/ChangeLog,v 1.30 2007/02/22 01:47:51 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   24 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   glide-v3-3.10-r4.ebuild, glide-v3-20060203.ebuild:

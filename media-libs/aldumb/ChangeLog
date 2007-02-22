@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/aldumb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aldumb/ChangeLog,v 1.17 2007/01/29 01:31:40 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aldumb/ChangeLog,v 1.18 2007/02/22 01:45:39 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *aldumb-0.9.3 (29 Jan 2007)
 

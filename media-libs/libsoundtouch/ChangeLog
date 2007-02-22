@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsoundtouch
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/ChangeLog,v 1.11 2006/11/20 21:04:20 blubb Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/ChangeLog,v 1.12 2007/02/22 02:01:04 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   20 Nov 2006; <blubb@gentoo.org> libsoundtouch-1.3.1.ebuild:
   stable on amd64

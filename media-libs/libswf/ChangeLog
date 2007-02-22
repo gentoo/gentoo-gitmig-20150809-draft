@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libswf
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libswf/ChangeLog,v 1.15 2005/12/26 20:33:08 blubb Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libswf/ChangeLog,v 1.16 2007/02/22 02:02:01 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   26 Dec 2005; Simon Stelling <blubb@gentoo.org> libswf-0.99.ebuild:
   moving the has_multilib_profile call to pkg_config, this time for real

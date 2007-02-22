@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/dssi
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/ChangeLog,v 1.10 2006/06/24 00:25:18 cardoe Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/ChangeLog,v 1.11 2007/02/22 01:47:29 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
   24 Jun 2006; Doug Goldstein <cardoe@gentoo.org> dssi-0.9.ebuild,
   dssi-0.9.1.ebuild:

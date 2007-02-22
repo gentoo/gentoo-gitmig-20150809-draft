@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/spandsp
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/ChangeLog,v 1.8 2006/11/27 21:05:46 drizzt Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/ChangeLog,v 1.9 2007/02/22 02:06:56 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *spandsp-0.0.3_pre26 (27 Nov 2006)
 
