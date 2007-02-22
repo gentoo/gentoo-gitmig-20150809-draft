@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-plugins
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/ChangeLog,v 1.10 2007/02/04 17:06:12 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/ChangeLog,v 1.11 2007/02/22 22:07:04 lack Exp $
+
+  22 Feb 2007; Jim Ramsay <lack@gentoo.org> metadata.xml,
+  gkrellm-plugins-2.0.ebuild:
+  Updated to include most recent gkrellm-2 plugins (bug 30244)
 
 *gkrellm-plugins-2.0 (04 Feb 2007)
 
