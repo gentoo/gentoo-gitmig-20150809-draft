@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/bakery
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/bakery/ChangeLog,v 1.6 2006/05/02 03:38:05 compnerd Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/bakery/ChangeLog,v 1.7 2007/02/22 00:58:49 peper Exp $
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *bakery-2.3.18 (02 May 2006)
 
