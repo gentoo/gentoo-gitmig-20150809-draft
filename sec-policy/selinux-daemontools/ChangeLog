@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-daemontools
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-daemontools/ChangeLog,v 1.21 2006/11/15 01:04:53 pebenito Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-daemontools/ChangeLog,v 1.22 2007/02/22 01:09:06 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
 *selinux-daemontools-20061114 (15 Nov 2006)
 

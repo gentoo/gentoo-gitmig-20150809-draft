@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-gpm
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-gpm/ChangeLog,v 1.8 2006/11/15 01:04:52 pebenito Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-gpm/ChangeLog,v 1.9 2007/02/22 01:13:12 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
 *selinux-gpm-20061114 (15 Nov 2006)
 

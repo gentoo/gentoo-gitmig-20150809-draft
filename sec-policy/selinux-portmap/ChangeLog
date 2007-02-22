@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-portmap
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-portmap/ChangeLog,v 1.10 2006/11/15 01:04:52 pebenito Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-portmap/ChangeLog,v 1.11 2007/02/22 01:21:05 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
 *selinux-portmap-20061114 (15 Nov 2006)
 
