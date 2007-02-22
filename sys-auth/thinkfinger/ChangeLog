@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/thinkfinger
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/ChangeLog,v 1.2 2007/02/21 17:15:41 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/ChangeLog,v 1.3 2007/02/22 21:58:25 chainsaw Exp $
+
+  22 Feb 2007; Tony Vroon <chainsaw@gentoo.org> thinkfinger-0.2.2-r1.ebuild:
+  Put inherit in correct location, as requested by Mr_Bones.
 
 *thinkfinger-0.2.2-r1 (21 Feb 2007)
 
