@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/iasl
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/ChangeLog,v 1.9 2006/11/14 12:29:37 robbat2 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/ChangeLog,v 1.10 2007/02/22 00:37:09 jokey Exp $
+
+  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
 
 *iasl-20060912 (14 Nov 2006)
 
