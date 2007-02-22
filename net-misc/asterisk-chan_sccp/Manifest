@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX chan_sccp-20050725-gentoo.diff 2677 RMD160 18c4fc160f0a20b6fa581ee7eaf0caf2bf84b322 SHA1 872e8a284eca1d96b072cf1997d6f9b117bc3940 SHA256 26b1f3b82e8af667e205c1d23356e2966b022e1f652f00e42665eaa1bd2cbe9a
 MD5 16f7563f69269ec845f0278beee36014 files/chan_sccp-20050725-gentoo.diff 2677
 RMD160 18c4fc160f0a20b6fa581ee7eaf0caf2bf84b322 files/chan_sccp-20050725-gentoo.diff 2677
@@ -13,15 +10,15 @@ AUX chan_sccp-20051118-gentoo.diff 3029 RMD160 5d34a8260f310b7be411f88bcfa336a5f
 MD5 a6ef07a48ddcfd2c436dd35c561f3689 files/chan_sccp-20051118-gentoo.diff 3029
 RMD160 5d34a8260f310b7be411f88bcfa336a5f3eda4ee files/chan_sccp-20051118-gentoo.diff 3029
 SHA256 398cf48248be5733990d72164465829b55697709ffe69fc39819692f4893979c files/chan_sccp-20051118-gentoo.diff 3029
-DIST chan_sccp-20050807.tar.bz2 56281
-DIST chan_sccp-20050826.tar.bz2 56441
-DIST chan_sccp-20050902.tar.bz2 57674
-DIST chan_sccp-20050906.tar.bz2 58397
-DIST chan_sccp-20050913.tar.bz2 58310
-DIST chan_sccp-20050922.tar.bz2 58637
-DIST chan_sccp-20051118.tar.bz2 67177
-DIST chan_sccp-20051125.tar.bz2 67569
-DIST chan_sccp-20060204.tar.bz2 68903 RMD160 b8849f3e037a9e4e2a3e1a178bc08f45954c1bd2 SHA256 ab6e9ac765cf6020a825f1af7f66652a8bb74a47ea0ad2fed18d9bf4fb732b03
+DIST chan_sccp-20050807.tar.bz2 56281 RMD160 fe5b6082b12f180ef1d06a88db78961e0f9290cc SHA1 da81b98df64b26af9eb99ec88ab5182fdc1945bc SHA256 1abb0dfb8230dda0b852d8e5b3e99d6ca0a69ae07973c77b32808d24bda2533c
+DIST chan_sccp-20050826.tar.bz2 56441 RMD160 937e071ed08e5eb267873b8c3a8f474994b17127 SHA1 2fa3ccf80279a1341a135d44ef44832b338b3ecb SHA256 d69081a55b3aa131ca138b36a7cfb133caed9e9145aa67e05f5d4e4e170c3dfe
+DIST chan_sccp-20050902.tar.bz2 57674 RMD160 e4516fefc3d89a478e85d59488b967ff7798bd76 SHA1 ceed710a46e828584a7c0daf89d9d8ffaa7ff01f SHA256 ebd8cb800f5fafaca65bc480e635f18846a4283e141550010aeab0f27b066616
+DIST chan_sccp-20050906.tar.bz2 58397 RMD160 c07cd498da8d26f59d7887243cdc8be07d6b0282 SHA1 88072c9447ab58bbedfaeb4b6aa0e7f785f3ae36 SHA256 fdfc50f0ad986dcb831c480757252037aef9656e0f7640155c180576e4d25dfe
+DIST chan_sccp-20050913.tar.bz2 58310 RMD160 c59e5c086aab7dc4b15fe67552756338fa75cb0e SHA1 e93361e60ce8110a7ce4f656a15aa877cf911519 SHA256 2acdba9bfb1fa478976ad046ffcdf6ad49b7195e4e72e83993a97b356c8faa2c
+DIST chan_sccp-20050922.tar.bz2 58637 RMD160 a11d998519e036430b5a0dfa93ac42784d84c1f6 SHA1 38bd4273ad21ad5ac1cef49ef73ed8a46df560d4 SHA256 6023c241b53688d038aa8ee7ba9cbd60234102a63e95c85e7871380960bcb169
+DIST chan_sccp-20051118.tar.bz2 67177 RMD160 571c2b2b3741c0912aab46106eddcf6b0e4e22cf SHA1 972f4bf88d2bd862524a523794ae50d916ce4138 SHA256 0cbd6555d62586b2a9bfa7adc11d299293b4b79ea9e667e874433d1e70774131
+DIST chan_sccp-20051125.tar.bz2 67569 RMD160 43d4e1872b60dcc5871caee14de48f8e51af5604 SHA1 f75b56a1662e87ef2a6fd1f22b7d1d272c05d526 SHA256 91dbf89532fee393a8357ff63d0af03d0c60b5dc6fd438a93caad7e12daa4263
+DIST chan_sccp-20060204.tar.bz2 68903 RMD160 b8849f3e037a9e4e2a3e1a178bc08f45954c1bd2 SHA1 dde19c3ea6e85fbada39ed2a5646b274890b6eb1 SHA256 ab6e9ac765cf6020a825f1af7f66652a8bb74a47ea0ad2fed18d9bf4fb732b03
 EBUILD asterisk-chan_sccp-0.0.20050807.ebuild 1221 RMD160 45140cc72c1ab5dcd499d2d450a701c13ac17e3c SHA1 2dbaa5354d48b3436f71286b3fceeccb206b3fbd SHA256 af26d4ecd0f26ba12afa7f36682f2df8f5e32f0cf17cd82354a7fd424cc8a41e
 MD5 9dce31d79fbd9d1f5227268d068432eb asterisk-chan_sccp-0.0.20050807.ebuild 1221
 RMD160 45140cc72c1ab5dcd499d2d450a701c13ac17e3c asterisk-chan_sccp-0.0.20050807.ebuild 1221
@@ -58,45 +55,38 @@ EBUILD asterisk-chan_sccp-0.0.20060204.ebuild 1222 RMD160 eae2fb49fc3a8b2de699ae
 MD5 f851ee732883d0302eb67ca99954176b asterisk-chan_sccp-0.0.20060204.ebuild 1222
 RMD160 eae2fb49fc3a8b2de699ae258719bcce9ba9cd5d asterisk-chan_sccp-0.0.20060204.ebuild 1222
 SHA256 a4049aa6ea2fc4fd11d9e6b95725a79462be682e2408e71540b25fafd5c0a132 asterisk-chan_sccp-0.0.20060204.ebuild 1222
-MISC ChangeLog 3102 RMD160 c6e2ce62e96e205c88ba897db74d849c3103248a SHA1 5574167569aba9e47d31cfb5550c90ae1f43045f SHA256 4a96f50e5b718ea0d71efc96b69d22ea8bd1a4af980737a7ad3a2ede7655556b
-MD5 b505da44c8a629f94f3a4f62a0d23d2b ChangeLog 3102
-RMD160 c6e2ce62e96e205c88ba897db74d849c3103248a ChangeLog 3102
-SHA256 4a96f50e5b718ea0d71efc96b69d22ea8bd1a4af980737a7ad3a2ede7655556b ChangeLog 3102
+MISC ChangeLog 3193 RMD160 f48ade727f2e841ae95ad8518b7d69edb9aa5cf7 SHA1 c285f810fb0932a8f950f4063225f10ed032648f SHA256 0026f37d09094bc2361a5b0b68a82a58a7704980a6786826ed0f8d845d6cb57b
+MD5 cf89ca36865df55868e4bcad4ed72ff0 ChangeLog 3193
+RMD160 f48ade727f2e841ae95ad8518b7d69edb9aa5cf7 ChangeLog 3193
+SHA256 0026f37d09094bc2361a5b0b68a82a58a7704980a6786826ed0f8d845d6cb57b ChangeLog 3193
 MISC metadata.xml 217 RMD160 275af641d8134ee438c8e2c9f89eb3b0a286a386 SHA1 7b349815d56d7d7e2d46968341228c5267c666eb SHA256 c3eb09d27b1a9cf05b690524903c7faf096829ef1d19c0264769c277ac28d0a1
 MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
 RMD160 275af641d8134ee438c8e2c9f89eb3b0a286a386 metadata.xml 217
 SHA256 c3eb09d27b1a9cf05b690524903c7faf096829ef1d19c0264769c277ac28d0a1 metadata.xml 217
-MD5 30eb666962717f702efb95d918c19b51 files/digest-asterisk-chan_sccp-0.0.20050807 70
-RMD160 2a0af319a9dc39da23462af8d09f476987f37d99 files/digest-asterisk-chan_sccp-0.0.20050807 70
-SHA256 859f42da76bad7a2af1016b301e233ae55a3dcb590fe20b00bedc828c2994d05 files/digest-asterisk-chan_sccp-0.0.20050807 70
-MD5 04446492f50aeda790ef899c4f9c7968 files/digest-asterisk-chan_sccp-0.0.20050826 70
-RMD160 50b654bc38a64f1f07de9ebd661d2b3ab9bf8a16 files/digest-asterisk-chan_sccp-0.0.20050826 70
-SHA256 fd59caf052c4a8f3363567d3f72bdb667caca287cf4e171ed2b9591805b9d8e1 files/digest-asterisk-chan_sccp-0.0.20050826 70
-MD5 e6fb198665c63dffdae3e3c41a281f7a files/digest-asterisk-chan_sccp-0.0.20050902 70
-RMD160 b2e2e8fba90d074425c19bd592141daf28dfed9d files/digest-asterisk-chan_sccp-0.0.20050902 70
-SHA256 80d2d4f35fcf29c3518ed76806ab798dff3907147e81eefe7c094c4d5799b5ff files/digest-asterisk-chan_sccp-0.0.20050902 70
-MD5 698d7cb54349753768338e8fc98c866b files/digest-asterisk-chan_sccp-0.0.20050906 70
-RMD160 07d6973a38dbdae2da87c53ccf9a2acee4ca8308 files/digest-asterisk-chan_sccp-0.0.20050906 70
-SHA256 ee8910d12d30ef0462201458824c00f22d80a57d6b3bea77ab5e0e16d7f1300f files/digest-asterisk-chan_sccp-0.0.20050906 70
-MD5 2c7f8a1aaaa9c1dfe69c5555e7293d49 files/digest-asterisk-chan_sccp-0.0.20050913 70
-RMD160 db5ed65b8291ef3aa360d376b8b275f3f5d4d5a3 files/digest-asterisk-chan_sccp-0.0.20050913 70
-SHA256 019ff4f6e2e5e07201f9a8686b2cfd7a10019e61b00cfd10e22637c81dd825c8 files/digest-asterisk-chan_sccp-0.0.20050913 70
-MD5 d50a8faf83a31d88aa12161bcdd8baa3 files/digest-asterisk-chan_sccp-0.0.20050922 70
-RMD160 dd227f82d8721cd4b319636abb5304f93859326c files/digest-asterisk-chan_sccp-0.0.20050922 70
-SHA256 19c97d9a9a33b5746d6c64be7c46792134033b709aa0f01df3641f471340c792 files/digest-asterisk-chan_sccp-0.0.20050922 70
-MD5 1d84bf73ca6681166fd5b99c041781a7 files/digest-asterisk-chan_sccp-0.0.20051118 70
-RMD160 c3d8612ed9ffdee275e6be6e5dc0cee313bccec7 files/digest-asterisk-chan_sccp-0.0.20051118 70
-SHA256 c20a72ab009083612bef203e44c96c2a172bde661ac3b6d3e3a17b170b04f7fc files/digest-asterisk-chan_sccp-0.0.20051118 70
-MD5 b096883926efa619bbfacaf42190299f files/digest-asterisk-chan_sccp-0.0.20051125 70
-RMD160 1e5a08d4d586948e98d4568bcf89c63e2166a30c files/digest-asterisk-chan_sccp-0.0.20051125 70
-SHA256 09f6c36a235c51aa9955372a91dfe36d56573fe6a01add2375ba015f948bd9aa files/digest-asterisk-chan_sccp-0.0.20051125 70
+MD5 edf6b39570b20d927e6abd7235372d54 files/digest-asterisk-chan_sccp-0.0.20050807 256
+RMD160 17666b104b4e2a7504fd41ee26cc213440ecc9e7 files/digest-asterisk-chan_sccp-0.0.20050807 256
+SHA256 99ce796804b28368a67f2f6aa3c98ccb31024392d9992dde53d67abc94f381ec files/digest-asterisk-chan_sccp-0.0.20050807 256
+MD5 224017d1379ee007e81590dc8813a88e files/digest-asterisk-chan_sccp-0.0.20050826 256
+RMD160 2039b28823e88d4f0a4ffe3b69c61acb53dd3fa8 files/digest-asterisk-chan_sccp-0.0.20050826 256
+SHA256 b69eaf4ca5bdbf4d09b56ee799f6ef7fafe464ddc7cae43858f09fdec48892d7 files/digest-asterisk-chan_sccp-0.0.20050826 256
+MD5 e8188d674149f58a9cb1bdba80f7dd87 files/digest-asterisk-chan_sccp-0.0.20050902 256
+RMD160 d0ac80838ebc492aa21d5f923edeb794924f3edd files/digest-asterisk-chan_sccp-0.0.20050902 256
+SHA256 e973fc59ddf8fe8da6eea884970d850f33ebc05c490df3620606fe2f9ac298a8 files/digest-asterisk-chan_sccp-0.0.20050902 256
+MD5 1f7baacd15fe5c1d0e2c05a2831b14ac files/digest-asterisk-chan_sccp-0.0.20050906 256
+RMD160 520217c6b0aefcc842c18ecb9074d30f76a73af3 files/digest-asterisk-chan_sccp-0.0.20050906 256
+SHA256 3a8061684888ad6e89cb0407e410b8298ac941bbfa2e5ae8af9a3b1cdcbb5c7b files/digest-asterisk-chan_sccp-0.0.20050906 256
+MD5 71279b3afd2106ed9f58ea2a9ae98c24 files/digest-asterisk-chan_sccp-0.0.20050913 256
+RMD160 9c8da7271eef8c688fecd5c73b7fdb5c81fbb7e2 files/digest-asterisk-chan_sccp-0.0.20050913 256
+SHA256 d8b394730f03d9c81a87e7fcd7fd03c44e5700e8290f5967321b3aa4fa0e8c17 files/digest-asterisk-chan_sccp-0.0.20050913 256
+MD5 9f4d81b2a909cb86d0eed62fadfb99fd files/digest-asterisk-chan_sccp-0.0.20050922 256
+RMD160 7224f7c0903012ed7aedaaa035ba68a1b91fd8ab files/digest-asterisk-chan_sccp-0.0.20050922 256
+SHA256 df4ff8d2722b038f4eb9ba3eabc5d2b7b7a465fd66f6a00d400a59306f16fb56 files/digest-asterisk-chan_sccp-0.0.20050922 256
+MD5 623182b5828f9be1d7557566b6b48962 files/digest-asterisk-chan_sccp-0.0.20051118 256
+RMD160 6a9276f4cec30b3e37d0ef53cf85178e9992a282 files/digest-asterisk-chan_sccp-0.0.20051118 256
+SHA256 8ac01496a32f07ad8d90fd51b15366845aa28e833aea27fc5b09c6c1925dab7a files/digest-asterisk-chan_sccp-0.0.20051118 256
+MD5 e6ddc20683dbb1b6fe2eedb126377856 files/digest-asterisk-chan_sccp-0.0.20051125 256
+RMD160 ff65367a988cd955e18e8b1565275355dbb72e9d files/digest-asterisk-chan_sccp-0.0.20051125 256
+SHA256 66641c6a81ecb4346e93f5228c008790eec1849a34643ff211d8a0cd963eafd2 files/digest-asterisk-chan_sccp-0.0.20051125 256
 MD5 2d54304703ca2fe6afe59a01377a3ce3 files/digest-asterisk-chan_sccp-0.0.20060204 256
 RMD160 373f1af6a1684acf440026fdafe9b71c6b984c6c files/digest-asterisk-chan_sccp-0.0.20060204 256
 SHA256 30972b284350ec185108da1db9b189d1e4ef9256d30474f404acafe93e7293ca files/digest-asterisk-chan_sccp-0.0.20060204 256
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.1 (GNU/Linux)
-
-iD8DBQFFn9JnGDyatLGpTbYRAiP8AJsEm2/ACJOBT2pNFWCaYpbkeDeOZQCfTTjT
-AAMHE1QU7Sk8mtJ8aUrqm8g=
-=Ruhl
------END PGP SIGNATURE-----
