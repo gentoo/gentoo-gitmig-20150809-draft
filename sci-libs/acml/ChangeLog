@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/acml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.18 2007/02/22 02:03:00 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.19 2007/02/22 05:48:15 je_fro Exp $
+
+  22 Feb 2007; Jeff Gardner <je_fro@gentoo.org> ChangeLog:
+  Really changing the manifest this time...
 
   22 Feb 2007; Jeff Gardner <je_fro@gentoo.org> files/digest-acml-3.0.0,
   Manifest:
