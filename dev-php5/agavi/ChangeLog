@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/agavi
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/agavi/ChangeLog,v 1.4 2006/02/16 19:08:21 swegener Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/agavi/ChangeLog,v 1.5 2007/02/21 23:54:40 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
 
 *agavi-0.10.1b (31 Jan 2006)
 
