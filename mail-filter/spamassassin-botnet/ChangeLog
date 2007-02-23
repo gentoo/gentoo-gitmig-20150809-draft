@@ -1,0 +1,10 @@
+# ChangeLog for mail-filter/spamassassin-botnet
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-botnet/ChangeLog,v 1.1 2007/02/23 03:27:00 chutzpah Exp $
+
+*spamassassin-botnet-0.7 (23 Feb 2007)
+
+  23 Feb 2007; Patrick McLean <chutzpah@gentoo.org> +metadata.xml,
+  +spamassassin-botnet-0.7.ebuild:
+  Initial import.
+
