@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/bbdb
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/ChangeLog,v 1.17 2007/01/28 04:02:26 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/ChangeLog,v 1.18 2007/02/23 11:46:17 opfer Exp $
+
+  23 Feb 2007; Christian Faulhammer <opfer@gentoo.org> -bbdb-2.34-r1.ebuild:
+  clean up
 
   28 Jan 2007; Marius Mauch <genone@gentoo.org> bbdb-2.34-r1.ebuild,
   bbdb-2.35_pre20040323.ebuild, bbdb-2.35_pre20040323-r1.ebuild:

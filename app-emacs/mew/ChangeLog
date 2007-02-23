@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/mew
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.39 2007/01/28 04:24:58 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.40 2007/02/23 12:07:32 opfer Exp $
+
+  23 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  -files/mew-smtp-2.3-gentoo.patch, -mew-2.3-r1.ebuild:
+  clean up
 
   28 Jan 2007; Marius Mauch <genone@gentoo.org> mew-2.3-r1.ebuild,
   mew-4.1.ebuild, mew-4.2.ebuild, mew-5.1.ebuild:

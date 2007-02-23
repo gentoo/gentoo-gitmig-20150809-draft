@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/navi2ch
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/ChangeLog,v 1.25 2007/02/21 21:35:06 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/ChangeLog,v 1.26 2007/02/23 12:08:29 opfer Exp $
+
+  23 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  -navi2ch-1.7.3.ebuild:
+  clean up
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
