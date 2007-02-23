@@ -1,6 +1,11 @@
 # ChangeLog for games-server/bf1942-desertcombat
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/bf1942-desertcombat/ChangeLog,v 1.6 2005/05/06 17:00:17 swegener Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/bf1942-desertcombat/ChangeLog,v 1.7 2007/02/23 01:31:11 peper Exp $
+
+  23 Feb 2007; Piotr Jaroszyński <peper@gentoo.org>
+  files/digest-bf1942-desertcombat-0.6,
+  files/digest-bf1942-desertcombat-0.7_beta1, Manifest:
+  Transition to Manifest2.
 
   06 May 2005; Sven Wegener <swegener@gentoo.org>
   bf1942-desertcombat-0.7_beta1.ebuild:
