@@ -22,11 +22,6 @@ pyste
 # we don't have hardware to test. also see bug #113398
 dvb
 
-# mask mozilla/firefox (bug #108020)
-mozilla
-firefox
-seamonkey
-
 # 2006/03/20 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: mask for architectures on which they aren't available
 video_cards_apm
