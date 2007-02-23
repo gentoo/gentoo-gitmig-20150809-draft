@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r8.ebuild,v 1.11 2006/10/28 13:59:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r8.ebuild,v 1.12 2007/02/23 11:51:46 armin76 Exp $
 
 inherit eutils
 
@@ -125,13 +125,13 @@ EOF
 		$(java-config --java) freenet.node.Main --config
 		mv freenet.conf /etc
 		sed -i -e "s/^%\(ipAddress\)/\1/" \
-		       -e "s/^%\(listenPort\)/\1/" \
-		       -e "s/^%\(seedFile\)/\1/" \
-		       -e "s/^%\(logFile\)/\1/" \
-		       -e "s/^%\(storeFile\)/\1/" \
-		       -e "s/^%\(diagnosticsPath\)/\1/" \
-		       -e "s/^%\(routingDir\)/\1/" \
-		       -e "s/^%\(nodeFile\)/\1/" /etc/freenet.conf
+				-e "s/^%\(listenPort\)/\1/" \
+				-e "s/^%\(seedFile\)/\1/" \
+				-e "s/^%\(logFile\)/\1/" \
+				-e "s/^%\(storeFile\)/\1/" \
+				-e "s/^%\(diagnosticsPath\)/\1/" \
+				-e "s/^%\(routingDir\)/\1/" \
+				-e "s/^%\(nodeFile\)/\1/" /etc/freenet.conf
 		chmod 664 /etc/freenet.conf
 		chown root:freenet /etc/freenet.conf
 	fi

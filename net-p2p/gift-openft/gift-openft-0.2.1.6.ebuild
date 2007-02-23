@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/gift-openft-0.2.1.6.ebuild,v 1.8 2006/09/11 20:54:55 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/gift-openft-0.2.1.6.ebuild,v 1.9 2007/02/23 11:56:09 armin76 Exp $
 
 inherit eutils
 
@@ -28,10 +28,10 @@ src_compile() {
 
 src_install() {
 	einstall giftconfdir=${D}/etc/giFT \
-		 plugindir=${D}/usr/$(get_libdir)/giFT \
-		 datadir=${D}/usr/share/giFT \
-		 giftperldir=${D}/usr/bin \
-		 libgiftincdir=${D}/usr/include/libgift || die "Install failed"
+		plugindir=${D}/usr/$(get_libdir)/giFT \
+		datadir=${D}/usr/share/giFT \
+		giftperldir=${D}/usr/bin \
+		libgiftincdir=${D}/usr/include/libgift || die "Install failed"
 	dodoc README NEWS ChangeLog TODO
 }
 
