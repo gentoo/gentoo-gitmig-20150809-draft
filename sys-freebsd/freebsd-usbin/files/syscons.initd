@@ -1,16 +1,16 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/files/syscons.initd,v 1.2 2006/10/03 14:43:39 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/files/syscons.initd,v 1.3 2007/02/23 14:03:08 uberlord Exp $
 
 depend() {
 	need localmount
 }
 
 start() {
-	ebegin $"Configuring system console"
+	ebegin "Configuring system console"
 
-	if [[ -n ${MODE} ]] ; then
+	if [ -n "${MODE}" ] ; then
 		einfo "Setting mode to ${MODE}"
 		vidcontrol "${MODE}"
 		eend $?
@@ -20,37 +20,43 @@ start() {
 	
 	# Set the keymap.
 	if [ -n "${KEYMAP}" ]; then
-		einfo $"Setting keymap to" "${KEYMAP}"
+		einfo "Setting keymap to" "${KEYMAP}"
 		kbdcontrol -l ${KEYMAP} < /dev/console
 	fi
 	
 	if [ -n "${KEYRATE}" ]; then
-		einfo $"Setting keyrate to" "${KEYRATE}"
+		einfo "Setting keyrate to" "${KEYRATE}"
 		kbdcontrol -r ${KEYRATE} < /dev/console
 	fi
 
 	if [ -n "${KEYCHANGE}" ]; then
-		einfo $"Changing function keys..."
-		while read $a $b; do
-			kbdcontrol -f "$a" "$b" < /dev/console
-		done <<< ${KEYCHANGE}
+		einfo "Changing function keys..."
+		eval set -- "${KEYCHANGE}"
+		eindent
+		while [ $# -gt 0 ] ; do
+			veinfo "F$1 -> \`$2'"
+			kbdcontrol -f "$1" "$2" < /dev/console
+			shift ; shift
+		done
+		eoutdent
 	fi
 	
 	if [ -n "${CURSOR}" ]; then
-		einfo $"Setting cursor"
+		einfo "Setting cursor"
 		vidcontrol -c ${CURSOR}
 	fi
 
-	einfo $"Setting custom fonts..."
+	einfo "Setting custom fonts..."
 	# Nothing to see here, move along...
-	for v in FONT8x{16,14,8}; do
-		if [ -n "${!v}" ]; then
-			vidcontrol -f ${v##FONT} ${!v}
+	for v in FONT8x16 FONT8x14 FONT8x8; do
+		f=$(eval \$"${v}")
+		if [ -n "${f}" ]; then
+			vidcontrol -f ${v##FONT} ${f}
 		fi
 	done
 
 	if [ -n "${BLANKTIME}" ]; then
-		einfo $"Setting blanktime"
+		einfo "Setting blanktime"
 		vidcontrol -t ${BLANKTIME}
 	fi
 
@@ -62,7 +68,7 @@ start() {
 	fi
 
 	if [ -n "${KBDFLAGS}" ]; then
-		einfo $"Setting keyboard flags for all screens"
+		einfo "Setting keyboard flags for all screens"
 		for ttyv in /dev/ttyv*; do    
 			kbdcontrol ${KBDFLAGS} <${ttyv} &>${ttyv}
 		done

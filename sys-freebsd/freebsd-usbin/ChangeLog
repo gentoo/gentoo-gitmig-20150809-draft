@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-usbin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.40 2007/01/16 23:15:08 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.41 2007/02/23 14:03:08 uberlord Exp $
+
+  23 Feb 2007; Roy Marples <uberlord@gentoo.org> files/moused.initd,
+  files/nfsmount.initd, files/powerd.initd, files/rarpd.initd,
+  files/syscons.initd, files/syslogd.initd:
+  Don't use bashisms in init scripts.
 
   16 Jan 2007; Timothy Redaelli <drizzt@gentoo.org>
   +files/freebsd-usbin-6.2_rc2-libedit-netbsd.patch:

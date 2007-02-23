@@ -1,10 +1,10 @@
 #!/sbin/runscript
 # Copyright 2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/files/rarpd.initd,v 1.2 2006/11/20 12:37:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/files/rarpd.initd,v 1.3 2007/02/23 14:03:08 uberlord Exp $
 
 depend() {
-	if [[ -z ${RARPD_ONLY_INTERFACE} ]]; then
+	if [ -z "${RARPD_ONLY_INTERFACE}" ]; then
 		need net
 	else
 		need net."${RARPD_ONLY_INTERFACE}"
@@ -14,7 +14,7 @@ depend() {
 start() {
 	local rarpd_opts
 
-	if [[ -z ${RARPD_ONLY_INTERFACE} ]]; then
+	if [ -z "${RARPD_ONLY_INTERFACE}" ]; then
 		rarpd_opts="${rarpd_opts} -a"
 	else
 		rarpd_opts="${rarpd_opts} ${RARPD_ONLY_INTERFACE}"
