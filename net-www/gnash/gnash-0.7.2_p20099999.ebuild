@@ -1,9 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.2_p20099999.ebuild,v 1.6 2007/02/05 13:24:47 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.2_p20099999.ebuild,v 1.7 2007/02/23 12:38:46 genstef Exp $
 
 WANT_AUTOCONF=latest
-inherit nsplugins autotools cvs kde-functions
+inherit nsplugins autotools cvs kde-functions qt3 multilib
 set-kdedir
 
 DESCRIPTION="Gnash is a GNU Flash movie player that supports many SWF v7 features"
@@ -97,12 +97,16 @@ src_compile() {
 		myconf="${myconf} --with-mp3-decoder=ffmpeg"
 	fi
 
+	if use kde; then
+		myconf="${myconf} --enable-klash --with-qt-incl=${QTDIR}/include
+			--with-qt-lib=${QTDIR}/$(get_libdir)"
+	fi
+
 	econf \
 		$(use_enable nsplugin plugin) \
 		$(use_enable xml) \
 		$(use_enable video_cards_i810 i810-lod-bias) \
 		--without-gcc-arch \
-		$(use_enable kde klash) \
 		${myconf} || die "econf failed"
 	emake -j1 || die "emake failed"
 }
