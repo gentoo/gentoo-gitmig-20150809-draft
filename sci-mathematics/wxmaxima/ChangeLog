@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/wxmaxima
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/ChangeLog,v 1.1 2007/02/23 11:33:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/ChangeLog,v 1.2 2007/02/23 12:16:46 bicatali Exp $
+
+  23 Feb 2007; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
+  changed sci -> sci-mathematics
 
 *wxmaxima-0.7.1 (23 Feb 2007)
 
