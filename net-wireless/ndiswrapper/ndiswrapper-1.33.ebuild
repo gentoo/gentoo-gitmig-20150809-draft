@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.33.ebuild,v 1.4 2007/01/28 17:45:20 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.33.ebuild,v 1.5 2007/02/23 15:57:47 peper Exp $
 
 inherit eutils linux-mod
 
@@ -19,7 +19,6 @@ RDEPEND="${DEPEND}
 CONFIG_CHECK="NET_RADIO"
 
 MODULE_NAMES="ndiswrapper(misc:${S}/driver)"
-BUILD_PARAMS="KSRC=${ROOT}${KV_DIR} KVERS=${KV_FULL}"
 BUILD_TARGETS="all"
 MODULESD_NDISWRAPPER_ALIASES=("wlan0 ndiswrapper")
 
@@ -58,13 +57,10 @@ src_compile() {
 
 	# Does not like parallel builds
 	# http://bugs.gentoo.org/show_bug.cgi?id=154213
-
-	# KBUILD trick needed to build against sources where only make
-	# modules_prepare has been run so /lib/modules/$(uname -r) does
-	# not exists yet
-	# KBUILD value can't be quoted or amd64 fails
+	# KBUILD value can't be quoted
 	# http://bugs.gentoo.org/show_bug.cgi?id=156319
-	BUILD_PARAMS="KBUILD=${KV_OUT_DIR} ${BUILD_PARAMS} ${params} -j1" linux-mod_src_compile
+	BUILD_PARAMS="KSRC=${KV_DIR} KVERS=${KV_FULL} KBUILD=${KV_OUT_DIR} ${params} -j1"
+	linux-mod_src_compile
 }
 
 src_install() {
