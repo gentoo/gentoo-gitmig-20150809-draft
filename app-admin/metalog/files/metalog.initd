@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/files/metalog.initd,v 1.2 2007/01/27 12:11:52 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/files/metalog.initd,v 1.3 2007/02/23 11:17:38 uberlord Exp $
 
 opts="buffer unbuffer"
 
@@ -16,27 +16,30 @@ depend() {
 
 start() {
 	ebegin "Starting metalog"
-	/usr/sbin/metalog \
-		--daemonize \
-		--pidfile=${PIDFILE} \
-		${METALOG_OPTS}
+	start-stop-daemon --start --exec /usr/sbin/metalog \
+	    --pidfile "${PIDFILE}" \
+	    -- --daemonize --pidfile="${PIDFILE}" ${METALOG_OPTS}
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping metalog"
-	start-stop-daemon --stop --quiet --pidfile ${PIDFILE}
+	start-stop-daemon --stop --exec /usr/sbin/metalog \
+	    --pidfile "${PIDFILE}"
 	eend $?
 }
 
 buffer() {
 	ebegin "Enabling log buffering"
-	kill -USR2 $(<${PIDFILE})
+	start-stop-daemon --stop --oknodo --signal USR2 \
+	    --exec /usr/sbin/metalog --pidfile "${PIDFILE}"
+	eend $?
 	eend $?
 }
 
 unbuffer() {
 	ebegin "Disabling log buffering"
-	kill -USR1 $(<${PIDFILE})
+	start-stop-daemon --stop --oknodo --signal USR1 \
+	    --exec /usr/sbin/metalog --pidfile "${PIDFILE}"
 	eend $?
 }

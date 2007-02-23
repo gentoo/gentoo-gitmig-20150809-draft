@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/metalog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.58 2007/02/13 00:33:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.59 2007/02/23 11:17:38 uberlord Exp $
+
+  23 Feb 2007; Roy Marples <uberlord@gentoo.org> files/metalog.initd:
+  Use start-stop-daemon correctly.
 
 *metalog-0.8_rc4 (13 Feb 2007)
 
