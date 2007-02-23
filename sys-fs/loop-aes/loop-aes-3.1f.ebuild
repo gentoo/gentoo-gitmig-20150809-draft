@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.1f.ebuild,v 1.1 2007/02/23 18:48:18 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.1f.ebuild,v 1.2 2007/02/23 19:22:24 alonbl Exp $
 
 inherit linux-mod eutils
 
@@ -28,7 +28,7 @@ pkg_setup() {
 	linux-mod_pkg_setup
 
 	CONFIG_CHECK="!BLK_DEV_LOOP"
-	MODULE_NAMES="loop(block:tmp-d-kbuild)"
+	MODULE_NAMES="loop(block::tmp-d-kbuild)"
 	BUILD_TARGETS="all"
 
 	BUILD_PARAMS="
