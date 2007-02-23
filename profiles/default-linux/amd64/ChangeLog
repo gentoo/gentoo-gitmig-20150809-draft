@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.76 2007/02/20 00:23:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.77 2007/02/23 20:41:34 lack Exp $
+
+  23 Feb 2007; Jim Ramsay <lack@gentoo.org> make.defaults:
+  Fixed blubb's change from Feb 14 for bug 164816 - only needs to ignore ROX-CLib
 
   20 Feb 2007; Simon Stelling <blubb@gentoo.org> package.use.mask:
   mask mmx USE flag for media-libs/sdl-gfx; it's x86 asm
