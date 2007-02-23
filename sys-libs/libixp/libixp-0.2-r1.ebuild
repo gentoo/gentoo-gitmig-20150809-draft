@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/libixp-0.2-r1.ebuild,v 1.4 2007/01/20 12:13:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/libixp-0.2-r1.ebuild,v 1.5 2007/02/23 01:36:28 omp Exp $
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Standalone client/server 9P library"
 HOMEPAGE="http://libs.suckless.org/"
