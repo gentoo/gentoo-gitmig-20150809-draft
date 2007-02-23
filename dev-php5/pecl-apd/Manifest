@@ -5,7 +5,7 @@ AUX fix-version-string-1.0.1.patch 278 RMD160 af2e7d09160cb917336c81c6b6d5aa5d6e
 MD5 28ec9f62ed19b6ea529b0efefcd2c119 files/fix-version-string-1.0.1.patch 278
 RMD160 af2e7d09160cb917336c81c6b6d5aa5d6eece284 files/fix-version-string-1.0.1.patch 278
 SHA256 67f58d1d4b1d01bbb06feadc0b389ad2942748280f9a9f1ff62b96faa844bf0b files/fix-version-string-1.0.1.patch 278
-DIST apd-1.0.1.tgz 36643
+DIST apd-1.0.1.tgz 36643 RMD160 e263e688da6753fd89455a73092b7d2f6848ca36 SHA1 e147b1c28d753235dcaa7ff9b4e8969d63921d9e SHA256 891f04b5b8b0bb1903f84d01389bc76f87710baf8cecdd37a323adf28c3cb21e
 EBUILD pecl-apd-1.0.1.ebuild 1258 RMD160 fe3dd9719472aeb355e68e7d79a9abb27226de7e SHA1 037c9c61fd4e0c1db8fce07d4b7a15f1a14fa930 SHA256 44b14088e7f745aff3d36c96a16c8c4949a49651246e43cedf802b8f94df3cf9
 MD5 85aa1fc899949a7024133c28338d1d71 pecl-apd-1.0.1.ebuild 1258
 RMD160 fe3dd9719472aeb355e68e7d79a9abb27226de7e pecl-apd-1.0.1.ebuild 1258
@@ -18,13 +18,13 @@ MISC metadata.xml 157 RMD160 a98db3a086fae3c09a903dadbc05f60443ec4b1a SHA1 ddaa2
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
 RMD160 a98db3a086fae3c09a903dadbc05f60443ec4b1a metadata.xml 157
 SHA256 54f8878ca0228e380abbaa4b529806b5533a6b9b51b3b16c0909e906586a91a1 metadata.xml 157
-MD5 3f5b44e18a6fc64c64ad6919e7192603 files/digest-pecl-apd-1.0.1 57
-RMD160 9fa6fe5dbf2fc0a64b41b46463a802e668e04a07 files/digest-pecl-apd-1.0.1 57
-SHA256 8b95ddaac62b098d509861b54c7c7ee958b30663a9a61a8ae84c28d6921b716e files/digest-pecl-apd-1.0.1 57
+MD5 16eea0bc658bc7511459c3093f850a34 files/digest-pecl-apd-1.0.1 217
+RMD160 cded44a035cdf2f900b79b4b5d2aa50d62faa088 files/digest-pecl-apd-1.0.1 217
+SHA256 68410ffdc9e0df4695b6f70e3b3a298b686222d480024638458eb82524e34c6e files/digest-pecl-apd-1.0.1 217
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
+Version: GnuPG v2.0.2 (GNU/Linux)
 
-iD8DBQFFHLvYaGfFFLhbXWkRAvF+AJ93+f82OxaDtckXf/VTLdMYpB7b5ACfcWWF
-0p40YVNkleh7BXkxffa+OeM=
-=KyxU
+iD8DBQFF3swc/ejvha5XGaMRArfJAJ4r+AaPRbVF3JuGCS7H3ncGtxDSQgCgrpOm
+msY03OGq1rWFasmjY84780Q=
+=oD+M
 -----END PGP SIGNATURE-----
