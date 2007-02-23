@@ -1,0 +1,10 @@
+# ChangeLog for sci-visualization/hippodraw
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/ChangeLog,v 1.1 2007/02/23 15:12:58 bicatali Exp $
+
+*hippodraw-1.19.1 (23 Feb 2007)
+
+  23 Feb 2007; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +hippodraw-1.19.1.ebuild:
+  Initial import, closing bug #65673.
+
