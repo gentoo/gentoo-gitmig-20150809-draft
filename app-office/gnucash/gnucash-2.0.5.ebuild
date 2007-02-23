@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.5.ebuild,v 1.2 2007/02/22 22:37:44 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.5.ebuild,v 1.3 2007/02/23 14:45:57 dang Exp $
 
 inherit eutils gnome2
 
@@ -54,8 +54,8 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	built_with_use gnome-extra/libgsf gnome || die "gnome-extra/libgsf must be built with gnome"
 	built_with_use x11-libs/goffice gnome || die "x11-libs/goffice must be built with gnome"
-	if !built_with_use dev-scheme/guile regex depricated discouraged; then
-		die "dev-scheme/guile must be built with USE=\"regex depricated discouraged\""
+	if !built_with_use dev-scheme/guile regex deprecated discouraged; then
+		die "dev-scheme/guile must be built with USE=\"regex deprecated discouraged\""
 	fi
 }
 
