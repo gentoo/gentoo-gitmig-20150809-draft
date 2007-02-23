@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.503 2007/02/17 00:29:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.504 2007/02/23 12:09:39 uberlord Exp $
+
+  23 Feb 2007; Roy Marples <uberlord@gentoo.org> files/nscd:
+  nscd init script no longer requires bash
 
   17 Feb 2007; Mike Frysinger <vapier@gentoo.org> glibc-2.5.ebuild:
   We no longer support i386-* hosts #165772.
