@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ebayagent
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ebayagent/ChangeLog,v 1.8 2006/11/29 11:45:22 yuval Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ebayagent/ChangeLog,v 1.9 2007/02/23 14:29:26 mcummings Exp $
+
+  23 Feb 2007; Michael Cummings <mcummings@gentoo.org>
+  ebayagent-0.9.11-r2.ebuild:
+  Bug 168039, un-ROOTing
 
   29 Nov 2006; Yuval Yaari <yuval@gentoo.org> ebayagent-0.9.11-r2.ebuild:
   Changed tcltk USE flag to tk, bug #17808
