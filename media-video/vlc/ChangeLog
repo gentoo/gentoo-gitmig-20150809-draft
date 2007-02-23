@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.226 2007/02/14 08:14:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.227 2007/02/23 13:29:56 aballier Exp $
+
+  23 Feb 2007; Alexis Ballier <aballier@gentoo.org> vlc-0.8.6_p18636.ebuild:
+  Add x264 useflag
 
   14 Feb 2007; Alexis Ballier <aballier@gentoo.org> vlc-0.8.6-r1.ebuild,
   vlc-0.8.6_p18636.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6_p18636.ebuild,v 1.12 2007/02/14 08:14:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6_p18636.ebuild,v 1.13 2007/02/23 13:29:56 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -38,7 +38,7 @@ dvb dvd vcd dts flac mpeg vorbis theora X opengl truetype svg fbcon svga
 oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc stream
 mp3 xv bidi sdl sdl-image png xml samba daap corba mod speex shout rtsp
 win32codecs skins hal avahi xinerama cddb directfb upnp nsplugin seamonkey
-optimisememory libnotify jack musepack"
+optimisememory libnotify jack musepack x264"
 
 RDEPEND="
 		>=media-video/ffmpeg-0.4.9_p20050226-r1
@@ -114,6 +114,7 @@ RDEPEND="
 		)
 		libnotify? ( x11-libs/libnotify )
 		musepack? ( media-libs/libmpcdec )
+		x264? ( >=media-libs/x264-svn-20061014 )
 		jack? ( >=media-sound/jack-audio-connection-kit-0.99.0-r1 )"
 
 DEPEND="${RDEPEND}
@@ -246,6 +247,7 @@ src_compile () {
 		$(use_enable libnotify notify) \
 		$(use_enable jack) \
 		$(use_enable musepack mpc) \
+		$(use_enable x264) \
 		--enable-ffmpeg \
 		--disable-faad \
 		--disable-dv \
@@ -254,7 +256,6 @@ src_compile () {
 		--disable-growl \
 		--disable-pth \
 		--disable-portaudio \
-		--disable-x264 \
 		--disable-libtar \
 		--disable-optimizations \
 		--enable-utf8 \
