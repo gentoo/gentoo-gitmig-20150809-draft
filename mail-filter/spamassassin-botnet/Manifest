@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST Botnet-0.7.tar 81920 RMD160 a96f1dbd6b290e33b7b33c2236416fd570c44000 SHA1 22f5d287a5b52b677d42fa86cfd4d3e2341f460b SHA256 cb47ffac52f0fcd9a28b954cca47b6dd417845b57f957e10c1de5d0d4be5a6c1
 EBUILD spamassassin-botnet-0.7.ebuild 1224 RMD160 3cc72415c280dfdd753d1d364fffd7bf691529d5 SHA1 d95bdd22aeab97689610e61511631b9ffed75feb SHA256 6a35993f1a80b2a9bb2bdf26f143e41519193d50aa4e3d3d6ccbbcfb2a9d2d17
 MD5 9f5fcc4afe037047b4e569e3b6114d1a spamassassin-botnet-0.7.ebuild 1224
@@ -14,3 +17,10 @@ SHA256 e5e7828bacd7de18a234ae093176ee22bed0310c4b42449a5d23f89d17b4139d metadata
 MD5 6942c4c28df757818cca5ed214272fa1 files/digest-spamassassin-botnet-0.7 220
 RMD160 862aad39a90e383f4f106409f2a1d78b13d637bd files/digest-spamassassin-botnet-0.7 220
 SHA256 8fec4c588623a3c624efe16b88a7ca11ab6314a78c8d7e00b5184f598127ab90 files/digest-spamassassin-botnet-0.7 220
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.2 (GNU/Linux)
+
+iD8DBQFF3l8gWt/XSf2CZdkRAuorAJ9KCltgeUwxgh2eisVE9DcEzQ9jZQCgiqIB
+6UPjG3Hs0NiVwbn4eU0X/LM=
+=Asbk
+-----END PGP SIGNATURE-----
