@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-sbin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.32 2007/01/15 21:38:54 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.33 2007/02/23 13:56:05 uberlord Exp $
+
+  23 Feb 2007; Roy Marples <uberlord@gentoo.org> files/devd.initd,
+  files/ipfw.initd, files/sysctl.initd:
+  init scripts no longer use bash.
 
 *freebsd-sbin-6.2 (15 Jan 2007)
 

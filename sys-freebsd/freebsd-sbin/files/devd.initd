@@ -16,31 +16,31 @@ start() {
 	# This is used by /etc/devd_queue
 	mkdir -p /var/run/devd
 
-	ebegin $"Starting the Device State Change Daemon"
+	ebegin "Starting the Device State Change Daemon"
 	sysctl hw.bus.devctl_disable=0 >/dev/null
 	start-stop-daemon --start --exec /sbin/devd \
 		--pidfile /var/run/devd.pid
-	eend $? $"Failed to start devd" \
+	eend $? "Failed to start devd" \
 	|| return $?
 
-	ebegin $"Waiting for Device State Change Daemon to settle"
-	LC_ALL=C sleep ${DEVD_WAIT:-2}
+	ebegin "Waiting for Device State Change Daemon to settle"
+	LC_ALL=C sleep "${DEVD_WAIT:-2}"
 	eend $?
 
 	# Now flush the queue
-	einfo $"Flushing Device State Change Daemon queue"
+	einfo "Flushing Device State Change Daemon queue"
 
 	# Flush the output buffer
 	eflush
 
 	/etc/devd_queue flush
 
-	mark_service_starting "${SVCNAME}"
+	mark_service_started "${SVCNAME}"
 	return 0
 }
 
 stop() {
-	ebegin $"Stopping the Device State Change Daemon"
+	ebegin "Stopping the Device State Change Daemon"
 	sysctl hw.bus.devctl_disable=1 >/dev/null
 	start-stop-daemon --stop --exec /sbin/devd \
 		--pidfile /var/run/devd.pid
