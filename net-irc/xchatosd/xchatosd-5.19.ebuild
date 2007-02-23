@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchatosd/xchatosd-5.19.ebuild,v 1.5 2006/10/19 23:46:22 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchatosd/xchatosd-5.19.ebuild,v 1.6 2007/02/23 11:10:53 armin76 Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -22,7 +22,7 @@ src_unpack() {
 
 	# We have our own include file in /usr/include/xchat
 	einfo "Updating xchat-plugin.h from /usr/include/xchat/xchat-plugin.h"
-	cp -f "${ROOT}"/usr/include/xchat/xchat-plugin.h "${S}"/xchat-plugin.h
+	cp -f /usr/include/xchat/xchat-plugin.h "${S}"/xchat-plugin.h
 	epatch "${FILESDIR}/${P}-gcc4.patch"
 }
 
