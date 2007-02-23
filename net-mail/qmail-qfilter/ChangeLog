@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/qmail-qfilter
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qfilter/ChangeLog,v 1.15 2007/02/22 16:02:04 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qfilter/ChangeLog,v 1.16 2007/02/23 19:21:50 bangert Exp $
+
+  23 Feb 2007; Thilo Bangert <bangert@gentoo.org> qmail-qfilter-2.1.ebuild:
+  remove ROOT misuse
 
   22 Feb 2007; Thilo Bangert <bangert@gentoo.org> qmail-qfilter-2.0.ebuild,
   qmail-qfilter-2.1.ebuild:

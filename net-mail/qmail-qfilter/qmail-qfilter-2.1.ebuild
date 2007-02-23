@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qfilter/qmail-qfilter-2.1.ebuild,v 1.5 2007/02/22 16:02:04 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qfilter/qmail-qfilter-2.1.ebuild,v 1.6 2007/02/23 19:21:50 bangert Exp $
 
 inherit toolchain-funcs
 
@@ -25,8 +25,8 @@ src_compile() {
 	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 	echo "${D}${QMAIL_BINDIR}" > conf-bin
 	echo "${D}/usr/share/man/" > conf-man
-	echo "${ROOT}/usr/include/bglibs" > conf-bgincs
-	echo "${ROOT}/usr/lib/bglibs" > conf-bglibs
+	echo "/usr/include/bglibs" > conf-bgincs
+	echo "/usr/lib/bglibs" > conf-bglibs
 	make || die
 }
 
