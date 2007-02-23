@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-1.71.ebuild,v 1.7 2007/02/05 09:00:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-1.71.ebuild,v 1.8 2007/02/23 16:24:46 mabi Exp $
 
 inherit eutils
 
@@ -57,8 +57,8 @@ src_compile () {
 		${EXTRA_ECONF} \
 		--enable-nolexer \
 		--with-fox-1-4 \
-		--with-foxinclude=${ROOT}usr/include \
-		--with-foxlib=${ROOT}usr/lib \
+		--with-foxinclude=/usr/include \
+		--with-foxlib=/usr/lib \
 		|| die "configure error"
 	emake || die "make error"
 
@@ -72,7 +72,7 @@ src_compile () {
 		${EXTRA_ECONF} \
 		--enable-nolexer \
 		--with-fox-1-6 \
-		--with-foxinclude=${ROOT}usr/include \
+		--with-foxinclude=/usr/include \
 		|| die "configure error"
 	emake || die "make error"
 }

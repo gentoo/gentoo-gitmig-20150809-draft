@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/fxscintilla
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.23 2007/02/05 09:00:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.24 2007/02/23 16:24:46 mabi Exp $
+
+  23 Feb 2007; Matti Bickel <mabi@gentoo.org> -fxscintilla-1.62-r1.ebuild,
+  fxscintilla-1.62-r2.ebuild, fxscintilla-1.71.ebuild:
+  ${ROOT} fix (bug #168044) and cleanup
 
   05 Feb 2007; Jeroen Roovers <jer@gentoo.org> fxscintilla-1.71.ebuild:
   Stable for HPPA.
