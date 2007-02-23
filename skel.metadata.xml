@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <!-- 
+$Header: /var/cvsroot/gentoo-x86/skel.metadata.xml,v 1.5 2007/02/23 08:21:33 robbat2 Exp $
 
 This is the example metadata file.
 The root element of this file is <pkgmetadata>. Within this element a 
@@ -9,6 +10,7 @@ longdescription. herd is a required subelement.
 
 For a full description look at:
 http://www.gentoo.org/proj/en/metastructure/herds/
+
 
 Before committing, please remove the comments from this file. They are 
 not relevant for general metadata.xml files.
