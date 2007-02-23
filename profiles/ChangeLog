@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.130 2007/02/23 15:11:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.131 2007/02/23 21:55:49 aballier Exp $
+
+  23 Feb 2007; Alexis Ballier <aballier@gentoo.org> use.local.desc:
+  xdtv schedule useflag added
 
   23 Feb 2007; Sébastien Fabbro <bicatali@gentoo.org> use.local.desc:
   added root, numarray and fits local use flags for sci-visualization/hippodraw
