@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.129 2007/02/22 21:32:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.130 2007/02/23 15:11:44 bicatali Exp $
+
+  23 Feb 2007; Sébastien Fabbro <bicatali@gentoo.org> use.local.desc:
+  added root, numarray and fits local use flags for sci-visualization/hippodraw
 
   22 Feb 2007; Raúl Porcel <armin76@gentoo.org> use.local.desc:
   Add mozbranding use flag for app-office/mozilla-sunbird to use.local.desc

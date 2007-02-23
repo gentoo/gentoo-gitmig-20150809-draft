@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2618 2007/02/23 11:01:09 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2619 2007/02/23 15:11:44 bicatali Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1609,6 +1609,9 @@ sci-mathematics/yacas:server -  Build the network server version.
 sci-misc/boinc:server - Enable compilation of server
 sci-misc/h5utils:octave - Build Octave plugins
 sci-visualization/gnuplot:xemacs - Add lisp files for emacs
+sci-visualization/hippodraw:fits - Add FITS support to hippodraw, via cfitsio
+sci-visualization/hippodraw:numarray - Add numarray python array support
+sci-visualization/hippodraw:root - Add root i/o, and minuit support
 sci-visualization/labplot:cdf - Adds cdf data exchange format support
 sci-visualization/labplot:kexi - Import and export data from/to MySQL, PostgreSQL etc. via Kexi (app-office/kexi).
 sci-visualization/opendx:cdf - Adds cdf data exchange format support
