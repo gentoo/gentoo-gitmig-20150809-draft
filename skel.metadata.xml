@@ -10,7 +10,6 @@ longdescription. herd is a required subelement.
 For a full description look at:
 http://www.gentoo.org/proj/en/metastructure/herds/
 
-
 Before committing, please remove the comments from this file. They are 
 not relevant for general metadata.xml files.
 -->
