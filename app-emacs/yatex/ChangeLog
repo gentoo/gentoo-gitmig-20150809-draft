@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/yatex
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/ChangeLog,v 1.15 2007/02/03 23:32:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/ChangeLog,v 1.16 2007/02/23 12:15:29 opfer Exp $
+
+  23 Feb 2007; Christian Faulhammer <opfer@gentoo.org> yatex-1.72.ebuild:
+  clean up, adjusted DESCRIPTION and added some quotes
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
