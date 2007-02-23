@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.1e.ebuild,v 1.4 2007/01/18 23:24:41 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.1e.ebuild,v 1.5 2007/02/23 15:42:07 alonbl Exp $
 
 inherit linux-mod eutils
 
@@ -14,13 +14,10 @@ SLOT="0"
 IUSE="keyscrub padlock"
 KEYWORDS="~amd64 ~hppa ~ppc x86"
 
-S="${WORKDIR}/${MY_P}"
-
-CONFIG_CHECK="!BLK_DEV_LOOP"
-MODULE_NAMES="loop(block:tmp-d-kbuild)"
-BUILD_TARGETS="all"
-
 RDEPEND=">=sys-apps/util-linux-2.12r"
+DEPEND=""
+
+S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	if ! built_with_use sys-apps/util-linux crypt; then
@@ -38,6 +35,10 @@ pkg_setup() {
 		ewarn "(CONFIG_KERNELD in kernels 2.0 or CONFIG_KMOD in newer)"
 		ewarn ""
 	fi
+
+	CONFIG_CHECK="!BLK_DEV_LOOP"
+	MODULE_NAMES="loop(block:tmp-d-kbuild)"
+	BUILD_TARGETS="all"
 
 	BUILD_PARAMS="
 		LINUX_SOURCE=${KERNEL_DIR}
