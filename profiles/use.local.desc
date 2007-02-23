@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2616 2007/02/22 22:02:59 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2617 2007/02/23 00:37:23 vanquirius Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -823,6 +823,8 @@ media-gfx/graphicsmagick:lzw - enable LZW support
 media-gfx/graphviz:pango - Enables the pango plugin
 media-gfx/gtkam:gimp - GIMP plugin from gtkam
 media-gfx/gwenview:kipi - Support for the KDE Image Plugin Interface.
+media-gfx/hugin:enblend - Pull media-gfx/enblend as a dependency
+media-gfx/hugin:sift - Pull media-gfx/autopano-sift as a dependency
 media-gfx/imagemagick:fpx - enable libfpx support
 media-gfx/imagemagick:gs - enable ghostscript support
 media-gfx/inkscape:boost - use external boost
