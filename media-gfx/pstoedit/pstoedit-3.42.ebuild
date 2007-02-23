@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.42.ebuild,v 1.7 2007/02/05 20:26:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.42.ebuild,v 1.8 2007/02/23 21:40:15 nattfodd Exp $
 
 inherit libtool eutils
 
@@ -35,7 +35,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf=""
+	local myconf="--without-swf"
 	if ! use amd64 && use emf ; then
 		myconf="${myconf} $(use_with emf)"
 		# bug #29724
