@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/qwtplot3d-0.2.6-r2.ebuild,v 1.5 2006/06/16 20:50:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/qwtplot3d-0.2.6-r2.ebuild,v 1.6 2007/02/23 12:06:47 cryos Exp $
 
 inherit multilib qt3
 
@@ -31,7 +31,7 @@ src_unpack () {
 		echo >> ${file} "QMAKE_CXXFLAGS_RELEASE += ${CXXFLAGS}"
 	done
 	find examples -type f -name "*.pro" | while read file; do
-		echo >> ${file} "INCLUDEPATH += ${ROOT}usr/include/qwtplot3d"
+		echo >> ${file} "INCLUDEPATH += /usr/include/qwtplot3d"
 	done
 }
 

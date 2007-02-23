@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qwtplot3d
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.9 2007/02/22 00:01:49 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.10 2007/02/23 12:06:47 cryos Exp $
+
+  23 Feb 2007; Marcus D. Hanwell <cryos@gentoo.org>
+  -qwtplot3d-0.2.6-r1.ebuild, qwtplot3d-0.2.6-r2.ebuild:
+  Fixed ROOT issue from bug 168044. Also removed old revision.
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
