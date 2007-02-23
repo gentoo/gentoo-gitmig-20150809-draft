@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.104 2007/02/07 10:36:09 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.105 2007/02/23 11:44:20 uberlord Exp $
+
+*openvpn-2.1_rc1-r2 (23 Feb 2007)
+*openvpn-2.0.7-r2 (23 Feb 2007)
+
+  23 Feb 2007; Roy Marples <uberlord@gentoo.org> files/openvpn-2.1.init,
+  files/down.sh, files/openvpn.init, files/up.sh, +openvpn-2.0.7-r2.ebuild,
+  +openvpn-2.1_rc1-r2.ebuild:
+  Init scripts no longer require bash.
 
   07 Feb 2007; Roy Marples <uberlord@gentoo.org> files/down.sh, files/up.sh:
   up.sh and down.sh no longer require bash.

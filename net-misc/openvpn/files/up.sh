@@ -1,5 +1,5 @@
 #!/bin/sh
-# Copyright (c) 2006 Gentoo Foundation
+# Copyright (c) 2006-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # Contributed by Roy Marples (uberlord@gentoo.org)
 
@@ -22,7 +22,7 @@ while true ; do
 	elif [ "${opt}" != "${opt#dhcp-option DNS *}" ] ; then
 		NS="${DNS}nameserver ${opt#dhcp-option DNS *}\n"
 	fi
-	i=$((i + 1))
+	i=$((${i} + 1))
 done
 
 if [ -n "${NS}" ] ; then
