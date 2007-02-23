@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/demerge-0.027.ebuild,v 1.2 2007/02/23 17:22:07 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/demerge-0.028.ebuild,v 1.1 2007/02/23 19:27:12 ian Exp $
 
 DESCRIPTION="demerge - revert to previous installation states"
 HOMEPAGE="http://download.iansview.com/gentoo/tools/demerge/"
@@ -20,6 +20,7 @@ RDEPEND="${DEPEND}
 src_install() {
 	dobin demerge || die
 	dodoc Changelog
+	doman demerge.3.gz
 }
 
 pkg_postinst() {
