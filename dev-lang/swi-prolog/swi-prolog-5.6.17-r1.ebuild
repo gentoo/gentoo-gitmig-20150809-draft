@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.17-r1.ebuild,v 1.12 2007/02/03 03:28:41 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.17-r1.ebuild,v 1.13 2007/02/23 22:03:15 keri Exp $
 
 inherit autotools eutils java-pkg-opt-2
 
@@ -53,6 +53,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-ltx2htm.patch
 	epatch "${FILESDIR}"/${PN}-semweb-sparc-alignment.patch
 	epatch "${FILESDIR}"/${PN}-SGML_CATALOG_FILES.patch
+	epatch "${FILESDIR}"/${PN}-ssl-cert.patch
 	epatch "${FILESDIR}"/${PN}-thread-tests.patch
 	epatch "${FILESDIR}"/${PN}-xpce-test.patch
 }
