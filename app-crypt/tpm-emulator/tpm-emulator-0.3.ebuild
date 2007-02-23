@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/tpm-emulator-0.3.ebuild,v 1.4 2007/01/24 17:11:52 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/tpm-emulator-0.3.ebuild,v 1.5 2007/02/23 15:25:35 alonbl Exp $
 
 inherit toolchain-funcs linux-mod eutils flag-o-matic
 
@@ -19,9 +19,12 @@ RDEPEND=""
 S=${WORKDIR}/${P/-/_}
 
 
-MODULE_NAMES="tpm_emulator(crypt:)"
-BUILD_TARGETS="all"
-BUILD_PARAMS="-j1 CC=$(tc-getCC) MODULE=tpm_emulator.${KV_OBJ} USE_GMP=/usr/lib/libgmp.a"
+pkg_setup() {
+	linux-mod_pkg_setup
+	MODULE_NAMES="tpm_emulator(crypt:)"
+	BUILD_TARGETS="all"
+	BUILD_PARAMS="-j1 CC=$(tc-getCC) MODULE=tpm_emulator.${KV_OBJ} USE_GMP=/usr/lib/libgmp.a"
+}
 
 src_install() {
 	linux-mod_src_install

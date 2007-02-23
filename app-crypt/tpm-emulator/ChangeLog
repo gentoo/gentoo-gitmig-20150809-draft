@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/tpm-emulator
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/ChangeLog,v 1.5 2007/01/24 17:11:52 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/ChangeLog,v 1.6 2007/02/23 15:25:35 alonbl Exp $
+
+  23 Feb 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  -files/tpm-emulator-0.2a-inline.patch, -tpm-emulator-0.2a.ebuild,
+  tpm-emulator-0.3.ebuild:
+  Fixed bug#168051, cleanup
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org> tpm-emulator-0.2a.ebuild,
   tpm-emulator-0.3.ebuild:
