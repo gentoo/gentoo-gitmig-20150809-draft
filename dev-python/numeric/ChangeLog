@@ -1,6 +1,18 @@
 # ChangeLog for dev-python/numeric
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/ChangeLog,v 1.28 2007/02/07 17:21:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/ChangeLog,v 1.29 2007/02/23 23:43:05 bicatali Exp $
+
+*numeric-24.2-r4 (23 Feb 2007)
+*numeric-24.2-r3 (23 Feb 2007)
+
+  23 Feb 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  files/numeric-24.2-arrayobject.patch, files/numeric-24.2-lapack.patch,
+  +files/numeric-24.2-python25.patch, +files/numeric-24.2-test.patch,
+  metadata.xml, -numeric-24.2-r1.ebuild, -numeric-24.2-r2.ebuild,
+  +numeric-24.2-r3.ebuild, +numeric-24.2-r4.ebuild:
+  Added sci herd in metadata.xml, removed buggy 
+  numeric-24.2-r{1,2}.ebuild, better cblas/lapack treatments, more patches.
+  Use numeric-24.2-r4 with lapack support for arches supporting it.
 
 *numeric-24.2-r2 (07 Feb 2007)
 
