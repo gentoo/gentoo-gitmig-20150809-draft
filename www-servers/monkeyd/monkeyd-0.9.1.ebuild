@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-0.9.1.ebuild,v 1.7 2007/01/10 08:01:14 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-0.9.1.ebuild,v 1.8 2007/02/23 19:39:50 bangert Exp $
 
 inherit toolchain-funcs depend.php
 
@@ -64,7 +64,7 @@ src_install() {
 		dosed 's:/home/my_home/php/bin/php:/usr/bin/php-cgi:' /etc/monkeyd/monkey.conf
 	fi
 
-	[[ -e ${ROOT}/${WEBROOT}/htdocs/index.html ]] && \
+	[[ -e ${WEBROOT}/htdocs/index.html ]] && \
 		mv ${D}${WEBROOT}/htdocs/{index,index-monkey}.html
 
 	dosed "s:/var/log/monkeyd/monkey.pid:/var/run/monkey.pid:" /etc/monkeyd/monkey.conf

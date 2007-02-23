@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/monkeyd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.16 2007/01/10 08:01:14 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.17 2007/02/23 19:39:50 bangert Exp $
+
+  23 Feb 2007; Thilo Bangert <bangert@gentoo.org> monkeyd-0.9.1.ebuild:
+  fix ROOT misuse
 
   10 Jan 2007; Elfyn McBratney <beu@gentoo.org> monkeyd-0.9.1.ebuild:
   Remove portage DEPEND.
