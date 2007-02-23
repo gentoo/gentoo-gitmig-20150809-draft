@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/maradns-1.2.07.8.ebuild,v 1.1 2006/08/13 00:48:10 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/maradns-1.2.12.05.ebuild,v 1.1 2007/02/23 00:18:31 matsuu Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Proxy DNS server with permanent caching"
 HOMEPAGE="http://www.maradns.org/"
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND=""
+DEPEND="dev-lang/perl"
 
 src_unpack() {
 	unpack ${A}
@@ -27,7 +27,7 @@ src_unpack() {
 
 src_compile() {
 	./configure || die
-	emake || die "compile problem"
+	emake CC="$(tc-getCC)" || die "compile problem"
 }
 
 src_install() {
@@ -43,7 +43,6 @@ src_install() {
 	dodoc doc/en/{QuickStart,README,*.txt}
 	dohtml doc/en/*.html
 	dohtml -r doc/en/webpage
-	docinto misc
 
 	insinto /etc; newins doc/en/examples/example_mararc mararc
 	insinto /etc/maradns; newins doc/en/examples/example_csv2 db.example.net
