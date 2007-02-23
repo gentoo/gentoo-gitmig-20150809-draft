@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.96.2.ebuild,v 1.6 2007/02/22 16:00:23 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.96.2.ebuild,v 1.7 2007/02/23 19:24:57 bangert Exp $
 
 inherit toolchain-funcs
 
@@ -24,8 +24,8 @@ RDEPEND="
 
 src_compile() {
 	cd ${S}
-	echo "${ROOT}/usr/include/bglibs" > conf-bgincs
-	echo "${ROOT}/usr/lib/bglibs" > conf-bglibs
+	echo "/usr/include/bglibs" > conf-bgincs
+	echo "/usr/lib/bglibs" > conf-bglibs
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 
