@@ -1,14 +1,14 @@
 #!/sbin/runscript
 # Copyright 2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/files/pf.initd,v 1.1 2006/04/14 15:26:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/files/pf.initd,v 1.2 2007/02/23 13:51:44 uberlord Exp $
 
 depend() {
 	need net
 }
 
 checkconfig() {
-	if ! [[ -c /dev/pf ]]; then
+	if ! [ -c /dev/pf ]; then
 		ewarn "Pseudo-device /dev/pf not found."
 	
 		ebegin "Loading pf module"
@@ -19,7 +19,7 @@ checkconfig() {
 		fi
 		eend $?
 
-		if ! [[ -c /dev/pf ]]; then
+		if ! [ -c /dev/pf ]; then
 			eerror "Pseudo-device /dev/pf still not found."
 			return 1
 		fi
