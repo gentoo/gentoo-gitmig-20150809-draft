@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.1.8.ebuild,v 1.8 2007/02/19 20:54:45 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.1.8.ebuild,v 1.9 2007/02/23 17:30:16 ian Exp $
 
 inherit perl-module eutils
 
@@ -202,16 +202,17 @@ pkg_postinst() {
 	fi
 
 	ewarn
-	elog "spamd is not designed to listen to an untrusted network"
-	elog "and is vulnerable to DoS attacks (and eternal doom) if"
-	elog "configured to do so"
+	ewarn "spamd is not designed to listen to an untrusted network"
+	ewarn "and is vulnerable to DoS attacks (and eternal doom) if"
+	ewarn "configured to do so"
 	ewarn
 	elog "If you plan on using the -u flag to spamd, please read the notes"
 	elog "in /etc/conf.d/spamd regarding the location of the pid file."
 
 	einfo
-	elog "If you build ${PN} with optional dependancy support,"
-	elog "you can enable them in /etc/mail/spamassassin/init.pre"
+	einfo "If you build ${PN} with optional dependancy support,"
+	einfo "you can enable them in /etc/mail/spamassassin/init.pre"
+	einfo
 
 	if has_version '>=dev-lang/perl-5.8.8'; then
 		elog "A note from the SA developers:"
