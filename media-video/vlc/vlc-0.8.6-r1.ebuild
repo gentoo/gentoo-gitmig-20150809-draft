@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6-r1.ebuild,v 1.18 2007/02/14 08:14:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6-r1.ebuild,v 1.19 2007/02/23 15:48:40 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -173,9 +173,9 @@ src_compile () {
 	fi
 
 	if use live && ! has_version '>=media-plugins/live-2006.12.08'; then
-		myconf="--enable-live555 --with-live555-tree=/usr/$(get_libdir)/live"
+		myconf="${myconf} --enable-live555 --with-live555-tree=/usr/$(get_libdir)/live"
 	else
-		myconf="$(use_enable live live555)"
+		myconf="${myconf} $(use_enable live live555)"
 	fi
 
 	econf \
