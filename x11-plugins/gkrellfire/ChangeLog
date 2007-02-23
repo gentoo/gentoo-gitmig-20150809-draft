@@ -1,0 +1,10 @@
+# ChangeLog for x11-plugins/gkrellfire
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellfire/ChangeLog,v 1.1 2007/02/23 16:29:13 lack Exp $
+
+*gkrellfire-0.3.3 (23 Feb 2007)
+
+  23 Feb 2007; Jim Ramsay <lack@gentoo.org> +metadata.xml,
+  +gkrellfire-0.3.3.ebuild:
+  New package added (bug 94034)
+
