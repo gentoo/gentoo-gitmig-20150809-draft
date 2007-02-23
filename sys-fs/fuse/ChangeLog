@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.76 2007/02/21 04:22:36 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.77 2007/02/23 12:28:43 genstef Exp $
+
+  23 Feb 2007; <genstef@gentoo.org> fuse-2.6.0_rc1.ebuild,
+  -fuse-2.6.0.ebuild, fuse-2.6.1.ebuild, fuse-2.6.3.ebuild:
+  move variables into the right place, bug 168051
 
   21 Feb 2007; Joseph Jezak <josejx@gentoo.org> fuse-2.6.1.ebuild:
   Marked ppc stable for bug #150978.

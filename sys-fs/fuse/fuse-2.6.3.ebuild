@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.6.3.ebuild,v 1.1 2007/02/07 16:47:30 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.6.3.ebuild,v 1.2 2007/02/23 12:28:43 genstef Exp $
 
 inherit linux-mod eutils libtool
 
@@ -14,20 +14,21 @@ IUSE="kernel_linux kernel_FreeBSD"
 S=${WORKDIR}/${MY_P}
 PDEPEND="kernel_FreeBSD? ( sys-fs/fuse4bsd )"
 
-MODULE_NAMES="fuse(fs:${S}/kernel)"
-CONFIG_CHECK="@FUSE_FS:fuse"
-BUILD_PARAMS="majver=${KV_MAJOR}.${KV_MINOR}
-			  fusemoduledir=${ROOT}/lib/modules/${KV_FULL/\ }/fs"
-BUILD_TARGETS="all"
-ECONF_PARAMS="--with-kernel=${KV_DIR} --with-kernel-build=${KV_OUT_DIR}"
-FUSE_FS_ERROR="We have detected FUSE already built into the kernel.
-We will continue, but we wont build the module this time."
-
 pkg_setup() {
 	if use kernel_linux ; then
+		MODULE_NAMES="fuse(fs:${S}/kernel)"
+		CONFIG_CHECK="@FUSE_FS:fuse"
+		FUSE_FS_ERROR="We have detected FUSE already built into the kernel.
+			We will continue, but we wont build the module this time."
+
 		linux-mod_pkg_setup
 		kernel_is 2 4 && die "kernel 2.4 is not supported by this ebuild. Get an
 			older version from viewcvs"
+
+		BUILD_PARAMS="majver=${KV_MAJOR}.${KV_MINOR}
+					  fusemoduledir=${ROOT}/lib/modules/${KV_FULL/\ }/fs"
+		BUILD_TARGETS="all"
+		ECONF_PARAMS="--with-kernel=${KV_DIR} --with-kernel-build=${KV_OUT_DIR}"
 	fi
 }
 
