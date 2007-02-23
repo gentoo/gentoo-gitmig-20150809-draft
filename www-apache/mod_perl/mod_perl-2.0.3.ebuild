@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.3.ebuild,v 1.2 2007/02/08 00:21:19 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.3.ebuild,v 1.3 2007/02/23 14:19:22 mcummings Exp $
 
 inherit apache-module perl-module eutils multilib
 DESCRIPTION="An embedded Perl interpreter for Apache2"
@@ -26,7 +26,7 @@ APACHE2_MOD_DEFINE="PERL"
 need_apache2
 
 src_unpack() {
-	INSTALLED_MPM="$(${ROOT}/usr/sbin/apxs2 -q MPM_NAME)"
+	INSTALLED_MPM="$(/usr/sbin/apxs2 -q MPM_NAME)"
 	eval `perl '-V:useithreads'`
 	ITHREADS="${useithreads}"
 	if [ "${INSTALLED_MPM}" != "prefork" ]; then
