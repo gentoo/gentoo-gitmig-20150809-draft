@@ -1,0 +1,10 @@
+# ChangeLog for x11-plugins/gkrellm-cpufreq
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-cpufreq/ChangeLog,v 1.1 2007/02/23 00:27:58 lack Exp $
+
+*gkrellm-cpufreq-0.5.5 (23 Feb 2007)
+
+  23 Feb 2007; Jim Ramsay <lack@gentoo.org> +metadata.xml,
+  +gkrellm-cpufreq-0.5.5.ebuild:
+  New package (bug 49314)
+
