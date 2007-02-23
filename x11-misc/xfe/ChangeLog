@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xfe
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.31 2007/02/22 00:03:18 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.32 2007/02/23 17:08:11 armin76 Exp $
+
+  23 Feb 2007; Raúl Porcel <armin76@gentoo.org> xfe-0.88.ebuild:
+  x86 stable wrt bug 168148
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
