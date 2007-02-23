@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/twoftpd/twoftpd-1.21.ebuild,v 1.1 2006/05/14 15:49:00 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/twoftpd/twoftpd-1.21.ebuild,v 1.2 2007/02/23 19:27:54 bangert Exp $
 
 inherit toolchain-funcs
 
@@ -23,8 +23,8 @@ RDEPEND="sys-apps/ucspi-tcp
 src_compile() {
 	echo "${D}/usr/sbin" > conf-bin
 	echo "${D}/usr/share/man" > conf-man
-	echo "$(tc-getCC) ${CFLAGS} -I${ROOT}/usr/include/bglibs" > conf-cc
-	echo "$(tc-getCC) -s -L${ROOT}/usr/lib/bglibs" > conf-ld
+	echo "$(tc-getCC) ${CFLAGS} -I/usr/include/bglibs" > conf-cc
+	echo "$(tc-getCC) -s -L/usr/lib/bglibs" > conf-ld
 	make || die "make failed"
 }
 
