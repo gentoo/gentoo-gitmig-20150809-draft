@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.92 2007/02/13 23:23:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.93 2007/02/23 12:24:59 uberlord Exp $
+
+  23 Feb 2007; Roy Marples <uberlord@gentoo.org>
+  wpa_supplicant-0.5.7.ebuild:
+  Stop using $ROOT in src_* functions, #168039
 
   13 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   wpa_supplicant-0.5.7.ebuild:
