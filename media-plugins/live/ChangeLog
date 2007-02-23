@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/live
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.69 2007/01/18 16:01:07 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.70 2007/02/23 11:09:20 aballier Exp $
+
+  23 Feb 2007; Alexis Ballier <aballier@gentoo.org> files/config.gentoo,
+  files/config.gentoo-so:
+  Fix Large file support, thanks to Åsmund Grammeltvedt <grammel@online.no>,
+  bug #167059
 
 *live-2007.01.17 (18 Jan 2007)
 
