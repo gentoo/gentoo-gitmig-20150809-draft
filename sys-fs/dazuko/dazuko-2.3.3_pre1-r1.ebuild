@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dazuko/dazuko-2.3.3_pre1.ebuild,v 1.3 2007/02/23 15:36:12 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dazuko/dazuko-2.3.3_pre1-r1.ebuild,v 1.1 2007/02/23 16:40:31 alonbl Exp $
 
 inherit linux-mod toolchain-funcs flag-o-matic
 
@@ -65,6 +65,7 @@ src_install() {
 	dolib.a library/libdazuko.a
 	insinto /usr/include
 	doins dazukoio.h
+	doins dazuko_events.h
 
 	dodoc COPYING
 	dodoc README
