@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.3.1.ebuild,v 1.5 2006/11/20 20:33:53 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.3.1.ebuild,v 1.6 2007/02/23 17:53:19 dang Exp $
 
 inherit gnome2 eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="fat hfs jfs ntfs reiserfs reiser4 xfs"
 
-RDEPEND=">=sys-apps/parted-1.7.1
+RDEPEND="~sys-apps/parted-1.7.1
 		>=dev-cpp/gtkmm-2.8.0
 		fat? ( sys-fs/dosfstools )
 		ntfs? ( sys-fs/ntfsprogs )
