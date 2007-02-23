@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dazuko/dazuko-2.3.2-r3.ebuild,v 1.2 2007/01/10 17:52:46 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dazuko/dazuko-2.3.2-r3.ebuild,v 1.3 2007/02/23 15:36:12 alonbl Exp $
 inherit linux-mod toolchain-funcs flag-o-matic
 
 DESCRIPTION="Linux kernel module and interface providing file access control"
@@ -16,13 +16,13 @@ DEPEND="kernel_linux? ( >=virtual/linux-sources-2.2 )"
 RDEPEND=${DEPEND}
 S="${WORKDIR}/${MY_P}"
 
-# kernel settings
-CONFIG_CHECK="SECURITY_CAPABILITIES"
-MODULE_NAMES="dazuko(misc:)"
-BUILD_TARGETS="dummy_rule"
-
 pkg_setup() {
 	[ "${KERNEL}" = "linux" ] && linux-mod_pkg_setup
+	# kernel settings
+	CONFIG_CHECK="SECURITY_CAPABILITIES"
+	MODULE_NAMES="dazuko(misc:)"
+	BUILD_TARGETS="dummy_rule"
+
 }
 
 src_unpack() {
