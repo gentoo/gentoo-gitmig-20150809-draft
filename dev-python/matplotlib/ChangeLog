@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.26 2007/02/08 22:40:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.27 2007/02/23 22:32:09 bicatali Exp $
+
+  23 Feb 2007; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
+  matplotlib-0.90.0.ebuild:
+  fixed a numpy dep (bug #168094), and added sci herd.
 
 *matplotlib-0.90.0 (08 Feb 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.90.0.ebuild,v 1.1 2007/02/08 22:40:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.90.0.ebuild,v 1.2 2007/02/23 22:32:09 bicatali Exp $
 
 NEED_PYTHON=2.3
 
@@ -23,6 +23,7 @@ DEPEND="|| (
 		dev-python/numarray
 		>=dev-python/numeric-23
 	   )
+	!<dev-python/numpy-1.0
 	>=media-libs/freetype-2.1.7
 	media-libs/libpng
 	sys-libs/zlib
