@@ -1,0 +1,13 @@
+# ChangeLog for sci-mathematics/wxmaxima
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/ChangeLog,v 1.1 2007/02/23 11:33:05 bicatali Exp $
+
+*wxmaxima-0.7.1 (23 Feb 2007)
+
+  23 Feb 2007; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +wxmaxima-0.7.1.ebuild:
+  Initial import. Closing bug #83167. Thanks to Lucas Chiesa 
+  <lucas.chiesa@gmail.com> for his help in the gentooscience overlay, 
+  Andreas Volz <linux@brachttal.net>, and Yosef Meller <yosefm@gmail.com>
+  for their initial help.
+
