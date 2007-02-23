@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/libgssapi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/libgssapi/ChangeLog,v 1.6 2007/02/18 18:22:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libgssapi/ChangeLog,v 1.7 2007/02/23 11:04:39 opfer Exp $
+
+  23 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  libgssapi-0.10.ebuild:
+  stable x86; bug 167664
 
   18 Feb 2007; Markus Rothe <corsair@gentoo.org> libgssapi-0.10.ebuild:
   Stable on ppc64
