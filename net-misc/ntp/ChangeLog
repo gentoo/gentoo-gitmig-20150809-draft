@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.91 2007/01/09 17:51:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.92 2007/02/23 11:26:26 uberlord Exp $
+
+*ntp-4.2.4-r1 (23 Feb 2007)
+
+  23 Feb 2007; Roy Marples <uberlord@gentoo.org> files/ntp-client.rc,
+  files/ntpd.rc, +ntp-4.2.4-r1.ebuild:
+  Bump for non bash init scripts.
+  ntpd now uses start-stop-daemon correctly.
 
   09 Jan 2007; Mike Frysinger <vapier@gentoo.org> files/ntp-client.confd,
   files/ntp-client.rc, ntp-4.2.2_p3.ebuild, ntp-4.2.2_p4.ebuild,
