@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.3.1.ebuild,v 1.1 2007/02/22 21:27:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.3.1.ebuild,v 1.2 2007/02/23 16:24:00 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -83,7 +83,7 @@ src_unpack() {
 	done
 
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-add-missing-LDFLAGS.patch"
+	epatch "${FILESDIR}/${PN}-0.3-add-missing-LDFLAGS.patch"
 
 	eautoreconf
 }
