@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/netlogo-bin/netlogo-bin-3.1.3.ebuild,v 1.2 2007/02/23 00:14:33 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/netlogo-bin/netlogo-bin-3.1.3.ebuild,v 1.3 2007/02/23 12:01:45 humpback Exp $
 
 inherit eutils java-pkg
 #RESTRICT="fetch"
@@ -41,6 +41,4 @@ src_install() {
 
 	make_desktop_entry netlogo "NetLogo" /usr/share/pixmaps/netlogo.gif
 
-	#3D Libs
-	dolib.so lib/*.so
 }
