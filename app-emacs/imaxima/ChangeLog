@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/imaxima
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/ChangeLog,v 1.8 2007/02/21 21:33:36 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/ChangeLog,v 1.9 2007/02/23 12:02:39 opfer Exp $
+
+*imaxima-0.97 (23 Feb 2007)
+
+  23 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  -files/imaxima-imaxima.el.patch, metadata.xml, -imaxima-0.9.ebuild,
+  +imaxima-0.97.ebuild:
+  version bump, fixes bug 157133; remove old version and an unused patch;
+  added emacs team to metadata.xml
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
