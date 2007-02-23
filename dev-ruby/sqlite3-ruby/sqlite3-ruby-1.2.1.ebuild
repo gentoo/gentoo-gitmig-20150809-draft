@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite3-ruby/sqlite3-ruby-1.2.1.ebuild,v 1.1 2007/02/23 11:08:03 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite3-ruby/sqlite3-ruby-1.2.1.ebuild,v 1.2 2007/02/23 12:50:52 fmccor Exp $
 
 inherit ruby
 
@@ -10,7 +10,7 @@ LICENSE="BSD"
 
 SRC_URI="http://rubyforge.org/frs/download.php/17096/${P}.tar.bz2"
 
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
 SLOT="0"
 IUSE="doc swig"
 
