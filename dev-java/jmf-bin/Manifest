@@ -17,7 +17,7 @@ AUX jmstudio 843 RMD160 f6198ed185a8df8a8d26cf6d448d2a653b3000c0 SHA1 7290fc40e0
 MD5 8ce7e0b4d336a4fdb841fa9e8d6a142f files/jmstudio 843
 RMD160 f6198ed185a8df8a8d26cf6d448d2a653b3000c0 files/jmstudio 843
 SHA256 b62efdd7dbf79d7167010c6714130971e61becb70f4c50aa05c411dbdd97f84e files/jmstudio 843
-DIST jmf-2_1_1e-alljava.zip 1959196
+DIST jmf-2_1_1e-alljava.zip 1959196 RMD160 bc376ac1a933979943af7c98b7550e9c739e0e3c SHA1 69a363e2dfb43787adabff87ae14a9bda6608d24 SHA256 6961ee0c8de9de245ebc9abdfd69640e8cc42c6b8d1bd43783a8b8eec4124160
 EBUILD jmf-bin-2.1.1e-r1.ebuild 1287 RMD160 dded9b7592a361daa724231697a29890b39dfa1c SHA1 02c98f9bf581b64b8a1f4500e894abe2abae7f23 SHA256 88c7f4dfc7699d239df23c5da9a979e79a7cf3ecbd2a5f888c2b96fdcaea28c0
 MD5 099785354e636e499a820bdbbb61f1f4 jmf-bin-2.1.1e-r1.ebuild 1287
 RMD160 dded9b7592a361daa724231697a29890b39dfa1c jmf-bin-2.1.1e-r1.ebuild 1287
@@ -30,13 +30,13 @@ MISC metadata.xml 157 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 SHA1 c37a6
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
 SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
-MD5 ac10f570840222bc9e1815908fe02b4a files/digest-jmf-bin-2.1.1e-r1 68
-RMD160 33bb515b3da1f16f0b5e52e2e0dab522231455ae files/digest-jmf-bin-2.1.1e-r1 68
-SHA256 603f8d2d1e586e16862c9c3b9b6b78a6aa8c018cd9aa5be39c7994516aa2dde2 files/digest-jmf-bin-2.1.1e-r1 68
+MD5 6c412208d0db2f14d1b07a965f472f9e files/digest-jmf-bin-2.1.1e-r1 250
+RMD160 82d28cc3b12868a6cfb372647c604e201ec6fac1 files/digest-jmf-bin-2.1.1e-r1 250
+SHA256 63b2a46a84a7eae74708a9875d36f5c7ad0873fd2334b4f90b3caeafaa4ce477 files/digest-jmf-bin-2.1.1e-r1 250
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v2.0.2 (GNU/Linux)
 
-iD8DBQFFJUVMKRy60XGEcJIRAn7eAJ9krhcgm05JD+A9WZBrG2CXFV7weACglpDy
-9xHZsh7nBm8goDdt/mC4CKY=
-=vNgO
+iD8DBQFF3oPP/ejvha5XGaMRAj20AJ4r27EqYxn5jTmtBzKOTbE8E8mWyQCfdclp
+T5nsFmJ5E7ScYa1ZMWAqqDA=
+=z5T4
 -----END PGP SIGNATURE-----
