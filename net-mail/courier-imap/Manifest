@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX authdaemond-3.0.4-r1 1062 RMD160 5e9184dc8c8ccbb528252c0795b5cd62b1d1b9c8 SHA1 55180242453ee47c951d265615da7a0902a5dc1f SHA256 2731b87fec98ae4ecdb5cfdb5917894e28eaf768f68555462d801c116cfa2a0d
 MD5 71a551a4f772f4299f9752f3d043b8c5 files/authdaemond-3.0.4-r1 1062
 RMD160 5e9184dc8c8ccbb528252c0795b5cd62b1d1b9c8 files/authdaemond-3.0.4-r1 1062
@@ -283,3 +286,10 @@ SHA256 3e0023761481fb070682400be05dfb6c3c02547c4a5db2fe0d8c1beffb37d7bf files/di
 MD5 c1fc1514f0256f3976cb49e9d420e478 files/digest-courier-imap-4.1.2 262
 RMD160 931feb25d5903456270bbcbcfae5fa1b4a7e6402 files/digest-courier-imap-4.1.2 262
 SHA256 334d2be842f306f500dd7da00eb8dbb4f433299a2d4f34c40093a28fa702f471 files/digest-courier-imap-4.1.2 262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.2 (GNU/Linux)
+
+iD8DBQFF3w90Wt/XSf2CZdkRAnhJAJwMoSkn2wN+0+lgCTLRLEYi3wmSAQCfXRud
+EgXIkG3zkAWGIm/mHaPNboY=
+=XujN
+-----END PGP SIGNATURE-----
