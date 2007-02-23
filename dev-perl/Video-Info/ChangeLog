@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Video-Info
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-Info/ChangeLog,v 1.10 2007/01/19 17:12:57 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-Info/ChangeLog,v 1.11 2007/02/23 17:17:25 ian Exp $
+
+  23 Feb 2007; Christian Hartmann <ian@gentoo.org> Video-Info-0.993.ebuild:
+  Fixed bug #168073
 
   19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   Video-Info-0.993.ebuild:
