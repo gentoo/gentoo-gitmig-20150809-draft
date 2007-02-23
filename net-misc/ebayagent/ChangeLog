@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ebayagent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ebayagent/ChangeLog,v 1.9 2007/02/23 14:29:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ebayagent/ChangeLog,v 1.10 2007/02/23 20:04:22 ian Exp $
+
+  23 Feb 2007; Christian Hartmann <ian@gentoo.org>
+  ebayagent-0.9.11-r2.ebuild:
+  Fixed bug #166980
 
   23 Feb 2007; Michael Cummings <mcummings@gentoo.org>
   ebayagent-0.9.11-r2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ebayagent/ebayagent-0.9.11-r2.ebuild,v 1.5 2007/02/23 14:29:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ebayagent/ebayagent-0.9.11-r2.ebuild,v 1.6 2007/02/23 20:04:22 ian Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ src_compile() {
 	sed -i -e "s|PREFIX=/usr|PREFIX=${D}${DESTTREE}|" ${S}/Makefile
 
 	# BUG: 95144 fix path for perl-tk app XeBayAgent.pl to point to eBayAgent 
-	sed -i -e "s|X_eBayAgentLocation\ \=>\ \"\",|X_eBayAgentLocation\ \=>\ \"\/usr\/bin\/eBayAgent\",|"	${S}/XeBayAgent.pl
+	sed -i -e 's|X_eBayAgentLocation => "|X_eBayAgentLocation => "/usr/bin/eBayAgent|' ${S}/XeBayAgent.pl
 
 	# patching repebay and runrepebay
 	epatch ${FILESDIR}/ebayagent.patch
@@ -48,11 +48,7 @@ src_install() {
 		rm -rf ${D}/usr/bin/XeBayAgent
 	fi
 
-	# prepare manpages (prepallman wonÂ´t do that)
-	for mpage in $(find ${D} -name '*.1'|grep man);do
-		gzip $mpage
-	done
+	doman *.1
 
-	dodoc COPYING INSTALL
 	prepalldocs
 }
