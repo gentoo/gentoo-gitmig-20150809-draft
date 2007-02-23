@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.3.18.ebuild,v 1.5 2007/02/15 12:58:41 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.3.18.ebuild,v 1.6 2007/02/23 11:15:03 armin76 Exp $
 
 inherit distutils eutils
 
@@ -71,4 +71,3 @@ src_install() {
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/bttrack.rc bttrack
 }
-
