@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.6-r1.ebuild,v 1.2 2007/02/23 15:59:32 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.1.2.ebuild,v 1.1 2007/02/23 15:59:32 chutzpah Exp $
 
-inherit eutils multilib
+inherit autotools eutils multilib
 IUSE="fam berkdb gdbm debug ipv6 nls selinux"
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
@@ -72,27 +72,31 @@ src_unpack() {
 	# We now can compile with db4 support.
 	if use berkdb; then
 		epatch ${FILESDIR}/${PN}-4.0.6-db4-bdbobj_configure.in.patch
+		epatch ${FILESDIR}/${PN}-4.0.6-db4-tcpd_configure.in.patch
 		epatch ${FILESDIR}/${PN}-4.0.6-db4-configure.in.patch
 	fi
 
 	export WANT_AUTOCONF="2.5"
-	libtoolize --copy --force
 	ebegin "Recreating configure"
-	autoconf || die "autoconf on . failed"
+	AT_NO_RECURSIVE="true" eautoreconf || die "autoconf on . failed"
 	eend $?
 
 	cd ${S}/maildir
-	libtoolize --copy --force
 	ebegin "Recreating maildir/configure"
-	autoconf || die "autoconf on maildir failed"
+	eautoreconf || die "autoconf on maildir failed"
 	eend $?
 
 	cd ${S}/bdbobj
-	libtoolize --copy --force
 	ebegin "Recreating bdbobj/configure"
-	autoconf || die "autoconf on bdbobj failed"
+	eautoreconf || die "autoconf on bdbobj failed"
+	eend $?
+
+	cd ${S}/tcpd
+	ebegin "Recreating tcpd/configure"
+	eautoreconf || die "autoconf on bdbobj failed"
 	eend $?
 }
+
 src_compile() {
 	vpopmail_setup
 
