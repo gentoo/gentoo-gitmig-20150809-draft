@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/files/acpid-1.0.4-init.d,v 1.5 2006/12/07 00:08:44 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/files/acpid-1.0.4-init.d,v 1.6 2007/02/23 10:55:56 uberlord Exp $
 
 opts="reload"
 
@@ -10,7 +10,7 @@ depend() {
 }
 
 checkconfig() {
-	if [[ ! -e /proc/acpi ]] ; then
+	if [ ! -e /proc/acpi ] ; then
 		eerror "ACPI support has not been compiled into the kernel"
 		return 1
 	fi
