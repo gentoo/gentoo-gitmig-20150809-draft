@@ -23,7 +23,6 @@ LIBFILES:= ./pa_common/pa_lib.c ./pa_unix_oss/pa_unix_oss.c ./pa_unix_oss/pa_uni
 VERSION=18
 
 CC=gcc
-LD=ld
 AR=ar
 RANLIB=ranlib
 LN=ln
@@ -43,7 +42,7 @@ all: libportaudio.so libportaudio.a
 	$(CC) $(CFLAGS) -c -I./pa_common $? -o $@
 
 libportaudio.so.$(VERSION): $(LIBFILES:.c=.lo)
-	$(LD) -shared $(LIBS) -soname $@ -o $@ $?
+	$(CC) -shared $(LIBS) -Wl,-soname,$@ -o $@ $?
 
 libportaudio.so: libportaudio.so.$(VERSION)
 	$(LN) -s $? $@
