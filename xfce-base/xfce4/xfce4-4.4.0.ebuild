@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.4.0.ebuild,v 1.6 2007/02/03 00:39:58 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.4.0.ebuild,v 1.7 2007/02/24 15:45:38 drac Exp $
 
 inherit xfce44
 
@@ -25,9 +25,9 @@ RDEPEND=">=x11-themes/gtk-engines-xfce-2.4
 	oss? ( >=xfce-extra/xfce4-mixer-${XFCE_MASTER_VERSION} )
 	cups? ( >=xfce-base/xfprint-${XFCE_MASTER_VERSION} )
 	!minimal? ( >=xfce-base/orage-${XFCE_MASTER_VERSION}
-		    >=xfce-extra/mousepad-0.2.12
-		    >=xfce-extra/xfwm4-themes-${XFCE_MASTER_VERSION}
-		    >=xfce-extra/terminal-0.2.6 )"
+		>=xfce-extra/mousepad-0.2.12
+		>=xfce-extra/xfwm4-themes-${XFCE_MASTER_VERSION}
+		>=xfce-extra/terminal-0.2.6 )"
 DEPEND="${RDEPEND}"
 
 # hack to avoid exporting function from eclass.
