@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.58 2007/02/23 13:39:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.59 2007/02/24 00:02:01 weeve Exp $
+
+  24 Feb 2007; Jason Wever <weeve@gentoo.org> libevent-1.3a.ebuild:
+  Stable on SPARC wrt security bug #167583.
 
   23 Feb 2007; Jeroen Roovers <jer@gentoo.org> libevent-1.3a.ebuild:
   Stable for HPPA (bug #167583).
