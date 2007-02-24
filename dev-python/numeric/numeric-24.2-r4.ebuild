@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/numeric-24.2-r4.ebuild,v 1.1 2007/02/23 23:43:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/numeric-24.2-r4.ebuild,v 1.2 2007/02/24 10:21:18 bicatali Exp $
 
 NEED_PYTHON=2.3
 
@@ -15,8 +15,9 @@ SRC_URI="mirror://sourceforge/numpy/${MY_P}.tar.gz
 
 # numeric does not work yet with other cblas implementations
 # than cblas-reference or blas-atlas (work in progress)
-RDEPEND="lapack? ( || ( sci-libs/blas-atlas sci-libs/cblas-reference )
-			  	   virtual/lapack )"
+RDEPEND="lapack? ( || ( >=sci-libs/blas-atlas-3.7.11-r1
+				   >=sci-libs/cblas-reference-20030223-r3 )
+				   virtual/lapack )"
 DEPEND="${RDEPEND}
 	lapack? ( app-admin/eselect-cblas )"
 

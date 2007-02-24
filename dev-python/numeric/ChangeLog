@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/numeric
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/ChangeLog,v 1.29 2007/02/23 23:43:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/ChangeLog,v 1.30 2007/02/24 10:21:18 bicatali Exp $
+
+  24 Feb 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  numeric-24.2-r4.ebuild:
+  fixed minimum cblas dependencies supporting eselect-cblas.
 
 *numeric-24.2-r4 (23 Feb 2007)
 *numeric-24.2-r3 (23 Feb 2007)
