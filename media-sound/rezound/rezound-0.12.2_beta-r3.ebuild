@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.2_beta-r3.ebuild,v 1.1 2006/12/04 19:10:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.2_beta-r3.ebuild,v 1.2 2007/02/24 14:07:39 aballier Exp $
 
 WANT_AUTOMAKE=1.9
 WANT_AUTOCONF=2.5
@@ -10,10 +10,11 @@ inherit eutils autotools
 MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P}"
 
+PATCHLEVEL="1"
 DESCRIPTION="Sound editor and recorder"
 HOMEPAGE="http://rezound.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
-	mirror://gentoo/${P}-patches.tar.bz2"
+	mirror://gentoo/${P}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -45,12 +46,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	EPATCH_SOURCE="${WORKDIR}" EPATCH_SUFFIX="patch"\
-	EPATCH_FORCE="yes" epatch
+	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 
-	epatch "${FILESDIR}/${P}-foxinclude.patch"
-	epatch "${FILESDIR}/${P}-automagic.patch"
-	epatch "${FILESDIR}/${P}-flac-1.1.3.patch"
 	AT_M4DIR="config/m4" eautoreconf
 	elibtoolize
 }
@@ -58,7 +55,7 @@ src_unpack() {
 src_compile() {
 	# fix compilation errors on ppc, where some
 	# of the required functions aren't defined
-	use ppc && epatch ${FILESDIR}/undefined-functions.patch
+	use ppc && epatch "${FILESDIR}/undefined-functions.patch"
 
 	# following features can't be disabled if already installed:
 	# -> flac, oggvorbis, soundtouch
