@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/ircd-hybrid
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ChangeLog,v 1.23 2007/02/24 13:43:24 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ChangeLog,v 1.24 2007/02/24 14:15:11 armin76 Exp $
+
+  24 Feb 2007; Raúl Porcel <armin76@gentoo.org>
+  -files/7.1.0-default-config.patch, -files/7.2.1-default-config.patch,
+  -files/config-ipv4-7.0.3.diff, -files/config-ipv6-7.0.3.diff,
+  -files/ircd-hybrid-7.0.3.diff, -files/7.2.1-amd64-multilib.patch,
+  -ircd-hybrid-7.0.3.ebuild, -ircd-hybrid-7.1.0.ebuild,
+  -ircd-hybrid-7.1.1.ebuild, -ircd-hybrid-7.2.1.ebuild:
+  old
 
   24 Feb 2007; nixnut <nixnut@gentoo.org> ircd-hybrid-7.2.2.ebuild:
   Added ~ppc wrt bug 167886
