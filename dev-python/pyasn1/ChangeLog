@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyasn1
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/ChangeLog,v 1.3 2007/02/24 21:00:12 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/ChangeLog,v 1.4 2007/02/24 23:51:40 mjolnir Exp $
+
+  24 Feb 2007; Martin Jackson <mjolnir@gentoo.org> -pyasn1-0.0.5a.ebuild:
+  Cleanup old version 0.0.5a
 
 *pyasn1-0.0.6a (24 Feb 2007)
 
