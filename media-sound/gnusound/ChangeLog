@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/gnusound
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/ChangeLog,v 1.15 2007/02/03 23:06:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/ChangeLog,v 1.16 2007/02/24 13:10:43 aballier Exp $
+
+  24 Feb 2007; Alexis Ballier <aballier@gentoo.org>
+  -files/gnusound-0.7.4-amd64.patch, -files/gnusound-0.7.4-automagic.patch,
+  -files/gnusound-0.7.4-destdir.patch, -files/gnusound-0.7.4-ffmpeg.patch,
+  -files/gnusound-0.7.4-ffmpeg-struct.patch,
+  -files/gnusound-0.7.4-flac-1.1.3.patch, gnusound-0.7.4.ebuild:
+  Make a patchset tarball
 
   03 Feb 2007; Alexis Ballier <aballier@gentoo.org> gnusound-0.7.4.ebuild:
   Fix multiple inherit calls, thanks to dirtyepic for reporting

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/gnusound-0.7.4.ebuild,v 1.4 2007/02/03 23:06:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/gnusound-0.7.4.ebuild,v 1.5 2007/02/24 13:10:43 aballier Exp $
 
 WANT_ATUOMAKE=1.8
 WANT_AUTOCONF=2.5
@@ -10,9 +10,11 @@ inherit toolchain-funcs eutils autotools
 IUSE="3dnow alsa audiofile cpudetection flac ffmpeg jack lame libsamplerate mmx
 ogg oss sse vorbis"
 
+PATCHLEVEL="1"
 DESCRIPTION="GNUsound is a sound editor for Linux/x86"
 HOMEPAGE="http://gnusound.sourceforge.net/"
-SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
+	mirror://gentoo/${P}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -41,18 +43,9 @@ pkg_setup() {
 }
 src_unpack() {
 	unpack ${A} || die "unpack failure"
-	cd ${S} || die "workdir not found"
-	rm -f doc/Makefile || die "could not remove doc Makefile"
-	rm -f modules/Makefile || die "could not remove modules Makefile"
-	sed -i "s:docrootdir:datadir:" doc/Makefile.in
+	cd "${S}" || die "workdir not found"
 
-	epatch "${FILESDIR}/${P}-destdir.patch"
-	epatch "${FILESDIR}/${P}-amd64.patch"
-	epatch "${FILESDIR}/${P}-ffmpeg-struct.patch"
-	epatch "${FILESDIR}/${P}-automagic.patch"
-	epatch "${FILESDIR}/${P}-flac-1.1.3.patch"
-	epatch "${FILESDIR}/${P}-ffmpeg.patch"
-
+	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 	AT_M4DIR="config" eautoreconf
 }
 
