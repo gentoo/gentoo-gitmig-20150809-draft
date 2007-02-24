@@ -1,0 +1,13 @@
+Index: paludis/merger/merger.cc
+===================================================================
+--- paludis/merger/merger.cc	(revision 2510)
++++ paludis/merger/merger.cc	(revision 2511)
+@@ -144,7 +144,7 @@
+ 
+     on_enter_dir(is_check, src);
+ 
+-    for (DirIterator d(src), d_end ; d != d_end ; ++d)
++    for (DirIterator d(src, false), d_end ; d != d_end ; ++d)
+     {
+         MergerEntryType m(entry_type(*d));
+         switch (m)
