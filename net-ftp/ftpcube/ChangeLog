@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ftpcube
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpcube/ChangeLog,v 1.32 2007/01/19 20:07:16 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpcube/ChangeLog,v 1.33 2007/02/24 14:42:35 dev-zero Exp $
+
+  24 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> ftpcube-0.5.1.ebuild:
+  Re-adding sparc-keyword since dependency (paramiko) has been keyworded.
 
   19 Jan 2007; Tiziano Müller <dev-zero@gentoo.org>
   -files/ftpcube-0.4.1-gentoo.patch, -files/ftpcube-0.4.2-gentoo.patch,
