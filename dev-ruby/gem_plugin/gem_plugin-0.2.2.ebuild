@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gem_plugin/gem_plugin-0.2.2.ebuild,v 1.9 2007/02/21 20:20:56 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gem_plugin/gem_plugin-0.2.2.ebuild,v 1.10 2007/02/24 10:14:04 corsair Exp $
 
 inherit ruby gems
 
@@ -12,7 +12,7 @@ SRC_URI="http://mongrel.rubyforge.org/releases/gems/${P}.gem"
 
 LICENSE="mongrel"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=dev-ruby/rake-0.7"
