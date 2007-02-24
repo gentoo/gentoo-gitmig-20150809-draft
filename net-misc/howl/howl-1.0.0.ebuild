@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-1.0.0.ebuild,v 1.12 2006/10/21 18:47:02 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-1.0.0.ebuild,v 1.13 2007/02/24 03:07:36 compnerd Exp $
 
 inherit eutils flag-o-matic
 
@@ -55,7 +55,9 @@ src_install() {
 
 	# Fix the perms on the init scripts
 	fperms a+x /etc/init.d/nifd /etc/init.d/mDNSResponder
+}
 
+pkg_preinst() {
 	# howl-0.9.8 introduces a change in library naming,
 	# preserve old libraries to not break things
 	preserve_old_lib /usr/$(get_libdir)/libhowl-[0-9].[0-9].[0-9].so.[0-9].[0-9].[0-9]

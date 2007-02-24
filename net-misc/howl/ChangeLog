@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/howl
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.44 2007/02/22 12:17:56 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.45 2007/02/24 03:07:36 compnerd Exp $
+
+  24 Feb 2007; Saleem Abdulrasool <compnerd@gentoo.org> howl-1.0.0.ebuild:
+  Fix preserve_old_lib usage (bug #167991)
 
   22 Feb 2007; Tristan Heaven <nyhm@gentoo.org> metadata.xml:
   Restore Japanese longdescription
