@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jamin/jamin-0.95.0-r2.ebuild,v 1.1 2006/01/14 11:51:04 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jamin/jamin-0.95.0-r2.ebuild,v 1.2 2007/02/24 19:16:32 aballier Exp $
 
 inherit eutils
 
@@ -22,6 +22,12 @@ DEPEND=">=media-sound/jack-audio-connection-kit-0.80.0
 	>=dev-libs/libxml2-2.5.0
 	>=x11-libs/gtk+-2.0.0
 	osc? ( >=media-libs/liblo-0.5 )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-multilib-strict.patch"
+}
 
 src_compile() {
 	econf `use_enable osc` || die "configure failed"
