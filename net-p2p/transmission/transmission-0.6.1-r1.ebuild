@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-0.6.1-r1.ebuild,v 1.2 2007/01/11 19:30:44 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-0.6.1-r1.ebuild,v 1.3 2007/02/24 11:41:28 armin76 Exp $
 
 inherit eutils
 
@@ -41,7 +41,7 @@ src_compile() {
 }
 
 src_install() {
-	make PREFIX="${D}${ROOT}usr" LOCALEDIR="\$(PREFIX)/share/locale" install \
+	make PREFIX="${D}/usr" LOCALEDIR="\$(PREFIX)/share/locale" install \
 		|| die "install failed"
 
 	if use gtk ; then

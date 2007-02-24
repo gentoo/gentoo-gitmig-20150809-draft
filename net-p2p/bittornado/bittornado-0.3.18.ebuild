@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.3.18.ebuild,v 1.6 2007/02/23 11:15:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.3.18.ebuild,v 1.7 2007/02/24 11:36:46 armin76 Exp $
 
 inherit distutils eutils
 
@@ -41,7 +41,7 @@ src_install() {
 	distutils_src_install
 
 	dodir /etc
-	cp -pPR ${ROOT}/etc/mailcap ${D}/etc/
+	cp -pPR /etc/mailcap ${D}/etc/
 	MAILCAP_STRING="application/x-bittorrent; /usr/bin/btdownloadgui.py '%s'; test=test -n \"\$DISPLAY\""
 
 	if use gtk; then
