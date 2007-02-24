@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-0.5.0.ebuild,v 1.1 2007/02/23 17:07:45 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-0.5.0.ebuild,v 1.2 2007/02/24 18:39:08 je_fro Exp $
 
 inherit eutils fortran
 
@@ -26,10 +26,6 @@ pkg_setup() {
 	# It is important that you use the same compiler to compile
 	# APBS that you used when compiling MPI.
 	fortran_pkg_setup
-}
-
-src_unpack() {
-	unpack ${A}
 }
 
 src_compile() {
