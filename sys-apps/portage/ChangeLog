@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.355 2007/02/19 22:01:30 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.356 2007/02/24 04:09:02 zmedico Exp $
+
+*portage-2.1.2-r11 (23 Feb 2007)
+
+  23 Feb 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.2-r11.ebuild:
+  2.1.2-r11 revbump. This fixes bugs #165342, #167667, #167668, #167795,
+  and #168169. Bug #167107 tracks fixes since 2.1.2-r9.  The default
+  PORTAGE_RSYNC_OPTS now excludes Manifest1 digest files.  See bugs
+  #167667 and #167668 for more information about this change.
 
 *portage-2.1.2-r10 (19 Feb 2007)
 
