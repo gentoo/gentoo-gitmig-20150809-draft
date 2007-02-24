@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.2_beta-r2.ebuild,v 1.5 2006/11/10 09:10:59 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.2_beta-r2.ebuild,v 1.6 2007/02/24 18:21:08 aballier Exp $
 
 WANT_AUTOMAKE=1.9
 WANT_AUTOCONF=2.5
@@ -21,7 +21,7 @@ KEYWORDS="amd64 ~ppc x86"
 IUSE="16bittmp alsa flac jack nls oss portaudio soundtouch vorbis"
 
 RDEPEND="=sci-libs/fftw-2*
-	>=x11-libs/fox-1.2.4
+	>=x11-libs/fox-1.6.19
 	>=media-libs/audiofile-0.2.3
 	>=media-libs/ladspa-sdk-1.12
 	>=media-libs/ladspa-cmt-1.15
