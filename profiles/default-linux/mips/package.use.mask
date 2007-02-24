@@ -1,2 +1,5 @@
 # NPTL only works on >=glibc-2.4 ...
 <sys-lib/glibc-2.4 nptl
+
+# these require dev-libs/pcre++, which doesn't work right now
+sys-apps/paludis qa inquisitio
