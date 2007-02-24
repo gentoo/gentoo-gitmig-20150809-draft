@@ -1,6 +1,18 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.88 2007/02/14 15:46:41 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.89 2007/02/24 21:16:41 joem Exp $
+
+*rhythmbox-0.9.8 (25 Feb 2007)
+
+  25 Feb 2007; Joe McCann <joem@gentoo.org>
+  -files/rhythmbox-0.9.2-dbus-0.60.patch,
+  -files/rhythmbox-0.9.4_p1-libnotify.patch,
+  -files/rhythmbox-0.9.5-dbus-0.90.patch, -rhythmbox-0.9.4.1.ebuild,
+  -rhythmbox-0.9.5.ebuild, -rhythmbox-0.9.6.ebuild, -rhythmbox-0.9.7.ebuild,
+  -rhythmbox-0.9.7-r1.ebuild, -rhythmbox-0.9.7-r2.ebuild,
+  +rhythmbox-0.9.8.ebuild:
+  New version with bugfixes and plugin updates. Add back ~ia64 keyword that got
+  lost for some reason. Prune lots of old files
 
 *rhythmbox-0.9.7-r3 (14 Feb 2007)
 
