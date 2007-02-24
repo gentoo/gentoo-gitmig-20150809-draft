@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/supertab/supertab-0.41.ebuild,v 1.1 2007/01/11 06:49:34 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/supertab/supertab-0.41.ebuild,v 1.2 2007/02/24 06:32:46 pioto Exp $
 
 inherit vim-plugin
 
@@ -16,5 +16,3 @@ VIM_PLUGIN_HELPTEXT=\
 autocompleted as per <ctrl-n>. Completion mode can be changed using
 <ctrl-x> (see :help insert_expand). To insert an actual tab character,
 either use <ctrl-v><Tab> or enter a space followed by a tab."
-
-RDEPEND="!>=app-editors/vim-core-7"
