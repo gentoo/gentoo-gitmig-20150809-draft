@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dog
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.21 2007/02/04 07:25:13 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.22 2007/02/24 16:17:55 dirtyepic Exp $
+
+  24 Feb 2007; Ryan Hill <dirtyepic@gentoo.org> ChangeLog:
+  Regen for Manifest2 - Bug #165195
 
   04 Feb 2007; Ryan Hill <dirtyepic@gentoo.org> metadata.xml:
   Removed ka0ttic from metadata.
