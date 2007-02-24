@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.01-r2.ebuild,v 1.8 2007/02/21 12:31:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.01-r2.ebuild,v 1.9 2007/02/24 11:10:03 drac Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.4"
@@ -43,7 +43,6 @@ DEPEND="${RDEPEND}
 	xinerama? ( x11-proto/xineramaproto )"
 
 src_unpack() {
-
 	unpack ${A}
 	cd "${S}"
 
@@ -64,7 +63,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	# simple workaround for the flurry screensaver
 	filter-flags -mabi=altivec
 	filter-flags -maltivec
@@ -93,15 +91,13 @@ src_compile() {
 		$(use_with xinerama xinerama-ext) \
 		$(use_with pam) \
 		$(use_with opengl gl) $(use_with opengl gle) \
-		$(use_with jpeg) \
-		|| die "econf failed"
+		$(use_with jpeg)
 
-	emake || die "emake failed"
-
+	# bug 155049
+	emake -j1 || die "emake failed."
 }
 
 src_install() {
-
 	[[ -n "${KDEDIR}" ]] && dodir "${KDEDIR}/bin"
 
 	make install_prefix="${D}" install || die "make install failed"
@@ -140,11 +136,9 @@ src_install() {
 	dodir "/usr/share/X11/app-defaults"
 	mv "${D}/usr/lib/X11/app-defaults/XScreenSaver" \
 		"${D}/usr/share/X11/app-defaults/XScreenSaver" || die "mv failed"
-
 }
 
 pkg_postinst() {
-
 	if ! use new-login; then
 		einfo
 		einfo "You have chosen to not use the new-login USE flag."
@@ -171,5 +165,4 @@ pkg_postinst() {
 	ewarn "need to be ported to the new API. Until then they will not work."
 	ewarn
 	epause
-
 }
