@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/wordpress
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.74 2007/02/23 23:28:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.75 2007/02/24 00:00:34 weeve Exp $
+
+  24 Feb 2007; Jason Wever <weeve@gentoo.org> wordpress-2.0.9.ebuild:
+  Stable on SPARC wrt security bug #163817.
 
   23 Feb 2007; Jeroen Roovers <jer@gentoo.org> wordpress-2.0.9.ebuild:
   Stable for HPPA (bug #163817).
