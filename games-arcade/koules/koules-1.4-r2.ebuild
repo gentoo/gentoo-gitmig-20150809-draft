@@ -1,38 +1,38 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/koules-1.4-r2.ebuild,v 1.3 2006/11/05 00:55:04 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/koules-1.4-r2.ebuild,v 1.4 2007/02/24 01:28:44 nyhm Exp $
 
 inherit eutils games
 
 DESCRIPTION="fast action arcade-style game w/sound and network support"
 HOMEPAGE="http://www.ucw.cz/~hubicka/koules/English/"
 SRC_URI="http://www.ucw.cz/~hubicka/koules/packages/koules${PV}-src.tar.gz
-	mirror://gentoo/${P}-gcc3.patch.bz2
-	http://dev.gentoo.org/~wolf31o2/sources/dump/${P}-gcc3.patch.bz2"
+	mirror://gentoo/${P}-gcc3.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ppc x86"
-IUSE="svga joystick tk"
+IUSE="joystick svga tk"
 
-RDEPEND="|| (
-	svga? ( media-libs/svgalib )
-	(
+RDEPEND="svga? ( media-libs/svgalib )
+	!svga? (
 		x11-libs/libX11
 		x11-libs/libXext
-		media-fonts/font-schumacher-misc )
+		media-fonts/font-schumacher-misc
 	)
-	|| (
-		tk? ( dev-lang/tk dev-lang/tcl )
-		dev-util/dialog )"
-
+	tk? (
+		dev-lang/tk
+		dev-lang/tcl
+	)
+	!tk? ( dev-util/dialog )"
 DEPEND="${RDEPEND}
 	!svga? (
 		x11-proto/xextproto
 		x11-proto/xproto
 		x11-misc/gccmakedep
 		x11-misc/imake
-		app-text/rman )"
+		app-text/rman
+	)"
 
 S=${WORKDIR}/${PN}${PV}
 
