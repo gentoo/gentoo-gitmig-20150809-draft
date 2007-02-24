@@ -17,7 +17,7 @@ diff -ur pl-5.6.25.orig/packages/jpl/Makefile.in pl-5.6.25/packages/jpl/Makefile
 +		LD_LIBRARY_PATH=$(JAVALDPATH) $(PL) -q -f test_jpl.pl -g run_tests,halt -t 'halt(1)'
  check_java::
 -		CLASSPATH=$(JUNIT):jpl.jar:jpltest.jar $(JAVA) junit.textui.TestRunner jpl.test.TestJUnit
-+		SWI_HOME_DIR=../.. LD_LIBRARY_PATH=.:../../lib/$(PLARCH)  CLASSPATH=$(JUNIT):jpl.jar:jpltest.jar $(JAVA) junit.textui.TestRunner jpl.test.TestJUnit
++		SWI_HOME_DIR=../.. LD_LIBRARY_PATH=.:../../lib/$(PLARCH)  CLASSPATH=$(JUNIT):jpl.jar:jpltest.jar $(JAVA) -Xss1m junit.textui.TestRunner jpl.test.TestJUnit
  
  ################################################################
  # Installation
