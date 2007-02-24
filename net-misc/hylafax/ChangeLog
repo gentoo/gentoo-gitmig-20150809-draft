@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.73 2007/01/28 23:59:35 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.74 2007/02/24 01:21:20 nerdboy Exp $
+
+  23 Feb 2007; Steve Arnold <nerdboy@gentoo.org> hylafax-4.2.5.ebuild,
+  hylafax-4.3.0.ebuild, hylafax-4.3.1.ebuild:
+  updated mgetty config paths per bug 166175
 
 *hylafax-4.3.1 (28 Jan 2007)
 

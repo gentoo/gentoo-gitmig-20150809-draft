@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.5.ebuild,v 1.5 2006/05/24 20:41:40 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.5.ebuild,v 1.6 2007/02/24 01:21:20 nerdboy Exp $
 
 inherit eutils multilib pam flag-o-matic toolchain-funcs
 
@@ -70,7 +70,7 @@ src_compile() {
 
 	if use mgetty; then
 		my_conf="${my_conf} \
-			--with-PATH_EGETTY=/usr/sbin/mgetty \
+			--with-PATH_EGETTY=/sbin/mgetty \
 			--with-PATH_VGETTY=/usr/sbin/vgetty"
 	else
 		my_conf="${my_conf} \
