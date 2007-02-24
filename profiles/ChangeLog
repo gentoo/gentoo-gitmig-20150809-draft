@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.133 2007/02/24 15:15:51 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.134 2007/02/24 23:03:59 rbu Exp $
+
+  24 Feb 2007; Robert Buchholz <rbu@gentoo.org> desc/lcd_devices.desc,
+  use.local.desc:
+  New use for app-misc/lcd4linux
 
   24 Feb 2007; Zac Medico <zmedico@gentoo.org>
   base/use.force, base/use.mask, default-bsd/use.mask,
