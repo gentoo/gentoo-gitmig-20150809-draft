@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/dmenu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.13 2007/02/22 20:41:45 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.14 2007/02/24 17:59:47 cedk Exp $
+
+  24 Feb 2007; Cedric Krier <cedk@gentoo.org> -dmenu-2.1.ebuild:
+  Remove old version for bug #168044
 
   22 Feb 2007; Cedric Krier <cedk@gentoo.org> dmenu-2.2.ebuild:
   Fix savedconfig for bug #167995
