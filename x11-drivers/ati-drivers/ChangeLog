@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.65 2007/02/22 22:24:22 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.66 2007/02/24 06:03:10 marienz Exp $
+
+  24 Feb 2007; Marien Zwart <marienz@gentoo.org> ati-drivers-8.34.8.ebuild:
+  Apply a patch from desbaine@yahoo.com to fix bug #168163: make ati-drivers
+  compile if a previous version is not installed.
 
 *ati-drivers-8.34.8 (22 Feb 2007)
 
