@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/nant
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/ChangeLog,v 1.11 2007/02/21 23:10:15 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/ChangeLog,v 1.12 2007/02/24 06:39:55 compnerd Exp $
+
+  24 Feb 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  +files/nant-0.85-obselencense.patch, nant-0.85.ebuild:
+  Fix for current mono releases
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
