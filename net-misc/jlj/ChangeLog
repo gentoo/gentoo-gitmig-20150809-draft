@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/jlj
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jlj/ChangeLog,v 1.5 2007/02/22 02:28:23 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jlj/ChangeLog,v 1.6 2007/02/24 16:46:52 nixnut Exp $
+
+  24 Feb 2007; nixnut <nixnut@gentoo.org> jlj-2.12.ebuild:
+  Added ~ppc wrt bug 155633
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
