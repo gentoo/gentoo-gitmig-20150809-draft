@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/transset
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/transset/ChangeLog,v 1.8 2005/10/24 04:51:18 spyderous Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/transset/ChangeLog,v 1.9 2007/02/24 16:41:58 joshuabaergen Exp $
+
+  24 Feb 2007; Joshua Baergen <joshuabaergen@gentoo.org>
+  transset-0.1_pre20040821.ebuild:
+  Fix dependencies.  (Bug #168100, Nguyen Thai Ngoc Duy)
 
   24 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
   transset-0.1_pre20040821.ebuild:
