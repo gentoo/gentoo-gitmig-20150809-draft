@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.9_beta1.ebuild,v 1.1 2007/02/24 17:34:58 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.9_beta1.ebuild,v 1.2 2007/02/24 22:47:33 drac Exp $
 
 inherit eutils python toolchain-funcs
 
@@ -43,7 +43,8 @@ RDEPEND=">=dev-lang/python-2.4
 	cdaudio? ( media-plugins/gst-plugins-cdparanoia
 	dev-python/cddb-py )
 	serpentine? ( app-cdr/serpentine )
-	streamripper? ( media-sound/streamripper )"
+	streamripper? ( media-sound/streamripper )
+	gnome-base/librsvg"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"

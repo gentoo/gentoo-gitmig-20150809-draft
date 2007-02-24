@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/exaile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.7 2007/02/24 17:34:58 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.8 2007/02/24 22:47:33 drac Exp $
+
+  24 Feb 2007; Samuli Suominen <drac@gentoo.org> exaile-0.2.9_beta1.ebuild:
+  Add gnome-base/librsvg rdep for bug 168273. Thanks to Maarten Bressen.
 
 *exaile-0.2.9_beta1 (24 Feb 2007)
 
