@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/nant
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/ChangeLog,v 1.12 2007/02/24 06:39:55 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/ChangeLog,v 1.13 2007/02/24 06:46:04 compnerd Exp $
+
+  24 Feb 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  -files/nant-0.85-rc2-is-unix.diff, -files/nant-0.85-rc2-profile.diff,
+  -files/nant-0.85-rc3-mono-1.1.7-compat.diff,
+  -files/nant-0.85_rc3-assignfix.diff, -nant-0.85_rc3.ebuild,
+  -nant-0.85_rc3-r1.ebuild:
+  prune old versions
 
   24 Feb 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   +files/nant-0.85-obselencense.patch, nant-0.85.ebuild:
