@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.131 2007/02/23 21:55:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.132 2007/02/24 11:27:33 opfer Exp $
+
+  24 Feb 2007; Christian Faulhammer <opfer@gentoo.org> use.local.desc:
+  added kpoll and smp USE flags for dev-lang/erlang
 
   23 Feb 2007; Alexis Ballier <aballier@gentoo.org> use.local.desc:
   xdtv schedule useflag added
