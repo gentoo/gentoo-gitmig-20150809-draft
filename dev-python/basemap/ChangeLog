@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/basemap
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/ChangeLog,v 1.1 2007/02/24 01:02:33 bicatali Exp $
+
+*basemap-0.9.4 (24 Feb 2007)
+
+  24 Feb 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/basemap-syslib.patch, +metadata.xml, +basemap-0.9.4.ebuild:
+  Initial import. Close bug #105482 together with dev-python/basemap-data.
+
