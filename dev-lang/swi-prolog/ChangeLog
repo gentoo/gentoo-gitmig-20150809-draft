@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.63 2007/02/23 22:03:15 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.64 2007/02/24 01:33:33 keri Exp $
+
+  24 Feb 2007; keri <keri@gentoo.org> files/swi-prolog-CFLAGS-r3.patch,
+  files/swi-prolog-CFLAGS-r4.patch:
+  Suppress strict-aliasing warnings in jpl package since it is built with
+  -fno-strict-aliasing.
 
   23 Feb 2007; keri <keri@gentoo.org> +files/swi-prolog-ssl-cert.patch,
   swi-prolog-5.6.17-r1.ebuild, swi-prolog-5.6.25.ebuild,

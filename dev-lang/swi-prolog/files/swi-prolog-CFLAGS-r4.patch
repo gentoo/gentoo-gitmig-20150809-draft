@@ -86,7 +86,7 @@ diff -ur pl-5.6.27.orig/packages/db/configure pl-5.6.27/packages/db/configure
 diff -ur pl-5.6.27.orig/packages/jpl/configure pl-5.6.27/packages/jpl/configure
 --- pl-5.6.27.orig/packages/jpl/configure	2006-12-22 02:41:37.000000000 +1300
 +++ pl-5.6.27/packages/jpl/configure	2007-01-27 08:47:00.000000000 +1300
-@@ -3115,11 +3115,11 @@
+@@ -3115,12 +3115,12 @@
  
  fi
  
@@ -96,10 +96,12 @@ diff -ur pl-5.6.27.orig/packages/jpl/configure pl-5.6.27/packages/jpl/configure
  
  if test ! -z "$GCC"; then
 -    COFLAGS="-O2 -cc-options,-fno-strict-aliasing"
+-    CWFLAGS="-Wall"
 +    COFLAGS="$CFLAGS -cc-options,-fno-strict-aliasing"
-     CWFLAGS="-Wall"
++    CWFLAGS="-Wall -Wno-strict-aliasing"
  else
      COFLAGS=-O
+     CWFLAGS=
 diff -ur pl-5.6.27.orig/packages/ltx2htm/configure pl-5.6.27/packages/ltx2htm/configure
 --- pl-5.6.27.orig/packages/ltx2htm/configure	2007-01-24 08:25:14.000000000 +1300
 +++ pl-5.6.27/packages/ltx2htm/configure	2007-01-27 08:49:50.000000000 +1300
