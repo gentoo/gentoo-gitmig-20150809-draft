@@ -1,8 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.7.0.ebuild,v 1.7 2007/01/27 00:48:57 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.7.0.ebuild,v 1.8 2007/02/24 00:32:20 caster Exp $
 
-inherit java-pkg-2
+# don't depend on itself
+JAVA_ANT_DISABLE_ANT_CORE_DEP=true
+# rewriting build.xml files for the testcases has no reason atm
+JAVA_PKG_BSFIX_ALL=no
+inherit java-pkg-2 java-ant-2
 
 MY_P="apache-ant-${PV}"
 
@@ -16,8 +20,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="doc source"
 
+# 1.7.0 instead of $PV in blocks is intentional, >1.7.0 upgrades should
+# be block free (but these fixed blocks should stay there for users upgrading
+# from <1.7.0 to >1.7.0 of course)
 RDEPEND=">=virtual/jdk-1.4
-	!<dev-java/ant-tasks-${PV}
+	!<dev-java/ant-tasks-1.7.0
+	!<dev-java/ant-1.7.0
 	!dev-java/ant-optional"
 DEPEND="${RDEPEND}
 	source? ( app-arch/zip )"
