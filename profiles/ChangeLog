@@ -1,6 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.132 2007/02/24 11:27:33 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.133 2007/02/24 15:15:51 zmedico Exp $
+
+  24 Feb 2007; Zac Medico <zmedico@gentoo.org>
+  base/use.force, base/use.mask, default-bsd/use.mask,
+  default-bsd/fbsd/use.force, default-darwin/use.force,
+  default-darwin/use.mask, uclibc/use.force, uclibc/use.mask:
+  Mask and force ELIBC, KERNEL, and USERLAND flags that apply to specific
+  profiles.
 
   24 Feb 2007; Christian Faulhammer <opfer@gentoo.org> use.local.desc:
   added kpoll and smp USE flags for dev-lang/erlang

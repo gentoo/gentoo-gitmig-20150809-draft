@@ -58,11 +58,10 @@ fastcgi
 
 # Re-add Darwin libc
 -elibc_Darwin
+-kernel_Darwin
+-userland_Darwin
 
 # Mask extraneous elibc/kernel combinations
 elibc_glibc
-elibc_uclibc
 kernel_linux
-kernel_FreeBSD
 userland_GNU
-userland_BSD
