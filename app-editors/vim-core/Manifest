@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX rphillips-invalcolorpatch.diff 722 RMD160 3051c7877483b00ff6bb43c9136bbb4b784c5f3d SHA1 17eae65534c0d96e166f5a71db9ae5b6e49d8270 SHA256 6678f6dd8b84d9b2c2454b346eb1febb17548f3e17b9f33ca6fc877a250660a1
 MD5 c2d0302eae7fc80b2a1cb38ddab9d3d3 files/rphillips-invalcolorpatch.diff 722
 RMD160 3051c7877483b00ff6bb43c9136bbb4b784c5f3d files/rphillips-invalcolorpatch.diff 722
@@ -83,3 +86,10 @@ SHA256 310cdb94903a866f3c63299566b88821d73a15f2a0c10baad928104ffe8c6f9f files/di
 MD5 2ab1706a88671abe59ef65dc747e0c18 files/digest-vim-core-7.0.91 759
 RMD160 e7854097907b79f8c3e9331ca3107dd5c714f4eb files/digest-vim-core-7.0.91 759
 SHA256 52e4ba01fc225e264a74e475d621befdb33cebc0a36f44dde8f92ec5040a9ab0 files/digest-vim-core-7.0.91 759
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.2 (GNU/Linux)
+
+iD8DBQFF3+IPokMzJ47YCzoRAoOhAKCSfpHHHXXUq1pKiiORSiQv09JMUwCfXRR3
+7ug8kI7CzNBJi4vTVUxoaCc=
+=6rA5
+-----END PGP SIGNATURE-----
