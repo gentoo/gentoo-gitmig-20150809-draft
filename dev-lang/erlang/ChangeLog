@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.56 2007/02/22 10:28:42 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.57 2007/02/24 11:30:28 opfer Exp $
+
+*erlang-11.2.3-r1 (24 Feb 2007)
+
+  24 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  +erlang-11.2.3-r1.ebuild:
+  added smp and kpoll USE flags to enable/disable those features, adjusted
+  some bits; thanks to Max Loparyev <max@city.veganet.ru>
 
   22 Feb 2007; Simon Stelling <blubb@gentoo.org> erlang-11.2.3.ebuild:
   put back the export-TARGET patch; bug 167909
