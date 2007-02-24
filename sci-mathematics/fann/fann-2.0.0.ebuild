@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/fann-2.0.0.ebuild,v 1.1 2006/10/28 14:13:26 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/fann-2.0.0.ebuild,v 1.2 2007/02/24 15:54:58 beandog Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/fann/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc python"
 
 DEPEND="python? ( dev-lang/python dev-lang/swig )"
