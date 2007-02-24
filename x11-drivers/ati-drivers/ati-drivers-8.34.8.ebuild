@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.34.8.ebuild,v 1.2 2007/02/24 06:03:10 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.34.8.ebuild,v 1.3 2007/02/24 23:00:23 marienz Exp $
 
 IUSE="acpi qt3"
 
@@ -170,14 +170,14 @@ src_compile() {
 	# The -DUSE_GLU is needed to compile using nvidia headers
 	# according to a comment in ati-drivers-extra-8.33.6.ebuild.
 	"$(tc-getCC)" -o fgl_fglxgears ${CFLAGS} ${LDFLAGS} -DUSE_GLU \
-		-I"${S}"/common/usr/include \
-		-lGL -lGLU -lX11 -lm fgl_glxgears.c || die "fgl_glxgears build failed"
+		-I"${S}"/common/usr/include fgl_glxgears.c \
+		-lGL -lGLU -lX11 -lm || die "fgl_glxgears build failed"
 
 	einfo "Building fglrx_gamma lib"
 	cd "${S}"/extra/lib/fglrx_gamma
 	"$(tc-getCC)" -shared -fpic -o libfglrx_gamma.so.1.0 ${CFLAGS} ${LDFLAGS} \
-		fglrx_gamma.c -DXF86MISC -Wl,-soname,libfglrx_gamma.so.1.0 -lXext \
-		|| die "fglrx_gamma lib build failed"
+		-DXF86MISC -Wl,-soname,libfglrx_gamma.so.1.0 fglrx_gamma.c \
+		-lXext || die "fglrx_gamma lib build failed"
 	ln -s libfglrx_gamma.so.1.0 libfglrx_gamma.so || die "ln failed"
 	ln -s libfglrx_gamma.so.1.0 libfglrx_gamma.so.1 || die "ln failed"
 
