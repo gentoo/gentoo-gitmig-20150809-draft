@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdb/sdb-1.0.2.ebuild,v 1.5 2006/09/20 16:49:31 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdb/sdb-1.0.2.ebuild,v 1.6 2007/02/24 08:05:46 nyhm Exp $
 
 inherit eutils games
 
@@ -27,8 +27,7 @@ src_unpack() {
 		-e "s:sprites/:${GAMES_DATADIR}/${PN}/sprites/:" \
 		-e "s:levels/:${GAMES_DATADIR}/${PN}/levels/:" \
 		src/sdb.h src/game.cpp || die "setting game paths"
-	# This patch should be endian safe
-	use ppc && epatch "${FILESDIR}"/${P}-endian.patch
+	epatch "${FILESDIR}"/${P}-endian.patch
 }
 
 src_compile() {
@@ -42,6 +41,8 @@ src_install() {
 	dogamesbin src/sdb || die "dogamesbin failed"
 	insinto "${GAMES_DATADIR}"/${PN}
 	doins -r levels models snd sprites || die "doins failed"
+	newicon sprites/barrel.png ${PN}.png
+	make_desktop_entry sdb "Shotgun Debugger"
 	dodoc ChangeLog README
 	prepgamesdirs
 }
