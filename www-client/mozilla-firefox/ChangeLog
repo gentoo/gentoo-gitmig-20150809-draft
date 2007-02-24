@@ -1,6 +1,13 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.256 2007/02/21 15:11:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.257 2007/02/24 00:19:24 armin76 Exp $
+
+*mozilla-firefox-2.0.0.2 (24 Feb 2007)
+*mozilla-firefox-1.5.0.10 (24 Feb 2007)
+
+  24 Feb 2007; Raúl Porcel <armin76@gentoo.org>
+  +mozilla-firefox-1.5.0.10.ebuild, +mozilla-firefox-2.0.0.2.ebuild:
+  Version bump, wrt bug 165555
 
   21 Feb 2007; Raúl Porcel <armin76@gentoo.org>
   mozilla-firefox-1.5.0.7.ebuild, mozilla-firefox-1.5.0.8.ebuild,
