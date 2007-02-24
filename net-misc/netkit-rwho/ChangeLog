@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netkit-rwho
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.12 2007/02/09 04:49:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.13 2007/02/24 18:59:18 armin76 Exp $
+
+  24 Feb 2007; Raúl Porcel <armin76@gentoo.org> netkit-rwho-0.17-r2.ebuild:
+  x86 stable wrt bug 168158
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
