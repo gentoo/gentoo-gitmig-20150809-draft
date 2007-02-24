@@ -1,9 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/foobillard-3.0a.ebuild,v 1.10 2006/10/12 22:53:22 flameeyes Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/foobillard-3.0a.ebuild,v 1.11 2007/02/24 01:20:00 nyhm Exp $
 
 inherit eutils autotools games
 
@@ -19,16 +16,13 @@ IUSE="sdl"
 RDEPEND="x11-libs/libXaw
 	x11-libs/libXi
 	virtual/opengl
+	virtual/glu
 	>=media-libs/freetype-2.0.9
-	>=media-libs/libpng-1.2.1
-	|| (
-		sdl? ( media-libs/libsdl )
-		(
-			virtual/glu
-			virtual/glut )
-	)"
+	media-libs/libpng
+	sdl? ( media-libs/libsdl )
+	!sdl? ( virtual/glut )"
 DEPEND="${RDEPEND}
-	app-admin/eselect"
+	app-admin/eselect-opengl"
 
 src_unpack() {
 	unpack ${A}
