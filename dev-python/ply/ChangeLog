@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/ply
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ChangeLog,v 1.7 2007/01/06 23:43:39 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ChangeLog,v 1.8 2007/02/24 21:54:59 lucass Exp $
+
+*ply-2.3 (24 Feb 2007)
+
+  24 Feb 2007; Lukasz Strzygowski <lucass@gentoo.org> +ply-2.3.ebuild:
+  Version bump (bug #168243).
 
 *ply-2.2 (06 Jan 2007)
 
