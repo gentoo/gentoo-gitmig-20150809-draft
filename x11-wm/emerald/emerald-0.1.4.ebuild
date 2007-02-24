@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/emerald-0.1.4.ebuild,v 1.2 2006/12/29 01:05:57 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/emerald-0.1.4.ebuild,v 1.3 2007/02/24 20:09:45 tsunam Exp $
 
 inherit gnome2 
 
@@ -20,7 +20,7 @@ RDEPEND="x11-libs/pango
 	>=x11-libs/libXrender-0.8.4
 	=x11-wm/beryl-core-${PV}"
 
-DEPEND="${RDEPENDS}
+DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.19
 	>=sys-devel/gettext-0.15
 	>=dev-util/intltool-0.35"
