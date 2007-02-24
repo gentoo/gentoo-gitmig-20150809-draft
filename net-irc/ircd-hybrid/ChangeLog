@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ircd-hybrid
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ChangeLog,v 1.22 2007/02/22 02:30:33 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ChangeLog,v 1.23 2007/02/24 13:43:24 nixnut Exp $
+
+  24 Feb 2007; nixnut <nixnut@gentoo.org> ircd-hybrid-7.2.2.ebuild:
+  Added ~ppc wrt bug 167886
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
