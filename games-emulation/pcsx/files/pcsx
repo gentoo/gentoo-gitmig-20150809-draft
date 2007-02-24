@@ -2,28 +2,28 @@
 
 source /sbin/functions.sh
 
-if [ ! -f ${HOME}/.pcsx/config ]; then
+if [[ ! -f ~/.pcsx/config ]]; then
 	einfo You are running PCSX for the first time.
 	einfo Setting up your PCSX environment... Please wait...
 
-	mkdir -p ${HOME}/.pcsx
-	cd ${HOME}/.pcsx
+	mkdir -p ~/.pcsx
+	cd ~/.pcsx
 	mkdir memcards bios cfg plugins
 
-	ln -s /usr/games/bin/pcsx.bin pcsx
-	ln -s /usr/games/lib/psemu/plugins/* plugins/
-	ln -s /usr/share/games/pcsx .pixmaps
+	ln -s GAMES_BINDIR/pcsx.bin pcsx
+	ln -s GAMES_LIBDIR/psemu/plugins/* plugins/
+	ln -s GAMES_DATADIR/pcsx .pixmaps
 
 	cd bios
-	if [ -f /usr/games/lib/psemu/bios/scph1001.bin ]; then
-		ln -s /usr/games/lib/psemu/bios/scph1001.bin .
+	if [[ -f GAMES_LIBDIR/psemu/bios/scph1001.bin ]]; then
+		ln -s GAMES_LIBDIR/psemu/bios/scph1001.bin .
 		biosname=scph1001.bin
 	else
 		biosname=HLE
 	fi
 	cd ..
 
-	cat >${HOME}/.pcsx/config <<EOF
+	cat >~/.pcsx/config <<EOF
 Bios = $biosname
 Gpu = $(basename $(ls plugins/libgpu* | cut -f1 -d\ ) )
 Spu = $(basename $(ls plugins/libspu* | cut -f1 -d\ ) )
@@ -48,9 +48,9 @@ EOF
 	unset biosname
 fi
 
-cd ${HOME}/.pcsx/
+cd ~/.pcsx/
 
-ln -s /usr/games/lib/psemu/cfg/* cfg/ &>/dev/null
-ln -s /usr/games/lib/psemu/plugins/* plugins/ &>/dev/null
+ln -s GAMES_LIBDIR/psemu/cfg/* cfg/ &>/dev/null
+ln -s GAMES_LIBDIR/psemu/plugins/* plugins/ &>/dev/null
 
 exec ./pcsx "$@"

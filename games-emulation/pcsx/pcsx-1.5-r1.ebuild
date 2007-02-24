@@ -1,68 +1,65 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx/pcsx-1.5-r1.ebuild,v 1.9 2006/07/25 04:19:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx/pcsx-1.5-r1.ebuild,v 1.10 2007/02/24 00:53:40 nyhm Exp $
 
 inherit eutils games
 
-S=${WORKDIR}/PcsxSrc-${PV}
-DESCRIPTION="Playstation emulator"
+DESCRIPTION="PlayStation emulator"
 HOMEPAGE="http://www.pcsx.net/"
 SRC_URI="http://www.pcsx.net/downloads/PcsxSrc-${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 -ppc"
+KEYWORDS="-ppc x86"
 IUSE="opengl"
 
-DEPEND="sys-libs/zlib
-	app-arch/unzip
-	>=x11-libs/gtk+-2
+DEPEND=">=x11-libs/gtk+-2
 	gnome-base/libglade"
-RDEPEND="games-emulation/psemu-cdr
+RDEPEND="${DEPEND}
+	games-emulation/psemu-cdr
 	games-emulation/psemu-cdriso
 	games-emulation/psemu-padxwin
 	games-emulation/psemu-padjoy
 	games-emulation/psemu-peopsspu
-	|| (
-		opengl? ( x86? ( games-emulation/psemu-gpupetemesagl ) )
-		games-emulation/psemu-peopssoftgpu
-	)"
+	opengl? ( games-emulation/psemu-gpupetemesagl )
+	!opengl? ( games-emulation/psemu-peopssoftgpu )"
+
+S=${WORKDIR}/PcsxSrc-${PV}
 
 src_unpack() {
-	unpack PcsxSrc-${PV}.tgz
+	unpack ${A}
 	cd "${S}"
 
-	edos2unix `find -regex '.*\.[ch]'`
+	edos2unix $(find -regex '.*\.[ch]')
 
-	epatch "${FILESDIR}"/${PV}-gentoo.patch \
-		"${FILESDIR}/${P}"-gcc41.patch
+	epatch \
+		"${FILESDIR}"/${PV}-gentoo.patch \
+		"${FILESDIR}"/${P}-gcc41.patch
 	sed -i \
 		-e "s:Plugin/:${GAMES_LIBDIR}/psemu/plugins/:" \
 		-e "s:Bios/:${GAMES_LIBDIR}/psemu/bios/:" \
 		-e 's:Pcsx.cfg:~/.pcsx/config:' \
 		Linux/LnxMain.c \
 		|| die "sed LnxMain.c failed"
-	if [ "${ARCH}" = "ppc" ]; then
-		sed -i \
-			-e "s:^CPU\ =.*:CPU = powerpc:" Linux/Makefile \
-			|| die "sed Linux/Makefile failed"
-		sed -i \
-			-e "s:__LINUX__:__i386__:g" Gte.c \
-			|| die "sed Gte.c failed"
-	fi
+	sed \
+		-e "s:GAMES_DATADIR:${GAMES_DATADIR}:" \
+		-e "s:GAMES_LIBDIR:${GAMES_LIBDIR}:" \
+		-e "s:GAMES_BINDIR:${GAMES_BINDIR}:" \
+		"${FILESDIR}"/pcsx > "${T}"/pcsx \
+		|| die "sed failed"
 }
 
 src_compile() {
 	cd Linux
-	econf || die "econf failed"
+	egamesconf || die
 	emake OPTIMIZE="${CFLAGS}" STRIP=true || die "emake failed"
 }
 
 src_install() {
-	newgamesbin Linux/pcsx pcsx.bin
-	dogamesbin "${FILESDIR}"/pcsx
+	newgamesbin Linux/pcsx pcsx.bin || die "newgamesbin failed"
+	dogamesbin "${T}"/pcsx || die "dogamesbin failed"
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins Linux/.pixmaps/*
+	doins Linux/.pixmaps/* || die "doins failed"
 	dodoc Docs/*
 	prepgamesdirs
 }

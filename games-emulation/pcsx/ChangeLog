@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/pcsx
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx/ChangeLog,v 1.9 2006/07/25 04:19:19 mr_bones_ Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx/ChangeLog,v 1.10 2007/02/24 00:53:40 nyhm Exp $
+
+  24 Feb 2007; Tristan Heaven <nyhm@gentoo.org> files/pcsx,
+  pcsx-1.5-r1.ebuild:
+  Fix dependencies, bug #168179
 
   25 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org> pcsx-1.5-r1.ebuild:
   avoid pre-stripping binaries; tidy - patch from Tristan Heaven via bug #137830
