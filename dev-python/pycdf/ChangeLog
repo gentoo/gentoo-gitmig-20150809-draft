@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycdf
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdf/ChangeLog,v 1.7 2007/02/22 00:34:36 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdf/ChangeLog,v 1.8 2007/02/24 16:04:43 beandog Exp $
+
+  24 Feb 2007; Steve Dibb <beandog@gentoo.org> pycdf-0.5.2.ebuild,
+  pycdf-0.6.2_rc1.ebuild:
+  add ~amd64, bug 167917
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
