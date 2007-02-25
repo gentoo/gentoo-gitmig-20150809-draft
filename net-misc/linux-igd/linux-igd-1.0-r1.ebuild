@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/linux-igd-1.0.ebuild,v 1.1 2007/02/25 01:48:32 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/linux-igd-1.0-r1.ebuild,v 1.1 2007/02/25 12:57:46 gurligebis Exp $
 
 DESCRIPTION="Deamon that emulates Microsoft's Internet Connection Sharing (ICS)
 		for UPnP-aware clients"
@@ -19,6 +19,7 @@ S=${WORKDIR}/linuxigd-${PV}
 src_compile() {
 	sed -i -e "s|/etc/linuxigd|${D}/etc/linuxigd|" \
 			-e "s|/usr/bin|${D}/usr/bin|" Makefile
+	sed -i -e "s|/etc/upnpd.conf|/etc/linuxigd/upnpd.conf|" globals.h
 
 	emake || die "compile failed"
 }
@@ -33,8 +34,8 @@ src_install() {
 	doins etc/ligd.gif
 	doins etc/upnpd.conf
 
-	newinitd ${FILESDIR}/upnpd.initd-${PV} upnpd
-	newconfd ${FILESDIR}/upnpd.confd-${PV} upnpd
+	newinitd ${FILESDIR}/upnpd.initd-${PVR} upnpd
+	newconfd ${FILESDIR}/upnpd.confd-${PVR} upnpd
 
 	dodoc CHANGES INSTALL LICENSE
 }
