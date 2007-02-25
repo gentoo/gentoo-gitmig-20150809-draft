@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arpstar/arpstar-0.5.5-r1.ebuild,v 1.3 2006/08/08 13:26:22 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arpstar/arpstar-0.5.5-r1.ebuild,v 1.4 2007/02/25 09:21:37 genstef Exp $
 
 inherit eutils linux-mod
 
@@ -16,8 +16,12 @@ S=${WORKDIR}
 
 MODULE_NAMES="arpstar(net:)"
 BUILD_TARGETS=" "
-BUILD_PARAMS="KDIR=${KV_DIR}"
 CONFIG_CHECK="NETFILTER"
+
+pkg_setup() {
+	linux-mod_pkg_setup
+	BUILD_PARAMS="KDIR=${KV_DIR}"
+}
 
 src_unpack() {
 	unpack ${A}
