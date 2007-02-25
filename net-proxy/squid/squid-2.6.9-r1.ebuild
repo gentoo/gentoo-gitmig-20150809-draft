@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.6.9-r1.ebuild,v 1.1 2007/02/25 20:30:45 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.6.9-r1.ebuild,v 1.2 2007/02/25 20:32:41 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -59,7 +59,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local basic_modules="getpwnam,NCSA,MSNT" 
+	local basic_modules="getpwnam,NCSA,MSNT"
 	use samba && basic_modules="SMB,multi-domain-NTLM,${basic_modules}"
 	use ldap && basic_modules="LDAP,${basic_modules}"
 	use pam && basic_modules="PAM,${basic_modules}"
@@ -72,7 +72,7 @@ src_compile() {
 
 	local ntlm_helpers="fakeauth"
 	use samba && ntlm_helpers="SMB,${ntlm_helpers}"
-	
+
 	local myconf=""
 
 	# Support for uclibc #61175
