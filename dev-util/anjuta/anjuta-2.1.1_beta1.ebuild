@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.1.1_beta1.ebuild,v 1.1 2007/02/24 04:28:37 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.1.1_beta1.ebuild,v 1.2 2007/02/25 20:53:49 compnerd Exp $
 
 inherit eutils gnome2 eutils autotools
 
@@ -28,6 +28,7 @@ RDEPEND=">=dev-libs/glib-2.8.0
 	 >=x11-libs/pango-1.1.1
 	 >=dev-libs/gdl-0.7.0
 	 >=dev-util/devhelp-0.13
+	 >=app-text/gnome-doc-utils-0.3.2
 	 >=dev-libs/gnome-build-0.1.4
 	 >=dev-libs/libpcre-5.0
 	 >=x11-libs/libwnck-2.12
