@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.9 2007/02/21 19:57:50 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.10 2007/02/25 09:30:56 genstef Exp $
+
+  25 Feb 2007; <genstef@gentoo.org> virtualbox-1.3.4-r1.ebuild,
+  virtualbox-9999.ebuild:
+  use KV_DIR only after linux-mod_pkg_setup, bug 168051
 
   21 Feb 2007; Simon Stelling <blubb@gentoo.org> virtualbox-9999.ebuild:
   re-keyword ~amd64 per bug 167001 comment #6

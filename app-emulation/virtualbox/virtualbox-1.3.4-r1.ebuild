@@ -32,9 +32,13 @@ RDEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-BUILD_PARAMS="KERN_DIR=${KV_DIR} KERNOUT=${KV_OUT_DIR}"
 BUILD_TARGETS="all"
 MODULE_NAMES="vboxdrv(misc:${S}/out/linux.${ARCH}/release/bin/src:${S}/out/linux.${ARCH}/release/bin/src)"
+
+pkg_setup() {
+	linux-mod_pkg_setup
+	BUILD_PARAMS="KERN_DIR=${KV_DIR} KERNOUT=${KV_OUT_DIR}"
+}
 
 src_compile() {
 	cd "${S}"

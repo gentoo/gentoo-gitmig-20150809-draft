@@ -41,12 +41,12 @@ S=${WORKDIR}
 
 RESTRICT="primaryuri"
 
-BUILD_PARAMS="KERN_DIR=${KV_DIR} KERNOUT=${KV_OUT_DIR}"
 BUILD_TARGETS="all"
 MODULE_NAMES="vboxdrv(misc:${S}/src)"
 
 pkg_setup() {
 	linux-mod_pkg_setup
+	BUILD_PARAMS="KERN_DIR=${KV_DIR} KERNOUT=${KV_OUT_DIR}"
 	check_license
 }
 
