@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54/prism54-20050125.ebuild,v 1.2 2005/07/04 18:27:45 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54/prism54-20050125.ebuild,v 1.3 2007/02/25 09:04:16 genstef Exp $
 
 inherit linux-mod
 
@@ -16,7 +16,6 @@ RDEPEND="net-wireless/prism54-firmware
 		net-wireless/wireless-tools"
 
 MODULE_NAMES="prism54(net:${S}/ksrc)"
-BUILD_PARAMS="KVER=${KV_FULL} KDIR=${KV_DIR}"
 BUILD_TARGETS="modules"
 
 CONFIG_CHECK="!PRISM54 NET_RADIO FW_LOADER"
@@ -34,6 +33,7 @@ PCMCIA_ERROR=CARDBUS_ERROR="General setup  --->
 
 pkg_setup() {
 	linux-mod_pkg_setup
+	BUILD_PARAMS="KVER=${KV_FULL} KDIR=${KV_DIR}"
 	if kernel_is ge 2 6 10; then
 		eerror "The driver in your kernel is newer than this snapshot, please use it"
 		eerror "together with prism54-firmware instead of this ebuild."
