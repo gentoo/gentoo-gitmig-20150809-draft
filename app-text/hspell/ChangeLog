@@ -1,6 +1,11 @@
 # ChangeLog for app-text/hspell
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/ChangeLog,v 1.35 2007/02/25 11:37:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/ChangeLog,v 1.36 2007/02/25 11:49:32 alonbl Exp $
+
+  25 Feb 2007; Alon Bar-Lev <alonbl@gentoo.org> -hspell-0.4.ebuild,
+  -hspell-0.5.ebuild, -hspell-0.6.ebuild, -hspell-0.7.ebuild,
+  -hspell-1.0.ebuild:
+  Cleanup
 
   25 Feb 2007; Raúl Porcel <armin76@gentoo.org> hspell-1.0-r1.ebuild:
   x86 stable wrt bug 152274
