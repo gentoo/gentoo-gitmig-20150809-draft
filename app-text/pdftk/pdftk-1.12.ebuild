@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/pdftk-1.12.ebuild,v 1.10 2006/09/03 09:53:10 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/pdftk-1.12.ebuild,v 1.11 2007/02/25 16:09:43 corsair Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.pdfhacks.com/pdftk/${P}.tar.gz
 	mirror://debian/pool/main/p/pdftk/pdftk_1.12-11.diff.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE="nodrm"
 DEPEND="virtual/libc
 	>=sys-devel/gcc-3.3"
