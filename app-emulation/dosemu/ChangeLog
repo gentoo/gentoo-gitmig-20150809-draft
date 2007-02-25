@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/dosemu
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.38 2007/02/21 21:43:05 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.39 2007/02/25 15:27:55 drac Exp $
+
+  25 Feb 2007; Samuli Suominen <drac@gentoo.org> dosemu-1.3.3.ebuild:
+  Remove virtual/x11 usage wrt bug 166370.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
