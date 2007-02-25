@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2me-bin/sun-j2me-bin-2.2-r3.ebuild,v 1.3 2007/01/26 19:16:58 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2me-bin/sun-j2me-bin-2.2-r3.ebuild,v 1.4 2007/02/25 23:33:38 caster Exp $
 
 inherit java-pkg-2
 
@@ -28,10 +28,13 @@ MY_FILE=${DISTDIR}/${BINARY}
 
 pkg_nofetch() {
 
-	einfo "Please download ${BINARY} and the patch"
-	einfo "${PATCH} from:"
-	einfo "http://java.sun.com/products/sjwtoolkit/download-2_2.html"
-	einfo "and move it to ${DISTDIR}"
+	einfo "Please navigate to http://java.sun.com/products/sjwtoolkit/download-2_2.html"
+	einfo "scroll down and click the 1st Download button for J2ME Wireless Toolkit 2.2"
+	einfo "and download ${BINARY}"
+	einfo "then click the 2nd Download button for J2ME Wireless Toolkit 2.2 Patch 200511"
+	einfo "and download ${PATCH}"
+	einfo ""
+	einfo "Put both files to ${DISTDIR} and resume the installation"
 
 }
 
