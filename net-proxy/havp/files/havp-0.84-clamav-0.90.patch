@@ -1,0 +1,22 @@
+diff -Nru havp-0.84.orig/havp/scanners/clamlibscanner.cpp havp-0.84/havp/scanners/clamlibscanner.cpp
+--- havp-0.84.orig/havp/scanners/clamlibscanner.cpp        2007-02-20 17:39:33.202195475 +0100
++++ havp-0.84/havp/scanners/clamlibscanner.cpp 2007-02-20 17:37:16.300080752 +0100
+@@ -29,7 +29,7 @@
+ 
+     LogFile::ErrorMessage("ClamAV: Using database directory: %s\n", dbdir);
+ 
+-    if ( (ret = cl_loaddbdir(dbdir, &root, &no)) != 0 )
++    if ( (ret = cl_load(dbdir, &root, &no, CL_DB_STDOPT)) != 0 )
+     {
+         LogFile::ErrorMessage("ClamAV: Could not load database: %s\n", cl_strerror(ret));
+         return false;
+@@ -65,7 +65,7 @@
+ 
+         cl_settempdir(Params::GetConfigString("TEMPDIR").c_str(), 0);
+ 
+-        if ( (ret = cl_loaddbdir(dbdir, &root, &no)) != 0 )
++        if ( (ret = cl_load(dbdir, &root, &no, CL_DB_STDOPT)) != 0 )
+         {
+             LogFile::ErrorMessage("ClamAV: Could not reload database: %s\n", cl_strerror(ret));
+             return false;
+
