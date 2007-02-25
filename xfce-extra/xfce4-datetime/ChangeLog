@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-datetime
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-datetime/ChangeLog,v 1.17 2007/02/11 00:06:07 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-datetime/ChangeLog,v 1.18 2007/02/25 16:52:50 drac Exp $
+
+  25 Feb 2007; Samuli Suominen <drac@gentoo.org>
+  xfce4-datetime-0.3.1-r1.ebuild:
+  Porting to Modular X.
 
 *xfce4-datetime-0.5.0 (11 Feb 2007)
 
