@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkpad/thinkpad-5.9-r1.ebuild,v 1.4 2006/10/20 19:01:59 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkpad/thinkpad-5.9-r1.ebuild,v 1.5 2007/02/25 08:57:47 genstef Exp $
 
 inherit eutils linux-mod
 
@@ -14,10 +14,6 @@ SLOT="0"
 KEYWORDS="x86"
 
 IUSE=""
-
-BUILD_PARAMS="KSRC=${KV_DIR}"
-
-MODULESD_THINKPAD_DOCS="README"
 
 pkg_setup() {
 	linux-info_pkg_setup
@@ -38,8 +34,8 @@ pkg_setup() {
 				smapi(thinkpad:${S}/${KV_MAJOR}.${KV_MINOR}/drivers)
 				superio(thinkpad:${S}/${KV_MAJOR}.${KV_MINOR}/drivers)
 				rtcmosram(thinkpad:${S}/${KV_MAJOR}.${KV_MINOR}/drivers)"
-
-	linux-mod_pkg_setup
+	MODULESD_THINKPAD_DOCS="README"
+	BUILD_PARAMS="KSRC=${KV_DIR}"
 }
 
 src_unpack() {

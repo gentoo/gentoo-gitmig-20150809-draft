@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/thinkpad
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkpad/ChangeLog,v 1.18 2007/02/10 07:19:47 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkpad/ChangeLog,v 1.19 2007/02/25 08:57:47 genstef Exp $
+
+  25 Feb 2007; <genstef@gentoo.org> ChangeLog:
+  use KV_DIR only after pkg setup
 
   10 Feb 2007; Steev Klimaszewski <steev@gentoo.org>
   -files/thinkpad-5.8-cpu_ptr.patch, -thinkpad-3.2.ebuild,
