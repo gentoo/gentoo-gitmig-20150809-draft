@@ -1,7 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-client/irc-client-2.10.3_p7.ebuild,v 1.4 2007/02/24 14:11:03 armin76 Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-client/irc-client-2.10.3_p7.ebuild,v 1.5 2007/02/25 18:55:37 armin76 Exp $
 
 MY_P=irc${PV/_/}
 DESCRIPTION="A simplistic RFC compliant IRC client"
