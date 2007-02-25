@@ -1,6 +1,12 @@
 # ChangeLog for app-office/lyx
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.96 2007/02/18 23:52:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.97 2007/02/25 16:27:54 matsuu Exp $
+
+  25 Feb 2007; MATSUU Takuto <matsuu@gentoo.org>
+  -files/lyx-1.4.1-dvips-R0.patch, -files/lyx-1.4.1-gentoo.patch,
+  -lyx-1.4.1-r1.ebuild, lyx-1.4.2.ebuild, lyx-1.4.4.ebuild:
+  Dropped virtual/x11, bug #156381.
+  Remove old version.
 
   18 Feb 2007; Jason Wever <weeve@gentoo.org> lyx-1.4.2.ebuild:
   Stable on SPARC wrt bug #167012.

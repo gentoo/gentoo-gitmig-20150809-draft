@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.4.2.ebuild,v 1.9 2007/02/18 23:52:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.4.2.ebuild,v 1.10 2007/02/25 16:27:54 matsuu Exp $
 
 inherit kde-functions fdo-mime eutils libtool flag-o-matic font
 
@@ -20,15 +20,10 @@ SLOT="0"
 KEYWORDS="amd64 ppc ~ppc64 sparc x86"
 IUSE="cjk cups debug gtk nls qt3 gnome"
 
-RDEPEND="|| (
-		virtual/x11
-		(
-			x11-libs/libXi
-			x11-libs/libXrandr
-			x11-libs/libXcursor
-			x11-libs/libXft
-		)
-	)
+RDEPEND="x11-libs/libXi
+	x11-libs/libXrandr
+	x11-libs/libXcursor
+	x11-libs/libXft
 	virtual/ghostscript
 	virtual/aspell-dict
 	dev-tex/latex2html
@@ -43,15 +38,10 @@ RDEPEND="|| (
 # does lyx only need qt to compile but not run ?
 # I'll look into it <obz@gentoo.org>
 DEPEND="${RDEPEND}
-	|| (
-		virtual/x11
-		(
-			x11-libs/libX11
-			x11-libs/libXt
-			x11-libs/libXpm
-			x11-proto/xproto
-		)
-	)
+	x11-libs/libX11
+	x11-libs/libXt
+	x11-libs/libXpm
+	x11-proto/xproto
 	virtual/tetex
 	>=dev-lang/perl-5
 	nls? ( sys-devel/gettext )
