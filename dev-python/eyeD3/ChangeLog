@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/eyeD3
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.22 2007/01/28 21:49:18 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.23 2007/02/25 15:10:57 lucass Exp $
+
+*eyeD3-0.6.12 (25 Feb 2007)
+
+  25 Feb 2007; Lukasz Strzygowski <lucass@gentoo.org> +eyeD3-0.6.12.ebuild:
+  Version bump, added NEED_PYTHON.
 
 *eyeD3-0.6.11 (28 Jan 2007)
 
