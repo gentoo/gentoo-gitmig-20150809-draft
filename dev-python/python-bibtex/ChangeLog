@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-bibtex
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-bibtex/ChangeLog,v 1.8 2006/07/18 12:09:21 nattfodd Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-bibtex/ChangeLog,v 1.9 2007/02/25 10:26:09 lucass Exp $
+
+*python-bibtex-1.2.3 (25 Feb 2007)
+
+  25 Feb 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  +python-bibtex-1.2.3.ebuild:
+  Version bump (bug #167873). Added src_test.
 
 *python-bibtex-1.2.2 (18 Jul 2006)
 
