@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/bewan-adsl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/ChangeLog,v 1.18 2007/01/15 21:35:18 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/ChangeLog,v 1.19 2007/02/25 09:12:32 genstef Exp $
+
+  25 Feb 2007; <genstef@gentoo.org> ChangeLog:
+  use KV_DIR only after linux-mod_pkg_setup, bug 168051
 
   15 Jan 2007; Alin Năstac <mrness@gentoo.org> bewan-adsl-0.9.3-r2.ebuild:
   Add informational messages in postinst function, thanks to Sebastián

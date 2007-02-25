@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.31_alpha10-r3.ebuild,v 1.2 2006/09/21 19:07:35 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.31_alpha10-r3.ebuild,v 1.3 2007/02/25 09:15:59 genstef Exp $
 
 inherit linux-mod eutils
 
@@ -24,9 +24,6 @@ S_2_4="${WORKDIR}/${MY_P}"
 
 DEPEND="sys-apps/util-linux"
 
-BUILD_TARGETS="module"
-BUILD_PARAMS="KERNEL_DIR='${KV_DIR}'"
-
 pkg_setup() {
 	if kernel_is 2 4; then
 		MODULE_NAMES="lt_modem(lt_modem:) lt_serial(lt_modem:)"
@@ -44,6 +41,9 @@ pkg_setup() {
 		SERIAL_8250_ERROR="This driver requires you to compile your kernel with serial core (CONFIG_SERIAL_8250) support."
 	fi
 	linux-mod_pkg_setup
+
+	BUILD_TARGETS="module"
+	BUILD_PARAMS="KERNEL_DIR='${KV_DIR}'"
 }
 
 src_unpack() {

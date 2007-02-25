@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/eagle-usb/eagle-usb-2.3.3.ebuild,v 1.3 2006/04/30 13:14:08 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/eagle-usb/eagle-usb-2.3.3.ebuild,v 1.4 2007/02/25 09:14:08 genstef Exp $
 
 inherit linux-mod eutils
 
@@ -19,7 +19,6 @@ RDEPEND="net-dialup/ppp
 MODULE_NAMES="${PN}(net:${S}/driver)"
 CONFIG_CHECK="!IPV6 USB"
 BUILD_TARGETS=" "
-BUILD_PARAMS="KERNELSRC='${KV_DIR}'"
 
 pkg_setup() {
 	if kernel_is ge 2 6 16; then
@@ -31,6 +30,7 @@ pkg_setup() {
 		die "unsupported kernel version"
 	fi
 	linux-mod_pkg_setup
+	BUILD_PARAMS="KERNELSRC='${KV_DIR}'"
 }
 
 src_unpack() {

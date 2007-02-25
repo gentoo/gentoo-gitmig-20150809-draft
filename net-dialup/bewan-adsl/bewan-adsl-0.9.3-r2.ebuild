@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/bewan-adsl-0.9.3-r2.ebuild,v 1.5 2007/01/15 21:35:18 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/bewan-adsl-0.9.3-r2.ebuild,v 1.6 2007/02/25 09:12:32 genstef Exp $
 
 inherit eutils linux-mod
 
@@ -21,7 +21,6 @@ S="${WORKDIR}/unicorn"
 
 PCI_S="${S}/unicorn_pci"
 USB_S="${S}/unicorn_usb"
-BUILD_PARAMS="KERNEL_SOURCES=${KV_DIR} KVERS=${KV_FULL}"
 BUILD_TARGETS="modules"
 CONFIG_CHECK="ATM"
 ATM_ERROR="This driver requires you to build your kernel with support for Asynchronous Transfer Mode (ATM)"
@@ -31,6 +30,7 @@ pkg_setup() {
 	use usb && MODULE_NAMES="${MODULE_NAMES} unicorn_usb_atm(extra:${USB_S}) unicorn_usb_eth(extra:${USB_S})"
 
 	linux-mod_pkg_setup
+	BUILD_PARAMS="KERNEL_SOURCES=${KV_DIR} KVERS=${KV_FULL}"
 }
 
 src_unpack() {
