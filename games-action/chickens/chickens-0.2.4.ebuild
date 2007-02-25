@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/chickens-0.2.4.ebuild,v 1.9 2006/09/20 16:42:42 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/chickens-0.2.4.ebuild,v 1.10 2007/02/25 13:01:28 nyhm Exp $
 
 inherit games
 
@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND="media-libs/allegro"
 
-S=${WORKDIR}/chickens
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
@@ -31,19 +31,18 @@ src_unpack() {
 		-e "s:\"sound/:\"${GAMES_DATADIR}/${PN}/sound/:" \
 		-e "s:\"dat/:\"${GAMES_DATADIR}/${PN}/dat/:" main.cpp README \
 		|| die "sed failed"
-	chmod a-x {dat,sound}/*
+	sed -i '/^CPPFLAGS/d' configure || die "sed failed"
 }
 
 src_install() {
-	dogamesbin chickens || die "dogamesbin failed"
-	dodir "${GAMES_DATADIR}/${PN}"
-	cp -r {dat,sound} "${D}/${GAMES_DATADIR}/${PN}" \
-		|| die "cp failed"
+	dogamesbin ${PN} || die "dogamesbin failed"
+	insinto "${GAMES_DATADIR}"/${PN}
+	doins -r dat sound || die "doins failed"
 	dodoc AUTHOR README
-	insinto "${GAMES_STATEDIR}/${PN}"
+	insinto "${GAMES_STATEDIR}"/${PN}
 	doins HighScores || die "doins failed"
-	insinto "${GAMES_SYSCONFDIR}/${PN}"
+	insinto "${GAMES_SYSCONFDIR}"/${PN}
 	doins options.cfg || die "doins failed"
-	fperms g+w "${GAMES_STATEDIR}/${PN}/HighScores"
+	fperms g+w "${GAMES_STATEDIR}"/${PN}/HighScores
 	prepgamesdirs
 }
