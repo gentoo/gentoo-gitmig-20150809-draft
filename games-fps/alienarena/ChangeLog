@@ -1,0 +1,13 @@
+# ChangeLog for games-fps/alienarena
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/ChangeLog,v 1.1 2007/02/25 10:15:30 nyhm Exp $
+
+*alienarena-20070224 (25 Feb 2007)
+
+  25 Feb 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/alienarena-20070224-build.patch,
+  +files/alienarena-20070224-exec-stack.patch,
+  +files/alienarena-20070224-paths.patch, +metadata.xml,
+  +alienarena-20070224.ebuild:
+  Initial commit, based on Paul Bredbury's ebuild from bug #110972
+
