@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/timidity-shompatches
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-shompatches/ChangeLog,v 1.22 2007/02/24 15:28:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-shompatches/ChangeLog,v 1.23 2007/02/25 22:57:58 josejx Exp $
+
+  25 Feb 2007; Joseph Jezak <josejx@gentoo.org>
+  timidity-shompatches-19960409-r4.ebuild:
+  Actually marked it ppc stable...
 
   24 Feb 2007; Jeroen Roovers <jer@gentoo.org>
   timidity-shompatches-19960409-r4.ebuild:
