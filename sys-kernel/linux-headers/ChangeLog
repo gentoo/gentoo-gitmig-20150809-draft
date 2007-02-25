@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.216 2007/02/24 15:56:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.217 2007/02/25 17:57:50 kumba Exp $
+
+  25 Feb 2007; Joshua Kinard <kumba@gentoo.org>
+  linux-headers-2.6.19.2-r2.ebuild:
+  linux-headers is the new thang for mips in 2007.1-dev. mips-headers is on
+  its way out. To use this, please switch to using the 2007.1-dev mips
+  profile.
 
 *linux-headers-2.6.20-r1 (24 Feb 2007)
 
