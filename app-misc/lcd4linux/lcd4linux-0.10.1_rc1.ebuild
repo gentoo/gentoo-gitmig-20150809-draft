@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.10.1_rc1.ebuild,v 1.1 2007/02/24 23:20:16 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.10.1_rc1.ebuild,v 1.2 2007/02/25 01:58:13 rbu Exp $
 
 inherit eutils multilib
 
@@ -8,7 +8,7 @@ MY_P=${P/_rc/-RC}
 
 DESCRIPTION="Shows system and ISDN information on an external display or in a X11 window"
 HOMEPAGE="http://ssl.bulix.org/projects/${PN}"
-SRC_URI="http://ssl.bulix.org/projects/lcd4linux/attachment/wiki/Download/${MY_P}.tar.gz"
+SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
