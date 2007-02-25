@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/paragui
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/ChangeLog,v 1.25 2007/02/22 02:04:32 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/ChangeLog,v 1.26 2007/02/25 13:23:06 drac Exp $
+
+  25 Feb 2007; Samuli Suominen <drac@gentoo.org>
+  +files/paragui-1.1.8-asneeded.patch, paragui-1.1.8.ebuild:
+  Add --as-needed patch for test/keyboard compile.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

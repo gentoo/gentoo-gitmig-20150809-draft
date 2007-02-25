@@ -1,0 +1,11 @@
+diff -ur paragui-1.1.8.orig/src/Makefile.am paragui-1.1.8/src/Makefile.am
+--- paragui-1.1.8.orig/src/Makefile.am	2004-09-26 21:13:42.000000000 +0300
++++ paragui-1.1.8/src/Makefile.am	2007-02-25 14:19:14.000000000 +0200
+@@ -11,6 +11,7 @@
+ 	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)
+ 
+ libparagui_la_LIBADD = \
++	$(FREETYPE_LIBS) \
+ 	$(SIGC_LIBS) \
+ 	$(SDL_LIBS) \
+ 	$(EXPAT_LIB) \

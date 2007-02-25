@@ -1,8 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/paragui-1.1.8.ebuild,v 1.5 2006/09/06 20:36:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/paragui-1.1.8.ebuild,v 1.6 2007/02/25 13:23:06 drac Exp $
 
-inherit eutils
+WANT_AUTOMAKE="1.8"
+
+inherit autotools eutils
 
 DESCRIPTION="A cross-platform high-level application framework and GUI library"
 HOMEPAGE="http://www.paragui.org/"
@@ -27,6 +29,13 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-header.patch
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+}
+
+src_compile() {
+	eautomake
+	econf
+	emake || die "emake failed."
 }
 
 src_install() {
