@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.121 2007/02/24 18:42:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.122 2007/02/25 18:29:25 corsair Exp $
+
+  25 Feb 2007; Markus Rothe <corsair@gentoo.org> pwlib-1.10.4.ebuild:
+  Stable on ppc64; bug #167643
 
   24 Feb 2007; Raúl Porcel <armin76@gentoo.org> pwlib-1.10.4.ebuild:
   x86 stable wrt bug 167643
