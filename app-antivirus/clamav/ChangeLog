@@ -1,6 +1,14 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.205 2007/02/22 13:22:04 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.206 2007/02/25 11:27:25 ticho Exp $
+
+  25 Feb 2007; Andrej Kacian <ticho@gentoo.org>
+  +files/clamav-0.90-compat.patch, clamav-0.90.ebuild:
+  Added a patch to include cl_loaddbdir() in clamav.h to prevent other apps
+  using this function from dying during compile-time. Other API
+  incompatibilities will be dealt with as they come (patch if it's trivial,
+  suggest users to whine upstream if it's not). Oh, and marked 0.90 stable on
+  x86, as per security bug #167201.
 
   22 Feb 2007; Patrick McLean <chutzpah@gentoo.org> clamav-0.90.ebuild:
   Stable on amd64 (bug #167201).
