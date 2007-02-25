@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6866 2007/02/25 12:13:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6867 2007/02/25 16:29:10 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Samuli Suominen <drac@gentoo.org> (24 Feb 2007)
+# Has no stable keywords and is not ported to Xfce 4.4.
+# Masked for removal.
+xfce-extra/xfce4-websearch
 
 # Marcelo Goes <vanquirius@gentoo.org> (24 Feb 2007)
 # Masked because scanning (SANE) is broken
