@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.22.2.ebuild,v 1.1 2007/02/03 23:31:28 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.22.2.ebuild,v 1.2 2007/02/25 23:50:49 rl03 Exp $
 
 inherit webapp
 
@@ -34,6 +34,8 @@ RDEPEND="
 	virtual/perl-Storable
 
 	extras? (
+	dev-perl/HTML-Scrubber
+	dev-perl/Template-GD
 	>=dev-perl/Chart-2.3
 	>=dev-perl/GD-1.20
 	dev-perl/GDGraph
