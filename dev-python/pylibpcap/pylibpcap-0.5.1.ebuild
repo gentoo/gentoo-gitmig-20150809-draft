@@ -1,32 +1,32 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibpcap/pylibpcap-0.5.1.ebuild,v 1.4 2007/02/25 15:54:29 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibpcap/pylibpcap-0.5.1.ebuild,v 1.5 2007/02/25 21:43:00 dev-zero Exp $
 
 inherit distutils eutils
 
 DESCRIPTION="Python interface to libpcap"
-HOMEPAGE="http://sourceforge.net/projects/${PN}/"
+HOMEPAGE="http://sourceforge.net/projects/pylibpcap/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 x86"
-IUSE=""
+IUSE="examples"
 
-DEPEND="virtual/python
-	virtual/libpcap
-	dev-lang/swig"
+RDEPEND="virtual/libpcap"
+DEPEND="${RDEPEND}
+	>=dev-lang/swig-1.3.29"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	if $(has_version \>=dev-lang/swig-1.3.29); then
-		epatch ${FILESDIR}/${PN}-swig-1.3.29.patch
-	fi
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-swig-1.3.29.patch"
 }
 
 src_install() {
 	distutils_src_install
-	insinto /usr/share/doc/${PF}/examples
-	doins examples/*
+	if use examples ; then
+		insinto /usr/share/doc/${PF}
+		doins -r examples
+	fi
 }
