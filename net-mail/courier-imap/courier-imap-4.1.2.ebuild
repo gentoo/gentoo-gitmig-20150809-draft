@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.1.2.ebuild,v 1.1 2007/02/23 15:59:32 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.1.2.ebuild,v 1.2 2007/02/25 22:56:32 chutzpah Exp $
+
+WANT_AUTOCONF="2.6"
 
 inherit autotools eutils multilib
 IUSE="fam berkdb gdbm debug ipv6 nls selinux"

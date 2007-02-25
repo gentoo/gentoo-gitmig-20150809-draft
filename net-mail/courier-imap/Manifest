@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX authdaemond-3.0.4-r1 1062 RMD160 5e9184dc8c8ccbb528252c0795b5cd62b1d1b9c8 SHA1 55180242453ee47c951d265615da7a0902a5dc1f SHA256 2731b87fec98ae4ecdb5cfdb5917894e28eaf768f68555462d801c116cfa2a0d
 MD5 71a551a4f772f4299f9752f3d043b8c5 files/authdaemond-3.0.4-r1 1062
 RMD160 5e9184dc8c8ccbb528252c0795b5cd62b1d1b9c8 files/authdaemond-3.0.4-r1 1062
@@ -125,6 +122,10 @@ AUX courier-imap-4.0.6-db4-configure.in.patch 1623 RMD160 10dcea6643be49b1be4241
 MD5 c1fdae0da5552decc362bc031c3a4b5b files/courier-imap-4.0.6-db4-configure.in.patch 1623
 RMD160 10dcea6643be49b1be4241a02cd153a508898332 files/courier-imap-4.0.6-db4-configure.in.patch 1623
 SHA256 809e730d6fb147bc1e8b59c6f23127cf3a38b14a00d723161cd6c85b1ab5e957 files/courier-imap-4.0.6-db4-configure.in.patch 1623
+AUX courier-imap-4.0.6-db4-tcpd_configure.in.patch 264 RMD160 49e1deaa1d006b1f3bd8d68ebad037fd934d3d06 SHA1 836208b414a72cf426a17e27f4c6dcf3c88138f3 SHA256 553b9b20afad380b2901318b6b2152b14c1f26ed3bfe26126364284f143cdd21
+MD5 4571f9dc2735dd1f8e53eaafe4c4bdf9 files/courier-imap-4.0.6-db4-tcpd_configure.in.patch 264
+RMD160 49e1deaa1d006b1f3bd8d68ebad037fd934d3d06 files/courier-imap-4.0.6-db4-tcpd_configure.in.patch 264
+SHA256 553b9b20afad380b2901318b6b2152b14c1f26ed3bfe26126364284f143cdd21 files/courier-imap-4.0.6-db4-tcpd_configure.in.patch 264
 AUX courier-imap-4.0.6-r1-courier-imapd-ssl.rc6 1183 RMD160 06e216bac647def373ea24fcef13e22825c3ed17 SHA1 35f814a65e79a87709a57e18fcc1b3f9ea442be8 SHA256 8d80d80cc06cc2855bef882f77dc17ccd06bd0062ce77beb11055c1fd4ccb485
 MD5 182d79e3ae41c713e5292dfb4043fbe5 files/courier-imap-4.0.6-r1-courier-imapd-ssl.rc6 1183
 RMD160 06e216bac647def373ea24fcef13e22825c3ed17 files/courier-imap-4.0.6-r1-courier-imapd-ssl.rc6 1183
@@ -247,14 +248,14 @@ EBUILD courier-imap-4.0.6.ebuild 10128 RMD160 ef2b87dd3905044dc01721e54bfa6d1c79
 MD5 175193eaa4b40b00df0b16acc074c64d courier-imap-4.0.6.ebuild 10128
 RMD160 ef2b87dd3905044dc01721e54bfa6d1c790b5e29 courier-imap-4.0.6.ebuild 10128
 SHA256 48623443290cb6095f32eb70967d89213bd2eff2ca61abba164cd6a0d8cb6d10 courier-imap-4.0.6.ebuild 10128
-EBUILD courier-imap-4.1.2.ebuild 9821 RMD160 fe215e4ec89f74d7b73688793f3ee8c64a721bd7 SHA1 5540e73cd21ee90fb5178e9e22f9f5fcc402ce16 SHA256 000eb6e824456044364b91a9b642ad93afc51e613c6afe916f81926e88afcd15
-MD5 f8f7a3d1f39f828b0c416c407c821aa3 courier-imap-4.1.2.ebuild 9821
-RMD160 fe215e4ec89f74d7b73688793f3ee8c64a721bd7 courier-imap-4.1.2.ebuild 9821
-SHA256 000eb6e824456044364b91a9b642ad93afc51e613c6afe916f81926e88afcd15 courier-imap-4.1.2.ebuild 9821
-MISC ChangeLog 1216 RMD160 979a264e6201d654f588b3b183eada580ee6cc92 SHA1 c98b22eee0ae0a587e19e8095fb857fc290e4325 SHA256 47dbf4b964aa2e4448ea6d51aba9001ac6674475c966ef505cf41c118d8c961c
-MD5 e17c3dc3f71d4aea82bfcef6409bc1e8 ChangeLog 1216
-RMD160 979a264e6201d654f588b3b183eada580ee6cc92 ChangeLog 1216
-SHA256 47dbf4b964aa2e4448ea6d51aba9001ac6674475c966ef505cf41c118d8c961c ChangeLog 1216
+EBUILD courier-imap-4.1.2.ebuild 9842 RMD160 1eaf11577e073ce9e89f7983ebfbc4bd5ba9cb78 SHA1 ffa0bfbc327a45552a2cedc0f074d1da71686363 SHA256 8b4479425371fd394bec9b0a027abe06c8aa82e71ef11303d741c656fb61250b
+MD5 0b530e988aef54e599e3f25526185a7f courier-imap-4.1.2.ebuild 9842
+RMD160 1eaf11577e073ce9e89f7983ebfbc4bd5ba9cb78 courier-imap-4.1.2.ebuild 9842
+SHA256 8b4479425371fd394bec9b0a027abe06c8aa82e71ef11303d741c656fb61250b courier-imap-4.1.2.ebuild 9842
+MISC ChangeLog 27500 RMD160 1032fc6ff3aa34698d21917c9f43ffea5bcc3901 SHA1 6715d1ab5807cc2e7c11073522a1d154161e66b3 SHA256 710da28fccac982ebc7422b11a503d3c3a5823c7b2369cbee04262c101245c14
+MD5 88879220ffc61bdd6da6ab70bc871dc9 ChangeLog 27500
+RMD160 1032fc6ff3aa34698d21917c9f43ffea5bcc3901 ChangeLog 27500
+SHA256 710da28fccac982ebc7422b11a503d3c3a5823c7b2369cbee04262c101245c14 ChangeLog 27500
 MISC metadata.xml 280 RMD160 9f5cd4ae71c9c7e45161110dd38d67f6604cd7b8 SHA1 4b9a055d510dca2f97d61f7df74fcefbc0cc0a2c SHA256 1e7cf6dbb378d12f4d6569350ba23c49aa55a855240b78b5487532028b0ff540
 MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
 RMD160 9f5cd4ae71c9c7e45161110dd38d67f6604cd7b8 metadata.xml 280
@@ -286,10 +287,3 @@ SHA256 3e0023761481fb070682400be05dfb6c3c02547c4a5db2fe0d8c1beffb37d7bf files/di
 MD5 c1fc1514f0256f3976cb49e9d420e478 files/digest-courier-imap-4.1.2 262
 RMD160 931feb25d5903456270bbcbcfae5fa1b4a7e6402 files/digest-courier-imap-4.1.2 262
 SHA256 334d2be842f306f500dd7da00eb8dbb4f433299a2d4f34c40093a28fa702f471 files/digest-courier-imap-4.1.2 262
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.2 (GNU/Linux)
-
-iD8DBQFF3w90Wt/XSf2CZdkRAnhJAJwMoSkn2wN+0+lgCTLRLEYi3wmSAQCfXRud
-EgXIkG3zkAWGIm/mHaPNboY=
-=XujN
------END PGP SIGNATURE-----
