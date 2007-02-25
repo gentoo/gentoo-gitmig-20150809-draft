@@ -1,6 +1,14 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.123 2007/01/27 09:17:35 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.124 2007/02/25 20:30:45 mrness Exp $
+
+*squid-2.6.9-r1 (25 Feb 2007)
+
+  25 Feb 2007; Alin Năstac <mrness@gentoo.org>
+  files/squid-2.6.9-gentoo.patch, files/squid.cron, -squid-2.6.9.ebuild,
+  +squid-2.6.9-r1.ebuild:
+  Restore the default cache_effective_group to none (#166950). Add samba USE
+  flag (#167712). Make squid.cron return 0 when pid doesn't exist (#168075).
 
 *squid-2.6.9 (27 Jan 2007)
 

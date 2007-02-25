@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.6.9.ebuild,v 1.1 2007/01/27 09:17:35 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.6.9-r1.ebuild,v 1.1 2007/02/25 20:30:45 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -20,18 +20,20 @@ SRC_URI="http://www.squid-cache.org/Versions/v2/${S_PV}/${S_PP}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="pam ldap sasl nis ssl snmp selinux logrotate zero-penalty-hit \
+IUSE="pam ldap samba sasl nis ssl snmp selinux logrotate zero-penalty-hit \
 	pf-transparent ipf-transparent \
 	elibc_uclibc kernel_linux"
 
-RDEPEND="pam? ( virtual/pam )
+DEPEND="pam? ( virtual/pam )
 	ldap? ( >=net-nds/openldap-2.1.26 )
 	ssl? ( >=dev-libs/openssl-0.9.7j )
 	sasl? ( >=dev-libs/cyrus-sasl-2.1.21 )
 	selinux? ( sec-policy/selinux-squid )
 	!x86-fbsd? ( logrotate? ( app-admin/logrotate ) )
-	>=sys-libs/db-4"
-DEPEND="${RDEPEND} dev-lang/perl"
+	>=sys-libs/db-4
+	dev-lang/perl"
+RDEPEND="${DEPEND}
+	samba? ( net-fs/samba )"
 
 S="${WORKDIR}/${S_PP}"
 
@@ -57,15 +59,20 @@ src_unpack() {
 }
 
 src_compile() {
-	local basic_modules="getpwnam,NCSA,SMB,MSNT,multi-domain-NTLM"
+	local basic_modules="getpwnam,NCSA,MSNT" 
+	use samba && basic_modules="SMB,multi-domain-NTLM,${basic_modules}"
 	use ldap && basic_modules="LDAP,${basic_modules}"
 	use pam && basic_modules="PAM,${basic_modules}"
 	use sasl && basic_modules="SASL,${basic_modules}"
 	use nis && ! use elibc_uclibc && basic_modules="YP,${basic_modules}"
 
-	local ext_helpers="ip_user,session,unix_group,wbinfo_group"
+	local ext_helpers="ip_user,session,unix_group"
+	use samba && ext_helpers="wbinfo_group,${ext_helpers}"
 	use ldap && ext_helpers="ldap_group,${ext_helpers}"
 
+	local ntlm_helpers="fakeauth"
+	use samba && ntlm_helpers="SMB,${ntlm_helpers}"
+	
 	local myconf=""
 
 	# Support for uclibc #61175
@@ -103,7 +110,7 @@ src_compile() {
 		--enable-digest-auth-helpers="password" \
 		--enable-basic-auth-helpers="${basic_modules}" \
 		--enable-external-acl-helpers="${ext_helpers}" \
-		--enable-ntlm-auth-helpers="SMB,fakeauth" \
+		--enable-ntlm-auth-helpers="${ntlm_helpers}" \
 		--enable-ident-lookups \
 		--enable-useragent-log \
 		--enable-cache-digests \
@@ -134,7 +141,7 @@ src_install() {
 	fperms 4750 /usr/libexec/squid/ncsa_auth
 	fperms 4750 /usr/libexec/squid/pam_auth
 
-	#some clean ups
+	#some cleanups
 	rm -f "${D}"/usr/bin/Run*
 
 	dodoc CONTRIBUTORS CREDITS ChangeLog QUICKSTART SPONSORS doc/*.txt \
