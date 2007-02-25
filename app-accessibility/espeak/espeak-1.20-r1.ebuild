@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.20.ebuild,v 1.1 2007/02/18 15:58:30 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.20-r1.ebuild,v 1.1 2007/02/25 05:40:34 williamh Exp $
 
 inherit eutils
 
@@ -45,7 +45,7 @@ src_compile() {
 
 src_install() {
 	cd src
-	make DESTDIR="${D}" install || die "Installation failed"
+	make DESTDIR="${D}" LIBDIR="/usr/$(get_libdir)" install || die "Installation failed"
 
 	cd "${S}"
 	dodoc ChangeLog ReadMe
