@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.29_pre20061116-r1.ebuild,v 1.2 2007/02/16 06:56:50 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.29_pre20070223.ebuild,v 1.1 2007/02/25 18:50:29 pva Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,8 +9,7 @@ snap_ver=${PV##*_pre}
 
 DESCRIPTION="The Ubiquitous Amiga Emulator with an emulation core largely based on WinUAE"
 HOMEPAGE="http://www.rcdrummond.net/uae/"
-#SRC_URI="http://www.rcdrummond.net/uae/${P}/${P}.tar.bz2"
-SRC_URI="mirror://gentoo/${PN}-${my_ver}-CVS-${snap_ver}.tar.bz2"
+SRC_URI="http://www.rcdrummond.net/uae/test/${snap_ver}/${PN}-${my_ver}-${snap_ver}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -41,7 +40,7 @@ DEPEND="$RDEPEND
 		X? ( dga? ( x11-proto/xf86vidmodeproto
 					x11-proto/xf86dgaproto ) )"
 
-S="${WORKDIR}"/${PN}-${my_ver}-CVS
+S="${WORKDIR}"/${PN}-${my_ver}-${snap_ver}
 
 pkg_setup() {
 	# Sound setup.
