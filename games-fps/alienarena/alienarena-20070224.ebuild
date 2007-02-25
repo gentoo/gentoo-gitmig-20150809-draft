@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20070224.ebuild,v 1.1 2007/02/25 10:15:30 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20070224.ebuild,v 1.2 2007/02/25 18:35:14 nyhm Exp $
 
-inherit eutils toolchain-funcs games
+inherit eutils flag-o-matic toolchain-funcs games
 
 MY_PN=${PN}${PV:0:4}
 DESCRIPTION="Fast paced multiplayer deathmatch game"
@@ -46,6 +46,7 @@ src_unpack() {
 }
 
 src_compile() {
+	[[ $(gcc-fullversion) == "4.1.1" ]] && replace-flags -O? -O0
 	emake \
 		CC="$(tc-getCC)" \
 		GENTOO_LIBDIR="${GAMES_LIBDIR}"/${PN} \
