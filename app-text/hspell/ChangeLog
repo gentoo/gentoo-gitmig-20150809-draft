@@ -1,6 +1,9 @@
 # ChangeLog for app-text/hspell
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/ChangeLog,v 1.34 2007/02/14 17:35:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/ChangeLog,v 1.35 2007/02/25 11:37:00 armin76 Exp $
+
+  25 Feb 2007; Raúl Porcel <armin76@gentoo.org> hspell-1.0-r1.ebuild:
+  x86 stable wrt bug 152274
 
   14 Feb 2007; Bryan Østergaard <kloeri@gentoo.org> hspell-1.0-r1.ebuild:
   Stable on IA64, bug 165606.
