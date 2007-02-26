@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.134 2007/02/24 23:03:59 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.135 2007/02/26 07:51:21 opfer Exp $
+
+  26 Feb 2007; Christian Faulhammer <opfer@gentoo.org> use.local.desc:
+  added bbdb USE flag for app-emacs/wanderlust
 
   24 Feb 2007; Robert Buchholz <rbu@gentoo.org> desc/lcd_devices.desc,
   use.local.desc:
