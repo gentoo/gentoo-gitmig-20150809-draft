@@ -1,16 +1,15 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.24.ebuild,v 1.10 2007/02/11 13:06:31 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.24.ebuild,v 1.11 2007/02/26 17:32:18 dev-zero Exp $
 
 WANT_AUTOCONF="latest"
 
 inherit eutils autotools versionator pam
 
 IUSE_LINGUAS="ja pl"
-IUSE="acl async automount cups doc examples kerberos kernel_linux ldap fam
+IUSE="acl async automount caps cups doc examples kerberos kernel_linux ldap fam
 	linguas_ja linguas_pl
 	oav pam python quotas readline selinux swat syslog winbind"
-#RESTRICT="test" # tests are enabled with --enable-socket-wrapper
 
 VSCAN_VER="0.3.6b"
 PATCH_VER="0.3.15"
@@ -42,7 +41,8 @@ RDEPEND="dev-libs/popt
 	selinux?   ( sec-policy/selinux-samba )
 	swat?      ( sys-apps/xinetd )
 	syslog?    ( virtual/logger )
-	fam?       ( virtual/fam )"
+	fam?       ( virtual/fam )
+	caps?      ( sys-libs/libcap )"
 DEPEND="${RDEPEND}"
 
 PRIVATE_DST=/var/lib/samba/private
@@ -89,6 +89,8 @@ src_compile() {
 	use hppa && myconf="${myconf} --disable-pie"
 
 	use fam && export ac_cv_header_fam_h=yes || export ac_cv_header_fam_h=no
+	use caps && export ac_cv_header_sys_capability_h=yes || export ac_cv_header_sys_capability_h=no
+
 	econf \
 		--with-fhs \
 		--sysconfdir=/etc/samba \
