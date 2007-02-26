@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/gnump3d
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.50 2007/02/22 01:01:32 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.51 2007/02/26 21:56:37 beandog Exp $
+
+*gnump3d-2.9.9.9 (26 Feb 2007)
+
+  26 Feb 2007; Steve Dibb <beandog@gentoo.org> +gnump3d-2.9.9.9.ebuild:
+  Version bump, bug 156801
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
