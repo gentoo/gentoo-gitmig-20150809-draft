@@ -1,12 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2-r1.ebuild,v 1.18 2005/02/16 11:04:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2-r1.ebuild,v 1.19 2007/02/26 09:12:22 robbat2 Exp $
 
 inherit libtool eutils
 
 DESCRIPTION="Allows important system files to be stored in a fast database file rather than plain text"
 HOMEPAGE="http://www.gnu.org/"
-SRC_URI="ftp://ftp.gnu.org/gnu/glibc/nss_db-${PV}.tar.gz"
+SRC_URI="mirror://gnu/glibc/nss_db-${PV}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
