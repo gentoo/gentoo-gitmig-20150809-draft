@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-7.19-r2.ebuild,v 1.1 2007/02/26 08:14:37 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-7.19-r2.ebuild,v 1.2 2007/02/26 12:01:43 opfer Exp $
 
 inherit elisp eutils
 
@@ -40,6 +40,6 @@ src_install() {
 		PIXMAPDIR="${D}/usr/share/pixmaps/vm" \
 		install || die
 	elisp-install ${PN} *.el
-	elisp-site-file-install "${FILESDIR}/50vm-gentoo.el"
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	dodoc README
 }
