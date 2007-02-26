@@ -1,6 +1,15 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.82 2007/02/20 22:21:59 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.83 2007/02/26 07:33:28 opfer Exp $
+
+*emacs-cvs-22.0.9999-r3 (26 Feb 2007)
+*emacs-cvs-22.0.94 (26 Feb 2007)
+
+  26 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  +emacs-cvs-22.0.94.ebuild, +emacs-cvs-22.0.9999-r3.ebuild:
+  if USE=gzip-el is not set, Emacs' build system will not compress el files
+  even if the gzip binary is found; 22.0.94: A new pretest version has been
+  released; 22.0.9999-r3: Fitted SLOT to the new pretest version
 
   20 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
   +files/emacs-cvs-blessmail-build.patch, emacs-cvs-22.0.93-r2.ebuild:
