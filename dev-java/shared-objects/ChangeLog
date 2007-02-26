@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/shared-objects
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/shared-objects/ChangeLog,v 1.8 2007/02/26 21:57:29 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/shared-objects/ChangeLog,v 1.9 2007/02/26 22:51:36 betelgeuse Exp $
+
+*shared-objects-1.4-r3 (26 Feb 2007)
+
+  26 Feb 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +shared-objects-1.4-r3.ebuild:
+  shared-objects-config is used by dev-java/aterm-java ./configure so adding
+  it back
 
 *shared-objects-1.4-r2 (26 Feb 2007)
 
