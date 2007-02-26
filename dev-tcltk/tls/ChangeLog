@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tls
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/ChangeLog,v 1.13 2007/02/22 01:35:29 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/ChangeLog,v 1.14 2007/02/26 09:54:34 blubb Exp $
+
+  26 Feb 2007; Simon Stelling <blubb@gentoo.org> tls-1.5.0.ebuild:
+  amd64 stable; bug 168364
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
