@@ -6,5 +6,5 @@
 		<email>gurligebis@gentoo.org</email>
 		<name>Bjarke Istrup Pedersen</name>
 	</maintainer>
-	<longdescription>PsyBNC is a multi-user and multi-server gateway to IRC networks</longdescription>
+	<longdescription>psyBNC is a multi-user and multi-server gateway to IRC networks</longdescription>
 </pkgmetadata>

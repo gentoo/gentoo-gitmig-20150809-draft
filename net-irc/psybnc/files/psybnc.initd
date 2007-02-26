@@ -1,32 +1,42 @@
 #!/sbin/runscript
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/files/psybnc.initd,v 1.2 2007/02/26 00:03:08 gurligebis Exp $
 
 depend() {
 	need net
 }
 
 check_config() {
-	if [ -z "${USER}" ]
+	if [[ ! -f ${PSYBNC_CONFIG} ]]
 	then
-	    eerror "Please set \$USER in /etc/conf.d/psybnc!"
+	    eerror "Please set \$PSYBNC_CONFIG in /etc/conf.d/psybnc!"
 	    return 1
 	fi
-	if [ -z "${BNCPATH}" ]
+
+	if [[ ! -d "${PSYBNC_HOME}" ]]
 	then
-	    eerror "Please set \$BNCPATH in /etc/conf.d/psybnc!"
+	    eerror "Please set \$PSYBNC_HOME in /etc/conf.d/psybnc!"
+	    return 1
+	fi
+
+	if [[ -z "${PSYBNC_USER}" ]]
+	then
+	    eerror "Please set \$PSYBNC_USER in /etc/conf.d/psybnc!"
 	    return 1
 	fi
 }
 
 start() {
-	ebegin "Starting psybnc"
 	check_config || return 1
-	export HOME="${BNCPATH}"
-	start-stop-daemon -c ${USER} -S -q --chdir ${BNCPATH} -x ${BNCPATH}/psybnc  1>/dev/null 2>&1
+	ebegin "Starting psyBNC"
+	start-stop-daemon --start --quiet --chuid "${PSYBNC_USER}" --chdir "${PSYBNC_HOME}" --exec /usr/bin/psybnc -- "${PSYBNC_CONFIG}" &>/dev/null
 	eend $?
 }
 
 stop() {
-	ebegin "Stopping psybnc"
-	start-stop-daemon -K -q --exec ${BNCPATH}/psybnc -s 9
+	check_config || return 1
+	ebegin "Stopping psyBNC"
+	start-stop-daemon --stop --quiet --pidfile "${PSYBNC_HOME}"/psybnc.pid --signal 9
 	eend $?
 }
