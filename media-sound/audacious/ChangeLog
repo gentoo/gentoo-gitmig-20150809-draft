@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.105 2007/02/26 14:00:14 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.106 2007/02/26 16:53:41 jer Exp $
+
+  26 Feb 2007; Jeroen Roovers <jer@gentoo.org> audacious-1.3.0_rc1.ebuild:
+  Marked ~hppa (bug #168465).
 
 *audacious-1.3.0_rc1 (26 Feb 2007)
 
