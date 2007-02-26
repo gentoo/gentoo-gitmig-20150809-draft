@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20070224.ebuild,v 1.2 2007/02/25 18:35:14 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20070224-r1.ebuild,v 1.1 2007/02/26 07:06:24 nyhm Exp $
 
 inherit eutils flag-o-matic toolchain-funcs games
 
@@ -42,15 +42,19 @@ src_unpack() {
 	epatch \
 		"${FILESDIR}"/${P}-build.patch \
 		"${FILESDIR}"/${P}-paths.patch \
-		"${FILESDIR}"/${P}-exec-stack.patch
+		"${FILESDIR}"/${P}-exec-stack.patch \
+		"${FILESDIR}"/${P}-gamedir.patch
+	sed -i \
+		-e "s:GENTOO_DATADIR:${GAMES_DATADIR}/${PN}:" \
+		-e "s:GENTOO_LIBDIR:${GAMES_LIBDIR}/${PN}:" \
+		source/linux/sys_linux.c \
+		|| die "sed failed"
 }
 
 src_compile() {
 	[[ $(gcc-fullversion) == "4.1.1" ]] && replace-flags -O? -O0
 	emake \
 		CC="$(tc-getCC)" \
-		GENTOO_LIBDIR="${GAMES_LIBDIR}"/${PN} \
-		GENTOO_DATADIR="${GAMES_DATADIR}"/${PN} \
 		$(use sdl && echo SDLSOUND=1) \
 		$(use opengl || use sdl && echo BUILD_ARENA=1) \
 		$(use opengl || use sdl || use dedicated || echo BUILD_ARENA=1) \
@@ -59,24 +63,24 @@ src_compile() {
 }
 
 src_install() {
-	cd build
+	cd debug
 	exeinto "${GAMES_LIBDIR}"/${PN}
-	doexe arena/game.so || die "doexe failed"
+	doexe game.so || die "doexe failed"
 
 	if (use opengl || use sdl) || use opengl || use sdl || ! use dedicated ; then
-		newgamesbin crx ${PN}-oss || die "newgamesbin crx failed"
+		newgamesbin crx. ${PN}-oss || die "newgamesbin crx failed"
 		make_desktop_entry ${PN}-oss "Alien Arena (OSS audio)" ${PN}.xpm
 		use sdl || dosym ${PN}-oss "${GAMES_BINDIR}"/${PN}
 	fi
 
 	if use sdl ; then
-		newgamesbin crx.sdl ${PN}-sdl || die "newgamesbin crx.sdl failed"
+		newgamesbin crx.sdl. ${PN}-sdl || die "newgamesbin crx.sdl failed"
 		make_desktop_entry ${PN}-sdl "Alien Arena (SDL audio)" ${PN}.xpm
 		dosym ${PN}-sdl "${GAMES_BINDIR}"/${PN}
 	fi
 
 	if use dedicated ; then
-		newgamesbin crded ${PN}-ded || die "newgamesbin crded failed"
+		newgamesbin crded. ${PN}-ded || die "newgamesbin crded failed"
 	fi
 
 	cd "${WORKDIR}"/${MY_PN}

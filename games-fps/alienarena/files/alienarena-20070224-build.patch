@@ -1,35 +1,34 @@
 --- source/linux/Makefile
 +++ source/linux/Makefile
-@@ -28,7 +28,8 @@
+@@ -25,6 +25,7 @@
+ endif
+ endif
+ NOARCH=noarch
++ARCH=
  
  MOUNT_DIR=..
  
--BUILD_DEBUG_DIR=debug$(ARCH)
-+BUILDDIR=build
-+BUILD_DEBUG_DIR=$(BUILDDIR)
- BUILD_RELEASE_DIR=release$(ARCH)
- CLIENT_DIR=$(MOUNT_DIR)/client
- SERVER_DIR=$(MOUNT_DIR)/server
 @@ -50,7 +51,7 @@
  _LIB := lib
  endif
  
 -BASE_CFLAGS=-Dstricmp=strcasecmp -D_stricmp=strcasecmp -D__linux__
-+CFLAGS+=-Dstricmp=strcasecmp -D_stricmp=strcasecmp -D__linux__
++BASE_CFLAGS=$(CFLAGS) -Dstricmp=strcasecmp -D_stricmp=strcasecmp -D__linux__
  
  ifeq ($(ARCH),axp)
  RELEASE_CFLAGS=$(BASE_CFLAGS) -ffast-math -funroll-loops \
-@@ -79,8 +80,7 @@
+@@ -79,8 +80,8 @@
  
  ARENA_CFLAGS=-DARENA
  
 -DEBUG_CFLAGS=$(BASE_CFLAGS) -g
 -LDFLAGS=-ldl -lm
++DEBUG_CFLAGS=$(BASE_CFLAGS) -fno-strict-aliasing
 +LDFLAGS+=-ldl -lm
  SVGALDFLAGS=-lvga -lm
  XLDFLAGS=-L/usr/X11R6/$(_LIB) -lX11 -lXext -lXxf86dga
  XCFLAGS=
-@@ -120,24 +120,27 @@
+@@ -120,10 +121,13 @@
  	$(BUILDDIR)/game$(ARCH).$(SHLIBEXT) \
  	$(BUILDDIR)/arena/game$(ARCH).$(SHLIBEXT)
  else
@@ -37,157 +36,13 @@
 -	$(BUILDDIR)/crx.$(ARCH) \
 -	$(BUILDDIR)/game$(ARCH).$(SHLIBEXT) \
 -	$(BUILDDIR)/arena/game$(ARCH).$(SHLIBEXT)
-+TARGETS=$(BUILDDIR)/arena/game.so
++TARGETS=$(BUILDDIR)/game$(ARCH).$(SHLIBEXT)
 +ifeq ($(BUILD_ARENA),1)
-+TARGETS+=$(BUILDDIR)/crx
++TARGETS+=$(BUILDDIR)/crx.$(ARCH)
 +endif
 +ifeq ($(BUILD_DED),1)
-+TARGETS+=$(BUILDDIR)/crded
++TARGETS+=$(BUILDDIR)/crded.$(ARCH)
 +endif
  endif
  
  ifeq ($(strip $(SDLSOUND)),1)
--	TARGETS+=$(BUILDDIR)/crx.sdl.$(ARCH)
-+	TARGETS+=$(BUILDDIR)/crx.sdl
- endif
- 
--build_debug:
-+targets: mkdirs $(TARGETS)
-+mkdirs:
- 	@-mkdir $(BUILD_DEBUG_DIR) \
- 		$(BUILD_DEBUG_DIR)/client \
- 		$(BUILD_DEBUG_DIR)/ded \
- 		$(BUILD_DEBUG_DIR)/ref_gl \
- 		$(BUILD_DEBUG_DIR)/game \
- 		$(BUILD_DEBUG_DIR)/arena
--	$(MAKE) targets BUILDDIR=$(BUILD_DEBUG_DIR) CFLAGS="$(DEBUG_CFLAGS)"
- 
- build_release:
- 	@-mkdir $(BUILD_RELEASE_DIR) \
-@@ -150,7 +153,6 @@
- 
- all: build_debug build_release
- 
--targets: $(TARGETS)
- 
- #############################################################################
- # CLIENT/SERVER
-@@ -242,14 +244,14 @@
- endif
- 
- 
--$(BUILDDIR)/crx.$(ARCH) : $(CODERED_OBJS) $(SOUND_OSS_OBJS) $(CODERED_AS_OBJS) $(REF_GL_OBJS) $(REF_GL_GLX_OBJS)
-+$(BUILDDIR)/crx : $(CODERED_OBJS) $(SOUND_OSS_OBJS) $(CODERED_AS_OBJS) $(REF_GL_OBJS) $(REF_GL_GLX_OBJS)
- 	$(CC) $(CFLAGS) -o $@ $(CODERED_OBJS) $(SOUND_OSS_OBJS) $(CODERED_AS_OBJS) $(LDFLAGS) $(REF_GL_OBJS) $(REF_GL_GLX_OBJS) $(GLXLDFLAGS)
- 
--$(BUILDDIR)/crx.sdl.$(ARCH) : $(CODERED_OBJS) $(SOUND_SDL_OBJS) $(CODERED_AS_OBJS) $(REF_GL_OBJS) $(REF_GL_GLX_OBJS)
-+$(BUILDDIR)/crx.sdl : $(CODERED_OBJS) $(SOUND_SDL_OBJS) $(CODERED_AS_OBJS) $(REF_GL_OBJS) $(REF_GL_GLX_OBJS)
- 	$(CC) $(CFLAGS) -o $@ $(CODERED_OBJS) $(SOUND_SDL_OBJS) $(CODERED_AS_OBJS) $(LDFLAGS) $(REF_GL_OBJS) $(REF_GL_GLX_OBJS) $(GLXLDFLAGS) $(SDLLDFLAGS)
- 
- $(BUILDDIR)/client/cl_cin.o :     $(CLIENT_DIR)/cl_cin.c
--	$(DO_CC)
-+	$(DO_CC) -fno-strict-aliasing
- 
- $(BUILDDIR)/client/cl_ents.o :    $(CLIENT_DIR)/cl_ents.c
- 	$(DO_CC)
-@@ -291,13 +293,13 @@
- 	$(DO_CC)
- 
- $(BUILDDIR)/client/menu.o :       $(CLIENT_DIR)/menu.c
--	$(DO_CC)
-+	$(DO_CC) -fno-strict-aliasing
- 
- $(BUILDDIR)/client/snd_dma.o :    $(CLIENT_DIR)/snd_dma.c
- 	$(DO_CC)
- 
- $(BUILDDIR)/client/snd_mem.o :    $(CLIENT_DIR)/snd_mem.c
--	$(DO_CC)
-+	$(DO_CC) -fno-strict-aliasing
- 
- $(BUILDDIR)/client/snd_mix.o :    $(CLIENT_DIR)/snd_mix.c
- 	$(DO_CC)
-@@ -306,10 +308,10 @@
- 	$(DO_CC)
- 
- $(BUILDDIR)/client/cmd.o :        $(COMMON_DIR)/cmd.c
--	$(DO_CC)
-+	$(DO_CC) -fno-strict-aliasing
- 
- $(BUILDDIR)/client/cmodel.o :     $(COMMON_DIR)/cmodel.c
--	$(DO_CC)
-+	$(DO_CC) -fno-strict-aliasing
- 
- $(BUILDDIR)/client/common.o :     $(COMMON_DIR)/common.c
- 	$(DO_CC)
-@@ -354,7 +356,7 @@
- 	$(DO_CC)
- 
- $(BUILDDIR)/client/sv_user.o :    $(SERVER_DIR)/sv_user.c
--	$(DO_CC)
-+	$(DO_CC) -fno-strict-aliasing
- 
- $(BUILDDIR)/client/sv_world.o :   $(SERVER_DIR)/sv_world.c
- 	$(DO_CC)
-@@ -405,7 +407,7 @@
- 	$(DO_GL_SHLIB_CC)
- 
- $(BUILDDIR)/ref_gl/r_script.o :       $(REF_GL_DIR)/r_script.c
--	$(DO_GL_SHLIB_CC)
-+	$(DO_GL_SHLIB_CC) -fno-strict-aliasing
- 
- $(BUILDDIR)/ref_gl/r_surf.o :       $(REF_GL_DIR)/r_surf.c
- 	$(DO_GL_SHLIB_CC)
-@@ -414,7 +416,7 @@
- 	$(DO_GL_SHLIB_CC)
- 
- $(BUILDDIR)/ref_gl/r_image.o :       $(REF_GL_DIR)/r_image.c
--	$(DO_GL_SHLIB_CC)
-+	$(DO_GL_SHLIB_CC) -fno-strict-aliasing
- 
- $(BUILDDIR)/ref_gl/r_mesh.o :        $(REF_GL_DIR)/r_mesh.c
- 	$(DO_GL_SHLIB_CC)
-@@ -478,14 +480,14 @@
- 	$(BUILDDIR)/ded/cl_null.o \
- 	$(BUILDDIR)/ded/cd_null.o
- 
--$(BUILDDIR)/crded.$(ARCH) : $(CRDED_OBJS)
-+$(BUILDDIR)/crded : $(CRDED_OBJS)
- 	$(CC) $(CFLAGS) -o $@ $(CRDED_OBJS) $(LDFLAGS)
- 
- $(BUILDDIR)/ded/cmd.o :        $(COMMON_DIR)/cmd.c
--	$(DO_DED_CC)
-+	$(DO_DED_CC) -fno-strict-aliasing
- 
- $(BUILDDIR)/ded/cmodel.o :     $(COMMON_DIR)/cmodel.c
--	$(DO_DED_CC)
-+	$(DO_DED_CC) -fno-strict-aliasing
- 
- $(BUILDDIR)/ded/common.o :     $(COMMON_DIR)/common.c
- 	$(DO_DED_CC)
-@@ -530,7 +532,7 @@
- 	$(DO_DED_CC)
- 
- $(BUILDDIR)/ded/sv_user.o :    $(SERVER_DIR)/sv_user.c
--	$(DO_DED_CC)
-+	$(DO_DED_CC) -fno-strict-aliasing
- 
- $(BUILDDIR)/ded/sv_world.o :   $(SERVER_DIR)/sv_world.c
- 	$(DO_DED_CC)
-@@ -597,7 +599,7 @@
- 
- 
- 
--$(BUILDDIR)/game$(ARCH).$(SHLIBEXT) : $(GAME_OBJS)
-+$(BUILDDIR)/game.so : $(GAME_OBJS)
- 	$(CC) $(CFLAGS) $(SHLIBLDFLAGS) -o $@ $(GAME_OBJS)
- 
- 
-@@ -753,7 +755,7 @@
- 	$(BUILDDIR)/arena/p_weapon.o \
- 	$(BUILDDIR)/arena/vehicles.o
- 
--$(BUILDDIR)/arena/game$(ARCH).$(SHLIBEXT) : $(ARENA_OBJS)
-+$(BUILDDIR)/arena/game.so : $(ARENA_OBJS)
- 	$(CC) $(CFLAGS) $(SHLIBLDFLAGS) -o $@ $(ARENA_OBJS)
- 
- 

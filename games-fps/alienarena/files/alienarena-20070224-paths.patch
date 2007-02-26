@@ -1,10 +1,3 @@
---- source/linux/Makefile
-+++ source/linux/Makefile
-@@ -1,3 +1,4 @@
-+CFLAGS+=-DGENTOO_DATADIR=\"$(GENTOO_DATADIR)\" -DGENTOO_LIBDIR=\"$(GENTOO_LIBDIR)\"
- #
- # CodeRED Makefile
- #
 --- source/linux/sys_linux.c
 +++ source/linux/sys_linux.c
 @@ -217,6 +217,8 @@
@@ -29,7 +22,7 @@
  		if (!path)
  			return NULL;		// couldn't find one anywhere
 -		snprintf (name, MAX_OSPATH, "%s/%s", path, gamename);
-+		snprintf (name, MAX_OSPATH, "%s/%s", GENTOO_LIBDIR, gamename);
++		snprintf (name, MAX_OSPATH, "%s/%s", "GENTOO_LIBDIR", gamename);
  
  		/* skip it if it just doesn't exist */
  		fp = fopen(name, "rb");
@@ -37,7 +30,7 @@
  	saved_euid = geteuid();
  	seteuid(getuid());
  
-+	chdir(GENTOO_DATADIR);
++	chdir("GENTOO_DATADIR");
  	Qcommon_Init(argc, argv);
  
  	fcntl(0, F_SETFL, fcntl (0, F_GETFL, 0) | FNDELAY);

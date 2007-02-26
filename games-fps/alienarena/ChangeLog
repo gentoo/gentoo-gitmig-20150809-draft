@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/alienarena
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/ChangeLog,v 1.1 2007/02/25 10:15:30 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/ChangeLog,v 1.2 2007/02/26 07:06:24 nyhm Exp $
+
+*alienarena-20070224-r1 (26 Feb 2007)
+
+  26 Feb 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/alienarena-20070224-gamedir.patch, +alienarena-20070224-r1.ebuild:
+  Revision bump with upstream patch
 
 *alienarena-20070224 (25 Feb 2007)
 
