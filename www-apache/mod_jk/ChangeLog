@@ -1,6 +1,15 @@
 # ChangeLog for www-apache/mod_jk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.19 2007/02/03 19:20:49 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.20 2007/02/26 19:27:44 wltjr Exp $
+
+*mod_jk-1.2.21 (26 Feb 2007)
+
+  26 Feb 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  files/88_mod_jk.conf, +mod_jk-1.2.21.ebuild:
+  Bumped to latest development version, added sed to change paths from apache2
+  -> apache depending on use. Paths were set/hard coded to fix bug #164838.
+  Could cause issues for apache (!apache2) users < 1.2.21. But no worse than
+  present :)
 
   03 Feb 2007; Steve Dibb <beandog@gentoo.org> mod_jk-1.2.20.ebuild:
   amd64 stable, bug 162949
