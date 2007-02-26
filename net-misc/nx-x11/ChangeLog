@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nx-x11
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/ChangeLog,v 1.15 2007/02/22 02:36:13 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/ChangeLog,v 1.16 2007/02/26 08:27:02 opfer Exp $
+
+  26 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  nx-x11-1.5.0-r8.ebuild:
+  stable x86; bug 153212
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
