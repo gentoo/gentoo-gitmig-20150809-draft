@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6j-r1.ebuild,v 1.1 2007/01/28 14:25:12 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6j-r2.ebuild,v 1.1 2007/02/26 06:53:27 pva Exp $
 
 inherit eutils webapp depend.apache depend.php
 
@@ -15,7 +15,8 @@ SRC_URI="http://www.cacti.net/downloads/${MY_P}.tar.gz"
 # patches 
 if [ $HAS_PATCHES == 1 ] ; then
 	UPSTREAM_PATCHES="ping_php_version4_snmpgetnext
-					  tree_console_missing_hosts"
+					  tree_console_missing_hosts
+					  thumbnail_graphs_not_working"
 	for i in $UPSTREAM_PATCHES ; do
 		SRC_URI="${SRC_URI} http://www.cacti.net/downloads/patches/${PV/_p*}/${i}.patch"
 	done
