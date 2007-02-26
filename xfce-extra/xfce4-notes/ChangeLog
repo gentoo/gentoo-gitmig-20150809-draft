@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-notes
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notes/ChangeLog,v 1.20 2007/02/25 18:06:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notes/ChangeLog,v 1.21 2007/02/26 16:59:16 opfer Exp $
+
+  26 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  xfce4-notes-0.10.0-r2.ebuild:
+  stable x86; bug 154314
 
   25 Feb 2007; Markus Rothe <corsair@gentoo.org>
   xfce4-notes-0.10.0-r2.ebuild:
