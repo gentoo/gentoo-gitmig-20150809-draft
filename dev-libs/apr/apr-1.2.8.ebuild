@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.2.8.ebuild,v 1.2 2007/02/03 09:11:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.2.8.ebuild,v 1.3 2007/02/26 07:10:22 opfer Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.1"
@@ -13,7 +13,7 @@ SRC_URI="mirror://apache/apr/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="1"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="ipv6 urandom debug"
 RESTRICT="test"
 
