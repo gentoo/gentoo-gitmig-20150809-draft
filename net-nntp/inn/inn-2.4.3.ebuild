@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.4.3.ebuild,v 1.1 2007/02/26 22:03:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.4.3.ebuild,v 1.2 2007/02/26 22:06:10 swegener Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -145,6 +145,10 @@ pkg_postinst() {
 		elog "If you choose to do so, automating this with a bootscript might"
 		elog "also be a good choice."
 		elog "Have a look at man nnrpd for valid parameters."
+		elog
+		elog "The certificate location in /etc/news/sasl.conf has been changed"
+		elog "to /etc/news/cert!"
+
 	fi
 }
 
