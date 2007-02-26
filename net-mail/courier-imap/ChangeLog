@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.142 2007/02/25 22:56:32 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.143 2007/02/26 11:09:41 tove Exp $
 
   25 Feb 2007; Patrick McLean <chutzpah@gentoo.org>
   +files/courier-imap-4.0.6-db4-tcpd_configure.in.patch,
@@ -32,7 +32,7 @@
   +courier-imap-4.0.6-r1.ebuild:
   fix bug 141775
 
-  05 Jan 2007; Diego PettenÃ² <flameeyes@gentoo.org>
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   courier-imap-3.0.7.ebuild, courier-imap-3.0.8.ebuild,
   courier-imap-4.0.1.ebuild, courier-imap-4.0.1-r1.ebuild,
   courier-imap-4.0.1-r2.ebuild, courier-imap-4.0.4.ebuild,
@@ -104,13 +104,13 @@
   courier-imap-3.0.8.ebuild:
   stabilize alpha
 
-  12 Aug 2005; Diego PettenÃ² <flameeyes@gentoo.org>
+  12 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
   courier-imap-4.0.4.ebuild:
   Fix courier-authlib dependency to 0.57.
 
 *courier-imap-4.0.4 (08 Aug 2005)
 
-  08 Aug 2005; Diego PettenÃ² <flameeyes@gentoo.org>
+  08 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
   +files/courier-imap-4.0.4-courier-imapd.rc6,
   +files/courier-imap-4.0.4-courier-imapd-ssl.rc6,
   +files/courier-imap-4.0.4-courier-pop3d.rc6,
@@ -161,7 +161,7 @@
   06 Feb 2005; Joshua Kinard <kumba@gentoo.org> courier-imap-4.0.1.ebuild:
   Marked stable on mips.
 
-  03 Feb 2005; Tuáº¥n VÄn <langthang@gentoo.org> courier-imap-4.0.1.ebuild:
+  03 Feb 2005; Tuấn Văn <langthang@gentoo.org> courier-imap-4.0.1.ebuild:
   Stable on x86. This upgrade is non-trival. Please read:
   http://www.courier-mta.org/imap/?INSTALL.html~upgrading
   less /usr/share/doc/courier-imap-4.0.1/courier-imap-gentoo.readme.gz
@@ -170,12 +170,12 @@
   16 Jan 2005; Guy Martin <gmsoft@gentoo.org> courier-imap-3.0.8.ebuild:
   Stable on hppa.
 
-  07 Jan 2005; Tuáº¥n VÄn <langthang@gentoo.org> courier-imap-4.0.1.ebuild:
+  07 Jan 2005; Tuấn Văn <langthang@gentoo.org> courier-imap-4.0.1.ebuild:
   change lib --> $(get_libdir)
 
 *courier-imap-4.0.1 (04 Jan 2005)
 
-  04 Jan 2005; Tuáº¥n VÄn <langthang@gentoo.org>
+  04 Jan 2005; Tuấn Văn <langthang@gentoo.org>
   +courier-imap-4.0.1.ebuild:
   errata release
 
