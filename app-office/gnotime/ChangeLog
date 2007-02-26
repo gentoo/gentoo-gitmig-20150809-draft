@@ -1,6 +1,11 @@
 # ChangeLog for app-office/gnotime
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.20 2007/02/21 22:49:06 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.21 2007/02/26 14:51:37 tester Exp $
+
+*gnotime-2.2.2 (26 Feb 2007)
+
+  26 Feb 2007; Olivier Crête <tester@gentoo.org> +gnotime-2.2.2.ebuild:
+  Version bump, bug #121972
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
