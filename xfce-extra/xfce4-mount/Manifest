@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX xfce4-mount-asneeded.patch 622 RMD160 809a07ea97f8e0c817c67e915efae0d0fd39261f SHA1 e9ee81de2a0b73e1e62e012d79f0f68dd1b1c668 SHA256 a26d09a85abdb63d095ee7853623ee628d2845a3566f7344ee285574f2f488cf
 MD5 f2564daf2049d039d12af05b06d03c92 files/xfce4-mount-asneeded.patch 622
 RMD160 809a07ea97f8e0c817c67e915efae0d0fd39261f files/xfce4-mount-asneeded.patch 622
@@ -16,10 +13,6 @@ EBUILD xfce4-mount-0.3.2.ebuild 373 RMD160 2a20f1527b61f55342c4aa9a41400ce6a71bb
 MD5 bc34f2659e91ca7ac23843f4958b6d58 xfce4-mount-0.3.2.ebuild 373
 RMD160 2a20f1527b61f55342c4aa9a41400ce6a71bb5ff xfce4-mount-0.3.2.ebuild 373
 SHA256 830b5b2d0227252f07f822bb05d5bf424a7c683ce8e5cd96f6de27055bdf0dd8 xfce4-mount-0.3.2.ebuild 373
-EBUILD xfce4-mount-0.3.ebuild 373 RMD160 160e858d56360be254d1578669aaafb6f0c29ddb SHA1 37cc4990b99b320f9aa311a999ec4e8ebf687dd4 SHA256 e2640ce46b468b8d47b743ef54f42093b4d34b31f7583a3ef2272a5113e774c3
-MD5 8ced8a0ce27ca839248314f9e83409a9 xfce4-mount-0.3.ebuild 373
-RMD160 160e858d56360be254d1578669aaafb6f0c29ddb xfce4-mount-0.3.ebuild 373
-SHA256 e2640ce46b468b8d47b743ef54f42093b4d34b31f7583a3ef2272a5113e774c3 xfce4-mount-0.3.ebuild 373
 EBUILD xfce4-mount-0.4.8.ebuild 578 RMD160 b0091eb4cef8acf7c3dfb875096fd53cf2bd8279 SHA1 e9ed65b9145e96530eea5ff1b0037c3f30bba9e6 SHA256 abc84f7bd40d7ac5240000afa9525315bc712664a073c37bd8e88cd25ea2cedd
 MD5 06d3205d0dda749661adb3a0cf122b87 xfce4-mount-0.4.8.ebuild 578
 RMD160 b0091eb4cef8acf7c3dfb875096fd53cf2bd8279 xfce4-mount-0.4.8.ebuild 578
@@ -32,9 +25,6 @@ MISC metadata.xml 157 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 SHA1 7eae9
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
 SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
-MD5 8d4d7dfd581d1210863e7097387db0b3 files/digest-xfce4-mount-0.3 268
-RMD160 9eadf9bb84fb22024ac807d76d883bd15d8d3e22 files/digest-xfce4-mount-0.3 268
-SHA256 45b46871beb869be9c8c5eb673e4830479049de3da8ad7f6851721f1b89e0b9c files/digest-xfce4-mount-0.3 268
 MD5 8d4d7dfd581d1210863e7097387db0b3 files/digest-xfce4-mount-0.3-r1 268
 RMD160 9eadf9bb84fb22024ac807d76d883bd15d8d3e22 files/digest-xfce4-mount-0.3-r1 268
 SHA256 45b46871beb869be9c8c5eb673e4830479049de3da8ad7f6851721f1b89e0b9c files/digest-xfce4-mount-0.3-r1 268
@@ -44,10 +34,3 @@ SHA256 f2cd695e8b7f9e8b1a0ad271342850720c3b277e41375f1e1999fc4084a82429 files/di
 MD5 9e06c0889e625f503e0b5aac904e976f files/digest-xfce4-mount-0.4.8 277
 RMD160 bbc00e622ba0d00f9d3fca4dfa2f34411dacaaf4 files/digest-xfce4-mount-0.4.8 277
 SHA256 23156fae7fc219f37b20d7add81094aa375bf7f2066815d86c4cf067b4b49bf1 files/digest-xfce4-mount-0.4.8 277
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.6 (GNU/Linux)
-
-iD8DBQFF4y99NQqtfCuFneMRAnCdAJ0Zq45NWQRS9j4ZNgCRF1d34CMdgACgkXGH
-c+nxh29yRHJBsUhTJ0qbsAQ=
-=CqJD
------END PGP SIGNATURE-----
