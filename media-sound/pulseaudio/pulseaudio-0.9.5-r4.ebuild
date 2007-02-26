@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.5-r4.ebuild,v 1.13 2006/12/21 14:31:17 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.5-r4.ebuild,v 1.14 2007/02/26 16:12:03 zzam Exp $
 
 inherit eutils libtool # autotools
 
@@ -114,7 +114,7 @@ src_install() {
 
 pkg_postinst() {
 	elog "PulseAudio in Gentoo can use a system-wide pulseaudio daemon."
-	elog "This support is enabled by starting the pulsedaemon init.d ."
+	elog "This support is enabled by starting the pulseaudio init.d ."
 	elog "To be able to access that you need to be in the group pulse-access."
 	elog "For more information about system-wide support, please refer to"
 	elog "	 http://pulseaudio.org/wiki/SystemWideInstance"

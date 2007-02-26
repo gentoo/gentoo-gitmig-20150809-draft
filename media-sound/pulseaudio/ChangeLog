@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pulseaudio
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.46 2006/12/21 14:31:17 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.47 2007/02/26 16:12:03 zzam Exp $
+
+  26 Feb 2007; Matthias Schwarzott <zzam@gentoo.org>
+  pulseaudio-0.9.5-r4.ebuild:
+  Corrected name of init-script in elog-message.
 
   21 Dec 2006; Bryan Østergaard <kloeri@gentoo.org>
   pulseaudio-0.9.5-r4.ebuild:
