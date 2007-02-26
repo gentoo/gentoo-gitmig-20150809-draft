@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/psybnc-2.3.2.7-r2.ebuild,v 1.1 2007/02/26 00:03:08 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/psybnc-2.3.2.7-r2.ebuild,v 1.2 2007/02/26 12:35:49 gurligebis Exp $
 
 inherit eutils versionator toolchain-funcs
 MY_PV="$(replace_version_separator 3 -)"
@@ -27,6 +27,8 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	epatch ${FILESDIR}/compile.diff
 
 	# Useless files
 	rm -f */INFO
