@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.219 2007/02/24 07:03:48 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.220 2007/02/26 21:07:32 dang Exp $
+
+  26 Feb 2007; Daniel Gryniewicz <dang@gentoo.org> gvim-7.0.174.ebuild:
+  Marked stable on amd64 For bug #167816
 
 *gvim-7.0.201 (24 Feb 2007)
 
