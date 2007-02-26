@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/exo-0.3.0-r2.ebuild,v 1.1 2007/02/26 17:54:56 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/exo-0.3.0-r2.ebuild,v 1.2 2007/02/26 17:56:40 drac Exp $
 
 inherit eutils xfce42
 
@@ -25,4 +25,4 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-pygtk.patch
-}	
+}

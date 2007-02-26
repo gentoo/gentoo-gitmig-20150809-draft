@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/exo-0.3.0-r1.ebuild,v 1.7 2007/01/26 09:35:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/exo-0.3.0-r1.ebuild,v 1.8 2007/02/26 17:56:40 drac Exp $
 
 inherit xfce42
 
