@@ -1,6 +1,13 @@
 # ChangeLog for media-video/em8300-modules
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/ChangeLog,v 1.35 2007/01/06 14:57:42 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/ChangeLog,v 1.36 2007/02/26 16:43:34 drac Exp $
+
+*em8300-modules-0.16.0-r1 (26 Feb 2007)
+
+  26 Feb 2007; Samuli Suominen <drac@gentoo.org>
+  +files/em8300-modules-0.16.0-i2c.patch, +em8300-modules-0.16.0-r1.ebuild:
+  Use i2c_del_adapter instead of i2c_bit_del_bus for kernels 2.6.0 and above,
+  to fix compatibility with 2.6.20 kernels. Thanks to zzam for reporting.
 
   06 Jan 2007; Matthias Schwarzott <zzam@gentoo.org>
   em8300-modules-0.15.3.ebuild:
