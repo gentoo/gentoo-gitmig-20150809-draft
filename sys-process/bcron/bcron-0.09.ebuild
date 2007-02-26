@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/bcron-0.09.ebuild,v 1.4 2007/02/22 16:06:58 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/bcron-0.09.ebuild,v 1.5 2007/02/26 21:19:44 bangert Exp $
 
 CRON_SYSTEM_CRONTAB="yes"
 
@@ -25,8 +25,8 @@ RDEPEND="!virtual/cron
 PROVIDE="virtual/cron"
 
 src_compile() {
-	echo "${ROOT}/usr/include/bglibs" > conf-bgincs
-	echo "${ROOT}/usr/lib/bglibs" > conf-bglibs
+	echo "/usr/include/bglibs" > conf-bgincs
+	echo "/usr/lib/bglibs" > conf-bglibs
 	echo "${D}/usr/bin" > conf-bin
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
