@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/libydpdict
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/libydpdict/ChangeLog,v 1.1 2007/02/26 21:01:16 peper Exp $
+
+*libydpdict-0.99.0 (26 Feb 2007)
+
+  26 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> +metadata.xml,
+  +libydpdict-0.99.0.ebuild:
+  New package, necessary for the new version of ydpdict.
+
