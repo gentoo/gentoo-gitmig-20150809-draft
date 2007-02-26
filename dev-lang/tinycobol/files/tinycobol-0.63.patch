@@ -1,0 +1,15 @@
+--- compiler/scan.l	2005-07-21 14:57:46.000000000 +0200
++++ compiler/scan.l.new	2007-02-26 13:41:01.000000000 +0100
+@@ -58,7 +58,12 @@
+  the token returned by the real lexer (yylex2)
+ */
+ int prev_token=0;
++#ifdef YY_USE_PROTOS
+ #define YY_DECL int yylex2 YY_PROTO((void))
++#else
++#define YY_PROTO(proto) (void)
++#define YY_DECL int yylex2(void)
++#endif 
+ %}
+ 
+ AnyNoDQuote  [^"\t\n]
