@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/jamin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jamin/ChangeLog,v 1.19 2007/02/24 19:16:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jamin/ChangeLog,v 1.20 2007/02/26 08:45:27 opfer Exp $
+
+  26 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  jamin-0.95.0-r2.ebuild:
+  stable x86; bug 154460
 
   24 Feb 2007; Alexis Ballier <aballier@gentoo.org>
   +files/jamin-0.95.0-multilib-strict.patch, jamin-0.95.0-r2.ebuild:
