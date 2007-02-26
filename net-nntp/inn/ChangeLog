@@ -1,6 +1,13 @@
 # ChangeLog for net-nntp/inn
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.7 2007/02/09 08:15:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.8 2007/02/26 22:03:41 swegener Exp $
+
+*inn-2.4.3 (11 Feb 2007)
+
+  11 Feb 2007; Sven Wegener <swegener@gentoo.org> +inn-2.4.3.ebuild:
+  Version bump, bug #135088. Fix certificate location in configuration files,
+  bug #123316. Fix autotools handling, bug #159065. Fix obsolete head/tail
+  invocations, bug #158293.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
