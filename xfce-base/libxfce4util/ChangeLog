@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/libxfce4util
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/ChangeLog,v 1.77 2007/02/06 21:48:59 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/ChangeLog,v 1.78 2007/02/26 19:48:10 drac Exp $
+
+  26 Feb 2007; Samuli Suominen <drac@gentoo.org>
+  libxfce4util-4.4.0-r1.ebuild:
+  Change DESCRIPTION. Adjust HOMEPAGE for bug 165707.
 
   06 Feb 2007; Samuli Suominen <drac@gentoo.org>
   libxfce4util-4.4.0-r1.ebuild:
