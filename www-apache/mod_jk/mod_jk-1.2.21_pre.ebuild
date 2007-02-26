@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.21.ebuild,v 1.1 2007/02/26 19:27:44 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.21_pre.ebuild,v 1.1 2007/02/26 22:38:17 wltjr Exp $
 
 inherit apache-module autotools
 
 #MY_P="tomcat-connectors-${PV}-src"
-MY_P="tomcat-connectors-${PV}-dev-511864-src"
+MY_P="tomcat-connectors-${PV/_pre/}-dev-511994-src"
 
 KEYWORDS="~amd64 ~ppc ~x86"
 
