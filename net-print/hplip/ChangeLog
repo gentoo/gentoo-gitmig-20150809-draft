@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.49 2007/02/24 22:06:05 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.50 2007/02/26 12:17:35 opfer Exp $
+
+  26 Feb 2007; Christian Faulhammer <opfer@gentoo.org> hplip-1.6.10.ebuild:
+  stable x86; bug 158911
 
   24 Feb 2007; Marcelo Goes <vanquirius@gentoo.org> +hplip-1.6.10.ebuild:
   Re-adding hplip-1.6.10 since scanning is broken with newer versions. This is
