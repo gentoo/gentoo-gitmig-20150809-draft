@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.162 2007/02/17 17:25:33 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.163 2007/02/26 17:56:29 dang Exp $
+
+*evolution-2.8.3-r1 (26 Feb 2007)
+
+  26 Feb 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/evolution-2.8.3-missing-groupwise-feature.patch,
+  -evolution-2.8.3.ebuild, +evolution-2.8.3-r1.ebuild:
+  Bump to 2.8.3-r1
+   -  Fix settings OK button.  Bug #166740
 
   17 Feb 2007; Daniel Gryniewicz <dang@gentoo.org>
   +files/evolution-2.8.2.1-pilot-link-as-needed.patch,
