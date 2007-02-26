@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-1.3.0_alpha4.ebuild,v 1.1 2007/02/05 20:31:38 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-1.3.0_rc1.ebuild,v 1.1 2007/02/26 14:00:14 chainsaw Exp $
 
 inherit flag-o-matic
 
@@ -13,19 +13,19 @@ SRC_URI="http://static.audacious-media-player.org/release/${MY_P}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="chardet nls gnome"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+IUSE="chardet nls"
 
 RDEPEND=">=x11-libs/gtk+-2.6
 	>=gnome-base/libglade-2.3.1
-	dev-libs/libxml2
-	gnome? ( >=gnome-base/gconf-2.6.0 )"
+	dev-libs/libmcs
+	dev-libs/libxml2"
 
 DEPEND="${RDEPEND}
 	nls? ( dev-util/intltool )
 	>=dev-util/pkgconfig-0.9.0"
 
-PDEPEND=">=media-plugins/audacious-plugins-1.3.0_alpha4"
+PDEPEND=">=media-plugins/audacious-plugins-1.3.0_rc1"
 
 src_compile() {
 	# Bug #42893
@@ -34,9 +34,9 @@ src_compile() {
 	is-flag "-O*" || append-flags -O
 
 	econf \
+		--enable-mcs \
 		$(use_enable chardet) \
 		$(use_enable nls) \
-		$(use_enable gnome gconf) \
 		|| die
 
 	emake || die "make failed"
@@ -54,8 +54,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "This is alpha-quality software, and you have unmasked this software manually. Do *not* use the Gentoo bugtracker for this package."
-	elog "Note that you need to recompile *all* third-party plugins to use Audacious 1.3 alpha builds."
-	elog "Failure to do so may cause the player to crash."
-	elog "Any bug reports are to be made on: http://bugs-meta.atheme.org/"
+	elog "Note that you need to recompile *all* third-party plugins to use Audacious 1.3"
+	elog "Failure to do so may cause the player to crash. If you note any instability "
+	elog "you should unmerge all plugins (except for audacious-plugins) before you file a bug."
 }
