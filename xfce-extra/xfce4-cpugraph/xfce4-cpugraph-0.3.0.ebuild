@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cpugraph/xfce4-cpugraph-0.3.0.ebuild,v 1.2 2007/02/04 06:30:25 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cpugraph/xfce4-cpugraph-0.3.0.ebuild,v 1.3 2007/02/26 20:20:07 drac Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -8,16 +8,17 @@ WANT_AUTOMAKE=latest
 inherit xfce44 eutils autotools
 
 xfce44
-xfce44_goodies_panel_plugin
 
-DESCRIPTION="Xfce4 panel cpugraph plugin"
+DESCRIPTION="CPU load panel plugin"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
-DEPEND=">=xfce-extra/xfce4-dev-tools-4.3.99"
+DEPEND=">=xfce-extra/xfce4-dev-tools-${XFCE_MASTER_VERSION}"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch ${FILESDIR}/${P}-asneeded.patch
+	epatch "${FILESDIR}"/${P}-asneeded.patch
 	AT_M4DIR=/usr/share/xfce4/dev-tools/m4macros eautoreconf
 }
+
+xfce44_goodies_panel_plugin
