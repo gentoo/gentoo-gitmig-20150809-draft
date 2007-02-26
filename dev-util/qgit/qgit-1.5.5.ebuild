@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/qgit-1.5.2.ebuild,v 1.1 2006/09/30 10:46:15 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/qgit-1.5.5.ebuild,v 1.1 2007/02/26 18:07:18 ferdy Exp $
 
 inherit qt3
 
@@ -18,9 +18,9 @@ IUSE=""
 
 DEPEND="=x11-libs/qt-3*"
 RDEPEND="${DEPEND}
-	>=dev-util/git-1.4.2"
+	>=dev-util/git-1.5"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_install() {
 	dobin src/qgit
