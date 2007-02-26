@@ -1,12 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/xfce4-mixer-4.4.0-r1.ebuild,v 1.2 2007/02/10 15:18:40 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/xfce4-mixer-4.4.0-r1.ebuild,v 1.3 2007/02/26 20:00:31 drac Exp $
 
 inherit eutils xfce44
 
 xfce44
 
-DESCRIPTION="Mixer GUI and panel plugin"
+DESCRIPTION="Volume control application (ALSA or OSS)"
+HOMEPAGE="http://www.xfce.org/projects/xfce4-mixer"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="alsa debug"
@@ -30,6 +31,7 @@ DOCS="AUTHORS ChangeLog NEWS NOTES README TODO"
 src_install() {
 	# .desktop file has allready been created by upstrean
 	# and make install tries to create it again. Bug 166167
+	# update: seems to be parallel make issue. needs a fix.
 	rm panel-plugin/xfce4-mixer.desktop
 	xfce44_src_install
 	make_desktop_entry ${PN} "Volume control" ${PN} AudioVideo
