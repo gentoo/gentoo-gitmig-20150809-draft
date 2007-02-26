@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/shadow
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.167 2006/11/23 19:53:39 blubb Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.168 2007/02/26 04:06:14 wolf31o2 Exp $
+
+  26 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  shadow-4.0.18.1.ebuild:
+  Added ttyPSC0 for PPC for EFIKA.  Closing bug #158208.
 
   23 Nov 2006; <blubb@gentoo.org> shadow-4.0.18.1.ebuild:
   stable on amd64

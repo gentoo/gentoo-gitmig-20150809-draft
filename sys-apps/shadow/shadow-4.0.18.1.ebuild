@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.18.1.ebuild,v 1.11 2007/01/10 14:15:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.18.1.ebuild,v 1.12 2007/02/26 04:06:14 wolf31o2 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -109,7 +109,8 @@ src_install() {
 	# Output arch-specific cruft
 	case $(tc-arch) in
 		ppc*)  echo "hvc0" >> "${D}"/etc/securetty
-		       echo "hvsi0" >> "${D}"/etc/securetty;;
+		       echo "hvsi0" >> "${D}"/etc/securetty
+			   echo "ttyPSC0" >> "${D}"/etc/securetty;;
 		hppa)  echo "ttyB0" >> "${D}"/etc/securetty;;
 		arm)   echo "ttyFB0" >> "${D}"/etc/securetty;;
 	esac
