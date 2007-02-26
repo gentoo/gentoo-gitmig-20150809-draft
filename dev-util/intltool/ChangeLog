@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/intltool
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.92 2007/02/12 19:33:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.93 2007/02/26 20:54:50 dang Exp $
+
+*intltool-0.35.5 (26 Feb 2007)
+
+  26 Feb 2007; Daniel Gryniewicz <dang@gentoo.org> +intltool-0.35.5.ebuild:
+  Bump to 0.35.5
+  * Don't hardcode fallback path to intltool-extract
+  * Fix mkdir race in inltool-merge.in.in
+  * Update an additional check to use $SRCDIR properly for POTFILES.skip
+  * Handle extracting comments from ini-style files
 
   12 Feb 2007; Michael Sterrett <mr_bones_@gentoo.org>
   intltool-0.35.0.ebuild:
