@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ucspi-unix
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-unix/ChangeLog,v 1.13 2006/06/11 18:23:04 bangert Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-unix/ChangeLog,v 1.14 2007/02/26 21:16:41 bangert Exp $
+
+  26 Feb 2007; Thilo Bangert <bangert@gentoo.org> ucspi-unix-0.36-r1.ebuild,
+  ucspi-unix-0.36-r2.ebuild:
+  fix ROOT misuse
 
 *ucspi-unix-0.36-r2 (11 Jun 2006)
 

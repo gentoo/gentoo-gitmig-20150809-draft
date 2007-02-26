@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-proxy/ucspi-proxy-0.96.ebuild,v 1.1 2006/06/11 18:38:02 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-proxy/ucspi-proxy-0.96.ebuild,v 1.2 2007/02/26 21:18:23 bangert Exp $
 
 inherit toolchain-funcs
 
@@ -19,8 +19,8 @@ src_compile() {
 	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 	echo "${D}/usr/bin" > conf-bin
 	echo "${D}/usr/share/man/" > conf-man
-	echo "${ROOT}/usr/include/bglibs/" > conf-bgincs
-	echo "${ROOT}/usr/lib/bglibs/" > conf-bglibs
+	echo "/usr/include/bglibs/" > conf-bgincs
+	echo "/usr/lib/bglibs/" > conf-bglibs
 	emake || die
 }
 
