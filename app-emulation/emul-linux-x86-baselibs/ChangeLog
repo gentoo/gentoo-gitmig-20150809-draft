@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.70 2007/02/21 09:29:41 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.71 2007/02/26 10:02:37 blubb Exp $
+
+  26 Feb 2007; Simon Stelling <blubb@gentoo.org>
+  emul-linux-x86-baselibs-10.1-r1.ebuild:
+  improve coding style; bug 168386
 
 *emul-linux-x86-baselibs-10.1-r1 (21 Feb 2007)
 

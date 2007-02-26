@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-10.1-r1.ebuild,v 1.1 2007/02/21 09:29:41 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-10.1-r1.ebuild,v 1.2 2007/02/26 10:02:37 blubb Exp $
 
 inherit emul-libs
 
@@ -53,9 +53,11 @@ RDEPEND=""
 src_unpack() {
 	export ALLOWED="(${S}/lib32/security/pam_filter/upperLOWER|${S}/etc/env.d)"
 	emul-libs_src_unpack
-	rm -rf ${S}/etc/env.d/binutils/ ${S}/usr/lib32/binutils/
-	rm -rf ${S}/usr/lib32/engines/ ${S}/usr/lib32/openldap/
-	rm -rf ${S}/usr/lib32/python2.4/
+	rm -rf "${S}/etc/env.d/binutils/" \
+			"${S}/usr/lib32/binutils/" \
+			"${S}/usr/lib32/engines/" \
+			"${S}/usr/lib32/openldap/" \
+			"${S}/usr/lib32/python2.4/"
 
 	ln -s ../share/terminfo ${S}/usr/lib32/terminfo
 }
