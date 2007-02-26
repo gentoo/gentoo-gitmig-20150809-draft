@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.22-r3.ebuild,v 1.8 2006/11/02 23:59:06 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.22-r3.ebuild,v 1.9 2007/02/26 18:40:03 grobian Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -9,12 +9,12 @@ HOMEPAGE="http://www.gentoo.org/"
 SRC_URI="mirror://gentoo/${PN}-${PV}.tar.bz2 http://dev.gentoo.org/~jstubbs/releases/${PN}-${PV}.tar.bz2"
 LICENSE="GPL-2"
 
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc-macos ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 
 SLOT="0"
 IUSE="build doc selinux"
 DEPEND=">=dev-lang/python-2.2.1"
-RDEPEND="!build? ( >=sys-apps/sed-4.0.5 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=app-shells/bash-2.05a ) !x86-fbsd? ( !ppc-macos? ( !mips? ( >=sys-apps/sandbox-1.2.17 ) ) ) selinux? ( >=dev-python/python-selinux-2.15 )"
+RDEPEND="!build? ( >=sys-apps/sed-4.0.5 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=app-shells/bash-2.05a ) !x86-fbsd? ( !mips? ( >=sys-apps/sandbox-1.2.17 ) ) selinux? ( >=dev-python/python-selinux-2.15 )"
 PDEPEND="doc? ( app-portage/portage-manpages )"
 PROVIDE="virtual/portage"
 
@@ -36,7 +36,7 @@ src_compile() {
 	cd "${S}"/src
 	$(tc-getCC) ${CFLAGS} -o tbz2tool tbz2tool.c
 
-	if ! use ppc-macos && ! python_has_lchown; then
+	if ! python_has_lchown; then
 		cd "${S}"/src/python-missingos
 		chmod +x setup.py
 		./setup.py build || die "Failed to build missingos module"
@@ -63,7 +63,7 @@ src_install() {
 		newins make.conf make.conf.example
 	fi
 
-	if ! use ppc-macos && ! python_has_lchown; then
+	if ! python_has_lchown; then
 		cd "${S}"/src/python-missingos
 		./setup.py install --root ${D} || die "Failed to install missingos module"
 	fi
