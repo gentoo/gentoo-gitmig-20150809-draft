@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.18-r2.ebuild,v 1.9 2006/10/20 21:34:27 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.18-r2.ebuild,v 1.10 2007/02/26 12:10:06 phosphan Exp $
 
 inherit eutils
 
@@ -90,6 +90,7 @@ src_unpack() {
 			die "could not add 'brother' to backend list"
 	fi
 	epatch ${FILESDIR}/udev-rule.patch
+	epatch ${FILESDIR}/broken_coolscan.patch
 }
 
 src_compile() {
