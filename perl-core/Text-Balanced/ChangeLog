@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Text-Balanced
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Text-Balanced/ChangeLog,v 1.14 2007/01/30 03:57:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Text-Balanced/ChangeLog,v 1.15 2007/02/26 12:01:47 mcummings Exp $
+
+  26 Feb 2007; Michael Cummings <mcummings@gentoo.org>
+  Text-Balanced-2.0.0.ebuild:
+  Bug 161486, tested on swarm, keywording ~mips
 
   30 Jan 2007; Jeroen Roovers <jer@gentoo.org> Text-Balanced-2.0.0.ebuild:
   Marked ~hppa (bug #161486).
