@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/zsh-completion
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completion/ChangeLog,v 1.17 2007/01/24 04:00:44 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completion/ChangeLog,v 1.18 2007/02/26 16:28:51 opfer Exp $
+
+  26 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  zsh-completion-20060618.ebuild:
+  stable x86; bug 168320
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org>
   zsh-completion-20040730.ebuild, zsh-completion-20050120.ebuild,
