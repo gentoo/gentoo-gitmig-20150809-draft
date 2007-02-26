@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce-mcs-manager
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-mcs-manager/ChangeLog,v 1.75 2007/02/03 00:59:40 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-mcs-manager/ChangeLog,v 1.76 2007/02/26 19:42:52 drac Exp $
+
+  26 Feb 2007; Samuli Suominen <drac@gentoo.org>
+  xfce-mcs-manager-4.4.0.ebuild:
+  Change DESCRIPTION. Adjust HOMEPAGE for bug 165707.
 
   03 Feb 2007; Joshua Nichols <nichoj@gentoo.org>
   -xfce-mcs-manager-4.3.99.2.ebuild:
