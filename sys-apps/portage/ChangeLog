@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.356 2007/02/24 04:09:02 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.357 2007/02/26 14:11:03 zmedico Exp $
+
+  26 Feb 2007; Zac Medico <zmedico@gentoo.org>
+  portage-2.1.2-r9.ebuild, portage-2.1.2-r11.ebuild:
+  RDEPEND on >=sys-apps/findutils-4.2.29 to prevent invalid predicate `-L'
+  errors from the find command in ecompressdir (bug #168432).
 
 *portage-2.1.2-r11 (23 Feb 2007)
 
