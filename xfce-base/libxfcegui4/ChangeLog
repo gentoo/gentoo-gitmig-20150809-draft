@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/libxfcegui4
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/ChangeLog,v 1.88 2007/02/04 00:05:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/ChangeLog,v 1.89 2007/02/26 19:45:56 drac Exp $
+
+  26 Feb 2007; Samuli Suominen <drac@gentoo.org> libxfcegui4-4.4.0.ebuild:
+  Change DESCRIPTION. Adjust HOMEPAGE for bug 165707.
 
   04 Feb 2007; Samuli Suominen <drac@gentoo.org> libxfcegui4-4.4.0.ebuild:
   Adjusting xfce4-panel blocker for bug 164771
