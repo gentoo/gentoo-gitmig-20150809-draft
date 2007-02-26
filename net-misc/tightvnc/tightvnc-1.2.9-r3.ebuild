@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.2.9-r3.ebuild,v 1.7 2007/01/21 12:11:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.2.9-r3.ebuild,v 1.8 2007/02/26 12:39:36 armin76 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -99,6 +99,10 @@ src_install() {
 		rm -f ${D}/usr/bin/vncserver
 		rm -f ${D}/usr/share/man/man1/{Xvnc,vncserver}*
 	fi
+
+	doicon ${FILESDIR}/vncviewer.png
+	make_desktop_entry vncviewer vncviewer vncviewer.png Network
+
 
 	dodoc ChangeLog README WhatsNew
 	use java && dodoc ${FILESDIR}/README.JavaViewer
