@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/cedet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.14 2007/02/21 21:27:00 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.15 2007/02/26 08:20:30 opfer Exp $
+
+  26 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  cedet-1.0_pre3-r2.ebuild:
+  added some quotes and braces for better readability and possible breakages
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

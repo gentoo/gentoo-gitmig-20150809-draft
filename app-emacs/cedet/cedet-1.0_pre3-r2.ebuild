@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0_pre3-r2.ebuild,v 1.1 2006/11/19 17:13:20 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0_pre3-r2.ebuild,v 1.2 2007/02/26 08:20:30 opfer Exp $
 
 inherit elisp eutils
 
@@ -24,9 +24,11 @@ SITEFILE="60cedet-gentoo.el"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/1.0_pre3-eieio-tests-gentoo.patch # Bug #124598
-	epatch ${FILESDIR}/1.0_pre3-sb-info-circular-dep-gentoo.patch # Bug #138190
-	epatch ${FILESDIR}/1.0_pre3-idle-gentoo.patch # Bug #149842
+
+	cd "${S}"
+	epatch "${FILESDIR}/1.0_pre3-eieio-tests-gentoo.patch" # Bug #124598
+	epatch "${FILESDIR}/1.0_pre3-sb-info-circular-dep-gentoo.patch" # Bug #138190
+	epatch "${FILESDIR}/1.0_pre3-idle-gentoo.patch" # Bug #149842
 }
 
 src_compile() {
@@ -34,37 +36,37 @@ src_compile() {
 }
 
 src_install() {
-	find ${S} -type f -print \
+	find "${S}" -type f -print \
 		| while read target; do
 			local directory=`dirname $target` file=`basename $target`
 			local sub_directory=`basename $directory`
 			case $file in
 				*~ | Makefile | *.texi | *-script | PRERELEASE_CHECKLIST | Project.ede)
-					rm -f $file
+					rm -f ${file}
 					;;
 				ChangeLog | README | AUTHORS | *NEWS | INSTALL)
-					docinto $sub_directory
-					dodoc $target
+					docinto ${sub_directory}
+					dodoc ${target}
 					;;
 				*.png)
-					insinto /usr/share/doc/${PF}/$sub_directory
-					doins $target
+					insinto /usr/share/doc/${PF}/${sub_directory}
+					doins ${target}
 					;;
 				IMPLICIT_TARGETS)
 					;;
 				*.el | *.elc)
-					insinto /usr/share/emacs/site-lisp/cedet/$sub_directory
-					doins $target
+					insinto /usr/share/emacs/site-lisp/cedet/${sub_directory}
+					doins ${target}
 					;;
 				*.info*)
-					doinfo $target
+					doinfo ${target}
 					;;
 				*)
-					insinto /usr/share/emacs/site-lisp/cedet/$sub_directory
-					doins $target
-					echo $target >>${S}/IMPLICIT_TARGETS
+					insinto /usr/share/emacs/site-lisp/cedet/${sub_directory}
+					doins ${target}
+					echo ${target} >>"${S}/IMPLICIT_TARGETS"
 					;;
 			esac
 		done
-	elisp-site-file-install ${FILESDIR}/${SITEFILE}
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 }
