@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2.ebuild,v 1.23 2007/01/10 16:50:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2.ebuild,v 1.24 2007/02/26 12:24:15 armin76 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -140,6 +140,10 @@ src_install() {
 	cd unix
 	./vncinstall "${D}"/usr/bin "${D}"/usr/share/man "${D}"/usr/$(get_libdir)/xorg/modules/extensions || die "failed to run vncinstall"
 	cd ..
+
+	doicon ${FILESDIR}/vncviewer.png
+	make_desktop_entry vncviewer vncviewer vncviewer.png Network
+
 	dodoc README
 
 	if ! use server ; then
