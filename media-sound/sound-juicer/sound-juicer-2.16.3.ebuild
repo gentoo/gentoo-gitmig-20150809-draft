@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.16.1.ebuild,v 1.1 2006/10/12 21:05:15 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.16.3.ebuild,v 1.1 2007/02/26 00:49:37 metalgod Exp $
 
-inherit gnome2 eutils
+inherit gnome2
 
 DESCRIPTION="CD ripper for GNOME 2"
 HOMEPAGE="http://www.burtonini.com/blog/computers/sound-juicer/"
