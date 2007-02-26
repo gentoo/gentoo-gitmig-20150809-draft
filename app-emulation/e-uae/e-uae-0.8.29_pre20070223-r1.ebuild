@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.29_pre20070223.ebuild,v 1.1 2007/02/25 18:50:29 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.29_pre20070223-r1.ebuild,v 1.1 2007/02/26 07:19:26 pva Exp $
 
 inherit eutils flag-o-matic
 
@@ -100,6 +100,13 @@ pkg_setup() {
 	myconf="$myconf --enable-aga"
 	myconf="$myconf --enable-autoconfig --enable-scsi-device --enable-cdtv --enable-cd32"
 	myconf="$myconf --enable-bsdsock"
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${PN}-${my_ver}-${snap_ver}-filesys_fix.diff
 }
 
 src_compile() {
