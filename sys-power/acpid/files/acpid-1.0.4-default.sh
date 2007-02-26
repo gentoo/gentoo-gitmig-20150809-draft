@@ -38,11 +38,13 @@ case "$group" in
 			# Add code here to handle when the system is unplugged
 			# (maybe change cpu scaling to powersave mode)
 			#*0)
+			#	cpufreq-set -g powersave
 			#	;;
 
 			# Add code here to handle when the system is plugged in
 			# (maybe change cpu scaling to performance mode)
 			#*1)
+			#	cpufreq-set -g performance
 			#	;;
 
 			*)	log_unhandled $* ;;
