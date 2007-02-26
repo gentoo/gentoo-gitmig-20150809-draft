@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libprojectm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/ChangeLog,v 1.3 2007/02/26 13:50:20 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/ChangeLog,v 1.4 2007/02/26 16:51:14 jer Exp $
+
+  26 Feb 2007; Jeroen Roovers <jer@gentoo.org> libprojectm-0.99.ebuild:
+  Marked ~hppa (bug #168465).
 
   26 Feb 2007; Tony Vroon <chainsaw@gentoo.org> libprojectm-0.99.ebuild:
   Keyword ~ppc & ~ppc64. Tested with GCC 4.1.2; 64UL.
