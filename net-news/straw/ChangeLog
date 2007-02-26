@@ -1,6 +1,17 @@
 # ChangeLog for net-news/straw
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/straw/ChangeLog,v 1.6 2007/02/09 08:14:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/straw/ChangeLog,v 1.7 2007/02/26 16:40:55 dang Exp $
+
+*straw-0.26 (26 Feb 2007)
+
+  26 Feb 2007; Daniel Gryniewicz <dang@gentoo.org> +straw-0.26.ebuild:
+  Bump to 0.26
+  - Autoloading of feed content on feed selection.
+  - DBus support (Subscribe to feed)
+  - More usable find dialog.
+  - Clipboard copy and text magnification content view.
+  - Feed sorting in the feed list view.
+  - Marking all feeds as read.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
