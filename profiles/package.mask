@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6872 2007/02/26 17:25:06 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6873 2007/02/26 17:29:53 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -22,12 +22,13 @@
 ##
 
 # Samuli Suominen <drac@gentoo.org> (24 Feb 2007)
-# These plugins are not ported for 4.4 and they have no
+# These plugins are not ported for 4.4 and have no
 # stable keywords so they are masked for removal.
-xfce-extra/xfce4-websearch
-xfce-extra/xfce4-panelmenu
 xfce-extra/xfce4-bglist-editor
 xfce-extra/xfce4-modemlights
+xfce-extra/xfce4-megahertz
+xfce-extra/xfce4-panelmenu
+xfce-extra/xfce4-websearch
 
 # Marcelo Goes <vanquirius@gentoo.org> (24 Feb 2007)
 # Masked because scanning (SANE) is broken
