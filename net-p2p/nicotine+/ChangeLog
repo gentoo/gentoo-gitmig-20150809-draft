@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/nicotine+
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/ChangeLog,v 1.9 2007/02/19 12:20:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/ChangeLog,v 1.10 2007/02/26 15:55:00 armin76 Exp $
+
+*nicotine+-1.2.7 (26 Feb 2007)
+
+  26 Feb 2007; Raúl Porcel <armin76@gentoo.org> +nicotine+-1.2.7.ebuild:
+  Version bump, bug 168467
 
   19 Feb 2007; Raúl Porcel <armin76@gentoo.org> -nicotine+-1.2.3.ebuild:
   Drop old
