@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.103 2007/02/26 16:26:55 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.104 2007/02/26 16:33:37 pylon Exp $
+
+  26 Feb 2007; Lars Weiler <pylon@gentoo.org> zsh-4.3.2-r2.ebuild:
+  Stable on ppc; bug #168320.
 
   26 Feb 2007; Christian Faulhammer <opfer@gentoo.org> zsh-4.3.2-r2.ebuild:
   stable x86; bug 168320
