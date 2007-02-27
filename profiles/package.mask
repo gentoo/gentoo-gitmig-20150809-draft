@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6880 2007/02/27 16:34:58 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6881 2007/02/27 16:38:11 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -22,7 +22,7 @@
 ##
 
 # Stefan Schweizer <genstef@gentoo.org> (27 Feb 2007)
-# Masked for modular X removal
+# Masked for removal, modular X incompatible
 # bug 153202, upstream dead
 media-libs/libhydrogen
 # bug 139792, upstream dead
