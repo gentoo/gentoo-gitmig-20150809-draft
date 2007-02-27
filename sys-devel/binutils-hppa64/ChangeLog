@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils-hppa64
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-hppa64/ChangeLog,v 1.10 2006/11/07 23:52:46 gmsoft Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-hppa64/ChangeLog,v 1.11 2007/02/27 19:42:08 gmsoft Exp $
+
+  27 Feb 2007; Guy Martin <gmsoft@gentoo.org>
+  -binutils-hppa64-2.16.1.ebuild:
+  Removed binutils-hppa64-2.16.1. See #168046.
 
   07 Nov 2006; Guy Martin <gmsoft@gentoo.org> binutils-hppa64-2.17.ebuild:
   Stable on hppa.
