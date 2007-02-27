@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/chess
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/ChangeLog,v 1.10 2007/02/09 00:26:28 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/ChangeLog,v 1.11 2007/02/27 12:39:35 opfer Exp $
+
+*chess-2.0_beta5-r2 (27 Feb 2007)
+
+  27 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  +files/51chess-gentoo.el, +chess-2.0_beta5-r2.ebuild:
+  revision bump: Have a smoother init file, install sounds and icons in better
+  suited directories; fixes bug 168550, reported by Ulrich Mueller
+  <ulm@kph.uni-mainz.de>
 
 *chess-2.0_beta5-r1 (09 Feb 2007)
 
