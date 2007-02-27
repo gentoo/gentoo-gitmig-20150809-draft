@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.3.0_rc1.ebuild,v 1.2 2007/02/26 16:52:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.3.0_rc2.ebuild,v 1.1 2007/02/27 15:28:04 chainsaw Exp $
 
-inherit flag-o-matic
+inherit eutils flag-o-matic autotools
 
 MY_P=${P/_/-}
 S=${WORKDIR}/${MY_P}
@@ -14,14 +14,15 @@ SRC_URI="http://static.audacious-media-player.org/release/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
-IUSE="aac adplug alsa arts chardet esd flac jack lirc mad modplug musepack nls opengl oss sid sndfile timidity tta vorbis wavpack wma pulseaudio sdl"
+IUSE="aac adplug alsa arts chardet esd flac jack lirc mad modplug musepack nls opengl oss sid sndfile timidity tta vorbis wavpack wma pulseaudio"
 
 RDEPEND="app-arch/unzip
 	dev-libs/libxml2
 	net-misc/curl
-	>=media-sound/audacious-1.3.0_rc1
+	>=media-sound/audacious-1.3.0_rc2
 	>=x11-libs/gtk+-2.6
 	>=gnome-base/libglade-2.3.1
+	>=media-libs/libsdl-1.2.5
 	media-libs/taglib
 	adplug? ( >=dev-cpp/libbinio-1.4 )
 	alsa? ( >=media-libs/alsa-lib-1.0.9_rc2 )
@@ -38,7 +39,6 @@ RDEPEND="app-arch/unzip
 	mad? ( media-libs/libmad )
 	musepack? ( media-libs/libmpcdec )
 	opengl? ( =media-libs/libprojectm-0.99* )
-	sdl? ( 	>=media-libs/libsdl-1.2.5 )
 	sid? ( media-libs/libsidplay )
 	sndfile? ( media-libs/libsndfile )
 	timidity? ( media-sound/timidity++ )
@@ -46,7 +46,8 @@ RDEPEND="app-arch/unzip
 	vorbis? ( >=media-libs/libvorbis-1.0
 		  >=media-libs/libogg-1.0 )
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.3 )
-	wavpack? ( >=media-sound/wavpack-4.31 )"
+	wavpack? ( >=media-sound/wavpack-4.31 )
+	wma? ( >=media-libs/libmms-0.3 )"
 
 DEPEND="${RDEPEND}
 	nls? ( dev-util/intltool )
@@ -60,6 +61,13 @@ mp3_warning() {
 	fi
 }
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-freebsd-portability.patch
+	eautoconf
+}
+
 src_compile() {
 	mp3_warning
 
@@ -71,6 +79,7 @@ src_compile() {
 	econf \
 		--with-dev-dsp=/dev/sound/dsp \
 		--with-dev-mixer=/dev/sound/mixer \
+		--enable-paranormal \
 		$(use_enable vorbis) \
 		$(use_enable esd) \
 		$(use_enable mad mp3) \
@@ -94,7 +103,6 @@ src_compile() {
 		$(use_enable tta) \
 		$(use_enable opengl projectm) \
 		$(use_enable adplug) \
-		$(use_enable sdl paranormal) \
 		|| die
 
 	emake || die "make failed"
@@ -107,8 +115,8 @@ src_install() {
 
 pkg_postinst() {
 	mp3_warning
-	ewarn "This is alpha-quality software, and you have unmasked this software manually. Do *not* use the Gentoo bugtracker for this package."
-	elog "Note that you need to recompile *all* third-party plugins to use Audacious 1.3 alpha builds."
-	elog "Failure to do so may cause the player to crash."
-	elog "Any bug reports are to be made on: http://bugs-meta.atheme.org/"
+	elog "Note that you need to recompile *all* third-party plugins to use Audacious 1.3 builds."
+	elog "To clarify, that means all plugins *not* contained in this ebuild. Failure to do so may cause "
+	elog "the player to crash. Rebuild, and if that fails, unmerge, any third-party plugins before you "
+	elog "report a bug."
 }
