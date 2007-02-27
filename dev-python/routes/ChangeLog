@@ -1,0 +1,15 @@
+# ChangeLog for dev-python/routes
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/routes/ChangeLog,v 1.1 2007/02/27 23:22:24 dev-zero Exp $
+
+  06 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> -routes-1.6.ebuild,
+  +routes-1.6.2.ebuild:
+  Version bump
+
+  04 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> routes-1.6.ebuild:
+  Added setuptools dependency
+
+  04 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> routes-1.6.ebuild,
+  +metadata.xml:
+  New ebuild for bug #155370 (thanks to Brad Walker)
+
