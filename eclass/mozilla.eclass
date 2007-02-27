@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.31 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.32 2007/02/27 17:02:37 genstef Exp $
 #
 # You probably don't want to change this eclass.  Newer ebuilds use
 # mozconfig.eclass instead.
@@ -21,7 +21,6 @@ RDEPEND="virtual/x11
 	>=media-libs/jpeg-6b
 	>=media-libs/libmng-1.0.0
 	>=media-libs/libpng-1.2.1
-	>=sys-apps/portage-2.0.36
 	dev-libs/expat
 	app-arch/zip
 	app-arch/unzip
