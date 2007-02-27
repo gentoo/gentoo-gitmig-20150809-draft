@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/videotrans/videotrans-1.5.2.ebuild,v 1.3 2007/02/02 03:49:17 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/videotrans/videotrans-1.5.2.ebuild,v 1.4 2007/02/27 23:34:07 sbriesen Exp $
 
 inherit eutils
 
@@ -25,6 +25,13 @@ RDEPEND="${DEPEND}
 	www-client/lynx
 	app-shells/bash
 	sys-devel/bc"
+
+pkg_setup() {
+	if ! built_with_use media-video/mjpegtools png; then
+		eerror "Please emerge media-video/mjpegtools with useflag 'png'."
+		die "Fix USE flags and re-emerge"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
