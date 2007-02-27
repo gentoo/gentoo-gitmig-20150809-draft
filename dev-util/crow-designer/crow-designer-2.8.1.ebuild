@@ -1,9 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/crow-designer/crow-designer-2.8.1.ebuild,v 1.1 2006/10/26 17:56:14 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/crow-designer/crow-designer-2.8.1.ebuild,v 1.2 2007/02/27 12:46:00 pva Exp $
 
 DESCRIPTION="GTK+ GUI building tool"
-HOMEPAGE="http://gideon.sourceforge.net"
+HOMEPAGE="http://crow-designer.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/crow-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
