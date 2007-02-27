@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.142 2007/02/27 16:34:58 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.143 2007/02/27 19:36:03 armin76 Exp $
+
+  27 Feb 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
+  Add net-p2p/freenet pending for removal, bug 72996
 
   27 Feb 2007; <genstef@gentoo.org> package.mask:
   mask other modular X offenders, app-i18n/skkinput, bug 139792,
