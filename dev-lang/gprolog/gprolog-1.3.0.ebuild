@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/gprolog-1.3.0.ebuild,v 1.3 2007/02/18 11:30:24 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/gprolog-1.3.0.ebuild,v 1.4 2007/02/27 13:02:00 grobian Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ S=${WORKDIR}/${P}/src
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~ppc-macos x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="doc examples"
 
 DEPEND=""
