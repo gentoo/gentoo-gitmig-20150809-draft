@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-10.0.ebuild,v 1.1 2007/02/21 19:25:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-10.0.ebuild,v 1.2 2007/02/27 10:56:05 blubb Exp $
 
 inherit emul-libs
 
@@ -19,6 +19,7 @@ KEYWORDS="-* ~amd64"
 
 DEPEND=""
 RDEPEND=">=app-emulation/emul-linux-x86-baselibs-10.0
+	>=app-emulation/emul-linux-x86-qtlibs-10.0
 	>=app-emulation/emul-linux-x86-xlibs-10.0"
 
 src_unpack() {

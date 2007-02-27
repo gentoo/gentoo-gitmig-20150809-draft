@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-gtklibs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.37 2007/02/21 19:25:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.38 2007/02/27 10:56:05 blubb Exp $
+
+  27 Feb 2007; Simon Stelling <blubb@gentoo.org>
+  emul-linux-x86-gtklibs-10.0.ebuild:
+  depend on qtlibs, otherwise gtk-engines-qt is broken; bug 168501
 
 *emul-linux-x86-gtklibs-10.0 (21 Feb 2007)
 
