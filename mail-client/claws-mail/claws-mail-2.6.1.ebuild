@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-2.6.1.ebuild,v 1.7 2007/02/07 20:34:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-2.6.1.ebuild,v 1.8 2007/02/27 20:42:04 ticho Exp $
 
 IUSE="gnome dillo crypt spell ssl ldap ipv6 pda clamav xface kde imap spamassassin doc startup-notification bogofilter"
 
@@ -44,8 +44,6 @@ DEPEND="${COMMONDEPEND}
 RDEPEND="${COMMONDEPEND}
 	app-misc/mime-types
 	x11-misc/shared-mime-info"
-
-PROVIDE="virtual/sylpheed"	# should be removed probably
 
 PLUGIN_NAMES="acpi-notifier att-remover cachesaver etpan-privacy fetchinfo gtkhtml maildir mailmbox newmail notification perl rssyl smime synce vcalendar"
 
