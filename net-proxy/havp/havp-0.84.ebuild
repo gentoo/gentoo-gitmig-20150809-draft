@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/havp-0.84.ebuild,v 1.3 2007/02/27 06:46:40 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/havp-0.84.ebuild,v 1.4 2007/02/27 12:12:04 mrness Exp $
 
 inherit eutils
 
@@ -24,9 +24,6 @@ src_unpack() {
 	unpack ${A}
 
 	epatch "${FILESDIR}/${P}-gentoo.patch"
-	if use clamav && has_version '>=app-antivirus/clamav-0.90' ; then
-		epatch "${FILESDIR}/${P}-clamav-0.90.patch"
-	fi
 }
 
 src_compile() {
@@ -53,7 +50,7 @@ src_install() {
 	diropts -m 0750
 	dodir /var/run/havp /var/tmp/havp
 
-	dodoc ChangeLog todo
+	dodoc ChangeLog
 }
 
 pkg_postinst() {
