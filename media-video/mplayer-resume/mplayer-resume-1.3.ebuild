@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-resume/mplayer-resume-1.3.ebuild,v 1.3 2007/02/08 17:07:25 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-resume/mplayer-resume-1.3.ebuild,v 1.4 2007/02/27 13:44:53 blubb Exp $
 
 inherit depend.php
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.spaceparanoids.org/trac/bend/wiki/mplayer-resume"
 SRC_URI="http://spaceparanoids.org/downloads/mplayer-resume/${P}.tar.gz"
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 DEPEND=""
 RDEPEND="app-misc/lirc
