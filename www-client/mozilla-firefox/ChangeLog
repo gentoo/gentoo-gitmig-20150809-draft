@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.265 2007/02/26 15:36:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.266 2007/02/27 02:33:51 weeve Exp $
+
+  27 Feb 2007; Jason Wever <weeve@gentoo.org>
+  mozilla-firefox-1.5.0.10.ebuild, mozilla-firefox-2.0.0.2.ebuild:
+  Stable on SPARC wrt security bug #165555.
 
   26 Feb 2007; Jeroen Roovers <jer@gentoo.org>
   mozilla-firefox-2.0.0.2.ebuild:
