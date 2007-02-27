@@ -1,9 +1,4 @@
-DIST xfce4-taskmanager-0.3.1.tar.gz 359673 RMD160 137e881cc683a3d871cd7197ddac8c8b328fb74c SHA1 05f4c17c743cfdf347a481ff466e9d2fcf2042fe SHA256 a01c7ac078b3adf7cecb5ed2b8dbdd6ee9eede20257ee1f1e270e9ab3befee13
 DIST xfce4-taskmanager-0.3.2.tar.bz2 190425 RMD160 da92462a3324702de9eae9e8039e8e787cf25d9c SHA1 a7cce962550f8c3669c3709db9f7f3a0c18c534d SHA256 76c5adbcd83d1f15676da42692a1bbcc19d8aef641c1b4046837e98bf1066b6f
-EBUILD xfce4-taskmanager-0.3.1-r1.ebuild 373 RMD160 6c0afd0fb5649fc66c2539038a1795d3d2e39dd0 SHA1 2dba010a82f4688e72e95ddbd09311194ade0a3d SHA256 d148be2c33b92d18766225a025d5de22d8b4ffd76a016521a574cdabd553364a
-MD5 c0cf439fbc8687844aaa5931b40351f9 xfce4-taskmanager-0.3.1-r1.ebuild 373
-RMD160 6c0afd0fb5649fc66c2539038a1795d3d2e39dd0 xfce4-taskmanager-0.3.1-r1.ebuild 373
-SHA256 d148be2c33b92d18766225a025d5de22d8b4ffd76a016521a574cdabd553364a xfce4-taskmanager-0.3.1-r1.ebuild 373
 EBUILD xfce4-taskmanager-0.3.2.ebuild 638 RMD160 07ca0b0eebd058aff5fe7a6d77b577d666e99da0 SHA1 17950f1b567b087e3c8be4b2f2b9e64ce568c406 SHA256 de798ebfe42cda8dd12ee934e39b71fc8c3196b9fb476f611687bc0f834ed00f
 MD5 6aa1752239c06e6869b3159e7b7a7174 xfce4-taskmanager-0.3.2.ebuild 638
 RMD160 07ca0b0eebd058aff5fe7a6d77b577d666e99da0 xfce4-taskmanager-0.3.2.ebuild 638
@@ -16,9 +11,6 @@ MISC metadata.xml 157 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 SHA1 7eae9
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
 SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
-MD5 77eff22880f89910541bb0d43f11ec0f files/digest-xfce4-taskmanager-0.3.1-r1 271
-RMD160 8d7343b9a36eecf241a38dc0babef7da629e77c4 files/digest-xfce4-taskmanager-0.3.1-r1 271
-SHA256 0ec09347d3f82b5b19617dd78d05ba203232f36af63bb04910dd373d4457dd0c files/digest-xfce4-taskmanager-0.3.1-r1 271
 MD5 1e2eed48067921b4e9d1088a87377cb4 files/digest-xfce4-taskmanager-0.3.2 274
 RMD160 267211a639f5da9bb3b3ed48a6d5da946d5bb87b files/digest-xfce4-taskmanager-0.3.2 274
 SHA256 e4434bb07daa0213890e29ff5e3992803bd3f8e1e69839b11a5be70fbb21ecf1 files/digest-xfce4-taskmanager-0.3.2 274
