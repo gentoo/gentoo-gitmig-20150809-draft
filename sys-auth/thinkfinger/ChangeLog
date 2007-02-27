@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/thinkfinger
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/ChangeLog,v 1.3 2007/02/22 21:58:25 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/ChangeLog,v 1.4 2007/02/27 14:58:09 peper Exp $
+
+  27 Feb 2007; Piotr Jaroszyński <peper@gentoo.org>
+  thinkfinger-0.2.2-r1.ebuild:
+  Add ~amd64 wrt bug #167951.
 
   22 Feb 2007; Tony Vroon <chainsaw@gentoo.org> thinkfinger-0.2.2-r1.ebuild:
   Put inherit in correct location, as requested by Mr_Bones.

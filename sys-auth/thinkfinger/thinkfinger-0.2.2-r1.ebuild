@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/thinkfinger-0.2.2-r1.ebuild,v 1.2 2007/02/22 21:58:25 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/thinkfinger-0.2.2-r1.ebuild,v 1.3 2007/02/27 14:58:09 peper Exp $
 
 inherit pam
 
@@ -16,7 +16,7 @@ DEPEND="${RDEPEND}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="pam"
 
 src_compile() {
