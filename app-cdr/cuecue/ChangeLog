@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/cuecue
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuecue/ChangeLog,v 1.3 2006/10/19 19:15:22 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuecue/ChangeLog,v 1.4 2007/02/27 22:47:46 sbriesen Exp $
+
+*cuecue-0.2.2-r1 (27 Feb 2007)
+
+  27 Feb 2007; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/cuecue-0.2.2-flac113.diff, +cuecue-0.2.2-r1.ebuild:
+  adding flac 1.1.3 compatibility patch (see bug #157706).
 
   19 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> cuecue-0.2.2.ebuild:
   Depend on 1.1.2 version of flac, as the 1.1.3 version changes API.
