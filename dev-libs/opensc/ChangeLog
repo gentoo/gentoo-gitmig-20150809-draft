@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/opensc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.35 2007/01/29 22:11:35 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.36 2007/02/27 23:35:54 peper Exp $
+
+  27 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> opensc-0.10.1.ebuild,
+  opensc-0.11.0-r1.ebuild:
+  Fix incomplete dev-libs/pam_pkcs11 -> sys-auth/pam_pkcs11 move.
 
   29 Jan 2007; Alon Bar-Lev <alonbl@gentoo.org> opensc-0.11.1-r1.ebuild:
   Fixed automake constraint, closes bug#164471, thanks to  Radu Benea

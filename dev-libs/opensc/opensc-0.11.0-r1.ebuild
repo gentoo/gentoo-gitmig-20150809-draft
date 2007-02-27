@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.11.0-r1.ebuild,v 1.1 2006/06/04 14:53:32 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.11.0-r1.ebuild,v 1.2 2007/02/27 23:35:54 peper Exp $
 
 inherit eutils libtool
 
@@ -19,7 +19,7 @@ RDEPEND="X? ( || ( ( >=x11-libs/libX11-1.0.0 >=x11-libs/libXt-1.0.0 ) virtual/x1
 	pcsc-lite? ( sys-apps/pcsc-lite )
 	!pcsc-lite? ( >=dev-libs/openct-0.5.0 )"
 
-#PDEPEND="pam? ( dev-libs/pam_pkcs11 )"
+#PDEPEND="pam? ( sys-auth/pam_pkcs11 )"
 
 src_unpack() {
 	unpack ${A}
