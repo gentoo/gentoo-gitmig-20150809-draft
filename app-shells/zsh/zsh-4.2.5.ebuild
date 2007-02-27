@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.5.ebuild,v 1.13 2007/01/24 03:59:25 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.5.ebuild,v 1.14 2007/02/27 16:59:15 grobian Exp $
 
 inherit eutils multilib
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.bz2
 
 LICENSE="ZSH"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ~ppc-macos s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc s390 sh sparc x86"
 IUSE="maildir ncurses static doc pcre cap"
 
 RDEPEND="pcre? ( >=dev-libs/libpcre-3.9 )
@@ -41,11 +41,6 @@ src_compile() {
 
 	use static && myconf="${myconf} --disable-dynamic" \
 		&& LDFLAGS="${LDFLAGS} -static"
-
-	if use ppc-macos; then
-		LDFLAGS="${LDFLAGS} -Wl,-x"
-		myconf="${myconf} --enable-libs=-liconv"
-	fi
 
 	econf \
 		--bindir=/bin \
@@ -76,13 +71,6 @@ src_compile() {
 		# avoid linking to libs in /usr/lib, see Bug #27064
 		sed -i -e "/LIBS/s%-lpcre%/usr/lib/libpcre.a%" \
 			Makefile || die
-	fi
-
-	# hack for Darwin8 broken poll()
-	if use ppc-macos ; then
-		sed -i -e "s/define HAVE_POLL_H/undef HAVE_POLL_H/g" \
-			-e "s/define HAVE_POLL/undef HAVE_POLL/g" \
-			config.h
 	fi
 
 	# emake still b0rks
