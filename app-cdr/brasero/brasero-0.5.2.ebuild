@@ -1,12 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.5.2.ebuild,v 1.1 2007/02/27 12:14:16 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.5.2.ebuild,v 1.2 2007/02/27 20:59:38 metalgod Exp $
 
 inherit gnome2 gnome.org
 
 DESCRIPTION="Brasero (aka Bonfire) is yet another application to burn CD/DVD for the gnome desktop."
 HOMEPAGE="http://www.gnome.org/projects/brasero"
-SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
