@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/glftpd-2.01.ebuild,v 1.2 2006/07/15 05:07:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/glftpd-2.01.ebuild,v 1.3 2007/02/27 17:24:07 vapier Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-install.patch
 }
 
-yesno() { if $@ ; then echo y ; else echo n ; fi ; }
+yesno() { if eval "$@" ; then echo y ; else echo n ; fi ; }
 
 src_install() {
 	dodir /etc/xinetd.d
