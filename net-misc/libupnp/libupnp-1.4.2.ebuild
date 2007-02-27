@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/libupnp/libupnp-1.4.1.ebuild,v 1.2 2007/02/10 18:17:49 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/libupnp/libupnp-1.4.2.ebuild,v 1.1 2007/02/27 00:58:46 genstef Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="An Portable Open Source UPnP Development Kit"
 HOMEPAGE="http://pupnp.sourceforge.net/"
-SRC_URI="mirror://sourceforge/pupnp/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/pupnp/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
@@ -22,6 +22,9 @@ src_compile() {
 		--without-docdir \
 		|| die "econf failed"
 	emake || die "emake failed"
+
+	# fix tests
+	chmod +x ixml/test/test_document.sh
 }
 
 src_install () {
