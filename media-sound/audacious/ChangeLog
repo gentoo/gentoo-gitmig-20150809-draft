@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.106 2007/02/26 16:53:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.107 2007/02/27 15:31:41 chainsaw Exp $
+
+*audacious-1.3.0_rc2 (27 Feb 2007)
+
+  27 Feb 2007; Tony Vroon <chainsaw@gentoo.org>
+  -audacious-1.3.0_alpha5.ebuild, -audacious-1.3.0_rc1.ebuild,
+  +audacious-1.3.0_rc2.ebuild:
+  New upstream release, now with correct .so naming. Thumbs up to the arch
+  teams (specifically GMsoft, JoseJX & tgall) for helping me out on the deps
+  so quickly.
 
   26 Feb 2007; Jeroen Roovers <jer@gentoo.org> audacious-1.3.0_rc1.ebuild:
   Marked ~hppa (bug #168465).
