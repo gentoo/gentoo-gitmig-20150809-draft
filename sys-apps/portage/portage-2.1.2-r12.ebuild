@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.2-r11.ebuild,v 1.3 2007/02/26 18:40:03 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.2-r12.ebuild,v 1.1 2007/02/27 07:39:00 zmedico Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib
 
@@ -24,8 +24,7 @@ RDEPEND=">=dev-lang/python-2.3
 	elibc_glibc? ( >=sys-apps/sandbox-1.2.17 )
 	elibc_uclibc? ( >=sys-apps/sandbox-1.2.17 )
 	!userland_Darwin? ( >=app-misc/pax-utils-0.1.13 )
-	userland_GNU? ( !selinux? ( >=sys-apps/coreutils-6.4 )
-	>=sys-apps/findutils-4.2.29 )
+	userland_GNU? ( !selinux? ( >=sys-apps/coreutils-6.4 ) )
 	selinux? ( >=dev-python/python-selinux-2.16 )
 	doc? ( app-portage/portage-manpages )
 	>=dev-python/pycrypto-2.0.1-r5"
