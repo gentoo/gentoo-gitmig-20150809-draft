@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/cons
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/cons/ChangeLog,v 1.12 2007/02/09 06:00:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/cons/ChangeLog,v 1.13 2007/02/27 16:00:08 peper Exp $
+
+  27 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> cons-2.2.0.ebuild:
+  Add ~amd64 wrt bug #168019.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
