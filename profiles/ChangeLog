@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.141 2007/02/27 11:37:23 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.142 2007/02/27 16:34:58 genstef Exp $
+
+  27 Feb 2007; <genstef@gentoo.org> package.mask:
+  mask other modular X offenders, app-i18n/skkinput, bug 139792,
+  media-video/xiron, bug 116233
 
   27 Feb 2007; <genstef@gentoo.org> package.mask:
   Mask media-libs/libhydrogen for removal, bug 153202
