@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.1.ebuild,v 1.2 2007/02/22 19:04:19 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.1.ebuild,v 1.3 2007/02/27 16:08:56 zzam Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -249,7 +249,7 @@ src_unpack() {
 
 	# remove parallel driver on SMP systems
 	if linux_chkconfig_present SMP ; then
-		sed -i -e "s:lirc_parallel::" drivers/Makefile.in
+		sed -i -e "s:lirc_parallel\.o::" drivers/lirc_parallel/Makefile.am
 	fi
 
 	# respect CFLAGS
