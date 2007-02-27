@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/xdoclet
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/ChangeLog,v 1.22 2007/02/21 23:46:44 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/ChangeLog,v 1.23 2007/02/27 16:58:09 caster Exp $
+
+  27 Feb 2007; Vlastimil Babka <caster@gentoo.org>
+  -files/xdoclet-1.2.3-fix_javac.patch, xdoclet-1.2.3.ebuild:
+  Add java-ant-2 to inherit to satisfy strict eant() requirements. Depend on
+  javatoolkit version capable of rewriting with entities.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
