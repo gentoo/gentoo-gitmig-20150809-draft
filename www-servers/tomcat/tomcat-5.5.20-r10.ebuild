@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r10.ebuild,v 1.4 2007/02/15 02:19:06 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r10.ebuild,v 1.5 2007/02/27 18:54:16 wltjr Exp $
 
 WANT_ANT_TASKS="ant-trax"
 
@@ -61,11 +61,6 @@ pkg_setup() {
 	enewuser tomcat -1 -1 /dev/null tomcat
 
 	java-pkg_filter-compiler ecj-3.1  ecj-3.2
-
-	if use java5; then
-		JAVA_PKG_WANT_SOURCE="1.5"
-		JAVA_PKG_WANT_TARGET="1.5"
-	fi
 }
 
 src_unpack() {
@@ -96,9 +91,6 @@ src_unpack() {
 	if ! use java5; then
 		java-pkg_jar-from mx4j-core-3.0 mx4j.jar jmx.jar
 		java-pkg_jar-from mx4j-core-3.0 mx4j-rjmx.jar jmx-remote.jar
-	fi
-
-	if ! use java5; then
 		mkdir ${S}/build/build/common/endorsed && cd ${S}/build/build/common/endorsed
 		java-pkg_jar-from xml-commons-external-1.3 xml-apis.jar
 		java-pkg_jar-from xerces-2 xercesImpl.jar
