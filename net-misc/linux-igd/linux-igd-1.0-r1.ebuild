@@ -1,7 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/linux-igd-1.0-r1.ebuild,v 1.3 2007/02/27 10:13:54 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/linux-igd-1.0-r1.ebuild,v 1.4 2007/02/27 16:56:46 gurligebis Exp $
 
+inherit eutils
 DESCRIPTION="Deamon that emulates Microsoft's Internet Connection Sharing (ICS)
 		for UPnP-aware clients"
 HOMEPAGE="http://linux-igd.sourceforge.net"
@@ -17,8 +18,8 @@ RDEPEND="net-firewall/iptables"
 S=${WORKDIR}/linuxigd-${PV}
 
 src_compile() {
-	sed -i -e "s|/etc/linuxigd|${D}/etc/linuxigd|" \
-			-e "s|/usr/bin|${D}/usr/bin|" Makefile
+	epatch ${FILESDIR}/makefile-fix-${PVR}.diff
+	sed -i -e "s|/etc/linuxigd|${D}/etc/linuxigd|" -e "s|/usr/bin|${D}/usr/bin|" Makefile
 	sed -i -e "s|/etc/upnpd.conf|/etc/linuxigd/upnpd.conf|" globals.h
 
 	emake || die "compile failed"
