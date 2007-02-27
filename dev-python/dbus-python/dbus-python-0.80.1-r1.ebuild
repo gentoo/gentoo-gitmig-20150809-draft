@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.80.1.ebuild,v 1.1 2007/01/25 03:17:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.80.1-r1.ebuild,v 1.1 2007/02/27 07:16:04 cardoe Exp $
 
 inherit distutils
 
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_compile() {
-	econf || die "econf failed"
+	econf --docdir=/usr/share/doc/dbus-python-${PV} || die "econf failed"
 	emake || die "emake failed"
 }
 
