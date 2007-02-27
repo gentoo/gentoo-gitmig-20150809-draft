@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.68 2007/02/26 07:42:26 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.69 2007/02/27 07:57:23 keri Exp $
+
+  27 Feb 2007; keri <keri@gentoo.org>
+  +files/swi-prolog-sgml-no_attribute.patch, swi-prolog-5.6.25.ebuild,
+  swi-prolog-5.6.27.ebuild, swi-prolog-5.6.28.ebuild:
+  wchar_t fix for sgml package.
 
   26 Feb 2007; keri <keri@gentoo.org>
   +files/swi-prolog-thread-sandbox.patch, swi-prolog-5.6.25.ebuild,
