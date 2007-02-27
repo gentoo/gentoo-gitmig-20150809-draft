@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.139 2007/02/27 00:57:25 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.140 2007/02/27 10:53:43 pva Exp $
+
+  27 Feb 2007; <pva@gentoo.org> use.local.desc:
+  New local use flag for net-analyzer:cacti
 
   27 Feb 2007; <genstef@gentoo.org> package.mask:
   Remove deleted packagemasks for nxserver
