@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rake
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.40 2007/02/27 11:42:32 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.41 2007/02/27 11:45:07 caleb Exp $
+
+  27 Feb 2007; Caleb Tennis <caleb@gentoo.org> -rake-0.6.0.ebuild,
+  -rake-0.6.2.ebuild, -rake-0.7.0.ebuild:
+  remove old versions
 
 *rake-0.7.2 (27 Feb 2007)
 
