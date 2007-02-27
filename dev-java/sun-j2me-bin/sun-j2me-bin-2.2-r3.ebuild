@@ -1,12 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2me-bin/sun-j2me-bin-2.2-r3.ebuild,v 1.4 2007/02/25 23:33:38 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2me-bin/sun-j2me-bin-2.2-r3.ebuild,v 1.5 2007/02/27 16:34:58 caster Exp $
 
 inherit java-pkg-2
 
 DESCRIPTION="Java 2 Micro Edition Wireless Toolkit for developing wireless applications"
 HOMEPAGE="http://java.sun.com/products/j2mewtoolkit/"
 
+DOWNLOAD_URL="http://java.sun.com/products/sjwtoolkit/download-2_2.html"
 BINARY="j2me_wireless_toolkit-${PV//./_}-linux-i386.bin"
 PATCH="j2me_wireless_toolkit-2_2-update_2-linux.zip"
 
@@ -28,10 +29,12 @@ MY_FILE=${DISTDIR}/${BINARY}
 
 pkg_nofetch() {
 
-	einfo "Please navigate to http://java.sun.com/products/sjwtoolkit/download-2_2.html"
-	einfo "scroll down and click the 1st Download button for J2ME Wireless Toolkit 2.2"
+	einfo "Please navigate your browser to ${DOWNLOAD_URL}"
+	einfo "scroll down and notice the two download buttons."
+	einfo "Click the first Download button for J2ME Wireless Toolkit 2.2"
 	einfo "and download ${BINARY}"
-	einfo "then click the 2nd Download button for J2ME Wireless Toolkit 2.2 Patch 200511"
+	einfo "Then go back to ${DOWNLOAD_URL}"
+	einfo "click the second Download button for J2ME Wireless Toolkit 2.2 Patch 200511"
 	einfo "and download ${PATCH}"
 	einfo ""
 	einfo "Put both files to ${DISTDIR} and resume the installation"
