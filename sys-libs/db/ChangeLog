@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.196 2007/02/27 20:31:27 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.197 2007/02/27 20:34:49 caleb Exp $
+
+  27 Feb 2007; Caleb Tennis <caleb@gentoo.org> -db-4.2.52_p2.ebuild,
+  -db-4.2.52_p4.ebuild:
+  more stale versions
 
   27 Feb 2007; Caleb Tennis <caleb@gentoo.org> -db-4.3.27.ebuild,
   -db-4.3.29.ebuild, -db-4.4.20_p2.ebuild:
