@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/cherrypy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/ChangeLog,v 1.18 2007/02/27 21:10:21 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/ChangeLog,v 1.19 2007/02/27 22:47:19 dev-zero Exp $
+
+  27 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> +cherrypy-2.2.1.ebuild,
+  -cherrypy-3.0.0.ebuild, cherrypy-3.0.1.ebuild:
+  Re-added version 2.2.1 since upstream still maintains that branch and it is
+  needed by Turbogears. Added doc USE-flags for tutorial installation.
 
 *cherrypy-3.0.1 (27 Feb 2007)
 
