@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/linux-igd-1.0-r1.ebuild,v 1.1 2007/02/25 12:57:46 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/linux-igd-1.0-r1.ebuild,v 1.2 2007/02/27 02:54:08 weeve Exp $
 
 DESCRIPTION="Deamon that emulates Microsoft's Internet Connection Sharing (ICS)
 		for UPnP-aware clients"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/linux-igd/linuxigd-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
 IUSE=""
 
 DEPEND=">=net-misc/libupnp-1.4.1"
