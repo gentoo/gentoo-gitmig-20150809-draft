@@ -1,0 +1,12 @@
+diff -ur xfce4-cellmodem-plugin-0.0.5.orig/panel-plugin/Makefile.am xfce4-cellmodem-plugin-0.0.5/panel-plugin/Makefile.am
+--- xfce4-cellmodem-plugin-0.0.5.orig/panel-plugin/Makefile.am	2007-01-16 21:58:53.000000000 +0200
++++ xfce4-cellmodem-plugin-0.0.5/panel-plugin/Makefile.am	2007-02-27 22:55:19.000000000 +0200
+@@ -5,7 +5,7 @@
+         -DPACKAGE_LOCALE_DIR=\"$(localedir)\" \
+ 	@LIBXFCE4PANEL_CFLAGS@
+ 
+-xfce4_cellmodem_plugin_LDFLAGS = \
++xfce4_cellmodem_plugin_LDADD = \
+ 	@LIBXFCE4PANEL_LIBS@ 
+ 
+ xfce4_cellmodem_plugin_SOURCES = \
