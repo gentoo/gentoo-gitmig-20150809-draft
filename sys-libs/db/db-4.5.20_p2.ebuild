@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.5.20_p2.ebuild,v 1.2 2007/02/27 20:28:23 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.5.20_p2.ebuild,v 1.3 2007/02/27 21:05:37 caleb Exp $
 
 inherit eutils gnuconfig db flag-o-matic java-pkg-opt-2
 
@@ -100,7 +100,7 @@ src_compile() {
 		--localstatedir=/var/lib \
 		--libdir=/usr/"$(get_libdir)" \
 		--enable-compat185 \
-		--with-uniquename \
+		--without-uniquename \
 		--enable-rpc \
 		--host="${CHOST}" \
 		${myconf}  "${javaconf}" || die "configure failed"
