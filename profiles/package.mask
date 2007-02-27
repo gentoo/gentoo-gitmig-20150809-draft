@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6876 2007/02/27 00:57:25 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6877 2007/02/27 11:37:23 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Stefan Schweizer <genstef@gentoo.org> (27 Feb 2007)
+# Masked for removal, bug 153202
+media-libs/libhydrogen
 
 # Steve Dibb <beandog@gentoo.org> (26 Feb 2007)
 # Security bug 159727
