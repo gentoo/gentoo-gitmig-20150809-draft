@@ -1,6 +1,9 @@
 # ChangeLog for games-action/blobandconquer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/blobandconquer/ChangeLog,v 1.1 2007/02/15 08:08:53 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/blobandconquer/ChangeLog,v 1.2 2007/02/27 12:39:17 blubb Exp $
+
+  27 Feb 2007; Simon Stelling <blubb@gentoo.org> blobandconquer-0.8.ebuild:
+  marked ~amd64; bug 167102
 
 *blobandconquer-0.8 (15 Feb 2007)
 

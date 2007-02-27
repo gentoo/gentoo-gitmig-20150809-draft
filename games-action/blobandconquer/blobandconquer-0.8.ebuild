@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/blobandconquer/blobandconquer-0.8.ebuild,v 1.1 2007/02/15 08:08:53 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/blobandconquer/blobandconquer-0.8.ebuild,v 1.2 2007/02/27 12:39:17 blubb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${MY_PN}-${PV}-2.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="virtual/opengl
