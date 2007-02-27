@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.25.ebuild,v 1.16 2007/02/11 14:23:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.25.ebuild,v 1.17 2007/02/27 23:37:34 peper Exp $
 
 inherit flag-o-matic mono eutils #48511
 
@@ -43,7 +43,7 @@ src_compile() {
 		$(use_with tcl) \
 		|| die
 
-	has_version dev-lisp/mzscheme && PLT=/usr/share/mzscheme/collects
+	has_version dev-scheme/mzscheme && PLT=/usr/share/mzscheme/collects
 	has_version dev-lisp/plt && PLT=/usr/share/plt/collects
 
 	emake || die
