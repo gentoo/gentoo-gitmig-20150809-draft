@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.20.0.ebuild,v 1.1 2007/02/24 04:24:46 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.20.0.ebuild,v 1.2 2007/02/27 02:43:34 spb Exp $
 
 inherit bash-completion eutils flag-o-matic
 
@@ -11,11 +11,10 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~s390 ~sparc ~x86"
-IUSE="contrarius cran doc glsa inquisitio pink qa ruby selinux zsh-completion"
+IUSE="contrarius cran doc glsa inquisitio pink qa ruby zsh-completion"
 
 COMMON_DEPEND="
 	>=app-shells/bash-3.1
-	selinux? ( sys-libs/libselinux )
 	qa? ( dev-libs/pcre++ >=dev-libs/libxml2-2.6 app-crypt/gnupg )
 	inquisitio? ( dev-libs/pcre++ )
 	glsa? ( >=dev-libs/libxml2-2.6 )
@@ -56,7 +55,6 @@ src_compile() {
 		$(use_enable doc doxygen ) \
 		$(use_enable !mips sandbox ) \
 		$(use_enable pink) \
-		$(use_enable selinux) \
 		$(use_enable qa) \
 		$(use_enable ruby) \
 		$(use_enable glsa) \
