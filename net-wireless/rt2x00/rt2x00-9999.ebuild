@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-9999.ebuild,v 1.20 2007/02/26 12:46:45 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-9999.ebuild,v 1.21 2007/02/27 07:34:08 uberlord Exp $
 
 inherit linux-mod cvs
 
@@ -28,9 +28,8 @@ pkg_setup() {
 	ERROR_NET_RADIO="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)."
 
 	# dScape requires some crypto
-	CONFIG_CHECK="${CONFIG_CHECK} CRYPTO_AES CRYPTO_MICHAEL_MIC CRYPTO_ARC4"
+	CONFIG_CHECK="${CONFIG_CHECK} CRYPTO_AES CRYPTO_ARC4"
 	ERROR_CRYPTO_AES="${P} requires support for AES Cryptography (CONFIG_CRYPTO_AES)."
-	ERROR_CRYPTO_MICHAEL_MIC="${P} requires support for Michael MIC Cryptography (CONFIG_CRYPTO_MICHAEL_MIC)."
 	ERROR_CRYPTO_ARC4="${P} requires support for ARC4 Cryptography (CONFIG_CRYPTO_ARC4)."
 
 	if use rfkill ; then
