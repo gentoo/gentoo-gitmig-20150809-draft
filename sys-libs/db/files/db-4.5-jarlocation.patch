@@ -8,9 +8,9 @@ diff -ur db-4.1.25.old/dist/Makefile.in db-4.1.25/dist/Makefile.in
 -libj_jarfile=	db.jar
 -libj_exjarfile=	dbexamples.jar
 -rpc_jarfile=	dbsvc.jar
-+libj_jarfile=	db-4.5.jar
-+libj_exjarfile=	dbexamples-4.5.jar
-+rpc_jarfile=	dbsvc-4.5.jar
++libj_jarfile=	db-4.4.jar
++libj_exjarfile=	dbexamples-4.4.jar
++rpc_jarfile=	dbsvc-4.4.jar
  libjso_base=	libdb_java
  libjso=		$(libjso_base)-$(SOVERSION).@JMODSUFFIX@
  libjso_static=	$(libjso_base)-$(SOVERSION).a
