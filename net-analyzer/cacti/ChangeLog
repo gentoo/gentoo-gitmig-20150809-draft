@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.88 2007/02/26 06:53:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.89 2007/02/27 15:14:18 pva Exp $
+
+*cacti-0.8.6j-r3 (27 Feb 2007)
+
+  27 Feb 2007; <pva@gentoo.org> +cacti-0.8.6j-r3.ebuild:
+  Use external adodb instead of bundled with package if bundeled-adodb USE
+  flag is off. Thank Francisco Javier <ffelix AT sshinf.com> for report.
 
 *cacti-0.8.6j-r2 (26 Feb 2007)
 
