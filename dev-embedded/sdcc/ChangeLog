@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/sdcc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.36 2007/02/21 19:26:37 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.37 2007/02/27 23:29:40 peper Exp $
+
+  27 Feb 2007; Piotr Jaroszyński <peper@gentoo.org>
+  sdcc-2.5.0_p20060502.ebuild:
+  Fix incomplete dev-embedded/sdcc-cvs -> dev-embedded/sdcc-svn move.
 
   21 Feb 2007; Denis Dupeyron <calchan@gentoo.org> Manifest:
   Transition to Manifest2.

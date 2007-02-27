@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.5.0_p20060502.ebuild,v 1.4 2006/09/02 18:28:27 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.5.0_p20060502.ebuild,v 1.5 2007/02/27 23:29:40 peper Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ IUSE="doc"
 
 DEPEND=">=dev-embedded/gputils-0.13.2
 	dev-libs/boehm-gc"
-RDEPEND="!dev-embedded/sdcc-cvs
+RDEPEND="!dev-embedded/sdcc-svn
 	!dev-embedded/sdcc-svn"
 
 S=${WORKDIR}/${PN}
