@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.138 2007/02/26 23:25:50 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.139 2007/02/27 00:57:25 genstef Exp $
+
+  27 Feb 2007; <genstef@gentoo.org> package.mask:
+  Remove deleted packagemasks for nxserver
 
   26 Feb 2007; Steve Dibb <beandog@gentoo.org> package.mask:
   Mask older mplayers for pending removal, security bug 159727
