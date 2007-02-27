@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/emul-linux-x86-sdl-10.0.ebuild,v 1.1 2007/02/22 09:59:12 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/emul-linux-x86-sdl-10.1.ebuild,v 1.1 2007/02/27 10:27:13 blubb Exp $
 
 inherit emul-libs
 
-SRC_URI="mirror://gentoo/libsdl-1.2.11.tbz2
+SRC_URI="mirror://gentoo/libsdl-1.2.11-emul2.tbz2
 	mirror://gentoo/openal-0.0.8-r1.tbz2
 	mirror://gentoo/sdl-image-1.2.5-r1.tbz2
 	mirror://gentoo/sdl-mixer-1.2.7.tbz2
