@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.194 2007/02/27 20:18:37 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.195 2007/02/27 20:28:23 caleb Exp $
+
+*db-4.4.20_p4 (27 Feb 2007)
+
+  27 Feb 2007; Caleb Tennis <caleb@gentoo.org> +db-4.4.20_p4.ebuild:
+  Bump to 4.4.20_p4, change SRC_URI to reflect new location of stuff
 
 *db-4.5.20_p2 (27 Feb 2007)
 

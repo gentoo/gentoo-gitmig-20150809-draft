@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.5.20_p2.ebuild,v 1.2 2007/02/27 20:28:23 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.4.20_p4.ebuild,v 1.1 2007/02/27 20:28:23 caleb Exp $
 
 inherit eutils gnuconfig db flag-o-matic java-pkg-opt-2
 
@@ -21,11 +21,11 @@ DESCRIPTION="Oracle Berkeley DB"
 HOMEPAGE="http://www.oracle.com/technology/software/products/berkeley-db/index.html"
 SRC_URI="http://download-west.oracle.com/berkeley-db/${MY_P}.tar.gz"
 for (( i=1 ; i<=${PATCHNO} ; i++ )) ; do
-	export SRC_URI="${SRC_URI} http://www.oracle.com/technology/products/berkeley-db/db/update/${MY_PV}/patch.${MY_PV}.${i}"
+        export SRC_URI="${SRC_URI} http://www.oracle.com/technology/products/berkeley-db/db/update/${MY_PV}/patch.${MY_PV}.${i}"
 done
 
 LICENSE="OracleDB"
-SLOT="4.5"
+SLOT="4.4"
 KEYWORDS="~amd64 ~arm ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="tcl java doc nocxx bootstrap"
 
@@ -100,7 +100,7 @@ src_compile() {
 		--localstatedir=/var/lib \
 		--libdir=/usr/"$(get_libdir)" \
 		--enable-compat185 \
-		--with-uniquename \
+		--without-uniquename \
 		--enable-rpc \
 		--host="${CHOST}" \
 		${myconf}  "${javaconf}" || die "configure failed"
@@ -120,7 +120,7 @@ src_install() {
 	db_src_install_usrlibcleanup
 
 	dodir /usr/sbin
-	mv "${D}"/usr/bin/berkeley_db_svc "${D}"/usr/sbin/berkeley_db45_svc
+	mv "${D}"/usr/bin/berkeley_db_svc "${D}"/usr/sbin/berkeley_db44_svc
 
 	if use java; then
 		java-pkg_regso "${D}"/usr/"$(get_libdir)"/libdb_java*.so
