@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/asis-gcc-4.1.2-r1.ebuild,v 1.1 2007/02/27 11:49:07 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/asis-gcc-4.1.2-r1.ebuild,v 1.2 2007/02/27 12:29:41 george Exp $
 
 inherit eutils flag-o-matic gnatbuild
 
@@ -121,13 +121,6 @@ src_install () {
 	dodir ${My_LIBPATH}/adalib
 	# doins grossly screws permissions
 	cp -dpP lib/* ${D}${My_LIBPATH}/adalib
-#	insinto ${LIBPATH}/adalib
-#	doins obj/*.ali
-#	doins lib/libasis*
-	# make appropriate symlinks
-#	pushd ${D}${LIBPATH}/adalib
-#	ln -s libasis-${SLOT}.so libasis.so
-#	popd
 	# sources
 	insinto ${My_LIBPATH}/adainclude
 	doins gnat/*.ad[sb]
@@ -150,9 +143,6 @@ src_install () {
 
 		insinto /usr/share/doc/${PF}
 		doins -r documentation/*.pdf examples/ tutorial/ templates/
-
-		# this version also provides wiki contents, may be added at some point,
-		# however it seems to make sense to just use the online wiki..
 	fi
 }
 
