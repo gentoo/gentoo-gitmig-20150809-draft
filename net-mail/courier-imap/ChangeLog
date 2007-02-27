@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.143 2007/02/26 11:09:41 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.144 2007/02/27 17:34:53 chutzpah Exp $
+
+  27 Feb 2007; Patrick McLean <chutzpah@gentoo.org>
+  +files/courier-imap-4.1.2-aclocal-fix.patch,
+  +files/courier-imap-4.1.2-db4-configure.in.patch,
+  courier-imap-4.1.2.ebuild:
+  Add patch to remove AC_PROG_SYSCONFTOOL from configure.in, move patch out of
+  -db4-configure.in.patch (fixes bug #168206).
 
   25 Feb 2007; Patrick McLean <chutzpah@gentoo.org>
   +files/courier-imap-4.0.6-db4-tcpd_configure.in.patch,

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.1.2.ebuild,v 1.2 2007/02/25 22:56:32 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.1.2.ebuild,v 1.3 2007/02/27 17:34:53 chutzpah Exp $
 
 WANT_AUTOCONF="2.6"
 
@@ -70,12 +70,15 @@ src_unpack() {
 	# This new patch should fix bug #51540. fam USE flag is not needed for shared folder support.
 	epatch ${FILESDIR}/${PN}-4.0.1-disable-fam-configure.in.patch
 
+	# kill unneeded call to AC_PROG_SYSCONFTOOL (bug #168206)
+	epatch "${FILESDIR}"/${P}-aclocal-fix.patch
+
 	# These patches should fix problem detecting Berkeley DB.
 	# We now can compile with db4 support.
 	if use berkdb; then
 		epatch ${FILESDIR}/${PN}-4.0.6-db4-bdbobj_configure.in.patch
 		epatch ${FILESDIR}/${PN}-4.0.6-db4-tcpd_configure.in.patch
-		epatch ${FILESDIR}/${PN}-4.0.6-db4-configure.in.patch
+		epatch ${FILESDIR}/${P}-db4-configure.in.patch
 	fi
 
 	export WANT_AUTOCONF="2.5"
