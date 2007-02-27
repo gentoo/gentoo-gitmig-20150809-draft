@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/asis-gcc-4.1.1.ebuild,v 1.3 2007/01/25 23:41:35 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/asis-gcc-4.1.1.ebuild,v 1.4 2007/02/27 12:27:14 george Exp $
 
 inherit eutils flag-o-matic gnatbuild
 
@@ -34,6 +34,12 @@ QA_EXECSTACK="usr/lib/gnat-gcc/*/${SLOT}/adalib/libasis-4.1.so
 # it may be even better to force plain -O2 -pipe -ftracer here
 replace-flags -O3 -O2
 
+# we need to adjust some vars defined in gnatbuild.eclass so that they use
+# gnat-gcc instead of asis
+My_LIBPATH=${LIBPATH/${PN}/${Gnat_Name}}
+My_BINPATH=${BINPATH/${PN}/${Gnat_Name}}
+My_DATAPATH=${DATAPATH/${PN}/${Gnat_Name}}
+
 
 pkg_setup() {
 	currGnat=$(eselect --no-color gnat show | grep "gnat-" | awk '{ print $1 }')
@@ -45,6 +51,15 @@ pkg_setup() {
 		eerror "eselect gnat set ${CTARGET}-${Gnat_Name}-${SLOT}"
 		eerror "env-update && source /etc/profile"
 		eerror "and then emerge =dev-ada/asis-${PV} again.."
+		echo
+		die
+	fi
+	if [[ -e ${My_LIBPATH}/adalib/libasis.a ]] ; then
+		echo
+		ewarn "gnatmake of gnat-gcc unfortunately has problems forcind the build"
+		ewarn "if the package is already installed."
+		eerror "Please unmerge asis-gcc first and then resume the merge:"
+		eerror "emerge --unmerge asis-gcc && emerge asis-gcc"
 		echo
 		die
 	fi
@@ -101,41 +116,35 @@ src_compile() {
 
 
 src_install () {
-	# we need to adjust some vars defined in gnatbuild.eclass so that they use
-	# gnat-gcc instead of asis
-	LIBPATH=${LIBPATH/${PN}/${Gnat_Name}}
-	BINPATH=${BINPATH/${PN}/${Gnat_Name}}
-	DATAPATH=${DATAPATH/${PN}/${Gnat_Name}}
-
 	# install the lib
-	dodir ${LIBPATH}/adalib
+	dodir ${My_LIBPATH}/adalib
 	chmod 0755 lib_dyn/libasis.so
-	cp lib_dyn/libasis.so ${D}${LIBPATH}/adalib/libasis-${SLOT}.so
-	insinto ${LIBPATH}/adalib
+	cp lib_dyn/libasis.so ${D}${My_LIBPATH}/adalib/libasis-${SLOT}.so
+	insinto ${My_LIBPATH}/adalib
 	doins obj/*.ali
 	doins lib/libasis.a
 	# make appropriate symlinks
-	pushd ${D}${LIBPATH}/adalib
+	pushd ${D}${My_LIBPATH}/adalib
 	ln -s libasis-${SLOT}.so libasis.so
 	popd
 	# sources
-	insinto ${LIBPATH}/adainclude
+	insinto ${My_LIBPATH}/adainclude
 	doins gnat/*.ad[sb]
 	doins asis/*.ad[sb]
 
 	# tools
-	mkdir -p ${D}${BINPATH}
+	mkdir -p ${D}${My_BINPATH}
 	for fn in tools/{adabrowse,gnatelim,gnatstub,gnatpp,gnatmetric}; do
-		cp ${fn}/${fn:6} ${D}${BINPATH}
+		cp ${fn}/${fn:6} ${D}${My_BINPATH}
 	done
-	cp tools/semtools/ada{dep,subst} ${D}${BINPATH}
+	cp tools/semtools/ada{dep,subst} ${D}${My_BINPATH}
 
 	# docs and examples
 	if use doc ; then
 		dodoc documentation/*.{txt,ps}
 		dohtml documentation/*.html
 		# info's should go into gnat-gpl dirs
-		insinto ${DATAPATH}/info/
+		insinto ${My_DATAPATH}/info/
 		doins documentation/*.info
 
 		insinto /usr/share/doc/${PF}
