@@ -1,6 +1,10 @@
 # ChangeLog for www-client/lynx
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.60 2007/02/27 16:45:21 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.61 2007/02/27 16:56:34 drizzt Exp $
+
+  27 Feb 2007; Timothy Redaelli <drizzt@gentoo.org> -lynx-2.8.5-r4.ebuild,
+  lynx-2.8.6-r2.ebuild:
+  Stable on amd64 and ppc wrt bug #168596
 
   27 Feb 2007; Fabian Groffen <grobian@gentoo.org> lynx-2.8.5-r3.ebuild,
   lynx-2.8.5-r4.ebuild, lynx-2.8.6-r1.ebuild, lynx-2.8.6-r2.ebuild:
