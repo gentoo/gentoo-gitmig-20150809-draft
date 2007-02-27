@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/gnucap
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/ChangeLog,v 1.33 2007/02/27 12:31:28 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/ChangeLog,v 1.34 2007/02/27 13:27:38 blubb Exp $
+
+  27 Feb 2007; Simon Stelling <blubb@gentoo.org>
+  gnucap-0.35.20070221.ebuild:
+  fix wrt multilib-strict and re-add ~amd64; bug 168571
 
 *gnucap-0.35.20070221 (27 Feb 2007)
 

@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-0.35.20070221.ebuild,v 1.1 2007/02/27 12:31:28 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-0.35.20070221.ebuild,v 1.2 2007/02/27 13:27:38 blubb Exp $
+
+inherit multilib
 
 SNAPSHOTDATE="${P##*.}"
 SNAPSHOT_DATE="${SNAPSHOTDATE:0:4}-${SNAPSHOTDATE:4:2}-${SNAPSHOTDATE:6:2}"
@@ -15,7 +17,7 @@ HOMEPAGE="http://www.gnucap.org/"
 IUSE="doc examples"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 DEPEND="doc? ( virtual/tetex )"
 
@@ -64,7 +66,7 @@ src_install () {
 	insopts -m0755
 	cd ${S}/plugins
 	for PLUGIN_DIR in * ; do
-		insinto /usr/lib/gnucap/${PLUGIN_DIR}
+		insinto /usr/$(get_libdir)/gnucap/${PLUGIN_DIR}
 		cd ${S}/plugins/${PLUGIN_DIR}
 		for PLUGIN in */*.so ; do
 			newins ${PLUGIN} ${PLUGIN##*/}
