@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6882 2007/02/27 19:36:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6883 2007/02/27 19:38:18 ticho Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -774,10 +774,6 @@ media-video/gspcav1
 # Diego Pettenò <flameeyes@gentoo.org> (19 Oct 2006)
 # beta version, breaks API badly with other software.
 >=media-libs/flac-1.1.3_beta2
-
-# Andrej Kacian <ticho@gentoo.org> (16 Oct 2006)
-# Release candidates, no unsuspecting users should use these.
-=app-antivirus/clamav-0.90_rc*
 
 # Christian Heim <phreak@gentoo.org> (14 Oct 2006)
 # masking app-misc/gpsdrive for treecleaners, bug(s) 142710
