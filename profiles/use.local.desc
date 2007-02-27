@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2626 2007/02/26 22:03:21 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2627 2007/02/27 01:29:36 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -83,7 +83,6 @@ app-editors/emacs:aqua - Build Carbon Emacs
 app-editors/emacs:multi-tty - Add multi-tty support
 app-editors/emacs:nosendmail - If you do not want to install any MTA
 app-editors/gvim:aqua - Include support for the Aqua / Carbon GUI
-app-editors/gvim:mzscheme - Include support for the mzscheme interpreter
 app-editors/gvim:netbeans - Include netbeans integration support
 app-editors/gvim:nextaw - Include support for the neXtaw GUI
 app-editors/joe:xterm - Enable full xterm clipboard support
@@ -93,7 +92,6 @@ app-editors/nano:justify - Toggle the justify option ...
 app-editors/nvu:moznoxft - placeholder until mozilla eclass is modified for nvu
 app-editors/tea:hacking - Enable hacking support...
 app-editors/tea:sounds - Enable sound support
-app-editors/vim:mzscheme - Include support for the mzscheme interpreter
 app-editors/vim:vim-pager - Install vimpager and vimmanpager links
 app-editors/vim:vim-with-x - Link console vim against X11 libraries to enable title and clipboard features in xterm
 app-editors/xemacs:athena - Chooses the MIT Athena widget set
