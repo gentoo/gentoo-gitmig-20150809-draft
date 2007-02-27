@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.45 2007/02/07 20:33:05 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.46 2007/02/27 22:08:17 gmsoft Exp $
+
+  27 Feb 2007; Guy Martin <gmsoft@gentoo.org> libetpan-0.48.ebuild:
+  Stable on hppa
 
   07 Feb 2007; Simon Stelling <blubb@gentoo.org> libetpan-0.48.ebuild:
   stable on amd64 as a dependency of claws-mail; bug 163611
