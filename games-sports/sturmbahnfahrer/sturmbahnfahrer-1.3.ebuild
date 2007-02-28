@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/sturmbahnfahrer/sturmbahnfahrer-1.3.ebuild,v 1.1 2007/02/23 05:19:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/sturmbahnfahrer/sturmbahnfahrer-1.3.ebuild,v 1.2 2007/02/28 22:41:09 mr_bones_ Exp $
 
-inherit toolchain-funcs games
+inherit eutils toolchain-funcs games
 
 DESCRIPTION="Simulated obstacle course for automobiles"
 HOMEPAGE="http://www.sturmbahnfahrer.com/"
@@ -25,7 +25,7 @@ src_unpack() {
 	cd "${S}"
 
 	sed -i \
-		-e "s:/usr/share/games/${PN}:${GAMES_DATADIR}/${PN}:" main.cxx \
+		-e "/dirprefix \?=/s:=.*: = \"${GAMES_DATADIR}/${PN}\";:" main.cxx \
 		|| die "sed failed"
 
 	sed -i \
@@ -49,5 +49,6 @@ src_install() {
 		|| die "emake install failed"
 
 	dodoc JOYSTICKS README TODO
+	make_desktop_entry sturmbahnfahrer Sturmbahnfahrer
 	prepgamesdirs
 }
