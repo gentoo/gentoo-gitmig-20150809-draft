@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.4.0-r2.ebuild,v 1.1 2007/02/27 17:59:30 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.4.0-r2.ebuild,v 1.2 2007/02/28 07:06:06 opfer Exp $
 
 inherit linux-info
 
@@ -33,4 +33,10 @@ src_install() {
 	dobin pcf2vpnc
 	dobin cisco-decrypt
 	newinitd "${FILESDIR}/vpnc.init" vpnc
+}
+
+pkg_postinstall() {
+	elog "You can generate a configuration file from the original Cisco profiles of your"
+	elog "connection by using /usr/bin/pcf2vpnc to convert the .pcf file"
+	elog "A draft guide is to be found in http://bugs.gentoo.org/show_bug.cgi?id=97760"
 }
