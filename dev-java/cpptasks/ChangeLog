@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/cpptasks
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cpptasks/ChangeLog,v 1.7 2007/02/10 12:43:51 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cpptasks/ChangeLog,v 1.8 2007/02/28 18:40:32 betelgeuse Exp $
+
+*cpptasks-1.0_beta4-r2 (28 Feb 2007)
+
+  28 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> +files/antlib.xml,
+  +cpptasks-1.0_beta4-r2.ebuild:
+  Add net/sf/antcontrib/cpptasks/antlib.xml from upstream svn because
+  dev-java/jogl needs this file.
 
 *cpptasks-1.0_beta4-r1 (10 Feb 2007)
 
