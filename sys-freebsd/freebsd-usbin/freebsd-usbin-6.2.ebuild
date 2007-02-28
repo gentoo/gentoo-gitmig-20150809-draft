@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.2.ebuild,v 1.1 2007/01/15 21:41:15 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.2.ebuild,v 1.2 2007/02/28 13:47:59 uberlord Exp $
 
 inherit bsdmk freebsd flag-o-matic eutils
 
@@ -78,7 +78,7 @@ REMOVE_SUBDIRS="
 		dnssec-keygen dnssec-signzone
 	tcpdchk tcpdmatch
 	sendmail praliases editmap mailstats makemap
-	sysinstall cron mailwrapper ntp bsnmpd mount_smbfs
+	sysinstall cron mailwrapper ntp bsnmpd
 	tcpdump ndp traceroute inetd
 	wpa/wpa_supplicant wpa/hostapd wpa/hostapd_cli wpa/wpa_cli
 	zic amd

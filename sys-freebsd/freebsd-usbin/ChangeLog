@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-usbin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.41 2007/02/23 14:03:08 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.42 2007/02/28 13:47:59 uberlord Exp $
+
+  28 Feb 2007; Roy Marples <uberlord@gentoo.org> freebsd-usbin-6.2.ebuild:
+  Install mount_smbfs and friends so we can mount samba shares.
 
   23 Feb 2007; Roy Marples <uberlord@gentoo.org> files/moused.initd,
   files/nfsmount.initd, files/powerd.initd, files/rarpd.initd,
