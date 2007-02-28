@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-2.4.ebuild,v 1.3 2006/03/06 16:23:03 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-2.4.ebuild,v 1.4 2007/02/28 22:08:18 genstef Exp $
 
 DESCRIPTION="fast compiler cache"
 HOMEPAGE="http://ccache.samba.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://samba.org/ftp/ccache/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~ppc-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE=""
 
 DEPEND="virtual/libc"
