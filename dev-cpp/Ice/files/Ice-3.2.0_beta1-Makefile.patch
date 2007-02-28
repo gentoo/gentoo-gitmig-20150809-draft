@@ -25,7 +25,7 @@
 -install_docdir		= $(prefix)/doc
 +install_slicedir	= $(prefix)/share/Ice/slice
 +install_schemadir	= $(prefix)/share/Ice/schema
-+install_docdir		= $(prefix)/doc/Ice-$(VERSION)
++install_docdir		= $(prefix)/share/doc/Ice-$(VERSION)
  
  INSTALL			= cp -fp
  INSTALL_PROGRAM		= ${INSTALL}
