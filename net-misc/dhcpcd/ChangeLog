@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.132 2007/02/23 10:45:41 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.133 2007/02/28 09:25:11 uberlord Exp $
+
+*dhcpcd-3.0.14 (28 Feb 2007)
+
+  28 Feb 2007; Roy Marples <uberlord@gentoo.org> +dhcpcd-3.0.14.ebuild:
+  New release, fixes a crash on 0 or invalid length dhcp options.
 
 *dhcpcd-3.0.13 (23 Feb 2007)
 
