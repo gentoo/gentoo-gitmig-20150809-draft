@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.5.20_p2.ebuild,v 1.3 2007/02/27 21:05:37 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.5.20_p2.ebuild,v 1.4 2007/02/28 13:22:15 caleb Exp $
 
-inherit eutils gnuconfig db flag-o-matic java-pkg-opt-2
+inherit eutils db flag-o-matic java-pkg-opt-2
 
 #Number of official patches
 #PATCHNO=`echo ${PV}|sed -e "s,\(.*_p\)\([0-9]*\),\2,"`
@@ -48,8 +48,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/"${PN}"-4.3-jni-check-prefix-first.patch
 	epatch "${FILESDIR}"/"${PN}"-4.3-listen-to-java-options.patch
 
-	gnuconfig_update "${S}"/../dist
-
 	sed -i \
 		-e "s,\(ac_compiler\|\${MAKEFILE_CC}\|\${MAKEFILE_CXX}\|\$CC\)\( *--version\),\1 -dumpversion,g" \
 		"${S}"/../dist/configure
@@ -91,7 +89,7 @@ src_compile() {
 		append-ldflags -Wl,--default-symver
 	fi
 
-	../dist/configure \
+	cd ${S} && ECONF_SOURCE="${S}"/../dist econf \
 		--prefix=/usr \
 		--mandir=/usr/share/man \
 		--infodir=/usr/share/info \

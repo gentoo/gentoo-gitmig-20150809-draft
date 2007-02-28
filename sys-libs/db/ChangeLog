@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.198 2007/02/27 21:05:37 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.199 2007/02/28 13:22:15 caleb Exp $
+
+  28 Feb 2007; Caleb Tennis <caleb@gentoo.org> db-4.4.20_p4.ebuild,
+  db-4.5.20_p2.ebuild:
+  Update 4.4 and 4.5 to use econf instead of gnuconfig_update per bug #160192
 
   27 Feb 2007; Caleb Tennis <caleb@gentoo.org> db-4.5.20_p2.ebuild:
   Paul asked to turn uniquename off, since it causes too many issues
