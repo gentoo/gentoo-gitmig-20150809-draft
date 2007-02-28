@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jgraph
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgraph/ChangeLog,v 1.15 2007/02/18 09:19:04 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgraph/ChangeLog,v 1.16 2007/02/28 18:01:00 blubb Exp $
+
+  28 Feb 2007; Simon Stelling <blubb@gentoo.org> jgraph-5.9.2.0.ebuild:
+  stable on amd64; bug 154366
 
   18 Feb 2007; nixnut <nixnut@gentoo.org> jgraph-5.9.2.0.ebuild:
   Stable on ppc wrt bug 154366
